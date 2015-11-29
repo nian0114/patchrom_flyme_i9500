@@ -1392,3 +1392,20 @@
 
     goto/16 :goto_1
 .end method
+
+.method private mzFreeCaches(I)V
+    .locals 1
+    .param p1, "changes"    # I
+
+    .prologue
+    and-int/lit16 v0, p1, 0x4000
+
+    if-eqz v0, :cond_0
+
+    invoke-static {}, Landroid/graphics/Canvas;->freeCaches()V
+
+    invoke-static {}, Landroid/graphics/Canvas;->freeTextLayoutCaches()V
+
+    :cond_0
+    return-void
+.end method

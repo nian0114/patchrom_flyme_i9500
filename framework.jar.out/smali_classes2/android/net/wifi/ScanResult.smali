@@ -38,6 +38,8 @@
 
 
 # instance fields
+.field public HexSSID:Ljava/lang/String;
+
 .field public BSSID:Ljava/lang/String;
 
 .field public HESSID:Ljava/lang/String;
@@ -108,98 +110,80 @@
     .param p1, "source"    # Landroid/net/wifi/ScanResult;
 
     .prologue
-    .line 269
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 270
     if-eqz p1, :cond_0
 
-    .line 271
     iget-object v0, p1, Landroid/net/wifi/ScanResult;->wifiSsid:Landroid/net/wifi/WifiSsid;
 
     iput-object v0, p0, Landroid/net/wifi/ScanResult;->wifiSsid:Landroid/net/wifi/WifiSsid;
 
-    .line 272
     iget-object v0, p1, Landroid/net/wifi/ScanResult;->SSID:Ljava/lang/String;
 
     iput-object v0, p0, Landroid/net/wifi/ScanResult;->SSID:Ljava/lang/String;
 
-    .line 273
     iget-object v0, p1, Landroid/net/wifi/ScanResult;->BSSID:Ljava/lang/String;
 
     iput-object v0, p0, Landroid/net/wifi/ScanResult;->BSSID:Ljava/lang/String;
 
-    .line 274
     iget-object v0, p1, Landroid/net/wifi/ScanResult;->HESSID:Ljava/lang/String;
 
     iput-object v0, p0, Landroid/net/wifi/ScanResult;->HESSID:Ljava/lang/String;
 
-    .line 275
     iget-object v0, p1, Landroid/net/wifi/ScanResult;->capabilities:Ljava/lang/String;
 
     iput-object v0, p0, Landroid/net/wifi/ScanResult;->capabilities:Ljava/lang/String;
 
-    .line 276
     iget v0, p1, Landroid/net/wifi/ScanResult;->level:I
 
     iput v0, p0, Landroid/net/wifi/ScanResult;->level:I
 
-    .line 277
     iget v0, p1, Landroid/net/wifi/ScanResult;->frequency:I
 
     iput v0, p0, Landroid/net/wifi/ScanResult;->frequency:I
 
-    .line 278
     iget-wide v0, p1, Landroid/net/wifi/ScanResult;->timestamp:J
 
     iput-wide v0, p0, Landroid/net/wifi/ScanResult;->timestamp:J
 
-    .line 279
     iget v0, p1, Landroid/net/wifi/ScanResult;->distanceCm:I
 
     iput v0, p0, Landroid/net/wifi/ScanResult;->distanceCm:I
 
-    .line 280
     iget v0, p1, Landroid/net/wifi/ScanResult;->distanceSdCm:I
 
     iput v0, p0, Landroid/net/wifi/ScanResult;->distanceSdCm:I
 
-    .line 281
     iget-wide v0, p1, Landroid/net/wifi/ScanResult;->seen:J
 
     iput-wide v0, p0, Landroid/net/wifi/ScanResult;->seen:J
 
-    .line 282
     iget v0, p1, Landroid/net/wifi/ScanResult;->autoJoinStatus:I
 
     iput v0, p0, Landroid/net/wifi/ScanResult;->autoJoinStatus:I
 
-    .line 283
     iget-boolean v0, p1, Landroid/net/wifi/ScanResult;->untrusted:Z
 
     iput-boolean v0, p0, Landroid/net/wifi/ScanResult;->untrusted:Z
 
-    .line 284
     iget v0, p1, Landroid/net/wifi/ScanResult;->numConnection:I
 
     iput v0, p0, Landroid/net/wifi/ScanResult;->numConnection:I
 
-    .line 285
     iget v0, p1, Landroid/net/wifi/ScanResult;->numUsage:I
 
     iput v0, p0, Landroid/net/wifi/ScanResult;->numUsage:I
 
-    .line 286
     iget v0, p1, Landroid/net/wifi/ScanResult;->numIpConfigFailures:I
 
     iput v0, p0, Landroid/net/wifi/ScanResult;->numIpConfigFailures:I
 
-    .line 287
     iget v0, p1, Landroid/net/wifi/ScanResult;->isAutoJoinCandidate:I
 
     iput v0, p0, Landroid/net/wifi/ScanResult;->isAutoJoinCandidate:I
 
-    .line 289
+    invoke-direct/range {p0 .. p1}, Landroid/net/wifi/ScanResult;->setHexSSID(Landroid/net/wifi/ScanResult;)V
+
     :cond_0
     return-void
 .end method
@@ -232,36 +216,28 @@
     :goto_0
     iput-object v0, p0, Landroid/net/wifi/ScanResult;->SSID:Ljava/lang/String;
 
-    .line 239
     iput-object p2, p0, Landroid/net/wifi/ScanResult;->BSSID:Ljava/lang/String;
 
-    .line 240
     const/4 v0, 0x0
 
     iput-object v0, p0, Landroid/net/wifi/ScanResult;->HESSID:Ljava/lang/String;
 
-    .line 241
     iput-object p3, p0, Landroid/net/wifi/ScanResult;->capabilities:Ljava/lang/String;
 
-    .line 242
     iput p4, p0, Landroid/net/wifi/ScanResult;->level:I
 
-    .line 243
     iput p5, p0, Landroid/net/wifi/ScanResult;->frequency:I
 
-    .line 244
     iput-wide p6, p0, Landroid/net/wifi/ScanResult;->timestamp:J
 
-    .line 245
     iput v1, p0, Landroid/net/wifi/ScanResult;->distanceCm:I
 
-    .line 246
     iput v1, p0, Landroid/net/wifi/ScanResult;->distanceSdCm:I
 
-    .line 247
+    invoke-direct/range {p0 .. p0}, Landroid/net/wifi/ScanResult;->setHexSSID()V
+
     return-void
 
-    .line 238
     :cond_0
     const-string v0, "<unknown ssid>"
 
@@ -958,5 +934,43 @@
 
     .line 367
     :cond_3
+    return-void
+.end method
+
+
+.method private setHexSSID()V
+    .locals 1
+
+    .prologue
+    iget-object v0, p0, Landroid/net/wifi/ScanResult;->wifiSsid:Landroid/net/wifi/WifiSsid;
+
+    if-eqz v0, :cond_0
+
+    iget-object v0, p0, Landroid/net/wifi/ScanResult;->wifiSsid:Landroid/net/wifi/WifiSsid;
+
+    invoke-virtual {v0}, Landroid/net/wifi/WifiSsid;->getHexString()Ljava/lang/String;
+
+    move-result-object v0
+
+    :goto_0
+    iput-object v0, p0, Landroid/net/wifi/ScanResult;->HexSSID:Ljava/lang/String;
+
+    return-void
+
+    :cond_0
+    const-string v0, "<unknown ssid>"
+
+    goto :goto_0
+.end method
+
+.method private setHexSSID(Landroid/net/wifi/ScanResult;)V
+    .locals 1
+    .param p1, "source"    # Landroid/net/wifi/ScanResult;
+
+    .prologue
+    iget-object v0, p1, Landroid/net/wifi/ScanResult;->HexSSID:Ljava/lang/String;
+
+    iput-object v0, p0, Landroid/net/wifi/ScanResult;->HexSSID:Ljava/lang/String;
+
     return-void
 .end method

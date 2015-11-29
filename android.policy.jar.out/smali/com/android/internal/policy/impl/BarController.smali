@@ -686,17 +686,14 @@
 
     if-eqz v1, :cond_4
 
-    .line 124
     :cond_1
     or-int/2addr p2, v4
 
-    .line 133
     .end local v0    # "fl":I
     :cond_2
     :goto_1
     return p2
 
-    .line 116
     .restart local v0    # "fl":I
     :cond_3
     iget v1, p0, Lcom/android/internal/policy/impl/BarController;->mTranslucentFlag:I

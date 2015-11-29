@@ -446,7 +446,7 @@
 
     move-result-object v1
 
-    const v4, 0x1120046
+    const v4, #android:bool@config_sms_capable#t
 
     invoke-virtual {v1, v4}, Landroid/content/res/Resources;->getBoolean(I)Z
 
@@ -2309,18 +2309,14 @@
 
     if-eqz v18, :cond_0
 
-    .line 1347
     :goto_0
     return-void
 
-    .line 1277
     :cond_0
     if-eqz p1, :cond_1
 
-    .line 1278
-    const v5, 0x10404d1
+    const v5, #android:string@sms_premium_short_code_details#t
 
-    .line 1283
     .local v5, "detailsId":I
     :goto_1
     move-object/from16 v0, p2
@@ -2351,7 +2347,7 @@
 
     .line 1285
     .local v13, "r":Landroid/content/res/Resources;
-    const v18, 0x10404cf
+    const v18, #android:string@sms_short_code_confirm_message#t
 
     const/16 v19, 0x2
 
@@ -2405,7 +2401,7 @@
 
     .line 1290
     .local v8, "inflater":Landroid/view/LayoutInflater;
-    const v18, 0x10900e6
+    const v18, #android:layout@sms_short_code_confirmation_dialog#t
 
     const/16 v19, 0x0
 
@@ -2421,7 +2417,7 @@
     .local v9, "layout":Landroid/view/View;
     new-instance v10, Lcom/android/internal/telephony/SMSDispatcher$ConfirmDialogListener;
 
-    const v18, 0x102044d
+    const v18, #android:id@sms_short_code_remember_undo_instruction#t
 
     move/from16 v0, v18
 
@@ -2441,7 +2437,7 @@
 
     .line 1296
     .local v10, "listener":Lcom/android/internal/telephony/SMSDispatcher$ConfirmDialogListener;
-    const v18, 0x1020447
+    const v18, #android:id@sms_short_code_confirm_message#t
 
     move/from16 v0, v18
 
@@ -2451,12 +2447,10 @@
 
     check-cast v12, Landroid/widget/TextView;
 
-    .line 1297
     .local v12, "messageView":Landroid/widget/TextView;
     invoke-virtual {v12, v11}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
 
-    .line 1299
-    const v18, 0x1020448
+    const v18, #android:id@sms_short_code_detail_layout#t
 
     move/from16 v0, v18
 
@@ -2468,7 +2462,7 @@
 
     .line 1301
     .local v6, "detailsLayout":Landroid/view/ViewGroup;
-    const v18, 0x102044a
+    const v18, #android:id@sms_short_code_detail_message#t
 
     move/from16 v0, v18
 
@@ -2478,12 +2472,10 @@
 
     check-cast v7, Landroid/widget/TextView;
 
-    .line 1303
     .local v7, "detailsView":Landroid/widget/TextView;
     invoke-virtual {v7, v5}, Landroid/widget/TextView;->setText(I)V
 
-    .line 1305
-    const v18, 0x102044b
+    const v18, #android:id@sms_short_code_remember_choice_checkbox#t
 
     move/from16 v0, v18
 
@@ -2493,12 +2485,10 @@
 
     check-cast v14, Landroid/widget/CheckBox;
 
-    .line 1307
     .local v14, "rememberChoice":Landroid/widget/CheckBox;
     invoke-virtual {v14, v10}, Landroid/widget/CheckBox;->setOnCheckedChangeListener(Landroid/widget/CompoundButton$OnCheckedChangeListener;)V
 
-    .line 1310
-    const v18, 0x102044c
+    const v18, #android:id@sms_short_code_remember_choice_text#t
 
     move/from16 v0, v18
 
@@ -2510,7 +2500,7 @@
 
     .line 1311
     .local v16, "rememberTextView":Landroid/widget/TextView;
-    const v18, 0x102044d
+    const v18, #android:id@sms_short_code_remember_undo_instruction#t
 
     move/from16 v0, v18
 
@@ -2589,7 +2579,7 @@
 
     move-result-object v18
 
-    const v19, 0x10404d2
+    const v19, #android:string@sms_short_code_confirm_allow#t
 
     move/from16 v0, v19
 
@@ -2605,7 +2595,7 @@
 
     move-result-object v18
 
-    const v19, 0x10404d3
+    const v19, #android:string@sms_short_code_confirm_deny#t
 
     move/from16 v0, v19
 
@@ -2688,7 +2678,7 @@
     .end local v15    # "rememberInstructionView":Landroid/widget/TextView;
     .end local v16    # "rememberTextView":Landroid/widget/TextView;
     :cond_1
-    const v5, 0x10404d0
+    const v5, #android:string@sms_short_code_details#t
 
     .restart local v5    # "detailsId":I
     goto/16 :goto_1
@@ -2785,7 +2775,7 @@
 
     move-result-object v18
 
-    const v19, 0x10404d2
+    const v19, #android:string@sms_short_code_confirm_allow#t
 
     move/from16 v0, v19
 
@@ -2801,7 +2791,7 @@
 
     move-result-object v18
 
-    const v19, 0x10404d3
+    const v19, #android:string@sms_short_code_confirm_deny#t
 
     move/from16 v0, v19
 
@@ -3292,13 +3282,13 @@
     .param p1, "tracker"    # Lcom/android/internal/telephony/SMSDispatcher$SmsTracker;
 
     .prologue
-    const v11, 0x108008a
+    const v11, #android:drawable@stat_sys_warning#t
 
-    const v10, 0x10404ce
+    const v10, #android:string@sms_control_no#t
 
-    const v9, 0x10404cd
+    const v9, #android:string@sms_control_yes#t
 
-    const v8, 0x10404cb
+    const v8, #android:string@sms_control_title#t
 
     .line 1229
     invoke-direct {p0, p1}, Lcom/android/internal/telephony/SMSDispatcher;->denyIfQueueLimitReached(Lcom/android/internal/telephony/SMSDispatcher$SmsTracker;)Z
@@ -3329,7 +3319,7 @@
 
     .line 1235
     .local v4, "r":Landroid/content/res/Resources;
-    const v5, 0x10404cc
+    const v5, #android:string@sms_control_message#t
 
     const/4 v6, 0x1
 
@@ -7416,4 +7406,39 @@
     invoke-static {v2, v3}, Landroid/os/Binder;->restoreCallingIdentity(J)V
 
     throw v5
+.end method
+
+.method private mzCheckSimState()Z
+    .locals 2
+
+    .prologue
+    const/4 v0, 0x1
+
+    iget-object v1, p0, Lcom/android/internal/telephony/SMSDispatcher;->mTelephonyManager:Landroid/telephony/TelephonyManager;
+
+    invoke-virtual {v1}, Landroid/telephony/TelephonyManager;->getSimState()I
+
+    move-result v1
+
+    if-eq v0, v1, :cond_0
+
+    iget-object v1, p0, Lcom/android/internal/telephony/SMSDispatcher;->mTelephonyManager:Landroid/telephony/TelephonyManager;
+
+    invoke-virtual {v1}, Landroid/telephony/TelephonyManager;->getSimState()I
+
+    move-result v1
+
+    if-eqz v1, :cond_0
+
+    invoke-static {}, Landroid/os/BuildExt;->isProductInternational()Z
+
+    move-result v1
+
+    if-nez v1, :cond_1
+
+    :cond_0
+    const/4 v0, 0x0
+
+    :cond_1
+    return v0
 .end method

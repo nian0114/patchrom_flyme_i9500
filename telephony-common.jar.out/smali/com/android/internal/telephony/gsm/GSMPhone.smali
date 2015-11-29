@@ -3599,7 +3599,7 @@
 
     move-result-object v1
 
-    const v2, 0x1120075
+    const v2, #android:bool@useImsAlwaysForEmergencyCall#t
 
     invoke-virtual {v1, v2}, Landroid/content/res/Resources;->getBoolean(I)Z
 
@@ -7289,7 +7289,7 @@
     :cond_0
     iget-object v2, p0, Lcom/android/internal/telephony/gsm/GSMPhone;->mContext:Landroid/content/Context;
 
-    const v3, 0x1040004
+    const v3, #android:string@defaultVoiceMailAlphaTag#t
 
     invoke-virtual {v2, v3}, Landroid/content/Context;->getText(I)Ljava/lang/CharSequence;
 
@@ -7416,7 +7416,7 @@
 
     move-result-object v6
 
-    const v7, 0x107003a
+    const v7, #android:array@config_default_vm_number#t
 
     invoke-virtual {v6, v7}, Landroid/content/res/Resources;->getStringArray(I)[Ljava/lang/String;
 
@@ -14296,5 +14296,13 @@
     invoke-virtual {v0}, Lcom/android/internal/telephony/gsm/GsmServiceStateTracker;->enableSingleLocationUpdate()V
 
     .line 1812
+    return-void
+.end method
+
+.method public setIncomingCallIndicationResponse(Z)V
+    .locals 0
+    .param p1, "accept"    # Z
+
+    .prologue
     return-void
 .end method

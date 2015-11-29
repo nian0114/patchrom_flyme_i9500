@@ -31,6 +31,10 @@
 
 
 # instance fields
+.field protected mMzDropDownHorizontalOffset:I
+
+.field protected mMzPopupLayoutMode:I
+
 .field private mDisableChildrenWhenDisabled:Z
 
 .field mDropDownWidth:I
@@ -71,14 +75,12 @@
     .param p2, "mode"    # I
 
     .prologue
-    .line 128
     const/4 v0, 0x0
 
-    const v1, 0x1010081
+    const v1, #android:attr@spinnerStyle#t
 
     invoke-direct {p0, p1, v0, v1, p2}, Landroid/widget/Spinner;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;II)V
 
-    .line 129
     return-void
 .end method
 
@@ -88,12 +90,10 @@
     .param p2, "attrs"    # Landroid/util/AttributeSet;
 
     .prologue
-    .line 139
-    const v0, 0x1010081
+    const v0, #android:attr@spinnerStyle#t
 
     invoke-direct {p0, p1, p2, v0}, Landroid/widget/Spinner;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;I)V
 
-    .line 140
     return-void
 .end method
 
@@ -216,7 +216,7 @@
 
     move-result-object v1
 
-    const v2, 0x10105a2
+    const v2, #android:attr@parentIsDeviceDefault#t
 
     invoke-virtual {v1, v2, v7, v3}, Landroid/content/res/Resources$Theme;->resolveAttribute(ILandroid/util/TypedValue;Z)Z
 
@@ -1800,12 +1800,12 @@
     .param p1, "pixels"    # I
 
     .prologue
-    .line 341
     iget-object v0, p0, Landroid/widget/Spinner;->mPopup:Landroid/widget/Spinner$SpinnerPopup;
 
     invoke-interface {v0, p1}, Landroid/widget/Spinner$SpinnerPopup;->setHorizontalOffset(I)V
 
-    .line 342
+    invoke-direct/range {p0 .. p1}, Landroid/widget/Spinner;->mzSetDropDownHorizontalOffset(I)V
+
     return-void
 .end method
 
@@ -2069,5 +2069,25 @@
 
     .line 733
     :cond_0
+    return-void
+.end method
+
+.method private mzSetDropDownHorizontalOffset(I)V
+    .locals 0
+    .param p1, "pixels"    # I
+
+    .prologue
+    iput p1, p0, Landroid/widget/Spinner;->mMzDropDownHorizontalOffset:I
+
+    return-void
+.end method
+
+.method public setPopupLayoutMode(I)V
+    .locals 0
+    .param p1, "mode"    # I
+
+    .prologue
+    iput p1, p0, Landroid/widget/Spinner;->mMzPopupLayoutMode:I
+
     return-void
 .end method

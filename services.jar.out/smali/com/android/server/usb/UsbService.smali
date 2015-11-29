@@ -12,6 +12,8 @@
 
 
 # static fields
+.field private mMzUsbAudioDeviceManager:Lcom/android/server/usb/MzUsbAudioDeviceManager;
+
 .field private static final TAG:Ljava/lang/String; = "UsbService"
 
 
@@ -159,51 +161,42 @@
 
     if-eqz v3, :cond_1
 
-    .line 129
     const-string v3, "UsbService"
 
     const-string v4, "UsbService -> UsbDeviceManager"
 
     invoke-static {v3, v4}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 130
     new-instance v3, Lcom/android/server/usb/UsbDeviceManager;
 
     invoke-direct {v3, p1}, Lcom/android/server/usb/UsbDeviceManager;-><init>(Landroid/content/Context;)V
 
     iput-object v3, p0, Lcom/android/server/usb/UsbService;->mDeviceManager:Lcom/android/server/usb/UsbDeviceManager;
 
-    .line 133
     :cond_1
     invoke-direct {p0, v6}, Lcom/android/server/usb/UsbService;->setCurrentUser(I)V
 
-    .line 135
     new-instance v2, Landroid/content/IntentFilter;
 
     invoke-direct {v2}, Landroid/content/IntentFilter;-><init>()V
 
-    .line 136
     .local v2, "userFilter":Landroid/content/IntentFilter;
     const-string v3, "android.intent.action.USER_SWITCHED"
 
     invoke-virtual {v2, v3}, Landroid/content/IntentFilter;->addAction(Ljava/lang/String;)V
 
-    .line 137
     const-string v3, "android.intent.action.USER_STOPPED"
 
     invoke-virtual {v2, v3}, Landroid/content/IntentFilter;->addAction(Ljava/lang/String;)V
 
-    .line 138
     iget-object v3, p0, Lcom/android/server/usb/UsbService;->mContext:Landroid/content/Context;
 
     iget-object v4, p0, Lcom/android/server/usb/UsbService;->mUserReceiver:Landroid/content/BroadcastReceiver;
 
     invoke-virtual {v3, v4, v2, v7, v7}, Landroid/content/Context;->registerReceiver(Landroid/content/BroadcastReceiver;Landroid/content/IntentFilter;Ljava/lang/String;Landroid/os/Handler;)Landroid/content/Intent;
 
-    .line 142
     invoke-direct {p0}, Lcom/android/server/usb/UsbService;->registerKnoxModeChangeObserver()V
 
-    .line 145
     return-void
 .end method
 
@@ -1408,5 +1401,38 @@
 
     .line 181
     :cond_1
+
+    invoke-direct/range {p0 .. p0}, Lcom/android/server/usb/UsbService;->mzUsbDeviceSystemReady()V
+
+    return-void
+.end method
+
+.method private initExtFlymeFields(Landroid/content/Context;)V
+    .locals 1
+    .param p1, "context"    # Landroid/content/Context;
+
+    .prologue
+    new-instance v0, Lcom/android/server/usb/MzUsbAudioDeviceManager;
+
+    invoke-direct {v0, p1}, Lcom/android/server/usb/MzUsbAudioDeviceManager;-><init>(Landroid/content/Context;)V
+
+    iput-object v0, p0, Lcom/android/server/usb/UsbService;->mMzUsbAudioDeviceManager:Lcom/android/server/usb/MzUsbAudioDeviceManager;
+
+    return-void
+.end method
+
+.method private mzUsbDeviceSystemReady()V
+    .locals 1
+
+    .prologue
+    iget-object v0, p0, Lcom/android/server/usb/UsbService;->mMzUsbAudioDeviceManager:Lcom/android/server/usb/MzUsbAudioDeviceManager;
+
+    if-eqz v0, :cond_0
+
+    iget-object v0, p0, Lcom/android/server/usb/UsbService;->mMzUsbAudioDeviceManager:Lcom/android/server/usb/MzUsbAudioDeviceManager;
+
+    invoke-virtual {v0}, Lcom/android/server/usb/MzUsbAudioDeviceManager;->systemReady()V
+
+    :cond_0
     return-void
 .end method

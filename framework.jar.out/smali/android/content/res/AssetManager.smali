@@ -119,66 +119,53 @@
 
     const/4 v0, 0x0
 
-    .line 98
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 47
     iput-boolean v0, p0, Landroid/content/res/AssetManager;->DEBUG_ELASTIC:Z
 
-    .line 48
     iput-boolean v0, p0, Landroid/content/res/AssetManager;->isElasticEnabled:Z
 
-    .line 79
     new-instance v0, Landroid/util/TypedValue;
 
     invoke-direct {v0}, Landroid/util/TypedValue;-><init>()V
 
     iput-object v0, p0, Landroid/content/res/AssetManager;->mValue:Landroid/util/TypedValue;
 
-    .line 80
     const/4 v0, 0x2
 
     new-array v0, v0, [J
 
     iput-object v0, p0, Landroid/content/res/AssetManager;->mOffsets:[J
 
-    .line 85
     const/4 v0, 0x0
 
     iput-object v0, p0, Landroid/content/res/AssetManager;->mStringBlocks:[Landroid/content/res/StringBlock;
 
-    .line 87
     iput v1, p0, Landroid/content/res/AssetManager;->mNumRefs:I
 
-    .line 88
     iput-boolean v1, p0, Landroid/content/res/AssetManager;->mOpen:Z
 
-    .line 633
     new-instance v0, Ljava/util/HashMap;
 
     invoke-direct {v0}, Ljava/util/HashMap;-><init>()V
 
     iput-object v0, p0, Landroid/content/res/AssetManager;->elasticAppCookieOffset:Ljava/util/HashMap;
 
-    .line 99
     monitor-enter p0
 
-    .line 104
     const/4 v0, 0x0
 
     :try_start_0
     invoke-direct {p0, v0}, Landroid/content/res/AssetManager;->init(Z)V
 
-    .line 106
     invoke-static {}, Landroid/content/res/AssetManager;->ensureSystemAssets()V
 
-    .line 107
+    invoke-direct/range {p0 .. p0}, Landroid/content/res/AssetManager;->addFlymeAssetPath()V
+
     monitor-exit p0
 
-    .line 108
     return-void
 
-    .line 107
     :catchall_0
     move-exception v0
 
@@ -198,51 +185,42 @@
 
     const/4 v1, 0x1
 
-    .line 120
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 47
     iput-boolean v0, p0, Landroid/content/res/AssetManager;->DEBUG_ELASTIC:Z
 
-    .line 48
     iput-boolean v0, p0, Landroid/content/res/AssetManager;->isElasticEnabled:Z
 
-    .line 79
     new-instance v0, Landroid/util/TypedValue;
 
     invoke-direct {v0}, Landroid/util/TypedValue;-><init>()V
 
     iput-object v0, p0, Landroid/content/res/AssetManager;->mValue:Landroid/util/TypedValue;
 
-    .line 80
     const/4 v0, 0x2
 
     new-array v0, v0, [J
 
     iput-object v0, p0, Landroid/content/res/AssetManager;->mOffsets:[J
 
-    .line 85
     const/4 v0, 0x0
 
     iput-object v0, p0, Landroid/content/res/AssetManager;->mStringBlocks:[Landroid/content/res/StringBlock;
 
-    .line 87
     iput v1, p0, Landroid/content/res/AssetManager;->mNumRefs:I
 
-    .line 88
     iput-boolean v1, p0, Landroid/content/res/AssetManager;->mOpen:Z
 
-    .line 633
     new-instance v0, Ljava/util/HashMap;
 
     invoke-direct {v0}, Ljava/util/HashMap;-><init>()V
 
     iput-object v0, p0, Landroid/content/res/AssetManager;->elasticAppCookieOffset:Ljava/util/HashMap;
 
-    .line 127
     invoke-direct {p0, v1}, Landroid/content/res/AssetManager;->init(Z)V
 
-    .line 129
+    invoke-direct/range {p0 .. p0}, Landroid/content/res/AssetManager;->addFlymeAssetPath()V
+
     return-void
 .end method
 
@@ -2272,4 +2250,15 @@
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
     throw v0
+.end method
+
+.method private addFlymeAssetPath()V
+    .locals 1
+
+    .prologue
+    const-string v0, "/system/framework/flyme-res/flyme-res.apk"
+
+    invoke-virtual {p0, v0}, Landroid/content/res/AssetManager;->addAssetPath(Ljava/lang/String;)I
+
+    return-void
 .end method

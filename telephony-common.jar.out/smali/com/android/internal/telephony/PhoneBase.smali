@@ -802,7 +802,7 @@
 
     move-result-object v4
 
-    const v5, 0x1120045
+    const v5, #android:bool@config_voice_capable#t
 
     invoke-virtual {v4, v5}, Landroid/content/res/Resources;->getBoolean(I)Z
 
@@ -2531,7 +2531,7 @@
 
     move-result-object v8
 
-    const v9, 0x1070045
+    const v9, #android:array@carrier_properties#t
 
     invoke-virtual {v8, v9}, Landroid/content/res/Resources;->getTextArray(I)[Ljava/lang/CharSequence;
 
@@ -5584,7 +5584,7 @@
 
     move-result-object v4
 
-    const v5, 0x112004c
+    const v5, #android:bool@config_telephony_use_own_number_for_voicemail#t
 
     invoke-virtual {v4, v5}, Landroid/content/res/Resources;->getBoolean(I)Z
 
@@ -9881,5 +9881,23 @@
     invoke-interface {v0, p1}, Lcom/android/internal/telephony/Phone;->updatePhoneObject(I)V
 
     .line 1468
+    return-void
+.end method
+
+.method public registerForVoiceCallIncomingIndication(Landroid/os/Handler;ILjava/lang/Object;)V
+    .locals 0
+    .param p1, "h"    # Landroid/os/Handler;
+    .param p2, "what"    # I
+    .param p3, "obj"    # Ljava/lang/Object;
+
+    .prologue
+    return-void
+.end method
+
+.method public unregisterForVoiceCallIncomingIndication(Landroid/os/Handler;)V
+    .locals 0
+    .param p1, "h"    # Landroid/os/Handler;
+
+    .prologue
     return-void
 .end method

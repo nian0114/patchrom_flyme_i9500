@@ -326,10 +326,8 @@
     .param p1, "context"    # Landroid/content/Context;
 
     .prologue
-    .line 399
     const/4 v12, 0x0
 
-    .line 400
     .local v12, "is":Ljava/io/InputStream;
     :try_start_0
     move-object/from16 v0, p0
@@ -756,7 +754,7 @@
 
     move-result-object v23
 
-    const v24, 0x10802e1
+    const v24, #android:drawable@default_wallpaper#t
 
     invoke-virtual/range {v23 .. v24}, Landroid/content/res/Resources;->openRawResource(I)Ljava/io/InputStream;
     :try_end_4
