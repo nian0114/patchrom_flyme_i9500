@@ -9,6 +9,7 @@
 # annotations
 .annotation system Ldalvik/annotation/MemberClasses;
     value = {
+        Lcom/android/internal/policy/impl/PhoneWindow$FlymeInjector;,
         Lcom/android/internal/policy/impl/PhoneWindow$DialogMenuCallback;,
         Lcom/android/internal/policy/impl/PhoneWindow$RotationWatcher;,
         Lcom/android/internal/policy/impl/PhoneWindow$PanelFeatureState;,
@@ -1605,6 +1606,8 @@
     goto :goto_0
 
     :cond_3
+    invoke-static/range {p0 .. p0}, Lcom/android/internal/policy/impl/PhoneWindow$FlymeInjector;->setWindowAttributesToActionbar(Lcom/android/internal/policy/impl/PhoneWindow;)V
+
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/android/internal/policy/impl/PhoneWindow;->mDecorContentParent:Lcom/android/internal/widget/DecorContentParent;
@@ -2433,6 +2436,8 @@
     move-result-object v19
 
     invoke-interface/range {v18 .. v19}, Lcom/android/internal/widget/DecorContentParent;->setIcon(Landroid/graphics/drawable/Drawable;)V
+
+    invoke-static/range {p0 .. p0}, Lcom/android/internal/policy/impl/PhoneWindow$FlymeInjector;->mzSetDefaultIcon(Lcom/android/internal/policy/impl/PhoneWindow;)V
 
     move-object/from16 v0, p0
 
@@ -6745,6 +6750,15 @@
     const/4 v0, 0x0
 
     goto :goto_0
+.end method
+
+.method getDecorContentParent()Lcom/android/internal/widget/DecorContentParent;
+    .locals 1
+
+    .prologue
+    iget-object v0, p0, Lcom/android/internal/policy/impl/PhoneWindow;->mDecorContentParent:Lcom/android/internal/widget/DecorContentParent;
+
+    return-object v0
 .end method
 
 .method public final getDecorView()Landroid/view/View;

@@ -18,6 +18,10 @@
 # static fields
 .field private static final DEBUG:Z = true
 
+.field public static final FLYME_KEYGUARD_CLASS:Ljava/lang/String; = "com.android.keyguard.KeyguardService"
+
+.field public static final FLYME_KEYGUARD_PACKAGE:Ljava/lang/String; = "com.android.keyguard"
+
 .field public static final KEYGUARD_CLASS:Ljava/lang/String; = "com.android.systemui.keyguard.KeyguardService"
 
 .field public static final KEYGUARD_PACKAGE:Ljava/lang/String; = "com.android.systemui"
@@ -194,9 +198,9 @@
     invoke-direct {v0}, Landroid/content/Intent;-><init>()V
 
     .local v0, "intent":Landroid/content/Intent;
-    const-string v1, "com.android.systemui"
+    const-string v1, "com.android.keyguard"
 
-    const-string v2, "com.android.systemui.keyguard.KeyguardService"
+    const-string v2, "com.android.keyguard.KeyguardService"
 
     invoke-virtual {v0, v1, v2}, Landroid/content/Intent;->setClassName(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;
 
@@ -214,7 +218,7 @@
 
     const-string v1, "KeyguardServiceDelegate"
 
-    const-string v2, "*** Keyguard: can\'t bind to com.android.systemui.keyguard.KeyguardService"
+    const-string v2, "*** Keyguard: can\'t bind to com.android.keyguard.KeyguardService"
 
     invoke-static {v1, v2}, Landroid/util/Log;->v(Ljava/lang/String;Ljava/lang/String;)I
 
