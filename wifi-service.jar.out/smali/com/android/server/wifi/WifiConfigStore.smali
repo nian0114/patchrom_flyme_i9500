@@ -2760,6 +2760,8 @@
     goto/16 :goto_1
 
     :cond_16
+    invoke-direct/range {p0 .. p1}, Lcom/android/server/wifi/WifiConfigStore;->mzSetKeyEncry(Landroid/net/wifi/WifiConfiguration;)V
+
     const/4 v13, 0x0
 
     .local v13, "hasSetKey":Z
@@ -4752,6 +4754,12 @@
 
     move-object/from16 v0, p0
 
+    move-object/from16 v1, p1
+
+    invoke-direct {v0, v1, v9}, Lcom/android/server/wifi/WifiConfigStore;->mzSetKeyEncry(Landroid/net/wifi/WifiConfiguration;Landroid/net/wifi/WifiConfiguration;)V
+
+    move-object/from16 v0, p0
+
     iget-object v0, v0, Lcom/android/server/wifi/WifiConfigStore;->mConfiguredNetworks:Ljava/util/HashMap;
 
     move-object/from16 v26, v0
@@ -5681,6 +5689,193 @@
     goto :goto_0
 
     .end local v0    # "config":Landroid/net/wifi/WifiConfiguration;
+    :cond_1
+    return-void
+.end method
+
+.method private mzReadNetworkVariableFromSupplicantFile(Landroid/net/wifi/WifiConfiguration;)Ljava/lang/String;
+    .locals 3
+    .param p1, "configuration"    # Landroid/net/wifi/WifiConfiguration;
+
+    .prologue
+    iget-object v0, p1, Landroid/net/wifi/WifiConfiguration;->preSharedKeyEncry:Ljava/lang/String;
+
+    .local v0, "configurationPsk":Ljava/lang/String;
+    invoke-static {v0}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
+
+    move-result v1
+
+    if-eqz v1, :cond_0
+
+    iget-object v1, p1, Landroid/net/wifi/WifiConfiguration;->SSID:Ljava/lang/String;
+
+    const-string v2, "psk"
+
+    invoke-direct {p0, v1, v2}, Lcom/android/server/wifi/WifiConfigStore;->readNetworkVariableFromSupplicantFile(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v0
+
+    :cond_0
+    return-object v0
+.end method
+
+.method private mzSetKeyEncry(Landroid/net/wifi/WifiConfiguration;)V
+    .locals 3
+    .param p1, "config"    # Landroid/net/wifi/WifiConfiguration;
+
+    .prologue
+    const/4 v2, 0x0
+
+    iget-object v0, p1, Landroid/net/wifi/WifiConfiguration;->preSharedKey:Ljava/lang/String;
+
+    if-eqz v0, :cond_0
+
+    iget-object v0, p1, Landroid/net/wifi/WifiConfiguration;->preSharedKey:Ljava/lang/String;
+
+    const-string v1, "*"
+
+    invoke-virtual {v0, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result v0
+
+    if-nez v0, :cond_0
+
+    iget-object v0, p1, Landroid/net/wifi/WifiConfiguration;->preSharedKey:Ljava/lang/String;
+
+    iput-object v0, p1, Landroid/net/wifi/WifiConfiguration;->preSharedKeyEncry:Ljava/lang/String;
+
+    :cond_0
+    iget-object v0, p1, Landroid/net/wifi/WifiConfiguration;->wepKeys:[Ljava/lang/String;
+
+    if-eqz v0, :cond_1
+
+    iget-object v0, p1, Landroid/net/wifi/WifiConfiguration;->wepKeys:[Ljava/lang/String;
+
+    aget-object v0, v0, v2
+
+    invoke-static {v0}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
+
+    move-result v0
+
+    if-nez v0, :cond_1
+
+    iget-object v0, p1, Landroid/net/wifi/WifiConfiguration;->wepKeys:[Ljava/lang/String;
+
+    aget-object v0, v0, v2
+
+    const-string v1, "*"
+
+    invoke-virtual {v0, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result v0
+
+    if-nez v0, :cond_1
+
+    iget-object v0, p1, Landroid/net/wifi/WifiConfiguration;->wepKeys:[Ljava/lang/String;
+
+    aget-object v0, v0, v2
+
+    iput-object v0, p1, Landroid/net/wifi/WifiConfiguration;->wepKeyEncry:Ljava/lang/String;
+
+    :cond_1
+    return-void
+.end method
+
+.method private mzSetKeyEncry(Landroid/net/wifi/WifiConfiguration;Landroid/net/wifi/WifiConfiguration;)V
+    .locals 3
+    .param p1, "config"    # Landroid/net/wifi/WifiConfiguration;
+    .param p2, "currentConfig"    # Landroid/net/wifi/WifiConfiguration;
+
+    .prologue
+    const/4 v2, 0x0
+
+    iget-object v0, p1, Landroid/net/wifi/WifiConfiguration;->preSharedKey:Ljava/lang/String;
+
+    if-eqz v0, :cond_0
+
+    iget-object v0, p1, Landroid/net/wifi/WifiConfiguration;->preSharedKey:Ljava/lang/String;
+
+    const-string v1, "*"
+
+    invoke-virtual {v0, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result v0
+
+    if-nez v0, :cond_0
+
+    iget-object v0, p1, Landroid/net/wifi/WifiConfiguration;->preSharedKey:Ljava/lang/String;
+
+    iput-object v0, p2, Landroid/net/wifi/WifiConfiguration;->preSharedKeyEncry:Ljava/lang/String;
+
+    :cond_0
+    iget-object v0, p1, Landroid/net/wifi/WifiConfiguration;->wepKeys:[Ljava/lang/String;
+
+    if-eqz v0, :cond_1
+
+    iget-object v0, p1, Landroid/net/wifi/WifiConfiguration;->wepKeys:[Ljava/lang/String;
+
+    aget-object v0, v0, v2
+
+    invoke-static {v0}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
+
+    move-result v0
+
+    if-nez v0, :cond_1
+
+    iget-object v0, p1, Landroid/net/wifi/WifiConfiguration;->wepKeys:[Ljava/lang/String;
+
+    aget-object v0, v0, v2
+
+    const-string v1, "*"
+
+    invoke-virtual {v0, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result v0
+
+    if-nez v0, :cond_1
+
+    iget-object v0, p1, Landroid/net/wifi/WifiConfiguration;->wepKeys:[Ljava/lang/String;
+
+    aget-object v0, v0, v2
+
+    iput-object v0, p2, Landroid/net/wifi/WifiConfiguration;->wepKeyEncry:Ljava/lang/String;
+
+    :cond_1
+    return-void
+.end method
+
+.method private mzSetKeyEncry(Ljava/lang/String;Landroid/net/wifi/WifiConfiguration;)V
+    .locals 3
+    .param p1, "psk"    # Ljava/lang/String;
+    .param p2, "config"    # Landroid/net/wifi/WifiConfiguration;
+
+    .prologue
+    invoke-static {p1}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
+
+    move-result v1
+
+    if-nez v1, :cond_0
+
+    iput-object p1, p2, Landroid/net/wifi/WifiConfiguration;->preSharedKeyEncry:Ljava/lang/String;
+
+    :cond_0
+    iget-object v1, p2, Landroid/net/wifi/WifiConfiguration;->SSID:Ljava/lang/String;
+
+    const-string v2, "wep_key0"
+
+    invoke-direct {p0, v1, v2}, Lcom/android/server/wifi/WifiConfigStore;->readNetworkVariableFromSupplicantFile(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v0
+
+    .local v0, "wepKey":Ljava/lang/String;
+    invoke-static {v0}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
+
+    move-result v1
+
+    if-nez v1, :cond_1
+
+    iput-object v0, p2, Landroid/net/wifi/WifiConfiguration;->wepKeyEncry:Ljava/lang/String;
+
     :cond_1
     return-void
 .end method
@@ -19602,7 +19797,7 @@
 
     const-string v2, "psk"
 
-    invoke-direct {p0, v1, v2}, Lcom/android/server/wifi/WifiConfigStore;->readNetworkVariableFromSupplicantFile(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+    invoke-direct {p0, v12}, Lcom/android/server/wifi/WifiConfigStore;->mzReadNetworkVariableFromSupplicantFile(Landroid/net/wifi/WifiConfiguration;)Ljava/lang/String;
 
     move-result-object v6
 
@@ -19611,7 +19806,7 @@
 
     const-string v2, "psk"
 
-    invoke-direct {p0, v1, v2}, Lcom/android/server/wifi/WifiConfigStore;->readNetworkVariableFromSupplicantFile(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+    invoke-direct {p0, p1}, Lcom/android/server/wifi/WifiConfigStore;->mzReadNetworkVariableFromSupplicantFile(Landroid/net/wifi/WifiConfiguration;)Ljava/lang/String;
 
     move-result-object v7
 
@@ -20404,6 +20599,10 @@
     iput v0, v4, Landroid/net/wifi/WifiConfiguration;->priority:I
 
     :cond_5
+    move-object/from16 v0, p0
+
+    invoke-direct {v0, v13, v4}, Lcom/android/server/wifi/WifiConfigStore;->mzSetKeyEncry(Ljava/lang/String;Landroid/net/wifi/WifiConfiguration;)V
+
     const-string v17, "PrivateFirst"
 
     sget-object v18, Lcom/android/server/wifi/WifiConfigStore;->mPriorityRuleAs:Ljava/lang/String;
