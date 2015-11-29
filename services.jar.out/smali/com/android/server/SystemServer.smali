@@ -3,6 +3,14 @@
 .source "SystemServer.java"
 
 
+# annotations
+.annotation system Ldalvik/annotation/MemberClasses;
+    value = {
+        Lcom/android/server/SystemServer$FlymeInjector;
+    }
+.end annotation
+
+
 # static fields
 .field private static final APPWIDGET_SERVICE_CLASS:Ljava/lang/String; = "com.android.server.appwidget.AppWidgetService"
 
@@ -2153,6 +2161,12 @@
 
     move-object/from16 v0, p0
 
+    move-object/from16 v5, v179
+
+    invoke-static {v0, v5}, Lcom/android/server/SystemServer$FlymeInjector;->startFlymeMoveWindowService(Lcom/android/server/SystemServer;Lcom/android/server/wm/WindowManagerService;)V
+
+    move-object/from16 v0, p0
+
     iget-object v5, v0, Lcom/android/server/SystemServer;->mActivityManagerService:Lcom/android/server/am/ActivityManagerService;
 
     move-object/from16 v0, v179
@@ -2325,13 +2339,13 @@
 
     invoke-static {v5, v6}, Landroid/util/Slog;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    new-instance v106, Lcom/android/server/InputMethodManagerService;
+    new-instance v106, Lcom/android/server/MzInputMethodManagerService;
 
     move-object/from16 v0, v106
 
     move-object/from16 v1, v179
 
-    invoke-direct {v0, v4, v1}, Lcom/android/server/InputMethodManagerService;-><init>(Landroid/content/Context;Lcom/android/server/wm/WindowManagerService;)V
+    invoke-direct {v0, v4, v1}, Lcom/android/server/MzInputMethodManagerService;-><init>(Landroid/content/Context;Lcom/android/server/wm/WindowManagerService;)V
     :try_end_23
     .catch Ljava/lang/Throwable; {:try_start_23 .. :try_end_23} :catch_12
 
@@ -2869,6 +2883,8 @@
     move-object/from16 v0, v154
 
     invoke-static {v5, v0}, Landroid/os/ServiceManager;->addService(Ljava/lang/String;Landroid/os/IBinder;)V
+
+    invoke-static {}, Lcom/android/server/SystemServer$FlymeInjector;->addFlymeStatusBarManagerService()V
     :try_end_37
     .catch Ljava/lang/Throwable; {:try_start_37 .. :try_end_37} :catch_63
 
@@ -2936,6 +2952,8 @@
     const-string v5, "network_management"
 
     invoke-static {v5, v8}, Landroid/os/ServiceManager;->addService(Ljava/lang/String;Landroid/os/IBinder;)V
+
+    invoke-static/range {p0 .. p0}, Lcom/android/server/SystemServer$FlymeInjector;->addNetworkManagementServiceFlyme(Lcom/android/server/SystemServer;)V
     :try_end_3a
     .catch Ljava/lang/Throwable; {:try_start_3a .. :try_end_3a} :catch_22
 
@@ -3153,6 +3171,8 @@
     if-nez v5, :cond_46
 
     :goto_2b
+    invoke-static/range {p0 .. p0}, Lcom/android/server/SystemServer$FlymeInjector;->addFlymePppoeAndSambaService(Lcom/android/server/SystemServer;)V
+
     :try_start_44
     const-string v5, "SystemServer"
 
@@ -4193,6 +4213,8 @@
 
     if-nez v86, :cond_30
 
+    goto :goto_flyme_0
+
     :try_start_66
     const-string v5, "SystemServer"
 
@@ -4225,6 +4247,7 @@
     .restart local v45    # "atlas":Lcom/android/server/AssetAtlasService;
     :cond_30
     :goto_46
+    :goto_flyme_0
     move-object/from16 v0, p0
 
     iget-object v5, v0, Lcom/android/server/SystemServer;->mPackageManager:Landroid/content/pm/PackageManager;
@@ -4792,6 +4815,14 @@
     check-cast v129, Lcom/android/server/MmsServiceBroker;
 
     .restart local v129    # "mmsService":Lcom/android/server/MmsServiceBroker;
+    move-object/from16 v0, p0
+
+    move-object/from16 v5, v179
+
+    move-object/from16 v6, v172
+
+    invoke-static {v0, v5, v6}, Lcom/android/server/SystemServer$FlymeInjector;->startFlymeServices(Lcom/android/server/SystemServer;Lcom/android/server/wm/WindowManagerService;Lcom/android/server/wallpaper/WallpaperManagerService;)V
+
     :try_start_72
     invoke-virtual/range {v168 .. v168}, Lcom/android/server/VibratorService;->systemReady()V
     :try_end_72
@@ -6338,26 +6369,6 @@
 
     move-result-object v66
 
-    .local v66, "constructor":Ljava/lang/reflect/Constructor;
-    const-string v6, "SecExternalDisplayService"
-
-    const/4 v5, 0x1
-
-    new-array v5, v5, [Ljava/lang/Object;
-
-    const/4 v9, 0x0
-
-    aput-object v4, v5, v9
-
-    move-object/from16 v0, v66
-
-    invoke-virtual {v0, v5}, Ljava/lang/reflect/Constructor;->newInstance([Ljava/lang/Object;)Ljava/lang/Object;
-
-    move-result-object v5
-
-    check-cast v5, Landroid/os/IBinder;
-
-    invoke-static {v6, v5}, Landroid/os/ServiceManager;->addService(Ljava/lang/String;Landroid/os/IBinder;)V
     :try_end_85
     .catch Ljava/lang/Throwable; {:try_start_85 .. :try_end_85} :catch_39
 
@@ -7418,4 +7429,24 @@
     invoke-virtual {p0, v0, v1}, Landroid/content/Context;->startServiceAsUser(Landroid/content/Intent;Landroid/os/UserHandle;)Landroid/content/ComponentName;
 
     return-void
+.end method
+
+
+# virtual methods
+.method getPackageManagerService()Lcom/android/server/pm/PackageManagerService;
+    .locals 1
+
+    .prologue
+    iget-object v0, p0, Lcom/android/server/SystemServer;->mPackageManagerService:Lcom/android/server/pm/PackageManagerService;
+
+    return-object v0
+.end method
+
+.method getSystemContext()Landroid/content/Context;
+    .locals 1
+
+    .prologue
+    iget-object v0, p0, Lcom/android/server/SystemServer;->mSystemContext:Landroid/content/Context;
+
+    return-object v0
 .end method

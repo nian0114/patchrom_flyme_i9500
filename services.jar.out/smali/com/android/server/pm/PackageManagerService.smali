@@ -1398,6 +1398,8 @@
 
     iput-boolean v2, v0, Lcom/android/server/pm/PackageManagerService;->mMediaMounted:Z
 
+    invoke-static/range {p0 .. p0}, Lcom/android/server/pm/InjectorPMS;->setup(Lcom/android/server/pm/PackageManagerService;)V
+
     const/16 v2, 0xbf4
 
     invoke-static {}, Landroid/os/SystemClock;->uptimeMillis()J
@@ -2910,6 +2912,8 @@
     move-object/from16 v0, v24
 
     invoke-virtual {v0, v2}, Ljava/util/HashSet;->add(Ljava/lang/Object;)Z
+
+    invoke-static/range {v24 .. v24}, Lcom/android/server/pm/InjectorPMS;->mzAddAlreadyDexOpted(Ljava/util/HashSet;)V
 
     invoke-virtual/range {v43 .. v43}, Ljava/io/File;->list()[Ljava/lang/String;
 
@@ -4554,6 +4558,8 @@
     iget-object v2, v0, Lcom/android/server/pm/PackageManagerService;->mSettings:Lcom/android/server/pm/Settings;
 
     invoke-virtual {v2}, Lcom/android/server/pm/Settings;->writeLPr()V
+
+    invoke-static {}, Lcom/android/server/pm/InjectorPMS;->initDefaultOpService()V
 
     const/16 v2, 0xc1c
 
@@ -23469,13 +23475,14 @@
 
     move-result v4
 
-    if-nez v4, :cond_3
+    if-nez v4, :cond_flyme_0
 
     :cond_0
     const/4 v0, 0x1
 
     .local v0, "allowed":Z
     :goto_0
+    :goto_flyme_0
     if-nez v0, :cond_1
 
     iget v4, p3, Lcom/android/server/pm/BasePermission;->protectionLevel:I
@@ -23613,6 +23620,22 @@
     move-result v0
 
     goto :goto_2
+
+    :cond_flyme_0
+    invoke-static/range {p2 .. p3}, Lcom/android/server/pm/InjectorPMS;->isExternalSystemPackage(Landroid/content/pm/PackageParser$Package;Lcom/android/server/pm/BasePermission;)Z
+
+    move-result v4
+
+    if-nez v4, :cond_flyme_1
+
+    const/4 v0, 0x0
+
+    goto :goto_flyme_0
+
+    :cond_flyme_1
+    const/4 v0, 0x1
+
+    goto :goto_flyme_0
 .end method
 
 .method private handlePendingBroadcastsForBurst([Ljava/lang/String;[Ljava/util/ArrayList;[I[ZI)I
@@ -28324,23 +28347,28 @@
     move-result-object v0
 
     .local v0, "dpm":Landroid/app/admin/IDevicePolicyManager;
-    if-eqz v0, :cond_3
+    if-eqz v0, :cond_2
 
     :try_start_0
     invoke-interface {v0, p1}, Landroid/app/admin/IDevicePolicyManager;->isDeviceOwner(Ljava/lang/String;)Z
 
     move-result v5
 
-    if-eqz v5, :cond_1
+    if-eqz v5, :cond_0
 
-    :cond_0
+    invoke-static/range {p1 .. p2}, Lcom/android/server/pm/InjectorPMS;->removeActiveAdminX(Ljava/lang/String;I)V
+
+    const/4 v3, 0x0
+
+    return v3
+
     :goto_0
     return v3
 
-    :cond_1
+    :cond_0
     const/4 v5, -0x1
 
-    if-ne p2, v5, :cond_2
+    if-ne p2, v5, :cond_1
 
     sget-object v5, Lcom/android/server/pm/PackageManagerService;->sUserManager:Lcom/android/server/pm/UserManagerService;
 
@@ -28356,7 +28384,7 @@
     :goto_2
     array-length v5, v2
 
-    if-ge v1, v5, :cond_3
+    if-ge v1, v5, :cond_2
 
     aget v5, v2, v1
 
@@ -28364,7 +28392,7 @@
 
     move-result v5
 
-    if-nez v5, :cond_0
+    if-nez v5, :cond_flyme_0
 
     add-int/lit8 v1, v1, 0x1
 
@@ -28372,7 +28400,7 @@
 
     .end local v1    # "i":I
     .end local v2    # "users":[I
-    :cond_2
+    :cond_1
     const/4 v5, 0x1
 
     new-array v2, v5, [I
@@ -28390,10 +28418,19 @@
     :catch_0
     move-exception v3
 
-    :cond_3
+    :cond_2
     move v3, v4
 
     goto :goto_0
+
+    :cond_flyme_0
+    aget v5, v2, v1
+
+    invoke-static {p1, v5}, Lcom/android/server/pm/InjectorPMS;->removeActiveAdminX(Ljava/lang/String;I)V
+
+    const/4 v3, 0x0
+
+    return v3
 .end method
 
 .method private isPackageEnabledInAnyPersona(Ljava/lang/String;)Z
@@ -37104,6 +37141,8 @@
 
     iput-object v13, v6, Landroid/content/pm/ActivityInfo;->name:Ljava/lang/String;
 
+    invoke-static {}, Lcom/android/server/pm/InjectorPMS;->getResolverActivityName()V
+
     move-object/from16 v0, p0
 
     iget-object v6, v0, Lcom/android/server/pm/PackageManagerService;->mResolveActivity:Landroid/content/pm/ActivityInfo;
@@ -37225,6 +37264,8 @@
     move-object/from16 v0, p0
 
     iput-object v6, v0, Lcom/android/server/pm/PackageManagerService;->mResolveComponentName:Landroid/content/ComponentName;
+
+    invoke-static {}, Lcom/android/server/pm/InjectorPMS;->scanPackageForAccessControl()V
 
     :cond_6
     monitor-exit v7
@@ -68598,6 +68639,10 @@
     .param p3, "userId"    # I
 
     .prologue
+    invoke-static/range {p1 .. p1}, Lcom/android/server/pm/InjectorPMS;->mzReplaceResolverName(Landroid/content/ComponentName;)Landroid/content/ComponentName;
+
+    move-result-object p1
+
     const/4 v3, 0x0
 
     const/4 v7, 0x0
@@ -68774,6 +68819,10 @@
     monitor-exit v1
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
+
+    invoke-static/range {p1 .. p1}, Lcom/android/server/pm/InjectorPMS;->getAccessActivityInfo(Landroid/content/ComponentName;)Landroid/content/pm/ActivityInfo;
+
+    move-result-object v7
 
     goto/16 :goto_0
 .end method
@@ -78062,8 +78111,7 @@
 
     move/from16 v1, v22
 
-    invoke-direct {v0, v15, v9, v1}, Lcom/android/server/pm/PackageManagerService;->performBootDexOpt(Landroid/content/pm/PackageParser$Package;II)V
-
+    invoke-direct {v0, v15, v9, v1}, Lcom/android/server/pm/PackageManagerService;->mzperformBootDexOpt(Landroid/content/pm/PackageParser$Package;II)V
     goto :goto_6
 
     .end local v15    # "pkg":Landroid/content/pm/PackageParser$Package;
@@ -81615,7 +81663,7 @@
 
     move v5, p4
 
-    invoke-direct/range {v0 .. v5}, Lcom/android/server/pm/PackageManagerService;->chooseBestActivity(Landroid/content/Intent;Ljava/lang/String;ILjava/util/List;I)Landroid/content/pm/ResolveInfo;
+    invoke-direct/range {v0 .. v5}, Lcom/android/server/pm/PackageManagerService;->mzchooseBestActivity(Landroid/content/Intent;Ljava/lang/String;ILjava/util/List;I)Landroid/content/pm/ResolveInfo;
 
     move-result-object v0
 

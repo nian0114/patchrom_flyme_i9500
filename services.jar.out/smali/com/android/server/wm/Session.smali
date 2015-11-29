@@ -1176,7 +1176,7 @@
     .end local v6    # "xPos":I
     .end local v7    # "yPos":I
     :goto_1
-    const v8, 0x3f350481    # 0.7071f
+    const v8, 0x3f800000    # 1.0f
 
     invoke-virtual {v5, v8}, Landroid/view/SurfaceControl;->setAlpha(F)V
 
@@ -1218,6 +1218,8 @@
 
     :try_start_4
     invoke-virtual {v5, v8, v10}, Landroid/view/SurfaceControl;->setPosition(FF)V
+
+    invoke-static/range {p3 .. p6}, Lcom/android/server/wm/InjectorWMS;->setInitXandY(FFFF)V
     :try_end_4
     .catchall {:try_start_4 .. :try_end_4} :catchall_1
 
@@ -1605,7 +1607,7 @@
 
     iget-object v4, v4, Lcom/android/server/wm/WindowManagerService;->mDragState:Lcom/android/server/wm/DragState;
 
-    invoke-virtual {v4}, Lcom/android/server/wm/DragState;->endDragLw()V
+    invoke-virtual {v4}, Lcom/android/server/wm/DragState;->mzEndDragLwAnimation()V
     :try_end_7
     .catchall {:try_start_7 .. :try_end_7} :catchall_0
 

@@ -492,6 +492,51 @@
     .end packed-switch
 .end method
 
+.method private moveShownFrameIfNeed()V
+    .locals 1
+
+    .prologue
+    iget-object v0, p0, Lcom/android/server/wm/WindowStateAnimator;->mWin:Lcom/android/server/wm/WindowState;
+
+    invoke-virtual {v0}, Lcom/android/server/wm/WindowState;->isInMovedMode()Z
+
+    move-result v0
+
+    if-eqz v0, :cond_0
+
+    iget-object v0, p0, Lcom/android/server/wm/WindowStateAnimator;->mWin:Lcom/android/server/wm/WindowState;
+
+    iget-object v0, v0, Lcom/android/server/wm/WindowState;->mWindowStateExt:Lcom/android/server/wm/WindowStateExt;
+
+    invoke-virtual {v0}, Lcom/android/server/wm/WindowStateExt;->moveShownFrame()V
+
+    :cond_0
+    return-void
+.end method
+
+.method private mzIsInMovedMode()Z
+    .locals 1
+
+    .prologue
+    iget-object v0, p0, Lcom/android/server/wm/WindowStateAnimator;->mWin:Lcom/android/server/wm/WindowState;
+
+    invoke-virtual {v0}, Lcom/android/server/wm/WindowState;->isInMovedMode()Z
+
+    move-result v0
+
+    if-nez v0, :cond_0
+
+    const/4 v0, 0x1
+
+    :goto_0
+    return v0
+
+    :cond_0
+    const/4 v0, 0x0
+
+    goto :goto_0
+.end method
+
 .method private stepAnimation(J)Z
     .locals 3
     .param p1, "currentTime"    # J
@@ -720,6 +765,12 @@
 
     invoke-virtual {v6, v8, v8, v5, v0}, Landroid/graphics/Rect;->set(IIII)V
 
+    invoke-direct/range {p0 .. p0}, Lcom/android/server/wm/WindowStateAnimator;->mzIsInMovedMode()Z
+
+    move-result v6
+
+    if-eqz v6, :cond_0
+
     iget-object v6, v4, Lcom/android/server/wm/WindowState;->mSystemDecorRect:Landroid/graphics/Rect;
 
     iget v7, p1, Landroid/graphics/Rect;->left:I
@@ -740,9 +791,10 @@
 
     invoke-virtual {v6, v7, v8, v9, v10}, Landroid/graphics/Rect;->intersect(IIII)Z
 
+    :cond_0
     iget-boolean v6, v4, Lcom/android/server/wm/WindowState;->mEnforceSizeCompat:Z
 
-    if-eqz v6, :cond_0
+    if-eqz v6, :cond_1
 
     iget v6, v4, Lcom/android/server/wm/WindowState;->mInvGlobalScale:F
 
@@ -750,7 +802,7 @@
 
     cmpl-float v6, v6, v7
 
-    if-eqz v6, :cond_0
+    if-eqz v6, :cond_1
 
     iget v2, v4, Lcom/android/server/wm/WindowState;->mInvGlobalScale:F
 
@@ -824,7 +876,7 @@
     iput v7, v6, Landroid/graphics/Rect;->bottom:I
 
     .end local v2    # "scale":F
-    :cond_0
+    :cond_1
     return-void
 .end method
 
@@ -3461,6 +3513,8 @@
     invoke-virtual/range {v27 .. v29}, Landroid/graphics/RectF;->offset(FF)V
 
     :cond_2d
+    invoke-direct/range {p0 .. p0}, Lcom/android/server/wm/WindowStateAnimator;->moveShownFrameIfNeed()V
+
     move-object/from16 v0, p0
 
     iget v0, v0, Lcom/android/server/wm/WindowStateAnimator;->mAlpha:F
@@ -9641,6 +9695,8 @@
     return-void
 
     :cond_1
+    invoke-virtual/range {p0 .. p0}, Lcom/android/server/wm/WindowStateAnimator;->updateSurfaceWindowCropForMeizu()V
+
     iget-object v0, v15, Lcom/android/server/wm/WindowState;->mAttrs:Landroid/view/WindowManager$LayoutParams;
 
     move-object/from16 v17, v0
@@ -11212,4 +11268,33 @@
     iget-object v8, v15, Lcom/android/server/wm/WindowState;->mSystemDecorRect:Landroid/graphics/Rect;
 
     goto/16 :goto_5
+.end method
+
+.method updateSurfaceWindowCropForMeizu()V
+    .locals 5
+
+    .prologue
+    const/4 v4, 0x0
+
+    iget-object v0, p0, Lcom/android/server/wm/WindowStateAnimator;->mWin:Lcom/android/server/wm/WindowState;
+
+    .local v0, "w":Lcom/android/server/wm/WindowState;
+    iget-object v1, v0, Lcom/android/server/wm/WindowState;->mAttrs:Landroid/view/WindowManager$LayoutParams;
+
+    iget v1, v1, Landroid/view/WindowManager$LayoutParams;->type:I
+
+    const/16 v2, 0x7fb
+
+    if-ne v1, v2, :cond_0
+
+    iget-object v1, v0, Lcom/android/server/wm/WindowState;->mSystemDecorRect:Landroid/graphics/Rect;
+
+    iget v2, v0, Lcom/android/server/wm/WindowState;->mRequestedWidth:I
+
+    iget v3, v0, Lcom/android/server/wm/WindowState;->mRequestedHeight:I
+
+    invoke-virtual {v1, v4, v4, v2, v3}, Landroid/graphics/Rect;->set(IIII)V
+
+    :cond_0
+    return-void
 .end method

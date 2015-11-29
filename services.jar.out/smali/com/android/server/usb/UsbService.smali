@@ -24,6 +24,8 @@
 
 .field private final mLock:Ljava/lang/Object;
 
+.field private mMzUsbAudioDeviceManager:Lcom/android/server/usb/MzUsbAudioDeviceManager;
+
 .field private final mSettingsByUser:Landroid/util/SparseArray;
     .annotation build Lcom/android/internal/annotations/GuardedBy;
         value = "mLock"
@@ -158,6 +160,8 @@
     iput-object v3, p0, Lcom/android/server/usb/UsbService;->mDeviceManager:Lcom/android/server/usb/UsbDeviceManager;
 
     :cond_1
+    invoke-direct/range {p0 .. p1}, Lcom/android/server/usb/UsbService;->initExtFlymeFields(Landroid/content/Context;)V
+
     invoke-direct {p0, v6}, Lcom/android/server/usb/UsbService;->setCurrentUser(I)V
 
     new-instance v2, Landroid/content/IntentFilter;
@@ -1244,5 +1248,38 @@
     invoke-virtual {v0}, Lcom/android/server/usb/UsbHostManager;->systemReady()V
 
     :cond_1
+    invoke-direct/range {p0 .. p0}, Lcom/android/server/usb/UsbService;->mzUsbDeviceSystemReady()V
+
     return-void
 .end method
+
+.method private initExtFlymeFields(Landroid/content/Context;)V
+    .locals 1
+    .param p1, "context"    # Landroid/content/Context;
+
+    .prologue
+    new-instance v0, Lcom/android/server/usb/MzUsbAudioDeviceManager;
+
+    invoke-direct {v0, p1}, Lcom/android/server/usb/MzUsbAudioDeviceManager;-><init>(Landroid/content/Context;)V
+
+    iput-object v0, p0, Lcom/android/server/usb/UsbService;->mMzUsbAudioDeviceManager:Lcom/android/server/usb/MzUsbAudioDeviceManager;
+
+    return-void
+.end method
+
+.method private mzUsbDeviceSystemReady()V
+    .locals 1
+
+    .prologue
+    iget-object v0, p0, Lcom/android/server/usb/UsbService;->mMzUsbAudioDeviceManager:Lcom/android/server/usb/MzUsbAudioDeviceManager;
+
+    if-eqz v0, :cond_0
+
+    iget-object v0, p0, Lcom/android/server/usb/UsbService;->mMzUsbAudioDeviceManager:Lcom/android/server/usb/MzUsbAudioDeviceManager;
+
+    invoke-virtual {v0}, Lcom/android/server/usb/MzUsbAudioDeviceManager;->systemReady()V
+
+    :cond_0
+    return-void
+.end method
+

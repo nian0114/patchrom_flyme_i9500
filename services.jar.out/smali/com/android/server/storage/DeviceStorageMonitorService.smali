@@ -942,7 +942,7 @@
     check-cast v8, Landroid/app/NotificationManager;
 
     .local v8, "mNotificationMgr":Landroid/app/NotificationManager;
-    const v3, 0x104046a
+    sget v3, Lcom/flyme/internal/R$string;->low_internal_storage_view_title:I
 
     invoke-virtual {v0, v3}, Landroid/content/Context;->getText(I)Ljava/lang/CharSequence;
 

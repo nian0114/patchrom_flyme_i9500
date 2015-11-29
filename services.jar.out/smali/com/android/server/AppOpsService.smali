@@ -886,9 +886,18 @@
     move-result-object v11
 
     invoke-static {v10, v11}, Landroid/util/Slog;->w(Ljava/lang/String;Ljava/lang/String;)I
+
+    const/16 v10, 0x3e9
+
+    if-ne v9, v10, :cond_flyme_0
+
+    const/16 p1, 0x3e9
+
+    goto :goto_flyme_0
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
+    :cond_flyme_0
     const/4 v7, 0x0
 
     .end local v7    # "ops":Lcom/android/server/AppOpsService$Ops;
@@ -947,6 +956,7 @@
     throw v10
 
     :cond_8
+    :goto_flyme_0
     invoke-static {v4, v5}, Landroid/os/Binder;->restoreCallingIdentity(J)V
 
     .end local v4    # "ident":J
