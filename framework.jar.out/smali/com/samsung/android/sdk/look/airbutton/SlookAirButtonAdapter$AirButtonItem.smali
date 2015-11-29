@@ -36,32 +36,24 @@
     .prologue
     const/4 v0, 0x0
 
-    .line 274
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 227
     iput-object v0, p0, Lcom/samsung/android/sdk/look/airbutton/SlookAirButtonAdapter$AirButtonItem;->mView:Landroid/view/View;
 
-    .line 231
     iput-object v0, p0, Lcom/samsung/android/sdk/look/airbutton/SlookAirButtonAdapter$AirButtonItem;->mImage:Landroid/graphics/drawable/Drawable;
 
-    .line 235
     iput-object v0, p0, Lcom/samsung/android/sdk/look/airbutton/SlookAirButtonAdapter$AirButtonItem;->mDescription:Ljava/lang/String;
 
-    .line 239
     iput-object v0, p0, Lcom/samsung/android/sdk/look/airbutton/SlookAirButtonAdapter$AirButtonItem;->mSubDescription:Ljava/lang/String;
 
-    .line 243
     iput-object v0, p0, Lcom/samsung/android/sdk/look/airbutton/SlookAirButtonAdapter$AirButtonItem;->mData:Ljava/lang/Object;
 
-    .line 275
     if-nez p1, :cond_0
 
     if-nez p2, :cond_0
 
     if-nez p3, :cond_0
 
-    .line 276
     new-instance v0, Ljava/lang/IllegalArgumentException;
 
     const-string v1, "You should set the Drawable, String and Object in Param"
@@ -70,11 +62,9 @@
 
     throw v0
 
-    .line 278
     :cond_0
     invoke-virtual {p0, p1, p2, p3}, Lcom/samsung/android/sdk/look/airbutton/SlookAirButtonAdapter$AirButtonItem;->set(Landroid/graphics/drawable/Drawable;Ljava/lang/String;Ljava/lang/Object;)V
 
-    .line 279
     return-void
 .end method
 
@@ -88,25 +78,18 @@
     .prologue
     const/4 v0, 0x0
 
-    .line 291
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 227
     iput-object v0, p0, Lcom/samsung/android/sdk/look/airbutton/SlookAirButtonAdapter$AirButtonItem;->mView:Landroid/view/View;
 
-    .line 231
     iput-object v0, p0, Lcom/samsung/android/sdk/look/airbutton/SlookAirButtonAdapter$AirButtonItem;->mImage:Landroid/graphics/drawable/Drawable;
 
-    .line 235
     iput-object v0, p0, Lcom/samsung/android/sdk/look/airbutton/SlookAirButtonAdapter$AirButtonItem;->mDescription:Ljava/lang/String;
 
-    .line 239
     iput-object v0, p0, Lcom/samsung/android/sdk/look/airbutton/SlookAirButtonAdapter$AirButtonItem;->mSubDescription:Ljava/lang/String;
 
-    .line 243
     iput-object v0, p0, Lcom/samsung/android/sdk/look/airbutton/SlookAirButtonAdapter$AirButtonItem;->mData:Ljava/lang/Object;
 
-    .line 292
     if-nez p1, :cond_0
 
     if-nez p2, :cond_0
@@ -115,7 +98,6 @@
 
     if-nez p4, :cond_0
 
-    .line 293
     new-instance v0, Ljava/lang/IllegalArgumentException;
 
     const-string v1, "You should set the Drawable, String, subDescription and Object in Param"
@@ -124,11 +106,9 @@
 
     throw v0
 
-    .line 295
     :cond_0
     invoke-virtual {p0, p1, p2, p3, p4}, Lcom/samsung/android/sdk/look/airbutton/SlookAirButtonAdapter$AirButtonItem;->set(Landroid/graphics/drawable/Drawable;Ljava/lang/String;Ljava/lang/String;Ljava/lang/Object;)V
 
-    .line 296
     return-void
 .end method
 
@@ -140,30 +120,22 @@
     .prologue
     const/4 v0, 0x0
 
-    .line 258
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 227
     iput-object v0, p0, Lcom/samsung/android/sdk/look/airbutton/SlookAirButtonAdapter$AirButtonItem;->mView:Landroid/view/View;
 
-    .line 231
     iput-object v0, p0, Lcom/samsung/android/sdk/look/airbutton/SlookAirButtonAdapter$AirButtonItem;->mImage:Landroid/graphics/drawable/Drawable;
 
-    .line 235
     iput-object v0, p0, Lcom/samsung/android/sdk/look/airbutton/SlookAirButtonAdapter$AirButtonItem;->mDescription:Ljava/lang/String;
 
-    .line 239
     iput-object v0, p0, Lcom/samsung/android/sdk/look/airbutton/SlookAirButtonAdapter$AirButtonItem;->mSubDescription:Ljava/lang/String;
 
-    .line 243
     iput-object v0, p0, Lcom/samsung/android/sdk/look/airbutton/SlookAirButtonAdapter$AirButtonItem;->mData:Ljava/lang/Object;
 
-    .line 259
     if-nez p1, :cond_0
 
     if-nez p2, :cond_0
 
-    .line 260
     new-instance v0, Ljava/lang/IllegalArgumentException;
 
     const-string v1, "You should set the View and Object in Param"
@@ -172,11 +144,9 @@
 
     throw v0
 
-    .line 262
     :cond_0
     invoke-virtual {p0, p1, p2}, Lcom/samsung/android/sdk/look/airbutton/SlookAirButtonAdapter$AirButtonItem;->set(Landroid/view/View;Ljava/lang/Object;)V
 
-    .line 263
     return-void
 .end method
 
@@ -186,7 +156,6 @@
     .locals 1
 
     .prologue
-    .line 389
     iget-object v0, p0, Lcom/samsung/android/sdk/look/airbutton/SlookAirButtonAdapter$AirButtonItem;->mData:Ljava/lang/Object;
 
     return-object v0
@@ -196,7 +165,6 @@
     .locals 1
 
     .prologue
-    .line 369
     iget-object v0, p0, Lcom/samsung/android/sdk/look/airbutton/SlookAirButtonAdapter$AirButtonItem;->mDescription:Ljava/lang/String;
 
     return-object v0
@@ -206,7 +174,6 @@
     .locals 1
 
     .prologue
-    .line 359
     iget-object v0, p0, Lcom/samsung/android/sdk/look/airbutton/SlookAirButtonAdapter$AirButtonItem;->mImage:Landroid/graphics/drawable/Drawable;
 
     return-object v0
@@ -216,7 +183,6 @@
     .locals 1
 
     .prologue
-    .line 379
     iget-object v0, p0, Lcom/samsung/android/sdk/look/airbutton/SlookAirButtonAdapter$AirButtonItem;->mSubDescription:Ljava/lang/String;
 
     return-object v0
@@ -226,7 +192,6 @@
     .locals 1
 
     .prologue
-    .line 349
     iget-object v0, p0, Lcom/samsung/android/sdk/look/airbutton/SlookAirButtonAdapter$AirButtonItem;->mView:Landroid/view/View;
 
     return-object v0
@@ -239,16 +204,12 @@
     .param p3, "data"    # Ljava/lang/Object;
 
     .prologue
-    .line 322
     iput-object p1, p0, Lcom/samsung/android/sdk/look/airbutton/SlookAirButtonAdapter$AirButtonItem;->mImage:Landroid/graphics/drawable/Drawable;
 
-    .line 323
     iput-object p2, p0, Lcom/samsung/android/sdk/look/airbutton/SlookAirButtonAdapter$AirButtonItem;->mDescription:Ljava/lang/String;
 
-    .line 324
     iput-object p3, p0, Lcom/samsung/android/sdk/look/airbutton/SlookAirButtonAdapter$AirButtonItem;->mData:Ljava/lang/Object;
 
-    .line 325
     return-void
 .end method
 
@@ -260,19 +221,14 @@
     .param p4, "data"    # Ljava/lang/Object;
 
     .prologue
-    .line 336
     iput-object p1, p0, Lcom/samsung/android/sdk/look/airbutton/SlookAirButtonAdapter$AirButtonItem;->mImage:Landroid/graphics/drawable/Drawable;
 
-    .line 337
     iput-object p2, p0, Lcom/samsung/android/sdk/look/airbutton/SlookAirButtonAdapter$AirButtonItem;->mDescription:Ljava/lang/String;
 
-    .line 338
     iput-object p3, p0, Lcom/samsung/android/sdk/look/airbutton/SlookAirButtonAdapter$AirButtonItem;->mSubDescription:Ljava/lang/String;
 
-    .line 339
     iput-object p4, p0, Lcom/samsung/android/sdk/look/airbutton/SlookAirButtonAdapter$AirButtonItem;->mData:Ljava/lang/Object;
 
-    .line 340
     return-void
 .end method
 
@@ -282,12 +238,9 @@
     .param p2, "data"    # Ljava/lang/Object;
 
     .prologue
-    .line 310
     iput-object p1, p0, Lcom/samsung/android/sdk/look/airbutton/SlookAirButtonAdapter$AirButtonItem;->mView:Landroid/view/View;
 
-    .line 311
     iput-object p2, p0, Lcom/samsung/android/sdk/look/airbutton/SlookAirButtonAdapter$AirButtonItem;->mData:Ljava/lang/Object;
 
-    .line 312
     return-void
 .end method

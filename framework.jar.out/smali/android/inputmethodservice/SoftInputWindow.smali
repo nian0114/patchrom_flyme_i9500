@@ -47,46 +47,34 @@
     .param p9, "takesFocus"    # Z
 
     .prologue
-    .line 76
     invoke-direct {p0, p1, p3}, Landroid/app/Dialog;-><init>(Landroid/content/Context;I)V
 
-    .line 44
     new-instance v0, Landroid/graphics/Rect;
 
     invoke-direct {v0}, Landroid/graphics/Rect;-><init>()V
 
     iput-object v0, p0, Landroid/inputmethodservice/SoftInputWindow;->mBounds:Landroid/graphics/Rect;
 
-    .line 47
     const/4 v0, 0x0
 
     iput-boolean v0, p0, Landroid/inputmethodservice/SoftInputWindow;->mMinimizeFlag:Z
 
-    .line 77
     iput-object p2, p0, Landroid/inputmethodservice/SoftInputWindow;->mName:Ljava/lang/String;
 
-    .line 78
     iput-object p4, p0, Landroid/inputmethodservice/SoftInputWindow;->mCallback:Landroid/inputmethodservice/SoftInputWindow$Callback;
 
-    .line 79
     iput-object p5, p0, Landroid/inputmethodservice/SoftInputWindow;->mKeyEventCallback:Landroid/view/KeyEvent$Callback;
 
-    .line 80
     iput-object p6, p0, Landroid/inputmethodservice/SoftInputWindow;->mDispatcherState:Landroid/view/KeyEvent$DispatcherState;
 
-    .line 81
     iput p7, p0, Landroid/inputmethodservice/SoftInputWindow;->mWindowType:I
 
-    .line 82
     iput p8, p0, Landroid/inputmethodservice/SoftInputWindow;->mGravity:I
 
-    .line 83
     iput-boolean p9, p0, Landroid/inputmethodservice/SoftInputWindow;->mTakesFocus:Z
 
-    .line 84
     invoke-direct {p0}, Landroid/inputmethodservice/SoftInputWindow;->initDockWindow()V
 
-    .line 86
     const-string v0, "input_method"
 
     invoke-virtual {p1, v0}, Landroid/content/Context;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
@@ -97,7 +85,6 @@
 
     iput-object v0, p0, Landroid/inputmethodservice/SoftInputWindow;->mImm:Landroid/view/inputmethod/InputMethodManager;
 
-    .line 88
     return-void
 .end method
 
@@ -105,7 +92,6 @@
     .locals 4
 
     .prologue
-    .line 184
     invoke-virtual {p0}, Landroid/inputmethodservice/SoftInputWindow;->getWindow()Landroid/view/Window;
 
     move-result-object v3
@@ -114,49 +100,39 @@
 
     move-result-object v0
 
-    .line 186
     .local v0, "lp":Landroid/view/WindowManager$LayoutParams;
     iget v3, p0, Landroid/inputmethodservice/SoftInputWindow;->mWindowType:I
 
     iput v3, v0, Landroid/view/WindowManager$LayoutParams;->type:I
 
-    .line 187
     iget-object v3, p0, Landroid/inputmethodservice/SoftInputWindow;->mName:Ljava/lang/String;
 
     invoke-virtual {v0, v3}, Landroid/view/WindowManager$LayoutParams;->setTitle(Ljava/lang/CharSequence;)V
 
-    .line 189
     iget v3, p0, Landroid/inputmethodservice/SoftInputWindow;->mGravity:I
 
     iput v3, v0, Landroid/view/WindowManager$LayoutParams;->gravity:I
 
-    .line 190
     invoke-direct {p0, v0}, Landroid/inputmethodservice/SoftInputWindow;->updateWidthHeight(Landroid/view/WindowManager$LayoutParams;)V
 
-    .line 192
     invoke-virtual {p0}, Landroid/inputmethodservice/SoftInputWindow;->getWindow()Landroid/view/Window;
 
     move-result-object v3
 
     invoke-virtual {v3, v0}, Landroid/view/Window;->setAttributes(Landroid/view/WindowManager$LayoutParams;)V
 
-    .line 194
     const/16 v2, 0x100
 
-    .line 195
     .local v2, "windowSetFlags":I
     const/16 v1, 0x10a
 
-    .line 199
     .local v1, "windowModFlags":I
     iget-boolean v3, p0, Landroid/inputmethodservice/SoftInputWindow;->mTakesFocus:Z
 
     if-nez v3, :cond_0
 
-    .line 200
     or-int/lit8 v2, v2, 0x8
 
-    .line 206
     :goto_0
     invoke-virtual {p0}, Landroid/inputmethodservice/SoftInputWindow;->getWindow()Landroid/view/Window;
 
@@ -164,14 +140,11 @@
 
     invoke-virtual {v3, v2, v1}, Landroid/view/Window;->setFlags(II)V
 
-    .line 207
     return-void
 
-    .line 202
     :cond_0
     or-int/lit8 v2, v2, 0x20
 
-    .line 203
     or-int/lit8 v1, v1, 0x20
 
     goto :goto_0
@@ -186,7 +159,6 @@
 
     const/4 v2, -0x2
 
-    .line 138
     iget v0, p1, Landroid/view/WindowManager$LayoutParams;->gravity:I
 
     const/16 v1, 0x30
@@ -199,22 +171,17 @@
 
     if-ne v0, v1, :cond_1
 
-    .line 139
     :cond_0
     iput v3, p1, Landroid/view/WindowManager$LayoutParams;->width:I
 
-    .line 140
     iput v2, p1, Landroid/view/WindowManager$LayoutParams;->height:I
 
-    .line 145
     :goto_0
     return-void
 
-    .line 142
     :cond_1
     iput v2, p1, Landroid/view/WindowManager$LayoutParams;->width:I
 
-    .line 143
     iput v3, p1, Landroid/view/WindowManager$LayoutParams;->height:I
 
     goto :goto_0
@@ -227,7 +194,6 @@
     .param p1, "ev"    # Landroid/view/MotionEvent;
 
     .prologue
-    .line 98
     invoke-virtual {p0}, Landroid/inputmethodservice/SoftInputWindow;->getWindow()Landroid/view/Window;
 
     move-result-object v2
@@ -240,12 +206,10 @@
 
     invoke-virtual {v2, v3}, Landroid/view/View;->getHitRect(Landroid/graphics/Rect;)V
 
-    .line 101
     iget-boolean v2, p0, Landroid/inputmethodservice/SoftInputWindow;->mMinimizeFlag:Z
 
     if-eqz v2, :cond_0
 
-    .line 102
     iget-object v2, p0, Landroid/inputmethodservice/SoftInputWindow;->mImm:Landroid/view/inputmethod/InputMethodManager;
 
     invoke-virtual {p0}, Landroid/inputmethodservice/SoftInputWindow;->getWindow()Landroid/view/Window;
@@ -262,14 +226,11 @@
 
     invoke-virtual {v2, v3, v4}, Landroid/view/inputmethod/InputMethodManager;->showSoftInputFromInputMethod(Landroid/os/IBinder;I)V
 
-    .line 103
     const/4 v0, 0x1
 
-    .line 114
     :goto_0
     return v0
 
-    .line 106
     :cond_0
     iget-object v2, p0, Landroid/inputmethodservice/SoftInputWindow;->mBounds:Landroid/graphics/Rect;
 
@@ -305,14 +266,12 @@
 
     if-eqz v2, :cond_1
 
-    .line 108
     invoke-super {p0, p1}, Landroid/app/Dialog;->dispatchTouchEvent(Landroid/view/MotionEvent;)Z
 
     move-result v0
 
     goto :goto_0
 
-    .line 110
     :cond_1
     iget-object v2, p0, Landroid/inputmethodservice/SoftInputWindow;->mBounds:Landroid/graphics/Rect;
 
@@ -346,13 +305,11 @@
 
     move-result-object v1
 
-    .line 112
     .local v1, "temp":Landroid/view/MotionEvent;
     invoke-super {p0, v1}, Landroid/app/Dialog;->dispatchTouchEvent(Landroid/view/MotionEvent;)Z
 
     move-result v0
 
-    .line 113
     .local v0, "handled":Z
     invoke-virtual {v1}, Landroid/view/MotionEvent;->recycle()V
 
@@ -363,7 +320,6 @@
     .locals 1
 
     .prologue
-    .line 134
     invoke-virtual {p0}, Landroid/inputmethodservice/SoftInputWindow;->getWindow()Landroid/view/Window;
 
     move-result-object v0
@@ -381,21 +337,17 @@
     .locals 1
 
     .prologue
-    .line 176
     iget-object v0, p0, Landroid/inputmethodservice/SoftInputWindow;->mCallback:Landroid/inputmethodservice/SoftInputWindow$Callback;
 
     if-eqz v0, :cond_0
 
-    .line 177
     iget-object v0, p0, Landroid/inputmethodservice/SoftInputWindow;->mCallback:Landroid/inputmethodservice/SoftInputWindow$Callback;
 
     invoke-interface {v0}, Landroid/inputmethodservice/SoftInputWindow$Callback;->onBackPressed()V
 
-    .line 181
     :goto_0
     return-void
 
-    .line 179
     :cond_0
     invoke-super {p0}, Landroid/app/Dialog;->onBackPressed()V
 
@@ -408,7 +360,6 @@
     .param p2, "event"    # Landroid/view/KeyEvent;
 
     .prologue
-    .line 148
     iget-object v0, p0, Landroid/inputmethodservice/SoftInputWindow;->mKeyEventCallback:Landroid/view/KeyEvent$Callback;
 
     if-eqz v0, :cond_0
@@ -421,10 +372,8 @@
 
     if-eqz v0, :cond_0
 
-    .line 149
     const/4 v0, 0x1
 
-    .line 151
     :goto_0
     return v0
 
@@ -442,7 +391,6 @@
     .param p2, "event"    # Landroid/view/KeyEvent;
 
     .prologue
-    .line 155
     iget-object v0, p0, Landroid/inputmethodservice/SoftInputWindow;->mKeyEventCallback:Landroid/view/KeyEvent$Callback;
 
     if-eqz v0, :cond_0
@@ -455,10 +403,8 @@
 
     if-eqz v0, :cond_0
 
-    .line 156
     const/4 v0, 0x1
 
-    .line 158
     :goto_0
     return v0
 
@@ -477,7 +423,6 @@
     .param p3, "event"    # Landroid/view/KeyEvent;
 
     .prologue
-    .line 169
     iget-object v0, p0, Landroid/inputmethodservice/SoftInputWindow;->mKeyEventCallback:Landroid/view/KeyEvent$Callback;
 
     if-eqz v0, :cond_0
@@ -490,10 +435,8 @@
 
     if-eqz v0, :cond_0
 
-    .line 170
     const/4 v0, 0x1
 
-    .line 172
     :goto_0
     return v0
 
@@ -511,7 +454,6 @@
     .param p2, "event"    # Landroid/view/KeyEvent;
 
     .prologue
-    .line 162
     iget-object v0, p0, Landroid/inputmethodservice/SoftInputWindow;->mKeyEventCallback:Landroid/view/KeyEvent$Callback;
 
     if-eqz v0, :cond_0
@@ -524,10 +466,8 @@
 
     if-eqz v0, :cond_0
 
-    .line 163
     const/4 v0, 0x1
 
-    .line 165
     :goto_0
     return v0
 
@@ -544,15 +484,12 @@
     .param p1, "hasFocus"    # Z
 
     .prologue
-    .line 92
     invoke-super {p0, p1}, Landroid/app/Dialog;->onWindowFocusChanged(Z)V
 
-    .line 93
     iget-object v0, p0, Landroid/inputmethodservice/SoftInputWindow;->mDispatcherState:Landroid/view/KeyEvent$DispatcherState;
 
     invoke-virtual {v0}, Landroid/view/KeyEvent$DispatcherState;->reset()V
 
-    .line 94
     return-void
 .end method
 
@@ -561,7 +498,6 @@
     .param p1, "gravity"    # I
 
     .prologue
-    .line 127
     invoke-virtual {p0}, Landroid/inputmethodservice/SoftInputWindow;->getWindow()Landroid/view/Window;
 
     move-result-object v1
@@ -570,21 +506,17 @@
 
     move-result-object v0
 
-    .line 128
     .local v0, "lp":Landroid/view/WindowManager$LayoutParams;
     iput p1, v0, Landroid/view/WindowManager$LayoutParams;->gravity:I
 
-    .line 129
     invoke-direct {p0, v0}, Landroid/inputmethodservice/SoftInputWindow;->updateWidthHeight(Landroid/view/WindowManager$LayoutParams;)V
 
-    .line 130
     invoke-virtual {p0}, Landroid/inputmethodservice/SoftInputWindow;->getWindow()Landroid/view/Window;
 
     move-result-object v1
 
     invoke-virtual {v1, v0}, Landroid/view/Window;->setAttributes(Landroid/view/WindowManager$LayoutParams;)V
 
-    .line 131
     return-void
 .end method
 
@@ -593,10 +525,8 @@
     .param p1, "flag"    # Z
 
     .prologue
-    .line 214
     iput-boolean p1, p0, Landroid/inputmethodservice/SoftInputWindow;->mMinimizeFlag:Z
 
-    .line 215
     return-void
 .end method
 
@@ -605,7 +535,6 @@
     .param p1, "token"    # Landroid/os/IBinder;
 
     .prologue
-    .line 56
     invoke-virtual {p0}, Landroid/inputmethodservice/SoftInputWindow;->getWindow()Landroid/view/Window;
 
     move-result-object v1
@@ -614,17 +543,14 @@
 
     move-result-object v0
 
-    .line 57
     .local v0, "lp":Landroid/view/WindowManager$LayoutParams;
     iput-object p1, v0, Landroid/view/WindowManager$LayoutParams;->token:Landroid/os/IBinder;
 
-    .line 58
     invoke-virtual {p0}, Landroid/inputmethodservice/SoftInputWindow;->getWindow()Landroid/view/Window;
 
     move-result-object v1
 
     invoke-virtual {v1, v0}, Landroid/view/Window;->setAttributes(Landroid/view/WindowManager$LayoutParams;)V
 
-    .line 59
     return-void
 .end method

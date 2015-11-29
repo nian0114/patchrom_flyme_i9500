@@ -30,7 +30,6 @@
     .locals 0
 
     .prologue
-    .line 4061
     invoke-direct {p0}, Landroid/os/AsyncTask;-><init>()V
 
     return-void
@@ -43,7 +42,6 @@
     .param p1, "x0"    # [Ljava/lang/Object;
 
     .prologue
-    .line 4061
     check-cast p1, [Ljava/lang/Void;
 
     .end local p1    # "x0":[Ljava/lang/Object;
@@ -61,7 +59,6 @@
     .prologue
     const/4 v11, 0x0
 
-    .line 4066
     :try_start_0
     invoke-static {}, Landroid/os/ServiceManager;->listServices()[Ljava/lang/String;
     :try_end_0
@@ -69,21 +66,17 @@
 
     move-result-object v7
 
-    .line 4073
     .local v7, "services":[Ljava/lang/String;
     if-nez v7, :cond_1
 
-    .line 4091
     .end local v7    # "services":[Ljava/lang/String;
     :cond_0
     :goto_0
     return-object v11
 
-    .line 4067
     :catch_0
     move-exception v2
 
-    .line 4068
     .local v2, "ex":Landroid/os/RemoteException;
     const-string v8, "RestrictionPolicy"
 
@@ -113,7 +106,6 @@
 
     goto :goto_0
 
-    .line 4076
     .end local v2    # "ex":Landroid/os/RemoteException;
     .restart local v7    # "services":[Ljava/lang/String;
     :cond_1
@@ -131,22 +123,18 @@
 
     aget-object v6, v0, v3
 
-    .line 4077
     .local v6, "service":Ljava/lang/String;
     invoke-static {v6}, Landroid/os/ServiceManager;->checkService(Ljava/lang/String;)Landroid/os/IBinder;
 
     move-result-object v5
 
-    .line 4078
     .local v5, "obj":Landroid/os/IBinder;
     if-eqz v5, :cond_2
 
-    .line 4079
     invoke-static {}, Landroid/os/Parcel;->obtain()Landroid/os/Parcel;
 
     move-result-object v1
 
-    .line 4081
     .local v1, "data":Landroid/os/Parcel;
     const v8, 0x5f535052
 
@@ -160,23 +148,19 @@
     .catch Landroid/os/RemoteException; {:try_start_1 .. :try_end_1} :catch_1
     .catch Ljava/lang/Exception; {:try_start_1 .. :try_end_1} :catch_2
 
-    .line 4088
     :goto_2
     invoke-virtual {v1}, Landroid/os/Parcel;->recycle()V
 
-    .line 4076
     .end local v1    # "data":Landroid/os/Parcel;
     :cond_2
     add-int/lit8 v3, v3, 0x1
 
     goto :goto_1
 
-    .line 4082
     .restart local v1    # "data":Landroid/os/Parcel;
     :catch_1
     move-exception v2
 
-    .line 4083
     .restart local v2    # "ex":Landroid/os/RemoteException;
     const-string v8, "RestrictionPolicy"
 
@@ -206,12 +190,10 @@
 
     goto :goto_2
 
-    .line 4084
     .end local v2    # "ex":Landroid/os/RemoteException;
     :catch_2
     move-exception v2
 
-    .line 4085
     .local v2, "ex":Ljava/lang/Exception;
     const-string v8, "RestrictionPolicy"
 

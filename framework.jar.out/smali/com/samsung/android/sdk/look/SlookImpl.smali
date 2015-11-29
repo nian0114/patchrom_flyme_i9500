@@ -42,8 +42,7 @@
 
     const/4 v1, -0x1
 
-    .line 22
-    const-string/jumbo v0, "ro.slook.ver"
+    const-string v0, "ro.slook.ver"
 
     invoke-static {v0, v2}, Landroid/os/SystemProperties;->getInt(Ljava/lang/String;I)I
 
@@ -51,13 +50,10 @@
 
     sput v0, Lcom/samsung/android/sdk/look/SlookImpl;->SDK_INT:I
 
-    .line 49
     sput v1, Lcom/samsung/android/sdk/look/SlookImpl;->sCocktailLevel:I
 
-    .line 51
     sput v1, Lcom/samsung/android/sdk/look/SlookImpl;->sUspLevel:I
 
-    .line 53
     const/4 v0, 0x1
 
     new-array v0, v0, [Ljava/lang/String;
@@ -75,10 +71,8 @@
     .locals 0
 
     .prologue
-    .line 20
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 62
     return-void
 .end method
 
@@ -86,7 +80,6 @@
     .locals 1
 
     .prologue
-    .line 59
     sget v0, Lcom/samsung/android/sdk/look/SlookImpl;->SDK_INT:I
 
     return v0
@@ -103,39 +96,32 @@
 
     const/4 v8, 0x1
 
-    .line 70
     packed-switch p0, :pswitch_data_0
 
     :pswitch_0
     move v8, v9
 
-    .line 118
     :cond_0
     :goto_0
     return v8
 
-    .line 72
     :pswitch_1
     sget v10, Lcom/samsung/android/sdk/look/SlookImpl;->SDK_INT:I
 
     if-nez v10, :cond_0
 
-    .line 77
     :pswitch_2
     sget v10, Lcom/samsung/android/sdk/look/SlookImpl;->sUspLevel:I
 
     if-ne v10, v11, :cond_1
 
-    .line 78
     invoke-static {}, Landroid/app/ActivityThread;->getPackageManager()Landroid/content/pm/IPackageManager;
 
     move-result-object v7
 
-    .line 79
     .local v7, "pm":Landroid/content/pm/IPackageManager;
     if-eqz v7, :cond_1
 
-    .line 81
     :try_start_0
     const-string v10, "com.sec.feature.spen_usp"
 
@@ -147,7 +133,6 @@
     :try_end_0
     .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 87
     .end local v7    # "pm":Landroid/content/pm/IPackageManager;
     :cond_1
     sget v10, Lcom/samsung/android/sdk/look/SlookImpl;->sUspLevel:I
@@ -160,12 +145,10 @@
 
     goto :goto_0
 
-    .line 82
     .restart local v7    # "pm":Landroid/content/pm/IPackageManager;
     :catch_0
     move-exception v3
 
-    .line 83
     .local v3, "e":Landroid/os/RemoteException;
     new-instance v8, Ljava/lang/RuntimeException;
 
@@ -175,7 +158,6 @@
 
     throw v8
 
-    .line 90
     .end local v3    # "e":Landroid/os/RemoteException;
     .end local v7    # "pm":Landroid/content/pm/IPackageManager;
     :pswitch_3
@@ -183,16 +165,13 @@
 
     if-ne v10, v11, :cond_3
 
-    .line 91
     invoke-static {}, Landroid/app/ActivityThread;->getPackageManager()Landroid/content/pm/IPackageManager;
 
     move-result-object v7
 
-    .line 92
     .restart local v7    # "pm":Landroid/content/pm/IPackageManager;
     if-eqz v7, :cond_3
 
-    .line 94
     :try_start_1
     const-string v10, "com.sec.feature.cocktailbar"
 
@@ -207,12 +186,10 @@
     :goto_1
     sput v10, Lcom/samsung/android/sdk/look/SlookImpl;->sCocktailLevel:I
 
-    .line 95
     sget v10, Lcom/samsung/android/sdk/look/SlookImpl;->sCocktailLevel:I
 
     if-ne v10, v8, :cond_3
 
-    .line 96
     invoke-static {}, Landroid/app/ActivityThread;->currentActivityThread()Landroid/app/ActivityThread;
 
     move-result-object v10
@@ -221,7 +198,7 @@
 
     move-result-object v10
 
-    const-string/jumbo v11, "normal"
+    const-string v11, "normal"
 
     invoke-static {v10, v11}, Lcom/samsung/android/cocktail/CocktailFeatures;->isSupportCategory(Landroid/content/Context;Ljava/lang/String;)Z
 
@@ -229,16 +206,13 @@
 
     if-nez v10, :cond_3
 
-    .line 97
     const/4 v2, 0x1
 
-    .line 98
     .local v2, "disableCocktail":Z
     invoke-static {}, Landroid/app/ActivityThread;->currentPackageName()Ljava/lang/String;
 
     move-result-object v1
 
-    .line 99
     .local v1, "currentPackageName":Ljava/lang/String;
     sget-object v0, Lcom/samsung/android/sdk/look/SlookImpl;->FORCE_ENABLE_COCKTAIL_PACKAGE_LIST:[Ljava/lang/String;
 
@@ -254,7 +228,6 @@
 
     aget-object v6, v0, v4
 
-    .line 100
     .local v6, "packageName":Ljava/lang/String;
     invoke-virtual {v6, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
@@ -262,22 +235,18 @@
 
     if-eqz v10, :cond_5
 
-    .line 101
     const/4 v2, 0x0
 
-    .line 105
     .end local v6    # "packageName":Ljava/lang/String;
     :cond_2
     if-eqz v2, :cond_3
 
-    .line 106
     const/4 v10, 0x0
 
     sput v10, Lcom/samsung/android/sdk/look/SlookImpl;->sCocktailLevel:I
     :try_end_1
     .catch Landroid/os/RemoteException; {:try_start_1 .. :try_end_1} :catch_1
 
-    .line 115
     .end local v0    # "arr$":[Ljava/lang/String;
     .end local v1    # "currentPackageName":Ljava/lang/String;
     .end local v2    # "disableCocktail":Z
@@ -297,10 +266,8 @@
     :cond_4
     move v10, v9
 
-    .line 94
     goto :goto_1
 
-    .line 99
     .restart local v0    # "arr$":[Ljava/lang/String;
     .restart local v1    # "currentPackageName":Ljava/lang/String;
     .restart local v2    # "disableCocktail":Z
@@ -312,7 +279,6 @@
 
     goto :goto_2
 
-    .line 110
     .end local v0    # "arr$":[Ljava/lang/String;
     .end local v1    # "currentPackageName":Ljava/lang/String;
     .end local v2    # "disableCocktail":Z
@@ -322,7 +288,6 @@
     :catch_1
     move-exception v3
 
-    .line 111
     .restart local v3    # "e":Landroid/os/RemoteException;
     new-instance v8, Ljava/lang/RuntimeException;
 
@@ -332,7 +297,6 @@
 
     throw v8
 
-    .line 70
     nop
 
     :pswitch_data_0

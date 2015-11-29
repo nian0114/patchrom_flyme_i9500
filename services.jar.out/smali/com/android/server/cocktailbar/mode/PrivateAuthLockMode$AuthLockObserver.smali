@@ -24,20 +24,16 @@
     .param p2, "handler"    # Landroid/os/Handler;
 
     .prologue
-    .line 30
     iput-object p1, p0, Lcom/android/server/cocktailbar/mode/PrivateAuthLockMode$AuthLockObserver;->this$0:Lcom/android/server/cocktailbar/mode/PrivateAuthLockMode;
 
-    .line 31
     invoke-direct {p0, p2}, Landroid/database/ContentObserver;-><init>(Landroid/os/Handler;)V
 
-    .line 32
     iget-object v1, p1, Lcom/android/server/cocktailbar/mode/PrivateAuthLockMode;->mContext:Landroid/content/Context;
 
     invoke-virtual {v1}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
 
     move-result-object v0
 
-    .line 33
     .local v0, "resolver":Landroid/content/ContentResolver;
     const-string v1, "kids_home_mode"
 
@@ -49,7 +45,6 @@
 
     invoke-virtual {v0, v1, v2, p0}, Landroid/content/ContentResolver;->registerContentObserver(Landroid/net/Uri;ZLandroid/database/ContentObserver;)V
 
-    .line 35
     return-void
 .end method
 
@@ -60,7 +55,6 @@
     .param p1, "selfChange"    # Z
 
     .prologue
-    .line 39
     iget-object v2, p0, Lcom/android/server/cocktailbar/mode/PrivateAuthLockMode$AuthLockObserver;->this$0:Lcom/android/server/cocktailbar/mode/PrivateAuthLockMode;
 
     iget-object v2, v2, Lcom/android/server/cocktailbar/mode/PrivateAuthLockMode;->mListener:Lcom/android/server/cocktailbar/mode/CocktailBarMode$OnCocktailBarModeListener;
@@ -69,7 +63,6 @@
 
     move-result v0
 
-    .line 40
     .local v0, "currentMode":I
     iget-object v2, p0, Lcom/android/server/cocktailbar/mode/PrivateAuthLockMode$AuthLockObserver;->this$0:Lcom/android/server/cocktailbar/mode/PrivateAuthLockMode;
 
@@ -77,11 +70,9 @@
 
     move-result v1
 
-    .line 41
     .local v1, "newMode":I
     if-eq v0, v1, :cond_0
 
-    .line 43
     # getter for: Lcom/android/server/cocktailbar/mode/PrivateAuthLockMode;->TAG:Ljava/lang/String;
     invoke-static {}, Lcom/android/server/cocktailbar/mode/PrivateAuthLockMode;->access$000()Ljava/lang/String;
 
@@ -107,7 +98,6 @@
 
     invoke-static {v2, v3}, Landroid/util/Slog;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 45
     iget-object v2, p0, Lcom/android/server/cocktailbar/mode/PrivateAuthLockMode$AuthLockObserver;->this$0:Lcom/android/server/cocktailbar/mode/PrivateAuthLockMode;
 
     invoke-virtual {v2}, Lcom/android/server/cocktailbar/mode/PrivateAuthLockMode;->getModeId()I
@@ -116,7 +106,6 @@
 
     if-ne v1, v2, :cond_1
 
-    .line 46
     iget-object v2, p0, Lcom/android/server/cocktailbar/mode/PrivateAuthLockMode$AuthLockObserver;->this$0:Lcom/android/server/cocktailbar/mode/PrivateAuthLockMode;
 
     iget-object v2, v2, Lcom/android/server/cocktailbar/mode/PrivateAuthLockMode;->mListener:Lcom/android/server/cocktailbar/mode/CocktailBarMode$OnCocktailBarModeListener;
@@ -129,12 +118,10 @@
 
     invoke-interface {v2, v3, v4}, Lcom/android/server/cocktailbar/mode/CocktailBarMode$OnCocktailBarModeListener;->onSetMode(ILcom/android/server/cocktailbar/mode/CocktailBarMode;)V
 
-    .line 51
     :cond_0
     :goto_0
     return-void
 
-    .line 48
     :cond_1
     iget-object v2, p0, Lcom/android/server/cocktailbar/mode/PrivateAuthLockMode$AuthLockObserver;->this$0:Lcom/android/server/cocktailbar/mode/PrivateAuthLockMode;
 

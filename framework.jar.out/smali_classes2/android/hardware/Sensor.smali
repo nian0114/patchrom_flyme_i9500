@@ -212,7 +212,6 @@
     .locals 1
 
     .prologue
-    .line 686
     const/16 v0, 0x2c
 
     new-array v0, v0, [I
@@ -276,10 +275,8 @@
     .locals 0
 
     .prologue
-    .line 787
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 788
     return-void
 .end method
 
@@ -289,7 +286,6 @@
     .param p1, "sdkLevel"    # I
 
     .prologue
-    .line 751
     iget v1, p0, Landroid/hardware/Sensor;->mType:I
 
     const/16 v2, 0xb
@@ -300,18 +296,14 @@
 
     if-gt p1, v1, :cond_0
 
-    .line 753
     const/4 v1, 0x3
 
-    .line 765
     :goto_0
     return v1
 
-    .line 755
     :cond_0
     iget v0, p0, Landroid/hardware/Sensor;->mType:I
 
-    .line 756
     .local v0, "offset":I
     sget-object v1, Landroid/hardware/Sensor;->sSensorReportingModes:[I
 
@@ -319,12 +311,10 @@
 
     if-lt v0, v1, :cond_1
 
-    .line 763
     const/16 v1, 0x10
 
     goto :goto_0
 
-    .line 765
     :cond_1
     sget-object v1, Landroid/hardware/Sensor;->sSensorReportingModes:[I
 
@@ -339,7 +329,6 @@
     .locals 1
 
     .prologue
-    .line 863
     iget v0, p0, Landroid/hardware/Sensor;->mFifoMaxEventCount:I
 
     return v0
@@ -349,7 +338,6 @@
     .locals 1
 
     .prologue
-    .line 853
     iget v0, p0, Landroid/hardware/Sensor;->mFifoReservedEventCount:I
 
     return v0
@@ -359,7 +347,6 @@
     .locals 1
 
     .prologue
-    .line 883
     iget v0, p0, Landroid/hardware/Sensor;->mHandle:I
 
     return v0
@@ -369,7 +356,6 @@
     .locals 1
 
     .prologue
-    .line 896
     iget v0, p0, Landroid/hardware/Sensor;->mMaxDelay:I
 
     return v0
@@ -379,7 +365,6 @@
     .locals 1
 
     .prologue
-    .line 822
     iget v0, p0, Landroid/hardware/Sensor;->mMaxRange:F
 
     return v0
@@ -389,7 +374,6 @@
     .locals 1
 
     .prologue
-    .line 845
     iget v0, p0, Landroid/hardware/Sensor;->mMinDelay:I
 
     return v0
@@ -399,7 +383,6 @@
     .locals 1
 
     .prologue
-    .line 794
     iget-object v0, p0, Landroid/hardware/Sensor;->mName:Ljava/lang/String;
 
     return-object v0
@@ -409,7 +392,6 @@
     .locals 1
 
     .prologue
-    .line 836
     iget v0, p0, Landroid/hardware/Sensor;->mPower:F
 
     return v0
@@ -419,7 +401,6 @@
     .locals 1
 
     .prologue
-    .line 745
     iget v0, p0, Landroid/hardware/Sensor;->mFlags:I
 
     and-int/lit8 v0, v0, 0xe
@@ -433,7 +414,6 @@
     .locals 1
 
     .prologue
-    .line 878
     iget-object v0, p0, Landroid/hardware/Sensor;->mRequiredPermission:Ljava/lang/String;
 
     return-object v0
@@ -443,7 +423,6 @@
     .locals 1
 
     .prologue
-    .line 829
     iget v0, p0, Landroid/hardware/Sensor;->mResolution:F
 
     return v0
@@ -453,7 +432,6 @@
     .locals 1
 
     .prologue
-    .line 870
     iget-object v0, p0, Landroid/hardware/Sensor;->mStringType:Ljava/lang/String;
 
     return-object v0
@@ -463,7 +441,6 @@
     .locals 1
 
     .prologue
-    .line 808
     iget v0, p0, Landroid/hardware/Sensor;->mType:I
 
     return v0
@@ -473,7 +450,6 @@
     .locals 1
 
     .prologue
-    .line 801
     iget-object v0, p0, Landroid/hardware/Sensor;->mVendor:Ljava/lang/String;
 
     return-object v0
@@ -483,7 +459,6 @@
     .locals 1
 
     .prologue
-    .line 815
     iget v0, p0, Landroid/hardware/Sensor;->mVersion:I
 
     return v0
@@ -493,7 +468,6 @@
     .locals 1
 
     .prologue
-    .line 927
     iget v0, p0, Landroid/hardware/Sensor;->mFlags:I
 
     and-int/lit8 v0, v0, 0x1
@@ -517,13 +491,10 @@
     .param p2, "res"    # F
 
     .prologue
-    .line 931
     iput p1, p0, Landroid/hardware/Sensor;->mMaxRange:F
 
-    .line 932
     iput p2, p0, Landroid/hardware/Sensor;->mResolution:F
 
-    .line 933
     return-void
 .end method
 
@@ -531,12 +502,11 @@
     .locals 2
 
     .prologue
-    .line 937
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v1, "{Sensor name=\""
+    const-string v1, "{Sensor name=\""
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -632,7 +602,7 @@
 
     move-result-object v0
 
-    const-string/jumbo v1, "}"
+    const-string v1, "}"
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 

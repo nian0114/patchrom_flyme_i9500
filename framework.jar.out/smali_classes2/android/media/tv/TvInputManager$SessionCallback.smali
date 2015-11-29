@@ -19,7 +19,6 @@
     .locals 0
 
     .prologue
-    .line 189
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -33,7 +32,6 @@
     .param p2, "channelUri"    # Landroid/net/Uri;
 
     .prologue
-    .line 216
     return-void
 .end method
 
@@ -42,7 +40,6 @@
     .param p1, "session"    # Landroid/media/tv/TvInputManager$Session;
 
     .prologue
-    .line 270
     return-void
 .end method
 
@@ -52,7 +49,6 @@
     .param p2, "rating"    # Landroid/media/tv/TvContentRating;
 
     .prologue
-    .line 280
     return-void
 .end method
 
@@ -65,7 +61,6 @@
     .param p5, "bottom"    # I
 
     .prologue
-    .line 295
     return-void
 .end method
 
@@ -74,7 +69,6 @@
     .param p1, "session"    # Landroid/media/tv/TvInputManager$Session;
 
     .prologue
-    .line 197
     return-void
 .end method
 
@@ -85,7 +79,6 @@
     .param p3, "eventArgs"    # Landroid/os/Bundle;
 
     .prologue
-    .line 307
     return-void
 .end method
 
@@ -94,7 +87,6 @@
     .param p1, "session"    # Landroid/media/tv/TvInputManager$Session;
 
     .prologue
-    .line 206
     return-void
 .end method
 
@@ -105,7 +97,6 @@
     .param p3, "trackId"    # Ljava/lang/String;
 
     .prologue
-    .line 238
     return-void
 .end method
 
@@ -124,7 +115,6 @@
     .end annotation
 
     .prologue
-    .line 225
     .local p2, "tracks":Ljava/util/List;, "Ljava/util/List<Landroid/media/tv/TvTrackInfo;>;"
     return-void
 .end method
@@ -134,7 +124,6 @@
     .param p1, "session"    # Landroid/media/tv/TvInputManager$Session;
 
     .prologue
-    .line 246
     return-void
 .end method
 
@@ -144,6 +133,5 @@
     .param p2, "reason"    # I
 
     .prologue
-    .line 261
     return-void
 .end method

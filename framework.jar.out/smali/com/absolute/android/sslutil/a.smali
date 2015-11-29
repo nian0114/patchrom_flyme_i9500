@@ -17,7 +17,6 @@
     .locals 0
 
     .prologue
-    .line 70
     iput-object p1, p0, Lcom/absolute/android/sslutil/a;->b:Lcom/absolute/android/sslutil/SslUtil;
 
     iput-object p2, p0, Lcom/absolute/android/sslutil/a;->a:Ljava/lang/String;
@@ -33,10 +32,8 @@
     .locals 4
 
     .prologue
-    .line 72
     const/4 v0, 0x0
 
-    .line 73
     iget-object v1, p0, Lcom/absolute/android/sslutil/a;->a:Ljava/lang/String;
 
     iget-object v2, p0, Lcom/absolute/android/sslutil/a;->a:Ljava/lang/String;
@@ -59,17 +56,14 @@
 
     move-result-object v1
 
-    .line 74
     invoke-virtual {p1, v1}, Ljava/lang/String;->equalsIgnoreCase(Ljava/lang/String;)Z
 
     move-result v1
 
     if-eqz v1, :cond_0
 
-    .line 75
     const/4 v0, 0x1
 
-    .line 77
     :cond_0
     return v0
 .end method

@@ -105,10 +105,8 @@
     .locals 0
 
     .prologue
-    .line 864
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 865
     return-void
 .end method
 
@@ -123,7 +121,6 @@
 
     const/4 v6, 0x0
 
-    .line 1412
     const-string v3, "Telephony"
 
     new-instance v4, Ljava/lang/StringBuilder;
@@ -202,16 +199,13 @@
 
     invoke-static {v3, v4}, Landroid/telephony/Rlog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1414
     const/4 v2, 0x0
 
-    .line 1415
     .local v2, "ret":Ljava/lang/String;
     const/4 v3, 0x4
 
     new-array v1, v3, [B
 
-    .line 1416
     .local v1, "fourBytes":[B
     aget-byte v3, p1, v6
 
@@ -221,7 +215,6 @@
 
     aput-byte v3, v1, v6
 
-    .line 1417
     aget-byte v3, p1, v7
 
     and-int/lit16 v3, v3, 0xff
@@ -230,7 +223,6 @@
 
     aput-byte v3, v1, v7
 
-    .line 1418
     const/4 v3, 0x2
 
     aget-byte v4, p0, p2
@@ -241,7 +233,6 @@
 
     aput-byte v4, v1, v3
 
-    .line 1419
     const/4 v3, 0x3
 
     add-int/lit8 v4, p2, 0x1
@@ -254,7 +245,6 @@
 
     aput-byte v4, v1, v3
 
-    .line 1422
     :try_start_0
     new-instance v2, Ljava/lang/String;
 
@@ -265,21 +255,17 @@
     :try_end_0
     .catch Ljava/io/UnsupportedEncodingException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 1427
     .restart local v2    # "ret":Ljava/lang/String;
     :goto_0
     return-object v2
 
-    .line 1423
     .end local v2    # "ret":Ljava/lang/String;
     :catch_0
     move-exception v0
 
-    .line 1424
     .local v0, "ex":Ljava/io/UnsupportedEncodingException;
     const-string v2, ""
 
-    .line 1425
     .restart local v2    # "ret":Ljava/lang/String;
     const-string v3, "Telephony"
 
@@ -295,7 +281,6 @@
     .param p0, "intent"    # Landroid/content/Intent;
 
     .prologue
-    .line 1359
     const-string v18, "pdus"
 
     move-object/from16 v0, p0
@@ -312,7 +297,6 @@
 
     check-cast v9, [Ljava/lang/Object;
 
-    .line 1360
     .local v9, "messages":[Ljava/lang/Object;
     const-string v18, "format"
 
@@ -324,7 +308,6 @@
 
     move-result-object v4
 
-    .line 1361
     .local v4, "format":Ljava/lang/String;
     const-string v18, "subscription"
 
@@ -342,7 +325,6 @@
 
     move-result-wide v16
 
-    .line 1364
     .local v16, "subId":J
     const-string v18, "Telephony"
 
@@ -370,10 +352,8 @@
 
     invoke-static/range {v18 .. v19}, Landroid/telephony/Rlog;->v(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1366
     array-length v12, v9
 
-    .line 1368
     .local v12, "pduCount":I
     const/16 v18, 0x2
 
@@ -381,19 +361,15 @@
 
     new-array v13, v0, [B
 
-    .line 1369
     .local v13, "shiftBytes":[B
     const/4 v6, 0x0
 
-    .line 1370
     .local v6, "isShiftBytes":Z
     const/4 v14, 0x0
 
-    .line 1374
     .local v14, "startBodyOffset":I
     new-array v10, v12, [Landroid/telephony/SmsMessage;
 
-    .line 1376
     .local v10, "msgs":[Landroid/telephony/SmsMessage;
     const/4 v5, 0x0
 
@@ -401,7 +377,6 @@
     :goto_0
     if-ge v5, v12, :cond_3
 
-    .line 1377
     aget-object v18, v9, v5
 
     check-cast v18, [B
@@ -410,7 +385,6 @@
 
     check-cast v11, [B
 
-    .line 1378
     .local v11, "pdu":[B
     if-eqz v11, :cond_1
 
@@ -420,17 +394,14 @@
 
     if-lez v18, :cond_1
 
-    .line 1379
     invoke-static {v11, v4}, Landroid/telephony/SmsMessage;->createFromPdu([BLjava/lang/String;)Landroid/telephony/SmsMessage;
 
     move-result-object v18
 
     aput-object v18, v10, v5
 
-    .line 1382
     if-eqz v6, :cond_0
 
-    .line 1383
     aget-object v18, v10, v5
 
     move-object/from16 v0, v18
@@ -449,7 +420,6 @@
 
     move-result-object v15
 
-    .line 1384
     .local v15, "str":Ljava/lang/String;
     aget-object v18, v10, v5
 
@@ -463,7 +433,6 @@
 
     move-result-object v8
 
-    .line 1385
     .local v8, "messageBody":Ljava/lang/String;
     new-instance v18, Ljava/lang/StringBuilder;
 
@@ -491,7 +460,6 @@
 
     move-result-object v15
 
-    .line 1386
     aget-object v18, v10, v5
 
     move-object/from16 v0, v18
@@ -504,10 +472,8 @@
 
     invoke-virtual {v0, v15}, Lcom/android/internal/telephony/SmsMessageBase;->replaceMessageBody(Ljava/lang/String;)V
 
-    .line 1387
     const/4 v6, 0x0
 
-    .line 1390
     .end local v8    # "messageBody":Ljava/lang/String;
     .end local v15    # "str":Ljava/lang/String;
     :cond_0
@@ -545,14 +511,12 @@
 
     if-ne v0, v1, :cond_1
 
-    .line 1392
     const-string v18, "Telephony"
 
     const-string v19, "Detect multibyte unicode at the end of page"
 
     invoke-static/range {v18 .. v19}, Landroid/telephony/Rlog;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1393
     aget-object v18, v10, v5
 
     move-object/from16 v0, v18
@@ -565,7 +529,6 @@
 
     move-result-object v7
 
-    .line 1394
     .local v7, "lastbyte":[B
     const/16 v18, 0x0
 
@@ -575,7 +538,6 @@
 
     aput-byte v19, v13, v18
 
-    .line 1395
     const/16 v18, 0x1
 
     const/16 v19, 0x1
@@ -584,7 +546,6 @@
 
     aput-byte v19, v13, v18
 
-    .line 1396
     aget-object v18, v10, v5
 
     move-object/from16 v0, v18
@@ -597,7 +558,6 @@
 
     move-result v14
 
-    .line 1397
     aget-object v18, v10, v5
 
     move-object/from16 v0, v18
@@ -610,7 +570,6 @@
 
     move-result-object v8
 
-    .line 1398
     .restart local v8    # "messageBody":Ljava/lang/String;
     const-string v18, "Telephony"
 
@@ -638,7 +597,6 @@
 
     invoke-static/range {v18 .. v19}, Landroid/telephony/Rlog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1399
     aget-object v18, v10, v5
 
     move-object/from16 v0, v18
@@ -665,10 +623,8 @@
 
     invoke-virtual/range {v18 .. v19}, Lcom/android/internal/telephony/SmsMessageBase;->replaceMessageBody(Ljava/lang/String;)V
 
-    .line 1400
     const/4 v6, 0x1
 
-    .line 1404
     .end local v7    # "lastbyte":[B
     .end local v8    # "messageBody":Ljava/lang/String;
     :cond_1
@@ -676,7 +632,6 @@
 
     if-eqz v18, :cond_2
 
-    .line 1405
     aget-object v18, v10, v5
 
     move-object/from16 v0, v18
@@ -685,13 +640,11 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/telephony/SmsMessage;->setSubId(J)V
 
-    .line 1376
     :cond_2
     add-int/lit8 v5, v5, 0x1
 
     goto/16 :goto_0
 
-    .line 1408
     .end local v11    # "pdu":[B
     :cond_3
     return-object v10

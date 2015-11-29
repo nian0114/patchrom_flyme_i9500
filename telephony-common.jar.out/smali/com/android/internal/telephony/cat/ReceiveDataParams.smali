@@ -20,18 +20,13 @@
     .param p4, "textMessage"    # Lcom/android/internal/telephony/cat/TextMessage;
 
     .prologue
-    .line 432
     invoke-direct {p0, p1}, Lcom/android/internal/telephony/cat/CommandParams;-><init>(Lcom/android/internal/telephony/cat/CommandDetails;)V
 
-    .line 433
     iput p2, p0, Lcom/android/internal/telephony/cat/ReceiveDataParams;->mChannelId:I
 
-    .line 434
     iput-byte p3, p0, Lcom/android/internal/telephony/cat/ReceiveDataParams;->mChannelDataLength:B
 
-    .line 435
     iput-object p4, p0, Lcom/android/internal/telephony/cat/ReceiveDataParams;->mTextMessage:Lcom/android/internal/telephony/cat/TextMessage;
 
-    .line 436
     return-void
 .end method

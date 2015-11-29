@@ -31,20 +31,16 @@
     .param p2, "listener"    # Landroid/os/storage/IMountServiceListener;
 
     .prologue
-    .line 782
     iput-object p1, p0, Lcom/android/server/MountService$MountServiceBinderListener;->this$0:Lcom/android/server/MountService;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 780
     const/4 v0, 0x0
 
     iput v0, p0, Lcom/android/server/MountService$MountServiceBinderListener;->caller:I
 
-    .line 783
     iput-object p2, p0, Lcom/android/server/MountService$MountServiceBinderListener;->mListener:Landroid/os/storage/IMountServiceListener;
 
-    .line 784
     return-void
 .end method
 
@@ -54,7 +50,6 @@
     .locals 3
 
     .prologue
-    .line 795
     iget-object v0, p0, Lcom/android/server/MountService$MountServiceBinderListener;->this$0:Lcom/android/server/MountService;
 
     # getter for: Lcom/android/server/MountService;->mListeners:Ljava/util/ArrayList;
@@ -64,7 +59,6 @@
 
     monitor-enter v1
 
-    .line 796
     :try_start_0
     iget-object v0, p0, Lcom/android/server/MountService$MountServiceBinderListener;->this$0:Lcom/android/server/MountService;
 
@@ -75,7 +69,6 @@
 
     invoke-virtual {v0, p0}, Ljava/util/ArrayList;->remove(Ljava/lang/Object;)Z
 
-    .line 797
     iget-object v0, p0, Lcom/android/server/MountService$MountServiceBinderListener;->mListener:Landroid/os/storage/IMountServiceListener;
 
     invoke-interface {v0}, Landroid/os/storage/IMountServiceListener;->asBinder()Landroid/os/IBinder;
@@ -86,13 +79,10 @@
 
     invoke-interface {v0, p0, v2}, Landroid/os/IBinder;->unlinkToDeath(Landroid/os/IBinder$DeathRecipient;I)Z
 
-    .line 798
     monitor-exit v1
 
-    .line 799
     return-void
 
-    .line 798
     :catchall_0
     move-exception v0
 
@@ -107,7 +97,6 @@
     .locals 1
 
     .prologue
-    .line 791
     iget v0, p0, Lcom/android/server/MountService$MountServiceBinderListener;->caller:I
 
     return v0
@@ -118,9 +107,7 @@
     .param p1, "pid"    # I
 
     .prologue
-    .line 787
     iput p1, p0, Lcom/android/server/MountService$MountServiceBinderListener;->caller:I
 
-    .line 788
     return-void
 .end method

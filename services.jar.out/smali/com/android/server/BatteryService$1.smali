@@ -23,7 +23,6 @@
     .locals 0
 
     .prologue
-    .line 293
     iput-object p1, p0, Lcom/android/server/BatteryService$1;->this$0:Lcom/android/server/BatteryService;
 
     invoke-direct {p0}, Landroid/content/BroadcastReceiver;-><init>()V
@@ -39,12 +38,10 @@
     .param p2, "intent"    # Landroid/content/Intent;
 
     .prologue
-    .line 296
     invoke-virtual {p2}, Landroid/content/Intent;->getAction()Ljava/lang/String;
 
     move-result-object v0
 
-    .line 297
     .local v0, "action":Ljava/lang/String;
     const-string v2, "android.intent.action.SCREEN_ON"
 
@@ -54,7 +51,6 @@
 
     if-eqz v2, :cond_1
 
-    .line 298
     iget-object v2, p0, Lcom/android/server/BatteryService$1;->this$0:Lcom/android/server/BatteryService;
 
     # getter for: Lcom/android/server/BatteryService;->mHandler:Landroid/os/Handler;
@@ -68,12 +64,10 @@
 
     invoke-virtual {v2, v3}, Landroid/os/Handler;->post(Ljava/lang/Runnable;)Z
 
-    .line 421
     :cond_0
     :goto_0
     return-void
 
-    .line 307
     :cond_1
     const-string v2, "android.intent.action.SCREEN_OFF"
 
@@ -83,7 +77,6 @@
 
     if-eqz v2, :cond_2
 
-    .line 308
     iget-object v2, p0, Lcom/android/server/BatteryService$1;->this$0:Lcom/android/server/BatteryService;
 
     # getter for: Lcom/android/server/BatteryService;->mHandler:Landroid/os/Handler;
@@ -99,7 +92,6 @@
 
     goto :goto_0
 
-    .line 317
     :cond_2
     const-string v2, "android.intent.action.USER_SWITCHED"
 
@@ -109,7 +101,6 @@
 
     if-eqz v2, :cond_3
 
-    .line 318
     iget-object v2, p0, Lcom/android/server/BatteryService$1;->this$0:Lcom/android/server/BatteryService;
 
     # getter for: Lcom/android/server/BatteryService;->mHandler:Landroid/os/Handler;
@@ -125,7 +116,6 @@
 
     goto :goto_0
 
-    .line 372
     :cond_3
     const-string v2, "com.android.server.BatteryService.action.DORMANT_START"
 
@@ -135,7 +125,6 @@
 
     if-eqz v2, :cond_4
 
-    .line 373
     iget-object v2, p0, Lcom/android/server/BatteryService$1;->this$0:Lcom/android/server/BatteryService;
 
     # getter for: Lcom/android/server/BatteryService;->mHandler:Landroid/os/Handler;
@@ -151,7 +140,6 @@
 
     goto :goto_0
 
-    .line 382
     :cond_4
     const-string v2, "com.android.server.BatteryService.action.DORMANT_END"
 
@@ -161,7 +149,6 @@
 
     if-eqz v2, :cond_5
 
-    .line 383
     iget-object v2, p0, Lcom/android/server/BatteryService$1;->this$0:Lcom/android/server/BatteryService;
 
     # getter for: Lcom/android/server/BatteryService;->mHandler:Landroid/os/Handler;
@@ -177,7 +164,6 @@
 
     goto :goto_0
 
-    .line 395
     :cond_5
     const-string v2, "com.android.systemui.power.action.POWER_SHARING"
 
@@ -187,8 +173,7 @@
 
     if-eqz v2, :cond_6
 
-    .line 396
-    const-string/jumbo v2, "power_sharing_enable"
+    const-string v2, "power_sharing_enable"
 
     const/4 v3, 0x0
 
@@ -196,7 +181,6 @@
 
     move-result v1
 
-    .line 397
     .local v1, "powerSharingEnable":Z
     iget-object v2, p0, Lcom/android/server/BatteryService$1;->this$0:Lcom/android/server/BatteryService;
 
@@ -213,7 +197,6 @@
 
     goto :goto_0
 
-    .line 410
     .end local v1    # "powerSharingEnable":Z
     :cond_6
     const-string v2, "android.intent.action.ACTION_SHUTDOWN"
@@ -224,7 +207,6 @@
 
     if-eqz v2, :cond_0
 
-    .line 411
     iget-object v2, p0, Lcom/android/server/BatteryService$1;->this$0:Lcom/android/server/BatteryService;
 
     # getter for: Lcom/android/server/BatteryService;->mHandler:Landroid/os/Handler;

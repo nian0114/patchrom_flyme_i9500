@@ -28,7 +28,6 @@
     .locals 1
 
     .prologue
-    .line 81
     const-class v0, Landroid/widget/CalendarView;
 
     invoke-virtual {v0}, Ljava/lang/Class;->getSimpleName()Ljava/lang/String;
@@ -45,12 +44,10 @@
     .param p1, "context"    # Landroid/content/Context;
 
     .prologue
-    .line 102
     const/4 v0, 0x0
 
     invoke-direct {p0, p1, v0}, Landroid/widget/CalendarView;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;)V
 
-    .line 103
     return-void
 .end method
 
@@ -60,12 +57,10 @@
     .param p2, "attrs"    # Landroid/util/AttributeSet;
 
     .prologue
-    .line 106
     const v0, 0x101035d
 
     invoke-direct {p0, p1, p2, v0}, Landroid/widget/CalendarView;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;I)V
 
-    .line 107
     return-void
 .end method
 
@@ -76,12 +71,10 @@
     .param p3, "defStyleAttr"    # I
 
     .prologue
-    .line 110
     const/4 v0, 0x0
 
     invoke-direct {p0, p1, p2, p3, v0}, Landroid/widget/CalendarView;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;II)V
 
-    .line 111
     return-void
 .end method
 
@@ -93,10 +86,8 @@
     .param p4, "defStyleRes"    # I
 
     .prologue
-    .line 114
     invoke-direct {p0, p1, p2, p3, p4}, Landroid/widget/FrameLayout;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;II)V
 
-    .line 116
     new-instance v0, Landroid/widget/CalendarView$LegacyCalendarViewDelegate;
 
     move-object v1, p0
@@ -113,7 +104,6 @@
 
     iput-object v0, p0, Landroid/widget/CalendarView;->mDelegate:Landroid/widget/CalendarView$CalendarViewDelegate;
 
-    .line 117
     return-void
 .end method
 
@@ -121,7 +111,6 @@
     .locals 1
 
     .prologue
-    .line 76
     sget-object v0, Landroid/widget/CalendarView;->LOG_TAG:Ljava/lang/String;
 
     return-object v0
@@ -133,7 +122,6 @@
     .locals 2
 
     .prologue
-    .line 473
     iget-object v0, p0, Landroid/widget/CalendarView;->mDelegate:Landroid/widget/CalendarView$CalendarViewDelegate;
 
     invoke-interface {v0}, Landroid/widget/CalendarView$CalendarViewDelegate;->getDate()J
@@ -147,7 +135,6 @@
     .locals 1
 
     .prologue
-    .line 326
     iget-object v0, p0, Landroid/widget/CalendarView;->mDelegate:Landroid/widget/CalendarView$CalendarViewDelegate;
 
     invoke-interface {v0}, Landroid/widget/CalendarView$CalendarViewDelegate;->getDateTextAppearance()I
@@ -161,7 +148,6 @@
     .locals 1
 
     .prologue
-    .line 435
     iget-object v0, p0, Landroid/widget/CalendarView;->mDelegate:Landroid/widget/CalendarView$CalendarViewDelegate;
 
     invoke-interface {v0}, Landroid/widget/CalendarView$CalendarViewDelegate;->getFirstDayOfWeek()I
@@ -175,7 +161,6 @@
     .locals 1
 
     .prologue
-    .line 182
     iget-object v0, p0, Landroid/widget/CalendarView;->mDelegate:Landroid/widget/CalendarView$CalendarViewDelegate;
 
     invoke-interface {v0}, Landroid/widget/CalendarView$CalendarViewDelegate;->getFocusedMonthDateColor()I
@@ -189,7 +174,6 @@
     .locals 2
 
     .prologue
-    .line 381
     iget-object v0, p0, Landroid/widget/CalendarView;->mDelegate:Landroid/widget/CalendarView$CalendarViewDelegate;
 
     invoke-interface {v0}, Landroid/widget/CalendarView$CalendarViewDelegate;->getMaxDate()J
@@ -203,7 +187,6 @@
     .locals 2
 
     .prologue
-    .line 352
     iget-object v0, p0, Landroid/widget/CalendarView;->mDelegate:Landroid/widget/CalendarView$CalendarViewDelegate;
 
     invoke-interface {v0}, Landroid/widget/CalendarView$CalendarViewDelegate;->getMinDate()J
@@ -217,7 +200,6 @@
     .locals 1
 
     .prologue
-    .line 282
     iget-object v0, p0, Landroid/widget/CalendarView;->mDelegate:Landroid/widget/CalendarView$CalendarViewDelegate;
 
     invoke-interface {v0}, Landroid/widget/CalendarView$CalendarViewDelegate;->getSelectedDateVerticalBar()Landroid/graphics/drawable/Drawable;
@@ -231,7 +213,6 @@
     .locals 1
 
     .prologue
-    .line 160
     iget-object v0, p0, Landroid/widget/CalendarView;->mDelegate:Landroid/widget/CalendarView$CalendarViewDelegate;
 
     invoke-interface {v0}, Landroid/widget/CalendarView$CalendarViewDelegate;->getSelectedWeekBackgroundColor()I
@@ -245,7 +226,6 @@
     .locals 1
 
     .prologue
-    .line 416
     iget-object v0, p0, Landroid/widget/CalendarView;->mDelegate:Landroid/widget/CalendarView$CalendarViewDelegate;
 
     invoke-interface {v0}, Landroid/widget/CalendarView$CalendarViewDelegate;->getShowWeekNumber()Z
@@ -259,7 +239,6 @@
     .locals 1
 
     .prologue
-    .line 138
     iget-object v0, p0, Landroid/widget/CalendarView;->mDelegate:Landroid/widget/CalendarView$CalendarViewDelegate;
 
     invoke-interface {v0}, Landroid/widget/CalendarView$CalendarViewDelegate;->getShownWeekCount()I
@@ -273,7 +252,6 @@
     .locals 1
 
     .prologue
-    .line 204
     iget-object v0, p0, Landroid/widget/CalendarView;->mDelegate:Landroid/widget/CalendarView$CalendarViewDelegate;
 
     invoke-interface {v0}, Landroid/widget/CalendarView$CalendarViewDelegate;->getUnfocusedMonthDateColor()I
@@ -287,7 +265,6 @@
     .locals 1
 
     .prologue
-    .line 304
     iget-object v0, p0, Landroid/widget/CalendarView;->mDelegate:Landroid/widget/CalendarView$CalendarViewDelegate;
 
     invoke-interface {v0}, Landroid/widget/CalendarView$CalendarViewDelegate;->getWeekDayTextAppearance()I
@@ -301,7 +278,6 @@
     .locals 1
 
     .prologue
-    .line 226
     iget-object v0, p0, Landroid/widget/CalendarView;->mDelegate:Landroid/widget/CalendarView$CalendarViewDelegate;
 
     invoke-interface {v0}, Landroid/widget/CalendarView$CalendarViewDelegate;->getWeekNumberColor()I
@@ -315,7 +291,6 @@
     .locals 1
 
     .prologue
-    .line 248
     iget-object v0, p0, Landroid/widget/CalendarView;->mDelegate:Landroid/widget/CalendarView$CalendarViewDelegate;
 
     invoke-interface {v0}, Landroid/widget/CalendarView$CalendarViewDelegate;->getWeekSeparatorLineColor()I
@@ -329,7 +304,6 @@
     .locals 1
 
     .prologue
-    .line 336
     iget-object v0, p0, Landroid/widget/CalendarView;->mDelegate:Landroid/widget/CalendarView$CalendarViewDelegate;
 
     invoke-interface {v0}, Landroid/widget/CalendarView$CalendarViewDelegate;->isEnabled()Z
@@ -344,15 +318,12 @@
     .param p1, "newConfig"    # Landroid/content/res/Configuration;
 
     .prologue
-    .line 513
     invoke-super {p0, p1}, Landroid/widget/FrameLayout;->onConfigurationChanged(Landroid/content/res/Configuration;)V
 
-    .line 514
     iget-object v0, p0, Landroid/widget/CalendarView;->mDelegate:Landroid/widget/CalendarView$CalendarViewDelegate;
 
     invoke-interface {v0, p1}, Landroid/widget/CalendarView$CalendarViewDelegate;->onConfigurationChanged(Landroid/content/res/Configuration;)V
 
-    .line 515
     return-void
 .end method
 
@@ -361,15 +332,12 @@
     .param p1, "event"    # Landroid/view/accessibility/AccessibilityEvent;
 
     .prologue
-    .line 519
     invoke-super {p0, p1}, Landroid/widget/FrameLayout;->onInitializeAccessibilityEvent(Landroid/view/accessibility/AccessibilityEvent;)V
 
-    .line 520
     iget-object v0, p0, Landroid/widget/CalendarView;->mDelegate:Landroid/widget/CalendarView$CalendarViewDelegate;
 
     invoke-interface {v0, p1}, Landroid/widget/CalendarView$CalendarViewDelegate;->onInitializeAccessibilityEvent(Landroid/view/accessibility/AccessibilityEvent;)V
 
-    .line 521
     return-void
 .end method
 
@@ -378,15 +346,12 @@
     .param p1, "info"    # Landroid/view/accessibility/AccessibilityNodeInfo;
 
     .prologue
-    .line 525
     invoke-super {p0, p1}, Landroid/widget/FrameLayout;->onInitializeAccessibilityNodeInfo(Landroid/view/accessibility/AccessibilityNodeInfo;)V
 
-    .line 526
     iget-object v0, p0, Landroid/widget/CalendarView;->mDelegate:Landroid/widget/CalendarView$CalendarViewDelegate;
 
     invoke-interface {v0, p1}, Landroid/widget/CalendarView$CalendarViewDelegate;->onInitializeAccessibilityNodeInfo(Landroid/view/accessibility/AccessibilityNodeInfo;)V
 
-    .line 527
     return-void
 .end method
 
@@ -395,12 +360,10 @@
     .param p1, "date"    # J
 
     .prologue
-    .line 490
     iget-object v0, p0, Landroid/widget/CalendarView;->mDelegate:Landroid/widget/CalendarView$CalendarViewDelegate;
 
     invoke-interface {v0, p1, p2}, Landroid/widget/CalendarView$CalendarViewDelegate;->setDate(J)V
 
-    .line 491
     return-void
 .end method
 
@@ -411,12 +374,10 @@
     .param p4, "center"    # Z
 
     .prologue
-    .line 508
     iget-object v0, p0, Landroid/widget/CalendarView;->mDelegate:Landroid/widget/CalendarView$CalendarViewDelegate;
 
     invoke-interface {v0, p1, p2, p3, p4}, Landroid/widget/CalendarView$CalendarViewDelegate;->setDate(JZZ)V
 
-    .line 509
     return-void
 .end method
 
@@ -425,12 +386,10 @@
     .param p1, "resourceId"    # I
 
     .prologue
-    .line 315
     iget-object v0, p0, Landroid/widget/CalendarView;->mDelegate:Landroid/widget/CalendarView$CalendarViewDelegate;
 
     invoke-interface {v0, p1}, Landroid/widget/CalendarView$CalendarViewDelegate;->setDateTextAppearance(I)V
 
-    .line 316
     return-void
 .end method
 
@@ -439,12 +398,10 @@
     .param p1, "enabled"    # Z
 
     .prologue
-    .line 331
     iget-object v0, p0, Landroid/widget/CalendarView;->mDelegate:Landroid/widget/CalendarView$CalendarViewDelegate;
 
     invoke-interface {v0, p1}, Landroid/widget/CalendarView$CalendarViewDelegate;->setEnabled(Z)V
 
-    .line 332
     return-void
 .end method
 
@@ -453,12 +410,10 @@
     .param p1, "firstDayOfWeek"    # I
 
     .prologue
-    .line 454
     iget-object v0, p0, Landroid/widget/CalendarView;->mDelegate:Landroid/widget/CalendarView$CalendarViewDelegate;
 
     invoke-interface {v0, p1}, Landroid/widget/CalendarView$CalendarViewDelegate;->setFirstDayOfWeek(I)V
 
-    .line 455
     return-void
 .end method
 
@@ -467,12 +422,10 @@
     .param p1, "color"    # I
 
     .prologue
-    .line 171
     iget-object v0, p0, Landroid/widget/CalendarView;->mDelegate:Landroid/widget/CalendarView$CalendarViewDelegate;
 
     invoke-interface {v0, p1}, Landroid/widget/CalendarView$CalendarViewDelegate;->setFocusedMonthDateColor(I)V
 
-    .line 172
     return-void
 .end method
 
@@ -481,12 +434,10 @@
     .param p1, "maxDate"    # J
 
     .prologue
-    .line 394
     iget-object v0, p0, Landroid/widget/CalendarView;->mDelegate:Landroid/widget/CalendarView$CalendarViewDelegate;
 
     invoke-interface {v0, p1, p2}, Landroid/widget/CalendarView$CalendarViewDelegate;->setMaxDate(J)V
 
-    .line 395
     return-void
 .end method
 
@@ -495,12 +446,10 @@
     .param p1, "minDate"    # J
 
     .prologue
-    .line 365
     iget-object v0, p0, Landroid/widget/CalendarView;->mDelegate:Landroid/widget/CalendarView$CalendarViewDelegate;
 
     invoke-interface {v0, p1, p2}, Landroid/widget/CalendarView$CalendarViewDelegate;->setMinDate(J)V
 
-    .line 366
     return-void
 .end method
 
@@ -509,12 +458,10 @@
     .param p1, "listener"    # Landroid/widget/CalendarView$OnDateChangeListener;
 
     .prologue
-    .line 463
     iget-object v0, p0, Landroid/widget/CalendarView;->mDelegate:Landroid/widget/CalendarView$CalendarViewDelegate;
 
     invoke-interface {v0, p1}, Landroid/widget/CalendarView$CalendarViewDelegate;->setOnDateChangeListener(Landroid/widget/CalendarView$OnDateChangeListener;)V
 
-    .line 464
     return-void
 .end method
 
@@ -523,12 +470,10 @@
     .param p1, "resourceId"    # I
 
     .prologue
-    .line 260
     iget-object v0, p0, Landroid/widget/CalendarView;->mDelegate:Landroid/widget/CalendarView$CalendarViewDelegate;
 
     invoke-interface {v0, p1}, Landroid/widget/CalendarView$CalendarViewDelegate;->setSelectedDateVerticalBar(I)V
 
-    .line 261
     return-void
 .end method
 
@@ -537,12 +482,10 @@
     .param p1, "drawable"    # Landroid/graphics/drawable/Drawable;
 
     .prologue
-    .line 272
     iget-object v0, p0, Landroid/widget/CalendarView;->mDelegate:Landroid/widget/CalendarView$CalendarViewDelegate;
 
     invoke-interface {v0, p1}, Landroid/widget/CalendarView$CalendarViewDelegate;->setSelectedDateVerticalBar(Landroid/graphics/drawable/Drawable;)V
 
-    .line 273
     return-void
 .end method
 
@@ -551,12 +494,10 @@
     .param p1, "color"    # I
 
     .prologue
-    .line 149
     iget-object v0, p0, Landroid/widget/CalendarView;->mDelegate:Landroid/widget/CalendarView$CalendarViewDelegate;
 
     invoke-interface {v0, p1}, Landroid/widget/CalendarView$CalendarViewDelegate;->setSelectedWeekBackgroundColor(I)V
 
-    .line 150
     return-void
 .end method
 
@@ -565,12 +506,10 @@
     .param p1, "showWeekNumber"    # Z
 
     .prologue
-    .line 405
     iget-object v0, p0, Landroid/widget/CalendarView;->mDelegate:Landroid/widget/CalendarView$CalendarViewDelegate;
 
     invoke-interface {v0, p1}, Landroid/widget/CalendarView$CalendarViewDelegate;->setShowWeekNumber(Z)V
 
-    .line 406
     return-void
 .end method
 
@@ -579,12 +518,10 @@
     .param p1, "count"    # I
 
     .prologue
-    .line 127
     iget-object v0, p0, Landroid/widget/CalendarView;->mDelegate:Landroid/widget/CalendarView$CalendarViewDelegate;
 
     invoke-interface {v0, p1}, Landroid/widget/CalendarView$CalendarViewDelegate;->setShownWeekCount(I)V
 
-    .line 128
     return-void
 .end method
 
@@ -593,12 +530,10 @@
     .param p1, "color"    # I
 
     .prologue
-    .line 193
     iget-object v0, p0, Landroid/widget/CalendarView;->mDelegate:Landroid/widget/CalendarView$CalendarViewDelegate;
 
     invoke-interface {v0, p1}, Landroid/widget/CalendarView$CalendarViewDelegate;->setUnfocusedMonthDateColor(I)V
 
-    .line 194
     return-void
 .end method
 
@@ -607,12 +542,10 @@
     .param p1, "resourceId"    # I
 
     .prologue
-    .line 293
     iget-object v0, p0, Landroid/widget/CalendarView;->mDelegate:Landroid/widget/CalendarView$CalendarViewDelegate;
 
     invoke-interface {v0, p1}, Landroid/widget/CalendarView$CalendarViewDelegate;->setWeekDayTextAppearance(I)V
 
-    .line 294
     return-void
 .end method
 
@@ -621,12 +554,10 @@
     .param p1, "color"    # I
 
     .prologue
-    .line 215
     iget-object v0, p0, Landroid/widget/CalendarView;->mDelegate:Landroid/widget/CalendarView$CalendarViewDelegate;
 
     invoke-interface {v0, p1}, Landroid/widget/CalendarView$CalendarViewDelegate;->setWeekNumberColor(I)V
 
-    .line 216
     return-void
 .end method
 
@@ -635,11 +566,9 @@
     .param p1, "color"    # I
 
     .prologue
-    .line 237
     iget-object v0, p0, Landroid/widget/CalendarView;->mDelegate:Landroid/widget/CalendarView$CalendarViewDelegate;
 
     invoke-interface {v0, p1}, Landroid/widget/CalendarView$CalendarViewDelegate;->setWeekSeparatorLineColor(I)V
 
-    .line 238
     return-void
 .end method

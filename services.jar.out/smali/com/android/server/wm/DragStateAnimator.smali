@@ -44,48 +44,38 @@
     .prologue
     const/4 v1, 0x0
 
-    .line 632
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 625
     new-instance v0, Landroid/view/animation/Transformation;
 
     invoke-direct {v0}, Landroid/view/animation/Transformation;-><init>()V
 
     iput-object v0, p0, Lcom/android/server/wm/DragStateAnimator;->mTransformation:Landroid/view/animation/Transformation;
 
-    .line 628
     iput v1, p0, Lcom/android/server/wm/DragStateAnimator;->TYPE_NONE:I
 
-    .line 629
     const/4 v0, 0x1
 
     iput v0, p0, Lcom/android/server/wm/DragStateAnimator;->TYPE_SPLIT:I
 
-    .line 630
     const/4 v0, 0x2
 
     iput v0, p0, Lcom/android/server/wm/DragStateAnimator;->TYPE_SMARTCLIP:I
 
-    .line 633
     iput-object p1, p0, Lcom/android/server/wm/DragStateAnimator;->mState:Lcom/android/server/wm/DragState;
 
-    .line 634
     iget-object v0, p1, Lcom/android/server/wm/DragState;->mService:Lcom/android/server/wm/WindowManagerService;
 
     iput-object v0, p0, Lcom/android/server/wm/DragStateAnimator;->mService:Lcom/android/server/wm/WindowManagerService;
 
-    .line 635
     iput v1, p0, Lcom/android/server/wm/DragStateAnimator;->mType:I
 
-    .line 636
     iget-object v0, p0, Lcom/android/server/wm/DragStateAnimator;->mService:Lcom/android/server/wm/WindowManagerService;
 
     iget-object v1, v0, Lcom/android/server/wm/WindowManagerService;->mWindowMap:Ljava/util/HashMap;
 
     monitor-enter v1
 
-    .line 637
     :try_start_0
     iget-object v0, p0, Lcom/android/server/wm/DragStateAnimator;->mService:Lcom/android/server/wm/WindowManagerService;
 
@@ -103,13 +93,10 @@
 
     iput-object v0, p0, Lcom/android/server/wm/DragStateAnimator;->mTargetWin:Lcom/android/server/wm/WindowState;
 
-    .line 638
     monitor-exit v1
 
-    .line 639
     return-void
 
-    .line 638
     :catchall_0
     move-exception v0
 
@@ -127,7 +114,6 @@
     .prologue
     const/4 v0, 0x0
 
-    .line 722
     iget-object v4, p0, Lcom/android/server/wm/DragStateAnimator;->mAnimation:Landroid/view/animation/Animation;
 
     if-eqz v4, :cond_0
@@ -136,18 +122,15 @@
 
     if-nez v4, :cond_1
 
-    .line 759
     :cond_0
     :goto_0
     return v0
 
-    .line 725
     :cond_1
     iget-object v4, p0, Lcom/android/server/wm/DragStateAnimator;->mTransformation:Landroid/view/animation/Transformation;
 
     invoke-virtual {v4}, Landroid/view/animation/Transformation;->clear()V
 
-    .line 726
     iget-object v4, p0, Lcom/android/server/wm/DragStateAnimator;->mAnimation:Landroid/view/animation/Animation;
 
     iget-object v5, p0, Lcom/android/server/wm/DragStateAnimator;->mTransformation:Landroid/view/animation/Transformation;
@@ -156,7 +139,6 @@
 
     move-result v0
 
-    .line 732
     .local v0, "more":Z
     iget-object v4, p0, Lcom/android/server/wm/DragStateAnimator;->mService:Lcom/android/server/wm/WindowManagerService;
 
@@ -164,14 +146,11 @@
 
     iget-object v2, v4, Lcom/android/server/wm/DragState;->mSurfaceControl:Landroid/view/SurfaceControl;
 
-    .line 733
     .local v2, "surfaceControl":Landroid/view/SurfaceControl;
     invoke-static {}, Landroid/view/SurfaceControl;->openTransaction()V
 
-    .line 736
     const/4 v1, 0x0
 
-    .line 737
     .local v1, "spec":Landroid/view/MagnificationSpec;
     :try_start_0
     iget-object v4, p0, Lcom/android/server/wm/DragStateAnimator;->mTargetWin:Lcom/android/server/wm/WindowState;
@@ -190,7 +169,6 @@
 
     if-eqz v4, :cond_3
 
-    .line 738
     :cond_2
     iget-object v4, p0, Lcom/android/server/wm/DragStateAnimator;->mTargetWin:Lcom/android/server/wm/WindowState;
 
@@ -198,7 +176,6 @@
 
     move-result-object v1
 
-    .line 741
     :cond_3
     if-eqz v1, :cond_4
 
@@ -208,7 +185,6 @@
 
     if-nez v4, :cond_4
 
-    .line 742
     iget-object v4, p0, Lcom/android/server/wm/DragStateAnimator;->mTransformation:Landroid/view/animation/Transformation;
 
     invoke-virtual {v4}, Landroid/view/animation/Transformation;->getMatrix()Landroid/graphics/Matrix;
@@ -221,7 +197,6 @@
 
     invoke-virtual {v4, v5, v6}, Landroid/graphics/Matrix;->postScale(FF)Z
 
-    .line 743
     iget-object v4, p0, Lcom/android/server/wm/DragStateAnimator;->mTransformation:Landroid/view/animation/Transformation;
 
     invoke-virtual {v4}, Landroid/view/animation/Transformation;->getMatrix()Landroid/graphics/Matrix;
@@ -234,13 +209,11 @@
 
     invoke-virtual {v4, v5, v6}, Landroid/graphics/Matrix;->postTranslate(FF)Z
 
-    .line 747
     :cond_4
     iget-object v4, p0, Lcom/android/server/wm/DragStateAnimator;->mService:Lcom/android/server/wm/WindowManagerService;
 
     iget-object v3, v4, Lcom/android/server/wm/WindowManagerService;->mTmpFloats:[F
 
-    .line 748
     .local v3, "tmpFloats":[F
     iget-object v4, p0, Lcom/android/server/wm/DragStateAnimator;->mTransformation:Landroid/view/animation/Transformation;
 
@@ -250,14 +223,12 @@
 
     invoke-virtual {v4, v3}, Landroid/graphics/Matrix;->getValues([F)V
 
-    .line 749
     iget-object v4, p0, Lcom/android/server/wm/DragStateAnimator;->mState:Lcom/android/server/wm/DragState;
 
     iget-boolean v4, v4, Lcom/android/server/wm/DragState;->mDragResult:Z
 
     if-nez v4, :cond_5
 
-    .line 750
     const/4 v4, 0x2
 
     aget v4, v3, v4
@@ -268,7 +239,6 @@
 
     invoke-virtual {v2, v4, v5}, Landroid/view/SurfaceControl;->setPosition(FF)V
 
-    .line 752
     :cond_5
     iget-object v4, p0, Lcom/android/server/wm/DragStateAnimator;->mTransformation:Landroid/view/animation/Transformation;
 
@@ -278,7 +248,6 @@
 
     invoke-virtual {v2, v4}, Landroid/view/SurfaceControl;->setAlpha(F)V
 
-    .line 753
     const/4 v4, 0x0
 
     aget v4, v3, v4
@@ -299,7 +268,6 @@
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 756
     invoke-static {}, Landroid/view/SurfaceControl;->closeTransaction()V
 
     goto/16 :goto_0
@@ -319,14 +287,12 @@
     .locals 2
 
     .prologue
-    .line 799
     invoke-static {}, Landroid/os/SystemClock;->uptimeMillis()J
 
     move-result-wide v0
 
     iput-wide v0, p0, Lcom/android/server/wm/DragStateAnimator;->mCurrentTime:J
 
-    .line 800
     iget-wide v0, p0, Lcom/android/server/wm/DragStateAnimator;->mCurrentTime:J
 
     invoke-virtual {p0, v0, v1}, Lcom/android/server/wm/DragStateAnimator;->stepAnimationLocked(J)Z
@@ -335,25 +301,21 @@
 
     if-nez v0, :cond_0
 
-    .line 801
     iget-object v0, p0, Lcom/android/server/wm/DragStateAnimator;->mService:Lcom/android/server/wm/WindowManagerService;
 
     iget-object v0, v0, Lcom/android/server/wm/WindowManagerService;->mDragState:Lcom/android/server/wm/DragState;
 
     invoke-virtual {v0}, Lcom/android/server/wm/DragState;->reset()V
 
-    .line 802
     iget-object v0, p0, Lcom/android/server/wm/DragStateAnimator;->mService:Lcom/android/server/wm/WindowManagerService;
 
     const/4 v1, 0x0
 
     iput-object v1, v0, Lcom/android/server/wm/WindowManagerService;->mDragState:Lcom/android/server/wm/DragState;
 
-    .line 806
     :goto_0
     return-void
 
-    .line 804
     :cond_0
     invoke-virtual {p0}, Lcom/android/server/wm/DragStateAnimator;->scheduleAnimationLocked()V
 
@@ -370,23 +332,19 @@
 
     const/4 v4, 0x1
 
-    .line 659
     iget-object v3, p0, Lcom/android/server/wm/DragStateAnimator;->mTargetWin:Lcom/android/server/wm/WindowState;
 
     if-nez v3, :cond_1
 
-    .line 718
     :cond_0
     :goto_0
     return v5
 
-    .line 663
     :cond_1
     iget-object v3, p0, Lcom/android/server/wm/DragStateAnimator;->mService:Lcom/android/server/wm/WindowManagerService;
 
     iget-object v2, v3, Lcom/android/server/wm/WindowManagerService;->mMultiWindowCenterBar:Lcom/android/server/wm/WindowState;
 
-    .line 664
     .local v2, "winCenterBar":Lcom/android/server/wm/WindowState;
     if-eqz v2, :cond_2
 
@@ -402,10 +360,8 @@
 
     if-eqz v3, :cond_2
 
-    .line 665
     iput v7, p0, Lcom/android/server/wm/DragStateAnimator;->mType:I
 
-    .line 672
     :goto_1
     iget-boolean v3, p0, Lcom/android/server/wm/DragStateAnimator;->mAnimating:Z
 
@@ -413,10 +369,8 @@
 
     move v5, v4
 
-    .line 673
     goto :goto_0
 
-    .line 666
     :cond_2
     iget-object v3, p0, Lcom/android/server/wm/DragStateAnimator;->mTargetWin:Lcom/android/server/wm/WindowState;
 
@@ -430,12 +384,10 @@
 
     if-eqz v3, :cond_0
 
-    .line 667
     iput v4, p0, Lcom/android/server/wm/DragStateAnimator;->mType:I
 
     goto :goto_1
 
-    .line 676
     :cond_3
     iget-object v3, p0, Lcom/android/server/wm/DragStateAnimator;->mService:Lcom/android/server/wm/WindowManagerService;
 
@@ -445,19 +397,16 @@
 
     if-eqz v3, :cond_9
 
-    .line 678
     iget-object v3, p0, Lcom/android/server/wm/DragStateAnimator;->mState:Lcom/android/server/wm/DragState;
 
     iget-boolean v3, v3, Lcom/android/server/wm/DragState;->mDragResult:Z
 
     if-eqz v3, :cond_7
 
-    .line 679
     iget v3, p0, Lcom/android/server/wm/DragStateAnimator;->mType:I
 
     if-ne v3, v7, :cond_6
 
-    .line 680
     iget-object v3, p0, Lcom/android/server/wm/DragStateAnimator;->mService:Lcom/android/server/wm/WindowManagerService;
 
     iget-object v3, v3, Lcom/android/server/wm/WindowManagerService;->mContext:Landroid/content/Context;
@@ -468,16 +417,13 @@
 
     move-result-object v0
 
-    .line 703
     .local v0, "a":Landroid/view/animation/Animation;
     :cond_4
     :goto_2
     if-eqz v0, :cond_5
 
-    .line 712
     invoke-virtual {p0, v0}, Lcom/android/server/wm/DragStateAnimator;->setAnimation(Landroid/view/animation/Animation;)V
 
-    .line 718
     .end local v0    # "a":Landroid/view/animation/Animation;
     :cond_5
     :goto_3
@@ -492,7 +438,6 @@
 
     goto :goto_0
 
-    .line 682
     :cond_6
     iget-object v3, p0, Lcom/android/server/wm/DragStateAnimator;->mService:Lcom/android/server/wm/WindowManagerService;
 
@@ -507,14 +452,12 @@
     .restart local v0    # "a":Landroid/view/animation/Animation;
     goto :goto_2
 
-    .line 685
     .end local v0    # "a":Landroid/view/animation/Animation;
     :cond_7
     iget v3, p0, Lcom/android/server/wm/DragStateAnimator;->mType:I
 
     if-ne v3, v7, :cond_8
 
-    .line 686
     iget-object v3, p0, Lcom/android/server/wm/DragStateAnimator;->mService:Lcom/android/server/wm/WindowManagerService;
 
     iget-object v3, v3, Lcom/android/server/wm/WindowManagerService;->mContext:Landroid/content/Context;
@@ -525,7 +468,6 @@
 
     move-result-object v0
 
-    .line 690
     .restart local v0    # "a":Landroid/view/animation/Animation;
     :goto_5
     new-instance v1, Landroid/view/animation/TranslateAnimation;
@@ -572,41 +514,33 @@
 
     invoke-direct {v1, v3, v6, v7, v8}, Landroid/view/animation/TranslateAnimation;-><init>(FFFF)V
 
-    .line 694
     .local v1, "trans":Landroid/view/animation/Animation;
     const-wide/16 v6, 0x0
 
     invoke-virtual {v1, v6, v7}, Landroid/view/animation/Animation;->setStartOffset(J)V
 
-    .line 695
     const-wide/16 v6, 0x1f4
 
     invoke-virtual {v1, v6, v7}, Landroid/view/animation/Animation;->setDuration(J)V
 
-    .line 696
     invoke-virtual {v1, v4}, Landroid/view/animation/Animation;->setFillAfter(Z)V
 
-    .line 697
     invoke-virtual {v1, v4}, Landroid/view/animation/Animation;->setFillBefore(Z)V
 
-    .line 698
     invoke-virtual {v1, v4}, Landroid/view/animation/Animation;->setFillEnabled(Z)V
 
-    .line 699
     instance-of v3, v0, Landroid/view/animation/AnimationSet;
 
     if-eqz v3, :cond_4
 
     move-object v3, v0
 
-    .line 700
     check-cast v3, Landroid/view/animation/AnimationSet;
 
     invoke-virtual {v3, v1}, Landroid/view/animation/AnimationSet;->addAnimation(Landroid/view/animation/Animation;)V
 
     goto :goto_2
 
-    .line 688
     .end local v0    # "a":Landroid/view/animation/Animation;
     .end local v1    # "trans":Landroid/view/animation/Animation;
     :cond_8
@@ -623,7 +557,6 @@
     .restart local v0    # "a":Landroid/view/animation/Animation;
     goto :goto_5
 
-    .line 715
     .end local v0    # "a":Landroid/view/animation/Animation;
     :cond_9
     invoke-virtual {p0}, Lcom/android/server/wm/DragStateAnimator;->clearAnimation()V
@@ -633,7 +566,6 @@
     :cond_a
     move v3, v5
 
-    .line 718
     goto :goto_4
 .end method
 
@@ -641,27 +573,22 @@
     .locals 1
 
     .prologue
-    .line 651
     iget-object v0, p0, Lcom/android/server/wm/DragStateAnimator;->mAnimation:Landroid/view/animation/Animation;
 
     if-eqz v0, :cond_0
 
-    .line 652
     const/4 v0, 0x1
 
     iput-boolean v0, p0, Lcom/android/server/wm/DragStateAnimator;->mAnimating:Z
 
-    .line 653
     iget-object v0, p0, Lcom/android/server/wm/DragStateAnimator;->mAnimation:Landroid/view/animation/Animation;
 
     invoke-virtual {v0}, Landroid/view/animation/Animation;->cancel()V
 
-    .line 654
     const/4 v0, 0x0
 
     iput-object v0, p0, Lcom/android/server/wm/DragStateAnimator;->mAnimation:Landroid/view/animation/Animation;
 
-    .line 656
     :cond_0
     return-void
 .end method
@@ -670,29 +597,23 @@
     .locals 2
 
     .prologue
-    .line 810
     iget-object v0, p0, Lcom/android/server/wm/DragStateAnimator;->mService:Lcom/android/server/wm/WindowManagerService;
 
     iget-object v1, v0, Lcom/android/server/wm/WindowManagerService;->mWindowMap:Ljava/util/HashMap;
 
     monitor-enter v1
 
-    .line 811
     const/4 v0, 0x0
 
     :try_start_0
     iput-boolean v0, p0, Lcom/android/server/wm/DragStateAnimator;->mAnimationScheduled:Z
 
-    .line 812
     invoke-virtual {p0}, Lcom/android/server/wm/DragStateAnimator;->animateLocked()V
 
-    .line 813
     monitor-exit v1
 
-    .line 814
     return-void
 
-    .line 813
     :catchall_0
     move-exception v0
 
@@ -709,15 +630,12 @@
     .prologue
     const/4 v2, 0x1
 
-    .line 791
     iget-boolean v0, p0, Lcom/android/server/wm/DragStateAnimator;->mAnimationScheduled:Z
 
     if-nez v0, :cond_0
 
-    .line 792
     iput-boolean v2, p0, Lcom/android/server/wm/DragStateAnimator;->mAnimationScheduled:Z
 
-    .line 793
     iget-object v0, p0, Lcom/android/server/wm/DragStateAnimator;->mService:Lcom/android/server/wm/WindowManagerService;
 
     iget-object v0, v0, Lcom/android/server/wm/WindowManagerService;->mChoreographer:Landroid/view/Choreographer;
@@ -726,7 +644,6 @@
 
     invoke-virtual {v0, v2, p0, v1}, Landroid/view/Choreographer;->postCallback(ILjava/lang/Runnable;Ljava/lang/Object;)V
 
-    .line 796
     :cond_0
     return-void
 .end method
@@ -736,22 +653,18 @@
     .param p1, "anim"    # Landroid/view/animation/Animation;
 
     .prologue
-    .line 643
     const/4 v0, 0x0
 
     iput-boolean v0, p0, Lcom/android/server/wm/DragStateAnimator;->mAnimating:Z
 
-    .line 644
     iput-object p1, p0, Lcom/android/server/wm/DragStateAnimator;->mAnimation:Landroid/view/animation/Animation;
 
-    .line 645
     iget-object v0, p0, Lcom/android/server/wm/DragStateAnimator;->mAnimation:Landroid/view/animation/Animation;
 
     const-wide/16 v2, 0x2710
 
     invoke-virtual {v0, v2, v3}, Landroid/view/animation/Animation;->restrictDuration(J)V
 
-    .line 646
     iget-object v0, p0, Lcom/android/server/wm/DragStateAnimator;->mAnimation:Landroid/view/animation/Animation;
 
     iget-object v1, p0, Lcom/android/server/wm/DragStateAnimator;->mService:Lcom/android/server/wm/WindowManagerService;
@@ -760,12 +673,10 @@
 
     invoke-virtual {v0, v1}, Landroid/view/animation/Animation;->scaleCurrentDuration(F)V
 
-    .line 647
     iget-object v0, p0, Lcom/android/server/wm/DragStateAnimator;->mTransformation:Landroid/view/animation/Transformation;
 
     invoke-virtual {v0}, Landroid/view/animation/Transformation;->clear()V
 
-    .line 648
     return-void
 .end method
 
@@ -780,7 +691,6 @@
 
     const/4 v1, 0x0
 
-    .line 763
     iget-object v2, p0, Lcom/android/server/wm/DragStateAnimator;->mService:Lcom/android/server/wm/WindowManagerService;
 
     invoke-virtual {v2}, Lcom/android/server/wm/WindowManagerService;->okToDisplay()Z
@@ -789,12 +699,10 @@
 
     if-eqz v2, :cond_1
 
-    .line 764
     iget-boolean v2, p0, Lcom/android/server/wm/DragStateAnimator;->mAnimating:Z
 
     if-nez v2, :cond_0
 
-    .line 765
     iget-object v2, p0, Lcom/android/server/wm/DragStateAnimator;->mAnimation:Landroid/view/animation/Animation;
 
     iget-object v3, p0, Lcom/android/server/wm/DragStateAnimator;->mState:Lcom/android/server/wm/DragState;
@@ -819,15 +727,12 @@
 
     invoke-virtual {v2, v3, v4, v1, v1}, Landroid/view/animation/Animation;->initialize(IIII)V
 
-    .line 767
     iget-object v2, p0, Lcom/android/server/wm/DragStateAnimator;->mAnimation:Landroid/view/animation/Animation;
 
     invoke-virtual {v2, p1, p2}, Landroid/view/animation/Animation;->setStartTime(J)V
 
-    .line 768
     iput-boolean v0, p0, Lcom/android/server/wm/DragStateAnimator;->mAnimating:Z
 
-    .line 770
     :cond_0
     iget-object v2, p0, Lcom/android/server/wm/DragStateAnimator;->mAnimation:Landroid/view/animation/Animation;
 
@@ -837,37 +742,30 @@
 
     if-eqz v2, :cond_1
 
-    .line 771
     invoke-direct {p0, p1, p2}, Lcom/android/server/wm/DragStateAnimator;->stepDropAnimation(J)Z
 
     move-result v2
 
     if-eqz v2, :cond_1
 
-    .line 787
     :goto_0
     return v0
 
-    .line 780
     :cond_1
     iput-boolean v1, p0, Lcom/android/server/wm/DragStateAnimator;->mAnimating:Z
 
-    .line 781
     iget-object v0, p0, Lcom/android/server/wm/DragStateAnimator;->mAnimation:Landroid/view/animation/Animation;
 
     if-eqz v0, :cond_2
 
-    .line 782
     iget-object v0, p0, Lcom/android/server/wm/DragStateAnimator;->mAnimation:Landroid/view/animation/Animation;
 
     invoke-virtual {v0}, Landroid/view/animation/Animation;->cancel()V
 
-    .line 783
     const/4 v0, 0x0
 
     iput-object v0, p0, Lcom/android/server/wm/DragStateAnimator;->mAnimation:Landroid/view/animation/Animation;
 
-    .line 786
     :cond_2
     iget-object v0, p0, Lcom/android/server/wm/DragStateAnimator;->mTransformation:Landroid/view/animation/Transformation;
 
@@ -875,6 +773,5 @@
 
     move v0, v1
 
-    .line 787
     goto :goto_0
 .end method

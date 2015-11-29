@@ -23,7 +23,6 @@
     .locals 0
 
     .prologue
-    .line 1588
     iput-object p1, p0, Lcom/android/server/epm/overlay/ThemeManagerService$EventBroadCastReceiver;->this$0:Lcom/android/server/epm/overlay/ThemeManagerService;
 
     invoke-direct {p0}, Landroid/content/BroadcastReceiver;-><init>()V
@@ -43,14 +42,12 @@
 
     const/4 v6, 0x2
 
-    .line 1591
-    const-string/jumbo v4, "package"
+    const-string v4, "package"
 
     invoke-virtual {p2, v4}, Landroid/content/Intent;->getStringExtra(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v3
 
-    .line 1592
     .local v3, "packageName":Ljava/lang/String;
     const-string v4, "index"
 
@@ -60,7 +57,6 @@
 
     move-result v1
 
-    .line 1593
     .local v1, "index":I
     iget-object v4, p0, Lcom/android/server/epm/overlay/ThemeManagerService$EventBroadCastReceiver;->this$0:Lcom/android/server/epm/overlay/ThemeManagerService;
 
@@ -88,12 +84,11 @@
 
     if-eqz v4, :cond_0
 
-    .line 1594
     invoke-virtual {p2}, Landroid/content/Intent;->getAction()Ljava/lang/String;
 
     move-result-object v4
 
-    const-string/jumbo v5, "theme.installer.action"
+    const-string v5, "theme.installer.action"
 
     invoke-virtual {v4, v5}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
@@ -101,17 +96,14 @@
 
     if-eqz v4, :cond_2
 
-    .line 1595
     iget-object v4, p0, Lcom/android/server/epm/overlay/ThemeManagerService$EventBroadCastReceiver;->this$0:Lcom/android/server/epm/overlay/ThemeManagerService;
 
     iput-object v3, v4, Lcom/android/server/epm/overlay/ThemeManagerService;->eventMasterPackageName:Ljava/lang/String;
 
-    .line 1596
     iget-object v4, p0, Lcom/android/server/epm/overlay/ThemeManagerService$EventBroadCastReceiver;->this$0:Lcom/android/server/epm/overlay/ThemeManagerService;
 
     iput v1, v4, Lcom/android/server/epm/overlay/ThemeManagerService;->eventIndex:I
 
-    .line 1600
     iget-object v4, p0, Lcom/android/server/epm/overlay/ThemeManagerService$EventBroadCastReceiver;->this$0:Lcom/android/server/epm/overlay/ThemeManagerService;
 
     # getter for: Lcom/android/server/epm/overlay/ThemeManagerService;->masterThemesMap:Ljava/util/HashMap;
@@ -174,7 +166,7 @@
 
     check-cast v4, Ljava/lang/String;
 
-    const-string/jumbo v5, "true"
+    const-string v5, "true"
 
     invoke-virtual {v4, v5}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
@@ -182,18 +174,15 @@
 
     if-eqz v4, :cond_1
 
-    .line 1602
     iget-object v4, p0, Lcom/android/server/epm/overlay/ThemeManagerService$EventBroadCastReceiver;->this$0:Lcom/android/server/epm/overlay/ThemeManagerService;
 
     # invokes: Lcom/android/server/epm/overlay/ThemeManagerService;->showEventBubble()V
     invoke-static {v4}, Lcom/android/server/epm/overlay/ThemeManagerService;->access$1500(Lcom/android/server/epm/overlay/ThemeManagerService;)V
 
-    .line 1622
     :cond_0
     :goto_0
     return-void
 
-    .line 1604
     :cond_1
     iget-object v4, p0, Lcom/android/server/epm/overlay/ThemeManagerService$EventBroadCastReceiver;->this$0:Lcom/android/server/epm/overlay/ThemeManagerService;
 
@@ -206,13 +195,11 @@
 
     goto :goto_0
 
-    .line 1608
     :cond_2
     sget-boolean v4, Lcom/android/server/epm/overlay/ThemeManagerService;->isVisible:Z
 
     if-eqz v4, :cond_3
 
-    .line 1609
     iget-object v4, p0, Lcom/android/server/epm/overlay/ThemeManagerService$EventBroadCastReceiver;->this$0:Lcom/android/server/epm/overlay/ThemeManagerService;
 
     # getter for: Lcom/android/server/epm/overlay/ThemeManagerService;->mWindowManager:Landroid/view/WindowManager;
@@ -231,36 +218,29 @@
 
     goto :goto_0
 
-    .line 1611
     :cond_3
     new-instance v2, Landroid/os/Message;
 
     invoke-direct {v2}, Landroid/os/Message;-><init>()V
 
-    .line 1612
     .local v2, "msg":Landroid/os/Message;
     iput v6, v2, Landroid/os/Message;->what:I
 
-    .line 1613
     new-instance v0, Landroid/os/Bundle;
 
     invoke-direct {v0}, Landroid/os/Bundle;-><init>()V
 
-    .line 1614
     .local v0, "bdl":Landroid/os/Bundle;
-    const-string/jumbo v4, "packageName"
+    const-string v4, "packageName"
 
     invoke-virtual {v0, v4, v3}, Landroid/os/Bundle;->putString(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 1615
     const-string v4, "index"
 
     invoke-virtual {v0, v4, v1}, Landroid/os/Bundle;->putInt(Ljava/lang/String;I)V
 
-    .line 1616
     iput-object v0, v2, Landroid/os/Message;->obj:Ljava/lang/Object;
 
-    .line 1617
     iget-object v4, p0, Lcom/android/server/epm/overlay/ThemeManagerService$EventBroadCastReceiver;->this$0:Lcom/android/server/epm/overlay/ThemeManagerService;
 
     # getter for: Lcom/android/server/epm/overlay/ThemeManagerService;->mHandler:Landroid/os/Handler;

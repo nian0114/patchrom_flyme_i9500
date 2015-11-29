@@ -190,71 +190,52 @@
 
     const/4 v2, 0x0
 
-    .line 378
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 106
     invoke-static {}, Landroid/os/Parcel;->obtain()Landroid/os/Parcel;
 
     move-result-object v1
 
     iput-object v1, p0, Landroid/media/TimedText;->mParcel:Landroid/os/Parcel;
 
-    .line 107
     new-instance v1, Ljava/util/HashMap;
 
     invoke-direct {v1}, Ljava/util/HashMap;-><init>()V
 
     iput-object v1, p0, Landroid/media/TimedText;->mKeyObjectMap:Ljava/util/HashMap;
 
-    .line 110
     iput v3, p0, Landroid/media/TimedText;->mDisplayFlags:I
 
-    .line 111
     iput v3, p0, Landroid/media/TimedText;->mBackgroundColorRGBA:I
 
-    .line 112
     iput v3, p0, Landroid/media/TimedText;->mHighlightColorRGBA:I
 
-    .line 113
     iput v3, p0, Landroid/media/TimedText;->mScrollDelay:I
 
-    .line 114
     iput v3, p0, Landroid/media/TimedText;->mWrapText:I
 
-    .line 116
     iput-object v2, p0, Landroid/media/TimedText;->mBlinkingPosList:Ljava/util/List;
 
-    .line 117
     iput-object v2, p0, Landroid/media/TimedText;->mHighlightPosList:Ljava/util/List;
 
-    .line 118
     iput-object v2, p0, Landroid/media/TimedText;->mKaraokeList:Ljava/util/List;
 
-    .line 119
     iput-object v2, p0, Landroid/media/TimedText;->mFontList:Ljava/util/List;
 
-    .line 120
     iput-object v2, p0, Landroid/media/TimedText;->mStyleList:Ljava/util/List;
 
-    .line 121
     iput-object v2, p0, Landroid/media/TimedText;->mHyperTextList:Ljava/util/List;
 
-    .line 123
     iput-object v2, p0, Landroid/media/TimedText;->mTextBounds:Landroid/graphics/Rect;
 
-    .line 124
     iput-object v2, p0, Landroid/media/TimedText;->mTextChars:Ljava/lang/String;
 
-    .line 126
     iput-object v2, p0, Landroid/media/TimedText;->mHeadChars:Ljava/lang/String;
 
-    .line 382
     invoke-virtual {p1}, Landroid/os/Parcel;->marshall()[B
 
     move-result-object v0
 
-    .line 383
     .local v0, "tmp":[B
     iget-object v1, p0, Landroid/media/TimedText;->mParcel:Landroid/os/Parcel;
 
@@ -264,7 +245,6 @@
 
     invoke-virtual {v1, v0, v2, v3}, Landroid/os/Parcel;->unmarshall([BII)V
 
-    .line 385
     iget-object v1, p0, Landroid/media/TimedText;->mParcel:Landroid/os/Parcel;
 
     invoke-direct {p0, v1}, Landroid/media/TimedText;->parseParcel(Landroid/os/Parcel;)Z
@@ -273,19 +253,16 @@
 
     if-nez v1, :cond_0
 
-    .line 386
     iget-object v1, p0, Landroid/media/TimedText;->mKeyObjectMap:Ljava/util/HashMap;
 
     invoke-virtual {v1}, Ljava/util/HashMap;->clear()V
 
-    .line 387
     const-string v1, "TimedText"
 
     const-string v2, "parseParcel() fails"
 
     invoke-static {v1, v2}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 391
     :cond_0
     return-void
 .end method
@@ -295,7 +272,6 @@
     .param p1, "key"    # I
 
     .prologue
-    .line 779
     invoke-direct {p0, p1}, Landroid/media/TimedText;->isValidKey(I)Z
 
     move-result v0
@@ -314,10 +290,8 @@
 
     if-eqz v0, :cond_0
 
-    .line 780
     const/4 v0, 0x1
 
-    .line 782
     :goto_0
     return v0
 
@@ -334,7 +308,6 @@
     .prologue
     const/4 v0, 0x1
 
-    .line 765
     if-lt p1, v0, :cond_0
 
     const/16 v1, 0x12
@@ -350,11 +323,9 @@
 
     if-le p1, v1, :cond_2
 
-    .line 767
     :cond_1
     const/4 v0, 0x0
 
-    .line 769
     :cond_2
     return v0
 .end method
@@ -363,7 +334,6 @@
     .locals 1
 
     .prologue
-    .line 789
     iget-object v0, p0, Landroid/media/TimedText;->mKeyObjectMap:Ljava/util/HashMap;
 
     invoke-virtual {v0}, Ljava/util/HashMap;->keySet()Ljava/util/Set;
@@ -378,7 +348,6 @@
     .param p1, "parcel"    # Landroid/os/Parcel;
 
     .prologue
-    .line 436
     monitor-enter p0
 
     const/4 v15, 0x0
@@ -388,7 +357,6 @@
 
     invoke-virtual {v0, v15}, Landroid/os/Parcel;->setDataPosition(I)V
 
-    .line 437
     invoke-virtual/range {p1 .. p1}, Landroid/os/Parcel;->dataAvail()I
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
@@ -397,34 +365,28 @@
 
     if-nez v15, :cond_0
 
-    .line 438
     const/4 v15, 0x0
 
-    .line 599
     :goto_0
     monitor-exit p0
 
     return v15
 
-    .line 444
     :cond_0
     :try_start_1
     invoke-virtual/range {p1 .. p1}, Landroid/os/Parcel;->readInt()I
 
     move-result v11
 
-    .line 445
     .local v11, "textType":I
     const/16 v15, 0x11
 
     if-ne v11, v15, :cond_1
 
-    .line 446
     invoke-virtual/range {p1 .. p1}, Landroid/os/Parcel;->readInt()I
 
     move-result v6
 
-    .line 447
     .local v6, "mTextIndex":I
     move-object/from16 v0, p0
 
@@ -440,12 +402,10 @@
 
     invoke-virtual/range {v15 .. v17}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 449
     invoke-virtual/range {p1 .. p1}, Landroid/os/Parcel;->readInt()I
 
     move-result v13
 
-    .line 456
     .end local v6    # "mTextIndex":I
     .local v13, "type":I
     :goto_1
@@ -453,22 +413,18 @@
 
     if-ne v13, v15, :cond_7
 
-    .line 457
     invoke-virtual/range {p1 .. p1}, Landroid/os/Parcel;->readInt()I
 
     move-result v13
 
-    .line 458
     const/4 v15, 0x7
 
     if-eq v13, v15, :cond_2
 
-    .line 459
     const/4 v15, 0x0
 
     goto :goto_0
 
-    .line 453
     .end local v13    # "type":I
     :cond_1
     move v13, v11
@@ -476,13 +432,11 @@
     .restart local v13    # "type":I
     goto :goto_1
 
-    .line 461
     :cond_2
     invoke-virtual/range {p1 .. p1}, Landroid/os/Parcel;->readInt()I
 
     move-result v5
 
-    .line 462
     .local v5, "mStartTimeMs":I
     move-object/from16 v0, p0
 
@@ -498,34 +452,28 @@
 
     invoke-virtual/range {v15 .. v17}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 464
     invoke-virtual/range {p1 .. p1}, Landroid/os/Parcel;->readInt()I
 
     move-result v13
 
-    .line 465
     const/16 v15, 0x10
 
     if-eq v13, v15, :cond_3
 
-    .line 466
     const/4 v15, 0x0
 
     goto :goto_0
 
-    .line 469
     :cond_3
     invoke-virtual/range {p1 .. p1}, Landroid/os/Parcel;->readInt()I
 
     move-result v10
 
-    .line 470
     .local v10, "textLen":I
     invoke-virtual/range {p1 .. p1}, Landroid/os/Parcel;->createByteArray()[B
 
     move-result-object v9
 
-    .line 471
     .local v9, "text":[B
     if-eqz v9, :cond_4
 
@@ -533,7 +481,6 @@
 
     if-nez v15, :cond_6
 
-    .line 472
     :cond_4
     const/4 v15, 0x0
 
@@ -541,7 +488,6 @@
 
     iput-object v15, v0, Landroid/media/TimedText;->mTextChars:Ljava/lang/String;
 
-    .line 499
     .end local v5    # "mStartTimeMs":I
     .end local v9    # "text":[B
     .end local v10    # "textLen":I
@@ -553,12 +499,10 @@
 
     if-lez v15, :cond_e
 
-    .line 500
     invoke-virtual/range {p1 .. p1}, Landroid/os/Parcel;->readInt()I
 
     move-result v3
 
-    .line 501
     .local v3, "key":I
     move-object/from16 v0, p0
 
@@ -568,7 +512,6 @@
 
     if-nez v15, :cond_c
 
-    .line 502
     const-string v15, "TimedText"
 
     new-instance v16, Ljava/lang/StringBuilder;
@@ -593,12 +536,10 @@
 
     invoke-static/range {v15 .. v16}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 503
     const/4 v15, 0x0
 
     goto/16 :goto_0
 
-    .line 474
     .end local v3    # "key":I
     .restart local v5    # "mStartTimeMs":I
     .restart local v9    # "text":[B
@@ -616,7 +557,6 @@
 
     goto :goto_2
 
-    .line 436
     .end local v5    # "mStartTimeMs":I
     .end local v9    # "text":[B
     .end local v10    # "textLen":I
@@ -629,7 +569,6 @@
 
     throw v15
 
-    .line 479
     .restart local v11    # "textType":I
     .restart local v13    # "type":I
     :cond_7
@@ -637,35 +576,29 @@
 
     if-ne v13, v15, :cond_b
 
-    .line 480
     :try_start_2
     invoke-virtual/range {p1 .. p1}, Landroid/os/Parcel;->readInt()I
 
     move-result v13
 
-    .line 481
     const/16 v15, 0x12
 
     if-eq v13, v15, :cond_8
 
-    .line 482
     const/4 v15, 0x0
 
     goto/16 :goto_0
 
-    .line 485
     :cond_8
     invoke-virtual/range {p1 .. p1}, Landroid/os/Parcel;->readInt()I
 
     move-result v10
 
-    .line 486
     .restart local v10    # "textLen":I
     invoke-virtual/range {p1 .. p1}, Landroid/os/Parcel;->createByteArray()[B
 
     move-result-object v9
 
-    .line 487
     .restart local v9    # "text":[B
     if-eqz v9, :cond_9
 
@@ -673,7 +606,6 @@
 
     if-nez v15, :cond_a
 
-    .line 488
     :cond_9
     const/4 v15, 0x0
 
@@ -683,7 +615,6 @@
 
     goto :goto_2
 
-    .line 490
     :cond_a
     new-instance v15, Ljava/lang/String;
 
@@ -695,7 +626,6 @@
 
     goto :goto_2
 
-    .line 494
     .end local v9    # "text":[B
     .end local v10    # "textLen":I
     :cond_b
@@ -703,7 +633,6 @@
 
     if-eq v13, v15, :cond_5
 
-    .line 495
     const-string v15, "TimedText"
 
     new-instance v16, Ljava/lang/StringBuilder;
@@ -728,27 +657,22 @@
 
     invoke-static/range {v15 .. v16}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 496
     const/4 v15, 0x0
 
     goto/16 :goto_0
 
-    .line 506
     .restart local v3    # "key":I
     :cond_c
     const/4 v7, 0x0
 
-    .line 508
     .local v7, "object":Ljava/lang/Object;
     packed-switch v3, :pswitch_data_0
 
-    .line 589
     .end local v7    # "object":Ljava/lang/Object;
     :goto_3
     :pswitch_0
     if-eqz v7, :cond_5
 
-    .line 590
     move-object/from16 v0, p0
 
     iget-object v15, v0, Landroid/media/TimedText;->mKeyObjectMap:Ljava/util/HashMap;
@@ -763,7 +687,6 @@
 
     if-eqz v15, :cond_d
 
-    .line 591
     move-object/from16 v0, p0
 
     iget-object v15, v0, Landroid/media/TimedText;->mKeyObjectMap:Ljava/util/HashMap;
@@ -774,7 +697,6 @@
 
     invoke-virtual/range {v15 .. v16}, Ljava/util/HashMap;->remove(Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 594
     :cond_d
     move-object/from16 v0, p0
 
@@ -790,91 +712,72 @@
 
     goto/16 :goto_2
 
-    .line 510
     .restart local v7    # "object":Ljava/lang/Object;
     :pswitch_1
     invoke-direct/range {p0 .. p1}, Landroid/media/TimedText;->readStyle(Landroid/os/Parcel;)V
 
-    .line 511
     move-object/from16 v0, p0
 
     iget-object v7, v0, Landroid/media/TimedText;->mStyleList:Ljava/util/List;
 
-    .line 512
     .local v7, "object":Ljava/util/List;
     goto :goto_3
 
-    .line 515
     .local v7, "object":Ljava/lang/Object;
     :pswitch_2
     invoke-direct/range {p0 .. p1}, Landroid/media/TimedText;->readFont(Landroid/os/Parcel;)V
 
-    .line 516
     move-object/from16 v0, p0
 
     iget-object v7, v0, Landroid/media/TimedText;->mFontList:Ljava/util/List;
 
-    .line 517
     .local v7, "object":Ljava/util/List;
     goto :goto_3
 
-    .line 520
     .local v7, "object":Ljava/lang/Object;
     :pswitch_3
     invoke-direct/range {p0 .. p1}, Landroid/media/TimedText;->readHighlight(Landroid/os/Parcel;)V
 
-    .line 521
     move-object/from16 v0, p0
 
     iget-object v7, v0, Landroid/media/TimedText;->mHighlightPosList:Ljava/util/List;
 
-    .line 522
     .local v7, "object":Ljava/util/List;
     goto :goto_3
 
-    .line 525
     .local v7, "object":Ljava/lang/Object;
     :pswitch_4
     invoke-direct/range {p0 .. p1}, Landroid/media/TimedText;->readKaraoke(Landroid/os/Parcel;)V
 
-    .line 526
     move-object/from16 v0, p0
 
     iget-object v7, v0, Landroid/media/TimedText;->mKaraokeList:Ljava/util/List;
 
-    .line 527
     .local v7, "object":Ljava/util/List;
     goto :goto_3
 
-    .line 530
     .local v7, "object":Ljava/lang/Object;
     :pswitch_5
     invoke-direct/range {p0 .. p1}, Landroid/media/TimedText;->readHyperText(Landroid/os/Parcel;)V
 
-    .line 531
     move-object/from16 v0, p0
 
     iget-object v7, v0, Landroid/media/TimedText;->mHyperTextList:Ljava/util/List;
 
-    .line 533
     .local v7, "object":Ljava/util/List;
     goto :goto_3
 
-    .line 536
     .local v7, "object":Ljava/lang/Object;
     :pswitch_6
     invoke-direct/range {p0 .. p1}, Landroid/media/TimedText;->readBlinkingText(Landroid/os/Parcel;)V
 
-    .line 537
     move-object/from16 v0, p0
 
     iget-object v7, v0, Landroid/media/TimedText;->mBlinkingPosList:Ljava/util/List;
 
-    .line 539
     .local v7, "object":Ljava/util/List;
     goto :goto_3
 
-    .line 542
     .local v7, "object":Ljava/lang/Object;
     :pswitch_7
     invoke-virtual/range {p1 .. p1}, Landroid/os/Parcel;->readInt()I
@@ -885,7 +788,6 @@
 
     iput v15, v0, Landroid/media/TimedText;->mWrapText:I
 
-    .line 543
     move-object/from16 v0, p0
 
     iget v15, v0, Landroid/media/TimedText;->mWrapText:I
@@ -894,11 +796,9 @@
 
     move-result-object v7
 
-    .line 544
     .local v7, "object":Ljava/lang/Integer;
     goto :goto_3
 
-    .line 547
     .local v7, "object":Ljava/lang/Object;
     :pswitch_8
     invoke-virtual/range {p1 .. p1}, Landroid/os/Parcel;->readInt()I
@@ -909,7 +809,6 @@
 
     iput v15, v0, Landroid/media/TimedText;->mHighlightColorRGBA:I
 
-    .line 548
     move-object/from16 v0, p0
 
     iget v15, v0, Landroid/media/TimedText;->mHighlightColorRGBA:I
@@ -918,11 +817,9 @@
 
     move-result-object v7
 
-    .line 549
     .local v7, "object":Ljava/lang/Integer;
     goto :goto_3
 
-    .line 552
     .local v7, "object":Ljava/lang/Object;
     :pswitch_9
     invoke-virtual/range {p1 .. p1}, Landroid/os/Parcel;->readInt()I
@@ -933,7 +830,6 @@
 
     iput v15, v0, Landroid/media/TimedText;->mDisplayFlags:I
 
-    .line 553
     move-object/from16 v0, p0
 
     iget v15, v0, Landroid/media/TimedText;->mDisplayFlags:I
@@ -942,24 +838,20 @@
 
     move-result-object v7
 
-    .line 554
     .local v7, "object":Ljava/lang/Integer;
     goto/16 :goto_3
 
-    .line 558
     .local v7, "object":Ljava/lang/Object;
     :pswitch_a
     invoke-virtual/range {p1 .. p1}, Landroid/os/Parcel;->readInt()I
 
     move-result v2
 
-    .line 559
     .local v2, "horizontal":I
     invoke-virtual/range {p1 .. p1}, Landroid/os/Parcel;->readInt()I
 
     move-result v14
 
-    .line 560
     .local v14, "vertical":I
     new-instance v15, Landroid/media/TimedText$Justification;
 
@@ -969,16 +861,13 @@
 
     iput-object v15, v0, Landroid/media/TimedText;->mJustification:Landroid/media/TimedText$Justification;
 
-    .line 562
     move-object/from16 v0, p0
 
     iget-object v7, v0, Landroid/media/TimedText;->mJustification:Landroid/media/TimedText$Justification;
 
-    .line 563
     .local v7, "object":Landroid/media/TimedText$Justification;
     goto/16 :goto_3
 
-    .line 566
     .end local v2    # "horizontal":I
     .end local v14    # "vertical":I
     .local v7, "object":Ljava/lang/Object;
@@ -991,7 +880,6 @@
 
     iput v15, v0, Landroid/media/TimedText;->mBackgroundColorRGBA:I
 
-    .line 567
     move-object/from16 v0, p0
 
     iget v15, v0, Landroid/media/TimedText;->mBackgroundColorRGBA:I
@@ -1000,36 +888,30 @@
 
     move-result-object v7
 
-    .line 568
     .local v7, "object":Ljava/lang/Integer;
     goto/16 :goto_3
 
-    .line 571
     .local v7, "object":Ljava/lang/Object;
     :pswitch_c
     invoke-virtual/range {p1 .. p1}, Landroid/os/Parcel;->readInt()I
 
     move-result v12
 
-    .line 572
     .local v12, "top":I
     invoke-virtual/range {p1 .. p1}, Landroid/os/Parcel;->readInt()I
 
     move-result v4
 
-    .line 573
     .local v4, "left":I
     invoke-virtual/range {p1 .. p1}, Landroid/os/Parcel;->readInt()I
 
     move-result v1
 
-    .line 574
     .local v1, "bottom":I
     invoke-virtual/range {p1 .. p1}, Landroid/os/Parcel;->readInt()I
 
     move-result v8
 
-    .line 575
     .local v8, "right":I
     new-instance v15, Landroid/graphics/Rect;
 
@@ -1041,7 +923,6 @@
 
     goto/16 :goto_3
 
-    .line 580
     .end local v1    # "bottom":I
     .end local v4    # "left":I
     .end local v8    # "right":I
@@ -1055,7 +936,6 @@
 
     iput v15, v0, Landroid/media/TimedText;->mScrollDelay:I
 
-    .line 581
     move-object/from16 v0, p0
 
     iget v15, v0, Landroid/media/TimedText;->mScrollDelay:I
@@ -1064,11 +944,9 @@
 
     move-result-object v7
 
-    .line 582
     .local v7, "object":Ljava/lang/Integer;
     goto/16 :goto_3
 
-    .line 598
     .end local v3    # "key":I
     .end local v7    # "object":Ljava/lang/Integer;
     :cond_e
@@ -1080,12 +958,10 @@
     :try_end_2
     .catchall {:try_start_2 .. :try_end_2} :catchall_0
 
-    .line 599
     const/4 v15, 0x1
 
     goto/16 :goto_0
 
-    .line 508
     :pswitch_data_0
     .packed-switch 0x1
         :pswitch_9
@@ -1111,43 +987,36 @@
     .param p1, "parcel"    # Landroid/os/Parcel;
 
     .prologue
-    .line 749
     invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
 
     move-result v2
 
-    .line 750
     .local v2, "startChar":I
     invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
 
     move-result v1
 
-    .line 751
     .local v1, "endChar":I
     new-instance v0, Landroid/media/TimedText$CharPos;
 
     invoke-direct {v0, v2, v1}, Landroid/media/TimedText$CharPos;-><init>(II)V
 
-    .line 753
     .local v0, "blinkingPos":Landroid/media/TimedText$CharPos;
     iget-object v3, p0, Landroid/media/TimedText;->mBlinkingPosList:Ljava/util/List;
 
     if-nez v3, :cond_0
 
-    .line 754
     new-instance v3, Ljava/util/ArrayList;
 
     invoke-direct {v3}, Ljava/util/ArrayList;-><init>()V
 
     iput-object v3, p0, Landroid/media/TimedText;->mBlinkingPosList:Ljava/util/List;
 
-    .line 756
     :cond_0
     iget-object v3, p0, Landroid/media/TimedText;->mBlinkingPosList:Ljava/util/List;
 
     invoke-interface {v3, v0}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    .line 757
     return-void
 .end method
 
@@ -1156,12 +1025,10 @@
     .param p1, "parcel"    # Landroid/os/Parcel;
 
     .prologue
-    .line 669
     invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
 
     move-result v0
 
-    .line 671
     .local v0, "entryCount":I
     const/4 v2, 0x0
 
@@ -1169,24 +1036,20 @@
     :goto_0
     if-ge v2, v0, :cond_1
 
-    .line 672
     invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
 
     move-result v3
 
-    .line 673
     .local v3, "id":I
     invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
 
     move-result v5
 
-    .line 675
     .local v5, "nameLen":I
     invoke-virtual {p1}, Landroid/os/Parcel;->createByteArray()[B
 
     move-result-object v6
 
-    .line 676
     .local v6, "text":[B
     new-instance v4, Ljava/lang/String;
 
@@ -1194,37 +1057,31 @@
 
     invoke-direct {v4, v6, v7, v5}, Ljava/lang/String;-><init>([BII)V
 
-    .line 678
     .local v4, "name":Ljava/lang/String;
     new-instance v1, Landroid/media/TimedText$Font;
 
     invoke-direct {v1, v3, v4}, Landroid/media/TimedText$Font;-><init>(ILjava/lang/String;)V
 
-    .line 680
     .local v1, "font":Landroid/media/TimedText$Font;
     iget-object v7, p0, Landroid/media/TimedText;->mFontList:Ljava/util/List;
 
     if-nez v7, :cond_0
 
-    .line 681
     new-instance v7, Ljava/util/ArrayList;
 
     invoke-direct {v7}, Ljava/util/ArrayList;-><init>()V
 
     iput-object v7, p0, Landroid/media/TimedText;->mFontList:Ljava/util/List;
 
-    .line 683
     :cond_0
     iget-object v7, p0, Landroid/media/TimedText;->mFontList:Ljava/util/List;
 
     invoke-interface {v7, v1}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    .line 671
     add-int/lit8 v2, v2, 0x1
 
     goto :goto_0
 
-    .line 685
     .end local v1    # "font":Landroid/media/TimedText$Font;
     .end local v3    # "id":I
     .end local v4    # "name":Ljava/lang/String;
@@ -1239,43 +1096,36 @@
     .param p1, "parcel"    # Landroid/os/Parcel;
 
     .prologue
-    .line 691
     invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
 
     move-result v2
 
-    .line 692
     .local v2, "startChar":I
     invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
 
     move-result v0
 
-    .line 693
     .local v0, "endChar":I
     new-instance v1, Landroid/media/TimedText$CharPos;
 
     invoke-direct {v1, v2, v0}, Landroid/media/TimedText$CharPos;-><init>(II)V
 
-    .line 695
     .local v1, "pos":Landroid/media/TimedText$CharPos;
     iget-object v3, p0, Landroid/media/TimedText;->mHighlightPosList:Ljava/util/List;
 
     if-nez v3, :cond_0
 
-    .line 696
     new-instance v3, Ljava/util/ArrayList;
 
     invoke-direct {v3}, Ljava/util/ArrayList;-><init>()V
 
     iput-object v3, p0, Landroid/media/TimedText;->mHighlightPosList:Ljava/util/List;
 
-    .line 698
     :cond_0
     iget-object v3, p0, Landroid/media/TimedText;->mHighlightPosList:Ljava/util/List;
 
     invoke-interface {v3, v1}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    .line 699
     return-void
 .end method
 
@@ -1286,78 +1136,65 @@
     .prologue
     const/4 v8, 0x0
 
-    .line 726
     invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
 
     move-result v5
 
-    .line 727
     .local v5, "startChar":I
     invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
 
     move-result v2
 
-    .line 729
     .local v2, "endChar":I
     invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
 
     move-result v4
 
-    .line 730
     .local v4, "len":I
     invoke-virtual {p1}, Landroid/os/Parcel;->createByteArray()[B
 
     move-result-object v6
 
-    .line 731
     .local v6, "url":[B
     new-instance v7, Ljava/lang/String;
 
     invoke-direct {v7, v6, v8, v4}, Ljava/lang/String;-><init>([BII)V
 
-    .line 733
     .local v7, "urlString":Ljava/lang/String;
     invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
 
     move-result v4
 
-    .line 734
     invoke-virtual {p1}, Landroid/os/Parcel;->createByteArray()[B
 
     move-result-object v0
 
-    .line 735
     .local v0, "alt":[B
     new-instance v1, Ljava/lang/String;
 
     invoke-direct {v1, v0, v8, v4}, Ljava/lang/String;-><init>([BII)V
 
-    .line 736
     .local v1, "altString":Ljava/lang/String;
     new-instance v3, Landroid/media/TimedText$HyperText;
 
     invoke-direct {v3, v5, v2, v7, v1}, Landroid/media/TimedText$HyperText;-><init>(IILjava/lang/String;Ljava/lang/String;)V
 
-    .line 739
     .local v3, "hyperText":Landroid/media/TimedText$HyperText;
     iget-object v8, p0, Landroid/media/TimedText;->mHyperTextList:Ljava/util/List;
 
     if-nez v8, :cond_0
 
-    .line 740
     new-instance v8, Ljava/util/ArrayList;
 
     invoke-direct {v8}, Ljava/util/ArrayList;-><init>()V
 
     iput-object v8, p0, Landroid/media/TimedText;->mHyperTextList:Ljava/util/List;
 
-    .line 742
     :cond_0
     iget-object v8, p0, Landroid/media/TimedText;->mHyperTextList:Ljava/util/List;
 
     invoke-interface {v8, v3}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    .line 743
     return-void
 .end method
 
@@ -1366,12 +1203,10 @@
     .param p1, "parcel"    # Landroid/os/Parcel;
 
     .prologue
-    .line 705
     invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
 
     move-result v2
 
-    .line 707
     .local v2, "entryCount":I
     const/4 v3, 0x0
 
@@ -1379,60 +1214,50 @@
     :goto_0
     if-ge v3, v2, :cond_1
 
-    .line 708
     invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
 
     move-result v6
 
-    .line 709
     .local v6, "startTimeMs":I
     invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
 
     move-result v1
 
-    .line 710
     .local v1, "endTimeMs":I
     invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
 
     move-result v5
 
-    .line 711
     .local v5, "startChar":I
     invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
 
     move-result v0
 
-    .line 712
     .local v0, "endChar":I
     new-instance v4, Landroid/media/TimedText$Karaoke;
 
     invoke-direct {v4, v6, v1, v5, v0}, Landroid/media/TimedText$Karaoke;-><init>(IIII)V
 
-    .line 715
     .local v4, "kara":Landroid/media/TimedText$Karaoke;
     iget-object v7, p0, Landroid/media/TimedText;->mKaraokeList:Ljava/util/List;
 
     if-nez v7, :cond_0
 
-    .line 716
     new-instance v7, Ljava/util/ArrayList;
 
     invoke-direct {v7}, Ljava/util/ArrayList;-><init>()V
 
     iput-object v7, p0, Landroid/media/TimedText;->mKaraokeList:Ljava/util/List;
 
-    .line 718
     :cond_0
     iget-object v7, p0, Landroid/media/TimedText;->mKaraokeList:Ljava/util/List;
 
     invoke-interface {v7, v4}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    .line 707
     add-int/lit8 v3, v3, 0x1
 
     goto :goto_0
 
-    .line 720
     .end local v0    # "endChar":I
     .end local v1    # "endTimeMs":I
     .end local v4    # "kara":Landroid/media/TimedText$Karaoke;
@@ -1447,42 +1272,32 @@
     .param p1, "parcel"    # Landroid/os/Parcel;
 
     .prologue
-    .line 606
     const/4 v9, 0x0
 
-    .line 607
     .local v9, "endOfStyle":Z
     const/4 v1, -0x1
 
-    .line 608
     .local v1, "startChar":I
     const/4 v2, -0x1
 
-    .line 609
     .local v2, "endChar":I
     const/4 v3, -0x1
 
-    .line 610
     .local v3, "fontId":I
     const/4 v4, 0x0
 
-    .line 611
     .local v4, "isBold":Z
     const/4 v5, 0x0
 
-    .line 612
     .local v5, "isItalic":Z
     const/4 v6, 0x0
 
-    .line 613
     .local v6, "isUnderlined":Z
     const/4 v7, -0x1
 
-    .line 614
     .local v7, "fontSize":I
     const/4 v8, -0x1
 
-    .line 615
     .local v8, "colorRGBA":I
     :goto_0
     if-nez v9, :cond_3
@@ -1493,16 +1308,13 @@
 
     if-lez v12, :cond_3
 
-    .line 616
     invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
 
     move-result v11
 
-    .line 617
     .local v11, "key":I
     sparse-switch v11, :sswitch_data_0
 
-    .line 650
     invoke-virtual {p1}, Landroid/os/Parcel;->dataPosition()I
 
     move-result v12
@@ -1511,45 +1323,36 @@
 
     invoke-virtual {p1, v12}, Landroid/os/Parcel;->setDataPosition(I)V
 
-    .line 651
     const/4 v9, 0x1
 
     goto :goto_0
 
-    .line 619
     :sswitch_0
     invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
 
     move-result v1
 
-    .line 620
     goto :goto_0
 
-    .line 623
     :sswitch_1
     invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
 
     move-result v2
 
-    .line 624
     goto :goto_0
 
-    .line 627
     :sswitch_2
     invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
 
     move-result v3
 
-    .line 628
     goto :goto_0
 
-    .line 631
     :sswitch_3
     invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
 
     move-result v10
 
-    .line 634
     .local v10, "flags":I
     rem-int/lit8 v12, v10, 0x2
 
@@ -1559,7 +1362,6 @@
 
     const/4 v4, 0x1
 
-    .line 635
     :goto_1
     rem-int/lit8 v12, v10, 0x4
 
@@ -1569,7 +1371,6 @@
 
     const/4 v5, 0x1
 
-    .line 636
     :goto_2
     div-int/lit8 v12, v10, 0x4
 
@@ -1579,77 +1380,63 @@
 
     const/4 v6, 0x1
 
-    .line 637
     :goto_3
     goto :goto_0
 
-    .line 634
     :cond_0
     const/4 v4, 0x0
 
     goto :goto_1
 
-    .line 635
     :cond_1
     const/4 v5, 0x0
 
     goto :goto_2
 
-    .line 636
     :cond_2
     const/4 v6, 0x0
 
     goto :goto_3
 
-    .line 640
     .end local v10    # "flags":I
     :sswitch_4
     invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
 
     move-result v7
 
-    .line 641
     goto :goto_0
 
-    .line 644
     :sswitch_5
     invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
 
     move-result v8
 
-    .line 645
     goto :goto_0
 
-    .line 657
     .end local v11    # "key":I
     :cond_3
     new-instance v0, Landroid/media/TimedText$Style;
 
     invoke-direct/range {v0 .. v8}, Landroid/media/TimedText$Style;-><init>(IIIZZZII)V
 
-    .line 659
     .local v0, "style":Landroid/media/TimedText$Style;
     iget-object v12, p0, Landroid/media/TimedText;->mStyleList:Ljava/util/List;
 
     if-nez v12, :cond_4
 
-    .line 660
     new-instance v12, Ljava/util/ArrayList;
 
     invoke-direct {v12}, Ljava/util/ArrayList;-><init>()V
 
     iput-object v12, p0, Landroid/media/TimedText;->mStyleList:Ljava/util/List;
 
-    .line 662
     :cond_4
     iget-object v12, p0, Landroid/media/TimedText;->mStyleList:Ljava/util/List;
 
     invoke-interface {v12, v0}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    .line 663
     return-void
 
-    .line 617
     nop
 
     :sswitch_data_0
@@ -1669,7 +1456,6 @@
     .locals 1
 
     .prologue
-    .line 425
     iget-object v0, p0, Landroid/media/TimedText;->mTextBounds:Landroid/graphics/Rect;
 
     return-object v0
@@ -1679,7 +1465,6 @@
     .locals 1
 
     .prologue
-    .line 413
     iget-object v0, p0, Landroid/media/TimedText;->mHeadChars:Ljava/lang/String;
 
     return-object v0
@@ -1690,14 +1475,12 @@
     .param p1, "key"    # I
 
     .prologue
-    .line 807
     invoke-direct {p0, p1}, Landroid/media/TimedText;->containsKey(I)Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
-    .line 808
     iget-object v0, p0, Landroid/media/TimedText;->mKeyObjectMap:Ljava/util/HashMap;
 
     invoke-static {p1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
@@ -1710,7 +1493,6 @@
 
     return-object v0
 
-    .line 810
     :cond_0
     new-instance v0, Ljava/lang/IllegalArgumentException;
 
@@ -1741,7 +1523,6 @@
     .locals 1
 
     .prologue
-    .line 401
     iget-object v0, p0, Landroid/media/TimedText;->mTextChars:Ljava/lang/String;
 
     return-object v0

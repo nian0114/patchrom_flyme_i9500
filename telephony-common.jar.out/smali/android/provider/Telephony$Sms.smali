@@ -40,7 +40,6 @@
     .locals 1
 
     .prologue
-    .line 373
     const-string v0, "content://sms"
 
     invoke-static {v0}, Landroid/net/Uri;->parse(Ljava/lang/String;)Landroid/net/Uri;
@@ -56,10 +55,8 @@
     .locals 0
 
     .prologue
-    .line 336
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 337
     return-void
 .end method
 
@@ -76,7 +73,6 @@
     .param p9, "deliveryReport"    # Z
 
     .prologue
-    .line 419
     const-wide/16 v10, -0x1
 
     move-wide v0, p0
@@ -118,14 +114,12 @@
     .param p10, "threadId"    # J
 
     .prologue
-    .line 465
     new-instance v0, Landroid/content/ContentValues;
 
     const/16 v1, 0x8
 
     invoke-direct {v0, v1}, Landroid/content/ContentValues;-><init>(I)V
 
-    .line 466
     .local v0, "values":Landroid/content/ContentValues;
     const-string v1, "Telephony"
 
@@ -149,7 +143,6 @@
 
     invoke-static {v1, v2}, Landroid/telephony/Rlog;->v(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 468
     const-string v1, "sub_id"
 
     invoke-static {p0, p1}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
@@ -158,20 +151,16 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/Long;)V
 
-    .line 469
     const-string v1, "address"
 
     invoke-virtual {v0, v1, p4}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 470
     if-eqz p7, :cond_0
 
-    .line 471
     const-string v1, "date"
 
     invoke-virtual {v0, v1, p7}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/Long;)V
 
-    .line 473
     :cond_0
     const-string v2, "read"
 
@@ -186,20 +175,16 @@
     :goto_0
     invoke-virtual {v0, v2, v1}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/Integer;)V
 
-    .line 474
     const-string v1, "subject"
 
     invoke-virtual {v0, v1, p6}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 475
     const-string v1, "body"
 
     invoke-virtual {v0, v1, p5}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 476
     if-eqz p9, :cond_1
 
-    .line 477
     const-string v1, "status"
 
     const/16 v2, 0x20
@@ -210,7 +195,6 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/Integer;)V
 
-    .line 479
     :cond_1
     const-wide/16 v2, -0x1
 
@@ -218,7 +202,6 @@
 
     if-eqz v1, :cond_2
 
-    .line 480
     const-string v1, "thread_id"
 
     invoke-static {p10, p11}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
@@ -227,7 +210,6 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/Long;)V
 
-    .line 482
     :cond_2
     invoke-virtual {p2, p3, v0}, Landroid/content/ContentResolver;->insert(Landroid/net/Uri;Landroid/content/ContentValues;)Landroid/net/Uri;
 
@@ -235,7 +217,6 @@
 
     return-object v1
 
-    .line 473
     :cond_3
     const/4 v1, 0x0
 
@@ -258,7 +239,6 @@
     .param p7, "deliveryReport"    # Z
 
     .prologue
-    .line 397
     invoke-static {}, Landroid/telephony/SubscriptionManager;->getDefaultSmsSubId()J
 
     move-result-wide v0
@@ -301,7 +281,6 @@
     .param p8, "threadId"    # J
 
     .prologue
-    .line 441
     invoke-static {}, Landroid/telephony/SubscriptionManager;->getDefaultSmsSubId()J
 
     move-result-wide v0
@@ -346,28 +325,23 @@
     .param p10, "threadId"    # J
 
     .prologue
-    .line 505
     new-instance v0, Landroid/content/ContentValues;
 
     const/4 v1, 0x7
 
     invoke-direct {v0, v1}, Landroid/content/ContentValues;-><init>(I)V
 
-    .line 507
     .local v0, "values":Landroid/content/ContentValues;
     const-string v1, "address"
 
     invoke-virtual {v0, v1, p2}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 508
     if-eqz p7, :cond_0
 
-    .line 509
     const-string v1, "date"
 
     invoke-virtual {v0, v1, p7}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/Long;)V
 
-    .line 511
     :cond_0
     const-string v2, "read"
 
@@ -382,25 +356,20 @@
     :goto_0
     invoke-virtual {v0, v2, v1}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/Integer;)V
 
-    .line 512
     const-string v1, "subject"
 
     invoke-virtual {v0, v1, p4}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 513
     const-string v1, "body"
 
     invoke-virtual {v0, v1, p3}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 514
     if-eqz p5, :cond_1
 
-    .line 515
     const-string v1, "sim_imsi"
 
     invoke-virtual {v0, v1, p5}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 517
     :cond_1
     const-string v1, "sim_slot"
 
@@ -410,10 +379,8 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/Integer;)V
 
-    .line 518
     if-eqz p9, :cond_2
 
-    .line 519
     const-string v1, "status"
 
     const/16 v2, 0x20
@@ -424,7 +391,6 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/Integer;)V
 
-    .line 521
     :cond_2
     const-wide/16 v2, -0x1
 
@@ -432,7 +398,6 @@
 
     if-eqz v1, :cond_3
 
-    .line 522
     const-string v1, "thread_id"
 
     invoke-static {p10, p11}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
@@ -441,7 +406,6 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/Long;)V
 
-    .line 524
     :cond_3
     invoke-virtual {p0, p1, v0}, Landroid/content/ContentResolver;->insert(Landroid/net/Uri;Landroid/content/ContentValues;)Landroid/net/Uri;
 
@@ -449,7 +413,6 @@
 
     return-object v1
 
-    .line 511
     :cond_4
     const/4 v1, 0x0
 
@@ -465,23 +428,19 @@
     .param p0, "context"    # Landroid/content/Context;
 
     .prologue
-    .line 345
     const/4 v1, 0x0
 
     invoke-static {p0, v1}, Lcom/android/internal/telephony/SmsApplication;->getDefaultSmsApplication(Landroid/content/Context;Z)Landroid/content/ComponentName;
 
     move-result-object v0
 
-    .line 346
     .local v0, "component":Landroid/content/ComponentName;
     if-eqz v0, :cond_0
 
-    .line 347
     invoke-virtual {v0}, Landroid/content/ComponentName;->getPackageName()Ljava/lang/String;
 
     move-result-object v1
 
-    .line 349
     :goto_0
     return-object v1
 
@@ -496,7 +455,6 @@
     .param p0, "messageType"    # I
 
     .prologue
-    .line 581
     const/4 v0, 0x5
 
     if-eq p0, v0, :cond_0
@@ -539,28 +497,22 @@
 
     const/4 v9, 0x0
 
-    .line 539
     if-nez p1, :cond_0
 
-    .line 571
     :goto_0
     return v9
 
-    .line 543
     :cond_0
     const/4 v7, 0x0
 
-    .line 544
     .local v7, "markAsUnread":Z
     const/4 v6, 0x0
 
-    .line 545
     .local v6, "markAsRead":Z
     packed-switch p2, :pswitch_data_0
 
     goto :goto_0
 
-    .line 561
     :goto_1
     :pswitch_0
     new-instance v3, Landroid/content/ContentValues;
@@ -569,7 +521,6 @@
 
     invoke-direct {v3, v0}, Landroid/content/ContentValues;-><init>(I)V
 
-    .line 563
     .local v3, "values":Landroid/content/ContentValues;
     const-string v0, "type"
 
@@ -579,10 +530,8 @@
 
     invoke-virtual {v3, v0, v1}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/Integer;)V
 
-    .line 564
     if-eqz v7, :cond_2
 
-    .line 565
     const-string v0, "read"
 
     invoke-static {v9}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
@@ -591,7 +540,6 @@
 
     invoke-virtual {v3, v0, v1}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/Integer;)V
 
-    .line 569
     :cond_1
     :goto_2
     const-string v0, "error_code"
@@ -602,7 +550,6 @@
 
     invoke-virtual {v3, v0, v1}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/Integer;)V
 
-    .line 571
     invoke-virtual {p0}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
 
     move-result-object v1
@@ -626,27 +573,21 @@
 
     goto :goto_0
 
-    .line 551
     .end local v3    # "values":Landroid/content/ContentValues;
     :pswitch_1
     const/4 v6, 0x1
 
-    .line 552
     goto :goto_1
 
-    .line 555
     :pswitch_2
     const/4 v7, 0x1
 
-    .line 556
     goto :goto_1
 
-    .line 566
     .restart local v3    # "values":Landroid/content/ContentValues;
     :cond_2
     if-eqz v6, :cond_1
 
-    .line 567
     const-string v0, "read"
 
     invoke-static {v8}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
@@ -660,10 +601,8 @@
     :cond_3
     move v0, v9
 
-    .line 571
     goto :goto_3
 
-    .line 545
     nop
 
     :pswitch_data_0
@@ -685,7 +624,6 @@
     .prologue
     const/4 v3, 0x0
 
-    .line 357
     sget-object v1, Landroid/provider/Telephony$Sms;->CONTENT_URI:Landroid/net/Uri;
 
     const-string v5, "date DESC"
@@ -711,7 +649,6 @@
     .param p3, "orderBy"    # Ljava/lang/String;
 
     .prologue
-    .line 366
     sget-object v1, Landroid/provider/Telephony$Sms;->CONTENT_URI:Landroid/net/Uri;
 
     const/4 v4, 0x0

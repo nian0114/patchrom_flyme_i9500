@@ -23,7 +23,6 @@
     .locals 0
 
     .prologue
-    .line 309
     iput-object p1, p0, Lcom/android/server/am/AMSLogger$AMSFormatter;->this$0:Lcom/android/server/am/AMSLogger;
 
     invoke-direct {p0}, Ljava/util/logging/Formatter;-><init>()V
@@ -37,7 +36,6 @@
     .param p2, "x1"    # Lcom/android/server/am/AMSLogger$1;
 
     .prologue
-    .line 309
     invoke-direct {p0, p1}, Lcom/android/server/am/AMSLogger$AMSFormatter;-><init>(Lcom/android/server/am/AMSLogger;)V
 
     return-void
@@ -50,7 +48,6 @@
     .param p1, "record"    # Ljava/util/logging/LogRecord;
 
     .prologue
-    .line 313
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V

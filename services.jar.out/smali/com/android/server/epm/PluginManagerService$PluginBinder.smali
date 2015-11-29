@@ -30,22 +30,18 @@
     .param p2, "context"    # Landroid/content/Context;
 
     .prologue
-    .line 113
     iput-object p1, p0, Lcom/android/server/epm/PluginManagerService$PluginBinder;->this$0:Lcom/android/server/epm/PluginManagerService;
 
     invoke-direct {p0}, Landroid/app/epm/IPluginManager$Stub;-><init>()V
 
-    .line 352
     new-instance v4, Lcom/android/server/epm/PluginManagerService$PluginBinder$1;
 
     invoke-direct {v4, p0}, Lcom/android/server/epm/PluginManagerService$PluginBinder$1;-><init>(Lcom/android/server/epm/PluginManagerService$PluginBinder;)V
 
     iput-object v4, p0, Lcom/android/server/epm/PluginManagerService$PluginBinder;->mBroadcastReceiver:Landroid/content/BroadcastReceiver;
 
-    .line 116
     iput-object p2, p0, Lcom/android/server/epm/PluginManagerService$PluginBinder;->mContext:Landroid/content/Context;
 
-    .line 117
     iget-object v4, p0, Lcom/android/server/epm/PluginManagerService$PluginBinder;->mContext:Landroid/content/Context;
 
     invoke-virtual {v4}, Landroid/content/Context;->getPackageManager()Landroid/content/pm/PackageManager;
@@ -55,53 +51,43 @@
     # setter for: Lcom/android/server/epm/PluginManagerService;->mPackageManager:Landroid/content/pm/PackageManager;
     invoke-static {p1, v4}, Lcom/android/server/epm/PluginManagerService;->access$002(Lcom/android/server/epm/PluginManagerService;Landroid/content/pm/PackageManager;)Landroid/content/pm/PackageManager;
 
-    .line 119
     invoke-direct {p0}, Lcom/android/server/epm/PluginManagerService$PluginBinder;->registerModules()V
 
-    .line 121
     new-instance v3, Landroid/content/IntentFilter;
 
     invoke-direct {v3}, Landroid/content/IntentFilter;-><init>()V
 
-    .line 122
     .local v3, "intentFilter":Landroid/content/IntentFilter;
     const-string v4, "android.intent.action.PACKAGE_ADDED"
 
     invoke-virtual {v3, v4}, Landroid/content/IntentFilter;->addAction(Ljava/lang/String;)V
 
-    .line 123
     const-string v4, "android.intent.action.PACKAGE_CHANGED"
 
     invoke-virtual {v3, v4}, Landroid/content/IntentFilter;->addAction(Ljava/lang/String;)V
 
-    .line 124
     const-string v4, "android.intent.action.PACKAGE_REPLACED"
 
     invoke-virtual {v3, v4}, Landroid/content/IntentFilter;->addAction(Ljava/lang/String;)V
 
-    .line 125
     const-string v4, "android.intent.action.PACKAGE_REMOVED"
 
     invoke-virtual {v3, v4}, Landroid/content/IntentFilter;->addAction(Ljava/lang/String;)V
 
-    .line 126
     const-string v4, "android.intent.action.BOOT_COMPLETED"
 
     invoke-virtual {v3, v4}, Landroid/content/IntentFilter;->addAction(Ljava/lang/String;)V
 
-    .line 127
-    const-string/jumbo v4, "package"
+    const-string v4, "package"
 
     invoke-virtual {v3, v4}, Landroid/content/IntentFilter;->addDataScheme(Ljava/lang/String;)V
 
-    .line 128
     iget-object v4, p0, Lcom/android/server/epm/PluginManagerService$PluginBinder;->mContext:Landroid/content/Context;
 
     iget-object v5, p0, Lcom/android/server/epm/PluginManagerService$PluginBinder;->mBroadcastReceiver:Landroid/content/BroadcastReceiver;
 
     invoke-virtual {v4, v5, v3}, Landroid/content/Context;->registerReceiver(Landroid/content/BroadcastReceiver;Landroid/content/IntentFilter;)Landroid/content/Intent;
 
-    .line 130
     # getter for: Lcom/android/server/epm/PluginManagerService;->mModules:Ljava/util/HashMap;
     invoke-static {p1}, Lcom/android/server/epm/PluginManagerService;->access$100(Lcom/android/server/epm/PluginManagerService;)Ljava/util/HashMap;
 
@@ -111,7 +97,6 @@
 
     move-result-object v0
 
-    .line 132
     .local v0, "allHelper":Ljava/util/Collection;, "Ljava/util/Collection<Lcom/android/server/epm/IPluginHelper;>;"
     invoke-interface {v0}, Ljava/util/Collection;->iterator()Ljava/util/Iterator;
 
@@ -131,7 +116,6 @@
 
     check-cast v2, Lcom/android/server/epm/IPluginHelper;
 
-    .line 133
     .local v2, "iPluginHelper":Lcom/android/server/epm/IPluginHelper;
     sget-object v4, Lcom/android/server/epm/PluginManagerService;->TAG:Ljava/lang/String;
 
@@ -161,12 +145,10 @@
 
     invoke-static {v4, v5}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 134
     invoke-interface {v2}, Lcom/android/server/epm/IPluginHelper;->parsePlugins()V
 
     goto :goto_0
 
-    .line 136
     .end local v2    # "iPluginHelper":Lcom/android/server/epm/IPluginHelper;
     :cond_0
     return-void
@@ -178,7 +160,6 @@
     .param p1, "x1"    # Ljava/lang/String;
 
     .prologue
-    .line 109
     invoke-direct {p0, p1}, Lcom/android/server/epm/PluginManagerService$PluginBinder;->getModule(Ljava/lang/String;)Lcom/android/server/epm/IPluginHelper;
 
     move-result-object v0
@@ -191,7 +172,6 @@
     .param p1, "moduleKey"    # Ljava/lang/String;
 
     .prologue
-    .line 151
     iget-object v0, p0, Lcom/android/server/epm/PluginManagerService$PluginBinder;->this$0:Lcom/android/server/epm/PluginManagerService;
 
     # getter for: Lcom/android/server/epm/PluginManagerService;->mModules:Ljava/util/HashMap;
@@ -214,7 +194,6 @@
 
     if-lez v0, :cond_0
 
-    .line 152
     iget-object v0, p0, Lcom/android/server/epm/PluginManagerService$PluginBinder;->this$0:Lcom/android/server/epm/PluginManagerService;
 
     # getter for: Lcom/android/server/epm/PluginManagerService;->mModules:Ljava/util/HashMap;
@@ -228,7 +207,6 @@
 
     check-cast v0, Lcom/android/server/epm/IPluginHelper;
 
-    .line 154
     :goto_0
     return-object v0
 
@@ -242,7 +220,6 @@
     .locals 5
 
     .prologue
-    .line 140
     iget-object v1, p0, Lcom/android/server/epm/PluginManagerService$PluginBinder;->this$0:Lcom/android/server/epm/PluginManagerService;
 
     # getter for: Lcom/android/server/epm/PluginManagerService;->mModules:Ljava/util/HashMap;
@@ -252,14 +229,12 @@
 
     if-eqz v1, :cond_0
 
-    .line 141
     new-instance v0, Lcom/android/server/epm/overlay/ThemeManagerService;
 
     iget-object v1, p0, Lcom/android/server/epm/PluginManagerService$PluginBinder;->mContext:Landroid/content/Context;
 
     invoke-direct {v0, v1}, Lcom/android/server/epm/overlay/ThemeManagerService;-><init>(Landroid/content/Context;)V
 
-    .line 142
     .local v0, "tms":Lcom/android/server/epm/overlay/ThemeManagerService;
     iget-object v1, p0, Lcom/android/server/epm/PluginManagerService$PluginBinder;->this$0:Lcom/android/server/epm/PluginManagerService;
 
@@ -272,14 +247,12 @@
 
     invoke-virtual {v1, v2, v0}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 143
     new-instance v1, Ljava/lang/Thread;
 
     invoke-direct {v1, v0}, Ljava/lang/Thread;-><init>(Ljava/lang/Runnable;)V
 
     invoke-virtual {v1}, Ljava/lang/Thread;->start()V
 
-    .line 144
     iget-object v1, p0, Lcom/android/server/epm/PluginManagerService$PluginBinder;->this$0:Lcom/android/server/epm/PluginManagerService;
 
     # getter for: Lcom/android/server/epm/PluginManagerService;->mModules:Ljava/util/HashMap;
@@ -297,7 +270,6 @@
 
     invoke-virtual {v1, v2, v3}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 146
     .end local v0    # "tms":Lcom/android/server/epm/overlay/ThemeManagerService;
     :cond_0
     return-void
@@ -313,42 +285,34 @@
     .param p4, "isTrial"    # Z
 
     .prologue
-    .line 210
     new-instance v1, Landroid/os/Message;
 
     invoke-direct {v1}, Landroid/os/Message;-><init>()V
 
-    .line 211
     .local v1, "msg":Landroid/os/Message;
     const/4 v2, 0x1
 
     iput v2, v1, Landroid/os/Message;->what:I
 
-    .line 212
     new-instance v0, Landroid/os/Bundle;
 
     invoke-direct {v0}, Landroid/os/Bundle;-><init>()V
 
-    .line 213
     .local v0, "bdl":Landroid/os/Bundle;
-    const-string/jumbo v2, "packageName"
+    const-string v2, "packageName"
 
     invoke-virtual {v0, v2, p1}, Landroid/os/Bundle;->putString(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 214
     const-string v2, "isTrial"
 
     invoke-virtual {v0, v2, p4}, Landroid/os/Bundle;->putBoolean(Ljava/lang/String;Z)V
 
-    .line 215
-    const-string/jumbo v2, "order"
+    const-string v2, "order"
 
     invoke-virtual {v0, v2, p3}, Landroid/os/Bundle;->putInt(Ljava/lang/String;I)V
 
-    .line 216
     iput-object v0, v1, Landroid/os/Message;->obj:Ljava/lang/Object;
 
-    .line 217
     iget-object v2, p0, Lcom/android/server/epm/PluginManagerService$PluginBinder;->this$0:Lcom/android/server/epm/PluginManagerService;
 
     # getter for: Lcom/android/server/epm/PluginManagerService;->mModules:Ljava/util/HashMap;
@@ -370,7 +334,6 @@
 
     invoke-virtual {v2, v1}, Landroid/os/Handler;->sendMessage(Landroid/os/Message;)Z
 
-    .line 257
     const/4 v2, 0x0
 
     return v2
@@ -380,7 +343,6 @@
     .locals 2
 
     .prologue
-    .line 267
     iget-object v0, p0, Lcom/android/server/epm/PluginManagerService$PluginBinder;->this$0:Lcom/android/server/epm/PluginManagerService;
 
     # getter for: Lcom/android/server/epm/PluginManagerService;->mModules:Ljava/util/HashMap;
@@ -416,12 +378,10 @@
     .end annotation
 
     .prologue
-    .line 329
     new-instance v1, Ljava/util/ArrayList;
 
     invoke-direct {v1}, Ljava/util/ArrayList;-><init>()V
 
-    .line 330
     .local v1, "categoryList":Ljava/util/ArrayList;, "Ljava/util/ArrayList<Ljava/lang/Integer;>;"
     iget-object v5, p0, Lcom/android/server/epm/PluginManagerService$PluginBinder;->this$0:Lcom/android/server/epm/PluginManagerService;
 
@@ -434,7 +394,6 @@
 
     move-result-object v0
 
-    .line 331
     .local v0, "allHelper":Ljava/util/Collection;, "Ljava/util/Collection<Lcom/android/server/epm/IPluginHelper;>;"
     invoke-interface {v0}, Ljava/util/Collection;->iterator()Ljava/util/Iterator;
 
@@ -454,13 +413,11 @@
 
     check-cast v4, Lcom/android/server/epm/IPluginHelper;
 
-    .line 332
     .local v4, "iPluginHelper":Lcom/android/server/epm/IPluginHelper;
     invoke-interface {v4}, Lcom/android/server/epm/IPluginHelper;->getCategory()I
 
     move-result v2
 
-    .line 333
     .local v2, "data":I
     invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
@@ -470,7 +427,6 @@
 
     goto :goto_0
 
-    .line 335
     .end local v2    # "data":I
     .end local v4    # "iPluginHelper":Lcom/android/server/epm/IPluginHelper;
     :cond_0
@@ -499,7 +455,6 @@
     .end annotation
 
     .prologue
-    .line 182
     iget-object v0, p0, Lcom/android/server/epm/PluginManagerService$PluginBinder;->this$0:Lcom/android/server/epm/PluginManagerService;
 
     # getter for: Lcom/android/server/epm/PluginManagerService;->mModules:Ljava/util/HashMap;
@@ -531,7 +486,6 @@
     .end annotation
 
     .prologue
-    .line 109
     invoke-virtual {p0}, Lcom/android/server/epm/PluginManagerService$PluginBinder;->getComponentPackageMap()Ljava/util/HashMap;
 
     move-result-object v0
@@ -562,12 +516,10 @@
     .end annotation
 
     .prologue
-    .line 199
     new-instance v0, Ljava/util/HashMap;
 
     invoke-direct {v0}, Ljava/util/HashMap;-><init>()V
 
-    .line 201
     .local v0, "data":Ljava/util/HashMap;, "Ljava/util/HashMap<Ljava/lang/String;Ljava/lang/String;>;"
     return-object v0
 .end method
@@ -582,7 +534,6 @@
     .end annotation
 
     .prologue
-    .line 109
     invoke-virtual {p0, p1}, Lcom/android/server/epm/PluginManagerService$PluginBinder;->getLanguagePackList(Ljava/lang/String;)Ljava/util/HashMap;
 
     move-result-object v0
@@ -604,7 +555,6 @@
     .end annotation
 
     .prologue
-    .line 343
     iget-object v3, p0, Lcom/android/server/epm/PluginManagerService$PluginBinder;->this$0:Lcom/android/server/epm/PluginManagerService;
 
     # getter for: Lcom/android/server/epm/PluginManagerService;->mModules:Ljava/util/HashMap;
@@ -616,7 +566,6 @@
 
     move-result-object v0
 
-    .line 344
     .local v0, "allHelper":Ljava/util/Collection;, "Ljava/util/Collection<Lcom/android/server/epm/IPluginHelper;>;"
     invoke-interface {v0}, Ljava/util/Collection;->iterator()Ljava/util/Iterator;
 
@@ -636,7 +585,6 @@
 
     check-cast v2, Lcom/android/server/epm/IPluginHelper;
 
-    .line 345
     .local v2, "iPluginHelper":Lcom/android/server/epm/IPluginHelper;
     invoke-interface {v2}, Lcom/android/server/epm/IPluginHelper;->getCategory()I
 
@@ -644,7 +592,6 @@
 
     if-ne p1, v3, :cond_0
 
-    .line 346
     new-instance v3, Ljava/util/ArrayList;
 
     invoke-interface {v2}, Lcom/android/server/epm/IPluginHelper;->getPluginList()Ljava/util/HashMap;
@@ -657,7 +604,6 @@
 
     invoke-direct {v3, v4}, Ljava/util/ArrayList;-><init>(Ljava/util/Collection;)V
 
-    .line 349
     .end local v2    # "iPluginHelper":Lcom/android/server/epm/IPluginHelper;
     :goto_0
     return-object v3
@@ -691,12 +637,10 @@
     .end annotation
 
     .prologue
-    .line 165
     new-instance v4, Ljava/util/HashMap;
 
     invoke-direct {v4}, Ljava/util/HashMap;-><init>()V
 
-    .line 166
     .local v4, "pluginMap":Ljava/util/HashMap;, "Ljava/util/HashMap<Ljava/lang/String;Ljava/lang/String;>;"
     iget-object v5, p0, Lcom/android/server/epm/PluginManagerService$PluginBinder;->this$0:Lcom/android/server/epm/PluginManagerService;
 
@@ -709,7 +653,6 @@
 
     move-result-object v0
 
-    .line 167
     .local v0, "allHelper":Ljava/util/Collection;, "Ljava/util/Collection<Lcom/android/server/epm/IPluginHelper;>;"
     invoke-interface {v0}, Ljava/util/Collection;->iterator()Ljava/util/Iterator;
 
@@ -729,19 +672,16 @@
 
     check-cast v3, Lcom/android/server/epm/IPluginHelper;
 
-    .line 168
     .local v3, "iPluginHelper":Lcom/android/server/epm/IPluginHelper;
     invoke-interface {v3}, Lcom/android/server/epm/IPluginHelper;->getPluginList()Ljava/util/HashMap;
 
     move-result-object v1
 
-    .line 169
     .local v1, "data":Ljava/util/HashMap;, "Ljava/util/HashMap<Ljava/lang/String;Ljava/lang/String;>;"
     invoke-virtual {v4, v1}, Ljava/util/HashMap;->putAll(Ljava/util/Map;)V
 
     goto :goto_0
 
-    .line 171
     .end local v1    # "data":Ljava/util/HashMap;, "Ljava/util/HashMap<Ljava/lang/String;Ljava/lang/String;>;"
     .end local v3    # "iPluginHelper":Lcom/android/server/epm/IPluginHelper;
     :cond_0
@@ -758,7 +698,6 @@
     .end annotation
 
     .prologue
-    .line 109
     invoke-virtual {p0, p1}, Lcom/android/server/epm/PluginManagerService$PluginBinder;->getPluginDetailsList(Ljava/lang/String;)Ljava/util/HashMap;
 
     move-result-object v0
@@ -772,37 +711,30 @@
     .param p2, "isTrial"    # Z
 
     .prologue
-    .line 281
     new-instance v1, Landroid/os/Message;
 
     invoke-direct {v1}, Landroid/os/Message;-><init>()V
 
-    .line 282
     .local v1, "msg":Landroid/os/Message;
     const/4 v2, 0x0
 
     iput v2, v1, Landroid/os/Message;->what:I
 
-    .line 283
     new-instance v0, Landroid/os/Bundle;
 
     invoke-direct {v0}, Landroid/os/Bundle;-><init>()V
 
-    .line 284
     .local v0, "bdl":Landroid/os/Bundle;
-    const-string/jumbo v2, "path"
+    const-string v2, "path"
 
     invoke-virtual {v0, v2, p1}, Landroid/os/Bundle;->putParcelable(Ljava/lang/String;Landroid/os/Parcelable;)V
 
-    .line 285
     const-string v2, "isTrial"
 
     invoke-virtual {v0, v2, p2}, Landroid/os/Bundle;->putBoolean(Ljava/lang/String;Z)V
 
-    .line 286
     iput-object v0, v1, Landroid/os/Message;->obj:Ljava/lang/Object;
 
-    .line 287
     iget-object v2, p0, Lcom/android/server/epm/PluginManagerService$PluginBinder;->this$0:Lcom/android/server/epm/PluginManagerService;
 
     # getter for: Lcom/android/server/epm/PluginManagerService;->mModules:Ljava/util/HashMap;
@@ -824,7 +756,6 @@
 
     invoke-virtual {v2, v1}, Landroid/os/Handler;->sendMessage(Landroid/os/Message;)Z
 
-    .line 288
     return-void
 .end method
 
@@ -833,10 +764,8 @@
     .param p1, "callback"    # Landroid/app/epm/IPluginManagerCallback;
 
     .prologue
-    .line 317
     iput-object p1, p0, Lcom/android/server/epm/PluginManagerService$PluginBinder;->mCallback:Landroid/app/epm/IPluginManagerCallback;
 
-    .line 318
     iget-object v2, p0, Lcom/android/server/epm/PluginManagerService$PluginBinder;->this$0:Lcom/android/server/epm/PluginManagerService;
 
     # getter for: Lcom/android/server/epm/PluginManagerService;->mModules:Ljava/util/HashMap;
@@ -866,7 +795,6 @@
 
     check-cast v1, Ljava/lang/String;
 
-    .line 319
     .local v1, "perm":Ljava/lang/String;
     iget-object v2, p0, Lcom/android/server/epm/PluginManagerService$PluginBinder;->this$0:Lcom/android/server/epm/PluginManagerService;
 
@@ -885,7 +813,6 @@
 
     goto :goto_0
 
-    .line 321
     .end local v1    # "perm":Ljava/lang/String;
     :cond_0
     return-void
@@ -896,32 +823,26 @@
     .param p1, "packageName"    # Ljava/lang/String;
 
     .prologue
-    .line 299
     new-instance v1, Landroid/os/Message;
 
     invoke-direct {v1}, Landroid/os/Message;-><init>()V
 
-    .line 300
     .local v1, "msg":Landroid/os/Message;
     const/4 v2, 0x4
 
     iput v2, v1, Landroid/os/Message;->what:I
 
-    .line 301
     new-instance v0, Landroid/os/Bundle;
 
     invoke-direct {v0}, Landroid/os/Bundle;-><init>()V
 
-    .line 302
     .local v0, "bdl":Landroid/os/Bundle;
-    const-string/jumbo v2, "packageName"
+    const-string v2, "packageName"
 
     invoke-virtual {v0, v2, p1}, Landroid/os/Bundle;->putString(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 303
     iput-object v0, v1, Landroid/os/Message;->obj:Ljava/lang/Object;
 
-    .line 304
     iget-object v2, p0, Lcom/android/server/epm/PluginManagerService$PluginBinder;->this$0:Lcom/android/server/epm/PluginManagerService;
 
     # getter for: Lcom/android/server/epm/PluginManagerService;->mModules:Ljava/util/HashMap;
@@ -943,6 +864,5 @@
 
     invoke-virtual {v2, v1}, Landroid/os/Handler;->sendMessage(Landroid/os/Message;)Z
 
-    .line 305
     return-void
 .end method

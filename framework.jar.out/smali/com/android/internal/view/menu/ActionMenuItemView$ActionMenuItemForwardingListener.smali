@@ -23,13 +23,10 @@
     .locals 0
 
     .prologue
-    .line 487
     iput-object p1, p0, Lcom/android/internal/view/menu/ActionMenuItemView$ActionMenuItemForwardingListener;->this$0:Lcom/android/internal/view/menu/ActionMenuItemView;
 
-    .line 488
     invoke-direct {p0, p1}, Landroid/widget/ListPopupWindow$ForwardingListener;-><init>(Landroid/view/View;)V
 
-    .line 489
     return-void
 .end method
 
@@ -39,7 +36,6 @@
     .locals 1
 
     .prologue
-    .line 493
     iget-object v0, p0, Lcom/android/internal/view/menu/ActionMenuItemView$ActionMenuItemForwardingListener;->this$0:Lcom/android/internal/view/menu/ActionMenuItemView;
 
     # getter for: Lcom/android/internal/view/menu/ActionMenuItemView;->mPopupCallback:Lcom/android/internal/view/menu/ActionMenuItemView$PopupCallback;
@@ -49,7 +45,6 @@
 
     if-eqz v0, :cond_0
 
-    .line 494
     iget-object v0, p0, Lcom/android/internal/view/menu/ActionMenuItemView$ActionMenuItemForwardingListener;->this$0:Lcom/android/internal/view/menu/ActionMenuItemView;
 
     # getter for: Lcom/android/internal/view/menu/ActionMenuItemView;->mPopupCallback:Lcom/android/internal/view/menu/ActionMenuItemView$PopupCallback;
@@ -61,7 +56,6 @@
 
     move-result-object v0
 
-    .line 496
     :goto_0
     return-object v0
 
@@ -77,7 +71,6 @@
     .prologue
     const/4 v1, 0x0
 
-    .line 502
     iget-object v2, p0, Lcom/android/internal/view/menu/ActionMenuItemView$ActionMenuItemForwardingListener;->this$0:Lcom/android/internal/view/menu/ActionMenuItemView;
 
     # getter for: Lcom/android/internal/view/menu/ActionMenuItemView;->mItemInvoker:Lcom/android/internal/view/menu/MenuBuilder$ItemInvoker;
@@ -107,12 +100,10 @@
 
     if-eqz v2, :cond_0
 
-    .line 503
     invoke-virtual {p0}, Lcom/android/internal/view/menu/ActionMenuItemView$ActionMenuItemForwardingListener;->getPopup()Landroid/widget/ListPopupWindow;
 
     move-result-object v0
 
-    .line 504
     .local v0, "popup":Landroid/widget/ListPopupWindow;
     if-eqz v0, :cond_0
 
@@ -124,7 +115,6 @@
 
     const/4 v1, 0x1
 
-    .line 506
     .end local v0    # "popup":Landroid/widget/ListPopupWindow;
     :cond_0
     return v1
@@ -134,22 +124,17 @@
     .locals 2
 
     .prologue
-    .line 511
     invoke-virtual {p0}, Lcom/android/internal/view/menu/ActionMenuItemView$ActionMenuItemForwardingListener;->getPopup()Landroid/widget/ListPopupWindow;
 
     move-result-object v0
 
-    .line 512
     .local v0, "popup":Landroid/widget/ListPopupWindow;
     if-eqz v0, :cond_0
 
-    .line 513
     invoke-virtual {v0}, Landroid/widget/ListPopupWindow;->dismiss()V
 
-    .line 514
     const/4 v1, 0x1
 
-    .line 516
     :goto_0
     return v1
 

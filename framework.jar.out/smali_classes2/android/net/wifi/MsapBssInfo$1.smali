@@ -32,7 +32,6 @@
     .locals 0
 
     .prologue
-    .line 146
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -45,7 +44,6 @@
     .param p1, "in"    # Landroid/os/Parcel;
 
     .prologue
-    .line 148
     new-instance v0, Landroid/net/wifi/MsapBssInfo;
 
     invoke-virtual {p1}, Landroid/os/Parcel;->readString()Ljava/lang/String;
@@ -94,7 +92,6 @@
     .param p1, "x0"    # Landroid/os/Parcel;
 
     .prologue
-    .line 146
     invoke-virtual {p0, p1}, Landroid/net/wifi/MsapBssInfo$1;->createFromParcel(Landroid/os/Parcel;)Landroid/net/wifi/MsapBssInfo;
 
     move-result-object v0
@@ -107,7 +104,6 @@
     .param p1, "size"    # I
 
     .prologue
-    .line 162
     new-array v0, p1, [Landroid/net/wifi/MsapBssInfo;
 
     return-object v0
@@ -118,7 +114,6 @@
     .param p1, "x0"    # I
 
     .prologue
-    .line 146
     invoke-virtual {p0, p1}, Landroid/net/wifi/MsapBssInfo$1;->newArray(I)[Landroid/net/wifi/MsapBssInfo;
 
     move-result-object v0

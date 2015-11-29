@@ -23,7 +23,6 @@
     .locals 0
 
     .prologue
-    .line 8236
     iput-object p1, p0, Lcom/android/server/am/ActivityManagerService$9;->this$0:Lcom/android/server/am/ActivityManagerService;
 
     invoke-direct {p0}, Landroid/content/BroadcastReceiver;-><init>()V
@@ -41,7 +40,6 @@
     .prologue
     const/4 v11, 0x1
 
-    .line 8239
     invoke-virtual {p2}, Landroid/content/Intent;->getAction()Ljava/lang/String;
 
     move-result-object v8
@@ -54,8 +52,7 @@
 
     if-nez v8, :cond_6
 
-    .line 8240
-    const-string/jumbo v8, "ro.debug_level"
+    const-string v8, "ro.debug_level"
 
     const-string v9, "Unknown"
 
@@ -63,7 +60,6 @@
 
     move-result-object v5
 
-    .line 8242
     .local v5, "state":Ljava/lang/String;
     const-string v8, "Unknown"
 
@@ -81,13 +77,11 @@
 
     if-eqz v8, :cond_1
 
-    .line 8291
     .end local v5    # "state":Ljava/lang/String;
     :cond_0
     :goto_0
     return-void
 
-    .line 8246
     .restart local v5    # "state":Ljava/lang/String;
     :cond_1
     invoke-virtual {p2}, Landroid/content/Intent;->getExtras()Landroid/os/Bundle;
@@ -100,7 +94,6 @@
 
     move-result-object v6
 
-    .line 8247
     .local v6, "updateInt":[I
     const-string v8, "ActivityManager"
 
@@ -108,15 +101,12 @@
 
     invoke-static {v8, v9}, Landroid/util/Slog;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 8249
     array-length v8, v6
 
     if-lez v8, :cond_0
 
-    .line 8250
     const/4 v4, 0x0
 
-    .line 8251
     .local v4, "loop":I
     move-object v0, v6
 
@@ -132,18 +122,15 @@
 
     aget v7, v0, v1
 
-    .line 8252
     .local v7, "value":I
     if-nez v4, :cond_2
 
-    .line 8253
     iget-object v8, p0, Lcom/android/server/am/ActivityManagerService$9;->this$0:Lcom/android/server/am/ActivityManagerService;
 
     iget-object v8, v8, Lcom/android/server/am/ActivityManagerService;->mProcessList:Lcom/android/server/am/ProcessList;
 
     invoke-virtual {v8, v7}, Lcom/android/server/am/ProcessList;->setTrimEmptyApps(I)V
 
-    .line 8254
     const-string v8, "ActivityManager"
 
     new-instance v9, Ljava/lang/StringBuilder;
@@ -166,18 +153,15 @@
 
     invoke-static {v8, v9}, Landroid/util/Slog;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 8256
     :cond_2
     if-ne v4, v11, :cond_3
 
-    .line 8257
     iget-object v8, p0, Lcom/android/server/am/ActivityManagerService$9;->this$0:Lcom/android/server/am/ActivityManagerService;
 
     iget-object v8, v8, Lcom/android/server/am/ActivityManagerService;->mProcessList:Lcom/android/server/am/ProcessList;
 
     invoke-virtual {v8, v7}, Lcom/android/server/am/ProcessList;->setTrimCachedApps(I)V
 
-    .line 8258
     const-string v8, "ActivityManager"
 
     new-instance v9, Ljava/lang/StringBuilder;
@@ -200,20 +184,17 @@
 
     invoke-static {v8, v9}, Landroid/util/Slog;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 8260
     :cond_3
     const/4 v8, 0x2
 
     if-ne v4, v8, :cond_4
 
-    .line 8261
     iget-object v8, p0, Lcom/android/server/am/ActivityManagerService$9;->this$0:Lcom/android/server/am/ActivityManagerService;
 
     iget-object v8, v8, Lcom/android/server/am/ActivityManagerService;->mProcessList:Lcom/android/server/am/ProcessList;
 
     invoke-virtual {v8, v7}, Lcom/android/server/am/ProcessList;->setTrimCriticalTH(I)V
 
-    .line 8262
     const-string v8, "ActivityManager"
 
     new-instance v9, Ljava/lang/StringBuilder;
@@ -236,20 +217,17 @@
 
     invoke-static {v8, v9}, Landroid/util/Slog;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 8264
     :cond_4
     const/4 v8, 0x3
 
     if-ne v4, v8, :cond_5
 
-    .line 8265
     iget-object v8, p0, Lcom/android/server/am/ActivityManagerService$9;->this$0:Lcom/android/server/am/ActivityManagerService;
 
     iget-object v8, v8, Lcom/android/server/am/ActivityManagerService;->mProcessList:Lcom/android/server/am/ProcessList;
 
     invoke-virtual {v8, v7}, Lcom/android/server/am/ProcessList;->setTrimLowlTH(I)V
 
-    .line 8266
     const-string v8, "ActivityManager"
 
     new-instance v9, Ljava/lang/StringBuilder;
@@ -272,16 +250,13 @@
 
     invoke-static {v8, v9}, Landroid/util/Slog;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 8268
     :cond_5
     add-int/lit8 v4, v4, 0x1
 
-    .line 8251
     add-int/lit8 v1, v1, 0x1
 
     goto/16 :goto_1
 
-    .line 8272
     .end local v0    # "arr$":[I
     .end local v1    # "i$":I
     .end local v2    # "len$":I
@@ -302,8 +277,7 @@
 
     if-nez v8, :cond_7
 
-    .line 8273
-    const-string/jumbo v8, "ro.debug_level"
+    const-string v8, "ro.debug_level"
 
     const-string v9, "Unknown"
 
@@ -311,7 +285,6 @@
 
     move-result-object v5
 
-    .line 8275
     .restart local v5    # "state":Ljava/lang/String;
     const-string v8, "Unknown"
 
@@ -329,7 +302,6 @@
 
     if-nez v8, :cond_0
 
-    .line 8279
     invoke-virtual {p2}, Landroid/content/Intent;->getExtras()Landroid/os/Bundle;
 
     move-result-object v8
@@ -340,13 +312,11 @@
 
     move-result v3
 
-    .line 8280
     .local v3, "level":I
     iget-object v8, p0, Lcom/android/server/am/ActivityManagerService$9;->this$0:Lcom/android/server/am/ActivityManagerService;
 
     invoke-virtual {v8, v3}, Lcom/android/server/am/ActivityManagerService;->doTrimMemory(I)V
 
-    .line 8281
     const-string v8, "ActivityManager"
 
     new-instance v9, Ljava/lang/StringBuilder;
@@ -371,7 +341,6 @@
 
     goto/16 :goto_0
 
-    .line 8282
     .end local v3    # "level":I
     .end local v5    # "state":Ljava/lang/String;
     :cond_7
@@ -387,8 +356,7 @@
 
     if-nez v8, :cond_0
 
-    .line 8283
-    const-string/jumbo v8, "ro.debug_level"
+    const-string v8, "ro.debug_level"
 
     const-string v9, "Unknown"
 
@@ -396,7 +364,6 @@
 
     move-result-object v5
 
-    .line 8285
     .restart local v5    # "state":Ljava/lang/String;
     const-string v8, "Unknown"
 
@@ -414,7 +381,6 @@
 
     if-nez v8, :cond_0
 
-    .line 8289
     sput-boolean v11, Lcom/android/server/am/ProcessList;->DEBUG:Z
 
     goto/16 :goto_0

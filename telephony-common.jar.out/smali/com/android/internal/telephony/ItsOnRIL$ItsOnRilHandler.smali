@@ -23,7 +23,6 @@
     .locals 0
 
     .prologue
-    .line 129
     iput-object p1, p0, Lcom/android/internal/telephony/ItsOnRIL$ItsOnRilHandler;->this$0:Lcom/android/internal/telephony/ItsOnRIL;
 
     invoke-direct {p0}, Landroid/os/Handler;-><init>()V
@@ -38,28 +37,23 @@
     .param p1, "msg"    # Landroid/os/Message;
 
     .prologue
-    .line 132
     iget-object v0, p1, Landroid/os/Message;->obj:Ljava/lang/Object;
 
     check-cast v0, Landroid/os/AsyncResult;
 
-    .line 133
     .local v0, "ar":Landroid/os/AsyncResult;
     iget v4, p1, Landroid/os/Message;->what:I
 
     packed-switch v4, :pswitch_data_0
 
-    .line 151
     :cond_0
     return-void
 
-    .line 135
     :pswitch_0
     iget-object v3, v0, Landroid/os/AsyncResult;->result:Ljava/lang/Object;
 
     check-cast v3, Ljava/util/List;
 
-    .line 136
     .local v3, "polledCalls":Ljava/util/List;, "Ljava/util/List<Lcom/android/internal/telephony/DriverCall;>;"
     invoke-interface {v3}, Ljava/util/List;->iterator()Ljava/util/Iterator;
 
@@ -80,7 +74,6 @@
 
     check-cast v1, Lcom/android/internal/telephony/DriverCall;
 
-    .line 137
     .local v1, "c":Lcom/android/internal/telephony/DriverCall;
     iget-boolean v4, v1, Lcom/android/internal/telephony/DriverCall;->isVoice:Z
 
@@ -98,7 +91,6 @@
 
     if-ne v4, v5, :cond_1
 
-    .line 141
     :cond_2
     iget-object v4, p0, Lcom/android/internal/telephony/ItsOnRIL$ItsOnRilHandler;->this$0:Lcom/android/internal/telephony/ItsOnRIL;
 
@@ -112,7 +104,6 @@
 
     if-nez v4, :cond_1
 
-    .line 143
     iget-object v4, p0, Lcom/android/internal/telephony/ItsOnRIL$ItsOnRilHandler;->this$0:Lcom/android/internal/telephony/ItsOnRIL;
 
     invoke-virtual {p0}, Lcom/android/internal/telephony/ItsOnRIL$ItsOnRilHandler;->obtainMessage()Landroid/os/Message;
@@ -123,7 +114,6 @@
 
     goto :goto_0
 
-    .line 133
     :pswitch_data_0
     .packed-switch 0x1
         :pswitch_0

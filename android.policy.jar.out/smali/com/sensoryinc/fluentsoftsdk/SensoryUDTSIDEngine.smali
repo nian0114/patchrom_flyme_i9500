@@ -52,25 +52,18 @@
 
     const/4 v0, 0x0
 
-    .line 18
     sput-object v0, Lcom/sensoryinc/fluentsoftsdk/SensoryUDTSIDEngine;->m_strFPSVnet:Ljava/lang/String;
 
-    .line 19
     sput-object v0, Lcom/sensoryinc/fluentsoftsdk/SensoryUDTSIDEngine;->m_strFPSVsearch:Ljava/lang/String;
 
-    .line 20
     sput-object v0, Lcom/sensoryinc/fluentsoftsdk/SensoryUDTSIDEngine;->m_strFPSVsvsid:Ljava/lang/String;
 
-    .line 22
     sput-object v0, Lcom/sensoryinc/fluentsoftsdk/SensoryUDTSIDEngine;->m_strResourceDir:Ljava/lang/String;
 
-    .line 23
     sput-object v0, Lcom/sensoryinc/fluentsoftsdk/SensoryUDTSIDEngine;->m_strLanguage:Ljava/lang/String;
 
-    .line 34
     sput v1, Lcom/sensoryinc/fluentsoftsdk/SensoryUDTSIDEngine;->VERSION_MAJOR:I
 
-    .line 35
     sput v1, Lcom/sensoryinc/fluentsoftsdk/SensoryUDTSIDEngine;->VERSION_MINOR:I
 
     return-void
@@ -82,13 +75,10 @@
     .prologue
     const-wide/16 v0, 0x0
 
-    .line 9
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 31
     iput-wide v0, p0, Lcom/sensoryinc/fluentsoftsdk/SensoryUDTSIDEngine;->m_lSessionValue:J
 
-    .line 32
     iput-wide v0, p0, Lcom/sensoryinc/fluentsoftsdk/SensoryUDTSIDEngine;->m_lSessionValueFPSV:J
 
     return-void
@@ -98,34 +88,28 @@
     .locals 5
 
     .prologue
-    .line 605
     const/4 v1, 0x1
 
-    .line 607
     .local v1, "nIndex":I
     sget-object v2, Lcom/sensoryinc/fluentsoftsdk/SensoryUDTSIDEngine;->m_strLanguage:Ljava/lang/String;
 
     if-nez v2, :cond_0
 
-    .line 609
     const-string v2, "SensoryUDTSIDEngine"
 
     const-string v3, "GetLanguageIndex, m_strLanguage is null!"
 
     invoke-static {v2, v3}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 630
     :goto_0
     :try_start_0
     invoke-virtual {p0, v1}, Lcom/sensoryinc/fluentsoftsdk/SensoryUDTSIDEngine;->SetLanguage(I)V
     :try_end_0
     .catch Ljava/lang/UnsatisfiedLinkError; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 637
     :goto_1
     return v1
 
-    .line 611
     :cond_0
     sget-object v2, Lcom/sensoryinc/fluentsoftsdk/SensoryUDTSIDEngine;->m_strLanguage:Ljava/lang/String;
 
@@ -141,7 +125,6 @@
 
     goto :goto_0
 
-    .line 612
     :cond_1
     sget-object v2, Lcom/sensoryinc/fluentsoftsdk/SensoryUDTSIDEngine;->m_strLanguage:Ljava/lang/String;
 
@@ -157,7 +140,6 @@
 
     goto :goto_0
 
-    .line 613
     :cond_2
     sget-object v2, Lcom/sensoryinc/fluentsoftsdk/SensoryUDTSIDEngine;->m_strLanguage:Ljava/lang/String;
 
@@ -173,7 +155,6 @@
 
     goto :goto_0
 
-    .line 614
     :cond_3
     sget-object v2, Lcom/sensoryinc/fluentsoftsdk/SensoryUDTSIDEngine;->m_strLanguage:Ljava/lang/String;
 
@@ -189,7 +170,6 @@
 
     goto :goto_0
 
-    .line 615
     :cond_4
     sget-object v2, Lcom/sensoryinc/fluentsoftsdk/SensoryUDTSIDEngine;->m_strLanguage:Ljava/lang/String;
 
@@ -205,7 +185,6 @@
 
     goto :goto_0
 
-    .line 616
     :cond_5
     sget-object v2, Lcom/sensoryinc/fluentsoftsdk/SensoryUDTSIDEngine;->m_strLanguage:Ljava/lang/String;
 
@@ -221,7 +200,6 @@
 
     goto :goto_0
 
-    .line 617
     :cond_6
     sget-object v2, Lcom/sensoryinc/fluentsoftsdk/SensoryUDTSIDEngine;->m_strLanguage:Ljava/lang/String;
 
@@ -237,7 +215,6 @@
 
     goto :goto_0
 
-    .line 618
     :cond_7
     sget-object v2, Lcom/sensoryinc/fluentsoftsdk/SensoryUDTSIDEngine;->m_strLanguage:Ljava/lang/String;
 
@@ -253,7 +230,6 @@
 
     goto :goto_0
 
-    .line 619
     :cond_8
     sget-object v2, Lcom/sensoryinc/fluentsoftsdk/SensoryUDTSIDEngine;->m_strLanguage:Ljava/lang/String;
 
@@ -269,7 +245,6 @@
 
     goto :goto_0
 
-    .line 620
     :cond_9
     sget-object v2, Lcom/sensoryinc/fluentsoftsdk/SensoryUDTSIDEngine;->m_strLanguage:Ljava/lang/String;
 
@@ -285,7 +260,6 @@
 
     goto :goto_0
 
-    .line 621
     :cond_a
     sget-object v2, Lcom/sensoryinc/fluentsoftsdk/SensoryUDTSIDEngine;->m_strLanguage:Ljava/lang/String;
 
@@ -301,7 +275,6 @@
 
     goto/16 :goto_0
 
-    .line 622
     :cond_b
     sget-object v2, Lcom/sensoryinc/fluentsoftsdk/SensoryUDTSIDEngine;->m_strLanguage:Ljava/lang/String;
 
@@ -317,7 +290,6 @@
 
     goto/16 :goto_0
 
-    .line 625
     :cond_c
     const-string v2, "SensoryUDTSIDEngine"
 
@@ -345,11 +317,9 @@
 
     goto/16 :goto_0
 
-    .line 632
     :catch_0
     move-exception v0
 
-    .line 634
     .local v0, "e":Ljava/lang/UnsatisfiedLinkError;
     invoke-virtual {v0}, Ljava/lang/UnsatisfiedLinkError;->printStackTrace()V
 
@@ -370,7 +340,6 @@
 
     const/4 v4, 0x0
 
-    .line 555
     const/16 v6, 0xc
 
     new-array v2, v6, [[Ljava/lang/String;
@@ -581,26 +550,21 @@
 
     aput-object v7, v2, v6
 
-    .line 571
     .local v2, "strResources":[[Ljava/lang/String;
     invoke-direct {p0}, Lcom/sensoryinc/fluentsoftsdk/SensoryUDTSIDEngine;->GetLanguageIndex()I
 
     move-result v0
 
-    .line 573
     .local v0, "nIndex":I
     const-string v3, "higalaxy_"
 
-    .line 574
     .local v3, "strTrigger":Ljava/lang/String;
     sget v6, Lcom/samsung/voiceshell/WakeUpCmdRecognizer;->WType:I
 
     if-ne v6, v11, :cond_0
 
-    .line 576
     const-string v3, "okgoogle_"
 
-    .line 579
     :cond_0
     const-string v6, "SensoryUDTSIDEngine"
 
@@ -632,7 +596,6 @@
 
     invoke-static {v6, v7}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 580
     const-string v6, "SensoryUDTSIDEngine"
 
     new-instance v7, Ljava/lang/StringBuilder;
@@ -663,7 +626,6 @@
 
     invoke-static {v6, v7}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 581
     const-string v6, "SensoryUDTSIDEngine"
 
     new-instance v7, Ljava/lang/StringBuilder;
@@ -694,23 +656,19 @@
 
     invoke-static {v6, v7}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 583
     sget-object v6, Lcom/sensoryinc/fluentsoftsdk/SensoryUDTSIDEngine;->m_strResourceDir:Ljava/lang/String;
 
     if-nez v6, :cond_1
 
-    .line 585
     const-string v5, "SensoryUDTSIDEngine"
 
     const-string v6, "SetResourceforFPSV, m_strResourceDir is null!"
 
     invoke-static {v5, v6}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 599
     :goto_0
     return v4
 
-    .line 589
     :cond_1
     sget-object v6, Lcom/sensoryinc/fluentsoftsdk/SensoryUDTSIDEngine;->m_strResourceDir:Ljava/lang/String;
 
@@ -718,7 +676,6 @@
 
     move-result v1
 
-    .line 590
     .local v1, "nLen":I
     if-lez v1, :cond_2
 
@@ -734,7 +691,6 @@
 
     if-eq v6, v7, :cond_2
 
-    .line 592
     new-instance v6, Ljava/lang/StringBuilder;
 
     invoke-direct {v6}, Ljava/lang/StringBuilder;-><init>()V
@@ -757,7 +713,6 @@
 
     sput-object v6, Lcom/sensoryinc/fluentsoftsdk/SensoryUDTSIDEngine;->m_strResourceDir:Ljava/lang/String;
 
-    .line 595
     :cond_2
     new-instance v6, Ljava/lang/StringBuilder;
 
@@ -787,7 +742,6 @@
 
     sput-object v4, Lcom/sensoryinc/fluentsoftsdk/SensoryUDTSIDEngine;->m_strFPSVnet:Ljava/lang/String;
 
-    .line 596
     new-instance v4, Ljava/lang/StringBuilder;
 
     invoke-direct {v4}, Ljava/lang/StringBuilder;-><init>()V
@@ -816,7 +770,6 @@
 
     sput-object v4, Lcom/sensoryinc/fluentsoftsdk/SensoryUDTSIDEngine;->m_strFPSVsearch:Ljava/lang/String;
 
-    .line 597
     new-instance v4, Ljava/lang/StringBuilder;
 
     invoke-direct {v4}, Ljava/lang/StringBuilder;-><init>()V
@@ -847,7 +800,6 @@
 
     move v4, v5
 
-    .line 599
     goto/16 :goto_0
 .end method
 
@@ -855,10 +807,8 @@
     .locals 4
 
     .prologue
-    .line 84
     const/4 v1, 0x0
 
-    .line 89
     .local v1, "nResult":I
     :try_start_0
     const-string v2, "SensoryUDTSIDEngine"
@@ -867,12 +817,10 @@
 
     invoke-static {v2, v3}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 90
     const-string v2, "SensoryUDTSIDEngine"
 
     invoke-static {v2}, Ljava/lang/System;->loadLibrary(Ljava/lang/String;)V
 
-    .line 91
     const-string v2, "SensoryUDTSIDEngine"
 
     const-string v3, "Loading libSensoryUDTSIDEngine.so"
@@ -882,15 +830,12 @@
     .catch Ljava/lang/UnsatisfiedLinkError; {:try_start_0 .. :try_end_0} :catch_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_1
 
-    .line 104
     :goto_0
     return v1
 
-    .line 93
     :catch_0
     move-exception v0
 
-    .line 95
     .local v0, "e":Ljava/lang/UnsatisfiedLinkError;
     const-string v2, "SensoryUDTSIDEngine"
 
@@ -898,22 +843,17 @@
 
     invoke-static {v2, v3}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 96
     const/4 v1, -0x1
 
-    .line 102
     goto :goto_0
 
-    .line 98
     .end local v0    # "e":Ljava/lang/UnsatisfiedLinkError;
     :catch_1
     move-exception v0
 
-    .line 100
     .local v0, "e":Ljava/lang/Exception;
     invoke-virtual {v0}, Ljava/lang/Exception;->printStackTrace()V
 
-    .line 101
     const/4 v1, -0x1
 
     goto :goto_0
@@ -928,7 +868,6 @@
     .locals 1
 
     .prologue
-    .line 540
     invoke-static {}, Lcom/samsung/voiceshell/WakeUpUtils;->GetVersion()Ljava/lang/String;
 
     move-result-object v0
@@ -951,13 +890,10 @@
     .param p2, "strLanguage"    # Ljava/lang/String;
 
     .prologue
-    .line 546
     sput-object p1, Lcom/sensoryinc/fluentsoftsdk/SensoryUDTSIDEngine;->m_strResourceDir:Ljava/lang/String;
 
-    .line 547
     sput-object p2, Lcom/sensoryinc/fluentsoftsdk/SensoryUDTSIDEngine;->m_strLanguage:Ljava/lang/String;
 
-    .line 548
     return-void
 .end method
 
@@ -966,7 +902,6 @@
     .param p1, "lSessionValueFPSV"    # J
 
     .prologue
-    .line 126
     const-string v0, "SensoryUDTSIDEngine"
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -989,10 +924,8 @@
 
     invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 127
     iput-wide p1, p0, Lcom/sensoryinc/fluentsoftsdk/SensoryUDTSIDEngine;->m_lSessionValueFPSV:J
 
-    .line 128
     return-void
 .end method
 
@@ -1001,7 +934,6 @@
     .param p1, "lSessionValue"    # J
 
     .prologue
-    .line 119
     const-string v0, "SensoryUDTSIDEngine"
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -1024,10 +956,8 @@
 
     invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 120
     iput-wide p1, p0, Lcom/sensoryinc/fluentsoftsdk/SensoryUDTSIDEngine;->m_lSessionValue:J
 
-    .line 121
     return-void
 .end method
 
@@ -1036,14 +966,12 @@
     .param p1, "strVersion"    # Ljava/lang/String;
 
     .prologue
-    .line 524
     const-string v1, "\\."
 
     invoke-virtual {p1, v1}, Ljava/lang/String;->split(Ljava/lang/String;)[Ljava/lang/String;
 
     move-result-object v0
 
-    .line 526
     .local v0, "str":[Ljava/lang/String;
     array-length v1, v0
 
@@ -1051,7 +979,6 @@
 
     if-ge v1, v2, :cond_0
 
-    .line 528
     const-string v1, "SensoryUDTSIDEngine"
 
     new-instance v2, Ljava/lang/StringBuilder;
@@ -1080,11 +1007,9 @@
 
     invoke-static {v1, v2}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 536
     :goto_0
     return-void
 
-    .line 532
     :cond_0
     const/4 v1, 0x0
 
@@ -1100,7 +1025,6 @@
 
     sput v1, Lcom/sensoryinc/fluentsoftsdk/SensoryUDTSIDEngine;->VERSION_MAJOR:I
 
-    .line 533
     const/4 v1, 0x1
 
     aget-object v1, v0, v1
@@ -1115,7 +1039,6 @@
 
     sput v1, Lcom/sensoryinc/fluentsoftsdk/SensoryUDTSIDEngine;->VERSION_MINOR:I
 
-    .line 535
     const-string v1, "SensoryUDTSIDEngine"
 
     new-instance v2, Ljava/lang/StringBuilder;
@@ -1179,18 +1102,14 @@
 
     const/4 v6, 0x1
 
-    .line 212
     const/4 v2, 0x0
 
-    .line 214
     .local v2, "recResult":I
     const/4 v1, 0x0
 
-    .line 215
     .local v1, "nUDTResult":I
     const/4 v0, 0x0
 
-    .line 217
     .local v0, "nFPSVResult":I
     const-string v3, "SensoryUDTSIDEngine"
 
@@ -1224,7 +1143,6 @@
 
     invoke-static {v3, v4}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 219
     sget v3, Lcom/samsung/voiceshell/WakeUpCmdRecognizer;->WType:I
 
     if-eq v3, v6, :cond_0
@@ -1237,7 +1155,6 @@
 
     if-nez v3, :cond_5
 
-    .line 223
     :cond_0
     sget v3, Lcom/samsung/voiceshell/WakeUpCmdRecognizer;->WMode:I
 
@@ -1245,38 +1162,31 @@
 
     if-eqz v3, :cond_2
 
-    .line 225
     iget-wide v4, p0, Lcom/sensoryinc/fluentsoftsdk/SensoryUDTSIDEngine;->m_lSessionValueFPSV:J
 
     invoke-virtual {p0, v4, v5, p1, p2}, Lcom/sensoryinc/fluentsoftsdk/SensoryUDTSIDEngine;->getResultEnroll(JSS)I
 
     move-result v2
 
-    .line 226
     sget v3, Lcom/samsung/voiceshell/WakeUpCmdRecognizer;->WMode:I
 
     if-ne v3, v8, :cond_1
 
     if-ne v2, v6, :cond_1
 
-    .line 228
     const-string v3, "SensoryUDTSIDEngine"
 
     const-string v4, "checkResultEnroll, Set WMode to WMODE_FPSV"
 
     invoke-static {v3, v4}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 229
     sput v7, Lcom/samsung/voiceshell/WakeUpCmdRecognizer;->WMode:I
 
-    .line 230
     invoke-virtual {p0, v7}, Lcom/sensoryinc/fluentsoftsdk/SensoryUDTSIDEngine;->SetWakeUpMode(I)V
 
-    .line 233
     :cond_1
     move v0, v2
 
-    .line 236
     :cond_2
     sget v3, Lcom/samsung/voiceshell/WakeUpCmdRecognizer;->WMode:I
 
@@ -1284,38 +1194,31 @@
 
     if-eqz v3, :cond_4
 
-    .line 238
     iget-wide v4, p0, Lcom/sensoryinc/fluentsoftsdk/SensoryUDTSIDEngine;->m_lSessionValue:J
 
     invoke-virtual {p0, v4, v5, p1, p2}, Lcom/sensoryinc/fluentsoftsdk/SensoryUDTSIDEngine;->getResultEnroll(JSS)I
 
     move-result v2
 
-    .line 239
     sget v3, Lcom/samsung/voiceshell/WakeUpCmdRecognizer;->WMode:I
 
     if-ne v3, v8, :cond_3
 
     if-ne v2, v6, :cond_3
 
-    .line 241
     const-string v3, "SensoryUDTSIDEngine"
 
     const-string v4, "checkResultEnroll, Set WMode to WMODE_UDT"
 
     invoke-static {v3, v4}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 242
     sput v6, Lcom/samsung/voiceshell/WakeUpCmdRecognizer;->WMode:I
 
-    .line 243
     invoke-virtual {p0, v6}, Lcom/sensoryinc/fluentsoftsdk/SensoryUDTSIDEngine;->SetWakeUpMode(I)V
 
-    .line 246
     :cond_3
     move v1, v2
 
-    .line 260
     :cond_4
     :goto_0
     const-string v3, "SensoryUDTSIDEngine"
@@ -1350,41 +1253,34 @@
 
     invoke-static {v3, v4}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 262
     return v2
 
-    .line 249
     :cond_5
     sget v3, Lcom/samsung/voiceshell/WakeUpCmdRecognizer;->WMode:I
 
     if-ne v3, v6, :cond_6
 
-    .line 251
     iget-wide v4, p0, Lcom/sensoryinc/fluentsoftsdk/SensoryUDTSIDEngine;->m_lSessionValue:J
 
     invoke-virtual {p0, v4, v5, p1, p2}, Lcom/sensoryinc/fluentsoftsdk/SensoryUDTSIDEngine;->getResultEnroll(JSS)I
 
     move-result v2
 
-    .line 252
     move v1, v2
 
     goto :goto_0
 
-    .line 254
     :cond_6
     sget v3, Lcom/samsung/voiceshell/WakeUpCmdRecognizer;->WMode:I
 
     if-ne v3, v7, :cond_4
 
-    .line 256
     iget-wide v4, p0, Lcom/sensoryinc/fluentsoftsdk/SensoryUDTSIDEngine;->m_lSessionValueFPSV:J
 
     invoke-virtual {p0, v4, v5, p1, p2}, Lcom/sensoryinc/fluentsoftsdk/SensoryUDTSIDEngine;->getResultEnroll(JSS)I
 
     move-result v2
 
-    .line 257
     move v0, v2
 
     goto :goto_0
@@ -1396,7 +1292,6 @@
     .prologue
     const-wide/16 v4, 0x0
 
-    .line 508
     const-string v0, "SensoryUDTSIDEngine"
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -1433,22 +1328,18 @@
 
     invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 509
     iget-wide v0, p0, Lcom/sensoryinc/fluentsoftsdk/SensoryUDTSIDEngine;->m_lSessionValue:J
 
     cmp-long v0, v0, v4
 
     if-eqz v0, :cond_0
 
-    .line 511
     iget-wide v0, p0, Lcom/sensoryinc/fluentsoftsdk/SensoryUDTSIDEngine;->m_lSessionValue:J
 
     invoke-virtual {p0, v0, v1}, Lcom/sensoryinc/fluentsoftsdk/SensoryUDTSIDEngine;->closeRecog(J)V
 
-    .line 512
     iput-wide v4, p0, Lcom/sensoryinc/fluentsoftsdk/SensoryUDTSIDEngine;->m_lSessionValue:J
 
-    .line 515
     :cond_0
     iget-wide v0, p0, Lcom/sensoryinc/fluentsoftsdk/SensoryUDTSIDEngine;->m_lSessionValueFPSV:J
 
@@ -1456,15 +1347,12 @@
 
     if-eqz v0, :cond_1
 
-    .line 517
     iget-wide v0, p0, Lcom/sensoryinc/fluentsoftsdk/SensoryUDTSIDEngine;->m_lSessionValueFPSV:J
 
     invoke-virtual {p0, v0, v1}, Lcom/sensoryinc/fluentsoftsdk/SensoryUDTSIDEngine;->closeRecog(J)V
 
-    .line 518
     iput-wide v4, p0, Lcom/sensoryinc/fluentsoftsdk/SensoryUDTSIDEngine;->m_lSessionValueFPSV:J
 
-    .line 520
     :cond_1
     return-void
 .end method
@@ -1484,23 +1372,18 @@
     .prologue
     const/4 v6, 0x1
 
-    .line 268
     const/4 v1, 0x0
 
-    .line 271
     .local v1, "nResult":I
     const-wide/16 v2, 0x0
 
-    .line 272
     .local v2, "trig":J
     sget v5, Lcom/samsung/voiceshell/WakeUpCmdRecognizer;->WMode:I
 
     if-ne v5, v6, :cond_1
 
-    .line 274
     iget-wide v2, p0, Lcom/sensoryinc/fluentsoftsdk/SensoryUDTSIDEngine;->m_lSessionValue:J
 
-    .line 281
     :goto_0
     sget v5, Lcom/sensoryinc/fluentsoftsdk/SensoryUDTSIDEngine;->VERSION_MAJOR:I
 
@@ -1512,12 +1395,10 @@
 
     if-gt v5, v6, :cond_2
 
-    .line 283
     invoke-virtual {p0, v2, v3, p1}, Lcom/sensoryinc/fluentsoftsdk/SensoryUDTSIDEngine;->checkNewRecordings(JS)I
 
     move-result v1
 
-    .line 290
     :goto_1
     const-string v5, "SensoryUDTSIDEngine"
 
@@ -1551,17 +1432,14 @@
 
     invoke-static {v5, v6}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 292
     const/4 v5, 0x5
 
     if-ne v1, v5, :cond_3
 
-    .line 294
     invoke-virtual {p0, v2, v3, p1}, Lcom/sensoryinc/fluentsoftsdk/SensoryUDTSIDEngine;->getFeedbackDetails(JS)[J
 
     move-result-object v0
 
-    .line 296
     .local v0, "details":[J
     const/4 v4, 0x0
 
@@ -1571,7 +1449,6 @@
 
     if-ge v4, v5, :cond_3
 
-    .line 298
     aget-wide v6, v0, v4
 
     const-wide/16 v8, 0x0
@@ -1580,14 +1457,12 @@
 
     if-eqz v5, :cond_0
 
-    .line 300
     const/4 v5, 0x0
 
     int-to-short v6, v4
 
     aput-short v6, p2, v5
 
-    .line 303
     :cond_0
     const-string v5, "SensoryUDTSIDEngine"
 
@@ -1623,12 +1498,10 @@
 
     invoke-static {v5, v6}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 296
     add-int/lit8 v4, v4, 0x1
 
     goto :goto_2
 
-    .line 278
     .end local v0    # "details":[J
     .end local v4    # "x":I
     :cond_1
@@ -1636,7 +1509,6 @@
 
     goto :goto_0
 
-    .line 287
     :cond_2
     invoke-virtual {p0, v2, v3, p1, p3}, Lcom/sensoryinc/fluentsoftsdk/SensoryUDTSIDEngine;->checkNewRecordings(JSI)I
 
@@ -1644,7 +1516,6 @@
 
     goto :goto_1
 
-    .line 307
     :cond_3
     return v1
 .end method
@@ -1655,7 +1526,6 @@
     .param p2, "CommandNumber"    # S
 
     .prologue
-    .line 402
     const-string v1, "SensoryUDTSIDEngine"
 
     new-instance v2, Ljava/lang/StringBuilder;
@@ -1678,10 +1548,8 @@
 
     invoke-static {v1, v2}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 403
     const/4 v0, 0x0
 
-    .line 405
     .local v0, "nResult":I
     iget-wide v2, p0, Lcom/sensoryinc/fluentsoftsdk/SensoryUDTSIDEngine;->m_lSessionValue:J
 
@@ -1691,21 +1559,17 @@
 
     if-nez v1, :cond_0
 
-    .line 407
     const-string v1, "SensoryUDTSIDEngine"
 
     const-string v2, "deleteModel, trig is ZERO!. need to load model"
 
     invoke-static {v1, v2}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 408
     const/4 v1, -0x1
 
-    .line 418
     :goto_0
     return v1
 
-    .line 411
     :cond_0
     iget-wide v2, p0, Lcom/sensoryinc/fluentsoftsdk/SensoryUDTSIDEngine;->m_lSessionValue:J
 
@@ -1713,22 +1577,18 @@
 
     move-result v0
 
-    .line 412
     const/4 v1, 0x1
 
     if-ne v0, v1, :cond_1
 
-    .line 414
     const-string v1, "SensoryUDTSIDEngine"
 
     const-string v2, "secMM: deleteModel, re-doEnroll"
 
     invoke-static {v1, v2}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 415
     invoke-virtual {p0, p1, p2}, Lcom/sensoryinc/fluentsoftsdk/SensoryUDTSIDEngine;->doEnrollModel(Ljava/lang/String;S)I
 
-    .line 418
     :cond_1
     const/4 v1, 0x0
 
@@ -1751,17 +1611,14 @@
 
     const/4 v0, 0x0
 
-    .line 346
     const-string v1, "SensoryUDTSIDEngine"
 
     const-string v2, "VSG: doCombineModel"
 
     invoke-static {v1, v2}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 347
     const/4 v6, 0x0
 
-    .line 349
     .local v6, "strTarget":Ljava/lang/String;
     const-string v1, "/system/wakeupdata/samsung/models_wa38.bin"
 
@@ -1771,14 +1628,11 @@
 
     if-eqz v1, :cond_0
 
-    .line 351
     const-string v6, "wa38"
 
-    .line 362
     :goto_0
     const/4 v7, 0x0
 
-    .line 364
     .local v7, "nNullCount":I
     sget v1, Lcom/sensoryinc/fluentsoftsdk/SensoryUDTSIDEngine;->VERSION_MAJOR:I
 
@@ -1790,18 +1644,15 @@
 
     if-gt v1, v2, :cond_2
 
-    .line 366
     const-string v1, "SensoryUDTSIDEngine"
 
     const-string v2, "CombineModel is not supported!"
 
     invoke-static {v1, v2}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 396
     :goto_1
     return v0
 
-    .line 353
     .end local v7    # "nNullCount":I
     :cond_0
     const-string v1, "/system/wakeupdata/samsung/models_ca38.bin"
@@ -1812,62 +1663,49 @@
 
     if-eqz v1, :cond_1
 
-    .line 355
     const-string v6, "ca38"
 
     goto :goto_0
 
-    .line 359
     :cond_1
     const-string v6, "pc36"
 
     goto :goto_0
 
-    .line 370
     .restart local v7    # "nNullCount":I
     :cond_2
     if-eqz p1, :cond_3
 
     if-nez p2, :cond_4
 
-    .line 372
     :cond_3
     add-int/lit8 v7, v7, 0x1
 
-    .line 374
     const-string p1, ""
 
-    .line 375
     const-string p2, ""
 
-    .line 378
     :cond_4
     if-eqz p3, :cond_5
 
     if-nez p4, :cond_6
 
-    .line 380
     :cond_5
     add-int/lit8 v7, v7, 0x1
 
-    .line 382
     const-string p3, ""
 
-    .line 383
     const-string p4, ""
 
-    .line 386
     :cond_6
     if-le v7, v3, :cond_7
 
-    .line 388
     const-string v1, "SensoryUDTSIDEngine"
 
     const-string v2, "File path is error!"
 
     invoke-static {v1, v2}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 389
     const-string v1, "SensoryUDTSIDEngine"
 
     new-instance v2, Ljava/lang/StringBuilder;
@@ -1890,7 +1728,6 @@
 
     invoke-static {v1, v2}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 390
     const-string v1, "SensoryUDTSIDEngine"
 
     new-instance v2, Ljava/lang/StringBuilder;
@@ -1913,7 +1750,6 @@
 
     invoke-static {v1, v2}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 391
     const-string v1, "SensoryUDTSIDEngine"
 
     new-instance v2, Ljava/lang/StringBuilder;
@@ -1936,7 +1772,6 @@
 
     invoke-static {v1, v2}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 392
     const-string v1, "SensoryUDTSIDEngine"
 
     new-instance v2, Ljava/lang/StringBuilder;
@@ -1974,7 +1809,6 @@
 
     move-object v5, p5
 
-    .line 396
     invoke-virtual/range {v0 .. v6}, Lcom/sensoryinc/fluentsoftsdk/SensoryUDTSIDEngine;->CombineModel(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)I
 
     move-result v0
@@ -1993,7 +1827,6 @@
     .prologue
     const/4 v4, 0x1
 
-    .line 313
     const-string v1, "SensoryUDTSIDEngine"
 
     new-instance v2, Ljava/lang/StringBuilder;
@@ -2016,14 +1849,11 @@
 
     invoke-static {v1, v2}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 315
     const-string v0, ""
 
-    .line 317
     .local v0, "strTarget":Ljava/lang/String;
     if-ne p2, v4, :cond_0
 
-    .line 319
     const-string v1, "/system/wakeupdata/samsung/models_wa38.bin"
 
     invoke-static {v1}, Lcom/samsung/voiceshell/WakeUpUtils;->IsFileExist(Ljava/lang/String;)Z
@@ -2032,28 +1862,23 @@
 
     if-eqz v1, :cond_1
 
-    .line 321
     const-string v0, "wa38"
 
-    .line 333
     :cond_0
     :goto_0
     sget v1, Lcom/samsung/voiceshell/WakeUpCmdRecognizer;->WMode:I
 
     if-ne v1, v4, :cond_3
 
-    .line 335
     iget-wide v2, p0, Lcom/sensoryinc/fluentsoftsdk/SensoryUDTSIDEngine;->m_lSessionValue:J
 
     invoke-virtual {p0, v2, v3, p1, v0}, Lcom/sensoryinc/fluentsoftsdk/SensoryUDTSIDEngine;->doEnroll(JLjava/lang/String;Ljava/lang/String;)I
 
     move-result v1
 
-    .line 339
     :goto_1
     return v1
 
-    .line 323
     :cond_1
     const-string v1, "/system/wakeupdata/samsung/models_ca38.bin"
 
@@ -2063,18 +1888,15 @@
 
     if-eqz v1, :cond_2
 
-    .line 325
     const-string v0, "ca38"
 
     goto :goto_0
 
-    .line 329
     :cond_2
     const-string v0, "pc36"
 
     goto :goto_0
 
-    .line 339
     :cond_3
     iget-wide v2, p0, Lcom/sensoryinc/fluentsoftsdk/SensoryUDTSIDEngine;->m_lSessionValueFPSV:J
 
@@ -2101,7 +1923,6 @@
     .locals 4
 
     .prologue
-    .line 133
     const-string v0, "SensoryUDTSIDEngine"
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -2126,7 +1947,6 @@
 
     invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 135
     iget-wide v0, p0, Lcom/sensoryinc/fluentsoftsdk/SensoryUDTSIDEngine;->m_lSessionValue:J
 
     return-wide v0
@@ -2136,7 +1956,6 @@
     .locals 4
 
     .prologue
-    .line 141
     const-string v0, "SensoryUDTSIDEngine"
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -2161,7 +1980,6 @@
 
     invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 143
     iget-wide v0, p0, Lcom/sensoryinc/fluentsoftsdk/SensoryUDTSIDEngine;->m_lSessionValueFPSV:J
 
     return-wide v0
@@ -2179,14 +1997,11 @@
     .param p2, "CommandNumber"    # S
 
     .prologue
-    .line 424
     const-wide/16 v14, 0x0
 
-    .line 425
     .local v14, "UDTSIDinitRecogReturn":J
     const/4 v2, 0x0
 
-    .line 427
     .local v2, "nResult":I
     sget v3, Lcom/samsung/voiceshell/WakeUpCmdRecognizer;->WType:I
 
@@ -2200,26 +2015,22 @@
 
     if-nez v3, :cond_0
 
-    .line 429
     const-string v3, "SensoryUDTSIDEngine"
 
     const-string v4, "loadModels, Set WMode to WMODE_UDT"
 
     invoke-static {v3, v4}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 430
     const/4 v3, 0x1
 
     sput v3, Lcom/samsung/voiceshell/WakeUpCmdRecognizer;->WMode:I
 
-    .line 431
     sget v3, Lcom/samsung/voiceshell/WakeUpCmdRecognizer;->WMode:I
 
     move-object/from16 v0, p0
 
     invoke-virtual {v0, v3}, Lcom/sensoryinc/fluentsoftsdk/SensoryUDTSIDEngine;->SetWakeUpMode(I)V
 
-    .line 433
     move-object/from16 v0, p0
 
     iget-wide v4, v0, Lcom/sensoryinc/fluentsoftsdk/SensoryUDTSIDEngine;->m_lSessionValue:J
@@ -2240,7 +2051,6 @@
 
     if-eqz v3, :cond_3
 
-    .line 435
     move-object/from16 v0, p0
 
     iget-wide v4, v0, Lcom/sensoryinc/fluentsoftsdk/SensoryUDTSIDEngine;->m_lSessionValueFPSV:J
@@ -2249,14 +2059,12 @@
 
     iput-wide v4, v0, Lcom/sensoryinc/fluentsoftsdk/SensoryUDTSIDEngine;->m_lSessionValue:J
 
-    .line 436
     const-wide/16 v4, 0x0
 
     move-object/from16 v0, p0
 
     iput-wide v4, v0, Lcom/sensoryinc/fluentsoftsdk/SensoryUDTSIDEngine;->m_lSessionValueFPSV:J
 
-    .line 444
     :cond_0
     :goto_0
     const-string v3, "SensoryUDTSIDEngine"
@@ -2299,7 +2107,6 @@
 
     invoke-static {v3, v4}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 446
     move-object/from16 v0, p0
 
     iget-wide v4, v0, Lcom/sensoryinc/fluentsoftsdk/SensoryUDTSIDEngine;->m_lSessionValueFPSV:J
@@ -2316,7 +2123,6 @@
 
     if-eqz v3, :cond_1
 
-    .line 448
     const-string v3, "SensoryUDTSIDEngine"
 
     new-instance v4, Ljava/lang/StringBuilder;
@@ -2343,7 +2149,6 @@
 
     invoke-static {v3, v4}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 449
     move-object/from16 v0, p0
 
     iget-wide v4, v0, Lcom/sensoryinc/fluentsoftsdk/SensoryUDTSIDEngine;->m_lSessionValueFPSV:J
@@ -2368,24 +2173,20 @@
 
     move-result-wide v14
 
-    .line 451
     const-wide/16 v4, 0x0
 
     cmp-long v3, v14, v4
 
     if-eqz v3, :cond_5
 
-    .line 453
     invoke-static {}, Lcom/samsung/voiceshell/AudioRecordHaydn;->GetRecordingMode()I
 
     move-result v3
 
     if-nez v3, :cond_4
 
-    .line 455
     const/4 v2, 0x1
 
-    .line 476
     :cond_1
     :goto_1
     move-object/from16 v0, p0
@@ -2404,7 +2205,6 @@
 
     if-eqz v3, :cond_2
 
-    .line 478
     const-string v3, "SensoryUDTSIDEngine"
 
     new-instance v4, Ljava/lang/StringBuilder;
@@ -2431,7 +2231,6 @@
 
     invoke-static {v3, v4}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 479
     move-object/from16 v0, p0
 
     iget-wide v4, v0, Lcom/sensoryinc/fluentsoftsdk/SensoryUDTSIDEngine;->m_lSessionValue:J
@@ -2456,29 +2255,24 @@
 
     move-result-wide v14
 
-    .line 481
     const-wide/16 v4, 0x0
 
     cmp-long v3, v14, v4
 
     if-eqz v3, :cond_7
 
-    .line 483
     invoke-static {}, Lcom/samsung/voiceshell/AudioRecordHaydn;->GetRecordingMode()I
 
     move-result v3
 
     if-nez v3, :cond_6
 
-    .line 485
     const/4 v2, 0x1
 
-    .line 503
     :cond_2
     :goto_2
     return v2
 
-    .line 438
     :cond_3
     move-object/from16 v0, p0
 
@@ -2490,7 +2284,6 @@
 
     if-eqz v3, :cond_0
 
-    .line 440
     move-object/from16 v0, p0
 
     iget-wide v4, v0, Lcom/sensoryinc/fluentsoftsdk/SensoryUDTSIDEngine;->m_lSessionValueFPSV:J
@@ -2499,7 +2292,6 @@
 
     invoke-virtual {v0, v4, v5}, Lcom/sensoryinc/fluentsoftsdk/SensoryUDTSIDEngine;->closeRecog(J)V
 
-    .line 441
     const-wide/16 v4, 0x0
 
     move-object/from16 v0, p0
@@ -2508,7 +2300,6 @@
 
     goto/16 :goto_0
 
-    .line 459
     :cond_4
     move-object/from16 v0, p0
 
@@ -2524,7 +2315,6 @@
 
     goto :goto_1
 
-    .line 464
     :cond_5
     const-string v3, "SensoryUDTSIDEngine"
 
@@ -2574,7 +2364,6 @@
 
     invoke-static {v3, v4}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 467
     move-object/from16 v0, p0
 
     iget-wide v4, v0, Lcom/sensoryinc/fluentsoftsdk/SensoryUDTSIDEngine;->m_lSessionValueFPSV:J
@@ -2583,26 +2372,22 @@
 
     invoke-virtual {v0, v4, v5}, Lcom/sensoryinc/fluentsoftsdk/SensoryUDTSIDEngine;->closeRecog(J)V
 
-    .line 468
     const-wide/16 v4, 0x0
 
     move-object/from16 v0, p0
 
     iput-wide v4, v0, Lcom/sensoryinc/fluentsoftsdk/SensoryUDTSIDEngine;->m_lSessionValueFPSV:J
 
-    .line 470
     const-string v3, "SensoryUDTSIDEngine"
 
     const-string v4, "loadModels, Set WMode to WMODE_UDT"
 
     invoke-static {v3, v4}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 471
     const/4 v3, 0x1
 
     sput v3, Lcom/samsung/voiceshell/WakeUpCmdRecognizer;->WMode:I
 
-    .line 472
     sget v3, Lcom/samsung/voiceshell/WakeUpCmdRecognizer;->WMode:I
 
     move-object/from16 v0, p0
@@ -2611,7 +2396,6 @@
 
     goto/16 :goto_1
 
-    .line 489
     :cond_6
     move-object/from16 v0, p0
 
@@ -2627,7 +2411,6 @@
 
     goto/16 :goto_2
 
-    .line 494
     :cond_7
     const-string v3, "SensoryUDTSIDEngine"
 
@@ -2677,7 +2460,6 @@
 
     invoke-static {v3, v4}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 496
     move-object/from16 v0, p0
 
     iget-wide v4, v0, Lcom/sensoryinc/fluentsoftsdk/SensoryUDTSIDEngine;->m_lSessionValue:J
@@ -2686,14 +2468,12 @@
 
     invoke-virtual {v0, v4, v5}, Lcom/sensoryinc/fluentsoftsdk/SensoryUDTSIDEngine;->closeRecog(J)V
 
-    .line 497
     const-wide/16 v4, 0x0
 
     move-object/from16 v0, p0
 
     iput-wide v4, v0, Lcom/sensoryinc/fluentsoftsdk/SensoryUDTSIDEngine;->m_lSessionValue:J
 
-    .line 499
     const/4 v2, 0x0
 
     goto/16 :goto_2
@@ -2718,10 +2498,8 @@
 
     const/4 v1, 0x1
 
-    .line 149
     const/4 v6, 0x0
 
-    .line 151
     .local v6, "nResult":I
     sget v0, Lcom/samsung/voiceshell/WakeUpCmdRecognizer;->WType:I
 
@@ -2735,7 +2513,6 @@
 
     if-nez v0, :cond_3
 
-    .line 155
     :cond_0
     sget v0, Lcom/samsung/voiceshell/WakeUpCmdRecognizer;->WMode:I
 
@@ -2743,7 +2520,6 @@
 
     if-eqz v0, :cond_1
 
-    .line 157
     iget-wide v1, p0, Lcom/sensoryinc/fluentsoftsdk/SensoryUDTSIDEngine;->m_lSessionValueFPSV:J
 
     int-to-long v4, p2
@@ -2756,7 +2532,6 @@
 
     move-result v6
 
-    .line 160
     :cond_1
     sget v0, Lcom/samsung/voiceshell/WakeUpCmdRecognizer;->WMode:I
 
@@ -2764,7 +2539,6 @@
 
     if-eqz v0, :cond_2
 
-    .line 162
     iget-wide v1, p0, Lcom/sensoryinc/fluentsoftsdk/SensoryUDTSIDEngine;->m_lSessionValue:J
 
     int-to-long v4, p2
@@ -2777,18 +2551,15 @@
 
     move-result v6
 
-    .line 174
     :cond_2
     :goto_0
     return v6
 
-    .line 165
     :cond_3
     sget v0, Lcom/samsung/voiceshell/WakeUpCmdRecognizer;->WMode:I
 
     if-ne v0, v1, :cond_4
 
-    .line 167
     iget-wide v1, p0, Lcom/sensoryinc/fluentsoftsdk/SensoryUDTSIDEngine;->m_lSessionValue:J
 
     int-to-long v4, p2
@@ -2803,13 +2574,11 @@
 
     goto :goto_0
 
-    .line 169
     :cond_4
     sget v0, Lcom/samsung/voiceshell/WakeUpCmdRecognizer;->WMode:I
 
     if-ne v0, v2, :cond_2
 
-    .line 171
     iget-wide v1, p0, Lcom/sensoryinc/fluentsoftsdk/SensoryUDTSIDEngine;->m_lSessionValueFPSV:J
 
     int-to-long v4, p2
@@ -2835,7 +2604,6 @@
     .prologue
     const/4 v8, 0x0
 
-    .line 180
     iget-wide v0, p0, Lcom/sensoryinc/fluentsoftsdk/SensoryUDTSIDEngine;->m_lSessionValue:J
 
     const-wide/16 v2, 0x0
@@ -2844,25 +2612,20 @@
 
     if-nez v0, :cond_0
 
-    .line 182
     const-string v0, "SensoryUDTSIDEngine"
 
     const-string v1, "secMM: processVerify , trig is ZERO, terminate to verify"
 
     invoke-static {v0, v1}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 183
     const/16 v6, -0xc
 
-    .line 206
     :goto_0
     return v6
 
-    .line 186
     :cond_0
     const/4 v6, 0x0
 
-    .line 187
     .local v6, "iResult":I
     iget-wide v1, p0, Lcom/sensoryinc/fluentsoftsdk/SensoryUDTSIDEngine;->m_lSessionValue:J
 
@@ -2876,16 +2639,13 @@
 
     move-result v7
 
-    .line 189
     .local v7, "nRecogResult":I
     const/4 v0, 0x2
 
     if-ne v7, v0, :cond_2
 
-    .line 191
     const/4 v6, 0x0
 
-    .line 193
     iget-wide v0, p0, Lcom/sensoryinc/fluentsoftsdk/SensoryUDTSIDEngine;->m_lSessionValue:J
 
     const/4 v2, 0x3
@@ -2898,15 +2658,12 @@
 
     aput-short v0, p4, v8
 
-    .line 194
     aget-short v0, p4, v8
 
     if-ltz v0, :cond_1
 
-    .line 196
     const/4 v6, 0x1
 
-    .line 204
     :cond_1
     :goto_1
     const-string v0, "SensoryUDTSIDEngine"
@@ -2943,7 +2700,6 @@
 
     goto :goto_0
 
-    .line 201
     :cond_2
     const/4 v6, 0x0
 
@@ -2959,7 +2715,6 @@
     .param p3, "lSessionValueFPSV"    # J
 
     .prologue
-    .line 110
     const-string v0, "SensoryUDTSIDEngine"
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -2992,12 +2747,9 @@
 
     invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 112
     iput-wide p1, p0, Lcom/sensoryinc/fluentsoftsdk/SensoryUDTSIDEngine;->m_lSessionValue:J
 
-    .line 113
     iput-wide p3, p0, Lcom/sensoryinc/fluentsoftsdk/SensoryUDTSIDEngine;->m_lSessionValueFPSV:J
 
-    .line 114
     return-void
 .end method

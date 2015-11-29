@@ -23,7 +23,6 @@
     .locals 0
 
     .prologue
-    .line 143
     iput-object p1, p0, Lcom/android/internal/telephony/PhoneBase$1;->this$0:Lcom/android/internal/telephony/PhoneBase;
 
     invoke-direct {p0}, Landroid/content/BroadcastReceiver;-><init>()V
@@ -39,10 +38,8 @@
     .param p2, "intent"    # Landroid/content/Intent;
 
     .prologue
-    .line 147
     if-eqz p2, :cond_1
 
-    .line 148
     const-string v0, "PhoneBase"
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -69,7 +66,6 @@
 
     invoke-static {v0, v1}, Landroid/telephony/Rlog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 156
     const-string v0, "android:subid"
 
     invoke-virtual {p2, v0}, Landroid/content/Intent;->hasExtra(Ljava/lang/String;)Z
@@ -78,7 +74,6 @@
 
     if-eqz v0, :cond_2
 
-    .line 157
     const-string v0, "android:subid"
 
     const-wide/16 v2, -0x1
@@ -97,12 +92,10 @@
 
     if-eqz v0, :cond_2
 
-    .line 191
     :cond_0
     :goto_0
     return-void
 
-    .line 150
     :cond_1
     const-string v0, "PhoneBase"
 
@@ -112,7 +105,6 @@
 
     goto :goto_0
 
-    .line 161
     :cond_2
     invoke-virtual {p2}, Landroid/content/Intent;->getAction()Ljava/lang/String;
 
@@ -126,7 +118,6 @@
 
     if-eqz v0, :cond_3
 
-    .line 163
     # getter for: Lcom/android/internal/telephony/PhoneBase;->mUsedLegacyIms:Z
     invoke-static {}, Lcom/android/internal/telephony/PhoneBase;->access$000()Z
 
@@ -134,7 +125,6 @@
 
     if-nez v0, :cond_0
 
-    .line 165
     iget-object v0, p0, Lcom/android/internal/telephony/PhoneBase$1;->this$0:Lcom/android/internal/telephony/PhoneBase;
 
     const/4 v1, 0x1
@@ -142,14 +132,12 @@
     # setter for: Lcom/android/internal/telephony/PhoneBase;->mImsServiceReady:Z
     invoke-static {v0, v1}, Lcom/android/internal/telephony/PhoneBase;->access$102(Lcom/android/internal/telephony/PhoneBase;Z)Z
 
-    .line 166
     iget-object v0, p0, Lcom/android/internal/telephony/PhoneBase$1;->this$0:Lcom/android/internal/telephony/PhoneBase;
 
     invoke-virtual {v0}, Lcom/android/internal/telephony/PhoneBase;->updateImsPhone()V
 
     goto :goto_0
 
-    .line 168
     :cond_3
     invoke-virtual {p2}, Landroid/content/Intent;->getAction()Ljava/lang/String;
 
@@ -163,7 +151,6 @@
 
     if-eqz v0, :cond_0
 
-    .line 169
     iget-object v0, p0, Lcom/android/internal/telephony/PhoneBase$1;->this$0:Lcom/android/internal/telephony/PhoneBase;
 
     const/4 v1, 0x0
@@ -171,7 +158,6 @@
     # setter for: Lcom/android/internal/telephony/PhoneBase;->mImsServiceReady:Z
     invoke-static {v0, v1}, Lcom/android/internal/telephony/PhoneBase;->access$102(Lcom/android/internal/telephony/PhoneBase;Z)Z
 
-    .line 170
     iget-object v0, p0, Lcom/android/internal/telephony/PhoneBase$1;->this$0:Lcom/android/internal/telephony/PhoneBase;
 
     invoke-virtual {v0}, Lcom/android/internal/telephony/PhoneBase;->updateImsPhone()V

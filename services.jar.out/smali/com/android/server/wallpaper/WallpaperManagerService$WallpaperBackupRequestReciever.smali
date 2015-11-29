@@ -23,7 +23,6 @@
     .locals 0
 
     .prologue
-    .line 1819
     iput-object p1, p0, Lcom/android/server/wallpaper/WallpaperManagerService$WallpaperBackupRequestReciever;->this$0:Lcom/android/server/wallpaper/WallpaperManagerService;
 
     invoke-direct {p0}, Landroid/content/BroadcastReceiver;-><init>()V
@@ -39,20 +38,17 @@
     .param p2, "intent"    # Landroid/content/Intent;
 
     .prologue
-    .line 1825
     iget-object v2, p0, Lcom/android/server/wallpaper/WallpaperManagerService$WallpaperBackupRequestReciever;->this$0:Lcom/android/server/wallpaper/WallpaperManagerService;
 
     iget-object v3, v2, Lcom/android/server/wallpaper/WallpaperManagerService;->mLock:Ljava/lang/Object;
 
     monitor-enter v3
 
-    .line 1826
     :try_start_0
     invoke-virtual {p2}, Landroid/content/Intent;->getAction()Ljava/lang/String;
 
     move-result-object v0
 
-    .line 1827
     .local v0, "action":Ljava/lang/String;
     const-string v2, "SOURCE"
 
@@ -60,7 +56,6 @@
 
     move-result-object v1
 
-    .line 1828
     .local v1, "source":Ljava/lang/String;
     const-string v2, "com.sec.android.intent.action.REQUEST_BACKUP_WALLPAPER"
 
@@ -87,7 +82,6 @@
 
     if-eqz v2, :cond_1
 
-    .line 1829
     iget-object v2, p0, Lcom/android/server/wallpaper/WallpaperManagerService$WallpaperBackupRequestReciever;->this$0:Lcom/android/server/wallpaper/WallpaperManagerService;
 
     iget v2, v2, Lcom/android/server/wallpaper/WallpaperManagerService;->mCurrentUserId:I
@@ -96,7 +90,6 @@
 
     if-lt v2, v4, :cond_1
 
-    .line 1830
     iget-object v2, p0, Lcom/android/server/wallpaper/WallpaperManagerService$WallpaperBackupRequestReciever;->this$0:Lcom/android/server/wallpaper/WallpaperManagerService;
 
     const/4 v4, 0x1
@@ -104,7 +97,6 @@
     # setter for: Lcom/android/server/wallpaper/WallpaperManagerService;->mBackupRunning:Z
     invoke-static {v2, v4}, Lcom/android/server/wallpaper/WallpaperManagerService;->access$602(Lcom/android/server/wallpaper/WallpaperManagerService;Z)Z
 
-    .line 1833
     :cond_1
     const-string v2, "android.intent.action.RESPONSE_BACKUP_WALLPAPER"
 
@@ -122,7 +114,6 @@
 
     if-eqz v2, :cond_3
 
-    .line 1834
     :cond_2
     iget-object v2, p0, Lcom/android/server/wallpaper/WallpaperManagerService$WallpaperBackupRequestReciever;->this$0:Lcom/android/server/wallpaper/WallpaperManagerService;
 
@@ -131,14 +122,11 @@
     # setter for: Lcom/android/server/wallpaper/WallpaperManagerService;->mBackupRunning:Z
     invoke-static {v2, v4}, Lcom/android/server/wallpaper/WallpaperManagerService;->access$602(Lcom/android/server/wallpaper/WallpaperManagerService;Z)Z
 
-    .line 1836
     :cond_3
     monitor-exit v3
 
-    .line 1837
     return-void
 
-    .line 1836
     .end local v0    # "action":Ljava/lang/String;
     .end local v1    # "source":Ljava/lang/String;
     :catchall_0

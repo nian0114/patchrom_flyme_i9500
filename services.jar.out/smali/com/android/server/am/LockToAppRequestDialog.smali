@@ -33,13 +33,10 @@
     .param p2, "activityManagerService"    # Lcom/android/server/am/ActivityManagerService;
 
     .prologue
-    .line 49
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 50
     iput-object p1, p0, Lcom/android/server/am/LockToAppRequestDialog;->mContext:Landroid/content/Context;
 
-    .line 51
     iget-object v0, p0, Lcom/android/server/am/LockToAppRequestDialog;->mContext:Landroid/content/Context;
 
     const-string v1, "accessibility"
@@ -52,10 +49,8 @@
 
     iput-object v0, p0, Lcom/android/server/am/LockToAppRequestDialog;->mAccessibilityService:Landroid/view/accessibility/AccessibilityManager;
 
-    .line 53
     iput-object p2, p0, Lcom/android/server/am/LockToAppRequestDialog;->mService:Lcom/android/server/am/ActivityManagerService;
 
-    .line 54
     return-void
 .end method
 
@@ -63,12 +58,10 @@
     .locals 1
 
     .prologue
-    .line 57
     iget-object v0, p0, Lcom/android/server/am/LockToAppRequestDialog;->mLockSettingsService:Lcom/android/internal/widget/ILockSettings;
 
     if-nez v0, :cond_0
 
-    .line 58
     const-string v0, "lock_settings"
 
     invoke-static {v0}, Landroid/os/ServiceManager;->getService(Ljava/lang/String;)Landroid/os/IBinder;
@@ -85,7 +78,6 @@
 
     iput-object v0, p0, Lcom/android/server/am/LockToAppRequestDialog;->mLockSettingsService:Lcom/android/internal/widget/ILockSettings;
 
-    .line 61
     :cond_0
     iget-object v0, p0, Lcom/android/server/am/LockToAppRequestDialog;->mLockSettingsService:Lcom/android/internal/widget/ILockSettings;
 
@@ -99,7 +91,6 @@
     .prologue
     const/4 v1, 0x0
 
-    .line 99
     :try_start_0
     invoke-direct {p0}, Lcom/android/server/am/LockToAppRequestDialog;->getLockSettings()Lcom/android/internal/widget/ILockSettings;
 
@@ -115,30 +106,25 @@
 
     long-to-int v0, v2
 
-    .line 101
     .local v0, "quality":I
     sparse-switch v0, :sswitch_data_0
 
-    .line 121
     .end local v0    # "quality":I
     :cond_0
     :goto_0
     return v1
 
-    .line 104
     .restart local v0    # "quality":I
     :sswitch_0
     const v1, 0x104091e
 
     goto :goto_0
 
-    .line 108
     :sswitch_1
     const v1, 0x1040920
 
     goto :goto_0
 
-    .line 110
     :sswitch_2
     invoke-direct {p0}, Lcom/android/server/am/LockToAppRequestDialog;->getLockSettings()Lcom/android/internal/widget/ILockSettings;
 
@@ -156,25 +142,21 @@
 
     if-eqz v2, :cond_0
 
-    .line 112
     const v1, 0x104091f
 
     goto :goto_0
 
-    .line 116
     :sswitch_3
     const v1, 0x1040921
 
     goto :goto_0
 
-    .line 119
     .end local v0    # "quality":I
     :catch_0
     move-exception v2
 
     goto :goto_0
 
-    .line 101
     nop
 
     :sswitch_data_0
@@ -195,22 +177,18 @@
     .locals 1
 
     .prologue
-    .line 126
     iget-object v0, p0, Lcom/android/server/am/LockToAppRequestDialog;->mDialog:Landroid/app/AlertDialog;
 
     if-eqz v0, :cond_0
 
-    .line 127
     iget-object v0, p0, Lcom/android/server/am/LockToAppRequestDialog;->mDialog:Landroid/app/AlertDialog;
 
     invoke-virtual {v0}, Landroid/app/AlertDialog;->dismiss()V
 
-    .line 128
     const/4 v0, 0x0
 
     iput-object v0, p0, Lcom/android/server/am/LockToAppRequestDialog;->mDialog:Landroid/app/AlertDialog;
 
-    .line 130
     :cond_0
     return-void
 .end method
@@ -221,19 +199,16 @@
     .param p2, "which"    # I
 
     .prologue
-    .line 203
     const/4 v0, -0x1
 
     if-ne v0, p2, :cond_1
 
-    .line 204
     const-string v0, "ActivityManager"
 
     const-string v1, "accept lock-to-app request"
 
     invoke-static {v0, v1}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 206
     iget-object v0, p0, Lcom/android/server/am/LockToAppRequestDialog;->mContext:Landroid/content/Context;
 
     invoke-virtual {v0}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
@@ -259,24 +234,20 @@
     :goto_0
     invoke-static {v1, v2, v0}, Landroid/provider/Settings$System;->putInt(Landroid/content/ContentResolver;Ljava/lang/String;I)Z
 
-    .line 211
     iget-object v0, p0, Lcom/android/server/am/LockToAppRequestDialog;->mService:Lcom/android/server/am/ActivityManagerService;
 
     iget-object v1, p0, Lcom/android/server/am/LockToAppRequestDialog;->mRequestedTask:Lcom/android/server/am/TaskRecord;
 
     invoke-virtual {v0, v1}, Lcom/android/server/am/ActivityManagerService;->startLockTaskMode(Lcom/android/server/am/TaskRecord;)V
 
-    .line 215
     :goto_1
     return-void
 
-    .line 206
     :cond_0
     const/4 v0, 0x0
 
     goto :goto_0
 
-    .line 213
     :cond_1
     const-string v0, "ActivityManager"
 
@@ -296,26 +267,21 @@
 
     const/4 v12, 0x0
 
-    .line 133
     invoke-virtual {p0}, Lcom/android/server/am/LockToAppRequestDialog;->clearPrompt()V
 
-    .line 134
     iput-object p1, p0, Lcom/android/server/am/LockToAppRequestDialog;->mRequestedTask:Lcom/android/server/am/TaskRecord;
 
-    .line 135
     iget v11, p1, Lcom/android/server/am/TaskRecord;->userId:I
 
     invoke-direct {p0, v11}, Lcom/android/server/am/LockToAppRequestDialog;->getLockString(I)I
 
     move-result v9
 
-    .line 137
     .local v9, "unlockStringId":I
     invoke-static {}, Landroid/content/res/Resources;->getSystem()Landroid/content/res/Resources;
 
     move-result-object v4
 
-    .line 145
     .local v4, "r":Landroid/content/res/Resources;
     iget-object v11, p0, Lcom/android/server/am/LockToAppRequestDialog;->mContext:Landroid/content/Context;
 
@@ -327,11 +293,9 @@
 
     move-result v2
 
-    .line 146
     .local v2, "hasPermanentMenuKey":Z
     if-eqz v2, :cond_1
 
-    .line 147
     iget-object v11, p0, Lcom/android/server/am/LockToAppRequestDialog;->mAccessibilityService:Landroid/view/accessibility/AccessibilityManager;
 
     invoke-virtual {v11}, Landroid/view/accessibility/AccessibilityManager;->isEnabled()Z
@@ -347,7 +311,6 @@
 
     move-result-object v1
 
-    .line 155
     .local v1, "description":Ljava/lang/String;
     :goto_1
     const v11, 0x104091d
@@ -356,7 +319,6 @@
 
     move-result-object v3
 
-    .line 156
     .local v3, "pinWindows":Ljava/lang/String;
     const v11, 0x104091c
 
@@ -368,7 +330,6 @@
 
     move-result-object v5
 
-    .line 158
     .local v5, "title":Ljava/lang/String;
     new-instance v11, Landroid/app/AlertDialog$Builder;
 
@@ -400,16 +361,13 @@
 
     move-result-object v0
 
-    .line 164
     .local v0, "builder":Landroid/app/AlertDialog$Builder;
     if-eqz v9, :cond_3
 
-    .line 165
     const v11, 0x1090075
 
     invoke-virtual {v0, v11}, Landroid/app/AlertDialog$Builder;->setView(I)Landroid/app/AlertDialog$Builder;
 
-    .line 169
     :goto_2
     invoke-virtual {v0}, Landroid/app/AlertDialog$Builder;->create()Landroid/app/AlertDialog;
 
@@ -417,7 +375,6 @@
 
     iput-object v11, p0, Lcom/android/server/am/LockToAppRequestDialog;->mDialog:Landroid/app/AlertDialog;
 
-    .line 171
     iget-object v11, p0, Lcom/android/server/am/LockToAppRequestDialog;->mDialog:Landroid/app/AlertDialog;
 
     invoke-virtual {v11}, Landroid/app/AlertDialog;->getWindow()Landroid/view/Window;
@@ -428,7 +385,6 @@
 
     invoke-virtual {v11, v13}, Landroid/view/Window;->setType(I)V
 
-    .line 172
     iget-object v11, p0, Lcom/android/server/am/LockToAppRequestDialog;->mDialog:Landroid/app/AlertDialog;
 
     invoke-virtual {v11}, Landroid/app/AlertDialog;->getWindow()Landroid/view/Window;
@@ -445,15 +401,12 @@
 
     iput v13, v11, Landroid/view/WindowManager$LayoutParams;->privateFlags:I
 
-    .line 174
     iget-object v11, p0, Lcom/android/server/am/LockToAppRequestDialog;->mDialog:Landroid/app/AlertDialog;
 
     invoke-virtual {v11}, Landroid/app/AlertDialog;->show()V
 
-    .line 176
     if-eqz v9, :cond_5
 
-    .line 177
     iget-object v11, p0, Lcom/android/server/am/LockToAppRequestDialog;->mDialog:Landroid/app/AlertDialog;
 
     const v13, 0x10203a4
@@ -464,18 +417,15 @@
 
     check-cast v6, Landroid/widget/TextView;
 
-    .line 178
     .local v6, "tv":Landroid/widget/TextView;
     invoke-virtual {v6, v1}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
 
-    .line 180
     iget-object v11, p0, Lcom/android/server/am/LockToAppRequestDialog;->mContext:Landroid/content/Context;
 
     invoke-virtual {v11, v9}, Landroid/content/Context;->getString(I)Ljava/lang/String;
 
     move-result-object v7
 
-    .line 181
     .local v7, "unlockString":Ljava/lang/String;
     iget-object v11, p0, Lcom/android/server/am/LockToAppRequestDialog;->mDialog:Landroid/app/AlertDialog;
 
@@ -489,7 +439,6 @@
 
     iput-object v11, p0, Lcom/android/server/am/LockToAppRequestDialog;->mCheckbox:Landroid/widget/CheckBox;
 
-    .line 185
     const v11, 0x1040922
 
     new-array v13, v10, [Ljava/lang/Object;
@@ -500,13 +449,11 @@
 
     move-result-object v8
 
-    .line 186
     .local v8, "unlockStringCombination":Ljava/lang/String;
     iget-object v11, p0, Lcom/android/server/am/LockToAppRequestDialog;->mCheckbox:Landroid/widget/CheckBox;
 
     invoke-virtual {v11, v8}, Landroid/widget/CheckBox;->setText(Ljava/lang/CharSequence;)V
 
-    .line 191
     :try_start_0
     iget-object v11, p0, Lcom/android/server/am/LockToAppRequestDialog;->mContext:Landroid/content/Context;
 
@@ -522,7 +469,6 @@
 
     if-eqz v11, :cond_4
 
-    .line 193
     .local v10, "useLock":Z
     :goto_3
     iget-object v11, p0, Lcom/android/server/am/LockToAppRequestDialog;->mCheckbox:Landroid/widget/CheckBox;
@@ -531,7 +477,6 @@
     :try_end_0
     .catch Landroid/provider/Settings$SettingNotFoundException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 199
     .end local v6    # "tv":Landroid/widget/TextView;
     .end local v7    # "unlockString":Ljava/lang/String;
     .end local v8    # "unlockStringCombination":Ljava/lang/String;
@@ -539,7 +484,6 @@
     :goto_4
     return-void
 
-    .line 147
     .end local v0    # "builder":Landroid/app/AlertDialog$Builder;
     .end local v1    # "description":Ljava/lang/String;
     .end local v3    # "pinWindows":Ljava/lang/String;
@@ -549,7 +493,6 @@
 
     goto/16 :goto_0
 
-    .line 151
     :cond_1
     iget-object v11, p0, Lcom/android/server/am/LockToAppRequestDialog;->mAccessibilityService:Landroid/view/accessibility/AccessibilityManager;
 
@@ -575,7 +518,6 @@
 
     goto :goto_5
 
-    .line 167
     .restart local v0    # "builder":Landroid/app/AlertDialog$Builder;
     .restart local v1    # "description":Ljava/lang/String;
     .restart local v3    # "pinWindows":Ljava/lang/String;
@@ -591,10 +533,8 @@
     :cond_4
     move v10, v12
 
-    .line 191
     goto :goto_3
 
-    .line 197
     .end local v6    # "tv":Landroid/widget/TextView;
     .end local v7    # "unlockString":Ljava/lang/String;
     .end local v8    # "unlockStringCombination":Ljava/lang/String;
@@ -605,7 +545,6 @@
 
     goto :goto_4
 
-    .line 194
     .restart local v6    # "tv":Landroid/widget/TextView;
     .restart local v7    # "unlockString":Ljava/lang/String;
     .restart local v8    # "unlockStringCombination":Ljava/lang/String;

@@ -28,12 +28,10 @@
     .locals 0
 
     .prologue
-    .line 359
     iput-object p1, p0, Lcom/android/internal/policy/impl/SubPhoneWindow$SubPhoneWindowListener;->this$0:Lcom/android/internal/policy/impl/SubPhoneWindow;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 360
     return-void
 .end method
 
@@ -44,7 +42,6 @@
     .param p1, "v"    # Landroid/view/View;
 
     .prologue
-    .line 364
     return-void
 .end method
 
@@ -54,7 +51,6 @@
     .param p2, "event"    # Landroid/view/MotionEvent;
 
     .prologue
-    .line 387
     const/4 v0, 0x0
 
     return v0
@@ -66,17 +62,14 @@
     .param p2, "event"    # Landroid/view/MotionEvent;
 
     .prologue
-    .line 368
     invoke-virtual {p2}, Landroid/view/MotionEvent;->getAction()I
 
     move-result v0
 
     packed-switch v0, :pswitch_data_0
 
-    .line 380
     const/4 v0, 0x0
 
-    .line 382
     :goto_0
     return v0
 
@@ -85,7 +78,6 @@
 
     goto :goto_0
 
-    .line 368
     nop
 
     :pswitch_data_0

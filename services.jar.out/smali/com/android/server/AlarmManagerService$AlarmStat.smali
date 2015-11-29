@@ -29,15 +29,11 @@
     .param p2, "pid"    # I
 
     .prologue
-    .line 692
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 693
     iput p1, p0, Lcom/android/server/AlarmManagerService$AlarmStat;->uid:I
 
-    .line 694
     iput p2, p0, Lcom/android/server/AlarmManagerService$AlarmStat;->pid:I
 
-    .line 695
     return-void
 .end method

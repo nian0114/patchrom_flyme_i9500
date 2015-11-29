@@ -36,7 +36,6 @@
     .locals 0
 
     .prologue
-    .line 6794
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -49,7 +48,6 @@
     .param p2, "label"    # Ljava/lang/CharSequence;
 
     .prologue
-    .line 6833
     if-nez p1, :cond_0
 
     invoke-static {p2}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
@@ -58,12 +56,10 @@
 
     if-nez v1, :cond_0
 
-    .line 6837
     .end local p2    # "label":Ljava/lang/CharSequence;
     :goto_0
     return-object p2
 
-    .line 6836
     .restart local p2    # "label":Ljava/lang/CharSequence;
     :cond_0
     invoke-static {p1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
@@ -74,7 +70,6 @@
 
     move-result v0
 
-    .line 6837
     .local v0, "labelRes":I
     invoke-virtual {p0, v0}, Landroid/content/res/Resources;->getText(I)Ljava/lang/CharSequence;
 
@@ -90,15 +85,12 @@
     .prologue
     const v0, 0x1040343
 
-    .line 6814
     if-nez p0, :cond_0
 
-    .line 6822
     :goto_0
     :pswitch_0
     return v0
 
-    .line 6817
     :cond_0
     invoke-virtual {p0}, Ljava/lang/Integer;->intValue()I
 
@@ -106,24 +98,20 @@
 
     packed-switch v1, :pswitch_data_0
 
-    .line 6822
     const v0, 0x1040340
 
     goto :goto_0
 
-    .line 6819
     :pswitch_1
     const v0, 0x1040342
 
     goto :goto_0
 
-    .line 6820
     :pswitch_2
     const v0, 0x1040341
 
     goto :goto_0
 
-    .line 6817
     nop
 
     :pswitch_data_0

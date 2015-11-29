@@ -26,7 +26,6 @@
     .locals 0
 
     .prologue
-    .line 1227
     iput-object p1, p0, Lcom/android/internal/policy/impl/PhoneWindowManager$6;->this$0:Lcom/android/internal/policy/impl/PhoneWindowManager;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -40,14 +39,12 @@
     .locals 5
 
     .prologue
-    .line 1229
     new-instance v1, Landroid/content/Intent;
 
     const-string v2, "android.system.agent"
 
     invoke-direct {v1, v2}, Landroid/content/Intent;-><init>(Ljava/lang/String;)V
 
-    .line 1230
     .local v1, "intent":Landroid/content/Intent;
     new-instance v2, Landroid/content/ComponentName;
 
@@ -59,14 +56,12 @@
 
     invoke-virtual {v1, v2}, Landroid/content/Intent;->setComponent(Landroid/content/ComponentName;)Landroid/content/Intent;
 
-    .line 1232
     const-string v2, "para"
 
     const-string v3, "takeLogs"
 
     invoke-virtual {v1, v2, v3}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;
 
-    .line 1234
     :try_start_0
     iget-object v2, p0, Lcom/android/internal/policy/impl/PhoneWindowManager$6;->this$0:Lcom/android/internal/policy/impl/PhoneWindowManager;
 
@@ -76,15 +71,12 @@
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 1238
     :goto_0
     return-void
 
-    .line 1235
     :catch_0
     move-exception v0
 
-    .line 1236
     .local v0, "e":Ljava/lang/Exception;
     const-string v2, "WindowManager"
 

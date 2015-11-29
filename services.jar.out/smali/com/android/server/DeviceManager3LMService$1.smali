@@ -23,7 +23,6 @@
     .locals 0
 
     .prologue
-    .line 605
     iput-object p1, p0, Lcom/android/server/DeviceManager3LMService$1;->this$0:Lcom/android/server/DeviceManager3LMService;
 
     invoke-direct {p0}, Ljava/lang/Thread;-><init>()V
@@ -37,7 +36,6 @@
     .locals 2
 
     .prologue
-    .line 607
     const-string v0, "KDI"
 
     iget-object v1, p0, Lcom/android/server/DeviceManager3LMService$1;->this$0:Lcom/android/server/DeviceManager3LMService;
@@ -53,12 +51,10 @@
 
     if-nez v0, :cond_0
 
-    .line 608
     iget-object v0, p0, Lcom/android/server/DeviceManager3LMService$1;->this$0:Lcom/android/server/DeviceManager3LMService;
 
     invoke-virtual {v0}, Lcom/android/server/DeviceManager3LMService;->restoreDefaultApns()V
 
-    .line 609
     :cond_0
     return-void
 .end method

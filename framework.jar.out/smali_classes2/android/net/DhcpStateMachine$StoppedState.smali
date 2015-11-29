@@ -23,7 +23,6 @@
     .locals 0
 
     .prologue
-    .line 204
     iput-object p1, p0, Landroid/net/DhcpStateMachine$StoppedState;->this$0:Landroid/net/DhcpStateMachine;
 
     invoke-direct {p0}, Lcom/android/internal/util/State;-><init>()V
@@ -37,7 +36,6 @@
     .locals 0
 
     .prologue
-    .line 208
     return-void
 .end method
 
@@ -46,25 +44,20 @@
     .param p1, "message"    # Landroid/os/Message;
 
     .prologue
-    .line 212
     const/4 v0, 0x1
 
-    .line 214
     .local v0, "retValue":Z
     iget v1, p1, Landroid/os/Message;->what:I
 
     sparse-switch v1, :sswitch_data_0
 
-    .line 233
     const/4 v0, 0x0
 
-    .line 236
     :cond_0
     :goto_0
     :sswitch_0
     return v0
 
-    .line 216
     :sswitch_1
     iget-object v1, p0, Landroid/net/DhcpStateMachine$StoppedState;->this$0:Landroid/net/DhcpStateMachine;
 
@@ -75,7 +68,6 @@
 
     if-eqz v1, :cond_1
 
-    .line 218
     iget-object v1, p0, Landroid/net/DhcpStateMachine$StoppedState;->this$0:Landroid/net/DhcpStateMachine;
 
     # getter for: Landroid/net/DhcpStateMachine;->mController:Lcom/android/internal/util/StateMachine;
@@ -87,7 +79,6 @@
 
     invoke-virtual {v1, v2}, Lcom/android/internal/util/StateMachine;->sendMessage(I)V
 
-    .line 219
     iget-object v1, p0, Landroid/net/DhcpStateMachine$StoppedState;->this$0:Landroid/net/DhcpStateMachine;
 
     iget-object v2, p0, Landroid/net/DhcpStateMachine$StoppedState;->this$0:Landroid/net/DhcpStateMachine;
@@ -102,7 +93,6 @@
 
     goto :goto_0
 
-    .line 221
     :cond_1
     iget-object v1, p0, Landroid/net/DhcpStateMachine$StoppedState;->this$0:Landroid/net/DhcpStateMachine;
 
@@ -115,7 +105,6 @@
 
     if-eqz v1, :cond_0
 
-    .line 222
     iget-object v1, p0, Landroid/net/DhcpStateMachine$StoppedState;->this$0:Landroid/net/DhcpStateMachine;
 
     iget-object v2, p0, Landroid/net/DhcpStateMachine$StoppedState;->this$0:Landroid/net/DhcpStateMachine;
@@ -130,7 +119,6 @@
 
     goto :goto_0
 
-    .line 214
     :sswitch_data_0
     .sparse-switch
         0x30001 -> :sswitch_1

@@ -55,7 +55,6 @@
 
     const/4 v2, 0x0
 
-    .line 370
     new-array v0, v5, [Ljava/lang/String;
 
     const-string v1, "Foreground"
@@ -72,7 +71,6 @@
 
     sput-object v0, Landroid/os/BatteryStats$Uid;->PROCESS_STATE_NAMES:[Ljava/lang/String;
 
-    .line 385
     new-array v0, v5, [Ljava/lang/String;
 
     const-string v1, "other"
@@ -83,7 +81,7 @@
 
     aput-object v1, v0, v3
 
-    const-string/jumbo v1, "touch"
+    const-string v1, "touch"
 
     aput-object v1, v0, v4
 
@@ -96,10 +94,8 @@
     .locals 0
 
     .prologue
-    .line 279
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 485
     return-void
 .end method
 

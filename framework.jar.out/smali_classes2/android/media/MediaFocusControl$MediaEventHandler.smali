@@ -24,13 +24,10 @@
     .param p2, "looper"    # Landroid/os/Looper;
 
     .prologue
-    .line 376
     iput-object p1, p0, Landroid/media/MediaFocusControl$MediaEventHandler;->this$0:Landroid/media/MediaFocusControl;
 
-    .line 377
     invoke-direct {p0, p2}, Landroid/os/Handler;-><init>(Landroid/os/Looper;)V
 
-    .line 378
     return-void
 .end method
 
@@ -41,17 +38,14 @@
     .param p1, "msg"    # Landroid/os/Message;
 
     .prologue
-    .line 382
     iget v0, p1, Landroid/os/Message;->what:I
 
     packed-switch v0, :pswitch_data_0
 
-    .line 449
     :goto_0
     :pswitch_0
     return-void
 
-    .line 384
     :pswitch_1
     iget-object v0, p0, Landroid/media/MediaFocusControl$MediaEventHandler;->this$0:Landroid/media/MediaFocusControl;
 
@@ -60,7 +54,6 @@
 
     goto :goto_0
 
-    .line 389
     :pswitch_2
     iget-object v1, p0, Landroid/media/MediaFocusControl$MediaEventHandler;->this$0:Landroid/media/MediaFocusControl;
 
@@ -75,7 +68,6 @@
 
     goto :goto_0
 
-    .line 393
     :pswitch_3
     iget-object v0, p0, Landroid/media/MediaFocusControl$MediaEventHandler;->this$0:Landroid/media/MediaFocusControl;
 
@@ -84,7 +76,6 @@
 
     goto :goto_0
 
-    .line 397
     :pswitch_4
     iget-object v1, p0, Landroid/media/MediaFocusControl$MediaEventHandler;->this$0:Landroid/media/MediaFocusControl;
 
@@ -99,7 +90,6 @@
 
     goto :goto_0
 
-    .line 402
     :pswitch_5
     const-string v1, "MediaFocusControl"
 
@@ -131,7 +121,6 @@
 
     invoke-static {v1, v0}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 403
     iget-object v1, p0, Landroid/media/MediaFocusControl$MediaEventHandler;->this$0:Landroid/media/MediaFocusControl;
 
     iget v2, p1, Landroid/os/Message;->arg2:I
@@ -153,7 +142,6 @@
 
     goto :goto_0
 
-    .line 408
     :pswitch_6
     const-string v0, "MediaFocusControl"
 
@@ -161,7 +149,6 @@
 
     invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 409
     iget-object v0, p0, Landroid/media/MediaFocusControl$MediaEventHandler;->this$0:Landroid/media/MediaFocusControl;
 
     # invokes: Landroid/media/MediaFocusControl;->onGetRemoteControlClientNowPlayingEntries()V
@@ -169,7 +156,6 @@
 
     goto :goto_0
 
-    .line 413
     :pswitch_7
     const-string v0, "MediaFocusControl"
 
@@ -177,7 +163,6 @@
 
     invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 414
     iget-object v0, p0, Landroid/media/MediaFocusControl$MediaEventHandler;->this$0:Landroid/media/MediaFocusControl;
 
     # invokes: Landroid/media/MediaFocusControl;->onSetRemoteControlClientBrowsedPlayer()V
@@ -185,7 +170,6 @@
 
     goto :goto_0
 
-    .line 419
     :pswitch_8
     iget-object v1, p0, Landroid/media/MediaFocusControl$MediaEventHandler;->this$0:Landroid/media/MediaFocusControl;
 
@@ -202,7 +186,6 @@
 
     goto :goto_0
 
-    .line 424
     :pswitch_9
     iget-object v0, p0, Landroid/media/MediaFocusControl$MediaEventHandler;->this$0:Landroid/media/MediaFocusControl;
 
@@ -211,7 +194,6 @@
 
     goto/16 :goto_0
 
-    .line 428
     :pswitch_a
     iget-object v1, p0, Landroid/media/MediaFocusControl$MediaEventHandler;->this$0:Landroid/media/MediaFocusControl;
 
@@ -223,7 +205,6 @@
 
     goto/16 :goto_0
 
-    .line 432
     :pswitch_b
     iget v0, p1, Landroid/os/Message;->arg1:I
 
@@ -231,7 +212,6 @@
 
     if-ge v0, v1, :cond_0
 
-    .line 433
     const/16 v1, 0xf
 
     const/4 v2, 0x2
@@ -253,13 +233,11 @@
 
     goto/16 :goto_0
 
-    .line 438
     :cond_0
     iget-object v1, p1, Landroid/os/Message;->obj:Ljava/lang/Object;
 
     monitor-enter v1
 
-    .line 439
     :try_start_0
     iget-object v0, p0, Landroid/media/MediaFocusControl$MediaEventHandler;->this$0:Landroid/media/MediaFocusControl;
 
@@ -270,7 +248,6 @@
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 441
     :try_start_1
     iget-object v0, p1, Landroid/os/Message;->obj:Ljava/lang/Object;
 
@@ -279,7 +256,6 @@
     .catch Ljava/lang/Exception; {:try_start_1 .. :try_end_1} :catch_0
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
-    .line 444
     :goto_1
     :try_start_2
     monitor-exit v1
@@ -295,13 +271,11 @@
 
     throw v0
 
-    .line 442
     :catch_0
     move-exception v0
 
     goto :goto_1
 
-    .line 382
     nop
 
     :pswitch_data_0

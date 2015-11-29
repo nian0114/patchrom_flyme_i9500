@@ -69,22 +69,18 @@
     .param p2, "connectTarget"    # I
 
     .prologue
-    .line 525
     iput-object p1, p0, Lcom/android/server/ReactiveService$AtCmdHandlingProcess;->this$0:Lcom/android/server/ReactiveService;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 520
     const/4 v0, 0x0
 
     iput-object v0, p0, Lcom/android/server/ReactiveService$AtCmdHandlingProcess;->mLocalSocketAddress:Landroid/net/LocalSocketAddress;
 
-    .line 522
     const/4 v0, 0x0
 
     iput-boolean v0, p0, Lcom/android/server/ReactiveService$AtCmdHandlingProcess;->mGettedBuffer:Z
 
-    .line 526
     new-instance v0, Landroid/net/LocalSocket;
 
     const/4 v1, 0x2
@@ -93,10 +89,8 @@
 
     iput-object v0, p0, Lcom/android/server/ReactiveService$AtCmdHandlingProcess;->mLocalSocket:Landroid/net/LocalSocket;
 
-    .line 527
     invoke-virtual {p0, p2}, Lcom/android/server/ReactiveService$AtCmdHandlingProcess;->selectTarget(I)V
 
-    .line 528
     return-void
 .end method
 
@@ -113,18 +107,15 @@
 
     const/4 v9, 0x0
 
-    .line 738
     new-instance v5, Ljava/lang/String;
 
     invoke-direct {v5}, Ljava/lang/String;-><init>()V
 
-    .line 739
     .local v5, "result":Ljava/lang/String;
     invoke-direct {p0, p1}, Lcom/android/server/ReactiveService$AtCmdHandlingProcess;->parsingParam(Ljava/lang/String;)[Ljava/lang/String;
 
     move-result-object v3
 
-    .line 740
     .local v3, "params":[Ljava/lang/String;
     const/4 v8, 0x4
 
@@ -146,18 +137,14 @@
 
     aput-object v8, v7, v12
 
-    .line 747
     .local v7, "supportedParams":[Ljava/lang/String;
     if-nez v3, :cond_0
 
-    .line 748
     const-string v8, "NG(INVALID_PARAM)"
 
-    .line 830
     :goto_0
     return-object v8
 
-    .line 751
     :cond_0
     :try_start_0
     new-instance v8, Ljava/lang/StringBuilder;
@@ -182,7 +169,6 @@
 
     move-result-object v5
 
-    .line 754
     const/4 v8, 0x0
 
     aget-object v8, v7, v8
@@ -207,7 +193,6 @@
 
     if-eqz v8, :cond_1
 
-    .line 756
     iget-object v8, p0, Lcom/android/server/ReactiveService$AtCmdHandlingProcess;->this$0:Lcom/android/server/ReactiveService;
 
     const/4 v9, 0x0
@@ -216,11 +201,9 @@
 
     move-result v2
 
-    .line 758
     .local v2, "flag":I
     packed-switch v2, :pswitch_data_0
 
-    .line 773
     new-instance v8, Ljava/lang/StringBuilder;
 
     invoke-direct {v8}, Ljava/lang/StringBuilder;-><init>()V
@@ -253,10 +236,8 @@
     :goto_1
     move-object v8, v5
 
-    .line 830
     goto :goto_0
 
-    .line 761
     .restart local v2    # "flag":I
     :pswitch_0
     new-instance v8, Ljava/lang/StringBuilder;
@@ -277,10 +258,8 @@
 
     move-result-object v5
 
-    .line 762
     goto :goto_1
 
-    .line 765
     :pswitch_1
     new-instance v8, Ljava/lang/StringBuilder;
 
@@ -300,10 +279,8 @@
 
     move-result-object v5
 
-    .line 766
     goto :goto_1
 
-    .line 769
     :pswitch_2
     new-instance v8, Ljava/lang/StringBuilder;
 
@@ -323,10 +300,8 @@
 
     move-result-object v5
 
-    .line 770
     goto :goto_1
 
-    .line 778
     .end local v2    # "flag":I
     :cond_1
     const/4 v8, 0x1
@@ -353,7 +328,6 @@
 
     if-eqz v8, :cond_2
 
-    .line 780
     iget-object v8, p0, Lcom/android/server/ReactiveService$AtCmdHandlingProcess;->this$0:Lcom/android/server/ReactiveService;
 
     invoke-virtual {v8}, Lcom/android/server/ReactiveService;->getServiceSupport()I
@@ -362,7 +336,6 @@
 
     packed-switch v8, :pswitch_data_1
 
-    .line 796
     :pswitch_3
     new-instance v8, Ljava/lang/StringBuilder;
 
@@ -382,10 +355,8 @@
 
     move-result-object v5
 
-    .line 797
     goto :goto_1
 
-    .line 783
     :pswitch_4
     new-instance v8, Ljava/lang/StringBuilder;
 
@@ -405,10 +376,8 @@
 
     move-result-object v5
 
-    .line 784
     goto/16 :goto_1
 
-    .line 787
     :pswitch_5
     new-instance v8, Ljava/lang/StringBuilder;
 
@@ -428,10 +397,8 @@
 
     move-result-object v5
 
-    .line 788
     goto/16 :goto_1
 
-    .line 791
     :pswitch_6
     new-instance v8, Ljava/lang/StringBuilder;
 
@@ -451,10 +418,8 @@
 
     move-result-object v5
 
-    .line 792
     goto/16 :goto_1
 
-    .line 801
     :cond_2
     const/4 v8, 0x2
 
@@ -480,7 +445,6 @@
 
     if-eqz v8, :cond_4
 
-    .line 803
     const/4 v8, 0x2
 
     aget-object v8, v3, v8
@@ -493,7 +457,6 @@
 
     move-result-object v0
 
-    .line 804
     .local v0, "data":[B
     iget-object v8, p0, Lcom/android/server/ReactiveService$AtCmdHandlingProcess;->this$0:Lcom/android/server/ReactiveService;
 
@@ -501,11 +464,9 @@
 
     move-result-object v4
 
-    .line 806
     .local v4, "response":[B
     if-eqz v4, :cond_3
 
-    .line 807
     new-instance v8, Ljava/lang/StringBuilder;
 
     invoke-direct {v8}, Ljava/lang/StringBuilder;-><init>()V
@@ -528,7 +489,6 @@
 
     goto/16 :goto_1
 
-    .line 809
     :cond_3
     new-instance v8, Ljava/lang/StringBuilder;
 
@@ -566,7 +526,6 @@
 
     goto/16 :goto_1
 
-    .line 812
     .end local v0    # "data":[B
     .end local v4    # "response":[B
     :cond_4
@@ -594,7 +553,6 @@
 
     if-eqz v8, :cond_6
 
-    .line 814
     const/4 v8, 0x2
 
     aget-object v8, v3, v8
@@ -607,7 +565,6 @@
 
     move-result-object v0
 
-    .line 815
     .restart local v0    # "data":[B
     iget-object v8, p0, Lcom/android/server/ReactiveService$AtCmdHandlingProcess;->this$0:Lcom/android/server/ReactiveService;
 
@@ -615,11 +572,9 @@
 
     move-result v6
 
-    .line 817
     .local v6, "ret":I
     if-nez v6, :cond_5
 
-    .line 818
     new-instance v8, Ljava/lang/StringBuilder;
 
     invoke-direct {v8}, Ljava/lang/StringBuilder;-><init>()V
@@ -640,7 +595,6 @@
 
     goto/16 :goto_1
 
-    .line 820
     :cond_5
     new-instance v8, Ljava/lang/StringBuilder;
 
@@ -672,7 +626,6 @@
 
     goto/16 :goto_1
 
-    .line 823
     .end local v0    # "data":[B
     .end local v6    # "ret":I
     :cond_6
@@ -698,11 +651,9 @@
 
     goto/16 :goto_1
 
-    .line 825
     :catch_0
     move-exception v1
 
-    .line 827
     .local v1, "e":Ljava/lang/Exception;
     new-instance v8, Ljava/lang/StringBuilder;
 
@@ -724,7 +675,6 @@
 
     goto/16 :goto_1
 
-    .line 758
     :pswitch_data_0
     .packed-switch 0x0
         :pswitch_0
@@ -732,7 +682,6 @@
         :pswitch_2
     .end packed-switch
 
-    .line 780
     :pswitch_data_1
     .packed-switch 0x1
         :pswitch_4
@@ -749,15 +698,12 @@
     .prologue
     const/4 v2, 0x0
 
-    .line 663
     if-nez p1, :cond_1
 
-    .line 681
     :cond_0
     :goto_0
     return v2
 
-    .line 667
     :cond_1
     :try_start_0
     const-string v3, "="
@@ -782,7 +728,6 @@
 
     if-le v3, v4, :cond_0
 
-    .line 670
     const/4 v3, 0x0
 
     const-string v4, "="
@@ -801,7 +746,6 @@
 
     move-result-object v0
 
-    .line 672
     .local v0, "commandName":Ljava/lang/String;
     const-string v3, "AT+REACTIVE"
 
@@ -813,17 +757,14 @@
 
     if-eqz v3, :cond_0
 
-    .line 673
     const/4 v2, 0x1
 
     goto :goto_0
 
-    .line 676
     .end local v0    # "commandName":Ljava/lang/String;
     :catch_0
     move-exception v1
 
-    .line 678
     .local v1, "e":Ljava/lang/Exception;
     invoke-virtual {v1}, Ljava/lang/Exception;->printStackTrace()V
 
@@ -835,12 +776,10 @@
     .param p1, "cmd"    # Ljava/lang/String;
 
     .prologue
-    .line 686
     new-instance v1, Ljava/lang/String;
 
     invoke-direct {v1}, Ljava/lang/String;-><init>()V
 
-    .line 689
     .local v1, "response":Ljava/lang/String;
     iget-object v3, p0, Lcom/android/server/ReactiveService$AtCmdHandlingProcess;->THREAD_TAG:Ljava/lang/String;
 
@@ -852,7 +791,6 @@
 
     if-eqz v3, :cond_0
 
-    .line 690
     new-instance v3, Ljava/lang/StringBuilder;
 
     invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
@@ -873,7 +811,6 @@
 
     move-result-object v1
 
-    .line 692
     :cond_0
     new-instance v3, Ljava/lang/StringBuilder;
 
@@ -893,10 +830,8 @@
 
     move-result-object v1
 
-    .line 694
     if-nez p1, :cond_1
 
-    .line 696
     new-instance v3, Ljava/lang/StringBuilder;
 
     invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
@@ -917,13 +852,11 @@
 
     move-object v2, v1
 
-    .line 716
     .end local v1    # "response":Ljava/lang/String;
     .local v2, "response":Ljava/lang/String;
     :goto_0
     return-object v2
 
-    .line 701
     .end local v2    # "response":Ljava/lang/String;
     .restart local v1    # "response":Ljava/lang/String;
     :cond_1
@@ -962,7 +895,6 @@
 
     move-result-object v1
 
-    .line 711
     const-string v3, "+"
 
     invoke-virtual {p1, v3}, Ljava/lang/String;->indexOf(Ljava/lang/String;)I
@@ -987,7 +919,6 @@
 
     if-eqz v3, :cond_2
 
-    .line 712
     new-instance v3, Ljava/lang/StringBuilder;
 
     invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
@@ -1030,7 +961,6 @@
 
     move-result-object v1
 
-    .line 714
     :cond_2
     new-instance v3, Ljava/lang/StringBuilder;
 
@@ -1052,22 +982,18 @@
 
     move-object v2, v1
 
-    .line 716
     .end local v1    # "response":Ljava/lang/String;
     .restart local v2    # "response":Ljava/lang/String;
     goto :goto_0
 
-    .line 703
     .end local v2    # "response":Ljava/lang/String;
     .restart local v1    # "response":Ljava/lang/String;
     :catch_0
     move-exception v0
 
-    .line 705
     .local v0, "e":Ljava/lang/Exception;
     invoke-virtual {v0}, Ljava/lang/Exception;->printStackTrace()V
 
-    .line 706
     new-instance v3, Ljava/lang/StringBuilder;
 
     invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
@@ -1088,7 +1014,6 @@
 
     move-object v2, v1
 
-    .line 707
     .end local v1    # "response":Ljava/lang/String;
     .restart local v2    # "response":Ljava/lang/String;
     goto/16 :goto_0
@@ -1099,10 +1024,8 @@
     .param p1, "cmd"    # Ljava/lang/String;
 
     .prologue
-    .line 721
     const/4 v2, 0x0
 
-    .line 724
     .local v2, "result":[Ljava/lang/String;
     const/4 v3, 0x0
 
@@ -1115,7 +1038,6 @@
 
     move-result-object v1
 
-    .line 725
     .local v1, "params":Ljava/lang/String;
     const-string v3, ","
 
@@ -1125,20 +1047,16 @@
 
     move-result-object v2
 
-    .line 733
     .end local v1    # "params":Ljava/lang/String;
     :goto_0
     return-object v2
 
-    .line 727
     :catch_0
     move-exception v0
 
-    .line 729
     .local v0, "e":Ljava/lang/Exception;
     const/4 v2, 0x0
 
-    .line 730
     invoke-virtual {v0}, Ljava/lang/Exception;->printStackTrace()V
 
     goto :goto_0
@@ -1154,14 +1072,12 @@
 
     const/4 v11, 0x0
 
-    .line 557
     :cond_0
     :goto_0
     iget-object v8, p0, Lcom/android/server/ReactiveService$AtCmdHandlingProcess;->mLocalSocket:Landroid/net/LocalSocket;
 
     if-nez v8, :cond_1
 
-    .line 558
     new-instance v8, Landroid/net/LocalSocket;
 
     const/4 v9, 0x2
@@ -1170,7 +1086,6 @@
 
     iput-object v8, p0, Lcom/android/server/ReactiveService$AtCmdHandlingProcess;->mLocalSocket:Landroid/net/LocalSocket;
 
-    .line 561
     :cond_1
     :try_start_0
     iget-object v8, p0, Lcom/android/server/ReactiveService$AtCmdHandlingProcess;->mLocalSocket:Landroid/net/LocalSocket;
@@ -1181,7 +1096,6 @@
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_1
 
-    .line 567
     :goto_1
     iget-object v8, p0, Lcom/android/server/ReactiveService$AtCmdHandlingProcess;->mLocalSocket:Landroid/net/LocalSocket;
 
@@ -1191,25 +1105,20 @@
 
     if-eqz v8, :cond_4
 
-    .line 569
     iget-object v8, p0, Lcom/android/server/ReactiveService$AtCmdHandlingProcess;->THREAD_TAG:Ljava/lang/String;
 
     const-string v9, "Connected to daemon."
 
     invoke-static {v8, v9}, Landroid/util/Slog;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 571
     const/4 v0, 0x0
 
-    .line 572
     .local v0, "br":Ljava/io/BufferedReader;
     const/4 v2, 0x0
 
-    .line 573
     .local v2, "bw":Ljava/io/BufferedWriter;
     const-string v7, ""
 
-    .line 576
     .local v7, "strIncome":Ljava/lang/String;
     :try_start_1
     new-instance v1, Ljava/io/BufferedReader;
@@ -1228,7 +1137,6 @@
     :try_end_1
     .catch Ljava/lang/Exception; {:try_start_1 .. :try_end_1} :catch_2
 
-    .line 577
     .end local v0    # "br":Ljava/io/BufferedReader;
     .local v1, "br":Ljava/io/BufferedReader;
     :try_start_2
@@ -1248,7 +1156,6 @@
     :try_end_2
     .catch Ljava/lang/Exception; {:try_start_2 .. :try_end_2} :catch_5
 
-    .line 578
     .end local v2    # "bw":Ljava/io/BufferedWriter;
     .local v3, "bw":Ljava/io/BufferedWriter;
     const/4 v8, 0x1
@@ -1264,7 +1171,6 @@
     .restart local v2    # "bw":Ljava/io/BufferedWriter;
     move-object v0, v1
 
-    .line 585
     .end local v1    # "br":Ljava/io/BufferedReader;
     .restart local v0    # "br":Ljava/io/BufferedReader;
     :cond_2
@@ -1273,42 +1179,34 @@
 
     if-eqz v8, :cond_0
 
-    .line 588
     :try_start_4
     invoke-virtual {v0}, Ljava/io/BufferedReader;->readLine()Ljava/lang/String;
 
     move-result-object v7
 
-    .line 590
     if-eqz v7, :cond_3
 
-    .line 593
     invoke-direct {p0, v7}, Lcom/android/server/ReactiveService$AtCmdHandlingProcess;->isValidCommand(Ljava/lang/String;)Z
 
     move-result v8
 
     if-eqz v8, :cond_2
 
-    .line 595
     sget-object v8, Ljava/util/Locale;->US:Ljava/util/Locale;
 
     invoke-virtual {v7, v8}, Ljava/lang/String;->toUpperCase(Ljava/util/Locale;)Ljava/lang/String;
 
     move-result-object v7
 
-    .line 596
     invoke-direct {p0, v7}, Lcom/android/server/ReactiveService$AtCmdHandlingProcess;->makeResponse(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v6
 
-    .line 598
     .local v6, "response":Ljava/lang/String;
     invoke-virtual {v2, v6}, Ljava/io/BufferedWriter;->write(Ljava/lang/String;)V
 
-    .line 599
     invoke-virtual {v2}, Ljava/io/BufferedWriter;->flush()V
 
-    .line 601
     iget-object v8, p0, Lcom/android/server/ReactiveService$AtCmdHandlingProcess;->THREAD_TAG:Ljava/lang/String;
 
     new-instance v9, Ljava/lang/StringBuilder;
@@ -1345,12 +1243,10 @@
 
     goto :goto_2
 
-    .line 617
     .end local v6    # "response":Ljava/lang/String;
     :catch_0
     move-exception v4
 
-    .line 618
     .local v4, "e":Ljava/lang/Exception;
     iget-object v8, p0, Lcom/android/server/ReactiveService$AtCmdHandlingProcess;->THREAD_TAG:Ljava/lang/String;
 
@@ -1374,26 +1270,21 @@
 
     invoke-static {v8, v9}, Landroid/util/Slog;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 619
     iput-boolean v11, p0, Lcom/android/server/ReactiveService$AtCmdHandlingProcess;->mGettedBuffer:Z
 
-    .line 622
     :try_start_5
     iget-object v8, p0, Lcom/android/server/ReactiveService$AtCmdHandlingProcess;->mLocalSocket:Landroid/net/LocalSocket;
 
     invoke-virtual {v8}, Landroid/net/LocalSocket;->shutdownInput()V
 
-    .line 623
     iget-object v8, p0, Lcom/android/server/ReactiveService$AtCmdHandlingProcess;->mLocalSocket:Landroid/net/LocalSocket;
 
     invoke-virtual {v8}, Landroid/net/LocalSocket;->shutdownOutput()V
 
-    .line 624
     iget-object v8, p0, Lcom/android/server/ReactiveService$AtCmdHandlingProcess;->mLocalSocket:Landroid/net/LocalSocket;
 
     invoke-virtual {v8}, Landroid/net/LocalSocket;->close()V
 
-    .line 625
     iget-object v8, p0, Lcom/android/server/ReactiveService$AtCmdHandlingProcess;->THREAD_TAG:Ljava/lang/String;
 
     const-string v9, "Closed socket."
@@ -1402,13 +1293,11 @@
     :try_end_5
     .catch Ljava/io/IOException; {:try_start_5 .. :try_end_5} :catch_3
 
-    .line 632
     :goto_3
     iput-object v12, p0, Lcom/android/server/ReactiveService$AtCmdHandlingProcess;->mLocalSocket:Landroid/net/LocalSocket;
 
     goto :goto_2
 
-    .line 563
     .end local v0    # "br":Ljava/io/BufferedReader;
     .end local v2    # "bw":Ljava/io/BufferedWriter;
     .end local v4    # "e":Ljava/lang/Exception;
@@ -1416,7 +1305,6 @@
     :catch_1
     move-exception v4
 
-    .line 564
     .restart local v4    # "e":Ljava/lang/Exception;
     iget-object v8, p0, Lcom/android/server/ReactiveService$AtCmdHandlingProcess;->THREAD_TAG:Ljava/lang/String;
 
@@ -1442,7 +1330,6 @@
 
     goto/16 :goto_1
 
-    .line 580
     .end local v4    # "e":Ljava/lang/Exception;
     .restart local v0    # "br":Ljava/io/BufferedReader;
     .restart local v2    # "bw":Ljava/io/BufferedWriter;
@@ -1450,7 +1337,6 @@
     :catch_2
     move-exception v4
 
-    .line 581
     .restart local v4    # "e":Ljava/lang/Exception;
     :goto_4
     iget-object v8, p0, Lcom/android/server/ReactiveService$AtCmdHandlingProcess;->THREAD_TAG:Ljava/lang/String;
@@ -1475,12 +1361,10 @@
 
     invoke-static {v8, v9}, Landroid/util/Slog;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 582
     iput-boolean v11, p0, Lcom/android/server/ReactiveService$AtCmdHandlingProcess;->mGettedBuffer:Z
 
     goto/16 :goto_2
 
-    .line 606
     .end local v4    # "e":Ljava/lang/Exception;
     :cond_3
     :try_start_6
@@ -1490,27 +1374,22 @@
 
     invoke-static {v8, v9}, Landroid/util/Slog;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 607
     const/4 v8, 0x0
 
     iput-boolean v8, p0, Lcom/android/server/ReactiveService$AtCmdHandlingProcess;->mGettedBuffer:Z
 
-    .line 609
     iget-object v8, p0, Lcom/android/server/ReactiveService$AtCmdHandlingProcess;->mLocalSocket:Landroid/net/LocalSocket;
 
     invoke-virtual {v8}, Landroid/net/LocalSocket;->shutdownInput()V
 
-    .line 610
     iget-object v8, p0, Lcom/android/server/ReactiveService$AtCmdHandlingProcess;->mLocalSocket:Landroid/net/LocalSocket;
 
     invoke-virtual {v8}, Landroid/net/LocalSocket;->shutdownOutput()V
 
-    .line 611
     iget-object v8, p0, Lcom/android/server/ReactiveService$AtCmdHandlingProcess;->mLocalSocket:Landroid/net/LocalSocket;
 
     invoke-virtual {v8}, Landroid/net/LocalSocket;->close()V
 
-    .line 613
     const/4 v8, 0x0
 
     iput-object v8, p0, Lcom/android/server/ReactiveService$AtCmdHandlingProcess;->mLocalSocket:Landroid/net/LocalSocket;
@@ -1519,18 +1398,15 @@
 
     goto/16 :goto_0
 
-    .line 627
     .restart local v4    # "e":Ljava/lang/Exception;
     :catch_3
     move-exception v5
 
-    .line 629
     .local v5, "ioe":Ljava/io/IOException;
     invoke-virtual {v5}, Ljava/io/IOException;->printStackTrace()V
 
     goto :goto_3
 
-    .line 639
     .end local v0    # "br":Ljava/io/BufferedReader;
     .end local v2    # "bw":Ljava/io/BufferedWriter;
     .end local v4    # "e":Ljava/lang/Exception;
@@ -1542,7 +1418,6 @@
     :try_start_7
     invoke-static {v8, v9}, Ljava/lang/Thread;->sleep(J)V
 
-    .line 642
     iget-object v8, p0, Lcom/android/server/ReactiveService$AtCmdHandlingProcess;->THREAD_TAG:Ljava/lang/String;
 
     const-string v9, "ReactiveServiceAt"
@@ -1553,14 +1428,12 @@
 
     if-eqz v8, :cond_0
 
-    .line 644
     iget-object v8, p0, Lcom/android/server/ReactiveService$AtCmdHandlingProcess;->THREAD_TAG:Ljava/lang/String;
 
     const-string v9, "Wait until JIG is inserted."
 
     invoke-static {v8, v9}, Landroid/util/Slog;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 646
     iget-object v8, p0, Lcom/android/server/ReactiveService$AtCmdHandlingProcess;->this$0:Lcom/android/server/ReactiveService;
 
     # getter for: Lcom/android/server/ReactiveService;->mThreadUart:Ljava/lang/Thread;
@@ -1572,7 +1445,6 @@
     :try_end_7
     .catch Ljava/lang/Exception; {:try_start_7 .. :try_end_7} :catch_4
 
-    .line 647
     :goto_5
     :try_start_8
     iget-object v8, p0, Lcom/android/server/ReactiveService$AtCmdHandlingProcess;->this$0:Lcom/android/server/ReactiveService;
@@ -1584,7 +1456,6 @@
 
     if-eqz v8, :cond_5
 
-    .line 648
     iget-object v8, p0, Lcom/android/server/ReactiveService$AtCmdHandlingProcess;->this$0:Lcom/android/server/ReactiveService;
 
     # getter for: Lcom/android/server/ReactiveService;->mThreadUart:Ljava/lang/Thread;
@@ -1596,7 +1467,6 @@
 
     goto :goto_5
 
-    .line 649
     :catchall_0
     move-exception v8
 
@@ -1609,17 +1479,14 @@
     :try_end_9
     .catch Ljava/lang/Exception; {:try_start_9 .. :try_end_9} :catch_4
 
-    .line 652
     :catch_4
     move-exception v4
 
-    .line 653
     .restart local v4    # "e":Ljava/lang/Exception;
     invoke-virtual {v4}, Ljava/lang/Exception;->printStackTrace()V
 
     goto/16 :goto_0
 
-    .line 649
     .end local v4    # "e":Ljava/lang/Exception;
     :cond_5
     :try_start_a
@@ -1629,7 +1496,6 @@
 
     goto/16 :goto_0
 
-    .line 580
     .restart local v1    # "br":Ljava/io/BufferedReader;
     .restart local v2    # "bw":Ljava/io/BufferedWriter;
     .restart local v7    # "strIncome":Ljava/lang/String;
@@ -1665,10 +1531,8 @@
     .param p1, "connectTarget"    # I
 
     .prologue
-    .line 532
     packed-switch p1, :pswitch_data_0
 
-    .line 547
     const-string v0, "ReactiveService"
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -1697,11 +1561,9 @@
 
     invoke-static {v0, v1}, Landroid/util/Slog;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 550
     :goto_0
     return-void
 
-    .line 535
     :pswitch_0
     new-instance v0, Landroid/net/LocalSocketAddress;
 
@@ -1713,14 +1575,12 @@
 
     iput-object v0, p0, Lcom/android/server/ReactiveService$AtCmdHandlingProcess;->mLocalSocketAddress:Landroid/net/LocalSocketAddress;
 
-    .line 537
     const-string v0, "ReactiveServiceAt"
 
     iput-object v0, p0, Lcom/android/server/ReactiveService$AtCmdHandlingProcess;->THREAD_TAG:Ljava/lang/String;
 
     goto :goto_0
 
-    .line 541
     :pswitch_1
     new-instance v0, Landroid/net/LocalSocketAddress;
 
@@ -1732,14 +1592,12 @@
 
     iput-object v0, p0, Lcom/android/server/ReactiveService$AtCmdHandlingProcess;->mLocalSocketAddress:Landroid/net/LocalSocketAddress;
 
-    .line 543
     const-string v0, "ReactiveServiceData"
 
     iput-object v0, p0, Lcom/android/server/ReactiveService$AtCmdHandlingProcess;->THREAD_TAG:Ljava/lang/String;
 
     goto :goto_0
 
-    .line 532
     :pswitch_data_0
     .packed-switch 0x0
         :pswitch_0

@@ -38,7 +38,6 @@
     .locals 1
 
     .prologue
-    .line 30
     const-string v0, "SamsungAudioManager"
 
     sput-object v0, Landroid/media/SamsungAudioManager;->TAG:Ljava/lang/String;
@@ -51,13 +50,10 @@
     .param p1, "context"    # Landroid/content/Context;
 
     .prologue
-    .line 32
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 33
     iput-object p1, p0, Landroid/media/SamsungAudioManager;->mContext:Landroid/content/Context;
 
-    .line 34
     const-string v0, "audio"
 
     invoke-virtual {p1, v0}, Landroid/content/Context;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
@@ -68,7 +64,6 @@
 
     iput-object v0, p0, Landroid/media/SamsungAudioManager;->mAudioManager:Landroid/media/AudioManager;
 
-    .line 35
     return-void
 .end method
 
@@ -81,7 +76,6 @@
     .prologue
     const/4 v1, 0x0
 
-    .line 76
     if-eqz p1, :cond_0
 
     const-string v2, ""
@@ -92,12 +86,10 @@
 
     if-eqz v2, :cond_1
 
-    .line 82
     :cond_0
     :goto_0
     return v1
 
-    .line 78
     :cond_1
     new-instance v2, Ljava/lang/StringBuilder;
 
@@ -117,9 +109,8 @@
 
     move-result-object v0
 
-    .line 79
     .local v0, "strIsUsingAudio":Ljava/lang/String;
-    const-string/jumbo v2, "true"
+    const-string v2, "true"
 
     invoke-static {v0}, Landroid/media/AudioSystem;->getParameters(Ljava/lang/String;)Ljava/lang/String;
 
@@ -131,7 +122,6 @@
 
     if-eqz v2, :cond_0
 
-    .line 80
     const/4 v1, 0x1
 
     goto :goto_0
@@ -146,7 +136,6 @@
 
     const/4 v1, 0x0
 
-    .line 53
     const-string v3, "persist.audio.globaleffect"
 
     invoke-static {v3, v1}, Landroid/os/SystemProperties;->getInt(Ljava/lang/String;I)I
@@ -157,12 +146,10 @@
 
     move v0, v2
 
-    .line 54
     .local v0, "GLOBAL_EFFECT_ENABLED":Z
     :goto_0
     if-nez v0, :cond_1
 
-    .line 66
     :goto_1
     return v1
 
@@ -170,54 +157,44 @@
     :cond_0
     move v0, v1
 
-    .line 53
     goto :goto_0
 
-    .line 57
     .restart local v0    # "GLOBAL_EFFECT_ENABLED":Z
     :cond_1
     if-nez p1, :cond_3
 
-    .line 58
     const-string v1, "audioEffectParam;setMySpaceEffectType=1"
 
     invoke-static {v1}, Landroid/media/AudioSystem;->setParameters(Ljava/lang/String;)I
 
-    .line 66
     :cond_2
     :goto_2
     const/16 v1, 0x3e8
 
     goto :goto_1
 
-    .line 59
     :cond_3
     if-ne p1, v2, :cond_4
 
-    .line 60
     const-string v1, "audioEffectParam;setMySpaceEffectType=1"
 
     invoke-static {v1}, Landroid/media/AudioSystem;->setParameters(Ljava/lang/String;)I
 
-    .line 61
     const-string v1, "audioEffectParam;setMySpaceEffectType=0"
 
     invoke-static {v1}, Landroid/media/AudioSystem;->setParameters(Ljava/lang/String;)I
 
     goto :goto_2
 
-    .line 62
     :cond_4
     const/4 v1, 0x2
 
     if-ne p1, v1, :cond_2
 
-    .line 63
     const-string v1, "audioEffectParam;setMySpaceEffectType=0"
 
     invoke-static {v1}, Landroid/media/AudioSystem;->setParameters(Ljava/lang/String;)I
 
-    .line 64
     const-string v1, "audioEffectParam;setMySpaceEffectType=2"
 
     invoke-static {v1}, Landroid/media/AudioSystem;->setParameters(Ljava/lang/String;)I

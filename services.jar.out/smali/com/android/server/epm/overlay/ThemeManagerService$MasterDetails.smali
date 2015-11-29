@@ -36,24 +36,17 @@
     .param p5, "version"    # Ljava/lang/String;
 
     .prologue
-    .line 928
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 929
     iput-object p1, p0, Lcom/android/server/epm/overlay/ThemeManagerService$MasterDetails;->mTitle:Ljava/lang/String;
 
-    .line 930
     iput-object p2, p0, Lcom/android/server/epm/overlay/ThemeManagerService$MasterDetails;->mDesc:Ljava/lang/String;
 
-    .line 931
     iput-object p3, p0, Lcom/android/server/epm/overlay/ThemeManagerService$MasterDetails;->mCategory:Ljava/lang/String;
 
-    .line 932
     iput-boolean p4, p0, Lcom/android/server/epm/overlay/ThemeManagerService$MasterDetails;->mStatus:Z
 
-    .line 933
     iput-object p5, p0, Lcom/android/server/epm/overlay/ThemeManagerService$MasterDetails;->mVersion:Ljava/lang/String;
 
-    .line 934
     return-void
 .end method

@@ -20,16 +20,12 @@
     .param p2, "service"    # Landroid/net/IEthernetManager;
 
     .prologue
-    .line 43
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 44
     iput-object p1, p0, Landroid/net/EthernetManager;->mContext:Landroid/content/Context;
 
-    .line 45
     iput-object p2, p0, Landroid/net/EthernetManager;->mService:Landroid/net/IEthernetManager;
 
-    .line 46
     return-void
 .end method
 
@@ -39,21 +35,17 @@
     .locals 2
 
     .prologue
-    .line 53
     iget-object v1, p0, Landroid/net/EthernetManager;->mService:Landroid/net/IEthernetManager;
 
     if-nez v1, :cond_0
 
-    .line 54
     new-instance v1, Landroid/net/IpConfiguration;
 
     invoke-direct {v1}, Landroid/net/IpConfiguration;-><init>()V
 
-    .line 59
     :goto_0
     return-object v1
 
-    .line 57
     :cond_0
     :try_start_0
     iget-object v1, p0, Landroid/net/EthernetManager;->mService:Landroid/net/IEthernetManager;
@@ -66,11 +58,9 @@
 
     goto :goto_0
 
-    .line 58
     :catch_0
     move-exception v0
 
-    .line 59
     .local v0, "e":Landroid/os/RemoteException;
     new-instance v1, Landroid/net/IpConfiguration;
 
@@ -84,16 +74,13 @@
     .param p1, "config"    # Landroid/net/IpConfiguration;
 
     .prologue
-    .line 67
     iget-object v0, p0, Landroid/net/EthernetManager;->mService:Landroid/net/IEthernetManager;
 
     if-nez v0, :cond_0
 
-    .line 74
     :goto_0
     return-void
 
-    .line 71
     :cond_0
     :try_start_0
     iget-object v0, p0, Landroid/net/EthernetManager;->mService:Landroid/net/IEthernetManager;
@@ -104,7 +91,6 @@
 
     goto :goto_0
 
-    .line 72
     :catch_0
     move-exception v0
 

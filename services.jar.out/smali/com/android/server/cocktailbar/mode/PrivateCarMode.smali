@@ -14,7 +14,6 @@
     .locals 1
 
     .prologue
-    .line 10
     const-class v0, Lcom/android/server/cocktailbar/mode/PrivateCarMode;
 
     invoke-virtual {v0}, Ljava/lang/Class;->getSimpleName()Ljava/lang/String;
@@ -34,24 +33,19 @@
     .param p4, "listener"    # Lcom/android/server/cocktailbar/mode/CocktailBarMode$OnCocktailBarModeListener;
 
     .prologue
-    .line 15
     invoke-direct {p0, p1, p2, p3, p4}, Lcom/android/server/cocktailbar/mode/AbsPrivateMode;-><init>(Landroid/content/Context;ILandroid/content/BroadcastReceiver;Lcom/android/server/cocktailbar/mode/CocktailBarMode$OnCocktailBarModeListener;)V
 
-    .line 16
     new-instance v0, Landroid/content/IntentFilter;
 
     invoke-direct {v0}, Landroid/content/IntentFilter;-><init>()V
 
-    .line 17
     .local v0, "filter":Landroid/content/IntentFilter;
     const-string v1, "com.sec.android.automotive.drivelink.carmodechanged"
 
     invoke-virtual {v0, v1}, Landroid/content/IntentFilter;->addAction(Ljava/lang/String;)V
 
-    .line 18
     invoke-virtual {p0, p3, v0}, Lcom/android/server/cocktailbar/mode/PrivateCarMode;->registerBroadcastReceiver(Landroid/content/BroadcastReceiver;Landroid/content/IntentFilter;)V
 
-    .line 19
     return-void
 .end method
 
@@ -61,7 +55,6 @@
     .locals 1
 
     .prologue
-    .line 52
     const/4 v0, 0x2
 
     return v0
@@ -71,7 +64,6 @@
     .locals 1
 
     .prologue
-    .line 37
     const/4 v0, 0x1
 
     return v0
@@ -81,7 +73,6 @@
     .locals 1
 
     .prologue
-    .line 42
     const-string v0, "carmode"
 
     return-object v0
@@ -91,7 +82,6 @@
     .locals 1
 
     .prologue
-    .line 47
     const/4 v0, 0x0
 
     return v0
@@ -104,12 +94,10 @@
     .prologue
     const/4 v2, 0x0
 
-    .line 23
     invoke-virtual {p1}, Landroid/content/Intent;->getAction()Ljava/lang/String;
 
     move-result-object v0
 
-    .line 24
     .local v0, "action":Ljava/lang/String;
     const-string v3, "com.sec.android.automotive.drivelink.carmodechanged"
 
@@ -119,29 +107,24 @@
 
     if-eqz v3, :cond_0
 
-    .line 25
     const-string v3, "car_mode_state"
 
     invoke-virtual {p1, v3, v2}, Landroid/content/Intent;->getIntExtra(Ljava/lang/String;I)I
 
     move-result v1
 
-    .line 26
     .local v1, "state":I
     const/4 v2, 0x1
 
     if-ne v1, v2, :cond_1
 
-    .line 27
     const/4 v2, 0x2
 
-    .line 32
     .end local v1    # "state":I
     :cond_0
     :goto_0
     return v2
 
-    .line 29
     .restart local v1    # "state":I
     :cond_1
     const/4 v2, 0x3

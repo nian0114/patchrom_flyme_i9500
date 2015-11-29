@@ -19,12 +19,10 @@
     .locals 1
 
     .prologue
-    .line 741
     const/16 v0, 0x11
 
     invoke-direct {p0, v0}, Landroid/graphics/ImageFilter;-><init>(I)V
 
-    .line 742
     return-void
 .end method
 
@@ -33,7 +31,6 @@
     .param p1, "x0"    # Landroid/graphics/ImageFilter$1;
 
     .prologue
-    .line 738
     invoke-direct {p0}, Landroid/graphics/ImageFilter$DesaturationFilter;-><init>()V
 
     return-void
@@ -50,7 +47,6 @@
     .end annotation
 
     .prologue
-    .line 738
     invoke-super {p0}, Landroid/graphics/ImageFilter;->clone()Landroid/graphics/ImageFilter;
 
     move-result-object v0
@@ -63,7 +59,6 @@
     .param p1, "saturation"    # F
 
     .prologue
-    .line 752
     const/4 v0, 0x0
 
     const/4 v1, 0x0
@@ -80,6 +75,5 @@
 
     invoke-super {p0, v0, v1}, Landroid/graphics/ImageFilter;->setValue(IF)V
 
-    .line 753
     return-void
 .end method

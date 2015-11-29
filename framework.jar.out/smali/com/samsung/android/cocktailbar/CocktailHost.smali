@@ -66,7 +66,6 @@
     .locals 1
 
     .prologue
-    .line 70
     new-instance v0, Ljava/lang/Object;
 
     invoke-direct {v0}, Ljava/lang/Object;-><init>()V
@@ -82,14 +81,12 @@
     .param p2, "callbackListener"    # Lcom/samsung/android/cocktailbar/CocktailHost$ICallbackListener;
 
     .prologue
-    .line 239
     invoke-virtual {p1}, Landroid/content/Context;->getMainLooper()Landroid/os/Looper;
 
     move-result-object v0
 
     invoke-direct {p0, p1, p2, v0}, Lcom/samsung/android/cocktailbar/CocktailHost;-><init>(Landroid/content/Context;Lcom/samsung/android/cocktailbar/CocktailHost$ICallbackListener;Landroid/os/Looper;)V
 
-    .line 240
     return-void
 .end method
 
@@ -100,33 +97,26 @@
     .param p3, "looper"    # Landroid/os/Looper;
 
     .prologue
-    .line 242
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 80
     new-instance v0, Lcom/samsung/android/cocktailbar/CocktailHost$Callbacks;
 
     invoke-direct {v0, p0}, Lcom/samsung/android/cocktailbar/CocktailHost$Callbacks;-><init>(Lcom/samsung/android/cocktailbar/CocktailHost;)V
 
     iput-object v0, p0, Lcom/samsung/android/cocktailbar/CocktailHost;->mCallbacks:Lcom/samsung/android/cocktailbar/CocktailHost$Callbacks;
 
-    .line 243
     iput-object p1, p0, Lcom/samsung/android/cocktailbar/CocktailHost;->mContext:Landroid/content/Context;
 
-    .line 244
     iput-object p2, p0, Lcom/samsung/android/cocktailbar/CocktailHost;->mCallbackListener:Lcom/samsung/android/cocktailbar/CocktailHost$ICallbackListener;
 
-    .line 245
     new-instance v0, Lcom/samsung/android/cocktailbar/CocktailHost$UpdateHandler;
 
     invoke-direct {v0, p0, p3}, Lcom/samsung/android/cocktailbar/CocktailHost$UpdateHandler;-><init>(Lcom/samsung/android/cocktailbar/CocktailHost;Landroid/os/Looper;)V
 
     iput-object v0, p0, Lcom/samsung/android/cocktailbar/CocktailHost;->mHandler:Landroid/os/Handler;
 
-    .line 246
     invoke-direct {p0}, Lcom/samsung/android/cocktailbar/CocktailHost;->bindService()V
 
-    .line 247
     return-void
 .end method
 
@@ -138,7 +128,6 @@
     .param p3, "x3"    # I
 
     .prologue
-    .line 39
     invoke-direct {p0, p1, p2, p3}, Lcom/samsung/android/cocktailbar/CocktailHost;->updateCocktail(ILcom/samsung/android/cocktailbar/Cocktail;I)V
 
     return-void
@@ -152,7 +141,6 @@
     .param p3, "x3"    # I
 
     .prologue
-    .line 39
     invoke-direct {p0, p1, p2, p3}, Lcom/samsung/android/cocktailbar/CocktailHost;->partiallyUpdateCocktail(ILandroid/widget/RemoteViews;I)V
 
     return-void
@@ -166,7 +154,6 @@
     .param p3, "x3"    # I
 
     .prologue
-    .line 39
     invoke-direct {p0, p1, p2, p3}, Lcom/samsung/android/cocktailbar/CocktailHost;->notifyWakeUpState(III)V
 
     return-void
@@ -179,7 +166,6 @@
     .param p2, "x2"    # I
 
     .prologue
-    .line 39
     invoke-direct {p0, p1, p2}, Lcom/samsung/android/cocktailbar/CocktailHost;->setMode(II)V
 
     return-void
@@ -192,7 +178,6 @@
     .param p2, "x2"    # I
 
     .prologue
-    .line 39
     invoke-direct {p0, p1, p2}, Lcom/samsung/android/cocktailbar/CocktailHost;->setDisableTickerView(II)V
 
     return-void
@@ -205,7 +190,6 @@
     .param p2, "x2"    # Lcom/samsung/android/cocktailbar/ICocktailBarShowCallback;
 
     .prologue
-    .line 39
     invoke-direct {p0, p1, p2}, Lcom/samsung/android/cocktailbar/CocktailHost;->notifyScreenTurnedOn(ILcom/samsung/android/cocktailbar/ICocktailBarShowCallback;)V
 
     return-void
@@ -218,7 +202,6 @@
     .param p2, "x2"    # I
 
     .prologue
-    .line 39
     invoke-direct {p0, p1, p2}, Lcom/samsung/android/cocktailbar/CocktailHost;->removeCocktail(II)V
 
     return-void
@@ -231,7 +214,6 @@
     .param p2, "x2"    # I
 
     .prologue
-    .line 39
     invoke-direct {p0, p1, p2}, Lcom/samsung/android/cocktailbar/CocktailHost;->showCocktail(II)V
 
     return-void
@@ -245,7 +227,6 @@
     .param p3, "x3"    # I
 
     .prologue
-    .line 39
     invoke-direct {p0, p1, p2, p3}, Lcom/samsung/android/cocktailbar/CocktailHost;->closeContextualCocktail(III)V
 
     return-void
@@ -259,7 +240,6 @@
     .param p3, "x3"    # I
 
     .prologue
-    .line 39
     invoke-direct {p0, p1, p2, p3}, Lcom/samsung/android/cocktailbar/CocktailHost;->viewDataChanged(III)V
 
     return-void
@@ -271,7 +251,6 @@
     .param p1, "x1"    # I
 
     .prologue
-    .line 39
     invoke-direct {p0, p1}, Lcom/samsung/android/cocktailbar/CocktailHost;->updateToolLauncher(I)V
 
     return-void
@@ -284,7 +263,6 @@
     .param p2, "x2"    # I
 
     .prologue
-    .line 39
     invoke-direct {p0, p1, p2}, Lcom/samsung/android/cocktailbar/CocktailHost;->notifyKeyguardState(II)V
 
     return-void
@@ -296,7 +274,6 @@
     .param p1, "x1"    # I
 
     .prologue
-    .line 39
     invoke-direct {p0, p1}, Lcom/samsung/android/cocktailbar/CocktailHost;->switchDefaultCocktail(I)V
 
     return-void
@@ -309,7 +286,6 @@
     .param p2, "x2"    # Landroid/os/Bundle;
 
     .prologue
-    .line 39
     invoke-direct {p0, p1, p2}, Lcom/samsung/android/cocktailbar/CocktailHost;->sendExtraDataToCocktailBar(ILandroid/os/Bundle;)V
 
     return-void
@@ -319,25 +295,21 @@
     .locals 5
 
     .prologue
-    .line 250
     sget-object v2, Lcom/samsung/android/cocktailbar/CocktailHost;->sServiceLock:Ljava/lang/Object;
 
     monitor-enter v2
 
-    .line 251
     :try_start_0
     sget-object v1, Lcom/samsung/android/cocktailbar/CocktailHost;->sService:Lcom/samsung/android/cocktailbar/ICocktailBarService;
 
     if-nez v1, :cond_0
 
-    .line 252
     const-string v1, "CocktailBarService"
 
     invoke-static {v1}, Landroid/os/ServiceManager;->getService(Ljava/lang/String;)Landroid/os/IBinder;
 
     move-result-object v0
 
-    .line 253
     .local v0, "b":Landroid/os/IBinder;
     invoke-static {v0}, Lcom/samsung/android/cocktailbar/ICocktailBarService$Stub;->asInterface(Landroid/os/IBinder;)Lcom/samsung/android/cocktailbar/ICocktailBarService;
 
@@ -347,7 +319,6 @@
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 256
     .end local v0    # "b":Landroid/os/IBinder;
     :cond_0
     :try_start_1
@@ -362,15 +333,12 @@
     .catch Landroid/os/RemoteException; {:try_start_1 .. :try_end_1} :catch_0
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
-    .line 260
     :goto_0
     :try_start_2
     monitor-exit v2
 
-    .line 261
     return-void
 
-    .line 260
     :catchall_0
     move-exception v1
 
@@ -380,7 +348,6 @@
 
     throw v1
 
-    .line 257
     :catch_0
     move-exception v1
 
@@ -394,12 +361,10 @@
     .param p3, "userId"    # I
 
     .prologue
-    .line 299
     iget-object v0, p0, Lcom/samsung/android/cocktailbar/CocktailHost;->mCallbackListener:Lcom/samsung/android/cocktailbar/CocktailHost$ICallbackListener;
 
     invoke-interface {v0, p1, p2, p3}, Lcom/samsung/android/cocktailbar/CocktailHost$ICallbackListener;->onCloseContextualCocktail(III)V
 
-    .line 300
     return-void
 .end method
 
@@ -411,7 +376,6 @@
     .prologue
     const/4 v0, 0x1
 
-    .line 311
     iget-object v1, p0, Lcom/samsung/android/cocktailbar/CocktailHost;->mCallbackListener:Lcom/samsung/android/cocktailbar/CocktailHost$ICallbackListener;
 
     if-ne p1, v0, :cond_0
@@ -419,10 +383,8 @@
     :goto_0
     invoke-interface {v1, v0, p2}, Lcom/samsung/android/cocktailbar/CocktailHost$ICallbackListener;->onNotifyKeyguardState(ZI)V
 
-    .line 312
     return-void
 
-    .line 311
     :cond_0
     const/4 v0, 0x0
 
@@ -435,12 +397,10 @@
     .param p2, "callback"    # Lcom/samsung/android/cocktailbar/ICocktailBarShowCallback;
 
     .prologue
-    .line 319
     iget-object v0, p0, Lcom/samsung/android/cocktailbar/CocktailHost;->mCallbackListener:Lcom/samsung/android/cocktailbar/CocktailHost$ICallbackListener;
 
     invoke-interface {v0, p2, p1}, Lcom/samsung/android/cocktailbar/CocktailHost$ICallbackListener;->onScreenTurnedOn(Lcom/samsung/android/cocktailbar/ICocktailBarShowCallback;I)V
 
-    .line 320
     return-void
 .end method
 
@@ -453,7 +413,6 @@
     .prologue
     const/4 v0, 0x1
 
-    .line 315
     iget-object v1, p0, Lcom/samsung/android/cocktailbar/CocktailHost;->mCallbackListener:Lcom/samsung/android/cocktailbar/CocktailHost$ICallbackListener;
 
     if-ne p1, v0, :cond_0
@@ -461,10 +420,8 @@
     :goto_0
     invoke-interface {v1, v0, p2, p3}, Lcom/samsung/android/cocktailbar/CocktailHost$ICallbackListener;->onNotifyWakeUpModeState(ZII)V
 
-    .line 316
     return-void
 
-    .line 315
     :cond_0
     const/4 v0, 0x0
 
@@ -478,12 +435,10 @@
     .param p3, "userId"    # I
 
     .prologue
-    .line 287
     iget-object v0, p0, Lcom/samsung/android/cocktailbar/CocktailHost;->mCallbackListener:Lcom/samsung/android/cocktailbar/CocktailHost$ICallbackListener;
 
     invoke-interface {v0, p1, p2, p3}, Lcom/samsung/android/cocktailbar/CocktailHost$ICallbackListener;->onPartiallyUpdateCocktail(ILandroid/widget/RemoteViews;I)V
 
-    .line 288
     return-void
 .end method
 
@@ -493,12 +448,10 @@
     .param p2, "userId"    # I
 
     .prologue
-    .line 291
     iget-object v0, p0, Lcom/samsung/android/cocktailbar/CocktailHost;->mCallbackListener:Lcom/samsung/android/cocktailbar/CocktailHost$ICallbackListener;
 
     invoke-interface {v0, p1, p2}, Lcom/samsung/android/cocktailbar/CocktailHost$ICallbackListener;->onRemoveCocktail(II)V
 
-    .line 292
     return-void
 .end method
 
@@ -508,12 +461,10 @@
     .param p2, "extraData"    # Landroid/os/Bundle;
 
     .prologue
-    .line 327
     iget-object v0, p0, Lcom/samsung/android/cocktailbar/CocktailHost;->mCallbackListener:Lcom/samsung/android/cocktailbar/CocktailHost$ICallbackListener;
 
     invoke-interface {v0, p2, p1}, Lcom/samsung/android/cocktailbar/CocktailHost$ICallbackListener;->onSendExtraDataToCocktailBar(Landroid/os/Bundle;I)V
 
-    .line 328
     return-void
 .end method
 
@@ -523,12 +474,10 @@
     .param p2, "userId"    # I
 
     .prologue
-    .line 335
     iget-object v0, p0, Lcom/samsung/android/cocktailbar/CocktailHost;->mCallbackListener:Lcom/samsung/android/cocktailbar/CocktailHost$ICallbackListener;
 
     invoke-interface {v0, p1, p2}, Lcom/samsung/android/cocktailbar/CocktailHost$ICallbackListener;->onSetDisableTickerView(II)V
 
-    .line 336
     return-void
 .end method
 
@@ -538,12 +487,10 @@
     .param p2, "userId"    # I
 
     .prologue
-    .line 331
     iget-object v0, p0, Lcom/samsung/android/cocktailbar/CocktailHost;->mCallbackListener:Lcom/samsung/android/cocktailbar/CocktailHost$ICallbackListener;
 
     invoke-interface {v0, p1, p2}, Lcom/samsung/android/cocktailbar/CocktailHost$ICallbackListener;->onSetMode(II)V
 
-    .line 332
     return-void
 .end method
 
@@ -553,12 +500,10 @@
     .param p2, "userId"    # I
 
     .prologue
-    .line 295
     iget-object v0, p0, Lcom/samsung/android/cocktailbar/CocktailHost;->mCallbackListener:Lcom/samsung/android/cocktailbar/CocktailHost$ICallbackListener;
 
     invoke-interface {v0, p1, p2}, Lcom/samsung/android/cocktailbar/CocktailHost$ICallbackListener;->onShowCocktail(II)V
 
-    .line 296
     return-void
 .end method
 
@@ -567,12 +512,10 @@
     .param p1, "userId"    # I
 
     .prologue
-    .line 323
     iget-object v0, p0, Lcom/samsung/android/cocktailbar/CocktailHost;->mCallbackListener:Lcom/samsung/android/cocktailbar/CocktailHost$ICallbackListener;
 
     invoke-interface {v0, p1}, Lcom/samsung/android/cocktailbar/CocktailHost$ICallbackListener;->onSwitchDefaultCocktail(I)V
 
-    .line 324
     return-void
 .end method
 
@@ -583,12 +526,10 @@
     .param p3, "userId"    # I
 
     .prologue
-    .line 283
     iget-object v0, p0, Lcom/samsung/android/cocktailbar/CocktailHost;->mCallbackListener:Lcom/samsung/android/cocktailbar/CocktailHost$ICallbackListener;
 
     invoke-interface {v0, p1, p2, p3}, Lcom/samsung/android/cocktailbar/CocktailHost$ICallbackListener;->onUpdateCocktail(ILcom/samsung/android/cocktailbar/Cocktail;I)V
 
-    .line 284
     return-void
 .end method
 
@@ -597,12 +538,10 @@
     .param p1, "userId"    # I
 
     .prologue
-    .line 307
     iget-object v0, p0, Lcom/samsung/android/cocktailbar/CocktailHost;->mCallbackListener:Lcom/samsung/android/cocktailbar/CocktailHost$ICallbackListener;
 
     invoke-interface {v0, p1}, Lcom/samsung/android/cocktailbar/CocktailHost$ICallbackListener;->onUpdateToolLauncher(I)V
 
-    .line 308
     return-void
 .end method
 
@@ -613,12 +552,10 @@
     .param p3, "userId"    # I
 
     .prologue
-    .line 303
     iget-object v0, p0, Lcom/samsung/android/cocktailbar/CocktailHost;->mCallbackListener:Lcom/samsung/android/cocktailbar/CocktailHost$ICallbackListener;
 
     invoke-interface {v0, p1, p2, p3}, Lcom/samsung/android/cocktailbar/CocktailHost$ICallbackListener;->onViewDataChanged(III)V
 
-    .line 304
     return-void
 .end method
 
@@ -628,19 +565,16 @@
     .locals 8
 
     .prologue
-    .line 265
     new-instance v1, Ljava/util/ArrayList;
 
     invoke-direct {v1}, Ljava/util/ArrayList;-><init>()V
 
-    .line 268
     .local v1, "cocktails":Ljava/util/ArrayList;, "Ljava/util/ArrayList<Lcom/samsung/android/cocktailbar/Cocktail;>;"
     :try_start_0
     iget-object v5, p0, Lcom/samsung/android/cocktailbar/CocktailHost;->mPackageName:Ljava/lang/String;
 
     if-nez v5, :cond_0
 
-    .line 269
     iget-object v5, p0, Lcom/samsung/android/cocktailbar/CocktailHost;->mContext:Landroid/content/Context;
 
     invoke-virtual {v5}, Landroid/content/Context;->getPackageName()Ljava/lang/String;
@@ -649,7 +583,6 @@
 
     iput-object v5, p0, Lcom/samsung/android/cocktailbar/CocktailHost;->mPackageName:Ljava/lang/String;
 
-    .line 271
     :cond_0
     sget-object v5, Lcom/samsung/android/cocktailbar/CocktailHost;->sService:Lcom/samsung/android/cocktailbar/ICocktailBarService;
 
@@ -663,11 +596,9 @@
 
     move-result-object v4
 
-    .line 276
     .local v4, "updatedIds":[I
     array-length v0, v4
 
-    .line 277
     .local v0, "N":I
     const/4 v3, 0x0
 
@@ -675,7 +606,6 @@
     :goto_0
     if-ge v3, v0, :cond_1
 
-    .line 278
     aget v6, v4, v3
 
     invoke-virtual {v1, v3}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
@@ -692,29 +622,25 @@
 
     invoke-direct {p0, v6, v5, v7}, Lcom/samsung/android/cocktailbar/CocktailHost;->updateCocktail(ILcom/samsung/android/cocktailbar/Cocktail;I)V
 
-    .line 277
     add-int/lit8 v3, v3, 0x1
 
     goto :goto_0
 
-    .line 272
     .end local v0    # "N":I
     .end local v3    # "i":I
     .end local v4    # "updatedIds":[I
     :catch_0
     move-exception v2
 
-    .line 273
     .local v2, "e":Landroid/os/RemoteException;
     new-instance v5, Ljava/lang/RuntimeException;
 
-    const-string/jumbo v6, "system server dead?"
+    const-string v6, "system server dead?"
 
     invoke-direct {v5, v6, v2}, Ljava/lang/RuntimeException;-><init>(Ljava/lang/String;Ljava/lang/Throwable;)V
 
     throw v5
 
-    .line 280
     .end local v2    # "e":Landroid/os/RemoteException;
     .restart local v0    # "N":I
     .restart local v3    # "i":I

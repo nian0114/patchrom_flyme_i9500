@@ -23,7 +23,6 @@
     .locals 0
 
     .prologue
-    .line 367
     iput-object p1, p0, Lcom/android/server/FMRadioService$3;->this$0:Lcom/android/server/FMRadioService;
 
     invoke-direct {p0}, Landroid/content/BroadcastReceiver;-><init>()V
@@ -43,7 +42,6 @@
 
     const/4 v4, 0x0
 
-    .line 369
     invoke-virtual {p2}, Landroid/content/Intent;->getAction()Ljava/lang/String;
 
     move-result-object v2
@@ -56,14 +54,12 @@
 
     if-eqz v2, :cond_0
 
-    .line 370
     const-string v2, "android.bluetooth.a2dp.extra.DISCONNECT_A2DP"
 
     invoke-virtual {p2, v2, v4}, Landroid/content/Intent;->getBooleanExtra(Ljava/lang/String;Z)Z
 
     move-result v0
 
-    .line 372
     .local v0, "isFromBT":Z
     new-instance v2, Ljava/lang/StringBuilder;
 
@@ -85,14 +81,12 @@
 
     invoke-static {v2}, Lcom/android/server/FMRadioService;->log(Ljava/lang/String;)V
 
-    .line 374
     const-string v2, "DISCONNECT_DOCK"
 
     invoke-virtual {p2, v2, v4}, Landroid/content/Intent;->getBooleanExtra(Ljava/lang/String;Z)Z
 
     move-result v1
 
-    .line 375
     .local v1, "isFromDock":Z
     new-instance v2, Ljava/lang/StringBuilder;
 
@@ -114,7 +108,6 @@
 
     invoke-static {v2}, Lcom/android/server/FMRadioService;->log(Ljava/lang/String;)V
 
-    .line 377
     iget-object v2, p0, Lcom/android/server/FMRadioService$3;->this$0:Lcom/android/server/FMRadioService;
 
     # getter for: Lcom/android/server/FMRadioService;->mIsOn:Z
@@ -137,7 +130,6 @@
 
     if-nez v1, :cond_0
 
-    .line 378
     iget-object v2, p0, Lcom/android/server/FMRadioService$3;->this$0:Lcom/android/server/FMRadioService;
 
     const/16 v3, 0x9
@@ -146,18 +138,15 @@
 
     invoke-virtual {v2, v3, v4}, Lcom/android/server/FMRadioService;->notifyEvent(ILjava/lang/Object;)V
 
-    .line 379
     iget-object v2, p0, Lcom/android/server/FMRadioService$3;->this$0:Lcom/android/server/FMRadioService;
 
     # invokes: Lcom/android/server/FMRadioService;->stopInternetStreaming()V
     invoke-static {v2}, Lcom/android/server/FMRadioService;->access$900(Lcom/android/server/FMRadioService;)V
 
-    .line 380
     iget-object v2, p0, Lcom/android/server/FMRadioService$3;->this$0:Lcom/android/server/FMRadioService;
 
     invoke-virtual {v2}, Lcom/android/server/FMRadioService;->cancelSeek()V
 
-    .line 381
     iget-object v2, p0, Lcom/android/server/FMRadioService$3;->this$0:Lcom/android/server/FMRadioService;
 
     const/4 v3, 0x2
@@ -165,7 +154,6 @@
     # invokes: Lcom/android/server/FMRadioService;->offInternal(ZIZ)Z
     invoke-static {v2, v5, v3, v5}, Lcom/android/server/FMRadioService;->access$1000(Lcom/android/server/FMRadioService;ZIZ)Z
 
-    .line 384
     .end local v0    # "isFromBT":Z
     .end local v1    # "isFromDock":Z
     :cond_0

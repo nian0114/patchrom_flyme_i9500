@@ -23,7 +23,6 @@
     .locals 0
 
     .prologue
-    .line 835
     iput-object p1, p0, Lcom/android/server/wifi/WifiController$DeviceActiveState;->this$0:Lcom/android/server/wifi/WifiController;
 
     invoke-direct {p0}, Lcom/android/internal/util/State;-><init>()V
@@ -39,21 +38,18 @@
     .prologue
     const/4 v1, 0x1
 
-    .line 838
     iget-object v0, p0, Lcom/android/server/wifi/WifiController$DeviceActiveState;->this$0:Lcom/android/server/wifi/WifiController;
 
     iget-object v0, v0, Lcom/android/server/wifi/WifiController;->mWifiStateMachine:Lcom/android/server/wifi/WifiStateMachine;
 
     invoke-virtual {v0, v1}, Lcom/android/server/wifi/WifiStateMachine;->setOperationalMode(I)V
 
-    .line 839
     iget-object v0, p0, Lcom/android/server/wifi/WifiController$DeviceActiveState;->this$0:Lcom/android/server/wifi/WifiController;
 
     iget-object v0, v0, Lcom/android/server/wifi/WifiController;->mWifiStateMachine:Lcom/android/server/wifi/WifiStateMachine;
 
     invoke-virtual {v0, v1}, Lcom/android/server/wifi/WifiStateMachine;->setDriverStart(Z)V
 
-    .line 840
     iget-object v0, p0, Lcom/android/server/wifi/WifiController$DeviceActiveState;->this$0:Lcom/android/server/wifi/WifiController;
 
     iget-object v0, v0, Lcom/android/server/wifi/WifiController;->mWifiStateMachine:Lcom/android/server/wifi/WifiStateMachine;
@@ -62,7 +58,6 @@
 
     invoke-virtual {v0, v1}, Lcom/android/server/wifi/WifiStateMachine;->setHighPerfModeEnabled(Z)V
 
-    .line 841
     return-void
 .end method
 
@@ -73,7 +68,6 @@
     .prologue
     const/4 v0, 0x1
 
-    .line 845
     iget v1, p1, Landroid/os/Message;->what:I
 
     const v2, 0x26005
@@ -89,20 +83,17 @@
 
     if-eqz v1, :cond_1
 
-    .line 846
     iget-object v0, p0, Lcom/android/server/wifi/WifiController$DeviceActiveState;->this$0:Lcom/android/server/wifi/WifiController;
 
     # invokes: Lcom/android/server/wifi/WifiController;->checkLocksAndTransitionWhenDeviceIdle()V
     invoke-static {v0}, Lcom/android/server/wifi/WifiController;->access$2500(Lcom/android/server/wifi/WifiController;)V
 
-    .line 858
     :cond_0
     const/4 v0, 0x0
 
     :goto_0
     return v0
 
-    .line 848
     :cond_1
     iget v1, p1, Landroid/os/Message;->what:I
 
@@ -110,7 +101,6 @@
 
     if-ne v1, v2, :cond_0
 
-    .line 852
     iget-object v1, p0, Lcom/android/server/wifi/WifiController$DeviceActiveState;->this$0:Lcom/android/server/wifi/WifiController;
 
     # getter for: Lcom/android/server/wifi/WifiController;->mFirstUserSignOnSeen:Z
@@ -120,14 +110,12 @@
 
     if-nez v1, :cond_2
 
-    .line 853
     iget-object v1, p0, Lcom/android/server/wifi/WifiController$DeviceActiveState;->this$0:Lcom/android/server/wifi/WifiController;
 
     iget-object v1, v1, Lcom/android/server/wifi/WifiController;->mWifiStateMachine:Lcom/android/server/wifi/WifiStateMachine;
 
     invoke-virtual {v1}, Lcom/android/server/wifi/WifiStateMachine;->reloadTlsNetworksAndReconnect()V
 
-    .line 855
     :cond_2
     iget-object v1, p0, Lcom/android/server/wifi/WifiController$DeviceActiveState;->this$0:Lcom/android/server/wifi/WifiController;
 

@@ -23,7 +23,6 @@
     .locals 0
 
     .prologue
-    .line 154
     iput-object p1, p0, Lcom/android/internal/policy/impl/multiwindow/MultiPhoneWindowManager$1;->this$0:Lcom/android/internal/policy/impl/multiwindow/MultiPhoneWindowManager;
 
     invoke-direct {p0}, Landroid/content/BroadcastReceiver;-><init>()V
@@ -41,7 +40,6 @@
     .prologue
     const/4 v4, 0x0
 
-    .line 157
     const-string v0, "android.intent.action.USER_SWITCHED"
 
     invoke-virtual {p2}, Landroid/content/Intent;->getAction()Ljava/lang/String;
@@ -54,7 +52,6 @@
 
     if-eqz v0, :cond_0
 
-    .line 163
     iget-object v0, p0, Lcom/android/internal/policy/impl/multiwindow/MultiPhoneWindowManager$1;->this$0:Lcom/android/internal/policy/impl/multiwindow/MultiPhoneWindowManager;
 
     iget-object v1, p0, Lcom/android/internal/policy/impl/multiwindow/MultiPhoneWindowManager$1;->this$0:Lcom/android/internal/policy/impl/multiwindow/MultiPhoneWindowManager;
@@ -76,14 +73,12 @@
     # setter for: Lcom/android/internal/policy/impl/multiwindow/MultiPhoneWindowManager;->mEnableMultiWindowUISetting:I
     invoke-static {v0, v1}, Lcom/android/internal/policy/impl/multiwindow/MultiPhoneWindowManager;->access$002(Lcom/android/internal/policy/impl/multiwindow/MultiPhoneWindowManager;I)I
 
-    .line 165
     iget-object v0, p0, Lcom/android/internal/policy/impl/multiwindow/MultiPhoneWindowManager$1;->this$0:Lcom/android/internal/policy/impl/multiwindow/MultiPhoneWindowManager;
 
     iget-object v0, v0, Lcom/android/internal/policy/impl/multiwindow/MultiPhoneWindowManager;->mSettingsObserver:Lcom/android/internal/policy/impl/multiwindow/MultiPhoneWindowManager$SettingsObserver;
 
     invoke-virtual {v0, v4}, Lcom/android/internal/policy/impl/multiwindow/MultiPhoneWindowManager$SettingsObserver;->onChange(Z)V
 
-    .line 167
     :cond_0
     return-void
 .end method

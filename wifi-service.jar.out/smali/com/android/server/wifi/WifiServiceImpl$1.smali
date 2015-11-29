@@ -23,7 +23,6 @@
     .locals 0
 
     .prologue
-    .line 524
     iput-object p1, p0, Lcom/android/server/wifi/WifiServiceImpl$1;->this$0:Lcom/android/server/wifi/WifiServiceImpl;
 
     invoke-direct {p0}, Landroid/content/BroadcastReceiver;-><init>()V
@@ -39,7 +38,6 @@
     .param p2, "intent"    # Landroid/content/Intent;
 
     .prologue
-    .line 527
     move-object/from16 v0, p0
 
     iget-object v15, v0, Lcom/android/server/wifi/WifiServiceImpl$1;->this$0:Lcom/android/server/wifi/WifiServiceImpl;
@@ -50,7 +48,6 @@
 
     move-result-object v13
 
-    .line 528
     .local v13, "scanList":Ljava/util/List;, "Ljava/util/List<Landroid/net/wifi/ScanResult;>;"
     move-object/from16 v0, p0
 
@@ -60,7 +57,6 @@
 
     move-result-object v3
 
-    .line 529
     .local v3, "configs":Ljava/util/List;, "Ljava/util/List<Landroid/net/wifi/WifiConfiguration;>;"
     move-object/from16 v0, p0
 
@@ -70,29 +66,23 @@
 
     move-result-object v10
 
-    .line 530
     .local v10, "mWifiInfo":Landroid/net/wifi/WifiInfo;
     const/4 v4, 0x0
 
-    .line 531
     .local v4, "currentAP":Landroid/net/wifi/WifiConfiguration;
     const/4 v14, 0x0
 
-    .line 532
     .local v14, "shouldBreak":Z
     const/4 v5, 0x0
 
-    .line 533
     .local v5, "currentIsVendorAP":Z
     const/4 v11, 0x0
 
-    .line 535
     .local v11, "netId":I
     if-eqz v10, :cond_2
 
     if-eqz v3, :cond_2
 
-    .line 536
     move-object/from16 v0, p0
 
     iget-object v15, v0, Lcom/android/server/wifi/WifiServiceImpl$1;->this$0:Lcom/android/server/wifi/WifiServiceImpl;
@@ -105,12 +95,10 @@
 
     move-result v11
 
-    .line 538
     const/4 v15, -0x1
 
     if-eq v11, v15, :cond_0
 
-    .line 539
     :try_start_0
     invoke-interface {v3, v11}, Ljava/util/List;->get(I)Ljava/lang/Object;
 
@@ -122,7 +110,6 @@
 
     move-object v4, v0
 
-    .line 540
     # getter for: Lcom/android/server/wifi/WifiServiceImpl;->DBG:Z
     invoke-static {}, Lcom/android/server/wifi/WifiServiceImpl;->access$100()Z
 
@@ -156,7 +143,6 @@
     :try_end_0
     .catch Ljava/lang/IndexOutOfBoundsException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 548
     :cond_0
     :goto_0
     if-eqz v4, :cond_2
@@ -185,7 +171,6 @@
 
     if-eqz v15, :cond_2
 
-    .line 551
     :cond_1
     move-object/from16 v0, p0
 
@@ -200,28 +185,23 @@
 
     move-result-object v1
 
-    .line 552
     .local v1, "apInfo":[Lcom/android/server/wifi/WifiServiceImpl$ApInfo;
     if-nez v1, :cond_3
 
-    .line 553
     const-string v15, "WifiService"
 
     const-string v16, "No VendorAP"
 
     invoke-static/range {v15 .. v16}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 584
     .end local v1    # "apInfo":[Lcom/android/server/wifi/WifiServiceImpl$ApInfo;
     :cond_2
     :goto_1
     return-void
 
-    .line 542
     :catch_0
     move-exception v6
 
-    .line 543
     .local v6, "e":Ljava/lang/IndexOutOfBoundsException;
     # getter for: Lcom/android/server/wifi/WifiServiceImpl;->DBG:Z
     invoke-static {}, Lcom/android/server/wifi/WifiServiceImpl;->access$100()Z
@@ -238,7 +218,6 @@
 
     goto :goto_0
 
-    .line 556
     .end local v6    # "e":Ljava/lang/IndexOutOfBoundsException;
     .restart local v1    # "apInfo":[Lcom/android/server/wifi/WifiServiceImpl$ApInfo;
     :cond_3
@@ -250,7 +229,6 @@
 
     if-ge v7, v15, :cond_4
 
-    .line 557
     iget-object v15, v4, Landroid/net/wifi/WifiConfiguration;->SSID:Ljava/lang/String;
 
     move-object/from16 v0, p0
@@ -281,21 +259,17 @@
 
     if-eqz v15, :cond_8
 
-    .line 558
     const-string v15, "WifiService"
 
     const-string v16, "Current AP is confirmed to be Vendor AP"
 
     invoke-static/range {v15 .. v16}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 559
     const/4 v5, 0x1
 
-    .line 563
     :cond_4
     if-eqz v5, :cond_2
 
-    .line 564
     invoke-interface {v3}, Ljava/util/List;->iterator()Ljava/util/Iterator;
 
     move-result-object v8
@@ -313,7 +287,6 @@
 
     check-cast v2, Landroid/net/wifi/WifiConfiguration;
 
-    .line 565
     .local v2, "config":Landroid/net/wifi/WifiConfiguration;
     iget v15, v4, Landroid/net/wifi/WifiConfiguration;->priority:I
 
@@ -325,7 +298,6 @@
 
     if-ge v15, v0, :cond_7
 
-    .line 566
     invoke-interface {v13}, Ljava/util/List;->iterator()Ljava/util/Iterator;
 
     move-result-object v9
@@ -344,7 +316,6 @@
 
     check-cast v12, Landroid/net/wifi/ScanResult;
 
-    .line 567
     .local v12, "scan":Landroid/net/wifi/ScanResult;
     iget-object v15, v12, Landroid/net/wifi/ScanResult;->SSID:Ljava/lang/String;
 
@@ -395,21 +366,18 @@
 
     if-ne v15, v0, :cond_6
 
-    .line 568
     const-string v15, "WifiService"
 
     const-string v16, "ConfigPriorAP Req is met. It will be return to Saved Private AP"
 
     invoke-static/range {v15 .. v16}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 569
     move-object/from16 v0, p0
 
     iget-object v15, v0, Lcom/android/server/wifi/WifiServiceImpl$1;->this$0:Lcom/android/server/wifi/WifiServiceImpl;
 
     invoke-virtual {v15, v11}, Lcom/android/server/wifi/WifiServiceImpl;->disableNetwork(I)Z
 
-    .line 570
     move-object/from16 v0, p0
 
     iget-object v15, v0, Lcom/android/server/wifi/WifiServiceImpl$1;->this$0:Lcom/android/server/wifi/WifiServiceImpl;
@@ -418,10 +386,8 @@
 
     invoke-virtual {v15}, Lcom/android/server/wifi/WifiStateMachine;->enableAllNetworks()V
 
-    .line 571
     const/4 v14, 0x1
 
-    .line 576
     .end local v9    # "i$":Ljava/util/Iterator;
     .end local v12    # "scan":Landroid/net/wifi/ScanResult;
     :cond_7
@@ -429,7 +395,6 @@
 
     goto/16 :goto_1
 
-    .line 556
     .end local v2    # "config":Landroid/net/wifi/WifiConfiguration;
     :cond_8
     add-int/lit8 v7, v7, 0x1

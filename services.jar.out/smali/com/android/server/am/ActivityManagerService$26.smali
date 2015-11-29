@@ -36,7 +36,6 @@
     .locals 0
 
     .prologue
-    .line 21809
     iput-object p1, p0, Lcom/android/server/am/ActivityManagerService$26;->this$0:Lcom/android/server/am/ActivityManagerService;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -56,19 +55,16 @@
 
     const/4 v0, -0x1
 
-    .line 21812
     iget v2, p1, Lcom/android/server/am/ProcessRecord;->hotnessAdj:I
 
     iget v3, p2, Lcom/android/server/am/ProcessRecord;->hotnessAdj:I
 
     if-ge v2, v3, :cond_1
 
-    .line 21822
     :cond_0
     :goto_0
     return v0
 
-    .line 21814
     :cond_1
     iget v2, p1, Lcom/android/server/am/ProcessRecord;->hotnessAdj:I
 
@@ -78,10 +74,8 @@
 
     move v0, v1
 
-    .line 21815
     goto :goto_0
 
-    .line 21817
     :cond_2
     iget v2, p1, Lcom/android/server/am/ProcessRecord;->curAdj:I
 
@@ -89,7 +83,6 @@
 
     if-gt v2, v3, :cond_0
 
-    .line 21819
     iget v0, p1, Lcom/android/server/am/ProcessRecord;->curAdj:I
 
     iget v2, p2, Lcom/android/server/am/ProcessRecord;->curAdj:I
@@ -98,10 +91,8 @@
 
     move v0, v1
 
-    .line 21820
     goto :goto_0
 
-    .line 21822
     :cond_3
     const/4 v0, 0x0
 
@@ -114,7 +105,6 @@
     .param p2, "x1"    # Ljava/lang/Object;
 
     .prologue
-    .line 21809
     check-cast p1, Lcom/android/server/am/ProcessRecord;
 
     .end local p1    # "x0":Ljava/lang/Object;

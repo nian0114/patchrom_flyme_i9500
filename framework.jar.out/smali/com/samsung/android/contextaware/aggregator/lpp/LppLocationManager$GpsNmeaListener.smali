@@ -26,7 +26,6 @@
     .locals 0
 
     .prologue
-    .line 1525
     iput-object p1, p0, Lcom/samsung/android/contextaware/aggregator/lpp/LppLocationManager$GpsNmeaListener;->this$0:Lcom/samsung/android/contextaware/aggregator/lpp/LppLocationManager;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -40,7 +39,6 @@
     .param p2, "x1"    # Lcom/samsung/android/contextaware/aggregator/lpp/LppLocationManager$1;
 
     .prologue
-    .line 1525
     invoke-direct {p0, p1}, Lcom/samsung/android/contextaware/aggregator/lpp/LppLocationManager$GpsNmeaListener;-><init>(Lcom/samsung/android/contextaware/aggregator/lpp/LppLocationManager;)V
 
     return-void
@@ -54,7 +52,6 @@
     .param p3, "nmea"    # Ljava/lang/String;
 
     .prologue
-    .line 1530
     iget-object v0, p0, Lcom/samsung/android/contextaware/aggregator/lpp/LppLocationManager$GpsNmeaListener;->this$0:Lcom/samsung/android/contextaware/aggregator/lpp/LppLocationManager;
 
     # getter for: Lcom/samsung/android/contextaware/aggregator/lpp/LppLocationManager;->mListener:Lcom/samsung/android/contextaware/aggregator/lpp/LppLocationManagerListener;
@@ -86,6 +83,5 @@
 
     invoke-interface {v0, v1}, Lcom/samsung/android/contextaware/aggregator/lpp/LppLocationManagerListener;->logNmeaData(Ljava/lang/String;)V
 
-    .line 1531
     return-void
 .end method

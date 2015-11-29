@@ -93,12 +93,10 @@
     .locals 2
 
     .prologue
-    .line 55
-    const-string/jumbo v0, "toolbox"
+    const-string v0, "toolbox"
 
     sput-object v0, Lcom/samsung/android/toolbox/TwToolBoxService;->TAG:Ljava/lang/String;
 
-    .line 57
     invoke-static {}, Lcom/samsung/android/feature/FloatingFeature;->getInstance()Lcom/samsung/android/feature/FloatingFeature;
 
     move-result-object v0
@@ -119,45 +117,38 @@
     .param p1, "context"    # Landroid/content/Context;
 
     .prologue
-    .line 99
     invoke-direct {p0}, Lcom/samsung/android/toolbox/ITwToolBoxService$Stub;-><init>()V
 
-    .line 93
     new-instance v1, Landroid/os/Handler;
 
     invoke-direct {v1}, Landroid/os/Handler;-><init>()V
 
     iput-object v1, p0, Lcom/samsung/android/toolbox/TwToolBoxService;->mH:Landroid/os/Handler;
 
-    .line 95
     new-instance v1, Landroid/os/RemoteCallbackList;
 
     invoke-direct {v1}, Landroid/os/RemoteCallbackList;-><init>()V
 
     iput-object v1, p0, Lcom/samsung/android/toolbox/TwToolBoxService;->mCallbacks:Landroid/os/RemoteCallbackList;
 
-    .line 122
     new-instance v1, Lcom/samsung/android/toolbox/TwToolBoxService$2;
 
     invoke-direct {v1, p0}, Lcom/samsung/android/toolbox/TwToolBoxService$2;-><init>(Lcom/samsung/android/toolbox/TwToolBoxService;)V
 
     iput-object v1, p0, Lcom/samsung/android/toolbox/TwToolBoxService;->mReceiver:Landroid/content/BroadcastReceiver;
 
-    .line 101
     invoke-virtual {p1}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
 
     move-result-object v1
 
     iput-object v1, p0, Lcom/samsung/android/toolbox/TwToolBoxService;->mContentResolver:Landroid/content/ContentResolver;
 
-    .line 102
     invoke-virtual {p1}, Landroid/content/Context;->getPackageManager()Landroid/content/pm/PackageManager;
 
     move-result-object v1
 
     iput-object v1, p0, Lcom/samsung/android/toolbox/TwToolBoxService;->mPackageManager:Landroid/content/pm/PackageManager;
 
-    .line 103
     const-string v1, "activity"
 
     invoke-virtual {p1, v1}, Landroid/content/Context;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
@@ -168,10 +159,9 @@
 
     iput-object v1, p0, Lcom/samsung/android/toolbox/TwToolBoxService;->mActivityManager:Landroid/app/ActivityManager;
 
-    .line 104
     iget-object v1, p0, Lcom/samsung/android/toolbox/TwToolBoxService;->mContentResolver:Landroid/content/ContentResolver;
 
-    const-string/jumbo v2, "toolbox_apps"
+    const-string v2, "toolbox_apps"
 
     const/4 v3, -0x2
 
@@ -181,7 +171,6 @@
 
     iput-object v1, p0, Lcom/samsung/android/toolbox/TwToolBoxService;->mPackageList:Ljava/lang/String;
 
-    .line 105
     iget-object v1, p0, Lcom/samsung/android/toolbox/TwToolBoxService;->mPackageList:Ljava/lang/String;
 
     if-nez v1, :cond_0
@@ -190,7 +179,6 @@
 
     iput-object v1, p0, Lcom/samsung/android/toolbox/TwToolBoxService;->mPackageList:Ljava/lang/String;
 
-    .line 107
     :cond_0
     new-instance v1, Lcom/samsung/android/toolbox/TwToolBoxService$1;
 
@@ -200,10 +188,9 @@
 
     iput-object v1, p0, Lcom/samsung/android/toolbox/TwToolBoxService;->mPackageListObserver:Landroid/database/ContentObserver;
 
-    .line 114
     iget-object v1, p0, Lcom/samsung/android/toolbox/TwToolBoxService;->mContentResolver:Landroid/content/ContentResolver;
 
-    const-string/jumbo v2, "toolbox_apps"
+    const-string v2, "toolbox_apps"
 
     invoke-static {v2}, Landroid/provider/Settings$System;->getUriFor(Ljava/lang/String;)Landroid/net/Uri;
 
@@ -217,23 +204,19 @@
 
     invoke-virtual {v1, v2, v3, v4, v5}, Landroid/content/ContentResolver;->registerContentObserver(Landroid/net/Uri;ZLandroid/database/ContentObserver;I)V
 
-    .line 116
     new-instance v0, Landroid/content/IntentFilter;
 
     invoke-direct {v0}, Landroid/content/IntentFilter;-><init>()V
 
-    .line 117
     .local v0, "filter":Landroid/content/IntentFilter;
     const-string v1, "android.intent.action.USER_SWITCHED"
 
     invoke-virtual {v0, v1}, Landroid/content/IntentFilter;->addAction(Ljava/lang/String;)V
 
-    .line 118
     iget-object v1, p0, Lcom/samsung/android/toolbox/TwToolBoxService;->mReceiver:Landroid/content/BroadcastReceiver;
 
     invoke-virtual {p1, v1, v0}, Landroid/content/Context;->registerReceiver(Landroid/content/BroadcastReceiver;Landroid/content/IntentFilter;)Landroid/content/Intent;
 
-    .line 120
     return-void
 .end method
 
@@ -243,7 +226,6 @@
     .param p1, "x1"    # Ljava/lang/String;
 
     .prologue
-    .line 54
     iput-object p1, p0, Lcom/samsung/android/toolbox/TwToolBoxService;->mPackageList:Ljava/lang/String;
 
     return-object p1
@@ -254,7 +236,6 @@
     .param p0, "x0"    # Lcom/samsung/android/toolbox/TwToolBoxService;
 
     .prologue
-    .line 54
     iget-object v0, p0, Lcom/samsung/android/toolbox/TwToolBoxService;->mContentResolver:Landroid/content/ContentResolver;
 
     return-object v0
@@ -264,7 +245,6 @@
     .locals 1
 
     .prologue
-    .line 54
     sget-object v0, Lcom/samsung/android/toolbox/TwToolBoxService;->TAG:Ljava/lang/String;
 
     return-object v0
@@ -276,14 +256,12 @@
     .locals 2
 
     .prologue
-    .line 165
     sget-object v0, Lcom/samsung/android/toolbox/TwToolBoxService;->TAG:Ljava/lang/String;
 
     const-string v1, "TwToolBoxService getToolList()"
 
     invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 166
     iget-object v0, p0, Lcom/samsung/android/toolbox/TwToolBoxService;->mPackageList:Ljava/lang/String;
 
     return-object v0
@@ -302,16 +280,13 @@
     .prologue
     const/4 v2, 0x0
 
-    .line 145
     const/4 v1, 0x0
 
-    .line 146
     .local v1, "result":Z
     iget-object v3, p0, Lcom/samsung/android/toolbox/TwToolBoxService;->mCallbacks:Landroid/os/RemoteCallbackList;
 
     monitor-enter v3
 
-    .line 147
     :try_start_0
     iget-object v4, p0, Lcom/samsung/android/toolbox/TwToolBoxService;->mCallbacks:Landroid/os/RemoteCallbackList;
 
@@ -319,7 +294,6 @@
 
     move-result v0
 
-    .line 148
     .local v0, "N":I
     if-lez v0, :cond_0
 
@@ -337,25 +311,20 @@
 
     move-result v1
 
-    .line 149
     :goto_0
     iget-object v2, p0, Lcom/samsung/android/toolbox/TwToolBoxService;->mCallbacks:Landroid/os/RemoteCallbackList;
 
     invoke-virtual {v2}, Landroid/os/RemoteCallbackList;->finishBroadcast()V
 
-    .line 150
     monitor-exit v3
 
-    .line 151
     return v1
 
     :cond_0
     move v1, v2
 
-    .line 148
     goto :goto_0
 
-    .line 150
     .end local v0    # "N":I
     :catchall_0
     move-exception v2
@@ -377,7 +346,6 @@
     .end annotation
 
     .prologue
-    .line 140
     if-nez p1, :cond_0
 
     const/4 v0, 0x0
@@ -407,12 +375,10 @@
     .end annotation
 
     .prologue
-    .line 156
     iget-object v2, p0, Lcom/samsung/android/toolbox/TwToolBoxService;->mCallbacks:Landroid/os/RemoteCallbackList;
 
     monitor-enter v2
 
-    .line 157
     :try_start_0
     iget-object v1, p0, Lcom/samsung/android/toolbox/TwToolBoxService;->mCallbacks:Landroid/os/RemoteCallbackList;
 
@@ -420,7 +386,6 @@
 
     move-result v0
 
-    .line 158
     .local v0, "N":I
     if-lez v0, :cond_0
 
@@ -436,19 +401,15 @@
 
     invoke-interface {v1, p1, p2, p3}, Lcom/samsung/android/toolbox/ITwToolBoxServiceCallback;->receiveMessage(Ljava/lang/String;II)V
 
-    .line 159
     :cond_0
     iget-object v1, p0, Lcom/samsung/android/toolbox/TwToolBoxService;->mCallbacks:Landroid/os/RemoteCallbackList;
 
     invoke-virtual {v1}, Landroid/os/RemoteCallbackList;->finishBroadcast()V
 
-    .line 160
     monitor-exit v2
 
-    .line 161
     return-void
 
-    .line 160
     .end local v0    # "N":I
     :catchall_0
     move-exception v1
@@ -465,14 +426,12 @@
     .param p1, "toolList"    # Ljava/lang/String;
 
     .prologue
-    .line 171
     sget-object v0, Lcom/samsung/android/toolbox/TwToolBoxService;->TAG:Ljava/lang/String;
 
     const-string v1, "TwToolBoxService setToolList() Deprecated."
 
     invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 172
     return-void
 .end method
 
@@ -486,7 +445,6 @@
     .end annotation
 
     .prologue
-    .line 135
     if-nez p1, :cond_0
 
     const/4 v0, 0x0

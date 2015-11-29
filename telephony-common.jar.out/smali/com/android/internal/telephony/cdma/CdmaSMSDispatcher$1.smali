@@ -23,7 +23,6 @@
     .locals 0
 
     .prologue
-    .line 848
     iput-object p1, p0, Lcom/android/internal/telephony/cdma/CdmaSMSDispatcher$1;->this$0:Lcom/android/internal/telephony/cdma/CdmaSMSDispatcher;
 
     invoke-direct {p0}, Landroid/content/BroadcastReceiver;-><init>()V
@@ -39,7 +38,6 @@
     .param p2, "intent"    # Landroid/content/Intent;
 
     .prologue
-    .line 851
     iget-object v4, p0, Lcom/android/internal/telephony/cdma/CdmaSMSDispatcher$1;->this$0:Lcom/android/internal/telephony/cdma/CdmaSMSDispatcher;
 
     # getter for: Lcom/android/internal/telephony/cdma/CdmaSMSDispatcher;->mIsDisposed:Z
@@ -49,19 +47,16 @@
 
     if-eqz v4, :cond_1
 
-    .line 853
     const-string v4, "CdmaSMSDispatcher"
 
     const-string v5, "CDMASmsDispatcher Already Disposed!"
 
     invoke-static {v4, v5}, Landroid/telephony/Rlog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 895
     :cond_0
     :goto_0
     return-void
 
-    .line 857
     :cond_1
     iget-object v4, p0, Lcom/android/internal/telephony/cdma/CdmaSMSDispatcher$1;->this$0:Lcom/android/internal/telephony/cdma/CdmaSMSDispatcher;
 
@@ -91,7 +86,6 @@
 
     if-eq v4, v5, :cond_3
 
-    .line 858
     :cond_2
     const-string v4, "CdmaSMSDispatcher"
 
@@ -126,7 +120,6 @@
 
     invoke-static {v4, v5}, Landroid/telephony/Rlog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 859
     const-string v4, "CdmaSMSDispatcher"
 
     new-instance v5, Ljava/lang/StringBuilder;
@@ -162,7 +155,6 @@
 
     goto :goto_0
 
-    .line 863
     :cond_3
     const-string v4, "android.intent.action.WAITING_AUTO_LOGIN"
 
@@ -176,10 +168,8 @@
 
     if-eqz v4, :cond_0
 
-    .line 864
     const/4 v3, 0x5
 
-    .line 865
     .local v3, "theme":I
     const-string v4, "ro.build.scafe.cream"
 
@@ -195,10 +185,8 @@
 
     if-eqz v4, :cond_4
 
-    .line 866
     const/4 v3, 0x4
 
-    .line 868
     :cond_4
     new-instance v1, Landroid/app/AlertDialog$Builder;
 
@@ -211,29 +199,24 @@
 
     invoke-direct {v1, v4, v3}, Landroid/app/AlertDialog$Builder;-><init>(Landroid/content/Context;I)V
 
-    .line 869
     .local v1, "builder":Landroid/app/AlertDialog$Builder;
     invoke-static {}, Landroid/content/res/Resources;->getSystem()Landroid/content/res/Resources;
 
     move-result-object v2
 
-    .line 871
     .local v2, "r":Landroid/content/res/Resources;
     const v4, 0x10408d6
 
     invoke-virtual {v1, v4}, Landroid/app/AlertDialog$Builder;->setTitle(I)Landroid/app/AlertDialog$Builder;
 
-    .line 872
     const v4, 0x10408d7
 
     invoke-virtual {v1, v4}, Landroid/app/AlertDialog$Builder;->setMessage(I)Landroid/app/AlertDialog$Builder;
 
-    .line 873
     const/4 v4, 0x0
 
     invoke-virtual {v1, v4}, Landroid/app/AlertDialog$Builder;->setCancelable(Z)Landroid/app/AlertDialog$Builder;
 
-    .line 874
     const v4, 0x10404d2
 
     invoke-virtual {v2, v4}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
@@ -246,7 +229,6 @@
 
     invoke-virtual {v1, v4, v5}, Landroid/app/AlertDialog$Builder;->setPositiveButton(Ljava/lang/CharSequence;Landroid/content/DialogInterface$OnClickListener;)Landroid/app/AlertDialog$Builder;
 
-    .line 883
     const v4, 0x10404d3
 
     invoke-virtual {v2, v4}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
@@ -259,12 +241,10 @@
 
     invoke-virtual {v1, v4, v5}, Landroid/app/AlertDialog$Builder;->setNegativeButton(Ljava/lang/CharSequence;Landroid/content/DialogInterface$OnClickListener;)Landroid/app/AlertDialog$Builder;
 
-    .line 891
     invoke-virtual {v1}, Landroid/app/AlertDialog$Builder;->create()Landroid/app/AlertDialog;
 
     move-result-object v0
 
-    .line 892
     .local v0, "alert":Landroid/app/AlertDialog;
     invoke-virtual {v0}, Landroid/app/AlertDialog;->getWindow()Landroid/view/Window;
 
@@ -274,7 +254,6 @@
 
     invoke-virtual {v4, v5}, Landroid/view/Window;->setType(I)V
 
-    .line 893
     invoke-virtual {v0}, Landroid/app/AlertDialog;->show()V
 
     goto/16 :goto_0

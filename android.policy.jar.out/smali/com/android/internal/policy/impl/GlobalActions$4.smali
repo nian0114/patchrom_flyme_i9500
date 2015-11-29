@@ -28,7 +28,6 @@
     .param p6, "x4"    # I
 
     .prologue
-    .line 960
     iput-object p1, p0, Lcom/android/internal/policy/impl/GlobalActions$4;->this$0:Lcom/android/internal/policy/impl/GlobalActions;
 
     move-object v0, p0
@@ -55,7 +54,6 @@
     .param p1, "buttonOn"    # Z
 
     .prologue
-    .line 976
     const-string v0, "GlobalActions"
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -78,7 +76,6 @@
 
     invoke-static {v0, v1}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 977
     return-void
 .end method
 
@@ -86,7 +83,6 @@
     .locals 1
 
     .prologue
-    .line 1008
     invoke-super {p0}, Lcom/android/internal/policy/impl/GlobalActions$ToggleAction;->isEnabled()Z
 
     move-result v0
@@ -98,21 +94,18 @@
     .locals 3
 
     .prologue
-    .line 963
     const-string v1, "GlobalActions"
 
     const-string v2, "in onPress of LongLifeMode"
 
     invoke-static {v1, v2}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 964
     new-instance v0, Landroid/content/Intent;
 
     const-string v1, "android.intent.action.EMERGENCY_START_SERVICE_BY_ORDER"
 
     invoke-direct {v0, v1}, Landroid/content/Intent;-><init>(Ljava/lang/String;)V
 
-    .line 965
     .local v0, "intent":Landroid/content/Intent;
     const-string v2, "enabled"
 
@@ -134,14 +127,12 @@
     :goto_0
     invoke-virtual {v0, v2, v1}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Z)Landroid/content/Intent;
 
-    .line 966
     const-string v1, "flag"
 
     const/16 v2, 0x10
 
     invoke-virtual {v0, v1, v2}, Landroid/content/Intent;->putExtra(Ljava/lang/String;I)Landroid/content/Intent;
 
-    .line 967
     iget-object v1, p0, Lcom/android/internal/policy/impl/GlobalActions$4;->this$0:Lcom/android/internal/policy/impl/GlobalActions;
 
     # getter for: Lcom/android/internal/policy/impl/GlobalActions;->mContext:Landroid/content/Context;
@@ -151,10 +142,8 @@
 
     invoke-virtual {v1, v0}, Landroid/content/Context;->sendBroadcast(Landroid/content/Intent;)V
 
-    .line 968
     return-void
 
-    .line 965
     :cond_0
     const/4 v1, 0x0
 
@@ -166,7 +155,6 @@
     .param p1, "on"    # Z
 
     .prologue
-    .line 971
     const-string v0, "GlobalActions"
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -189,7 +177,6 @@
 
     invoke-static {v0, v1}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 972
     return-void
 .end method
 
@@ -197,7 +184,6 @@
     .locals 1
 
     .prologue
-    .line 984
     const/4 v0, 0x0
 
     return v0
@@ -207,7 +193,6 @@
     .locals 1
 
     .prologue
-    .line 1003
     const/4 v0, 0x0
 
     return v0
@@ -217,7 +202,6 @@
     .locals 1
 
     .prologue
-    .line 980
     const/4 v0, 0x1
 
     return v0

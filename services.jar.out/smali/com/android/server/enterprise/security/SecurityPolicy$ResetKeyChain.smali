@@ -34,7 +34,6 @@
     .locals 0
 
     .prologue
-    .line 1158
     iput-object p1, p0, Lcom/android/server/enterprise/security/SecurityPolicy$ResetKeyChain;->this$0:Lcom/android/server/enterprise/security/SecurityPolicy;
 
     invoke-direct {p0}, Landroid/os/AsyncTask;-><init>()V
@@ -48,7 +47,6 @@
     .param p2, "x1"    # Lcom/android/server/enterprise/security/SecurityPolicy$1;
 
     .prologue
-    .line 1158
     invoke-direct {p0, p1}, Lcom/android/server/enterprise/security/SecurityPolicy$ResetKeyChain;-><init>(Lcom/android/server/enterprise/security/SecurityPolicy;)V
 
     return-void
@@ -63,7 +61,6 @@
     .prologue
     const/4 v5, 0x0
 
-    .line 1161
     iget-object v3, p0, Lcom/android/server/enterprise/security/SecurityPolicy$ResetKeyChain;->this$0:Lcom/android/server/enterprise/security/SecurityPolicy;
 
     # getter for: Lcom/android/server/enterprise/security/SecurityPolicy;->mKeyStore:Landroid/security/KeyStore;
@@ -73,14 +70,12 @@
 
     invoke-virtual {v3}, Landroid/security/KeyStore;->reset()Z
 
-    .line 1163
     aget-object v3, p1, v5
 
     invoke-virtual {v3}, Ljava/lang/Integer;->intValue()I
 
     move-result v2
 
-    .line 1167
     .local v2, "userId":I
     :try_start_0
     iget-object v3, p0, Lcom/android/server/enterprise/security/SecurityPolicy$ResetKeyChain;->this$0:Lcom/android/server/enterprise/security/SecurityPolicy;
@@ -100,7 +95,6 @@
 
     move-result-object v1
 
-    .line 1169
     .local v1, "keyChainConnection":Landroid/security/KeyChain$KeyChainConnection;
     :try_start_1
     invoke-virtual {v1}, Landroid/security/KeyChain$KeyChainConnection;->getService()Landroid/security/IKeyChainService;
@@ -118,23 +112,19 @@
 
     move-result-object v3
 
-    .line 1173
     :try_start_2
     invoke-virtual {v1}, Landroid/security/KeyChain$KeyChainConnection;->close()V
     :try_end_2
     .catch Ljava/lang/InterruptedException; {:try_start_2 .. :try_end_2} :catch_1
 
-    .line 1176
     .end local v1    # "keyChainConnection":Landroid/security/KeyChain$KeyChainConnection;
     :goto_0
     return-object v3
 
-    .line 1170
     .restart local v1    # "keyChainConnection":Landroid/security/KeyChain$KeyChainConnection;
     :catch_0
     move-exception v0
 
-    .line 1171
     .local v0, "e":Landroid/os/RemoteException;
     const/4 v3, 0x0
 
@@ -145,7 +135,6 @@
 
     move-result-object v3
 
-    .line 1173
     :try_start_4
     invoke-virtual {v1}, Landroid/security/KeyChain$KeyChainConnection;->close()V
     :try_end_4
@@ -153,13 +142,11 @@
 
     goto :goto_0
 
-    .line 1175
     .end local v0    # "e":Landroid/os/RemoteException;
     .end local v1    # "keyChainConnection":Landroid/security/KeyChain$KeyChainConnection;
     :catch_1
     move-exception v0
 
-    .line 1176
     .local v0, "e":Ljava/lang/InterruptedException;
     invoke-static {v5}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
 
@@ -167,7 +154,6 @@
 
     goto :goto_0
 
-    .line 1173
     .end local v0    # "e":Ljava/lang/InterruptedException;
     .restart local v1    # "keyChainConnection":Landroid/security/KeyChain$KeyChainConnection;
     :catchall_0
@@ -186,7 +172,6 @@
     .param p1, "x0"    # [Ljava/lang/Object;
 
     .prologue
-    .line 1158
     check-cast p1, [Ljava/lang/Integer;
 
     .end local p1    # "x0":[Ljava/lang/Object;

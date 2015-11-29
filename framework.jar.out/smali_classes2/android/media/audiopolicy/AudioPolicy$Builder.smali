@@ -32,17 +32,14 @@
     .locals 1
 
     .prologue
-    .line 83
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 84
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
     iput-object v0, p0, Landroid/media/audiopolicy/AudioPolicy$Builder;->mMixes:Ljava/util/ArrayList;
 
-    .line 85
     return-void
 .end method
 
@@ -58,10 +55,8 @@
     .end annotation
 
     .prologue
-    .line 94
     if-nez p1, :cond_0
 
-    .line 95
     new-instance v0, Ljava/lang/IllegalArgumentException;
 
     const-string v1, "Illegal null AudioMix argument"
@@ -70,13 +65,11 @@
 
     throw v0
 
-    .line 97
     :cond_0
     iget-object v0, p0, Landroid/media/audiopolicy/AudioPolicy$Builder;->mMixes:Ljava/util/ArrayList;
 
     invoke-virtual {v0, p1}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 98
     return-object p0
 .end method
 
@@ -84,7 +77,6 @@
     .locals 3
 
     .prologue
-    .line 102
     new-instance v0, Landroid/media/audiopolicy/AudioPolicy;
 
     new-instance v1, Landroid/media/audiopolicy/AudioPolicyConfig;

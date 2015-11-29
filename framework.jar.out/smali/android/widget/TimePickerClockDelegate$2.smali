@@ -26,7 +26,6 @@
     .locals 0
 
     .prologue
-    .line 164
     iput-object p1, p0, Landroid/widget/TimePickerClockDelegate$2;->this$0:Landroid/widget/TimePickerClockDelegate;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -43,12 +42,10 @@
     .param p3, "newVal"    # I
 
     .prologue
-    .line 187
     iget-object v0, p0, Landroid/widget/TimePickerClockDelegate$2;->this$0:Landroid/widget/TimePickerClockDelegate;
 
     # invokes: Landroid/widget/TimePickerClockDelegate;->onTimeChanged()V
     invoke-static {v0}, Landroid/widget/TimePickerClockDelegate;->access$200(Landroid/widget/TimePickerClockDelegate;)V
 
-    .line 188
     return-void
 .end method

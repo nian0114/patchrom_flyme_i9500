@@ -26,7 +26,6 @@
     .locals 0
 
     .prologue
-    .line 278
     iput-object p1, p0, Lcom/android/internal/app/ResolverActivity$2;->this$0:Lcom/android/internal/app/ResolverActivity;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -40,14 +39,12 @@
     .locals 2
 
     .prologue
-    .line 286
     const-string v0, "ResolverActivity"
 
-    const-string/jumbo v1, "onConnected"
+    const-string v1, "onConnected"
 
     invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 287
     iget-object v0, p0, Lcom/android/internal/app/ResolverActivity$2;->this$0:Lcom/android/internal/app/ResolverActivity;
 
     # getter for: Lcom/android/internal/app/ResolverActivity;->mConnector:Lcom/samsung/android/sconnect/extern/QuickConnectConnector;
@@ -64,7 +61,6 @@
 
     invoke-virtual {v0, v1}, Lcom/samsung/android/sconnect/extern/QuickConnectConnector;->startDiscovery(Lcom/samsung/android/sconnect/extern/QuickConnectConnector$IDeviceStatusListener;)V
 
-    .line 288
     return-void
 .end method
 
@@ -72,13 +68,11 @@
     .locals 2
 
     .prologue
-    .line 281
     const-string v0, "ResolverActivity"
 
-    const-string/jumbo v1, "onDisconnected"
+    const-string v1, "onDisconnected"
 
     invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 282
     return-void
 .end method

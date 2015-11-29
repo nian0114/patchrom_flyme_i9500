@@ -24,7 +24,6 @@
     .param p2, "x0"    # Landroid/os/Looper;
 
     .prologue
-    .line 53
     iput-object p1, p0, Landroid/media/AudioPortEventHandler$1;->this$0:Landroid/media/AudioPortEventHandler;
 
     invoke-direct {p0, p2}, Landroid/os/Handler;-><init>(Landroid/os/Looper;)V
@@ -45,10 +44,8 @@
 
     const/4 v9, 0x0
 
-    .line 57
     monitor-enter p0
 
-    .line 58
     :try_start_0
     iget v7, p1, Landroid/os/Message;->what:I
 
@@ -56,12 +53,10 @@
 
     if-ne v7, v8, :cond_2
 
-    .line 59
     new-instance v1, Ljava/util/ArrayList;
 
     invoke-direct {v1}, Ljava/util/ArrayList;-><init>()V
 
-    .line 60
     .local v1, "listeners":Ljava/util/ArrayList;, "Ljava/util/ArrayList<Landroid/media/AudioManager$OnAudioPortUpdateListener;>;"
     iget-object v7, p0, Landroid/media/AudioPortEventHandler$1;->this$0:Landroid/media/AudioPortEventHandler;
 
@@ -78,33 +73,28 @@
 
     if-eqz v7, :cond_0
 
-    .line 61
     iget-object v7, p1, Landroid/os/Message;->obj:Ljava/lang/Object;
 
     check-cast v7, Landroid/media/AudioManager$OnAudioPortUpdateListener;
 
     invoke-virtual {v1, v7}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 66
     :cond_0
     :goto_0
     monitor-exit p0
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 67
     invoke-virtual {v1}, Ljava/util/ArrayList;->isEmpty()Z
 
     move-result v7
 
     if-eqz v7, :cond_3
 
-    .line 114
     :cond_1
     :goto_1
     return-void
 
-    .line 64
     .end local v1    # "listeners":Ljava/util/ArrayList;, "Ljava/util/ArrayList<Landroid/media/AudioManager$OnAudioPortUpdateListener;>;"
     :cond_2
     :try_start_1
@@ -118,7 +108,6 @@
     .restart local v1    # "listeners":Ljava/util/ArrayList;, "Ljava/util/ArrayList<Landroid/media/AudioManager$OnAudioPortUpdateListener;>;"
     goto :goto_0
 
-    .line 66
     .end local v1    # "listeners":Ljava/util/ArrayList;, "Ljava/util/ArrayList<Landroid/media/AudioManager$OnAudioPortUpdateListener;>;"
     :catchall_0
     move-exception v7
@@ -129,7 +118,6 @@
 
     throw v7
 
-    .line 72
     .restart local v1    # "listeners":Ljava/util/ArrayList;, "Ljava/util/ArrayList<Landroid/media/AudioManager$OnAudioPortUpdateListener;>;"
     :cond_3
     iget v7, p1, Landroid/os/Message;->what:I
@@ -146,7 +134,6 @@
 
     if-ne v7, v11, :cond_5
 
-    .line 75
     :cond_4
     iget-object v7, p0, Landroid/media/AudioPortEventHandler$1;->this$0:Landroid/media/AudioPortEventHandler;
 
@@ -157,25 +144,21 @@
 
     invoke-virtual {v7}, Landroid/media/AudioManager;->resetAudioPortGeneration()I
 
-    .line 77
     :cond_5
     new-instance v5, Ljava/util/ArrayList;
 
     invoke-direct {v5}, Ljava/util/ArrayList;-><init>()V
 
-    .line 78
     .local v5, "ports":Ljava/util/ArrayList;, "Ljava/util/ArrayList<Landroid/media/AudioPort;>;"
     new-instance v3, Ljava/util/ArrayList;
 
     invoke-direct {v3}, Ljava/util/ArrayList;-><init>()V
 
-    .line 79
     .local v3, "patches":Ljava/util/ArrayList;, "Ljava/util/ArrayList<Landroid/media/AudioPatch;>;"
     iget v7, p1, Landroid/os/Message;->what:I
 
     if-eq v7, v11, :cond_6
 
-    .line 80
     iget-object v7, p0, Landroid/media/AudioPortEventHandler$1;->this$0:Landroid/media/AudioPortEventHandler;
 
     # getter for: Landroid/media/AudioPortEventHandler;->mAudioManager:Landroid/media/AudioManager;
@@ -187,11 +170,9 @@
 
     move-result v6
 
-    .line 81
     .local v6, "status":I
     if-nez v6, :cond_1
 
-    .line 86
     .end local v6    # "status":I
     :cond_6
     iget v7, p1, Landroid/os/Message;->what:I
@@ -200,7 +181,6 @@
 
     goto :goto_1
 
-    .line 89
     :pswitch_0
     new-array v7, v9, [Landroid/media/AudioPort;
 
@@ -210,7 +190,6 @@
 
     check-cast v4, [Landroid/media/AudioPort;
 
-    .line 90
     .local v4, "portList":[Landroid/media/AudioPort;
     const/4 v0, 0x0
 
@@ -222,7 +201,6 @@
 
     if-ge v0, v7, :cond_7
 
-    .line 91
     invoke-virtual {v1, v0}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
 
     move-result-object v7
@@ -231,18 +209,15 @@
 
     invoke-interface {v7, v4}, Landroid/media/AudioManager$OnAudioPortUpdateListener;->onAudioPortListUpdate([Landroid/media/AudioPort;)V
 
-    .line 90
     add-int/lit8 v0, v0, 0x1
 
     goto :goto_2
 
-    .line 93
     :cond_7
     iget v7, p1, Landroid/os/Message;->what:I
 
     if-eq v7, v10, :cond_1
 
-    .line 99
     .end local v0    # "i":I
     .end local v4    # "portList":[Landroid/media/AudioPort;
     :pswitch_1
@@ -254,7 +229,6 @@
 
     check-cast v2, [Landroid/media/AudioPatch;
 
-    .line 100
     .local v2, "patchList":[Landroid/media/AudioPatch;
     const/4 v0, 0x0
 
@@ -266,7 +240,6 @@
 
     if-ge v0, v7, :cond_1
 
-    .line 101
     invoke-virtual {v1, v0}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
 
     move-result-object v7
@@ -275,12 +248,10 @@
 
     invoke-interface {v7, v2}, Landroid/media/AudioManager$OnAudioPortUpdateListener;->onAudioPatchListUpdate([Landroid/media/AudioPatch;)V
 
-    .line 100
     add-int/lit8 v0, v0, 0x1
 
     goto :goto_3
 
-    .line 106
     .end local v0    # "i":I
     .end local v2    # "patchList":[Landroid/media/AudioPatch;
     :pswitch_2
@@ -294,7 +265,6 @@
 
     if-ge v0, v7, :cond_1
 
-    .line 107
     invoke-virtual {v1, v0}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
 
     move-result-object v7
@@ -303,12 +273,10 @@
 
     invoke-interface {v7}, Landroid/media/AudioManager$OnAudioPortUpdateListener;->onServiceDied()V
 
-    .line 106
     add-int/lit8 v0, v0, 0x1
 
     goto :goto_4
 
-    .line 86
     :pswitch_data_0
     .packed-switch 0x1
         :pswitch_0

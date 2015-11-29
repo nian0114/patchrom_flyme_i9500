@@ -23,7 +23,6 @@
     .locals 0
 
     .prologue
-    .line 408
     iput-object p1, p0, Lcom/android/server/lights/LightsService$3;->this$0:Lcom/android/server/lights/LightsService;
 
     invoke-direct {p0}, Lcom/android/server/lights/LightsManager;-><init>()V
@@ -38,19 +37,16 @@
     .param p1, "id"    # I
 
     .prologue
-    .line 411
     const/16 v0, 0xb
 
     if-ge p1, v0, :cond_0
 
-    .line 412
     iget-object v0, p0, Lcom/android/server/lights/LightsService$3;->this$0:Lcom/android/server/lights/LightsService;
 
     iget-object v0, v0, Lcom/android/server/lights/LightsService;->mLights:[Lcom/android/server/lights/LightsService$LightImpl;
 
     aget-object v0, v0, p1
 
-    .line 414
     :goto_0
     return-object v0
 

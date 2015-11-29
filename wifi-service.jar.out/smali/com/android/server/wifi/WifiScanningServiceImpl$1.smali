@@ -23,7 +23,6 @@
     .locals 0
 
     .prologue
-    .line 198
     iput-object p1, p0, Lcom/android/server/wifi/WifiScanningServiceImpl$1;->this$0:Lcom/android/server/wifi/WifiScanningServiceImpl;
 
     invoke-direct {p0}, Landroid/content/BroadcastReceiver;-><init>()V
@@ -41,14 +40,12 @@
     .prologue
     const/4 v4, 0x1
 
-    .line 201
     const-string v1, "scan_enabled"
 
     invoke-virtual {p2, v1, v4}, Landroid/content/Intent;->getIntExtra(Ljava/lang/String;I)I
 
     move-result v0
 
-    .line 203
     .local v0, "state":I
     const-string v1, "WifiScanningService"
 
@@ -72,12 +69,10 @@
 
     invoke-static {v1, v2}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 204
     const/4 v1, 0x3
 
     if-ne v0, v1, :cond_1
 
-    .line 205
     iget-object v1, p0, Lcom/android/server/wifi/WifiScanningServiceImpl$1;->this$0:Lcom/android/server/wifi/WifiScanningServiceImpl;
 
     # getter for: Lcom/android/server/wifi/WifiScanningServiceImpl;->mStateMachine:Lcom/android/server/wifi/WifiScanningServiceImpl$WifiScanningStateMachine;
@@ -89,16 +84,13 @@
 
     invoke-virtual {v1, v2}, Lcom/android/server/wifi/WifiScanningServiceImpl$WifiScanningStateMachine;->sendMessage(I)V
 
-    .line 209
     :cond_0
     :goto_0
     return-void
 
-    .line 206
     :cond_1
     if-ne v0, v4, :cond_0
 
-    .line 207
     iget-object v1, p0, Lcom/android/server/wifi/WifiScanningServiceImpl$1;->this$0:Lcom/android/server/wifi/WifiScanningServiceImpl;
 
     # getter for: Lcom/android/server/wifi/WifiScanningServiceImpl;->mStateMachine:Lcom/android/server/wifi/WifiScanningServiceImpl$WifiScanningStateMachine;

@@ -23,7 +23,6 @@
     .locals 0
 
     .prologue
-    .line 12396
     iput-object p1, p0, Lcom/android/server/wifi/WifiStateMachine$SoftApStartingState;->this$0:Lcom/android/server/wifi/WifiStateMachine;
 
     invoke-direct {p0}, Lcom/android/internal/util/State;-><init>()V
@@ -37,7 +36,6 @@
     .locals 5
 
     .prologue
-    .line 12399
     iget-object v2, p0, Lcom/android/server/wifi/WifiStateMachine$SoftApStartingState;->this$0:Lcom/android/server/wifi/WifiStateMachine;
 
     # invokes: Lcom/android/server/wifi/WifiStateMachine;->getCurrentMessage()Landroid/os/Message;
@@ -45,7 +43,6 @@
 
     move-result-object v1
 
-    .line 12400
     .local v1, "message":Landroid/os/Message;
     iget v2, v1, Landroid/os/Message;->what:I
 
@@ -53,16 +50,13 @@
 
     if-ne v2, v3, :cond_5
 
-    .line 12401
     iget-object v0, v1, Landroid/os/Message;->obj:Ljava/lang/Object;
 
     check-cast v0, Landroid/net/wifi/WifiConfiguration;
 
-    .line 12403
     .local v0, "config":Landroid/net/wifi/WifiConfiguration;
     if-nez v0, :cond_0
 
-    .line 12404
     iget-object v2, p0, Lcom/android/server/wifi/WifiStateMachine$SoftApStartingState;->this$0:Lcom/android/server/wifi/WifiStateMachine;
 
     # getter for: Lcom/android/server/wifi/WifiStateMachine;->mWifiApConfigChannel:Lcom/android/internal/util/AsyncChannel;
@@ -74,11 +68,9 @@
 
     invoke-virtual {v2, v3}, Lcom/android/internal/util/AsyncChannel;->sendMessage(I)V
 
-    .line 12432
     :goto_0
     return-void
 
-    .line 12406
     :cond_0
     iget-object v2, p0, Lcom/android/server/wifi/WifiStateMachine$SoftApStartingState;->this$0:Lcom/android/server/wifi/WifiStateMachine;
 
@@ -89,7 +81,6 @@
 
     if-nez v2, :cond_3
 
-    .line 12407
     iget-object v2, p0, Lcom/android/server/wifi/WifiStateMachine$SoftApStartingState;->this$0:Lcom/android/server/wifi/WifiStateMachine;
 
     # getter for: Lcom/android/server/wifi/WifiStateMachine;->mWifiApConfigChannel:Lcom/android/internal/util/AsyncChannel;
@@ -101,7 +92,6 @@
 
     invoke-virtual {v2, v3, v0}, Lcom/android/internal/util/AsyncChannel;->sendMessage(ILjava/lang/Object;)V
 
-    .line 12408
     const-string v2, "1"
 
     const-string v3, "net.forward.disable"
@@ -116,14 +106,12 @@
 
     if-eqz v2, :cond_1
 
-    .line 12409
     const-string v2, "net.forward.disable"
 
     const-string v3, ""
 
     invoke-static {v2, v3}, Landroid/os/SystemProperties;->set(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 12411
     :cond_1
     const-string v2, "100"
 
@@ -139,14 +127,12 @@
 
     if-eqz v2, :cond_2
 
-    .line 12412
     const-string v2, "net.leasetime"
 
     const-string v3, ""
 
     invoke-static {v2, v3}, Landroid/os/SystemProperties;->set(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 12427
     :cond_2
     :goto_1
     iget-object v2, p0, Lcom/android/server/wifi/WifiStateMachine$SoftApStartingState;->this$0:Lcom/android/server/wifi/WifiStateMachine;
@@ -156,7 +142,6 @@
 
     goto :goto_0
 
-    .line 12414
     :cond_3
     iget-object v2, p0, Lcom/android/server/wifi/WifiStateMachine$SoftApStartingState;->this$0:Lcom/android/server/wifi/WifiStateMachine;
 
@@ -167,21 +152,18 @@
 
     if-lez v2, :cond_2
 
-    .line 12415
     const-string v2, "net.forward.disable"
 
     const-string v3, "1"
 
     invoke-static {v2, v3}, Landroid/os/SystemProperties;->set(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 12416
     const-string v2, "net.leasetime"
 
     const-string v3, "100"
 
     invoke-static {v2, v3}, Landroid/os/SystemProperties;->set(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 12417
     # getter for: Lcom/android/server/wifi/WifiStateMachine;->DBG:Z
     invoke-static {}, Lcom/android/server/wifi/WifiStateMachine;->access$100()Z
 
@@ -195,7 +177,6 @@
 
     invoke-virtual {v2, v3}, Lcom/android/server/wifi/WifiStateMachine;->log(Ljava/lang/String;)V
 
-    .line 12425
     :cond_4
     const/4 v2, 0x1
 
@@ -203,7 +184,6 @@
 
     goto :goto_1
 
-    .line 12430
     .end local v0    # "config":Landroid/net/wifi/WifiConfiguration;
     :cond_5
     new-instance v2, Ljava/lang/RuntimeException;
@@ -238,7 +218,6 @@
     .prologue
     const/4 v1, 0x1
 
-    .line 12435
     iget-object v2, p0, Lcom/android/server/wifi/WifiStateMachine$SoftApStartingState;->this$0:Lcom/android/server/wifi/WifiStateMachine;
 
     invoke-virtual {p0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
@@ -252,19 +231,15 @@
     # invokes: Lcom/android/server/wifi/WifiStateMachine;->logStateAndMessage(Landroid/os/Message;Ljava/lang/String;)V
     invoke-static {v2, p1, v3}, Lcom/android/server/wifi/WifiStateMachine;->access$2500(Lcom/android/server/wifi/WifiStateMachine;Landroid/os/Message;Ljava/lang/String;)V
 
-    .line 12437
     iget v2, p1, Landroid/os/Message;->what:I
 
     sparse-switch v2, :sswitch_data_0
 
-    .line 12476
     const/4 v1, 0x0
 
-    .line 12478
     :goto_0
     return v1
 
-    .line 12450
     :sswitch_0
     iget-object v2, p0, Lcom/android/server/wifi/WifiStateMachine$SoftApStartingState;->this$0:Lcom/android/server/wifi/WifiStateMachine;
 
@@ -273,17 +248,14 @@
 
     goto :goto_0
 
-    .line 12453
     :sswitch_1
     iget-object v0, p1, Landroid/os/Message;->obj:Ljava/lang/Object;
 
     check-cast v0, Landroid/net/wifi/WifiConfiguration;
 
-    .line 12454
     .local v0, "config":Landroid/net/wifi/WifiConfiguration;
     if-eqz v0, :cond_1
 
-    .line 12456
     iget-object v2, p0, Lcom/android/server/wifi/WifiStateMachine$SoftApStartingState;->this$0:Lcom/android/server/wifi/WifiStateMachine;
 
     # getter for: Lcom/android/server/wifi/WifiStateMachine;->mRVFMode:I
@@ -293,10 +265,8 @@
 
     if-lez v2, :cond_0
 
-    .line 12457
     iput v1, v0, Landroid/net/wifi/WifiConfiguration;->txPowerMode:I
 
-    .line 12460
     :cond_0
     iget-object v2, p0, Lcom/android/server/wifi/WifiStateMachine$SoftApStartingState;->this$0:Lcom/android/server/wifi/WifiStateMachine;
 
@@ -305,7 +275,6 @@
 
     goto :goto_0
 
-    .line 12462
     :cond_1
     iget-object v2, p0, Lcom/android/server/wifi/WifiStateMachine$SoftApStartingState;->this$0:Lcom/android/server/wifi/WifiStateMachine;
 
@@ -313,7 +282,6 @@
 
     invoke-virtual {v2, v3}, Lcom/android/server/wifi/WifiStateMachine;->loge(Ljava/lang/String;)V
 
-    .line 12463
     iget-object v2, p0, Lcom/android/server/wifi/WifiStateMachine$SoftApStartingState;->this$0:Lcom/android/server/wifi/WifiStateMachine;
 
     const v3, 0x20017
@@ -322,7 +290,6 @@
 
     goto :goto_0
 
-    .line 12467
     .end local v0    # "config":Landroid/net/wifi/WifiConfiguration;
     :sswitch_2
     iget-object v2, p0, Lcom/android/server/wifi/WifiStateMachine$SoftApStartingState;->this$0:Lcom/android/server/wifi/WifiStateMachine;
@@ -331,13 +298,11 @@
 
     invoke-virtual {v2, v3}, Lcom/android/server/wifi/WifiStateMachine;->setWifiApState(I)V
 
-    .line 12468
     iget-object v2, p0, Lcom/android/server/wifi/WifiStateMachine$SoftApStartingState;->this$0:Lcom/android/server/wifi/WifiStateMachine;
 
     # invokes: Lcom/android/server/wifi/WifiStateMachine;->updateLTECoexState()I
     invoke-static {v2}, Lcom/android/server/wifi/WifiStateMachine;->access$9200(Lcom/android/server/wifi/WifiStateMachine;)I
 
-    .line 12469
     iget-object v2, p0, Lcom/android/server/wifi/WifiStateMachine$SoftApStartingState;->this$0:Lcom/android/server/wifi/WifiStateMachine;
 
     iget-object v3, p0, Lcom/android/server/wifi/WifiStateMachine$SoftApStartingState;->this$0:Lcom/android/server/wifi/WifiStateMachine;
@@ -352,7 +317,6 @@
 
     goto :goto_0
 
-    .line 12472
     :sswitch_3
     iget-object v2, p0, Lcom/android/server/wifi/WifiStateMachine$SoftApStartingState;->this$0:Lcom/android/server/wifi/WifiStateMachine;
 
@@ -360,7 +324,6 @@
 
     invoke-virtual {v2, v3}, Lcom/android/server/wifi/WifiStateMachine;->setWifiApState(I)V
 
-    .line 12473
     iget-object v2, p0, Lcom/android/server/wifi/WifiStateMachine$SoftApStartingState;->this$0:Lcom/android/server/wifi/WifiStateMachine;
 
     iget-object v3, p0, Lcom/android/server/wifi/WifiStateMachine$SoftApStartingState;->this$0:Lcom/android/server/wifi/WifiStateMachine;
@@ -375,7 +338,6 @@
 
     goto :goto_0
 
-    .line 12437
     :sswitch_data_0
     .sparse-switch
         0x2000b -> :sswitch_0

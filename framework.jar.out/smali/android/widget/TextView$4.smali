@@ -26,7 +26,6 @@
     .locals 0
 
     .prologue
-    .line 9492
     iput-object p1, p0, Landroid/widget/TextView$4;->this$0:Landroid/widget/TextView;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -42,12 +41,10 @@
     .prologue
     const/16 v2, 0xa
 
-    .line 9494
     const/4 v1, 0x1
 
     invoke-static {v1, v2}, Landroid/text/MultiSelection;->setTextViewHovered(ZI)V
 
-    .line 9496
     const/16 v1, 0xa
 
     const/4 v2, -0x1
@@ -57,15 +54,12 @@
     :try_end_0
     .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 9500
     :goto_0
     return-void
 
-    .line 9497
     :catch_0
     move-exception v0
 
-    .line 9498
     .local v0, "e":Landroid/os/RemoteException;
     const-string v1, "TextView"
 

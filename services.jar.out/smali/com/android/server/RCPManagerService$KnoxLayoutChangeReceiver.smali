@@ -23,7 +23,6 @@
     .locals 0
 
     .prologue
-    .line 1261
     iput-object p1, p0, Lcom/android/server/RCPManagerService$KnoxLayoutChangeReceiver;->this$0:Lcom/android/server/RCPManagerService;
 
     invoke-direct {p0}, Landroid/content/BroadcastReceiver;-><init>()V
@@ -39,7 +38,6 @@
     .param p2, "intent"    # Landroid/content/Intent;
 
     .prologue
-    .line 1265
     # getter for: Lcom/android/server/RCPManagerService;->TAG:Ljava/lang/String;
     invoke-static {}, Lcom/android/server/RCPManagerService;->access$200()Ljava/lang/String;
 
@@ -90,7 +88,6 @@
     :goto_0
     invoke-static {v6, v5}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1267
     const-string v5, "com.sec.knox.action.KNOX_LAYOUT_CHANGED"
 
     invoke-virtual {p2}, Landroid/content/Intent;->getAction()Ljava/lang/String;
@@ -103,7 +100,6 @@
 
     if-eqz v5, :cond_0
 
-    .line 1268
     const-string v5, "android.intent.extra.user_handle"
 
     const/4 v6, -0x1
@@ -112,13 +108,12 @@
 
     move-result v3
 
-    .line 1269
     .local v3, "personaId":I
     iget-object v5, p0, Lcom/android/server/RCPManagerService$KnoxLayoutChangeReceiver;->this$0:Lcom/android/server/RCPManagerService;
 
     iget-object v5, v5, Lcom/android/server/RCPManagerService;->mContext:Landroid/content/Context;
 
-    const-string/jumbo v6, "persona"
+    const-string v6, "persona"
 
     invoke-virtual {v5, v6}, Landroid/content/Context;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
 
@@ -126,19 +121,16 @@
 
     check-cast v2, Landroid/os/PersonaManager;
 
-    .line 1271
     .local v2, "mPersonaManager":Landroid/os/PersonaManager;
     invoke-virtual {v2, v3}, Landroid/os/PersonaManager;->getPersonaInfo(I)Landroid/content/pm/PersonaInfo;
 
     move-result-object v4
 
-    .line 1272
     .local v4, "personaInfo":Landroid/content/pm/PersonaInfo;
     iget-boolean v5, v4, Landroid/content/pm/PersonaInfo;->isLightWeightContainer:Z
 
     if-eqz v5, :cond_2
 
-    .line 1273
     iget-object v5, p0, Lcom/android/server/RCPManagerService$KnoxLayoutChangeReceiver;->this$0:Lcom/android/server/RCPManagerService;
 
     # getter for: Lcom/android/server/RCPManagerService;->mBridgeSyncUserMap:Ljava/util/HashMap;
@@ -158,11 +150,9 @@
 
     check-cast v0, Landroid/content/ISyncCallBack;
 
-    .line 1274
     .local v0, "callback":Landroid/content/ISyncCallBack;
     if-eqz v0, :cond_0
 
-    .line 1275
     # getter for: Lcom/android/server/RCPManagerService;->TAG:Ljava/lang/String;
     invoke-static {}, Lcom/android/server/RCPManagerService;->access$200()Ljava/lang/String;
 
@@ -188,13 +178,11 @@
 
     invoke-static {v5, v6}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1278
     :try_start_0
     invoke-interface {v0, v3}, Landroid/content/ISyncCallBack;->deleteShortcuts(I)V
     :try_end_0
     .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 1289
     .end local v0    # "callback":Landroid/content/ISyncCallBack;
     .end local v2    # "mPersonaManager":Landroid/os/PersonaManager;
     .end local v3    # "personaId":I
@@ -203,13 +191,11 @@
     :goto_1
     return-void
 
-    .line 1265
     :cond_1
     const-string v5, " intent is null "
 
     goto :goto_0
 
-    .line 1280
     .restart local v0    # "callback":Landroid/content/ISyncCallBack;
     .restart local v2    # "mPersonaManager":Landroid/os/PersonaManager;
     .restart local v3    # "personaId":I
@@ -217,7 +203,6 @@
     :catch_0
     move-exception v1
 
-    .line 1281
     .local v1, "e":Landroid/os/RemoteException;
     # getter for: Lcom/android/server/RCPManagerService;->TAG:Ljava/lang/String;
     invoke-static {}, Lcom/android/server/RCPManagerService;->access$200()Ljava/lang/String;
@@ -246,7 +231,6 @@
 
     goto :goto_1
 
-    .line 1286
     .end local v0    # "callback":Landroid/content/ISyncCallBack;
     .end local v1    # "e":Landroid/os/RemoteException;
     :cond_2

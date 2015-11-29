@@ -11,10 +11,8 @@
     .locals 0
 
     .prologue
-    .line 87
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 88
     return-void
 .end method
 
@@ -24,10 +22,8 @@
     .param p2, "attrs"    # Landroid/util/AttributeSet;
 
     .prologue
-    .line 96
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 97
     return-void
 .end method
 
@@ -36,7 +32,6 @@
     .param p1, "t"    # F
 
     .prologue
-    .line 104
     mul-float v0, p1, p1
 
     mul-float/2addr v0, p1
@@ -55,7 +50,6 @@
     .param p1, "t"    # F
 
     .prologue
-    .line 100
     invoke-direct {p0, p1}, Landroid/view/animation/interpolator/QuintEaseIn;->in(F)F
 
     move-result v0

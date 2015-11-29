@@ -32,10 +32,8 @@
 
     const/4 v3, 0x1
 
-    .line 71
     invoke-direct {p0, p1, v3}, Landroid/nfc/tech/BasicTagTechnology;-><init>(Landroid/nfc/Tag;I)V
 
-    .line 75
     const-string v1, "NXP_PN547C2"
 
     const-string v2, "BCM2079x"
@@ -46,15 +44,13 @@
 
     if-nez v1, :cond_0
 
-    .line 76
     invoke-virtual {p1, v3}, Landroid/nfc/Tag;->getTechExtras(I)Landroid/os/Bundle;
 
     move-result-object v0
 
-    .line 84
     .local v0, "extras":Landroid/os/Bundle;
     :goto_0
-    const-string/jumbo v1, "sak"
+    const-string v1, "sak"
 
     invoke-virtual {v0, v1}, Landroid/os/Bundle;->getShort(Ljava/lang/String;)S
 
@@ -62,7 +58,6 @@
 
     iput-short v1, p0, Landroid/nfc/tech/NfcA;->mSak:S
 
-    .line 85
     const-string v1, "atqa"
 
     invoke-virtual {v0, v1}, Landroid/os/Bundle;->getByteArray(Ljava/lang/String;)[B
@@ -71,10 +66,8 @@
 
     iput-object v1, p0, Landroid/nfc/tech/NfcA;->mAtqa:[B
 
-    .line 86
     return-void
 
-    .line 78
     .end local v0    # "extras":Landroid/os/Bundle;
     :cond_0
     invoke-virtual {p1, v4}, Landroid/nfc/Tag;->hasTech(I)Z
@@ -83,7 +76,6 @@
 
     if-eqz v1, :cond_1
 
-    .line 79
     invoke-virtual {p1, v4}, Landroid/nfc/Tag;->getTechExtras(I)Landroid/os/Bundle;
 
     move-result-object v0
@@ -91,7 +83,6 @@
     .restart local v0    # "extras":Landroid/os/Bundle;
     goto :goto_0
 
-    .line 81
     .end local v0    # "extras":Landroid/os/Bundle;
     :cond_1
     invoke-virtual {p1, v3}, Landroid/nfc/Tag;->getTechExtras(I)Landroid/os/Bundle;
@@ -109,7 +100,6 @@
     .prologue
     const/4 v1, 0x0
 
-    .line 61
     const/4 v2, 0x1
 
     invoke-virtual {p0, v2}, Landroid/nfc/Tag;->hasTech(I)Z
@@ -118,11 +108,9 @@
 
     if-nez v2, :cond_0
 
-    .line 65
     :goto_0
     return-object v1
 
-    .line 63
     :cond_0
     :try_start_0
     new-instance v2, Landroid/nfc/tech/NfcA;
@@ -135,11 +123,9 @@
 
     goto :goto_0
 
-    .line 64
     :catch_0
     move-exception v0
 
-    .line 65
     .local v0, "e":Landroid/os/RemoteException;
     goto :goto_0
 .end method
@@ -155,7 +141,6 @@
     .end annotation
 
     .prologue
-    .line 40
     invoke-super {p0}, Landroid/nfc/tech/BasicTagTechnology;->close()V
 
     return-void
@@ -170,7 +155,6 @@
     .end annotation
 
     .prologue
-    .line 40
     invoke-super {p0}, Landroid/nfc/tech/BasicTagTechnology;->connect()V
 
     return-void
@@ -180,7 +164,6 @@
     .locals 1
 
     .prologue
-    .line 96
     iget-object v0, p0, Landroid/nfc/tech/NfcA;->mAtqa:[B
 
     return-object v0
@@ -190,7 +173,6 @@
     .locals 1
 
     .prologue
-    .line 142
     invoke-virtual {p0}, Landroid/nfc/tech/NfcA;->getMaxTransceiveLengthInternal()I
 
     move-result v0
@@ -202,7 +184,6 @@
     .locals 1
 
     .prologue
-    .line 107
     iget-short v0, p0, Landroid/nfc/tech/NfcA;->mSak:S
 
     return v0
@@ -212,7 +193,6 @@
     .locals 1
 
     .prologue
-    .line 40
     invoke-super {p0}, Landroid/nfc/tech/BasicTagTechnology;->getTag()Landroid/nfc/Tag;
 
     move-result-object v0
@@ -224,7 +204,6 @@
     .locals 3
 
     .prologue
-    .line 179
     :try_start_0
     iget-object v1, p0, Landroid/nfc/tech/NfcA;->mTag:Landroid/nfc/Tag;
 
@@ -240,15 +219,12 @@
 
     move-result v1
 
-    .line 182
     :goto_0
     return v1
 
-    .line 180
     :catch_0
     move-exception v0
 
-    .line 181
     .local v0, "e":Landroid/os/RemoteException;
     const-string v1, "NFC"
 
@@ -256,7 +232,6 @@
 
     invoke-static {v1, v2, v0}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
-    .line 182
     const/4 v1, 0x0
 
     goto :goto_0
@@ -266,7 +241,6 @@
     .locals 1
 
     .prologue
-    .line 40
     invoke-super {p0}, Landroid/nfc/tech/BasicTagTechnology;->isConnected()Z
 
     move-result v0
@@ -283,7 +257,6 @@
     .end annotation
 
     .prologue
-    .line 40
     invoke-super {p0}, Landroid/nfc/tech/BasicTagTechnology;->reconnect()V
 
     return-void
@@ -294,7 +267,6 @@
     .param p1, "timeout"    # I
 
     .prologue
-    .line 161
     :try_start_0
     iget-object v2, p0, Landroid/nfc/tech/NfcA;->mTag:Landroid/nfc/Tag;
 
@@ -308,11 +280,9 @@
 
     move-result v1
 
-    .line 162
     .local v1, "err":I
     if-eqz v1, :cond_0
 
-    .line 163
     new-instance v2, Ljava/lang/IllegalArgumentException;
 
     const-string v3, "The supplied timeout is not valid"
@@ -323,12 +293,10 @@
     :try_end_0
     .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 165
     .end local v1    # "err":I
     :catch_0
     move-exception v0
 
-    .line 166
     .local v0, "e":Landroid/os/RemoteException;
     const-string v2, "NFC"
 
@@ -336,7 +304,6 @@
 
     invoke-static {v2, v3, v0}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
-    .line 168
     .end local v0    # "e":Landroid/os/RemoteException;
     :cond_0
     return-void
@@ -352,7 +319,6 @@
     .end annotation
 
     .prologue
-    .line 134
     const/4 v0, 0x1
 
     invoke-virtual {p0, p1, v0}, Landroid/nfc/tech/NfcA;->transceive([BZ)[B

@@ -30,7 +30,6 @@
     .locals 0
 
     .prologue
-    .line 2172
     iput-object p1, p0, Lcom/android/server/accessibility/SamsungTouchExplorer$PerformLongPressDelayed;->this$0:Lcom/android/server/accessibility/SamsungTouchExplorer;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -44,7 +43,6 @@
     .param p2, "x1"    # Lcom/android/server/accessibility/SamsungTouchExplorer$1;
 
     .prologue
-    .line 2172
     invoke-direct {p0, p1}, Lcom/android/server/accessibility/SamsungTouchExplorer$PerformLongPressDelayed;-><init>(Lcom/android/server/accessibility/SamsungTouchExplorer;)V
 
     return-void
@@ -55,7 +53,6 @@
     .param p0, "x0"    # Lcom/android/server/accessibility/SamsungTouchExplorer$PerformLongPressDelayed;
 
     .prologue
-    .line 2172
     invoke-direct {p0}, Lcom/android/server/accessibility/SamsungTouchExplorer$PerformLongPressDelayed;->isPending()Z
 
     move-result v0
@@ -67,22 +64,18 @@
     .locals 1
 
     .prologue
-    .line 2233
     iget-object v0, p0, Lcom/android/server/accessibility/SamsungTouchExplorer$PerformLongPressDelayed;->mEvent:Landroid/view/MotionEvent;
 
     invoke-virtual {v0}, Landroid/view/MotionEvent;->recycle()V
 
-    .line 2234
     const/4 v0, 0x0
 
     iput-object v0, p0, Lcom/android/server/accessibility/SamsungTouchExplorer$PerformLongPressDelayed;->mEvent:Landroid/view/MotionEvent;
 
-    .line 2235
     const/4 v0, 0x0
 
     iput v0, p0, Lcom/android/server/accessibility/SamsungTouchExplorer$PerformLongPressDelayed;->mPolicyFlags:I
 
-    .line 2236
     return-void
 .end method
 
@@ -90,7 +83,6 @@
     .locals 1
 
     .prologue
-    .line 2195
     iget-object v0, p0, Lcom/android/server/accessibility/SamsungTouchExplorer$PerformLongPressDelayed;->this$0:Lcom/android/server/accessibility/SamsungTouchExplorer;
 
     # getter for: Lcom/android/server/accessibility/SamsungTouchExplorer;->mHandler:Landroid/os/Handler;
@@ -111,7 +103,6 @@
     .locals 2
 
     .prologue
-    .line 2187
     iget-object v0, p0, Lcom/android/server/accessibility/SamsungTouchExplorer$PerformLongPressDelayed;->this$0:Lcom/android/server/accessibility/SamsungTouchExplorer;
 
     const/4 v1, 0x0
@@ -119,12 +110,10 @@
     # setter for: Lcom/android/server/accessibility/SamsungTouchExplorer;->isLongPressPerformed:Z
     invoke-static {v0, v1}, Lcom/android/server/accessibility/SamsungTouchExplorer;->access$2902(Lcom/android/server/accessibility/SamsungTouchExplorer;Z)Z
 
-    .line 2188
     iget-object v0, p0, Lcom/android/server/accessibility/SamsungTouchExplorer$PerformLongPressDelayed;->mEvent:Landroid/view/MotionEvent;
 
     if-eqz v0, :cond_0
 
-    .line 2189
     iget-object v0, p0, Lcom/android/server/accessibility/SamsungTouchExplorer$PerformLongPressDelayed;->this$0:Lcom/android/server/accessibility/SamsungTouchExplorer;
 
     # getter for: Lcom/android/server/accessibility/SamsungTouchExplorer;->mHandler:Landroid/os/Handler;
@@ -134,10 +123,8 @@
 
     invoke-virtual {v0, p0}, Landroid/os/Handler;->removeCallbacks(Ljava/lang/Runnable;)V
 
-    .line 2190
     invoke-direct {p0}, Lcom/android/server/accessibility/SamsungTouchExplorer$PerformLongPressDelayed;->clear()V
 
-    .line 2192
     :cond_0
     return-void
 .end method
@@ -148,17 +135,14 @@
     .param p2, "policyFlags"    # I
 
     .prologue
-    .line 2177
     invoke-static {p1}, Landroid/view/MotionEvent;->obtain(Landroid/view/MotionEvent;)Landroid/view/MotionEvent;
 
     move-result-object v0
 
     iput-object v0, p0, Lcom/android/server/accessibility/SamsungTouchExplorer$PerformLongPressDelayed;->mEvent:Landroid/view/MotionEvent;
 
-    .line 2178
     iput p2, p0, Lcom/android/server/accessibility/SamsungTouchExplorer$PerformLongPressDelayed;->mPolicyFlags:I
 
-    .line 2181
     iget-object v0, p0, Lcom/android/server/accessibility/SamsungTouchExplorer$PerformLongPressDelayed;->this$0:Lcom/android/server/accessibility/SamsungTouchExplorer;
 
     const/4 v1, 0x0
@@ -166,7 +150,6 @@
     # setter for: Lcom/android/server/accessibility/SamsungTouchExplorer;->isLongPressPerformed:Z
     invoke-static {v0, v1}, Lcom/android/server/accessibility/SamsungTouchExplorer;->access$2902(Lcom/android/server/accessibility/SamsungTouchExplorer;Z)Z
 
-    .line 2182
     iget-object v0, p0, Lcom/android/server/accessibility/SamsungTouchExplorer$PerformLongPressDelayed;->this$0:Lcom/android/server/accessibility/SamsungTouchExplorer;
 
     # getter for: Lcom/android/server/accessibility/SamsungTouchExplorer;->mHandler:Landroid/os/Handler;
@@ -182,7 +165,6 @@
 
     invoke-virtual {v0, p0, v2, v3}, Landroid/os/Handler;->postDelayed(Ljava/lang/Runnable;J)Z
 
-    .line 2183
     return-void
 .end method
 
@@ -190,7 +172,6 @@
     .locals 8
 
     .prologue
-    .line 2201
     iget-object v3, p0, Lcom/android/server/accessibility/SamsungTouchExplorer$PerformLongPressDelayed;->this$0:Lcom/android/server/accessibility/SamsungTouchExplorer;
 
     # getter for: Lcom/android/server/accessibility/SamsungTouchExplorer;->mReceivedPointerTracker:Lcom/android/server/accessibility/SamsungTouchExplorer$ReceivedPointerTracker;
@@ -208,12 +189,10 @@
 
     if-nez v3, :cond_1
 
-    .line 2230
     :cond_0
     :goto_0
     return-void
 
-    .line 2205
     :cond_1
     iget-object v3, p0, Lcom/android/server/accessibility/SamsungTouchExplorer$PerformLongPressDelayed;->mEvent:Landroid/view/MotionEvent;
 
@@ -227,7 +206,6 @@
 
     move-result v1
 
-    .line 2206
     .local v1, "pointerId":I
     iget-object v3, p0, Lcom/android/server/accessibility/SamsungTouchExplorer$PerformLongPressDelayed;->mEvent:Landroid/view/MotionEvent;
 
@@ -235,7 +213,6 @@
 
     move-result v2
 
-    .line 2208
     .local v2, "pointerIndex":I
     iget-object v3, p0, Lcom/android/server/accessibility/SamsungTouchExplorer$PerformLongPressDelayed;->this$0:Lcom/android/server/accessibility/SamsungTouchExplorer;
 
@@ -244,7 +221,6 @@
 
     move-result-object v0
 
-    .line 2209
     .local v0, "clickLocation":Landroid/graphics/Point;
     iget-object v3, p0, Lcom/android/server/accessibility/SamsungTouchExplorer$PerformLongPressDelayed;->this$0:Lcom/android/server/accessibility/SamsungTouchExplorer;
 
@@ -255,13 +231,11 @@
 
     if-eqz v3, :cond_0
 
-    .line 2213
     iget-object v3, p0, Lcom/android/server/accessibility/SamsungTouchExplorer$PerformLongPressDelayed;->this$0:Lcom/android/server/accessibility/SamsungTouchExplorer;
 
     # setter for: Lcom/android/server/accessibility/SamsungTouchExplorer;->mLongPressingPointerId:I
     invoke-static {v3, v1}, Lcom/android/server/accessibility/SamsungTouchExplorer;->access$3102(Lcom/android/server/accessibility/SamsungTouchExplorer;I)I
 
-    .line 2214
     iget-object v3, p0, Lcom/android/server/accessibility/SamsungTouchExplorer$PerformLongPressDelayed;->this$0:Lcom/android/server/accessibility/SamsungTouchExplorer;
 
     iget-object v4, p0, Lcom/android/server/accessibility/SamsungTouchExplorer$PerformLongPressDelayed;->mEvent:Landroid/view/MotionEvent;
@@ -279,7 +253,6 @@
     # setter for: Lcom/android/server/accessibility/SamsungTouchExplorer;->mLongPressingPointerDeltaX:I
     invoke-static {v3, v4}, Lcom/android/server/accessibility/SamsungTouchExplorer;->access$3202(Lcom/android/server/accessibility/SamsungTouchExplorer;I)I
 
-    .line 2215
     iget-object v3, p0, Lcom/android/server/accessibility/SamsungTouchExplorer$PerformLongPressDelayed;->this$0:Lcom/android/server/accessibility/SamsungTouchExplorer;
 
     iget-object v4, p0, Lcom/android/server/accessibility/SamsungTouchExplorer$PerformLongPressDelayed;->mEvent:Landroid/view/MotionEvent;
@@ -297,7 +270,6 @@
     # setter for: Lcom/android/server/accessibility/SamsungTouchExplorer;->mLongPressingPointerDeltaY:I
     invoke-static {v3, v4}, Lcom/android/server/accessibility/SamsungTouchExplorer;->access$3302(Lcom/android/server/accessibility/SamsungTouchExplorer;I)I
 
-    .line 2217
     iget-object v3, p0, Lcom/android/server/accessibility/SamsungTouchExplorer$PerformLongPressDelayed;->this$0:Lcom/android/server/accessibility/SamsungTouchExplorer;
 
     iget v4, p0, Lcom/android/server/accessibility/SamsungTouchExplorer$PerformLongPressDelayed;->mPolicyFlags:I
@@ -305,7 +277,6 @@
     # invokes: Lcom/android/server/accessibility/SamsungTouchExplorer;->sendHoverExitAndTouchExplorationGestureEndIfNeeded(I)V
     invoke-static {v3, v4}, Lcom/android/server/accessibility/SamsungTouchExplorer;->access$3400(Lcom/android/server/accessibility/SamsungTouchExplorer;I)V
 
-    .line 2219
     iget-object v3, p0, Lcom/android/server/accessibility/SamsungTouchExplorer$PerformLongPressDelayed;->this$0:Lcom/android/server/accessibility/SamsungTouchExplorer;
 
     const/4 v4, 0x4
@@ -313,7 +284,6 @@
     # setter for: Lcom/android/server/accessibility/SamsungTouchExplorer;->mCurrentState:I
     invoke-static {v3, v4}, Lcom/android/server/accessibility/SamsungTouchExplorer;->access$3502(Lcom/android/server/accessibility/SamsungTouchExplorer;I)I
 
-    .line 2220
     iget-object v3, p0, Lcom/android/server/accessibility/SamsungTouchExplorer$PerformLongPressDelayed;->this$0:Lcom/android/server/accessibility/SamsungTouchExplorer;
 
     iget-object v4, p0, Lcom/android/server/accessibility/SamsungTouchExplorer$PerformLongPressDelayed;->mEvent:Landroid/view/MotionEvent;
@@ -323,7 +293,6 @@
     # invokes: Lcom/android/server/accessibility/SamsungTouchExplorer;->sendDownForAllNotInjectedPointers(Landroid/view/MotionEvent;I)V
     invoke-static {v3, v4, v5}, Lcom/android/server/accessibility/SamsungTouchExplorer;->access$3600(Lcom/android/server/accessibility/SamsungTouchExplorer;Landroid/view/MotionEvent;I)V
 
-    .line 2222
     iget-object v3, p0, Lcom/android/server/accessibility/SamsungTouchExplorer$PerformLongPressDelayed;->this$0:Lcom/android/server/accessibility/SamsungTouchExplorer;
 
     # getter for: Lcom/android/server/accessibility/SamsungTouchExplorer;->mHandler:Landroid/os/Handler;
@@ -343,7 +312,6 @@
 
     invoke-virtual {v3, v4, v6, v7}, Landroid/os/Handler;->postDelayed(Ljava/lang/Runnable;J)Z
 
-    .line 2229
     invoke-direct {p0}, Lcom/android/server/accessibility/SamsungTouchExplorer$PerformLongPressDelayed;->clear()V
 
     goto :goto_0

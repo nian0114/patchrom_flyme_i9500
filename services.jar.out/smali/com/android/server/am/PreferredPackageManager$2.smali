@@ -28,7 +28,6 @@
     .locals 0
 
     .prologue
-    .line 571
     iput-object p1, p0, Lcom/android/server/am/PreferredPackageManager$2;->this$0:Lcom/android/server/am/PreferredPackageManager;
 
     iput-object p2, p0, Lcom/android/server/am/PreferredPackageManager$2;->val$resumedPkgName:Ljava/lang/String;
@@ -44,7 +43,6 @@
     .locals 6
 
     .prologue
-    .line 574
     iget-object v2, p0, Lcom/android/server/am/PreferredPackageManager$2;->this$0:Lcom/android/server/am/PreferredPackageManager;
 
     # getter for: Lcom/android/server/am/PreferredPackageManager;->mLowMemState:Z
@@ -54,7 +52,6 @@
 
     if-eqz v2, :cond_2
 
-    .line 575
     sget-boolean v2, Lcom/android/server/am/PreferredPackageManager;->DEBUG:Z
 
     if-eqz v2, :cond_0
@@ -65,7 +62,6 @@
 
     invoke-static {v2, v3}, Landroid/util/Slog;->secD(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 576
     :cond_0
     sget-boolean v2, Lcom/android/server/am/PreferredPackageManager;->DEBUG_LOGFILE_ENABLE:Z
 
@@ -77,12 +73,10 @@
 
     invoke-virtual {v2, v3}, Lcom/android/server/am/PreferredPackageManager;->recordLog(Ljava/lang/String;)V
 
-    .line 591
     :cond_1
     :goto_0
     return-void
 
-    .line 579
     :cond_2
     iget-object v2, p0, Lcom/android/server/am/PreferredPackageManager$2;->this$0:Lcom/android/server/am/PreferredPackageManager;
 
@@ -93,7 +87,6 @@
 
     if-eqz v2, :cond_5
 
-    .line 581
     sget-boolean v2, Lcom/android/server/am/PreferredPackageManager;->DEBUG:Z
 
     if-eqz v2, :cond_3
@@ -127,7 +120,6 @@
 
     invoke-static {v2, v3}, Landroid/util/Slog;->secD(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 582
     :cond_3
     sget-boolean v2, Lcom/android/server/am/PreferredPackageManager;->DEBUG_LOGFILE_ENABLE:Z
 
@@ -162,7 +154,6 @@
 
     invoke-virtual {v2, v3}, Lcom/android/server/am/PreferredPackageManager;->recordLog(Ljava/lang/String;)V
 
-    .line 583
     :cond_4
     iget-object v2, p0, Lcom/android/server/am/PreferredPackageManager$2;->this$0:Lcom/android/server/am/PreferredPackageManager;
 
@@ -177,7 +168,6 @@
 
     goto :goto_0
 
-    .line 585
     :cond_5
     iget-object v2, p0, Lcom/android/server/am/PreferredPackageManager$2;->this$0:Lcom/android/server/am/PreferredPackageManager;
 
@@ -192,13 +182,11 @@
 
     move-result-object v1
 
-    .line 586
     .local v1, "msg":Landroid/os/Message;
     new-instance v0, Landroid/os/Bundle;
 
     invoke-direct {v0}, Landroid/os/Bundle;-><init>()V
 
-    .line 587
     .local v0, "b":Landroid/os/Bundle;
     const-string v2, "name"
 
@@ -206,10 +194,8 @@
 
     invoke-virtual {v0, v2, v3}, Landroid/os/Bundle;->putString(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 588
     invoke-virtual {v1, v0}, Landroid/os/Message;->setData(Landroid/os/Bundle;)V
 
-    .line 589
     iget-object v2, p0, Lcom/android/server/am/PreferredPackageManager$2;->this$0:Lcom/android/server/am/PreferredPackageManager;
 
     # getter for: Lcom/android/server/am/PreferredPackageManager;->mHandler:Lcom/android/server/am/PreferredPackageManager$PreferredPackageHandler;

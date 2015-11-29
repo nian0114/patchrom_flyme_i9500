@@ -191,12 +191,10 @@
     .prologue
     const/4 v2, 0x0
 
-    .line 114
     const-string v0, "RCPManagerService"
 
     sput-object v0, Lcom/android/server/RCPManagerService;->TAG:Ljava/lang/String;
 
-    .line 115
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -213,7 +211,7 @@
 
     move-result-object v0
 
-    const-string/jumbo v1, "system"
+    const-string v1, "system"
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -225,7 +223,7 @@
 
     move-result-object v0
 
-    const-string/jumbo v1, "users"
+    const-string v1, "users"
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -237,7 +235,6 @@
 
     sput-object v0, Lcom/android/server/RCPManagerService;->USER_INFO_DIR:Ljava/lang/String;
 
-    .line 151
     new-instance v0, Ljava/lang/Integer;
 
     const/4 v1, 0x0
@@ -246,10 +243,8 @@
 
     sput-object v0, Lcom/android/server/RCPManagerService;->OWNER_ID:Ljava/lang/Integer;
 
-    .line 152
     sput-object v2, Lcom/android/server/RCPManagerService;->sContext:Landroid/content/Context;
 
-    .line 200
     sput-object v2, Lcom/android/server/RCPManagerService;->kioskAllowedApps:Ljava/util/ArrayList;
 
     return-void
@@ -262,120 +257,99 @@
     .prologue
     const/4 v12, 0x0
 
-    .line 444
     invoke-direct {p0}, Landroid/os/IRCPManager$Stub;-><init>()V
 
-    .line 144
     new-instance v8, Ljava/util/HashMap;
 
     invoke-direct {v8}, Ljava/util/HashMap;-><init>()V
 
     iput-object v8, p0, Lcom/android/server/RCPManagerService;->mBridgeProviderUserMap:Ljava/util/HashMap;
 
-    .line 145
     new-instance v8, Ljava/util/HashMap;
 
     invoke-direct {v8}, Ljava/util/HashMap;-><init>()V
 
     iput-object v8, p0, Lcom/android/server/RCPManagerService;->mBridgeSyncUserMap:Ljava/util/HashMap;
 
-    .line 146
     new-instance v8, Ljava/util/HashMap;
 
     invoke-direct {v8}, Ljava/util/HashMap;-><init>()V
 
     iput-object v8, p0, Lcom/android/server/RCPManagerService;->mRCPGlobalContactsDirMap:Ljava/util/HashMap;
 
-    .line 147
     new-instance v8, Ljava/util/HashMap;
 
     invoke-direct {v8}, Ljava/util/HashMap;-><init>()V
 
     iput-object v8, p0, Lcom/android/server/RCPManagerService;->mBridgeCommandExeUserMap:Ljava/util/HashMap;
 
-    .line 148
     new-instance v8, Ljava/util/HashMap;
 
     invoke-direct {v8}, Ljava/util/HashMap;-><init>()V
 
     iput-object v8, p0, Lcom/android/server/RCPManagerService;->mRCPInterfaceMap:Ljava/util/HashMap;
 
-    .line 149
     new-instance v8, Ljava/util/ArrayList;
 
     invoke-direct {v8}, Ljava/util/ArrayList;-><init>()V
 
     iput-object v8, p0, Lcom/android/server/RCPManagerService;->mRCPProxyAliveList:Ljava/util/List;
 
-    .line 150
     iput-object v12, p0, Lcom/android/server/RCPManagerService;->mRCPProxyScanSP:Landroid/content/SharedPreferences;
 
-    .line 165
     const/4 v8, 0x0
 
     iput v8, p0, Lcom/android/server/RCPManagerService;->currentUserId:I
 
-    .line 189
     new-instance v8, Ljava/util/HashMap;
 
     invoke-direct {v8}, Ljava/util/HashMap;-><init>()V
 
     iput-object v8, p0, Lcom/android/server/RCPManagerService;->mCommandQueue:Ljava/util/Map;
 
-    .line 2265
     new-instance v8, Ljava/util/ArrayList;
 
     invoke-direct {v8}, Ljava/util/ArrayList;-><init>()V
 
     iput-object v8, p0, Lcom/android/server/RCPManagerService;->mExchangeDataInfos:Ljava/util/List;
 
-    .line 446
     iput-object p1, p0, Lcom/android/server/RCPManagerService;->mContext:Landroid/content/Context;
 
-    .line 447
     sput-object p1, Lcom/android/server/RCPManagerService;->sContext:Landroid/content/Context;
 
-    .line 448
     sget-object v8, Lcom/android/server/RCPManagerService;->TAG:Ljava/lang/String;
 
     const-string v9, "RCPManagerService() registering receiver for package added and user switch"
 
     invoke-static {v8, v9}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 450
     new-instance v2, Landroid/content/IntentFilter;
 
     invoke-direct {v2}, Landroid/content/IntentFilter;-><init>()V
 
-    .line 451
     .local v2, "filter":Landroid/content/IntentFilter;
     const-string v8, "android.intent.action.PACKAGE_ADDED"
 
     invoke-virtual {v2, v8}, Landroid/content/IntentFilter;->addAction(Ljava/lang/String;)V
 
-    .line 452
     const-string v8, "android.intent.action.PACKAGE_REMOVED"
 
     invoke-virtual {v2, v8}, Landroid/content/IntentFilter;->addAction(Ljava/lang/String;)V
 
-    .line 453
-    const-string/jumbo v8, "package"
+    const-string v8, "package"
 
     invoke-virtual {v2, v8}, Landroid/content/IntentFilter;->addDataScheme(Ljava/lang/String;)V
 
-    .line 454
     new-instance v8, Lcom/android/server/RCPManagerService$PackageReceiver;
 
     invoke-direct {v8, p0}, Lcom/android/server/RCPManagerService$PackageReceiver;-><init>(Lcom/android/server/RCPManagerService;)V
 
     iput-object v8, p0, Lcom/android/server/RCPManagerService;->receiver:Lcom/android/server/RCPManagerService$PackageReceiver;
 
-    .line 455
     iget-object v8, p0, Lcom/android/server/RCPManagerService;->receiver:Lcom/android/server/RCPManagerService$PackageReceiver;
 
     invoke-virtual {p1, v8, v2}, Landroid/content/Context;->registerReceiver(Landroid/content/BroadcastReceiver;Landroid/content/IntentFilter;)Landroid/content/Intent;
 
-    .line 458
     iget-object v8, p0, Lcom/android/server/RCPManagerService;->mContext:Landroid/content/Context;
 
     new-instance v9, Lcom/android/server/RCPManagerService$BootReceiver;
@@ -390,151 +364,125 @@
 
     invoke-virtual {v8, v9, v10}, Landroid/content/Context;->registerReceiver(Landroid/content/BroadcastReceiver;Landroid/content/IntentFilter;)Landroid/content/Intent;
 
-    .line 461
     new-instance v3, Landroid/content/IntentFilter;
 
     invoke-direct {v3}, Landroid/content/IntentFilter;-><init>()V
 
-    .line 462
     .local v3, "filterClipboard":Landroid/content/IntentFilter;
     const-string v8, "com.samsung.knox.clipboard.clipremoved"
 
     invoke-virtual {v3, v8}, Landroid/content/IntentFilter;->addAction(Ljava/lang/String;)V
 
-    .line 463
     const-string v8, "com.samsung.knox.clipboard.clipscleared"
 
     invoke-virtual {v3, v8}, Landroid/content/IntentFilter;->addAction(Ljava/lang/String;)V
 
-    .line 464
     new-instance v8, Lcom/android/server/RCPManagerService$ClipboardReceiver;
 
     invoke-direct {v8, p0}, Lcom/android/server/RCPManagerService$ClipboardReceiver;-><init>(Lcom/android/server/RCPManagerService;)V
 
     invoke-virtual {p1, v8, v3}, Landroid/content/Context;->registerReceiver(Landroid/content/BroadcastReceiver;Landroid/content/IntentFilter;)Landroid/content/Intent;
 
-    .line 466
     new-instance v5, Landroid/content/IntentFilter;
 
     invoke-direct {v5}, Landroid/content/IntentFilter;-><init>()V
 
-    .line 467
     .local v5, "filterModeSwitcher":Landroid/content/IntentFilter;
     const-string v8, "android.intent.action.USER_ADDED"
 
     invoke-virtual {v5, v8}, Landroid/content/IntentFilter;->addAction(Ljava/lang/String;)V
 
-    .line 468
     const-string v8, "android.intent.action.USER_REMOVED"
 
     invoke-virtual {v5, v8}, Landroid/content/IntentFilter;->addAction(Ljava/lang/String;)V
 
-    .line 469
     const-string v8, "android.intent.action.USER_STARTED"
 
     invoke-virtual {v5, v8}, Landroid/content/IntentFilter;->addAction(Ljava/lang/String;)V
 
-    .line 470
     const-string v8, "android.intent.action.MANAGED_PROFILE_ADDED"
 
     invoke-virtual {v5, v8}, Landroid/content/IntentFilter;->addAction(Ljava/lang/String;)V
 
-    .line 471
     const-string v8, "com.samsung.knox.fmc_incoming_call"
 
     invoke-virtual {v5, v8}, Landroid/content/IntentFilter;->addAction(Ljava/lang/String;)V
 
-    .line 472
     new-instance v8, Lcom/android/server/RCPManagerService$ModeSwitcherReceiver;
 
     invoke-direct {v8, p0, v12}, Lcom/android/server/RCPManagerService$ModeSwitcherReceiver;-><init>(Lcom/android/server/RCPManagerService;Lcom/android/server/RCPManagerService$1;)V
 
     iput-object v8, p0, Lcom/android/server/RCPManagerService;->modeSwitchReceiver:Lcom/android/server/RCPManagerService$ModeSwitcherReceiver;
 
-    .line 473
     iget-object v8, p0, Lcom/android/server/RCPManagerService;->modeSwitchReceiver:Lcom/android/server/RCPManagerService$ModeSwitcherReceiver;
 
     invoke-virtual {p1, v8, v5}, Landroid/content/Context;->registerReceiver(Landroid/content/BroadcastReceiver;Landroid/content/IntentFilter;)Landroid/content/Intent;
 
-    .line 484
     new-instance v4, Landroid/content/IntentFilter;
 
     invoke-direct {v4}, Landroid/content/IntentFilter;-><init>()V
 
-    .line 485
     .local v4, "filterEmergency":Landroid/content/IntentFilter;
     const-string v8, "android.intent.action.EMERGENCY_STATE_CHANGED"
 
     invoke-virtual {v4, v8}, Landroid/content/IntentFilter;->addAction(Ljava/lang/String;)V
 
-    .line 486
     new-instance v8, Lcom/android/server/RCPManagerService$EmergencyModeReceiver;
 
     invoke-direct {v8, p0}, Lcom/android/server/RCPManagerService$EmergencyModeReceiver;-><init>(Lcom/android/server/RCPManagerService;)V
 
     iput-object v8, p0, Lcom/android/server/RCPManagerService;->mEmergencyModeReceiver:Lcom/android/server/RCPManagerService$EmergencyModeReceiver;
 
-    .line 487
     iget-object v8, p0, Lcom/android/server/RCPManagerService;->mEmergencyModeReceiver:Lcom/android/server/RCPManagerService$EmergencyModeReceiver;
 
     invoke-virtual {p1, v8, v4}, Landroid/content/Context;->registerReceiver(Landroid/content/BroadcastReceiver;Landroid/content/IntentFilter;)Landroid/content/Intent;
 
-    .line 490
     new-instance v0, Landroid/content/IntentFilter;
 
     invoke-direct {v0}, Landroid/content/IntentFilter;-><init>()V
 
-    .line 491
     .local v0, "changeInKnoxLayout":Landroid/content/IntentFilter;
     const-string v8, "com.sec.knox.action.KNOX_LAYOUT_CHANGED"
 
     invoke-virtual {v0, v8}, Landroid/content/IntentFilter;->addAction(Ljava/lang/String;)V
 
-    .line 492
     new-instance v8, Lcom/android/server/RCPManagerService$KnoxLayoutChangeReceiver;
 
     invoke-direct {v8, p0}, Lcom/android/server/RCPManagerService$KnoxLayoutChangeReceiver;-><init>(Lcom/android/server/RCPManagerService;)V
 
     iput-object v8, p0, Lcom/android/server/RCPManagerService;->mKnoxLayoutChangeReceiver:Lcom/android/server/RCPManagerService$KnoxLayoutChangeReceiver;
 
-    .line 493
     iget-object v8, p0, Lcom/android/server/RCPManagerService;->mKnoxLayoutChangeReceiver:Lcom/android/server/RCPManagerService$KnoxLayoutChangeReceiver;
 
     invoke-virtual {p1, v8, v0}, Landroid/content/Context;->registerReceiver(Landroid/content/BroadcastReceiver;Landroid/content/IntentFilter;)Landroid/content/Intent;
 
-    .line 495
     new-instance v7, Landroid/content/IntentFilter;
 
     invoke-direct {v7}, Landroid/content/IntentFilter;-><init>()V
 
-    .line 496
     .local v7, "personaRemovalTrigger":Landroid/content/IntentFilter;
     const-string v8, "com.sec.knox.container.action.containerremovalstarted"
 
     invoke-virtual {v7, v8}, Landroid/content/IntentFilter;->addAction(Ljava/lang/String;)V
 
-    .line 497
     new-instance v8, Lcom/android/server/RCPManagerService$PersonaRemovalReceiver;
 
     invoke-direct {v8, p0}, Lcom/android/server/RCPManagerService$PersonaRemovalReceiver;-><init>(Lcom/android/server/RCPManagerService;)V
 
     iput-object v8, p0, Lcom/android/server/RCPManagerService;->mPersonaRemovalReceiver:Lcom/android/server/RCPManagerService$PersonaRemovalReceiver;
 
-    .line 498
     iget-object v8, p0, Lcom/android/server/RCPManagerService;->mPersonaRemovalReceiver:Lcom/android/server/RCPManagerService$PersonaRemovalReceiver;
 
     const-string v9, "com.samsung.container.OBSERVER"
 
     invoke-virtual {p1, v8, v7, v9, v12}, Landroid/content/Context;->registerReceiver(Landroid/content/BroadcastReceiver;Landroid/content/IntentFilter;Ljava/lang/String;Landroid/os/Handler;)Landroid/content/Intent;
 
-    .line 500
     sget-object v8, Lcom/android/server/RCPManagerService;->TAG:Ljava/lang/String;
 
     const-string v9, " registered the receiver "
 
     invoke-static {v8, v9}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 506
     :try_start_0
     invoke-static {}, Landroid/app/ActivityManagerNative;->getDefault()Landroid/app/IActivityManager;
 
@@ -548,11 +496,10 @@
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 563
     :goto_0
     iget-object v8, p0, Lcom/android/server/RCPManagerService;->mContext:Landroid/content/Context;
 
-    const-string/jumbo v9, "persona"
+    const-string v9, "persona"
 
     invoke-virtual {v8, v9}, Landroid/content/Context;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
 
@@ -560,7 +507,6 @@
 
     check-cast v6, Landroid/os/PersonaManager;
 
-    .line 568
     .local v6, "mPersona":Landroid/os/PersonaManager;
     :try_start_1
     new-instance v8, Lcom/android/server/RCPManagerService$2;
@@ -571,31 +517,25 @@
     :try_end_1
     .catch Ljava/lang/Exception; {:try_start_1 .. :try_end_1} :catch_1
 
-    .line 643
     :goto_1
     invoke-direct {p0}, Lcom/android/server/RCPManagerService;->registerKnoxModeChangeObserver()V
 
-    .line 645
     return-void
 
-    .line 559
     .end local v6    # "mPersona":Landroid/os/PersonaManager;
     :catch_0
     move-exception v1
 
-    .line 560
     .local v1, "e":Ljava/lang/Exception;
     invoke-virtual {v1}, Ljava/lang/Exception;->printStackTrace()V
 
     goto :goto_0
 
-    .line 638
     .end local v1    # "e":Ljava/lang/Exception;
     .restart local v6    # "mPersona":Landroid/os/PersonaManager;
     :catch_1
     move-exception v1
 
-    .line 639
     .restart local v1    # "e":Ljava/lang/Exception;
     sget-object v8, Lcom/android/server/RCPManagerService;->TAG:Ljava/lang/String;
 
@@ -611,7 +551,6 @@
     .param p0, "x0"    # Ljava/lang/String;
 
     .prologue
-    .line 112
     invoke-static {p0}, Lcom/android/server/RCPManagerService;->checkCallerPermissionFor(Ljava/lang/String;)I
 
     move-result v0
@@ -624,7 +563,6 @@
     .param p0, "x0"    # Lcom/android/server/RCPManagerService;
 
     .prologue
-    .line 112
     iget-object v0, p0, Lcom/android/server/RCPManagerService;->mRCPProxyScanSP:Landroid/content/SharedPreferences;
 
     return-object v0
@@ -636,7 +574,6 @@
     .param p1, "x1"    # Landroid/content/SharedPreferences;
 
     .prologue
-    .line 112
     iput-object p1, p0, Lcom/android/server/RCPManagerService;->mRCPProxyScanSP:Landroid/content/SharedPreferences;
 
     return-object p1
@@ -647,7 +584,6 @@
     .param p0, "x0"    # Lcom/android/server/RCPManagerService;
 
     .prologue
-    .line 112
     invoke-direct {p0}, Lcom/android/server/RCPManagerService;->getAllPersonas()[I
 
     move-result-object v0
@@ -660,7 +596,6 @@
     .param p0, "x0"    # Lcom/android/server/RCPManagerService;
 
     .prologue
-    .line 112
     iget-object v0, p0, Lcom/android/server/RCPManagerService;->mRCPProxyAliveList:Ljava/util/List;
 
     return-object v0
@@ -672,7 +607,6 @@
     .param p1, "x1"    # I
 
     .prologue
-    .line 112
     invoke-direct {p0, p1}, Lcom/android/server/RCPManagerService;->unregisterProxy(I)V
 
     return-void
@@ -682,7 +616,6 @@
     .locals 1
 
     .prologue
-    .line 112
     sget-object v0, Lcom/android/server/RCPManagerService;->TAG:Ljava/lang/String;
 
     return-object v0
@@ -693,7 +626,6 @@
     .param p0, "x0"    # Lcom/android/server/RCPManagerService;
 
     .prologue
-    .line 112
     iget-object v0, p0, Lcom/android/server/RCPManagerService;->mBridgeCommandExeUserMap:Ljava/util/HashMap;
 
     return-object v0
@@ -704,7 +636,6 @@
     .param p0, "x0"    # Lcom/android/server/RCPManagerService;
 
     .prologue
-    .line 112
     iget-object v0, p0, Lcom/android/server/RCPManagerService;->mCommandQueue:Ljava/util/Map;
 
     return-object v0
@@ -717,7 +648,6 @@
     .param p2, "x2"    # I
 
     .prologue
-    .line 112
     invoke-direct {p0, p1, p2}, Lcom/android/server/RCPManagerService;->startKnoxModeSwitcher(Ljava/lang/String;I)V
 
     return-void
@@ -728,7 +658,6 @@
     .param p0, "x0"    # Lcom/android/server/RCPManagerService;
 
     .prologue
-    .line 112
     invoke-direct {p0}, Lcom/android/server/RCPManagerService;->updateKnoxInfo()V
 
     return-void
@@ -739,7 +668,6 @@
     .param p0, "x0"    # Lcom/android/server/RCPManagerService;
 
     .prologue
-    .line 112
     iget-object v0, p0, Lcom/android/server/RCPManagerService;->mBridgeSyncUserMap:Ljava/util/HashMap;
 
     return-object v0
@@ -751,7 +679,6 @@
     .param p1, "x1"    # I
 
     .prologue
-    .line 112
     invoke-direct {p0, p1}, Lcom/android/server/RCPManagerService;->getUserOrItsPersonasIds(I)[I
 
     move-result-object v0
@@ -763,7 +690,6 @@
     .locals 1
 
     .prologue
-    .line 112
     sget-object v0, Lcom/android/server/RCPManagerService;->OWNER_ID:Ljava/lang/Integer;
 
     return-object v0
@@ -774,10 +700,8 @@
     .param p0, "methodName"    # Ljava/lang/String;
 
     .prologue
-    .line 172
     const-string v1, "RCPManagerService"
 
-    .line 173
     .local v1, "serviceName":Ljava/lang/String;
     sget-object v2, Lcom/android/server/RCPManagerService;->sContext:Landroid/content/Context;
 
@@ -795,7 +719,6 @@
 
     if-eqz v2, :cond_0
 
-    .line 175
     new-instance v0, Ljava/lang/SecurityException;
 
     new-instance v2, Ljava/lang/StringBuilder;
@@ -862,14 +785,11 @@
 
     invoke-direct {v0, v2}, Ljava/lang/SecurityException;-><init>(Ljava/lang/String;)V
 
-    .line 182
     .local v0, "e":Ljava/lang/SecurityException;
     invoke-virtual {v0}, Ljava/lang/SecurityException;->printStackTrace()V
 
-    .line 183
     throw v0
 
-    .line 186
     .end local v0    # "e":Ljava/lang/SecurityException;
     :cond_0
     const/4 v2, 0x0
@@ -882,7 +802,6 @@
     .param p1, "f"    # Ljava/io/File;
 
     .prologue
-    .line 1807
     sget-object v4, Lcom/android/server/RCPManagerService;->TAG:Ljava/lang/String;
 
     new-instance v5, Ljava/lang/StringBuilder;
@@ -905,14 +824,12 @@
 
     invoke-static {v4, v5}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1809
     invoke-virtual {p1}, Ljava/io/File;->isDirectory()Z
 
     move-result v4
 
     if-eqz v4, :cond_0
 
-    .line 1810
     invoke-virtual {p1}, Ljava/io/File;->listFiles()[Ljava/io/File;
 
     move-result-object v0
@@ -929,16 +846,13 @@
 
     aget-object v1, v0, v2
 
-    .line 1811
     .local v1, "c":Ljava/io/File;
     invoke-direct {p0, v1}, Lcom/android/server/RCPManagerService;->delete(Ljava/io/File;)V
 
-    .line 1810
     add-int/lit8 v2, v2, 0x1
 
     goto :goto_0
 
-    .line 1813
     .end local v0    # "arr$":[Ljava/io/File;
     .end local v1    # "c":Ljava/io/File;
     .end local v2    # "i$":I
@@ -950,7 +864,6 @@
 
     if-nez v4, :cond_1
 
-    .line 1814
     sget-object v4, Lcom/android/server/RCPManagerService;->TAG:Ljava/lang/String;
 
     new-instance v5, Ljava/lang/StringBuilder;
@@ -973,7 +886,6 @@
 
     invoke-static {v4, v5}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1816
     :cond_1
     return-void
 .end method
@@ -984,7 +896,6 @@
     .param p2, "dest"    # Ljava/io/File;
 
     .prologue
-    .line 1819
     sget-object v4, Lcom/android/server/RCPManagerService;->TAG:Ljava/lang/String;
 
     new-instance v5, Ljava/lang/StringBuilder;
@@ -1021,23 +932,18 @@
 
     invoke-static {v4, v5}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1821
     const/4 v2, 0x0
 
-    .line 1822
     .local v2, "Result":Z
     const/4 v11, 0x0
 
-    .line 1823
     .local v11, "inputStream":Ljava/io/FileInputStream;
     const/4 v13, 0x0
 
-    .line 1826
     .local v13, "outputStream":Ljava/io/FileOutputStream;
     :try_start_0
     invoke-virtual/range {p2 .. p2}, Ljava/io/File;->createNewFile()Z
 
-    .line 1827
     new-instance v12, Ljava/io/FileInputStream;
 
     move-object/from16 v0, p1
@@ -1051,7 +957,6 @@
     .local v12, "inputStream":Ljava/io/FileInputStream;
     move-object v11, v12
 
-    .line 1841
     .end local v12    # "inputStream":Ljava/io/FileInputStream;
     .restart local v11    # "inputStream":Ljava/io/FileInputStream;
     :goto_0
@@ -1068,39 +973,32 @@
     .local v14, "outputStream":Ljava/io/FileOutputStream;
     move-object v13, v14
 
-    .line 1849
     .end local v14    # "outputStream":Ljava/io/FileOutputStream;
     .restart local v13    # "outputStream":Ljava/io/FileOutputStream;
     :goto_1
     const/4 v3, 0x0
 
-    .line 1850
     .local v3, "fcin":Ljava/nio/channels/FileChannel;
     const/4 v8, 0x0
 
-    .line 1852
     .local v8, "fcout":Ljava/nio/channels/FileChannel;
     if-eqz v11, :cond_0
 
     if-eqz v13, :cond_0
 
-    .line 1853
     :try_start_2
     invoke-virtual {v11}, Ljava/io/FileInputStream;->getChannel()Ljava/nio/channels/FileChannel;
 
     move-result-object v3
 
-    .line 1854
     invoke-virtual {v13}, Ljava/io/FileOutputStream;->getChannel()Ljava/nio/channels/FileChannel;
 
     move-result-object v8
 
-    .line 1855
     invoke-virtual {v3}, Ljava/nio/channels/FileChannel;->size()J
 
     move-result-wide v6
 
-    .line 1856
     .local v6, "lSize":J
     const-wide/16 v4, 0x0
 
@@ -1109,37 +1007,28 @@
     .catch Ljava/io/IOException; {:try_start_2 .. :try_end_2} :catch_4
     .catchall {:try_start_2 .. :try_end_2} :catchall_0
 
-    .line 1859
     .end local v6    # "lSize":J
     :cond_0
     const/4 v2, 0x1
 
-    .line 1867
     if-eqz v3, :cond_1
 
-    .line 1868
     :try_start_3
     invoke-virtual {v3}, Ljava/nio/channels/FileChannel;->close()V
 
-    .line 1870
     :cond_1
     if-eqz v8, :cond_2
 
-    .line 1871
     invoke-virtual {v8}, Ljava/nio/channels/FileChannel;->close()V
 
-    .line 1873
     :cond_2
     if-eqz v11, :cond_3
 
-    .line 1874
     invoke-virtual {v11}, Ljava/io/FileInputStream;->close()V
 
-    .line 1876
     :cond_3
     if-eqz v13, :cond_4
 
-    .line 1877
     invoke-virtual {v13}, Ljava/io/FileOutputStream;->close()V
     :try_end_3
     .catch Ljava/io/IOException; {:try_start_3 .. :try_end_3} :catch_3
@@ -1148,7 +1037,6 @@
     :goto_2
     move v9, v2
 
-    .line 1885
     .end local v2    # "Result":Z
     .end local v3    # "fcin":Ljava/nio/channels/FileChannel;
     .end local v8    # "fcout":Ljava/nio/channels/FileChannel;
@@ -1156,13 +1044,11 @@
     :goto_3
     return v9
 
-    .line 1829
     .end local v9    # "Result":I
     .restart local v2    # "Result":Z
     :catch_0
     move-exception v10
 
-    .line 1830
     .local v10, "e":Ljava/io/FileNotFoundException;
     sget-object v4, Lcom/android/server/RCPManagerService;->TAG:Ljava/lang/String;
 
@@ -1190,7 +1076,6 @@
 
     invoke-static {v4, v5}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1833
     sget-object v4, Lcom/android/server/RCPManagerService;->TAG:Ljava/lang/String;
 
     new-instance v5, Ljava/lang/StringBuilder;
@@ -1229,28 +1114,23 @@
 
     move v9, v2
 
-    .line 1835
     .restart local v9    # "Result":I
     goto :goto_3
 
-    .line 1836
     .end local v9    # "Result":I
     .end local v10    # "e":Ljava/io/FileNotFoundException;
     :catch_1
     move-exception v10
 
-    .line 1837
     .local v10, "e":Ljava/io/IOException;
     invoke-virtual {v10}, Ljava/io/IOException;->printStackTrace()V
 
     goto :goto_0
 
-    .line 1842
     .end local v10    # "e":Ljava/io/IOException;
     :catch_2
     move-exception v10
 
-    .line 1843
     .local v10, "e":Ljava/io/FileNotFoundException;
     sget-object v4, Lcom/android/server/RCPManagerService;->TAG:Ljava/lang/String;
 
@@ -1278,7 +1158,6 @@
 
     invoke-static {v4, v5}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1846
     sget-object v4, Lcom/android/server/RCPManagerService;->TAG:Ljava/lang/String;
 
     new-instance v5, Ljava/lang/StringBuilder;
@@ -1317,14 +1196,12 @@
 
     goto/16 :goto_1
 
-    .line 1879
     .end local v10    # "e":Ljava/io/FileNotFoundException;
     .restart local v3    # "fcin":Ljava/nio/channels/FileChannel;
     .restart local v8    # "fcout":Ljava/nio/channels/FileChannel;
     :catch_3
     move-exception v10
 
-    .line 1880
     .local v10, "e":Ljava/io/IOException;
     sget-object v4, Lcom/android/server/RCPManagerService;->TAG:Ljava/lang/String;
 
@@ -1352,17 +1229,14 @@
 
     invoke-static {v4, v5}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1881
     invoke-virtual {v10}, Ljava/io/IOException;->printStackTrace()V
 
     goto/16 :goto_2
 
-    .line 1860
     .end local v10    # "e":Ljava/io/IOException;
     :catch_4
     move-exception v10
 
-    .line 1861
     .restart local v10    # "e":Ljava/io/IOException;
     :try_start_4
     sget-object v4, Lcom/android/server/RCPManagerService;->TAG:Ljava/lang/String;
@@ -1391,7 +1265,6 @@
 
     invoke-static {v4, v5}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1862
     sget-object v4, Lcom/android/server/RCPManagerService;->TAG:Ljava/lang/String;
 
     new-instance v5, Ljava/lang/StringBuilder;
@@ -1430,46 +1303,35 @@
     :try_end_4
     .catchall {:try_start_4 .. :try_end_4} :catchall_0
 
-    .line 1864
     const/4 v2, 0x0
 
-    .line 1867
     if-eqz v3, :cond_5
 
-    .line 1868
     :try_start_5
     invoke-virtual {v3}, Ljava/nio/channels/FileChannel;->close()V
 
-    .line 1870
     :cond_5
     if-eqz v8, :cond_6
 
-    .line 1871
     invoke-virtual {v8}, Ljava/nio/channels/FileChannel;->close()V
 
-    .line 1873
     :cond_6
     if-eqz v11, :cond_7
 
-    .line 1874
     invoke-virtual {v11}, Ljava/io/FileInputStream;->close()V
 
-    .line 1876
     :cond_7
     if-eqz v13, :cond_4
 
-    .line 1877
     invoke-virtual {v13}, Ljava/io/FileOutputStream;->close()V
     :try_end_5
     .catch Ljava/io/IOException; {:try_start_5 .. :try_end_5} :catch_5
 
     goto/16 :goto_2
 
-    .line 1879
     :catch_5
     move-exception v10
 
-    .line 1880
     sget-object v4, Lcom/android/server/RCPManagerService;->TAG:Ljava/lang/String;
 
     new-instance v5, Ljava/lang/StringBuilder;
@@ -1496,56 +1358,43 @@
 
     invoke-static {v4, v5}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1881
     invoke-virtual {v10}, Ljava/io/IOException;->printStackTrace()V
 
     goto/16 :goto_2
 
-    .line 1866
     .end local v10    # "e":Ljava/io/IOException;
     :catchall_0
     move-exception v4
 
-    .line 1867
     if-eqz v3, :cond_8
 
-    .line 1868
     :try_start_6
     invoke-virtual {v3}, Ljava/nio/channels/FileChannel;->close()V
 
-    .line 1870
     :cond_8
     if-eqz v8, :cond_9
 
-    .line 1871
     invoke-virtual {v8}, Ljava/nio/channels/FileChannel;->close()V
 
-    .line 1873
     :cond_9
     if-eqz v11, :cond_a
 
-    .line 1874
     invoke-virtual {v11}, Ljava/io/FileInputStream;->close()V
 
-    .line 1876
     :cond_a
     if-eqz v13, :cond_b
 
-    .line 1877
     invoke-virtual {v13}, Ljava/io/FileOutputStream;->close()V
     :try_end_6
     .catch Ljava/io/IOException; {:try_start_6 .. :try_end_6} :catch_6
 
-    .line 1882
     :cond_b
     :goto_4
     throw v4
 
-    .line 1879
     :catch_6
     move-exception v10
 
-    .line 1880
     .restart local v10    # "e":Ljava/io/IOException;
     sget-object v5, Lcom/android/server/RCPManagerService;->TAG:Ljava/lang/String;
 
@@ -1573,7 +1422,6 @@
 
     invoke-static {v5, v15}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1881
     invoke-virtual {v10}, Ljava/io/IOException;->printStackTrace()V
 
     goto :goto_4
@@ -1585,11 +1433,10 @@
     .prologue
     const/4 v8, 0x0
 
-    .line 2019
     :try_start_0
     iget-object v9, p0, Lcom/android/server/RCPManagerService;->mContext:Landroid/content/Context;
 
-    const-string/jumbo v10, "persona"
+    const-string v10, "persona"
 
     invoke-virtual {v9, v10}, Landroid/content/Context;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
 
@@ -1597,7 +1444,6 @@
 
     check-cast v5, Landroid/os/PersonaManager;
 
-    .line 2021
     .local v5, "mPersonaManager":Landroid/os/PersonaManager;
     const/4 v9, 0x0
 
@@ -1605,7 +1451,6 @@
 
     move-result-object v7
 
-    .line 2023
     .local v7, "personaInfos":Ljava/util/List;, "Ljava/util/List<Landroid/content/pm/PersonaInfo;>;"
     if-eqz v7, :cond_0
 
@@ -1615,7 +1460,6 @@
 
     if-eqz v9, :cond_1
 
-    .line 2024
     :cond_0
     sget-object v9, Lcom/android/server/RCPManagerService;->TAG:Ljava/lang/String;
 
@@ -1625,19 +1469,16 @@
 
     move-object v4, v8
 
-    .line 2041
     .end local v5    # "mPersonaManager":Landroid/os/PersonaManager;
     .end local v7    # "personaInfos":Ljava/util/List;, "Ljava/util/List<Landroid/content/pm/PersonaInfo;>;"
     :goto_0
     return-object v4
 
-    .line 2029
     .restart local v5    # "mPersonaManager":Landroid/os/PersonaManager;
     .restart local v7    # "personaInfos":Ljava/util/List;, "Ljava/util/List<Landroid/content/pm/PersonaInfo;>;"
     :cond_1
     const/4 v1, 0x0
 
-    .line 2030
     .local v1, "i":I
     invoke-interface {v7}, Ljava/util/List;->size()I
 
@@ -1645,7 +1486,6 @@
 
     new-array v4, v9, [I
 
-    .line 2032
     .local v4, "ids":[I
     invoke-interface {v7}, Ljava/util/List;->iterator()Ljava/util/Iterator;
 
@@ -1669,7 +1509,6 @@
 
     check-cast v6, Landroid/content/pm/PersonaInfo;
 
-    .line 2033
     .local v6, "personaInfo":Landroid/content/pm/PersonaInfo;
     add-int/lit8 v1, v2, 0x1
 
@@ -1681,12 +1520,10 @@
 
     move v2, v1
 
-    .line 2034
     .end local v1    # "i":I
     .restart local v2    # "i":I
     goto :goto_1
 
-    .line 2035
     .end local v6    # "personaInfo":Landroid/content/pm/PersonaInfo;
     :cond_2
     sget-object v9, Lcom/android/server/RCPManagerService;->TAG:Ljava/lang/String;
@@ -1715,7 +1552,6 @@
 
     goto :goto_0
 
-    .line 2037
     .end local v2    # "i":I
     .end local v3    # "i$":Ljava/util/Iterator;
     .end local v4    # "ids":[I
@@ -1724,7 +1560,6 @@
     :catch_0
     move-exception v0
 
-    .line 2038
     .local v0, "e":Ljava/lang/Exception;
     sget-object v9, Lcom/android/server/RCPManagerService;->TAG:Ljava/lang/String;
 
@@ -1732,12 +1567,10 @@
 
     invoke-static {v9, v10}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 2039
     invoke-virtual {v0}, Ljava/lang/Exception;->printStackTrace()V
 
     move-object v4, v8
 
-    .line 2041
     goto :goto_0
 .end method
 
@@ -1754,10 +1587,9 @@
     .end annotation
 
     .prologue
-    .line 807
     iget-object v7, p0, Lcom/android/server/RCPManagerService;->mContext:Landroid/content/Context;
 
-    const-string/jumbo v8, "user"
+    const-string v8, "user"
 
     invoke-virtual {v7, v8}, Landroid/content/Context;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
 
@@ -1765,7 +1597,6 @@
 
     check-cast v3, Landroid/os/UserManager;
 
-    .line 809
     .local v3, "mUserManager":Landroid/os/UserManager;
     iget-object v7, p0, Lcom/android/server/RCPManagerService;->mContext:Landroid/content/Context;
 
@@ -1777,11 +1608,10 @@
 
     check-cast v1, Landroid/app/ActivityManager;
 
-    .line 811
     .local v1, "mActMngr":Landroid/app/ActivityManager;
     iget-object v7, p0, Lcom/android/server/RCPManagerService;->mContext:Landroid/content/Context;
 
-    const-string/jumbo v8, "persona"
+    const-string v8, "persona"
 
     invoke-virtual {v7, v8}, Landroid/content/Context;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
 
@@ -1789,19 +1619,16 @@
 
     check-cast v2, Landroid/os/PersonaManager;
 
-    .line 814
     .local v2, "mPersona":Landroid/os/PersonaManager;
     invoke-virtual {v3}, Landroid/os/UserManager;->getUsers()Ljava/util/List;
 
     move-result-object v6
 
-    .line 830
     .local v6, "userList":Ljava/util/List;, "Ljava/util/List<Landroid/content/pm/UserInfo;>;"
     new-instance v4, Ljava/util/ArrayList;
 
     invoke-direct {v4}, Ljava/util/ArrayList;-><init>()V
 
-    .line 831
     .local v4, "persona_list":Ljava/util/List;, "Ljava/util/List<Ljava/lang/String;>;"
     invoke-interface {v6}, Ljava/util/List;->iterator()Ljava/util/Iterator;
 
@@ -1821,7 +1648,6 @@
 
     check-cast v5, Landroid/content/pm/UserInfo;
 
-    .line 833
     .local v5, "user":Landroid/content/pm/UserInfo;
     iget v7, v5, Landroid/content/pm/UserInfo;->id:I
 
@@ -1833,7 +1659,6 @@
 
     goto :goto_0
 
-    .line 836
     .end local v5    # "user":Landroid/content/pm/UserInfo;
     :cond_0
     return-object v4
@@ -1853,12 +1678,10 @@
     .end annotation
 
     .prologue
-    .line 1580
     new-instance v1, Ljava/util/ArrayList;
 
     invoke-direct {v1}, Ljava/util/ArrayList;-><init>()V
 
-    .line 1581
     .local v1, "idList":Ljava/util/ArrayList;, "Ljava/util/ArrayList<Ljava/lang/Integer;>;"
     sget-object v7, Lcom/android/server/RCPManagerService;->TAG:Ljava/lang/String;
 
@@ -1882,14 +1705,12 @@
 
     invoke-static {v7, v8}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1582
-    const-string/jumbo v7, "persona"
+    const-string v7, "persona"
 
     invoke-static {v7}, Landroid/os/ServiceManager;->getService(Ljava/lang/String;)Landroid/os/IBinder;
 
     move-result-object v0
 
-    .line 1583
     .local v0, "b":Landroid/os/IBinder;
     invoke-static {v0}, Landroid/os/IPersonaManager$Stub;->asInterface(Landroid/os/IBinder;)Landroid/os/IPersonaManager;
 
@@ -1897,11 +1718,9 @@
 
     check-cast v6, Lcom/android/server/pm/PersonaManagerService;
 
-    .line 1585
     .local v6, "personaService":Lcom/android/server/pm/PersonaManagerService;
     const/4 v2, 0x0
 
-    .line 1586
     .local v2, "isPersona":Z
     if-eqz v6, :cond_0
 
@@ -1911,55 +1730,44 @@
 
     if-eqz v7, :cond_0
 
-    .line 1587
     const/4 v2, 0x1
 
-    .line 1589
     :cond_0
     const/4 v4, -0x1
 
-    .line 1590
     .local v4, "parent":I
     if-eqz v6, :cond_3
 
     if-eqz v2, :cond_3
 
-    .line 1591
     invoke-virtual {v6, p1}, Lcom/android/server/pm/PersonaManagerService;->getParentId(I)I
 
     move-result v4
 
-    .line 1596
     :goto_0
     if-ltz v4, :cond_1
 
-    .line 1597
     new-instance v7, Ljava/lang/Integer;
 
     invoke-direct {v7, v4}, Ljava/lang/Integer;-><init>(I)V
 
     invoke-virtual {v1, v7}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 1598
     :cond_1
     const/4 v5, 0x0
 
-    .line 1599
     .local v5, "personaInfoList":Ljava/util/List;, "Ljava/util/List<Landroid/content/pm/PersonaInfo;>;"
     if-eqz v6, :cond_2
 
-    .line 1600
     const/4 v7, 0x1
 
     invoke-virtual {v6, v4, v7}, Lcom/android/server/pm/PersonaManagerService;->getPersonasForUser(IZ)Ljava/util/List;
 
     move-result-object v5
 
-    .line 1603
     :cond_2
     if-eqz v5, :cond_4
 
-    .line 1604
     const/4 v3, 0x0
 
     .local v3, "k":I
@@ -1970,7 +1778,6 @@
 
     if-ge v3, v7, :cond_4
 
-    .line 1605
     new-instance v8, Ljava/lang/Integer;
 
     invoke-interface {v5, v3}, Ljava/util/List;->get(I)Ljava/lang/Object;
@@ -1985,12 +1792,10 @@
 
     invoke-virtual {v1, v8}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 1604
     add-int/lit8 v3, v3, 0x1
 
     goto :goto_1
 
-    .line 1593
     .end local v3    # "k":I
     .end local v5    # "personaInfoList":Ljava/util/List;, "Ljava/util/List<Landroid/content/pm/PersonaInfo;>;"
     :cond_3
@@ -1998,7 +1803,6 @@
 
     goto :goto_0
 
-    .line 1608
     .restart local v5    # "personaInfoList":Ljava/util/List;, "Ljava/util/List<Landroid/content/pm/PersonaInfo;>;"
     :cond_4
     return-object v1
@@ -2022,7 +1826,6 @@
     .prologue
     const/4 v3, 0x0
 
-    .line 2272
     const/4 v1, 0x0
 
     .local v1, "i":I
@@ -2035,7 +1838,6 @@
 
     if-ge v1, v4, :cond_1
 
-    .line 2273
     iget-object v4, p0, Lcom/android/server/RCPManagerService;->mExchangeDataInfos:Ljava/util/List;
 
     invoke-interface {v4, v1}, Ljava/util/List;->get(I)Ljava/lang/Object;
@@ -2044,57 +1846,46 @@
 
     check-cast v2, Lcom/android/server/RCPManagerService$ExchangeDataInfo;
 
-    .line 2275
     .local v2, "info":Lcom/android/server/RCPManagerService$ExchangeDataInfo;
     iget v4, v2, Lcom/android/server/RCPManagerService$ExchangeDataInfo;->userId:I
 
     if-ne v4, p1, :cond_0
 
-    .line 2276
     iget-object v0, v2, Lcom/android/server/RCPManagerService$ExchangeDataInfo;->cbMap:Ljava/util/HashMap;
 
-    .line 2292
     .end local v2    # "info":Lcom/android/server/RCPManagerService$ExchangeDataInfo;
     :goto_1
     return-object v0
 
-    .line 2272
     .restart local v2    # "info":Lcom/android/server/RCPManagerService$ExchangeDataInfo;
     :cond_0
     add-int/lit8 v1, v1, 0x1
 
     goto :goto_0
 
-    .line 2280
     .end local v2    # "info":Lcom/android/server/RCPManagerService$ExchangeDataInfo;
     :cond_1
     if-nez p2, :cond_2
 
     move-object v0, v3
 
-    .line 2281
     goto :goto_1
 
-    .line 2284
     :cond_2
     new-instance v0, Ljava/util/HashMap;
 
     invoke-direct {v0}, Ljava/util/HashMap;-><init>()V
 
-    .line 2285
     .local v0, "cbMap":Ljava/util/HashMap;, "Ljava/util/HashMap<Ljava/lang/String;Landroid/os/IRunnableCallback;>;"
     new-instance v2, Lcom/android/server/RCPManagerService$ExchangeDataInfo;
 
     invoke-direct {v2, p0, v3}, Lcom/android/server/RCPManagerService$ExchangeDataInfo;-><init>(Lcom/android/server/RCPManagerService;Lcom/android/server/RCPManagerService$1;)V
 
-    .line 2287
     .restart local v2    # "info":Lcom/android/server/RCPManagerService$ExchangeDataInfo;
     iput p1, v2, Lcom/android/server/RCPManagerService$ExchangeDataInfo;->userId:I
 
-    .line 2288
     iput-object v0, v2, Lcom/android/server/RCPManagerService$ExchangeDataInfo;->cbMap:Ljava/util/HashMap;
 
-    .line 2290
     iget-object v3, p0, Lcom/android/server/RCPManagerService;->mExchangeDataInfos:Ljava/util/List;
 
     invoke-interface {v3, v2}, Ljava/util/List;->add(Ljava/lang/Object;)Z
@@ -2116,17 +1907,15 @@
     .end annotation
 
     .prologue
-    .line 2227
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
-    .line 2230
     .local v0, "arrayList":Ljava/util/ArrayList;, "Ljava/util/ArrayList<Ljava/lang/Integer;>;"
     :try_start_0
     iget-object v7, p0, Lcom/android/server/RCPManagerService;->mContext:Landroid/content/Context;
 
-    const-string/jumbo v8, "persona"
+    const-string v8, "persona"
 
     invoke-virtual {v7, v8}, Landroid/content/Context;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
 
@@ -2134,13 +1923,11 @@
 
     check-cast v3, Landroid/os/PersonaManager;
 
-    .line 2232
     .local v3, "mPersonaManager":Landroid/os/PersonaManager;
     invoke-virtual {v3, p1}, Landroid/os/PersonaManager;->getParentId(I)I
 
     move-result v4
 
-    .line 2234
     .local v4, "parentUser":I
     invoke-static {v4}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
@@ -2148,12 +1935,10 @@
 
     invoke-virtual {v0, v7}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 2237
     invoke-virtual {v3, v4}, Landroid/os/PersonaManager;->getPersonasForUser(I)Ljava/util/List;
 
     move-result-object v6
 
-    .line 2240
     .local v6, "personaInfos":Ljava/util/List;, "Ljava/util/List<Landroid/content/pm/PersonaInfo;>;"
     if-eqz v6, :cond_0
 
@@ -2163,7 +1948,6 @@
 
     if-eqz v7, :cond_2
 
-    .line 2241
     :cond_0
     sget-object v7, Lcom/android/server/RCPManagerService;->TAG:Ljava/lang/String;
 
@@ -2187,7 +1971,6 @@
 
     invoke-static {v7, v8}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 2257
     .end local v3    # "mPersonaManager":Landroid/os/PersonaManager;
     .end local v4    # "parentUser":I
     .end local v6    # "personaInfos":Ljava/util/List;, "Ljava/util/List<Landroid/content/pm/PersonaInfo;>;"
@@ -2195,7 +1978,6 @@
     :goto_0
     return-object v0
 
-    .line 2248
     .restart local v3    # "mPersonaManager":Landroid/os/PersonaManager;
     .restart local v4    # "parentUser":I
     .restart local v6    # "personaInfos":Ljava/util/List;, "Ljava/util/List<Landroid/content/pm/PersonaInfo;>;"
@@ -2218,7 +2000,6 @@
 
     check-cast v5, Landroid/content/pm/PersonaInfo;
 
-    .line 2249
     .local v5, "personaInfo":Landroid/content/pm/PersonaInfo;
     iget v7, v5, Landroid/content/pm/PersonaInfo;->id:I
 
@@ -2232,7 +2013,6 @@
 
     goto :goto_1
 
-    .line 2253
     .end local v2    # "i$":Ljava/util/Iterator;
     .end local v3    # "mPersonaManager":Landroid/os/PersonaManager;
     .end local v4    # "parentUser":I
@@ -2241,7 +2021,6 @@
     :catch_0
     move-exception v1
 
-    .line 2254
     .local v1, "e":Ljava/lang/Exception;
     invoke-virtual {v1}, Ljava/lang/Exception;->printStackTrace()V
 
@@ -2255,11 +2034,10 @@
     .prologue
     const/4 v9, 0x0
 
-    .line 1979
     :try_start_0
     iget-object v10, p0, Lcom/android/server/RCPManagerService;->mContext:Landroid/content/Context;
 
-    const-string/jumbo v11, "persona"
+    const-string v11, "persona"
 
     invoke-virtual {v10, v11}, Landroid/content/Context;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
 
@@ -2267,17 +2045,14 @@
 
     check-cast v5, Landroid/os/PersonaManager;
 
-    .line 1981
     .local v5, "mPersonaManager":Landroid/os/PersonaManager;
     invoke-virtual {v5, p1}, Landroid/os/PersonaManager;->getParentId(I)I
 
     move-result v6
 
-    .line 1985
     .local v6, "parentUser":I
     if-eq v6, p1, :cond_0
 
-    .line 1987
     const/4 v10, 0x1
 
     new-array v4, v10, [I
@@ -2286,13 +2061,11 @@
 
     aput v6, v4, v10
 
-    .line 2014
     .end local v5    # "mPersonaManager":Landroid/os/PersonaManager;
     .end local v6    # "parentUser":I
     :goto_0
     return-object v4
 
-    .line 1992
     .restart local v5    # "mPersonaManager":Landroid/os/PersonaManager;
     .restart local v6    # "parentUser":I
     :cond_0
@@ -2300,7 +2073,6 @@
 
     move-result-object v8
 
-    .line 1995
     .local v8, "personaInfos":Ljava/util/List;, "Ljava/util/List<Landroid/content/pm/PersonaInfo;>;"
     if-eqz v8, :cond_1
 
@@ -2310,7 +2082,6 @@
 
     if-eqz v10, :cond_2
 
-    .line 1996
     :cond_1
     sget-object v10, Lcom/android/server/RCPManagerService;->TAG:Ljava/lang/String;
 
@@ -2336,14 +2107,11 @@
 
     move-object v4, v9
 
-    .line 1999
     goto :goto_0
 
-    .line 2002
     :cond_2
     const/4 v1, 0x0
 
-    .line 2003
     .local v1, "i":I
     invoke-interface {v8}, Ljava/util/List;->size()I
 
@@ -2351,7 +2119,6 @@
 
     new-array v4, v10, [I
 
-    .line 2005
     .local v4, "ids":[I
     invoke-interface {v8}, Ljava/util/List;->iterator()Ljava/util/Iterator;
 
@@ -2375,7 +2142,6 @@
 
     check-cast v7, Landroid/content/pm/PersonaInfo;
 
-    .line 2006
     .local v7, "personaInfo":Landroid/content/pm/PersonaInfo;
     add-int/lit8 v1, v2, 0x1
 
@@ -2387,12 +2153,10 @@
 
     move v2, v1
 
-    .line 2007
     .end local v1    # "i":I
     .restart local v2    # "i":I
     goto :goto_1
 
-    .line 2008
     .end local v7    # "personaInfo":Landroid/content/pm/PersonaInfo;
     :cond_3
     sget-object v10, Lcom/android/server/RCPManagerService;->TAG:Ljava/lang/String;
@@ -2421,7 +2185,6 @@
 
     goto :goto_0
 
-    .line 2010
     .end local v2    # "i":I
     .end local v3    # "i$":Ljava/util/Iterator;
     .end local v4    # "ids":[I
@@ -2431,7 +2194,6 @@
     :catch_0
     move-exception v0
 
-    .line 2011
     .local v0, "e":Ljava/lang/Exception;
     sget-object v10, Lcom/android/server/RCPManagerService;->TAG:Ljava/lang/String;
 
@@ -2439,12 +2201,10 @@
 
     invoke-static {v10, v11}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 2012
     invoke-virtual {v0}, Ljava/lang/Exception;->printStackTrace()V
 
     move-object v4, v9
 
-    .line 2014
     goto :goto_0
 .end method
 
@@ -2453,7 +2213,6 @@
     .param p0, "aInfo"    # Landroid/content/pm/ActivityInfo;
 
     .prologue
-    .line 2390
     const/16 v19, 0x1e
 
     move/from16 v0, v19
@@ -2640,7 +2399,6 @@
 
     aput-object v20, v3, v19
 
-    .line 2408
     .local v3, "allowedapps":[Ljava/lang/String;
     const/16 v19, 0x0
 
@@ -2648,7 +2406,6 @@
 
     new-array v12, v0, [Ljava/lang/String;
 
-    .line 2410
     .local v12, "notAllowedComps":[Ljava/lang/String;
     new-instance v7, Lcom/android/server/enterprise/storage/EdmStorageProvider;
 
@@ -2658,11 +2415,10 @@
 
     invoke-direct {v7, v0}, Lcom/android/server/enterprise/storage/EdmStorageProvider;-><init>(Landroid/content/Context;)V
 
-    .line 2411
     .local v7, "edmStorageProvider":Lcom/android/server/enterprise/storage/EdmStorageProvider;
     sget-object v19, Lcom/android/server/RCPManagerService;->sContext:Landroid/content/Context;
 
-    const-string/jumbo v20, "persona"
+    const-string v20, "persona"
 
     invoke-virtual/range {v19 .. v20}, Landroid/content/Context;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
 
@@ -2670,17 +2426,14 @@
 
     check-cast v14, Landroid/os/PersonaManager;
 
-    .line 2412
     .local v14, "persona":Landroid/os/PersonaManager;
     const/4 v15, 0x0
 
-    .line 2413
     .local v15, "personas":Ljava/util/List;, "Ljava/util/List<Landroid/content/pm/PersonaInfo;>;"
     invoke-static {}, Landroid/os/Binder;->clearCallingIdentity()J
 
     move-result-wide v10
 
-    .line 2415
     .local v10, "ident":J
     const/16 v19, 0x1
 
@@ -2694,10 +2447,8 @@
 
     move-result-object v15
 
-    .line 2419
     invoke-static {v10, v11}, Landroid/os/Binder;->restoreCallingIdentity(J)V
 
-    .line 2421
     :goto_0
     const/16 v19, 0x0
 
@@ -2709,7 +2460,6 @@
 
     check-cast v16, Landroid/content/pm/PersonaInfo;
 
-    .line 2423
     .local v16, "pi":Landroid/content/pm/PersonaInfo;
     sget-object v19, Lcom/android/server/RCPManagerService;->kioskAllowedApps:Ljava/util/ArrayList;
 
@@ -2723,7 +2473,6 @@
 
     if-nez v19, :cond_1
 
-    .line 2425
     :cond_0
     move-object/from16 v0, v16
 
@@ -2737,13 +2486,11 @@
 
     move-result v13
 
-    .line 2427
     .local v13, "ownerUid":I
     invoke-virtual {v7, v13}, Lcom/android/server/enterprise/storage/EdmStorageProvider;->getPackageNameForUid(I)Ljava/lang/String;
 
     move-result-object v17
 
-    .line 2429
     .local v17, "pkgName":Ljava/lang/String;
     if-eqz v17, :cond_1
 
@@ -2759,12 +2506,10 @@
 
     if-nez v19, :cond_1
 
-    .line 2430
     sget-object v19, Lcom/android/server/RCPManagerService;->kioskAllowedApps:Ljava/util/ArrayList;
 
     invoke-virtual/range {v19 .. v19}, Ljava/util/ArrayList;->clear()V
 
-    .line 2431
     sget-object v19, Lcom/android/server/RCPManagerService;->kioskAllowedApps:Ljava/util/ArrayList;
 
     move-object/from16 v0, v19
@@ -2773,21 +2518,18 @@
 
     invoke-virtual {v0, v1}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 2432
     sget-object v19, Lcom/android/server/RCPManagerService;->kioskAllowedApps:Ljava/util/ArrayList;
 
     const-string v20, "com.sec.android.fotaclient"
 
     invoke-virtual/range {v19 .. v20}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 2433
     sget-object v19, Lcom/android/server/RCPManagerService;->kioskAllowedApps:Ljava/util/ArrayList;
 
     const-string v20, "com.wssyncmldm"
 
     invoke-virtual/range {v19 .. v20}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 2436
     .end local v13    # "ownerUid":I
     .end local v17    # "pkgName":Ljava/lang/String;
     :cond_1
@@ -2797,12 +2539,10 @@
 
     if-eqz v19, :cond_2
 
-    .line 2437
     new-instance v4, Ljava/util/ArrayList;
 
     invoke-direct {v4}, Ljava/util/ArrayList;-><init>()V
 
-    .line 2438
     .local v4, "allowedappswhenLocked":Ljava/util/ArrayList;, "Ljava/util/ArrayList<Ljava/lang/String;>;"
     const-string v19, "com.sec.knox.bridge"
 
@@ -2810,7 +2550,6 @@
 
     invoke-virtual {v4, v0}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 2440
     move-object/from16 v0, v16
 
     iget v0, v0, Landroid/content/pm/PersonaInfo;->id:I
@@ -2823,54 +2562,46 @@
 
     move-result v13
 
-    .line 2442
     .restart local v13    # "ownerUid":I
     invoke-virtual {v7, v13}, Lcom/android/server/enterprise/storage/EdmStorageProvider;->getPackageNameForUid(I)Ljava/lang/String;
 
     move-result-object v17
 
-    .line 2443
     .restart local v17    # "pkgName":Ljava/lang/String;
     move-object/from16 v0, v17
 
     invoke-virtual {v4, v0}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 2444
     const-string v19, "com.sec.android.fotaclient"
 
     move-object/from16 v0, v19
 
     invoke-virtual {v4, v0}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 2445
     const-string v19, "com.wssyncmldm"
 
     move-object/from16 v0, v19
 
     invoke-virtual {v4, v0}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 2446
     const-string v19, "com.android.incallui"
 
     move-object/from16 v0, v19
 
     invoke-virtual {v4, v0}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 2447
     const-string v19, "com.android.server.telecom"
 
     move-object/from16 v0, v19
 
     invoke-virtual {v4, v0}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 2448
     const-string v19, "com.android.phone"
 
     move-object/from16 v0, v19
 
     invoke-virtual {v4, v0}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 2450
     if-eqz v4, :cond_7
 
     move-object/from16 v0, p0
@@ -2889,26 +2620,22 @@
 
     const/16 v19, 0x1
 
-    .line 2473
     .end local v4    # "allowedappswhenLocked":Ljava/util/ArrayList;, "Ljava/util/ArrayList<Ljava/lang/String;>;"
     .end local v13    # "ownerUid":I
     .end local v17    # "pkgName":Ljava/lang/String;
     :goto_1
     return v19
 
-    .line 2416
     .end local v16    # "pi":Landroid/content/pm/PersonaInfo;
     :catch_0
     move-exception v6
 
-    .line 2417
     .local v6, "e":Ljava/lang/Exception;
     :try_start_1
     invoke-virtual {v6}, Ljava/lang/Exception;->printStackTrace()V
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
-    .line 2419
     invoke-static {v10, v11}, Landroid/os/Binder;->restoreCallingIdentity(J)V
 
     goto/16 :goto_0
@@ -2921,7 +2648,6 @@
 
     throw v19
 
-    .line 2453
     .restart local v16    # "pi":Landroid/content/pm/PersonaInfo;
     :cond_2
     sget-object v19, Lcom/android/server/RCPManagerService;->kioskAllowedApps:Ljava/util/ArrayList;
@@ -2942,12 +2668,10 @@
 
     if-eqz v19, :cond_3
 
-    .line 2455
     const/16 v19, 0x1
 
     goto :goto_1
 
-    .line 2457
     :cond_3
     move-object v5, v12
 
@@ -2963,7 +2687,6 @@
 
     aget-object v18, v5, v8
 
-    .line 2458
     .local v18, "str":Ljava/lang/String;
     move-object/from16 v0, p0
 
@@ -2989,18 +2712,15 @@
 
     if-eqz v19, :cond_4
 
-    .line 2460
     const/16 v19, 0x0
 
     goto :goto_1
 
-    .line 2457
     :cond_4
     add-int/lit8 v8, v8, 0x1
 
     goto :goto_2
 
-    .line 2464
     .end local v18    # "str":Ljava/lang/String;
     :cond_5
     move-object v5, v3
@@ -3014,7 +2734,6 @@
 
     aget-object v2, v5, v8
 
-    .line 2465
     .local v2, "allowedApp":Ljava/lang/String;
     move-object/from16 v0, p0
 
@@ -3030,18 +2749,15 @@
 
     if-eqz v19, :cond_6
 
-    .line 2467
     const/16 v19, 0x1
 
     goto :goto_1
 
-    .line 2464
     :cond_6
     add-int/lit8 v8, v8, 0x1
 
     goto :goto_3
 
-    .line 2473
     .end local v2    # "allowedApp":Ljava/lang/String;
     .end local v5    # "arr$":[Ljava/lang/String;
     .end local v8    # "i$":I
@@ -3059,7 +2775,6 @@
     .prologue
     const/4 v1, 0x0
 
-    .line 2480
     if-eqz p0, :cond_1
 
     invoke-virtual {p0}, Landroid/os/PersonaManager;->isKioskContainerExistOnDevice()Z
@@ -3068,12 +2783,10 @@
 
     if-eqz v2, :cond_1
 
-    .line 2481
     invoke-virtual {p0}, Landroid/os/PersonaManager;->getPersonaIds()[I
 
     move-result-object v0
 
-    .line 2482
     .local v0, "personaid":[I
     if-eqz v0, :cond_1
 
@@ -3119,7 +2832,6 @@
 
     if-eqz v2, :cond_1
 
-    .line 2486
     :cond_0
     sget-object v1, Lcom/android/server/RCPManagerService;->TAG:Ljava/lang/String;
 
@@ -3127,10 +2839,8 @@
 
     invoke-static {v1, v2}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 2487
     const/4 v1, 0x1
 
-    .line 2490
     .end local v0    # "personaid":[I
     :cond_1
     return v1
@@ -3140,22 +2850,19 @@
     .locals 6
 
     .prologue
-    .line 649
     sget-object v3, Lcom/android/server/RCPManagerService;->TAG:Ljava/lang/String;
 
     const-string v4, "RCP.registerKnoxModeChangeObserver() Registered..."
 
     invoke-static {v3, v4}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 651
     :try_start_0
-    const-string/jumbo v3, "persona"
+    const-string v3, "persona"
 
     invoke-static {v3}, Landroid/os/ServiceManager;->getService(Ljava/lang/String;)Landroid/os/IBinder;
 
     move-result-object v0
 
-    .line 652
     .local v0, "b":Landroid/os/IBinder;
     invoke-static {v0}, Landroid/os/IPersonaManager$Stub;->asInterface(Landroid/os/IBinder;)Landroid/os/IPersonaManager;
 
@@ -3163,24 +2870,20 @@
 
     check-cast v2, Lcom/android/server/pm/PersonaManagerService;
 
-    .line 654
     .local v2, "pms":Lcom/android/server/pm/PersonaManagerService;
     if-nez v2, :cond_0
 
-    .line 655
     sget-object v3, Lcom/android/server/RCPManagerService;->TAG:Ljava/lang/String;
 
     const-string v4, "RCP.onKnoxModeChange() pms == null...  should not happened"
 
     invoke-static {v3, v4}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 686
     .end local v0    # "b":Landroid/os/IBinder;
     .end local v2    # "pms":Lcom/android/server/pm/PersonaManagerService;
     :goto_0
     return-void
 
-    .line 660
     .restart local v0    # "b":Landroid/os/IBinder;
     .restart local v2    # "pms":Lcom/android/server/pm/PersonaManagerService;
     :cond_0
@@ -3194,13 +2897,11 @@
 
     goto :goto_0
 
-    .line 680
     .end local v0    # "b":Landroid/os/IBinder;
     .end local v2    # "pms":Lcom/android/server/pm/PersonaManagerService;
     :catch_0
     move-exception v1
 
-    .line 681
     .local v1, "e":Ljava/lang/Exception;
     sget-object v3, Lcom/android/server/RCPManagerService;->TAG:Ljava/lang/String;
 
@@ -3228,7 +2929,6 @@
 
     invoke-static {v3, v4}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 684
     invoke-virtual {v1}, Ljava/lang/Exception;->printStackTrace()V
 
     goto :goto_0
@@ -3239,7 +2939,6 @@
     .param p1, "userId"    # I
 
     .prologue
-    .line 2296
     const/4 v0, 0x0
 
     .local v0, "i":I
@@ -3252,7 +2951,6 @@
 
     if-ge v0, v2, :cond_0
 
-    .line 2297
     iget-object v2, p0, Lcom/android/server/RCPManagerService;->mExchangeDataInfos:Ljava/util/List;
 
     invoke-interface {v2, v0}, Ljava/util/List;->get(I)Ljava/lang/Object;
@@ -3261,23 +2959,19 @@
 
     check-cast v1, Lcom/android/server/RCPManagerService$ExchangeDataInfo;
 
-    .line 2298
     .local v1, "info":Lcom/android/server/RCPManagerService$ExchangeDataInfo;
     iget v2, v1, Lcom/android/server/RCPManagerService$ExchangeDataInfo;->userId:I
 
     if-ne v2, p1, :cond_1
 
-    .line 2299
     iget-object v2, p0, Lcom/android/server/RCPManagerService;->mExchangeDataInfos:Ljava/util/List;
 
     invoke-interface {v2, v0}, Ljava/util/List;->remove(I)Ljava/lang/Object;
 
-    .line 2303
     .end local v1    # "info":Lcom/android/server/RCPManagerService$ExchangeDataInfo;
     :cond_0
     return-void
 
-    .line 2296
     .restart local v1    # "info":Lcom/android/server/RCPManagerService$ExchangeDataInfo;
     :cond_1
     add-int/lit8 v0, v0, 0x1
@@ -3291,18 +2985,15 @@
     .param p2, "userId"    # I
 
     .prologue
-    .line 2201
     new-instance v4, Landroid/os/UserHandle;
 
     invoke-direct {v4, p2}, Landroid/os/UserHandle;-><init>(I)V
 
-    .line 2203
     .local v4, "uh":Landroid/os/UserHandle;
     new-instance v3, Landroid/content/Intent;
 
     invoke-direct {v3}, Landroid/content/Intent;-><init>()V
 
-    .line 2204
     .local v3, "serviceIntent":Landroid/content/Intent;
     const-string v5, "com.sec.knox.bridge"
 
@@ -3310,15 +3001,12 @@
 
     invoke-virtual {v3, v5, v6}, Landroid/content/Intent;->setClassName(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;
 
-    .line 2206
     invoke-virtual {v3, p1}, Landroid/content/Intent;->setAction(Ljava/lang/String;)Landroid/content/Intent;
 
-    .line 2207
     const-string v5, "android.intent.extra.user_handle"
 
     invoke-virtual {v3, v5, p2}, Landroid/content/Intent;->putExtra(Ljava/lang/String;I)Landroid/content/Intent;
 
-    .line 2210
     :try_start_0
     const-string v5, "com.sec.knox.bridge.receiver.ACTION_USER_SWITCHED"
 
@@ -3328,17 +3016,14 @@
 
     if-eqz v5, :cond_1
 
-    .line 2212
     iget-object v5, p0, Lcom/android/server/RCPManagerService;->mContext:Landroid/content/Context;
 
     invoke-virtual {v5, v3, v4}, Landroid/content/Context;->startServiceAsUser(Landroid/content/Intent;Landroid/os/UserHandle;)Landroid/content/ComponentName;
 
-    .line 2222
     :cond_0
     :goto_0
     return-void
 
-    .line 2214
     :cond_1
     invoke-direct {p0, p2}, Lcom/android/server/RCPManagerService;->getUserAndPersonasIds(I)Ljava/util/ArrayList;
 
@@ -3366,7 +3051,6 @@
 
     move-result v0
 
-    .line 2215
     .local v0, "familyUserId":I
     iget-object v5, p0, Lcom/android/server/RCPManagerService;->mContext:Landroid/content/Context;
 
@@ -3380,13 +3064,11 @@
 
     goto :goto_1
 
-    .line 2219
     .end local v0    # "familyUserId":I
     .end local v1    # "i$":Ljava/util/Iterator;
     :catch_0
     move-exception v2
 
-    .line 2220
     .local v2, "se":Ljava/lang/SecurityException;
     iget-object v5, p0, Lcom/android/server/RCPManagerService;->mContext:Landroid/content/Context;
 
@@ -3406,14 +3088,13 @@
     .end annotation
 
     .prologue
-    .line 766
     sget-object v1, Lcom/android/server/RCPManagerService;->TAG:Ljava/lang/String;
 
     new-instance v2, Ljava/lang/StringBuilder;
 
     invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v3, "switchPersonaAndLaunch() with id = "
+    const-string v3, "switchPersonaAndLaunch() with id = "
 
     invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -3439,18 +3120,15 @@
 
     invoke-static {v1, v2}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 769
     if-gez p1, :cond_0
 
-    .line 775
     :goto_0
     return-void
 
-    .line 771
     :cond_0
     iget-object v1, p0, Lcom/android/server/RCPManagerService;->mContext:Landroid/content/Context;
 
-    const-string/jumbo v2, "persona"
+    const-string v2, "persona"
 
     invoke-virtual {v1, v2}, Landroid/content/Context;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
 
@@ -3458,7 +3136,6 @@
 
     check-cast v0, Landroid/os/PersonaManager;
 
-    .line 773
     .local v0, "mPersona":Landroid/os/PersonaManager;
     sget-object v1, Lcom/android/server/RCPManagerService;->TAG:Ljava/lang/String;
 
@@ -3466,7 +3143,7 @@
 
     invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v3, "switch PERSONA to id = "
+    const-string v3, "switch PERSONA to id = "
 
     invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -3482,7 +3159,6 @@
 
     invoke-static {v1, v2}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 774
     invoke-virtual {v0, p1, p2}, Landroid/os/PersonaManager;->switchPersonaAndLaunch(ILandroid/content/Intent;)Z
 
     goto :goto_0
@@ -3493,7 +3169,6 @@
     .param p1, "personaId"    # I
 
     .prologue
-    .line 2085
     iget-object v0, p0, Lcom/android/server/RCPManagerService;->mBridgeProviderUserMap:Ljava/util/HashMap;
 
     invoke-static {p1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
@@ -3502,7 +3177,6 @@
 
     invoke-virtual {v0, v1}, Ljava/util/HashMap;->remove(Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 2086
     iget-object v0, p0, Lcom/android/server/RCPManagerService;->mBridgeSyncUserMap:Ljava/util/HashMap;
 
     invoke-static {p1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
@@ -3511,7 +3185,6 @@
 
     invoke-virtual {v0, v1}, Ljava/util/HashMap;->remove(Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 2087
     iget-object v0, p0, Lcom/android/server/RCPManagerService;->mRCPGlobalContactsDirMap:Ljava/util/HashMap;
 
     invoke-static {p1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
@@ -3520,7 +3193,6 @@
 
     invoke-virtual {v0, v1}, Ljava/util/HashMap;->remove(Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 2088
     iget-object v0, p0, Lcom/android/server/RCPManagerService;->mBridgeCommandExeUserMap:Ljava/util/HashMap;
 
     invoke-static {p1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
@@ -3529,7 +3201,6 @@
 
     invoke-virtual {v0, v1}, Ljava/util/HashMap;->remove(Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 2089
     iget-object v0, p0, Lcom/android/server/RCPManagerService;->mRCPInterfaceMap:Ljava/util/HashMap;
 
     invoke-static {p1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
@@ -3538,10 +3209,8 @@
 
     invoke-virtual {v0, v1}, Ljava/util/HashMap;->remove(Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 2090
     invoke-direct {p0, p1}, Lcom/android/server/RCPManagerService;->removeExchangeDataInfo(I)V
 
-    .line 2091
     iget-object v0, p0, Lcom/android/server/RCPManagerService;->mContext:Landroid/content/Context;
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -3578,7 +3247,6 @@
 
     invoke-interface {v0}, Landroid/content/SharedPreferences$Editor;->commit()Z
 
-    .line 2093
     return-void
 .end method
 
@@ -3588,17 +3256,15 @@
     .prologue
     const/4 v9, 0x0
 
-    .line 856
     sget-object v6, Lcom/android/server/RCPManagerService;->TAG:Ljava/lang/String;
 
-    const-string/jumbo v7, "updateKnoxInfo is called...."
+    const-string v7, "updateKnoxInfo is called...."
 
     invoke-static {v6, v7}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 857
     iget-object v6, p0, Lcom/android/server/RCPManagerService;->mContext:Landroid/content/Context;
 
-    const-string/jumbo v7, "persona"
+    const-string v7, "persona"
 
     invoke-virtual {v6, v7}, Landroid/content/Context;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
 
@@ -3606,29 +3272,24 @@
 
     check-cast v1, Landroid/os/PersonaManager;
 
-    .line 860
     .local v1, "mPersona":Landroid/os/PersonaManager;
     if-eqz v1, :cond_1
 
-    .line 861
     invoke-virtual {v1}, Landroid/os/PersonaManager;->isKioskContainerExistOnDevice()Z
 
     move-result v6
 
     if-eqz v6, :cond_6
 
-    .line 862
     const/4 v6, 0x1
 
     invoke-virtual {v1, v6}, Landroid/os/PersonaManager;->getPersonas(Z)Ljava/util/List;
 
     move-result-object v3
 
-    .line 863
     .local v3, "personas":Ljava/util/List;, "Ljava/util/List<Landroid/content/pm/PersonaInfo;>;"
     const/4 v4, 0x0
 
-    .line 864
     .local v4, "pi":Landroid/content/pm/PersonaInfo;
     if-eqz v3, :cond_0
 
@@ -3638,7 +3299,6 @@
 
     if-lez v6, :cond_0
 
-    .line 865
     const/4 v6, 0x0
 
     invoke-interface {v3, v6}, Ljava/util/List;->get(I)Ljava/lang/Object;
@@ -3648,25 +3308,20 @@
     .end local v4    # "pi":Landroid/content/pm/PersonaInfo;
     check-cast v4, Landroid/content/pm/PersonaInfo;
 
-    .line 867
     .restart local v4    # "pi":Landroid/content/pm/PersonaInfo;
     :cond_0
     if-nez v4, :cond_2
 
-    .line 868
     sput-object v9, Lcom/android/server/am/ActivityManagerService;->mKnoxInfo:Landroid/os/Bundle;
 
-    .line 869
     sput-object v9, Lcom/android/server/RCPManagerService;->kioskAllowedApps:Ljava/util/ArrayList;
 
-    .line 913
     .end local v3    # "personas":Ljava/util/List;, "Ljava/util/List<Landroid/content/pm/PersonaInfo;>;"
     .end local v4    # "pi":Landroid/content/pm/PersonaInfo;
     :cond_1
     :goto_0
     return-void
 
-    .line 872
     .restart local v3    # "personas":Ljava/util/List;, "Ljava/util/List<Landroid/content/pm/PersonaInfo;>;"
     .restart local v4    # "pi":Landroid/content/pm/PersonaInfo;
     :cond_2
@@ -3674,16 +3329,14 @@
 
     if-nez v6, :cond_3
 
-    .line 873
     new-instance v6, Landroid/os/Bundle;
 
     invoke-direct {v6}, Landroid/os/Bundle;-><init>()V
 
     sput-object v6, Lcom/android/server/am/ActivityManagerService;->mKnoxInfo:Landroid/os/Bundle;
 
-    .line 876
     :cond_3
-    const-string/jumbo v6, "true"
+    const-string v6, "true"
 
     sget-object v7, Lcom/android/server/am/ActivityManagerService;->mKnoxInfo:Landroid/os/Bundle;
 
@@ -3699,29 +3352,25 @@
 
     if-nez v6, :cond_4
 
-    .line 878
     sget-object v6, Lcom/android/server/am/ActivityManagerService;->mKnoxInfo:Landroid/os/Bundle;
 
     const-string v7, "isKnoxKioskMode"
 
-    const-string/jumbo v8, "true"
+    const-string v8, "true"
 
     invoke-virtual {v6, v7, v8}, Landroid/os/Bundle;->putString(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 882
     :cond_4
     sget-object v6, Lcom/android/server/RCPManagerService;->kioskAllowedApps:Ljava/util/ArrayList;
 
     if-nez v6, :cond_5
 
-    .line 883
     new-instance v6, Ljava/util/ArrayList;
 
     invoke-direct {v6}, Ljava/util/ArrayList;-><init>()V
 
     sput-object v6, Lcom/android/server/RCPManagerService;->kioskAllowedApps:Ljava/util/ArrayList;
 
-    .line 886
     :cond_5
     sget-object v6, Lcom/android/server/RCPManagerService;->kioskAllowedApps:Ljava/util/ArrayList;
 
@@ -3731,14 +3380,12 @@
 
     if-nez v6, :cond_1
 
-    .line 887
     new-instance v0, Lcom/android/server/enterprise/storage/EdmStorageProvider;
 
     iget-object v6, p0, Lcom/android/server/RCPManagerService;->mContext:Landroid/content/Context;
 
     invoke-direct {v0, v6}, Lcom/android/server/enterprise/storage/EdmStorageProvider;-><init>(Landroid/content/Context;)V
 
-    .line 890
     .local v0, "edmStorageProvider":Lcom/android/server/enterprise/storage/EdmStorageProvider;
     iget v6, v4, Landroid/content/pm/PersonaInfo;->id:I
 
@@ -3746,13 +3393,11 @@
 
     move-result v2
 
-    .line 894
     .local v2, "ownerUid":I
     invoke-virtual {v0, v2}, Lcom/android/server/enterprise/storage/EdmStorageProvider;->getPackageNameForUid(I)Ljava/lang/String;
 
     move-result-object v5
 
-    .line 897
     .local v5, "pkgName":Ljava/lang/String;
     if-eqz v5, :cond_1
 
@@ -3764,24 +3409,20 @@
 
     if-nez v6, :cond_1
 
-    .line 898
     sget-object v6, Lcom/android/server/RCPManagerService;->kioskAllowedApps:Ljava/util/ArrayList;
 
     invoke-virtual {v6}, Ljava/util/ArrayList;->clear()V
 
-    .line 899
     sget-object v6, Lcom/android/server/RCPManagerService;->kioskAllowedApps:Ljava/util/ArrayList;
 
     invoke-virtual {v6, v5}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 900
     sget-object v6, Lcom/android/server/RCPManagerService;->kioskAllowedApps:Ljava/util/ArrayList;
 
     const-string v7, "com.sec.android.fotaclient"
 
     invoke-virtual {v6, v7}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 901
     sget-object v6, Lcom/android/server/RCPManagerService;->kioskAllowedApps:Ljava/util/ArrayList;
 
     const-string v7, "com.wssyncmldm"
@@ -3790,7 +3431,6 @@
 
     goto :goto_0
 
-    .line 905
     .end local v0    # "edmStorageProvider":Lcom/android/server/enterprise/storage/EdmStorageProvider;
     .end local v2    # "ownerUid":I
     .end local v3    # "personas":Ljava/util/List;, "Ljava/util/List<Landroid/content/pm/PersonaInfo;>;"
@@ -3801,7 +3441,6 @@
 
     if-eqz v6, :cond_7
 
-    .line 906
     sget-object v6, Lcom/android/server/am/ActivityManagerService;->mKnoxInfo:Landroid/os/Bundle;
 
     const-string v7, "isKnoxKioskMode"
@@ -3810,7 +3449,6 @@
 
     invoke-virtual {v6, v7, v8}, Landroid/os/Bundle;->putString(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 909
     :cond_7
     sput-object v9, Lcom/android/server/RCPManagerService;->kioskAllowedApps:Ljava/util/ArrayList;
 
@@ -3828,7 +3466,6 @@
     .prologue
     const/4 v11, 0x1
 
-    .line 1429
     sget-object v8, Lcom/android/server/RCPManagerService;->TAG:Ljava/lang/String;
 
     new-instance v9, Ljava/lang/StringBuilder;
@@ -3871,7 +3508,6 @@
 
     invoke-static {v8, v9}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1432
     iget-object v8, p0, Lcom/android/server/RCPManagerService;->mRCPProxyAliveList:Ljava/util/List;
 
     invoke-static {p1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
@@ -3884,7 +3520,6 @@
 
     if-eqz v8, :cond_0
 
-    .line 1433
     sget-object v8, Lcom/android/server/RCPManagerService;->TAG:Ljava/lang/String;
 
     new-instance v9, Ljava/lang/StringBuilder;
@@ -3927,15 +3562,13 @@
 
     invoke-static {v8, v9}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1471
     :goto_0
     return-void
 
-    .line 1438
     :cond_0
     iget-object v8, p0, Lcom/android/server/RCPManagerService;->mContext:Landroid/content/Context;
 
-    const-string/jumbo v9, "persona"
+    const-string v9, "persona"
 
     invoke-virtual {v8, v9}, Landroid/content/Context;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
 
@@ -3943,31 +3576,25 @@
 
     check-cast v4, Landroid/os/PersonaManager;
 
-    .line 1440
     .local v4, "mPm":Landroid/os/PersonaManager;
     invoke-virtual {v4, p1}, Landroid/os/PersonaManager;->getParentId(I)I
 
     move-result v6
 
-    .line 1441
     .local v6, "pUserId":I
     invoke-virtual {v4, p1}, Landroid/os/PersonaManager;->getPersonaInfo(I)Landroid/content/pm/PersonaInfo;
 
     move-result-object v5
 
-    .line 1442
     .local v5, "pInfo":Landroid/content/pm/PersonaInfo;
     if-eq p1, v6, :cond_1
 
-    .line 1443
     if-eqz v5, :cond_1
 
-    .line 1444
     iget-boolean v8, v5, Landroid/content/pm/PersonaInfo;->removePersona:Z
 
     if-ne v8, v11, :cond_1
 
-    .line 1445
     sget-object v8, Lcom/android/server/RCPManagerService;->TAG:Ljava/lang/String;
 
     new-instance v9, Ljava/lang/StringBuilder;
@@ -3992,34 +3619,28 @@
 
     goto :goto_0
 
-    .line 1453
     :cond_1
     new-instance v7, Landroid/os/UserHandle;
 
     invoke-direct {v7, p1}, Landroid/os/UserHandle;-><init>(I)V
 
-    .line 1454
     .local v7, "uh":Landroid/os/UserHandle;
     new-instance v3, Landroid/content/Intent;
 
     invoke-direct {v3}, Landroid/content/Intent;-><init>()V
 
-    .line 1455
     .local v3, "i":Landroid/content/Intent;
     new-instance v1, Landroid/content/ComponentName;
 
     invoke-direct {v1, p2, p3}, Landroid/content/ComponentName;-><init>(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 1456
     .local v1, "cn":Landroid/content/ComponentName;
     invoke-virtual {v3, v1}, Landroid/content/Intent;->setComponent(Landroid/content/ComponentName;)Landroid/content/Intent;
 
-    .line 1457
     new-instance v2, Lcom/android/server/RCPManagerService$RCPServiceConnection;
 
     invoke-direct {v2, p0, p1}, Lcom/android/server/RCPManagerService$RCPServiceConnection;-><init>(Lcom/android/server/RCPManagerService;I)V
 
-    .line 1458
     .local v2, "conn":Lcom/android/server/RCPManagerService$RCPServiceConnection;
     iget-object v8, p0, Lcom/android/server/RCPManagerService;->mContext:Landroid/content/Context;
 
@@ -4027,11 +3648,9 @@
 
     move-result v0
 
-    .line 1460
     .local v0, "boundToService":Z
     if-nez v0, :cond_2
 
-    .line 1461
     sget-object v8, Lcom/android/server/RCPManagerService;->TAG:Ljava/lang/String;
 
     new-instance v9, Ljava/lang/StringBuilder;
@@ -4084,7 +3703,6 @@
 
     goto/16 :goto_0
 
-    .line 1465
     :cond_2
     sget-object v8, Lcom/android/server/RCPManagerService;->TAG:Ljava/lang/String;
 
@@ -4134,12 +3752,10 @@
     .param p1, "sessionId"    # J
 
     .prologue
-    .line 2190
     const-string v1, "cancelCopyChunks"
 
     invoke-static {v1}, Lcom/android/server/RCPManagerService;->checkCallerPermissionFor(Ljava/lang/String;)I
 
-    .line 2191
     sget-object v1, Lcom/android/server/RCPManagerService;->TAG:Ljava/lang/String;
 
     new-instance v2, Ljava/lang/StringBuilder;
@@ -4162,18 +3778,15 @@
 
     invoke-static {v1, v2}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 2192
     iget-object v1, p0, Lcom/android/server/RCPManagerService;->mContext:Landroid/content/Context;
 
     invoke-static {v1}, Lcom/sec/knox/container/util/EnterprisePartitionManager;->getInstance(Landroid/content/Context;)Lcom/sec/knox/container/util/EnterprisePartitionManager;
 
     move-result-object v0
 
-    .line 2194
     .local v0, "epm":Lcom/sec/knox/container/util/EnterprisePartitionManager;
     invoke-virtual {v0, p1, p2}, Lcom/sec/knox/container/util/EnterprisePartitionManager;->cancelCopyChunks(J)V
 
-    .line 2195
     return-void
 .end method
 
@@ -4185,12 +3798,10 @@
     .param p4, "mode"    # I
 
     .prologue
-    .line 2124
     const-string v1, "changePermissionMigration"
 
     invoke-static {v1}, Lcom/android/server/RCPManagerService;->checkCallerPermissionFor(Ljava/lang/String;)I
 
-    .line 2125
     sget-object v1, Lcom/android/server/RCPManagerService;->TAG:Ljava/lang/String;
 
     new-instance v2, Ljava/lang/StringBuilder;
@@ -4243,14 +3854,12 @@
 
     invoke-static {v1, v2}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 2127
     iget-object v1, p0, Lcom/android/server/RCPManagerService;->mContext:Landroid/content/Context;
 
     invoke-static {v1}, Lcom/sec/knox/container/util/EnterprisePartitionManager;->getInstance(Landroid/content/Context;)Lcom/sec/knox/container/util/EnterprisePartitionManager;
 
     move-result-object v0
 
-    .line 2129
     .local v0, "epm":Lcom/sec/knox/container/util/EnterprisePartitionManager;
     invoke-virtual {v0, p1, p2, p3, p4}, Lcom/sec/knox/container/util/EnterprisePartitionManager;->changePermissionMigration(Ljava/lang/String;III)I
 
@@ -4270,19 +3879,16 @@
     .end annotation
 
     .prologue
-    .line 1554
     const-string v1, "checkSAccount"
 
     invoke-static {v1}, Lcom/android/server/RCPManagerService;->checkCallerPermissionFor(Ljava/lang/String;)I
 
-    .line 1555
     const-string v1, "BridgeManagerService "
 
     const-string v2, "checkSAccount"
 
     invoke-static {v1, v2}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1556
     iget-object v1, p0, Lcom/android/server/RCPManagerService;->mBridgeProviderUserMap:Ljava/util/HashMap;
 
     sget-object v2, Lcom/android/server/RCPManagerService;->OWNER_ID:Ljava/lang/Integer;
@@ -4293,21 +3899,17 @@
 
     check-cast v0, Landroid/content/IProviderCallBack;
 
-    .line 1558
     .local v0, "value":Landroid/content/IProviderCallBack;
     if-eqz v0, :cond_0
 
-    .line 1559
     invoke-interface {v0, p1, p2}, Landroid/content/IProviderCallBack;->checkSAccount(Ljava/lang/String;Landroid/content/ISAccountCallback;)V
 
-    .line 1560
     const-string v1, "BridgeManagerService "
 
     const-string v2, "checkSAccount:  value != null"
 
     invoke-static {v1, v2}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1563
     :cond_0
     return-void
 .end method
@@ -4323,19 +3925,16 @@
     .end annotation
 
     .prologue
-    .line 1568
     const-string v1, "checkSAccountPassword"
 
     invoke-static {v1}, Lcom/android/server/RCPManagerService;->checkCallerPermissionFor(Ljava/lang/String;)I
 
-    .line 1569
     const-string v1, "BridgeManagerService "
 
     const-string v2, "checkSAccountPassword"
 
     invoke-static {v1, v2}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1570
     iget-object v1, p0, Lcom/android/server/RCPManagerService;->mBridgeProviderUserMap:Ljava/util/HashMap;
 
     sget-object v2, Lcom/android/server/RCPManagerService;->OWNER_ID:Ljava/lang/Integer;
@@ -4346,21 +3945,17 @@
 
     check-cast v0, Landroid/content/IProviderCallBack;
 
-    .line 1572
     .local v0, "value":Landroid/content/IProviderCallBack;
     if-eqz v0, :cond_0
 
-    .line 1573
     invoke-interface {v0, p1, p2}, Landroid/content/IProviderCallBack;->checkSAccountPassword(Ljava/lang/String;Landroid/content/ISAccountCallback;)V
 
-    .line 1574
     const-string v1, "BridgeManagerService "
 
     const-string v2, "checkSAccountPassword: value != null"
 
     invoke-static {v1, v2}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1577
     :cond_0
     return-void
 .end method
@@ -4377,12 +3972,10 @@
     .param p10, "deleteSrc"    # Z
 
     .prologue
-    .line 2176
     const-string v3, "copyChunks"
 
     invoke-static {v3}, Lcom/android/server/RCPManagerService;->checkCallerPermissionFor(Ljava/lang/String;)I
 
-    .line 2177
     sget-object v3, Lcom/android/server/RCPManagerService;->TAG:Ljava/lang/String;
 
     new-instance v4, Ljava/lang/StringBuilder;
@@ -4487,7 +4080,6 @@
 
     invoke-static {v3, v4}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 2183
     iget-object v3, p0, Lcom/android/server/RCPManagerService;->mContext:Landroid/content/Context;
 
     invoke-static {v3}, Lcom/sec/knox/container/util/EnterprisePartitionManager;->getInstance(Landroid/content/Context;)Lcom/sec/knox/container/util/EnterprisePartitionManager;
@@ -4511,7 +4103,6 @@
 
     move/from16 v12, p10
 
-    .line 2185
     invoke-virtual/range {v2 .. v12}, Lcom/sec/knox/container/util/EnterprisePartitionManager;->copyChunks(Ljava/lang/String;ILjava/lang/String;IJIJZ)I
 
     move-result v3
@@ -4530,12 +4121,10 @@
 
     const/4 v7, 0x0
 
-    .line 1746
     const-string v8, "copyClipboardFile"
 
     invoke-static {v8}, Lcom/android/server/RCPManagerService;->checkCallerPermissionFor(Ljava/lang/String;)I
 
-    .line 1747
     sget-object v8, Lcom/android/server/RCPManagerService;->TAG:Ljava/lang/String;
 
     new-instance v9, Ljava/lang/StringBuilder;
@@ -4568,22 +4157,18 @@
 
     invoke-static {v8, v9}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1749
     const/4 v4, 0x1
 
-    .line 1751
     .local v4, "retValue":Z
     new-instance v5, Ljava/io/File;
 
     invoke-direct {v5, p1}, Ljava/io/File;-><init>(Ljava/lang/String;)V
 
-    .line 1752
     .local v5, "src":Ljava/io/File;
     new-instance v1, Ljava/io/File;
 
     invoke-direct {v1, p2}, Ljava/io/File;-><init>(Ljava/lang/String;)V
 
-    .line 1756
     .local v1, "dest":Ljava/io/File;
     :try_start_0
     invoke-virtual {v5}, Ljava/io/File;->exists()Z
@@ -4592,7 +4177,6 @@
 
     if-nez v8, :cond_0
 
-    .line 1757
     sget-object v6, Lcom/android/server/RCPManagerService;->TAG:Ljava/lang/String;
 
     new-instance v8, Ljava/lang/StringBuilder;
@@ -4621,11 +4205,9 @@
 
     invoke-static {v6, v8}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1796
     :goto_0
     return v7
 
-    .line 1762
     :cond_0
     invoke-virtual {v5}, Ljava/io/File;->isDirectory()Z
 
@@ -4633,32 +4215,26 @@
 
     if-eqz v8, :cond_4
 
-    .line 1763
     invoke-virtual {v1}, Ljava/io/File;->exists()Z
 
     move-result v8
 
     if-nez v8, :cond_1
 
-    .line 1764
     invoke-virtual {v1}, Ljava/io/File;->mkdir()Z
 
-    .line 1766
     :cond_1
     invoke-virtual {v5}, Ljava/io/File;->list()[Ljava/lang/String;
 
     move-result-object v0
 
-    .line 1767
     .local v0, "children":[Ljava/lang/String;
     if-nez v0, :cond_2
 
     move v7, v6
 
-    .line 1768
     goto :goto_0
 
-    .line 1769
     :cond_2
     const/4 v3, 0x0
 
@@ -4668,7 +4244,6 @@
 
     if-ge v3, v8, :cond_6
 
-    .line 1770
     if-eqz v4, :cond_3
 
     new-instance v8, Ljava/lang/StringBuilder;
@@ -4727,7 +4302,6 @@
 
     move v4, v6
 
-    .line 1769
     :goto_2
     add-int/lit8 v3, v3, 0x1
 
@@ -4736,10 +4310,8 @@
     :cond_3
     move v4, v7
 
-    .line 1770
     goto :goto_2
 
-    .line 1776
     .end local v0    # "children":[Ljava/lang/String;
     .end local v3    # "i":I
     :cond_4
@@ -4753,11 +4325,9 @@
 
     move v4, v6
 
-    .line 1777
     :goto_3
     if-nez v4, :cond_6
 
-    .line 1778
     sget-object v6, Lcom/android/server/RCPManagerService;->TAG:Ljava/lang/String;
 
     new-instance v8, Ljava/lang/StringBuilder;
@@ -4794,11 +4364,9 @@
 
     goto/16 :goto_0
 
-    .line 1787
     :catch_0
     move-exception v2
 
-    .line 1788
     .local v2, "e":Ljava/lang/Exception;
     sget-object v6, Lcom/android/server/RCPManagerService;->TAG:Ljava/lang/String;
 
@@ -4832,7 +4400,6 @@
 
     invoke-static {v6, v8}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1790
     invoke-virtual {v2}, Ljava/lang/Exception;->printStackTrace()V
 
     goto/16 :goto_0
@@ -4841,10 +4408,8 @@
     :cond_5
     move v4, v7
 
-    .line 1776
     goto :goto_3
 
-    .line 1784
     :cond_6
     :try_start_1
     invoke-virtual {v1}, Ljava/io/File;->getAbsolutePath()Ljava/lang/String;
@@ -4859,7 +4424,6 @@
     :try_end_1
     .catch Ljava/lang/Exception; {:try_start_1 .. :try_end_1} :catch_0
 
-    .line 1794
     sget-object v6, Lcom/android/server/RCPManagerService;->TAG:Ljava/lang/String;
 
     new-instance v7, Ljava/lang/StringBuilder;
@@ -4884,7 +4448,6 @@
 
     move v7, v4
 
-    .line 1796
     goto/16 :goto_0
 .end method
 
@@ -4901,35 +4464,28 @@
     .end annotation
 
     .prologue
-    .line 2496
     const/4 v0, 0x0
 
-    .line 2497
     .local v0, "rcpInterface":Landroid/content/IRCPInterface;
     invoke-virtual {p0}, Lcom/android/server/RCPManagerService;->getRCPInterface()Landroid/content/IRCPInterface;
 
     move-result-object v0
 
-    .line 2498
     if-eqz v0, :cond_0
 
-    .line 2499
     sget-object v1, Lcom/android/server/RCPManagerService;->TAG:Ljava/lang/String;
 
     const-string v2, "copyFile  getRCPInterface not NULL "
 
     invoke-static {v1, v2}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 2500
     invoke-interface {v0, p1, p2, p3, p4}, Landroid/content/IRCPInterface;->copyFile(ILjava/lang/String;ILjava/lang/String;)I
 
     move-result v1
 
-    .line 2504
     :goto_0
     return v1
 
-    .line 2503
     :cond_0
     sget-object v1, Lcom/android/server/RCPManagerService;->TAG:Ljava/lang/String;
 
@@ -4937,7 +4493,6 @@
 
     invoke-static {v1, v2}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 2504
     const/4 v1, -0x1
 
     goto :goto_0
@@ -4951,12 +4506,10 @@
     .param p4, "destFilePath"    # Ljava/lang/String;
 
     .prologue
-    .line 2098
     const-string v1, "copyFile"
 
     invoke-static {v1}, Lcom/android/server/RCPManagerService;->checkCallerPermissionFor(Ljava/lang/String;)I
 
-    .line 2099
     sget-object v1, Lcom/android/server/RCPManagerService;->TAG:Ljava/lang/String;
 
     new-instance v2, Ljava/lang/StringBuilder;
@@ -5009,14 +4562,12 @@
 
     invoke-static {v1, v2}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 2102
     iget-object v1, p0, Lcom/android/server/RCPManagerService;->mContext:Landroid/content/Context;
 
     invoke-static {v1}, Lcom/sec/knox/container/util/EnterprisePartitionManager;->getInstance(Landroid/content/Context;)Lcom/sec/knox/container/util/EnterprisePartitionManager;
 
     move-result-object v0
 
-    .line 2104
     .local v0, "epm":Lcom/sec/knox/container/util/EnterprisePartitionManager;
     invoke-virtual {v0, p2, p1, p4, p3}, Lcom/sec/knox/container/util/EnterprisePartitionManager;->copy(Ljava/lang/String;ILjava/lang/String;I)I
 
@@ -5030,14 +4581,11 @@
     .param p1, "personaID"    # I
 
     .prologue
-    .line 2046
     const/4 v1, 0x0
 
-    .line 2047
     .local v1, "callback":Landroid/content/ISyncCallBack;
     invoke-direct {p0, p1}, Lcom/android/server/RCPManagerService;->unregisterProxy(I)V
 
-    .line 2048
     iget-object v5, p0, Lcom/android/server/RCPManagerService;->mCommandQueue:Ljava/util/Map;
 
     invoke-static {p1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
@@ -5046,7 +4594,6 @@
 
     invoke-interface {v5, v6}, Ljava/util/Map;->remove(Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 2050
     iget-object v5, p0, Lcom/android/server/RCPManagerService;->mBridgeSyncUserMap:Ljava/util/HashMap;
 
     invoke-virtual {v5}, Ljava/util/HashMap;->isEmpty()Z
@@ -5055,7 +4602,6 @@
 
     if-nez v5, :cond_1
 
-    .line 2051
     iget-object v5, p0, Lcom/android/server/RCPManagerService;->mBridgeSyncUserMap:Ljava/util/HashMap;
 
     invoke-virtual {v5}, Ljava/util/HashMap;->entrySet()Ljava/util/Set;
@@ -5066,7 +4612,6 @@
 
     move-result-object v3
 
-    .line 2053
     .local v3, "it":Ljava/util/Iterator;
     :cond_0
     :goto_0
@@ -5076,7 +4621,6 @@
 
     if-eqz v5, :cond_1
 
-    .line 2056
     :try_start_0
     invoke-interface {v3}, Ljava/util/Iterator;->next()Ljava/lang/Object;
 
@@ -5084,7 +4628,6 @@
 
     check-cast v4, Ljava/util/Map$Entry;
 
-    .line 2057
     .local v4, "pairs":Ljava/util/Map$Entry;
     if-eqz v4, :cond_0
 
@@ -5100,7 +4643,6 @@
 
     if-eqz v5, :cond_0
 
-    .line 2060
     invoke-interface {v4}, Ljava/util/Map$Entry;->getValue()Ljava/lang/Object;
 
     move-result-object v5
@@ -5111,10 +4653,8 @@
 
     move-object v1, v0
 
-    .line 2061
     if-eqz v1, :cond_0
 
-    .line 2062
     sget-object v5, Lcom/android/server/RCPManagerService;->TAG:Ljava/lang/String;
 
     new-instance v6, Ljava/lang/StringBuilder;
@@ -5147,7 +4687,6 @@
 
     invoke-static {v5, v6}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 2066
     invoke-interface {v1, p1}, Landroid/content/ISyncCallBack;->deletePersonaData(I)V
     :try_end_0
     .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
@@ -5155,12 +4694,10 @@
 
     goto :goto_0
 
-    .line 2069
     .end local v4    # "pairs":Ljava/util/Map$Entry;
     :catch_0
     move-exception v2
 
-    .line 2071
     .local v2, "e":Landroid/os/RemoteException;
     sget-object v5, Lcom/android/server/RCPManagerService;->TAG:Ljava/lang/String;
 
@@ -5186,12 +4723,10 @@
 
     goto :goto_0
 
-    .line 2074
     .end local v2    # "e":Landroid/os/RemoteException;
     :catch_1
     move-exception v2
 
-    .line 2076
     .local v2, "e":Ljava/lang/Exception;
     sget-object v5, Lcom/android/server/RCPManagerService;->TAG:Ljava/lang/String;
 
@@ -5217,7 +4752,6 @@
 
     goto :goto_0
 
-    .line 2082
     .end local v2    # "e":Ljava/lang/Exception;
     .end local v3    # "it":Ljava/util/Iterator;
     :cond_1
@@ -5229,12 +4763,10 @@
     .param p1, "path"    # Ljava/lang/String;
 
     .prologue
-    .line 1801
     const-string v0, "deleteClipboardFile"
 
     invoke-static {v0}, Lcom/android/server/RCPManagerService;->checkCallerPermissionFor(Ljava/lang/String;)I
 
-    .line 1802
     sget-object v0, Lcom/android/server/RCPManagerService;->TAG:Ljava/lang/String;
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -5257,14 +4789,12 @@
 
     invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1803
     new-instance v0, Ljava/io/File;
 
     invoke-direct {v0, p1}, Ljava/io/File;-><init>(Ljava/lang/String;)V
 
     invoke-direct {p0, v0}, Lcom/android/server/RCPManagerService;->delete(Ljava/io/File;)V
 
-    .line 1804
     return-void
 .end method
 
@@ -5274,12 +4804,10 @@
     .param p2, "containerId"    # I
 
     .prologue
-    .line 2157
     const-string v1, "deleteFile"
 
     invoke-static {v1}, Lcom/android/server/RCPManagerService;->checkCallerPermissionFor(Ljava/lang/String;)I
 
-    .line 2158
     sget-object v1, Lcom/android/server/RCPManagerService;->TAG:Ljava/lang/String;
 
     new-instance v2, Ljava/lang/StringBuilder;
@@ -5312,14 +4840,12 @@
 
     invoke-static {v1, v2}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 2159
     iget-object v1, p0, Lcom/android/server/RCPManagerService;->mContext:Landroid/content/Context;
 
     invoke-static {v1}, Lcom/sec/knox/container/util/EnterprisePartitionManager;->getInstance(Landroid/content/Context;)Lcom/sec/knox/container/util/EnterprisePartitionManager;
 
     move-result-object v0
 
-    .line 2161
     .local v0, "epm":Lcom/sec/knox/container/util/EnterprisePartitionManager;
     invoke-virtual {v0, p1, p2}, Lcom/sec/knox/container/util/EnterprisePartitionManager;->deleteFile(Ljava/lang/String;I)Z
 
@@ -5339,21 +4865,17 @@
 
     const/4 v4, 0x0
 
-    .line 2328
     const-string v6, "exchangeData"
 
     invoke-static {v6}, Lcom/android/server/RCPManagerService;->checkCallerPermissionFor(Ljava/lang/String;)I
 
-    .line 2331
     const/4 v0, 0x0
 
-    .line 2333
     .local v0, "bd":Landroid/os/Bundle;
     if-eqz p1, :cond_0
 
     if-gez p2, :cond_1
 
-    .line 2334
     :cond_0
     sget-object v4, Lcom/android/server/RCPManagerService;->TAG:Ljava/lang/String;
 
@@ -5379,21 +4901,17 @@
 
     move-object v4, v5
 
-    .line 2368
     :goto_0
     return-object v4
 
-    .line 2340
     :cond_1
     invoke-direct {p0, p2, v4}, Lcom/android/server/RCPManagerService;->getExchangeDataMap(IZ)Ljava/util/HashMap;
 
     move-result-object v2
 
-    .line 2343
     .local v2, "cbMap":Ljava/util/HashMap;, "Ljava/util/HashMap<Ljava/lang/String;Landroid/os/IRunnableCallback;>;"
     if-nez v2, :cond_2
 
-    .line 2344
     sget-object v4, Lcom/android/server/RCPManagerService;->TAG:Ljava/lang/String;
 
     const-string v6, "exchangeData() failure , invalid userId"
@@ -5402,10 +4920,8 @@
 
     move-object v4, v5
 
-    .line 2345
     goto :goto_0
 
-    .line 2348
     :cond_2
     if-eqz p3, :cond_3
 
@@ -5423,15 +4939,12 @@
 
     if-eqz v5, :cond_3
 
-    .line 2349
     const-string v5, "callerPkgName"
 
     invoke-virtual {p3, v5, p1}, Landroid/os/Bundle;->putString(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 2350
     const-string p1, "com.sec.knox.bridge"
 
-    .line 2353
     :cond_3
     invoke-virtual {v2, p1}, Ljava/util/HashMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
 
@@ -5439,7 +4952,6 @@
 
     check-cast v1, Landroid/os/IRunnableCallback;
 
-    .line 2355
     .local v1, "cb":Landroid/os/IRunnableCallback;
     sget-object v5, Lcom/android/server/RCPManagerService;->TAG:Ljava/lang/String;
 
@@ -5488,10 +5000,8 @@
 
     invoke-static {v5, v4}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 2358
     if-eqz v1, :cond_5
 
-    .line 2360
     :try_start_0
     invoke-interface {v1, p3}, Landroid/os/IRunnableCallback;->run(Landroid/os/Bundle;)Landroid/os/Bundle;
     :try_end_0
@@ -5499,7 +5009,6 @@
 
     move-result-object v0
 
-    .line 2366
     :cond_5
     :goto_1
     sget-object v4, Lcom/android/server/RCPManagerService;->TAG:Ljava/lang/String;
@@ -5510,14 +5019,11 @@
 
     move-object v4, v0
 
-    .line 2368
     goto :goto_0
 
-    .line 2361
     :catch_0
     move-exception v3
 
-    .line 2362
     .local v3, "e":Ljava/lang/Exception;
     invoke-virtual {v3}, Ljava/lang/Exception;->printStackTrace()V
 
@@ -5534,12 +5040,10 @@
     .end annotation
 
     .prologue
-    .line 721
     const-string v5, "executeCommandForPersona"
 
     invoke-static {v5}, Lcom/android/server/RCPManagerService;->checkCallerPermissionFor(Ljava/lang/String;)I
 
-    .line 723
     sget-object v5, Lcom/android/server/RCPManagerService;->TAG:Ljava/lang/String;
 
     new-instance v6, Ljava/lang/StringBuilder;
@@ -5588,10 +5092,9 @@
 
     invoke-static {v5, v6}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 725
     iget-object v5, p0, Lcom/android/server/RCPManagerService;->mContext:Landroid/content/Context;
 
-    const-string/jumbo v6, "persona"
+    const-string v6, "persona"
 
     invoke-virtual {v5, v6}, Landroid/content/Context;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
 
@@ -5599,17 +5102,14 @@
 
     check-cast v1, Landroid/os/PersonaManager;
 
-    .line 727
     .local v1, "mPm":Landroid/os/PersonaManager;
     const/4 v4, 0x0
 
-    .line 730
     .local v4, "parsedIntent":Landroid/content/Intent;
     invoke-static {}, Landroid/os/Binder;->clearCallingIdentity()J
 
     move-result-wide v2
 
-    .line 732
     .local v2, "ident":J
     iget v5, p1, Landroid/app/Command;->personaId:I
 
@@ -5619,7 +5119,6 @@
 
     if-nez v5, :cond_1
 
-    .line 733
     iget-object v5, p0, Lcom/android/server/RCPManagerService;->mCommandQueue:Ljava/util/Map;
 
     iget v6, p1, Landroid/app/Command;->personaId:I
@@ -5630,33 +5129,27 @@
 
     invoke-interface {v5, v6, p1}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 759
     :cond_0
     :goto_0
     iget v5, p1, Landroid/app/Command;->personaId:I
 
     invoke-direct {p0, v5, v4}, Lcom/android/server/RCPManagerService;->switchPersonaAndLaunch(ILandroid/content/Intent;)V
 
-    .line 760
     sget-object v5, Lcom/android/server/RCPManagerService;->TAG:Ljava/lang/String;
 
     const-string v6, "executecommand is done."
 
     invoke-static {v5, v6}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 761
     invoke-static {v2, v3}, Landroid/os/Binder;->restoreCallingIdentity(J)V
 
-    .line 762
     return-void
 
-    .line 735
     :cond_1
     iget-object v5, p1, Landroid/app/Command;->uri:Ljava/lang/String;
 
     if-eqz v5, :cond_2
 
-    .line 737
     :try_start_0
     iget-object v5, p1, Landroid/app/Command;->uri:Ljava/lang/String;
 
@@ -5670,11 +5163,9 @@
 
     goto :goto_0
 
-    .line 738
     :catch_0
     move-exception v0
 
-    .line 739
     .local v0, "e":Ljava/net/URISyntaxException;
     sget-object v5, Lcom/android/server/RCPManagerService;->TAG:Ljava/lang/String;
 
@@ -5684,7 +5175,6 @@
 
     goto :goto_0
 
-    .line 741
     .end local v0    # "e":Ljava/net/URISyntaxException;
     :cond_2
     const-string v5, "launchIntent"
@@ -5697,15 +5187,12 @@
 
     if-eqz v5, :cond_3
 
-    .line 742
     if-nez v4, :cond_0
 
-    .line 743
     iget-object v4, p1, Landroid/app/Command;->intent:Landroid/content/Intent;
 
     goto :goto_0
 
-    .line 745
     :cond_3
     const-string v5, "launchNotification"
 
@@ -5717,35 +5204,29 @@
 
     if-eqz v5, :cond_0
 
-    .line 746
     iget-object v5, p1, Landroid/app/Command;->contentIntent:Landroid/app/PendingIntent;
 
     if-eqz v5, :cond_0
 
-    .line 747
     if-nez v4, :cond_4
 
-    .line 748
     new-instance v4, Landroid/content/Intent;
 
     .end local v4    # "parsedIntent":Landroid/content/Intent;
     invoke-direct {v4}, Landroid/content/Intent;-><init>()V
 
-    .line 750
     .restart local v4    # "parsedIntent":Landroid/content/Intent;
     :cond_4
     const-string v5, "launchContentIntent"
 
     invoke-virtual {v4, v5}, Landroid/content/Intent;->setAction(Ljava/lang/String;)Landroid/content/Intent;
 
-    .line 751
-    const-string/jumbo v5, "pendingIntent"
+    const-string v5, "pendingIntent"
 
     iget-object v6, p1, Landroid/app/Command;->contentIntent:Landroid/app/PendingIntent;
 
     invoke-virtual {v4, v5, v6}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Landroid/os/Parcelable;)Landroid/content/Intent;
 
-    .line 754
     const-string v5, "intent"
 
     iget-object v6, p1, Landroid/app/Command;->intent:Landroid/content/Intent;
@@ -5764,45 +5245,38 @@
     .end annotation
 
     .prologue
-    .line 841
     iget-object v0, p0, Lcom/android/server/RCPManagerService;->mContext:Landroid/content/Context;
 
     iget-object v1, p0, Lcom/android/server/RCPManagerService;->receiver:Lcom/android/server/RCPManagerService$PackageReceiver;
 
     invoke-virtual {v0, v1}, Landroid/content/Context;->unregisterReceiver(Landroid/content/BroadcastReceiver;)V
 
-    .line 842
     iget-object v0, p0, Lcom/android/server/RCPManagerService;->mContext:Landroid/content/Context;
 
     iget-object v1, p0, Lcom/android/server/RCPManagerService;->modeSwitchReceiver:Lcom/android/server/RCPManagerService$ModeSwitcherReceiver;
 
     invoke-virtual {v0, v1}, Landroid/content/Context;->unregisterReceiver(Landroid/content/BroadcastReceiver;)V
 
-    .line 844
     iget-object v0, p0, Lcom/android/server/RCPManagerService;->mContext:Landroid/content/Context;
 
     iget-object v1, p0, Lcom/android/server/RCPManagerService;->mKnoxLayoutChangeReceiver:Lcom/android/server/RCPManagerService$KnoxLayoutChangeReceiver;
 
     invoke-virtual {v0, v1}, Landroid/content/Context;->unregisterReceiver(Landroid/content/BroadcastReceiver;)V
 
-    .line 845
     iget-object v0, p0, Lcom/android/server/RCPManagerService;->mContext:Landroid/content/Context;
 
     iget-object v1, p0, Lcom/android/server/RCPManagerService;->mPersonaRemovalReceiver:Lcom/android/server/RCPManagerService$PersonaRemovalReceiver;
 
     invoke-virtual {v0, v1}, Landroid/content/Context;->unregisterReceiver(Landroid/content/BroadcastReceiver;)V
 
-    .line 850
     sget-object v0, Lcom/android/server/RCPManagerService;->TAG:Ljava/lang/String;
 
     const-string v1, "finalize() Unregistering the receiver"
 
     invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 851
     invoke-super {p0}, Landroid/os/IRCPManager$Stub;->finalize()V
 
-    .line 852
     return-void
 .end method
 
@@ -5813,12 +5287,10 @@
     .prologue
     const/4 v6, 0x0
 
-    .line 1917
     const-string v7, "getCallerInfo"
 
     invoke-static {v7}, Lcom/android/server/RCPManagerService;->checkCallerPermissionFor(Ljava/lang/String;)I
 
-    .line 1918
     sget-object v7, Lcom/android/server/RCPManagerService;->TAG:Ljava/lang/String;
 
     new-instance v8, Ljava/lang/StringBuilder;
@@ -5841,7 +5313,6 @@
 
     invoke-static {v7, v8}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1921
     iget-object v7, p0, Lcom/android/server/RCPManagerService;->mBridgeProviderUserMap:Ljava/util/HashMap;
 
     if-eqz v7, :cond_0
@@ -5854,7 +5325,6 @@
 
     if-eqz v7, :cond_1
 
-    .line 1922
     :cond_0
     sget-object v7, Lcom/android/server/RCPManagerService;->TAG:Ljava/lang/String;
 
@@ -5864,11 +5334,9 @@
 
     move-object v5, v6
 
-    .line 1972
     :goto_0
     return-object v5
 
-    .line 1927
     :cond_1
     iget-object v7, p0, Lcom/android/server/RCPManagerService;->mBridgeProviderUserMap:Ljava/util/HashMap;
 
@@ -5880,7 +5348,6 @@
 
     move-result-object v2
 
-    .line 1929
     .local v2, "iteratorPersonaIds":Ljava/util/Iterator;, "Ljava/util/Iterator<Ljava/lang/Integer;>;"
     new-instance v0, Ljava/lang/Integer;
 
@@ -5890,7 +5357,6 @@
 
     invoke-direct {v0, v7}, Ljava/lang/Integer;-><init>(I)V
 
-    .line 1931
     .local v0, "callingUserId":Ljava/lang/Integer;
     :cond_2
     :goto_1
@@ -5900,18 +5366,15 @@
 
     if-eqz v7, :cond_4
 
-    .line 1932
     invoke-interface {v2}, Ljava/util/Iterator;->next()Ljava/lang/Object;
 
     move-result-object v3
 
     check-cast v3, Ljava/lang/Integer;
 
-    .line 1933
     .local v3, "personaId":Ljava/lang/Integer;
     if-eqz v3, :cond_2
 
-    .line 1935
     invoke-virtual {v3}, Ljava/lang/Integer;->intValue()I
 
     move-result v7
@@ -5922,7 +5385,6 @@
 
     if-ne v7, v8, :cond_3
 
-    .line 1936
     sget-object v7, Lcom/android/server/RCPManagerService;->TAG:Ljava/lang/String;
 
     new-instance v8, Ljava/lang/StringBuilder;
@@ -5947,7 +5409,6 @@
 
     goto :goto_1
 
-    .line 1942
     :cond_3
     :try_start_0
     sget-object v7, Lcom/android/server/RCPManagerService;->TAG:Ljava/lang/String;
@@ -5972,7 +5433,6 @@
 
     invoke-static {v7, v8}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1945
     iget-object v7, p0, Lcom/android/server/RCPManagerService;->mBridgeProviderUserMap:Ljava/util/HashMap;
 
     invoke-virtual {v7, v3}, Ljava/util/HashMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
@@ -5981,16 +5441,13 @@
 
     check-cast v4, Landroid/content/IProviderCallBack;
 
-    .line 1947
     .local v4, "providerCallBack":Landroid/content/IProviderCallBack;
     if-eqz v4, :cond_2
 
-    .line 1950
     invoke-interface {v4, p1}, Landroid/content/IProviderCallBack;->getCallerInfoDetails(Ljava/lang/String;)Landroid/content/CustomCursor;
 
     move-result-object v5
 
-    .line 1952
     .local v5, "result":Landroid/content/CustomCursor;
     sget-object v7, Lcom/android/server/RCPManagerService;->TAG:Ljava/lang/String;
 
@@ -6014,7 +5471,6 @@
 
     invoke-static {v7, v8}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1956
     if-eqz v5, :cond_2
 
     invoke-virtual {v5}, Landroid/content/CustomCursor;->getCount()I
@@ -6023,14 +5479,12 @@
 
     if-lez v7, :cond_2
 
-    .line 1957
     invoke-virtual {v3}, Ljava/lang/Integer;->intValue()I
 
     move-result v7
 
     invoke-virtual {v5, v7}, Landroid/content/CustomCursor;->setCursorOwnerId(I)V
 
-    .line 1958
     sget-object v7, Lcom/android/server/RCPManagerService;->TAG:Ljava/lang/String;
 
     const-string v8, "Found first valid record; getCallerInfo(): result != null && result.getCount() > 0; "
@@ -6041,13 +5495,11 @@
 
     goto/16 :goto_0
 
-    .line 1963
     .end local v4    # "providerCallBack":Landroid/content/IProviderCallBack;
     .end local v5    # "result":Landroid/content/CustomCursor;
     :catch_0
     move-exception v1
 
-    .line 1964
     .local v1, "e":Landroid/os/RemoteException;
     sget-object v7, Lcom/android/server/RCPManagerService;->TAG:Ljava/lang/String;
 
@@ -6073,7 +5525,6 @@
 
     goto/16 :goto_1
 
-    .line 1969
     .end local v1    # "e":Landroid/os/RemoteException;
     .end local v3    # "personaId":Ljava/lang/Integer;
     :cond_4
@@ -6085,7 +5536,6 @@
 
     move-object v5, v6
 
-    .line 1972
     goto/16 :goto_0
 .end method
 
@@ -6095,12 +5545,10 @@
     .param p2, "containerId"    # I
 
     .prologue
-    .line 2165
     const-string v1, "getFileInfo"
 
     invoke-static {v1}, Lcom/android/server/RCPManagerService;->checkCallerPermissionFor(Ljava/lang/String;)I
 
-    .line 2166
     sget-object v1, Lcom/android/server/RCPManagerService;->TAG:Ljava/lang/String;
 
     new-instance v2, Ljava/lang/StringBuilder;
@@ -6133,14 +5581,12 @@
 
     invoke-static {v1, v2}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 2168
     iget-object v1, p0, Lcom/android/server/RCPManagerService;->mContext:Landroid/content/Context;
 
     invoke-static {v1}, Lcom/sec/knox/container/util/EnterprisePartitionManager;->getInstance(Landroid/content/Context;)Lcom/sec/knox/container/util/EnterprisePartitionManager;
 
     move-result-object v0
 
-    .line 2170
     .local v0, "epm":Lcom/sec/knox/container/util/EnterprisePartitionManager;
     invoke-virtual {v0, p1, p2}, Lcom/sec/knox/container/util/EnterprisePartitionManager;->getFileInfo(Ljava/lang/String;I)Landroid/os/Bundle;
 
@@ -6166,12 +5612,10 @@
     .end annotation
 
     .prologue
-    .line 2146
     const-string v1, "getFiles"
 
     invoke-static {v1}, Lcom/android/server/RCPManagerService;->checkCallerPermissionFor(Ljava/lang/String;)I
 
-    .line 2147
     sget-object v1, Lcom/android/server/RCPManagerService;->TAG:Ljava/lang/String;
 
     new-instance v2, Ljava/lang/StringBuilder;
@@ -6204,14 +5648,12 @@
 
     invoke-static {v1, v2}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 2148
     iget-object v1, p0, Lcom/android/server/RCPManagerService;->mContext:Landroid/content/Context;
 
     invoke-static {v1}, Lcom/sec/knox/container/util/EnterprisePartitionManager;->getInstance(Landroid/content/Context;)Lcom/sec/knox/container/util/EnterprisePartitionManager;
 
     move-result-object v0
 
-    .line 2150
     .local v0, "epm":Lcom/sec/knox/container/util/EnterprisePartitionManager;
     invoke-virtual {v0, p1, p2}, Lcom/sec/knox/container/util/EnterprisePartitionManager;->getFiles(Ljava/lang/String;I)Ljava/util/ArrayList;
 
@@ -6229,26 +5671,21 @@
     .prologue
     const-wide/16 v10, 0x0
 
-    .line 1517
     const-string v6, "getPolicy"
 
     invoke-static {v6}, Lcom/android/server/RCPManagerService;->checkCallerPermissionFor(Ljava/lang/String;)I
 
-    .line 1518
     const-wide/16 v4, 0x0
 
-    .line 1519
     .local v4, "token":J
     const/4 v2, 0x0
 
-    .line 1521
     .local v2, "policy":Ljava/lang/String;
     :try_start_0
     invoke-static {}, Landroid/os/Binder;->clearCallingIdentity()J
 
     move-result-wide v4
 
-    .line 1522
     sget-object v6, Lcom/android/server/RCPManagerService;->TAG:Ljava/lang/String;
 
     new-instance v7, Ljava/lang/StringBuilder;
@@ -6301,8 +5738,7 @@
 
     invoke-static {v6, v7}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1525
-    const-string/jumbo v6, "persona_policy"
+    const-string v6, "persona_policy"
 
     invoke-static {v6}, Landroid/os/ServiceManager;->getService(Ljava/lang/String;)Landroid/os/IBinder;
 
@@ -6310,13 +5746,11 @@
 
     check-cast v1, Lcom/android/server/pm/PersonaPolicyManagerService;
 
-    .line 1527
     .local v1, "personaPolicyMgrSer":Lcom/android/server/pm/PersonaPolicyManagerService;
     invoke-virtual {v1, p1, p2, p3}, Lcom/android/server/pm/PersonaPolicyManagerService;->getRCPDataPolicyForUser(ILjava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v2
 
-    .line 1529
     sget-object v6, Lcom/android/server/RCPManagerService;->TAG:Ljava/lang/String;
 
     new-instance v7, Ljava/lang/StringBuilder;
@@ -6342,31 +5776,26 @@
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 1536
     cmp-long v6, v4, v10
 
     if-eqz v6, :cond_0
 
-    .line 1537
     invoke-static {v4, v5}, Landroid/os/Binder;->restoreCallingIdentity(J)V
 
     :cond_0
     move-object v3, v2
 
-    .line 1539
     .end local v1    # "personaPolicyMgrSer":Lcom/android/server/pm/PersonaPolicyManagerService;
     .end local v2    # "policy":Ljava/lang/String;
     .local v3, "policy":Ljava/lang/String;
     :goto_0
     return-object v3
 
-    .line 1530
     .end local v3    # "policy":Ljava/lang/String;
     .restart local v2    # "policy":Ljava/lang/String;
     :catch_0
     move-exception v0
 
-    .line 1531
     .local v0, "e":Ljava/lang/Exception;
     :try_start_1
     sget-object v6, Lcom/android/server/RCPManagerService;->TAG:Ljava/lang/String;
@@ -6391,28 +5820,23 @@
 
     invoke-static {v6, v7}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1534
     invoke-virtual {v0}, Ljava/lang/Exception;->printStackTrace()V
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
-    .line 1536
     cmp-long v6, v4, v10
 
     if-eqz v6, :cond_1
 
-    .line 1537
     invoke-static {v4, v5}, Landroid/os/Binder;->restoreCallingIdentity(J)V
 
     :cond_1
     move-object v3, v2
 
-    .line 1539
     .end local v2    # "policy":Ljava/lang/String;
     .restart local v3    # "policy":Ljava/lang/String;
     goto :goto_0
 
-    .line 1536
     .end local v0    # "e":Ljava/lang/Exception;
     .end local v3    # "policy":Ljava/lang/String;
     .restart local v2    # "policy":Ljava/lang/String;
@@ -6423,13 +5847,11 @@
 
     if-eqz v6, :cond_2
 
-    .line 1537
     invoke-static {v4, v5}, Landroid/os/Binder;->restoreCallingIdentity(J)V
 
     :cond_2
     move-object v3, v2
 
-    .line 1539
     .end local v2    # "policy":Ljava/lang/String;
     .restart local v3    # "policy":Ljava/lang/String;
     goto :goto_0
@@ -6439,12 +5861,10 @@
     .locals 5
 
     .prologue
-    .line 1904
     const-string v2, "getRCPInterface"
 
     invoke-static {v2}, Lcom/android/server/RCPManagerService;->checkCallerPermissionFor(Ljava/lang/String;)I
 
-    .line 1905
     sget-object v2, Lcom/android/server/RCPManagerService;->TAG:Ljava/lang/String;
 
     new-instance v3, Ljava/lang/StringBuilder;
@@ -6467,12 +5887,10 @@
 
     invoke-static {v2, v3}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1907
     invoke-static {}, Lcom/android/server/RCPManagerService;->getCallingUserHandle()Landroid/os/UserHandle;
 
     move-result-object v0
 
-    .line 1908
     .local v0, "user":Landroid/os/UserHandle;
     sget-object v2, Lcom/android/server/RCPManagerService;->TAG:Ljava/lang/String;
 
@@ -6496,14 +5914,12 @@
 
     invoke-static {v2, v3}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1910
     sget-object v2, Lcom/android/server/RCPManagerService;->TAG:Ljava/lang/String;
 
     const-string v3, "getRCPInterface getting User Id"
 
     invoke-static {v2, v3}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1911
     new-instance v1, Ljava/lang/Integer;
 
     invoke-static {}, Landroid/os/UserHandle;->getCallingUserId()I
@@ -6512,7 +5928,6 @@
 
     invoke-direct {v1, v2}, Ljava/lang/Integer;-><init>(I)V
 
-    .line 1913
     .local v1, "userId":Ljava/lang/Integer;
     iget-object v2, p0, Lcom/android/server/RCPManagerService;->mRCPInterfaceMap:Ljava/util/HashMap;
 
@@ -6529,12 +5944,10 @@
     .locals 5
 
     .prologue
-    .line 1890
     const-string v2, "getRCPProxy"
 
     invoke-static {v2}, Lcom/android/server/RCPManagerService;->checkCallerPermissionFor(Ljava/lang/String;)I
 
-    .line 1892
     sget-object v2, Lcom/android/server/RCPManagerService;->TAG:Ljava/lang/String;
 
     new-instance v3, Ljava/lang/StringBuilder;
@@ -6557,12 +5970,10 @@
 
     invoke-static {v2, v3}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1894
     invoke-static {}, Lcom/android/server/RCPManagerService;->getCallingUserHandle()Landroid/os/UserHandle;
 
     move-result-object v0
 
-    .line 1895
     .local v0, "user":Landroid/os/UserHandle;
     sget-object v2, Lcom/android/server/RCPManagerService;->TAG:Ljava/lang/String;
 
@@ -6586,14 +5997,12 @@
 
     invoke-static {v2, v3}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1897
     sget-object v2, Lcom/android/server/RCPManagerService;->TAG:Ljava/lang/String;
 
     const-string v3, "getRCPProxy getting User Id"
 
     invoke-static {v2, v3}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1898
     new-instance v1, Ljava/lang/Integer;
 
     invoke-static {}, Landroid/os/UserHandle;->getCallingUserId()I
@@ -6602,7 +6011,6 @@
 
     invoke-direct {v1, v2}, Ljava/lang/Integer;-><init>(I)V
 
-    .line 1900
     .local v1, "userId":Ljava/lang/Integer;
     iget-object v2, p0, Lcom/android/server/RCPManagerService;->mRCPGlobalContactsDirMap:Ljava/util/HashMap;
 
@@ -6624,17 +6032,14 @@
 
     const/4 v13, 0x1
 
-    .line 1615
     const-string v10, "getUsersToSyncFrom"
 
     invoke-static {v10}, Lcom/android/server/RCPManagerService;->checkCallerPermissionFor(Ljava/lang/String;)I
 
-    .line 1616
     invoke-static {}, Landroid/os/UserHandle;->getCallingUserId()I
 
     move-result v1
 
-    .line 1617
     .local v1, "callingUserId":I
     sget-object v10, Lcom/android/server/RCPManagerService;->TAG:Ljava/lang/String;
 
@@ -6668,14 +6073,12 @@
 
     invoke-static {v10, v11}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1619
-    const-string/jumbo v10, "persona"
+    const-string v10, "persona"
 
     invoke-static {v10}, Landroid/os/ServiceManager;->getService(Ljava/lang/String;)Landroid/os/IBinder;
 
     move-result-object v0
 
-    .line 1620
     .local v0, "b":Landroid/os/IBinder;
     invoke-static {v0}, Landroid/os/IPersonaManager$Stub;->asInterface(Landroid/os/IBinder;)Landroid/os/IPersonaManager;
 
@@ -6683,20 +6086,16 @@
 
     check-cast v6, Lcom/android/server/pm/PersonaManagerService;
 
-    .line 1622
     .local v6, "personaService":Lcom/android/server/pm/PersonaManagerService;
     const/4 v5, 0x0
 
-    .line 1623
     .local v5, "personaList":Ljava/util/List;, "Ljava/util/List<Landroid/content/pm/PersonaInfo;>;"
     if-eqz v6, :cond_0
 
-    .line 1624
     invoke-virtual {v6, v13}, Lcom/android/server/pm/PersonaManagerService;->getPersonas(Z)Ljava/util/List;
 
     move-result-object v5
 
-    .line 1626
     :cond_0
     if-eqz v5, :cond_1
 
@@ -6706,7 +6105,6 @@
 
     if-ge v10, v13, :cond_3
 
-    .line 1627
     :cond_1
     sget-object v10, Lcom/android/server/RCPManagerService;->TAG:Ljava/lang/String;
 
@@ -6714,12 +6112,10 @@
 
     invoke-static {v10, v11}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1669
     :cond_2
     :goto_0
     return-object v8
 
-    .line 1630
     :cond_3
     sget-object v10, Lcom/android/server/RCPManagerService;->TAG:Ljava/lang/String;
 
@@ -6757,7 +6153,6 @@
 
     invoke-static {v10, v11}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1634
     if-eqz v6, :cond_4
 
     invoke-virtual {v6, v1}, Lcom/android/server/pm/PersonaManagerService;->exists(I)Z
@@ -6766,7 +6161,6 @@
 
     if-nez v10, :cond_4
 
-    .line 1635
     sget-object v10, Lcom/android/server/RCPManagerService;->TAG:Ljava/lang/String;
 
     const-string v11, "getUsersToSyncFrom() - Current user is USER/OWNER, hence disabling syncing for it"
@@ -6775,7 +6169,6 @@
 
     goto :goto_0
 
-    .line 1640
     :cond_4
     if-eqz v6, :cond_5
 
@@ -6785,16 +6178,13 @@
 
     if-eqz v10, :cond_5
 
-    .line 1641
     invoke-interface {v5}, Ljava/util/List;->clear()V
 
-    .line 1643
     :cond_5
     new-instance v9, Ljava/util/ArrayList;
 
     invoke-direct {v9}, Ljava/util/ArrayList;-><init>()V
 
-    .line 1644
     .local v9, "usersToSyncFromList":Ljava/util/ArrayList;, "Ljava/util/ArrayList<Ljava/lang/Integer;>;"
     const/4 v3, 0x0
 
@@ -6808,10 +6198,8 @@
 
     if-ge v3, v10, :cond_a
 
-    .line 1645
     const/4 v7, -0x1
 
-    .line 1646
     .local v7, "userPersonaId":I
     invoke-interface {v5}, Ljava/util/List;->size()I
 
@@ -6819,21 +6207,17 @@
 
     if-ne v3, v10, :cond_7
 
-    .line 1647
     const/4 v7, 0x0
 
-    .line 1650
     :goto_2
     if-ne v1, v7, :cond_8
 
-    .line 1644
     :cond_6
     :goto_3
     add-int/lit8 v3, v3, 0x1
 
     goto :goto_1
 
-    .line 1649
     :cond_7
     invoke-interface {v5, v3}, Ljava/util/List;->get(I)Ljava/lang/Object;
 
@@ -6845,7 +6229,6 @@
 
     goto :goto_2
 
-    .line 1653
     :cond_8
     const-string v10, "Clipboard"
 
@@ -6855,7 +6238,6 @@
 
     move-result-object v2
 
-    .line 1656
     .local v2, "exportPolicy":Ljava/lang/String;
     if-eqz v2, :cond_9
 
@@ -6867,7 +6249,6 @@
 
     if-nez v10, :cond_6
 
-    .line 1659
     :cond_9
     new-instance v10, Ljava/lang/Integer;
 
@@ -6877,7 +6258,6 @@
 
     goto :goto_3
 
-    .line 1663
     .end local v2    # "exportPolicy":Ljava/lang/String;
     .end local v7    # "userPersonaId":I
     :cond_a
@@ -6887,13 +6267,11 @@
 
     new-array v8, v10, [I
 
-    .line 1664
     .local v8, "usersToSyncFromIntArr":[I
     invoke-virtual {v9}, Ljava/util/ArrayList;->iterator()Ljava/util/Iterator;
 
     move-result-object v4
 
-    .line 1665
     .local v4, "iterator":Ljava/util/Iterator;, "Ljava/util/Iterator<Ljava/lang/Integer;>;"
     const/4 v3, 0x0
 
@@ -6902,7 +6280,6 @@
 
     if-ge v3, v10, :cond_2
 
-    .line 1666
     invoke-interface {v4}, Ljava/util/Iterator;->next()Ljava/lang/Object;
 
     move-result-object v10
@@ -6915,7 +6292,6 @@
 
     aput v10, v8, v3
 
-    .line 1665
     add-int/lit8 v3, v3, 0x1
 
     goto :goto_4
@@ -6931,12 +6307,10 @@
     .param p6, "createOrRemove"    # Ljava/lang/String;
 
     .prologue
-    .line 781
     const-string v1, "handleShortcut"
 
     invoke-static {v1}, Lcom/android/server/RCPManagerService;->checkCallerPermissionFor(Ljava/lang/String;)I
 
-    .line 782
     sget-object v1, Lcom/android/server/RCPManagerService;->TAG:Ljava/lang/String;
 
     new-instance v2, Ljava/lang/StringBuilder;
@@ -6969,7 +6343,6 @@
 
     invoke-static {v1, v2}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 785
     iget-object v1, p0, Lcom/android/server/RCPManagerService;->mBridgeProviderUserMap:Ljava/util/HashMap;
 
     sget-object v2, Lcom/android/server/RCPManagerService;->OWNER_ID:Ljava/lang/Integer;
@@ -6980,22 +6353,18 @@
 
     check-cast v0, Landroid/content/IProviderCallBack;
 
-    .line 788
     .local v0, "providerCallBack":Landroid/content/IProviderCallBack;
     if-nez v0, :cond_0
 
-    .line 789
     sget-object v1, Lcom/android/server/RCPManagerService;->TAG:Ljava/lang/String;
 
-    const-string/jumbo v2, "queryAllProviders():  providerCallBack is not register for 0"
+    const-string v2, "queryAllProviders():  providerCallBack is not register for 0"
 
     invoke-static {v1, v2}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 803
     :goto_0
     return-void
 
-    .line 795
     :cond_0
     :try_start_0
     sget-object v1, Lcom/android/server/RCPManagerService;->TAG:Ljava/lang/String;
@@ -7016,18 +6385,15 @@
 
     move-object v6, p6
 
-    .line 797
     invoke-interface/range {v0 .. v6}, Landroid/content/IProviderCallBack;->handleShortcut(ILjava/lang/String;Ljava/lang/String;Landroid/graphics/Bitmap;Ljava/lang/String;Ljava/lang/String;)V
     :try_end_0
     .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
 
     goto :goto_0
 
-    .line 799
     :catch_0
     move-exception v7
 
-    .line 800
     .local v7, "e":Landroid/os/RemoteException;
     sget-object v1, Lcom/android/server/RCPManagerService;->TAG:Ljava/lang/String;
 
@@ -7060,12 +6426,10 @@
     .param p2, "containerId"    # I
 
     .prologue
-    .line 2136
     const-string v1, "isFileExist"
 
     invoke-static {v1}, Lcom/android/server/RCPManagerService;->checkCallerPermissionFor(Ljava/lang/String;)I
 
-    .line 2137
     sget-object v1, Lcom/android/server/RCPManagerService;->TAG:Ljava/lang/String;
 
     new-instance v2, Ljava/lang/StringBuilder;
@@ -7098,14 +6462,12 @@
 
     invoke-static {v1, v2}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 2139
     iget-object v1, p0, Lcom/android/server/RCPManagerService;->mContext:Landroid/content/Context;
 
     invoke-static {v1}, Lcom/sec/knox/container/util/EnterprisePartitionManager;->getInstance(Landroid/content/Context;)Lcom/sec/knox/container/util/EnterprisePartitionManager;
 
     move-result-object v0
 
-    .line 2141
     .local v0, "epm":Lcom/sec/knox/container/util/EnterprisePartitionManager;
     invoke-virtual {v0, p1, p2}, Lcom/sec/knox/container/util/EnterprisePartitionManager;->isFileExist(Ljava/lang/String;I)Z
 
@@ -7122,12 +6484,10 @@
     .param p4, "destFilePath"    # Ljava/lang/String;
 
     .prologue
-    .line 2111
     const-string v1, "moveFile"
 
     invoke-static {v1}, Lcom/android/server/RCPManagerService;->checkCallerPermissionFor(Ljava/lang/String;)I
 
-    .line 2112
     sget-object v1, Lcom/android/server/RCPManagerService;->TAG:Ljava/lang/String;
 
     new-instance v2, Ljava/lang/StringBuilder;
@@ -7180,14 +6540,12 @@
 
     invoke-static {v1, v2}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 2115
     iget-object v1, p0, Lcom/android/server/RCPManagerService;->mContext:Landroid/content/Context;
 
     invoke-static {v1}, Lcom/sec/knox/container/util/EnterprisePartitionManager;->getInstance(Landroid/content/Context;)Lcom/sec/knox/container/util/EnterprisePartitionManager;
 
     move-result-object v0
 
-    .line 2117
     .local v0, "epm":Lcom/sec/knox/container/util/EnterprisePartitionManager;
     invoke-virtual {v0, p2, p1, p4, p3}, Lcom/sec/knox/container/util/EnterprisePartitionManager;->move(Ljava/lang/String;ILjava/lang/String;I)I
 
@@ -7220,37 +6578,30 @@
     .end annotation
 
     .prologue
-    .line 2509
     .local p2, "srcFilePaths":Ljava/util/List;, "Ljava/util/List<Ljava/lang/String;>;"
     .local p3, "destFilePaths":Ljava/util/List;, "Ljava/util/List<Ljava/lang/String;>;"
     const/4 v0, 0x0
 
-    .line 2510
     .local v0, "rcpInterface":Landroid/content/IRCPInterface;
     invoke-virtual {p0}, Lcom/android/server/RCPManagerService;->getRCPInterface()Landroid/content/IRCPInterface;
 
     move-result-object v0
 
-    .line 2511
     if-eqz v0, :cond_0
 
-    .line 2512
     sget-object v1, Lcom/android/server/RCPManagerService;->TAG:Ljava/lang/String;
 
     const-string v2, "moveFilesForApp  getRCPInterface not NULL "
 
     invoke-static {v1, v2}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 2513
     invoke-interface {v0, p1, p2, p3}, Landroid/content/IRCPInterface;->moveFilesForApp(ILjava/util/List;Ljava/util/List;)J
 
     move-result-wide v2
 
-    .line 2517
     :goto_0
     return-wide v2
 
-    .line 2516
     :cond_0
     sget-object v1, Lcom/android/server/RCPManagerService;->TAG:Ljava/lang/String;
 
@@ -7258,7 +6609,6 @@
 
     invoke-static {v1, v2}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 2517
     const-wide/16 v2, -0x1
 
     goto :goto_0
@@ -7293,17 +6643,14 @@
     .end annotation
 
     .prologue
-    .line 255
-    const-string/jumbo v2, "queryProvider"
+    const-string v2, "queryProvider"
 
     invoke-static {v2}, Lcom/android/server/RCPManagerService;->checkCallerPermissionFor(Ljava/lang/String;)I
 
-    .line 256
     invoke-static {}, Landroid/os/UserHandle;->getCallingUserId()I
 
     move-result v9
 
-    .line 258
     .local v9, "callingUserId":I
     sget-object v2, Lcom/android/server/RCPManagerService;->TAG:Ljava/lang/String;
 
@@ -7341,42 +6688,34 @@
 
     invoke-static {v2, v3}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 261
     move-object/from16 v0, p0
 
     invoke-direct {v0, v9}, Lcom/android/server/RCPManagerService;->getUserOrItsPersonasIds(I)[I
 
     move-result-object v14
 
-    .line 262
     .local v14, "ids":[I
     if-nez v14, :cond_0
 
-    .line 263
     sget-object v2, Lcom/android/server/RCPManagerService;->TAG:Ljava/lang/String;
 
-    const-string/jumbo v3, "queryAllProviders ids[] form getUserOrItsPersonasIds() is null"
+    const-string v3, "queryAllProviders ids[] form getUserOrItsPersonasIds() is null"
 
     invoke-static {v2, v3}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 265
     const/4 v10, 0x0
 
-    .line 321
     :goto_0
     return-object v10
 
-    .line 268
     :cond_0
     array-length v15, v14
 
-    .line 269
     .local v15, "idsLength":I
     new-instance v10, Ljava/util/ArrayList;
 
     invoke-direct {v10, v15}, Ljava/util/ArrayList;-><init>(I)V
 
-    .line 274
     .local v10, "customCursorsList":Ljava/util/List;, "Ljava/util/List<Landroid/content/CustomCursor;>;"
     const/4 v12, 0x0
 
@@ -7384,10 +6723,8 @@
     :goto_1
     if-ge v12, v15, :cond_3
 
-    .line 275
     aget v13, v14, v12
 
-    .line 276
     .local v13, "id":I
     sget-object v2, Lcom/android/server/RCPManagerService;->TAG:Ljava/lang/String;
 
@@ -7395,7 +6732,7 @@
 
     invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v4, "queryAllProviders(): process id="
+    const-string v4, "queryAllProviders(): process id="
 
     invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -7411,7 +6748,6 @@
 
     invoke-static {v2, v3}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 278
     move-object/from16 v0, p0
 
     iget-object v2, v0, Lcom/android/server/RCPManagerService;->mBridgeProviderUserMap:Ljava/util/HashMap;
@@ -7426,18 +6762,16 @@
 
     check-cast v1, Landroid/content/IProviderCallBack;
 
-    .line 280
     .local v1, "providerCallBack":Landroid/content/IProviderCallBack;
     if-nez v1, :cond_1
 
-    .line 281
     sget-object v2, Lcom/android/server/RCPManagerService;->TAG:Ljava/lang/String;
 
     new-instance v3, Ljava/lang/StringBuilder;
 
     invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v4, "queryAllProviders():  providerCallBack is not register for ID="
+    const-string v4, "queryAllProviders():  providerCallBack is not register for ID="
 
     invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -7453,18 +6787,16 @@
 
     invoke-static {v2, v3}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 274
     :goto_2
     add-int/lit8 v12, v12, 0x1
 
     goto :goto_1
 
-    .line 288
     :cond_1
     :try_start_0
     sget-object v2, Lcom/android/server/RCPManagerService;->TAG:Ljava/lang/String;
 
-    const-string/jumbo v3, "queryAllProviders(): Found a provider to query. Calling it now"
+    const-string v3, "queryAllProviders(): Found a provider to query. Calling it now"
 
     invoke-static {v2, v3}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
@@ -7482,23 +6814,20 @@
 
     move-object/from16 v8, p7
 
-    .line 291
     invoke-interface/range {v1 .. v8}, Landroid/content/IProviderCallBack;->queryProvider(Ljava/lang/String;Ljava/lang/String;I[Ljava/lang/String;Ljava/lang/String;[Ljava/lang/String;Ljava/lang/String;)Landroid/content/CustomCursor;
 
     move-result-object v16
 
-    .line 295
     .local v16, "resultCursor":Landroid/content/CustomCursor;
     if-nez v16, :cond_2
 
-    .line 296
     sget-object v2, Lcom/android/server/RCPManagerService;->TAG:Ljava/lang/String;
 
     new-instance v3, Ljava/lang/StringBuilder;
 
     invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v4, "queryAllProviders() resultCursor is null for id="
+    const-string v4, "queryAllProviders() resultCursor is null for id="
 
     invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -7514,7 +6843,6 @@
 
     invoke-static {v2, v3}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 304
     :goto_3
     sget-object v2, Lcom/android/server/RCPManagerService;->TAG:Ljava/lang/String;
 
@@ -7522,7 +6850,7 @@
 
     invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v4, "queryAllProviders(): resultCursor: "
+    const-string v4, "queryAllProviders(): resultCursor: "
 
     invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -7540,7 +6868,6 @@
 
     invoke-static {v2, v3}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 307
     move-object/from16 v0, v16
 
     invoke-interface {v10, v0}, Ljava/util/List;->add(Ljava/lang/Object;)Z
@@ -7549,12 +6876,10 @@
 
     goto :goto_2
 
-    .line 310
     .end local v16    # "resultCursor":Landroid/content/CustomCursor;
     :catch_0
     move-exception v11
 
-    .line 311
     .local v11, "e":Landroid/os/RemoteException;
     sget-object v2, Lcom/android/server/RCPManagerService;->TAG:Ljava/lang/String;
 
@@ -7562,7 +6887,7 @@
 
     invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v4, "queryAllProviders(): Remote exception thrown by service for id="
+    const-string v4, "queryAllProviders(): Remote exception thrown by service for id="
 
     invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -7588,14 +6913,12 @@
 
     invoke-static {v2, v3}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 316
     const/4 v2, 0x0
 
     invoke-interface {v10, v2}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
     goto/16 :goto_2
 
-    .line 301
     .end local v11    # "e":Landroid/os/RemoteException;
     .restart local v16    # "resultCursor":Landroid/content/CustomCursor;
     :cond_2
@@ -7604,7 +6927,6 @@
 
     invoke-virtual {v0, v13}, Landroid/content/CustomCursor;->setCursorOwnerId(I)V
 
-    .line 302
     const/4 v2, 0x1
 
     move-object/from16 v0, v16
@@ -7615,14 +6937,13 @@
 
     goto :goto_3
 
-    .line 319
     .end local v1    # "providerCallBack":Landroid/content/IProviderCallBack;
     .end local v13    # "id":I
     .end local v16    # "resultCursor":Landroid/content/CustomCursor;
     :cond_3
     sget-object v2, Lcom/android/server/RCPManagerService;->TAG:Ljava/lang/String;
 
-    const-string/jumbo v3, "queryAllProviders(): DONE..."
+    const-string v3, "queryAllProviders(): DONE..."
 
     invoke-static {v2, v3}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
@@ -7640,17 +6961,14 @@
     .param p7, "sortOrder"    # Ljava/lang/String;
 
     .prologue
-    .line 206
-    const-string/jumbo v2, "queryProvider"
+    const-string v2, "queryProvider"
 
     invoke-static {v2}, Lcom/android/server/RCPManagerService;->checkCallerPermissionFor(Ljava/lang/String;)I
 
-    .line 208
     invoke-static {}, Lcom/android/server/RCPManagerService;->getCallingUserHandle()Landroid/os/UserHandle;
 
     move-result-object v16
 
-    .line 209
     .local v16, "user":Landroid/os/UserHandle;
     new-instance v17, Ljava/lang/Integer;
 
@@ -7662,7 +6980,6 @@
 
     invoke-direct {v0, v2}, Ljava/lang/Integer;-><init>(I)V
 
-    .line 210
     .local v17, "userId":Ljava/lang/Integer;
     sget-object v2, Lcom/android/server/RCPManagerService;->TAG:Ljava/lang/String;
 
@@ -7670,7 +6987,7 @@
 
     invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v4, "queryProvider My Context is "
+    const-string v4, "queryProvider My Context is "
 
     invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -7700,14 +7017,12 @@
 
     invoke-static {v2, v3}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 213
-    const-string/jumbo v2, "persona"
+    const-string v2, "persona"
 
     invoke-static {v2}, Landroid/os/ServiceManager;->getService(Ljava/lang/String;)Landroid/os/IBinder;
 
     move-result-object v9
 
-    .line 214
     .local v9, "b":Landroid/os/IBinder;
     invoke-static {v9}, Landroid/os/IPersonaManager$Stub;->asInterface(Landroid/os/IBinder;)Landroid/os/IPersonaManager;
 
@@ -7715,25 +7030,20 @@
 
     check-cast v14, Lcom/android/server/pm/PersonaManagerService;
 
-    .line 216
     .local v14, "personaService":Lcom/android/server/pm/PersonaManagerService;
     const/4 v12, 0x0
 
-    .line 217
     .local v12, "isPersona":Z
     invoke-virtual/range {v17 .. v17}, Ljava/lang/Integer;->intValue()I
 
     move-result v10
 
-    .line 218
     .local v10, "currentUser":I
     const/4 v13, 0x0
 
-    .line 219
     .local v13, "parentUser":I
     if-eqz v14, :cond_0
 
-    .line 220
     invoke-static {}, Landroid/os/UserHandle;->getCallingUserId()I
 
     move-result v2
@@ -7742,12 +7052,10 @@
 
     move-result v12
 
-    .line 221
     invoke-virtual {v14, v10}, Lcom/android/server/pm/PersonaManagerService;->getParentUserForPersona(I)I
 
     move-result v13
 
-    .line 224
     :cond_0
     move-object/from16 v0, p0
 
@@ -7765,7 +7073,6 @@
 
     check-cast v1, Landroid/content/IProviderCallBack;
 
-    .line 226
     .local v1, "value":Landroid/content/IProviderCallBack;
     sget-object v2, Lcom/android/server/RCPManagerService;->TAG:Ljava/lang/String;
 
@@ -7773,7 +7080,7 @@
 
     invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v4, "queryProvider():  mBridgeProviderUserMap.get(): value="
+    const-string v4, "queryProvider():  mBridgeProviderUserMap.get(): value="
 
     invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -7801,17 +7108,13 @@
 
     invoke-static {v2, v3}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 228
     if-nez v1, :cond_1
 
-    .line 229
     const/4 v15, 0x0
 
-    .line 247
     :goto_0
     return-object v15
 
-    .line 231
     :cond_1
     :try_start_0
     sget-object v2, Lcom/android/server/RCPManagerService;->TAG:Ljava/lang/String;
@@ -7834,23 +7137,19 @@
 
     move-object/from16 v8, p7
 
-    .line 232
     invoke-interface/range {v1 .. v8}, Landroid/content/IProviderCallBack;->queryProvider(Ljava/lang/String;Ljava/lang/String;I[Ljava/lang/String;Ljava/lang/String;[Ljava/lang/String;Ljava/lang/String;)Landroid/content/CustomCursor;
 
     move-result-object v15
 
-    .line 235
     .local v15, "resultCursor":Landroid/content/CustomCursor;
     if-nez v15, :cond_2
 
-    .line 236
     sget-object v2, Lcom/android/server/RCPManagerService;->TAG:Ljava/lang/String;
 
     const-string v3, " resultCursor is null  "
 
     invoke-static {v2, v3}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 238
     :cond_2
     sget-object v2, Lcom/android/server/RCPManagerService;->TAG:Ljava/lang/String;
 
@@ -7878,12 +7177,10 @@
 
     goto :goto_0
 
-    .line 240
     .end local v15    # "resultCursor":Landroid/content/CustomCursor;
     :catch_0
     move-exception v11
 
-    .line 241
     .local v11, "e":Landroid/os/RemoteException;
     sget-object v2, Lcom/android/server/RCPManagerService;->TAG:Ljava/lang/String;
 
@@ -7907,14 +7204,13 @@
 
     invoke-static {v2, v3}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 244
     sget-object v2, Lcom/android/server/RCPManagerService;->TAG:Ljava/lang/String;
 
     new-instance v3, Ljava/lang/StringBuilder;
 
     invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v4, "queryProvider Calling userid is"
+    const-string v4, "queryProvider Calling userid is"
 
     invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -7934,7 +7230,6 @@
 
     invoke-static {v2, v3}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 247
     const/4 v15, 0x0
 
     goto :goto_0
@@ -7944,32 +7239,27 @@
     .locals 3
 
     .prologue
-    .line 1545
-    const-string/jumbo v1, "refreshClipboard"
+    const-string v1, "refreshClipboard"
 
     invoke-static {v1}, Lcom/android/server/RCPManagerService;->checkCallerPermissionFor(Ljava/lang/String;)I
 
-    .line 1546
     sget-object v1, Lcom/android/server/RCPManagerService;->TAG:Ljava/lang/String;
 
-    const-string/jumbo v2, "refreshClipboard sending intent to refresh clipboard"
+    const-string v2, "refreshClipboard sending intent to refresh clipboard"
 
     invoke-static {v1, v2}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1547
     new-instance v0, Landroid/content/Intent;
 
     const-string v1, "com.samsung.knox.clipboard.sync"
 
     invoke-direct {v0, v1}, Landroid/content/Intent;-><init>(Ljava/lang/String;)V
 
-    .line 1548
     .local v0, "i":Landroid/content/Intent;
     iget-object v1, p0, Lcom/android/server/RCPManagerService;->mContext:Landroid/content/Context;
 
     invoke-virtual {v1, v0}, Landroid/content/Context;->sendBroadcast(Landroid/content/Intent;)V
 
-    .line 1549
     return-void
 .end method
 
@@ -7983,19 +7273,17 @@
     .end annotation
 
     .prologue
-    .line 386
-    const-string/jumbo v5, "registerCommandExe"
+    const-string v5, "registerCommandExe"
 
     invoke-static {v5}, Lcom/android/server/RCPManagerService;->checkCallerPermissionFor(Ljava/lang/String;)I
 
-    .line 387
     sget-object v5, Lcom/android/server/RCPManagerService;->TAG:Ljava/lang/String;
 
     new-instance v6, Ljava/lang/StringBuilder;
 
     invoke-direct {v6}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v7, "registerCommandExe My Context is "
+    const-string v7, "registerCommandExe My Context is "
 
     invoke-virtual {v6, v7}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -8011,12 +7299,10 @@
 
     invoke-static {v5, v6}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 389
     invoke-static {}, Lcom/android/server/RCPManagerService;->getCallingUserHandle()Landroid/os/UserHandle;
 
     move-result-object v3
 
-    .line 390
     .local v3, "user":Landroid/os/UserHandle;
     sget-object v5, Lcom/android/server/RCPManagerService;->TAG:Ljava/lang/String;
 
@@ -8024,7 +7310,7 @@
 
     invoke-direct {v6}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v7, "registerCommandExe  User calling is "
+    const-string v7, "registerCommandExe  User calling is "
 
     invoke-virtual {v6, v7}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -8040,14 +7326,12 @@
 
     invoke-static {v5, v6}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 392
     sget-object v5, Lcom/android/server/RCPManagerService;->TAG:Ljava/lang/String;
 
-    const-string/jumbo v6, "registerCommandExe getting User Id"
+    const-string v6, "registerCommandExe getting User Id"
 
     invoke-static {v5, v6}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 393
     new-instance v4, Ljava/lang/Integer;
 
     invoke-static {}, Landroid/os/UserHandle;->getCallingUserId()I
@@ -8056,20 +7340,18 @@
 
     invoke-direct {v4, v5}, Ljava/lang/Integer;-><init>(I)V
 
-    .line 395
     .local v4, "userId":Ljava/lang/Integer;
     iget-object v5, p0, Lcom/android/server/RCPManagerService;->mBridgeCommandExeUserMap:Ljava/util/HashMap;
 
     invoke-virtual {v5, v4, p1}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 397
     sget-object v5, Lcom/android/server/RCPManagerService;->TAG:Ljava/lang/String;
 
     new-instance v6, Ljava/lang/StringBuilder;
 
     invoke-direct {v6}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v7, "registerCommandExe Calling userid is"
+    const-string v7, "registerCommandExe Calling userid is"
 
     invoke-virtual {v6, v7}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -8089,7 +7371,6 @@
 
     invoke-static {v5, v6}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 401
     iget-object v5, p0, Lcom/android/server/RCPManagerService;->mBridgeCommandExeUserMap:Ljava/util/HashMap;
 
     invoke-virtual {v5, v4}, Ljava/util/HashMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
@@ -8098,11 +7379,9 @@
 
     check-cast v1, Landroid/content/ICommandExeCallBack;
 
-    .line 403
     .local v1, "commandExeCallback":Landroid/content/ICommandExeCallBack;
     if-eqz v1, :cond_0
 
-    .line 404
     sget-object v5, Lcom/android/server/RCPManagerService;->TAG:Ljava/lang/String;
 
     new-instance v6, Ljava/lang/StringBuilder;
@@ -8131,7 +7410,6 @@
 
     invoke-static {v5, v6}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 407
     :try_start_0
     iget-object v5, p0, Lcom/android/server/RCPManagerService;->mCommandQueue:Ljava/util/Map;
 
@@ -8145,7 +7423,6 @@
 
     if-eqz v5, :cond_0
 
-    .line 408
     iget-object v5, p0, Lcom/android/server/RCPManagerService;->mCommandQueue:Ljava/util/Map;
 
     invoke-interface {v5, v4}, Ljava/util/Map;->remove(Ljava/lang/Object;)Ljava/lang/Object;
@@ -8154,7 +7431,6 @@
 
     check-cast v0, Landroid/app/Command;
 
-    .line 409
     .local v0, "command":Landroid/app/Command;
     sget-object v5, Lcom/android/server/RCPManagerService;->TAG:Ljava/lang/String;
 
@@ -8178,17 +7454,15 @@
 
     invoke-static {v5, v6}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 410
     if-eqz v0, :cond_0
 
-    .line 411
     sget-object v5, Lcom/android/server/RCPManagerService;->TAG:Ljava/lang/String;
 
     new-instance v6, Ljava/lang/StringBuilder;
 
     invoke-direct {v6}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v7, "pkg in commandqueue is: "
+    const-string v7, "pkg in commandqueue is: "
 
     invoke-virtual {v6, v7}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -8206,22 +7480,18 @@
 
     invoke-static {v5, v6}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 412
     invoke-interface {v1, v0}, Landroid/content/ICommandExeCallBack;->execute(Landroid/app/Command;)V
     :try_end_0
     .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 420
     .end local v0    # "command":Landroid/app/Command;
     :cond_0
     :goto_0
     return-void
 
-    .line 415
     :catch_0
     move-exception v2
 
-    .line 416
     .local v2, "e":Landroid/os/RemoteException;
     sget-object v5, Lcom/android/server/RCPManagerService;->TAG:Ljava/lang/String;
 
@@ -8256,55 +7526,46 @@
     .prologue
     const/4 v2, 0x1
 
-    .line 2307
-    const-string/jumbo v3, "registerExchangeData"
+    const-string v3, "registerExchangeData"
 
     invoke-static {v3}, Lcom/android/server/RCPManagerService;->checkCallerPermissionFor(Ljava/lang/String;)I
 
-    .line 2308
     invoke-static {}, Landroid/os/UserHandle;->getCallingUserId()I
 
     move-result v1
 
-    .line 2310
     .local v1, "userId":I
     if-eqz p1, :cond_0
 
     if-nez p2, :cond_1
 
-    .line 2311
     :cond_0
     sget-object v2, Lcom/android/server/RCPManagerService;->TAG:Ljava/lang/String;
 
-    const-string/jumbo v3, "registerExchangeData() return false for input null"
+    const-string v3, "registerExchangeData() return false for input null"
 
     invoke-static {v2, v3}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 2312
     const/4 v2, 0x0
 
-    .line 2323
     :goto_0
     return v2
 
-    .line 2315
     :cond_1
     invoke-direct {p0, v1, v2}, Lcom/android/server/RCPManagerService;->getExchangeDataMap(IZ)Ljava/util/HashMap;
 
     move-result-object v0
 
-    .line 2318
     .local v0, "cbMap":Ljava/util/HashMap;, "Ljava/util/HashMap<Ljava/lang/String;Landroid/os/IRunnableCallback;>;"
     invoke-virtual {v0, p1, p2}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 2320
     sget-object v3, Lcom/android/server/RCPManagerService;->TAG:Ljava/lang/String;
 
     new-instance v4, Ljava/lang/StringBuilder;
 
     invoke-direct {v4}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v5, "registerExchangeData User calling is "
+    const-string v5, "registerExchangeData User calling is "
 
     invoke-virtual {v4, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -8339,7 +7600,6 @@
     .param p2, "cb"    # Landroid/os/IRunnableCallback;
 
     .prologue
-    .line 2372
     const-string v0, "com.sec.knox.bridge"
 
     invoke-virtual {v0, p1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
@@ -8348,31 +7608,27 @@
 
     if-eqz v0, :cond_0
 
-    .line 2376
     sget-object v0, Lcom/android/server/RCPManagerService;->TAG:Ljava/lang/String;
 
     const-string v1, "Blocked!!!"
 
     invoke-static {v0, v1}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 2377
     sget-object v0, Lcom/android/server/RCPManagerService;->TAG:Ljava/lang/String;
 
-    const-string/jumbo v1, "registerMonitorCb cb registered"
+    const-string v1, "registerMonitorCb cb registered"
 
     invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 2382
     :goto_0
     const/4 v0, 0x1
 
     return v0
 
-    .line 2379
     :cond_0
     sget-object v0, Lcom/android/server/RCPManagerService;->TAG:Ljava/lang/String;
 
-    const-string/jumbo v1, "registerMonitorCb failed"
+    const-string v1, "registerMonitorCb failed"
 
     invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
@@ -8385,19 +7641,17 @@
     .param p2, "mProvider"    # Landroid/content/IProviderCallBack;
 
     .prologue
-    .line 327
-    const-string/jumbo v2, "registerProvider"
+    const-string v2, "registerProvider"
 
     invoke-static {v2}, Lcom/android/server/RCPManagerService;->checkCallerPermissionFor(Ljava/lang/String;)I
 
-    .line 329
     sget-object v2, Lcom/android/server/RCPManagerService;->TAG:Ljava/lang/String;
 
     new-instance v3, Ljava/lang/StringBuilder;
 
     invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v4, "registerProvider My Context is "
+    const-string v4, "registerProvider My Context is "
 
     invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -8413,12 +7667,10 @@
 
     invoke-static {v2, v3}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 331
     invoke-static {}, Lcom/android/server/RCPManagerService;->getCallingUserHandle()Landroid/os/UserHandle;
 
     move-result-object v0
 
-    .line 332
     .local v0, "user":Landroid/os/UserHandle;
     sget-object v2, Lcom/android/server/RCPManagerService;->TAG:Ljava/lang/String;
 
@@ -8426,7 +7678,7 @@
 
     invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v4, "registerProvider  User calling is "
+    const-string v4, "registerProvider  User calling is "
 
     invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -8442,14 +7694,12 @@
 
     invoke-static {v2, v3}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 334
     sget-object v2, Lcom/android/server/RCPManagerService;->TAG:Ljava/lang/String;
 
-    const-string/jumbo v3, "registerProvider getting User Id"
+    const-string v3, "registerProvider getting User Id"
 
     invoke-static {v2, v3}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 335
     new-instance v1, Ljava/lang/Integer;
 
     invoke-static {}, Landroid/os/UserHandle;->getCallingUserId()I
@@ -8458,7 +7708,6 @@
 
     invoke-direct {v1, v2}, Ljava/lang/Integer;-><init>(I)V
 
-    .line 337
     .local v1, "userId":Ljava/lang/Integer;
     sget-object v2, Lcom/android/server/RCPManagerService;->TAG:Ljava/lang/String;
 
@@ -8466,7 +7715,7 @@
 
     invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v4, "setting the All_Provider bridge callback for user "
+    const-string v4, "setting the All_Provider bridge callback for user "
 
     invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -8482,19 +7731,17 @@
 
     invoke-static {v2, v3}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 339
     iget-object v2, p0, Lcom/android/server/RCPManagerService;->mBridgeProviderUserMap:Ljava/util/HashMap;
 
     invoke-virtual {v2, v1, p2}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 341
     sget-object v2, Lcom/android/server/RCPManagerService;->TAG:Ljava/lang/String;
 
     new-instance v3, Ljava/lang/StringBuilder;
 
     invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v4, "registerProvider Calling userid is"
+    const-string v4, "registerProvider Calling userid is"
 
     invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -8514,7 +7761,6 @@
 
     invoke-static {v2, v3}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 344
     return-void
 .end method
 
@@ -8528,19 +7774,17 @@
     .end annotation
 
     .prologue
-    .line 368
-    const-string/jumbo v2, "registerRCPGlobalContactsDir"
+    const-string v2, "registerRCPGlobalContactsDir"
 
     invoke-static {v2}, Lcom/android/server/RCPManagerService;->checkCallerPermissionFor(Ljava/lang/String;)I
 
-    .line 369
     sget-object v2, Lcom/android/server/RCPManagerService;->TAG:Ljava/lang/String;
 
     new-instance v3, Ljava/lang/StringBuilder;
 
     invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v4, "registerRCPGlobalContactsDir My Context is "
+    const-string v4, "registerRCPGlobalContactsDir My Context is "
 
     invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -8556,12 +7800,10 @@
 
     invoke-static {v2, v3}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 370
     invoke-static {}, Lcom/android/server/RCPManagerService;->getCallingUserHandle()Landroid/os/UserHandle;
 
     move-result-object v0
 
-    .line 371
     .local v0, "user":Landroid/os/UserHandle;
     sget-object v2, Lcom/android/server/RCPManagerService;->TAG:Ljava/lang/String;
 
@@ -8569,7 +7811,7 @@
 
     invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v4, "registerSync  User calling is "
+    const-string v4, "registerSync  User calling is "
 
     invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -8585,14 +7827,12 @@
 
     invoke-static {v2, v3}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 373
     sget-object v2, Lcom/android/server/RCPManagerService;->TAG:Ljava/lang/String;
 
-    const-string/jumbo v3, "registerSync getting User Id"
+    const-string v3, "registerSync getting User Id"
 
     invoke-static {v2, v3}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 374
     new-instance v1, Ljava/lang/Integer;
 
     invoke-static {}, Landroid/os/UserHandle;->getCallingUserId()I
@@ -8601,20 +7841,18 @@
 
     invoke-direct {v1, v2}, Ljava/lang/Integer;-><init>(I)V
 
-    .line 376
     .local v1, "userId":Ljava/lang/Integer;
     iget-object v2, p0, Lcom/android/server/RCPManagerService;->mRCPGlobalContactsDirMap:Ljava/util/HashMap;
 
     invoke-virtual {v2, v1, p1}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 378
     sget-object v2, Lcom/android/server/RCPManagerService;->TAG:Ljava/lang/String;
 
     new-instance v3, Ljava/lang/StringBuilder;
 
     invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v4, "registerRCPGlobalContactsDir Calling userid is"
+    const-string v4, "registerRCPGlobalContactsDir Calling userid is"
 
     invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -8634,7 +7872,6 @@
 
     invoke-static {v2, v3}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 380
     return-void
 .end method
 
@@ -8648,19 +7885,17 @@
     .end annotation
 
     .prologue
-    .line 426
-    const-string/jumbo v2, "registerRCPInterface"
+    const-string v2, "registerRCPInterface"
 
     invoke-static {v2}, Lcom/android/server/RCPManagerService;->checkCallerPermissionFor(Ljava/lang/String;)I
 
-    .line 427
     sget-object v2, Lcom/android/server/RCPManagerService;->TAG:Ljava/lang/String;
 
     new-instance v3, Ljava/lang/StringBuilder;
 
     invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v4, "registerRCPInterface My Context is "
+    const-string v4, "registerRCPInterface My Context is "
 
     invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -8676,12 +7911,10 @@
 
     invoke-static {v2, v3}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 429
     invoke-static {}, Lcom/android/server/RCPManagerService;->getCallingUserHandle()Landroid/os/UserHandle;
 
     move-result-object v0
 
-    .line 430
     .local v0, "user":Landroid/os/UserHandle;
     sget-object v2, Lcom/android/server/RCPManagerService;->TAG:Ljava/lang/String;
 
@@ -8689,7 +7922,7 @@
 
     invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v4, "registerRCPInterface  User calling is "
+    const-string v4, "registerRCPInterface  User calling is "
 
     invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -8705,14 +7938,12 @@
 
     invoke-static {v2, v3}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 432
     sget-object v2, Lcom/android/server/RCPManagerService;->TAG:Ljava/lang/String;
 
-    const-string/jumbo v3, "registerRCPInterface getting User Id"
+    const-string v3, "registerRCPInterface getting User Id"
 
     invoke-static {v2, v3}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 433
     new-instance v1, Ljava/lang/Integer;
 
     invoke-static {}, Landroid/os/UserHandle;->getCallingUserId()I
@@ -8721,20 +7952,18 @@
 
     invoke-direct {v1, v2}, Ljava/lang/Integer;-><init>(I)V
 
-    .line 435
     .local v1, "userId":Ljava/lang/Integer;
     iget-object v2, p0, Lcom/android/server/RCPManagerService;->mRCPInterfaceMap:Ljava/util/HashMap;
 
     invoke-virtual {v2, v1, p1}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 437
     sget-object v2, Lcom/android/server/RCPManagerService;->TAG:Ljava/lang/String;
 
     new-instance v3, Ljava/lang/StringBuilder;
 
     invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v4, "registerRCPInterface Calling userid is"
+    const-string v4, "registerRCPInterface Calling userid is"
 
     invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -8754,7 +7983,6 @@
 
     invoke-static {v2, v3}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 440
     return-void
 .end method
 
@@ -8768,14 +7996,13 @@
     .end annotation
 
     .prologue
-    .line 349
     sget-object v2, Lcom/android/server/RCPManagerService;->TAG:Ljava/lang/String;
 
     new-instance v3, Ljava/lang/StringBuilder;
 
     invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v4, "registerSync My Context is "
+    const-string v4, "registerSync My Context is "
 
     invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -8791,17 +8018,14 @@
 
     invoke-static {v2, v3}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 350
-    const-string/jumbo v2, "registerSync"
+    const-string v2, "registerSync"
 
     invoke-static {v2}, Lcom/android/server/RCPManagerService;->checkCallerPermissionFor(Ljava/lang/String;)I
 
-    .line 351
     invoke-static {}, Lcom/android/server/RCPManagerService;->getCallingUserHandle()Landroid/os/UserHandle;
 
     move-result-object v0
 
-    .line 352
     .local v0, "user":Landroid/os/UserHandle;
     sget-object v2, Lcom/android/server/RCPManagerService;->TAG:Ljava/lang/String;
 
@@ -8809,7 +8033,7 @@
 
     invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v4, "registerSync  User calling is "
+    const-string v4, "registerSync  User calling is "
 
     invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -8825,14 +8049,12 @@
 
     invoke-static {v2, v3}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 354
     sget-object v2, Lcom/android/server/RCPManagerService;->TAG:Ljava/lang/String;
 
-    const-string/jumbo v3, "registerSync getting User Id"
+    const-string v3, "registerSync getting User Id"
 
     invoke-static {v2, v3}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 355
     new-instance v1, Ljava/lang/Integer;
 
     invoke-static {}, Landroid/os/UserHandle;->getCallingUserId()I
@@ -8841,20 +8063,18 @@
 
     invoke-direct {v1, v2}, Ljava/lang/Integer;-><init>(I)V
 
-    .line 357
     .local v1, "userId":Ljava/lang/Integer;
     iget-object v2, p0, Lcom/android/server/RCPManagerService;->mBridgeSyncUserMap:Ljava/util/HashMap;
 
     invoke-virtual {v2, v1, p1}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 359
     sget-object v2, Lcom/android/server/RCPManagerService;->TAG:Ljava/lang/String;
 
     new-instance v3, Ljava/lang/StringBuilder;
 
     invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v4, "registerSync Calling userid is"
+    const-string v4, "registerSync Calling userid is"
 
     invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -8874,7 +8094,6 @@
 
     invoke-static {v2, v3}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 362
     return-void
 .end method
 
@@ -8883,19 +8102,17 @@
     .param p1, "toUser"    # I
 
     .prologue
-    .line 1705
-    const-string/jumbo v4, "saveSharedSandbox"
+    const-string v4, "saveSharedSandbox"
 
     invoke-static {v4}, Lcom/android/server/RCPManagerService;->checkCallerPermissionFor(Ljava/lang/String;)I
 
-    .line 1706
     sget-object v4, Lcom/android/server/RCPManagerService;->TAG:Ljava/lang/String;
 
     new-instance v5, Ljava/lang/StringBuilder;
 
     invoke-direct {v5}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v6, "saveSharedSandbox() to "
+    const-string v6, "saveSharedSandbox() to "
 
     invoke-virtual {v5, v6}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -8911,7 +8128,6 @@
 
     invoke-static {v4, v5}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1708
     new-instance v2, Ljava/io/File;
 
     new-instance v4, Ljava/lang/StringBuilder;
@@ -8930,7 +8146,7 @@
 
     move-result-object v4
 
-    const-string/jumbo v5, "to"
+    const-string v5, "to"
 
     invoke-virtual {v4, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -8942,7 +8158,6 @@
 
     invoke-direct {v2, v4}, Ljava/io/File;-><init>(Ljava/lang/String;)V
 
-    .line 1711
     .local v2, "sandboxTo":Ljava/io/File;
     new-instance v3, Ljava/io/File;
 
@@ -8977,25 +8192,20 @@
 
     invoke-direct {v3, v4}, Ljava/io/File;-><init>(Ljava/lang/String;)V
 
-    .line 1719
     .local v3, "sharedClipsDestination":Ljava/io/File;
     invoke-direct {p0, v3}, Lcom/android/server/RCPManagerService;->delete(Ljava/io/File;)V
 
-    .line 1721
     invoke-virtual {v3}, Ljava/io/File;->exists()Z
 
     move-result v4
 
     if-nez v4, :cond_0
 
-    .line 1722
     invoke-virtual {v3}, Ljava/io/File;->mkdirs()Z
 
-    .line 1725
     :cond_0
     const/4 v1, 0x0
 
-    .line 1727
     .local v1, "result":Z
     :try_start_0
     invoke-virtual {v2}, Ljava/io/File;->getPath()Ljava/lang/String;
@@ -9014,7 +8224,6 @@
 
     move-result v1
 
-    .line 1736
     :goto_1
     sget-object v4, Lcom/android/server/RCPManagerService;->TAG:Ljava/lang/String;
 
@@ -9022,7 +8231,7 @@
 
     invoke-direct {v5}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v6, "result of copying sandbox to our shared? = "
+    const-string v6, "result of copying sandbox to our shared? = "
 
     invoke-virtual {v5, v6}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -9038,10 +8247,8 @@
 
     invoke-static {v4, v5}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1738
     invoke-direct {p0, v2}, Lcom/android/server/RCPManagerService;->delete(Ljava/io/File;)V
 
-    .line 1739
     new-instance v4, Ljava/io/File;
 
     new-instance v5, Ljava/lang/StringBuilder;
@@ -9074,10 +8281,8 @@
 
     invoke-direct {p0, v4}, Lcom/android/server/RCPManagerService;->delete(Ljava/io/File;)V
 
-    .line 1741
     return-void
 
-    .line 1711
     .end local v1    # "result":Z
     .end local v3    # "sharedClipsDestination":Ljava/io/File;
     :cond_1
@@ -9087,21 +8292,18 @@
 
     goto :goto_0
 
-    .line 1729
     .restart local v1    # "result":Z
     .restart local v3    # "sharedClipsDestination":Ljava/io/File;
     :catch_0
     move-exception v0
 
-    .line 1730
     .local v0, "e":Ljava/lang/Exception;
     sget-object v4, Lcom/android/server/RCPManagerService;->TAG:Ljava/lang/String;
 
-    const-string/jumbo v5, "saveSharedSandbox() exception trying to export sandbox to user"
+    const-string v5, "saveSharedSandbox() exception trying to export sandbox to user"
 
     invoke-static {v4, v5, v0}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
-    .line 1733
     invoke-virtual {v0}, Ljava/lang/Exception;->printStackTrace()V
 
     goto :goto_1
@@ -9112,7 +8314,6 @@
     .param p1, "userId"    # I
 
     .prologue
-    .line 1316
     sget-object v19, Lcom/android/server/RCPManagerService;->TAG:Ljava/lang/String;
 
     new-instance v20, Ljava/lang/StringBuilder;
@@ -9139,14 +8340,13 @@
 
     invoke-static/range {v19 .. v20}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1317
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/android/server/RCPManagerService;->mContext:Landroid/content/Context;
 
     move-object/from16 v19, v0
 
-    const-string/jumbo v20, "persona"
+    const-string v20, "persona"
 
     invoke-virtual/range {v19 .. v20}, Landroid/content/Context;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
 
@@ -9154,13 +8354,11 @@
 
     check-cast v11, Landroid/os/PersonaManager;
 
-    .line 1320
     .local v11, "mPersonaManager":Landroid/os/PersonaManager;
     if-ltz p1, :cond_0
 
     if-nez v11, :cond_2
 
-    .line 1321
     :cond_0
     sget-object v19, Lcom/android/server/RCPManagerService;->TAG:Ljava/lang/String;
 
@@ -9168,7 +8366,7 @@
 
     invoke-direct/range {v20 .. v20}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v21, "scanAndStartRCPProxy: return without starting .. userId = "
+    const-string v21, "scanAndStartRCPProxy: return without starting .. userId = "
 
     invoke-virtual/range {v20 .. v21}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -9200,12 +8398,10 @@
 
     invoke-static/range {v19 .. v20}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1425
     :cond_1
     :goto_0
     return-void
 
-    .line 1337
     :cond_2
     move/from16 v0, p1
 
@@ -9213,20 +8409,18 @@
 
     move-result v12
 
-    .line 1339
     .local v12, "parentId":I
     move/from16 v0, p1
 
     if-eq v12, v0, :cond_4
 
-    .line 1340
     sget-object v19, Lcom/android/server/RCPManagerService;->TAG:Ljava/lang/String;
 
     new-instance v20, Ljava/lang/StringBuilder;
 
     invoke-direct/range {v20 .. v20}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v21, "scanAndStartRCPProxy: Executing starting RCP Proxy logic for user = "
+    const-string v21, "scanAndStartRCPProxy: Executing starting RCP Proxy logic for user = "
 
     invoke-virtual/range {v20 .. v21}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -9252,7 +8446,6 @@
 
     invoke-static/range {v19 .. v20}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1360
     :goto_1
     move-object/from16 v0, p0
 
@@ -9294,7 +8487,6 @@
 
     iput-object v0, v1, Lcom/android/server/RCPManagerService;->mRCPProxyScanSP:Landroid/content/SharedPreferences;
 
-    .line 1362
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/android/server/RCPManagerService;->mRCPProxyScanSP:Landroid/content/SharedPreferences;
@@ -9305,7 +8497,6 @@
 
     move-result-object v15
 
-    .line 1364
     .local v15, "prefs":Ljava/util/Map;, "Ljava/util/Map<Ljava/lang/String;*>;"
     invoke-interface {v15}, Ljava/util/Map;->isEmpty()Z
 
@@ -9313,7 +8504,6 @@
 
     if-nez v19, :cond_7
 
-    .line 1365
     sget-object v19, Lcom/android/server/RCPManagerService;->TAG:Ljava/lang/String;
 
     new-instance v20, Ljava/lang/StringBuilder;
@@ -9340,7 +8530,6 @@
 
     invoke-static/range {v19 .. v20}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1366
     invoke-interface {v15}, Ljava/util/Map;->entrySet()Ljava/util/Set;
 
     move-result-object v19
@@ -9364,7 +8553,6 @@
 
     check-cast v8, Ljava/util/Map$Entry;
 
-    .line 1367
     .local v8, "entry":Ljava/util/Map$Entry;, "Ljava/util/Map$Entry<Ljava/lang/String;*>;"
     sget-object v20, Lcom/android/server/RCPManagerService;->TAG:Ljava/lang/String;
 
@@ -9372,7 +8560,7 @@
 
     invoke-direct/range {v19 .. v19}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v21, "prefs key(pkg) : "
+    const-string v21, "prefs key(pkg) : "
 
     move-object/from16 v0, v19
 
@@ -9432,7 +8620,6 @@
 
     invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1369
     invoke-interface {v8}, Ljava/util/Map$Entry;->getKey()Ljava/lang/Object;
 
     move-result-object v19
@@ -9455,7 +8642,6 @@
 
     if-eqz v19, :cond_3
 
-    .line 1371
     invoke-interface {v8}, Ljava/util/Map$Entry;->getKey()Ljava/lang/Object;
 
     move-result-object v19
@@ -9482,7 +8668,6 @@
 
     goto :goto_2
 
-    .line 1345
     .end local v8    # "entry":Ljava/util/Map$Entry;, "Ljava/util/Map$Entry<Ljava/lang/String;*>;"
     .end local v10    # "i$":Ljava/util/Iterator;
     .end local v15    # "prefs":Ljava/util/Map;, "Ljava/util/Map<Ljava/lang/String;*>;"
@@ -9493,7 +8678,6 @@
 
     move-result-object v13
 
-    .line 1348
     .local v13, "personaInfoList":Ljava/util/List;, "Ljava/util/List<Landroid/content/pm/PersonaInfo;>;"
     if-eqz v13, :cond_5
 
@@ -9503,7 +8687,6 @@
 
     if-nez v19, :cond_6
 
-    .line 1349
     :cond_5
     sget-object v19, Lcom/android/server/RCPManagerService;->TAG:Ljava/lang/String;
 
@@ -9511,7 +8694,7 @@
 
     invoke-direct/range {v20 .. v20}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v21, "scanAndStartRCPProxy: NOT starting RCP Proxy for user = "
+    const-string v21, "scanAndStartRCPProxy: NOT starting RCP Proxy for user = "
 
     invoke-virtual/range {v20 .. v21}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -9539,7 +8722,6 @@
 
     goto/16 :goto_0
 
-    .line 1355
     :cond_6
     sget-object v19, Lcom/android/server/RCPManagerService;->TAG:Ljava/lang/String;
 
@@ -9547,7 +8729,7 @@
 
     invoke-direct/range {v20 .. v20}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v21, "scanAndStartRCPProxy: Executing starting RCP Proxy logic for user = "
+    const-string v21, "scanAndStartRCPProxy: Executing starting RCP Proxy logic for user = "
 
     invoke-virtual/range {v20 .. v21}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -9575,13 +8757,11 @@
 
     goto/16 :goto_1
 
-    .line 1377
     .end local v13    # "personaInfoList":Ljava/util/List;, "Ljava/util/List<Landroid/content/pm/PersonaInfo;>;"
     .restart local v15    # "prefs":Ljava/util/Map;, "Ljava/util/Map<Ljava/lang/String;*>;"
     :cond_7
     const/16 v9, 0x80
 
-    .line 1378
     .local v9, "flags":I
     move-object/from16 v0, p0
 
@@ -9599,7 +8779,6 @@
 
     move-result-object v5
 
-    .line 1380
     .local v5, "appInfoList":Ljava/util/List;, "Ljava/util/List<Landroid/content/pm/ApplicationInfo;>;"
     sget-object v19, Lcom/android/server/RCPManagerService;->TAG:Ljava/lang/String;
 
@@ -9627,7 +8806,6 @@
 
     invoke-static/range {v19 .. v20}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1384
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/android/server/RCPManagerService;->mRCPProxyScanSP:Landroid/content/SharedPreferences;
@@ -9638,7 +8816,6 @@
 
     move-result-object v14
 
-    .line 1385
     .local v14, "prefEditor":Landroid/content/SharedPreferences$Editor;
     invoke-interface {v5}, Ljava/util/List;->iterator()Ljava/util/Iterator;
 
@@ -9658,32 +8835,25 @@
 
     check-cast v4, Landroid/content/pm/ApplicationInfo;
 
-    .line 1387
     .local v4, "appInfo":Landroid/content/pm/ApplicationInfo;
     const/4 v6, 0x0
 
-    .line 1388
     .local v6, "bundle":Landroid/os/Bundle;
     const/16 v16, 0x0
 
-    .line 1389
     .local v16, "proxyName":Ljava/lang/String;
     const/16 v18, 0x0
 
-    .line 1390
     .local v18, "proxyService":Ljava/lang/String;
     const/16 v17, 0x0
 
-    .line 1393
     .local v17, "proxyPkg":Ljava/lang/String;
     :try_start_0
     iget-object v6, v4, Landroid/content/pm/ApplicationInfo;->metaData:Landroid/os/Bundle;
 
-    .line 1394
     if-eqz v6, :cond_9
 
-    .line 1395
-    const-string/jumbo v19, "proxyName"
+    const-string v19, "proxyName"
 
     move-object/from16 v0, v19
 
@@ -9691,8 +8861,7 @@
 
     move-result-object v16
 
-    .line 1396
-    const-string/jumbo v19, "proxyService"
+    const-string v19, "proxyService"
 
     move-object/from16 v0, v19
 
@@ -9700,7 +8869,6 @@
 
     move-result-object v18
 
-    .line 1398
     :cond_9
     iget-object v0, v4, Landroid/content/pm/ApplicationInfo;->packageName:Ljava/lang/String;
 
@@ -9708,11 +8876,9 @@
     :try_end_0
     .catch Ljava/lang/NullPointerException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 1405
     :goto_3
     if-eqz v6, :cond_8
 
-    .line 1408
     if-eqz v16, :cond_8
 
     if-eqz v18, :cond_8
@@ -9731,7 +8897,6 @@
 
     if-eqz v19, :cond_8
 
-    .line 1412
     sget-object v19, Lcom/android/server/RCPManagerService;->TAG:Ljava/lang/String;
 
     new-instance v20, Ljava/lang/StringBuilder;
@@ -9786,14 +8951,12 @@
 
     invoke-static/range {v19 .. v20}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1415
     move-object/from16 v0, v17
 
     move-object/from16 v1, v18
 
     invoke-interface {v14, v0, v1}, Landroid/content/SharedPreferences$Editor;->putString(Ljava/lang/String;Ljava/lang/String;)Landroid/content/SharedPreferences$Editor;
 
-    .line 1416
     move-object/from16 v0, p0
 
     move/from16 v1, p1
@@ -9804,7 +8967,6 @@
 
     invoke-virtual {v0, v1, v2, v3}, Lcom/android/server/RCPManagerService;->bindToRCPProxy(ILjava/lang/String;Ljava/lang/String;)V
 
-    .line 1421
     .end local v4    # "appInfo":Landroid/content/pm/ApplicationInfo;
     .end local v6    # "bundle":Landroid/os/Bundle;
     .end local v16    # "proxyName":Ljava/lang/String;
@@ -9815,7 +8977,6 @@
 
     goto/16 :goto_0
 
-    .line 1399
     .restart local v4    # "appInfo":Landroid/content/pm/ApplicationInfo;
     .restart local v6    # "bundle":Landroid/os/Bundle;
     .restart local v16    # "proxyName":Ljava/lang/String;
@@ -9824,7 +8985,6 @@
     :catch_0
     move-exception v7
 
-    .line 1400
     .local v7, "e":Ljava/lang/NullPointerException;
     sget-object v19, Lcom/android/server/RCPManagerService;->TAG:Ljava/lang/String;
 
@@ -9863,19 +9023,16 @@
 
     const/4 v5, -0x1
 
-    .line 1677
-    const-string/jumbo v3, "setupClipbardSandbox"
+    const-string v3, "setupClipbardSandbox"
 
     invoke-static {v3}, Lcom/android/server/RCPManagerService;->checkCallerPermissionFor(Ljava/lang/String;)I
 
-    .line 1678
     new-instance v0, Ljava/io/File;
 
     const-string v3, "/data/clipboardSandbox"
 
     invoke-direct {v0, v3}, Ljava/io/File;-><init>(Ljava/lang/String;)V
 
-    .line 1679
     .local v0, "sandboxDir":Ljava/io/File;
     invoke-virtual {v0}, Ljava/io/File;->exists()Z
 
@@ -9883,17 +9040,14 @@
 
     if-nez v3, :cond_0
 
-    .line 1680
     invoke-virtual {v0}, Ljava/io/File;->mkdir()Z
 
-    .line 1681
     invoke-virtual {v0}, Ljava/io/File;->getAbsolutePath()Ljava/lang/String;
 
     move-result-object v3
 
     invoke-static {v3, v6, v5, v5}, Landroid/os/FileUtils;->setPermissions(Ljava/lang/String;III)I
 
-    .line 1685
     :cond_0
     new-instance v1, Ljava/io/File;
 
@@ -9925,7 +9079,6 @@
 
     invoke-direct {v1, v3}, Ljava/io/File;-><init>(Ljava/lang/String;)V
 
-    .line 1687
     .local v1, "sandboxFrom":Ljava/io/File;
     new-instance v2, Ljava/io/File;
 
@@ -9945,7 +9098,7 @@
 
     move-result-object v3
 
-    const-string/jumbo v4, "to"
+    const-string v4, "to"
 
     invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -9957,7 +9110,6 @@
 
     invoke-direct {v2, v3}, Ljava/io/File;-><init>(Ljava/lang/String;)V
 
-    .line 1690
     .local v2, "sandboxTo":Ljava/io/File;
     invoke-virtual {v1}, Ljava/io/File;->exists()Z
 
@@ -9965,17 +9117,14 @@
 
     if-nez v3, :cond_1
 
-    .line 1691
     invoke-virtual {v1}, Ljava/io/File;->mkdir()Z
 
-    .line 1692
     invoke-virtual {v1}, Ljava/io/File;->getAbsolutePath()Ljava/lang/String;
 
     move-result-object v3
 
     invoke-static {v3, v6, v5, v5}, Landroid/os/FileUtils;->setPermissions(Ljava/lang/String;III)I
 
-    .line 1696
     :cond_1
     invoke-virtual {v2}, Ljava/io/File;->exists()Z
 
@@ -9983,17 +9132,14 @@
 
     if-nez v3, :cond_2
 
-    .line 1697
     invoke-virtual {v2}, Ljava/io/File;->mkdir()Z
 
-    .line 1698
     invoke-virtual {v2}, Ljava/io/File;->getAbsolutePath()Ljava/lang/String;
 
     move-result-object v3
 
     invoke-static {v3, v6, v5, v5}, Landroid/os/FileUtils;->setPermissions(Ljava/lang/String;III)I
 
-    .line 1701
     :cond_2
     return-void
 .end method
@@ -10003,12 +9149,10 @@
     .param p1, "newUserId"    # I
 
     .prologue
-    .line 691
-    const-string/jumbo v2, "startRCPProxy"
+    const-string v2, "startRCPProxy"
 
     invoke-static {v2}, Lcom/android/server/RCPManagerService;->checkCallerPermissionFor(Ljava/lang/String;)I
 
-    .line 692
     iget-object v2, p0, Lcom/android/server/RCPManagerService;->mBridgeSyncUserMap:Ljava/util/HashMap;
 
     invoke-static {p1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
@@ -10021,11 +9165,9 @@
 
     check-cast v0, Landroid/content/ISyncCallBack;
 
-    .line 694
     .local v0, "callback":Landroid/content/ISyncCallBack;
     if-nez v0, :cond_1
 
-    .line 696
     iget-object v2, p0, Lcom/android/server/RCPManagerService;->mRCPProxyAliveList:Ljava/util/List;
 
     invoke-static {p1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
@@ -10038,7 +9180,6 @@
 
     if-eqz v2, :cond_0
 
-    .line 697
     iget-object v2, p0, Lcom/android/server/RCPManagerService;->mRCPProxyAliveList:Ljava/util/List;
 
     invoke-static {p1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
@@ -10047,22 +9188,18 @@
 
     invoke-interface {v2, v3}, Ljava/util/List;->remove(Ljava/lang/Object;)Z
 
-    .line 700
     :cond_0
     :try_start_0
     invoke-virtual {p0, p1}, Lcom/android/server/RCPManagerService;->scanAndStartRCPProxy(I)V
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 716
     :goto_0
     return-void
 
-    .line 701
     :catch_0
     move-exception v1
 
-    .line 702
     .local v1, "e":Ljava/lang/Exception;
     sget-object v2, Lcom/android/server/RCPManagerService;->TAG:Ljava/lang/String;
 
@@ -10092,7 +9229,6 @@
 
     goto :goto_0
 
-    .line 707
     .end local v1    # "e":Ljava/lang/Exception;
     :cond_1
     sget-object v2, Lcom/android/server/RCPManagerService;->TAG:Ljava/lang/String;
@@ -10123,7 +9259,6 @@
 
     invoke-static {v2, v3}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 710
     :try_start_1
     invoke-interface {v0}, Landroid/content/ISyncCallBack;->doSync()V
     :try_end_1
@@ -10131,11 +9266,9 @@
 
     goto :goto_0
 
-    .line 712
     :catch_1
     move-exception v1
 
-    .line 713
     .local v1, "e":Landroid/os/RemoteException;
     sget-object v2, Lcom/android/server/RCPManagerService;->TAG:Ljava/lang/String;
 
@@ -10172,19 +9305,17 @@
     .end annotation
 
     .prologue
-    .line 1505
-    const-string/jumbo v1, "switchPersona"
+    const-string v1, "switchPersona"
 
     invoke-static {v1}, Lcom/android/server/RCPManagerService;->checkCallerPermissionFor(Ljava/lang/String;)I
 
-    .line 1506
     sget-object v1, Lcom/android/server/RCPManagerService;->TAG:Ljava/lang/String;
 
     new-instance v2, Ljava/lang/StringBuilder;
 
     invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v3, "switchToUser() with id = "
+    const-string v3, "switchToUser() with id = "
 
     invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -10200,18 +9331,15 @@
 
     invoke-static {v1, v2}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1508
     if-gez p1, :cond_0
 
-    .line 1514
     :goto_0
     return-void
 
-    .line 1510
     :cond_0
     iget-object v1, p0, Lcom/android/server/RCPManagerService;->mContext:Landroid/content/Context;
 
-    const-string/jumbo v2, "persona"
+    const-string v2, "persona"
 
     invoke-virtual {v1, v2}, Landroid/content/Context;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
 
@@ -10219,7 +9347,6 @@
 
     check-cast v0, Landroid/os/PersonaManager;
 
-    .line 1512
     .local v0, "mPersona":Landroid/os/PersonaManager;
     sget-object v1, Lcom/android/server/RCPManagerService;->TAG:Ljava/lang/String;
 
@@ -10227,7 +9354,7 @@
 
     invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v3, "switch PERSONA to id = "
+    const-string v3, "switch PERSONA to id = "
 
     invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 

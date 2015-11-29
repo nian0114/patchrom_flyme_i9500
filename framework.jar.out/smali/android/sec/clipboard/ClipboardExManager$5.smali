@@ -28,7 +28,6 @@
     .locals 0
 
     .prologue
-    .line 765
     iput-object p1, p0, Landroid/sec/clipboard/ClipboardExManager$5;->this$0:Landroid/sec/clipboard/ClipboardExManager;
 
     iput-object p2, p0, Landroid/sec/clipboard/ClipboardExManager$5;->val$clipData:Landroid/sec/clipboard/data/ClipboardData;
@@ -48,7 +47,6 @@
 
     const/4 v3, 0x0
 
-    .line 776
     :try_start_0
     iget-object v4, p0, Landroid/sec/clipboard/ClipboardExManager$5;->val$clipData:Landroid/sec/clipboard/data/ClipboardData;
 
@@ -93,7 +91,6 @@
 
     if-eqz v4, :cond_0
 
-    .line 778
     .local v0, "Result":Z
     :goto_0
     iget-object v3, p0, Landroid/sec/clipboard/ClipboardExManager$5;->this$0:Landroid/sec/clipboard/ClipboardExManager;
@@ -107,16 +104,13 @@
 
     move-result-object v2
 
-    .line 780
     .local v2, "msg":Landroid/os/Message;
     if-eqz v0, :cond_1
 
-    .line 781
     const/4 v3, 0x0
 
     iput v3, v2, Landroid/os/Message;->what:I
 
-    .line 785
     :goto_1
     iget-object v3, p0, Landroid/sec/clipboard/ClipboardExManager$5;->this$0:Landroid/sec/clipboard/ClipboardExManager;
 
@@ -127,7 +121,6 @@
 
     invoke-virtual {v3, v2}, Landroid/os/Handler;->sendMessage(Landroid/os/Message;)Z
 
-    .line 791
     .end local v0    # "Result":Z
     .end local v2    # "msg":Landroid/os/Message;
     :goto_2
@@ -136,10 +129,8 @@
     :cond_0
     move v0, v3
 
-    .line 776
     goto :goto_0
 
-    .line 783
     .restart local v0    # "Result":Z
     .restart local v2    # "msg":Landroid/os/Message;
     :cond_1
@@ -151,13 +142,11 @@
 
     goto :goto_1
 
-    .line 787
     .end local v0    # "Result":Z
     .end local v2    # "msg":Landroid/os/Message;
     :catch_0
     move-exception v1
 
-    .line 788
     .local v1, "e":Ljava/lang/Exception;
     sget-boolean v3, Landroid/sec/clipboard/data/ClipboardDefine;->DEBUG:Z
 
@@ -165,11 +154,10 @@
 
     const-string v3, "ClipboardServiceEx"
 
-    const-string/jumbo v4, "setData(ClipboardData)(RemoteException): "
+    const-string v4, "setData(ClipboardData)(RemoteException): "
 
     invoke-static {v3, v4}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 789
     :cond_2
     invoke-virtual {v1}, Ljava/lang/Exception;->printStackTrace()V
 

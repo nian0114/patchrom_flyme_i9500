@@ -23,7 +23,6 @@
     .locals 0
 
     .prologue
-    .line 42
     iput-object p1, p0, Lcom/android/internal/telephony/TelephonyTester$1;->this$0:Lcom/android/internal/telephony/TelephonyTester;
 
     invoke-direct {p0}, Landroid/content/BroadcastReceiver;-><init>()V
@@ -39,12 +38,10 @@
     .param p2, "intent"    # Landroid/content/Intent;
 
     .prologue
-    .line 45
     invoke-virtual {p2}, Landroid/content/Intent;->getAction()Ljava/lang/String;
 
     move-result-object v0
 
-    .line 46
     .local v0, "action":Ljava/lang/String;
     new-instance v1, Ljava/lang/StringBuilder;
 
@@ -67,7 +64,6 @@
     # invokes: Lcom/android/internal/telephony/TelephonyTester;->log(Ljava/lang/String;)V
     invoke-static {v1}, Lcom/android/internal/telephony/TelephonyTester;->access$000(Ljava/lang/String;)V
 
-    .line 47
     iget-object v1, p0, Lcom/android/internal/telephony/TelephonyTester$1;->this$0:Lcom/android/internal/telephony/TelephonyTester;
 
     # getter for: Lcom/android/internal/telephony/TelephonyTester;->mPhone:Lcom/android/internal/telephony/PhoneBase;
@@ -85,13 +81,11 @@
 
     if-eqz v1, :cond_0
 
-    .line 48
     const-string v1, "simulate detaching"
 
     # invokes: Lcom/android/internal/telephony/TelephonyTester;->log(Ljava/lang/String;)V
     invoke-static {v1}, Lcom/android/internal/telephony/TelephonyTester;->access$000(Ljava/lang/String;)V
 
-    .line 49
     iget-object v1, p0, Lcom/android/internal/telephony/TelephonyTester$1;->this$0:Lcom/android/internal/telephony/TelephonyTester;
 
     # getter for: Lcom/android/internal/telephony/TelephonyTester;->mPhone:Lcom/android/internal/telephony/PhoneBase;
@@ -107,11 +101,9 @@
 
     invoke-virtual {v1}, Landroid/os/RegistrantList;->notifyRegistrants()V
 
-    .line 56
     :goto_0
     return-void
 
-    .line 50
     :cond_0
     iget-object v1, p0, Lcom/android/internal/telephony/TelephonyTester$1;->this$0:Lcom/android/internal/telephony/TelephonyTester;
 
@@ -130,13 +122,11 @@
 
     if-eqz v1, :cond_1
 
-    .line 51
     const-string v1, "simulate attaching"
 
     # invokes: Lcom/android/internal/telephony/TelephonyTester;->log(Ljava/lang/String;)V
     invoke-static {v1}, Lcom/android/internal/telephony/TelephonyTester;->access$000(Ljava/lang/String;)V
 
-    .line 52
     iget-object v1, p0, Lcom/android/internal/telephony/TelephonyTester$1;->this$0:Lcom/android/internal/telephony/TelephonyTester;
 
     # getter for: Lcom/android/internal/telephony/TelephonyTester;->mPhone:Lcom/android/internal/telephony/PhoneBase;
@@ -154,7 +144,6 @@
 
     goto :goto_0
 
-    .line 54
     :cond_1
     new-instance v1, Ljava/lang/StringBuilder;
 

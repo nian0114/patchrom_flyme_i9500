@@ -29,16 +29,12 @@
     .param p2, "handler"    # Landroid/os/Handler;
 
     .prologue
-    .line 316
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 317
     iput-object p1, p0, Landroid/media/tv/TvInputManager$SessionCallbackRecord;->mSessionCallback:Landroid/media/tv/TvInputManager$SessionCallback;
 
-    .line 318
     iput-object p2, p0, Landroid/media/tv/TvInputManager$SessionCallbackRecord;->mHandler:Landroid/os/Handler;
 
-    .line 319
     return-void
 .end method
 
@@ -47,7 +43,6 @@
     .param p0, "x0"    # Landroid/media/tv/TvInputManager$SessionCallbackRecord;
 
     .prologue
-    .line 310
     iget-object v0, p0, Landroid/media/tv/TvInputManager$SessionCallbackRecord;->mSessionCallback:Landroid/media/tv/TvInputManager$SessionCallback;
 
     return-object v0
@@ -58,7 +53,6 @@
     .param p0, "x0"    # Landroid/media/tv/TvInputManager$SessionCallbackRecord;
 
     .prologue
-    .line 310
     iget-object v0, p0, Landroid/media/tv/TvInputManager$SessionCallbackRecord;->mSession:Landroid/media/tv/TvInputManager$Session;
 
     return-object v0
@@ -71,7 +65,6 @@
     .param p1, "channelUri"    # Landroid/net/Uri;
 
     .prologue
-    .line 341
     iget-object v0, p0, Landroid/media/tv/TvInputManager$SessionCallbackRecord;->mHandler:Landroid/os/Handler;
 
     new-instance v1, Landroid/media/tv/TvInputManager$SessionCallbackRecord$3;
@@ -80,7 +73,6 @@
 
     invoke-virtual {v0, v1}, Landroid/os/Handler;->post(Ljava/lang/Runnable;)Z
 
-    .line 347
     return-void
 .end method
 
@@ -88,7 +80,6 @@
     .locals 2
 
     .prologue
-    .line 410
     iget-object v0, p0, Landroid/media/tv/TvInputManager$SessionCallbackRecord;->mHandler:Landroid/os/Handler;
 
     new-instance v1, Landroid/media/tv/TvInputManager$SessionCallbackRecord$8;
@@ -97,7 +88,6 @@
 
     invoke-virtual {v0, v1}, Landroid/os/Handler;->post(Ljava/lang/Runnable;)Z
 
-    .line 416
     return-void
 .end method
 
@@ -106,7 +96,6 @@
     .param p1, "rating"    # Landroid/media/tv/TvContentRating;
 
     .prologue
-    .line 419
     iget-object v0, p0, Landroid/media/tv/TvInputManager$SessionCallbackRecord;->mHandler:Landroid/os/Handler;
 
     new-instance v1, Landroid/media/tv/TvInputManager$SessionCallbackRecord$9;
@@ -115,7 +104,6 @@
 
     invoke-virtual {v0, v1}, Landroid/os/Handler;->post(Ljava/lang/Runnable;)Z
 
-    .line 425
     return-void
 .end method
 
@@ -127,7 +115,6 @@
     .param p4, "bottom"    # I
 
     .prologue
-    .line 429
     iget-object v6, p0, Landroid/media/tv/TvInputManager$SessionCallbackRecord;->mHandler:Landroid/os/Handler;
 
     new-instance v0, Landroid/media/tv/TvInputManager$SessionCallbackRecord$10;
@@ -146,7 +133,6 @@
 
     invoke-virtual {v6, v0}, Landroid/os/Handler;->post(Ljava/lang/Runnable;)Z
 
-    .line 435
     return-void
 .end method
 
@@ -155,10 +141,8 @@
     .param p1, "session"    # Landroid/media/tv/TvInputManager$Session;
 
     .prologue
-    .line 322
     iput-object p1, p0, Landroid/media/tv/TvInputManager$SessionCallbackRecord;->mSession:Landroid/media/tv/TvInputManager$Session;
 
-    .line 323
     iget-object v0, p0, Landroid/media/tv/TvInputManager$SessionCallbackRecord;->mHandler:Landroid/os/Handler;
 
     new-instance v1, Landroid/media/tv/TvInputManager$SessionCallbackRecord$1;
@@ -167,7 +151,6 @@
 
     invoke-virtual {v0, v1}, Landroid/os/Handler;->post(Ljava/lang/Runnable;)Z
 
-    .line 329
     return-void
 .end method
 
@@ -177,7 +160,6 @@
     .param p2, "eventArgs"    # Landroid/os/Bundle;
 
     .prologue
-    .line 438
     iget-object v0, p0, Landroid/media/tv/TvInputManager$SessionCallbackRecord;->mHandler:Landroid/os/Handler;
 
     new-instance v1, Landroid/media/tv/TvInputManager$SessionCallbackRecord$11;
@@ -186,7 +168,6 @@
 
     invoke-virtual {v0, v1}, Landroid/os/Handler;->post(Ljava/lang/Runnable;)Z
 
-    .line 444
     return-void
 .end method
 
@@ -194,7 +175,6 @@
     .locals 2
 
     .prologue
-    .line 332
     iget-object v0, p0, Landroid/media/tv/TvInputManager$SessionCallbackRecord;->mHandler:Landroid/os/Handler;
 
     new-instance v1, Landroid/media/tv/TvInputManager$SessionCallbackRecord$2;
@@ -203,7 +183,6 @@
 
     invoke-virtual {v0, v1}, Landroid/os/Handler;->post(Ljava/lang/Runnable;)Z
 
-    .line 338
     return-void
 .end method
 
@@ -213,7 +192,6 @@
     .param p2, "trackId"    # Ljava/lang/String;
 
     .prologue
-    .line 373
     iget-object v0, p0, Landroid/media/tv/TvInputManager$SessionCallbackRecord;->mHandler:Landroid/os/Handler;
 
     new-instance v1, Landroid/media/tv/TvInputManager$SessionCallbackRecord$5;
@@ -222,7 +200,6 @@
 
     invoke-virtual {v0, v1}, Landroid/os/Handler;->post(Ljava/lang/Runnable;)Z
 
-    .line 389
     return-void
 .end method
 
@@ -239,7 +216,6 @@
     .end annotation
 
     .prologue
-    .line 350
     .local p1, "tracks":Ljava/util/List;, "Ljava/util/List<Landroid/media/tv/TvTrackInfo;>;"
     iget-object v0, p0, Landroid/media/tv/TvInputManager$SessionCallbackRecord;->mHandler:Landroid/os/Handler;
 
@@ -249,7 +225,6 @@
 
     invoke-virtual {v0, v1}, Landroid/os/Handler;->post(Ljava/lang/Runnable;)Z
 
-    .line 370
     return-void
 .end method
 
@@ -257,7 +232,6 @@
     .locals 2
 
     .prologue
-    .line 392
     iget-object v0, p0, Landroid/media/tv/TvInputManager$SessionCallbackRecord;->mHandler:Landroid/os/Handler;
 
     new-instance v1, Landroid/media/tv/TvInputManager$SessionCallbackRecord$6;
@@ -266,7 +240,6 @@
 
     invoke-virtual {v0, v1}, Landroid/os/Handler;->post(Ljava/lang/Runnable;)Z
 
-    .line 398
     return-void
 .end method
 
@@ -275,7 +248,6 @@
     .param p1, "reason"    # I
 
     .prologue
-    .line 401
     iget-object v0, p0, Landroid/media/tv/TvInputManager$SessionCallbackRecord;->mHandler:Landroid/os/Handler;
 
     new-instance v1, Landroid/media/tv/TvInputManager$SessionCallbackRecord$7;
@@ -284,6 +256,5 @@
 
     invoke-virtual {v0, v1}, Landroid/os/Handler;->post(Ljava/lang/Runnable;)Z
 
-    .line 407
     return-void
 .end method

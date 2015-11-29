@@ -26,7 +26,6 @@
     .locals 0
 
     .prologue
-    .line 346
     iput-object p1, p0, Lcom/android/internal/telephony/uicc/IsimUiccRecords$EfIsimIstLoaded;->this$0:Lcom/android/internal/telephony/uicc/IsimUiccRecords;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -40,7 +39,6 @@
     .param p2, "x1"    # Lcom/android/internal/telephony/uicc/IsimUiccRecords$1;
 
     .prologue
-    .line 346
     invoke-direct {p0, p1}, Lcom/android/internal/telephony/uicc/IsimUiccRecords$EfIsimIstLoaded;-><init>(Lcom/android/internal/telephony/uicc/IsimUiccRecords;)V
 
     return-void
@@ -52,7 +50,6 @@
     .locals 1
 
     .prologue
-    .line 348
     const-string v0, "EF_ISIM_IST"
 
     return-object v0
@@ -65,7 +62,6 @@
     .prologue
     const/4 v2, 0x0
 
-    .line 351
     iget-object v1, p1, Landroid/os/AsyncResult;->result:Ljava/lang/Object;
 
     check-cast v1, [B
@@ -74,7 +70,6 @@
 
     check-cast v0, [B
 
-    .line 352
     .local v0, "data":[B
     iget-object v3, p0, Lcom/android/internal/telephony/uicc/IsimUiccRecords$EfIsimIstLoaded;->this$0:Lcom/android/internal/telephony/uicc/IsimUiccRecords;
 
@@ -96,7 +91,6 @@
     # setter for: Lcom/android/internal/telephony/uicc/IsimUiccRecords;->mIsGbaSupported:Z
     invoke-static {v3, v1}, Lcom/android/internal/telephony/uicc/IsimUiccRecords;->access$1102(Lcom/android/internal/telephony/uicc/IsimUiccRecords;Z)Z
 
-    .line 354
     iget-object v1, p0, Lcom/android/internal/telephony/uicc/IsimUiccRecords$EfIsimIstLoaded;->this$0:Lcom/android/internal/telephony/uicc/IsimUiccRecords;
 
     invoke-static {v0}, Lcom/android/internal/telephony/uicc/IccUtils;->bytesToHexString([B)Ljava/lang/String;
@@ -106,12 +100,10 @@
     # setter for: Lcom/android/internal/telephony/uicc/IsimUiccRecords;->mIsimIst:Ljava/lang/String;
     invoke-static {v1, v2}, Lcom/android/internal/telephony/uicc/IsimUiccRecords;->access$1202(Lcom/android/internal/telephony/uicc/IsimUiccRecords;Ljava/lang/String;)Ljava/lang/String;
 
-    .line 356
     sget-boolean v1, Lcom/android/internal/telephony/uicc/IsimUiccRecords;->SHIP_BUILD:Z
 
     if-nez v1, :cond_1
 
-    .line 357
     iget-object v1, p0, Lcom/android/internal/telephony/uicc/IsimUiccRecords$EfIsimIstLoaded;->this$0:Lcom/android/internal/telephony/uicc/IsimUiccRecords;
 
     new-instance v2, Ljava/lang/StringBuilder;
@@ -141,7 +133,6 @@
 
     invoke-virtual {v1, v2}, Lcom/android/internal/telephony/uicc/IsimUiccRecords;->log(Ljava/lang/String;)V
 
-    .line 358
     iget-object v1, p0, Lcom/android/internal/telephony/uicc/IsimUiccRecords$EfIsimIstLoaded;->this$0:Lcom/android/internal/telephony/uicc/IsimUiccRecords;
 
     new-instance v2, Ljava/lang/StringBuilder;
@@ -171,17 +162,14 @@
 
     invoke-virtual {v1, v2}, Lcom/android/internal/telephony/uicc/IsimUiccRecords;->log(Ljava/lang/String;)V
 
-    .line 363
     :goto_1
     return-void
 
     :cond_0
     move v1, v2
 
-    .line 352
     goto :goto_0
 
-    .line 360
     :cond_1
     iget-object v1, p0, Lcom/android/internal/telephony/uicc/IsimUiccRecords$EfIsimIstLoaded;->this$0:Lcom/android/internal/telephony/uicc/IsimUiccRecords;
 
@@ -189,7 +177,6 @@
 
     invoke-virtual {v1, v2}, Lcom/android/internal/telephony/uicc/IsimUiccRecords;->log(Ljava/lang/String;)V
 
-    .line 361
     iget-object v1, p0, Lcom/android/internal/telephony/uicc/IsimUiccRecords$EfIsimIstLoaded;->this$0:Lcom/android/internal/telephony/uicc/IsimUiccRecords;
 
     const-string v2, "mIsGbaSupported=**"

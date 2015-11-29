@@ -25,18 +25,14 @@
     .param p2, "listener"    # Lcom/samsung/android/quickconnect/QuickConnectManager$QuickConnectListener;
 
     .prologue
-    .line 171
     invoke-direct {p0, p1}, Landroid/os/Handler;-><init>(Landroid/os/Looper;)V
 
-    .line 168
     const/4 v0, 0x0
 
     iput-object v0, p0, Lcom/samsung/android/quickconnect/QuickConnectManager$QuickConnectListenerDelegate$ListenerHandler;->mListener:Lcom/samsung/android/quickconnect/QuickConnectManager$QuickConnectListener;
 
-    .line 172
     iput-object p2, p0, Lcom/samsung/android/quickconnect/QuickConnectManager$QuickConnectListenerDelegate$ListenerHandler;->mListener:Lcom/samsung/android/quickconnect/QuickConnectManager$QuickConnectListener;
 
-    .line 173
     return-void
 .end method
 
@@ -47,17 +43,14 @@
     .param p1, "msg"    # Landroid/os/Message;
 
     .prologue
-    .line 177
     iget-object v0, p0, Lcom/samsung/android/quickconnect/QuickConnectManager$QuickConnectListenerDelegate$ListenerHandler;->mListener:Lcom/samsung/android/quickconnect/QuickConnectManager$QuickConnectListener;
 
     if-eqz v0, :cond_0
 
-    .line 178
     iget-object v0, p0, Lcom/samsung/android/quickconnect/QuickConnectManager$QuickConnectListenerDelegate$ListenerHandler;->mListener:Lcom/samsung/android/quickconnect/QuickConnectManager$QuickConnectListener;
 
     invoke-interface {v0}, Lcom/samsung/android/quickconnect/QuickConnectManager$QuickConnectListener;->onItemSelected()V
 
-    .line 180
     :cond_0
     return-void
 .end method

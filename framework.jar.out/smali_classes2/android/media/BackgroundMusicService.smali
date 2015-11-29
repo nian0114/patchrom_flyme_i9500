@@ -33,7 +33,6 @@
     .locals 1
 
     .prologue
-    .line 32
     const-string v0, "/system/media/audio/ui/"
 
     sput-object v0, Landroid/media/BackgroundMusicService;->BACKGROUND_MUSIC_PATH:Ljava/lang/String;
@@ -49,28 +48,20 @@
     .prologue
     const/4 v0, 0x0
 
-    .line 43
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 34
     iput-object v0, p0, Landroid/media/BackgroundMusicService;->mContext:Landroid/content/Context;
 
-    .line 35
     iput-object v0, p0, Landroid/media/BackgroundMusicService;->mAudioService:Landroid/media/AudioService;
 
-    .line 36
     iput-object v0, p0, Landroid/media/BackgroundMusicService;->mContentResolver:Landroid/content/ContentResolver;
 
-    .line 37
     iput-object v0, p0, Landroid/media/BackgroundMusicService;->mMediaPlayer:Landroid/media/MediaPlayer;
 
-    .line 44
     iput-object p1, p0, Landroid/media/BackgroundMusicService;->mContext:Landroid/content/Context;
 
-    .line 45
     iput-object p2, p0, Landroid/media/BackgroundMusicService;->mAudioService:Landroid/media/AudioService;
 
-    .line 46
     return-void
 .end method
 
@@ -79,7 +70,6 @@
     .param p0, "x0"    # Landroid/media/BackgroundMusicService;
 
     .prologue
-    .line 29
     iget-object v0, p0, Landroid/media/BackgroundMusicService;->mMediaPlayer:Landroid/media/MediaPlayer;
 
     return-object v0
@@ -91,7 +81,6 @@
     .param p1, "x1"    # Landroid/media/MediaPlayer;
 
     .prologue
-    .line 29
     iput-object p1, p0, Landroid/media/BackgroundMusicService;->mMediaPlayer:Landroid/media/MediaPlayer;
 
     return-object p1
@@ -107,7 +96,6 @@
     .prologue
     const/4 v5, 0x3
 
-    .line 53
     iget-object v1, p0, Landroid/media/BackgroundMusicService;->mAudioService:Landroid/media/AudioService;
 
     if-eqz v1, :cond_0
@@ -116,7 +104,6 @@
 
     if-eqz v1, :cond_0
 
-    .line 54
     iget-object v1, p0, Landroid/media/BackgroundMusicService;->mAudioService:Landroid/media/AudioService;
 
     sget-object v2, Landroid/media/AudioManager;->DEFAULT_STREAM_VOLUME:[I
@@ -133,7 +120,6 @@
 
     invoke-virtual {v1, v5, v2, v3, v4}, Landroid/media/AudioService;->setStreamVolume(IIILjava/lang/String;)V
 
-    .line 58
     iget-object v1, p0, Landroid/media/BackgroundMusicService;->mContext:Landroid/content/Context;
 
     invoke-virtual {v1}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
@@ -142,31 +128,26 @@
 
     iput-object v1, p0, Landroid/media/BackgroundMusicService;->mContentResolver:Landroid/content/ContentResolver;
 
-    .line 62
     :cond_0
     :try_start_0
     iget-object v1, p0, Landroid/media/BackgroundMusicService;->mMediaPlayer:Landroid/media/MediaPlayer;
 
     if-nez v1, :cond_1
 
-    .line 63
     new-instance v1, Landroid/media/MediaPlayer;
 
     invoke-direct {v1}, Landroid/media/MediaPlayer;-><init>()V
 
     iput-object v1, p0, Landroid/media/BackgroundMusicService;->mMediaPlayer:Landroid/media/MediaPlayer;
 
-    .line 65
     iget-object v1, p0, Landroid/media/BackgroundMusicService;->mMediaPlayer:Landroid/media/MediaPlayer;
 
     if-eqz v1, :cond_1
 
-    .line 66
     iget-object v1, p0, Landroid/media/BackgroundMusicService;->mMediaPlayer:Landroid/media/MediaPlayer;
 
     invoke-virtual {v1}, Landroid/media/MediaPlayer;->reset()V
 
-    .line 67
     iget-object v1, p0, Landroid/media/BackgroundMusicService;->mMediaPlayer:Landroid/media/MediaPlayer;
 
     const/high16 v2, 0x3f800000    # 1.0f
@@ -175,32 +156,26 @@
 
     invoke-virtual {v1, v2, v3}, Landroid/media/MediaPlayer;->setVolume(FF)V
 
-    .line 68
     iget-object v1, p0, Landroid/media/BackgroundMusicService;->mMediaPlayer:Landroid/media/MediaPlayer;
 
     const/4 v2, 0x1
 
     invoke-virtual {v1, v2}, Landroid/media/MediaPlayer;->setLooping(Z)V
 
-    .line 70
     packed-switch p1, :pswitch_data_0
 
-    .line 76
     iget-object v1, p0, Landroid/media/BackgroundMusicService;->mMediaPlayer:Landroid/media/MediaPlayer;
 
     invoke-virtual {v1}, Landroid/media/MediaPlayer;->release()V
 
-    .line 77
     const/4 v1, 0x0
 
     iput-object v1, p0, Landroid/media/BackgroundMusicService;->mMediaPlayer:Landroid/media/MediaPlayer;
 
-    .line 87
     :cond_1
     :goto_0
     return-void
 
-    .line 72
     :pswitch_0
     iget-object v1, p0, Landroid/media/BackgroundMusicService;->mMediaPlayer:Landroid/media/MediaPlayer;
 
@@ -226,7 +201,6 @@
 
     invoke-virtual {v1, v2}, Landroid/media/MediaPlayer;->setDataSource(Ljava/lang/String;)V
 
-    .line 81
     new-instance v1, Landroid/media/BackgroundMusicService$FadeInThread;
 
     invoke-direct {v1, p0, p2}, Landroid/media/BackgroundMusicService$FadeInThread;-><init>(Landroid/media/BackgroundMusicService;I)V
@@ -237,17 +211,14 @@
 
     goto :goto_0
 
-    .line 84
     :catch_0
     move-exception v0
 
-    .line 85
     .local v0, "e":Ljava/lang/Exception;
     invoke-virtual {v0}, Ljava/lang/Exception;->printStackTrace()V
 
     goto :goto_0
 
-    .line 70
     :pswitch_data_0
     .packed-switch 0x0
         :pswitch_0
@@ -258,12 +229,10 @@
     .locals 1
 
     .prologue
-    .line 90
     iget-object v0, p0, Landroid/media/BackgroundMusicService;->mMediaPlayer:Landroid/media/MediaPlayer;
 
     if-eqz v0, :cond_0
 
-    .line 91
     iget-object v0, p0, Landroid/media/BackgroundMusicService;->mMediaPlayer:Landroid/media/MediaPlayer;
 
     invoke-virtual {v0}, Landroid/media/MediaPlayer;->isPlaying()Z
@@ -272,25 +241,21 @@
 
     if-eqz v0, :cond_1
 
-    .line 92
     new-instance v0, Landroid/media/BackgroundMusicService$FadeOutThread;
 
     invoke-direct {v0, p0}, Landroid/media/BackgroundMusicService$FadeOutThread;-><init>(Landroid/media/BackgroundMusicService;)V
 
     invoke-virtual {v0}, Landroid/media/BackgroundMusicService$FadeOutThread;->start()V
 
-    .line 98
     :cond_0
     :goto_0
     return-void
 
-    .line 94
     :cond_1
     iget-object v0, p0, Landroid/media/BackgroundMusicService;->mMediaPlayer:Landroid/media/MediaPlayer;
 
     invoke-virtual {v0}, Landroid/media/MediaPlayer;->release()V
 
-    .line 95
     const/4 v0, 0x0
 
     iput-object v0, p0, Landroid/media/BackgroundMusicService;->mMediaPlayer:Landroid/media/MediaPlayer;

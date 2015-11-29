@@ -28,7 +28,6 @@
     .locals 0
 
     .prologue
-    .line 199
     iput-object p1, p0, Lcom/android/server/wm/MultiWindowTransition$1;->this$0:Lcom/android/server/wm/MultiWindowTransition;
 
     iput-object p2, p0, Lcom/android/server/wm/MultiWindowTransition$1;->val$wtoken:Lcom/android/server/wm/AppWindowToken;
@@ -47,7 +46,6 @@
     .prologue
     const/16 v3, 0x67
 
-    .line 214
     iget-object v1, p0, Lcom/android/server/wm/MultiWindowTransition$1;->this$0:Lcom/android/server/wm/MultiWindowTransition;
 
     # getter for: Lcom/android/server/wm/MultiWindowTransition;->mService:Lcom/android/server/wm/WindowManagerService;
@@ -63,7 +61,6 @@
 
     invoke-virtual {v1, v3, v2}, Lcom/android/server/wm/WindowManagerService$H;->removeMessages(ILjava/lang/Object;)V
 
-    .line 216
     iget-object v1, p0, Lcom/android/server/wm/MultiWindowTransition$1;->this$0:Lcom/android/server/wm/MultiWindowTransition;
 
     # getter for: Lcom/android/server/wm/MultiWindowTransition;->mService:Lcom/android/server/wm/WindowManagerService;
@@ -81,7 +78,6 @@
 
     move-result-object v0
 
-    .line 218
     .local v0, "m":Landroid/os/Message;
     iget-object v1, p0, Lcom/android/server/wm/MultiWindowTransition$1;->this$0:Lcom/android/server/wm/MultiWindowTransition;
 
@@ -94,7 +90,6 @@
 
     invoke-virtual {v1, v0}, Lcom/android/server/wm/WindowManagerService$H;->sendMessage(Landroid/os/Message;)Z
 
-    .line 219
     return-void
 .end method
 
@@ -103,7 +98,6 @@
     .param p1, "animation"    # Landroid/view/animation/Animation;
 
     .prologue
-    .line 210
     return-void
 .end method
 
@@ -112,7 +106,6 @@
     .param p1, "animation"    # Landroid/view/animation/Animation;
 
     .prologue
-    .line 202
     iget-object v1, p0, Lcom/android/server/wm/MultiWindowTransition$1;->this$0:Lcom/android/server/wm/MultiWindowTransition;
 
     # getter for: Lcom/android/server/wm/MultiWindowTransition;->mService:Lcom/android/server/wm/WindowManagerService;
@@ -132,16 +125,13 @@
 
     check-cast v0, Lcom/android/server/wm/Task;
 
-    .line 203
     .local v0, "task":Lcom/android/server/wm/Task;
     if-eqz v0, :cond_0
 
-    .line 204
     iget-object v1, v0, Lcom/android/server/wm/Task;->mStack:Lcom/android/server/wm/TaskStack;
 
     invoke-virtual {v1}, Lcom/android/server/wm/TaskStack;->hideBackgoundLayer()V
 
-    .line 206
     :cond_0
     return-void
 .end method

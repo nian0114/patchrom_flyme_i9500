@@ -24,24 +24,18 @@
     .prologue
     const/4 v1, 0x0
 
-    .line 59
     const/16 v0, 0x9
 
     invoke-direct {p0, v0}, Landroid/sec/clipboard/data/ClipboardData;-><init>(I)V
 
-    .line 48
     iput-object v1, p0, Landroid/sec/clipboard/data/list/ClipboardDataSmartClip;->mValue:Ljava/lang/String;
 
-    .line 49
     iput-object v1, p0, Landroid/sec/clipboard/data/list/ClipboardDataSmartClip;->mPlainString:Ljava/lang/String;
 
-    .line 50
     iput-object v1, p0, Landroid/sec/clipboard/data/list/ClipboardDataSmartClip;->mImgPath:Ljava/lang/String;
 
-    .line 51
     iput-object v1, p0, Landroid/sec/clipboard/data/list/ClipboardDataSmartClip;->mBmpImgPath:Ljava/lang/String;
 
-    .line 60
     return-void
 .end method
 
@@ -51,7 +45,6 @@
     .locals 1
 
     .prologue
-    .line 187
     iget-object v0, p0, Landroid/sec/clipboard/data/list/ClipboardDataSmartClip;->mValue:Ljava/lang/String;
 
     invoke-static {v0}, Lcom/samsung/android/smartclip/SmartClipDataRepositoryImpl;->createRepositoryFromString(Ljava/lang/String;)Lcom/samsung/android/smartclip/SmartClipDataRepositoryImpl;
@@ -67,25 +60,21 @@
     .param p2, "altData"    # Landroid/sec/clipboard/data/ClipboardData;
 
     .prologue
-    .line 75
     invoke-super {p0, p1, p2}, Landroid/sec/clipboard/data/ClipboardData;->SetAlternateFormat(ILandroid/sec/clipboard/data/ClipboardData;)Z
 
     move-result v0
 
-    .line 76
     .local v0, "Result":Z
     if-nez v0, :cond_0
 
     move v1, v0
 
-    .line 118
     .end local v0    # "Result":Z
     .end local p2    # "altData":Landroid/sec/clipboard/data/ClipboardData;
     .local v1, "Result":Z
     :goto_0
     return v1
 
-    .line 78
     .end local v1    # "Result":Z
     .restart local v0    # "Result":Z
     .restart local p2    # "altData":Landroid/sec/clipboard/data/ClipboardData;
@@ -96,74 +85,57 @@
     :goto_1
     move v1, v0
 
-    .line 118
     .end local v0    # "Result":Z
     .restart local v1    # "Result":Z
     goto :goto_0
 
-    .line 81
     .end local v1    # "Result":Z
     .restart local v0    # "Result":Z
     .restart local p2    # "altData":Landroid/sec/clipboard/data/ClipboardData;
     :pswitch_0
     const/4 v0, 0x0
 
-    .line 82
     goto :goto_1
 
-    .line 84
     :pswitch_1
     const/4 v0, 0x0
 
-    .line 85
     goto :goto_1
 
-    .line 87
     :pswitch_2
     const/4 v0, 0x0
 
-    .line 88
     goto :goto_1
 
-    .line 92
     :pswitch_3
     const/4 v0, 0x0
 
-    .line 93
     goto :goto_1
 
-    .line 96
     :pswitch_4
     const/4 v0, 0x0
 
-    .line 97
     goto :goto_1
 
-    .line 101
     :pswitch_5
     const/4 v0, 0x0
 
-    .line 102
     goto :goto_1
 
-    .line 106
     :pswitch_6
     const/4 v0, 0x0
 
-    .line 107
     goto :goto_1
 
     :pswitch_7
     move-object v2, p2
 
-    .line 110
     check-cast v2, Landroid/sec/clipboard/data/list/ClipboardDataSmartClip;
 
     iget-object v3, p0, Landroid/sec/clipboard/data/list/ClipboardDataSmartClip;->mBmpImgPath:Ljava/lang/String;
 
     invoke-virtual {v2, v3}, Landroid/sec/clipboard/data/list/ClipboardDataSmartClip;->setBmpImagePath(Ljava/lang/String;)V
 
-    .line 111
     check-cast p2, Landroid/sec/clipboard/data/list/ClipboardDataSmartClip;
 
     .end local p2    # "altData":Landroid/sec/clipboard/data/ClipboardData;
@@ -177,17 +149,14 @@
 
     move-result v0
 
-    .line 112
     goto :goto_1
 
-    .line 114
     .restart local p2    # "altData":Landroid/sec/clipboard/data/ClipboardData;
     :pswitch_8
     const/4 v0, 0x0
 
     goto :goto_1
 
-    .line 78
     :pswitch_data_0
     .packed-switch 0x2
         :pswitch_0
@@ -207,17 +176,13 @@
     .param p1, "smartClip"    # Lcom/samsung/android/smartclip/SmartClipDataRepositoryImpl;
 
     .prologue
-    .line 128
     if-nez p1, :cond_0
 
-    .line 129
     const/4 v0, 0x0
 
-    .line 134
     :goto_0
     return v0
 
-    .line 131
     :cond_0
     invoke-virtual {p1}, Lcom/samsung/android/smartclip/SmartClipDataRepositoryImpl;->encodeRepositoryToString()Ljava/lang/String;
 
@@ -225,21 +190,18 @@
 
     iput-object v0, p0, Landroid/sec/clipboard/data/list/ClipboardDataSmartClip;->mValue:Ljava/lang/String;
 
-    .line 132
     invoke-virtual {p1}, Lcom/samsung/android/smartclip/SmartClipDataRepositoryImpl;->getMergedPlainTextTag()Ljava/lang/String;
 
     move-result-object v0
 
     iput-object v0, p0, Landroid/sec/clipboard/data/list/ClipboardDataSmartClip;->mPlainString:Ljava/lang/String;
 
-    .line 133
     invoke-virtual {p1}, Lcom/samsung/android/smartclip/SmartClipDataRepositoryImpl;->getCapturedImageFilePath()Ljava/lang/String;
 
     move-result-object v0
 
     iput-object v0, p0, Landroid/sec/clipboard/data/list/ClipboardDataSmartClip;->mImgPath:Ljava/lang/String;
 
-    .line 134
     const/4 v0, 0x1
 
     goto :goto_0
@@ -249,22 +211,18 @@
     .locals 1
 
     .prologue
-    .line 172
     const/4 v0, 0x0
 
     iput-object v0, p0, Landroid/sec/clipboard/data/list/ClipboardDataSmartClip;->mValue:Ljava/lang/String;
 
-    .line 173
     const-string v0, ""
 
     iput-object v0, p0, Landroid/sec/clipboard/data/list/ClipboardDataSmartClip;->mImgPath:Ljava/lang/String;
 
-    .line 174
     const-string v0, ""
 
     iput-object v0, p0, Landroid/sec/clipboard/data/list/ClipboardDataSmartClip;->mBmpImgPath:Ljava/lang/String;
 
-    .line 175
     return-void
 .end method
 
@@ -272,7 +230,6 @@
     .locals 1
 
     .prologue
-    .line 161
     iget-object v0, p0, Landroid/sec/clipboard/data/list/ClipboardDataSmartClip;->mBmpImgPath:Ljava/lang/String;
 
     return-object v0
@@ -282,7 +239,6 @@
     .locals 1
 
     .prologue
-    .line 241
     iget-object v0, p0, Landroid/sec/clipboard/data/list/ClipboardDataSmartClip;->mImgPath:Ljava/lang/String;
 
     return-object v0
@@ -293,7 +249,6 @@
     .param p1, "source"    # Landroid/os/Parcel;
 
     .prologue
-    .line 227
     const-class v0, Ljava/lang/String;
 
     invoke-virtual {v0}, Ljava/lang/Class;->getClassLoader()Ljava/lang/ClassLoader;
@@ -308,7 +263,6 @@
 
     iput-object v0, p0, Landroid/sec/clipboard/data/list/ClipboardDataSmartClip;->mValue:Ljava/lang/String;
 
-    .line 228
     const-class v0, Ljava/lang/String;
 
     invoke-virtual {v0}, Ljava/lang/Class;->getClassLoader()Ljava/lang/ClassLoader;
@@ -323,7 +277,6 @@
 
     iput-object v0, p0, Landroid/sec/clipboard/data/list/ClipboardDataSmartClip;->mImgPath:Ljava/lang/String;
 
-    .line 229
     const-class v0, Ljava/lang/String;
 
     invoke-virtual {v0}, Ljava/lang/Class;->getClassLoader()Ljava/lang/ClassLoader;
@@ -338,7 +291,6 @@
 
     iput-object v0, p0, Landroid/sec/clipboard/data/list/ClipboardDataSmartClip;->mBmpImgPath:Ljava/lang/String;
 
-    .line 231
     const-class v0, Landroid/content/ClipData;
 
     invoke-virtual {v0}, Ljava/lang/Class;->getClassLoader()Ljava/lang/ClassLoader;
@@ -353,7 +305,6 @@
 
     iput-object v0, p0, Landroid/sec/clipboard/data/ClipboardData;->mClipdata:Landroid/content/ClipData;
 
-    .line 232
     const-class v0, Ljava/lang/Boolean;
 
     invoke-virtual {v0}, Ljava/lang/Class;->getClassLoader()Ljava/lang/ClassLoader;
@@ -372,7 +323,6 @@
 
     iput-boolean v0, p0, Landroid/sec/clipboard/data/ClipboardData;->mIsProtected:Z
 
-    .line 233
     return-void
 .end method
 
@@ -381,7 +331,6 @@
     .param p1, "Path"    # Ljava/lang/String;
 
     .prologue
-    .line 144
     if-eqz p1, :cond_0
 
     invoke-virtual {p1}, Ljava/lang/String;->length()I
@@ -392,18 +341,15 @@
 
     if-ge v1, v2, :cond_1
 
-    .line 153
     :cond_0
     :goto_0
     return-void
 
-    .line 147
     :cond_1
     new-instance v0, Ljava/io/File;
 
     invoke-direct {v0, p1}, Ljava/io/File;-><init>(Ljava/lang/String;)V
 
-    .line 148
     .local v0, "tempFile":Ljava/io/File;
     invoke-virtual {v0}, Ljava/io/File;->isFile()Z
 
@@ -411,12 +357,10 @@
 
     if-eqz v1, :cond_2
 
-    .line 149
     iput-object p1, p0, Landroid/sec/clipboard/data/list/ClipboardDataSmartClip;->mBmpImgPath:Ljava/lang/String;
 
     goto :goto_0
 
-    .line 151
     :cond_2
     sget-boolean v1, Landroid/sec/clipboard/data/ClipboardDefine;->DEBUG:Z
 
@@ -437,7 +381,6 @@
     .param p2, "flags"    # I
 
     .prologue
-    .line 203
     sget-boolean v2, Landroid/sec/clipboard/data/ClipboardDefine;->DEBUG:Z
 
     if-eqz v2, :cond_0
@@ -448,11 +391,9 @@
 
     invoke-static {v2, v3}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 204
     :cond_0
     invoke-super {p0, p1, p2}, Landroid/sec/clipboard/data/ClipboardData;->writeToParcel(Landroid/os/Parcel;I)V
 
-    .line 206
     iget-object v2, p0, Landroid/sec/clipboard/data/ClipboardData;->mClipdata:Landroid/content/ClipData;
 
     if-nez v2, :cond_1
@@ -461,18 +402,16 @@
 
     if-eqz v2, :cond_1
 
-    .line 207
     const/4 v2, 0x1
 
     new-array v1, v2, [Ljava/lang/String;
 
     const/4 v2, 0x0
 
-    const-string/jumbo v3, "text/uri-list"
+    const-string v3, "text/uri-list"
 
     aput-object v3, v1, v2
 
-    .line 208
     .local v1, "mimeType":[Ljava/lang/String;
     new-instance v0, Landroid/content/ClipData$Item;
 
@@ -488,7 +427,6 @@
 
     invoke-direct {v0, v2}, Landroid/content/ClipData$Item;-><init>(Landroid/net/Uri;)V
 
-    .line 209
     .local v0, "item":Landroid/content/ClipData$Item;
     new-instance v2, Landroid/content/ClipData;
 
@@ -498,7 +436,6 @@
 
     iput-object v2, p0, Landroid/sec/clipboard/data/ClipboardData;->mClipdata:Landroid/content/ClipData;
 
-    .line 212
     .end local v0    # "item":Landroid/content/ClipData$Item;
     .end local v1    # "mimeType":[Ljava/lang/String;
     :cond_1
@@ -506,22 +443,18 @@
 
     invoke-virtual {p1, v2}, Landroid/os/Parcel;->writeValue(Ljava/lang/Object;)V
 
-    .line 213
     iget-object v2, p0, Landroid/sec/clipboard/data/list/ClipboardDataSmartClip;->mImgPath:Ljava/lang/String;
 
     invoke-virtual {p1, v2}, Landroid/os/Parcel;->writeValue(Ljava/lang/Object;)V
 
-    .line 214
     iget-object v2, p0, Landroid/sec/clipboard/data/list/ClipboardDataSmartClip;->mBmpImgPath:Ljava/lang/String;
 
     invoke-virtual {p1, v2}, Landroid/os/Parcel;->writeValue(Ljava/lang/Object;)V
 
-    .line 215
     iget-object v2, p0, Landroid/sec/clipboard/data/ClipboardData;->mClipdata:Landroid/content/ClipData;
 
     invoke-virtual {p1, v2}, Landroid/os/Parcel;->writeValue(Ljava/lang/Object;)V
 
-    .line 216
     iget-boolean v2, p0, Landroid/sec/clipboard/data/ClipboardData;->mIsProtected:Z
 
     invoke-static {v2}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
@@ -530,6 +463,5 @@
 
     invoke-virtual {p1, v2}, Landroid/os/Parcel;->writeValue(Ljava/lang/Object;)V
 
-    .line 217
     return-void
 .end method

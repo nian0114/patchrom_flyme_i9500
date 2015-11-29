@@ -26,7 +26,6 @@
     .locals 0
 
     .prologue
-    .line 1192
     iput-object p1, p0, Lcom/android/internal/policy/impl/MultiPhoneWindow$ContentFrameDragListener;->this$0:Lcom/android/internal/policy/impl/MultiPhoneWindow;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -40,7 +39,6 @@
     .param p2, "x1"    # Lcom/android/internal/policy/impl/MultiPhoneWindow$1;
 
     .prologue
-    .line 1192
     invoke-direct {p0, p1}, Lcom/android/internal/policy/impl/MultiPhoneWindow$ContentFrameDragListener;-><init>(Lcom/android/internal/policy/impl/MultiPhoneWindow;)V
 
     return-void
@@ -58,7 +56,6 @@
 
     const/16 v5, 0x66
 
-    .line 1195
     iget-object v3, p0, Lcom/android/internal/policy/impl/MultiPhoneWindow$ContentFrameDragListener;->this$0:Lcom/android/internal/policy/impl/MultiPhoneWindow;
 
     # invokes: Lcom/android/internal/policy/impl/MultiPhoneWindow;->getMultiWindowStyle()Lcom/samsung/android/multiwindow/MultiWindowStyle;
@@ -66,7 +63,6 @@
 
     move-result-object v1
 
-    .line 1196
     .local v1, "style":Lcom/samsung/android/multiwindow/MultiWindowStyle;
     if-eqz v1, :cond_1
 
@@ -78,30 +74,25 @@
 
     if-eq v3, v4, :cond_1
 
-    .line 1234
     :cond_0
     :goto_0
     return v2
 
-    .line 1200
     :cond_1
     invoke-virtual {p2}, Landroid/view/DragEvent;->getAction()I
 
     move-result v0
 
-    .line 1201
     .local v0, "action":I
     packed-switch v0, :pswitch_data_0
 
     goto :goto_0
 
-    .line 1204
     :pswitch_0
     const/4 v2, 0x1
 
     goto :goto_0
 
-    .line 1208
     :pswitch_1
     iget-object v3, p0, Lcom/android/internal/policy/impl/MultiPhoneWindow$ContentFrameDragListener;->this$0:Lcom/android/internal/policy/impl/MultiPhoneWindow;
 
@@ -113,7 +104,6 @@
 
     if-eqz v3, :cond_0
 
-    .line 1209
     iget-object v3, p0, Lcom/android/internal/policy/impl/MultiPhoneWindow$ContentFrameDragListener;->this$0:Lcom/android/internal/policy/impl/MultiPhoneWindow;
 
     iget-object v3, v3, Lcom/android/internal/policy/impl/MultiPhoneWindow;->mHandler:Landroid/os/Handler;
@@ -122,7 +112,6 @@
 
     goto :goto_0
 
-    .line 1214
     :pswitch_2
     iget-object v3, p0, Lcom/android/internal/policy/impl/MultiPhoneWindow$ContentFrameDragListener;->this$0:Lcom/android/internal/policy/impl/MultiPhoneWindow;
 
@@ -144,7 +133,6 @@
 
     if-eqz v3, :cond_0
 
-    .line 1215
     iget-object v3, p0, Lcom/android/internal/policy/impl/MultiPhoneWindow$ContentFrameDragListener;->this$0:Lcom/android/internal/policy/impl/MultiPhoneWindow;
 
     iget-object v3, v3, Lcom/android/internal/policy/impl/MultiPhoneWindow;->mHandler:Landroid/os/Handler;
@@ -155,7 +143,6 @@
 
     if-nez v3, :cond_0
 
-    .line 1216
     iget-object v3, p0, Lcom/android/internal/policy/impl/MultiPhoneWindow$ContentFrameDragListener;->this$0:Lcom/android/internal/policy/impl/MultiPhoneWindow;
 
     iget-object v3, v3, Lcom/android/internal/policy/impl/MultiPhoneWindow;->mHandler:Landroid/os/Handler;
@@ -174,7 +161,6 @@
 
     goto :goto_0
 
-    .line 1224
     :pswitch_3
     iget-object v3, p0, Lcom/android/internal/policy/impl/MultiPhoneWindow$ContentFrameDragListener;->this$0:Lcom/android/internal/policy/impl/MultiPhoneWindow;
 
@@ -185,7 +171,6 @@
 
     if-eqz v3, :cond_0
 
-    .line 1225
     iget-object v3, p0, Lcom/android/internal/policy/impl/MultiPhoneWindow$ContentFrameDragListener;->this$0:Lcom/android/internal/policy/impl/MultiPhoneWindow;
 
     iget-object v3, v3, Lcom/android/internal/policy/impl/MultiPhoneWindow;->mHandler:Landroid/os/Handler;
@@ -196,7 +181,6 @@
 
     if-eqz v3, :cond_0
 
-    .line 1226
     iget-object v3, p0, Lcom/android/internal/policy/impl/MultiPhoneWindow$ContentFrameDragListener;->this$0:Lcom/android/internal/policy/impl/MultiPhoneWindow;
 
     iget-object v3, v3, Lcom/android/internal/policy/impl/MultiPhoneWindow;->mHandler:Landroid/os/Handler;
@@ -205,7 +189,6 @@
 
     goto :goto_0
 
-    .line 1201
     :pswitch_data_0
     .packed-switch 0x1
         :pswitch_0

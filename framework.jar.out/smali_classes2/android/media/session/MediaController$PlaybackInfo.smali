@@ -42,25 +42,18 @@
     .param p5, "current"    # I
 
     .prologue
-    .line 879
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 880
     iput p1, p0, Landroid/media/session/MediaController$PlaybackInfo;->mVolumeType:I
 
-    .line 881
     iput-object p2, p0, Landroid/media/session/MediaController$PlaybackInfo;->mAudioAttrs:Landroid/media/AudioAttributes;
 
-    .line 882
     iput p3, p0, Landroid/media/session/MediaController$PlaybackInfo;->mVolumeControl:I
 
-    .line 883
     iput p4, p0, Landroid/media/session/MediaController$PlaybackInfo;->mMaxVolume:I
 
-    .line 884
     iput p5, p0, Landroid/media/session/MediaController$PlaybackInfo;->mCurrentVolume:I
 
-    .line 885
     return-void
 .end method
 
@@ -70,7 +63,6 @@
     .locals 1
 
     .prologue
-    .line 909
     iget-object v0, p0, Landroid/media/session/MediaController$PlaybackInfo;->mAudioAttrs:Landroid/media/AudioAttributes;
 
     return-object v0
@@ -80,7 +72,6 @@
     .locals 1
 
     .prologue
-    .line 942
     iget v0, p0, Landroid/media/session/MediaController$PlaybackInfo;->mCurrentVolume:I
 
     return v0
@@ -90,7 +81,6 @@
     .locals 1
 
     .prologue
-    .line 933
     iget v0, p0, Landroid/media/session/MediaController$PlaybackInfo;->mMaxVolume:I
 
     return v0
@@ -100,7 +90,6 @@
     .locals 1
 
     .prologue
-    .line 897
     iget v0, p0, Landroid/media/session/MediaController$PlaybackInfo;->mVolumeType:I
 
     return v0
@@ -110,7 +99,6 @@
     .locals 1
 
     .prologue
-    .line 924
     iget v0, p0, Landroid/media/session/MediaController$PlaybackInfo;->mVolumeControl:I
 
     return v0

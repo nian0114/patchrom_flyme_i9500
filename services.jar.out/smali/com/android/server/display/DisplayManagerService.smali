@@ -202,135 +202,112 @@
 
     const/4 v2, 0x0
 
-    .line 277
     invoke-direct {p0, p1}, Lcom/android/server/SystemService;-><init>(Landroid/content/Context;)V
 
-    .line 180
     new-instance v0, Lcom/android/server/display/DisplayManagerService$SyncRoot;
 
     invoke-direct {v0}, Lcom/android/server/display/DisplayManagerService$SyncRoot;-><init>()V
 
     iput-object v0, p0, Lcom/android/server/display/DisplayManagerService;->mSyncRoot:Lcom/android/server/display/DisplayManagerService$SyncRoot;
 
-    .line 198
     new-instance v0, Landroid/util/SparseArray;
 
     invoke-direct {v0}, Landroid/util/SparseArray;-><init>()V
 
     iput-object v0, p0, Lcom/android/server/display/DisplayManagerService;->mCallbacks:Landroid/util/SparseArray;
 
-    .line 202
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
     iput-object v0, p0, Lcom/android/server/display/DisplayManagerService;->mDisplayAdapters:Ljava/util/ArrayList;
 
-    .line 205
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
     iput-object v0, p0, Lcom/android/server/display/DisplayManagerService;->mDisplayDevices:Ljava/util/ArrayList;
 
-    .line 208
     new-instance v0, Landroid/util/SparseArray;
 
     invoke-direct {v0}, Landroid/util/SparseArray;-><init>()V
 
     iput-object v0, p0, Lcom/android/server/display/DisplayManagerService;->mLogicalDisplays:Landroid/util/SparseArray;
 
-    .line 210
     const/4 v0, 0x1
 
     iput v0, p0, Lcom/android/server/display/DisplayManagerService;->mNextNonDefaultDisplayId:I
 
-    .line 213
     new-instance v0, Ljava/util/concurrent/CopyOnWriteArrayList;
 
     invoke-direct {v0}, Ljava/util/concurrent/CopyOnWriteArrayList;-><init>()V
 
     iput-object v0, p0, Lcom/android/server/display/DisplayManagerService;->mDisplayTransactionListeners:Ljava/util/concurrent/CopyOnWriteArrayList;
 
-    .line 221
     iput v2, p0, Lcom/android/server/display/DisplayManagerService;->mGlobalDisplayState:I
 
-    .line 238
     new-instance v0, Landroid/hardware/display/DisplayViewport;
 
     invoke-direct {v0}, Landroid/hardware/display/DisplayViewport;-><init>()V
 
     iput-object v0, p0, Lcom/android/server/display/DisplayManagerService;->mDefaultViewport:Landroid/hardware/display/DisplayViewport;
 
-    .line 239
     new-instance v0, Landroid/hardware/display/DisplayViewport;
 
     invoke-direct {v0}, Landroid/hardware/display/DisplayViewport;-><init>()V
 
     iput-object v0, p0, Lcom/android/server/display/DisplayManagerService;->mExternalTouchViewport:Landroid/hardware/display/DisplayViewport;
 
-    .line 242
     new-instance v0, Lcom/android/server/display/PersistentDataStore;
 
     invoke-direct {v0}, Lcom/android/server/display/PersistentDataStore;-><init>()V
 
     iput-object v0, p0, Lcom/android/server/display/DisplayManagerService;->mPersistentDataStore:Lcom/android/server/display/PersistentDataStore;
 
-    .line 246
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
     iput-object v0, p0, Lcom/android/server/display/DisplayManagerService;->mTempCallbacks:Ljava/util/ArrayList;
 
-    .line 249
     new-instance v0, Landroid/view/DisplayInfo;
 
     invoke-direct {v0}, Landroid/view/DisplayInfo;-><init>()V
 
     iput-object v0, p0, Lcom/android/server/display/DisplayManagerService;->mTempDisplayInfo:Landroid/view/DisplayInfo;
 
-    .line 253
     new-instance v0, Landroid/hardware/display/DisplayViewport;
 
     invoke-direct {v0}, Landroid/hardware/display/DisplayViewport;-><init>()V
 
     iput-object v0, p0, Lcom/android/server/display/DisplayManagerService;->mTempDefaultViewport:Landroid/hardware/display/DisplayViewport;
 
-    .line 254
     new-instance v0, Landroid/hardware/display/DisplayViewport;
 
     invoke-direct {v0}, Landroid/hardware/display/DisplayViewport;-><init>()V
 
     iput-object v0, p0, Lcom/android/server/display/DisplayManagerService;->mTempExternalTouchViewport:Landroid/hardware/display/DisplayViewport;
 
-    .line 259
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
     iput-object v0, p0, Lcom/android/server/display/DisplayManagerService;->mTempDisplayStateWorkQueue:Ljava/util/ArrayList;
 
-    .line 263
     iput-object v3, p0, Lcom/android/server/display/DisplayManagerService;->wifiDevice:Lcom/android/server/display/DisplayDevice;
 
-    .line 268
     new-instance v0, Ljava/util/HashMap;
 
     invoke-direct {v0}, Ljava/util/HashMap;-><init>()V
 
     iput-object v0, p0, Lcom/android/server/display/DisplayManagerService;->mScaledPids:Ljava/util/HashMap;
 
-    .line 272
     iput v2, p0, Lcom/android/server/display/DisplayManagerService;->mCocktailSize:I
 
-    .line 273
     iput v2, p0, Lcom/android/server/display/DisplayManagerService;->mCocktailShiftSize:I
 
-    .line 278
     iput-object p1, p0, Lcom/android/server/display/DisplayManagerService;->mContext:Landroid/content/Context;
 
-    .line 279
     new-instance v0, Lcom/android/server/display/DisplayManagerService$DisplayManagerHandler;
 
     invoke-static {}, Lcom/android/server/DisplayThread;->get()Lcom/android/server/DisplayThread;
@@ -345,22 +322,19 @@
 
     iput-object v0, p0, Lcom/android/server/display/DisplayManagerService;->mHandler:Lcom/android/server/display/DisplayManagerService$DisplayManagerHandler;
 
-    .line 280
     invoke-static {}, Lcom/android/server/UiThread;->getHandler()Landroid/os/Handler;
 
     move-result-object v0
 
     iput-object v0, p0, Lcom/android/server/display/DisplayManagerService;->mUiHandler:Landroid/os/Handler;
 
-    .line 281
     new-instance v0, Lcom/android/server/display/DisplayManagerService$DisplayAdapterListener;
 
     invoke-direct {v0, p0, v3}, Lcom/android/server/display/DisplayManagerService$DisplayAdapterListener;-><init>(Lcom/android/server/display/DisplayManagerService;Lcom/android/server/display/DisplayManagerService$1;)V
 
     iput-object v0, p0, Lcom/android/server/display/DisplayManagerService;->mDisplayAdapterListener:Lcom/android/server/display/DisplayManagerService$DisplayAdapterListener;
 
-    .line 282
-    const-string/jumbo v0, "persist.demo.singledisplay"
+    const-string v0, "persist.demo.singledisplay"
 
     invoke-static {v0, v2}, Landroid/os/SystemProperties;->getBoolean(Ljava/lang/String;Z)Z
 
@@ -368,7 +342,6 @@
 
     iput-boolean v0, p0, Lcom/android/server/display/DisplayManagerService;->mSingleDisplayDemoMode:Z
 
-    .line 285
     iget-object v0, p0, Lcom/android/server/display/DisplayManagerService;->mContext:Landroid/content/Context;
 
     invoke-virtual {v0}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
@@ -383,7 +356,6 @@
 
     iput v0, p0, Lcom/android/server/display/DisplayManagerService;->mCocktailSize:I
 
-    .line 286
     iget-object v0, p0, Lcom/android/server/display/DisplayManagerService;->mContext:Landroid/content/Context;
 
     invoke-virtual {v0}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
@@ -398,7 +370,6 @@
 
     iput v0, p0, Lcom/android/server/display/DisplayManagerService;->mCocktailShiftSize:I
 
-    .line 288
     return-void
 .end method
 
@@ -407,7 +378,6 @@
     .param p0, "x0"    # Lcom/android/server/display/DisplayManagerService;
 
     .prologue
-    .line 138
     iget-object v0, p0, Lcom/android/server/display/DisplayManagerService;->mExternalTouchViewport:Landroid/hardware/display/DisplayViewport;
 
     return-object v0
@@ -418,7 +388,6 @@
     .param p0, "x0"    # Lcom/android/server/display/DisplayManagerService;
 
     .prologue
-    .line 138
     iget-object v0, p0, Lcom/android/server/display/DisplayManagerService;->mTempExternalTouchViewport:Landroid/hardware/display/DisplayViewport;
 
     return-object v0
@@ -429,7 +398,6 @@
     .param p0, "x0"    # Lcom/android/server/display/DisplayManagerService;
 
     .prologue
-    .line 138
     iget-object v0, p0, Lcom/android/server/display/DisplayManagerService;->mInputManagerInternal:Landroid/hardware/input/InputManagerInternal;
 
     return-object v0
@@ -441,7 +409,6 @@
     .param p1, "x1"    # Lcom/android/server/display/DisplayDevice;
 
     .prologue
-    .line 138
     invoke-direct {p0, p1}, Lcom/android/server/display/DisplayManagerService;->handleDisplayDeviceAdded(Lcom/android/server/display/DisplayDevice;)V
 
     return-void
@@ -453,7 +420,6 @@
     .param p1, "x1"    # Lcom/android/server/display/DisplayDevice;
 
     .prologue
-    .line 138
     invoke-direct {p0, p1}, Lcom/android/server/display/DisplayManagerService;->handleDisplayDeviceChanged(Lcom/android/server/display/DisplayDevice;)V
 
     return-void
@@ -465,7 +431,6 @@
     .param p1, "x1"    # Lcom/android/server/display/DisplayDevice;
 
     .prologue
-    .line 138
     invoke-direct {p0, p1}, Lcom/android/server/display/DisplayManagerService;->handleDisplayDeviceRemoved(Lcom/android/server/display/DisplayDevice;)V
 
     return-void
@@ -477,7 +442,6 @@
     .param p1, "x1"    # Z
 
     .prologue
-    .line 138
     invoke-direct {p0, p1}, Lcom/android/server/display/DisplayManagerService;->scheduleTraversalLocked(Z)V
 
     return-void
@@ -489,7 +453,6 @@
     .param p1, "x1"    # Lcom/android/server/display/DisplayManagerService$CallbackRecord;
 
     .prologue
-    .line 138
     invoke-direct {p0, p1}, Lcom/android/server/display/DisplayManagerService;->onCallbackDied(Lcom/android/server/display/DisplayManagerService$CallbackRecord;)V
 
     return-void
@@ -504,7 +467,6 @@
     .param p4, "x4"    # Landroid/os/IBinder;
 
     .prologue
-    .line 138
     invoke-direct {p0, p1, p2, p3, p4}, Lcom/android/server/display/DisplayManagerService;->getDisplayInfoInternal(IIILandroid/os/IBinder;)Landroid/view/DisplayInfo;
 
     move-result-object v0
@@ -518,7 +480,6 @@
     .param p1, "x1"    # I
 
     .prologue
-    .line 138
     invoke-direct {p0, p1}, Lcom/android/server/display/DisplayManagerService;->getDisplayIdsInternal(I)[I
 
     move-result-object v0
@@ -533,7 +494,6 @@
     .param p2, "x2"    # I
 
     .prologue
-    .line 138
     invoke-direct {p0, p1, p2}, Lcom/android/server/display/DisplayManagerService;->registerCallbackInternal(Landroid/hardware/display/IDisplayManagerCallback;I)V
 
     return-void
@@ -544,7 +504,6 @@
     .param p0, "x0"    # Lcom/android/server/display/DisplayManagerService;
 
     .prologue
-    .line 138
     iget-object v0, p0, Lcom/android/server/display/DisplayManagerService;->mContext:Landroid/content/Context;
 
     return-object v0
@@ -556,7 +515,6 @@
     .param p1, "x1"    # I
 
     .prologue
-    .line 138
     invoke-direct {p0, p1}, Lcom/android/server/display/DisplayManagerService;->startWifiDisplayScanInternal(I)V
 
     return-void
@@ -568,7 +526,6 @@
     .param p1, "x1"    # I
 
     .prologue
-    .line 138
     invoke-direct {p0, p1}, Lcom/android/server/display/DisplayManagerService;->stopWifiDisplayScanInternal(I)V
 
     return-void
@@ -580,7 +537,6 @@
     .param p1, "x1"    # Ljava/lang/String;
 
     .prologue
-    .line 138
     invoke-direct {p0, p1}, Lcom/android/server/display/DisplayManagerService;->connectWifiDisplayInternal(Ljava/lang/String;)V
 
     return-void
@@ -591,7 +547,6 @@
     .param p0, "x0"    # Lcom/android/server/display/DisplayManagerService;
 
     .prologue
-    .line 138
     iget-object v0, p0, Lcom/android/server/display/DisplayManagerService;->mWifiDisplayAdapter:Lcom/android/server/display/WifiDisplayAdapter;
 
     return-object v0
@@ -602,7 +557,6 @@
     .param p0, "x0"    # Lcom/android/server/display/DisplayManagerService;
 
     .prologue
-    .line 138
     invoke-direct {p0}, Lcom/android/server/display/DisplayManagerService;->disconnectWifiDisplayInternal()V
 
     return-void
@@ -615,7 +569,6 @@
     .param p2, "x2"    # Ljava/lang/String;
 
     .prologue
-    .line 138
     invoke-direct {p0, p1, p2}, Lcom/android/server/display/DisplayManagerService;->renameWifiDisplayInternal(Ljava/lang/String;Ljava/lang/String;)V
 
     return-void
@@ -627,7 +580,6 @@
     .param p1, "x1"    # Ljava/lang/String;
 
     .prologue
-    .line 138
     invoke-direct {p0, p1}, Lcom/android/server/display/DisplayManagerService;->forgetWifiDisplayInternal(Ljava/lang/String;)V
 
     return-void
@@ -638,7 +590,6 @@
     .param p0, "x0"    # Lcom/android/server/display/DisplayManagerService;
 
     .prologue
-    .line 138
     invoke-direct {p0}, Lcom/android/server/display/DisplayManagerService;->pauseWifiDisplayInternal()V
 
     return-void
@@ -649,7 +600,6 @@
     .param p0, "x0"    # Lcom/android/server/display/DisplayManagerService;
 
     .prologue
-    .line 138
     invoke-direct {p0}, Lcom/android/server/display/DisplayManagerService;->registerDefaultDisplayAdapter()V
 
     return-void
@@ -660,7 +610,6 @@
     .param p0, "x0"    # Lcom/android/server/display/DisplayManagerService;
 
     .prologue
-    .line 138
     invoke-direct {p0}, Lcom/android/server/display/DisplayManagerService;->resumeWifiDisplayInternal()V
 
     return-void
@@ -671,7 +620,6 @@
     .param p0, "x0"    # Lcom/android/server/display/DisplayManagerService;
 
     .prologue
-    .line 138
     invoke-direct {p0}, Lcom/android/server/display/DisplayManagerService;->getWifiDisplayStatusInternal()Landroid/hardware/display/WifiDisplayStatus;
 
     move-result-object v0
@@ -684,7 +632,6 @@
     .param p0, "x0"    # Lcom/android/server/display/DisplayManagerService;
 
     .prologue
-    .line 138
     invoke-direct {p0}, Lcom/android/server/display/DisplayManagerService;->getProjectionService()Landroid/media/projection/IMediaProjectionManager;
 
     move-result-object v0
@@ -707,7 +654,6 @@
     .param p10, "x10"    # I
 
     .prologue
-    .line 138
     invoke-direct/range {p0 .. p10}, Lcom/android/server/display/DisplayManagerService;->createVirtualDisplayInternal(Landroid/hardware/display/IVirtualDisplayCallback;Landroid/media/projection/IMediaProjection;ILjava/lang/String;Ljava/lang/String;IIILandroid/view/Surface;I)I
 
     move-result v0
@@ -724,7 +670,6 @@
     .param p4, "x4"    # I
 
     .prologue
-    .line 138
     invoke-direct {p0, p1, p2, p3, p4}, Lcom/android/server/display/DisplayManagerService;->resizeVirtualDisplayInternal(Landroid/os/IBinder;III)V
 
     return-void
@@ -737,7 +682,6 @@
     .param p2, "x2"    # Landroid/view/Surface;
 
     .prologue
-    .line 138
     invoke-direct {p0, p1, p2}, Lcom/android/server/display/DisplayManagerService;->setVirtualDisplaySurfaceInternal(Landroid/os/IBinder;Landroid/view/Surface;)V
 
     return-void
@@ -749,7 +693,6 @@
     .param p1, "x1"    # Landroid/os/IBinder;
 
     .prologue
-    .line 138
     invoke-direct {p0, p1}, Lcom/android/server/display/DisplayManagerService;->releaseVirtualDisplayInternal(Landroid/os/IBinder;)V
 
     return-void
@@ -761,7 +704,6 @@
     .param p1, "x1"    # Ljava/io/PrintWriter;
 
     .prologue
-    .line 138
     invoke-direct {p0, p1}, Lcom/android/server/display/DisplayManagerService;->dumpInternal(Ljava/io/PrintWriter;)V
 
     return-void
@@ -773,7 +715,6 @@
     .param p1, "x1"    # I
 
     .prologue
-    .line 138
     invoke-direct {p0, p1}, Lcom/android/server/display/DisplayManagerService;->requestGlobalDisplayStateInternal(I)V
 
     return-void
@@ -784,7 +725,6 @@
     .param p0, "x0"    # Lcom/android/server/display/DisplayManagerService;
 
     .prologue
-    .line 138
     iget-object v0, p0, Lcom/android/server/display/DisplayManagerService;->mDisplayPowerController:Lcom/android/server/display/DisplayPowerController;
 
     return-object v0
@@ -796,7 +736,6 @@
     .param p1, "x1"    # Lcom/android/server/display/DisplayPowerController;
 
     .prologue
-    .line 138
     iput-object p1, p0, Lcom/android/server/display/DisplayManagerService;->mDisplayPowerController:Lcom/android/server/display/DisplayPowerController;
 
     return-object p1
@@ -807,7 +746,6 @@
     .param p0, "x0"    # Lcom/android/server/display/DisplayManagerService;
 
     .prologue
-    .line 138
     invoke-direct {p0}, Lcom/android/server/display/DisplayManagerService;->registerAdditionalDisplayAdapters()V
 
     return-void
@@ -819,7 +757,6 @@
     .param p1, "x1"    # Landroid/hardware/display/DisplayManagerInternal$DisplayTransactionListener;
 
     .prologue
-    .line 138
     invoke-direct {p0, p1}, Lcom/android/server/display/DisplayManagerService;->registerDisplayTransactionListenerInternal(Landroid/hardware/display/DisplayManagerInternal$DisplayTransactionListener;)V
 
     return-void
@@ -831,7 +768,6 @@
     .param p1, "x1"    # Landroid/hardware/display/DisplayManagerInternal$DisplayTransactionListener;
 
     .prologue
-    .line 138
     invoke-direct {p0, p1}, Lcom/android/server/display/DisplayManagerService;->unregisterDisplayTransactionListenerInternal(Landroid/hardware/display/DisplayManagerInternal$DisplayTransactionListener;)V
 
     return-void
@@ -844,7 +780,6 @@
     .param p2, "x2"    # Landroid/view/DisplayInfo;
 
     .prologue
-    .line 138
     invoke-direct {p0, p1, p2}, Lcom/android/server/display/DisplayManagerService;->setDisplayInfoOverrideFromWindowManagerInternal(ILandroid/view/DisplayInfo;)V
 
     return-void
@@ -855,7 +790,6 @@
     .param p0, "x0"    # Lcom/android/server/display/DisplayManagerService;
 
     .prologue
-    .line 138
     invoke-direct {p0}, Lcom/android/server/display/DisplayManagerService;->performTraversalInTransactionFromWindowManagerInternal()V
 
     return-void
@@ -870,7 +804,6 @@
     .param p4, "x4"    # Z
 
     .prologue
-    .line 138
     invoke-direct {p0, p1, p2, p3, p4}, Lcom/android/server/display/DisplayManagerService;->setDisplayPropertiesInternal(IZFZ)V
 
     return-void
@@ -883,7 +816,6 @@
     .param p2, "x2"    # I
 
     .prologue
-    .line 138
     invoke-direct {p0, p1, p2}, Lcom/android/server/display/DisplayManagerService;->deliverDisplayEvent(II)V
 
     return-void
@@ -894,7 +826,6 @@
     .param p0, "x0"    # Lcom/android/server/display/DisplayManagerService;
 
     .prologue
-    .line 138
     iget-object v0, p0, Lcom/android/server/display/DisplayManagerService;->mWindowManagerInternal:Landroid/view/WindowManagerInternal;
 
     return-object v0
@@ -905,7 +836,6 @@
     .param p0, "x0"    # Lcom/android/server/display/DisplayManagerService;
 
     .prologue
-    .line 138
     iget-object v0, p0, Lcom/android/server/display/DisplayManagerService;->mSyncRoot:Lcom/android/server/display/DisplayManagerService$SyncRoot;
 
     return-object v0
@@ -916,7 +846,6 @@
     .param p0, "x0"    # Lcom/android/server/display/DisplayManagerService;
 
     .prologue
-    .line 138
     iget-object v0, p0, Lcom/android/server/display/DisplayManagerService;->mDefaultViewport:Landroid/hardware/display/DisplayViewport;
 
     return-object v0
@@ -927,7 +856,6 @@
     .param p0, "x0"    # Lcom/android/server/display/DisplayManagerService;
 
     .prologue
-    .line 138
     iget-object v0, p0, Lcom/android/server/display/DisplayManagerService;->mTempDefaultViewport:Landroid/hardware/display/DisplayViewport;
 
     return-object v0
@@ -942,12 +870,10 @@
 
     const/4 v6, 0x0
 
-    .line 897
     invoke-virtual {p1}, Lcom/android/server/display/DisplayDevice;->getDisplayDeviceInfoLocked()Lcom/android/server/display/DisplayDeviceInfo;
 
     move-result-object v0
 
-    .line 898
     .local v0, "deviceInfo":Lcom/android/server/display/DisplayDeviceInfo;
     iget v7, v0, Lcom/android/server/display/DisplayDeviceInfo;->flags:I
 
@@ -957,7 +883,6 @@
 
     move v3, v5
 
-    .line 900
     .local v3, "isDefault":Z
     :goto_0
     if-eqz v3, :cond_0
@@ -970,7 +895,6 @@
 
     if-eqz v6, :cond_0
 
-    .line 901
     const-string v6, "DisplayManagerService"
 
     new-instance v7, Ljava/lang/StringBuilder;
@@ -993,10 +917,8 @@
 
     invoke-static {v6, v7}, Landroid/util/Slog;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 902
     const/4 v3, 0x0
 
-    .line 905
     :cond_0
     if-nez v3, :cond_2
 
@@ -1004,7 +926,6 @@
 
     if-eqz v6, :cond_2
 
-    .line 906
     const-string v5, "DisplayManagerService"
 
     new-instance v6, Ljava/lang/StringBuilder;
@@ -1027,7 +948,6 @@
 
     invoke-static {v5, v6}, Landroid/util/Slog;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 931
     :goto_1
     return-void
 
@@ -1035,42 +955,35 @@
     :cond_1
     move v3, v6
 
-    .line 898
     goto :goto_0
 
-    .line 911
     .restart local v3    # "isDefault":Z
     :cond_2
     invoke-direct {p0, v3}, Lcom/android/server/display/DisplayManagerService;->assignDisplayIdLocked(Z)I
 
     move-result v2
 
-    .line 912
     .local v2, "displayId":I
     invoke-direct {p0, v2}, Lcom/android/server/display/DisplayManagerService;->assignLayerStackLocked(I)I
 
     move-result v4
 
-    .line 914
     .local v4, "layerStack":I
     new-instance v1, Lcom/android/server/display/LogicalDisplay;
 
     invoke-direct {v1, v2, v4, p1}, Lcom/android/server/display/LogicalDisplay;-><init>(IILcom/android/server/display/DisplayDevice;)V
 
-    .line 915
     .local v1, "display":Lcom/android/server/display/LogicalDisplay;
     iget-object v6, p0, Lcom/android/server/display/DisplayManagerService;->mDisplayDevices:Ljava/util/ArrayList;
 
     invoke-virtual {v1, v6}, Lcom/android/server/display/LogicalDisplay;->updateLocked(Ljava/util/List;)V
 
-    .line 916
     invoke-virtual {v1}, Lcom/android/server/display/LogicalDisplay;->isValidLocked()Z
 
     move-result v6
 
     if-nez v6, :cond_3
 
-    .line 918
     const-string v5, "DisplayManagerService"
 
     new-instance v6, Ljava/lang/StringBuilder;
@@ -1095,21 +1008,17 @@
 
     goto :goto_1
 
-    .line 923
     :cond_3
     iget-object v6, p0, Lcom/android/server/display/DisplayManagerService;->mLogicalDisplays:Landroid/util/SparseArray;
 
     invoke-virtual {v6, v2, v1}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    .line 926
     if-eqz v3, :cond_4
 
-    .line 927
     iget-object v6, p0, Lcom/android/server/display/DisplayManagerService;->mSyncRoot:Lcom/android/server/display/DisplayManagerService$SyncRoot;
 
     invoke-virtual {v6}, Ljava/lang/Object;->notifyAll()V
 
-    .line 930
     :cond_4
     invoke-direct {p0, v2, v5}, Lcom/android/server/display/DisplayManagerService;->sendDisplayEventLocked(II)V
 
@@ -1121,7 +1030,6 @@
     .param p1, "isDefault"    # Z
 
     .prologue
-    .line 934
     if-eqz p1, :cond_0
 
     const/4 v0, 0x0
@@ -1144,7 +1052,6 @@
     .param p1, "displayId"    # I
 
     .prologue
-    .line 940
     return p1
 .end method
 
@@ -1154,17 +1061,14 @@
     .prologue
     const/4 v1, 0x0
 
-    .line 1013
     iget-object v0, p0, Lcom/android/server/display/DisplayManagerService;->mDefaultViewport:Landroid/hardware/display/DisplayViewport;
 
     iput-boolean v1, v0, Landroid/hardware/display/DisplayViewport;->valid:Z
 
-    .line 1014
     iget-object v0, p0, Lcom/android/server/display/DisplayManagerService;->mExternalTouchViewport:Landroid/hardware/display/DisplayViewport;
 
     iput-boolean v1, v0, Landroid/hardware/display/DisplayViewport;->valid:Z
 
-    .line 1015
     return-void
 .end method
 
@@ -1177,12 +1081,10 @@
 
     const/4 v8, 0x0
 
-    .line 1018
     invoke-virtual {p1}, Lcom/android/server/display/DisplayDevice;->getDisplayDeviceInfoLocked()Lcom/android/server/display/DisplayDeviceInfo;
 
     move-result-object v3
 
-    .line 1019
     .local v3, "info":Lcom/android/server/display/DisplayDeviceInfo;
     iget v6, v3, Lcom/android/server/display/DisplayDeviceInfo;->flags:I
 
@@ -1192,22 +1094,18 @@
 
     move v4, v7
 
-    .line 1020
     .local v4, "ownContent":Z
     :goto_0
     const/4 v2, 0x0
 
-    .line 1024
     .local v2, "displayExistsAndEmpty":Z
     invoke-direct {p0, p1}, Lcom/android/server/display/DisplayManagerService;->findLogicalDisplayForDeviceLocked(Lcom/android/server/display/DisplayDevice;)Lcom/android/server/display/LogicalDisplay;
 
     move-result-object v1
 
-    .line 1025
     .local v1, "display":Lcom/android/server/display/LogicalDisplay;
     if-nez v4, :cond_1
 
-    .line 1026
     if-eqz v1, :cond_0
 
     invoke-virtual {v1}, Lcom/android/server/display/LogicalDisplay;->hasContentLocked()Z
@@ -1216,17 +1114,13 @@
 
     if-nez v6, :cond_0
 
-    .line 1029
     const/4 v1, 0x0
 
-    .line 1030
     const/4 v2, 0x1
 
-    .line 1032
     :cond_0
     if-nez v1, :cond_1
 
-    .line 1033
     iget-object v6, p0, Lcom/android/server/display/DisplayManagerService;->mLogicalDisplays:Landroid/util/SparseArray;
 
     invoke-virtual {v6, v8}, Landroid/util/SparseArray;->get(I)Ljava/lang/Object;
@@ -1236,12 +1130,10 @@
     .end local v1    # "display":Lcom/android/server/display/LogicalDisplay;
     check-cast v1, Lcom/android/server/display/LogicalDisplay;
 
-    .line 1038
     .restart local v1    # "display":Lcom/android/server/display/LogicalDisplay;
     :cond_1
     if-nez v1, :cond_4
 
-    .line 1040
     const-string v6, "DisplayManagerService"
 
     new-instance v7, Ljava/lang/StringBuilder;
@@ -1268,7 +1160,6 @@
 
     invoke-static {v6, v7}, Landroid/util/Slog;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1076
     :cond_2
     :goto_1
     return-void
@@ -1279,10 +1170,8 @@
     :cond_3
     move v4, v8
 
-    .line 1019
     goto :goto_0
 
-    .line 1046
     .restart local v1    # "display":Lcom/android/server/display/LogicalDisplay;
     .restart local v2    # "displayExistsAndEmpty":Z
     .restart local v4    # "ownContent":Z
@@ -1307,7 +1196,6 @@
 
     if-nez v6, :cond_5
 
-    .line 1048
     iget-object v6, p0, Lcom/android/server/display/DisplayManagerService;->mLogicalDisplays:Landroid/util/SparseArray;
 
     invoke-virtual {v6, v8}, Landroid/util/SparseArray;->get(I)Ljava/lang/Object;
@@ -1320,19 +1208,16 @@
 
     move-result-object v5
 
-    .line 1049
     .local v5, "primaryDisplayInfo":Landroid/view/DisplayInfo;
     invoke-virtual {v1}, Lcom/android/server/display/LogicalDisplay;->getDisplayInfoLocked()Landroid/view/DisplayInfo;
 
     move-result-object v0
 
-    .line 1050
     .local v0, "digitalPenOffScreenInfo":Landroid/view/DisplayInfo;
     iget v6, v5, Landroid/view/DisplayInfo;->rotation:I
 
     iput v6, v0, Landroid/view/DisplayInfo;->rotation:I
 
-    .line 1053
     .end local v0    # "digitalPenOffScreenInfo":Landroid/view/DisplayInfo;
     .end local v5    # "primaryDisplayInfo":Landroid/view/DisplayInfo;
     :cond_5
@@ -1345,7 +1230,6 @@
     :cond_6
     invoke-virtual {v1, p1, v8}, Lcom/android/server/display/LogicalDisplay;->configureDisplayInTransactionLocked(Lcom/android/server/display/DisplayDevice;Z)V
 
-    .line 1056
     iget-object v6, p0, Lcom/android/server/display/DisplayManagerService;->mDefaultViewport:Landroid/hardware/display/DisplayViewport;
 
     iget-boolean v6, v6, Landroid/hardware/display/DisplayViewport;->valid:Z
@@ -1358,12 +1242,10 @@
 
     if-eqz v6, :cond_7
 
-    .line 1058
     iget-object v6, p0, Lcom/android/server/display/DisplayManagerService;->mDefaultViewport:Landroid/hardware/display/DisplayViewport;
 
     invoke-static {v6, v1, p1}, Lcom/android/server/display/DisplayManagerService;->setViewportLocked(Landroid/hardware/display/DisplayViewport;Lcom/android/server/display/LogicalDisplay;Lcom/android/server/display/DisplayDevice;)V
 
-    .line 1060
     :cond_7
     iget-object v6, p0, Lcom/android/server/display/DisplayManagerService;->mExternalTouchViewport:Landroid/hardware/display/DisplayViewport;
 
@@ -1377,7 +1259,6 @@
 
     if-ne v6, v8, :cond_2
 
-    .line 1062
     invoke-virtual {p1}, Lcom/android/server/display/DisplayDevice;->getNameLocked()Ljava/lang/String;
 
     move-result-object v6
@@ -1400,12 +1281,10 @@
 
     if-nez v6, :cond_8
 
-    .line 1070
     iget-object v6, p0, Lcom/android/server/display/DisplayManagerService;->mExternalTouchViewport:Landroid/hardware/display/DisplayViewport;
 
     iput-boolean v7, v6, Landroid/hardware/display/DisplayViewport;->valid:Z
 
-    .line 1071
     iget-object v6, p0, Lcom/android/server/display/DisplayManagerService;->mExternalTouchViewport:Landroid/hardware/display/DisplayViewport;
 
     const/4 v7, -0x1
@@ -1414,7 +1293,6 @@
 
     goto :goto_1
 
-    .line 1073
     :cond_8
     iget-object v6, p0, Lcom/android/server/display/DisplayManagerService;->mExternalTouchViewport:Landroid/hardware/display/DisplayViewport;
 
@@ -1428,30 +1306,24 @@
     .param p1, "address"    # Ljava/lang/String;
 
     .prologue
-    .line 601
     iget-object v1, p0, Lcom/android/server/display/DisplayManagerService;->mSyncRoot:Lcom/android/server/display/DisplayManagerService$SyncRoot;
 
     monitor-enter v1
 
-    .line 602
     :try_start_0
     iget-object v0, p0, Lcom/android/server/display/DisplayManagerService;->mWifiDisplayAdapter:Lcom/android/server/display/WifiDisplayAdapter;
 
     if-eqz v0, :cond_0
 
-    .line 603
     iget-object v0, p0, Lcom/android/server/display/DisplayManagerService;->mWifiDisplayAdapter:Lcom/android/server/display/WifiDisplayAdapter;
 
     invoke-virtual {v0, p1}, Lcom/android/server/display/WifiDisplayAdapter;->requestConnectLocked(Ljava/lang/String;)V
 
-    .line 605
     :cond_0
     monitor-exit v1
 
-    .line 606
     return-void
 
-    .line 605
     :catchall_0
     move-exception v0
 
@@ -1476,34 +1348,28 @@
     .param p10, "flags"    # I
 
     .prologue
-    .line 660
     iget-object v13, p0, Lcom/android/server/display/DisplayManagerService;->mSyncRoot:Lcom/android/server/display/DisplayManagerService$SyncRoot;
 
     monitor-enter v13
 
-    .line 661
     :try_start_0
     iget-object v0, p0, Lcom/android/server/display/DisplayManagerService;->mVirtualDisplayAdapter:Lcom/android/server/display/VirtualDisplayAdapter;
 
     if-nez v0, :cond_0
 
-    .line 662
     const-string v0, "DisplayManagerService"
 
     const-string v1, "Rejecting request to create private virtual display because the virtual display adapter is not available."
 
     invoke-static {v0, v1}, Landroid/util/Slog;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 664
     const/4 v0, -0x1
 
     monitor-exit v13
 
-    .line 686
     :goto_0
     return v0
 
-    .line 667
     :cond_0
     iget-object v0, p0, Lcom/android/server/display/DisplayManagerService;->mVirtualDisplayAdapter:Lcom/android/server/display/VirtualDisplayAdapter;
 
@@ -1531,18 +1397,15 @@
 
     move-result-object v11
 
-    .line 670
     .local v11, "device":Lcom/android/server/display/DisplayDevice;
     if-nez v11, :cond_1
 
-    .line 671
     const/4 v0, -0x1
 
     monitor-exit v13
 
     goto :goto_0
 
-    .line 685
     .end local v11    # "device":Lcom/android/server/display/DisplayDevice;
     :catchall_0
     move-exception v0
@@ -1553,22 +1416,18 @@
 
     throw v0
 
-    .line 674
     .restart local v11    # "device":Lcom/android/server/display/DisplayDevice;
     :cond_1
     :try_start_1
     invoke-direct {p0, v11}, Lcom/android/server/display/DisplayManagerService;->handleDisplayDeviceAddedLocked(Lcom/android/server/display/DisplayDevice;)V
 
-    .line 675
     invoke-direct {p0, v11}, Lcom/android/server/display/DisplayManagerService;->findLogicalDisplayForDeviceLocked(Lcom/android/server/display/DisplayDevice;)Lcom/android/server/display/LogicalDisplay;
 
     move-result-object v12
 
-    .line 676
     .local v12, "display":Lcom/android/server/display/LogicalDisplay;
     if-eqz v12, :cond_2
 
-    .line 677
     invoke-virtual {v12}, Lcom/android/server/display/LogicalDisplay;->getDisplayIdLocked()I
 
     move-result v0
@@ -1577,7 +1436,6 @@
 
     goto :goto_0
 
-    .line 681
     :cond_2
     const-string v0, "DisplayManagerService"
 
@@ -1585,7 +1443,6 @@
 
     invoke-static {v0, v1}, Landroid/util/Slog;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 683
     iget-object v0, p0, Lcom/android/server/display/DisplayManagerService;->mVirtualDisplayAdapter:Lcom/android/server/display/VirtualDisplayAdapter;
 
     invoke-interface {p1}, Landroid/hardware/display/IVirtualDisplayCallback;->asBinder()Landroid/os/IBinder;
@@ -1594,15 +1451,12 @@
 
     invoke-virtual {v0, v1}, Lcom/android/server/display/VirtualDisplayAdapter;->releaseVirtualDisplayLocked(Landroid/os/IBinder;)Lcom/android/server/display/DisplayDevice;
 
-    .line 684
     invoke-direct {p0, v11}, Lcom/android/server/display/DisplayManagerService;->handleDisplayDeviceRemovedLocked(Lcom/android/server/display/DisplayDevice;)V
 
-    .line 685
     monitor-exit v13
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
-    .line 686
     const/4 v0, -0x1
 
     goto :goto_0
@@ -1614,12 +1468,10 @@
     .param p2, "event"    # I
 
     .prologue
-    .line 1122
     iget-object v3, p0, Lcom/android/server/display/DisplayManagerService;->mSyncRoot:Lcom/android/server/display/DisplayManagerService$SyncRoot;
 
     monitor-enter v3
 
-    .line 1123
     :try_start_0
     iget-object v2, p0, Lcom/android/server/display/DisplayManagerService;->mCallbacks:Landroid/util/SparseArray;
 
@@ -1627,20 +1479,17 @@
 
     move-result v0
 
-    .line 1124
     .local v0, "count":I
     iget-object v2, p0, Lcom/android/server/display/DisplayManagerService;->mTempCallbacks:Ljava/util/ArrayList;
 
     invoke-virtual {v2}, Ljava/util/ArrayList;->clear()V
 
-    .line 1125
     const/4 v1, 0x0
 
     .local v1, "i":I
     :goto_0
     if-ge v1, v0, :cond_0
 
-    .line 1126
     iget-object v2, p0, Lcom/android/server/display/DisplayManagerService;->mTempCallbacks:Ljava/util/ArrayList;
 
     iget-object v4, p0, Lcom/android/server/display/DisplayManagerService;->mCallbacks:Landroid/util/SparseArray;
@@ -1651,24 +1500,20 @@
 
     invoke-virtual {v2, v4}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 1125
     add-int/lit8 v1, v1, 0x1
 
     goto :goto_0
 
-    .line 1128
     :cond_0
     monitor-exit v3
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 1131
     const/4 v1, 0x0
 
     :goto_1
     if-ge v1, v0, :cond_1
 
-    .line 1132
     iget-object v2, p0, Lcom/android/server/display/DisplayManagerService;->mTempCallbacks:Ljava/util/ArrayList;
 
     invoke-virtual {v2, v1}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
@@ -1679,12 +1524,10 @@
 
     invoke-virtual {v2, p1, p2}, Lcom/android/server/display/DisplayManagerService$CallbackRecord;->notifyDisplayEventAsync(II)V
 
-    .line 1131
     add-int/lit8 v1, v1, 0x1
 
     goto :goto_1
 
-    .line 1128
     .end local v0    # "count":I
     .end local v1    # "i":I
     :catchall_0
@@ -1697,7 +1540,6 @@
 
     throw v2
 
-    .line 1134
     .restart local v0    # "count":I
     .restart local v1    # "i":I
     :cond_1
@@ -1705,7 +1547,6 @@
 
     invoke-virtual {v2}, Ljava/util/ArrayList;->clear()V
 
-    .line 1135
     return-void
 .end method
 
@@ -1713,30 +1554,24 @@
     .locals 2
 
     .prologue
-    .line 625
     iget-object v1, p0, Lcom/android/server/display/DisplayManagerService;->mSyncRoot:Lcom/android/server/display/DisplayManagerService$SyncRoot;
 
     monitor-enter v1
 
-    .line 626
     :try_start_0
     iget-object v0, p0, Lcom/android/server/display/DisplayManagerService;->mWifiDisplayAdapter:Lcom/android/server/display/WifiDisplayAdapter;
 
     if-eqz v0, :cond_0
 
-    .line 627
     iget-object v0, p0, Lcom/android/server/display/DisplayManagerService;->mWifiDisplayAdapter:Lcom/android/server/display/WifiDisplayAdapter;
 
     invoke-virtual {v0}, Lcom/android/server/display/WifiDisplayAdapter;->requestDisconnectLocked()V
 
-    .line 629
     :cond_0
     monitor-exit v1
 
-    .line 630
     return-void
 
-    .line 629
     :catchall_0
     move-exception v0
 
@@ -1752,17 +1587,14 @@
     .param p1, "pw"    # Ljava/io/PrintWriter;
 
     .prologue
-    .line 1146
     const-string v10, "DISPLAY MANAGER (dumpsys display)"
 
     invoke-virtual {p1, v10}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
-    .line 1148
     iget-object v11, p0, Lcom/android/server/display/DisplayManagerService;->mSyncRoot:Lcom/android/server/display/DisplayManagerService$SyncRoot;
 
     monitor-enter v11
 
-    .line 1149
     :try_start_0
     new-instance v10, Ljava/lang/StringBuilder;
 
@@ -1786,7 +1618,6 @@
 
     invoke-virtual {p1, v10}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
-    .line 1150
     new-instance v10, Ljava/lang/StringBuilder;
 
     invoke-direct {v10}, Ljava/lang/StringBuilder;-><init>()V
@@ -1809,7 +1640,6 @@
 
     invoke-virtual {p1, v10}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
-    .line 1151
     new-instance v10, Ljava/lang/StringBuilder;
 
     invoke-direct {v10}, Ljava/lang/StringBuilder;-><init>()V
@@ -1832,7 +1662,6 @@
 
     invoke-virtual {p1, v10}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
-    .line 1152
     new-instance v10, Ljava/lang/StringBuilder;
 
     invoke-direct {v10}, Ljava/lang/StringBuilder;-><init>()V
@@ -1859,7 +1688,6 @@
 
     invoke-virtual {p1, v10}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
-    .line 1153
     new-instance v10, Ljava/lang/StringBuilder;
 
     invoke-direct {v10}, Ljava/lang/StringBuilder;-><init>()V
@@ -1882,7 +1710,6 @@
 
     invoke-virtual {p1, v10}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
-    .line 1154
     new-instance v10, Ljava/lang/StringBuilder;
 
     invoke-direct {v10}, Ljava/lang/StringBuilder;-><init>()V
@@ -1905,7 +1732,6 @@
 
     invoke-virtual {p1, v10}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
-    .line 1155
     new-instance v10, Ljava/lang/StringBuilder;
 
     invoke-direct {v10}, Ljava/lang/StringBuilder;-><init>()V
@@ -1928,7 +1754,6 @@
 
     invoke-virtual {p1, v10}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
-    .line 1156
     new-instance v10, Ljava/lang/StringBuilder;
 
     invoke-direct {v10}, Ljava/lang/StringBuilder;-><init>()V
@@ -1951,7 +1776,6 @@
 
     invoke-virtual {p1, v10}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
-    .line 1157
     new-instance v10, Ljava/lang/StringBuilder;
 
     invoke-direct {v10}, Ljava/lang/StringBuilder;-><init>()V
@@ -1974,21 +1798,17 @@
 
     invoke-virtual {p1, v10}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
-    .line 1159
     new-instance v8, Lcom/android/internal/util/IndentingPrintWriter;
 
     const-string v10, "    "
 
     invoke-direct {v8, p1, v10}, Lcom/android/internal/util/IndentingPrintWriter;-><init>(Ljava/io/Writer;Ljava/lang/String;)V
 
-    .line 1160
     .local v8, "ipw":Lcom/android/internal/util/IndentingPrintWriter;
     invoke-virtual {v8}, Lcom/android/internal/util/IndentingPrintWriter;->increaseIndent()V
 
-    .line 1162
     invoke-virtual {p1}, Ljava/io/PrintWriter;->println()V
 
-    .line 1163
     new-instance v10, Ljava/lang/StringBuilder;
 
     invoke-direct {v10}, Ljava/lang/StringBuilder;-><init>()V
@@ -2015,7 +1835,6 @@
 
     invoke-virtual {p1, v10}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
-    .line 1164
     iget-object v10, p0, Lcom/android/server/display/DisplayManagerService;->mDisplayAdapters:Ljava/util/ArrayList;
 
     invoke-virtual {v10}, Ljava/util/ArrayList;->iterator()Ljava/util/Iterator;
@@ -2036,7 +1855,6 @@
 
     check-cast v0, Lcom/android/server/display/DisplayAdapter;
 
-    .line 1165
     .local v0, "adapter":Lcom/android/server/display/DisplayAdapter;
     new-instance v10, Ljava/lang/StringBuilder;
 
@@ -2062,12 +1880,10 @@
 
     invoke-virtual {p1, v10}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
-    .line 1166
     invoke-virtual {v0, v8}, Lcom/android/server/display/DisplayAdapter;->dumpLocked(Ljava/io/PrintWriter;)V
 
     goto :goto_0
 
-    .line 1198
     .end local v0    # "adapter":Lcom/android/server/display/DisplayAdapter;
     .end local v7    # "i$":Ljava/util/Iterator;
     .end local v8    # "ipw":Lcom/android/internal/util/IndentingPrintWriter;
@@ -2080,14 +1896,12 @@
 
     throw v10
 
-    .line 1169
     .restart local v7    # "i$":Ljava/util/Iterator;
     .restart local v8    # "ipw":Lcom/android/internal/util/IndentingPrintWriter;
     :cond_0
     :try_start_1
     invoke-virtual {p1}, Ljava/io/PrintWriter;->println()V
 
-    .line 1170
     new-instance v10, Ljava/lang/StringBuilder;
 
     invoke-direct {v10}, Ljava/lang/StringBuilder;-><init>()V
@@ -2114,7 +1928,6 @@
 
     invoke-virtual {p1, v10}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
-    .line 1171
     iget-object v10, p0, Lcom/android/server/display/DisplayManagerService;->mDisplayDevices:Ljava/util/ArrayList;
 
     invoke-virtual {v10}, Ljava/util/ArrayList;->iterator()Ljava/util/Iterator;
@@ -2134,7 +1947,6 @@
 
     check-cast v3, Lcom/android/server/display/DisplayDevice;
 
-    .line 1172
     .local v3, "device":Lcom/android/server/display/DisplayDevice;
     new-instance v10, Ljava/lang/StringBuilder;
 
@@ -2160,12 +1972,10 @@
 
     invoke-virtual {p1, v10}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
-    .line 1173
     invoke-virtual {v3, v8}, Lcom/android/server/display/DisplayDevice;->dumpLocked(Ljava/io/PrintWriter;)V
 
     goto :goto_1
 
-    .line 1176
     .end local v3    # "device":Lcom/android/server/display/DisplayDevice;
     :cond_1
     iget-object v10, p0, Lcom/android/server/display/DisplayManagerService;->mLogicalDisplays:Landroid/util/SparseArray;
@@ -2174,11 +1984,9 @@
 
     move-result v9
 
-    .line 1177
     .local v9, "logicalDisplayCount":I
     invoke-virtual {p1}, Ljava/io/PrintWriter;->println()V
 
-    .line 1178
     new-instance v10, Ljava/lang/StringBuilder;
 
     invoke-direct {v10}, Ljava/lang/StringBuilder;-><init>()V
@@ -2199,21 +2007,18 @@
 
     invoke-virtual {p1, v10}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
-    .line 1179
     const/4 v6, 0x0
 
     .local v6, "i":I
     :goto_2
     if-ge v6, v9, :cond_2
 
-    .line 1180
     iget-object v10, p0, Lcom/android/server/display/DisplayManagerService;->mLogicalDisplays:Landroid/util/SparseArray;
 
     invoke-virtual {v10, v6}, Landroid/util/SparseArray;->keyAt(I)I
 
     move-result v5
 
-    .line 1181
     .local v5, "displayId":I
     iget-object v10, p0, Lcom/android/server/display/DisplayManagerService;->mLogicalDisplays:Landroid/util/SparseArray;
 
@@ -2223,7 +2028,6 @@
 
     check-cast v4, Lcom/android/server/display/LogicalDisplay;
 
-    .line 1182
     .local v4, "display":Lcom/android/server/display/LogicalDisplay;
     new-instance v10, Ljava/lang/StringBuilder;
 
@@ -2251,15 +2055,12 @@
 
     invoke-virtual {p1, v10}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
-    .line 1183
     invoke-virtual {v4, v8}, Lcom/android/server/display/LogicalDisplay;->dumpLocked(Ljava/io/PrintWriter;)V
 
-    .line 1179
     add-int/lit8 v6, v6, 0x1
 
     goto :goto_2
 
-    .line 1186
     .end local v4    # "display":Lcom/android/server/display/LogicalDisplay;
     .end local v5    # "displayId":I
     :cond_2
@@ -2269,11 +2070,9 @@
 
     move-result v2
 
-    .line 1187
     .local v2, "callbackCount":I
     invoke-virtual {p1}, Ljava/io/PrintWriter;->println()V
 
-    .line 1188
     new-instance v10, Ljava/lang/StringBuilder;
 
     invoke-direct {v10}, Ljava/lang/StringBuilder;-><init>()V
@@ -2294,13 +2093,11 @@
 
     invoke-virtual {p1, v10}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
-    .line 1189
     const/4 v6, 0x0
 
     :goto_3
     if-ge v6, v2, :cond_3
 
-    .line 1190
     iget-object v10, p0, Lcom/android/server/display/DisplayManagerService;->mCallbacks:Landroid/util/SparseArray;
 
     invoke-virtual {v10, v6}, Landroid/util/SparseArray;->valueAt(I)Ljava/lang/Object;
@@ -2309,7 +2106,6 @@
 
     check-cast v1, Lcom/android/server/display/DisplayManagerService$CallbackRecord;
 
-    .line 1191
     .local v1, "callback":Lcom/android/server/display/DisplayManagerService$CallbackRecord;
     new-instance v10, Ljava/lang/StringBuilder;
 
@@ -2355,30 +2151,25 @@
 
     invoke-virtual {p1, v10}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
-    .line 1189
     add-int/lit8 v6, v6, 0x1
 
     goto :goto_3
 
-    .line 1195
     .end local v1    # "callback":Lcom/android/server/display/DisplayManagerService$CallbackRecord;
     :cond_3
     iget-object v10, p0, Lcom/android/server/display/DisplayManagerService;->mDisplayPowerController:Lcom/android/server/display/DisplayPowerController;
 
     if-eqz v10, :cond_4
 
-    .line 1196
     iget-object v10, p0, Lcom/android/server/display/DisplayManagerService;->mDisplayPowerController:Lcom/android/server/display/DisplayPowerController;
 
     invoke-virtual {v10, p1}, Lcom/android/server/display/DisplayPowerController;->dump(Ljava/io/PrintWriter;)V
 
-    .line 1198
     :cond_4
     monitor-exit v11
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
-    .line 1199
     return-void
 .end method
 
@@ -2387,14 +2178,12 @@
     .param p1, "device"    # Lcom/android/server/display/DisplayDevice;
 
     .prologue
-    .line 1086
     iget-object v3, p0, Lcom/android/server/display/DisplayManagerService;->mLogicalDisplays:Landroid/util/SparseArray;
 
     invoke-virtual {v3}, Landroid/util/SparseArray;->size()I
 
     move-result v0
 
-    .line 1087
     .local v0, "count":I
     const/4 v2, 0x0
 
@@ -2402,7 +2191,6 @@
     :goto_0
     if-ge v2, v0, :cond_1
 
-    .line 1088
     iget-object v3, p0, Lcom/android/server/display/DisplayManagerService;->mLogicalDisplays:Landroid/util/SparseArray;
 
     invoke-virtual {v3, v2}, Landroid/util/SparseArray;->valueAt(I)Ljava/lang/Object;
@@ -2411,7 +2199,6 @@
 
     check-cast v1, Lcom/android/server/display/LogicalDisplay;
 
-    .line 1089
     .local v1, "display":Lcom/android/server/display/LogicalDisplay;
     invoke-virtual {v1}, Lcom/android/server/display/LogicalDisplay;->getPrimaryDisplayDeviceLocked()Lcom/android/server/display/DisplayDevice;
 
@@ -2419,19 +2206,16 @@
 
     if-ne v3, p1, :cond_0
 
-    .line 1093
     .end local v1    # "display":Lcom/android/server/display/LogicalDisplay;
     :goto_1
     return-object v1
 
-    .line 1087
     .restart local v1    # "display":Lcom/android/server/display/LogicalDisplay;
     :cond_0
     add-int/lit8 v2, v2, 0x1
 
     goto :goto_0
 
-    .line 1093
     .end local v1    # "display":Lcom/android/server/display/LogicalDisplay;
     :cond_1
     const/4 v1, 0x0
@@ -2444,30 +2228,24 @@
     .param p1, "address"    # Ljava/lang/String;
 
     .prologue
-    .line 641
     iget-object v1, p0, Lcom/android/server/display/DisplayManagerService;->mSyncRoot:Lcom/android/server/display/DisplayManagerService$SyncRoot;
 
     monitor-enter v1
 
-    .line 642
     :try_start_0
     iget-object v0, p0, Lcom/android/server/display/DisplayManagerService;->mWifiDisplayAdapter:Lcom/android/server/display/WifiDisplayAdapter;
 
     if-eqz v0, :cond_0
 
-    .line 643
     iget-object v0, p0, Lcom/android/server/display/DisplayManagerService;->mWifiDisplayAdapter:Lcom/android/server/display/WifiDisplayAdapter;
 
     invoke-virtual {v0, p1}, Lcom/android/server/display/WifiDisplayAdapter;->requestForgetLocked(Ljava/lang/String;)V
 
-    .line 645
     :cond_0
     monitor-exit v1
 
-    .line 646
     return-void
 
-    .line 645
     :catchall_0
     move-exception v0
 
@@ -2483,12 +2261,10 @@
     .param p1, "callingUid"    # I
 
     .prologue
-    .line 507
     iget-object v8, p0, Lcom/android/server/display/DisplayManagerService;->mSyncRoot:Lcom/android/server/display/DisplayManagerService$SyncRoot;
 
     monitor-enter v8
 
-    .line 508
     :try_start_0
     iget-object v7, p0, Lcom/android/server/display/DisplayManagerService;->mLogicalDisplays:Landroid/util/SparseArray;
 
@@ -2496,15 +2272,12 @@
 
     move-result v0
 
-    .line 509
     .local v0, "count":I
     new-array v2, v0, [I
 
-    .line 510
     .local v2, "displayIds":[I
     const/4 v5, 0x0
 
-    .line 511
     .local v5, "n":I
     const/4 v3, 0x0
 
@@ -2516,7 +2289,6 @@
     :goto_0
     if-ge v3, v0, :cond_0
 
-    .line 512
     iget-object v7, p0, Lcom/android/server/display/DisplayManagerService;->mLogicalDisplays:Landroid/util/SparseArray;
 
     invoke-virtual {v7, v3}, Landroid/util/SparseArray;->valueAt(I)Ljava/lang/Object;
@@ -2525,13 +2297,11 @@
 
     check-cast v1, Lcom/android/server/display/LogicalDisplay;
 
-    .line 513
     .local v1, "display":Lcom/android/server/display/LogicalDisplay;
     invoke-virtual {v1}, Lcom/android/server/display/LogicalDisplay;->getDisplayInfoLocked()Landroid/view/DisplayInfo;
 
     move-result-object v4
 
-    .line 514
     .local v4, "info":Landroid/view/DisplayInfo;
     invoke-virtual {v4, p1}, Landroid/view/DisplayInfo;->hasAccess(I)Z
 
@@ -2539,7 +2309,6 @@
 
     if-eqz v7, :cond_2
 
-    .line 515
     add-int/lit8 v5, v6, 0x1
 
     .end local v6    # "n":I
@@ -2552,7 +2321,6 @@
 
     aput v7, v2, v6
 
-    .line 511
     :goto_1
     add-int/lit8 v3, v3, 0x1
 
@@ -2562,26 +2330,22 @@
     .restart local v6    # "n":I
     goto :goto_0
 
-    .line 518
     .end local v1    # "display":Lcom/android/server/display/LogicalDisplay;
     .end local v4    # "info":Landroid/view/DisplayInfo;
     :cond_0
     if-eq v6, v0, :cond_1
 
-    .line 519
     const/4 v7, 0x0
 
     invoke-static {v2, v7, v6}, Ljava/util/Arrays;->copyOfRange([III)[I
 
     move-result-object v2
 
-    .line 521
     :cond_1
     monitor-exit v8
 
     return-object v2
 
-    .line 522
     .end local v0    # "count":I
     .end local v2    # "displayIds":[I
     .end local v3    # "i":I
@@ -2617,12 +2381,10 @@
     .param p4, "appToken"    # Landroid/os/IBinder;
 
     .prologue
-    .line 432
     iget-object v7, p0, Lcom/android/server/display/DisplayManagerService;->mSyncRoot:Lcom/android/server/display/DisplayManagerService$SyncRoot;
 
     monitor-enter v7
 
-    .line 433
     :try_start_0
     iget-object v6, p0, Lcom/android/server/display/DisplayManagerService;->mLogicalDisplays:Landroid/util/SparseArray;
 
@@ -2632,16 +2394,13 @@
 
     check-cast v0, Lcom/android/server/display/LogicalDisplay;
 
-    .line 434
     .local v0, "display":Lcom/android/server/display/LogicalDisplay;
     if-eqz v0, :cond_1
 
-    .line 435
     invoke-virtual {v0}, Lcom/android/server/display/LogicalDisplay;->getDisplayInfoLocked()Landroid/view/DisplayInfo;
 
     move-result-object v2
 
-    .line 473
     .local v2, "info":Landroid/view/DisplayInfo;
     invoke-virtual {v2, p2}, Landroid/view/DisplayInfo;->hasAccess(I)Z
 
@@ -2649,7 +2408,6 @@
 
     if-eqz v6, :cond_1
 
-    .line 476
     iget-object v6, p0, Lcom/android/server/display/DisplayManagerService;->mScaledPids:Ljava/util/HashMap;
 
     invoke-static {p3}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
@@ -2662,12 +2420,10 @@
 
     if-eqz v6, :cond_0
 
-    .line 477
     invoke-static {}, Landroid/os/DssHelper;->getInstance()Landroid/os/DssHelper;
 
     move-result-object v3
 
-    .line 478
     .local v3, "mDssHelper":Landroid/os/DssHelper;
     iget-object v6, p0, Lcom/android/server/display/DisplayManagerService;->mScaledPids:Ljava/util/HashMap;
 
@@ -2689,19 +2445,16 @@
 
     move-result-object v5
 
-    .line 479
     .local v5, "scalfac":Ljava/lang/Double;
     invoke-virtual {v5}, Ljava/lang/Double;->floatValue()F
 
     move-result v4
 
-    .line 480
     .local v4, "resolutionFactorf":F
     new-instance v1, Landroid/view/DisplayInfo;
 
     invoke-direct {v1, v2}, Landroid/view/DisplayInfo;-><init>(Landroid/view/DisplayInfo;)V
 
-    .line 481
     .local v1, "fakeInfo":Landroid/view/DisplayInfo;
     iget v6, v1, Landroid/view/DisplayInfo;->logicalDensityDpi:I
 
@@ -2713,21 +2466,18 @@
 
     iput v6, v1, Landroid/view/DisplayInfo;->logicalDensityDpi:I
 
-    .line 482
     iget v6, v1, Landroid/view/DisplayInfo;->physicalXDpi:F
 
     mul-float/2addr v6, v4
 
     iput v6, v1, Landroid/view/DisplayInfo;->physicalXDpi:F
 
-    .line 483
     iget v6, v1, Landroid/view/DisplayInfo;->physicalYDpi:F
 
     mul-float/2addr v6, v4
 
     iput v6, v1, Landroid/view/DisplayInfo;->physicalYDpi:F
 
-    .line 484
     iget v6, v1, Landroid/view/DisplayInfo;->logicalHeight:I
 
     int-to-float v6, v6
@@ -2738,7 +2488,6 @@
 
     iput v6, v1, Landroid/view/DisplayInfo;->logicalHeight:I
 
-    .line 485
     iget v6, v1, Landroid/view/DisplayInfo;->logicalWidth:I
 
     int-to-float v6, v6
@@ -2749,7 +2498,6 @@
 
     iput v6, v1, Landroid/view/DisplayInfo;->logicalWidth:I
 
-    .line 486
     iget v6, v1, Landroid/view/DisplayInfo;->appHeight:I
 
     int-to-float v6, v6
@@ -2760,7 +2508,6 @@
 
     iput v6, v1, Landroid/view/DisplayInfo;->appHeight:I
 
-    .line 487
     iget v6, v1, Landroid/view/DisplayInfo;->appWidth:I
 
     int-to-float v6, v6
@@ -2771,10 +2518,8 @@
 
     iput v6, v1, Landroid/view/DisplayInfo;->appWidth:I
 
-    .line 496
     monitor-exit v7
 
-    .line 502
     .end local v1    # "fakeInfo":Landroid/view/DisplayInfo;
     .end local v2    # "info":Landroid/view/DisplayInfo;
     .end local v3    # "mDssHelper":Landroid/os/DssHelper;
@@ -2783,7 +2528,6 @@
     :goto_0
     return-object v1
 
-    .line 499
     .restart local v2    # "info":Landroid/view/DisplayInfo;
     :cond_0
     monitor-exit v7
@@ -2792,7 +2536,6 @@
 
     goto :goto_0
 
-    .line 502
     .end local v2    # "info":Landroid/view/DisplayInfo;
     :cond_1
     const/4 v1, 0x0
@@ -2801,7 +2544,6 @@
 
     goto :goto_0
 
-    .line 503
     .end local v0    # "display":Lcom/android/server/display/LogicalDisplay;
     :catchall_0
     move-exception v6
@@ -2817,19 +2559,16 @@
     .locals 2
 
     .prologue
-    .line 1138
     iget-object v1, p0, Lcom/android/server/display/DisplayManagerService;->mProjectionService:Landroid/media/projection/IMediaProjectionManager;
 
     if-nez v1, :cond_0
 
-    .line 1139
     const-string v1, "media_projection"
 
     invoke-static {v1}, Landroid/os/ServiceManager;->getService(Ljava/lang/String;)Landroid/os/IBinder;
 
     move-result-object v0
 
-    .line 1140
     .local v0, "b":Landroid/os/IBinder;
     invoke-static {v0}, Landroid/media/projection/IMediaProjectionManager$Stub;->asInterface(Landroid/os/IBinder;)Landroid/media/projection/IMediaProjectionManager;
 
@@ -2837,7 +2576,6 @@
 
     iput-object v1, p0, Lcom/android/server/display/DisplayManagerService;->mProjectionService:Landroid/media/projection/IMediaProjectionManager;
 
-    .line 1142
     .end local v0    # "b":Landroid/os/IBinder;
     :cond_0
     iget-object v1, p0, Lcom/android/server/display/DisplayManagerService;->mProjectionService:Landroid/media/projection/IMediaProjectionManager;
@@ -2849,18 +2587,15 @@
     .locals 2
 
     .prologue
-    .line 649
     iget-object v1, p0, Lcom/android/server/display/DisplayManagerService;->mSyncRoot:Lcom/android/server/display/DisplayManagerService$SyncRoot;
 
     monitor-enter v1
 
-    .line 650
     :try_start_0
     iget-object v0, p0, Lcom/android/server/display/DisplayManagerService;->mWifiDisplayAdapter:Lcom/android/server/display/WifiDisplayAdapter;
 
     if-eqz v0, :cond_0
 
-    .line 651
     iget-object v0, p0, Lcom/android/server/display/DisplayManagerService;->mWifiDisplayAdapter:Lcom/android/server/display/WifiDisplayAdapter;
 
     invoke-virtual {v0}, Lcom/android/server/display/WifiDisplayAdapter;->getWifiDisplayStatusLocked()Landroid/hardware/display/WifiDisplayStatus;
@@ -2869,7 +2604,6 @@
 
     monitor-exit v1
 
-    .line 653
     :goto_0
     return-object v0
 
@@ -2882,7 +2616,6 @@
 
     goto :goto_0
 
-    .line 654
     :catchall_0
     move-exception v0
 
@@ -2898,22 +2631,17 @@
     .param p1, "device"    # Lcom/android/server/display/DisplayDevice;
 
     .prologue
-    .line 800
     iget-object v1, p0, Lcom/android/server/display/DisplayManagerService;->mSyncRoot:Lcom/android/server/display/DisplayManagerService$SyncRoot;
 
     monitor-enter v1
 
-    .line 801
     :try_start_0
     invoke-direct {p0, p1}, Lcom/android/server/display/DisplayManagerService;->handleDisplayDeviceAddedLocked(Lcom/android/server/display/DisplayDevice;)V
 
-    .line 802
     monitor-exit v1
 
-    .line 803
     return-void
 
-    .line 802
     :catchall_0
     move-exception v0
 
@@ -2929,7 +2657,6 @@
     .param p1, "device"    # Lcom/android/server/display/DisplayDevice;
 
     .prologue
-    .line 806
     iget-object v1, p0, Lcom/android/server/display/DisplayManagerService;->mDisplayDevices:Ljava/util/ArrayList;
 
     invoke-virtual {v1, p1}, Ljava/util/ArrayList;->contains(Ljava/lang/Object;)Z
@@ -2938,7 +2665,6 @@
 
     if-eqz v1, :cond_0
 
-    .line 807
     const-string v1, "DisplayManagerService"
 
     new-instance v2, Ljava/lang/StringBuilder;
@@ -2965,11 +2691,9 @@
 
     invoke-static {v1, v2}, Landroid/util/Slog;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 821
     :goto_0
     return-void
 
-    .line 812
     :cond_0
     const-string v1, "DisplayManagerService"
 
@@ -2997,27 +2721,21 @@
 
     invoke-static {v1, v2}, Landroid/util/Slog;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 814
     iget-object v1, p0, Lcom/android/server/display/DisplayManagerService;->mDisplayDevices:Ljava/util/ArrayList;
 
     invoke-virtual {v1, p1}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 815
     invoke-direct {p0, p1}, Lcom/android/server/display/DisplayManagerService;->addLogicalDisplayLocked(Lcom/android/server/display/DisplayDevice;)V
 
-    .line 816
     invoke-direct {p0, p1}, Lcom/android/server/display/DisplayManagerService;->updateDisplayStateLocked(Lcom/android/server/display/DisplayDevice;)Ljava/lang/Runnable;
 
     move-result-object v0
 
-    .line 817
     .local v0, "work":Ljava/lang/Runnable;
     if-eqz v0, :cond_1
 
-    .line 818
     invoke-interface {v0}, Ljava/lang/Runnable;->run()V
 
-    .line 820
     :cond_1
     const/4 v1, 0x0
 
@@ -3031,12 +2749,10 @@
     .param p1, "device"    # Lcom/android/server/display/DisplayDevice;
 
     .prologue
-    .line 824
     iget-object v1, p0, Lcom/android/server/display/DisplayManagerService;->mSyncRoot:Lcom/android/server/display/DisplayManagerService$SyncRoot;
 
     monitor-enter v1
 
-    .line 825
     :try_start_0
     iget-object v0, p0, Lcom/android/server/display/DisplayManagerService;->mDisplayDevices:Ljava/util/ArrayList;
 
@@ -3046,7 +2762,6 @@
 
     if-nez v0, :cond_0
 
-    .line 826
     const-string v0, "DisplayManagerService"
 
     new-instance v2, Ljava/lang/StringBuilder;
@@ -3073,14 +2788,11 @@
 
     invoke-static {v0, v2}, Landroid/util/Slog;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 828
     monitor-exit v1
 
-    .line 838
     :goto_0
     return-void
 
-    .line 831
     :cond_0
     const-string v0, "DisplayManagerService"
 
@@ -3108,22 +2820,18 @@
 
     invoke-static {v0, v2}, Landroid/util/Slog;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 833
     invoke-virtual {p1}, Lcom/android/server/display/DisplayDevice;->applyPendingDisplayDeviceInfoChangesLocked()V
 
-    .line 834
     invoke-direct {p0}, Lcom/android/server/display/DisplayManagerService;->updateLogicalDisplaysLocked()Z
 
     move-result v0
 
     if-eqz v0, :cond_1
 
-    .line 835
     const/4 v0, 0x0
 
     invoke-direct {p0, v0}, Lcom/android/server/display/DisplayManagerService;->scheduleTraversalLocked(Z)V
 
-    .line 837
     :cond_1
     monitor-exit v1
 
@@ -3144,22 +2852,17 @@
     .param p1, "device"    # Lcom/android/server/display/DisplayDevice;
 
     .prologue
-    .line 841
     iget-object v1, p0, Lcom/android/server/display/DisplayManagerService;->mSyncRoot:Lcom/android/server/display/DisplayManagerService$SyncRoot;
 
     monitor-enter v1
 
-    .line 842
     :try_start_0
     invoke-direct {p0, p1}, Lcom/android/server/display/DisplayManagerService;->handleDisplayDeviceRemovedLocked(Lcom/android/server/display/DisplayDevice;)V
 
-    .line 843
     monitor-exit v1
 
-    .line 844
     return-void
 
-    .line 843
     :catchall_0
     move-exception v0
 
@@ -3175,7 +2878,6 @@
     .param p1, "device"    # Lcom/android/server/display/DisplayDevice;
 
     .prologue
-    .line 846
     iget-object v1, p0, Lcom/android/server/display/DisplayManagerService;->mDisplayDevices:Ljava/util/ArrayList;
 
     invoke-virtual {v1, p1}, Ljava/util/ArrayList;->remove(Ljava/lang/Object;)Z
@@ -3184,7 +2886,6 @@
 
     if-nez v1, :cond_0
 
-    .line 847
     const-string v1, "DisplayManagerService"
 
     new-instance v2, Ljava/lang/StringBuilder;
@@ -3211,19 +2912,16 @@
 
     invoke-static {v1, v2}, Landroid/util/Slog;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 871
     :goto_0
     return-void
 
-    .line 854
     :cond_0
-    const-string/jumbo v1, "ro.product.board"
+    const-string v1, "ro.product.board"
 
     invoke-static {v1}, Landroid/os/SystemProperties;->get(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 
-    .line 855
     .local v0, "chipname":Ljava/lang/String;
     const-string v1, "DisplayManagerService"
 
@@ -3247,7 +2945,6 @@
 
     invoke-static {v1, v2}, Landroid/util/Slog;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 857
     const-string v1, ".*smdk4x12.*"
 
     invoke-virtual {v0, v1}, Ljava/lang/String;->matches(Ljava/lang/String;)Z
@@ -3266,24 +2963,20 @@
 
     if-ne v1, v2, :cond_1
 
-    .line 859
     const-string v1, "DisplayManagerService"
 
-    const-string/jumbo v2, "remove saved sidesync information"
+    const-string v2, "remove saved sidesync information"
 
     invoke-static {v1, v2}, Landroid/util/Slog;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 861
     const-wide/16 v2, 0x514
 
     invoke-static {v2, v3}, Landroid/os/SystemClock;->sleep(J)V
 
-    .line 862
     const/4 v1, 0x0
 
     iput-object v1, p0, Lcom/android/server/display/DisplayManagerService;->wifiDevice:Lcom/android/server/display/DisplayDevice;
 
-    .line 867
     :cond_1
     const-string v1, "DisplayManagerService"
 
@@ -3311,10 +3004,8 @@
 
     invoke-static {v1, v2}, Landroid/util/Slog;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 869
     invoke-direct {p0}, Lcom/android/server/display/DisplayManagerService;->updateLogicalDisplaysLocked()Z
 
-    .line 870
     const/4 v1, 0x0
 
     invoke-direct {p0, v1}, Lcom/android/server/display/DisplayManagerService;->scheduleTraversalLocked(Z)V
@@ -3326,19 +3017,16 @@
     .locals 1
 
     .prologue
-    .line 1203
     iget-object v0, p0, Lcom/android/server/display/DisplayManagerService;->mWifiDisplayAdapter:Lcom/android/server/display/WifiDisplayAdapter;
 
     if-eqz v0, :cond_0
 
-    .line 1204
     iget-object v0, p0, Lcom/android/server/display/DisplayManagerService;->mWifiDisplayAdapter:Lcom/android/server/display/WifiDisplayAdapter;
 
     invoke-virtual {v0}, Lcom/android/server/display/WifiDisplayAdapter;->isWfdEngineRunning()Z
 
     move-result v0
 
-    .line 1206
     :goto_0
     return v0
 
@@ -3353,12 +3041,10 @@
     .param p1, "record"    # Lcom/android/server/display/DisplayManagerService$CallbackRecord;
 
     .prologue
-    .line 546
     iget-object v1, p0, Lcom/android/server/display/DisplayManagerService;->mSyncRoot:Lcom/android/server/display/DisplayManagerService$SyncRoot;
 
     monitor-enter v1
 
-    .line 547
     :try_start_0
     iget-object v0, p0, Lcom/android/server/display/DisplayManagerService;->mCallbacks:Landroid/util/SparseArray;
 
@@ -3366,16 +3052,12 @@
 
     invoke-virtual {v0, v2}, Landroid/util/SparseArray;->remove(I)V
 
-    .line 548
     invoke-direct {p0, p1}, Lcom/android/server/display/DisplayManagerService;->stopWifiDisplayScanLocked(Lcom/android/server/display/DisplayManagerService$CallbackRecord;)V
 
-    .line 549
     monitor-exit v1
 
-    .line 550
     return-void
 
-    .line 549
     :catchall_0
     move-exception v0
 
@@ -3390,30 +3072,24 @@
     .locals 2
 
     .prologue
-    .line 609
     iget-object v1, p0, Lcom/android/server/display/DisplayManagerService;->mSyncRoot:Lcom/android/server/display/DisplayManagerService$SyncRoot;
 
     monitor-enter v1
 
-    .line 610
     :try_start_0
     iget-object v0, p0, Lcom/android/server/display/DisplayManagerService;->mWifiDisplayAdapter:Lcom/android/server/display/WifiDisplayAdapter;
 
     if-eqz v0, :cond_0
 
-    .line 611
     iget-object v0, p0, Lcom/android/server/display/DisplayManagerService;->mWifiDisplayAdapter:Lcom/android/server/display/WifiDisplayAdapter;
 
     invoke-virtual {v0}, Lcom/android/server/display/WifiDisplayAdapter;->requestPauseLocked()V
 
-    .line 613
     :cond_0
     monitor-exit v1
 
-    .line 614
     return-void
 
-    .line 613
     :catchall_0
     move-exception v0
 
@@ -3428,39 +3104,31 @@
     .locals 4
 
     .prologue
-    .line 369
     iget-object v3, p0, Lcom/android/server/display/DisplayManagerService;->mSyncRoot:Lcom/android/server/display/DisplayManagerService$SyncRoot;
 
     monitor-enter v3
 
-    .line 370
     :try_start_0
     iget-boolean v2, p0, Lcom/android/server/display/DisplayManagerService;->mPendingTraversal:Z
 
     if-nez v2, :cond_1
 
-    .line 371
     monitor-exit v3
 
-    .line 382
     :cond_0
     return-void
 
-    .line 373
     :cond_1
     const/4 v2, 0x0
 
     iput-boolean v2, p0, Lcom/android/server/display/DisplayManagerService;->mPendingTraversal:Z
 
-    .line 375
     invoke-direct {p0}, Lcom/android/server/display/DisplayManagerService;->performTraversalInTransactionLocked()V
 
-    .line 376
     monitor-exit v3
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 379
     iget-object v2, p0, Lcom/android/server/display/DisplayManagerService;->mDisplayTransactionListeners:Ljava/util/concurrent/CopyOnWriteArrayList;
 
     invoke-virtual {v2}, Ljava/util/concurrent/CopyOnWriteArrayList;->iterator()Ljava/util/Iterator;
@@ -3481,13 +3149,11 @@
 
     check-cast v1, Landroid/hardware/display/DisplayManagerInternal$DisplayTransactionListener;
 
-    .line 380
     .local v1, "listener":Landroid/hardware/display/DisplayManagerInternal$DisplayTransactionListener;
     invoke-interface {v1}, Landroid/hardware/display/DisplayManagerInternal$DisplayTransactionListener;->onDisplayTransaction()V
 
     goto :goto_0
 
-    .line 376
     .end local v0    # "i$":Ljava/util/Iterator;
     .end local v1    # "listener":Landroid/hardware/display/DisplayManagerInternal$DisplayTransactionListener;
     :catchall_0
@@ -3505,17 +3171,14 @@
     .locals 5
 
     .prologue
-    .line 969
     invoke-direct {p0}, Lcom/android/server/display/DisplayManagerService;->clearViewportsLocked()V
 
-    .line 972
     iget-object v3, p0, Lcom/android/server/display/DisplayManagerService;->mDisplayDevices:Ljava/util/ArrayList;
 
     invoke-virtual {v3}, Ljava/util/ArrayList;->size()I
 
     move-result v0
 
-    .line 973
     .local v0, "count":I
     const/4 v2, 0x0
 
@@ -3523,7 +3186,6 @@
     :goto_0
     if-ge v2, v0, :cond_0
 
-    .line 974
     iget-object v3, p0, Lcom/android/server/display/DisplayManagerService;->mDisplayDevices:Ljava/util/ArrayList;
 
     invoke-virtual {v3, v2}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
@@ -3532,33 +3194,27 @@
 
     check-cast v1, Lcom/android/server/display/DisplayDevice;
 
-    .line 975
     .local v1, "device":Lcom/android/server/display/DisplayDevice;
     invoke-direct {p0, v1}, Lcom/android/server/display/DisplayManagerService;->configureDisplayInTransactionLocked(Lcom/android/server/display/DisplayDevice;)V
 
-    .line 976
     invoke-virtual {v1}, Lcom/android/server/display/DisplayDevice;->performTraversalInTransactionLocked()V
 
-    .line 973
     add-int/lit8 v2, v2, 0x1
 
     goto :goto_0
 
-    .line 980
     .end local v1    # "device":Lcom/android/server/display/DisplayDevice;
     :cond_0
     iget-object v3, p0, Lcom/android/server/display/DisplayManagerService;->mInputManagerInternal:Landroid/hardware/input/InputManagerInternal;
 
     if-eqz v3, :cond_1
 
-    .line 981
     iget-object v3, p0, Lcom/android/server/display/DisplayManagerService;->mHandler:Lcom/android/server/display/DisplayManagerService$DisplayManagerHandler;
 
     const/4 v4, 0x5
 
     invoke-virtual {v3, v4}, Lcom/android/server/display/DisplayManagerService$DisplayManagerHandler;->sendEmptyMessage(I)Z
 
-    .line 983
     :cond_1
     return-void
 .end method
@@ -3567,12 +3223,10 @@
     .locals 2
 
     .prologue
-    .line 733
     iget-object v1, p0, Lcom/android/server/display/DisplayManagerService;->mSyncRoot:Lcom/android/server/display/DisplayManagerService$SyncRoot;
 
     monitor-enter v1
 
-    .line 734
     :try_start_0
     invoke-direct {p0}, Lcom/android/server/display/DisplayManagerService;->shouldRegisterNonEssentialDisplayAdaptersLocked()Z
 
@@ -3580,36 +3234,27 @@
 
     if-eqz v0, :cond_0
 
-    .line 735
     invoke-direct {p0}, Lcom/android/server/display/DisplayManagerService;->registerOverlayDisplayAdapterLocked()V
 
-    .line 736
     invoke-direct {p0}, Lcom/android/server/display/DisplayManagerService;->registerWifiDisplayAdapterLocked()V
 
-    .line 737
     invoke-direct {p0}, Lcom/android/server/display/DisplayManagerService;->registerVirtualDisplayAdapterLocked()V
 
-    .line 739
     invoke-direct {p0}, Lcom/android/server/display/DisplayManagerService;->registerMagnifierDisplayAdapterLocked()V
 
-    .line 741
     invoke-static {}, Lcom/android/server/display/DigitalPenOffScreenDisplayAdapter;->isDigitalPenDisabled()Z
 
     move-result v0
 
     if-nez v0, :cond_0
 
-    .line 742
     invoke-direct {p0}, Lcom/android/server/display/DisplayManagerService;->registerDigitalPenOffScreenDisplayAdapterLocked()V
 
-    .line 745
     :cond_0
     monitor-exit v1
 
-    .line 746
     return-void
 
-    .line 745
     :catchall_0
     move-exception v0
 
@@ -3626,12 +3271,10 @@
     .param p2, "callingPid"    # I
 
     .prologue
-    .line 526
     iget-object v4, p0, Lcom/android/server/display/DisplayManagerService;->mSyncRoot:Lcom/android/server/display/DisplayManagerService$SyncRoot;
 
     monitor-enter v4
 
-    .line 527
     :try_start_0
     iget-object v3, p0, Lcom/android/server/display/DisplayManagerService;->mCallbacks:Landroid/util/SparseArray;
 
@@ -3641,7 +3284,6 @@
 
     if-eqz v3, :cond_0
 
-    .line 528
     new-instance v3, Ljava/lang/SecurityException;
 
     const-string v5, "The calling process has already registered an IDisplayManagerCallback."
@@ -3650,7 +3292,6 @@
 
     throw v3
 
-    .line 542
     :catchall_0
     move-exception v3
 
@@ -3660,7 +3301,6 @@
 
     throw v3
 
-    .line 532
     :cond_0
     :try_start_1
     new-instance v2, Lcom/android/server/display/DisplayManagerService$CallbackRecord;
@@ -3669,14 +3309,12 @@
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
-    .line 534
     .local v2, "record":Lcom/android/server/display/DisplayManagerService$CallbackRecord;
     :try_start_2
     invoke-interface {p1}, Landroid/hardware/display/IDisplayManagerCallback;->asBinder()Landroid/os/IBinder;
 
     move-result-object v0
 
-    .line 535
     .local v0, "binder":Landroid/os/IBinder;
     const/4 v3, 0x0
 
@@ -3685,24 +3323,19 @@
     .catch Landroid/os/RemoteException; {:try_start_2 .. :try_end_2} :catch_0
     .catchall {:try_start_2 .. :try_end_2} :catchall_0
 
-    .line 541
     :try_start_3
     iget-object v3, p0, Lcom/android/server/display/DisplayManagerService;->mCallbacks:Landroid/util/SparseArray;
 
     invoke-virtual {v3, p2, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    .line 542
     monitor-exit v4
 
-    .line 543
     return-void
 
-    .line 536
     .end local v0    # "binder":Landroid/os/IBinder;
     :catch_0
     move-exception v1
 
-    .line 538
     .local v1, "ex":Landroid/os/RemoteException;
     new-instance v3, Ljava/lang/RuntimeException;
 
@@ -3717,12 +3350,10 @@
     .locals 6
 
     .prologue
-    .line 726
     iget-object v1, p0, Lcom/android/server/display/DisplayManagerService;->mSyncRoot:Lcom/android/server/display/DisplayManagerService$SyncRoot;
 
     monitor-enter v1
 
-    .line 727
     :try_start_0
     new-instance v0, Lcom/android/server/display/LocalDisplayAdapter;
 
@@ -3738,13 +3369,10 @@
 
     invoke-direct {p0, v0}, Lcom/android/server/display/DisplayManagerService;->registerDisplayAdapterLocked(Lcom/android/server/display/DisplayAdapter;)V
 
-    .line 729
     monitor-exit v1
 
-    .line 730
     return-void
 
-    .line 729
     :catchall_0
     move-exception v0
 
@@ -3759,7 +3387,6 @@
     .locals 5
 
     .prologue
-    .line 754
     new-instance v0, Lcom/android/server/display/DigitalPenOffScreenDisplayAdapter;
 
     iget-object v1, p0, Lcom/android/server/display/DisplayManagerService;->mSyncRoot:Lcom/android/server/display/DisplayManagerService$SyncRoot;
@@ -3774,7 +3401,6 @@
 
     invoke-direct {p0, v0}, Lcom/android/server/display/DisplayManagerService;->registerDisplayAdapterLocked(Lcom/android/server/display/DisplayAdapter;)V
 
-    .line 756
     return-void
 .end method
 
@@ -3783,15 +3409,12 @@
     .param p1, "adapter"    # Lcom/android/server/display/DisplayAdapter;
 
     .prologue
-    .line 795
     iget-object v0, p0, Lcom/android/server/display/DisplayManagerService;->mDisplayAdapters:Ljava/util/ArrayList;
 
     invoke-virtual {v0, p1}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 796
     invoke-virtual {p1}, Lcom/android/server/display/DisplayAdapter;->registerLocked()V
 
-    .line 797
     return-void
 .end method
 
@@ -3800,12 +3423,10 @@
     .param p1, "listener"    # Landroid/hardware/display/DisplayManagerInternal$DisplayTransactionListener;
 
     .prologue
-    .line 346
     iget-object v0, p0, Lcom/android/server/display/DisplayManagerService;->mDisplayTransactionListeners:Ljava/util/concurrent/CopyOnWriteArrayList;
 
     invoke-virtual {v0, p1}, Ljava/util/concurrent/CopyOnWriteArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 347
     return-void
 .end method
 
@@ -3813,7 +3434,6 @@
     .locals 6
 
     .prologue
-    .line 779
     new-instance v0, Lcom/android/server/display/MagnifierDisplayAdapter;
 
     iget-object v1, p0, Lcom/android/server/display/DisplayManagerService;->mSyncRoot:Lcom/android/server/display/DisplayManagerService$SyncRoot;
@@ -3830,12 +3450,10 @@
 
     iput-object v0, p0, Lcom/android/server/display/DisplayManagerService;->mMagnifierDisplayAdapter:Lcom/android/server/display/MagnifierDisplayAdapter;
 
-    .line 780
     iget-object v0, p0, Lcom/android/server/display/DisplayManagerService;->mMagnifierDisplayAdapter:Lcom/android/server/display/MagnifierDisplayAdapter;
 
     invoke-direct {p0, v0}, Lcom/android/server/display/DisplayManagerService;->registerDisplayAdapterLocked(Lcom/android/server/display/DisplayAdapter;)V
 
-    .line 781
     return-void
 .end method
 
@@ -3843,7 +3461,6 @@
     .locals 6
 
     .prologue
-    .line 749
     new-instance v0, Lcom/android/server/display/OverlayDisplayAdapter;
 
     iget-object v1, p0, Lcom/android/server/display/DisplayManagerService;->mSyncRoot:Lcom/android/server/display/DisplayManagerService$SyncRoot;
@@ -3860,7 +3477,6 @@
 
     invoke-direct {p0, v0}, Lcom/android/server/display/DisplayManagerService;->registerDisplayAdapterLocked(Lcom/android/server/display/DisplayAdapter;)V
 
-    .line 751
     return-void
 .end method
 
@@ -3868,7 +3484,6 @@
     .locals 5
 
     .prologue
-    .line 770
     new-instance v0, Lcom/android/server/display/VirtualDisplayAdapter;
 
     iget-object v1, p0, Lcom/android/server/display/DisplayManagerService;->mSyncRoot:Lcom/android/server/display/DisplayManagerService$SyncRoot;
@@ -3883,12 +3498,10 @@
 
     iput-object v0, p0, Lcom/android/server/display/DisplayManagerService;->mVirtualDisplayAdapter:Lcom/android/server/display/VirtualDisplayAdapter;
 
-    .line 772
     iget-object v0, p0, Lcom/android/server/display/DisplayManagerService;->mVirtualDisplayAdapter:Lcom/android/server/display/VirtualDisplayAdapter;
 
     invoke-direct {p0, v0}, Lcom/android/server/display/DisplayManagerService;->registerDisplayAdapterLocked(Lcom/android/server/display/DisplayAdapter;)V
 
-    .line 773
     return-void
 .end method
 
@@ -3896,7 +3509,6 @@
     .locals 6
 
     .prologue
-    .line 759
     iget-object v0, p0, Lcom/android/server/display/DisplayManagerService;->mContext:Landroid/content/Context;
 
     invoke-virtual {v0}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
@@ -3911,7 +3523,7 @@
 
     if-nez v0, :cond_0
 
-    const-string/jumbo v0, "persist.debug.wfd.enable"
+    const-string v0, "persist.debug.wfd.enable"
 
     const/4 v1, -0x1
 
@@ -3923,7 +3535,6 @@
 
     if-ne v0, v1, :cond_1
 
-    .line 762
     :cond_0
     new-instance v0, Lcom/android/server/display/WifiDisplayAdapter;
 
@@ -3941,12 +3552,10 @@
 
     iput-object v0, p0, Lcom/android/server/display/DisplayManagerService;->mWifiDisplayAdapter:Lcom/android/server/display/WifiDisplayAdapter;
 
-    .line 765
     iget-object v0, p0, Lcom/android/server/display/DisplayManagerService;->mWifiDisplayAdapter:Lcom/android/server/display/WifiDisplayAdapter;
 
     invoke-direct {p0, v0}, Lcom/android/server/display/DisplayManagerService;->registerDisplayAdapterLocked(Lcom/android/server/display/DisplayAdapter;)V
 
-    .line 767
     :cond_1
     return-void
 .end method
@@ -3956,25 +3565,20 @@
     .param p1, "appToken"    # Landroid/os/IBinder;
 
     .prologue
-    .line 711
     iget-object v2, p0, Lcom/android/server/display/DisplayManagerService;->mSyncRoot:Lcom/android/server/display/DisplayManagerService$SyncRoot;
 
     monitor-enter v2
 
-    .line 712
     :try_start_0
     iget-object v1, p0, Lcom/android/server/display/DisplayManagerService;->mVirtualDisplayAdapter:Lcom/android/server/display/VirtualDisplayAdapter;
 
     if-nez v1, :cond_0
 
-    .line 713
     monitor-exit v2
 
-    .line 722
     :goto_0
     return-void
 
-    .line 716
     :cond_0
     iget-object v1, p0, Lcom/android/server/display/DisplayManagerService;->mVirtualDisplayAdapter:Lcom/android/server/display/VirtualDisplayAdapter;
 
@@ -3982,14 +3586,11 @@
 
     move-result-object v0
 
-    .line 718
     .local v0, "device":Lcom/android/server/display/DisplayDevice;
     if-eqz v0, :cond_1
 
-    .line 719
     invoke-direct {p0, v0}, Lcom/android/server/display/DisplayManagerService;->handleDisplayDeviceRemovedLocked(Lcom/android/server/display/DisplayDevice;)V
 
-    .line 721
     :cond_1
     monitor-exit v2
 
@@ -4012,30 +3613,24 @@
     .param p2, "alias"    # Ljava/lang/String;
 
     .prologue
-    .line 633
     iget-object v1, p0, Lcom/android/server/display/DisplayManagerService;->mSyncRoot:Lcom/android/server/display/DisplayManagerService$SyncRoot;
 
     monitor-enter v1
 
-    .line 634
     :try_start_0
     iget-object v0, p0, Lcom/android/server/display/DisplayManagerService;->mWifiDisplayAdapter:Lcom/android/server/display/WifiDisplayAdapter;
 
     if-eqz v0, :cond_0
 
-    .line 635
     iget-object v0, p0, Lcom/android/server/display/DisplayManagerService;->mWifiDisplayAdapter:Lcom/android/server/display/WifiDisplayAdapter;
 
     invoke-virtual {v0, p1, p2}, Lcom/android/server/display/WifiDisplayAdapter;->requestRenameLocked(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 637
     :cond_0
     monitor-exit v1
 
-    .line 638
     return-void
 
-    .line 637
     :catchall_0
     move-exception v0
 
@@ -4051,12 +3646,10 @@
     .param p1, "state"    # I
 
     .prologue
-    .line 385
     iget-object v2, p0, Lcom/android/server/display/DisplayManagerService;->mTempDisplayStateWorkQueue:Ljava/util/ArrayList;
 
     monitor-enter v2
 
-    .line 388
     :try_start_0
     iget-object v3, p0, Lcom/android/server/display/DisplayManagerService;->mSyncRoot:Lcom/android/server/display/DisplayManagerService$SyncRoot;
 
@@ -4064,32 +3657,26 @@
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_1
 
-    .line 389
     :try_start_1
     iget v1, p0, Lcom/android/server/display/DisplayManagerService;->mGlobalDisplayState:I
 
     if-eq v1, p1, :cond_0
 
-    .line 390
     iput p1, p0, Lcom/android/server/display/DisplayManagerService;->mGlobalDisplayState:I
 
-    .line 391
     iget-object v1, p0, Lcom/android/server/display/DisplayManagerService;->mTempDisplayStateWorkQueue:Ljava/util/ArrayList;
 
     invoke-direct {p0, v1}, Lcom/android/server/display/DisplayManagerService;->updateGlobalDisplayStateLocked(Ljava/util/List;)V
 
-    .line 392
     const/4 v1, 0x0
 
     invoke-direct {p0, v1}, Lcom/android/server/display/DisplayManagerService;->scheduleTraversalLocked(Z)V
 
-    .line 394
     :cond_0
     monitor-exit v3
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
-    .line 400
     const/4 v0, 0x0
 
     .local v0, "i":I
@@ -4103,7 +3690,6 @@
 
     if-ge v0, v1, :cond_1
 
-    .line 401
     iget-object v1, p0, Lcom/android/server/display/DisplayManagerService;->mTempDisplayStateWorkQueue:Ljava/util/ArrayList;
 
     invoke-virtual {v1, v0}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
@@ -4116,12 +3702,10 @@
     :try_end_2
     .catchall {:try_start_2 .. :try_end_2} :catchall_1
 
-    .line 400
     add-int/lit8 v0, v0, 0x1
 
     goto :goto_0
 
-    .line 394
     .end local v0    # "i":I
     :catchall_0
     move-exception v1
@@ -4136,7 +3720,6 @@
     :try_end_4
     .catchall {:try_start_4 .. :try_end_4} :catchall_1
 
-    .line 404
     :catchall_1
     move-exception v1
 
@@ -4147,7 +3730,6 @@
 
     throw v1
 
-    .line 406
     :catchall_2
     move-exception v1
 
@@ -4157,7 +3739,6 @@
 
     throw v1
 
-    .line 404
     .restart local v0    # "i":I
     :cond_1
     :try_start_6
@@ -4165,12 +3746,10 @@
 
     invoke-virtual {v1}, Ljava/util/ArrayList;->clear()V
 
-    .line 406
     monitor-exit v2
     :try_end_6
     .catchall {:try_start_6 .. :try_end_6} :catchall_2
 
-    .line 407
     return-void
 .end method
 
@@ -4182,31 +3761,25 @@
     .param p4, "densityDpi"    # I
 
     .prologue
-    .line 691
     iget-object v1, p0, Lcom/android/server/display/DisplayManagerService;->mSyncRoot:Lcom/android/server/display/DisplayManagerService$SyncRoot;
 
     monitor-enter v1
 
-    .line 692
     :try_start_0
     iget-object v0, p0, Lcom/android/server/display/DisplayManagerService;->mVirtualDisplayAdapter:Lcom/android/server/display/VirtualDisplayAdapter;
 
     if-nez v0, :cond_0
 
-    .line 693
     monitor-exit v1
 
-    .line 698
     :goto_0
     return-void
 
-    .line 696
     :cond_0
     iget-object v0, p0, Lcom/android/server/display/DisplayManagerService;->mVirtualDisplayAdapter:Lcom/android/server/display/VirtualDisplayAdapter;
 
     invoke-virtual {v0, p1, p2, p3, p4}, Lcom/android/server/display/VirtualDisplayAdapter;->resizeVirtualDisplayLocked(Landroid/os/IBinder;III)V
 
-    .line 697
     monitor-exit v1
 
     goto :goto_0
@@ -4225,30 +3798,24 @@
     .locals 2
 
     .prologue
-    .line 617
     iget-object v1, p0, Lcom/android/server/display/DisplayManagerService;->mSyncRoot:Lcom/android/server/display/DisplayManagerService$SyncRoot;
 
     monitor-enter v1
 
-    .line 618
     :try_start_0
     iget-object v0, p0, Lcom/android/server/display/DisplayManagerService;->mWifiDisplayAdapter:Lcom/android/server/display/WifiDisplayAdapter;
 
     if-eqz v0, :cond_0
 
-    .line 619
     iget-object v0, p0, Lcom/android/server/display/DisplayManagerService;->mWifiDisplayAdapter:Lcom/android/server/display/WifiDisplayAdapter;
 
     invoke-virtual {v0}, Lcom/android/server/display/WifiDisplayAdapter;->requestResumeLocked()V
 
-    .line 621
     :cond_0
     monitor-exit v1
 
-    .line 622
     return-void
 
-    .line 621
     :catchall_0
     move-exception v0
 
@@ -4264,10 +3831,8 @@
     .param p1, "device"    # Lcom/android/server/display/DisplayDevice;
 
     .prologue
-    .line 1231
     iput-object p1, p0, Lcom/android/server/display/DisplayManagerService;->wifiDevice:Lcom/android/server/display/DisplayDevice;
 
-    .line 1233
     return-void
 .end method
 
@@ -4276,7 +3841,6 @@
     .param p1, "inTraversal"    # Z
 
     .prologue
-    .line 1104
     iget-boolean v0, p0, Lcom/android/server/display/DisplayManagerService;->mPendingTraversal:Z
 
     if-nez v0, :cond_0
@@ -4285,22 +3849,18 @@
 
     if-eqz v0, :cond_0
 
-    .line 1105
     const/4 v0, 0x1
 
     iput-boolean v0, p0, Lcom/android/server/display/DisplayManagerService;->mPendingTraversal:Z
 
-    .line 1106
     if-nez p1, :cond_0
 
-    .line 1107
     iget-object v0, p0, Lcom/android/server/display/DisplayManagerService;->mHandler:Lcom/android/server/display/DisplayManagerService$DisplayManagerHandler;
 
     const/4 v1, 0x4
 
     invoke-virtual {v0, v1}, Lcom/android/server/display/DisplayManagerService$DisplayManagerHandler;->sendEmptyMessage(I)Z
 
-    .line 1110
     :cond_0
     return-void
 .end method
@@ -4311,7 +3871,6 @@
     .param p2, "event"    # I
 
     .prologue
-    .line 1097
     iget-object v1, p0, Lcom/android/server/display/DisplayManagerService;->mHandler:Lcom/android/server/display/DisplayManagerService$DisplayManagerHandler;
 
     const/4 v2, 0x3
@@ -4320,13 +3879,11 @@
 
     move-result-object v0
 
-    .line 1098
     .local v0, "msg":Landroid/os/Message;
     iget-object v1, p0, Lcom/android/server/display/DisplayManagerService;->mHandler:Lcom/android/server/display/DisplayManagerService$DisplayManagerHandler;
 
     invoke-virtual {v1, v0}, Lcom/android/server/display/DisplayManagerService$DisplayManagerHandler;->sendMessage(Landroid/os/Message;)Z
 
-    .line 1099
     return-void
 .end method
 
@@ -4336,12 +3893,10 @@
     .param p2, "info"    # Landroid/view/DisplayInfo;
 
     .prologue
-    .line 357
     iget-object v2, p0, Lcom/android/server/display/DisplayManagerService;->mSyncRoot:Lcom/android/server/display/DisplayManagerService$SyncRoot;
 
     monitor-enter v2
 
-    .line 358
     :try_start_0
     iget-object v1, p0, Lcom/android/server/display/DisplayManagerService;->mLogicalDisplays:Landroid/util/SparseArray;
 
@@ -4351,35 +3906,28 @@
 
     check-cast v0, Lcom/android/server/display/LogicalDisplay;
 
-    .line 359
     .local v0, "display":Lcom/android/server/display/LogicalDisplay;
     if-eqz v0, :cond_0
 
-    .line 360
     invoke-virtual {v0, p2}, Lcom/android/server/display/LogicalDisplay;->setDisplayInfoOverrideFromWindowManagerLocked(Landroid/view/DisplayInfo;)Z
 
     move-result v1
 
     if-eqz v1, :cond_0
 
-    .line 361
     const/4 v1, 0x2
 
     invoke-direct {p0, p1, v1}, Lcom/android/server/display/DisplayManagerService;->sendDisplayEventLocked(II)V
 
-    .line 362
     const/4 v1, 0x0
 
     invoke-direct {p0, v1}, Lcom/android/server/display/DisplayManagerService;->scheduleTraversalLocked(Z)V
 
-    .line 365
     :cond_0
     monitor-exit v2
 
-    .line 366
     return-void
 
-    .line 365
     .end local v0    # "display":Lcom/android/server/display/LogicalDisplay;
     :catchall_0
     move-exception v1
@@ -4399,12 +3947,10 @@
     .param p4, "inTraversal"    # Z
 
     .prologue
-    .line 987
     iget-object v2, p0, Lcom/android/server/display/DisplayManagerService;->mSyncRoot:Lcom/android/server/display/DisplayManagerService$SyncRoot;
 
     monitor-enter v2
 
-    .line 988
     :try_start_0
     iget-object v1, p0, Lcom/android/server/display/DisplayManagerService;->mLogicalDisplays:Landroid/util/SparseArray;
 
@@ -4414,18 +3960,14 @@
 
     check-cast v0, Lcom/android/server/display/LogicalDisplay;
 
-    .line 989
     .local v0, "display":Lcom/android/server/display/LogicalDisplay;
     if-nez v0, :cond_0
 
-    .line 990
     monitor-exit v2
 
-    .line 1010
     :goto_0
     return-void
 
-    .line 992
     :cond_0
     invoke-virtual {v0}, Lcom/android/server/display/LogicalDisplay;->hasContentLocked()Z
 
@@ -4433,13 +3975,10 @@
 
     if-eq v1, p2, :cond_1
 
-    .line 998
     invoke-virtual {v0, p2}, Lcom/android/server/display/LogicalDisplay;->setHasContentLocked(Z)V
 
-    .line 999
     invoke-direct {p0, p4}, Lcom/android/server/display/DisplayManagerService;->scheduleTraversalLocked(Z)V
 
-    .line 1001
     :cond_1
     invoke-virtual {v0}, Lcom/android/server/display/LogicalDisplay;->getRequestedRefreshRateLocked()F
 
@@ -4449,13 +3988,10 @@
 
     if-eqz v1, :cond_2
 
-    .line 1006
     invoke-virtual {v0, p3}, Lcom/android/server/display/LogicalDisplay;->setRequestedRefreshRateLocked(F)V
 
-    .line 1007
     invoke-direct {p0, p4}, Lcom/android/server/display/DisplayManagerService;->scheduleTraversalLocked(Z)V
 
-    .line 1009
     :cond_2
     monitor-exit v2
 
@@ -4479,22 +4015,18 @@
     .param p2, "device"    # Lcom/android/server/display/DisplayDevice;
 
     .prologue
-    .line 1080
     const/4 v0, 0x1
 
     iput-boolean v0, p0, Landroid/hardware/display/DisplayViewport;->valid:Z
 
-    .line 1081
     invoke-virtual {p1}, Lcom/android/server/display/LogicalDisplay;->getDisplayIdLocked()I
 
     move-result v0
 
     iput v0, p0, Landroid/hardware/display/DisplayViewport;->displayId:I
 
-    .line 1082
     invoke-virtual {p2, p0}, Lcom/android/server/display/DisplayDevice;->populateViewportLocked(Landroid/hardware/display/DisplayViewport;)V
 
-    .line 1083
     return-void
 .end method
 
@@ -4504,31 +4036,25 @@
     .param p2, "surface"    # Landroid/view/Surface;
 
     .prologue
-    .line 701
     iget-object v1, p0, Lcom/android/server/display/DisplayManagerService;->mSyncRoot:Lcom/android/server/display/DisplayManagerService$SyncRoot;
 
     monitor-enter v1
 
-    .line 702
     :try_start_0
     iget-object v0, p0, Lcom/android/server/display/DisplayManagerService;->mVirtualDisplayAdapter:Lcom/android/server/display/VirtualDisplayAdapter;
 
     if-nez v0, :cond_0
 
-    .line 703
     monitor-exit v1
 
-    .line 708
     :goto_0
     return-void
 
-    .line 706
     :cond_0
     iget-object v0, p0, Lcom/android/server/display/DisplayManagerService;->mVirtualDisplayAdapter:Lcom/android/server/display/VirtualDisplayAdapter;
 
     invoke-virtual {v0, p1, p2}, Lcom/android/server/display/VirtualDisplayAdapter;->setVirtualDisplaySurfaceLocked(Landroid/os/IBinder;Landroid/view/Surface;)V
 
-    .line 707
     monitor-exit v1
 
     goto :goto_0
@@ -4547,7 +4073,6 @@
     .locals 1
 
     .prologue
-    .line 791
     iget-boolean v0, p0, Lcom/android/server/display/DisplayManagerService;->mSafeMode:Z
 
     if-nez v0, :cond_0
@@ -4572,12 +4097,10 @@
     .param p1, "callingPid"    # I
 
     .prologue
-    .line 553
     iget-object v2, p0, Lcom/android/server/display/DisplayManagerService;->mSyncRoot:Lcom/android/server/display/DisplayManagerService$SyncRoot;
 
     monitor-enter v2
 
-    .line 554
     :try_start_0
     iget-object v1, p0, Lcom/android/server/display/DisplayManagerService;->mCallbacks:Landroid/util/SparseArray;
 
@@ -4587,11 +4110,9 @@
 
     check-cast v0, Lcom/android/server/display/DisplayManagerService$CallbackRecord;
 
-    .line 555
     .local v0, "record":Lcom/android/server/display/DisplayManagerService$CallbackRecord;
     if-nez v0, :cond_0
 
-    .line 556
     new-instance v1, Ljava/lang/IllegalStateException;
 
     const-string v3, "The calling process has not registered an IDisplayManagerCallback."
@@ -4600,7 +4121,6 @@
 
     throw v1
 
-    .line 560
     .end local v0    # "record":Lcom/android/server/display/DisplayManagerService$CallbackRecord;
     :catchall_0
     move-exception v1
@@ -4611,18 +4131,15 @@
 
     throw v1
 
-    .line 559
     .restart local v0    # "record":Lcom/android/server/display/DisplayManagerService$CallbackRecord;
     :cond_0
     :try_start_1
     invoke-direct {p0, v0}, Lcom/android/server/display/DisplayManagerService;->startWifiDisplayScanLocked(Lcom/android/server/display/DisplayManagerService$CallbackRecord;)V
 
-    .line 560
     monitor-exit v2
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
-    .line 561
     return-void
 .end method
 
@@ -4631,17 +4148,14 @@
     .param p1, "record"    # Lcom/android/server/display/DisplayManagerService$CallbackRecord;
 
     .prologue
-    .line 564
     iget-boolean v0, p1, Lcom/android/server/display/DisplayManagerService$CallbackRecord;->mWifiDisplayScanRequested:Z
 
     if-nez v0, :cond_0
 
-    .line 565
     const/4 v0, 0x1
 
     iput-boolean v0, p1, Lcom/android/server/display/DisplayManagerService$CallbackRecord;->mWifiDisplayScanRequested:Z
 
-    .line 566
     iget v0, p0, Lcom/android/server/display/DisplayManagerService;->mWifiDisplayScanRequestCount:I
 
     add-int/lit8 v1, v0, 0x1
@@ -4650,17 +4164,14 @@
 
     if-nez v0, :cond_0
 
-    .line 567
     iget-object v0, p0, Lcom/android/server/display/DisplayManagerService;->mWifiDisplayAdapter:Lcom/android/server/display/WifiDisplayAdapter;
 
     if-eqz v0, :cond_0
 
-    .line 568
     iget-object v0, p0, Lcom/android/server/display/DisplayManagerService;->mWifiDisplayAdapter:Lcom/android/server/display/WifiDisplayAdapter;
 
     invoke-virtual {v0}, Lcom/android/server/display/WifiDisplayAdapter;->requestStartScanLocked()V
 
-    .line 572
     :cond_0
     return-void
 .end method
@@ -4670,12 +4181,10 @@
     .param p1, "callingPid"    # I
 
     .prologue
-    .line 575
     iget-object v2, p0, Lcom/android/server/display/DisplayManagerService;->mSyncRoot:Lcom/android/server/display/DisplayManagerService$SyncRoot;
 
     monitor-enter v2
 
-    .line 576
     :try_start_0
     iget-object v1, p0, Lcom/android/server/display/DisplayManagerService;->mCallbacks:Landroid/util/SparseArray;
 
@@ -4685,11 +4194,9 @@
 
     check-cast v0, Lcom/android/server/display/DisplayManagerService$CallbackRecord;
 
-    .line 577
     .local v0, "record":Lcom/android/server/display/DisplayManagerService$CallbackRecord;
     if-nez v0, :cond_0
 
-    .line 578
     new-instance v1, Ljava/lang/IllegalStateException;
 
     const-string v3, "The calling process has not registered an IDisplayManagerCallback."
@@ -4698,7 +4205,6 @@
 
     throw v1
 
-    .line 582
     .end local v0    # "record":Lcom/android/server/display/DisplayManagerService$CallbackRecord;
     :catchall_0
     move-exception v1
@@ -4709,18 +4215,15 @@
 
     throw v1
 
-    .line 581
     .restart local v0    # "record":Lcom/android/server/display/DisplayManagerService$CallbackRecord;
     :cond_0
     :try_start_1
     invoke-direct {p0, v0}, Lcom/android/server/display/DisplayManagerService;->stopWifiDisplayScanLocked(Lcom/android/server/display/DisplayManagerService$CallbackRecord;)V
 
-    .line 582
     monitor-exit v2
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
-    .line 583
     return-void
 .end method
 
@@ -4731,15 +4234,12 @@
     .prologue
     const/4 v3, 0x0
 
-    .line 586
     iget-boolean v0, p1, Lcom/android/server/display/DisplayManagerService$CallbackRecord;->mWifiDisplayScanRequested:Z
 
     if-eqz v0, :cond_0
 
-    .line 587
     iput-boolean v3, p1, Lcom/android/server/display/DisplayManagerService$CallbackRecord;->mWifiDisplayScanRequested:Z
 
-    .line 588
     iget v0, p0, Lcom/android/server/display/DisplayManagerService;->mWifiDisplayScanRequestCount:I
 
     add-int/lit8 v0, v0, -0x1
@@ -4748,28 +4248,23 @@
 
     if-nez v0, :cond_1
 
-    .line 589
     iget-object v0, p0, Lcom/android/server/display/DisplayManagerService;->mWifiDisplayAdapter:Lcom/android/server/display/WifiDisplayAdapter;
 
     if-eqz v0, :cond_0
 
-    .line 590
     iget-object v0, p0, Lcom/android/server/display/DisplayManagerService;->mWifiDisplayAdapter:Lcom/android/server/display/WifiDisplayAdapter;
 
     invoke-virtual {v0}, Lcom/android/server/display/WifiDisplayAdapter;->requestStopScanLocked()V
 
-    .line 598
     :cond_0
     :goto_0
     return-void
 
-    .line 592
     :cond_1
     iget v0, p0, Lcom/android/server/display/DisplayManagerService;->mWifiDisplayScanRequestCount:I
 
     if-gez v0, :cond_0
 
-    .line 593
     const-string v0, "DisplayManagerService"
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -4794,7 +4289,6 @@
 
     invoke-static {v0, v1}, Landroid/util/Slog;->wtf(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 595
     iput v3, p0, Lcom/android/server/display/DisplayManagerService;->mWifiDisplayScanRequestCount:I
 
     goto :goto_0
@@ -4805,12 +4299,10 @@
     .param p1, "listener"    # Landroid/hardware/display/DisplayManagerInternal$DisplayTransactionListener;
 
     .prologue
-    .line 352
     iget-object v0, p0, Lcom/android/server/display/DisplayManagerService;->mDisplayTransactionListeners:Ljava/util/concurrent/CopyOnWriteArrayList;
 
     invoke-virtual {v0, p1}, Ljava/util/concurrent/CopyOnWriteArrayList;->remove(Ljava/lang/Object;)Z
 
-    .line 353
     return-void
 .end method
 
@@ -4820,19 +4312,16 @@
     .param p2, "fromDevice"    # Lcom/android/server/display/DisplayDevice;
 
     .prologue
-    .line 1210
     const-string v1, "DisplayManagerService"
 
     const-string v2, "Replacing deviceInfo details"
 
     invoke-static {v1, v2}, Landroid/util/Slog;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1211
     if-eqz p1, :cond_0
 
     if-eqz p2, :cond_0
 
-    .line 1212
     invoke-virtual {p1}, Lcom/android/server/display/DisplayDevice;->getDisplayDeviceInfoLocked()Lcom/android/server/display/DisplayDeviceInfo;
 
     move-result-object v1
@@ -4845,7 +4334,6 @@
 
     iput-object v2, v1, Lcom/android/server/display/DisplayDeviceInfo;->name:Ljava/lang/String;
 
-    .line 1213
     invoke-virtual {p1}, Lcom/android/server/display/DisplayDevice;->getDisplayDeviceInfoLocked()Lcom/android/server/display/DisplayDeviceInfo;
 
     move-result-object v1
@@ -4858,7 +4346,6 @@
 
     iput-object v2, v1, Lcom/android/server/display/DisplayDeviceInfo;->address:Ljava/lang/String;
 
-    .line 1214
     invoke-virtual {p1}, Lcom/android/server/display/DisplayDevice;->getDisplayDeviceInfoLocked()Lcom/android/server/display/DisplayDeviceInfo;
 
     move-result-object v1
@@ -4867,14 +4354,12 @@
 
     iput v2, v1, Lcom/android/server/display/DisplayDeviceInfo;->type:I
 
-    .line 1215
-    const-string/jumbo v1, "ro.board.platform"
+    const-string v1, "ro.board.platform"
 
     invoke-static {v1}, Landroid/os/SystemProperties;->get(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 
-    .line 1216
     .local v0, "platform":Ljava/lang/String;
     const-string v1, "DisplayManagerService"
 
@@ -4882,7 +4367,7 @@
 
     invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v3, "platform info: "
+    const-string v3, "platform info: "
 
     invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -4898,7 +4383,6 @@
 
     invoke-static {v1, v2}, Landroid/util/Slog;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1218
     const-string v1, "exynos4"
 
     invoke-virtual {v0, v1}, Ljava/lang/String;->matches(Ljava/lang/String;)Z
@@ -4907,7 +4391,6 @@
 
     if-eqz v1, :cond_1
 
-    .line 1219
     invoke-virtual {p1}, Lcom/android/server/display/DisplayDevice;->getDisplayDeviceInfoLocked()Lcom/android/server/display/DisplayDeviceInfo;
 
     move-result-object v1
@@ -4920,20 +4403,17 @@
 
     iput v2, v1, Lcom/android/server/display/DisplayDeviceInfo;->flags:I
 
-    .line 1220
     const-string v1, "DisplayManagerService"
 
     const-string v2, "Add secure flag"
 
     invoke-static {v1, v2}, Landroid/util/Slog;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1226
     .end local v0    # "platform":Ljava/lang/String;
     :cond_0
     :goto_0
     return-object p1
 
-    .line 1222
     .restart local v0    # "platform":Ljava/lang/String;
     :cond_1
     invoke-virtual {p1}, Lcom/android/server/display/DisplayDevice;->getDisplayDeviceInfoLocked()Lcom/android/server/display/DisplayDeviceInfo;
@@ -4952,12 +4432,10 @@
     .param p1, "device"    # Lcom/android/server/display/DisplayDevice;
 
     .prologue
-    .line 887
     invoke-virtual {p1}, Lcom/android/server/display/DisplayDevice;->getDisplayDeviceInfoLocked()Lcom/android/server/display/DisplayDeviceInfo;
 
     move-result-object v0
 
-    .line 888
     .local v0, "info":Lcom/android/server/display/DisplayDeviceInfo;
     iget v1, v0, Lcom/android/server/display/DisplayDeviceInfo;->flags:I
 
@@ -4965,14 +4443,12 @@
 
     if-nez v1, :cond_0
 
-    .line 889
     iget v1, p0, Lcom/android/server/display/DisplayManagerService;->mGlobalDisplayState:I
 
     invoke-virtual {p1, v1}, Lcom/android/server/display/DisplayDevice;->requestDisplayStateLocked(I)Ljava/lang/Runnable;
 
     move-result-object v1
 
-    .line 891
     :goto_0
     return-object v1
 
@@ -4995,7 +4471,6 @@
     .end annotation
 
     .prologue
-    .line 874
     .local p1, "workQueue":Ljava/util/List;, "Ljava/util/List<Ljava/lang/Runnable;>;"
     iget-object v4, p0, Lcom/android/server/display/DisplayManagerService;->mDisplayDevices:Ljava/util/ArrayList;
 
@@ -5003,7 +4478,6 @@
 
     move-result v0
 
-    .line 875
     .local v0, "count":I
     const/4 v2, 0x0
 
@@ -5011,7 +4485,6 @@
     :goto_0
     if-ge v2, v0, :cond_1
 
-    .line 876
     iget-object v4, p0, Lcom/android/server/display/DisplayManagerService;->mDisplayDevices:Ljava/util/ArrayList;
 
     invoke-virtual {v4, v2}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
@@ -5020,26 +4493,21 @@
 
     check-cast v1, Lcom/android/server/display/DisplayDevice;
 
-    .line 877
     .local v1, "device":Lcom/android/server/display/DisplayDevice;
     invoke-direct {p0, v1}, Lcom/android/server/display/DisplayManagerService;->updateDisplayStateLocked(Lcom/android/server/display/DisplayDevice;)Ljava/lang/Runnable;
 
     move-result-object v3
 
-    .line 878
     .local v3, "runnable":Ljava/lang/Runnable;
     if-eqz v3, :cond_0
 
-    .line 879
     invoke-interface {p1, v3}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    .line 875
     :cond_0
     add-int/lit8 v2, v2, 0x1
 
     goto :goto_0
 
-    .line 882
     .end local v1    # "device":Lcom/android/server/display/DisplayDevice;
     .end local v3    # "runnable":Ljava/lang/Runnable;
     :cond_1
@@ -5050,10 +4518,8 @@
     .locals 7
 
     .prologue
-    .line 947
     const/4 v0, 0x0
 
-    .line 948
     .local v0, "changed":Z
     iget-object v5, p0, Lcom/android/server/display/DisplayManagerService;->mLogicalDisplays:Landroid/util/SparseArray;
 
@@ -5073,14 +4539,12 @@
     .restart local v3    # "i":I
     if-lez v4, :cond_2
 
-    .line 949
     iget-object v5, p0, Lcom/android/server/display/DisplayManagerService;->mLogicalDisplays:Landroid/util/SparseArray;
 
     invoke-virtual {v5, v3}, Landroid/util/SparseArray;->keyAt(I)I
 
     move-result v2
 
-    .line 950
     .local v2, "displayId":I
     iget-object v5, p0, Lcom/android/server/display/DisplayManagerService;->mLogicalDisplays:Landroid/util/SparseArray;
 
@@ -5090,7 +4554,6 @@
 
     check-cast v1, Lcom/android/server/display/LogicalDisplay;
 
-    .line 952
     .local v1, "display":Lcom/android/server/display/LogicalDisplay;
     iget-object v5, p0, Lcom/android/server/display/DisplayManagerService;->mTempDisplayInfo:Landroid/view/DisplayInfo;
 
@@ -5100,41 +4563,34 @@
 
     invoke-virtual {v5, v6}, Landroid/view/DisplayInfo;->copyFrom(Landroid/view/DisplayInfo;)V
 
-    .line 953
     iget-object v5, p0, Lcom/android/server/display/DisplayManagerService;->mDisplayDevices:Ljava/util/ArrayList;
 
     invoke-virtual {v1, v5}, Lcom/android/server/display/LogicalDisplay;->updateLocked(Ljava/util/List;)V
 
-    .line 954
     invoke-virtual {v1}, Lcom/android/server/display/LogicalDisplay;->isValidLocked()Z
 
     move-result v5
 
     if-nez v5, :cond_1
 
-    .line 955
     iget-object v5, p0, Lcom/android/server/display/DisplayManagerService;->mLogicalDisplays:Landroid/util/SparseArray;
 
     invoke-virtual {v5, v3}, Landroid/util/SparseArray;->removeAt(I)V
 
-    .line 956
     const/4 v5, 0x3
 
     invoke-direct {p0, v2, v5}, Lcom/android/server/display/DisplayManagerService;->sendDisplayEventLocked(II)V
 
-    .line 957
     const/4 v0, 0x1
 
     :cond_0
     :goto_1
     move v4, v3
 
-    .line 962
     .end local v3    # "i":I
     .restart local v4    # "i":I
     goto :goto_0
 
-    .line 958
     .end local v4    # "i":I
     .restart local v3    # "i":I
     :cond_1
@@ -5150,17 +4606,14 @@
 
     if-nez v5, :cond_0
 
-    .line 959
     const/4 v5, 0x2
 
     invoke-direct {p0, v2, v5}, Lcom/android/server/display/DisplayManagerService;->sendDisplayEventLocked(II)V
 
-    .line 960
     const/4 v0, 0x1
 
     goto :goto_1
 
-    .line 963
     .end local v1    # "display":Lcom/android/server/display/LogicalDisplay;
     .end local v2    # "displayId":I
     :cond_2
@@ -5175,7 +4628,6 @@
     .param p2, "packageName"    # Ljava/lang/String;
 
     .prologue
-    .line 413
     iget-object v0, p0, Lcom/android/server/display/DisplayManagerService;->mScaledPids:Ljava/util/HashMap;
 
     invoke-static {p1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
@@ -5184,7 +4636,6 @@
 
     invoke-virtual {v0, v1, p2}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 414
     return-void
 .end method
 
@@ -5193,17 +4644,14 @@
     .param p1, "phase"    # I
 
     .prologue
-    .line 301
     const/16 v4, 0x64
 
     if-ne p1, v4, :cond_2
 
-    .line 302
     iget-object v5, p0, Lcom/android/server/display/DisplayManagerService;->mSyncRoot:Lcom/android/server/display/DisplayManagerService$SyncRoot;
 
     monitor-enter v5
 
-    .line 303
     :try_start_0
     invoke-static {}, Landroid/os/SystemClock;->uptimeMillis()J
 
@@ -5213,7 +4661,6 @@
 
     add-long v2, v6, v8
 
-    .line 304
     .local v2, "timeout":J
     :goto_0
     iget-object v4, p0, Lcom/android/server/display/DisplayManagerService;->mLogicalDisplays:Landroid/util/SparseArray;
@@ -5226,14 +4673,12 @@
 
     if-nez v4, :cond_1
 
-    .line 305
     invoke-static {}, Landroid/os/SystemClock;->uptimeMillis()J
 
     move-result-wide v6
 
     sub-long v0, v2, v6
 
-    .line 306
     .local v0, "delay":J
     const-wide/16 v6, 0x0
 
@@ -5241,7 +4686,6 @@
 
     if-gtz v4, :cond_0
 
-    .line 307
     new-instance v4, Ljava/lang/RuntimeException;
 
     const-string v6, "Timeout waiting for default display to be initialized."
@@ -5250,7 +4694,6 @@
 
     throw v4
 
-    .line 318
     .end local v0    # "delay":J
     .end local v2    # "timeout":J
     :catchall_0
@@ -5262,7 +4705,6 @@
 
     throw v4
 
-    .line 314
     .restart local v0    # "delay":J
     .restart local v2    # "timeout":J
     :cond_0
@@ -5276,13 +4718,11 @@
 
     goto :goto_0
 
-    .line 315
     :catch_0
     move-exception v4
 
     goto :goto_0
 
-    .line 318
     .end local v0    # "delay":J
     :cond_1
     :try_start_2
@@ -5290,7 +4730,6 @@
     :try_end_2
     .catchall {:try_start_2 .. :try_end_2} :catchall_0
 
-    .line 320
     .end local v2    # "timeout":J
     :cond_2
     return-void
@@ -5304,12 +4743,10 @@
 
     const/4 v2, 0x1
 
-    .line 292
     iget-object v0, p0, Lcom/android/server/display/DisplayManagerService;->mHandler:Lcom/android/server/display/DisplayManagerService$DisplayManagerHandler;
 
     invoke-virtual {v0, v2}, Lcom/android/server/display/DisplayManagerService$DisplayManagerHandler;->sendEmptyMessage(I)Z
 
-    .line 294
     const-string v0, "display"
 
     new-instance v1, Lcom/android/server/display/DisplayManagerService$BinderService;
@@ -5318,7 +4755,6 @@
 
     invoke-virtual {p0, v0, v1, v2}, Lcom/android/server/display/DisplayManagerService;->publishBinderService(Ljava/lang/String;Landroid/os/IBinder;Z)V
 
-    .line 296
     const-class v0, Landroid/hardware/display/DisplayManagerInternal;
 
     new-instance v1, Lcom/android/server/display/DisplayManagerService$LocalService;
@@ -5327,7 +4763,6 @@
 
     invoke-virtual {p0, v0, v1}, Lcom/android/server/display/DisplayManagerService;->publishLocalService(Ljava/lang/Class;Ljava/lang/Object;)V
 
-    .line 297
     return-void
 .end method
 
@@ -5336,7 +4771,6 @@
     .param p1, "pid"    # I
 
     .prologue
-    .line 418
     iget-object v0, p0, Lcom/android/server/display/DisplayManagerService;->mScaledPids:Ljava/util/HashMap;
 
     invoke-static {p1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
@@ -5349,7 +4783,6 @@
 
     if-eqz v0, :cond_0
 
-    .line 419
     iget-object v0, p0, Lcom/android/server/display/DisplayManagerService;->mScaledPids:Ljava/util/HashMap;
 
     invoke-static {p1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
@@ -5358,7 +4791,6 @@
 
     invoke-virtual {v0, v1}, Ljava/util/HashMap;->remove(Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 421
     :cond_0
     return-void
 .end method
@@ -5367,12 +4799,10 @@
     .locals 1
 
     .prologue
-    .line 425
     iget-object v0, p0, Lcom/android/server/display/DisplayManagerService;->mScaledPids:Ljava/util/HashMap;
 
     invoke-virtual {v0}, Ljava/util/HashMap;->clear()V
 
-    .line 426
     return-void
 .end method
 
@@ -5382,34 +4812,27 @@
     .param p2, "onlyCore"    # Z
 
     .prologue
-    .line 335
     iget-object v1, p0, Lcom/android/server/display/DisplayManagerService;->mSyncRoot:Lcom/android/server/display/DisplayManagerService$SyncRoot;
 
     monitor-enter v1
 
-    .line 336
     :try_start_0
     iput-boolean p1, p0, Lcom/android/server/display/DisplayManagerService;->mSafeMode:Z
 
-    .line 337
     iput-boolean p2, p0, Lcom/android/server/display/DisplayManagerService;->mOnlyCore:Z
 
-    .line 338
     monitor-exit v1
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 340
     iget-object v0, p0, Lcom/android/server/display/DisplayManagerService;->mHandler:Lcom/android/server/display/DisplayManagerService$DisplayManagerHandler;
 
     const/4 v1, 0x2
 
     invoke-virtual {v0, v1}, Lcom/android/server/display/DisplayManagerService$DisplayManagerHandler;->sendEmptyMessage(I)Z
 
-    .line 341
     return-void
 
-    .line 338
     :catchall_0
     move-exception v0
 
@@ -5425,12 +4848,10 @@
     .locals 2
 
     .prologue
-    .line 324
     iget-object v1, p0, Lcom/android/server/display/DisplayManagerService;->mSyncRoot:Lcom/android/server/display/DisplayManagerService$SyncRoot;
 
     monitor-enter v1
 
-    .line 325
     :try_start_0
     const-class v0, Landroid/view/WindowManagerInternal;
 
@@ -5442,7 +4863,6 @@
 
     iput-object v0, p0, Lcom/android/server/display/DisplayManagerService;->mWindowManagerInternal:Landroid/view/WindowManagerInternal;
 
-    .line 326
     const-class v0, Landroid/hardware/input/InputManagerInternal;
 
     invoke-static {v0}, Lcom/android/server/LocalServices;->getService(Ljava/lang/Class;)Ljava/lang/Object;
@@ -5453,18 +4873,14 @@
 
     iput-object v0, p0, Lcom/android/server/display/DisplayManagerService;->mInputManagerInternal:Landroid/hardware/input/InputManagerInternal;
 
-    .line 327
     const/4 v0, 0x0
 
     invoke-direct {p0, v0}, Lcom/android/server/display/DisplayManagerService;->scheduleTraversalLocked(Z)V
 
-    .line 328
     monitor-exit v1
 
-    .line 329
     return-void
 
-    .line 328
     :catchall_0
     move-exception v0
 

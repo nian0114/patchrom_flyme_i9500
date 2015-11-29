@@ -24,13 +24,10 @@
     .param p2, "looper"    # Landroid/os/Looper;
 
     .prologue
-    .line 262
     iput-object p1, p0, Lcom/android/server/enterprise/sso/GenericSSOService$GenericSSOHandler;->this$0:Lcom/android/server/enterprise/sso/GenericSSOService;
 
-    .line 263
     invoke-direct {p0, p2}, Landroid/os/Handler;-><init>(Landroid/os/Looper;)V
 
-    .line 264
     return-void
 .end method
 
@@ -41,29 +38,23 @@
     .param p1, "msg"    # Landroid/os/Message;
 
     .prologue
-    .line 267
     if-eqz p1, :cond_0
 
-    .line 268
     iget v5, p1, Landroid/os/Message;->arg1:I
 
-    .line 269
     .local v5, "userId":I
     invoke-virtual {p1}, Landroid/os/Message;->getData()Landroid/os/Bundle;
 
     move-result-object v2
 
-    .line 270
     .local v2, "configData":Landroid/os/Bundle;
     const/4 v1, 0x0
 
-    .line 271
     .local v1, "callback":Landroid/app/enterprise/sso/IGenericSSOCallback;
     iget v7, p1, Landroid/os/Message;->what:I
 
     packed-switch v7, :pswitch_data_0
 
-    .line 306
     .end local v1    # "callback":Landroid/app/enterprise/sso/IGenericSSOCallback;
     .end local v2    # "configData":Landroid/os/Bundle;
     .end local v5    # "userId":I
@@ -71,7 +62,6 @@
     :goto_0
     return-void
 
-    .line 274
     .restart local v1    # "callback":Landroid/app/enterprise/sso/IGenericSSOCallback;
     .restart local v2    # "configData":Landroid/os/Bundle;
     .restart local v5    # "userId":I
@@ -85,7 +75,6 @@
 
     move-object v1, v0
 
-    .line 275
     iget-object v7, p0, Lcom/android/server/enterprise/sso/GenericSSOService$GenericSSOHandler;->this$0:Lcom/android/server/enterprise/sso/GenericSSOService;
 
     # invokes: Lcom/android/server/enterprise/sso/GenericSSOService;->getTokenFromConfigData(ILandroid/os/Bundle;)Landroid/app/enterprise/sso/TokenInfo;
@@ -93,26 +82,21 @@
 
     move-result-object v4
 
-    .line 277
     .local v4, "tokenInfo":Landroid/app/enterprise/sso/TokenInfo;
     if-eqz v1, :cond_0
 
-    .line 278
     if-eqz v4, :cond_1
 
-    .line 279
     invoke-interface {v1, v4}, Landroid/app/enterprise/sso/IGenericSSOCallback;->tokenInfoSuccess(Landroid/app/enterprise/sso/TokenInfo;)V
     :try_end_0
     .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
 
     goto :goto_0
 
-    .line 283
     .end local v4    # "tokenInfo":Landroid/app/enterprise/sso/TokenInfo;
     :catch_0
     move-exception v3
 
-    .line 284
     .local v3, "e":Landroid/os/RemoteException;
     const-string v7, "GenericSSOService"
 
@@ -122,7 +106,6 @@
 
     goto :goto_0
 
-    .line 281
     .end local v3    # "e":Landroid/os/RemoteException;
     .restart local v4    # "tokenInfo":Landroid/app/enterprise/sso/TokenInfo;
     :cond_1
@@ -135,7 +118,6 @@
 
     goto :goto_0
 
-    .line 289
     .end local v4    # "tokenInfo":Landroid/app/enterprise/sso/TokenInfo;
     :pswitch_1
     :try_start_2
@@ -147,33 +129,27 @@
 
     move-object v1, v0
 
-    .line 290
     iget-object v7, p0, Lcom/android/server/enterprise/sso/GenericSSOService$GenericSSOHandler;->this$0:Lcom/android/server/enterprise/sso/GenericSSOService;
 
     invoke-virtual {v7, v5, v2}, Lcom/android/server/enterprise/sso/GenericSSOService;->acquireUserInfo(ILandroid/os/Bundle;)Landroid/app/enterprise/sso/UserInfo;
 
     move-result-object v6
 
-    .line 292
     .local v6, "userInfo":Landroid/app/enterprise/sso/UserInfo;
     if-eqz v1, :cond_0
 
-    .line 293
     if-eqz v6, :cond_2
 
-    .line 294
     invoke-interface {v1, v6}, Landroid/app/enterprise/sso/IGenericSSOCallback;->userInfoSuccess(Landroid/app/enterprise/sso/UserInfo;)V
     :try_end_2
     .catch Landroid/os/RemoteException; {:try_start_2 .. :try_end_2} :catch_1
 
     goto :goto_0
 
-    .line 298
     .end local v6    # "userInfo":Landroid/app/enterprise/sso/UserInfo;
     :catch_1
     move-exception v3
 
-    .line 299
     .restart local v3    # "e":Landroid/os/RemoteException;
     const-string v7, "GenericSSOService"
 
@@ -183,7 +159,6 @@
 
     goto :goto_0
 
-    .line 296
     .end local v3    # "e":Landroid/os/RemoteException;
     .restart local v6    # "userInfo":Landroid/app/enterprise/sso/UserInfo;
     :cond_2
@@ -196,7 +171,6 @@
 
     goto :goto_0
 
-    .line 271
     nop
 
     :pswitch_data_0

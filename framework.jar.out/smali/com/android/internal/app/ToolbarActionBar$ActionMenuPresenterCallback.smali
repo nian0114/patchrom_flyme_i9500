@@ -28,7 +28,6 @@
     .locals 0
 
     .prologue
-    .line 502
     iput-object p1, p0, Lcom/android/internal/app/ToolbarActionBar$ActionMenuPresenterCallback;->this$0:Lcom/android/internal/app/ToolbarActionBar;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -42,7 +41,6 @@
     .param p2, "x1"    # Lcom/android/internal/app/ToolbarActionBar$1;
 
     .prologue
-    .line 502
     invoke-direct {p0, p1}, Lcom/android/internal/app/ToolbarActionBar$ActionMenuPresenterCallback;-><init>(Lcom/android/internal/app/ToolbarActionBar;)V
 
     return-void
@@ -56,22 +54,18 @@
     .param p2, "allMenusAreClosing"    # Z
 
     .prologue
-    .line 516
     iget-boolean v0, p0, Lcom/android/internal/app/ToolbarActionBar$ActionMenuPresenterCallback;->mClosingActionMenu:Z
 
     if-eqz v0, :cond_0
 
-    .line 526
     :goto_0
     return-void
 
-    .line 520
     :cond_0
     const/4 v0, 0x1
 
     iput-boolean v0, p0, Lcom/android/internal/app/ToolbarActionBar$ActionMenuPresenterCallback;->mClosingActionMenu:Z
 
-    .line 521
     iget-object v0, p0, Lcom/android/internal/app/ToolbarActionBar$ActionMenuPresenterCallback;->this$0:Lcom/android/internal/app/ToolbarActionBar;
 
     # getter for: Lcom/android/internal/app/ToolbarActionBar;->mToolbar:Landroid/widget/Toolbar;
@@ -81,7 +75,6 @@
 
     invoke-virtual {v0}, Landroid/widget/Toolbar;->dismissPopupMenus()V
 
-    .line 522
     iget-object v0, p0, Lcom/android/internal/app/ToolbarActionBar$ActionMenuPresenterCallback;->this$0:Lcom/android/internal/app/ToolbarActionBar;
 
     # getter for: Lcom/android/internal/app/ToolbarActionBar;->mWindowCallback:Landroid/view/Window$Callback;
@@ -91,7 +84,6 @@
 
     if-eqz v0, :cond_1
 
-    .line 523
     iget-object v0, p0, Lcom/android/internal/app/ToolbarActionBar$ActionMenuPresenterCallback;->this$0:Lcom/android/internal/app/ToolbarActionBar;
 
     # getter for: Lcom/android/internal/app/ToolbarActionBar;->mWindowCallback:Landroid/view/Window$Callback;
@@ -103,7 +95,6 @@
 
     invoke-interface {v0, v1, p1}, Landroid/view/Window$Callback;->onPanelClosed(ILandroid/view/Menu;)V
 
-    .line 525
     :cond_1
     const/4 v0, 0x0
 
@@ -117,7 +108,6 @@
     .param p1, "subMenu"    # Lcom/android/internal/view/menu/MenuBuilder;
 
     .prologue
-    .line 507
     iget-object v0, p0, Lcom/android/internal/app/ToolbarActionBar$ActionMenuPresenterCallback;->this$0:Lcom/android/internal/app/ToolbarActionBar;
 
     # getter for: Lcom/android/internal/app/ToolbarActionBar;->mWindowCallback:Landroid/view/Window$Callback;
@@ -127,7 +117,6 @@
 
     if-eqz v0, :cond_0
 
-    .line 508
     iget-object v0, p0, Lcom/android/internal/app/ToolbarActionBar$ActionMenuPresenterCallback;->this$0:Lcom/android/internal/app/ToolbarActionBar;
 
     # getter for: Lcom/android/internal/app/ToolbarActionBar;->mWindowCallback:Landroid/view/Window$Callback;
@@ -139,10 +128,8 @@
 
     invoke-interface {v0, v1, p1}, Landroid/view/Window$Callback;->onMenuOpened(ILandroid/view/Menu;)Z
 
-    .line 509
     const/4 v0, 0x1
 
-    .line 511
     :goto_0
     return v0
 

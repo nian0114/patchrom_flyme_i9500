@@ -26,7 +26,6 @@
     .locals 0
 
     .prologue
-    .line 937
     iput-object p1, p0, Landroid/preference/PreferenceActivity$7;->this$0:Landroid/preference/PreferenceActivity;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -42,7 +41,6 @@
     .param p2, "event"    # Landroid/view/MotionEvent;
 
     .prologue
-    .line 941
     move-object/from16 v0, p0
 
     iget-object v0, v0, Landroid/preference/PreferenceActivity$7;->this$0:Landroid/preference/PreferenceActivity;
@@ -56,26 +54,21 @@
 
     if-nez v23, :cond_0
 
-    .line 942
     const/16 v23, 0x0
 
-    .line 1053
     .end local p1    # "v":Landroid/view/View;
     :goto_0
     return v23
 
-    .line 945
     .restart local p1    # "v":Landroid/view/View;
     :cond_0
     invoke-virtual/range {p2 .. p2}, Landroid/view/MotionEvent;->getAction()I
 
     move-result v2
 
-    .line 946
     .local v2, "action":I
     const/4 v15, 0x0
 
-    .line 947
     .local v15, "splitBar":Landroid/view/View;
     move-object/from16 v0, p1
 
@@ -85,7 +78,6 @@
 
     if-eqz v23, :cond_1
 
-    .line 948
     check-cast p1, Landroid/view/ViewGroup;
 
     .end local p1    # "v":Landroid/view/View;
@@ -99,27 +91,22 @@
 
     move-result-object v15
 
-    .line 951
     :cond_1
     if-nez v15, :cond_2
 
-    .line 952
     const/16 v23, 0x0
 
     goto :goto_0
 
-    .line 955
     :cond_2
     if-nez v2, :cond_3
 
-    .line 957
     const/16 v23, 0x0
 
     move/from16 v0, v23
 
     invoke-virtual {v15, v0}, Landroid/view/View;->setVisibility(I)V
 
-    .line 959
     move-object/from16 v0, p0
 
     iget-object v0, v0, Landroid/preference/PreferenceActivity$7;->this$0:Landroid/preference/PreferenceActivity;
@@ -131,13 +118,11 @@
     # setter for: Landroid/preference/PreferenceActivity;->mUpdateLayoutBySplitChange:Z
     invoke-static/range {v23 .. v24}, Landroid/preference/PreferenceActivity;->access$1002(Landroid/preference/PreferenceActivity;Z)Z
 
-    .line 1053
     :goto_1
     const/16 v23, 0x1
 
     goto :goto_0
 
-    .line 960
     :cond_3
     const/16 v23, 0x2
 
@@ -145,7 +130,6 @@
 
     if-ne v2, v0, :cond_a
 
-    .line 961
     move-object/from16 v0, p0
 
     iget-object v0, v0, Landroid/preference/PreferenceActivity$7;->this$0:Landroid/preference/PreferenceActivity;
@@ -161,7 +145,6 @@
 
     move-result v16
 
-    .line 962
     .local v16, "splitBarwidth":I
     move-object/from16 v0, p0
 
@@ -186,13 +169,11 @@
 
     move-result v12
 
-    .line 964
     .local v12, "parentLayoutWidth":I
     invoke-virtual/range {p2 .. p2}, Landroid/view/MotionEvent;->getX()F
 
     move-result v19
 
-    .line 965
     .local v19, "touchX":F
     move-object/from16 v0, p0
 
@@ -209,7 +190,6 @@
 
     move-result v11
 
-    .line 966
     .local v11, "newSplitBarPosX":F
     div-int/lit8 v23, v16, 0x2
 
@@ -221,11 +201,9 @@
 
     add-float v10, v11, v23
 
-    .line 967
     .local v10, "newSplitBarCenterPosX":F
     add-float v20, v11, v19
 
-    .line 969
     .local v20, "touchXInParentRect":F
     move/from16 v0, v16
 
@@ -245,7 +223,6 @@
 
     if-gtz v23, :cond_8
 
-    .line 971
     move/from16 v0, v16
 
     int-to-float v0, v0
@@ -256,14 +233,12 @@
 
     add-float v10, v10, v23
 
-    .line 974
     int-to-float v0, v12
 
     move/from16 v23, v0
 
     div-float v17, v10, v23
 
-    .line 975
     .local v17, "splitRatio":F
     const v23, 0x3f28f5c3    # 0.66f
 
@@ -271,7 +246,6 @@
 
     if-lez v23, :cond_7
 
-    .line 976
     int-to-float v0, v12
 
     move/from16 v23, v0
@@ -280,7 +254,6 @@
 
     mul-float v10, v23, v24
 
-    .line 985
     :cond_4
     :goto_2
     div-int/lit8 v23, v16, 0x2
@@ -293,7 +266,6 @@
 
     sub-float v11, v10, v23
 
-    .line 986
     move-object/from16 v0, p0
 
     iget-object v0, v0, Landroid/preference/PreferenceActivity$7;->this$0:Landroid/preference/PreferenceActivity;
@@ -309,7 +281,6 @@
 
     invoke-virtual {v0, v11}, Landroid/view/View;->setX(F)V
 
-    .line 987
     move-object/from16 v0, p0
 
     iget-object v0, v0, Landroid/preference/PreferenceActivity$7;->this$0:Landroid/preference/PreferenceActivity;
@@ -321,7 +292,6 @@
     # setter for: Landroid/preference/PreferenceActivity;->mUpdateLayoutBySplitChange:Z
     invoke-static/range {v23 .. v24}, Landroid/preference/PreferenceActivity;->access$1002(Landroid/preference/PreferenceActivity;Z)Z
 
-    .line 1007
     .end local v17    # "splitRatio":F
     :cond_5
     :goto_3
@@ -338,13 +308,11 @@
 
     if-eqz v23, :cond_6
 
-    .line 1008
     const/16 v23, 0x1
 
     # setter for: Landroid/preference/PreferenceActivity;->mUserUpdateSplit:Z
     invoke-static/range {v23 .. v23}, Landroid/preference/PreferenceActivity;->access$1102(Z)Z
 
-    .line 1009
     move-object/from16 v0, p0
 
     iget-object v0, v0, Landroid/preference/PreferenceActivity$7;->this$0:Landroid/preference/PreferenceActivity;
@@ -359,7 +327,6 @@
 
     check-cast v4, Landroid/widget/LinearLayout;
 
-    .line 1010
     .local v4, "headerLayout":Landroid/widget/LinearLayout;
     invoke-virtual {v4}, Landroid/widget/LinearLayout;->getLayoutParams()Landroid/view/ViewGroup$LayoutParams;
 
@@ -367,7 +334,6 @@
 
     check-cast v7, Landroid/widget/LinearLayout$LayoutParams;
 
-    .line 1012
     .local v7, "llp":Landroid/widget/LinearLayout$LayoutParams;
     move-object/from16 v0, p0
 
@@ -386,19 +352,15 @@
 
     check-cast v14, Landroid/widget/LinearLayout$LayoutParams;
 
-    .line 1015
     .local v14, "rlp":Landroid/widget/LinearLayout$LayoutParams;
     iget v5, v7, Landroid/widget/LinearLayout$LayoutParams;->weight:F
 
-    .line 1016
     .local v5, "leftPanelWeight":F
     iget v13, v14, Landroid/widget/LinearLayout$LayoutParams;->weight:F
 
-    .line 1017
     .local v13, "rightPanelWeight":F
     add-float v21, v5, v13
 
-    .line 1019
     .local v21, "weightSum":F
     int-to-float v0, v12
 
@@ -406,25 +368,19 @@
 
     div-float v6, v10, v23
 
-    .line 1021
     .local v6, "leftPanelWidthRatio":F
     mul-float v8, v21, v6
 
-    .line 1022
     .local v8, "newLeftPanelWeight":F
     sub-float v9, v21, v8
 
-    .line 1024
     .local v9, "newRightPanelWeight":F
     iput v8, v7, Landroid/widget/LinearLayout$LayoutParams;->weight:F
 
-    .line 1025
     iput v9, v14, Landroid/widget/LinearLayout$LayoutParams;->weight:F
 
-    .line 1026
     invoke-virtual {v4, v7}, Landroid/widget/LinearLayout;->setLayoutParams(Landroid/view/ViewGroup$LayoutParams;)V
 
-    .line 1027
     move-object/from16 v0, p0
 
     iget-object v0, v0, Landroid/preference/PreferenceActivity$7;->this$0:Landroid/preference/PreferenceActivity;
@@ -440,7 +396,6 @@
 
     invoke-virtual {v0, v14}, Landroid/view/ViewGroup;->setLayoutParams(Landroid/view/ViewGroup$LayoutParams;)V
 
-    .line 1029
     .end local v4    # "headerLayout":Landroid/widget/LinearLayout;
     .end local v5    # "leftPanelWeight":F
     .end local v6    # "leftPanelWidthRatio":F
@@ -464,7 +419,6 @@
 
     goto/16 :goto_1
 
-    .line 977
     .restart local v17    # "splitRatio":F
     :cond_7
     const v23, 0x3da3d70a    # 0.08f
@@ -473,7 +427,6 @@
 
     if-gez v23, :cond_4
 
-    .line 978
     move-object/from16 v0, p0
 
     iget-object v0, v0, Landroid/preference/PreferenceActivity$7;->this$0:Landroid/preference/PreferenceActivity;
@@ -488,7 +441,6 @@
 
     move-result-object v3
 
-    .line 979
     .local v3, "d":Landroid/util/DisplayMetrics;
     const/16 v23, 0x1
 
@@ -502,13 +454,11 @@
 
     move-result v18
 
-    .line 982
     .local v18, "splitXinFullview":F
     move/from16 v10, v18
 
     goto/16 :goto_2
 
-    .line 988
     .end local v3    # "d":Landroid/util/DisplayMetrics;
     .end local v17    # "splitRatio":F
     .end local v18    # "splitXinFullview":F
@@ -525,17 +475,14 @@
 
     if-ltz v23, :cond_5
 
-    .line 990
     add-float v10, v10, v19
 
-    .line 993
     int-to-float v0, v12
 
     move/from16 v23, v0
 
     div-float v17, v10, v23
 
-    .line 994
     .restart local v17    # "splitRatio":F
     const v23, 0x3da3d70a    # 0.08f
 
@@ -543,7 +490,6 @@
 
     if-gez v23, :cond_9
 
-    .line 995
     move-object/from16 v0, p0
 
     iget-object v0, v0, Landroid/preference/PreferenceActivity$7;->this$0:Landroid/preference/PreferenceActivity;
@@ -558,7 +504,6 @@
 
     move-result-object v3
 
-    .line 996
     .restart local v3    # "d":Landroid/util/DisplayMetrics;
     const/16 v23, 0x1
 
@@ -572,11 +517,9 @@
 
     move-result v18
 
-    .line 999
     .restart local v18    # "splitXinFullview":F
     move/from16 v10, v18
 
-    .line 1002
     .end local v3    # "d":Landroid/util/DisplayMetrics;
     .end local v18    # "splitXinFullview":F
     :cond_9
@@ -590,7 +533,6 @@
 
     sub-float v11, v10, v23
 
-    .line 1003
     move-object/from16 v0, p0
 
     iget-object v0, v0, Landroid/preference/PreferenceActivity$7;->this$0:Landroid/preference/PreferenceActivity;
@@ -606,7 +548,6 @@
 
     invoke-virtual {v0, v11}, Landroid/view/View;->setX(F)V
 
-    .line 1004
     move-object/from16 v0, p0
 
     iget-object v0, v0, Landroid/preference/PreferenceActivity$7;->this$0:Landroid/preference/PreferenceActivity;
@@ -620,7 +561,6 @@
 
     goto/16 :goto_3
 
-    .line 1030
     .end local v10    # "newSplitBarCenterPosX":F
     .end local v11    # "newSplitBarPosX":F
     .end local v12    # "parentLayoutWidth":I
@@ -635,7 +575,6 @@
 
     if-ne v2, v0, :cond_c
 
-    .line 1032
     move-object/from16 v0, p0
 
     iget-object v0, v0, Landroid/preference/PreferenceActivity$7;->this$0:Landroid/preference/PreferenceActivity;
@@ -650,7 +589,6 @@
 
     check-cast v4, Landroid/widget/LinearLayout;
 
-    .line 1033
     .restart local v4    # "headerLayout":Landroid/widget/LinearLayout;
     invoke-virtual {v4}, Landroid/widget/LinearLayout;->getLayoutParams()Landroid/view/ViewGroup$LayoutParams;
 
@@ -658,7 +596,6 @@
 
     check-cast v7, Landroid/widget/LinearLayout$LayoutParams;
 
-    .line 1036
     .restart local v7    # "llp":Landroid/widget/LinearLayout$LayoutParams;
     # getter for: Landroid/preference/PreferenceActivity;->mSplitBarMovedLeftWeight:F
     invoke-static {}, Landroid/preference/PreferenceActivity;->access$1200()F
@@ -673,7 +610,6 @@
 
     if-eqz v23, :cond_b
 
-    .line 1037
     iget v0, v7, Landroid/widget/LinearLayout$LayoutParams;->weight:F
 
     move/from16 v23, v0
@@ -681,7 +617,6 @@
     # setter for: Landroid/preference/PreferenceActivity;->mSplitBarMovedLeftWeight:F
     invoke-static/range {v23 .. v23}, Landroid/preference/PreferenceActivity;->access$1202(F)F
 
-    .line 1041
     :cond_b
     const/16 v23, 0x4
 
@@ -691,7 +626,6 @@
 
     goto/16 :goto_1
 
-    .line 1043
     .end local v4    # "headerLayout":Landroid/widget/LinearLayout;
     .end local v7    # "llp":Landroid/widget/LinearLayout$LayoutParams;
     :cond_c
@@ -735,7 +669,6 @@
 
     sub-float v22, v23, v24
 
-    .line 1044
     .local v22, "x":F
     const/16 v23, 0x0
 
@@ -743,10 +676,8 @@
 
     if-gez v23, :cond_d
 
-    .line 1045
     const/16 v22, 0x0
 
-    .line 1047
     :cond_d
     move-object/from16 v0, p0
 
@@ -765,7 +696,6 @@
 
     invoke-virtual {v0, v1}, Landroid/view/View;->setX(F)V
 
-    .line 1048
     move-object/from16 v0, p0
 
     iget-object v0, v0, Landroid/preference/PreferenceActivity$7;->this$0:Landroid/preference/PreferenceActivity;
@@ -777,7 +707,6 @@
     # setter for: Landroid/preference/PreferenceActivity;->mUpdateLayoutBySplitChange:Z
     invoke-static/range {v23 .. v24}, Landroid/preference/PreferenceActivity;->access$1002(Landroid/preference/PreferenceActivity;Z)Z
 
-    .line 1051
     const/16 v23, 0x4
 
     move/from16 v0, v23

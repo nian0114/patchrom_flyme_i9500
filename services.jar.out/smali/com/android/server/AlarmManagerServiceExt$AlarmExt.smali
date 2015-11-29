@@ -38,7 +38,6 @@
     .param p1, "alarm"    # Lcom/android/server/AlarmManagerService$Alarm;
 
     .prologue
-    .line 213
     move-object/from16 v0, p1
 
     iget v3, v0, Lcom/android/server/AlarmManagerService$Alarm;->type:I
@@ -87,7 +86,6 @@
 
     invoke-direct/range {v2 .. v17}, Lcom/android/server/AlarmManagerService$Alarm;-><init>(IJJJJJLandroid/app/PendingIntent;Landroid/os/WorkSource;Landroid/app/AlarmManager$AlarmClockInfo;I)V
 
-    .line 217
     move-object/from16 v0, p1
 
     iget v2, v0, Lcom/android/server/AlarmManagerService$Alarm;->pid:I
@@ -96,7 +94,6 @@
 
     iput v2, v0, Lcom/android/server/AlarmManagerServiceExt$AlarmExt;->pid:I
 
-    .line 218
     move-object/from16 v0, p1
 
     iget v2, v0, Lcom/android/server/AlarmManagerService$Alarm;->uid:I
@@ -105,7 +102,6 @@
 
     iput v2, v0, Lcom/android/server/AlarmManagerServiceExt$AlarmExt;->uid:I
 
-    .line 220
     move-object/from16 v0, p1
 
     iget v2, v0, Lcom/android/server/AlarmManagerService$Alarm;->count:I
@@ -114,7 +110,6 @@
 
     iput v2, v0, Lcom/android/server/AlarmManagerServiceExt$AlarmExt;->count:I
 
-    .line 227
     move-object/from16 v0, p1
 
     iget-wide v2, v0, Lcom/android/server/AlarmManagerService$Alarm;->repeatInterval:J
@@ -123,7 +118,6 @@
 
     iput-wide v2, v0, Lcom/android/server/AlarmManagerServiceExt$AlarmExt;->repeatIntervalOriginal:J
 
-    .line 228
     move-object/from16 v0, p0
 
     iget-wide v2, v0, Lcom/android/server/AlarmManagerServiceExt$AlarmExt;->repeatIntervalOriginal:J
@@ -143,14 +137,12 @@
 
     iput-wide v2, v0, Lcom/android/server/AlarmManagerServiceExt$AlarmExt;->repeatIntervalWindow:J
 
-    .line 230
     const-wide/16 v2, 0x0
 
     move-object/from16 v0, p0
 
     iput-wide v2, v0, Lcom/android/server/AlarmManagerServiceExt$AlarmExt;->lastTriggerWhen:J
 
-    .line 231
     const/4 v2, 0x0
 
     move-object/from16 v0, p0
@@ -165,7 +157,6 @@
 
     iput-boolean v2, v0, Lcom/android/server/AlarmManagerServiceExt$AlarmExt;->isPassedAlarm:Z
 
-    .line 232
     move-object/from16 v0, p1
 
     iget-wide v2, v0, Lcom/android/server/AlarmManagerService$Alarm;->whenElapsed:J
@@ -185,7 +176,6 @@
 
     iput-boolean v2, v0, Lcom/android/server/AlarmManagerServiceExt$AlarmExt;->isExact:Z
 
-    .line 234
     :try_start_0
     invoke-static {}, Landroid/app/ActivityManagerNative;->getDefault()Landroid/app/IActivityManager;
 
@@ -209,11 +199,9 @@
     :try_end_0
     .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 238
     :goto_2
     return-void
 
-    .line 228
     :cond_0
     move-object/from16 v0, p0
 
@@ -235,17 +223,14 @@
 
     goto :goto_0
 
-    .line 232
     :cond_1
     const/4 v2, 0x0
 
     goto :goto_1
 
-    .line 235
     :catch_0
     move-exception v18
 
-    .line 236
     .local v18, "e":Landroid/os/RemoteException;
     invoke-virtual/range {v18 .. v18}, Landroid/os/RemoteException;->printStackTrace()V
 

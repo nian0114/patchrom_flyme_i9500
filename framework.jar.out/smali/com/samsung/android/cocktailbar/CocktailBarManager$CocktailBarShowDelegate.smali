@@ -26,15 +26,12 @@
     .param p2, "showListener"    # Lcom/samsung/android/cocktailbar/CocktailBarManager$ShowListener;
 
     .prologue
-    .line 730
     iput-object p1, p0, Lcom/samsung/android/cocktailbar/CocktailBarManager$CocktailBarShowDelegate;->this$0:Lcom/samsung/android/cocktailbar/CocktailBarManager;
 
     invoke-direct {p0}, Lcom/samsung/android/cocktailbar/ICocktailBarShowCallback$Stub;-><init>()V
 
-    .line 731
     iput-object p2, p0, Lcom/samsung/android/cocktailbar/CocktailBarManager$CocktailBarShowDelegate;->mShowListener:Lcom/samsung/android/cocktailbar/CocktailBarManager$ShowListener;
 
-    .line 732
     return-void
 .end method
 
@@ -50,17 +47,14 @@
     .end annotation
 
     .prologue
-    .line 736
     iget-object v0, p0, Lcom/samsung/android/cocktailbar/CocktailBarManager$CocktailBarShowDelegate;->mShowListener:Lcom/samsung/android/cocktailbar/CocktailBarManager$ShowListener;
 
     if-eqz v0, :cond_0
 
-    .line 737
     iget-object v0, p0, Lcom/samsung/android/cocktailbar/CocktailBarManager$CocktailBarShowDelegate;->mShowListener:Lcom/samsung/android/cocktailbar/CocktailBarManager$ShowListener;
 
     invoke-interface {v0, p1}, Lcom/samsung/android/cocktailbar/CocktailBarManager$ShowListener;->onShown(Landroid/os/IBinder;)V
 
-    .line 739
     :cond_0
     return-void
 .end method

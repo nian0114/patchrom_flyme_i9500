@@ -36,7 +36,6 @@
     .locals 0
 
     .prologue
-    .line 341
     iput-object p1, p0, Lcom/android/server/epm/overlay/ThemeManagerService$1;->this$0:Lcom/android/server/epm/overlay/ThemeManagerService;
 
     iput-object p2, p0, Lcom/android/server/epm/overlay/ThemeManagerService$1;->val$masterContext:Landroid/content/Context;
@@ -60,7 +59,6 @@
     .locals 6
 
     .prologue
-    .line 344
     iget-object v0, p0, Lcom/android/server/epm/overlay/ThemeManagerService$1;->this$0:Lcom/android/server/epm/overlay/ThemeManagerService;
 
     iget-object v1, p0, Lcom/android/server/epm/overlay/ThemeManagerService$1;->val$masterContext:Landroid/content/Context;
@@ -83,6 +81,5 @@
 
     invoke-virtual/range {v0 .. v5}, Lcom/android/server/epm/overlay/ThemeManagerService;->installThemes(Landroid/content/Context;Ljava/lang/String;Ljava/util/List;Ljava/lang/String;I)V
 
-    .line 345
     return-void
 .end method

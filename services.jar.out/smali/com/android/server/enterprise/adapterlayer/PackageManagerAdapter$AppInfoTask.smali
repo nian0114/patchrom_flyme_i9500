@@ -40,16 +40,12 @@
     .param p2, "usage"    # J
 
     .prologue
-    .line 724
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 725
     iput-object p1, p0, Lcom/android/server/enterprise/adapterlayer/PackageManagerAdapter$AppInfoTask;->mCmd:Ljava/lang/String;
 
-    .line 726
     iput-wide p2, p0, Lcom/android/server/enterprise/adapterlayer/PackageManagerAdapter$AppInfoTask;->mUsage:J
 
-    .line 727
     return-void
 .end method
 
@@ -60,7 +56,6 @@
     .param p1, "other"    # Lcom/android/server/enterprise/adapterlayer/PackageManagerAdapter$AppInfoTask;
 
     .prologue
-    .line 756
     iget-wide v0, p0, Lcom/android/server/enterprise/adapterlayer/PackageManagerAdapter$AppInfoTask;->mUsage:J
 
     iget-wide v2, p1, Lcom/android/server/enterprise/adapterlayer/PackageManagerAdapter$AppInfoTask;->mUsage:J
@@ -69,7 +64,6 @@
 
     if-nez v0, :cond_0
 
-    .line 757
     iget-object v0, p0, Lcom/android/server/enterprise/adapterlayer/PackageManagerAdapter$AppInfoTask;->mCmd:Ljava/lang/String;
 
     iget-object v1, p1, Lcom/android/server/enterprise/adapterlayer/PackageManagerAdapter$AppInfoTask;->mCmd:Ljava/lang/String;
@@ -78,7 +72,6 @@
 
     move-result v0
 
-    .line 759
     :goto_0
     return v0
 
@@ -101,7 +94,6 @@
     .param p1, "x0"    # Ljava/lang/Object;
 
     .prologue
-    .line 714
     check-cast p1, Lcom/android/server/enterprise/adapterlayer/PackageManagerAdapter$AppInfoTask;
 
     .end local p1    # "x0":Ljava/lang/Object;
@@ -116,7 +108,6 @@
     .locals 1
 
     .prologue
-    .line 735
     iget-object v0, p0, Lcom/android/server/enterprise/adapterlayer/PackageManagerAdapter$AppInfoTask;->mCmd:Ljava/lang/String;
 
     return-object v0
@@ -126,7 +117,6 @@
     .locals 2
 
     .prologue
-    .line 744
     iget-wide v0, p0, Lcom/android/server/enterprise/adapterlayer/PackageManagerAdapter$AppInfoTask;->mUsage:J
 
     return-wide v0

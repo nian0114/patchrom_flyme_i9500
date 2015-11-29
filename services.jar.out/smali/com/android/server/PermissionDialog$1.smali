@@ -23,7 +23,6 @@
     .locals 0
 
     .prologue
-    .line 120
     iput-object p1, p0, Lcom/android/server/PermissionDialog$1;->this$0:Lcom/android/server/PermissionDialog;
 
     invoke-direct {p0}, Landroid/os/Handler;-><init>()V
@@ -38,7 +37,6 @@
     .param p1, "msg"    # Landroid/os/Message;
 
     .prologue
-    .line 123
     iget-object v0, p0, Lcom/android/server/PermissionDialog$1;->this$0:Lcom/android/server/PermissionDialog;
 
     # getter for: Lcom/android/server/PermissionDialog;->mChoice:Landroid/widget/CheckBox;
@@ -50,21 +48,17 @@
 
     move-result v5
 
-    .line 124
     .local v5, "remember":Z
     iget v0, p1, Landroid/os/Message;->what:I
 
     packed-switch v0, :pswitch_data_0
 
-    .line 132
     :pswitch_0
     const/4 v4, 0x1
 
-    .line 133
     .local v4, "mode":I
     const/4 v5, 0x0
 
-    .line 135
     :goto_0
     iget-object v0, p0, Lcom/android/server/PermissionDialog$1;->this$0:Lcom/android/server/PermissionDialog;
 
@@ -96,33 +90,26 @@
 
     invoke-virtual/range {v0 .. v5}, Lcom/android/server/AppOpsService;->notifyOperation(IILjava/lang/String;IZ)V
 
-    .line 137
     iget-object v0, p0, Lcom/android/server/PermissionDialog$1;->this$0:Lcom/android/server/PermissionDialog;
 
     invoke-virtual {v0}, Lcom/android/server/PermissionDialog;->dismiss()V
 
-    .line 138
     return-void
 
-    .line 126
     .end local v4    # "mode":I
     :pswitch_1
     const/4 v4, 0x0
 
-    .line 127
     .restart local v4    # "mode":I
     goto :goto_0
 
-    .line 129
     .end local v4    # "mode":I
     :pswitch_2
     const/4 v4, 0x1
 
-    .line 130
     .restart local v4    # "mode":I
     goto :goto_0
 
-    .line 124
     :pswitch_data_0
     .packed-switch 0x2
         :pswitch_1

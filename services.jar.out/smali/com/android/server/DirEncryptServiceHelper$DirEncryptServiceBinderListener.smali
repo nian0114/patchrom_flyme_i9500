@@ -29,15 +29,12 @@
     .param p2, "listener"    # Landroid/os/storage/IDirEncryptServiceListener;
 
     .prologue
-    .line 119
     iput-object p1, p0, Lcom/android/server/DirEncryptServiceHelper$DirEncryptServiceBinderListener;->this$0:Lcom/android/server/DirEncryptServiceHelper;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 120
     iput-object p2, p0, Lcom/android/server/DirEncryptServiceHelper$DirEncryptServiceBinderListener;->mListener:Landroid/os/storage/IDirEncryptServiceListener;
 
-    .line 122
     return-void
 .end method
 
@@ -47,12 +44,10 @@
     .locals 3
 
     .prologue
-    .line 125
     const-string v0, "An IDirEncryptServiceListener has died!"
 
     invoke-static {v0}, Lcom/android/server/DirEncryptServiceHelper;->logD(Ljava/lang/String;)V
 
-    .line 126
     iget-object v0, p0, Lcom/android/server/DirEncryptServiceHelper$DirEncryptServiceBinderListener;->this$0:Lcom/android/server/DirEncryptServiceHelper;
 
     # getter for: Lcom/android/server/DirEncryptServiceHelper;->mListeners:Ljava/util/ArrayList;
@@ -62,7 +57,6 @@
 
     monitor-enter v1
 
-    .line 127
     :try_start_0
     iget-object v0, p0, Lcom/android/server/DirEncryptServiceHelper$DirEncryptServiceBinderListener;->this$0:Lcom/android/server/DirEncryptServiceHelper;
 
@@ -73,7 +67,6 @@
 
     invoke-virtual {v0, p0}, Ljava/util/ArrayList;->remove(Ljava/lang/Object;)Z
 
-    .line 128
     iget-object v0, p0, Lcom/android/server/DirEncryptServiceHelper$DirEncryptServiceBinderListener;->mListener:Landroid/os/storage/IDirEncryptServiceListener;
 
     invoke-interface {v0}, Landroid/os/storage/IDirEncryptServiceListener;->asBinder()Landroid/os/IBinder;
@@ -84,13 +77,10 @@
 
     invoke-interface {v0, p0, v2}, Landroid/os/IBinder;->unlinkToDeath(Landroid/os/IBinder$DeathRecipient;I)Z
 
-    .line 129
     monitor-exit v1
 
-    .line 130
     return-void
 
-    .line 129
     :catchall_0
     move-exception v0
 

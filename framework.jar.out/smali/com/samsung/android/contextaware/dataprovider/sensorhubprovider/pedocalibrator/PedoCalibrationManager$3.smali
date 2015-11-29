@@ -26,7 +26,6 @@
     .locals 0
 
     .prologue
-    .line 204
     iput-object p1, p0, Lcom/samsung/android/contextaware/dataprovider/sensorhubprovider/pedocalibrator/PedoCalibrationManager$3;->this$0:Lcom/samsung/android/contextaware/dataprovider/sensorhubprovider/pedocalibrator/PedoCalibrationManager;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -44,7 +43,6 @@
     .prologue
     const/16 v3, 0x11
 
-    .line 207
     const-string v2, "$GPGSA"
 
     invoke-virtual {p3, v2}, Ljava/lang/String;->startsWith(Ljava/lang/String;)Z
@@ -53,14 +51,12 @@
 
     if-eqz v2, :cond_0
 
-    .line 208
     const-string v2, "[,*]"
 
     invoke-virtual {p3, v2}, Ljava/lang/String;->split(Ljava/lang/String;)[Ljava/lang/String;
 
     move-result-object v1
 
-    .line 209
     .local v1, "split":[Ljava/lang/String;
     aget-object v2, v1, v3
 
@@ -70,7 +66,6 @@
 
     if-lez v2, :cond_0
 
-    .line 212
     :try_start_0
     iget-object v2, p0, Lcom/samsung/android/contextaware/dataprovider/sensorhubprovider/pedocalibrator/PedoCalibrationManager$3;->this$0:Lcom/samsung/android/contextaware/dataprovider/sensorhubprovider/pedocalibrator/PedoCalibrationManager;
 
@@ -89,7 +84,6 @@
     # setter for: Lcom/samsung/android/contextaware/dataprovider/sensorhubprovider/pedocalibrator/PedoCalibrationManager;->mHdop:F
     invoke-static {v2, v3}, Lcom/samsung/android/contextaware/dataprovider/sensorhubprovider/pedocalibrator/PedoCalibrationManager;->access$402(Lcom/samsung/android/contextaware/dataprovider/sensorhubprovider/pedocalibrator/PedoCalibrationManager;F)F
 
-    .line 213
     iget-object v2, p0, Lcom/samsung/android/contextaware/dataprovider/sensorhubprovider/pedocalibrator/PedoCalibrationManager$3;->this$0:Lcom/samsung/android/contextaware/dataprovider/sensorhubprovider/pedocalibrator/PedoCalibrationManager;
 
     new-instance v3, Ljava/lang/StringBuilder;
@@ -122,18 +116,15 @@
     :try_end_0
     .catch Ljava/lang/NumberFormatException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 221
     .end local v1    # "split":[Ljava/lang/String;
     :cond_0
     :goto_0
     return-void
 
-    .line 215
     .restart local v1    # "split":[Ljava/lang/String;
     :catch_0
     move-exception v0
 
-    .line 217
     .local v0, "e":Ljava/lang/NumberFormatException;
     iget-object v2, p0, Lcom/samsung/android/contextaware/dataprovider/sensorhubprovider/pedocalibrator/PedoCalibrationManager$3;->this$0:Lcom/samsung/android/contextaware/dataprovider/sensorhubprovider/pedocalibrator/PedoCalibrationManager;
 

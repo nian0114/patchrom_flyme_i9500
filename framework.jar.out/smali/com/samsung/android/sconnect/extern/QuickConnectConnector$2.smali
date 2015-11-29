@@ -23,10 +23,8 @@
     .locals 0
 
     .prologue
-    .line 1
     iput-object p1, p0, Lcom/samsung/android/sconnect/extern/QuickConnectConnector$2;->this$0:Lcom/samsung/android/sconnect/extern/QuickConnectConnector;
 
-    .line 197
     invoke-direct {p0}, Lcom/samsung/android/sconnect/central/extern/ISconnectCallback$Stub;-><init>()V
 
     return-void
@@ -49,12 +47,11 @@
     .end annotation
 
     .prologue
-    .line 201
     const-string v0, "QuickConnectConnector"
 
     new-instance v1, Ljava/lang/StringBuilder;
 
-    const-string/jumbo v2, "onDeviceAdded: deviceName:"
+    const-string v2, "onDeviceAdded: deviceName:"
 
     invoke-direct {v1, v2}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
@@ -68,7 +65,6 @@
 
     move-result-object v1
 
-    .line 202
     invoke-virtual {v1, p4}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
     move-result-object v1
@@ -77,10 +73,8 @@
 
     move-result-object v1
 
-    .line 201
     invoke-static {v0, v1}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 204
     iget-object v0, p0, Lcom/samsung/android/sconnect/extern/QuickConnectConnector$2;->this$0:Lcom/samsung/android/sconnect/extern/QuickConnectConnector;
 
     # getter for: Lcom/samsung/android/sconnect/extern/QuickConnectConnector;->mDeviceListener:Lcom/samsung/android/sconnect/extern/QuickConnectConnector$IDeviceStatusListener;
@@ -90,7 +84,6 @@
 
     if-eqz v0, :cond_0
 
-    .line 205
     iget-object v0, p0, Lcom/samsung/android/sconnect/extern/QuickConnectConnector$2;->this$0:Lcom/samsung/android/sconnect/extern/QuickConnectConnector;
 
     # getter for: Lcom/samsung/android/sconnect/extern/QuickConnectConnector;->mDeviceListener:Lcom/samsung/android/sconnect/extern/QuickConnectConnector$IDeviceStatusListener;
@@ -112,7 +105,6 @@
 
     invoke-interface/range {v0 .. v6}, Lcom/samsung/android/sconnect/extern/QuickConnectConnector$IDeviceStatusListener;->onDeviceAdded(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;IILjava/lang/String;)V
 
-    .line 208
     :cond_0
     return-void
 .end method
@@ -132,12 +124,11 @@
     .end annotation
 
     .prologue
-    .line 223
     const-string v0, "QuickConnectConnector"
 
     new-instance v1, Ljava/lang/StringBuilder;
 
-    const-string/jumbo v2, "onDeviceChanged: deviceName:"
+    const-string v2, "onDeviceChanged: deviceName:"
 
     invoke-direct {v1, v2}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
@@ -151,7 +142,6 @@
 
     move-result-object v1
 
-    .line 224
     invoke-virtual {v1, p4}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
     move-result-object v1
@@ -160,10 +150,8 @@
 
     move-result-object v1
 
-    .line 223
     invoke-static {v0, v1}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 226
     iget-object v0, p0, Lcom/samsung/android/sconnect/extern/QuickConnectConnector$2;->this$0:Lcom/samsung/android/sconnect/extern/QuickConnectConnector;
 
     # getter for: Lcom/samsung/android/sconnect/extern/QuickConnectConnector;->mDeviceListener:Lcom/samsung/android/sconnect/extern/QuickConnectConnector$IDeviceStatusListener;
@@ -173,7 +161,6 @@
 
     if-eqz v0, :cond_0
 
-    .line 227
     iget-object v0, p0, Lcom/samsung/android/sconnect/extern/QuickConnectConnector$2;->this$0:Lcom/samsung/android/sconnect/extern/QuickConnectConnector;
 
     # getter for: Lcom/samsung/android/sconnect/extern/QuickConnectConnector;->mDeviceListener:Lcom/samsung/android/sconnect/extern/QuickConnectConnector$IDeviceStatusListener;
@@ -195,7 +182,6 @@
 
     invoke-interface/range {v0 .. v6}, Lcom/samsung/android/sconnect/extern/QuickConnectConnector$IDeviceStatusListener;->onDeviceChanged(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;IILjava/lang/String;)V
 
-    .line 230
     :cond_0
     return-void
 .end method
@@ -212,12 +198,11 @@
     .end annotation
 
     .prologue
-    .line 213
     const-string v0, "QuickConnectConnector"
 
     new-instance v1, Ljava/lang/StringBuilder;
 
-    const-string/jumbo v2, "onDeviceRemoved: deviceName:"
+    const-string v2, "onDeviceRemoved: deviceName:"
 
     invoke-direct {v1, v2}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
@@ -231,7 +216,6 @@
 
     invoke-static {v0, v1}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 215
     iget-object v0, p0, Lcom/samsung/android/sconnect/extern/QuickConnectConnector$2;->this$0:Lcom/samsung/android/sconnect/extern/QuickConnectConnector;
 
     # getter for: Lcom/samsung/android/sconnect/extern/QuickConnectConnector;->mDeviceListener:Lcom/samsung/android/sconnect/extern/QuickConnectConnector$IDeviceStatusListener;
@@ -241,7 +225,6 @@
 
     if-eqz v0, :cond_0
 
-    .line 216
     iget-object v0, p0, Lcom/samsung/android/sconnect/extern/QuickConnectConnector$2;->this$0:Lcom/samsung/android/sconnect/extern/QuickConnectConnector;
 
     # getter for: Lcom/samsung/android/sconnect/extern/QuickConnectConnector;->mDeviceListener:Lcom/samsung/android/sconnect/extern/QuickConnectConnector$IDeviceStatusListener;
@@ -251,7 +234,6 @@
 
     invoke-interface {v0, p1, p2, p3}, Lcom/samsung/android/sconnect/extern/QuickConnectConnector$IDeviceStatusListener;->onDeviceRemoved(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 218
     :cond_0
     return-void
 .end method
@@ -265,14 +247,12 @@
     .end annotation
 
     .prologue
-    .line 243
     const-string v0, "QuickConnectConnector"
 
-    const-string/jumbo v1, "onDiscoveryFinished:"
+    const-string v1, "onDiscoveryFinished:"
 
     invoke-static {v0, v1}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 245
     iget-object v0, p0, Lcom/samsung/android/sconnect/extern/QuickConnectConnector$2;->this$0:Lcom/samsung/android/sconnect/extern/QuickConnectConnector;
 
     # getter for: Lcom/samsung/android/sconnect/extern/QuickConnectConnector;->mDeviceListener:Lcom/samsung/android/sconnect/extern/QuickConnectConnector$IDeviceStatusListener;
@@ -282,7 +262,6 @@
 
     if-eqz v0, :cond_0
 
-    .line 246
     iget-object v0, p0, Lcom/samsung/android/sconnect/extern/QuickConnectConnector$2;->this$0:Lcom/samsung/android/sconnect/extern/QuickConnectConnector;
 
     # getter for: Lcom/samsung/android/sconnect/extern/QuickConnectConnector;->mDeviceListener:Lcom/samsung/android/sconnect/extern/QuickConnectConnector$IDeviceStatusListener;
@@ -292,7 +271,6 @@
 
     invoke-interface {v0}, Lcom/samsung/android/sconnect/extern/QuickConnectConnector$IDeviceStatusListener;->onDiscoveryFinished()V
 
-    .line 248
     :cond_0
     return-void
 .end method
@@ -306,14 +284,12 @@
     .end annotation
 
     .prologue
-    .line 234
     const-string v0, "QuickConnectConnector"
 
-    const-string/jumbo v1, "onDiscoveryStarted:"
+    const-string v1, "onDiscoveryStarted:"
 
     invoke-static {v0, v1}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 236
     iget-object v0, p0, Lcom/samsung/android/sconnect/extern/QuickConnectConnector$2;->this$0:Lcom/samsung/android/sconnect/extern/QuickConnectConnector;
 
     # getter for: Lcom/samsung/android/sconnect/extern/QuickConnectConnector;->mDeviceListener:Lcom/samsung/android/sconnect/extern/QuickConnectConnector$IDeviceStatusListener;
@@ -323,7 +299,6 @@
 
     if-eqz v0, :cond_0
 
-    .line 237
     iget-object v0, p0, Lcom/samsung/android/sconnect/extern/QuickConnectConnector$2;->this$0:Lcom/samsung/android/sconnect/extern/QuickConnectConnector;
 
     # getter for: Lcom/samsung/android/sconnect/extern/QuickConnectConnector;->mDeviceListener:Lcom/samsung/android/sconnect/extern/QuickConnectConnector$IDeviceStatusListener;
@@ -333,7 +308,6 @@
 
     invoke-interface {v0}, Lcom/samsung/android/sconnect/extern/QuickConnectConnector$IDeviceStatusListener;->onDiscoveryStarted()V
 
-    .line 239
     :cond_0
     return-void
 .end method

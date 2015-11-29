@@ -75,7 +75,6 @@
     .locals 1
 
     .prologue
-    .line 77
     new-instance v0, Landroid/app/KnoxNotification$1;
 
     invoke-direct {v0}, Landroid/app/KnoxNotification$1;-><init>()V
@@ -114,52 +113,39 @@
     .end annotation
 
     .prologue
-    .line 31
     .local p9, "labels":Ljava/util/HashMap;, "Ljava/util/HashMap<Ljava/lang/String;Ljava/lang/Integer;>;"
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 28
     new-instance v0, Ljava/util/HashMap;
 
     invoke-direct {v0}, Ljava/util/HashMap;-><init>()V
 
     iput-object v0, p0, Landroid/app/KnoxNotification;->labels:Ljava/util/HashMap;
 
-    .line 29
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
     iput-object v0, p0, Landroid/app/KnoxNotification;->notifIds:Ljava/util/List;
 
-    .line 32
     iput-object p3, p0, Landroid/app/KnoxNotification;->notification:Landroid/app/Notification;
 
-    .line 33
     iput-object p4, p0, Landroid/app/KnoxNotification;->pkg:Ljava/lang/String;
 
-    .line 34
     iput p6, p0, Landroid/app/KnoxNotification;->userId:I
 
-    .line 35
     iput-object p7, p0, Landroid/app/KnoxNotification;->userName:Ljava/lang/String;
 
-    .line 36
     iput p1, p0, Landroid/app/KnoxNotification;->notifId:I
 
-    .line 37
     iput-object p5, p0, Landroid/app/KnoxNotification;->appLabel:Ljava/lang/String;
 
-    .line 38
     iput-object p2, p0, Landroid/app/KnoxNotification;->tag:Ljava/lang/String;
 
-    .line 39
     iput-boolean p8, p0, Landroid/app/KnoxNotification;->sanitized:Z
 
-    .line 40
     iput-object p9, p0, Landroid/app/KnoxNotification;->labels:Ljava/util/HashMap;
 
-    .line 41
     iget-object v0, p0, Landroid/app/KnoxNotification;->notifIds:Ljava/util/List;
 
     new-instance v1, Ljava/lang/Integer;
@@ -168,7 +154,6 @@
 
     invoke-interface {v0, v1}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    .line 42
     return-void
 .end method
 
@@ -205,56 +190,42 @@
     .end annotation
 
     .prologue
-    .line 44
     .local p9, "labels":Ljava/util/HashMap;, "Ljava/util/HashMap<Ljava/lang/String;Ljava/lang/Integer;>;"
     .local p10, "notifIds":Ljava/util/List;, "Ljava/util/List<Ljava/lang/Integer;>;"
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 28
     new-instance v0, Ljava/util/HashMap;
 
     invoke-direct {v0}, Ljava/util/HashMap;-><init>()V
 
     iput-object v0, p0, Landroid/app/KnoxNotification;->labels:Ljava/util/HashMap;
 
-    .line 29
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
     iput-object v0, p0, Landroid/app/KnoxNotification;->notifIds:Ljava/util/List;
 
-    .line 45
     iput-object p3, p0, Landroid/app/KnoxNotification;->notification:Landroid/app/Notification;
 
-    .line 46
     iput-object p4, p0, Landroid/app/KnoxNotification;->pkg:Ljava/lang/String;
 
-    .line 47
     iput p6, p0, Landroid/app/KnoxNotification;->userId:I
 
-    .line 48
     iput-object p7, p0, Landroid/app/KnoxNotification;->userName:Ljava/lang/String;
 
-    .line 49
     iput p1, p0, Landroid/app/KnoxNotification;->notifId:I
 
-    .line 50
     iput-object p5, p0, Landroid/app/KnoxNotification;->appLabel:Ljava/lang/String;
 
-    .line 51
     iput-object p2, p0, Landroid/app/KnoxNotification;->tag:Ljava/lang/String;
 
-    .line 52
     iput-boolean p8, p0, Landroid/app/KnoxNotification;->sanitized:Z
 
-    .line 53
     iput-object p9, p0, Landroid/app/KnoxNotification;->labels:Ljava/util/HashMap;
 
-    .line 54
     iput-object p10, p0, Landroid/app/KnoxNotification;->notifIds:Ljava/util/List;
 
-    .line 55
     return-void
 .end method
 
@@ -263,31 +234,26 @@
     .param p1, "in"    # Landroid/os/Parcel;
 
     .prologue
-    .line 60
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 28
     new-instance v1, Ljava/util/HashMap;
 
     invoke-direct {v1}, Ljava/util/HashMap;-><init>()V
 
     iput-object v1, p0, Landroid/app/KnoxNotification;->labels:Ljava/util/HashMap;
 
-    .line 29
     new-instance v1, Ljava/util/ArrayList;
 
     invoke-direct {v1}, Ljava/util/ArrayList;-><init>()V
 
     iput-object v1, p0, Landroid/app/KnoxNotification;->notifIds:Ljava/util/List;
 
-    .line 61
     invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
 
     move-result v1
 
     iput v1, p0, Landroid/app/KnoxNotification;->notifId:I
 
-    .line 62
     const-class v1, Landroid/app/Notification;
 
     invoke-virtual {v1}, Ljava/lang/Class;->getClassLoader()Ljava/lang/ClassLoader;
@@ -302,42 +268,36 @@
 
     iput-object v1, p0, Landroid/app/KnoxNotification;->notification:Landroid/app/Notification;
 
-    .line 63
     invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
 
     move-result v1
 
     iput v1, p0, Landroid/app/KnoxNotification;->userId:I
 
-    .line 64
     invoke-virtual {p1}, Landroid/os/Parcel;->readString()Ljava/lang/String;
 
     move-result-object v1
 
     iput-object v1, p0, Landroid/app/KnoxNotification;->userName:Ljava/lang/String;
 
-    .line 65
     invoke-virtual {p1}, Landroid/os/Parcel;->readString()Ljava/lang/String;
 
     move-result-object v1
 
     iput-object v1, p0, Landroid/app/KnoxNotification;->pkg:Ljava/lang/String;
 
-    .line 66
     invoke-virtual {p1}, Landroid/os/Parcel;->readString()Ljava/lang/String;
 
     move-result-object v1
 
     iput-object v1, p0, Landroid/app/KnoxNotification;->appLabel:Ljava/lang/String;
 
-    .line 67
     invoke-virtual {p1}, Landroid/os/Parcel;->readString()Ljava/lang/String;
 
     move-result-object v1
 
     iput-object v1, p0, Landroid/app/KnoxNotification;->tag:Ljava/lang/String;
 
-    .line 68
     invoke-virtual {p1}, Landroid/os/Parcel;->readString()Ljava/lang/String;
 
     move-result-object v1
@@ -350,14 +310,12 @@
 
     iput-boolean v1, p0, Landroid/app/KnoxNotification;->sanitized:Z
 
-    .line 69
     invoke-virtual {p1}, Landroid/os/Parcel;->readBundle()Landroid/os/Bundle;
 
     move-result-object v0
 
-    .line 70
     .local v0, "b":Landroid/os/Bundle;
-    const-string/jumbo v1, "mapKey"
+    const-string v1, "mapKey"
 
     invoke-virtual {v0, v1}, Landroid/os/Bundle;->getSerializable(Ljava/lang/String;)Ljava/io/Serializable;
 
@@ -367,7 +325,6 @@
 
     iput-object v1, p0, Landroid/app/KnoxNotification;->labels:Ljava/util/HashMap;
 
-    .line 71
     iget-object v1, p0, Landroid/app/KnoxNotification;->notifIds:Ljava/util/List;
 
     const-class v2, Ljava/util/List;
@@ -378,7 +335,6 @@
 
     invoke-virtual {p1, v1, v2}, Landroid/os/Parcel;->readList(Ljava/util/List;Ljava/lang/ClassLoader;)V
 
-    .line 72
     return-void
 .end method
 
@@ -388,7 +344,6 @@
     .locals 1
 
     .prologue
-    .line 91
     const/4 v0, 0x0
 
     return v0
@@ -400,44 +355,36 @@
     .param p2, "flags"    # I
 
     .prologue
-    .line 96
     iget v1, p0, Landroid/app/KnoxNotification;->notifId:I
 
     invoke-virtual {p1, v1}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 97
     iget-object v1, p0, Landroid/app/KnoxNotification;->notification:Landroid/app/Notification;
 
     const/4 v2, 0x0
 
     invoke-virtual {p1, v1, v2}, Landroid/os/Parcel;->writeParcelable(Landroid/os/Parcelable;I)V
 
-    .line 98
     iget v1, p0, Landroid/app/KnoxNotification;->userId:I
 
     invoke-virtual {p1, v1}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 99
     iget-object v1, p0, Landroid/app/KnoxNotification;->userName:Ljava/lang/String;
 
     invoke-virtual {p1, v1}, Landroid/os/Parcel;->writeString(Ljava/lang/String;)V
 
-    .line 100
     iget-object v1, p0, Landroid/app/KnoxNotification;->pkg:Ljava/lang/String;
 
     invoke-virtual {p1, v1}, Landroid/os/Parcel;->writeString(Ljava/lang/String;)V
 
-    .line 101
     iget-object v1, p0, Landroid/app/KnoxNotification;->appLabel:Ljava/lang/String;
 
     invoke-virtual {p1, v1}, Landroid/os/Parcel;->writeString(Ljava/lang/String;)V
 
-    .line 102
     iget-object v1, p0, Landroid/app/KnoxNotification;->tag:Ljava/lang/String;
 
     invoke-virtual {p1, v1}, Landroid/os/Parcel;->writeString(Ljava/lang/String;)V
 
-    .line 103
     iget-boolean v1, p0, Landroid/app/KnoxNotification;->sanitized:Z
 
     if-eqz v1, :cond_0
@@ -447,31 +394,25 @@
     :goto_0
     invoke-virtual {p1, v1}, Landroid/os/Parcel;->writeString(Ljava/lang/String;)V
 
-    .line 104
     new-instance v0, Landroid/os/Bundle;
 
     invoke-direct {v0}, Landroid/os/Bundle;-><init>()V
 
-    .line 105
     .local v0, "b":Landroid/os/Bundle;
-    const-string/jumbo v1, "mapKey"
+    const-string v1, "mapKey"
 
     iget-object v2, p0, Landroid/app/KnoxNotification;->labels:Ljava/util/HashMap;
 
     invoke-virtual {v0, v1, v2}, Landroid/os/Bundle;->putSerializable(Ljava/lang/String;Ljava/io/Serializable;)V
 
-    .line 106
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeBundle(Landroid/os/Bundle;)V
 
-    .line 107
     iget-object v1, p0, Landroid/app/KnoxNotification;->notifIds:Ljava/util/List;
 
     invoke-virtual {p1, v1}, Landroid/os/Parcel;->writeList(Ljava/util/List;)V
 
-    .line 108
     return-void
 
-    .line 103
     .end local v0    # "b":Landroid/os/Bundle;
     :cond_0
     const-string v1, ""

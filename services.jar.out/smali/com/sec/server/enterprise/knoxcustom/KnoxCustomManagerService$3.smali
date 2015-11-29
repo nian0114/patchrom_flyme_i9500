@@ -26,7 +26,6 @@
     .locals 0
 
     .prologue
-    .line 347
     iput-object p1, p0, Lcom/sec/server/enterprise/knoxcustom/KnoxCustomManagerService$3;->this$0:Lcom/sec/server/enterprise/knoxcustom/KnoxCustomManagerService;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -40,7 +39,6 @@
     .locals 4
 
     .prologue
-    .line 350
     iget-object v2, p0, Lcom/sec/server/enterprise/knoxcustom/KnoxCustomManagerService$3;->this$0:Lcom/sec/server/enterprise/knoxcustom/KnoxCustomManagerService;
 
     # getter for: Lcom/sec/server/enterprise/knoxcustom/KnoxCustomManagerService;->mTempContext:Landroid/content/Context;
@@ -56,7 +54,6 @@
 
     check-cast v0, Landroid/net/ConnectivityManager;
 
-    .line 351
     .local v0, "cm":Landroid/net/ConnectivityManager;
     iget-object v2, p0, Lcom/sec/server/enterprise/knoxcustom/KnoxCustomManagerService$3;->this$0:Lcom/sec/server/enterprise/knoxcustom/KnoxCustomManagerService;
 
@@ -81,15 +78,12 @@
 
     move-result v1
 
-    .line 352
     .local v1, "result":I
     if-nez v1, :cond_0
 
-    .line 357
     :cond_0
     return-void
 
-    .line 351
     .end local v1    # "result":I
     :cond_1
     const/4 v2, 0x0

@@ -19,7 +19,6 @@
     .locals 0
 
     .prologue
-    .line 783
     invoke-direct {p0}, Landroid/app/ContextImpl$ServiceFetcher;-><init>()V
 
     return-void
@@ -32,7 +31,6 @@
     .param p1, "ctx"    # Landroid/app/ContextImpl;
 
     .prologue
-    .line 785
     new-instance v0, Lcom/samsung/android/contextaware/ContextAwareManager;
 
     iget-object v1, p1, Landroid/app/ContextImpl;->mMainThread:Landroid/app/ActivityThread;

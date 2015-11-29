@@ -63,53 +63,41 @@
     .prologue
     const/4 v1, 0x0
 
-    .line 62
     invoke-direct {p0, p1}, Landroid/widget/FrameLayout;-><init>(Landroid/content/Context;)V
 
-    .line 27
     iput-boolean v1, p0, Lcom/samsung/android/multiwindow/ui/GuideView;->mAttached:Z
 
-    .line 28
     iput-boolean v1, p0, Lcom/samsung/android/multiwindow/ui/GuideView;->mShowing:Z
 
-    .line 37
     iput v1, p0, Lcom/samsung/android/multiwindow/ui/GuideView;->mGuideState:I
 
-    .line 40
     iput-boolean v1, p0, Lcom/samsung/android/multiwindow/ui/GuideView;->mHeaderViewVisibility:Z
 
-    .line 43
     const/16 v0, 0x8d4
 
     iput v0, p0, Lcom/samsung/android/multiwindow/ui/GuideView;->mWindowType:I
 
-    .line 46
     const/high16 v0, -0x40800000    # -1.0f
 
     iput v0, p0, Lcom/samsung/android/multiwindow/ui/GuideView;->mDimAmount:F
 
-    .line 53
     new-instance v0, Landroid/graphics/Rect;
 
     invoke-direct {v0}, Landroid/graphics/Rect;-><init>()V
 
     iput-object v0, p0, Lcom/samsung/android/multiwindow/ui/GuideView;->mLastRect:Landroid/graphics/Rect;
 
-    .line 55
     iput-boolean v1, p0, Lcom/samsung/android/multiwindow/ui/GuideView;->mIsSupportWindowController:Z
 
-    .line 63
     iput-object p2, p0, Lcom/samsung/android/multiwindow/ui/GuideView;->mToken:Landroid/os/IBinder;
 
-    .line 64
     iput p3, p0, Lcom/samsung/android/multiwindow/ui/GuideView;->mWindowType:I
 
-    .line 65
     invoke-virtual {p0}, Lcom/samsung/android/multiwindow/ui/GuideView;->getContext()Landroid/content/Context;
 
     move-result-object v0
 
-    const-string/jumbo v1, "window"
+    const-string v1, "window"
 
     invoke-virtual {v0, v1}, Landroid/content/Context;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
 
@@ -119,7 +107,6 @@
 
     iput-object v0, p0, Lcom/samsung/android/multiwindow/ui/GuideView;->mWindowManager:Landroid/view/WindowManager;
 
-    .line 66
     iget-object v0, p0, Lcom/samsung/android/multiwindow/ui/GuideView;->mContext:Landroid/content/Context;
 
     invoke-static {v0}, Lcom/samsung/android/multiwindow/MultiWindowFeatures;->isSupportStyleTransition(Landroid/content/Context;)Z
@@ -128,7 +115,6 @@
 
     iput-boolean v0, p0, Lcom/samsung/android/multiwindow/ui/GuideView;->mIsSupportWindowController:Z
 
-    .line 67
     return-void
 .end method
 
@@ -138,7 +124,6 @@
     .param p2, "windowType"    # I
 
     .prologue
-    .line 58
     invoke-virtual {p1}, Landroid/view/View;->getContext()Landroid/content/Context;
 
     move-result-object v0
@@ -149,7 +134,6 @@
 
     invoke-direct {p0, v0, v1, p2}, Lcom/samsung/android/multiwindow/ui/GuideView;-><init>(Landroid/content/Context;Landroid/os/IBinder;I)V
 
-    .line 59
     return-void
 .end method
 
@@ -159,49 +143,39 @@
     .prologue
     const/4 v2, -0x1
 
-    .line 178
     new-instance v0, Landroid/view/WindowManager$LayoutParams;
 
     invoke-direct {v0}, Landroid/view/WindowManager$LayoutParams;-><init>()V
 
-    .line 179
     .local v0, "lp":Landroid/view/WindowManager$LayoutParams;
     const-string v1, "MultiWindow GuideView"
 
     invoke-virtual {v0, v1}, Landroid/view/WindowManager$LayoutParams;->setTitle(Ljava/lang/CharSequence;)V
 
-    .line 180
     const v1, 0x800033
 
     iput v1, v0, Landroid/view/WindowManager$LayoutParams;->gravity:I
 
-    .line 181
     iput v2, v0, Landroid/view/WindowManager$LayoutParams;->width:I
 
-    .line 182
     iput v2, v0, Landroid/view/WindowManager$LayoutParams;->width:I
 
-    .line 183
     const/4 v1, -0x2
 
     iput v1, v0, Landroid/view/WindowManager$LayoutParams;->format:I
 
-    .line 184
     iget v1, p0, Lcom/samsung/android/multiwindow/ui/GuideView;->mWindowType:I
 
     iput v1, v0, Landroid/view/WindowManager$LayoutParams;->type:I
 
-    .line 185
     iget-object v1, p0, Lcom/samsung/android/multiwindow/ui/GuideView;->mToken:Landroid/os/IBinder;
 
     iput-object v1, v0, Landroid/view/WindowManager$LayoutParams;->token:Landroid/os/IBinder;
 
-    .line 186
     const/16 v1, 0x318
 
     iput v1, v0, Landroid/view/WindowManager$LayoutParams;->flags:I
 
-    .line 190
     iget v1, p0, Lcom/samsung/android/multiwindow/ui/GuideView;->mDimAmount:F
 
     const/high16 v2, -0x40800000    # -1.0f
@@ -210,25 +184,21 @@
 
     if-eqz v1, :cond_0
 
-    .line 191
     iget v1, p0, Lcom/samsung/android/multiwindow/ui/GuideView;->mDimAmount:F
 
     iput v1, v0, Landroid/view/WindowManager$LayoutParams;->dimAmount:F
 
-    .line 192
     iget v1, v0, Landroid/view/WindowManager$LayoutParams;->flags:I
 
     or-int/lit8 v1, v1, 0x2
 
     iput v1, v0, Landroid/view/WindowManager$LayoutParams;->flags:I
 
-    .line 195
     :cond_0
     iget v1, p0, Lcom/samsung/android/multiwindow/ui/GuideView;->mMultiWindowFlags:I
 
     iput v1, v0, Landroid/view/WindowManager$LayoutParams;->privateFlags:I
 
-    .line 196
     return-object v0
 .end method
 
@@ -244,17 +214,14 @@
 
     const/4 v2, 0x0
 
-    .line 226
     iget-object v0, p0, Lcom/samsung/android/multiwindow/ui/GuideView;->mBorderView:Landroid/view/View;
 
     if-nez v0, :cond_1
 
-    .line 274
     :cond_0
     :goto_0
     return-void
 
-    .line 229
     :cond_1
     iget-boolean v0, p0, Lcom/samsung/android/multiwindow/ui/GuideView;->mIsSupportWindowController:Z
 
@@ -264,32 +231,27 @@
 
     if-eqz v0, :cond_0
 
-    .line 233
     :cond_2
     iget-object v0, p0, Lcom/samsung/android/multiwindow/ui/GuideView;->mGuideDrawable:Landroid/graphics/drawable/Drawable;
 
     if-eqz v0, :cond_3
 
-    .line 234
     iget-object v0, p0, Lcom/samsung/android/multiwindow/ui/GuideView;->mBorderView:Landroid/view/View;
 
     iget-object v1, p0, Lcom/samsung/android/multiwindow/ui/GuideView;->mGuideDrawable:Landroid/graphics/drawable/Drawable;
 
     invoke-virtual {v0, v1}, Landroid/view/View;->setBackground(Landroid/graphics/drawable/Drawable;)V
 
-    .line 235
     iget-boolean v0, p0, Lcom/samsung/android/multiwindow/ui/GuideView;->mIsSupportWindowController:Z
 
     if-eqz v0, :cond_0
 
-    .line 236
     iget-object v0, p0, Lcom/samsung/android/multiwindow/ui/GuideView;->mFakeHeaderView:Landroid/widget/ImageView;
 
     invoke-virtual {v0, v3}, Landroid/widget/ImageView;->setVisibility(I)V
 
     goto :goto_0
 
-    .line 239
     :cond_3
     iget v0, p0, Lcom/samsung/android/multiwindow/ui/GuideView;->mGuideState:I
 
@@ -297,37 +259,31 @@
 
     goto :goto_0
 
-    .line 241
     :pswitch_0
     iget-object v0, p0, Lcom/samsung/android/multiwindow/ui/GuideView;->mBorderView:Landroid/view/View;
 
     invoke-virtual {v0, v1}, Landroid/view/View;->setBackgroundResource(I)V
 
-    .line 242
     iget-boolean v0, p0, Lcom/samsung/android/multiwindow/ui/GuideView;->mIsSupportWindowController:Z
 
     if-eqz v0, :cond_0
 
-    .line 243
     iget-object v0, p0, Lcom/samsung/android/multiwindow/ui/GuideView;->mFakeHeaderView:Landroid/widget/ImageView;
 
     const v1, 0x108060e
 
     invoke-virtual {v0, v1}, Landroid/widget/ImageView;->setBackgroundResource(I)V
 
-    .line 244
     iget-boolean v0, p0, Lcom/samsung/android/multiwindow/ui/GuideView;->mHeaderViewVisibility:Z
 
     if-eqz v0, :cond_0
 
-    .line 245
     iget-object v0, p0, Lcom/samsung/android/multiwindow/ui/GuideView;->mFakeHeaderView:Landroid/widget/ImageView;
 
     invoke-virtual {v0, v2}, Landroid/widget/ImageView;->setVisibility(I)V
 
     goto :goto_0
 
-    .line 249
     :pswitch_1
     iget-object v0, p0, Lcom/samsung/android/multiwindow/ui/GuideView;->mBorderView:Landroid/view/View;
 
@@ -335,31 +291,26 @@
 
     invoke-virtual {v0, v1}, Landroid/view/View;->setBackgroundResource(I)V
 
-    .line 250
     iget-boolean v0, p0, Lcom/samsung/android/multiwindow/ui/GuideView;->mIsSupportWindowController:Z
 
     if-eqz v0, :cond_0
 
-    .line 251
     iget-object v0, p0, Lcom/samsung/android/multiwindow/ui/GuideView;->mFakeHeaderView:Landroid/widget/ImageView;
 
     const v1, 0x108060d
 
     invoke-virtual {v0, v1}, Landroid/widget/ImageView;->setBackgroundResource(I)V
 
-    .line 252
     iget-boolean v0, p0, Lcom/samsung/android/multiwindow/ui/GuideView;->mHeaderViewVisibility:Z
 
     if-eqz v0, :cond_0
 
-    .line 253
     iget-object v0, p0, Lcom/samsung/android/multiwindow/ui/GuideView;->mFakeHeaderView:Landroid/widget/ImageView;
 
     invoke-virtual {v0, v2}, Landroid/widget/ImageView;->setVisibility(I)V
 
     goto :goto_0
 
-    .line 257
     :pswitch_2
     iget-object v0, p0, Lcom/samsung/android/multiwindow/ui/GuideView;->mBorderView:Landroid/view/View;
 
@@ -367,52 +318,43 @@
 
     invoke-virtual {v0, v1}, Landroid/view/View;->setBackgroundResource(I)V
 
-    .line 258
     iget-boolean v0, p0, Lcom/samsung/android/multiwindow/ui/GuideView;->mIsSupportWindowController:Z
 
     if-eqz v0, :cond_0
 
-    .line 260
     iget-object v0, p0, Lcom/samsung/android/multiwindow/ui/GuideView;->mFakeHeaderView:Landroid/widget/ImageView;
 
     invoke-virtual {v0, v4}, Landroid/widget/ImageView;->setBackgroundResource(I)V
 
-    .line 261
     iget-object v0, p0, Lcom/samsung/android/multiwindow/ui/GuideView;->mFakeHeaderView:Landroid/widget/ImageView;
 
     invoke-virtual {v0, v3}, Landroid/widget/ImageView;->setVisibility(I)V
 
     goto :goto_0
 
-    .line 265
     :pswitch_3
     iget-object v0, p0, Lcom/samsung/android/multiwindow/ui/GuideView;->mBorderView:Landroid/view/View;
 
     invoke-virtual {v0, v1}, Landroid/view/View;->setBackgroundResource(I)V
 
-    .line 266
     iget-boolean v0, p0, Lcom/samsung/android/multiwindow/ui/GuideView;->mIsSupportWindowController:Z
 
     if-eqz v0, :cond_0
 
-    .line 267
     iget-object v0, p0, Lcom/samsung/android/multiwindow/ui/GuideView;->mFakeHeaderView:Landroid/widget/ImageView;
 
     invoke-virtual {v0, v4}, Landroid/widget/ImageView;->setBackgroundResource(I)V
 
-    .line 268
     iget-boolean v0, p0, Lcom/samsung/android/multiwindow/ui/GuideView;->mHeaderViewVisibility:Z
 
     if-eqz v0, :cond_0
 
-    .line 269
     iget-object v0, p0, Lcom/samsung/android/multiwindow/ui/GuideView;->mFakeHeaderView:Landroid/widget/ImageView;
 
     invoke-virtual {v0, v2}, Landroid/widget/ImageView;->setVisibility(I)V
 
     goto/16 :goto_0
 
-    .line 239
     nop
 
     :pswitch_data_0
@@ -430,41 +372,32 @@
     .locals 1
 
     .prologue
-    .line 70
     monitor-enter p0
 
-    .line 71
     :try_start_0
     iget-boolean v0, p0, Lcom/samsung/android/multiwindow/ui/GuideView;->mAttached:Z
 
     if-eqz v0, :cond_0
 
-    .line 72
     iget-object v0, p0, Lcom/samsung/android/multiwindow/ui/GuideView;->mWindowManager:Landroid/view/WindowManager;
 
     invoke-interface {v0, p0}, Landroid/view/WindowManager;->removeViewImmediate(Landroid/view/View;)V
 
-    .line 73
     invoke-virtual {p0}, Lcom/samsung/android/multiwindow/ui/GuideView;->removeAllViews()V
 
-    .line 74
     const/4 v0, 0x0
 
     iput-boolean v0, p0, Lcom/samsung/android/multiwindow/ui/GuideView;->mAttached:Z
 
-    .line 75
     const/4 v0, 0x0
 
     iput-boolean v0, p0, Lcom/samsung/android/multiwindow/ui/GuideView;->mShowing:Z
 
-    .line 77
     :cond_0
     monitor-exit p0
 
-    .line 78
     return-void
 
-    .line 77
     :catchall_0
     move-exception v0
 
@@ -479,7 +412,6 @@
     .locals 1
 
     .prologue
-    .line 170
     iget-object v0, p0, Lcom/samsung/android/multiwindow/ui/GuideView;->mLastRect:Landroid/graphics/Rect;
 
     return-object v0
@@ -491,30 +423,24 @@
     .prologue
     const/4 v2, 0x0
 
-    .line 160
     iget-boolean v0, p0, Lcom/samsung/android/multiwindow/ui/GuideView;->mShowing:Z
 
     if-eqz v0, :cond_0
 
-    .line 161
     iput-boolean v2, p0, Lcom/samsung/android/multiwindow/ui/GuideView;->mShowing:Z
 
-    .line 162
     iget-object v0, p0, Lcom/samsung/android/multiwindow/ui/GuideView;->mBorderView:Landroid/view/View;
 
     const/4 v1, 0x4
 
     invoke-virtual {v0, v1}, Landroid/view/View;->setVisibility(I)V
 
-    .line 163
     iget-boolean v0, p0, Lcom/samsung/android/multiwindow/ui/GuideView;->mIsSupportWindowController:Z
 
     if-eqz v0, :cond_0
 
-    .line 164
     invoke-virtual {p0, v2}, Lcom/samsung/android/multiwindow/ui/GuideView;->setFakeHeaderVisibility(Z)V
 
-    .line 167
     :cond_0
     return-void
 .end method
@@ -525,17 +451,14 @@
     .prologue
     const/4 v7, 0x0
 
-    .line 81
     iget-boolean v5, p0, Lcom/samsung/android/multiwindow/ui/GuideView;->mAttached:Z
 
     if-nez v5, :cond_3
 
-    .line 82
     iget-object v5, p0, Lcom/samsung/android/multiwindow/ui/GuideView;->mBorderView:Landroid/view/View;
 
     if-nez v5, :cond_0
 
-    .line 83
     new-instance v5, Landroid/view/View;
 
     invoke-virtual {p0}, Lcom/samsung/android/multiwindow/ui/GuideView;->getContext()Landroid/content/Context;
@@ -546,7 +469,6 @@
 
     iput-object v5, p0, Lcom/samsung/android/multiwindow/ui/GuideView;->mBorderView:Landroid/view/View;
 
-    .line 85
     :cond_0
     iget-boolean v5, p0, Lcom/samsung/android/multiwindow/ui/GuideView;->mIsSupportWindowController:Z
 
@@ -556,7 +478,6 @@
 
     if-nez v5, :cond_1
 
-    .line 86
     new-instance v5, Landroid/widget/ImageView;
 
     invoke-virtual {p0}, Lcom/samsung/android/multiwindow/ui/GuideView;->getContext()Landroid/content/Context;
@@ -567,18 +488,15 @@
 
     iput-object v5, p0, Lcom/samsung/android/multiwindow/ui/GuideView;->mFakeHeaderView:Landroid/widget/ImageView;
 
-    .line 88
     :cond_1
     invoke-direct {p0}, Lcom/samsung/android/multiwindow/ui/GuideView;->refreshBackground()V
 
-    .line 90
     iget-object v5, p0, Lcom/samsung/android/multiwindow/ui/GuideView;->mBorderView:Landroid/view/View;
 
     invoke-virtual {v5}, Landroid/view/View;->getBackground()Landroid/graphics/drawable/Drawable;
 
     move-result-object v0
 
-    .line 91
     .local v0, "bd":Landroid/graphics/drawable/Drawable;
     new-instance v4, Landroid/widget/FrameLayout$LayoutParams;
 
@@ -592,32 +510,27 @@
 
     invoke-direct {v4, v5, v6}, Landroid/widget/FrameLayout$LayoutParams;-><init>(II)V
 
-    .line 92
     .local v4, "vlp":Landroid/widget/FrameLayout$LayoutParams;
     iget-object v5, p0, Lcom/samsung/android/multiwindow/ui/GuideView;->mBorderView:Landroid/view/View;
 
     invoke-virtual {p0, v5, v4}, Lcom/samsung/android/multiwindow/ui/GuideView;->addView(Landroid/view/View;Landroid/view/ViewGroup$LayoutParams;)V
 
-    .line 93
     iget-object v5, p0, Lcom/samsung/android/multiwindow/ui/GuideView;->mBorderView:Landroid/view/View;
 
     const/4 v6, 0x4
 
     invoke-virtual {v5, v6}, Landroid/view/View;->setVisibility(I)V
 
-    .line 95
     iget-boolean v5, p0, Lcom/samsung/android/multiwindow/ui/GuideView;->mIsSupportWindowController:Z
 
     if-eqz v5, :cond_2
 
-    .line 96
     iget-object v5, p0, Lcom/samsung/android/multiwindow/ui/GuideView;->mFakeHeaderView:Landroid/widget/ImageView;
 
     invoke-virtual {v5}, Landroid/widget/ImageView;->getBackground()Landroid/graphics/drawable/Drawable;
 
     move-result-object v1
 
-    .line 97
     .local v1, "fd":Landroid/graphics/drawable/Drawable;
     new-instance v2, Landroid/widget/FrameLayout$LayoutParams;
 
@@ -631,44 +544,35 @@
 
     invoke-direct {v2, v5, v6}, Landroid/widget/FrameLayout$LayoutParams;-><init>(II)V
 
-    .line 98
     .local v2, "flp":Landroid/widget/FrameLayout$LayoutParams;
     iget-object v5, p0, Lcom/samsung/android/multiwindow/ui/GuideView;->mFakeHeaderView:Landroid/widget/ImageView;
 
     invoke-virtual {p0, v5, v2}, Lcom/samsung/android/multiwindow/ui/GuideView;->addView(Landroid/view/View;Landroid/view/ViewGroup$LayoutParams;)V
 
-    .line 99
     invoke-virtual {p0, v7}, Lcom/samsung/android/multiwindow/ui/GuideView;->setFakeHeaderVisibility(Z)V
 
-    .line 102
     .end local v1    # "fd":Landroid/graphics/drawable/Drawable;
     .end local v2    # "flp":Landroid/widget/FrameLayout$LayoutParams;
     :cond_2
     invoke-virtual {p0}, Lcom/samsung/android/multiwindow/ui/GuideView;->resetResolvedLayoutDirection()V
 
-    .line 103
     invoke-virtual {p0, v7}, Lcom/samsung/android/multiwindow/ui/GuideView;->setLayoutDirection(I)V
 
-    .line 105
     invoke-direct {p0}, Lcom/samsung/android/multiwindow/ui/GuideView;->generateLayoutParam()Landroid/view/WindowManager$LayoutParams;
 
     move-result-object v3
 
-    .line 106
     .local v3, "lp":Landroid/view/WindowManager$LayoutParams;
     iget-object v5, p0, Lcom/samsung/android/multiwindow/ui/GuideView;->mWindowManager:Landroid/view/WindowManager;
 
     invoke-interface {v5, p0, v3}, Landroid/view/WindowManager;->addView(Landroid/view/View;Landroid/view/ViewGroup$LayoutParams;)V
 
-    .line 107
     iput-boolean v7, p0, Lcom/samsung/android/multiwindow/ui/GuideView;->mShowing:Z
 
-    .line 108
     const/4 v5, 0x1
 
     iput-boolean v5, p0, Lcom/samsung/android/multiwindow/ui/GuideView;->mAttached:Z
 
-    .line 110
     .end local v0    # "bd":Landroid/graphics/drawable/Drawable;
     .end local v3    # "lp":Landroid/view/WindowManager$LayoutParams;
     .end local v4    # "vlp":Landroid/widget/FrameLayout$LayoutParams;
@@ -680,7 +584,6 @@
     .locals 1
 
     .prologue
-    .line 277
     iget-boolean v0, p0, Lcom/samsung/android/multiwindow/ui/GuideView;->mShowing:Z
 
     return v0
@@ -691,13 +594,10 @@
     .param p1, "newConfig"    # Landroid/content/res/Configuration;
 
     .prologue
-    .line 286
     invoke-super {p0, p1}, Landroid/widget/FrameLayout;->onConfigurationChanged(Landroid/content/res/Configuration;)V
 
-    .line 287
     invoke-virtual {p0}, Lcom/samsung/android/multiwindow/ui/GuideView;->dismiss()V
 
-    .line 288
     return-void
 .end method
 
@@ -706,10 +606,8 @@
     .param p1, "amount"    # F
 
     .prologue
-    .line 281
     iput p1, p0, Lcom/samsung/android/multiwindow/ui/GuideView;->mDimAmount:F
 
-    .line 282
     return-void
 .end method
 
@@ -720,7 +618,6 @@
     .prologue
     const/4 v1, 0x0
 
-    .line 208
     iget-boolean v0, p0, Lcom/samsung/android/multiwindow/ui/GuideView;->mIsSupportWindowController:Z
 
     if-eqz v0, :cond_0
@@ -729,32 +626,26 @@
 
     if-nez v0, :cond_1
 
-    .line 218
     :cond_0
     :goto_0
     return-void
 
-    .line 211
     :cond_1
     if-eqz p1, :cond_2
 
-    .line 212
     const/4 v0, 0x1
 
     iput-boolean v0, p0, Lcom/samsung/android/multiwindow/ui/GuideView;->mHeaderViewVisibility:Z
 
-    .line 213
     iget-object v0, p0, Lcom/samsung/android/multiwindow/ui/GuideView;->mFakeHeaderView:Landroid/widget/ImageView;
 
     invoke-virtual {v0, v1}, Landroid/widget/ImageView;->setVisibility(I)V
 
     goto :goto_0
 
-    .line 215
     :cond_2
     iput-boolean v1, p0, Lcom/samsung/android/multiwindow/ui/GuideView;->mHeaderViewVisibility:Z
 
-    .line 216
     iget-object v0, p0, Lcom/samsung/android/multiwindow/ui/GuideView;->mFakeHeaderView:Landroid/widget/ImageView;
 
     const/4 v1, 0x4
@@ -769,7 +660,6 @@
     .param p1, "bitmap"    # Landroid/graphics/Bitmap;
 
     .prologue
-    .line 221
     new-instance v0, Landroid/graphics/drawable/BitmapDrawable;
 
     invoke-virtual {p0}, Lcom/samsung/android/multiwindow/ui/GuideView;->getContext()Landroid/content/Context;
@@ -784,10 +674,8 @@
 
     iput-object v0, p0, Lcom/samsung/android/multiwindow/ui/GuideView;->mGuideDrawable:Landroid/graphics/drawable/Drawable;
 
-    .line 222
     invoke-direct {p0}, Lcom/samsung/android/multiwindow/ui/GuideView;->refreshBackground()V
 
-    .line 223
     return-void
 .end method
 
@@ -799,19 +687,14 @@
     .param p4, "bottom"    # I
 
     .prologue
-    .line 291
     iput p1, p0, Lcom/samsung/android/multiwindow/ui/GuideView;->mGuidePaddingLeft:I
 
-    .line 292
     iput p2, p0, Lcom/samsung/android/multiwindow/ui/GuideView;->mGuidePaddingTop:I
 
-    .line 293
     iput p3, p0, Lcom/samsung/android/multiwindow/ui/GuideView;->mGuidePaddingRight:I
 
-    .line 294
     iput p4, p0, Lcom/samsung/android/multiwindow/ui/GuideView;->mGuidePaddingBottom:I
 
-    .line 295
     return-void
 .end method
 
@@ -820,20 +703,16 @@
     .param p1, "state"    # I
 
     .prologue
-    .line 200
     iget v0, p0, Lcom/samsung/android/multiwindow/ui/GuideView;->mGuideState:I
 
     if-ne v0, p1, :cond_0
 
-    .line 205
     :goto_0
     return-void
 
-    .line 203
     :cond_0
     iput p1, p0, Lcom/samsung/android/multiwindow/ui/GuideView;->mGuideState:I
 
-    .line 204
     invoke-direct {p0}, Lcom/samsung/android/multiwindow/ui/GuideView;->refreshBackground()V
 
     goto :goto_0
@@ -844,10 +723,8 @@
     .param p1, "multiWindowFlags"    # I
 
     .prologue
-    .line 174
     iput p1, p0, Lcom/samsung/android/multiwindow/ui/GuideView;->mMultiWindowFlags:I
 
-    .line 175
     return-void
 .end method
 
@@ -859,7 +736,6 @@
     .param p4, "height"    # I
 
     .prologue
-    .line 113
     const/4 v5, 0x0
 
     move-object v0, p0
@@ -874,7 +750,6 @@
 
     invoke-virtual/range {v0 .. v5}, Lcom/samsung/android/multiwindow/ui/GuideView;->show(IIIIZ)V
 
-    .line 114
     return-void
 .end method
 
@@ -889,10 +764,8 @@
     .prologue
     const/4 v6, 0x1
 
-    .line 117
     monitor-enter p0
 
-    .line 118
     :try_start_0
     iget-object v4, p0, Lcom/samsung/android/multiwindow/ui/GuideView;->mBorderView:Landroid/view/View;
 
@@ -906,22 +779,18 @@
 
     if-nez v4, :cond_1
 
-    .line 119
     :cond_0
     const-string v4, "GuideView"
 
-    const-string/jumbo v5, "mBorder or mFakeHeaderView is null"
+    const-string v5, "mBorder or mFakeHeaderView is null"
 
     invoke-static {v4, v5}, Landroid/util/Slog;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 120
     monitor-exit p0
 
-    .line 157
     :goto_0
     return-void
 
-    .line 123
     :cond_1
     iget-object v4, p0, Lcom/samsung/android/multiwindow/ui/GuideView;->mBorderView:Landroid/view/View;
 
@@ -931,7 +800,6 @@
 
     check-cast v3, Landroid/widget/FrameLayout$LayoutParams;
 
-    .line 124
     .local v3, "vlp":Landroid/widget/FrameLayout$LayoutParams;
     iget v4, p0, Lcom/samsung/android/multiwindow/ui/GuideView;->mGuidePaddingLeft:I
 
@@ -941,7 +809,6 @@
 
     add-int v2, v4, v5
 
-    .line 125
     .local v2, "totalWidth":I
     iget v4, p0, Lcom/samsung/android/multiwindow/ui/GuideView;->mGuidePaddingTop:I
 
@@ -951,7 +818,6 @@
 
     add-int v1, v4, v5
 
-    .line 126
     .local v1, "totalHeight":I
     iget v4, p0, Lcom/samsung/android/multiwindow/ui/GuideView;->mGuidePaddingLeft:I
 
@@ -959,23 +825,18 @@
 
     iput v4, v3, Landroid/widget/FrameLayout$LayoutParams;->leftMargin:I
 
-    .line 127
     iget v4, p0, Lcom/samsung/android/multiwindow/ui/GuideView;->mGuidePaddingTop:I
 
     sub-int v4, p2, v4
 
     iput v4, v3, Landroid/widget/FrameLayout$LayoutParams;->topMargin:I
 
-    .line 128
     iput v2, v3, Landroid/widget/FrameLayout$LayoutParams;->width:I
 
-    .line 129
     iput v1, v3, Landroid/widget/FrameLayout$LayoutParams;->height:I
 
-    .line 130
     if-eqz p5, :cond_2
 
-    .line 131
     iget-object v4, p0, Lcom/samsung/android/multiwindow/ui/GuideView;->mContext:Landroid/content/Context;
 
     invoke-virtual {v4}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
@@ -990,19 +851,16 @@
 
     if-ne v4, v6, :cond_6
 
-    .line 132
     const/4 v4, -0x1
 
     iput v4, v3, Landroid/widget/FrameLayout$LayoutParams;->width:I
 
-    .line 138
     :cond_2
     :goto_1
     iget-boolean v4, p0, Lcom/samsung/android/multiwindow/ui/GuideView;->mIsSupportWindowController:Z
 
     if-eqz v4, :cond_3
 
-    .line 139
     iget-object v4, p0, Lcom/samsung/android/multiwindow/ui/GuideView;->mFakeHeaderView:Landroid/widget/ImageView;
 
     invoke-virtual {v4}, Landroid/widget/ImageView;->getLayoutParams()Landroid/view/ViewGroup$LayoutParams;
@@ -1011,7 +869,6 @@
 
     check-cast v0, Landroid/widget/FrameLayout$LayoutParams;
 
-    .line 140
     .local v0, "flp":Landroid/widget/FrameLayout$LayoutParams;
     iget v4, v0, Landroid/widget/FrameLayout$LayoutParams;->width:I
 
@@ -1023,7 +880,6 @@
 
     iput v4, v0, Landroid/widget/FrameLayout$LayoutParams;->leftMargin:I
 
-    .line 141
     iget v4, v0, Landroid/widget/FrameLayout$LayoutParams;->height:I
 
     div-int/lit8 v4, v4, 0x2
@@ -1032,26 +888,22 @@
 
     iput v4, v0, Landroid/widget/FrameLayout$LayoutParams;->topMargin:I
 
-    .line 142
     iget-object v4, p0, Lcom/samsung/android/multiwindow/ui/GuideView;->mFakeHeaderView:Landroid/widget/ImageView;
 
     invoke-virtual {v4, v0}, Landroid/widget/ImageView;->setLayoutParams(Landroid/view/ViewGroup$LayoutParams;)V
 
-    .line 145
     .end local v0    # "flp":Landroid/widget/FrameLayout$LayoutParams;
     :cond_3
     iget-boolean v4, p0, Lcom/samsung/android/multiwindow/ui/GuideView;->mShowing:Z
 
     if-nez v4, :cond_5
 
-    .line 146
     iget-object v4, p0, Lcom/samsung/android/multiwindow/ui/GuideView;->mBorderView:Landroid/view/View;
 
     const/4 v5, 0x0
 
     invoke-virtual {v4, v5}, Landroid/view/View;->setVisibility(I)V
 
-    .line 147
     iget-boolean v4, p0, Lcom/samsung/android/multiwindow/ui/GuideView;->mIsSupportWindowController:Z
 
     if-eqz v4, :cond_4
@@ -1062,29 +914,24 @@
 
     if-eq v4, v5, :cond_4
 
-    .line 148
     const/4 v4, 0x1
 
     invoke-virtual {p0, v4}, Lcom/samsung/android/multiwindow/ui/GuideView;->setFakeHeaderVisibility(Z)V
 
-    .line 150
     :cond_4
     const/4 v4, 0x1
 
     iput-boolean v4, p0, Lcom/samsung/android/multiwindow/ui/GuideView;->mShowing:Z
 
-    .line 153
     :cond_5
     iget-object v4, p0, Lcom/samsung/android/multiwindow/ui/GuideView;->mBorderView:Landroid/view/View;
 
     invoke-virtual {v4}, Landroid/view/View;->requestLayout()V
 
-    .line 154
     iget-object v4, p0, Lcom/samsung/android/multiwindow/ui/GuideView;->mBorderView:Landroid/view/View;
 
     invoke-virtual {v4}, Landroid/view/View;->invalidate()V
 
-    .line 155
     iget-object v4, p0, Lcom/samsung/android/multiwindow/ui/GuideView;->mLastRect:Landroid/graphics/Rect;
 
     add-int v5, p1, p3
@@ -1093,7 +940,6 @@
 
     invoke-virtual {v4, p1, p2, v5, v6}, Landroid/graphics/Rect;->set(IIII)V
 
-    .line 156
     monitor-exit p0
 
     goto/16 :goto_0
@@ -1110,7 +956,6 @@
 
     throw v4
 
-    .line 134
     .restart local v1    # "totalHeight":I
     .restart local v2    # "totalWidth":I
     .restart local v3    # "vlp":Landroid/widget/FrameLayout$LayoutParams;

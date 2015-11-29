@@ -25,7 +25,6 @@
     .locals 1
 
     .prologue
-    .line 242
     new-instance v0, Landroid/hardware/scontext/SContextExercise$1;
 
     invoke-direct {v0}, Landroid/hardware/scontext/SContextExercise$1;-><init>()V
@@ -39,17 +38,14 @@
     .locals 1
 
     .prologue
-    .line 104
     invoke-direct {p0}, Landroid/hardware/scontext/SContextEventContext;-><init>()V
 
-    .line 105
     new-instance v0, Landroid/os/Bundle;
 
     invoke-direct {v0}, Landroid/os/Bundle;-><init>()V
 
     iput-object v0, p0, Landroid/hardware/scontext/SContextExercise;->mContext:Landroid/os/Bundle;
 
-    .line 106
     return-void
 .end method
 
@@ -58,13 +54,10 @@
     .param p1, "src"    # Landroid/os/Parcel;
 
     .prologue
-    .line 111
     invoke-direct {p0}, Landroid/hardware/scontext/SContextEventContext;-><init>()V
 
-    .line 112
     invoke-direct {p0, p1}, Landroid/hardware/scontext/SContextExercise;->readFromParcel(Landroid/os/Parcel;)V
 
-    .line 113
     return-void
 .end method
 
@@ -73,14 +66,12 @@
     .param p1, "src"    # Landroid/os/Parcel;
 
     .prologue
-    .line 236
     invoke-virtual {p1}, Landroid/os/Parcel;->readBundle()Landroid/os/Bundle;
 
     move-result-object v0
 
     iput-object v0, p0, Landroid/hardware/scontext/SContextExercise;->mContext:Landroid/os/Bundle;
 
-    .line 237
     return-void
 .end method
 
@@ -90,7 +81,6 @@
     .locals 1
 
     .prologue
-    .line 96
     invoke-super {p0}, Landroid/hardware/scontext/SContextEventContext;->describeContents()I
 
     move-result v0
@@ -102,7 +92,6 @@
     .locals 2
 
     .prologue
-    .line 157
     iget-object v0, p0, Landroid/hardware/scontext/SContextExercise;->mContext:Landroid/os/Bundle;
 
     const-string v1, "AltitudeArray"
@@ -118,7 +107,6 @@
     .locals 2
 
     .prologue
-    .line 139
     iget-object v0, p0, Landroid/hardware/scontext/SContextExercise;->mContext:Landroid/os/Bundle;
 
     const-string v1, "LatitudeArray"
@@ -134,7 +122,6 @@
     .locals 2
 
     .prologue
-    .line 121
     iget-object v0, p0, Landroid/hardware/scontext/SContextExercise;->mContext:Landroid/os/Bundle;
 
     const-string v1, "DataCount"
@@ -150,7 +137,6 @@
     .locals 2
 
     .prologue
-    .line 148
     iget-object v0, p0, Landroid/hardware/scontext/SContextExercise;->mContext:Landroid/os/Bundle;
 
     const-string v1, "LongitudeArray"
@@ -166,7 +152,6 @@
     .locals 2
 
     .prologue
-    .line 184
     iget-object v0, p0, Landroid/hardware/scontext/SContextExercise;->mContext:Landroid/os/Bundle;
 
     const-string v1, "PedoDistanceDiffArray"
@@ -182,7 +167,6 @@
     .locals 2
 
     .prologue
-    .line 193
     iget-object v0, p0, Landroid/hardware/scontext/SContextExercise;->mContext:Landroid/os/Bundle;
 
     const-string v1, "PedoSpeedArray"
@@ -198,7 +182,6 @@
     .locals 2
 
     .prologue
-    .line 166
     iget-object v0, p0, Landroid/hardware/scontext/SContextExercise;->mContext:Landroid/os/Bundle;
 
     const-string v1, "PressureArray"
@@ -214,7 +197,6 @@
     .locals 2
 
     .prologue
-    .line 175
     iget-object v0, p0, Landroid/hardware/scontext/SContextExercise;->mContext:Landroid/os/Bundle;
 
     const-string v1, "SpeedArray"
@@ -230,7 +212,6 @@
     .locals 2
 
     .prologue
-    .line 202
     iget-object v0, p0, Landroid/hardware/scontext/SContextExercise;->mContext:Landroid/os/Bundle;
 
     const-string v1, "StepCountDiffArray"
@@ -246,7 +227,6 @@
     .locals 2
 
     .prologue
-    .line 130
     iget-object v0, p0, Landroid/hardware/scontext/SContextExercise;->mContext:Landroid/os/Bundle;
 
     const-string v1, "TimeStampArray"
@@ -263,10 +243,8 @@
     .param p1, "context"    # Landroid/os/Bundle;
 
     .prologue
-    .line 212
     iput-object p1, p0, Landroid/hardware/scontext/SContextExercise;->mContext:Landroid/os/Bundle;
 
-    .line 213
     return-void
 .end method
 
@@ -276,11 +254,9 @@
     .param p2, "flags"    # I
 
     .prologue
-    .line 226
     iget-object v0, p0, Landroid/hardware/scontext/SContextExercise;->mContext:Landroid/os/Bundle;
 
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeBundle(Landroid/os/Bundle;)V
 
-    .line 227
     return-void
 .end method

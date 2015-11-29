@@ -40,10 +40,8 @@
     .param p2, "r"    # Ljava/lang/String;
 
     .prologue
-    .line 523
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 491
     new-instance v0, Ljava/util/concurrent/ArrayBlockingQueue;
 
     const/16 v1, 0xa
@@ -52,12 +50,9 @@
 
     iput-object v0, p0, Lcom/sec/knox/container/util/DaemonConnector$ResponseQueue$PendingCmd;->responses:Ljava/util/concurrent/BlockingQueue;
 
-    .line 524
     iput p1, p0, Lcom/sec/knox/container/util/DaemonConnector$ResponseQueue$PendingCmd;->cmdNum:I
 
-    .line 525
     iput-object p2, p0, Lcom/sec/knox/container/util/DaemonConnector$ResponseQueue$PendingCmd;->request:Ljava/lang/String;
 
-    .line 526
     return-void
 .end method

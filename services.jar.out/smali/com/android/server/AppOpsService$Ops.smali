@@ -41,24 +41,18 @@
     .param p3, "_isPrivileged"    # Z
 
     .prologue
-    .line 119
     invoke-direct {p0}, Landroid/util/SparseArray;-><init>()V
 
-    .line 120
     iput-object p1, p0, Lcom/android/server/AppOpsService$Ops;->packageName:Ljava/lang/String;
 
-    .line 121
     iput p2, p0, Lcom/android/server/AppOpsService$Ops;->uid:I
 
-    .line 122
     iput-boolean p3, p0, Lcom/android/server/AppOpsService$Ops;->isPrivileged:Z
 
-    .line 123
     const/4 v0, 0x1
 
     iput-boolean v0, p0, Lcom/android/server/AppOpsService$Ops;->isPrivilegedCredible:Z
 
-    .line 124
     return-void
 .end method
 
@@ -70,21 +64,15 @@
     .param p4, "_isPrivilegedCredible"    # Z
 
     .prologue
-    .line 125
     invoke-direct {p0}, Landroid/util/SparseArray;-><init>()V
 
-    .line 126
     iput-object p1, p0, Lcom/android/server/AppOpsService$Ops;->packageName:Ljava/lang/String;
 
-    .line 127
     iput p2, p0, Lcom/android/server/AppOpsService$Ops;->uid:I
 
-    .line 128
     iput-boolean p3, p0, Lcom/android/server/AppOpsService$Ops;->isPrivileged:Z
 
-    .line 129
     iput-boolean p4, p0, Lcom/android/server/AppOpsService$Ops;->isPrivilegedCredible:Z
 
-    .line 130
     return-void
 .end method

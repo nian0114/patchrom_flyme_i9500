@@ -20,16 +20,12 @@
     .prologue
     const/4 v0, 0x0
 
-    .line 36
     sput-boolean v0, Landroid/sec/clipboard/util/ClipboardProcText;->body_found:Z
 
-    .line 37
     sput-boolean v0, Landroid/sec/clipboard/util/ClipboardProcText;->in_body:Z
 
-    .line 38
     sput-boolean v0, Landroid/sec/clipboard/util/ClipboardProcText;->pre:Z
 
-    .line 39
     const-string v0, ""
 
     sput-object v0, Landroid/sec/clipboard/util/ClipboardProcText;->href:Ljava/lang/String;
@@ -41,7 +37,6 @@
     .locals 0
 
     .prologue
-    .line 35
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -57,61 +52,50 @@
     .end annotation
 
     .prologue
-    .line 101
     new-instance v4, Ljava/lang/StringBuffer;
 
     invoke-direct {v4}, Ljava/lang/StringBuffer;-><init>()V
 
-    .line 102
     .local v4, "result":Ljava/lang/StringBuffer;
     new-instance v5, Ljava/lang/StringBuffer;
 
     invoke-direct {v5}, Ljava/lang/StringBuffer;-><init>()V
 
-    .line 103
     .local v5, "result2":Ljava/lang/StringBuffer;
     new-instance v3, Ljava/io/StringReader;
 
     invoke-direct {v3, p0}, Ljava/io/StringReader;-><init>(Ljava/lang/String;)V
 
-    .line 106
     .local v3, "input":Ljava/io/StringReader;
     const/4 v8, 0x0
 
-    .line 107
     .local v8, "text":Ljava/lang/String;
     :try_start_0
     invoke-virtual {v3}, Ljava/io/StringReader;->read()I
 
     move-result v1
 
-    .line 109
     .local v1, "dChar":I
     :goto_0
     const/4 v9, -0x1
 
     if-eq v1, v9, :cond_15
 
-    .line 111
     const-string v8, ""
 
-    .line 112
     const/16 v9, 0x3c
 
     if-ne v1, v9, :cond_0
 
-    .line 114
     invoke-static {v3}, Landroid/sec/clipboard/util/ClipboardProcText;->getTag(Ljava/io/Reader;)Ljava/lang/String;
 
     move-result-object v0
 
-    .line 116
     .local v0, "CurrentTag":Ljava/lang/String;
     invoke-static {v0}, Landroid/sec/clipboard/util/ClipboardProcText;->convertTag(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v8
 
-    .line 153
     .end local v0    # "CurrentTag":Ljava/lang/String;
     :goto_1
     sget-boolean v9, Landroid/sec/clipboard/util/ClipboardProcText;->in_body:Z
@@ -120,34 +104,28 @@
 
     move-object v6, v4
 
-    .line 154
     .local v6, "s":Ljava/lang/StringBuffer;
     :goto_2
     invoke-virtual {v6, v8}, Ljava/lang/StringBuffer;->append(Ljava/lang/String;)Ljava/lang/StringBuffer;
 
-    .line 155
     invoke-virtual {v3}, Ljava/io/StringReader;->read()I
 
     move-result v1
 
-    .line 156
     goto :goto_0
 
-    .line 117
     .end local v6    # "s":Ljava/lang/StringBuffer;
     :cond_0
     const/16 v9, 0x26
 
     if-ne v1, v9, :cond_10
 
-    .line 118
     invoke-static {v3}, Landroid/sec/clipboard/util/ClipboardProcText;->getSpecial(Ljava/io/Reader;)Ljava/lang/String;
 
     move-result-object v7
 
-    .line 119
     .local v7, "specialchar":Ljava/lang/String;
-    const-string/jumbo v9, "lt;"
+    const-string v9, "lt;"
 
     invoke-virtual {v7, v9}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
@@ -163,13 +141,11 @@
 
     if-eqz v9, :cond_2
 
-    .line 120
     :cond_1
     const-string v8, "<"
 
     goto :goto_1
 
-    .line 121
     :cond_2
     const-string v9, "gt;"
 
@@ -187,13 +163,11 @@
 
     if-eqz v9, :cond_4
 
-    .line 123
     :cond_3
     const-string v8, ">"
 
     goto :goto_1
 
-    .line 124
     :cond_4
     const-string v9, "amp;"
 
@@ -211,15 +185,13 @@
 
     if-eqz v9, :cond_6
 
-    .line 126
     :cond_5
     const-string v8, "&"
 
     goto :goto_1
 
-    .line 127
     :cond_6
-    const-string/jumbo v9, "nbsp;"
+    const-string v9, "nbsp;"
 
     invoke-virtual {v7, v9}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
@@ -227,14 +199,12 @@
 
     if-eqz v9, :cond_7
 
-    .line 128
     const-string v8, " "
 
     goto :goto_1
 
-    .line 129
     :cond_7
-    const-string/jumbo v9, "quot;"
+    const-string v9, "quot;"
 
     invoke-virtual {v7, v9}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
@@ -250,13 +220,11 @@
 
     if-eqz v9, :cond_9
 
-    .line 131
     :cond_8
     const-string v8, "\""
 
     goto :goto_1
 
-    .line 132
     :cond_9
     const-string v9, "copy;"
 
@@ -274,15 +242,13 @@
 
     if-eqz v9, :cond_b
 
-    .line 134
     :cond_a
     const-string v8, "[Copyright]"
 
     goto/16 :goto_1
 
-    .line 135
     :cond_b
-    const-string/jumbo v9, "reg;"
+    const-string v9, "reg;"
 
     invoke-virtual {v7, v9}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
@@ -298,15 +264,13 @@
 
     if-eqz v9, :cond_d
 
-    .line 137
     :cond_c
     const-string v8, "[Registered]"
 
     goto/16 :goto_1
 
-    .line 138
     :cond_d
-    const-string/jumbo v9, "trade;"
+    const-string v9, "trade;"
 
     invoke-virtual {v7, v9}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
@@ -322,13 +286,11 @@
 
     if-eqz v9, :cond_f
 
-    .line 140
     :cond_e
     const-string v8, "[Trademark]"
 
     goto/16 :goto_1
 
-    .line 142
     :cond_f
     new-instance v9, Ljava/lang/StringBuilder;
 
@@ -350,7 +312,6 @@
 
     goto/16 :goto_1
 
-    .line 143
     .end local v7    # "specialchar":Ljava/lang/String;
     :cond_10
     sget-boolean v9, Landroid/sec/clipboard/util/ClipboardProcText;->pre:Z
@@ -365,14 +326,12 @@
 
     if-eqz v9, :cond_13
 
-    .line 144
     sget-boolean v9, Landroid/sec/clipboard/util/ClipboardProcText;->in_body:Z
 
     if-eqz v9, :cond_11
 
     move-object v6, v4
 
-    .line 145
     .restart local v6    # "s":Ljava/lang/StringBuffer;
     :goto_3
     invoke-virtual {v6}, Ljava/lang/StringBuffer;->length()I
@@ -397,7 +356,6 @@
 
     if-eqz v9, :cond_12
 
-    .line 147
     const-string v8, ""
 
     goto/16 :goto_1
@@ -406,17 +364,14 @@
     :cond_11
     move-object v6, v5
 
-    .line 144
     goto :goto_3
 
-    .line 149
     .restart local v6    # "s":Ljava/lang/StringBuffer;
     :cond_12
     const-string v8, " "
 
     goto/16 :goto_1
 
-    .line 151
     .end local v6    # "s":Ljava/lang/StringBuffer;
     :cond_13
     new-instance v9, Ljava/lang/StringBuilder;
@@ -446,22 +401,17 @@
     :cond_14
     move-object v6, v5
 
-    .line 153
     goto/16 :goto_2
 
-    .line 157
     .end local v1    # "dChar":I
     :catch_0
     move-exception v2
 
-    .line 158
     .local v2, "e":Ljava/lang/Exception;
     invoke-virtual {v3}, Ljava/io/StringReader;->close()V
 
-    .line 159
     throw v2
 
-    .line 161
     .end local v2    # "e":Ljava/lang/Exception;
     .restart local v1    # "dChar":I
     :cond_15
@@ -471,7 +421,6 @@
 
     move-object v6, v4
 
-    .line 162
     .restart local v6    # "s":Ljava/lang/StringBuffer;
     :goto_4
     invoke-virtual {v6}, Ljava/lang/StringBuffer;->toString()Ljava/lang/String;
@@ -488,7 +437,6 @@
     :cond_16
     move-object v6, v5
 
-    .line 161
     goto :goto_4
 .end method
 
@@ -508,10 +456,8 @@
 
     const/4 v4, 0x1
 
-    .line 247
     const-string v2, ""
 
-    .line 248
     .local v2, "result":Ljava/lang/String;
     const-string v3, "body"
 
@@ -521,18 +467,14 @@
 
     if-eqz v3, :cond_1
 
-    .line 249
     sput-boolean v4, Landroid/sec/clipboard/util/ClipboardProcText;->in_body:Z
 
-    .line 250
     sput-boolean v4, Landroid/sec/clipboard/util/ClipboardProcText;->body_found:Z
 
-    .line 335
     :cond_0
     :goto_0
     return-object v2
 
-    .line 251
     :cond_1
     const-string v3, "/body"
 
@@ -542,15 +484,12 @@
 
     if-eqz v3, :cond_2
 
-    .line 252
     sput-boolean v6, Landroid/sec/clipboard/util/ClipboardProcText;->in_body:Z
 
-    .line 253
     const-string v2, ""
 
     goto :goto_0
 
-    .line 254
     :cond_2
     const-string v3, "center"
 
@@ -560,12 +499,10 @@
 
     if-eqz v3, :cond_3
 
-    .line 255
     const-string v2, ""
 
     goto :goto_0
 
-    .line 257
     :cond_3
     const-string v3, "/center"
 
@@ -575,14 +512,12 @@
 
     if-eqz v3, :cond_4
 
-    .line 258
     const-string v2, ""
 
     goto :goto_0
 
-    .line 260
     :cond_4
-    const-string/jumbo v3, "pre"
+    const-string v3, "pre"
 
     invoke-static {p0, v3}, Landroid/sec/clipboard/util/ClipboardProcText;->isTag(Ljava/lang/String;Ljava/lang/String;)Z
 
@@ -590,15 +525,12 @@
 
     if-eqz v3, :cond_5
 
-    .line 261
     const-string v2, ""
 
-    .line 262
     sput-boolean v4, Landroid/sec/clipboard/util/ClipboardProcText;->pre:Z
 
     goto :goto_0
 
-    .line 263
     :cond_5
     const-string v3, "/pre"
 
@@ -608,17 +540,14 @@
 
     if-eqz v3, :cond_6
 
-    .line 264
     const-string v2, ""
 
-    .line 265
     sput-boolean v6, Landroid/sec/clipboard/util/ClipboardProcText;->pre:Z
 
     goto :goto_0
 
-    .line 266
     :cond_6
-    const-string/jumbo v3, "p"
+    const-string v3, "p"
 
     invoke-static {p0, v3}, Landroid/sec/clipboard/util/ClipboardProcText;->isTag(Ljava/lang/String;Ljava/lang/String;)Z
 
@@ -626,12 +555,10 @@
 
     if-eqz v3, :cond_7
 
-    .line 267
     const-string v2, "\n"
 
     goto :goto_0
 
-    .line 268
     :cond_7
     const-string v3, "br"
 
@@ -641,12 +568,10 @@
 
     if-eqz v3, :cond_8
 
-    .line 269
     const-string v2, "\n"
 
     goto :goto_0
 
-    .line 270
     :cond_8
     const-string v3, "h1"
 
@@ -704,13 +629,11 @@
 
     if-eqz v3, :cond_a
 
-    .line 273
     :cond_9
     const-string v2, ""
 
     goto/16 :goto_0
 
-    .line 274
     :cond_a
     const-string v3, "/h1"
 
@@ -768,13 +691,11 @@
 
     if-eqz v3, :cond_c
 
-    .line 278
     :cond_b
     const-string v2, ""
 
     goto/16 :goto_0
 
-    .line 279
     :cond_c
     const-string v3, "/dl"
 
@@ -784,12 +705,10 @@
 
     if-eqz v3, :cond_d
 
-    .line 280
     const-string v2, ""
 
     goto/16 :goto_0
 
-    .line 281
     :cond_d
     const-string v3, "dd"
 
@@ -799,12 +718,10 @@
 
     if-eqz v3, :cond_e
 
-    .line 282
     const-string v2, ""
 
     goto/16 :goto_0
 
-    .line 283
     :cond_e
     const-string v3, "dt"
 
@@ -814,14 +731,12 @@
 
     if-eqz v3, :cond_f
 
-    .line 284
     const-string v2, "      "
 
     goto/16 :goto_0
 
-    .line 285
     :cond_f
-    const-string/jumbo v3, "li"
+    const-string v3, "li"
 
     invoke-static {p0, v3}, Landroid/sec/clipboard/util/ClipboardProcText;->isTag(Ljava/lang/String;Ljava/lang/String;)Z
 
@@ -829,12 +744,10 @@
 
     if-eqz v3, :cond_10
 
-    .line 286
     const-string v2, "\n   "
 
     goto/16 :goto_0
 
-    .line 287
     :cond_10
     const-string v3, "/ul"
 
@@ -844,12 +757,10 @@
 
     if-eqz v3, :cond_11
 
-    .line 288
     const-string v2, ""
 
     goto/16 :goto_0
 
-    .line 289
     :cond_11
     const-string v3, "/ol"
 
@@ -859,12 +770,10 @@
 
     if-eqz v3, :cond_12
 
-    .line 290
     const-string v2, ""
 
     goto/16 :goto_0
 
-    .line 291
     :cond_12
     const-string v3, "hr"
 
@@ -874,14 +783,12 @@
 
     if-eqz v3, :cond_13
 
-    .line 292
     const-string v2, "_________________________________________"
 
     goto/16 :goto_0
 
-    .line 293
     :cond_13
-    const-string/jumbo v3, "table"
+    const-string v3, "table"
 
     invoke-static {p0, v3}, Landroid/sec/clipboard/util/ClipboardProcText;->isTag(Ljava/lang/String;Ljava/lang/String;)Z
 
@@ -889,12 +796,10 @@
 
     if-eqz v3, :cond_14
 
-    .line 294
     const-string v2, ""
 
     goto/16 :goto_0
 
-    .line 295
     :cond_14
     const-string v3, "/table"
 
@@ -904,12 +809,10 @@
 
     if-eqz v3, :cond_15
 
-    .line 296
     const-string v2, ""
 
     goto/16 :goto_0
 
-    .line 297
     :cond_15
     const-string v3, "form"
 
@@ -919,12 +822,10 @@
 
     if-eqz v3, :cond_16
 
-    .line 298
     const-string v2, ""
 
     goto/16 :goto_0
 
-    .line 299
     :cond_16
     const-string v3, "/form"
 
@@ -934,12 +835,10 @@
 
     if-eqz v3, :cond_17
 
-    .line 300
     const-string v2, ""
 
     goto/16 :goto_0
 
-    .line 301
     :cond_17
     const-string v3, "b"
 
@@ -949,12 +848,10 @@
 
     if-eqz v3, :cond_18
 
-    .line 302
     const-string v2, ""
 
     goto/16 :goto_0
 
-    .line 303
     :cond_18
     const-string v3, "/b"
 
@@ -964,12 +861,10 @@
 
     if-eqz v3, :cond_19
 
-    .line 304
     const-string v2, ""
 
     goto/16 :goto_0
 
-    .line 305
     :cond_19
     const-string v3, "i"
 
@@ -979,12 +874,10 @@
 
     if-eqz v3, :cond_1a
 
-    .line 306
     const-string v2, ""
 
     goto/16 :goto_0
 
-    .line 307
     :cond_1a
     const-string v3, "/i"
 
@@ -994,12 +887,10 @@
 
     if-eqz v3, :cond_1b
 
-    .line 308
     const-string v2, ""
 
     goto/16 :goto_0
 
-    .line 309
     :cond_1b
     const-string v3, "img"
 
@@ -1009,28 +900,23 @@
 
     if-eqz v3, :cond_1c
 
-    .line 310
     const-string v3, "alt=\""
 
     invoke-virtual {p0, v3}, Ljava/lang/String;->indexOf(Ljava/lang/String;)I
 
     move-result v0
 
-    .line 311
     .local v0, "idx":I
     if-eq v0, v5, :cond_0
 
-    .line 312
     add-int/lit8 v0, v0, 0x5
 
-    .line 313
     const-string v3, "\""
 
     invoke-virtual {p0, v3, v0}, Ljava/lang/String;->indexOf(Ljava/lang/String;I)I
 
     move-result v1
 
-    .line 314
     .local v1, "idx2":I
     invoke-virtual {p0, v0, v1}, Ljava/lang/String;->substring(II)Ljava/lang/String;
 
@@ -1038,7 +924,6 @@
 
     goto/16 :goto_0
 
-    .line 316
     .end local v0    # "idx":I
     .end local v1    # "idx2":I
     :cond_1c
@@ -1050,28 +935,23 @@
 
     if-eqz v3, :cond_1e
 
-    .line 317
     const-string v3, "href=\""
 
     invoke-virtual {p0, v3}, Ljava/lang/String;->indexOf(Ljava/lang/String;)I
 
     move-result v0
 
-    .line 318
     .restart local v0    # "idx":I
     if-eq v0, v5, :cond_1d
 
-    .line 319
     add-int/lit8 v0, v0, 0x6
 
-    .line 320
     const-string v3, "\""
 
     invoke-virtual {p0, v3, v0}, Ljava/lang/String;->indexOf(Ljava/lang/String;I)I
 
     move-result v1
 
-    .line 321
     .restart local v1    # "idx2":I
     invoke-virtual {p0, v0, v1}, Ljava/lang/String;->substring(II)Ljava/lang/String;
 
@@ -1081,7 +961,6 @@
 
     goto/16 :goto_0
 
-    .line 323
     .end local v1    # "idx2":I
     :cond_1d
     const-string v3, ""
@@ -1090,7 +969,6 @@
 
     goto/16 :goto_0
 
-    .line 326
     .end local v0    # "idx":I
     :cond_1e
     const-string v3, "/a"
@@ -1101,7 +979,6 @@
 
     if-eqz v3, :cond_1f
 
-    .line 327
     sget-object v3, Landroid/sec/clipboard/util/ClipboardProcText;->href:Ljava/lang/String;
 
     invoke-virtual {v3}, Ljava/lang/String;->length()I
@@ -1110,12 +987,10 @@
 
     if-lez v3, :cond_0
 
-    .line 328
     const-string v2, "\n"
 
     goto/16 :goto_0
 
-    .line 332
     :cond_1f
     const-string v3, "/tr"
 
@@ -1125,7 +1000,6 @@
 
     if-eqz v3, :cond_0
 
-    .line 333
     const-string v2, "\n"
 
     goto/16 :goto_0
@@ -1136,36 +1010,28 @@
     .param p0, "sSource"    # Ljava/lang/String;
 
     .prologue
-    .line 53
-    const-string/jumbo v1, "src=\""
+    const-string v1, "src=\""
 
-    .line 54
     .local v1, "IMG_SRC":Ljava/lang/String;
     const-string v0, "<img"
 
-    .line 55
     .local v0, "IMG_BEGIN":Ljava/lang/String;
     move-object v7, p0
 
-    .line 56
     .local v7, "sSourceOriginal":Ljava/lang/String;
     invoke-virtual {v7}, Ljava/lang/String;->toLowerCase()Ljava/lang/String;
 
     move-result-object v6
 
-    .line 57
     .local v6, "sSourceLower":Ljava/lang/String;
     const-string v5, ""
 
-    .line 59
     .local v5, "sResult":Ljava/lang/String;
     const/4 v3, 0x0
 
-    .line 60
     .local v3, "iIndex":I
     const/4 v4, 0x0
 
-    .line 62
     .local v4, "iSubIndex":I
     const-string v8, "<img"
 
@@ -1173,34 +1039,28 @@
 
     move-result v3
 
-    .line 64
     :goto_0
     const/4 v8, -0x1
 
     if-le v3, v8, :cond_0
 
-    .line 65
     invoke-virtual {v6, v3}, Ljava/lang/String;->substring(I)Ljava/lang/String;
 
     move-result-object v6
 
-    .line 66
     invoke-virtual {v7, v3}, Ljava/lang/String;->substring(I)Ljava/lang/String;
 
     move-result-object v7
 
-    .line 68
-    const-string/jumbo v8, "src=\""
+    const-string v8, "src=\""
 
     invoke-virtual {v6, v8}, Ljava/lang/String;->indexOf(Ljava/lang/String;)I
 
     move-result v4
 
-    .line 69
     if-lez v4, :cond_0
 
-    .line 70
-    const-string/jumbo v8, "src=\""
+    const-string v8, "src=\""
 
     invoke-virtual {v8}, Ljava/lang/String;->length()I
 
@@ -1208,24 +1068,20 @@
 
     add-int/2addr v4, v8
 
-    .line 72
     invoke-virtual {v6, v4}, Ljava/lang/String;->substring(I)Ljava/lang/String;
 
     move-result-object v6
 
-    .line 73
     invoke-virtual {v7, v4}, Ljava/lang/String;->substring(I)Ljava/lang/String;
 
     move-result-object v7
 
-    .line 75
     const-string v8, "\""
 
     invoke-virtual {v6, v8}, Ljava/lang/String;->indexOf(Ljava/lang/String;)I
 
     move-result v2
 
-    .line 76
     .local v2, "i1":I
     const/4 v8, 0x0
 
@@ -1233,29 +1089,24 @@
 
     move-result-object v5
 
-    .line 77
     invoke-virtual {v6, v2}, Ljava/lang/String;->substring(I)Ljava/lang/String;
 
     move-result-object v6
 
-    .line 78
     invoke-virtual {v7, v2}, Ljava/lang/String;->substring(I)Ljava/lang/String;
 
     move-result-object v7
 
-    .line 80
     invoke-virtual {v5}, Ljava/lang/String;->length()I
 
     move-result v8
 
     if-lez v8, :cond_1
 
-    .line 88
     .end local v2    # "i1":I
     :cond_0
     return-object v5
 
-    .line 85
     .restart local v2    # "i1":I
     :cond_1
     const-string v8, "<img"
@@ -1281,21 +1132,17 @@
 
     const/4 v3, 0x1
 
-    .line 201
     new-instance v1, Ljava/lang/StringBuffer;
 
     invoke-direct {v1}, Ljava/lang/StringBuffer;-><init>()V
 
-    .line 202
     .local v1, "result":Ljava/lang/StringBuffer;
     invoke-virtual {p0, v3}, Ljava/io/Reader;->mark(I)V
 
-    .line 203
     invoke-virtual {p0}, Ljava/io/Reader;->read()I
 
     move-result v0
 
-    .line 205
     .local v0, "dCharacter":I
     :goto_0
     int-to-char v2, v0
@@ -1306,29 +1153,23 @@
 
     if-eqz v2, :cond_0
 
-    .line 206
     int-to-char v2, v0
 
     invoke-virtual {v1, v2}, Ljava/lang/StringBuffer;->append(C)Ljava/lang/StringBuffer;
 
-    .line 207
     invoke-virtual {p0, v3}, Ljava/io/Reader;->mark(I)V
 
-    .line 208
     invoke-virtual {p0}, Ljava/io/Reader;->read()I
 
     move-result v0
 
     goto :goto_0
 
-    .line 210
     :cond_0
     if-ne v0, v4, :cond_1
 
-    .line 211
     invoke-virtual {v1, v4}, Ljava/lang/StringBuffer;->append(C)Ljava/lang/StringBuffer;
 
-    .line 214
     :goto_1
     invoke-virtual {v1}, Ljava/lang/StringBuffer;->toString()Ljava/lang/String;
 
@@ -1336,7 +1177,6 @@
 
     return-object v2
 
-    .line 213
     :cond_1
     invoke-virtual {p0}, Ljava/io/Reader;->reset()V
 
@@ -1355,36 +1195,29 @@
     .prologue
     const/16 v4, 0x3c
 
-    .line 174
     new-instance v2, Ljava/lang/StringBuffer;
 
     invoke-direct {v2}, Ljava/lang/StringBuffer;-><init>()V
 
-    .line 175
     .local v2, "result":Ljava/lang/StringBuffer;
     const/4 v1, 0x1
 
-    .line 177
     .local v1, "level":I
     invoke-virtual {v2, v4}, Ljava/lang/StringBuffer;->append(C)Ljava/lang/StringBuffer;
 
-    .line 178
     :cond_0
     :goto_0
     if-lez v1, :cond_1
 
-    .line 179
     invoke-virtual {p0}, Ljava/io/Reader;->read()I
 
     move-result v0
 
-    .line 180
     .local v0, "dChar":I
     const/4 v3, -0x1
 
     if-ne v0, v3, :cond_2
 
-    .line 189
     .end local v0    # "dChar":I
     :cond_1
     invoke-virtual {v2}, Ljava/lang/StringBuffer;->toString()Ljava/lang/String;
@@ -1393,28 +1226,23 @@
 
     return-object v3
 
-    .line 182
     .restart local v0    # "dChar":I
     :cond_2
     int-to-char v3, v0
 
     invoke-virtual {v2, v3}, Ljava/lang/StringBuffer;->append(C)Ljava/lang/StringBuffer;
 
-    .line 183
     if-ne v0, v4, :cond_3
 
-    .line 184
     add-int/lit8 v1, v1, 0x1
 
     goto :goto_0
 
-    .line 185
     :cond_3
     const/16 v3, 0x3e
 
     if-ne v0, v3, :cond_0
 
-    .line 186
     add-int/lit8 v1, v1, -0x1
 
     goto :goto_0
@@ -1426,12 +1254,10 @@
     .param p1, "sTag"    # Ljava/lang/String;
 
     .prologue
-    .line 230
     invoke-virtual {p0}, Ljava/lang/String;->toLowerCase()Ljava/lang/String;
 
     move-result-object p0
 
-    .line 231
     new-instance v2, Ljava/lang/StringBuilder;
 
     invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
@@ -1460,7 +1286,6 @@
 
     move-result-object v0
 
-    .line 232
     .local v0, "sTagType_1":Ljava/lang/String;
     new-instance v2, Ljava/lang/StringBuilder;
 
@@ -1490,7 +1315,6 @@
 
     move-result-object v1
 
-    .line 234
     .local v1, "sTagType_2":Ljava/lang/String;
     invoke-virtual {p0, v0}, Ljava/lang/String;->startsWith(Ljava/lang/String;)Z
 

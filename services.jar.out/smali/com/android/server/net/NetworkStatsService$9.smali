@@ -23,7 +23,6 @@
     .locals 0
 
     .prologue
-    .line 856
     iput-object p1, p0, Lcom/android/server/net/NetworkStatsService$9;->this$0:Lcom/android/server/net/NetworkStatsService;
 
     invoke-direct {p0}, Landroid/telephony/PhoneStateListener;-><init>()V
@@ -43,7 +42,6 @@
 
     const/4 v3, 0x0
 
-    .line 859
     iget-object v4, p0, Lcom/android/server/net/NetworkStatsService$9;->this$0:Lcom/android/server/net/NetworkStatsService;
 
     # getter for: Lcom/android/server/net/NetworkStatsService;->mLastPhoneState:I
@@ -55,7 +53,6 @@
 
     move v1, v2
 
-    .line 860
     .local v1, "stateChanged":Z
     :goto_0
     iget-object v4, p0, Lcom/android/server/net/NetworkStatsService$9;->this$0:Lcom/android/server/net/NetworkStatsService;
@@ -69,21 +66,18 @@
 
     move v0, v2
 
-    .line 862
     .local v0, "networkTypeChanged":Z
     :goto_1
     if-eqz v0, :cond_0
 
     if-nez v1, :cond_0
 
-    .line 868
     const-string v2, "NetworkStats"
 
-    const-string/jumbo v3, "triggering delayed updateIfaces()"
+    const-string v3, "triggering delayed updateIfaces()"
 
     invoke-static {v2, v3}, Landroid/util/Slog;->v(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 869
     iget-object v2, p0, Lcom/android/server/net/NetworkStatsService$9;->this$0:Lcom/android/server/net/NetworkStatsService;
 
     # getter for: Lcom/android/server/net/NetworkStatsService;->mHandler:Landroid/os/Handler;
@@ -108,20 +102,17 @@
 
     invoke-virtual {v2, v3, v4, v5}, Landroid/os/Handler;->sendMessageDelayed(Landroid/os/Message;J)Z
 
-    .line 873
     :cond_0
     iget-object v2, p0, Lcom/android/server/net/NetworkStatsService$9;->this$0:Lcom/android/server/net/NetworkStatsService;
 
     # setter for: Lcom/android/server/net/NetworkStatsService;->mLastPhoneState:I
     invoke-static {v2, p1}, Lcom/android/server/net/NetworkStatsService;->access$1502(Lcom/android/server/net/NetworkStatsService;I)I
 
-    .line 874
     iget-object v2, p0, Lcom/android/server/net/NetworkStatsService$9;->this$0:Lcom/android/server/net/NetworkStatsService;
 
     # setter for: Lcom/android/server/net/NetworkStatsService;->mLastPhoneNetworkType:I
     invoke-static {v2, p2}, Lcom/android/server/net/NetworkStatsService;->access$1602(Lcom/android/server/net/NetworkStatsService;I)I
 
-    .line 875
     return-void
 
     .end local v0    # "networkTypeChanged":Z
@@ -129,13 +120,11 @@
     :cond_1
     move v1, v3
 
-    .line 859
     goto :goto_0
 
     .restart local v1    # "stateChanged":Z
     :cond_2
     move v0, v3
 
-    .line 860
     goto :goto_1
 .end method

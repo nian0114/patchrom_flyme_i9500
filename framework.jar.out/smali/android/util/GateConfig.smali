@@ -56,10 +56,8 @@
     .prologue
     const/4 v0, 0x0
 
-    .line 51
     sput-boolean v0, Landroid/util/GateConfig;->sGateEnabled:Z
 
-    .line 52
     sput-boolean v0, Landroid/util/GateConfig;->sGateLcdtextEnabled:Z
 
     return-void
@@ -69,7 +67,6 @@
     .locals 0
 
     .prologue
-    .line 24
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -79,8 +76,7 @@
     .locals 3
 
     .prologue
-    .line 74
-    const-string/jumbo v1, "ro.debug_level"
+    const-string v1, "ro.debug_level"
 
     invoke-static {v1}, Landroid/os/SystemProperties;->get(Ljava/lang/String;)Ljava/lang/String;
 
@@ -90,7 +86,6 @@
 
     move-result-object v0
 
-    .line 75
     .local v0, "debugLevel":Ljava/lang/String;
     const-string v1, "0x494d"
 
@@ -100,8 +95,7 @@
 
     if-eqz v1, :cond_0
 
-    .line 76
-    const-string/jumbo v1, "service.gate.enabled"
+    const-string v1, "service.gate.enabled"
 
     invoke-static {v1}, Landroid/os/SystemProperties;->get(Ljava/lang/String;)Ljava/lang/String;
 
@@ -113,7 +107,6 @@
 
     move-result v1
 
-    .line 78
     :goto_0
     return v1
 
@@ -127,8 +120,7 @@
     .locals 3
 
     .prologue
-    .line 86
-    const-string/jumbo v1, "ro.debug_level"
+    const-string v1, "ro.debug_level"
 
     invoke-static {v1}, Landroid/os/SystemProperties;->get(Ljava/lang/String;)Ljava/lang/String;
 
@@ -138,7 +130,6 @@
 
     move-result-object v0
 
-    .line 87
     .local v0, "debugLevel":Ljava/lang/String;
     const-string v1, "0x494d"
 
@@ -148,8 +139,7 @@
 
     if-eqz v1, :cond_0
 
-    .line 88
-    const-string/jumbo v1, "service.gate.lcdtexton"
+    const-string v1, "service.gate.lcdtexton"
 
     invoke-static {v1}, Landroid/os/SystemProperties;->get(Ljava/lang/String;)Ljava/lang/String;
 
@@ -161,7 +151,6 @@
 
     move-result v1
 
-    .line 90
     :goto_0
     return v1
 
@@ -176,10 +165,8 @@
     .param p0, "gateEnabled"    # Z
 
     .prologue
-    .line 59
     sput-boolean p0, Landroid/util/GateConfig;->sGateEnabled:Z
 
-    .line 61
     const-string v0, "GATE"
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -216,7 +203,6 @@
 
     invoke-static {v0, v1}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 62
     return-void
 .end method
 
@@ -225,10 +211,8 @@
     .param p0, "lcdTextEnabled"    # Z
 
     .prologue
-    .line 65
     sput-boolean p0, Landroid/util/GateConfig;->sGateLcdtextEnabled:Z
 
-    .line 67
     const-string v0, "GATE"
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -265,6 +249,5 @@
 
     invoke-static {v0, v1}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 68
     return-void
 .end method

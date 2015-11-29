@@ -71,22 +71,18 @@
     .locals 1
 
     .prologue
-    .line 1578
     iput-object p1, p0, Lcom/android/server/display/DisplayPowerController$DynamicAutoBrightnessConfig;->this$0:Lcom/android/server/display/DisplayPowerController;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 1579
     const/16 v0, 0xff
 
     iput v0, p0, Lcom/android/server/display/DisplayPowerController$DynamicAutoBrightnessConfig;->mLowLimitAtHighestAutoBrightnessLevel:I
 
-    .line 1607
     const/4 v0, 0x0
 
     iput v0, p0, Lcom/android/server/display/DisplayPowerController$DynamicAutoBrightnessConfig;->mAutoBrightnessLevelStepRatio:F
 
-    .line 1749
     const/4 v0, 0x0
 
     iput-boolean v0, p0, Lcom/android/server/display/DisplayPowerController$DynamicAutoBrightnessConfig;->mIsTablet:Z
@@ -100,7 +96,6 @@
     .param p1, "x1"    # Ljava/io/PrintWriter;
 
     .prologue
-    .line 1578
     invoke-direct {p0, p1}, Lcom/android/server/display/DisplayPowerController$DynamicAutoBrightnessConfig;->dumpAutoBrightnessTables(Ljava/io/PrintWriter;)V
 
     return-void
@@ -111,7 +106,6 @@
     .param p1, "pw"    # Ljava/io/PrintWriter;
 
     .prologue
-    .line 1924
     :try_start_0
     iget-object v9, p0, Lcom/android/server/display/DisplayPowerController$DynamicAutoBrightnessConfig;->this$0:Lcom/android/server/display/DisplayPowerController;
 
@@ -122,28 +116,22 @@
 
     if-eqz v9, :cond_7
 
-    .line 1925
     const-string v6, ""
 
-    .line 1926
     .local v6, "mStrLowHysteresisPoints":Ljava/lang/String;
     const-string v2, ""
 
-    .line 1927
     .local v2, "mStrBrightnessValuePoints":Ljava/lang/String;
     const-string v4, ""
 
-    .line 1928
     .local v4, "mStrHighHysteresisPoints":Ljava/lang/String;
     const-string v8, ""
 
-    .line 1930
     .local v8, "mStrMinimumExpressiveBrightnessValues":Ljava/lang/String;
     const-string v9, "[DAB] Dynamic Auto Brightness Tables :"
 
     invoke-virtual {p1, v9}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
-    .line 1931
     new-instance v9, Ljava/lang/StringBuilder;
 
     invoke-direct {v9}, Ljava/lang/StringBuilder;-><init>()V
@@ -166,7 +154,6 @@
 
     invoke-virtual {p1, v9}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
-    .line 1932
     new-instance v9, Ljava/lang/StringBuilder;
 
     invoke-direct {v9}, Ljava/lang/StringBuilder;-><init>()V
@@ -189,7 +176,6 @@
 
     invoke-virtual {p1, v9}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
-    .line 1933
     new-instance v9, Ljava/lang/StringBuilder;
 
     invoke-direct {v9}, Ljava/lang/StringBuilder;-><init>()V
@@ -212,7 +198,6 @@
 
     invoke-virtual {p1, v9}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
-    .line 1934
     const/4 v1, 0x0
 
     .local v1, "i":I
@@ -223,7 +208,6 @@
 
     if-ge v1, v9, :cond_0
 
-    .line 1935
     new-instance v9, Ljava/lang/StringBuilder;
 
     invoke-direct {v9}, Ljava/lang/StringBuilder;-><init>()V
@@ -270,12 +254,10 @@
 
     move-result-object v6
 
-    .line 1934
     add-int/lit8 v1, v1, 0x1
 
     goto :goto_0
 
-    .line 1937
     :cond_0
     new-instance v9, Ljava/lang/StringBuilder;
 
@@ -297,7 +279,6 @@
 
     invoke-virtual {p1, v9}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
-    .line 1938
     const/4 v1, 0x0
 
     :goto_1
@@ -307,7 +288,6 @@
 
     if-ge v1, v9, :cond_1
 
-    .line 1939
     new-instance v9, Ljava/lang/StringBuilder;
 
     invoke-direct {v9}, Ljava/lang/StringBuilder;-><init>()V
@@ -354,12 +334,10 @@
 
     move-result-object v2
 
-    .line 1938
     add-int/lit8 v1, v1, 0x1
 
     goto :goto_1
 
-    .line 1941
     :cond_1
     new-instance v9, Ljava/lang/StringBuilder;
 
@@ -381,7 +359,6 @@
 
     invoke-virtual {p1, v9}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
-    .line 1942
     const/4 v1, 0x0
 
     :goto_2
@@ -391,7 +368,6 @@
 
     if-ge v1, v9, :cond_2
 
-    .line 1943
     new-instance v9, Ljava/lang/StringBuilder;
 
     invoke-direct {v9}, Ljava/lang/StringBuilder;-><init>()V
@@ -438,12 +414,10 @@
 
     move-result-object v4
 
-    .line 1942
     add-int/lit8 v1, v1, 0x1
 
     goto :goto_2
 
-    .line 1945
     :cond_2
     new-instance v9, Ljava/lang/StringBuilder;
 
@@ -465,7 +439,6 @@
 
     invoke-virtual {p1, v9}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
-    .line 1946
     const/4 v1, 0x0
 
     :goto_3
@@ -475,7 +448,6 @@
 
     if-ge v1, v9, :cond_3
 
-    .line 1947
     new-instance v9, Ljava/lang/StringBuilder;
 
     invoke-direct {v9}, Ljava/lang/StringBuilder;-><init>()V
@@ -502,12 +474,10 @@
 
     move-result-object v8
 
-    .line 1946
     add-int/lit8 v1, v1, 0x1
 
     goto :goto_3
 
-    .line 1949
     :cond_3
     new-instance v9, Ljava/lang/StringBuilder;
 
@@ -529,24 +499,19 @@
 
     invoke-virtual {p1, v9}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
-    .line 1952
     const-string v7, ""
 
-    .line 1953
     .local v7, "mStrLowHysteresisPointsForEbookOnly":Ljava/lang/String;
     const-string v3, ""
 
-    .line 1954
     .local v3, "mStrBrightnessValuePointsForEbookOnly":Ljava/lang/String;
     const-string v5, ""
 
-    .line 1956
     .local v5, "mStrHighHysteresisPointsForEbookOnly":Ljava/lang/String;
     const-string v9, "[DAB] "
 
     invoke-virtual {p1, v9}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
-    .line 1957
     const/4 v1, 0x0
 
     :goto_4
@@ -556,7 +521,6 @@
 
     if-ge v1, v9, :cond_4
 
-    .line 1958
     new-instance v9, Ljava/lang/StringBuilder;
 
     invoke-direct {v9}, Ljava/lang/StringBuilder;-><init>()V
@@ -603,12 +567,10 @@
 
     move-result-object v7
 
-    .line 1957
     add-int/lit8 v1, v1, 0x1
 
     goto :goto_4
 
-    .line 1960
     :cond_4
     new-instance v9, Ljava/lang/StringBuilder;
 
@@ -630,7 +592,6 @@
 
     invoke-virtual {p1, v9}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
-    .line 1961
     const/4 v1, 0x0
 
     :goto_5
@@ -640,7 +601,6 @@
 
     if-ge v1, v9, :cond_5
 
-    .line 1962
     new-instance v9, Ljava/lang/StringBuilder;
 
     invoke-direct {v9}, Ljava/lang/StringBuilder;-><init>()V
@@ -687,12 +647,10 @@
 
     move-result-object v3
 
-    .line 1961
     add-int/lit8 v1, v1, 0x1
 
     goto :goto_5
 
-    .line 1964
     :cond_5
     new-instance v9, Ljava/lang/StringBuilder;
 
@@ -714,7 +672,6 @@
 
     invoke-virtual {p1, v9}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
-    .line 1965
     const/4 v1, 0x0
 
     :goto_6
@@ -724,7 +681,6 @@
 
     if-ge v1, v9, :cond_6
 
-    .line 1966
     new-instance v9, Ljava/lang/StringBuilder;
 
     invoke-direct {v9}, Ljava/lang/StringBuilder;-><init>()V
@@ -771,12 +727,10 @@
 
     move-result-object v5
 
-    .line 1965
     add-int/lit8 v1, v1, 0x1
 
     goto :goto_6
 
-    .line 1968
     :cond_6
     new-instance v9, Ljava/lang/StringBuilder;
 
@@ -800,7 +754,6 @@
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 1974
     .end local v1    # "i":I
     .end local v2    # "mStrBrightnessValuePoints":Ljava/lang/String;
     .end local v3    # "mStrBrightnessValuePointsForEbookOnly":Ljava/lang/String;
@@ -813,11 +766,9 @@
     :goto_7
     return-void
 
-    .line 1971
     :catch_0
     move-exception v0
 
-    .line 1972
     .local v0, "e":Ljava/lang/Exception;
     const-string v9, "DisplayPowerController"
 
@@ -839,28 +790,22 @@
     .prologue
     const-wide v8, 0x3f847ae147ae147bL    # 0.01
 
-    .line 1736
     const-wide/16 v0, 0x0
 
-    .line 1737
     .local v0, "slope":D
     if-eq p1, p3, :cond_0
 
     if-ne p2, p4, :cond_1
 
-    .line 1738
     :cond_0
     const-wide/16 v0, 0x0
 
-    .line 1746
     :goto_0
     return-wide v0
 
-    .line 1740
     :cond_1
     if-eqz p5, :cond_2
 
-    .line 1741
     int-to-double v2, p3
 
     add-double/2addr v2, v8
@@ -887,7 +832,6 @@
 
     goto :goto_0
 
-    .line 1743
     :cond_2
     sub-int v2, p4, p2
 
@@ -920,18 +864,16 @@
     .locals 2
 
     .prologue
-    .line 1751
-    const-string/jumbo v1, "ro.build.characteristics"
+    const-string v1, "ro.build.characteristics"
 
     invoke-static {v1}, Landroid/os/SystemProperties;->get(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 
-    .line 1752
     .local v0, "deviceType":Ljava/lang/String;
     if-eqz v0, :cond_0
 
-    const-string/jumbo v1, "tablet"
+    const-string v1, "tablet"
 
     invoke-virtual {v0, v1}, Ljava/lang/String;->contains(Ljava/lang/CharSequence;)Z
 
@@ -961,14 +903,11 @@
 
     const-wide/16 v6, 0x0
 
-    .line 1878
     const/4 v2, 0x0
 
-    .line 1879
     .local v2, "lux":F
     const/4 v1, 0x0
 
-    .line 1881
     .local v1, "i":I
     :try_start_0
     iget-object v3, p0, Lcom/android/server/display/DisplayPowerController$DynamicAutoBrightnessConfig;->this$0:Lcom/android/server/display/DisplayPowerController;
@@ -982,7 +921,6 @@
 
     if-nez v3, :cond_4
 
-    .line 1882
     const/4 v1, 0x1
 
     :goto_0
@@ -992,7 +930,6 @@
 
     if-ge v1, v3, :cond_0
 
-    .line 1883
     iget-object v3, p0, Lcom/android/server/display/DisplayPowerController$DynamicAutoBrightnessConfig;->mHighHysteresisValues:[I
 
     aget v3, v3, v1
@@ -1003,7 +940,6 @@
 
     if-gez v3, :cond_1
 
-    .line 1885
     :cond_0
     iget-object v3, p0, Lcom/android/server/display/DisplayPowerController$DynamicAutoBrightnessConfig;->mHighHysteresisLevels:[I
 
@@ -1011,33 +947,28 @@
 
     if-lt v1, v3, :cond_2
 
-    .line 1886
     iget-object v3, p0, Lcom/android/server/display/DisplayPowerController$DynamicAutoBrightnessConfig;->mHighHysteresisLevels:[I
 
     array-length v3, v3
 
     add-int/lit8 v1, v3, -0x1
 
-    .line 1887
     iget-object v3, p0, Lcom/android/server/display/DisplayPowerController$DynamicAutoBrightnessConfig;->mHighHysteresisLevels:[I
 
     aget v3, v3, v1
 
     int-to-float v2, v3
 
-    .line 1917
     .end local v2    # "lux":F
     :goto_1
     return v2
 
-    .line 1882
     .restart local v2    # "lux":F
     :cond_1
     add-int/lit8 v1, v1, 0x1
 
     goto :goto_0
 
-    .line 1889
     :cond_2
     iget-object v3, p0, Lcom/android/server/display/DisplayPowerController$DynamicAutoBrightnessConfig;->mHighHysteresisSlope:[D
 
@@ -1049,7 +980,6 @@
 
     if-lez v3, :cond_3
 
-    .line 1890
     const-wide/high16 v4, 0x4024000000000000L    # 10.0
 
     iget-object v3, p0, Lcom/android/server/display/DisplayPowerController$DynamicAutoBrightnessConfig;->mHighHysteresisSlope:[D
@@ -1098,7 +1028,6 @@
 
     goto :goto_1
 
-    .line 1892
     :cond_3
     iget-object v3, p0, Lcom/android/server/display/DisplayPowerController$DynamicAutoBrightnessConfig;->mHighHysteresisLevels:[I
 
@@ -1110,7 +1039,6 @@
 
     goto :goto_1
 
-    .line 1898
     :cond_4
     const/4 v1, 0x1
 
@@ -1121,7 +1049,6 @@
 
     if-ge v1, v3, :cond_5
 
-    .line 1899
     iget-object v3, p0, Lcom/android/server/display/DisplayPowerController$DynamicAutoBrightnessConfig;->mHighHysteresisValuesForEbookOnly:[I
 
     aget v3, v3, v1
@@ -1132,7 +1059,6 @@
 
     if-gez v3, :cond_6
 
-    .line 1901
     :cond_5
     iget-object v3, p0, Lcom/android/server/display/DisplayPowerController$DynamicAutoBrightnessConfig;->mHighHysteresisLevelsForEbookOnly:[I
 
@@ -1140,14 +1066,12 @@
 
     if-lt v1, v3, :cond_7
 
-    .line 1902
     iget-object v3, p0, Lcom/android/server/display/DisplayPowerController$DynamicAutoBrightnessConfig;->mHighHysteresisLevelsForEbookOnly:[I
 
     array-length v3, v3
 
     add-int/lit8 v1, v3, -0x1
 
-    .line 1903
     iget-object v3, p0, Lcom/android/server/display/DisplayPowerController$DynamicAutoBrightnessConfig;->mHighHysteresisLevelsForEbookOnly:[I
 
     aget v3, v3, v1
@@ -1156,13 +1080,11 @@
 
     goto :goto_1
 
-    .line 1898
     :cond_6
     add-int/lit8 v1, v1, 0x1
 
     goto :goto_2
 
-    .line 1905
     :cond_7
     iget-object v3, p0, Lcom/android/server/display/DisplayPowerController$DynamicAutoBrightnessConfig;->mHighHysteresisSlopeForEbookOnly:[D
 
@@ -1174,7 +1096,6 @@
 
     if-lez v3, :cond_8
 
-    .line 1906
     const-wide/high16 v4, 0x4024000000000000L    # 10.0
 
     iget-object v3, p0, Lcom/android/server/display/DisplayPowerController$DynamicAutoBrightnessConfig;->mHighHysteresisSlopeForEbookOnly:[D
@@ -1223,7 +1144,6 @@
 
     goto/16 :goto_1
 
-    .line 1908
     :cond_8
     iget-object v3, p0, Lcom/android/server/display/DisplayPowerController$DynamicAutoBrightnessConfig;->mHighHysteresisLevelsForEbookOnly:[I
 
@@ -1237,11 +1157,9 @@
 
     goto/16 :goto_1
 
-    .line 1914
     :catch_0
     move-exception v0
 
-    .line 1916
     .local v0, "e":Ljava/lang/Exception;
     const-string v3, "DisplayPowerController"
 
@@ -1249,7 +1167,6 @@
 
     invoke-static {v3, v4, v0}, Landroid/util/Slog;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
-    .line 1917
     const v2, 0x459c4000    # 5000.0f
 
     goto/16 :goto_1
@@ -1264,14 +1181,11 @@
 
     const-wide/16 v6, 0x0
 
-    .line 1828
     const/4 v2, 0x0
 
-    .line 1829
     .local v2, "lux":F
     const/4 v1, 0x0
 
-    .line 1831
     .local v1, "i":I
     :try_start_0
     iget-object v3, p0, Lcom/android/server/display/DisplayPowerController$DynamicAutoBrightnessConfig;->this$0:Lcom/android/server/display/DisplayPowerController;
@@ -1285,7 +1199,6 @@
 
     if-nez v3, :cond_4
 
-    .line 1832
     const/4 v1, 0x1
 
     :goto_0
@@ -1295,7 +1208,6 @@
 
     if-ge v1, v3, :cond_0
 
-    .line 1833
     iget-object v3, p0, Lcom/android/server/display/DisplayPowerController$DynamicAutoBrightnessConfig;->mLowHysteresisValues:[I
 
     aget v3, v3, v1
@@ -1306,7 +1218,6 @@
 
     if-gtz v3, :cond_1
 
-    .line 1837
     :cond_0
     iget-object v3, p0, Lcom/android/server/display/DisplayPowerController$DynamicAutoBrightnessConfig;->mLowHysteresisLevels:[I
 
@@ -1314,7 +1225,6 @@
 
     if-lt v1, v3, :cond_2
 
-    .line 1838
     iget-object v3, p0, Lcom/android/server/display/DisplayPowerController$DynamicAutoBrightnessConfig;->mLowHysteresisLevels:[I
 
     iget-object v4, p0, Lcom/android/server/display/DisplayPowerController$DynamicAutoBrightnessConfig;->mLowHysteresisLevels:[I
@@ -1327,19 +1237,16 @@
 
     int-to-float v2, v3
 
-    .line 1871
     .end local v2    # "lux":F
     :goto_1
     return v2
 
-    .line 1832
     .restart local v2    # "lux":F
     :cond_1
     add-int/lit8 v1, v1, 0x1
 
     goto :goto_0
 
-    .line 1840
     :cond_2
     iget-object v3, p0, Lcom/android/server/display/DisplayPowerController$DynamicAutoBrightnessConfig;->mLowHysteresisSlope:[D
 
@@ -1351,7 +1258,6 @@
 
     if-lez v3, :cond_3
 
-    .line 1841
     const-wide/high16 v4, 0x4024000000000000L    # 10.0
 
     iget-object v3, p0, Lcom/android/server/display/DisplayPowerController$DynamicAutoBrightnessConfig;->mLowHysteresisSlope:[D
@@ -1400,7 +1306,6 @@
 
     goto :goto_1
 
-    .line 1844
     :cond_3
     iget-object v3, p0, Lcom/android/server/display/DisplayPowerController$DynamicAutoBrightnessConfig;->mLowHysteresisLevels:[I
 
@@ -1412,7 +1317,6 @@
 
     goto :goto_1
 
-    .line 1850
     :cond_4
     const/4 v1, 0x1
 
@@ -1423,7 +1327,6 @@
 
     if-ge v1, v3, :cond_5
 
-    .line 1851
     iget-object v3, p0, Lcom/android/server/display/DisplayPowerController$DynamicAutoBrightnessConfig;->mLowHysteresisValuesForEbookOnly:[I
 
     aget v3, v3, v1
@@ -1434,7 +1337,6 @@
 
     if-gtz v3, :cond_6
 
-    .line 1855
     :cond_5
     iget-object v3, p0, Lcom/android/server/display/DisplayPowerController$DynamicAutoBrightnessConfig;->mLowHysteresisLevelsForEbookOnly:[I
 
@@ -1442,7 +1344,6 @@
 
     if-lt v1, v3, :cond_7
 
-    .line 1856
     iget-object v3, p0, Lcom/android/server/display/DisplayPowerController$DynamicAutoBrightnessConfig;->mLowHysteresisLevelsForEbookOnly:[I
 
     iget-object v4, p0, Lcom/android/server/display/DisplayPowerController$DynamicAutoBrightnessConfig;->mLowHysteresisLevelsForEbookOnly:[I
@@ -1457,13 +1358,11 @@
 
     goto :goto_1
 
-    .line 1850
     :cond_6
     add-int/lit8 v1, v1, 0x1
 
     goto :goto_2
 
-    .line 1858
     :cond_7
     iget-object v3, p0, Lcom/android/server/display/DisplayPowerController$DynamicAutoBrightnessConfig;->mLowHysteresisSlopeForEbookOnly:[D
 
@@ -1475,7 +1374,6 @@
 
     if-lez v3, :cond_8
 
-    .line 1859
     const-wide/high16 v4, 0x4024000000000000L    # 10.0
 
     iget-object v3, p0, Lcom/android/server/display/DisplayPowerController$DynamicAutoBrightnessConfig;->mLowHysteresisSlopeForEbookOnly:[D
@@ -1524,7 +1422,6 @@
 
     goto/16 :goto_1
 
-    .line 1862
     :cond_8
     iget-object v3, p0, Lcom/android/server/display/DisplayPowerController$DynamicAutoBrightnessConfig;->mLowHysteresisLevelsForEbookOnly:[I
 
@@ -1538,11 +1435,9 @@
 
     goto/16 :goto_1
 
-    .line 1868
     :catch_0
     move-exception v0
 
-    .line 1870
     .local v0, "e":Ljava/lang/Exception;
     const-string v3, "DisplayPowerController"
 
@@ -1550,7 +1445,6 @@
 
     invoke-static {v3, v4, v0}, Landroid/util/Slog;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
-    .line 1871
     const v2, 0x459c4000    # 5000.0f
 
     goto/16 :goto_1
@@ -1565,14 +1459,11 @@
 
     const-wide v10, 0x3f847ae147ae147bL    # 0.01
 
-    .line 1779
     const/4 v0, 0x0
 
-    .line 1780
     .local v0, "cd":F
     const/4 v2, 0x0
 
-    .line 1781
     .local v2, "i":I
     :try_start_0
     iget-object v3, p0, Lcom/android/server/display/DisplayPowerController$DynamicAutoBrightnessConfig;->this$0:Lcom/android/server/display/DisplayPowerController;
@@ -1586,7 +1477,6 @@
 
     if-nez v3, :cond_4
 
-    .line 1782
     const/4 v2, 0x1
 
     :goto_0
@@ -1596,7 +1486,6 @@
 
     if-ge v2, v3, :cond_0
 
-    .line 1783
     iget-object v3, p0, Lcom/android/server/display/DisplayPowerController$DynamicAutoBrightnessConfig;->mBrightnessLevels:[I
 
     aget v3, v3, v2
@@ -1607,7 +1496,6 @@
 
     if-gtz v3, :cond_1
 
-    .line 1787
     :cond_0
     iget-object v3, p0, Lcom/android/server/display/DisplayPowerController$DynamicAutoBrightnessConfig;->mBrightnessValues:[I
 
@@ -1615,7 +1503,6 @@
 
     if-lt v2, v3, :cond_2
 
-    .line 1788
     iget-object v3, p0, Lcom/android/server/display/DisplayPowerController$DynamicAutoBrightnessConfig;->mBrightnessValues:[I
 
     iget-object v4, p0, Lcom/android/server/display/DisplayPowerController$DynamicAutoBrightnessConfig;->mBrightnessValues:[I
@@ -1628,19 +1515,16 @@
 
     int-to-float v0, v3
 
-    .line 1821
     .end local v0    # "cd":F
     :goto_1
     return v0
 
-    .line 1782
     .restart local v0    # "cd":F
     :cond_1
     add-int/lit8 v2, v2, 0x1
 
     goto :goto_0
 
-    .line 1790
     :cond_2
     iget-object v3, p0, Lcom/android/server/display/DisplayPowerController$DynamicAutoBrightnessConfig;->mBrightnessValueSlope:[D
 
@@ -1652,7 +1536,6 @@
 
     if-lez v3, :cond_3
 
-    .line 1791
     iget-object v3, p0, Lcom/android/server/display/DisplayPowerController$DynamicAutoBrightnessConfig;->mBrightnessValueSlope:[D
 
     add-int/lit8 v4, v2, -0x1
@@ -1701,7 +1584,6 @@
 
     goto :goto_1
 
-    .line 1794
     :cond_3
     iget-object v3, p0, Lcom/android/server/display/DisplayPowerController$DynamicAutoBrightnessConfig;->mBrightnessValues:[I
 
@@ -1713,7 +1595,6 @@
 
     goto :goto_1
 
-    .line 1800
     :cond_4
     const/4 v2, 0x1
 
@@ -1724,7 +1605,6 @@
 
     if-ge v2, v3, :cond_5
 
-    .line 1801
     iget-object v3, p0, Lcom/android/server/display/DisplayPowerController$DynamicAutoBrightnessConfig;->mBrightnessLevelsForEbookOnly:[I
 
     aget v3, v3, v2
@@ -1735,7 +1615,6 @@
 
     if-gtz v3, :cond_6
 
-    .line 1805
     :cond_5
     iget-object v3, p0, Lcom/android/server/display/DisplayPowerController$DynamicAutoBrightnessConfig;->mBrightnessValuesForEbookOnly:[I
 
@@ -1743,7 +1622,6 @@
 
     if-lt v2, v3, :cond_7
 
-    .line 1806
     iget-object v3, p0, Lcom/android/server/display/DisplayPowerController$DynamicAutoBrightnessConfig;->mBrightnessValuesForEbookOnly:[I
 
     iget-object v4, p0, Lcom/android/server/display/DisplayPowerController$DynamicAutoBrightnessConfig;->mBrightnessValuesForEbookOnly:[I
@@ -1758,13 +1636,11 @@
 
     goto :goto_1
 
-    .line 1800
     :cond_6
     add-int/lit8 v2, v2, 0x1
 
     goto :goto_2
 
-    .line 1808
     :cond_7
     iget-object v3, p0, Lcom/android/server/display/DisplayPowerController$DynamicAutoBrightnessConfig;->mBrightnessValueSlopeForEbookOnly:[D
 
@@ -1776,7 +1652,6 @@
 
     if-lez v3, :cond_8
 
-    .line 1809
     iget-object v3, p0, Lcom/android/server/display/DisplayPowerController$DynamicAutoBrightnessConfig;->mBrightnessValueSlopeForEbookOnly:[D
 
     add-int/lit8 v4, v2, -0x1
@@ -1825,7 +1700,6 @@
 
     goto/16 :goto_1
 
-    .line 1812
     :cond_8
     iget-object v3, p0, Lcom/android/server/display/DisplayPowerController$DynamicAutoBrightnessConfig;->mBrightnessValuesForEbookOnly:[I
 
@@ -1839,11 +1713,9 @@
 
     goto/16 :goto_1
 
-    .line 1818
     :catch_0
     move-exception v1
 
-    .line 1820
     .local v1, "e":Ljava/lang/Exception;
     const-string v3, "DisplayPowerController"
 
@@ -1851,7 +1723,6 @@
 
     invoke-static {v3, v4, v1}, Landroid/util/Slog;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
-    .line 1821
     const/high16 v0, 0x437f0000    # 255.0f
 
     goto/16 :goto_1
@@ -1867,10 +1738,8 @@
 
     const/4 v6, 0x0
 
-    .line 1756
     float-to-int v1, p2
 
-    .line 1758
     .local v1, "finalBrightness":I
     iget-object v2, p0, Lcom/android/server/display/DisplayPowerController$DynamicAutoBrightnessConfig;->this$0:Lcom/android/server/display/DisplayPowerController;
 
@@ -1881,7 +1750,6 @@
 
     iget v0, v2, Landroid/hardware/display/DisplayManagerInternal$DisplayPowerRequest;->screenAutoBrightnessAdjustment:F
 
-    .line 1760
     .local v0, "autoBrightnessAdj":F
     const v2, 0x459c4000    # 5000.0f
 
@@ -1893,7 +1761,6 @@
 
     if-ge v1, v2, :cond_0
 
-    .line 1761
     const-string v2, "DisplayPowerController"
 
     new-instance v3, Ljava/lang/StringBuilder;
@@ -1928,10 +1795,8 @@
 
     invoke-static {v2, v3}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1762
     iget v1, p0, Lcom/android/server/display/DisplayPowerController$DynamicAutoBrightnessConfig;->mLowLimitAtHighestAutoBrightnessLevel:I
 
-    .line 1765
     :cond_0
     iget-boolean v2, p0, Lcom/android/server/display/DisplayPowerController$DynamicAutoBrightnessConfig;->mIsTablet:Z
 
@@ -1943,7 +1808,6 @@
 
     if-nez v2, :cond_1
 
-    .line 1766
     float-to-double v2, v0
 
     const-wide v4, -0x4026666666666666L    # -0.4
@@ -1958,17 +1822,14 @@
 
     if-le v1, v2, :cond_2
 
-    .line 1767
     iget-object v2, p0, Lcom/android/server/display/DisplayPowerController$DynamicAutoBrightnessConfig;->mMinimumExpressiveBrightnessValues:[I
 
     aget v1, v2, v6
 
-    .line 1773
     :cond_1
     :goto_0
     return v1
 
-    .line 1768
     :cond_2
     float-to-double v2, v0
 
@@ -1984,7 +1845,6 @@
 
     if-ge v1, v2, :cond_1
 
-    .line 1769
     iget-object v2, p0, Lcom/android/server/display/DisplayPowerController$DynamicAutoBrightnessConfig;->mMinimumExpressiveBrightnessValues:[I
 
     aget v1, v2, v7
@@ -1996,7 +1856,6 @@
     .locals 15
 
     .prologue
-    .line 1687
     :try_start_0
     iget-object v0, p0, Lcom/android/server/display/DisplayPowerController$DynamicAutoBrightnessConfig;->mLowHysteresisValues:[I
 
@@ -2004,7 +1863,6 @@
 
     add-int/lit8 v12, v0, -0x1
 
-    .line 1688
     .local v12, "lengthOfLowHysteresisSlope":I
     iget-object v0, p0, Lcom/android/server/display/DisplayPowerController$DynamicAutoBrightnessConfig;->mBrightnessValues:[I
 
@@ -2012,7 +1870,6 @@
 
     add-int/lit8 v8, v0, -0x1
 
-    .line 1689
     .local v8, "lengthOfBrightnessValueSlope":I
     iget-object v0, p0, Lcom/android/server/display/DisplayPowerController$DynamicAutoBrightnessConfig;->mHighHysteresisValues:[I
 
@@ -2020,30 +1877,25 @@
 
     add-int/lit8 v10, v0, -0x1
 
-    .line 1691
     .local v10, "lengthOfHighHysteresisSlope":I
     new-array v0, v12, [D
 
     iput-object v0, p0, Lcom/android/server/display/DisplayPowerController$DynamicAutoBrightnessConfig;->mLowHysteresisSlope:[D
 
-    .line 1692
     new-array v0, v8, [D
 
     iput-object v0, p0, Lcom/android/server/display/DisplayPowerController$DynamicAutoBrightnessConfig;->mBrightnessValueSlope:[D
 
-    .line 1693
     new-array v0, v10, [D
 
     iput-object v0, p0, Lcom/android/server/display/DisplayPowerController$DynamicAutoBrightnessConfig;->mHighHysteresisSlope:[D
 
-    .line 1694
     const/4 v7, 0x0
 
     .local v7, "i":I
     :goto_0
     if-ge v7, v12, :cond_0
 
-    .line 1695
     iget-object v14, p0, Lcom/android/server/display/DisplayPowerController$DynamicAutoBrightnessConfig;->mLowHysteresisSlope:[D
 
     iget-object v0, p0, Lcom/android/server/display/DisplayPowerController$DynamicAutoBrightnessConfig;->mLowHysteresisLevels:[I
@@ -2076,19 +1928,16 @@
 
     aput-wide v0, v14, v7
 
-    .line 1694
     add-int/lit8 v7, v7, 0x1
 
     goto :goto_0
 
-    .line 1698
     :cond_0
     const/4 v7, 0x0
 
     :goto_1
     if-ge v7, v8, :cond_1
 
-    .line 1699
     iget-object v14, p0, Lcom/android/server/display/DisplayPowerController$DynamicAutoBrightnessConfig;->mBrightnessValueSlope:[D
 
     iget-object v0, p0, Lcom/android/server/display/DisplayPowerController$DynamicAutoBrightnessConfig;->mBrightnessLevels:[I
@@ -2121,19 +1970,16 @@
 
     aput-wide v0, v14, v7
 
-    .line 1698
     add-int/lit8 v7, v7, 0x1
 
     goto :goto_1
 
-    .line 1702
     :cond_1
     const/4 v7, 0x0
 
     :goto_2
     if-ge v7, v10, :cond_2
 
-    .line 1703
     iget-object v14, p0, Lcom/android/server/display/DisplayPowerController$DynamicAutoBrightnessConfig;->mHighHysteresisSlope:[D
 
     iget-object v0, p0, Lcom/android/server/display/DisplayPowerController$DynamicAutoBrightnessConfig;->mHighHysteresisLevels:[I
@@ -2166,12 +2012,10 @@
 
     aput-wide v0, v14, v7
 
-    .line 1702
     add-int/lit8 v7, v7, 0x1
 
     goto :goto_2
 
-    .line 1708
     :cond_2
     iget-object v0, p0, Lcom/android/server/display/DisplayPowerController$DynamicAutoBrightnessConfig;->mLowHysteresisValuesForEbookOnly:[I
 
@@ -2179,7 +2023,6 @@
 
     add-int/lit8 v13, v0, -0x1
 
-    .line 1709
     .local v13, "lengthOfLowHysteresisSlopeForEbookOnly":I
     iget-object v0, p0, Lcom/android/server/display/DisplayPowerController$DynamicAutoBrightnessConfig;->mBrightnessValuesForEbookOnly:[I
 
@@ -2187,7 +2030,6 @@
 
     add-int/lit8 v9, v0, -0x1
 
-    .line 1710
     .local v9, "lengthOfBrightnessValueSlopeForEbookOnly":I
     iget-object v0, p0, Lcom/android/server/display/DisplayPowerController$DynamicAutoBrightnessConfig;->mHighHysteresisValuesForEbookOnly:[I
 
@@ -2195,29 +2037,24 @@
 
     add-int/lit8 v11, v0, -0x1
 
-    .line 1712
     .local v11, "lengthOfHighHysteresisSlopeForEbookOnly":I
     new-array v0, v13, [D
 
     iput-object v0, p0, Lcom/android/server/display/DisplayPowerController$DynamicAutoBrightnessConfig;->mLowHysteresisSlopeForEbookOnly:[D
 
-    .line 1713
     new-array v0, v9, [D
 
     iput-object v0, p0, Lcom/android/server/display/DisplayPowerController$DynamicAutoBrightnessConfig;->mBrightnessValueSlopeForEbookOnly:[D
 
-    .line 1714
     new-array v0, v11, [D
 
     iput-object v0, p0, Lcom/android/server/display/DisplayPowerController$DynamicAutoBrightnessConfig;->mHighHysteresisSlopeForEbookOnly:[D
 
-    .line 1716
     const/4 v7, 0x0
 
     :goto_3
     if-ge v7, v13, :cond_3
 
-    .line 1717
     iget-object v14, p0, Lcom/android/server/display/DisplayPowerController$DynamicAutoBrightnessConfig;->mLowHysteresisSlopeForEbookOnly:[D
 
     iget-object v0, p0, Lcom/android/server/display/DisplayPowerController$DynamicAutoBrightnessConfig;->mLowHysteresisLevelsForEbookOnly:[I
@@ -2250,19 +2087,16 @@
 
     aput-wide v0, v14, v7
 
-    .line 1716
     add-int/lit8 v7, v7, 0x1
 
     goto :goto_3
 
-    .line 1720
     :cond_3
     const/4 v7, 0x0
 
     :goto_4
     if-ge v7, v9, :cond_4
 
-    .line 1721
     iget-object v14, p0, Lcom/android/server/display/DisplayPowerController$DynamicAutoBrightnessConfig;->mBrightnessValueSlopeForEbookOnly:[D
 
     iget-object v0, p0, Lcom/android/server/display/DisplayPowerController$DynamicAutoBrightnessConfig;->mBrightnessLevelsForEbookOnly:[I
@@ -2295,19 +2129,16 @@
 
     aput-wide v0, v14, v7
 
-    .line 1720
     add-int/lit8 v7, v7, 0x1
 
     goto :goto_4
 
-    .line 1724
     :cond_4
     const/4 v7, 0x0
 
     :goto_5
     if-ge v7, v11, :cond_5
 
-    .line 1725
     iget-object v14, p0, Lcom/android/server/display/DisplayPowerController$DynamicAutoBrightnessConfig;->mHighHysteresisSlopeForEbookOnly:[D
 
     iget-object v0, p0, Lcom/android/server/display/DisplayPowerController$DynamicAutoBrightnessConfig;->mHighHysteresisLevelsForEbookOnly:[I
@@ -2342,12 +2173,10 @@
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 1724
     add-int/lit8 v7, v7, 0x1
 
     goto :goto_5
 
-    .line 1730
     .end local v7    # "i":I
     .end local v8    # "lengthOfBrightnessValueSlope":I
     .end local v9    # "lengthOfBrightnessValueSlopeForEbookOnly":I
@@ -2358,7 +2187,6 @@
     :catch_0
     move-exception v6
 
-    .line 1731
     .local v6, "e":Ljava/lang/Exception;
     const-string v0, "DisplayPowerController"
 
@@ -2366,7 +2194,6 @@
 
     invoke-static {v0, v1, v6}, Landroid/util/Slog;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
-    .line 1733
     .end local v6    # "e":Ljava/lang/Exception;
     :cond_5
     return-void
@@ -2376,14 +2203,12 @@
     .locals 18
 
     .prologue
-    .line 1610
     const-string v10, "DisplayPowerController"
 
     const-string v11, "[DAB] Load SEC Auto-brightness setting"
 
     invoke-static {v10, v11}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1611
     move-object/from16 v0, p0
 
     iget-object v10, v0, Lcom/android/server/display/DisplayPowerController$DynamicAutoBrightnessConfig;->this$0:Lcom/android/server/display/DisplayPowerController;
@@ -2397,7 +2222,6 @@
 
     move-result-object v7
 
-    .line 1617
     .local v7, "resources":Landroid/content/res/Resources;
     const v10, 0x10e00b5
 
@@ -2409,7 +2233,6 @@
 
     iput v10, v0, Lcom/android/server/display/DisplayPowerController$DynamicAutoBrightnessConfig;->mValueOfVirtualZeroCandela:I
 
-    .line 1620
     const v10, 0x1070049
 
     invoke-virtual {v7, v10}, Landroid/content/res/Resources;->getIntArray(I)[I
@@ -2420,7 +2243,6 @@
 
     iput-object v10, v0, Lcom/android/server/display/DisplayPowerController$DynamicAutoBrightnessConfig;->mLowHysteresisLevels:[I
 
-    .line 1622
     const v10, 0x107004a
 
     invoke-virtual {v7, v10}, Landroid/content/res/Resources;->getIntArray(I)[I
@@ -2431,7 +2253,6 @@
 
     iput-object v10, v0, Lcom/android/server/display/DisplayPowerController$DynamicAutoBrightnessConfig;->mLowHysteresisValues:[I
 
-    .line 1624
     const v10, 0x107004b
 
     invoke-virtual {v7, v10}, Landroid/content/res/Resources;->getIntArray(I)[I
@@ -2442,7 +2263,6 @@
 
     iput-object v10, v0, Lcom/android/server/display/DisplayPowerController$DynamicAutoBrightnessConfig;->mBrightnessLevels:[I
 
-    .line 1626
     const v10, 0x107004c
 
     invoke-virtual {v7, v10}, Landroid/content/res/Resources;->getIntArray(I)[I
@@ -2453,7 +2273,6 @@
 
     iput-object v10, v0, Lcom/android/server/display/DisplayPowerController$DynamicAutoBrightnessConfig;->mBrightnessValues:[I
 
-    .line 1628
     const v10, 0x107004d
 
     invoke-virtual {v7, v10}, Landroid/content/res/Resources;->getIntArray(I)[I
@@ -2464,7 +2283,6 @@
 
     iput-object v10, v0, Lcom/android/server/display/DisplayPowerController$DynamicAutoBrightnessConfig;->mHighHysteresisLevels:[I
 
-    .line 1630
     const v10, 0x107004e
 
     invoke-virtual {v7, v10}, Landroid/content/res/Resources;->getIntArray(I)[I
@@ -2475,7 +2293,6 @@
 
     iput-object v10, v0, Lcom/android/server/display/DisplayPowerController$DynamicAutoBrightnessConfig;->mHighHysteresisValues:[I
 
-    .line 1634
     const v10, 0x107004f
 
     invoke-virtual {v7, v10}, Landroid/content/res/Resources;->getIntArray(I)[I
@@ -2486,7 +2303,6 @@
 
     iput-object v10, v0, Lcom/android/server/display/DisplayPowerController$DynamicAutoBrightnessConfig;->mLowHysteresisLevelsForEbookOnly:[I
 
-    .line 1636
     const v10, 0x1070050
 
     invoke-virtual {v7, v10}, Landroid/content/res/Resources;->getIntArray(I)[I
@@ -2497,7 +2313,6 @@
 
     iput-object v10, v0, Lcom/android/server/display/DisplayPowerController$DynamicAutoBrightnessConfig;->mLowHysteresisValuesForEbookOnly:[I
 
-    .line 1638
     const v10, 0x1070051
 
     invoke-virtual {v7, v10}, Landroid/content/res/Resources;->getIntArray(I)[I
@@ -2508,7 +2323,6 @@
 
     iput-object v10, v0, Lcom/android/server/display/DisplayPowerController$DynamicAutoBrightnessConfig;->mBrightnessLevelsForEbookOnly:[I
 
-    .line 1640
     const v10, 0x1070052
 
     invoke-virtual {v7, v10}, Landroid/content/res/Resources;->getIntArray(I)[I
@@ -2519,7 +2333,6 @@
 
     iput-object v10, v0, Lcom/android/server/display/DisplayPowerController$DynamicAutoBrightnessConfig;->mBrightnessValuesForEbookOnly:[I
 
-    .line 1642
     const v10, 0x1070053
 
     invoke-virtual {v7, v10}, Landroid/content/res/Resources;->getIntArray(I)[I
@@ -2530,7 +2343,6 @@
 
     iput-object v10, v0, Lcom/android/server/display/DisplayPowerController$DynamicAutoBrightnessConfig;->mHighHysteresisLevelsForEbookOnly:[I
 
-    .line 1644
     const v10, 0x1070054
 
     invoke-virtual {v7, v10}, Landroid/content/res/Resources;->getIntArray(I)[I
@@ -2541,7 +2353,6 @@
 
     iput-object v10, v0, Lcom/android/server/display/DisplayPowerController$DynamicAutoBrightnessConfig;->mHighHysteresisValuesForEbookOnly:[I
 
-    .line 1648
     const v10, 0x1070048
 
     invoke-virtual {v7, v10}, Landroid/content/res/Resources;->getIntArray(I)[I
@@ -2552,7 +2363,6 @@
 
     iput-object v10, v0, Lcom/android/server/display/DisplayPowerController$DynamicAutoBrightnessConfig;->mMinimumExpressiveBrightnessValues:[I
 
-    .line 1650
     const v10, 0x10e00b3
 
     invoke-virtual {v7, v10}, Landroid/content/res/Resources;->getInteger(I)I
@@ -2563,10 +2373,8 @@
 
     iput v10, v0, Lcom/android/server/display/DisplayPowerController$DynamicAutoBrightnessConfig;->mMinimumBrightnessStepValue:I
 
-    .line 1652
     invoke-virtual/range {p0 .. p0}, Lcom/android/server/display/DisplayPowerController$DynamicAutoBrightnessConfig;->initDynamicAutoBrightnessSlopeTables()V
 
-    .line 1655
     move-object/from16 v0, p0
 
     iget-object v10, v0, Lcom/android/server/display/DisplayPowerController$DynamicAutoBrightnessConfig;->this$0:Lcom/android/server/display/DisplayPowerController;
@@ -2576,7 +2384,7 @@
 
     move-result-object v10
 
-    const-string/jumbo v11, "power"
+    const-string v11, "power"
 
     invoke-virtual {v10, v11}, Landroid/content/Context;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
 
@@ -2584,19 +2392,15 @@
 
     check-cast v6, Landroid/os/PowerManager;
 
-    .line 1656
     .local v6, "pm":Landroid/os/PowerManager;
     const/4 v3, 0x0
 
-    .line 1657
     .local v3, "i":I
     const/high16 v4, 0x43fa0000    # 500.0f
 
-    .line 1658
     .local v4, "lux":F
     const/4 v8, 0x0
 
-    .line 1660
     .local v8, "screenBrightnessSettingDefault":F
     const/4 v3, 0x1
 
@@ -2610,7 +2414,6 @@
 
     if-ge v3, v10, :cond_0
 
-    .line 1661
     move-object/from16 v0, p0
 
     iget-object v10, v0, Lcom/android/server/display/DisplayPowerController$DynamicAutoBrightnessConfig;->mBrightnessLevels:[I
@@ -2623,7 +2426,6 @@
 
     if-gtz v10, :cond_1
 
-    .line 1665
     :cond_0
     move-object/from16 v0, p0
 
@@ -2633,7 +2435,6 @@
 
     if-lt v3, v10, :cond_2
 
-    .line 1666
     move-object/from16 v0, p0
 
     iget-object v10, v0, Lcom/android/server/display/DisplayPowerController$DynamicAutoBrightnessConfig;->mBrightnessValues:[I
@@ -2652,13 +2453,11 @@
 
     int-to-float v8, v10
 
-    .line 1679
     :goto_1
     invoke-virtual {v6}, Landroid/os/PowerManager;->getMaximumScreenBrightnessSetting()I
 
     move-result v9
 
-    .line 1680
     .local v9, "screenBrightnessSettingMaximum":I
     int-to-float v10, v9
 
@@ -2670,7 +2469,6 @@
 
     move-result v5
 
-    .line 1681
     .local v5, "max_default_ratio":F
     const/high16 v10, 0x3f800000    # 1.0f
 
@@ -2696,10 +2494,8 @@
 
     iput v10, v0, Lcom/android/server/display/DisplayPowerController$DynamicAutoBrightnessConfig;->mAutoBrightnessLevelStepRatio:F
 
-    .line 1683
     return-void
 
-    .line 1660
     .end local v5    # "max_default_ratio":F
     .end local v9    # "screenBrightnessSettingMaximum":I
     :cond_1
@@ -2707,7 +2503,6 @@
 
     goto :goto_0
 
-    .line 1668
     :cond_2
     :try_start_1
     move-object/from16 v0, p0
@@ -2724,7 +2519,6 @@
 
     if-lez v10, :cond_3
 
-    .line 1669
     move-object/from16 v0, p0
 
     iget-object v10, v0, Lcom/android/server/display/DisplayPowerController$DynamicAutoBrightnessConfig;->mBrightnessValueSlope:[D
@@ -2783,7 +2577,6 @@
 
     goto :goto_1
 
-    .line 1672
     :cond_3
     move-object/from16 v0, p0
 
@@ -2799,11 +2592,9 @@
 
     goto :goto_1
 
-    .line 1675
     :catch_0
     move-exception v2
 
-    .line 1676
     .local v2, "e":Ljava/lang/Exception;
     const-string v10, "DisplayPowerController"
 
@@ -2811,7 +2602,6 @@
 
     invoke-static {v10, v11, v2}, Landroid/util/Slog;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
-    .line 1677
     invoke-virtual {v6}, Landroid/os/PowerManager;->getDefaultScreenBrightnessSetting()I
 
     move-result v10

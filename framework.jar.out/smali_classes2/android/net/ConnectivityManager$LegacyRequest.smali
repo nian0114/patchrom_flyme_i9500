@@ -33,15 +33,12 @@
     .locals 1
 
     .prologue
-    .line 1388
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 1393
     const/4 v0, -0x1
 
     iput v0, p0, Landroid/net/ConnectivityManager$LegacyRequest;->delay:I
 
-    .line 1394
     new-instance v0, Landroid/net/ConnectivityManager$LegacyRequest$1;
 
     invoke-direct {v0, p0}, Landroid/net/ConnectivityManager$LegacyRequest$1;-><init>(Landroid/net/ConnectivityManager$LegacyRequest;)V
@@ -56,7 +53,6 @@
     .param p1, "x0"    # Landroid/net/ConnectivityManager$1;
 
     .prologue
-    .line 1388
     invoke-direct {p0}, Landroid/net/ConnectivityManager$LegacyRequest;-><init>()V
 
     return-void

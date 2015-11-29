@@ -23,7 +23,6 @@
     .locals 0
 
     .prologue
-    .line 824
     iput-object p1, p0, Lcom/android/server/InputMethodManagerService$CarModeReceiver;->this$0:Lcom/android/server/InputMethodManagerService;
 
     invoke-direct {p0}, Landroid/content/BroadcastReceiver;-><init>()V
@@ -35,7 +34,6 @@
     .locals 5
 
     .prologue
-    .line 845
     iget-object v1, p0, Lcom/android/server/InputMethodManagerService$CarModeReceiver;->this$0:Lcom/android/server/InputMethodManagerService;
 
     # getter for: Lcom/android/server/InputMethodManagerService;->mPrevInputMethodForCarMode:Ljava/lang/String;
@@ -45,19 +43,16 @@
 
     if-nez v1, :cond_1
 
-    .line 846
     const-string v1, "InputMethodManagerService"
 
     const-string v2, "Failed to return the previous IME becuase the stored info is null"
 
     invoke-static {v1, v2}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 858
     :cond_0
     :goto_0
     return-void
 
-    .line 850
     :cond_1
     iget-object v1, p0, Lcom/android/server/InputMethodManagerService$CarModeReceiver;->this$0:Lcom/android/server/InputMethodManagerService;
 
@@ -74,7 +69,6 @@
 
     move-result-object v0
 
-    .line 851
     .local v0, "currentIME":Ljava/lang/String;
     if-eqz v0, :cond_0
 
@@ -91,14 +85,12 @@
 
     if-eqz v1, :cond_0
 
-    .line 853
     const-string v1, "InputMethodManagerService"
 
     const-string v2, "Restore the Previous Used IME because MirrorLink Disconnected"
 
     invoke-static {v1, v2}, Landroid/util/Slog;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 854
     iget-object v1, p0, Lcom/android/server/InputMethodManagerService$CarModeReceiver;->this$0:Lcom/android/server/InputMethodManagerService;
 
     iget-object v2, p0, Lcom/android/server/InputMethodManagerService$CarModeReceiver;->this$0:Lcom/android/server/InputMethodManagerService;
@@ -132,7 +124,6 @@
     .locals 4
 
     .prologue
-    .line 829
     const-string v0, "com.sec.android.inputmethod/.SamsungKeypad"
 
     iget-object v1, p0, Lcom/android/server/InputMethodManagerService$CarModeReceiver;->this$0:Lcom/android/server/InputMethodManagerService;
@@ -145,7 +136,6 @@
 
     if-nez v0, :cond_1
 
-    .line 830
     iget-object v0, p0, Lcom/android/server/InputMethodManagerService$CarModeReceiver;->this$0:Lcom/android/server/InputMethodManagerService;
 
     const-string v1, "com.sec.android.inputmethod/.SamsungKeypad"
@@ -162,12 +152,10 @@
 
     invoke-virtual {v0, v1, v2}, Lcom/android/server/InputMethodManagerService;->setInputMethodLocked(Ljava/lang/String;I)V
 
-    .line 841
     :cond_0
     :goto_0
     return-void
 
-    .line 832
     :cond_1
     iget-object v0, p0, Lcom/android/server/InputMethodManagerService$CarModeReceiver;->this$0:Lcom/android/server/InputMethodManagerService;
 
@@ -178,7 +166,6 @@
 
     if-eqz v0, :cond_2
 
-    .line 833
     const-string v0, "com.samsung.inputmethod/.SamsungIME"
 
     iget-object v1, p0, Lcom/android/server/InputMethodManagerService$CarModeReceiver;->this$0:Lcom/android/server/InputMethodManagerService;
@@ -191,7 +178,6 @@
 
     if-nez v0, :cond_0
 
-    .line 834
     iget-object v0, p0, Lcom/android/server/InputMethodManagerService$CarModeReceiver;->this$0:Lcom/android/server/InputMethodManagerService;
 
     const-string v1, "com.samsung.inputmethod/.SamsungIME"
@@ -210,7 +196,6 @@
 
     goto :goto_0
 
-    .line 836
     :cond_2
     iget-object v0, p0, Lcom/android/server/InputMethodManagerService$CarModeReceiver;->this$0:Lcom/android/server/InputMethodManagerService;
 
@@ -232,7 +217,6 @@
     .param p2, "intent"    # Landroid/content/Intent;
 
     .prologue
-    .line 863
     if-eqz p2, :cond_0
 
     :try_start_0
@@ -254,7 +238,6 @@
 
     if-eqz v1, :cond_0
 
-    .line 864
     iget-object v1, p0, Lcom/android/server/InputMethodManagerService$CarModeReceiver;->this$0:Lcom/android/server/InputMethodManagerService;
 
     iget-object v1, v1, Lcom/android/server/InputMethodManagerService;->mContext:Landroid/content/Context;
@@ -273,7 +256,6 @@
 
     if-eqz v1, :cond_0
 
-    .line 866
     invoke-virtual {p2}, Landroid/content/Intent;->getExtras()Landroid/os/Bundle;
 
     move-result-object v1
@@ -292,7 +274,6 @@
 
     if-eqz v1, :cond_1
 
-    .line 868
     iget-object v1, p0, Lcom/android/server/InputMethodManagerService$CarModeReceiver;->this$0:Lcom/android/server/InputMethodManagerService;
 
     iget-object v2, p0, Lcom/android/server/InputMethodManagerService$CarModeReceiver;->this$0:Lcom/android/server/InputMethodManagerService;
@@ -313,15 +294,12 @@
     # setter for: Lcom/android/server/InputMethodManagerService;->mPrevInputMethodForCarMode:Ljava/lang/String;
     invoke-static {v1, v2}, Lcom/android/server/InputMethodManagerService;->access$1302(Lcom/android/server/InputMethodManagerService;Ljava/lang/String;)Ljava/lang/String;
 
-    .line 870
     invoke-direct {p0}, Lcom/android/server/InputMethodManagerService$CarModeReceiver;->setDefaultCarModeInputMethod()V
 
-    .line 882
     :cond_0
     :goto_0
     return-void
 
-    .line 874
     :cond_1
     invoke-direct {p0}, Lcom/android/server/InputMethodManagerService$CarModeReceiver;->restorePreviousUsedInputMethod()V
     :try_end_0
@@ -329,11 +307,9 @@
 
     goto :goto_0
 
-    .line 879
     :catch_0
     move-exception v0
 
-    .line 880
     .local v0, "ex":Landroid/content/pm/PackageManager$NameNotFoundException;
     const-string v1, "InputMethodManagerService"
 

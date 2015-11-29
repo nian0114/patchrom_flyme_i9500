@@ -151,51 +151,40 @@
     .prologue
     const/4 v1, 0x0
 
-    .line 204
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 146
     const/4 v0, -0x1
 
     iput v0, p0, Lcom/android/server/wm/AppTransition;->mNextAppTransition:I
 
-    .line 158
     iput v1, p0, Lcom/android/server/wm/AppTransition;->mNextAppTransitionType:I
 
-    .line 177
     new-instance v0, Landroid/graphics/Rect;
 
     invoke-direct {v0}, Landroid/graphics/Rect;-><init>()V
 
     iput-object v0, p0, Lcom/android/server/wm/AppTransition;->mNextAppTransitionInsets:Landroid/graphics/Rect;
 
-    .line 179
     new-instance v0, Landroid/graphics/Rect;
 
     invoke-direct {v0}, Landroid/graphics/Rect;-><init>()V
 
     iput-object v0, p0, Lcom/android/server/wm/AppTransition;->mTmpFromClipRect:Landroid/graphics/Rect;
 
-    .line 180
     new-instance v0, Landroid/graphics/Rect;
 
     invoke-direct {v0}, Landroid/graphics/Rect;-><init>()V
 
     iput-object v0, p0, Lcom/android/server/wm/AppTransition;->mTmpToClipRect:Landroid/graphics/Rect;
 
-    .line 186
     iput v1, p0, Lcom/android/server/wm/AppTransition;->mAppTransitionState:I
 
-    .line 194
     iput v1, p0, Lcom/android/server/wm/AppTransition;->mCurrentUserId:I
 
-    .line 205
     iput-object p1, p0, Lcom/android/server/wm/AppTransition;->mContext:Landroid/content/Context;
 
-    .line 206
     iput-object p2, p0, Lcom/android/server/wm/AppTransition;->mH:Landroid/os/Handler;
 
-    .line 207
     invoke-virtual {p1}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
 
     move-result-object v0
@@ -208,7 +197,6 @@
 
     iput v0, p0, Lcom/android/server/wm/AppTransition;->mConfigShortAnimTime:I
 
-    .line 209
     const v0, 0x10c0003
 
     invoke-static {p1, v0}, Landroid/view/animation/AnimationUtils;->loadInterpolator(Landroid/content/Context;I)Landroid/view/animation/Interpolator;
@@ -217,7 +205,6 @@
 
     iput-object v0, p0, Lcom/android/server/wm/AppTransition;->mDecelerateInterpolator:Landroid/view/animation/Interpolator;
 
-    .line 211
     const v0, 0x10c000d
 
     invoke-static {p1, v0}, Landroid/view/animation/AnimationUtils;->loadInterpolator(Landroid/content/Context;I)Landroid/view/animation/Interpolator;
@@ -226,24 +213,21 @@
 
     iput-object v0, p0, Lcom/android/server/wm/AppTransition;->mThumbnailFastOutSlowInInterpolator:Landroid/view/animation/Interpolator;
 
-    .line 213
     new-instance v0, Lcom/android/server/wm/AppTransition$1;
 
     invoke-direct {v0, p0}, Lcom/android/server/wm/AppTransition$1;-><init>(Lcom/android/server/wm/AppTransition;)V
 
     iput-object v0, p0, Lcom/android/server/wm/AppTransition;->mThumbnailFadeInInterpolator:Landroid/view/animation/Interpolator;
 
-    .line 224
     new-instance v0, Lcom/android/server/wm/AppTransition$2;
 
     invoke-direct {v0, p0}, Lcom/android/server/wm/AppTransition$2;-><init>(Lcom/android/server/wm/AppTransition;)V
 
     iput-object v0, p0, Lcom/android/server/wm/AppTransition;->mThumbnailFadeOutInterpolator:Landroid/view/animation/Interpolator;
 
-    .line 235
     iget-object v0, p0, Lcom/android/server/wm/AppTransition;->mContext:Landroid/content/Context;
 
-    const-string/jumbo v1, "window"
+    const-string v1, "window"
 
     invoke-virtual {v0, v1}, Landroid/content/Context;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
 
@@ -253,7 +237,6 @@
 
     iput-object v0, p0, Lcom/android/server/wm/AppTransition;->mWindowManager:Landroid/view/WindowManager;
 
-    .line 237
     return-void
 .end method
 
@@ -261,17 +244,15 @@
     .locals 2
 
     .prologue
-    .line 1264
     iget v0, p0, Lcom/android/server/wm/AppTransition;->mAppTransitionState:I
 
     packed-switch v0, :pswitch_data_0
 
-    .line 1274
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v1, "unknown state="
+    const-string v1, "unknown state="
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -290,31 +271,26 @@
     :goto_0
     return-object v0
 
-    .line 1266
     :pswitch_0
     const-string v0, "APP_STATE_IDLE"
 
     goto :goto_0
 
-    .line 1268
     :pswitch_1
     const-string v0, "APP_STATE_READY"
 
     goto :goto_0
 
-    .line 1270
     :pswitch_2
     const-string v0, "APP_STATE_RUNNING"
 
     goto :goto_0
 
-    .line 1272
     :pswitch_3
     const-string v0, "APP_STATE_TIMEOUT"
 
     goto :goto_0
 
-    .line 1264
     :pswitch_data_0
     .packed-switch 0x0
         :pswitch_0
@@ -329,116 +305,96 @@
     .param p0, "transition"    # I
 
     .prologue
-    .line 1203
     packed-switch p0, :pswitch_data_0
 
-    .line 1217
     packed-switch p0, :pswitch_data_1
 
-    .line 1258
     :pswitch_0
     const-string v0, "<UNKNOWN>"
 
     :goto_0
     return-object v0
 
-    .line 1205
     :pswitch_1
     const-string v0, "TRANSIT_MULTIWINDOW_NONE"
 
     goto :goto_0
 
-    .line 1208
     :pswitch_2
     const-string v0, "TRANSIT_MULTIWINDOW_OPEN"
 
     goto :goto_0
 
-    .line 1211
     :pswitch_3
     const-string v0, "TRANSIT_MULTIWINDOW_CLOSE"
 
     goto :goto_0
 
-    .line 1219
     :pswitch_4
     const-string v0, "TRANSIT_UNSET"
 
     goto :goto_0
 
-    .line 1222
     :pswitch_5
     const-string v0, "TRANSIT_NONE"
 
     goto :goto_0
 
-    .line 1225
     :pswitch_6
     const-string v0, "TRANSIT_ACTIVITY_OPEN"
 
     goto :goto_0
 
-    .line 1228
     :pswitch_7
     const-string v0, "TRANSIT_ACTIVITY_CLOSE"
 
     goto :goto_0
 
-    .line 1231
     :pswitch_8
     const-string v0, "TRANSIT_TASK_OPEN"
 
     goto :goto_0
 
-    .line 1234
     :pswitch_9
     const-string v0, "TRANSIT_TASK_CLOSE"
 
     goto :goto_0
 
-    .line 1237
     :pswitch_a
     const-string v0, "TRANSIT_TASK_TO_FRONT"
 
     goto :goto_0
 
-    .line 1240
     :pswitch_b
     const-string v0, "TRANSIT_TASK_TO_BACK"
 
     goto :goto_0
 
-    .line 1243
     :pswitch_c
     const-string v0, "TRANSIT_WALLPAPER_CLOSE"
 
     goto :goto_0
 
-    .line 1246
     :pswitch_d
     const-string v0, "TRANSIT_WALLPAPER_OPEN"
 
     goto :goto_0
 
-    .line 1249
     :pswitch_e
     const-string v0, "TRANSIT_WALLPAPER_INTRA_OPEN"
 
     goto :goto_0
 
-    .line 1252
     :pswitch_f
     const-string v0, "TRANSIT_WALLPAPER_INTRA_CLOSE"
 
     goto :goto_0
 
-    .line 1255
     :pswitch_10
     const-string v0, "TRANSIT_TASK_OPEN_BEHIND"
 
     goto :goto_0
 
-    .line 1203
     nop
 
     :pswitch_data_0
@@ -448,7 +404,6 @@
         :pswitch_3
     .end packed-switch
 
-    .line 1217
     :pswitch_data_1
     .packed-switch -0x1
         :pswitch_4
@@ -478,12 +433,10 @@
     .param p1, "finalScale"    # F
 
     .prologue
-    .line 421
     const/high16 v1, 0x3f800000    # 1.0f
 
     sub-float v0, p1, v1
 
-    .line 422
     .local v0, "denom":F
     invoke-static {v0}, Ljava/lang/Math;->abs(F)F
 
@@ -495,10 +448,8 @@
 
     if-gez v1, :cond_0
 
-    .line 423
     int-to-float v1, p0
 
-    .line 425
     :goto_0
     return v1
 
@@ -520,14 +471,11 @@
     .param p4, "appHeight"    # I
 
     .prologue
-    .line 430
     const/4 v11, 0x0
 
-    .line 431
     .local v11, "a":Landroid/view/animation/Animation;
     if-eqz p2, :cond_0
 
-    .line 433
     move-object/from16 v0, p0
 
     iget v6, v0, Lcom/android/server/wm/AppTransition;->mNextAppTransitionStartWidth:I
@@ -540,7 +488,6 @@
 
     div-float v5, v6, v8
 
-    .line 434
     .local v5, "scaleW":F
     move-object/from16 v0, p0
 
@@ -554,7 +501,6 @@
 
     div-float v7, v6, v8
 
-    .line 435
     .local v7, "scaleH":F
     new-instance v4, Landroid/view/animation/ScaleAnimation;
 
@@ -580,7 +526,6 @@
 
     invoke-direct/range {v4 .. v10}, Landroid/view/animation/ScaleAnimation;-><init>(FFFFFF)V
 
-    .line 438
     .local v4, "scale":Landroid/view/animation/Animation;
     move-object/from16 v0, p0
 
@@ -588,7 +533,6 @@
 
     invoke-virtual {v4, v6}, Landroid/view/animation/Animation;->setInterpolator(Landroid/view/animation/Interpolator;)V
 
-    .line 440
     new-instance v12, Landroid/view/animation/AlphaAnimation;
 
     const/4 v6, 0x0
@@ -597,7 +541,6 @@
 
     invoke-direct {v12, v6, v8}, Landroid/view/animation/AlphaAnimation;-><init>(FF)V
 
-    .line 441
     .local v12, "alpha":Landroid/view/animation/Animation;
     move-object/from16 v0, p0
 
@@ -605,29 +548,23 @@
 
     invoke-virtual {v12, v6}, Landroid/view/animation/Animation;->setInterpolator(Landroid/view/animation/Interpolator;)V
 
-    .line 443
     new-instance v13, Landroid/view/animation/AnimationSet;
 
     const/4 v6, 0x0
 
     invoke-direct {v13, v6}, Landroid/view/animation/AnimationSet;-><init>(Z)V
 
-    .line 444
     .local v13, "set":Landroid/view/animation/AnimationSet;
     invoke-virtual {v13, v4}, Landroid/view/animation/AnimationSet;->addAnimation(Landroid/view/animation/Animation;)V
 
-    .line 445
     invoke-virtual {v13, v12}, Landroid/view/animation/AnimationSet;->addAnimation(Landroid/view/animation/Animation;)V
 
-    .line 446
     const/4 v6, 0x1
 
     invoke-virtual {v13, v6}, Landroid/view/animation/AnimationSet;->setDetachWallpaper(Z)V
 
-    .line 447
     move-object v11, v13
 
-    .line 465
     .end local v4    # "scale":Landroid/view/animation/Animation;
     .end local v5    # "scaleW":F
     .end local v7    # "scaleH":F
@@ -636,27 +573,22 @@
     :goto_0
     packed-switch p1, :pswitch_data_0
 
-    .line 471
     const-wide/16 v14, 0xfa
 
-    .line 474
     .local v14, "duration":J
     :goto_1
     invoke-virtual {v11, v14, v15}, Landroid/view/animation/Animation;->setDuration(J)V
 
-    .line 475
     const/4 v6, 0x1
 
     invoke-virtual {v11, v6}, Landroid/view/animation/Animation;->setFillAfter(Z)V
 
-    .line 476
     move-object/from16 v0, p0
 
     iget-object v6, v0, Lcom/android/server/wm/AppTransition;->mDecelerateInterpolator:Landroid/view/animation/Interpolator;
 
     invoke-virtual {v11, v6}, Landroid/view/animation/Animation;->setInterpolator(Landroid/view/animation/Interpolator;)V
 
-    .line 477
     move/from16 v0, p3
 
     move/from16 v1, p4
@@ -667,10 +599,8 @@
 
     invoke-virtual {v11, v0, v1, v2, v3}, Landroid/view/animation/Animation;->initialize(IIII)V
 
-    .line 478
     return-object v11
 
-    .line 448
     .end local v14    # "duration":J
     :cond_0
     const/16 v6, 0xe
@@ -685,7 +615,6 @@
 
     if-ne v0, v6, :cond_2
 
-    .line 454
     :cond_1
     new-instance v11, Landroid/view/animation/AlphaAnimation;
 
@@ -696,7 +625,6 @@
 
     invoke-direct {v11, v6, v8}, Landroid/view/animation/AlphaAnimation;-><init>(FF)V
 
-    .line 455
     .restart local v11    # "a":Landroid/view/animation/Animation;
     const/4 v6, 0x1
 
@@ -704,7 +632,6 @@
 
     goto :goto_0
 
-    .line 458
     :cond_2
     new-instance v11, Landroid/view/animation/AlphaAnimation;
 
@@ -718,7 +645,6 @@
     .restart local v11    # "a":Landroid/view/animation/Animation;
     goto :goto_0
 
-    .line 468
     :pswitch_0
     move-object/from16 v0, p0
 
@@ -726,11 +652,9 @@
 
     int-to-long v14, v6
 
-    .line 469
     .restart local v14    # "duration":J
     goto :goto_1
 
-    .line 465
     nop
 
     :pswitch_data_0
@@ -749,10 +673,8 @@
     .prologue
     const/4 v3, 0x0
 
-    .line 1130
     const/4 v1, 0x0
 
-    .line 1131
     .local v1, "trans":Landroid/view/animation/Animation;
     iget-object v2, p0, Lcom/android/server/wm/AppTransition;->mWindowManager:Landroid/view/WindowManager;
 
@@ -764,14 +686,11 @@
 
     move-result v0
 
-    .line 1133
     .local v0, "rotation":I
     packed-switch v0, :pswitch_data_0
 
-    .line 1156
     if-eqz p1, :cond_3
 
-    .line 1157
     new-instance v1, Landroid/view/animation/TranslateAnimation;
 
     .end local v1    # "trans":Landroid/view/animation/Animation;
@@ -779,21 +698,17 @@
 
     invoke-direct {v1, v2, v3, v3, v3}, Landroid/view/animation/TranslateAnimation;-><init>(FFFF)V
 
-    .line 1163
     .restart local v1    # "trans":Landroid/view/animation/Animation;
     :goto_0
     iget-object v2, p0, Lcom/android/server/wm/AppTransition;->mDecelerateInterpolator:Landroid/view/animation/Interpolator;
 
     invoke-virtual {v1, v2}, Landroid/view/animation/Animation;->setInterpolator(Landroid/view/animation/Interpolator;)V
 
-    .line 1165
     return-object v1
 
-    .line 1135
     :pswitch_0
     if-eqz p1, :cond_0
 
-    .line 1136
     new-instance v1, Landroid/view/animation/TranslateAnimation;
 
     .end local v1    # "trans":Landroid/view/animation/Animation;
@@ -806,7 +721,6 @@
     .restart local v1    # "trans":Landroid/view/animation/Animation;
     goto :goto_0
 
-    .line 1138
     :cond_0
     new-instance v1, Landroid/view/animation/TranslateAnimation;
 
@@ -817,15 +731,12 @@
 
     invoke-direct {v1, v3, v3, v3, v2}, Landroid/view/animation/TranslateAnimation;-><init>(FFFF)V
 
-    .line 1140
     .restart local v1    # "trans":Landroid/view/animation/Animation;
     goto :goto_0
 
-    .line 1142
     :pswitch_1
     if-eqz p1, :cond_1
 
-    .line 1143
     new-instance v1, Landroid/view/animation/TranslateAnimation;
 
     .end local v1    # "trans":Landroid/view/animation/Animation;
@@ -838,7 +749,6 @@
     .restart local v1    # "trans":Landroid/view/animation/Animation;
     goto :goto_0
 
-    .line 1145
     :cond_1
     new-instance v1, Landroid/view/animation/TranslateAnimation;
 
@@ -849,15 +759,12 @@
 
     invoke-direct {v1, v3, v2, v3, v3}, Landroid/view/animation/TranslateAnimation;-><init>(FFFF)V
 
-    .line 1147
     .restart local v1    # "trans":Landroid/view/animation/Animation;
     goto :goto_0
 
-    .line 1149
     :pswitch_2
     if-eqz p1, :cond_2
 
-    .line 1150
     new-instance v1, Landroid/view/animation/TranslateAnimation;
 
     .end local v1    # "trans":Landroid/view/animation/Animation;
@@ -868,7 +775,6 @@
     .restart local v1    # "trans":Landroid/view/animation/Animation;
     goto :goto_0
 
-    .line 1152
     :cond_2
     new-instance v1, Landroid/view/animation/TranslateAnimation;
 
@@ -877,11 +783,9 @@
 
     invoke-direct {v1, v3, v3, v3, v2}, Landroid/view/animation/TranslateAnimation;-><init>(FFFF)V
 
-    .line 1154
     .restart local v1    # "trans":Landroid/view/animation/Animation;
     goto :goto_0
 
-    .line 1159
     :cond_3
     new-instance v1, Landroid/view/animation/TranslateAnimation;
 
@@ -893,7 +797,6 @@
     .restart local v1    # "trans":Landroid/view/animation/Animation;
     goto :goto_0
 
-    .line 1133
     :pswitch_data_0
     .packed-switch 0x1
         :pswitch_0
@@ -917,69 +820,53 @@
 
     const/4 v6, 0x1
 
-    .line 1097
     const/4 v0, 0x0
 
-    .line 1098
     .local v0, "a":Landroid/view/animation/Animation;
     if-eqz p1, :cond_0
 
-    .line 1099
     invoke-direct {p0, p1, p2, p3}, Lcom/android/server/wm/AppTransition;->createTransAnimation(ZII)Landroid/view/animation/Animation;
 
     move-result-object v3
 
-    .line 1101
     .local v3, "trans":Landroid/view/animation/Animation;
     new-instance v1, Landroid/view/animation/AlphaAnimation;
 
     invoke-direct {v1, v4, v5}, Landroid/view/animation/AlphaAnimation;-><init>(FF)V
 
-    .line 1102
     .local v1, "alpha":Landroid/view/animation/Animation;
     iget-object v4, p0, Lcom/android/server/wm/AppTransition;->mThumbnailFadeOutInterpolator:Landroid/view/animation/Interpolator;
 
     invoke-virtual {v1, v4}, Landroid/view/animation/Animation;->setInterpolator(Landroid/view/animation/Interpolator;)V
 
-    .line 1104
     new-instance v2, Landroid/view/animation/AnimationSet;
 
     invoke-direct {v2, v7}, Landroid/view/animation/AnimationSet;-><init>(Z)V
 
-    .line 1105
     .local v2, "set":Landroid/view/animation/AnimationSet;
     invoke-virtual {v2, v3}, Landroid/view/animation/AnimationSet;->addAnimation(Landroid/view/animation/Animation;)V
 
-    .line 1106
     invoke-virtual {v2, v1}, Landroid/view/animation/AnimationSet;->addAnimation(Landroid/view/animation/Animation;)V
 
-    .line 1107
     invoke-virtual {v2, v6}, Landroid/view/animation/AnimationSet;->setDetachWallpaper(Z)V
 
-    .line 1108
     move-object v0, v2
 
-    .line 1122
     :goto_0
     const-wide/16 v4, 0xfa
 
     invoke-virtual {v0, v4, v5}, Landroid/view/animation/Animation;->setDuration(J)V
 
-    .line 1123
     invoke-virtual {v0, v6}, Landroid/view/animation/Animation;->setFillAfter(Z)V
 
-    .line 1124
     iget-object v4, p0, Lcom/android/server/wm/AppTransition;->mDecelerateInterpolator:Landroid/view/animation/Interpolator;
 
     invoke-virtual {v0, v4}, Landroid/view/animation/Animation;->setInterpolator(Landroid/view/animation/Interpolator;)V
 
-    .line 1125
     invoke-virtual {v0, p2, p3, p2, p3}, Landroid/view/animation/Animation;->initialize(IIII)V
 
-    .line 1126
     return-object v0
 
-    .line 1110
     .end local v1    # "alpha":Landroid/view/animation/Animation;
     .end local v2    # "set":Landroid/view/animation/AnimationSet;
     .end local v3    # "trans":Landroid/view/animation/Animation;
@@ -988,34 +875,27 @@
 
     move-result-object v3
 
-    .line 1112
     .restart local v3    # "trans":Landroid/view/animation/Animation;
     new-instance v1, Landroid/view/animation/AlphaAnimation;
 
     invoke-direct {v1, v5, v4}, Landroid/view/animation/AlphaAnimation;-><init>(FF)V
 
-    .line 1113
     .restart local v1    # "alpha":Landroid/view/animation/Animation;
     iget-object v4, p0, Lcom/android/server/wm/AppTransition;->mThumbnailFadeOutInterpolator:Landroid/view/animation/Interpolator;
 
     invoke-virtual {v1, v4}, Landroid/view/animation/Animation;->setInterpolator(Landroid/view/animation/Interpolator;)V
 
-    .line 1115
     new-instance v2, Landroid/view/animation/AnimationSet;
 
     invoke-direct {v2, v7}, Landroid/view/animation/AnimationSet;-><init>(Z)V
 
-    .line 1116
     .restart local v2    # "set":Landroid/view/animation/AnimationSet;
     invoke-virtual {v2, v3}, Landroid/view/animation/AnimationSet;->addAnimation(Landroid/view/animation/Animation;)V
 
-    .line 1117
     invoke-virtual {v2, v1}, Landroid/view/animation/AnimationSet;->addAnimation(Landroid/view/animation/Animation;)V
 
-    .line 1118
     invoke-virtual {v2, v6}, Landroid/view/animation/AnimationSet;->setZAdjustment(I)V
 
-    .line 1119
     move-object v0, v2
 
     goto :goto_0
@@ -1026,26 +906,22 @@
     .param p1, "lp"    # Landroid/view/WindowManager$LayoutParams;
 
     .prologue
-    .line 334
     if-eqz p1, :cond_2
 
     iget v2, p1, Landroid/view/WindowManager$LayoutParams;->windowAnimations:I
 
     if-eqz v2, :cond_2
 
-    .line 338
     iget-object v2, p1, Landroid/view/WindowManager$LayoutParams;->packageName:Ljava/lang/String;
 
     if-eqz v2, :cond_1
 
     iget-object v0, p1, Landroid/view/WindowManager$LayoutParams;->packageName:Ljava/lang/String;
 
-    .line 339
     .local v0, "packageName":Ljava/lang/String;
     :goto_0
     iget v1, p1, Landroid/view/WindowManager$LayoutParams;->windowAnimations:I
 
-    .line 340
     .local v1, "resId":I
     const/high16 v2, -0x1000000
 
@@ -1055,10 +931,8 @@
 
     if-ne v2, v3, :cond_0
 
-    .line 341
     const-string v0, "android"
 
-    .line 345
     :cond_0
     invoke-static {}, Lcom/android/server/AttributeCache;->instance()Lcom/android/server/AttributeCache;
 
@@ -1072,19 +946,16 @@
 
     move-result-object v2
 
-    .line 348
     .end local v0    # "packageName":Ljava/lang/String;
     .end local v1    # "resId":I
     :goto_1
     return-object v2
 
-    .line 338
     :cond_1
     const-string v0, "android"
 
     goto :goto_0
 
-    .line 348
     :cond_2
     const/4 v2, 0x0
 
@@ -1097,10 +968,8 @@
     .param p2, "resId"    # I
 
     .prologue
-    .line 354
     if-eqz p1, :cond_1
 
-    .line 355
     const/high16 v0, -0x1000000
 
     and-int/2addr v0, p2
@@ -1109,10 +978,8 @@
 
     if-ne v0, v1, :cond_0
 
-    .line 356
     const-string p1, "android"
 
-    .line 360
     :cond_0
     invoke-static {}, Lcom/android/server/AttributeCache;->instance()Lcom/android/server/AttributeCache;
 
@@ -1126,7 +993,6 @@
 
     move-result-object v0
 
-    .line 363
     :goto_0
     return-object v0
 
@@ -1142,43 +1008,33 @@
     .param p2, "resId"    # I
 
     .prologue
-    .line 395
     const/4 v0, 0x0
 
-    .line 396
     .local v0, "anim":I
     iget-object v1, p0, Lcom/android/server/wm/AppTransition;->mContext:Landroid/content/Context;
 
-    .line 397
     .local v1, "context":Landroid/content/Context;
     if-ltz p2, :cond_0
 
-    .line 398
     invoke-direct {p0, p1, p2}, Lcom/android/server/wm/AppTransition;->getCachedAnimations(Ljava/lang/String;I)Lcom/android/server/AttributeCache$Entry;
 
     move-result-object v2
 
-    .line 399
     .local v2, "ent":Lcom/android/server/AttributeCache$Entry;
     if-eqz v2, :cond_0
 
-    .line 400
     iget-object v1, v2, Lcom/android/server/AttributeCache$Entry;->context:Landroid/content/Context;
 
-    .line 401
     move v0, p2
 
-    .line 404
     .end local v2    # "ent":Lcom/android/server/AttributeCache$Entry;
     :cond_0
     if-eqz v0, :cond_1
 
-    .line 405
     invoke-static {v1, v0}, Landroid/view/animation/AnimationUtils;->loadAnimation(Landroid/content/Context;I)Landroid/view/animation/Animation;
 
     move-result-object v3
 
-    .line 407
     :goto_0
     return-object v3
 
@@ -1192,17 +1048,15 @@
     .locals 2
 
     .prologue
-    .line 1279
     iget v0, p0, Lcom/android/server/wm/AppTransition;->mNextAppTransitionType:I
 
     packed-switch v0, :pswitch_data_0
 
-    .line 1295
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v1, "unknown type="
+    const-string v1, "unknown type="
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -1221,49 +1075,41 @@
     :goto_0
     return-object v0
 
-    .line 1281
     :pswitch_0
     const-string v0, "NEXT_TRANSIT_TYPE_NONE"
 
     goto :goto_0
 
-    .line 1283
     :pswitch_1
     const-string v0, "NEXT_TRANSIT_TYPE_CUSTOM"
 
     goto :goto_0
 
-    .line 1285
     :pswitch_2
     const-string v0, "NEXT_TRANSIT_TYPE_SCALE_UP"
 
     goto :goto_0
 
-    .line 1287
     :pswitch_3
     const-string v0, "NEXT_TRANSIT_TYPE_THUMBNAIL_SCALE_UP"
 
     goto :goto_0
 
-    .line 1289
     :pswitch_4
     const-string v0, "NEXT_TRANSIT_TYPE_THUMBNAIL_SCALE_DOWN"
 
     goto :goto_0
 
-    .line 1291
     :pswitch_5
     const-string v0, "NEXT_TRANSIT_TYPE_THUMBNAIL_ASPECT_SCALE_UP"
 
     goto :goto_0
 
-    .line 1293
     :pswitch_6
     const-string v0, "NEXT_TRANSIT_TYPE_THUMBNAIL_ASPECT_SCALE_DOWN"
 
     goto :goto_0
 
-    .line 1279
     nop
 
     :pswitch_data_0
@@ -1286,7 +1132,6 @@
     .param p2, "enter"    # Z
 
     .prologue
-    .line 1185
     const/4 v0, 0x0
 
     return v0
@@ -1298,18 +1143,14 @@
     .prologue
     const/4 v1, 0x0
 
-    .line 319
     const/4 v0, 0x0
 
     iput v0, p0, Lcom/android/server/wm/AppTransition;->mNextAppTransitionType:I
 
-    .line 320
     iput-object v1, p0, Lcom/android/server/wm/AppTransition;->mNextAppTransitionPackage:Ljava/lang/String;
 
-    .line 321
     iput-object v1, p0, Lcom/android/server/wm/AppTransition;->mNextAppTransitionThumbnail:Landroid/graphics/Bitmap;
 
-    .line 322
     return-void
 .end method
 
@@ -1325,14 +1166,12 @@
     .param p8, "isFullScreen"    # Z
 
     .prologue
-    .line 607
     move-object/from16 v0, p0
 
     iget v0, v0, Lcom/android/server/wm/AppTransition;->mNextAppTransitionStartWidth:I
 
     move/from16 v16, v0
 
-    .line 608
     .local v16, "thumbWidthI":I
     if-lez v16, :cond_0
 
@@ -1340,33 +1179,27 @@
 
     int-to-float v15, v0
 
-    .line 609
     .local v15, "thumbWidth":F
     :goto_0
     move-object/from16 v0, p0
 
     iget v14, v0, Lcom/android/server/wm/AppTransition;->mNextAppTransitionStartHeight:I
 
-    .line 610
     .local v14, "thumbHeightI":I
     if-lez v14, :cond_1
 
     int-to-float v13, v14
 
-    .line 613
     .local v13, "thumbHeight":F
     :goto_1
     const/high16 v2, 0x3f800000    # 1.0f
 
-    .line 614
     .local v2, "scale":F
     const/4 v11, 0x0
 
-    .line 616
     .local v11, "scaledTopDecor":I
     packed-switch p1, :pswitch_data_0
 
-    .line 726
     new-instance v3, Ljava/lang/RuntimeException;
 
     const-string v5, "Invalid thumbnail transition state"
@@ -1375,7 +1208,6 @@
 
     throw v3
 
-    .line 608
     .end local v2    # "scale":F
     .end local v11    # "scaledTopDecor":I
     .end local v13    # "thumbHeight":F
@@ -1386,7 +1218,6 @@
 
     goto :goto_0
 
-    .line 610
     .restart local v14    # "thumbHeightI":I
     .restart local v15    # "thumbWidth":F
     :cond_1
@@ -1394,7 +1225,6 @@
 
     goto :goto_1
 
-    .line 619
     .restart local v2    # "scale":F
     .restart local v11    # "scaledTopDecor":I
     .restart local v13    # "thumbHeight":F
@@ -1405,14 +1235,12 @@
 
     if-ne v0, v3, :cond_3
 
-    .line 621
     move/from16 v0, p2
 
     int-to-float v3, v0
 
     div-float v2, v15, v3
 
-    .line 622
     move-object/from16 v0, p7
 
     iget v3, v0, Landroid/graphics/Rect;->top:I
@@ -1423,14 +1251,12 @@
 
     float-to-int v11, v3
 
-    .line 623
     div-float v3, v13, v2
 
     float-to-int v0, v3
 
     move/from16 v18, v0
 
-    .line 624
     .local v18, "unscaledThumbHeight":I
     move-object/from16 v0, p0
 
@@ -1440,10 +1266,8 @@
 
     invoke-virtual {v3, v0}, Landroid/graphics/Rect;->set(Landroid/graphics/Rect;)V
 
-    .line 625
     if-eqz p8, :cond_2
 
-    .line 626
     move-object/from16 v0, p0
 
     iget-object v3, v0, Lcom/android/server/wm/AppTransition;->mTmpFromClipRect:Landroid/graphics/Rect;
@@ -1454,7 +1278,6 @@
 
     iput v5, v3, Landroid/graphics/Rect;->top:I
 
-    .line 628
     :cond_2
     move-object/from16 v0, p0
 
@@ -1470,7 +1293,6 @@
 
     iput v5, v3, Landroid/graphics/Rect;->bottom:I
 
-    .line 629
     move-object/from16 v0, p0
 
     iget-object v3, v0, Lcom/android/server/wm/AppTransition;->mTmpToClipRect:Landroid/graphics/Rect;
@@ -1479,7 +1301,6 @@
 
     invoke-virtual {v3, v0}, Landroid/graphics/Rect;->set(Landroid/graphics/Rect;)V
 
-    .line 644
     :goto_2
     move-object/from16 v0, p0
 
@@ -1489,7 +1310,6 @@
 
     invoke-virtual {v3, v0}, Landroid/graphics/Rect;->set(Landroid/graphics/Rect;)V
 
-    .line 646
     new-instance v1, Landroid/view/animation/ScaleAnimation;
 
     const/high16 v3, 0x3f800000    # 1.0f
@@ -1516,7 +1336,6 @@
 
     invoke-direct/range {v1 .. v7}, Landroid/view/animation/ScaleAnimation;-><init>(FFFFFF)V
 
-    .line 649
     .local v1, "scaleAnim":Landroid/view/animation/Animation;
     new-instance v10, Landroid/view/animation/ClipRectAnimation;
 
@@ -1530,7 +1349,6 @@
 
     invoke-direct {v10, v3, v5}, Landroid/view/animation/ClipRectAnimation;-><init>(Landroid/graphics/Rect;Landroid/graphics/Rect;)V
 
-    .line 650
     .local v10, "clipAnim":Landroid/view/animation/Animation;
     new-instance v17, Landroid/view/animation/TranslateAnimation;
 
@@ -1548,7 +1366,6 @@
 
     invoke-direct {v0, v3, v5, v6, v7}, Landroid/view/animation/TranslateAnimation;-><init>(FFFF)V
 
-    .line 652
     .local v17, "translateAnim":Landroid/view/animation/Animation;
     new-instance v12, Landroid/view/animation/AnimationSet;
 
@@ -1556,22 +1373,17 @@
 
     invoke-direct {v12, v3}, Landroid/view/animation/AnimationSet;-><init>(Z)V
 
-    .line 653
     .local v12, "set":Landroid/view/animation/AnimationSet;
     invoke-virtual {v12, v10}, Landroid/view/animation/AnimationSet;->addAnimation(Landroid/view/animation/Animation;)V
 
-    .line 654
     invoke-virtual {v12, v1}, Landroid/view/animation/AnimationSet;->addAnimation(Landroid/view/animation/Animation;)V
 
-    .line 655
     move-object/from16 v0, v17
 
     invoke-virtual {v12, v0}, Landroid/view/animation/AnimationSet;->addAnimation(Landroid/view/animation/Animation;)V
 
-    .line 656
     move-object v4, v12
 
-    .line 729
     .end local v1    # "scaleAnim":Landroid/view/animation/Animation;
     .end local v10    # "clipAnim":Landroid/view/animation/Animation;
     .end local v12    # "set":Landroid/view/animation/AnimationSet;
@@ -1597,7 +1409,6 @@
 
     return-object v3
 
-    .line 632
     .end local v4    # "a":Landroid/view/animation/Animation;
     :cond_3
     move-object/from16 v0, p7
@@ -1610,7 +1421,6 @@
 
     div-float v2, v13, v3
 
-    .line 633
     move-object/from16 v0, p7
 
     iget v3, v0, Landroid/graphics/Rect;->top:I
@@ -1621,14 +1431,12 @@
 
     float-to-int v11, v3
 
-    .line 634
     div-float v3, v15, v2
 
     float-to-int v0, v3
 
     move/from16 v19, v0
 
-    .line 635
     .local v19, "unscaledThumbWidth":I
     div-float v3, v13, v2
 
@@ -1636,7 +1444,6 @@
 
     move/from16 v18, v0
 
-    .line 636
     .restart local v18    # "unscaledThumbHeight":I
     move-object/from16 v0, p0
 
@@ -1646,10 +1453,8 @@
 
     invoke-virtual {v3, v0}, Landroid/graphics/Rect;->set(Landroid/graphics/Rect;)V
 
-    .line 637
     if-eqz p8, :cond_4
 
-    .line 638
     move-object/from16 v0, p0
 
     iget-object v3, v0, Lcom/android/server/wm/AppTransition;->mTmpFromClipRect:Landroid/graphics/Rect;
@@ -1660,7 +1465,6 @@
 
     iput v5, v3, Landroid/graphics/Rect;->top:I
 
-    .line 639
     move-object/from16 v0, p0
 
     iget-object v3, v0, Lcom/android/server/wm/AppTransition;->mTmpFromClipRect:Landroid/graphics/Rect;
@@ -1675,7 +1479,6 @@
 
     iput v5, v3, Landroid/graphics/Rect;->bottom:I
 
-    .line 641
     :cond_4
     move-object/from16 v0, p0
 
@@ -1691,7 +1494,6 @@
 
     iput v5, v3, Landroid/graphics/Rect;->right:I
 
-    .line 642
     move-object/from16 v0, p0
 
     iget-object v3, v0, Lcom/android/server/wm/AppTransition;->mTmpToClipRect:Landroid/graphics/Rect;
@@ -1702,7 +1504,6 @@
 
     goto/16 :goto_2
 
-    .line 661
     .end local v18    # "unscaledThumbHeight":I
     .end local v19    # "unscaledThumbWidth":I
     :pswitch_1
@@ -1712,7 +1513,6 @@
 
     if-ne v0, v3, :cond_5
 
-    .line 664
     new-instance v4, Landroid/view/animation/AlphaAnimation;
 
     const/high16 v3, 0x3f800000    # 1.0f
@@ -1724,7 +1524,6 @@
     .restart local v4    # "a":Landroid/view/animation/Animation;
     goto :goto_3
 
-    .line 666
     .end local v4    # "a":Landroid/view/animation/Animation;
     :cond_5
     new-instance v4, Landroid/view/animation/AlphaAnimation;
@@ -1735,11 +1534,9 @@
 
     invoke-direct {v4, v3, v5}, Landroid/view/animation/AlphaAnimation;-><init>(FF)V
 
-    .line 668
     .restart local v4    # "a":Landroid/view/animation/Animation;
     goto :goto_3
 
-    .line 672
     .end local v4    # "a":Landroid/view/animation/Animation;
     :pswitch_2
     const/16 v3, 0xe
@@ -1748,7 +1545,6 @@
 
     if-ne v0, v3, :cond_6
 
-    .line 675
     new-instance v4, Landroid/view/animation/AlphaAnimation;
 
     const/4 v3, 0x0
@@ -1760,7 +1556,6 @@
     .restart local v4    # "a":Landroid/view/animation/Animation;
     goto/16 :goto_3
 
-    .line 677
     .end local v4    # "a":Landroid/view/animation/Animation;
     :cond_6
     new-instance v4, Landroid/view/animation/AlphaAnimation;
@@ -1771,11 +1566,9 @@
 
     invoke-direct {v4, v3, v5}, Landroid/view/animation/AlphaAnimation;-><init>(FF)V
 
-    .line 679
     .restart local v4    # "a":Landroid/view/animation/Animation;
     goto/16 :goto_3
 
-    .line 683
     .end local v4    # "a":Landroid/view/animation/Animation;
     :pswitch_3
     const/4 v3, 0x1
@@ -1784,14 +1577,12 @@
 
     if-ne v0, v3, :cond_8
 
-    .line 685
     move/from16 v0, p2
 
     int-to-float v3, v0
 
     div-float v2, v15, v3
 
-    .line 686
     move-object/from16 v0, p7
 
     iget v3, v0, Landroid/graphics/Rect;->top:I
@@ -1802,14 +1593,12 @@
 
     float-to-int v11, v3
 
-    .line 687
     div-float v3, v13, v2
 
     float-to-int v0, v3
 
     move/from16 v18, v0
 
-    .line 688
     .restart local v18    # "unscaledThumbHeight":I
     move-object/from16 v0, p0
 
@@ -1819,7 +1608,6 @@
 
     invoke-virtual {v3, v0}, Landroid/graphics/Rect;->set(Landroid/graphics/Rect;)V
 
-    .line 689
     move-object/from16 v0, p0
 
     iget-object v3, v0, Lcom/android/server/wm/AppTransition;->mTmpToClipRect:Landroid/graphics/Rect;
@@ -1828,10 +1616,8 @@
 
     invoke-virtual {v3, v0}, Landroid/graphics/Rect;->set(Landroid/graphics/Rect;)V
 
-    .line 690
     if-eqz p8, :cond_7
 
-    .line 691
     move-object/from16 v0, p0
 
     iget-object v3, v0, Lcom/android/server/wm/AppTransition;->mTmpToClipRect:Landroid/graphics/Rect;
@@ -1842,7 +1628,6 @@
 
     iput v5, v3, Landroid/graphics/Rect;->top:I
 
-    .line 693
     :cond_7
     move-object/from16 v0, p0
 
@@ -1858,7 +1643,6 @@
 
     iput v5, v3, Landroid/graphics/Rect;->bottom:I
 
-    .line 708
     :goto_4
     move-object/from16 v0, p0
 
@@ -1868,7 +1652,6 @@
 
     invoke-virtual {v3, v0}, Landroid/graphics/Rect;->set(Landroid/graphics/Rect;)V
 
-    .line 710
     new-instance v1, Landroid/view/animation/ScaleAnimation;
 
     const/high16 v4, 0x3f800000    # 1.0f
@@ -1899,7 +1682,6 @@
 
     invoke-direct/range {v3 .. v9}, Landroid/view/animation/ScaleAnimation;-><init>(FFFFFF)V
 
-    .line 713
     .restart local v1    # "scaleAnim":Landroid/view/animation/Animation;
     new-instance v10, Landroid/view/animation/ClipRectAnimation;
 
@@ -1913,7 +1695,6 @@
 
     invoke-direct {v10, v3, v5}, Landroid/view/animation/ClipRectAnimation;-><init>(Landroid/graphics/Rect;Landroid/graphics/Rect;)V
 
-    .line 714
     .restart local v10    # "clipAnim":Landroid/view/animation/Animation;
     new-instance v17, Landroid/view/animation/TranslateAnimation;
 
@@ -1931,7 +1712,6 @@
 
     invoke-direct {v0, v3, v5, v6, v7}, Landroid/view/animation/TranslateAnimation;-><init>(FFFF)V
 
-    .line 716
     .restart local v17    # "translateAnim":Landroid/view/animation/Animation;
     new-instance v12, Landroid/view/animation/AnimationSet;
 
@@ -1939,22 +1719,17 @@
 
     invoke-direct {v12, v3}, Landroid/view/animation/AnimationSet;-><init>(Z)V
 
-    .line 717
     .restart local v12    # "set":Landroid/view/animation/AnimationSet;
     invoke-virtual {v12, v10}, Landroid/view/animation/AnimationSet;->addAnimation(Landroid/view/animation/Animation;)V
 
-    .line 718
     invoke-virtual {v12, v1}, Landroid/view/animation/AnimationSet;->addAnimation(Landroid/view/animation/Animation;)V
 
-    .line 719
     move-object/from16 v0, v17
 
     invoke-virtual {v12, v0}, Landroid/view/animation/AnimationSet;->addAnimation(Landroid/view/animation/Animation;)V
 
-    .line 721
     move-object v4, v12
 
-    .line 722
     .restart local v4    # "a":Landroid/view/animation/Animation;
     const/4 v3, 0x1
 
@@ -1962,7 +1737,6 @@
 
     goto/16 :goto_3
 
-    .line 696
     .end local v1    # "scaleAnim":Landroid/view/animation/Animation;
     .end local v4    # "a":Landroid/view/animation/Animation;
     .end local v10    # "clipAnim":Landroid/view/animation/Animation;
@@ -1980,7 +1754,6 @@
 
     div-float v2, v13, v3
 
-    .line 697
     move-object/from16 v0, p7
 
     iget v3, v0, Landroid/graphics/Rect;->top:I
@@ -1991,14 +1764,12 @@
 
     float-to-int v11, v3
 
-    .line 698
     div-float v3, v15, v2
 
     float-to-int v0, v3
 
     move/from16 v19, v0
 
-    .line 699
     .restart local v19    # "unscaledThumbWidth":I
     div-float v3, v13, v2
 
@@ -2006,7 +1777,6 @@
 
     move/from16 v18, v0
 
-    .line 700
     .restart local v18    # "unscaledThumbHeight":I
     move-object/from16 v0, p0
 
@@ -2016,7 +1786,6 @@
 
     invoke-virtual {v3, v0}, Landroid/graphics/Rect;->set(Landroid/graphics/Rect;)V
 
-    .line 701
     move-object/from16 v0, p0
 
     iget-object v3, v0, Lcom/android/server/wm/AppTransition;->mTmpToClipRect:Landroid/graphics/Rect;
@@ -2025,10 +1794,8 @@
 
     invoke-virtual {v3, v0}, Landroid/graphics/Rect;->set(Landroid/graphics/Rect;)V
 
-    .line 702
     if-eqz p8, :cond_9
 
-    .line 703
     move-object/from16 v0, p0
 
     iget-object v3, v0, Lcom/android/server/wm/AppTransition;->mTmpToClipRect:Landroid/graphics/Rect;
@@ -2039,7 +1806,6 @@
 
     iput v5, v3, Landroid/graphics/Rect;->top:I
 
-    .line 704
     move-object/from16 v0, p0
 
     iget-object v3, v0, Lcom/android/server/wm/AppTransition;->mTmpToClipRect:Landroid/graphics/Rect;
@@ -2054,7 +1820,6 @@
 
     iput v5, v3, Landroid/graphics/Rect;->bottom:I
 
-    .line 706
     :cond_9
     move-object/from16 v0, p0
 
@@ -2072,7 +1837,6 @@
 
     goto/16 :goto_4
 
-    .line 616
     nop
 
     :pswitch_data_0
@@ -2092,7 +1856,6 @@
     .param p4, "transit"    # I
 
     .prologue
-    .line 542
     move-object/from16 v0, p0
 
     iget-object v3, v0, Lcom/android/server/wm/AppTransition;->mNextAppTransitionThumbnail:Landroid/graphics/Bitmap;
@@ -2101,7 +1864,6 @@
 
     move-result v16
 
-    .line 543
     .local v16, "thumbWidthI":I
     if-lez v16, :cond_0
 
@@ -2109,7 +1871,6 @@
 
     int-to-float v15, v0
 
-    .line 544
     .local v15, "thumbWidth":F
     :goto_0
     move-object/from16 v0, p0
@@ -2120,13 +1881,11 @@
 
     move-result v14
 
-    .line 545
     .local v14, "thumbHeightI":I
     if-lez v14, :cond_1
 
     int-to-float v13, v14
 
-    .line 547
     .local v13, "thumbHeight":F
     :goto_1
     move/from16 v0, p3
@@ -2135,7 +1894,6 @@
 
     div-float v4, v3, v15
 
-    .line 548
     .local v4, "scaleW":F
     move/from16 v0, p3
 
@@ -2143,11 +1901,9 @@
 
     move/from16 v20, v0
 
-    .line 549
     .local v20, "unscaledWidth":F
     mul-float v18, v13, v4
 
-    .line 550
     .local v18, "unscaledHeight":F
     move-object/from16 v0, p0
 
@@ -2163,7 +1919,6 @@
 
     sub-float v19, v3, v5
 
-    .line 551
     .local v19, "unscaledStartY":F
     move-object/from16 v0, p0
 
@@ -2171,7 +1926,6 @@
 
     if-eqz v3, :cond_2
 
-    .line 553
     new-instance v2, Landroid/view/animation/ScaleAnimation;
 
     const/high16 v3, 0x3f800000    # 1.0f
@@ -2206,7 +1960,6 @@
 
     invoke-direct/range {v2 .. v8}, Landroid/view/animation/ScaleAnimation;-><init>(FFFFFF)V
 
-    .line 556
     .local v2, "scale":Landroid/view/animation/Animation;
     move-object/from16 v0, p0
 
@@ -2214,12 +1967,10 @@
 
     invoke-virtual {v2, v3}, Landroid/view/animation/Animation;->setInterpolator(Landroid/view/animation/Interpolator;)V
 
-    .line 557
     const-wide/16 v8, 0x12c
 
     invoke-virtual {v2, v8, v9}, Landroid/view/animation/Animation;->setDuration(J)V
 
-    .line 558
     new-instance v11, Landroid/view/animation/AlphaAnimation;
 
     const/high16 v3, 0x3f800000    # 1.0f
@@ -2228,7 +1979,6 @@
 
     invoke-direct {v11, v3, v5}, Landroid/view/animation/AlphaAnimation;-><init>(FF)V
 
-    .line 559
     .local v11, "alpha":Landroid/view/animation/Animation;
     move-object/from16 v0, p0
 
@@ -2236,12 +1986,10 @@
 
     invoke-virtual {v11, v3}, Landroid/view/animation/Animation;->setInterpolator(Landroid/view/animation/Interpolator;)V
 
-    .line 560
     const-wide/16 v8, 0x145
 
     invoke-virtual {v11, v8, v9}, Landroid/view/animation/Animation;->setDuration(J)V
 
-    .line 561
     new-instance v17, Landroid/view/animation/TranslateAnimation;
 
     const/4 v3, 0x0
@@ -2268,7 +2016,6 @@
 
     invoke-direct {v0, v3, v5, v7, v8}, Landroid/view/animation/TranslateAnimation;-><init>(FFFF)V
 
-    .line 563
     .local v17, "translate":Landroid/view/animation/Animation;
     move-object/from16 v0, p0
 
@@ -2278,36 +2025,29 @@
 
     invoke-virtual {v0, v3}, Landroid/view/animation/Animation;->setInterpolator(Landroid/view/animation/Interpolator;)V
 
-    .line 564
     const-wide/16 v8, 0x12c
 
     move-object/from16 v0, v17
 
     invoke-virtual {v0, v8, v9}, Landroid/view/animation/Animation;->setDuration(J)V
 
-    .line 567
     new-instance v12, Landroid/view/animation/AnimationSet;
 
     const/4 v3, 0x0
 
     invoke-direct {v12, v3}, Landroid/view/animation/AnimationSet;-><init>(Z)V
 
-    .line 568
     .local v12, "set":Landroid/view/animation/AnimationSet;
     invoke-virtual {v12, v2}, Landroid/view/animation/AnimationSet;->addAnimation(Landroid/view/animation/Animation;)V
 
-    .line 569
     invoke-virtual {v12, v11}, Landroid/view/animation/AnimationSet;->addAnimation(Landroid/view/animation/Animation;)V
 
-    .line 570
     move-object/from16 v0, v17
 
     invoke-virtual {v12, v0}, Landroid/view/animation/AnimationSet;->addAnimation(Landroid/view/animation/Animation;)V
 
-    .line 571
     move-object v6, v12
 
-    .line 595
     .local v6, "a":Landroid/view/animation/Animation;
     :goto_2
     const/4 v9, 0x0
@@ -2328,7 +2068,6 @@
 
     return-object v3
 
-    .line 543
     .end local v2    # "scale":Landroid/view/animation/Animation;
     .end local v4    # "scaleW":F
     .end local v6    # "a":Landroid/view/animation/Animation;
@@ -2346,7 +2085,6 @@
 
     goto/16 :goto_0
 
-    .line 545
     .restart local v14    # "thumbHeightI":I
     .restart local v15    # "thumbWidth":F
     :cond_1
@@ -2354,7 +2092,6 @@
 
     goto/16 :goto_1
 
-    .line 574
     .restart local v4    # "scaleW":F
     .restart local v13    # "thumbHeight":F
     .restart local v18    # "unscaledHeight":F
@@ -2397,7 +2134,6 @@
 
     invoke-direct/range {v3 .. v9}, Landroid/view/animation/ScaleAnimation;-><init>(FFFFFF)V
 
-    .line 577
     .restart local v2    # "scale":Landroid/view/animation/Animation;
     move-object/from16 v0, p0
 
@@ -2405,12 +2141,10 @@
 
     invoke-virtual {v2, v3}, Landroid/view/animation/Animation;->setInterpolator(Landroid/view/animation/Interpolator;)V
 
-    .line 578
     const-wide/16 v8, 0x12c
 
     invoke-virtual {v2, v8, v9}, Landroid/view/animation/Animation;->setDuration(J)V
 
-    .line 579
     new-instance v11, Landroid/view/animation/AlphaAnimation;
 
     const/4 v3, 0x0
@@ -2419,7 +2153,6 @@
 
     invoke-direct {v11, v3, v5}, Landroid/view/animation/AlphaAnimation;-><init>(FF)V
 
-    .line 580
     .restart local v11    # "alpha":Landroid/view/animation/Animation;
     move-object/from16 v0, p0
 
@@ -2427,12 +2160,10 @@
 
     invoke-virtual {v11, v3}, Landroid/view/animation/Animation;->setInterpolator(Landroid/view/animation/Interpolator;)V
 
-    .line 581
     const-wide/16 v8, 0x145
 
     invoke-virtual {v11, v8, v9}, Landroid/view/animation/Animation;->setDuration(J)V
 
-    .line 582
     new-instance v17, Landroid/view/animation/TranslateAnimation;
 
     const/4 v3, 0x0
@@ -2459,7 +2190,6 @@
 
     invoke-direct {v0, v3, v5, v7, v8}, Landroid/view/animation/TranslateAnimation;-><init>(FFFF)V
 
-    .line 584
     .restart local v17    # "translate":Landroid/view/animation/Animation;
     move-object/from16 v0, p0
 
@@ -2469,33 +2199,27 @@
 
     invoke-virtual {v0, v3}, Landroid/view/animation/Animation;->setInterpolator(Landroid/view/animation/Interpolator;)V
 
-    .line 585
     const-wide/16 v8, 0x12c
 
     move-object/from16 v0, v17
 
     invoke-virtual {v0, v8, v9}, Landroid/view/animation/Animation;->setDuration(J)V
 
-    .line 588
     new-instance v12, Landroid/view/animation/AnimationSet;
 
     const/4 v3, 0x0
 
     invoke-direct {v12, v3}, Landroid/view/animation/AnimationSet;-><init>(Z)V
 
-    .line 589
     .restart local v12    # "set":Landroid/view/animation/AnimationSet;
     invoke-virtual {v12, v2}, Landroid/view/animation/AnimationSet;->addAnimation(Landroid/view/animation/Animation;)V
 
-    .line 590
     invoke-virtual {v12, v11}, Landroid/view/animation/AnimationSet;->addAnimation(Landroid/view/animation/Animation;)V
 
-    .line 591
     move-object/from16 v0, v17
 
     invoke-virtual {v12, v0}, Landroid/view/animation/AnimationSet;->addAnimation(Landroid/view/animation/Animation;)V
 
-    .line 592
     move-object v6, v12
 
     .restart local v6    # "a":Landroid/view/animation/Animation;
@@ -2510,7 +2234,6 @@
     .param p4, "transit"    # I
 
     .prologue
-    .line 780
     move-object/from16 v0, p0
 
     iget-object v6, v0, Lcom/android/server/wm/AppTransition;->mNextAppTransitionThumbnail:Landroid/graphics/Bitmap;
@@ -2519,7 +2242,6 @@
 
     move-result v20
 
-    .line 781
     .local v20, "thumbWidthI":I
     if-lez v20, :cond_0
 
@@ -2529,7 +2251,6 @@
 
     move/from16 v19, v0
 
-    .line 782
     .local v19, "thumbWidth":F
     :goto_0
     move-object/from16 v0, p0
@@ -2540,7 +2261,6 @@
 
     move-result v18
 
-    .line 783
     .local v18, "thumbHeightI":I
     if-lez v18, :cond_1
 
@@ -2550,12 +2270,10 @@
 
     move/from16 v17, v0
 
-    .line 785
     .local v17, "thumbHeight":F
     :goto_1
     packed-switch p1, :pswitch_data_0
 
-    .line 832
     new-instance v6, Ljava/lang/RuntimeException;
 
     const-string v9, "Invalid thumbnail transition state"
@@ -2564,7 +2282,6 @@
 
     throw v6
 
-    .line 781
     .end local v17    # "thumbHeight":F
     .end local v18    # "thumbHeightI":I
     .end local v19    # "thumbWidth":F
@@ -2573,7 +2290,6 @@
 
     goto :goto_0
 
-    .line 783
     .restart local v18    # "thumbHeightI":I
     .restart local v19    # "thumbWidth":F
     :cond_1
@@ -2581,7 +2297,6 @@
 
     goto :goto_1
 
-    .line 788
     .restart local v17    # "thumbHeight":F
     :pswitch_0
     move/from16 v0, p2
@@ -2590,7 +2305,6 @@
 
     div-float v5, v19, v6
 
-    .line 789
     .local v5, "scaleW":F
     move/from16 v0, p3
 
@@ -2598,7 +2312,6 @@
 
     div-float v7, v17, v6
 
-    .line 790
     .local v7, "scaleH":F
     new-instance v4, Landroid/view/animation/ScaleAnimation;
 
@@ -2624,7 +2337,6 @@
 
     invoke-direct/range {v4 .. v10}, Landroid/view/animation/ScaleAnimation;-><init>(FFFFFF)V
 
-    .line 835
     .end local v5    # "scaleW":F
     .end local v7    # "scaleH":F
     .local v4, "a":Landroid/view/animation/Animation;
@@ -2643,7 +2355,6 @@
 
     return-object v6
 
-    .line 797
     .end local v4    # "a":Landroid/view/animation/Animation;
     :pswitch_1
     const/16 v6, 0xe
@@ -2652,7 +2363,6 @@
 
     if-ne v0, v6, :cond_2
 
-    .line 801
     new-instance v4, Landroid/view/animation/AlphaAnimation;
 
     const/high16 v6, 0x3f800000    # 1.0f
@@ -2664,7 +2374,6 @@
     .restart local v4    # "a":Landroid/view/animation/Animation;
     goto :goto_2
 
-    .line 804
     .end local v4    # "a":Landroid/view/animation/Animation;
     :cond_2
     new-instance v4, Landroid/view/animation/AlphaAnimation;
@@ -2675,11 +2384,9 @@
 
     invoke-direct {v4, v6, v9}, Landroid/view/animation/AlphaAnimation;-><init>(FF)V
 
-    .line 806
     .restart local v4    # "a":Landroid/view/animation/Animation;
     goto :goto_2
 
-    .line 811
     .end local v4    # "a":Landroid/view/animation/Animation;
     :pswitch_2
     new-instance v4, Landroid/view/animation/AlphaAnimation;
@@ -2690,11 +2397,9 @@
 
     invoke-direct {v4, v6, v9}, Landroid/view/animation/AlphaAnimation;-><init>(FF)V
 
-    .line 812
     .restart local v4    # "a":Landroid/view/animation/Animation;
     goto :goto_2
 
-    .line 816
     .end local v4    # "a":Landroid/view/animation/Animation;
     :pswitch_3
     move/from16 v0, p2
@@ -2703,7 +2408,6 @@
 
     div-float v5, v19, v6
 
-    .line 817
     .restart local v5    # "scaleW":F
     move/from16 v0, p3
 
@@ -2711,7 +2415,6 @@
 
     div-float v7, v17, v6
 
-    .line 818
     .restart local v7    # "scaleH":F
     new-instance v8, Landroid/view/animation/ScaleAnimation;
 
@@ -2741,7 +2444,6 @@
 
     invoke-direct/range {v8 .. v14}, Landroid/view/animation/ScaleAnimation;-><init>(FFFFFF)V
 
-    .line 822
     .local v8, "scale":Landroid/view/animation/Animation;
     new-instance v15, Landroid/view/animation/AlphaAnimation;
 
@@ -2751,7 +2453,6 @@
 
     invoke-direct {v15, v6, v9}, Landroid/view/animation/AlphaAnimation;-><init>(FF)V
 
-    .line 824
     .local v15, "alpha":Landroid/view/animation/Animation;
     new-instance v16, Landroid/view/animation/AnimationSet;
 
@@ -2761,32 +2462,26 @@
 
     invoke-direct {v0, v6}, Landroid/view/animation/AnimationSet;-><init>(Z)V
 
-    .line 825
     .local v16, "set":Landroid/view/animation/AnimationSet;
     move-object/from16 v0, v16
 
     invoke-virtual {v0, v8}, Landroid/view/animation/AnimationSet;->addAnimation(Landroid/view/animation/Animation;)V
 
-    .line 826
     move-object/from16 v0, v16
 
     invoke-virtual {v0, v15}, Landroid/view/animation/AnimationSet;->addAnimation(Landroid/view/animation/Animation;)V
 
-    .line 827
     const/4 v6, 0x1
 
     move-object/from16 v0, v16
 
     invoke-virtual {v0, v6}, Landroid/view/animation/AnimationSet;->setZAdjustment(I)V
 
-    .line 828
     move-object/from16 v4, v16
 
-    .line 829
     .restart local v4    # "a":Landroid/view/animation/Animation;
     goto :goto_2
 
-    .line 785
     :pswitch_data_0
     .packed-switch 0x0
         :pswitch_0
@@ -2803,7 +2498,6 @@
     .param p3, "transit"    # I
 
     .prologue
-    .line 739
     move-object/from16 v0, p0
 
     iget-object v7, v0, Lcom/android/server/wm/AppTransition;->mNextAppTransitionThumbnail:Landroid/graphics/Bitmap;
@@ -2812,7 +2506,6 @@
 
     move-result v17
 
-    .line 740
     .local v17, "thumbWidthI":I
     if-lez v17, :cond_0
 
@@ -2822,7 +2515,6 @@
 
     move/from16 v16, v0
 
-    .line 741
     .local v16, "thumbWidth":F
     :goto_0
     move-object/from16 v0, p0
@@ -2833,13 +2525,11 @@
 
     move-result v15
 
-    .line 742
     .local v15, "thumbHeightI":I
     if-lez v15, :cond_1
 
     int-to-float v14, v15
 
-    .line 744
     .local v14, "thumbHeight":F
     :goto_1
     move-object/from16 v0, p0
@@ -2848,14 +2538,12 @@
 
     if-eqz v7, :cond_2
 
-    .line 746
     move/from16 v0, p1
 
     int-to-float v7, v0
 
     div-float v6, v7, v16
 
-    .line 747
     .local v6, "scaleW":F
     move/from16 v0, p2
 
@@ -2863,7 +2551,6 @@
 
     div-float v8, v7, v14
 
-    .line 748
     .local v8, "scaleH":F
     new-instance v4, Landroid/view/animation/ScaleAnimation;
 
@@ -2897,7 +2584,6 @@
 
     invoke-direct/range {v4 .. v10}, Landroid/view/animation/ScaleAnimation;-><init>(FFFFFF)V
 
-    .line 751
     .local v4, "scale":Landroid/view/animation/Animation;
     move-object/from16 v0, p0
 
@@ -2905,7 +2591,6 @@
 
     invoke-virtual {v4, v7}, Landroid/view/animation/Animation;->setInterpolator(Landroid/view/animation/Interpolator;)V
 
-    .line 753
     new-instance v12, Landroid/view/animation/AlphaAnimation;
 
     const/high16 v7, 0x3f800000    # 1.0f
@@ -2914,7 +2599,6 @@
 
     invoke-direct {v12, v7, v9}, Landroid/view/animation/AlphaAnimation;-><init>(FF)V
 
-    .line 754
     .local v12, "alpha":Landroid/view/animation/Animation;
     move-object/from16 v0, p0
 
@@ -2922,24 +2606,19 @@
 
     invoke-virtual {v12, v7}, Landroid/view/animation/Animation;->setInterpolator(Landroid/view/animation/Interpolator;)V
 
-    .line 757
     new-instance v13, Landroid/view/animation/AnimationSet;
 
     const/4 v7, 0x0
 
     invoke-direct {v13, v7}, Landroid/view/animation/AnimationSet;-><init>(Z)V
 
-    .line 758
     .local v13, "set":Landroid/view/animation/AnimationSet;
     invoke-virtual {v13, v4}, Landroid/view/animation/AnimationSet;->addAnimation(Landroid/view/animation/Animation;)V
 
-    .line 759
     invoke-virtual {v13, v12}, Landroid/view/animation/AnimationSet;->addAnimation(Landroid/view/animation/Animation;)V
 
-    .line 760
     move-object v5, v13
 
-    .line 770
     .end local v4    # "scale":Landroid/view/animation/Animation;
     .end local v12    # "alpha":Landroid/view/animation/Animation;
     .end local v13    # "set":Landroid/view/animation/AnimationSet;
@@ -2959,7 +2638,6 @@
 
     return-object v7
 
-    .line 740
     .end local v5    # "a":Landroid/view/animation/Animation;
     .end local v6    # "scaleW":F
     .end local v8    # "scaleH":F
@@ -2971,7 +2649,6 @@
 
     goto :goto_0
 
-    .line 742
     .restart local v15    # "thumbHeightI":I
     .restart local v16    # "thumbWidth":F
     :cond_1
@@ -2979,7 +2656,6 @@
 
     goto :goto_1
 
-    .line 763
     .restart local v14    # "thumbHeight":F
     :cond_2
     move/from16 v0, p1
@@ -2988,7 +2664,6 @@
 
     div-float v6, v7, v16
 
-    .line 764
     .restart local v6    # "scaleW":F
     move/from16 v0, p2
 
@@ -2996,7 +2671,6 @@
 
     div-float v8, v7, v14
 
-    .line 765
     .restart local v8    # "scaleH":F
     new-instance v5, Landroid/view/animation/ScaleAnimation;
 
@@ -3041,7 +2715,6 @@
     .param p1, "pw"    # Ljava/io/PrintWriter;
 
     .prologue
-    .line 1301
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -3062,7 +2735,6 @@
 
     invoke-virtual {p1, v0}, Ljava/io/PrintWriter;->print(Ljava/lang/String;)V
 
-    .line 1302
     const-string v0, "  mAppTransitionState="
 
     invoke-virtual {p1, v0}, Ljava/io/PrintWriter;->print(Ljava/lang/String;)V
@@ -3073,12 +2745,10 @@
 
     invoke-virtual {p1, v0}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
-    .line 1303
     iget v0, p0, Lcom/android/server/wm/AppTransition;->mNextAppTransitionType:I
 
     if-eqz v0, :cond_0
 
-    .line 1304
     const-string v0, "  mNextAppTransitionType="
 
     invoke-virtual {p1, v0}, Ljava/io/PrintWriter;->print(Ljava/lang/String;)V
@@ -3089,49 +2759,40 @@
 
     invoke-virtual {p1, v0}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
-    .line 1306
     :cond_0
     iget v0, p0, Lcom/android/server/wm/AppTransition;->mNextAppTransitionType:I
 
     packed-switch v0, :pswitch_data_0
 
-    .line 1341
     :goto_0
     iget-object v0, p0, Lcom/android/server/wm/AppTransition;->mNextAppTransitionCallback:Landroid/os/IRemoteCallback;
 
     if-eqz v0, :cond_1
 
-    .line 1342
     const-string v0, "  mNextAppTransitionCallback="
 
     invoke-virtual {p1, v0}, Ljava/io/PrintWriter;->print(Ljava/lang/String;)V
 
-    .line 1343
     iget-object v0, p0, Lcom/android/server/wm/AppTransition;->mNextAppTransitionCallback:Landroid/os/IRemoteCallback;
 
     invoke-virtual {p1, v0}, Ljava/io/PrintWriter;->println(Ljava/lang/Object;)V
 
-    .line 1345
     :cond_1
     return-void
 
-    .line 1308
     :pswitch_0
     const-string v0, "  mNextAppTransitionPackage="
 
     invoke-virtual {p1, v0}, Ljava/io/PrintWriter;->print(Ljava/lang/String;)V
 
-    .line 1309
     iget-object v0, p0, Lcom/android/server/wm/AppTransition;->mNextAppTransitionPackage:Ljava/lang/String;
 
     invoke-virtual {p1, v0}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
-    .line 1310
     const-string v0, "  mNextAppTransitionEnter=0x"
 
     invoke-virtual {p1, v0}, Ljava/io/PrintWriter;->print(Ljava/lang/String;)V
 
-    .line 1311
     iget v0, p0, Lcom/android/server/wm/AppTransition;->mNextAppTransitionEnter:I
 
     invoke-static {v0}, Ljava/lang/Integer;->toHexString(I)Ljava/lang/String;
@@ -3140,12 +2801,10 @@
 
     invoke-virtual {p1, v0}, Ljava/io/PrintWriter;->print(Ljava/lang/String;)V
 
-    .line 1312
     const-string v0, " mNextAppTransitionExit=0x"
 
     invoke-virtual {p1, v0}, Ljava/io/PrintWriter;->print(Ljava/lang/String;)V
 
-    .line 1313
     iget v0, p0, Lcom/android/server/wm/AppTransition;->mNextAppTransitionExit:I
 
     invoke-static {v0}, Ljava/lang/Integer;->toHexString(I)Ljava/lang/String;
@@ -3156,7 +2815,6 @@
 
     goto :goto_0
 
-    .line 1316
     :pswitch_1
     const-string v0, "  mNextAppTransitionStartX="
 
@@ -3166,90 +2824,73 @@
 
     invoke-virtual {p1, v0}, Ljava/io/PrintWriter;->print(I)V
 
-    .line 1317
     const-string v0, " mNextAppTransitionStartY="
 
     invoke-virtual {p1, v0}, Ljava/io/PrintWriter;->print(Ljava/lang/String;)V
 
-    .line 1318
     iget v0, p0, Lcom/android/server/wm/AppTransition;->mNextAppTransitionStartY:I
 
     invoke-virtual {p1, v0}, Ljava/io/PrintWriter;->println(I)V
 
-    .line 1319
     const-string v0, "  mNextAppTransitionStartWidth="
 
     invoke-virtual {p1, v0}, Ljava/io/PrintWriter;->print(Ljava/lang/String;)V
 
-    .line 1320
     iget v0, p0, Lcom/android/server/wm/AppTransition;->mNextAppTransitionStartWidth:I
 
     invoke-virtual {p1, v0}, Ljava/io/PrintWriter;->print(I)V
 
-    .line 1321
     const-string v0, " mNextAppTransitionStartHeight="
 
     invoke-virtual {p1, v0}, Ljava/io/PrintWriter;->print(Ljava/lang/String;)V
 
-    .line 1322
     iget v0, p0, Lcom/android/server/wm/AppTransition;->mNextAppTransitionStartHeight:I
 
     invoke-virtual {p1, v0}, Ljava/io/PrintWriter;->println(I)V
 
     goto :goto_0
 
-    .line 1328
     :pswitch_2
     const-string v0, "  mNextAppTransitionThumbnail="
 
     invoke-virtual {p1, v0}, Ljava/io/PrintWriter;->print(Ljava/lang/String;)V
 
-    .line 1329
     iget-object v0, p0, Lcom/android/server/wm/AppTransition;->mNextAppTransitionThumbnail:Landroid/graphics/Bitmap;
 
     invoke-virtual {p1, v0}, Ljava/io/PrintWriter;->print(Ljava/lang/Object;)V
 
-    .line 1330
     const-string v0, " mNextAppTransitionStartX="
 
     invoke-virtual {p1, v0}, Ljava/io/PrintWriter;->print(Ljava/lang/String;)V
 
-    .line 1331
     iget v0, p0, Lcom/android/server/wm/AppTransition;->mNextAppTransitionStartX:I
 
     invoke-virtual {p1, v0}, Ljava/io/PrintWriter;->print(I)V
 
-    .line 1332
     const-string v0, " mNextAppTransitionStartY="
 
     invoke-virtual {p1, v0}, Ljava/io/PrintWriter;->print(Ljava/lang/String;)V
 
-    .line 1333
     iget v0, p0, Lcom/android/server/wm/AppTransition;->mNextAppTransitionStartY:I
 
     invoke-virtual {p1, v0}, Ljava/io/PrintWriter;->println(I)V
 
-    .line 1334
     const-string v0, " mNextAppTransitionStartWidth="
 
     invoke-virtual {p1, v0}, Ljava/io/PrintWriter;->print(Ljava/lang/String;)V
 
-    .line 1335
     iget v0, p0, Lcom/android/server/wm/AppTransition;->mNextAppTransitionStartWidth:I
 
     invoke-virtual {p1, v0}, Ljava/io/PrintWriter;->print(I)V
 
-    .line 1336
     const-string v0, " mNextAppTransitionStartHeight="
 
     invoke-virtual {p1, v0}, Ljava/io/PrintWriter;->print(Ljava/lang/String;)V
 
-    .line 1337
     iget v0, p0, Lcom/android/server/wm/AppTransition;->mNextAppTransitionStartHeight:I
 
     invoke-virtual {p1, v0}, Ljava/io/PrintWriter;->println(I)V
 
-    .line 1338
     const-string v0, "  mNextAppTransitionScaleUp="
 
     invoke-virtual {p1, v0}, Ljava/io/PrintWriter;->print(Ljava/lang/String;)V
@@ -3260,7 +2901,6 @@
 
     goto/16 :goto_0
 
-    .line 1306
     :pswitch_data_0
     .packed-switch 0x1
         :pswitch_0
@@ -3276,18 +2916,14 @@
     .locals 1
 
     .prologue
-    .line 325
     const/4 v0, -0x1
 
     invoke-virtual {p0, v0}, Lcom/android/server/wm/AppTransition;->setAppTransition(I)V
 
-    .line 326
     invoke-virtual {p0}, Lcom/android/server/wm/AppTransition;->clear()V
 
-    .line 327
     invoke-virtual {p0}, Lcom/android/server/wm/AppTransition;->setReady()V
 
-    .line 328
     return-void
 .end method
 
@@ -3295,7 +2931,6 @@
     .locals 1
 
     .prologue
-    .line 252
     iget v0, p0, Lcom/android/server/wm/AppTransition;->mNextAppTransition:I
 
     return v0
@@ -3305,7 +2940,6 @@
     .locals 1
 
     .prologue
-    .line 285
     iget-object v0, p0, Lcom/android/server/wm/AppTransition;->mNextAppTransitionThumbnail:Landroid/graphics/Bitmap;
 
     return-object v0
@@ -3315,7 +2949,6 @@
     .locals 1
 
     .prologue
-    .line 300
     iget v0, p0, Lcom/android/server/wm/AppTransition;->mNextAppTransitionStartX:I
 
     return v0
@@ -3325,7 +2958,6 @@
     .locals 1
 
     .prologue
-    .line 304
     iget v0, p0, Lcom/android/server/wm/AppTransition;->mNextAppTransitionStartY:I
 
     return v0
@@ -3336,39 +2968,31 @@
     .param p1, "enter"    # Z
 
     .prologue
-    .line 520
     if-eqz p1, :cond_1
 
-    .line 521
     iget-boolean v0, p0, Lcom/android/server/wm/AppTransition;->mNextAppTransitionScaleUp:Z
 
     if-eqz v0, :cond_0
 
-    .line 522
     const/4 v0, 0x0
 
-    .line 530
     :goto_0
     return v0
 
-    .line 524
     :cond_0
     const/4 v0, 0x2
 
     goto :goto_0
 
-    .line 527
     :cond_1
     iget-boolean v0, p0, Lcom/android/server/wm/AppTransition;->mNextAppTransitionScaleUp:Z
 
     if-eqz v0, :cond_2
 
-    .line 528
     const/4 v0, 0x1
 
     goto :goto_0
 
-    .line 530
     :cond_2
     const/4 v0, 0x3
 
@@ -3379,17 +3003,14 @@
     .locals 1
 
     .prologue
-    .line 314
     const/4 v0, -0x1
 
     iput v0, p0, Lcom/android/server/wm/AppTransition;->mNextAppTransition:I
 
-    .line 315
     const/4 v0, 0x2
 
     iput v0, p0, Lcom/android/server/wm/AppTransition;->mAppTransitionState:I
 
-    .line 316
     return-void
 .end method
 
@@ -3397,7 +3018,6 @@
     .locals 2
 
     .prologue
-    .line 290
     iget v0, p0, Lcom/android/server/wm/AppTransition;->mNextAppTransitionType:I
 
     const/4 v1, 0x5
@@ -3426,7 +3046,6 @@
     .locals 1
 
     .prologue
-    .line 296
     iget-boolean v0, p0, Lcom/android/server/wm/AppTransition;->mNextAppTransitionScaleUp:Z
 
     return v0
@@ -3438,7 +3057,6 @@
     .prologue
     const/4 v0, 0x1
 
-    .line 260
     iget v1, p0, Lcom/android/server/wm/AppTransition;->mAppTransitionState:I
 
     if-eq v1, v0, :cond_0
@@ -3463,7 +3081,6 @@
     .locals 2
 
     .prologue
-    .line 269
     iget v0, p0, Lcom/android/server/wm/AppTransition;->mAppTransitionState:I
 
     const/4 v1, 0x2
@@ -3485,7 +3102,6 @@
     .locals 2
 
     .prologue
-    .line 277
     iget v0, p0, Lcom/android/server/wm/AppTransition;->mAppTransitionState:I
 
     const/4 v1, 0x3
@@ -3508,7 +3124,6 @@
     .param p1, "transit"    # I
 
     .prologue
-    .line 248
     iget v0, p0, Lcom/android/server/wm/AppTransition;->mNextAppTransition:I
 
     if-ne v0, p1, :cond_0
@@ -3528,7 +3143,6 @@
     .locals 1
 
     .prologue
-    .line 244
     iget v0, p0, Lcom/android/server/wm/AppTransition;->mNextAppTransition:I
 
     if-nez v0, :cond_0
@@ -3548,7 +3162,6 @@
     .locals 2
 
     .prologue
-    .line 240
     iget v0, p0, Lcom/android/server/wm/AppTransition;->mNextAppTransition:I
 
     const/4 v1, -0x1
@@ -3580,7 +3193,6 @@
     .param p10, "isVoiceInteraction"    # Z
 
     .prologue
-    .line 848
     if-eqz p10, :cond_2
 
     const/4 v4, 0x6
@@ -3601,7 +3213,6 @@
 
     if-ne v0, v4, :cond_2
 
-    .line 851
     :cond_0
     if-eqz p3, :cond_1
 
@@ -3614,17 +3225,14 @@
 
     move-result-object v13
 
-    .line 1012
     :goto_1
     return-object v13
 
-    .line 851
     :cond_1
     const v4, 0x10a00be
 
     goto :goto_0
 
-    .line 858
     :cond_2
     if-eqz p10, :cond_5
 
@@ -3646,7 +3254,6 @@
 
     if-ne v0, v4, :cond_5
 
-    .line 861
     :cond_3
     if-eqz p3, :cond_4
 
@@ -3668,7 +3275,6 @@
 
     goto :goto_2
 
-    .line 868
     :cond_5
     iget v4, p0, Lcom/android/server/wm/AppTransition;->mNextAppTransitionType:I
 
@@ -3676,7 +3282,6 @@
 
     if-ne v4, v5, :cond_7
 
-    .line 869
     iget-object v5, p0, Lcom/android/server/wm/AppTransition;->mNextAppTransitionPackage:Ljava/lang/String;
 
     if-eqz p3, :cond_6
@@ -3697,7 +3302,6 @@
 
     goto :goto_3
 
-    .line 878
     :cond_7
     move/from16 v0, p2
 
@@ -3709,7 +3313,6 @@
 
     if-eqz v4, :cond_8
 
-    .line 879
     move/from16 v0, p3
 
     move/from16 v1, p4
@@ -3723,7 +3326,6 @@
     .restart local v13    # "a":Landroid/view/animation/Animation;
     goto :goto_1
 
-    .line 882
     .end local v13    # "a":Landroid/view/animation/Animation;
     :cond_8
     iget v4, p0, Lcom/android/server/wm/AppTransition;->mNextAppTransitionType:I
@@ -3732,7 +3334,6 @@
 
     if-ne v4, v5, :cond_9
 
-    .line 883
     move/from16 v0, p2
 
     move/from16 v1, p3
@@ -3748,7 +3349,6 @@
     .restart local v13    # "a":Landroid/view/animation/Animation;
     goto :goto_1
 
-    .line 889
     .end local v13    # "a":Landroid/view/animation/Animation;
     :cond_9
     iget v4, p0, Lcom/android/server/wm/AppTransition;->mNextAppTransitionType:I
@@ -3768,7 +3368,6 @@
 
     if-nez v4, :cond_c
 
-    .line 891
     iget v4, p0, Lcom/android/server/wm/AppTransition;->mNextAppTransitionType:I
 
     const/4 v5, 0x3
@@ -3780,7 +3379,6 @@
     :goto_4
     iput-boolean v4, p0, Lcom/android/server/wm/AppTransition;->mNextAppTransitionScaleUp:Z
 
-    .line 893
     move/from16 v0, p3
 
     invoke-virtual {p0, v0}, Lcom/android/server/wm/AppTransition;->getThumbnailTransitionState(Z)I
@@ -3800,14 +3398,12 @@
     .restart local v13    # "a":Landroid/view/animation/Animation;
     goto/16 :goto_1
 
-    .line 891
     .end local v13    # "a":Landroid/view/animation/Animation;
     :cond_b
     const/4 v4, 0x0
 
     goto :goto_4
 
-    .line 903
     :cond_c
     iget v4, p0, Lcom/android/server/wm/AppTransition;->mNextAppTransitionType:I
 
@@ -3826,7 +3422,6 @@
 
     if-nez v4, :cond_f
 
-    .line 905
     iget v4, p0, Lcom/android/server/wm/AppTransition;->mNextAppTransitionType:I
 
     const/4 v5, 0x5
@@ -3838,7 +3433,6 @@
     :goto_5
     iput-boolean v4, p0, Lcom/android/server/wm/AppTransition;->mNextAppTransitionScaleUp:Z
 
-    .line 907
     move/from16 v0, p3
 
     invoke-virtual {p0, v0}, Lcom/android/server/wm/AppTransition;->getThumbnailTransitionState(Z)I
@@ -3868,35 +3462,28 @@
     .restart local v13    # "a":Landroid/view/animation/Animation;
     goto/16 :goto_1
 
-    .line 905
     .end local v13    # "a":Landroid/view/animation/Animation;
     :cond_e
     const/4 v4, 0x0
 
     goto :goto_5
 
-    .line 920
     :cond_f
     const/4 v14, 0x0
 
-    .line 921
     .local v14, "animAttr":I
     packed-switch p2, :pswitch_data_0
 
-    .line 980
     :goto_6
     packed-switch p2, :pswitch_data_1
 
-    .line 996
     :goto_7
     iget-boolean v4, p0, Lcom/android/server/wm/AppTransition;->mEasyOneHandRunning:Z
 
     if-eqz v4, :cond_10
 
-    .line 997
     packed-switch p2, :pswitch_data_2
 
-    .line 1004
     :cond_10
     if-eqz v14, :cond_1e
 
@@ -3910,168 +3497,137 @@
     :goto_8
     goto/16 :goto_1
 
-    .line 923
     .end local v13    # "a":Landroid/view/animation/Animation;
     :pswitch_0
     if-eqz p3, :cond_11
 
     const/4 v14, 0x4
 
-    .line 926
     :goto_9
     goto :goto_6
 
-    .line 923
     :cond_11
     const/4 v14, 0x5
 
     goto :goto_9
 
-    .line 928
     :pswitch_1
     if-eqz p3, :cond_12
 
     const/4 v14, 0x6
 
-    .line 931
     :goto_a
     goto :goto_6
 
-    .line 928
     :cond_12
     const/4 v14, 0x7
 
     goto :goto_a
 
-    .line 933
     :pswitch_2
     if-eqz p3, :cond_13
 
     const/16 v14, 0x8
 
-    .line 936
     :goto_b
     goto :goto_6
 
-    .line 933
     :cond_13
     const/16 v14, 0x9
 
     goto :goto_b
 
-    .line 938
     :pswitch_3
     if-eqz p3, :cond_14
 
     const/16 v14, 0xa
 
-    .line 941
     :goto_c
     goto :goto_6
 
-    .line 938
     :cond_14
     const/16 v14, 0xb
 
     goto :goto_c
 
-    .line 943
     :pswitch_4
     if-eqz p3, :cond_15
 
     const/16 v14, 0xc
 
-    .line 946
     :goto_d
     goto :goto_6
 
-    .line 943
     :cond_15
     const/16 v14, 0xd
 
     goto :goto_d
 
-    .line 948
     :pswitch_5
     if-eqz p3, :cond_16
 
     const/16 v14, 0xe
 
-    .line 951
     :goto_e
     goto :goto_6
 
-    .line 948
     :cond_16
     const/16 v14, 0xf
 
     goto :goto_e
 
-    .line 953
     :pswitch_6
     if-eqz p3, :cond_17
 
     const/16 v14, 0x10
 
-    .line 956
     :goto_f
     goto :goto_6
 
-    .line 953
     :cond_17
     const/16 v14, 0x11
 
     goto :goto_f
 
-    .line 958
     :pswitch_7
     if-eqz p3, :cond_18
 
     const/16 v14, 0x12
 
-    .line 961
     :goto_10
     goto :goto_6
 
-    .line 958
     :cond_18
     const/16 v14, 0x13
 
     goto :goto_10
 
-    .line 963
     :pswitch_8
     if-eqz p3, :cond_19
 
     const/16 v14, 0x14
 
-    .line 966
     :goto_11
     goto :goto_6
 
-    .line 963
     :cond_19
     const/16 v14, 0x15
 
     goto :goto_11
 
-    .line 968
     :pswitch_9
     if-eqz p3, :cond_1a
 
     const/16 v14, 0x16
 
-    .line 971
     :goto_12
     goto :goto_6
 
-    .line 968
     :cond_1a
     const/16 v14, 0x17
 
     goto :goto_12
 
-    .line 973
     :pswitch_a
     if-eqz p3, :cond_1b
 
@@ -4085,23 +3641,19 @@
 
     goto :goto_13
 
-    .line 982
     :pswitch_b
     if-eqz p3, :cond_1c
 
     const/16 v14, 0x1a
 
-    .line 985
     :goto_14
     goto :goto_7
 
-    .line 982
     :cond_1c
     const/16 v14, 0x1b
 
     goto :goto_14
 
-    .line 987
     :pswitch_c
     if-eqz p3, :cond_1d
 
@@ -4115,19 +3667,16 @@
 
     goto :goto_15
 
-    .line 999
     :pswitch_d
     const/4 v13, 0x0
 
     goto/16 :goto_1
 
-    .line 1004
     :cond_1e
     const/4 v13, 0x0
 
     goto :goto_8
 
-    .line 921
     :pswitch_data_0
     .packed-switch 0x6
         :pswitch_0
@@ -4143,14 +3692,12 @@
         :pswitch_a
     .end packed-switch
 
-    .line 980
     :pswitch_data_1
     .packed-switch 0x65
         :pswitch_b
         :pswitch_c
     .end packed-switch
 
-    .line 997
     :pswitch_data_2
     .packed-switch 0xc
         :pswitch_d
@@ -4163,30 +3710,23 @@
     .param p2, "animAttr"    # I
 
     .prologue
-    .line 367
     const/4 v0, 0x0
 
-    .line 368
     .local v0, "anim":I
     iget-object v1, p0, Lcom/android/server/wm/AppTransition;->mContext:Landroid/content/Context;
 
-    .line 369
     .local v1, "context":Landroid/content/Context;
     if-ltz p2, :cond_0
 
-    .line 370
     invoke-direct {p0, p1}, Lcom/android/server/wm/AppTransition;->getCachedAnimations(Landroid/view/WindowManager$LayoutParams;)Lcom/android/server/AttributeCache$Entry;
 
     move-result-object v2
 
-    .line 371
     .local v2, "ent":Lcom/android/server/AttributeCache$Entry;
     if-eqz v2, :cond_0
 
-    .line 372
     iget-object v1, v2, Lcom/android/server/AttributeCache$Entry;->context:Landroid/content/Context;
 
-    .line 373
     iget-object v3, v2, Lcom/android/server/AttributeCache$Entry;->array:Landroid/content/res/TypedArray;
 
     const/4 v4, 0x0
@@ -4195,17 +3735,14 @@
 
     move-result v0
 
-    .line 376
     .end local v2    # "ent":Lcom/android/server/AttributeCache$Entry;
     :cond_0
     if-eqz v0, :cond_1
 
-    .line 377
     invoke-static {v1, v0}, Landroid/view/animation/AnimationUtils;->loadAnimation(Landroid/content/Context;I)Landroid/view/animation/Animation;
 
     move-result-object v3
 
-    .line 379
     :goto_0
     return-object v3
 
@@ -4221,32 +3758,25 @@
     .param p2, "resId"    # I
 
     .prologue
-    .line 383
     iget-object v0, p0, Lcom/android/server/wm/AppTransition;->mContext:Landroid/content/Context;
 
-    .line 384
     .local v0, "context":Landroid/content/Context;
     if-ltz p2, :cond_1
 
-    .line 385
     invoke-direct {p0, p1}, Lcom/android/server/wm/AppTransition;->getCachedAnimations(Landroid/view/WindowManager$LayoutParams;)Lcom/android/server/AttributeCache$Entry;
 
     move-result-object v1
 
-    .line 386
     .local v1, "ent":Lcom/android/server/AttributeCache$Entry;
     if-eqz v1, :cond_0
 
-    .line 387
     iget-object v0, v1, Lcom/android/server/AttributeCache$Entry;->context:Landroid/content/Context;
 
-    .line 389
     :cond_0
     invoke-static {v0, p2}, Landroid/view/animation/AnimationUtils;->loadAnimation(Landroid/content/Context;I)Landroid/view/animation/Animation;
 
     move-result-object v2
 
-    .line 391
     .end local v1    # "ent":Lcom/android/server/AttributeCache$Entry;
     :goto_0
     return-object v2
@@ -4265,43 +3795,33 @@
     .param p4, "startedCallback"    # Landroid/os/IRemoteCallback;
 
     .prologue
-    .line 1024
     invoke-virtual {p0}, Lcom/android/server/wm/AppTransition;->isTransitionSet()Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
-    .line 1025
     const/4 v0, 0x1
 
     iput v0, p0, Lcom/android/server/wm/AppTransition;->mNextAppTransitionType:I
 
-    .line 1026
     iput-object p1, p0, Lcom/android/server/wm/AppTransition;->mNextAppTransitionPackage:Ljava/lang/String;
 
-    .line 1027
     const/4 v0, 0x0
 
     iput-object v0, p0, Lcom/android/server/wm/AppTransition;->mNextAppTransitionThumbnail:Landroid/graphics/Bitmap;
 
-    .line 1028
     iput p2, p0, Lcom/android/server/wm/AppTransition;->mNextAppTransitionEnter:I
 
-    .line 1029
     iput p3, p0, Lcom/android/server/wm/AppTransition;->mNextAppTransitionExit:I
 
-    .line 1030
     invoke-virtual {p0}, Lcom/android/server/wm/AppTransition;->postAnimationCallback()V
 
-    .line 1031
     iput-object p4, p0, Lcom/android/server/wm/AppTransition;->mNextAppTransitionCallback:Landroid/os/IRemoteCallback;
 
-    .line 1035
     :goto_0
     return-void
 
-    .line 1033
     :cond_0
     invoke-virtual {p0}, Lcom/android/server/wm/AppTransition;->postAnimationCallback()V
 
@@ -4319,14 +3839,12 @@
     .param p7, "scaleUp"    # Z
 
     .prologue
-    .line 1071
     invoke-virtual {p0}, Lcom/android/server/wm/AppTransition;->isTransitionSet()Z
 
     move-result v0
 
     if-eqz v0, :cond_1
 
-    .line 1072
     if-eqz p7, :cond_0
 
     const/4 v0, 0x5
@@ -4334,46 +3852,34 @@
     :goto_0
     iput v0, p0, Lcom/android/server/wm/AppTransition;->mNextAppTransitionType:I
 
-    .line 1074
     const/4 v0, 0x0
 
     iput-object v0, p0, Lcom/android/server/wm/AppTransition;->mNextAppTransitionPackage:Ljava/lang/String;
 
-    .line 1075
     iput-object p1, p0, Lcom/android/server/wm/AppTransition;->mNextAppTransitionThumbnail:Landroid/graphics/Bitmap;
 
-    .line 1076
     iput-boolean p7, p0, Lcom/android/server/wm/AppTransition;->mNextAppTransitionScaleUp:Z
 
-    .line 1077
     iput p2, p0, Lcom/android/server/wm/AppTransition;->mNextAppTransitionStartX:I
 
-    .line 1078
     iput p3, p0, Lcom/android/server/wm/AppTransition;->mNextAppTransitionStartY:I
 
-    .line 1079
     iput p4, p0, Lcom/android/server/wm/AppTransition;->mNextAppTransitionStartWidth:I
 
-    .line 1080
     iput p5, p0, Lcom/android/server/wm/AppTransition;->mNextAppTransitionStartHeight:I
 
-    .line 1081
     invoke-virtual {p0}, Lcom/android/server/wm/AppTransition;->postAnimationCallback()V
 
-    .line 1082
     iput-object p6, p0, Lcom/android/server/wm/AppTransition;->mNextAppTransitionCallback:Landroid/os/IRemoteCallback;
 
-    .line 1086
     :goto_1
     return-void
 
-    .line 1072
     :cond_0
     const/4 v0, 0x6
 
     goto :goto_0
 
-    .line 1084
     :cond_1
     invoke-virtual {p0}, Lcom/android/server/wm/AppTransition;->postAnimationCallback()V
 
@@ -4390,43 +3896,32 @@
     .prologue
     const/4 v1, 0x0
 
-    .line 1039
     invoke-virtual {p0}, Lcom/android/server/wm/AppTransition;->isTransitionSet()Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
-    .line 1040
     const/4 v0, 0x2
 
     iput v0, p0, Lcom/android/server/wm/AppTransition;->mNextAppTransitionType:I
 
-    .line 1041
     iput-object v1, p0, Lcom/android/server/wm/AppTransition;->mNextAppTransitionPackage:Ljava/lang/String;
 
-    .line 1042
     iput-object v1, p0, Lcom/android/server/wm/AppTransition;->mNextAppTransitionThumbnail:Landroid/graphics/Bitmap;
 
-    .line 1043
     iput p1, p0, Lcom/android/server/wm/AppTransition;->mNextAppTransitionStartX:I
 
-    .line 1044
     iput p2, p0, Lcom/android/server/wm/AppTransition;->mNextAppTransitionStartY:I
 
-    .line 1045
     iput p3, p0, Lcom/android/server/wm/AppTransition;->mNextAppTransitionStartWidth:I
 
-    .line 1046
     iput p4, p0, Lcom/android/server/wm/AppTransition;->mNextAppTransitionStartHeight:I
 
-    .line 1047
     invoke-virtual {p0}, Lcom/android/server/wm/AppTransition;->postAnimationCallback()V
 
-    .line 1048
     iput-object v1, p0, Lcom/android/server/wm/AppTransition;->mNextAppTransitionCallback:Landroid/os/IRemoteCallback;
 
-    .line 1050
     :cond_0
     return-void
 .end method
@@ -4440,14 +3935,12 @@
     .param p5, "scaleUp"    # Z
 
     .prologue
-    .line 1054
     invoke-virtual {p0}, Lcom/android/server/wm/AppTransition;->isTransitionSet()Z
 
     move-result v0
 
     if-eqz v0, :cond_1
 
-    .line 1055
     if-eqz p5, :cond_0
 
     const/4 v0, 0x3
@@ -4455,40 +3948,30 @@
     :goto_0
     iput v0, p0, Lcom/android/server/wm/AppTransition;->mNextAppTransitionType:I
 
-    .line 1057
     const/4 v0, 0x0
 
     iput-object v0, p0, Lcom/android/server/wm/AppTransition;->mNextAppTransitionPackage:Ljava/lang/String;
 
-    .line 1058
     iput-object p1, p0, Lcom/android/server/wm/AppTransition;->mNextAppTransitionThumbnail:Landroid/graphics/Bitmap;
 
-    .line 1059
     iput-boolean p5, p0, Lcom/android/server/wm/AppTransition;->mNextAppTransitionScaleUp:Z
 
-    .line 1060
     iput p2, p0, Lcom/android/server/wm/AppTransition;->mNextAppTransitionStartX:I
 
-    .line 1061
     iput p3, p0, Lcom/android/server/wm/AppTransition;->mNextAppTransitionStartY:I
 
-    .line 1062
     invoke-virtual {p0}, Lcom/android/server/wm/AppTransition;->postAnimationCallback()V
 
-    .line 1063
     iput-object p4, p0, Lcom/android/server/wm/AppTransition;->mNextAppTransitionCallback:Landroid/os/IRemoteCallback;
 
-    .line 1067
     :goto_1
     return-void
 
-    .line 1055
     :cond_0
     const/4 v0, 0x4
 
     goto :goto_0
 
-    .line 1065
     :cond_1
     invoke-virtual {p0}, Lcom/android/server/wm/AppTransition;->postAnimationCallback()V
 
@@ -4499,22 +3982,18 @@
     .locals 1
 
     .prologue
-    .line 1090
     invoke-virtual {p0}, Lcom/android/server/wm/AppTransition;->isTransitionSet()Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
-    .line 1091
     const/16 v0, 0x3e8
 
     iput v0, p0, Lcom/android/server/wm/AppTransition;->mNextAppTransitionType:I
 
-    .line 1092
     invoke-virtual {p0}, Lcom/android/server/wm/AppTransition;->postAnimationCallback()V
 
-    .line 1094
     :cond_0
     return-void
 .end method
@@ -4523,12 +4002,10 @@
     .locals 4
 
     .prologue
-    .line 1016
     iget-object v0, p0, Lcom/android/server/wm/AppTransition;->mNextAppTransitionCallback:Landroid/os/IRemoteCallback;
 
     if-eqz v0, :cond_0
 
-    .line 1017
     iget-object v0, p0, Lcom/android/server/wm/AppTransition;->mH:Landroid/os/Handler;
 
     iget-object v1, p0, Lcom/android/server/wm/AppTransition;->mH:Landroid/os/Handler;
@@ -4543,12 +4020,10 @@
 
     invoke-virtual {v0, v1}, Landroid/os/Handler;->sendMessage(Landroid/os/Message;)Z
 
-    .line 1018
     const/4 v0, 0x0
 
     iput-object v0, p0, Lcom/android/server/wm/AppTransition;->mNextAppTransitionCallback:Landroid/os/IRemoteCallback;
 
-    .line 1020
     :cond_0
     return-void
 .end method
@@ -4557,19 +4032,16 @@
     .locals 1
 
     .prologue
-    .line 308
     invoke-virtual {p0}, Lcom/android/server/wm/AppTransition;->isRunning()Z
 
     move-result v0
 
     if-nez v0, :cond_0
 
-    .line 309
     const/4 v0, 0x0
 
     iput v0, p0, Lcom/android/server/wm/AppTransition;->mAppTransitionState:I
 
-    .line 311
     :cond_0
     return-void
 .end method
@@ -4582,13 +4054,10 @@
     .param p4, "transit"    # I
 
     .prologue
-    .line 503
     packed-switch p4, :pswitch_data_0
 
-    .line 509
     const/16 v4, 0xfa
 
-    .line 512
     .local v4, "duration":I
     :goto_0
     iget-object v5, p0, Lcom/android/server/wm/AppTransition;->mDecelerateInterpolator:Landroid/view/animation/Interpolator;
@@ -4607,16 +4076,13 @@
 
     return-object v0
 
-    .line 506
     .end local v4    # "duration":I
     :pswitch_0
     iget v4, p0, Lcom/android/server/wm/AppTransition;->mConfigShortAnimTime:I
 
-    .line 507
     .restart local v4    # "duration":I
     goto :goto_0
 
-    .line 503
     nop
 
     :pswitch_data_0
@@ -4635,27 +4101,21 @@
     .param p5, "interpolator"    # Landroid/view/animation/Interpolator;
 
     .prologue
-    .line 486
     if-lez p4, :cond_0
 
-    .line 487
     int-to-long v0, p4
 
     invoke-virtual {p1, v0, v1}, Landroid/view/animation/Animation;->setDuration(J)V
 
-    .line 489
     :cond_0
     const/4 v0, 0x1
 
     invoke-virtual {p1, v0}, Landroid/view/animation/Animation;->setFillAfter(Z)V
 
-    .line 490
     invoke-virtual {p1, p5}, Landroid/view/animation/Animation;->setInterpolator(Landroid/view/animation/Interpolator;)V
 
-    .line 491
     invoke-virtual {p1, p2, p3, p2, p3}, Landroid/view/animation/Animation;->initialize(IIII)V
 
-    .line 492
     return-object p1
 .end method
 
@@ -4664,10 +4124,8 @@
     .param p1, "transit"    # I
 
     .prologue
-    .line 256
     iput p1, p0, Lcom/android/server/wm/AppTransition;->mNextAppTransition:I
 
-    .line 257
     return-void
 .end method
 
@@ -4676,10 +4134,8 @@
     .param p1, "newUserId"    # I
 
     .prologue
-    .line 1348
     iput p1, p0, Lcom/android/server/wm/AppTransition;->mCurrentUserId:I
 
-    .line 1349
     return-void
 .end method
 
@@ -4688,10 +4144,8 @@
     .param p1, "isRunning"    # Z
 
     .prologue
-    .line 840
     iput-boolean p1, p0, Lcom/android/server/wm/AppTransition;->mEasyOneHandRunning:Z
 
-    .line 841
     return-void
 .end method
 
@@ -4699,12 +4153,10 @@
     .locals 1
 
     .prologue
-    .line 273
     const/4 v0, 0x0
 
     iput v0, p0, Lcom/android/server/wm/AppTransition;->mAppTransitionState:I
 
-    .line 274
     return-void
 .end method
 
@@ -4712,12 +4164,10 @@
     .locals 1
 
     .prologue
-    .line 265
     const/4 v0, 0x1
 
     iput v0, p0, Lcom/android/server/wm/AppTransition;->mAppTransitionState:I
 
-    .line 266
     return-void
 .end method
 
@@ -4725,12 +4175,10 @@
     .locals 1
 
     .prologue
-    .line 281
     const/4 v0, 0x3
 
     iput v0, p0, Lcom/android/server/wm/AppTransition;->mAppTransitionState:I
 
-    .line 282
     return-void
 .end method
 
@@ -4738,7 +4186,6 @@
     .locals 2
 
     .prologue
-    .line 1191
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V

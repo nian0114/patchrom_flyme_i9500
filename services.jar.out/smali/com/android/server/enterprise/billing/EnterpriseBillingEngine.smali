@@ -32,7 +32,6 @@
     .locals 1
 
     .prologue
-    .line 48
     const/4 v0, 0x0
 
     sput-object v0, Lcom/android/server/enterprise/billing/EnterpriseBillingEngine;->engine:Lcom/android/server/enterprise/billing/EnterpriseBillingEngine;
@@ -47,30 +46,24 @@
     .prologue
     const/4 v2, 0x0
 
-    .line 50
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 83
     iput-object v2, p0, Lcom/android/server/enterprise/billing/EnterpriseBillingEngine;->mContext:Landroid/content/Context;
 
-    .line 84
     iput-object v2, p0, Lcom/android/server/enterprise/billing/EnterpriseBillingEngine;->ebPolicyStorageHelper:Lcom/android/server/enterprise/billing/EnterpriseBillingPolicyStorageHelper;
 
-    .line 176
     new-instance v2, Lcom/android/server/enterprise/billing/EnterpriseBillingEngine$1;
 
     invoke-direct {v2, p0}, Lcom/android/server/enterprise/billing/EnterpriseBillingEngine$1;-><init>(Lcom/android/server/enterprise/billing/EnterpriseBillingEngine;)V
 
     iput-object v2, p0, Lcom/android/server/enterprise/billing/EnterpriseBillingEngine;->telephonyPhoneStateListener:Landroid/telephony/PhoneStateListener;
 
-    .line 186
     new-instance v2, Lcom/android/server/enterprise/billing/EnterpriseBillingEngine$2;
 
     invoke-direct {v2, p0}, Lcom/android/server/enterprise/billing/EnterpriseBillingEngine$2;-><init>(Lcom/android/server/enterprise/billing/EnterpriseBillingEngine;)V
 
     iput-object v2, p0, Lcom/android/server/enterprise/billing/EnterpriseBillingEngine;->receiver:Landroid/content/BroadcastReceiver;
 
-    .line 51
     const-string v2, "EnterpriseBillingEngine"
 
     new-instance v3, Ljava/lang/StringBuilder;
@@ -95,34 +88,28 @@
 
     invoke-static {v2, v3}, Landroid/util/Log;->v(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 52
     iput-object p1, p0, Lcom/android/server/enterprise/billing/EnterpriseBillingEngine;->mContext:Landroid/content/Context;
 
-    .line 53
     new-instance v2, Lcom/android/server/enterprise/billing/EnterpriseBillingPolicyStorageHelper;
 
     invoke-direct {v2, p1}, Lcom/android/server/enterprise/billing/EnterpriseBillingPolicyStorageHelper;-><init>(Landroid/content/Context;)V
 
     iput-object v2, p0, Lcom/android/server/enterprise/billing/EnterpriseBillingEngine;->ebPolicyStorageHelper:Lcom/android/server/enterprise/billing/EnterpriseBillingPolicyStorageHelper;
 
-    .line 55
     new-instance v0, Landroid/content/IntentFilter;
 
     invoke-direct {v0}, Landroid/content/IntentFilter;-><init>()V
 
-    .line 56
     .local v0, "IF":Landroid/content/IntentFilter;
     const-string v2, "android.intent.action.BOOT_COMPLETED"
 
     invoke-virtual {v0, v2}, Landroid/content/IntentFilter;->addAction(Ljava/lang/String;)V
 
-    .line 58
     iget-object v2, p0, Lcom/android/server/enterprise/billing/EnterpriseBillingEngine;->receiver:Landroid/content/BroadcastReceiver;
 
     invoke-virtual {p1, v2, v0}, Landroid/content/Context;->registerReceiver(Landroid/content/BroadcastReceiver;Landroid/content/IntentFilter;)Landroid/content/Intent;
 
-    .line 60
-    const-string/jumbo v2, "phone"
+    const-string v2, "phone"
 
     invoke-virtual {p1, v2}, Landroid/content/Context;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
 
@@ -130,7 +117,6 @@
 
     check-cast v1, Landroid/telephony/TelephonyManager;
 
-    .line 61
     .local v1, "telephonyManager":Landroid/telephony/TelephonyManager;
     iget-object v2, p0, Lcom/android/server/enterprise/billing/EnterpriseBillingEngine;->telephonyPhoneStateListener:Landroid/telephony/PhoneStateListener;
 
@@ -138,14 +124,12 @@
 
     invoke-virtual {v1, v2, v3}, Landroid/telephony/TelephonyManager;->listen(Landroid/telephony/PhoneStateListener;I)V
 
-    .line 63
     const-string v2, "EnterpriseBillingEngine"
 
     const-string v3, "EnterpriseBillingEngine() - created"
 
     invoke-static {v2, v3}, Landroid/util/Log;->v(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 64
     return-void
 .end method
 
@@ -154,7 +138,6 @@
     .param p0, "x0"    # Lcom/android/server/enterprise/billing/EnterpriseBillingEngine;
 
     .prologue
-    .line 32
     invoke-direct {p0}, Lcom/android/server/enterprise/billing/EnterpriseBillingEngine;->handleAllprofiles()V
 
     return-void
@@ -175,10 +158,8 @@
     .end annotation
 
     .prologue
-    .line 886
     const/4 v2, 0x0
 
-    .line 888
     .local v2, "packageUidMappings":Ljava/util/Map;, "Ljava/util/Map<Ljava/lang/Integer;Ljava/lang/String;>;"
     iget-object v4, p0, Lcom/android/server/enterprise/billing/EnterpriseBillingEngine;->mContext:Landroid/content/Context;
 
@@ -192,11 +173,9 @@
 
     move-result-object v3
 
-    .line 890
     .local v3, "packages":Ljava/util/List;, "Ljava/util/List<Landroid/content/pm/PackageInfo;>;"
     if-eqz v3, :cond_1
 
-    .line 891
     invoke-interface {v3}, Ljava/util/List;->iterator()Ljava/util/Iterator;
 
     move-result-object v0
@@ -215,17 +194,14 @@
 
     check-cast v1, Landroid/content/pm/PackageInfo;
 
-    .line 892
     .local v1, "info":Landroid/content/pm/PackageInfo;
     if-nez v2, :cond_0
 
-    .line 893
     new-instance v2, Ljava/util/HashMap;
 
     .end local v2    # "packageUidMappings":Ljava/util/Map;, "Ljava/util/Map<Ljava/lang/Integer;Ljava/lang/String;>;"
     invoke-direct {v2}, Ljava/util/HashMap;-><init>()V
 
-    .line 895
     .restart local v2    # "packageUidMappings":Ljava/util/Map;, "Ljava/util/Map<Ljava/lang/Integer;Ljava/lang/String;>;"
     :cond_0
     iget-object v4, v1, Landroid/content/pm/PackageInfo;->applicationInfo:Landroid/content/pm/ApplicationInfo;
@@ -244,7 +220,6 @@
 
     goto :goto_0
 
-    .line 898
     .end local v0    # "i$":Ljava/util/Iterator;
     .end local v1    # "info":Landroid/content/pm/PackageInfo;
     :cond_1
@@ -258,7 +233,6 @@
     .prologue
     const/4 v0, 0x0
 
-    .line 69
     const-class v1, Lcom/android/server/enterprise/billing/EnterpriseBillingEngine;
 
     monitor-enter v1
@@ -270,19 +244,16 @@
 
     if-nez v2, :cond_1
 
-    .line 70
     const-string v0, "EnterpriseBillingEngine"
 
     const-string v2, "Feature not enabled"
 
     invoke-static {v0, v2}, Landroid/util/Log;->v(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 71
     const/4 v0, 0x0
 
     sput-object v0, Lcom/android/server/enterprise/billing/EnterpriseBillingEngine;->engine:Lcom/android/server/enterprise/billing/EnterpriseBillingEngine;
 
-    .line 78
     :cond_0
     :goto_0
     const-string v0, "EnterpriseBillingEngine"
@@ -309,7 +280,6 @@
 
     invoke-static {v0, v2}, Landroid/util/Log;->v(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 79
     sget-object v0, Lcom/android/server/enterprise/billing/EnterpriseBillingEngine;->engine:Lcom/android/server/enterprise/billing/EnterpriseBillingEngine;
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
@@ -319,11 +289,9 @@
 
     return-object v0
 
-    .line 72
     :cond_1
     if-nez p0, :cond_2
 
-    .line 73
     :try_start_1
     const-string v2, "EnterpriseBillingEngine"
 
@@ -335,7 +303,6 @@
 
     goto :goto_1
 
-    .line 69
     :catchall_0
     move-exception v0
 
@@ -343,14 +310,12 @@
 
     throw v0
 
-    .line 75
     :cond_2
     :try_start_2
     sget-object v0, Lcom/android/server/enterprise/billing/EnterpriseBillingEngine;->engine:Lcom/android/server/enterprise/billing/EnterpriseBillingEngine;
 
     if-nez v0, :cond_0
 
-    .line 76
     new-instance v0, Lcom/android/server/enterprise/billing/EnterpriseBillingEngine;
 
     invoke-direct {v0, p0}, Lcom/android/server/enterprise/billing/EnterpriseBillingEngine;-><init>(Landroid/content/Context;)V
@@ -366,25 +331,21 @@
     .locals 8
 
     .prologue
-    .line 203
     const-string v5, "EnterpriseBillingEngine"
 
     const-string v6, "handleAllprofiles - start"
 
     invoke-static {v5, v6}, Landroid/util/Log;->v(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 204
     iget-object v5, p0, Lcom/android/server/enterprise/billing/EnterpriseBillingEngine;->ebPolicyStorageHelper:Lcom/android/server/enterprise/billing/EnterpriseBillingPolicyStorageHelper;
 
     invoke-virtual {v5}, Lcom/android/server/enterprise/billing/EnterpriseBillingPolicyStorageHelper;->getCurrentActiveProfiles()[Ljava/lang/String;
 
     move-result-object v4
 
-    .line 205
     .local v4, "profiles":[Ljava/lang/String;
     if-eqz v4, :cond_0
 
-    .line 206
     const-string v5, "EnterpriseBillingEngine"
 
     new-instance v6, Ljava/lang/StringBuilder;
@@ -409,7 +370,6 @@
 
     invoke-static {v5, v6}, Landroid/util/Log;->v(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 208
     move-object v0, v4
 
     .local v0, "arr$":[Ljava/lang/String;
@@ -424,16 +384,13 @@
 
     aget-object v3, v0, v1
 
-    .line 209
     .local v3, "profileName":Ljava/lang/String;
     invoke-virtual {p0, v3}, Lcom/android/server/enterprise/billing/EnterpriseBillingEngine;->handleProfile(Ljava/lang/String;)V
 
-    .line 208
     add-int/lit8 v1, v1, 0x1
 
     goto :goto_0
 
-    .line 212
     .end local v0    # "arr$":[Ljava/lang/String;
     .end local v1    # "i$":I
     .end local v2    # "len$":I
@@ -445,7 +402,6 @@
 
     invoke-static {v5, v6}, Landroid/util/Log;->v(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 213
     return-void
 .end method
 
@@ -455,14 +411,13 @@
     .param p2, "profile"    # Ljava/lang/String;
 
     .prologue
-    .line 347
     const-string v6, "EnterpriseBillingEngine"
 
     new-instance v7, Ljava/lang/StringBuilder;
 
     invoke-direct {v7}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v8, "sendEventToRIL - start - "
+    const-string v8, "sendEventToRIL - start - "
 
     invoke-virtual {v7, v8}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -478,12 +433,10 @@
 
     invoke-static {v6, v7}, Landroid/util/Log;->v(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 348
     invoke-static {}, Landroid/os/Binder;->clearCallingIdentity()J
 
     move-result-wide v4
 
-    .line 350
     .local v4, "token":J
     :try_start_0
     iget-object v6, p0, Lcom/android/server/enterprise/billing/EnterpriseBillingEngine;->ebPolicyStorageHelper:Lcom/android/server/enterprise/billing/EnterpriseBillingPolicyStorageHelper;
@@ -492,7 +445,6 @@
 
     move-result-object v1
 
-    .line 351
     .local v1, "eapnType":Ljava/lang/String;
     const-string v6, "com.android.server.enterprise.billing.mapping_modified"
 
@@ -502,50 +454,43 @@
 
     if-eqz v6, :cond_0
 
-    .line 352
     new-instance v2, Landroid/content/Intent;
 
     const-string v6, "com.android.server.enterprise.billing.action_enable_status_modified"
 
     invoke-direct {v2, v6}, Landroid/content/Intent;-><init>(Ljava/lang/String;)V
 
-    .line 353
     .local v2, "extraIntent":Landroid/content/Intent;
     const-string v6, "ent_type"
 
     invoke-virtual {v2, v6, v1}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;
 
-    .line 354
     iget-object v6, p0, Lcom/android/server/enterprise/billing/EnterpriseBillingEngine;->mContext:Landroid/content/Context;
 
     invoke-virtual {v6, v2}, Landroid/content/Context;->sendBroadcast(Landroid/content/Intent;)V
 
-    .line 356
     .end local v2    # "extraIntent":Landroid/content/Intent;
     :cond_0
     new-instance v3, Landroid/content/Intent;
 
     invoke-direct {v3, p1}, Landroid/content/Intent;-><init>(Ljava/lang/String;)V
 
-    .line 357
     .local v3, "intent":Landroid/content/Intent;
     const-string v6, "ent_type"
 
     invoke-virtual {v3, v6, v1}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;
 
-    .line 361
     iget-object v6, p0, Lcom/android/server/enterprise/billing/EnterpriseBillingEngine;->mContext:Landroid/content/Context;
 
     invoke-virtual {v6, v3}, Landroid/content/Context;->sendBroadcast(Landroid/content/Intent;)V
 
-    .line 363
     const-string v6, "EnterpriseBillingEngine"
 
     new-instance v7, Ljava/lang/StringBuilder;
 
     invoke-direct {v7}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v8, "sendEventToRIL - end - "
+    const-string v8, "sendEventToRIL - end - "
 
     invoke-virtual {v7, v8}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -564,20 +509,16 @@
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 367
     invoke-static {v4, v5}, Landroid/os/Binder;->restoreCallingIdentity(J)V
 
-    .line 369
     .end local v1    # "eapnType":Ljava/lang/String;
     .end local v3    # "intent":Landroid/content/Intent;
     :goto_0
     return-void
 
-    .line 364
     :catch_0
     move-exception v0
 
-    .line 365
     .local v0, "e":Ljava/lang/Exception;
     :try_start_1
     const-string v6, "EnterpriseBillingEngine"
@@ -586,7 +527,7 @@
 
     invoke-direct {v7}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v8, "sendEventToRIL - failed -"
+    const-string v8, "sendEventToRIL - failed -"
 
     invoke-virtual {v7, v8}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -604,7 +545,6 @@
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
-    .line 367
     invoke-static {v4, v5}, Landroid/os/Binder;->restoreCallingIdentity(J)V
 
     goto :goto_0
@@ -626,7 +566,6 @@
     .param p2, "containerId"    # I
 
     .prologue
-    .line 629
     const-string v10, "EnterpriseBillingEngine"
 
     new-instance v11, Ljava/lang/StringBuilder;
@@ -649,16 +588,13 @@
 
     invoke-static {v10, v11}, Landroid/util/Log;->v(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 631
     const/4 v6, 0x0
 
-    .line 632
     .local v6, "returnVal":I
     invoke-static {}, Landroid/os/Binder;->clearCallingIdentity()J
 
     move-result-wide v8
 
-    .line 633
     .local v8, "token":J
     if-eqz p1, :cond_3
 
@@ -668,17 +604,14 @@
 
     if-lez v10, :cond_3
 
-    .line 635
     :try_start_0
     invoke-direct {p0, p2}, Lcom/android/server/enterprise/billing/EnterpriseBillingEngine;->getApplicationsInfoOfContainer(I)Ljava/util/Map;
 
     move-result-object v5
 
-    .line 636
     .local v5, "packageUidMappings":Ljava/util/Map;, "Ljava/util/Map<Ljava/lang/Integer;Ljava/lang/String;>;"
     if-eqz v5, :cond_1
 
-    .line 637
     invoke-interface {v5}, Ljava/util/Map;->entrySet()Ljava/util/Set;
 
     move-result-object v10
@@ -701,7 +634,6 @@
 
     check-cast v2, Ljava/util/Map$Entry;
 
-    .line 639
     .local v2, "entry":Ljava/util/Map$Entry;, "Ljava/util/Map$Entry<Ljava/lang/Integer;Ljava/lang/String;>;"
     invoke-interface {v2}, Ljava/util/Map$Entry;->getKey()Ljava/lang/Object;
 
@@ -713,7 +645,6 @@
 
     move-result v7
 
-    .line 641
     .local v7, "uid":I
     invoke-interface {v2}, Ljava/util/Map$Entry;->getValue()Ljava/lang/Object;
 
@@ -721,7 +652,6 @@
 
     check-cast v4, Ljava/lang/String;
 
-    .line 643
     .local v4, "packageName":Ljava/lang/String;
     iget-object v10, p0, Lcom/android/server/enterprise/billing/EnterpriseBillingEngine;->ebPolicyStorageHelper:Lcom/android/server/enterprise/billing/EnterpriseBillingPolicyStorageHelper;
 
@@ -747,12 +677,10 @@
 
     move-result v6
 
-    .line 645
     const/4 v10, -0x1
 
     if-ne v6, v10, :cond_0
 
-    .line 656
     .end local v2    # "entry":Ljava/util/Map$Entry;, "Ljava/util/Map$Entry<Ljava/lang/Integer;Ljava/lang/String;>;"
     .end local v3    # "i$":Ljava/util/Iterator;
     .end local v4    # "packageName":Ljava/lang/String;
@@ -764,11 +692,9 @@
 
     move-result-object v0
 
-    .line 658
     .local v0, "activeProfileName":Ljava/lang/String;
     if-eqz v0, :cond_2
 
-    .line 660
     const-string v10, "com.android.server.enterprise.billing.mapping_modified"
 
     invoke-direct {p0, v10, v0}, Lcom/android/server/enterprise/billing/EnterpriseBillingEngine;->sendEventToRIL(Ljava/lang/String;Ljava/lang/String;)V
@@ -776,11 +702,9 @@
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 667
     :cond_2
     invoke-static {v8, v9}, Landroid/os/Binder;->restoreCallingIdentity(J)V
 
-    .line 672
     .end local v0    # "activeProfileName":Ljava/lang/String;
     .end local v5    # "packageUidMappings":Ljava/util/Map;, "Ljava/util/Map<Ljava/lang/Integer;Ljava/lang/String;>;"
     :goto_0
@@ -806,14 +730,11 @@
 
     invoke-static {v10, v11}, Landroid/util/Log;->v(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 674
     return v6
 
-    .line 664
     :catch_0
     move-exception v1
 
-    .line 665
     .local v1, "e":Ljava/lang/Exception;
     :try_start_1
     const-string v10, "EnterpriseBillingEngine"
@@ -822,7 +743,7 @@
 
     invoke-direct {v11}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v12, "sendEventToRIL - failed -"
+    const-string v12, "sendEventToRIL - failed -"
 
     invoke-virtual {v11, v12}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -840,7 +761,6 @@
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
-    .line 667
     invoke-static {v8, v9}, Landroid/os/Binder;->restoreCallingIdentity(J)V
 
     goto :goto_0
@@ -853,7 +773,6 @@
 
     throw v10
 
-    .line 670
     :cond_3
     const-string v10, "EnterpriseBillingEngine"
 
@@ -896,7 +815,6 @@
     .end annotation
 
     .prologue
-    .line 579
     .local p2, "packageUidMappings":Ljava/util/Map;, "Ljava/util/Map<Ljava/lang/Integer;Ljava/lang/String;>;"
     const-string v9, "EnterpriseBillingEngine"
 
@@ -904,16 +822,13 @@
 
     invoke-static {v9, v10}, Landroid/util/Log;->v(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 581
     const/4 v5, 0x0
 
-    .line 582
     .local v5, "returnVal":I
     invoke-static {}, Landroid/os/Binder;->clearCallingIdentity()J
 
     move-result-wide v6
 
-    .line 583
     .local v6, "token":J
     if-eqz p1, :cond_3
 
@@ -931,7 +846,6 @@
 
     if-nez v9, :cond_3
 
-    .line 586
     :try_start_0
     invoke-interface {p2}, Ljava/util/Map;->entrySet()Ljava/util/Set;
 
@@ -955,7 +869,6 @@
 
     check-cast v2, Ljava/util/Map$Entry;
 
-    .line 588
     .local v2, "entry":Ljava/util/Map$Entry;, "Ljava/util/Map$Entry<Ljava/lang/Integer;Ljava/lang/String;>;"
     invoke-interface {v2}, Ljava/util/Map$Entry;->getKey()Ljava/lang/Object;
 
@@ -967,7 +880,6 @@
 
     move-result v8
 
-    .line 590
     .local v8, "uid":I
     invoke-interface {v2}, Ljava/util/Map$Entry;->getValue()Ljava/lang/Object;
 
@@ -975,7 +887,6 @@
 
     check-cast v4, Ljava/lang/String;
 
-    .line 591
     .local v4, "packageName":Ljava/lang/String;
     iget-object v9, p0, Lcom/android/server/enterprise/billing/EnterpriseBillingEngine;->ebPolicyStorageHelper:Lcom/android/server/enterprise/billing/EnterpriseBillingPolicyStorageHelper;
 
@@ -1001,12 +912,10 @@
 
     move-result v5
 
-    .line 593
     const/4 v9, -0x1
 
     if-ne v5, v9, :cond_0
 
-    .line 602
     .end local v2    # "entry":Ljava/util/Map$Entry;, "Ljava/util/Map$Entry<Ljava/lang/Integer;Ljava/lang/String;>;"
     .end local v4    # "packageName":Ljava/lang/String;
     .end local v8    # "uid":I
@@ -1017,11 +926,9 @@
 
     move-result-object v0
 
-    .line 604
     .local v0, "activeProfileName":Ljava/lang/String;
     if-eqz v0, :cond_2
 
-    .line 606
     const-string v9, "com.android.server.enterprise.billing.mapping_modified"
 
     invoke-direct {p0, v9, v0}, Lcom/android/server/enterprise/billing/EnterpriseBillingEngine;->sendEventToRIL(Ljava/lang/String;Ljava/lang/String;)V
@@ -1029,11 +936,9 @@
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 612
     :cond_2
     invoke-static {v6, v7}, Landroid/os/Binder;->restoreCallingIdentity(J)V
 
-    .line 618
     .end local v0    # "activeProfileName":Ljava/lang/String;
     .end local v3    # "i$":Ljava/util/Iterator;
     :goto_0
@@ -1059,14 +964,11 @@
 
     invoke-static {v9, v10}, Landroid/util/Log;->v(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 620
     return v5
 
-    .line 609
     :catch_0
     move-exception v1
 
-    .line 610
     .local v1, "e":Ljava/lang/Exception;
     :try_start_1
     const-string v9, "EnterpriseBillingEngine"
@@ -1075,7 +977,7 @@
 
     invoke-direct {v10}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v11, "sendEventToRIL - failed -"
+    const-string v11, "sendEventToRIL - failed -"
 
     invoke-virtual {v10, v11}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -1093,7 +995,6 @@
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
-    .line 612
     invoke-static {v6, v7}, Landroid/os/Binder;->restoreCallingIdentity(J)V
 
     goto :goto_0
@@ -1106,7 +1007,6 @@
 
     throw v9
 
-    .line 615
     :cond_3
     const-string v9, "EnterpriseBillingEngine"
 
@@ -1122,14 +1022,12 @@
     .param p1, "profileName"    # Ljava/lang/String;
 
     .prologue
-    .line 324
     const-string v0, "EnterpriseBillingEngine"
 
     const-string v1, "allowOnWifi - start - "
 
     invoke-static {v0, v1}, Landroid/util/Log;->v(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 325
     if-eqz p1, :cond_0
 
     invoke-virtual {p1}, Ljava/lang/String;->length()I
@@ -1138,12 +1036,10 @@
 
     if-lez v0, :cond_0
 
-    .line 326
     const-string v0, "com.android.server.enterprise.billing.wifi_fallback_modified"
 
     invoke-direct {p0, v0, p1}, Lcom/android/server/enterprise/billing/EnterpriseBillingEngine;->sendEventToRIL(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 330
     :goto_0
     const-string v0, "EnterpriseBillingEngine"
 
@@ -1151,10 +1047,8 @@
 
     invoke-static {v0, v1}, Landroid/util/Log;->v(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 331
     return-void
 
-    .line 328
     :cond_0
     const-string v0, "EnterpriseBillingEngine"
 
@@ -1186,14 +1080,12 @@
     .param p1, "profileName"    # Ljava/lang/String;
 
     .prologue
-    .line 336
     const-string v0, "EnterpriseBillingEngine"
 
     const-string v1, "allowOnRoaming - start - "
 
     invoke-static {v0, v1}, Landroid/util/Log;->v(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 337
     if-eqz p1, :cond_0
 
     invoke-virtual {p1}, Ljava/lang/String;->length()I
@@ -1202,12 +1094,10 @@
 
     if-lez v0, :cond_0
 
-    .line 338
     const-string v0, "com.android.server.enterprise.billing.roaming_modified"
 
     invoke-direct {p0, v0, p1}, Lcom/android/server/enterprise/billing/EnterpriseBillingEngine;->sendEventToRIL(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 342
     :goto_0
     const-string v0, "EnterpriseBillingEngine"
 
@@ -1215,10 +1105,8 @@
 
     invoke-static {v0, v1}, Landroid/util/Log;->v(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 343
     return-void
 
-    .line 340
     :cond_0
     const-string v0, "EnterpriseBillingEngine"
 
@@ -1250,10 +1138,8 @@
     .param p1, "profileName"    # Ljava/lang/String;
 
     .prologue
-    .line 141
     const/4 v4, 0x0
 
-    .line 142
     .local v4, "returnValue":I
     const-string v6, "EnterpriseBillingEngine"
 
@@ -1277,7 +1163,6 @@
 
     invoke-static {v6, v7}, Landroid/util/Log;->v(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 143
     if-eqz p1, :cond_4
 
     invoke-virtual {p1}, Ljava/lang/String;->length()I
@@ -1286,14 +1171,12 @@
 
     if-lez v6, :cond_4
 
-    .line 144
     iget-object v6, p0, Lcom/android/server/enterprise/billing/EnterpriseBillingEngine;->ebPolicyStorageHelper:Lcom/android/server/enterprise/billing/EnterpriseBillingPolicyStorageHelper;
 
     invoke-virtual {v6, p1}, Lcom/android/server/enterprise/billing/EnterpriseBillingPolicyStorageHelper;->getApplicationsUsingProfile(Ljava/lang/String;)Ljava/util/List;
 
     move-result-object v1
 
-    .line 145
     .local v1, "apps":Ljava/util/List;, "Ljava/util/List<Ljava/lang/String;>;"
     iget-object v6, p0, Lcom/android/server/enterprise/billing/EnterpriseBillingEngine;->ebPolicyStorageHelper:Lcom/android/server/enterprise/billing/EnterpriseBillingPolicyStorageHelper;
 
@@ -1301,7 +1184,6 @@
 
     move-result-object v2
 
-    .line 147
     .local v2, "containers":Ljava/util/List;, "Ljava/util/List<Ljava/lang/Integer;>;"
     if-eqz v1, :cond_0
 
@@ -1320,7 +1202,6 @@
 
     if-nez v6, :cond_3
 
-    .line 148
     :cond_1
     iget-object v6, p0, Lcom/android/server/enterprise/billing/EnterpriseBillingEngine;->ebPolicyStorageHelper:Lcom/android/server/enterprise/billing/EnterpriseBillingPolicyStorageHelper;
 
@@ -1328,7 +1209,6 @@
 
     move-result-object v0
 
-    .line 149
     .local v0, "apn":Lcom/sec/enterprise/knox/billing/EnterpriseApn;
     const-string v6, "EnterpriseBillingEngine"
 
@@ -1352,14 +1232,12 @@
 
     invoke-static {v6, v7}, Landroid/util/Log;->v(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 150
     iget-object v6, p0, Lcom/android/server/enterprise/billing/EnterpriseBillingEngine;->ebPolicyStorageHelper:Lcom/android/server/enterprise/billing/EnterpriseBillingPolicyStorageHelper;
 
     invoke-virtual {v6, p1}, Lcom/android/server/enterprise/billing/EnterpriseBillingPolicyStorageHelper;->getDefaultApnType(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v3
 
-    .line 151
     .local v3, "defaultType":Ljava/lang/String;
     const-string v6, "EnterpriseBillingEngine"
 
@@ -1383,19 +1261,16 @@
 
     invoke-static {v6, v7}, Landroid/util/Log;->v(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 152
     if-eqz v3, :cond_2
 
     if-eqz v0, :cond_2
 
-    .line 153
     iget-object v6, p0, Lcom/android/server/enterprise/billing/EnterpriseBillingEngine;->mContext:Landroid/content/Context;
 
     invoke-static {v6, v0, v3}, Lcom/android/server/enterprise/billing/EnterpriseBillingTelephonyInterface;->updateApnType(Landroid/content/Context;Lcom/sec/enterprise/knox/billing/EnterpriseApn;Ljava/lang/String;)I
 
     move-result v5
 
-    .line 154
     .local v5, "value":I
     const-string v6, "EnterpriseBillingEngine"
 
@@ -1419,7 +1294,6 @@
 
     invoke-static {v6, v7}, Landroid/util/Log;->v(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 158
     .end local v5    # "value":I
     :cond_2
     iget-object v6, p0, Lcom/android/server/enterprise/billing/EnterpriseBillingEngine;->ebPolicyStorageHelper:Lcom/android/server/enterprise/billing/EnterpriseBillingPolicyStorageHelper;
@@ -1428,7 +1302,6 @@
 
     move-result v4
 
-    .line 159
     const-string v6, "EnterpriseBillingEngine"
 
     new-instance v7, Ljava/lang/StringBuilder;
@@ -1451,14 +1324,12 @@
 
     invoke-static {v6, v7}, Landroid/util/Log;->v(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 160
     iget-object v6, p0, Lcom/android/server/enterprise/billing/EnterpriseBillingEngine;->ebPolicyStorageHelper:Lcom/android/server/enterprise/billing/EnterpriseBillingPolicyStorageHelper;
 
     invoke-virtual {v6, p1}, Lcom/android/server/enterprise/billing/EnterpriseBillingPolicyStorageHelper;->clearEapnProfile(Ljava/lang/String;)I
 
     move-result v4
 
-    .line 161
     const-string v6, "EnterpriseBillingEngine"
 
     new-instance v7, Ljava/lang/StringBuilder;
@@ -1481,7 +1352,6 @@
 
     invoke-static {v6, v7}, Landroid/util/Log;->v(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 166
     .end local v0    # "apn":Lcom/sec/enterprise/knox/billing/EnterpriseApn;
     .end local v3    # "defaultType":Ljava/lang/String;
     :goto_0
@@ -1489,7 +1359,6 @@
 
     invoke-direct {p0, v6, p1}, Lcom/android/server/enterprise/billing/EnterpriseBillingEngine;->sendEventToRIL(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 170
     .end local v1    # "apps":Ljava/util/List;, "Ljava/util/List<Ljava/lang/String;>;"
     .end local v2    # "containers":Ljava/util/List;, "Ljava/util/List<Ljava/lang/Integer;>;"
     :goto_1
@@ -1515,7 +1384,6 @@
 
     invoke-static {v6, v7}, Landroid/util/Log;->v(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 171
     if-lez v4, :cond_5
 
     const/4 v6, 0x1
@@ -1523,7 +1391,6 @@
     :goto_2
     return v6
 
-    .line 163
     .restart local v1    # "apps":Ljava/util/List;, "Ljava/util/List<Ljava/lang/String;>;"
     .restart local v2    # "containers":Ljava/util/List;, "Ljava/util/List<Ljava/lang/Integer;>;"
     :cond_3
@@ -1531,7 +1398,6 @@
 
     goto :goto_0
 
-    .line 168
     .end local v1    # "apps":Ljava/util/List;, "Ljava/util/List<Ljava/lang/String;>;"
     .end local v2    # "containers":Ljava/util/List;, "Ljava/util/List<Ljava/lang/Integer;>;"
     :cond_4
@@ -1559,7 +1425,6 @@
 
     goto :goto_1
 
-    .line 171
     :cond_5
     const/4 v6, 0x0
 
@@ -1571,17 +1436,14 @@
     .param p1, "profileName"    # Ljava/lang/String;
 
     .prologue
-    .line 93
     const-string v4, "EnterpriseBillingEngine"
 
     const-string v5, "enableForContainer() - start"
 
     invoke-static {v4, v5}, Landroid/util/Log;->v(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 94
     const/4 v2, 0x0
 
-    .line 95
     .local v2, "returnValue":Z
     if-eqz p1, :cond_4
 
@@ -1591,18 +1453,15 @@
 
     if-lez v4, :cond_4
 
-    .line 96
     iget-object v4, p0, Lcom/android/server/enterprise/billing/EnterpriseBillingEngine;->ebPolicyStorageHelper:Lcom/android/server/enterprise/billing/EnterpriseBillingPolicyStorageHelper;
 
     invoke-virtual {v4, p1}, Lcom/android/server/enterprise/billing/EnterpriseBillingPolicyStorageHelper;->getProfile(Ljava/lang/String;)Lcom/sec/enterprise/knox/billing/EnterpriseBillingProfile;
 
     move-result-object v1
 
-    .line 97
     .local v1, "profile":Lcom/sec/enterprise/knox/billing/EnterpriseBillingProfile;
     if-eqz v1, :cond_3
 
-    .line 98
     iget-object v4, p0, Lcom/android/server/enterprise/billing/EnterpriseBillingEngine;->ebPolicyStorageHelper:Lcom/android/server/enterprise/billing/EnterpriseBillingPolicyStorageHelper;
 
     invoke-virtual {v1}, Lcom/sec/enterprise/knox/billing/EnterpriseBillingProfile;->getProfileName()Ljava/lang/String;
@@ -1613,17 +1472,13 @@
 
     move-result-object v0
 
-    .line 100
     .local v0, "eapnType":Ljava/lang/String;
     if-eqz v0, :cond_0
 
-    .line 101
     invoke-virtual {p0, p1}, Lcom/android/server/enterprise/billing/EnterpriseBillingEngine;->handleProfile(Ljava/lang/String;)V
 
-    .line 102
     const/4 v2, 0x1
 
-    .line 128
     .end local v0    # "eapnType":Ljava/lang/String;
     .end local v1    # "profile":Lcom/sec/enterprise/knox/billing/EnterpriseBillingProfile;
     :goto_0
@@ -1633,10 +1488,8 @@
 
     invoke-static {v4, v5}, Landroid/util/Log;->v(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 130
     return v2
 
-    .line 104
     .restart local v0    # "eapnType":Ljava/lang/String;
     .restart local v1    # "profile":Lcom/sec/enterprise/knox/billing/EnterpriseBillingProfile;
     :cond_0
@@ -1646,10 +1499,8 @@
 
     move-result-object v0
 
-    .line 105
     if-eqz v0, :cond_2
 
-    .line 107
     iget-object v4, p0, Lcom/android/server/enterprise/billing/EnterpriseBillingEngine;->ebPolicyStorageHelper:Lcom/android/server/enterprise/billing/EnterpriseBillingPolicyStorageHelper;
 
     invoke-virtual {v1}, Lcom/sec/enterprise/knox/billing/EnterpriseBillingProfile;->getProfileName()Ljava/lang/String;
@@ -1660,25 +1511,21 @@
 
     move-result v3
 
-    .line 108
     .local v3, "rows":I
     if-lez v3, :cond_1
 
     const/4 v2, 0x1
 
-    .line 109
     :goto_1
     invoke-virtual {p0, p1}, Lcom/android/server/enterprise/billing/EnterpriseBillingEngine;->handleProfile(Ljava/lang/String;)V
 
     goto :goto_0
 
-    .line 108
     :cond_1
     const/4 v2, 0x0
 
     goto :goto_1
 
-    .line 112
     .end local v3    # "rows":I
     :cond_2
     const-string v4, "EnterpriseBillingEngine"
@@ -1687,12 +1534,10 @@
 
     invoke-static {v4, v5}, Landroid/util/Log;->v(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 113
     const/4 v2, 0x0
 
     goto :goto_0
 
-    .line 119
     .end local v0    # "eapnType":Ljava/lang/String;
     :cond_3
     const-string v4, "EnterpriseBillingEngine"
@@ -1717,12 +1562,10 @@
 
     invoke-static {v4, v5}, Landroid/util/Log;->v(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 120
     const/4 v2, 0x0
 
     goto :goto_0
 
-    .line 124
     .end local v1    # "profile":Lcom/sec/enterprise/knox/billing/EnterpriseBillingProfile;
     :cond_4
     const-string v4, "EnterpriseBillingEngine"
@@ -1747,7 +1590,6 @@
 
     invoke-static {v4, v5}, Landroid/util/Log;->v(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 125
     const/4 v2, 0x0
 
     goto :goto_0
@@ -1758,14 +1600,11 @@
     .param p1, "vpnProfileName"    # Ljava/lang/String;
 
     .prologue
-    .line 868
     const/4 v1, 0x0
 
-    .line 869
     .local v1, "eapnType":Ljava/lang/String;
     const/4 v0, 0x0
 
-    .line 870
     .local v0, "billingProfileName":Ljava/lang/String;
     const-string v2, "EnterpriseBillingEngine"
 
@@ -1789,7 +1628,6 @@
 
     invoke-static {v2, v3}, Landroid/util/Log;->v(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 871
     if-eqz p1, :cond_1
 
     invoke-virtual {p1}, Ljava/lang/String;->length()I
@@ -1798,17 +1636,14 @@
 
     if-lez v2, :cond_1
 
-    .line 872
     iget-object v2, p0, Lcom/android/server/enterprise/billing/EnterpriseBillingEngine;->ebPolicyStorageHelper:Lcom/android/server/enterprise/billing/EnterpriseBillingPolicyStorageHelper;
 
     invoke-virtual {v2, p1}, Lcom/android/server/enterprise/billing/EnterpriseBillingPolicyStorageHelper;->getBillingProfileName(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 
-    .line 873
     if-eqz v0, :cond_0
 
-    .line 874
     const-string v2, "EnterpriseBillingEngine"
 
     new-instance v3, Ljava/lang/StringBuilder;
@@ -1831,14 +1666,12 @@
 
     invoke-static {v2, v3}, Landroid/util/Log;->v(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 875
     iget-object v2, p0, Lcom/android/server/enterprise/billing/EnterpriseBillingEngine;->ebPolicyStorageHelper:Lcom/android/server/enterprise/billing/EnterpriseBillingPolicyStorageHelper;
 
     invoke-virtual {v2, v0}, Lcom/android/server/enterprise/billing/EnterpriseBillingPolicyStorageHelper;->getAssignedEapn(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v1
 
-    .line 876
     const-string v2, "EnterpriseBillingEngine"
 
     new-instance v3, Ljava/lang/StringBuilder;
@@ -1861,7 +1694,6 @@
 
     invoke-static {v2, v3}, Landroid/util/Log;->v(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 882
     :cond_0
     :goto_0
     const-string v2, "EnterpriseBillingEngine"
@@ -1886,10 +1718,8 @@
 
     invoke-static {v2, v3}, Landroid/util/Log;->v(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 883
     return-object v1
 
-    .line 880
     :cond_1
     const-string v2, "EnterpriseBillingEngine"
 
@@ -1938,10 +1768,8 @@
     .end annotation
 
     .prologue
-    .line 816
     const/4 v0, 0x0
 
-    .line 817
     .local v0, "list":Ljava/util/List;, "Ljava/util/List<Ljava/lang/Integer;>;"
     if-eqz p1, :cond_1
 
@@ -1951,25 +1779,21 @@
 
     if-lez v2, :cond_1
 
-    .line 818
     iget-object v2, p0, Lcom/android/server/enterprise/billing/EnterpriseBillingEngine;->ebPolicyStorageHelper:Lcom/android/server/enterprise/billing/EnterpriseBillingPolicyStorageHelper;
 
     invoke-virtual {v2, p1}, Lcom/android/server/enterprise/billing/EnterpriseBillingPolicyStorageHelper;->getAssignedProfile(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v1
 
-    .line 819
     .local v1, "profileName":Ljava/lang/String;
     if-eqz v1, :cond_0
 
-    .line 820
     iget-object v2, p0, Lcom/android/server/enterprise/billing/EnterpriseBillingEngine;->ebPolicyStorageHelper:Lcom/android/server/enterprise/billing/EnterpriseBillingPolicyStorageHelper;
 
     invoke-virtual {v2, v1}, Lcom/android/server/enterprise/billing/EnterpriseBillingPolicyStorageHelper;->getContainersUsingProfile(Ljava/lang/String;)Ljava/util/List;
 
     move-result-object v0
 
-    .line 825
     .end local v1    # "profileName":Ljava/lang/String;
     :cond_0
     :goto_0
@@ -1995,10 +1819,8 @@
 
     invoke-static {v2, v3}, Landroid/util/Log;->v(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 826
     return-object v0
 
-    .line 823
     :cond_1
     const-string v2, "EnterpriseBillingEngine"
 
@@ -2041,12 +1863,10 @@
     .end annotation
 
     .prologue
-    .line 411
     monitor-enter p0
 
     const/16 v19, 0x0
 
-    .line 413
     .local v19, "map":Ljava/util/Map;, "Ljava/util/Map<Ljava/lang/String;Ljava/util/List<Ljava/lang/Integer;>;>;"
     :try_start_0
     const-string v32, "EnterpriseBillingEngine"
@@ -2055,7 +1875,6 @@
 
     invoke-static/range {v32 .. v33}, Landroid/util/Log;->v(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 416
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/android/server/enterprise/billing/EnterpriseBillingEngine;->ebPolicyStorageHelper:Lcom/android/server/enterprise/billing/EnterpriseBillingPolicyStorageHelper;
@@ -2066,7 +1885,6 @@
 
     move-result-object v11
 
-    .line 418
     .local v11, "exceptionList":Ljava/util/List;, "Ljava/util/List<Ljava/lang/Integer;>;"
     move-object/from16 v0, p0
 
@@ -2078,11 +1896,9 @@
 
     move-result-object v26
 
-    .line 419
     .local v26, "profiles":[Ljava/lang/String;
     if-eqz v26, :cond_f
 
-    .line 421
     const-string v32, "EnterpriseBillingEngine"
 
     new-instance v33, Ljava/lang/StringBuilder;
@@ -2111,7 +1927,6 @@
 
     invoke-static/range {v32 .. v33}, Landroid/util/Log;->v(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 423
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/android/server/enterprise/billing/EnterpriseBillingEngine;->mContext:Landroid/content/Context;
@@ -2122,11 +1937,9 @@
 
     move-result-object v22
 
-    .line 424
     .local v22, "packageManager":Landroid/content/pm/PackageManager;
     const/16 v16, 0x0
 
-    .line 425
     .local v16, "isContains":Z
     move-object/from16 v0, p0
 
@@ -2138,7 +1951,6 @@
 
     move-result-object v3
 
-    .line 427
     .local v3, "apns":Ljava/util/List;, "Ljava/util/List<Lcom/sec/enterprise/knox/billing/EnterpriseApn;>;"
     move-object/from16 v5, v26
 
@@ -2169,7 +1981,6 @@
     :try_start_1
     aget-object v25, v5, v14
 
-    .line 428
     .local v25, "profileName":Ljava/lang/String;
     move-object/from16 v0, p0
 
@@ -2185,7 +1996,6 @@
 
     move-result v17
 
-    .line 429
     .local v17, "isProfileActive":Z
     const-string v32, "EnterpriseBillingEngine"
 
@@ -2227,17 +2037,13 @@
 
     invoke-static/range {v32 .. v33}, Landroid/util/Log;->v(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 431
     if-eqz v17, :cond_12
 
-    .line 433
     const/4 v8, 0x0
 
-    .line 434
     .local v8, "eapn":Lcom/sec/enterprise/knox/billing/EnterpriseApn;
     if-eqz v3, :cond_0
 
-    .line 435
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/android/server/enterprise/billing/EnterpriseBillingEngine;->ebPolicyStorageHelper:Lcom/android/server/enterprise/billing/EnterpriseBillingPolicyStorageHelper;
@@ -2252,13 +2058,11 @@
 
     move-result-object v8
 
-    .line 437
     :cond_0
     if-nez v8, :cond_1
 
     move-object/from16 v19, v20
 
-    .line 427
     .end local v8    # "eapn":Lcom/sec/enterprise/knox/billing/EnterpriseApn;
     .end local v14    # "i$":I
     .end local v20    # "map":Ljava/util/Map;, "Ljava/util/Map<Ljava/lang/String;Ljava/util/List<Ljava/lang/Integer;>;>;"
@@ -2277,7 +2081,6 @@
     .restart local v20    # "map":Ljava/util/Map;, "Ljava/util/Map<Ljava/lang/String;Ljava/util/List<Ljava/lang/Integer;>;>;"
     goto :goto_0
 
-    .line 441
     .restart local v8    # "eapn":Lcom/sec/enterprise/knox/billing/EnterpriseApn;
     :cond_1
     move-object/from16 v0, p0
@@ -2294,11 +2097,9 @@
 
     move-result-object v9
 
-    .line 442
     .local v9, "eapnType":Ljava/lang/String;
     const/16 v28, 0x0
 
-    .line 444
     .local v28, "uids":Ljava/util/List;, "Ljava/util/List<Ljava/lang/Integer;>;"
     move-object/from16 v0, p0
 
@@ -2314,7 +2115,6 @@
 
     move-result-object v4
 
-    .line 445
     .local v4, "applications":Ljava/util/List;, "Ljava/util/List<Ljava/lang/String;>;"
     const-string v32, "EnterpriseBillingEngine"
 
@@ -2340,10 +2140,8 @@
 
     invoke-static/range {v32 .. v33}, Landroid/util/Log;->v(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 447
     if-eqz v4, :cond_5
 
-    .line 448
     invoke-interface {v4}, Ljava/util/List;->iterator()Ljava/util/Iterator;
 
     move-result-object v12
@@ -2364,11 +2162,9 @@
 
     check-cast v23, Ljava/lang/String;
 
-    .line 449
     .local v23, "packageName":Ljava/lang/String;
     if-nez v28, :cond_3
 
-    .line 450
     new-instance v28, Ljava/util/ArrayList;
 
     .end local v28    # "uids":Ljava/util/List;, "Ljava/util/List<Ljava/lang/Integer;>;"
@@ -2376,7 +2172,6 @@
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
-    .line 453
     .restart local v28    # "uids":Ljava/util/List;, "Ljava/util/List<Ljava/lang/Integer;>;"
     :cond_3
     const/16 v32, 0x0
@@ -2392,7 +2187,6 @@
 
     move-result v27
 
-    .line 455
     .local v27, "uid":I
     if-eqz v11, :cond_4
 
@@ -2408,14 +2202,11 @@
 
     if-eqz v32, :cond_4
 
-    .line 456
     const/16 v16, 0x1
 
-    .line 460
     :goto_3
     if-nez v16, :cond_2
 
-    .line 461
     invoke-static/range {v27 .. v27}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object v32
@@ -2430,7 +2221,6 @@
 
     if-nez v32, :cond_2
 
-    .line 462
     invoke-static/range {v27 .. v27}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object v32
@@ -2446,21 +2236,18 @@
 
     goto :goto_2
 
-    .line 465
     .end local v27    # "uid":I
     :catch_0
     move-exception v32
 
     goto :goto_2
 
-    .line 458
     .restart local v27    # "uid":I
     :cond_4
     const/16 v16, 0x0
 
     goto :goto_3
 
-    .line 471
     .end local v12    # "i$":Ljava/util/Iterator;
     .end local v23    # "packageName":Ljava/lang/String;
     .end local v27    # "uid":I
@@ -2480,7 +2267,6 @@
 
     move-result-object v6
 
-    .line 472
     .local v6, "containers":Ljava/util/List;, "Ljava/util/List<Ljava/lang/Integer;>;"
     const-string v32, "EnterpriseBillingEngine"
 
@@ -2506,10 +2292,8 @@
 
     invoke-static/range {v32 .. v33}, Landroid/util/Log;->v(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 473
     if-eqz v6, :cond_a
 
-    .line 474
     invoke-interface {v6}, Ljava/util/List;->iterator()Ljava/util/Iterator;
 
     move-result-object v12
@@ -2531,7 +2315,6 @@
 
     move-result v15
 
-    .line 475
     .local v15, "id":I
     const/16 v32, 0x1
 
@@ -2543,11 +2326,9 @@
 
     move-result-object v24
 
-    .line 476
     .local v24, "packages":Ljava/util/List;, "Ljava/util/List<Landroid/content/pm/PackageInfo;>;"
     if-eqz v24, :cond_6
 
-    .line 477
     invoke-interface/range {v24 .. v24}, Ljava/util/List;->iterator()Ljava/util/Iterator;
 
     move-result-object v13
@@ -2567,17 +2348,14 @@
 
     check-cast v21, Landroid/content/pm/PackageInfo;
 
-    .line 478
     .local v21, "packageInfo":Landroid/content/pm/PackageInfo;
     if-nez v28, :cond_8
 
-    .line 479
     new-instance v28, Ljava/util/ArrayList;
 
     .end local v28    # "uids":Ljava/util/List;, "Ljava/util/List<Ljava/lang/Integer;>;"
     invoke-direct/range {v28 .. v28}, Ljava/util/ArrayList;-><init>()V
 
-    .line 481
     .restart local v28    # "uids":Ljava/util/List;, "Ljava/util/List<Ljava/lang/Integer;>;"
     :cond_8
     move-object/from16 v0, v21
@@ -2606,7 +2384,6 @@
 
     if-nez v32, :cond_7
 
-    .line 482
     if-eqz v11, :cond_9
 
     move-object/from16 v0, v21
@@ -2633,14 +2410,11 @@
 
     if-eqz v32, :cond_9
 
-    .line 483
     const/16 v16, 0x1
 
-    .line 488
     :goto_5
     if-nez v16, :cond_7
 
-    .line 489
     move-object/from16 v0, v21
 
     iget-object v0, v0, Landroid/content/pm/PackageInfo;->applicationInfo:Landroid/content/pm/ApplicationInfo;
@@ -2667,7 +2441,6 @@
 
     if-nez v32, :cond_7
 
-    .line 490
     move-object/from16 v0, v21
 
     iget-object v0, v0, Landroid/content/pm/PackageInfo;->applicationInfo:Landroid/content/pm/ApplicationInfo;
@@ -2694,7 +2467,6 @@
 
     goto :goto_4
 
-    .line 411
     .end local v4    # "applications":Ljava/util/List;, "Ljava/util/List<Ljava/lang/String;>;"
     .end local v6    # "containers":Ljava/util/List;, "Ljava/util/List<Ljava/lang/Integer;>;"
     .end local v8    # "eapn":Lcom/sec/enterprise/knox/billing/EnterpriseApn;
@@ -2725,7 +2497,6 @@
 
     throw v32
 
-    .line 486
     .end local v19    # "map":Ljava/util/Map;, "Ljava/util/Map<Ljava/lang/String;Ljava/util/List<Ljava/lang/Integer;>;>;"
     .restart local v3    # "apns":Ljava/util/List;, "Ljava/util/List<Lcom/sec/enterprise/knox/billing/EnterpriseApn;>;"
     .restart local v4    # "applications":Ljava/util/List;, "Ljava/util/List<Ljava/lang/String;>;"
@@ -2751,7 +2522,6 @@
 
     goto :goto_5
 
-    .line 500
     .end local v13    # "i$":Ljava/util/Iterator;
     .end local v15    # "id":I
     .end local v21    # "packageInfo":Landroid/content/pm/PackageInfo;
@@ -2772,11 +2542,9 @@
 
     move-result-object v30
 
-    .line 501
     .local v30, "vpnEngines":Ljava/util/List;, "Ljava/util/List<Lcom/android/server/enterprise/billing/EnterpriseBillingPolicyStorageHelper$EnterpriseBillingVpnEngineDetail;>;"
     if-eqz v30, :cond_d
 
-    .line 502
     invoke-interface/range {v30 .. v30}, Ljava/util/List;->iterator()Ljava/util/Iterator;
 
     move-result-object v12
@@ -2801,7 +2569,6 @@
     :try_end_4
     .catchall {:try_start_4 .. :try_end_4} :catchall_0
 
-    .line 504
     .local v10, "engine":Lcom/android/server/enterprise/billing/EnterpriseBillingPolicyStorageHelper$EnterpriseBillingVpnEngineDetail;
     :try_start_5
     iget-object v0, v10, Lcom/android/server/enterprise/billing/EnterpriseBillingPolicyStorageHelper$EnterpriseBillingVpnEngineDetail;->enginePackageName:Ljava/lang/String;
@@ -2822,11 +2589,9 @@
 
     move-result v31
 
-    .line 506
     .local v31, "vpnUid":I
     if-nez v29, :cond_11
 
-    .line 507
     new-instance v28, Ljava/util/ArrayList;
 
     invoke-direct/range {v28 .. v28}, Ljava/util/ArrayList;-><init>()V
@@ -2834,7 +2599,6 @@
     .catch Landroid/content/pm/PackageManager$NameNotFoundException; {:try_start_5 .. :try_end_5} :catch_1
     .catchall {:try_start_5 .. :try_end_5} :catchall_0
 
-    .line 509
     .end local v29    # "uids":Ljava/util/List;, "Ljava/util/List<Ljava/lang/Integer;>;"
     .restart local v28    # "uids":Ljava/util/List;, "Ljava/util/List<Ljava/lang/Integer;>;"
     :goto_8
@@ -2853,7 +2617,6 @@
 
     if-nez v32, :cond_b
 
-    .line 510
     invoke-static/range {v31 .. v31}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object v32
@@ -2872,18 +2635,15 @@
     :goto_9
     move-object/from16 v29, v28
 
-    .line 515
     .end local v28    # "uids":Ljava/util/List;, "Ljava/util/List<Ljava/lang/Integer;>;"
     .restart local v29    # "uids":Ljava/util/List;, "Ljava/util/List<Ljava/lang/Integer;>;"
     goto :goto_7
 
-    .line 512
     :catch_1
     move-exception v7
 
     move-object/from16 v28, v29
 
-    .line 513
     .end local v29    # "uids":Ljava/util/List;, "Ljava/util/List<Ljava/lang/Integer;>;"
     .local v7, "e":Landroid/content/pm/PackageManager$NameNotFoundException;
     .restart local v28    # "uids":Ljava/util/List;, "Ljava/util/List<Ljava/lang/Integer;>;"
@@ -2900,21 +2660,18 @@
     :cond_c
     move-object/from16 v28, v29
 
-    .line 518
     .end local v12    # "i$":Ljava/util/Iterator;
     .end local v29    # "uids":Ljava/util/List;, "Ljava/util/List<Ljava/lang/Integer;>;"
     .restart local v28    # "uids":Ljava/util/List;, "Ljava/util/List<Ljava/lang/Integer;>;"
     :cond_d
     if-nez v20, :cond_10
 
-    .line 519
     new-instance v19, Ljava/util/HashMap;
 
     invoke-direct/range {v19 .. v19}, Ljava/util/HashMap;-><init>()V
     :try_end_7
     .catchall {:try_start_7 .. :try_end_7} :catchall_0
 
-    .line 521
     .end local v20    # "map":Ljava/util/Map;, "Ljava/util/Map<Ljava/lang/String;Ljava/util/List<Ljava/lang/Integer;>;>;"
     .restart local v19    # "map":Ljava/util/Map;, "Ljava/util/Map<Ljava/lang/String;Ljava/util/List<Ljava/lang/Integer;>;>;"
     :goto_b
@@ -2927,7 +2684,6 @@
 
     goto/16 :goto_1
 
-    .line 411
     .end local v3    # "apns":Ljava/util/List;, "Ljava/util/List<Lcom/sec/enterprise/knox/billing/EnterpriseApn;>;"
     .end local v4    # "applications":Ljava/util/List;, "Ljava/util/List<Ljava/lang/String;>;"
     .end local v5    # "arr$":[Ljava/lang/String;
@@ -2961,7 +2717,6 @@
     :cond_e
     move-object/from16 v19, v20
 
-    .line 525
     .end local v3    # "apns":Ljava/util/List;, "Ljava/util/List<Lcom/sec/enterprise/knox/billing/EnterpriseApn;>;"
     .end local v5    # "arr$":[Ljava/lang/String;
     .end local v14    # "i$":I
@@ -2999,12 +2754,10 @@
     :try_end_8
     .catchall {:try_start_8 .. :try_end_8} :catchall_1
 
-    .line 527
     monitor-exit p0
 
     return-object v19
 
-    .line 512
     .end local v19    # "map":Ljava/util/Map;, "Ljava/util/Map<Ljava/lang/String;Ljava/util/List<Ljava/lang/Integer;>;>;"
     .restart local v3    # "apns":Ljava/util/List;, "Ljava/util/List<Lcom/sec/enterprise/knox/billing/EnterpriseApn;>;"
     .restart local v4    # "applications":Ljava/util/List;, "Ljava/util/List<Ljava/lang/String;>;"
@@ -3086,10 +2839,8 @@
     .end annotation
 
     .prologue
-    .line 782
     const/4 v1, 0x0
 
-    .line 783
     .local v1, "list":Ljava/util/List;, "Ljava/util/List<Ljava/lang/String;>;"
     const-string v2, "EnterpriseBillingEngine"
 
@@ -3113,7 +2864,6 @@
 
     invoke-static {v2, v3}, Landroid/util/Log;->v(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 784
     if-eqz p1, :cond_1
 
     invoke-virtual {p1}, Ljava/lang/String;->length()I
@@ -3122,18 +2872,15 @@
 
     if-lez v2, :cond_1
 
-    .line 785
     iget-object v2, p0, Lcom/android/server/enterprise/billing/EnterpriseBillingEngine;->ebPolicyStorageHelper:Lcom/android/server/enterprise/billing/EnterpriseBillingPolicyStorageHelper;
 
     invoke-virtual {v2, p1}, Lcom/android/server/enterprise/billing/EnterpriseBillingPolicyStorageHelper;->getAssignedProfile(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 
-    .line 786
     .local v0, "billingProfileName":Ljava/lang/String;
     if-eqz v0, :cond_0
 
-    .line 787
     const-string v2, "EnterpriseBillingEngine"
 
     new-instance v3, Ljava/lang/StringBuilder;
@@ -3156,14 +2903,12 @@
 
     invoke-static {v2, v3}, Landroid/util/Log;->v(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 788
     iget-object v2, p0, Lcom/android/server/enterprise/billing/EnterpriseBillingEngine;->ebPolicyStorageHelper:Lcom/android/server/enterprise/billing/EnterpriseBillingPolicyStorageHelper;
 
     invoke-virtual {v2, v0}, Lcom/android/server/enterprise/billing/EnterpriseBillingPolicyStorageHelper;->getVpnProfilesforBillingProfile(Ljava/lang/String;)Ljava/util/List;
 
     move-result-object v1
 
-    .line 794
     .end local v0    # "billingProfileName":Ljava/lang/String;
     :cond_0
     :goto_0
@@ -3189,10 +2934,8 @@
 
     invoke-static {v2, v3}, Landroid/util/Log;->v(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 795
     return-object v1
 
-    .line 792
     :cond_1
     const-string v2, "EnterpriseBillingEngine"
 
@@ -3224,7 +2967,6 @@
     .param p1, "profileName"    # Ljava/lang/String;
 
     .prologue
-    .line 221
     const-string v9, "EnterpriseBillingEngine"
 
     new-instance v10, Ljava/lang/StringBuilder;
@@ -3247,7 +2989,6 @@
 
     invoke-static {v9, v10}, Landroid/util/Log;->v(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 223
     if-eqz p1, :cond_6
 
     invoke-virtual {p1}, Ljava/lang/String;->length()I
@@ -3264,7 +3005,6 @@
 
     if-eqz v9, :cond_6
 
-    .line 225
     const-string v9, "EnterpriseBillingEngine"
 
     new-instance v10, Ljava/lang/StringBuilder;
@@ -3287,14 +3027,12 @@
 
     invoke-static {v9, v10}, Landroid/util/Log;->v(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 228
     iget-object v9, p0, Lcom/android/server/enterprise/billing/EnterpriseBillingEngine;->ebPolicyStorageHelper:Lcom/android/server/enterprise/billing/EnterpriseBillingPolicyStorageHelper;
 
     invoke-virtual {v9, p1}, Lcom/android/server/enterprise/billing/EnterpriseBillingPolicyStorageHelper;->getActiveApnForProfile(Ljava/lang/String;)Lcom/sec/enterprise/knox/billing/EnterpriseApn;
 
     move-result-object v0
 
-    .line 229
     .local v0, "apn":Lcom/sec/enterprise/knox/billing/EnterpriseApn;
     iget-object v9, p0, Lcom/android/server/enterprise/billing/EnterpriseBillingEngine;->ebPolicyStorageHelper:Lcom/android/server/enterprise/billing/EnterpriseBillingPolicyStorageHelper;
 
@@ -3302,27 +3040,23 @@
 
     move-result-object v7
 
-    .line 231
     .local v7, "oldDefaultApnType":Ljava/lang/String;
     if-eqz v0, :cond_0
 
     if-nez v7, :cond_0
 
-    .line 232
     iget-object v9, p0, Lcom/android/server/enterprise/billing/EnterpriseBillingEngine;->mContext:Landroid/content/Context;
 
     invoke-static {v9, v0}, Lcom/android/server/enterprise/billing/EnterpriseBillingTelephonyInterface;->getDefaultType(Landroid/content/Context;Lcom/sec/enterprise/knox/billing/EnterpriseApn;)Ljava/lang/String;
 
     move-result-object v7
 
-    .line 233
     iget-object v9, p0, Lcom/android/server/enterprise/billing/EnterpriseBillingEngine;->ebPolicyStorageHelper:Lcom/android/server/enterprise/billing/EnterpriseBillingPolicyStorageHelper;
 
     invoke-virtual {v9, p1, v7}, Lcom/android/server/enterprise/billing/EnterpriseBillingPolicyStorageHelper;->setDefaultApnType(Ljava/lang/String;Ljava/lang/String;)Z
 
     move-result v5
 
-    .line 234
     .local v5, "isSetDefaulType":Z
     const-string v9, "EnterpriseBillingEngine"
 
@@ -3346,7 +3080,6 @@
 
     invoke-static {v9, v10}, Landroid/util/Log;->v(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 236
     .end local v5    # "isSetDefaulType":Z
     :cond_0
     const-string v9, "EnterpriseBillingEngine"
@@ -3381,14 +3114,12 @@
 
     invoke-static {v9, v10}, Landroid/util/Log;->v(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 238
     iget-object v9, p0, Lcom/android/server/enterprise/billing/EnterpriseBillingEngine;->mContext:Landroid/content/Context;
 
     invoke-static {v9}, Lcom/android/server/enterprise/billing/EnterpriseBillingTelephonyInterface;->getCurrentActiveApns(Landroid/content/Context;)Ljava/util/List;
 
     move-result-object v1
 
-    .line 240
     .local v1, "apns":Ljava/util/List;, "Ljava/util/List<Lcom/sec/enterprise/knox/billing/EnterpriseApn;>;"
     const-string v9, "EnterpriseBillingEngine"
 
@@ -3412,10 +3143,8 @@
 
     invoke-static {v9, v10}, Landroid/util/Log;->v(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 242
     if-eqz v1, :cond_3
 
-    .line 243
     if-eqz v0, :cond_1
 
     invoke-interface {v1, v0}, Ljava/util/List;->contains(Ljava/lang/Object;)Z
@@ -3424,7 +3153,6 @@
 
     if-nez v9, :cond_5
 
-    .line 248
     :cond_1
     const-string v9, "EnterpriseBillingEngine"
 
@@ -3432,14 +3160,12 @@
 
     invoke-static {v9, v10}, Landroid/util/Log;->v(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 249
     iget-object v9, p0, Lcom/android/server/enterprise/billing/EnterpriseBillingEngine;->ebPolicyStorageHelper:Lcom/android/server/enterprise/billing/EnterpriseBillingPolicyStorageHelper;
 
     invoke-virtual {v9, p1}, Lcom/android/server/enterprise/billing/EnterpriseBillingPolicyStorageHelper;->getAssignedEapn(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v3
 
-    .line 251
     .local v3, "eapnType":Ljava/lang/String;
     const-string v9, "EnterpriseBillingEngine"
 
@@ -3463,14 +3189,12 @@
 
     invoke-static {v9, v10}, Landroid/util/Log;->v(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 253
     iget-object v9, p0, Lcom/android/server/enterprise/billing/EnterpriseBillingEngine;->ebPolicyStorageHelper:Lcom/android/server/enterprise/billing/EnterpriseBillingPolicyStorageHelper;
 
     invoke-virtual {v9, p1, v1}, Lcom/android/server/enterprise/billing/EnterpriseBillingPolicyStorageHelper;->getMatchingApn(Ljava/lang/String;Ljava/util/List;)Lcom/sec/enterprise/knox/billing/EnterpriseApn;
 
     move-result-object v2
 
-    .line 255
     .local v2, "eapn":Lcom/sec/enterprise/knox/billing/EnterpriseApn;
     const-string v9, "EnterpriseBillingEngine"
 
@@ -3494,30 +3218,24 @@
 
     invoke-static {v9, v10}, Landroid/util/Log;->v(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 257
     if-eqz v2, :cond_4
 
-    .line 261
     if-eqz v7, :cond_2
 
-    .line 262
     const-string v9, "EnterpriseBillingEngine"
 
     const-string v10, "handle - changed current apn to its defaulttype in telephony db"
 
     invoke-static {v9, v10}, Landroid/util/Log;->v(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 263
     iget-object v9, p0, Lcom/android/server/enterprise/billing/EnterpriseBillingEngine;->mContext:Landroid/content/Context;
 
     invoke-static {v9, v0, v7}, Lcom/android/server/enterprise/billing/EnterpriseBillingTelephonyInterface;->updateApnType(Landroid/content/Context;Lcom/sec/enterprise/knox/billing/EnterpriseApn;Ljava/lang/String;)I
 
-    .line 264
     iget-object v9, p0, Lcom/android/server/enterprise/billing/EnterpriseBillingEngine;->ebPolicyStorageHelper:Lcom/android/server/enterprise/billing/EnterpriseBillingPolicyStorageHelper;
 
     invoke-virtual {v9, p1}, Lcom/android/server/enterprise/billing/EnterpriseBillingPolicyStorageHelper;->deleteActiveProfileApn(Ljava/lang/String;)Z
 
-    .line 267
     :cond_2
     iget-object v9, p0, Lcom/android/server/enterprise/billing/EnterpriseBillingEngine;->mContext:Landroid/content/Context;
 
@@ -3525,7 +3243,6 @@
 
     move-result-object v6
 
-    .line 269
     .local v6, "newDefaultApnType":Ljava/lang/String;
     const-string v9, "EnterpriseBillingEngine"
 
@@ -3549,14 +3266,12 @@
 
     invoke-static {v9, v10}, Landroid/util/Log;->v(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 271
     iget-object v9, p0, Lcom/android/server/enterprise/billing/EnterpriseBillingEngine;->ebPolicyStorageHelper:Lcom/android/server/enterprise/billing/EnterpriseBillingPolicyStorageHelper;
 
     invoke-virtual {v9, p1, v2}, Lcom/android/server/enterprise/billing/EnterpriseBillingPolicyStorageHelper;->addActiveApnToProfile(Ljava/lang/String;Lcom/sec/enterprise/knox/billing/EnterpriseApn;)Z
 
     move-result v4
 
-    .line 273
     .local v4, "isAddedActiveApn":Z
     const-string v9, "EnterpriseBillingEngine"
 
@@ -3580,14 +3295,12 @@
 
     invoke-static {v9, v10}, Landroid/util/Log;->v(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 275
     iget-object v9, p0, Lcom/android/server/enterprise/billing/EnterpriseBillingEngine;->ebPolicyStorageHelper:Lcom/android/server/enterprise/billing/EnterpriseBillingPolicyStorageHelper;
 
     invoke-virtual {v9, p1, v6}, Lcom/android/server/enterprise/billing/EnterpriseBillingPolicyStorageHelper;->setDefaultApnType(Ljava/lang/String;Ljava/lang/String;)Z
 
     move-result v5
 
-    .line 277
     .restart local v5    # "isSetDefaulType":Z
     const-string v9, "EnterpriseBillingEngine"
 
@@ -3611,14 +3324,12 @@
 
     invoke-static {v9, v10}, Landroid/util/Log;->v(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 279
     iget-object v9, p0, Lcom/android/server/enterprise/billing/EnterpriseBillingEngine;->mContext:Landroid/content/Context;
 
     invoke-static {v9, v2, v3}, Lcom/android/server/enterprise/billing/EnterpriseBillingTelephonyInterface;->updateApnType(Landroid/content/Context;Lcom/sec/enterprise/knox/billing/EnterpriseApn;Ljava/lang/String;)I
 
     move-result v8
 
-    .line 281
     .local v8, "update":I
     const-string v9, "EnterpriseBillingEngine"
 
@@ -3642,12 +3353,10 @@
 
     invoke-static {v9, v10}, Landroid/util/Log;->v(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 283
     const-string v9, "com.android.server.enterprise.billing.mapping_modified"
 
     invoke-direct {p0, v9, p1}, Lcom/android/server/enterprise/billing/EnterpriseBillingEngine;->sendEventToRIL(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 300
     .end local v2    # "eapn":Lcom/sec/enterprise/knox/billing/EnterpriseApn;
     .end local v3    # "eapnType":Ljava/lang/String;
     .end local v4    # "isAddedActiveApn":Z
@@ -3678,7 +3387,6 @@
 
     invoke-static {v9, v10}, Landroid/util/Log;->v(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 305
     .end local v0    # "apn":Lcom/sec/enterprise/knox/billing/EnterpriseApn;
     .end local v1    # "apns":Ljava/util/List;, "Ljava/util/List<Lcom/sec/enterprise/knox/billing/EnterpriseApn;>;"
     .end local v7    # "oldDefaultApnType":Ljava/lang/String;
@@ -3689,10 +3397,8 @@
 
     invoke-static {v9, v10}, Landroid/util/Log;->v(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 306
     return-void
 
-    .line 285
     .restart local v0    # "apn":Lcom/sec/enterprise/knox/billing/EnterpriseApn;
     .restart local v1    # "apns":Ljava/util/List;, "Ljava/util/List<Lcom/sec/enterprise/knox/billing/EnterpriseApn;>;"
     .restart local v2    # "eapn":Lcom/sec/enterprise/knox/billing/EnterpriseApn;
@@ -3705,7 +3411,6 @@
 
     goto :goto_0
 
-    .line 292
     .end local v2    # "eapn":Lcom/sec/enterprise/knox/billing/EnterpriseApn;
     .end local v3    # "eapnType":Ljava/lang/String;
     :cond_5
@@ -3715,14 +3420,12 @@
 
     invoke-static {v9, v10}, Landroid/util/Log;->v(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 293
     const-string v9, "com.android.server.enterprise.billing.mapping_modified"
 
     invoke-direct {p0, v9, p1}, Lcom/android/server/enterprise/billing/EnterpriseBillingEngine;->sendEventToRIL(Ljava/lang/String;Ljava/lang/String;)V
 
     goto :goto_0
 
-    .line 302
     .end local v0    # "apn":Lcom/sec/enterprise/knox/billing/EnterpriseApn;
     .end local v1    # "apns":Ljava/util/List;, "Ljava/util/List<Lcom/sec/enterprise/knox/billing/EnterpriseApn;>;"
     .end local v7    # "oldDefaultApnType":Ljava/lang/String;
@@ -3757,14 +3460,12 @@
     .param p1, "profileName"    # Ljava/lang/String;
 
     .prologue
-    .line 799
     const-string v0, "EnterpriseBillingEngine"
 
     const-string v1, "informMappingChanged - start - "
 
     invoke-static {v0, v1}, Landroid/util/Log;->v(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 800
     if-eqz p1, :cond_0
 
     invoke-virtual {p1}, Ljava/lang/String;->length()I
@@ -3773,12 +3474,10 @@
 
     if-lez v0, :cond_0
 
-    .line 801
     const-string v0, "com.android.server.enterprise.billing.mapping_modified"
 
     invoke-direct {p0, v0, p1}, Lcom/android/server/enterprise/billing/EnterpriseBillingEngine;->sendEventToRIL(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 805
     :goto_0
     const-string v0, "EnterpriseBillingEngine"
 
@@ -3786,10 +3485,8 @@
 
     invoke-static {v0, v1}, Landroid/util/Log;->v(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 806
     return-void
 
-    .line 803
     :cond_0
     const-string v0, "EnterpriseBillingEngine"
 
@@ -3823,7 +3520,6 @@
     .param p3, "mnc"    # Ljava/lang/String;
 
     .prologue
-    .line 936
     const-string v4, "EnterpriseBillingEngine"
 
     new-instance v5, Ljava/lang/StringBuilder;
@@ -3866,16 +3562,13 @@
 
     invoke-static {v4, v5}, Landroid/util/Log;->v(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 942
     const/4 v1, 0x0
 
-    .line 943
     .local v1, "returnValue":Z
     invoke-static {}, Landroid/os/Binder;->clearCallingIdentity()J
 
     move-result-wide v2
 
-    .line 945
     .local v2, "token":J
     :try_start_0
     iget-object v4, p0, Lcom/android/server/enterprise/billing/EnterpriseBillingEngine;->ebPolicyStorageHelper:Lcom/android/server/enterprise/billing/EnterpriseBillingPolicyStorageHelper;
@@ -3900,7 +3593,6 @@
 
     if-nez v4, :cond_0
 
-    .line 949
     iget-object v4, p0, Lcom/android/server/enterprise/billing/EnterpriseBillingEngine;->ebPolicyStorageHelper:Lcom/android/server/enterprise/billing/EnterpriseBillingPolicyStorageHelper;
 
     invoke-virtual {v4, p1, p2, p3}, Lcom/android/server/enterprise/billing/EnterpriseBillingPolicyStorageHelper;->isEnterpriseAPN(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Z
@@ -3910,11 +3602,9 @@
 
     move-result v1
 
-    .line 954
     :cond_0
     invoke-static {v2, v3}, Landroid/os/Binder;->restoreCallingIdentity(J)V
 
-    .line 957
     :goto_0
     const-string v4, "EnterpriseBillingEngine"
 
@@ -3938,14 +3628,11 @@
 
     invoke-static {v4, v5}, Landroid/util/Log;->v(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 958
     return v1
 
-    .line 951
     :catch_0
     move-exception v0
 
-    .line 952
     .local v0, "e":Ljava/lang/Exception;
     :try_start_1
     const-string v4, "EnterpriseBillingEngine"
@@ -3972,7 +3659,6 @@
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
-    .line 954
     invoke-static {v2, v3}, Landroid/os/Binder;->restoreCallingIdentity(J)V
 
     goto :goto_0
@@ -3991,10 +3677,8 @@
     .param p1, "eapnType"    # Ljava/lang/String;
 
     .prologue
-    .line 556
     const/4 v1, 0x0
 
-    .line 557
     .local v1, "returnValue":Z
     const-string v2, "EnterpriseBillingEngine"
 
@@ -4018,7 +3702,6 @@
 
     invoke-static {v2, v3}, Landroid/util/Log;->v(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 558
     if-eqz p1, :cond_1
 
     invoke-virtual {p1}, Ljava/lang/String;->length()I
@@ -4027,18 +3710,15 @@
 
     if-lez v2, :cond_1
 
-    .line 559
     iget-object v2, p0, Lcom/android/server/enterprise/billing/EnterpriseBillingEngine;->ebPolicyStorageHelper:Lcom/android/server/enterprise/billing/EnterpriseBillingPolicyStorageHelper;
 
     invoke-virtual {v2, p1}, Lcom/android/server/enterprise/billing/EnterpriseBillingPolicyStorageHelper;->getAssignedProfile(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 
-    .line 560
     .local v0, "profileName":Ljava/lang/String;
     if-eqz v0, :cond_0
 
-    .line 561
     const-string v2, "EnterpriseBillingEngine"
 
     new-instance v3, Ljava/lang/StringBuilder;
@@ -4061,14 +3741,12 @@
 
     invoke-static {v2, v3}, Landroid/util/Log;->v(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 562
     iget-object v2, p0, Lcom/android/server/enterprise/billing/EnterpriseBillingEngine;->ebPolicyStorageHelper:Lcom/android/server/enterprise/billing/EnterpriseBillingPolicyStorageHelper;
 
     invoke-virtual {v2, v0}, Lcom/android/server/enterprise/billing/EnterpriseBillingPolicyStorageHelper;->isRoamingAllowed(Ljava/lang/String;)Z
 
     move-result v1
 
-    .line 570
     .end local v0    # "profileName":Ljava/lang/String;
     :goto_0
     const-string v2, "EnterpriseBillingEngine"
@@ -4093,10 +3771,8 @@
 
     invoke-static {v2, v3}, Landroid/util/Log;->v(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 571
     return v1
 
-    .line 564
     .restart local v0    # "profileName":Ljava/lang/String;
     :cond_0
     const-string v2, "EnterpriseBillingEngine"
@@ -4107,7 +3783,6 @@
 
     goto :goto_0
 
-    .line 568
     .end local v0    # "profileName":Ljava/lang/String;
     :cond_1
     const-string v2, "EnterpriseBillingEngine"
@@ -4140,17 +3815,14 @@
     .param p1, "eapnType"    # Ljava/lang/String;
 
     .prologue
-    .line 374
     const-string v2, "EnterpriseBillingEngine"
 
     const-string v3, " - isSplitBillingEnabled - start - "
 
     invoke-static {v2, v3}, Landroid/util/Log;->v(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 375
     const/4 v1, 0x0
 
-    .line 376
     .local v1, "returnValue":Z
     if-eqz p1, :cond_1
 
@@ -4160,14 +3832,12 @@
 
     if-lez v2, :cond_1
 
-    .line 377
     iget-object v2, p0, Lcom/android/server/enterprise/billing/EnterpriseBillingEngine;->ebPolicyStorageHelper:Lcom/android/server/enterprise/billing/EnterpriseBillingPolicyStorageHelper;
 
     invoke-virtual {v2, p1}, Lcom/android/server/enterprise/billing/EnterpriseBillingPolicyStorageHelper;->getAssignedProfile(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 
-    .line 378
     .local v0, "profileName":Ljava/lang/String;
     const-string v2, "EnterpriseBillingEngine"
 
@@ -4191,17 +3861,14 @@
 
     invoke-static {v2, v3}, Landroid/util/Log;->v(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 379
     if-eqz v0, :cond_0
 
-    .line 380
     iget-object v2, p0, Lcom/android/server/enterprise/billing/EnterpriseBillingEngine;->ebPolicyStorageHelper:Lcom/android/server/enterprise/billing/EnterpriseBillingPolicyStorageHelper;
 
     invoke-virtual {v2, v0}, Lcom/android/server/enterprise/billing/EnterpriseBillingPolicyStorageHelper;->isProfileActive(Ljava/lang/String;)Z
 
     move-result v1
 
-    .line 385
     .end local v0    # "profileName":Ljava/lang/String;
     :cond_0
     :goto_0
@@ -4227,10 +3894,8 @@
 
     invoke-static {v2, v3}, Landroid/util/Log;->v(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 386
     return v1
 
-    .line 383
     :cond_1
     const-string v2, "EnterpriseBillingEngine"
 
@@ -4262,7 +3927,6 @@
     .param p1, "eapnType"    # Ljava/lang/String;
 
     .prologue
-    .line 392
     const-string v2, "EnterpriseBillingEngine"
 
     new-instance v3, Ljava/lang/StringBuilder;
@@ -4285,10 +3949,8 @@
 
     invoke-static {v2, v3}, Landroid/util/Log;->v(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 393
     const/4 v1, 0x0
 
-    .line 394
     .local v1, "returnValue":Z
     if-eqz p1, :cond_1
 
@@ -4298,14 +3960,12 @@
 
     if-lez v2, :cond_1
 
-    .line 395
     iget-object v2, p0, Lcom/android/server/enterprise/billing/EnterpriseBillingEngine;->ebPolicyStorageHelper:Lcom/android/server/enterprise/billing/EnterpriseBillingPolicyStorageHelper;
 
     invoke-virtual {v2, p1}, Lcom/android/server/enterprise/billing/EnterpriseBillingPolicyStorageHelper;->getAssignedProfile(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 
-    .line 396
     .local v0, "profileName":Ljava/lang/String;
     if-eqz v0, :cond_0
 
@@ -4315,7 +3975,6 @@
 
     if-lez v2, :cond_0
 
-    .line 397
     const-string v2, "EnterpriseBillingEngine"
 
     new-instance v3, Ljava/lang/StringBuilder;
@@ -4338,14 +3997,12 @@
 
     invoke-static {v2, v3}, Landroid/util/Log;->v(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 398
     iget-object v2, p0, Lcom/android/server/enterprise/billing/EnterpriseBillingEngine;->ebPolicyStorageHelper:Lcom/android/server/enterprise/billing/EnterpriseBillingPolicyStorageHelper;
 
     invoke-virtual {v2, v0}, Lcom/android/server/enterprise/billing/EnterpriseBillingPolicyStorageHelper;->isProfileTurnedOn(Ljava/lang/String;)Z
 
     move-result v1
 
-    .line 404
     .end local v0    # "profileName":Ljava/lang/String;
     :cond_0
     :goto_0
@@ -4371,10 +4028,8 @@
 
     invoke-static {v2, v3}, Landroid/util/Log;->v(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 405
     return v1
 
-    .line 402
     :cond_1
     const-string v2, "EnterpriseBillingEngine"
 
@@ -4406,10 +4061,8 @@
     .param p1, "eapnType"    # Ljava/lang/String;
 
     .prologue
-    .line 533
     const/4 v1, 0x0
 
-    .line 534
     .local v1, "returnValue":Z
     const-string v2, "EnterpriseBillingEngine"
 
@@ -4433,7 +4086,6 @@
 
     invoke-static {v2, v3}, Landroid/util/Log;->v(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 535
     if-eqz p1, :cond_1
 
     invoke-virtual {p1}, Ljava/lang/String;->length()I
@@ -4442,18 +4094,15 @@
 
     if-lez v2, :cond_1
 
-    .line 536
     iget-object v2, p0, Lcom/android/server/enterprise/billing/EnterpriseBillingEngine;->ebPolicyStorageHelper:Lcom/android/server/enterprise/billing/EnterpriseBillingPolicyStorageHelper;
 
     invoke-virtual {v2, p1}, Lcom/android/server/enterprise/billing/EnterpriseBillingPolicyStorageHelper;->getAssignedProfile(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 
-    .line 537
     .local v0, "profileName":Ljava/lang/String;
     if-eqz v0, :cond_0
 
-    .line 538
     const-string v2, "EnterpriseBillingEngine"
 
     new-instance v3, Ljava/lang/StringBuilder;
@@ -4476,14 +4125,12 @@
 
     invoke-static {v2, v3}, Landroid/util/Log;->v(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 539
     iget-object v2, p0, Lcom/android/server/enterprise/billing/EnterpriseBillingEngine;->ebPolicyStorageHelper:Lcom/android/server/enterprise/billing/EnterpriseBillingPolicyStorageHelper;
 
     invoke-virtual {v2, v0}, Lcom/android/server/enterprise/billing/EnterpriseBillingPolicyStorageHelper;->isWifiFallbackAllowed(Ljava/lang/String;)Z
 
     move-result v1
 
-    .line 548
     .end local v0    # "profileName":Ljava/lang/String;
     :goto_0
     const-string v2, "EnterpriseBillingEngine"
@@ -4508,10 +4155,8 @@
 
     invoke-static {v2, v3}, Landroid/util/Log;->v(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 550
     return v1
 
-    .line 541
     .restart local v0    # "profileName":Ljava/lang/String;
     :cond_0
     const-string v2, "EnterpriseBillingEngine"
@@ -4522,7 +4167,6 @@
 
     goto :goto_0
 
-    .line 546
     .end local v0    # "profileName":Ljava/lang/String;
     :cond_1
     const-string v2, "EnterpriseBillingEngine"
@@ -4555,12 +4199,10 @@
     .param p1, "profileName"    # Ljava/lang/String;
 
     .prologue
-    .line 809
     const-string v0, "com.android.server.enterprise.billing.mapping_modified"
 
     invoke-direct {p0, v0, p1}, Lcom/android/server/enterprise/billing/EnterpriseBillingEngine;->sendEventToRIL(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 810
     return-void
 .end method
 
@@ -4569,21 +4211,19 @@
     .param p1, "tagName"    # Ljava/lang/String;
 
     .prologue
-    .line 905
     const-string v3, "EnterpriseBillingEngine"
 
-    const-string/jumbo v6, "removeAllUidByTAG - Start"
+    const-string v6, "removeAllUidByTAG - Start"
 
     invoke-static {v3, v6}, Landroid/util/Log;->v(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 906
     const-string v3, "EnterpriseBillingEngine"
 
     new-instance v6, Ljava/lang/StringBuilder;
 
     invoke-direct {v6}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v7, "removeAllUidByTAG - TAG Name - "
+    const-string v7, "removeAllUidByTAG - TAG Name - "
 
     invoke-virtual {v6, v7}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -4599,42 +4239,35 @@
 
     invoke-static {v3, v6}, Landroid/util/Log;->v(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 908
     const/4 v1, 0x0
 
-    .line 909
     .local v1, "returnValue":Z
     invoke-static {}, Landroid/os/Binder;->clearCallingIdentity()J
 
     move-result-wide v4
 
-    .line 911
     .local v4, "token":J
     if-nez p1, :cond_0
 
-    .line 912
     :try_start_0
     const-string v3, "EnterpriseBillingEngine"
 
-    const-string/jumbo v6, "removeAllUidByTAG - TAG Name is NULL"
+    const-string v6, "removeAllUidByTAG - TAG Name is NULL"
 
     invoke-static {v3, v6}, Landroid/util/Log;->v(Ljava/lang/String;Ljava/lang/String;)I
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 922
     invoke-static {v4, v5}, Landroid/os/Binder;->restoreCallingIdentity(J)V
 
     move v2, v1
 
-    .line 926
     .end local v1    # "returnValue":Z
     .local v2, "returnValue":I
     :goto_0
     return v2
 
-    .line 916
     .end local v2    # "returnValue":I
     .restart local v1    # "returnValue":Z
     :cond_0
@@ -4643,7 +4276,6 @@
 
     if-eqz v3, :cond_1
 
-    .line 917
     iget-object v3, p0, Lcom/android/server/enterprise/billing/EnterpriseBillingEngine;->ebPolicyStorageHelper:Lcom/android/server/enterprise/billing/EnterpriseBillingPolicyStorageHelper;
 
     invoke-virtual {v3, p1}, Lcom/android/server/enterprise/billing/EnterpriseBillingPolicyStorageHelper;->removeUidByTAG(Ljava/lang/String;)Z
@@ -4653,30 +4285,25 @@
 
     move-result v1
 
-    .line 922
     :cond_1
     invoke-static {v4, v5}, Landroid/os/Binder;->restoreCallingIdentity(J)V
 
-    .line 925
     :goto_1
     const-string v3, "EnterpriseBillingEngine"
 
-    const-string/jumbo v6, "removeAllUidByTAG - End"
+    const-string v6, "removeAllUidByTAG - End"
 
     invoke-static {v3, v6}, Landroid/util/Log;->v(Ljava/lang/String;Ljava/lang/String;)I
 
     move v2, v1
 
-    .line 926
     .restart local v2    # "returnValue":I
     goto :goto_0
 
-    .line 919
     .end local v2    # "returnValue":I
     :catch_0
     move-exception v0
 
-    .line 920
     .local v0, "e":Ljava/lang/Exception;
     :try_start_2
     const-string v3, "EnterpriseBillingEngine"
@@ -4685,7 +4312,7 @@
 
     invoke-direct {v6}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v7, "removeAllUidByTAG - failed -"
+    const-string v7, "removeAllUidByTAG - failed -"
 
     invoke-virtual {v6, v7}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -4703,7 +4330,6 @@
     :try_end_2
     .catchall {:try_start_2 .. :try_end_2} :catchall_0
 
-    .line 922
     invoke-static {v4, v5}, Landroid/os/Binder;->restoreCallingIdentity(J)V
 
     goto :goto_1
@@ -4723,10 +4349,8 @@
     .param p2, "containerId"    # I
 
     .prologue
-    .line 733
     const/4 v6, 0x0
 
-    .line 735
     .local v6, "returnVal":I
     const-string v10, "EnterpriseBillingEngine"
 
@@ -4734,7 +4358,7 @@
 
     invoke-direct {v11}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v12, "removeContainerFromExceptionList called by VPN inside enterpriseBillingService for container- "
+    const-string v12, "removeContainerFromExceptionList called by VPN inside enterpriseBillingService for container- "
 
     invoke-virtual {v11, v12}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -4750,12 +4374,10 @@
 
     invoke-static {v10, v11}, Landroid/util/Log;->v(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 736
     invoke-static {}, Landroid/os/Binder;->clearCallingIdentity()J
 
     move-result-wide v8
 
-    .line 737
     .local v8, "token":J
     if-eqz p1, :cond_3
 
@@ -4765,17 +4387,14 @@
 
     if-lez v10, :cond_3
 
-    .line 739
     :try_start_0
     invoke-direct {p0, p2}, Lcom/android/server/enterprise/billing/EnterpriseBillingEngine;->getApplicationsInfoOfContainer(I)Ljava/util/Map;
 
     move-result-object v5
 
-    .line 740
     .local v5, "packageUidMappings":Ljava/util/Map;, "Ljava/util/Map<Ljava/lang/Integer;Ljava/lang/String;>;"
     if-eqz v5, :cond_1
 
-    .line 741
     invoke-interface {v5}, Ljava/util/Map;->entrySet()Ljava/util/Set;
 
     move-result-object v10
@@ -4798,7 +4417,6 @@
 
     check-cast v2, Ljava/util/Map$Entry;
 
-    .line 743
     .local v2, "entry":Ljava/util/Map$Entry;, "Ljava/util/Map$Entry<Ljava/lang/Integer;Ljava/lang/String;>;"
     invoke-interface {v2}, Ljava/util/Map$Entry;->getKey()Ljava/lang/Object;
 
@@ -4810,7 +4428,6 @@
 
     move-result v7
 
-    .line 745
     .local v7, "uid":I
     invoke-interface {v2}, Ljava/util/Map$Entry;->getValue()Ljava/lang/Object;
 
@@ -4818,7 +4435,6 @@
 
     check-cast v4, Ljava/lang/String;
 
-    .line 747
     .local v4, "packageName":Ljava/lang/String;
     iget-object v10, p0, Lcom/android/server/enterprise/billing/EnterpriseBillingEngine;->ebPolicyStorageHelper:Lcom/android/server/enterprise/billing/EnterpriseBillingPolicyStorageHelper;
 
@@ -4844,12 +4460,10 @@
 
     move-result v6
 
-    .line 749
     const/4 v10, -0x1
 
     if-ne v6, v10, :cond_0
 
-    .line 758
     .end local v2    # "entry":Ljava/util/Map$Entry;, "Ljava/util/Map$Entry<Ljava/lang/Integer;Ljava/lang/String;>;"
     .end local v3    # "i$":Ljava/util/Iterator;
     .end local v4    # "packageName":Ljava/lang/String;
@@ -4861,11 +4475,9 @@
 
     move-result-object v0
 
-    .line 760
     .local v0, "activeProfileName":Ljava/lang/String;
     if-eqz v0, :cond_2
 
-    .line 762
     const-string v10, "com.android.server.enterprise.billing.mapping_modified"
 
     invoke-direct {p0, v10, v0}, Lcom/android/server/enterprise/billing/EnterpriseBillingEngine;->sendEventToRIL(Ljava/lang/String;Ljava/lang/String;)V
@@ -4873,11 +4485,9 @@
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 768
     :cond_2
     invoke-static {v8, v9}, Landroid/os/Binder;->restoreCallingIdentity(J)V
 
-    .line 773
     .end local v0    # "activeProfileName":Ljava/lang/String;
     .end local v5    # "packageUidMappings":Ljava/util/Map;, "Ljava/util/Map<Ljava/lang/Integer;Ljava/lang/String;>;"
     :goto_0
@@ -4887,7 +4497,7 @@
 
     invoke-direct {v11}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v12, "removeContainerFromExceptionList inside EnterpriseBillingService exits with returnVal = "
+    const-string v12, "removeContainerFromExceptionList inside EnterpriseBillingService exits with returnVal = "
 
     invoke-virtual {v11, v12}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -4903,14 +4513,11 @@
 
     invoke-static {v10, v11}, Landroid/util/Log;->v(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 775
     return v6
 
-    .line 765
     :catch_0
     move-exception v1
 
-    .line 766
     .local v1, "e":Ljava/lang/Exception;
     :try_start_1
     const-string v10, "EnterpriseBillingEngine"
@@ -4919,7 +4526,7 @@
 
     invoke-direct {v11}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v12, "sendEventToRIL - failed -"
+    const-string v12, "sendEventToRIL - failed -"
 
     invoke-virtual {v11, v12}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -4937,7 +4544,6 @@
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
-    .line 768
     invoke-static {v8, v9}, Landroid/os/Binder;->restoreCallingIdentity(J)V
 
     goto :goto_0
@@ -4950,7 +4556,6 @@
 
     throw v10
 
-    .line 771
     :cond_3
     const-string v10, "EnterpriseBillingEngine"
 
@@ -4958,7 +4563,7 @@
 
     invoke-direct {v11}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v12, "removeContainerFromExceptionList Error invalid parameter callerId"
+    const-string v12, "removeContainerFromExceptionList Error invalid parameter callerId"
 
     invoke-virtual {v11, v12}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -4993,24 +4598,20 @@
     .end annotation
 
     .prologue
-    .line 683
     .local p2, "packageUidMappings":Ljava/util/Map;, "Ljava/util/Map<Ljava/lang/Integer;Ljava/lang/String;>;"
     const-string v9, "EnterpriseBillingEngine"
 
-    const-string/jumbo v10, "removeUIDListFromExceptionList called by VPN inside enterpriseBillingService for packages"
+    const-string v10, "removeUIDListFromExceptionList called by VPN inside enterpriseBillingService for packages"
 
     invoke-static {v9, v10}, Landroid/util/Log;->v(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 685
     const/4 v5, 0x0
 
-    .line 686
     .local v5, "returnVal":I
     invoke-static {}, Landroid/os/Binder;->clearCallingIdentity()J
 
     move-result-wide v6
 
-    .line 687
     .local v6, "token":J
     if-eqz p1, :cond_3
 
@@ -5028,7 +4629,6 @@
 
     if-nez v9, :cond_3
 
-    .line 689
     :try_start_0
     invoke-interface {p2}, Ljava/util/Map;->entrySet()Ljava/util/Set;
 
@@ -5052,7 +4652,6 @@
 
     check-cast v2, Ljava/util/Map$Entry;
 
-    .line 691
     .local v2, "entry":Ljava/util/Map$Entry;, "Ljava/util/Map$Entry<Ljava/lang/Integer;Ljava/lang/String;>;"
     invoke-interface {v2}, Ljava/util/Map$Entry;->getKey()Ljava/lang/Object;
 
@@ -5064,7 +4663,6 @@
 
     move-result v8
 
-    .line 693
     .local v8, "uid":I
     invoke-interface {v2}, Ljava/util/Map$Entry;->getValue()Ljava/lang/Object;
 
@@ -5072,7 +4670,6 @@
 
     check-cast v4, Ljava/lang/String;
 
-    .line 695
     .local v4, "packageName":Ljava/lang/String;
     iget-object v9, p0, Lcom/android/server/enterprise/billing/EnterpriseBillingEngine;->ebPolicyStorageHelper:Lcom/android/server/enterprise/billing/EnterpriseBillingPolicyStorageHelper;
 
@@ -5098,12 +4695,10 @@
 
     move-result v5
 
-    .line 697
     const/4 v9, -0x1
 
     if-ne v5, v9, :cond_0
 
-    .line 707
     .end local v2    # "entry":Ljava/util/Map$Entry;, "Ljava/util/Map$Entry<Ljava/lang/Integer;Ljava/lang/String;>;"
     .end local v4    # "packageName":Ljava/lang/String;
     .end local v8    # "uid":I
@@ -5114,11 +4709,9 @@
 
     move-result-object v0
 
-    .line 709
     .local v0, "activeProfileName":Ljava/lang/String;
     if-eqz v0, :cond_2
 
-    .line 711
     const-string v9, "com.android.server.enterprise.billing.mapping_modified"
 
     invoke-direct {p0, v9, v0}, Lcom/android/server/enterprise/billing/EnterpriseBillingEngine;->sendEventToRIL(Ljava/lang/String;Ljava/lang/String;)V
@@ -5126,11 +4719,9 @@
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 717
     :cond_2
     invoke-static {v6, v7}, Landroid/os/Binder;->restoreCallingIdentity(J)V
 
-    .line 722
     .end local v0    # "activeProfileName":Ljava/lang/String;
     .end local v3    # "i$":Ljava/util/Iterator;
     :goto_0
@@ -5140,7 +4731,7 @@
 
     invoke-direct {v10}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v11, "removeUIDListFromExceptionList inside EnterpriseBillingService exits with returnVal = "
+    const-string v11, "removeUIDListFromExceptionList inside EnterpriseBillingService exits with returnVal = "
 
     invoke-virtual {v10, v11}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -5156,14 +4747,11 @@
 
     invoke-static {v9, v10}, Landroid/util/Log;->v(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 724
     return v5
 
-    .line 714
     :catch_0
     move-exception v1
 
-    .line 715
     .local v1, "e":Ljava/lang/Exception;
     :try_start_1
     const-string v9, "EnterpriseBillingEngine"
@@ -5172,7 +4760,7 @@
 
     invoke-direct {v10}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v11, "sendEventToRIL - failed -"
+    const-string v11, "sendEventToRIL - failed -"
 
     invoke-virtual {v10, v11}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -5190,7 +4778,6 @@
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
-    .line 717
     invoke-static {v6, v7}, Landroid/os/Binder;->restoreCallingIdentity(J)V
 
     goto :goto_0
@@ -5203,11 +4790,10 @@
 
     throw v9
 
-    .line 720
     :cond_3
     const-string v9, "EnterpriseBillingEngine"
 
-    const-string/jumbo v10, "removeUIDListFromExceptionList Error Invalid input parameter"
+    const-string v10, "removeUIDListFromExceptionList Error Invalid input parameter"
 
     invoke-static {v9, v10}, Landroid/util/Log;->v(Ljava/lang/String;Ljava/lang/String;)I
 
@@ -5225,14 +4811,13 @@
     .end annotation
 
     .prologue
-    .line 835
     const-string v4, "EnterpriseBillingEngine"
 
     new-instance v5, Ljava/lang/StringBuilder;
 
     invoke-direct {v5}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v6, "sendNotification - start - "
+    const-string v6, "sendNotification - start - "
 
     invoke-virtual {v5, v6}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -5248,7 +4833,6 @@
 
     invoke-static {v4, v5}, Landroid/util/Log;->v(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 837
     if-eqz p1, :cond_0
 
     if-eqz p2, :cond_0
@@ -5263,12 +4847,10 @@
 
     if-nez v4, :cond_1
 
-    .line 862
     :cond_0
     :goto_0
     return-void
 
-    .line 843
     :cond_1
     const-string v4, "ent1"
 
@@ -5286,7 +4868,6 @@
 
     if-eqz v4, :cond_3
 
-    .line 845
     :cond_2
     iget-object v4, p0, Lcom/android/server/enterprise/billing/EnterpriseBillingEngine;->ebPolicyStorageHelper:Lcom/android/server/enterprise/billing/EnterpriseBillingPolicyStorageHelper;
 
@@ -5294,7 +4875,6 @@
 
     move-result-object v3
 
-    .line 846
     .local v3, "profileName":Ljava/lang/String;
     const-string v4, "EnterpriseBillingEngine"
 
@@ -5302,7 +4882,7 @@
 
     invoke-direct {v5}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v6, "sendNotification - profileName - "
+    const-string v6, "sendNotification - profileName - "
 
     invoke-virtual {v5, v6}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -5318,17 +4898,14 @@
 
     invoke-static {v4, v5}, Landroid/util/Log;->v(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 847
     if-eqz v3, :cond_4
 
-    .line 848
     iget-object v4, p0, Lcom/android/server/enterprise/billing/EnterpriseBillingEngine;->ebPolicyStorageHelper:Lcom/android/server/enterprise/billing/EnterpriseBillingPolicyStorageHelper;
 
     invoke-virtual {v4, v3}, Lcom/android/server/enterprise/billing/EnterpriseBillingPolicyStorageHelper;->getContainersUsingProfile(Ljava/lang/String;)Ljava/util/List;
 
     move-result-object v1
 
-    .line 849
     .local v1, "containers":Ljava/util/List;, "Ljava/util/List<Ljava/lang/Integer;>;"
     const-string v4, "EnterpriseBillingEngine"
 
@@ -5336,7 +4913,7 @@
 
     invoke-direct {v5}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v6, "sendNotification - containers - "
+    const-string v6, "sendNotification - containers - "
 
     invoke-virtual {v5, v6}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -5352,10 +4929,8 @@
 
     invoke-static {v4, v5}, Landroid/util/Log;->v(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 850
     if-eqz v1, :cond_4
 
-    .line 851
     invoke-interface {v1}, Ljava/util/List;->iterator()Ljava/util/Iterator;
 
     move-result-object v2
@@ -5378,7 +4953,6 @@
 
     move-result v0
 
-    .line 852
     .local v0, "containerId":I
     iget-object v4, p0, Lcom/android/server/enterprise/billing/EnterpriseBillingEngine;->mContext:Landroid/content/Context;
 
@@ -5388,14 +4962,13 @@
 
     invoke-virtual {v4, p1, v5}, Landroid/content/Context;->sendStickyBroadcastAsUser(Landroid/content/Intent;Landroid/os/UserHandle;)V
 
-    .line 853
     const-string v4, "EnterpriseBillingEngine"
 
     new-instance v5, Ljava/lang/StringBuilder;
 
     invoke-direct {v5}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v6, "sendNotification - Broadcast sent to "
+    const-string v6, "sendNotification - Broadcast sent to "
 
     invoke-virtual {v5, v6}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -5413,7 +4986,6 @@
 
     goto :goto_1
 
-    .line 858
     .end local v0    # "containerId":I
     .end local v1    # "containers":Ljava/util/List;, "Ljava/util/List<Ljava/lang/Integer;>;"
     .end local v2    # "i$":Ljava/util/Iterator;
@@ -5421,11 +4993,10 @@
     :cond_3
     const-string v4, "EnterpriseBillingEngine"
 
-    const-string/jumbo v5, "sendNotification - personal user"
+    const-string v5, "sendNotification - personal user"
 
     invoke-static {v4, v5}, Landroid/util/Log;->v(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 859
     iget-object v4, p0, Lcom/android/server/enterprise/billing/EnterpriseBillingEngine;->mContext:Landroid/content/Context;
 
     new-instance v5, Landroid/os/UserHandle;
@@ -5436,11 +5007,10 @@
 
     invoke-virtual {v4, p1, v5}, Landroid/content/Context;->sendStickyBroadcastAsUser(Landroid/content/Intent;Landroid/os/UserHandle;)V
 
-    .line 861
     :cond_4
     const-string v4, "EnterpriseBillingEngine"
 
-    const-string/jumbo v5, "sendNotification - end"
+    const-string v5, "sendNotification - end"
 
     invoke-static {v4, v5}, Landroid/util/Log;->v(Ljava/lang/String;Ljava/lang/String;)I
 
@@ -5452,14 +5022,13 @@
     .param p1, "profileName"    # Ljava/lang/String;
 
     .prologue
-    .line 311
     const-string v0, "EnterpriseBillingEngine"
 
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v2, "turnOn - start - "
+    const-string v2, "turnOn - start - "
 
     invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -5475,7 +5044,6 @@
 
     invoke-static {v0, v1}, Landroid/util/Log;->v(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 312
     if-eqz p1, :cond_0
 
     invoke-virtual {p1}, Ljava/lang/String;->length()I
@@ -5484,23 +5052,19 @@
 
     if-lez v0, :cond_0
 
-    .line 313
     const-string v0, "com.android.server.enterprise.billing.profile_turn_on_status_modified"
 
     invoke-direct {p0, v0, p1}, Lcom/android/server/enterprise/billing/EnterpriseBillingEngine;->sendEventToRIL(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 317
     :goto_0
     const-string v0, "EnterpriseBillingEngine"
 
-    const-string/jumbo v1, "turnOn - end - "
+    const-string v1, "turnOn - end - "
 
     invoke-static {v0, v1}, Landroid/util/Log;->v(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 319
     return-void
 
-    .line 315
     :cond_0
     const-string v0, "EnterpriseBillingEngine"
 
@@ -5508,7 +5072,7 @@
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v2, "turnOn - Invalid Profile Name"
+    const-string v2, "turnOn - Invalid Profile Name"
 
     invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 

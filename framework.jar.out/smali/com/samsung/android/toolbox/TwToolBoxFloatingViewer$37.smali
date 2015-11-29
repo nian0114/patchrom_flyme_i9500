@@ -26,7 +26,6 @@
     .locals 0
 
     .prologue
-    .line 1828
     iput-object p1, p0, Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer$37;->this$0:Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -41,7 +40,6 @@
     .param p1, "animation"    # Landroid/animation/Animator;
 
     .prologue
-    .line 1850
     return-void
 .end method
 
@@ -50,7 +48,6 @@
     .param p1, "animation"    # Landroid/animation/Animator;
 
     .prologue
-    .line 1839
     :try_start_0
     iget-object v0, p0, Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer$37;->this$0:Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer;
 
@@ -61,18 +58,15 @@
 
     if-eqz v0, :cond_0
 
-    .line 1840
     iget-object v0, p0, Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer$37;->this$0:Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer;
 
     const/16 v1, 0x8
 
     invoke-virtual {v0, v1}, Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer;->setVisibility(I)V
 
-    .line 1846
     :goto_0
     return-void
 
-    .line 1842
     :cond_0
     iget-object v0, p0, Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer$37;->this$0:Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer;
 
@@ -83,7 +77,6 @@
 
     goto :goto_0
 
-    .line 1844
     :catch_0
     move-exception v0
 
@@ -95,7 +88,6 @@
     .param p1, "animation"    # Landroid/animation/Animator;
 
     .prologue
-    .line 1848
     return-void
 .end method
 
@@ -104,7 +96,6 @@
     .param p1, "animation"    # Landroid/animation/Animator;
 
     .prologue
-    .line 1832
     :try_start_0
     iget-object v0, p0, Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer$37;->this$0:Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer;
 
@@ -113,11 +104,9 @@
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 1835
     :goto_0
     return-void
 
-    .line 1833
     :catch_0
     move-exception v0
 

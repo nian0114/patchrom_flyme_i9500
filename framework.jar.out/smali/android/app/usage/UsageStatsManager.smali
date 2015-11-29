@@ -30,7 +30,6 @@
     .locals 1
 
     .prologue
-    .line 87
     new-instance v0, Landroid/app/usage/UsageEvents;
 
     invoke-direct {v0}, Landroid/app/usage/UsageEvents;-><init>()V
@@ -46,16 +45,12 @@
     .param p2, "service"    # Landroid/app/usage/IUsageStatsManager;
 
     .prologue
-    .line 95
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 96
     iput-object p1, p0, Landroid/app/usage/UsageStatsManager;->mContext:Landroid/content/Context;
 
-    .line 97
     iput-object p2, p0, Landroid/app/usage/UsageStatsManager;->mService:Landroid/app/usage/IUsageStatsManager;
 
-    .line 98
     return-void
 .end method
 
@@ -77,7 +72,6 @@
     .end annotation
 
     .prologue
-    .line 219
     const/4 v1, 0x4
 
     move-object v0, p0
@@ -90,7 +84,6 @@
 
     move-result-object v11
 
-    .line 220
     .local v11, "stats":Ljava/util/List;, "Ljava/util/List<Landroid/app/usage/UsageStats;>;"
     invoke-interface {v11}, Ljava/util/List;->isEmpty()Z
 
@@ -98,28 +91,23 @@
 
     if-eqz v0, :cond_1
 
-    .line 221
     invoke-static {}, Ljava/util/Collections;->emptyMap()Ljava/util/Map;
 
     move-result-object v6
 
-    .line 235
     :cond_0
     return-object v6
 
-    .line 224
     :cond_1
     new-instance v6, Landroid/util/ArrayMap;
 
     invoke-direct {v6}, Landroid/util/ArrayMap;-><init>()V
 
-    .line 225
     .local v6, "aggregatedStats":Landroid/util/ArrayMap;, "Landroid/util/ArrayMap<Ljava/lang/String;Landroid/app/usage/UsageStats;>;"
     invoke-interface {v11}, Ljava/util/List;->size()I
 
     move-result v10
 
-    .line 226
     .local v10, "statCount":I
     const/4 v8, 0x0
 
@@ -127,14 +115,12 @@
     :goto_0
     if-ge v8, v10, :cond_0
 
-    .line 227
     invoke-interface {v11, v8}, Ljava/util/List;->get(I)Ljava/lang/Object;
 
     move-result-object v9
 
     check-cast v9, Landroid/app/usage/UsageStats;
 
-    .line 228
     .local v9, "newStat":Landroid/app/usage/UsageStats;
     invoke-virtual {v9}, Landroid/app/usage/UsageStats;->getPackageName()Ljava/lang/String;
 
@@ -146,22 +132,18 @@
 
     check-cast v7, Landroid/app/usage/UsageStats;
 
-    .line 229
     .local v7, "existingStat":Landroid/app/usage/UsageStats;
     if-nez v7, :cond_2
 
-    .line 230
     iget-object v0, v9, Landroid/app/usage/UsageStats;->mPackageName:Ljava/lang/String;
 
     invoke-virtual {v6, v0, v9}, Landroid/util/ArrayMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 226
     :goto_1
     add-int/lit8 v8, v8, 0x1
 
     goto :goto_0
 
-    .line 232
     :cond_2
     invoke-virtual {v7, v9}, Landroid/app/usage/UsageStats;->add(Landroid/app/usage/UsageStats;)V
 
@@ -184,7 +166,6 @@
     .end annotation
 
     .prologue
-    .line 173
     :try_start_0
     iget-object v0, p0, Landroid/app/usage/UsageStatsManager;->mService:Landroid/app/usage/IUsageStatsManager;
 
@@ -204,27 +185,22 @@
 
     move-result-object v7
 
-    .line 175
     .local v7, "slice":Landroid/content/pm/ParceledListSlice;, "Landroid/content/pm/ParceledListSlice<Landroid/app/usage/ConfigurationStats;>;"
     if-eqz v7, :cond_0
 
-    .line 176
     invoke-virtual {v7}, Landroid/content/pm/ParceledListSlice;->getList()Ljava/util/List;
     :try_end_0
     .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
 
     move-result-object v0
 
-    .line 181
     .end local v7    # "slice":Landroid/content/pm/ParceledListSlice;, "Landroid/content/pm/ParceledListSlice<Landroid/app/usage/ConfigurationStats;>;"
     :goto_0
     return-object v0
 
-    .line 178
     :catch_0
     move-exception v0
 
-    .line 181
     :cond_0
     invoke-static {}, Ljava/util/Collections;->emptyList()Ljava/util/List;
 
@@ -239,7 +215,6 @@
     .param p3, "endTime"    # J
 
     .prologue
-    .line 197
     :try_start_0
     iget-object v1, p0, Landroid/app/usage/UsageStatsManager;->mService:Landroid/app/usage/IUsageStatsManager;
 
@@ -259,20 +234,16 @@
 
     move-result-object v0
 
-    .line 199
     .local v0, "iter":Landroid/app/usage/UsageEvents;
     if-eqz v0, :cond_0
 
-    .line 205
     .end local v0    # "iter":Landroid/app/usage/UsageEvents;
     :goto_0
     return-object v0
 
-    .line 202
     :catch_0
     move-exception v1
 
-    .line 205
     :cond_0
     sget-object v0, Landroid/app/usage/UsageStatsManager;->sEmptyResults:Landroid/app/usage/UsageEvents;
 
@@ -294,7 +265,6 @@
     .end annotation
 
     .prologue
-    .line 147
     :try_start_0
     iget-object v0, p0, Landroid/app/usage/UsageStatsManager;->mService:Landroid/app/usage/IUsageStatsManager;
 
@@ -314,27 +284,22 @@
 
     move-result-object v7
 
-    .line 149
     .local v7, "slice":Landroid/content/pm/ParceledListSlice;, "Landroid/content/pm/ParceledListSlice<Landroid/app/usage/UsageStats;>;"
     if-eqz v7, :cond_0
 
-    .line 150
     invoke-virtual {v7}, Landroid/content/pm/ParceledListSlice;->getList()Ljava/util/List;
     :try_end_0
     .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
 
     move-result-object v0
 
-    .line 155
     .end local v7    # "slice":Landroid/content/pm/ParceledListSlice;, "Landroid/content/pm/ParceledListSlice<Landroid/app/usage/UsageStats;>;"
     :goto_0
     return-object v0
 
-    .line 152
     :catch_0
     move-exception v0
 
-    .line 155
     :cond_0
     invoke-static {}, Ljava/util/Collections;->emptyList()Ljava/util/List;
 
@@ -359,7 +324,6 @@
     .end annotation
 
     .prologue
-    .line 131
     :try_start_0
     iget-object v0, p0, Landroid/app/usage/UsageStatsManager;->mService:Landroid/app/usage/IUsageStatsManager;
 
@@ -379,27 +343,22 @@
 
     move-result-object v7
 
-    .line 133
     .local v7, "slice":Landroid/content/pm/ParceledListSlice;, "Landroid/content/pm/ParceledListSlice<Landroid/app/usage/UsageStats;>;"
     if-eqz v7, :cond_0
 
-    .line 134
     invoke-virtual {v7}, Landroid/content/pm/ParceledListSlice;->getList()Ljava/util/List;
     :try_end_0
     .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
 
     move-result-object v0
 
-    .line 139
     .end local v7    # "slice":Landroid/content/pm/ParceledListSlice;, "Landroid/content/pm/ParceledListSlice<Landroid/app/usage/UsageStats;>;"
     :goto_0
     return-object v0
 
-    .line 136
     :catch_0
     move-exception v0
 
-    .line 139
     :cond_0
     invoke-static {}, Ljava/util/Collections;->emptyList()Ljava/util/List;
 
@@ -413,7 +372,6 @@
     .param p1, "watcher"    # Landroid/app/usage/IUsageStatsWatcher;
 
     .prologue
-    .line 240
     :try_start_0
     iget-object v0, p0, Landroid/app/usage/UsageStatsManager;->mService:Landroid/app/usage/IUsageStatsManager;
 
@@ -421,11 +379,9 @@
     :try_end_0
     .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 244
     :goto_0
     return-void
 
-    .line 241
     :catch_0
     move-exception v0
 
@@ -437,7 +393,6 @@
     .param p1, "watcher"    # Landroid/app/usage/IUsageStatsWatcher;
 
     .prologue
-    .line 249
     :try_start_0
     iget-object v0, p0, Landroid/app/usage/UsageStatsManager;->mService:Landroid/app/usage/IUsageStatsManager;
 
@@ -445,11 +400,9 @@
     :try_end_0
     .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 253
     :goto_0
     return-void
 
-    .line 250
     :catch_0
     move-exception v0
 

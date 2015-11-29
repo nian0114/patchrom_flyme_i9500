@@ -26,7 +26,6 @@
     .locals 0
 
     .prologue
-    .line 2852
     iput-object p1, p0, Lcom/android/internal/policy/impl/MultiPhoneWindow$TabContainer$3;->this$1:Lcom/android/internal/policy/impl/MultiPhoneWindow$TabContainer;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -41,7 +40,6 @@
     .param p1, "tag"    # Ljava/lang/String;
 
     .prologue
-    .line 2855
     new-instance v0, Landroid/widget/LinearLayout;
 
     iget-object v1, p0, Lcom/android/internal/policy/impl/MultiPhoneWindow$TabContainer$3;->this$1:Lcom/android/internal/policy/impl/MultiPhoneWindow$TabContainer;

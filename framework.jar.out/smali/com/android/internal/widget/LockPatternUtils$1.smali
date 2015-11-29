@@ -25,7 +25,6 @@
     .locals 1
 
     .prologue
-    .line 444
     iput-object p1, p0, Lcom/android/internal/widget/LockPatternUtils$1;->this$0:Lcom/android/internal/widget/LockPatternUtils;
 
     iput-object p2, p0, Lcom/android/internal/widget/LockPatternUtils$1;->val$cv:Landroid/os/ConditionVariable;
@@ -44,7 +43,6 @@
     .param p1, "status"    # I
 
     .prologue
-    .line 448
     const-string v0, "LockPatternUtils"
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -67,22 +65,18 @@
 
     invoke-static {v0, v1}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 450
     # setter for: Lcom/android/internal/widget/LockPatternUtils;->mScVerifyStatus:I
     invoke-static {p1}, Lcom/android/internal/widget/LockPatternUtils;->access$102(I)I
 
-    .line 451
     const/4 v0, 0x1
 
     # setter for: Lcom/android/internal/widget/LockPatternUtils;->mIsCallbackCalled:Z
     invoke-static {v0}, Lcom/android/internal/widget/LockPatternUtils;->access$202(Z)Z
 
-    .line 452
     iget-object v0, p0, Lcom/android/internal/widget/LockPatternUtils$1;->val$cv:Landroid/os/ConditionVariable;
 
     invoke-virtual {v0}, Landroid/os/ConditionVariable;->open()V
 
-    .line 454
     const-string v0, "LockPatternUtils"
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -107,7 +101,6 @@
 
     invoke-static {v0, v1}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 455
     const-string v0, "LockPatternUtils"
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -130,6 +123,5 @@
 
     invoke-static {v0, v1}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 456
     return-void
 .end method

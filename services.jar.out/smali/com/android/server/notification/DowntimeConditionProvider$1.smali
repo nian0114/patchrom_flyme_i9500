@@ -23,7 +23,6 @@
     .locals 0
 
     .prologue
-    .line 356
     iput-object p1, p0, Lcom/android/server/notification/DowntimeConditionProvider$1;->this$0:Lcom/android/server/notification/DowntimeConditionProvider;
 
     invoke-direct {p0}, Landroid/content/BroadcastReceiver;-><init>()V
@@ -39,18 +38,15 @@
     .param p2, "intent"    # Landroid/content/Intent;
 
     .prologue
-    .line 359
     invoke-virtual {p2}, Landroid/content/Intent;->getAction()Ljava/lang/String;
 
     move-result-object v0
 
-    .line 360
     .local v0, "action":Ljava/lang/String;
     invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
 
     move-result-wide v2
 
-    .line 361
     .local v2, "now":J
     const-string v6, "DowntimeConditions.enter"
 
@@ -68,9 +64,8 @@
 
     if-eqz v6, :cond_2
 
-    .line 362
     :cond_0
-    const-string/jumbo v6, "time"
+    const-string v6, "time"
 
     const-wide/16 v8, 0x0
 
@@ -78,7 +73,6 @@
 
     move-result-wide v4
 
-    .line 363
     .local v4, "schTime":J
     # getter for: Lcom/android/server/notification/DowntimeConditionProvider;->DEBUG:Z
     invoke-static {}, Lcom/android/server/notification/DowntimeConditionProvider;->access$000()Z
@@ -133,7 +127,6 @@
 
     invoke-static {v6, v7}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 372
     .end local v4    # "schTime":J
     :cond_1
     :goto_0
@@ -144,7 +137,6 @@
 
     if-eqz v6, :cond_a
 
-    .line 373
     iget-object v6, p0, Lcom/android/server/notification/DowntimeConditionProvider$1;->this$0:Lcom/android/server/notification/DowntimeConditionProvider;
 
     # getter for: Lcom/android/server/notification/DowntimeConditionProvider;->mConfig:Landroid/service/notification/ZenModeConfig;
@@ -156,7 +148,6 @@
 
     if-nez v6, :cond_5
 
-    .line 374
     const-string v6, "DowntimeConditions"
 
     new-instance v7, Ljava/lang/StringBuilder;
@@ -179,11 +170,9 @@
 
     invoke-static {v6, v7}, Landroid/util/Slog;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 393
     :goto_1
     return-void
 
-    .line 365
     :cond_2
     const-string v6, "android.intent.action.TIMEZONE_CHANGED"
 
@@ -193,7 +182,6 @@
 
     if-eqz v6, :cond_4
 
-    .line 366
     # getter for: Lcom/android/server/notification/DowntimeConditionProvider;->DEBUG:Z
     invoke-static {}, Lcom/android/server/notification/DowntimeConditionProvider;->access$000()Z
 
@@ -207,7 +195,7 @@
 
     invoke-direct {v7}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v8, "timezone changed to "
+    const-string v8, "timezone changed to "
 
     invoke-virtual {v7, v8}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -227,7 +215,6 @@
 
     invoke-static {v6, v7}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 367
     :cond_3
     iget-object v6, p0, Lcom/android/server/notification/DowntimeConditionProvider$1;->this$0:Lcom/android/server/notification/DowntimeConditionProvider;
 
@@ -244,7 +231,6 @@
 
     goto :goto_0
 
-    .line 369
     :cond_4
     # getter for: Lcom/android/server/notification/DowntimeConditionProvider;->DEBUG:Z
     invoke-static {}, Lcom/android/server/notification/DowntimeConditionProvider;->access$000()Z
@@ -281,11 +267,9 @@
 
     goto/16 :goto_0
 
-    .line 378
     :cond_5
     const/4 v1, 0x0
 
-    .line 379
     .local v1, "reason":I
     const-string v6, "DowntimeConditions.enter"
 
@@ -303,11 +287,9 @@
 
     if-eqz v6, :cond_8
 
-    .line 380
     :cond_6
     const/4 v1, 0x5
 
-    .line 386
     :cond_7
     :goto_2
     iget-object v6, p0, Lcom/android/server/notification/DowntimeConditionProvider$1;->this$0:Lcom/android/server/notification/DowntimeConditionProvider;
@@ -315,7 +297,6 @@
     # invokes: Lcom/android/server/notification/DowntimeConditionProvider;->reevaluateDowntime(I)V
     invoke-static {v6, v1}, Lcom/android/server/notification/DowntimeConditionProvider;->access$500(Lcom/android/server/notification/DowntimeConditionProvider;I)V
 
-    .line 392
     .end local v1    # "reason":I
     :goto_3
     iget-object v6, p0, Lcom/android/server/notification/DowntimeConditionProvider$1;->this$0:Lcom/android/server/notification/DowntimeConditionProvider;
@@ -325,7 +306,6 @@
 
     goto :goto_1
 
-    .line 381
     .restart local v1    # "reason":I
     :cond_8
     const-string v6, "android.intent.action.TIMEZONE_CHANGED"
@@ -336,12 +316,10 @@
 
     if-eqz v6, :cond_9
 
-    .line 382
     const/4 v1, 0x4
 
     goto :goto_2
 
-    .line 383
     :cond_9
     const-string v6, "android.intent.action.TIME_SET"
 
@@ -351,12 +329,10 @@
 
     if-eqz v6, :cond_7
 
-    .line 384
     const/4 v1, 0x3
 
     goto :goto_2
 
-    .line 390
     .end local v1    # "reason":I
     :cond_a
     iget-object v6, p0, Lcom/android/server/notification/DowntimeConditionProvider$1;->this$0:Lcom/android/server/notification/DowntimeConditionProvider;

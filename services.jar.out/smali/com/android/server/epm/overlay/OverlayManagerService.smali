@@ -182,7 +182,6 @@
     .locals 1
 
     .prologue
-    .line 92
     const-class v0, Lcom/android/server/epm/overlay/OverlayManagerService;
 
     invoke-virtual {v0}, Ljava/lang/Class;->getSimpleName()Ljava/lang/String;
@@ -205,13 +204,11 @@
 
     const/4 v3, 0x0
 
-    .line 140
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 101
     new-array v0, v5, [Ljava/lang/String;
 
-    const-string/jumbo v1, "themes"
+    const-string v1, "themes"
 
     aput-object v1, v0, v4
 
@@ -235,7 +232,7 @@
 
     const/4 v1, 0x4
 
-    const-string/jumbo v2, "phonestyle"
+    const-string v2, "phonestyle"
 
     aput-object v2, v0, v1
 
@@ -253,7 +250,7 @@
 
     const/4 v1, 0x7
 
-    const-string/jumbo v2, "sound"
+    const-string v2, "sound"
 
     aput-object v2, v0, v1
 
@@ -265,84 +262,64 @@
 
     iput-object v0, p0, Lcom/android/server/epm/overlay/OverlayManagerService;->componentOrder:[Ljava/lang/String;
 
-    .line 104
     new-array v0, v5, [Ljava/lang/String;
 
     iput-object v0, p0, Lcom/android/server/epm/overlay/OverlayManagerService;->activeComponentMasterPackageArr:[Ljava/lang/String;
 
-    .line 105
     iput-object v3, p0, Lcom/android/server/epm/overlay/OverlayManagerService;->eventPackage:Ljava/lang/String;
 
-    .line 106
     new-array v0, v5, [Ljava/lang/String;
 
     iput-object v0, p0, Lcom/android/server/epm/overlay/OverlayManagerService;->activeComponentPackageArr:[Ljava/lang/String;
 
-    .line 107
     new-instance v0, Ljava/util/HashMap;
 
     invoke-direct {v0}, Ljava/util/HashMap;-><init>()V
 
     iput-object v0, p0, Lcom/android/server/epm/overlay/OverlayManagerService;->masterEventTimeDetails:Ljava/util/HashMap;
 
-    .line 108
-    const-string/jumbo v0, "theme.installer.action"
+    const-string v0, "theme.installer.action"
 
     iput-object v0, p0, Lcom/android/server/epm/overlay/OverlayManagerService;->ACTION_EVENT_OCCUR:Ljava/lang/String;
 
-    .line 109
-    const-string/jumbo v0, "theme.uninstaller.action"
+    const-string v0, "theme.uninstaller.action"
 
     iput-object v0, p0, Lcom/android/server/epm/overlay/OverlayManagerService;->ACTION_EVEN_ENDED:Ljava/lang/String;
 
-    .line 111
     iput v4, p0, Lcom/android/server/epm/overlay/OverlayManagerService;->mNoOfOverlays:I
 
-    .line 112
     iput v4, p0, Lcom/android/server/epm/overlay/OverlayManagerService;->overlayCount:I
 
-    .line 114
     iput-object v3, p0, Lcom/android/server/epm/overlay/OverlayManagerService;->mOverlay:Ljava/io/File;
 
-    .line 123
     const/high16 v0, 0x41200000    # 10.0f
 
     iput v0, p0, Lcom/android/server/epm/overlay/OverlayManagerService;->SCROLL_THRESHOLD:F
 
-    .line 126
     iput-object v3, p0, Lcom/android/server/epm/overlay/OverlayManagerService;->masterPackageName:Ljava/lang/String;
 
-    .line 127
     iput-object v3, p0, Lcom/android/server/epm/overlay/OverlayManagerService;->masterVersion:Ljava/lang/String;
 
-    .line 128
     iput v4, p0, Lcom/android/server/epm/overlay/OverlayManagerService;->expiryTime:I
 
-    .line 129
-    const-string/jumbo v0, "value"
+    const-string v0, "value"
 
     iput-object v0, p0, Lcom/android/server/epm/overlay/OverlayManagerService;->KEY_VALUE:Ljava/lang/String;
 
-    .line 130
     iput v4, p0, Lcom/android/server/epm/overlay/OverlayManagerService;->overlaysForuninstall:I
 
-    .line 134
     iput-object v3, p0, Lcom/android/server/epm/overlay/OverlayManagerService;->eventThemeMasterPackageName:Ljava/lang/String;
 
-    .line 135
     iput-object v3, p0, Lcom/android/server/epm/overlay/OverlayManagerService;->mAlarmManager:Landroid/app/AlarmManager;
 
-    .line 144
     iput-object p1, p0, Lcom/android/server/epm/overlay/OverlayManagerService;->mContext:Landroid/content/Context;
 
-    .line 145
     invoke-virtual {p1}, Landroid/content/Context;->getPackageManager()Landroid/content/pm/PackageManager;
 
     move-result-object v0
 
     iput-object v0, p0, Lcom/android/server/epm/overlay/OverlayManagerService;->mPackageManager:Landroid/content/pm/PackageManager;
 
-    .line 147
     return-void
 .end method
 
@@ -351,7 +328,6 @@
     .param p0, "x0"    # Lcom/android/server/epm/overlay/OverlayManagerService;
 
     .prologue
-    .line 86
     iget v0, p0, Lcom/android/server/epm/overlay/OverlayManagerService;->expiryTime:I
 
     return v0
@@ -362,7 +338,6 @@
     .param p0, "x0"    # Lcom/android/server/epm/overlay/OverlayManagerService;
 
     .prologue
-    .line 86
     iget-object v0, p0, Lcom/android/server/epm/overlay/OverlayManagerService;->mContext:Landroid/content/Context;
 
     return-object v0
@@ -373,7 +348,6 @@
     .param p0, "x0"    # Lcom/android/server/epm/overlay/OverlayManagerService;
 
     .prologue
-    .line 86
     iget-object v0, p0, Lcom/android/server/epm/overlay/OverlayManagerService;->KEY_VALUE:Ljava/lang/String;
 
     return-object v0
@@ -384,7 +358,6 @@
     .param p0, "x0"    # Lcom/android/server/epm/overlay/OverlayManagerService;
 
     .prologue
-    .line 86
     iget-object v0, p0, Lcom/android/server/epm/overlay/OverlayManagerService;->mPackageManager:Landroid/content/pm/PackageManager;
 
     return-object v0
@@ -397,7 +370,6 @@
     .param p3, "dirPath"    # Ljava/lang/String;
 
     .prologue
-    .line 232
     const/4 v0, 0x0
 
     return-object v0
@@ -408,18 +380,15 @@
     .param p1, "pkgName"    # Ljava/lang/String;
 
     .prologue
-    .line 258
     new-instance v0, Ljava/util/Timer;
 
     invoke-direct {v0}, Ljava/util/Timer;-><init>()V
 
-    .line 259
     .local v0, "mTimer":Ljava/util/Timer;
     new-instance v1, Lcom/android/server/epm/overlay/OverlayManagerService$1;
 
     invoke-direct {v1, p0, p1, v0}, Lcom/android/server/epm/overlay/OverlayManagerService$1;-><init>(Lcom/android/server/epm/overlay/OverlayManagerService;Ljava/lang/String;Ljava/util/Timer;)V
 
-    .line 284
     .local v1, "mTask":Ljava/util/TimerTask;
     const-wide/16 v2, 0x0
 
@@ -427,7 +396,6 @@
 
     invoke-virtual/range {v0 .. v5}, Ljava/util/Timer;->schedule(Ljava/util/TimerTask;JJ)V
 
-    .line 285
     return-void
 .end method
 
@@ -441,7 +409,6 @@
     .param p4, "isTrial"    # Z
 
     .prologue
-    .line 203
     return-void
 .end method
 
@@ -456,12 +423,10 @@
     .end annotation
 
     .prologue
-    .line 241
     const/16 v2, 0x400
 
     new-array v0, v2, [B
 
-    .line 243
     .local v0, "buffer":[B
     :goto_0
     invoke-virtual {p1, v0}, Ljava/io/InputStream;->read([B)I
@@ -473,18 +438,15 @@
 
     if-eq v1, v2, :cond_0
 
-    .line 244
     const/4 v2, 0x0
 
     invoke-virtual {p2, v0, v2, v1}, Ljava/io/OutputStream;->write([BII)V
 
     goto :goto_0
 
-    .line 246
     :cond_0
     invoke-virtual {p2}, Ljava/io/OutputStream;->flush()V
 
-    .line 247
     return-void
 .end method
 
@@ -492,7 +454,6 @@
     .locals 1
 
     .prologue
-    .line 211
     const/4 v0, 0x0
 
     return-object v0
@@ -502,7 +463,6 @@
     .locals 1
 
     .prologue
-    .line 376
     const/4 v0, 0x0
 
     return v0
@@ -524,7 +484,6 @@
     .end annotation
 
     .prologue
-    .line 192
     const/4 v0, 0x0
 
     return-object v0
@@ -538,14 +497,12 @@
     .prologue
     const/4 v2, 0x0
 
-    .line 291
-    const-string/jumbo v1, "store"
+    const-string v1, "store"
 
     invoke-virtual {p1, v1, v2}, Landroid/content/Context;->getSharedPreferences(Ljava/lang/String;I)Landroid/content/SharedPreferences;
 
     move-result-object v0
 
-    .line 292
     .local v0, "mPreferences":Landroid/content/SharedPreferences;
     invoke-interface {v0, p2, v2}, Landroid/content/SharedPreferences;->getInt(Ljava/lang/String;I)I
 
@@ -570,7 +527,6 @@
     .end annotation
 
     .prologue
-    .line 163
     const/4 v0, 0x0
 
     return-object v0
@@ -580,7 +536,6 @@
     .locals 1
 
     .prologue
-    .line 394
     const/4 v0, 0x0
 
     return-object v0
@@ -600,12 +555,10 @@
     .end annotation
 
     .prologue
-    .line 172
     new-instance v0, Ljava/util/HashMap;
 
     invoke-direct {v0}, Ljava/util/HashMap;-><init>()V
 
-    .line 173
     .local v0, "data":Ljava/util/HashMap;, "Ljava/util/HashMap<Ljava/lang/String;Ljava/lang/String;>;"
     iget-object v6, p0, Lcom/android/server/epm/overlay/OverlayManagerService;->masterDetailsMap:Ljava/util/HashMap;
 
@@ -619,14 +572,12 @@
 
     if-lez v6, :cond_0
 
-    .line 174
     iget-object v6, p0, Lcom/android/server/epm/overlay/OverlayManagerService;->masterDetailsMap:Ljava/util/HashMap;
 
     invoke-virtual {v6}, Ljava/util/HashMap;->keySet()Ljava/util/Set;
 
     move-result-object v3
 
-    .line 175
     .local v3, "packages":Ljava/util/Set;, "Ljava/util/Set<Ljava/lang/String;>;"
     invoke-interface {v3}, Ljava/util/Set;->iterator()Ljava/util/Iterator;
 
@@ -646,7 +597,6 @@
 
     check-cast v4, Ljava/lang/String;
 
-    .line 176
     .local v4, "pkg":Ljava/lang/String;
     iget-object v6, p0, Lcom/android/server/epm/overlay/OverlayManagerService;->masterDetailsMap:Ljava/util/HashMap;
 
@@ -656,7 +606,6 @@
 
     check-cast v2, Lcom/android/server/epm/overlay/OverlayManagerService$MasterDetails;
 
-    .line 177
     .local v2, "obj":Lcom/android/server/epm/overlay/OverlayManagerService$MasterDetails;
     new-instance v6, Ljava/lang/StringBuilder;
 
@@ -720,13 +669,11 @@
 
     move-result-object v5
 
-    .line 179
     .local v5, "value":Ljava/lang/String;
     invoke-virtual {v0, v4, v5}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     goto :goto_0
 
-    .line 182
     .end local v1    # "i$":Ljava/util/Iterator;
     .end local v2    # "obj":Lcom/android/server/epm/overlay/OverlayManagerService$MasterDetails;
     .end local v3    # "packages":Ljava/util/Set;, "Ljava/util/Set<Ljava/lang/String;>;"
@@ -752,7 +699,6 @@
     .end annotation
 
     .prologue
-    .line 154
     const/4 v0, 0x0
 
     return-object v0
@@ -764,7 +710,6 @@
     .param p2, "isTrial"    # Z
 
     .prologue
-    .line 357
     return-void
 .end method
 
@@ -772,7 +717,6 @@
     .locals 0
 
     .prologue
-    .line 339
     return-void
 .end method
 
@@ -781,7 +725,6 @@
     .param p1, "packageName"    # Ljava/lang/String;
 
     .prologue
-    .line 331
     return-void
 .end method
 
@@ -790,7 +733,6 @@
     .param p1, "packageName"    # Ljava/lang/String;
 
     .prologue
-    .line 325
     return-void
 .end method
 
@@ -801,7 +743,6 @@
     .param p3, "packageName"    # Ljava/lang/String;
 
     .prologue
-    .line 220
     return-void
 .end method
 
@@ -812,7 +753,6 @@
     .param p3, "packageName"    # Ljava/lang/String;
 
     .prologue
-    .line 345
     return-void
 .end method
 
@@ -822,7 +762,6 @@
     .param p2, "status"    # Z
 
     .prologue
-    .line 253
     return-void
 .end method
 
@@ -830,7 +769,6 @@
     .locals 0
 
     .prologue
-    .line 385
     return-void
 .end method
 
@@ -839,7 +777,6 @@
     .param p1, "packageName"    # Ljava/lang/String;
 
     .prologue
-    .line 390
     return-void
 .end method
 
@@ -848,10 +785,8 @@
     .param p1, "callback"    # Landroid/app/epm/IPluginManagerCallback;
 
     .prologue
-    .line 368
     iput-object p1, p0, Lcom/android/server/epm/overlay/OverlayManagerService;->mCallback:Landroid/app/epm/IPluginManagerCallback;
 
-    .line 369
     return-void
 .end method
 
@@ -861,8 +796,7 @@
     .param p2, "val"    # I
 
     .prologue
-    .line 300
-    const-string/jumbo v2, "store"
+    const-string v2, "store"
 
     const/4 v3, 0x0
 
@@ -870,13 +804,11 @@
 
     move-result-object v1
 
-    .line 301
     .local v1, "pref":Landroid/content/SharedPreferences;
     invoke-interface {v1}, Landroid/content/SharedPreferences;->edit()Landroid/content/SharedPreferences$Editor;
 
     move-result-object v0
 
-    .line 302
     .local v0, "editor":Landroid/content/SharedPreferences$Editor;
     iget-object v2, p0, Lcom/android/server/epm/overlay/OverlayManagerService;->KEY_VALUE:Ljava/lang/String;
 
@@ -886,6 +818,5 @@
 
     invoke-interface {v2}, Landroid/content/SharedPreferences$Editor;->commit()Z
 
-    .line 304
     return-void
 .end method

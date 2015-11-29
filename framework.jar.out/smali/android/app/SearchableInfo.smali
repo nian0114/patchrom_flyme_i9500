@@ -148,7 +148,6 @@
     .locals 1
 
     .prologue
-    .line 918
     new-instance v0, Landroid/app/SearchableInfo$1;
 
     invoke-direct {v0}, Landroid/app/SearchableInfo$1;-><init>()V
@@ -173,25 +172,20 @@
 
     const/4 v7, 0x0
 
-    .line 331
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 106
     const/4 v5, 0x0
 
     iput-object v5, p0, Landroid/app/SearchableInfo;->mActionKeys:Ljava/util/HashMap;
 
-    .line 332
     iput-object p3, p0, Landroid/app/SearchableInfo;->mSearchActivity:Landroid/content/ComponentName;
 
-    .line 334
     sget-object v5, Lcom/android/internal/R$styleable;->Searchable:[I
 
     invoke-virtual {p1, p2, v5}, Landroid/content/Context;->obtainStyledAttributes(Landroid/util/AttributeSet;[I)Landroid/content/res/TypedArray;
 
     move-result-object v0
 
-    .line 336
     .local v0, "a":Landroid/content/res/TypedArray;
     const/4 v5, 0x3
 
@@ -201,28 +195,24 @@
 
     iput v5, p0, Landroid/app/SearchableInfo;->mSearchMode:I
 
-    .line 337
     invoke-virtual {v0, v7, v7}, Landroid/content/res/TypedArray;->getResourceId(II)I
 
     move-result v5
 
     iput v5, p0, Landroid/app/SearchableInfo;->mLabelId:I
 
-    .line 338
     invoke-virtual {v0, v9, v7}, Landroid/content/res/TypedArray;->getResourceId(II)I
 
     move-result v5
 
     iput v5, p0, Landroid/app/SearchableInfo;->mHintId:I
 
-    .line 339
     invoke-virtual {v0, v8, v7}, Landroid/content/res/TypedArray;->getResourceId(II)I
 
     move-result v5
 
     iput v5, p0, Landroid/app/SearchableInfo;->mIconId:I
 
-    .line 340
     const/16 v5, 0x9
 
     invoke-virtual {v0, v5, v7}, Landroid/content/res/TypedArray;->getResourceId(II)I
@@ -231,7 +221,6 @@
 
     iput v5, p0, Landroid/app/SearchableInfo;->mSearchButtonText:I
 
-    .line 342
     const/16 v5, 0xa
 
     invoke-virtual {v0, v5, v8}, Landroid/content/res/TypedArray;->getInt(II)I
@@ -240,12 +229,10 @@
 
     iput v5, p0, Landroid/app/SearchableInfo;->mSearchInputType:I
 
-    .line 346
     new-instance v1, Landroid/util/TypedValue;
 
     invoke-direct {v1}, Landroid/util/TypedValue;-><init>()V
 
-    .line 347
     .local v1, "outValue":Landroid/util/TypedValue;
     invoke-virtual {p1}, Landroid/content/Context;->getTheme()Landroid/content/res/Resources$Theme;
 
@@ -255,12 +242,10 @@
 
     invoke-virtual {v5, v6, v1, v8}, Landroid/content/res/Resources$Theme;->resolveAttribute(ILandroid/util/TypedValue;Z)Z
 
-    .line 348
     iget v5, v1, Landroid/util/TypedValue;->data:I
 
     if-eqz v5, :cond_1
 
-    .line 349
     const v5, 0x2000003
 
     invoke-virtual {v0, v10, v5}, Landroid/content/res/TypedArray;->getInt(II)I
@@ -269,7 +254,6 @@
 
     iput v5, p0, Landroid/app/SearchableInfo;->mSearchImeOptions:I
 
-    .line 357
     :goto_0
     const/16 v5, 0x12
 
@@ -279,7 +263,6 @@
 
     iput-boolean v5, p0, Landroid/app/SearchableInfo;->mIncludeInGlobalSearch:Z
 
-    .line 359
     const/16 v5, 0x13
 
     invoke-virtual {v0, v5, v7}, Landroid/content/res/TypedArray;->getBoolean(IZ)Z
@@ -288,7 +271,6 @@
 
     iput-boolean v5, p0, Landroid/app/SearchableInfo;->mQueryAfterZeroResults:Z
 
-    .line 361
     const/16 v5, 0x15
 
     invoke-virtual {v0, v5, v7}, Landroid/content/res/TypedArray;->getBoolean(IZ)Z
@@ -297,7 +279,6 @@
 
     iput-boolean v5, p0, Landroid/app/SearchableInfo;->mAutoUrlDetect:Z
 
-    .line 364
     const/16 v5, 0x14
 
     invoke-virtual {v0, v5, v7}, Landroid/content/res/TypedArray;->getResourceId(II)I
@@ -306,7 +287,6 @@
 
     iput v5, p0, Landroid/app/SearchableInfo;->mSettingsDescriptionId:I
 
-    .line 366
     const/4 v5, 0x4
 
     invoke-virtual {v0, v5}, Landroid/content/res/TypedArray;->getString(I)Ljava/lang/String;
@@ -315,7 +295,6 @@
 
     iput-object v5, p0, Landroid/app/SearchableInfo;->mSuggestAuthority:Ljava/lang/String;
 
-    .line 368
     const/4 v5, 0x5
 
     invoke-virtual {v0, v5}, Landroid/content/res/TypedArray;->getString(I)Ljava/lang/String;
@@ -324,7 +303,6 @@
 
     iput-object v5, p0, Landroid/app/SearchableInfo;->mSuggestPath:Ljava/lang/String;
 
-    .line 370
     const/4 v5, 0x6
 
     invoke-virtual {v0, v5}, Landroid/content/res/TypedArray;->getString(I)Ljava/lang/String;
@@ -333,7 +311,6 @@
 
     iput-object v5, p0, Landroid/app/SearchableInfo;->mSuggestSelection:Ljava/lang/String;
 
-    .line 372
     const/4 v5, 0x7
 
     invoke-virtual {v0, v5}, Landroid/content/res/TypedArray;->getString(I)Ljava/lang/String;
@@ -342,7 +319,6 @@
 
     iput-object v5, p0, Landroid/app/SearchableInfo;->mSuggestIntentAction:Ljava/lang/String;
 
-    .line 374
     const/16 v5, 0x8
 
     invoke-virtual {v0, v5}, Landroid/content/res/TypedArray;->getString(I)Ljava/lang/String;
@@ -351,7 +327,6 @@
 
     iput-object v5, p0, Landroid/app/SearchableInfo;->mSuggestIntentData:Ljava/lang/String;
 
-    .line 376
     const/16 v5, 0x11
 
     invoke-virtual {v0, v5, v7}, Landroid/content/res/TypedArray;->getInt(II)I
@@ -360,7 +335,6 @@
 
     iput v5, p0, Landroid/app/SearchableInfo;->mSuggestThreshold:I
 
-    .line 379
     const/16 v5, 0xb
 
     invoke-virtual {v0, v5, v7}, Landroid/content/res/TypedArray;->getInt(II)I
@@ -369,7 +343,6 @@
 
     iput v5, p0, Landroid/app/SearchableInfo;->mVoiceSearchMode:I
 
-    .line 382
     const/16 v5, 0xc
 
     invoke-virtual {v0, v5, v7}, Landroid/content/res/TypedArray;->getResourceId(II)I
@@ -378,7 +351,6 @@
 
     iput v5, p0, Landroid/app/SearchableInfo;->mVoiceLanguageModeId:I
 
-    .line 384
     const/16 v5, 0xd
 
     invoke-virtual {v0, v5, v7}, Landroid/content/res/TypedArray;->getResourceId(II)I
@@ -387,7 +359,6 @@
 
     iput v5, p0, Landroid/app/SearchableInfo;->mVoicePromptTextId:I
 
-    .line 386
     const/16 v5, 0xe
 
     invoke-virtual {v0, v5, v7}, Landroid/content/res/TypedArray;->getResourceId(II)I
@@ -396,7 +367,6 @@
 
     iput v5, p0, Landroid/app/SearchableInfo;->mVoiceLanguageId:I
 
-    .line 388
     const/16 v5, 0xf
 
     invoke-virtual {v0, v5, v7}, Landroid/content/res/TypedArray;->getInt(II)I
@@ -405,27 +375,21 @@
 
     iput v5, p0, Landroid/app/SearchableInfo;->mVoiceMaxResults:I
 
-    .line 391
     invoke-virtual {v0}, Landroid/content/res/TypedArray;->recycle()V
 
-    .line 394
     iput-boolean v8, p0, Landroid/app/SearchableInfo;->mIncludeInAppSearch:Z
 
-    .line 397
     const/4 v4, 0x0
 
-    .line 398
     .local v4, "suggestProviderPackage":Ljava/lang/String;
     iget-object v5, p0, Landroid/app/SearchableInfo;->mSuggestAuthority:Ljava/lang/String;
 
     if-eqz v5, :cond_0
 
-    .line 399
     invoke-virtual {p1}, Landroid/content/Context;->getPackageManager()Landroid/content/pm/PackageManager;
 
     move-result-object v3
 
-    .line 400
     .local v3, "pm":Landroid/content/pm/PackageManager;
     iget-object v5, p0, Landroid/app/SearchableInfo;->mSuggestAuthority:Ljava/lang/String;
 
@@ -433,25 +397,20 @@
 
     move-result-object v2
 
-    .line 401
     .local v2, "pi":Landroid/content/pm/ProviderInfo;
     if-eqz v2, :cond_0
 
-    .line 402
     iget-object v4, v2, Landroid/content/pm/ProviderInfo;->packageName:Ljava/lang/String;
 
-    .line 405
     .end local v2    # "pi":Landroid/content/pm/ProviderInfo;
     .end local v3    # "pm":Landroid/content/pm/PackageManager;
     :cond_0
     iput-object v4, p0, Landroid/app/SearchableInfo;->mSuggestProviderPackage:Ljava/lang/String;
 
-    .line 408
     iget v5, p0, Landroid/app/SearchableInfo;->mLabelId:I
 
     if-nez v5, :cond_2
 
-    .line 409
     new-instance v5, Ljava/lang/IllegalArgumentException;
 
     const-string v6, "Search label must be a resource reference."
@@ -460,7 +419,6 @@
 
     throw v5
 
-    .line 353
     .end local v4    # "suggestProviderPackage":Ljava/lang/String;
     :cond_1
     invoke-virtual {v0, v10, v9}, Landroid/content/res/TypedArray;->getInt(II)I
@@ -471,7 +429,6 @@
 
     goto/16 :goto_0
 
-    .line 411
     .restart local v4    # "suggestProviderPackage":Ljava/lang/String;
     :cond_2
     return-void
@@ -488,69 +445,58 @@
 
     const/4 v3, 0x0
 
-    .line 936
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 106
     iput-object v4, p0, Landroid/app/SearchableInfo;->mActionKeys:Ljava/util/HashMap;
 
-    .line 937
     invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
 
     move-result v1
 
     iput v1, p0, Landroid/app/SearchableInfo;->mLabelId:I
 
-    .line 938
     invoke-static {p1}, Landroid/content/ComponentName;->readFromParcel(Landroid/os/Parcel;)Landroid/content/ComponentName;
 
     move-result-object v1
 
     iput-object v1, p0, Landroid/app/SearchableInfo;->mSearchActivity:Landroid/content/ComponentName;
 
-    .line 939
     invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
 
     move-result v1
 
     iput v1, p0, Landroid/app/SearchableInfo;->mHintId:I
 
-    .line 940
     invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
 
     move-result v1
 
     iput v1, p0, Landroid/app/SearchableInfo;->mSearchMode:I
 
-    .line 941
     invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
 
     move-result v1
 
     iput v1, p0, Landroid/app/SearchableInfo;->mIconId:I
 
-    .line 942
     invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
 
     move-result v1
 
     iput v1, p0, Landroid/app/SearchableInfo;->mSearchButtonText:I
 
-    .line 943
     invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
 
     move-result v1
 
     iput v1, p0, Landroid/app/SearchableInfo;->mSearchInputType:I
 
-    .line 944
     invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
 
     move-result v1
 
     iput v1, p0, Landroid/app/SearchableInfo;->mSearchImeOptions:I
 
-    .line 945
     invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
 
     move-result v1
@@ -562,7 +508,6 @@
     :goto_0
     iput-boolean v1, p0, Landroid/app/SearchableInfo;->mIncludeInGlobalSearch:Z
 
-    .line 946
     invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
 
     move-result v1
@@ -574,7 +519,6 @@
     :goto_1
     iput-boolean v1, p0, Landroid/app/SearchableInfo;->mQueryAfterZeroResults:Z
 
-    .line 947
     invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
 
     move-result v1
@@ -586,56 +530,48 @@
     :goto_2
     iput-boolean v1, p0, Landroid/app/SearchableInfo;->mAutoUrlDetect:Z
 
-    .line 949
     invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
 
     move-result v1
 
     iput v1, p0, Landroid/app/SearchableInfo;->mSettingsDescriptionId:I
 
-    .line 950
     invoke-virtual {p1}, Landroid/os/Parcel;->readString()Ljava/lang/String;
 
     move-result-object v1
 
     iput-object v1, p0, Landroid/app/SearchableInfo;->mSuggestAuthority:Ljava/lang/String;
 
-    .line 951
     invoke-virtual {p1}, Landroid/os/Parcel;->readString()Ljava/lang/String;
 
     move-result-object v1
 
     iput-object v1, p0, Landroid/app/SearchableInfo;->mSuggestPath:Ljava/lang/String;
 
-    .line 952
     invoke-virtual {p1}, Landroid/os/Parcel;->readString()Ljava/lang/String;
 
     move-result-object v1
 
     iput-object v1, p0, Landroid/app/SearchableInfo;->mSuggestSelection:Ljava/lang/String;
 
-    .line 953
     invoke-virtual {p1}, Landroid/os/Parcel;->readString()Ljava/lang/String;
 
     move-result-object v1
 
     iput-object v1, p0, Landroid/app/SearchableInfo;->mSuggestIntentAction:Ljava/lang/String;
 
-    .line 954
     invoke-virtual {p1}, Landroid/os/Parcel;->readString()Ljava/lang/String;
 
     move-result-object v1
 
     iput-object v1, p0, Landroid/app/SearchableInfo;->mSuggestIntentData:Ljava/lang/String;
 
-    .line 955
     invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
 
     move-result v1
 
     iput v1, p0, Landroid/app/SearchableInfo;->mSuggestThreshold:I
 
-    .line 957
     invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
 
     move-result v0
@@ -644,14 +580,12 @@
     :goto_3
     if-lez v0, :cond_3
 
-    .line 958
     new-instance v1, Landroid/app/SearchableInfo$ActionKeyInfo;
 
     invoke-direct {v1, p1, v4}, Landroid/app/SearchableInfo$ActionKeyInfo;-><init>(Landroid/os/Parcel;Landroid/app/SearchableInfo$1;)V
 
     invoke-direct {p0, v1}, Landroid/app/SearchableInfo;->addActionKey(Landroid/app/SearchableInfo$ActionKeyInfo;)V
 
-    .line 957
     add-int/lit8 v0, v0, -0x1
 
     goto :goto_3
@@ -660,22 +594,18 @@
     :cond_0
     move v1, v3
 
-    .line 945
     goto :goto_0
 
     :cond_1
     move v1, v3
 
-    .line 946
     goto :goto_1
 
     :cond_2
     move v1, v3
 
-    .line 947
     goto :goto_2
 
-    .line 961
     .restart local v0    # "count":I
     :cond_3
     invoke-virtual {p1}, Landroid/os/Parcel;->readString()Ljava/lang/String;
@@ -684,42 +614,36 @@
 
     iput-object v1, p0, Landroid/app/SearchableInfo;->mSuggestProviderPackage:Ljava/lang/String;
 
-    .line 963
     invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
 
     move-result v1
 
     iput v1, p0, Landroid/app/SearchableInfo;->mVoiceSearchMode:I
 
-    .line 964
     invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
 
     move-result v1
 
     iput v1, p0, Landroid/app/SearchableInfo;->mVoiceLanguageModeId:I
 
-    .line 965
     invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
 
     move-result v1
 
     iput v1, p0, Landroid/app/SearchableInfo;->mVoicePromptTextId:I
 
-    .line 966
     invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
 
     move-result v1
 
     iput v1, p0, Landroid/app/SearchableInfo;->mVoiceLanguageId:I
 
-    .line 967
     invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
 
     move-result v1
 
     iput v1, p0, Landroid/app/SearchableInfo;->mVoiceMaxResults:I
 
-    .line 970
     invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
 
     move-result v1
@@ -731,7 +655,6 @@
     :goto_4
     iput-boolean v1, p0, Landroid/app/SearchableInfo;->mIncludeInInsightSearch:Z
 
-    .line 971
     invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
 
     move-result v1
@@ -741,54 +664,46 @@
     :goto_5
     iput-boolean v2, p0, Landroid/app/SearchableInfo;->mIncludeInAppSearch:Z
 
-    .line 972
     invoke-virtual {p1}, Landroid/os/Parcel;->readString()Ljava/lang/String;
 
     move-result-object v1
 
     iput-object v1, p0, Landroid/app/SearchableInfo;->mAdvancedSearchType:Ljava/lang/String;
 
-    .line 973
     invoke-virtual {p1}, Landroid/os/Parcel;->readString()Ljava/lang/String;
 
     move-result-object v1
 
     iput-object v1, p0, Landroid/app/SearchableInfo;->mSearchLayoutStyle:Ljava/lang/String;
 
-    .line 974
     invoke-virtual {p1}, Landroid/os/Parcel;->readString()Ljava/lang/String;
 
     move-result-object v1
 
     iput-object v1, p0, Landroid/app/SearchableInfo;->mTagProviderUri:Ljava/lang/String;
 
-    .line 975
     invoke-virtual {p1}, Landroid/os/Parcel;->readString()Ljava/lang/String;
 
     move-result-object v1
 
     iput-object v1, p0, Landroid/app/SearchableInfo;->mTagFilters:Ljava/lang/String;
 
-    .line 976
     invoke-virtual {p1}, Landroid/os/Parcel;->readString()Ljava/lang/String;
 
     move-result-object v1
 
     iput-object v1, p0, Landroid/app/SearchableInfo;->mCategoryFilters:Ljava/lang/String;
 
-    .line 977
     return-void
 
     :cond_4
     move v1, v3
 
-    .line 970
     goto :goto_4
 
     :cond_5
     move v2, v3
 
-    .line 971
     goto :goto_5
 .end method
 
@@ -797,19 +712,16 @@
     .param p1, "keyInfo"    # Landroid/app/SearchableInfo$ActionKeyInfo;
 
     .prologue
-    .line 534
     iget-object v0, p0, Landroid/app/SearchableInfo;->mActionKeys:Ljava/util/HashMap;
 
     if-nez v0, :cond_0
 
-    .line 535
     new-instance v0, Ljava/util/HashMap;
 
     invoke-direct {v0}, Ljava/util/HashMap;-><init>()V
 
     iput-object v0, p0, Landroid/app/SearchableInfo;->mActionKeys:Ljava/util/HashMap;
 
-    .line 537
     :cond_0
     iget-object v0, p0, Landroid/app/SearchableInfo;->mActionKeys:Ljava/util/HashMap;
 
@@ -823,7 +735,6 @@
 
     invoke-virtual {v0, v1, p1}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 538
     return-void
 .end method
 
@@ -833,10 +744,8 @@
     .param p1, "activity"    # Landroid/content/ComponentName;
 
     .prologue
-    .line 281
     const/4 v1, 0x0
 
-    .line 283
     .local v1, "theirContext":Landroid/content/Context;
     :try_start_0
     invoke-virtual {p1}, Landroid/content/ComponentName;->getPackageName()Ljava/lang/String;
@@ -852,15 +761,12 @@
 
     move-result-object v1
 
-    .line 290
     :goto_0
     return-object v1
 
-    .line 284
     :catch_0
     move-exception v0
 
-    .line 285
     .local v0, "e":Landroid/content/pm/PackageManager$NameNotFoundException;
     const-string v2, "SearchableInfo"
 
@@ -890,12 +796,10 @@
 
     goto :goto_0
 
-    .line 286
     .end local v0    # "e":Landroid/content/pm/PackageManager$NameNotFoundException;
     :catch_1
     move-exception v0
 
-    .line 287
     .local v0, "e":Ljava/lang/SecurityException;
     const-string v2, "SearchableInfo"
 
@@ -935,13 +839,11 @@
     .prologue
     const/4 v2, 0x0
 
-    .line 552
     const/4 v3, 0x0
 
-    .line 554
     .local v3, "userContext":Landroid/content/Context;
     :try_start_0
-    const-string/jumbo v5, "system"
+    const-string v5, "system"
 
     const/4 v6, 0x0
 
@@ -955,7 +857,6 @@
 
     move-result-object v3
 
-    .line 561
     invoke-virtual {v3}, Landroid/content/Context;->getPackageManager()Landroid/content/pm/PackageManager;
 
     move-result-object v5
@@ -966,20 +867,16 @@
 
     move-result-object v4
 
-    .line 563
     .local v4, "xml":Landroid/content/res/XmlResourceParser;
     if-nez v4, :cond_0
 
-    .line 585
     .end local v4    # "xml":Landroid/content/res/XmlResourceParser;
     :goto_0
     return-object v2
 
-    .line 556
     :catch_0
     move-exception v1
 
-    .line 557
     .local v1, "nnfe":Landroid/content/pm/PackageManager$NameNotFoundException;
     const-string v5, "SearchableInfo"
 
@@ -1005,7 +902,6 @@
 
     goto :goto_0
 
-    .line 566
     .end local v1    # "nnfe":Landroid/content/pm/PackageManager$NameNotFoundException;
     .restart local v4    # "xml":Landroid/content/res/XmlResourceParser;
     :cond_0
@@ -1017,13 +913,11 @@
 
     invoke-direct {v0, v5, v6}, Landroid/content/ComponentName;-><init>(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 568
     .local v0, "cName":Landroid/content/ComponentName;
     invoke-static {v3, v4, v0}, Landroid/app/SearchableInfo;->getActivityMetaData(Landroid/content/Context;Lorg/xmlpull/v1/XmlPullParser;Landroid/content/ComponentName;)Landroid/app/SearchableInfo;
 
     move-result-object v2
 
-    .line 569
     .local v2, "searchable":Landroid/app/SearchableInfo;
     invoke-interface {v4}, Landroid/content/res/XmlResourceParser;->close()V
 
@@ -1039,26 +933,21 @@
     .prologue
     const/4 v7, 0x0
 
-    .line 599
     const/4 v4, 0x0
 
-    .line 600
     .local v4, "result":Landroid/app/SearchableInfo;
     invoke-static {p0, p2}, Landroid/app/SearchableInfo;->createActivityContext(Landroid/content/Context;Landroid/content/ComponentName;)Landroid/content/Context;
 
     move-result-object v0
 
-    .line 601
     .local v0, "activityContext":Landroid/content/Context;
     if-nez v0, :cond_0
 
     move-object v5, v7
 
-    .line 654
     :goto_0
     return-object v5
 
-    .line 606
     :cond_0
     :try_start_0
     invoke-interface {p1}, Lorg/xmlpull/v1/XmlPullParser;->next()I
@@ -1071,7 +960,6 @@
     .local v6, "tagType":I
     move-object v5, v4
 
-    .line 607
     .end local v4    # "result":Landroid/app/SearchableInfo;
     .local v5, "result":Landroid/app/SearchableInfo;
     :goto_1
@@ -1079,18 +967,16 @@
 
     if-eq v6, v8, :cond_6
 
-    .line 608
     const/4 v8, 0x2
 
     if-ne v6, v8, :cond_5
 
-    .line 609
     :try_start_1
     invoke-interface {p1}, Lorg/xmlpull/v1/XmlPullParser;->getName()Ljava/lang/String;
 
     move-result-object v8
 
-    const-string/jumbo v9, "searchable"
+    const-string v9, "searchable"
 
     invoke-virtual {v8, v9}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
@@ -1098,7 +984,6 @@
 
     if-eqz v8, :cond_1
 
-    .line 610
     invoke-static {p1}, Landroid/util/Xml;->asAttributeSet(Lorg/xmlpull/v1/XmlPullParser;)Landroid/util/AttributeSet;
     :try_end_1
     .catch Lorg/xmlpull/v1/XmlPullParserException; {:try_start_1 .. :try_end_1} :catch_5
@@ -1106,11 +991,9 @@
 
     move-result-object v1
 
-    .line 611
     .local v1, "attr":Landroid/util/AttributeSet;
     if-eqz v1, :cond_5
 
-    .line 613
     :try_start_2
     new-instance v4, Landroid/app/SearchableInfo;
 
@@ -1120,7 +1003,6 @@
     .catch Lorg/xmlpull/v1/XmlPullParserException; {:try_start_2 .. :try_end_2} :catch_5
     .catch Ljava/io/IOException; {:try_start_2 .. :try_end_2} :catch_4
 
-    .line 644
     .end local v1    # "attr":Landroid/util/AttributeSet;
     .end local v5    # "result":Landroid/app/SearchableInfo;
     .restart local v4    # "result":Landroid/app/SearchableInfo;
@@ -1139,12 +1021,10 @@
     .restart local v5    # "result":Landroid/app/SearchableInfo;
     goto :goto_1
 
-    .line 614
     .restart local v1    # "attr":Landroid/util/AttributeSet;
     :catch_0
     move-exception v3
 
-    .line 615
     .local v3, "ex":Ljava/lang/IllegalArgumentException;
     :try_start_4
     const-string v8, "SearchableInfo"
@@ -1193,10 +1073,8 @@
     .restart local v4    # "result":Landroid/app/SearchableInfo;
     move-object v5, v7
 
-    .line 617
     goto :goto_0
 
-    .line 620
     .end local v1    # "attr":Landroid/util/AttributeSet;
     .end local v3    # "ex":Ljava/lang/IllegalArgumentException;
     .end local v4    # "result":Landroid/app/SearchableInfo;
@@ -1214,7 +1092,6 @@
 
     if-eqz v8, :cond_4
 
-    .line 621
     if-nez v5, :cond_2
 
     move-object v4, v5
@@ -1223,10 +1100,8 @@
     .restart local v4    # "result":Landroid/app/SearchableInfo;
     move-object v5, v7
 
-    .line 623
     goto :goto_0
 
-    .line 625
     .end local v4    # "result":Landroid/app/SearchableInfo;
     .restart local v5    # "result":Landroid/app/SearchableInfo;
     :cond_2
@@ -1237,11 +1112,9 @@
 
     move-result-object v1
 
-    .line 626
     .restart local v1    # "attr":Landroid/util/AttributeSet;
     if-eqz v1, :cond_3
 
-    .line 628
     :try_start_5
     new-instance v8, Landroid/app/SearchableInfo$ActionKeyInfo;
 
@@ -1256,18 +1129,15 @@
     :cond_3
     move-object v4, v5
 
-    .line 635
     .end local v5    # "result":Landroid/app/SearchableInfo;
     .restart local v4    # "result":Landroid/app/SearchableInfo;
     goto :goto_2
 
-    .line 629
     .end local v4    # "result":Landroid/app/SearchableInfo;
     .restart local v5    # "result":Landroid/app/SearchableInfo;
     :catch_1
     move-exception v3
 
-    .line 630
     .restart local v3    # "ex":Ljava/lang/IllegalArgumentException;
     :try_start_6
     const-string v8, "SearchableInfo"
@@ -1316,10 +1186,8 @@
     .restart local v4    # "result":Landroid/app/SearchableInfo;
     move-object v5, v7
 
-    .line 632
     goto/16 :goto_0
 
-    .line 635
     .end local v1    # "attr":Landroid/util/AttributeSet;
     .end local v3    # "ex":Ljava/lang/IllegalArgumentException;
     .end local v4    # "result":Landroid/app/SearchableInfo;
@@ -1337,19 +1205,15 @@
 
     if-eqz v8, :cond_5
 
-    .line 636
     if-eqz v5, :cond_5
 
-    .line 637
     invoke-static {p1}, Landroid/util/Xml;->asAttributeSet(Lorg/xmlpull/v1/XmlPullParser;)Landroid/util/AttributeSet;
 
     move-result-object v1
 
-    .line 638
     .restart local v1    # "attr":Landroid/util/AttributeSet;
     if-eqz v1, :cond_5
 
-    .line 639
     invoke-virtual {v5, v0, v1}, Landroid/app/SearchableInfo;->addExtraAttribute(Landroid/content/Context;Landroid/util/AttributeSet;)V
     :try_end_6
     .catch Lorg/xmlpull/v1/XmlPullParserException; {:try_start_6 .. :try_end_6} :catch_5
@@ -1363,12 +1227,10 @@
     .restart local v4    # "result":Landroid/app/SearchableInfo;
     goto/16 :goto_2
 
-    .line 646
     .end local v6    # "tagType":I
     :catch_2
     move-exception v2
 
-    .line 647
     .local v2, "e":Lorg/xmlpull/v1/XmlPullParserException;
     :goto_3
     const-string v8, "SearchableInfo"
@@ -1399,15 +1261,12 @@
 
     move-object v5, v7
 
-    .line 648
     goto/16 :goto_0
 
-    .line 649
     .end local v2    # "e":Lorg/xmlpull/v1/XmlPullParserException;
     :catch_3
     move-exception v2
 
-    .line 650
     .local v2, "e":Ljava/io/IOException;
     :goto_4
     const-string v8, "SearchableInfo"
@@ -1438,7 +1297,6 @@
 
     move-object v5, v7
 
-    .line 651
     goto/16 :goto_0
 
     .end local v2    # "e":Ljava/io/IOException;
@@ -1448,12 +1306,10 @@
     :cond_6
     move-object v4, v5
 
-    .line 654
     .end local v5    # "result":Landroid/app/SearchableInfo;
     .restart local v4    # "result":Landroid/app/SearchableInfo;
     goto/16 :goto_0
 
-    .line 649
     .end local v4    # "result":Landroid/app/SearchableInfo;
     .restart local v5    # "result":Landroid/app/SearchableInfo;
     :catch_4
@@ -1465,7 +1321,6 @@
     .restart local v4    # "result":Landroid/app/SearchableInfo;
     goto :goto_4
 
-    .line 646
     .end local v4    # "result":Landroid/app/SearchableInfo;
     .restart local v5    # "result":Landroid/app/SearchableInfo;
     :catch_5
@@ -1488,20 +1343,17 @@
     .prologue
     const/4 v5, 0x0
 
-    .line 833
     sget-object v4, Lcom/android/internal/R$styleable;->SearchableExtraAttr:[I
 
     invoke-virtual {p1, p2, v4}, Landroid/content/Context;->obtainStyledAttributes(Landroid/util/AttributeSet;[I)Landroid/content/res/TypedArray;
 
     move-result-object v2
 
-    .line 836
     .local v2, "ta":Landroid/content/res/TypedArray;
     invoke-virtual {v2, v5}, Landroid/content/res/TypedArray;->getString(I)Ljava/lang/String;
 
     move-result-object v0
 
-    .line 837
     .local v0, "name":Ljava/lang/String;
     const/4 v4, 0x1
 
@@ -1509,7 +1361,6 @@
 
     move-result-object v3
 
-    .line 838
     .local v3, "value":Ljava/lang/String;
     const/4 v4, 0x2
 
@@ -1517,7 +1368,6 @@
 
     move-result v1
 
-    .line 840
     .local v1, "resId":I
     const-string v4, "includeInInsightSearch"
 
@@ -1527,22 +1377,18 @@
 
     if-eqz v4, :cond_1
 
-    .line 841
     invoke-static {v3}, Ljava/lang/Boolean;->parseBoolean(Ljava/lang/String;)Z
 
     move-result v4
 
     iput-boolean v4, p0, Landroid/app/SearchableInfo;->mIncludeInInsightSearch:Z
 
-    .line 856
     :cond_0
     :goto_0
     invoke-virtual {v2}, Landroid/content/res/TypedArray;->recycle()V
 
-    .line 857
     return-void
 
-    .line 842
     :cond_1
     const-string v4, "includeInAppSearch"
 
@@ -1552,7 +1398,6 @@
 
     if-eqz v4, :cond_2
 
-    .line 843
     invoke-static {v3}, Ljava/lang/Boolean;->parseBoolean(Ljava/lang/String;)Z
 
     move-result v4
@@ -1561,7 +1406,6 @@
 
     goto :goto_0
 
-    .line 844
     :cond_2
     const-string v4, "advancedSearchType"
 
@@ -1571,14 +1415,12 @@
 
     if-eqz v4, :cond_3
 
-    .line 845
     iput-object v3, p0, Landroid/app/SearchableInfo;->mAdvancedSearchType:Ljava/lang/String;
 
     goto :goto_0
 
-    .line 846
     :cond_3
-    const-string/jumbo v4, "searchLayoutStyle"
+    const-string v4, "searchLayoutStyle"
 
     invoke-virtual {v4, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
@@ -1586,14 +1428,12 @@
 
     if-eqz v4, :cond_4
 
-    .line 847
     iput-object v3, p0, Landroid/app/SearchableInfo;->mSearchLayoutStyle:Ljava/lang/String;
 
     goto :goto_0
 
-    .line 848
     :cond_4
-    const-string/jumbo v4, "tagProviderUri"
+    const-string v4, "tagProviderUri"
 
     invoke-virtual {v4, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
@@ -1601,14 +1441,12 @@
 
     if-eqz v4, :cond_5
 
-    .line 849
     iput-object v3, p0, Landroid/app/SearchableInfo;->mTagProviderUri:Ljava/lang/String;
 
     goto :goto_0
 
-    .line 850
     :cond_5
-    const-string/jumbo v4, "tagFilters"
+    const-string v4, "tagFilters"
 
     invoke-virtual {v4, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
@@ -1616,12 +1454,10 @@
 
     if-eqz v4, :cond_6
 
-    .line 851
     iput-object v3, p0, Landroid/app/SearchableInfo;->mTagFilters:Ljava/lang/String;
 
     goto :goto_0
 
-    .line 852
     :cond_6
     const-string v4, "categoryFilters"
 
@@ -1631,7 +1467,6 @@
 
     if-eqz v4, :cond_0
 
-    .line 853
     iput-object v3, p0, Landroid/app/SearchableInfo;->mCategoryFilters:Ljava/lang/String;
 
     goto :goto_0
@@ -1641,7 +1476,6 @@
     .locals 1
 
     .prologue
-    .line 824
     iget-boolean v0, p0, Landroid/app/SearchableInfo;->mAutoUrlDetect:Z
 
     return v0
@@ -1651,7 +1485,6 @@
     .locals 1
 
     .prologue
-    .line 980
     const/4 v0, 0x0
 
     return v0
@@ -1662,15 +1495,12 @@
     .param p1, "keyCode"    # I
 
     .prologue
-    .line 527
     iget-object v0, p0, Landroid/app/SearchableInfo;->mActionKeys:Ljava/util/HashMap;
 
     if-nez v0, :cond_0
 
-    .line 528
     const/4 v0, 0x0
 
-    .line 530
     :goto_0
     return-object v0
 
@@ -1695,7 +1525,6 @@
     .param p1, "context"    # Landroid/content/Context;
 
     .prologue
-    .line 274
     iget-object v0, p0, Landroid/app/SearchableInfo;->mSearchActivity:Landroid/content/ComponentName;
 
     invoke-static {p1, v0}, Landroid/app/SearchableInfo;->createActivityContext(Landroid/content/Context;Landroid/content/ComponentName;)Landroid/content/Context;
@@ -1709,7 +1538,6 @@
     .locals 1
 
     .prologue
-    .line 880
     iget-object v0, p0, Landroid/app/SearchableInfo;->mAdvancedSearchType:Ljava/lang/String;
 
     return-object v0
@@ -1719,7 +1547,6 @@
     .locals 1
 
     .prologue
-    .line 912
     iget-object v0, p0, Landroid/app/SearchableInfo;->mCategoryFilters:Ljava/lang/String;
 
     return-object v0
@@ -1729,7 +1556,6 @@
     .locals 1
 
     .prologue
-    .line 678
     iget v0, p0, Landroid/app/SearchableInfo;->mHintId:I
 
     return v0
@@ -1739,7 +1565,6 @@
     .locals 1
 
     .prologue
-    .line 691
     iget v0, p0, Landroid/app/SearchableInfo;->mIconId:I
 
     return v0
@@ -1749,7 +1574,6 @@
     .locals 1
 
     .prologue
-    .line 794
     iget v0, p0, Landroid/app/SearchableInfo;->mSearchImeOptions:I
 
     return v0
@@ -1759,7 +1583,6 @@
     .locals 1
 
     .prologue
-    .line 782
     iget v0, p0, Landroid/app/SearchableInfo;->mSearchInputType:I
 
     return v0
@@ -1769,7 +1592,6 @@
     .locals 1
 
     .prologue
-    .line 667
     iget v0, p0, Landroid/app/SearchableInfo;->mLabelId:I
 
     return v0
@@ -1781,10 +1603,8 @@
     .param p2, "activityContext"    # Landroid/content/Context;
 
     .prologue
-    .line 303
     const/4 v0, 0x0
 
-    .line 304
     .local v0, "theirContext":Landroid/content/Context;
     iget-object v1, p0, Landroid/app/SearchableInfo;->mSearchActivity:Landroid/content/ComponentName;
 
@@ -1800,19 +1620,16 @@
 
     if-eqz v1, :cond_0
 
-    .line 316
     .end local p2    # "activityContext":Landroid/content/Context;
     :goto_0
     return-object p2
 
-    .line 307
     .restart local p2    # "activityContext":Landroid/content/Context;
     :cond_0
     iget-object v1, p0, Landroid/app/SearchableInfo;->mSuggestProviderPackage:Ljava/lang/String;
 
     if-eqz v1, :cond_1
 
-    .line 309
     :try_start_0
     iget-object v1, p0, Landroid/app/SearchableInfo;->mSuggestProviderPackage:Ljava/lang/String;
 
@@ -1829,16 +1646,13 @@
     :goto_1
     move-object p2, v0
 
-    .line 316
     goto :goto_0
 
-    .line 312
     :catch_0
     move-exception v1
 
     goto :goto_1
 
-    .line 310
     :catch_1
     move-exception v1
 
@@ -1849,7 +1663,6 @@
     .locals 1
 
     .prologue
-    .line 152
     iget-object v0, p0, Landroid/app/SearchableInfo;->mSearchActivity:Landroid/content/ComponentName;
 
     return-object v0
@@ -1859,7 +1672,6 @@
     .locals 1
 
     .prologue
-    .line 770
     iget v0, p0, Landroid/app/SearchableInfo;->mSearchButtonText:I
 
     return v0
@@ -1869,7 +1681,6 @@
     .locals 1
 
     .prologue
-    .line 888
     iget-object v0, p0, Landroid/app/SearchableInfo;->mSearchLayoutStyle:Ljava/lang/String;
 
     return-object v0
@@ -1879,7 +1690,6 @@
     .locals 1
 
     .prologue
-    .line 202
     iget v0, p0, Landroid/app/SearchableInfo;->mSettingsDescriptionId:I
 
     return v0
@@ -1889,7 +1699,6 @@
     .locals 1
 
     .prologue
-    .line 135
     iget-object v0, p0, Landroid/app/SearchableInfo;->mSuggestAuthority:Ljava/lang/String;
 
     return-object v0
@@ -1899,7 +1708,6 @@
     .locals 1
 
     .prologue
-    .line 236
     iget-object v0, p0, Landroid/app/SearchableInfo;->mSuggestIntentAction:Ljava/lang/String;
 
     return-object v0
@@ -1909,7 +1717,6 @@
     .locals 1
 
     .prologue
-    .line 253
     iget-object v0, p0, Landroid/app/SearchableInfo;->mSuggestIntentData:Ljava/lang/String;
 
     return-object v0
@@ -1919,7 +1726,6 @@
     .locals 1
 
     .prologue
-    .line 143
     iget-object v0, p0, Landroid/app/SearchableInfo;->mSuggestProviderPackage:Ljava/lang/String;
 
     return-object v0
@@ -1929,7 +1735,6 @@
     .locals 1
 
     .prologue
-    .line 212
     iget-object v0, p0, Landroid/app/SearchableInfo;->mSuggestPath:Ljava/lang/String;
 
     return-object v0
@@ -1939,7 +1744,6 @@
     .locals 1
 
     .prologue
-    .line 221
     iget-object v0, p0, Landroid/app/SearchableInfo;->mSuggestSelection:Ljava/lang/String;
 
     return-object v0
@@ -1949,7 +1753,6 @@
     .locals 1
 
     .prologue
-    .line 263
     iget v0, p0, Landroid/app/SearchableInfo;->mSuggestThreshold:I
 
     return v0
@@ -1959,7 +1762,6 @@
     .locals 1
 
     .prologue
-    .line 904
     iget-object v0, p0, Landroid/app/SearchableInfo;->mTagFilters:Ljava/lang/String;
 
     return-object v0
@@ -1969,7 +1771,6 @@
     .locals 1
 
     .prologue
-    .line 896
     iget-object v0, p0, Landroid/app/SearchableInfo;->mTagProviderUri:Ljava/lang/String;
 
     return-object v0
@@ -1979,7 +1780,6 @@
     .locals 1
 
     .prologue
-    .line 748
     iget v0, p0, Landroid/app/SearchableInfo;->mVoiceLanguageId:I
 
     return v0
@@ -1989,7 +1789,6 @@
     .locals 1
 
     .prologue
-    .line 728
     iget v0, p0, Landroid/app/SearchableInfo;->mVoiceLanguageModeId:I
 
     return v0
@@ -1999,7 +1798,6 @@
     .locals 1
 
     .prologue
-    .line 759
     iget v0, p0, Landroid/app/SearchableInfo;->mVoiceMaxResults:I
 
     return v0
@@ -2009,7 +1807,6 @@
     .locals 1
 
     .prologue
-    .line 738
     iget v0, p0, Landroid/app/SearchableInfo;->mVoicePromptTextId:I
 
     return v0
@@ -2019,7 +1816,6 @@
     .locals 1
 
     .prologue
-    .line 700
     iget v0, p0, Landroid/app/SearchableInfo;->mVoiceSearchMode:I
 
     and-int/lit8 v0, v0, 0x1
@@ -2041,7 +1837,6 @@
     .locals 1
 
     .prologue
-    .line 718
     iget v0, p0, Landroid/app/SearchableInfo;->mVoiceSearchMode:I
 
     and-int/lit8 v0, v0, 0x4
@@ -2063,7 +1858,6 @@
     .locals 1
 
     .prologue
-    .line 709
     iget v0, p0, Landroid/app/SearchableInfo;->mVoiceSearchMode:I
 
     and-int/lit8 v0, v0, 0x2
@@ -2085,7 +1879,6 @@
     .locals 1
 
     .prologue
-    .line 815
     iget-boolean v0, p0, Landroid/app/SearchableInfo;->mQueryAfterZeroResults:Z
 
     return v0
@@ -2095,7 +1888,6 @@
     .locals 1
 
     .prologue
-    .line 872
     iget-boolean v0, p0, Landroid/app/SearchableInfo;->mIncludeInAppSearch:Z
 
     return v0
@@ -2105,7 +1897,6 @@
     .locals 1
 
     .prologue
-    .line 805
     iget-boolean v0, p0, Landroid/app/SearchableInfo;->mIncludeInGlobalSearch:Z
 
     return v0
@@ -2115,7 +1906,6 @@
     .locals 1
 
     .prologue
-    .line 864
     iget-boolean v0, p0, Landroid/app/SearchableInfo;->mIncludeInInsightSearch:Z
 
     return v0
@@ -2125,7 +1915,6 @@
     .locals 1
 
     .prologue
-    .line 183
     iget v0, p0, Landroid/app/SearchableInfo;->mSearchMode:I
 
     and-int/lit8 v0, v0, 0x10
@@ -2147,7 +1936,6 @@
     .locals 1
 
     .prologue
-    .line 192
     iget v0, p0, Landroid/app/SearchableInfo;->mSearchMode:I
 
     and-int/lit8 v0, v0, 0x20
@@ -2169,7 +1957,6 @@
     .locals 1
 
     .prologue
-    .line 174
     iget v0, p0, Landroid/app/SearchableInfo;->mSearchMode:I
 
     and-int/lit8 v0, v0, 0x8
@@ -2195,7 +1982,6 @@
     .locals 1
 
     .prologue
-    .line 163
     iget v0, p0, Landroid/app/SearchableInfo;->mSearchMode:I
 
     and-int/lit8 v0, v0, 0x4
@@ -2223,47 +2009,38 @@
 
     const/4 v4, 0x0
 
-    .line 984
     iget v2, p0, Landroid/app/SearchableInfo;->mLabelId:I
 
     invoke-virtual {p1, v2}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 985
     iget-object v2, p0, Landroid/app/SearchableInfo;->mSearchActivity:Landroid/content/ComponentName;
 
     invoke-virtual {v2, p1, p2}, Landroid/content/ComponentName;->writeToParcel(Landroid/os/Parcel;I)V
 
-    .line 986
     iget v2, p0, Landroid/app/SearchableInfo;->mHintId:I
 
     invoke-virtual {p1, v2}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 987
     iget v2, p0, Landroid/app/SearchableInfo;->mSearchMode:I
 
     invoke-virtual {p1, v2}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 988
     iget v2, p0, Landroid/app/SearchableInfo;->mIconId:I
 
     invoke-virtual {p1, v2}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 989
     iget v2, p0, Landroid/app/SearchableInfo;->mSearchButtonText:I
 
     invoke-virtual {p1, v2}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 990
     iget v2, p0, Landroid/app/SearchableInfo;->mSearchInputType:I
 
     invoke-virtual {p1, v2}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 991
     iget v2, p0, Landroid/app/SearchableInfo;->mSearchImeOptions:I
 
     invoke-virtual {p1, v2}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 992
     iget-boolean v2, p0, Landroid/app/SearchableInfo;->mIncludeInGlobalSearch:Z
 
     if-eqz v2, :cond_1
@@ -2273,7 +2050,6 @@
     :goto_0
     invoke-virtual {p1, v2}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 993
     iget-boolean v2, p0, Landroid/app/SearchableInfo;->mQueryAfterZeroResults:Z
 
     if-eqz v2, :cond_2
@@ -2283,7 +2059,6 @@
     :goto_1
     invoke-virtual {p1, v2}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 994
     iget-boolean v2, p0, Landroid/app/SearchableInfo;->mAutoUrlDetect:Z
 
     if-eqz v2, :cond_3
@@ -2293,81 +2068,65 @@
     :goto_2
     invoke-virtual {p1, v2}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 996
     iget v2, p0, Landroid/app/SearchableInfo;->mSettingsDescriptionId:I
 
     invoke-virtual {p1, v2}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 997
     iget-object v2, p0, Landroid/app/SearchableInfo;->mSuggestAuthority:Ljava/lang/String;
 
     invoke-virtual {p1, v2}, Landroid/os/Parcel;->writeString(Ljava/lang/String;)V
 
-    .line 998
     iget-object v2, p0, Landroid/app/SearchableInfo;->mSuggestPath:Ljava/lang/String;
 
     invoke-virtual {p1, v2}, Landroid/os/Parcel;->writeString(Ljava/lang/String;)V
 
-    .line 999
     iget-object v2, p0, Landroid/app/SearchableInfo;->mSuggestSelection:Ljava/lang/String;
 
     invoke-virtual {p1, v2}, Landroid/os/Parcel;->writeString(Ljava/lang/String;)V
 
-    .line 1000
     iget-object v2, p0, Landroid/app/SearchableInfo;->mSuggestIntentAction:Ljava/lang/String;
 
     invoke-virtual {p1, v2}, Landroid/os/Parcel;->writeString(Ljava/lang/String;)V
 
-    .line 1001
     iget-object v2, p0, Landroid/app/SearchableInfo;->mSuggestIntentData:Ljava/lang/String;
 
     invoke-virtual {p1, v2}, Landroid/os/Parcel;->writeString(Ljava/lang/String;)V
 
-    .line 1002
     iget v2, p0, Landroid/app/SearchableInfo;->mSuggestThreshold:I
 
     invoke-virtual {p1, v2}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 1004
     iget-object v2, p0, Landroid/app/SearchableInfo;->mActionKeys:Ljava/util/HashMap;
 
     if-nez v2, :cond_4
 
-    .line 1005
     invoke-virtual {p1, v4}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 1013
     :cond_0
     iget-object v2, p0, Landroid/app/SearchableInfo;->mSuggestProviderPackage:Ljava/lang/String;
 
     invoke-virtual {p1, v2}, Landroid/os/Parcel;->writeString(Ljava/lang/String;)V
 
-    .line 1015
     iget v2, p0, Landroid/app/SearchableInfo;->mVoiceSearchMode:I
 
     invoke-virtual {p1, v2}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 1016
     iget v2, p0, Landroid/app/SearchableInfo;->mVoiceLanguageModeId:I
 
     invoke-virtual {p1, v2}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 1017
     iget v2, p0, Landroid/app/SearchableInfo;->mVoicePromptTextId:I
 
     invoke-virtual {p1, v2}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 1018
     iget v2, p0, Landroid/app/SearchableInfo;->mVoiceLanguageId:I
 
     invoke-virtual {p1, v2}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 1019
     iget v2, p0, Landroid/app/SearchableInfo;->mVoiceMaxResults:I
 
     invoke-virtual {p1, v2}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 1022
     iget-boolean v2, p0, Landroid/app/SearchableInfo;->mIncludeInInsightSearch:Z
 
     if-eqz v2, :cond_5
@@ -2377,7 +2136,6 @@
     :goto_3
     invoke-virtual {p1, v2}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 1023
     iget-boolean v2, p0, Landroid/app/SearchableInfo;->mIncludeInAppSearch:Z
 
     if-eqz v2, :cond_6
@@ -2385,53 +2143,43 @@
     :goto_4
     invoke-virtual {p1, v3}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 1024
     iget-object v2, p0, Landroid/app/SearchableInfo;->mAdvancedSearchType:Ljava/lang/String;
 
     invoke-virtual {p1, v2}, Landroid/os/Parcel;->writeString(Ljava/lang/String;)V
 
-    .line 1025
     iget-object v2, p0, Landroid/app/SearchableInfo;->mSearchLayoutStyle:Ljava/lang/String;
 
     invoke-virtual {p1, v2}, Landroid/os/Parcel;->writeString(Ljava/lang/String;)V
 
-    .line 1026
     iget-object v2, p0, Landroid/app/SearchableInfo;->mTagProviderUri:Ljava/lang/String;
 
     invoke-virtual {p1, v2}, Landroid/os/Parcel;->writeString(Ljava/lang/String;)V
 
-    .line 1027
     iget-object v2, p0, Landroid/app/SearchableInfo;->mTagFilters:Ljava/lang/String;
 
     invoke-virtual {p1, v2}, Landroid/os/Parcel;->writeString(Ljava/lang/String;)V
 
-    .line 1028
     iget-object v2, p0, Landroid/app/SearchableInfo;->mCategoryFilters:Ljava/lang/String;
 
     invoke-virtual {p1, v2}, Landroid/os/Parcel;->writeString(Ljava/lang/String;)V
 
-    .line 1029
     return-void
 
     :cond_1
     move v2, v4
 
-    .line 992
     goto/16 :goto_0
 
     :cond_2
     move v2, v4
 
-    .line 993
     goto :goto_1
 
     :cond_3
     move v2, v4
 
-    .line 994
     goto :goto_2
 
-    .line 1007
     :cond_4
     iget-object v2, p0, Landroid/app/SearchableInfo;->mActionKeys:Ljava/util/HashMap;
 
@@ -2441,7 +2189,6 @@
 
     invoke-virtual {p1, v2}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 1008
     iget-object v2, p0, Landroid/app/SearchableInfo;->mActionKeys:Ljava/util/HashMap;
 
     invoke-virtual {v2}, Ljava/util/HashMap;->values()Ljava/util/Collection;
@@ -2466,7 +2213,6 @@
 
     check-cast v0, Landroid/app/SearchableInfo$ActionKeyInfo;
 
-    .line 1009
     .local v0, "actionKey":Landroid/app/SearchableInfo$ActionKeyInfo;
     invoke-virtual {v0, p1, p2}, Landroid/app/SearchableInfo$ActionKeyInfo;->writeToParcel(Landroid/os/Parcel;I)V
 
@@ -2477,12 +2223,10 @@
     :cond_5
     move v2, v4
 
-    .line 1022
     goto :goto_3
 
     :cond_6
     move v3, v4
 
-    .line 1023
     goto :goto_4
 .end method

@@ -26,7 +26,6 @@
     .locals 0
 
     .prologue
-    .line 690
     iput-object p1, p0, Lcom/android/internal/policy/impl/sec/CombinationKeyManager$4;->this$0:Lcom/android/internal/policy/impl/sec/CombinationKeyManager;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -40,12 +39,10 @@
     .locals 3
 
     .prologue
-    .line 692
     new-instance v0, Landroid/content/Intent;
 
     invoke-direct {v0}, Landroid/content/Intent;-><init>()V
 
-    .line 693
     .local v0, "intent":Landroid/content/Intent;
     const-string v1, "com.sec.factory"
 
@@ -53,19 +50,16 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/content/Intent;->setClassName(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;
 
-    .line 695
     const/high16 v1, 0x34000000
 
     invoke-virtual {v0, v1}, Landroid/content/Intent;->setFlags(I)Landroid/content/Intent;
 
-    .line 698
     iget-object v1, p0, Lcom/android/internal/policy/impl/sec/CombinationKeyManager$4;->this$0:Lcom/android/internal/policy/impl/sec/CombinationKeyManager;
 
     iget-object v1, v1, Lcom/android/internal/policy/impl/sec/CombinationKeyManager;->mContext:Landroid/content/Context;
 
     invoke-virtual {v1, v0}, Landroid/content/Context;->startActivity(Landroid/content/Intent;)V
 
-    .line 699
     # getter for: Lcom/android/internal/policy/impl/sec/CombinationKeyManager;->SAFE_DEBUG:Z
     invoke-static {}, Lcom/android/internal/policy/impl/sec/CombinationKeyManager;->access$000()Z
 
@@ -79,7 +73,6 @@
 
     invoke-static {v1, v2}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 700
     :cond_0
     return-void
 .end method

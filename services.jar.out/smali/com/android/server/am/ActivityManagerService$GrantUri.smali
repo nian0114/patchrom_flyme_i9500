@@ -30,19 +30,14 @@
     .param p3, "prefix"    # Z
 
     .prologue
-    .line 1149
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 1150
     iput p1, p0, Lcom/android/server/am/ActivityManagerService$GrantUri;->sourceUserId:I
 
-    .line 1151
     iput-object p2, p0, Lcom/android/server/am/ActivityManagerService$GrantUri;->uri:Landroid/net/Uri;
 
-    .line 1152
     iput-boolean p3, p0, Lcom/android/server/am/ActivityManagerService$GrantUri;->prefix:Z
 
-    .line 1153
     return-void
 .end method
 
@@ -52,7 +47,6 @@
     .param p1, "uri"    # Landroid/net/Uri;
 
     .prologue
-    .line 1184
     new-instance v0, Lcom/android/server/am/ActivityManagerService$GrantUri;
 
     invoke-static {p1, p0}, Landroid/content/ContentProvider;->getUserIdFromUri(Landroid/net/Uri;I)I
@@ -79,17 +73,14 @@
     .prologue
     const/4 v1, 0x0
 
-    .line 1162
     instance-of v2, p1, Lcom/android/server/am/ActivityManagerService$GrantUri;
 
     if-eqz v2, :cond_0
 
     move-object v0, p1
 
-    .line 1163
     check-cast v0, Lcom/android/server/am/ActivityManagerService$GrantUri;
 
-    .line 1164
     .local v0, "other":Lcom/android/server/am/ActivityManagerService$GrantUri;
     iget-object v2, p0, Lcom/android/server/am/ActivityManagerService$GrantUri;->uri:Landroid/net/Uri;
 
@@ -115,7 +106,6 @@
 
     const/4 v1, 0x1
 
-    .line 1167
     .end local v0    # "other":Lcom/android/server/am/ActivityManagerService$GrantUri;
     :cond_0
     return v1
@@ -125,7 +115,6 @@
     .locals 1
 
     .prologue
-    .line 1157
     invoke-virtual {p0}, Lcom/android/server/am/ActivityManagerService$GrantUri;->toString()Ljava/lang/String;
 
     move-result-object v0
@@ -141,7 +130,6 @@
     .locals 3
 
     .prologue
-    .line 1178
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
@@ -176,7 +164,6 @@
 
     move-result-object v0
 
-    .line 1179
     .local v0, "result":Ljava/lang/String;
     iget-boolean v1, p0, Lcom/android/server/am/ActivityManagerService$GrantUri;->prefix:Z
 
@@ -200,7 +187,6 @@
 
     move-result-object v0
 
-    .line 1180
     :cond_0
     return-object v0
 .end method
@@ -209,7 +195,6 @@
     .locals 3
 
     .prologue
-    .line 1172
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
@@ -244,7 +229,6 @@
 
     move-result-object v0
 
-    .line 1173
     .local v0, "result":Ljava/lang/String;
     iget-boolean v1, p0, Lcom/android/server/am/ActivityManagerService$GrantUri;->prefix:Z
 
@@ -268,7 +252,6 @@
 
     move-result-object v0
 
-    .line 1174
     :cond_0
     return-object v0
 .end method

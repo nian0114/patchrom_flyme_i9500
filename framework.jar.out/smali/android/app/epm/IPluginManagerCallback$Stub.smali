@@ -38,15 +38,12 @@
     .locals 1
 
     .prologue
-    .line 21
     invoke-direct {p0}, Landroid/os/Binder;-><init>()V
 
-    .line 22
     const-string v0, "android.app.epm.IPluginManagerCallback"
 
     invoke-virtual {p0, p0, v0}, Landroid/app/epm/IPluginManagerCallback$Stub;->attachInterface(Landroid/os/IInterface;Ljava/lang/String;)V
 
-    .line 23
     return-void
 .end method
 
@@ -55,17 +52,13 @@
     .param p0, "obj"    # Landroid/os/IBinder;
 
     .prologue
-    .line 30
     if-nez p0, :cond_0
 
-    .line 31
     const/4 v0, 0x0
 
-    .line 37
     :goto_0
     return-object v0
 
-    .line 33
     :cond_0
     const-string v1, "android.app.epm.IPluginManagerCallback"
 
@@ -73,7 +66,6 @@
 
     move-result-object v0
 
-    .line 34
     .local v0, "iin":Landroid/os/IInterface;
     if-eqz v0, :cond_1
 
@@ -81,12 +73,10 @@
 
     if-eqz v1, :cond_1
 
-    .line 35
     check-cast v0, Landroid/app/epm/IPluginManagerCallback;
 
     goto :goto_0
 
-    .line 37
     :cond_1
     new-instance v0, Landroid/app/epm/IPluginManagerCallback$Stub$Proxy;
 
@@ -102,7 +92,6 @@
     .locals 0
 
     .prologue
-    .line 41
     return-object p0
 .end method
 
@@ -121,10 +110,8 @@
     .prologue
     const/4 v2, 0x1
 
-    .line 45
     sparse-switch p1, :sswitch_data_0
 
-    .line 79
     invoke-super {p0, p1, p2, p3, p4}, Landroid/os/Binder;->onTransact(ILandroid/os/Parcel;Landroid/os/Parcel;I)Z
 
     move-result v2
@@ -132,7 +119,6 @@
     :goto_0
     return v2
 
-    .line 49
     :sswitch_0
     const-string v3, "android.app.epm.IPluginManagerCallback"
 
@@ -140,30 +126,25 @@
 
     goto :goto_0
 
-    .line 54
     :sswitch_1
     const-string v3, "android.app.epm.IPluginManagerCallback"
 
     invoke-virtual {p2, v3}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
 
-    .line 56
     invoke-virtual {p2}, Landroid/os/Parcel;->readString()Ljava/lang/String;
 
     move-result-object v0
 
-    .line 58
     .local v0, "_arg0":Ljava/lang/String;
     invoke-virtual {p2}, Landroid/os/Parcel;->readInt()I
 
     move-result v1
 
-    .line 59
     .local v1, "_arg1":I
     invoke-virtual {p0, v0, v1}, Landroid/app/epm/IPluginManagerCallback$Stub;->onInstallCompleted(Ljava/lang/String;I)V
 
     goto :goto_0
 
-    .line 64
     .end local v0    # "_arg0":Ljava/lang/String;
     .end local v1    # "_arg1":I
     :sswitch_2
@@ -171,36 +152,30 @@
 
     invoke-virtual {p2, v3}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
 
-    .line 66
     invoke-virtual {p2}, Landroid/os/Parcel;->readString()Ljava/lang/String;
 
     move-result-object v0
 
-    .line 67
     .restart local v0    # "_arg0":Ljava/lang/String;
     invoke-virtual {p0, v0}, Landroid/app/epm/IPluginManagerCallback$Stub;->onUninstallCompleted(Ljava/lang/String;)V
 
     goto :goto_0
 
-    .line 72
     .end local v0    # "_arg0":Ljava/lang/String;
     :sswitch_3
     const-string v3, "android.app.epm.IPluginManagerCallback"
 
     invoke-virtual {p2, v3}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
 
-    .line 74
     invoke-virtual {p2}, Landroid/os/Parcel;->readString()Ljava/lang/String;
 
     move-result-object v0
 
-    .line 75
     .restart local v0    # "_arg0":Ljava/lang/String;
     invoke-virtual {p0, v0}, Landroid/app/epm/IPluginManagerCallback$Stub;->onStateChangeCompleted(Ljava/lang/String;)V
 
     goto :goto_0
 
-    .line 45
     :sswitch_data_0
     .sparse-switch
         0x1 -> :sswitch_1

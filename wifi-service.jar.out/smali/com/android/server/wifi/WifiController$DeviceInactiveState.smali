@@ -23,7 +23,6 @@
     .locals 0
 
     .prologue
-    .line 863
     iput-object p1, p0, Lcom/android/server/wifi/WifiController$DeviceInactiveState;->this$0:Lcom/android/server/wifi/WifiController;
 
     invoke-direct {p0}, Lcom/android/internal/util/State;-><init>()V
@@ -40,34 +39,28 @@
     .prologue
     const/4 v0, 0x0
 
-    .line 866
     iget v1, p1, Landroid/os/Message;->what:I
 
     sparse-switch v1, :sswitch_data_0
 
-    .line 876
     :goto_0
     return v0
 
-    .line 868
     :sswitch_0
     iget-object v0, p0, Lcom/android/server/wifi/WifiController$DeviceInactiveState;->this$0:Lcom/android/server/wifi/WifiController;
 
     # invokes: Lcom/android/server/wifi/WifiController;->checkLocksAndTransitionWhenDeviceIdle()V
     invoke-static {v0}, Lcom/android/server/wifi/WifiController;->access$2500(Lcom/android/server/wifi/WifiController;)V
 
-    .line 869
     iget-object v0, p0, Lcom/android/server/wifi/WifiController$DeviceInactiveState;->this$0:Lcom/android/server/wifi/WifiController;
 
     # invokes: Lcom/android/server/wifi/WifiController;->updateBatteryWorkSource()V
     invoke-static {v0}, Lcom/android/server/wifi/WifiController;->access$700(Lcom/android/server/wifi/WifiController;)V
 
-    .line 870
     const/4 v0, 0x1
 
     goto :goto_0
 
-    .line 872
     :sswitch_1
     iget-object v1, p0, Lcom/android/server/wifi/WifiController$DeviceInactiveState;->this$0:Lcom/android/server/wifi/WifiController;
 
@@ -83,7 +76,6 @@
 
     goto :goto_0
 
-    .line 866
     nop
 
     :sswitch_data_0

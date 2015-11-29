@@ -23,7 +23,6 @@
     .locals 0
 
     .prologue
-    .line 84
     iput-object p1, p0, Lcom/samsung/android/cocktailbar/CocktailHost$Callbacks;->this$0:Lcom/samsung/android/cocktailbar/CocktailHost;
 
     invoke-direct {p0}, Lcom/samsung/android/cocktailbar/ICocktailHost$Stub;-><init>()V
@@ -45,7 +44,6 @@
     .end annotation
 
     .prologue
-    .line 112
     iget-object v1, p0, Lcom/samsung/android/cocktailbar/CocktailHost$Callbacks;->this$0:Lcom/samsung/android/cocktailbar/CocktailHost;
 
     iget-object v1, v1, Lcom/samsung/android/cocktailbar/CocktailHost;->mHandler:Landroid/os/Handler;
@@ -60,11 +58,9 @@
 
     move-result-object v0
 
-    .line 113
     .local v0, "msg":Landroid/os/Message;
     invoke-virtual {v0}, Landroid/os/Message;->sendToTarget()V
 
-    .line 114
     return-void
 .end method
 
@@ -81,7 +77,6 @@
     .prologue
     const/4 v1, 0x1
 
-    .line 130
     iget-object v2, p0, Lcom/samsung/android/cocktailbar/CocktailHost$Callbacks;->this$0:Lcom/samsung/android/cocktailbar/CocktailHost;
 
     iget-object v2, v2, Lcom/samsung/android/cocktailbar/CocktailHost;->mHandler:Landroid/os/Handler;
@@ -95,14 +90,11 @@
 
     move-result-object v0
 
-    .line 131
     .local v0, "msg":Landroid/os/Message;
     invoke-virtual {v0}, Landroid/os/Message;->sendToTarget()V
 
-    .line 132
     return-void
 
-    .line 130
     .end local v0    # "msg":Landroid/os/Message;
     :cond_0
     const/4 v1, 0x0
@@ -121,7 +113,6 @@
     .end annotation
 
     .prologue
-    .line 166
     iget-object v1, p0, Lcom/samsung/android/cocktailbar/CocktailHost$Callbacks;->this$0:Lcom/samsung/android/cocktailbar/CocktailHost;
 
     iget-object v1, v1, Lcom/samsung/android/cocktailbar/CocktailHost;->mHandler:Landroid/os/Handler;
@@ -134,11 +125,9 @@
 
     move-result-object v0
 
-    .line 167
     .local v0, "msg":Landroid/os/Message;
     invoke-virtual {v0}, Landroid/os/Message;->sendToTarget()V
 
-    .line 168
     return-void
 .end method
 
@@ -154,7 +143,6 @@
     .end annotation
 
     .prologue
-    .line 136
     iget-object v1, p0, Lcom/samsung/android/cocktailbar/CocktailHost$Callbacks;->this$0:Lcom/samsung/android/cocktailbar/CocktailHost;
 
     iget-object v2, v1, Lcom/samsung/android/cocktailbar/CocktailHost;->mHandler:Landroid/os/Handler;
@@ -174,14 +162,11 @@
 
     move-result-object v0
 
-    .line 137
     .local v0, "msg":Landroid/os/Message;
     invoke-virtual {v0}, Landroid/os/Message;->sendToTarget()V
 
-    .line 138
     return-void
 
-    .line 136
     .end local v0    # "msg":Landroid/os/Message;
     :cond_0
     const/4 v1, 0x0
@@ -201,7 +186,6 @@
     .end annotation
 
     .prologue
-    .line 94
     iget-object v1, p0, Lcom/samsung/android/cocktailbar/CocktailHost$Callbacks;->this$0:Lcom/samsung/android/cocktailbar/CocktailHost;
 
     iget-object v1, v1, Lcom/samsung/android/cocktailbar/CocktailHost;->mHandler:Landroid/os/Handler;
@@ -212,11 +196,9 @@
 
     move-result-object v0
 
-    .line 95
     .local v0, "msg":Landroid/os/Message;
     invoke-virtual {v0}, Landroid/os/Message;->sendToTarget()V
 
-    .line 96
     return-void
 .end method
 
@@ -231,7 +213,6 @@
     .end annotation
 
     .prologue
-    .line 100
     iget-object v1, p0, Lcom/samsung/android/cocktailbar/CocktailHost$Callbacks;->this$0:Lcom/samsung/android/cocktailbar/CocktailHost;
 
     iget-object v1, v1, Lcom/samsung/android/cocktailbar/CocktailHost;->mHandler:Landroid/os/Handler;
@@ -242,11 +223,9 @@
 
     move-result-object v0
 
-    .line 101
     .local v0, "msg":Landroid/os/Message;
     invoke-virtual {v0}, Landroid/os/Message;->sendToTarget()V
 
-    .line 102
     return-void
 .end method
 
@@ -261,7 +240,6 @@
     .end annotation
 
     .prologue
-    .line 148
     iget-object v1, p0, Lcom/samsung/android/cocktailbar/CocktailHost$Callbacks;->this$0:Lcom/samsung/android/cocktailbar/CocktailHost;
 
     iget-object v1, v1, Lcom/samsung/android/cocktailbar/CocktailHost;->mHandler:Landroid/os/Handler;
@@ -274,11 +252,9 @@
 
     move-result-object v0
 
-    .line 149
     .local v0, "msg":Landroid/os/Message;
     invoke-virtual {v0}, Landroid/os/Message;->sendToTarget()V
 
-    .line 150
     return-void
 .end method
 
@@ -293,7 +269,6 @@
     .end annotation
 
     .prologue
-    .line 160
     iget-object v1, p0, Lcom/samsung/android/cocktailbar/CocktailHost$Callbacks;->this$0:Lcom/samsung/android/cocktailbar/CocktailHost;
 
     iget-object v1, v1, Lcom/samsung/android/cocktailbar/CocktailHost;->mHandler:Landroid/os/Handler;
@@ -304,11 +279,9 @@
 
     move-result-object v0
 
-    .line 161
     .local v0, "msg":Landroid/os/Message;
     invoke-virtual {v0}, Landroid/os/Message;->sendToTarget()V
 
-    .line 162
     return-void
 .end method
 
@@ -323,7 +296,6 @@
     .end annotation
 
     .prologue
-    .line 154
     iget-object v1, p0, Lcom/samsung/android/cocktailbar/CocktailHost$Callbacks;->this$0:Lcom/samsung/android/cocktailbar/CocktailHost;
 
     iget-object v1, v1, Lcom/samsung/android/cocktailbar/CocktailHost;->mHandler:Landroid/os/Handler;
@@ -334,11 +306,9 @@
 
     move-result-object v0
 
-    .line 155
     .local v0, "msg":Landroid/os/Message;
     invoke-virtual {v0}, Landroid/os/Message;->sendToTarget()V
 
-    .line 156
     return-void
 .end method
 
@@ -353,7 +323,6 @@
     .end annotation
 
     .prologue
-    .line 106
     iget-object v1, p0, Lcom/samsung/android/cocktailbar/CocktailHost$Callbacks;->this$0:Lcom/samsung/android/cocktailbar/CocktailHost;
 
     iget-object v1, v1, Lcom/samsung/android/cocktailbar/CocktailHost;->mHandler:Landroid/os/Handler;
@@ -364,11 +333,9 @@
 
     move-result-object v0
 
-    .line 107
     .local v0, "msg":Landroid/os/Message;
     invoke-virtual {v0}, Landroid/os/Message;->sendToTarget()V
 
-    .line 108
     return-void
 .end method
 
@@ -382,7 +349,6 @@
     .end annotation
 
     .prologue
-    .line 142
     iget-object v1, p0, Lcom/samsung/android/cocktailbar/CocktailHost$Callbacks;->this$0:Lcom/samsung/android/cocktailbar/CocktailHost;
 
     iget-object v1, v1, Lcom/samsung/android/cocktailbar/CocktailHost;->mHandler:Landroid/os/Handler;
@@ -395,11 +361,9 @@
 
     move-result-object v0
 
-    .line 143
     .local v0, "msg":Landroid/os/Message;
     invoke-virtual {v0}, Landroid/os/Message;->sendToTarget()V
 
-    .line 144
     return-void
 .end method
 
@@ -415,7 +379,6 @@
     .end annotation
 
     .prologue
-    .line 88
     iget-object v1, p0, Lcom/samsung/android/cocktailbar/CocktailHost$Callbacks;->this$0:Lcom/samsung/android/cocktailbar/CocktailHost;
 
     iget-object v1, v1, Lcom/samsung/android/cocktailbar/CocktailHost;->mHandler:Landroid/os/Handler;
@@ -426,11 +389,9 @@
 
     move-result-object v0
 
-    .line 89
     .local v0, "msg":Landroid/os/Message;
     invoke-virtual {v0}, Landroid/os/Message;->sendToTarget()V
 
-    .line 90
     return-void
 .end method
 
@@ -444,7 +405,6 @@
     .end annotation
 
     .prologue
-    .line 124
     iget-object v1, p0, Lcom/samsung/android/cocktailbar/CocktailHost$Callbacks;->this$0:Lcom/samsung/android/cocktailbar/CocktailHost;
 
     iget-object v1, v1, Lcom/samsung/android/cocktailbar/CocktailHost;->mHandler:Landroid/os/Handler;
@@ -457,11 +417,9 @@
 
     move-result-object v0
 
-    .line 125
     .local v0, "msg":Landroid/os/Message;
     invoke-virtual {v0}, Landroid/os/Message;->sendToTarget()V
 
-    .line 126
     return-void
 .end method
 
@@ -477,7 +435,6 @@
     .end annotation
 
     .prologue
-    .line 118
     iget-object v1, p0, Lcom/samsung/android/cocktailbar/CocktailHost$Callbacks;->this$0:Lcom/samsung/android/cocktailbar/CocktailHost;
 
     iget-object v1, v1, Lcom/samsung/android/cocktailbar/CocktailHost;->mHandler:Landroid/os/Handler;
@@ -492,10 +449,8 @@
 
     move-result-object v0
 
-    .line 119
     .local v0, "msg":Landroid/os/Message;
     invoke-virtual {v0}, Landroid/os/Message;->sendToTarget()V
 
-    .line 120
     return-void
 .end method

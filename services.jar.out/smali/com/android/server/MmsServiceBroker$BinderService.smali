@@ -23,7 +23,6 @@
     .locals 0
 
     .prologue
-    .line 220
     iput-object p1, p0, Lcom/android/server/MmsServiceBroker$BinderService;->this$0:Lcom/android/server/MmsServiceBroker;
 
     invoke-direct {p0}, Lcom/android/internal/telephony/IMms$Stub;-><init>()V
@@ -37,7 +36,6 @@
     .param p2, "x1"    # Lcom/android/server/MmsServiceBroker$1;
 
     .prologue
-    .line 220
     invoke-direct {p0, p1}, Lcom/android/server/MmsServiceBroker$BinderService;-><init>(Lcom/android/server/MmsServiceBroker;)V
 
     return-void
@@ -56,7 +54,6 @@
     .end annotation
 
     .prologue
-    .line 352
     iget-object v0, p0, Lcom/android/server/MmsServiceBroker$BinderService;->this$0:Lcom/android/server/MmsServiceBroker;
 
     # getter for: Lcom/android/server/MmsServiceBroker;->mContext:Landroid/content/Context;
@@ -70,7 +67,6 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/content/Context;->enforceCallingPermission(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 353
     iget-object v0, p0, Lcom/android/server/MmsServiceBroker$BinderService;->this$0:Lcom/android/server/MmsServiceBroker;
 
     # invokes: Lcom/android/server/MmsServiceBroker;->getAppOpsManager()Landroid/app/AppOpsManager;
@@ -90,13 +86,11 @@
 
     if-eqz v0, :cond_0
 
-    .line 357
     # getter for: Lcom/android/server/MmsServiceBroker;->FAKE_MMS_DRAFT_URI:Landroid/net/Uri;
     invoke-static {}, Lcom/android/server/MmsServiceBroker;->access$1100()Landroid/net/Uri;
 
     move-result-object v0
 
-    .line 359
     :goto_0
     return-object v0
 
@@ -127,7 +121,6 @@
     .end annotation
 
     .prologue
-    .line 339
     iget-object v0, p0, Lcom/android/server/MmsServiceBroker$BinderService;->this$0:Lcom/android/server/MmsServiceBroker;
 
     # getter for: Lcom/android/server/MmsServiceBroker;->mContext:Landroid/content/Context;
@@ -141,7 +134,6 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/content/Context;->enforceCallingPermission(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 340
     iget-object v0, p0, Lcom/android/server/MmsServiceBroker$BinderService;->this$0:Lcom/android/server/MmsServiceBroker;
 
     # invokes: Lcom/android/server/MmsServiceBroker;->getAppOpsManager()Landroid/app/AppOpsManager;
@@ -161,13 +153,11 @@
 
     if-eqz v0, :cond_0
 
-    .line 344
     # getter for: Lcom/android/server/MmsServiceBroker;->FAKE_SMS_DRAFT_URI:Landroid/net/Uri;
     invoke-static {}, Lcom/android/server/MmsServiceBroker;->access$1000()Landroid/net/Uri;
 
     move-result-object v0
 
-    .line 346
     :goto_0
     return-object v0
 
@@ -198,7 +188,6 @@
     .end annotation
 
     .prologue
-    .line 330
     iget-object v0, p0, Lcom/android/server/MmsServiceBroker$BinderService;->this$0:Lcom/android/server/MmsServiceBroker;
 
     # getter for: Lcom/android/server/MmsServiceBroker;->mContext:Landroid/content/Context;
@@ -212,7 +201,6 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/content/Context;->enforceCallingPermission(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 332
     iget-object v0, p0, Lcom/android/server/MmsServiceBroker$BinderService;->this$0:Lcom/android/server/MmsServiceBroker;
 
     # invokes: Lcom/android/server/MmsServiceBroker;->getServiceGuarded()Lcom/android/internal/telephony/IMms;
@@ -238,7 +226,6 @@
     .end annotation
 
     .prologue
-    .line 310
     iget-object v0, p0, Lcom/android/server/MmsServiceBroker$BinderService;->this$0:Lcom/android/server/MmsServiceBroker;
 
     # getter for: Lcom/android/server/MmsServiceBroker;->mContext:Landroid/content/Context;
@@ -252,7 +239,6 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/content/Context;->enforceCallingPermission(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 311
     iget-object v0, p0, Lcom/android/server/MmsServiceBroker$BinderService;->this$0:Lcom/android/server/MmsServiceBroker;
 
     # invokes: Lcom/android/server/MmsServiceBroker;->getAppOpsManager()Landroid/app/AppOpsManager;
@@ -272,10 +258,8 @@
 
     if-eqz v0, :cond_0
 
-    .line 313
     const/4 v0, 0x0
 
-    .line 315
     :goto_0
     return v0
 
@@ -305,7 +289,6 @@
     .end annotation
 
     .prologue
-    .line 298
     iget-object v0, p0, Lcom/android/server/MmsServiceBroker$BinderService;->this$0:Lcom/android/server/MmsServiceBroker;
 
     # getter for: Lcom/android/server/MmsServiceBroker;->mContext:Landroid/content/Context;
@@ -319,7 +302,6 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/content/Context;->enforceCallingPermission(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 300
     iget-object v0, p0, Lcom/android/server/MmsServiceBroker$BinderService;->this$0:Lcom/android/server/MmsServiceBroker;
 
     # invokes: Lcom/android/server/MmsServiceBroker;->getAppOpsManager()Landroid/app/AppOpsManager;
@@ -339,10 +321,8 @@
 
     if-eqz v0, :cond_0
 
-    .line 302
     const/4 v0, 0x0
 
-    .line 304
     :goto_0
     return v0
 
@@ -376,7 +356,6 @@
     .end annotation
 
     .prologue
-    .line 238
     iget-object v0, p0, Lcom/android/server/MmsServiceBroker$BinderService;->this$0:Lcom/android/server/MmsServiceBroker;
 
     # getter for: Lcom/android/server/MmsServiceBroker;->mContext:Landroid/content/Context;
@@ -390,7 +369,6 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/content/Context;->enforceCallingPermission(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 240
     iget-object v0, p0, Lcom/android/server/MmsServiceBroker$BinderService;->this$0:Lcom/android/server/MmsServiceBroker;
 
     # invokes: Lcom/android/server/MmsServiceBroker;->getAppOpsManager()Landroid/app/AppOpsManager;
@@ -410,11 +388,9 @@
 
     if-eqz v0, :cond_0
 
-    .line 246
     :goto_0
     return-void
 
-    .line 244
     :cond_0
     iget-object v0, p0, Lcom/android/server/MmsServiceBroker$BinderService;->this$0:Lcom/android/server/MmsServiceBroker;
 
@@ -449,7 +425,6 @@
     .end annotation
 
     .prologue
-    .line 387
     iget-object v0, p0, Lcom/android/server/MmsServiceBroker$BinderService;->this$0:Lcom/android/server/MmsServiceBroker;
 
     # invokes: Lcom/android/server/MmsServiceBroker;->getServiceGuarded()Lcom/android/internal/telephony/IMms;
@@ -474,7 +449,6 @@
     .end annotation
 
     .prologue
-    .line 263
     iget-object v0, p0, Lcom/android/server/MmsServiceBroker$BinderService;->this$0:Lcom/android/server/MmsServiceBroker;
 
     # invokes: Lcom/android/server/MmsServiceBroker;->getServiceGuarded()Lcom/android/internal/telephony/IMms;
@@ -504,7 +478,6 @@
     .end annotation
 
     .prologue
-    .line 284
     iget-object v0, p0, Lcom/android/server/MmsServiceBroker$BinderService;->this$0:Lcom/android/server/MmsServiceBroker;
 
     # getter for: Lcom/android/server/MmsServiceBroker;->mContext:Landroid/content/Context;
@@ -518,7 +491,6 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/content/Context;->enforceCallingPermission(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 285
     iget-object v0, p0, Lcom/android/server/MmsServiceBroker$BinderService;->this$0:Lcom/android/server/MmsServiceBroker;
 
     # invokes: Lcom/android/server/MmsServiceBroker;->getAppOpsManager()Landroid/app/AppOpsManager;
@@ -538,13 +510,11 @@
 
     if-eqz v0, :cond_0
 
-    .line 289
     # getter for: Lcom/android/server/MmsServiceBroker;->FAKE_MMS_SENT_URI:Landroid/net/Uri;
     invoke-static {}, Lcom/android/server/MmsServiceBroker;->access$900()Landroid/net/Uri;
 
     move-result-object v0
 
-    .line 291
     :goto_0
     return-object v0
 
@@ -591,7 +561,6 @@
     .end annotation
 
     .prologue
-    .line 269
     iget-object v0, p0, Lcom/android/server/MmsServiceBroker$BinderService;->this$0:Lcom/android/server/MmsServiceBroker;
 
     # getter for: Lcom/android/server/MmsServiceBroker;->mContext:Landroid/content/Context;
@@ -605,7 +574,6 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/content/Context;->enforceCallingPermission(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 270
     iget-object v0, p0, Lcom/android/server/MmsServiceBroker$BinderService;->this$0:Lcom/android/server/MmsServiceBroker;
 
     # invokes: Lcom/android/server/MmsServiceBroker;->getAppOpsManager()Landroid/app/AppOpsManager;
@@ -625,13 +593,11 @@
 
     if-eqz v0, :cond_0
 
-    .line 274
     # getter for: Lcom/android/server/MmsServiceBroker;->FAKE_SMS_SENT_URI:Landroid/net/Uri;
     invoke-static {}, Lcom/android/server/MmsServiceBroker;->access$800()Landroid/net/Uri;
 
     move-result-object v0
 
-    .line 276
     :goto_0
     return-object v0
 
@@ -679,7 +645,6 @@
     .end annotation
 
     .prologue
-    .line 225
     iget-object v0, p0, Lcom/android/server/MmsServiceBroker$BinderService;->this$0:Lcom/android/server/MmsServiceBroker;
 
     # getter for: Lcom/android/server/MmsServiceBroker;->mContext:Landroid/content/Context;
@@ -693,7 +658,6 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/content/Context;->enforceCallingPermission(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 226
     iget-object v0, p0, Lcom/android/server/MmsServiceBroker$BinderService;->this$0:Lcom/android/server/MmsServiceBroker;
 
     # invokes: Lcom/android/server/MmsServiceBroker;->getAppOpsManager()Landroid/app/AppOpsManager;
@@ -713,11 +677,9 @@
 
     if-eqz v0, :cond_0
 
-    .line 232
     :goto_0
     return-void
 
-    .line 230
     :cond_0
     iget-object v0, p0, Lcom/android/server/MmsServiceBroker$BinderService;->this$0:Lcom/android/server/MmsServiceBroker;
 
@@ -757,7 +719,6 @@
     .end annotation
 
     .prologue
-    .line 365
     iget-object v0, p0, Lcom/android/server/MmsServiceBroker$BinderService;->this$0:Lcom/android/server/MmsServiceBroker;
 
     # getter for: Lcom/android/server/MmsServiceBroker;->mContext:Landroid/content/Context;
@@ -771,7 +732,6 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/content/Context;->enforceCallingPermission(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 367
     iget-object v0, p0, Lcom/android/server/MmsServiceBroker$BinderService;->this$0:Lcom/android/server/MmsServiceBroker;
 
     # invokes: Lcom/android/server/MmsServiceBroker;->getAppOpsManager()Landroid/app/AppOpsManager;
@@ -791,11 +751,9 @@
 
     if-eqz v0, :cond_0
 
-    .line 373
     :goto_0
     return-void
 
-    .line 371
     :cond_0
     iget-object v0, p0, Lcom/android/server/MmsServiceBroker$BinderService;->this$0:Lcom/android/server/MmsServiceBroker;
 
@@ -830,7 +788,6 @@
     .end annotation
 
     .prologue
-    .line 377
     iget-object v0, p0, Lcom/android/server/MmsServiceBroker$BinderService;->this$0:Lcom/android/server/MmsServiceBroker;
 
     # getter for: Lcom/android/server/MmsServiceBroker;->mContext:Landroid/content/Context;
@@ -844,7 +801,6 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/content/Context;->enforceCallingPermission(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 378
     iget-object v0, p0, Lcom/android/server/MmsServiceBroker$BinderService;->this$0:Lcom/android/server/MmsServiceBroker;
 
     # invokes: Lcom/android/server/MmsServiceBroker;->getAppOpsManager()Landroid/app/AppOpsManager;
@@ -864,11 +820,9 @@
 
     if-eqz v0, :cond_0
 
-    .line 383
     :goto_0
     return-void
 
-    .line 382
     :cond_0
     iget-object v0, p0, Lcom/android/server/MmsServiceBroker$BinderService;->this$0:Lcom/android/server/MmsServiceBroker;
 
@@ -893,13 +847,11 @@
     .end annotation
 
     .prologue
-    .line 257
     iget-object v0, p0, Lcom/android/server/MmsServiceBroker$BinderService;->this$0:Lcom/android/server/MmsServiceBroker;
 
     # invokes: Lcom/android/server/MmsServiceBroker;->enforceCarrierPrivilege()V
     invoke-static {v0}, Lcom/android/server/MmsServiceBroker;->access$700(Lcom/android/server/MmsServiceBroker;)V
 
-    .line 258
     iget-object v0, p0, Lcom/android/server/MmsServiceBroker$BinderService;->this$0:Lcom/android/server/MmsServiceBroker;
 
     # invokes: Lcom/android/server/MmsServiceBroker;->getServiceGuarded()Lcom/android/internal/telephony/IMms;
@@ -909,7 +861,6 @@
 
     invoke-interface {v0, p1, p2}, Lcom/android/internal/telephony/IMms;->updateMmsDownloadStatus(II)V
 
-    .line 259
     return-void
 .end method
 
@@ -925,13 +876,11 @@
     .end annotation
 
     .prologue
-    .line 251
     iget-object v0, p0, Lcom/android/server/MmsServiceBroker$BinderService;->this$0:Lcom/android/server/MmsServiceBroker;
 
     # invokes: Lcom/android/server/MmsServiceBroker;->enforceCarrierPrivilege()V
     invoke-static {v0}, Lcom/android/server/MmsServiceBroker;->access$700(Lcom/android/server/MmsServiceBroker;)V
 
-    .line 252
     iget-object v0, p0, Lcom/android/server/MmsServiceBroker$BinderService;->this$0:Lcom/android/server/MmsServiceBroker;
 
     # invokes: Lcom/android/server/MmsServiceBroker;->getServiceGuarded()Lcom/android/internal/telephony/IMms;
@@ -941,7 +890,6 @@
 
     invoke-interface {v0, p1, p2, p3}, Lcom/android/internal/telephony/IMms;->updateMmsSendStatus(I[BI)V
 
-    .line 253
     return-void
 .end method
 
@@ -957,7 +905,6 @@
     .end annotation
 
     .prologue
-    .line 321
     iget-object v0, p0, Lcom/android/server/MmsServiceBroker$BinderService;->this$0:Lcom/android/server/MmsServiceBroker;
 
     # getter for: Lcom/android/server/MmsServiceBroker;->mContext:Landroid/content/Context;
@@ -971,7 +918,6 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/content/Context;->enforceCallingPermission(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 323
     iget-object v0, p0, Lcom/android/server/MmsServiceBroker$BinderService;->this$0:Lcom/android/server/MmsServiceBroker;
 
     # invokes: Lcom/android/server/MmsServiceBroker;->getServiceGuarded()Lcom/android/internal/telephony/IMms;

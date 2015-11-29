@@ -264,20 +264,16 @@
 
     const/4 v2, 0x0
 
-    .line 41
     const-string v0, "knoxvpn"
 
     sput-object v0, Lcom/android/server/enterprise/vpn/knoxvpn/KnoxVpnConstants;->KNOX_VPN:Ljava/lang/String;
 
-    .line 79
     sput-boolean v2, Lcom/android/server/enterprise/vpn/knoxvpn/KnoxVpnConstants;->VPN_RETURN_BOOL_ERROR:Z
 
-    .line 81
     const-string v0, "block_traffic"
 
     sput-object v0, Lcom/android/server/enterprise/vpn/knoxvpn/KnoxVpnConstants;->BLOCK_APP_TRAFFIC:Ljava/lang/String;
 
-    .line 320
     new-array v0, v3, [Ljava/lang/String;
 
     const-string v1, "com.android.providers.downloads"
@@ -286,7 +282,6 @@
 
     sput-object v0, Lcom/android/server/enterprise/vpn/knoxvpn/KnoxVpnConstants;->BLACK_LISTED_APPLICATION:[Ljava/lang/String;
 
-    .line 321
     const/4 v0, 0x2
 
     new-array v0, v0, [Ljava/lang/Integer;
@@ -307,7 +302,6 @@
 
     sput-object v0, Lcom/android/server/enterprise/vpn/knoxvpn/KnoxVpnConstants;->BLACK_LISTED_UID:[Ljava/lang/Integer;
 
-    .line 322
     new-array v0, v3, [Ljava/lang/String;
 
     const-string v1, "com.android.providers.downloads"
@@ -323,9 +317,7 @@
     .locals 0
 
     .prologue
-    .line 39
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 43
     return-void
 .end method

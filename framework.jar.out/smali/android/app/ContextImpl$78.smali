@@ -19,7 +19,6 @@
     .locals 0
 
     .prologue
-    .line 1000
     invoke-direct {p0}, Landroid/app/ContextImpl$ServiceFetcher;-><init>()V
 
     return-void
@@ -32,7 +31,6 @@
     .param p1, "ctx"    # Landroid/app/ContextImpl;
 
     .prologue
-    .line 1002
     invoke-virtual {p1}, Landroid/app/ContextImpl;->getOuterContext()Landroid/content/Context;
 
     move-result-object v2
@@ -49,26 +47,22 @@
 
     if-eqz v2, :cond_0
 
-    .line 1004
     const-string v2, "barbeam"
 
     invoke-static {v2}, Landroid/os/ServiceManager;->getService(Ljava/lang/String;)Landroid/os/IBinder;
 
     move-result-object v0
 
-    .line 1005
     .local v0, "b":Landroid/os/IBinder;
     invoke-static {v0}, Landroid/app/IBarBeamService$Stub;->asInterface(Landroid/os/IBinder;)Landroid/app/IBarBeamService;
 
     move-result-object v1
 
-    .line 1006
     .local v1, "service":Landroid/app/IBarBeamService;
     new-instance v2, Landroid/app/BarBeamCommandImpl;
 
     invoke-direct {v2, v1}, Landroid/app/BarBeamCommandImpl;-><init>(Landroid/app/IBarBeamService;)V
 
-    .line 1008
     .end local v0    # "b":Landroid/os/IBinder;
     .end local v1    # "service":Landroid/app/IBarBeamService;
     :goto_0

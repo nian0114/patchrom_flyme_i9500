@@ -23,7 +23,6 @@
     .locals 0
 
     .prologue
-    .line 252
     iput-object p1, p0, Lcom/android/internal/app/ResolverActivity$1;->this$0:Lcom/android/internal/app/ResolverActivity;
 
     invoke-direct {p0}, Landroid/os/Handler;-><init>()V
@@ -38,17 +37,14 @@
     .param p1, "msg"    # Landroid/os/Message;
 
     .prologue
-    .line 255
     iget v1, p1, Landroid/os/Message;->what:I
 
     sparse-switch v1, :sswitch_data_0
 
-    .line 275
     :cond_0
     :goto_0
     return-void
 
-    .line 257
     :sswitch_0
     iget-object v1, p0, Lcom/android/internal/app/ResolverActivity$1;->this$0:Lcom/android/internal/app/ResolverActivity;
 
@@ -59,7 +55,6 @@
 
     if-eqz v1, :cond_1
 
-    .line 258
     iget-object v1, p0, Lcom/android/internal/app/ResolverActivity$1;->this$0:Lcom/android/internal/app/ResolverActivity;
 
     # getter for: Lcom/android/internal/app/ResolverActivity;->mDeviceList:Ljava/util/List;
@@ -75,7 +70,6 @@
 
     check-cast v0, Lcom/android/internal/app/ResolverActivity$DisplayDeviceInfo;
 
-    .line 259
     .local v0, "mDevInfo":Lcom/android/internal/app/ResolverActivity$DisplayDeviceInfo;
     iget-object v1, p0, Lcom/android/internal/app/ResolverActivity$1;->this$0:Lcom/android/internal/app/ResolverActivity;
 
@@ -86,13 +80,11 @@
 
     if-nez v1, :cond_0
 
-    .line 262
     iget-object v1, p0, Lcom/android/internal/app/ResolverActivity$1;->this$0:Lcom/android/internal/app/ResolverActivity;
 
     # invokes: Lcom/android/internal/app/ResolverActivity;->addDeviceItemToList(Lcom/android/internal/app/ResolverActivity$DisplayDeviceInfo;)V
     invoke-static {v1, v0}, Lcom/android/internal/app/ResolverActivity;->access$200(Lcom/android/internal/app/ResolverActivity;Lcom/android/internal/app/ResolverActivity$DisplayDeviceInfo;)V
 
-    .line 264
     .end local v0    # "mDevInfo":Lcom/android/internal/app/ResolverActivity$DisplayDeviceInfo;
     :cond_1
     iget-object v1, p0, Lcom/android/internal/app/ResolverActivity$1;->this$0:Lcom/android/internal/app/ResolverActivity;
@@ -106,14 +98,12 @@
 
     goto :goto_0
 
-    .line 269
     :sswitch_1
     iget-object v1, p0, Lcom/android/internal/app/ResolverActivity$1;->this$0:Lcom/android/internal/app/ResolverActivity;
 
     # invokes: Lcom/android/internal/app/ResolverActivity;->initRemoteShareRecentHistoryList()V
     invoke-static {v1}, Lcom/android/internal/app/ResolverActivity;->access$400(Lcom/android/internal/app/ResolverActivity;)V
 
-    .line 270
     iget-object v1, p0, Lcom/android/internal/app/ResolverActivity$1;->this$0:Lcom/android/internal/app/ResolverActivity;
 
     const/16 v2, 0x8
@@ -121,7 +111,6 @@
     # invokes: Lcom/android/internal/app/ResolverActivity;->setVisibilityGridRemoteShareRecentHistoryDefault(I)V
     invoke-static {v1, v2}, Lcom/android/internal/app/ResolverActivity;->access$500(Lcom/android/internal/app/ResolverActivity;I)V
 
-    .line 271
     iget-object v1, p0, Lcom/android/internal/app/ResolverActivity$1;->this$0:Lcom/android/internal/app/ResolverActivity;
 
     const/4 v2, 0x0
@@ -131,7 +120,6 @@
 
     goto :goto_0
 
-    .line 255
     :sswitch_data_0
     .sparse-switch
         0x3e8 -> :sswitch_0

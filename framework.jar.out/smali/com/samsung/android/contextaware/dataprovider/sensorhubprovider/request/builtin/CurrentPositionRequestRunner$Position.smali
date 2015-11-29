@@ -39,7 +39,6 @@
     .locals 0
 
     .prologue
-    .line 49
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -51,7 +50,6 @@
     .param p1, "x1"    # I
 
     .prologue
-    .line 49
     iput p1, p0, Lcom/samsung/android/contextaware/dataprovider/sensorhubprovider/request/builtin/CurrentPositionRequestRunner$Position;->type:I
 
     return p1
@@ -63,7 +61,6 @@
     .param p1, "x1"    # [I
 
     .prologue
-    .line 49
     iput-object p1, p0, Lcom/samsung/android/contextaware/dataprovider/sensorhubprovider/request/builtin/CurrentPositionRequestRunner$Position;->utcTime:[I
 
     return-object p1
@@ -75,7 +72,6 @@
     .param p1, "x1"    # D
 
     .prologue
-    .line 49
     iput-wide p1, p0, Lcom/samsung/android/contextaware/dataprovider/sensorhubprovider/request/builtin/CurrentPositionRequestRunner$Position;->latitude:D
 
     return-wide p1
@@ -87,7 +83,6 @@
     .param p1, "x1"    # D
 
     .prologue
-    .line 49
     iput-wide p1, p0, Lcom/samsung/android/contextaware/dataprovider/sensorhubprovider/request/builtin/CurrentPositionRequestRunner$Position;->longitude:D
 
     return-wide p1
@@ -99,7 +94,6 @@
     .param p1, "x1"    # D
 
     .prologue
-    .line 49
     iput-wide p1, p0, Lcom/samsung/android/contextaware/dataprovider/sensorhubprovider/request/builtin/CurrentPositionRequestRunner$Position;->altitude:D
 
     return-wide p1
@@ -111,7 +105,6 @@
     .param p1, "x1"    # D
 
     .prologue
-    .line 49
     iput-wide p1, p0, Lcom/samsung/android/contextaware/dataprovider/sensorhubprovider/request/builtin/CurrentPositionRequestRunner$Position;->distance:D
 
     return-wide p1
@@ -123,7 +116,6 @@
     .param p1, "x1"    # F
 
     .prologue
-    .line 49
     iput p1, p0, Lcom/samsung/android/contextaware/dataprovider/sensorhubprovider/request/builtin/CurrentPositionRequestRunner$Position;->speed:F
 
     return p1
@@ -135,7 +127,6 @@
     .param p1, "x1"    # F
 
     .prologue
-    .line 49
     iput p1, p0, Lcom/samsung/android/contextaware/dataprovider/sensorhubprovider/request/builtin/CurrentPositionRequestRunner$Position;->accuracy:F
 
     return p1
@@ -147,7 +138,6 @@
     .param p1, "x1"    # I
 
     .prologue
-    .line 49
     iput p1, p0, Lcom/samsung/android/contextaware/dataprovider/sensorhubprovider/request/builtin/CurrentPositionRequestRunner$Position;->satelliteCount:I
 
     return p1
@@ -159,7 +149,6 @@
     .locals 1
 
     .prologue
-    .line 147
     iget v0, p0, Lcom/samsung/android/contextaware/dataprovider/sensorhubprovider/request/builtin/CurrentPositionRequestRunner$Position;->accuracy:F
 
     return v0
@@ -169,7 +158,6 @@
     .locals 2
 
     .prologue
-    .line 120
     iget-wide v0, p0, Lcom/samsung/android/contextaware/dataprovider/sensorhubprovider/request/builtin/CurrentPositionRequestRunner$Position;->altitude:D
 
     return-wide v0
@@ -179,7 +167,6 @@
     .locals 2
 
     .prologue
-    .line 129
     iget-wide v0, p0, Lcom/samsung/android/contextaware/dataprovider/sensorhubprovider/request/builtin/CurrentPositionRequestRunner$Position;->distance:D
 
     return-wide v0
@@ -189,7 +176,6 @@
     .locals 2
 
     .prologue
-    .line 102
     iget-wide v0, p0, Lcom/samsung/android/contextaware/dataprovider/sensorhubprovider/request/builtin/CurrentPositionRequestRunner$Position;->latitude:D
 
     return-wide v0
@@ -199,7 +185,6 @@
     .locals 2
 
     .prologue
-    .line 111
     iget-wide v0, p0, Lcom/samsung/android/contextaware/dataprovider/sensorhubprovider/request/builtin/CurrentPositionRequestRunner$Position;->longitude:D
 
     return-wide v0
@@ -209,7 +194,6 @@
     .locals 1
 
     .prologue
-    .line 156
     iget v0, p0, Lcom/samsung/android/contextaware/dataprovider/sensorhubprovider/request/builtin/CurrentPositionRequestRunner$Position;->satelliteCount:I
 
     return v0
@@ -219,7 +203,6 @@
     .locals 1
 
     .prologue
-    .line 138
     iget v0, p0, Lcom/samsung/android/contextaware/dataprovider/sensorhubprovider/request/builtin/CurrentPositionRequestRunner$Position;->speed:F
 
     return v0
@@ -229,7 +212,6 @@
     .locals 1
 
     .prologue
-    .line 84
     iget v0, p0, Lcom/samsung/android/contextaware/dataprovider/sensorhubprovider/request/builtin/CurrentPositionRequestRunner$Position;->type:I
 
     return v0
@@ -239,7 +221,6 @@
     .locals 1
 
     .prologue
-    .line 93
     iget-object v0, p0, Lcom/samsung/android/contextaware/dataprovider/sensorhubprovider/request/builtin/CurrentPositionRequestRunner$Position;->utcTime:[I
 
     return-object v0

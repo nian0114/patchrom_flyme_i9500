@@ -25,7 +25,6 @@
     .locals 0
 
     .prologue
-    .line 244
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -36,7 +35,6 @@
     .param p1, "x0"    # Lcom/android/internal/widget/LockPatternUtilsCache$1;
 
     .prologue
-    .line 244
     invoke-direct {p0}, Lcom/android/internal/widget/LockPatternUtilsCache$CacheKey;-><init>()V
 
     return-void
@@ -48,7 +46,6 @@
     .locals 3
 
     .prologue
-    .line 255
     new-instance v0, Lcom/android/internal/widget/LockPatternUtilsCache$CacheKey;
 
     invoke-direct {v0}, Lcom/android/internal/widget/LockPatternUtilsCache$CacheKey;-><init>()V
@@ -71,12 +68,10 @@
     .prologue
     const/4 v1, 0x0
 
-    .line 260
     instance-of v2, p1, Lcom/android/internal/widget/LockPatternUtilsCache$CacheKey;
 
     if-nez v2, :cond_1
 
-    .line 263
     :cond_0
     :goto_0
     return v1
@@ -84,10 +79,8 @@
     :cond_1
     move-object v0, p1
 
-    .line 262
     check-cast v0, Lcom/android/internal/widget/LockPatternUtilsCache$CacheKey;
 
-    .line 263
     .local v0, "o":Lcom/android/internal/widget/LockPatternUtilsCache$CacheKey;
     iget v2, p0, Lcom/android/internal/widget/LockPatternUtilsCache$CacheKey;->userId:I
 
@@ -114,7 +107,6 @@
     .locals 2
 
     .prologue
-    .line 268
     iget-object v0, p0, Lcom/android/internal/widget/LockPatternUtilsCache$CacheKey;->key:Ljava/lang/String;
 
     invoke-virtual {v0}, Ljava/lang/String;->hashCode()I
@@ -134,12 +126,9 @@
     .param p2, "userId"    # I
 
     .prologue
-    .line 249
     iput-object p1, p0, Lcom/android/internal/widget/LockPatternUtilsCache$CacheKey;->key:Ljava/lang/String;
 
-    .line 250
     iput p2, p0, Lcom/android/internal/widget/LockPatternUtilsCache$CacheKey;->userId:I
 
-    .line 251
     return-object p0
 .end method

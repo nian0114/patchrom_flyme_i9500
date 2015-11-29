@@ -53,7 +53,6 @@
     .locals 1
 
     .prologue
-    .line 81
     const/4 v0, 0x0
 
     sput-object v0, Lcom/android/server/enterprise/application/ApplicationPermissionControlPolicy;->mAppPermissionControl:Ljava/util/HashMap;
@@ -66,14 +65,11 @@
     .param p1, "ctx"    # Landroid/content/Context;
 
     .prologue
-    .line 87
     invoke-direct {p0}, Landroid/app/enterprise/IApplicationPermissionControlPolicy$Stub;-><init>()V
 
-    .line 88
     iput-object p1, p0, Lcom/android/server/enterprise/application/ApplicationPermissionControlPolicy;->mContext:Landroid/content/Context;
 
-    .line 89
-    const-string/jumbo v0, "package"
+    const-string v0, "package"
 
     invoke-static {v0}, Landroid/os/ServiceManager;->getService(Ljava/lang/String;)Landroid/os/IBinder;
 
@@ -85,7 +81,6 @@
 
     iput-object v0, p0, Lcom/android/server/enterprise/application/ApplicationPermissionControlPolicy;->mPackageManager:Landroid/content/pm/IPackageManager;
 
-    .line 91
     new-instance v0, Lcom/android/server/enterprise/storage/EdmStorageProvider;
 
     iget-object v1, p0, Lcom/android/server/enterprise/application/ApplicationPermissionControlPolicy;->mContext:Landroid/content/Context;
@@ -94,7 +89,6 @@
 
     iput-object v0, p0, Lcom/android/server/enterprise/application/ApplicationPermissionControlPolicy;->mEdmStorageProvider:Lcom/android/server/enterprise/storage/EdmStorageProvider;
 
-    .line 93
     return-void
 .end method
 
@@ -104,7 +98,6 @@
     .param p2, "listType"    # Ljava/lang/String;
 
     .prologue
-    .line 472
     monitor-enter p0
 
     if-lez p1, :cond_0
@@ -124,14 +117,12 @@
 
     if-eqz v23, :cond_1
 
-    .line 603
     :cond_0
     :goto_0
     monitor-exit p0
 
     return-void
 
-    .line 475
     :cond_1
     :try_start_1
     sget-object v23, Lcom/android/server/enterprise/application/ApplicationPermissionControlPolicy;->mAppPermissionControl:Ljava/util/HashMap;
@@ -146,7 +137,6 @@
 
     if-eqz v23, :cond_0
 
-    .line 479
     sget-object v23, Lcom/android/server/enterprise/application/ApplicationPermissionControlPolicy;->mAppPermissionControl:Ljava/util/HashMap;
 
     invoke-static/range {p1 .. p1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
@@ -159,7 +149,6 @@
 
     check-cast v17, Ljava/util/Map;
 
-    .line 480
     .local v17, "singleAdminMap":Ljava/util/Map;, "Ljava/util/Map<Ljava/lang/String;Ljava/util/Map<Ljava/lang/String;Ljava/util/Set<Ljava/lang/String;>;>;>;"
     if-eqz v17, :cond_0
 
@@ -169,12 +158,10 @@
 
     if-nez v23, :cond_0
 
-    .line 483
     new-instance v9, Ljava/util/HashMap;
 
     invoke-direct {v9}, Ljava/util/HashMap;-><init>()V
 
-    .line 484
     .local v9, "eRevokeOrRollbackList":Ljava/util/Map;, "Ljava/util/Map<Ljava/lang/String;Ljava/util/List<Ljava/lang/String;>;>;"
     invoke-interface/range {v17 .. v17}, Ljava/util/Map;->keySet()Ljava/util/Set;
 
@@ -184,7 +171,6 @@
 
     move-result-object v18
 
-    .line 485
     .local v18, "strItr":Ljava/util/Iterator;, "Ljava/util/Iterator<Ljava/lang/String;>;"
     :cond_2
     :goto_1
@@ -194,14 +180,12 @@
 
     if-eqz v23, :cond_c
 
-    .line 486
     invoke-interface/range {v18 .. v18}, Ljava/util/Iterator;->next()Ljava/lang/Object;
 
     move-result-object v12
 
     check-cast v12, Ljava/lang/String;
 
-    .line 487
     .local v12, "perm":Ljava/lang/String;
     move-object/from16 v0, v17
 
@@ -219,7 +203,6 @@
 
     check-cast v5, Ljava/util/Set;
 
-    .line 489
     .local v5, "currentBLPkgNameSet":Ljava/util/Set;, "Ljava/util/Set<Ljava/lang/String;>;"
     move-object/from16 v0, v17
 
@@ -237,11 +220,9 @@
 
     check-cast v6, Ljava/util/Set;
 
-    .line 491
     .local v6, "currentWLPkgNameSet":Ljava/util/Set;, "Ljava/util/Set<Ljava/lang/String;>;"
     const/4 v15, 0x0
 
-    .line 493
     .local v15, "pkgNameList":Ljava/util/List;, "Ljava/util/List<Ljava/lang/String;>;"
     const-string v23, "Blacklist"
 
@@ -267,7 +248,6 @@
 
     if-eqz v23, :cond_6
 
-    .line 497
     :cond_3
     if-eqz v5, :cond_2
 
@@ -277,7 +257,6 @@
 
     if-nez v23, :cond_2
 
-    .line 500
     const-string v23, "*"
 
     move-object/from16 v0, v23
@@ -288,19 +267,16 @@
 
     if-eqz v23, :cond_5
 
-    .line 501
     move-object/from16 v0, p0
 
     invoke-direct {v0, v12}, Lcom/android/server/enterprise/application/ApplicationPermissionControlPolicy;->getEffectiveAllPackages(Ljava/lang/String;)Ljava/util/List;
 
     move-result-object v15
 
-    .line 538
     :cond_4
     :goto_2
     invoke-interface {v9, v12, v15}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 539
     move-object/from16 v0, v17
 
     invoke-interface {v0, v12}, Ljava/util/Map;->get(Ljava/lang/Object;)Ljava/lang/Object;
@@ -319,7 +295,6 @@
 
     if-eqz v23, :cond_2
 
-    .line 540
     move-object/from16 v0, v17
 
     invoke-interface {v0, v12}, Ljava/util/Map;->get(Ljava/lang/Object;)Ljava/lang/Object;
@@ -344,7 +319,6 @@
 
     goto/16 :goto_1
 
-    .line 472
     .end local v5    # "currentBLPkgNameSet":Ljava/util/Set;, "Ljava/util/Set<Ljava/lang/String;>;"
     .end local v6    # "currentWLPkgNameSet":Ljava/util/Set;, "Ljava/util/Set<Ljava/lang/String;>;"
     .end local v9    # "eRevokeOrRollbackList":Ljava/util/Map;, "Ljava/util/Map<Ljava/lang/String;Ljava/util/List<Ljava/lang/String;>;>;"
@@ -359,7 +333,6 @@
 
     throw v23
 
-    .line 503
     .restart local v5    # "currentBLPkgNameSet":Ljava/util/Set;, "Ljava/util/Set<Ljava/lang/String;>;"
     .restart local v6    # "currentWLPkgNameSet":Ljava/util/Set;, "Ljava/util/Set<Ljava/lang/String;>;"
     .restart local v9    # "eRevokeOrRollbackList":Ljava/util/Map;, "Ljava/util/Map<Ljava/lang/String;Ljava/util/List<Ljava/lang/String;>;>;"
@@ -374,13 +347,11 @@
     .end local v15    # "pkgNameList":Ljava/util/List;, "Ljava/util/List<Ljava/lang/String;>;"
     invoke-direct {v15}, Ljava/util/ArrayList;-><init>()V
 
-    .line 504
     .restart local v15    # "pkgNameList":Ljava/util/List;, "Ljava/util/List<Ljava/lang/String;>;"
     invoke-interface {v15, v5}, Ljava/util/List;->addAll(Ljava/util/Collection;)Z
 
     goto :goto_2
 
-    .line 508
     :cond_6
     if-eqz v6, :cond_2
 
@@ -390,19 +361,16 @@
 
     if-nez v23, :cond_2
 
-    .line 511
     invoke-interface {v5}, Ljava/util/Set;->isEmpty()Z
 
     move-result v23
 
     if-eqz v23, :cond_7
 
-    .line 512
     invoke-interface {v6}, Ljava/util/Set;->clear()V
 
     goto/16 :goto_1
 
-    .line 516
     :cond_7
     const-string v23, "*"
 
@@ -414,7 +382,6 @@
 
     if-eqz v23, :cond_9
 
-    .line 517
     const-string v23, "*"
 
     move-object/from16 v0, v23
@@ -425,7 +392,6 @@
 
     if-eqz v23, :cond_8
 
-    .line 518
     move-object/from16 v0, p0
 
     invoke-direct {v0, v12}, Lcom/android/server/enterprise/application/ApplicationPermissionControlPolicy;->getEffectiveAllPackages(Ljava/lang/String;)Ljava/util/List;
@@ -434,27 +400,23 @@
 
     goto :goto_2
 
-    .line 520
     :cond_8
     new-instance v15, Ljava/util/ArrayList;
 
     .end local v15    # "pkgNameList":Ljava/util/List;, "Ljava/util/List<Ljava/lang/String;>;"
     invoke-direct {v15}, Ljava/util/ArrayList;-><init>()V
 
-    .line 521
     .restart local v15    # "pkgNameList":Ljava/util/List;, "Ljava/util/List<Ljava/lang/String;>;"
     invoke-interface {v15, v5}, Ljava/util/List;->addAll(Ljava/util/Collection;)Z
 
     goto :goto_2
 
-    .line 524
     :cond_9
     new-instance v15, Ljava/util/ArrayList;
 
     .end local v15    # "pkgNameList":Ljava/util/List;, "Ljava/util/List<Ljava/lang/String;>;"
     invoke-direct {v15}, Ljava/util/ArrayList;-><init>()V
 
-    .line 525
     .restart local v15    # "pkgNameList":Ljava/util/List;, "Ljava/util/List<Ljava/lang/String;>;"
     const-string v23, "*"
 
@@ -466,18 +428,15 @@
 
     if-eqz v23, :cond_a
 
-    .line 526
     invoke-interface {v15, v6}, Ljava/util/List;->addAll(Ljava/util/Collection;)Z
 
     goto/16 :goto_2
 
-    .line 528
     :cond_a
     invoke-interface {v6}, Ljava/util/Set;->iterator()Ljava/util/Iterator;
 
     move-result-object v19
 
-    .line 529
     .local v19, "strItr1":Ljava/util/Iterator;, "Ljava/util/Iterator<Ljava/lang/String;>;"
     :cond_b
     :goto_3
@@ -487,14 +446,12 @@
 
     if-eqz v23, :cond_4
 
-    .line 530
     invoke-interface/range {v19 .. v19}, Ljava/util/Iterator;->next()Ljava/lang/Object;
 
     move-result-object v14
 
     check-cast v14, Ljava/lang/String;
 
-    .line 531
     .local v14, "pkgName":Ljava/lang/String;
     invoke-interface {v5, v14}, Ljava/util/Set;->contains(Ljava/lang/Object;)Z
 
@@ -502,12 +459,10 @@
 
     if-eqz v23, :cond_b
 
-    .line 532
     invoke-interface {v15, v14}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
     goto :goto_3
 
-    .line 543
     .end local v5    # "currentBLPkgNameSet":Ljava/util/Set;, "Ljava/util/Set<Ljava/lang/String;>;"
     .end local v6    # "currentWLPkgNameSet":Ljava/util/Set;, "Ljava/util/Set<Ljava/lang/String;>;"
     .end local v12    # "perm":Ljava/lang/String;
@@ -521,7 +476,6 @@
 
     if-eqz v23, :cond_d
 
-    .line 544
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/android/server/enterprise/application/ApplicationPermissionControlPolicy;->mEdmStorageProvider:Lcom/android/server/enterprise/storage/EdmStorageProvider;
@@ -546,7 +500,6 @@
 
     goto/16 :goto_0
 
-    .line 549
     :cond_d
     invoke-interface {v9}, Ljava/util/Map;->keySet()Ljava/util/Set;
 
@@ -556,7 +509,6 @@
 
     move-result-object v19
 
-    .line 550
     .restart local v19    # "strItr1":Ljava/util/Iterator;, "Ljava/util/Iterator<Ljava/lang/String;>;"
     :cond_e
     invoke-interface/range {v19 .. v19}, Ljava/util/Iterator;->hasNext()Z
@@ -565,14 +517,12 @@
 
     if-eqz v23, :cond_11
 
-    .line 551
     invoke-interface/range {v19 .. v19}, Ljava/util/Iterator;->next()Ljava/lang/Object;
 
     move-result-object v13
 
     check-cast v13, Ljava/lang/String;
 
-    .line 552
     .local v13, "perm1":Ljava/lang/String;
     sget-object v23, Lcom/android/server/enterprise/application/ApplicationPermissionControlPolicy;->mAppPermissionControl:Ljava/util/HashMap;
 
@@ -584,7 +534,6 @@
 
     move-result-object v22
 
-    .line 553
     .local v22, "uidItr":Ljava/util/Iterator;, "Ljava/util/Iterator<Ljava/lang/Integer;>;"
     :cond_f
     invoke-interface/range {v22 .. v22}, Ljava/util/Iterator;->hasNext()Z
@@ -593,14 +542,12 @@
 
     if-eqz v23, :cond_e
 
-    .line 554
     invoke-interface/range {v22 .. v22}, Ljava/util/Iterator;->next()Ljava/lang/Object;
 
     move-result-object v21
 
     check-cast v21, Ljava/lang/Integer;
 
-    .line 555
     .local v21, "uid":Ljava/lang/Integer;
     invoke-virtual/range {v21 .. v21}, Ljava/lang/Integer;->intValue()I
 
@@ -612,7 +559,6 @@
 
     if-eq v0, v1, :cond_f
 
-    .line 557
     invoke-virtual/range {v21 .. v21}, Ljava/lang/Integer;->intValue()I
 
     move-result v23
@@ -625,7 +571,6 @@
 
     move-result-object v8
 
-    .line 558
     .local v8, "eBLPkgOneAdmin":Ljava/util/List;, "Ljava/util/List<Ljava/lang/String;>;"
     if-eqz v8, :cond_f
 
@@ -635,7 +580,6 @@
 
     if-nez v23, :cond_f
 
-    .line 560
     invoke-interface {v8}, Ljava/util/List;->iterator()Ljava/util/Iterator;
 
     move-result-object v10
@@ -655,7 +599,6 @@
 
     check-cast v16, Ljava/lang/String;
 
-    .line 561
     .local v16, "pkgname":Ljava/lang/String;
     invoke-interface {v9, v13}, Ljava/util/Map;->get(Ljava/lang/Object;)Ljava/lang/Object;
 
@@ -673,7 +616,6 @@
 
     if-eqz v23, :cond_10
 
-    .line 562
     invoke-interface {v9, v13}, Ljava/util/Map;->get(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object v23
@@ -688,7 +630,6 @@
 
     goto :goto_4
 
-    .line 568
     .end local v8    # "eBLPkgOneAdmin":Ljava/util/List;, "Ljava/util/List<Ljava/lang/String;>;"
     .end local v10    # "i$":Ljava/util/Iterator;
     .end local v13    # "perm1":Ljava/lang/String;
@@ -702,7 +643,6 @@
 
     if-eqz v23, :cond_12
 
-    .line 569
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/android/server/enterprise/application/ApplicationPermissionControlPolicy;->mEdmStorageProvider:Lcom/android/server/enterprise/storage/EdmStorageProvider;
@@ -727,11 +667,9 @@
 
     goto/16 :goto_0
 
-    .line 573
     :cond_12
     const/16 v20, 0x0
 
-    .line 575
     .local v20, "uPkgNameList":Ljava/util/List;, "Ljava/util/List<Ljava/lang/String;>;"
     invoke-interface {v9}, Ljava/util/Map;->keySet()Ljava/util/Set;
 
@@ -741,7 +679,6 @@
 
     move-result-object v11
 
-    .line 576
     .local v11, "perStrItr":Ljava/util/Iterator;, "Ljava/util/Iterator<Ljava/lang/String;>;"
     :cond_13
     :goto_5
@@ -751,7 +688,6 @@
 
     if-eqz v23, :cond_15
 
-    .line 577
     invoke-interface {v11}, Ljava/util/Iterator;->next()Ljava/lang/Object;
 
     move-result-object v12
@@ -760,7 +696,6 @@
     :try_end_2
     .catchall {:try_start_2 .. :try_end_2} :catchall_0
 
-    .line 579
     .restart local v12    # "perm":Ljava/lang/String;
     :try_start_3
     const-string v23, "Whitelist"
@@ -775,7 +710,6 @@
 
     if-eqz v23, :cond_14
 
-    .line 580
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/android/server/enterprise/application/ApplicationPermissionControlPolicy;->mPackageManager:Landroid/content/pm/IPackageManager;
@@ -799,7 +733,6 @@
 
     move-result-object v20
 
-    .line 590
     :goto_6
     if-eqz v20, :cond_13
 
@@ -810,7 +743,6 @@
 
     if-nez v23, :cond_13
 
-    .line 591
     move-object/from16 v0, p0
 
     move-object/from16 v1, v20
@@ -821,7 +753,6 @@
 
     goto :goto_5
 
-    .line 583
     :cond_14
     :try_start_5
     move-object/from16 v0, p0
@@ -849,17 +780,14 @@
 
     goto :goto_6
 
-    .line 586
     :catch_0
     move-exception v7
 
-    .line 587
     .local v7, "e":Landroid/os/RemoteException;
     const/16 v20, 0x0
 
     goto :goto_6
 
-    .line 595
     .end local v7    # "e":Landroid/os/RemoteException;
     .end local v12    # "perm":Ljava/lang/String;
     :cond_15
@@ -876,7 +804,6 @@
 
     if-eqz v23, :cond_16
 
-    .line 597
     sget-object v23, Lcom/android/server/enterprise/application/ApplicationPermissionControlPolicy;->mAppPermissionControl:Ljava/util/HashMap;
 
     invoke-static/range {p1 .. p1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
@@ -887,7 +814,6 @@
 
     goto/16 :goto_0
 
-    .line 599
     :cond_16
     move-object/from16 v0, p0
 
@@ -922,7 +848,6 @@
     .param p2, "permission"    # Ljava/lang/String;
 
     .prologue
-    .line 856
     monitor-enter p0
 
     :try_start_0
@@ -938,12 +863,10 @@
 
     if-nez v1, :cond_0
 
-    .line 858
     new-instance v0, Ljava/util/HashMap;
 
     invoke-direct {v0}, Ljava/util/HashMap;-><init>()V
 
-    .line 859
     .local v0, "adminMap":Ljava/util/Map;, "Ljava/util/Map<Ljava/lang/String;Ljava/util/Map<Ljava/lang/String;Ljava/util/Set<Ljava/lang/String;>;>;>;"
     sget-object v1, Lcom/android/server/enterprise/application/ApplicationPermissionControlPolicy;->mAppPermissionControl:Ljava/util/HashMap;
 
@@ -955,14 +878,12 @@
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 861
     .end local v0    # "adminMap":Ljava/util/Map;, "Ljava/util/Map<Ljava/lang/String;Ljava/util/Map<Ljava/lang/String;Ljava/util/Set<Ljava/lang/String;>;>;>;"
     :cond_0
     monitor-exit p0
 
     return-void
 
-    .line 856
     :catchall_0
     move-exception v1
 
@@ -976,7 +897,6 @@
     .param p1, "cxtInfo"    # Landroid/app/enterprise/ContextInfo;
 
     .prologue
-    .line 618
     invoke-direct {p0}, Lcom/android/server/enterprise/application/ApplicationPermissionControlPolicy;->getEDM()Landroid/app/enterprise/EnterpriseDeviceManager;
 
     move-result-object v0
@@ -1011,13 +931,11 @@
     .end annotation
 
     .prologue
-    .line 983
     .local p3, "pkgNameList":Ljava/util/List;, "Ljava/util/List<Ljava/lang/String;>;"
     new-instance v2, Ljava/util/ArrayList;
 
     invoke-direct {v2}, Ljava/util/ArrayList;-><init>()V
 
-    .line 984
     .local v2, "ePkgNameList":Ljava/util/List;, "Ljava/util/List<Ljava/lang/String;>;"
     sget-object v9, Lcom/android/server/enterprise/application/ApplicationPermissionControlPolicy;->mAppPermissionControl:Ljava/util/HashMap;
 
@@ -1037,16 +955,13 @@
 
     check-cast v4, Ljava/util/Map;
 
-    .line 986
     .local v4, "permissionMap":Ljava/util/Map;, "Ljava/util/Map<Ljava/lang/String;Ljava/util/Set<Ljava/lang/String;>;>;"
     if-nez v4, :cond_0
 
-    .line 1051
     .end local p3    # "pkgNameList":Ljava/util/List;, "Ljava/util/List<Ljava/lang/String;>;"
     :goto_0
     return-object p3
 
-    .line 990
     .restart local p3    # "pkgNameList":Ljava/util/List;, "Ljava/util/List<Ljava/lang/String;>;"
     :cond_0
     const-string v9, "Whitelist"
@@ -1067,10 +982,8 @@
 
     move-object p3, v2
 
-    .line 992
     goto :goto_0
 
-    .line 995
     :cond_1
     const-string v9, "*"
 
@@ -1080,30 +993,24 @@
 
     if-eqz v9, :cond_4
 
-    .line 996
     invoke-interface {v2}, Ljava/util/List;->clear()V
 
-    .line 998
     invoke-direct {p0, p2}, Lcom/android/server/enterprise/application/ApplicationPermissionControlPolicy;->getEffectiveAllPackages(Ljava/lang/String;)Ljava/util/List;
 
     move-result-object v2
 
-    .line 999
     if-nez v2, :cond_2
 
-    .line 1000
     const-string v9, "ApplicationPermissionControlPolicy"
 
     const-string v10, "getEffectiveAllPackages: returns null"
 
     invoke-static {v9, v10}, Lcom/android/server/enterprise/log/Log;->i(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 1001
     const/4 p3, 0x0
 
     goto :goto_0
 
-    .line 1005
     :cond_2
     const-string v9, "Blacklist"
 
@@ -1117,7 +1024,6 @@
 
     move-result-object v6
 
-    .line 1006
     .local v6, "strItr":Ljava/util/Iterator;, "Ljava/util/Iterator<Ljava/lang/String;>;"
     :cond_3
     :goto_1
@@ -1127,14 +1033,12 @@
 
     if-eqz v9, :cond_6
 
-    .line 1007
     invoke-interface {v6}, Ljava/util/Iterator;->next()Ljava/lang/Object;
 
     move-result-object v5
 
     check-cast v5, Ljava/lang/String;
 
-    .line 1008
     .local v5, "pkg":Ljava/lang/String;
     invoke-interface {v2, v5}, Ljava/util/List;->contains(Ljava/lang/Object;)Z
 
@@ -1142,7 +1046,6 @@
 
     if-eqz v9, :cond_3
 
-    .line 1009
     invoke-interface {v2, v5}, Ljava/util/List;->indexOf(Ljava/lang/Object;)I
 
     move-result v9
@@ -1151,7 +1054,6 @@
 
     goto :goto_1
 
-    .line 1012
     .end local v5    # "pkg":Ljava/lang/String;
     .end local v6    # "strItr":Ljava/util/Iterator;, "Ljava/util/Iterator<Ljava/lang/String;>;"
     :cond_4
@@ -1173,14 +1075,11 @@
 
     move-object p3, v2
 
-    .line 1014
     goto :goto_0
 
-    .line 1016
     :cond_5
     invoke-interface {v2, p3}, Ljava/util/List;->addAll(Ljava/util/Collection;)Z
 
-    .line 1020
     :cond_6
     if-eqz v2, :cond_7
 
@@ -1193,10 +1092,8 @@
     :cond_7
     move-object p3, v2
 
-    .line 1021
     goto :goto_0
 
-    .line 1024
     :cond_8
     const-string v9, "Whitelist"
 
@@ -1210,7 +1107,6 @@
 
     move-result-object v6
 
-    .line 1025
     .restart local v6    # "strItr":Ljava/util/Iterator;, "Ljava/util/Iterator<Ljava/lang/String;>;"
     :cond_9
     :goto_2
@@ -1220,14 +1116,12 @@
 
     if-eqz v9, :cond_a
 
-    .line 1026
     invoke-interface {v6}, Ljava/util/Iterator;->next()Ljava/lang/Object;
 
     move-result-object v5
 
     check-cast v5, Ljava/lang/String;
 
-    .line 1027
     .restart local v5    # "pkg":Ljava/lang/String;
     invoke-interface {v2, v5}, Ljava/util/List;->contains(Ljava/lang/Object;)Z
 
@@ -1235,7 +1129,6 @@
 
     if-eqz v9, :cond_9
 
-    .line 1028
     invoke-interface {v2, v5}, Ljava/util/List;->indexOf(Ljava/lang/Object;)I
 
     move-result v9
@@ -1244,7 +1137,6 @@
 
     goto :goto_2
 
-    .line 1031
     .end local v5    # "pkg":Ljava/lang/String;
     :cond_a
     if-eqz p4, :cond_c
@@ -1252,10 +1144,8 @@
     :cond_b
     move-object p3, v2
 
-    .line 1051
     goto/16 :goto_0
 
-    .line 1034
     :cond_c
     sget-object v9, Lcom/android/server/enterprise/application/ApplicationPermissionControlPolicy;->mAppPermissionControl:Ljava/util/HashMap;
 
@@ -1267,7 +1157,6 @@
 
     move-result-object v8
 
-    .line 1035
     .local v8, "uidItr":Ljava/util/Iterator;, "Ljava/util/Iterator<Ljava/lang/Integer;>;"
     :cond_d
     invoke-interface {v8}, Ljava/util/Iterator;->hasNext()Z
@@ -1276,14 +1165,12 @@
 
     if-eqz v9, :cond_b
 
-    .line 1036
     invoke-interface {v8}, Ljava/util/Iterator;->next()Ljava/lang/Object;
 
     move-result-object v7
 
     check-cast v7, Ljava/lang/Integer;
 
-    .line 1039
     .local v7, "uid":Ljava/lang/Integer;
     invoke-virtual {v7}, Ljava/lang/Integer;->intValue()I
 
@@ -1291,7 +1178,6 @@
 
     if-eq v9, p1, :cond_d
 
-    .line 1041
     invoke-virtual {v7}, Ljava/lang/Integer;->intValue()I
 
     move-result v9
@@ -1300,7 +1186,6 @@
 
     move-result-object v1
 
-    .line 1042
     .local v1, "eBLPkgNameList":Ljava/util/List;, "Ljava/util/List<Ljava/lang/String;>;"
     if-eqz v1, :cond_d
 
@@ -1310,7 +1195,6 @@
 
     if-nez v9, :cond_d
 
-    .line 1044
     invoke-interface {v1}, Ljava/util/List;->iterator()Ljava/util/Iterator;
 
     move-result-object v3
@@ -1330,7 +1214,6 @@
 
     check-cast v0, Ljava/lang/String;
 
-    .line 1045
     .local v0, "eBLPkgName":Ljava/lang/String;
     invoke-interface {v2, v0}, Ljava/util/List;->contains(Ljava/lang/Object;)Z
 
@@ -1338,7 +1221,6 @@
 
     if-eqz v9, :cond_e
 
-    .line 1046
     invoke-interface {v2, v0}, Ljava/util/List;->indexOf(Ljava/lang/Object;)I
 
     move-result v9
@@ -1369,13 +1251,11 @@
     .end annotation
 
     .prologue
-    .line 1101
     .local p3, "pkgNameList":Ljava/util/List;, "Ljava/util/List<Ljava/lang/String;>;"
     new-instance v4, Ljava/util/ArrayList;
 
     invoke-direct {v4}, Ljava/util/ArrayList;-><init>()V
 
-    .line 1102
     .local v4, "ePkgNameList":Ljava/util/List;, "Ljava/util/List<Ljava/lang/String;>;"
     sget-object v12, Lcom/android/server/enterprise/application/ApplicationPermissionControlPolicy;->mAppPermissionControl:Ljava/util/HashMap;
 
@@ -1397,16 +1277,13 @@
 
     check-cast v6, Ljava/util/Map;
 
-    .line 1105
     .local v6, "permissionMap":Ljava/util/Map;, "Ljava/util/Map<Ljava/lang/String;Ljava/util/Set<Ljava/lang/String;>;>;"
     if-nez v6, :cond_1
 
-    .line 1179
     :cond_0
     :goto_0
     return-object v4
 
-    .line 1111
     :cond_1
     const-string v12, "Blacklist"
 
@@ -1422,7 +1299,6 @@
 
     if-nez v12, :cond_0
 
-    .line 1114
     const-string v12, "*"
 
     move-object/from16 v0, p3
@@ -1433,7 +1309,6 @@
 
     if-eqz v12, :cond_4
 
-    .line 1116
     const-string v12, "Blacklist"
 
     invoke-interface {v6, v12}, Ljava/util/Map;->get(Ljava/lang/Object;)Ljava/lang/Object;
@@ -1450,18 +1325,15 @@
 
     if-eqz v12, :cond_3
 
-    .line 1117
     move-object/from16 v0, p2
 
     invoke-direct {p0, v0}, Lcom/android/server/enterprise/application/ApplicationPermissionControlPolicy;->getEffectiveAllPackages(Ljava/lang/String;)Ljava/util/List;
 
     move-result-object v1
 
-    .line 1118
     .local v1, "allPkgs":Ljava/util/List;, "Ljava/util/List<Ljava/lang/String;>;"
     invoke-interface {v4, v1}, Ljava/util/List;->addAll(Ljava/util/Collection;)Z
 
-    .line 1123
     .end local v1    # "allPkgs":Ljava/util/List;, "Ljava/util/List<Ljava/lang/String;>;"
     :goto_1
     const-string v12, "Whitelist"
@@ -1476,7 +1348,6 @@
 
     move-result-object v9
 
-    .line 1124
     .local v9, "strItr":Ljava/util/Iterator;, "Ljava/util/Iterator<Ljava/lang/String;>;"
     :cond_2
     :goto_2
@@ -1486,14 +1357,12 @@
 
     if-eqz v12, :cond_5
 
-    .line 1125
     invoke-interface {v9}, Ljava/util/Iterator;->next()Ljava/lang/Object;
 
     move-result-object v7
 
     check-cast v7, Ljava/lang/String;
 
-    .line 1126
     .local v7, "pkg":Ljava/lang/String;
     invoke-interface {v4, v7}, Ljava/util/List;->contains(Ljava/lang/Object;)Z
 
@@ -1501,7 +1370,6 @@
 
     if-eqz v12, :cond_2
 
-    .line 1127
     invoke-interface {v4, v7}, Ljava/util/List;->indexOf(Ljava/lang/Object;)I
 
     move-result v12
@@ -1510,7 +1378,6 @@
 
     goto :goto_2
 
-    .line 1120
     .end local v7    # "pkg":Ljava/lang/String;
     .end local v9    # "strItr":Ljava/util/Iterator;, "Ljava/util/Iterator<Ljava/lang/String;>;"
     :cond_3
@@ -1526,7 +1393,6 @@
 
     goto :goto_1
 
-    .line 1131
     :cond_4
     const-string v12, "Blacklist"
 
@@ -1560,12 +1426,10 @@
 
     if-nez v12, :cond_8
 
-    .line 1134
     move-object/from16 v0, p3
 
     invoke-interface {v4, v0}, Ljava/util/List;->addAll(Ljava/util/Collection;)Z
 
-    .line 1151
     :cond_5
     invoke-interface {v4}, Ljava/util/List;->isEmpty()Z
 
@@ -1573,10 +1437,8 @@
 
     if-nez v12, :cond_0
 
-    .line 1154
     if-eqz p4, :cond_0
 
-    .line 1162
     sget-object v12, Lcom/android/server/enterprise/application/ApplicationPermissionControlPolicy;->mAppPermissionControl:Ljava/util/HashMap;
 
     invoke-virtual {v12}, Ljava/util/HashMap;->keySet()Ljava/util/Set;
@@ -1587,7 +1449,6 @@
 
     move-result-object v11
 
-    .line 1163
     .local v11, "uidItr":Ljava/util/Iterator;, "Ljava/util/Iterator<Ljava/lang/Integer;>;"
     :cond_6
     invoke-interface {v11}, Ljava/util/Iterator;->hasNext()Z
@@ -1596,14 +1457,12 @@
 
     if-eqz v12, :cond_0
 
-    .line 1164
     invoke-interface {v11}, Ljava/util/Iterator;->next()Ljava/lang/Object;
 
     move-result-object v10
 
     check-cast v10, Ljava/lang/Integer;
 
-    .line 1167
     .local v10, "uid":Ljava/lang/Integer;
     invoke-virtual {v10}, Ljava/lang/Integer;->intValue()I
 
@@ -1611,7 +1470,6 @@
 
     if-eq v12, p1, :cond_6
 
-    .line 1169
     invoke-virtual {v10}, Ljava/lang/Integer;->intValue()I
 
     move-result v12
@@ -1622,7 +1480,6 @@
 
     move-result-object v3
 
-    .line 1170
     .local v3, "eBLPkgNameList":Ljava/util/List;, "Ljava/util/List<Ljava/lang/String;>;"
     if-eqz v3, :cond_6
 
@@ -1632,7 +1489,6 @@
 
     if-nez v12, :cond_6
 
-    .line 1172
     invoke-interface {v3}, Ljava/util/List;->iterator()Ljava/util/Iterator;
 
     move-result-object v5
@@ -1652,7 +1508,6 @@
 
     check-cast v2, Ljava/lang/String;
 
-    .line 1173
     .local v2, "eBLPkgName":Ljava/lang/String;
     invoke-interface {v4, v2}, Ljava/util/List;->contains(Ljava/lang/Object;)Z
 
@@ -1660,7 +1515,6 @@
 
     if-eqz v12, :cond_7
 
-    .line 1174
     invoke-interface {v4, v2}, Ljava/util/List;->indexOf(Ljava/lang/Object;)I
 
     move-result v12
@@ -1669,7 +1523,6 @@
 
     goto :goto_3
 
-    .line 1139
     .end local v2    # "eBLPkgName":Ljava/lang/String;
     .end local v3    # "eBLPkgNameList":Ljava/util/List;, "Ljava/util/List<Ljava/lang/String;>;"
     .end local v5    # "i$":Ljava/util/Iterator;
@@ -1692,12 +1545,10 @@
 
     if-eqz v12, :cond_9
 
-    .line 1140
     invoke-interface {v4}, Ljava/util/List;->clear()V
 
     goto/16 :goto_0
 
-    .line 1143
     :cond_9
     invoke-interface/range {p3 .. p3}, Ljava/util/List;->iterator()Ljava/util/Iterator;
 
@@ -1718,7 +1569,6 @@
 
     check-cast v8, Ljava/lang/String;
 
-    .line 1144
     .local v8, "pkgName":Ljava/lang/String;
     const-string v12, "Blacklist"
 
@@ -1734,7 +1584,6 @@
 
     if-eqz v12, :cond_a
 
-    .line 1145
     invoke-interface {v4, v8}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
     goto :goto_4
@@ -1744,12 +1593,10 @@
     .locals 2
 
     .prologue
-    .line 606
     iget-object v0, p0, Lcom/android/server/enterprise/application/ApplicationPermissionControlPolicy;->mEDM:Landroid/app/enterprise/EnterpriseDeviceManager;
 
     if-nez v0, :cond_0
 
-    .line 607
     iget-object v0, p0, Lcom/android/server/enterprise/application/ApplicationPermissionControlPolicy;->mContext:Landroid/content/Context;
 
     const-string v1, "enterprise_policy"
@@ -1762,7 +1609,6 @@
 
     iput-object v0, p0, Lcom/android/server/enterprise/application/ApplicationPermissionControlPolicy;->mEDM:Landroid/app/enterprise/EnterpriseDeviceManager;
 
-    .line 610
     :cond_0
     iget-object v0, p0, Lcom/android/server/enterprise/application/ApplicationPermissionControlPolicy;->mEDM:Landroid/app/enterprise/EnterpriseDeviceManager;
 
@@ -1785,12 +1631,10 @@
     .end annotation
 
     .prologue
-    .line 662
     new-instance v1, Ljava/util/ArrayList;
 
     invoke-direct {v1}, Ljava/util/ArrayList;-><init>()V
 
-    .line 663
     .local v1, "eAllPkgList":Ljava/util/List;, "Ljava/util/List<Ljava/lang/String;>;"
     iget-object v6, p0, Lcom/android/server/enterprise/application/ApplicationPermissionControlPolicy;->mEdmStorageProvider:Lcom/android/server/enterprise/storage/EdmStorageProvider;
 
@@ -1798,7 +1642,6 @@
 
     move-result-object v0
 
-    .line 664
     .local v0, "adminUidList":Ljava/util/ArrayList;, "Ljava/util/ArrayList<Ljava/lang/Integer;>;"
     iget-object v6, p0, Lcom/android/server/enterprise/application/ApplicationPermissionControlPolicy;->mContext:Landroid/content/Context;
 
@@ -1812,7 +1655,6 @@
 
     move-result-object v5
 
-    .line 666
     .local v5, "pkgInfoList":Ljava/util/List;, "Ljava/util/List<Landroid/content/pm/PackageInfo;>;"
     invoke-interface {v5}, Ljava/util/List;->iterator()Ljava/util/Iterator;
 
@@ -1833,7 +1675,6 @@
 
     check-cast v4, Landroid/content/pm/PackageInfo;
 
-    .line 667
     .local v4, "pkgInfo":Landroid/content/pm/PackageInfo;
     if-eqz v4, :cond_0
 
@@ -1845,7 +1686,6 @@
 
     if-eqz v6, :cond_0
 
-    .line 670
     iget-object v6, v4, Landroid/content/pm/PackageInfo;->applicationInfo:Landroid/content/pm/ApplicationInfo;
 
     iget v6, v6, Landroid/content/pm/ApplicationInfo;->flags:I
@@ -1854,7 +1694,6 @@
 
     if-nez v6, :cond_0
 
-    .line 673
     if-eqz v0, :cond_1
 
     invoke-virtual {v0}, Ljava/util/ArrayList;->isEmpty()Z
@@ -1863,7 +1702,6 @@
 
     if-nez v6, :cond_1
 
-    .line 674
     iget-object v6, v4, Landroid/content/pm/PackageInfo;->applicationInfo:Landroid/content/pm/ApplicationInfo;
 
     iget v6, v6, Landroid/content/pm/ApplicationInfo;->uid:I
@@ -1878,7 +1716,6 @@
 
     if-eqz v6, :cond_1
 
-    .line 675
     const-string v6, "ApplicationPermissionControlPolicy"
 
     const-string v7, "Can\'t apply policy to EDM Admin: "
@@ -1887,7 +1724,6 @@
 
     goto :goto_0
 
-    .line 680
     :cond_1
     const/4 v3, 0x0
 
@@ -1899,7 +1735,6 @@
 
     if-ge v3, v6, :cond_0
 
-    .line 681
     iget-object v6, v4, Landroid/content/pm/PackageInfo;->requestedPermissions:[Ljava/lang/String;
 
     aget-object v6, v6, v3
@@ -1910,20 +1745,17 @@
 
     if-eqz v6, :cond_2
 
-    .line 682
     iget-object v6, v4, Landroid/content/pm/PackageInfo;->packageName:Ljava/lang/String;
 
     invoke-interface {v1, v6}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
     goto :goto_0
 
-    .line 680
     :cond_2
     add-int/lit8 v3, v3, 0x1
 
     goto :goto_1
 
-    .line 689
     .end local v3    # "n":I
     .end local v4    # "pkgInfo":Landroid/content/pm/PackageInfo;
     :cond_3
@@ -1949,12 +1781,10 @@
     .prologue
     const/4 v7, 0x0
 
-    .line 1055
     new-instance v1, Ljava/util/ArrayList;
 
     invoke-direct {v1}, Ljava/util/ArrayList;-><init>()V
 
-    .line 1057
     .local v1, "eBlackList":Ljava/util/List;, "Ljava/util/List<Ljava/lang/String;>;"
     sget-object v6, Lcom/android/server/enterprise/application/ApplicationPermissionControlPolicy;->mAppPermissionControl:Ljava/util/HashMap;
 
@@ -1974,17 +1804,14 @@
 
     check-cast v2, Ljava/util/Map;
 
-    .line 1059
     .local v2, "permissionMap":Ljava/util/Map;, "Ljava/util/Map<Ljava/lang/String;Ljava/util/Set<Ljava/lang/String;>;>;"
     if-nez v2, :cond_0
 
     move-object v6, v7
 
-    .line 1094
     :goto_0
     return-object v6
 
-    .line 1062
     :cond_0
     const-string v6, "Blacklist"
 
@@ -1994,7 +1821,6 @@
 
     check-cast v0, Ljava/util/Set;
 
-    .line 1063
     .local v0, "blPkgList":Ljava/util/Set;, "Ljava/util/Set<Ljava/lang/String;>;"
     const-string v6, "Whitelist"
 
@@ -2004,7 +1830,6 @@
 
     check-cast v5, Ljava/util/Set;
 
-    .line 1065
     .local v5, "whPkgList":Ljava/util/Set;, "Ljava/util/Set<Ljava/lang/String;>;"
     if-eqz v0, :cond_1
 
@@ -2017,10 +1842,8 @@
     :cond_1
     move-object v6, v7
 
-    .line 1066
     goto :goto_0
 
-    .line 1068
     :cond_2
     if-eqz v5, :cond_3
 
@@ -2038,16 +1861,13 @@
 
     if-nez v6, :cond_4
 
-    .line 1069
     :cond_3
     invoke-interface {v1, v0}, Ljava/util/List;->addAll(Ljava/util/Collection;)Z
 
     move-object v6, v1
 
-    .line 1070
     goto :goto_0
 
-    .line 1072
     :cond_4
     const-string v6, "*"
 
@@ -2059,10 +1879,8 @@
 
     move-object v6, v7
 
-    .line 1073
     goto :goto_0
 
-    .line 1075
     :cond_5
     const-string v6, "*"
 
@@ -2072,18 +1890,14 @@
 
     if-eqz v6, :cond_6
 
-    .line 1076
     invoke-interface {v1}, Ljava/util/List;->clear()V
 
-    .line 1077
     invoke-direct {p0, p2}, Lcom/android/server/enterprise/application/ApplicationPermissionControlPolicy;->getEffectiveAllPackages(Ljava/lang/String;)Ljava/util/List;
 
     move-result-object v1
 
-    .line 1078
     if-nez v1, :cond_7
 
-    .line 1079
     const-string v6, "ApplicationPermissionControlPolicy"
 
     const-string v8, "getEffectiveBlacklist: returns null"
@@ -2092,14 +1906,11 @@
 
     move-object v6, v7
 
-    .line 1080
     goto :goto_0
 
-    .line 1083
     :cond_6
     invoke-interface {v1, v0}, Ljava/util/List;->addAll(Ljava/util/Collection;)Z
 
-    .line 1086
     :cond_7
     invoke-interface {v5}, Ljava/util/Set;->isEmpty()Z
 
@@ -2107,12 +1918,10 @@
 
     if-nez v6, :cond_9
 
-    .line 1087
     invoke-interface {v5}, Ljava/util/Set;->iterator()Ljava/util/Iterator;
 
     move-result-object v4
 
-    .line 1088
     .local v4, "strItr":Ljava/util/Iterator;, "Ljava/util/Iterator<Ljava/lang/String;>;"
     :cond_8
     :goto_1
@@ -2122,14 +1931,12 @@
 
     if-eqz v6, :cond_9
 
-    .line 1089
     invoke-interface {v4}, Ljava/util/Iterator;->next()Ljava/lang/Object;
 
     move-result-object v3
 
     check-cast v3, Ljava/lang/String;
 
-    .line 1090
     .local v3, "pkgName":Ljava/lang/String;
     invoke-interface {v1, v3}, Ljava/util/List;->contains(Ljava/lang/Object;)Z
 
@@ -2137,7 +1944,6 @@
 
     if-eqz v6, :cond_8
 
-    .line 1091
     invoke-interface {v1, v3}, Ljava/util/List;->indexOf(Ljava/lang/Object;)I
 
     move-result v6
@@ -2151,7 +1957,6 @@
     :cond_9
     move-object v6, v1
 
-    .line 1094
     goto :goto_0
 .end method
 
@@ -2160,7 +1965,6 @@
     .param p1, "uid"    # I
 
     .prologue
-    .line 852
     iget-object v0, p0, Lcom/android/server/enterprise/application/ApplicationPermissionControlPolicy;->mEdmStorageProvider:Lcom/android/server/enterprise/storage/EdmStorageProvider;
 
     invoke-virtual {v0, p1}, Lcom/android/server/enterprise/storage/EdmStorageProvider;->getPackageNameForUid(I)Ljava/lang/String;
@@ -2188,7 +1992,6 @@
     .prologue
     const/4 v3, 0x0
 
-    .line 750
     monitor-enter p0
 
     :try_start_0
@@ -2206,21 +2009,18 @@
 
     if-eqz v10, :cond_1
 
-    .line 791
     :cond_0
     :goto_0
     monitor-exit p0
 
     return-object v3
 
-    .line 753
     :cond_1
     :try_start_1
     invoke-direct {p0}, Lcom/android/server/enterprise/application/ApplicationPermissionControlPolicy;->getPermissionList()Ljava/util/List;
 
     move-result-object v4
 
-    .line 754
     .local v4, "permList":Ljava/util/List;, "Ljava/util/List<Ljava/lang/String;>;"
     if-eqz v4, :cond_0
 
@@ -2230,12 +2030,10 @@
 
     if-nez v10, :cond_0
 
-    .line 757
     new-instance v3, Ljava/util/ArrayList;
 
     invoke-direct {v3}, Ljava/util/ArrayList;-><init>()V
 
-    .line 758
     .local v3, "permBWList":Ljava/util/List;, "Ljava/util/List<Landroid/app/enterprise/AppPermissionControlInfo;>;"
     sget-object v10, Lcom/android/server/enterprise/application/ApplicationPermissionControlPolicy;->mAppPermissionControl:Ljava/util/HashMap;
 
@@ -2247,7 +2045,6 @@
 
     move-result-object v9
 
-    .line 760
     .local v9, "uidItr":Ljava/util/Iterator;, "Ljava/util/Iterator<Ljava/lang/Integer;>;"
     :cond_2
     :goto_1
@@ -2257,20 +2054,17 @@
 
     if-eqz v10, :cond_5
 
-    .line 761
     invoke-interface {v9}, Ljava/util/Iterator;->next()Ljava/lang/Object;
 
     move-result-object v8
 
     check-cast v8, Ljava/lang/Integer;
 
-    .line 762
     .local v8, "uid":Ljava/lang/Integer;
     new-instance v0, Landroid/app/enterprise/AppPermissionControlInfo;
 
     invoke-direct {v0}, Landroid/app/enterprise/AppPermissionControlInfo;-><init>()V
 
-    .line 763
     .local v0, "appPermContInfo":Landroid/app/enterprise/AppPermissionControlInfo;
     invoke-virtual {v8}, Ljava/lang/Integer;->intValue()I
 
@@ -2282,26 +2076,21 @@
 
     iput-object v10, v0, Landroid/app/enterprise/AppPermissionControlInfo;->adminPackageName:Ljava/lang/String;
 
-    .line 764
     iget-object v10, v0, Landroid/app/enterprise/AppPermissionControlInfo;->adminPackageName:Ljava/lang/String;
 
     if-eqz v10, :cond_2
 
-    .line 766
     const/4 v10, 0x0
 
     iput-object v10, v0, Landroid/app/enterprise/AppPermissionControlInfo;->entries:Ljava/util/List;
 
-    .line 767
     new-instance v6, Ljava/util/HashMap;
 
     invoke-direct {v6}, Ljava/util/HashMap;-><init>()V
 
-    .line 768
     .local v6, "permissionListMap":Ljava/util/Map;, "Ljava/util/Map<Ljava/lang/String;Ljava/util/Set<Ljava/lang/String;>;>;"
     iput-object v6, v0, Landroid/app/enterprise/AppPermissionControlInfo;->mapEntries:Ljava/util/Map;
 
-    .line 769
     invoke-interface {v4}, Ljava/util/List;->iterator()Ljava/util/Iterator;
 
     move-result-object v2
@@ -2321,7 +2110,6 @@
 
     check-cast v5, Ljava/lang/String;
 
-    .line 771
     .local v5, "permission":Ljava/lang/String;
     sget-object v10, Lcom/android/server/enterprise/application/ApplicationPermissionControlPolicy;->mAppPermissionControl:Ljava/util/HashMap;
 
@@ -2337,7 +2125,6 @@
 
     check-cast v7, Ljava/util/Map;
 
-    .line 773
     .local v7, "permissionMap":Ljava/util/Map;, "Ljava/util/Map<Ljava/lang/String;Ljava/util/Set<Ljava/lang/String;>;>;"
     if-eqz v7, :cond_3
 
@@ -2347,14 +2134,12 @@
 
     if-nez v10, :cond_3
 
-    .line 776
     invoke-interface {v7, p1}, Ljava/util/Map;->get(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object v1
 
     check-cast v1, Ljava/util/Set;
 
-    .line 777
     .local v1, "bwPkgList":Ljava/util/Set;, "Ljava/util/Set<Ljava/lang/String;>;"
     if-eqz v1, :cond_3
 
@@ -2364,21 +2149,18 @@
 
     if-nez v10, :cond_3
 
-    .line 780
     new-instance v10, Ljava/util/TreeSet;
 
     invoke-direct {v10}, Ljava/util/TreeSet;-><init>()V
 
     invoke-interface {v6, v5, v10}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 781
     invoke-interface {v6, v5, v1}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
     goto :goto_2
 
-    .line 750
     .end local v0    # "appPermContInfo":Landroid/app/enterprise/AppPermissionControlInfo;
     .end local v1    # "bwPkgList":Ljava/util/Set;, "Ljava/util/Set<Ljava/lang/String;>;"
     .end local v2    # "i$":Ljava/util/Iterator;
@@ -2396,7 +2178,6 @@
 
     throw v10
 
-    .line 784
     .restart local v0    # "appPermContInfo":Landroid/app/enterprise/AppPermissionControlInfo;
     .restart local v2    # "i$":Ljava/util/Iterator;
     .restart local v3    # "permBWList":Ljava/util/List;, "Ljava/util/List<Landroid/app/enterprise/AppPermissionControlInfo;>;"
@@ -2414,12 +2195,10 @@
 
     if-nez v10, :cond_2
 
-    .line 785
     invoke-interface {v3, v0}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
     goto :goto_1
 
-    .line 788
     .end local v0    # "appPermContInfo":Landroid/app/enterprise/AppPermissionControlInfo;
     .end local v2    # "i$":Ljava/util/Iterator;
     .end local v6    # "permissionListMap":Ljava/util/Map;, "Ljava/util/Map<Ljava/lang/String;Ljava/util/Set<Ljava/lang/String;>;>;"
@@ -2433,7 +2212,6 @@
 
     if-eqz v10, :cond_0
 
-    .line 789
     const/4 v3, 0x0
 
     goto/16 :goto_0
@@ -2452,7 +2230,6 @@
     .end annotation
 
     .prologue
-    .line 1237
     monitor-enter p0
 
     :try_start_0
@@ -2460,7 +2237,6 @@
 
     invoke-direct {v1}, Ljava/util/ArrayList;-><init>()V
 
-    .line 1239
     .local v1, "permList":Ljava/util/List;, "Ljava/util/List<Ljava/lang/String;>;"
     sget-object v5, Lcom/android/server/enterprise/application/ApplicationPermissionControlPolicy;->mAppPermissionControl:Ljava/util/HashMap;
 
@@ -2472,7 +2248,6 @@
 
     move-result-object v4
 
-    .line 1241
     .local v4, "uidItr":Ljava/util/Iterator;, "Ljava/util/Iterator<Ljava/lang/Integer;>;"
     :cond_0
     invoke-interface {v4}, Ljava/util/Iterator;->hasNext()Z
@@ -2481,14 +2256,12 @@
 
     if-eqz v5, :cond_2
 
-    .line 1242
     invoke-interface {v4}, Ljava/util/Iterator;->next()Ljava/lang/Object;
 
     move-result-object v3
 
     check-cast v3, Ljava/lang/Integer;
 
-    .line 1243
     .local v3, "uid":Ljava/lang/Integer;
     sget-object v5, Lcom/android/server/enterprise/application/ApplicationPermissionControlPolicy;->mAppPermissionControl:Ljava/util/HashMap;
 
@@ -2506,7 +2279,6 @@
 
     move-result-object v2
 
-    .line 1244
     .local v2, "strItr":Ljava/util/Iterator;, "Ljava/util/Iterator<Ljava/lang/String;>;"
     :cond_1
     :goto_0
@@ -2516,14 +2288,12 @@
 
     if-eqz v5, :cond_0
 
-    .line 1245
     invoke-interface {v2}, Ljava/util/Iterator;->next()Ljava/lang/Object;
 
     move-result-object v0
 
     check-cast v0, Ljava/lang/String;
 
-    .line 1246
     .local v0, "perm":Ljava/lang/String;
     invoke-interface {v1, v0}, Ljava/util/List;->contains(Ljava/lang/Object;)Z
 
@@ -2531,14 +2301,12 @@
 
     if-nez v5, :cond_1
 
-    .line 1247
     invoke-interface {v1, v0}, Ljava/util/List;->add(Ljava/lang/Object;)Z
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
     goto :goto_0
 
-    .line 1237
     .end local v0    # "perm":Ljava/lang/String;
     .end local v1    # "permList":Ljava/util/List;, "Ljava/util/List<Ljava/lang/String;>;"
     .end local v2    # "strItr":Ljava/util/Iterator;, "Ljava/util/Iterator<Ljava/lang/String;>;"
@@ -2551,7 +2319,6 @@
 
     throw v5
 
-    .line 1251
     .restart local v1    # "permList":Ljava/util/List;, "Ljava/util/List<Ljava/lang/String;>;"
     .restart local v4    # "uidItr":Ljava/util/Iterator;, "Ljava/util/Iterator<Ljava/lang/Integer;>;"
     :cond_2
@@ -2567,15 +2334,12 @@
     .prologue
     const/4 v1, 0x0
 
-    .line 1313
     if-nez p0, :cond_1
 
-    .line 1317
     :cond_0
     :goto_0
     return-object v1
 
-    .line 1313
     :cond_1
     :try_start_0
     invoke-virtual {p0}, Ljava/lang/String;->trim()Ljava/lang/String;
@@ -2594,11 +2358,9 @@
 
     goto :goto_0
 
-    .line 1314
     :catch_0
     move-exception v0
 
-    .line 1315
     .local v0, "e":Ljava/lang/Exception;
     invoke-virtual {v0}, Ljava/lang/Exception;->printStackTrace()V
 
@@ -2610,7 +2372,6 @@
     .param p1, "adminUid"    # I
 
     .prologue
-    .line 418
     monitor-enter p0
 
     :try_start_0
@@ -2618,7 +2379,6 @@
 
     invoke-direct {v3}, Ljava/util/ArrayList;-><init>()V
 
-    .line 420
     .local v3, "grantPermList":Ljava/util/List;, "Ljava/util/List<Ljava/lang/String;>;"
     sget-object v12, Lcom/android/server/enterprise/application/ApplicationPermissionControlPolicy;->mAppPermissionControl:Ljava/util/HashMap;
 
@@ -2632,7 +2392,6 @@
 
     if-eqz v12, :cond_2
 
-    .line 421
     :cond_0
     const-string v12, "ApplicationPermissionControlPolicy"
 
@@ -2642,14 +2401,12 @@
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 467
     :cond_1
     :goto_0
     monitor-exit p0
 
     return-void
 
-    .line 424
     :cond_2
     :try_start_1
     invoke-direct {p0, p1}, Lcom/android/server/enterprise/application/ApplicationPermissionControlPolicy;->getPackageNameForUid(I)Ljava/lang/String;
@@ -2658,11 +2415,9 @@
 
     move-result-object v1
 
-    .line 425
     .local v1, "adminPkgName":Ljava/lang/String;
     const/4 v8, 0x0
 
-    .line 427
     .local v8, "pkgInfo":Landroid/content/pm/PackageInfo;
     :try_start_2
     iget-object v12, p0, Lcom/android/server/enterprise/application/ApplicationPermissionControlPolicy;->mContext:Landroid/content/Context;
@@ -2680,7 +2435,6 @@
 
     move-result-object v8
 
-    .line 434
     if-eqz v1, :cond_3
 
     if-eqz v8, :cond_3
@@ -2690,7 +2444,6 @@
 
     if-nez v12, :cond_4
 
-    .line 435
     :cond_3
     const-string v12, "ApplicationPermissionControlPolicy"
 
@@ -2702,7 +2455,6 @@
 
     goto :goto_0
 
-    .line 418
     .end local v1    # "adminPkgName":Ljava/lang/String;
     .end local v3    # "grantPermList":Ljava/util/List;, "Ljava/util/List<Ljava/lang/String;>;"
     .end local v8    # "pkgInfo":Landroid/content/pm/PackageInfo;
@@ -2713,19 +2465,16 @@
 
     throw v12
 
-    .line 429
     .restart local v1    # "adminPkgName":Ljava/lang/String;
     .restart local v3    # "grantPermList":Ljava/util/List;, "Ljava/util/List<Ljava/lang/String;>;"
     .restart local v8    # "pkgInfo":Landroid/content/pm/PackageInfo;
     :catch_0
     move-exception v2
 
-    .line 430
     .local v2, "e":Ljava/lang/Exception;
     :try_start_4
     invoke-virtual {v2}, Ljava/lang/Exception;->printStackTrace()V
 
-    .line 431
     const-string v12, "ApplicationPermissionControlPolicy"
 
     const-string v13, "handleAdminAdded failed"
@@ -2734,7 +2483,6 @@
 
     goto :goto_0
 
-    .line 438
     .end local v2    # "e":Ljava/lang/Exception;
     :cond_4
     iget-object v12, v8, Landroid/content/pm/PackageInfo;->requestedPermissions:[Ljava/lang/String;
@@ -2743,7 +2491,6 @@
 
     move-result-object v0
 
-    .line 439
     .local v0, "PermissionList":Ljava/util/List;, "Ljava/util/List<Ljava/lang/String;>;"
     invoke-interface {v0}, Ljava/util/List;->iterator()Ljava/util/Iterator;
 
@@ -2763,7 +2510,6 @@
 
     check-cast v6, Ljava/lang/String;
 
-    .line 441
     .local v6, "permission":Ljava/lang/String;
     sget-object v12, Lcom/android/server/enterprise/application/ApplicationPermissionControlPolicy;->mAppPermissionControl:Ljava/util/HashMap;
 
@@ -2775,7 +2521,6 @@
 
     move-result-object v11
 
-    .line 442
     .local v11, "uidItr":Ljava/util/Iterator;, "Ljava/util/Iterator<Ljava/lang/Integer;>;"
     :cond_6
     :goto_1
@@ -2785,14 +2530,12 @@
 
     if-eqz v12, :cond_5
 
-    .line 443
     invoke-interface {v11}, Ljava/util/Iterator;->next()Ljava/lang/Object;
 
     move-result-object v10
 
     check-cast v10, Ljava/lang/Integer;
 
-    .line 444
     .local v10, "uid":Ljava/lang/Integer;
     sget-object v12, Lcom/android/server/enterprise/application/ApplicationPermissionControlPolicy;->mAppPermissionControl:Ljava/util/HashMap;
 
@@ -2808,11 +2551,9 @@
 
     check-cast v7, Ljava/util/Map;
 
-    .line 446
     .local v7, "permissionMap":Ljava/util/Map;, "Ljava/util/Map<Ljava/lang/String;Ljava/util/Set<Ljava/lang/String;>;>;"
     if-eqz v7, :cond_6
 
-    .line 448
     const-string v12, "Blacklist"
 
     invoke-interface {v7, v12}, Ljava/util/Map;->get(Ljava/lang/Object;)Ljava/lang/Object;
@@ -2843,13 +2584,11 @@
 
     if-eqz v12, :cond_6
 
-    .line 450
     :cond_7
     invoke-interface {v3, v6}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
     goto :goto_1
 
-    .line 455
     .end local v6    # "permission":Ljava/lang/String;
     .end local v7    # "permissionMap":Ljava/util/Map;, "Ljava/util/Map<Ljava/lang/String;Ljava/util/Set<Ljava/lang/String;>;>;"
     .end local v10    # "uid":Ljava/lang/Integer;
@@ -2861,16 +2600,13 @@
 
     if-nez v12, :cond_1
 
-    .line 456
     new-instance v9, Ljava/util/ArrayList;
 
     invoke-direct {v9}, Ljava/util/ArrayList;-><init>()V
 
-    .line 457
     .local v9, "pkgNameList":Ljava/util/List;, "Ljava/util/List<Ljava/lang/String;>;"
     invoke-interface {v9, v1}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    .line 458
     invoke-interface {v3}, Ljava/util/List;->iterator()Ljava/util/Iterator;
 
     move-result-object v4
@@ -2890,7 +2626,6 @@
     :try_end_4
     .catchall {:try_start_4 .. :try_end_4} :catchall_0
 
-    .line 460
     .local v5, "perm":Ljava/lang/String;
     :try_start_5
     iget-object v12, p0, Lcom/android/server/enterprise/application/ApplicationPermissionControlPolicy;->mPackageManager:Landroid/content/pm/IPackageManager;
@@ -2902,11 +2637,9 @@
 
     goto :goto_2
 
-    .line 461
     :catch_1
     move-exception v2
 
-    .line 462
     .local v2, "e":Landroid/os/RemoteException;
     :try_start_6
     invoke-virtual {v2}, Landroid/os/RemoteException;->printStackTrace()V
@@ -2921,12 +2654,10 @@
     .param p1, "adminUid"    # I
 
     .prologue
-    .line 413
     const-string v0, "Alllist"
 
     invoke-direct {p0, p1, v0}, Lcom/android/server/enterprise/application/ApplicationPermissionControlPolicy;->clearBWList(ILjava/lang/String;)V
 
-    .line 415
     return-void
 .end method
 
@@ -2943,7 +2674,6 @@
     .end annotation
 
     .prologue
-    .line 627
     .local p1, "pkgNameList":Ljava/util/List;, "Ljava/util/List<Ljava/lang/String;>;"
     :try_start_0
     iget-object v7, p0, Lcom/android/server/enterprise/application/ApplicationPermissionControlPolicy;->mContext:Landroid/content/Context;
@@ -2956,13 +2686,11 @@
 
     check-cast v0, Landroid/app/ActivityManager;
 
-    .line 628
     .local v0, "aMgr":Landroid/app/ActivityManager;
     invoke-virtual {v0}, Landroid/app/ActivityManager;->getRunningAppProcesses()Ljava/util/List;
 
     move-result-object v5
 
-    .line 629
     .local v5, "runninAppinfList":Ljava/util/List;, "Ljava/util/List<Landroid/app/ActivityManager$RunningAppProcessInfo;>;"
     if-eqz v5, :cond_0
 
@@ -2972,7 +2700,6 @@
 
     if-gtz v7, :cond_2
 
-    .line 630
     :cond_0
     const-string v7, "ApplicationPermissionControlPolicy"
 
@@ -2982,22 +2709,18 @@
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 659
     .end local v0    # "aMgr":Landroid/app/ActivityManager;
     .end local v5    # "runninAppinfList":Ljava/util/List;, "Ljava/util/List<Landroid/app/ActivityManager$RunningAppProcessInfo;>;"
     :cond_1
     :goto_0
     return-void
 
-    .line 633
     :catch_0
     move-exception v2
 
-    .line 634
     .local v2, "e":Ljava/lang/Exception;
     invoke-virtual {v2}, Ljava/lang/Exception;->printStackTrace()V
 
-    .line 635
     const-string v7, "ApplicationPermissionControlPolicy"
 
     const-string v8, "killApplications failed"
@@ -3006,7 +2729,6 @@
 
     goto :goto_0
 
-    .line 639
     .end local v2    # "e":Ljava/lang/Exception;
     .restart local v0    # "aMgr":Landroid/app/ActivityManager;
     .restart local v5    # "runninAppinfList":Ljava/util/List;, "Ljava/util/List<Landroid/app/ActivityManager$RunningAppProcessInfo;>;"
@@ -3015,11 +2737,9 @@
 
     move-result-object v1
 
-    .line 640
     .local v1, "am":Landroid/app/IActivityManager;
     if-nez v1, :cond_3
 
-    .line 641
     const-string v7, "ApplicationPermissionControlPolicy"
 
     const-string v8, "IActivityManager is null"
@@ -3028,7 +2748,6 @@
 
     goto :goto_0
 
-    .line 645
     :cond_3
     invoke-interface {v5}, Ljava/util/List;->iterator()Ljava/util/Iterator;
 
@@ -3049,7 +2768,6 @@
 
     check-cast v6, Landroid/app/ActivityManager$RunningAppProcessInfo;
 
-    .line 646
     .local v6, "runningApplicationInfo":Landroid/app/ActivityManager$RunningAppProcessInfo;
     iget-object v7, v6, Landroid/app/ActivityManager$RunningAppProcessInfo;->processName:Ljava/lang/String;
 
@@ -3059,7 +2777,6 @@
 
     if-eqz v7, :cond_4
 
-    .line 648
     :try_start_1
     const-string v7, "ApplicationPermissionControlPolicy"
 
@@ -3067,7 +2784,7 @@
 
     invoke-direct {v8}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v9, "pkgName:"
+    const-string v9, "pkgName:"
 
     invoke-virtual {v8, v9}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -3091,7 +2808,6 @@
 
     invoke-static {v7, v8}, Lcom/android/server/enterprise/log/Log;->i(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 650
     iget-object v7, v6, Landroid/app/ActivityManager$RunningAppProcessInfo;->processName:Ljava/lang/String;
 
     iget v8, v6, Landroid/app/ActivityManager$RunningAppProcessInfo;->uid:I
@@ -3102,15 +2818,12 @@
 
     goto :goto_1
 
-    .line 652
     :catch_1
     move-exception v3
 
-    .line 653
     .local v3, "e1":Ljava/lang/Exception;
     invoke-virtual {v3}, Ljava/lang/Exception;->printStackTrace()V
 
-    .line 654
     const-string v7, "ApplicationPermissionControlPolicy"
 
     const-string v8, "killApplicationProcess failed"
@@ -3124,23 +2837,19 @@
     .locals 14
 
     .prologue
-    .line 1255
     const/4 v6, 0x0
 
-    .line 1256
     .local v6, "permList":Ljava/util/List;, "Ljava/util/List<Ljava/lang/String;>;"
     const-string v12, "ApplicationPermissionControlPolicy"
 
-    const-string/jumbo v13, "reinforceApplicationPermissionControl"
+    const-string v13, "reinforceApplicationPermissionControl"
 
     invoke-static {v12, v13}, Lcom/android/server/enterprise/log/Log;->i(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 1257
     invoke-direct {p0}, Lcom/android/server/enterprise/application/ApplicationPermissionControlPolicy;->getPermissionList()Ljava/util/List;
 
     move-result-object v6
 
-    .line 1258
     if-eqz v6, :cond_0
 
     invoke-interface {v6}, Ljava/util/List;->isEmpty()Z
@@ -3149,12 +2858,10 @@
 
     if-eqz v12, :cond_1
 
-    .line 1292
     :cond_0
     :goto_0
     return-void
 
-    .line 1261
     :cond_1
     sget-object v12, Lcom/android/server/enterprise/application/ApplicationPermissionControlPolicy;->mAppPermissionControl:Ljava/util/HashMap;
 
@@ -3166,13 +2873,11 @@
 
     move-result-object v11
 
-    .line 1262
     .local v11, "uidItr":Ljava/util/Iterator;, "Ljava/util/Iterator<Ljava/lang/Integer;>;"
     new-instance v8, Ljava/util/HashMap;
 
     invoke-direct {v8}, Ljava/util/HashMap;-><init>()V
 
-    .line 1263
     .local v8, "permissionListMap":Ljava/util/Map;, "Ljava/util/Map<Ljava/lang/String;Ljava/util/Set<Ljava/lang/String;>;>;"
     invoke-interface {v6}, Ljava/util/List;->iterator()Ljava/util/Iterator;
 
@@ -3193,7 +2898,6 @@
 
     check-cast v7, Ljava/lang/String;
 
-    .line 1264
     .local v7, "permission":Ljava/lang/String;
     sget-object v12, Lcom/android/server/enterprise/application/ApplicationPermissionControlPolicy;->mAppPermissionControl:Ljava/util/HashMap;
 
@@ -3205,12 +2909,10 @@
 
     move-result-object v11
 
-    .line 1265
     new-instance v1, Ljava/util/TreeSet;
 
     invoke-direct {v1}, Ljava/util/TreeSet;-><init>()V
 
-    .line 1266
     .local v1, "eBLPkgListAllAdmin":Ljava/util/Set;, "Ljava/util/Set<Ljava/lang/String;>;"
     :cond_3
     :goto_2
@@ -3220,14 +2922,12 @@
 
     if-eqz v12, :cond_4
 
-    .line 1267
     invoke-interface {v11}, Ljava/util/Iterator;->next()Ljava/lang/Object;
 
     move-result-object v10
 
     check-cast v10, Ljava/lang/Integer;
 
-    .line 1268
     .local v10, "uid":Ljava/lang/Integer;
     invoke-virtual {v10}, Ljava/lang/Integer;->intValue()I
 
@@ -3237,7 +2937,6 @@
 
     move-result-object v2
 
-    .line 1269
     .local v2, "eBLPkgOneAdmin":Ljava/util/List;, "Ljava/util/List<Ljava/lang/String;>;"
     if-eqz v2, :cond_3
 
@@ -3247,12 +2946,10 @@
 
     if-nez v12, :cond_3
 
-    .line 1270
     invoke-interface {v1, v2}, Ljava/util/Set;->addAll(Ljava/util/Collection;)Z
 
     goto :goto_2
 
-    .line 1272
     .end local v2    # "eBLPkgOneAdmin":Ljava/util/List;, "Ljava/util/List<Ljava/lang/String;>;"
     .end local v10    # "uid":Ljava/lang/Integer;
     :cond_4
@@ -3262,12 +2959,10 @@
 
     if-nez v12, :cond_2
 
-    .line 1273
     invoke-interface {v8, v7, v1}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     goto :goto_1
 
-    .line 1276
     .end local v1    # "eBLPkgListAllAdmin":Ljava/util/Set;, "Ljava/util/Set<Ljava/lang/String;>;"
     .end local v7    # "permission":Ljava/lang/String;
     :cond_5
@@ -3277,7 +2972,6 @@
 
     if-nez v12, :cond_0
 
-    .line 1280
     invoke-interface {v8}, Ljava/util/Map;->keySet()Ljava/util/Set;
 
     move-result-object v12
@@ -3286,7 +2980,6 @@
 
     move-result-object v4
 
-    .line 1281
     .local v4, "perStrItr":Ljava/util/Iterator;, "Ljava/util/Iterator<Ljava/lang/String;>;"
     :goto_3
     invoke-interface {v4}, Ljava/util/Iterator;->hasNext()Z
@@ -3295,14 +2988,12 @@
 
     if-eqz v12, :cond_6
 
-    .line 1282
     invoke-interface {v4}, Ljava/util/Iterator;->next()Ljava/lang/Object;
 
     move-result-object v5
 
     check-cast v5, Ljava/lang/String;
 
-    .line 1283
     .local v5, "perm":Ljava/lang/String;
     new-instance v9, Ljava/util/ArrayList;
 
@@ -3314,7 +3005,6 @@
 
     invoke-direct {v9, v12}, Ljava/util/ArrayList;-><init>(Ljava/util/Collection;)V
 
-    .line 1285
     .local v9, "pkgNameList":Ljava/util/List;, "Ljava/util/List<Ljava/lang/String;>;"
     :try_start_0
     iget-object v12, p0, Lcom/android/server/enterprise/application/ApplicationPermissionControlPolicy;->mPackageManager:Landroid/content/pm/IPackageManager;
@@ -3325,24 +3015,21 @@
 
     goto :goto_3
 
-    .line 1287
     :catch_0
     move-exception v0
 
-    .line 1288
     .local v0, "e":Landroid/os/RemoteException;
     invoke-virtual {v0}, Landroid/os/RemoteException;->printStackTrace()V
 
     goto :goto_3
 
-    .line 1291
     .end local v0    # "e":Landroid/os/RemoteException;
     .end local v5    # "perm":Ljava/lang/String;
     .end local v9    # "pkgNameList":Ljava/util/List;, "Ljava/util/List<Ljava/lang/String;>;"
     :cond_6
     const-string v12, "ApplicationPermissionControlPolicy"
 
-    const-string/jumbo v13, "reinforceApplicationPermissionControl done"
+    const-string v13, "reinforceApplicationPermissionControl done"
 
     invoke-static {v12, v13}, Lcom/android/server/enterprise/log/Log;->i(Ljava/lang/String;Ljava/lang/String;)V
 
@@ -3373,17 +3060,14 @@
     .end annotation
 
     .prologue
-    .line 1190
     .local p3, "pkgNameList":Ljava/util/List;, "Ljava/util/List<Ljava/lang/String;>;"
     monitor-enter p0
 
     :try_start_0
     invoke-direct {p0, p1, p2}, Lcom/android/server/enterprise/application/ApplicationPermissionControlPolicy;->createAdminMap(ILjava/lang/String;)V
 
-    .line 1192
     if-eqz p4, :cond_0
 
-    .line 1193
     sget-object v1, Lcom/android/server/enterprise/application/ApplicationPermissionControlPolicy;->mAppPermissionControl:Ljava/util/HashMap;
 
     invoke-static {p1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
@@ -3402,12 +3086,10 @@
 
     if-nez v1, :cond_0
 
-    .line 1195
     new-instance v11, Ljava/util/HashMap;
 
     invoke-direct {v11}, Ljava/util/HashMap;-><init>()V
 
-    .line 1196
     .local v11, "permissionMap":Ljava/util/Map;, "Ljava/util/Map<Ljava/lang/String;Ljava/util/Set<Ljava/lang/String;>;>;"
     const-string v1, "Whitelist"
 
@@ -3417,7 +3099,6 @@
 
     invoke-interface {v11, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 1197
     const-string v1, "Blacklist"
 
     new-instance v2, Ljava/util/TreeSet;
@@ -3426,7 +3107,6 @@
 
     invoke-interface {v11, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 1198
     sget-object v1, Lcom/android/server/enterprise/application/ApplicationPermissionControlPolicy;->mAppPermissionControl:Ljava/util/HashMap;
 
     invoke-static {p1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
@@ -3441,12 +3121,10 @@
 
     invoke-interface {v1, p2, v11}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 1202
     .end local v11    # "permissionMap":Ljava/util/Map;, "Ljava/util/Map<Ljava/lang/String;Ljava/util/Set<Ljava/lang/String;>;>;"
     :cond_0
     const/4 v8, 0x0
 
-    .line 1203
     .local v8, "ePkgList":Ljava/util/List;, "Ljava/util/List<Ljava/lang/String;>;"
     const-string v1, "Blacklist"
 
@@ -3458,12 +3136,10 @@
 
     if-eqz v1, :cond_1
 
-    .line 1204
     invoke-direct/range {p0 .. p4}, Lcom/android/server/enterprise/application/ApplicationPermissionControlPolicy;->getAppPermissionControlBL(ILjava/lang/String;Ljava/util/List;Z)Ljava/util/List;
 
     move-result-object v8
 
-    .line 1209
     :goto_0
     invoke-interface {p3}, Ljava/util/List;->iterator()Ljava/util/Iterator;
 
@@ -3494,18 +3170,14 @@
 
     move-object/from16 v6, p5
 
-    .line 1211
     invoke-direct/range {v1 .. v6}, Lcom/android/server/enterprise/application/ApplicationPermissionControlPolicy;->updateAppPermissionControlBWState(ILjava/lang/String;Ljava/lang/String;ZLjava/lang/String;)V
 
-    .line 1213
     if-eqz p4, :cond_2
 
-    .line 1214
     new-instance v7, Landroid/content/ContentValues;
 
     invoke-direct {v7}, Landroid/content/ContentValues;-><init>()V
 
-    .line 1215
     .local v7, "cv":Landroid/content/ContentValues;
     const-string v1, "ListType"
 
@@ -3513,12 +3185,10 @@
 
     invoke-virtual {v7, v1, v0}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 1216
-    const-string/jumbo v1, "permission"
+    const-string v1, "permission"
 
     invoke-virtual {v7, v1, p2}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 1217
     const-string v1, "adminUid"
 
     invoke-static {p1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
@@ -3527,12 +3197,10 @@
 
     invoke-virtual {v7, v1, v2}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/Integer;)V
 
-    .line 1218
     const-string v1, "Object"
 
     invoke-virtual {v7, v1, v4}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 1219
     iget-object v1, p0, Lcom/android/server/enterprise/application/ApplicationPermissionControlPolicy;->mEdmStorageProvider:Lcom/android/server/enterprise/storage/EdmStorageProvider;
 
     const-string v2, "APPLICATION_PERMISSIONCONTROL"
@@ -3543,7 +3211,6 @@
 
     goto :goto_1
 
-    .line 1190
     .end local v4    # "pkgName":Ljava/lang/String;
     .end local v7    # "cv":Landroid/content/ContentValues;
     .end local v8    # "ePkgList":Ljava/util/List;, "Ljava/util/List<Ljava/lang/String;>;"
@@ -3555,7 +3222,6 @@
 
     throw v1
 
-    .line 1206
     .restart local v8    # "ePkgList":Ljava/util/List;, "Ljava/util/List<Ljava/lang/String;>;"
     :cond_1
     :try_start_1
@@ -3565,7 +3231,6 @@
 
     goto :goto_0
 
-    .line 1222
     .restart local v4    # "pkgName":Ljava/lang/String;
     .restart local v10    # "i$":Ljava/util/Iterator;
     :cond_2
@@ -3573,7 +3238,6 @@
 
     invoke-direct {v9}, Ljava/util/HashMap;-><init>()V
 
-    .line 1223
     .local v9, "fieldsAndValues":Ljava/util/HashMap;, "Ljava/util/HashMap<Ljava/lang/String;Ljava/lang/String;>;"
     const-string v1, "adminUid"
 
@@ -3583,24 +3247,20 @@
 
     invoke-virtual {v9, v1, v2}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 1224
-    const-string/jumbo v1, "permission"
+    const-string v1, "permission"
 
     invoke-virtual {v9, v1, p2}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 1225
     const-string v1, "ListType"
 
     move-object/from16 v0, p5
 
     invoke-virtual {v9, v1, v0}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 1226
     const-string v1, "Object"
 
     invoke-virtual {v9, v1, v4}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 1227
     iget-object v1, p0, Lcom/android/server/enterprise/application/ApplicationPermissionControlPolicy;->mEdmStorageProvider:Lcom/android/server/enterprise/storage/EdmStorageProvider;
 
     const-string v2, "APPLICATION_PERMISSIONCONTROL"
@@ -3611,7 +3271,6 @@
 
     goto :goto_1
 
-    .line 1233
     .end local v4    # "pkgName":Ljava/lang/String;
     .end local v9    # "fieldsAndValues":Ljava/util/HashMap;, "Ljava/util/HashMap<Ljava/lang/String;Ljava/lang/String;>;"
     :cond_3
@@ -3629,10 +3288,8 @@
     .param p5, "listType"    # Ljava/lang/String;
 
     .prologue
-    .line 866
     if-eqz p4, :cond_2
 
-    .line 867
     sget-object v1, Lcom/android/server/enterprise/application/ApplicationPermissionControlPolicy;->mAppPermissionControl:Ljava/util/HashMap;
 
     invoke-static {p1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
@@ -3651,12 +3308,10 @@
 
     if-nez v1, :cond_0
 
-    .line 869
     new-instance v0, Ljava/util/HashMap;
 
     invoke-direct {v0}, Ljava/util/HashMap;-><init>()V
 
-    .line 870
     .local v0, "permissionMap":Ljava/util/Map;, "Ljava/util/Map<Ljava/lang/String;Ljava/util/Set<Ljava/lang/String;>;>;"
     const-string v1, "Whitelist"
 
@@ -3666,7 +3321,6 @@
 
     invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 871
     const-string v1, "Blacklist"
 
     new-instance v2, Ljava/util/TreeSet;
@@ -3675,7 +3329,6 @@
 
     invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 872
     sget-object v1, Lcom/android/server/enterprise/application/ApplicationPermissionControlPolicy;->mAppPermissionControl:Ljava/util/HashMap;
 
     invoke-static {p1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
@@ -3690,7 +3343,6 @@
 
     invoke-interface {v1, p2, v0}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 874
     .end local v0    # "permissionMap":Ljava/util/Map;, "Ljava/util/Map<Ljava/lang/String;Ljava/util/Set<Ljava/lang/String;>;>;"
     :cond_0
     sget-object v1, Lcom/android/server/enterprise/application/ApplicationPermissionControlPolicy;->mAppPermissionControl:Ljava/util/HashMap;
@@ -3719,12 +3371,10 @@
 
     invoke-interface {v1, p3}, Ljava/util/Set;->add(Ljava/lang/Object;)Z
 
-    .line 890
     :cond_1
     :goto_0
     return-void
 
-    .line 877
     :cond_2
     sget-object v1, Lcom/android/server/enterprise/application/ApplicationPermissionControlPolicy;->mAppPermissionControl:Ljava/util/HashMap;
 
@@ -3744,7 +3394,6 @@
 
     if-eqz v1, :cond_1
 
-    .line 879
     sget-object v1, Lcom/android/server/enterprise/application/ApplicationPermissionControlPolicy;->mAppPermissionControl:Ljava/util/HashMap;
 
     invoke-static {p1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
@@ -3798,7 +3447,6 @@
     .end annotation
 
     .prologue
-    .line 895
     .local p3, "iPkgNameList":Ljava/util/List;, "Ljava/util/List<Ljava/lang/String;>;"
     monitor-enter p0
 
@@ -3807,10 +3455,8 @@
 
     if-nez v10, :cond_0
 
-    .line 896
     invoke-virtual {p0}, Lcom/android/server/enterprise/application/ApplicationPermissionControlPolicy;->loadApplicationPermissionControlList()V
 
-    .line 898
     :cond_0
     if-eqz p3, :cond_1
 
@@ -3822,18 +3468,15 @@
 
     if-eqz v10, :cond_3
 
-    .line 899
     :cond_1
     const/4 v7, 0x0
 
-    .line 977
     :cond_2
     :goto_0
     monitor-exit p0
 
     return-object v7
 
-    .line 901
     :cond_3
     :try_start_1
     invoke-static {p2}, Lcom/android/server/enterprise/application/ApplicationPermissionControlPolicy;->getValidStr(Ljava/lang/String;)Ljava/lang/String;
@@ -3842,18 +3485,15 @@
 
     if-nez v10, :cond_4
 
-    .line 902
     const/4 v7, 0x0
 
     goto :goto_0
 
-    .line 907
     :cond_4
     new-instance v7, Ljava/util/ArrayList;
 
     invoke-direct {v7}, Ljava/util/ArrayList;-><init>()V
 
-    .line 908
     .local v7, "pkgNameList":Ljava/util/List;, "Ljava/util/List<Ljava/lang/String;>;"
     invoke-interface/range {p3 .. p3}, Ljava/util/List;->iterator()Ljava/util/Iterator;
 
@@ -3874,16 +3514,13 @@
 
     check-cast v6, Ljava/lang/String;
 
-    .line 909
     .local v6, "pkgName":Ljava/lang/String;
     invoke-static {v6}, Lcom/android/server/enterprise/application/ApplicationPermissionControlPolicy;->getValidStr(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v6
 
-    .line 910
     if-eqz v6, :cond_5
 
-    .line 911
     invoke-virtual {v6}, Ljava/lang/String;->trim()Ljava/lang/String;
 
     move-result-object v10
@@ -3894,7 +3531,6 @@
 
     goto :goto_1
 
-    .line 895
     .end local v5    # "i$":Ljava/util/Iterator;
     .end local v6    # "pkgName":Ljava/lang/String;
     .end local v7    # "pkgNameList":Ljava/util/List;, "Ljava/util/List<Ljava/lang/String;>;"
@@ -3905,7 +3541,6 @@
 
     throw v10
 
-    .line 913
     .restart local v5    # "i$":Ljava/util/Iterator;
     .restart local v7    # "pkgNameList":Ljava/util/List;, "Ljava/util/List<Ljava/lang/String;>;"
     :cond_6
@@ -3916,12 +3551,10 @@
 
     if-eqz v10, :cond_7
 
-    .line 914
     const/4 v7, 0x0
 
     goto :goto_0
 
-    .line 917
     :cond_7
     iget-object v10, p0, Lcom/android/server/enterprise/application/ApplicationPermissionControlPolicy;->mEdmStorageProvider:Lcom/android/server/enterprise/storage/EdmStorageProvider;
 
@@ -3929,7 +3562,6 @@
 
     move-result-object v2
 
-    .line 918
     .local v2, "adminUidList":Ljava/util/ArrayList;, "Ljava/util/ArrayList<Ljava/lang/Integer;>;"
     invoke-interface {v7}, Ljava/util/List;->iterator()Ljava/util/Iterator;
 
@@ -3951,7 +3583,6 @@
     :try_end_2
     .catchall {:try_start_2 .. :try_end_2} :catchall_0
 
-    .line 920
     .restart local v6    # "pkgName":Ljava/lang/String;
     :try_start_3
     const-string v10, "*"
@@ -3962,12 +3593,10 @@
 
     if-nez v10, :cond_8
 
-    .line 922
     invoke-static {}, Landroid/os/Binder;->clearCallingIdentity()J
 
     move-result-wide v8
 
-    .line 923
     .local v8, "token":J
     iget-object v10, p0, Lcom/android/server/enterprise/application/ApplicationPermissionControlPolicy;->mContext:Landroid/content/Context;
 
@@ -3981,21 +3610,17 @@
 
     move-result-object v3
 
-    .line 924
     .local v3, "appInfo":Landroid/content/pm/ApplicationInfo;
     invoke-static {v8, v9}, Landroid/os/Binder;->restoreCallingIdentity(J)V
 
-    .line 925
     if-eqz v3, :cond_8
 
-    .line 926
     iget v10, v3, Landroid/content/pm/ApplicationInfo;->flags:I
 
     and-int/lit8 v10, v10, 0x1
 
     if-eqz v10, :cond_9
 
-    .line 927
     const-string v10, "ApplicationPermissionControlPolicy"
 
     new-instance v11, Ljava/lang/StringBuilder;
@@ -4018,12 +3643,10 @@
 
     invoke-static {v10, v11}, Lcom/android/server/enterprise/log/Log;->i(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 928
     const/4 v7, 0x0
 
     goto/16 :goto_0
 
-    .line 931
     :cond_9
     if-eqz v2, :cond_8
 
@@ -4033,7 +3656,6 @@
 
     if-nez v10, :cond_8
 
-    .line 932
     iget v10, v3, Landroid/content/pm/ApplicationInfo;->uid:I
 
     invoke-static {v10}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
@@ -4046,7 +3668,6 @@
 
     if-eqz v10, :cond_8
 
-    .line 933
     const-string v10, "ApplicationPermissionControlPolicy"
 
     new-instance v11, Ljava/lang/StringBuilder;
@@ -4072,31 +3693,26 @@
     .catch Landroid/content/pm/PackageManager$NameNotFoundException; {:try_start_3 .. :try_end_3} :catch_0
     .catchall {:try_start_3 .. :try_end_3} :catchall_0
 
-    .line 934
     const/4 v7, 0x0
 
     goto/16 :goto_0
 
-    .line 938
     .end local v3    # "appInfo":Landroid/content/pm/ApplicationInfo;
     .end local v8    # "token":J
     :catch_0
     move-exception v4
 
-    .line 940
     .local v4, "e":Landroid/content/pm/PackageManager$NameNotFoundException;
     :try_start_4
     invoke-virtual {v4}, Landroid/content/pm/PackageManager$NameNotFoundException;->printStackTrace()V
 
     goto :goto_2
 
-    .line 946
     .end local v4    # "e":Landroid/content/pm/PackageManager$NameNotFoundException;
     .end local v6    # "pkgName":Ljava/lang/String;
     :cond_a
     if-nez p4, :cond_e
 
-    .line 948
     sget-object v10, Lcom/android/server/enterprise/application/ApplicationPermissionControlPolicy;->mAppPermissionControl:Ljava/util/HashMap;
 
     invoke-static {p1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
@@ -4153,13 +3769,11 @@
 
     if-nez v10, :cond_c
 
-    .line 951
     :cond_b
     const/4 v7, 0x0
 
     goto/16 :goto_0
 
-    .line 953
     :cond_c
     invoke-interface {v7}, Ljava/util/List;->iterator()Ljava/util/Iterator;
 
@@ -4178,7 +3792,6 @@
 
     check-cast v6, Ljava/lang/String;
 
-    .line 954
     .restart local v6    # "pkgName":Ljava/lang/String;
     sget-object v10, Lcom/android/server/enterprise/application/ApplicationPermissionControlPolicy;->mAppPermissionControl:Ljava/util/HashMap;
 
@@ -4246,15 +3859,12 @@
 
     if-nez v10, :cond_d
 
-    .line 958
     const/4 v7, 0x0
 
-    .line 959
     const/4 v7, 0x0
 
     goto/16 :goto_0
 
-    .line 967
     .end local v6    # "pkgName":Ljava/lang/String;
     :cond_e
     invoke-interface {v7}, Ljava/util/List;->size()I
@@ -4273,10 +3883,8 @@
 
     if-eqz v10, :cond_2
 
-    .line 968
     if-eqz p4, :cond_2
 
-    .line 969
     sget-object v10, Lcom/android/server/enterprise/application/ApplicationPermissionControlPolicy;->mAppPermissionControl:Ljava/util/HashMap;
 
     invoke-static {p1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
@@ -4367,7 +3975,6 @@
 
     if-eqz v10, :cond_2
 
-    .line 974
     invoke-interface {v7}, Ljava/util/List;->clear()V
     :try_end_4
     .catchall {:try_start_4 .. :try_end_4} :catchall_0
@@ -4397,29 +4004,23 @@
     .local p3, "pkgNameList":Ljava/util/List;, "Ljava/util/List<Ljava/lang/String;>;"
     const/4 v4, 0x1
 
-    .line 122
     const/4 v8, 0x0
 
-    .line 123
     .local v8, "ret":Z
     const/4 v9, 0x0
 
-    .line 124
     .local v9, "uPkgNameList":Ljava/util/List;, "Ljava/util/List<Ljava/lang/String;>;"
     invoke-direct {p0, p1}, Lcom/android/server/enterprise/application/ApplicationPermissionControlPolicy;->enforceOwnerOnlyAndAppPermisionControlPermission(Landroid/app/enterprise/ContextInfo;)Landroid/app/enterprise/ContextInfo;
 
     move-result-object p1
 
-    .line 125
     iget v1, p1, Landroid/app/enterprise/ContextInfo;->mCallerUid:I
 
-    .line 126
     .local v1, "callingUid":I
     invoke-static {p2}, Lcom/android/server/enterprise/application/ApplicationPermissionControlPolicy;->getValidStr(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object p2
 
-    .line 127
     if-eqz p2, :cond_0
 
     const-string v0, "*"
@@ -4433,11 +4034,9 @@
     :cond_0
     move v4, v8
 
-    .line 179
     :goto_0
     return v4
 
-    .line 131
     :cond_1
     const-string v5, "Blacklist"
 
@@ -4451,11 +4050,9 @@
 
     move-result-object v3
 
-    .line 134
     .local v3, "pkgNameList1":Ljava/util/List;, "Ljava/util/List<Ljava/lang/String;>;"
     if-nez v3, :cond_2
 
-    .line 136
     const-string v0, "ApplicationPermissionControlPolicy"
 
     const-string v2, "illegal input found. can\'t do the operation"
@@ -4464,10 +4061,8 @@
 
     move v4, v8
 
-    .line 137
     goto :goto_0
 
-    .line 139
     :cond_2
     invoke-interface {v3}, Ljava/util/List;->isEmpty()Z
 
@@ -4475,7 +4070,6 @@
 
     if-eqz v0, :cond_3
 
-    .line 141
     const-string v0, "ApplicationPermissionControlPolicy"
 
     const-string v2, "illegal input found. can\'t do the operation"
@@ -4484,13 +4078,11 @@
 
     goto :goto_0
 
-    .line 144
     :cond_3
     invoke-static {}, Landroid/os/Binder;->clearCallingIdentity()J
 
     move-result-wide v10
 
-    .line 146
     .local v10, "token":J
     const-string v5, "Blacklist"
 
@@ -4502,23 +4094,19 @@
 
     move-result-object v7
 
-    .line 149
     .local v7, "ePkgNameList":Ljava/util/List;, "Ljava/util/List<Ljava/lang/String;>;"
     if-nez v7, :cond_4
 
-    .line 150
     const-string v0, "ApplicationPermissionControlPolicy"
 
-    const-string/jumbo v2, "updateAppPermissionControlBW failed."
+    const-string v2, "updateAppPermissionControlBW failed."
 
     invoke-static {v0, v2}, Lcom/android/server/enterprise/log/Log;->i(Ljava/lang/String;Ljava/lang/String;)V
 
     move v4, v8
 
-    .line 151
     goto :goto_0
 
-    .line 153
     :cond_4
     invoke-interface {v7}, Ljava/util/List;->isEmpty()Z
 
@@ -4526,16 +4114,14 @@
 
     if-eqz v0, :cond_5
 
-    .line 154
     const-string v0, "ApplicationPermissionControlPolicy"
 
-    const-string/jumbo v2, "updateAppPermissionControlBW returned empty list."
+    const-string v2, "updateAppPermissionControlBW returned empty list."
 
     invoke-static {v0, v2}, Lcom/android/server/enterprise/log/Log;->i(Ljava/lang/String;Ljava/lang/String;)V
 
     goto :goto_0
 
-    .line 160
     :cond_5
     :try_start_0
     iget-object v0, p0, Lcom/android/server/enterprise/application/ApplicationPermissionControlPolicy;->mPackageManager:Landroid/content/pm/IPackageManager;
@@ -4546,7 +4132,6 @@
 
     move-result-object v9
 
-    .line 165
     :goto_1
     if-eqz v9, :cond_8
 
@@ -4556,10 +4141,8 @@
 
     if-nez v0, :cond_8
 
-    .line 166
     invoke-direct {p0, v9}, Lcom/android/server/enterprise/application/ApplicationPermissionControlPolicy;->killApplications(Ljava/util/List;)V
 
-    .line 168
     const-string v0, "*"
 
     invoke-interface {v3, v0}, Ljava/util/List;->contains(Ljava/lang/Object;)Z
@@ -4568,15 +4151,12 @@
 
     if-eqz v0, :cond_7
 
-    .line 169
     const/4 v8, 0x1
 
-    .line 175
     :cond_6
     :goto_2
     invoke-static {v10, v11}, Landroid/os/Binder;->restoreCallingIdentity(J)V
 
-    .line 178
     const-string v0, "ApplicationPermissionControlPolicy"
 
     new-instance v2, Ljava/lang/StringBuilder;
@@ -4601,20 +4181,16 @@
 
     move v4, v8
 
-    .line 179
     goto :goto_0
 
-    .line 161
     :catch_0
     move-exception v6
 
-    .line 162
     .local v6, "e":Landroid/os/RemoteException;
     const/4 v9, 0x0
 
     goto :goto_1
 
-    .line 170
     .end local v6    # "e":Landroid/os/RemoteException;
     :cond_7
     invoke-interface {v9}, Ljava/util/List;->size()I
@@ -4627,12 +4203,10 @@
 
     if-ne v0, v2, :cond_6
 
-    .line 171
     const/4 v8, 0x1
 
     goto :goto_2
 
-    .line 173
     :cond_8
     const/4 v8, 0x1
 
@@ -4659,29 +4233,23 @@
     .local p3, "pkgNameList":Ljava/util/List;, "Ljava/util/List<Ljava/lang/String;>;"
     const/4 v4, 0x1
 
-    .line 265
     const/4 v8, 0x0
 
-    .line 266
     .local v8, "ret":Z
     const/4 v9, 0x0
 
-    .line 267
     .local v9, "uPkgNameList":Ljava/util/List;, "Ljava/util/List<Ljava/lang/String;>;"
     invoke-direct {p0, p1}, Lcom/android/server/enterprise/application/ApplicationPermissionControlPolicy;->enforceOwnerOnlyAndAppPermisionControlPermission(Landroid/app/enterprise/ContextInfo;)Landroid/app/enterprise/ContextInfo;
 
     move-result-object p1
 
-    .line 268
     iget v1, p1, Landroid/app/enterprise/ContextInfo;->mCallerUid:I
 
-    .line 269
     .local v1, "callingUid":I
     invoke-static {p2}, Lcom/android/server/enterprise/application/ApplicationPermissionControlPolicy;->getValidStr(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object p2
 
-    .line 270
     if-eqz p2, :cond_0
 
     const-string v0, "*"
@@ -4695,11 +4263,9 @@
     :cond_0
     move v4, v8
 
-    .line 328
     :goto_0
     return v4
 
-    .line 274
     :cond_1
     const-string v5, "Whitelist"
 
@@ -4713,11 +4279,9 @@
 
     move-result-object v3
 
-    .line 277
     .local v3, "pkgNameList1":Ljava/util/List;, "Ljava/util/List<Ljava/lang/String;>;"
     if-nez v3, :cond_2
 
-    .line 279
     const-string v0, "ApplicationPermissionControlPolicy"
 
     const-string v2, "illegal input found. can\'t do the operation"
@@ -4726,10 +4290,8 @@
 
     move v4, v8
 
-    .line 280
     goto :goto_0
 
-    .line 283
     :cond_2
     invoke-interface {v3}, Ljava/util/List;->isEmpty()Z
 
@@ -4737,7 +4299,6 @@
 
     if-eqz v0, :cond_3
 
-    .line 285
     const-string v0, "ApplicationPermissionControlPolicy"
 
     const-string v2, "illegal input found. can\'t do the operation"
@@ -4746,13 +4307,11 @@
 
     goto :goto_0
 
-    .line 289
     :cond_3
     invoke-static {}, Landroid/os/Binder;->clearCallingIdentity()J
 
     move-result-wide v10
 
-    .line 291
     .local v10, "token":J
     const-string v5, "Whitelist"
 
@@ -4764,23 +4323,19 @@
 
     move-result-object v7
 
-    .line 294
     .local v7, "ePkgNameList":Ljava/util/List;, "Ljava/util/List<Ljava/lang/String;>;"
     if-nez v7, :cond_4
 
-    .line 295
     const-string v0, "ApplicationPermissionControlPolicy"
 
-    const-string/jumbo v2, "updateAppPermissionControlBW failed."
+    const-string v2, "updateAppPermissionControlBW failed."
 
     invoke-static {v0, v2}, Lcom/android/server/enterprise/log/Log;->i(Ljava/lang/String;Ljava/lang/String;)V
 
     move v4, v8
 
-    .line 296
     goto :goto_0
 
-    .line 298
     :cond_4
     invoke-interface {v7}, Ljava/util/List;->isEmpty()Z
 
@@ -4788,16 +4343,14 @@
 
     if-eqz v0, :cond_5
 
-    .line 299
     const-string v0, "ApplicationPermissionControlPolicy"
 
-    const-string/jumbo v2, "updateAppPermissionControlBW returned empty list."
+    const-string v2, "updateAppPermissionControlBW returned empty list."
 
     invoke-static {v0, v2}, Lcom/android/server/enterprise/log/Log;->i(Ljava/lang/String;Ljava/lang/String;)V
 
     goto :goto_0
 
-    .line 305
     :cond_5
     :try_start_0
     iget-object v0, p0, Lcom/android/server/enterprise/application/ApplicationPermissionControlPolicy;->mPackageManager:Landroid/content/pm/IPackageManager;
@@ -4808,33 +4361,27 @@
 
     move-result-object v9
 
-    .line 310
     :goto_1
     if-nez v9, :cond_6
 
-    .line 311
     const-string v0, "ApplicationPermissionControlPolicy"
 
-    const-string/jumbo v2, "updateAppPermissionControlBW null uPkgNameList failed."
+    const-string v2, "updateAppPermissionControlBW null uPkgNameList failed."
 
     invoke-static {v0, v2}, Lcom/android/server/enterprise/log/Log;->i(Ljava/lang/String;Ljava/lang/String;)V
 
     move v4, v8
 
-    .line 312
     goto :goto_0
 
-    .line 306
     :catch_0
     move-exception v6
 
-    .line 307
     .local v6, "e":Landroid/os/RemoteException;
     const/4 v9, 0x0
 
     goto :goto_1
 
-    .line 315
     .end local v6    # "e":Landroid/os/RemoteException;
     :cond_6
     invoke-interface {v9}, Ljava/util/List;->isEmpty()Z
@@ -4843,10 +4390,8 @@
 
     if-nez v0, :cond_9
 
-    .line 316
     invoke-direct {p0, v9}, Lcom/android/server/enterprise/application/ApplicationPermissionControlPolicy;->killApplications(Ljava/util/List;)V
 
-    .line 318
     const-string v0, "*"
 
     invoke-interface {v3, v0}, Ljava/util/List;->contains(Ljava/lang/Object;)Z
@@ -4855,15 +4400,12 @@
 
     if-eqz v0, :cond_8
 
-    .line 319
     const/4 v8, 0x1
 
-    .line 325
     :cond_7
     :goto_2
     invoke-static {v10, v11}, Landroid/os/Binder;->restoreCallingIdentity(J)V
 
-    .line 327
     const-string v0, "ApplicationPermissionControlPolicy"
 
     new-instance v2, Ljava/lang/StringBuilder;
@@ -4888,10 +4430,8 @@
 
     move v4, v8
 
-    .line 328
     goto/16 :goto_0
 
-    .line 320
     :cond_8
     invoke-interface {v9}, Ljava/util/List;->size()I
 
@@ -4903,12 +4443,10 @@
 
     if-ne v0, v2, :cond_7
 
-    .line 321
     const/4 v8, 0x1
 
     goto :goto_2
 
-    .line 323
     :cond_9
     const/4 v8, 0x1
 
@@ -4920,21 +4458,17 @@
     .param p1, "cxtInfo"    # Landroid/app/enterprise/ContextInfo;
 
     .prologue
-    .line 256
     const/4 v0, 0x1
 
-    .line 257
     .local v0, "ret":Z
     invoke-direct {p0, p1}, Lcom/android/server/enterprise/application/ApplicationPermissionControlPolicy;->enforceOwnerOnlyAndAppPermisionControlPermission(Landroid/app/enterprise/ContextInfo;)Landroid/app/enterprise/ContextInfo;
 
     move-result-object p1
 
-    .line 258
     invoke-static {}, Landroid/os/Binder;->clearCallingIdentity()J
 
     move-result-wide v2
 
-    .line 259
     .local v2, "token":J
     iget v1, p1, Landroid/app/enterprise/ContextInfo;->mCallerUid:I
 
@@ -4942,10 +4476,8 @@
 
     invoke-direct {p0, v1, v4}, Lcom/android/server/enterprise/application/ApplicationPermissionControlPolicy;->clearBWList(ILjava/lang/String;)V
 
-    .line 260
     invoke-static {v2, v3}, Landroid/os/Binder;->restoreCallingIdentity(J)V
 
-    .line 261
     return v0
 .end method
 
@@ -4954,21 +4486,17 @@
     .param p1, "cxtInfo"    # Landroid/app/enterprise/ContextInfo;
 
     .prologue
-    .line 403
     const/4 v0, 0x1
 
-    .line 404
     .local v0, "ret":Z
     invoke-direct {p0, p1}, Lcom/android/server/enterprise/application/ApplicationPermissionControlPolicy;->enforceOwnerOnlyAndAppPermisionControlPermission(Landroid/app/enterprise/ContextInfo;)Landroid/app/enterprise/ContextInfo;
 
     move-result-object p1
 
-    .line 405
     invoke-static {}, Landroid/os/Binder;->clearCallingIdentity()J
 
     move-result-wide v2
 
-    .line 406
     .local v2, "token":J
     iget v1, p1, Landroid/app/enterprise/ContextInfo;->mCallerUid:I
 
@@ -4976,10 +4504,8 @@
 
     invoke-direct {p0, v1, v4}, Lcom/android/server/enterprise/application/ApplicationPermissionControlPolicy;->clearBWList(ILjava/lang/String;)V
 
-    .line 407
     invoke-static {v2, v3}, Landroid/os/Binder;->restoreCallingIdentity(J)V
 
-    .line 408
     return v0
 .end method
 
@@ -5001,30 +4527,23 @@
     .end annotation
 
     .prologue
-    .line 1295
     invoke-direct {p0, p1}, Lcom/android/server/enterprise/application/ApplicationPermissionControlPolicy;->enforceOwnerOnlyAndAppPermisionControlPermission(Landroid/app/enterprise/ContextInfo;)Landroid/app/enterprise/ContextInfo;
 
-    .line 1296
     if-nez p2, :cond_0
 
-    .line 1297
     const/4 v1, 0x0
 
-    .line 1308
     :goto_0
     return-object v1
 
-    .line 1299
     :cond_0
     invoke-static {}, Landroid/os/Binder;->clearCallingIdentity()J
 
     move-result-wide v2
 
-    .line 1300
     .local v2, "token":J
     const/4 v1, 0x0
 
-    .line 1302
     .local v1, "list":Ljava/util/List;, "Ljava/util/List<Ljava/lang/String;>;"
     :try_start_0
     iget-object v4, p0, Lcom/android/server/enterprise/application/ApplicationPermissionControlPolicy;->mPackageManager:Landroid/content/pm/IPackageManager;
@@ -5035,17 +4554,14 @@
 
     move-result-object v1
 
-    .line 1307
     :goto_1
     invoke-static {v2, v3}, Landroid/os/Binder;->restoreCallingIdentity(J)V
 
     goto :goto_0
 
-    .line 1304
     :catch_0
     move-exception v0
 
-    .line 1305
     .local v0, "e":Landroid/os/RemoteException;
     const/4 v1, 0x0
 
@@ -5068,14 +4584,12 @@
     .end annotation
 
     .prologue
-    .line 250
     const-string v0, "ApplicationPermissionControlPolicy"
 
     const-string v1, "getAppPermissionAllBlackLists:"
 
     invoke-static {v0, v1}, Lcom/android/server/enterprise/log/Log;->i(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 251
     const-string v0, "Blacklist"
 
     invoke-direct {p0, v0}, Lcom/android/server/enterprise/application/ApplicationPermissionControlPolicy;->getPackagesFromPermissionBlackWhiteList(Ljava/lang/String;)Ljava/util/List;
@@ -5101,14 +4615,12 @@
     .end annotation
 
     .prologue
-    .line 397
     const-string v0, "ApplicationPermissionControlPolicy"
 
     const-string v1, "getPackagesFromPermissionWhiteList:"
 
     invoke-static {v0, v1}, Lcom/android/server/enterprise/log/Log;->i(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 398
     const-string v0, "Whitelist"
 
     invoke-direct {p0, v0}, Lcom/android/server/enterprise/application/ApplicationPermissionControlPolicy;->getPackagesFromPermissionBlackWhiteList(Ljava/lang/String;)Ljava/util/List;
@@ -5142,7 +4654,6 @@
     .local p3, "PermissionList":Ljava/util/List;, "Ljava/util/List<Ljava/lang/String;>;"
     const/4 v7, 0x0
 
-    .line 701
     monitor-enter p0
 
     :try_start_0
@@ -5150,7 +4661,6 @@
 
     invoke-direct {v1}, Ljava/util/ArrayList;-><init>()V
 
-    .line 703
     .local v1, "blockedPermList":Ljava/util/List;, "Ljava/util/List<Ljava/lang/String;>;"
     if-eqz p2, :cond_0
 
@@ -5165,7 +4675,6 @@
     :cond_0
     move-object v1, v7
 
-    .line 743
     .end local v1    # "blockedPermList":Ljava/util/List;, "Ljava/util/List<Ljava/lang/String;>;"
     :cond_1
     :goto_0
@@ -5173,7 +4682,6 @@
 
     return-object v1
 
-    .line 707
     .restart local v1    # "blockedPermList":Ljava/util/List;, "Ljava/util/List<Ljava/lang/String;>;"
     :cond_2
     :try_start_1
@@ -5181,7 +4689,6 @@
 
     if-nez v8, :cond_3
 
-    .line 708
     const-string v8, "ApplicationPermissionControlPolicy"
 
     const-string v9, "mAppPermissionControl is null"
@@ -5190,10 +4697,8 @@
 
     move-object v1, v7
 
-    .line 709
     goto :goto_0
 
-    .line 713
     :cond_3
     sget-object v8, Lcom/android/server/enterprise/application/ApplicationPermissionControlPolicy;->mAppPermissionControl:Ljava/util/HashMap;
 
@@ -5205,10 +4710,8 @@
 
     move-object v1, v7
 
-    .line 714
     goto :goto_0
 
-    .line 716
     :cond_4
     invoke-interface {p3}, Ljava/util/List;->iterator()Ljava/util/Iterator;
 
@@ -5229,7 +4732,6 @@
 
     check-cast v3, Ljava/lang/String;
 
-    .line 718
     .local v3, "permission":Ljava/lang/String;
     sget-object v7, Lcom/android/server/enterprise/application/ApplicationPermissionControlPolicy;->mAppPermissionControl:Ljava/util/HashMap;
 
@@ -5241,11 +4743,9 @@
 
     move-result-object v6
 
-    .line 719
     .local v6, "uidItr":Ljava/util/Iterator;, "Ljava/util/Iterator<Ljava/lang/Integer;>;"
     const/4 v0, 0x1
 
-    .line 721
     .local v0, "allowed":Z
     :cond_6
     invoke-interface {v6}, Ljava/util/Iterator;->hasNext()Z
@@ -5254,18 +4754,15 @@
 
     if-eqz v7, :cond_8
 
-    .line 722
     invoke-interface {v6}, Ljava/util/Iterator;->next()Ljava/lang/Object;
 
     move-result-object v5
 
     check-cast v5, Ljava/lang/Integer;
 
-    .line 723
     .local v5, "uid":Ljava/lang/Integer;
     const/4 v0, 0x1
 
-    .line 724
     sget-object v7, Lcom/android/server/enterprise/application/ApplicationPermissionControlPolicy;->mAppPermissionControl:Ljava/util/HashMap;
 
     invoke-virtual {v7, v5}, Ljava/util/HashMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
@@ -5280,11 +4777,9 @@
 
     check-cast v4, Ljava/util/Map;
 
-    .line 726
     .local v4, "permissionMap":Ljava/util/Map;, "Ljava/util/Map<Ljava/lang/String;Ljava/util/Set<Ljava/lang/String;>;>;"
     if-eqz v4, :cond_6
 
-    .line 728
     const-string v7, "Blacklist"
 
     invoke-interface {v4, v7}, Ljava/util/Map;->get(Ljava/lang/Object;)Ljava/lang/Object;
@@ -5315,7 +4810,6 @@
 
     if-eqz v7, :cond_6
 
-    .line 730
     :cond_7
     const-string v7, "Whitelist"
 
@@ -5347,23 +4841,19 @@
 
     if-nez v7, :cond_6
 
-    .line 735
     const/4 v0, 0x0
 
-    .line 740
     .end local v4    # "permissionMap":Ljava/util/Map;, "Ljava/util/Map<Ljava/lang/String;Ljava/util/Set<Ljava/lang/String;>;>;"
     .end local v5    # "uid":Ljava/lang/Integer;
     :cond_8
     if-nez v0, :cond_5
 
-    .line 741
     invoke-interface {v1, v3}, Ljava/util/List;->add(Ljava/lang/Object;)Z
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
     goto :goto_1
 
-    .line 701
     .end local v0    # "allowed":Z
     .end local v1    # "blockedPermList":Ljava/util/List;, "Ljava/util/List<Ljava/lang/String;>;"
     .end local v2    # "i$":Ljava/util/Iterator;
@@ -5381,7 +4871,6 @@
     .locals 12
 
     .prologue
-    .line 796
     monitor-enter p0
 
     :try_start_0
@@ -5391,13 +4880,11 @@
 
     if-eqz v10, :cond_0
 
-    .line 849
     :goto_0
     monitor-exit p0
 
     return-void
 
-    .line 800
     :cond_0
     :try_start_1
     new-instance v10, Ljava/util/HashMap;
@@ -5406,14 +4893,12 @@
 
     sput-object v10, Lcom/android/server/enterprise/application/ApplicationPermissionControlPolicy;->mAppPermissionControl:Ljava/util/HashMap;
 
-    .line 802
     iget-object v10, p0, Lcom/android/server/enterprise/application/ApplicationPermissionControlPolicy;->mEdmStorageProvider:Lcom/android/server/enterprise/storage/EdmStorageProvider;
 
     invoke-virtual {v10}, Lcom/android/server/enterprise/storage/EdmStorageProvider;->getAdminUidList()Ljava/util/ArrayList;
 
     move-result-object v9
 
-    .line 805
     .local v9, "uidList":Ljava/util/ArrayList;, "Ljava/util/ArrayList<Ljava/lang/Integer;>;"
     const/4 v10, 0x3
 
@@ -5421,7 +4906,7 @@
 
     const/4 v10, 0x0
 
-    const-string/jumbo v11, "permission"
+    const-string v11, "permission"
 
     aput-object v11, v2, v10
 
@@ -5437,7 +4922,6 @@
 
     aput-object v11, v2, v10
 
-    .line 810
     .local v2, "columns":[Ljava/lang/String;
     invoke-virtual {v9}, Ljava/util/ArrayList;->iterator()Ljava/util/Iterator;
 
@@ -5462,13 +4946,11 @@
 
     move-result v8
 
-    .line 812
     .local v8, "storedUid":I
     new-instance v0, Ljava/util/HashMap;
 
     invoke-direct {v0}, Ljava/util/HashMap;-><init>()V
 
-    .line 815
     .local v0, "adminMap":Ljava/util/Map;, "Ljava/util/Map<Ljava/lang/String;Ljava/util/Map<Ljava/lang/String;Ljava/util/Set<Ljava/lang/String;>;>;>;"
     iget-object v10, p0, Lcom/android/server/enterprise/application/ApplicationPermissionControlPolicy;->mEdmStorageProvider:Lcom/android/server/enterprise/storage/EdmStorageProvider;
 
@@ -5478,11 +4960,9 @@
 
     move-result-object v3
 
-    .line 817
     .local v3, "cursor":Landroid/database/Cursor;
     if-eqz v3, :cond_4
 
-    .line 818
     :goto_2
     invoke-interface {v3}, Landroid/database/Cursor;->moveToNext()Z
 
@@ -5490,7 +4970,6 @@
 
     if-eqz v10, :cond_3
 
-    .line 819
     const-string v10, "Object"
 
     invoke-interface {v3, v10}, Landroid/database/Cursor;->getColumnIndex(Ljava/lang/String;)I
@@ -5501,9 +4980,8 @@
 
     move-result-object v7
 
-    .line 821
     .local v7, "pkgName":Ljava/lang/String;
-    const-string/jumbo v10, "permission"
+    const-string v10, "permission"
 
     invoke-interface {v3, v10}, Landroid/database/Cursor;->getColumnIndex(Ljava/lang/String;)I
 
@@ -5513,7 +4991,6 @@
 
     move-result-object v5
 
-    .line 823
     .local v5, "permission":Ljava/lang/String;
     const-string v10, "ListType"
 
@@ -5525,7 +5002,6 @@
 
     move-result-object v1
 
-    .line 825
     .local v1, "bwType":Ljava/lang/String;
     invoke-interface {v0, v5}, Ljava/util/Map;->get(Ljava/lang/Object;)Ljava/lang/Object;
 
@@ -5533,17 +5009,14 @@
 
     check-cast v6, Ljava/util/Map;
 
-    .line 826
     .local v6, "permissionMap":Ljava/util/Map;, "Ljava/util/Map<Ljava/lang/String;Ljava/util/Set<Ljava/lang/String;>;>;"
     if-nez v6, :cond_2
 
-    .line 827
     new-instance v6, Ljava/util/HashMap;
 
     .end local v6    # "permissionMap":Ljava/util/Map;, "Ljava/util/Map<Ljava/lang/String;Ljava/util/Set<Ljava/lang/String;>;>;"
     invoke-direct {v6}, Ljava/util/HashMap;-><init>()V
 
-    .line 828
     .restart local v6    # "permissionMap":Ljava/util/Map;, "Ljava/util/Map<Ljava/lang/String;Ljava/util/Set<Ljava/lang/String;>;>;"
     const-string v10, "Whitelist"
 
@@ -5553,7 +5026,6 @@
 
     invoke-interface {v6, v10, v11}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 829
     const-string v10, "Blacklist"
 
     new-instance v11, Ljava/util/TreeSet;
@@ -5562,7 +5034,6 @@
 
     invoke-interface {v6, v10, v11}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 831
     :cond_2
     invoke-interface {v6, v1}, Ljava/util/Map;->get(Ljava/lang/Object;)Ljava/lang/Object;
 
@@ -5572,14 +5043,12 @@
 
     invoke-interface {v10, v7}, Ljava/util/Set;->add(Ljava/lang/Object;)Z
 
-    .line 832
     invoke-interface {v0, v5, v6}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
     goto :goto_2
 
-    .line 796
     .end local v0    # "adminMap":Ljava/util/Map;, "Ljava/util/Map<Ljava/lang/String;Ljava/util/Map<Ljava/lang/String;Ljava/util/Set<Ljava/lang/String;>;>;>;"
     .end local v1    # "bwType":Ljava/lang/String;
     .end local v2    # "columns":[Ljava/lang/String;
@@ -5597,7 +5066,6 @@
 
     throw v10
 
-    .line 837
     .restart local v0    # "adminMap":Ljava/util/Map;, "Ljava/util/Map<Ljava/lang/String;Ljava/util/Map<Ljava/lang/String;Ljava/util/Set<Ljava/lang/String;>;>;>;"
     .restart local v2    # "columns":[Ljava/lang/String;
     .restart local v3    # "cursor":Landroid/database/Cursor;
@@ -5608,7 +5076,6 @@
     :try_start_2
     invoke-interface {v3}, Landroid/database/Cursor;->close()V
 
-    .line 840
     :cond_4
     invoke-interface {v0}, Ljava/util/Map;->isEmpty()Z
 
@@ -5616,7 +5083,6 @@
 
     if-nez v10, :cond_1
 
-    .line 843
     sget-object v10, Lcom/android/server/enterprise/application/ApplicationPermissionControlPolicy;->mAppPermissionControl:Ljava/util/HashMap;
 
     invoke-static {v8}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
@@ -5627,7 +5093,6 @@
 
     goto/16 :goto_1
 
-    .line 847
     .end local v0    # "adminMap":Ljava/util/Map;, "Ljava/util/Map<Ljava/lang/String;Ljava/util/Map<Ljava/lang/String;Ljava/util/Set<Ljava/lang/String;>;>;>;"
     .end local v3    # "cursor":Landroid/database/Cursor;
     .end local v8    # "storedUid":I
@@ -5644,10 +5109,8 @@
     .param p1, "uid"    # I
 
     .prologue
-    .line 118
     invoke-direct {p0, p1}, Lcom/android/server/enterprise/application/ApplicationPermissionControlPolicy;->handleAdminAdded(I)V
 
-    .line 119
     return-void
 .end method
 
@@ -5656,7 +5119,6 @@
     .param p1, "uid"    # I
 
     .prologue
-    .line 98
     return-void
 .end method
 
@@ -5665,10 +5127,8 @@
     .param p1, "uid"    # I
 
     .prologue
-    .line 113
     invoke-direct {p0, p1}, Lcom/android/server/enterprise/application/ApplicationPermissionControlPolicy;->handleAdminRemoval(I)V
 
-    .line 114
     return-void
 .end method
 
@@ -5692,29 +5152,23 @@
     .local p3, "pkgNameList":Ljava/util/List;, "Ljava/util/List<Ljava/lang/String;>;"
     const/4 v4, 0x0
 
-    .line 184
     const/4 v9, 0x0
 
-    .line 185
     .local v9, "uPkgNameList":Ljava/util/List;, "Ljava/util/List<Ljava/lang/String;>;"
     invoke-direct {p0, p1}, Lcom/android/server/enterprise/application/ApplicationPermissionControlPolicy;->enforceOwnerOnlyAndAppPermisionControlPermission(Landroid/app/enterprise/ContextInfo;)Landroid/app/enterprise/ContextInfo;
 
     move-result-object p1
 
-    .line 186
     iget v1, p1, Landroid/app/enterprise/ContextInfo;->mCallerUid:I
 
-    .line 187
     .local v1, "callingUid":I
     const/4 v8, 0x0
 
-    .line 188
     .local v8, "ret":Z
     invoke-static {p2}, Lcom/android/server/enterprise/application/ApplicationPermissionControlPolicy;->getValidStr(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object p2
 
-    .line 189
     if-eqz p2, :cond_0
 
     const-string v0, "*"
@@ -5728,11 +5182,9 @@
     :cond_0
     move v0, v8
 
-    .line 246
     :goto_0
     return v0
 
-    .line 193
     :cond_1
     const-string v5, "Blacklist"
 
@@ -5746,11 +5198,9 @@
 
     move-result-object v3
 
-    .line 196
     .local v3, "pkgNameList1":Ljava/util/List;, "Ljava/util/List<Ljava/lang/String;>;"
     if-nez v3, :cond_2
 
-    .line 198
     const-string v0, "ApplicationPermissionControlPolicy"
 
     const-string v2, "illegal input found. can\'t do the operation"
@@ -5759,10 +5209,8 @@
 
     move v0, v8
 
-    .line 199
     goto :goto_0
 
-    .line 202
     :cond_2
     invoke-interface {v3}, Ljava/util/List;->isEmpty()Z
 
@@ -5770,25 +5218,21 @@
 
     if-eqz v0, :cond_3
 
-    .line 204
     const-string v0, "ApplicationPermissionControlPolicy"
 
     const-string v2, "illegal input found. can\'t do the operation"
 
     invoke-static {v0, v2}, Lcom/android/server/enterprise/log/Log;->i(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 205
     const/4 v0, 0x1
 
     goto :goto_0
 
-    .line 207
     :cond_3
     invoke-static {}, Landroid/os/Binder;->clearCallingIdentity()J
 
     move-result-wide v10
 
-    .line 210
     .local v10, "token":J
     const-string v5, "Blacklist"
 
@@ -5800,23 +5244,19 @@
 
     move-result-object v7
 
-    .line 213
     .local v7, "ePkgNameList":Ljava/util/List;, "Ljava/util/List<Ljava/lang/String;>;"
     if-nez v7, :cond_4
 
-    .line 214
     const-string v0, "ApplicationPermissionControlPolicy"
 
-    const-string/jumbo v2, "updateAppPermissionControlBW failed."
+    const-string v2, "updateAppPermissionControlBW failed."
 
     invoke-static {v0, v2}, Lcom/android/server/enterprise/log/Log;->i(Ljava/lang/String;Ljava/lang/String;)V
 
     move v0, v8
 
-    .line 215
     goto :goto_0
 
-    .line 218
     :cond_4
     invoke-interface {v7}, Ljava/util/List;->isEmpty()Z
 
@@ -5824,7 +5264,6 @@
 
     if-nez v0, :cond_9
 
-    .line 220
     :try_start_0
     iget-object v0, p0, Lcom/android/server/enterprise/application/ApplicationPermissionControlPolicy;->mPackageManager:Landroid/content/pm/IPackageManager;
 
@@ -5834,11 +5273,9 @@
 
     move-result-object v9
 
-    .line 225
     :goto_1
     if-nez v9, :cond_5
 
-    .line 227
     const-string v0, "ApplicationPermissionControlPolicy"
 
     const-string v2, "illegal input found. can\'t do the operation"
@@ -5847,20 +5284,16 @@
 
     move v0, v8
 
-    .line 228
     goto :goto_0
 
-    .line 221
     :catch_0
     move-exception v6
 
-    .line 222
     .local v6, "e":Landroid/os/RemoteException;
     const/4 v9, 0x0
 
     goto :goto_1
 
-    .line 231
     .end local v6    # "e":Landroid/os/RemoteException;
     :cond_5
     if-eqz v9, :cond_6
@@ -5871,10 +5304,8 @@
 
     if-nez v0, :cond_6
 
-    .line 232
     invoke-direct {p0, v9}, Lcom/android/server/enterprise/application/ApplicationPermissionControlPolicy;->killApplications(Ljava/util/List;)V
 
-    .line 234
     :cond_6
     const-string v0, "*"
 
@@ -5884,22 +5315,19 @@
 
     if-eqz v0, :cond_8
 
-    .line 235
     const/4 v8, 0x1
 
-    .line 243
     :cond_7
     :goto_2
     invoke-static {v10, v11}, Landroid/os/Binder;->restoreCallingIdentity(J)V
 
-    .line 245
     const-string v0, "ApplicationPermissionControlPolicy"
 
     new-instance v2, Ljava/lang/StringBuilder;
 
     invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v4, "removePackagesFromPermissionBlackList: return:"
+    const-string v4, "removePackagesFromPermissionBlackList: return:"
 
     invoke-virtual {v2, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -5917,10 +5345,8 @@
 
     move v0, v8
 
-    .line 246
     goto/16 :goto_0
 
-    .line 236
     :cond_8
     if-eqz v9, :cond_7
 
@@ -5934,12 +5360,10 @@
 
     if-ne v0, v2, :cond_7
 
-    .line 237
     const/4 v8, 0x1
 
     goto :goto_2
 
-    .line 241
     :cond_9
     const/4 v8, 0x1
 
@@ -5963,36 +5387,29 @@
     .end annotation
 
     .prologue
-    .line 332
     .local p3, "pkgNameList":Ljava/util/List;, "Ljava/util/List<Ljava/lang/String;>;"
     const/4 v9, 0x0
 
-    .line 333
     .local v9, "uPkgNameList":Ljava/util/List;, "Ljava/util/List<Ljava/lang/String;>;"
     invoke-direct {p0, p1}, Lcom/android/server/enterprise/application/ApplicationPermissionControlPolicy;->enforceOwnerOnlyAndAppPermisionControlPermission(Landroid/app/enterprise/ContextInfo;)Landroid/app/enterprise/ContextInfo;
 
     move-result-object p1
 
-    .line 334
     iget v1, p1, Landroid/app/enterprise/ContextInfo;->mCallerUid:I
 
-    .line 335
     .local v1, "callingUid":I
     const/4 v8, 0x0
 
-    .line 337
     .local v8, "ret":Z
     invoke-static {}, Landroid/os/Binder;->clearCallingIdentity()J
 
     move-result-wide v10
 
-    .line 338
     .local v10, "token":J
     invoke-static {p2}, Lcom/android/server/enterprise/application/ApplicationPermissionControlPolicy;->getValidStr(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object p2
 
-    .line 339
     if-eqz p2, :cond_0
 
     const-string v0, "*"
@@ -6006,11 +5423,9 @@
     :cond_0
     move v0, v8
 
-    .line 393
     :goto_0
     return v0
 
-    .line 343
     :cond_1
     const/4 v4, 0x0
 
@@ -6026,11 +5441,9 @@
 
     move-result-object v3
 
-    .line 346
     .local v3, "pkgNameList1":Ljava/util/List;, "Ljava/util/List<Ljava/lang/String;>;"
     if-nez v3, :cond_2
 
-    .line 348
     const-string v0, "ApplicationPermissionControlPolicy"
 
     const-string v2, "illegal input found. can\'t do the operation"
@@ -6039,10 +5452,8 @@
 
     move v0, v8
 
-    .line 349
     goto :goto_0
 
-    .line 352
     :cond_2
     invoke-interface {v3}, Ljava/util/List;->isEmpty()Z
 
@@ -6050,19 +5461,16 @@
 
     if-eqz v0, :cond_3
 
-    .line 354
     const-string v0, "ApplicationPermissionControlPolicy"
 
     const-string v2, "illegal input found. can\'t do the operation"
 
     invoke-static {v0, v2}, Lcom/android/server/enterprise/log/Log;->i(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 355
     const/4 v0, 0x1
 
     goto :goto_0
 
-    .line 357
     :cond_3
     const/4 v4, 0x0
 
@@ -6076,23 +5484,19 @@
 
     move-result-object v7
 
-    .line 360
     .local v7, "ePkgNameList":Ljava/util/List;, "Ljava/util/List<Ljava/lang/String;>;"
     if-nez v7, :cond_4
 
-    .line 361
     const-string v0, "ApplicationPermissionControlPolicy"
 
-    const-string/jumbo v2, "updateAppPermissionControlBW failed."
+    const-string v2, "updateAppPermissionControlBW failed."
 
     invoke-static {v0, v2}, Lcom/android/server/enterprise/log/Log;->i(Ljava/lang/String;Ljava/lang/String;)V
 
     move v0, v8
 
-    .line 362
     goto :goto_0
 
-    .line 364
     :cond_4
     invoke-interface {v7}, Ljava/util/List;->isEmpty()Z
 
@@ -6100,19 +5504,16 @@
 
     if-eqz v0, :cond_5
 
-    .line 365
     const-string v0, "ApplicationPermissionControlPolicy"
 
-    const-string/jumbo v2, "updateAppPermissionControlBW returned empty list."
+    const-string v2, "updateAppPermissionControlBW returned empty list."
 
     invoke-static {v0, v2}, Lcom/android/server/enterprise/log/Log;->i(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 366
     const/4 v0, 0x1
 
     goto :goto_0
 
-    .line 370
     :cond_5
     :try_start_0
     iget-object v0, p0, Lcom/android/server/enterprise/application/ApplicationPermissionControlPolicy;->mPackageManager:Landroid/content/pm/IPackageManager;
@@ -6123,33 +5524,27 @@
 
     move-result-object v9
 
-    .line 375
     :goto_1
     if-nez v9, :cond_6
 
-    .line 376
     const-string v0, "ApplicationPermissionControlPolicy"
 
-    const-string/jumbo v2, "updateAppPermissionControlBW uPkgNameList failed."
+    const-string v2, "updateAppPermissionControlBW uPkgNameList failed."
 
     invoke-static {v0, v2}, Lcom/android/server/enterprise/log/Log;->i(Ljava/lang/String;Ljava/lang/String;)V
 
     move v0, v8
 
-    .line 377
     goto :goto_0
 
-    .line 371
     :catch_0
     move-exception v6
 
-    .line 372
     .local v6, "e":Landroid/os/RemoteException;
     const/4 v9, 0x0
 
     goto :goto_1
 
-    .line 380
     .end local v6    # "e":Landroid/os/RemoteException;
     :cond_6
     invoke-interface {v9}, Ljava/util/List;->isEmpty()Z
@@ -6158,10 +5553,8 @@
 
     if-nez v0, :cond_9
 
-    .line 381
     invoke-direct {p0, v9}, Lcom/android/server/enterprise/application/ApplicationPermissionControlPolicy;->killApplications(Ljava/util/List;)V
 
-    .line 383
     const-string v0, "*"
 
     invoke-interface {v3, v0}, Ljava/util/List;->contains(Ljava/lang/Object;)Z
@@ -6170,22 +5563,19 @@
 
     if-eqz v0, :cond_8
 
-    .line 384
     const/4 v8, 0x1
 
-    .line 390
     :cond_7
     :goto_2
     invoke-static {v10, v11}, Landroid/os/Binder;->restoreCallingIdentity(J)V
 
-    .line 392
     const-string v0, "ApplicationPermissionControlPolicy"
 
     new-instance v2, Ljava/lang/StringBuilder;
 
     invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v4, "removePackagesFromPermissionWhiteList: return:"
+    const-string v4, "removePackagesFromPermissionWhiteList: return:"
 
     invoke-virtual {v2, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -6203,10 +5593,8 @@
 
     move v0, v8
 
-    .line 393
     goto/16 :goto_0
 
-    .line 385
     :cond_8
     invoke-interface {v9}, Ljava/util/List;->size()I
 
@@ -6218,12 +5606,10 @@
 
     if-ne v0, v2, :cond_7
 
-    .line 386
     const/4 v8, 0x1
 
     goto :goto_2
 
-    .line 388
     :cond_9
     const/4 v8, 0x1
 
@@ -6234,7 +5620,6 @@
     .locals 2
 
     .prologue
-    .line 103
     new-instance v0, Ljava/lang/Thread;
 
     new-instance v1, Lcom/android/server/enterprise/application/ApplicationPermissionControlPolicy$1;
@@ -6245,6 +5630,5 @@
 
     invoke-virtual {v0}, Ljava/lang/Thread;->start()V
 
-    .line 109
     return-void
 .end method

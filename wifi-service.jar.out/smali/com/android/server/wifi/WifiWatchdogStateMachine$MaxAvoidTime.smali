@@ -27,15 +27,11 @@
     .param p2, "rssi"    # I
 
     .prologue
-    .line 5362
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 5363
     iput p1, p0, Lcom/android/server/wifi/WifiWatchdogStateMachine$MaxAvoidTime;->TIME_MS:I
 
-    .line 5364
     iput p2, p0, Lcom/android/server/wifi/WifiWatchdogStateMachine$MaxAvoidTime;->MIN_RSSI_DBM:I
 
-    .line 5365
     return-void
 .end method

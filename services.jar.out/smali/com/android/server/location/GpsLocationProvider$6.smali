@@ -26,7 +26,6 @@
     .locals 0
 
     .prologue
-    .line 817
     iput-object p1, p0, Lcom/android/server/location/GpsLocationProvider$6;->this$0:Lcom/android/server/location/GpsLocationProvider;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -40,7 +39,6 @@
     .locals 11
 
     .prologue
-    .line 820
     iget-object v6, p0, Lcom/android/server/location/GpsLocationProvider$6;->this$0:Lcom/android/server/location/GpsLocationProvider;
 
     # getter for: Lcom/android/server/location/GpsLocationProvider;->mContext:Landroid/content/Context;
@@ -56,21 +54,17 @@
 
     check-cast v0, Landroid/location/LocationManager;
 
-    .line 822
     .local v0, "locManager":Landroid/location/LocationManager;
     const-wide/16 v2, 0x0
 
-    .line 823
     .local v2, "minTime":J
     const/4 v1, 0x0
 
-    .line 824
     .local v1, "minDistance":F
     const/4 v4, 0x0
 
-    .line 825
     .local v4, "oneShot":Z
-    const-string/jumbo v6, "passive"
+    const-string v6, "passive"
 
     const-wide/16 v8, 0x0
 
@@ -82,13 +76,11 @@
 
     move-result-object v5
 
-    .line 832
     .local v5, "request":Landroid/location/LocationRequest;
     const/4 v6, 0x1
 
     invoke-virtual {v5, v6}, Landroid/location/LocationRequest;->setHideFromAppOps(Z)V
 
-    .line 833
     new-instance v6, Lcom/android/server/location/GpsLocationProvider$NetworkLocationListener;
 
     iget-object v7, p0, Lcom/android/server/location/GpsLocationProvider$6;->this$0:Lcom/android/server/location/GpsLocationProvider;
@@ -110,6 +102,5 @@
 
     invoke-virtual {v0, v5, v6, v7}, Landroid/location/LocationManager;->requestLocationUpdates(Landroid/location/LocationRequest;Landroid/location/LocationListener;Landroid/os/Looper;)V
 
-    .line 837
     return-void
 .end method

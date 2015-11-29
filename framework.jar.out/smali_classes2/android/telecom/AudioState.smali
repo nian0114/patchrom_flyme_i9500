@@ -44,7 +44,6 @@
     .locals 1
 
     .prologue
-    .line 130
     new-instance v0, Landroid/telecom/AudioState$1;
 
     invoke-direct {v0}, Landroid/telecom/AudioState$1;-><init>()V
@@ -59,25 +58,20 @@
     .param p1, "state"    # Landroid/telecom/AudioState;
 
     .prologue
-    .line 71
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 72
     iget-boolean v0, p1, Landroid/telecom/AudioState;->isMuted:Z
 
     iput-boolean v0, p0, Landroid/telecom/AudioState;->isMuted:Z
 
-    .line 73
     iget v0, p1, Landroid/telecom/AudioState;->route:I
 
     iput v0, p0, Landroid/telecom/AudioState;->route:I
 
-    .line 74
     iget v0, p1, Landroid/telecom/AudioState;->supportedRouteMask:I
 
     iput v0, p0, Landroid/telecom/AudioState;->supportedRouteMask:I
 
-    .line 75
     return-void
 .end method
 
@@ -88,19 +82,14 @@
     .param p3, "supportedRouteMask"    # I
 
     .prologue
-    .line 65
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 66
     iput-boolean p1, p0, Landroid/telecom/AudioState;->isMuted:Z
 
-    .line 67
     iput p2, p0, Landroid/telecom/AudioState;->route:I
 
-    .line 68
     iput p3, p0, Landroid/telecom/AudioState;->supportedRouteMask:I
 
-    .line 69
     return-void
 .end method
 
@@ -109,28 +98,23 @@
     .param p0, "route"    # I
 
     .prologue
-    .line 99
     if-eqz p0, :cond_0
 
     and-int/lit8 v1, p0, -0x10
 
     if-eqz v1, :cond_1
 
-    .line 100
     :cond_0
     const-string v1, "UNKNOWN"
 
-    .line 117
     :goto_0
     return-object v1
 
-    .line 103
     :cond_1
     new-instance v0, Ljava/lang/StringBuffer;
 
     invoke-direct {v0}, Ljava/lang/StringBuffer;-><init>()V
 
-    .line 104
     .local v0, "buffer":Ljava/lang/StringBuffer;
     and-int/lit8 v1, p0, 0x1
 
@@ -138,12 +122,10 @@
 
     if-ne v1, v2, :cond_2
 
-    .line 105
     const-string v1, "EARPIECE"
 
     invoke-static {v0, v1}, Landroid/telecom/AudioState;->listAppend(Ljava/lang/StringBuffer;Ljava/lang/String;)V
 
-    .line 107
     :cond_2
     and-int/lit8 v1, p0, 0x2
 
@@ -151,12 +133,10 @@
 
     if-ne v1, v2, :cond_3
 
-    .line 108
     const-string v1, "BLUETOOTH"
 
     invoke-static {v0, v1}, Landroid/telecom/AudioState;->listAppend(Ljava/lang/StringBuffer;Ljava/lang/String;)V
 
-    .line 110
     :cond_3
     and-int/lit8 v1, p0, 0x4
 
@@ -164,12 +144,10 @@
 
     if-ne v1, v2, :cond_4
 
-    .line 111
     const-string v1, "WIRED_HEADSET"
 
     invoke-static {v0, v1}, Landroid/telecom/AudioState;->listAppend(Ljava/lang/StringBuffer;Ljava/lang/String;)V
 
-    .line 113
     :cond_4
     and-int/lit8 v1, p0, 0x8
 
@@ -177,12 +155,10 @@
 
     if-ne v1, v2, :cond_5
 
-    .line 114
     const-string v1, "SPEAKER"
 
     invoke-static {v0, v1}, Landroid/telecom/AudioState;->listAppend(Ljava/lang/StringBuffer;Ljava/lang/String;)V
 
-    .line 117
     :cond_5
     invoke-virtual {v0}, Ljava/lang/StringBuffer;->toString()Ljava/lang/String;
 
@@ -197,23 +173,19 @@
     .param p1, "str"    # Ljava/lang/String;
 
     .prologue
-    .line 121
     invoke-virtual {p0}, Ljava/lang/StringBuffer;->length()I
 
     move-result v0
 
     if-lez v0, :cond_0
 
-    .line 122
     const-string v0, ", "
 
     invoke-virtual {p0, v0}, Ljava/lang/StringBuffer;->append(Ljava/lang/String;)Ljava/lang/StringBuffer;
 
-    .line 124
     :cond_0
     invoke-virtual {p0, p1}, Ljava/lang/StringBuffer;->append(Ljava/lang/String;)Ljava/lang/StringBuffer;
 
-    .line 125
     return-void
 .end method
 
@@ -223,7 +195,6 @@
     .locals 1
 
     .prologue
-    .line 152
     const/4 v0, 0x0
 
     return v0
@@ -236,15 +207,12 @@
     .prologue
     const/4 v1, 0x0
 
-    .line 79
     if-nez p1, :cond_1
 
-    .line 86
     :cond_0
     :goto_0
     return v1
 
-    .line 82
     :cond_1
     instance-of v2, p1, Landroid/telecom/AudioState;
 
@@ -252,10 +220,8 @@
 
     move-object v0, p1
 
-    .line 85
     check-cast v0, Landroid/telecom/AudioState;
 
-    .line 86
     .local v0, "state":Landroid/telecom/AudioState;
     iget-boolean v2, p0, Landroid/telecom/AudioState;->isMuted:Z
 
@@ -284,7 +250,6 @@
     .locals 5
 
     .prologue
-    .line 92
     sget-object v0, Ljava/util/Locale;->US:Ljava/util/Locale;
 
     const-string v1, "[AudioState isMuted: %b, route; %s, supportedRouteMask: %s]"
@@ -336,7 +301,6 @@
     .param p2, "flags"    # I
 
     .prologue
-    .line 160
     iget-boolean v0, p0, Landroid/telecom/AudioState;->isMuted:Z
 
     if-eqz v0, :cond_0
@@ -348,20 +312,16 @@
 
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeByte(B)V
 
-    .line 161
     iget v0, p0, Landroid/telecom/AudioState;->route:I
 
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 162
     iget v0, p0, Landroid/telecom/AudioState;->supportedRouteMask:I
 
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 163
     return-void
 
-    .line 160
     :cond_0
     const/4 v0, 0x0
 

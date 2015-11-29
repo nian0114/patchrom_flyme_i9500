@@ -24,7 +24,6 @@
     .param p2, "x0"    # Landroid/os/Handler;
 
     .prologue
-    .line 107
     iput-object p1, p0, Lcom/samsung/android/toolbox/TwToolBoxService$1;->this$0:Lcom/samsung/android/toolbox/TwToolBoxService;
 
     invoke-direct {p0, p2}, Landroid/database/ContentObserver;-><init>(Landroid/os/Handler;)V
@@ -39,7 +38,6 @@
     .param p1, "selfChange"    # Z
 
     .prologue
-    .line 110
     iget-object v0, p0, Lcom/samsung/android/toolbox/TwToolBoxService$1;->this$0:Lcom/samsung/android/toolbox/TwToolBoxService;
 
     iget-object v1, p0, Lcom/samsung/android/toolbox/TwToolBoxService$1;->this$0:Lcom/samsung/android/toolbox/TwToolBoxService;
@@ -49,7 +47,7 @@
 
     move-result-object v1
 
-    const-string/jumbo v2, "toolbox_apps"
+    const-string v2, "toolbox_apps"
 
     const/4 v3, -0x2
 
@@ -60,6 +58,5 @@
     # setter for: Lcom/samsung/android/toolbox/TwToolBoxService;->mPackageList:Ljava/lang/String;
     invoke-static {v0, v1}, Lcom/samsung/android/toolbox/TwToolBoxService;->access$002(Lcom/samsung/android/toolbox/TwToolBoxService;Ljava/lang/String;)Ljava/lang/String;
 
-    .line 111
     return-void
 .end method

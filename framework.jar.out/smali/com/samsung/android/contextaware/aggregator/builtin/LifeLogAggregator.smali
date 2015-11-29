@@ -24,7 +24,6 @@
     .local p2, "collectionList":Ljava/util/concurrent/CopyOnWriteArrayList;, "Ljava/util/concurrent/CopyOnWriteArrayList<Lcom/samsung/android/contextaware/manager/ContextComponent;>;"
     const/4 v2, 0x0
 
-    .line 52
     move-object v0, p0
 
     move v1, p1
@@ -37,7 +36,6 @@
 
     invoke-direct/range {v0 .. v5}, Lcom/samsung/android/contextaware/aggregator/Aggregator;-><init>(ILandroid/content/Context;Landroid/os/Looper;Ljava/util/concurrent/CopyOnWriteArrayList;Lcom/samsung/android/contextaware/dataprovider/sensorhubprovider/ISensorHubResetObservable;)V
 
-    .line 53
     return-void
 .end method
 
@@ -47,13 +45,10 @@
     .locals 0
 
     .prologue
-    .line 201
     invoke-static {}, Lcom/samsung/android/contextaware/utilbundle/logger/CaLogger;->trace()V
 
-    .line 202
     invoke-super {p0}, Lcom/samsung/android/contextaware/aggregator/Aggregator;->clear()V
 
-    .line 203
     return-void
 .end method
 
@@ -61,13 +56,10 @@
     .locals 0
 
     .prologue
-    .line 214
     invoke-static {}, Lcom/samsung/android/contextaware/utilbundle/logger/CaLogger;->trace()V
 
-    .line 215
     invoke-super {p0}, Lcom/samsung/android/contextaware/aggregator/Aggregator;->clearAccordingToRequest()V
 
-    .line 216
     return-void
 .end method
 
@@ -75,10 +67,8 @@
     .locals 0
 
     .prologue
-    .line 191
     invoke-static {}, Lcom/samsung/android/contextaware/utilbundle/logger/CaLogger;->trace()V
 
-    .line 192
     return-void
 .end method
 
@@ -86,7 +76,6 @@
     .locals 0
 
     .prologue
-    .line 303
     return-void
 .end method
 
@@ -94,10 +83,8 @@
     .locals 0
 
     .prologue
-    .line 181
     invoke-static {}, Lcom/samsung/android/contextaware/utilbundle/logger/CaLogger;->trace()V
 
-    .line 182
     return-void
 .end method
 
@@ -105,7 +92,6 @@
     .locals 1
 
     .prologue
-    .line 238
     sget-object v0, Lcom/samsung/android/contextaware/ContextList$ContextType;->AGGREGATOR_LIFE_LOG:Lcom/samsung/android/contextaware/ContextList$ContextType;
 
     invoke-virtual {v0}, Lcom/samsung/android/contextaware/ContextList$ContextType;->getCode()Ljava/lang/String;
@@ -119,7 +105,6 @@
     .locals 3
 
     .prologue
-    .line 227
     const/4 v0, 0x2
 
     new-array v0, v0, [Ljava/lang/String;
@@ -143,7 +128,6 @@
     .locals 1
 
     .prologue
-    .line 314
     invoke-virtual {p0}, Lcom/samsung/android/contextaware/aggregator/builtin/LifeLogAggregator;->checkFaultDetectionResult()Z
 
     move-result v0
@@ -154,7 +138,6 @@
 
     invoke-static {v0}, Lcom/samsung/android/contextaware/utilbundle/logger/CaLogger;->debug(Ljava/lang/String;)V
 
-    .line 315
     invoke-super {p0}, Lcom/samsung/android/contextaware/aggregator/Aggregator;->getFaultDetectionResult()Landroid/os/Bundle;
 
     move-result-object v0
@@ -166,7 +149,6 @@
     .locals 0
 
     .prologue
-    .line 249
     return-object p0
 .end method
 
@@ -174,7 +156,6 @@
     .locals 0
 
     .prologue
-    .line 261
     return-object p0
 .end method
 
@@ -193,10 +174,8 @@
     .local p2, "value":Ljava/lang/Object;, "TE;"
     const/4 v2, 0x0
 
-    .line 273
     const/4 v1, 0x0
 
-    .line 275
     .local v1, "subCollectorName":Ljava/lang/String;
     const/16 v3, 0x1c
 
@@ -214,7 +193,6 @@
 
     if-ne p1, v3, :cond_3
 
-    .line 279
     :cond_0
     sget-object v3, Lcom/samsung/android/contextaware/ContextList$ContextType;->SENSORHUB_RUNNER_LIFE_LOG_COMPONENT:Lcom/samsung/android/contextaware/ContextList$ContextType;
 
@@ -222,7 +200,6 @@
 
     move-result-object v1
 
-    .line 285
     :cond_1
     :goto_0
     if-eqz v1, :cond_2
@@ -233,18 +210,15 @@
 
     if-eqz v3, :cond_4
 
-    .line 297
     :cond_2
     :goto_1
     return v2
 
-    .line 281
     :cond_3
     const/16 v3, 0x20
 
     if-ne p1, v3, :cond_1
 
-    .line 282
     sget-object v3, Lcom/samsung/android/contextaware/ContextList$ContextType;->AGGREGATOR_LPP:Lcom/samsung/android/contextaware/ContextList$ContextType;
 
     invoke-virtual {v3}, Lcom/samsung/android/contextaware/ContextList$ContextType;->getCode()Ljava/lang/String;
@@ -253,17 +227,14 @@
 
     goto :goto_0
 
-    .line 289
     :cond_4
     invoke-virtual {p0, v1}, Lcom/samsung/android/contextaware/aggregator/builtin/LifeLogAggregator;->getSubCollectionObj(Ljava/lang/String;)Lcom/samsung/android/contextaware/manager/ContextComponent;
 
     move-result-object v0
 
-    .line 290
     .local v0, "sub":Lcom/samsung/android/contextaware/manager/ContextComponent;
     if-nez v0, :cond_5
 
-    .line 291
     sget-object v3, Lcom/samsung/android/contextaware/aggregator/AggregatorErrors;->ERROR_SUB_COLLECTOR_NULL_EXCEPTION:Lcom/samsung/android/contextaware/aggregator/AggregatorErrors;
 
     invoke-virtual {v3}, Lcom/samsung/android/contextaware/aggregator/AggregatorErrors;->getCode()I
@@ -278,7 +249,6 @@
 
     goto :goto_1
 
-    .line 297
     :cond_5
     invoke-virtual {v0, p1, p2}, Lcom/samsung/android/contextaware/manager/ContextComponent;->setPropertyValue(ILjava/lang/Object;)Z
 
@@ -303,7 +273,6 @@
 
     const/4 v6, 0x1
 
-    .line 64
     if-eqz p1, :cond_0
 
     invoke-virtual {p1}, Ljava/lang/String;->isEmpty()Z
@@ -312,7 +281,6 @@
 
     if-eqz v3, :cond_2
 
-    .line 65
     :cond_0
     sget-object v3, Lcom/samsung/android/contextaware/aggregator/AggregatorErrors;->ERROR_UPDATED_CONTEXT_TYPE_FAULT:Lcom/samsung/android/contextaware/aggregator/AggregatorErrors;
 
@@ -326,16 +294,13 @@
 
     invoke-static {v3}, Lcom/samsung/android/contextaware/utilbundle/logger/CaLogger;->error(Ljava/lang/String;)V
 
-    .line 172
     :cond_1
     :goto_0
     return-void
 
-    .line 71
     :cond_2
     if-nez p2, :cond_3
 
-    .line 72
     sget-object v3, Lcom/samsung/android/contextaware/aggregator/AggregatorErrors;->ERROR_UPDATED_CONTEXT_NULL_EXCEPTION:Lcom/samsung/android/contextaware/aggregator/AggregatorErrors;
 
     invoke-virtual {v3}, Lcom/samsung/android/contextaware/aggregator/AggregatorErrors;->getCode()I
@@ -350,13 +315,12 @@
 
     goto :goto_0
 
-    .line 78
     :cond_3
     new-instance v3, Ljava/lang/StringBuilder;
 
     invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v4, "updateContext:"
+    const-string v4, "updateContext:"
 
     invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -372,7 +336,6 @@
 
     invoke-static {v3}, Lcom/samsung/android/contextaware/utilbundle/logger/CaLogger;->info(Ljava/lang/String;)V
 
-    .line 80
     sget-object v3, Lcom/samsung/android/contextaware/ContextList$ContextType;->SENSORHUB_RUNNER_LIFE_LOG_COMPONENT:Lcom/samsung/android/contextaware/ContextList$ContextType;
 
     invoke-virtual {v3}, Lcom/samsung/android/contextaware/ContextList$ContextType;->getCode()Ljava/lang/String;
@@ -385,7 +348,6 @@
 
     if-eqz v3, :cond_7
 
-    .line 82
     const-string v3, "StayingAreaCount"
 
     invoke-virtual {p2, v3}, Landroid/os/Bundle;->getInt(Ljava/lang/String;)I
@@ -394,12 +356,10 @@
 
     if-lez v3, :cond_5
 
-    .line 83
     invoke-virtual {p0}, Lcom/samsung/android/contextaware/aggregator/builtin/LifeLogAggregator;->getContextValueNames()[Ljava/lang/String;
 
     move-result-object v1
 
-    .line 84
     .local v1, "names":[Ljava/lang/String;
     invoke-virtual {p0}, Lcom/samsung/android/contextaware/aggregator/builtin/LifeLogAggregator;->getContextBean()Lcom/samsung/android/contextaware/manager/ContextBean;
 
@@ -409,7 +369,6 @@
 
     invoke-virtual {v3, v4, v6}, Lcom/samsung/android/contextaware/manager/ContextBean;->putContext(Ljava/lang/String;I)V
 
-    .line 86
     invoke-virtual {p0}, Lcom/samsung/android/contextaware/aggregator/builtin/LifeLogAggregator;->getContextBean()Lcom/samsung/android/contextaware/manager/ContextBean;
 
     move-result-object v3
@@ -418,7 +377,6 @@
 
     invoke-virtual {v3, v4, p2}, Lcom/samsung/android/contextaware/manager/ContextBean;->putContext(Ljava/lang/String;Landroid/os/Bundle;)V
 
-    .line 88
     sget-object v3, Lcom/samsung/android/contextaware/ContextList$ContextType;->SENSORHUB_RUNNER_LIFE_LOG_COMPONENT:Lcom/samsung/android/contextaware/ContextList$ContextType;
 
     invoke-virtual {v3}, Lcom/samsung/android/contextaware/ContextList$ContextType;->getCode()Ljava/lang/String;
@@ -429,24 +387,20 @@
 
     move-result-object v2
 
-    .line 90
     .local v2, "obj":Lcom/samsung/android/contextaware/manager/ContextComponent;
     if-nez v2, :cond_4
 
-    .line 91
     const-string v3, "Sub-collection object is null"
 
     invoke-static {v3}, Lcom/samsung/android/contextaware/utilbundle/logger/CaLogger;->error(Ljava/lang/String;)V
 
     goto :goto_0
 
-    .line 95
     :cond_4
     invoke-virtual {v2}, Lcom/samsung/android/contextaware/manager/ContextComponent;->getContextValueNames()[Ljava/lang/String;
 
     move-result-object v0
 
-    .line 97
     .local v0, "keys":[Ljava/lang/String;
     invoke-virtual {p0}, Lcom/samsung/android/contextaware/aggregator/builtin/LifeLogAggregator;->getContextBean()Lcom/samsung/android/contextaware/manager/ContextBean;
 
@@ -462,7 +416,6 @@
 
     invoke-virtual {v3, v4, v5}, Lcom/samsung/android/contextaware/manager/ContextBean;->putContextForDisplay(Ljava/lang/String;I)V
 
-    .line 99
     invoke-virtual {p0}, Lcom/samsung/android/contextaware/aggregator/builtin/LifeLogAggregator;->getContextBean()Lcom/samsung/android/contextaware/manager/ContextBean;
 
     move-result-object v3
@@ -477,7 +430,6 @@
 
     invoke-virtual {v3, v4, v5}, Lcom/samsung/android/contextaware/manager/ContextBean;->putContextForDisplay(Ljava/lang/String;[J)V
 
-    .line 101
     invoke-virtual {p0}, Lcom/samsung/android/contextaware/aggregator/builtin/LifeLogAggregator;->getContextBean()Lcom/samsung/android/contextaware/manager/ContextBean;
 
     move-result-object v3
@@ -492,7 +444,6 @@
 
     invoke-virtual {v3, v4, v5}, Lcom/samsung/android/contextaware/manager/ContextBean;->putContextForDisplay(Ljava/lang/String;[D)V
 
-    .line 103
     invoke-virtual {p0}, Lcom/samsung/android/contextaware/aggregator/builtin/LifeLogAggregator;->getContextBean()Lcom/samsung/android/contextaware/manager/ContextBean;
 
     move-result-object v3
@@ -507,7 +458,6 @@
 
     invoke-virtual {v3, v4, v5}, Lcom/samsung/android/contextaware/manager/ContextBean;->putContextForDisplay(Ljava/lang/String;[D)V
 
-    .line 105
     invoke-virtual {p0}, Lcom/samsung/android/contextaware/aggregator/builtin/LifeLogAggregator;->getContextBean()Lcom/samsung/android/contextaware/manager/ContextBean;
 
     move-result-object v3
@@ -522,7 +472,6 @@
 
     invoke-virtual {v3, v4, v5}, Lcom/samsung/android/contextaware/manager/ContextBean;->putContextForDisplay(Ljava/lang/String;[D)V
 
-    .line 107
     invoke-virtual {p0}, Lcom/samsung/android/contextaware/aggregator/builtin/LifeLogAggregator;->getContextBean()Lcom/samsung/android/contextaware/manager/ContextBean;
 
     move-result-object v3
@@ -541,7 +490,6 @@
 
     invoke-virtual {v3, v4, v5}, Lcom/samsung/android/contextaware/manager/ContextBean;->putContextForDisplay(Ljava/lang/String;[I)V
 
-    .line 109
     invoke-virtual {p0}, Lcom/samsung/android/contextaware/aggregator/builtin/LifeLogAggregator;->getContextBean()Lcom/samsung/android/contextaware/manager/ContextBean;
 
     move-result-object v3
@@ -560,7 +508,6 @@
 
     invoke-virtual {v3, v4, v5}, Lcom/samsung/android/contextaware/manager/ContextBean;->putContextForDisplay(Ljava/lang/String;[I)V
 
-    .line 111
     invoke-virtual {p0}, Lcom/samsung/android/contextaware/aggregator/builtin/LifeLogAggregator;->getContextBean()Lcom/samsung/android/contextaware/manager/ContextBean;
 
     move-result-object v3
@@ -579,10 +526,8 @@
 
     invoke-virtual {v3, v4, v5}, Lcom/samsung/android/contextaware/manager/ContextBean;->putContextForDisplay(Ljava/lang/String;[I)V
 
-    .line 114
     invoke-virtual {p0}, Lcom/samsung/android/contextaware/aggregator/builtin/LifeLogAggregator;->notifyObserver()V
 
-    .line 116
     .end local v0    # "keys":[Ljava/lang/String;
     .end local v1    # "names":[Ljava/lang/String;
     .end local v2    # "obj":Lcom/samsung/android/contextaware/manager/ContextComponent;
@@ -595,12 +540,10 @@
 
     if-lez v3, :cond_1
 
-    .line 117
     invoke-virtual {p0}, Lcom/samsung/android/contextaware/aggregator/builtin/LifeLogAggregator;->getContextValueNames()[Ljava/lang/String;
 
     move-result-object v1
 
-    .line 118
     .restart local v1    # "names":[Ljava/lang/String;
     invoke-virtual {p0}, Lcom/samsung/android/contextaware/aggregator/builtin/LifeLogAggregator;->getContextBean()Lcom/samsung/android/contextaware/manager/ContextBean;
 
@@ -610,7 +553,6 @@
 
     invoke-virtual {v3, v4, v8}, Lcom/samsung/android/contextaware/manager/ContextBean;->putContext(Ljava/lang/String;I)V
 
-    .line 120
     invoke-virtual {p0}, Lcom/samsung/android/contextaware/aggregator/builtin/LifeLogAggregator;->getContextBean()Lcom/samsung/android/contextaware/manager/ContextBean;
 
     move-result-object v3
@@ -619,7 +561,6 @@
 
     invoke-virtual {v3, v4, p2}, Lcom/samsung/android/contextaware/manager/ContextBean;->putContext(Ljava/lang/String;Landroid/os/Bundle;)V
 
-    .line 122
     sget-object v3, Lcom/samsung/android/contextaware/ContextList$ContextType;->SENSORHUB_RUNNER_LIFE_LOG_COMPONENT:Lcom/samsung/android/contextaware/ContextList$ContextType;
 
     invoke-virtual {v3}, Lcom/samsung/android/contextaware/ContextList$ContextType;->getCode()Ljava/lang/String;
@@ -630,24 +571,20 @@
 
     move-result-object v2
 
-    .line 124
     .restart local v2    # "obj":Lcom/samsung/android/contextaware/manager/ContextComponent;
     if-nez v2, :cond_6
 
-    .line 125
     const-string v3, "Sub-collection object is null"
 
     invoke-static {v3}, Lcom/samsung/android/contextaware/utilbundle/logger/CaLogger;->error(Ljava/lang/String;)V
 
     goto/16 :goto_0
 
-    .line 129
     :cond_6
     invoke-virtual {v2}, Lcom/samsung/android/contextaware/manager/ContextComponent;->getContextValueNames()[Ljava/lang/String;
 
     move-result-object v0
 
-    .line 131
     .restart local v0    # "keys":[Ljava/lang/String;
     invoke-virtual {p0}, Lcom/samsung/android/contextaware/aggregator/builtin/LifeLogAggregator;->getContextBean()Lcom/samsung/android/contextaware/manager/ContextBean;
 
@@ -667,7 +604,6 @@
 
     invoke-virtual {v3, v4, v5}, Lcom/samsung/android/contextaware/manager/ContextBean;->putContextForDisplay(Ljava/lang/String;I)V
 
-    .line 133
     invoke-virtual {p0}, Lcom/samsung/android/contextaware/aggregator/builtin/LifeLogAggregator;->getContextBean()Lcom/samsung/android/contextaware/manager/ContextBean;
 
     move-result-object v3
@@ -686,7 +622,6 @@
 
     invoke-virtual {v3, v4, v6, v7}, Lcom/samsung/android/contextaware/manager/ContextBean;->putContextForDisplay(Ljava/lang/String;J)V
 
-    .line 135
     invoke-virtual {p0}, Lcom/samsung/android/contextaware/aggregator/builtin/LifeLogAggregator;->getContextBean()Lcom/samsung/android/contextaware/manager/ContextBean;
 
     move-result-object v3
@@ -705,7 +640,6 @@
 
     invoke-virtual {v3, v4, v5}, Lcom/samsung/android/contextaware/manager/ContextBean;->putContextForDisplay(Ljava/lang/String;[I)V
 
-    .line 137
     invoke-virtual {p0}, Lcom/samsung/android/contextaware/aggregator/builtin/LifeLogAggregator;->getContextBean()Lcom/samsung/android/contextaware/manager/ContextBean;
 
     move-result-object v3
@@ -724,7 +658,6 @@
 
     invoke-virtual {v3, v4, v5}, Lcom/samsung/android/contextaware/manager/ContextBean;->putContextForDisplay(Ljava/lang/String;[I)V
 
-    .line 139
     invoke-virtual {p0}, Lcom/samsung/android/contextaware/aggregator/builtin/LifeLogAggregator;->getContextBean()Lcom/samsung/android/contextaware/manager/ContextBean;
 
     move-result-object v3
@@ -743,12 +676,10 @@
 
     invoke-virtual {v3, v4, v5}, Lcom/samsung/android/contextaware/manager/ContextBean;->putContextForDisplay(Ljava/lang/String;[I)V
 
-    .line 142
     invoke-virtual {p0}, Lcom/samsung/android/contextaware/aggregator/builtin/LifeLogAggregator;->notifyObserver()V
 
     goto/16 :goto_0
 
-    .line 144
     .end local v0    # "keys":[Ljava/lang/String;
     .end local v1    # "names":[Ljava/lang/String;
     .end local v2    # "obj":Lcom/samsung/android/contextaware/manager/ContextComponent;
@@ -765,12 +696,10 @@
 
     if-eqz v3, :cond_1
 
-    .line 145
     invoke-virtual {p0}, Lcom/samsung/android/contextaware/aggregator/builtin/LifeLogAggregator;->getContextValueNames()[Ljava/lang/String;
 
     move-result-object v1
 
-    .line 146
     .restart local v1    # "names":[Ljava/lang/String;
     invoke-virtual {p0}, Lcom/samsung/android/contextaware/aggregator/builtin/LifeLogAggregator;->getContextBean()Lcom/samsung/android/contextaware/manager/ContextBean;
 
@@ -780,7 +709,6 @@
 
     invoke-virtual {v3, v4, v9}, Lcom/samsung/android/contextaware/manager/ContextBean;->putContext(Ljava/lang/String;I)V
 
-    .line 148
     invoke-virtual {p0}, Lcom/samsung/android/contextaware/aggregator/builtin/LifeLogAggregator;->getContextBean()Lcom/samsung/android/contextaware/manager/ContextBean;
 
     move-result-object v3
@@ -789,7 +717,6 @@
 
     invoke-virtual {v3, v4, p2}, Lcom/samsung/android/contextaware/manager/ContextBean;->putContext(Ljava/lang/String;Landroid/os/Bundle;)V
 
-    .line 150
     sget-object v3, Lcom/samsung/android/contextaware/ContextList$ContextType;->AGGREGATOR_LPP:Lcom/samsung/android/contextaware/ContextList$ContextType;
 
     invoke-virtual {v3}, Lcom/samsung/android/contextaware/ContextList$ContextType;->getCode()Ljava/lang/String;
@@ -800,24 +727,20 @@
 
     move-result-object v2
 
-    .line 152
     .restart local v2    # "obj":Lcom/samsung/android/contextaware/manager/ContextComponent;
     if-nez v2, :cond_8
 
-    .line 153
     const-string v3, "Sub-collection object is null"
 
     invoke-static {v3}, Lcom/samsung/android/contextaware/utilbundle/logger/CaLogger;->error(Ljava/lang/String;)V
 
     goto/16 :goto_0
 
-    .line 157
     :cond_8
     invoke-virtual {v2}, Lcom/samsung/android/contextaware/manager/ContextComponent;->getContextValueNames()[Ljava/lang/String;
 
     move-result-object v0
 
-    .line 159
     .restart local v0    # "keys":[Ljava/lang/String;
     invoke-virtual {p0}, Lcom/samsung/android/contextaware/aggregator/builtin/LifeLogAggregator;->getContextBean()Lcom/samsung/android/contextaware/manager/ContextBean;
 
@@ -833,7 +756,6 @@
 
     invoke-virtual {v3, v4, v5}, Lcom/samsung/android/contextaware/manager/ContextBean;->putContextForDisplay(Ljava/lang/String;I)V
 
-    .line 161
     invoke-virtual {p0}, Lcom/samsung/android/contextaware/aggregator/builtin/LifeLogAggregator;->getContextBean()Lcom/samsung/android/contextaware/manager/ContextBean;
 
     move-result-object v3
@@ -848,7 +770,6 @@
 
     invoke-virtual {v3, v4, v5}, Lcom/samsung/android/contextaware/manager/ContextBean;->putContextForDisplay(Ljava/lang/String;[J)V
 
-    .line 163
     invoke-virtual {p0}, Lcom/samsung/android/contextaware/aggregator/builtin/LifeLogAggregator;->getContextBean()Lcom/samsung/android/contextaware/manager/ContextBean;
 
     move-result-object v3
@@ -863,7 +784,6 @@
 
     invoke-virtual {v3, v4, v5}, Lcom/samsung/android/contextaware/manager/ContextBean;->putContextForDisplay(Ljava/lang/String;[D)V
 
-    .line 165
     invoke-virtual {p0}, Lcom/samsung/android/contextaware/aggregator/builtin/LifeLogAggregator;->getContextBean()Lcom/samsung/android/contextaware/manager/ContextBean;
 
     move-result-object v3
@@ -878,7 +798,6 @@
 
     invoke-virtual {v3, v4, v5}, Lcom/samsung/android/contextaware/manager/ContextBean;->putContextForDisplay(Ljava/lang/String;[D)V
 
-    .line 167
     invoke-virtual {p0}, Lcom/samsung/android/contextaware/aggregator/builtin/LifeLogAggregator;->getContextBean()Lcom/samsung/android/contextaware/manager/ContextBean;
 
     move-result-object v3
@@ -893,7 +812,6 @@
 
     invoke-virtual {v3, v4, v5}, Lcom/samsung/android/contextaware/manager/ContextBean;->putContextForDisplay(Ljava/lang/String;[D)V
 
-    .line 170
     invoke-virtual {p0}, Lcom/samsung/android/contextaware/aggregator/builtin/LifeLogAggregator;->notifyObserver()V
 
     goto/16 :goto_0

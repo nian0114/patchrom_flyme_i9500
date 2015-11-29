@@ -26,7 +26,6 @@
     .locals 0
 
     .prologue
-    .line 1451
     iput-object p1, p0, Lcom/android/internal/policy/impl/GlobalActions$13;->this$0:Lcom/android/internal/policy/impl/GlobalActions;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -45,7 +44,6 @@
     .prologue
     const/4 v2, 0x1
 
-    .line 1454
     iget-object v3, p0, Lcom/android/internal/policy/impl/GlobalActions$13;->this$0:Lcom/android/internal/policy/impl/GlobalActions;
 
     const-string v4, "content://com.sec.knox.provider2/KnoxCustomManagerService1"
@@ -59,7 +57,6 @@
 
     move-result-object v0
 
-    .line 1456
     .local v0, "cr":Landroid/database/Cursor;
     iget-object v3, p0, Lcom/android/internal/policy/impl/GlobalActions$13;->this$0:Lcom/android/internal/policy/impl/GlobalActions;
 
@@ -70,7 +67,6 @@
 
     move-result-object v1
 
-    .line 1458
     .local v1, "getSealedState":Ljava/lang/String;
     if-eqz v1, :cond_0
 
@@ -82,7 +78,6 @@
 
     if-eqz v3, :cond_0
 
-    .line 1459
     invoke-virtual {p3}, Landroid/view/KeyEvent;->getAction()I
 
     move-result v3
@@ -93,7 +88,6 @@
 
     if-ne p2, v3, :cond_0
 
-    .line 1460
     # getter for: Lcom/android/internal/policy/impl/GlobalActions;->mSealedModeOptionShown:Z
     invoke-static {}, Lcom/android/internal/policy/impl/GlobalActions;->access$3300()Z
 
@@ -101,11 +95,9 @@
 
     if-nez v3, :cond_0
 
-    .line 1462
     # setter for: Lcom/android/internal/policy/impl/GlobalActions;->mSealedModeOptionShown:Z
     invoke-static {v2}, Lcom/android/internal/policy/impl/GlobalActions;->access$3302(Z)Z
 
-    .line 1463
     iget-object v3, p0, Lcom/android/internal/policy/impl/GlobalActions$13;->this$0:Lcom/android/internal/policy/impl/GlobalActions;
 
     # getter for: Lcom/android/internal/policy/impl/GlobalActions;->mItems:Ljava/util/ArrayList;
@@ -127,7 +119,6 @@
 
     invoke-virtual {v3, v4, v5}, Ljava/util/ArrayList;->add(ILjava/lang/Object;)V
 
-    .line 1464
     iget-object v3, p0, Lcom/android/internal/policy/impl/GlobalActions$13;->this$0:Lcom/android/internal/policy/impl/GlobalActions;
 
     # getter for: Lcom/android/internal/policy/impl/GlobalActions;->mHandler:Landroid/os/Handler;
@@ -137,7 +128,6 @@
 
     invoke-virtual {v3, v2}, Landroid/os/Handler;->sendEmptyMessage(I)Z
 
-    .line 1469
     :goto_0
     return v2
 

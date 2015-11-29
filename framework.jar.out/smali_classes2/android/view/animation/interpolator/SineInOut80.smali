@@ -17,7 +17,6 @@
     .prologue
     const/4 v3, 0x3
 
-    .line 56
     const/4 v0, 0x5
 
     new-array v0, v0, [[F
@@ -104,10 +103,8 @@
     .locals 0
 
     .prologue
-    .line 70
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 71
     return-void
 .end method
 
@@ -117,10 +114,8 @@
     .param p2, "attrs"    # Landroid/util/AttributeSet;
 
     .prologue
-    .line 79
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 80
     return-void
 .end method
 
@@ -131,7 +126,6 @@
     .param p1, "input"    # F
 
     .prologue
-    .line 84
     sget-object v0, Landroid/view/animation/interpolator/SineInOut80;->segments:[[F
 
     invoke-static {p1, v0}, Landroid/view/animation/interpolator/SineBase;->getInterpolation(F[[F)F

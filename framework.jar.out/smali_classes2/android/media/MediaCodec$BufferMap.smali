@@ -39,10 +39,8 @@
     .locals 1
 
     .prologue
-    .line 1190
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 1219
     new-instance v0, Ljava/util/HashMap;
 
     invoke-direct {v0}, Ljava/util/HashMap;-><init>()V
@@ -57,7 +55,6 @@
     .param p1, "x0"    # Landroid/media/MediaCodec$1;
 
     .prologue
-    .line 1190
     invoke-direct {p0}, Landroid/media/MediaCodec$BufferMap;-><init>()V
 
     return-void
@@ -69,7 +66,6 @@
     .locals 3
 
     .prologue
-    .line 1249
     iget-object v2, p0, Landroid/media/MediaCodec$BufferMap;->mMap:Ljava/util/Map;
 
     invoke-interface {v2}, Ljava/util/Map;->values()Ljava/util/Collection;
@@ -94,20 +90,17 @@
 
     check-cast v0, Landroid/media/MediaCodec$BufferMap$CodecBuffer;
 
-    .line 1250
     .local v0, "buffer":Landroid/media/MediaCodec$BufferMap$CodecBuffer;
     invoke-virtual {v0}, Landroid/media/MediaCodec$BufferMap$CodecBuffer;->free()V
 
     goto :goto_0
 
-    .line 1252
     .end local v0    # "buffer":Landroid/media/MediaCodec$BufferMap$CodecBuffer;
     :cond_0
     iget-object v2, p0, Landroid/media/MediaCodec$BufferMap;->mMap:Ljava/util/Map;
 
     invoke-interface {v2}, Ljava/util/Map;->clear()V
 
-    .line 1253
     return-void
 .end method
 
@@ -117,7 +110,6 @@
     .param p2, "newImage"    # Landroid/media/Image;
 
     .prologue
-    .line 1240
     iget-object v1, p0, Landroid/media/MediaCodec$BufferMap;->mMap:Ljava/util/Map;
 
     invoke-static {p1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
@@ -130,11 +122,9 @@
 
     check-cast v0, Landroid/media/MediaCodec$BufferMap$CodecBuffer;
 
-    .line 1241
     .local v0, "buffer":Landroid/media/MediaCodec$BufferMap$CodecBuffer;
     if-nez v0, :cond_0
 
-    .line 1242
     new-instance v0, Landroid/media/MediaCodec$BufferMap$CodecBuffer;
 
     .end local v0    # "buffer":Landroid/media/MediaCodec$BufferMap$CodecBuffer;
@@ -142,7 +132,6 @@
 
     invoke-direct {v0, v1}, Landroid/media/MediaCodec$BufferMap$CodecBuffer;-><init>(Landroid/media/MediaCodec$1;)V
 
-    .line 1243
     .restart local v0    # "buffer":Landroid/media/MediaCodec$BufferMap$CodecBuffer;
     iget-object v1, p0, Landroid/media/MediaCodec$BufferMap;->mMap:Ljava/util/Map;
 
@@ -152,11 +141,9 @@
 
     invoke-interface {v1, v2, v0}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 1245
     :cond_0
     invoke-virtual {v0, p2}, Landroid/media/MediaCodec$BufferMap$CodecBuffer;->setImage(Landroid/media/Image;)V
 
-    .line 1246
     return-void
 .end method
 
@@ -166,7 +153,6 @@
     .param p2, "newBuffer"    # Ljava/nio/ByteBuffer;
 
     .prologue
-    .line 1231
     iget-object v1, p0, Landroid/media/MediaCodec$BufferMap;->mMap:Ljava/util/Map;
 
     invoke-static {p1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
@@ -179,11 +165,9 @@
 
     check-cast v0, Landroid/media/MediaCodec$BufferMap$CodecBuffer;
 
-    .line 1232
     .local v0, "buffer":Landroid/media/MediaCodec$BufferMap$CodecBuffer;
     if-nez v0, :cond_0
 
-    .line 1233
     new-instance v0, Landroid/media/MediaCodec$BufferMap$CodecBuffer;
 
     .end local v0    # "buffer":Landroid/media/MediaCodec$BufferMap$CodecBuffer;
@@ -191,7 +175,6 @@
 
     invoke-direct {v0, v1}, Landroid/media/MediaCodec$BufferMap$CodecBuffer;-><init>(Landroid/media/MediaCodec$1;)V
 
-    .line 1234
     .restart local v0    # "buffer":Landroid/media/MediaCodec$BufferMap$CodecBuffer;
     iget-object v1, p0, Landroid/media/MediaCodec$BufferMap;->mMap:Ljava/util/Map;
 
@@ -201,11 +184,9 @@
 
     invoke-interface {v1, v2, v0}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 1236
     :cond_0
     invoke-virtual {v0, p2}, Landroid/media/MediaCodec$BufferMap$CodecBuffer;->setByteBuffer(Ljava/nio/ByteBuffer;)V
 
-    .line 1237
     return-void
 .end method
 
@@ -214,7 +195,6 @@
     .param p1, "index"    # I
 
     .prologue
-    .line 1223
     iget-object v1, p0, Landroid/media/MediaCodec$BufferMap;->mMap:Ljava/util/Map;
 
     invoke-static {p1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
@@ -227,14 +207,11 @@
 
     check-cast v0, Landroid/media/MediaCodec$BufferMap$CodecBuffer;
 
-    .line 1224
     .local v0, "buffer":Landroid/media/MediaCodec$BufferMap$CodecBuffer;
     if-eqz v0, :cond_0
 
-    .line 1225
     invoke-virtual {v0}, Landroid/media/MediaCodec$BufferMap$CodecBuffer;->free()V
 
-    .line 1226
     iget-object v1, p0, Landroid/media/MediaCodec$BufferMap;->mMap:Ljava/util/Map;
 
     invoke-static {p1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
@@ -243,7 +220,6 @@
 
     invoke-interface {v1, v2}, Ljava/util/Map;->remove(Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 1228
     :cond_0
     return-void
 .end method

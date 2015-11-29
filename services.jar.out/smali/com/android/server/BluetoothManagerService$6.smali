@@ -23,7 +23,6 @@
     .locals 0
 
     .prologue
-    .line 2470
     iput-object p1, p0, Lcom/android/server/BluetoothManagerService$6;->this$0:Lcom/android/server/BluetoothManagerService;
 
     invoke-direct {p0}, Landroid/content/pm/IKnoxModeChangeObserver$Stub;-><init>()V
@@ -38,7 +37,6 @@
     .param p1, "personaId"    # I
 
     .prologue
-    .line 2476
     const-string v0, "BluetoothManagerService"
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -61,21 +59,18 @@
 
     invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 2478
     invoke-static {p1}, Landroid/os/PersonaManager;->isCACEnabled(I)Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
-    .line 2479
     const-string v0, "BluetoothManagerService"
 
     const-string v1, "BMS.onKnoxModeChange() PersonaManager.isCACEnabled==true"
 
     invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 2480
     iget-object v0, p0, Lcom/android/server/BluetoothManagerService$6;->this$0:Lcom/android/server/BluetoothManagerService;
 
     # getter for: Lcom/android/server/BluetoothManagerService;->mHandler:Lcom/android/server/BluetoothManagerService$BluetoothHandler;
@@ -100,7 +95,6 @@
 
     invoke-virtual {v0, v1}, Lcom/android/server/BluetoothManagerService$BluetoothHandler;->sendMessage(Landroid/os/Message;)Z
 
-    .line 2482
     :cond_0
     return-void
 .end method

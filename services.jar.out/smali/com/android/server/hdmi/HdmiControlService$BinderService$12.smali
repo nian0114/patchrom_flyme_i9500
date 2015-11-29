@@ -30,7 +30,6 @@
     .locals 0
 
     .prologue
-    .line 1355
     iput-object p1, p0, Lcom/android/server/hdmi/HdmiControlService$BinderService$12;->this$1:Lcom/android/server/hdmi/HdmiControlService$BinderService;
 
     iput p2, p0, Lcom/android/server/hdmi/HdmiControlService$BinderService$12;->val$recorderAddress:I
@@ -48,7 +47,6 @@
     .locals 3
 
     .prologue
-    .line 1358
     iget-object v0, p0, Lcom/android/server/hdmi/HdmiControlService$BinderService$12;->this$1:Lcom/android/server/hdmi/HdmiControlService$BinderService;
 
     iget-object v0, v0, Lcom/android/server/hdmi/HdmiControlService$BinderService;->this$0:Lcom/android/server/hdmi/HdmiControlService;
@@ -59,18 +57,15 @@
 
     if-nez v0, :cond_0
 
-    .line 1359
     const-string v0, "HdmiControlService"
 
     const-string v1, "No TV is available."
 
     invoke-static {v0, v1}, Landroid/util/Slog;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1363
     :goto_0
     return-void
 
-    .line 1362
     :cond_0
     iget-object v0, p0, Lcom/android/server/hdmi/HdmiControlService$BinderService$12;->this$1:Lcom/android/server/hdmi/HdmiControlService$BinderService;
 

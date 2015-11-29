@@ -86,15 +86,12 @@
     .locals 1
 
     .prologue
-    .line 15
     invoke-direct {p0}, Landroid/os/Binder;-><init>()V
 
-    .line 16
     const-string v0, "com.android.internal.policy.ISignServiceInterface"
 
     invoke-virtual {p0, p0, v0}, Lcom/android/internal/policy/ISignServiceInterface$Stub;->attachInterface(Landroid/os/IInterface;Ljava/lang/String;)V
 
-    .line 17
     return-void
 .end method
 
@@ -103,17 +100,13 @@
     .param p0, "obj"    # Landroid/os/IBinder;
 
     .prologue
-    .line 24
     if-nez p0, :cond_0
 
-    .line 25
     const/4 v0, 0x0
 
-    .line 31
     :goto_0
     return-object v0
 
-    .line 27
     :cond_0
     const-string v1, "com.android.internal.policy.ISignServiceInterface"
 
@@ -121,7 +114,6 @@
 
     move-result-object v0
 
-    .line 28
     .local v0, "iin":Landroid/os/IInterface;
     if-eqz v0, :cond_1
 
@@ -129,12 +121,10 @@
 
     if-eqz v1, :cond_1
 
-    .line 29
     check-cast v0, Lcom/android/internal/policy/ISignServiceInterface;
 
     goto :goto_0
 
-    .line 31
     :cond_1
     new-instance v0, Lcom/android/internal/policy/ISignServiceInterface$Stub$Proxy;
 
@@ -150,7 +140,6 @@
     .locals 0
 
     .prologue
-    .line 35
     return-object p0
 .end method
 
@@ -171,10 +160,8 @@
 
     const/4 v7, 0x1
 
-    .line 39
     sparse-switch p1, :sswitch_data_0
 
-    .line 297
     invoke-super {p0, p1, p2, p3, p4}, Landroid/os/Binder;->onTransact(ILandroid/os/Parcel;Landroid/os/Parcel;I)Z
 
     move-result v7
@@ -182,7 +169,6 @@
     :goto_0
     return v7
 
-    .line 43
     :sswitch_0
     const-string v1, "com.android.internal.policy.ISignServiceInterface"
 
@@ -190,22 +176,18 @@
 
     goto :goto_0
 
-    .line 48
     :sswitch_1
     const-string v8, "com.android.internal.policy.ISignServiceInterface"
 
     invoke-virtual {p2, v8}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
 
-    .line 49
     invoke-virtual {p0}, Lcom/android/internal/policy/ISignServiceInterface$Stub;->initEngine()Z
 
     move-result v0
 
-    .line 50
     .local v0, "_result":Z
     invoke-virtual {p3}, Landroid/os/Parcel;->writeNoException()V
 
-    .line 51
     if-eqz v0, :cond_0
 
     move v1, v7
@@ -215,23 +197,19 @@
 
     goto :goto_0
 
-    .line 56
     .end local v0    # "_result":Z
     :sswitch_2
     const-string v8, "com.android.internal.policy.ISignServiceInterface"
 
     invoke-virtual {p2, v8}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
 
-    .line 57
     invoke-virtual {p0}, Lcom/android/internal/policy/ISignServiceInterface$Stub;->getEngineStatus()Z
 
     move-result v0
 
-    .line 58
     .restart local v0    # "_result":Z
     invoke-virtual {p3}, Landroid/os/Parcel;->writeNoException()V
 
-    .line 59
     if-eqz v0, :cond_1
 
     move v1, v7
@@ -241,34 +219,28 @@
 
     goto :goto_0
 
-    .line 64
     .end local v0    # "_result":Z
     :sswitch_3
     const-string v1, "com.android.internal.policy.ISignServiceInterface"
 
     invoke-virtual {p2, v1}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
 
-    .line 66
     invoke-virtual {p2}, Landroid/os/Parcel;->readInt()I
 
     move-result v2
 
-    .line 68
     .local v2, "_arg0":I
     invoke-virtual {p2}, Landroid/os/Parcel;->readInt()I
 
     move-result v3
 
-    .line 69
     .local v3, "_arg1":I
     invoke-virtual {p0, v2, v3}, Lcom/android/internal/policy/ISignServiceInterface$Stub;->startWriting(II)V
 
-    .line 70
     invoke-virtual {p3}, Landroid/os/Parcel;->writeNoException()V
 
     goto :goto_0
 
-    .line 75
     .end local v2    # "_arg0":I
     .end local v3    # "_arg1":I
     :sswitch_4
@@ -276,38 +248,31 @@
 
     invoke-virtual {p2, v1}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
 
-    .line 76
     invoke-virtual {p0}, Lcom/android/internal/policy/ISignServiceInterface$Stub;->endWriting()V
 
-    .line 77
     invoke-virtual {p3}, Landroid/os/Parcel;->writeNoException()V
 
     goto :goto_0
 
-    .line 82
     :sswitch_5
     const-string v1, "com.android.internal.policy.ISignServiceInterface"
 
     invoke-virtual {p2, v1}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
 
-    .line 84
     invoke-virtual {p2}, Landroid/os/Parcel;->readInt()I
 
     move-result v2
 
-    .line 86
     .restart local v2    # "_arg0":I
     invoke-virtual {p2}, Landroid/os/Parcel;->readInt()I
 
     move-result v3
 
-    .line 88
     .restart local v3    # "_arg1":I
     invoke-virtual {p2}, Landroid/os/Parcel;->readLong()J
 
     move-result-wide v4
 
-    .line 90
     .local v4, "_arg2":J
     invoke-virtual {p2}, Landroid/os/Parcel;->readInt()I
 
@@ -316,15 +281,12 @@
     .local v6, "_arg3":I
     move-object v1, p0
 
-    .line 91
     invoke-virtual/range {v1 .. v6}, Lcom/android/internal/policy/ISignServiceInterface$Stub;->addOnePoint(IIJI)V
 
-    .line 92
     invoke-virtual {p3}, Landroid/os/Parcel;->writeNoException()V
 
     goto :goto_0
 
-    .line 97
     .end local v2    # "_arg0":I
     .end local v3    # "_arg1":I
     .end local v4    # "_arg2":J
@@ -334,58 +296,46 @@
 
     invoke-virtual {p2, v1}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
 
-    .line 98
     invoke-virtual {p0}, Lcom/android/internal/policy/ISignServiceInterface$Stub;->endOneStroke()V
 
-    .line 99
     invoke-virtual {p3}, Landroid/os/Parcel;->writeNoException()V
 
     goto :goto_0
 
-    .line 104
     :sswitch_7
     const-string v1, "com.android.internal.policy.ISignServiceInterface"
 
     invoke-virtual {p2, v1}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
 
-    .line 105
     invoke-virtual {p0}, Lcom/android/internal/policy/ISignServiceInterface$Stub;->reset()V
 
-    .line 106
     invoke-virtual {p3}, Landroid/os/Parcel;->writeNoException()V
 
     goto/16 :goto_0
 
-    .line 111
     :sswitch_8
     const-string v1, "com.android.internal.policy.ISignServiceInterface"
 
     invoke-virtual {p2, v1}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
 
-    .line 112
     invoke-virtual {p0}, Lcom/android/internal/policy/ISignServiceInterface$Stub;->setPointZero()V
 
-    .line 113
     invoke-virtual {p3}, Landroid/os/Parcel;->writeNoException()V
 
     goto/16 :goto_0
 
-    .line 118
     :sswitch_9
     const-string v8, "com.android.internal.policy.ISignServiceInterface"
 
     invoke-virtual {p2, v8}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
 
-    .line 119
     invoke-virtual {p0}, Lcom/android/internal/policy/ISignServiceInterface$Stub;->isWriting()Z
 
     move-result v0
 
-    .line 120
     .restart local v0    # "_result":Z
     invoke-virtual {p3}, Landroid/os/Parcel;->writeNoException()V
 
-    .line 121
     if-eqz v0, :cond_2
 
     move v1, v7
@@ -395,23 +345,19 @@
 
     goto/16 :goto_0
 
-    .line 126
     .end local v0    # "_result":Z
     :sswitch_a
     const-string v8, "com.android.internal.policy.ISignServiceInterface"
 
     invoke-virtual {p2, v8}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
 
-    .line 127
     invoke-virtual {p0}, Lcom/android/internal/policy/ISignServiceInterface$Stub;->isPenDown()Z
 
     move-result v0
 
-    .line 128
     .restart local v0    # "_result":Z
     invoke-virtual {p3}, Landroid/os/Parcel;->writeNoException()V
 
-    .line 129
     if-eqz v0, :cond_3
 
     move v1, v7
@@ -421,34 +367,28 @@
 
     goto/16 :goto_0
 
-    .line 134
     .end local v0    # "_result":Z
     :sswitch_b
     const-string v1, "com.android.internal.policy.ISignServiceInterface"
 
     invoke-virtual {p2, v1}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
 
-    .line 136
     invoke-virtual {p2}, Landroid/os/Parcel;->readInt()I
 
     move-result v2
 
-    .line 137
     .restart local v2    # "_arg0":I
     invoke-virtual {p0, v2}, Lcom/android/internal/policy/ISignServiceInterface$Stub;->delUser(I)I
 
     move-result v0
 
-    .line 138
     .local v0, "_result":I
     invoke-virtual {p3}, Landroid/os/Parcel;->writeNoException()V
 
-    .line 139
     invoke-virtual {p3, v0}, Landroid/os/Parcel;->writeInt(I)V
 
     goto/16 :goto_0
 
-    .line 144
     .end local v0    # "_result":I
     .end local v2    # "_arg0":I
     :sswitch_c
@@ -456,18 +396,15 @@
 
     invoke-virtual {p2, v8}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
 
-    .line 146
     invoke-virtual {p2}, Landroid/os/Parcel;->readInt()I
 
     move-result v2
 
-    .line 148
     .restart local v2    # "_arg0":I
     invoke-virtual {p2}, Landroid/os/Parcel;->readInt()I
 
     move-result v3
 
-    .line 150
     .restart local v3    # "_arg1":I
     invoke-virtual {p2}, Landroid/os/Parcel;->readInt()I
 
@@ -477,18 +414,15 @@
 
     move v4, v7
 
-    .line 151
     .local v4, "_arg2":Z
     :goto_1
     invoke-virtual {p0, v2, v3, v4}, Lcom/android/internal/policy/ISignServiceInterface$Stub;->verify(IIZ)I
 
     move-result v0
 
-    .line 152
     .restart local v0    # "_result":I
     invoke-virtual {p3}, Landroid/os/Parcel;->writeNoException()V
 
-    .line 153
     invoke-virtual {p3, v0}, Landroid/os/Parcel;->writeInt(I)V
 
     goto/16 :goto_0
@@ -498,10 +432,8 @@
     :cond_4
     move v4, v1
 
-    .line 150
     goto :goto_1
 
-    .line 158
     .end local v2    # "_arg0":I
     .end local v3    # "_arg1":I
     :sswitch_d
@@ -509,27 +441,22 @@
 
     invoke-virtual {p2, v1}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
 
-    .line 160
     invoke-virtual {p2}, Landroid/os/Parcel;->readInt()I
 
     move-result v2
 
-    .line 161
     .restart local v2    # "_arg0":I
     invoke-virtual {p0, v2}, Lcom/android/internal/policy/ISignServiceInterface$Stub;->getModelNum(I)I
 
     move-result v0
 
-    .line 162
     .restart local v0    # "_result":I
     invoke-virtual {p3}, Landroid/os/Parcel;->writeNoException()V
 
-    .line 163
     invoke-virtual {p3, v0}, Landroid/os/Parcel;->writeInt(I)V
 
     goto/16 :goto_0
 
-    .line 168
     .end local v0    # "_result":I
     .end local v2    # "_arg0":I
     :sswitch_e
@@ -537,27 +464,22 @@
 
     invoke-virtual {p2, v1}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
 
-    .line 170
     invoke-virtual {p2}, Landroid/os/Parcel;->readInt()I
 
     move-result v2
 
-    .line 171
     .restart local v2    # "_arg0":I
     invoke-virtual {p0, v2}, Lcom/android/internal/policy/ISignServiceInterface$Stub;->addSignatureModel(I)I
 
     move-result v0
 
-    .line 172
     .restart local v0    # "_result":I
     invoke-virtual {p3}, Landroid/os/Parcel;->writeNoException()V
 
-    .line 173
     invoke-virtual {p3, v0}, Landroid/os/Parcel;->writeInt(I)V
 
     goto/16 :goto_0
 
-    .line 178
     .end local v0    # "_result":I
     .end local v2    # "_arg0":I
     :sswitch_f
@@ -565,48 +487,39 @@
 
     invoke-virtual {p2, v1}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
 
-    .line 179
     invoke-virtual {p0}, Lcom/android/internal/policy/ISignServiceInterface$Stub;->saveSignatureData()I
 
     move-result v0
 
-    .line 180
     .restart local v0    # "_result":I
     invoke-virtual {p3}, Landroid/os/Parcel;->writeNoException()V
 
-    .line 181
     invoke-virtual {p3, v0}, Landroid/os/Parcel;->writeInt(I)V
 
     goto/16 :goto_0
 
-    .line 186
     .end local v0    # "_result":I
     :sswitch_10
     const-string v1, "com.android.internal.policy.ISignServiceInterface"
 
     invoke-virtual {p2, v1}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
 
-    .line 188
     invoke-virtual {p2}, Landroid/os/Parcel;->readString()Ljava/lang/String;
 
     move-result-object v2
 
-    .line 189
     .local v2, "_arg0":Ljava/lang/String;
     invoke-virtual {p0, v2}, Lcom/android/internal/policy/ISignServiceInterface$Stub;->readSignatureData(Ljava/lang/String;)I
 
     move-result v0
 
-    .line 190
     .restart local v0    # "_result":I
     invoke-virtual {p3}, Landroid/os/Parcel;->writeNoException()V
 
-    .line 191
     invoke-virtual {p3, v0}, Landroid/os/Parcel;->writeInt(I)V
 
     goto/16 :goto_0
 
-    .line 196
     .end local v0    # "_result":I
     .end local v2    # "_arg0":Ljava/lang/String;
     :sswitch_11
@@ -614,60 +527,49 @@
 
     invoke-virtual {p2, v1}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
 
-    .line 197
     invoke-virtual {p0}, Lcom/android/internal/policy/ISignServiceInterface$Stub;->replaceSignatureData()I
 
     move-result v0
 
-    .line 198
     .restart local v0    # "_result":I
     invoke-virtual {p3}, Landroid/os/Parcel;->writeNoException()V
 
-    .line 199
     invoke-virtual {p3, v0}, Landroid/os/Parcel;->writeInt(I)V
 
     goto/16 :goto_0
 
-    .line 204
     .end local v0    # "_result":I
     :sswitch_12
     const-string v1, "com.android.internal.policy.ISignServiceInterface"
 
     invoke-virtual {p2, v1}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
 
-    .line 206
     invoke-virtual {p2}, Landroid/os/Parcel;->readInt()I
 
     move-result v2
 
-    .line 208
     .local v2, "_arg0":I
     invoke-virtual {p2}, Landroid/os/Parcel;->readInt()I
 
     move-result v3
 
-    .line 210
     .restart local v3    # "_arg1":I
     invoke-virtual {p2}, Landroid/os/Parcel;->readInt()I
 
     move-result v4
 
-    .line 212
     .local v4, "_arg2":I
     invoke-virtual {p2}, Landroid/os/Parcel;->readInt()I
 
     move-result v6
 
-    .line 213
     .restart local v6    # "_arg3":I
     invoke-virtual {p0, v2, v3, v4, v6}, Lcom/android/internal/policy/ISignServiceInterface$Stub;->setRegisterViewXY(IIII)V
 
-    .line 214
     invoke-virtual {p3}, Landroid/os/Parcel;->writeNoException()V
 
     goto/16 :goto_0
 
-    .line 219
     .end local v2    # "_arg0":I
     .end local v3    # "_arg1":I
     .end local v4    # "_arg2":I
@@ -677,117 +579,95 @@
 
     invoke-virtual {p2, v1}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
 
-    .line 220
     invoke-virtual {p0}, Lcom/android/internal/policy/ISignServiceInterface$Stub;->getRegisterViewX()I
 
     move-result v0
 
-    .line 221
     .restart local v0    # "_result":I
     invoke-virtual {p3}, Landroid/os/Parcel;->writeNoException()V
 
-    .line 222
     invoke-virtual {p3, v0}, Landroid/os/Parcel;->writeInt(I)V
 
     goto/16 :goto_0
 
-    .line 227
     .end local v0    # "_result":I
     :sswitch_14
     const-string v1, "com.android.internal.policy.ISignServiceInterface"
 
     invoke-virtual {p2, v1}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
 
-    .line 228
     invoke-virtual {p0}, Lcom/android/internal/policy/ISignServiceInterface$Stub;->getRegisterViewY()I
 
     move-result v0
 
-    .line 229
     .restart local v0    # "_result":I
     invoke-virtual {p3}, Landroid/os/Parcel;->writeNoException()V
 
-    .line 230
     invoke-virtual {p3, v0}, Landroid/os/Parcel;->writeInt(I)V
 
     goto/16 :goto_0
 
-    .line 235
     .end local v0    # "_result":I
     :sswitch_15
     const-string v1, "com.android.internal.policy.ISignServiceInterface"
 
     invoke-virtual {p2, v1}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
 
-    .line 236
     invoke-virtual {p0}, Lcom/android/internal/policy/ISignServiceInterface$Stub;->getRegisterViewW()I
 
     move-result v0
 
-    .line 237
     .restart local v0    # "_result":I
     invoke-virtual {p3}, Landroid/os/Parcel;->writeNoException()V
 
-    .line 238
     invoke-virtual {p3, v0}, Landroid/os/Parcel;->writeInt(I)V
 
     goto/16 :goto_0
 
-    .line 243
     .end local v0    # "_result":I
     :sswitch_16
     const-string v1, "com.android.internal.policy.ISignServiceInterface"
 
     invoke-virtual {p2, v1}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
 
-    .line 244
     invoke-virtual {p0}, Lcom/android/internal/policy/ISignServiceInterface$Stub;->getRegisterViewH()I
 
     move-result v0
 
-    .line 245
     .restart local v0    # "_result":I
     invoke-virtual {p3}, Landroid/os/Parcel;->writeNoException()V
 
-    .line 246
     invoke-virtual {p3, v0}, Landroid/os/Parcel;->writeInt(I)V
 
     goto/16 :goto_0
 
-    .line 251
     .end local v0    # "_result":I
     :sswitch_17
     const-string v1, "com.android.internal.policy.ISignServiceInterface"
 
     invoke-virtual {p2, v1}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
 
-    .line 253
     invoke-virtual {p2}, Landroid/os/Parcel;->readInt()I
 
     move-result v2
 
-    .line 255
     .restart local v2    # "_arg0":I
     invoke-virtual {p2}, Landroid/os/Parcel;->readInt()I
 
     move-result v3
 
-    .line 256
     .restart local v3    # "_arg1":I
     invoke-virtual {p0, v2, v3}, Lcom/android/internal/policy/ISignServiceInterface$Stub;->checkSignatureData(II)I
 
     move-result v0
 
-    .line 257
     .restart local v0    # "_result":I
     invoke-virtual {p3}, Landroid/os/Parcel;->writeNoException()V
 
-    .line 258
     invoke-virtual {p3, v0}, Landroid/os/Parcel;->writeInt(I)V
 
     goto/16 :goto_0
 
-    .line 263
     .end local v0    # "_result":I
     .end local v2    # "_arg0":I
     .end local v3    # "_arg1":I
@@ -796,27 +676,22 @@
 
     invoke-virtual {p2, v1}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
 
-    .line 265
     invoke-virtual {p2}, Landroid/os/Parcel;->readInt()I
 
     move-result v2
 
-    .line 266
     .restart local v2    # "_arg0":I
     invoke-virtual {p0, v2}, Lcom/android/internal/policy/ISignServiceInterface$Stub;->getOriginalPointsPath(I)Ljava/lang/String;
 
     move-result-object v0
 
-    .line 267
     .local v0, "_result":Ljava/lang/String;
     invoke-virtual {p3}, Landroid/os/Parcel;->writeNoException()V
 
-    .line 268
     invoke-virtual {p3, v0}, Landroid/os/Parcel;->writeString(Ljava/lang/String;)V
 
     goto/16 :goto_0
 
-    .line 273
     .end local v0    # "_result":Ljava/lang/String;
     .end local v2    # "_arg0":I
     :sswitch_19
@@ -824,58 +699,47 @@
 
     invoke-virtual {p2, v1}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
 
-    .line 275
     invoke-virtual {p2}, Landroid/os/Parcel;->readInt()I
 
     move-result v2
 
-    .line 276
     .restart local v2    # "_arg0":I
     invoke-virtual {p0, v2}, Lcom/android/internal/policy/ISignServiceInterface$Stub;->setEngineStatus(I)V
 
-    .line 277
     invoke-virtual {p3}, Landroid/os/Parcel;->writeNoException()V
 
     goto/16 :goto_0
 
-    .line 282
     .end local v2    # "_arg0":I
     :sswitch_1a
     const-string v1, "com.android.internal.policy.ISignServiceInterface"
 
     invoke-virtual {p2, v1}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
 
-    .line 283
     invoke-virtual {p0}, Lcom/android/internal/policy/ISignServiceInterface$Stub;->getEngineWorkStatus()I
 
     move-result v0
 
-    .line 284
     .local v0, "_result":I
     invoke-virtual {p3}, Landroid/os/Parcel;->writeNoException()V
 
-    .line 285
     invoke-virtual {p3, v0}, Landroid/os/Parcel;->writeInt(I)V
 
     goto/16 :goto_0
 
-    .line 290
     .end local v0    # "_result":I
     :sswitch_1b
     const-string v8, "com.android.internal.policy.ISignServiceInterface"
 
     invoke-virtual {p2, v8}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
 
-    .line 291
     invoke-virtual {p0}, Lcom/android/internal/policy/ISignServiceInterface$Stub;->isUsingOldData()Z
 
     move-result v0
 
-    .line 292
     .local v0, "_result":Z
     invoke-virtual {p3}, Landroid/os/Parcel;->writeNoException()V
 
-    .line 293
     if-eqz v0, :cond_5
 
     move v1, v7
@@ -885,7 +749,6 @@
 
     goto/16 :goto_0
 
-    .line 39
     :sswitch_data_0
     .sparse-switch
         0x1 -> :sswitch_1

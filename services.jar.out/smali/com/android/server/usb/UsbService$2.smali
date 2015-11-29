@@ -23,7 +23,6 @@
     .locals 0
 
     .prologue
-    .line 431
     iput-object p1, p0, Lcom/android/server/usb/UsbService$2;->this$0:Lcom/android/server/usb/UsbService;
 
     invoke-direct {p0}, Landroid/content/pm/IKnoxModeChangeObserver$Stub;-><init>()V
@@ -38,7 +37,6 @@
     .param p1, "personaId"    # I
 
     .prologue
-    .line 436
     const-string v0, "UsbService"
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -61,13 +59,11 @@
 
     invoke-static {v0, v1}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 438
     iget-object v0, p0, Lcom/android/server/usb/UsbService$2;->this$0:Lcom/android/server/usb/UsbService;
 
     # invokes: Lcom/android/server/usb/UsbService;->setCurrentUser(I)V
     invoke-static {v0, p1}, Lcom/android/server/usb/UsbService;->access$000(Lcom/android/server/usb/UsbService;I)V
 
-    .line 439
     iget-object v0, p0, Lcom/android/server/usb/UsbService$2;->this$0:Lcom/android/server/usb/UsbService;
 
     const/4 v1, 0x1
@@ -75,6 +71,5 @@
     # setter for: Lcom/android/server/usb/UsbService;->setByNox:Z
     invoke-static {v0, v1}, Lcom/android/server/usb/UsbService;->access$302(Lcom/android/server/usb/UsbService;Z)Z
 
-    .line 440
     return-void
 .end method

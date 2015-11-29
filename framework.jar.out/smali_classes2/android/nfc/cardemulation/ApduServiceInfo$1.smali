@@ -32,7 +32,6 @@
     .locals 0
 
     .prologue
-    .line 671
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -45,7 +44,6 @@
     .param p1, "source"    # Landroid/os/Parcel;
 
     .prologue
-    .line 674
     sget-object v1, Landroid/content/pm/ResolveInfo;->CREATOR:Landroid/os/Parcelable$Creator;
 
     move-object/from16 v0, p1
@@ -56,13 +54,11 @@
 
     check-cast v2, Landroid/content/pm/ResolveInfo;
 
-    .line 675
     .local v2, "info":Landroid/content/pm/ResolveInfo;
     invoke-virtual/range {p1 .. p1}, Landroid/os/Parcel;->readString()Ljava/lang/String;
 
     move-result-object v4
 
-    .line 676
     .local v4, "description":Ljava/lang/String;
     invoke-virtual/range {p1 .. p1}, Landroid/os/Parcel;->readInt()I
 
@@ -72,54 +68,45 @@
 
     const/4 v3, 0x1
 
-    .line 677
     .local v3, "onHost":Z
     :goto_0
     new-instance v5, Ljava/util/ArrayList;
 
     invoke-direct {v5}, Ljava/util/ArrayList;-><init>()V
 
-    .line 678
     .local v5, "staticAidGroups":Ljava/util/ArrayList;, "Ljava/util/ArrayList<Landroid/nfc/cardemulation/AidGroup;>;"
     invoke-virtual/range {p1 .. p1}, Landroid/os/Parcel;->readInt()I
 
     move-result v17
 
-    .line 679
     .local v17, "numStaticGroups":I
     if-lez v17, :cond_0
 
-    .line 680
     sget-object v1, Landroid/nfc/cardemulation/AidGroup;->CREATOR:Landroid/os/Parcelable$Creator;
 
     move-object/from16 v0, p1
 
     invoke-virtual {v0, v5, v1}, Landroid/os/Parcel;->readTypedList(Ljava/util/List;Landroid/os/Parcelable$Creator;)V
 
-    .line 682
     :cond_0
     new-instance v6, Ljava/util/ArrayList;
 
     invoke-direct {v6}, Ljava/util/ArrayList;-><init>()V
 
-    .line 683
     .local v6, "dynamicAidGroups":Ljava/util/ArrayList;, "Ljava/util/ArrayList<Landroid/nfc/cardemulation/AidGroup;>;"
     invoke-virtual/range {p1 .. p1}, Landroid/os/Parcel;->readInt()I
 
     move-result v16
 
-    .line 684
     .local v16, "numDynamicGroups":I
     if-lez v16, :cond_1
 
-    .line 685
     sget-object v1, Landroid/nfc/cardemulation/AidGroup;->CREATOR:Landroid/os/Parcelable$Creator;
 
     move-object/from16 v0, p1
 
     invoke-virtual {v0, v6, v1}, Landroid/os/Parcel;->readTypedList(Ljava/util/List;Landroid/os/Parcelable$Creator;)V
 
-    .line 687
     :cond_1
     invoke-virtual/range {p1 .. p1}, Landroid/os/Parcel;->readInt()I
 
@@ -129,20 +116,17 @@
 
     const/4 v7, 0x1
 
-    .line 688
     .local v7, "requiresUnlock":Z
     :goto_1
     invoke-virtual/range {p1 .. p1}, Landroid/os/Parcel;->readInt()I
 
     move-result v8
 
-    .line 689
     .local v8, "bannerResource":I
     invoke-virtual/range {p1 .. p1}, Landroid/os/Parcel;->readInt()I
 
     move-result v10
 
-    .line 691
     .local v10, "uid":I
     sget-object v1, Landroid/nfc/cardemulation/ApduServiceInfo$SecureElementInfo;->CREATOR:Landroid/os/Parcelable$Creator;
 
@@ -154,23 +138,19 @@
 
     check-cast v11, Landroid/nfc/cardemulation/ApduServiceInfo$SecureElementInfo;
 
-    .line 694
     .local v11, "seInfo":Landroid/nfc/cardemulation/ApduServiceInfo$SecureElementInfo;
     invoke-virtual/range {p1 .. p1}, Landroid/os/Parcel;->readInt()I
 
     move-result v15
 
-    .line 695
     .local v15, "existBanner":I
     const/4 v9, 0x0
 
-    .line 696
     .local v9, "drawableBanner":Landroid/graphics/drawable/Drawable;
     const/4 v1, 0x1
 
     if-ne v15, v1, :cond_2
 
-    .line 698
     :try_start_0
     invoke-virtual/range {p0 .. p0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
@@ -188,11 +168,9 @@
 
     check-cast v12, Landroid/graphics/Bitmap;
 
-    .line 699
     .local v12, "bitmap":Landroid/graphics/Bitmap;
     if-eqz v12, :cond_5
 
-    .line 700
     new-instance v13, Landroid/graphics/drawable/BitmapDrawable;
 
     invoke-direct {v13, v12}, Landroid/graphics/drawable/BitmapDrawable;-><init>(Landroid/graphics/Bitmap;)V
@@ -203,7 +181,6 @@
     .local v13, "drawableBanner":Landroid/graphics/drawable/Drawable;
     move-object v9, v13
 
-    .line 709
     .end local v12    # "bitmap":Landroid/graphics/Bitmap;
     .end local v13    # "drawableBanner":Landroid/graphics/drawable/Drawable;
     .restart local v9    # "drawableBanner":Landroid/graphics/drawable/Drawable;
@@ -215,7 +192,6 @@
 
     return-object v1
 
-    .line 676
     .end local v3    # "onHost":Z
     .end local v5    # "staticAidGroups":Ljava/util/ArrayList;, "Ljava/util/ArrayList<Landroid/nfc/cardemulation/AidGroup;>;"
     .end local v6    # "dynamicAidGroups":Ljava/util/ArrayList;, "Ljava/util/ArrayList<Landroid/nfc/cardemulation/AidGroup;>;"
@@ -232,7 +208,6 @@
 
     goto :goto_0
 
-    .line 687
     .restart local v3    # "onHost":Z
     .restart local v5    # "staticAidGroups":Ljava/util/ArrayList;, "Ljava/util/ArrayList<Landroid/nfc/cardemulation/AidGroup;>;"
     .restart local v6    # "dynamicAidGroups":Ljava/util/ArrayList;, "Ljava/util/ArrayList<Landroid/nfc/cardemulation/AidGroup;>;"
@@ -243,7 +218,6 @@
 
     goto :goto_1
 
-    .line 702
     .restart local v7    # "requiresUnlock":Z
     .restart local v8    # "bannerResource":I
     .restart local v9    # "drawableBanner":Landroid/graphics/drawable/Drawable;
@@ -265,12 +239,10 @@
 
     goto :goto_2
 
-    .line 704
     .end local v12    # "bitmap":Landroid/graphics/Bitmap;
     :catch_0
     move-exception v14
 
-    .line 705
     .local v14, "e":Landroid/os/BadParcelableException;
     const-string v1, "ApduServiceInfo"
 
@@ -288,7 +260,6 @@
     .param p1, "x0"    # Landroid/os/Parcel;
 
     .prologue
-    .line 671
     invoke-virtual {p0, p1}, Landroid/nfc/cardemulation/ApduServiceInfo$1;->createFromParcel(Landroid/os/Parcel;)Landroid/nfc/cardemulation/ApduServiceInfo;
 
     move-result-object v0
@@ -301,7 +272,6 @@
     .param p1, "size"    # I
 
     .prologue
-    .line 715
     new-array v0, p1, [Landroid/nfc/cardemulation/ApduServiceInfo;
 
     return-object v0
@@ -312,7 +282,6 @@
     .param p1, "x0"    # I
 
     .prologue
-    .line 671
     invoke-virtual {p0, p1}, Landroid/nfc/cardemulation/ApduServiceInfo$1;->newArray(I)[Landroid/nfc/cardemulation/ApduServiceInfo;
 
     move-result-object v0

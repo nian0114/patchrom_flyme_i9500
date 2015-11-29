@@ -32,7 +32,6 @@
     .locals 0
 
     .prologue
-    .line 15
     invoke-direct {p0}, Lcom/sec/rll/IExtControlDeviceService$Stub;-><init>()V
 
     return-void
@@ -42,7 +41,6 @@
     .locals 2
 
     .prologue
-    .line 41
     const-class v1, Lcom/sec/rll/ExtControlDeviceService;
 
     monitor-enter v1
@@ -52,14 +50,12 @@
 
     if-nez v0, :cond_0
 
-    .line 42
     new-instance v0, Lcom/sec/rll/ExtControlDeviceService;
 
     invoke-direct {v0}, Lcom/sec/rll/ExtControlDeviceService;-><init>()V
 
     sput-object v0, Lcom/sec/rll/ExtControlDeviceService;->sService:Lcom/sec/rll/ExtControlDeviceService;
 
-    .line 44
     :cond_0
     sget-object v0, Lcom/sec/rll/ExtControlDeviceService;->sService:Lcom/sec/rll/ExtControlDeviceService;
     :try_end_0
@@ -69,7 +65,6 @@
 
     return-object v0
 
-    .line 41
     :catchall_0
     move-exception v0
 
@@ -82,8 +77,7 @@
     .locals 2
 
     .prologue
-    .line 80
-    const-string/jumbo v0, "persist.security.nfc.lockout"
+    const-string v0, "persist.security.nfc.lockout"
 
     const/4 v1, 0x1
 
@@ -99,17 +93,14 @@
     .param p0, "context"    # Landroid/content/Context;
 
     .prologue
-    .line 35
     sput-object p0, Lcom/sec/rll/ExtControlDeviceService;->mContext:Landroid/content/Context;
 
-    .line 36
     invoke-static {}, Landroid/os/Process;->myUid()I
 
     move-result v0
 
     sput v0, Lcom/sec/rll/ExtControlDeviceService;->mUid:I
 
-    .line 37
     sget-object v0, Lcom/sec/rll/ExtControlDeviceService;->mContext:Landroid/content/Context;
 
     invoke-virtual {v0}, Landroid/content/Context;->getPackageManager()Landroid/content/pm/PackageManager;
@@ -118,7 +109,6 @@
 
     sput-object v0, Lcom/sec/rll/ExtControlDeviceService;->mPackageManager:Landroid/content/pm/PackageManager;
 
-    .line 38
     return-void
 .end method
 
@@ -128,18 +118,15 @@
     .prologue
     const/4 v6, 0x1
 
-    .line 93
     invoke-static {}, Landroid/os/Binder;->getCallingUid()I
 
     move-result v1
 
-    .line 94
     .local v1, "callerUid":I
     sget v7, Lcom/sec/rll/ExtControlDeviceService;->mUid:I
 
     if-ne v1, v7, :cond_0
 
-    .line 95
     const-string v7, "SRIB-ExtControlDeviceService"
 
     new-instance v8, Ljava/lang/StringBuilder;
@@ -162,11 +149,9 @@
 
     invoke-static {v7, v8}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 113
     :goto_0
     return v6
 
-    .line 100
     :cond_0
     sget-object v7, Lcom/sec/rll/ExtControlDeviceService;->mPackageManager:Landroid/content/pm/PackageManager;
 
@@ -174,7 +159,6 @@
 
     move-result-object v4
 
-    .line 102
     .local v4, "packages":[Ljava/lang/String;
     move-object v0, v4
 
@@ -190,7 +174,6 @@
 
     aget-object v5, v0, v2
 
-    .line 105
     .local v5, "pkg":Ljava/lang/String;
     const-string v7, "com.example.testrll"
 
@@ -208,7 +191,6 @@
 
     if-eqz v7, :cond_2
 
-    .line 107
     :cond_1
     const-string v7, "SRIB-ExtControlDeviceService"
 
@@ -218,13 +200,11 @@
 
     goto :goto_0
 
-    .line 102
     :cond_2
     add-int/lit8 v2, v2, 0x1
 
     goto :goto_1
 
-    .line 112
     .end local v5    # "pkg":Ljava/lang/String;
     :cond_3
     const-string v6, "SRIB-ExtControlDeviceService"
@@ -249,7 +229,6 @@
 
     invoke-static {v6, v7}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 113
     const/4 v6, 0x0
 
     goto :goto_0
@@ -260,10 +239,8 @@
     .param p0, "mode"    # I
 
     .prologue
-    .line 85
     invoke-static {}, Landroid/os/Binder;->clearCallingIdentity()J
 
-    .line 86
     sget-object v0, Lcom/sec/rll/ExtControlDeviceService;->mContext:Landroid/content/Context;
 
     invoke-virtual {v0}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
@@ -284,8 +261,7 @@
     .param p0, "state"    # I
 
     .prologue
-    .line 72
-    const-string/jumbo v1, "persist.security.nfc.lockout"
+    const-string v1, "persist.security.nfc.lockout"
 
     invoke-static {p0}, Ljava/lang/Integer;->toString(I)Ljava/lang/String;
 
@@ -293,25 +269,21 @@
 
     invoke-static {v1, v2}, Landroid/os/SystemProperties;->set(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 73
     new-instance v0, Landroid/content/Intent;
 
     const-string v1, "android.action.nfc.policychanged"
 
     invoke-direct {v0, v1}, Landroid/content/Intent;-><init>(Ljava/lang/String;)V
 
-    .line 74
     .local v0, "nfcIntent":Landroid/content/Intent;
     const-string v1, "NfcState"
 
     invoke-virtual {v0, v1, p0}, Landroid/content/Intent;->putExtra(Ljava/lang/String;I)Landroid/content/Intent;
 
-    .line 75
     sget-object v1, Lcom/sec/rll/ExtControlDeviceService;->mContext:Landroid/content/Context;
 
     invoke-virtual {v1, v0}, Landroid/content/Context;->sendBroadcast(Landroid/content/Intent;)V
 
-    .line 77
     return-void
 .end method
 
@@ -329,38 +301,31 @@
     .prologue
     const/4 v0, 0x0
 
-    .line 119
     const-string v1, "SRIB-ExtControlDeviceService"
 
     const-string v2, "getStatus called"
 
     invoke-static {v1, v2}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 121
     invoke-direct {p0}, Lcom/sec/rll/ExtControlDeviceService;->isAccessPermitted()Z
 
     move-result v1
 
     if-nez v1, :cond_1
 
-    .line 122
     const/4 v0, -0x1
 
-    .line 144
     :cond_0
     :goto_0
     return v0
 
-    .line 125
     :cond_1
     const/16 v1, 0x1001
 
     if-ne p1, v1, :cond_2
 
-    .line 127
     invoke-static {}, Landroid/os/Binder;->clearCallingIdentity()J
 
-    .line 128
     const-string v1, "SRIB-ExtControlDeviceService"
 
     new-instance v2, Ljava/lang/StringBuilder;
@@ -395,7 +360,6 @@
 
     invoke-static {v1, v2}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 134
     sget-object v1, Lcom/sec/rll/ExtControlDeviceService;->mContext:Landroid/content/Context;
 
     invoke-virtual {v1}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
@@ -410,13 +374,11 @@
 
     goto :goto_0
 
-    .line 137
     :cond_2
     const/16 v1, 0x2001
 
     if-ne p1, v1, :cond_0
 
-    .line 139
     const-string v0, "SRIB-ExtControlDeviceService"
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -443,7 +405,6 @@
 
     invoke-static {v0, v1}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 141
     invoke-static {}, Lcom/sec/rll/ExtControlDeviceService;->getNfcState()I
 
     move-result v0
@@ -462,32 +423,27 @@
     .end annotation
 
     .prologue
-    .line 50
     const-string v0, "SRIB-ExtControlDeviceService"
 
-    const-string/jumbo v1, "setStatus called"
+    const-string v1, "setStatus called"
 
     invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 52
     invoke-direct {p0}, Lcom/sec/rll/ExtControlDeviceService;->isAccessPermitted()Z
 
     move-result v0
 
     if-nez v0, :cond_1
 
-    .line 68
     :cond_0
     :goto_0
     return-void
 
-    .line 56
     :cond_1
     const/16 v0, 0x1001
 
     if-ne p1, v0, :cond_2
 
-    .line 58
     const-string v0, "SRIB-ExtControlDeviceService"
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -510,10 +466,8 @@
 
     invoke-static {v0, v1}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 59
     invoke-static {}, Landroid/os/Binder;->clearCallingIdentity()J
 
-    .line 60
     sget-object v0, Lcom/sec/rll/ExtControlDeviceService;->mContext:Landroid/content/Context;
 
     invoke-virtual {v0}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
@@ -526,13 +480,11 @@
 
     goto :goto_0
 
-    .line 62
     :cond_2
     const/16 v0, 0x2001
 
     if-ne p1, v0, :cond_0
 
-    .line 64
     const-string v0, "SRIB-ExtControlDeviceService"
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -555,7 +507,6 @@
 
     invoke-static {v0, v1}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 65
     invoke-static {p2}, Lcom/sec/rll/ExtControlDeviceService;->setNfcState(I)V
 
     goto :goto_0

@@ -26,20 +26,16 @@
     .param p2, "kResult"    # Lcom/samsung/android/hermes/KerykeionResult;
 
     .prologue
-    .line 875
     iput-object p1, p0, Lcom/samsung/android/hermes/HermesServiceManager$HermesClickSpannable;->this$0:Lcom/samsung/android/hermes/HermesServiceManager;
 
     invoke-direct {p0}, Landroid/text/style/ClickableSpan;-><init>()V
 
-    .line 873
     const/4 v0, 0x0
 
     iput-object v0, p0, Lcom/samsung/android/hermes/HermesServiceManager$HermesClickSpannable;->mResult:Lcom/samsung/android/hermes/KerykeionResult;
 
-    .line 876
     iput-object p2, p0, Lcom/samsung/android/hermes/HermesServiceManager$HermesClickSpannable;->mResult:Lcom/samsung/android/hermes/KerykeionResult;
 
-    .line 877
     return-void
 .end method
 
@@ -50,7 +46,6 @@
     .param p1, "arg0"    # Landroid/view/View;
 
     .prologue
-    .line 889
     # getter for: Lcom/samsung/android/hermes/HermesServiceManager;->TAG:Ljava/lang/String;
     invoke-static {}, Lcom/samsung/android/hermes/HermesServiceManager;->access$400()Ljava/lang/String;
 
@@ -82,7 +77,6 @@
 
     invoke-static {v1, v2}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 890
     # getter for: Lcom/samsung/android/hermes/HermesServiceManager;->TAG:Ljava/lang/String;
     invoke-static {}, Lcom/samsung/android/hermes/HermesServiceManager;->access$400()Ljava/lang/String;
 
@@ -114,16 +108,13 @@
 
     invoke-static {v1, v2}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 892
     new-instance v0, Landroid/graphics/Rect;
 
     invoke-direct {v0}, Landroid/graphics/Rect;-><init>()V
 
-    .line 893
     .local v0, "rect":Landroid/graphics/Rect;
     invoke-virtual {p1, v0}, Landroid/view/View;->getGlobalVisibleRect(Landroid/graphics/Rect;)Z
 
-    .line 894
     iget-object v1, p0, Lcom/samsung/android/hermes/HermesServiceManager$HermesClickSpannable;->this$0:Lcom/samsung/android/hermes/HermesServiceManager;
 
     iget-object v2, p0, Lcom/samsung/android/hermes/HermesServiceManager$HermesClickSpannable;->this$0:Lcom/samsung/android/hermes/HermesServiceManager;
@@ -154,7 +145,6 @@
     # invokes: Lcom/samsung/android/hermes/HermesServiceManager;->startHermesTickerService(Ljava/lang/String;Landroid/graphics/Rect;)V
     invoke-static {v1, v2, v0}, Lcom/samsung/android/hermes/HermesServiceManager;->access$800(Lcom/samsung/android/hermes/HermesServiceManager;Ljava/lang/String;Landroid/graphics/Rect;)V
 
-    .line 896
     return-void
 .end method
 
@@ -163,19 +153,15 @@
     .param p1, "ds"    # Landroid/text/TextPaint;
 
     .prologue
-    .line 881
     const v0, -0xffff01
 
     invoke-virtual {p1, v0}, Landroid/text/TextPaint;->setColor(I)V
 
-    .line 882
     const/4 v0, 0x1
 
     invoke-virtual {p1, v0}, Landroid/text/TextPaint;->setUnderlineText(Z)V
 
-    .line 884
     invoke-super {p0, p1}, Landroid/text/style/ClickableSpan;->updateDrawState(Landroid/text/TextPaint;)V
 
-    .line 885
     return-void
 .end method

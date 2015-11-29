@@ -29,15 +29,12 @@
     .param p2, "listener"    # Landroid/hardware/hdmi/IHdmiMhlVendorCommandListener;
 
     .prologue
-    .line 921
     iput-object p1, p0, Lcom/android/server/hdmi/HdmiControlService$HdmiMhlVendorCommandListenerRecord;->this$0:Lcom/android/server/hdmi/HdmiControlService;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 922
     iput-object p2, p0, Lcom/android/server/hdmi/HdmiControlService$HdmiMhlVendorCommandListenerRecord;->mListener:Landroid/hardware/hdmi/IHdmiMhlVendorCommandListener;
 
-    .line 923
     return-void
 .end method
 
@@ -46,7 +43,6 @@
     .param p0, "x0"    # Lcom/android/server/hdmi/HdmiControlService$HdmiMhlVendorCommandListenerRecord;
 
     .prologue
-    .line 918
     iget-object v0, p0, Lcom/android/server/hdmi/HdmiControlService$HdmiMhlVendorCommandListenerRecord;->mListener:Landroid/hardware/hdmi/IHdmiMhlVendorCommandListener;
 
     return-object v0
@@ -58,7 +54,6 @@
     .locals 1
 
     .prologue
-    .line 927
     iget-object v0, p0, Lcom/android/server/hdmi/HdmiControlService$HdmiMhlVendorCommandListenerRecord;->this$0:Lcom/android/server/hdmi/HdmiControlService;
 
     # getter for: Lcom/android/server/hdmi/HdmiControlService;->mMhlVendorCommandListenerRecords:Ljava/util/ArrayList;
@@ -68,6 +63,5 @@
 
     invoke-virtual {v0, p0}, Ljava/util/ArrayList;->remove(Ljava/lang/Object;)Z
 
-    .line 928
     return-void
 .end method

@@ -40,25 +40,20 @@
     .param p2, "tabLayout"    # Lcom/android/internal/policy/impl/MultiPhoneWindow$CustomTabLayout;
 
     .prologue
-    .line 2731
     iput-object p1, p0, Lcom/android/internal/policy/impl/MultiPhoneWindow$TabContainer;->this$0:Lcom/android/internal/policy/impl/MultiPhoneWindow;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 2732
     if-eqz p2, :cond_0
 
-    .line 2733
     iput-object p2, p0, Lcom/android/internal/policy/impl/MultiPhoneWindow$TabContainer;->mTabRoot:Lcom/android/internal/policy/impl/MultiPhoneWindow$CustomTabLayout;
 
-    .line 2734
     iget-object v0, p0, Lcom/android/internal/policy/impl/MultiPhoneWindow$TabContainer;->mTabRoot:Lcom/android/internal/policy/impl/MultiPhoneWindow$CustomTabLayout;
 
     const/16 v1, 0x8
 
     invoke-virtual {v0, v1}, Lcom/android/internal/policy/impl/MultiPhoneWindow$CustomTabLayout;->setVisibility(I)V
 
-    .line 2735
     const v0, 0x1020012
 
     invoke-virtual {p2, v0}, Lcom/android/internal/policy/impl/MultiPhoneWindow$CustomTabLayout;->findViewById(I)Landroid/view/View;
@@ -69,19 +64,16 @@
 
     iput-object v0, p0, Lcom/android/internal/policy/impl/MultiPhoneWindow$TabContainer;->mTabHost:Landroid/widget/TabHost;
 
-    .line 2736
     iget-object v0, p0, Lcom/android/internal/policy/impl/MultiPhoneWindow$TabContainer;->mTabHost:Landroid/widget/TabHost;
 
     invoke-virtual {v0}, Landroid/widget/TabHost;->setup()V
 
-    .line 2737
     new-instance v0, Lcom/android/internal/policy/impl/MultiPhoneWindow$TabContainer$1;
 
     invoke-direct {v0, p0, p1}, Lcom/android/internal/policy/impl/MultiPhoneWindow$TabContainer$1;-><init>(Lcom/android/internal/policy/impl/MultiPhoneWindow$TabContainer;Lcom/android/internal/policy/impl/MultiPhoneWindow;)V
 
     iput-object v0, p0, Lcom/android/internal/policy/impl/MultiPhoneWindow$TabContainer;->mTabChangeListener:Landroid/widget/TabHost$OnTabChangeListener;
 
-    .line 2757
     new-instance v0, Landroid/view/GestureDetector;
 
     # getter for: Lcom/android/internal/policy/impl/MultiPhoneWindow;->mContext:Landroid/content/Context;
@@ -99,7 +91,6 @@
 
     iput-object v0, p0, Lcom/android/internal/policy/impl/MultiPhoneWindow$TabContainer;->mTabGestureDetector:Landroid/view/GestureDetector;
 
-    .line 2759
     :cond_0
     return-void
 .end method
@@ -111,7 +102,6 @@
     .param p3, "x2"    # Lcom/android/internal/policy/impl/MultiPhoneWindow$1;
 
     .prologue
-    .line 2724
     invoke-direct {p0, p1, p2}, Lcom/android/internal/policy/impl/MultiPhoneWindow$TabContainer;-><init>(Lcom/android/internal/policy/impl/MultiPhoneWindow;Lcom/android/internal/policy/impl/MultiPhoneWindow$CustomTabLayout;)V
 
     return-void
@@ -122,7 +112,6 @@
     .param p0, "x0"    # Lcom/android/internal/policy/impl/MultiPhoneWindow$TabContainer;
 
     .prologue
-    .line 2724
     iget-object v0, p0, Lcom/android/internal/policy/impl/MultiPhoneWindow$TabContainer;->mTabFocusedView:Landroid/view/View;
 
     return-object v0
@@ -134,7 +123,6 @@
     .param p1, "x1"    # Landroid/view/View;
 
     .prologue
-    .line 2724
     iput-object p1, p0, Lcom/android/internal/policy/impl/MultiPhoneWindow$TabContainer;->mTabFocusedView:Landroid/view/View;
 
     return-object p1
@@ -145,7 +133,6 @@
     .param p0, "x0"    # Lcom/android/internal/policy/impl/MultiPhoneWindow$TabContainer;
 
     .prologue
-    .line 2724
     iget-object v0, p0, Lcom/android/internal/policy/impl/MultiPhoneWindow$TabContainer;->mTabGestureDetector:Landroid/view/GestureDetector;
 
     return-object v0
@@ -156,7 +143,6 @@
     .param p1, "componentName"    # Landroid/content/ComponentName;
 
     .prologue
-    .line 2784
     iget-object v0, p0, Lcom/android/internal/policy/impl/MultiPhoneWindow$TabContainer;->this$0:Lcom/android/internal/policy/impl/MultiPhoneWindow;
 
     # getter for: Lcom/android/internal/policy/impl/MultiPhoneWindow;->mThumbnail:Lcom/android/internal/policy/impl/multiwindow/ApplicationThumbnail;
@@ -166,7 +152,6 @@
 
     if-nez v0, :cond_0
 
-    .line 2785
     iget-object v0, p0, Lcom/android/internal/policy/impl/MultiPhoneWindow$TabContainer;->this$0:Lcom/android/internal/policy/impl/MultiPhoneWindow;
 
     # getter for: Lcom/android/internal/policy/impl/MultiPhoneWindow;->mIsSupportMinimizeAnimation:Z
@@ -176,7 +161,6 @@
 
     if-eqz v0, :cond_1
 
-    .line 2786
     iget-object v0, p0, Lcom/android/internal/policy/impl/MultiPhoneWindow$TabContainer;->this$0:Lcom/android/internal/policy/impl/MultiPhoneWindow;
 
     iget-object v1, p0, Lcom/android/internal/policy/impl/MultiPhoneWindow$TabContainer;->this$0:Lcom/android/internal/policy/impl/MultiPhoneWindow;
@@ -193,7 +177,6 @@
     # setter for: Lcom/android/internal/policy/impl/MultiPhoneWindow;->mThumbnail:Lcom/android/internal/policy/impl/multiwindow/ApplicationThumbnail;
     invoke-static {v0, v1}, Lcom/android/internal/policy/impl/MultiPhoneWindow;->access$5902(Lcom/android/internal/policy/impl/MultiPhoneWindow;Lcom/android/internal/policy/impl/multiwindow/ApplicationThumbnail;)Lcom/android/internal/policy/impl/multiwindow/ApplicationThumbnail;
 
-    .line 2791
     :cond_0
     :goto_0
     iget-object v0, p0, Lcom/android/internal/policy/impl/MultiPhoneWindow$TabContainer;->this$0:Lcom/android/internal/policy/impl/MultiPhoneWindow;
@@ -209,7 +192,6 @@
 
     return-object v0
 
-    .line 2788
     :cond_1
     iget-object v0, p0, Lcom/android/internal/policy/impl/MultiPhoneWindow$TabContainer;->this$0:Lcom/android/internal/policy/impl/MultiPhoneWindow;
 
@@ -236,7 +218,6 @@
     .locals 1
 
     .prologue
-    .line 2780
     iget-object v0, p0, Lcom/android/internal/policy/impl/MultiPhoneWindow$TabContainer;->mTabFocusedView:Landroid/view/View;
 
     return-object v0
@@ -252,7 +233,6 @@
 
     const/4 v9, 0x1
 
-    .line 2795
     iget-object v7, p0, Lcom/android/internal/policy/impl/MultiPhoneWindow$TabContainer;->this$0:Lcom/android/internal/policy/impl/MultiPhoneWindow;
 
     # getter for: Lcom/android/internal/policy/impl/MultiPhoneWindow;->mMultiWindowFacade:Lcom/samsung/android/multiwindow/MultiWindowFacade;
@@ -262,7 +242,6 @@
 
     if-eqz v7, :cond_0
 
-    .line 2796
     iget-object v7, p0, Lcom/android/internal/policy/impl/MultiPhoneWindow$TabContainer;->this$0:Lcom/android/internal/policy/impl/MultiPhoneWindow;
 
     # invokes: Lcom/android/internal/policy/impl/MultiPhoneWindow;->getState()I
@@ -274,25 +253,21 @@
 
     if-eq v7, v8, :cond_1
 
-    .line 2797
     const-string v7, "TAG"
 
     const-string v8, "TabContainer::refresh state is not STATE_SCALED_FLOATING"
 
     invoke-static {v7, v8}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 2866
     :cond_0
     :goto_0
     return-void
 
-    .line 2801
     :cond_1
     iget-object v7, p0, Lcom/android/internal/policy/impl/MultiPhoneWindow$TabContainer;->mTabRoot:Lcom/android/internal/policy/impl/MultiPhoneWindow$CustomTabLayout;
 
     if-nez v7, :cond_2
 
-    .line 2802
     const-string v7, "TAG"
 
     const-string v8, "TabContainer::refresh mTabRoot == null"
@@ -301,7 +276,6 @@
 
     goto :goto_0
 
-    .line 2806
     :cond_2
     iget-object v7, p0, Lcom/android/internal/policy/impl/MultiPhoneWindow$TabContainer;->this$0:Lcom/android/internal/policy/impl/MultiPhoneWindow;
 
@@ -316,7 +290,6 @@
 
     check-cast v6, Ljava/util/ArrayList;
 
-    .line 2807
     .local v6, "tabs":Ljava/util/ArrayList;, "Ljava/util/ArrayList<Lcom/samsung/android/multiwindow/MultiWindowTab;>;"
     if-eqz v6, :cond_3
 
@@ -341,7 +314,6 @@
 
     if-nez v7, :cond_6
 
-    .line 2809
     :cond_3
     const-string v7, "TAG"
 
@@ -349,7 +321,6 @@
 
     invoke-static {v7, v8}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 2810
     iget-object v7, p0, Lcom/android/internal/policy/impl/MultiPhoneWindow$TabContainer;->this$0:Lcom/android/internal/policy/impl/MultiPhoneWindow;
 
     # invokes: Lcom/android/internal/policy/impl/MultiPhoneWindow;->getState()I
@@ -368,7 +339,6 @@
 
     if-eqz v7, :cond_4
 
-    .line 2811
     iget-object v7, p0, Lcom/android/internal/policy/impl/MultiPhoneWindow$TabContainer;->this$0:Lcom/android/internal/policy/impl/MultiPhoneWindow;
 
     iget-object v7, v7, Lcom/android/internal/policy/impl/MultiPhoneWindow;->mPenWindowController:Lcom/android/internal/policy/impl/MultiPhoneWindow$PenWindowController;
@@ -379,14 +349,12 @@
 
     if-nez v7, :cond_5
 
-    .line 2812
     const-string v7, "TAG"
 
     const-string v8, "token is null"
 
     invoke-static {v7, v8}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 2817
     :cond_4
     :goto_1
     iget-object v7, p0, Lcom/android/internal/policy/impl/MultiPhoneWindow$TabContainer;->mTabRoot:Lcom/android/internal/policy/impl/MultiPhoneWindow$CustomTabLayout;
@@ -397,7 +365,6 @@
 
     goto :goto_0
 
-    .line 2814
     :cond_5
     iget-object v7, p0, Lcom/android/internal/policy/impl/MultiPhoneWindow$TabContainer;->this$0:Lcom/android/internal/policy/impl/MultiPhoneWindow;
 
@@ -407,7 +374,6 @@
 
     goto :goto_1
 
-    .line 2820
     :cond_6
     iget-object v7, p0, Lcom/android/internal/policy/impl/MultiPhoneWindow$TabContainer;->mTabRoot:Lcom/android/internal/policy/impl/MultiPhoneWindow$CustomTabLayout;
 
@@ -417,7 +383,6 @@
 
     if-eqz v7, :cond_7
 
-    .line 2821
     const-string v7, "TAG"
 
     const-string v8, "TabContainer::refresh : mTabHost is not visible"
@@ -426,7 +391,6 @@
 
     goto :goto_0
 
-    .line 2824
     :cond_7
     iget-object v7, p0, Lcom/android/internal/policy/impl/MultiPhoneWindow$TabContainer;->mTabHost:Landroid/widget/TabHost;
 
@@ -434,12 +398,10 @@
 
     invoke-virtual {v7, v8}, Landroid/widget/TabHost;->setOnTabChangedListener(Landroid/widget/TabHost$OnTabChangeListener;)V
 
-    .line 2825
     iget-object v7, p0, Lcom/android/internal/policy/impl/MultiPhoneWindow$TabContainer;->mTabHost:Landroid/widget/TabHost;
 
     invoke-virtual {v7}, Landroid/widget/TabHost;->clearAllTabs()V
 
-    .line 2827
     invoke-virtual {v6}, Ljava/util/ArrayList;->iterator()Ljava/util/Iterator;
 
     move-result-object v1
@@ -459,19 +421,16 @@
 
     check-cast v5, Lcom/samsung/android/multiwindow/MultiWindowTab;
 
-    .line 2828
     .local v5, "tab":Lcom/samsung/android/multiwindow/MultiWindowTab;
     invoke-virtual {v5}, Lcom/samsung/android/multiwindow/MultiWindowTab;->getStackId()I
 
     move-result v4
 
-    .line 2829
     .local v4, "stackId":I
     invoke-virtual {v5}, Lcom/samsung/android/multiwindow/MultiWindowTab;->getComponentName()Landroid/content/ComponentName;
 
     move-result-object v0
 
-    .line 2830
     .local v0, "componentName":Landroid/content/ComponentName;
     iget-object v7, p0, Lcom/android/internal/policy/impl/MultiPhoneWindow$TabContainer;->this$0:Lcom/android/internal/policy/impl/MultiPhoneWindow;
 
@@ -484,11 +443,9 @@
 
     move-result-object v3
 
-    .line 2831
     .local v3, "pm":Landroid/content/pm/PackageManager;
     if-eqz v3, :cond_8
 
-    .line 2832
     new-instance v2, Landroid/widget/ImageView;
 
     iget-object v7, p0, Lcom/android/internal/policy/impl/MultiPhoneWindow$TabContainer;->this$0:Lcom/android/internal/policy/impl/MultiPhoneWindow;
@@ -500,30 +457,25 @@
 
     invoke-direct {v2, v7}, Landroid/widget/ImageView;-><init>(Landroid/content/Context;)V
 
-    .line 2833
     .local v2, "iv":Landroid/widget/ImageView;
     sget-object v7, Landroid/widget/ImageView$ScaleType;->CENTER_INSIDE:Landroid/widget/ImageView$ScaleType;
 
     invoke-virtual {v2, v7}, Landroid/widget/ImageView;->setScaleType(Landroid/widget/ImageView$ScaleType;)V
 
-    .line 2834
     invoke-virtual {v2, v10, v11, v10, v11}, Landroid/widget/ImageView;->setPadding(IIII)V
 
-    .line 2835
     invoke-static {v4}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object v7
 
     invoke-virtual {v2, v7}, Landroid/widget/ImageView;->setTag(Ljava/lang/Object;)V
 
-    .line 2836
     invoke-direct {p0, v0}, Lcom/android/internal/policy/impl/MultiPhoneWindow$TabContainer;->getMinimizedDrawable(Landroid/content/ComponentName;)Landroid/graphics/drawable/Drawable;
 
     move-result-object v7
 
     invoke-virtual {v2, v7}, Landroid/widget/ImageView;->setImageDrawable(Landroid/graphics/drawable/Drawable;)V
 
-    .line 2837
     iget-object v7, p0, Lcom/android/internal/policy/impl/MultiPhoneWindow$TabContainer;->this$0:Lcom/android/internal/policy/impl/MultiPhoneWindow;
 
     # getter for: Lcom/android/internal/policy/impl/MultiPhoneWindow;->mContext:Landroid/content/Context;
@@ -543,14 +495,12 @@
 
     invoke-virtual {v2, v7}, Landroid/widget/ImageView;->setBackground(Landroid/graphics/drawable/Drawable;)V
 
-    .line 2838
     new-instance v7, Lcom/android/internal/policy/impl/MultiPhoneWindow$TabContainer$2;
 
     invoke-direct {v7, p0}, Lcom/android/internal/policy/impl/MultiPhoneWindow$TabContainer$2;-><init>(Lcom/android/internal/policy/impl/MultiPhoneWindow$TabContainer;)V
 
     invoke-virtual {v2, v7}, Landroid/widget/ImageView;->setOnTouchListener(Landroid/view/View$OnTouchListener;)V
 
-    .line 2850
     iget-object v7, p0, Lcom/android/internal/policy/impl/MultiPhoneWindow$TabContainer;->mTabHost:Landroid/widget/TabHost;
 
     iget-object v8, p0, Lcom/android/internal/policy/impl/MultiPhoneWindow$TabContainer;->mTabHost:Landroid/widget/TabHost;
@@ -577,7 +527,6 @@
 
     invoke-virtual {v7, v8}, Landroid/widget/TabHost;->addTab(Landroid/widget/TabHost$TabSpec;)V
 
-    .line 2858
     iget-object v7, p0, Lcom/android/internal/policy/impl/MultiPhoneWindow$TabContainer;->this$0:Lcom/android/internal/policy/impl/MultiPhoneWindow;
 
     # getter for: Lcom/android/internal/policy/impl/MultiPhoneWindow;->mMultiWindowFacade:Lcom/samsung/android/multiwindow/MultiWindowFacade;
@@ -587,7 +536,6 @@
 
     if-eqz v7, :cond_8
 
-    .line 2860
     iget-object v7, p0, Lcom/android/internal/policy/impl/MultiPhoneWindow$TabContainer;->this$0:Lcom/android/internal/policy/impl/MultiPhoneWindow;
 
     # getter for: Lcom/android/internal/policy/impl/MultiPhoneWindow;->mMultiWindowFacade:Lcom/samsung/android/multiwindow/MultiWindowFacade;
@@ -614,7 +562,6 @@
 
     goto/16 :goto_2
 
-    .line 2864
     .end local v0    # "componentName":Landroid/content/ComponentName;
     .end local v2    # "iv":Landroid/widget/ImageView;
     .end local v3    # "pm":Landroid/content/pm/PackageManager;
@@ -635,7 +582,6 @@
     .param p1, "tag"    # Ljava/lang/String;
 
     .prologue
-    .line 2762
     const-string v0, "TAG"
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -658,12 +604,10 @@
 
     invoke-static {v0, v1}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 2763
     iget-object v0, p0, Lcom/android/internal/policy/impl/MultiPhoneWindow$TabContainer;->mTabHost:Landroid/widget/TabHost;
 
     invoke-virtual {v0, p1}, Landroid/widget/TabHost;->setCurrentTabByTag(Ljava/lang/String;)V
 
-    .line 2764
     return-void
 .end method
 
@@ -674,7 +618,6 @@
     .prologue
     const/4 v2, 0x0
 
-    .line 2767
     iget-object v0, p0, Lcom/android/internal/policy/impl/MultiPhoneWindow$TabContainer;->this$0:Lcom/android/internal/policy/impl/MultiPhoneWindow;
 
     # getter for: Lcom/android/internal/policy/impl/MultiPhoneWindow;->mContext:Landroid/content/Context;
@@ -688,7 +631,6 @@
 
     if-eqz v0, :cond_1
 
-    .line 2768
     if-eqz p1, :cond_2
 
     iget-object v0, p0, Lcom/android/internal/policy/impl/MultiPhoneWindow$TabContainer;->this$0:Lcom/android/internal/policy/impl/MultiPhoneWindow;
@@ -706,7 +648,6 @@
 
     if-eqz v0, :cond_2
 
-    .line 2769
     iget-object v0, p0, Lcom/android/internal/policy/impl/MultiPhoneWindow$TabContainer;->this$0:Lcom/android/internal/policy/impl/MultiPhoneWindow;
 
     # getter for: Lcom/android/internal/policy/impl/MultiPhoneWindow;->mContentLayoutGenerated:Z
@@ -716,25 +657,21 @@
 
     if-eqz v0, :cond_0
 
-    .line 2770
     iget-object v0, p0, Lcom/android/internal/policy/impl/MultiPhoneWindow$TabContainer;->this$0:Lcom/android/internal/policy/impl/MultiPhoneWindow;
 
     iget-object v0, v0, Lcom/android/internal/policy/impl/MultiPhoneWindow;->mPenWindowController:Lcom/android/internal/policy/impl/MultiPhoneWindow$PenWindowController;
 
     invoke-virtual {v0, v2}, Lcom/android/internal/policy/impl/MultiPhoneWindow$PenWindowController;->performUpdateVisibility(Z)V
 
-    .line 2772
     :cond_0
     iget-object v0, p0, Lcom/android/internal/policy/impl/MultiPhoneWindow$TabContainer;->mTabRoot:Lcom/android/internal/policy/impl/MultiPhoneWindow$CustomTabLayout;
 
     invoke-virtual {v0, v2}, Lcom/android/internal/policy/impl/MultiPhoneWindow$CustomTabLayout;->setVisibility(I)V
 
-    .line 2777
     :cond_1
     :goto_0
     return-void
 
-    .line 2774
     :cond_2
     iget-object v0, p0, Lcom/android/internal/policy/impl/MultiPhoneWindow$TabContainer;->mTabRoot:Lcom/android/internal/policy/impl/MultiPhoneWindow$CustomTabLayout;
 

@@ -28,7 +28,6 @@
     .locals 0
 
     .prologue
-    .line 1232
     iput-object p1, p0, Lcom/android/internal/policy/impl/multiwindow/MultiPhoneWindowManager$6;->this$0:Lcom/android/internal/policy/impl/multiwindow/MultiPhoneWindowManager;
 
     iput p2, p0, Lcom/android/internal/policy/impl/multiwindow/MultiPhoneWindowManager$6;->val$visibility:I
@@ -44,7 +43,6 @@
     .locals 2
 
     .prologue
-    .line 1235
     iget-object v0, p0, Lcom/android/internal/policy/impl/multiwindow/MultiPhoneWindowManager$6;->this$0:Lcom/android/internal/policy/impl/multiwindow/MultiPhoneWindowManager;
 
     iget-object v0, v0, Lcom/android/internal/policy/impl/multiwindow/MultiPhoneWindowManager;->mWindowManagerFuncs:Landroid/view/WindowManagerPolicy$WindowManagerFuncs;
@@ -53,6 +51,5 @@
 
     invoke-interface {v0, v1}, Landroid/view/WindowManagerPolicy$WindowManagerFuncs;->notifySystemUiVisibility(I)V
 
-    .line 1236
     return-void
 .end method

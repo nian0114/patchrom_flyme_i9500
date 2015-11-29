@@ -31,12 +31,10 @@
     .locals 0
 
     .prologue
-    .line 520
     iput-object p1, p0, Lcom/android/server/connectivity/NetworkMonitor$CaptivePortalState;->this$0:Lcom/android/server/connectivity/NetworkMonitor;
 
     invoke-direct {p0}, Lcom/android/internal/util/State;-><init>()V
 
-    .line 521
     return-void
 .end method
 
@@ -46,7 +44,6 @@
     .param p2, "x1"    # Lcom/android/server/connectivity/NetworkMonitor$1;
 
     .prologue
-    .line 520
     invoke-direct {p0, p1}, Lcom/android/server/connectivity/NetworkMonitor$CaptivePortalState;-><init>(Lcom/android/server/connectivity/NetworkMonitor;)V
 
     return-void
@@ -58,14 +55,12 @@
     .locals 5
 
     .prologue
-    .line 542
     new-instance v1, Landroid/content/Intent;
 
     const-string v2, "android.intent.action.SEND"
 
     invoke-direct {v1, v2}, Landroid/content/Intent;-><init>(Ljava/lang/String;)V
 
-    .line 543
     .local v1, "intent":Landroid/content/Intent;
     const-string v2, "android.intent.extra.TEXT"
 
@@ -86,12 +81,10 @@
 
     invoke-virtual {v1, v2, v3}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;
 
-    .line 544
-    const-string/jumbo v2, "text/plain"
+    const-string v2, "text/plain"
 
     invoke-virtual {v1, v2}, Landroid/content/Intent;->setType(Ljava/lang/String;)Landroid/content/Intent;
 
-    .line 545
     new-instance v2, Landroid/content/ComponentName;
 
     const-string v3, "com.android.captiveportallogin"
@@ -102,12 +95,10 @@
 
     invoke-virtual {v1, v2}, Landroid/content/Intent;->setComponent(Landroid/content/ComponentName;)Landroid/content/Intent;
 
-    .line 547
     const/high16 v2, 0x10400000
 
     invoke-virtual {v1, v2}, Landroid/content/Intent;->setFlags(I)Landroid/content/Intent;
 
-    .line 550
     new-instance v2, Lcom/android/server/connectivity/NetworkMonitor$CaptivePortalState$CaptivePortalLoggedInBroadcastReceiver;
 
     iget-object v3, p0, Lcom/android/server/connectivity/NetworkMonitor$CaptivePortalState;->this$0:Lcom/android/server/connectivity/NetworkMonitor;
@@ -121,14 +112,12 @@
 
     iput-object v2, p0, Lcom/android/server/connectivity/NetworkMonitor$CaptivePortalState;->mCaptivePortalLoggedInBroadcastReceiver:Lcom/android/server/connectivity/NetworkMonitor$CaptivePortalState$CaptivePortalLoggedInBroadcastReceiver;
 
-    .line 552
     new-instance v0, Landroid/content/IntentFilter;
 
     const-string v2, "android.net.netmon.captive_portal_logged_in"
 
     invoke-direct {v0, v2}, Landroid/content/IntentFilter;-><init>(Ljava/lang/String;)V
 
-    .line 553
     .local v0, "filter":Landroid/content/IntentFilter;
     iget-object v2, p0, Lcom/android/server/connectivity/NetworkMonitor$CaptivePortalState;->this$0:Lcom/android/server/connectivity/NetworkMonitor;
 
@@ -141,7 +130,6 @@
 
     invoke-virtual {v2, v3, v0}, Landroid/content/Context;->registerReceiver(Landroid/content/BroadcastReceiver;Landroid/content/IntentFilter;)Landroid/content/Intent;
 
-    .line 555
     iget-object v2, p0, Lcom/android/server/connectivity/NetworkMonitor$CaptivePortalState;->this$0:Lcom/android/server/connectivity/NetworkMonitor;
 
     # getter for: Lcom/android/server/connectivity/NetworkMonitor;->mContext:Landroid/content/Context;
@@ -153,7 +141,6 @@
 
     invoke-virtual {v2, v1, v3}, Landroid/content/Context;->startActivityAsUser(Landroid/content/Intent;Landroid/os/UserHandle;)V
 
-    .line 556
     return-void
 .end method
 
@@ -161,7 +148,6 @@
     .locals 2
 
     .prologue
-    .line 580
     iget-object v0, p0, Lcom/android/server/connectivity/NetworkMonitor$CaptivePortalState;->this$0:Lcom/android/server/connectivity/NetworkMonitor;
 
     # getter for: Lcom/android/server/connectivity/NetworkMonitor;->mContext:Landroid/content/Context;
@@ -173,12 +159,10 @@
 
     invoke-virtual {v0, v1}, Landroid/content/Context;->unregisterReceiver(Landroid/content/BroadcastReceiver;)V
 
-    .line 581
     const/4 v0, 0x0
 
     iput-object v0, p0, Lcom/android/server/connectivity/NetworkMonitor$CaptivePortalState;->mCaptivePortalLoggedInBroadcastReceiver:Lcom/android/server/connectivity/NetworkMonitor$CaptivePortalState$CaptivePortalLoggedInBroadcastReceiver;
 
-    .line 582
     return-void
 .end method
 
@@ -189,7 +173,6 @@
     .prologue
     const/4 v0, 0x1
 
-    .line 560
     iget-object v1, p0, Lcom/android/server/connectivity/NetworkMonitor$CaptivePortalState;->this$0:Lcom/android/server/connectivity/NetworkMonitor;
 
     new-instance v2, Ljava/lang/StringBuilder;
@@ -219,19 +202,16 @@
     # invokes: Lcom/android/server/connectivity/NetworkMonitor;->log(Ljava/lang/String;)V
     invoke-static {v1, v2}, Lcom/android/server/connectivity/NetworkMonitor;->access$4900(Lcom/android/server/connectivity/NetworkMonitor;Ljava/lang/String;)V
 
-    .line 561
     iget v1, p1, Landroid/os/Message;->what:I
 
     packed-switch v1, :pswitch_data_0
 
-    .line 574
     const/4 v0, 0x0
 
     :cond_0
     :goto_0
     return v0
 
-    .line 563
     :pswitch_0
     iget v1, p1, Landroid/os/Message;->arg1:I
 
@@ -244,18 +224,15 @@
 
     if-ne v1, v2, :cond_0
 
-    .line 565
     iget v1, p1, Landroid/os/Message;->arg2:I
 
     if-nez v1, :cond_1
 
-    .line 566
     iget-object v1, p0, Lcom/android/server/connectivity/NetworkMonitor$CaptivePortalState;->this$0:Lcom/android/server/connectivity/NetworkMonitor;
 
     # setter for: Lcom/android/server/connectivity/NetworkMonitor;->mUserDoesNotWant:Z
     invoke-static {v1, v0}, Lcom/android/server/connectivity/NetworkMonitor;->access$2202(Lcom/android/server/connectivity/NetworkMonitor;Z)Z
 
-    .line 568
     iget-object v1, p0, Lcom/android/server/connectivity/NetworkMonitor$CaptivePortalState;->this$0:Lcom/android/server/connectivity/NetworkMonitor;
 
     iget-object v2, p0, Lcom/android/server/connectivity/NetworkMonitor$CaptivePortalState;->this$0:Lcom/android/server/connectivity/NetworkMonitor;
@@ -270,7 +247,6 @@
 
     goto :goto_0
 
-    .line 570
     :cond_1
     iget-object v1, p0, Lcom/android/server/connectivity/NetworkMonitor$CaptivePortalState;->this$0:Lcom/android/server/connectivity/NetworkMonitor;
 
@@ -286,7 +262,6 @@
 
     goto :goto_0
 
-    .line 561
     nop
 
     :pswitch_data_0

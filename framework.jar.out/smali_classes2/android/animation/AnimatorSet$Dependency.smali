@@ -33,15 +33,11 @@
     .param p2, "rule"    # I
 
     .prologue
-    .line 965
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 966
     iput-object p1, p0, Landroid/animation/AnimatorSet$Dependency;->node:Landroid/animation/AnimatorSet$Node;
 
-    .line 967
     iput p2, p0, Landroid/animation/AnimatorSet$Dependency;->rule:I
 
-    .line 968
     return-void
 .end method

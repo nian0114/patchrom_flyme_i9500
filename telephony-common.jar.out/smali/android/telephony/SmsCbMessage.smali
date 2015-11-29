@@ -68,7 +68,6 @@
     .locals 1
 
     .prologue
-    .line 222
     new-instance v0, Landroid/telephony/SmsCbMessage$1;
 
     invoke-direct {v0}, Landroid/telephony/SmsCbMessage$1;-><init>()V
@@ -92,40 +91,28 @@
     .param p10, "cmasWarningInfo"    # Landroid/telephony/SmsCbCmasInfo;
 
     .prologue
-    .line 149
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 150
     iput p1, p0, Landroid/telephony/SmsCbMessage;->mMessageFormat:I
 
-    .line 151
     iput p2, p0, Landroid/telephony/SmsCbMessage;->mGeographicalScope:I
 
-    .line 152
     iput p3, p0, Landroid/telephony/SmsCbMessage;->mSerialNumber:I
 
-    .line 153
     iput-object p4, p0, Landroid/telephony/SmsCbMessage;->mLocation:Landroid/telephony/SmsCbLocation;
 
-    .line 154
     iput p5, p0, Landroid/telephony/SmsCbMessage;->mServiceCategory:I
 
-    .line 155
     iput-object p6, p0, Landroid/telephony/SmsCbMessage;->mLanguage:Ljava/lang/String;
 
-    .line 156
     iput-object p7, p0, Landroid/telephony/SmsCbMessage;->mBody:Ljava/lang/String;
 
-    .line 157
     iput p8, p0, Landroid/telephony/SmsCbMessage;->mPriority:I
 
-    .line 158
     iput-object p9, p0, Landroid/telephony/SmsCbMessage;->mEtwsWarningInfo:Landroid/telephony/SmsCbEtwsInfo;
 
-    .line 159
     iput-object p10, p0, Landroid/telephony/SmsCbMessage;->mCmasWarningInfo:Landroid/telephony/SmsCbCmasInfo;
 
-    .line 160
     return-void
 .end method
 
@@ -136,86 +123,71 @@
     .prologue
     const/4 v2, 0x0
 
-    .line 163
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 164
     invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
 
     move-result v1
 
     iput v1, p0, Landroid/telephony/SmsCbMessage;->mMessageFormat:I
 
-    .line 165
     invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
 
     move-result v1
 
     iput v1, p0, Landroid/telephony/SmsCbMessage;->mGeographicalScope:I
 
-    .line 166
     invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
 
     move-result v1
 
     iput v1, p0, Landroid/telephony/SmsCbMessage;->mSerialNumber:I
 
-    .line 167
     new-instance v1, Landroid/telephony/SmsCbLocation;
 
     invoke-direct {v1, p1}, Landroid/telephony/SmsCbLocation;-><init>(Landroid/os/Parcel;)V
 
     iput-object v1, p0, Landroid/telephony/SmsCbMessage;->mLocation:Landroid/telephony/SmsCbLocation;
 
-    .line 168
     invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
 
     move-result v1
 
     iput v1, p0, Landroid/telephony/SmsCbMessage;->mServiceCategory:I
 
-    .line 169
     invoke-virtual {p1}, Landroid/os/Parcel;->readString()Ljava/lang/String;
 
     move-result-object v1
 
     iput-object v1, p0, Landroid/telephony/SmsCbMessage;->mLanguage:Ljava/lang/String;
 
-    .line 170
     invoke-virtual {p1}, Landroid/os/Parcel;->readString()Ljava/lang/String;
 
     move-result-object v1
 
     iput-object v1, p0, Landroid/telephony/SmsCbMessage;->mBody:Ljava/lang/String;
 
-    .line 171
     invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
 
     move-result v1
 
     iput v1, p0, Landroid/telephony/SmsCbMessage;->mPriority:I
 
-    .line 172
     invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
 
     move-result v0
 
-    .line 173
     .local v0, "type":I
     packed-switch v0, :pswitch_data_0
 
-    .line 187
     :pswitch_0
     iput-object v2, p0, Landroid/telephony/SmsCbMessage;->mEtwsWarningInfo:Landroid/telephony/SmsCbEtwsInfo;
 
-    .line 188
     iput-object v2, p0, Landroid/telephony/SmsCbMessage;->mCmasWarningInfo:Landroid/telephony/SmsCbCmasInfo;
 
-    .line 190
     :goto_0
     return-void
 
-    .line 176
     :pswitch_1
     new-instance v1, Landroid/telephony/SmsCbEtwsInfo;
 
@@ -223,16 +195,13 @@
 
     iput-object v1, p0, Landroid/telephony/SmsCbMessage;->mEtwsWarningInfo:Landroid/telephony/SmsCbEtwsInfo;
 
-    .line 177
     iput-object v2, p0, Landroid/telephony/SmsCbMessage;->mCmasWarningInfo:Landroid/telephony/SmsCbCmasInfo;
 
     goto :goto_0
 
-    .line 182
     :pswitch_2
     iput-object v2, p0, Landroid/telephony/SmsCbMessage;->mEtwsWarningInfo:Landroid/telephony/SmsCbEtwsInfo;
 
-    .line 183
     new-instance v1, Landroid/telephony/SmsCbCmasInfo;
 
     invoke-direct {v1, p1}, Landroid/telephony/SmsCbCmasInfo;-><init>(Landroid/os/Parcel;)V
@@ -241,7 +210,6 @@
 
     goto :goto_0
 
-    .line 173
     nop
 
     :pswitch_data_0
@@ -258,7 +226,6 @@
     .locals 1
 
     .prologue
-    .line 498
     const/4 v0, 0x0
 
     return v0
@@ -268,7 +235,6 @@
     .locals 3
 
     .prologue
-    .line 426
     :try_start_0
     iget-object v1, p0, Landroid/telephony/SmsCbMessage;->mCmasWarningInfo:Landroid/telephony/SmsCbCmasInfo;
 
@@ -278,15 +244,12 @@
 
     move-result v1
 
-    .line 429
     :goto_0
     return v1
 
-    .line 427
     :catch_0
     move-exception v0
 
-    .line 428
     .local v0, "e":Ljava/lang/NullPointerException;
     const-string v1, "SMSCB"
 
@@ -294,7 +257,6 @@
 
     invoke-static {v1, v2}, Landroid/telephony/Rlog;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 429
     const/4 v1, 0x0
 
     goto :goto_0
@@ -304,7 +266,6 @@
     .locals 3
 
     .prologue
-    .line 373
     :try_start_0
     iget-object v1, p0, Landroid/telephony/SmsCbMessage;->mCmasWarningInfo:Landroid/telephony/SmsCbCmasInfo;
 
@@ -314,15 +275,12 @@
 
     move-result v1
 
-    .line 376
     :goto_0
     return v1
 
-    .line 374
     :catch_0
     move-exception v0
 
-    .line 375
     .local v0, "e":Ljava/lang/NullPointerException;
     const-string v1, "SMSCB"
 
@@ -330,7 +288,6 @@
 
     invoke-static {v1, v2}, Landroid/telephony/Rlog;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 376
     const/4 v1, 0x0
 
     goto :goto_0
@@ -340,7 +297,6 @@
     .locals 3
 
     .prologue
-    .line 405
     :try_start_0
     iget-object v1, p0, Landroid/telephony/SmsCbMessage;->mCmasWarningInfo:Landroid/telephony/SmsCbCmasInfo;
 
@@ -350,15 +306,12 @@
 
     move-result v1
 
-    .line 408
     :goto_0
     return v1
 
-    .line 406
     :catch_0
     move-exception v0
 
-    .line 407
     .local v0, "e":Ljava/lang/NullPointerException;
     const-string v1, "SMSCB"
 
@@ -366,7 +319,6 @@
 
     invoke-static {v1, v2}, Landroid/telephony/Rlog;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 408
     const/4 v1, 0x0
 
     goto :goto_0
@@ -376,7 +328,6 @@
     .locals 3
 
     .prologue
-    .line 417
     :try_start_0
     iget-object v1, p0, Landroid/telephony/SmsCbMessage;->mCmasWarningInfo:Landroid/telephony/SmsCbCmasInfo;
 
@@ -386,15 +337,12 @@
 
     move-result v1
 
-    .line 420
     :goto_0
     return v1
 
-    .line 418
     :catch_0
     move-exception v0
 
-    .line 419
     .local v0, "e":Ljava/lang/NullPointerException;
     const-string v1, "SMSCB"
 
@@ -402,7 +350,6 @@
 
     invoke-static {v1, v2}, Landroid/telephony/Rlog;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 420
     const/4 v1, 0x0
 
     goto :goto_0
@@ -412,7 +359,6 @@
     .locals 4
 
     .prologue
-    .line 435
     :try_start_0
     iget-object v1, p0, Landroid/telephony/SmsCbMessage;->mCmasWarningInfo:Landroid/telephony/SmsCbCmasInfo;
 
@@ -422,15 +368,12 @@
 
     move-result-wide v2
 
-    .line 438
     :goto_0
     return-wide v2
 
-    .line 436
     :catch_0
     move-exception v0
 
-    .line 437
     .local v0, "e":Ljava/lang/NullPointerException;
     const-string v1, "SMSCB"
 
@@ -438,7 +381,6 @@
 
     invoke-static {v1, v2}, Landroid/telephony/Rlog;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 438
     const-wide/16 v2, 0x0
 
     goto :goto_0
@@ -448,7 +390,6 @@
     .locals 3
 
     .prologue
-    .line 456
     :try_start_0
     iget-object v1, p0, Landroid/telephony/SmsCbMessage;->mCmasWarningInfo:Landroid/telephony/SmsCbCmasInfo;
 
@@ -458,15 +399,12 @@
 
     move-result v1
 
-    .line 459
     :goto_0
     return v1
 
-    .line 457
     :catch_0
     move-exception v0
 
-    .line 458
     .local v0, "e":Ljava/lang/NullPointerException;
     const-string v1, "SMSCB"
 
@@ -474,7 +412,6 @@
 
     invoke-static {v1, v2}, Landroid/telephony/Rlog;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 459
     const/4 v1, 0x0
 
     goto :goto_0
@@ -484,7 +421,6 @@
     .locals 3
 
     .prologue
-    .line 465
     :try_start_0
     iget-object v1, p0, Landroid/telephony/SmsCbMessage;->mCmasWarningInfo:Landroid/telephony/SmsCbCmasInfo;
 
@@ -494,15 +430,12 @@
 
     move-result v1
 
-    .line 468
     :goto_0
     return v1
 
-    .line 466
     :catch_0
     move-exception v0
 
-    .line 467
     .local v0, "e":Ljava/lang/NullPointerException;
     const-string v1, "SMSCB"
 
@@ -510,7 +443,6 @@
 
     invoke-static {v1, v2}, Landroid/telephony/Rlog;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 468
     const/4 v1, 0x0
 
     goto :goto_0
@@ -520,7 +452,6 @@
     .locals 3
 
     .prologue
-    .line 474
     :try_start_0
     iget-object v1, p0, Landroid/telephony/SmsCbMessage;->mCmasWarningInfo:Landroid/telephony/SmsCbCmasInfo;
 
@@ -530,15 +461,12 @@
 
     move-result v1
 
-    .line 477
     :goto_0
     return v1
 
-    .line 475
     :catch_0
     move-exception v0
 
-    .line 476
     .local v0, "e":Ljava/lang/NullPointerException;
     const-string v1, "SMSCB"
 
@@ -546,7 +474,6 @@
 
     invoke-static {v1, v2}, Landroid/telephony/Rlog;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 477
     const/4 v1, 0x0
 
     goto :goto_0
@@ -556,7 +483,6 @@
     .locals 3
 
     .prologue
-    .line 447
     :try_start_0
     iget-object v1, p0, Landroid/telephony/SmsCbMessage;->mCmasWarningInfo:Landroid/telephony/SmsCbCmasInfo;
 
@@ -566,15 +492,12 @@
 
     move-result v1
 
-    .line 450
     :goto_0
     return v1
 
-    .line 448
     :catch_0
     move-exception v0
 
-    .line 449
     .local v0, "e":Ljava/lang/NullPointerException;
     const-string v1, "SMSCB"
 
@@ -582,7 +505,6 @@
 
     invoke-static {v1, v2}, Landroid/telephony/Rlog;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 450
     const/4 v1, 0x0
 
     goto :goto_0
@@ -592,7 +514,6 @@
     .locals 3
 
     .prologue
-    .line 381
     :try_start_0
     iget-object v1, p0, Landroid/telephony/SmsCbMessage;->mCmasWarningInfo:Landroid/telephony/SmsCbCmasInfo;
 
@@ -602,15 +523,12 @@
 
     move-result v1
 
-    .line 384
     :goto_0
     return v1
 
-    .line 382
     :catch_0
     move-exception v0
 
-    .line 383
     .local v0, "e":Ljava/lang/NullPointerException;
     const-string v1, "SMSCB"
 
@@ -618,7 +536,6 @@
 
     invoke-static {v1, v2}, Landroid/telephony/Rlog;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 384
     const/4 v1, 0x0
 
     goto :goto_0
@@ -628,7 +545,6 @@
     .locals 3
 
     .prologue
-    .line 389
     :try_start_0
     iget-object v1, p0, Landroid/telephony/SmsCbMessage;->mCmasWarningInfo:Landroid/telephony/SmsCbCmasInfo;
 
@@ -638,15 +554,12 @@
 
     move-result v1
 
-    .line 392
     :goto_0
     return v1
 
-    .line 390
     :catch_0
     move-exception v0
 
-    .line 391
     .local v0, "e":Ljava/lang/NullPointerException;
     const-string v1, "SMSCB"
 
@@ -654,7 +567,6 @@
 
     invoke-static {v1, v2}, Landroid/telephony/Rlog;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 392
     const/4 v1, 0x0
 
     goto :goto_0
@@ -664,7 +576,6 @@
     .locals 3
 
     .prologue
-    .line 397
     :try_start_0
     iget-object v1, p0, Landroid/telephony/SmsCbMessage;->mCmasWarningInfo:Landroid/telephony/SmsCbCmasInfo;
 
@@ -674,15 +585,12 @@
 
     move-result v1
 
-    .line 400
     :goto_0
     return v1
 
-    .line 398
     :catch_0
     move-exception v0
 
-    .line 399
     .local v0, "e":Ljava/lang/NullPointerException;
     const-string v1, "SMSCB"
 
@@ -690,7 +598,6 @@
 
     invoke-static {v1, v2}, Landroid/telephony/Rlog;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 400
     const/4 v1, 0x0
 
     goto :goto_0
@@ -700,7 +607,6 @@
     .locals 1
 
     .prologue
-    .line 340
     iget-object v0, p0, Landroid/telephony/SmsCbMessage;->mCmasWarningInfo:Landroid/telephony/SmsCbCmasInfo;
 
     return-object v0
@@ -710,7 +616,6 @@
     .locals 1
 
     .prologue
-    .line 326
     iget-object v0, p0, Landroid/telephony/SmsCbMessage;->mEtwsWarningInfo:Landroid/telephony/SmsCbEtwsInfo;
 
     return-object v0
@@ -720,7 +625,6 @@
     .locals 1
 
     .prologue
-    .line 241
     iget v0, p0, Landroid/telephony/SmsCbMessage;->mGeographicalScope:I
 
     return v0
@@ -730,7 +634,6 @@
     .locals 1
 
     .prologue
-    .line 286
     iget-object v0, p0, Landroid/telephony/SmsCbMessage;->mLanguage:Ljava/lang/String;
 
     return-object v0
@@ -740,7 +643,6 @@
     .locals 1
 
     .prologue
-    .line 265
     iget-object v0, p0, Landroid/telephony/SmsCbMessage;->mLocation:Landroid/telephony/SmsCbLocation;
 
     return-object v0
@@ -750,7 +652,6 @@
     .locals 1
 
     .prologue
-    .line 295
     iget-object v0, p0, Landroid/telephony/SmsCbMessage;->mBody:Ljava/lang/String;
 
     return-object v0
@@ -760,7 +661,6 @@
     .locals 1
 
     .prologue
-    .line 303
     iget v0, p0, Landroid/telephony/SmsCbMessage;->mMessageFormat:I
 
     return v0
@@ -770,7 +670,6 @@
     .locals 1
 
     .prologue
-    .line 313
     iget v0, p0, Landroid/telephony/SmsCbMessage;->mPriority:I
 
     return v0
@@ -780,7 +679,6 @@
     .locals 1
 
     .prologue
-    .line 252
     iget v0, p0, Landroid/telephony/SmsCbMessage;->mSerialNumber:I
 
     return v0
@@ -790,7 +688,6 @@
     .locals 1
 
     .prologue
-    .line 277
     iget v0, p0, Landroid/telephony/SmsCbMessage;->mServiceCategory:I
 
     return v0
@@ -800,7 +697,6 @@
     .locals 1
 
     .prologue
-    .line 364
     iget-object v0, p0, Landroid/telephony/SmsCbMessage;->mCmasWarningInfo:Landroid/telephony/SmsCbCmasInfo;
 
     if-eqz v0, :cond_0
@@ -820,7 +716,6 @@
     .locals 2
 
     .prologue
-    .line 348
     iget v0, p0, Landroid/telephony/SmsCbMessage;->mPriority:I
 
     const/4 v1, 0x3
@@ -842,7 +737,6 @@
     .locals 1
 
     .prologue
-    .line 356
     iget-object v0, p0, Landroid/telephony/SmsCbMessage;->mEtwsWarningInfo:Landroid/telephony/SmsCbEtwsInfo;
 
     if-eqz v0, :cond_0
@@ -862,7 +756,6 @@
     .locals 3
 
     .prologue
-    .line 484
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -1046,84 +939,68 @@
     .param p2, "flags"    # I
 
     .prologue
-    .line 200
     iget v0, p0, Landroid/telephony/SmsCbMessage;->mMessageFormat:I
 
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 201
     iget v0, p0, Landroid/telephony/SmsCbMessage;->mGeographicalScope:I
 
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 202
     iget v0, p0, Landroid/telephony/SmsCbMessage;->mSerialNumber:I
 
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 203
     iget-object v0, p0, Landroid/telephony/SmsCbMessage;->mLocation:Landroid/telephony/SmsCbLocation;
 
     invoke-virtual {v0, p1, p2}, Landroid/telephony/SmsCbLocation;->writeToParcel(Landroid/os/Parcel;I)V
 
-    .line 204
     iget v0, p0, Landroid/telephony/SmsCbMessage;->mServiceCategory:I
 
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 205
     iget-object v0, p0, Landroid/telephony/SmsCbMessage;->mLanguage:Ljava/lang/String;
 
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeString(Ljava/lang/String;)V
 
-    .line 206
     iget-object v0, p0, Landroid/telephony/SmsCbMessage;->mBody:Ljava/lang/String;
 
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeString(Ljava/lang/String;)V
 
-    .line 207
     iget v0, p0, Landroid/telephony/SmsCbMessage;->mPriority:I
 
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 208
     iget-object v0, p0, Landroid/telephony/SmsCbMessage;->mEtwsWarningInfo:Landroid/telephony/SmsCbEtwsInfo;
 
     if-eqz v0, :cond_0
 
-    .line 210
     const/16 v0, 0x45
 
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 211
     iget-object v0, p0, Landroid/telephony/SmsCbMessage;->mEtwsWarningInfo:Landroid/telephony/SmsCbEtwsInfo;
 
     invoke-virtual {v0, p1, p2}, Landroid/telephony/SmsCbEtwsInfo;->writeToParcel(Landroid/os/Parcel;I)V
 
-    .line 220
     :goto_0
     return-void
 
-    .line 212
     :cond_0
     iget-object v0, p0, Landroid/telephony/SmsCbMessage;->mCmasWarningInfo:Landroid/telephony/SmsCbCmasInfo;
 
     if-eqz v0, :cond_1
 
-    .line 214
     const/16 v0, 0x43
 
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 215
     iget-object v0, p0, Landroid/telephony/SmsCbMessage;->mCmasWarningInfo:Landroid/telephony/SmsCbCmasInfo;
 
     invoke-virtual {v0, p1, p2}, Landroid/telephony/SmsCbCmasInfo;->writeToParcel(Landroid/os/Parcel;I)V
 
     goto :goto_0
 
-    .line 218
     :cond_1
     const/16 v0, 0x30
 

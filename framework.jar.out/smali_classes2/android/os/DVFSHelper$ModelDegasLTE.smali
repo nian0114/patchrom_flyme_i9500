@@ -23,16 +23,13 @@
     .locals 1
 
     .prologue
-    .line 1790
     iput-object p1, p0, Landroid/os/DVFSHelper$ModelDegasLTE;->this$0:Landroid/os/DVFSHelper;
 
     invoke-direct {p0, p1}, Landroid/os/DVFSHelper$ModelKMINI;-><init>(Landroid/os/DVFSHelper;)V
 
-    .line 1791
     const v0, 0x155cc0
 
     iput v0, p0, Landroid/os/DVFSHelper$ModelDegasLTE;->LAUNCHER_TOUCH_ARM_FREQ:I
 
-    .line 1792
     return-void
 .end method

@@ -37,7 +37,6 @@
     .locals 1
 
     .prologue
-    .line 13
     const-string v0, "KMLGenerator"
 
     sput-object v0, Lcom/samsung/android/contextaware/aggregator/lpp/log/KMLGenerator;->TAG:Ljava/lang/String;
@@ -50,50 +49,40 @@
     .param p1, "ID"    # Ljava/lang/String;
 
     .prologue
-    .line 24
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 16
     const-string v0, "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<kml xmlns=\"http://www.opengis.net/kml/2.2\" xmlns:gx=\"http://www.google.com/kml/ext/2.2\" xmlns:kml=\"http://www.opengis.net/kml/2.2\" xmlns:atom=\"http://www.w3.org/2005/Atom\">"
 
     iput-object v0, p0, Lcom/samsung/android/contextaware/aggregator/lpp/log/KMLGenerator;->Header:Ljava/lang/String;
 
-    .line 17
-    const-string/jumbo v0, "temp"
+    const-string v0, "temp"
 
     iput-object v0, p0, Lcom/samsung/android/contextaware/aggregator/lpp/log/KMLGenerator;->mPlaceID:Ljava/lang/String;
 
-    .line 18
     const-string v0, "ffffffff"
 
     iput-object v0, p0, Lcom/samsung/android/contextaware/aggregator/lpp/log/KMLGenerator;->mLineStyle:Ljava/lang/String;
 
-    .line 19
     const-string v0, "00ffffff"
 
     iput-object v0, p0, Lcom/samsung/android/contextaware/aggregator/lpp/log/KMLGenerator;->mPolyStyleColor:Ljava/lang/String;
 
-    .line 20
     const/16 v0, 0xa
 
     iput v0, p0, Lcom/samsung/android/contextaware/aggregator/lpp/log/KMLGenerator;->mWidth:I
 
-    .line 21
     const-string v0, ""
 
     iput-object v0, p0, Lcom/samsung/android/contextaware/aggregator/lpp/log/KMLGenerator;->mCoordinates:Ljava/lang/String;
 
-    .line 22
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
     iput-object v0, p0, Lcom/samsung/android/contextaware/aggregator/lpp/log/KMLGenerator;->mGPSCoordinates:Ljava/util/ArrayList;
 
-    .line 25
     invoke-virtual {p0, p1}, Lcom/samsung/android/contextaware/aggregator/lpp/log/KMLGenerator;->SetPlaceID(Ljava/lang/String;)V
 
-    .line 26
     return-void
 .end method
 
@@ -112,7 +101,6 @@
     .end annotation
 
     .prologue
-    .line 91
     .local p1, "mLocation":Ljava/util/ArrayList;, "Ljava/util/ArrayList<Landroid/location/Location;>;"
     sget-object v1, Lcom/samsung/android/contextaware/aggregator/lpp/log/KMLGenerator;->TAG:Ljava/lang/String;
 
@@ -140,7 +128,6 @@
 
     invoke-static {v1, v2}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 92
     const/4 v0, 0x0
 
     .local v0, "inx":I
@@ -151,7 +138,6 @@
 
     if-ge v0, v1, :cond_0
 
-    .line 93
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
@@ -228,12 +214,10 @@
 
     iput-object v1, p0, Lcom/samsung/android/contextaware/aggregator/lpp/log/KMLGenerator;->mCoordinates:Ljava/lang/String;
 
-    .line 92
     add-int/lit8 v0, v0, 0x1
 
     goto :goto_0
 
-    .line 97
     :cond_0
     return-void
 .end method
@@ -243,7 +227,6 @@
     .param p1, "loc"    # Landroid/location/Location;
 
     .prologue
-    .line 101
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -302,7 +285,6 @@
 
     iput-object v0, p0, Lcom/samsung/android/contextaware/aggregator/lpp/log/KMLGenerator;->mCoordinates:Ljava/lang/String;
 
-    .line 104
     return-void
 .end method
 
@@ -319,7 +301,6 @@
     .end annotation
 
     .prologue
-    .line 107
     .local p1, "mLocation":Ljava/util/ArrayList;, "Ljava/util/ArrayList<Landroid/location/Location;>;"
     sget-object v1, Lcom/samsung/android/contextaware/aggregator/lpp/log/KMLGenerator;->TAG:Ljava/lang/String;
 
@@ -347,7 +328,6 @@
 
     invoke-static {v1, v2}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 108
     const/4 v0, 0x0
 
     .local v0, "inx":I
@@ -358,7 +338,6 @@
 
     if-ge v0, v1, :cond_0
 
-    .line 109
     iget-object v2, p0, Lcom/samsung/android/contextaware/aggregator/lpp/log/KMLGenerator;->mGPSCoordinates:Ljava/util/ArrayList;
 
     new-instance v3, Landroid/location/Location;
@@ -373,12 +352,10 @@
 
     invoke-virtual {v2, v3}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 108
     add-int/lit8 v0, v0, 0x1
 
     goto :goto_0
 
-    .line 111
     :cond_0
     return-void
 .end method
@@ -387,10 +364,8 @@
     .locals 6
 
     .prologue
-    .line 48
     const-string v1, "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<kml xmlns=\"http://www.opengis.net/kml/2.2\" xmlns:gx=\"http://www.google.com/kml/ext/2.2\" xmlns:kml=\"http://www.opengis.net/kml/2.2\" xmlns:atom=\"http://www.w3.org/2005/Atom\">"
 
-    .line 49
     .local v1, "out":Ljava/lang/String;
     new-instance v2, Ljava/lang/StringBuilder;
 
@@ -410,7 +385,6 @@
 
     move-result-object v1
 
-    .line 50
     new-instance v2, Ljava/lang/StringBuilder;
 
     invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
@@ -441,7 +415,6 @@
 
     move-result-object v1
 
-    .line 51
     new-instance v2, Ljava/lang/StringBuilder;
 
     invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
@@ -472,7 +445,6 @@
 
     move-result-object v1
 
-    .line 52
     new-instance v2, Ljava/lang/StringBuilder;
 
     invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
@@ -491,7 +463,6 @@
 
     move-result-object v1
 
-    .line 53
     new-instance v2, Ljava/lang/StringBuilder;
 
     invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
@@ -510,7 +481,6 @@
 
     move-result-object v1
 
-    .line 54
     new-instance v2, Ljava/lang/StringBuilder;
 
     invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
@@ -541,7 +511,6 @@
 
     move-result-object v1
 
-    .line 55
     new-instance v2, Ljava/lang/StringBuilder;
 
     invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
@@ -572,7 +541,6 @@
 
     move-result-object v1
 
-    .line 56
     new-instance v2, Ljava/lang/StringBuilder;
 
     invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
@@ -591,7 +559,6 @@
 
     move-result-object v1
 
-    .line 57
     new-instance v2, Ljava/lang/StringBuilder;
 
     invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
@@ -610,7 +577,6 @@
 
     move-result-object v1
 
-    .line 58
     new-instance v2, Ljava/lang/StringBuilder;
 
     invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
@@ -641,7 +607,6 @@
 
     move-result-object v1
 
-    .line 59
     new-instance v2, Ljava/lang/StringBuilder;
 
     invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
@@ -660,7 +625,6 @@
 
     move-result-object v1
 
-    .line 60
     new-instance v2, Ljava/lang/StringBuilder;
 
     invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
@@ -679,7 +643,6 @@
 
     move-result-object v1
 
-    .line 61
     new-instance v2, Ljava/lang/StringBuilder;
 
     invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
@@ -710,7 +673,6 @@
 
     move-result-object v1
 
-    .line 62
     new-instance v2, Ljava/lang/StringBuilder;
 
     invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
@@ -729,7 +691,6 @@
 
     move-result-object v1
 
-    .line 63
     new-instance v2, Ljava/lang/StringBuilder;
 
     invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
@@ -748,7 +709,6 @@
 
     move-result-object v1
 
-    .line 64
     new-instance v2, Ljava/lang/StringBuilder;
 
     invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
@@ -773,7 +733,6 @@
 
     move-result-object v1
 
-    .line 65
     new-instance v2, Ljava/lang/StringBuilder;
 
     invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
@@ -792,7 +751,6 @@
 
     move-result-object v1
 
-    .line 66
     new-instance v2, Ljava/lang/StringBuilder;
 
     invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
@@ -811,7 +769,6 @@
 
     move-result-object v1
 
-    .line 67
     new-instance v2, Ljava/lang/StringBuilder;
 
     invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
@@ -830,7 +787,6 @@
 
     move-result-object v1
 
-    .line 68
     new-instance v2, Ljava/lang/StringBuilder;
 
     invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
@@ -849,7 +805,6 @@
 
     move-result-object v1
 
-    .line 71
     const/4 v0, 0x0
 
     .local v0, "inx":I
@@ -862,7 +817,6 @@
 
     if-ge v0, v2, :cond_0
 
-    .line 72
     new-instance v2, Ljava/lang/StringBuilder;
 
     invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
@@ -897,7 +851,6 @@
 
     move-result-object v1
 
-    .line 73
     new-instance v2, Ljava/lang/StringBuilder;
 
     invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
@@ -948,7 +901,6 @@
 
     move-result-object v1
 
-    .line 74
     new-instance v2, Ljava/lang/StringBuilder;
 
     invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
@@ -967,7 +919,6 @@
 
     move-result-object v1
 
-    .line 75
     new-instance v2, Ljava/lang/StringBuilder;
 
     invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
@@ -986,7 +937,6 @@
 
     move-result-object v1
 
-    .line 76
     new-instance v2, Ljava/lang/StringBuilder;
 
     invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
@@ -1071,7 +1021,6 @@
 
     move-result-object v1
 
-    .line 77
     new-instance v2, Ljava/lang/StringBuilder;
 
     invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
@@ -1090,7 +1039,6 @@
 
     move-result-object v1
 
-    .line 78
     new-instance v2, Ljava/lang/StringBuilder;
 
     invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
@@ -1109,7 +1057,6 @@
 
     move-result-object v1
 
-    .line 79
     new-instance v2, Ljava/lang/StringBuilder;
 
     invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
@@ -1128,12 +1075,10 @@
 
     move-result-object v1
 
-    .line 71
     add-int/lit8 v0, v0, 0x1
 
     goto/16 :goto_0
 
-    .line 82
     :cond_0
     new-instance v2, Ljava/lang/StringBuilder;
 
@@ -1153,7 +1098,6 @@
 
     move-result-object v1
 
-    .line 83
     new-instance v2, Ljava/lang/StringBuilder;
 
     invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
@@ -1172,12 +1116,10 @@
 
     move-result-object v1
 
-    .line 85
     const-string v2, ""
 
     iput-object v2, p0, Lcom/samsung/android/contextaware/aggregator/lpp/log/KMLGenerator;->mCoordinates:Ljava/lang/String;
 
-    .line 87
     return-object v1
 .end method
 
@@ -1186,10 +1128,8 @@
     .param p1, "style"    # Ljava/lang/String;
 
     .prologue
-    .line 29
     iput-object p1, p0, Lcom/samsung/android/contextaware/aggregator/lpp/log/KMLGenerator;->mLineStyle:Ljava/lang/String;
 
-    .line 30
     return-void
 .end method
 
@@ -1198,10 +1138,8 @@
     .param p1, "width"    # I
 
     .prologue
-    .line 37
     iput p1, p0, Lcom/samsung/android/contextaware/aggregator/lpp/log/KMLGenerator;->mWidth:I
 
-    .line 38
     return-void
 .end method
 
@@ -1210,10 +1148,8 @@
     .param p1, "ID"    # Ljava/lang/String;
 
     .prologue
-    .line 41
     iput-object p1, p0, Lcom/samsung/android/contextaware/aggregator/lpp/log/KMLGenerator;->mPlaceID:Ljava/lang/String;
 
-    .line 42
     return-void
 .end method
 
@@ -1222,9 +1158,7 @@
     .param p1, "style"    # Ljava/lang/String;
 
     .prologue
-    .line 33
     iput-object p1, p0, Lcom/samsung/android/contextaware/aggregator/lpp/log/KMLGenerator;->mPolyStyleColor:Ljava/lang/String;
 
-    .line 34
     return-void
 .end method

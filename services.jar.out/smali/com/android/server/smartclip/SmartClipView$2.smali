@@ -23,7 +23,6 @@
     .locals 0
 
     .prologue
-    .line 514
     iput-object p1, p0, Lcom/android/server/smartclip/SmartClipView$2;->this$0:Lcom/android/server/smartclip/SmartClipView;
 
     invoke-direct {p0}, Landroid/content/BroadcastReceiver;-><init>()V
@@ -41,12 +40,10 @@
     .prologue
     const/4 v2, 0x1
 
-    .line 516
     invoke-virtual {p2}, Landroid/content/Intent;->getAction()Ljava/lang/String;
 
     move-result-object v0
 
-    .line 517
     .local v0, "action":Ljava/lang/String;
     const-string v1, "android.intent.action.MEDIA_SCANNER_FINISHED"
 
@@ -56,7 +53,6 @@
 
     if-eqz v1, :cond_0
 
-    .line 518
     iget-object v1, p0, Lcom/android/server/smartclip/SmartClipView$2;->this$0:Lcom/android/server/smartclip/SmartClipView;
 
     # getter for: Lcom/android/server/smartclip/SmartClipView;->mIsFirstMediaScan:Z
@@ -66,7 +62,6 @@
 
     if-ne v1, v2, :cond_1
 
-    .line 519
     iget-object v1, p0, Lcom/android/server/smartclip/SmartClipView$2;->this$0:Lcom/android/server/smartclip/SmartClipView;
 
     const/4 v2, 0x0
@@ -74,12 +69,10 @@
     # setter for: Lcom/android/server/smartclip/SmartClipView;->mIsFirstMediaScan:Z
     invoke-static {v1, v2}, Lcom/android/server/smartclip/SmartClipView;->access$002(Lcom/android/server/smartclip/SmartClipView;Z)Z
 
-    .line 527
     :cond_0
     :goto_0
     return-void
 
-    .line 522
     :cond_1
     iget-object v1, p0, Lcom/android/server/smartclip/SmartClipView$2;->this$0:Lcom/android/server/smartclip/SmartClipView;
 
@@ -90,7 +83,6 @@
 
     if-nez v1, :cond_0
 
-    .line 523
     iget-object v1, p0, Lcom/android/server/smartclip/SmartClipView$2;->this$0:Lcom/android/server/smartclip/SmartClipView;
 
     # setter for: Lcom/android/server/smartclip/SmartClipView;->mIsSendingBootMsg:Z

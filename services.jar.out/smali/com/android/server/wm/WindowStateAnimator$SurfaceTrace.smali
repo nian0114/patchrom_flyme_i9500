@@ -64,7 +64,6 @@
     .locals 1
 
     .prologue
-    .line 566
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
@@ -91,56 +90,46 @@
     .prologue
     const/4 v1, 0x0
 
-    .line 582
     invoke-direct/range {p0 .. p6}, Landroid/view/SurfaceControl;-><init>(Landroid/view/SurfaceSession;Ljava/lang/String;IIII)V
 
-    .line 568
     const/4 v0, 0x0
 
     iput v0, p0, Lcom/android/server/wm/WindowStateAnimator$SurfaceTrace;->mSurfaceTraceAlpha:F
 
-    .line 570
     new-instance v0, Landroid/graphics/PointF;
 
     invoke-direct {v0}, Landroid/graphics/PointF;-><init>()V
 
     iput-object v0, p0, Lcom/android/server/wm/WindowStateAnimator$SurfaceTrace;->mPosition:Landroid/graphics/PointF;
 
-    .line 571
     new-instance v0, Landroid/graphics/Point;
 
     invoke-direct {v0}, Landroid/graphics/Point;-><init>()V
 
     iput-object v0, p0, Lcom/android/server/wm/WindowStateAnimator$SurfaceTrace;->mSize:Landroid/graphics/Point;
 
-    .line 572
     new-instance v0, Landroid/graphics/Rect;
 
     invoke-direct {v0}, Landroid/graphics/Rect;-><init>()V
 
     iput-object v0, p0, Lcom/android/server/wm/WindowStateAnimator$SurfaceTrace;->mWindowCrop:Landroid/graphics/Rect;
 
-    .line 573
     iput-boolean v1, p0, Lcom/android/server/wm/WindowStateAnimator$SurfaceTrace;->mShown:Z
 
-    .line 583
     if-eqz p2, :cond_0
 
     .end local p2    # "name":Ljava/lang/String;
     :goto_0
     iput-object p2, p0, Lcom/android/server/wm/WindowStateAnimator$SurfaceTrace;->mName:Ljava/lang/String;
 
-    .line 584
     iget-object v0, p0, Lcom/android/server/wm/WindowStateAnimator$SurfaceTrace;->mSize:Landroid/graphics/Point;
 
     invoke-virtual {v0, p3, p4}, Landroid/graphics/Point;->set(II)V
 
-    .line 587
     sget-object v1, Lcom/android/server/wm/WindowStateAnimator$SurfaceTrace;->sSurfaces:Ljava/util/ArrayList;
 
     monitor-enter v1
 
-    .line 588
     :try_start_0
     sget-object v0, Lcom/android/server/wm/WindowStateAnimator$SurfaceTrace;->sSurfaces:Ljava/util/ArrayList;
 
@@ -148,22 +137,18 @@
 
     invoke-virtual {v0, v2, p0}, Ljava/util/ArrayList;->add(ILjava/lang/Object;)V
 
-    .line 589
     monitor-exit v1
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 590
     return-void
 
-    .line 583
     .restart local p2    # "name":Ljava/lang/String;
     :cond_0
     const-string p2, "Not named"
 
     goto :goto_0
 
-    .line 589
     .end local p2    # "name":Ljava/lang/String;
     :catchall_0
     move-exception v0
@@ -182,12 +167,10 @@
     .param p1, "header"    # Ljava/lang/String;
 
     .prologue
-    .line 732
     sget-object v4, Lcom/android/server/wm/WindowStateAnimator$SurfaceTrace;->sSurfaces:Ljava/util/ArrayList;
 
     monitor-enter v4
 
-    .line 733
     :try_start_0
     sget-object v3, Lcom/android/server/wm/WindowStateAnimator$SurfaceTrace;->sSurfaces:Ljava/util/ArrayList;
 
@@ -195,38 +178,30 @@
 
     move-result v0
 
-    .line 734
     .local v0, "N":I
     if-gtz v0, :cond_0
 
-    .line 735
     monitor-exit v4
 
-    .line 761
     :goto_0
     return-void
 
-    .line 737
     :cond_0
     if-eqz p1, :cond_1
 
-    .line 738
     invoke-virtual {p0, p1}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
-    .line 740
     :cond_1
     const-string v3, "WINDOW MANAGER SURFACES (dumpsys window surfaces)"
 
     invoke-virtual {p0, v3}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
-    .line 741
     const/4 v1, 0x0
 
     .local v1, "i":I
     :goto_1
     if-ge v1, v0, :cond_2
 
-    .line 742
     sget-object v3, Lcom/android/server/wm/WindowStateAnimator$SurfaceTrace;->sSurfaces:Ljava/util/ArrayList;
 
     invoke-virtual {v3, v1}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
@@ -235,7 +210,6 @@
 
     check-cast v2, Lcom/android/server/wm/WindowStateAnimator$SurfaceTrace;
 
-    .line 743
     .local v2, "s":Lcom/android/server/wm/WindowStateAnimator$SurfaceTrace;
     const-string v3, "  Surface #"
 
@@ -247,7 +221,6 @@
 
     invoke-virtual {p0, v3}, Ljava/io/PrintWriter;->print(Ljava/lang/String;)V
 
-    .line 744
     invoke-static {v2}, Ljava/lang/System;->identityHashCode(Ljava/lang/Object;)I
 
     move-result v3
@@ -258,7 +231,6 @@
 
     invoke-virtual {p0, v3}, Ljava/io/PrintWriter;->print(Ljava/lang/String;)V
 
-    .line 745
     const-string v3, " "
 
     invoke-virtual {p0, v3}, Ljava/io/PrintWriter;->print(Ljava/lang/String;)V
@@ -267,7 +239,6 @@
 
     invoke-virtual {p0, v3}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
-    .line 746
     const-string v3, "    mLayerStack="
 
     invoke-virtual {p0, v3}, Ljava/io/PrintWriter;->print(Ljava/lang/String;)V
@@ -276,7 +247,6 @@
 
     invoke-virtual {p0, v3}, Ljava/io/PrintWriter;->print(I)V
 
-    .line 747
     const-string v3, " mLayer="
 
     invoke-virtual {p0, v3}, Ljava/io/PrintWriter;->print(Ljava/lang/String;)V
@@ -285,7 +255,6 @@
 
     invoke-virtual {p0, v3}, Ljava/io/PrintWriter;->println(I)V
 
-    .line 748
     const-string v3, "    mShown="
 
     invoke-virtual {p0, v3}, Ljava/io/PrintWriter;->print(Ljava/lang/String;)V
@@ -298,7 +267,6 @@
 
     invoke-virtual {p0, v3}, Ljava/io/PrintWriter;->print(Ljava/lang/String;)V
 
-    .line 749
     iget v3, v2, Lcom/android/server/wm/WindowStateAnimator$SurfaceTrace;->mSurfaceTraceAlpha:F
 
     invoke-virtual {p0, v3}, Ljava/io/PrintWriter;->print(F)V
@@ -307,12 +275,10 @@
 
     invoke-virtual {p0, v3}, Ljava/io/PrintWriter;->print(Ljava/lang/String;)V
 
-    .line 750
     iget-boolean v3, v2, Lcom/android/server/wm/WindowStateAnimator$SurfaceTrace;->mIsOpaque:Z
 
     invoke-virtual {p0, v3}, Ljava/io/PrintWriter;->println(Z)V
 
-    .line 751
     const-string v3, "    mPosition="
 
     invoke-virtual {p0, v3}, Ljava/io/PrintWriter;->print(Ljava/lang/String;)V
@@ -327,14 +293,12 @@
 
     invoke-virtual {p0, v3}, Ljava/io/PrintWriter;->print(Ljava/lang/String;)V
 
-    .line 752
     iget-object v3, v2, Lcom/android/server/wm/WindowStateAnimator$SurfaceTrace;->mPosition:Landroid/graphics/PointF;
 
     iget v3, v3, Landroid/graphics/PointF;->y:F
 
     invoke-virtual {p0, v3}, Ljava/io/PrintWriter;->print(F)V
 
-    .line 753
     const-string v3, " mSize="
 
     invoke-virtual {p0, v3}, Ljava/io/PrintWriter;->print(Ljava/lang/String;)V
@@ -345,18 +309,16 @@
 
     invoke-virtual {p0, v3}, Ljava/io/PrintWriter;->print(I)V
 
-    const-string/jumbo v3, "x"
+    const-string v3, "x"
 
     invoke-virtual {p0, v3}, Ljava/io/PrintWriter;->print(Ljava/lang/String;)V
 
-    .line 754
     iget-object v3, v2, Lcom/android/server/wm/WindowStateAnimator$SurfaceTrace;->mSize:Landroid/graphics/Point;
 
     iget v3, v3, Landroid/graphics/Point;->y:I
 
     invoke-virtual {p0, v3}, Ljava/io/PrintWriter;->println(I)V
 
-    .line 755
     const-string v3, "    mCrop="
 
     invoke-virtual {p0, v3}, Ljava/io/PrintWriter;->print(Ljava/lang/String;)V
@@ -367,7 +329,6 @@
 
     invoke-virtual {p0}, Ljava/io/PrintWriter;->println()V
 
-    .line 756
     const-string v3, "    Transform: ("
 
     invoke-virtual {p0, v3}, Ljava/io/PrintWriter;->print(Ljava/lang/String;)V
@@ -380,7 +341,6 @@
 
     invoke-virtual {p0, v3}, Ljava/io/PrintWriter;->print(Ljava/lang/String;)V
 
-    .line 757
     iget v3, v2, Lcom/android/server/wm/WindowStateAnimator$SurfaceTrace;->mDtdx:F
 
     invoke-virtual {p0, v3}, Ljava/io/PrintWriter;->print(F)V
@@ -393,7 +353,6 @@
 
     invoke-virtual {p0, v3}, Ljava/io/PrintWriter;->print(F)V
 
-    .line 758
     const-string v3, ", "
 
     invoke-virtual {p0, v3}, Ljava/io/PrintWriter;->print(Ljava/lang/String;)V
@@ -406,12 +365,10 @@
 
     invoke-virtual {p0, v3}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
-    .line 741
     add-int/lit8 v1, v1, 0x1
 
     goto/16 :goto_1
 
-    .line 760
     .end local v2    # "s":Lcom/android/server/wm/WindowStateAnimator$SurfaceTrace;
     :cond_2
     monitor-exit v4
@@ -436,27 +393,21 @@
     .locals 2
 
     .prologue
-    .line 713
     invoke-super {p0}, Landroid/view/SurfaceControl;->destroy()V
 
-    .line 716
     sget-object v1, Lcom/android/server/wm/WindowStateAnimator$SurfaceTrace;->sSurfaces:Ljava/util/ArrayList;
 
     monitor-enter v1
 
-    .line 717
     :try_start_0
     sget-object v0, Lcom/android/server/wm/WindowStateAnimator$SurfaceTrace;->sSurfaces:Ljava/util/ArrayList;
 
     invoke-virtual {v0, p0}, Ljava/util/ArrayList;->remove(Ljava/lang/Object;)Z
 
-    .line 718
     monitor-exit v1
 
-    .line 719
     return-void
 
-    .line 718
     :catchall_0
     move-exception v0
 
@@ -471,21 +422,17 @@
     .locals 1
 
     .prologue
-    .line 693
     iget-boolean v0, p0, Lcom/android/server/wm/WindowStateAnimator$SurfaceTrace;->mShown:Z
 
     if-eqz v0, :cond_0
 
-    .line 696
     const/4 v0, 0x0
 
     iput-boolean v0, p0, Lcom/android/server/wm/WindowStateAnimator$SurfaceTrace;->mShown:Z
 
-    .line 698
     :cond_0
     invoke-super {p0}, Landroid/view/SurfaceControl;->hide()V
 
-    .line 699
     return-void
 .end method
 
@@ -493,27 +440,21 @@
     .locals 2
 
     .prologue
-    .line 723
     invoke-super {p0}, Landroid/view/SurfaceControl;->release()V
 
-    .line 726
     sget-object v1, Lcom/android/server/wm/WindowStateAnimator$SurfaceTrace;->sSurfaces:Ljava/util/ArrayList;
 
     monitor-enter v1
 
-    .line 727
     :try_start_0
     sget-object v0, Lcom/android/server/wm/WindowStateAnimator$SurfaceTrace;->sSurfaces:Ljava/util/ArrayList;
 
     invoke-virtual {v0, p0}, Ljava/util/ArrayList;->remove(Ljava/lang/Object;)Z
 
-    .line 728
     monitor-exit v1
 
-    .line 729
     return-void
 
-    .line 728
     :catchall_0
     move-exception v0
 
@@ -529,21 +470,17 @@
     .param p1, "alpha"    # F
 
     .prologue
-    .line 594
     iget v0, p0, Lcom/android/server/wm/WindowStateAnimator$SurfaceTrace;->mSurfaceTraceAlpha:F
 
     cmpl-float v0, v0, p1
 
     if-eqz v0, :cond_0
 
-    .line 597
     iput p1, p0, Lcom/android/server/wm/WindowStateAnimator$SurfaceTrace;->mSurfaceTraceAlpha:F
 
-    .line 599
     :cond_0
     invoke-super {p0, p1}, Landroid/view/SurfaceControl;->setAlpha(F)V
 
-    .line 600
     return-void
 .end method
 
@@ -552,30 +489,24 @@
     .param p1, "zorder"    # I
 
     .prologue
-    .line 604
     iget v2, p0, Lcom/android/server/wm/WindowStateAnimator$SurfaceTrace;->mLayer:I
 
     if-eq p1, v2, :cond_0
 
-    .line 607
     iput p1, p0, Lcom/android/server/wm/WindowStateAnimator$SurfaceTrace;->mLayer:I
 
-    .line 609
     :cond_0
     invoke-super {p0, p1}, Landroid/view/SurfaceControl;->setLayer(I)V
 
-    .line 611
     sget-object v3, Lcom/android/server/wm/WindowStateAnimator$SurfaceTrace;->sSurfaces:Ljava/util/ArrayList;
 
     monitor-enter v3
 
-    .line 612
     :try_start_0
     sget-object v2, Lcom/android/server/wm/WindowStateAnimator$SurfaceTrace;->sSurfaces:Ljava/util/ArrayList;
 
     invoke-virtual {v2, p0}, Ljava/util/ArrayList;->remove(Ljava/lang/Object;)Z
 
-    .line 614
     sget-object v2, Lcom/android/server/wm/WindowStateAnimator$SurfaceTrace;->sSurfaces:Ljava/util/ArrayList;
 
     invoke-virtual {v2}, Ljava/util/ArrayList;->size()I
@@ -588,7 +519,6 @@
     :goto_0
     if-ltz v0, :cond_1
 
-    .line 615
     sget-object v2, Lcom/android/server/wm/WindowStateAnimator$SurfaceTrace;->sSurfaces:Ljava/util/ArrayList;
 
     invoke-virtual {v2, v0}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
@@ -597,13 +527,11 @@
 
     check-cast v1, Lcom/android/server/wm/WindowStateAnimator$SurfaceTrace;
 
-    .line 616
     .local v1, "s":Lcom/android/server/wm/WindowStateAnimator$SurfaceTrace;
     iget v2, v1, Lcom/android/server/wm/WindowStateAnimator$SurfaceTrace;->mLayer:I
 
     if-ge v2, p1, :cond_2
 
-    .line 620
     .end local v1    # "s":Lcom/android/server/wm/WindowStateAnimator$SurfaceTrace;
     :cond_1
     sget-object v2, Lcom/android/server/wm/WindowStateAnimator$SurfaceTrace;->sSurfaces:Ljava/util/ArrayList;
@@ -612,20 +540,16 @@
 
     invoke-virtual {v2, v4, p0}, Ljava/util/ArrayList;->add(ILjava/lang/Object;)V
 
-    .line 621
     monitor-exit v3
 
-    .line 622
     return-void
 
-    .line 614
     .restart local v1    # "s":Lcom/android/server/wm/WindowStateAnimator$SurfaceTrace;
     :cond_2
     add-int/lit8 v0, v0, -0x1
 
     goto :goto_0
 
-    .line 621
     .end local v0    # "i":I
     .end local v1    # "s":Lcom/android/server/wm/WindowStateAnimator$SurfaceTrace;
     :catchall_0
@@ -643,19 +567,15 @@
     .param p1, "layerStack"    # I
 
     .prologue
-    .line 659
     iget v0, p0, Lcom/android/server/wm/WindowStateAnimator$SurfaceTrace;->mLayerStack:I
 
     if-eq p1, v0, :cond_0
 
-    .line 662
     iput p1, p0, Lcom/android/server/wm/WindowStateAnimator$SurfaceTrace;->mLayerStack:I
 
-    .line 664
     :cond_0
     invoke-super {p0, p1}, Landroid/view/SurfaceControl;->setLayerStack(I)V
 
-    .line 665
     return-void
 .end method
 
@@ -667,7 +587,6 @@
     .param p4, "dtdy"    # F
 
     .prologue
-    .line 679
     iget v0, p0, Lcom/android/server/wm/WindowStateAnimator$SurfaceTrace;->mDsdx:F
 
     cmpl-float v0, p1, v0
@@ -692,24 +611,18 @@
 
     if-eqz v0, :cond_1
 
-    .line 683
     :cond_0
     iput p1, p0, Lcom/android/server/wm/WindowStateAnimator$SurfaceTrace;->mDsdx:F
 
-    .line 684
     iput p2, p0, Lcom/android/server/wm/WindowStateAnimator$SurfaceTrace;->mDtdx:F
 
-    .line 685
     iput p3, p0, Lcom/android/server/wm/WindowStateAnimator$SurfaceTrace;->mDsdy:F
 
-    .line 686
     iput p4, p0, Lcom/android/server/wm/WindowStateAnimator$SurfaceTrace;->mDtdy:F
 
-    .line 688
     :cond_1
     invoke-super {p0, p1, p2, p3, p4}, Landroid/view/SurfaceControl;->setMatrix(FFFF)V
 
-    .line 689
     return-void
 .end method
 
@@ -718,19 +631,15 @@
     .param p1, "isOpaque"    # Z
 
     .prologue
-    .line 669
     iget-boolean v0, p0, Lcom/android/server/wm/WindowStateAnimator$SurfaceTrace;->mIsOpaque:Z
 
     if-eq p1, v0, :cond_0
 
-    .line 672
     iput-boolean p1, p0, Lcom/android/server/wm/WindowStateAnimator$SurfaceTrace;->mIsOpaque:Z
 
-    .line 674
     :cond_0
     invoke-super {p0, p1}, Landroid/view/SurfaceControl;->setOpaque(Z)V
 
-    .line 675
     return-void
 .end method
 
@@ -740,7 +649,6 @@
     .param p2, "y"    # F
 
     .prologue
-    .line 626
     iget-object v0, p0, Lcom/android/server/wm/WindowStateAnimator$SurfaceTrace;->mPosition:Landroid/graphics/PointF;
 
     iget v0, v0, Landroid/graphics/PointF;->x:F
@@ -757,17 +665,14 @@
 
     if-eqz v0, :cond_1
 
-    .line 629
     :cond_0
     iget-object v0, p0, Lcom/android/server/wm/WindowStateAnimator$SurfaceTrace;->mPosition:Landroid/graphics/PointF;
 
     invoke-virtual {v0, p1, p2}, Landroid/graphics/PointF;->set(FF)V
 
-    .line 631
     :cond_1
     invoke-super {p0, p1, p2}, Landroid/view/SurfaceControl;->setPosition(FF)V
 
-    .line 632
     return-void
 .end method
 
@@ -777,7 +682,6 @@
     .param p2, "h"    # I
 
     .prologue
-    .line 636
     iget-object v0, p0, Lcom/android/server/wm/WindowStateAnimator$SurfaceTrace;->mSize:Landroid/graphics/Point;
 
     iget v0, v0, Landroid/graphics/Point;->x:I
@@ -790,17 +694,14 @@
 
     if-eq p2, v0, :cond_1
 
-    .line 639
     :cond_0
     iget-object v0, p0, Lcom/android/server/wm/WindowStateAnimator$SurfaceTrace;->mSize:Landroid/graphics/Point;
 
     invoke-virtual {v0, p1, p2}, Landroid/graphics/Point;->set(II)V
 
-    .line 641
     :cond_1
     invoke-super {p0, p1, p2}, Landroid/view/SurfaceControl;->setSize(II)V
 
-    .line 642
     return-void
 .end method
 
@@ -809,10 +710,8 @@
     .param p1, "crop"    # Landroid/graphics/Rect;
 
     .prologue
-    .line 646
     if-eqz p1, :cond_0
 
-    .line 647
     iget-object v0, p0, Lcom/android/server/wm/WindowStateAnimator$SurfaceTrace;->mWindowCrop:Landroid/graphics/Rect;
 
     invoke-virtual {p1, v0}, Landroid/graphics/Rect;->equals(Ljava/lang/Object;)Z
@@ -821,16 +720,13 @@
 
     if-nez v0, :cond_0
 
-    .line 651
     iget-object v0, p0, Lcom/android/server/wm/WindowStateAnimator$SurfaceTrace;->mWindowCrop:Landroid/graphics/Rect;
 
     invoke-virtual {v0, p1}, Landroid/graphics/Rect;->set(Landroid/graphics/Rect;)V
 
-    .line 654
     :cond_0
     invoke-super {p0, p1}, Landroid/view/SurfaceControl;->setWindowCrop(Landroid/graphics/Rect;)V
 
-    .line 655
     return-void
 .end method
 
@@ -838,21 +734,17 @@
     .locals 1
 
     .prologue
-    .line 703
     iget-boolean v0, p0, Lcom/android/server/wm/WindowStateAnimator$SurfaceTrace;->mShown:Z
 
     if-nez v0, :cond_0
 
-    .line 706
     const/4 v0, 0x1
 
     iput-boolean v0, p0, Lcom/android/server/wm/WindowStateAnimator$SurfaceTrace;->mShown:Z
 
-    .line 708
     :cond_0
     invoke-super {p0}, Landroid/view/SurfaceControl;->show()V
 
-    .line 709
     return-void
 .end method
 
@@ -860,7 +752,6 @@
     .locals 2
 
     .prologue
-    .line 765
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -985,7 +876,7 @@
 
     move-result-object v0
 
-    const-string/jumbo v1, "x"
+    const-string v1, "x"
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 

@@ -392,267 +392,207 @@
 
     const/4 v3, 0x0
 
-    .line 293
     invoke-direct {p0, p1}, Landroid/widget/FrameLayout;-><init>(Landroid/content/Context;)V
 
-    .line 99
     const/16 v0, 0xbb8
 
     iput v0, p0, Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer;->SLEEP_TIME_OUT:I
 
-    .line 100
     const/4 v0, 0x5
 
     iput v0, p0, Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer;->TOOLBOX_MAX_ITEM_COUNT:I
 
-    .line 101
     const v0, 0x3e75c28f    # 0.24f
 
     iput v0, p0, Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer;->MAIN_DECREASE_RATIO:F
 
-    .line 102
     const v0, 0x3ecccccd    # 0.4f
 
     iput v0, p0, Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer;->MAIN_DIM_RATIO:F
 
-    .line 132
     iput-object v4, p0, Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer;->mCoverManager:Lcom/samsung/android/cover/CoverManager;
 
-    .line 139
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
     iput-object v0, p0, Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer;->mObjects:Ljava/util/ArrayList;
 
-    .line 142
     iput-boolean v3, p0, Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer;->mTracking:Z
 
-    .line 143
     iput-boolean v3, p0, Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer;->mReseting:Z
 
-    .line 144
     iput-boolean v3, p0, Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer;->mExpanded:Z
 
-    .line 145
     iput-boolean v3, p0, Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer;->mLongPressed:Z
 
-    .line 146
     iput-boolean v3, p0, Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer;->mMovingByAnimation:Z
 
-    .line 147
     iput-boolean v3, p0, Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer;->mBoxAnimating:Z
 
-    .line 148
     iput-boolean v3, p0, Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer;->mHiddenToolBox:Z
 
-    .line 149
     iput-boolean v3, p0, Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer;->mVisible:Z
 
-    .line 150
     iput-boolean v3, p0, Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer;->mVisibleFloatingStyle:Z
 
-    .line 151
     iput-boolean v3, p0, Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer;->mKeyguardShowing:Z
 
-    .line 152
     iput-boolean v3, p0, Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer;->mOTAShowing:Z
 
-    .line 153
     iput-boolean v3, p0, Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer;->mDeivceProvisioned:Z
 
-    .line 154
     iput-boolean v3, p0, Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer;->mExploreByTouchMode:Z
 
-    .line 155
     iput-boolean v1, p0, Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer;->mCoverOpen:Z
 
-    .line 156
     iput-boolean v3, p0, Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer;->mKidsMode:Z
 
-    .line 157
     iput-boolean v3, p0, Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer;->mCarMode:Z
 
-    .line 158
     iput-boolean v3, p0, Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer;->mValidUser:Z
 
-    .line 159
     iput-boolean v3, p0, Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer;->mKnoxRunning:Z
 
-    .line 160
     iput-boolean v1, p0, Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer;->mEnableFloatingViewer:Z
 
-    .line 161
     iput-boolean v3, p0, Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer;->mDisableFloatingViewer:Z
 
-    .line 162
     iput-boolean v3, p0, Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer;->mLongPressPanelShowing:Z
 
-    .line 163
     iput-boolean v3, p0, Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer;->mLongPressPanelRemoveAnimating:Z
 
-    .line 164
     iput-boolean v3, p0, Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer;->mInVSync:Z
 
-    .line 165
     iput-boolean v3, p0, Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer;->mNeedSaveCenterPosition:Z
 
-    .line 168
     const/4 v0, -0x1
 
     iput v0, p0, Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer;->mLastOrientation:I
 
-    .line 169
     iput v3, p0, Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer;->mMainCharacterDecreaseAmount:I
 
-    .line 170
     const/4 v0, -0x1
 
     iput v0, p0, Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer;->mEditAfterScreenCapture:I
 
-    .line 171
     iput v3, p0, Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer;->mPersonaId:I
 
-    .line 172
     const-string v0, ""
 
     iput-object v0, p0, Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer;->mCurrentPackage:Ljava/lang/String;
 
-    .line 174
     new-instance v0, Landroid/graphics/Rect;
 
     invoke-direct {v0}, Landroid/graphics/Rect;-><init>()V
 
     iput-object v0, p0, Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer;->mGlobalRect:Landroid/graphics/Rect;
 
-    .line 175
     new-instance v0, Landroid/graphics/Rect;
 
     invoke-direct {v0}, Landroid/graphics/Rect;-><init>()V
 
     iput-object v0, p0, Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer;->mShadowRect:Landroid/graphics/Rect;
 
-    .line 176
     new-instance v0, Landroid/graphics/Rect;
 
     invoke-direct {v0}, Landroid/graphics/Rect;-><init>()V
 
     iput-object v0, p0, Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer;->mTextBounds:Landroid/graphics/Rect;
 
-    .line 177
     new-instance v0, Landroid/graphics/Rect;
 
     invoke-direct {v0}, Landroid/graphics/Rect;-><init>()V
 
     iput-object v0, p0, Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer;->mDrawGlobalRect:Landroid/graphics/Rect;
 
-    .line 178
     new-instance v0, Landroid/graphics/Rect;
 
     invoke-direct {v0}, Landroid/graphics/Rect;-><init>()V
 
     iput-object v0, p0, Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer;->mDownSlopArea:Landroid/graphics/Rect;
 
-    .line 179
     new-instance v0, Landroid/graphics/Rect;
 
     invoke-direct {v0}, Landroid/graphics/Rect;-><init>()V
 
     iput-object v0, p0, Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer;->mEndFloatingBgArea:Landroid/graphics/Rect;
 
-    .line 180
     new-instance v0, Landroid/graphics/Rect;
 
     invoke-direct {v0}, Landroid/graphics/Rect;-><init>()V
 
     iput-object v0, p0, Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer;->mEndFloatingEditBgArea:Landroid/graphics/Rect;
 
-    .line 181
     new-instance v0, Landroid/graphics/Rect;
 
     invoke-direct {v0}, Landroid/graphics/Rect;-><init>()V
 
     iput-object v0, p0, Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer;->mEndFloatingEditBtnArea:Landroid/graphics/Rect;
 
-    .line 182
     new-instance v0, Landroid/graphics/Rect;
 
     invoke-direct {v0}, Landroid/graphics/Rect;-><init>()V
 
     iput-object v0, p0, Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer;->mEndFloatingEditConflictArea:Landroid/graphics/Rect;
 
-    .line 183
     new-instance v0, Landroid/graphics/Rect;
 
     invoke-direct {v0}, Landroid/graphics/Rect;-><init>()V
 
     iput-object v0, p0, Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer;->mEndFloatingRemoveConflictArea:Landroid/graphics/Rect;
 
-    .line 184
     new-instance v0, Landroid/graphics/Rect;
 
     invoke-direct {v0}, Landroid/graphics/Rect;-><init>()V
 
     iput-object v0, p0, Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer;->mEndFloatingRemoveBgArea:Landroid/graphics/Rect;
 
-    .line 185
     new-instance v0, Landroid/graphics/Rect;
 
     invoke-direct {v0}, Landroid/graphics/Rect;-><init>()V
 
     iput-object v0, p0, Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer;->mEndFloatingRemoveBtnArea:Landroid/graphics/Rect;
 
-    .line 186
     new-instance v0, Landroid/graphics/Rect;
 
     invoke-direct {v0}, Landroid/graphics/Rect;-><init>()V
 
     iput-object v0, p0, Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer;->mEndFloatingRemoveBtnCoverArea:Landroid/graphics/Rect;
 
-    .line 187
     const-string v0, ""
 
     iput-object v0, p0, Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer;->mEndFloatingMsgEdit:Ljava/lang/String;
 
-    .line 188
     const-string v0, ""
 
     iput-object v0, p0, Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer;->mEndFloatingMsgRemove:Ljava/lang/String;
 
-    .line 190
     iput v2, p0, Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer;->mExpandProgressValue:F
 
-    .line 191
     iput v2, p0, Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer;->mEnterProgressValue:F
 
-    .line 192
     iput v3, p0, Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer;->mLongPressPanelPosition:I
 
-    .line 193
     iput v3, p0, Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer;->mLongPressPanelRemoveBtnPosition:I
 
-    .line 194
     iput v2, p0, Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer;->mLongPressPanelRemoveBtnAngle:F
 
-    .line 195
     iput v2, p0, Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer;->mTurnOffEffectRatio:F
 
-    .line 207
     new-instance v0, Landroid/graphics/Paint;
 
     invoke-direct {v0}, Landroid/graphics/Paint;-><init>()V
 
     iput-object v0, p0, Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer;->mTextPaint:Landroid/graphics/Paint;
 
-    .line 208
     new-instance v0, Landroid/graphics/Paint;
 
     invoke-direct {v0}, Landroid/graphics/Paint;-><init>()V
 
     iput-object v0, p0, Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer;->mMaskPaint:Landroid/graphics/Paint;
 
-    .line 209
-    const-string/jumbo v0, "sec-roboto-light"
+    const-string v0, "sec-roboto-light"
 
     invoke-static {v0, v3}, Landroid/graphics/Typeface;->create(Ljava/lang/String;I)Landroid/graphics/Typeface;
 
@@ -660,7 +600,6 @@
 
     iput-object v0, p0, Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer;->mFont:Landroid/graphics/Typeface;
 
-    .line 210
     new-instance v0, Landroid/graphics/PorterDuffXfermode;
 
     sget-object v2, Landroid/graphics/PorterDuff$Mode;->DST_IN:Landroid/graphics/PorterDuff$Mode;
@@ -669,21 +608,18 @@
 
     iput-object v0, p0, Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer;->mXfermode:Landroid/graphics/PorterDuffXfermode;
 
-    .line 211
     new-instance v0, Landroid/graphics/Canvas;
 
     invoke-direct {v0}, Landroid/graphics/Canvas;-><init>()V
 
     iput-object v0, p0, Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer;->mMaskCanvas:Landroid/graphics/Canvas;
 
-    .line 223
     new-instance v0, Landroid/animation/AnimatorSet;
 
     invoke-direct {v0}, Landroid/animation/AnimatorSet;-><init>()V
 
     iput-object v0, p0, Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer;->mLongPressPanelRemoveBtnAnimator:Landroid/animation/AnimatorSet;
 
-    .line 224
     new-instance v0, Ljava/util/ArrayList;
 
     const/4 v2, 0x3
@@ -692,48 +628,36 @@
 
     iput-object v0, p0, Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer;->mShakeAnimators:Ljava/util/ArrayList;
 
-    .line 227
     iput-boolean v3, p0, Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer;->mSipVisible:Z
 
-    .line 236
     iput-object v4, p0, Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer;->mDVFSHelper:Landroid/os/DVFSHelper;
 
-    .line 237
     iput-object v4, p0, Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer;->mDVFSHelperGPU:Landroid/os/DVFSHelper;
 
-    .line 238
     iput-object v4, p0, Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer;->mDVFSHelperBUS:Landroid/os/DVFSHelper;
 
-    .line 239
     iput-object v4, p0, Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer;->mDVFSHelperCore:Landroid/os/DVFSHelper;
 
-    .line 240
     iput-boolean v3, p0, Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer;->mDVFSLockAcquired:Z
 
-    .line 241
     iput v3, p0, Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer;->mDVFSCookie:I
 
-    .line 242
     iput-object v4, p0, Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer;->methodPauseGc:Ljava/lang/reflect/Method;
 
-    .line 243
     iput-object v4, p0, Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer;->methodResumeGc:Ljava/lang/reflect/Method;
 
-    .line 248
     new-instance v0, Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer$1;
 
     invoke-direct {v0, p0}, Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer$1;-><init>(Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer;)V
 
     iput-object v0, p0, Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer;->mDelegateKeyguardShowing:Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer$DelegateKeyguardShowing;
 
-    .line 255
     new-instance v0, Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer$2;
 
     invoke-direct {v0, p0}, Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer$2;-><init>(Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer;)V
 
     iput-object v0, p0, Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer;->mPersonaObserver:Landroid/content/pm/ISystemPersonaObserver;
 
-    .line 282
     const/4 v0, 0x7
 
     new-array v0, v0, [Ljava/lang/String;
@@ -778,169 +702,144 @@
 
     iput-object v0, p0, Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer;->BLOCK_LIST:[Ljava/lang/String;
 
-    .line 506
     new-instance v0, Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer$4;
 
     invoke-direct {v0, p0}, Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer$4;-><init>(Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer;)V
 
     iput-object v0, p0, Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer;->mCheckEnvironment:Ljava/lang/Runnable;
 
-    .line 545
     new-instance v0, Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer$5;
 
     invoke-direct {v0, p0}, Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer$5;-><init>(Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer;)V
 
     iput-object v0, p0, Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer;->mUpdateVisibility:Ljava/lang/Runnable;
 
-    .line 555
     new-instance v0, Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer$6;
 
     invoke-direct {v0, p0}, Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer$6;-><init>(Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer;)V
 
     iput-object v0, p0, Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer;->mCallbcak:Lcom/samsung/android/toolbox/ITwToolBoxServiceCallback;
 
-    .line 621
     new-instance v0, Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer$7;
 
     invoke-direct {v0, p0}, Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer$7;-><init>(Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer;)V
 
     iput-object v0, p0, Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer;->mCoverStateListener:Lcom/samsung/android/cover/CoverManager$StateListener;
 
-    .line 629
     new-instance v0, Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer$8;
 
     invoke-direct {v0, p0}, Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer$8;-><init>(Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer;)V
 
     iput-object v0, p0, Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer;->mReceiver:Landroid/content/BroadcastReceiver;
 
-    .line 645
     new-instance v0, Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer$9;
 
     invoke-direct {v0, p0}, Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer$9;-><init>(Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer;)V
 
     iput-object v0, p0, Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer;->mReset:Ljava/lang/Runnable;
 
-    .line 682
     sget-object v0, Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer$TouchMode;->NORMAL:Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer$TouchMode;
 
     iput-object v0, p0, Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer;->mTouchMode:Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer$TouchMode;
 
-    .line 1156
     new-instance v0, Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer$15;
 
     invoke-direct {v0, p0}, Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer$15;-><init>(Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer;)V
 
     iput-object v0, p0, Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer;->mTouchUpOrCancelRunnable:Ljava/lang/Runnable;
 
-    .line 1162
     new-instance v0, Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer$16;
 
     invoke-direct {v0, p0}, Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer$16;-><init>(Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer;)V
 
     iput-object v0, p0, Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer;->mTouchLongClickRunnable:Ljava/lang/Runnable;
 
-    .line 1168
     new-instance v0, Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer$17;
 
     invoke-direct {v0, p0}, Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer$17;-><init>(Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer;)V
 
     iput-object v0, p0, Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer;->mTouchClickRunnable:Ljava/lang/Runnable;
 
-    .line 1174
     new-instance v0, Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer$18;
 
     invoke-direct {v0, p0}, Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer$18;-><init>(Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer;)V
 
     iput-object v0, p0, Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer;->mPlayAnimationEnterRunnable:Ljava/lang/Runnable;
 
-    .line 1180
     new-instance v0, Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer$19;
 
     invoke-direct {v0, p0}, Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer$19;-><init>(Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer;)V
 
     iput-object v0, p0, Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer;->mPlayAnimationSleepRunnable:Ljava/lang/Runnable;
 
-    .line 1186
     new-instance v0, Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer$20;
 
     invoke-direct {v0, p0}, Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer$20;-><init>(Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer;)V
 
     iput-object v0, p0, Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer;->mPlayAnimationWakeupRunnable:Ljava/lang/Runnable;
 
-    .line 1192
     new-instance v0, Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer$21;
 
     invoke-direct {v0, p0}, Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer$21;-><init>(Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer;)V
 
     iput-object v0, p0, Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer;->mPlayAnimationExpandRunnable:Ljava/lang/Runnable;
 
-    .line 1198
     new-instance v0, Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer$22;
 
     invoke-direct {v0, p0}, Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer$22;-><init>(Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer;)V
 
     iput-object v0, p0, Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer;->mPlayAnimationCollapseRunnable:Ljava/lang/Runnable;
 
-    .line 1204
     new-instance v0, Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer$23;
 
     invoke-direct {v0, p0}, Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer$23;-><init>(Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer;)V
 
     iput-object v0, p0, Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer;->mPlayAnimationFadeInRunnable:Ljava/lang/Runnable;
 
-    .line 1210
     new-instance v0, Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer$24;
 
     invoke-direct {v0, p0}, Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer$24;-><init>(Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer;)V
 
     iput-object v0, p0, Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer;->mPlayAnimationFadeOutRunnable:Ljava/lang/Runnable;
 
-    .line 1216
     new-instance v0, Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer$25;
 
     invoke-direct {v0, p0}, Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer$25;-><init>(Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer;)V
 
     iput-object v0, p0, Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer;->mGoToPositionCallback:Ljava/lang/Runnable;
 
-    .line 1248
     new-instance v0, Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer$26;
 
     invoke-direct {v0, p0}, Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer$26;-><init>(Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer;)V
 
     iput-object v0, p0, Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer;->mGoToPositionAndromeda:Ljava/lang/Runnable;
 
-    .line 1254
     new-instance v0, Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer$27;
 
     invoke-direct {v0, p0}, Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer$27;-><init>(Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer;)V
 
     iput-object v0, p0, Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer;->mScreenWriteRecovery:Ljava/lang/Runnable;
 
-    .line 1261
     new-instance v0, Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer$28;
 
     invoke-direct {v0, p0}, Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer$28;-><init>(Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer;)V
 
     iput-object v0, p0, Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer;->mUpdateLongPressPanelRect:Ljava/lang/Runnable;
 
-    .line 295
     iput-object p1, p0, Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer;->mContext:Landroid/content/Context;
 
-    .line 296
     invoke-virtual {p1}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
 
     move-result-object v0
 
     iput-object v0, p0, Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer;->mContentResolver:Landroid/content/ContentResolver;
 
-    .line 297
     invoke-virtual {p1}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
 
     move-result-object v0
 
     iput-object v0, p0, Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer;->mResources:Landroid/content/res/Resources;
 
-    .line 298
     iget-object v0, p0, Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer;->mResources:Landroid/content/res/Resources;
 
     invoke-virtual {v0}, Landroid/content/res/Resources;->getDisplayMetrics()Landroid/util/DisplayMetrics;
@@ -949,29 +848,25 @@
 
     iput-object v0, p0, Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer;->mDisplayMetrics:Landroid/util/DisplayMetrics;
 
-    .line 299
     invoke-virtual {p1}, Landroid/content/Context;->getPackageManager()Landroid/content/pm/PackageManager;
 
     move-result-object v0
 
     iput-object v0, p0, Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer;->mPackageManager:Landroid/content/pm/PackageManager;
 
-    .line 300
     invoke-static {p1}, Landroid/view/ViewConfiguration;->get(Landroid/content/Context;)Landroid/view/ViewConfiguration;
 
     move-result-object v0
 
     iput-object v0, p0, Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer;->mViewConfiguration:Landroid/view/ViewConfiguration;
 
-    .line 302
     new-instance v0, Lcom/samsung/android/cover/CoverManager;
 
     invoke-direct {v0, p1}, Lcom/samsung/android/cover/CoverManager;-><init>(Landroid/content/Context;)V
 
     iput-object v0, p0, Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer;->mCoverManager:Lcom/samsung/android/cover/CoverManager;
 
-    .line 303
-    const-string/jumbo v0, "statusbar"
+    const-string v0, "statusbar"
 
     invoke-virtual {p1, v0}, Landroid/content/Context;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
 
@@ -981,7 +876,6 @@
 
     iput-object v0, p0, Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer;->mStatusBarManager:Landroid/app/StatusBarManager;
 
-    .line 304
     const-string v0, "activity"
 
     invoke-virtual {p1, v0}, Landroid/content/Context;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
@@ -992,8 +886,7 @@
 
     iput-object v0, p0, Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer;->mActivityManager:Landroid/app/ActivityManager;
 
-    .line 305
-    const-string/jumbo v0, "window"
+    const-string v0, "window"
 
     invoke-virtual {p1, v0}, Landroid/content/Context;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
 
@@ -1003,7 +896,6 @@
 
     iput-object v0, p0, Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer;->mWindowManager:Landroid/view/WindowManager;
 
-    .line 306
     const-string v0, "dreams"
 
     invoke-static {v0}, Landroid/os/ServiceManager;->getService(Ljava/lang/String;)Landroid/os/IBinder;
@@ -1016,8 +908,7 @@
 
     iput-object v0, p0, Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer;->mDreamManager:Landroid/service/dreams/IDreamManager;
 
-    .line 307
-    const-string/jumbo v0, "user"
+    const-string v0, "user"
 
     invoke-virtual {p1, v0}, Landroid/content/Context;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
 
@@ -1027,8 +918,7 @@
 
     iput-object v0, p0, Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer;->mUserManager:Landroid/os/UserManager;
 
-    .line 308
-    const-string/jumbo v0, "persona"
+    const-string v0, "persona"
 
     invoke-virtual {p1, v0}, Landroid/content/Context;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
 
@@ -1038,14 +928,12 @@
 
     iput-object v0, p0, Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer;->mPersonaManager:Landroid/os/PersonaManager;
 
-    .line 310
     new-instance v0, Lcom/samsung/android/toolbox/TwToolBoxManager;
 
     invoke-direct {v0, p1}, Lcom/samsung/android/toolbox/TwToolBoxManager;-><init>(Landroid/content/Context;)V
 
     iput-object v0, p0, Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer;->mManager:Lcom/samsung/android/toolbox/TwToolBoxManager;
 
-    .line 311
     iget-object v0, p0, Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer;->mGlobalRect:Landroid/graphics/Rect;
 
     const/16 v2, 0x64
@@ -1058,14 +946,12 @@
 
     invoke-virtual {v0, v2, v4, v5, v6}, Landroid/graphics/Rect;->set(IIII)V
 
-    .line 313
     iget-object v0, p0, Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer;->mDisplayMetrics:Landroid/util/DisplayMetrics;
 
     iget v0, v0, Landroid/util/DisplayMetrics;->density:F
 
     iput v0, p0, Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer;->mDensity:F
 
-    .line 314
     iget-object v0, p0, Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer;->mResources:Landroid/content/res/Resources;
 
     invoke-virtual {v0}, Landroid/content/res/Resources;->getConfiguration()Landroid/content/res/Configuration;
@@ -1083,14 +969,12 @@
     :goto_0
     iput-boolean v0, p0, Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer;->mIsTablet:Z
 
-    .line 316
     const v0, 0x1080b1d
 
     invoke-virtual {p1, v0}, Landroid/content/Context;->getDrawable(I)Landroid/graphics/drawable/Drawable;
 
     move-result-object v9
 
-    .line 317
     .local v9, "mainCharacter":Landroid/graphics/drawable/Drawable;
     iget-object v0, p0, Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer;->mResources:Landroid/content/res/Resources;
 
@@ -1102,7 +986,6 @@
 
     iput v0, p0, Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer;->FIXED_MAIN_ITEM_WIDTH:I
 
-    .line 318
     iget-object v0, p0, Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer;->mResources:Landroid/content/res/Resources;
 
     const v2, 0x105013a
@@ -1113,7 +996,6 @@
 
     iput v0, p0, Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer;->FIXED_MAIN_ITEM_HEIGHT:I
 
-    .line 319
     iget-object v0, p0, Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer;->mResources:Landroid/content/res/Resources;
 
     const v2, 0x105013d
@@ -1124,7 +1006,6 @@
 
     iput v0, p0, Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer;->FIXED_MAIN_ITEM_GAP:I
 
-    .line 320
     iget-object v0, p0, Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer;->mResources:Landroid/content/res/Resources;
 
     const v2, 0x105013b
@@ -1135,7 +1016,6 @@
 
     iput v0, p0, Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer;->FIXED_SHORTCUT_ITEM_SIZE:I
 
-    .line 321
     iget-object v0, p0, Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer;->mResources:Landroid/content/res/Resources;
 
     const v2, 0x105013c
@@ -1146,7 +1026,6 @@
 
     iput v0, p0, Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer;->FIXED_SHORTCUT_ITEM_GAP:I
 
-    .line 322
     iget-object v0, p0, Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer;->mResources:Landroid/content/res/Resources;
 
     const v2, 0x1050137
@@ -1157,7 +1036,6 @@
 
     iput v0, p0, Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer;->FIXED_SHORTCUT_SHADOW_HEIGHT_PX:I
 
-    .line 323
     iget-object v0, p0, Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer;->mResources:Landroid/content/res/Resources;
 
     const v2, 0x105013e
@@ -1168,7 +1046,6 @@
 
     iput v0, p0, Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer;->FIXED_ROUND_TAIL_SIZE:I
 
-    .line 324
     iget-object v0, p0, Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer;->mResources:Landroid/content/res/Resources;
 
     const v2, 0x105013f
@@ -1179,7 +1056,6 @@
 
     iput v0, p0, Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer;->FIXED_START_POSITION_TOP_PADDING:I
 
-    .line 325
     iget-object v0, p0, Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer;->mResources:Landroid/content/res/Resources;
 
     const v2, 0x1050140
@@ -1190,7 +1066,6 @@
 
     iput v0, p0, Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer;->FIXED_START_POSITION_RIGHT_PADDING:I
 
-    .line 326
     iget-object v0, p0, Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer;->mResources:Landroid/content/res/Resources;
 
     const v2, 0x1050138
@@ -1201,7 +1076,6 @@
 
     iput v0, p0, Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer;->LONG_PRESS_PANEL_HEIGHT_PX:I
 
-    .line 327
     iget-object v0, p0, Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer;->mResources:Landroid/content/res/Resources;
 
     const v2, 0x1050139
@@ -1212,7 +1086,6 @@
 
     iput v0, p0, Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer;->LONG_PRESS_PANEL_TOP_EMPTY_SPACE_PX:I
 
-    .line 328
     iget-object v0, p0, Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer;->mResources:Landroid/content/res/Resources;
 
     const v2, 0x1050143
@@ -1223,7 +1096,6 @@
 
     iput v0, p0, Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer;->LONG_PRESS_PANEL_BUTTON_SIZE:I
 
-    .line 329
     iget-object v0, p0, Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer;->mResources:Landroid/content/res/Resources;
 
     const v2, 0x1050144
@@ -1234,7 +1106,6 @@
 
     iput v0, p0, Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer;->LONG_PRESS_PANEL_BUTTON_BG_WIDTH:I
 
-    .line 330
     iget-object v0, p0, Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer;->mResources:Landroid/content/res/Resources;
 
     const v2, 0x1050145
@@ -1245,7 +1116,6 @@
 
     iput v0, p0, Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer;->LONG_PRESS_PANEL_BUTTON_BG_HEIGHT:I
 
-    .line 331
     iget-object v0, p0, Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer;->mViewConfiguration:Landroid/view/ViewConfiguration;
 
     invoke-virtual {v0}, Landroid/view/ViewConfiguration;->getScaledTouchSlop()I
@@ -1254,7 +1124,6 @@
 
     iput v0, p0, Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer;->SCALED_TOUCH_SLOP:I
 
-    .line 332
     iget-object v0, p0, Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer;->mResources:Landroid/content/res/Resources;
 
     const v2, 0x1050146
@@ -1265,7 +1134,6 @@
 
     iput v0, p0, Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer;->SCALED_APPROACH_SLOP:I
 
-    .line 335
     iget v0, p0, Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer;->FIXED_MAIN_ITEM_HEIGHT:I
 
     iget v2, p0, Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer;->FIXED_MAIN_ITEM_GAP:I
@@ -1292,19 +1160,16 @@
 
     iput v0, p0, Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer;->TOTAL_HEIGHT:I
 
-    .line 337
     iget-object v0, p0, Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer;->mTextPaint:Landroid/graphics/Paint;
 
     sget-object v2, Landroid/graphics/Paint$Align;->CENTER:Landroid/graphics/Paint$Align;
 
     invoke-virtual {v0, v2}, Landroid/graphics/Paint;->setTextAlign(Landroid/graphics/Paint$Align;)V
 
-    .line 338
     iget-object v0, p0, Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer;->mTextPaint:Landroid/graphics/Paint;
 
     invoke-virtual {v0, v1}, Landroid/graphics/Paint;->setAntiAlias(Z)V
 
-    .line 339
     iget-object v0, p0, Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer;->mTextPaint:Landroid/graphics/Paint;
 
     iget-object v2, p0, Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer;->mResources:Landroid/content/res/Resources;
@@ -1319,22 +1184,18 @@
 
     invoke-virtual {v0, v2}, Landroid/graphics/Paint;->setTextSize(F)V
 
-    .line 340
     iget-object v0, p0, Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer;->mMaskPaint:Landroid/graphics/Paint;
 
     invoke-virtual {v0, v3}, Landroid/graphics/Paint;->setFilterBitmap(Z)V
 
-    .line 345
     iget-object v0, p0, Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer;->mTextPaint:Landroid/graphics/Paint;
 
     invoke-virtual {v0, v7, v7, v7, v7}, Landroid/graphics/Paint;->setARGB(IIII)V
 
-    .line 348
     iget-boolean v0, p0, Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer;->mIsTablet:Z
 
     if-eqz v0, :cond_0
 
-    .line 349
     iget-object v0, p0, Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer;->mResources:Landroid/content/res/Resources;
 
     const v2, 0x1050141
@@ -1343,7 +1204,6 @@
 
     move-result v10
 
-    .line 350
     .local v10, "textShadowSize":I
     iget-object v0, p0, Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer;->mTextPaint:Landroid/graphics/Paint;
 
@@ -1351,7 +1211,6 @@
 
     invoke-virtual {v0, v2}, Landroid/graphics/Paint;->setTypeface(Landroid/graphics/Typeface;)Landroid/graphics/Typeface;
 
-    .line 351
     iget-object v0, p0, Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer;->mTextPaint:Landroid/graphics/Paint;
 
     int-to-float v2, v10
@@ -1364,7 +1223,6 @@
 
     invoke-virtual {v0, v2, v4, v5, v6}, Landroid/graphics/Paint;->setShadowLayer(FFFI)V
 
-    .line 354
     .end local v10    # "textShadowSize":I
     :cond_0
     const v0, 0x1080b1b
@@ -1375,7 +1233,6 @@
 
     iput-object v0, p0, Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer;->mFloatingBoxBg:Landroid/graphics/drawable/Drawable;
 
-    .line 355
     const v0, 0x1080b26
 
     invoke-virtual {p1, v0}, Landroid/content/Context;->getDrawable(I)Landroid/graphics/drawable/Drawable;
@@ -1384,7 +1241,6 @@
 
     iput-object v0, p0, Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer;->mEndFloatingBg:Landroid/graphics/drawable/Drawable;
 
-    .line 356
     const v0, 0x1080b18
 
     invoke-virtual {p1, v0}, Landroid/content/Context;->getDrawable(I)Landroid/graphics/drawable/Drawable;
@@ -1393,7 +1249,6 @@
 
     iput-object v0, p0, Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer;->mEndFloatingEditBg:Landroid/graphics/drawable/Drawable;
 
-    .line 357
     const v0, 0x1080b19
 
     invoke-virtual {p1, v0}, Landroid/content/Context;->getDrawable(I)Landroid/graphics/drawable/Drawable;
@@ -1402,7 +1257,6 @@
 
     iput-object v0, p0, Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer;->mEndFloatingEditBtn:Landroid/graphics/drawable/Drawable;
 
-    .line 358
     const v0, 0x1080b1a
 
     invoke-virtual {p1, v0}, Landroid/content/Context;->getDrawable(I)Landroid/graphics/drawable/Drawable;
@@ -1411,7 +1265,6 @@
 
     iput-object v0, p0, Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer;->mEndFloatingEditBtnFocused:Landroid/graphics/drawable/Drawable;
 
-    .line 359
     const v0, 0x1080b27
 
     invoke-virtual {p1, v0}, Landroid/content/Context;->getDrawable(I)Landroid/graphics/drawable/Drawable;
@@ -1420,7 +1273,6 @@
 
     iput-object v0, p0, Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer;->mEndFloatingRemoveBg:Landroid/graphics/drawable/Drawable;
 
-    .line 360
     const v0, 0x1080b28
 
     invoke-virtual {p1, v0}, Landroid/content/Context;->getDrawable(I)Landroid/graphics/drawable/Drawable;
@@ -1429,7 +1281,6 @@
 
     iput-object v0, p0, Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer;->mEndFloatingRemoveBtn:Landroid/graphics/drawable/Drawable;
 
-    .line 361
     const v0, 0x1080b29
 
     invoke-virtual {p1, v0}, Landroid/content/Context;->getDrawable(I)Landroid/graphics/drawable/Drawable;
@@ -1438,7 +1289,6 @@
 
     iput-object v0, p0, Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer;->mEndFloatingRemoveBtnFocused:Landroid/graphics/drawable/Drawable;
 
-    .line 362
     const v0, 0x1080b2a
 
     invoke-virtual {p1, v0}, Landroid/content/Context;->getDrawable(I)Landroid/graphics/drawable/Drawable;
@@ -1447,7 +1297,6 @@
 
     iput-object v0, p0, Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer;->mEndFloatingRemoveBtnFocusedCover:Landroid/graphics/drawable/Drawable;
 
-    .line 363
     const v0, 0x10405a7
 
     invoke-virtual {p1, v0}, Landroid/content/Context;->getString(I)Ljava/lang/String;
@@ -1456,7 +1305,6 @@
 
     iput-object v0, p0, Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer;->mEndFloatingMsgEdit:Ljava/lang/String;
 
-    .line 364
     const v0, 0x1040607
 
     invoke-virtual {p1, v0}, Landroid/content/Context;->getString(I)Ljava/lang/String;
@@ -1465,7 +1313,6 @@
 
     iput-object v0, p0, Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer;->mEndFloatingMsgRemove:Ljava/lang/String;
 
-    .line 366
     iget-object v0, p0, Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer;->mContentResolver:Landroid/content/ContentResolver;
 
     const-string v2, "device_provisioned"
@@ -1481,10 +1328,9 @@
     :goto_1
     iput-boolean v0, p0, Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer;->mDeivceProvisioned:Z
 
-    .line 367
     iget-object v0, p0, Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer;->mContentResolver:Landroid/content/ContentResolver;
 
-    const-string/jumbo v2, "touch_exploration_enabled"
+    const-string v2, "touch_exploration_enabled"
 
     const/4 v4, -0x2
 
@@ -1499,10 +1345,9 @@
     :goto_2
     iput-boolean v0, p0, Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer;->mExploreByTouchMode:Z
 
-    .line 368
     iget-object v0, p0, Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer;->mContentResolver:Landroid/content/ContentResolver;
 
-    const-string/jumbo v2, "kids_home_mode"
+    const-string v2, "kids_home_mode"
 
     const/4 v4, -0x2
 
@@ -1517,7 +1362,6 @@
     :goto_3
     iput-boolean v0, p0, Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer;->mKidsMode:Z
 
-    .line 369
     iget-object v0, p0, Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer;->mContentResolver:Landroid/content/ContentResolver;
 
     const-string v2, "car_mode_on"
@@ -1533,21 +1377,18 @@
     :goto_4
     iput-boolean v1, p0, Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer;->mCarMode:Z
 
-    .line 370
     invoke-direct {p0}, Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer;->isValidUser()Z
 
     move-result v0
 
     iput-boolean v0, p0, Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer;->mValidUser:Z
 
-    .line 371
     invoke-direct {p0}, Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer;->isKnoxRunning()Z
 
     move-result v0
 
     iput-boolean v0, p0, Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer;->mKnoxRunning:Z
 
-    .line 374
     new-instance v0, Landroid/view/WindowManager$LayoutParams;
 
     iget v1, p0, Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer;->FIXED_MAIN_ITEM_WIDTH:I
@@ -1566,7 +1407,6 @@
 
     iput-object v0, p0, Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer;->mWindowAttributes:Landroid/view/WindowManager$LayoutParams;
 
-    .line 385
     iget-object v0, p0, Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer;->mWindowAttributes:Landroid/view/WindowManager$LayoutParams;
 
     iget v1, v0, Landroid/view/WindowManager$LayoutParams;->privateFlags:I
@@ -1575,14 +1415,12 @@
 
     iput v1, v0, Landroid/view/WindowManager$LayoutParams;->privateFlags:I
 
-    .line 386
     invoke-static {}, Landroid/app/ActivityManager;->isHighEndGfx()Z
 
     move-result v0
 
     if-eqz v0, :cond_1
 
-    .line 387
     iget-object v0, p0, Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer;->mWindowAttributes:Landroid/view/WindowManager$LayoutParams;
 
     iget v1, v0, Landroid/view/WindowManager$LayoutParams;->flags:I
@@ -1593,7 +1431,6 @@
 
     iput v1, v0, Landroid/view/WindowManager$LayoutParams;->flags:I
 
-    .line 388
     iget-object v0, p0, Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer;->mWindowAttributes:Landroid/view/WindowManager$LayoutParams;
 
     iget v1, v0, Landroid/view/WindowManager$LayoutParams;->privateFlags:I
@@ -1602,7 +1439,6 @@
 
     iput v1, v0, Landroid/view/WindowManager$LayoutParams;->privateFlags:I
 
-    .line 390
     :cond_1
     iget-object v0, p0, Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer;->mWindowAttributes:Landroid/view/WindowManager$LayoutParams;
 
@@ -1610,7 +1446,6 @@
 
     iput v1, v0, Landroid/view/WindowManager$LayoutParams;->gravity:I
 
-    .line 391
     iget-object v0, p0, Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer;->mWindowAttributes:Landroid/view/WindowManager$LayoutParams;
 
     iget v1, v0, Landroid/view/WindowManager$LayoutParams;->inputFeatures:I
@@ -1619,28 +1454,24 @@
 
     iput v1, v0, Landroid/view/WindowManager$LayoutParams;->inputFeatures:I
 
-    .line 392
     iget-object v0, p0, Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer;->mWindowAttributes:Landroid/view/WindowManager$LayoutParams;
 
     const-string v1, "TwToolBoxFloatingViewer"
 
     invoke-virtual {v0, v1}, Landroid/view/WindowManager$LayoutParams;->setTitle(Ljava/lang/CharSequence;)V
 
-    .line 394
     new-instance v0, Landroid/view/WindowManager$LayoutParams;
 
     invoke-direct {v0, v3, v3}, Landroid/view/WindowManager$LayoutParams;-><init>(II)V
 
     iput-object v0, p0, Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer;->mAndromedaWindowAttributes:Landroid/view/WindowManager$LayoutParams;
 
-    .line 395
     iget-object v0, p0, Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer;->mAndromedaWindowAttributes:Landroid/view/WindowManager$LayoutParams;
 
     iget-object v1, p0, Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer;->mWindowAttributes:Landroid/view/WindowManager$LayoutParams;
 
     invoke-virtual {v0, v1}, Landroid/view/WindowManager$LayoutParams;->copyFrom(Landroid/view/WindowManager$LayoutParams;)I
 
-    .line 396
     iget-object v0, p0, Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer;->mAndromedaWindowAttributes:Landroid/view/WindowManager$LayoutParams;
 
     iget-object v1, p0, Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer;->mAndromedaWindowAttributes:Landroid/view/WindowManager$LayoutParams;
@@ -1651,27 +1482,22 @@
 
     iput v2, v0, Landroid/view/WindowManager$LayoutParams;->x:I
 
-    .line 398
     new-instance v0, Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer$TwToolBoxLongPressPanel;
 
     invoke-direct {v0, p0, p1}, Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer$TwToolBoxLongPressPanel;-><init>(Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer;Landroid/content/Context;)V
 
     iput-object v0, p0, Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer;->mTwToolBoxLongPressPanel:Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer$TwToolBoxLongPressPanel;
 
-    .line 400
     invoke-direct {p0}, Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer;->updateVisibility()Z
 
-    .line 401
     const/16 v0, 0x8
 
     invoke-virtual {p0, v0}, Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer;->setVisibility(I)V
 
-    .line 404
     iget-object v0, p0, Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer;->mContext:Landroid/content/Context;
 
     if-eqz v0, :cond_2
 
-    .line 405
     new-instance v0, Landroid/os/DVFSHelper;
 
     iget-object v1, p0, Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer;->mContext:Landroid/content/Context;
@@ -1686,14 +1512,12 @@
 
     iput-object v0, p0, Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer;->mDVFSHelper:Landroid/os/DVFSHelper;
 
-    .line 406
     iget-object v0, p0, Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer;->mDVFSHelper:Landroid/os/DVFSHelper;
 
     const-string v1, "ListView_scroll"
 
     invoke-virtual {v0, v1}, Landroid/os/DVFSHelper;->addExtraOptionsByDefaultPolicy(Ljava/lang/String;)V
 
-    .line 408
     new-instance v0, Landroid/os/DVFSHelper;
 
     iget-object v1, p0, Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer;->mContext:Landroid/content/Context;
@@ -1708,14 +1532,12 @@
 
     iput-object v0, p0, Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer;->mDVFSHelperGPU:Landroid/os/DVFSHelper;
 
-    .line 409
     iget-object v0, p0, Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer;->mDVFSHelperGPU:Landroid/os/DVFSHelper;
 
     const-string v1, "ListView_scroll"
 
     invoke-virtual {v0, v1}, Landroid/os/DVFSHelper;->addExtraOptionsByDefaultPolicy(Ljava/lang/String;)V
 
-    .line 411
     new-instance v0, Landroid/os/DVFSHelper;
 
     iget-object v1, p0, Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer;->mContext:Landroid/content/Context;
@@ -1730,19 +1552,16 @@
 
     iput-object v0, p0, Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer;->mDVFSHelperBUS:Landroid/os/DVFSHelper;
 
-    .line 412
     iget-object v0, p0, Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer;->mDVFSHelperBUS:Landroid/os/DVFSHelper;
 
     const-string v1, "ListView_scroll"
 
     invoke-virtual {v0, v1}, Landroid/os/DVFSHelper;->addExtraOptionsByDefaultPolicy(Ljava/lang/String;)V
 
-    .line 414
     sget v0, Landroid/os/DVFSHelper;->LIST_SCROLL_BOOSTER_CORE_NUM:I
 
     if-eqz v0, :cond_2
 
-    .line 415
     new-instance v0, Landroid/os/DVFSHelper;
 
     iget-object v1, p0, Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer;->mContext:Landroid/content/Context;
@@ -1757,7 +1576,6 @@
 
     iput-object v0, p0, Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer;->mDVFSHelperCore:Landroid/os/DVFSHelper;
 
-    .line 416
     iget-object v0, p0, Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer;->mDVFSHelperCore:Landroid/os/DVFSHelper;
 
     const-string v1, "CORE_NUM"
@@ -1768,14 +1586,12 @@
 
     invoke-virtual {v0, v1, v2, v3}, Landroid/os/DVFSHelper;->addExtraOption(Ljava/lang/String;J)V
 
-    .line 421
     :cond_2
     const-class v8, Ldalvik/system/VMRuntime;
 
-    .line 423
     .local v8, "clazz":Ljava/lang/Class;
     :try_start_0
-    const-string/jumbo v0, "pauseGc"
+    const-string v0, "pauseGc"
 
     const/4 v1, 0x1
 
@@ -1793,8 +1609,7 @@
 
     iput-object v0, p0, Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer;->methodPauseGc:Ljava/lang/reflect/Method;
 
-    .line 424
-    const-string/jumbo v0, "resumeGc"
+    const-string v0, "resumeGc"
 
     const/4 v1, 0x2
 
@@ -1821,7 +1636,6 @@
     .catch Ljava/lang/NoSuchMethodException; {:try_start_0 .. :try_end_0} :catch_1
     .catch Ljava/lang/IllegalArgumentException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 430
     :goto_5
     iget-object v0, p0, Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer;->mWindowManager:Landroid/view/WindowManager;
 
@@ -1833,7 +1647,6 @@
 
     invoke-interface {v0, v1, v2}, Landroid/view/WindowManager;->addView(Landroid/view/View;Landroid/view/ViewGroup$LayoutParams;)V
 
-    .line 432
     return-void
 
     .end local v8    # "clazz":Ljava/lang/Class;
@@ -1841,42 +1654,35 @@
     :cond_3
     move v0, v3
 
-    .line 314
     goto/16 :goto_0
 
     .restart local v9    # "mainCharacter":Landroid/graphics/drawable/Drawable;
     :cond_4
     move v0, v3
 
-    .line 366
     goto/16 :goto_1
 
     :cond_5
     move v0, v3
 
-    .line 367
     goto/16 :goto_2
 
     :cond_6
     move v0, v3
 
-    .line 368
     goto/16 :goto_3
 
     :cond_7
     move v1, v3
 
-    .line 369
     goto/16 :goto_4
 
-    .line 426
     .restart local v8    # "clazz":Ljava/lang/Class;
     :catch_0
     move-exception v0
 
     goto :goto_5
 
-    .line 425
     :catch_1
     move-exception v0
 
@@ -1889,7 +1695,6 @@
     .param p1, "x1"    # I
 
     .prologue
-    .line 95
     iput p1, p0, Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer;->mPersonaId:I
 
     return p1
@@ -1900,7 +1705,6 @@
     .param p0, "x0"    # Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer;
 
     .prologue
-    .line 95
     iget-object v0, p0, Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer;->mUpdateVisibility:Ljava/lang/Runnable;
 
     return-object v0
@@ -1911,7 +1715,6 @@
     .param p0, "x0"    # Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer;
 
     .prologue
-    .line 95
     iget-object v0, p0, Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer;->mPlayAnimationFadeOutRunnable:Ljava/lang/Runnable;
 
     return-object v0
@@ -1922,7 +1725,6 @@
     .param p0, "x0"    # Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer;
 
     .prologue
-    .line 95
     iget-object v0, p0, Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer;->mEndFloatingMsgEdit:Ljava/lang/String;
 
     return-object v0
@@ -1933,7 +1735,6 @@
     .param p0, "x0"    # Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer;
 
     .prologue
-    .line 95
     iget-object v0, p0, Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer;->mTextPaint:Landroid/graphics/Paint;
 
     return-object v0
@@ -1944,7 +1745,6 @@
     .param p0, "x0"    # Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer;
 
     .prologue
-    .line 95
     iget-object v0, p0, Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer;->mEndFloatingMsgRemove:Ljava/lang/String;
 
     return-object v0
@@ -1955,7 +1755,6 @@
     .param p0, "x0"    # Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer;
 
     .prologue
-    .line 95
     iget-object v0, p0, Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer;->mTextBounds:Landroid/graphics/Rect;
 
     return-object v0
@@ -1966,7 +1765,6 @@
     .param p0, "x0"    # Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer;
 
     .prologue
-    .line 95
     iget-object v0, p0, Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer;->mLongPressPanelRemoveBtnAnimator:Landroid/animation/AnimatorSet;
 
     return-object v0
@@ -1977,7 +1775,6 @@
     .param p0, "x0"    # Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer;
 
     .prologue
-    .line 95
     iget-object v0, p0, Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer;->mEndFloatingRemoveBtnCoverArea:Landroid/graphics/Rect;
 
     return-object v0
@@ -1988,7 +1785,6 @@
     .param p0, "x0"    # Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer;
 
     .prologue
-    .line 95
     iget-object v0, p0, Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer;->mEndFloatingRemoveBtnFocusedCover:Landroid/graphics/drawable/Drawable;
 
     return-object v0
@@ -1999,7 +1795,6 @@
     .param p0, "x0"    # Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer;
 
     .prologue
-    .line 95
     iget-object v0, p0, Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer;->mLongPressPanelAnimator:Landroid/animation/ValueAnimator;
 
     return-object v0
@@ -2010,7 +1805,6 @@
     .param p0, "x0"    # Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer;
 
     .prologue
-    .line 95
     iget-boolean v0, p0, Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer;->mTracking:Z
 
     return v0
@@ -2021,7 +1815,6 @@
     .param p0, "x0"    # Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer;
 
     .prologue
-    .line 95
     iget v0, p0, Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer;->mAbsX:I
 
     return v0
@@ -2032,7 +1825,6 @@
     .param p0, "x0"    # Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer;
 
     .prologue
-    .line 95
     iget v0, p0, Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer;->mAbsY:I
 
     return v0
@@ -2046,7 +1838,6 @@
     .param p3, "x3"    # I
 
     .prologue
-    .line 95
     invoke-direct {p0, p1, p2, p3}, Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer;->onTouchUpOrCancel(III)V
 
     return-void
@@ -2057,7 +1848,6 @@
     .param p0, "x0"    # Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer;
 
     .prologue
-    .line 95
     iget-object v0, p0, Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer;->mPlayAnimationFadeInRunnable:Ljava/lang/Runnable;
 
     return-object v0
@@ -2068,7 +1858,6 @@
     .param p0, "x0"    # Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer;
 
     .prologue
-    .line 95
     invoke-direct {p0}, Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer;->getSCoverState()Z
 
     move-result v0
@@ -2081,7 +1870,6 @@
     .param p0, "x0"    # Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer;
 
     .prologue
-    .line 95
     iget-boolean v0, p0, Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer;->mCoverOpen:Z
 
     return v0
@@ -2093,7 +1881,6 @@
     .param p1, "x1"    # Z
 
     .prologue
-    .line 95
     iput-boolean p1, p0, Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer;->mCoverOpen:Z
 
     return p1
@@ -2104,7 +1891,6 @@
     .param p0, "x0"    # Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer;
 
     .prologue
-    .line 95
     iget-object v0, p0, Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer;->mDreamManager:Landroid/service/dreams/IDreamManager;
 
     return-object v0
@@ -2115,7 +1901,6 @@
     .param p0, "x0"    # Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer;
 
     .prologue
-    .line 95
     iget-boolean v0, p0, Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer;->mKeyguardShowing:Z
 
     return v0
@@ -2127,7 +1912,6 @@
     .param p1, "x1"    # Z
 
     .prologue
-    .line 95
     iput-boolean p1, p0, Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer;->mKeyguardShowing:Z
 
     return p1
@@ -2138,7 +1922,6 @@
     .param p0, "x0"    # Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer;
 
     .prologue
-    .line 95
     iget-boolean v0, p0, Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer;->mSipVisible:Z
 
     return v0
@@ -2149,7 +1932,6 @@
     .param p0, "x0"    # Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer;
 
     .prologue
-    .line 95
     invoke-direct {p0}, Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer;->isEnableOTA()Z
 
     move-result v0
@@ -2163,7 +1945,6 @@
     .param p1, "x1"    # Z
 
     .prologue
-    .line 95
     iput-boolean p1, p0, Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer;->mSipVisible:Z
 
     return p1
@@ -2174,7 +1955,6 @@
     .param p0, "x0"    # Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer;
 
     .prologue
-    .line 95
     iget-boolean v0, p0, Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer;->mOTAShowing:Z
 
     return v0
@@ -2186,7 +1966,6 @@
     .param p1, "x1"    # Z
 
     .prologue
-    .line 95
     iput-boolean p1, p0, Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer;->mOTAShowing:Z
 
     return p1
@@ -2197,7 +1976,6 @@
     .param p0, "x0"    # Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer;
 
     .prologue
-    .line 95
     invoke-direct {p0}, Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer;->updateVisibility()Z
 
     move-result v0
@@ -2210,7 +1988,6 @@
     .param p0, "x0"    # Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer;
 
     .prologue
-    .line 95
     iget-boolean v0, p0, Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer;->mHiddenToolBox:Z
 
     return v0
@@ -2221,7 +1998,6 @@
     .param p0, "x0"    # Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer;
 
     .prologue
-    .line 95
     iget-boolean v0, p0, Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer;->mDisableFloatingViewer:Z
 
     return v0
@@ -2232,7 +2008,6 @@
     .param p0, "x0"    # Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer;
 
     .prologue
-    .line 95
     iget-object v0, p0, Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer;->mGlobalRect:Landroid/graphics/Rect;
 
     return-object v0
@@ -2243,7 +2018,6 @@
     .param p0, "x0"    # Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer;
 
     .prologue
-    .line 95
     iget-object v0, p0, Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer;->mCheckEnvironment:Ljava/lang/Runnable;
 
     return-object v0
@@ -2254,7 +2028,6 @@
     .param p0, "x0"    # Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer;
 
     .prologue
-    .line 95
     iget-object v0, p0, Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer;->mTouchUpOrCancelRunnable:Ljava/lang/Runnable;
 
     return-object v0
@@ -2266,7 +2039,6 @@
     .param p1, "x1"    # Z
 
     .prologue
-    .line 95
     iput-boolean p1, p0, Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer;->mValidUser:Z
 
     return p1
@@ -2277,7 +2049,6 @@
     .param p0, "x0"    # Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer;
 
     .prologue
-    .line 95
     invoke-direct {p0}, Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer;->isValidUser()Z
 
     move-result v0
@@ -2290,7 +2061,6 @@
     .param p0, "x0"    # Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer;
 
     .prologue
-    .line 95
     iget-boolean v0, p0, Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer;->mVisibleFloatingStyle:Z
 
     return v0
@@ -2301,7 +2071,6 @@
     .param p0, "x0"    # Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer;
 
     .prologue
-    .line 95
     invoke-direct {p0}, Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer;->loadCenterPosition()V
 
     return-void
@@ -2312,7 +2081,6 @@
     .param p0, "x0"    # Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer;
 
     .prologue
-    .line 95
     iget-object v0, p0, Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer;->mGoToPositionAndromeda:Ljava/lang/Runnable;
 
     return-object v0
@@ -2323,7 +2091,6 @@
     .param p0, "x0"    # Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer;
 
     .prologue
-    .line 95
     invoke-direct {p0}, Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer;->clearToolBox()V
 
     return-void
@@ -2334,7 +2101,6 @@
     .param p0, "x0"    # Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer;
 
     .prologue
-    .line 95
     invoke-direct {p0}, Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer;->prepareToolBoxLinear()V
 
     return-void
@@ -2346,7 +2112,6 @@
     .param p1, "x1"    # Z
 
     .prologue
-    .line 95
     iput-boolean p1, p0, Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer;->mReseting:Z
 
     return p1
@@ -2357,7 +2122,6 @@
     .param p0, "x0"    # Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer;
 
     .prologue
-    .line 95
     iget-object v0, p0, Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer;->mPlayAnimationWakeupRunnable:Ljava/lang/Runnable;
 
     return-object v0
@@ -2369,7 +2133,6 @@
     .param p1, "x1"    # Landroid/content/Intent;
 
     .prologue
-    .line 95
     invoke-direct {p0, p1}, Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer;->startActivityOrTask(Landroid/content/Intent;)V
 
     return-void
@@ -2380,7 +2143,6 @@
     .param p0, "x0"    # Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer;
 
     .prologue
-    .line 95
     iget-object v0, p0, Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer;->mContext:Landroid/content/Context;
 
     return-object v0
@@ -2392,7 +2154,6 @@
     .param p1, "x1"    # Z
 
     .prologue
-    .line 95
     iput-boolean p1, p0, Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer;->mDeivceProvisioned:Z
 
     return p1
@@ -2403,7 +2164,6 @@
     .param p0, "x0"    # Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer;
 
     .prologue
-    .line 95
     iget-object v0, p0, Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer;->mContentResolver:Landroid/content/ContentResolver;
 
     return-object v0
@@ -2414,7 +2174,6 @@
     .param p0, "x0"    # Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer;
 
     .prologue
-    .line 95
     iget v0, p0, Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer;->mLongPressPanelPosition:I
 
     return v0
@@ -2426,7 +2185,6 @@
     .param p1, "x1"    # Z
 
     .prologue
-    .line 95
     iput-boolean p1, p0, Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer;->mExploreByTouchMode:Z
 
     return p1
@@ -2438,7 +2196,6 @@
     .param p1, "x1"    # I
 
     .prologue
-    .line 95
     iput p1, p0, Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer;->mLongPressPanelPosition:I
 
     return p1
@@ -2449,7 +2206,6 @@
     .param p0, "x0"    # Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer;
 
     .prologue
-    .line 95
     iget-boolean v0, p0, Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer;->mKidsMode:Z
 
     return v0
@@ -2461,7 +2217,6 @@
     .param p1, "x1"    # Z
 
     .prologue
-    .line 95
     iput-boolean p1, p0, Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer;->mKidsMode:Z
 
     return p1
@@ -2472,7 +2227,6 @@
     .param p0, "x0"    # Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer;
 
     .prologue
-    .line 95
     iget-boolean v0, p0, Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer;->mCarMode:Z
 
     return v0
@@ -2484,7 +2238,6 @@
     .param p1, "x1"    # Z
 
     .prologue
-    .line 95
     iput-boolean p1, p0, Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer;->mCarMode:Z
 
     return p1
@@ -2495,7 +2248,6 @@
     .param p0, "x0"    # Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer;
 
     .prologue
-    .line 95
     invoke-direct {p0}, Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer;->onToolLongClick()V
 
     return-void
@@ -2506,7 +2258,6 @@
     .param p0, "x0"    # Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer;
 
     .prologue
-    .line 95
     invoke-direct {p0}, Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer;->onToolClick()V
 
     return-void
@@ -2517,7 +2268,6 @@
     .param p0, "x0"    # Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer;
 
     .prologue
-    .line 95
     invoke-direct {p0}, Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer;->playAnimationEnter()V
 
     return-void
@@ -2528,7 +2278,6 @@
     .param p0, "x0"    # Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer;
 
     .prologue
-    .line 95
     invoke-direct {p0}, Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer;->playAnimationSleep()V
 
     return-void
@@ -2539,7 +2288,6 @@
     .param p0, "x0"    # Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer;
 
     .prologue
-    .line 95
     invoke-direct {p0}, Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer;->playAnimationWakeup()V
 
     return-void
@@ -2550,7 +2298,6 @@
     .param p0, "x0"    # Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer;
 
     .prologue
-    .line 95
     invoke-direct {p0}, Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer;->playAnimationExpand()V
 
     return-void
@@ -2561,7 +2308,6 @@
     .param p0, "x0"    # Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer;
 
     .prologue
-    .line 95
     invoke-direct {p0}, Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer;->playAnimationCollapse()V
 
     return-void
@@ -2572,7 +2318,6 @@
     .param p0, "x0"    # Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer;
 
     .prologue
-    .line 95
     iget v0, p0, Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer;->LONG_PRESS_PANEL_HEIGHT_PX:I
 
     return v0
@@ -2583,7 +2328,6 @@
     .param p0, "x0"    # Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer;
 
     .prologue
-    .line 95
     invoke-direct {p0}, Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer;->playAnimationFadeIn()V
 
     return-void
@@ -2594,7 +2338,6 @@
     .param p0, "x0"    # Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer;
 
     .prologue
-    .line 95
     invoke-direct {p0}, Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer;->playAnimationFadeOut()V
 
     return-void
@@ -2605,7 +2348,6 @@
     .param p0, "x0"    # Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer;
 
     .prologue
-    .line 95
     iget v0, p0, Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer;->mTargetX:I
 
     return v0
@@ -2616,7 +2358,6 @@
     .param p0, "x0"    # Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer;
 
     .prologue
-    .line 95
     iget v0, p0, Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer;->mCenterX:I
 
     return v0
@@ -2628,7 +2369,6 @@
     .param p1, "x1"    # I
 
     .prologue
-    .line 95
     iput p1, p0, Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer;->mCenterX:I
 
     return p1
@@ -2640,7 +2380,6 @@
     .param p1, "x1"    # I
 
     .prologue
-    .line 95
     iget v0, p0, Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer;->mCenterX:I
 
     add-int/2addr v0, p1
@@ -2655,7 +2394,6 @@
     .param p0, "x0"    # Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer;
 
     .prologue
-    .line 95
     iget v0, p0, Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer;->mTargetY:I
 
     return v0
@@ -2666,7 +2404,6 @@
     .param p0, "x0"    # Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer;
 
     .prologue
-    .line 95
     iget v0, p0, Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer;->mCenterY:I
 
     return v0
@@ -2678,7 +2415,6 @@
     .param p1, "x1"    # I
 
     .prologue
-    .line 95
     iput p1, p0, Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer;->mCenterY:I
 
     return p1
@@ -2690,7 +2426,6 @@
     .param p1, "x1"    # I
 
     .prologue
-    .line 95
     iget v0, p0, Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer;->mCenterY:I
 
     add-int/2addr v0, p1
@@ -2706,7 +2441,6 @@
     .param p1, "x1"    # Z
 
     .prologue
-    .line 95
     invoke-direct {p0, p1}, Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer;->setEnableVSync(Z)V
 
     return-void
@@ -2717,7 +2451,6 @@
     .param p0, "x0"    # Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer;
 
     .prologue
-    .line 95
     iget-boolean v0, p0, Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer;->mNeedSaveCenterPosition:Z
 
     return v0
@@ -2729,7 +2462,6 @@
     .param p1, "x1"    # Z
 
     .prologue
-    .line 95
     iput-boolean p1, p0, Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer;->mNeedSaveCenterPosition:Z
 
     return p1
@@ -2740,7 +2472,6 @@
     .param p0, "x0"    # Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer;
 
     .prologue
-    .line 95
     invoke-direct {p0}, Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer;->saveCenterPosition()V
 
     return-void
@@ -2751,7 +2482,6 @@
     .param p0, "x0"    # Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer;
 
     .prologue
-    .line 95
     iget v0, p0, Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer;->SCALED_APPROACH_SLOP:I
 
     return v0
@@ -2762,7 +2492,6 @@
     .param p0, "x0"    # Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer;
 
     .prologue
-    .line 95
     iget-boolean v0, p0, Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer;->mLongPressPanelShowing:Z
 
     return v0
@@ -2773,7 +2502,6 @@
     .param p0, "x0"    # Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer;
 
     .prologue
-    .line 95
     iget-object v0, p0, Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer;->mChoreographer:Landroid/view/Choreographer;
 
     return-object v0
@@ -2785,7 +2513,6 @@
     .param p1, "x1"    # Z
 
     .prologue
-    .line 95
     iput-boolean p1, p0, Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer;->mLongPressPanelShowing:Z
 
     return p1
@@ -2796,7 +2523,6 @@
     .param p0, "x0"    # Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer;
 
     .prologue
-    .line 95
     iget-object v0, p0, Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer;->mGoToPositionCallback:Ljava/lang/Runnable;
 
     return-object v0
@@ -2807,7 +2533,6 @@
     .param p0, "x0"    # Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer;
 
     .prologue
-    .line 95
     invoke-direct {p0}, Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer;->goToPositionAndromeda()V
 
     return-void
@@ -2818,7 +2543,6 @@
     .param p0, "x0"    # Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer;
 
     .prologue
-    .line 95
     iget v0, p0, Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer;->mEditAfterScreenCapture:I
 
     return v0
@@ -2830,7 +2554,6 @@
     .param p1, "x1"    # I
 
     .prologue
-    .line 95
     iput p1, p0, Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer;->mEditAfterScreenCapture:I
 
     return p1
@@ -2842,7 +2565,6 @@
     .param p1, "x1"    # Z
 
     .prologue
-    .line 95
     iput-boolean p1, p0, Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer;->mMovingByAnimation:Z
 
     return p1
@@ -2854,7 +2576,6 @@
     .param p1, "x1"    # I
 
     .prologue
-    .line 95
     iput p1, p0, Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer;->mMainCharacterDegree:I
 
     return p1
@@ -2866,7 +2587,6 @@
     .param p1, "x1"    # F
 
     .prologue
-    .line 95
     iput p1, p0, Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer;->mExpandProgressValue:F
 
     return p1
@@ -2877,7 +2597,6 @@
     .param p0, "x0"    # Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer;
 
     .prologue
-    .line 95
     iget v0, p0, Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer;->mEnterProgressValue:F
 
     return v0
@@ -2889,7 +2608,6 @@
     .param p1, "x1"    # F
 
     .prologue
-    .line 95
     iput p1, p0, Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer;->mEnterProgressValue:F
 
     return p1
@@ -2900,7 +2618,6 @@
     .param p0, "x0"    # Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer;
 
     .prologue
-    .line 95
     iget-object v0, p0, Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer;->mUpdateLongPressPanelRect:Ljava/lang/Runnable;
 
     return-object v0
@@ -2911,7 +2628,6 @@
     .param p0, "x0"    # Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer;
 
     .prologue
-    .line 95
     iget-boolean v0, p0, Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer;->mLongPressPanelRemoveAnimating:Z
 
     return v0
@@ -2923,7 +2639,6 @@
     .param p1, "x1"    # Z
 
     .prologue
-    .line 95
     iput-boolean p1, p0, Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer;->mLongPressPanelRemoveAnimating:Z
 
     return p1
@@ -2934,7 +2649,6 @@
     .param p0, "x0"    # Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer;
 
     .prologue
-    .line 95
     iget-object v0, p0, Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer;->mTwToolBoxLongPressPanel:Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer$TwToolBoxLongPressPanel;
 
     return-object v0
@@ -2945,7 +2659,6 @@
     .param p0, "x0"    # Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer;
 
     .prologue
-    .line 95
     iget v0, p0, Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer;->mLongPressPanelRemoveBtnPosition:I
 
     return v0
@@ -2957,7 +2670,6 @@
     .param p1, "x1"    # I
 
     .prologue
-    .line 95
     iput p1, p0, Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer;->mLongPressPanelRemoveBtnPosition:I
 
     return p1
@@ -2968,7 +2680,6 @@
     .param p0, "x0"    # Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer;
 
     .prologue
-    .line 95
     iget v0, p0, Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer;->mLongPressPanelRemoveBtnAngle:F
 
     return v0
@@ -2980,7 +2691,6 @@
     .param p1, "x1"    # F
 
     .prologue
-    .line 95
     iput p1, p0, Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer;->mLongPressPanelRemoveBtnAngle:F
 
     return p1
@@ -2992,7 +2702,6 @@
     .param p1, "x1"    # F
 
     .prologue
-    .line 95
     iput p1, p0, Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer;->mTurnOffEffectRatio:F
 
     return p1
@@ -3005,7 +2714,6 @@
     .param p2, "x2"    # Z
 
     .prologue
-    .line 95
     invoke-direct {p0, p1, p2}, Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer;->startActivityOrTask(Landroid/content/Intent;Z)V
 
     return-void
@@ -3016,7 +2724,6 @@
     .param p0, "x0"    # Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer;
 
     .prologue
-    .line 95
     invoke-direct {p0}, Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer;->getTorchStatus()Z
 
     move-result v0
@@ -3029,7 +2736,6 @@
     .param p0, "x0"    # Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer;
 
     .prologue
-    .line 95
     invoke-direct {p0}, Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer;->toggleTorch()V
 
     return-void
@@ -3040,7 +2746,6 @@
     .param p0, "x0"    # Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer;
 
     .prologue
-    .line 95
     invoke-direct {p0}, Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer;->screenCapture()V
 
     return-void
@@ -3051,7 +2756,6 @@
     .param p0, "x0"    # Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer;
 
     .prologue
-    .line 95
     iget-object v0, p0, Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer;->mScreenWriteRecovery:Ljava/lang/Runnable;
 
     return-object v0
@@ -3062,7 +2766,6 @@
     .param p0, "x0"    # Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer;
 
     .prologue
-    .line 95
     iget-object v0, p0, Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer;->mDisplayMetrics:Landroid/util/DisplayMetrics;
 
     return-object v0
@@ -3073,7 +2776,6 @@
     .param p0, "x0"    # Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer;
 
     .prologue
-    .line 95
     iget-object v0, p0, Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer;->mEndFloatingBgArea:Landroid/graphics/Rect;
 
     return-object v0
@@ -3084,7 +2786,6 @@
     .param p0, "x0"    # Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer;
 
     .prologue
-    .line 95
     iget-object v0, p0, Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer;->BLOCK_LIST:[Ljava/lang/String;
 
     return-object v0
@@ -3095,7 +2796,6 @@
     .param p0, "x0"    # Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer;
 
     .prologue
-    .line 95
     iget v0, p0, Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer;->LONG_PRESS_PANEL_BUTTON_SIZE:I
 
     return v0
@@ -3106,7 +2806,6 @@
     .param p0, "x0"    # Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer;
 
     .prologue
-    .line 95
     iget v0, p0, Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer;->LONG_PRESS_PANEL_BUTTON_BG_WIDTH:I
 
     return v0
@@ -3117,7 +2816,6 @@
     .param p0, "x0"    # Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer;
 
     .prologue
-    .line 95
     iget v0, p0, Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer;->LONG_PRESS_PANEL_BUTTON_BG_HEIGHT:I
 
     return v0
@@ -3128,7 +2826,6 @@
     .param p0, "x0"    # Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer;
 
     .prologue
-    .line 95
     iget-boolean v0, p0, Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer;->mIsTablet:Z
 
     return v0
@@ -3139,7 +2836,6 @@
     .param p0, "x0"    # Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer;
 
     .prologue
-    .line 95
     iget v0, p0, Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer;->FIXED_SHORTCUT_SHADOW_HEIGHT_PX:I
 
     return v0
@@ -3150,7 +2846,6 @@
     .param p0, "x0"    # Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer;
 
     .prologue
-    .line 95
     iget-object v0, p0, Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer;->mEndFloatingEditBtnArea:Landroid/graphics/Rect;
 
     return-object v0
@@ -3161,7 +2856,6 @@
     .param p0, "x0"    # Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer;
 
     .prologue
-    .line 95
     iget-object v0, p0, Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer;->mEndFloatingRemoveBtnArea:Landroid/graphics/Rect;
 
     return-object v0
@@ -3172,7 +2866,6 @@
     .param p0, "x0"    # Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer;
 
     .prologue
-    .line 95
     iget-object v0, p0, Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer;->mEndFloatingEditBgArea:Landroid/graphics/Rect;
 
     return-object v0
@@ -3183,7 +2876,6 @@
     .param p0, "x0"    # Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer;
 
     .prologue
-    .line 95
     iget-object v0, p0, Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer;->mEndFloatingRemoveBgArea:Landroid/graphics/Rect;
 
     return-object v0
@@ -3194,7 +2886,6 @@
     .param p0, "x0"    # Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer;
 
     .prologue
-    .line 95
     iget-object v0, p0, Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer;->mEndFloatingEditConflictArea:Landroid/graphics/Rect;
 
     return-object v0
@@ -3205,7 +2896,6 @@
     .param p0, "x0"    # Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer;
 
     .prologue
-    .line 95
     iget-object v0, p0, Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer;->mCurrentPackage:Ljava/lang/String;
 
     return-object v0
@@ -3216,7 +2906,6 @@
     .param p0, "x0"    # Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer;
 
     .prologue
-    .line 95
     iget-object v0, p0, Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer;->mEndFloatingRemoveConflictArea:Landroid/graphics/Rect;
 
     return-object v0
@@ -3228,7 +2917,6 @@
     .param p1, "x1"    # Ljava/lang/String;
 
     .prologue
-    .line 95
     iput-object p1, p0, Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer;->mCurrentPackage:Ljava/lang/String;
 
     return-object p1
@@ -3239,7 +2927,6 @@
     .param p0, "x0"    # Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer;
 
     .prologue
-    .line 95
     iget v0, p0, Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer;->LONG_PRESS_PANEL_TOP_EMPTY_SPACE_PX:I
 
     return v0
@@ -3250,7 +2937,6 @@
     .param p0, "x0"    # Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer;
 
     .prologue
-    .line 95
     iget-object v0, p0, Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer;->mMainCharacter:Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer$ToolBoxCharacter;
 
     return-object v0
@@ -3261,7 +2947,6 @@
     .param p0, "x0"    # Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer;
 
     .prologue
-    .line 95
     iget-object v0, p0, Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer;->mEndFloatingBg:Landroid/graphics/drawable/Drawable;
 
     return-object v0
@@ -3272,7 +2957,6 @@
     .param p0, "x0"    # Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer;
 
     .prologue
-    .line 95
     iget-object v0, p0, Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer;->mEndFloatingEditBtn:Landroid/graphics/drawable/Drawable;
 
     return-object v0
@@ -3283,7 +2967,6 @@
     .param p0, "x0"    # Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer;
 
     .prologue
-    .line 95
     iget-object v0, p0, Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer;->mEndFloatingRemoveBtn:Landroid/graphics/drawable/Drawable;
 
     return-object v0
@@ -3294,7 +2977,6 @@
     .param p0, "x0"    # Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer;
 
     .prologue
-    .line 95
     iget-object v0, p0, Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer;->mEndFloatingEditBg:Landroid/graphics/drawable/Drawable;
 
     return-object v0
@@ -3305,7 +2987,6 @@
     .param p0, "x0"    # Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer;
 
     .prologue
-    .line 95
     iget-object v0, p0, Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer;->mEndFloatingEditBtnFocused:Landroid/graphics/drawable/Drawable;
 
     return-object v0
@@ -3316,7 +2997,6 @@
     .param p0, "x0"    # Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer;
 
     .prologue
-    .line 95
     iget-object v0, p0, Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer;->mEndFloatingRemoveBg:Landroid/graphics/drawable/Drawable;
 
     return-object v0
@@ -3327,7 +3007,6 @@
     .param p0, "x0"    # Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer;
 
     .prologue
-    .line 95
     iget-object v0, p0, Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer;->mEndFloatingRemoveBtnFocused:Landroid/graphics/drawable/Drawable;
 
     return-object v0
@@ -3337,64 +3016,52 @@
     .locals 1
 
     .prologue
-    .line 1543
     invoke-direct {p0}, Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer;->releaseDVFS()V
 
-    .line 1545
     iget-boolean v0, p0, Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer;->mDVFSLockAcquired:Z
 
     if-nez v0, :cond_4
 
-    .line 1546
     iget-object v0, p0, Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer;->mDVFSHelper:Landroid/os/DVFSHelper;
 
     if-eqz v0, :cond_0
 
-    .line 1547
     iget-object v0, p0, Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer;->mDVFSHelper:Landroid/os/DVFSHelper;
 
     invoke-virtual {v0}, Landroid/os/DVFSHelper;->acquire()V
 
-    .line 1549
     :cond_0
     iget-object v0, p0, Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer;->mDVFSHelperGPU:Landroid/os/DVFSHelper;
 
     if-eqz v0, :cond_1
 
-    .line 1550
     iget-object v0, p0, Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer;->mDVFSHelperGPU:Landroid/os/DVFSHelper;
 
     invoke-virtual {v0}, Landroid/os/DVFSHelper;->acquire()V
 
-    .line 1552
     :cond_1
     iget-object v0, p0, Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer;->mDVFSHelperBUS:Landroid/os/DVFSHelper;
 
     if-eqz v0, :cond_2
 
-    .line 1553
     iget-object v0, p0, Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer;->mDVFSHelperBUS:Landroid/os/DVFSHelper;
 
     invoke-virtual {v0}, Landroid/os/DVFSHelper;->acquire()V
 
-    .line 1555
     :cond_2
     iget-object v0, p0, Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer;->mDVFSHelperCore:Landroid/os/DVFSHelper;
 
     if-eqz v0, :cond_3
 
-    .line 1556
     iget-object v0, p0, Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer;->mDVFSHelperCore:Landroid/os/DVFSHelper;
 
     invoke-virtual {v0}, Landroid/os/DVFSHelper;->acquire()V
 
-    .line 1558
     :cond_3
     const/4 v0, 0x1
 
     iput-boolean v0, p0, Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer;->mDVFSLockAcquired:Z
 
-    .line 1560
     :cond_4
     return-void
 .end method
@@ -3409,75 +3076,60 @@
 
     const/4 v6, 0x0
 
-    .line 2060
     iget-object v4, p0, Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer;->mUpdateVisibility:Ljava/lang/Runnable;
 
     invoke-virtual {p0, v4}, Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer;->removeCallbacks(Ljava/lang/Runnable;)Z
 
-    .line 2061
     iget-object v4, p0, Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer;->mUpdateLongPressPanelRect:Ljava/lang/Runnable;
 
     invoke-virtual {p0, v4}, Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer;->removeCallbacks(Ljava/lang/Runnable;)Z
 
-    .line 2062
     iget-object v4, p0, Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer;->mCheckEnvironment:Ljava/lang/Runnable;
 
     invoke-virtual {p0, v4}, Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer;->removeCallbacks(Ljava/lang/Runnable;)Z
 
-    .line 2063
     iget-object v4, p0, Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer;->mTouchClickRunnable:Ljava/lang/Runnable;
 
     invoke-virtual {p0, v4}, Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer;->removeCallbacks(Ljava/lang/Runnable;)Z
 
-    .line 2064
     iget-object v4, p0, Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer;->mTouchLongClickRunnable:Ljava/lang/Runnable;
 
     invoke-virtual {p0, v4}, Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer;->removeCallbacks(Ljava/lang/Runnable;)Z
 
-    .line 2065
     iget-object v4, p0, Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer;->mTouchUpOrCancelRunnable:Ljava/lang/Runnable;
 
     invoke-virtual {p0, v4}, Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer;->removeCallbacks(Ljava/lang/Runnable;)Z
 
-    .line 2066
     iget-object v4, p0, Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer;->mPlayAnimationSleepRunnable:Ljava/lang/Runnable;
 
     invoke-virtual {p0, v4}, Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer;->removeCallbacks(Ljava/lang/Runnable;)Z
 
-    .line 2067
     iget-object v4, p0, Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer;->mPlayAnimationWakeupRunnable:Ljava/lang/Runnable;
 
     invoke-virtual {p0, v4}, Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer;->removeCallbacks(Ljava/lang/Runnable;)Z
 
-    .line 2068
     iget-object v4, p0, Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer;->mPlayAnimationFadeInRunnable:Ljava/lang/Runnable;
 
     invoke-virtual {p0, v4}, Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer;->removeCallbacks(Ljava/lang/Runnable;)Z
 
-    .line 2069
     iget-object v4, p0, Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer;->mPlayAnimationFadeOutRunnable:Ljava/lang/Runnable;
 
     invoke-virtual {p0, v4}, Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer;->removeCallbacks(Ljava/lang/Runnable;)Z
 
-    .line 2070
     iget-object v4, p0, Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer;->mPlayAnimationExpandRunnable:Ljava/lang/Runnable;
 
     invoke-virtual {p0, v4}, Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer;->removeCallbacks(Ljava/lang/Runnable;)Z
 
-    .line 2071
     iget-object v4, p0, Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer;->mPlayAnimationCollapseRunnable:Ljava/lang/Runnable;
 
     invoke-virtual {p0, v4}, Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer;->removeCallbacks(Ljava/lang/Runnable;)Z
 
-    .line 2072
     iget-object v4, p0, Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer;->mPlayAnimationEnterRunnable:Ljava/lang/Runnable;
 
     invoke-virtual {p0, v4}, Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer;->removeCallbacks(Ljava/lang/Runnable;)Z
 
-    .line 2075
     invoke-direct {p0, v7}, Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer;->setEnableVSync(Z)V
 
-    .line 2077
     iget-object v4, p0, Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer;->mObjects:Ljava/util/ArrayList;
 
     invoke-virtual {v4}, Ljava/util/ArrayList;->isEmpty()Z
@@ -3486,7 +3138,6 @@
 
     if-nez v4, :cond_3
 
-    .line 2078
     iget-object v4, p0, Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer;->mObjects:Ljava/util/ArrayList;
 
     invoke-virtual {v4}, Ljava/util/ArrayList;->iterator()Ljava/util/Iterator;
@@ -3508,106 +3159,85 @@
 
     check-cast v2, Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer$ToolBoxMenu;
 
-    .line 2079
     .local v2, "m":Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer$ToolBoxMenu;
     iget-object v4, v2, Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer$ToolBoxMenu;->aniExpand:Landroid/animation/ValueAnimator;
 
     invoke-virtual {v4}, Landroid/animation/ValueAnimator;->removeAllListeners()V
 
-    .line 2080
     iget-object v4, v2, Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer$ToolBoxMenu;->aniExpand:Landroid/animation/ValueAnimator;
 
     invoke-virtual {v4}, Landroid/animation/ValueAnimator;->removeAllUpdateListeners()V
 
-    .line 2081
     iput-object v6, v2, Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer$ToolBoxMenu;->aniExpand:Landroid/animation/ValueAnimator;
 
-    .line 2082
     iput-object v6, v2, Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer$ToolBoxMenu;->action:Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer$ToolBoxAction;
 
-    .line 2083
     iget-object v4, v2, Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer$ToolBoxMenu;->shadowBitmap:Landroid/graphics/Bitmap;
 
     if-eqz v4, :cond_0
 
-    .line 2084
     iget-object v4, v2, Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer$ToolBoxMenu;->shadowBitmap:Landroid/graphics/Bitmap;
 
     invoke-virtual {v4}, Landroid/graphics/Bitmap;->recycle()V
 
-    .line 2085
     iput-object v6, v2, Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer$ToolBoxMenu;->shadowBitmap:Landroid/graphics/Bitmap;
 
     goto :goto_0
 
-    .line 2088
     .end local v2    # "m":Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer$ToolBoxMenu;
     :cond_1
     iget-object v4, p0, Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer;->mObjects:Ljava/util/ArrayList;
 
     invoke-virtual {v4}, Ljava/util/ArrayList;->clear()V
 
-    .line 2090
     iget-object v4, p0, Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer;->mExpandAnimator:Landroid/animation/ValueAnimator;
 
     invoke-virtual {v4}, Landroid/animation/ValueAnimator;->removeAllListeners()V
 
-    .line 2091
     iget-object v4, p0, Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer;->mExpandAnimator:Landroid/animation/ValueAnimator;
 
     invoke-virtual {v4}, Landroid/animation/ValueAnimator;->removeAllUpdateListeners()V
 
-    .line 2093
     iget-object v4, p0, Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer;->mTransparentAnimator:Landroid/animation/ValueAnimator;
 
     invoke-virtual {v4}, Landroid/animation/ValueAnimator;->removeAllListeners()V
 
-    .line 2094
     iget-object v4, p0, Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer;->mTransparentAnimator:Landroid/animation/ValueAnimator;
 
     invoke-virtual {v4}, Landroid/animation/ValueAnimator;->removeAllUpdateListeners()V
 
-    .line 2096
     iget-object v4, p0, Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer;->mSleepAnimator:Landroid/animation/ValueAnimator;
 
     invoke-virtual {v4}, Landroid/animation/ValueAnimator;->removeAllListeners()V
 
-    .line 2097
     iget-object v4, p0, Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer;->mSleepAnimator:Landroid/animation/ValueAnimator;
 
     invoke-virtual {v4}, Landroid/animation/ValueAnimator;->removeAllUpdateListeners()V
 
-    .line 2099
     iget-object v4, p0, Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer;->mEnterAnimator:Landroid/animation/ValueAnimator;
 
     invoke-virtual {v4}, Landroid/animation/ValueAnimator;->removeAllListeners()V
 
-    .line 2100
     iget-object v4, p0, Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer;->mEnterAnimator:Landroid/animation/ValueAnimator;
 
     invoke-virtual {v4}, Landroid/animation/ValueAnimator;->removeAllUpdateListeners()V
 
-    .line 2102
     iget-object v4, p0, Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer;->mLongPressPanelAnimator:Landroid/animation/ValueAnimator;
 
     invoke-virtual {v4}, Landroid/animation/ValueAnimator;->removeAllListeners()V
 
-    .line 2103
     iget-object v4, p0, Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer;->mLongPressPanelAnimator:Landroid/animation/ValueAnimator;
 
     invoke-virtual {v4}, Landroid/animation/ValueAnimator;->removeAllUpdateListeners()V
 
-    .line 2105
     iget-object v4, p0, Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer;->mTurnOffAnimator:Landroid/animation/ValueAnimator;
 
     invoke-virtual {v4}, Landroid/animation/ValueAnimator;->removeAllListeners()V
 
-    .line 2106
     iget-object v4, p0, Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer;->mTurnOffAnimator:Landroid/animation/ValueAnimator;
 
     invoke-virtual {v4}, Landroid/animation/ValueAnimator;->removeAllUpdateListeners()V
 
-    .line 2108
     iget-object v4, p0, Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer;->mShakeAnimators:Ljava/util/ArrayList;
 
     invoke-virtual {v4}, Ljava/util/ArrayList;->iterator()Ljava/util/Iterator;
@@ -3630,19 +3260,15 @@
     .local v0, "a":Landroid/animation/Animator;
     move-object v3, v0
 
-    .line 2109
     check-cast v3, Landroid/animation/ValueAnimator;
 
-    .line 2110
     .local v3, "va":Landroid/animation/ValueAnimator;
     invoke-virtual {v3}, Landroid/animation/ValueAnimator;->removeAllListeners()V
 
-    .line 2111
     invoke-virtual {v3}, Landroid/animation/ValueAnimator;->removeAllUpdateListeners()V
 
     goto :goto_1
 
-    .line 2113
     .end local v0    # "a":Landroid/animation/Animator;
     .end local v3    # "va":Landroid/animation/ValueAnimator;
     :cond_2
@@ -3650,62 +3276,49 @@
 
     invoke-virtual {v4}, Ljava/util/ArrayList;->clear()V
 
-    .line 2116
-    const-string/jumbo v4, "toolbox"
+    const-string v4, "toolbox"
 
     const-string v5, "ToolBox disposed..."
 
     invoke-static {v4, v5}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 2119
     .end local v1    # "i$":Ljava/util/Iterator;
     :cond_3
     iget-object v4, p0, Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer;->mPositionAnimatorX:Landroid/animation/ValueAnimator;
 
     if-eqz v4, :cond_4
 
-    .line 2120
     iget-object v4, p0, Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer;->mPositionAnimatorX:Landroid/animation/ValueAnimator;
 
     invoke-virtual {v4}, Landroid/animation/ValueAnimator;->removeAllUpdateListeners()V
 
-    .line 2121
     iput-object v6, p0, Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer;->mPositionAnimatorX:Landroid/animation/ValueAnimator;
 
-    .line 2122
     iget-object v4, p0, Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer;->mPositionAnimatorY:Landroid/animation/ValueAnimator;
 
     invoke-virtual {v4}, Landroid/animation/ValueAnimator;->removeAllListeners()V
 
-    .line 2123
     iget-object v4, p0, Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer;->mPositionAnimatorY:Landroid/animation/ValueAnimator;
 
     invoke-virtual {v4}, Landroid/animation/ValueAnimator;->removeAllUpdateListeners()V
 
-    .line 2124
     iput-object v6, p0, Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer;->mPositionAnimatorY:Landroid/animation/ValueAnimator;
 
-    .line 2127
     :cond_4
     iput-boolean v7, p0, Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer;->mExpanded:Z
 
-    .line 2128
     iput v8, p0, Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer;->mEnterProgressValue:F
 
-    .line 2129
     iput v8, p0, Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer;->mExpandProgressValue:F
 
-    .line 2130
     iput v7, p0, Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer;->mMainCharacterDegree:I
 
-    .line 2131
     iget v4, p0, Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer;->LONG_PRESS_PANEL_HEIGHT_PX:I
 
     neg-int v4, v4
 
     iput v4, p0, Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer;->mLongPressPanelPosition:I
 
-    .line 2133
     return-void
 .end method
 
@@ -3717,18 +3330,14 @@
     .param p4, "isReCalculation"    # Z
 
     .prologue
-    .line 950
     const/4 v11, 0x0
 
-    .line 951
     .local v11, "halfWidth":I
     const/4 v10, 0x0
 
-    .line 952
     .local v10, "halfHeight":I
     const/4 v8, 0x0
 
-    .line 953
     .local v8, "boxAnimating":Z
     const/16 v27, 0x0
 
@@ -3738,7 +3347,6 @@
 
     iput v0, v1, Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer;->mMainCharacterDecreaseAmount:I
 
-    .line 955
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer;->mExpandAnimator:Landroid/animation/ValueAnimator;
@@ -3759,7 +3367,6 @@
 
     or-int v8, v8, v27
 
-    .line 956
     :cond_0
     move-object/from16 v0, p0
 
@@ -3781,7 +3388,6 @@
 
     or-int v8, v8, v27
 
-    .line 959
     :cond_1
     move-object/from16 v0, p0
 
@@ -3808,7 +3414,6 @@
 
     check-cast v14, Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer$ToolBoxMenu;
 
-    .line 960
     .local v14, "m":Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer$ToolBoxMenu;
     iget-object v0, v14, Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer$ToolBoxMenu;->operationType:Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer$OperationType;
 
@@ -3830,7 +3435,6 @@
 
     iget-object v7, v14, Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer$ToolBoxMenu;->backgroundInverse:Landroid/graphics/drawable/Drawable;
 
-    .line 961
     .local v7, "background":Landroid/graphics/drawable/Drawable;
     :goto_1
     iget-boolean v0, v14, Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer$ToolBoxMenu;->isEnabled:Z
@@ -3860,7 +3464,6 @@
 
     float-to-int v6, v0
 
-    .line 963
     .local v6, "alpha":I
     iget-boolean v0, v14, Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer$ToolBoxMenu;->isAnimating:Z
 
@@ -3868,14 +3471,12 @@
 
     or-int v8, v8, v27
 
-    .line 965
     instance-of v0, v14, Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer$ToolBoxCharacter;
 
     move/from16 v27, v0
 
     if-eqz v27, :cond_7
 
-    .line 966
     move-object/from16 v0, p0
 
     iget v0, v0, Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer;->FIXED_MAIN_ITEM_WIDTH:I
@@ -3884,7 +3485,6 @@
 
     div-int/lit8 v11, v27, 0x2
 
-    .line 967
     move-object/from16 v0, p0
 
     iget v0, v0, Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer;->FIXED_MAIN_ITEM_HEIGHT:I
@@ -3893,7 +3493,6 @@
 
     div-int/lit8 v10, v27, 0x2
 
-    .line 968
     iget-object v0, v14, Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer$ToolBoxMenu;->bounds:Landroid/graphics/Rect;
 
     move-object/from16 v27, v0
@@ -3908,7 +3507,6 @@
 
     invoke-virtual/range {v27 .. v31}, Landroid/graphics/Rect;->set(IIII)V
 
-    .line 972
     move-object/from16 v0, p0
 
     iget v0, v0, Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer;->mEnterProgressValue:F
@@ -3921,7 +3519,6 @@
 
     if-lez v27, :cond_5
 
-    .line 973
     move-object/from16 v0, p0
 
     iget v0, v0, Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer;->mEnterProgressValue:F
@@ -3932,7 +3529,6 @@
 
     sub-float v23, v27, v28
 
-    .line 974
     .local v23, "progress":F
     const v27, 0x3e75c28f    # 0.24f
 
@@ -3942,7 +3538,6 @@
 
     move-result v23
 
-    .line 975
     move-object/from16 v0, p0
 
     iget v0, v0, Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer;->FIXED_MAIN_ITEM_WIDTH:I
@@ -3969,7 +3564,6 @@
 
     iput v0, v1, Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer;->mMainCharacterDecreaseAmount:I
 
-    .line 983
     .end local v23    # "progress":F
     :goto_3
     iget-object v0, v14, Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer$ToolBoxMenu;->bounds:Landroid/graphics/Rect;
@@ -3990,7 +3584,6 @@
 
     invoke-virtual/range {v27 .. v29}, Landroid/graphics/Rect;->inset(II)V
 
-    .line 984
     iget-object v0, v14, Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer$ToolBoxMenu;->bounds:Landroid/graphics/Rect;
 
     move-object/from16 v27, v0
@@ -3999,7 +3592,6 @@
 
     invoke-virtual {v7, v0}, Landroid/graphics/drawable/Drawable;->setBounds(Landroid/graphics/Rect;)V
 
-    .line 985
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer;->mGlobalRect:Landroid/graphics/Rect;
@@ -4014,7 +3606,6 @@
 
     goto/16 :goto_0
 
-    .line 960
     .end local v6    # "alpha":I
     .end local v7    # "background":Landroid/graphics/drawable/Drawable;
     :cond_3
@@ -4022,14 +3613,12 @@
 
     goto/16 :goto_1
 
-    .line 961
     .restart local v7    # "background":Landroid/graphics/drawable/Drawable;
     :cond_4
     const/16 v27, 0x80
 
     goto/16 :goto_2
 
-    .line 977
     .restart local v6    # "alpha":I
     :cond_5
     move-object/from16 v0, p0
@@ -4044,7 +3633,6 @@
 
     if-lez v27, :cond_6
 
-    .line 978
     move-object/from16 v0, p0
 
     iget v0, v0, Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer;->FIXED_MAIN_ITEM_WIDTH:I
@@ -4079,7 +3667,6 @@
 
     goto :goto_3
 
-    .line 981
     :cond_6
     move-object/from16 v0, p0
 
@@ -4127,7 +3714,6 @@
 
     goto/16 :goto_3
 
-    .line 987
     :cond_7
     move-object/from16 v0, p0
 
@@ -4141,10 +3727,8 @@
 
     if-eqz v27, :cond_2
 
-    .line 990
     invoke-virtual {v7, v6}, Landroid/graphics/drawable/Drawable;->setAlpha(I)V
 
-    .line 991
     move-object/from16 v0, p0
 
     iget v0, v0, Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer;->FIXED_SHORTCUT_ITEM_SIZE:I
@@ -4153,7 +3737,6 @@
 
     div-int/lit8 v11, v27, 0x2
 
-    .line 992
     move-object/from16 v0, p0
 
     iget v0, v0, Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer;->FIXED_SHORTCUT_ITEM_SIZE:I
@@ -4162,7 +3745,6 @@
 
     div-int/lit8 v10, v27, 0x2
 
-    .line 993
     iget-object v0, v14, Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer$ToolBoxMenu;->bounds:Landroid/graphics/Rect;
 
     move-object/from16 v27, v0
@@ -4221,7 +3803,6 @@
 
     invoke-virtual/range {v27 .. v31}, Landroid/graphics/Rect;->set(IIII)V
 
-    .line 995
     iget-object v0, v14, Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer$ToolBoxMenu;->bounds:Landroid/graphics/Rect;
 
     move-object/from16 v27, v0
@@ -4240,7 +3821,6 @@
 
     invoke-virtual/range {v27 .. v29}, Landroid/graphics/Rect;->inset(II)V
 
-    .line 996
     iget-object v0, v14, Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer$ToolBoxMenu;->bounds:Landroid/graphics/Rect;
 
     move-object/from16 v27, v0
@@ -4249,7 +3829,6 @@
 
     invoke-virtual {v7, v0}, Landroid/graphics/drawable/Drawable;->setBounds(Landroid/graphics/Rect;)V
 
-    .line 997
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer;->mGlobalRect:Landroid/graphics/Rect;
@@ -4264,7 +3843,6 @@
 
     goto/16 :goto_0
 
-    .line 1003
     .end local v6    # "alpha":I
     .end local v7    # "background":Landroid/graphics/drawable/Drawable;
     .end local v14    # "m":Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer$ToolBoxMenu;
@@ -4315,7 +3893,6 @@
 
     iput v0, v1, Landroid/graphics/Rect;->bottom:I
 
-    .line 1006
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer;->mGlobalRect:Landroid/graphics/Rect;
@@ -4366,19 +3943,15 @@
 
     iput v0, v1, Landroid/graphics/Rect;->bottom:I
 
-    .line 1009
     move-object/from16 v0, p0
 
     iput-boolean v8, v0, Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer;->mBoxAnimating:Z
 
-    .line 1012
     if-eqz p4, :cond_12
 
-    .line 1029
     :cond_9
     invoke-direct/range {p0 .. p0}, Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer;->updatePosition()V
 
-    .line 1032
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer;->mDrawGlobalRect:Landroid/graphics/Rect;
@@ -4393,7 +3966,6 @@
 
     invoke-virtual/range {v27 .. v28}, Landroid/graphics/Rect;->set(Landroid/graphics/Rect;)V
 
-    .line 1033
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer;->mDrawGlobalRect:Landroid/graphics/Rect;
@@ -4420,7 +3992,6 @@
 
     add-int v25, v27, v28
 
-    .line 1034
     .local v25, "zeroOffsetX":I
     move-object/from16 v0, p0
 
@@ -4448,7 +4019,6 @@
 
     add-int v26, v27, v28
 
-    .line 1035
     .local v26, "zeroOffsetY":I
     move-object/from16 v0, p0
 
@@ -4470,7 +4040,6 @@
 
     invoke-virtual/range {v27 .. v29}, Landroid/graphics/Rect;->offsetTo(II)V
 
-    .line 1038
     move-object/from16 v0, p0
 
     iget v0, v0, Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer;->mMainCharacterDegree:I
@@ -4487,7 +4056,6 @@
 
     if-eqz v27, :cond_b
 
-    .line 1039
     :cond_a
     move-object/from16 v0, p0
 
@@ -4503,7 +4071,6 @@
 
     invoke-virtual/range {v27 .. v28}, Landroid/graphics/drawable/Drawable;->setBounds(Landroid/graphics/Rect;)V
 
-    .line 1040
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer;->mFloatingBoxBg:Landroid/graphics/drawable/Drawable;
@@ -4528,7 +4095,6 @@
 
     invoke-virtual/range {v27 .. v28}, Landroid/graphics/drawable/Drawable;->setAlpha(I)V
 
-    .line 1041
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer;->mFloatingBoxBg:Landroid/graphics/drawable/Drawable;
@@ -4541,7 +4107,6 @@
 
     invoke-virtual {v0, v1}, Landroid/graphics/drawable/Drawable;->draw(Landroid/graphics/Canvas;)V
 
-    .line 1045
     :cond_b
     move-object/from16 v0, p0
 
@@ -4553,7 +4118,6 @@
 
     move-result v20
 
-    .line 1046
     .local v20, "objectSize":I
     add-int/lit8 v13, v20, -0x1
 
@@ -4561,7 +4125,6 @@
     :goto_4
     if-ltz v13, :cond_16
 
-    .line 1047
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer;->mObjects:Ljava/util/ArrayList;
@@ -4576,7 +4139,6 @@
 
     check-cast v14, Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer$ToolBoxMenu;
 
-    .line 1048
     .restart local v14    # "m":Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer$ToolBoxMenu;
     iget-object v0, v14, Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer$ToolBoxMenu;->operationType:Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer$OperationType;
 
@@ -4598,7 +4160,6 @@
 
     iget-object v7, v14, Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer$ToolBoxMenu;->backgroundInverse:Landroid/graphics/drawable/Drawable;
 
-    .line 1049
     .restart local v7    # "background":Landroid/graphics/drawable/Drawable;
     :goto_5
     iget-boolean v0, v14, Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer$ToolBoxMenu;->isEnabled:Z
@@ -4628,7 +4189,6 @@
 
     float-to-int v6, v0
 
-    .line 1052
     .restart local v6    # "alpha":I
     iget-object v0, v14, Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer$ToolBoxMenu;->bounds:Landroid/graphics/Rect;
 
@@ -4642,7 +4202,6 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/graphics/Rect;->offset(II)V
 
-    .line 1054
     instance-of v0, v14, Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer$ToolBoxCharacter;
 
     move/from16 v27, v0
@@ -4651,10 +4210,8 @@
 
     move-object v15, v14
 
-    .line 1055
     check-cast v15, Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer$ToolBoxCharacter;
 
-    .line 1058
     .local v15, "main":Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer$ToolBoxCharacter;
     iget-object v0, v15, Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer$ToolBoxCharacter;->shadow:Landroid/graphics/drawable/BitmapDrawable;
 
@@ -4662,7 +4219,6 @@
 
     if-eqz v27, :cond_c
 
-    .line 1059
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer;->mShadowRect:Landroid/graphics/Rect;
@@ -4675,7 +4231,6 @@
 
     invoke-virtual/range {v27 .. v28}, Landroid/graphics/Rect;->set(Landroid/graphics/Rect;)V
 
-    .line 1060
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer;->mShadowRect:Landroid/graphics/Rect;
@@ -4692,7 +4247,6 @@
 
     invoke-virtual/range {v27 .. v29}, Landroid/graphics/Rect;->offset(II)V
 
-    .line 1061
     iget-object v0, v15, Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer$ToolBoxCharacter;->shadow:Landroid/graphics/drawable/BitmapDrawable;
 
     move-object/from16 v27, v0
@@ -4705,7 +4259,6 @@
 
     invoke-virtual/range {v27 .. v28}, Landroid/graphics/drawable/BitmapDrawable;->setBounds(Landroid/graphics/Rect;)V
 
-    .line 1062
     iget-object v0, v15, Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer$ToolBoxCharacter;->shadow:Landroid/graphics/drawable/BitmapDrawable;
 
     move-object/from16 v27, v0
@@ -4742,7 +4295,6 @@
 
     invoke-virtual/range {v27 .. v28}, Landroid/graphics/drawable/BitmapDrawable;->setAlpha(I)V
 
-    .line 1063
     iget-object v0, v15, Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer$ToolBoxCharacter;->shadow:Landroid/graphics/drawable/BitmapDrawable;
 
     move-object/from16 v27, v0
@@ -4753,13 +4305,11 @@
 
     invoke-virtual {v0, v1}, Landroid/graphics/drawable/BitmapDrawable;->draw(Landroid/graphics/Canvas;)V
 
-    .line 1067
     :cond_c
     iget-object v0, v15, Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer$ToolBoxCharacter;->background:Landroid/graphics/drawable/Drawable;
 
     move-object/from16 v18, v0
 
-    .line 1068
     .local v18, "mainNormalBg":Landroid/graphics/drawable/Drawable;
     iget-object v0, v15, Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer$ToolBoxCharacter;->bounds:Landroid/graphics/Rect;
 
@@ -4769,7 +4319,6 @@
 
     move-result v16
 
-    .line 1069
     .local v16, "mainCenterX":I
     iget-object v0, v15, Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer$ToolBoxCharacter;->bounds:Landroid/graphics/Rect;
 
@@ -4779,7 +4328,6 @@
 
     move-result v17
 
-    .line 1070
     .local v17, "mainCenterY":I
     iget-object v0, v15, Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer$ToolBoxCharacter;->bounds:Landroid/graphics/Rect;
 
@@ -4791,7 +4339,6 @@
 
     invoke-virtual {v0, v1}, Landroid/graphics/drawable/Drawable;->setBounds(Landroid/graphics/Rect;)V
 
-    .line 1072
     move-object/from16 v0, p0
 
     iget v0, v0, Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer;->mMainCharacterDegree:I
@@ -4834,7 +4381,6 @@
 
     invoke-virtual {v0, v1, v2, v3}, Landroid/graphics/Canvas;->rotate(FFF)V
 
-    .line 1073
     :cond_d
     move-object/from16 v0, p0
 
@@ -4856,7 +4402,6 @@
 
     invoke-virtual {v0, v1}, Landroid/graphics/drawable/Drawable;->draw(Landroid/graphics/Canvas;)V
 
-    .line 1074
     :cond_e
     move-object/from16 v0, p0
 
@@ -4906,13 +4451,11 @@
 
     invoke-virtual {v0, v1, v2, v3}, Landroid/graphics/Canvas;->rotate(FFF)V
 
-    .line 1076
     :cond_f
     iget-object v0, v15, Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer$ToolBoxCharacter;->backgroundOpen:Landroid/graphics/drawable/Drawable;
 
     move-object/from16 v19, v0
 
-    .line 1077
     .local v19, "mainOpenBg":Landroid/graphics/drawable/Drawable;
     iget-object v0, v15, Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer$ToolBoxCharacter;->bounds:Landroid/graphics/Rect;
 
@@ -4924,7 +4467,6 @@
 
     invoke-virtual {v0, v1}, Landroid/graphics/drawable/Drawable;->setBounds(Landroid/graphics/Rect;)V
 
-    .line 1079
     move-object/from16 v0, p0
 
     iget v0, v0, Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer;->mMainCharacterDegree:I
@@ -4969,7 +4511,6 @@
 
     invoke-virtual {v0, v1, v2, v3}, Landroid/graphics/Canvas;->rotate(FFF)V
 
-    .line 1080
     :cond_10
     move-object/from16 v0, p0
 
@@ -5003,14 +4544,12 @@
 
     invoke-virtual {v0, v1}, Landroid/graphics/drawable/Drawable;->setAlpha(I)V
 
-    .line 1081
     move-object/from16 v0, v19
 
     move-object/from16 v1, p1
 
     invoke-virtual {v0, v1}, Landroid/graphics/drawable/Drawable;->draw(Landroid/graphics/Canvas;)V
 
-    .line 1082
     move-object/from16 v0, p0
 
     iget v0, v0, Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer;->mMainCharacterDegree:I
@@ -5061,7 +4600,6 @@
 
     invoke-virtual {v0, v1, v2, v3}, Landroid/graphics/Canvas;->rotate(FFF)V
 
-    .line 1046
     .end local v15    # "main":Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer$ToolBoxCharacter;
     .end local v16    # "mainCenterX":I
     .end local v17    # "mainCenterY":I
@@ -5073,7 +4611,6 @@
 
     goto/16 :goto_4
 
-    .line 1015
     .end local v6    # "alpha":I
     .end local v7    # "background":Landroid/graphics/drawable/Drawable;
     .end local v13    # "idx":I
@@ -5094,7 +4631,6 @@
 
     move/from16 v24, v0
 
-    .line 1016
     .local v24, "w":I
     move-object/from16 v0, p0
 
@@ -5106,14 +4642,12 @@
 
     iget v9, v0, Landroid/util/DisplayMetrics;->heightPixels:I
 
-    .line 1017
     .local v9, "h":I
     const/16 v21, 0x0
 
     .local v21, "offsetX":I
     const/16 v22, 0x0
 
-    .line 1018
     .local v22, "offsetY":I
     move-object/from16 v0, p0
 
@@ -5147,7 +4681,6 @@
 
     move/from16 v21, v0
 
-    .line 1020
     :cond_13
     :goto_8
     move-object/from16 v0, p0
@@ -5182,14 +4715,12 @@
 
     move/from16 v22, v0
 
-    .line 1022
     :cond_14
     :goto_9
     if-nez v21, :cond_15
 
     if-eqz v22, :cond_9
 
-    .line 1023
     :cond_15
     add-int v27, p2, v21
 
@@ -5209,7 +4740,6 @@
 
     invoke-direct {v0, v1, v2, v3, v4}, Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer;->drawToolBox(Landroid/graphics/Canvas;IIZ)V
 
-    .line 1102
     .end local v9    # "h":I
     .end local v21    # "offsetX":I
     .end local v22    # "offsetY":I
@@ -5217,7 +4747,6 @@
     :cond_16
     return-void
 
-    .line 1019
     .restart local v9    # "h":I
     .restart local v21    # "offsetX":I
     .restart local v22    # "offsetY":I
@@ -5257,7 +4786,6 @@
 
     goto :goto_8
 
-    .line 1021
     :cond_18
     move-object/from16 v0, p0
 
@@ -5291,7 +4819,6 @@
 
     goto :goto_9
 
-    .line 1048
     .end local v9    # "h":I
     .end local v21    # "offsetX":I
     .end local v22    # "offsetY":I
@@ -5306,14 +4833,12 @@
 
     goto/16 :goto_5
 
-    .line 1049
     .restart local v7    # "background":Landroid/graphics/drawable/Drawable;
     :cond_1a
     const/16 v27, 0x80
 
     goto/16 :goto_6
 
-    .line 1085
     .restart local v6    # "alpha":I
     :cond_1b
     if-eqz v6, :cond_11
@@ -5330,14 +4855,12 @@
 
     if-ltz v27, :cond_11
 
-    .line 1088
     iget-object v0, v14, Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer$ToolBoxMenu;->shadow:Landroid/graphics/drawable/BitmapDrawable;
 
     move-object/from16 v27, v0
 
     if-eqz v27, :cond_1c
 
-    .line 1089
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer;->mShadowRect:Landroid/graphics/Rect;
@@ -5350,7 +4873,6 @@
 
     invoke-virtual/range {v27 .. v28}, Landroid/graphics/Rect;->set(Landroid/graphics/Rect;)V
 
-    .line 1090
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer;->mShadowRect:Landroid/graphics/Rect;
@@ -5367,7 +4889,6 @@
 
     invoke-virtual/range {v27 .. v29}, Landroid/graphics/Rect;->offset(II)V
 
-    .line 1091
     iget-object v0, v14, Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer$ToolBoxMenu;->shadow:Landroid/graphics/drawable/BitmapDrawable;
 
     move-object/from16 v27, v0
@@ -5380,7 +4901,6 @@
 
     invoke-virtual/range {v27 .. v28}, Landroid/graphics/drawable/BitmapDrawable;->setBounds(Landroid/graphics/Rect;)V
 
-    .line 1092
     iget-object v0, v14, Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer$ToolBoxMenu;->shadow:Landroid/graphics/drawable/BitmapDrawable;
 
     move-object/from16 v27, v0
@@ -5401,7 +4921,6 @@
 
     invoke-virtual/range {v27 .. v28}, Landroid/graphics/drawable/BitmapDrawable;->setAlpha(I)V
 
-    .line 1093
     iget-object v0, v14, Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer$ToolBoxMenu;->shadow:Landroid/graphics/drawable/BitmapDrawable;
 
     move-object/from16 v27, v0
@@ -5412,7 +4931,6 @@
 
     invoke-virtual {v0, v1}, Landroid/graphics/drawable/BitmapDrawable;->draw(Landroid/graphics/Canvas;)V
 
-    .line 1097
     :cond_1c
     iget-object v0, v14, Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer$ToolBoxMenu;->bounds:Landroid/graphics/Rect;
 
@@ -5422,7 +4940,6 @@
 
     invoke-virtual {v7, v0}, Landroid/graphics/drawable/Drawable;->setBounds(Landroid/graphics/Rect;)V
 
-    .line 1098
     move-object/from16 v0, p1
 
     invoke-virtual {v7, v0}, Landroid/graphics/drawable/Drawable;->draw(Landroid/graphics/Canvas;)V
@@ -5434,28 +4951,23 @@
     .locals 2
 
     .prologue
-    .line 2400
     iget-object v1, p0, Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer;->mCoverManager:Lcom/samsung/android/cover/CoverManager;
 
     if-eqz v1, :cond_0
 
-    .line 2401
     iget-object v1, p0, Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer;->mCoverManager:Lcom/samsung/android/cover/CoverManager;
 
     invoke-virtual {v1}, Lcom/samsung/android/cover/CoverManager;->getCoverState()Lcom/samsung/android/cover/CoverState;
 
     move-result-object v0
 
-    .line 2402
     .local v0, "state":Lcom/samsung/android/cover/CoverState;
     if-eqz v0, :cond_0
 
-    .line 2403
     invoke-virtual {v0}, Lcom/samsung/android/cover/CoverState;->getSwitchState()Z
 
     move-result v1
 
-    .line 2406
     .end local v0    # "state":Lcom/samsung/android/cover/CoverState;
     :goto_0
     return v1
@@ -5472,10 +4984,9 @@
     .prologue
     const/4 v0, 0x0
 
-    .line 2535
     iget-object v1, p0, Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer;->mContentResolver:Landroid/content/ContentResolver;
 
-    const-string/jumbo v2, "torch_light"
+    const-string v2, "torch_light"
 
     const/4 v3, -0x2
 
@@ -5497,18 +5008,14 @@
     .param p2, "y"    # I
 
     .prologue
-    .line 1473
     iput p1, p0, Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer;->mTargetX:I
 
-    .line 1474
     iput p2, p0, Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer;->mTargetY:I
 
-    .line 1475
     const/4 v0, 0x1
 
     invoke-direct {p0, v0}, Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer;->setEnableVSync(Z)V
 
-    .line 1476
     return-void
 .end method
 
@@ -5516,21 +5023,18 @@
     .locals 2
 
     .prologue
-    .line 1536
     invoke-virtual {p0}, Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer;->isAttachedToWindow()Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
-    .line 1537
     iget-object v0, p0, Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer;->mWindowManager:Landroid/view/WindowManager;
 
     iget-object v1, p0, Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer;->mAndromedaWindowAttributes:Landroid/view/WindowManager$LayoutParams;
 
     invoke-interface {v0, p0, v1}, Landroid/view/WindowManager;->updateViewLayout(Landroid/view/View;Landroid/view/ViewGroup$LayoutParams;)V
 
-    .line 1539
     :cond_0
     return-void
 .end method
@@ -5547,29 +5051,23 @@
 
     const/4 v4, 0x0
 
-    .line 1479
     iget v0, p0, Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer;->mCenterX:I
 
-    .line 1480
     .local v0, "oldCenterX":I
     iget v1, p0, Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer;->mCenterY:I
 
-    .line 1483
     .local v1, "oldCenterY":I
     invoke-direct {p0, v4}, Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer;->setEnableVSync(Z)V
 
-    .line 1485
     if-ne p1, v0, :cond_0
 
     if-eq p2, v1, :cond_1
 
-    .line 1486
     :cond_0
     iget-object v2, p0, Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer;->mPositionAnimatorX:Landroid/animation/ValueAnimator;
 
     if-nez v2, :cond_2
 
-    .line 1487
     new-array v2, v6, [I
 
     aput v0, v2, v4
@@ -5582,7 +5080,6 @@
 
     iput-object v2, p0, Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer;->mPositionAnimatorX:Landroid/animation/ValueAnimator;
 
-    .line 1488
     iget-object v2, p0, Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer;->mPositionAnimatorX:Landroid/animation/ValueAnimator;
 
     new-instance v3, Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer$29;
@@ -5591,7 +5088,6 @@
 
     invoke-virtual {v2, v3}, Landroid/animation/ValueAnimator;->addUpdateListener(Landroid/animation/ValueAnimator$AnimatorUpdateListener;)V
 
-    .line 1499
     new-array v2, v6, [I
 
     aput v1, v2, v4
@@ -5604,7 +5100,6 @@
 
     iput-object v2, p0, Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer;->mPositionAnimatorY:Landroid/animation/ValueAnimator;
 
-    .line 1500
     iget-object v2, p0, Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer;->mPositionAnimatorY:Landroid/animation/ValueAnimator;
 
     new-instance v3, Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer$30;
@@ -5613,7 +5108,6 @@
 
     invoke-virtual {v2, v3}, Landroid/animation/ValueAnimator;->addUpdateListener(Landroid/animation/ValueAnimator$AnimatorUpdateListener;)V
 
-    .line 1511
     iget-object v2, p0, Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer;->mPositionAnimatorY:Landroid/animation/ValueAnimator;
 
     new-instance v3, Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer$31;
@@ -5622,22 +5116,18 @@
 
     invoke-virtual {v2, v3}, Landroid/animation/ValueAnimator;->addListener(Landroid/animation/Animator$AnimatorListener;)V
 
-    .line 1529
     :goto_0
     iget-object v2, p0, Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer;->mPositionAnimatorX:Landroid/animation/ValueAnimator;
 
     invoke-virtual {v2}, Landroid/animation/ValueAnimator;->start()V
 
-    .line 1530
     iget-object v2, p0, Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer;->mPositionAnimatorY:Landroid/animation/ValueAnimator;
 
     invoke-virtual {v2}, Landroid/animation/ValueAnimator;->start()V
 
-    .line 1533
     :cond_1
     return-void
 
-    .line 1526
     :cond_2
     iget-object v2, p0, Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer;->mPositionAnimatorX:Landroid/animation/ValueAnimator;
 
@@ -5649,7 +5139,6 @@
 
     invoke-virtual {v2, v3}, Landroid/animation/ValueAnimator;->setIntValues([I)V
 
-    .line 1527
     iget-object v2, p0, Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer;->mPositionAnimatorY:Landroid/animation/ValueAnimator;
 
     new-array v3, v6, [I
@@ -5667,19 +5156,16 @@
     .locals 1
 
     .prologue
-    .line 1641
     iget-object v0, p0, Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer;->mChoreographer:Landroid/view/Choreographer;
 
     if-nez v0, :cond_0
 
-    .line 1642
     invoke-static {}, Landroid/view/Choreographer;->getInstance()Landroid/view/Choreographer;
 
     move-result-object v0
 
     iput-object v0, p0, Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer;->mChoreographer:Landroid/view/Choreographer;
 
-    .line 1644
     :cond_0
     return-void
 .end method
@@ -5694,15 +5180,12 @@
 
     const/4 v2, 0x0
 
-    .line 2136
     packed-switch p2, :pswitch_data_0
 
-    .line 2279
     :goto_0
     :pswitch_0
     return v2
 
-    .line 2139
     :pswitch_1
     :try_start_0
     new-instance v0, Landroid/content/ComponentName;
@@ -5713,7 +5196,6 @@
 
     invoke-direct {v0, v4, v5}, Landroid/content/ComponentName;-><init>(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 2140
     .local v0, "cm":Landroid/content/ComponentName;
     invoke-virtual {v0}, Landroid/content/ComponentName;->flattenToString()Ljava/lang/String;
 
@@ -5721,7 +5203,6 @@
 
     iput-object v4, p1, Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer$ToolBoxMenu;->packageName:Ljava/lang/String;
 
-    .line 2141
     iget-object v4, p0, Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer;->mContext:Landroid/content/Context;
 
     const v5, 0x1080b21
@@ -5732,12 +5213,10 @@
 
     iput-object v4, p1, Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer$ToolBoxMenu;->background:Landroid/graphics/drawable/Drawable;
 
-    .line 2142
     const/4 v4, 0x1
 
     iput-boolean v4, p1, Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer$ToolBoxMenu;->isFunctionShortcut:Z
 
-    .line 2143
     new-instance v4, Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer$53;
 
     invoke-direct {v4, p0, v0}, Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer$53;-><init>(Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer;Landroid/content/ComponentName;)V
@@ -5750,16 +5229,13 @@
     :goto_1
     move v2, v3
 
-    .line 2279
     goto :goto_0
 
-    .line 2154
     :catch_0
     move-exception v1
 
-    .line 2155
     .local v1, "e":Ljava/lang/Exception;
-    const-string/jumbo v3, "toolbox"
+    const-string v3, "toolbox"
 
     new-instance v4, Ljava/lang/StringBuilder;
 
@@ -5783,7 +5259,6 @@
 
     goto :goto_0
 
-    .line 2163
     .end local v1    # "e":Ljava/lang/Exception;
     :pswitch_2
     :try_start_1
@@ -5797,12 +5272,10 @@
 
     iput-object v4, p1, Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer$ToolBoxMenu;->background:Landroid/graphics/drawable/Drawable;
 
-    .line 2164
     const/4 v4, 0x1
 
     iput-boolean v4, p1, Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer$ToolBoxMenu;->isFunctionShortcut:Z
 
-    .line 2165
     new-instance v4, Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer$54;
 
     invoke-direct {v4, p0}, Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer$54;-><init>(Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer;)V
@@ -5813,13 +5286,11 @@
 
     goto :goto_1
 
-    .line 2175
     :catch_1
     move-exception v1
 
-    .line 2176
     .restart local v1    # "e":Ljava/lang/Exception;
-    const-string/jumbo v3, "toolbox"
+    const-string v3, "toolbox"
 
     new-instance v4, Ljava/lang/StringBuilder;
 
@@ -5843,7 +5314,6 @@
 
     goto :goto_0
 
-    .line 2184
     .end local v1    # "e":Ljava/lang/Exception;
     :pswitch_3
     :try_start_2
@@ -5851,7 +5321,6 @@
 
     iput-object v4, p1, Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer$ToolBoxMenu;->operationType:Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer$OperationType;
 
-    .line 2185
     iget-object v4, p0, Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer;->mContext:Landroid/content/Context;
 
     const v5, 0x1080b25
@@ -5862,7 +5331,6 @@
 
     iput-object v4, p1, Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer$ToolBoxMenu;->background:Landroid/graphics/drawable/Drawable;
 
-    .line 2186
     iget-object v4, p0, Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer;->mResources:Landroid/content/res/Resources;
 
     const v5, 0x1080b24
@@ -5873,19 +5341,16 @@
 
     iput-object v4, p1, Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer$ToolBoxMenu;->backgroundInverse:Landroid/graphics/drawable/Drawable;
 
-    .line 2187
     invoke-direct {p0}, Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer;->getTorchStatus()Z
 
     move-result v4
 
     iput-boolean v4, p1, Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer$ToolBoxMenu;->toggleStatus:Z
 
-    .line 2188
     const/4 v4, 0x1
 
     iput-boolean v4, p1, Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer$ToolBoxMenu;->isFunctionShortcut:Z
 
-    .line 2189
     new-instance v4, Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer$55;
 
     invoke-direct {v4, p0, p1}, Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer$55;-><init>(Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer;Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer$ToolBoxMenu;)V
@@ -5896,13 +5361,11 @@
 
     goto :goto_1
 
-    .line 2203
     :catch_2
     move-exception v1
 
-    .line 2204
     .restart local v1    # "e":Ljava/lang/Exception;
-    const-string/jumbo v3, "toolbox"
+    const-string v3, "toolbox"
 
     new-instance v4, Ljava/lang/StringBuilder;
 
@@ -5926,7 +5389,6 @@
 
     goto/16 :goto_0
 
-    .line 2212
     .end local v1    # "e":Ljava/lang/Exception;
     :pswitch_4
     :try_start_3
@@ -5940,12 +5402,10 @@
 
     iput-object v4, p1, Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer$ToolBoxMenu;->background:Landroid/graphics/drawable/Drawable;
 
-    .line 2213
     const/4 v4, 0x1
 
     iput-boolean v4, p1, Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer$ToolBoxMenu;->isFunctionShortcut:Z
 
-    .line 2214
     new-instance v4, Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer$56;
 
     invoke-direct {v4, p0}, Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer$56;-><init>(Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer;)V
@@ -5956,13 +5416,11 @@
 
     goto/16 :goto_1
 
-    .line 2233
     :catch_3
     move-exception v1
 
-    .line 2234
     .restart local v1    # "e":Ljava/lang/Exception;
-    const-string/jumbo v3, "toolbox"
+    const-string v3, "toolbox"
 
     new-instance v4, Ljava/lang/StringBuilder;
 
@@ -5986,7 +5444,6 @@
 
     goto/16 :goto_0
 
-    .line 2252
     .end local v1    # "e":Ljava/lang/Exception;
     :pswitch_5
     :try_start_4
@@ -5998,7 +5455,6 @@
 
     invoke-direct {v0, v4, v5}, Landroid/content/ComponentName;-><init>(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 2253
     .restart local v0    # "cm":Landroid/content/ComponentName;
     invoke-virtual {v0}, Landroid/content/ComponentName;->flattenToString()Ljava/lang/String;
 
@@ -6006,7 +5462,6 @@
 
     iput-object v4, p1, Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer$ToolBoxMenu;->packageName:Ljava/lang/String;
 
-    .line 2254
     iget-object v4, p0, Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer;->mContext:Landroid/content/Context;
 
     const v5, 0x1080b1f
@@ -6017,12 +5472,10 @@
 
     iput-object v4, p1, Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer$ToolBoxMenu;->background:Landroid/graphics/drawable/Drawable;
 
-    .line 2255
     const/4 v4, 0x1
 
     iput-boolean v4, p1, Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer$ToolBoxMenu;->isFunctionShortcut:Z
 
-    .line 2256
     new-instance v4, Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer$57;
 
     invoke-direct {v4, p0, v0}, Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer$57;-><init>(Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer;Landroid/content/ComponentName;)V
@@ -6033,14 +5486,12 @@
 
     goto/16 :goto_1
 
-    .line 2268
     .end local v0    # "cm":Landroid/content/ComponentName;
     :catch_4
     move-exception v1
 
-    .line 2269
     .restart local v1    # "e":Ljava/lang/Exception;
-    const-string/jumbo v3, "toolbox"
+    const-string v3, "toolbox"
 
     new-instance v4, Ljava/lang/StringBuilder;
 
@@ -6064,7 +5515,6 @@
 
     goto/16 :goto_0
 
-    .line 2136
     :pswitch_data_0
     .packed-switch 0x0
         :pswitch_1
@@ -6081,10 +5531,8 @@
     .locals 6
 
     .prologue
-    .line 2478
     const/4 v4, 0x0
 
-    .line 2479
     .local v4, "needBlock":Z
     iget-object v0, p0, Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer;->BLOCK_LIST:[Ljava/lang/String;
 
@@ -6100,7 +5548,6 @@
 
     aget-object v1, v0, v2
 
-    .line 2480
     .local v1, "blockPkg":Ljava/lang/String;
     iget-object v5, p0, Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer;->mCurrentPackage:Ljava/lang/String;
 
@@ -6110,10 +5557,8 @@
 
     if-eqz v5, :cond_2
 
-    .line 2481
     const/4 v4, 0x1
 
-    .line 2486
     .end local v1    # "blockPkg":Ljava/lang/String;
     :cond_0
     if-nez v4, :cond_1
@@ -6160,14 +5605,12 @@
     :goto_1
     return v5
 
-    .line 2479
     .restart local v1    # "blockPkg":Ljava/lang/String;
     :cond_2
     add-int/lit8 v2, v2, 0x1
 
     goto :goto_0
 
-    .line 2486
     .end local v1    # "blockPkg":Ljava/lang/String;
     :cond_3
     const/4 v5, 0x0
@@ -6179,10 +5622,8 @@
     .locals 6
 
     .prologue
-    .line 2492
     const/4 v4, 0x0
 
-    .line 2493
     .local v4, "needBlock":Z
     iget-object v0, p0, Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer;->BLOCK_LIST:[Ljava/lang/String;
 
@@ -6198,7 +5639,6 @@
 
     aget-object v1, v0, v2
 
-    .line 2494
     .local v1, "blockPkg":Ljava/lang/String;
     iget-object v5, p0, Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer;->mCurrentPackage:Ljava/lang/String;
 
@@ -6208,10 +5648,8 @@
 
     if-eqz v5, :cond_1
 
-    .line 2495
     const/4 v4, 0x1
 
-    .line 2500
     .end local v1    # "blockPkg":Ljava/lang/String;
     :cond_0
     if-nez v4, :cond_2
@@ -6257,14 +5695,12 @@
     :goto_1
     return v5
 
-    .line 2493
     .restart local v1    # "blockPkg":Ljava/lang/String;
     :cond_1
     add-int/lit8 v2, v2, 0x1
 
     goto :goto_0
 
-    .line 2500
     .end local v1    # "blockPkg":Ljava/lang/String;
     :cond_2
     const/4 v5, 0x0
@@ -6276,7 +5712,6 @@
     .locals 1
 
     .prologue
-    .line 2525
     const/4 v0, 0x0
 
     return v0
@@ -6289,7 +5724,6 @@
     .prologue
     const/4 v3, 0x0
 
-    .line 2506
     :try_start_0
     iget-object v4, p0, Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer;->mPackageManager:Landroid/content/pm/PackageManager;
 
@@ -6300,7 +5734,6 @@
 
     move-result v1
 
-    .line 2508
     .local v1, "enable":I
     const/4 v4, 0x2
 
@@ -6310,34 +5743,28 @@
 
     if-ne v4, v1, :cond_1
 
-    .line 2517
     .end local v1    # "enable":I
     :cond_0
     :goto_0
     return v3
 
-    .line 2512
     .restart local v1    # "enable":I
     :cond_1
     const/4 v3, 0x1
 
     goto :goto_0
 
-    .line 2514
     .end local v1    # "enable":I
     :catch_0
     move-exception v2
 
-    .line 2515
     .local v2, "ex":Ljava/lang/IllegalArgumentException;
     goto :goto_0
 
-    .line 2516
     .end local v2    # "ex":Ljava/lang/IllegalArgumentException;
     :catch_1
     move-exception v0
 
-    .line 2517
     .local v0, "e":Ljava/lang/Exception;
     goto :goto_0
 .end method
@@ -6346,8 +5773,7 @@
     .locals 3
 
     .prologue
-    .line 2473
-    const-string/jumbo v0, "true"
+    const-string v0, "true"
 
     const-string v1, "dev.knoxapp.running"
 
@@ -6373,7 +5799,6 @@
     .param p8, "y"    # I
 
     .prologue
-    .line 1663
     move/from16 v0, p7
 
     int-to-double v10, v0
@@ -6414,14 +5839,12 @@
 
     if-gtz v10, :cond_1
 
-    .line 1665
     move/from16 v0, p7
 
     int-to-double v10, v0
 
     sub-double v4, p1, v10
 
-    .line 1666
     .local v4, "dx":D
     move/from16 v0, p8
 
@@ -6429,21 +5852,16 @@
 
     sub-double v6, p3, v10
 
-    .line 1667
     .local v6, "dy":D
     mul-double/2addr v4, v4
 
-    .line 1668
     mul-double/2addr v6, v6
 
-    .line 1669
     add-double v2, v4, v6
 
-    .line 1670
     .local v2, "distanceSquared":D
     mul-double v8, p5, p5
 
-    .line 1671
     .local v8, "radiusSquared":D
     cmpg-double v10, v2, v8
 
@@ -6451,7 +5869,6 @@
 
     const/4 v10, 0x1
 
-    .line 1673
     .end local v2    # "distanceSquared":D
     .end local v4    # "dx":D
     .end local v6    # "dy":D
@@ -6459,7 +5876,6 @@
     :goto_0
     return v10
 
-    .line 1671
     .restart local v2    # "distanceSquared":D
     .restart local v4    # "dx":D
     .restart local v6    # "dy":D
@@ -6469,7 +5885,6 @@
 
     goto :goto_0
 
-    .line 1673
     .end local v2    # "distanceSquared":D
     .end local v4    # "dx":D
     .end local v6    # "dy":D
@@ -6488,7 +5903,6 @@
 
     const/4 v3, 0x0
 
-    .line 2467
     invoke-static {}, Landroid/os/UserHandle;->getCallingUserId()I
 
     move-result v4
@@ -6499,7 +5913,6 @@
 
     move v0, v2
 
-    .line 2468
     .local v0, "isKnoxUser":Z
     :goto_0
     iget-object v4, p0, Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer;->mUserManager:Landroid/os/UserManager;
@@ -6512,7 +5925,6 @@
 
     move-result-object v1
 
-    .line 2469
     .local v1, "user":Landroid/content/pm/UserInfo;
     if-nez v0, :cond_1
 
@@ -6530,7 +5942,6 @@
     :cond_0
     move v0, v3
 
-    .line 2467
     goto :goto_0
 
     .restart local v0    # "isKnoxUser":Z
@@ -6538,7 +5949,6 @@
     :cond_1
     move v2, v3
 
-    .line 2469
     goto :goto_1
 .end method
 
@@ -6550,10 +5960,9 @@
 
     const/4 v2, 0x0
 
-    .line 2378
     iget-object v0, p0, Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer;->mContentResolver:Landroid/content/ContentResolver;
 
-    const-string/jumbo v1, "tw_tool_box_floating_x_ratio"
+    const-string v1, "tw_tool_box_floating_x_ratio"
 
     invoke-static {v0, v1, v2, v3}, Landroid/provider/Settings$System;->getFloatForUser(Landroid/content/ContentResolver;Ljava/lang/String;FI)F
 
@@ -6571,10 +5980,9 @@
 
     iput v0, p0, Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer;->mCenterX:I
 
-    .line 2379
     iget-object v0, p0, Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer;->mContentResolver:Landroid/content/ContentResolver;
 
-    const-string/jumbo v1, "tw_tool_box_floating_y_ratio"
+    const-string v1, "tw_tool_box_floating_y_ratio"
 
     invoke-static {v0, v1, v2, v3}, Landroid/provider/Settings$System;->getFloatForUser(Landroid/content/ContentResolver;Ljava/lang/String;FI)F
 
@@ -6592,7 +6000,6 @@
 
     iput v0, p0, Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer;->mCenterY:I
 
-    .line 2380
     return-void
 .end method
 
@@ -6604,7 +6011,6 @@
 
     const/4 v5, 0x0
 
-    .line 1433
     iget-object v6, p0, Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer;->mTouchTarget:Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer$ToolBoxMenu;
 
     if-eqz v6, :cond_0
@@ -6613,12 +6019,10 @@
 
     if-eqz v6, :cond_1
 
-    .line 1470
     :cond_0
     :goto_0
     return-void
 
-    .line 1434
     :cond_1
     iget-object v6, p0, Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer;->mTouchTarget:Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer$ToolBoxMenu;
 
@@ -6626,31 +6030,25 @@
 
     if-ne v6, v7, :cond_8
 
-    .line 1435
     invoke-virtual {p0, v8}, Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer;->performHapticFeedback(I)Z
 
-    .line 1436
     invoke-virtual {p0, v5}, Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer;->playSoundEffect(I)V
 
-    .line 1437
     iget-boolean v6, p0, Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer;->mExpanded:Z
 
     if-eqz v6, :cond_3
 
-    .line 1438
     iget-object v5, p0, Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer;->mPlayAnimationCollapseRunnable:Ljava/lang/Runnable;
 
     invoke-virtual {p0, v5}, Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer;->removeCallbacks(Ljava/lang/Runnable;)Z
 
-    .line 1439
     iget-object v5, p0, Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer;->mPlayAnimationCollapseRunnable:Ljava/lang/Runnable;
 
     invoke-virtual {p0, v5}, Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer;->post(Ljava/lang/Runnable;)Z
 
-    .line 1469
     :cond_2
     :goto_1
-    const-string/jumbo v5, "toolbox"
+    const-string v5, "toolbox"
 
     new-instance v6, Ljava/lang/StringBuilder;
 
@@ -6678,7 +6076,6 @@
 
     goto :goto_0
 
-    .line 1441
     :cond_3
     iget-object v6, p0, Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer;->mAllPackages:[Ljava/lang/Object;
 
@@ -6686,7 +6083,6 @@
 
     move v0, v5
 
-    .line 1442
     .local v0, "allPkgCount":I
     :goto_2
     iget-object v6, p0, Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer;->mObjects:Ljava/util/ArrayList;
@@ -6697,7 +6093,6 @@
 
     if-ne v0, v6, :cond_7
 
-    .line 1443
     iget-object v6, p0, Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer;->mObjects:Ljava/util/ArrayList;
 
     invoke-virtual {v6}, Ljava/util/ArrayList;->iterator()Ljava/util/Iterator;
@@ -6718,7 +6113,6 @@
 
     check-cast v3, Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer$ToolBoxMenu;
 
-    .line 1444
     .local v3, "m":Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer$ToolBoxMenu;
     iget-object v6, p0, Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer;->mMainCharacter:Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer$ToolBoxCharacter;
 
@@ -6728,7 +6122,6 @@
 
     if-nez v6, :cond_4
 
-    .line 1445
     iget-object v6, v3, Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer$ToolBoxMenu;->packageName:Ljava/lang/String;
 
     const-string v7, "/"
@@ -6737,11 +6130,9 @@
 
     move-result-object v1
 
-    .line 1446
     .local v1, "data":[Ljava/lang/String;
     aget-object v4, v1, v5
 
-    .line 1447
     .local v4, "pkgName":Ljava/lang/String;
     invoke-direct {p0, v4}, Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer;->isEnabledPkg(Ljava/lang/String;)Z
 
@@ -6749,12 +6140,10 @@
 
     if-nez v6, :cond_4
 
-    .line 1448
     iget-object v5, p0, Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer;->mReset:Ljava/lang/Runnable;
 
     invoke-interface {v5}, Ljava/lang/Runnable;->run()V
 
-    .line 1456
     .end local v1    # "data":[Ljava/lang/String;
     .end local v2    # "i$":Ljava/util/Iterator;
     .end local v3    # "m":Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer$ToolBoxMenu;
@@ -6765,14 +6154,12 @@
 
     invoke-virtual {p0, v5}, Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer;->removeCallbacks(Ljava/lang/Runnable;)Z
 
-    .line 1457
     iget-object v5, p0, Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer;->mPlayAnimationExpandRunnable:Ljava/lang/Runnable;
 
     invoke-virtual {p0, v5}, Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer;->post(Ljava/lang/Runnable;)Z
 
     goto :goto_1
 
-    .line 1441
     .end local v0    # "allPkgCount":I
     :cond_6
     iget-object v6, p0, Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer;->mAllPackages:[Ljava/lang/Object;
@@ -6781,7 +6168,6 @@
 
     goto :goto_2
 
-    .line 1453
     .restart local v0    # "allPkgCount":I
     :cond_7
     iget-object v5, p0, Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer;->mReset:Ljava/lang/Runnable;
@@ -6790,37 +6176,30 @@
 
     goto :goto_3
 
-    .line 1460
     .end local v0    # "allPkgCount":I
     :cond_8
     iget-boolean v6, p0, Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer;->mExpanded:Z
 
     if-eqz v6, :cond_2
 
-    .line 1461
     iget-object v6, p0, Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer;->mTouchTarget:Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer$ToolBoxMenu;
 
     iget-object v6, v6, Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer$ToolBoxMenu;->action:Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer$ToolBoxAction;
 
     invoke-interface {v6}, Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer$ToolBoxAction;->onAction()V
 
-    .line 1462
     invoke-virtual {p0, v8}, Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer;->performHapticFeedback(I)Z
 
-    .line 1463
     invoke-virtual {p0, v5}, Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer;->playSoundEffect(I)V
 
-    .line 1464
     iget-object v5, p0, Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer;->mPlayAnimationCollapseRunnable:Ljava/lang/Runnable;
 
     invoke-virtual {p0, v5}, Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer;->removeCallbacks(Ljava/lang/Runnable;)Z
 
-    .line 1465
     iget-object v5, p0, Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer;->mPlayAnimationCollapseRunnable:Ljava/lang/Runnable;
 
     invoke-virtual {p0, v5}, Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer;->post(Ljava/lang/Runnable;)Z
 
-    .line 1466
     iget-object v5, p0, Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer;->mStatusBarManager:Landroid/app/StatusBarManager;
 
     invoke-virtual {v5}, Landroid/app/StatusBarManager;->collapsePanels()V
@@ -6836,22 +6215,18 @@
 
     const/4 v3, 0x0
 
-    .line 1409
     iget-object v0, p0, Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer;->mTouchTarget:Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer$ToolBoxMenu;
 
     if-nez v0, :cond_1
 
-    .line 1430
     :cond_0
     :goto_0
     return-void
 
-    .line 1410
     :cond_1
     iput-boolean v4, p0, Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer;->mLongPressed:Z
 
-    .line 1411
-    const-string/jumbo v0, "toolbox"
+    const-string v0, "toolbox"
 
     new-instance v1, Ljava/lang/StringBuilder;
 
@@ -6877,25 +6252,20 @@
 
     invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1413
     iget-object v0, p0, Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer;->mTouchTarget:Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer$ToolBoxMenu;
 
     iget-object v1, p0, Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer;->mMainCharacter:Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer$ToolBoxCharacter;
 
     if-ne v0, v1, :cond_0
 
-    .line 1414
     invoke-virtual {p0, v3}, Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer;->performHapticFeedback(I)Z
 
-    .line 1415
     invoke-virtual {p0, v3}, Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer;->playSoundEffect(I)V
 
-    .line 1416
     sget-object v0, Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer$TouchMode;->POSITIONING:Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer$TouchMode;
 
     iput-object v0, p0, Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer;->mTouchMode:Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer$TouchMode;
 
-    .line 1417
     iget v0, p0, Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer;->mAbsX:I
 
     iget v1, p0, Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer;->mDeltaX:I
@@ -6910,7 +6280,6 @@
 
     invoke-direct {p0, v0, v1}, Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer;->goToPosition(II)V
 
-    .line 1419
     iget-object v0, p0, Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer;->mLongPressPanelAnimator:Landroid/animation/ValueAnimator;
 
     const/4 v1, 0x2
@@ -6927,36 +6296,30 @@
 
     invoke-virtual {v0, v1}, Landroid/animation/ValueAnimator;->setIntValues([I)V
 
-    .line 1420
     iget-object v0, p0, Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer;->mLongPressPanelAnimator:Landroid/animation/ValueAnimator;
 
     const-wide/16 v2, 0x12c
 
     invoke-virtual {v0, v2, v3}, Landroid/animation/ValueAnimator;->setDuration(J)Landroid/animation/ValueAnimator;
 
-    .line 1421
     iget-object v0, p0, Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer;->mLongPressPanelAnimator:Landroid/animation/ValueAnimator;
 
     invoke-virtual {v0}, Landroid/animation/ValueAnimator;->start()V
 
-    .line 1423
     iget-boolean v0, p0, Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer;->mExpanded:Z
 
     if-eqz v0, :cond_2
 
-    .line 1424
     iget-object v0, p0, Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer;->mPlayAnimationCollapseRunnable:Ljava/lang/Runnable;
 
     invoke-virtual {p0, v0}, Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer;->removeCallbacks(Ljava/lang/Runnable;)Z
 
-    .line 1425
     iget-object v0, p0, Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer;->mPlayAnimationCollapseRunnable:Ljava/lang/Runnable;
 
     invoke-virtual {p0, v0}, Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer;->post(Ljava/lang/Runnable;)Z
 
     goto :goto_0
 
-    .line 1427
     :cond_2
     invoke-direct {p0}, Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer;->playAnimationEnter()V
 
@@ -6969,7 +6332,6 @@
     .param p2, "y"    # I
 
     .prologue
-    .line 1270
     move-object/from16 v0, p0
 
     iget-object v3, v0, Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer;->mTouchLongClickRunnable:Ljava/lang/Runnable;
@@ -6978,7 +6340,6 @@
 
     invoke-virtual {v0, v3}, Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer;->removeCallbacks(Ljava/lang/Runnable;)Z
 
-    .line 1272
     move-object/from16 v0, p0
 
     iget-boolean v3, v0, Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer;->mReseting:Z
@@ -6991,12 +6352,10 @@
 
     if-eqz v3, :cond_1
 
-    .line 1319
     :cond_0
     :goto_0
     return-void
 
-    .line 1273
     :cond_1
     move-object/from16 v0, p0
 
@@ -7006,7 +6365,6 @@
 
     sub-int v10, p1, v3
 
-    .line 1274
     .local v10, "relX":I
     move-object/from16 v0, p0
 
@@ -7016,7 +6374,6 @@
 
     sub-int v11, p2, v3
 
-    .line 1275
     .local v11, "relY":I
     move-object/from16 v0, p0
 
@@ -7046,16 +6403,13 @@
 
     const/4 v2, 0x1
 
-    .line 1276
     .local v2, "conflict":Z
     :goto_1
     const/4 v15, 0x0
 
-    .line 1277
     .local v15, "tracking":Z
     if-eqz v2, :cond_5
 
-    .line 1278
     move-object/from16 v0, p0
 
     iget-boolean v3, v0, Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer;->mSipVisible:Z
@@ -7068,7 +6422,6 @@
 
     if-eqz v3, :cond_3
 
-    .line 1279
     move-object/from16 v0, p0
 
     iget-object v3, v0, Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer;->mUpdateVisibility:Ljava/lang/Runnable;
@@ -7077,7 +6430,6 @@
 
     invoke-virtual {v0, v3}, Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer;->post(Ljava/lang/Runnable;)Z
 
-    .line 1280
     const/4 v3, 0x0
 
     move-object/from16 v0, p0
@@ -7086,7 +6438,6 @@
 
     goto :goto_0
 
-    .line 1275
     .end local v2    # "conflict":Z
     .end local v15    # "tracking":Z
     :cond_2
@@ -7094,7 +6445,6 @@
 
     goto :goto_1
 
-    .line 1283
     .restart local v2    # "conflict":Z
     .restart local v15    # "tracking":Z
     :cond_3
@@ -7120,11 +6470,9 @@
 
     check-cast v13, Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer$ToolBoxMenu;
 
-    .line 1284
     .local v13, "m":Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer$ToolBoxMenu;
     iget-object v14, v13, Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer$ToolBoxMenu;->bounds:Landroid/graphics/Rect;
 
-    .line 1285
     .local v14, "r":Landroid/graphics/Rect;
     iget-boolean v3, v13, Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer$ToolBoxMenu;->isRectangleShape:Z
 
@@ -7136,21 +6484,17 @@
 
     if-eqz v3, :cond_4
 
-    .line 1287
     :goto_2
     iget-boolean v3, v13, Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer$ToolBoxMenu;->isAnimating:Z
 
     if-nez v3, :cond_4
 
-    .line 1289
     const/4 v15, 0x1
 
-    .line 1290
     move-object/from16 v0, p0
 
     iput-object v13, v0, Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer;->mTouchTarget:Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer$ToolBoxMenu;
 
-    .line 1295
     .end local v12    # "i$":Ljava/util/Iterator;
     .end local v13    # "m":Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer$ToolBoxMenu;
     .end local v14    # "r":Landroid/graphics/Rect;
@@ -7159,17 +6503,14 @@
 
     iput-boolean v15, v0, Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer;->mTracking:Z
 
-    .line 1296
     const/4 v3, 0x0
 
     move-object/from16 v0, p0
 
     iput-boolean v3, v0, Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer;->mNeedSaveCenterPosition:Z
 
-    .line 1298
     if-eqz v2, :cond_8
 
-    .line 1299
     move-object/from16 v0, p0
 
     iget-object v3, v0, Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer;->mPlayAnimationSleepRunnable:Ljava/lang/Runnable;
@@ -7178,7 +6519,6 @@
 
     invoke-virtual {v0, v3}, Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer;->removeCallbacks(Ljava/lang/Runnable;)Z
 
-    .line 1300
     move-object/from16 v0, p0
 
     iget-object v3, v0, Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer;->mPlayAnimationSleepRunnable:Ljava/lang/Runnable;
@@ -7189,7 +6529,6 @@
 
     invoke-virtual {v0, v3, v4, v5}, Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer;->postDelayed(Ljava/lang/Runnable;J)Z
 
-    .line 1301
     move-object/from16 v0, p0
 
     iget-object v3, v0, Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer;->mPlayAnimationWakeupRunnable:Ljava/lang/Runnable;
@@ -7198,7 +6537,6 @@
 
     invoke-virtual {v0, v3}, Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer;->removeCallbacks(Ljava/lang/Runnable;)Z
 
-    .line 1302
     move-object/from16 v0, p0
 
     iget-object v3, v0, Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer;->mPlayAnimationWakeupRunnable:Ljava/lang/Runnable;
@@ -7209,7 +6547,6 @@
 
     invoke-virtual {v0, v3, v4, v5}, Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer;->postDelayed(Ljava/lang/Runnable;J)Z
 
-    .line 1310
     :cond_6
     :goto_3
     move-object/from16 v0, p0
@@ -7218,14 +6555,12 @@
 
     if-eqz v3, :cond_0
 
-    .line 1311
     const/4 v3, 0x0
 
     move-object/from16 v0, p0
 
     iput-boolean v3, v0, Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer;->mLongPressed:Z
 
-    .line 1312
     move-object/from16 v0, p0
 
     iget-object v3, v0, Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer;->mDownSlopArea:Landroid/graphics/Rect;
@@ -7256,7 +6591,6 @@
 
     invoke-virtual {v3, v4, v5, v6, v7}, Landroid/graphics/Rect;->set(IIII)V
 
-    .line 1314
     move-object/from16 v0, p0
 
     iget-object v3, v0, Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer;->mTouchLongClickRunnable:Ljava/lang/Runnable;
@@ -7275,7 +6609,6 @@
 
     invoke-virtual {v0, v3, v4, v5}, Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer;->postDelayed(Ljava/lang/Runnable;J)Z
 
-    .line 1316
     move-object/from16 v0, p0
 
     iget-object v3, v0, Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer;->mMainCharacter:Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer$ToolBoxCharacter;
@@ -7292,7 +6625,6 @@
 
     iput v3, v0, Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer;->mDeltaX:I
 
-    .line 1317
     move-object/from16 v0, p0
 
     iget-object v3, v0, Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer;->mMainCharacter:Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer$ToolBoxCharacter;
@@ -7311,7 +6643,6 @@
 
     goto/16 :goto_0
 
-    .line 1285
     .restart local v12    # "i$":Ljava/util/Iterator;
     .restart local v13    # "m":Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer$ToolBoxMenu;
     .restart local v14    # "r":Landroid/graphics/Rect;
@@ -7346,7 +6677,6 @@
 
     goto/16 :goto_2
 
-    .line 1304
     .end local v12    # "i$":Ljava/util/Iterator;
     .end local v13    # "m":Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer$ToolBoxMenu;
     .end local v14    # "r":Landroid/graphics/Rect;
@@ -7357,7 +6687,6 @@
 
     if-eqz v3, :cond_6
 
-    .line 1305
     move-object/from16 v0, p0
 
     iget-object v3, v0, Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer;->mPlayAnimationCollapseRunnable:Ljava/lang/Runnable;
@@ -7366,7 +6695,6 @@
 
     invoke-virtual {v0, v3}, Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer;->removeCallbacks(Ljava/lang/Runnable;)Z
 
-    .line 1306
     move-object/from16 v0, p0
 
     iget-object v3, v0, Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer;->mPlayAnimationCollapseRunnable:Ljava/lang/Runnable;
@@ -7384,7 +6712,6 @@
     .param p2, "y"    # I
 
     .prologue
-    .line 1323
     iget-object v0, p0, Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer;->mTouchMode:Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer$TouchMode;
 
     sget-object v1, Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer$TouchMode;->DRAG:Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer$TouchMode;
@@ -7397,7 +6724,6 @@
 
     if-ne v0, v1, :cond_2
 
-    .line 1324
     :cond_0
     iget v0, p0, Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer;->mDeltaX:I
 
@@ -7405,19 +6731,16 @@
 
     iput v0, p0, Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer;->mTargetX:I
 
-    .line 1325
     iget v0, p0, Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer;->mDeltaY:I
 
     sub-int v0, p2, v0
 
     iput v0, p0, Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer;->mTargetY:I
 
-    .line 1338
     :cond_1
     :goto_0
     return-void
 
-    .line 1326
     :cond_2
     iget-object v0, p0, Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer;->mDownSlopArea:Landroid/graphics/Rect;
 
@@ -7427,24 +6750,20 @@
 
     if-nez v0, :cond_1
 
-    .line 1327
     iget-object v0, p0, Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer;->mTouchLongClickRunnable:Ljava/lang/Runnable;
 
     invoke-virtual {p0, v0}, Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer;->removeCallbacks(Ljava/lang/Runnable;)Z
 
-    .line 1329
     iget-object v0, p0, Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer;->mTouchTarget:Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer$ToolBoxMenu;
 
     iget-object v1, p0, Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer;->mMainCharacter:Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer$ToolBoxCharacter;
 
     if-ne v0, v1, :cond_1
 
-    .line 1330
     sget-object v0, Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer$TouchMode;->DRAG:Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer$TouchMode;
 
     iput-object v0, p0, Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer;->mTouchMode:Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer$TouchMode;
 
-    .line 1331
     iget v0, p0, Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer;->mDeltaX:I
 
     sub-int v0, p1, v0
@@ -7455,17 +6774,14 @@
 
     invoke-direct {p0, v0, v1}, Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer;->goToPosition(II)V
 
-    .line 1332
     iget-boolean v0, p0, Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer;->mExpanded:Z
 
     if-eqz v0, :cond_1
 
-    .line 1333
     iget-object v0, p0, Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer;->mPlayAnimationCollapseRunnable:Ljava/lang/Runnable;
 
     invoke-virtual {p0, v0}, Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer;->removeCallbacks(Ljava/lang/Runnable;)Z
 
-    .line 1334
     iget-object v0, p0, Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer;->mPlayAnimationCollapseRunnable:Ljava/lang/Runnable;
 
     invoke-virtual {p0, v0}, Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer;->post(Ljava/lang/Runnable;)Z
@@ -7480,12 +6796,10 @@
     .param p3, "y"    # I
 
     .prologue
-    .line 1341
     move-object/from16 v0, p0
 
     iget-object v12, v0, Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer;->mTouchMode:Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer$TouchMode;
 
-    .line 1343
     .local v12, "lastTouchMode":Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer$TouchMode;
     move-object/from16 v0, p0
 
@@ -7499,7 +6813,6 @@
 
     invoke-virtual {v0, v1}, Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer;->removeCallbacks(Ljava/lang/Runnable;)Z
 
-    .line 1344
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer;->mTouchUpOrCancelRunnable:Ljava/lang/Runnable;
@@ -7512,7 +6825,6 @@
 
     invoke-virtual {v0, v1}, Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer;->removeCallbacks(Ljava/lang/Runnable;)Z
 
-    .line 1346
     const/16 v18, 0x1
 
     move/from16 v0, p1
@@ -7561,7 +6873,6 @@
 
     if-eqz v18, :cond_0
 
-    .line 1347
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer;->mTouchClickRunnable:Ljava/lang/Runnable;
@@ -7574,7 +6885,6 @@
 
     invoke-virtual {v0, v1}, Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer;->post(Ljava/lang/Runnable;)Z
 
-    .line 1350
     :cond_0
     move-object/from16 v0, p0
 
@@ -7588,7 +6898,6 @@
 
     move-object/from16 v17, v0
 
-    .line 1351
     .local v17, "r":Landroid/graphics/Rect;
     move-object/from16 v0, p0
 
@@ -7604,7 +6913,6 @@
 
     if-ne v0, v1, :cond_b
 
-    .line 1352
     move-object/from16 v0, v17
 
     iget v0, v0, Landroid/graphics/Rect;->left:I
@@ -7625,7 +6933,6 @@
 
     add-int v5, v18, v19
 
-    .line 1353
     .local v5, "absoluteMainLeft":I
     move-object/from16 v0, v17
 
@@ -7667,7 +6974,6 @@
 
     sub-int v7, v18, v19
 
-    .line 1354
     .local v7, "absoluteMainTop":I
     move-object/from16 v0, v17
 
@@ -7689,7 +6995,6 @@
 
     add-int v6, v18, v19
 
-    .line 1355
     .local v6, "absoluteMainRight":I
     move-object/from16 v0, v17
 
@@ -7731,7 +7036,6 @@
 
     sub-int v4, v18, v19
 
-    .line 1356
     .local v4, "absoluteMainBottom":I
     const/16 v18, 0x3
 
@@ -7741,7 +7045,6 @@
 
     if-ne v0, v1, :cond_6
 
-    .line 1388
     .end local v4    # "absoluteMainBottom":I
     .end local v5    # "absoluteMainLeft":I
     .end local v6    # "absoluteMainRight":I
@@ -7780,7 +7083,6 @@
 
     if-eqz v18, :cond_3
 
-    .line 1389
     :cond_2
     move-object/from16 v0, p0
 
@@ -7790,7 +7092,6 @@
 
     invoke-virtual/range {v18 .. v18}, Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer$TwToolBoxLongPressPanel;->hide()V
 
-    .line 1392
     :cond_3
     sget-object v18, Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer$TouchMode;->NORMAL:Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer$TouchMode;
 
@@ -7800,7 +7101,6 @@
 
     iput-object v0, v1, Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer;->mTouchMode:Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer$TouchMode;
 
-    .line 1393
     const/16 v18, 0x0
 
     move/from16 v0, v18
@@ -7809,7 +7109,6 @@
 
     iput-boolean v0, v1, Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer;->mLongPressed:Z
 
-    .line 1395
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer;->mTouchMode:Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer$TouchMode;
@@ -7820,10 +7119,8 @@
 
     if-eq v12, v0, :cond_4
 
-    .line 1396
     invoke-virtual/range {p0 .. p0}, Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer;->postInvalidate()V
 
-    .line 1399
     :cond_4
     invoke-virtual/range {p0 .. p0}, Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer;->getAlpha()F
 
@@ -7835,7 +7132,6 @@
 
     if-nez v18, :cond_5
 
-    .line 1400
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer;->mPlayAnimationSleepRunnable:Ljava/lang/Runnable;
@@ -7848,7 +7144,6 @@
 
     invoke-virtual {v0, v1}, Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer;->removeCallbacks(Ljava/lang/Runnable;)Z
 
-    .line 1401
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer;->mPlayAnimationSleepRunnable:Ljava/lang/Runnable;
@@ -7865,7 +7160,6 @@
 
     invoke-virtual {v0, v1, v2, v3}, Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer;->postDelayed(Ljava/lang/Runnable;J)Z
 
-    .line 1405
     :cond_5
     const/16 v18, 0x0
 
@@ -7875,10 +7169,8 @@
 
     iput-boolean v0, v1, Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer;->mTracking:Z
 
-    .line 1406
     return-void
 
-    .line 1359
     .restart local v4    # "absoluteMainBottom":I
     .restart local v5    # "absoluteMainLeft":I
     .restart local v6    # "absoluteMainRight":I
@@ -7898,7 +7190,6 @@
 
     if-eqz v18, :cond_7
 
-    .line 1360
     new-instance v11, Landroid/content/Intent;
 
     const-string v18, "android.settings.TOOLBOX_LIST"
@@ -7907,7 +7198,6 @@
 
     invoke-direct {v11, v0}, Landroid/content/Intent;-><init>(Ljava/lang/String;)V
 
-    .line 1361
     .local v11, "intent":Landroid/content/Intent;
     const v18, 0x10008000
 
@@ -7915,7 +7205,6 @@
 
     invoke-virtual {v11, v0}, Landroid/content/Intent;->addFlags(I)Landroid/content/Intent;
 
-    .line 1362
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer;->mContext:Landroid/content/Context;
@@ -7934,7 +7223,6 @@
 
     invoke-virtual {v0, v11, v1}, Landroid/content/Context;->startActivityAsUser(Landroid/content/Intent;Landroid/os/UserHandle;)V
 
-    .line 1363
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer;->mStatusBarManager:Landroid/app/StatusBarManager;
@@ -7943,14 +7231,13 @@
 
     invoke-virtual/range {v18 .. v18}, Landroid/app/StatusBarManager;->collapsePanels()V
 
-    .line 1365
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer;->mContentResolver:Landroid/content/ContentResolver;
 
     move-object/from16 v18, v0
 
-    const-string/jumbo v19, "tw_tool_box_floating_x_ratio"
+    const-string v19, "tw_tool_box_floating_x_ratio"
 
     const/16 v20, 0x0
 
@@ -7984,7 +7271,6 @@
 
     float-to-int v15, v0
 
-    .line 1366
     .local v15, "newCenterX":I
     move-object/from16 v0, p0
 
@@ -7992,7 +7278,7 @@
 
     move-object/from16 v18, v0
 
-    const-string/jumbo v19, "tw_tool_box_floating_y_ratio"
+    const-string v19, "tw_tool_box_floating_y_ratio"
 
     const/16 v20, 0x0
 
@@ -8028,7 +7314,6 @@
 
     move/from16 v16, v0
 
-    .line 1367
     .local v16, "newCenterY":I
     move-object/from16 v0, p0
 
@@ -8038,7 +7323,6 @@
 
     goto/16 :goto_0
 
-    .line 1369
     .end local v11    # "intent":Landroid/content/Intent;
     .end local v15    # "newCenterX":I
     .end local v16    # "newCenterY":I
@@ -8057,7 +7341,6 @@
 
     if-eqz v18, :cond_8
 
-    .line 1370
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer;->mTurnOffAnimator:Landroid/animation/ValueAnimator;
@@ -8068,11 +7351,9 @@
 
     goto/16 :goto_0
 
-    .line 1372
     :cond_8
     invoke-direct/range {p0 .. p0}, Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer;->saveCenterPosition()V
 
-    .line 1373
     move-object/from16 v0, p0
 
     iget-boolean v0, v0, Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer;->mSipVisible:Z
@@ -8089,10 +7370,8 @@
 
     if-nez v18, :cond_1
 
-    .line 1374
     const/4 v14, 0x0
 
-    .line 1375
     .local v14, "needBlock":Z
     move-object/from16 v0, p0
 
@@ -8110,7 +7389,6 @@
 
     aget-object v9, v8, v10
 
-    .line 1376
     .local v9, "blockPkg":Ljava/lang/String;
     move-object/from16 v0, p0
 
@@ -8126,10 +7404,8 @@
 
     if-eqz v18, :cond_a
 
-    .line 1377
     const/4 v14, 0x1
 
-    .line 1381
     .end local v9    # "blockPkg":Ljava/lang/String;
     :cond_9
     if-eqz v14, :cond_1
@@ -8148,14 +7424,12 @@
 
     goto/16 :goto_0
 
-    .line 1375
     .restart local v9    # "blockPkg":Ljava/lang/String;
     :cond_a
     add-int/lit8 v10, v10, 0x1
 
     goto :goto_1
 
-    .line 1384
     .end local v4    # "absoluteMainBottom":I
     .end local v5    # "absoluteMainLeft":I
     .end local v6    # "absoluteMainRight":I
@@ -8180,7 +7454,6 @@
 
     if-ne v0, v1, :cond_1
 
-    .line 1385
     const/16 v18, 0x1
 
     move/from16 v0, v18
@@ -8196,15 +7469,12 @@
     .locals 5
 
     .prologue
-    .line 1590
     invoke-direct {p0}, Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer;->resumeGC()V
 
-    .line 1592
     iget-object v0, p0, Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer;->methodPauseGc:Ljava/lang/reflect/Method;
 
     if-eqz v0, :cond_0
 
-    .line 1594
     :try_start_0
     iget-object v0, p0, Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer;->methodPauseGc:Ljava/lang/reflect/Method;
 
@@ -8237,18 +7507,15 @@
     .catch Ljava/lang/IllegalAccessException; {:try_start_0 .. :try_end_0} :catch_1
     .catch Ljava/lang/reflect/InvocationTargetException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 1600
     :cond_0
     :goto_0
     return-void
 
-    .line 1596
     :catch_0
     move-exception v0
 
     goto :goto_0
 
-    .line 1595
     :catch_1
     move-exception v0
 
@@ -8259,27 +7526,22 @@
     .locals 6
 
     .prologue
-    .line 2320
     iget-boolean v2, p0, Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer;->mExpanded:Z
 
     if-nez v2, :cond_0
 
-    .line 2330
     :goto_0
     return-void
 
-    .line 2322
     :cond_0
     const/4 v2, 0x0
 
     iput-boolean v2, p0, Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer;->mExpanded:Z
 
-    .line 2323
     iget-object v2, p0, Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer;->mExpandAnimator:Landroid/animation/ValueAnimator;
 
     invoke-virtual {v2}, Landroid/animation/ValueAnimator;->reverse()V
 
-    .line 2324
     iget-object v2, p0, Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer;->mObjects:Ljava/util/ArrayList;
 
     invoke-virtual {v2}, Ljava/util/ArrayList;->iterator()Ljava/util/Iterator;
@@ -8300,7 +7562,6 @@
 
     check-cast v1, Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer$ToolBoxMenu;
 
-    .line 2325
     .local v1, "m":Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer$ToolBoxMenu;
     iget-object v2, v1, Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer$ToolBoxMenu;->aniExpand:Landroid/animation/ValueAnimator;
 
@@ -8308,14 +7569,12 @@
 
     goto :goto_1
 
-    .line 2328
     .end local v1    # "m":Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer$ToolBoxMenu;
     :cond_1
     iget-object v2, p0, Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer;->mPlayAnimationSleepRunnable:Ljava/lang/Runnable;
 
     invoke-virtual {p0, v2}, Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer;->removeCallbacks(Ljava/lang/Runnable;)Z
 
-    .line 2329
     iget-object v2, p0, Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer;->mPlayAnimationSleepRunnable:Ljava/lang/Runnable;
 
     const-wide/16 v4, 0xbb8
@@ -8329,16 +7588,13 @@
     .locals 1
 
     .prologue
-    .line 2283
     iget-boolean v0, p0, Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer;->mHiddenToolBox:Z
 
     if-eqz v0, :cond_0
 
-    .line 2285
     :goto_0
     return-void
 
-    .line 2284
     :cond_0
     iget-object v0, p0, Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer;->mEnterAnimator:Landroid/animation/ValueAnimator;
 
@@ -8351,32 +7607,26 @@
     .locals 3
 
     .prologue
-    .line 2306
     iget-boolean v2, p0, Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer;->mExpanded:Z
 
     if-eqz v2, :cond_1
 
-    .line 2317
     :cond_0
     return-void
 
-    .line 2307
     :cond_1
     iget-object v2, p0, Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer;->mPlayAnimationSleepRunnable:Ljava/lang/Runnable;
 
     invoke-virtual {p0, v2}, Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer;->removeCallbacks(Ljava/lang/Runnable;)Z
 
-    .line 2309
     const/4 v2, 0x1
 
     iput-boolean v2, p0, Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer;->mExpanded:Z
 
-    .line 2310
     iget-object v2, p0, Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer;->mExpandAnimator:Landroid/animation/ValueAnimator;
 
     invoke-virtual {v2}, Landroid/animation/ValueAnimator;->start()V
 
-    .line 2311
     iget-object v2, p0, Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer;->mObjects:Ljava/util/ArrayList;
 
     invoke-virtual {v2}, Ljava/util/ArrayList;->iterator()Ljava/util/Iterator;
@@ -8397,7 +7647,6 @@
 
     check-cast v1, Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer$ToolBoxMenu;
 
-    .line 2312
     .local v1, "m":Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer$ToolBoxMenu;
     iget-object v2, v1, Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer$ToolBoxMenu;->action:Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer$ToolBoxAction;
 
@@ -8405,14 +7654,12 @@
 
     if-eqz v2, :cond_2
 
-    .line 2313
     iget-object v2, v1, Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer$ToolBoxMenu;->action:Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer$ToolBoxAction;
 
     check-cast v2, Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer$ToolBoxToggleAction;
 
     invoke-interface {v2}, Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer$ToolBoxToggleAction;->onUpdateToggleStatus()V
 
-    .line 2315
     :cond_2
     iget-object v2, v1, Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer$ToolBoxMenu;->aniExpand:Landroid/animation/ValueAnimator;
 
@@ -8429,17 +7676,14 @@
 
     const/4 v2, 0x0
 
-    .line 2333
     iget-boolean v0, p0, Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer;->mHiddenToolBox:Z
 
     if-nez v0, :cond_1
 
-    .line 2348
     :cond_0
     :goto_0
     return-void
 
-    .line 2335
     :cond_1
     invoke-direct {p0}, Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer;->isEnableFloatingViewer()Z
 
@@ -8447,7 +7691,6 @@
 
     iput-boolean v0, p0, Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer;->mEnableFloatingViewer:Z
 
-    .line 2336
     iget-boolean v0, p0, Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer;->mEnableFloatingViewer:Z
 
     if-nez v0, :cond_3
@@ -8457,12 +7700,10 @@
     :goto_1
     iput-boolean v0, p0, Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer;->mDisableFloatingViewer:Z
 
-    .line 2337
     iget-boolean v0, p0, Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer;->mDisableFloatingViewer:Z
 
     if-nez v0, :cond_0
 
-    .line 2339
     iget-object v0, p0, Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer;->mSleepAnimator:Landroid/animation/ValueAnimator;
 
     invoke-virtual {v0}, Landroid/animation/ValueAnimator;->isRunning()Z
@@ -8471,23 +7712,19 @@
 
     if-eqz v0, :cond_2
 
-    .line 2340
     iget-object v0, p0, Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer;->mSleepAnimator:Landroid/animation/ValueAnimator;
 
     invoke-virtual {v0}, Landroid/animation/ValueAnimator;->cancel()V
 
-    .line 2342
     :cond_2
-    const-string/jumbo v0, "toolbox"
+    const-string v0, "toolbox"
 
-    const-string/jumbo v3, "playAnimationFadeIn()"
+    const-string v3, "playAnimationFadeIn()"
 
     invoke-static {v0, v3}, Landroid/util/Log;->v(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 2343
     iput-boolean v2, p0, Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer;->mHiddenToolBox:Z
 
-    .line 2344
     iget-object v0, p0, Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer;->mTransparentAnimator:Landroid/animation/ValueAnimator;
 
     const/4 v3, 0x2
@@ -8506,17 +7743,14 @@
 
     invoke-virtual {v0, v3}, Landroid/animation/ValueAnimator;->setFloatValues([F)V
 
-    .line 2345
     iget-object v0, p0, Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer;->mTransparentAnimator:Landroid/animation/ValueAnimator;
 
     invoke-virtual {v0}, Landroid/animation/ValueAnimator;->reverse()V
 
-    .line 2346
     iget-object v0, p0, Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer;->mPlayAnimationSleepRunnable:Ljava/lang/Runnable;
 
     invoke-virtual {p0, v0}, Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer;->removeCallbacks(Ljava/lang/Runnable;)Z
 
-    .line 2347
     iget-object v0, p0, Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer;->mPlayAnimationSleepRunnable:Ljava/lang/Runnable;
 
     const-wide/16 v2, 0xbb8
@@ -8528,7 +7762,6 @@
     :cond_3
     move v0, v2
 
-    .line 2336
     goto :goto_1
 .end method
 
@@ -8538,16 +7771,13 @@
     .prologue
     const/4 v4, 0x1
 
-    .line 2351
     iget-boolean v0, p0, Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer;->mHiddenToolBox:Z
 
     if-eqz v0, :cond_0
 
-    .line 2360
     :goto_0
     return-void
 
-    .line 2352
     :cond_0
     iget-object v0, p0, Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer;->mSleepAnimator:Landroid/animation/ValueAnimator;
 
@@ -8557,28 +7787,23 @@
 
     if-eqz v0, :cond_1
 
-    .line 2353
     iget-object v0, p0, Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer;->mSleepAnimator:Landroid/animation/ValueAnimator;
 
     invoke-virtual {v0}, Landroid/animation/ValueAnimator;->cancel()V
 
-    .line 2355
     :cond_1
     iget-object v0, p0, Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer;->mPlayAnimationSleepRunnable:Ljava/lang/Runnable;
 
     invoke-virtual {p0, v0}, Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer;->removeCallbacks(Ljava/lang/Runnable;)Z
 
-    .line 2356
-    const-string/jumbo v0, "toolbox"
+    const-string v0, "toolbox"
 
-    const-string/jumbo v1, "playAnimationFadeOut()"
+    const-string v1, "playAnimationFadeOut()"
 
     invoke-static {v0, v1}, Landroid/util/Log;->v(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 2357
     iput-boolean v4, p0, Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer;->mHiddenToolBox:Z
 
-    .line 2358
     iget-object v0, p0, Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer;->mTransparentAnimator:Landroid/animation/ValueAnimator;
 
     const/4 v1, 0x2
@@ -8599,7 +7824,6 @@
 
     invoke-virtual {v0, v1}, Landroid/animation/ValueAnimator;->setFloatValues([F)V
 
-    .line 2359
     iget-object v0, p0, Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer;->mTransparentAnimator:Landroid/animation/ValueAnimator;
 
     invoke-virtual {v0}, Landroid/animation/ValueAnimator;->start()V
@@ -8611,7 +7835,6 @@
     .locals 4
 
     .prologue
-    .line 2288
     iget-boolean v0, p0, Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer;->mHiddenToolBox:Z
 
     if-nez v0, :cond_0
@@ -8638,12 +7861,10 @@
 
     if-eqz v0, :cond_1
 
-    .line 2293
     :cond_0
     :goto_0
     return-void
 
-    .line 2289
     :cond_1
     iget-object v0, p0, Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer;->mSleepAnimator:Landroid/animation/ValueAnimator;
 
@@ -8657,7 +7878,6 @@
 
     invoke-virtual {v0}, Landroid/animation/ValueAnimator;->cancel()V
 
-    .line 2290
     :cond_2
     iget-object v0, p0, Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer;->mSleepAnimator:Landroid/animation/ValueAnimator;
 
@@ -8665,7 +7885,6 @@
 
     invoke-virtual {v0, v2, v3}, Landroid/animation/ValueAnimator;->setDuration(J)Landroid/animation/ValueAnimator;
 
-    .line 2291
     iget-object v0, p0, Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer;->mSleepAnimator:Landroid/animation/ValueAnimator;
 
     const/4 v1, 0x2
@@ -8688,7 +7907,6 @@
 
     invoke-virtual {v0, v1}, Landroid/animation/ValueAnimator;->setFloatValues([F)V
 
-    .line 2292
     iget-object v0, p0, Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer;->mSleepAnimator:Landroid/animation/ValueAnimator;
 
     invoke-virtual {v0}, Landroid/animation/ValueAnimator;->start()V
@@ -8702,7 +7920,6 @@
     .prologue
     const/high16 v4, 0x3f800000    # 1.0f
 
-    .line 2296
     iget-boolean v1, p0, Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer;->mHiddenToolBox:Z
 
     if-nez v1, :cond_0
@@ -8715,12 +7932,10 @@
 
     if-eqz v1, :cond_1
 
-    .line 2303
     :cond_0
     :goto_0
     return-void
 
-    .line 2297
     :cond_1
     iget-object v1, p0, Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer;->mSleepAnimator:Landroid/animation/ValueAnimator;
 
@@ -8734,26 +7949,22 @@
 
     invoke-virtual {v1}, Landroid/animation/ValueAnimator;->cancel()V
 
-    .line 2298
     :cond_2
     invoke-virtual {p0}, Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer;->getAlpha()F
 
     move-result v0
 
-    .line 2299
     .local v0, "alpha":F
     cmpl-float v1, v0, v4
 
     if-eqz v1, :cond_0
 
-    .line 2300
     iget-object v1, p0, Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer;->mSleepAnimator:Landroid/animation/ValueAnimator;
 
     const-wide/16 v2, 0x14d
 
     invoke-virtual {v1, v2, v3}, Landroid/animation/ValueAnimator;->setDuration(J)Landroid/animation/ValueAnimator;
 
-    .line 2301
     iget-object v1, p0, Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer;->mSleepAnimator:Landroid/animation/ValueAnimator;
 
     const/4 v2, 0x2
@@ -8770,7 +7981,6 @@
 
     invoke-virtual {v1, v2}, Landroid/animation/ValueAnimator;->setFloatValues([F)V
 
-    .line 2302
     iget-object v1, p0, Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer;->mSleepAnimator:Landroid/animation/ValueAnimator;
 
     invoke-virtual {v1}, Landroid/animation/ValueAnimator;->reverse()V
@@ -8782,19 +7992,16 @@
     .locals 40
 
     .prologue
-    .line 1677
-    const-string/jumbo v4, "toolbox"
+    const-string v4, "toolbox"
 
-    const-string/jumbo v5, "prepareToolBoxLinear()"
+    const-string v5, "prepareToolBoxLinear()"
 
     invoke-static {v4, v5}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1679
     new-instance v23, Landroid/view/animation/interpolator/SineInOut80;
 
     invoke-direct/range {v23 .. v23}, Landroid/view/animation/interpolator/SineInOut80;-><init>()V
 
-    .line 1681
     .local v23, "interpolator":Landroid/view/animation/interpolator/SineInOut80;
     move-object/from16 v0, p0
 
@@ -8802,7 +8009,6 @@
 
     invoke-virtual {v4}, Ljava/util/ArrayList;->clear()V
 
-    .line 1684
     move-object/from16 v0, p0
 
     iget-object v4, v0, Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer;->mManager:Lcom/samsung/android/toolbox/TwToolBoxManager;
@@ -8811,13 +8017,11 @@
 
     move-result-object v38
 
-    .line 1685
     .local v38, "tools":[Ljava/lang/String;
     new-instance v37, Ljava/util/ArrayList;
 
     invoke-direct/range {v37 .. v37}, Ljava/util/ArrayList;-><init>()V
 
-    .line 1686
     .local v37, "toolArrayList":Ljava/util/ArrayList;, "Ljava/util/ArrayList<Ljava/lang/String;>;"
     const-string v4, "0"
 
@@ -8825,7 +8029,6 @@
 
     invoke-virtual {v0, v4}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 1687
     move-object/from16 v13, v38
 
     .local v13, "arr$":[Ljava/lang/String;
@@ -8857,7 +8060,6 @@
 
     goto :goto_0
 
-    .line 1688
     .end local v36    # "t":Ljava/lang/String;
     :cond_0
     invoke-virtual/range {v37 .. v37}, Ljava/util/ArrayList;->toArray()[Ljava/lang/Object;
@@ -8870,10 +8072,8 @@
 
     iput-object v4, v0, Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer;->mAllPackages:[Ljava/lang/Object;
 
-    .line 1689
     const/16 v32, 0x0
 
-    .line 1691
     .local v32, "priority":I
     move-object/from16 v0, p0
 
@@ -8898,10 +8098,8 @@
     .local v28, "obj":Ljava/lang/Object;
     move-object/from16 v29, v28
 
-    .line 1692
     check-cast v29, Ljava/lang/String;
 
-    .line 1693
     .local v29, "pkg":Ljava/lang/String;
     const-string v4, "/"
 
@@ -8911,13 +8109,11 @@
 
     move-result-object v17
 
-    .line 1694
     .local v17, "data":[Ljava/lang/String;
     const/4 v4, 0x0
 
     aget-object v30, v17, v4
 
-    .line 1695
     .local v30, "pkgName":Ljava/lang/String;
     move-object/from16 v0, v17
 
@@ -8929,7 +8125,6 @@
 
     const-string v10, "00"
 
-    .line 1696
     .local v10, "activityName":Ljava/lang/String;
     :goto_2
     const-string v4, "0"
@@ -8940,7 +8135,6 @@
 
     move-result v24
 
-    .line 1697
     .local v24, "isMainCharactor":Z
     if-eqz v24, :cond_4
 
@@ -8960,7 +8154,6 @@
 
     iput-object v0, v1, Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer;->mMainCharacter:Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer$ToolBoxCharacter;
 
-    .line 1698
     .local v26, "m":Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer$ToolBoxMenu;
     :goto_3
     move/from16 v0, v32
@@ -8969,7 +8162,6 @@
 
     iput v0, v1, Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer$ToolBoxMenu;->priority:I
 
-    .line 1700
     new-instance v11, Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer$32;
 
     move-object/from16 v0, p0
@@ -8978,11 +8170,9 @@
 
     invoke-direct {v11, v0, v1}, Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer$32;-><init>(Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer;Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer$ToolBoxMenu;)V
 
-    .line 1716
     .local v11, "animatorListener":Landroid/animation/Animator$AnimatorListener;
     if-eqz v24, :cond_5
 
-    .line 1717
     move-object/from16 v0, p0
 
     iget-object v4, v0, Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer;->mContext:Landroid/content/Context;
@@ -8997,7 +8187,6 @@
 
     iput-object v4, v0, Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer$ToolBoxMenu;->background:Landroid/graphics/drawable/Drawable;
 
-    .line 1718
     const/4 v4, 0x2
 
     new-array v4, v4, [I
@@ -9012,7 +8201,6 @@
 
     iput-object v4, v0, Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer$ToolBoxMenu;->aniExpand:Landroid/animation/ValueAnimator;
 
-    .line 1719
     move-object/from16 v0, v26
 
     iget-object v4, v0, Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer$ToolBoxMenu;->aniExpand:Landroid/animation/ValueAnimator;
@@ -9021,14 +8209,12 @@
 
     invoke-virtual {v4, v0}, Landroid/animation/ValueAnimator;->setInterpolator(Landroid/animation/TimeInterpolator;)V
 
-    .line 1720
     move-object/from16 v0, v26
 
     iget-object v4, v0, Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer$ToolBoxMenu;->aniExpand:Landroid/animation/ValueAnimator;
 
     invoke-virtual {v4, v11}, Landroid/animation/ValueAnimator;->addListener(Landroid/animation/Animator$AnimatorListener;)V
 
-    .line 1721
     move-object/from16 v0, v26
 
     iget-object v4, v0, Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer$ToolBoxMenu;->aniExpand:Landroid/animation/ValueAnimator;
@@ -9041,7 +8227,6 @@
 
     invoke-virtual {v4, v5}, Landroid/animation/ValueAnimator;->addUpdateListener(Landroid/animation/ValueAnimator$AnimatorUpdateListener;)V
 
-    .line 1785
     :goto_4
     move-object/from16 v0, v26
 
@@ -9051,7 +8236,6 @@
 
     if-eqz v4, :cond_1
 
-    .line 1786
     move-object/from16 v0, v26
 
     iget-object v4, v0, Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer$ToolBoxMenu;->background:Landroid/graphics/drawable/Drawable;
@@ -9062,7 +8246,6 @@
 
     move-result-object v14
 
-    .line 1787
     .local v14, "bitmap":Landroid/graphics/Bitmap;
     if-eqz v24, :cond_8
 
@@ -9080,7 +8263,6 @@
 
     move-result-object v15
 
-    .line 1790
     .local v15, "bitmapMask":Landroid/graphics/Bitmap;
     :goto_5
     invoke-virtual {v15}, Landroid/graphics/Bitmap;->getWidth()I
@@ -9101,7 +8283,6 @@
 
     iput-object v4, v0, Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer$ToolBoxMenu;->shadowBitmap:Landroid/graphics/Bitmap;
 
-    .line 1791
     move-object/from16 v0, p0
 
     iget-object v4, v0, Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer;->mMaskCanvas:Landroid/graphics/Canvas;
@@ -9112,7 +8293,6 @@
 
     invoke-virtual {v4, v5}, Landroid/graphics/Canvas;->setBitmap(Landroid/graphics/Bitmap;)V
 
-    .line 1792
     move-object/from16 v0, p0
 
     iget-object v4, v0, Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer;->mMaskPaint:Landroid/graphics/Paint;
@@ -9121,7 +8301,6 @@
 
     invoke-virtual {v4, v5}, Landroid/graphics/Paint;->setXfermode(Landroid/graphics/Xfermode;)Landroid/graphics/Xfermode;
 
-    .line 1793
     move-object/from16 v0, p0
 
     iget-object v4, v0, Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer;->mMaskCanvas:Landroid/graphics/Canvas;
@@ -9148,7 +8327,6 @@
 
     invoke-virtual/range {v4 .. v9}, Landroid/graphics/Canvas;->drawRect(FFFFLandroid/graphics/Paint;)V
 
-    .line 1794
     move-object/from16 v0, p0
 
     iget-object v4, v0, Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer;->mMaskPaint:Landroid/graphics/Paint;
@@ -9159,7 +8337,6 @@
 
     invoke-virtual {v4, v5}, Landroid/graphics/Paint;->setXfermode(Landroid/graphics/Xfermode;)Landroid/graphics/Xfermode;
 
-    .line 1795
     move-object/from16 v0, p0
 
     iget-object v4, v0, Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer;->mMaskCanvas:Landroid/graphics/Canvas;
@@ -9174,7 +8351,6 @@
 
     invoke-virtual {v4, v15, v5, v6, v7}, Landroid/graphics/Canvas;->drawBitmap(Landroid/graphics/Bitmap;FFLandroid/graphics/Paint;)V
 
-    .line 1796
     move-object/from16 v0, p0
 
     iget-object v4, v0, Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer;->mMaskPaint:Landroid/graphics/Paint;
@@ -9183,7 +8359,6 @@
 
     invoke-virtual {v4, v5}, Landroid/graphics/Paint;->setXfermode(Landroid/graphics/Xfermode;)Landroid/graphics/Xfermode;
 
-    .line 1797
     new-instance v4, Landroid/graphics/drawable/BitmapDrawable;
 
     move-object/from16 v0, p0
@@ -9200,7 +8375,6 @@
 
     iput-object v4, v0, Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer$ToolBoxMenu;->shadow:Landroid/graphics/drawable/BitmapDrawable;
 
-    .line 1800
     .end local v14    # "bitmap":Landroid/graphics/Bitmap;
     .end local v15    # "bitmapMask":Landroid/graphics/Bitmap;
     :cond_1
@@ -9212,17 +8386,14 @@
 
     invoke-virtual {v4, v0}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 1801
     add-int/lit8 v32, v32, 0x1
 
-    .line 1691
     :cond_2
     :goto_6
     add-int/lit8 v21, v21, 0x1
 
     goto/16 :goto_1
 
-    .line 1695
     .end local v10    # "activityName":Ljava/lang/String;
     .end local v11    # "animatorListener":Landroid/animation/Animator$AnimatorListener;
     .end local v24    # "isMainCharactor":Z
@@ -9234,7 +8405,6 @@
 
     goto/16 :goto_2
 
-    .line 1697
     .restart local v10    # "activityName":Ljava/lang/String;
     .restart local v24    # "isMainCharactor":Z
     :cond_4
@@ -9250,7 +8420,6 @@
 
     goto/16 :goto_3
 
-    .line 1734
     .restart local v11    # "animatorListener":Landroid/animation/Animator$AnimatorListener;
     .restart local v26    # "m":Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer$ToolBoxMenu;
     :cond_5
@@ -9261,7 +8430,6 @@
 
     move-object/from16 v31, v0
 
-    .line 1735
     .local v31, "pm":Landroid/content/pm/PackageManager;
     const-string v4, "00"
 
@@ -9271,7 +8439,6 @@
 
     if-eqz v4, :cond_7
 
-    .line 1736
     move-object/from16 v0, v31
 
     move-object/from16 v1, v30
@@ -9284,7 +8451,6 @@
 
     iput-object v4, v0, Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer$ToolBoxMenu;->background:Landroid/graphics/drawable/Drawable;
 
-    .line 1742
     :goto_7
     move-object/from16 v0, p0
 
@@ -9299,7 +8465,6 @@
 
     if-eqz v4, :cond_2
 
-    .line 1765
     .end local v31    # "pm":Landroid/content/pm/PackageManager;
     :cond_6
     new-instance v12, Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer$34;
@@ -9310,11 +8475,9 @@
 
     invoke-direct {v12, v0, v1}, Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer$34;-><init>(Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer;Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer$ToolBoxMenu;)V
 
-    .line 1775
     .local v12, "animatorUpdateListener":Landroid/animation/ValueAnimator$AnimatorUpdateListener;
     const/16 v35, 0x0
 
-    .line 1776
     .local v35, "startY":I
     move-object/from16 v0, p0
 
@@ -9352,7 +8515,6 @@
 
     add-int v20, v4, v5
 
-    .line 1777
     .local v20, "endY":I
     const/4 v4, 0x2
 
@@ -9376,7 +8538,6 @@
 
     iput-object v4, v0, Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer$ToolBoxMenu;->aniExpand:Landroid/animation/ValueAnimator;
 
-    .line 1778
     move-object/from16 v0, v26
 
     iget-object v4, v0, Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer$ToolBoxMenu;->aniExpand:Landroid/animation/ValueAnimator;
@@ -9385,21 +8546,18 @@
 
     invoke-virtual {v4, v0}, Landroid/animation/ValueAnimator;->setInterpolator(Landroid/animation/TimeInterpolator;)V
 
-    .line 1779
     move-object/from16 v0, v26
 
     iget-object v4, v0, Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer$ToolBoxMenu;->aniExpand:Landroid/animation/ValueAnimator;
 
     invoke-virtual {v4, v11}, Landroid/animation/ValueAnimator;->addListener(Landroid/animation/Animator$AnimatorListener;)V
 
-    .line 1780
     move-object/from16 v0, v26
 
     iget-object v4, v0, Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer$ToolBoxMenu;->aniExpand:Landroid/animation/ValueAnimator;
 
     invoke-virtual {v4, v12}, Landroid/animation/ValueAnimator;->addUpdateListener(Landroid/animation/ValueAnimator$AnimatorUpdateListener;)V
 
-    .line 1781
     move-object/from16 v0, v26
 
     iget-object v4, v0, Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer$ToolBoxMenu;->aniExpand:Landroid/animation/ValueAnimator;
@@ -9420,7 +8578,6 @@
 
     goto/16 :goto_4
 
-    .line 1738
     .end local v12    # "animatorUpdateListener":Landroid/animation/ValueAnimator$AnimatorUpdateListener;
     .end local v20    # "endY":I
     .end local v35    # "startY":I
@@ -9435,7 +8592,6 @@
 
     invoke-direct {v0, v1, v10}, Landroid/content/ComponentName;-><init>(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 1739
     .local v16, "cm":Landroid/content/ComponentName;
     move-object/from16 v0, v31
 
@@ -9454,15 +8610,13 @@
 
     goto/16 :goto_7
 
-    .line 1746
     .end local v16    # "cm":Landroid/content/ComponentName;
     .end local v31    # "pm":Landroid/content/pm/PackageManager;
     :catch_0
     move-exception v19
 
-    .line 1747
     .local v19, "e":Landroid/content/pm/PackageManager$NameNotFoundException;
-    const-string/jumbo v4, "toolbox"
+    const-string v4, "toolbox"
 
     new-instance v5, Ljava/lang/StringBuilder;
 
@@ -9486,7 +8640,6 @@
 
     invoke-static {v4, v5}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1749
     invoke-virtual {v10}, Ljava/lang/String;->toLowerCase()Ljava/lang/String;
 
     move-result-object v4
@@ -9499,7 +8652,6 @@
 
     if-eqz v4, :cond_2
 
-    .line 1751
     :try_start_2
     const-string v4, "index"
 
@@ -9513,7 +8665,6 @@
 
     move-result v22
 
-    .line 1752
     .local v22, "index":I
     move-object/from16 v0, p0
 
@@ -9531,26 +8682,21 @@
 
     goto/16 :goto_6
 
-    .line 1755
     .end local v22    # "index":I
     :catch_1
     move-exception v27
 
-    .line 1756
     .local v27, "nfe":Ljava/lang/NumberFormatException;
     goto/16 :goto_6
 
-    .line 1761
     .end local v19    # "e":Landroid/content/pm/PackageManager$NameNotFoundException;
     .end local v27    # "nfe":Ljava/lang/NumberFormatException;
     :catch_2
     move-exception v19
 
-    .line 1762
     .local v19, "e":Ljava/lang/Exception;
     goto/16 :goto_6
 
-    .line 1787
     .end local v19    # "e":Ljava/lang/Exception;
     .restart local v14    # "bitmap":Landroid/graphics/Bitmap;
     :cond_8
@@ -9570,7 +8716,6 @@
 
     goto/16 :goto_5
 
-    .line 1804
     .end local v10    # "activityName":Ljava/lang/String;
     .end local v11    # "animatorListener":Landroid/animation/Animator$AnimatorListener;
     .end local v14    # "bitmap":Landroid/graphics/Bitmap;
@@ -9595,7 +8740,6 @@
 
     iput-object v4, v0, Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer;->mExpandAnimator:Landroid/animation/ValueAnimator;
 
-    .line 1805
     move-object/from16 v0, p0
 
     iget-object v4, v0, Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer;->mExpandAnimator:Landroid/animation/ValueAnimator;
@@ -9608,7 +8752,6 @@
 
     invoke-virtual {v4, v5}, Landroid/animation/ValueAnimator;->addListener(Landroid/animation/Animator$AnimatorListener;)V
 
-    .line 1815
     move-object/from16 v0, p0
 
     iget-object v4, v0, Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer;->mExpandAnimator:Landroid/animation/ValueAnimator;
@@ -9621,7 +8764,6 @@
 
     invoke-virtual {v4, v5}, Landroid/animation/ValueAnimator;->addUpdateListener(Landroid/animation/ValueAnimator$AnimatorUpdateListener;)V
 
-    .line 1825
     move-object/from16 v0, p0
 
     iget-object v4, v0, Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer;->mExpandAnimator:Landroid/animation/ValueAnimator;
@@ -9630,7 +8772,6 @@
 
     invoke-virtual {v4, v6, v7}, Landroid/animation/ValueAnimator;->setDuration(J)Landroid/animation/ValueAnimator;
 
-    .line 1827
     const/4 v4, 0x2
 
     new-array v4, v4, [F
@@ -9645,7 +8786,6 @@
 
     iput-object v4, v0, Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer;->mTransparentAnimator:Landroid/animation/ValueAnimator;
 
-    .line 1828
     move-object/from16 v0, p0
 
     iget-object v4, v0, Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer;->mTransparentAnimator:Landroid/animation/ValueAnimator;
@@ -9658,7 +8798,6 @@
 
     invoke-virtual {v4, v5}, Landroid/animation/ValueAnimator;->addListener(Landroid/animation/Animator$AnimatorListener;)V
 
-    .line 1852
     move-object/from16 v0, p0
 
     iget-object v4, v0, Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer;->mTransparentAnimator:Landroid/animation/ValueAnimator;
@@ -9671,7 +8810,6 @@
 
     invoke-virtual {v4, v5}, Landroid/animation/ValueAnimator;->addUpdateListener(Landroid/animation/ValueAnimator$AnimatorUpdateListener;)V
 
-    .line 1863
     const/4 v4, 0x2
 
     new-array v4, v4, [F
@@ -9686,7 +8824,6 @@
 
     iput-object v4, v0, Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer;->mSleepAnimator:Landroid/animation/ValueAnimator;
 
-    .line 1864
     move-object/from16 v0, p0
 
     iget-object v4, v0, Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer;->mSleepAnimator:Landroid/animation/ValueAnimator;
@@ -9699,7 +8836,6 @@
 
     invoke-virtual {v4, v5}, Landroid/animation/ValueAnimator;->addListener(Landroid/animation/Animator$AnimatorListener;)V
 
-    .line 1874
     move-object/from16 v0, p0
 
     iget-object v4, v0, Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer;->mSleepAnimator:Landroid/animation/ValueAnimator;
@@ -9712,7 +8848,6 @@
 
     invoke-virtual {v4, v5}, Landroid/animation/ValueAnimator;->addUpdateListener(Landroid/animation/ValueAnimator$AnimatorUpdateListener;)V
 
-    .line 1885
     const/4 v4, 0x2
 
     new-array v4, v4, [F
@@ -9727,7 +8862,6 @@
 
     iput-object v4, v0, Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer;->mEnterAnimator:Landroid/animation/ValueAnimator;
 
-    .line 1886
     move-object/from16 v0, p0
 
     iget-object v4, v0, Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer;->mEnterAnimator:Landroid/animation/ValueAnimator;
@@ -9740,7 +8874,6 @@
 
     invoke-virtual {v4, v5}, Landroid/animation/ValueAnimator;->addListener(Landroid/animation/Animator$AnimatorListener;)V
 
-    .line 1896
     move-object/from16 v0, p0
 
     iget-object v4, v0, Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer;->mEnterAnimator:Landroid/animation/ValueAnimator;
@@ -9753,7 +8886,6 @@
 
     invoke-virtual {v4, v5}, Landroid/animation/ValueAnimator;->addUpdateListener(Landroid/animation/ValueAnimator$AnimatorUpdateListener;)V
 
-    .line 1907
     move-object/from16 v0, p0
 
     iget-object v4, v0, Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer;->mEnterAnimator:Landroid/animation/ValueAnimator;
@@ -9762,7 +8894,6 @@
 
     invoke-virtual {v4, v6, v7}, Landroid/animation/ValueAnimator;->setDuration(J)Landroid/animation/ValueAnimator;
 
-    .line 1909
     const/4 v4, 0x2
 
     new-array v4, v4, [I
@@ -9791,7 +8922,6 @@
 
     iput-object v4, v0, Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer;->mLongPressPanelAnimator:Landroid/animation/ValueAnimator;
 
-    .line 1910
     move-object/from16 v0, p0
 
     iget-object v4, v0, Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer;->mLongPressPanelAnimator:Landroid/animation/ValueAnimator;
@@ -9804,7 +8934,6 @@
 
     invoke-virtual {v4, v5}, Landroid/animation/ValueAnimator;->addListener(Landroid/animation/Animator$AnimatorListener;)V
 
-    .line 1939
     move-object/from16 v0, p0
 
     iget-object v4, v0, Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer;->mLongPressPanelAnimator:Landroid/animation/ValueAnimator;
@@ -9817,7 +8946,6 @@
 
     invoke-virtual {v4, v5}, Landroid/animation/ValueAnimator;->addUpdateListener(Landroid/animation/ValueAnimator$AnimatorUpdateListener;)V
 
-    .line 1950
     const/high16 v4, 0x40000000    # 2.0f
 
     move-object/from16 v0, p0
@@ -9830,7 +8958,6 @@
 
     move/from16 v33, v0
 
-    .line 1951
     .local v33, "removeButtonMoveAmount":I
     const/4 v4, 0x2
 
@@ -9850,7 +8977,6 @@
 
     move-result-object v39
 
-    .line 1952
     .local v39, "upAnimator":Landroid/animation/ValueAnimator;
     const-wide/16 v4, 0x96
 
@@ -9858,14 +8984,12 @@
 
     invoke-virtual {v0, v4, v5}, Landroid/animation/ValueAnimator;->setDuration(J)Landroid/animation/ValueAnimator;
 
-    .line 1953
     const-wide/16 v4, 0x3c
 
     move-object/from16 v0, v39
 
     invoke-virtual {v0, v4, v5}, Landroid/animation/ValueAnimator;->setStartDelay(J)V
 
-    .line 1954
     new-instance v4, Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer$45;
 
     move-object/from16 v0, p0
@@ -9876,7 +9000,6 @@
 
     invoke-virtual {v0, v4}, Landroid/animation/ValueAnimator;->addListener(Landroid/animation/Animator$AnimatorListener;)V
 
-    .line 1964
     new-instance v4, Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer$46;
 
     move-object/from16 v0, p0
@@ -9887,7 +9010,6 @@
 
     invoke-virtual {v0, v4}, Landroid/animation/ValueAnimator;->addUpdateListener(Landroid/animation/ValueAnimator$AnimatorUpdateListener;)V
 
-    .line 1975
     const/4 v4, 0x2
 
     new-array v4, v4, [I
@@ -9906,7 +9028,6 @@
 
     move-result-object v18
 
-    .line 1976
     .local v18, "downAnimator":Landroid/animation/ValueAnimator;
     const-wide/16 v4, 0x96
 
@@ -9914,14 +9035,12 @@
 
     invoke-virtual {v0, v4, v5}, Landroid/animation/ValueAnimator;->setDuration(J)Landroid/animation/ValueAnimator;
 
-    .line 1977
     const-wide/16 v4, 0x3c
 
     move-object/from16 v0, v18
 
     invoke-virtual {v0, v4, v5}, Landroid/animation/ValueAnimator;->setStartDelay(J)V
 
-    .line 1978
     new-instance v4, Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer$47;
 
     move-object/from16 v0, p0
@@ -9932,7 +9051,6 @@
 
     invoke-virtual {v0, v4}, Landroid/animation/ValueAnimator;->addListener(Landroid/animation/Animator$AnimatorListener;)V
 
-    .line 1988
     new-instance v4, Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer$48;
 
     move-object/from16 v0, p0
@@ -9943,7 +9061,6 @@
 
     invoke-virtual {v0, v4}, Landroid/animation/ValueAnimator;->addUpdateListener(Landroid/animation/ValueAnimator$AnimatorUpdateListener;)V
 
-    .line 1999
     const/4 v4, 0x6
 
     new-array v4, v4, [F
@@ -9954,7 +9071,6 @@
 
     move-result-object v34
 
-    .line 2000
     .local v34, "shakeAnimator":Landroid/animation/ValueAnimator;
     const-wide/16 v4, 0x190
 
@@ -9962,14 +9078,12 @@
 
     invoke-virtual {v0, v4, v5}, Landroid/animation/ValueAnimator;->setDuration(J)Landroid/animation/ValueAnimator;
 
-    .line 2001
     const-wide/16 v4, 0x3c
 
     move-object/from16 v0, v34
 
     invoke-virtual {v0, v4, v5}, Landroid/animation/ValueAnimator;->setStartDelay(J)V
 
-    .line 2002
     new-instance v4, Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer$49;
 
     move-object/from16 v0, p0
@@ -9980,7 +9094,6 @@
 
     invoke-virtual {v0, v4}, Landroid/animation/ValueAnimator;->addListener(Landroid/animation/Animator$AnimatorListener;)V
 
-    .line 2012
     new-instance v4, Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer$50;
 
     move-object/from16 v0, p0
@@ -9991,14 +9104,12 @@
 
     invoke-virtual {v0, v4}, Landroid/animation/ValueAnimator;->addUpdateListener(Landroid/animation/ValueAnimator$AnimatorUpdateListener;)V
 
-    .line 2023
     move-object/from16 v0, p0
 
     iget-object v4, v0, Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer;->mShakeAnimators:Ljava/util/ArrayList;
 
     invoke-virtual {v4}, Ljava/util/ArrayList;->clear()V
 
-    .line 2024
     move-object/from16 v0, p0
 
     iget-object v4, v0, Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer;->mShakeAnimators:Ljava/util/ArrayList;
@@ -10007,7 +9118,6 @@
 
     invoke-virtual {v4, v0}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 2025
     move-object/from16 v0, p0
 
     iget-object v4, v0, Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer;->mShakeAnimators:Ljava/util/ArrayList;
@@ -10016,7 +9126,6 @@
 
     invoke-virtual {v4, v0}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 2026
     move-object/from16 v0, p0
 
     iget-object v4, v0, Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer;->mShakeAnimators:Ljava/util/ArrayList;
@@ -10025,7 +9134,6 @@
 
     invoke-virtual {v4, v0}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 2027
     move-object/from16 v0, p0
 
     iget-object v4, v0, Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer;->mLongPressPanelRemoveBtnAnimator:Landroid/animation/AnimatorSet;
@@ -10036,7 +9144,6 @@
 
     invoke-virtual {v4, v5}, Landroid/animation/AnimatorSet;->playSequentially(Ljava/util/List;)V
 
-    .line 2029
     const/4 v4, 0x2
 
     new-array v4, v4, [F
@@ -10051,7 +9158,6 @@
 
     iput-object v4, v0, Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer;->mTurnOffAnimator:Landroid/animation/ValueAnimator;
 
-    .line 2030
     move-object/from16 v0, p0
 
     iget-object v4, v0, Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer;->mTurnOffAnimator:Landroid/animation/ValueAnimator;
@@ -10064,7 +9170,6 @@
 
     invoke-virtual {v4, v5}, Landroid/animation/ValueAnimator;->addListener(Landroid/animation/Animator$AnimatorListener;)V
 
-    .line 2042
     move-object/from16 v0, p0
 
     iget-object v4, v0, Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer;->mTurnOffAnimator:Landroid/animation/ValueAnimator;
@@ -10077,11 +9182,9 @@
 
     invoke-virtual {v4, v5}, Landroid/animation/ValueAnimator;->addUpdateListener(Landroid/animation/ValueAnimator$AnimatorUpdateListener;)V
 
-    .line 2053
     invoke-virtual/range {p0 .. p0}, Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer;->postInvalidate()V
 
-    .line 2055
-    const-string/jumbo v4, "toolbox"
+    const-string v4, "toolbox"
 
     new-instance v5, Ljava/lang/StringBuilder;
 
@@ -10111,45 +9214,38 @@
 
     invoke-static {v4, v5}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 2057
     return-void
 
-    .line 1718
     :array_0
     .array-data 4
         0x0
         0x5a
     .end array-data
 
-    .line 1804
     :array_1
     .array-data 4
         0x0
         0x3f800000    # 1.0f
     .end array-data
 
-    .line 1827
     :array_2
     .array-data 4
         0x3f800000    # 1.0f
         0x0
     .end array-data
 
-    .line 1863
     :array_3
     .array-data 4
         0x3f800000    # 1.0f
         0x3ecccccd    # 0.4f
     .end array-data
 
-    .line 1885
     :array_4
     .array-data 4
         0x0
         0x3f800000    # 1.0f
     .end array-data
 
-    .line 1999
     :array_5
     .array-data 4
         0x0
@@ -10160,7 +9256,6 @@
         0x0
     .end array-data
 
-    .line 2029
     :array_6
     .array-data 4
         0x0
@@ -10174,12 +9269,10 @@
     .prologue
     const/4 v5, 0x0
 
-    .line 1563
     iget-boolean v0, p0, Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer;->mDVFSLockAcquired:Z
 
     if-eqz v0, :cond_5
 
-    .line 1564
     iget v0, p0, Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer;->mDVFSCookie:I
 
     if-eqz v0, :cond_0
@@ -10188,7 +9281,6 @@
 
     if-eqz v0, :cond_0
 
-    .line 1566
     :try_start_0
     iget-object v0, p0, Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer;->methodResumeGc:Ljava/lang/reflect/Method;
 
@@ -10225,69 +9317,56 @@
     .catch Ljava/lang/IllegalAccessException; {:try_start_0 .. :try_end_0} :catch_1
     .catch Ljava/lang/reflect/InvocationTargetException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 1570
     :goto_0
     iput v5, p0, Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer;->mDVFSCookie:I
 
-    .line 1572
     :cond_0
     iget-object v0, p0, Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer;->mDVFSHelper:Landroid/os/DVFSHelper;
 
     if-eqz v0, :cond_1
 
-    .line 1573
     iget-object v0, p0, Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer;->mDVFSHelper:Landroid/os/DVFSHelper;
 
     invoke-virtual {v0}, Landroid/os/DVFSHelper;->release()V
 
-    .line 1575
     :cond_1
     iget-object v0, p0, Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer;->mDVFSHelperCore:Landroid/os/DVFSHelper;
 
     if-eqz v0, :cond_2
 
-    .line 1576
     iget-object v0, p0, Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer;->mDVFSHelperCore:Landroid/os/DVFSHelper;
 
     invoke-virtual {v0}, Landroid/os/DVFSHelper;->release()V
 
-    .line 1578
     :cond_2
     iget-object v0, p0, Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer;->mDVFSHelperGPU:Landroid/os/DVFSHelper;
 
     if-eqz v0, :cond_3
 
-    .line 1579
     iget-object v0, p0, Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer;->mDVFSHelperGPU:Landroid/os/DVFSHelper;
 
     invoke-virtual {v0}, Landroid/os/DVFSHelper;->release()V
 
-    .line 1581
     :cond_3
     iget-object v0, p0, Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer;->mDVFSHelperBUS:Landroid/os/DVFSHelper;
 
     if-eqz v0, :cond_4
 
-    .line 1582
     iget-object v0, p0, Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer;->mDVFSHelperBUS:Landroid/os/DVFSHelper;
 
     invoke-virtual {v0}, Landroid/os/DVFSHelper;->release()V
 
-    .line 1584
     :cond_4
     iput-boolean v5, p0, Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer;->mDVFSLockAcquired:Z
 
-    .line 1586
     :cond_5
     return-void
 
-    .line 1568
     :catch_0
     move-exception v0
 
     goto :goto_0
 
-    .line 1567
     :catch_1
     move-exception v0
 
@@ -10300,7 +9379,6 @@
     .prologue
     const/4 v5, 0x0
 
-    .line 1603
     iget v0, p0, Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer;->mDVFSCookie:I
 
     if-eqz v0, :cond_0
@@ -10309,7 +9387,6 @@
 
     if-eqz v0, :cond_0
 
-    .line 1605
     :try_start_0
     iget-object v0, p0, Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer;->methodResumeGc:Ljava/lang/reflect/Method;
 
@@ -10346,21 +9423,17 @@
     .catch Ljava/lang/IllegalAccessException; {:try_start_0 .. :try_end_0} :catch_1
     .catch Ljava/lang/reflect/InvocationTargetException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 1609
     :goto_0
     iput v5, p0, Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer;->mDVFSCookie:I
 
-    .line 1611
     :cond_0
     return-void
 
-    .line 1607
     :catch_0
     move-exception v0
 
     goto :goto_0
 
-    .line 1606
     :catch_1
     move-exception v0
 
@@ -10373,10 +9446,9 @@
     .prologue
     const/4 v4, -0x2
 
-    .line 2363
     iget-object v0, p0, Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer;->mContentResolver:Landroid/content/ContentResolver;
 
-    const-string/jumbo v1, "tw_tool_box_floating_x_ratio"
+    const-string v1, "tw_tool_box_floating_x_ratio"
 
     iget v2, p0, Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer;->mCenterX:I
 
@@ -10392,10 +9464,9 @@
 
     invoke-static {v0, v1, v2, v4}, Landroid/provider/Settings$System;->putFloatForUser(Landroid/content/ContentResolver;Ljava/lang/String;FI)Z
 
-    .line 2364
     iget-object v0, p0, Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer;->mContentResolver:Landroid/content/ContentResolver;
 
-    const-string/jumbo v1, "tw_tool_box_floating_y_ratio"
+    const-string v1, "tw_tool_box_floating_y_ratio"
 
     iget v2, p0, Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer;->mCenterY:I
 
@@ -10411,7 +9482,6 @@
 
     invoke-static {v0, v1, v2, v4}, Landroid/provider/Settings$System;->putFloatForUser(Landroid/content/ContentResolver;Ljava/lang/String;FI)Z
 
-    .line 2365
     return-void
 .end method
 
@@ -10421,14 +9491,12 @@
     .prologue
     const/4 v9, -0x2
 
-    .line 2368
     iget-object v5, p0, Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer;->mMainCharacter:Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer$ToolBoxCharacter;
 
     if-nez v5, :cond_0
 
     const/4 v0, 0x0
 
-    .line 2369
     .local v0, "defaultHalfWidth":I
     :goto_0
     iget-object v5, p0, Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer;->mDisplayMetrics:Landroid/util/DisplayMetrics;
@@ -10437,7 +9505,6 @@
 
     int-to-float v3, v5
 
-    .line 2370
     .local v3, "screenWidth":F
     iget-object v5, p0, Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer;->mDisplayMetrics:Landroid/util/DisplayMetrics;
 
@@ -10445,19 +9512,16 @@
 
     int-to-float v2, v5
 
-    .line 2371
     .local v2, "screenHeight":F
     iget v4, p0, Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer;->FIXED_START_POSITION_TOP_PADDING:I
 
-    .line 2372
     .local v4, "topPadding":I
     iget v1, p0, Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer;->FIXED_START_POSITION_RIGHT_PADDING:I
 
-    .line 2373
     .local v1, "rightPadding":I
     iget-object v5, p0, Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer;->mContentResolver:Landroid/content/ContentResolver;
 
-    const-string/jumbo v6, "tw_tool_box_floating_x_ratio"
+    const-string v6, "tw_tool_box_floating_x_ratio"
 
     int-to-float v7, v0
 
@@ -10471,10 +9535,9 @@
 
     invoke-static {v5, v6, v7, v9}, Landroid/provider/Settings$System;->putFloatForUser(Landroid/content/ContentResolver;Ljava/lang/String;FI)Z
 
-    .line 2374
     iget-object v5, p0, Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer;->mContentResolver:Landroid/content/ContentResolver;
 
-    const-string/jumbo v6, "tw_tool_box_floating_y_ratio"
+    const-string v6, "tw_tool_box_floating_y_ratio"
 
     add-int v7, v0, v4
 
@@ -10484,10 +9547,8 @@
 
     invoke-static {v5, v6, v7, v9}, Landroid/provider/Settings$System;->putFloatForUser(Landroid/content/ContentResolver;Ljava/lang/String;FI)Z
 
-    .line 2375
     return-void
 
-    .line 2368
     .end local v0    # "defaultHalfWidth":I
     .end local v1    # "rightPadding":I
     .end local v2    # "screenHeight":F
@@ -10509,7 +9570,6 @@
     .locals 2
 
     .prologue
-    .line 2539
     new-instance v0, Ljava/lang/Thread;
 
     new-instance v1, Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer$58;
@@ -10520,7 +9580,6 @@
 
     invoke-virtual {v0}, Ljava/lang/Thread;->start()V
 
-    .line 2553
     return-void
 .end method
 
@@ -10529,30 +9588,22 @@
     .param p1, "status"    # Z
 
     .prologue
-    .line 1619
     if-eqz p1, :cond_0
 
-    .line 1621
     invoke-direct {p0}, Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer;->pauseGC()V
 
-    .line 1624
     invoke-direct {p0}, Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer;->acquireDVFS()V
 
-    .line 1627
     invoke-direct {p0}, Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer;->updateVSync()V
 
-    .line 1638
     :goto_0
     return-void
 
-    .line 1630
     :cond_0
     invoke-direct {p0}, Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer;->stopVSync()V
 
-    .line 1633
     invoke-direct {p0}, Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer;->releaseDVFS()V
 
-    .line 1636
     invoke-direct {p0}, Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer;->resumeGC()V
 
     goto :goto_0
@@ -10562,15 +9613,12 @@
     .locals 1
 
     .prologue
-    .line 1614
     const/4 v0, 0x0
 
     iput-boolean v0, p0, Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer;->mInVSync:Z
 
-    .line 1615
     invoke-direct {p0}, Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer;->initVSync()V
 
-    .line 1616
     return-void
 .end method
 
@@ -10579,12 +9627,10 @@
     .param p1, "intent"    # Landroid/content/Intent;
 
     .prologue
-    .line 2410
     const/4 v0, 0x0
 
     invoke-direct {p0, p1, v0}, Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer;->startActivityOrTask(Landroid/content/Intent;Z)V
 
-    .line 2411
     return-void
 .end method
 
@@ -10594,31 +9640,25 @@
     .param p2, "isFunctionShortcut"    # Z
 
     .prologue
-    .line 2414
     if-nez p1, :cond_0
 
-    .line 2464
     :goto_0
     return-void
 
-    .line 2417
     :cond_0
     const/4 v1, -0x1
 
-    .line 2418
     .local v1, "bestMatchTaskId":I
     :try_start_0
     invoke-virtual {p1}, Landroid/content/Intent;->getComponent()Landroid/content/ComponentName;
 
     move-result-object v2
 
-    .line 2419
     .local v2, "component":Landroid/content/ComponentName;
     invoke-virtual {v2}, Landroid/content/ComponentName;->getClassName()Ljava/lang/String;
 
     move-result-object v7
 
-    .line 2420
     .local v7, "targetPackageName":Ljava/lang/String;
     iget-object v10, p0, Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer;->mActivityManager:Landroid/app/ActivityManager;
 
@@ -10628,11 +9668,9 @@
 
     move-result-object v9
 
-    .line 2421
     .local v9, "taskInfoList":Ljava/util/List;, "Ljava/util/List<Landroid/app/ActivityManager$RunningTaskInfo;>;"
     if-eqz v9, :cond_4
 
-    .line 2422
     invoke-interface {v9}, Ljava/util/List;->iterator()Ljava/util/Iterator;
 
     move-result-object v4
@@ -10652,24 +9690,21 @@
 
     check-cast v8, Landroid/app/ActivityManager$RunningTaskInfo;
 
-    .line 2423
     .local v8, "taskInfo":Landroid/app/ActivityManager$RunningTaskInfo;
     iget-object v10, v8, Landroid/app/ActivityManager$RunningTaskInfo;->topActivity:Landroid/content/ComponentName;
 
     if-nez v10, :cond_5
 
-    const-string/jumbo v5, "null"
+    const-string v5, "null"
 
-    .line 2424
     .local v5, "runningPackageName":Ljava/lang/String;
     :goto_2
     iget-object v10, v8, Landroid/app/ActivityManager$RunningTaskInfo;->sourceActivity:Landroid/content/ComponentName;
 
     if-nez v10, :cond_6
 
-    const-string/jumbo v6, "null"
+    const-string v6, "null"
 
-    .line 2425
     .local v6, "sourcePackageName":Ljava/lang/String;
     :goto_3
     iget v10, v8, Landroid/app/ActivityManager$RunningTaskInfo;->userId:I
@@ -10694,7 +9729,6 @@
 
     if-eqz v10, :cond_1
 
-    .line 2430
     :cond_2
     :try_start_1
     iget-object v10, p0, Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer;->mPackageManager:Landroid/content/pm/PackageManager;
@@ -10705,7 +9739,6 @@
 
     move-result-object v0
 
-    .line 2431
     .local v0, "activityInfo":Landroid/content/pm/ActivityInfo;
     iget v10, v0, Landroid/content/pm/ActivityInfo;->flags:I
 
@@ -10723,10 +9756,8 @@
 
     if-nez v10, :cond_7
 
-    .line 2432
     const/4 v1, -0x1
 
-    .line 2451
     .end local v0    # "activityInfo":Landroid/content/pm/ActivityInfo;
     .end local v5    # "runningPackageName":Ljava/lang/String;
     .end local v6    # "sourcePackageName":Ljava/lang/String;
@@ -10735,7 +9766,6 @@
     :goto_4
     if-ltz v1, :cond_4
 
-    .line 2452
     :try_start_2
     iget-object v10, p0, Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer;->mActivityManager:Landroid/app/ActivityManager;
 
@@ -10743,10 +9773,9 @@
 
     invoke-virtual {v10, v1, v11}, Landroid/app/ActivityManager;->moveTaskToFront(II)V
 
-    .line 2453
-    const-string/jumbo v10, "toolbox"
+    const-string v10, "toolbox"
 
-    const-string/jumbo v11, "moveTaskToFront()"
+    const-string v11, "moveTaskToFront()"
 
     invoke-static {v10, v11}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
     :try_end_2
@@ -10754,7 +9783,6 @@
 
     goto :goto_0
 
-    .line 2458
     .end local v2    # "component":Landroid/content/ComponentName;
     .end local v4    # "i$":Ljava/util/Iterator;
     .end local v7    # "targetPackageName":Ljava/lang/String;
@@ -10762,9 +9790,8 @@
     :catch_0
     move-exception v3
 
-    .line 2459
     .local v3, "e":Ljava/lang/Exception;
-    const-string/jumbo v10, "toolbox"
+    const-string v10, "toolbox"
 
     new-instance v11, Ljava/lang/StringBuilder;
 
@@ -10786,7 +9813,6 @@
 
     invoke-static {v10, v11}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 2462
     .end local v3    # "e":Ljava/lang/Exception;
     :cond_4
     iget-object v10, p0, Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer;->mContext:Landroid/content/Context;
@@ -10795,16 +9821,14 @@
 
     invoke-virtual {v10, p1, v11}, Landroid/content/Context;->startActivityAsUser(Landroid/content/Intent;Landroid/os/UserHandle;)V
 
-    .line 2463
-    const-string/jumbo v10, "toolbox"
+    const-string v10, "toolbox"
 
-    const-string/jumbo v11, "startActivityAsUser()"
+    const-string v11, "startActivityAsUser()"
 
     invoke-static {v10, v11}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
     goto/16 :goto_0
 
-    .line 2423
     .restart local v2    # "component":Landroid/content/ComponentName;
     .restart local v4    # "i$":Ljava/util/Iterator;
     .restart local v7    # "targetPackageName":Ljava/lang/String;
@@ -10820,7 +9844,6 @@
 
     goto :goto_2
 
-    .line 2424
     .restart local v5    # "runningPackageName":Ljava/lang/String;
     :cond_6
     iget-object v10, v8, Landroid/app/ActivityManager$RunningTaskInfo;->sourceActivity:Landroid/content/ComponentName;
@@ -10831,19 +9854,15 @@
 
     goto :goto_3
 
-    .line 2435
     .restart local v6    # "sourcePackageName":Ljava/lang/String;
     :catch_1
     move-exception v3
 
-    .line 2436
     .restart local v3    # "e":Ljava/lang/Exception;
     const/4 v1, -0x1
 
-    .line 2437
     goto :goto_4
 
-    .line 2440
     .end local v3    # "e":Ljava/lang/Exception;
     .restart local v0    # "activityInfo":Landroid/content/pm/ActivityInfo;
     :cond_7
@@ -10853,13 +9872,10 @@
 
     if-eqz v10, :cond_8
 
-    .line 2441
     iget v1, v8, Landroid/app/ActivityManager$RunningTaskInfo;->id:I
 
-    .line 2442
     goto :goto_4
 
-    .line 2445
     :cond_8
     if-nez p2, :cond_1
 
@@ -10869,7 +9885,6 @@
 
     if-eqz v10, :cond_1
 
-    .line 2446
     iget v1, v8, Landroid/app/ActivityManager$RunningTaskInfo;->id:I
     :try_end_3
     .catch Ljava/lang/Exception; {:try_start_3 .. :try_end_3} :catch_0
@@ -10883,17 +9898,14 @@
     .prologue
     const/4 v3, 0x0
 
-    .line 1655
     const/4 v0, 0x0
 
     iput-boolean v0, p0, Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer;->mInVSync:Z
 
-    .line 1656
     iget-object v0, p0, Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer;->mChoreographer:Landroid/view/Choreographer;
 
     if-eqz v0, :cond_0
 
-    .line 1657
     iget-object v0, p0, Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer;->mChoreographer:Landroid/view/Choreographer;
 
     const/4 v1, 0x1
@@ -10902,10 +9914,8 @@
 
     invoke-virtual {v0, v1, v2, v3}, Landroid/view/Choreographer;->removeCallbacks(ILjava/lang/Runnable;Ljava/lang/Object;)V
 
-    .line 1658
     iput-object v3, p0, Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer;->mChoreographer:Landroid/view/Choreographer;
 
-    .line 1660
     :cond_0
     return-void
 .end method
@@ -10914,7 +9924,6 @@
     .locals 2
 
     .prologue
-    .line 2529
     new-instance v0, Landroid/content/Intent;
 
     invoke-direct {p0}, Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer;->getTorchStatus()Z
@@ -10928,21 +9937,17 @@
     :goto_0
     invoke-direct {v0, v1}, Landroid/content/Intent;-><init>(Ljava/lang/String;)V
 
-    .line 2530
     .local v0, "intent":Landroid/content/Intent;
     const/high16 v1, 0x10000000
 
     invoke-virtual {v0, v1}, Landroid/content/Intent;->addFlags(I)Landroid/content/Intent;
 
-    .line 2531
     iget-object v1, p0, Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer;->mContext:Landroid/content/Context;
 
     invoke-virtual {v1, v0}, Landroid/content/Context;->sendBroadcast(Landroid/content/Intent;)V
 
-    .line 2532
     return-void
 
-    .line 2529
     .end local v0    # "intent":Landroid/content/Intent;
     :cond_0
     const-string v1, "android.intent.action.ASSISTIVELIGHT_ON"
@@ -10954,14 +9959,12 @@
     .locals 3
 
     .prologue
-    .line 770
     invoke-virtual {p0}, Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer;->isAttachedToWindow()Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
-    .line 771
     iget-object v0, p0, Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer;->mWindowAttributes:Landroid/view/WindowManager$LayoutParams;
 
     iget-object v1, p0, Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer;->mGlobalRect:Landroid/graphics/Rect;
@@ -10974,7 +9977,6 @@
 
     iput v1, v0, Landroid/view/WindowManager$LayoutParams;->x:I
 
-    .line 772
     iget-object v0, p0, Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer;->mWindowAttributes:Landroid/view/WindowManager$LayoutParams;
 
     iget-object v1, p0, Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer;->mGlobalRect:Landroid/graphics/Rect;
@@ -10987,14 +9989,12 @@
 
     iput v1, v0, Landroid/view/WindowManager$LayoutParams;->y:I
 
-    .line 773
     iget-object v0, p0, Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer;->mWindowManager:Landroid/view/WindowManager;
 
     iget-object v1, p0, Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer;->mWindowAttributes:Landroid/view/WindowManager$LayoutParams;
 
     invoke-interface {v0, p0, v1}, Landroid/view/WindowManager;->updateViewLayout(Landroid/view/View;Landroid/view/ViewGroup$LayoutParams;)V
 
-    .line 775
     :cond_0
     return-void
 .end method
@@ -11005,18 +10005,14 @@
     .prologue
     const/4 v3, 0x1
 
-    .line 1647
     iget-boolean v0, p0, Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer;->mInVSync:Z
 
     if-nez v0, :cond_0
 
-    .line 1648
     iput-boolean v3, p0, Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer;->mInVSync:Z
 
-    .line 1649
     invoke-direct {p0}, Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer;->initVSync()V
 
-    .line 1650
     iget-object v0, p0, Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer;->mChoreographer:Landroid/view/Choreographer;
 
     iget-object v1, p0, Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer;->mGoToPositionCallback:Ljava/lang/Runnable;
@@ -11025,7 +10021,6 @@
 
     invoke-virtual {v0, v3, v1, v2}, Landroid/view/Choreographer;->postCallback(ILjava/lang/Runnable;Ljava/lang/Object;)V
 
-    .line 1652
     :cond_0
     return-void
 .end method
@@ -11038,10 +10033,8 @@
 
     const/4 v4, 0x0
 
-    .line 778
     const/4 v1, 0x0
 
-    .line 780
     .local v1, "isDreaming":Z
     :try_start_0
     iget-object v6, p0, Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer;->mDreamManager:Landroid/service/dreams/IDreamManager;
@@ -11052,11 +10045,9 @@
 
     if-eqz v6, :cond_0
 
-    .line 781
     const/4 v1, 0x1
 
-    .line 782
-    const-string/jumbo v6, "toolbox"
+    const-string v6, "toolbox"
 
     const-string v7, "Daydream isDreaming"
 
@@ -11064,7 +10055,6 @@
     :try_end_0
     .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_1
 
-    .line 787
     :cond_0
     :goto_0
     iget-object v6, p0, Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer;->mDelegateKeyguardShowing:Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer$DelegateKeyguardShowing;
@@ -11096,32 +10086,26 @@
     :cond_1
     move v2, v5
 
-    .line 789
     .local v2, "keyguardShowing":Z
     :goto_1
     iget-boolean v6, p0, Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer;->mKeyguardShowing:Z
 
     if-eq v2, v6, :cond_2
 
-    .line 790
     iput-boolean v2, p0, Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer;->mKeyguardShowing:Z
 
-    .line 793
     :cond_2
     invoke-direct {p0}, Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer;->isEnableOTA()Z
 
     move-result v0
 
-    .line 794
     .local v0, "OTAShowing":Z
     iget-boolean v6, p0, Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer;->mOTAShowing:Z
 
     if-eq v0, v6, :cond_3
 
-    .line 795
     iput-boolean v0, p0, Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer;->mOTAShowing:Z
 
-    .line 798
     :cond_3
     sget-boolean v6, Lcom/samsung/android/toolbox/TwToolBoxService;->TOOLBOX_SUPPORT:Z
 
@@ -11129,7 +10113,7 @@
 
     iget-object v6, p0, Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer;->mContentResolver:Landroid/content/ContentResolver;
 
-    const-string/jumbo v7, "toolbox_onoff"
+    const-string v7, "toolbox_onoff"
 
     const/4 v8, -0x2
 
@@ -11144,7 +10128,6 @@
     :goto_2
     iput-boolean v6, p0, Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer;->mVisible:Z
 
-    .line 799
     invoke-direct {p0}, Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer;->isValidUser()Z
 
     move-result v6
@@ -11162,35 +10145,30 @@
     :goto_3
     iput-boolean v6, p0, Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer;->mValidUser:Z
 
-    .line 800
     invoke-direct {p0}, Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer;->isKnoxRunning()Z
 
     move-result v6
 
     iput-boolean v6, p0, Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer;->mKnoxRunning:Z
 
-    .line 801
     invoke-direct {p0}, Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer;->getSCoverState()Z
 
     move-result v6
 
     iput-boolean v6, p0, Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer;->mCoverOpen:Z
 
-    .line 802
     invoke-direct {p0}, Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer;->isEnableFloatingViewer()Z
 
     move-result v6
 
     iput-boolean v6, p0, Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer;->mEnableFloatingViewer:Z
 
-    .line 803
     invoke-direct {p0}, Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer;->isDisableFloatingViewer()Z
 
     move-result v6
 
     iput-boolean v6, p0, Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer;->mDisableFloatingViewer:Z
 
-    .line 805
     iget-boolean v6, p0, Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer;->mVisible:Z
 
     if-eqz v6, :cond_7
@@ -11202,7 +10180,6 @@
     :goto_4
     iput-boolean v5, p0, Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer;->mVisibleFloatingStyle:Z
 
-    .line 808
     :try_start_1
     iget-boolean v5, p0, Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer;->mVisibleFloatingStyle:Z
 
@@ -11210,7 +10187,6 @@
 
     move v3, v4
 
-    .line 809
     .local v3, "visibility":I
     :goto_5
     invoke-virtual {p0}, Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer;->getVisibility()I
@@ -11219,12 +10195,10 @@
 
     if-eq v4, v3, :cond_9
 
-    .line 810
     invoke-virtual {p0, v3}, Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer;->setVisibility(I)V
     :try_end_1
     .catch Ljava/lang/Exception; {:try_start_1 .. :try_end_1} :catch_0
 
-    .line 818
     .end local v3    # "visibility":I
     :goto_6
     iget-boolean v4, p0, Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer;->mVisibleFloatingStyle:Z
@@ -11236,7 +10210,6 @@
     :cond_4
     move v2, v4
 
-    .line 787
     goto :goto_1
 
     .restart local v0    # "OTAShowing":Z
@@ -11244,28 +10217,23 @@
     :cond_5
     move v6, v4
 
-    .line 798
     goto :goto_2
 
     :cond_6
     move v6, v4
 
-    .line 799
     goto :goto_3
 
     :cond_7
     move v5, v4
 
-    .line 805
     goto :goto_4
 
-    .line 808
     :cond_8
     const/16 v3, 0x8
 
     goto :goto_5
 
-    .line 812
     .restart local v3    # "visibility":I
     :cond_9
     :try_start_2
@@ -11275,14 +10243,12 @@
 
     goto :goto_6
 
-    .line 814
     .end local v3    # "visibility":I
     :catch_0
     move-exception v4
 
     goto :goto_6
 
-    .line 784
     .end local v0    # "OTAShowing":Z
     .end local v2    # "keyguardShowing":Z
     :catch_1
@@ -11298,10 +10264,8 @@
     .param p1, "canvas"    # Landroid/graphics/Canvas;
 
     .prologue
-    .line 942
     invoke-super {p0, p1}, Landroid/widget/FrameLayout;->dispatchDraw(Landroid/graphics/Canvas;)V
 
-    .line 945
     iget v0, p0, Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer;->mCenterX:I
 
     iget v1, p0, Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer;->mCenterY:I
@@ -11310,7 +10274,6 @@
 
     invoke-direct {p0, p1, v0, v1, v2}, Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer;->drawToolBox(Landroid/graphics/Canvas;IIZ)V
 
-    .line 947
     return-void
 .end method
 
@@ -11318,22 +10281,18 @@
     .locals 2
 
     .prologue
-    .line 1106
     invoke-super {p0}, Landroid/widget/FrameLayout;->invalidate()V
 
-    .line 1109
     iget-object v0, p0, Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer;->mTouchMode:Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer$TouchMode;
 
     sget-object v1, Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer$TouchMode;->POSITIONING:Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer$TouchMode;
 
     if-ne v0, v1, :cond_0
 
-    .line 1110
     iget-object v0, p0, Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer;->mTwToolBoxLongPressPanel:Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer$TwToolBoxLongPressPanel;
 
     invoke-virtual {v0}, Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer$TwToolBoxLongPressPanel;->invalidate()V
 
-    .line 1112
     :cond_0
     return-void
 .end method
@@ -11346,19 +10305,15 @@
 
     const/4 v5, 0x0
 
-    .line 823
     invoke-super {p0}, Landroid/widget/FrameLayout;->onAttachedToWindow()V
 
-    .line 825
     iget-object v0, p0, Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer;->mContentResolver:Landroid/content/ContentResolver;
 
-    .line 826
     .local v0, "cr":Landroid/content/ContentResolver;
     invoke-virtual {p0}, Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer;->getHandler()Landroid/os/Handler;
 
     move-result-object v2
 
-    .line 828
     .local v2, "handler":Landroid/os/Handler;
     new-instance v3, Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer$10;
 
@@ -11366,36 +10321,31 @@
 
     iput-object v3, p0, Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer;->mPackageListObserver:Landroid/database/ContentObserver;
 
-    .line 835
     new-instance v3, Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer$11;
 
     invoke-direct {v3, p0, v2}, Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer$11;-><init>(Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer;Landroid/os/Handler;)V
 
     iput-object v3, p0, Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer;->mDeviceProvisionedObserver:Landroid/database/ContentObserver;
 
-    .line 843
     new-instance v3, Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer$12;
 
     invoke-direct {v3, p0, v2}, Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer$12;-><init>(Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer;Landroid/os/Handler;)V
 
     iput-object v3, p0, Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer;->mExploreByTouchModeObserver:Landroid/database/ContentObserver;
 
-    .line 851
     new-instance v3, Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer$13;
 
     invoke-direct {v3, p0, v2}, Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer$13;-><init>(Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer;Landroid/os/Handler;)V
 
     iput-object v3, p0, Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer;->mKidsModeObserver:Landroid/database/ContentObserver;
 
-    .line 860
     new-instance v3, Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer$14;
 
     invoke-direct {v3, p0, v2}, Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer$14;-><init>(Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer;Landroid/os/Handler;)V
 
     iput-object v3, p0, Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer;->mCarModeObserver:Landroid/database/ContentObserver;
 
-    .line 869
-    const-string/jumbo v3, "toolbox_apps"
+    const-string v3, "toolbox_apps"
 
     invoke-static {v3}, Landroid/provider/Settings$System;->getUriFor(Ljava/lang/String;)Landroid/net/Uri;
 
@@ -11405,7 +10355,6 @@
 
     invoke-virtual {v0, v3, v5, v4, v6}, Landroid/content/ContentResolver;->registerContentObserver(Landroid/net/Uri;ZLandroid/database/ContentObserver;I)V
 
-    .line 870
     const-string v3, "device_provisioned"
 
     invoke-static {v3}, Landroid/provider/Settings$Global;->getUriFor(Ljava/lang/String;)Landroid/net/Uri;
@@ -11416,8 +10365,7 @@
 
     invoke-virtual {v0, v3, v5, v4}, Landroid/content/ContentResolver;->registerContentObserver(Landroid/net/Uri;ZLandroid/database/ContentObserver;)V
 
-    .line 871
-    const-string/jumbo v3, "touch_exploration_enabled"
+    const-string v3, "touch_exploration_enabled"
 
     invoke-static {v3}, Landroid/provider/Settings$Secure;->getUriFor(Ljava/lang/String;)Landroid/net/Uri;
 
@@ -11427,8 +10375,7 @@
 
     invoke-virtual {v0, v3, v5, v4, v6}, Landroid/content/ContentResolver;->registerContentObserver(Landroid/net/Uri;ZLandroid/database/ContentObserver;I)V
 
-    .line 872
-    const-string/jumbo v3, "kids_home_mode"
+    const-string v3, "kids_home_mode"
 
     invoke-static {v3}, Landroid/provider/Settings$System;->getUriFor(Ljava/lang/String;)Landroid/net/Uri;
 
@@ -11438,7 +10385,6 @@
 
     invoke-virtual {v0, v3, v5, v4, v6}, Landroid/content/ContentResolver;->registerContentObserver(Landroid/net/Uri;ZLandroid/database/ContentObserver;I)V
 
-    .line 873
     const-string v3, "car_mode_on"
 
     invoke-static {v3}, Landroid/provider/Settings$System;->getUriFor(Ljava/lang/String;)Landroid/net/Uri;
@@ -11449,63 +10395,51 @@
 
     invoke-virtual {v0, v3, v5, v4, v6}, Landroid/content/ContentResolver;->registerContentObserver(Landroid/net/Uri;ZLandroid/database/ContentObserver;I)V
 
-    .line 875
     new-instance v1, Landroid/content/IntentFilter;
 
     invoke-direct {v1}, Landroid/content/IntentFilter;-><init>()V
 
-    .line 876
     .local v1, "filter":Landroid/content/IntentFilter;
     const-string v3, "android.intent.action.USER_SWITCHED"
 
     invoke-virtual {v1, v3}, Landroid/content/IntentFilter;->addAction(Ljava/lang/String;)V
 
-    .line 877
     const-string v3, "android.intent.action.SCREEN_OFF"
 
     invoke-virtual {v1, v3}, Landroid/content/IntentFilter;->addAction(Ljava/lang/String;)V
 
-    .line 878
     iget-object v3, p0, Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer;->mContext:Landroid/content/Context;
 
     iget-object v4, p0, Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer;->mReceiver:Landroid/content/BroadcastReceiver;
 
     invoke-virtual {v3, v4, v1}, Landroid/content/Context;->registerReceiver(Landroid/content/BroadcastReceiver;Landroid/content/IntentFilter;)Landroid/content/Intent;
 
-    .line 881
     iget-object v3, p0, Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer;->mCheckEnvironment:Ljava/lang/Runnable;
 
     invoke-interface {v3}, Ljava/lang/Runnable;->run()V
 
-    .line 882
     iget-object v3, p0, Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer;->mUpdateVisibility:Ljava/lang/Runnable;
 
     invoke-virtual {p0, v3}, Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer;->removeCallbacks(Ljava/lang/Runnable;)Z
 
-    .line 883
     invoke-direct {p0}, Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer;->updateVisibility()Z
 
-    .line 886
     iget-boolean v3, p0, Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer;->mSipVisible:Z
 
     if-eqz v3, :cond_0
 
-    .line 887
     iget-object v3, p0, Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer;->mPlayAnimationFadeOutRunnable:Ljava/lang/Runnable;
 
     invoke-virtual {p0, v3}, Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer;->post(Ljava/lang/Runnable;)Z
 
-    .line 894
     :goto_0
     return-void
 
-    .line 889
     :cond_0
     iget-object v3, p0, Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer;->mPlayAnimationEnterRunnable:Ljava/lang/Runnable;
 
     invoke-virtual {p0, v3}, Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer;->post(Ljava/lang/Runnable;)Z
 
-    .line 890
     iget-object v3, p0, Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer;->mPlayAnimationExpandRunnable:Ljava/lang/Runnable;
 
     iget-object v4, p0, Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer;->mEnterAnimator:Landroid/animation/ValueAnimator;
@@ -11516,7 +10450,6 @@
 
     invoke-virtual {p0, v3, v4, v5}, Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer;->postDelayed(Ljava/lang/Runnable;J)Z
 
-    .line 891
     iget-object v3, p0, Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer;->mPlayAnimationCollapseRunnable:Ljava/lang/Runnable;
 
     iget-object v4, p0, Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer;->mEnterAnimator:Landroid/animation/ValueAnimator;
@@ -11539,10 +10472,8 @@
     .param p1, "newConfig"    # Landroid/content/res/Configuration;
 
     .prologue
-    .line 927
     invoke-super {p0, p1}, Landroid/widget/FrameLayout;->onConfigurationChanged(Landroid/content/res/Configuration;)V
 
-    .line 929
     iget-object v0, p0, Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer;->mResources:Landroid/content/res/Resources;
 
     const v1, 0x10405a7
@@ -11553,7 +10484,6 @@
 
     iput-object v0, p0, Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer;->mEndFloatingMsgEdit:Ljava/lang/String;
 
-    .line 930
     iget-object v0, p0, Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer;->mResources:Landroid/content/res/Resources;
 
     const v1, 0x1040607
@@ -11564,28 +10494,22 @@
 
     iput-object v0, p0, Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer;->mEndFloatingMsgRemove:Ljava/lang/String;
 
-    .line 932
     iget v0, p0, Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer;->mLastOrientation:I
 
     iget v1, p1, Landroid/content/res/Configuration;->orientation:I
 
     if-eq v0, v1, :cond_0
 
-    .line 933
     iget v0, p1, Landroid/content/res/Configuration;->orientation:I
 
     iput v0, p0, Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer;->mLastOrientation:I
 
-    .line 934
     invoke-direct {p0}, Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer;->loadCenterPosition()V
 
-    .line 935
     invoke-direct {p0}, Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer;->playAnimationCollapse()V
 
-    .line 936
     invoke-virtual {p0}, Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer;->postInvalidate()V
 
-    .line 938
     :cond_0
     return-void
 .end method
@@ -11594,17 +10518,14 @@
     .locals 2
 
     .prologue
-    .line 899
     iget-object v0, p0, Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer;->mWindowManager:Landroid/view/WindowManager;
 
     iget-object v1, p0, Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer;->mTwToolBoxLongPressPanel:Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer$TwToolBoxLongPressPanel;
 
     invoke-interface {v0, v1}, Landroid/view/WindowManager;->removeView(Landroid/view/View;)V
 
-    .line 901
     invoke-super {p0}, Landroid/widget/FrameLayout;->onDetachedFromWindow()V
 
-    .line 902
     return-void
 .end method
 
@@ -11618,10 +10539,8 @@
     .prologue
     const/4 v5, 0x0
 
-    .line 906
     invoke-super {p0, p1, p2, p3, p4}, Landroid/widget/FrameLayout;->onSizeChanged(IIII)V
 
-    .line 908
     iget-object v2, p0, Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer;->mResources:Landroid/content/res/Resources;
 
     invoke-virtual {v2}, Landroid/content/res/Resources;->getConfiguration()Landroid/content/res/Configuration;
@@ -11630,7 +10549,6 @@
 
     iget v0, v2, Landroid/content/res/Configuration;->orientation:I
 
-    .line 909
     .local v0, "orientation":I
     iget v2, p0, Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer;->mLastOrientation:I
 
@@ -11638,18 +10556,15 @@
 
     if-ne v2, v3, :cond_2
 
-    .line 910
     if-lez p1, :cond_1
 
     if-lez p2, :cond_1
 
-    .line 911
     iput v0, p0, Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer;->mLastOrientation:I
 
-    .line 912
     iget-object v2, p0, Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer;->mContentResolver:Landroid/content/ContentResolver;
 
-    const-string/jumbo v3, "tw_tool_box_floating_x_ratio"
+    const-string v3, "tw_tool_box_floating_x_ratio"
 
     const/4 v4, -0x2
 
@@ -11657,38 +10572,30 @@
 
     move-result v1
 
-    .line 913
     .local v1, "ratioX":F
     cmpl-float v2, v1, v5
 
     if-nez v2, :cond_0
 
-    .line 914
     invoke-direct {p0}, Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer;->saveDefaultCenterPosition()V
 
-    .line 916
     :cond_0
     invoke-direct {p0}, Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer;->loadCenterPosition()V
 
-    .line 923
     .end local v1    # "ratioX":F
     :cond_1
     :goto_0
     return-void
 
-    .line 918
     :cond_2
     iget v2, p0, Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer;->mLastOrientation:I
 
     if-eq v2, v0, :cond_1
 
-    .line 919
     iput v0, p0, Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer;->mLastOrientation:I
 
-    .line 920
     invoke-direct {p0}, Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer;->loadCenterPosition()V
 
-    .line 921
     invoke-direct {p0}, Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer;->playAnimationCollapse()V
 
     goto :goto_0
@@ -11705,16 +10612,13 @@
 
     const/4 v4, 0x1
 
-    .line 1116
     invoke-virtual {p1}, Landroid/view/MotionEvent;->getAction()I
 
     move-result v0
 
-    .line 1119
     .local v0, "action":I
     packed-switch v0, :pswitch_data_0
 
-    .line 1126
     :pswitch_0
     invoke-virtual {p1}, Landroid/view/MotionEvent;->getRawX()F
 
@@ -11724,7 +10628,6 @@
 
     iput v1, p0, Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer;->mAbsX:I
 
-    .line 1127
     .local v1, "x":I
     invoke-virtual {p1}, Landroid/view/MotionEvent;->getRawY()F
 
@@ -11734,14 +10637,11 @@
 
     iput v2, p0, Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer;->mAbsY:I
 
-    .line 1129
     .local v2, "y":I
     if-nez v0, :cond_0
 
-    .line 1130
     invoke-direct {p0, v1, v2}, Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer;->onTouchDown(II)V
 
-    .line 1133
     :cond_0
     iget-boolean v5, p0, Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer;->mTracking:Z
 
@@ -11755,19 +10655,16 @@
 
     if-eqz v5, :cond_5
 
-    .line 1135
     :cond_1
     if-eq v0, v4, :cond_2
 
     if-ne v0, v6, :cond_4
 
-    .line 1137
     :cond_2
     iget-object v4, p0, Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer;->mTouchLongClickRunnable:Ljava/lang/Runnable;
 
     invoke-virtual {p0, v4}, Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer;->removeCallbacks(Ljava/lang/Runnable;)Z
 
-    .line 1138
     iget v4, p0, Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer;->mLongPressPanelPosition:I
 
     iget v5, p0, Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer;->LONG_PRESS_PANEL_HEIGHT_PX:I
@@ -11780,7 +10677,6 @@
 
     if-eqz v4, :cond_4
 
-    .line 1139
     :cond_3
     iget v4, p0, Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer;->mAbsX:I
 
@@ -11788,14 +10684,12 @@
 
     invoke-direct {p0, v6, v4, v5}, Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer;->onTouchUpOrCancel(III)V
 
-    .line 1140
-    const-string/jumbo v4, "toolbox"
+    const-string v4, "toolbox"
 
     const-string v5, "Recovered LongPressPanel"
 
     invoke-static {v4, v5}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1153
     .end local v1    # "x":I
     .end local v2    # "y":I
     :cond_4
@@ -11803,7 +10697,6 @@
     :pswitch_1
     return v3
 
-    .line 1146
     .restart local v1    # "x":I
     .restart local v2    # "y":I
     :cond_5
@@ -11811,29 +10704,24 @@
 
     if-ne v0, v3, :cond_7
 
-    .line 1147
     invoke-direct {p0, v1, v2}, Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer;->onTouchMove(II)V
 
     :cond_6
     :goto_1
     move v3, v4
 
-    .line 1153
     goto :goto_0
 
-    .line 1149
     :cond_7
     if-eq v0, v4, :cond_8
 
     if-ne v0, v6, :cond_6
 
-    .line 1150
     :cond_8
     invoke-direct {p0, v0, v1, v2}, Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer;->onTouchUpOrCancel(III)V
 
     goto :goto_1
 
-    .line 1119
     nop
 
     :pswitch_data_0
@@ -11851,57 +10739,46 @@
     .param p2, "visibility"    # I
 
     .prologue
-    .line 2384
     invoke-super {p0, p1, p2}, Landroid/widget/FrameLayout;->onVisibilityChanged(Landroid/view/View;I)V
 
-    .line 2386
     if-nez p2, :cond_0
 
-    .line 2387
     iget-object v0, p0, Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer;->mPlayAnimationSleepRunnable:Ljava/lang/Runnable;
 
     invoke-virtual {p0, v0}, Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer;->removeCallbacks(Ljava/lang/Runnable;)Z
 
-    .line 2388
     iget-object v0, p0, Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer;->mPlayAnimationSleepRunnable:Ljava/lang/Runnable;
 
     const-wide/16 v2, 0xbb8
 
     invoke-virtual {p0, v0, v2, v3}, Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer;->postDelayed(Ljava/lang/Runnable;J)Z
 
-    .line 2389
     iget-object v0, p0, Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer;->mPlayAnimationWakeupRunnable:Ljava/lang/Runnable;
 
     invoke-virtual {p0, v0}, Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer;->removeCallbacks(Ljava/lang/Runnable;)Z
 
-    .line 2390
     iget-object v0, p0, Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer;->mPlayAnimationWakeupRunnable:Ljava/lang/Runnable;
 
     const-wide/16 v2, 0x32
 
     invoke-virtual {p0, v0, v2, v3}, Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer;->postDelayed(Ljava/lang/Runnable;J)Z
 
-    .line 2397
     :goto_0
     return-void
 
-    .line 2392
     :cond_0
     iget-object v0, p0, Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer;->mPlayAnimationSleepRunnable:Ljava/lang/Runnable;
 
     invoke-virtual {p0, v0}, Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer;->removeCallbacks(Ljava/lang/Runnable;)Z
 
-    .line 2393
     iget-object v0, p0, Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer;->mPlayAnimationWakeupRunnable:Ljava/lang/Runnable;
 
     invoke-virtual {p0, v0}, Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer;->removeCallbacks(Ljava/lang/Runnable;)Z
 
-    .line 2394
     iget-object v0, p0, Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer;->mTouchLongClickRunnable:Ljava/lang/Runnable;
 
     invoke-virtual {p0, v0}, Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer;->removeCallbacks(Ljava/lang/Runnable;)Z
 
-    .line 2395
     invoke-direct {p0}, Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer;->goToPositionAndromeda()V
 
     goto :goto_0
@@ -11915,17 +10792,14 @@
 
     const/4 v5, 0x1
 
-    .line 435
     iget-object v7, p0, Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer;->mManager:Lcom/samsung/android/toolbox/TwToolBoxManager;
 
     iget-object v8, p0, Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer;->mCallbcak:Lcom/samsung/android/toolbox/ITwToolBoxServiceCallback;
 
     invoke-virtual {v7, v8}, Lcom/samsung/android/toolbox/TwToolBoxManager;->registerCallback(Lcom/samsung/android/toolbox/ITwToolBoxServiceCallback;)Z
 
-    .line 438
     invoke-direct {p0}, Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer;->setInitVSync()V
 
-    .line 440
     iget-object v7, p0, Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer;->mCoverManager:Lcom/samsung/android/cover/CoverManager;
 
     if-eqz v7, :cond_0
@@ -11934,27 +10808,23 @@
 
     if-eqz v7, :cond_0
 
-    .line 441
     iget-object v7, p0, Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer;->mCoverManager:Lcom/samsung/android/cover/CoverManager;
 
     iget-object v8, p0, Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer;->mCoverStateListener:Lcom/samsung/android/cover/CoverManager$StateListener;
 
     invoke-virtual {v7, v8}, Lcom/samsung/android/cover/CoverManager;->registerListener(Lcom/samsung/android/cover/CoverManager$StateListener;)V
 
-    .line 444
     :cond_0
     iget-object v7, p0, Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer;->mPersonaManager:Landroid/os/PersonaManager;
 
     if-eqz v7, :cond_1
 
-    .line 445
     iget-object v7, p0, Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer;->mPersonaManager:Landroid/os/PersonaManager;
 
     iget-object v8, p0, Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer;->mPersonaObserver:Landroid/content/pm/ISystemPersonaObserver;
 
     invoke-virtual {v7, v8}, Landroid/os/PersonaManager;->registerSystemPersonaObserver(Landroid/content/pm/ISystemPersonaObserver;)Z
 
-    .line 448
     :cond_1
     iget-object v7, p0, Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer;->mResources:Landroid/content/res/Resources;
 
@@ -11962,7 +10832,6 @@
 
     move-result-object v0
 
-    .line 449
     .local v0, "config":Landroid/content/res/Configuration;
     iget v7, v0, Landroid/content/res/Configuration;->keyboard:I
 
@@ -11970,7 +10839,6 @@
 
     move v2, v5
 
-    .line 450
     .local v2, "haveHardKeyboard":Z
     :goto_0
     if-eqz v2, :cond_5
@@ -11983,18 +10851,15 @@
 
     move v1, v5
 
-    .line 451
     .local v1, "hardKeyShown":Z
     :goto_1
     invoke-static {}, Landroid/view/inputmethod/InputMethodManager;->peekInstance()Landroid/view/inputmethod/InputMethodManager;
 
     move-result-object v3
 
-    .line 452
     .local v3, "imm":Landroid/view/inputmethod/InputMethodManager;
     if-eqz v3, :cond_2
 
-    .line 453
     invoke-virtual {v3}, Landroid/view/inputmethod/InputMethodManager;->isInputMethodShown()Z
 
     move-result v7
@@ -12006,31 +10871,26 @@
     :goto_2
     iput-boolean v5, p0, Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer;->mSipVisible:Z
 
-    .line 456
     :cond_2
     new-instance v4, Landroid/content/IntentFilter;
 
     invoke-direct {v4}, Landroid/content/IntentFilter;-><init>()V
 
-    .line 457
     .local v4, "sipIntentFilter":Landroid/content/IntentFilter;
     const-string v5, "ResponseAxT9Info"
 
     invoke-virtual {v4, v5}, Landroid/content/IntentFilter;->addAction(Ljava/lang/String;)V
 
-    .line 458
     iget-object v5, p0, Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer;->mSipReceiver:Landroid/content/BroadcastReceiver;
 
     if-nez v5, :cond_3
 
-    .line 459
     new-instance v5, Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer$3;
 
     invoke-direct {v5, p0}, Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer$3;-><init>(Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer;)V
 
     iput-object v5, p0, Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer;->mSipReceiver:Landroid/content/BroadcastReceiver;
 
-    .line 486
     :cond_3
     iget-object v5, p0, Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer;->mContext:Landroid/content/Context;
 
@@ -12038,10 +10898,8 @@
 
     invoke-virtual {v5, v6, v4}, Landroid/content/Context;->registerReceiver(Landroid/content/BroadcastReceiver;Landroid/content/IntentFilter;)Landroid/content/Intent;
 
-    .line 488
     invoke-direct {p0}, Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer;->prepareToolBoxLinear()V
 
-    .line 489
     return-void
 
     .end local v1    # "hardKeyShown":Z
@@ -12051,14 +10909,12 @@
     :cond_4
     move v2, v6
 
-    .line 449
     goto :goto_0
 
     .restart local v2    # "haveHardKeyboard":Z
     :cond_5
     move v1, v6
 
-    .line 450
     goto :goto_1
 
     .restart local v1    # "hardKeyShown":Z
@@ -12066,7 +10922,6 @@
     :cond_6
     move v5, v6
 
-    .line 453
     goto :goto_2
 .end method
 
@@ -12074,27 +10929,22 @@
     .locals 3
 
     .prologue
-    .line 658
     const/4 v0, 0x1
 
     iput-boolean v0, p0, Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer;->mReseting:Z
 
-    .line 659
     iget-boolean v0, p0, Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer;->mExpanded:Z
 
     if-eqz v0, :cond_0
 
-    .line 660
     iget-object v0, p0, Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer;->mPlayAnimationCollapseRunnable:Ljava/lang/Runnable;
 
     invoke-virtual {p0, v0}, Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer;->removeCallbacks(Ljava/lang/Runnable;)Z
 
-    .line 661
     iget-object v0, p0, Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer;->mPlayAnimationCollapseRunnable:Ljava/lang/Runnable;
 
     invoke-virtual {p0, v0}, Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer;->post(Ljava/lang/Runnable;)Z
 
-    .line 663
     :cond_0
     iget-object v2, p0, Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer;->mReset:Ljava/lang/Runnable;
 
@@ -12107,10 +10957,8 @@
     :goto_0
     invoke-virtual {p0, v2, v0, v1}, Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer;->postDelayed(Ljava/lang/Runnable;J)Z
 
-    .line 664
     return-void
 
-    .line 663
     :cond_1
     const-wide/16 v0, 0xa
 
@@ -12121,14 +10969,12 @@
     .locals 2
 
     .prologue
-    .line 492
     iget-object v0, p0, Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer;->mManager:Lcom/samsung/android/toolbox/TwToolBoxManager;
 
     iget-object v1, p0, Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer;->mCallbcak:Lcom/samsung/android/toolbox/ITwToolBoxServiceCallback;
 
     invoke-virtual {v0, v1}, Lcom/samsung/android/toolbox/TwToolBoxManager;->unregisterCallback(Lcom/samsung/android/toolbox/ITwToolBoxServiceCallback;)Z
 
-    .line 494
     iget-object v0, p0, Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer;->mCoverManager:Lcom/samsung/android/cover/CoverManager;
 
     if-eqz v0, :cond_0
@@ -12137,35 +10983,29 @@
 
     if-eqz v0, :cond_0
 
-    .line 495
     iget-object v0, p0, Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer;->mCoverManager:Lcom/samsung/android/cover/CoverManager;
 
     iget-object v1, p0, Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer;->mCoverStateListener:Lcom/samsung/android/cover/CoverManager$StateListener;
 
     invoke-virtual {v0, v1}, Lcom/samsung/android/cover/CoverManager;->unregisterListener(Lcom/samsung/android/cover/CoverManager$StateListener;)V
 
-    .line 498
     :cond_0
     iget-object v0, p0, Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer;->mSipReceiver:Landroid/content/BroadcastReceiver;
 
     if-eqz v0, :cond_1
 
-    .line 499
     iget-object v0, p0, Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer;->mContext:Landroid/content/Context;
 
     iget-object v1, p0, Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer;->mSipReceiver:Landroid/content/BroadcastReceiver;
 
     invoke-virtual {v0, v1}, Landroid/content/Context;->unregisterReceiver(Landroid/content/BroadcastReceiver;)V
 
-    .line 501
     :cond_1
     const/4 v0, 0x0
 
     iput-object v0, p0, Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer;->mSipReceiver:Landroid/content/BroadcastReceiver;
 
-    .line 503
     invoke-direct {p0}, Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer;->clearToolBox()V
 
-    .line 504
     return-void
 .end method

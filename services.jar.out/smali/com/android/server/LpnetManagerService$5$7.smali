@@ -26,7 +26,6 @@
     .locals 0
 
     .prologue
-    .line 1011
     iput-object p1, p0, Lcom/android/server/LpnetManagerService$5$7;->this$1:Lcom/android/server/LpnetManagerService$5;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -40,7 +39,6 @@
     .locals 2
 
     .prologue
-    .line 1014
     iget-object v0, p0, Lcom/android/server/LpnetManagerService$5$7;->this$1:Lcom/android/server/LpnetManagerService$5;
 
     iget-object v0, v0, Lcom/android/server/LpnetManagerService$5;->this$0:Lcom/android/server/LpnetManagerService;
@@ -50,6 +48,5 @@
     # invokes: Lcom/android/server/LpnetManagerService;->freezeBasedOnLRU(Z)V
     invoke-static {v0, v1}, Lcom/android/server/LpnetManagerService;->access$5300(Lcom/android/server/LpnetManagerService;Z)V
 
-    .line 1015
     return-void
 .end method

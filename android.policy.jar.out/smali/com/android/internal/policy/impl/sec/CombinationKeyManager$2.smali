@@ -26,7 +26,6 @@
     .locals 0
 
     .prologue
-    .line 605
     iput-object p1, p0, Lcom/android/internal/policy/impl/sec/CombinationKeyManager$2;->this$0:Lcom/android/internal/policy/impl/sec/CombinationKeyManager;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -40,14 +39,12 @@
     .locals 3
 
     .prologue
-    .line 608
     new-instance v0, Landroid/content/Intent;
 
     const-string v1, "com.samsung.android.app.accesscontrol.TOGGLE_MODE"
 
     invoke-direct {v0, v1}, Landroid/content/Intent;-><init>(Ljava/lang/String;)V
 
-    .line 610
     .local v0, "intent":Landroid/content/Intent;
     iget-object v1, p0, Lcom/android/internal/policy/impl/sec/CombinationKeyManager$2;->this$0:Lcom/android/internal/policy/impl/sec/CombinationKeyManager;
 
@@ -57,7 +54,6 @@
 
     invoke-virtual {v1, v0, v2}, Landroid/content/Context;->sendBroadcastAsUser(Landroid/content/Intent;Landroid/os/UserHandle;)V
 
-    .line 611
     # getter for: Lcom/android/internal/policy/impl/sec/CombinationKeyManager;->SAFE_DEBUG:Z
     invoke-static {}, Lcom/android/internal/policy/impl/sec/CombinationKeyManager;->access$000()Z
 
@@ -71,7 +67,6 @@
 
     invoke-static {v1, v2}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 612
     :cond_0
     return-void
 .end method

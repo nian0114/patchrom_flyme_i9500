@@ -26,7 +26,6 @@
     .locals 0
 
     .prologue
-    .line 291
     iput-object p1, p0, Lcom/android/internal/app/ResolverActivity$3;->this$0:Lcom/android/internal/app/ResolverActivity;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -46,14 +45,13 @@
     .param p6, "contactName"    # Ljava/lang/String;
 
     .prologue
-    .line 333
     const-string v2, "ResolverActivity"
 
     new-instance v3, Ljava/lang/StringBuilder;
 
     invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v4, "onDeviceAdded:"
+    const-string v4, "onDeviceAdded:"
 
     invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -123,7 +121,6 @@
 
     invoke-static {v2, v3}, Landroid/util/Log;->v(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 340
     iget-object v2, p0, Lcom/android/internal/app/ResolverActivity$3;->this$0:Lcom/android/internal/app/ResolverActivity;
 
     invoke-virtual {v2}, Lcom/android/internal/app/ResolverActivity;->getResources()Landroid/content/res/Resources;
@@ -136,7 +133,6 @@
 
     move-result-object v7
 
-    .line 341
     .local v7, "mDrawableIcon":Landroid/graphics/drawable/Drawable;
     new-instance v1, Lcom/android/internal/app/ResolverActivity$DisplayDeviceInfo;
 
@@ -156,7 +152,6 @@
 
     invoke-direct/range {v1 .. v9}, Lcom/android/internal/app/ResolverActivity$DisplayDeviceInfo;-><init>(Lcom/android/internal/app/ResolverActivity;Ljava/lang/CharSequence;Ljava/lang/CharSequence;Ljava/lang/CharSequence;Ljava/lang/CharSequence;Landroid/graphics/drawable/Drawable;II)V
 
-    .line 342
     .local v1, "mTempInfo":Lcom/android/internal/app/ResolverActivity$DisplayDeviceInfo;
     iget-object v2, p0, Lcom/android/internal/app/ResolverActivity$3;->this$0:Lcom/android/internal/app/ResolverActivity;
 
@@ -167,7 +162,6 @@
 
     invoke-interface {v2, v1}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    .line 345
     iget-object v2, p0, Lcom/android/internal/app/ResolverActivity$3;->this$0:Lcom/android/internal/app/ResolverActivity;
 
     # getter for: Lcom/android/internal/app/ResolverActivity;->mListupCompleted:Z
@@ -177,25 +171,21 @@
 
     if-eqz v2, :cond_0
 
-    .line 346
     const-string v2, "ResolverActivity"
 
-    const-string/jumbo v3, "onDeviceAdded: List updated"
+    const-string v3, "onDeviceAdded: List updated"
 
     invoke-static {v2, v3}, Landroid/util/Log;->v(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 347
     invoke-static {}, Landroid/os/Message;->obtain()Landroid/os/Message;
 
     move-result-object v10
 
-    .line 348
     .local v10, "msg":Landroid/os/Message;
     const/16 v2, 0x3e8
 
     iput v2, v10, Landroid/os/Message;->what:I
 
-    .line 349
     iget-object v2, p0, Lcom/android/internal/app/ResolverActivity$3;->this$0:Lcom/android/internal/app/ResolverActivity;
 
     # getter for: Lcom/android/internal/app/ResolverActivity;->mDeviceList:Ljava/util/List;
@@ -211,14 +201,12 @@
 
     iput v2, v10, Landroid/os/Message;->arg1:I
 
-    .line 350
     iget-object v2, p0, Lcom/android/internal/app/ResolverActivity$3;->this$0:Lcom/android/internal/app/ResolverActivity;
 
     iget-object v2, v2, Lcom/android/internal/app/ResolverActivity;->mHandler:Landroid/os/Handler;
 
     invoke-virtual {v2, v10}, Landroid/os/Handler;->sendMessage(Landroid/os/Message;)Z
 
-    .line 352
     .end local v10    # "msg":Landroid/os/Message;
     :cond_0
     return-void
@@ -234,14 +222,13 @@
     .param p6, "contactName"    # Ljava/lang/String;
 
     .prologue
-    .line 312
     const-string v0, "ResolverActivity"
 
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v2, "onDeviceChanged"
+    const-string v2, "onDeviceChanged"
 
     invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -257,7 +244,6 @@
 
     invoke-static {v0, v1}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 328
     return-void
 .end method
 
@@ -268,14 +254,13 @@
     .param p3, "number"    # Ljava/lang/String;
 
     .prologue
-    .line 305
     const-string v0, "ResolverActivity"
 
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v2, "onDeviceRemoved"
+    const-string v2, "onDeviceRemoved"
 
     invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -291,7 +276,6 @@
 
     invoke-static {v0, v1}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 307
     return-void
 .end method
 
@@ -299,14 +283,12 @@
     .locals 2
 
     .prologue
-    .line 299
     const-string v0, "ResolverActivity"
 
-    const-string/jumbo v1, "onDiscoveryFinished"
+    const-string v1, "onDiscoveryFinished"
 
     invoke-static {v0, v1}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 301
     return-void
 .end method
 
@@ -314,13 +296,11 @@
     .locals 2
 
     .prologue
-    .line 294
     const-string v0, "ResolverActivity"
 
-    const-string/jumbo v1, "onDiscoveryStarted"
+    const-string v1, "onDiscoveryStarted"
 
     invoke-static {v0, v1}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 295
     return-void
 .end method

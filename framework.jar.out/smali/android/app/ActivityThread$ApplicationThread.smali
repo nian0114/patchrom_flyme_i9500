@@ -33,12 +33,10 @@
     .locals 1
 
     .prologue
-    .line 650
     iput-object p1, p0, Landroid/app/ActivityThread$ApplicationThread;->this$0:Landroid/app/ActivityThread;
 
     invoke-direct {p0}, Landroid/app/ApplicationThreadNative;-><init>()V
 
-    .line 655
     const/4 v0, -0x1
 
     iput v0, p0, Landroid/app/ActivityThread$ApplicationThread;->mLastProcessState:I
@@ -52,7 +50,6 @@
     .param p2, "x1"    # Landroid/app/ActivityThread$1;
 
     .prologue
-    .line 650
     invoke-direct {p0, p1}, Landroid/app/ActivityThread$ApplicationThread;-><init>(Landroid/app/ActivityThread;)V
 
     return-void
@@ -67,7 +64,6 @@
     .param p5, "dumpDalvik"    # Z
 
     .prologue
-    .line 1089
     invoke-static {}, Landroid/os/Debug;->getNativeHeapSize()J
 
     move-result-wide v6
@@ -76,7 +72,6 @@
 
     div-long v12, v6, v8
 
-    .line 1090
     .local v12, "nativeMax":J
     invoke-static {}, Landroid/os/Debug;->getNativeHeapAllocatedSize()J
 
@@ -86,7 +81,6 @@
 
     div-long v14, v6, v8
 
-    .line 1091
     .local v14, "nativeAllocated":J
     invoke-static {}, Landroid/os/Debug;->getNativeHeapFreeSize()J
 
@@ -96,13 +90,11 @@
 
     div-long v16, v6, v8
 
-    .line 1093
     .local v16, "nativeFree":J
     invoke-static {}, Ljava/lang/Runtime;->getRuntime()Ljava/lang/Runtime;
 
     move-result-object v38
 
-    .line 1095
     .local v38, "runtime":Ljava/lang/Runtime;
     invoke-virtual/range {v38 .. v38}, Ljava/lang/Runtime;->totalMemory()J
 
@@ -112,7 +104,6 @@
 
     div-long v18, v6, v8
 
-    .line 1096
     .local v18, "dalvikMax":J
     invoke-virtual/range {v38 .. v38}, Ljava/lang/Runtime;->freeMemory()J
 
@@ -122,23 +113,19 @@
 
     div-long v22, v6, v8
 
-    .line 1097
     .local v22, "dalvikFree":J
     sub-long v20, v18, v22
 
-    .line 1098
     .local v20, "dalvikAllocated":J
     invoke-static {}, Landroid/view/ViewDebug;->getViewInstanceCount()J
 
     move-result-wide v40
 
-    .line 1099
     .local v40, "viewInstanceCount":J
     invoke-static {}, Landroid/view/ViewDebug;->getViewRootImplCount()J
 
     move-result-wide v42
 
-    .line 1100
     .local v42, "viewRootInstanceCount":J
     const-class v5, Landroid/app/ContextImpl;
 
@@ -146,7 +133,6 @@
 
     move-result-wide v26
 
-    .line 1101
     .local v26, "appContextInstanceCount":J
     const-class v5, Landroid/app/Activity;
 
@@ -154,37 +140,31 @@
 
     move-result-wide v24
 
-    .line 1102
     .local v24, "activityInstanceCount":J
     invoke-static {}, Landroid/content/res/AssetManager;->getGlobalAssetCount()I
 
     move-result v33
 
-    .line 1103
     .local v33, "globalAssetCount":I
     invoke-static {}, Landroid/content/res/AssetManager;->getGlobalAssetManagerCount()I
 
     move-result v34
 
-    .line 1104
     .local v34, "globalAssetManagerCount":I
     invoke-static {}, Landroid/os/Debug;->getBinderLocalObjectCount()I
 
     move-result v30
 
-    .line 1105
     .local v30, "binderLocalObjectCount":I
     invoke-static {}, Landroid/os/Debug;->getBinderProxyObjectCount()I
 
     move-result v31
 
-    .line 1106
     .local v31, "binderProxyObjectCount":I
     invoke-static {}, Landroid/os/Debug;->getBinderDeathObjectCount()I
 
     move-result v29
 
-    .line 1107
     .local v29, "binderDeathObjectCount":I
     const-class v5, Lcom/android/org/conscrypt/OpenSSLSocketImpl;
 
@@ -192,13 +172,11 @@
 
     move-result-wide v36
 
-    .line 1108
     .local v36, "openSslSocketCount":J
     invoke-static {}, Landroid/database/sqlite/SQLiteDebug;->getDatabaseInfo()Landroid/database/sqlite/SQLiteDebug$PagerStats;
 
     move-result-object v39
 
-    .line 1110
     .local v39, "stats":Landroid/database/sqlite/SQLiteDebug$PagerStats;
     invoke-static {}, Landroid/os/Process;->myPid()I
 
@@ -233,10 +211,8 @@
 
     invoke-static/range {v5 .. v23}, Landroid/app/ActivityThread;->dumpMemInfoTable(Ljava/io/PrintWriter;Landroid/os/Debug$MemoryInfo;ZZZILjava/lang/String;JJJJJJ)V
 
-    .line 1115
     if-eqz p3, :cond_3
 
-    .line 1120
     move-object/from16 v0, p1
 
     move-wide/from16 v1, v40
@@ -249,7 +225,6 @@
 
     invoke-virtual {v0, v5}, Ljava/io/PrintWriter;->print(C)V
 
-    .line 1121
     move-object/from16 v0, p1
 
     move-wide/from16 v1, v42
@@ -262,7 +237,6 @@
 
     invoke-virtual {v0, v5}, Ljava/io/PrintWriter;->print(C)V
 
-    .line 1122
     move-object/from16 v0, p1
 
     move-wide/from16 v1, v26
@@ -275,7 +249,6 @@
 
     invoke-virtual {v0, v5}, Ljava/io/PrintWriter;->print(C)V
 
-    .line 1123
     move-object/from16 v0, p1
 
     move-wide/from16 v1, v24
@@ -288,7 +261,6 @@
 
     invoke-virtual {v0, v5}, Ljava/io/PrintWriter;->print(C)V
 
-    .line 1125
     move-object/from16 v0, p1
 
     move/from16 v1, v33
@@ -301,7 +273,6 @@
 
     invoke-virtual {v0, v5}, Ljava/io/PrintWriter;->print(C)V
 
-    .line 1126
     move-object/from16 v0, p1
 
     move/from16 v1, v34
@@ -314,7 +285,6 @@
 
     invoke-virtual {v0, v5}, Ljava/io/PrintWriter;->print(C)V
 
-    .line 1127
     move-object/from16 v0, p1
 
     move/from16 v1, v30
@@ -327,7 +297,6 @@
 
     invoke-virtual {v0, v5}, Ljava/io/PrintWriter;->print(C)V
 
-    .line 1128
     move-object/from16 v0, p1
 
     move/from16 v1, v31
@@ -340,7 +309,6 @@
 
     invoke-virtual {v0, v5}, Ljava/io/PrintWriter;->print(C)V
 
-    .line 1130
     move-object/from16 v0, p1
 
     move/from16 v1, v29
@@ -353,7 +321,6 @@
 
     invoke-virtual {v0, v5}, Ljava/io/PrintWriter;->print(C)V
 
-    .line 1131
     move-object/from16 v0, p1
 
     move-wide/from16 v1, v36
@@ -366,7 +333,6 @@
 
     invoke-virtual {v0, v5}, Ljava/io/PrintWriter;->print(C)V
 
-    .line 1134
     move-object/from16 v0, v39
 
     iget v5, v0, Landroid/database/sqlite/SQLiteDebug$PagerStats;->memoryUsed:I
@@ -383,7 +349,6 @@
 
     invoke-virtual {v0, v5}, Ljava/io/PrintWriter;->print(C)V
 
-    .line 1135
     move-object/from16 v0, v39
 
     iget v5, v0, Landroid/database/sqlite/SQLiteDebug$PagerStats;->memoryUsed:I
@@ -400,7 +365,6 @@
 
     invoke-virtual {v0, v5}, Ljava/io/PrintWriter;->print(C)V
 
-    .line 1136
     move-object/from16 v0, v39
 
     iget v5, v0, Landroid/database/sqlite/SQLiteDebug$PagerStats;->pageCacheOverflow:I
@@ -417,7 +381,6 @@
 
     invoke-virtual {v0, v5}, Ljava/io/PrintWriter;->print(C)V
 
-    .line 1137
     move-object/from16 v0, v39
 
     iget v5, v0, Landroid/database/sqlite/SQLiteDebug$PagerStats;->largestMemAlloc:I
@@ -428,7 +391,6 @@
 
     invoke-virtual {v0, v5}, Ljava/io/PrintWriter;->print(I)V
 
-    .line 1138
     const/16 v35, 0x0
 
     .local v35, "i":I
@@ -445,7 +407,6 @@
 
     if-ge v0, v5, :cond_1
 
-    .line 1139
     move-object/from16 v0, v39
 
     iget-object v5, v0, Landroid/database/sqlite/SQLiteDebug$PagerStats;->dbStats:Ljava/util/ArrayList;
@@ -458,7 +419,6 @@
 
     check-cast v32, Landroid/database/sqlite/SQLiteDebug$DbStats;
 
-    .line 1140
     .local v32, "dbStats":Landroid/database/sqlite/SQLiteDebug$DbStats;
     const/16 v5, 0x2c
 
@@ -474,7 +434,6 @@
 
     invoke-virtual {v0, v5}, Ljava/io/PrintWriter;->print(Ljava/lang/String;)V
 
-    .line 1141
     const/16 v5, 0x2c
 
     move-object/from16 v0, p1
@@ -489,7 +448,6 @@
 
     invoke-virtual {v0, v6, v7}, Ljava/io/PrintWriter;->print(J)V
 
-    .line 1142
     const/16 v5, 0x2c
 
     move-object/from16 v0, p1
@@ -504,7 +462,6 @@
 
     invoke-virtual {v0, v6, v7}, Ljava/io/PrintWriter;->print(J)V
 
-    .line 1143
     const/16 v5, 0x2c
 
     move-object/from16 v0, p1
@@ -519,7 +476,6 @@
 
     invoke-virtual {v0, v5}, Ljava/io/PrintWriter;->print(I)V
 
-    .line 1144
     const/16 v5, 0x2c
 
     move-object/from16 v0, p1
@@ -534,7 +490,6 @@
 
     invoke-virtual {v0, v5}, Ljava/io/PrintWriter;->print(Ljava/lang/String;)V
 
-    .line 1145
     const/16 v5, 0x2c
 
     move-object/from16 v0, p1
@@ -549,31 +504,26 @@
 
     invoke-virtual {v0, v5}, Ljava/io/PrintWriter;->print(Ljava/lang/String;)V
 
-    .line 1138
     add-int/lit8 v35, v35, 0x1
 
     goto :goto_1
 
-    .line 1110
     .end local v32    # "dbStats":Landroid/database/sqlite/SQLiteDebug$DbStats;
     .end local v35    # "i":I
     :cond_0
-    const-string/jumbo v11, "unknown"
+    const-string v11, "unknown"
 
     goto/16 :goto_0
 
-    .line 1147
     .restart local v35    # "i":I
     :cond_1
     invoke-virtual/range {p1 .. p1}, Ljava/io/PrintWriter;->println()V
 
-    .line 1198
     .end local v35    # "i":I
     :cond_2
     :goto_2
     return-void
 
-    .line 1152
     :cond_3
     const-string v5, " "
 
@@ -581,14 +531,12 @@
 
     invoke-virtual {v0, v5}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
-    .line 1153
     const-string v5, " Objects"
 
     move-object/from16 v0, p1
 
     invoke-virtual {v0, v5}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
-    .line 1154
     const-string v5, "%21s %8d %21s %8d"
 
     const/4 v6, 0x4
@@ -627,7 +575,6 @@
 
     invoke-static {v0, v5, v6}, Landroid/app/ActivityThread;->printRow(Ljava/io/PrintWriter;Ljava/lang/String;[Ljava/lang/Object;)V
 
-    .line 1157
     const-string v5, "%21s %8d %21s %8d"
 
     const/4 v6, 0x4
@@ -666,7 +613,6 @@
 
     invoke-static {v0, v5, v6}, Landroid/app/ActivityThread;->printRow(Ljava/io/PrintWriter;Ljava/lang/String;[Ljava/lang/Object;)V
 
-    .line 1160
     const-string v5, "%21s %8d %21s %8d"
 
     const/4 v6, 0x4
@@ -705,7 +651,6 @@
 
     invoke-static {v0, v5, v6}, Landroid/app/ActivityThread;->printRow(Ljava/io/PrintWriter;Ljava/lang/String;[Ljava/lang/Object;)V
 
-    .line 1163
     const-string v5, "%21s %8d %21s %8d"
 
     const/4 v6, 0x4
@@ -744,7 +689,6 @@
 
     invoke-static {v0, v5, v6}, Landroid/app/ActivityThread;->printRow(Ljava/io/PrintWriter;Ljava/lang/String;[Ljava/lang/Object;)V
 
-    .line 1165
     const-string v5, "%21s %8d"
 
     const/4 v6, 0x2
@@ -769,7 +713,6 @@
 
     invoke-static {v0, v5, v6}, Landroid/app/ActivityThread;->printRow(Ljava/io/PrintWriter;Ljava/lang/String;[Ljava/lang/Object;)V
 
-    .line 1167
     const-string v5, "%21s %8d"
 
     const/4 v6, 0x2
@@ -794,21 +737,18 @@
 
     invoke-static {v0, v5, v6}, Landroid/app/ActivityThread;->printRow(Ljava/io/PrintWriter;Ljava/lang/String;[Ljava/lang/Object;)V
 
-    .line 1170
     const-string v5, " "
 
     move-object/from16 v0, p1
 
     invoke-virtual {v0, v5}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
-    .line 1171
     const-string v5, " SQL"
 
     move-object/from16 v0, p1
 
     invoke-virtual {v0, v5}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
-    .line 1172
     const-string v5, "%21s %8d"
 
     const/4 v6, 0x2
@@ -839,7 +779,6 @@
 
     invoke-static {v0, v5, v6}, Landroid/app/ActivityThread;->printRow(Ljava/io/PrintWriter;Ljava/lang/String;[Ljava/lang/Object;)V
 
-    .line 1173
     const-string v5, "%21s %8d %21s %8d"
 
     const/4 v6, 0x4
@@ -890,14 +829,12 @@
 
     invoke-static {v0, v5, v6}, Landroid/app/ActivityThread;->printRow(Ljava/io/PrintWriter;Ljava/lang/String;[Ljava/lang/Object;)V
 
-    .line 1175
     const-string v5, " "
 
     move-object/from16 v0, p1
 
     invoke-virtual {v0, v5}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
-    .line 1176
     move-object/from16 v0, v39
 
     iget-object v5, v0, Landroid/database/sqlite/SQLiteDebug$PagerStats;->dbStats:Ljava/util/ArrayList;
@@ -906,18 +843,15 @@
 
     move-result v4
 
-    .line 1177
     .local v4, "N":I
     if-lez v4, :cond_7
 
-    .line 1178
     const-string v5, " DATABASES"
 
     move-object/from16 v0, p1
 
     invoke-virtual {v0, v5}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
-    .line 1179
     const-string v5, "  %8s %8s %14s %14s  %s"
 
     const/4 v6, 0x5
@@ -926,7 +860,7 @@
 
     const/4 v7, 0x0
 
-    const-string/jumbo v8, "pgsz"
+    const-string v8, "pgsz"
 
     aput-object v8, v6, v7
 
@@ -958,7 +892,6 @@
 
     invoke-static {v0, v5, v6}, Landroid/app/ActivityThread;->printRow(Ljava/io/PrintWriter;Ljava/lang/String;[Ljava/lang/Object;)V
 
-    .line 1181
     const/16 v35, 0x0
 
     .restart local v35    # "i":I
@@ -967,7 +900,6 @@
 
     if-ge v0, v4, :cond_7
 
-    .line 1182
     move-object/from16 v0, v39
 
     iget-object v5, v0, Landroid/database/sqlite/SQLiteDebug$PagerStats;->dbStats:Ljava/util/ArrayList;
@@ -980,7 +912,6 @@
 
     check-cast v32, Landroid/database/sqlite/SQLiteDebug$DbStats;
 
-    .line 1183
     .restart local v32    # "dbStats":Landroid/database/sqlite/SQLiteDebug$DbStats;
     const-string v6, "  %8s %8s %14s %14s  %s"
 
@@ -1073,12 +1004,10 @@
 
     invoke-static {v0, v6, v7}, Landroid/app/ActivityThread;->printRow(Ljava/io/PrintWriter;Ljava/lang/String;[Ljava/lang/Object;)V
 
-    .line 1181
     add-int/lit8 v35, v35, 0x1
 
     goto :goto_3
 
-    .line 1183
     :cond_4
     const-string v5, " "
 
@@ -1094,7 +1023,6 @@
 
     goto :goto_6
 
-    .line 1192
     .end local v32    # "dbStats":Landroid/database/sqlite/SQLiteDebug$DbStats;
     .end local v35    # "i":I
     :cond_7
@@ -1102,25 +1030,21 @@
 
     move-result-object v28
 
-    .line 1193
     .local v28, "assetAlloc":Ljava/lang/String;
     if-eqz v28, :cond_2
 
-    .line 1194
     const-string v5, " "
 
     move-object/from16 v0, p1
 
     invoke-virtual {v0, v5}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
-    .line 1195
     const-string v5, " Asset Allocations"
 
     move-object/from16 v0, p1
 
     invoke-virtual {v0, v5}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
-    .line 1196
     move-object/from16 v0, p1
 
     move-object/from16 v1, v28
@@ -1135,7 +1059,6 @@
     .param p1, "config"    # Landroid/content/res/Configuration;
 
     .prologue
-    .line 658
     iget-object v0, p0, Landroid/app/ActivityThread$ApplicationThread;->this$0:Landroid/app/ActivityThread;
 
     # getter for: Landroid/app/ActivityThread;->mResourcesManager:Landroid/app/ResourcesManager;
@@ -1145,7 +1068,6 @@
 
     monitor-enter v1
 
-    .line 659
     :try_start_0
     iget-object v0, p0, Landroid/app/ActivityThread$ApplicationThread;->this$0:Landroid/app/ActivityThread;
 
@@ -1163,20 +1085,16 @@
 
     if-eqz v0, :cond_1
 
-    .line 661
     :cond_0
     iget-object v0, p0, Landroid/app/ActivityThread$ApplicationThread;->this$0:Landroid/app/ActivityThread;
 
     iput-object p1, v0, Landroid/app/ActivityThread;->mPendingConfiguration:Landroid/content/res/Configuration;
 
-    .line 663
     :cond_1
     monitor-exit v1
 
-    .line 664
     return-void
 
-    .line 663
     :catchall_0
     move-exception v0
 
@@ -1233,30 +1151,24 @@
     .end annotation
 
     .prologue
-    .line 867
     .local p3, "providers":Ljava/util/List;, "Ljava/util/List<Landroid/content/pm/ProviderInfo;>;"
     .local p15, "services":Ljava/util/Map;, "Ljava/util/Map<Ljava/lang/String;Landroid/os/IBinder;>;"
     if-eqz p15, :cond_0
 
-    .line 869
     invoke-static/range {p15 .. p15}, Landroid/os/ServiceManager;->initServiceCache(Ljava/util/Map;)V
 
-    .line 872
     :cond_0
     move-object/from16 v0, p16
 
     invoke-virtual {p0, v0}, Landroid/app/ActivityThread$ApplicationThread;->setCoreSettings(Landroid/os/Bundle;)V
 
-    .line 890
     invoke-static {}, Landroid/app/ActivityThread;->getPackageManager()Landroid/content/pm/IPackageManager;
 
     move-result-object v3
 
-    .line 891
     .local v3, "pm":Landroid/content/pm/IPackageManager;
     const/4 v2, 0x0
 
-    .line 893
     .local v2, "pi":Landroid/content/pm/PackageInfo;
     :try_start_0
     iget-object v7, p2, Landroid/content/pm/ApplicationInfo;->packageName:Ljava/lang/String;
@@ -1273,18 +1185,15 @@
 
     move-result-object v2
 
-    .line 896
     :goto_0
     if-eqz v2, :cond_2
 
-    .line 897
     iget-object v7, v2, Landroid/content/pm/PackageInfo;->sharedUserId:Ljava/lang/String;
 
     if-eqz v7, :cond_3
 
     const/4 v6, 0x1
 
-    .line 898
     .local v6, "sharedUserIdSet":Z
     :goto_1
     iget-object v7, v2, Landroid/content/pm/PackageInfo;->applicationInfo:Landroid/content/pm/ApplicationInfo;
@@ -1305,7 +1214,6 @@
 
     const/4 v4, 0x1
 
-    .line 901
     .local v4, "processNameNotDefault":Z
     :goto_2
     if-nez v6, :cond_1
@@ -1315,12 +1223,10 @@
     :cond_1
     const/4 v5, 0x1
 
-    .line 905
     .local v5, "sharable":Z
     :goto_3
     if-nez v5, :cond_2
 
-    .line 906
     iget-object v7, p2, Landroid/content/pm/ApplicationInfo;->packageName:Ljava/lang/String;
 
     iget-object v8, p2, Landroid/content/pm/ApplicationInfo;->dataDir:Ljava/lang/String;
@@ -1329,7 +1235,6 @@
 
     invoke-static {v7, v8, v9}, Ldalvik/system/VMRuntime;->registerAppInfo(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 911
     .end local v4    # "processNameNotDefault":Z
     .end local v5    # "sharable":Z
     .end local v6    # "sharedUserIdSet":Z
@@ -1338,68 +1243,53 @@
 
     invoke-direct {v1}, Landroid/app/ActivityThread$AppBindData;-><init>()V
 
-    .line 912
     .local v1, "data":Landroid/app/ActivityThread$AppBindData;
     iput-object p1, v1, Landroid/app/ActivityThread$AppBindData;->processName:Ljava/lang/String;
 
-    .line 913
     iput-object p2, v1, Landroid/app/ActivityThread$AppBindData;->appInfo:Landroid/content/pm/ApplicationInfo;
 
-    .line 914
     iput-object p3, v1, Landroid/app/ActivityThread$AppBindData;->providers:Ljava/util/List;
 
-    .line 915
     iput-object p4, v1, Landroid/app/ActivityThread$AppBindData;->instrumentationName:Landroid/content/ComponentName;
 
-    .line 916
     move-object/from16 v0, p6
 
     iput-object v0, v1, Landroid/app/ActivityThread$AppBindData;->instrumentationArgs:Landroid/os/Bundle;
 
-    .line 917
     move-object/from16 v0, p7
 
     iput-object v0, v1, Landroid/app/ActivityThread$AppBindData;->instrumentationWatcher:Landroid/app/IInstrumentationWatcher;
 
-    .line 918
     move-object/from16 v0, p8
 
     iput-object v0, v1, Landroid/app/ActivityThread$AppBindData;->instrumentationUiAutomationConnection:Landroid/app/IUiAutomationConnection;
 
-    .line 919
     move/from16 v0, p9
 
     iput v0, v1, Landroid/app/ActivityThread$AppBindData;->debugMode:I
 
-    .line 920
     move/from16 v0, p10
 
     iput-boolean v0, v1, Landroid/app/ActivityThread$AppBindData;->enableOpenGlTrace:Z
 
-    .line 921
     move/from16 v0, p11
 
     iput-boolean v0, v1, Landroid/app/ActivityThread$AppBindData;->restrictedBackupMode:Z
 
-    .line 922
     move/from16 v0, p12
 
     iput-boolean v0, v1, Landroid/app/ActivityThread$AppBindData;->persistent:Z
 
-    .line 923
     move-object/from16 v0, p13
 
     iput-object v0, v1, Landroid/app/ActivityThread$AppBindData;->config:Landroid/content/res/Configuration;
 
-    .line 924
     move-object/from16 v0, p14
 
     iput-object v0, v1, Landroid/app/ActivityThread$AppBindData;->compatInfo:Landroid/content/res/CompatibilityInfo;
 
-    .line 925
     iput-object p5, v1, Landroid/app/ActivityThread$AppBindData;->initProfilerInfo:Landroid/app/ProfilerInfo;
 
-    .line 926
     iget-object v7, p0, Landroid/app/ActivityThread$ApplicationThread;->this$0:Landroid/app/ActivityThread;
 
     const/16 v8, 0x6e
@@ -1407,31 +1297,26 @@
     # invokes: Landroid/app/ActivityThread;->sendMessage(ILjava/lang/Object;)V
     invoke-static {v7, v8, v1}, Landroid/app/ActivityThread;->access$500(Landroid/app/ActivityThread;ILjava/lang/Object;)V
 
-    .line 927
     return-void
 
-    .line 897
     .end local v1    # "data":Landroid/app/ActivityThread$AppBindData;
     :cond_3
     const/4 v6, 0x0
 
     goto :goto_1
 
-    .line 898
     .restart local v6    # "sharedUserIdSet":Z
     :cond_4
     const/4 v4, 0x0
 
     goto :goto_2
 
-    .line 901
     .restart local v4    # "processNameNotDefault":Z
     :cond_5
     const/4 v5, 0x0
 
     goto :goto_3
 
-    .line 894
     .end local v4    # "processNameNotDefault":Z
     .end local v6    # "sharedUserIdSet":Z
     :catch_0
@@ -1444,17 +1329,14 @@
     .locals 1
 
     .prologue
-    .line 948
     invoke-static {}, Ljava/net/InetAddress;->clearDnsCache()V
 
-    .line 951
     invoke-static {}, Llibcore/net/event/NetworkEventDispatcher;->getInstance()Llibcore/net/event/NetworkEventDispatcher;
 
     move-result-object v0
 
     invoke-virtual {v0}, Llibcore/net/event/NetworkEventDispatcher;->onNetworkConfigurationChanged()V
 
-    .line 952
     return-void
 .end method
 
@@ -1464,7 +1346,6 @@
     .param p2, "packages"    # [Ljava/lang/String;
 
     .prologue
-    .line 1033
     iget-object v0, p0, Landroid/app/ActivityThread$ApplicationThread;->this$0:Landroid/app/ActivityThread;
 
     const/16 v1, 0x85
@@ -1472,7 +1353,6 @@
     # invokes: Landroid/app/ActivityThread;->sendMessage(ILjava/lang/Object;I)V
     invoke-static {v0, v1, p2, p1}, Landroid/app/ActivityThread;->access$300(Landroid/app/ActivityThread;ILjava/lang/Object;I)V
 
-    .line 1034
     return-void
 .end method
 
@@ -1484,12 +1364,10 @@
     .param p4, "args"    # [Ljava/lang/String;
 
     .prologue
-    .line 1050
     new-instance v2, Landroid/app/ActivityThread$DumpComponentInfo;
 
     invoke-direct {v2}, Landroid/app/ActivityThread$DumpComponentInfo;-><init>()V
 
-    .line 1052
     .local v2, "data":Landroid/app/ActivityThread$DumpComponentInfo;
     :try_start_0
     invoke-static {p1}, Landroid/os/ParcelFileDescriptor;->dup(Ljava/io/FileDescriptor;)Landroid/os/ParcelFileDescriptor;
@@ -1498,16 +1376,12 @@
 
     iput-object v0, v2, Landroid/app/ActivityThread$DumpComponentInfo;->fd:Landroid/os/ParcelFileDescriptor;
 
-    .line 1053
     iput-object p2, v2, Landroid/app/ActivityThread$DumpComponentInfo;->token:Landroid/os/IBinder;
 
-    .line 1054
     iput-object p3, v2, Landroid/app/ActivityThread$DumpComponentInfo;->prefix:Ljava/lang/String;
 
-    .line 1055
     iput-object p4, v2, Landroid/app/ActivityThread$DumpComponentInfo;->args:[Ljava/lang/String;
 
-    .line 1056
     iget-object v0, p0, Landroid/app/ActivityThread$ApplicationThread;->this$0:Landroid/app/ActivityThread;
 
     const/16 v1, 0x88
@@ -1523,15 +1397,12 @@
     :try_end_0
     .catch Ljava/io/IOException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 1060
     :goto_0
     return-void
 
-    .line 1057
     :catch_0
     move-exception v6
 
-    .line 1058
     .local v6, "e":Ljava/io/IOException;
     const-string v0, "ActivityThread"
 
@@ -1548,7 +1419,6 @@
     .param p2, "args"    # [Ljava/lang/String;
 
     .prologue
-    .line 1208
     new-instance v1, Lcom/android/internal/util/FastPrintWriter;
 
     new-instance v2, Ljava/io/FileOutputStream;
@@ -1557,20 +1427,16 @@
 
     invoke-direct {v1, v2}, Lcom/android/internal/util/FastPrintWriter;-><init>(Ljava/io/OutputStream;)V
 
-    .line 1209
     .local v1, "pw":Ljava/io/PrintWriter;
     new-instance v0, Landroid/util/PrintWriterPrinter;
 
     invoke-direct {v0, v1}, Landroid/util/PrintWriterPrinter;-><init>(Ljava/io/PrintWriter;)V
 
-    .line 1210
     .local v0, "printer":Landroid/util/PrintWriterPrinter;
     invoke-static {v0, p2}, Landroid/database/sqlite/SQLiteDebug;->dump(Landroid/util/Printer;[Ljava/lang/String;)V
 
-    .line 1211
     invoke-virtual {v1}, Ljava/io/PrintWriter;->flush()V
 
-    .line 1212
     return-void
 .end method
 
@@ -1580,20 +1446,17 @@
     .param p2, "args"    # [Ljava/lang/String;
 
     .prologue
-    .line 1202
     iget-object v0, p0, Landroid/app/ActivityThread$ApplicationThread;->this$0:Landroid/app/ActivityThread;
 
     # invokes: Landroid/app/ActivityThread;->dumpGraphicsInfo(Ljava/io/FileDescriptor;)V
     invoke-static {v0, p1}, Landroid/app/ActivityThread;->access$700(Landroid/app/ActivityThread;Ljava/io/FileDescriptor;)V
 
-    .line 1203
     invoke-static {}, Landroid/view/WindowManagerGlobal;->getInstance()Landroid/view/WindowManagerGlobal;
 
     move-result-object v0
 
     invoke-virtual {v0, p1}, Landroid/view/WindowManagerGlobal;->dumpGfxInfo(Ljava/io/FileDescriptor;)V
 
-    .line 1204
     return-void
 .end method
 
@@ -1608,19 +1471,15 @@
 
     const/4 v4, 0x0
 
-    .line 1014
     new-instance v2, Landroid/app/ActivityThread$DumpHeapData;
 
     invoke-direct {v2}, Landroid/app/ActivityThread$DumpHeapData;-><init>()V
 
-    .line 1015
     .local v2, "dhd":Landroid/app/ActivityThread$DumpHeapData;
     iput-object p2, v2, Landroid/app/ActivityThread$DumpHeapData;->path:Ljava/lang/String;
 
-    .line 1016
     iput-object p3, v2, Landroid/app/ActivityThread$DumpHeapData;->fd:Landroid/os/ParcelFileDescriptor;
 
-    .line 1017
     iget-object v0, p0, Landroid/app/ActivityThread$ApplicationThread;->this$0:Landroid/app/ActivityThread;
 
     const/16 v1, 0x87
@@ -1633,13 +1492,11 @@
     # invokes: Landroid/app/ActivityThread;->sendMessage(ILjava/lang/Object;IIZ)V
     invoke-static/range {v0 .. v5}, Landroid/app/ActivityThread;->access$600(Landroid/app/ActivityThread;ILjava/lang/Object;IIZ)V
 
-    .line 1018
     return-void
 
     :cond_0
     move v3, v4
 
-    .line 1017
     goto :goto_0
 .end method
 
@@ -1653,12 +1510,10 @@
     .param p6, "args"    # [Ljava/lang/String;
 
     .prologue
-    .line 1078
     new-instance v6, Ljava/io/FileOutputStream;
 
     invoke-direct {v6, p1}, Ljava/io/FileOutputStream;-><init>(Ljava/io/FileDescriptor;)V
 
-    .line 1079
     .local v6, "fout":Ljava/io/FileOutputStream;
     new-instance v1, Lcom/android/internal/util/FastPrintWriter;
 
@@ -1675,19 +1530,15 @@
 
     move v5, p5
 
-    .line 1081
     :try_start_0
     invoke-direct/range {v0 .. v5}, Landroid/app/ActivityThread$ApplicationThread;->dumpMemInfo(Ljava/io/PrintWriter;Landroid/os/Debug$MemoryInfo;ZZZ)V
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 1083
     invoke-virtual {v1}, Ljava/io/PrintWriter;->flush()V
 
-    .line 1085
     return-void
 
-    .line 1083
     :catchall_0
     move-exception v0
 
@@ -1703,12 +1554,10 @@
     .param p3, "args"    # [Ljava/lang/String;
 
     .prologue
-    .line 1064
     new-instance v2, Landroid/app/ActivityThread$DumpComponentInfo;
 
     invoke-direct {v2}, Landroid/app/ActivityThread$DumpComponentInfo;-><init>()V
 
-    .line 1066
     .local v2, "data":Landroid/app/ActivityThread$DumpComponentInfo;
     :try_start_0
     invoke-static {p1}, Landroid/os/ParcelFileDescriptor;->dup(Ljava/io/FileDescriptor;)Landroid/os/ParcelFileDescriptor;
@@ -1717,13 +1566,10 @@
 
     iput-object v0, v2, Landroid/app/ActivityThread$DumpComponentInfo;->fd:Landroid/os/ParcelFileDescriptor;
 
-    .line 1067
     iput-object p2, v2, Landroid/app/ActivityThread$DumpComponentInfo;->token:Landroid/os/IBinder;
 
-    .line 1068
     iput-object p3, v2, Landroid/app/ActivityThread$DumpComponentInfo;->args:[Ljava/lang/String;
 
-    .line 1069
     iget-object v0, p0, Landroid/app/ActivityThread$ApplicationThread;->this$0:Landroid/app/ActivityThread;
 
     const/16 v1, 0x8d
@@ -1739,15 +1585,12 @@
     :try_end_0
     .catch Ljava/io/IOException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 1073
     :goto_0
     return-void
 
-    .line 1070
     :catch_0
     move-exception v6
 
-    .line 1071
     .local v6, "e":Ljava/io/IOException;
     const-string v0, "ActivityThread"
 
@@ -1765,12 +1608,10 @@
     .param p3, "args"    # [Ljava/lang/String;
 
     .prologue
-    .line 973
     new-instance v2, Landroid/app/ActivityThread$DumpComponentInfo;
 
     invoke-direct {v2}, Landroid/app/ActivityThread$DumpComponentInfo;-><init>()V
 
-    .line 975
     .local v2, "data":Landroid/app/ActivityThread$DumpComponentInfo;
     :try_start_0
     invoke-static {p1}, Landroid/os/ParcelFileDescriptor;->dup(Ljava/io/FileDescriptor;)Landroid/os/ParcelFileDescriptor;
@@ -1779,13 +1620,10 @@
 
     iput-object v0, v2, Landroid/app/ActivityThread$DumpComponentInfo;->fd:Landroid/os/ParcelFileDescriptor;
 
-    .line 976
     iput-object p2, v2, Landroid/app/ActivityThread$DumpComponentInfo;->token:Landroid/os/IBinder;
 
-    .line 977
     iput-object p3, v2, Landroid/app/ActivityThread$DumpComponentInfo;->args:[Ljava/lang/String;
 
-    .line 978
     iget-object v0, p0, Landroid/app/ActivityThread$ApplicationThread;->this$0:Landroid/app/ActivityThread;
 
     const/16 v1, 0x7b
@@ -1801,15 +1639,12 @@
     :try_end_0
     .catch Ljava/io/IOException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 982
     :goto_0
     return-void
 
-    .line 979
     :catch_0
     move-exception v6
 
-    .line 980
     .local v6, "e":Ljava/io/IOException;
     const-string v0, "ActivityThread"
 
@@ -1826,14 +1661,12 @@
     .prologue
     const/16 v2, 0x78
 
-    .line 968
     iget-object v0, p0, Landroid/app/ActivityThread$ApplicationThread;->this$0:Landroid/app/ActivityThread;
 
     iget-object v0, v0, Landroid/app/ActivityThread;->mH:Landroid/app/ActivityThread$H;
 
     invoke-virtual {v0, v2}, Landroid/app/ActivityThread$H;->removeMessages(I)V
 
-    .line 969
     iget-object v0, p0, Landroid/app/ActivityThread$ApplicationThread;->this$0:Landroid/app/ActivityThread;
 
     iget-object v0, v0, Landroid/app/ActivityThread;->mH:Landroid/app/ActivityThread$H;
@@ -1848,7 +1681,6 @@
 
     invoke-virtual {v0, v1}, Landroid/app/ActivityThread$H;->sendMessage(Landroid/os/Message;)Z
 
-    .line 970
     return-void
 .end method
 
@@ -1859,7 +1691,6 @@
     .param p3, "profileType"    # I
 
     .prologue
-    .line 1010
     iget-object v1, p0, Landroid/app/ActivityThread$ApplicationThread;->this$0:Landroid/app/ActivityThread;
 
     const/16 v2, 0x7f
@@ -1872,10 +1703,8 @@
     # invokes: Landroid/app/ActivityThread;->sendMessage(ILjava/lang/Object;II)V
     invoke-static {v1, v2, p2, v0, p3}, Landroid/app/ActivityThread;->access$400(Landroid/app/ActivityThread;ILjava/lang/Object;II)V
 
-    .line 1011
     return-void
 
-    .line 1010
     :cond_0
     const/4 v0, 0x0
 
@@ -1889,22 +1718,17 @@
     .param p3, "requestType"    # I
 
     .prologue
-    .line 1222
     new-instance v0, Landroid/app/ActivityThread$RequestAssistContextExtras;
 
     invoke-direct {v0}, Landroid/app/ActivityThread$RequestAssistContextExtras;-><init>()V
 
-    .line 1223
     .local v0, "cmd":Landroid/app/ActivityThread$RequestAssistContextExtras;
     iput-object p1, v0, Landroid/app/ActivityThread$RequestAssistContextExtras;->activityToken:Landroid/os/IBinder;
 
-    .line 1224
     iput-object p2, v0, Landroid/app/ActivityThread$RequestAssistContextExtras;->requestToken:Landroid/os/IBinder;
 
-    .line 1225
     iput p3, v0, Landroid/app/ActivityThread$RequestAssistContextExtras;->requestType:I
 
-    .line 1226
     iget-object v1, p0, Landroid/app/ActivityThread$ApplicationThread;->this$0:Landroid/app/ActivityThread;
 
     const/16 v2, 0x8f
@@ -1912,7 +1736,6 @@
     # invokes: Landroid/app/ActivityThread;->sendMessage(ILjava/lang/Object;)V
     invoke-static {v1, v2, v0}, Landroid/app/ActivityThread;->access$500(Landroid/app/ActivityThread;ILjava/lang/Object;)V
 
-    .line 1227
     return-void
 .end method
 
@@ -1921,7 +1744,6 @@
     .param p1, "token"    # Landroid/os/IBinder;
 
     .prologue
-    .line 1000
     iget-object v0, p0, Landroid/app/ActivityThread$ApplicationThread;->this$0:Landroid/app/ActivityThread;
 
     const/16 v1, 0x7d
@@ -1929,7 +1751,6 @@
     # invokes: Landroid/app/ActivityThread;->sendMessage(ILjava/lang/Object;)V
     invoke-static {v0, v1, p1}, Landroid/app/ActivityThread;->access$500(Landroid/app/ActivityThread;ILjava/lang/Object;)V
 
-    .line 1001
     return-void
 .end method
 
@@ -1939,7 +1760,6 @@
     .param p2, "visible"    # Z
 
     .prologue
-    .line 1295
     iget-object v1, p0, Landroid/app/ActivityThread$ApplicationThread;->this$0:Landroid/app/ActivityThread;
 
     const/16 v2, 0x94
@@ -1952,10 +1772,8 @@
     # invokes: Landroid/app/ActivityThread;->sendMessage(ILjava/lang/Object;I)V
     invoke-static {v1, v2, p1, v0}, Landroid/app/ActivityThread;->access$300(Landroid/app/ActivityThread;ILjava/lang/Object;I)V
 
-    .line 1296
     return-void
 
-    .line 1295
     :cond_0
     const/4 v0, 0x0
 
@@ -1970,27 +1788,21 @@
     .param p4, "processState"    # I
 
     .prologue
-    .line 822
     const/4 v1, 0x0
 
     invoke-virtual {p0, p4, v1}, Landroid/app/ActivityThread$ApplicationThread;->updateProcessState(IZ)V
 
-    .line 823
     new-instance v0, Landroid/app/ActivityThread$BindServiceData;
 
     invoke-direct {v0}, Landroid/app/ActivityThread$BindServiceData;-><init>()V
 
-    .line 824
     .local v0, "s":Landroid/app/ActivityThread$BindServiceData;
     iput-object p1, v0, Landroid/app/ActivityThread$BindServiceData;->token:Landroid/os/IBinder;
 
-    .line 825
     iput-object p2, v0, Landroid/app/ActivityThread$BindServiceData;->intent:Landroid/content/Intent;
 
-    .line 826
     iput-boolean p3, v0, Landroid/app/ActivityThread$BindServiceData;->rebind:Z
 
-    .line 831
     iget-object v1, p0, Landroid/app/ActivityThread$ApplicationThread;->this$0:Landroid/app/ActivityThread;
 
     const/16 v2, 0x79
@@ -1998,7 +1810,6 @@
     # invokes: Landroid/app/ActivityThread;->sendMessage(ILjava/lang/Object;)V
     invoke-static {v1, v2, v0}, Landroid/app/ActivityThread;->access$500(Landroid/app/ActivityThread;ILjava/lang/Object;)V
 
-    .line 832
     return-void
 .end method
 
@@ -2007,7 +1818,6 @@
     .param p1, "token"    # Landroid/os/IBinder;
 
     .prologue
-    .line 1290
     iget-object v0, p0, Landroid/app/ActivityThread$ApplicationThread;->this$0:Landroid/app/ActivityThread;
 
     const/16 v1, 0x93
@@ -2015,7 +1825,6 @@
     # invokes: Landroid/app/ActivityThread;->sendMessage(ILjava/lang/Object;)V
     invoke-static {v0, v1, p1}, Landroid/app/ActivityThread;->access$500(Landroid/app/ActivityThread;ILjava/lang/Object;)V
 
-    .line 1291
     return-void
 .end method
 
@@ -2024,10 +1833,8 @@
     .param p1, "config"    # Landroid/content/res/Configuration;
 
     .prologue
-    .line 938
     invoke-direct {p0, p1}, Landroid/app/ActivityThread$ApplicationThread;->updatePendingConfiguration(Landroid/content/res/Configuration;)V
 
-    .line 939
     iget-object v0, p0, Landroid/app/ActivityThread$ApplicationThread;->this$0:Landroid/app/ActivityThread;
 
     const/16 v1, 0x76
@@ -2035,7 +1842,6 @@
     # invokes: Landroid/app/ActivityThread;->sendMessage(ILjava/lang/Object;)V
     invoke-static {v0, v1, p1}, Landroid/app/ActivityThread;->access$500(Landroid/app/ActivityThread;ILjava/lang/Object;)V
 
-    .line 940
     return-void
 .end method
 
@@ -2044,7 +1850,6 @@
     .param p1, "msg"    # Ljava/lang/String;
 
     .prologue
-    .line 1037
     iget-object v0, p0, Landroid/app/ActivityThread$ApplicationThread;->this$0:Landroid/app/ActivityThread;
 
     const/16 v1, 0x86
@@ -2052,7 +1857,6 @@
     # invokes: Landroid/app/ActivityThread;->sendMessage(ILjava/lang/Object;)V
     invoke-static {v0, v1, p1}, Landroid/app/ActivityThread;->access$500(Landroid/app/ActivityThread;ILjava/lang/Object;)V
 
-    .line 1038
     return-void
 .end method
 
@@ -2063,22 +1867,17 @@
     .param p3, "backupMode"    # I
 
     .prologue
-    .line 792
     new-instance v0, Landroid/app/ActivityThread$CreateBackupAgentData;
 
     invoke-direct {v0}, Landroid/app/ActivityThread$CreateBackupAgentData;-><init>()V
 
-    .line 793
     .local v0, "d":Landroid/app/ActivityThread$CreateBackupAgentData;
     iput-object p1, v0, Landroid/app/ActivityThread$CreateBackupAgentData;->appInfo:Landroid/content/pm/ApplicationInfo;
 
-    .line 794
     iput-object p2, v0, Landroid/app/ActivityThread$CreateBackupAgentData;->compatInfo:Landroid/content/res/CompatibilityInfo;
 
-    .line 795
     iput p3, v0, Landroid/app/ActivityThread$CreateBackupAgentData;->backupMode:I
 
-    .line 797
     iget-object v1, p0, Landroid/app/ActivityThread$ApplicationThread;->this$0:Landroid/app/ActivityThread;
 
     const/16 v2, 0x80
@@ -2086,7 +1885,6 @@
     # invokes: Landroid/app/ActivityThread;->sendMessage(ILjava/lang/Object;)V
     invoke-static {v1, v2, v0}, Landroid/app/ActivityThread;->access$500(Landroid/app/ActivityThread;ILjava/lang/Object;)V
 
-    .line 798
     return-void
 .end method
 
@@ -2098,27 +1896,21 @@
     .param p4, "processState"    # I
 
     .prologue
-    .line 811
     const/4 v1, 0x0
 
     invoke-virtual {p0, p4, v1}, Landroid/app/ActivityThread$ApplicationThread;->updateProcessState(IZ)V
 
-    .line 812
     new-instance v0, Landroid/app/ActivityThread$CreateServiceData;
 
     invoke-direct {v0}, Landroid/app/ActivityThread$CreateServiceData;-><init>()V
 
-    .line 813
     .local v0, "s":Landroid/app/ActivityThread$CreateServiceData;
     iput-object p1, v0, Landroid/app/ActivityThread$CreateServiceData;->token:Landroid/os/IBinder;
 
-    .line 814
     iput-object p2, v0, Landroid/app/ActivityThread$CreateServiceData;->info:Landroid/content/pm/ServiceInfo;
 
-    .line 815
     iput-object p3, v0, Landroid/app/ActivityThread$CreateServiceData;->compatInfo:Landroid/content/res/CompatibilityInfo;
 
-    .line 817
     iget-object v1, p0, Landroid/app/ActivityThread$ApplicationThread;->this$0:Landroid/app/ActivityThread;
 
     const/16 v2, 0x72
@@ -2126,7 +1918,6 @@
     # invokes: Landroid/app/ActivityThread;->sendMessage(ILjava/lang/Object;)V
     invoke-static {v1, v2, v0}, Landroid/app/ActivityThread;->access$500(Landroid/app/ActivityThread;ILjava/lang/Object;)V
 
-    .line 818
     return-void
 .end method
 
@@ -2137,7 +1928,6 @@
     .param p3, "configChanges"    # I
 
     .prologue
-    .line 775
     iget-object v1, p0, Landroid/app/ActivityThread$ApplicationThread;->this$0:Landroid/app/ActivityThread;
 
     const/16 v2, 0x6d
@@ -2150,10 +1940,8 @@
     # invokes: Landroid/app/ActivityThread;->sendMessage(ILjava/lang/Object;II)V
     invoke-static {v1, v2, p1, v0, p3}, Landroid/app/ActivityThread;->access$400(Landroid/app/ActivityThread;ILjava/lang/Object;II)V
 
-    .line 777
     return-void
 
-    .line 775
     :cond_0
     const/4 v0, 0x0
 
@@ -2166,19 +1954,15 @@
     .param p2, "compatInfo"    # Landroid/content/res/CompatibilityInfo;
 
     .prologue
-    .line 802
     new-instance v0, Landroid/app/ActivityThread$CreateBackupAgentData;
 
     invoke-direct {v0}, Landroid/app/ActivityThread$CreateBackupAgentData;-><init>()V
 
-    .line 803
     .local v0, "d":Landroid/app/ActivityThread$CreateBackupAgentData;
     iput-object p1, v0, Landroid/app/ActivityThread$CreateBackupAgentData;->appInfo:Landroid/content/pm/ApplicationInfo;
 
-    .line 804
     iput-object p2, v0, Landroid/app/ActivityThread$CreateBackupAgentData;->compatInfo:Landroid/content/res/CompatibilityInfo;
 
-    .line 806
     iget-object v1, p0, Landroid/app/ActivityThread$ApplicationThread;->this$0:Landroid/app/ActivityThread;
 
     const/16 v2, 0x81
@@ -2186,7 +1970,6 @@
     # invokes: Landroid/app/ActivityThread;->sendMessage(ILjava/lang/Object;)V
     invoke-static {v1, v2, v0}, Landroid/app/ActivityThread;->access$500(Landroid/app/ActivityThread;ILjava/lang/Object;)V
 
-    .line 807
     return-void
 .end method
 
@@ -2195,7 +1978,6 @@
     .param p1, "token"    # Landroid/os/IBinder;
 
     .prologue
-    .line 1299
     iget-object v0, p0, Landroid/app/ActivityThread$ApplicationThread;->this$0:Landroid/app/ActivityThread;
 
     const/16 v1, 0x95
@@ -2203,7 +1985,6 @@
     # invokes: Landroid/app/ActivityThread;->sendMessage(ILjava/lang/Object;)V
     invoke-static {v0, v1, p1}, Landroid/app/ActivityThread;->access$500(Landroid/app/ActivityThread;ILjava/lang/Object;)V
 
-    .line 1300
     return-void
 .end method
 
@@ -2211,7 +1992,6 @@
     .locals 3
 
     .prologue
-    .line 930
     iget-object v0, p0, Landroid/app/ActivityThread$ApplicationThread;->this$0:Landroid/app/ActivityThread;
 
     const/16 v1, 0x6f
@@ -2221,7 +2001,6 @@
     # invokes: Landroid/app/ActivityThread;->sendMessage(ILjava/lang/Object;)V
     invoke-static {v0, v1, v2}, Landroid/app/ActivityThread;->access$500(Landroid/app/ActivityThread;ILjava/lang/Object;)V
 
-    .line 931
     return-void
 .end method
 
@@ -2230,7 +2009,6 @@
     .param p1, "provider"    # Landroid/content/pm/ProviderInfo;
 
     .prologue
-    .line 1280
     iget-object v0, p0, Landroid/app/ActivityThread$ApplicationThread;->this$0:Landroid/app/ActivityThread;
 
     const/16 v1, 0x91
@@ -2238,7 +2016,6 @@
     # invokes: Landroid/app/ActivityThread;->sendMessage(ILjava/lang/Object;)V
     invoke-static {v0, v1, p1}, Landroid/app/ActivityThread;->access$500(Landroid/app/ActivityThread;ILjava/lang/Object;)V
 
-    .line 1281
     return-void
 .end method
 
@@ -2286,67 +2063,51 @@
     .end annotation
 
     .prologue
-    .line 724
     .local p11, "pendingResults":Ljava/util/List;, "Ljava/util/List<Landroid/app/ResultInfo;>;"
     .local p12, "pendingNewIntents":Ljava/util/List;, "Ljava/util/List<Landroid/content/Intent;>;"
     const/4 v2, 0x0
 
     invoke-virtual {p0, p8, v2}, Landroid/app/ActivityThread$ApplicationThread;->updateProcessState(IZ)V
 
-    .line 726
     new-instance v1, Landroid/app/ActivityThread$ActivityClientRecord;
 
     invoke-direct {v1}, Landroid/app/ActivityThread$ActivityClientRecord;-><init>()V
 
-    .line 728
     .local v1, "r":Landroid/app/ActivityThread$ActivityClientRecord;
     iput-object p2, v1, Landroid/app/ActivityThread$ActivityClientRecord;->token:Landroid/os/IBinder;
 
-    .line 729
     iput p3, v1, Landroid/app/ActivityThread$ActivityClientRecord;->ident:I
 
-    .line 730
     iput-object p1, v1, Landroid/app/ActivityThread$ActivityClientRecord;->intent:Landroid/content/Intent;
 
-    .line 731
     iput-object p7, v1, Landroid/app/ActivityThread$ActivityClientRecord;->voiceInteractor:Lcom/android/internal/app/IVoiceInteractor;
 
-    .line 732
     iput-object p4, v1, Landroid/app/ActivityThread$ActivityClientRecord;->activityInfo:Landroid/content/pm/ActivityInfo;
 
-    .line 733
     iput-object p6, v1, Landroid/app/ActivityThread$ActivityClientRecord;->compatInfo:Landroid/content/res/CompatibilityInfo;
 
-    .line 734
     iput-object p9, v1, Landroid/app/ActivityThread$ActivityClientRecord;->state:Landroid/os/Bundle;
 
-    .line 735
     iput-object p10, v1, Landroid/app/ActivityThread$ActivityClientRecord;->persistentState:Landroid/os/PersistableBundle;
 
-    .line 737
     iput-object p11, v1, Landroid/app/ActivityThread$ActivityClientRecord;->pendingResults:Ljava/util/List;
 
-    .line 738
     move-object/from16 v0, p12
 
     iput-object v0, v1, Landroid/app/ActivityThread$ActivityClientRecord;->pendingIntents:Ljava/util/List;
 
-    .line 740
     move/from16 v0, p13
 
     iput-boolean v0, v1, Landroid/app/ActivityThread$ActivityClientRecord;->startsNotResumed:Z
 
-    .line 741
     move/from16 v0, p14
 
     iput-boolean v0, v1, Landroid/app/ActivityThread$ActivityClientRecord;->isForward:Z
 
-    .line 743
     move-object/from16 v0, p15
 
     iput-object v0, v1, Landroid/app/ActivityThread$ActivityClientRecord;->profilerInfo:Landroid/app/ProfilerInfo;
 
-    .line 747
     iget-object v2, v1, Landroid/app/ActivityThread$ActivityClientRecord;->multiWindowStyle:Lcom/samsung/android/multiwindow/MultiWindowStyle;
 
     const/4 v3, 0x1
@@ -2355,10 +2116,8 @@
 
     invoke-virtual {v2, v0, v3}, Lcom/samsung/android/multiwindow/MultiWindowStyle;->setTo(Lcom/samsung/android/multiwindow/MultiWindowStyle;Z)V
 
-    .line 751
     invoke-direct {p0, p5}, Landroid/app/ActivityThread$ApplicationThread;->updatePendingConfiguration(Landroid/content/res/Configuration;)V
 
-    .line 753
     iget-object v2, p0, Landroid/app/ActivityThread$ApplicationThread;->this$0:Landroid/app/ActivityThread;
 
     const/16 v3, 0x64
@@ -2366,7 +2125,6 @@
     # invokes: Landroid/app/ActivityThread;->sendMessage(ILjava/lang/Object;)V
     invoke-static {v2, v3, v1}, Landroid/app/ActivityThread;->access$500(Landroid/app/ActivityThread;ILjava/lang/Object;)V
 
-    .line 754
     return-void
 .end method
 
@@ -2374,7 +2132,6 @@
     .locals 3
 
     .prologue
-    .line 996
     iget-object v0, p0, Landroid/app/ActivityThread$ApplicationThread;->this$0:Landroid/app/ActivityThread;
 
     const/16 v1, 0x7c
@@ -2384,7 +2141,6 @@
     # invokes: Landroid/app/ActivityThread;->sendMessage(ILjava/lang/Object;)V
     invoke-static {v0, v1, v2}, Landroid/app/ActivityThread;->access$500(Landroid/app/ActivityThread;ILjava/lang/Object;)V
 
-    .line 997
     return-void
 .end method
 
@@ -2395,7 +2151,6 @@
     .param p3, "notifyReason"    # I
 
     .prologue
-    .line 1005
     iget-object v0, p0, Landroid/app/ActivityThread$ApplicationThread;->this$0:Landroid/app/ActivityThread;
 
     const/16 v1, 0x3e8
@@ -2407,7 +2162,6 @@
     # invokes: Landroid/app/ActivityThread;->sendMessage(ILjava/lang/Object;I)V
     invoke-static {v0, v1, v2, p3}, Landroid/app/ActivityThread;->access$300(Landroid/app/ActivityThread;ILjava/lang/Object;I)V
 
-    .line 1006
     return-void
 .end method
 
@@ -2427,20 +2181,16 @@
     .end annotation
 
     .prologue
-    .line 766
     .local p1, "intents":Ljava/util/List;, "Ljava/util/List<Landroid/content/Intent;>;"
     new-instance v0, Landroid/app/ActivityThread$NewIntentData;
 
     invoke-direct {v0}, Landroid/app/ActivityThread$NewIntentData;-><init>()V
 
-    .line 767
     .local v0, "data":Landroid/app/ActivityThread$NewIntentData;
     iput-object p1, v0, Landroid/app/ActivityThread$NewIntentData;->intents:Ljava/util/List;
 
-    .line 768
     iput-object p2, v0, Landroid/app/ActivityThread$NewIntentData;->token:Landroid/os/IBinder;
 
-    .line 770
     iget-object v1, p0, Landroid/app/ActivityThread$ApplicationThread;->this$0:Landroid/app/ActivityThread;
 
     const/16 v2, 0x70
@@ -2448,7 +2198,6 @@
     # invokes: Landroid/app/ActivityThread;->sendMessage(ILjava/lang/Object;)V
     invoke-static {v1, v2, v0}, Landroid/app/ActivityThread;->access$500(Landroid/app/ActivityThread;ILjava/lang/Object;)V
 
-    .line 771
     return-void
 .end method
 
@@ -2458,7 +2207,6 @@
     .param p2, "options"    # Landroid/app/ActivityOptions;
 
     .prologue
-    .line 1249
     iget-object v0, p0, Landroid/app/ActivityThread$ApplicationThread;->this$0:Landroid/app/ActivityThread;
 
     const/16 v1, 0x92
@@ -2470,7 +2218,6 @@
     # invokes: Landroid/app/ActivityThread;->sendMessage(ILjava/lang/Object;)V
     invoke-static {v0, v1, v2}, Landroid/app/ActivityThread;->access$500(Landroid/app/ActivityThread;ILjava/lang/Object;)V
 
-    .line 1251
     return-void
 .end method
 
@@ -2485,7 +2232,6 @@
     .prologue
     const/4 v0, 0x0
 
-    .line 677
     iget-object v3, p0, Landroid/app/ActivityThread$ApplicationThread;->this$0:Landroid/app/ActivityThread;
 
     if-eqz p2, :cond_1
@@ -2510,10 +2256,8 @@
     # invokes: Landroid/app/ActivityThread;->sendMessage(ILjava/lang/Object;II)V
     invoke-static {v3, v2, p1, v0, p4}, Landroid/app/ActivityThread;->access$400(Landroid/app/ActivityThread;ILjava/lang/Object;II)V
 
-    .line 682
     return-void
 
-    .line 677
     :cond_1
     const/16 v1, 0x65
 
@@ -2540,14 +2284,12 @@
     .param p9, "processState"    # I
 
     .prologue
-    .line 782
     const/4 v2, 0x0
 
     move/from16 v0, p9
 
     invoke-virtual {p0, v0, v2}, Landroid/app/ActivityThread$ApplicationThread;->updateProcessState(IZ)V
 
-    .line 783
     new-instance v1, Landroid/app/ActivityThread$ReceiverData;
 
     const/4 v7, 0x0
@@ -2574,14 +2316,11 @@
 
     invoke-direct/range {v1 .. v9}, Landroid/app/ActivityThread$ReceiverData;-><init>(Landroid/content/Intent;ILjava/lang/String;Landroid/os/Bundle;ZZLandroid/os/IBinder;I)V
 
-    .line 785
     .local v1, "r":Landroid/app/ActivityThread$ReceiverData;
     iput-object p2, v1, Landroid/app/ActivityThread$ReceiverData;->info:Landroid/content/pm/ActivityInfo;
 
-    .line 786
     iput-object p3, v1, Landroid/app/ActivityThread$ReceiverData;->compatInfo:Landroid/content/res/CompatibilityInfo;
 
-    .line 787
     iget-object v2, p0, Landroid/app/ActivityThread$ApplicationThread;->this$0:Landroid/app/ActivityThread;
 
     const/16 v3, 0x71
@@ -2589,7 +2328,6 @@
     # invokes: Landroid/app/ActivityThread;->sendMessage(ILjava/lang/Object;)V
     invoke-static {v2, v3, v1}, Landroid/app/ActivityThread;->access$500(Landroid/app/ActivityThread;ILjava/lang/Object;)V
 
-    .line 788
     return-void
 .end method
 
@@ -2611,15 +2349,12 @@
     .end annotation
 
     .prologue
-    .line 990
     const/4 v0, 0x0
 
     invoke-virtual {p0, p9, v0}, Landroid/app/ActivityThread$ApplicationThread;->updateProcessState(IZ)V
 
-    .line 991
     invoke-interface/range {p1 .. p8}, Landroid/content/IIntentReceiver;->performReceive(Landroid/content/Intent;ILjava/lang/String;Landroid/os/Bundle;ZZI)V
 
-    .line 993
     return-void
 .end method
 
@@ -2649,7 +2384,6 @@
     .end annotation
 
     .prologue
-    .line 760
     .local p2, "pendingResults":Ljava/util/List;, "Ljava/util/List<Landroid/app/ResultInfo;>;"
     .local p3, "pendingNewIntents":Ljava/util/List;, "Ljava/util/List<Landroid/content/Intent;>;"
     iget-object v0, p0, Landroid/app/ActivityThread$ApplicationThread;->this$0:Landroid/app/ActivityThread;
@@ -2672,7 +2406,6 @@
 
     invoke-virtual/range {v0 .. v8}, Landroid/app/ActivityThread;->requestRelaunchActivity(Landroid/os/IBinder;Ljava/util/List;Ljava/util/List;IZLandroid/content/res/Configuration;ZLcom/samsung/android/multiwindow/MultiWindowStyle;)V
 
-    .line 763
     return-void
 .end method
 
@@ -2682,7 +2415,6 @@
     .param p2, "currentComponentName"    # Ljava/lang/String;
 
     .prologue
-    .line 1044
     iget-object v0, p0, Landroid/app/ActivityThread$ApplicationThread;->this$0:Landroid/app/ActivityThread;
 
     const/16 v1, 0xf6
@@ -2690,7 +2422,6 @@
     # invokes: Landroid/app/ActivityThread;->sendMessage(ILjava/lang/Object;)V
     invoke-static {v0, v1, p1}, Landroid/app/ActivityThread;->access$500(Landroid/app/ActivityThread;ILjava/lang/Object;)V
 
-    .line 1045
     return-void
 .end method
 
@@ -2704,10 +2435,8 @@
     .prologue
     const/4 v0, 0x0
 
-    .line 703
     invoke-virtual {p0, p2, v0}, Landroid/app/ActivityThread$ApplicationThread;->updateProcessState(IZ)V
 
-    .line 704
     iget-object v1, p0, Landroid/app/ActivityThread$ApplicationThread;->this$0:Landroid/app/ActivityThread;
 
     const/16 v2, 0x6b
@@ -2720,7 +2449,6 @@
     # invokes: Landroid/app/ActivityThread;->sendMessage(ILjava/lang/Object;I)V
     invoke-static {v1, v2, p1, v0}, Landroid/app/ActivityThread;->access$300(Landroid/app/ActivityThread;ILjava/lang/Object;I)V
 
-    .line 705
     return-void
 .end method
 
@@ -2739,20 +2467,16 @@
     .end annotation
 
     .prologue
-    .line 708
     .local p2, "results":Ljava/util/List;, "Ljava/util/List<Landroid/app/ResultInfo;>;"
     new-instance v0, Landroid/app/ActivityThread$ResultData;
 
     invoke-direct {v0}, Landroid/app/ActivityThread$ResultData;-><init>()V
 
-    .line 709
     .local v0, "res":Landroid/app/ActivityThread$ResultData;
     iput-object p1, v0, Landroid/app/ActivityThread$ResultData;->token:Landroid/os/IBinder;
 
-    .line 710
     iput-object p2, v0, Landroid/app/ActivityThread$ResultData;->results:Ljava/util/List;
 
-    .line 711
     iget-object v1, p0, Landroid/app/ActivityThread$ApplicationThread;->this$0:Landroid/app/ActivityThread;
 
     const/16 v2, 0x6c
@@ -2760,7 +2484,6 @@
     # invokes: Landroid/app/ActivityThread;->sendMessage(ILjava/lang/Object;)V
     invoke-static {v1, v2, v0}, Landroid/app/ActivityThread;->access$500(Landroid/app/ActivityThread;ILjava/lang/Object;)V
 
-    .line 712
     return-void
 .end method
 
@@ -2773,28 +2496,21 @@
     .param p5, "args"    # Landroid/content/Intent;
 
     .prologue
-    .line 844
     new-instance v0, Landroid/app/ActivityThread$ServiceArgsData;
 
     invoke-direct {v0}, Landroid/app/ActivityThread$ServiceArgsData;-><init>()V
 
-    .line 845
     .local v0, "s":Landroid/app/ActivityThread$ServiceArgsData;
     iput-object p1, v0, Landroid/app/ActivityThread$ServiceArgsData;->token:Landroid/os/IBinder;
 
-    .line 846
     iput-boolean p2, v0, Landroid/app/ActivityThread$ServiceArgsData;->taskRemoved:Z
 
-    .line 847
     iput p3, v0, Landroid/app/ActivityThread$ServiceArgsData;->startId:I
 
-    .line 848
     iput p4, v0, Landroid/app/ActivityThread$ServiceArgsData;->flags:I
 
-    .line 849
     iput-object p5, v0, Landroid/app/ActivityThread$ServiceArgsData;->args:Landroid/content/Intent;
 
-    .line 851
     iget-object v1, p0, Landroid/app/ActivityThread$ApplicationThread;->this$0:Landroid/app/ActivityThread;
 
     const/16 v2, 0x73
@@ -2802,7 +2518,6 @@
     # invokes: Landroid/app/ActivityThread;->sendMessage(ILjava/lang/Object;)V
     invoke-static {v1, v2, v0}, Landroid/app/ActivityThread;->access$500(Landroid/app/ActivityThread;ILjava/lang/Object;)V
 
-    .line 852
     return-void
 .end method
 
@@ -2812,7 +2527,6 @@
     .param p2, "sleeping"    # Z
 
     .prologue
-    .line 698
     iget-object v1, p0, Landroid/app/ActivityThread$ApplicationThread;->this$0:Landroid/app/ActivityThread;
 
     const/16 v2, 0x89
@@ -2825,10 +2539,8 @@
     # invokes: Landroid/app/ActivityThread;->sendMessage(ILjava/lang/Object;I)V
     invoke-static {v1, v2, p1, v0}, Landroid/app/ActivityThread;->access$300(Landroid/app/ActivityThread;ILjava/lang/Object;I)V
 
-    .line 699
     return-void
 
-    .line 698
     :cond_0
     const/4 v0, 0x0
 
@@ -2842,7 +2554,6 @@
     .param p3, "configChanges"    # I
 
     .prologue
-    .line 686
     iget-object v1, p0, Landroid/app/ActivityThread$ApplicationThread;->this$0:Landroid/app/ActivityThread;
 
     if-eqz p2, :cond_0
@@ -2855,10 +2566,8 @@
     # invokes: Landroid/app/ActivityThread;->sendMessage(ILjava/lang/Object;II)V
     invoke-static {v1, v0, p1, v2, p3}, Landroid/app/ActivityThread;->access$400(Landroid/app/ActivityThread;ILjava/lang/Object;II)V
 
-    .line 689
     return-void
 
-    .line 686
     :cond_0
     const/16 v0, 0x68
 
@@ -2870,7 +2579,6 @@
     .param p1, "token"    # Landroid/os/IBinder;
 
     .prologue
-    .line 855
     iget-object v0, p0, Landroid/app/ActivityThread$ApplicationThread;->this$0:Landroid/app/ActivityThread;
 
     const/16 v1, 0x74
@@ -2878,7 +2586,6 @@
     # invokes: Landroid/app/ActivityThread;->sendMessage(ILjava/lang/Object;)V
     invoke-static {v0, v1, p1}, Landroid/app/ActivityThread;->access$500(Landroid/app/ActivityThread;ILjava/lang/Object;)V
 
-    .line 856
     return-void
 .end method
 
@@ -2886,7 +2593,6 @@
     .locals 3
 
     .prologue
-    .line 934
     iget-object v0, p0, Landroid/app/ActivityThread$ApplicationThread;->this$0:Landroid/app/ActivityThread;
 
     const/16 v1, 0x82
@@ -2896,7 +2602,6 @@
     # invokes: Landroid/app/ActivityThread;->sendMessage(ILjava/lang/Object;)V
     invoke-static {v0, v1, v2}, Landroid/app/ActivityThread;->access$500(Landroid/app/ActivityThread;ILjava/lang/Object;)V
 
-    .line 935
     return-void
 .end method
 
@@ -2906,7 +2611,6 @@
     .param p2, "drawComplete"    # Z
 
     .prologue
-    .line 1245
     iget-object v1, p0, Landroid/app/ActivityThread$ApplicationThread;->this$0:Landroid/app/ActivityThread;
 
     const/16 v2, 0x90
@@ -2919,10 +2623,8 @@
     # invokes: Landroid/app/ActivityThread;->sendMessage(ILjava/lang/Object;I)V
     invoke-static {v1, v2, p1, v0}, Landroid/app/ActivityThread;->access$300(Landroid/app/ActivityThread;ILjava/lang/Object;I)V
 
-    .line 1246
     return-void
 
-    .line 1245
     :cond_0
     const/4 v0, 0x0
 
@@ -2934,7 +2636,6 @@
     .param p1, "level"    # I
 
     .prologue
-    .line 1241
     iget-object v0, p0, Landroid/app/ActivityThread$ApplicationThread;->this$0:Landroid/app/ActivityThread;
 
     const/16 v1, 0x8c
@@ -2944,7 +2645,6 @@
     # invokes: Landroid/app/ActivityThread;->sendMessage(ILjava/lang/Object;I)V
     invoke-static {v0, v1, v2, p1}, Landroid/app/ActivityThread;->access$300(Landroid/app/ActivityThread;ILjava/lang/Object;I)V
 
-    .line 1242
     return-void
 .end method
 
@@ -2954,19 +2654,15 @@
     .param p2, "intent"    # Landroid/content/Intent;
 
     .prologue
-    .line 835
     new-instance v0, Landroid/app/ActivityThread$BindServiceData;
 
     invoke-direct {v0}, Landroid/app/ActivityThread$BindServiceData;-><init>()V
 
-    .line 836
     .local v0, "s":Landroid/app/ActivityThread$BindServiceData;
     iput-object p1, v0, Landroid/app/ActivityThread$BindServiceData;->token:Landroid/os/IBinder;
 
-    .line 837
     iput-object p2, v0, Landroid/app/ActivityThread$BindServiceData;->intent:Landroid/content/Intent;
 
-    .line 839
     iget-object v1, p0, Landroid/app/ActivityThread$ApplicationThread;->this$0:Landroid/app/ActivityThread;
 
     const/16 v2, 0x7a
@@ -2974,7 +2670,6 @@
     # invokes: Landroid/app/ActivityThread;->sendMessage(ILjava/lang/Object;)V
     invoke-static {v1, v2, v0}, Landroid/app/ActivityThread;->access$500(Landroid/app/ActivityThread;ILjava/lang/Object;)V
 
-    .line 840
     return-void
 .end method
 
@@ -2984,7 +2679,6 @@
     .param p2, "showWindow"    # Z
 
     .prologue
-    .line 692
     iget-object v1, p0, Landroid/app/ActivityThread$ApplicationThread;->this$0:Landroid/app/ActivityThread;
 
     if-eqz p2, :cond_0
@@ -2995,10 +2689,8 @@
     # invokes: Landroid/app/ActivityThread;->sendMessage(ILjava/lang/Object;)V
     invoke-static {v1, v0, p1}, Landroid/app/ActivityThread;->access$500(Landroid/app/ActivityThread;ILjava/lang/Object;)V
 
-    .line 695
     return-void
 
-    .line 692
     :cond_0
     const/16 v0, 0x6a
 
@@ -3010,7 +2702,6 @@
     .param p1, "coreSettings"    # Landroid/os/Bundle;
 
     .prologue
-    .line 1230
     iget-object v0, p0, Landroid/app/ActivityThread$ApplicationThread;->this$0:Landroid/app/ActivityThread;
 
     const/16 v1, 0x8a
@@ -3018,7 +2709,6 @@
     # invokes: Landroid/app/ActivityThread;->sendMessage(ILjava/lang/Object;)V
     invoke-static {v0, v1, p1}, Landroid/app/ActivityThread;->access$500(Landroid/app/ActivityThread;ILjava/lang/Object;)V
 
-    .line 1231
     return-void
 .end method
 
@@ -3030,10 +2720,8 @@
     .param p4, "pacFileUrl"    # Landroid/net/Uri;
 
     .prologue
-    .line 955
     invoke-static {p1, p2, p3, p4}, Landroid/net/Proxy;->setHttpProxySystemProperty(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Landroid/net/Uri;)V
 
-    .line 956
     return-void
 .end method
 
@@ -3047,10 +2735,8 @@
     .param p6, "pacFileUrl"    # Landroid/net/Uri;
 
     .prologue
-    .line 963
     invoke-static/range {p1 .. p6}, Landroid/net/Proxy;->setHttpProxySystemProperty(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Landroid/net/Uri;)V
 
-    .line 964
     return-void
 .end method
 
@@ -3059,12 +2745,10 @@
     .param p1, "state"    # I
 
     .prologue
-    .line 1254
     const/4 v0, 0x1
 
     invoke-virtual {p0, p1, v0}, Landroid/app/ActivityThread$ApplicationThread;->updateProcessState(IZ)V
 
-    .line 1255
     return-void
 .end method
 
@@ -3073,7 +2757,6 @@
     .param p1, "group"    # I
 
     .prologue
-    .line 1026
     :try_start_0
     invoke-static {}, Landroid/os/Process;->myPid()I
 
@@ -3083,15 +2766,12 @@
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 1030
     :goto_0
     return-void
 
-    .line 1027
     :catch_0
     move-exception v0
 
-    .line 1028
     .local v0, "e":Ljava/lang/Exception;
     const-string v1, "ActivityThread"
 
@@ -3123,7 +2803,6 @@
     .param p1, "provider"    # Landroid/os/IBinder;
 
     .prologue
-    .line 1216
     iget-object v0, p0, Landroid/app/ActivityThread$ApplicationThread;->this$0:Landroid/app/ActivityThread;
 
     const/16 v1, 0x8e
@@ -3131,7 +2810,6 @@
     # invokes: Landroid/app/ActivityThread;->sendMessage(ILjava/lang/Object;)V
     invoke-static {v0, v1, p1}, Landroid/app/ActivityThread;->access$500(Landroid/app/ActivityThread;ILjava/lang/Object;)V
 
-    .line 1217
     return-void
 .end method
 
@@ -3141,7 +2819,6 @@
     .param p2, "isDisable"    # I
 
     .prologue
-    .line 671
     iget-object v0, p0, Landroid/app/ActivityThread$ApplicationThread;->this$0:Landroid/app/ActivityThread;
 
     const/16 v1, 0x96
@@ -3149,7 +2826,6 @@
     # invokes: Landroid/app/ActivityThread;->sendMessage(ILjava/lang/Object;I)V
     invoke-static {v0, v1, p1, p2}, Landroid/app/ActivityThread;->access$300(Landroid/app/ActivityThread;ILjava/lang/Object;I)V
 
-    .line 672
     return-void
 .end method
 
@@ -3159,19 +2835,15 @@
     .param p2, "info"    # Landroid/content/res/CompatibilityInfo;
 
     .prologue
-    .line 1234
     new-instance v0, Landroid/app/ActivityThread$UpdateCompatibilityData;
 
     invoke-direct {v0}, Landroid/app/ActivityThread$UpdateCompatibilityData;-><init>()V
 
-    .line 1235
     .local v0, "ucd":Landroid/app/ActivityThread$UpdateCompatibilityData;
     iput-object p1, v0, Landroid/app/ActivityThread$UpdateCompatibilityData;->pkg:Ljava/lang/String;
 
-    .line 1236
     iput-object p2, v0, Landroid/app/ActivityThread$UpdateCompatibilityData;->info:Landroid/content/res/CompatibilityInfo;
 
-    .line 1237
     iget-object v1, p0, Landroid/app/ActivityThread$ApplicationThread;->this$0:Landroid/app/ActivityThread;
 
     const/16 v2, 0x8b
@@ -3179,7 +2851,6 @@
     # invokes: Landroid/app/ActivityThread;->sendMessage(ILjava/lang/Object;)V
     invoke-static {v1, v2, v0}, Landroid/app/ActivityThread;->access$500(Landroid/app/ActivityThread;ILjava/lang/Object;)V
 
-    .line 1238
     return-void
 .end method
 
@@ -3189,39 +2860,30 @@
     .param p2, "fromIpc"    # Z
 
     .prologue
-    .line 1258
     monitor-enter p0
 
-    .line 1259
     :try_start_0
     iget v3, p0, Landroid/app/ActivityThread$ApplicationThread;->mLastProcessState:I
 
     if-eq v3, p1, :cond_1
 
-    .line 1260
     iput p1, p0, Landroid/app/ActivityThread$ApplicationThread;->mLastProcessState:I
 
-    .line 1262
     const/4 v1, 0x0
 
-    .line 1263
     .local v1, "DALVIK_PROCESS_STATE_JANK_PERCEPTIBLE":I
     const/4 v0, 0x1
 
-    .line 1264
     .local v0, "DALVIK_PROCESS_STATE_JANK_IMPERCEPTIBLE":I
     const/4 v2, 0x1
 
-    .line 1266
     .local v2, "dalvikProcessState":I
     const/4 v3, 0x3
 
     if-gt p1, v3, :cond_0
 
-    .line 1267
     const/4 v2, 0x0
 
-    .line 1269
     :cond_0
     invoke-static {}, Ldalvik/system/VMRuntime;->getRuntime()Ldalvik/system/VMRuntime;
 
@@ -3229,17 +2891,14 @@
 
     invoke-virtual {v3, v2}, Ldalvik/system/VMRuntime;->updateProcessState(I)V
 
-    .line 1275
     .end local v0    # "DALVIK_PROCESS_STATE_JANK_IMPERCEPTIBLE":I
     .end local v1    # "DALVIK_PROCESS_STATE_JANK_PERCEPTIBLE":I
     .end local v2    # "dalvikProcessState":I
     :cond_1
     monitor-exit p0
 
-    .line 1276
     return-void
 
-    .line 1275
     :catchall_0
     move-exception v3
 
@@ -3255,10 +2914,8 @@
     .param p1, "is24Hour"    # Z
 
     .prologue
-    .line 1285
     invoke-static {p1}, Ljava/text/DateFormat;->set24HourTimePref(Z)V
 
-    .line 1286
     return-void
 .end method
 
@@ -3266,11 +2923,9 @@
     .locals 1
 
     .prologue
-    .line 943
     const/4 v0, 0x0
 
     invoke-static {v0}, Ljava/util/TimeZone;->setDefault(Ljava/util/TimeZone;)V
 
-    .line 944
     return-void
 .end method

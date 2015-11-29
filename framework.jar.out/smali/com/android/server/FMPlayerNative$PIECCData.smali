@@ -27,15 +27,11 @@
     .param p2, "ECC"    # I
 
     .prologue
-    .line 302
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 303
     iput p1, p0, Lcom/android/server/FMPlayerNative$PIECCData;->mPI:I
 
-    .line 304
     iput p2, p0, Lcom/android/server/FMPlayerNative$PIECCData;->mECC:I
 
-    .line 305
     return-void
 .end method

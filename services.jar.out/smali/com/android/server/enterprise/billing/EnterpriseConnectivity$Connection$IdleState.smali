@@ -23,7 +23,6 @@
     .locals 0
 
     .prologue
-    .line 1506
     iput-object p1, p0, Lcom/android/server/enterprise/billing/EnterpriseConnectivity$Connection$IdleState;->this$1:Lcom/android/server/enterprise/billing/EnterpriseConnectivity$Connection;
 
     invoke-direct {p0}, Lcom/android/internal/util/State;-><init>()V
@@ -37,7 +36,6 @@
     .param p2, "x1"    # Lcom/android/server/enterprise/billing/EnterpriseConnectivity$1;
 
     .prologue
-    .line 1506
     invoke-direct {p0, p1}, Lcom/android/server/enterprise/billing/EnterpriseConnectivity$Connection$IdleState;-><init>(Lcom/android/server/enterprise/billing/EnterpriseConnectivity$Connection;)V
 
     return-void
@@ -49,20 +47,17 @@
     .locals 4
 
     .prologue
-    .line 1509
     iget-object v0, p0, Lcom/android/server/enterprise/billing/EnterpriseConnectivity$Connection$IdleState;->this$1:Lcom/android/server/enterprise/billing/EnterpriseConnectivity$Connection;
 
     const-string v1, "IdleState: enter"
 
     invoke-virtual {v0, v1}, Lcom/android/server/enterprise/billing/EnterpriseConnectivity$Connection;->logd(Ljava/lang/String;)V
 
-    .line 1510
     iget-object v0, p0, Lcom/android/server/enterprise/billing/EnterpriseConnectivity$Connection$IdleState;->this$1:Lcom/android/server/enterprise/billing/EnterpriseConnectivity$Connection;
 
     # invokes: Lcom/android/server/enterprise/billing/EnterpriseConnectivity$Connection;->showNotification()V
     invoke-static {v0}, Lcom/android/server/enterprise/billing/EnterpriseConnectivity$Connection;->access$2000(Lcom/android/server/enterprise/billing/EnterpriseConnectivity$Connection;)V
 
-    .line 1511
     iget-object v0, p0, Lcom/android/server/enterprise/billing/EnterpriseConnectivity$Connection$IdleState;->this$1:Lcom/android/server/enterprise/billing/EnterpriseConnectivity$Connection;
 
     # getter for: Lcom/android/server/enterprise/billing/EnterpriseConnectivity$Connection;->mLock:Ljava/lang/Object;
@@ -72,7 +67,6 @@
 
     monitor-enter v1
 
-    .line 1512
     :try_start_0
     iget-object v0, p0, Lcom/android/server/enterprise/billing/EnterpriseConnectivity$Connection$IdleState;->this$1:Lcom/android/server/enterprise/billing/EnterpriseConnectivity$Connection;
 
@@ -83,14 +77,12 @@
 
     if-eqz v0, :cond_0
 
-    .line 1513
     iget-object v0, p0, Lcom/android/server/enterprise/billing/EnterpriseConnectivity$Connection$IdleState;->this$1:Lcom/android/server/enterprise/billing/EnterpriseConnectivity$Connection;
 
     const-string v2, "IdleState: enableUidBlockRules true"
 
     invoke-virtual {v0, v2}, Lcom/android/server/enterprise/billing/EnterpriseConnectivity$Connection;->logd(Ljava/lang/String;)V
 
-    .line 1514
     iget-object v0, p0, Lcom/android/server/enterprise/billing/EnterpriseConnectivity$Connection$IdleState;->this$1:Lcom/android/server/enterprise/billing/EnterpriseConnectivity$Connection;
 
     iget-object v2, p0, Lcom/android/server/enterprise/billing/EnterpriseConnectivity$Connection$IdleState;->this$1:Lcom/android/server/enterprise/billing/EnterpriseConnectivity$Connection;
@@ -110,14 +102,11 @@
     # invokes: Lcom/android/server/enterprise/billing/EnterpriseConnectivity$Connection;->addBlockChain(Ljava/lang/String;)V
     invoke-static {v0, v2}, Lcom/android/server/enterprise/billing/EnterpriseConnectivity$Connection;->access$2600(Lcom/android/server/enterprise/billing/EnterpriseConnectivity$Connection;Ljava/lang/String;)V
 
-    .line 1516
     :cond_0
     monitor-exit v1
 
-    .line 1517
     return-void
 
-    .line 1516
     :catchall_0
     move-exception v0
 
@@ -132,14 +121,12 @@
     .locals 2
 
     .prologue
-    .line 1520
     iget-object v0, p0, Lcom/android/server/enterprise/billing/EnterpriseConnectivity$Connection$IdleState;->this$1:Lcom/android/server/enterprise/billing/EnterpriseConnectivity$Connection;
 
     const-string v1, "IdleState: exit"
 
     invoke-virtual {v0, v1}, Lcom/android/server/enterprise/billing/EnterpriseConnectivity$Connection;->logd(Ljava/lang/String;)V
 
-    .line 1521
     return-void
 .end method
 
@@ -150,7 +137,6 @@
     .prologue
     const/4 v0, 0x1
 
-    .line 1524
     iget-object v4, p0, Lcom/android/server/enterprise/billing/EnterpriseConnectivity$Connection$IdleState;->this$1:Lcom/android/server/enterprise/billing/EnterpriseConnectivity$Connection;
 
     new-instance v5, Ljava/lang/StringBuilder;
@@ -182,12 +168,10 @@
 
     invoke-virtual {v4, v5}, Lcom/android/server/enterprise/billing/EnterpriseConnectivity$Connection;->logd(Ljava/lang/String;)V
 
-    .line 1526
     iget v4, p1, Landroid/os/Message;->what:I
 
     sparse-switch v4, :sswitch_data_0
 
-    .line 1677
     iget-object v4, p0, Lcom/android/server/enterprise/billing/EnterpriseConnectivity$Connection$IdleState;->this$1:Lcom/android/server/enterprise/billing/EnterpriseConnectivity$Connection;
 
     new-instance v5, Ljava/lang/StringBuilder;
@@ -219,15 +203,12 @@
 
     invoke-virtual {v4, v5}, Lcom/android/server/enterprise/billing/EnterpriseConnectivity$Connection;->logd(Ljava/lang/String;)V
 
-    .line 1678
     const/4 v3, 0x0
 
-    .line 1681
     .local v3, "retVal":Z
     :goto_0
     return v3
 
-    .line 1528
     .end local v3    # "retVal":Z
     :sswitch_0
     iget-object v4, p0, Lcom/android/server/enterprise/billing/EnterpriseConnectivity$Connection$IdleState;->this$1:Lcom/android/server/enterprise/billing/EnterpriseConnectivity$Connection;
@@ -236,19 +217,16 @@
 
     invoke-virtual {v4, v5}, Lcom/android/server/enterprise/billing/EnterpriseConnectivity$Connection;->logd(Ljava/lang/String;)V
 
-    .line 1530
     iget-object v1, p1, Landroid/os/Message;->obj:Ljava/lang/Object;
 
     check-cast v1, Ljava/lang/String;
 
-    .line 1531
     .local v1, "iface":Ljava/lang/String;
     iget-object v4, p0, Lcom/android/server/enterprise/billing/EnterpriseConnectivity$Connection$IdleState;->this$1:Lcom/android/server/enterprise/billing/EnterpriseConnectivity$Connection;
 
     # invokes: Lcom/android/server/enterprise/billing/EnterpriseConnectivity$Connection;->onConnect(Ljava/lang/String;)V
     invoke-static {v4, v1}, Lcom/android/server/enterprise/billing/EnterpriseConnectivity$Connection;->access$2700(Lcom/android/server/enterprise/billing/EnterpriseConnectivity$Connection;Ljava/lang/String;)V
 
-    .line 1532
     iget-object v4, p0, Lcom/android/server/enterprise/billing/EnterpriseConnectivity$Connection$IdleState;->this$1:Lcom/android/server/enterprise/billing/EnterpriseConnectivity$Connection;
 
     iget-object v5, p0, Lcom/android/server/enterprise/billing/EnterpriseConnectivity$Connection$IdleState;->this$1:Lcom/android/server/enterprise/billing/EnterpriseConnectivity$Connection;
@@ -261,14 +239,11 @@
     # invokes: Lcom/android/server/enterprise/billing/EnterpriseConnectivity$Connection;->transitionTo(Lcom/android/internal/util/IState;)V
     invoke-static {v4, v5}, Lcom/android/server/enterprise/billing/EnterpriseConnectivity$Connection;->access$2900(Lcom/android/server/enterprise/billing/EnterpriseConnectivity$Connection;Lcom/android/internal/util/IState;)V
 
-    .line 1533
     const/4 v3, 0x1
 
-    .line 1534
     .restart local v3    # "retVal":Z
     goto :goto_0
 
-    .line 1536
     .end local v1    # "iface":Ljava/lang/String;
     .end local v3    # "retVal":Z
     :sswitch_1
@@ -279,7 +254,6 @@
     # invokes: Lcom/android/server/enterprise/billing/EnterpriseConnectivity$Connection;->removeMessages(I)V
     invoke-static {v4, v5}, Lcom/android/server/enterprise/billing/EnterpriseConnectivity$Connection;->access$3000(Lcom/android/server/enterprise/billing/EnterpriseConnectivity$Connection;I)V
 
-    .line 1537
     iget-object v4, p0, Lcom/android/server/enterprise/billing/EnterpriseConnectivity$Connection$IdleState;->this$1:Lcom/android/server/enterprise/billing/EnterpriseConnectivity$Connection;
 
     # getter for: Lcom/android/server/enterprise/billing/EnterpriseConnectivity$Connection;->mDefaultNetwork:Lcom/android/server/enterprise/billing/EnterpriseConnectivity$DefaultNetwork;
@@ -293,7 +267,6 @@
 
     if-eqz v4, :cond_3
 
-    .line 1538
     iget-object v4, p0, Lcom/android/server/enterprise/billing/EnterpriseConnectivity$Connection$IdleState;->this$1:Lcom/android/server/enterprise/billing/EnterpriseConnectivity$Connection;
 
     # getter for: Lcom/android/server/enterprise/billing/EnterpriseConnectivity$Connection;->mLock:Ljava/lang/Object;
@@ -303,7 +276,6 @@
 
     monitor-enter v5
 
-    .line 1539
     :try_start_0
     iget-object v4, p0, Lcom/android/server/enterprise/billing/EnterpriseConnectivity$Connection$IdleState;->this$1:Lcom/android/server/enterprise/billing/EnterpriseConnectivity$Connection;
 
@@ -350,7 +322,6 @@
 
     if-eqz v4, :cond_2
 
-    .line 1541
     :cond_1
     iget-object v4, p0, Lcom/android/server/enterprise/billing/EnterpriseConnectivity$Connection$IdleState;->this$1:Lcom/android/server/enterprise/billing/EnterpriseConnectivity$Connection;
 
@@ -371,27 +342,22 @@
     # invokes: Lcom/android/server/enterprise/billing/EnterpriseConnectivity$Connection;->deleteBlockChain(Ljava/lang/String;)V
     invoke-static {v4, v6}, Lcom/android/server/enterprise/billing/EnterpriseConnectivity$Connection;->access$3400(Lcom/android/server/enterprise/billing/EnterpriseConnectivity$Connection;Ljava/lang/String;)V
 
-    .line 1543
     :cond_2
     monitor-exit v5
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 1556
     :goto_1
     iget-object v4, p0, Lcom/android/server/enterprise/billing/EnterpriseConnectivity$Connection$IdleState;->this$1:Lcom/android/server/enterprise/billing/EnterpriseConnectivity$Connection;
 
     # invokes: Lcom/android/server/enterprise/billing/EnterpriseConnectivity$Connection;->showNotification()V
     invoke-static {v4}, Lcom/android/server/enterprise/billing/EnterpriseConnectivity$Connection;->access$2000(Lcom/android/server/enterprise/billing/EnterpriseConnectivity$Connection;)V
 
-    .line 1557
     const/4 v3, 0x1
 
-    .line 1558
     .restart local v3    # "retVal":Z
     goto :goto_0
 
-    .line 1543
     .end local v3    # "retVal":Z
     :catchall_0
     move-exception v4
@@ -403,7 +369,6 @@
 
     throw v4
 
-    .line 1545
     :cond_3
     iget-object v4, p0, Lcom/android/server/enterprise/billing/EnterpriseConnectivity$Connection$IdleState;->this$1:Lcom/android/server/enterprise/billing/EnterpriseConnectivity$Connection;
 
@@ -414,7 +379,6 @@
 
     monitor-enter v5
 
-    .line 1546
     :try_start_2
     iget-object v4, p0, Lcom/android/server/enterprise/billing/EnterpriseConnectivity$Connection$IdleState;->this$1:Lcom/android/server/enterprise/billing/EnterpriseConnectivity$Connection;
 
@@ -425,7 +389,6 @@
 
     if-eqz v4, :cond_4
 
-    .line 1547
     iget-object v4, p0, Lcom/android/server/enterprise/billing/EnterpriseConnectivity$Connection$IdleState;->this$1:Lcom/android/server/enterprise/billing/EnterpriseConnectivity$Connection;
 
     iget-object v6, p0, Lcom/android/server/enterprise/billing/EnterpriseConnectivity$Connection$IdleState;->this$1:Lcom/android/server/enterprise/billing/EnterpriseConnectivity$Connection;
@@ -445,7 +408,6 @@
     # invokes: Lcom/android/server/enterprise/billing/EnterpriseConnectivity$Connection;->addBlockChain(Ljava/lang/String;)V
     invoke-static {v4, v6}, Lcom/android/server/enterprise/billing/EnterpriseConnectivity$Connection;->access$2600(Lcom/android/server/enterprise/billing/EnterpriseConnectivity$Connection;Ljava/lang/String;)V
 
-    .line 1548
     iget-object v4, p0, Lcom/android/server/enterprise/billing/EnterpriseConnectivity$Connection$IdleState;->this$1:Lcom/android/server/enterprise/billing/EnterpriseConnectivity$Connection;
 
     # invokes: Lcom/android/server/enterprise/billing/EnterpriseConnectivity$Connection;->isDataPossible()Z
@@ -455,7 +417,6 @@
 
     if-eqz v4, :cond_4
 
-    .line 1549
     iget-object v4, p0, Lcom/android/server/enterprise/billing/EnterpriseConnectivity$Connection$IdleState;->this$1:Lcom/android/server/enterprise/billing/EnterpriseConnectivity$Connection;
 
     # invokes: Lcom/android/server/enterprise/billing/EnterpriseConnectivity$Connection;->turnOnConnection()Z
@@ -465,7 +426,6 @@
 
     if-eqz v4, :cond_4
 
-    .line 1550
     iget-object v4, p0, Lcom/android/server/enterprise/billing/EnterpriseConnectivity$Connection$IdleState;->this$1:Lcom/android/server/enterprise/billing/EnterpriseConnectivity$Connection;
 
     iget-object v6, p0, Lcom/android/server/enterprise/billing/EnterpriseConnectivity$Connection$IdleState;->this$1:Lcom/android/server/enterprise/billing/EnterpriseConnectivity$Connection;
@@ -478,7 +438,6 @@
     # invokes: Lcom/android/server/enterprise/billing/EnterpriseConnectivity$Connection;->transitionTo(Lcom/android/internal/util/IState;)V
     invoke-static {v4, v6}, Lcom/android/server/enterprise/billing/EnterpriseConnectivity$Connection;->access$3700(Lcom/android/server/enterprise/billing/EnterpriseConnectivity$Connection;Lcom/android/internal/util/IState;)V
 
-    .line 1554
     :cond_4
     monitor-exit v5
 
@@ -493,7 +452,6 @@
 
     throw v4
 
-    .line 1560
     :sswitch_2
     iget-object v4, p0, Lcom/android/server/enterprise/billing/EnterpriseConnectivity$Connection$IdleState;->this$1:Lcom/android/server/enterprise/billing/EnterpriseConnectivity$Connection;
 
@@ -504,7 +462,6 @@
 
     if-eqz v4, :cond_5
 
-    .line 1561
     iget-object v4, p0, Lcom/android/server/enterprise/billing/EnterpriseConnectivity$Connection$IdleState;->this$1:Lcom/android/server/enterprise/billing/EnterpriseConnectivity$Connection;
 
     # invokes: Lcom/android/server/enterprise/billing/EnterpriseConnectivity$Connection;->isDataPossible()Z
@@ -514,7 +471,6 @@
 
     if-eqz v4, :cond_5
 
-    .line 1562
     iget-object v4, p0, Lcom/android/server/enterprise/billing/EnterpriseConnectivity$Connection$IdleState;->this$1:Lcom/android/server/enterprise/billing/EnterpriseConnectivity$Connection;
 
     # invokes: Lcom/android/server/enterprise/billing/EnterpriseConnectivity$Connection;->turnOnConnection()Z
@@ -524,7 +480,6 @@
 
     if-eqz v4, :cond_5
 
-    .line 1563
     iget-object v4, p0, Lcom/android/server/enterprise/billing/EnterpriseConnectivity$Connection$IdleState;->this$1:Lcom/android/server/enterprise/billing/EnterpriseConnectivity$Connection;
 
     iget-object v5, p0, Lcom/android/server/enterprise/billing/EnterpriseConnectivity$Connection$IdleState;->this$1:Lcom/android/server/enterprise/billing/EnterpriseConnectivity$Connection;
@@ -537,15 +492,12 @@
     # invokes: Lcom/android/server/enterprise/billing/EnterpriseConnectivity$Connection;->transitionTo(Lcom/android/internal/util/IState;)V
     invoke-static {v4, v5}, Lcom/android/server/enterprise/billing/EnterpriseConnectivity$Connection;->access$3800(Lcom/android/server/enterprise/billing/EnterpriseConnectivity$Connection;Lcom/android/internal/util/IState;)V
 
-    .line 1567
     :cond_5
     const/4 v3, 0x1
 
-    .line 1568
     .restart local v3    # "retVal":Z
     goto/16 :goto_0
 
-    .line 1570
     .end local v3    # "retVal":Z
     :sswitch_3
     iget-object v4, p0, Lcom/android/server/enterprise/billing/EnterpriseConnectivity$Connection$IdleState;->this$1:Lcom/android/server/enterprise/billing/EnterpriseConnectivity$Connection;
@@ -557,7 +509,6 @@
 
     if-eqz v4, :cond_6
 
-    .line 1571
     iget-object v4, p0, Lcom/android/server/enterprise/billing/EnterpriseConnectivity$Connection$IdleState;->this$1:Lcom/android/server/enterprise/billing/EnterpriseConnectivity$Connection;
 
     # invokes: Lcom/android/server/enterprise/billing/EnterpriseConnectivity$Connection;->isDataPossible()Z
@@ -567,7 +518,6 @@
 
     if-eqz v4, :cond_6
 
-    .line 1572
     iget-object v4, p0, Lcom/android/server/enterprise/billing/EnterpriseConnectivity$Connection$IdleState;->this$1:Lcom/android/server/enterprise/billing/EnterpriseConnectivity$Connection;
 
     # invokes: Lcom/android/server/enterprise/billing/EnterpriseConnectivity$Connection;->turnOnConnection()Z
@@ -577,7 +527,6 @@
 
     if-eqz v4, :cond_6
 
-    .line 1573
     iget-object v4, p0, Lcom/android/server/enterprise/billing/EnterpriseConnectivity$Connection$IdleState;->this$1:Lcom/android/server/enterprise/billing/EnterpriseConnectivity$Connection;
 
     iget-object v5, p0, Lcom/android/server/enterprise/billing/EnterpriseConnectivity$Connection$IdleState;->this$1:Lcom/android/server/enterprise/billing/EnterpriseConnectivity$Connection;
@@ -590,15 +539,12 @@
     # invokes: Lcom/android/server/enterprise/billing/EnterpriseConnectivity$Connection;->transitionTo(Lcom/android/internal/util/IState;)V
     invoke-static {v4, v5}, Lcom/android/server/enterprise/billing/EnterpriseConnectivity$Connection;->access$3900(Lcom/android/server/enterprise/billing/EnterpriseConnectivity$Connection;Lcom/android/internal/util/IState;)V
 
-    .line 1577
     :cond_6
     const/4 v3, 0x1
 
-    .line 1578
     .restart local v3    # "retVal":Z
     goto/16 :goto_0
 
-    .line 1580
     .end local v3    # "retVal":Z
     :sswitch_4
     iget-object v4, p0, Lcom/android/server/enterprise/billing/EnterpriseConnectivity$Connection$IdleState;->this$1:Lcom/android/server/enterprise/billing/EnterpriseConnectivity$Connection;
@@ -608,20 +554,17 @@
     # invokes: Lcom/android/server/enterprise/billing/EnterpriseConnectivity$Connection;->removeMessages(I)V
     invoke-static {v4, v5}, Lcom/android/server/enterprise/billing/EnterpriseConnectivity$Connection;->access$4000(Lcom/android/server/enterprise/billing/EnterpriseConnectivity$Connection;I)V
 
-    .line 1581
     iget-object v4, p0, Lcom/android/server/enterprise/billing/EnterpriseConnectivity$Connection$IdleState;->this$1:Lcom/android/server/enterprise/billing/EnterpriseConnectivity$Connection;
 
     # invokes: Lcom/android/server/enterprise/billing/EnterpriseConnectivity$Connection;->setContainersForConnection()V
     invoke-static {v4}, Lcom/android/server/enterprise/billing/EnterpriseConnectivity$Connection;->access$4100(Lcom/android/server/enterprise/billing/EnterpriseConnectivity$Connection;)V
 
-    .line 1582
     iget-object v4, p0, Lcom/android/server/enterprise/billing/EnterpriseConnectivity$Connection$IdleState;->this$1:Lcom/android/server/enterprise/billing/EnterpriseConnectivity$Connection;
 
     invoke-virtual {v4, v0}, Lcom/android/server/enterprise/billing/EnterpriseConnectivity$Connection;->getUidsFromDb(Z)Ljava/util/Collection;
 
     move-result-object v2
 
-    .line 1583
     .local v2, "newUids":Ljava/util/Collection;, "Ljava/util/Collection<Ljava/lang/Integer;>;"
     iget-object v4, p0, Lcom/android/server/enterprise/billing/EnterpriseConnectivity$Connection$IdleState;->this$1:Lcom/android/server/enterprise/billing/EnterpriseConnectivity$Connection;
 
@@ -632,14 +575,12 @@
 
     monitor-enter v5
 
-    .line 1584
     :try_start_3
     iget-object v4, p0, Lcom/android/server/enterprise/billing/EnterpriseConnectivity$Connection$IdleState;->this$1:Lcom/android/server/enterprise/billing/EnterpriseConnectivity$Connection;
 
     # invokes: Lcom/android/server/enterprise/billing/EnterpriseConnectivity$Connection;->changeUidRules(Ljava/util/Collection;)V
     invoke-static {v4, v2}, Lcom/android/server/enterprise/billing/EnterpriseConnectivity$Connection;->access$4200(Lcom/android/server/enterprise/billing/EnterpriseConnectivity$Connection;Ljava/util/Collection;)V
 
-    .line 1585
     iget-object v4, p0, Lcom/android/server/enterprise/billing/EnterpriseConnectivity$Connection$IdleState;->this$1:Lcom/android/server/enterprise/billing/EnterpriseConnectivity$Connection;
 
     # getter for: Lcom/android/server/enterprise/billing/EnterpriseConnectivity$Connection;->mUids:Ljava/util/concurrent/ConcurrentSkipListSet;
@@ -649,7 +590,6 @@
 
     invoke-virtual {v4}, Ljava/util/concurrent/ConcurrentSkipListSet;->clear()V
 
-    .line 1586
     iget-object v4, p0, Lcom/android/server/enterprise/billing/EnterpriseConnectivity$Connection$IdleState;->this$1:Lcom/android/server/enterprise/billing/EnterpriseConnectivity$Connection;
 
     # getter for: Lcom/android/server/enterprise/billing/EnterpriseConnectivity$Connection;->mUids:Ljava/util/concurrent/ConcurrentSkipListSet;
@@ -659,12 +599,11 @@
 
     invoke-virtual {v4, v2}, Ljava/util/concurrent/ConcurrentSkipListSet;->addAll(Ljava/util/Collection;)Z
 
-    .line 1587
     new-instance v4, Ljava/lang/StringBuilder;
 
     invoke-direct {v4}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v6, "uids "
+    const-string v6, "uids "
 
     invoke-virtual {v4, v6}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -692,17 +631,13 @@
     # invokes: Lcom/android/server/enterprise/billing/EnterpriseConnectivity;->slogv(Ljava/lang/String;)V
     invoke-static {v4}, Lcom/android/server/enterprise/billing/EnterpriseConnectivity;->access$1000(Ljava/lang/String;)V
 
-    .line 1588
     monitor-exit v5
 
-    .line 1589
     const/4 v3, 0x1
 
-    .line 1590
     .restart local v3    # "retVal":Z
     goto/16 :goto_0
 
-    .line 1588
     .end local v3    # "retVal":Z
     :catchall_2
     move-exception v4
@@ -713,7 +648,6 @@
 
     throw v4
 
-    .line 1593
     .end local v2    # "newUids":Ljava/util/Collection;, "Ljava/util/Collection<Ljava/lang/Integer;>;"
     :sswitch_5
     iget-object v4, p0, Lcom/android/server/enterprise/billing/EnterpriseConnectivity$Connection$IdleState;->this$1:Lcom/android/server/enterprise/billing/EnterpriseConnectivity$Connection;
@@ -721,7 +655,6 @@
     # invokes: Lcom/android/server/enterprise/billing/EnterpriseConnectivity$Connection;->getSettings()V
     invoke-static {v4}, Lcom/android/server/enterprise/billing/EnterpriseConnectivity$Connection;->access$4400(Lcom/android/server/enterprise/billing/EnterpriseConnectivity$Connection;)V
 
-    .line 1594
     iget-object v4, p0, Lcom/android/server/enterprise/billing/EnterpriseConnectivity$Connection$IdleState;->this$1:Lcom/android/server/enterprise/billing/EnterpriseConnectivity$Connection;
 
     # getter for: Lcom/android/server/enterprise/billing/EnterpriseConnectivity$Connection;->mLock:Ljava/lang/Object;
@@ -731,7 +664,6 @@
 
     monitor-enter v5
 
-    .line 1595
     :try_start_4
     iget-object v4, p0, Lcom/android/server/enterprise/billing/EnterpriseConnectivity$Connection$IdleState;->this$1:Lcom/android/server/enterprise/billing/EnterpriseConnectivity$Connection;
 
@@ -742,7 +674,6 @@
 
     if-eqz v4, :cond_8
 
-    .line 1596
     iget-object v4, p0, Lcom/android/server/enterprise/billing/EnterpriseConnectivity$Connection$IdleState;->this$1:Lcom/android/server/enterprise/billing/EnterpriseConnectivity$Connection;
 
     new-instance v6, Ljava/lang/StringBuilder;
@@ -791,7 +722,6 @@
 
     invoke-virtual {v4, v6}, Lcom/android/server/enterprise/billing/EnterpriseConnectivity$Connection;->logd(Ljava/lang/String;)V
 
-    .line 1597
     iget-object v4, p0, Lcom/android/server/enterprise/billing/EnterpriseConnectivity$Connection$IdleState;->this$1:Lcom/android/server/enterprise/billing/EnterpriseConnectivity$Connection;
 
     # invokes: Lcom/android/server/enterprise/billing/EnterpriseConnectivity$Connection;->isAllowed()Z
@@ -801,7 +731,6 @@
 
     if-eqz v4, :cond_7
 
-    .line 1598
     iget-object v4, p0, Lcom/android/server/enterprise/billing/EnterpriseConnectivity$Connection$IdleState;->this$1:Lcom/android/server/enterprise/billing/EnterpriseConnectivity$Connection;
 
     iget-object v6, p0, Lcom/android/server/enterprise/billing/EnterpriseConnectivity$Connection$IdleState;->this$1:Lcom/android/server/enterprise/billing/EnterpriseConnectivity$Connection;
@@ -821,7 +750,6 @@
     # invokes: Lcom/android/server/enterprise/billing/EnterpriseConnectivity$Connection;->addBlockChain(Ljava/lang/String;)V
     invoke-static {v4, v6}, Lcom/android/server/enterprise/billing/EnterpriseConnectivity$Connection;->access$2600(Lcom/android/server/enterprise/billing/EnterpriseConnectivity$Connection;Ljava/lang/String;)V
 
-    .line 1599
     iget-object v4, p0, Lcom/android/server/enterprise/billing/EnterpriseConnectivity$Connection$IdleState;->this$1:Lcom/android/server/enterprise/billing/EnterpriseConnectivity$Connection;
 
     # invokes: Lcom/android/server/enterprise/billing/EnterpriseConnectivity$Connection;->isDataPossible()Z
@@ -831,7 +759,6 @@
 
     if-eqz v4, :cond_7
 
-    .line 1600
     iget-object v4, p0, Lcom/android/server/enterprise/billing/EnterpriseConnectivity$Connection$IdleState;->this$1:Lcom/android/server/enterprise/billing/EnterpriseConnectivity$Connection;
 
     # invokes: Lcom/android/server/enterprise/billing/EnterpriseConnectivity$Connection;->turnOnConnection()Z
@@ -841,7 +768,6 @@
 
     if-eqz v4, :cond_7
 
-    .line 1601
     iget-object v4, p0, Lcom/android/server/enterprise/billing/EnterpriseConnectivity$Connection$IdleState;->this$1:Lcom/android/server/enterprise/billing/EnterpriseConnectivity$Connection;
 
     iget-object v6, p0, Lcom/android/server/enterprise/billing/EnterpriseConnectivity$Connection$IdleState;->this$1:Lcom/android/server/enterprise/billing/EnterpriseConnectivity$Connection;
@@ -854,7 +780,6 @@
     # invokes: Lcom/android/server/enterprise/billing/EnterpriseConnectivity$Connection;->transitionTo(Lcom/android/internal/util/IState;)V
     invoke-static {v4, v6}, Lcom/android/server/enterprise/billing/EnterpriseConnectivity$Connection;->access$4600(Lcom/android/server/enterprise/billing/EnterpriseConnectivity$Connection;Lcom/android/internal/util/IState;)V
 
-    .line 1608
     :cond_7
     :goto_2
     iget-object v4, p0, Lcom/android/server/enterprise/billing/EnterpriseConnectivity$Connection$IdleState;->this$1:Lcom/android/server/enterprise/billing/EnterpriseConnectivity$Connection;
@@ -862,17 +787,13 @@
     # invokes: Lcom/android/server/enterprise/billing/EnterpriseConnectivity$Connection;->showNotification()V
     invoke-static {v4}, Lcom/android/server/enterprise/billing/EnterpriseConnectivity$Connection;->access$2000(Lcom/android/server/enterprise/billing/EnterpriseConnectivity$Connection;)V
 
-    .line 1609
     monitor-exit v5
 
-    .line 1610
     const/4 v3, 0x1
 
-    .line 1611
     .restart local v3    # "retVal":Z
     goto/16 :goto_0
 
-    .line 1606
     .end local v3    # "retVal":Z
     :cond_8
     iget-object v4, p0, Lcom/android/server/enterprise/billing/EnterpriseConnectivity$Connection$IdleState;->this$1:Lcom/android/server/enterprise/billing/EnterpriseConnectivity$Connection;
@@ -896,7 +817,6 @@
 
     goto :goto_2
 
-    .line 1609
     :catchall_3
     move-exception v4
 
@@ -906,7 +826,6 @@
 
     throw v4
 
-    .line 1613
     :sswitch_6
     iget-object v4, p0, Lcom/android/server/enterprise/billing/EnterpriseConnectivity$Connection$IdleState;->this$1:Lcom/android/server/enterprise/billing/EnterpriseConnectivity$Connection;
 
@@ -920,7 +839,6 @@
     # setter for: Lcom/android/server/enterprise/billing/EnterpriseConnectivity$Connection;->mOffloadToWifi:Z
     invoke-static {v4, v5}, Lcom/android/server/enterprise/billing/EnterpriseConnectivity$Connection;->access$3202(Lcom/android/server/enterprise/billing/EnterpriseConnectivity$Connection;Z)Z
 
-    .line 1614
     iget-object v4, p0, Lcom/android/server/enterprise/billing/EnterpriseConnectivity$Connection$IdleState;->this$1:Lcom/android/server/enterprise/billing/EnterpriseConnectivity$Connection;
 
     # getter for: Lcom/android/server/enterprise/billing/EnterpriseConnectivity$Connection;->mLock:Ljava/lang/Object;
@@ -930,7 +848,6 @@
 
     monitor-enter v5
 
-    .line 1615
     :try_start_5
     iget-object v4, p0, Lcom/android/server/enterprise/billing/EnterpriseConnectivity$Connection$IdleState;->this$1:Lcom/android/server/enterprise/billing/EnterpriseConnectivity$Connection;
 
@@ -941,7 +858,6 @@
 
     if-eqz v4, :cond_a
 
-    .line 1616
     iget-object v4, p0, Lcom/android/server/enterprise/billing/EnterpriseConnectivity$Connection$IdleState;->this$1:Lcom/android/server/enterprise/billing/EnterpriseConnectivity$Connection;
 
     iget-object v6, p0, Lcom/android/server/enterprise/billing/EnterpriseConnectivity$Connection$IdleState;->this$1:Lcom/android/server/enterprise/billing/EnterpriseConnectivity$Connection;
@@ -961,7 +877,6 @@
     # invokes: Lcom/android/server/enterprise/billing/EnterpriseConnectivity$Connection;->addBlockChain(Ljava/lang/String;)V
     invoke-static {v4, v6}, Lcom/android/server/enterprise/billing/EnterpriseConnectivity$Connection;->access$2600(Lcom/android/server/enterprise/billing/EnterpriseConnectivity$Connection;Ljava/lang/String;)V
 
-    .line 1617
     iget-object v4, p0, Lcom/android/server/enterprise/billing/EnterpriseConnectivity$Connection$IdleState;->this$1:Lcom/android/server/enterprise/billing/EnterpriseConnectivity$Connection;
 
     # invokes: Lcom/android/server/enterprise/billing/EnterpriseConnectivity$Connection;->isDataPossible()Z
@@ -971,7 +886,6 @@
 
     if-eqz v4, :cond_9
 
-    .line 1618
     iget-object v4, p0, Lcom/android/server/enterprise/billing/EnterpriseConnectivity$Connection$IdleState;->this$1:Lcom/android/server/enterprise/billing/EnterpriseConnectivity$Connection;
 
     # invokes: Lcom/android/server/enterprise/billing/EnterpriseConnectivity$Connection;->turnOnConnection()Z
@@ -981,7 +895,6 @@
 
     if-eqz v4, :cond_9
 
-    .line 1619
     iget-object v4, p0, Lcom/android/server/enterprise/billing/EnterpriseConnectivity$Connection$IdleState;->this$1:Lcom/android/server/enterprise/billing/EnterpriseConnectivity$Connection;
 
     iget-object v6, p0, Lcom/android/server/enterprise/billing/EnterpriseConnectivity$Connection$IdleState;->this$1:Lcom/android/server/enterprise/billing/EnterpriseConnectivity$Connection;
@@ -994,27 +907,22 @@
     # invokes: Lcom/android/server/enterprise/billing/EnterpriseConnectivity$Connection;->transitionTo(Lcom/android/internal/util/IState;)V
     invoke-static {v4, v6}, Lcom/android/server/enterprise/billing/EnterpriseConnectivity$Connection;->access$4800(Lcom/android/server/enterprise/billing/EnterpriseConnectivity$Connection;Lcom/android/internal/util/IState;)V
 
-    .line 1627
     :cond_9
     :goto_3
     monitor-exit v5
     :try_end_5
     .catchall {:try_start_5 .. :try_end_5} :catchall_4
 
-    .line 1628
     iget-object v4, p0, Lcom/android/server/enterprise/billing/EnterpriseConnectivity$Connection$IdleState;->this$1:Lcom/android/server/enterprise/billing/EnterpriseConnectivity$Connection;
 
     # invokes: Lcom/android/server/enterprise/billing/EnterpriseConnectivity$Connection;->showNotification()V
     invoke-static {v4}, Lcom/android/server/enterprise/billing/EnterpriseConnectivity$Connection;->access$2000(Lcom/android/server/enterprise/billing/EnterpriseConnectivity$Connection;)V
 
-    .line 1629
     const/4 v3, 0x1
 
-    .line 1630
     .restart local v3    # "retVal":Z
     goto/16 :goto_0
 
-    .line 1623
     .end local v3    # "retVal":Z
     :cond_a
     :try_start_6
@@ -1040,7 +948,6 @@
 
     if-eqz v4, :cond_9
 
-    .line 1624
     iget-object v4, p0, Lcom/android/server/enterprise/billing/EnterpriseConnectivity$Connection$IdleState;->this$1:Lcom/android/server/enterprise/billing/EnterpriseConnectivity$Connection;
 
     iget-object v6, p0, Lcom/android/server/enterprise/billing/EnterpriseConnectivity$Connection$IdleState;->this$1:Lcom/android/server/enterprise/billing/EnterpriseConnectivity$Connection;
@@ -1062,7 +969,6 @@
 
     goto :goto_3
 
-    .line 1627
     :catchall_4
     move-exception v4
 
@@ -1072,13 +978,11 @@
 
     throw v4
 
-    .line 1632
     :sswitch_7
     iget v4, p1, Landroid/os/Message;->arg1:I
 
     if-ne v4, v0, :cond_d
 
-    .line 1633
     .local v0, "enabled":Z
     :goto_4
     iget-object v4, p0, Lcom/android/server/enterprise/billing/EnterpriseConnectivity$Connection$IdleState;->this$1:Lcom/android/server/enterprise/billing/EnterpriseConnectivity$Connection;
@@ -1090,13 +994,11 @@
 
     if-eq v4, v0, :cond_c
 
-    .line 1634
     iget-object v4, p0, Lcom/android/server/enterprise/billing/EnterpriseConnectivity$Connection$IdleState;->this$1:Lcom/android/server/enterprise/billing/EnterpriseConnectivity$Connection;
 
     # setter for: Lcom/android/server/enterprise/billing/EnterpriseConnectivity$Connection;->mDataEnabled:Z
     invoke-static {v4, v0}, Lcom/android/server/enterprise/billing/EnterpriseConnectivity$Connection;->access$4902(Lcom/android/server/enterprise/billing/EnterpriseConnectivity$Connection;Z)Z
 
-    .line 1635
     iget-object v4, p0, Lcom/android/server/enterprise/billing/EnterpriseConnectivity$Connection$IdleState;->this$1:Lcom/android/server/enterprise/billing/EnterpriseConnectivity$Connection;
 
     # getter for: Lcom/android/server/enterprise/billing/EnterpriseConnectivity$Connection;->mLock:Ljava/lang/Object;
@@ -1106,7 +1008,6 @@
 
     monitor-enter v5
 
-    .line 1636
     :try_start_7
     iget-object v4, p0, Lcom/android/server/enterprise/billing/EnterpriseConnectivity$Connection$IdleState;->this$1:Lcom/android/server/enterprise/billing/EnterpriseConnectivity$Connection;
 
@@ -1117,7 +1018,6 @@
 
     if-eqz v4, :cond_b
 
-    .line 1637
     iget-object v4, p0, Lcom/android/server/enterprise/billing/EnterpriseConnectivity$Connection$IdleState;->this$1:Lcom/android/server/enterprise/billing/EnterpriseConnectivity$Connection;
 
     iget-object v6, p0, Lcom/android/server/enterprise/billing/EnterpriseConnectivity$Connection$IdleState;->this$1:Lcom/android/server/enterprise/billing/EnterpriseConnectivity$Connection;
@@ -1137,7 +1037,6 @@
     # invokes: Lcom/android/server/enterprise/billing/EnterpriseConnectivity$Connection;->addBlockChain(Ljava/lang/String;)V
     invoke-static {v4, v6}, Lcom/android/server/enterprise/billing/EnterpriseConnectivity$Connection;->access$2600(Lcom/android/server/enterprise/billing/EnterpriseConnectivity$Connection;Ljava/lang/String;)V
 
-    .line 1638
     iget-object v4, p0, Lcom/android/server/enterprise/billing/EnterpriseConnectivity$Connection$IdleState;->this$1:Lcom/android/server/enterprise/billing/EnterpriseConnectivity$Connection;
 
     # invokes: Lcom/android/server/enterprise/billing/EnterpriseConnectivity$Connection;->isDataPossible()Z
@@ -1147,7 +1046,6 @@
 
     if-eqz v4, :cond_b
 
-    .line 1639
     iget-object v4, p0, Lcom/android/server/enterprise/billing/EnterpriseConnectivity$Connection$IdleState;->this$1:Lcom/android/server/enterprise/billing/EnterpriseConnectivity$Connection;
 
     # invokes: Lcom/android/server/enterprise/billing/EnterpriseConnectivity$Connection;->turnOnConnection()Z
@@ -1157,7 +1055,6 @@
 
     if-eqz v4, :cond_b
 
-    .line 1640
     iget-object v4, p0, Lcom/android/server/enterprise/billing/EnterpriseConnectivity$Connection$IdleState;->this$1:Lcom/android/server/enterprise/billing/EnterpriseConnectivity$Connection;
 
     iget-object v6, p0, Lcom/android/server/enterprise/billing/EnterpriseConnectivity$Connection$IdleState;->this$1:Lcom/android/server/enterprise/billing/EnterpriseConnectivity$Connection;
@@ -1170,19 +1067,15 @@
     # invokes: Lcom/android/server/enterprise/billing/EnterpriseConnectivity$Connection;->transitionTo(Lcom/android/internal/util/IState;)V
     invoke-static {v4, v6}, Lcom/android/server/enterprise/billing/EnterpriseConnectivity$Connection;->access$5000(Lcom/android/server/enterprise/billing/EnterpriseConnectivity$Connection;Lcom/android/internal/util/IState;)V
 
-    .line 1644
     :cond_b
     monitor-exit v5
 
-    .line 1646
     :cond_c
     const/4 v3, 0x1
 
-    .line 1647
     .restart local v3    # "retVal":Z
     goto/16 :goto_0
 
-    .line 1632
     .end local v0    # "enabled":Z
     .end local v3    # "retVal":Z
     :cond_d
@@ -1190,7 +1083,6 @@
 
     goto :goto_4
 
-    .line 1644
     .restart local v0    # "enabled":Z
     :catchall_5
     move-exception v4
@@ -1201,7 +1093,6 @@
 
     throw v4
 
-    .line 1649
     .end local v0    # "enabled":Z
     :sswitch_8
     iget-object v4, p0, Lcom/android/server/enterprise/billing/EnterpriseConnectivity$Connection$IdleState;->this$1:Lcom/android/server/enterprise/billing/EnterpriseConnectivity$Connection;
@@ -1216,7 +1107,6 @@
     # setter for: Lcom/android/server/enterprise/billing/EnterpriseConnectivity$Connection;->mConnectionEnabled:Z
     invoke-static {v4, v5}, Lcom/android/server/enterprise/billing/EnterpriseConnectivity$Connection;->access$5102(Lcom/android/server/enterprise/billing/EnterpriseConnectivity$Connection;Z)Z
 
-    .line 1650
     iget-object v4, p0, Lcom/android/server/enterprise/billing/EnterpriseConnectivity$Connection$IdleState;->this$1:Lcom/android/server/enterprise/billing/EnterpriseConnectivity$Connection;
 
     # getter for: Lcom/android/server/enterprise/billing/EnterpriseConnectivity$Connection;->mLock:Ljava/lang/Object;
@@ -1226,7 +1116,6 @@
 
     monitor-enter v5
 
-    .line 1651
     :try_start_8
     iget-object v4, p0, Lcom/android/server/enterprise/billing/EnterpriseConnectivity$Connection$IdleState;->this$1:Lcom/android/server/enterprise/billing/EnterpriseConnectivity$Connection;
 
@@ -1237,7 +1126,6 @@
 
     if-eqz v4, :cond_e
 
-    .line 1652
     iget-object v4, p0, Lcom/android/server/enterprise/billing/EnterpriseConnectivity$Connection$IdleState;->this$1:Lcom/android/server/enterprise/billing/EnterpriseConnectivity$Connection;
 
     iget-object v6, p0, Lcom/android/server/enterprise/billing/EnterpriseConnectivity$Connection$IdleState;->this$1:Lcom/android/server/enterprise/billing/EnterpriseConnectivity$Connection;
@@ -1257,7 +1145,6 @@
     # invokes: Lcom/android/server/enterprise/billing/EnterpriseConnectivity$Connection;->addBlockChain(Ljava/lang/String;)V
     invoke-static {v4, v6}, Lcom/android/server/enterprise/billing/EnterpriseConnectivity$Connection;->access$2600(Lcom/android/server/enterprise/billing/EnterpriseConnectivity$Connection;Ljava/lang/String;)V
 
-    .line 1653
     iget-object v4, p0, Lcom/android/server/enterprise/billing/EnterpriseConnectivity$Connection$IdleState;->this$1:Lcom/android/server/enterprise/billing/EnterpriseConnectivity$Connection;
 
     # invokes: Lcom/android/server/enterprise/billing/EnterpriseConnectivity$Connection;->isDataPossible()Z
@@ -1267,7 +1154,6 @@
 
     if-eqz v4, :cond_e
 
-    .line 1654
     iget-object v4, p0, Lcom/android/server/enterprise/billing/EnterpriseConnectivity$Connection$IdleState;->this$1:Lcom/android/server/enterprise/billing/EnterpriseConnectivity$Connection;
 
     # invokes: Lcom/android/server/enterprise/billing/EnterpriseConnectivity$Connection;->turnOnConnection()Z
@@ -1277,7 +1163,6 @@
 
     if-eqz v4, :cond_e
 
-    .line 1655
     iget-object v4, p0, Lcom/android/server/enterprise/billing/EnterpriseConnectivity$Connection$IdleState;->this$1:Lcom/android/server/enterprise/billing/EnterpriseConnectivity$Connection;
 
     iget-object v6, p0, Lcom/android/server/enterprise/billing/EnterpriseConnectivity$Connection$IdleState;->this$1:Lcom/android/server/enterprise/billing/EnterpriseConnectivity$Connection;
@@ -1290,18 +1175,14 @@
     # invokes: Lcom/android/server/enterprise/billing/EnterpriseConnectivity$Connection;->transitionTo(Lcom/android/internal/util/IState;)V
     invoke-static {v4, v6}, Lcom/android/server/enterprise/billing/EnterpriseConnectivity$Connection;->access$5300(Lcom/android/server/enterprise/billing/EnterpriseConnectivity$Connection;Lcom/android/internal/util/IState;)V
 
-    .line 1659
     :cond_e
     monitor-exit v5
 
-    .line 1660
     const/4 v3, 0x1
 
-    .line 1661
     .restart local v3    # "retVal":Z
     goto/16 :goto_0
 
-    .line 1659
     .end local v3    # "retVal":Z
     :catchall_6
     move-exception v4
@@ -1312,7 +1193,6 @@
 
     throw v4
 
-    .line 1663
     :sswitch_9
     iget-object v4, p0, Lcom/android/server/enterprise/billing/EnterpriseConnectivity$Connection$IdleState;->this$1:Lcom/android/server/enterprise/billing/EnterpriseConnectivity$Connection;
 
@@ -1326,7 +1206,6 @@
     # setter for: Lcom/android/server/enterprise/billing/EnterpriseConnectivity$Connection;->mRoamingDataAllowed:Z
     invoke-static {v4, v5}, Lcom/android/server/enterprise/billing/EnterpriseConnectivity$Connection;->access$5402(Lcom/android/server/enterprise/billing/EnterpriseConnectivity$Connection;Z)Z
 
-    .line 1664
     iget-object v4, p0, Lcom/android/server/enterprise/billing/EnterpriseConnectivity$Connection$IdleState;->this$1:Lcom/android/server/enterprise/billing/EnterpriseConnectivity$Connection;
 
     # getter for: Lcom/android/server/enterprise/billing/EnterpriseConnectivity$Connection;->mLock:Ljava/lang/Object;
@@ -1336,7 +1215,6 @@
 
     monitor-enter v5
 
-    .line 1665
     :try_start_9
     iget-object v4, p0, Lcom/android/server/enterprise/billing/EnterpriseConnectivity$Connection$IdleState;->this$1:Lcom/android/server/enterprise/billing/EnterpriseConnectivity$Connection;
 
@@ -1347,7 +1225,6 @@
 
     if-eqz v4, :cond_f
 
-    .line 1666
     iget-object v4, p0, Lcom/android/server/enterprise/billing/EnterpriseConnectivity$Connection$IdleState;->this$1:Lcom/android/server/enterprise/billing/EnterpriseConnectivity$Connection;
 
     iget-object v6, p0, Lcom/android/server/enterprise/billing/EnterpriseConnectivity$Connection$IdleState;->this$1:Lcom/android/server/enterprise/billing/EnterpriseConnectivity$Connection;
@@ -1367,7 +1244,6 @@
     # invokes: Lcom/android/server/enterprise/billing/EnterpriseConnectivity$Connection;->addBlockChain(Ljava/lang/String;)V
     invoke-static {v4, v6}, Lcom/android/server/enterprise/billing/EnterpriseConnectivity$Connection;->access$2600(Lcom/android/server/enterprise/billing/EnterpriseConnectivity$Connection;Ljava/lang/String;)V
 
-    .line 1667
     iget-object v4, p0, Lcom/android/server/enterprise/billing/EnterpriseConnectivity$Connection$IdleState;->this$1:Lcom/android/server/enterprise/billing/EnterpriseConnectivity$Connection;
 
     # invokes: Lcom/android/server/enterprise/billing/EnterpriseConnectivity$Connection;->isDataPossible()Z
@@ -1377,7 +1253,6 @@
 
     if-eqz v4, :cond_f
 
-    .line 1668
     iget-object v4, p0, Lcom/android/server/enterprise/billing/EnterpriseConnectivity$Connection$IdleState;->this$1:Lcom/android/server/enterprise/billing/EnterpriseConnectivity$Connection;
 
     # invokes: Lcom/android/server/enterprise/billing/EnterpriseConnectivity$Connection;->turnOnConnection()Z
@@ -1387,7 +1262,6 @@
 
     if-eqz v4, :cond_f
 
-    .line 1669
     iget-object v4, p0, Lcom/android/server/enterprise/billing/EnterpriseConnectivity$Connection$IdleState;->this$1:Lcom/android/server/enterprise/billing/EnterpriseConnectivity$Connection;
 
     iget-object v6, p0, Lcom/android/server/enterprise/billing/EnterpriseConnectivity$Connection$IdleState;->this$1:Lcom/android/server/enterprise/billing/EnterpriseConnectivity$Connection;
@@ -1400,18 +1274,14 @@
     # invokes: Lcom/android/server/enterprise/billing/EnterpriseConnectivity$Connection;->transitionTo(Lcom/android/internal/util/IState;)V
     invoke-static {v4, v6}, Lcom/android/server/enterprise/billing/EnterpriseConnectivity$Connection;->access$5600(Lcom/android/server/enterprise/billing/EnterpriseConnectivity$Connection;Lcom/android/internal/util/IState;)V
 
-    .line 1673
     :cond_f
     monitor-exit v5
 
-    .line 1674
     const/4 v3, 0x1
 
-    .line 1675
     .restart local v3    # "retVal":Z
     goto/16 :goto_0
 
-    .line 1673
     .end local v3    # "retVal":Z
     :catchall_7
     move-exception v4
@@ -1422,7 +1292,6 @@
 
     throw v4
 
-    .line 1526
     :sswitch_data_0
     .sparse-switch
         0x3ea -> :sswitch_4

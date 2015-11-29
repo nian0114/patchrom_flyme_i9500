@@ -23,7 +23,6 @@
     .locals 0
 
     .prologue
-    .line 384
     iput-object p1, p0, Lcom/android/internal/app/ResolverActivity$4;->this$0:Lcom/android/internal/app/ResolverActivity;
 
     invoke-direct {p0}, Landroid/content/BroadcastReceiver;-><init>()V
@@ -41,7 +40,6 @@
     .prologue
     const/4 v6, 0x0
 
-    .line 387
     const-string v1, "ResolverActivity"
 
     new-instance v2, Ljava/lang/StringBuilder;
@@ -68,7 +66,6 @@
 
     invoke-static {v1, v2}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 388
     invoke-virtual {p2}, Landroid/content/Intent;->getAction()Ljava/lang/String;
 
     move-result-object v1
@@ -81,13 +78,11 @@
 
     if-eqz v1, :cond_4
 
-    .line 390
     iget-object v1, p0, Lcom/android/internal/app/ResolverActivity$4;->this$0:Lcom/android/internal/app/ResolverActivity;
 
     # setter for: Lcom/android/internal/app/ResolverActivity;->mRecentContactsListCount:I
     invoke-static {v1, v6}, Lcom/android/internal/app/ResolverActivity;->access$1002(Lcom/android/internal/app/ResolverActivity;I)I
 
-    .line 391
     iget-object v1, p0, Lcom/android/internal/app/ResolverActivity$4;->this$0:Lcom/android/internal/app/ResolverActivity;
 
     # getter for: Lcom/android/internal/app/ResolverActivity;->mRecentContactsListThumb:Ljava/util/List;
@@ -110,7 +105,6 @@
 
     if-eqz v1, :cond_0
 
-    .line 392
     iget-object v1, p0, Lcom/android/internal/app/ResolverActivity$4;->this$0:Lcom/android/internal/app/ResolverActivity;
 
     # getter for: Lcom/android/internal/app/ResolverActivity;->mRecentContactsListThumb:Ljava/util/List;
@@ -120,7 +114,6 @@
 
     invoke-interface {v1}, Ljava/util/List;->clear()V
 
-    .line 394
     :cond_0
     iget-object v1, p0, Lcom/android/internal/app/ResolverActivity$4;->this$0:Lcom/android/internal/app/ResolverActivity;
 
@@ -144,7 +137,6 @@
 
     if-eqz v1, :cond_1
 
-    .line 395
     iget-object v1, p0, Lcom/android/internal/app/ResolverActivity$4;->this$0:Lcom/android/internal/app/ResolverActivity;
 
     # getter for: Lcom/android/internal/app/ResolverActivity;->mRecentContactsListName:Ljava/util/ArrayList;
@@ -154,7 +146,6 @@
 
     invoke-virtual {v1}, Ljava/util/ArrayList;->clear()V
 
-    .line 397
     :cond_1
     const/4 v0, 0x0
 
@@ -164,12 +155,11 @@
 
     if-ge v0, v1, :cond_2
 
-    .line 398
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v2, "recentgroupdataids"
+    const-string v2, "recentgroupdataids"
 
     invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -189,7 +179,6 @@
 
     if-nez v1, :cond_5
 
-    .line 419
     :cond_2
     const-string v1, "ResolverActivity"
 
@@ -197,7 +186,7 @@
 
     invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v3, "mRecentContactsListCount : "
+    const-string v3, "mRecentContactsListCount : "
 
     invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -220,7 +209,6 @@
 
     invoke-static {v1, v2}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 421
     iget-object v1, p0, Lcom/android/internal/app/ResolverActivity$4;->this$0:Lcom/android/internal/app/ResolverActivity;
 
     # getter for: Lcom/android/internal/app/ResolverActivity;->mGridRemoteShareRecentHistory:Landroid/widget/HorizontalListView;
@@ -230,7 +218,6 @@
 
     if-nez v1, :cond_3
 
-    .line 422
     iget-object v1, p0, Lcom/android/internal/app/ResolverActivity$4;->this$0:Lcom/android/internal/app/ResolverActivity;
 
     iget-object v2, p0, Lcom/android/internal/app/ResolverActivity$4;->this$0:Lcom/android/internal/app/ResolverActivity;
@@ -243,7 +230,6 @@
     # invokes: Lcom/android/internal/app/ResolverActivity;->addRemoteShareRecentHistoryGridView(Landroid/content/Intent;)V
     invoke-static {v1, v2}, Lcom/android/internal/app/ResolverActivity;->access$1900(Lcom/android/internal/app/ResolverActivity;Landroid/content/Intent;)V
 
-    .line 427
     :cond_3
     iget-object v1, p0, Lcom/android/internal/app/ResolverActivity$4;->this$0:Lcom/android/internal/app/ResolverActivity;
 
@@ -253,12 +239,10 @@
 
     invoke-virtual {v1, v2}, Landroid/os/Handler;->sendEmptyMessage(I)Z
 
-    .line 429
     .end local v0    # "i":I
     :cond_4
     return-void
 
-    .line 401
     .restart local v0    # "i":I
     :cond_5
     iget-object v1, p0, Lcom/android/internal/app/ResolverActivity$4;->this$0:Lcom/android/internal/app/ResolverActivity;
@@ -272,7 +256,7 @@
 
     invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v3, "recentgroupnames"
+    const-string v3, "recentgroupnames"
 
     invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -292,7 +276,6 @@
 
     invoke-virtual {v1, v2}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 402
     iget-object v1, p0, Lcom/android/internal/app/ResolverActivity$4;->this$0:Lcom/android/internal/app/ResolverActivity;
 
     # getter for: Lcom/android/internal/app/ResolverActivity;->request_dataids:[Ljava/lang/String;
@@ -304,7 +287,7 @@
 
     invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v3, "recentgroupdataids"
+    const-string v3, "recentgroupdataids"
 
     invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -324,7 +307,6 @@
 
     aput-object v2, v1, v0
 
-    .line 403
     iget-object v1, p0, Lcom/android/internal/app/ResolverActivity$4;->this$0:Lcom/android/internal/app/ResolverActivity;
 
     # getter for: Lcom/android/internal/app/ResolverActivity;->mRecentContactsId:[J
@@ -336,7 +318,7 @@
 
     invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v3, "recentgroupcontactids"
+    const-string v3, "recentgroupcontactids"
 
     invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -358,7 +340,6 @@
 
     aput-wide v2, v1, v0
 
-    .line 404
     iget-object v1, p0, Lcom/android/internal/app/ResolverActivity$4;->this$0:Lcom/android/internal/app/ResolverActivity;
 
     # getter for: Lcom/android/internal/app/ResolverActivity;->mRecentContactsItemContactsCountInGroup:[I
@@ -370,7 +351,7 @@
 
     invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v3, "recentgroupcount"
+    const-string v3, "recentgroupcount"
 
     invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -390,7 +371,6 @@
 
     aput v2, v1, v0
 
-    .line 405
     iget-object v1, p0, Lcom/android/internal/app/ResolverActivity$4;->this$0:Lcom/android/internal/app/ResolverActivity;
 
     # getter for: Lcom/android/internal/app/ResolverActivity;->mRecentContactsItemPhoneNum:[Ljava/lang/String;
@@ -402,7 +382,7 @@
 
     invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v3, "recentphonenumbers"
+    const-string v3, "recentphonenumbers"
 
     invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -422,7 +402,6 @@
 
     aput-object v2, v1, v0
 
-    .line 406
     const-string v2, "ResolverActivity"
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -534,7 +513,6 @@
 
     invoke-static {v2, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 410
     iget-object v1, p0, Lcom/android/internal/app/ResolverActivity$4;->this$0:Lcom/android/internal/app/ResolverActivity;
 
     # getter for: Lcom/android/internal/app/ResolverActivity;->mRecentContactsListThumb:Ljava/util/List;
@@ -546,7 +524,7 @@
 
     invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v3, "recentgroupthumbnail"
+    const-string v3, "recentgroupthumbnail"
 
     invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -566,7 +544,6 @@
 
     invoke-interface {v1, v2}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    .line 411
     iget-object v1, p0, Lcom/android/internal/app/ResolverActivity$4;->this$0:Lcom/android/internal/app/ResolverActivity;
 
     # getter for: Lcom/android/internal/app/ResolverActivity;->mRecentContactsListThumb:Ljava/util/List;
@@ -580,7 +557,6 @@
 
     if-eqz v1, :cond_6
 
-    .line 412
     const-string v2, "ResolverActivity"
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -618,19 +594,16 @@
 
     invoke-static {v2, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 417
     :goto_1
     iget-object v1, p0, Lcom/android/internal/app/ResolverActivity$4;->this$0:Lcom/android/internal/app/ResolverActivity;
 
     # operator++ for: Lcom/android/internal/app/ResolverActivity;->mRecentContactsListCount:I
     invoke-static {v1}, Lcom/android/internal/app/ResolverActivity;->access$1008(Lcom/android/internal/app/ResolverActivity;)I
 
-    .line 397
     add-int/lit8 v0, v0, 0x1
 
     goto/16 :goto_0
 
-    .line 414
     :cond_6
     const-string v1, "ResolverActivity"
 

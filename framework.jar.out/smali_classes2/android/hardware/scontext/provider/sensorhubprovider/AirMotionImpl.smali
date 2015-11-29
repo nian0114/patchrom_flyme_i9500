@@ -35,17 +35,14 @@
 
     const/4 v3, 0x2
 
-    .line 57
     invoke-direct {p0, p1, p2, v3, v4}, Landroid/hardware/scontext/provider/sensorhubprovider/SensorHubProvider;-><init>(Landroid/content/Context;Landroid/hardware/scontext/provider/EventListener;II)V
 
-    .line 41
     new-array v0, v3, [I
 
     fill-array-data v0, :array_0
 
     iput-object v0, p0, Landroid/hardware/scontext/provider/sensorhubprovider/AirMotionImpl;->GESTURE_VALID_COUNT_RANGE_AMS:[I
 
-    .line 45
     const/4 v0, 0x5
 
     new-array v0, v0, [Ljava/lang/String;
@@ -78,13 +75,10 @@
 
     iput-object v0, p0, Landroid/hardware/scontext/provider/sensorhubprovider/AirMotionImpl;->mDirections:[Ljava/lang/String;
 
-    .line 59
     iput p3, p0, Landroid/hardware/scontext/provider/sensorhubprovider/AirMotionImpl;->mFeatureLevel:I
 
-    .line 60
     return-void
 
-    .line 41
     nop
 
     :array_0
@@ -99,20 +93,16 @@
     .param p1, "value"    # F
 
     .prologue
-    .line 119
     const/4 v0, 0x0
 
-    .line 121
     .local v0, "direction":I
     iget v1, p0, Landroid/hardware/scontext/provider/sensorhubprovider/AirMotionImpl;->mFeatureLevel:I
 
     packed-switch v1, :pswitch_data_0
 
-    .line 156
     :goto_0
     return v0
 
-    .line 124
     :pswitch_0
     float-to-int v1, p1
 
@@ -122,34 +112,26 @@
 
     goto :goto_0
 
-    .line 132
     :sswitch_0
     const/4 v0, 0x2
 
-    .line 133
     goto :goto_0
 
-    .line 126
     :sswitch_1
     const/4 v0, 0x3
 
-    .line 127
     goto :goto_0
 
-    .line 129
     :sswitch_2
     const/4 v0, 0x4
 
-    .line 130
     goto :goto_0
 
-    .line 135
     :sswitch_3
     const/4 v0, 0x1
 
     goto :goto_0
 
-    .line 140
     :pswitch_1
     float-to-int v1, p1
 
@@ -157,34 +139,26 @@
 
     goto :goto_0
 
-    .line 151
     :pswitch_2
     const/4 v0, 0x1
 
     goto :goto_0
 
-    .line 142
     :pswitch_3
     const/4 v0, 0x3
 
-    .line 143
     goto :goto_0
 
-    .line 145
     :pswitch_4
     const/4 v0, 0x4
 
-    .line 146
     goto :goto_0
 
-    .line 148
     :pswitch_5
     const/4 v0, 0x2
 
-    .line 149
     goto :goto_0
 
-    .line 121
     :pswitch_data_0
     .packed-switch 0x1
         :pswitch_0
@@ -192,7 +166,6 @@
         :pswitch_1
     .end packed-switch
 
-    .line 124
     :sswitch_data_0
     .sparse-switch
         0x44 -> :sswitch_0
@@ -201,7 +174,6 @@
         0x55 -> :sswitch_3
     .end sparse-switch
 
-    .line 140
     :pswitch_data_1
     .packed-switch 0x2
         :pswitch_2
@@ -228,20 +200,17 @@
 
     const/4 v10, 0x0
 
-    .line 73
     const-string v8, "Values"
 
     invoke-virtual {p1, v8}, Landroid/os/Bundle;->getFloatArray(Ljava/lang/String;)[F
 
     move-result-object v7
 
-    .line 74
     .local v7, "values":[F
     aget v8, v7, v9
 
     float-to-int v0, v8
 
-    .line 75
     .local v0, "angle":I
     aget v8, v7, v10
 
@@ -249,37 +218,29 @@
 
     move-result v3
 
-    .line 76
     .local v3, "direction":I
     const/4 v5, -0x1
 
-    .line 77
     .local v5, "speed":I
     new-array v4, v9, [I
 
-    .line 78
     .local v4, "range":[I
     const/4 v6, -0x1
 
-    .line 80
     .local v6, "valid_cnt":I
     iget v8, p0, Landroid/hardware/scontext/provider/sensorhubprovider/AirMotionImpl;->mFeatureLevel:I
 
     packed-switch v8, :pswitch_data_0
 
-    .line 100
     :goto_0
     if-lez v6, :cond_1
 
-    .line 101
     aget v8, v4, v11
 
     if-le v6, v8, :cond_5
 
-    .line 102
     aget v6, v4, v11
 
-    .line 106
     :cond_0
     :goto_1
     aget v8, v4, v11
@@ -288,7 +249,6 @@
 
     if-eq v8, v9, :cond_1
 
-    .line 107
     aget v8, v4, v11
 
     sub-int/2addr v8, v6
@@ -303,23 +263,19 @@
 
     div-int v5, v8, v9
 
-    .line 110
     :cond_1
     const-string v8, "Angle"
 
     invoke-virtual {p1, v8, v0}, Landroid/os/Bundle;->putInt(Ljava/lang/String;I)V
 
-    .line 111
     const-string v8, "Direction"
 
     invoke-virtual {p1, v8, v3}, Landroid/os/Bundle;->putInt(Ljava/lang/String;I)V
 
-    .line 112
     const-string v8, "Speed"
 
     invoke-virtual {p1, v8, v5}, Landroid/os/Bundle;->putInt(Ljava/lang/String;I)V
 
-    .line 113
     const-string v8, "SContext.AirMotionImpl"
 
     new-instance v9, Ljava/lang/StringBuilder;
@@ -366,17 +322,14 @@
 
     invoke-static {v8, v9}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 115
     .end local p1    # "context":Landroid/os/Bundle;
     :goto_2
     return-object p1
 
-    .line 82
     .restart local p1    # "context":Landroid/os/Bundle;
     :pswitch_0
     const/high16 v1, 0x42a00000    # 80.0f
 
-    .line 83
     .local v1, "angleDiffThrs":F
     const/4 v8, 0x3
 
@@ -388,16 +341,13 @@
 
     sub-float v2, v8, v9
 
-    .line 84
     .local v2, "diffAngle":F
     cmpg-float v8, v2, v12
 
     if-gez v8, :cond_2
 
-    .line 85
     add-float/2addr v2, v13
 
-    .line 87
     :cond_2
     const/high16 v8, 0x43340000    # 180.0f
 
@@ -405,10 +355,8 @@
 
     if-lez v8, :cond_3
 
-    .line 88
     sub-float v2, v13, v2
 
-    .line 90
     :cond_3
     cmpl-float v8, v2, v12
 
@@ -418,23 +366,19 @@
 
     if-gtz v8, :cond_4
 
-    .line 91
     const-string v8, "SContext.AirMotionImpl"
 
     const-string v9, "onGetSensorHubData() : AirMotion : The difference of exit and enter angle is below threshold!"
 
     invoke-static {v8, v9}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 93
     const/4 p1, 0x0
 
     goto :goto_2
 
-    .line 95
     :cond_4
     iget-object v4, p0, Landroid/hardware/scontext/provider/sensorhubprovider/AirMotionImpl;->GESTURE_VALID_COUNT_RANGE_AMS:[I
 
-    .line 96
     const/4 v8, 0x7
 
     aget v8, v7, v8
@@ -443,7 +387,6 @@
 
     goto/16 :goto_0
 
-    .line 103
     .end local v1    # "angleDiffThrs":F
     .end local v2    # "diffAngle":F
     :cond_5
@@ -451,12 +394,10 @@
 
     if-ge v6, v8, :cond_0
 
-    .line 104
     aget v6, v4, v10
 
     goto/16 :goto_1
 
-    .line 80
     :pswitch_data_0
     .packed-switch 0x3
         :pswitch_0

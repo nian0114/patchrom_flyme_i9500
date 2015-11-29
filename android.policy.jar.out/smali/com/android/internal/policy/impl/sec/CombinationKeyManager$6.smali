@@ -26,7 +26,6 @@
     .locals 0
 
     .prologue
-    .line 772
     iput-object p1, p0, Lcom/android/internal/policy/impl/sec/CombinationKeyManager$6;->this$0:Lcom/android/internal/policy/impl/sec/CombinationKeyManager;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -40,7 +39,6 @@
     .locals 6
 
     .prologue
-    .line 774
     # getter for: Lcom/android/internal/policy/impl/sec/CombinationKeyManager;->SAFE_DEBUG:Z
     invoke-static {}, Lcom/android/internal/policy/impl/sec/CombinationKeyManager;->access$000()Z
 
@@ -54,7 +52,6 @@
 
     invoke-static {v2, v3}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 776
     :cond_0
     :try_start_0
     iget-object v2, p0, Lcom/android/internal/policy/impl/sec/CombinationKeyManager$6;->this$0:Lcom/android/internal/policy/impl/sec/CombinationKeyManager;
@@ -69,27 +66,22 @@
 
     invoke-virtual {v2, v3, v4, v5}, Lcom/android/internal/policy/impl/sec/SamsungPhoneWindowManager;->performHapticFeedbackLw(Landroid/view/WindowManagerPolicy$WindowState;IZ)Z
 
-    .line 777
     invoke-static {}, Landroid/app/ActivityManagerNative;->getDefault()Landroid/app/IActivityManager;
 
     move-result-object v0
 
-    .line 778
     .local v0, "activityManager":Landroid/app/IActivityManager;
     invoke-interface {v0}, Landroid/app/IActivityManager;->stopLockTaskModeOnCurrent()V
     :try_end_0
     .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 782
     .end local v0    # "activityManager":Landroid/app/IActivityManager;
     :goto_0
     return-void
 
-    .line 779
     :catch_0
     move-exception v1
 
-    .line 780
     .local v1, "e":Landroid/os/RemoteException;
     const-string v2, "CombinationKeyManager"
 

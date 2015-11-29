@@ -16,7 +16,6 @@
     .locals 0
 
     .prologue
-    .line 1080
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -27,12 +26,10 @@
     .param p0, "objToDump"    # Ljava/lang/Object;
 
     .prologue
-    .line 1345
     invoke-virtual {p0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
     move-result-object v4
 
-    .line 1347
     .local v4, "objClass":Ljava/lang/Class;, "Ljava/lang/Class<*>;"
     const-string v5, "ReflectionUtils"
 
@@ -66,14 +63,12 @@
 
     invoke-static {v5, v6}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1349
     move-object v0, v4
 
     .local v0, "c":Ljava/lang/Class;, "Ljava/lang/Class<*>;"
     :goto_0
     if-eqz v0, :cond_1
 
-    .line 1350
     const-string v5, "ReflectionUtils"
 
     new-instance v6, Ljava/lang/StringBuilder;
@@ -100,12 +95,10 @@
 
     invoke-static {v5, v6}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1352
     invoke-virtual {v0}, Ljava/lang/Class;->getInterfaces()[Ljava/lang/Class;
 
     move-result-object v2
 
-    .line 1353
     .local v2, "clz":[Ljava/lang/Class;, "[Ljava/lang/Class<*>;"
     const/4 v3, 0x0
 
@@ -115,10 +108,8 @@
 
     if-ge v3, v5, :cond_0
 
-    .line 1354
     aget-object v1, v2, v3
 
-    .line 1355
     .local v1, "cls":Ljava/lang/Class;, "Ljava/lang/Class<*>;"
     const-string v5, "ReflectionUtils"
 
@@ -146,12 +137,10 @@
 
     invoke-static {v5, v6}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1353
     add-int/lit8 v3, v3, 0x1
 
     goto :goto_1
 
-    .line 1349
     .end local v1    # "cls":Ljava/lang/Class;, "Ljava/lang/Class<*>;"
     :cond_0
     invoke-virtual {v0}, Ljava/lang/Class;->getSuperclass()Ljava/lang/Class;
@@ -160,7 +149,6 @@
 
     goto :goto_0
 
-    .line 1358
     .end local v2    # "clz":[Ljava/lang/Class;, "[Ljava/lang/Class<*>;"
     .end local v3    # "i":I
     :cond_1
@@ -170,7 +158,6 @@
 
     invoke-static {v5, v6}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1359
     return-void
 .end method
 
@@ -183,12 +170,10 @@
     .prologue
     const/4 v3, 0x0
 
-    .line 1203
     new-instance v1, Ljava/util/ArrayList;
 
     invoke-direct {v1}, Ljava/util/ArrayList;-><init>()V
 
-    .line 1205
     .local v1, "objList":Ljava/util/ArrayList;, "Ljava/util/ArrayList<Ljava/lang/Object;>;"
     const-string v0, "ReflectionUtils"
 
@@ -222,7 +207,6 @@
 
     invoke-static {v0, v2}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1206
     const-string v4, ""
 
     const/4 v5, 0x0
@@ -239,14 +223,12 @@
 
     invoke-static/range {v0 .. v8}, Lcom/samsung/android/smartclip/ReflectionUtils;->dumpObjectFields(Ljava/lang/Object;Ljava/util/ArrayList;Ljava/lang/String;Ljava/lang/reflect/Field;Ljava/lang/String;IILjava/lang/String;Ljava/lang/String;)V
 
-    .line 1207
     const-string v0, "ReflectionUtils"
 
     const-string v2, "-------- Field list dump finished ----------"
 
     invoke-static {v0, v2}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1209
     return-void
 .end method
 
@@ -279,32 +261,26 @@
     .end annotation
 
     .prologue
-    .line 1213
     .local p1, "dumpedObj":Ljava/util/ArrayList;, "Ljava/util/ArrayList<Ljava/lang/Object;>;"
     if-nez p0, :cond_1
 
-    .line 1322
     :cond_0
     :goto_0
     return-void
 
-    .line 1217
     :cond_1
     invoke-virtual/range {p0 .. p0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
     move-result-object v17
 
-    .line 1218
     .local v17, "curObjClass":Ljava/lang/Class;, "Ljava/lang/Class<*>;"
     invoke-virtual/range {v17 .. v17}, Ljava/lang/Class;->getName()Ljava/lang/String;
 
     move-result-object v29
 
-    .line 1219
     .local v29, "objectTypeStr":Ljava/lang/String;
     const/16 v30, 0x0
 
-    .line 1221
     .local v30, "objectValueStr":Ljava/lang/String;
     move-object/from16 v0, p1
 
@@ -320,7 +296,6 @@
 
     const/4 v14, 0x1
 
-    .line 1223
     .local v14, "alreadyDumpedObj":Z
     :goto_1
     invoke-virtual/range {v17 .. v17}, Ljava/lang/Class;->isPrimitive()Z
@@ -343,13 +318,11 @@
 
     if-ne v4, v5, :cond_f
 
-    .line 1224
     :cond_2
     invoke-virtual/range {p0 .. p0}, Ljava/lang/Object;->toString()Ljava/lang/String;
 
     move-result-object v30
 
-    .line 1228
     :goto_2
     invoke-virtual/range {v17 .. v17}, Ljava/lang/Class;->isArray()Z
 
@@ -359,7 +332,6 @@
 
     if-ne v4, v5, :cond_3
 
-    .line 1229
     new-instance v4, Ljava/lang/StringBuilder;
 
     invoke-direct {v4}, Ljava/lang/StringBuilder;-><init>()V
@@ -398,13 +370,11 @@
 
     move-result-object v30
 
-    .line 1232
     :cond_3
     invoke-static/range {p5 .. p5}, Lcom/samsung/android/smartclip/ReflectionUtils;->getIndentString(I)Ljava/lang/String;
 
     move-result-object v24
 
-    .line 1234
     .local v24, "indent":Ljava/lang/String;
     if-eqz p3, :cond_10
 
@@ -416,7 +386,6 @@
 
     move-result-object v20
 
-    .line 1235
     .local v20, "fieldTypeStr":Ljava/lang/String;
     :goto_3
     const-string v4, "[L"
@@ -429,13 +398,10 @@
 
     move-result-object v20
 
-    .line 1237
     if-nez p2, :cond_4
 
-    .line 1238
     const-string p2, ""
 
-    .line 1240
     :cond_4
     new-instance v4, Ljava/lang/StringBuilder;
 
@@ -462,14 +428,11 @@
 
     move-result-object v19
 
-    .line 1242
     .local v19, "fieldName":Ljava/lang/String;
     if-nez p4, :cond_5
 
-    .line 1243
     const-string p4, ""
 
-    .line 1246
     :cond_5
     if-eqz p7, :cond_6
 
@@ -500,7 +463,6 @@
 
     if-ne v4, v5, :cond_9
 
-    .line 1249
     :cond_7
     invoke-virtual/range {v17 .. v17}, Ljava/lang/Class;->isPrimitive()Z
 
@@ -522,7 +484,6 @@
 
     if-ne v4, v5, :cond_12
 
-    .line 1250
     :cond_8
     const-string v4, "ReflectionUtils"
 
@@ -584,7 +545,6 @@
 
     invoke-static {v4, v5}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1255
     :cond_9
     :goto_5
     const-string v4, ""
@@ -597,7 +557,6 @@
 
     if-nez v4, :cond_a
 
-    .line 1256
     new-instance v4, Ljava/lang/StringBuilder;
 
     invoke-direct {v4}, Ljava/lang/StringBuilder;-><init>()V
@@ -618,7 +577,6 @@
 
     move-result-object p4
 
-    .line 1258
     :cond_a
     new-instance v4, Ljava/lang/StringBuilder;
 
@@ -660,24 +618,20 @@
 
     move-result-object p4
 
-    .line 1260
     if-nez v14, :cond_0
 
-    .line 1261
     add-int/lit8 v4, p5, 0x1
 
     move/from16 v0, p6
 
     if-ge v4, v0, :cond_b
 
-    .line 1262
     move-object/from16 v0, p1
 
     move-object/from16 v1, p0
 
     invoke-virtual {v0, v1}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 1268
     :cond_b
     invoke-virtual/range {v17 .. v17}, Ljava/lang/Class;->isArray()Z
 
@@ -687,7 +641,6 @@
 
     if-ne v4, v5, :cond_14
 
-    .line 1269
     move-object/from16 v0, p0
 
     move-object/from16 v1, v29
@@ -696,11 +649,9 @@
 
     move-result v16
 
-    .line 1271
     .local v16, "arrayLength":I
     const/16 v12, 0x64
 
-    .line 1272
     .local v12, "accessLimit":I
     const/16 v22, 0x0
 
@@ -718,7 +669,6 @@
 
     if-ge v0, v4, :cond_13
 
-    .line 1273
     move-object/from16 v0, p0
 
     move/from16 v1, v22
@@ -727,11 +677,9 @@
 
     move-result-object v2
 
-    .line 1275
     .local v2, "o":Ljava/lang/Object;
     if-eqz v2, :cond_d
 
-    .line 1276
     invoke-virtual {v2}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
     move-result-object v4
@@ -754,7 +702,6 @@
 
     if-nez v4, :cond_d
 
-    .line 1277
     :cond_c
     new-instance v4, Ljava/lang/StringBuilder;
 
@@ -798,13 +745,11 @@
 
     invoke-static/range {v2 .. v10}, Lcom/samsung/android/smartclip/ReflectionUtils;->dumpObjectFields(Ljava/lang/Object;Ljava/util/ArrayList;Ljava/lang/String;Ljava/lang/reflect/Field;Ljava/lang/String;IILjava/lang/String;Ljava/lang/String;)V
 
-    .line 1272
     :cond_d
     add-int/lit8 v22, v22, 0x1
 
     goto :goto_6
 
-    .line 1221
     .end local v2    # "o":Ljava/lang/Object;
     .end local v12    # "accessLimit":I
     .end local v14    # "alreadyDumpedObj":Z
@@ -818,7 +763,6 @@
 
     goto/16 :goto_1
 
-    .line 1226
     .restart local v14    # "alreadyDumpedObj":Z
     :cond_f
     new-instance v4, Ljava/lang/StringBuilder;
@@ -849,21 +793,18 @@
 
     goto/16 :goto_2
 
-    .line 1234
     .restart local v24    # "indent":Ljava/lang/String;
     :cond_10
     const-string v20, ""
 
     goto/16 :goto_3
 
-    .line 1240
     .restart local v20    # "fieldTypeStr":Ljava/lang/String;
     :cond_11
     const-string v4, ""
 
     goto/16 :goto_4
 
-    .line 1252
     .restart local v19    # "fieldName":Ljava/lang/String;
     :cond_12
     const-string v4, "ReflectionUtils"
@@ -940,7 +881,6 @@
 
     goto/16 :goto_5
 
-    .line 1281
     .restart local v12    # "accessLimit":I
     .restart local v16    # "arrayLength":I
     .restart local v22    # "i":I
@@ -951,7 +891,6 @@
 
     if-le v0, v4, :cond_0
 
-    .line 1282
     const-string v4, "ReflectionUtils"
 
     new-instance v5, Ljava/lang/StringBuilder;
@@ -990,7 +929,6 @@
 
     goto/16 :goto_0
 
-    .line 1285
     .end local v12    # "accessLimit":I
     .end local v16    # "arrayLength":I
     .end local v22    # "i":I
@@ -1011,16 +949,13 @@
 
     if-nez v4, :cond_0
 
-    .line 1286
     :goto_7
     if-eqz v17, :cond_0
 
-    .line 1287
     invoke-virtual/range {v17 .. v17}, Ljava/lang/Class;->getDeclaredFields()[Ljava/lang/reflect/Field;
 
     move-result-object v21
 
-    .line 1289
     .local v21, "fields":[Ljava/lang/reflect/Field;
     move-object/from16 v15, v21
 
@@ -1042,37 +977,31 @@
 
     aget-object v6, v15, v23
 
-    .line 1290
     .local v6, "field":Ljava/lang/reflect/Field;
     const/4 v3, 0x0
 
-    .line 1294
     .local v3, "fieldObject":Ljava/lang/Object;
     :try_start_0
     invoke-virtual {v6}, Ljava/lang/reflect/Field;->isAccessible()Z
 
     move-result v13
 
-    .line 1295
     .local v13, "accessable":Z
     const/4 v4, 0x1
 
     invoke-virtual {v6, v4}, Ljava/lang/reflect/Field;->setAccessible(Z)V
 
-    .line 1296
     move-object/from16 v0, p0
 
     invoke-virtual {v6, v0}, Ljava/lang/reflect/Field;->get(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object v3
 
-    .line 1297
     invoke-virtual {v6, v13}, Ljava/lang/reflect/Field;->setAccessible(Z)V
     :try_end_0
     .catch Ljava/lang/IllegalArgumentException; {:try_start_0 .. :try_end_0} :catch_0
     .catch Ljava/lang/IllegalAccessException; {:try_start_0 .. :try_end_0} :catch_1
 
-    .line 1306
     .end local v3    # "fieldObject":Ljava/lang/Object;
     .end local v13    # "accessable":Z
     :goto_9
@@ -1086,7 +1015,6 @@
 
     const/16 v26, 0x1
 
-    .line 1307
     .local v26, "isFinalField":Z
     :goto_a
     invoke-virtual {v6}, Ljava/lang/reflect/Field;->getModifiers()I
@@ -1099,14 +1027,12 @@
 
     const/16 v27, 0x1
 
-    .line 1308
     .local v27, "isStaticField":Z
     :goto_b
     invoke-virtual {v6}, Ljava/lang/reflect/Field;->isEnumConstant()Z
 
     move-result v25
 
-    .line 1310
     .local v25, "isEnumField":Z
     if-nez v25, :cond_16
 
@@ -1114,7 +1040,6 @@
 
     if-nez v26, :cond_16
 
-    .line 1313
     :cond_15
     add-int/lit8 v4, p5, 0x1
 
@@ -1122,7 +1047,6 @@
 
     if-ge v4, v0, :cond_16
 
-    .line 1314
     const/4 v5, 0x0
 
     add-int/lit8 v8, p5, 0x1
@@ -1139,46 +1063,38 @@
 
     invoke-static/range {v3 .. v11}, Lcom/samsung/android/smartclip/ReflectionUtils;->dumpObjectFields(Ljava/lang/Object;Ljava/util/ArrayList;Ljava/lang/String;Ljava/lang/reflect/Field;Ljava/lang/String;IILjava/lang/String;Ljava/lang/String;)V
 
-    .line 1289
     :cond_16
     add-int/lit8 v23, v23, 0x1
 
     goto :goto_8
 
-    .line 1298
     .end local v25    # "isEnumField":Z
     .end local v26    # "isFinalField":Z
     .end local v27    # "isStaticField":Z
     :catch_0
     move-exception v18
 
-    .line 1299
     .local v18, "e":Ljava/lang/IllegalArgumentException;
     const/4 v3, 0x0
 
-    .line 1300
     .restart local v3    # "fieldObject":Ljava/lang/Object;
     invoke-virtual/range {v18 .. v18}, Ljava/lang/IllegalArgumentException;->printStackTrace()V
 
     goto :goto_9
 
-    .line 1301
     .end local v3    # "fieldObject":Ljava/lang/Object;
     .end local v18    # "e":Ljava/lang/IllegalArgumentException;
     :catch_1
     move-exception v18
 
-    .line 1302
     .local v18, "e":Ljava/lang/IllegalAccessException;
     const/4 v3, 0x0
 
-    .line 1303
     .restart local v3    # "fieldObject":Ljava/lang/Object;
     invoke-virtual/range {v18 .. v18}, Ljava/lang/IllegalAccessException;->printStackTrace()V
 
     goto :goto_9
 
-    .line 1306
     .end local v3    # "fieldObject":Ljava/lang/Object;
     .end local v18    # "e":Ljava/lang/IllegalAccessException;
     :cond_17
@@ -1186,14 +1102,12 @@
 
     goto :goto_a
 
-    .line 1307
     .restart local v26    # "isFinalField":Z
     :cond_18
     const/16 v27, 0x0
 
     goto :goto_b
 
-    .line 1319
     .end local v6    # "field":Ljava/lang/reflect/Field;
     .end local v26    # "isFinalField":Z
     :cond_19
@@ -1201,7 +1115,6 @@
 
     move-result-object v17
 
-    .line 1320
     goto :goto_7
 .end method
 
@@ -1215,12 +1128,10 @@
     .prologue
     const/4 v3, 0x0
 
-    .line 1183
     new-instance v1, Ljava/util/ArrayList;
 
     invoke-direct {v1}, Ljava/util/ArrayList;-><init>()V
 
-    .line 1185
     .local v1, "objList":Ljava/util/ArrayList;, "Ljava/util/ArrayList<Ljava/lang/Object;>;"
     const-string v0, "ReflectionUtils"
 
@@ -1264,7 +1175,6 @@
 
     invoke-static {v0, v2}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1186
     const-string v4, ""
 
     const/4 v5, 0x0
@@ -1281,14 +1191,12 @@
 
     invoke-static/range {v0 .. v8}, Lcom/samsung/android/smartclip/ReflectionUtils;->dumpObjectFields(Ljava/lang/Object;Ljava/util/ArrayList;Ljava/lang/String;Ljava/lang/reflect/Field;Ljava/lang/String;IILjava/lang/String;Ljava/lang/String;)V
 
-    .line 1187
     const-string v0, "ReflectionUtils"
 
     const-string v2, "-------- Field list dump finished ----------"
 
     invoke-static {v0, v2}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1189
     return-void
 .end method
 
@@ -1302,12 +1210,10 @@
     .prologue
     const/4 v3, 0x0
 
-    .line 1193
     new-instance v1, Ljava/util/ArrayList;
 
     invoke-direct {v1}, Ljava/util/ArrayList;-><init>()V
 
-    .line 1195
     .local v1, "objList":Ljava/util/ArrayList;, "Ljava/util/ArrayList<Ljava/lang/Object;>;"
     const-string v0, "ReflectionUtils"
 
@@ -1351,7 +1257,6 @@
 
     invoke-static {v0, v2}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1196
     const-string v4, ""
 
     const/4 v5, 0x0
@@ -1368,14 +1273,12 @@
 
     invoke-static/range {v0 .. v8}, Lcom/samsung/android/smartclip/ReflectionUtils;->dumpObjectFields(Ljava/lang/Object;Ljava/util/ArrayList;Ljava/lang/String;Ljava/lang/reflect/Field;Ljava/lang/String;IILjava/lang/String;Ljava/lang/String;)V
 
-    .line 1197
     const-string v0, "ReflectionUtils"
 
     const-string v2, "-------- Field list dump finished ----------"
 
     invoke-static {v0, v2}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1199
     return-void
 .end method
 
@@ -1384,12 +1287,10 @@
     .param p0, "objToDump"    # Ljava/lang/Object;
 
     .prologue
-    .line 1326
     invoke-virtual {p0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
     move-result-object v2
 
-    .line 1328
     .local v2, "curObjClass":Ljava/lang/Class;, "Ljava/lang/Class<*>;"
     const-string v7, "ReflectionUtils"
 
@@ -1423,11 +1324,9 @@
 
     invoke-static {v7, v8}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1330
     :goto_0
     if-eqz v2, :cond_1
 
-    .line 1331
     const-string v7, "ReflectionUtils"
 
     new-instance v8, Ljava/lang/StringBuilder;
@@ -1460,12 +1359,10 @@
 
     invoke-static {v7, v8}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1332
     invoke-virtual {v2}, Ljava/lang/Class;->getDeclaredMethods()[Ljava/lang/reflect/Method;
 
     move-result-object v6
 
-    .line 1334
     .local v6, "methods":[Ljava/lang/reflect/Method;
     move-object v0, v6
 
@@ -1481,24 +1378,20 @@
 
     aget-object v5, v0, v3
 
-    .line 1335
     .local v5, "method":Ljava/lang/reflect/Method;
     invoke-virtual {v5}, Ljava/lang/reflect/Method;->toGenericString()Ljava/lang/String;
 
     move-result-object v1
 
-    .line 1336
     .local v1, "curMethodName":Ljava/lang/String;
     const-string v7, "ReflectionUtils"
 
     invoke-static {v7, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1334
     add-int/lit8 v3, v3, 0x1
 
     goto :goto_1
 
-    .line 1338
     .end local v1    # "curMethodName":Ljava/lang/String;
     .end local v5    # "method":Ljava/lang/reflect/Method;
     :cond_0
@@ -1506,10 +1399,8 @@
 
     move-result-object v2
 
-    .line 1339
     goto :goto_0
 
-    .line 1341
     .end local v0    # "arr$":[Ljava/lang/reflect/Method;
     .end local v3    # "i$":I
     .end local v4    # "len$":I
@@ -1521,7 +1412,6 @@
 
     invoke-static {v7, v8}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1342
     return-void
 .end method
 
@@ -1530,23 +1420,19 @@
     .param p0, "classPath"    # Ljava/lang/String;
 
     .prologue
-    .line 1175
     const-string v1, "\\."
 
     invoke-virtual {p0, v1}, Ljava/lang/String;->split(Ljava/lang/String;)[Ljava/lang/String;
 
     move-result-object v0
 
-    .line 1176
     .local v0, "strs":[Ljava/lang/String;
     array-length v1, v0
 
     if-nez v1, :cond_0
 
-    .line 1177
     const-string v1, ""
 
-    .line 1179
     :goto_0
     return-object v1
 
@@ -1576,13 +1462,11 @@
     .end annotation
 
     .prologue
-    .line 1158
     .local p0, "arrayList":Ljava/util/ArrayList;, "Ljava/util/ArrayList<Ljava/lang/Object;>;"
     invoke-virtual {p0}, Ljava/util/ArrayList;->size()I
 
     move-result v0
 
-    .line 1159
     .local v0, "arraySize":I
     const/4 v1, 0x0
 
@@ -1590,26 +1474,22 @@
     :goto_0
     if-ge v1, v0, :cond_1
 
-    .line 1160
     invoke-virtual {p0, v1}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
 
     move-result-object v2
 
     if-ne p1, v2, :cond_0
 
-    .line 1164
     .end local v1    # "i":I
     :goto_1
     return v1
 
-    .line 1159
     .restart local v1    # "i":I
     :cond_0
     add-int/lit8 v1, v1, 0x1
 
     goto :goto_0
 
-    .line 1164
     :cond_1
     const/4 v1, -0x1
 
@@ -1622,10 +1502,8 @@
     .param p1, "objectTypeStr"    # Ljava/lang/String;
 
     .prologue
-    .line 1087
     const/4 v0, 0x0
 
-    .line 1089
     .local v0, "arrayLength":I
     const-string v1, "[I"
 
@@ -1635,7 +1513,6 @@
 
     if-eqz v1, :cond_0
 
-    .line 1090
     check-cast p0, [I
 
     .end local p0    # "array":Ljava/lang/Object;
@@ -1643,11 +1520,9 @@
 
     array-length v0, p0
 
-    .line 1110
     :goto_0
     return v0
 
-    .line 1091
     .restart local p0    # "array":Ljava/lang/Object;
     :cond_0
     const-string v1, "[Z"
@@ -1658,7 +1533,6 @@
 
     if-eqz v1, :cond_1
 
-    .line 1092
     check-cast p0, [Z
 
     .end local p0    # "array":Ljava/lang/Object;
@@ -1668,7 +1542,6 @@
 
     goto :goto_0
 
-    .line 1093
     .restart local p0    # "array":Ljava/lang/Object;
     :cond_1
     const-string v1, "[J"
@@ -1679,7 +1552,6 @@
 
     if-eqz v1, :cond_2
 
-    .line 1094
     check-cast p0, [J
 
     .end local p0    # "array":Ljava/lang/Object;
@@ -1689,7 +1561,6 @@
 
     goto :goto_0
 
-    .line 1095
     .restart local p0    # "array":Ljava/lang/Object;
     :cond_2
     const-string v1, "[B"
@@ -1700,7 +1571,6 @@
 
     if-eqz v1, :cond_3
 
-    .line 1096
     check-cast p0, [B
 
     .end local p0    # "array":Ljava/lang/Object;
@@ -1710,7 +1580,6 @@
 
     goto :goto_0
 
-    .line 1097
     .restart local p0    # "array":Ljava/lang/Object;
     :cond_3
     const-string v1, "[F"
@@ -1721,7 +1590,6 @@
 
     if-eqz v1, :cond_4
 
-    .line 1098
     check-cast p0, [F
 
     .end local p0    # "array":Ljava/lang/Object;
@@ -1731,7 +1599,6 @@
 
     goto :goto_0
 
-    .line 1099
     .restart local p0    # "array":Ljava/lang/Object;
     :cond_4
     const-string v1, "[C"
@@ -1742,7 +1609,6 @@
 
     if-eqz v1, :cond_5
 
-    .line 1100
     check-cast p0, [C
 
     .end local p0    # "array":Ljava/lang/Object;
@@ -1752,7 +1618,6 @@
 
     goto :goto_0
 
-    .line 1101
     .restart local p0    # "array":Ljava/lang/Object;
     :cond_5
     const-string v1, "[S"
@@ -1763,7 +1628,6 @@
 
     if-eqz v1, :cond_6
 
-    .line 1102
     check-cast p0, [S
 
     .end local p0    # "array":Ljava/lang/Object;
@@ -1773,7 +1637,6 @@
 
     goto :goto_0
 
-    .line 1103
     .restart local p0    # "array":Ljava/lang/Object;
     :cond_6
     const-string v1, "[D"
@@ -1784,7 +1647,6 @@
 
     if-eqz v1, :cond_7
 
-    .line 1104
     check-cast p0, [D
 
     .end local p0    # "array":Ljava/lang/Object;
@@ -1794,7 +1656,6 @@
 
     goto :goto_0
 
-    .line 1105
     .restart local p0    # "array":Ljava/lang/Object;
     :cond_7
     const-string v1, "[L"
@@ -1805,7 +1666,6 @@
 
     if-eqz v1, :cond_8
 
-    .line 1106
     check-cast p0, [Ljava/lang/Object;
 
     .end local p0    # "array":Ljava/lang/Object;
@@ -1815,7 +1675,6 @@
 
     goto :goto_0
 
-    .line 1108
     .restart local p0    # "array":Ljava/lang/Object;
     :cond_8
     const/4 v0, 0x0
@@ -1829,18 +1688,15 @@
     .param p1, "index"    # I
 
     .prologue
-    .line 1115
     invoke-virtual {p0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
     move-result-object v0
 
-    .line 1116
     .local v0, "cls":Ljava/lang/Class;, "Ljava/lang/Class<*>;"
     invoke-virtual {v0}, Ljava/lang/Class;->getName()Ljava/lang/String;
 
     move-result-object v1
 
-    .line 1118
     .local v1, "dataTypeStr":Ljava/lang/String;
     const-string v2, "[I"
 
@@ -1850,7 +1706,6 @@
 
     if-eqz v2, :cond_0
 
-    .line 1119
     new-instance v2, Ljava/lang/Integer;
 
     check-cast p0, [I
@@ -1862,11 +1717,9 @@
 
     invoke-direct {v2, v3}, Ljava/lang/Integer;-><init>(I)V
 
-    .line 1137
     :goto_0
     return-object v2
 
-    .line 1120
     .restart local p0    # "array":Ljava/lang/Object;
     :cond_0
     const-string v2, "[Z"
@@ -1877,7 +1730,6 @@
 
     if-eqz v2, :cond_1
 
-    .line 1121
     new-instance v2, Ljava/lang/Boolean;
 
     check-cast p0, [Z
@@ -1891,7 +1743,6 @@
 
     goto :goto_0
 
-    .line 1122
     .restart local p0    # "array":Ljava/lang/Object;
     :cond_1
     const-string v2, "[J"
@@ -1902,7 +1753,6 @@
 
     if-eqz v2, :cond_2
 
-    .line 1123
     new-instance v2, Ljava/lang/Long;
 
     check-cast p0, [J
@@ -1916,7 +1766,6 @@
 
     goto :goto_0
 
-    .line 1124
     .restart local p0    # "array":Ljava/lang/Object;
     :cond_2
     const-string v2, "[B"
@@ -1927,7 +1776,6 @@
 
     if-eqz v2, :cond_3
 
-    .line 1125
     new-instance v2, Ljava/lang/Byte;
 
     check-cast p0, [B
@@ -1941,7 +1789,6 @@
 
     goto :goto_0
 
-    .line 1126
     .restart local p0    # "array":Ljava/lang/Object;
     :cond_3
     const-string v2, "[F"
@@ -1952,7 +1799,6 @@
 
     if-eqz v2, :cond_4
 
-    .line 1127
     new-instance v2, Ljava/lang/Float;
 
     check-cast p0, [F
@@ -1966,7 +1812,6 @@
 
     goto :goto_0
 
-    .line 1128
     .restart local p0    # "array":Ljava/lang/Object;
     :cond_4
     const-string v2, "[C"
@@ -1977,7 +1822,6 @@
 
     if-eqz v2, :cond_5
 
-    .line 1129
     new-instance v2, Ljava/lang/Integer;
 
     check-cast p0, [C
@@ -1991,7 +1835,6 @@
 
     goto :goto_0
 
-    .line 1130
     .restart local p0    # "array":Ljava/lang/Object;
     :cond_5
     const-string v2, "[S"
@@ -2002,7 +1845,6 @@
 
     if-eqz v2, :cond_6
 
-    .line 1131
     new-instance v2, Ljava/lang/Short;
 
     check-cast p0, [S
@@ -2016,7 +1858,6 @@
 
     goto :goto_0
 
-    .line 1132
     .restart local p0    # "array":Ljava/lang/Object;
     :cond_6
     const-string v2, "[D"
@@ -2027,7 +1868,6 @@
 
     if-eqz v2, :cond_7
 
-    .line 1133
     new-instance v2, Ljava/lang/Double;
 
     check-cast p0, [D
@@ -2041,7 +1881,6 @@
 
     goto/16 :goto_0
 
-    .line 1134
     .restart local p0    # "array":Ljava/lang/Object;
     :cond_7
     const-string v2, "[L"
@@ -2052,7 +1891,6 @@
 
     if-eqz v2, :cond_8
 
-    .line 1135
     check-cast p0, [Ljava/lang/Object;
 
     .end local p0    # "array":Ljava/lang/Object;
@@ -2062,7 +1900,6 @@
 
     goto/16 :goto_0
 
-    .line 1137
     .restart local p0    # "array":Ljava/lang/Object;
     :cond_8
     new-instance v2, Ljava/lang/StringBuilder;
@@ -2102,7 +1939,6 @@
 
     const/4 v11, 0x1
 
-    .line 1458
     if-eqz p0, :cond_0
 
     if-nez p1, :cond_1
@@ -2110,27 +1946,22 @@
     :cond_0
     move-object v5, v9
 
-    .line 1484
     :goto_0
     return-object v5
 
-    .line 1462
     :cond_1
     invoke-virtual {p0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
     move-result-object v3
 
-    .line 1463
     .local v3, "curObjClass":Ljava/lang/Class;, "Ljava/lang/Class<*>;"
     :goto_1
     if-eqz v3, :cond_4
 
-    .line 1464
     invoke-virtual {v3}, Ljava/lang/Class;->getDeclaredFields()[Ljava/lang/reflect/Field;
 
     move-result-object v6
 
-    .line 1466
     .local v6, "fields":[Ljava/lang/reflect/Field;
     move-object v1, v6
 
@@ -2146,13 +1977,11 @@
 
     aget-object v4, v1, v7
 
-    .line 1467
     .local v4, "field":Ljava/lang/reflect/Field;
     invoke-virtual {v4}, Ljava/lang/reflect/Field;->getName()Ljava/lang/String;
 
     move-result-object v2
 
-    .line 1468
     .local v2, "curFieldName":Ljava/lang/String;
     invoke-virtual {p1, v2}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
@@ -2160,24 +1989,20 @@
 
     if-ne v10, v11, :cond_2
 
-    .line 1471
     :try_start_0
     invoke-virtual {v4}, Ljava/lang/reflect/Field;->isAccessible()Z
 
     move-result v0
 
-    .line 1472
     .local v0, "accessable":Z
     const/4 v10, 0x1
 
     invoke-virtual {v4, v10}, Ljava/lang/reflect/Field;->setAccessible(Z)V
 
-    .line 1473
     invoke-virtual {v4, p0}, Ljava/lang/reflect/Field;->get(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object v5
 
-    .line 1474
     .local v5, "fieldObject":Ljava/lang/Object;
     invoke-virtual {v4, v0}, Ljava/lang/reflect/Field;->setAccessible(Z)V
     :try_end_0
@@ -2186,20 +2011,17 @@
 
     goto :goto_0
 
-    .line 1477
     .end local v0    # "accessable":Z
     .end local v5    # "fieldObject":Ljava/lang/Object;
     :catch_0
     move-exception v10
 
-    .line 1466
     :cond_2
     :goto_3
     add-int/lit8 v7, v7, 0x1
 
     goto :goto_2
 
-    .line 1482
     .end local v2    # "curFieldName":Ljava/lang/String;
     .end local v4    # "field":Ljava/lang/reflect/Field;
     :cond_3
@@ -2207,7 +2029,6 @@
 
     move-result-object v3
 
-    .line 1483
     goto :goto_1
 
     .end local v1    # "arr$":[Ljava/lang/reflect/Field;
@@ -2217,10 +2038,8 @@
     :cond_4
     move-object v5, v9
 
-    .line 1484
     goto :goto_0
 
-    .line 1478
     .restart local v1    # "arr$":[Ljava/lang/reflect/Field;
     .restart local v2    # "curFieldName":Ljava/lang/String;
     .restart local v4    # "field":Ljava/lang/reflect/Field;
@@ -2257,7 +2076,6 @@
     .end annotation
 
     .prologue
-    .line 1362
     .local p4, "searchResult":Ljava/util/ArrayList;, "Ljava/util/ArrayList<Ljava/lang/Object;>;"
     if-eqz p0, :cond_0
 
@@ -2269,38 +2087,31 @@
 
     if-ne v0, v1, :cond_1
 
-    .line 1437
     :cond_0
     return-void
 
-    .line 1366
     :cond_1
     invoke-virtual/range {p0 .. p0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
     move-result-object v14
 
-    .line 1368
     .local v14, "curObjClass":Ljava/lang/Class;, "Ljava/lang/Class<*>;"
     :goto_0
     if-eqz v14, :cond_0
 
-    .line 1369
     const/4 v3, 0x1
 
     move/from16 v0, p7
 
     if-ne v0, v3, :cond_2
 
-    .line 1370
     invoke-virtual {v14}, Ljava/lang/Class;->getName()Ljava/lang/String;
 
     move-result-object v12
 
-    .line 1371
     .local v12, "className":Ljava/lang/String;
     if-eqz v12, :cond_2
 
-    .line 1372
     const-string v3, "android.view."
 
     invoke-virtual {v12, v3}, Ljava/lang/String;->startsWith(Ljava/lang/String;)Z
@@ -2321,14 +2132,12 @@
 
     if-eq v3, v4, :cond_0
 
-    .line 1378
     .end local v12    # "className":Ljava/lang/String;
     :cond_2
     invoke-virtual {v14}, Ljava/lang/Class;->getDeclaredFields()[Ljava/lang/reflect/Field;
 
     move-result-object v17
 
-    .line 1380
     .local v17, "fields":[Ljava/lang/reflect/Field;
     move-object/from16 v11, v17
 
@@ -2354,53 +2163,43 @@
 
     aget-object v15, v11, v20
 
-    .line 1381
     .local v15, "field":Ljava/lang/reflect/Field;
     invoke-virtual {v15}, Ljava/lang/reflect/Field;->getType()Ljava/lang/Class;
 
     move-result-object v13
 
-    .line 1382
     .local v13, "classType":Ljava/lang/Class;, "Ljava/lang/Class<*>;"
     invoke-virtual {v13}, Ljava/lang/Class;->getName()Ljava/lang/String;
 
     move-result-object v16
 
-    .line 1386
     .local v16, "fieldType":Ljava/lang/String;
     :try_start_0
     invoke-virtual {v15}, Ljava/lang/reflect/Field;->isAccessible()Z
 
     move-result v10
 
-    .line 1387
     .local v10, "accessable":Z
     const/4 v3, 0x1
 
     invoke-virtual {v15, v3}, Ljava/lang/reflect/Field;->setAccessible(Z)V
 
-    .line 1388
     move-object/from16 v0, p0
 
     invoke-virtual {v15, v0}, Ljava/lang/reflect/Field;->get(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object v2
 
-    .line 1389
     .local v2, "memberObj":Ljava/lang/Object;
     invoke-virtual {v15, v10}, Ljava/lang/reflect/Field;->setAccessible(Z)V
 
-    .line 1391
     if-eqz v2, :cond_6
 
-    .line 1392
     const/16 v22, 0x0
 
-    .line 1394
     .local v22, "matched":Z
     packed-switch p1, :pswitch_data_0
 
-    .line 1401
     move-object/from16 v0, v16
 
     move-object/from16 v1, p2
@@ -2409,7 +2208,6 @@
 
     move-result v22
 
-    .line 1405
     :goto_2
     const/4 v3, 0x1
 
@@ -2417,10 +2215,8 @@
 
     if-ne v0, v3, :cond_7
 
-    .line 1406
     const/16 v18, 0x0
 
-    .line 1409
     .local v18, "haveSameObject":Z
     invoke-virtual/range {p4 .. p4}, Ljava/util/ArrayList;->iterator()Ljava/util/Iterator;
 
@@ -2439,26 +2235,21 @@
 
     move-result-object v23
 
-    .line 1410
     .local v23, "o":Ljava/lang/Object;
     move-object/from16 v0, v23
 
     if-ne v0, v2, :cond_3
 
-    .line 1411
     const/16 v18, 0x1
 
-    .line 1416
     .end local v23    # "o":Ljava/lang/Object;
     :cond_4
     if-nez v18, :cond_5
 
-    .line 1418
     move-object/from16 v0, p4
 
     invoke-virtual {v0, v2}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 1424
     .end local v18    # "haveSameObject":Z
     .end local v19    # "i$":Ljava/util/Iterator;
     :cond_5
@@ -2473,7 +2264,6 @@
 
     if-ge v3, v0, :cond_0
 
-    .line 1380
     .end local v2    # "memberObj":Ljava/lang/Object;
     .end local v10    # "accessable":Z
     .end local v22    # "matched":Z
@@ -2488,7 +2278,6 @@
     .restart local v20    # "i$":I
     goto :goto_1
 
-    .line 1396
     .restart local v2    # "memberObj":Ljava/lang/Object;
     .restart local v10    # "accessable":Z
     .restart local v22    # "matched":Z
@@ -2519,10 +2308,8 @@
 
     move-result v22
 
-    .line 1397
     goto :goto_2
 
-    .line 1421
     :cond_7
     add-int/lit8 v7, p5, 0x1
 
@@ -2545,7 +2332,6 @@
 
     goto :goto_3
 
-    .line 1429
     .end local v2    # "memberObj":Ljava/lang/Object;
     .end local v10    # "accessable":Z
     .end local v20    # "i$":I
@@ -2555,7 +2341,6 @@
 
     goto :goto_4
 
-    .line 1434
     .end local v13    # "classType":Ljava/lang/Class;, "Ljava/lang/Class<*>;"
     .end local v15    # "field":Ljava/lang/reflect/Field;
     .end local v16    # "fieldType":Ljava/lang/String;
@@ -2565,10 +2350,8 @@
 
     move-result-object v14
 
-    .line 1435
     goto/16 :goto_0
 
-    .line 1430
     .end local v20    # "i$":I
     .restart local v13    # "classType":Ljava/lang/Class;, "Ljava/lang/Class<*>;"
     .restart local v15    # "field":Ljava/lang/reflect/Field;
@@ -2578,7 +2361,6 @@
 
     goto :goto_4
 
-    .line 1394
     :pswitch_data_0
     .packed-switch 0x1
         :pswitch_0
@@ -2595,28 +2377,23 @@
     .param p5, "skipWellKnownClass"    # Z
 
     .prologue
-    .line 1445
     new-instance v4, Ljava/util/ArrayList;
 
     invoke-direct {v4}, Ljava/util/ArrayList;-><init>()V
 
-    .line 1447
     .local v4, "searchResult":Ljava/util/ArrayList;, "Ljava/util/ArrayList<Ljava/lang/Object;>;"
     if-eqz p0, :cond_0
 
     if-nez p2, :cond_1
 
-    .line 1448
     :cond_0
     invoke-virtual {v4}, Ljava/util/ArrayList;->toArray()[Ljava/lang/Object;
 
     move-result-object v0
 
-    .line 1453
     :goto_0
     return-object v0
 
-    .line 1451
     :cond_1
     const/4 v5, 0x0
 
@@ -2634,7 +2411,6 @@
 
     invoke-static/range {v0 .. v7}, Lcom/samsung/android/smartclip/ReflectionUtils;->getFieldObjectByObjectType(Ljava/lang/Object;ILjava/lang/String;ILjava/util/ArrayList;IIZ)V
 
-    .line 1453
     invoke-virtual {v4}, Ljava/util/ArrayList;->toArray()[Ljava/lang/Object;
 
     move-result-object v0
@@ -2651,7 +2427,6 @@
     .param p4, "skipWellKnownClass"    # Z
 
     .prologue
-    .line 1441
     const/4 v4, 0x1
 
     move-object v0, p0
@@ -2676,10 +2451,8 @@
     .param p0, "depth"    # I
 
     .prologue
-    .line 1168
     const-string v1, ""
 
-    .line 1169
     .local v1, "indent":Ljava/lang/String;
     const/4 v0, 0x0
 
@@ -2687,7 +2460,6 @@
     :goto_0
     if-ge v0, p0, :cond_0
 
-    .line 1170
     new-instance v2, Ljava/lang/StringBuilder;
 
     invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
@@ -2706,12 +2478,10 @@
 
     move-result-object v1
 
-    .line 1169
     add-int/lit8 v0, v0, 0x1
 
     goto :goto_0
 
-    .line 1171
     :cond_0
     return-object v1
 .end method
@@ -2723,8 +2493,7 @@
     .prologue
     const/4 v0, 0x1
 
-    .line 1142
-    const-string/jumbo v1, "short"
+    const-string v1, "short"
 
     invoke-virtual {p0, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
@@ -2740,7 +2509,7 @@
 
     if-eq v1, v0, :cond_0
 
-    const-string/jumbo v1, "long"
+    const-string v1, "long"
 
     invoke-virtual {p0, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
@@ -2788,7 +2557,6 @@
 
     if-ne v1, v0, :cond_1
 
-    .line 1153
     :cond_0
     :goto_0
     return v0

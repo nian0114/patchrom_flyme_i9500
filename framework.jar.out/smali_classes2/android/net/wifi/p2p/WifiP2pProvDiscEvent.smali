@@ -32,8 +32,7 @@
     .locals 1
 
     .prologue
-    .line 58
-    const-string/jumbo v0, "static_ip=(0x[0-9a-fA-F]+)"
+    const-string v0, "static_ip=(0x[0-9a-fA-F]+)"
 
     invoke-static {v0}, Ljava/util/regex/Pattern;->compile(Ljava/lang/String;)Ljava/util/regex/Pattern;
 
@@ -48,17 +47,14 @@
     .locals 1
 
     .prologue
-    .line 62
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 63
     new-instance v0, Landroid/net/wifi/p2p/WifiP2pDevice;
 
     invoke-direct {v0}, Landroid/net/wifi/p2p/WifiP2pDevice;-><init>()V
 
     iput-object v0, p0, Landroid/net/wifi/p2p/WifiP2pProvDiscEvent;->device:Landroid/net/wifi/p2p/WifiP2pDevice;
 
-    .line 64
     return-void
 .end method
 
@@ -80,23 +76,19 @@
 
     const/4 v4, 0x0
 
-    .line 77
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 78
     const-string v2, " "
 
     invoke-virtual {p1, v2}, Ljava/lang/String;->split(Ljava/lang/String;)[Ljava/lang/String;
 
     move-result-object v1
 
-    .line 81
     .local v1, "tokens":[Ljava/lang/String;
     array-length v2, v1
 
     if-ge v2, v6, :cond_0
 
-    .line 82
     new-instance v2, Ljava/lang/IllegalArgumentException;
 
     new-instance v3, Ljava/lang/StringBuilder;
@@ -121,7 +113,6 @@
 
     throw v2
 
-    .line 85
     :cond_0
     aget-object v2, v1, v4
 
@@ -135,7 +126,6 @@
 
     iput v5, p0, Landroid/net/wifi/p2p/WifiP2pProvDiscEvent;->event:I
 
-    .line 93
     :goto_0
     new-instance v2, Landroid/net/wifi/p2p/WifiP2pDevice;
 
@@ -143,21 +133,18 @@
 
     iput-object v2, p0, Landroid/net/wifi/p2p/WifiP2pProvDiscEvent;->device:Landroid/net/wifi/p2p/WifiP2pDevice;
 
-    .line 94
     iget-object v2, p0, Landroid/net/wifi/p2p/WifiP2pProvDiscEvent;->device:Landroid/net/wifi/p2p/WifiP2pDevice;
 
     aget-object v3, v1, v5
 
     iput-object v3, v2, Landroid/net/wifi/p2p/WifiP2pDevice;->deviceAddress:Ljava/lang/String;
 
-    .line 95
     sget-object v2, Landroid/net/wifi/p2p/WifiP2pProvDiscEvent;->staticIpPattern:Ljava/util/regex/Pattern;
 
     invoke-virtual {v2, p1}, Ljava/util/regex/Pattern;->matcher(Ljava/lang/CharSequence;)Ljava/util/regex/Matcher;
 
     move-result-object v0
 
-    .line 96
     .local v0, "matchForStaticIp":Ljava/util/regex/Matcher;
     invoke-virtual {v0}, Ljava/util/regex/Matcher;->find()Z
 
@@ -165,7 +152,6 @@
 
     if-eqz v2, :cond_1
 
-    .line 97
     iget-object v2, p0, Landroid/net/wifi/p2p/WifiP2pProvDiscEvent;->device:Landroid/net/wifi/p2p/WifiP2pDevice;
 
     invoke-virtual {v0, v5}, Ljava/util/regex/Matcher;->group(I)Ljava/lang/String;
@@ -178,22 +164,18 @@
 
     iput v3, v2, Landroid/net/wifi/p2p/WifiP2pDevice;->candidateStaticIp:I
 
-    .line 99
     :cond_1
     iget v2, p0, Landroid/net/wifi/p2p/WifiP2pProvDiscEvent;->event:I
 
     if-ne v2, v7, :cond_2
 
-    .line 100
     aget-object v2, v1, v6
 
     iput-object v2, p0, Landroid/net/wifi/p2p/WifiP2pProvDiscEvent;->pin:Ljava/lang/String;
 
-    .line 102
     :cond_2
     return-void
 
-    .line 86
     .end local v0    # "matchForStaticIp":Ljava/util/regex/Matcher;
     :cond_3
     aget-object v2, v1, v4
@@ -210,7 +192,6 @@
 
     goto :goto_0
 
-    .line 87
     :cond_4
     aget-object v2, v1, v4
 
@@ -228,7 +209,6 @@
 
     goto :goto_0
 
-    .line 88
     :cond_5
     aget-object v2, v1, v4
 
@@ -244,7 +224,6 @@
 
     goto :goto_0
 
-    .line 89
     :cond_6
     aget-object v2, v1, v4
 
@@ -256,7 +235,6 @@
 
     if-eqz v2, :cond_7
 
-    .line 90
     :cond_7
     new-instance v2, Ljava/lang/IllegalArgumentException;
 
@@ -288,10 +266,8 @@
     .param p1, "hexString"    # Ljava/lang/String;
 
     .prologue
-    .line 114
     const/4 v1, 0x0
 
-    .line 115
     .local v1, "num":I
     const-string v2, "0x"
 
@@ -309,7 +285,6 @@
 
     if-eqz v2, :cond_1
 
-    .line 116
     :cond_0
     const/4 v2, 0x2
 
@@ -317,7 +292,6 @@
 
     move-result-object p1
 
-    .line 120
     :cond_1
     const/16 v2, 0x10
 
@@ -328,15 +302,12 @@
 
     move-result v1
 
-    .line 124
     :goto_0
     return v1
 
-    .line 121
     :catch_0
     move-exception v0
 
-    .line 122
     .local v0, "e":Ljava/lang/NumberFormatException;
     const-string v2, "WifiP2pProvDiscEvent"
 
@@ -369,18 +340,15 @@
     .locals 3
 
     .prologue
-    .line 105
     new-instance v0, Ljava/lang/StringBuffer;
 
     invoke-direct {v0}, Ljava/lang/StringBuffer;-><init>()V
 
-    .line 106
     .local v0, "sbuf":Ljava/lang/StringBuffer;
     iget-object v1, p0, Landroid/net/wifi/p2p/WifiP2pProvDiscEvent;->device:Landroid/net/wifi/p2p/WifiP2pDevice;
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuffer;->append(Ljava/lang/Object;)Ljava/lang/StringBuffer;
 
-    .line 107
     const-string v1, "\n event: "
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuffer;->append(Ljava/lang/String;)Ljava/lang/StringBuffer;
@@ -391,7 +359,6 @@
 
     invoke-virtual {v1, v2}, Ljava/lang/StringBuffer;->append(I)Ljava/lang/StringBuffer;
 
-    .line 108
     const-string v1, "\n pin: "
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuffer;->append(Ljava/lang/String;)Ljava/lang/StringBuffer;
@@ -402,7 +369,6 @@
 
     invoke-virtual {v1, v2}, Ljava/lang/StringBuffer;->append(Ljava/lang/String;)Ljava/lang/StringBuffer;
 
-    .line 109
     invoke-virtual {v0}, Ljava/lang/StringBuffer;->toString()Ljava/lang/String;
 
     move-result-object v1

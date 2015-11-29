@@ -26,7 +26,6 @@
     .locals 0
 
     .prologue
-    .line 39
     iput-object p1, p0, Lcom/android/server/MountServiceIdler$1;->this$0:Lcom/android/server/MountServiceIdler;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -40,14 +39,12 @@
     .locals 4
 
     .prologue
-    .line 42
     const-string v0, "MountServiceIdler"
 
     const-string v1, "Got mount service completion callback"
 
     invoke-static {v0, v1}, Landroid/util/Slog;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 43
     iget-object v0, p0, Lcom/android/server/MountServiceIdler$1;->this$0:Lcom/android/server/MountServiceIdler;
 
     # getter for: Lcom/android/server/MountServiceIdler;->mFinishCallback:Ljava/lang/Runnable;
@@ -57,7 +54,6 @@
 
     monitor-enter v1
 
-    .line 44
     :try_start_0
     iget-object v0, p0, Lcom/android/server/MountServiceIdler$1;->this$0:Lcom/android/server/MountServiceIdler;
 
@@ -68,7 +64,6 @@
 
     if-eqz v0, :cond_0
 
-    .line 45
     iget-object v0, p0, Lcom/android/server/MountServiceIdler$1;->this$0:Lcom/android/server/MountServiceIdler;
 
     iget-object v2, p0, Lcom/android/server/MountServiceIdler$1;->this$0:Lcom/android/server/MountServiceIdler;
@@ -82,7 +77,6 @@
 
     invoke-virtual {v0, v2, v3}, Lcom/android/server/MountServiceIdler;->jobFinished(Landroid/app/job/JobParameters;Z)V
 
-    .line 46
     iget-object v0, p0, Lcom/android/server/MountServiceIdler$1;->this$0:Lcom/android/server/MountServiceIdler;
 
     const/4 v2, 0x0
@@ -90,21 +84,17 @@
     # setter for: Lcom/android/server/MountServiceIdler;->mStarted:Z
     invoke-static {v0, v2}, Lcom/android/server/MountServiceIdler;->access$102(Lcom/android/server/MountServiceIdler;Z)Z
 
-    .line 48
     :cond_0
     monitor-exit v1
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 50
     iget-object v0, p0, Lcom/android/server/MountServiceIdler$1;->this$0:Lcom/android/server/MountServiceIdler;
 
     invoke-static {v0}, Lcom/android/server/MountServiceIdler;->scheduleIdlePass(Landroid/content/Context;)V
 
-    .line 51
     return-void
 
-    .line 48
     :catchall_0
     move-exception v0
 

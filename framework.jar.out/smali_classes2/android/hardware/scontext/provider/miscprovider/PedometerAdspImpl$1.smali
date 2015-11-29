@@ -26,7 +26,6 @@
     .locals 0
 
     .prologue
-    .line 411
     iput-object p1, p0, Landroid/hardware/scontext/provider/miscprovider/PedometerAdspImpl$1;->this$0:Landroid/hardware/scontext/provider/miscprovider/PedometerAdspImpl;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -42,7 +41,6 @@
     .param p2, "accuracy"    # I
 
     .prologue
-    .line 416
     return-void
 .end method
 
@@ -51,12 +49,10 @@
     .param p1, "event"    # Landroid/hardware/SensorEvent;
 
     .prologue
-    .line 421
     iget-object v0, p0, Landroid/hardware/scontext/provider/miscprovider/PedometerAdspImpl$1;->this$0:Landroid/hardware/scontext/provider/miscprovider/PedometerAdspImpl;
 
     # invokes: Landroid/hardware/scontext/provider/miscprovider/PedometerAdspImpl;->parseEvent(Landroid/hardware/SensorEvent;)V
     invoke-static {v0, p1}, Landroid/hardware/scontext/provider/miscprovider/PedometerAdspImpl;->access$000(Landroid/hardware/scontext/provider/miscprovider/PedometerAdspImpl;Landroid/hardware/SensorEvent;)V
 
-    .line 422
     return-void
 .end method

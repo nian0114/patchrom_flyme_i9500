@@ -23,7 +23,6 @@
     .locals 0
 
     .prologue
-    .line 628
     iput-object p1, p0, Lcom/android/server/epm/overlay/ThemeManagerService$TrialInstallObserver;->this$0:Lcom/android/server/epm/overlay/ThemeManagerService;
 
     invoke-direct {p0}, Landroid/content/pm/IPackageInstallObserver$Stub;-><init>()V
@@ -37,7 +36,6 @@
     .param p2, "x1"    # Lcom/android/server/epm/overlay/ThemeManagerService$1;
 
     .prologue
-    .line 628
     invoke-direct {p0, p1}, Lcom/android/server/epm/overlay/ThemeManagerService$TrialInstallObserver;-><init>(Lcom/android/server/epm/overlay/ThemeManagerService;)V
 
     return-void
@@ -51,10 +49,8 @@
     .param p2, "returnCode"    # I
 
     .prologue
-    .line 631
     if-eqz p1, :cond_0
 
-    .line 632
     iget-object v0, p0, Lcom/android/server/epm/overlay/ThemeManagerService$TrialInstallObserver;->this$0:Lcom/android/server/epm/overlay/ThemeManagerService;
 
     const/4 v1, 0x1
@@ -62,7 +58,6 @@
     # invokes: Lcom/android/server/epm/overlay/ThemeManagerService;->onMasterInstalled(Ljava/lang/String;Z)V
     invoke-static {v0, p1, v1}, Lcom/android/server/epm/overlay/ThemeManagerService;->access$800(Lcom/android/server/epm/overlay/ThemeManagerService;Ljava/lang/String;Z)V
 
-    .line 634
     :cond_0
     return-void
 .end method

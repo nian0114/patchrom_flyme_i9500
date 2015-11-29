@@ -26,7 +26,6 @@
     .locals 0
 
     .prologue
-    .line 5446
     iput-object p1, p0, Lcom/android/server/power/PowerManagerService$UserActivityTimeoutTask;->this$0:Lcom/android/server/power/PowerManagerService;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -40,7 +39,6 @@
     .param p2, "x1"    # Lcom/android/server/power/PowerManagerService$1;
 
     .prologue
-    .line 5446
     invoke-direct {p0, p1}, Lcom/android/server/power/PowerManagerService$UserActivityTimeoutTask;-><init>(Lcom/android/server/power/PowerManagerService;)V
 
     return-void
@@ -52,7 +50,6 @@
     .locals 3
 
     .prologue
-    .line 5451
     iget-object v0, p0, Lcom/android/server/power/PowerManagerService$UserActivityTimeoutTask;->this$0:Lcom/android/server/power/PowerManagerService;
 
     # getter for: Lcom/android/server/power/PowerManagerService;->mContext:Landroid/content/Context;
@@ -68,7 +65,6 @@
 
     if-eqz v0, :cond_0
 
-    .line 5452
     iget-object v0, p0, Lcom/android/server/power/PowerManagerService$UserActivityTimeoutTask;->this$0:Lcom/android/server/power/PowerManagerService;
 
     # getter for: Lcom/android/server/power/PowerManagerService;->mContext:Landroid/content/Context;
@@ -87,7 +83,6 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/content/Context;->sendBroadcastAsUser(Landroid/content/Intent;Landroid/os/UserHandle;)V
 
-    .line 5453
     iget-object v0, p0, Lcom/android/server/power/PowerManagerService$UserActivityTimeoutTask;->this$0:Lcom/android/server/power/PowerManagerService;
 
     const/4 v1, 0x1
@@ -95,7 +90,6 @@
     # setter for: Lcom/android/server/power/PowerManagerService;->mNoUserActivitySent:Z
     invoke-static {v0, v1}, Lcom/android/server/power/PowerManagerService;->access$9502(Lcom/android/server/power/PowerManagerService;Z)Z
 
-    .line 5457
     :cond_0
     return-void
 .end method

@@ -23,7 +23,6 @@
     .locals 0
 
     .prologue
-    .line 371
     iput-object p1, p0, Lcom/android/internal/policy/impl/sec/SamsungPhoneWindowManager$3;->this$0:Lcom/android/internal/policy/impl/sec/SamsungPhoneWindowManager;
 
     invoke-direct {p0}, Landroid/content/BroadcastReceiver;-><init>()V
@@ -39,12 +38,10 @@
     .param p2, "intent"    # Landroid/content/Intent;
 
     .prologue
-    .line 373
     invoke-virtual {p2}, Landroid/content/Intent;->getAction()Ljava/lang/String;
 
     move-result-object v0
 
-    .line 374
     .local v0, "action":Ljava/lang/String;
     const-string v1, "android.intent.action.PACKAGE_CHANGED"
 
@@ -54,7 +51,6 @@
 
     if-eqz v1, :cond_0
 
-    .line 375
     iget-object v1, p0, Lcom/android/internal/policy/impl/sec/SamsungPhoneWindowManager$3;->this$0:Lcom/android/internal/policy/impl/sec/SamsungPhoneWindowManager;
 
     iget-object v2, p0, Lcom/android/internal/policy/impl/sec/SamsungPhoneWindowManager$3;->this$0:Lcom/android/internal/policy/impl/sec/SamsungPhoneWindowManager;
@@ -69,7 +65,6 @@
 
     iput-boolean v2, v1, Lcom/android/internal/policy/impl/sec/SamsungPhoneWindowManager;->mAvailableVoiceCommand:Z
 
-    .line 377
     :cond_0
     return-void
 .end method

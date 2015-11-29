@@ -28,7 +28,6 @@
     .locals 0
 
     .prologue
-    .line 127
     iput-object p1, p0, Lcom/android/server/media/projection/MediaProjectionManagerService$1;->this$0:Lcom/android/server/media/projection/MediaProjectionManagerService;
 
     iput-object p2, p0, Lcom/android/server/media/projection/MediaProjectionManagerService$1;->val$callback:Landroid/media/projection/IMediaProjectionWatcherCallback;
@@ -44,7 +43,6 @@
     .locals 3
 
     .prologue
-    .line 130
     iget-object v0, p0, Lcom/android/server/media/projection/MediaProjectionManagerService$1;->this$0:Lcom/android/server/media/projection/MediaProjectionManagerService;
 
     # getter for: Lcom/android/server/media/projection/MediaProjectionManagerService;->mLock:Ljava/lang/Object;
@@ -54,7 +52,6 @@
 
     monitor-enter v1
 
-    .line 131
     :try_start_0
     iget-object v0, p0, Lcom/android/server/media/projection/MediaProjectionManagerService$1;->this$0:Lcom/android/server/media/projection/MediaProjectionManagerService;
 
@@ -63,13 +60,10 @@
     # invokes: Lcom/android/server/media/projection/MediaProjectionManagerService;->removeCallback(Landroid/media/projection/IMediaProjectionWatcherCallback;)V
     invoke-static {v0, v2}, Lcom/android/server/media/projection/MediaProjectionManagerService;->access$300(Lcom/android/server/media/projection/MediaProjectionManagerService;Landroid/media/projection/IMediaProjectionWatcherCallback;)V
 
-    .line 132
     monitor-exit v1
 
-    .line 133
     return-void
 
-    .line 132
     :catchall_0
     move-exception v0
 

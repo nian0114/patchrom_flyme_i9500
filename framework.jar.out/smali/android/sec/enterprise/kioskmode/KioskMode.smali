@@ -18,17 +18,14 @@
     .locals 1
 
     .prologue
-    .line 55
     const-string v0, "com.sec.android.app.controlpanel"
 
     sput-object v0, Landroid/sec/enterprise/kioskmode/KioskMode;->CONTROL_PANEL_PKGNAME:Ljava/lang/String;
 
-    .line 58
     const-string v0, "com.sec.android.app.taskmanager"
 
     sput-object v0, Landroid/sec/enterprise/kioskmode/KioskMode;->TASK_MANAGER_PKGNAME:Ljava/lang/String;
 
-    .line 61
     const-string v0, "com.sec.minimode.taskcloser"
 
     sput-object v0, Landroid/sec/enterprise/kioskmode/KioskMode;->MINI_TASK_MANAGER_PKGNAME:Ljava/lang/String;
@@ -40,7 +37,6 @@
     .locals 0
 
     .prologue
-    .line 50
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -54,17 +50,14 @@
     .param p2, "showMsg"    # Z
 
     .prologue
-    .line 112
     :try_start_0
     invoke-static {}, Landroid/sec/enterprise/EnterpriseDeviceManager$EDMProxyServiceHelper;->getService()Landroid/sec/enterprise/IEDMProxy;
 
     move-result-object v1
 
-    .line 113
     .local v1, "lService":Landroid/sec/enterprise/IEDMProxy;
     if-eqz v1, :cond_0
 
-    .line 114
     invoke-static {}, Landroid/sec/enterprise/EnterpriseDeviceManager$EDMProxyServiceHelper;->getService()Landroid/sec/enterprise/IEDMProxy;
 
     move-result-object v2
@@ -75,16 +68,13 @@
 
     move-result v2
 
-    .line 119
     .end local v1    # "lService":Landroid/sec/enterprise/IEDMProxy;
     :goto_0
     return v2
 
-    .line 116
     :catch_0
     move-exception v0
 
-    .line 117
     .local v0, "e":Ljava/lang/Exception;
     const-string v2, "KioskMode"
 
@@ -92,7 +82,6 @@
 
     invoke-static {v2, v3}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 119
     .end local v0    # "e":Ljava/lang/Exception;
     :cond_0
     const/4 v2, 0x1
@@ -105,17 +94,14 @@
     .param p1, "showMsg"    # Z
 
     .prologue
-    .line 70
     :try_start_0
     invoke-static {}, Landroid/sec/enterprise/EnterpriseDeviceManager$EDMProxyServiceHelper;->getService()Landroid/sec/enterprise/IEDMProxy;
 
     move-result-object v1
 
-    .line 71
     .local v1, "lService":Landroid/sec/enterprise/IEDMProxy;
     if-eqz v1, :cond_0
 
-    .line 72
     invoke-static {}, Landroid/sec/enterprise/EnterpriseDeviceManager$EDMProxyServiceHelper;->getService()Landroid/sec/enterprise/IEDMProxy;
 
     move-result-object v2
@@ -126,16 +112,13 @@
 
     move-result v2
 
-    .line 77
     .end local v1    # "lService":Landroid/sec/enterprise/IEDMProxy;
     :goto_0
     return v2
 
-    .line 74
     :catch_0
     move-exception v0
 
-    .line 75
     .local v0, "e":Ljava/lang/Exception;
     const-string v2, "KioskMode"
 
@@ -143,7 +126,6 @@
 
     invoke-static {v2, v3}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 77
     .end local v0    # "e":Ljava/lang/Exception;
     :cond_0
     const/4 v2, 0x1

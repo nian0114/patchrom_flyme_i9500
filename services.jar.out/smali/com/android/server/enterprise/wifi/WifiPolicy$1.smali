@@ -23,7 +23,6 @@
     .locals 0
 
     .prologue
-    .line 210
     iput-object p1, p0, Lcom/android/server/enterprise/wifi/WifiPolicy$1;->this$0:Lcom/android/server/enterprise/wifi/WifiPolicy;
 
     invoke-direct {p0}, Landroid/content/pm/ISystemPersonaObserver$Stub;-><init>()V
@@ -42,7 +41,6 @@
 
     const/4 v8, 0x1
 
-    .line 228
     const-string v5, "WifiPolicyService"
 
     new-instance v6, Ljava/lang/StringBuilder;
@@ -65,28 +63,23 @@
 
     invoke-static {v5, v6}, Lcom/android/server/enterprise/log/Log;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 229
     invoke-static {}, Landroid/os/Binder;->getCallingUid()I
 
     move-result v0
 
-    .line 230
     .local v0, "callingUid":I
     new-instance v3, Landroid/app/enterprise/ContextInfo;
 
     invoke-direct {v3, v0}, Landroid/app/enterprise/ContextInfo;-><init>(I)V
 
-    .line 231
     .local v3, "ctxInfo":Landroid/app/enterprise/ContextInfo;
     invoke-static {}, Lcom/sec/enterprise/knox/EnterpriseKnoxManager;->getInstance()Lcom/sec/enterprise/knox/EnterpriseKnoxManager;
 
     move-result-object v4
 
-    .line 232
     .local v4, "ekm":Lcom/sec/enterprise/knox/EnterpriseKnoxManager;
     if-eqz p1, :cond_3
 
-    .line 233
     iget-object v5, p0, Lcom/android/server/enterprise/wifi/WifiPolicy$1;->this$0:Lcom/android/server/enterprise/wifi/WifiPolicy;
 
     iget-object v5, v5, Lcom/android/server/enterprise/wifi/WifiPolicy;->mContext:Landroid/content/Context;
@@ -95,30 +88,24 @@
 
     move-result-object v2
 
-    .line 234
     .local v2, "containerMgr":Lcom/sec/enterprise/knox/container/KnoxContainerManager;
     const/4 v1, 0x0
 
-    .line 235
     .local v1, "ccp":Lcom/sec/enterprise/knox/container/ContainerConfigurationPolicy;
     if-eqz v2, :cond_0
 
-    .line 236
     invoke-virtual {v2}, Lcom/sec/enterprise/knox/container/KnoxContainerManager;->getContainerConfigurationPolicy()Lcom/sec/enterprise/knox/container/ContainerConfigurationPolicy;
 
     move-result-object v1
 
-    .line 239
     :cond_0
     const/16 v5, 0x64
 
     if-lt p1, v5, :cond_2
 
-    .line 240
     # setter for: Lcom/android/server/enterprise/wifi/WifiPolicy;->isKnoxMode:Z
     invoke-static {v8}, Lcom/android/server/enterprise/wifi/WifiPolicy;->access$002(Z)Z
 
-    .line 245
     :goto_0
     if-eqz v1, :cond_1
 
@@ -128,19 +115,16 @@
 
     if-nez v5, :cond_1
 
-    .line 246
     iget-object v5, p0, Lcom/android/server/enterprise/wifi/WifiPolicy$1;->this$0:Lcom/android/server/enterprise/wifi/WifiPolicy;
 
     invoke-virtual {v5, v3, v8}, Lcom/android/server/enterprise/wifi/WifiPolicy;->activateWifiSsidRestriction(Landroid/app/enterprise/ContextInfo;Z)Z
 
-    .line 254
     .end local v1    # "ccp":Lcom/sec/enterprise/knox/container/ContainerConfigurationPolicy;
     .end local v2    # "containerMgr":Lcom/sec/enterprise/knox/container/KnoxContainerManager;
     :cond_1
     :goto_1
     return-void
 
-    .line 242
     .restart local v1    # "ccp":Lcom/sec/enterprise/knox/container/ContainerConfigurationPolicy;
     .restart local v2    # "containerMgr":Lcom/sec/enterprise/knox/container/KnoxContainerManager;
     :cond_2
@@ -149,7 +133,6 @@
 
     goto :goto_0
 
-    .line 249
     .end local v1    # "ccp":Lcom/sec/enterprise/knox/container/ContainerConfigurationPolicy;
     .end local v2    # "containerMgr":Lcom/sec/enterprise/knox/container/KnoxContainerManager;
     :cond_3
@@ -160,11 +143,9 @@
 
     if-ne v5, v8, :cond_1
 
-    .line 250
     # setter for: Lcom/android/server/enterprise/wifi/WifiPolicy;->isKnoxMode:Z
     invoke-static {v9}, Lcom/android/server/enterprise/wifi/WifiPolicy;->access$002(Z)Z
 
-    .line 251
     iget-object v5, p0, Lcom/android/server/enterprise/wifi/WifiPolicy$1;->this$0:Lcom/android/server/enterprise/wifi/WifiPolicy;
 
     invoke-virtual {v5, v3, v8}, Lcom/android/server/enterprise/wifi/WifiPolicy;->activateWifiSsidRestriction(Landroid/app/enterprise/ContextInfo;Z)Z
@@ -177,14 +158,13 @@
     .param p1, "personaId"    # I
 
     .prologue
-    .line 213
     const-string v0, "WifiPolicyService"
 
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v2, "onPersonaActive called for  "
+    const-string v2, "onPersonaActive called for  "
 
     invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -200,7 +180,6 @@
 
     invoke-static {v0, v1}, Lcom/android/server/enterprise/log/Log;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 214
     return-void
 .end method
 
@@ -209,14 +188,13 @@
     .param p1, "personaId"    # I
 
     .prologue
-    .line 218
     const-string v0, "WifiPolicyService"
 
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v2, "onRemovePersona called for  "
+    const-string v2, "onRemovePersona called for  "
 
     invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -232,7 +210,6 @@
 
     invoke-static {v0, v1}, Lcom/android/server/enterprise/log/Log;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 219
     return-void
 .end method
 
@@ -241,14 +218,13 @@
     .param p1, "personaId"    # I
 
     .prologue
-    .line 223
     const-string v0, "WifiPolicyService"
 
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v2, "onResetPersona called for  "
+    const-string v2, "onResetPersona called for  "
 
     invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -264,7 +240,6 @@
 
     invoke-static {v0, v1}, Lcom/android/server/enterprise/log/Log;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 224
     return-void
 .end method
 
@@ -275,14 +250,13 @@
     .param p3, "newState"    # Landroid/content/pm/PersonaState;
 
     .prologue
-    .line 258
     const-string v0, "WifiPolicyService"
 
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v2, "onStateChange called for  "
+    const-string v2, "onStateChange called for  "
 
     invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -298,6 +272,5 @@
 
     invoke-static {v0, v1}, Lcom/android/server/enterprise/log/Log;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 259
     return-void
 .end method

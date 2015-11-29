@@ -26,7 +26,6 @@
     .locals 0
 
     .prologue
-    .line 3756
     iput-object p1, p0, Lcom/android/server/MountService$8;->val$m:Ljava/util/Map;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -44,14 +43,12 @@
     .prologue
     const/4 v2, 0x0
 
-    .line 3758
     iget-object v3, p0, Lcom/android/server/MountService$8;->val$m:Ljava/util/Map;
 
     invoke-interface {v3, p1}, Ljava/util/Map;->get(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object v0
 
-    .line 3759
     .local v0, "v1":Ljava/lang/Object;
     iget-object v3, p0, Lcom/android/server/MountService$8;->val$m:Ljava/util/Map;
 
@@ -59,33 +56,27 @@
 
     move-result-object v1
 
-    .line 3760
     .local v1, "v2":Ljava/lang/Object;
     if-nez v0, :cond_2
 
-    .line 3761
     if-nez v1, :cond_1
 
-    .line 3767
     .end local v1    # "v2":Ljava/lang/Object;
     :cond_0
     :goto_0
     return v2
 
-    .line 3761
     .restart local v1    # "v2":Ljava/lang/Object;
     :cond_1
     const/4 v2, 0x1
 
     goto :goto_0
 
-    .line 3763
     :cond_2
     instance-of v3, v1, Ljava/lang/Comparable;
 
     if-eqz v3, :cond_0
 
-    .line 3764
     check-cast v1, Ljava/lang/Comparable;
 
     .end local v1    # "v2":Ljava/lang/Object;

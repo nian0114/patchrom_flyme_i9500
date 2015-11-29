@@ -30,7 +30,6 @@
     .locals 0
 
     .prologue
-    .line 1197
     iput-object p1, p0, Lcom/android/server/clipboardex/ClipboardExService$4;->this$0:Lcom/android/server/clipboardex/ClipboardExService;
 
     iput-object p2, p0, Lcom/android/server/clipboardex/ClipboardExService$4;->val$data:Landroid/sec/clipboard/data/ClipboardData;
@@ -48,10 +47,8 @@
     .locals 3
 
     .prologue
-    .line 1200
     monitor-enter p0
 
-    .line 1201
     :try_start_0
     sget-boolean v0, Landroid/sec/clipboard/data/ClipboardDefine;->DEBUG:Z
 
@@ -63,7 +60,6 @@
 
     invoke-static {v0, v1}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1202
     :cond_0
     sget-boolean v0, Landroid/sec/clipboard/data/ClipboardDefine;->DEBUG:Z
 
@@ -75,21 +71,17 @@
 
     invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1205
     :cond_1
     iget-object v0, p0, Lcom/android/server/clipboardex/ClipboardExService$4;->val$data:Landroid/sec/clipboard/data/ClipboardData;
 
     if-nez v0, :cond_3
 
-    .line 1210
     :cond_2
     :goto_0
     monitor-exit p0
 
-    .line 1211
     return-void
 
-    .line 1207
     :cond_3
     iget-object v0, p0, Lcom/android/server/clipboardex/ClipboardExService$4;->this$0:Lcom/android/server/clipboardex/ClipboardExService;
 
@@ -106,7 +98,6 @@
 
     goto :goto_0
 
-    .line 1210
     :catchall_0
     move-exception v0
 

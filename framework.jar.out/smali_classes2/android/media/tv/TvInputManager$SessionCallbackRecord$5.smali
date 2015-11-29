@@ -30,7 +30,6 @@
     .locals 0
 
     .prologue
-    .line 373
     iput-object p1, p0, Landroid/media/tv/TvInputManager$SessionCallbackRecord$5;->this$0:Landroid/media/tv/TvInputManager$SessionCallbackRecord;
 
     iput p2, p0, Landroid/media/tv/TvInputManager$SessionCallbackRecord$5;->val$type:I
@@ -48,12 +47,10 @@
     .locals 4
 
     .prologue
-    .line 376
     iget v0, p0, Landroid/media/tv/TvInputManager$SessionCallbackRecord$5;->val$type:I
 
     if-nez v0, :cond_1
 
-    .line 377
     iget-object v0, p0, Landroid/media/tv/TvInputManager$SessionCallbackRecord$5;->this$0:Landroid/media/tv/TvInputManager$SessionCallbackRecord;
 
     # getter for: Landroid/media/tv/TvInputManager$SessionCallbackRecord;->mSession:Landroid/media/tv/TvInputManager$Session;
@@ -66,7 +63,6 @@
     # setter for: Landroid/media/tv/TvInputManager$Session;->mSelectedAudioTrackId:Ljava/lang/String;
     invoke-static {v0, v1}, Landroid/media/tv/TvInputManager$Session;->access$502(Landroid/media/tv/TvInputManager$Session;Ljava/lang/String;)Ljava/lang/String;
 
-    .line 386
     :goto_0
     iget-object v0, p0, Landroid/media/tv/TvInputManager$SessionCallbackRecord$5;->this$0:Landroid/media/tv/TvInputManager$SessionCallbackRecord;
 
@@ -88,11 +84,9 @@
 
     invoke-virtual {v0, v1, v2, v3}, Landroid/media/tv/TvInputManager$SessionCallback;->onTrackSelected(Landroid/media/tv/TvInputManager$Session;ILjava/lang/String;)V
 
-    .line 387
     :cond_0
     return-void
 
-    .line 378
     :cond_1
     iget v0, p0, Landroid/media/tv/TvInputManager$SessionCallbackRecord$5;->val$type:I
 
@@ -100,7 +94,6 @@
 
     if-ne v0, v1, :cond_2
 
-    .line 379
     iget-object v0, p0, Landroid/media/tv/TvInputManager$SessionCallbackRecord$5;->this$0:Landroid/media/tv/TvInputManager$SessionCallbackRecord;
 
     # getter for: Landroid/media/tv/TvInputManager$SessionCallbackRecord;->mSession:Landroid/media/tv/TvInputManager$Session;
@@ -115,7 +108,6 @@
 
     goto :goto_0
 
-    .line 380
     :cond_2
     iget v0, p0, Landroid/media/tv/TvInputManager$SessionCallbackRecord$5;->val$type:I
 
@@ -123,7 +115,6 @@
 
     if-ne v0, v1, :cond_0
 
-    .line 381
     iget-object v0, p0, Landroid/media/tv/TvInputManager$SessionCallbackRecord$5;->this$0:Landroid/media/tv/TvInputManager$SessionCallbackRecord;
 
     # getter for: Landroid/media/tv/TvInputManager$SessionCallbackRecord;->mSession:Landroid/media/tv/TvInputManager$Session;

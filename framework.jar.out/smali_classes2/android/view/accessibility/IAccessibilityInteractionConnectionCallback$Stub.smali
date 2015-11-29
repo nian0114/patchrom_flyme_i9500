@@ -40,15 +40,12 @@
     .locals 1
 
     .prologue
-    .line 20
     invoke-direct {p0}, Landroid/os/Binder;-><init>()V
 
-    .line 21
     const-string v0, "android.view.accessibility.IAccessibilityInteractionConnectionCallback"
 
     invoke-virtual {p0, p0, v0}, Landroid/view/accessibility/IAccessibilityInteractionConnectionCallback$Stub;->attachInterface(Landroid/os/IInterface;Ljava/lang/String;)V
 
-    .line 22
     return-void
 .end method
 
@@ -57,17 +54,13 @@
     .param p0, "obj"    # Landroid/os/IBinder;
 
     .prologue
-    .line 29
     if-nez p0, :cond_0
 
-    .line 30
     const/4 v0, 0x0
 
-    .line 36
     :goto_0
     return-object v0
 
-    .line 32
     :cond_0
     const-string v1, "android.view.accessibility.IAccessibilityInteractionConnectionCallback"
 
@@ -75,7 +68,6 @@
 
     move-result-object v0
 
-    .line 33
     .local v0, "iin":Landroid/os/IInterface;
     if-eqz v0, :cond_1
 
@@ -83,12 +75,10 @@
 
     if-eqz v1, :cond_1
 
-    .line 34
     check-cast v0, Landroid/view/accessibility/IAccessibilityInteractionConnectionCallback;
 
     goto :goto_0
 
-    .line 36
     :cond_1
     new-instance v0, Landroid/view/accessibility/IAccessibilityInteractionConnectionCallback$Stub$Proxy;
 
@@ -104,7 +94,6 @@
     .locals 0
 
     .prologue
-    .line 40
     return-object p0
 .end method
 
@@ -123,10 +112,8 @@
     .prologue
     const/4 v3, 0x1
 
-    .line 44
     sparse-switch p1, :sswitch_data_0
 
-    .line 102
     invoke-super {p0, p1, p2, p3, p4}, Landroid/os/Binder;->onTransact(ILandroid/os/Parcel;Landroid/os/Parcel;I)Z
 
     move-result v3
@@ -134,7 +121,6 @@
     :goto_0
     return v3
 
-    .line 48
     :sswitch_0
     const-string v4, "android.view.accessibility.IAccessibilityInteractionConnectionCallback"
 
@@ -142,20 +128,17 @@
 
     goto :goto_0
 
-    .line 53
     :sswitch_1
     const-string v4, "android.view.accessibility.IAccessibilityInteractionConnectionCallback"
 
     invoke-virtual {p2, v4}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
 
-    .line 55
     invoke-virtual {p2}, Landroid/os/Parcel;->readInt()I
 
     move-result v4
 
     if-eqz v4, :cond_0
 
-    .line 56
     sget-object v4, Landroid/view/accessibility/AccessibilityNodeInfo;->CREATOR:Landroid/os/Parcelable$Creator;
 
     invoke-interface {v4, p2}, Landroid/os/Parcelable$Creator;->createFromParcel(Landroid/os/Parcel;)Ljava/lang/Object;
@@ -164,20 +147,17 @@
 
     check-cast v0, Landroid/view/accessibility/AccessibilityNodeInfo;
 
-    .line 62
     .local v0, "_arg0":Landroid/view/accessibility/AccessibilityNodeInfo;
     :goto_1
     invoke-virtual {p2}, Landroid/os/Parcel;->readInt()I
 
     move-result v2
 
-    .line 63
     .local v2, "_arg1":I
     invoke-virtual {p0, v0, v2}, Landroid/view/accessibility/IAccessibilityInteractionConnectionCallback$Stub;->setFindAccessibilityNodeInfoResult(Landroid/view/accessibility/AccessibilityNodeInfo;I)V
 
     goto :goto_0
 
-    .line 59
     .end local v0    # "_arg0":Landroid/view/accessibility/AccessibilityNodeInfo;
     .end local v2    # "_arg1":I
     :cond_0
@@ -186,33 +166,28 @@
     .restart local v0    # "_arg0":Landroid/view/accessibility/AccessibilityNodeInfo;
     goto :goto_1
 
-    .line 68
     .end local v0    # "_arg0":Landroid/view/accessibility/AccessibilityNodeInfo;
     :sswitch_2
     const-string v4, "android.view.accessibility.IAccessibilityInteractionConnectionCallback"
 
     invoke-virtual {p2, v4}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
 
-    .line 70
     sget-object v4, Landroid/view/accessibility/AccessibilityNodeInfo;->CREATOR:Landroid/os/Parcelable$Creator;
 
     invoke-virtual {p2, v4}, Landroid/os/Parcel;->createTypedArrayList(Landroid/os/Parcelable$Creator;)Ljava/util/ArrayList;
 
     move-result-object v1
 
-    .line 72
     .local v1, "_arg0":Ljava/util/List;, "Ljava/util/List<Landroid/view/accessibility/AccessibilityNodeInfo;>;"
     invoke-virtual {p2}, Landroid/os/Parcel;->readInt()I
 
     move-result v2
 
-    .line 73
     .restart local v2    # "_arg1":I
     invoke-virtual {p0, v1, v2}, Landroid/view/accessibility/IAccessibilityInteractionConnectionCallback$Stub;->setFindAccessibilityNodeInfosResult(Ljava/util/List;I)V
 
     goto :goto_0
 
-    .line 78
     .end local v1    # "_arg0":Ljava/util/List;, "Ljava/util/List<Landroid/view/accessibility/AccessibilityNodeInfo;>;"
     .end local v2    # "_arg1":I
     :sswitch_3
@@ -220,7 +195,6 @@
 
     invoke-virtual {p2, v4}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
 
-    .line 80
     invoke-virtual {p2}, Landroid/os/Parcel;->readInt()I
 
     move-result v4
@@ -229,20 +203,17 @@
 
     move v0, v3
 
-    .line 82
     .local v0, "_arg0":Z
     :goto_2
     invoke-virtual {p2}, Landroid/os/Parcel;->readInt()I
 
     move-result v2
 
-    .line 83
     .restart local v2    # "_arg1":I
     invoke-virtual {p0, v0, v2}, Landroid/view/accessibility/IAccessibilityInteractionConnectionCallback$Stub;->setPerformAccessibilityActionResult(ZI)V
 
     goto :goto_0
 
-    .line 80
     .end local v0    # "_arg0":Z
     .end local v2    # "_arg1":I
     :cond_1
@@ -250,20 +221,17 @@
 
     goto :goto_2
 
-    .line 88
     :sswitch_4
     const-string v4, "android.view.accessibility.IAccessibilityInteractionConnectionCallback"
 
     invoke-virtual {p2, v4}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
 
-    .line 90
     invoke-virtual {p2}, Landroid/os/Parcel;->readInt()I
 
     move-result v4
 
     if-eqz v4, :cond_2
 
-    .line 91
     sget-object v4, Landroid/graphics/Point;->CREATOR:Landroid/os/Parcelable$Creator;
 
     invoke-interface {v4, p2}, Landroid/os/Parcelable$Creator;->createFromParcel(Landroid/os/Parcel;)Ljava/lang/Object;
@@ -272,20 +240,17 @@
 
     check-cast v0, Landroid/graphics/Point;
 
-    .line 97
     .local v0, "_arg0":Landroid/graphics/Point;
     :goto_3
     invoke-virtual {p2}, Landroid/os/Parcel;->readInt()I
 
     move-result v2
 
-    .line 98
     .restart local v2    # "_arg1":I
     invoke-virtual {p0, v0, v2}, Landroid/view/accessibility/IAccessibilityInteractionConnectionCallback$Stub;->setComputeClickPointInScreenActionResult(Landroid/graphics/Point;I)V
 
     goto :goto_0
 
-    .line 94
     .end local v0    # "_arg0":Landroid/graphics/Point;
     .end local v2    # "_arg1":I
     :cond_2
@@ -294,7 +259,6 @@
     .restart local v0    # "_arg0":Landroid/graphics/Point;
     goto :goto_3
 
-    .line 44
     :sswitch_data_0
     .sparse-switch
         0x1 -> :sswitch_1

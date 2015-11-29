@@ -42,7 +42,6 @@
     .locals 1
 
     .prologue
-    .line 117
     const/4 v0, 0x0
 
     sput-object v0, Lcom/android/server/enterprise/remotecontrol/RemoteInjectionService;->mSelf:Lcom/android/server/enterprise/remotecontrol/RemoteInjectionService;
@@ -59,26 +58,20 @@
 
     const/4 v3, 0x2
 
-    .line 119
     invoke-direct {p0}, Landroid/app/enterprise/remotecontrol/IRemoteInjection$Stub;-><init>()V
 
-    .line 108
     iput-object v2, p0, Lcom/android/server/enterprise/remotecontrol/RemoteInjectionService;->mEDM:Landroid/app/enterprise/EnterpriseDeviceManager;
 
-    .line 109
     iput-object v2, p0, Lcom/android/server/enterprise/remotecontrol/RemoteInjectionService;->mEdmStorageProvider:Lcom/android/server/enterprise/storage/EdmStorageProvider;
 
-    .line 115
     new-instance v2, Landroid/util/SparseArray;
 
     invoke-direct {v2}, Landroid/util/SparseArray;-><init>()V
 
     iput-object v2, p0, Lcom/android/server/enterprise/remotecontrol/RemoteInjectionService;->mRemoteControlDisabled:Landroid/util/SparseArray;
 
-    .line 120
     iput-object p1, p0, Lcom/android/server/enterprise/remotecontrol/RemoteInjectionService;->mContext:Landroid/content/Context;
 
-    .line 121
     invoke-direct {p0}, Lcom/android/server/enterprise/remotecontrol/RemoteInjectionService;->getWindowManager()Landroid/view/WindowManager;
 
     move-result-object v2
@@ -87,13 +80,11 @@
 
     move-result-object v0
 
-    .line 122
     .local v0, "display":Landroid/view/Display;
     invoke-virtual {v0}, Landroid/view/Display;->getRotation()I
 
     move-result v1
 
-    .line 123
     .local v1, "orientation":I
     if-eqz v1, :cond_0
 
@@ -107,7 +98,6 @@
     :goto_0
     iput v2, p0, Lcom/android/server/enterprise/remotecontrol/RemoteInjectionService;->mRemoteScreenWidth:I
 
-    .line 125
     if-eqz v1, :cond_1
 
     if-ne v1, v3, :cond_3
@@ -120,25 +110,20 @@
     :goto_1
     iput v2, p0, Lcom/android/server/enterprise/remotecontrol/RemoteInjectionService;->mRemoteScreenHeight:I
 
-    .line 127
     new-instance v2, Lcom/android/server/enterprise/storage/EdmStorageProvider;
 
     invoke-direct {v2, p1}, Lcom/android/server/enterprise/storage/EdmStorageProvider;-><init>(Landroid/content/Context;)V
 
     iput-object v2, p0, Lcom/android/server/enterprise/remotecontrol/RemoteInjectionService;->mEdmStorageProvider:Lcom/android/server/enterprise/storage/EdmStorageProvider;
 
-    .line 128
     const/4 v2, -0x1
 
     iput v2, p0, Lcom/android/server/enterprise/remotecontrol/RemoteInjectionService;->mSessionOwnerUid:I
 
-    .line 129
     sput-object p0, Lcom/android/server/enterprise/remotecontrol/RemoteInjectionService;->mSelf:Lcom/android/server/enterprise/remotecontrol/RemoteInjectionService;
 
-    .line 130
     return-void
 
-    .line 123
     :cond_2
     invoke-virtual {v0}, Landroid/view/Display;->getHeight()I
 
@@ -146,7 +131,6 @@
 
     goto :goto_0
 
-    .line 125
     :cond_3
     invoke-virtual {v0}, Landroid/view/Display;->getWidth()I
 
@@ -160,7 +144,6 @@
     .param p1, "cxtInfo"    # Landroid/app/enterprise/ContextInfo;
 
     .prologue
-    .line 145
     invoke-direct {p0}, Lcom/android/server/enterprise/remotecontrol/RemoteInjectionService;->getEDM()Landroid/app/enterprise/EnterpriseDeviceManager;
 
     move-result-object v0
@@ -178,12 +161,10 @@
     .locals 2
 
     .prologue
-    .line 137
     iget-object v0, p0, Lcom/android/server/enterprise/remotecontrol/RemoteInjectionService;->mEDM:Landroid/app/enterprise/EnterpriseDeviceManager;
 
     if-nez v0, :cond_0
 
-    .line 138
     iget-object v0, p0, Lcom/android/server/enterprise/remotecontrol/RemoteInjectionService;->mContext:Landroid/content/Context;
 
     const-string v1, "enterprise_policy"
@@ -196,7 +177,6 @@
 
     iput-object v0, p0, Lcom/android/server/enterprise/remotecontrol/RemoteInjectionService;->mEDM:Landroid/app/enterprise/EnterpriseDeviceManager;
 
-    .line 141
     :cond_0
     iget-object v0, p0, Lcom/android/server/enterprise/remotecontrol/RemoteInjectionService;->mEDM:Landroid/app/enterprise/EnterpriseDeviceManager;
 
@@ -207,7 +187,6 @@
     .locals 1
 
     .prologue
-    .line 133
     sget-object v0, Lcom/android/server/enterprise/remotecontrol/RemoteInjectionService;->mSelf:Lcom/android/server/enterprise/remotecontrol/RemoteInjectionService;
 
     return-object v0
@@ -217,10 +196,9 @@
     .locals 2
 
     .prologue
-    .line 429
     iget-object v0, p0, Lcom/android/server/enterprise/remotecontrol/RemoteInjectionService;->mContext:Landroid/content/Context;
 
-    const-string/jumbo v1, "window"
+    const-string v1, "window"
 
     invoke-virtual {v0, v1}, Landroid/content/Context;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
 
@@ -237,73 +215,60 @@
     .param p2, "sync"    # Z
 
     .prologue
-    .line 379
     invoke-virtual/range {p1 .. p1}, Landroid/view/KeyEvent;->getDownTime()J
 
     move-result-wide v2
 
-    .line 380
     .local v2, "downTime":J
     invoke-virtual/range {p1 .. p1}, Landroid/view/KeyEvent;->getEventTime()J
 
     move-result-wide v4
 
-    .line 382
     .local v4, "eventTime":J
     invoke-virtual/range {p1 .. p1}, Landroid/view/KeyEvent;->getAction()I
 
     move-result v6
 
-    .line 383
     .local v6, "action":I
     invoke-virtual/range {p1 .. p1}, Landroid/view/KeyEvent;->getKeyCode()I
 
     move-result v7
 
-    .line 384
     .local v7, "code":I
     invoke-virtual/range {p1 .. p1}, Landroid/view/KeyEvent;->getRepeatCount()I
 
     move-result v8
 
-    .line 385
     .local v8, "repeatCount":I
     invoke-virtual/range {p1 .. p1}, Landroid/view/KeyEvent;->getMetaState()I
 
     move-result v9
 
-    .line 386
     .local v9, "metaState":I
     invoke-virtual/range {p1 .. p1}, Landroid/view/KeyEvent;->getDeviceId()I
 
     move-result v10
 
-    .line 387
     .local v10, "deviceId":I
     invoke-virtual/range {p1 .. p1}, Landroid/view/KeyEvent;->getScanCode()I
 
     move-result v11
 
-    .line 388
     .local v11, "scancode":I
     invoke-virtual/range {p1 .. p1}, Landroid/view/KeyEvent;->getSource()I
 
     move-result v13
 
-    .line 389
     .local v13, "source":I
     invoke-virtual/range {p1 .. p1}, Landroid/view/KeyEvent;->getFlags()I
 
     move-result v0
 
-    .line 391
     .local v0, "flags":I
     if-nez v13, :cond_0
 
-    .line 392
     const/16 v13, 0x101
 
-    .line 395
     :cond_0
     const-wide/16 v14, 0x0
 
@@ -315,7 +280,6 @@
 
     move-result-wide v4
 
-    .line 396
     :cond_1
     const-wide/16 v14, 0x0
 
@@ -325,7 +289,6 @@
 
     move-wide v2, v4
 
-    .line 398
     :cond_2
     new-instance v1, Landroid/view/KeyEvent;
 
@@ -333,7 +296,6 @@
 
     invoke-direct/range {v1 .. v13}, Landroid/view/KeyEvent;-><init>(JJIIIIIIII)V
 
-    .line 401
     .local v1, "newEvent":Landroid/view/KeyEvent;
     invoke-static {}, Landroid/hardware/input/InputManager;->getInstance()Landroid/hardware/input/InputManager;
 
@@ -362,12 +324,10 @@
     .param p2, "sync"    # Z
 
     .prologue
-    .line 407
     invoke-static {p1}, Landroid/view/MotionEvent;->obtain(Landroid/view/MotionEvent;)Landroid/view/MotionEvent;
 
     move-result-object v0
 
-    .line 408
     .local v0, "newEvent":Landroid/view/MotionEvent;
     invoke-virtual {v0}, Landroid/view/MotionEvent;->getSource()I
 
@@ -377,12 +337,10 @@
 
     if-nez v1, :cond_0
 
-    .line 409
     const/16 v1, 0x1002
 
     invoke-virtual {v0, v1}, Landroid/view/MotionEvent;->setSource(I)V
 
-    .line 412
     :cond_0
     invoke-static {}, Landroid/hardware/input/InputManager;->getInstance()Landroid/hardware/input/InputManager;
 
@@ -411,12 +369,10 @@
     .param p2, "sync"    # Z
 
     .prologue
-    .line 418
     invoke-static {p1}, Landroid/view/MotionEvent;->obtain(Landroid/view/MotionEvent;)Landroid/view/MotionEvent;
 
     move-result-object v0
 
-    .line 419
     .local v0, "newEvent":Landroid/view/MotionEvent;
     invoke-virtual {v0}, Landroid/view/MotionEvent;->getSource()I
 
@@ -426,12 +382,10 @@
 
     if-nez v1, :cond_0
 
-    .line 420
     const v1, 0x10004
 
     invoke-virtual {v0, v1}, Landroid/view/MotionEvent;->setSource(I)V
 
-    .line 423
     :cond_0
     invoke-static {}, Landroid/hardware/input/InputManager;->getInstance()Landroid/hardware/input/InputManager;
 
@@ -460,18 +414,15 @@
     .param p2, "callerUid"    # I
 
     .prologue
-    .line 533
     invoke-static {p2}, Landroid/os/UserHandle;->getUserId(I)I
 
     move-result v0
 
-    .line 534
     .local v0, "callerUserId":I
     if-eqz v0, :cond_0
 
     if-ne p1, v0, :cond_2
 
-    .line 535
     :cond_0
     iget-object v2, p0, Lcom/android/server/enterprise/remotecontrol/RemoteInjectionService;->mRemoteControlDisabled:Landroid/util/SparseArray;
 
@@ -481,19 +432,15 @@
 
     check-cast v1, Ljava/lang/Boolean;
 
-    .line 536
     .local v1, "disabled":Ljava/lang/Boolean;
     if-nez v1, :cond_1
 
-    .line 537
     const/4 v2, 0x0
 
-    .line 542
     .end local v1    # "disabled":Ljava/lang/Boolean;
     :goto_0
     return v2
 
-    .line 539
     .restart local v1    # "disabled":Ljava/lang/Boolean;
     :cond_1
     invoke-virtual {v1}, Ljava/lang/Boolean;->booleanValue()Z
@@ -502,7 +449,6 @@
 
     goto :goto_0
 
-    .line 542
     .end local v1    # "disabled":Ljava/lang/Boolean;
     :cond_2
     const/4 v2, 0x1
@@ -517,12 +463,10 @@
     .prologue
     const/4 v4, 0x0
 
-    .line 518
     invoke-static {}, Landroid/os/Binder;->clearCallingIdentity()J
 
     move-result-wide v2
 
-    .line 521
     .local v2, "token":J
     :try_start_0
     invoke-static {}, Landroid/app/ActivityManagerNative;->getDefault()Landroid/app/IActivityManager;
@@ -554,18 +498,14 @@
 
     move-result v1
 
-    .line 526
     invoke-static {v2, v3}, Landroid/os/Binder;->restoreCallingIdentity(J)V
 
-    .line 529
     :goto_0
     return v1
 
-    .line 523
     :catch_0
     move-exception v0
 
-    .line 524
     .local v0, "e":Ljava/lang/Exception;
     :try_start_1
     const-string v1, "RemoteInjection"
@@ -576,15 +516,12 @@
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
-    .line 526
     invoke-static {v2, v3}, Landroid/os/Binder;->restoreCallingIdentity(J)V
 
     move v1, v4
 
-    .line 529
     goto :goto_0
 
-    .line 526
     .end local v0    # "e":Ljava/lang/Exception;
     :catchall_0
     move-exception v1
@@ -599,7 +536,6 @@
     .param p1, "event"    # Landroid/view/MotionEvent;
 
     .prologue
-    .line 433
     invoke-direct/range {p0 .. p0}, Lcom/android/server/enterprise/remotecontrol/RemoteInjectionService;->getWindowManager()Landroid/view/WindowManager;
 
     move-result-object v2
@@ -608,7 +544,6 @@
 
     move-result-object v16
 
-    .line 434
     .local v16, "display":Landroid/view/Display;
     invoke-virtual/range {v16 .. v16}, Landroid/view/Display;->getWidth()I
 
@@ -618,7 +553,6 @@
 
     move/from16 v18, v0
 
-    .line 435
     .local v18, "hwWidth":F
     invoke-virtual/range {v16 .. v16}, Landroid/view/Display;->getHeight()I
 
@@ -628,13 +562,11 @@
 
     move/from16 v17, v0
 
-    .line 436
     .local v17, "hwHeight":F
     invoke-virtual/range {v16 .. v16}, Landroid/view/Display;->getRotation()I
 
     move-result v19
 
-    .line 438
     .local v19, "orientation":I
     if-eqz v19, :cond_0
 
@@ -653,7 +585,6 @@
 
     move/from16 v21, v0
 
-    .line 439
     .local v21, "remoteWidth":F
     :goto_0
     if-eqz v19, :cond_1
@@ -673,7 +604,6 @@
 
     move/from16 v20, v0
 
-    .line 442
     .local v20, "remoteHeight":F
     :goto_1
     invoke-virtual/range {p1 .. p1}, Landroid/view/MotionEvent;->getX()F
@@ -684,7 +614,6 @@
 
     mul-float v7, v2, v3
 
-    .line 443
     .local v7, "x":F
     invoke-virtual/range {p1 .. p1}, Landroid/view/MotionEvent;->getY()F
 
@@ -694,7 +623,6 @@
 
     mul-float v8, v2, v3
 
-    .line 445
     .local v8, "y":F
     invoke-virtual/range {p1 .. p1}, Landroid/view/MotionEvent;->getDownTime()J
 
@@ -742,7 +670,6 @@
 
     return-object v2
 
-    .line 438
     .end local v7    # "x":F
     .end local v8    # "y":F
     .end local v20    # "remoteHeight":F
@@ -758,7 +685,6 @@
 
     goto :goto_0
 
-    .line 439
     .restart local v21    # "remoteWidth":F
     :cond_3
     move-object/from16 v0, p0
@@ -780,25 +706,20 @@
     .param p2, "allow"    # Z
 
     .prologue
-    .line 460
     const/4 v2, 0x0
 
-    .line 461
     .local v2, "retVal":Z
     invoke-direct {p0, p1}, Lcom/android/server/enterprise/remotecontrol/RemoteInjectionService;->enforceRemoteControlPermission(Landroid/app/enterprise/ContextInfo;)Landroid/app/enterprise/ContextInfo;
 
     move-result-object p1
 
-    .line 462
     iget v0, p1, Landroid/app/enterprise/ContextInfo;->mCallerUid:I
 
-    .line 466
     .local v0, "callerUid":I
     invoke-static {}, Landroid/os/Binder;->clearCallingIdentity()J
 
     move-result-wide v4
 
-    .line 469
     .local v4, "token":J
     :try_start_0
     iget-object v6, p0, Lcom/android/server/enterprise/remotecontrol/RemoteInjectionService;->mEdmStorageProvider:Lcom/android/server/enterprise/storage/EdmStorageProvider;
@@ -811,15 +732,12 @@
 
     move-result v2
 
-    .line 472
     if-eqz v2, :cond_0
 
-    .line 473
     invoke-static {v0}, Landroid/os/UserHandle;->getUserId(I)I
 
     move-result v3
 
-    .line 474
     .local v3, "userId":I
     iget-object v7, p0, Lcom/android/server/enterprise/remotecontrol/RemoteInjectionService;->mRemoteControlDisabled:Landroid/util/SparseArray;
 
@@ -841,28 +759,23 @@
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 480
     .end local v3    # "userId":I
     :cond_0
     invoke-static {v4, v5}, Landroid/os/Binder;->restoreCallingIdentity(J)V
 
-    .line 483
     :goto_1
     return v2
 
-    .line 474
     .restart local v3    # "userId":I
     :cond_1
     const/4 v6, 0x0
 
     goto :goto_0
 
-    .line 477
     .end local v3    # "userId":I
     :catch_0
     move-exception v1
 
-    .line 478
     .local v1, "e":Ljava/lang/Exception;
     :try_start_1
     const-string v6, "RemoteInjection"
@@ -873,7 +786,6 @@
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
-    .line 480
     invoke-static {v4, v5}, Landroid/os/Binder;->restoreCallingIdentity(J)V
 
     goto :goto_1
@@ -899,10 +811,8 @@
 
     const/4 v2, 0x0
 
-    .line 170
     if-nez p1, :cond_0
 
-    .line 172
     invoke-static {}, Landroid/os/Process;->myPid()I
 
     move-result v3
@@ -921,11 +831,9 @@
 
     move v8, v2
 
-    .line 212
     :goto_0
     return v8
 
-    .line 178
     :cond_0
     iget-object v3, p0, Lcom/android/server/enterprise/remotecontrol/RemoteInjectionService;->mContext:Landroid/content/Context;
 
@@ -935,22 +843,18 @@
 
     invoke-virtual {v3, v4, v5}, Landroid/content/Context;->enforceCallingOrSelfPermission(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 182
     invoke-static {}, Landroid/os/Binder;->getCallingUid()I
 
     move-result v6
 
-    .line 184
     .local v6, "callerUid":I
     invoke-static {}, Landroid/os/Binder;->clearCallingIdentity()J
 
     move-result-wide v10
 
-    .line 186
     .local v10, "token":J
     const/4 v8, 0x0
 
-    .line 188
     .local v8, "ret":Z
     invoke-direct {p0, v6}, Lcom/android/server/enterprise/remotecontrol/RemoteInjectionService;->isRemoteInjectionDisabled(I)Z
 
@@ -958,14 +862,12 @@
 
     if-eqz v3, :cond_1
 
-    .line 189
     const-string v3, "RemoteInjection"
 
     const-string v4, "Remote Control is disabled, couldnt inject key event"
 
     invoke-static {v3, v4}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 190
     invoke-static {}, Landroid/os/Process;->myPid()I
 
     move-result v3
@@ -984,7 +886,6 @@
 
     goto :goto_0
 
-    .line 197
     :cond_1
     :try_start_0
     invoke-direct {p0, p1, p2}, Lcom/android/server/enterprise/remotecontrol/RemoteInjectionService;->injectKeyEventInternal(Landroid/view/KeyEvent;Z)Z
@@ -993,14 +894,11 @@
 
     move-result v8
 
-    .line 202
     :goto_1
     invoke-static {v10, v11}, Landroid/os/Binder;->restoreCallingIdentity(J)V
 
-    .line 204
     if-eqz v8, :cond_2
 
-    .line 205
     const/4 v2, 0x1
 
     invoke-static {}, Landroid/os/Process;->myPid()I
@@ -1021,11 +919,9 @@
 
     goto :goto_0
 
-    .line 198
     :catch_0
     move-exception v7
 
-    .line 199
     .local v7, "e":Ljava/lang/Exception;
     const-string v3, "RemoteInjection"
 
@@ -1051,7 +947,6 @@
 
     goto :goto_1
 
-    .line 208
     .end local v7    # "e":Ljava/lang/Exception;
     :cond_2
     invoke-static {}, Landroid/os/Process;->myPid()I
@@ -1079,7 +974,6 @@
     .param p2, "sync"    # Z
 
     .prologue
-    .line 239
     move-object/from16 v0, p0
 
     iget-object v2, v0, Lcom/android/server/enterprise/remotecontrol/RemoteInjectionService;->mContext:Landroid/content/Context;
@@ -1090,22 +984,18 @@
 
     invoke-virtual {v2, v3, v4}, Landroid/content/Context;->enforceCallingOrSelfPermission(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 243
     invoke-static {}, Landroid/os/Binder;->getCallingUid()I
 
     move-result v8
 
-    .line 246
     .local v8, "callerUid":I
     invoke-static {}, Landroid/os/Binder;->clearCallingIdentity()J
 
     move-result-wide v14
 
-    .line 248
     .local v14, "token":J
     const/4 v10, 0x0
 
-    .line 250
     .local v10, "ret":Z
     move-object/from16 v0, p0
 
@@ -1115,14 +1005,12 @@
 
     if-eqz v2, :cond_0
 
-    .line 251
     const-string v2, "RemoteInjection"
 
     const-string v3, "Remote Control is disabled, couldnt inject pointer event"
 
     invoke-static {v2, v3}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 252
     const/4 v2, 0x5
 
     const/4 v3, 0x4
@@ -1147,13 +1035,11 @@
 
     move v11, v10
 
-    .line 275
     .end local v10    # "ret":Z
     .local v11, "ret":I
     :goto_0
     return v11
 
-    .line 259
     .end local v11    # "ret":I
     .restart local v10    # "ret":Z
     :cond_0
@@ -1162,7 +1048,6 @@
 
     move-result-object v12
 
-    .line 260
     .local v12, "tev":Landroid/view/MotionEvent;
     move-object/from16 v0, p0
 
@@ -1174,15 +1059,12 @@
 
     move-result v10
 
-    .line 265
     .end local v12    # "tev":Landroid/view/MotionEvent;
     :goto_1
     invoke-static {v14, v15}, Landroid/os/Binder;->restoreCallingIdentity(J)V
 
-    .line 267
     if-eqz v10, :cond_1
 
-    .line 268
     const/4 v2, 0x5
 
     const/4 v3, 0x4
@@ -1208,16 +1090,13 @@
     :goto_2
     move v11, v10
 
-    .line 275
     .restart local v11    # "ret":I
     goto :goto_0
 
-    .line 261
     .end local v11    # "ret":I
     :catch_0
     move-exception v9
 
-    .line 262
     .local v9, "e":Ljava/lang/Exception;
     const-string v2, "RemoteInjection"
 
@@ -1243,7 +1122,6 @@
 
     goto :goto_1
 
-    .line 271
     .end local v9    # "e":Ljava/lang/Exception;
     :cond_1
     const/4 v2, 0x5
@@ -1277,7 +1155,6 @@
     .param p2, "sync"    # Z
 
     .prologue
-    .line 302
     move-object/from16 v0, p0
 
     iget-object v2, v0, Lcom/android/server/enterprise/remotecontrol/RemoteInjectionService;->mContext:Landroid/content/Context;
@@ -1288,22 +1165,18 @@
 
     invoke-virtual {v2, v3, v4}, Landroid/content/Context;->enforceCallingOrSelfPermission(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 306
     invoke-static {}, Landroid/os/Binder;->getCallingUid()I
 
     move-result v8
 
-    .line 309
     .local v8, "callerUid":I
     invoke-static {}, Landroid/os/Binder;->clearCallingIdentity()J
 
     move-result-wide v14
 
-    .line 311
     .local v14, "token":J
     const/4 v10, 0x0
 
-    .line 313
     .local v10, "ret":Z
     move-object/from16 v0, p0
 
@@ -1313,14 +1186,12 @@
 
     if-eqz v2, :cond_0
 
-    .line 314
     const-string v2, "RemoteInjection"
 
     const-string v3, "Remote Control is disabled, couldnt inject track ball event"
 
     invoke-static {v2, v3}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 315
     const/4 v2, 0x5
 
     const/4 v3, 0x4
@@ -1345,13 +1216,11 @@
 
     move v11, v10
 
-    .line 338
     .end local v10    # "ret":Z
     .local v11, "ret":I
     :goto_0
     return v11
 
-    .line 322
     .end local v11    # "ret":I
     .restart local v10    # "ret":Z
     :cond_0
@@ -1360,7 +1229,6 @@
 
     move-result-object v12
 
-    .line 323
     .local v12, "tev":Landroid/view/MotionEvent;
     move-object/from16 v0, p0
 
@@ -1372,15 +1240,12 @@
 
     move-result v10
 
-    .line 328
     .end local v12    # "tev":Landroid/view/MotionEvent;
     :goto_1
     invoke-static {v14, v15}, Landroid/os/Binder;->restoreCallingIdentity(J)V
 
-    .line 330
     if-eqz v10, :cond_1
 
-    .line 331
     const/4 v2, 0x5
 
     const/4 v3, 0x4
@@ -1406,16 +1271,13 @@
     :goto_2
     move v11, v10
 
-    .line 338
     .restart local v11    # "ret":I
     goto :goto_0
 
-    .line 324
     .end local v11    # "ret":I
     :catch_0
     move-exception v9
 
-    .line 325
     .local v9, "e":Ljava/lang/Exception;
     const-string v2, "RemoteInjection"
 
@@ -1441,7 +1303,6 @@
 
     goto :goto_1
 
-    .line 334
     .end local v9    # "e":Ljava/lang/Exception;
     :cond_1
     const/4 v2, 0x5
@@ -1474,10 +1335,8 @@
     .param p1, "userId"    # I
 
     .prologue
-    .line 487
     const/4 v2, 0x1
 
-    .line 490
     .local v2, "ret":Z
     :try_start_0
     iget-object v5, p0, Lcom/android/server/enterprise/remotecontrol/RemoteInjectionService;->mEdmStorageProvider:Lcom/android/server/enterprise/storage/EdmStorageProvider;
@@ -1490,7 +1349,6 @@
 
     move-result-object v4
 
-    .line 493
     .local v4, "values":Ljava/util/ArrayList;, "Ljava/util/ArrayList<Ljava/lang/Boolean;>;"
     invoke-virtual {v4}, Ljava/util/ArrayList;->iterator()Ljava/util/Iterator;
 
@@ -1516,14 +1374,11 @@
 
     move-result v3
 
-    .line 494
     .local v3, "value":Z
     if-nez v3, :cond_0
 
-    .line 495
     move v2, v3
 
-    .line 502
     .end local v1    # "i$":Ljava/util/Iterator;
     .end local v3    # "value":Z
     .end local v4    # "values":Ljava/util/ArrayList;, "Ljava/util/ArrayList<Ljava/lang/Boolean;>;"
@@ -1531,11 +1386,9 @@
     :goto_0
     return v2
 
-    .line 499
     :catch_0
     move-exception v0
 
-    .line 500
     .local v0, "e":Ljava/lang/Exception;
     const-string v5, "RemoteInjection"
 
@@ -1551,12 +1404,10 @@
     .param p1, "cxtInfo"    # Landroid/app/enterprise/ContextInfo;
 
     .prologue
-    .line 506
     invoke-static {p1}, Lcom/android/server/enterprise/EnterpriseDeviceManagerService;->getCallingOrCurrentUserId(Landroid/app/enterprise/ContextInfo;)I
 
     move-result v0
 
-    .line 507
     .local v0, "userId":I
     invoke-virtual {p0, v0}, Lcom/android/server/enterprise/remotecontrol/RemoteInjectionService;->isRemoteControlAllowed(I)Z
 
@@ -1570,21 +1421,18 @@
     .param p1, "userId"    # I
 
     .prologue
-    .line 511
     iget v0, p0, Lcom/android/server/enterprise/remotecontrol/RemoteInjectionService;->mSessionOwnerUid:I
 
     const/4 v1, -0x1
 
     if-eq v0, v1, :cond_0
 
-    .line 512
     iget v0, p0, Lcom/android/server/enterprise/remotecontrol/RemoteInjectionService;->mSessionOwnerUid:I
 
     invoke-direct {p0, p1, v0}, Lcom/android/server/enterprise/remotecontrol/RemoteInjectionService;->isRemoteControlDisabledInternal(II)Z
 
     move-result v0
 
-    .line 514
     :goto_0
     return v0
 
@@ -1599,7 +1447,6 @@
     .param p1, "uid"    # I
 
     .prologue
-    .line 346
     return-void
 .end method
 
@@ -1608,7 +1455,6 @@
     .param p1, "uid"    # I
 
     .prologue
-    .line 350
     iget-object v1, p0, Lcom/android/server/enterprise/remotecontrol/RemoteInjectionService;->mRemoteControlDisabled:Landroid/util/SparseArray;
 
     invoke-static {p1}, Landroid/os/UserHandle;->getUserId(I)I
@@ -1634,10 +1480,8 @@
 
     invoke-virtual {v1, v2, v0}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    .line 352
     return-void
 
-    .line 350
     :cond_0
     const/4 v0, 0x0
 
@@ -1649,7 +1493,6 @@
     .param p1, "uid"    # I
 
     .prologue
-    .line 376
     return-void
 .end method
 
@@ -1657,7 +1500,6 @@
     .locals 2
 
     .prologue
-    .line 357
     new-instance v0, Ljava/lang/Thread;
 
     new-instance v1, Lcom/android/server/enterprise/remotecontrol/RemoteInjectionService$1;
@@ -1668,7 +1510,6 @@
 
     invoke-virtual {v0}, Ljava/lang/Thread;->start()V
 
-    .line 371
     return-void
 .end method
 
@@ -1679,22 +1520,17 @@
     .param p3, "uid"    # I
 
     .prologue
-    .line 453
     const-string v0, "RemoteInjection"
 
     const-string v1, "RemoteInjectionService: updateRemoteScreenDimensions()"
 
     invoke-static {v0, v1}, Lcom/android/server/enterprise/log/Log;->i(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 454
     iput p1, p0, Lcom/android/server/enterprise/remotecontrol/RemoteInjectionService;->mRemoteScreenWidth:I
 
-    .line 455
     iput p2, p0, Lcom/android/server/enterprise/remotecontrol/RemoteInjectionService;->mRemoteScreenHeight:I
 
-    .line 456
     iput p3, p0, Lcom/android/server/enterprise/remotecontrol/RemoteInjectionService;->mSessionOwnerUid:I
 
-    .line 457
     return-void
 .end method

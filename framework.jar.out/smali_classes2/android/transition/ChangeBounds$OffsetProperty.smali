@@ -33,10 +33,8 @@
     .param p1, "name"    # Ljava/lang/String;
 
     .prologue
-    .line 364
     invoke-direct {p0, p1}, Landroid/util/IntProperty;-><init>(Ljava/lang/String;)V
 
-    .line 365
     return-void
 .end method
 
@@ -47,7 +45,6 @@
     .param p1, "object"    # Landroid/view/View;
 
     .prologue
-    .line 376
     const/4 v0, 0x0
 
     return-object v0
@@ -58,7 +55,6 @@
     .param p1, "x0"    # Ljava/lang/Object;
 
     .prologue
-    .line 360
     check-cast p1, Landroid/view/View;
 
     .end local p1    # "x0":Ljava/lang/Object;
@@ -78,19 +74,15 @@
     .param p2, "value"    # I
 
     .prologue
-    .line 369
     iget v1, p0, Landroid/transition/ChangeBounds$OffsetProperty;->mPreviousValue:I
 
     sub-int v0, p2, v1
 
-    .line 370
     .local v0, "offset":I
     invoke-virtual {p0, p1, v0}, Landroid/transition/ChangeBounds$OffsetProperty;->offsetBy(Landroid/view/View;I)V
 
-    .line 371
     iput p2, p0, Landroid/transition/ChangeBounds$OffsetProperty;->mPreviousValue:I
 
-    .line 372
     return-void
 .end method
 
@@ -100,7 +92,6 @@
     .param p2, "x1"    # I
 
     .prologue
-    .line 360
     check-cast p1, Landroid/view/View;
 
     .end local p1    # "x0":Ljava/lang/Object;

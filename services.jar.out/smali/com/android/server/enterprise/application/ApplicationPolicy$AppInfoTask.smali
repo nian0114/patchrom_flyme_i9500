@@ -42,18 +42,14 @@
     .param p3, "usage"    # J
 
     .prologue
-    .line 4720
     iput-object p1, p0, Lcom/android/server/enterprise/application/ApplicationPolicy$AppInfoTask;->this$0:Lcom/android/server/enterprise/application/ApplicationPolicy;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 4721
     iput-object p2, p0, Lcom/android/server/enterprise/application/ApplicationPolicy$AppInfoTask;->mCmd:Ljava/lang/String;
 
-    .line 4722
     iput-wide p3, p0, Lcom/android/server/enterprise/application/ApplicationPolicy$AppInfoTask;->mUsage:J
 
-    .line 4723
     return-void
 .end method
 
@@ -62,7 +58,6 @@
     .param p0, "x0"    # Lcom/android/server/enterprise/application/ApplicationPolicy$AppInfoTask;
 
     .prologue
-    .line 4710
     iget-object v0, p0, Lcom/android/server/enterprise/application/ApplicationPolicy$AppInfoTask;->mCmd:Ljava/lang/String;
 
     return-object v0
@@ -73,7 +68,6 @@
     .param p0, "x0"    # Lcom/android/server/enterprise/application/ApplicationPolicy$AppInfoTask;
 
     .prologue
-    .line 4710
     iget-wide v0, p0, Lcom/android/server/enterprise/application/ApplicationPolicy$AppInfoTask;->mUsage:J
 
     return-wide v0
@@ -86,7 +80,6 @@
     .param p1, "other"    # Lcom/android/server/enterprise/application/ApplicationPolicy$AppInfoTask;
 
     .prologue
-    .line 4752
     iget-wide v0, p0, Lcom/android/server/enterprise/application/ApplicationPolicy$AppInfoTask;->mUsage:J
 
     iget-wide v2, p1, Lcom/android/server/enterprise/application/ApplicationPolicy$AppInfoTask;->mUsage:J
@@ -95,7 +88,6 @@
 
     if-nez v0, :cond_0
 
-    .line 4753
     iget-object v0, p0, Lcom/android/server/enterprise/application/ApplicationPolicy$AppInfoTask;->mCmd:Ljava/lang/String;
 
     iget-object v1, p1, Lcom/android/server/enterprise/application/ApplicationPolicy$AppInfoTask;->mCmd:Ljava/lang/String;
@@ -104,7 +96,6 @@
 
     move-result v0
 
-    .line 4755
     :goto_0
     return v0
 
@@ -127,7 +118,6 @@
     .param p1, "x0"    # Ljava/lang/Object;
 
     .prologue
-    .line 4710
     check-cast p1, Lcom/android/server/enterprise/application/ApplicationPolicy$AppInfoTask;
 
     .end local p1    # "x0":Ljava/lang/Object;
@@ -142,7 +132,6 @@
     .locals 1
 
     .prologue
-    .line 4731
     iget-object v0, p0, Lcom/android/server/enterprise/application/ApplicationPolicy$AppInfoTask;->mCmd:Ljava/lang/String;
 
     return-object v0
@@ -152,7 +141,6 @@
     .locals 2
 
     .prologue
-    .line 4740
     iget-wide v0, p0, Lcom/android/server/enterprise/application/ApplicationPolicy$AppInfoTask;->mUsage:J
 
     return-wide v0

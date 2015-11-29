@@ -23,7 +23,6 @@
     .locals 0
 
     .prologue
-    .line 943
     iput-object p1, p0, Lcom/android/server/ConnectivityService$1;->this$0:Lcom/android/server/ConnectivityService;
 
     invoke-direct {p0}, Landroid/content/BroadcastReceiver;-><init>()V
@@ -41,12 +40,10 @@
     .prologue
     const/4 v1, 0x1
 
-    .line 946
     invoke-virtual {p2}, Landroid/content/Intent;->getAction()Ljava/lang/String;
 
     move-result-object v6
 
-    .line 947
     .local v6, "action":Ljava/lang/String;
     const-string v0, "android.net.ConnectivityService.action.PKT_CNT_SAMPLE_INTERVAL_ELAPSED"
 
@@ -56,7 +53,6 @@
 
     if-eqz v0, :cond_1
 
-    .line 948
     iget-object v0, p0, Lcom/android/server/ConnectivityService$1;->this$0:Lcom/android/server/ConnectivityService;
 
     # getter for: Lcom/android/server/ConnectivityService;->mHandler:Lcom/android/server/ConnectivityService$InternalHandler;
@@ -79,12 +75,10 @@
 
     invoke-virtual {v0, v1}, Lcom/android/server/ConnectivityService$InternalHandler;->sendMessage(Landroid/os/Message;)Z
 
-    .line 955
     :cond_0
     :goto_0
     return-void
 
-    .line 950
     :cond_1
     const-string v0, "android.intent.action.LOCALE_CHANGED"
 
@@ -94,7 +88,6 @@
 
     if-eqz v0, :cond_0
 
-    .line 951
     iget-object v0, p0, Lcom/android/server/ConnectivityService$1;->this$0:Lcom/android/server/ConnectivityService;
 
     # getter for: Lcom/android/server/ConnectivityService;->mIsNotificationVisible:Z
@@ -104,7 +97,6 @@
 
     if-eqz v0, :cond_0
 
-    .line 952
     iget-object v0, p0, Lcom/android/server/ConnectivityService$1;->this$0:Lcom/android/server/ConnectivityService;
 
     iget-object v2, p0, Lcom/android/server/ConnectivityService$1;->this$0:Lcom/android/server/ConnectivityService;

@@ -36,15 +36,12 @@
     .locals 1
 
     .prologue
-    .line 1331
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 1325
     const/4 v0, 0x1
 
     iput v0, p0, Landroid/app/Notification$Action$WearableExtender;->mFlags:I
 
-    .line 1332
     return-void
 .end method
 
@@ -55,13 +52,10 @@
     .prologue
     const/4 v3, 0x1
 
-    .line 1339
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 1325
     iput v3, p0, Landroid/app/Notification$Action$WearableExtender;->mFlags:I
 
-    .line 1340
     invoke-virtual {p1}, Landroid/app/Notification$Action;->getExtras()Landroid/os/Bundle;
 
     move-result-object v1
@@ -72,11 +66,9 @@
 
     move-result-object v0
 
-    .line 1341
     .local v0, "wearableBundle":Landroid/os/Bundle;
     if-eqz v0, :cond_0
 
-    .line 1342
     const-string v1, "flags"
 
     invoke-virtual {v0, v1, v3}, Landroid/os/Bundle;->getInt(Ljava/lang/String;I)I
@@ -85,7 +77,6 @@
 
     iput v1, p0, Landroid/app/Notification$Action$WearableExtender;->mFlags:I
 
-    .line 1344
     :cond_0
     return-void
 .end method
@@ -96,21 +87,17 @@
     .param p2, "value"    # Z
 
     .prologue
-    .line 1392
     if-eqz p2, :cond_0
 
-    .line 1393
     iget v0, p0, Landroid/app/Notification$Action$WearableExtender;->mFlags:I
 
     or-int/2addr v0, p1
 
     iput v0, p0, Landroid/app/Notification$Action$WearableExtender;->mFlags:I
 
-    .line 1397
     :goto_0
     return-void
 
-    .line 1395
     :cond_0
     iget v0, p0, Landroid/app/Notification$Action$WearableExtender;->mFlags:I
 
@@ -129,18 +116,15 @@
     .locals 2
 
     .prologue
-    .line 1365
     new-instance v0, Landroid/app/Notification$Action$WearableExtender;
 
     invoke-direct {v0}, Landroid/app/Notification$Action$WearableExtender;-><init>()V
 
-    .line 1366
     .local v0, "that":Landroid/app/Notification$Action$WearableExtender;
     iget v1, p0, Landroid/app/Notification$Action$WearableExtender;->mFlags:I
 
     iput v1, v0, Landroid/app/Notification$Action$WearableExtender;->mFlags:I
 
-    .line 1367
     return-object v0
 .end method
 
@@ -153,7 +137,6 @@
     .end annotation
 
     .prologue
-    .line 1313
     invoke-virtual {p0}, Landroid/app/Notification$Action$WearableExtender;->clone()Landroid/app/Notification$Action$WearableExtender;
 
     move-result-object v0
@@ -166,12 +149,10 @@
     .param p1, "builder"    # Landroid/app/Notification$Action$Builder;
 
     .prologue
-    .line 1353
     new-instance v0, Landroid/os/Bundle;
 
     invoke-direct {v0}, Landroid/os/Bundle;-><init>()V
 
-    .line 1355
     .local v0, "wearableBundle":Landroid/os/Bundle;
     iget v1, p0, Landroid/app/Notification$Action$WearableExtender;->mFlags:I
 
@@ -179,14 +160,12 @@
 
     if-eq v1, v2, :cond_0
 
-    .line 1356
     const-string v1, "flags"
 
     iget v2, p0, Landroid/app/Notification$Action$WearableExtender;->mFlags:I
 
     invoke-virtual {v0, v1, v2}, Landroid/os/Bundle;->putInt(Ljava/lang/String;I)V
 
-    .line 1359
     :cond_0
     invoke-virtual {p1}, Landroid/app/Notification$Action$Builder;->getExtras()Landroid/os/Bundle;
 
@@ -196,7 +175,6 @@
 
     invoke-virtual {v1, v2, v0}, Landroid/os/Bundle;->putBundle(Ljava/lang/String;Landroid/os/Bundle;)V
 
-    .line 1360
     return-object p1
 .end method
 
@@ -204,7 +182,6 @@
     .locals 1
 
     .prologue
-    .line 1388
     iget v0, p0, Landroid/app/Notification$Action$WearableExtender;->mFlags:I
 
     and-int/lit8 v0, v0, 0x1
@@ -227,11 +204,9 @@
     .param p1, "availableOffline"    # Z
 
     .prologue
-    .line 1377
     const/4 v0, 0x1
 
     invoke-direct {p0, v0, p1}, Landroid/app/Notification$Action$WearableExtender;->setFlag(IZ)V
 
-    .line 1378
     return-object p0
 .end method

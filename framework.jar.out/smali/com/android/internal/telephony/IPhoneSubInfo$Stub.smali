@@ -134,15 +134,12 @@
     .locals 1
 
     .prologue
-    .line 18
     invoke-direct {p0}, Landroid/os/Binder;-><init>()V
 
-    .line 19
     const-string v0, "com.android.internal.telephony.IPhoneSubInfo"
 
     invoke-virtual {p0, p0, v0}, Lcom/android/internal/telephony/IPhoneSubInfo$Stub;->attachInterface(Landroid/os/IInterface;Ljava/lang/String;)V
 
-    .line 20
     return-void
 .end method
 
@@ -151,17 +148,13 @@
     .param p0, "obj"    # Landroid/os/IBinder;
 
     .prologue
-    .line 27
     if-nez p0, :cond_0
 
-    .line 28
     const/4 v0, 0x0
 
-    .line 34
     :goto_0
     return-object v0
 
-    .line 30
     :cond_0
     const-string v1, "com.android.internal.telephony.IPhoneSubInfo"
 
@@ -169,7 +162,6 @@
 
     move-result-object v0
 
-    .line 31
     .local v0, "iin":Landroid/os/IInterface;
     if-eqz v0, :cond_1
 
@@ -177,12 +169,10 @@
 
     if-eqz v1, :cond_1
 
-    .line 32
     check-cast v0, Lcom/android/internal/telephony/IPhoneSubInfo;
 
     goto :goto_0
 
-    .line 34
     :cond_1
     new-instance v0, Lcom/android/internal/telephony/IPhoneSubInfo$Stub$Proxy;
 
@@ -198,7 +188,6 @@
     .locals 0
 
     .prologue
-    .line 38
     return-object p0
 .end method
 
@@ -219,10 +208,8 @@
 
     const/4 v6, 0x1
 
-    .line 42
     sparse-switch p1, :sswitch_data_0
 
-    .line 499
     invoke-super {p0, p1, p2, p3, p4}, Landroid/os/Binder;->onTransact(ILandroid/os/Parcel;Landroid/os/Parcel;I)Z
 
     move-result v6
@@ -230,7 +217,6 @@
     :goto_0
     return v6
 
-    .line 46
     :sswitch_0
     const-string v5, "com.android.internal.telephony.IPhoneSubInfo"
 
@@ -238,54 +224,44 @@
 
     goto :goto_0
 
-    .line 51
     :sswitch_1
     const-string v5, "com.android.internal.telephony.IPhoneSubInfo"
 
     invoke-virtual {p2, v5}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
 
-    .line 52
     invoke-virtual {p0}, Lcom/android/internal/telephony/IPhoneSubInfo$Stub;->getDeviceId()Ljava/lang/String;
 
     move-result-object v4
 
-    .line 53
     .local v4, "_result":Ljava/lang/String;
     invoke-virtual {p3}, Landroid/os/Parcel;->writeNoException()V
 
-    .line 54
     invoke-virtual {p3, v4}, Landroid/os/Parcel;->writeString(Ljava/lang/String;)V
 
     goto :goto_0
 
-    .line 59
     .end local v4    # "_result":Ljava/lang/String;
     :sswitch_2
     const-string v5, "com.android.internal.telephony.IPhoneSubInfo"
 
     invoke-virtual {p2, v5}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
 
-    .line 61
     invoke-virtual {p2}, Landroid/os/Parcel;->readLong()J
 
     move-result-wide v0
 
-    .line 62
     .local v0, "_arg0":J
     invoke-virtual {p0, v0, v1}, Lcom/android/internal/telephony/IPhoneSubInfo$Stub;->getDeviceIdForSubscriber(J)Ljava/lang/String;
 
     move-result-object v4
 
-    .line 63
     .restart local v4    # "_result":Ljava/lang/String;
     invoke-virtual {p3}, Landroid/os/Parcel;->writeNoException()V
 
-    .line 64
     invoke-virtual {p3, v4}, Landroid/os/Parcel;->writeString(Ljava/lang/String;)V
 
     goto :goto_0
 
-    .line 69
     .end local v0    # "_arg0":J
     .end local v4    # "_result":Ljava/lang/String;
     :sswitch_3
@@ -293,27 +269,22 @@
 
     invoke-virtual {p2, v5}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
 
-    .line 71
     invoke-virtual {p2}, Landroid/os/Parcel;->readLong()J
 
     move-result-wide v0
 
-    .line 72
     .restart local v0    # "_arg0":J
     invoke-virtual {p0, v0, v1}, Lcom/android/internal/telephony/IPhoneSubInfo$Stub;->getImeiForSubscriber(J)Ljava/lang/String;
 
     move-result-object v4
 
-    .line 73
     .restart local v4    # "_result":Ljava/lang/String;
     invoke-virtual {p3}, Landroid/os/Parcel;->writeNoException()V
 
-    .line 74
     invoke-virtual {p3, v4}, Landroid/os/Parcel;->writeString(Ljava/lang/String;)V
 
     goto :goto_0
 
-    .line 79
     .end local v0    # "_arg0":J
     .end local v4    # "_result":Ljava/lang/String;
     :sswitch_4
@@ -321,69 +292,56 @@
 
     invoke-virtual {p2, v5}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
 
-    .line 80
     invoke-virtual {p0}, Lcom/android/internal/telephony/IPhoneSubInfo$Stub;->getDeviceSvn()Ljava/lang/String;
 
     move-result-object v4
 
-    .line 81
     .restart local v4    # "_result":Ljava/lang/String;
     invoke-virtual {p3}, Landroid/os/Parcel;->writeNoException()V
 
-    .line 82
     invoke-virtual {p3, v4}, Landroid/os/Parcel;->writeString(Ljava/lang/String;)V
 
     goto :goto_0
 
-    .line 87
     .end local v4    # "_result":Ljava/lang/String;
     :sswitch_5
     const-string v5, "com.android.internal.telephony.IPhoneSubInfo"
 
     invoke-virtual {p2, v5}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
 
-    .line 88
     invoke-virtual {p0}, Lcom/android/internal/telephony/IPhoneSubInfo$Stub;->getSubscriberId()Ljava/lang/String;
 
     move-result-object v4
 
-    .line 89
     .restart local v4    # "_result":Ljava/lang/String;
     invoke-virtual {p3}, Landroid/os/Parcel;->writeNoException()V
 
-    .line 90
     invoke-virtual {p3, v4}, Landroid/os/Parcel;->writeString(Ljava/lang/String;)V
 
     goto :goto_0
 
-    .line 95
     .end local v4    # "_result":Ljava/lang/String;
     :sswitch_6
     const-string v5, "com.android.internal.telephony.IPhoneSubInfo"
 
     invoke-virtual {p2, v5}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
 
-    .line 97
     invoke-virtual {p2}, Landroid/os/Parcel;->readLong()J
 
     move-result-wide v0
 
-    .line 98
     .restart local v0    # "_arg0":J
     invoke-virtual {p0, v0, v1}, Lcom/android/internal/telephony/IPhoneSubInfo$Stub;->getSubscriberIdForSubscriber(J)Ljava/lang/String;
 
     move-result-object v4
 
-    .line 99
     .restart local v4    # "_result":Ljava/lang/String;
     invoke-virtual {p3}, Landroid/os/Parcel;->writeNoException()V
 
-    .line 100
     invoke-virtual {p3, v4}, Landroid/os/Parcel;->writeString(Ljava/lang/String;)V
 
     goto :goto_0
 
-    .line 105
     .end local v0    # "_arg0":J
     .end local v4    # "_result":Ljava/lang/String;
     :sswitch_7
@@ -391,48 +349,39 @@
 
     invoke-virtual {p2, v5}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
 
-    .line 106
     invoke-virtual {p0}, Lcom/android/internal/telephony/IPhoneSubInfo$Stub;->getGroupIdLevel1()Ljava/lang/String;
 
     move-result-object v4
 
-    .line 107
     .restart local v4    # "_result":Ljava/lang/String;
     invoke-virtual {p3}, Landroid/os/Parcel;->writeNoException()V
 
-    .line 108
     invoke-virtual {p3, v4}, Landroid/os/Parcel;->writeString(Ljava/lang/String;)V
 
     goto/16 :goto_0
 
-    .line 113
     .end local v4    # "_result":Ljava/lang/String;
     :sswitch_8
     const-string v5, "com.android.internal.telephony.IPhoneSubInfo"
 
     invoke-virtual {p2, v5}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
 
-    .line 115
     invoke-virtual {p2}, Landroid/os/Parcel;->readLong()J
 
     move-result-wide v0
 
-    .line 116
     .restart local v0    # "_arg0":J
     invoke-virtual {p0, v0, v1}, Lcom/android/internal/telephony/IPhoneSubInfo$Stub;->getGroupIdLevel1ForSubscriber(J)Ljava/lang/String;
 
     move-result-object v4
 
-    .line 117
     .restart local v4    # "_result":Ljava/lang/String;
     invoke-virtual {p3}, Landroid/os/Parcel;->writeNoException()V
 
-    .line 118
     invoke-virtual {p3, v4}, Landroid/os/Parcel;->writeString(Ljava/lang/String;)V
 
     goto/16 :goto_0
 
-    .line 123
     .end local v0    # "_arg0":J
     .end local v4    # "_result":Ljava/lang/String;
     :sswitch_9
@@ -440,48 +389,39 @@
 
     invoke-virtual {p2, v5}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
 
-    .line 124
     invoke-virtual {p0}, Lcom/android/internal/telephony/IPhoneSubInfo$Stub;->getIccSerialNumber()Ljava/lang/String;
 
     move-result-object v4
 
-    .line 125
     .restart local v4    # "_result":Ljava/lang/String;
     invoke-virtual {p3}, Landroid/os/Parcel;->writeNoException()V
 
-    .line 126
     invoke-virtual {p3, v4}, Landroid/os/Parcel;->writeString(Ljava/lang/String;)V
 
     goto/16 :goto_0
 
-    .line 131
     .end local v4    # "_result":Ljava/lang/String;
     :sswitch_a
     const-string v5, "com.android.internal.telephony.IPhoneSubInfo"
 
     invoke-virtual {p2, v5}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
 
-    .line 133
     invoke-virtual {p2}, Landroid/os/Parcel;->readLong()J
 
     move-result-wide v0
 
-    .line 134
     .restart local v0    # "_arg0":J
     invoke-virtual {p0, v0, v1}, Lcom/android/internal/telephony/IPhoneSubInfo$Stub;->getIccSerialNumberForSubscriber(J)Ljava/lang/String;
 
     move-result-object v4
 
-    .line 135
     .restart local v4    # "_result":Ljava/lang/String;
     invoke-virtual {p3}, Landroid/os/Parcel;->writeNoException()V
 
-    .line 136
     invoke-virtual {p3, v4}, Landroid/os/Parcel;->writeString(Ljava/lang/String;)V
 
     goto/16 :goto_0
 
-    .line 141
     .end local v0    # "_arg0":J
     .end local v4    # "_result":Ljava/lang/String;
     :sswitch_b
@@ -489,48 +429,39 @@
 
     invoke-virtual {p2, v5}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
 
-    .line 142
     invoke-virtual {p0}, Lcom/android/internal/telephony/IPhoneSubInfo$Stub;->getLine1Number()Ljava/lang/String;
 
     move-result-object v4
 
-    .line 143
     .restart local v4    # "_result":Ljava/lang/String;
     invoke-virtual {p3}, Landroid/os/Parcel;->writeNoException()V
 
-    .line 144
     invoke-virtual {p3, v4}, Landroid/os/Parcel;->writeString(Ljava/lang/String;)V
 
     goto/16 :goto_0
 
-    .line 149
     .end local v4    # "_result":Ljava/lang/String;
     :sswitch_c
     const-string v5, "com.android.internal.telephony.IPhoneSubInfo"
 
     invoke-virtual {p2, v5}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
 
-    .line 151
     invoke-virtual {p2}, Landroid/os/Parcel;->readLong()J
 
     move-result-wide v0
 
-    .line 152
     .restart local v0    # "_arg0":J
     invoke-virtual {p0, v0, v1}, Lcom/android/internal/telephony/IPhoneSubInfo$Stub;->getLine1NumberForSubscriber(J)Ljava/lang/String;
 
     move-result-object v4
 
-    .line 153
     .restart local v4    # "_result":Ljava/lang/String;
     invoke-virtual {p3}, Landroid/os/Parcel;->writeNoException()V
 
-    .line 154
     invoke-virtual {p3, v4}, Landroid/os/Parcel;->writeString(Ljava/lang/String;)V
 
     goto/16 :goto_0
 
-    .line 159
     .end local v0    # "_arg0":J
     .end local v4    # "_result":Ljava/lang/String;
     :sswitch_d
@@ -538,48 +469,39 @@
 
     invoke-virtual {p2, v5}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
 
-    .line 160
     invoke-virtual {p0}, Lcom/android/internal/telephony/IPhoneSubInfo$Stub;->getLine1AlphaTag()Ljava/lang/String;
 
     move-result-object v4
 
-    .line 161
     .restart local v4    # "_result":Ljava/lang/String;
     invoke-virtual {p3}, Landroid/os/Parcel;->writeNoException()V
 
-    .line 162
     invoke-virtual {p3, v4}, Landroid/os/Parcel;->writeString(Ljava/lang/String;)V
 
     goto/16 :goto_0
 
-    .line 167
     .end local v4    # "_result":Ljava/lang/String;
     :sswitch_e
     const-string v5, "com.android.internal.telephony.IPhoneSubInfo"
 
     invoke-virtual {p2, v5}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
 
-    .line 169
     invoke-virtual {p2}, Landroid/os/Parcel;->readLong()J
 
     move-result-wide v0
 
-    .line 170
     .restart local v0    # "_arg0":J
     invoke-virtual {p0, v0, v1}, Lcom/android/internal/telephony/IPhoneSubInfo$Stub;->getLine1AlphaTagForSubscriber(J)Ljava/lang/String;
 
     move-result-object v4
 
-    .line 171
     .restart local v4    # "_result":Ljava/lang/String;
     invoke-virtual {p3}, Landroid/os/Parcel;->writeNoException()V
 
-    .line 172
     invoke-virtual {p3, v4}, Landroid/os/Parcel;->writeString(Ljava/lang/String;)V
 
     goto/16 :goto_0
 
-    .line 177
     .end local v0    # "_arg0":J
     .end local v4    # "_result":Ljava/lang/String;
     :sswitch_f
@@ -587,48 +509,39 @@
 
     invoke-virtual {p2, v5}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
 
-    .line 178
     invoke-virtual {p0}, Lcom/android/internal/telephony/IPhoneSubInfo$Stub;->getMsisdn()Ljava/lang/String;
 
     move-result-object v4
 
-    .line 179
     .restart local v4    # "_result":Ljava/lang/String;
     invoke-virtual {p3}, Landroid/os/Parcel;->writeNoException()V
 
-    .line 180
     invoke-virtual {p3, v4}, Landroid/os/Parcel;->writeString(Ljava/lang/String;)V
 
     goto/16 :goto_0
 
-    .line 185
     .end local v4    # "_result":Ljava/lang/String;
     :sswitch_10
     const-string v5, "com.android.internal.telephony.IPhoneSubInfo"
 
     invoke-virtual {p2, v5}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
 
-    .line 187
     invoke-virtual {p2}, Landroid/os/Parcel;->readLong()J
 
     move-result-wide v0
 
-    .line 188
     .restart local v0    # "_arg0":J
     invoke-virtual {p0, v0, v1}, Lcom/android/internal/telephony/IPhoneSubInfo$Stub;->getMsisdnForSubscriber(J)Ljava/lang/String;
 
     move-result-object v4
 
-    .line 189
     .restart local v4    # "_result":Ljava/lang/String;
     invoke-virtual {p3}, Landroid/os/Parcel;->writeNoException()V
 
-    .line 190
     invoke-virtual {p3, v4}, Landroid/os/Parcel;->writeString(Ljava/lang/String;)V
 
     goto/16 :goto_0
 
-    .line 195
     .end local v0    # "_arg0":J
     .end local v4    # "_result":Ljava/lang/String;
     :sswitch_11
@@ -636,48 +549,39 @@
 
     invoke-virtual {p2, v5}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
 
-    .line 196
     invoke-virtual {p0}, Lcom/android/internal/telephony/IPhoneSubInfo$Stub;->getVoiceMailNumber()Ljava/lang/String;
 
     move-result-object v4
 
-    .line 197
     .restart local v4    # "_result":Ljava/lang/String;
     invoke-virtual {p3}, Landroid/os/Parcel;->writeNoException()V
 
-    .line 198
     invoke-virtual {p3, v4}, Landroid/os/Parcel;->writeString(Ljava/lang/String;)V
 
     goto/16 :goto_0
 
-    .line 203
     .end local v4    # "_result":Ljava/lang/String;
     :sswitch_12
     const-string v5, "com.android.internal.telephony.IPhoneSubInfo"
 
     invoke-virtual {p2, v5}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
 
-    .line 205
     invoke-virtual {p2}, Landroid/os/Parcel;->readLong()J
 
     move-result-wide v0
 
-    .line 206
     .restart local v0    # "_arg0":J
     invoke-virtual {p0, v0, v1}, Lcom/android/internal/telephony/IPhoneSubInfo$Stub;->getVoiceMailNumberForSubscriber(J)Ljava/lang/String;
 
     move-result-object v4
 
-    .line 207
     .restart local v4    # "_result":Ljava/lang/String;
     invoke-virtual {p3}, Landroid/os/Parcel;->writeNoException()V
 
-    .line 208
     invoke-virtual {p3, v4}, Landroid/os/Parcel;->writeString(Ljava/lang/String;)V
 
     goto/16 :goto_0
 
-    .line 213
     .end local v0    # "_arg0":J
     .end local v4    # "_result":Ljava/lang/String;
     :sswitch_13
@@ -685,48 +589,39 @@
 
     invoke-virtual {p2, v5}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
 
-    .line 214
     invoke-virtual {p0}, Lcom/android/internal/telephony/IPhoneSubInfo$Stub;->getCompleteVoiceMailNumber()Ljava/lang/String;
 
     move-result-object v4
 
-    .line 215
     .restart local v4    # "_result":Ljava/lang/String;
     invoke-virtual {p3}, Landroid/os/Parcel;->writeNoException()V
 
-    .line 216
     invoke-virtual {p3, v4}, Landroid/os/Parcel;->writeString(Ljava/lang/String;)V
 
     goto/16 :goto_0
 
-    .line 221
     .end local v4    # "_result":Ljava/lang/String;
     :sswitch_14
     const-string v5, "com.android.internal.telephony.IPhoneSubInfo"
 
     invoke-virtual {p2, v5}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
 
-    .line 223
     invoke-virtual {p2}, Landroid/os/Parcel;->readLong()J
 
     move-result-wide v0
 
-    .line 224
     .restart local v0    # "_arg0":J
     invoke-virtual {p0, v0, v1}, Lcom/android/internal/telephony/IPhoneSubInfo$Stub;->getCompleteVoiceMailNumberForSubscriber(J)Ljava/lang/String;
 
     move-result-object v4
 
-    .line 225
     .restart local v4    # "_result":Ljava/lang/String;
     invoke-virtual {p3}, Landroid/os/Parcel;->writeNoException()V
 
-    .line 226
     invoke-virtual {p3, v4}, Landroid/os/Parcel;->writeString(Ljava/lang/String;)V
 
     goto/16 :goto_0
 
-    .line 231
     .end local v0    # "_arg0":J
     .end local v4    # "_result":Ljava/lang/String;
     :sswitch_15
@@ -734,48 +629,39 @@
 
     invoke-virtual {p2, v5}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
 
-    .line 232
     invoke-virtual {p0}, Lcom/android/internal/telephony/IPhoneSubInfo$Stub;->getVoiceMailAlphaTag()Ljava/lang/String;
 
     move-result-object v4
 
-    .line 233
     .restart local v4    # "_result":Ljava/lang/String;
     invoke-virtual {p3}, Landroid/os/Parcel;->writeNoException()V
 
-    .line 234
     invoke-virtual {p3, v4}, Landroid/os/Parcel;->writeString(Ljava/lang/String;)V
 
     goto/16 :goto_0
 
-    .line 239
     .end local v4    # "_result":Ljava/lang/String;
     :sswitch_16
     const-string v5, "com.android.internal.telephony.IPhoneSubInfo"
 
     invoke-virtual {p2, v5}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
 
-    .line 241
     invoke-virtual {p2}, Landroid/os/Parcel;->readLong()J
 
     move-result-wide v0
 
-    .line 242
     .restart local v0    # "_arg0":J
     invoke-virtual {p0, v0, v1}, Lcom/android/internal/telephony/IPhoneSubInfo$Stub;->getVoiceMailAlphaTagForSubscriber(J)Ljava/lang/String;
 
     move-result-object v4
 
-    .line 243
     .restart local v4    # "_result":Ljava/lang/String;
     invoke-virtual {p3}, Landroid/os/Parcel;->writeNoException()V
 
-    .line 244
     invoke-virtual {p3, v4}, Landroid/os/Parcel;->writeString(Ljava/lang/String;)V
 
     goto/16 :goto_0
 
-    .line 249
     .end local v0    # "_arg0":J
     .end local v4    # "_result":Ljava/lang/String;
     :sswitch_17
@@ -783,132 +669,107 @@
 
     invoke-virtual {p2, v5}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
 
-    .line 250
     invoke-virtual {p0}, Lcom/android/internal/telephony/IPhoneSubInfo$Stub;->getIsimImpi()Ljava/lang/String;
 
     move-result-object v4
 
-    .line 251
     .restart local v4    # "_result":Ljava/lang/String;
     invoke-virtual {p3}, Landroid/os/Parcel;->writeNoException()V
 
-    .line 252
     invoke-virtual {p3, v4}, Landroid/os/Parcel;->writeString(Ljava/lang/String;)V
 
     goto/16 :goto_0
 
-    .line 257
     .end local v4    # "_result":Ljava/lang/String;
     :sswitch_18
     const-string v5, "com.android.internal.telephony.IPhoneSubInfo"
 
     invoke-virtual {p2, v5}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
 
-    .line 258
     invoke-virtual {p0}, Lcom/android/internal/telephony/IPhoneSubInfo$Stub;->getIsimDomain()Ljava/lang/String;
 
     move-result-object v4
 
-    .line 259
     .restart local v4    # "_result":Ljava/lang/String;
     invoke-virtual {p3}, Landroid/os/Parcel;->writeNoException()V
 
-    .line 260
     invoke-virtual {p3, v4}, Landroid/os/Parcel;->writeString(Ljava/lang/String;)V
 
     goto/16 :goto_0
 
-    .line 265
     .end local v4    # "_result":Ljava/lang/String;
     :sswitch_19
     const-string v5, "com.android.internal.telephony.IPhoneSubInfo"
 
     invoke-virtual {p2, v5}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
 
-    .line 266
     invoke-virtual {p0}, Lcom/android/internal/telephony/IPhoneSubInfo$Stub;->getIsimImpu()[Ljava/lang/String;
 
     move-result-object v4
 
-    .line 267
     .local v4, "_result":[Ljava/lang/String;
     invoke-virtual {p3}, Landroid/os/Parcel;->writeNoException()V
 
-    .line 268
     invoke-virtual {p3, v4}, Landroid/os/Parcel;->writeStringArray([Ljava/lang/String;)V
 
     goto/16 :goto_0
 
-    .line 273
     .end local v4    # "_result":[Ljava/lang/String;
     :sswitch_1a
     const-string v5, "com.android.internal.telephony.IPhoneSubInfo"
 
     invoke-virtual {p2, v5}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
 
-    .line 274
     invoke-virtual {p0}, Lcom/android/internal/telephony/IPhoneSubInfo$Stub;->getIsimIst()Ljava/lang/String;
 
     move-result-object v4
 
-    .line 275
     .local v4, "_result":Ljava/lang/String;
     invoke-virtual {p3}, Landroid/os/Parcel;->writeNoException()V
 
-    .line 276
     invoke-virtual {p3, v4}, Landroid/os/Parcel;->writeString(Ljava/lang/String;)V
 
     goto/16 :goto_0
 
-    .line 281
     .end local v4    # "_result":Ljava/lang/String;
     :sswitch_1b
     const-string v5, "com.android.internal.telephony.IPhoneSubInfo"
 
     invoke-virtual {p2, v5}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
 
-    .line 282
     invoke-virtual {p0}, Lcom/android/internal/telephony/IPhoneSubInfo$Stub;->getIsimPcscf()[Ljava/lang/String;
 
     move-result-object v4
 
-    .line 283
     .local v4, "_result":[Ljava/lang/String;
     invoke-virtual {p3}, Landroid/os/Parcel;->writeNoException()V
 
-    .line 284
     invoke-virtual {p3, v4}, Landroid/os/Parcel;->writeStringArray([Ljava/lang/String;)V
 
     goto/16 :goto_0
 
-    .line 289
     .end local v4    # "_result":[Ljava/lang/String;
     :sswitch_1c
     const-string v5, "com.android.internal.telephony.IPhoneSubInfo"
 
     invoke-virtual {p2, v5}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
 
-    .line 291
     invoke-virtual {p2}, Landroid/os/Parcel;->readString()Ljava/lang/String;
 
     move-result-object v0
 
-    .line 292
     .local v0, "_arg0":Ljava/lang/String;
     invoke-virtual {p0, v0}, Lcom/android/internal/telephony/IPhoneSubInfo$Stub;->getIsimChallengeResponse(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v4
 
-    .line 293
     .local v4, "_result":Ljava/lang/String;
     invoke-virtual {p3}, Landroid/os/Parcel;->writeNoException()V
 
-    .line 294
     invoke-virtual {p3, v4}, Landroid/os/Parcel;->writeString(Ljava/lang/String;)V
 
     goto/16 :goto_0
 
-    .line 299
     .end local v0    # "_arg0":Ljava/lang/String;
     .end local v4    # "_result":Ljava/lang/String;
     :sswitch_1d
@@ -916,39 +777,32 @@
 
     invoke-virtual {p2, v5}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
 
-    .line 301
     invoke-virtual {p2}, Landroid/os/Parcel;->readLong()J
 
     move-result-wide v0
 
-    .line 303
     .local v0, "_arg0":J
     invoke-virtual {p2}, Landroid/os/Parcel;->readInt()I
 
     move-result v2
 
-    .line 305
     .local v2, "_arg1":I
     invoke-virtual {p2}, Landroid/os/Parcel;->readString()Ljava/lang/String;
 
     move-result-object v3
 
-    .line 306
     .local v3, "_arg2":Ljava/lang/String;
     invoke-virtual {p0, v0, v1, v2, v3}, Lcom/android/internal/telephony/IPhoneSubInfo$Stub;->getIccSimChallengeResponse(JILjava/lang/String;)Ljava/lang/String;
 
     move-result-object v4
 
-    .line 307
     .restart local v4    # "_result":Ljava/lang/String;
     invoke-virtual {p3}, Landroid/os/Parcel;->writeNoException()V
 
-    .line 308
     invoke-virtual {p3, v4}, Landroid/os/Parcel;->writeString(Ljava/lang/String;)V
 
     goto/16 :goto_0
 
-    .line 313
     .end local v0    # "_arg0":J
     .end local v2    # "_arg1":I
     .end local v3    # "_arg2":Ljava/lang/String;
@@ -958,16 +812,13 @@
 
     invoke-virtual {p2, v7}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
 
-    .line 314
     invoke-virtual {p0}, Lcom/android/internal/telephony/IPhoneSubInfo$Stub;->isGbaSupported()Z
 
     move-result v4
 
-    .line 315
     .local v4, "_result":Z
     invoke-virtual {p3}, Landroid/os/Parcel;->writeNoException()V
 
-    .line 316
     if-eqz v4, :cond_0
 
     move v5, v6
@@ -977,23 +828,19 @@
 
     goto/16 :goto_0
 
-    .line 321
     .end local v4    # "_result":Z
     :sswitch_1f
     const-string v7, "com.android.internal.telephony.IPhoneSubInfo"
 
     invoke-virtual {p2, v7}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
 
-    .line 322
     invoke-virtual {p0}, Lcom/android/internal/telephony/IPhoneSubInfo$Stub;->hasIsim()Z
 
     move-result v4
 
-    .line 323
     .restart local v4    # "_result":Z
     invoke-virtual {p3}, Landroid/os/Parcel;->writeNoException()V
 
-    .line 324
     if-eqz v4, :cond_1
 
     move v5, v6
@@ -1003,44 +850,36 @@
 
     goto/16 :goto_0
 
-    .line 329
     .end local v4    # "_result":Z
     :sswitch_20
     const-string v5, "com.android.internal.telephony.IPhoneSubInfo"
 
     invoke-virtual {p2, v5}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
 
-    .line 330
     invoke-virtual {p0}, Lcom/android/internal/telephony/IPhoneSubInfo$Stub;->getPsismsc()[B
 
     move-result-object v4
 
-    .line 331
     .local v4, "_result":[B
     invoke-virtual {p3}, Landroid/os/Parcel;->writeNoException()V
 
-    .line 332
     invoke-virtual {p3, v4}, Landroid/os/Parcel;->writeByteArray([B)V
 
     goto/16 :goto_0
 
-    .line 337
     .end local v4    # "_result":[B
     :sswitch_21
     const-string v7, "com.android.internal.telephony.IPhoneSubInfo"
 
     invoke-virtual {p2, v7}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
 
-    .line 338
     invoke-virtual {p0}, Lcom/android/internal/telephony/IPhoneSubInfo$Stub;->isImsRegistered()Z
 
     move-result v4
 
-    .line 339
     .local v4, "_result":Z
     invoke-virtual {p3}, Landroid/os/Parcel;->writeNoException()V
 
-    .line 340
     if-eqz v4, :cond_2
 
     move v5, v6
@@ -1050,23 +889,19 @@
 
     goto/16 :goto_0
 
-    .line 345
     .end local v4    # "_result":Z
     :sswitch_22
     const-string v7, "com.android.internal.telephony.IPhoneSubInfo"
 
     invoke-virtual {p2, v7}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
 
-    .line 346
     invoke-virtual {p0}, Lcom/android/internal/telephony/IPhoneSubInfo$Stub;->isVolteRegistered()Z
 
     move-result v4
 
-    .line 347
     .restart local v4    # "_result":Z
     invoke-virtual {p3}, Landroid/os/Parcel;->writeNoException()V
 
-    .line 348
     if-eqz v4, :cond_3
 
     move v5, v6
@@ -1076,23 +911,19 @@
 
     goto/16 :goto_0
 
-    .line 353
     .end local v4    # "_result":Z
     :sswitch_23
     const-string v7, "com.android.internal.telephony.IPhoneSubInfo"
 
     invoke-virtual {p2, v7}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
 
-    .line 354
     invoke-virtual {p0}, Lcom/android/internal/telephony/IPhoneSubInfo$Stub;->isWfcRegistered()Z
 
     move-result v4
 
-    .line 355
     .restart local v4    # "_result":Z
     invoke-virtual {p3}, Landroid/os/Parcel;->writeNoException()V
 
-    .line 356
     if-eqz v4, :cond_4
 
     move v5, v6
@@ -1102,50 +933,41 @@
 
     goto/16 :goto_0
 
-    .line 361
     .end local v4    # "_result":Z
     :sswitch_24
     const-string v5, "com.android.internal.telephony.IPhoneSubInfo"
 
     invoke-virtual {p2, v5}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
 
-    .line 362
     invoke-virtual {p0}, Lcom/android/internal/telephony/IPhoneSubInfo$Stub;->getImsRegisteredFeature()I
 
     move-result v4
 
-    .line 363
     .local v4, "_result":I
     invoke-virtual {p3}, Landroid/os/Parcel;->writeNoException()V
 
-    .line 364
     invoke-virtual {p3, v4}, Landroid/os/Parcel;->writeInt(I)V
 
     goto/16 :goto_0
 
-    .line 369
     .end local v4    # "_result":I
     :sswitch_25
     const-string v7, "com.android.internal.telephony.IPhoneSubInfo"
 
     invoke-virtual {p2, v7}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
 
-    .line 371
     invoke-virtual {p2}, Landroid/os/Parcel;->readString()Ljava/lang/String;
 
     move-result-object v0
 
-    .line 372
     .local v0, "_arg0":Ljava/lang/String;
     invoke-virtual {p0, v0}, Lcom/android/internal/telephony/IPhoneSubInfo$Stub;->hasCall(Ljava/lang/String;)Z
 
     move-result v4
 
-    .line 373
     .local v4, "_result":Z
     invoke-virtual {p3}, Landroid/os/Parcel;->writeNoException()V
 
-    .line 374
     if-eqz v4, :cond_5
 
     move v5, v6
@@ -1155,7 +977,6 @@
 
     goto/16 :goto_0
 
-    .line 379
     .end local v0    # "_arg0":Ljava/lang/String;
     .end local v4    # "_result":Z
     :sswitch_26
@@ -1163,22 +984,18 @@
 
     invoke-virtual {p2, v7}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
 
-    .line 381
     invoke-virtual {p2}, Landroid/os/Parcel;->readInt()I
 
     move-result v0
 
-    .line 382
     .local v0, "_arg0":I
     invoke-virtual {p0, v0}, Lcom/android/internal/telephony/IPhoneSubInfo$Stub;->setDrxMode(I)Z
 
     move-result v4
 
-    .line 383
     .restart local v4    # "_result":Z
     invoke-virtual {p3}, Landroid/os/Parcel;->writeNoException()V
 
-    .line 384
     if-eqz v4, :cond_6
 
     move v5, v6
@@ -1188,7 +1005,6 @@
 
     goto/16 :goto_0
 
-    .line 389
     .end local v0    # "_arg0":I
     .end local v4    # "_result":Z
     :sswitch_27
@@ -1196,43 +1012,35 @@
 
     invoke-virtual {p2, v5}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
 
-    .line 390
     invoke-virtual {p0}, Lcom/android/internal/telephony/IPhoneSubInfo$Stub;->getDrxValue()I
 
     move-result v4
 
-    .line 391
     .local v4, "_result":I
     invoke-virtual {p3}, Landroid/os/Parcel;->writeNoException()V
 
-    .line 392
     invoke-virtual {p3, v4}, Landroid/os/Parcel;->writeInt(I)V
 
     goto/16 :goto_0
 
-    .line 397
     .end local v4    # "_result":I
     :sswitch_28
     const-string v7, "com.android.internal.telephony.IPhoneSubInfo"
 
     invoke-virtual {p2, v7}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
 
-    .line 399
     invoke-virtual {p2}, Landroid/os/Parcel;->readInt()I
 
     move-result v0
 
-    .line 400
     .restart local v0    # "_arg0":I
     invoke-virtual {p0, v0}, Lcom/android/internal/telephony/IPhoneSubInfo$Stub;->setReducedCycleTime(I)Z
 
     move-result v4
 
-    .line 401
     .local v4, "_result":Z
     invoke-virtual {p3}, Landroid/os/Parcel;->writeNoException()V
 
-    .line 402
     if-eqz v4, :cond_7
 
     move v5, v6
@@ -1242,7 +1050,6 @@
 
     goto/16 :goto_0
 
-    .line 407
     .end local v0    # "_arg0":I
     .end local v4    # "_result":Z
     :sswitch_29
@@ -1250,90 +1057,73 @@
 
     invoke-virtual {p2, v5}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
 
-    .line 408
     invoke-virtual {p0}, Lcom/android/internal/telephony/IPhoneSubInfo$Stub;->getReducedCycleTime()I
 
     move-result v4
 
-    .line 409
     .local v4, "_result":I
     invoke-virtual {p3}, Landroid/os/Parcel;->writeNoException()V
 
-    .line 410
     invoke-virtual {p3, v4}, Landroid/os/Parcel;->writeInt(I)V
 
     goto/16 :goto_0
 
-    .line 415
     .end local v4    # "_result":I
     :sswitch_2a
     const-string v5, "com.android.internal.telephony.IPhoneSubInfo"
 
     invoke-virtual {p2, v5}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
 
-    .line 416
     invoke-virtual {p0}, Lcom/android/internal/telephony/IPhoneSubInfo$Stub;->getSktImsiM()Ljava/lang/String;
 
     move-result-object v4
 
-    .line 417
     .local v4, "_result":Ljava/lang/String;
     invoke-virtual {p3}, Landroid/os/Parcel;->writeNoException()V
 
-    .line 418
     invoke-virtual {p3, v4}, Landroid/os/Parcel;->writeString(Ljava/lang/String;)V
 
     goto/16 :goto_0
 
-    .line 423
     .end local v4    # "_result":Ljava/lang/String;
     :sswitch_2b
     const-string v5, "com.android.internal.telephony.IPhoneSubInfo"
 
     invoke-virtual {p2, v5}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
 
-    .line 424
     invoke-virtual {p0}, Lcom/android/internal/telephony/IPhoneSubInfo$Stub;->getSktIrm()Ljava/lang/String;
 
     move-result-object v4
 
-    .line 425
     .restart local v4    # "_result":Ljava/lang/String;
     invoke-virtual {p3}, Landroid/os/Parcel;->writeNoException()V
 
-    .line 426
     invoke-virtual {p3, v4}, Landroid/os/Parcel;->writeString(Ljava/lang/String;)V
 
     goto/16 :goto_0
 
-    .line 431
     .end local v4    # "_result":Ljava/lang/String;
     :sswitch_2c
     const-string v5, "com.android.internal.telephony.IPhoneSubInfo"
 
     invoke-virtual {p2, v5}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
 
-    .line 433
     invoke-virtual {p2}, Landroid/os/Parcel;->readInt()I
 
     move-result v0
 
-    .line 434
     .restart local v0    # "_arg0":I
     invoke-virtual {p0, v0}, Lcom/android/internal/telephony/IPhoneSubInfo$Stub;->getLine1NumberType(I)Ljava/lang/String;
 
     move-result-object v4
 
-    .line 435
     .restart local v4    # "_result":Ljava/lang/String;
     invoke-virtual {p3}, Landroid/os/Parcel;->writeNoException()V
 
-    .line 436
     invoke-virtual {p3, v4}, Landroid/os/Parcel;->writeString(Ljava/lang/String;)V
 
     goto/16 :goto_0
 
-    .line 441
     .end local v0    # "_arg0":I
     .end local v4    # "_result":Ljava/lang/String;
     :sswitch_2d
@@ -1341,27 +1131,22 @@
 
     invoke-virtual {p2, v5}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
 
-    .line 443
     invoke-virtual {p2}, Landroid/os/Parcel;->readInt()I
 
     move-result v0
 
-    .line 444
     .restart local v0    # "_arg0":I
     invoke-virtual {p0, v0}, Lcom/android/internal/telephony/IPhoneSubInfo$Stub;->getSubscriberIdType(I)Ljava/lang/String;
 
     move-result-object v4
 
-    .line 445
     .restart local v4    # "_result":Ljava/lang/String;
     invoke-virtual {p3}, Landroid/os/Parcel;->writeNoException()V
 
-    .line 446
     invoke-virtual {p3, v4}, Landroid/os/Parcel;->writeString(Ljava/lang/String;)V
 
     goto/16 :goto_0
 
-    .line 451
     .end local v0    # "_arg0":I
     .end local v4    # "_result":Ljava/lang/String;
     :sswitch_2e
@@ -1369,126 +1154,102 @@
 
     invoke-virtual {p2, v5}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
 
-    .line 452
     invoke-virtual {p0}, Lcom/android/internal/telephony/IPhoneSubInfo$Stub;->getIsimAid()Ljava/lang/String;
 
     move-result-object v4
 
-    .line 453
     .restart local v4    # "_result":Ljava/lang/String;
     invoke-virtual {p3}, Landroid/os/Parcel;->writeNoException()V
 
-    .line 454
     invoke-virtual {p3, v4}, Landroid/os/Parcel;->writeString(Ljava/lang/String;)V
 
     goto/16 :goto_0
 
-    .line 459
     .end local v4    # "_result":Ljava/lang/String;
     :sswitch_2f
     const-string v5, "com.android.internal.telephony.IPhoneSubInfo"
 
     invoke-virtual {p2, v5}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
 
-    .line 460
     invoke-virtual {p0}, Lcom/android/internal/telephony/IPhoneSubInfo$Stub;->getRand()[B
 
     move-result-object v4
 
-    .line 461
     .local v4, "_result":[B
     invoke-virtual {p3}, Landroid/os/Parcel;->writeNoException()V
 
-    .line 462
     invoke-virtual {p3, v4}, Landroid/os/Parcel;->writeByteArray([B)V
 
     goto/16 :goto_0
 
-    .line 467
     .end local v4    # "_result":[B
     :sswitch_30
     const-string v5, "com.android.internal.telephony.IPhoneSubInfo"
 
     invoke-virtual {p2, v5}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
 
-    .line 468
     invoke-virtual {p0}, Lcom/android/internal/telephony/IPhoneSubInfo$Stub;->getBtid()Ljava/lang/String;
 
     move-result-object v4
 
-    .line 469
     .local v4, "_result":Ljava/lang/String;
     invoke-virtual {p3}, Landroid/os/Parcel;->writeNoException()V
 
-    .line 470
     invoke-virtual {p3, v4}, Landroid/os/Parcel;->writeString(Ljava/lang/String;)V
 
     goto/16 :goto_0
 
-    .line 475
     .end local v4    # "_result":Ljava/lang/String;
     :sswitch_31
     const-string v5, "com.android.internal.telephony.IPhoneSubInfo"
 
     invoke-virtual {p2, v5}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
 
-    .line 476
     invoke-virtual {p0}, Lcom/android/internal/telephony/IPhoneSubInfo$Stub;->getKeyLifetime()Ljava/lang/String;
 
     move-result-object v4
 
-    .line 477
     .restart local v4    # "_result":Ljava/lang/String;
     invoke-virtual {p3}, Landroid/os/Parcel;->writeNoException()V
 
-    .line 478
     invoke-virtual {p3, v4}, Landroid/os/Parcel;->writeString(Ljava/lang/String;)V
 
     goto/16 :goto_0
 
-    .line 483
     .end local v4    # "_result":Ljava/lang/String;
     :sswitch_32
     const-string v5, "com.android.internal.telephony.IPhoneSubInfo"
 
     invoke-virtual {p2, v5}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
 
-    .line 484
     invoke-virtual {p0}, Lcom/android/internal/telephony/IPhoneSubInfo$Stub;->getSponImsi()[Ljava/lang/String;
 
     move-result-object v4
 
-    .line 485
     .local v4, "_result":[Ljava/lang/String;
     invoke-virtual {p3}, Landroid/os/Parcel;->writeNoException()V
 
-    .line 486
     invoke-virtual {p3, v4}, Landroid/os/Parcel;->writeStringArray([Ljava/lang/String;)V
 
     goto/16 :goto_0
 
-    .line 491
     .end local v4    # "_result":[Ljava/lang/String;
     :sswitch_33
     const-string v5, "com.android.internal.telephony.IPhoneSubInfo"
 
     invoke-virtual {p2, v5}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
 
-    .line 493
     invoke-virtual {p2}, Landroid/os/Parcel;->readInt()I
 
     move-result v0
 
-    .line 494
     .restart local v0    # "_arg0":I
     invoke-virtual {p0, v0}, Lcom/android/internal/telephony/IPhoneSubInfo$Stub;->setPcoValue(I)V
 
-    .line 495
     invoke-virtual {p3}, Landroid/os/Parcel;->writeNoException()V
 
     goto/16 :goto_0
 
-    .line 42
     nop
 
     :sswitch_data_0

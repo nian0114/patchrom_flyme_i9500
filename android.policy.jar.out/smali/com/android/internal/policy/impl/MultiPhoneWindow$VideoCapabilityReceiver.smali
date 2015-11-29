@@ -25,12 +25,10 @@
     .locals 1
 
     .prologue
-    .line 451
     iput-object p1, p0, Lcom/android/internal/policy/impl/MultiPhoneWindow$VideoCapabilityReceiver;->this$0:Lcom/android/internal/policy/impl/MultiPhoneWindow;
 
     invoke-direct {p0}, Landroid/content/BroadcastReceiver;-><init>()V
 
-    .line 461
     const/4 v0, 0x0
 
     iput-object v0, p0, Lcom/android/internal/policy/impl/MultiPhoneWindow$VideoCapabilityReceiver;->mVideoCapabilityAlert:Landroid/app/AlertDialog$Builder;
@@ -44,7 +42,6 @@
     .param p1, "x1"    # Landroid/app/AlertDialog$Builder;
 
     .prologue
-    .line 451
     iput-object p1, p0, Lcom/android/internal/policy/impl/MultiPhoneWindow$VideoCapabilityReceiver;->mVideoCapabilityAlert:Landroid/app/AlertDialog$Builder;
 
     return-object p1
@@ -58,21 +55,17 @@
     .param p2, "intent"    # Landroid/content/Intent;
 
     .prologue
-    .line 465
     iget-object v4, p0, Lcom/android/internal/policy/impl/MultiPhoneWindow$VideoCapabilityReceiver;->mVideoCapabilityAlert:Landroid/app/AlertDialog$Builder;
 
     if-nez v4, :cond_0
 
-    .line 467
     invoke-virtual {p2}, Landroid/content/Intent;->getType()Ljava/lang/String;
 
     move-result-object v3
 
-    .line 468
     .local v3, "type":Ljava/lang/String;
     const/4 v2, -0x1
 
-    .line 470
     .local v2, "requestedPid":I
     :try_start_0
     invoke-static {v3}, Ljava/lang/Integer;->valueOf(Ljava/lang/String;)Ljava/lang/Integer;
@@ -85,27 +78,22 @@
 
     move-result v2
 
-    .line 474
     :goto_0
     const/4 v4, -0x1
 
     if-le v2, v4, :cond_0
 
-    .line 475
     new-instance v1, Landroid/app/ActivityManager$RunningAppProcessInfo;
 
     invoke-direct {v1}, Landroid/app/ActivityManager$RunningAppProcessInfo;-><init>()V
 
-    .line 476
     .local v1, "pinfo":Landroid/app/ActivityManager$RunningAppProcessInfo;
     invoke-static {v1}, Landroid/app/ActivityManager;->getMyMemoryState(Landroid/app/ActivityManager$RunningAppProcessInfo;)V
 
-    .line 477
     iget v4, v1, Landroid/app/ActivityManager$RunningAppProcessInfo;->pid:I
 
     if-ne v4, v2, :cond_0
 
-    .line 478
     new-instance v4, Landroid/app/AlertDialog$Builder;
 
     iget-object v5, p0, Lcom/android/internal/policy/impl/MultiPhoneWindow$VideoCapabilityReceiver;->this$0:Lcom/android/internal/policy/impl/MultiPhoneWindow;
@@ -119,7 +107,6 @@
 
     iput-object v4, p0, Lcom/android/internal/policy/impl/MultiPhoneWindow$VideoCapabilityReceiver;->mVideoCapabilityAlert:Landroid/app/AlertDialog$Builder;
 
-    .line 479
     iget-object v4, p0, Lcom/android/internal/policy/impl/MultiPhoneWindow$VideoCapabilityReceiver;->mVideoCapabilityAlert:Landroid/app/AlertDialog$Builder;
 
     const v5, 0x104000a
@@ -130,32 +117,27 @@
 
     invoke-virtual {v4, v5, v6}, Landroid/app/AlertDialog$Builder;->setPositiveButton(ILandroid/content/DialogInterface$OnClickListener;)Landroid/app/AlertDialog$Builder;
 
-    .line 486
     iget-object v4, p0, Lcom/android/internal/policy/impl/MultiPhoneWindow$VideoCapabilityReceiver;->mVideoCapabilityAlert:Landroid/app/AlertDialog$Builder;
 
     const v5, 0x1040b82
 
     invoke-virtual {v4, v5}, Landroid/app/AlertDialog$Builder;->setMessage(I)Landroid/app/AlertDialog$Builder;
 
-    .line 487
     iget-object v4, p0, Lcom/android/internal/policy/impl/MultiPhoneWindow$VideoCapabilityReceiver;->mVideoCapabilityAlert:Landroid/app/AlertDialog$Builder;
 
     invoke-virtual {v4}, Landroid/app/AlertDialog$Builder;->show()Landroid/app/AlertDialog;
 
-    .line 491
     .end local v1    # "pinfo":Landroid/app/ActivityManager$RunningAppProcessInfo;
     .end local v2    # "requestedPid":I
     .end local v3    # "type":Ljava/lang/String;
     :cond_0
     return-void
 
-    .line 471
     .restart local v2    # "requestedPid":I
     .restart local v3    # "type":Ljava/lang/String;
     :catch_0
     move-exception v0
 
-    .line 472
     .local v0, "e":Ljava/lang/NumberFormatException;
     const-string v4, "MultiPhoneWindow"
 
@@ -170,14 +152,12 @@
     .locals 2
 
     .prologue
-    .line 453
     new-instance v0, Landroid/content/IntentFilter;
 
     const-string v1, "android.intent.action.VIDEOCAPABILITY"
 
     invoke-direct {v0, v1}, Landroid/content/IntentFilter;-><init>(Ljava/lang/String;)V
 
-    .line 454
     .local v0, "intentFilter":Landroid/content/IntentFilter;
     iget-object v1, p0, Lcom/android/internal/policy/impl/MultiPhoneWindow$VideoCapabilityReceiver;->this$0:Lcom/android/internal/policy/impl/MultiPhoneWindow;
 
@@ -188,7 +168,6 @@
 
     invoke-virtual {v1, p0, v0}, Landroid/content/Context;->registerReceiver(Landroid/content/BroadcastReceiver;Landroid/content/IntentFilter;)Landroid/content/Intent;
 
-    .line 455
     return-void
 .end method
 
@@ -196,7 +175,6 @@
     .locals 1
 
     .prologue
-    .line 458
     iget-object v0, p0, Lcom/android/internal/policy/impl/MultiPhoneWindow$VideoCapabilityReceiver;->this$0:Lcom/android/internal/policy/impl/MultiPhoneWindow;
 
     # getter for: Lcom/android/internal/policy/impl/MultiPhoneWindow;->mContext:Landroid/content/Context;
@@ -206,6 +184,5 @@
 
     invoke-virtual {v0, p0}, Landroid/content/Context;->unregisterReceiver(Landroid/content/BroadcastReceiver;)V
 
-    .line 459
     return-void
 .end method

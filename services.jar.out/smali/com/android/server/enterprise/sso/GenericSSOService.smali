@@ -161,28 +161,24 @@
     .locals 1
 
     .prologue
-    .line 175
     new-instance v0, Ljava/lang/Object;
 
     invoke-direct {v0}, Ljava/lang/Object;-><init>()V
 
     sput-object v0, Lcom/android/server/enterprise/sso/GenericSSOService;->SERVICECONNECTIONWAIT:Ljava/lang/Object;
 
-    .line 234
     new-instance v0, Ljava/lang/Object;
 
     invoke-direct {v0}, Ljava/lang/Object;-><init>()V
 
     sput-object v0, Lcom/android/server/enterprise/sso/GenericSSOService;->mSecretKeyLock:Ljava/lang/Object;
 
-    .line 235
     new-instance v0, Ljava/lang/Object;
 
     invoke-direct {v0}, Ljava/lang/Object;-><init>()V
 
     sput-object v0, Lcom/android/server/enterprise/sso/GenericSSOService;->mCacheLock:Ljava/lang/Object;
 
-    .line 237
     new-instance v0, Ljava/util/concurrent/ConcurrentHashMap;
 
     invoke-direct {v0}, Ljava/util/concurrent/ConcurrentHashMap;-><init>()V
@@ -199,63 +195,51 @@
     .prologue
     const-wide/16 v0, -0x2710
 
-    .line 249
     invoke-direct {p0}, Landroid/app/enterprise/sso/IGenericSSO$Stub;-><init>()V
 
-    .line 239
     iput-wide v0, p0, Lcom/android/server/enterprise/sso/GenericSSOService;->initUTCTime:J
 
-    .line 240
     iput-wide v0, p0, Lcom/android/server/enterprise/sso/GenericSSOService;->initElapsedTime:J
 
-    .line 250
     iput-object p1, p0, Lcom/android/server/enterprise/sso/GenericSSOService;->mContext:Landroid/content/Context;
 
-    .line 251
     new-instance v0, Landroid/util/SparseArray;
 
     invoke-direct {v0}, Landroid/util/SparseArray;-><init>()V
 
     sput-object v0, Lcom/android/server/enterprise/sso/GenericSSOService;->requestConfigXMLDocs:Landroid/util/SparseArray;
 
-    .line 252
     new-instance v0, Landroid/util/SparseArray;
 
     invoke-direct {v0}, Landroid/util/SparseArray;-><init>()V
 
     sput-object v0, Lcom/android/server/enterprise/sso/GenericSSOService;->tokenConfigXMLDocs:Landroid/util/SparseArray;
 
-    .line 254
     invoke-direct {p0}, Lcom/android/server/enterprise/sso/GenericSSOService;->getUserId()I
 
     move-result v0
 
     invoke-direct {p0, v0}, Lcom/android/server/enterprise/sso/GenericSSOService;->initRequestConfigDoc(I)V
 
-    .line 255
     invoke-direct {p0}, Lcom/android/server/enterprise/sso/GenericSSOService;->getUserId()I
 
     move-result v0
 
     invoke-direct {p0, v0}, Lcom/android/server/enterprise/sso/GenericSSOService;->initTokenConfigDoc(I)V
 
-    .line 256
     sget-boolean v0, Landroid/app/enterprise/sso/GenericSSOConstants;->DEBUG:Z
 
     if-eqz v0, :cond_0
 
-    .line 257
     const-string v0, "GenericSSOService"
 
     const-string v1, "In GenericSSOService: registerReceiverForKeyClear"
 
     invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 258
     :cond_0
     invoke-direct {p0}, Lcom/android/server/enterprise/sso/GenericSSOService;->registerReceiverForKeyClear()V
 
-    .line 259
     return-void
 .end method
 
@@ -266,7 +250,6 @@
     .param p2, "x2"    # Landroid/os/Bundle;
 
     .prologue
-    .line 144
     invoke-direct {p0, p1, p2}, Lcom/android/server/enterprise/sso/GenericSSOService;->getTokenFromConfigData(ILandroid/os/Bundle;)Landroid/app/enterprise/sso/TokenInfo;
 
     move-result-object v0
@@ -279,7 +262,6 @@
     .param p0, "x0"    # Ljavax/crypto/SecretKey;
 
     .prologue
-    .line 144
     sput-object p0, Lcom/android/server/enterprise/sso/GenericSSOService;->sSecretKeyFromAndroidKeyStore:Ljavax/crypto/SecretKey;
 
     return-object p0
@@ -289,7 +271,6 @@
     .locals 1
 
     .prologue
-    .line 144
     sget-object v0, Lcom/android/server/enterprise/sso/GenericSSOService;->mSSOInterfaceMap:Ljava/util/Map;
 
     return-object v0
@@ -299,7 +280,6 @@
     .locals 1
 
     .prologue
-    .line 144
     sget-object v0, Lcom/android/server/enterprise/sso/GenericSSOService;->countDownLatch:Ljava/util/concurrent/CountDownLatch;
 
     return-object v0
@@ -310,7 +290,6 @@
     .param p0, "x0"    # Lcom/android/server/enterprise/sso/GenericSSOService;
 
     .prologue
-    .line 144
     iget-wide v0, p0, Lcom/android/server/enterprise/sso/GenericSSOService;->initUTCTime:J
 
     return-wide v0
@@ -322,7 +301,6 @@
     .param p1, "x1"    # J
 
     .prologue
-    .line 144
     iput-wide p1, p0, Lcom/android/server/enterprise/sso/GenericSSOService;->initUTCTime:J
 
     return-wide p1
@@ -332,7 +310,6 @@
     .locals 1
 
     .prologue
-    .line 144
     sget-object v0, Lcom/android/server/enterprise/sso/GenericSSOService;->countDownLatchNTP:Ljava/util/concurrent/CountDownLatch;
 
     return-object v0
@@ -343,7 +320,6 @@
     .param p0, "x0"    # Ljava/security/Key;
 
     .prologue
-    .line 144
     sput-object p0, Lcom/android/server/enterprise/sso/GenericSSOService;->mSecretKey:Ljava/security/Key;
 
     return-object p0
@@ -354,7 +330,6 @@
     .param p0, "x0"    # Ljava/security/KeyPair;
 
     .prologue
-    .line 144
     sput-object p0, Lcom/android/server/enterprise/sso/GenericSSOService;->mKeyPair:Ljava/security/KeyPair;
 
     return-object p0
@@ -364,7 +339,6 @@
     .locals 1
 
     .prologue
-    .line 144
     sget-object v0, Lcom/android/server/enterprise/sso/GenericSSOService;->tokenConfigXMLDocs:Landroid/util/SparseArray;
 
     return-object v0
@@ -375,7 +349,6 @@
     .param p0, "x0"    # Ljava/security/KeyStore;
 
     .prologue
-    .line 144
     sput-object p0, Lcom/android/server/enterprise/sso/GenericSSOService;->mKeystore:Ljava/security/KeyStore;
 
     return-object p0
@@ -388,13 +361,11 @@
     .param p3, "token"    # Landroid/app/enterprise/sso/TokenInfo;
 
     .prologue
-    .line 3516
     :try_start_0
     invoke-direct {p0, p1}, Lcom/android/server/enterprise/sso/GenericSSOService;->getTokenConfigForUserId(I)Lcom/android/server/enterprise/sso/GenericSSOService$TokenConfigDocument;
 
     move-result-object v0
 
-    .line 3517
     .local v0, "configDoc":Lcom/android/server/enterprise/sso/GenericSSOService$TokenConfigDocument;
     # invokes: Lcom/android/server/enterprise/sso/GenericSSOService$TokenConfigDocument;->getSSOTokenNode(Ljava/lang/String;)Lorg/w3c/dom/Node;
     invoke-static {v0, p2}, Lcom/android/server/enterprise/sso/GenericSSOService$TokenConfigDocument;->access$1300(Lcom/android/server/enterprise/sso/GenericSSOService$TokenConfigDocument;Ljava/lang/String;)Lorg/w3c/dom/Node;
@@ -403,16 +374,13 @@
 
     check-cast v6, Lorg/w3c/dom/Element;
 
-    .line 3518
     .local v6, "tokenNode":Lorg/w3c/dom/Element;
     if-nez v6, :cond_1
 
-    .line 3519
     sget-boolean v8, Landroid/app/enterprise/sso/GenericSSOConstants;->DEBUG:Z
 
     if-eqz v8, :cond_0
 
-    .line 3520
     const-string v8, "GenericSSOService"
 
     new-instance v9, Ljava/lang/StringBuilder;
@@ -441,7 +409,6 @@
 
     invoke-static {v8, v9}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 3523
     :cond_0
     iget-object v8, v0, Lcom/android/server/enterprise/sso/GenericSSOService$TokenConfigDocument;->XMLDoc:Lorg/w3c/dom/Document;
 
@@ -451,12 +418,10 @@
 
     move-result-object v6
 
-    .line 3524
-    const-string/jumbo v8, "packagename"
+    const-string v8, "packagename"
 
     invoke-interface {v6, v8, p2}, Lorg/w3c/dom/Element;->setAttribute(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 3525
     iget-object v8, v0, Lcom/android/server/enterprise/sso/GenericSSOService$TokenConfigDocument;->XMLDoc:Lorg/w3c/dom/Document;
 
     invoke-interface {v8}, Lorg/w3c/dom/Document;->getFirstChild()Lorg/w3c/dom/Node;
@@ -465,9 +430,8 @@
 
     invoke-interface {v8, v6}, Lorg/w3c/dom/Node;->appendChild(Lorg/w3c/dom/Node;)Lorg/w3c/dom/Node;
 
-    .line 3527
     :cond_1
-    const-string/jumbo v8, "protocoltype"
+    const-string v8, "protocoltype"
 
     new-instance v9, Ljava/lang/StringBuilder;
 
@@ -493,18 +457,15 @@
 
     invoke-interface {v6, v8, v9}, Lorg/w3c/dom/Element;->setAttribute(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 3531
     invoke-virtual {p3}, Landroid/app/enterprise/sso/TokenInfo;->getResponseBundle()Landroid/os/Bundle;
 
     move-result-object v5
 
-    .line 3532
     .local v5, "tokenBundle":Landroid/os/Bundle;
     invoke-virtual {v5}, Landroid/os/Bundle;->keySet()Ljava/util/Set;
 
     move-result-object v4
 
-    .line 3533
     .local v4, "keySet":Ljava/util/Set;, "Ljava/util/Set<Ljava/lang/String;>;"
     invoke-interface {v4}, Ljava/util/Set;->iterator()Ljava/util/Iterator;
 
@@ -525,13 +486,11 @@
 
     check-cast v3, Ljava/lang/String;
 
-    .line 3534
     .local v3, "key":Ljava/lang/String;
     invoke-virtual {v5, v3}, Landroid/os/Bundle;->getString(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v7
 
-    .line 3535
     .local v7, "value":Ljava/lang/String;
     invoke-direct {p0, v7}, Lcom/android/server/enterprise/sso/GenericSSOService;->isNullOrEmpty(Ljava/lang/String;)Z
 
@@ -539,7 +498,6 @@
 
     if-nez v8, :cond_2
 
-    .line 3536
     const-string v8, "SAML_RESPONSE_USER_CERT"
 
     invoke-virtual {v3, v8}, Ljava/lang/String;->startsWith(Ljava/lang/String;)Z
@@ -572,7 +530,6 @@
 
     if-nez v8, :cond_2
 
-    .line 3540
     invoke-direct {p0, v0, v6, v3, v7}, Lcom/android/server/enterprise/sso/GenericSSOService;->fillChildNodes(Lcom/android/server/enterprise/sso/GenericSSOService$TokenConfigDocument;Lorg/w3c/dom/Element;Ljava/lang/String;Ljava/lang/String;)V
     :try_end_0
     .catch Ljava/lang/NullPointerException; {:try_start_0 .. :try_end_0} :catch_0
@@ -580,7 +537,6 @@
 
     goto :goto_0
 
-    .line 3546
     .end local v0    # "configDoc":Lcom/android/server/enterprise/sso/GenericSSOService$TokenConfigDocument;
     .end local v2    # "i$":Ljava/util/Iterator;
     .end local v3    # "key":Ljava/lang/String;
@@ -591,7 +547,6 @@
     :catch_0
     move-exception v1
 
-    .line 3548
     .local v1, "e":Ljava/lang/NullPointerException;
     const-string v8, "GenericSSOService"
 
@@ -599,7 +554,6 @@
 
     invoke-static {v8, v9, v1}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
-    .line 3557
     .end local v1    # "e":Ljava/lang/NullPointerException;
     :goto_1
     const/4 v8, -0x1
@@ -607,7 +561,6 @@
     :goto_2
     return v8
 
-    .line 3544
     .restart local v0    # "configDoc":Lcom/android/server/enterprise/sso/GenericSSOService$TokenConfigDocument;
     .restart local v2    # "i$":Ljava/util/Iterator;
     .restart local v4    # "keySet":Ljava/util/Set;, "Ljava/util/Set<Ljava/lang/String;>;"
@@ -620,12 +573,10 @@
     .catch Ljava/lang/NullPointerException; {:try_start_1 .. :try_end_1} :catch_0
     .catch Ljava/lang/Exception; {:try_start_1 .. :try_end_1} :catch_1
 
-    .line 3545
     const/4 v8, 0x0
 
     goto :goto_2
 
-    .line 3551
     .end local v0    # "configDoc":Lcom/android/server/enterprise/sso/GenericSSOService$TokenConfigDocument;
     .end local v2    # "i$":Ljava/util/Iterator;
     .end local v4    # "keySet":Ljava/util/Set;, "Ljava/util/Set<Ljava/lang/String;>;"
@@ -634,7 +585,6 @@
     :catch_1
     move-exception v1
 
-    .line 3553
     .local v1, "e":Ljava/lang/Exception;
     const-string v8, "GenericSSOService"
 
@@ -672,38 +622,32 @@
     .param p3, "token"    # Landroid/app/enterprise/sso/TokenInfo;
 
     .prologue
-    .line 3214
     invoke-direct {p0, p2}, Lcom/android/server/enterprise/sso/GenericSSOService;->isNullOrEmpty(Ljava/lang/String;)Z
 
     move-result v3
 
     if-eqz v3, :cond_0
 
-    .line 3215
     sget-boolean v3, Landroid/app/enterprise/sso/GenericSSOConstants;->DEBUG:Z
 
     if-eqz v3, :cond_0
 
-    .line 3216
     const-string v3, "GenericSSOService"
 
     const-string v4, "In addTokenToGenericSSO: appPkgName is null or empty string"
 
     invoke-static {v3, v4}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 3219
     :cond_0
     invoke-static {p1}, Lcom/android/server/enterprise/EnterpriseDeviceManagerService;->getCallingOrCurrentUserId(Landroid/app/enterprise/ContextInfo;)I
 
     move-result v2
 
-    .line 3221
     .local v2, "userId":I
     invoke-static {}, Landroid/os/Binder;->getCallingPid()I
 
     move-result v1
 
-    .line 3222
     .local v1, "pid":I
     const/4 v3, 0x0
 
@@ -711,7 +655,6 @@
 
     move-result-object v0
 
-    .line 3224
     .local v0, "packageName":Ljava/lang/String;
     invoke-direct {p0, v2, v0}, Lcom/android/server/enterprise/sso/GenericSSOService;->vendorPermissionCheck(ILjava/lang/String;)Z
 
@@ -719,27 +662,22 @@
 
     if-nez v3, :cond_2
 
-    .line 3225
     sget-boolean v3, Landroid/app/enterprise/sso/GenericSSOConstants;->DEBUG:Z
 
     if-eqz v3, :cond_1
 
-    .line 3226
     const-string v3, "GenericSSOService"
 
     const-string v4, "In addTokenToGenericSSO: authenticator is not permitted to call this API"
 
     invoke-static {v3, v4}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 3228
     :cond_1
     const/4 v3, -0x1
 
-    .line 3239
     :goto_0
     return v3
 
-    .line 3230
     :cond_2
     invoke-virtual {p2, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
@@ -747,19 +685,16 @@
 
     if-eqz v3, :cond_4
 
-    .line 3231
     sget-boolean v3, Landroid/app/enterprise/sso/GenericSSOConstants;->DEBUG:Z
 
     if-eqz v3, :cond_3
 
-    .line 3232
     const-string v3, "GenericSSOService"
 
     const-string v4, "In addTokenToGenericSSO: appPkgName is authenticator packagename, we add share token"
 
     invoke-static {v3, v4}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 3234
     :cond_3
     invoke-direct {p0, v2, p3}, Lcom/android/server/enterprise/sso/GenericSSOService;->addUserAndDeviceCertificatesForUser(ILandroid/app/enterprise/sso/TokenInfo;)I
 
@@ -767,20 +702,17 @@
 
     goto :goto_0
 
-    .line 3236
     :cond_4
     sget-boolean v3, Landroid/app/enterprise/sso/GenericSSOConstants;->DEBUG:Z
 
     if-eqz v3, :cond_5
 
-    .line 3237
     const-string v3, "GenericSSOService"
 
     const-string v4, "In addTokenToGenericSSO: appPkgName is not application packagename, we add app token"
 
     invoke-static {v3, v4}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 3239
     :cond_5
     invoke-direct {p0, v2, p2, p3}, Lcom/android/server/enterprise/sso/GenericSSOService;->addAppTokenToSecureStorageForUser(ILjava/lang/String;Landroid/app/enterprise/sso/TokenInfo;)I
 
@@ -796,12 +728,10 @@
     .param p3, "token"    # Landroid/app/enterprise/sso/TokenInfo;
 
     .prologue
-    .line 3459
     invoke-static {p1}, Lcom/android/server/enterprise/EnterpriseDeviceManagerService;->getCallingOrCurrentUserId(Landroid/app/enterprise/ContextInfo;)I
 
     move-result v0
 
-    .line 3461
     .local v0, "userId":I
     invoke-direct {p0, v0, p2, p3}, Lcom/android/server/enterprise/sso/GenericSSOService;->addTokenToSecureStorageForUser(ILjava/lang/String;Landroid/app/enterprise/sso/TokenInfo;)I
 
@@ -817,7 +747,6 @@
     .param p3, "token"    # Landroid/app/enterprise/sso/TokenInfo;
 
     .prologue
-    .line 3566
     if-eqz p3, :cond_0
 
     invoke-virtual/range {p3 .. p3}, Landroid/app/enterprise/sso/TokenInfo;->getResponseBundle()Landroid/os/Bundle;
@@ -826,35 +755,29 @@
 
     if-nez v10, :cond_2
 
-    .line 3567
     :cond_0
     sget-boolean v10, Landroid/app/enterprise/sso/GenericSSOConstants;->DEBUG:Z
 
     if-eqz v10, :cond_1
 
-    .line 3568
     const-string v10, "GenericSSOService"
 
     const-string v11, "In addTokenToSecureStorageForUser: token to save is null"
 
     invoke-static {v10, v11}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 3570
     :cond_1
     const/4 v10, -0x3
 
-    .line 3634
     :goto_0
     return v10
 
-    .line 3573
     :cond_2
     :try_start_0
     invoke-direct {p0, p1}, Lcom/android/server/enterprise/sso/GenericSSOService;->getTokenConfigForUserId(I)Lcom/android/server/enterprise/sso/GenericSSOService$TokenConfigDocument;
 
     move-result-object v0
 
-    .line 3574
     .local v0, "configDoc":Lcom/android/server/enterprise/sso/GenericSSOService$TokenConfigDocument;
     # invokes: Lcom/android/server/enterprise/sso/GenericSSOService$TokenConfigDocument;->getUserCertificate()Lorg/w3c/dom/Node;
     invoke-static {v0}, Lcom/android/server/enterprise/sso/GenericSSOService$TokenConfigDocument;->access$1000(Lcom/android/server/enterprise/sso/GenericSSOService$TokenConfigDocument;)Lorg/w3c/dom/Node;
@@ -863,33 +786,28 @@
 
     check-cast v8, Lorg/w3c/dom/Element;
 
-    .line 3575
     .local v8, "userCertNode":Lorg/w3c/dom/Element;
     if-nez v8, :cond_4
 
-    .line 3576
     sget-boolean v10, Landroid/app/enterprise/sso/GenericSSOConstants;->DEBUG:Z
 
     if-eqz v10, :cond_3
 
-    .line 3577
     const-string v10, "GenericSSOService"
 
     const-string v11, "In addTokenToSecureStorageForUser: the usercert doesn\'t exist"
 
     invoke-static {v10, v11}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 3579
     :cond_3
     iget-object v10, v0, Lcom/android/server/enterprise/sso/GenericSSOService$TokenConfigDocument;->XMLDoc:Lorg/w3c/dom/Document;
 
-    const-string/jumbo v11, "usercertificate"
+    const-string v11, "usercertificate"
 
     invoke-interface {v10, v11}, Lorg/w3c/dom/Document;->createElement(Ljava/lang/String;)Lorg/w3c/dom/Element;
 
     move-result-object v8
 
-    .line 3581
     iget-object v10, v0, Lcom/android/server/enterprise/sso/GenericSSOService$TokenConfigDocument;->XMLDoc:Lorg/w3c/dom/Document;
 
     invoke-interface {v10}, Lorg/w3c/dom/Document;->getFirstChild()Lorg/w3c/dom/Node;
@@ -898,7 +816,6 @@
 
     invoke-interface {v10, v8}, Lorg/w3c/dom/Node;->appendChild(Lorg/w3c/dom/Node;)Lorg/w3c/dom/Node;
 
-    .line 3583
     :cond_4
     # invokes: Lcom/android/server/enterprise/sso/GenericSSOService$TokenConfigDocument;->getDeviceCertificate()Lorg/w3c/dom/Node;
     invoke-static {v0}, Lcom/android/server/enterprise/sso/GenericSSOService$TokenConfigDocument;->access$1100(Lcom/android/server/enterprise/sso/GenericSSOService$TokenConfigDocument;)Lorg/w3c/dom/Node;
@@ -907,23 +824,19 @@
 
     check-cast v1, Lorg/w3c/dom/Element;
 
-    .line 3584
     .local v1, "deviceCertNode":Lorg/w3c/dom/Element;
     if-nez v1, :cond_6
 
-    .line 3585
     sget-boolean v10, Landroid/app/enterprise/sso/GenericSSOConstants;->DEBUG:Z
 
     if-eqz v10, :cond_5
 
-    .line 3586
     const-string v10, "GenericSSOService"
 
     const-string v11, "In addTokenToSecureStorageForUser: the deviceCert doesn\'t exist"
 
     invoke-static {v10, v11}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 3588
     :cond_5
     iget-object v10, v0, Lcom/android/server/enterprise/sso/GenericSSOService$TokenConfigDocument;->XMLDoc:Lorg/w3c/dom/Document;
 
@@ -933,7 +846,6 @@
 
     move-result-object v1
 
-    .line 3590
     iget-object v10, v0, Lcom/android/server/enterprise/sso/GenericSSOService$TokenConfigDocument;->XMLDoc:Lorg/w3c/dom/Document;
 
     invoke-interface {v10}, Lorg/w3c/dom/Document;->getFirstChild()Lorg/w3c/dom/Node;
@@ -942,7 +854,6 @@
 
     invoke-interface {v10, v1}, Lorg/w3c/dom/Node;->appendChild(Lorg/w3c/dom/Node;)Lorg/w3c/dom/Node;
 
-    .line 3592
     :cond_6
     # invokes: Lcom/android/server/enterprise/sso/GenericSSOService$TokenConfigDocument;->getSSOTokenNode(Ljava/lang/String;)Lorg/w3c/dom/Node;
     invoke-static {v0, p2}, Lcom/android/server/enterprise/sso/GenericSSOService$TokenConfigDocument;->access$1300(Lcom/android/server/enterprise/sso/GenericSSOService$TokenConfigDocument;Ljava/lang/String;)Lorg/w3c/dom/Node;
@@ -951,16 +862,13 @@
 
     check-cast v7, Lorg/w3c/dom/Element;
 
-    .line 3593
     .local v7, "tokenNode":Lorg/w3c/dom/Element;
     if-nez v7, :cond_8
 
-    .line 3594
     sget-boolean v10, Landroid/app/enterprise/sso/GenericSSOConstants;->DEBUG:Z
 
     if-eqz v10, :cond_7
 
-    .line 3595
     const-string v10, "GenericSSOService"
 
     new-instance v11, Ljava/lang/StringBuilder;
@@ -989,7 +897,6 @@
 
     invoke-static {v10, v11}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 3598
     :cond_7
     iget-object v10, v0, Lcom/android/server/enterprise/sso/GenericSSOService$TokenConfigDocument;->XMLDoc:Lorg/w3c/dom/Document;
 
@@ -999,12 +906,10 @@
 
     move-result-object v7
 
-    .line 3599
-    const-string/jumbo v10, "packagename"
+    const-string v10, "packagename"
 
     invoke-interface {v7, v10, p2}, Lorg/w3c/dom/Element;->setAttribute(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 3600
     iget-object v10, v0, Lcom/android/server/enterprise/sso/GenericSSOService$TokenConfigDocument;->XMLDoc:Lorg/w3c/dom/Document;
 
     invoke-interface {v10}, Lorg/w3c/dom/Document;->getFirstChild()Lorg/w3c/dom/Node;
@@ -1013,9 +918,8 @@
 
     invoke-interface {v10, v7}, Lorg/w3c/dom/Node;->appendChild(Lorg/w3c/dom/Node;)Lorg/w3c/dom/Node;
 
-    .line 3602
     :cond_8
-    const-string/jumbo v10, "protocoltype"
+    const-string v10, "protocoltype"
 
     new-instance v11, Ljava/lang/StringBuilder;
 
@@ -1041,18 +945,15 @@
 
     invoke-interface {v7, v10, v11}, Lorg/w3c/dom/Element;->setAttribute(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 3606
     invoke-virtual/range {p3 .. p3}, Landroid/app/enterprise/sso/TokenInfo;->getResponseBundle()Landroid/os/Bundle;
 
     move-result-object v6
 
-    .line 3607
     .local v6, "tokenBundle":Landroid/os/Bundle;
     invoke-virtual {v6}, Landroid/os/Bundle;->keySet()Ljava/util/Set;
 
     move-result-object v5
 
-    .line 3609
     .local v5, "keySet":Ljava/util/Set;, "Ljava/util/Set<Ljava/lang/String;>;"
     invoke-interface {v5}, Ljava/util/Set;->iterator()Ljava/util/Iterator;
 
@@ -1073,17 +974,14 @@
 
     check-cast v4, Ljava/lang/String;
 
-    .line 3610
     .local v4, "key":Ljava/lang/String;
     invoke-virtual {v6, v4}, Landroid/os/Bundle;->getString(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v9
 
-    .line 3611
     .local v9, "value":Ljava/lang/String;
     if-eqz v9, :cond_9
 
-    .line 3612
     const-string v10, "SAML_RESPONSE_USER_CERT"
 
     invoke-virtual {v4, v10}, Ljava/lang/String;->startsWith(Ljava/lang/String;)Z
@@ -1100,7 +998,6 @@
 
     if-eqz v10, :cond_b
 
-    .line 3614
     :cond_a
     invoke-direct {p0, v0, v8, v4, v9}, Lcom/android/server/enterprise/sso/GenericSSOService;->fillChildNodes(Lcom/android/server/enterprise/sso/GenericSSOService$TokenConfigDocument;Lorg/w3c/dom/Element;Ljava/lang/String;Ljava/lang/String;)V
     :try_end_0
@@ -1109,7 +1006,6 @@
 
     goto :goto_1
 
-    .line 3625
     .end local v0    # "configDoc":Lcom/android/server/enterprise/sso/GenericSSOService$TokenConfigDocument;
     .end local v1    # "deviceCertNode":Lorg/w3c/dom/Element;
     .end local v3    # "i$":Ljava/util/Iterator;
@@ -1122,7 +1018,6 @@
     :catch_0
     move-exception v2
 
-    .line 3627
     .local v2, "e":Ljava/lang/NullPointerException;
     const-string v10, "GenericSSOService"
 
@@ -1130,14 +1025,12 @@
 
     invoke-static {v10, v11, v2}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
-    .line 3634
     .end local v2    # "e":Ljava/lang/NullPointerException;
     :goto_2
     const/4 v10, -0x1
 
     goto/16 :goto_0
 
-    .line 3615
     .restart local v0    # "configDoc":Lcom/android/server/enterprise/sso/GenericSSOService$TokenConfigDocument;
     .restart local v1    # "deviceCertNode":Lorg/w3c/dom/Element;
     .restart local v3    # "i$":Ljava/util/Iterator;
@@ -1165,7 +1058,6 @@
 
     if-eqz v10, :cond_d
 
-    .line 3617
     :cond_c
     invoke-direct {p0, v0, v1, v4, v9}, Lcom/android/server/enterprise/sso/GenericSSOService;->fillChildNodes(Lcom/android/server/enterprise/sso/GenericSSOService$TokenConfigDocument;Lorg/w3c/dom/Element;Ljava/lang/String;Ljava/lang/String;)V
     :try_end_1
@@ -1174,7 +1066,6 @@
 
     goto :goto_1
 
-    .line 3630
     .end local v0    # "configDoc":Lcom/android/server/enterprise/sso/GenericSSOService$TokenConfigDocument;
     .end local v1    # "deviceCertNode":Lorg/w3c/dom/Element;
     .end local v3    # "i$":Ljava/util/Iterator;
@@ -1187,7 +1078,6 @@
     :catch_1
     move-exception v2
 
-    .line 3632
     .local v2, "e":Ljava/lang/Exception;
     const-string v10, "GenericSSOService"
 
@@ -1197,7 +1087,6 @@
 
     goto :goto_2
 
-    .line 3619
     .end local v2    # "e":Ljava/lang/Exception;
     .restart local v0    # "configDoc":Lcom/android/server/enterprise/sso/GenericSSOService$TokenConfigDocument;
     .restart local v1    # "deviceCertNode":Lorg/w3c/dom/Element;
@@ -1214,7 +1103,6 @@
 
     goto :goto_1
 
-    .line 3623
     .end local v4    # "key":Ljava/lang/String;
     .end local v9    # "value":Ljava/lang/String;
     :cond_e
@@ -1223,7 +1111,6 @@
     .catch Ljava/lang/NullPointerException; {:try_start_2 .. :try_end_2} :catch_0
     .catch Ljava/lang/Exception; {:try_start_2 .. :try_end_2} :catch_1
 
-    .line 3624
     const/4 v10, 0x0
 
     goto/16 :goto_0
@@ -1235,13 +1122,11 @@
     .param p2, "token"    # Landroid/app/enterprise/sso/TokenInfo;
 
     .prologue
-    .line 3466
     :try_start_0
     invoke-direct {p0, p1}, Lcom/android/server/enterprise/sso/GenericSSOService;->getTokenConfigForUserId(I)Lcom/android/server/enterprise/sso/GenericSSOService$TokenConfigDocument;
 
     move-result-object v0
 
-    .line 3467
     .local v0, "configDoc":Lcom/android/server/enterprise/sso/GenericSSOService$TokenConfigDocument;
     # invokes: Lcom/android/server/enterprise/sso/GenericSSOService$TokenConfigDocument;->getUserCertificate()Lorg/w3c/dom/Node;
     invoke-static {v0}, Lcom/android/server/enterprise/sso/GenericSSOService$TokenConfigDocument;->access$1000(Lcom/android/server/enterprise/sso/GenericSSOService$TokenConfigDocument;)Lorg/w3c/dom/Node;
@@ -1250,33 +1135,28 @@
 
     check-cast v7, Lorg/w3c/dom/Element;
 
-    .line 3468
     .local v7, "userCertNode":Lorg/w3c/dom/Element;
     if-nez v7, :cond_1
 
-    .line 3469
     sget-boolean v9, Landroid/app/enterprise/sso/GenericSSOConstants;->DEBUG:Z
 
     if-eqz v9, :cond_0
 
-    .line 3470
     const-string v9, "GenericSSOService"
 
     const-string v10, "In addUserAndDeviceCertificates: the usercert doesn\'t exist"
 
     invoke-static {v9, v10}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 3472
     :cond_0
     iget-object v9, v0, Lcom/android/server/enterprise/sso/GenericSSOService$TokenConfigDocument;->XMLDoc:Lorg/w3c/dom/Document;
 
-    const-string/jumbo v10, "usercertificate"
+    const-string v10, "usercertificate"
 
     invoke-interface {v9, v10}, Lorg/w3c/dom/Document;->createElement(Ljava/lang/String;)Lorg/w3c/dom/Element;
 
     move-result-object v7
 
-    .line 3474
     iget-object v9, v0, Lcom/android/server/enterprise/sso/GenericSSOService$TokenConfigDocument;->XMLDoc:Lorg/w3c/dom/Document;
 
     invoke-interface {v9}, Lorg/w3c/dom/Document;->getFirstChild()Lorg/w3c/dom/Node;
@@ -1285,7 +1165,6 @@
 
     invoke-interface {v9, v7}, Lorg/w3c/dom/Node;->appendChild(Lorg/w3c/dom/Node;)Lorg/w3c/dom/Node;
 
-    .line 3476
     :cond_1
     # invokes: Lcom/android/server/enterprise/sso/GenericSSOService$TokenConfigDocument;->getDeviceCertificate()Lorg/w3c/dom/Node;
     invoke-static {v0}, Lcom/android/server/enterprise/sso/GenericSSOService$TokenConfigDocument;->access$1100(Lcom/android/server/enterprise/sso/GenericSSOService$TokenConfigDocument;)Lorg/w3c/dom/Node;
@@ -1294,23 +1173,19 @@
 
     check-cast v1, Lorg/w3c/dom/Element;
 
-    .line 3477
     .local v1, "deviceCertNode":Lorg/w3c/dom/Element;
     if-nez v1, :cond_3
 
-    .line 3478
     sget-boolean v9, Landroid/app/enterprise/sso/GenericSSOConstants;->DEBUG:Z
 
     if-eqz v9, :cond_2
 
-    .line 3479
     const-string v9, "GenericSSOService"
 
     const-string v10, "In addUserAndDeviceCertificates: the deviceCert doesn\'t exist"
 
     invoke-static {v9, v10}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 3481
     :cond_2
     iget-object v9, v0, Lcom/android/server/enterprise/sso/GenericSSOService$TokenConfigDocument;->XMLDoc:Lorg/w3c/dom/Document;
 
@@ -1320,7 +1195,6 @@
 
     move-result-object v1
 
-    .line 3483
     iget-object v9, v0, Lcom/android/server/enterprise/sso/GenericSSOService$TokenConfigDocument;->XMLDoc:Lorg/w3c/dom/Document;
 
     invoke-interface {v9}, Lorg/w3c/dom/Document;->getFirstChild()Lorg/w3c/dom/Node;
@@ -1329,19 +1203,16 @@
 
     invoke-interface {v9, v1}, Lorg/w3c/dom/Node;->appendChild(Lorg/w3c/dom/Node;)Lorg/w3c/dom/Node;
 
-    .line 3485
     :cond_3
     invoke-virtual {p2}, Landroid/app/enterprise/sso/TokenInfo;->getResponseBundle()Landroid/os/Bundle;
 
     move-result-object v6
 
-    .line 3486
     .local v6, "tokenBundle":Landroid/os/Bundle;
     invoke-virtual {v6}, Landroid/os/Bundle;->keySet()Ljava/util/Set;
 
     move-result-object v5
 
-    .line 3487
     .local v5, "keySet":Ljava/util/Set;, "Ljava/util/Set<Ljava/lang/String;>;"
     invoke-interface {v5}, Ljava/util/Set;->iterator()Ljava/util/Iterator;
 
@@ -1362,13 +1233,11 @@
 
     check-cast v4, Ljava/lang/String;
 
-    .line 3488
     .local v4, "key":Ljava/lang/String;
     invoke-virtual {v6, v4}, Landroid/os/Bundle;->getString(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v8
 
-    .line 3489
     .local v8, "value":Ljava/lang/String;
     invoke-direct {p0, v8}, Lcom/android/server/enterprise/sso/GenericSSOService;->isNullOrEmpty(Ljava/lang/String;)Z
 
@@ -1376,7 +1245,6 @@
 
     if-nez v9, :cond_4
 
-    .line 3490
     const-string v9, "SAML_RESPONSE_USER_CERT"
 
     invoke-virtual {v4, v9}, Ljava/lang/String;->startsWith(Ljava/lang/String;)Z
@@ -1393,7 +1261,6 @@
 
     if-eqz v9, :cond_6
 
-    .line 3492
     :cond_5
     invoke-direct {p0, v0, v7, v4, v8}, Lcom/android/server/enterprise/sso/GenericSSOService;->fillChildNodes(Lcom/android/server/enterprise/sso/GenericSSOService$TokenConfigDocument;Lorg/w3c/dom/Element;Ljava/lang/String;Ljava/lang/String;)V
     :try_end_0
@@ -1402,7 +1269,6 @@
 
     goto :goto_0
 
-    .line 3501
     .end local v0    # "configDoc":Lcom/android/server/enterprise/sso/GenericSSOService$TokenConfigDocument;
     .end local v1    # "deviceCertNode":Lorg/w3c/dom/Element;
     .end local v3    # "i$":Ljava/util/Iterator;
@@ -1414,7 +1280,6 @@
     :catch_0
     move-exception v2
 
-    .line 3503
     .local v2, "e":Ljava/lang/NullPointerException;
     const-string v9, "GenericSSOService"
 
@@ -1422,7 +1287,6 @@
 
     invoke-static {v9, v10, v2}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
-    .line 3510
     .end local v2    # "e":Ljava/lang/NullPointerException;
     :goto_1
     const/4 v9, -0x1
@@ -1430,7 +1294,6 @@
     :goto_2
     return v9
 
-    .line 3493
     .restart local v0    # "configDoc":Lcom/android/server/enterprise/sso/GenericSSOService$TokenConfigDocument;
     .restart local v1    # "deviceCertNode":Lorg/w3c/dom/Element;
     .restart local v3    # "i$":Ljava/util/Iterator;
@@ -1457,7 +1320,6 @@
 
     if-eqz v9, :cond_4
 
-    .line 3495
     :cond_7
     invoke-direct {p0, v0, v1, v4, v8}, Lcom/android/server/enterprise/sso/GenericSSOService;->fillChildNodes(Lcom/android/server/enterprise/sso/GenericSSOService$TokenConfigDocument;Lorg/w3c/dom/Element;Ljava/lang/String;Ljava/lang/String;)V
     :try_end_1
@@ -1466,7 +1328,6 @@
 
     goto :goto_0
 
-    .line 3505
     .end local v0    # "configDoc":Lcom/android/server/enterprise/sso/GenericSSOService$TokenConfigDocument;
     .end local v1    # "deviceCertNode":Lorg/w3c/dom/Element;
     .end local v3    # "i$":Ljava/util/Iterator;
@@ -1478,7 +1339,6 @@
     :catch_1
     move-exception v2
 
-    .line 3507
     .local v2, "e":Ljava/lang/Exception;
     const-string v9, "GenericSSOService"
 
@@ -1508,7 +1368,6 @@
 
     goto :goto_1
 
-    .line 3499
     .end local v2    # "e":Ljava/lang/Exception;
     .restart local v0    # "configDoc":Lcom/android/server/enterprise/sso/GenericSSOService$TokenConfigDocument;
     .restart local v1    # "deviceCertNode":Lorg/w3c/dom/Element;
@@ -1523,7 +1382,6 @@
     .catch Ljava/lang/NullPointerException; {:try_start_2 .. :try_end_2} :catch_0
     .catch Ljava/lang/Exception; {:try_start_2 .. :try_end_2} :catch_1
 
-    .line 3500
     const/4 v9, 0x0
 
     goto :goto_2
@@ -1535,12 +1393,10 @@
     .param p2, "intent"    # Landroid/content/Intent;
 
     .prologue
-    .line 991
     new-instance v0, Lcom/android/server/enterprise/sso/GenericSSOService$SSOServiceConnection;
 
     invoke-direct {v0, p1}, Lcom/android/server/enterprise/sso/GenericSSOService$SSOServiceConnection;-><init>(I)V
 
-    .line 992
     .local v0, "connection":Lcom/android/server/enterprise/sso/GenericSSOService$SSOServiceConnection;
     sget-object v3, Lcom/android/server/enterprise/sso/GenericSSOService;->mSSOInterfaceMap:Ljava/util/Map;
 
@@ -1554,43 +1410,36 @@
 
     if-eqz v3, :cond_1
 
-    .line 993
     sget-boolean v3, Landroid/app/enterprise/sso/GenericSSOConstants;->DEBUG:Z
 
     if-eqz v3, :cond_0
 
-    .line 994
     const-string v3, "GenericSSOService"
 
     const-string v4, "In bindToService: The SSO Service is already bound"
 
     invoke-static {v3, v4}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1022
     :cond_0
     :goto_0
     return-void
 
-    .line 998
     :cond_1
     sget-object v4, Lcom/android/server/enterprise/sso/GenericSSOService;->SERVICECONNECTIONWAIT:Ljava/lang/Object;
 
     monitor-enter v4
 
-    .line 999
     :try_start_0
     sget-boolean v3, Landroid/app/enterprise/sso/GenericSSOConstants;->DEBUG:Z
 
     if-eqz v3, :cond_2
 
-    .line 1000
     const-string v3, "GenericSSOService"
 
     const-string v5, "In bindToService: Binding to the service..."
 
     invoke-static {v3, v5}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1002
     :cond_2
     iget-object v3, p0, Lcom/android/server/enterprise/sso/GenericSSOService;->mContext:Landroid/content/Context;
 
@@ -1608,7 +1457,6 @@
 
     if-eqz v3, :cond_4
 
-    .line 1005
     :try_start_1
     new-instance v3, Ljava/util/concurrent/CountDownLatch;
 
@@ -1618,7 +1466,6 @@
 
     sput-object v3, Lcom/android/server/enterprise/sso/GenericSSOService;->countDownLatch:Ljava/util/concurrent/CountDownLatch;
 
-    .line 1006
     sget-object v3, Lcom/android/server/enterprise/sso/GenericSSOService;->countDownLatch:Ljava/util/concurrent/CountDownLatch;
 
     const-wide/16 v6, 0x4e20
@@ -1629,16 +1476,13 @@
 
     move-result v1
 
-    .line 1008
     .local v1, "countDownTimeout":Z
     if-nez v1, :cond_3
 
-    .line 1009
     sget-boolean v3, Landroid/app/enterprise/sso/GenericSSOConstants;->DEBUG:Z
 
     if-eqz v3, :cond_3
 
-    .line 1010
     const-string v3, "GenericSSOService"
 
     const-string v5, "In bindToService: CoutnDownLatch return false"
@@ -1648,7 +1492,6 @@
     .catch Ljava/lang/InterruptedException; {:try_start_1 .. :try_end_1} :catch_0
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
-    .line 1021
     .end local v1    # "countDownTimeout":Z
     :cond_3
     :goto_1
@@ -1666,11 +1509,9 @@
 
     throw v3
 
-    .line 1013
     :catch_0
     move-exception v2
 
-    .line 1014
     .local v2, "e":Ljava/lang/InterruptedException;
     :try_start_3
     const-string v3, "GenericSSOService"
@@ -1681,21 +1522,18 @@
 
     goto :goto_1
 
-    .line 1017
     .end local v2    # "e":Ljava/lang/InterruptedException;
     :cond_4
     sget-boolean v3, Landroid/app/enterprise/sso/GenericSSOConstants;->DEBUG:Z
 
     if-eqz v3, :cond_5
 
-    .line 1018
     const-string v3, "GenericSSOService"
 
     const-string v5, "In bindToService: Fail to bind to sso service"
 
     invoke-static {v3, v5}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1019
     :cond_5
     monitor-exit v4
     :try_end_3
@@ -1715,12 +1553,10 @@
 
     const/4 v1, 0x0
 
-    .line 893
     sget-boolean v3, Landroid/app/enterprise/sso/GenericSSOConstants;->DEBUG:Z
 
     if-eqz v3, :cond_0
 
-    .line 894
     const-string v3, "GenericSSOService"
 
     new-instance v4, Ljava/lang/StringBuilder;
@@ -1753,7 +1589,6 @@
 
     invoke-static {v3, v4}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 896
     :cond_0
     if-eqz p3, :cond_1
 
@@ -1763,13 +1598,11 @@
 
     if-eqz v3, :cond_3
 
-    .line 897
     :cond_1
     sget-boolean v2, Landroid/app/enterprise/sso/GenericSSOConstants;->DEBUG:Z
 
     if-eqz v2, :cond_2
 
-    .line 898
     const-string v2, "GenericSSOService"
 
     new-instance v3, Ljava/lang/StringBuilder;
@@ -1798,12 +1631,10 @@
 
     invoke-static {v2, v3}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 919
     :cond_2
     :goto_0
     return v1
 
-    .line 903
     :cond_3
     const-string v3, "clientpackagesignature"
 
@@ -1813,12 +1644,10 @@
 
     if-eqz v3, :cond_4
 
-    .line 905
     invoke-direct {p0, p1, v2}, Lcom/android/server/enterprise/sso/GenericSSOService;->getPackageInfoForPid(II)Ljava/lang/String;
 
     move-result-object v0
 
-    .line 906
     .local v0, "packageCert":Ljava/lang/String;
     const-string v3, "clientpackagesignature"
 
@@ -1832,12 +1661,10 @@
 
     if-nez v3, :cond_4
 
-    .line 909
     sget-boolean v2, Landroid/app/enterprise/sso/GenericSSOConstants;->DEBUG:Z
 
     if-eqz v2, :cond_2
 
-    .line 910
     const-string v2, "GenericSSOService"
 
     new-instance v3, Ljava/lang/StringBuilder;
@@ -1882,7 +1709,6 @@
     :cond_4
     move v1, v2
 
-    .line 919
     goto :goto_0
 .end method
 
@@ -1891,7 +1717,6 @@
     .param p1, "userId"    # I
 
     .prologue
-    .line 1870
     sget-object v0, Lcom/android/server/enterprise/sso/GenericSSOService;->mSSOInterfaceMap:Ljava/util/Map;
 
     invoke-static {p1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
@@ -1904,7 +1729,6 @@
 
     if-eqz v0, :cond_1
 
-    .line 1871
     sget-object v0, Lcom/android/server/enterprise/sso/GenericSSOService;->mSSOInterfaceMap:Ljava/util/Map;
 
     invoke-static {p1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
@@ -1923,7 +1747,6 @@
 
     if-eqz v0, :cond_0
 
-    .line 1872
     iget-object v1, p0, Lcom/android/server/enterprise/sso/GenericSSOService;->mContext:Landroid/content/Context;
 
     sget-object v0, Lcom/android/server/enterprise/sso/GenericSSOService;->mSSOInterfaceMap:Ljava/util/Map;
@@ -1940,7 +1763,6 @@
 
     invoke-virtual {v1, v0}, Landroid/content/Context;->unbindService(Landroid/content/ServiceConnection;)V
 
-    .line 1874
     :cond_0
     sget-object v0, Lcom/android/server/enterprise/sso/GenericSSOService;->mSSOInterfaceMap:Ljava/util/Map;
 
@@ -1950,7 +1772,6 @@
 
     invoke-interface {v0, v1}, Ljava/util/Map;->remove(Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 1876
     :cond_1
     return-void
 .end method
@@ -1960,76 +1781,62 @@
     .param p1, "userId"    # I
 
     .prologue
-    .line 2734
     :try_start_0
     invoke-direct {p0, p1}, Lcom/android/server/enterprise/sso/GenericSSOService;->unregisterByAuthenticator(I)I
 
     move-result v3
 
-    .line 2735
     .local v3, "ret":I
     if-eqz v3, :cond_1
 
-    .line 2736
     sget-boolean v4, Landroid/app/enterprise/sso/GenericSSOConstants;->DEBUG:Z
 
     if-eqz v4, :cond_0
 
-    .line 2737
     const-string v4, "GenericSSOService"
 
     const-string v5, "In clearConfigAndTokenForAuthenticator: Fail to clear records remotely"
 
     invoke-static {v4, v5}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 2739
     :cond_0
     const/16 v3, -0x10
 
-    .line 2762
     .end local v3    # "ret":I
     :goto_0
     return v3
 
-    .line 2743
     .restart local v3    # "ret":I
     :cond_1
     sget-object v4, Lcom/android/server/enterprise/sso/GenericSSOService;->requestConfigXMLDocs:Landroid/util/SparseArray;
 
     invoke-virtual {v4, p1}, Landroid/util/SparseArray;->delete(I)V
 
-    .line 2744
     invoke-direct {p0, p1}, Lcom/android/server/enterprise/sso/GenericSSOService;->getRequestConfigFilePath(I)Ljava/lang/String;
 
     move-result-object v2
 
-    .line 2745
     .local v2, "filepath":Ljava/lang/String;
     new-instance v1, Ljava/io/File;
 
     invoke-direct {v1, v2}, Ljava/io/File;-><init>(Ljava/lang/String;)V
 
-    .line 2746
     .local v1, "file":Ljava/io/File;
     invoke-virtual {v1}, Ljava/io/File;->delete()Z
 
-    .line 2749
     sget-object v4, Lcom/android/server/enterprise/sso/GenericSSOService;->tokenConfigXMLDocs:Landroid/util/SparseArray;
 
     invoke-virtual {v4, p1}, Landroid/util/SparseArray;->delete(I)V
 
-    .line 2750
     invoke-direct {p0, p1}, Lcom/android/server/enterprise/sso/GenericSSOService;->getTokenConfigFilePath(I)Ljava/lang/String;
 
     move-result-object v2
 
-    .line 2751
     new-instance v1, Ljava/io/File;
 
     .end local v1    # "file":Ljava/io/File;
     invoke-direct {v1, v2}, Ljava/io/File;-><init>(Ljava/lang/String;)V
 
-    .line 2752
     .restart local v1    # "file":Ljava/io/File;
     invoke-virtual {v1}, Ljava/io/File;->delete()Z
     :try_end_0
@@ -2038,14 +1845,12 @@
 
     goto :goto_0
 
-    .line 2754
     .end local v1    # "file":Ljava/io/File;
     .end local v2    # "filepath":Ljava/lang/String;
     .end local v3    # "ret":I
     :catch_0
     move-exception v0
 
-    .line 2756
     .local v0, "e":Ljava/lang/SecurityException;
     const-string v4, "GenericSSOService"
 
@@ -2053,18 +1858,15 @@
 
     invoke-static {v4, v5, v0}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
-    .line 2762
     .end local v0    # "e":Ljava/lang/SecurityException;
     :goto_1
     const/4 v3, -0x1
 
     goto :goto_0
 
-    .line 2758
     :catch_1
     move-exception v0
 
-    .line 2760
     .local v0, "e":Ljava/lang/Exception;
     const-string v4, "GenericSSOService"
 
@@ -2080,29 +1882,24 @@
     .param p1, "cxtInfo"    # Landroid/app/enterprise/ContextInfo;
 
     .prologue
-    .line 2768
     :try_start_0
     invoke-static {p1}, Lcom/android/server/enterprise/EnterpriseDeviceManagerService;->getCallingOrCurrentUserId(Landroid/app/enterprise/ContextInfo;)I
 
     move-result v6
 
-    .line 2770
     .local v6, "userId":I
     invoke-direct {p0, v6}, Lcom/android/server/enterprise/sso/GenericSSOService;->getTokenConfigForUserId(I)Lcom/android/server/enterprise/sso/GenericSSOService$TokenConfigDocument;
 
     move-result-object v0
 
-    .line 2771
     .local v0, "configDoc":Lcom/android/server/enterprise/sso/GenericSSOService$TokenConfigDocument;
     invoke-virtual {p0, p1}, Lcom/android/server/enterprise/sso/GenericSSOService;->getWhiteListPackages(Landroid/app/enterprise/ContextInfo;)Ljava/util/List;
 
     move-result-object v4
 
-    .line 2772
     .local v4, "packages":Ljava/util/List;, "Ljava/util/List<Ljava/lang/String;>;"
     if-eqz v4, :cond_1
 
-    .line 2773
     invoke-interface {v4}, Ljava/util/List;->iterator()Ljava/util/Iterator;
 
     move-result-object v2
@@ -2121,13 +1918,11 @@
 
     check-cast v3, Ljava/lang/String;
 
-    .line 2774
     .local v3, "packageName":Ljava/lang/String;
     sget-boolean v7, Landroid/app/enterprise/sso/GenericSSOConstants;->DEBUG:Z
 
     if-eqz v7, :cond_0
 
-    .line 2775
     const-string v7, "GenericSSOService"
 
     new-instance v8, Ljava/lang/StringBuilder;
@@ -2150,7 +1945,6 @@
 
     invoke-static {v7, v8}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 2778
     :cond_0
     invoke-direct {p0, v6, v3}, Lcom/android/server/enterprise/sso/GenericSSOService;->deleteAppTokenForUser(ILjava/lang/String;)I
     :try_end_0
@@ -2159,7 +1953,6 @@
 
     goto :goto_0
 
-    .line 2788
     .end local v0    # "configDoc":Lcom/android/server/enterprise/sso/GenericSSOService$TokenConfigDocument;
     .end local v2    # "i$":Ljava/util/Iterator;
     .end local v3    # "packageName":Ljava/lang/String;
@@ -2168,7 +1961,6 @@
     :catch_0
     move-exception v1
 
-    .line 2790
     .local v1, "e":Ljava/lang/NullPointerException;
     const-string v7, "GenericSSOService"
 
@@ -2176,7 +1968,6 @@
 
     invoke-static {v7, v8, v1}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
-    .line 2795
     .end local v1    # "e":Ljava/lang/NullPointerException;
     :goto_1
     const/4 v7, -0x1
@@ -2184,7 +1975,6 @@
     :goto_2
     return v7
 
-    .line 2782
     .restart local v0    # "configDoc":Lcom/android/server/enterprise/sso/GenericSSOService$TokenConfigDocument;
     .restart local v4    # "packages":Ljava/util/List;, "Ljava/util/List<Ljava/lang/String;>;"
     .restart local v6    # "userId":I
@@ -2195,11 +1985,9 @@
 
     move-result-object v5
 
-    .line 2783
     .local v5, "userCertNode":Lorg/w3c/dom/Node;
     if-eqz v5, :cond_2
 
-    .line 2784
     iget-object v7, v0, Lcom/android/server/enterprise/sso/GenericSSOService$TokenConfigDocument;->XMLDoc:Lorg/w3c/dom/Document;
 
     invoke-interface {v7}, Lorg/w3c/dom/Document;->getFirstChild()Lorg/w3c/dom/Node;
@@ -2208,19 +1996,16 @@
 
     invoke-interface {v7, v5}, Lorg/w3c/dom/Node;->removeChild(Lorg/w3c/dom/Node;)Lorg/w3c/dom/Node;
 
-    .line 2786
     :cond_2
     invoke-direct {p0, v6, v0}, Lcom/android/server/enterprise/sso/GenericSSOService;->updateCacheAndFile(ILcom/android/server/enterprise/sso/GenericSSOService$TokenConfigDocument;)V
     :try_end_1
     .catch Ljava/lang/NullPointerException; {:try_start_1 .. :try_end_1} :catch_0
     .catch Ljava/lang/Exception; {:try_start_1 .. :try_end_1} :catch_1
 
-    .line 2787
     const/4 v7, 0x0
 
     goto :goto_2
 
-    .line 2791
     .end local v0    # "configDoc":Lcom/android/server/enterprise/sso/GenericSSOService$TokenConfigDocument;
     .end local v4    # "packages":Ljava/util/List;, "Ljava/util/List<Ljava/lang/String;>;"
     .end local v5    # "userCertNode":Lorg/w3c/dom/Node;
@@ -2228,7 +2013,6 @@
     :catch_1
     move-exception v1
 
-    .line 2793
     .local v1, "e":Ljava/lang/Exception;
     const-string v7, "GenericSSOService"
 
@@ -2252,14 +2036,12 @@
     .end annotation
 
     .prologue
-    .line 1165
     const-string v2, "AES"
 
     invoke-static {v2}, Ljavax/crypto/KeyGenerator;->getInstance(Ljava/lang/String;)Ljavax/crypto/KeyGenerator;
 
     move-result-object v1
 
-    .line 1166
     .local v1, "keyGenerator":Ljavax/crypto/KeyGenerator;
     const/16 v2, 0x100
 
@@ -2269,25 +2051,21 @@
 
     invoke-virtual {v1, v2, v3}, Ljavax/crypto/KeyGenerator;->init(ILjava/security/SecureRandom;)V
 
-    .line 1167
     invoke-virtual {v1}, Ljavax/crypto/KeyGenerator;->generateKey()Ljavax/crypto/SecretKey;
 
     move-result-object v0
 
-    .line 1168
     .local v0, "key":Ljavax/crypto/SecretKey;
     sget-boolean v2, Landroid/app/enterprise/sso/GenericSSOConstants;->DEBUG:Z
 
     if-eqz v2, :cond_0
 
-    .line 1169
     const-string v2, "GenericSSOService"
 
-    const-string/jumbo v3, "secret key is created"
+    const-string v3, "secret key is created"
 
     invoke-static {v2, v3}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1170
     :cond_0
     return-object v0
 .end method
@@ -2297,12 +2075,10 @@
     .param p1, "token"    # Ljava/lang/String;
 
     .prologue
-    .line 1154
     invoke-static {}, Landroid/os/Binder;->clearCallingIdentity()J
 
     move-result-wide v0
 
-    .line 1156
     .local v0, "_token":J
     :try_start_0
     const-string v2, "GenericSSOService"
@@ -2313,7 +2089,6 @@
 
     move-result-object v2
 
-    .line 1158
     invoke-static {v0, v1}, Landroid/os/Binder;->restoreCallingIdentity(J)V
 
     return-object v2
@@ -2334,7 +2109,6 @@
     .prologue
     const/4 v7, 0x0
 
-    .line 1383
     invoke-direct {p0, p1}, Lcom/android/server/enterprise/sso/GenericSSOService;->isNullOrEmpty(Ljava/lang/String;)Z
 
     move-result v6
@@ -2347,13 +2121,11 @@
 
     if-eqz v6, :cond_3
 
-    .line 1384
     :cond_0
     sget-boolean v6, Landroid/app/enterprise/sso/GenericSSOConstants;->DEBUG:Z
 
     if-eqz v6, :cond_1
 
-    .line 1385
     const-string v6, "GenericSSOService"
 
     const-string v8, "In decrypt: Key alias or token to encrypt is null"
@@ -2363,12 +2135,10 @@
     :cond_1
     move-object v2, v7
 
-    .line 1441
     :cond_2
     :goto_0
     return-object v2
 
-    .line 1389
     :cond_3
     const/4 v6, 0x0
 
@@ -2377,26 +2147,21 @@
 
     move-result-object v1
 
-    .line 1390
     .local v1, "data":[B
     invoke-direct {p0}, Lcom/android/server/enterprise/sso/GenericSSOService;->initKeyStore()V
 
-    .line 1391
     invoke-direct {p0, p1}, Lcom/android/server/enterprise/sso/GenericSSOService;->loadKey(Ljava/lang/String;)V
 
-    .line 1393
     sget-object v6, Lcom/android/server/enterprise/sso/GenericSSOService;->mSecretKey:Ljava/security/Key;
 
     instance-of v6, v6, Ljavax/crypto/SecretKey;
 
     if-nez v6, :cond_5
 
-    .line 1394
     sget-boolean v6, Landroid/app/enterprise/sso/GenericSSOConstants;->DEBUG:Z
 
     if-eqz v6, :cond_4
 
-    .line 1395
     const-string v6, "GenericSSOService"
 
     const-string v8, "In decrypt: the retrieved key in keystore is not SecretKey"
@@ -2406,10 +2171,8 @@
     :cond_4
     move-object v2, v7
 
-    .line 1397
     goto :goto_0
 
-    .line 1400
     :cond_5
     const-string v6, "AES/CBC/PKCS5Padding"
 
@@ -2417,13 +2180,11 @@
 
     move-result-object v0
 
-    .line 1401
     .local v0, "cipher":Ljavax/crypto/Cipher;
     sget-boolean v6, Landroid/app/enterprise/sso/GenericSSOConstants;->DEBUG:Z
 
     if-eqz v6, :cond_6
 
-    .line 1402
     const-string v6, "GenericSSOService"
 
     new-instance v8, Ljava/lang/StringBuilder;
@@ -2450,16 +2211,13 @@
 
     invoke-static {v6, v8}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1403
     :cond_6
     if-eqz v0, :cond_9
 
-    .line 1404
     array-length v6, v1
 
     add-int/lit8 v4, v6, -0x10
 
-    .line 1405
     .local v4, "ivIndex":I
     const/4 v8, 0x2
 
@@ -2475,14 +2233,12 @@
 
     invoke-virtual {v0, v8, v6, v9}, Ljavax/crypto/Cipher;->init(ILjava/security/Key;Ljava/security/spec/AlgorithmParameterSpec;)V
 
-    .line 1407
     const/4 v6, 0x0
 
     invoke-virtual {v0, v1, v6, v4}, Ljavax/crypto/Cipher;->doFinal([BII)[B
 
     move-result-object v5
 
-    .line 1408
     .local v5, "out":[B
     new-instance v2, Ljava/lang/String;
 
@@ -2490,13 +2246,11 @@
 
     invoke-direct {v2, v5, v6}, Ljava/lang/String;-><init>([BLjava/lang/String;)V
 
-    .line 1409
     .local v2, "decrypted":Ljava/lang/String;
     sget-boolean v6, Landroid/app/enterprise/sso/GenericSSOConstants;->DEBUG:Z
 
     if-eqz v6, :cond_7
 
-    .line 1410
     const-string v6, "GenericSSOService"
 
     new-instance v8, Ljava/lang/StringBuilder;
@@ -2519,13 +2273,11 @@
 
     invoke-static {v6, v8}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1411
     :cond_7
     sget-boolean v6, Landroid/app/enterprise/sso/GenericSSOConstants;->DEBUG:Z
 
     if-eqz v6, :cond_2
 
-    .line 1412
     const-string v6, "GenericSSOService"
 
     new-instance v8, Ljava/lang/StringBuilder;
@@ -2566,7 +2318,6 @@
 
     goto/16 :goto_0
 
-    .line 1418
     .end local v0    # "cipher":Ljavax/crypto/Cipher;
     .end local v1    # "data":[B
     .end local v2    # "decrypted":Ljava/lang/String;
@@ -2575,7 +2326,6 @@
     :catch_0
     move-exception v3
 
-    .line 1419
     .local v3, "e":Ljava/security/NoSuchAlgorithmException;
     const-string v6, "GenericSSOService"
 
@@ -2588,10 +2338,8 @@
     :goto_1
     move-object v2, v7
 
-    .line 1441
     goto/16 :goto_0
 
-    .line 1415
     .restart local v0    # "cipher":Ljavax/crypto/Cipher;
     .restart local v1    # "data":[B
     :cond_9
@@ -2600,7 +2348,6 @@
 
     if-eqz v6, :cond_8
 
-    .line 1416
     const-string v6, "GenericSSOService"
 
     const-string v8, "In decrypt: cipher is null"
@@ -2621,13 +2368,11 @@
 
     goto :goto_1
 
-    .line 1420
     .end local v0    # "cipher":Ljavax/crypto/Cipher;
     .end local v1    # "data":[B
     :catch_1
     move-exception v3
 
-    .line 1421
     .local v3, "e":Ljava/security/KeyStoreException;
     const-string v6, "GenericSSOService"
 
@@ -2637,12 +2382,10 @@
 
     goto :goto_1
 
-    .line 1422
     .end local v3    # "e":Ljava/security/KeyStoreException;
     :catch_2
     move-exception v3
 
-    .line 1423
     .local v3, "e":Ljava/security/InvalidKeyException;
     const-string v6, "GenericSSOService"
 
@@ -2652,12 +2395,10 @@
 
     goto :goto_1
 
-    .line 1424
     .end local v3    # "e":Ljava/security/InvalidKeyException;
     :catch_3
     move-exception v3
 
-    .line 1425
     .local v3, "e":Ljavax/crypto/NoSuchPaddingException;
     const-string v6, "GenericSSOService"
 
@@ -2667,12 +2408,10 @@
 
     goto :goto_1
 
-    .line 1426
     .end local v3    # "e":Ljavax/crypto/NoSuchPaddingException;
     :catch_4
     move-exception v3
 
-    .line 1427
     .local v3, "e":Ljavax/crypto/IllegalBlockSizeException;
     const-string v6, "GenericSSOService"
 
@@ -2682,12 +2421,10 @@
 
     goto :goto_1
 
-    .line 1428
     .end local v3    # "e":Ljavax/crypto/IllegalBlockSizeException;
     :catch_5
     move-exception v3
 
-    .line 1429
     .local v3, "e":Ljavax/crypto/BadPaddingException;
     const-string v6, "GenericSSOService"
 
@@ -2697,12 +2434,10 @@
 
     goto :goto_1
 
-    .line 1430
     .end local v3    # "e":Ljavax/crypto/BadPaddingException;
     :catch_6
     move-exception v3
 
-    .line 1431
     .local v3, "e":Ljava/security/UnrecoverableKeyException;
     const-string v6, "GenericSSOService"
 
@@ -2712,12 +2447,10 @@
 
     goto :goto_1
 
-    .line 1432
     .end local v3    # "e":Ljava/security/UnrecoverableKeyException;
     :catch_7
     move-exception v3
 
-    .line 1433
     .local v3, "e":Ljava/io/IOException;
     const-string v6, "GenericSSOService"
 
@@ -2727,12 +2460,10 @@
 
     goto :goto_1
 
-    .line 1434
     .end local v3    # "e":Ljava/io/IOException;
     :catch_8
     move-exception v3
 
-    .line 1435
     .local v3, "e":Ljava/security/InvalidAlgorithmParameterException;
     const-string v6, "GenericSSOService"
 
@@ -2742,12 +2473,10 @@
 
     goto :goto_1
 
-    .line 1436
     .end local v3    # "e":Ljava/security/InvalidAlgorithmParameterException;
     :catch_9
     move-exception v3
 
-    .line 1437
     .local v3, "e":Ljava/security/GeneralSecurityException;
     const-string v6, "GenericSSOService"
 
@@ -2757,12 +2486,10 @@
 
     goto :goto_1
 
-    .line 1438
     .end local v3    # "e":Ljava/security/GeneralSecurityException;
     :catch_a
     move-exception v3
 
-    .line 1439
     .local v3, "e":Ljava/lang/Exception;
     const-string v6, "GenericSSOService"
 
@@ -2779,57 +2506,47 @@
     .param p2, "packageName"    # Ljava/lang/String;
 
     .prologue
-    .line 3000
     invoke-direct {p0, p2}, Lcom/android/server/enterprise/sso/GenericSSOService;->isNullOrEmpty(Ljava/lang/String;)Z
 
     move-result v3
 
     if-eqz v3, :cond_1
 
-    .line 3001
     sget-boolean v3, Landroid/app/enterprise/sso/GenericSSOConstants;->DEBUG:Z
 
     if-eqz v3, :cond_0
 
-    .line 3002
     const-string v3, "GenericSSOService"
 
-    const-string/jumbo v4, "packageName is null or empty"
+    const-string v4, "packageName is null or empty"
 
     invoke-static {v3, v4}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 3003
     :cond_0
     const/4 v3, -0x3
 
-    .line 3029
     :goto_0
     return v3
 
-    .line 3006
     :cond_1
     :try_start_0
     invoke-direct {p0, p1}, Lcom/android/server/enterprise/sso/GenericSSOService;->getTokenConfigForUserId(I)Lcom/android/server/enterprise/sso/GenericSSOService$TokenConfigDocument;
 
     move-result-object v0
 
-    .line 3007
     .local v0, "configDoc":Lcom/android/server/enterprise/sso/GenericSSOService$TokenConfigDocument;
     # invokes: Lcom/android/server/enterprise/sso/GenericSSOService$TokenConfigDocument;->getSSOTokenNode(Ljava/lang/String;)Lorg/w3c/dom/Node;
     invoke-static {v0, p2}, Lcom/android/server/enterprise/sso/GenericSSOService$TokenConfigDocument;->access$1300(Lcom/android/server/enterprise/sso/GenericSSOService$TokenConfigDocument;Ljava/lang/String;)Lorg/w3c/dom/Node;
 
     move-result-object v2
 
-    .line 3008
     .local v2, "tokenNode":Lorg/w3c/dom/Node;
     if-nez v2, :cond_3
 
-    .line 3009
     sget-boolean v3, Landroid/app/enterprise/sso/GenericSSOConstants;->DEBUG:Z
 
     if-eqz v3, :cond_2
 
-    .line 3010
     const-string v3, "GenericSSOService"
 
     new-instance v4, Ljava/lang/StringBuilder;
@@ -2858,17 +2575,14 @@
 
     invoke-static {v3, v4}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 3020
     :cond_2
     :goto_1
     invoke-direct {p0, p1, v0}, Lcom/android/server/enterprise/sso/GenericSSOService;->updateCacheAndFile(ILcom/android/server/enterprise/sso/GenericSSOService$TokenConfigDocument;)V
 
-    .line 3021
     const/4 v3, 0x0
 
     goto :goto_0
 
-    .line 3014
     :cond_3
     iget-object v3, v0, Lcom/android/server/enterprise/sso/GenericSSOService$TokenConfigDocument;->XMLDoc:Lorg/w3c/dom/Document;
 
@@ -2878,12 +2592,10 @@
 
     invoke-interface {v3, v2}, Lorg/w3c/dom/Node;->removeChild(Lorg/w3c/dom/Node;)Lorg/w3c/dom/Node;
 
-    .line 3015
     sget-boolean v3, Landroid/app/enterprise/sso/GenericSSOConstants;->DEBUG:Z
 
     if-eqz v3, :cond_2
 
-    .line 3016
     const-string v3, "GenericSSOService"
 
     new-instance v4, Ljava/lang/StringBuilder;
@@ -2917,13 +2629,11 @@
 
     goto :goto_1
 
-    .line 3022
     .end local v0    # "configDoc":Lcom/android/server/enterprise/sso/GenericSSOService$TokenConfigDocument;
     .end local v2    # "tokenNode":Lorg/w3c/dom/Node;
     :catch_0
     move-exception v1
 
-    .line 3024
     .local v1, "e":Ljava/lang/NullPointerException;
     const-string v3, "GenericSSOService"
 
@@ -2931,18 +2641,15 @@
 
     invoke-static {v3, v4, v1}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
-    .line 3029
     .end local v1    # "e":Ljava/lang/NullPointerException;
     :goto_2
     const/4 v3, -0x1
 
     goto :goto_0
 
-    .line 3025
     :catch_1
     move-exception v1
 
-    .line 3027
     .local v1, "e":Ljava/lang/Exception;
     const-string v3, "GenericSSOService"
 
@@ -2958,36 +2665,30 @@
     .param p1, "userId"    # I
 
     .prologue
-    .line 3035
     :try_start_0
     invoke-direct {p0, p1}, Lcom/android/server/enterprise/sso/GenericSSOService;->getTokenConfigForUserId(I)Lcom/android/server/enterprise/sso/GenericSSOService$TokenConfigDocument;
 
     move-result-object v0
 
-    .line 3036
     .local v0, "configDoc":Lcom/android/server/enterprise/sso/GenericSSOService$TokenConfigDocument;
     # invokes: Lcom/android/server/enterprise/sso/GenericSSOService$TokenConfigDocument;->getUserCertificate()Lorg/w3c/dom/Node;
     invoke-static {v0}, Lcom/android/server/enterprise/sso/GenericSSOService$TokenConfigDocument;->access$1000(Lcom/android/server/enterprise/sso/GenericSSOService$TokenConfigDocument;)Lorg/w3c/dom/Node;
 
     move-result-object v3
 
-    .line 3037
     .local v3, "userCertNode":Lorg/w3c/dom/Node;
     if-nez v3, :cond_2
 
-    .line 3038
     sget-boolean v4, Landroid/app/enterprise/sso/GenericSSOConstants;->DEBUG:Z
 
     if-eqz v4, :cond_0
 
-    .line 3039
     const-string v4, "GenericSSOService"
 
     const-string v5, "In deleteUserAndDeviceCertForUser: userCertNode is null"
 
     invoke-static {v4, v5}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 3047
     :cond_0
     :goto_0
     # invokes: Lcom/android/server/enterprise/sso/GenericSSOService$TokenConfigDocument;->getDeviceCertificate()Lorg/w3c/dom/Node;
@@ -2995,38 +2696,31 @@
 
     move-result-object v1
 
-    .line 3048
     .local v1, "deviceCertNode":Lorg/w3c/dom/Node;
     if-nez v1, :cond_3
 
-    .line 3049
     sget-boolean v4, Landroid/app/enterprise/sso/GenericSSOConstants;->DEBUG:Z
 
     if-eqz v4, :cond_1
 
-    .line 3050
     const-string v4, "GenericSSOService"
 
     const-string v5, "In deleteUserAndDeviceCertForUser: deviceCertNode is null"
 
     invoke-static {v4, v5}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 3058
     :cond_1
     :goto_1
     invoke-direct {p0, p1, v0}, Lcom/android/server/enterprise/sso/GenericSSOService;->updateCacheAndFile(ILcom/android/server/enterprise/sso/GenericSSOService$TokenConfigDocument;)V
 
-    .line 3059
     const/4 v4, 0x0
 
-    .line 3069
     .end local v0    # "configDoc":Lcom/android/server/enterprise/sso/GenericSSOService$TokenConfigDocument;
     .end local v1    # "deviceCertNode":Lorg/w3c/dom/Node;
     .end local v3    # "userCertNode":Lorg/w3c/dom/Node;
     :goto_2
     return v4
 
-    .line 3042
     .restart local v0    # "configDoc":Lcom/android/server/enterprise/sso/GenericSSOService$TokenConfigDocument;
     .restart local v3    # "userCertNode":Lorg/w3c/dom/Node;
     :cond_2
@@ -3038,12 +2732,10 @@
 
     invoke-interface {v4, v3}, Lorg/w3c/dom/Node;->removeChild(Lorg/w3c/dom/Node;)Lorg/w3c/dom/Node;
 
-    .line 3043
     sget-boolean v4, Landroid/app/enterprise/sso/GenericSSOConstants;->DEBUG:Z
 
     if-eqz v4, :cond_0
 
-    .line 3044
     const-string v4, "GenericSSOService"
 
     const-string v5, "In deleteUserAndDeviceCertForUser: userCertNode is removed"
@@ -3055,13 +2747,11 @@
 
     goto :goto_0
 
-    .line 3060
     .end local v0    # "configDoc":Lcom/android/server/enterprise/sso/GenericSSOService$TokenConfigDocument;
     .end local v3    # "userCertNode":Lorg/w3c/dom/Node;
     :catch_0
     move-exception v2
 
-    .line 3062
     .local v2, "e":Ljava/lang/NullPointerException;
     const-string v4, "GenericSSOService"
 
@@ -3069,14 +2759,12 @@
 
     invoke-static {v4, v5, v2}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
-    .line 3069
     .end local v2    # "e":Ljava/lang/NullPointerException;
     :goto_3
     const/4 v4, -0x1
 
     goto :goto_2
 
-    .line 3053
     .restart local v0    # "configDoc":Lcom/android/server/enterprise/sso/GenericSSOService$TokenConfigDocument;
     .restart local v1    # "deviceCertNode":Lorg/w3c/dom/Node;
     .restart local v3    # "userCertNode":Lorg/w3c/dom/Node;
@@ -3090,12 +2778,10 @@
 
     invoke-interface {v4, v1}, Lorg/w3c/dom/Node;->removeChild(Lorg/w3c/dom/Node;)Lorg/w3c/dom/Node;
 
-    .line 3054
     sget-boolean v4, Landroid/app/enterprise/sso/GenericSSOConstants;->DEBUG:Z
 
     if-eqz v4, :cond_1
 
-    .line 3055
     const-string v4, "GenericSSOService"
 
     const-string v5, "In deleteUserAndDeviceCertForUser: deviceCertNode is removed"
@@ -3107,14 +2793,12 @@
 
     goto :goto_1
 
-    .line 3065
     .end local v0    # "configDoc":Lcom/android/server/enterprise/sso/GenericSSOService$TokenConfigDocument;
     .end local v1    # "deviceCertNode":Lorg/w3c/dom/Node;
     .end local v3    # "userCertNode":Lorg/w3c/dom/Node;
     :catch_1
     move-exception v2
 
-    .line 3067
     .local v2, "e":Ljava/lang/Exception;
     const-string v4, "GenericSSOService"
 
@@ -3130,12 +2814,10 @@
     .param p1, "token"    # Ljava/lang/String;
 
     .prologue
-    .line 1142
     invoke-static {}, Landroid/os/Binder;->clearCallingIdentity()J
 
     move-result-wide v0
 
-    .line 1144
     .local v0, "_token":J
     :try_start_0
     const-string v2, "GenericSSOService"
@@ -3146,7 +2828,6 @@
 
     move-result-object v2
 
-    .line 1146
     invoke-static {v0, v1}, Landroid/os/Binder;->restoreCallingIdentity(J)V
 
     return-object v2
@@ -3167,7 +2848,6 @@
     .prologue
     const/4 v10, 0x0
 
-    .line 1305
     invoke-direct {p0, p1}, Lcom/android/server/enterprise/sso/GenericSSOService;->isNullOrEmpty(Ljava/lang/String;)Z
 
     move-result v9
@@ -3180,13 +2860,11 @@
 
     if-eqz v9, :cond_3
 
-    .line 1306
     :cond_0
     sget-boolean v9, Landroid/app/enterprise/sso/GenericSSOConstants;->DEBUG:Z
 
     if-eqz v9, :cond_1
 
-    .line 1307
     const-string v9, "GenericSSOService"
 
     const-string v11, "In encrypt: Key alias or token to encrypt is null"
@@ -3196,12 +2874,10 @@
     :cond_1
     move-object v2, v10
 
-    .line 1375
     :cond_2
     :goto_0
     return-object v2
 
-    .line 1312
     :cond_3
     :try_start_0
     const-string v9, "UTF_8"
@@ -3210,26 +2886,21 @@
 
     move-result-object v3
 
-    .line 1313
     .local v3, "data":[B
     invoke-direct {p0}, Lcom/android/server/enterprise/sso/GenericSSOService;->initKeyStore()V
 
-    .line 1314
     invoke-direct {p0, p1}, Lcom/android/server/enterprise/sso/GenericSSOService;->loadKey(Ljava/lang/String;)V
 
-    .line 1316
     sget-object v9, Lcom/android/server/enterprise/sso/GenericSSOService;->mSecretKey:Ljava/security/Key;
 
     instance-of v9, v9, Ljavax/crypto/SecretKey;
 
     if-nez v9, :cond_5
 
-    .line 1317
     sget-boolean v9, Landroid/app/enterprise/sso/GenericSSOConstants;->DEBUG:Z
 
     if-eqz v9, :cond_4
 
-    .line 1318
     const-string v9, "GenericSSOService"
 
     const-string v11, "In encrypt: the retrieved key in keystore is not SecretKey"
@@ -3239,31 +2910,25 @@
     :cond_4
     move-object v2, v10
 
-    .line 1320
     goto :goto_0
 
-    .line 1324
     :cond_5
     const/16 v9, 0x10
 
     new-array v5, v9, [B
 
-    .line 1325
     .local v5, "iv":[B
     new-instance v7, Ljava/security/SecureRandom;
 
     invoke-direct {v7}, Ljava/security/SecureRandom;-><init>()V
 
-    .line 1326
     .local v7, "mRandom":Ljava/security/SecureRandom;
     invoke-virtual {v7, v5}, Ljava/security/SecureRandom;->nextBytes([B)V
 
-    .line 1327
     new-instance v6, Ljavax/crypto/spec/IvParameterSpec;
 
     invoke-direct {v6, v5}, Ljavax/crypto/spec/IvParameterSpec;-><init>([B)V
 
-    .line 1329
     .local v6, "ivSpec":Ljavax/crypto/spec/IvParameterSpec;
     const-string v9, "AES/CBC/PKCS5Padding"
 
@@ -3271,13 +2936,11 @@
 
     move-result-object v1
 
-    .line 1330
     .local v1, "cipher":Ljavax/crypto/Cipher;
     sget-boolean v9, Landroid/app/enterprise/sso/GenericSSOConstants;->DEBUG:Z
 
     if-eqz v9, :cond_6
 
-    .line 1331
     const-string v9, "GenericSSOService"
 
     new-instance v11, Ljava/lang/StringBuilder;
@@ -3304,11 +2967,9 @@
 
     invoke-static {v9, v11}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1332
     :cond_6
     if-eqz v1, :cond_8
 
-    .line 1333
     const/4 v11, 0x1
 
     sget-object v9, Lcom/android/server/enterprise/sso/GenericSSOService;->mSecretKey:Ljava/security/Key;
@@ -3317,12 +2978,10 @@
 
     invoke-virtual {v1, v11, v9, v6}, Ljavax/crypto/Cipher;->init(ILjava/security/Key;Ljava/security/spec/AlgorithmParameterSpec;)V
 
-    .line 1334
     invoke-virtual {v1, v3}, Ljavax/crypto/Cipher;->doFinal([B)[B
 
     move-result-object v8
 
-    .line 1336
     .local v8, "out":[B
     array-length v9, v8
 
@@ -3332,7 +2991,6 @@
 
     new-array v0, v9, [B
 
-    .line 1337
     .local v0, "EncryptedDataAndIV":[B
     const/4 v9, 0x0
 
@@ -3342,7 +3000,6 @@
 
     invoke-static {v8, v9, v0, v11, v12}, Ljava/lang/System;->arraycopy([BI[BII)V
 
-    .line 1338
     const/4 v9, 0x0
 
     array-length v11, v8
@@ -3351,7 +3008,6 @@
 
     invoke-static {v5, v9, v0, v11, v12}, Ljava/lang/System;->arraycopy([BI[BII)V
 
-    .line 1341
     new-instance v2, Ljava/lang/String;
 
     const/4 v9, 0x2
@@ -3364,13 +3020,11 @@
 
     invoke-direct {v2, v9, v11}, Ljava/lang/String;-><init>([BLjava/lang/String;)V
 
-    .line 1343
     .local v2, "ciphertext":Ljava/lang/String;
     sget-boolean v9, Landroid/app/enterprise/sso/GenericSSOConstants;->DEBUG:Z
 
     if-eqz v9, :cond_7
 
-    .line 1344
     const-string v9, "GenericSSOService"
 
     new-instance v11, Ljava/lang/StringBuilder;
@@ -3393,13 +3047,11 @@
 
     invoke-static {v9, v11}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1345
     :cond_7
     sget-boolean v9, Landroid/app/enterprise/sso/GenericSSOConstants;->DEBUG:Z
 
     if-eqz v9, :cond_2
 
-    .line 1346
     const-string v9, "GenericSSOService"
 
     new-instance v11, Ljava/lang/StringBuilder;
@@ -3441,7 +3093,6 @@
 
     goto/16 :goto_0
 
-    .line 1350
     .end local v0    # "EncryptedDataAndIV":[B
     .end local v1    # "cipher":Ljavax/crypto/Cipher;
     .end local v2    # "ciphertext":Ljava/lang/String;
@@ -3453,7 +3104,6 @@
     :catch_0
     move-exception v4
 
-    .line 1351
     .local v4, "e":Ljava/security/InvalidAlgorithmParameterException;
     const-string v9, "GenericSSOService"
 
@@ -3466,14 +3116,11 @@
     :goto_1
     move-object v2, v10
 
-    .line 1375
     goto/16 :goto_0
 
-    .line 1352
     :catch_1
     move-exception v4
 
-    .line 1353
     .local v4, "e":Ljava/security/InvalidKeyException;
     const-string v9, "GenericSSOService"
 
@@ -3483,12 +3130,10 @@
 
     goto :goto_1
 
-    .line 1354
     .end local v4    # "e":Ljava/security/InvalidKeyException;
     :catch_2
     move-exception v4
 
-    .line 1355
     .local v4, "e":Ljava/security/NoSuchProviderException;
     const-string v9, "GenericSSOService"
 
@@ -3498,12 +3143,10 @@
 
     goto :goto_1
 
-    .line 1356
     .end local v4    # "e":Ljava/security/NoSuchProviderException;
     :catch_3
     move-exception v4
 
-    .line 1357
     .local v4, "e":Ljava/security/NoSuchAlgorithmException;
     const-string v9, "GenericSSOService"
 
@@ -3513,12 +3156,10 @@
 
     goto :goto_1
 
-    .line 1358
     .end local v4    # "e":Ljava/security/NoSuchAlgorithmException;
     :catch_4
     move-exception v4
 
-    .line 1359
     .local v4, "e":Ljavax/crypto/NoSuchPaddingException;
     const-string v9, "GenericSSOService"
 
@@ -3528,12 +3169,10 @@
 
     goto :goto_1
 
-    .line 1360
     .end local v4    # "e":Ljavax/crypto/NoSuchPaddingException;
     :catch_5
     move-exception v4
 
-    .line 1361
     .local v4, "e":Ljavax/crypto/IllegalBlockSizeException;
     const-string v9, "GenericSSOService"
 
@@ -3543,12 +3182,10 @@
 
     goto :goto_1
 
-    .line 1362
     .end local v4    # "e":Ljavax/crypto/IllegalBlockSizeException;
     :catch_6
     move-exception v4
 
-    .line 1363
     .local v4, "e":Ljavax/crypto/BadPaddingException;
     const-string v9, "GenericSSOService"
 
@@ -3558,12 +3195,10 @@
 
     goto :goto_1
 
-    .line 1364
     .end local v4    # "e":Ljavax/crypto/BadPaddingException;
     :catch_7
     move-exception v4
 
-    .line 1365
     .local v4, "e":Ljava/security/ProviderException;
     const-string v9, "GenericSSOService"
 
@@ -3573,12 +3208,10 @@
 
     goto :goto_1
 
-    .line 1366
     .end local v4    # "e":Ljava/security/ProviderException;
     :catch_8
     move-exception v4
 
-    .line 1367
     .local v4, "e":Ljava/security/KeyStoreException;
     const-string v9, "GenericSSOService"
 
@@ -3588,12 +3221,10 @@
 
     goto :goto_1
 
-    .line 1368
     .end local v4    # "e":Ljava/security/KeyStoreException;
     :catch_9
     move-exception v4
 
-    .line 1369
     .local v4, "e":Ljava/security/UnrecoverableKeyException;
     const-string v9, "GenericSSOService"
 
@@ -3603,12 +3234,10 @@
 
     goto :goto_1
 
-    .line 1370
     .end local v4    # "e":Ljava/security/UnrecoverableKeyException;
     :catch_a
     move-exception v4
 
-    .line 1371
     .local v4, "e":Ljava/io/IOException;
     const-string v9, "GenericSSOService"
 
@@ -3618,12 +3247,10 @@
 
     goto :goto_1
 
-    .line 1372
     .end local v4    # "e":Ljava/io/IOException;
     :catch_b
     move-exception v4
 
-    .line 1373
     .local v4, "e":Ljava/lang/Exception;
     const-string v9, "GenericSSOService"
 
@@ -3639,7 +3266,6 @@
     .param p1, "cxtInfo"    # Landroid/app/enterprise/ContextInfo;
 
     .prologue
-    .line 419
     invoke-direct {p0}, Lcom/android/server/enterprise/sso/GenericSSOService;->getEDM()Landroid/app/enterprise/EnterpriseDeviceManager;
 
     move-result-object v0
@@ -3658,7 +3284,6 @@
     .param p1, "cxtInfo"    # Landroid/app/enterprise/ContextInfo;
 
     .prologue
-    .line 424
     invoke-direct {p0}, Lcom/android/server/enterprise/sso/GenericSSOService;->getEDM()Landroid/app/enterprise/EnterpriseDeviceManager;
 
     move-result-object v0
@@ -3680,7 +3305,6 @@
     .prologue
     const/4 v6, 0x0
 
-    .line 1930
     if-eqz p1, :cond_0
 
     invoke-direct {p0, p2}, Lcom/android/server/enterprise/sso/GenericSSOService;->isNullOrEmpty(Ljava/lang/String;)Z
@@ -3692,24 +3316,20 @@
     :cond_0
     move-object v5, v6
 
-    .line 1954
     :goto_0
     return-object v5
 
-    .line 1934
     :cond_1
     :try_start_0
     invoke-interface {p1}, Lorg/w3c/dom/Node;->getChildNodes()Lorg/w3c/dom/NodeList;
 
     move-result-object v0
 
-    .line 1935
     .local v0, "children":Lorg/w3c/dom/NodeList;
     new-instance v4, Ljava/util/ArrayList;
 
     invoke-direct {v4}, Ljava/util/ArrayList;-><init>()V
 
-    .line 1936
     .local v4, "result":Ljava/util/ArrayList;, "Ljava/util/ArrayList<Lorg/w3c/dom/Node;>;"
     const/4 v2, 0x0
 
@@ -3721,12 +3341,10 @@
 
     if-ge v2, v5, :cond_3
 
-    .line 1937
     invoke-interface {v0, v2}, Lorg/w3c/dom/NodeList;->item(I)Lorg/w3c/dom/Node;
 
     move-result-object v3
 
-    .line 1938
     .local v3, "node":Lorg/w3c/dom/Node;
     invoke-interface {v3}, Lorg/w3c/dom/Node;->getNodeType()S
 
@@ -3746,16 +3364,13 @@
 
     if-eqz v5, :cond_2
 
-    .line 1940
     invoke-virtual {v4, v3}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 1936
     :cond_2
     add-int/lit8 v2, v2, 0x1
 
     goto :goto_1
 
-    .line 1943
     .end local v3    # "node":Lorg/w3c/dom/Node;
     :cond_3
     if-eqz v4, :cond_4
@@ -3766,7 +3381,6 @@
 
     if-lez v5, :cond_4
 
-    .line 1944
     const/4 v5, 0x0
 
     invoke-virtual {v4, v5}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
@@ -3783,17 +3397,14 @@
     :cond_4
     move-object v5, v6
 
-    .line 1946
     goto :goto_0
 
-    .line 1947
     .end local v0    # "children":Lorg/w3c/dom/NodeList;
     .end local v2    # "i":I
     .end local v4    # "result":Ljava/util/ArrayList;, "Ljava/util/ArrayList<Lorg/w3c/dom/Node;>;"
     :catch_0
     move-exception v1
 
-    .line 1949
     .local v1, "e":Ljava/lang/NullPointerException;
     const-string v5, "GenericSSOService"
 
@@ -3805,14 +3416,11 @@
     :goto_2
     move-object v5, v6
 
-    .line 1954
     goto :goto_0
 
-    .line 1950
     :catch_1
     move-exception v1
 
-    .line 1952
     .local v1, "e":Ljava/lang/Exception;
     const-string v5, "GenericSSOService"
 
@@ -3831,43 +3439,36 @@
     .param p4, "value"    # Ljava/lang/String;
 
     .prologue
-    .line 2800
     if-eqz p2, :cond_0
 
     if-eqz p3, :cond_0
 
     if-nez p4, :cond_2
 
-    .line 2801
     :cond_0
     sget-boolean v3, Landroid/app/enterprise/sso/GenericSSOConstants;->DEBUG:Z
 
     if-eqz v3, :cond_1
 
-    .line 2802
     const-string v3, "GenericSSOService"
 
     const-string v4, "In fillChildNodes: parameters are not valid"
 
     invoke-static {v3, v4}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 2837
     :cond_1
     :goto_0
     return-void
 
-    .line 2806
     :cond_2
     :try_start_0
     invoke-direct {p0, p2, p3}, Lcom/android/server/enterprise/sso/GenericSSOService;->getChildNodes(Lorg/w3c/dom/Node;Ljava/lang/String;)Ljava/util/ArrayList;
 
     move-result-object v2
 
-    .line 2807
     .local v2, "tokenNodes":Ljava/util/ArrayList;, "Ljava/util/ArrayList<Lorg/w3c/dom/Node;>;"
     const/4 v1, 0x0
 
-    .line 2808
     .local v1, "tokenFieldNode":Lorg/w3c/dom/Element;
     invoke-virtual {p4}, Ljava/lang/String;->length()I
 
@@ -3875,7 +3476,6 @@
 
     if-eqz v3, :cond_7
 
-    .line 2809
     if-eqz v2, :cond_3
 
     invoke-virtual {v2}, Ljava/util/ArrayList;->isEmpty()Z
@@ -3884,7 +3484,6 @@
 
     if-eqz v3, :cond_5
 
-    .line 2810
     :cond_3
     iget-object v3, p1, Lcom/android/server/enterprise/sso/GenericSSOService$TokenConfigDocument;->XMLDoc:Lorg/w3c/dom/Document;
 
@@ -3892,23 +3491,20 @@
 
     move-result-object v1
 
-    .line 2811
     invoke-interface {p2, v1}, Lorg/w3c/dom/Element;->appendChild(Lorg/w3c/dom/Node;)Lorg/w3c/dom/Node;
 
-    .line 2815
     :goto_1
     sget-boolean v3, Landroid/app/enterprise/sso/GenericSSOConstants;->DEBUG:Z
 
     if-eqz v3, :cond_4
 
-    .line 2816
     const-string v3, "GenericSSOService"
 
     new-instance v4, Ljava/lang/StringBuilder;
 
     invoke-direct {v4}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v5, "the original value = "
+    const-string v5, "the original value = "
 
     invoke-virtual {v4, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -3924,21 +3520,17 @@
 
     invoke-static {v3, v4}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 2818
     :cond_4
     invoke-direct {p0, p4}, Lcom/android/server/enterprise/sso/GenericSSOService;->encrypt(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object p4
 
-    .line 2819
     if-nez p4, :cond_6
 
-    .line 2820
     sget-boolean v3, Landroid/app/enterprise/sso/GenericSSOConstants;->DEBUG:Z
 
     if-eqz v3, :cond_1
 
-    .line 2821
     const-string v3, "GenericSSOService"
 
     const-string v4, "In fillChildNodes: encrypted token value is null, failed to fillChildNodes"
@@ -3949,13 +3541,11 @@
 
     goto :goto_0
 
-    .line 2833
     .end local v1    # "tokenFieldNode":Lorg/w3c/dom/Element;
     .end local v2    # "tokenNodes":Ljava/util/ArrayList;, "Ljava/util/ArrayList<Lorg/w3c/dom/Node;>;"
     :catch_0
     move-exception v0
 
-    .line 2835
     .local v0, "e":Ljava/lang/Exception;
     const-string v3, "GenericSSOService"
 
@@ -3967,7 +3557,6 @@
 
     goto :goto_0
 
-    .line 2813
     .end local v0    # "e":Ljava/lang/Exception;
     .restart local v1    # "tokenFieldNode":Lorg/w3c/dom/Element;
     .restart local v2    # "tokenNodes":Ljava/util/ArrayList;, "Ljava/util/ArrayList<Lorg/w3c/dom/Node;>;"
@@ -3985,15 +3574,13 @@
     .restart local v1    # "tokenFieldNode":Lorg/w3c/dom/Element;
     goto :goto_1
 
-    .line 2825
     :cond_6
-    const-string/jumbo v3, "value"
+    const-string v3, "value"
 
     invoke-interface {v1, v3, p4}, Lorg/w3c/dom/Element;->setAttribute(Ljava/lang/String;Ljava/lang/String;)V
 
     goto :goto_0
 
-    .line 2828
     :cond_7
     if-eqz v2, :cond_1
 
@@ -4003,7 +3590,6 @@
 
     if-nez v3, :cond_1
 
-    .line 2829
     const/4 v3, 0x0
 
     invoke-virtual {v2, v3}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
@@ -4041,16 +3627,13 @@
     .local p1, "list":Ljava/util/List;, "Ljava/util/List<Lorg/w3c/dom/Node;>;"
     const/4 v2, 0x0
 
-    .line 1116
     if-nez p1, :cond_0
 
     move-object v1, v2
 
-    .line 1124
     :goto_0
     return-object v1
 
-    .line 1118
     :cond_0
     invoke-interface {p1}, Ljava/util/List;->iterator()Ljava/util/Iterator;
 
@@ -4070,7 +3653,6 @@
 
     check-cast v1, Lorg/w3c/dom/Node;
 
-    .line 1119
     .local v1, "node":Lorg/w3c/dom/Node;
     invoke-interface {v1}, Lorg/w3c/dom/Node;->getNodeType()S
 
@@ -4104,7 +3686,6 @@
     :cond_2
     move-object v1, v2
 
-    .line 1124
     goto :goto_0
 .end method
 
@@ -4115,7 +3696,6 @@
     .prologue
     const/4 v2, 0x0
 
-    .line 1712
     if-eqz p1, :cond_0
 
     invoke-virtual {p1}, Landroid/app/enterprise/sso/TokenInfo;->getResponseBundle()Landroid/os/Bundle;
@@ -4124,43 +3704,36 @@
 
     if-nez v3, :cond_2
 
-    .line 1713
     :cond_0
     sget-boolean v3, Landroid/app/enterprise/sso/GenericSSOConstants;->DEBUG:Z
 
     if-eqz v3, :cond_1
 
-    .line 1714
     const-string v3, "GenericSSOService"
 
     const-string v4, "In getAccessTokenByProtocolType: token is not valid"
 
     invoke-static {v3, v4}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1731
     :cond_1
     :goto_0
     return-object v2
 
-    .line 1718
     :cond_2
     invoke-virtual {p1}, Landroid/app/enterprise/sso/TokenInfo;->getProtocolType()I
 
     move-result v0
 
-    .line 1719
     .local v0, "protocolType":I
     invoke-virtual {p1}, Landroid/app/enterprise/sso/TokenInfo;->getResponseBundle()Landroid/os/Bundle;
 
     move-result-object v1
 
-    .line 1720
     .local v1, "responseBundle":Landroid/os/Bundle;
     packed-switch v0, :pswitch_data_0
 
     goto :goto_0
 
-    .line 1722
     :pswitch_0
     const-string v2, "SAML_RESPONSE_ASSERTION"
 
@@ -4170,7 +3743,6 @@
 
     goto :goto_0
 
-    .line 1725
     :pswitch_1
     const-string v2, "OAUTH_RESPONSE_ACCESS_TOKEN"
 
@@ -4180,7 +3752,6 @@
 
     goto :goto_0
 
-    .line 1728
     :pswitch_2
     const-string v2, "SAML_RESPONSE_ASSERTION"
 
@@ -4190,7 +3761,6 @@
 
     goto :goto_0
 
-    .line 1720
     :pswitch_data_0
     .packed-switch 0x1
         :pswitch_0
@@ -4207,19 +3777,16 @@
     .prologue
     const/4 v8, 0x0
 
-    .line 2954
     invoke-direct {p0, p2}, Lcom/android/server/enterprise/sso/GenericSSOService;->isNullOrEmpty(Ljava/lang/String;)Z
 
     move-result v9
 
     if-eqz v9, :cond_1
 
-    .line 2955
     sget-boolean v9, Landroid/app/enterprise/sso/GenericSSOConstants;->DEBUG:Z
 
     if-eqz v9, :cond_0
 
-    .line 2956
     const-string v9, "GenericSSOService"
 
     const-string v10, "In getAppTokenFromSecureStorageForUser: appPkgName is null or empty"
@@ -4229,24 +3796,20 @@
     :cond_0
     move-object v6, v8
 
-    .line 2996
     :goto_0
     return-object v6
 
-    .line 2961
     :cond_1
     :try_start_0
     new-instance v6, Landroid/app/enterprise/sso/TokenInfo;
 
     invoke-direct {v6}, Landroid/app/enterprise/sso/TokenInfo;-><init>()V
 
-    .line 2962
     .local v6, "retToken":Landroid/app/enterprise/sso/TokenInfo;
     invoke-direct {p0, p1}, Lcom/android/server/enterprise/sso/GenericSSOService;->getTokenConfigForUserId(I)Lcom/android/server/enterprise/sso/GenericSSOService$TokenConfigDocument;
 
     move-result-object v3
 
-    .line 2963
     .local v3, "configDoc":Lcom/android/server/enterprise/sso/GenericSSOService$TokenConfigDocument;
     # invokes: Lcom/android/server/enterprise/sso/GenericSSOService$TokenConfigDocument;->getSSOTokenNode(Ljava/lang/String;)Lorg/w3c/dom/Node;
     invoke-static {v3, p2}, Lcom/android/server/enterprise/sso/GenericSSOService$TokenConfigDocument;->access$1300(Lcom/android/server/enterprise/sso/GenericSSOService$TokenConfigDocument;Ljava/lang/String;)Lorg/w3c/dom/Node;
@@ -4255,16 +3818,13 @@
 
     check-cast v7, Lorg/w3c/dom/Element;
 
-    .line 2964
     .local v7, "tokenNode":Lorg/w3c/dom/Element;
     if-nez v7, :cond_3
 
-    .line 2965
     sget-boolean v9, Landroid/app/enterprise/sso/GenericSSOConstants;->DEBUG:Z
 
     if-eqz v9, :cond_2
 
-    .line 2966
     const-string v9, "GenericSSOService"
 
     new-instance v10, Ljava/lang/StringBuilder;
@@ -4296,12 +3856,10 @@
     :cond_2
     move-object v6, v8
 
-    .line 2969
     goto :goto_0
 
-    .line 2971
     :cond_3
-    const-string/jumbo v9, "protocoltype"
+    const-string v9, "protocoltype"
 
     invoke-interface {v7, v9}, Lorg/w3c/dom/Element;->getAttribute(Ljava/lang/String;)Ljava/lang/String;
 
@@ -4313,18 +3871,15 @@
 
     invoke-virtual {v6, v9}, Landroid/app/enterprise/sso/TokenInfo;->setProtocolType(I)V
 
-    .line 2974
     invoke-direct {p0, v7}, Lcom/android/server/enterprise/sso/GenericSSOService;->getChildNodes(Lorg/w3c/dom/Node;)Ljava/util/ArrayList;
 
     move-result-object v2
 
-    .line 2975
     .local v2, "childNodes":Ljava/util/ArrayList;, "Ljava/util/ArrayList<Lorg/w3c/dom/Node;>;"
     new-instance v0, Landroid/os/Bundle;
 
     invoke-direct {v0}, Landroid/os/Bundle;-><init>()V
 
-    .line 2976
     .local v0, "cachedTokenItems":Landroid/os/Bundle;
     invoke-virtual {v2}, Ljava/util/ArrayList;->iterator()Ljava/util/Iterator;
 
@@ -4345,7 +3900,6 @@
 
     check-cast v1, Lorg/w3c/dom/Node;
 
-    .line 2977
     .local v1, "childNode":Lorg/w3c/dom/Node;
     invoke-interface {v1}, Lorg/w3c/dom/Node;->getNodeType()S
 
@@ -4355,8 +3909,7 @@
 
     if-ne v9, v10, :cond_4
 
-    .line 2979
-    const-string/jumbo v9, "value"
+    const-string v9, "value"
 
     invoke-direct {p0, v1, v9}, Lcom/android/server/enterprise/sso/GenericSSOService;->getAttributeNode(Lorg/w3c/dom/Node;Ljava/lang/String;)Lorg/w3c/dom/Node;
 
@@ -4364,12 +3917,11 @@
 
     if-eqz v9, :cond_4
 
-    .line 2980
     invoke-interface {v1}, Lorg/w3c/dom/Node;->getNodeName()Ljava/lang/String;
 
     move-result-object v9
 
-    const-string/jumbo v10, "value"
+    const-string v10, "value"
 
     invoke-direct {p0, v1, v10}, Lcom/android/server/enterprise/sso/GenericSSOService;->getAttributeNode(Lorg/w3c/dom/Node;Ljava/lang/String;)Lorg/w3c/dom/Node;
 
@@ -4390,7 +3942,6 @@
 
     goto :goto_1
 
-    .line 2989
     .end local v0    # "cachedTokenItems":Landroid/os/Bundle;
     .end local v1    # "childNode":Lorg/w3c/dom/Node;
     .end local v2    # "childNodes":Ljava/util/ArrayList;, "Ljava/util/ArrayList<Lorg/w3c/dom/Node;>;"
@@ -4401,7 +3952,6 @@
     :catch_0
     move-exception v4
 
-    .line 2991
     .local v4, "e":Ljava/lang/NullPointerException;
     const-string v9, "GenericSSOService"
 
@@ -4413,10 +3963,8 @@
     :goto_2
     move-object v6, v8
 
-    .line 2996
     goto/16 :goto_0
 
-    .line 2986
     .restart local v0    # "cachedTokenItems":Landroid/os/Bundle;
     .restart local v2    # "childNodes":Ljava/util/ArrayList;, "Ljava/util/ArrayList<Lorg/w3c/dom/Node;>;"
     .restart local v3    # "configDoc":Lcom/android/server/enterprise/sso/GenericSSOService$TokenConfigDocument;
@@ -4432,7 +3980,6 @@
 
     goto/16 :goto_0
 
-    .line 2992
     .end local v0    # "cachedTokenItems":Landroid/os/Bundle;
     .end local v2    # "childNodes":Ljava/util/ArrayList;, "Ljava/util/ArrayList<Lorg/w3c/dom/Node;>;"
     .end local v3    # "configDoc":Lcom/android/server/enterprise/sso/GenericSSOService$TokenConfigDocument;
@@ -4442,7 +3989,6 @@
     :catch_1
     move-exception v4
 
-    .line 2994
     .local v4, "e":Ljava/lang/Exception;
     const-string v9, "GenericSSOService"
 
@@ -4459,7 +4005,6 @@
     .param p2, "attirbuteName"    # Ljava/lang/String;
 
     .prologue
-    .line 1132
     if-eqz p1, :cond_0
 
     if-eqz p2, :cond_0
@@ -4470,11 +4015,9 @@
 
     if-nez v0, :cond_1
 
-    .line 1134
     :cond_0
     const/4 v0, 0x0
 
-    .line 1135
     :goto_0
     return-object v0
 
@@ -4508,30 +4051,25 @@
     .prologue
     const/4 v5, 0x0
 
-    .line 1085
     if-nez p1, :cond_1
 
     move-object v4, v5
 
-    .line 1103
     :cond_0
     :goto_0
     return-object v4
 
-    .line 1088
     :cond_1
     :try_start_0
     invoke-interface {p1}, Lorg/w3c/dom/Node;->getChildNodes()Lorg/w3c/dom/NodeList;
 
     move-result-object v0
 
-    .line 1089
     .local v0, "children":Lorg/w3c/dom/NodeList;
     new-instance v4, Ljava/util/ArrayList;
 
     invoke-direct {v4}, Ljava/util/ArrayList;-><init>()V
 
-    .line 1091
     .local v4, "result":Ljava/util/ArrayList;, "Ljava/util/ArrayList<Lorg/w3c/dom/Node;>;"
     const/4 v2, 0x0
 
@@ -4543,12 +4081,10 @@
 
     if-ge v2, v6, :cond_0
 
-    .line 1092
     invoke-interface {v0, v2}, Lorg/w3c/dom/NodeList;->item(I)Lorg/w3c/dom/Node;
 
     move-result-object v3
 
-    .line 1093
     .local v3, "node":Lorg/w3c/dom/Node;
     invoke-interface {v3}, Lorg/w3c/dom/Node;->getNodeType()S
 
@@ -4558,19 +4094,16 @@
 
     if-ne v6, v7, :cond_2
 
-    .line 1094
     invoke-virtual {v4, v3}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
     :try_end_0
     .catch Ljava/lang/NullPointerException; {:try_start_0 .. :try_end_0} :catch_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_1
 
-    .line 1091
     :cond_2
     add-int/lit8 v2, v2, 0x1
 
     goto :goto_1
 
-    .line 1098
     .end local v0    # "children":Lorg/w3c/dom/NodeList;
     .end local v2    # "i":I
     .end local v3    # "node":Lorg/w3c/dom/Node;
@@ -4578,7 +4111,6 @@
     :catch_0
     move-exception v1
 
-    .line 1099
     .local v1, "e":Ljava/lang/NullPointerException;
     const-string v6, "GenericSSOService"
 
@@ -4590,14 +4122,11 @@
     :goto_2
     move-object v4, v5
 
-    .line 1103
     goto :goto_0
 
-    .line 1100
     :catch_1
     move-exception v1
 
-    .line 1101
     .local v1, "e":Ljava/lang/Exception;
     const-string v6, "GenericSSOService"
 
@@ -4628,7 +4157,6 @@
     .prologue
     const/4 v5, 0x0
 
-    .line 1056
     if-eqz p1, :cond_0
 
     invoke-direct {p0, p2}, Lcom/android/server/enterprise/sso/GenericSSOService;->isNullOrEmpty(Ljava/lang/String;)Z
@@ -4640,25 +4168,21 @@
     :cond_0
     move-object v4, v5
 
-    .line 1075
     :cond_1
     :goto_0
     return-object v4
 
-    .line 1060
     :cond_2
     :try_start_0
     invoke-interface {p1}, Lorg/w3c/dom/Node;->getChildNodes()Lorg/w3c/dom/NodeList;
 
     move-result-object v0
 
-    .line 1061
     .local v0, "children":Lorg/w3c/dom/NodeList;
     new-instance v4, Ljava/util/ArrayList;
 
     invoke-direct {v4}, Ljava/util/ArrayList;-><init>()V
 
-    .line 1062
     .local v4, "result":Ljava/util/ArrayList;, "Ljava/util/ArrayList<Lorg/w3c/dom/Node;>;"
     const/4 v2, 0x0
 
@@ -4670,12 +4194,10 @@
 
     if-ge v2, v6, :cond_1
 
-    .line 1063
     invoke-interface {v0, v2}, Lorg/w3c/dom/NodeList;->item(I)Lorg/w3c/dom/Node;
 
     move-result-object v3
 
-    .line 1064
     .local v3, "node":Lorg/w3c/dom/Node;
     invoke-interface {v3}, Lorg/w3c/dom/Node;->getNodeType()S
 
@@ -4695,19 +4217,16 @@
 
     if-eqz v6, :cond_3
 
-    .line 1066
     invoke-virtual {v4, v3}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
     :try_end_0
     .catch Ljava/lang/NullPointerException; {:try_start_0 .. :try_end_0} :catch_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_1
 
-    .line 1062
     :cond_3
     add-int/lit8 v2, v2, 0x1
 
     goto :goto_1
 
-    .line 1070
     .end local v0    # "children":Lorg/w3c/dom/NodeList;
     .end local v2    # "i":I
     .end local v3    # "node":Lorg/w3c/dom/Node;
@@ -4715,7 +4234,6 @@
     :catch_0
     move-exception v1
 
-    .line 1071
     .local v1, "e":Ljava/lang/NullPointerException;
     const-string v6, "GenericSSOService"
 
@@ -4727,14 +4245,11 @@
     :goto_2
     move-object v4, v5
 
-    .line 1075
     goto :goto_0
 
-    .line 1072
     :catch_1
     move-exception v1
 
-    .line 1073
     .local v1, "e":Ljava/lang/Exception;
     const-string v6, "GenericSSOService"
 
@@ -4751,28 +4266,23 @@
     .param p2, "packageName"    # Ljava/lang/String;
 
     .prologue
-    .line 541
     invoke-direct {p0, p1}, Lcom/android/server/enterprise/sso/GenericSSOService;->getConfigDataForSSOVendor(I)Landroid/os/Bundle;
 
     move-result-object v5
 
-    .line 542
     .local v5, "vendorBundle":Landroid/os/Bundle;
     invoke-direct {p0, p1, p2}, Lcom/android/server/enterprise/sso/GenericSSOService;->getConfigDataForPkgName(ILjava/lang/String;)Landroid/os/Bundle;
 
     move-result-object v4
 
-    .line 544
     .local v4, "packageBundle":Landroid/os/Bundle;
     new-instance v3, Landroid/os/Bundle;
 
     invoke-direct {v3}, Landroid/os/Bundle;-><init>()V
 
-    .line 545
     .local v3, "newBundle":Landroid/os/Bundle;
     const/4 v2, 0x0
 
-    .line 546
     .local v2, "keySet":Ljava/util/Set;, "Ljava/util/Set<Ljava/lang/String;>;"
     invoke-direct {p0, v5}, Lcom/android/server/enterprise/sso/GenericSSOService;->isNullOrEmpty(Landroid/os/Bundle;)Z
 
@@ -4780,12 +4290,10 @@
 
     if-nez v6, :cond_1
 
-    .line 547
     invoke-virtual {v5}, Landroid/os/Bundle;->keySet()Ljava/util/Set;
 
     move-result-object v2
 
-    .line 548
     invoke-interface {v2}, Ljava/util/Set;->iterator()Ljava/util/Iterator;
 
     move-result-object v0
@@ -4805,7 +4313,6 @@
 
     check-cast v1, Ljava/lang/String;
 
-    .line 549
     .local v1, "key":Ljava/lang/String;
     invoke-virtual {v5, v1}, Landroid/os/Bundle;->getString(Ljava/lang/String;)Ljava/lang/String;
 
@@ -4813,7 +4320,6 @@
 
     if-eqz v6, :cond_0
 
-    .line 550
     invoke-virtual {v5, v1}, Landroid/os/Bundle;->getString(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v6
@@ -4822,7 +4328,6 @@
 
     goto :goto_0
 
-    .line 553
     .end local v0    # "i$":Ljava/util/Iterator;
     .end local v1    # "key":Ljava/lang/String;
     :cond_1
@@ -4832,12 +4337,10 @@
 
     if-nez v6, :cond_3
 
-    .line 554
     invoke-virtual {v4}, Landroid/os/Bundle;->keySet()Ljava/util/Set;
 
     move-result-object v2
 
-    .line 555
     invoke-interface {v2}, Ljava/util/Set;->iterator()Ljava/util/Iterator;
 
     move-result-object v0
@@ -4857,7 +4360,6 @@
 
     check-cast v1, Ljava/lang/String;
 
-    .line 556
     .restart local v1    # "key":Ljava/lang/String;
     invoke-virtual {v4, v1}, Landroid/os/Bundle;->getString(Ljava/lang/String;)Ljava/lang/String;
 
@@ -4865,7 +4367,6 @@
 
     if-eqz v6, :cond_2
 
-    .line 557
     invoke-virtual {v4, v1}, Landroid/os/Bundle;->getString(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v6
@@ -4874,7 +4375,6 @@
 
     goto :goto_1
 
-    .line 560
     .end local v0    # "i$":Ljava/util/Iterator;
     .end local v1    # "key":Ljava/lang/String;
     :cond_3
@@ -4887,34 +4387,28 @@
     .param p2, "packageName"    # Ljava/lang/String;
 
     .prologue
-    .line 613
     :try_start_0
     invoke-direct {p0, p1}, Lcom/android/server/enterprise/sso/GenericSSOService;->getSSOConfigForUserId(I)Lcom/android/server/enterprise/sso/GenericSSOService$RequestConfigDocument;
 
     move-result-object v4
 
-    .line 614
     .local v4, "configDoc":Lcom/android/server/enterprise/sso/GenericSSOService$RequestConfigDocument;
     # invokes: Lcom/android/server/enterprise/sso/GenericSSOService$RequestConfigDocument;->getEnrolledSSOVendor()Lorg/w3c/dom/Node;
     invoke-static {v4}, Lcom/android/server/enterprise/sso/GenericSSOService$RequestConfigDocument;->access$600(Lcom/android/server/enterprise/sso/GenericSSOService$RequestConfigDocument;)Lorg/w3c/dom/Node;
 
     move-result-object v9
 
-    .line 615
     .local v9, "ssoNode":Lorg/w3c/dom/Node;
     if-nez v9, :cond_1
 
-    .line 616
     const/4 v8, 0x0
 
-    .line 660
     .end local v4    # "configDoc":Lcom/android/server/enterprise/sso/GenericSSOService$RequestConfigDocument;
     .end local v9    # "ssoNode":Lorg/w3c/dom/Node;
     :cond_0
     :goto_0
     return-object v8
 
-    .line 618
     .restart local v4    # "configDoc":Lcom/android/server/enterprise/sso/GenericSSOService$RequestConfigDocument;
     .restart local v9    # "ssoNode":Lorg/w3c/dom/Node;
     :cond_1
@@ -4922,22 +4416,18 @@
 
     move-result-object v1
 
-    .line 619
     .local v1, "allowedApps":Ljava/util/ArrayList;, "Ljava/util/ArrayList<Lorg/w3c/dom/Node;>;"
     if-nez v1, :cond_2
 
-    .line 620
     const/4 v8, 0x0
 
     goto :goto_0
 
-    .line 622
     :cond_2
     new-instance v8, Landroid/os/Bundle;
 
     invoke-direct {v8}, Landroid/os/Bundle;-><init>()V
 
-    .line 623
     .local v8, "ret":Landroid/os/Bundle;
     invoke-virtual {v1}, Ljava/util/ArrayList;->iterator()Ljava/util/Iterator;
 
@@ -4956,7 +4446,6 @@
 
     check-cast v0, Lorg/w3c/dom/Node;
 
-    .line 624
     .local v0, "allowedApp":Lorg/w3c/dom/Node;
     invoke-interface {v0}, Lorg/w3c/dom/Node;->getNodeType()S
 
@@ -4982,12 +4471,10 @@
 
     if-eqz v10, :cond_3
 
-    .line 630
     const-string v10, "clientpackagename"
 
     invoke-virtual {v8, v10, p2}, Landroid/os/Bundle;->putString(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 632
     const-string v10, "clientpackagesignature"
 
     invoke-direct {p0, v0, v10}, Lcom/android/server/enterprise/sso/GenericSSOService;->getAttributeNode(Lorg/w3c/dom/Node;Ljava/lang/String;)Lorg/w3c/dom/Node;
@@ -4996,7 +4483,6 @@
 
     if-eqz v10, :cond_4
 
-    .line 634
     const-string v10, "clientpackagesignature"
 
     const-string v11, "clientpackagesignature"
@@ -5011,13 +4497,11 @@
 
     invoke-virtual {v8, v10, v11}, Landroid/os/Bundle;->putString(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 642
     :cond_4
     invoke-direct {p0, v0}, Lcom/android/server/enterprise/sso/GenericSSOService;->getChildNodes(Lorg/w3c/dom/Node;)Ljava/util/ArrayList;
 
     move-result-object v3
 
-    .line 643
     .local v3, "childNodes":Ljava/util/ArrayList;, "Ljava/util/ArrayList<Lorg/w3c/dom/Node;>;"
     invoke-virtual {v3}, Ljava/util/ArrayList;->iterator()Ljava/util/Iterator;
 
@@ -5038,7 +4522,6 @@
 
     check-cast v2, Lorg/w3c/dom/Node;
 
-    .line 644
     .local v2, "childNode":Lorg/w3c/dom/Node;
     invoke-interface {v2}, Lorg/w3c/dom/Node;->getNodeType()S
 
@@ -5048,12 +4531,11 @@
 
     if-ne v10, v11, :cond_5
 
-    .line 646
     invoke-interface {v2}, Lorg/w3c/dom/Node;->getNodeName()Ljava/lang/String;
 
     move-result-object v10
 
-    const-string/jumbo v11, "value"
+    const-string v11, "value"
 
     invoke-direct {p0, v2, v11}, Lcom/android/server/enterprise/sso/GenericSSOService;->getAttributeNode(Lorg/w3c/dom/Node;Ljava/lang/String;)Lorg/w3c/dom/Node;
 
@@ -5070,7 +4552,6 @@
 
     goto :goto_1
 
-    .line 655
     .end local v0    # "allowedApp":Lorg/w3c/dom/Node;
     .end local v1    # "allowedApps":Ljava/util/ArrayList;, "Ljava/util/ArrayList<Lorg/w3c/dom/Node;>;"
     .end local v2    # "childNode":Lorg/w3c/dom/Node;
@@ -5082,7 +4563,6 @@
     :catch_0
     move-exception v5
 
-    .line 656
     .local v5, "e":Ljava/lang/NullPointerException;
     const-string v10, "GenericSSOService"
 
@@ -5090,18 +4570,15 @@
 
     invoke-static {v10, v11, v5}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
-    .line 660
     .end local v5    # "e":Ljava/lang/NullPointerException;
     :goto_2
     const/4 v8, 0x0
 
     goto/16 :goto_0
 
-    .line 657
     :catch_1
     move-exception v5
 
-    .line 658
     .local v5, "e":Ljava/lang/Exception;
     const-string v10, "GenericSSOService"
 
@@ -5117,23 +4594,19 @@
     .param p1, "userId"    # I
 
     .prologue
-    .line 564
     sget-boolean v10, Landroid/app/enterprise/sso/GenericSSOConstants;->DEBUG:Z
 
     if-eqz v10, :cond_0
 
-    .line 565
     const-string v10, "GenericSSOService"
 
     const-string v11, "In getConfigDataForSSOVendor: start getConfigDataForSSOVendor"
 
     invoke-static {v10, v11}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 567
     :cond_0
     const/4 v7, 0x0
 
-    .line 569
     .local v7, "ret":Landroid/os/Bundle;
     :try_start_0
     new-instance v8, Landroid/os/Bundle;
@@ -5142,7 +4615,6 @@
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_1
 
-    .line 570
     .end local v7    # "ret":Landroid/os/Bundle;
     .local v8, "ret":Landroid/os/Bundle;
     :try_start_1
@@ -5150,18 +4622,16 @@
 
     move-result-object v3
 
-    .line 571
     .local v3, "configDoc":Lcom/android/server/enterprise/sso/GenericSSOService$RequestConfigDocument;
     # invokes: Lcom/android/server/enterprise/sso/GenericSSOService$RequestConfigDocument;->getEnrolledSSOVendor()Lorg/w3c/dom/Node;
     invoke-static {v3}, Lcom/android/server/enterprise/sso/GenericSSOService$RequestConfigDocument;->access$600(Lcom/android/server/enterprise/sso/GenericSSOService$RequestConfigDocument;)Lorg/w3c/dom/Node;
 
     move-result-object v9
 
-    .line 573
     .local v9, "ssoNode":Lorg/w3c/dom/Node;
-    const-string/jumbo v10, "servicepackagename"
+    const-string v10, "servicepackagename"
 
-    const-string/jumbo v11, "servicepackagename"
+    const-string v11, "servicepackagename"
 
     invoke-direct {p0, v9, v11}, Lcom/android/server/enterprise/sso/GenericSSOService;->getAttributeNode(Lorg/w3c/dom/Node;Ljava/lang/String;)Lorg/w3c/dom/Node;
 
@@ -5173,8 +4643,7 @@
 
     invoke-virtual {v8, v10, v11}, Landroid/os/Bundle;->putString(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 578
-    const-string/jumbo v10, "servicepackagesignature"
+    const-string v10, "servicepackagesignature"
 
     invoke-direct {p0, v9, v10}, Lcom/android/server/enterprise/sso/GenericSSOService;->getAttributeNode(Lorg/w3c/dom/Node;Ljava/lang/String;)Lorg/w3c/dom/Node;
 
@@ -5182,10 +4651,9 @@
 
     if-eqz v10, :cond_1
 
-    .line 580
-    const-string/jumbo v10, "servicepackagesignature"
+    const-string v10, "servicepackagesignature"
 
-    const-string/jumbo v11, "servicepackagesignature"
+    const-string v11, "servicepackagesignature"
 
     invoke-direct {p0, v9, v11}, Lcom/android/server/enterprise/sso/GenericSSOService;->getAttributeNode(Lorg/w3c/dom/Node;Ljava/lang/String;)Lorg/w3c/dom/Node;
 
@@ -5197,13 +4665,11 @@
 
     invoke-virtual {v8, v10, v11}, Landroid/os/Bundle;->putString(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 588
     :cond_1
     invoke-direct {p0, v9}, Lcom/android/server/enterprise/sso/GenericSSOService;->getChildNodes(Lorg/w3c/dom/Node;)Ljava/util/ArrayList;
 
     move-result-object v1
 
-    .line 589
     .local v1, "childNodes":Ljava/util/ArrayList;, "Ljava/util/ArrayList<Lorg/w3c/dom/Node;>;"
     invoke-virtual {v1}, Ljava/util/ArrayList;->iterator()Ljava/util/Iterator;
 
@@ -5222,7 +4688,6 @@
 
     check-cast v0, Lorg/w3c/dom/Node;
 
-    .line 590
     .local v0, "childNode":Lorg/w3c/dom/Node;
     invoke-interface {v0}, Lorg/w3c/dom/Node;->getNodeType()S
 
@@ -5236,7 +4701,7 @@
 
     move-result-object v10
 
-    const-string/jumbo v11, "vendorconfigs"
+    const-string v11, "vendorconfigs"
 
     invoke-virtual {v10, v11}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
@@ -5244,7 +4709,6 @@
 
     if-eqz v10, :cond_2
 
-    .line 592
     invoke-direct {p0, v0}, Lcom/android/server/enterprise/sso/GenericSSOService;->getChildNodes(Lorg/w3c/dom/Node;)Ljava/util/ArrayList;
 
     move-result-object v10
@@ -5268,9 +4732,8 @@
 
     check-cast v2, Lorg/w3c/dom/Node;
 
-    .line 593
     .local v2, "configChildNode":Lorg/w3c/dom/Node;
-    const-string/jumbo v10, "value"
+    const-string v10, "value"
 
     invoke-direct {p0, v2, v10}, Lcom/android/server/enterprise/sso/GenericSSOService;->getAttributeNode(Lorg/w3c/dom/Node;Ljava/lang/String;)Lorg/w3c/dom/Node;
 
@@ -5278,12 +4741,11 @@
 
     if-eqz v10, :cond_3
 
-    .line 594
     invoke-interface {v2}, Lorg/w3c/dom/Node;->getNodeName()Ljava/lang/String;
 
     move-result-object v10
 
-    const-string/jumbo v11, "value"
+    const-string v11, "value"
 
     invoke-direct {p0, v2, v11}, Lcom/android/server/enterprise/sso/GenericSSOService;->getAttributeNode(Lorg/w3c/dom/Node;Ljava/lang/String;)Lorg/w3c/dom/Node;
 
@@ -5299,7 +4761,6 @@
 
     goto :goto_0
 
-    .line 603
     .end local v0    # "childNode":Lorg/w3c/dom/Node;
     .end local v1    # "childNodes":Ljava/util/ArrayList;, "Ljava/util/ArrayList<Lorg/w3c/dom/Node;>;"
     .end local v2    # "configChildNode":Lorg/w3c/dom/Node;
@@ -5311,7 +4772,6 @@
 
     move-object v7, v8
 
-    .line 604
     .end local v8    # "ret":Landroid/os/Bundle;
     .local v4, "e":Ljava/lang/Exception;
     .restart local v7    # "ret":Landroid/os/Bundle;
@@ -5322,7 +4782,6 @@
 
     invoke-static {v10, v11, v4}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
-    .line 607
     .end local v4    # "e":Ljava/lang/Exception;
     :goto_2
     return-object v7
@@ -5335,12 +4794,10 @@
     :cond_4
     move-object v7, v8
 
-    .line 605
     .end local v8    # "ret":Landroid/os/Bundle;
     .restart local v7    # "ret":Landroid/os/Bundle;
     goto :goto_2
 
-    .line 603
     .end local v1    # "childNodes":Ljava/util/ArrayList;, "Ljava/util/ArrayList<Lorg/w3c/dom/Node;>;"
     .end local v3    # "configDoc":Lcom/android/server/enterprise/sso/GenericSSOService$RequestConfigDocument;
     .end local v9    # "ssoNode":Lorg/w3c/dom/Node;
@@ -5355,37 +4812,31 @@
     .param p1, "userId"    # I
 
     .prologue
-    .line 1851
     new-instance v6, Landroid/app/enterprise/sso/TokenInfo;
 
     invoke-direct {v6}, Landroid/app/enterprise/sso/TokenInfo;-><init>()V
 
-    .line 1852
     .local v6, "retToken":Landroid/app/enterprise/sso/TokenInfo;
     new-instance v0, Landroid/os/Bundle;
 
     invoke-direct {v0}, Landroid/os/Bundle;-><init>()V
 
-    .line 1853
     .local v0, "bundle":Landroid/os/Bundle;
     invoke-direct {p0, p1}, Lcom/android/server/enterprise/sso/GenericSSOService;->getTokenConfigForUserId(I)Lcom/android/server/enterprise/sso/GenericSSOService$TokenConfigDocument;
 
     move-result-object v1
 
-    .line 1854
     .local v1, "configDoc":Lcom/android/server/enterprise/sso/GenericSSOService$TokenConfigDocument;
     # invokes: Lcom/android/server/enterprise/sso/GenericSSOService$TokenConfigDocument;->getDeviceCertificate()Lorg/w3c/dom/Node;
     invoke-static {v1}, Lcom/android/server/enterprise/sso/GenericSSOService$TokenConfigDocument;->access$1100(Lcom/android/server/enterprise/sso/GenericSSOService$TokenConfigDocument;)Lorg/w3c/dom/Node;
 
     move-result-object v2
 
-    .line 1855
     .local v2, "deviceCertNode":Lorg/w3c/dom/Node;
     invoke-interface {v2}, Lorg/w3c/dom/Node;->getChildNodes()Lorg/w3c/dom/NodeList;
 
     move-result-object v5
 
-    .line 1856
     .local v5, "nodes":Lorg/w3c/dom/NodeList;
     const/4 v3, 0x0
 
@@ -5397,12 +4848,10 @@
 
     if-ge v3, v7, :cond_1
 
-    .line 1857
     invoke-interface {v5, v3}, Lorg/w3c/dom/NodeList;->item(I)Lorg/w3c/dom/Node;
 
     move-result-object v4
 
-    .line 1858
     .local v4, "node":Lorg/w3c/dom/Node;
     invoke-interface {v4}, Lorg/w3c/dom/Node;->getNodeType()S
 
@@ -5422,7 +4871,6 @@
 
     if-nez v7, :cond_0
 
-    .line 1860
     invoke-interface {v4}, Lorg/w3c/dom/Node;->getNodeName()Ljava/lang/String;
 
     move-result-object v7
@@ -5431,7 +4879,7 @@
 
     move-result-object v8
 
-    const-string/jumbo v9, "value"
+    const-string v9, "value"
 
     invoke-interface {v8, v9}, Lorg/w3c/dom/NamedNodeMap;->getNamedItem(Ljava/lang/String;)Lorg/w3c/dom/Node;
 
@@ -5443,18 +4891,15 @@
 
     invoke-virtual {v0, v7, v8}, Landroid/os/Bundle;->putString(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 1856
     :cond_0
     add-int/lit8 v3, v3, 0x1
 
     goto :goto_0
 
-    .line 1864
     .end local v4    # "node":Lorg/w3c/dom/Node;
     :cond_1
     invoke-virtual {v6, v0}, Landroid/app/enterprise/sso/TokenInfo;->setResponseBundle(Landroid/os/Bundle;)V
 
-    .line 1865
     return-object v6
 .end method
 
@@ -5462,12 +4907,10 @@
     .locals 2
 
     .prologue
-    .line 432
     iget-object v0, p0, Lcom/android/server/enterprise/sso/GenericSSOService;->mEDM:Landroid/app/enterprise/EnterpriseDeviceManager;
 
     if-nez v0, :cond_0
 
-    .line 433
     iget-object v0, p0, Lcom/android/server/enterprise/sso/GenericSSOService;->mContext:Landroid/content/Context;
 
     const-string v1, "enterprise_policy"
@@ -5480,7 +4923,6 @@
 
     iput-object v0, p0, Lcom/android/server/enterprise/sso/GenericSSOService;->mEDM:Landroid/app/enterprise/EnterpriseDeviceManager;
 
-    .line 436
     :cond_0
     iget-object v0, p0, Lcom/android/server/enterprise/sso/GenericSSOService;->mEDM:Landroid/app/enterprise/EnterpriseDeviceManager;
 
@@ -5494,7 +4936,6 @@
     .prologue
     const/4 v2, 0x0
 
-    .line 1754
     if-eqz p1, :cond_0
 
     invoke-virtual {p1}, Landroid/app/enterprise/sso/TokenInfo;->getResponseBundle()Landroid/os/Bundle;
@@ -5503,43 +4944,36 @@
 
     if-nez v3, :cond_2
 
-    .line 1755
     :cond_0
     sget-boolean v3, Landroid/app/enterprise/sso/GenericSSOConstants;->DEBUG:Z
 
     if-eqz v3, :cond_1
 
-    .line 1756
     const-string v3, "GenericSSOService"
 
-    const-string/jumbo v4, "token is not valid"
+    const-string v4, "token is not valid"
 
     invoke-static {v3, v4}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1772
     :cond_1
     :goto_0
     return-object v2
 
-    .line 1759
     :cond_2
     invoke-virtual {p1}, Landroid/app/enterprise/sso/TokenInfo;->getProtocolType()I
 
     move-result v0
 
-    .line 1760
     .local v0, "protocolType":I
     invoke-virtual {p1}, Landroid/app/enterprise/sso/TokenInfo;->getResponseBundle()Landroid/os/Bundle;
 
     move-result-object v1
 
-    .line 1761
     .local v1, "responseBundle":Landroid/os/Bundle;
     packed-switch v0, :pswitch_data_0
 
     goto :goto_0
 
-    .line 1763
     :pswitch_0
     const-string v2, "SAML_RESPONSE_EXPIRED_TIME"
 
@@ -5549,7 +4983,6 @@
 
     goto :goto_0
 
-    .line 1766
     :pswitch_1
     const-string v2, "OAUTH_RESPONSE_EXPIRES_IN"
 
@@ -5559,7 +4992,6 @@
 
     goto :goto_0
 
-    .line 1769
     :pswitch_2
     const-string v2, "SAML_RESPONSE_EXPIRED_TIME"
 
@@ -5569,7 +5001,6 @@
 
     goto :goto_0
 
-    .line 1761
     nop
 
     :pswitch_data_0
@@ -5584,17 +5015,14 @@
     .locals 4
 
     .prologue
-    .line 311
     iget-object v2, p0, Lcom/android/server/enterprise/sso/GenericSSOService;->mHandler:Lcom/android/server/enterprise/sso/GenericSSOService$GenericSSOHandler;
 
     if-nez v2, :cond_0
 
-    .line 312
     invoke-static {}, Landroid/os/Binder;->clearCallingIdentity()J
 
     move-result-wide v0
 
-    .line 313
     .local v0, "token":J
     new-instance v2, Landroid/os/HandlerThread;
 
@@ -5604,12 +5032,10 @@
 
     iput-object v2, p0, Lcom/android/server/enterprise/sso/GenericSSOService;->mHandlerThread:Landroid/os/HandlerThread;
 
-    .line 314
     iget-object v2, p0, Lcom/android/server/enterprise/sso/GenericSSOService;->mHandlerThread:Landroid/os/HandlerThread;
 
     invoke-virtual {v2}, Landroid/os/HandlerThread;->start()V
 
-    .line 315
     new-instance v2, Lcom/android/server/enterprise/sso/GenericSSOService$GenericSSOHandler;
 
     iget-object v3, p0, Lcom/android/server/enterprise/sso/GenericSSOService;->mHandlerThread:Landroid/os/HandlerThread;
@@ -5622,10 +5048,8 @@
 
     iput-object v2, p0, Lcom/android/server/enterprise/sso/GenericSSOService;->mHandler:Lcom/android/server/enterprise/sso/GenericSSOService$GenericSSOHandler;
 
-    .line 316
     invoke-static {v0, v1}, Landroid/os/Binder;->restoreCallingIdentity(J)V
 
-    .line 318
     .end local v0    # "token":J
     :cond_0
     iget-object v2, p0, Lcom/android/server/enterprise/sso/GenericSSOService;->mHandler:Lcom/android/server/enterprise/sso/GenericSSOService$GenericSSOHandler;
@@ -5640,24 +5064,20 @@
     .prologue
     const/4 v2, 0x0
 
-    .line 1178
     :try_start_0
     invoke-static {p1}, Ljava/security/KeyStore;->getInstance(Ljava/lang/String;)Ljava/security/KeyStore;
 
     move-result-object v1
 
-    .line 1179
     .local v1, "ks":Ljava/security/KeyStore;
     const/4 v3, 0x0
 
     invoke-virtual {v1, v3}, Ljava/security/KeyStore;->load(Ljava/security/KeyStore$LoadStoreParameter;)V
 
-    .line 1180
     sget-boolean v3, Landroid/app/enterprise/sso/GenericSSOConstants;->DEBUG:Z
 
     if-eqz v3, :cond_0
 
-    .line 1181
     const-string v3, "GenericSSOService"
 
     new-instance v4, Ljava/lang/StringBuilder;
@@ -5692,17 +5112,14 @@
     .catch Ljava/security/NoSuchAlgorithmException; {:try_start_0 .. :try_end_0} :catch_3
     .catch Ljava/security/cert/CertificateException; {:try_start_0 .. :try_end_0} :catch_4
 
-    .line 1198
     .end local v1    # "ks":Ljava/security/KeyStore;
     :cond_0
     :goto_0
     return-object v1
 
-    .line 1183
     :catch_0
     move-exception v0
 
-    .line 1184
     .local v0, "e":Ljava/security/KeyStoreException;
     const-string v3, "GenericSSOService"
 
@@ -5744,12 +5161,10 @@
 
     invoke-static {v3, v4}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1187
     sget-boolean v3, Landroid/app/enterprise/sso/GenericSSOConstants;->DEBUG:Z
 
     if-eqz v3, :cond_1
 
-    .line 1188
     const-string v3, "GenericSSOService"
 
     const-string v4, "In getInstanceOfKeyStore: KeyStoreException"
@@ -5761,14 +5176,11 @@
     :goto_1
     move-object v1, v2
 
-    .line 1198
     goto :goto_0
 
-    .line 1189
     :catch_1
     move-exception v0
 
-    .line 1190
     .local v0, "e":Ljava/lang/NullPointerException;
     const-string v3, "GenericSSOService"
 
@@ -5778,12 +5190,10 @@
 
     goto :goto_1
 
-    .line 1191
     .end local v0    # "e":Ljava/lang/NullPointerException;
     :catch_2
     move-exception v0
 
-    .line 1192
     .local v0, "e":Ljava/io/IOException;
     const-string v3, "GenericSSOService"
 
@@ -5793,12 +5203,10 @@
 
     goto :goto_1
 
-    .line 1193
     .end local v0    # "e":Ljava/io/IOException;
     :catch_3
     move-exception v0
 
-    .line 1194
     .local v0, "e":Ljava/security/NoSuchAlgorithmException;
     const-string v3, "GenericSSOService"
 
@@ -5808,12 +5216,10 @@
 
     goto :goto_1
 
-    .line 1195
     .end local v0    # "e":Ljava/security/NoSuchAlgorithmException;
     :catch_4
     move-exception v0
 
-    .line 1196
     .local v0, "e":Ljava/security/cert/CertificateException;
     const-string v3, "GenericSSOService"
 
@@ -5843,7 +5249,6 @@
     .end annotation
 
     .prologue
-    .line 1549
     monitor-enter p0
 
     :try_start_0
@@ -5853,13 +5258,11 @@
 
     move-result-object v4
 
-    .line 1550
     .local v4, "keyStore":Ljava/security/KeyStore;
     const/4 v7, 0x0
 
     invoke-virtual {v4, v7}, Ljava/security/KeyStore;->load(Ljava/security/KeyStore$LoadStoreParameter;)V
 
-    .line 1552
     const-string v7, "KnoxSSOKey"
 
     invoke-virtual {v4, v7}, Ljava/security/KeyStore;->containsAlias(Ljava/lang/String;)Z
@@ -5868,31 +5271,26 @@
 
     if-nez v7, :cond_3
 
-    .line 1553
     sget-boolean v7, Landroid/app/enterprise/sso/GenericSSOConstants;->DEBUG:Z
 
     if-eqz v7, :cond_0
 
-    .line 1554
     const-string v7, "GenericSSOService"
 
     const-string v8, "In getKeyPairFromAndroidKeyStore: Key entry is not available"
 
     invoke-static {v7, v8}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1557
     :cond_0
     invoke-static {}, Ljava/util/Calendar;->getInstance()Ljava/util/Calendar;
 
     move-result-object v6
 
-    .line 1558
     .local v6, "start":Ljava/util/Calendar;
     invoke-static {}, Ljava/util/Calendar;->getInstance()Ljava/util/Calendar;
 
     move-result-object v1
 
-    .line 1559
     .local v1, "end":Ljava/util/Calendar;
     const/4 v7, 0x1
 
@@ -5900,7 +5298,6 @@
 
     invoke-virtual {v1, v7, v8}, Ljava/util/Calendar;->add(II)V
 
-    .line 1563
     const-string v7, "CN=%s, OU=%s"
 
     const/4 v8, 0x2
@@ -5927,7 +5324,6 @@
 
     move-result-object v0
 
-    .line 1565
     .local v0, "certInfo":Ljava/lang/String;
     new-instance v7, Landroid/security/KeyPairGeneratorSpec$Builder;
 
@@ -5975,7 +5371,6 @@
 
     move-result-object v5
 
-    .line 1572
     .local v5, "spec":Landroid/security/KeyPairGeneratorSpec;
     const-string v7, "RSA"
 
@@ -5985,19 +5380,15 @@
 
     move-result-object v3
 
-    .line 1574
     .local v3, "generator":Ljava/security/KeyPairGenerator;
     invoke-virtual {v3, v5}, Ljava/security/KeyPairGenerator;->initialize(Ljava/security/spec/AlgorithmParameterSpec;)V
 
-    .line 1575
     invoke-virtual {v3}, Ljava/security/KeyPairGenerator;->generateKeyPair()Ljava/security/KeyPair;
 
-    .line 1576
     sget-boolean v7, Landroid/app/enterprise/sso/GenericSSOConstants;->DEBUG:Z
 
     if-eqz v7, :cond_1
 
-    .line 1577
     const-string v7, "GenericSSOService"
 
     new-instance v8, Ljava/lang/StringBuilder;
@@ -6020,7 +5411,6 @@
 
     invoke-static {v7, v8}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1585
     .end local v0    # "certInfo":Ljava/lang/String;
     .end local v1    # "end":Ljava/util/Calendar;
     .end local v3    # "generator":Ljava/security/KeyPairGenerator;
@@ -6032,14 +5422,12 @@
 
     if-eqz v7, :cond_2
 
-    .line 1586
     const-string v7, "GenericSSOService"
 
     const-string v8, "In getKeyPairFromAndroidKeyStore: Reading Key entry"
 
     invoke-static {v7, v8}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1587
     :cond_2
     const-string v7, "KnoxSSOKey"
 
@@ -6051,7 +5439,6 @@
 
     check-cast v2, Ljava/security/KeyStore$PrivateKeyEntry;
 
-    .line 1589
     .local v2, "entry":Ljava/security/KeyStore$PrivateKeyEntry;
     new-instance v7, Ljava/security/KeyPair;
 
@@ -6075,7 +5462,6 @@
 
     return-object v7
 
-    .line 1579
     .end local v2    # "entry":Ljava/security/KeyStore$PrivateKeyEntry;
     :cond_3
     :try_start_1
@@ -6083,7 +5469,6 @@
 
     if-eqz v7, :cond_1
 
-    .line 1580
     const-string v7, "GenericSSOService"
 
     const-string v8, "In getKeyPairFromAndroidKeyStore: Key entry is available"
@@ -6094,7 +5479,6 @@
 
     goto :goto_0
 
-    .line 1549
     .end local v4    # "keyStore":Ljava/security/KeyStore;
     :catchall_0
     move-exception v7
@@ -6110,23 +5494,19 @@
     .param p2, "pkgName"    # Ljava/lang/String;
 
     .prologue
-    .line 496
     const/4 v8, 0x0
 
-    .line 497
     .local v8, "pkgCert":Ljava/lang/String;
     invoke-static {}, Landroid/os/Binder;->clearCallingIdentity()J
 
     move-result-wide v12
 
-    .line 499
     .local v12, "token":J
     :try_start_0
     sget-boolean v14, Landroid/app/enterprise/sso/GenericSSOConstants;->DEBUG:Z
 
     if-eqz v14, :cond_0
 
-    .line 500
     const-string v14, "GenericSSOService"
 
     new-instance v15, Ljava/lang/StringBuilder;
@@ -6151,7 +5531,6 @@
 
     invoke-static {v14, v15}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 501
     :cond_0
     move-object/from16 v0, p0
 
@@ -6161,7 +5540,6 @@
 
     move-result-object v6
 
-    .line 503
     .local v6, "mPackageManagerAdapter":Lcom/android/server/enterprise/adapterlayer/PackageManagerAdapter;
     const/16 v14, 0x40
 
@@ -6173,16 +5551,13 @@
 
     move-result-object v9
 
-    .line 505
     .local v9, "pkgInfo":Landroid/content/pm/PackageInfo;
     if-nez v9, :cond_2
 
-    .line 506
     sget-boolean v14, Landroid/app/enterprise/sso/GenericSSOConstants;->DEBUG:Z
 
     if-eqz v14, :cond_1
 
-    .line 507
     const-string v14, "GenericSSOService"
 
     const-string v15, "in getPackageCertForPkgname: pkgInfo is null"
@@ -6193,27 +5568,22 @@
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_1
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 508
     :cond_1
     const/4 v14, 0x0
 
-    .line 522
     invoke-static {v12, v13}, Landroid/os/Binder;->restoreCallingIdentity(J)V
 
-    .line 524
     .end local v6    # "mPackageManagerAdapter":Lcom/android/server/enterprise/adapterlayer/PackageManagerAdapter;
     .end local v9    # "pkgInfo":Landroid/content/pm/PackageInfo;
     :goto_0
     return-object v14
 
-    .line 510
     .restart local v6    # "mPackageManagerAdapter":Lcom/android/server/enterprise/adapterlayer/PackageManagerAdapter;
     .restart local v9    # "pkgInfo":Landroid/content/pm/PackageInfo;
     :cond_2
     :try_start_1
     iget-object v11, v9, Landroid/content/pm/PackageInfo;->signatures:[Landroid/content/pm/Signature;
 
-    .line 511
     .local v11, "signs":[Landroid/content/pm/Signature;
     move-object v2, v11
 
@@ -6229,11 +5599,9 @@
 
     aget-object v10, v2, v4
 
-    .line 512
     .local v10, "sign":Landroid/content/pm/Signature;
     if-eqz v10, :cond_4
 
-    .line 513
     invoke-virtual {v10}, Landroid/content/pm/Signature;->toCharsString()Ljava/lang/String;
     :try_end_1
     .catch Ljava/lang/NullPointerException; {:try_start_1 .. :try_end_1} :catch_0
@@ -6242,7 +5610,6 @@
 
     move-result-object v8
 
-    .line 522
     .end local v10    # "sign":Landroid/content/pm/Signature;
     :cond_3
     invoke-static {v12, v13}, Landroid/os/Binder;->restoreCallingIdentity(J)V
@@ -6256,10 +5623,8 @@
     :goto_2
     move-object v14, v8
 
-    .line 524
     goto :goto_0
 
-    .line 511
     .restart local v2    # "arr$":[Landroid/content/pm/Signature;
     .restart local v4    # "i$":I
     .restart local v5    # "len$":I
@@ -6272,7 +5637,6 @@
 
     goto :goto_1
 
-    .line 517
     .end local v2    # "arr$":[Landroid/content/pm/Signature;
     .end local v4    # "i$":I
     .end local v5    # "len$":I
@@ -6283,7 +5647,6 @@
     :catch_0
     move-exception v7
 
-    .line 518
     .local v7, "npe":Ljava/lang/NullPointerException;
     :try_start_2
     const-string v14, "GenericSSOService"
@@ -6294,17 +5657,14 @@
     :try_end_2
     .catchall {:try_start_2 .. :try_end_2} :catchall_0
 
-    .line 522
     invoke-static {v12, v13}, Landroid/os/Binder;->restoreCallingIdentity(J)V
 
     goto :goto_2
 
-    .line 519
     .end local v7    # "npe":Ljava/lang/NullPointerException;
     :catch_1
     move-exception v3
 
-    .line 520
     .local v3, "e":Ljava/lang/Exception;
     :try_start_3
     const-string v14, "GenericSSOService"
@@ -6315,7 +5675,6 @@
     :try_end_3
     .catchall {:try_start_3 .. :try_end_3} :catchall_0
 
-    .line 522
     invoke-static {v12, v13}, Landroid/os/Binder;->restoreCallingIdentity(J)V
 
     goto :goto_2
@@ -6335,16 +5694,13 @@
     .param p2, "type"    # I
 
     .prologue
-    .line 528
     packed-switch p2, :pswitch_data_0
 
-    .line 536
     const/4 v1, 0x0
 
     :goto_0
     return-object v1
 
-    .line 530
     :pswitch_0
     invoke-direct {p0, p1}, Lcom/android/server/enterprise/sso/GenericSSOService;->getPackageNameForPid(I)Ljava/lang/String;
 
@@ -6352,7 +5708,6 @@
 
     goto :goto_0
 
-    .line 532
     :pswitch_1
     invoke-static {p1}, Landroid/os/Process;->getUidForPid(I)I
 
@@ -6362,7 +5717,6 @@
 
     move-result v0
 
-    .line 533
     .local v0, "userId":I
     invoke-direct {p0, p1}, Lcom/android/server/enterprise/sso/GenericSSOService;->getPackageNameForPid(I)Ljava/lang/String;
 
@@ -6374,7 +5728,6 @@
 
     goto :goto_0
 
-    .line 528
     nop
 
     :pswitch_data_0
@@ -6391,19 +5744,16 @@
     .prologue
     const/4 v9, 0x0
 
-    .line 452
     invoke-static {}, Landroid/os/Process;->myPid()I
 
     move-result v8
 
     if-ne p1, v8, :cond_2
 
-    .line 453
     sget-boolean v8, Landroid/app/enterprise/sso/GenericSSOConstants;->DEBUG:Z
 
     if-eqz v8, :cond_0
 
-    .line 454
     const-string v8, "GenericSSOService"
 
     new-instance v9, Ljava/lang/StringBuilder;
@@ -6432,20 +5782,16 @@
 
     invoke-static {v8, v9}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 456
     :cond_0
     const-string v5, "android"
 
-    .line 486
     :cond_1
     :goto_0
     return-object v5
 
-    .line 458
     :cond_2
     const/4 v5, 0x0
 
-    .line 460
     .local v5, "packageName":Ljava/lang/String;
     :try_start_0
     iget-object v8, p0, Lcom/android/server/enterprise/sso/GenericSSOService;->mContext:Landroid/content/Context;
@@ -6458,19 +5804,16 @@
 
     check-cast v1, Landroid/app/ActivityManager;
 
-    .line 462
     .local v1, "am":Landroid/app/ActivityManager;
     invoke-virtual {v1}, Landroid/app/ActivityManager;->getRunningAppProcesses()Ljava/util/List;
 
     move-result-object v7
 
-    .line 463
     .local v7, "procList":Ljava/util/List;
     invoke-interface {v7}, Ljava/util/List;->iterator()Ljava/util/Iterator;
 
     move-result-object v3
 
-    .line 464
     .local v3, "iter":Ljava/util/Iterator;
     :cond_3
     invoke-interface {v3}, Ljava/util/Iterator;->hasNext()Z
@@ -6479,7 +5822,6 @@
 
     if-eqz v8, :cond_4
 
-    .line 465
     invoke-interface {v3}, Ljava/util/Iterator;->next()Ljava/lang/Object;
 
     move-result-object v8
@@ -6492,26 +5834,22 @@
 
     move-object v6, v0
 
-    .line 467
     .local v6, "procInfo":Landroid/app/ActivityManager$RunningAppProcessInfo;
     iget v8, v6, Landroid/app/ActivityManager$RunningAppProcessInfo;->pid:I
 
     if-ne v8, p1, :cond_3
 
-    .line 468
     iget-object v5, v6, Landroid/app/ActivityManager$RunningAppProcessInfo;->processName:Ljava/lang/String;
     :try_end_0
     .catch Ljava/lang/NullPointerException; {:try_start_0 .. :try_end_0} :catch_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_1
 
-    .line 483
     .end local v6    # "procInfo":Landroid/app/ActivityManager$RunningAppProcessInfo;
     :cond_4
     sget-boolean v8, Landroid/app/enterprise/sso/GenericSSOConstants;->DEBUG:Z
 
     if-eqz v8, :cond_1
 
-    .line 484
     const-string v8, "GenericSSOService"
 
     new-instance v9, Ljava/lang/StringBuilder;
@@ -6546,14 +5884,12 @@
 
     goto :goto_0
 
-    .line 472
     .end local v1    # "am":Landroid/app/ActivityManager;
     .end local v3    # "iter":Ljava/util/Iterator;
     .end local v7    # "procList":Ljava/util/List;
     :catch_0
     move-exception v4
 
-    .line 473
     .local v4, "npe":Ljava/lang/NullPointerException;
     const-string v8, "GenericSSOService"
 
@@ -6563,15 +5899,12 @@
 
     move-object v5, v9
 
-    .line 476
     goto :goto_0
 
-    .line 477
     .end local v4    # "npe":Ljava/lang/NullPointerException;
     :catch_1
     move-exception v2
 
-    .line 478
     .local v2, "e":Ljava/lang/Exception;
     const-string v8, "GenericSSOService"
 
@@ -6581,7 +5914,6 @@
 
     move-object v5, v9
 
-    .line 481
     goto :goto_0
 .end method
 
@@ -6592,7 +5924,6 @@
     .prologue
     const/4 v2, 0x0
 
-    .line 1736
     if-eqz p1, :cond_0
 
     invoke-virtual {p1}, Landroid/app/enterprise/sso/TokenInfo;->getResponseBundle()Landroid/os/Bundle;
@@ -6601,43 +5932,36 @@
 
     if-nez v3, :cond_2
 
-    .line 1737
     :cond_0
     sget-boolean v3, Landroid/app/enterprise/sso/GenericSSOConstants;->DEBUG:Z
 
     if-eqz v3, :cond_1
 
-    .line 1738
     const-string v3, "GenericSSOService"
 
     const-string v4, "In getRefreshTokenByProtocolType: token is not valid"
 
     invoke-static {v3, v4}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1749
     :cond_1
     :goto_0
     return-object v2
 
-    .line 1742
     :cond_2
     invoke-virtual {p1}, Landroid/app/enterprise/sso/TokenInfo;->getProtocolType()I
 
     move-result v0
 
-    .line 1743
     .local v0, "protocolType":I
     invoke-virtual {p1}, Landroid/app/enterprise/sso/TokenInfo;->getResponseBundle()Landroid/os/Bundle;
 
     move-result-object v1
 
-    .line 1744
     .local v1, "responseBundle":Landroid/os/Bundle;
     packed-switch v0, :pswitch_data_0
 
     goto :goto_0
 
-    .line 1746
     :pswitch_0
     const-string v2, "OAUTH_RESPONSE_REFRESH_TOKEN"
 
@@ -6647,7 +5971,6 @@
 
     goto :goto_0
 
-    .line 1744
     :pswitch_data_0
     .packed-switch 0x2
         :pswitch_0
@@ -6659,7 +5982,6 @@
     .param p1, "userId"    # I
 
     .prologue
-    .line 873
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -6680,7 +6002,7 @@
 
     move-result-object v0
 
-    const-string/jumbo v1, "ssoconfig.xml"
+    const-string v1, "ssoconfig.xml"
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -6698,7 +6020,6 @@
     .param p1, "userId"    # I
 
     .prologue
-    .line 758
     :try_start_0
     sget-object v1, Lcom/android/server/enterprise/sso/GenericSSOService;->requestConfigXMLDocs:Landroid/util/SparseArray;
 
@@ -6708,10 +6029,8 @@
 
     if-nez v1, :cond_0
 
-    .line 759
     invoke-direct {p0, p1}, Lcom/android/server/enterprise/sso/GenericSSOService;->initRequestConfigDoc(I)V
 
-    .line 760
     :cond_0
     sget-object v1, Lcom/android/server/enterprise/sso/GenericSSOService;->requestConfigXMLDocs:Landroid/util/SparseArray;
 
@@ -6723,15 +6042,12 @@
     :try_end_0
     .catch Ljava/lang/NullPointerException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 763
     :goto_0
     return-object v1
 
-    .line 761
     :catch_0
     move-exception v0
 
-    .line 762
     .local v0, "npe":Ljava/lang/NullPointerException;
     const-string v1, "GenericSSOService"
 
@@ -6739,7 +6055,6 @@
 
     invoke-static {v1, v2, v0}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
-    .line 763
     const/4 v1, 0x0
 
     goto :goto_0
@@ -6750,10 +6065,8 @@
     .param p1, "userId"    # I
 
     .prologue
-    .line 978
     const/4 v0, 0x0
 
-    .line 979
     .local v0, "connection":Lcom/android/server/enterprise/sso/GenericSSOService$SSOServiceConnection;
     sget-object v1, Lcom/android/server/enterprise/sso/GenericSSOService;->mSSOInterfaceMap:Ljava/util/Map;
 
@@ -6767,7 +6080,6 @@
 
     if-eqz v1, :cond_1
 
-    .line 980
     sget-object v1, Lcom/android/server/enterprise/sso/GenericSSOService;->mSSOInterfaceMap:Ljava/util/Map;
 
     invoke-static {p1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
@@ -6781,13 +6093,11 @@
     .end local v0    # "connection":Lcom/android/server/enterprise/sso/GenericSSOService$SSOServiceConnection;
     check-cast v0, Lcom/android/server/enterprise/sso/GenericSSOService$SSOServiceConnection;
 
-    .line 981
     .restart local v0    # "connection":Lcom/android/server/enterprise/sso/GenericSSOService$SSOServiceConnection;
     sget-boolean v1, Landroid/app/enterprise/sso/GenericSSOConstants;->DEBUG:Z
 
     if-eqz v1, :cond_0
 
-    .line 982
     const-string v1, "GenericSSOService"
 
     new-instance v2, Ljava/lang/StringBuilder;
@@ -6815,7 +6125,6 @@
 
     invoke-static {v1, v2}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 987
     :cond_0
     invoke-virtual {v0}, Lcom/android/server/enterprise/sso/GenericSSOService$SSOServiceConnection;->getService()Landroid/app/enterprise/sso/GenericSSOSupportSolution;
 
@@ -6824,7 +6133,6 @@
     :goto_0
     return-object v1
 
-    .line 985
     :cond_1
     const/4 v1, 0x0
 
@@ -6836,17 +6144,14 @@
     .param p1, "servicePkgName"    # Ljava/lang/String;
 
     .prologue
-    .line 956
     :try_start_0
     new-instance v1, Landroid/content/Intent;
 
     invoke-direct {v1}, Landroid/content/Intent;-><init>()V
 
-    .line 957
     .local v1, "intent":Landroid/content/Intent;
     invoke-virtual {v1, p1}, Landroid/content/Intent;->setPackage(Ljava/lang/String;)Landroid/content/Intent;
 
-    .line 958
     new-instance v2, Ljava/lang/StringBuilder;
 
     invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
@@ -6867,12 +6172,10 @@
 
     invoke-virtual {v1, v2}, Landroid/content/Intent;->setAction(Ljava/lang/String;)Landroid/content/Intent;
 
-    .line 960
     sget-boolean v2, Landroid/app/enterprise/sso/GenericSSOConstants;->DEBUG:Z
 
     if-eqz v2, :cond_0
 
-    .line 961
     const-string v2, "GenericSSOService"
 
     new-instance v3, Ljava/lang/StringBuilder;
@@ -6902,17 +6205,14 @@
     .catch Ljava/lang/NullPointerException; {:try_start_0 .. :try_end_0} :catch_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_1
 
-    .line 970
     .end local v1    # "intent":Landroid/content/Intent;
     :cond_0
     :goto_0
     return-object v1
 
-    .line 965
     :catch_0
     move-exception v0
 
-    .line 966
     .local v0, "e":Ljava/lang/NullPointerException;
     const-string v2, "GenericSSOService"
 
@@ -6920,18 +6220,15 @@
 
     invoke-static {v2, v3, v0}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
-    .line 970
     .end local v0    # "e":Ljava/lang/NullPointerException;
     :goto_1
     const/4 v1, 0x0
 
     goto :goto_0
 
-    .line 967
     :catch_1
     move-exception v0
 
-    .line 968
     .local v0, "e":Ljava/lang/Exception;
     const-string v2, "GenericSSOService"
 
@@ -6956,27 +6253,22 @@
     .end annotation
 
     .prologue
-    .line 1492
     sget-object v6, Lcom/android/server/enterprise/sso/GenericSSOService;->mSecretKeyLock:Ljava/lang/Object;
 
     monitor-enter v6
 
-    .line 1495
     :try_start_0
     sget-object v5, Lcom/android/server/enterprise/sso/GenericSSOService;->sSecretKeyFromAndroidKeyStore:Ljavax/crypto/SecretKey;
 
     if-eqz v5, :cond_0
 
-    .line 1496
     sget-object v5, Lcom/android/server/enterprise/sso/GenericSSOService;->sSecretKeyFromAndroidKeyStore:Ljavax/crypto/SecretKey;
 
     monitor-exit v6
 
-    .line 1540
     :goto_0
     return-object v5
 
-    .line 1510
     :cond_0
     invoke-direct {p0}, Lcom/android/server/enterprise/sso/GenericSSOService;->getKeyPairFromAndroidKeyStore()Ljava/security/KeyPair;
 
@@ -6984,14 +6276,12 @@
 
     sput-object v5, Lcom/android/server/enterprise/sso/GenericSSOService;->mKeyPair:Ljava/security/KeyPair;
 
-    .line 1511
     const-string v5, "RSA/ECB/PKCS1Padding"
 
     invoke-static {v5}, Ljavax/crypto/Cipher;->getInstance(Ljava/lang/String;)Ljavax/crypto/Cipher;
 
     move-result-object v4
 
-    .line 1512
     .local v4, "wrapCipher":Ljavax/crypto/Cipher;
     new-instance v2, Ljava/io/File;
 
@@ -6999,7 +6289,6 @@
 
     invoke-direct {v2, v5}, Ljava/io/File;-><init>(Ljava/lang/String;)V
 
-    .line 1514
     .local v2, "keyFile":Ljava/io/File;
     invoke-virtual {v2}, Ljava/io/File;->exists()Z
 
@@ -7007,73 +6296,61 @@
 
     if-nez v5, :cond_4
 
-    .line 1515
     sget-boolean v5, Landroid/app/enterprise/sso/GenericSSOConstants;->DEBUG:Z
 
     if-eqz v5, :cond_1
 
-    .line 1516
     const-string v5, "GenericSSOService"
 
     const-string v7, "In getSecretKeyFromAndroidKeyStore: Key file does not exists"
 
     invoke-static {v5, v7}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1518
     :cond_1
     invoke-direct {p0}, Lcom/android/server/enterprise/sso/GenericSSOService;->createSecretKey()Ljavax/crypto/SecretKey;
 
     move-result-object v1
 
-    .line 1519
     .local v1, "key":Ljavax/crypto/SecretKey;
     sget-boolean v5, Landroid/app/enterprise/sso/GenericSSOConstants;->DEBUG:Z
 
     if-eqz v5, :cond_2
 
-    .line 1520
     const-string v5, "GenericSSOService"
 
     const-string v7, "In getSecretKeyFromAndroidKeyStore: Wrapping SecretKey"
 
     invoke-static {v5, v7}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1522
     :cond_2
     invoke-direct {p0, v4, v1}, Lcom/android/server/enterprise/sso/GenericSSOService;->wrap(Ljavax/crypto/Cipher;Ljavax/crypto/SecretKey;)[B
 
     move-result-object v3
 
-    .line 1523
     .local v3, "keyWrapped":[B
     sget-boolean v5, Landroid/app/enterprise/sso/GenericSSOConstants;->DEBUG:Z
 
     if-eqz v5, :cond_3
 
-    .line 1524
     const-string v5, "GenericSSOService"
 
     const-string v7, "In getSecretKeyFromAndroidKeyStore: Writing SecretKey"
 
     invoke-static {v5, v7}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1526
     :cond_3
     invoke-static {v2, v3}, Lcom/android/server/enterprise/sso/GenericSSOService;->writeKeyData(Ljava/io/File;[B)V
 
-    .line 1527
     sget-boolean v5, Landroid/app/enterprise/sso/GenericSSOConstants;->DEBUG:Z
 
     if-eqz v5, :cond_4
 
-    .line 1528
     const-string v5, "GenericSSOService"
 
     const-string v7, "In getSecretKeyFromAndroidKeyStore: Finished writing SecretKey"
 
     invoke-static {v5, v7}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1533
     .end local v1    # "key":Ljavax/crypto/SecretKey;
     .end local v3    # "keyWrapped":[B
     :cond_4
@@ -7081,20 +6358,17 @@
 
     if-eqz v5, :cond_5
 
-    .line 1534
     const-string v5, "GenericSSOService"
 
     const-string v7, "In getSecretKeyFromAndroidKeyStore: Reading SecretKey"
 
     invoke-static {v5, v7}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1535
     :cond_5
     invoke-static {v2}, Lcom/android/server/enterprise/sso/GenericSSOService;->readKeyData(Ljava/io/File;)[B
 
     move-result-object v0
 
-    .line 1536
     .local v0, "encryptedKey":[B
     invoke-direct {p0, v4, v0}, Lcom/android/server/enterprise/sso/GenericSSOService;->unwrap(Ljavax/crypto/Cipher;[B)Ljavax/crypto/SecretKey;
 
@@ -7102,19 +6376,16 @@
 
     sput-object v5, Lcom/android/server/enterprise/sso/GenericSSOService;->sSecretKeyFromAndroidKeyStore:Ljavax/crypto/SecretKey;
 
-    .line 1537
     sget-boolean v5, Landroid/app/enterprise/sso/GenericSSOConstants;->DEBUG:Z
 
     if-eqz v5, :cond_6
 
-    .line 1538
     const-string v5, "GenericSSOService"
 
     const-string v7, "In getSecretKeyFromAndroidKeyStore: Finished reading SecretKey"
 
     invoke-static {v5, v7}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1540
     :cond_6
     sget-object v5, Lcom/android/server/enterprise/sso/GenericSSOService;->sSecretKeyFromAndroidKeyStore:Ljavax/crypto/SecretKey;
 
@@ -7122,7 +6393,6 @@
 
     goto :goto_0
 
-    .line 1541
     .end local v0    # "encryptedKey":[B
     .end local v2    # "keyFile":Ljava/io/File;
     .end local v4    # "wrapCipher":Ljavax/crypto/Cipher;
@@ -7141,7 +6411,6 @@
     .param p1, "userId"    # I
 
     .prologue
-    .line 883
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -7162,7 +6431,7 @@
 
     move-result-object v0
 
-    const-string/jumbo v1, "tmpssoconfig.xml"
+    const-string v1, "tmpssoconfig.xml"
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -7179,8 +6448,7 @@
     .locals 2
 
     .prologue
-    .line 490
-    const-string/jumbo v1, "tima"
+    const-string v1, "tima"
 
     invoke-static {v1}, Landroid/os/ServiceManager;->getService(Ljava/lang/String;)Landroid/os/IBinder;
 
@@ -7190,7 +6458,6 @@
 
     move-result-object v0
 
-    .line 492
     .local v0, "timaService":Landroid/service/tima/ITimaService;
     return-object v0
 .end method
@@ -7203,15 +6470,13 @@
     .prologue
     const/4 v12, 0x0
 
-    .line 1779
     :try_start_0
     invoke-static {p1}, Lcom/android/server/enterprise/EnterpriseDeviceManagerService;->getCallingOrCurrentUserId(Landroid/app/enterprise/ContextInfo;)I
 
     move-result v11
 
-    .line 1781
     .local v11, "userId":I
-    const-string/jumbo v1, "servicepackagename"
+    const-string v1, "servicepackagename"
 
     invoke-virtual {p2, v1}, Landroid/os/Bundle;->getString(Ljava/lang/String;)Ljava/lang/String;
 
@@ -7221,16 +6486,13 @@
 
     move-result-object v8
 
-    .line 1783
     .local v8, "serviceIntent":Landroid/content/Intent;
     if-nez v8, :cond_2
 
-    .line 1784
     sget-boolean v1, Landroid/app/enterprise/sso/GenericSSOConstants;->DEBUG:Z
 
     if-eqz v1, :cond_0
 
-    .line 1785
     const-string v1, "GenericSSOService"
 
     const-string v2, "In getTokenByRefreshToken: cannot get SSO Service intent"
@@ -7240,34 +6502,28 @@
     :cond_0
     move-object v10, v12
 
-    .line 1829
     .end local v8    # "serviceIntent":Landroid/content/Intent;
     .end local v11    # "userId":I
     :cond_1
     :goto_0
     return-object v10
 
-    .line 1790
     .restart local v8    # "serviceIntent":Landroid/content/Intent;
     .restart local v11    # "userId":I
     :cond_2
     invoke-direct {p0, v11, v8}, Lcom/android/server/enterprise/sso/GenericSSOService;->bindToService(ILandroid/content/Intent;)V
 
-    .line 1791
     invoke-direct {p0, v11}, Lcom/android/server/enterprise/sso/GenericSSOService;->getSSOService(I)Landroid/app/enterprise/sso/GenericSSOSupportSolution;
 
     move-result-object v9
 
-    .line 1792
     .local v9, "ssoService":Landroid/app/enterprise/sso/GenericSSOSupportSolution;
     if-nez v9, :cond_4
 
-    .line 1793
     sget-boolean v1, Landroid/app/enterprise/sso/GenericSSOConstants;->DEBUG:Z
 
     if-eqz v1, :cond_3
 
-    .line 1794
     const-string v1, "GenericSSOService"
 
     const-string v2, "In getTokenByRefreshToken: sso service is not ready to use"
@@ -7277,14 +6533,12 @@
     :cond_3
     move-object v10, v12
 
-    .line 1796
     goto :goto_0
 
-    .line 1799
     :cond_4
     new-instance v0, Landroid/app/enterprise/sso/AuthenticationRequest;
 
-    const-string/jumbo v1, "servicepackagename"
+    const-string v1, "servicepackagename"
 
     invoke-virtual {p2, v1}, Landroid/os/Bundle;->getString(Ljava/lang/String;)Ljava/lang/String;
 
@@ -7304,22 +6558,18 @@
 
     invoke-direct/range {v0 .. v5}, Landroid/app/enterprise/sso/AuthenticationRequest;-><init>(Ljava/lang/String;Ljava/lang/String;Landroid/app/enterprise/sso/TokenInfo;Landroid/os/Bundle;Landroid/app/enterprise/sso/WebServiceRequest;)V
 
-    .line 1806
     .local v0, "request":Landroid/app/enterprise/sso/AuthenticationRequest;
     invoke-interface {v9, v0}, Landroid/app/enterprise/sso/GenericSSOSupportSolution;->acquireTokenByRefreshToken(Landroid/app/enterprise/sso/AuthenticationRequest;)Landroid/app/enterprise/sso/TokenInfo;
 
     move-result-object v10
 
-    .line 1808
     .local v10, "tokenResponse":Landroid/app/enterprise/sso/TokenInfo;
     if-nez v10, :cond_1
 
-    .line 1809
     sget-boolean v1, Landroid/app/enterprise/sso/GenericSSOConstants;->DEBUG:Z
 
     if-eqz v1, :cond_5
 
-    .line 1810
     const-string v1, "GenericSSOService"
 
     const-string v2, "In getTokenByRefreshToken: Fail to acquire valid token from sso service"
@@ -7333,10 +6583,8 @@
     :cond_5
     move-object v10, v12
 
-    .line 1812
     goto :goto_0
 
-    .line 1819
     .end local v0    # "request":Landroid/app/enterprise/sso/AuthenticationRequest;
     .end local v8    # "serviceIntent":Landroid/content/Intent;
     .end local v9    # "ssoService":Landroid/app/enterprise/sso/GenericSSOSupportSolution;
@@ -7345,7 +6593,6 @@
     :catch_0
     move-exception v7
 
-    .line 1821
     .local v7, "npe":Ljava/lang/NullPointerException;
     const-string v1, "GenericSSOService"
 
@@ -7357,14 +6604,11 @@
     :goto_1
     move-object v10, v12
 
-    .line 1829
     goto :goto_0
 
-    .line 1822
     :catch_1
     move-exception v6
 
-    .line 1824
     .local v6, "e":Landroid/os/RemoteException;
     const-string v1, "GenericSSOService"
 
@@ -7374,12 +6618,10 @@
 
     goto :goto_1
 
-    .line 1825
     .end local v6    # "e":Landroid/os/RemoteException;
     :catch_2
     move-exception v6
 
-    .line 1827
     .local v6, "e":Ljava/lang/Exception;
     const-string v1, "GenericSSOService"
 
@@ -7395,7 +6637,6 @@
     .param p1, "userId"    # I
 
     .prologue
-    .line 878
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -7416,7 +6657,7 @@
 
     move-result-object v0
 
-    const-string/jumbo v1, "ssotoken.xml"
+    const-string v1, "ssotoken.xml"
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -7434,7 +6675,6 @@
     .param p1, "userId"    # I
 
     .prologue
-    .line 773
     :try_start_0
     sget-object v1, Lcom/android/server/enterprise/sso/GenericSSOService;->tokenConfigXMLDocs:Landroid/util/SparseArray;
 
@@ -7444,10 +6684,8 @@
 
     if-nez v1, :cond_0
 
-    .line 774
     invoke-direct {p0, p1}, Lcom/android/server/enterprise/sso/GenericSSOService;->initTokenConfigDoc(I)V
 
-    .line 775
     :cond_0
     sget-object v1, Lcom/android/server/enterprise/sso/GenericSSOService;->tokenConfigXMLDocs:Landroid/util/SparseArray;
 
@@ -7459,15 +6697,12 @@
     :try_end_0
     .catch Ljava/lang/NullPointerException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 778
     :goto_0
     return-object v1
 
-    .line 776
     :catch_0
     move-exception v0
 
-    .line 777
     .local v0, "npe":Ljava/lang/NullPointerException;
     const-string v1, "GenericSSOService"
 
@@ -7475,7 +6710,6 @@
 
     invoke-static {v1, v2, v0}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
-    .line 778
     const/4 v1, 0x0
 
     goto :goto_0
@@ -7489,9 +6723,8 @@
     .prologue
     const/4 v11, 0x0
 
-    .line 3366
     :try_start_0
-    const-string/jumbo v1, "servicepackagename"
+    const-string v1, "servicepackagename"
 
     invoke-virtual {p2, v1}, Landroid/os/Bundle;->getString(Ljava/lang/String;)Ljava/lang/String;
 
@@ -7501,16 +6734,13 @@
 
     move-result-object v8
 
-    .line 3368
     .local v8, "serviceIntent":Landroid/content/Intent;
     if-nez v8, :cond_2
 
-    .line 3369
     sget-boolean v1, Landroid/app/enterprise/sso/GenericSSOConstants;->DEBUG:Z
 
     if-eqz v1, :cond_0
 
-    .line 3370
     const-string v1, "GenericSSOService"
 
     const-string v3, "In getTokenFromConfigData: cannot get SSO Service intent"
@@ -7520,32 +6750,26 @@
     :cond_0
     move-object v10, v11
 
-    .line 3414
     .end local v8    # "serviceIntent":Landroid/content/Intent;
     :cond_1
     :goto_0
     return-object v10
 
-    .line 3375
     .restart local v8    # "serviceIntent":Landroid/content/Intent;
     :cond_2
     invoke-direct {p0, p1, v8}, Lcom/android/server/enterprise/sso/GenericSSOService;->bindToService(ILandroid/content/Intent;)V
 
-    .line 3376
     invoke-direct {p0, p1}, Lcom/android/server/enterprise/sso/GenericSSOService;->getSSOService(I)Landroid/app/enterprise/sso/GenericSSOSupportSolution;
 
     move-result-object v9
 
-    .line 3378
     .local v9, "ssoService":Landroid/app/enterprise/sso/GenericSSOSupportSolution;
     if-nez v9, :cond_4
 
-    .line 3379
     sget-boolean v1, Landroid/app/enterprise/sso/GenericSSOConstants;->DEBUG:Z
 
     if-eqz v1, :cond_3
 
-    .line 3380
     const-string v1, "GenericSSOService"
 
     const-string v3, "In getTokenFromConfigData: sso service is not ready to use"
@@ -7555,10 +6779,8 @@
     :cond_3
     move-object v10, v11
 
-    .line 3382
     goto :goto_0
 
-    .line 3384
     :cond_4
     const-string v1, "clientpackagename"
 
@@ -7566,11 +6788,10 @@
 
     move-result-object v2
 
-    .line 3388
     .local v2, "appPkgName":Ljava/lang/String;
     new-instance v0, Landroid/app/enterprise/sso/AuthenticationRequest;
 
-    const-string/jumbo v1, "servicepackagename"
+    const-string v1, "servicepackagename"
 
     invoke-virtual {p2, v1}, Landroid/os/Bundle;->getString(Ljava/lang/String;)Ljava/lang/String;
 
@@ -7584,22 +6805,18 @@
 
     invoke-direct/range {v0 .. v5}, Landroid/app/enterprise/sso/AuthenticationRequest;-><init>(Ljava/lang/String;Ljava/lang/String;Landroid/app/enterprise/sso/TokenInfo;Landroid/os/Bundle;Landroid/app/enterprise/sso/WebServiceRequest;)V
 
-    .line 3393
     .local v0, "request":Landroid/app/enterprise/sso/AuthenticationRequest;
     invoke-interface {v9, v0}, Landroid/app/enterprise/sso/GenericSSOSupportSolution;->acquireToken(Landroid/app/enterprise/sso/AuthenticationRequest;)Landroid/app/enterprise/sso/TokenInfo;
 
     move-result-object v10
 
-    .line 3394
     .local v10, "tokenResponse":Landroid/app/enterprise/sso/TokenInfo;
     if-nez v10, :cond_1
 
-    .line 3395
     sget-boolean v1, Landroid/app/enterprise/sso/GenericSSOConstants;->DEBUG:Z
 
     if-eqz v1, :cond_5
 
-    .line 3396
     const-string v1, "GenericSSOService"
 
     const-string v3, "In getTokenFromConfigData: Fail to acquire valid token from sso service"
@@ -7613,10 +6830,8 @@
     :cond_5
     move-object v10, v11
 
-    .line 3398
     goto :goto_0
 
-    .line 3404
     .end local v0    # "request":Landroid/app/enterprise/sso/AuthenticationRequest;
     .end local v2    # "appPkgName":Ljava/lang/String;
     .end local v8    # "serviceIntent":Landroid/content/Intent;
@@ -7625,7 +6840,6 @@
     :catch_0
     move-exception v7
 
-    .line 3406
     .local v7, "npe":Ljava/lang/NullPointerException;
     const-string v1, "GenericSSOService"
 
@@ -7637,14 +6851,11 @@
     :goto_1
     move-object v10, v11
 
-    .line 3414
     goto :goto_0
 
-    .line 3407
     :catch_1
     move-exception v6
 
-    .line 3409
     .local v6, "e":Landroid/os/RemoteException;
     const-string v1, "GenericSSOService"
 
@@ -7654,12 +6865,10 @@
 
     goto :goto_1
 
-    .line 3410
     .end local v6    # "e":Landroid/os/RemoteException;
     :catch_2
     move-exception v6
 
-    .line 3412
     .local v6, "e":Ljava/lang/Exception;
     const-string v1, "GenericSSOService"
 
@@ -7676,38 +6885,32 @@
     .param p2, "appPkgName"    # Ljava/lang/String;
 
     .prologue
-    .line 3147
     invoke-direct {p0, p2}, Lcom/android/server/enterprise/sso/GenericSSOService;->isNullOrEmpty(Ljava/lang/String;)Z
 
     move-result v3
 
     if-eqz v3, :cond_0
 
-    .line 3148
     sget-boolean v3, Landroid/app/enterprise/sso/GenericSSOConstants;->DEBUG:Z
 
     if-eqz v3, :cond_0
 
-    .line 3149
     const-string v3, "GenericSSOService"
 
     const-string v4, "In getTokenFromGenericSSO: appPkgName is null or empty string"
 
     invoke-static {v3, v4}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 3152
     :cond_0
     invoke-static {p1}, Lcom/android/server/enterprise/EnterpriseDeviceManagerService;->getCallingOrCurrentUserId(Landroid/app/enterprise/ContextInfo;)I
 
     move-result v2
 
-    .line 3154
     .local v2, "userId":I
     invoke-static {}, Landroid/os/Binder;->getCallingPid()I
 
     move-result v1
 
-    .line 3155
     .local v1, "pid":I
     const/4 v3, 0x0
 
@@ -7715,7 +6918,6 @@
 
     move-result-object v0
 
-    .line 3156
     .local v0, "packageName":Ljava/lang/String;
     invoke-direct {p0, v2, v0}, Lcom/android/server/enterprise/sso/GenericSSOService;->vendorPermissionCheck(ILjava/lang/String;)Z
 
@@ -7723,27 +6925,22 @@
 
     if-nez v3, :cond_2
 
-    .line 3157
     sget-boolean v3, Landroid/app/enterprise/sso/GenericSSOConstants;->DEBUG:Z
 
     if-eqz v3, :cond_1
 
-    .line 3158
     const-string v3, "GenericSSOService"
 
     const-string v4, "In getTokenFromGenericSSO: authenticator is not permitted to call this API"
 
     invoke-static {v3, v4}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 3160
     :cond_1
     const/4 v3, 0x0
 
-    .line 3171
     :goto_0
     return-object v3
 
-    .line 3162
     :cond_2
     invoke-virtual {p2, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
@@ -7751,19 +6948,16 @@
 
     if-eqz v3, :cond_4
 
-    .line 3163
     sget-boolean v3, Landroid/app/enterprise/sso/GenericSSOConstants;->DEBUG:Z
 
     if-eqz v3, :cond_3
 
-    .line 3164
     const-string v3, "GenericSSOService"
 
     const-string v4, "In getTokenFromGenericSSO: appPkgName is authenticator packagename, we return share token back"
 
     invoke-static {v3, v4}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 3166
     :cond_3
     invoke-direct {p0, v2}, Lcom/android/server/enterprise/sso/GenericSSOService;->getUserAndDeviceCertificatesForUser(I)Landroid/app/enterprise/sso/TokenInfo;
 
@@ -7771,20 +6965,17 @@
 
     goto :goto_0
 
-    .line 3168
     :cond_4
     sget-boolean v3, Landroid/app/enterprise/sso/GenericSSOConstants;->DEBUG:Z
 
     if-eqz v3, :cond_5
 
-    .line 3169
     const-string v3, "GenericSSOService"
 
     const-string v4, "In getTokenFromGenericSSO: appPkgName is not application packagename, we return app token back"
 
     invoke-static {v3, v4}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 3171
     :cond_5
     invoke-direct {p0, v2, p2}, Lcom/android/server/enterprise/sso/GenericSSOService;->getAppTokenFromSecureStorageForUser(ILjava/lang/String;)Landroid/app/enterprise/sso/TokenInfo;
 
@@ -7799,18 +6990,15 @@
     .param p2, "configData"    # Landroid/os/Bundle;
 
     .prologue
-    .line 3419
     invoke-static {p1}, Lcom/android/server/enterprise/EnterpriseDeviceManagerService;->getCallingOrCurrentUserId(Landroid/app/enterprise/ContextInfo;)I
 
     move-result v6
 
-    .line 3421
     .local v6, "userId":I
     sget-boolean v7, Landroid/app/enterprise/sso/GenericSSOConstants;->DEBUG:Z
 
     if-eqz v7, :cond_0
 
-    .line 3422
     const-string v7, "GenericSSOService"
 
     new-instance v8, Ljava/lang/StringBuilder;
@@ -7833,7 +7021,6 @@
 
     invoke-static {v7, v8}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 3426
     :cond_0
     :try_start_0
     const-string v7, "clientpackagename"
@@ -7842,28 +7029,23 @@
 
     move-result-object v1
 
-    .line 3428
     .local v1, "appPkgName":Ljava/lang/String;
     invoke-direct {p0, v6, v1}, Lcom/android/server/enterprise/sso/GenericSSOService;->getAppTokenFromSecureStorageForUser(ILjava/lang/String;)Landroid/app/enterprise/sso/TokenInfo;
 
     move-result-object v4
 
-    .line 3430
     .local v4, "tokenCached":Landroid/app/enterprise/sso/TokenInfo;
     if-eqz v4, :cond_3
 
-    .line 3431
     invoke-direct {p0, v4}, Lcom/android/server/enterprise/sso/GenericSSOService;->getAccessTokenByProtocolType(Landroid/app/enterprise/sso/TokenInfo;)Ljava/lang/String;
 
     move-result-object v0
 
-    .line 3432
     .local v0, "accessTokenValue":Ljava/lang/String;
     invoke-direct {p0, v4}, Lcom/android/server/enterprise/sso/GenericSSOService;->getExpirationTimeByProtocolType(Landroid/app/enterprise/sso/TokenInfo;)Ljava/lang/String;
 
     move-result-object v5
 
-    .line 3433
     .local v5, "tokenExpirationTime":Ljava/lang/String;
     invoke-direct {p0, v0}, Lcom/android/server/enterprise/sso/GenericSSOService;->isNullOrEmpty(Ljava/lang/String;)Z
 
@@ -7877,7 +7059,6 @@
 
     if-nez v7, :cond_1
 
-    .line 3450
     .end local v0    # "accessTokenValue":Ljava/lang/String;
     .end local v1    # "appPkgName":Ljava/lang/String;
     .end local v4    # "tokenCached":Landroid/app/enterprise/sso/TokenInfo;
@@ -7885,7 +7066,6 @@
     :goto_0
     return-object v4
 
-    .line 3437
     .restart local v0    # "accessTokenValue":Ljava/lang/String;
     .restart local v1    # "appPkgName":Ljava/lang/String;
     .restart local v4    # "tokenCached":Landroid/app/enterprise/sso/TokenInfo;
@@ -7897,19 +7077,16 @@
 
     if-eqz v7, :cond_3
 
-    .line 3438
     sget-boolean v7, Landroid/app/enterprise/sso/GenericSSOConstants;->DEBUG:Z
 
     if-eqz v7, :cond_2
 
-    .line 3439
     const-string v7, "GenericSSOService"
 
     const-string v8, "In getTokenFromLocalCache: token in cache expired, so getTokenByRefreshToken is called"
 
     invoke-static {v7, v8}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 3441
     :cond_2
     invoke-direct {p0, p1, p2}, Lcom/android/server/enterprise/sso/GenericSSOService;->getTokenByRefreshToken(Landroid/app/enterprise/ContextInfo;Landroid/os/Bundle;)Landroid/app/enterprise/sso/TokenInfo;
     :try_end_0
@@ -7917,16 +7094,13 @@
 
     move-result-object v3
 
-    .line 3442
     .local v3, "info":Landroid/app/enterprise/sso/TokenInfo;
     if-eqz v3, :cond_3
 
     move-object v4, v3
 
-    .line 3443
     goto :goto_0
 
-    .line 3446
     .end local v0    # "accessTokenValue":Ljava/lang/String;
     .end local v1    # "appPkgName":Ljava/lang/String;
     .end local v3    # "info":Landroid/app/enterprise/sso/TokenInfo;
@@ -7935,7 +7109,6 @@
     :catch_0
     move-exception v2
 
-    .line 3448
     .local v2, "e":Ljava/lang/Exception;
     const-string v7, "GenericSSOService"
 
@@ -7943,7 +7116,6 @@
 
     invoke-static {v7, v8, v2}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
-    .line 3450
     .end local v2    # "e":Ljava/lang/Exception;
     :cond_3
     const/4 v4, 0x0
@@ -7958,40 +7130,33 @@
     .prologue
     const/4 v11, 0x1
 
-    .line 3074
     new-instance v6, Landroid/app/enterprise/sso/TokenInfo;
 
     invoke-direct {v6}, Landroid/app/enterprise/sso/TokenInfo;-><init>()V
 
-    .line 3075
     .local v6, "retToken":Landroid/app/enterprise/sso/TokenInfo;
     new-instance v0, Landroid/os/Bundle;
 
     invoke-direct {v0}, Landroid/os/Bundle;-><init>()V
 
-    .line 3076
     .local v0, "bundle":Landroid/os/Bundle;
     invoke-direct {p0, p1}, Lcom/android/server/enterprise/sso/GenericSSOService;->getTokenConfigForUserId(I)Lcom/android/server/enterprise/sso/GenericSSOService$TokenConfigDocument;
 
     move-result-object v1
 
-    .line 3077
     .local v1, "configDoc":Lcom/android/server/enterprise/sso/GenericSSOService$TokenConfigDocument;
     # invokes: Lcom/android/server/enterprise/sso/GenericSSOService$TokenConfigDocument;->getUserCertificate()Lorg/w3c/dom/Node;
     invoke-static {v1}, Lcom/android/server/enterprise/sso/GenericSSOService$TokenConfigDocument;->access$1000(Lcom/android/server/enterprise/sso/GenericSSOService$TokenConfigDocument;)Lorg/w3c/dom/Node;
 
     move-result-object v7
 
-    .line 3078
     .local v7, "userCertNode":Lorg/w3c/dom/Node;
     if-eqz v7, :cond_1
 
-    .line 3079
     invoke-interface {v7}, Lorg/w3c/dom/Node;->getChildNodes()Lorg/w3c/dom/NodeList;
 
     move-result-object v5
 
-    .line 3080
     .local v5, "nodes":Lorg/w3c/dom/NodeList;
     const/4 v3, 0x0
 
@@ -8003,12 +7168,10 @@
 
     if-ge v3, v8, :cond_1
 
-    .line 3081
     invoke-interface {v5, v3}, Lorg/w3c/dom/NodeList;->item(I)Lorg/w3c/dom/Node;
 
     move-result-object v4
 
-    .line 3082
     .local v4, "node":Lorg/w3c/dom/Node;
     invoke-interface {v4}, Lorg/w3c/dom/Node;->getNodeType()S
 
@@ -8026,7 +7189,6 @@
 
     if-nez v8, :cond_0
 
-    .line 3084
     invoke-interface {v4}, Lorg/w3c/dom/Node;->getNodeName()Ljava/lang/String;
 
     move-result-object v8
@@ -8035,7 +7197,7 @@
 
     move-result-object v9
 
-    const-string/jumbo v10, "value"
+    const-string v10, "value"
 
     invoke-interface {v9, v10}, Lorg/w3c/dom/NamedNodeMap;->getNamedItem(Ljava/lang/String;)Lorg/w3c/dom/Node;
 
@@ -8051,13 +7213,11 @@
 
     invoke-virtual {v0, v8, v9}, Landroid/os/Bundle;->putString(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 3080
     :cond_0
     add-int/lit8 v3, v3, 0x1
 
     goto :goto_0
 
-    .line 3090
     .end local v3    # "i":I
     .end local v4    # "node":Lorg/w3c/dom/Node;
     .end local v5    # "nodes":Lorg/w3c/dom/NodeList;
@@ -8067,16 +7227,13 @@
 
     move-result-object v2
 
-    .line 3091
     .local v2, "deviceCertNode":Lorg/w3c/dom/Node;
     if-eqz v2, :cond_3
 
-    .line 3092
     invoke-interface {v2}, Lorg/w3c/dom/Node;->getChildNodes()Lorg/w3c/dom/NodeList;
 
     move-result-object v5
 
-    .line 3093
     .restart local v5    # "nodes":Lorg/w3c/dom/NodeList;
     const/4 v3, 0x0
 
@@ -8088,12 +7245,10 @@
 
     if-ge v3, v8, :cond_3
 
-    .line 3094
     invoke-interface {v5, v3}, Lorg/w3c/dom/NodeList;->item(I)Lorg/w3c/dom/Node;
 
     move-result-object v4
 
-    .line 3095
     .restart local v4    # "node":Lorg/w3c/dom/Node;
     invoke-interface {v4}, Lorg/w3c/dom/Node;->getNodeType()S
 
@@ -8111,7 +7266,6 @@
 
     if-nez v8, :cond_2
 
-    .line 3097
     invoke-interface {v4}, Lorg/w3c/dom/Node;->getNodeName()Ljava/lang/String;
 
     move-result-object v8
@@ -8120,7 +7274,7 @@
 
     move-result-object v9
 
-    const-string/jumbo v10, "value"
+    const-string v10, "value"
 
     invoke-interface {v9, v10}, Lorg/w3c/dom/NamedNodeMap;->getNamedItem(Ljava/lang/String;)Lorg/w3c/dom/Node;
 
@@ -8136,13 +7290,11 @@
 
     invoke-virtual {v0, v8, v9}, Landroid/os/Bundle;->putString(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 3093
     :cond_2
     add-int/lit8 v3, v3, 0x1
 
     goto :goto_1
 
-    .line 3103
     .end local v3    # "i":I
     .end local v4    # "node":Lorg/w3c/dom/Node;
     .end local v5    # "nodes":Lorg/w3c/dom/NodeList;
@@ -8153,15 +7305,12 @@
 
     if-eqz v8, :cond_4
 
-    .line 3104
     const/4 v6, 0x0
 
-    .line 3107
     .end local v6    # "retToken":Landroid/app/enterprise/sso/TokenInfo;
     :goto_2
     return-object v6
 
-    .line 3106
     .restart local v6    # "retToken":Landroid/app/enterprise/sso/TokenInfo;
     :cond_4
     invoke-virtual {v6, v0}, Landroid/app/enterprise/sso/TokenInfo;->setResponseBundle(Landroid/os/Bundle;)V
@@ -8174,37 +7323,31 @@
     .param p1, "userId"    # I
 
     .prologue
-    .line 1833
     new-instance v5, Landroid/app/enterprise/sso/TokenInfo;
 
     invoke-direct {v5}, Landroid/app/enterprise/sso/TokenInfo;-><init>()V
 
-    .line 1834
     .local v5, "retToken":Landroid/app/enterprise/sso/TokenInfo;
     new-instance v0, Landroid/os/Bundle;
 
     invoke-direct {v0}, Landroid/os/Bundle;-><init>()V
 
-    .line 1835
     .local v0, "bundle":Landroid/os/Bundle;
     invoke-direct {p0, p1}, Lcom/android/server/enterprise/sso/GenericSSOService;->getTokenConfigForUserId(I)Lcom/android/server/enterprise/sso/GenericSSOService$TokenConfigDocument;
 
     move-result-object v1
 
-    .line 1836
     .local v1, "configDoc":Lcom/android/server/enterprise/sso/GenericSSOService$TokenConfigDocument;
     # invokes: Lcom/android/server/enterprise/sso/GenericSSOService$TokenConfigDocument;->getUserCertificate()Lorg/w3c/dom/Node;
     invoke-static {v1}, Lcom/android/server/enterprise/sso/GenericSSOService$TokenConfigDocument;->access$1000(Lcom/android/server/enterprise/sso/GenericSSOService$TokenConfigDocument;)Lorg/w3c/dom/Node;
 
     move-result-object v6
 
-    .line 1837
     .local v6, "userCertNode":Lorg/w3c/dom/Node;
     invoke-interface {v6}, Lorg/w3c/dom/Node;->getChildNodes()Lorg/w3c/dom/NodeList;
 
     move-result-object v4
 
-    .line 1838
     .local v4, "nodes":Lorg/w3c/dom/NodeList;
     const/4 v2, 0x0
 
@@ -8216,12 +7359,10 @@
 
     if-ge v2, v7, :cond_1
 
-    .line 1839
     invoke-interface {v4, v2}, Lorg/w3c/dom/NodeList;->item(I)Lorg/w3c/dom/Node;
 
     move-result-object v3
 
-    .line 1840
     .local v3, "node":Lorg/w3c/dom/Node;
     invoke-interface {v3}, Lorg/w3c/dom/Node;->getNodeType()S
 
@@ -8241,7 +7382,6 @@
 
     if-nez v7, :cond_0
 
-    .line 1842
     invoke-interface {v3}, Lorg/w3c/dom/Node;->getNodeName()Ljava/lang/String;
 
     move-result-object v7
@@ -8250,7 +7390,7 @@
 
     move-result-object v8
 
-    const-string/jumbo v9, "value"
+    const-string v9, "value"
 
     invoke-interface {v8, v9}, Lorg/w3c/dom/NamedNodeMap;->getNamedItem(Ljava/lang/String;)Lorg/w3c/dom/Node;
 
@@ -8262,18 +7402,15 @@
 
     invoke-virtual {v0, v7, v8}, Landroid/os/Bundle;->putString(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 1838
     :cond_0
     add-int/lit8 v2, v2, 0x1
 
     goto :goto_0
 
-    .line 1846
     .end local v3    # "node":Lorg/w3c/dom/Node;
     :cond_1
     invoke-virtual {v5, v0}, Landroid/app/enterprise/sso/TokenInfo;->setResponseBundle(Landroid/os/Bundle;)V
 
-    .line 1847
     return-object v5
 .end method
 
@@ -8281,24 +7418,20 @@
     .locals 5
 
     .prologue
-    .line 786
     invoke-static {}, Landroid/os/Binder;->getCallingUid()I
 
     move-result v0
 
-    .line 787
     .local v0, "uid":I
     invoke-static {v0}, Landroid/os/UserHandle;->getUserId(I)I
 
     move-result v1
 
-    .line 788
     .local v1, "userId":I
     sget-boolean v2, Landroid/app/enterprise/sso/GenericSSOConstants;->DEBUG:Z
 
     if-eqz v2, :cond_0
 
-    .line 789
     const-string v2, "GenericSSOService"
 
     new-instance v3, Ljava/lang/StringBuilder;
@@ -8331,7 +7464,6 @@
 
     invoke-static {v2, v3}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 791
     :cond_0
     return v1
 .end method
@@ -8352,36 +7484,29 @@
     .end annotation
 
     .prologue
-    .line 1029
     if-nez p1, :cond_1
 
-    .line 1030
     sget-boolean v0, Landroid/app/enterprise/sso/GenericSSOConstants;->DEBUG:Z
 
     if-eqz v0, :cond_0
 
-    .line 1031
     const-string v0, "GenericSSOService"
 
     const-string v1, "In getWhitelistAppNode: In getWhitelistAppNode: solution node is null"
 
     invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1033
     :cond_0
     const/4 v0, 0x0
 
-    .line 1044
     :goto_0
     return-object v0
 
-    .line 1035
     :cond_1
     sget-boolean v0, Landroid/app/enterprise/sso/GenericSSOConstants;->DEBUG:Z
 
     if-eqz v0, :cond_2
 
-    .line 1036
     const-string v0, "GenericSSOService"
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -8398,7 +7523,7 @@
 
     move-result-object v2
 
-    const-string/jumbo v3, "servicepackagename"
+    const-string v3, "servicepackagename"
 
     invoke-interface {v2, v3}, Lorg/w3c/dom/NamedNodeMap;->getNamedItem(Ljava/lang/String;)Lorg/w3c/dom/Node;
 
@@ -8418,9 +7543,8 @@
 
     invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1044
     :cond_2
-    const-string/jumbo v0, "whitelistpackage"
+    const-string v0, "whitelistpackage"
 
     invoke-direct {p0, p1, v0}, Lcom/android/server/enterprise/sso/GenericSSOService;->getChildNodes(Lorg/w3c/dom/Node;Ljava/lang/String;)Ljava/util/ArrayList;
 
@@ -8437,7 +7561,6 @@
     .prologue
     const-wide/16 v8, 0x0
 
-    .line 1642
     iget-wide v6, p0, Lcom/android/server/enterprise/sso/GenericSSOService;->initElapsedTime:J
 
     cmp-long v6, v6, v8
@@ -8450,15 +7573,12 @@
 
     if-gez v6, :cond_1
 
-    .line 1643
     :cond_0
     invoke-direct {p0}, Lcom/android/server/enterprise/sso/GenericSSOService;->setInitTime()V
 
-    .line 1645
     :cond_1
     const/4 v3, 0x1
 
-    .line 1647
     .local v3, "hasExipired":Z
     :try_start_0
     invoke-static {}, Landroid/os/SystemClock;->elapsedRealtime()J
@@ -8473,13 +7593,11 @@
 
     add-long v0, v6, v8
 
-    .line 1649
     .local v0, "currentUTCTime":J
     sget-boolean v6, Landroid/app/enterprise/sso/GenericSSOConstants;->DEBUG:Z
 
     if-eqz v6, :cond_2
 
-    .line 1650
     const-string v6, "In hasTokenExpired: SystemClock.elapsedRealtime()"
 
     new-instance v7, Ljava/lang/StringBuilder;
@@ -8506,13 +7624,11 @@
 
     invoke-static {v6, v7}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1652
     :cond_2
     sget-boolean v6, Landroid/app/enterprise/sso/GenericSSOConstants;->DEBUG:Z
 
     if-eqz v6, :cond_3
 
-    .line 1653
     const-string v6, "In hasTokenExpired: initElapsedTime"
 
     new-instance v7, Ljava/lang/StringBuilder;
@@ -8537,13 +7653,11 @@
 
     invoke-static {v6, v7}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1655
     :cond_3
     sget-boolean v6, Landroid/app/enterprise/sso/GenericSSOConstants;->DEBUG:Z
 
     if-eqz v6, :cond_4
 
-    .line 1656
     const-string v6, "In hasTokenExpired: initUTCTime"
 
     new-instance v7, Ljava/lang/StringBuilder;
@@ -8568,13 +7682,11 @@
 
     invoke-static {v6, v7}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1659
     :cond_4
     sget-boolean v6, Landroid/app/enterprise/sso/GenericSSOConstants;->DEBUG:Z
 
     if-eqz v6, :cond_5
 
-    .line 1660
     const-string v6, "GenericSSOService"
 
     new-instance v7, Ljava/lang/StringBuilder;
@@ -8607,13 +7719,11 @@
 
     invoke-static {v6, v7}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1662
     :cond_5
     invoke-static {p2}, Ljava/lang/Long;->parseLong(Ljava/lang/String;)J
 
     move-result-wide v4
 
-    .line 1663
     .local v4, "expireTime":J
     cmp-long v6, v0, v4
 
@@ -8621,30 +7731,25 @@
 
     const/4 v3, 0x1
 
-    .line 1664
     :goto_0
     if-eqz v3, :cond_6
 
-    .line 1665
     sget-boolean v6, Landroid/app/enterprise/sso/GenericSSOConstants;->DEBUG:Z
 
     if-eqz v6, :cond_8
 
-    .line 1666
     const-string v6, "GenericSSOService"
 
     const-string v7, "In hasTokenExpired: the token obtained has expired"
 
     invoke-static {v6, v7}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1675
     .end local v0    # "currentUTCTime":J
     .end local v4    # "expireTime":J
     :cond_6
     :goto_1
     return v3
 
-    .line 1663
     .restart local v0    # "currentUTCTime":J
     .restart local v4    # "expireTime":J
     :cond_7
@@ -8652,13 +7757,11 @@
 
     goto :goto_0
 
-    .line 1668
     :cond_8
     sget-boolean v6, Landroid/app/enterprise/sso/GenericSSOConstants;->DEBUG:Z
 
     if-eqz v6, :cond_6
 
-    .line 1669
     const-string v6, "GenericSSOService"
 
     const-string v7, "In hasTokenExpired: the token obtained is still valid"
@@ -8669,13 +7772,11 @@
 
     goto :goto_1
 
-    .line 1671
     .end local v0    # "currentUTCTime":J
     .end local v4    # "expireTime":J
     :catch_0
     move-exception v2
 
-    .line 1673
     .local v2, "e":Ljava/lang/Exception;
     const-string v6, "GenericSSOService"
 
@@ -8701,12 +7802,10 @@
     .prologue
     const/4 v6, 0x0
 
-    .line 1221
     sget-object v2, Lcom/android/server/enterprise/sso/GenericSSOService;->mKeystore:Ljava/security/KeyStore;
 
     if-nez v2, :cond_0
 
-    .line 1222
     const-string v2, "TIMAKeyStore"
 
     invoke-direct {p0, v2}, Lcom/android/server/enterprise/sso/GenericSSOService;->getInstanceOfKeyStore(Ljava/lang/String;)Ljava/security/KeyStore;
@@ -8715,7 +7814,6 @@
 
     sput-object v2, Lcom/android/server/enterprise/sso/GenericSSOService;->mKeystore:Ljava/security/KeyStore;
 
-    .line 1236
     :cond_0
     sget-object v2, Lcom/android/server/enterprise/sso/GenericSSOService;->mKeystore:Ljava/security/KeyStore;
 
@@ -8727,7 +7825,7 @@
 
     move-result-object v2
 
-    const-string/jumbo v3, "timakeystore"
+    const-string v3, "timakeystore"
 
     invoke-virtual {v2, v3}, Ljava/lang/String;->equalsIgnoreCase(Ljava/lang/String;)Z
 
@@ -8735,14 +7833,12 @@
 
     if-eqz v2, :cond_4
 
-    .line 1237
     new-instance v0, Ljava/io/File;
 
     const-string v2, "/data/system/KnoxSSO_SCKF"
 
     invoke-direct {v0, v2}, Ljava/io/File;-><init>(Ljava/lang/String;)V
 
-    .line 1240
     .local v0, "keyFile":Ljava/io/File;
     const-string v2, "AndroidKeyStore"
 
@@ -8750,11 +7846,9 @@
 
     move-result-object v1
 
-    .line 1241
     .local v1, "keyStore":Ljava/security/KeyStore;
     invoke-virtual {v1, v6}, Ljava/security/KeyStore;->load(Ljava/security/KeyStore$LoadStoreParameter;)V
 
-    .line 1247
     invoke-virtual {v0}, Ljava/io/File;->exists()Z
 
     move-result v2
@@ -8769,19 +7863,16 @@
 
     if-eqz v2, :cond_4
 
-    .line 1249
     sget-boolean v2, Landroid/app/enterprise/sso/GenericSSOConstants;->DEBUG:Z
 
     if-eqz v2, :cond_1
 
-    .line 1250
     const-string v2, "GenericSSOService"
 
     const-string v3, "In initKeyStore: Starting doing the migration from AndroidKeyStore to TIMA keystore"
 
     invoke-static {v2, v3}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1255
     :cond_1
     invoke-direct {p0}, Lcom/android/server/enterprise/sso/GenericSSOService;->getSecretKeyFromAndroidKeyStore()Ljavax/crypto/SecretKey;
 
@@ -8789,19 +7880,16 @@
 
     sput-object v2, Lcom/android/server/enterprise/sso/GenericSSOService;->mSecretKey:Ljava/security/Key;
 
-    .line 1258
     sget-boolean v2, Landroid/app/enterprise/sso/GenericSSOConstants;->DEBUG:Z
 
     if-eqz v2, :cond_2
 
-    .line 1259
     const-string v2, "GenericSSOService"
 
     const-string v3, "In initKeyStore: Saving the secretKey to TIMA 3.0 KeyStore"
 
     invoke-static {v2, v3}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1261
     :cond_2
     sget-object v2, Lcom/android/server/enterprise/sso/GenericSSOService;->mKeystore:Ljava/security/KeyStore;
 
@@ -8809,7 +7897,7 @@
 
     sget-object v4, Lcom/android/server/enterprise/sso/GenericSSOService;->mSecretKey:Ljava/security/Key;
 
-    const-string/jumbo v5, "password_for_secret_key"
+    const-string v5, "password_for_secret_key"
 
     invoke-virtual {v5}, Ljava/lang/String;->toCharArray()[C
 
@@ -8817,34 +7905,27 @@
 
     invoke-virtual {v2, v3, v4, v5, v6}, Ljava/security/KeyStore;->setKeyEntry(Ljava/lang/String;Ljava/security/Key;[C[Ljava/security/cert/Certificate;)V
 
-    .line 1268
     sget-boolean v2, Landroid/app/enterprise/sso/GenericSSOConstants;->DEBUG:Z
 
     if-eqz v2, :cond_3
 
-    .line 1269
     const-string v2, "GenericSSOService"
 
     const-string v3, "In initKeyStore: Cleaning up variables from memory, as well as keypair and keyfile from storage."
 
     invoke-static {v2, v3}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1272
     :cond_3
     sput-object v6, Lcom/android/server/enterprise/sso/GenericSSOService;->mKeyPair:Ljava/security/KeyPair;
 
-    .line 1273
     sput-object v6, Lcom/android/server/enterprise/sso/GenericSSOService;->sSecretKeyFromAndroidKeyStore:Ljavax/crypto/SecretKey;
 
-    .line 1275
     invoke-virtual {v0}, Ljava/io/File;->delete()Z
 
-    .line 1276
     const-string v2, "KnoxSSOKey"
 
     invoke-virtual {v1, v2}, Ljava/security/KeyStore;->deleteEntry(Ljava/lang/String;)V
 
-    .line 1280
     .end local v0    # "keyFile":Ljava/io/File;
     .end local v1    # "keyStore":Ljava/security/KeyStore;
     :cond_4
@@ -8852,7 +7933,6 @@
 
     if-nez v2, :cond_5
 
-    .line 1281
     const-string v2, "AndroidKeyStore"
 
     invoke-direct {p0, v2}, Lcom/android/server/enterprise/sso/GenericSSOService;->getInstanceOfKeyStore(Ljava/lang/String;)Ljava/security/KeyStore;
@@ -8861,36 +7941,30 @@
 
     sput-object v2, Lcom/android/server/enterprise/sso/GenericSSOService;->mKeystore:Ljava/security/KeyStore;
 
-    .line 1283
     :cond_5
     sget-object v2, Lcom/android/server/enterprise/sso/GenericSSOService;->mKeystore:Ljava/security/KeyStore;
 
     if-nez v2, :cond_7
 
-    .line 1284
     sget-boolean v2, Landroid/app/enterprise/sso/GenericSSOConstants;->DEBUG:Z
 
     if-eqz v2, :cond_6
 
-    .line 1285
     const-string v2, "GenericSSOService"
 
     const-string v3, "In initKeyStore: no KeyStore instance is running"
 
     invoke-static {v2, v3}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1292
     :cond_6
     :goto_0
     return-void
 
-    .line 1287
     :cond_7
     sget-boolean v2, Landroid/app/enterprise/sso/GenericSSOConstants;->DEBUG:Z
 
     if-eqz v2, :cond_6
 
-    .line 1288
     const-string v2, "GenericSSOService"
 
     new-instance v3, Ljava/lang/StringBuilder;
@@ -8933,16 +8007,13 @@
     .param p1, "userId"    # I
 
     .prologue
-    .line 667
     const/4 v6, 0x0
 
-    .line 668
     .local v6, "stream":Ljava/io/FileInputStream;
     invoke-direct {p0, p1}, Lcom/android/server/enterprise/sso/GenericSSOService;->getRequestConfigFilePath(I)Ljava/lang/String;
 
     move-result-object v4
 
-    .line 670
     .local v4, "filepath":Ljava/lang/String;
     sget-object v8, Lcom/android/server/enterprise/sso/GenericSSOService;->requestConfigXMLDocs:Landroid/util/SparseArray;
 
@@ -8952,19 +8023,16 @@
 
     if-nez v8, :cond_2
 
-    .line 672
     :try_start_0
     invoke-static {}, Ljavax/xml/parsers/DocumentBuilderFactory;->newInstance()Ljavax/xml/parsers/DocumentBuilderFactory;
 
     move-result-object v1
 
-    .line 674
     .local v1, "dbFactory":Ljavax/xml/parsers/DocumentBuilderFactory;
     invoke-virtual {v1}, Ljavax/xml/parsers/DocumentBuilderFactory;->newDocumentBuilder()Ljavax/xml/parsers/DocumentBuilder;
 
     move-result-object v0
 
-    .line 676
     .local v0, "dBuilder":Ljavax/xml/parsers/DocumentBuilder;
     invoke-direct {p0, v4}, Lcom/android/server/enterprise/sso/GenericSSOService;->isFileExist(Ljava/lang/String;)Z
 
@@ -8986,13 +8054,11 @@
 
     if-nez v8, :cond_3
 
-    .line 677
     :cond_0
     sget-boolean v8, Landroid/app/enterprise/sso/GenericSSOConstants;->DEBUG:Z
 
     if-eqz v8, :cond_1
 
-    .line 678
     const-string v8, "GenericSSOService"
 
     new-instance v9, Ljava/lang/StringBuilder;
@@ -9021,13 +8087,11 @@
 
     invoke-static {v8, v9}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 682
     :cond_1
     invoke-virtual {v0}, Ljavax/xml/parsers/DocumentBuilder;->newDocument()Lorg/w3c/dom/Document;
 
     move-result-object v2
 
-    .line 683
     .local v2, "doc":Lorg/w3c/dom/Document;
     const-string v8, "configuration"
 
@@ -9035,32 +8099,27 @@
 
     move-result-object v5
 
-    .line 684
     .local v5, "root":Lorg/w3c/dom/Element;
     invoke-interface {v2, v5}, Lorg/w3c/dom/Document;->appendChild(Lorg/w3c/dom/Node;)Lorg/w3c/dom/Node;
 
-    .line 685
     invoke-interface {v2}, Lorg/w3c/dom/Document;->getDocumentElement()Lorg/w3c/dom/Element;
 
     move-result-object v8
 
     invoke-interface {v8}, Lorg/w3c/dom/Element;->normalize()V
 
-    .line 686
     new-instance v8, Lcom/android/server/enterprise/sso/GenericSSOService$RequestConfigDocument;
 
     invoke-direct {v8, v2}, Lcom/android/server/enterprise/sso/GenericSSOService$RequestConfigDocument;-><init>(Lorg/w3c/dom/Document;)V
 
     invoke-direct {p0, p1, v8}, Lcom/android/server/enterprise/sso/GenericSSOService;->updateCacheAndFile(ILcom/android/server/enterprise/sso/GenericSSOService$RequestConfigDocument;)V
 
-    .line 695
     .end local v5    # "root":Lorg/w3c/dom/Element;
     :goto_0
     sget-boolean v8, Landroid/app/enterprise/sso/GenericSSOConstants;->DEBUG:Z
 
     if-eqz v8, :cond_2
 
-    .line 696
     const-string v8, "GenericSSOService"
 
     new-instance v9, Ljava/lang/StringBuilder;
@@ -9087,7 +8146,6 @@
 
     invoke-static {v8, v9}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 707
     .end local v0    # "dBuilder":Ljavax/xml/parsers/DocumentBuilder;
     .end local v1    # "dbFactory":Ljavax/xml/parsers/DocumentBuilderFactory;
     .end local v2    # "doc":Lorg/w3c/dom/Document;
@@ -9095,7 +8153,6 @@
     :goto_1
     return-void
 
-    .line 688
     .restart local v0    # "dBuilder":Ljavax/xml/parsers/DocumentBuilder;
     .restart local v1    # "dbFactory":Ljavax/xml/parsers/DocumentBuilderFactory;
     :cond_3
@@ -9107,7 +8164,6 @@
     .catch Ljavax/xml/parsers/ParserConfigurationException; {:try_start_0 .. :try_end_0} :catch_1
     .catch Lorg/xml/sax/SAXException; {:try_start_0 .. :try_end_0} :catch_2
 
-    .line 689
     .end local v6    # "stream":Ljava/io/FileInputStream;
     .local v7, "stream":Ljava/io/FileInputStream;
     :try_start_1
@@ -9115,7 +8171,6 @@
 
     move-result-object v2
 
-    .line 690
     .restart local v2    # "doc":Lorg/w3c/dom/Document;
     invoke-interface {v2}, Lorg/w3c/dom/Document;->getDocumentElement()Lorg/w3c/dom/Element;
 
@@ -9123,7 +8178,6 @@
 
     invoke-interface {v8}, Lorg/w3c/dom/Element;->normalize()V
 
-    .line 691
     sget-object v8, Lcom/android/server/enterprise/sso/GenericSSOService;->requestConfigXMLDocs:Landroid/util/SparseArray;
 
     new-instance v9, Lcom/android/server/enterprise/sso/GenericSSOService$RequestConfigDocument;
@@ -9132,7 +8186,6 @@
 
     invoke-virtual {v8, p1, v9}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    .line 693
     invoke-virtual {v7}, Ljava/io/FileInputStream;->close()V
     :try_end_1
     .catch Ljava/io/IOException; {:try_start_1 .. :try_end_1} :catch_5
@@ -9145,14 +8198,12 @@
     .restart local v6    # "stream":Ljava/io/FileInputStream;
     goto :goto_0
 
-    .line 697
     .end local v0    # "dBuilder":Ljavax/xml/parsers/DocumentBuilder;
     .end local v1    # "dbFactory":Ljavax/xml/parsers/DocumentBuilderFactory;
     .end local v2    # "doc":Lorg/w3c/dom/Document;
     :catch_0
     move-exception v3
 
-    .line 698
     .local v3, "e":Ljava/io/IOException;
     :goto_2
     const-string v8, "GenericSSOService"
@@ -9163,12 +8214,10 @@
 
     goto :goto_1
 
-    .line 699
     .end local v3    # "e":Ljava/io/IOException;
     :catch_1
     move-exception v3
 
-    .line 700
     .local v3, "e":Ljavax/xml/parsers/ParserConfigurationException;
     :goto_3
     const-string v8, "GenericSSOService"
@@ -9179,12 +8228,10 @@
 
     goto :goto_1
 
-    .line 703
     .end local v3    # "e":Ljavax/xml/parsers/ParserConfigurationException;
     :catch_2
     move-exception v3
 
-    .line 704
     .local v3, "e":Lorg/xml/sax/SAXException;
     :goto_4
     const-string v8, "GenericSSOService"
@@ -9195,7 +8242,6 @@
 
     goto :goto_1
 
-    .line 703
     .end local v3    # "e":Lorg/xml/sax/SAXException;
     .end local v6    # "stream":Ljava/io/FileInputStream;
     .restart local v0    # "dBuilder":Ljavax/xml/parsers/DocumentBuilder;
@@ -9210,7 +8256,6 @@
     .restart local v6    # "stream":Ljava/io/FileInputStream;
     goto :goto_4
 
-    .line 699
     .end local v6    # "stream":Ljava/io/FileInputStream;
     .restart local v7    # "stream":Ljava/io/FileInputStream;
     :catch_4
@@ -9222,7 +8267,6 @@
     .restart local v6    # "stream":Ljava/io/FileInputStream;
     goto :goto_3
 
-    .line 697
     .end local v6    # "stream":Ljava/io/FileInputStream;
     .restart local v7    # "stream":Ljava/io/FileInputStream;
     :catch_5
@@ -9240,16 +8284,13 @@
     .param p1, "userId"    # I
 
     .prologue
-    .line 713
     const/4 v6, 0x0
 
-    .line 714
     .local v6, "stream":Ljava/io/FileInputStream;
     invoke-direct {p0, p1}, Lcom/android/server/enterprise/sso/GenericSSOService;->getTokenConfigFilePath(I)Ljava/lang/String;
 
     move-result-object v4
 
-    .line 716
     .local v4, "filepath":Ljava/lang/String;
     sget-object v8, Lcom/android/server/enterprise/sso/GenericSSOService;->tokenConfigXMLDocs:Landroid/util/SparseArray;
 
@@ -9259,19 +8300,16 @@
 
     if-nez v8, :cond_2
 
-    .line 718
     :try_start_0
     invoke-static {}, Ljavax/xml/parsers/DocumentBuilderFactory;->newInstance()Ljavax/xml/parsers/DocumentBuilderFactory;
 
     move-result-object v1
 
-    .line 720
     .local v1, "dbFactory":Ljavax/xml/parsers/DocumentBuilderFactory;
     invoke-virtual {v1}, Ljavax/xml/parsers/DocumentBuilderFactory;->newDocumentBuilder()Ljavax/xml/parsers/DocumentBuilder;
 
     move-result-object v0
 
-    .line 722
     .local v0, "dBuilder":Ljavax/xml/parsers/DocumentBuilder;
     invoke-direct {p0, v4}, Lcom/android/server/enterprise/sso/GenericSSOService;->isFileExist(Ljava/lang/String;)Z
 
@@ -9293,13 +8331,11 @@
 
     if-nez v8, :cond_3
 
-    .line 723
     :cond_0
     sget-boolean v8, Landroid/app/enterprise/sso/GenericSSOConstants;->DEBUG:Z
 
     if-eqz v8, :cond_1
 
-    .line 724
     const-string v8, "GenericSSOService"
 
     new-instance v9, Ljava/lang/StringBuilder;
@@ -9328,46 +8364,39 @@
 
     invoke-static {v8, v9}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 728
     :cond_1
     invoke-virtual {v0}, Ljavax/xml/parsers/DocumentBuilder;->newDocument()Lorg/w3c/dom/Document;
 
     move-result-object v2
 
-    .line 729
     .local v2, "doc":Lorg/w3c/dom/Document;
-    const-string/jumbo v8, "ssotoken"
+    const-string v8, "ssotoken"
 
     invoke-interface {v2, v8}, Lorg/w3c/dom/Document;->createElement(Ljava/lang/String;)Lorg/w3c/dom/Element;
 
     move-result-object v5
 
-    .line 730
     .local v5, "root":Lorg/w3c/dom/Element;
     invoke-interface {v2, v5}, Lorg/w3c/dom/Document;->appendChild(Lorg/w3c/dom/Node;)Lorg/w3c/dom/Node;
 
-    .line 731
     invoke-interface {v2}, Lorg/w3c/dom/Document;->getDocumentElement()Lorg/w3c/dom/Element;
 
     move-result-object v8
 
     invoke-interface {v8}, Lorg/w3c/dom/Element;->normalize()V
 
-    .line 732
     new-instance v8, Lcom/android/server/enterprise/sso/GenericSSOService$TokenConfigDocument;
 
     invoke-direct {v8, v2}, Lcom/android/server/enterprise/sso/GenericSSOService$TokenConfigDocument;-><init>(Lorg/w3c/dom/Document;)V
 
     invoke-direct {p0, p1, v8}, Lcom/android/server/enterprise/sso/GenericSSOService;->updateCacheAndFile(ILcom/android/server/enterprise/sso/GenericSSOService$TokenConfigDocument;)V
 
-    .line 741
     .end local v5    # "root":Lorg/w3c/dom/Element;
     :goto_0
     sget-boolean v8, Landroid/app/enterprise/sso/GenericSSOConstants;->DEBUG:Z
 
     if-eqz v8, :cond_2
 
-    .line 742
     const-string v8, "GenericSSOService"
 
     new-instance v9, Ljava/lang/StringBuilder;
@@ -9400,7 +8429,6 @@
 
     invoke-static {v8, v9}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 754
     .end local v0    # "dBuilder":Ljavax/xml/parsers/DocumentBuilder;
     .end local v1    # "dbFactory":Ljavax/xml/parsers/DocumentBuilderFactory;
     .end local v2    # "doc":Lorg/w3c/dom/Document;
@@ -9408,7 +8436,6 @@
     :goto_1
     return-void
 
-    .line 734
     .restart local v0    # "dBuilder":Ljavax/xml/parsers/DocumentBuilder;
     .restart local v1    # "dbFactory":Ljavax/xml/parsers/DocumentBuilderFactory;
     :cond_3
@@ -9420,7 +8447,6 @@
     .catch Ljavax/xml/parsers/ParserConfigurationException; {:try_start_0 .. :try_end_0} :catch_1
     .catch Lorg/xml/sax/SAXException; {:try_start_0 .. :try_end_0} :catch_2
 
-    .line 735
     .end local v6    # "stream":Ljava/io/FileInputStream;
     .local v7, "stream":Ljava/io/FileInputStream;
     :try_start_1
@@ -9428,7 +8454,6 @@
 
     move-result-object v2
 
-    .line 736
     .restart local v2    # "doc":Lorg/w3c/dom/Document;
     invoke-interface {v2}, Lorg/w3c/dom/Document;->getDocumentElement()Lorg/w3c/dom/Element;
 
@@ -9436,7 +8461,6 @@
 
     invoke-interface {v8}, Lorg/w3c/dom/Element;->normalize()V
 
-    .line 737
     sget-object v8, Lcom/android/server/enterprise/sso/GenericSSOService;->tokenConfigXMLDocs:Landroid/util/SparseArray;
 
     new-instance v9, Lcom/android/server/enterprise/sso/GenericSSOService$TokenConfigDocument;
@@ -9445,7 +8469,6 @@
 
     invoke-virtual {v8, p1, v9}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    .line 739
     invoke-virtual {v7}, Ljava/io/FileInputStream;->close()V
     :try_end_1
     .catch Ljava/io/IOException; {:try_start_1 .. :try_end_1} :catch_5
@@ -9458,14 +8481,12 @@
     .restart local v6    # "stream":Ljava/io/FileInputStream;
     goto :goto_0
 
-    .line 744
     .end local v0    # "dBuilder":Ljavax/xml/parsers/DocumentBuilder;
     .end local v1    # "dbFactory":Ljavax/xml/parsers/DocumentBuilderFactory;
     .end local v2    # "doc":Lorg/w3c/dom/Document;
     :catch_0
     move-exception v3
 
-    .line 745
     .local v3, "e":Ljava/io/IOException;
     :goto_2
     const-string v8, "GenericSSOService"
@@ -9476,12 +8497,10 @@
 
     goto :goto_1
 
-    .line 746
     .end local v3    # "e":Ljava/io/IOException;
     :catch_1
     move-exception v3
 
-    .line 747
     .local v3, "e":Ljavax/xml/parsers/ParserConfigurationException;
     :goto_3
     const-string v8, "GenericSSOService"
@@ -9492,12 +8511,10 @@
 
     goto :goto_1
 
-    .line 750
     .end local v3    # "e":Ljavax/xml/parsers/ParserConfigurationException;
     :catch_2
     move-exception v3
 
-    .line 751
     .local v3, "e":Lorg/xml/sax/SAXException;
     :goto_4
     const-string v8, "GenericSSOService"
@@ -9508,7 +8525,6 @@
 
     goto :goto_1
 
-    .line 750
     .end local v3    # "e":Lorg/xml/sax/SAXException;
     .end local v6    # "stream":Ljava/io/FileInputStream;
     .restart local v0    # "dBuilder":Ljavax/xml/parsers/DocumentBuilder;
@@ -9523,7 +8539,6 @@
     .restart local v6    # "stream":Ljava/io/FileInputStream;
     goto :goto_4
 
-    .line 746
     .end local v6    # "stream":Ljava/io/FileInputStream;
     .restart local v7    # "stream":Ljava/io/FileInputStream;
     :catch_4
@@ -9535,7 +8550,6 @@
     .restart local v6    # "stream":Ljava/io/FileInputStream;
     goto :goto_3
 
-    .line 744
     .end local v6    # "stream":Ljava/io/FileInputStream;
     .restart local v7    # "stream":Ljava/io/FileInputStream;
     :catch_5
@@ -9558,34 +8572,29 @@
 
     const/4 v5, 0x0
 
-    .line 924
     :try_start_0
-    const-string/jumbo v6, "servicepackagename"
+    const-string v6, "servicepackagename"
 
     invoke-virtual {p2, v6}, Landroid/os/Bundle;->getString(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v3
 
-    .line 926
     .local v3, "servicePkgName":Ljava/lang/String;
-    const-string/jumbo v6, "servicepackagesignature"
+    const-string v6, "servicepackagesignature"
 
     invoke-virtual {p2, v6}, Landroid/os/Bundle;->getString(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v2
 
-    .line 928
     .local v2, "servicePkgCert":Ljava/lang/String;
     if-nez v2, :cond_1
 
-    .line 951
     .end local v2    # "servicePkgCert":Ljava/lang/String;
     .end local v3    # "servicePkgName":Ljava/lang/String;
     :cond_0
     :goto_0
     return v4
 
-    .line 931
     .restart local v2    # "servicePkgCert":Ljava/lang/String;
     .restart local v3    # "servicePkgName":Ljava/lang/String;
     :cond_1
@@ -9593,7 +8602,6 @@
 
     move-result-object v1
 
-    .line 933
     .local v1, "installedServicePkgCert":Ljava/lang/String;
     invoke-virtual {v2, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
@@ -9601,12 +8609,10 @@
 
     if-eqz v6, :cond_2
 
-    .line 934
     sget-boolean v6, Landroid/app/enterprise/sso/GenericSSOConstants;->DEBUG:Z
 
     if-eqz v6, :cond_0
 
-    .line 935
     const-string v6, "GenericSSOService"
 
     const-string v7, "In installedServiceIsPermitted: service package cert is matched between configured and installed"
@@ -9617,14 +8623,12 @@
 
     goto :goto_0
 
-    .line 948
     .end local v1    # "installedServicePkgCert":Ljava/lang/String;
     .end local v2    # "servicePkgCert":Ljava/lang/String;
     .end local v3    # "servicePkgName":Ljava/lang/String;
     :catch_0
     move-exception v0
 
-    .line 949
     .local v0, "e":Ljava/lang/Exception;
     const-string v4, "GenericSSOService"
 
@@ -9634,10 +8638,8 @@
 
     move v4, v5
 
-    .line 951
     goto :goto_0
 
-    .line 939
     .end local v0    # "e":Ljava/lang/Exception;
     .restart local v1    # "installedServicePkgCert":Ljava/lang/String;
     .restart local v2    # "servicePkgCert":Ljava/lang/String;
@@ -9648,7 +8650,6 @@
 
     if-eqz v4, :cond_3
 
-    .line 940
     const-string v4, "GenericSSOService"
 
     new-instance v6, Ljava/lang/StringBuilder;
@@ -9686,7 +8687,6 @@
     :cond_3
     move v4, v5
 
-    .line 945
     goto :goto_0
 .end method
 
@@ -9700,46 +8700,37 @@
 
     const/4 v5, 0x0
 
-    .line 2106
     :try_start_0
     invoke-direct {p0, p1}, Lcom/android/server/enterprise/sso/GenericSSOService;->getSSOConfigForUserId(I)Lcom/android/server/enterprise/sso/GenericSSOService$RequestConfigDocument;
 
     move-result-object v0
 
-    .line 2107
     .local v0, "configDoc":Lcom/android/server/enterprise/sso/GenericSSOService$RequestConfigDocument;
     const/4 v2, 0x0
 
-    .line 2108
     .local v2, "enrolledVendor":Lorg/w3c/dom/Node;
     const/4 v3, 0x0
 
-    .line 2109
     .local v3, "mdmUidNode":Lorg/w3c/dom/Node;
     if-eqz v0, :cond_4
 
-    .line 2110
     # invokes: Lcom/android/server/enterprise/sso/GenericSSOService$RequestConfigDocument;->getEnrolledSSOVendor()Lorg/w3c/dom/Node;
     invoke-static {v0}, Lcom/android/server/enterprise/sso/GenericSSOService$RequestConfigDocument;->access$600(Lcom/android/server/enterprise/sso/GenericSSOService$RequestConfigDocument;)Lorg/w3c/dom/Node;
 
     move-result-object v2
 
-    .line 2111
     if-nez v2, :cond_1
 
-    .line 2113
     sget-boolean v6, Landroid/app/enterprise/sso/GenericSSOConstants;->DEBUG:Z
 
     if-eqz v6, :cond_0
 
-    .line 2114
     const-string v6, "GenericSSOService"
 
     const-string v7, "In isCallingMDMMatch: the enrolledVendor is null, return true"
 
     invoke-static {v6, v7}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 2142
     .end local v0    # "configDoc":Lcom/android/server/enterprise/sso/GenericSSOService$RequestConfigDocument;
     .end local v2    # "enrolledVendor":Lorg/w3c/dom/Node;
     .end local v3    # "mdmUidNode":Lorg/w3c/dom/Node;
@@ -9747,7 +8738,6 @@
     :goto_0
     return v4
 
-    .line 2118
     .restart local v0    # "configDoc":Lcom/android/server/enterprise/sso/GenericSSOService$RequestConfigDocument;
     .restart local v2    # "enrolledVendor":Lorg/w3c/dom/Node;
     .restart local v3    # "mdmUidNode":Lorg/w3c/dom/Node;
@@ -9758,15 +8748,12 @@
 
     move-result-object v3
 
-    .line 2120
     if-nez v3, :cond_3
 
-    .line 2121
     sget-boolean v4, Landroid/app/enterprise/sso/GenericSSOConstants;->DEBUG:Z
 
     if-eqz v4, :cond_2
 
-    .line 2122
     const-string v4, "GenericSSOService"
 
     const-string v6, "In isCallingMDMMatch: the mDmUidNode is null, return false"
@@ -9776,10 +8763,8 @@
     :cond_2
     move v4, v5
 
-    .line 2124
     goto :goto_0
 
-    .line 2126
     :cond_3
     invoke-interface {v3}, Lorg/w3c/dom/Node;->getTextContent()Ljava/lang/String;
 
@@ -9811,16 +8796,13 @@
 
     move v4, v5
 
-    .line 2127
     goto :goto_0
 
-    .line 2133
     :cond_4
     sget-boolean v6, Landroid/app/enterprise/sso/GenericSSOConstants;->DEBUG:Z
 
     if-eqz v6, :cond_0
 
-    .line 2134
     const-string v6, "GenericSSOService"
 
     const-string v7, "In isCallingMDMMatch: the configDoc is null, return true"
@@ -9831,14 +8813,12 @@
 
     goto :goto_0
 
-    .line 2138
     .end local v0    # "configDoc":Lcom/android/server/enterprise/sso/GenericSSOService$RequestConfigDocument;
     .end local v2    # "enrolledVendor":Lorg/w3c/dom/Node;
     .end local v3    # "mdmUidNode":Lorg/w3c/dom/Node;
     :catch_0
     move-exception v1
 
-    .line 2140
     .local v1, "e":Ljava/lang/NullPointerException;
     const-string v4, "GenericSSOService"
 
@@ -9848,7 +8828,6 @@
 
     move v4, v5
 
-    .line 2142
     goto :goto_0
 .end method
 
@@ -9857,7 +8836,6 @@
     .param p1, "filename"    # Ljava/lang/String;
 
     .prologue
-    .line 974
     new-instance v0, Ljava/io/File;
 
     invoke-direct {v0, p1}, Ljava/io/File;-><init>(Ljava/lang/String;)V
@@ -9873,12 +8851,10 @@
     .locals 8
 
     .prologue
-    .line 3638
     invoke-static {}, Landroid/os/Binder;->clearCallingIdentity()J
 
     move-result-wide v4
 
-    .line 3639
     .local v4, "token1":J
     iget-object v3, p0, Lcom/android/server/enterprise/sso/GenericSSOService;->mContext:Landroid/content/Context;
 
@@ -9890,13 +8866,11 @@
 
     check-cast v1, Landroid/net/ConnectivityManager;
 
-    .line 3641
     .local v1, "cm":Landroid/net/ConnectivityManager;
     invoke-virtual {v1}, Landroid/net/ConnectivityManager;->getActiveNetworkInfo()Landroid/net/NetworkInfo;
 
     move-result-object v0
 
-    .line 3642
     .local v0, "activeNetwork":Landroid/net/NetworkInfo;
     if-eqz v0, :cond_1
 
@@ -9908,7 +8882,6 @@
 
     const/4 v2, 0x1
 
-    .line 3644
     .local v2, "isConnected":Z
     :goto_0
     if-eqz v0, :cond_0
@@ -9917,7 +8890,6 @@
 
     if-eqz v3, :cond_0
 
-    .line 3645
     const-string v3, "GenericSSOService"
 
     new-instance v6, Ljava/lang/StringBuilder;
@@ -9944,14 +8916,11 @@
 
     invoke-static {v3, v6}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 3646
     :cond_0
     invoke-static {v4, v5}, Landroid/os/Binder;->restoreCallingIdentity(J)V
 
-    .line 3647
     return v2
 
-    .line 3642
     .end local v2    # "isConnected":Z
     :cond_1
     const/4 v2, 0x0
@@ -9964,7 +8933,6 @@
     .param p1, "target"    # Landroid/os/Bundle;
 
     .prologue
-    .line 446
     if-eqz p1, :cond_0
 
     invoke-virtual {p1}, Landroid/os/Bundle;->isEmpty()Z
@@ -9973,11 +8941,9 @@
 
     if-eqz v0, :cond_1
 
-    .line 447
     :cond_0
     const/4 v0, 0x1
 
-    .line 448
     :goto_0
     return v0
 
@@ -9992,7 +8958,6 @@
     .param p1, "target"    # Ljava/lang/String;
 
     .prologue
-    .line 440
     if-eqz p1, :cond_0
 
     invoke-virtual {p1}, Ljava/lang/String;->length()I
@@ -10001,11 +8966,9 @@
 
     if-nez v0, :cond_1
 
-    .line 441
     :cond_0
     const/4 v0, 0x1
 
-    .line 442
     :goto_0
     return v0
 
@@ -10028,17 +8991,14 @@
     .end annotation
 
     .prologue
-    .line 1447
     sget-object v2, Lcom/android/server/enterprise/sso/GenericSSOService;->mSecretKey:Ljava/security/Key;
 
     if-eqz v2, :cond_1
 
-    .line 1448
     sget-boolean v2, Landroid/app/enterprise/sso/GenericSSOConstants;->DEBUG:Z
 
     if-eqz v2, :cond_0
 
-    .line 1449
     const-string v2, "GenericSSOService"
 
     new-instance v3, Ljava/lang/StringBuilder;
@@ -10071,23 +9031,19 @@
 
     invoke-static {v2, v3}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1487
     :cond_0
     :goto_0
     return-void
 
-    .line 1454
     :cond_1
     sget-object v2, Lcom/android/server/enterprise/sso/GenericSSOService;->mKeystore:Ljava/security/KeyStore;
 
     if-nez v2, :cond_2
 
-    .line 1455
     sget-boolean v2, Landroid/app/enterprise/sso/GenericSSOConstants;->DEBUG:Z
 
     if-eqz v2, :cond_0
 
-    .line 1456
     const-string v2, "GenericSSOService"
 
     const-string v3, "In loadKey: loadkey() failed, because keystore is not initialized"
@@ -10096,13 +9052,11 @@
 
     goto :goto_0
 
-    .line 1461
     :cond_2
     invoke-static {}, Landroid/os/Binder;->clearCallingIdentity()J
 
     move-result-wide v0
 
-    .line 1462
     .local v0, "token":J
     sget-object v2, Lcom/android/server/enterprise/sso/GenericSSOService;->mKeystore:Ljava/security/KeyStore;
 
@@ -10110,7 +9064,7 @@
 
     move-result-object v2
 
-    const-string/jumbo v3, "timakeystore"
+    const-string v3, "timakeystore"
 
     invoke-virtual {v2, v3}, Ljava/lang/String;->equalsIgnoreCase(Ljava/lang/String;)Z
 
@@ -10118,7 +9072,6 @@
 
     if-eqz v2, :cond_6
 
-    .line 1463
     sget-object v2, Lcom/android/server/enterprise/sso/GenericSSOService;->mKeystore:Ljava/security/KeyStore;
 
     invoke-virtual {v2, p1}, Ljava/security/KeyStore;->containsAlias(Ljava/lang/String;)Z
@@ -10127,19 +9080,17 @@
 
     if-nez v2, :cond_5
 
-    .line 1464
     invoke-direct {p0}, Lcom/android/server/enterprise/sso/GenericSSOService;->createSecretKey()Ljavax/crypto/SecretKey;
 
     move-result-object v2
 
     sput-object v2, Lcom/android/server/enterprise/sso/GenericSSOService;->mSecretKey:Ljava/security/Key;
 
-    .line 1465
     sget-object v2, Lcom/android/server/enterprise/sso/GenericSSOService;->mKeystore:Ljava/security/KeyStore;
 
     sget-object v3, Lcom/android/server/enterprise/sso/GenericSSOService;->mSecretKey:Ljava/security/Key;
 
-    const-string/jumbo v4, "password_for_secret_key"
+    const-string v4, "password_for_secret_key"
 
     invoke-virtual {v4}, Ljava/lang/String;->toCharArray()[C
 
@@ -10149,12 +9100,10 @@
 
     invoke-virtual {v2, p1, v3, v4, v5}, Ljava/security/KeyStore;->setKeyEntry(Ljava/lang/String;Ljava/security/Key;[C[Ljava/security/cert/Certificate;)V
 
-    .line 1467
     sget-boolean v2, Landroid/app/enterprise/sso/GenericSSOConstants;->DEBUG:Z
 
     if-eqz v2, :cond_3
 
-    .line 1468
     const-string v2, "GenericSSOService"
 
     new-instance v3, Ljava/lang/StringBuilder;
@@ -10183,14 +9132,12 @@
 
     invoke-static {v2, v3}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1475
     :cond_3
     :goto_1
     sget-boolean v2, Landroid/app/enterprise/sso/GenericSSOConstants;->DEBUG:Z
 
     if-eqz v2, :cond_4
 
-    .line 1476
     const-string v2, "GenericSSOService"
 
     new-instance v3, Ljava/lang/StringBuilder;
@@ -10223,18 +9170,16 @@
 
     invoke-static {v2, v3}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1486
     :cond_4
     :goto_2
     invoke-static {v0, v1}, Landroid/os/Binder;->restoreCallingIdentity(J)V
 
     goto/16 :goto_0
 
-    .line 1472
     :cond_5
     sget-object v2, Lcom/android/server/enterprise/sso/GenericSSOService;->mKeystore:Ljava/security/KeyStore;
 
-    const-string/jumbo v3, "password_for_secret_key"
+    const-string v3, "password_for_secret_key"
 
     invoke-virtual {v3}, Ljava/lang/String;->toCharArray()[C
 
@@ -10248,7 +9193,6 @@
 
     goto :goto_1
 
-    .line 1478
     :cond_6
     sget-object v2, Lcom/android/server/enterprise/sso/GenericSSOService;->mKeystore:Ljava/security/KeyStore;
 
@@ -10264,14 +9208,12 @@
 
     if-eqz v2, :cond_4
 
-    .line 1479
     invoke-direct {p0}, Lcom/android/server/enterprise/sso/GenericSSOService;->getSecretKeyFromAndroidKeyStore()Ljavax/crypto/SecretKey;
 
     move-result-object v2
 
     sput-object v2, Lcom/android/server/enterprise/sso/GenericSSOService;->mSecretKey:Ljava/security/Key;
 
-    .line 1480
     sget-boolean v2, Landroid/app/enterprise/sso/GenericSSOConstants;->DEBUG:Z
 
     if-eqz v2, :cond_4
@@ -10288,7 +9230,6 @@
 
     if-eqz v2, :cond_4
 
-    .line 1482
     const-string v2, "GenericSSOService"
 
     new-instance v3, Ljava/lang/StringBuilder;
@@ -10328,12 +9269,10 @@
     .locals 3
 
     .prologue
-    .line 1707
     new-instance v0, Ljava/security/SecureRandom;
 
     invoke-direct {v0}, Ljava/security/SecureRandom;-><init>()V
 
-    .line 1708
     .local v0, "random":Ljava/security/SecureRandom;
     new-instance v1, Ljava/math/BigInteger;
 
@@ -10359,22 +9298,18 @@
     .prologue
     const/4 v6, -0x1
 
-    .line 3653
     :try_start_0
     invoke-direct {p0, p2}, Lcom/android/server/enterprise/sso/GenericSSOService;->getSSOServiceIntent(Ljava/lang/String;)Landroid/content/Intent;
 
     move-result-object v4
 
-    .line 3654
     .local v4, "serviceIntent":Landroid/content/Intent;
     if-nez v4, :cond_2
 
-    .line 3655
     sget-boolean v7, Landroid/app/enterprise/sso/GenericSSOConstants;->DEBUG:Z
 
     if-eqz v7, :cond_0
 
-    .line 3656
     const-string v7, "GenericSSOService"
 
     const-string v8, "In pushAuthenticatorConfig: cannot get SSO Service intent"
@@ -10384,38 +9319,31 @@
     :cond_0
     move v1, v6
 
-    .line 3693
     .end local v4    # "serviceIntent":Landroid/content/Intent;
     :cond_1
     :goto_0
     return v1
 
-    .line 3661
     .restart local v4    # "serviceIntent":Landroid/content/Intent;
     :cond_2
     invoke-static {}, Landroid/os/Binder;->clearCallingIdentity()J
 
     move-result-wide v2
 
-    .line 3662
     .local v2, "identity":J
     invoke-direct {p0, p1, v4}, Lcom/android/server/enterprise/sso/GenericSSOService;->bindToService(ILandroid/content/Intent;)V
 
-    .line 3663
     invoke-direct {p0, p1}, Lcom/android/server/enterprise/sso/GenericSSOService;->getSSOService(I)Landroid/app/enterprise/sso/GenericSSOSupportSolution;
 
     move-result-object v5
 
-    .line 3665
     .local v5, "ssoService":Landroid/app/enterprise/sso/GenericSSOSupportSolution;
     if-nez v5, :cond_4
 
-    .line 3666
     sget-boolean v7, Landroid/app/enterprise/sso/GenericSSOConstants;->DEBUG:Z
 
     if-eqz v7, :cond_3
 
-    .line 3667
     const-string v7, "GenericSSOService"
 
     const-string v8, "In pushAuthenticatorConfig: sso service is not ready to use"
@@ -10425,28 +9353,22 @@
     :cond_3
     move v1, v6
 
-    .line 3669
     goto :goto_0
 
-    .line 3672
     :cond_4
     invoke-interface {v5, p3}, Landroid/app/enterprise/sso/GenericSSOSupportSolution;->pushAuthenticatorConfig(Landroid/os/Bundle;)I
 
     move-result v1
 
-    .line 3673
     .local v1, "ret":I
     invoke-static {v2, v3}, Landroid/os/Binder;->restoreCallingIdentity(J)V
 
-    .line 3675
     sget-boolean v7, Landroid/app/enterprise/sso/GenericSSOConstants;->DEBUG:Z
 
     if-eqz v7, :cond_1
 
-    .line 3676
     if-nez v1, :cond_5
 
-    .line 3677
     const-string v7, "GenericSSOService"
 
     new-instance v8, Ljava/lang/StringBuilder;
@@ -10480,7 +9402,6 @@
 
     goto :goto_0
 
-    .line 3688
     .end local v1    # "ret":I
     .end local v2    # "identity":J
     .end local v4    # "serviceIntent":Landroid/content/Intent;
@@ -10488,7 +9409,6 @@
     :catch_0
     move-exception v0
 
-    .line 3689
     .local v0, "e":Landroid/os/RemoteException;
     const-string v7, "GenericSSOService"
 
@@ -10500,10 +9420,8 @@
     :goto_1
     move v1, v6
 
-    .line 3693
     goto :goto_0
 
-    .line 3681
     .restart local v1    # "ret":I
     .restart local v2    # "identity":J
     .restart local v4    # "serviceIntent":Landroid/content/Intent;
@@ -10547,7 +9465,6 @@
 
     goto :goto_0
 
-    .line 3690
     .end local v1    # "ret":I
     .end local v2    # "identity":J
     .end local v4    # "serviceIntent":Landroid/content/Intent;
@@ -10555,7 +9472,6 @@
     :catch_1
     move-exception v0
 
-    .line 3691
     .local v0, "e":Ljava/lang/Exception;
     const-string v7, "GenericSSOService"
 
@@ -10571,28 +9487,24 @@
     .param p1, "userId"    # I
 
     .prologue
-    .line 2578
     :try_start_0
     invoke-direct {p0, p1}, Lcom/android/server/enterprise/sso/GenericSSOService;->getSSOConfigForUserId(I)Lcom/android/server/enterprise/sso/GenericSSOService$RequestConfigDocument;
 
     move-result-object v3
 
-    .line 2579
     .local v3, "configDoc":Lcom/android/server/enterprise/sso/GenericSSOService$RequestConfigDocument;
     # invokes: Lcom/android/server/enterprise/sso/GenericSSOService$RequestConfigDocument;->getEnrolledSSOVendor()Lorg/w3c/dom/Node;
     invoke-static {v3}, Lcom/android/server/enterprise/sso/GenericSSOService$RequestConfigDocument;->access$600(Lcom/android/server/enterprise/sso/GenericSSOService$RequestConfigDocument;)Lorg/w3c/dom/Node;
 
     move-result-object v8
 
-    .line 2580
     .local v8, "ssoNode":Lorg/w3c/dom/Node;
     new-instance v2, Landroid/os/Bundle;
 
     invoke-direct {v2}, Landroid/os/Bundle;-><init>()V
 
-    .line 2581
     .local v2, "configData":Landroid/os/Bundle;
-    const-string/jumbo v12, "servicepackagename"
+    const-string v12, "servicepackagename"
 
     invoke-direct {p0, v8, v12}, Lcom/android/server/enterprise/sso/GenericSSOService;->getAttributeNode(Lorg/w3c/dom/Node;Ljava/lang/String;)Lorg/w3c/dom/Node;
 
@@ -10602,18 +9514,15 @@
 
     move-result-object v11
 
-    .line 2584
     .local v11, "vendorAuthPkgName":Ljava/lang/String;
-    const-string/jumbo v12, "servicepackagename"
+    const-string v12, "servicepackagename"
 
     invoke-virtual {v2, v12, v11}, Landroid/os/Bundle;->putString(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 2586
     const/4 v10, 0x0
 
-    .line 2587
     .local v10, "vendorAuthPkgCert":Ljava/lang/String;
-    const-string/jumbo v12, "servicepackagesignature"
+    const-string v12, "servicepackagesignature"
 
     invoke-direct {p0, v8, v12}, Lcom/android/server/enterprise/sso/GenericSSOService;->getAttributeNode(Lorg/w3c/dom/Node;Ljava/lang/String;)Lorg/w3c/dom/Node;
 
@@ -10621,8 +9530,7 @@
 
     if-eqz v12, :cond_0
 
-    .line 2589
-    const-string/jumbo v12, "servicepackagesignature"
+    const-string v12, "servicepackagesignature"
 
     invoke-direct {p0, v8, v12}, Lcom/android/server/enterprise/sso/GenericSSOService;->getAttributeNode(Lorg/w3c/dom/Node;Ljava/lang/String;)Lorg/w3c/dom/Node;
 
@@ -10632,12 +9540,10 @@
 
     move-result-object v10
 
-    .line 2592
-    const-string/jumbo v12, "servicepackagesignature"
+    const-string v12, "servicepackagesignature"
 
     invoke-virtual {v2, v12, v10}, Landroid/os/Bundle;->putString(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 2596
     :cond_0
     invoke-direct {p0, p1, v2}, Lcom/android/server/enterprise/sso/GenericSSOService;->installedServiceIsPermitted(ILandroid/os/Bundle;)Z
 
@@ -10645,23 +9551,19 @@
 
     if-nez v12, :cond_2
 
-    .line 2597
     sget-boolean v12, Landroid/app/enterprise/sso/GenericSSOConstants;->DEBUG:Z
 
     if-eqz v12, :cond_1
 
-    .line 2598
     const-string v12, "GenericSSOService"
 
     const-string v13, "In reAuthenInAuthenticator: Fail to pass the service package cert check"
 
     invoke-static {v12, v13}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 2600
     :cond_1
     const/16 v12, -0xd
 
-    .line 2638
     .end local v2    # "configData":Landroid/os/Bundle;
     .end local v3    # "configDoc":Lcom/android/server/enterprise/sso/GenericSSOService$RequestConfigDocument;
     .end local v8    # "ssoNode":Lorg/w3c/dom/Node;
@@ -10670,7 +9572,6 @@
     :goto_0
     return v12
 
-    .line 2603
     .restart local v2    # "configData":Landroid/os/Bundle;
     .restart local v3    # "configDoc":Lcom/android/server/enterprise/sso/GenericSSOService$RequestConfigDocument;
     .restart local v8    # "ssoNode":Lorg/w3c/dom/Node;
@@ -10681,70 +9582,57 @@
 
     move-result-object v6
 
-    .line 2604
     .local v6, "serviceIntent":Landroid/content/Intent;
     if-nez v6, :cond_4
 
-    .line 2605
     sget-boolean v12, Landroid/app/enterprise/sso/GenericSSOConstants;->DEBUG:Z
 
     if-eqz v12, :cond_3
 
-    .line 2606
     const-string v12, "GenericSSOService"
 
     const-string v13, "In reAuthenInAuthenticator: cannot get SSO Service intent"
 
     invoke-static {v12, v13}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 2608
     :cond_3
     const/4 v12, -0x1
 
     goto :goto_0
 
-    .line 2610
     :cond_4
     invoke-direct {p0, p1, v6}, Lcom/android/server/enterprise/sso/GenericSSOService;->bindToService(ILandroid/content/Intent;)V
 
-    .line 2611
     invoke-direct {p0, p1}, Lcom/android/server/enterprise/sso/GenericSSOService;->getSSOService(I)Landroid/app/enterprise/sso/GenericSSOSupportSolution;
 
     move-result-object v9
 
-    .line 2612
     .local v9, "ssoService":Landroid/app/enterprise/sso/GenericSSOSupportSolution;
     if-nez v9, :cond_6
 
-    .line 2613
     sget-boolean v12, Landroid/app/enterprise/sso/GenericSSOConstants;->DEBUG:Z
 
     if-eqz v12, :cond_5
 
-    .line 2614
     const-string v12, "GenericSSOService"
 
     const-string v13, "In reAuthenInAuthenticator: sso service is not ready to use"
 
     invoke-static {v12, v13}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 2616
     :cond_5
     const/4 v12, -0x1
 
     goto :goto_0
 
-    .line 2618
     :cond_6
     invoke-direct {p0, v8}, Lcom/android/server/enterprise/sso/GenericSSOService;->getWhitelistAppNode(Lorg/w3c/dom/Node;)Ljava/util/ArrayList;
 
     move-result-object v0
 
-    .line 2619
     .local v0, "allowedApps":Ljava/util/ArrayList;, "Ljava/util/ArrayList<Lorg/w3c/dom/Node;>;"
     const/4 v1, 0x0
 
-    .line 2620
     .local v1, "appPkgName":Ljava/lang/String;
     invoke-virtual {v0}, Ljava/util/ArrayList;->size()I
 
@@ -10752,7 +9640,6 @@
 
     if-lez v12, :cond_7
 
-    .line 2621
     const/4 v12, 0x0
 
     invoke-virtual {v0, v12}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
@@ -10771,13 +9658,11 @@
 
     move-result-object v1
 
-    .line 2625
     :cond_7
     invoke-direct {p0, p1, v1}, Lcom/android/server/enterprise/sso/GenericSSOService;->getConfigData(ILjava/lang/String;)Landroid/os/Bundle;
 
     move-result-object v7
 
-    .line 2627
     .local v7, "ssoConfig":Landroid/os/Bundle;
     invoke-interface {v9, v7}, Landroid/app/enterprise/sso/GenericSSOSupportSolution;->forceAuthenticate(Landroid/os/Bundle;)I
     :try_end_0
@@ -10789,7 +9674,6 @@
 
     goto :goto_0
 
-    .line 2628
     .end local v0    # "allowedApps":Ljava/util/ArrayList;, "Ljava/util/ArrayList<Lorg/w3c/dom/Node;>;"
     .end local v1    # "appPkgName":Ljava/lang/String;
     .end local v2    # "configData":Landroid/os/Bundle;
@@ -10803,7 +9687,6 @@
     :catch_0
     move-exception v5
 
-    .line 2630
     .local v5, "npe":Ljava/lang/NullPointerException;
     const-string v12, "GenericSSOService"
 
@@ -10811,18 +9694,15 @@
 
     invoke-static {v12, v13, v5}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
-    .line 2638
     .end local v5    # "npe":Ljava/lang/NullPointerException;
     :goto_1
     const/4 v12, -0x1
 
     goto :goto_0
 
-    .line 2631
     :catch_1
     move-exception v4
 
-    .line 2633
     .local v4, "e":Landroid/os/RemoteException;
     const-string v12, "GenericSSOService"
 
@@ -10832,12 +9712,10 @@
 
     goto :goto_1
 
-    .line 2634
     .end local v4    # "e":Landroid/os/RemoteException;
     :catch_2
     move-exception v4
 
-    .line 2636
     .local v4, "e":Ljava/lang/Exception;
     const-string v12, "GenericSSOService"
 
@@ -10858,38 +9736,32 @@
     .end annotation
 
     .prologue
-    .line 1620
     sget-boolean v4, Landroid/app/enterprise/sso/GenericSSOConstants;->DEBUG:Z
 
     if-eqz v4, :cond_0
 
-    .line 1621
     const-string v4, "GenericSSOService"
 
     const-string v5, "In readKeyData: Reading key data from a file"
 
     invoke-static {v4, v5}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1622
     :cond_0
     new-instance v3, Ljava/io/FileInputStream;
 
     invoke-direct {v3, p0}, Ljava/io/FileInputStream;-><init>(Ljava/io/File;)V
 
-    .line 1625
     .local v3, "in":Ljava/io/InputStream;
     :try_start_0
     new-instance v1, Ljava/io/ByteArrayOutputStream;
 
     invoke-direct {v1}, Ljava/io/ByteArrayOutputStream;-><init>()V
 
-    .line 1626
     .local v1, "bytes":Ljava/io/ByteArrayOutputStream;
     const/16 v4, 0x400
 
     new-array v0, v4, [B
 
-    .line 1628
     .local v0, "buffer":[B
     :goto_0
     invoke-virtual {v3, v0}, Ljava/io/InputStream;->read([B)I
@@ -10901,7 +9773,6 @@
 
     if-eq v2, v4, :cond_1
 
-    .line 1629
     const/4 v4, 0x0
 
     invoke-virtual {v1, v0, v4, v2}, Ljava/io/ByteArrayOutputStream;->write([BII)V
@@ -10910,7 +9781,6 @@
 
     goto :goto_0
 
-    .line 1634
     .end local v0    # "buffer":[B
     .end local v1    # "bytes":Ljava/io/ByteArrayOutputStream;
     .end local v2    # "count":I
@@ -10921,7 +9791,6 @@
 
     throw v4
 
-    .line 1632
     .restart local v0    # "buffer":[B
     .restart local v1    # "bytes":Ljava/io/ByteArrayOutputStream;
     .restart local v2    # "count":I
@@ -10933,7 +9802,6 @@
 
     move-result-object v4
 
-    .line 1634
     invoke-virtual {v3}, Ljava/io/InputStream;->close()V
 
     return-object v4
@@ -10945,23 +9813,19 @@
     .prologue
     const/4 v4, 0x0
 
-    .line 325
     new-instance v3, Landroid/content/IntentFilter;
 
     invoke-direct {v3}, Landroid/content/IntentFilter;-><init>()V
 
-    .line 326
     .local v3, "filter":Landroid/content/IntentFilter;
     const-string v0, "android.intent.action.SCREEN_OFF"
 
     invoke-virtual {v3, v0}, Landroid/content/IntentFilter;->addAction(Ljava/lang/String;)V
 
-    .line 327
     const-string v0, "android.security.STORAGE_CHANGED"
 
     invoke-virtual {v3, v0}, Landroid/content/IntentFilter;->addAction(Ljava/lang/String;)V
 
-    .line 328
     iget-object v0, p0, Lcom/android/server/enterprise/sso/GenericSSOService;->mContext:Landroid/content/Context;
 
     new-instance v1, Lcom/android/server/enterprise/sso/GenericSSOService$ScreenOffReceiver;
@@ -10974,7 +9838,6 @@
 
     invoke-virtual/range {v0 .. v5}, Landroid/content/Context;->registerReceiverAsUser(Landroid/content/BroadcastReceiver;Landroid/os/UserHandle;Landroid/content/IntentFilter;Ljava/lang/String;Landroid/os/Handler;)Landroid/content/Intent;
 
-    .line 330
     return-void
 .end method
 
@@ -10984,28 +9847,23 @@
     .param p2, "filepath"    # Ljava/lang/String;
 
     .prologue
-    .line 839
     const/4 v3, 0x0
 
-    .line 840
     .local v3, "stream":Ljava/io/FileOutputStream;
     sget-object v8, Lcom/android/server/enterprise/sso/GenericSSOService;->mCacheLock:Ljava/lang/Object;
 
     monitor-enter v8
 
-    .line 842
     :try_start_0
     invoke-static {}, Ljavax/xml/transform/TransformerFactory;->newInstance()Ljavax/xml/transform/TransformerFactory;
 
     move-result-object v6
 
-    .line 844
     .local v6, "transformerfactory":Ljavax/xml/transform/TransformerFactory;
     invoke-virtual {v6}, Ljavax/xml/transform/TransformerFactory;->newTransformer()Ljavax/xml/transform/Transformer;
 
     move-result-object v5
 
-    .line 846
     .local v5, "transformer":Ljavax/xml/transform/Transformer;
     new-instance v4, Ljava/io/FileOutputStream;
 
@@ -11019,34 +9877,28 @@
     .catch Ljava/io/IOException; {:try_start_0 .. :try_end_0} :catch_3
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 847
     .end local v3    # "stream":Ljava/io/FileOutputStream;
     .local v4, "stream":Ljava/io/FileOutputStream;
     const/4 v2, 0x0
 
-    .line 848
     .local v2, "source":Ljavax/xml/transform/dom/DOMSource;
     if-nez p1, :cond_0
 
-    .line 849
     :try_start_1
     new-instance v2, Ljavax/xml/transform/dom/DOMSource;
 
     .end local v2    # "source":Ljavax/xml/transform/dom/DOMSource;
     invoke-direct {v2}, Ljavax/xml/transform/dom/DOMSource;-><init>()V
 
-    .line 853
     .restart local v2    # "source":Ljavax/xml/transform/dom/DOMSource;
     :goto_0
     new-instance v1, Ljavax/xml/transform/stream/StreamResult;
 
     invoke-direct {v1, v4}, Ljavax/xml/transform/stream/StreamResult;-><init>(Ljava/io/OutputStream;)V
 
-    .line 854
     .local v1, "result":Ljavax/xml/transform/stream/StreamResult;
     invoke-virtual {v5, v2, v1}, Ljavax/xml/transform/Transformer;->transform(Ljavax/xml/transform/Source;Ljavax/xml/transform/Result;)V
 
-    .line 855
     invoke-virtual {v4}, Ljava/io/FileOutputStream;->close()V
     :try_end_1
     .catch Ljavax/xml/transform/TransformerConfigurationException; {:try_start_1 .. :try_end_1} :catch_7
@@ -11057,7 +9909,6 @@
 
     move-object v3, v4
 
-    .line 869
     .end local v1    # "result":Ljavax/xml/transform/stream/StreamResult;
     .end local v2    # "source":Ljavax/xml/transform/dom/DOMSource;
     .end local v4    # "stream":Ljava/io/FileOutputStream;
@@ -11070,10 +9921,8 @@
     :try_end_2
     .catchall {:try_start_2 .. :try_end_2} :catchall_0
 
-    .line 870
     return-void
 
-    .line 851
     .end local v3    # "stream":Ljava/io/FileOutputStream;
     .restart local v2    # "source":Ljavax/xml/transform/dom/DOMSource;
     .restart local v4    # "stream":Ljava/io/FileOutputStream;
@@ -11095,7 +9944,6 @@
     .restart local v2    # "source":Ljavax/xml/transform/dom/DOMSource;
     goto :goto_0
 
-    .line 856
     .end local v2    # "source":Ljavax/xml/transform/dom/DOMSource;
     .end local v4    # "stream":Ljava/io/FileOutputStream;
     .end local v5    # "transformer":Ljavax/xml/transform/Transformer;
@@ -11104,7 +9952,6 @@
     :catch_0
     move-exception v0
 
-    .line 857
     .local v0, "e":Ljavax/xml/transform/TransformerConfigurationException;
     :goto_2
     :try_start_4
@@ -11116,7 +9963,6 @@
 
     goto :goto_1
 
-    .line 869
     .end local v0    # "e":Ljavax/xml/transform/TransformerConfigurationException;
     :catchall_0
     move-exception v7
@@ -11128,11 +9974,9 @@
 
     throw v7
 
-    .line 860
     :catch_1
     move-exception v0
 
-    .line 861
     .local v0, "e":Ljavax/xml/transform/TransformerException;
     :goto_4
     :try_start_5
@@ -11144,12 +9988,10 @@
 
     goto :goto_1
 
-    .line 863
     .end local v0    # "e":Ljavax/xml/transform/TransformerException;
     :catch_2
     move-exception v0
 
-    .line 864
     .local v0, "e":Ljava/io/FileNotFoundException;
     :goto_5
     const-string v7, "GenericSSOService"
@@ -11160,12 +10002,10 @@
 
     goto :goto_1
 
-    .line 866
     .end local v0    # "e":Ljava/io/FileNotFoundException;
     :catch_3
     move-exception v0
 
-    .line 867
     .local v0, "e":Ljava/io/IOException;
     :goto_6
     const-string v7, "GenericSSOService"
@@ -11178,7 +10018,6 @@
 
     goto :goto_1
 
-    .line 869
     .end local v0    # "e":Ljava/io/IOException;
     .end local v3    # "stream":Ljava/io/FileOutputStream;
     .restart local v4    # "stream":Ljava/io/FileOutputStream;
@@ -11193,7 +10032,6 @@
     .restart local v3    # "stream":Ljava/io/FileOutputStream;
     goto :goto_3
 
-    .line 866
     .end local v3    # "stream":Ljava/io/FileOutputStream;
     .restart local v4    # "stream":Ljava/io/FileOutputStream;
     :catch_4
@@ -11205,7 +10043,6 @@
     .restart local v3    # "stream":Ljava/io/FileOutputStream;
     goto :goto_6
 
-    .line 863
     .end local v3    # "stream":Ljava/io/FileOutputStream;
     .restart local v4    # "stream":Ljava/io/FileOutputStream;
     :catch_5
@@ -11217,7 +10054,6 @@
     .restart local v3    # "stream":Ljava/io/FileOutputStream;
     goto :goto_5
 
-    .line 860
     .end local v3    # "stream":Ljava/io/FileOutputStream;
     .restart local v4    # "stream":Ljava/io/FileOutputStream;
     :catch_6
@@ -11229,7 +10065,6 @@
     .restart local v3    # "stream":Ljava/io/FileOutputStream;
     goto :goto_4
 
-    .line 856
     .end local v3    # "stream":Ljava/io/FileOutputStream;
     .restart local v4    # "stream":Ljava/io/FileOutputStream;
     :catch_7
@@ -11246,14 +10081,12 @@
     .locals 6
 
     .prologue
-    .line 1684
     invoke-static {}, Landroid/os/SystemClock;->elapsedRealtime()J
 
     move-result-wide v2
 
     iput-wide v2, p0, Lcom/android/server/enterprise/sso/GenericSSOService;->initElapsedTime:J
 
-    .line 1685
     new-instance v2, Lcom/android/server/enterprise/sso/GenericSSOService$RetrieveFeedTask;
 
     invoke-direct {v2, p0}, Lcom/android/server/enterprise/sso/GenericSSOService$RetrieveFeedTask;-><init>(Lcom/android/server/enterprise/sso/GenericSSOService;)V
@@ -11264,7 +10097,6 @@
 
     invoke-virtual {v2, v3}, Lcom/android/server/enterprise/sso/GenericSSOService$RetrieveFeedTask;->execute([Ljava/lang/Object;)Landroid/os/AsyncTask;
 
-    .line 1687
     :try_start_0
     new-instance v2, Ljava/util/concurrent/CountDownLatch;
 
@@ -11274,7 +10106,6 @@
 
     sput-object v2, Lcom/android/server/enterprise/sso/GenericSSOService;->countDownLatchNTP:Ljava/util/concurrent/CountDownLatch;
 
-    .line 1688
     sget-object v2, Lcom/android/server/enterprise/sso/GenericSSOService;->countDownLatchNTP:Ljava/util/concurrent/CountDownLatch;
 
     const-wide/16 v4, 0x7d0
@@ -11285,7 +10116,6 @@
 
     move-result v0
 
-    .line 1690
     .local v0, "countDownTimeout":Z
     if-nez v0, :cond_0
 
@@ -11293,7 +10123,6 @@
 
     if-eqz v2, :cond_0
 
-    .line 1691
     const-string v2, "GenericSSOService"
 
     const-string v3, "In setInitTime: CountDownLatch return false"
@@ -11302,7 +10131,6 @@
     :try_end_0
     .catch Ljava/lang/InterruptedException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 1697
     .end local v0    # "countDownTimeout":Z
     :cond_0
     :goto_0
@@ -11310,7 +10138,6 @@
 
     if-eqz v2, :cond_1
 
-    .line 1698
     const-string v2, "GenericSSOService"
 
     new-instance v3, Ljava/lang/StringBuilder;
@@ -11335,13 +10162,11 @@
 
     invoke-static {v2, v3}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1700
     :cond_1
     sget-boolean v2, Landroid/app/enterprise/sso/GenericSSOConstants;->DEBUG:Z
 
     if-eqz v2, :cond_2
 
-    .line 1701
     const-string v2, "GenericSSOService"
 
     new-instance v3, Ljava/lang/StringBuilder;
@@ -11366,15 +10191,12 @@
 
     invoke-static {v2, v3}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1704
     :cond_2
     return-void
 
-    .line 1692
     :catch_0
     move-exception v1
 
-    .line 1694
     .local v1, "e":Ljava/lang/InterruptedException;
     const-string v2, "GenericSSOService"
 
@@ -11407,33 +10229,27 @@
     .param p2, "userId"    # I
 
     .prologue
-    .line 1879
     if-nez p1, :cond_1
 
-    .line 1880
     sget-boolean v10, Landroid/app/enterprise/sso/GenericSSOConstants;->DEBUG:Z
 
     if-eqz v10, :cond_0
 
-    .line 1881
     const-string v10, "GenericSSOService"
 
     const-string v11, "in stopAuthenticatorApplication: packageName is null"
 
     invoke-static {v10, v11}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1915
     :cond_0
     :goto_0
     return-void
 
-    .line 1885
     :cond_1
     invoke-static {}, Landroid/os/Binder;->clearCallingIdentity()J
 
     move-result-wide v8
 
-    .line 1887
     .local v8, "token":J
     :try_start_0
     iget-object v10, p0, Lcom/android/server/enterprise/sso/GenericSSOService;->mContext:Landroid/content/Context;
@@ -11446,7 +10262,6 @@
 
     check-cast v0, Landroid/app/ActivityManager;
 
-    .line 1890
     .local v0, "am":Landroid/app/ActivityManager;
     const/16 v10, 0xc
 
@@ -11456,7 +10271,6 @@
 
     move-result-object v6
 
-    .line 1892
     .local v6, "recentTasks":Ljava/util/List;, "Ljava/util/List<Landroid/app/ActivityManager$RecentTaskInfo;>;"
     invoke-interface {v6}, Ljava/util/List;->isEmpty()Z
 
@@ -11464,7 +10278,6 @@
 
     if-nez v10, :cond_3
 
-    .line 1895
     invoke-interface {v6}, Ljava/util/List;->iterator()Ljava/util/Iterator;
 
     move-result-object v3
@@ -11484,26 +10297,21 @@
 
     check-cast v7, Landroid/app/ActivityManager$RecentTaskInfo;
 
-    .line 1896
     .local v7, "task":Landroid/app/ActivityManager$RecentTaskInfo;
     iget-object v4, v7, Landroid/app/ActivityManager$RecentTaskInfo;->baseIntent:Landroid/content/Intent;
 
-    .line 1897
     .local v4, "origInt":Landroid/content/Intent;
     invoke-virtual {v4}, Landroid/content/Intent;->getComponent()Landroid/content/ComponentName;
 
     move-result-object v1
 
-    .line 1898
     .local v1, "cmp":Landroid/content/ComponentName;
     if-eqz v1, :cond_2
 
-    .line 1899
     invoke-virtual {v1}, Landroid/content/ComponentName;->getPackageName()Ljava/lang/String;
 
     move-result-object v5
 
-    .line 1901
     .local v5, "pkgName":Ljava/lang/String;
     if-eqz v5, :cond_2
 
@@ -11513,26 +10321,23 @@
 
     if-eqz v10, :cond_2
 
-    .line 1902
     iget v10, v7, Landroid/app/ActivityManager$RecentTaskInfo;->persistentId:I
 
     const/4 v11, 0x1
 
     invoke-virtual {v0, v10, v11}, Landroid/app/ActivityManager;->removeTask(II)Z
 
-    .line 1904
     sget-boolean v10, Landroid/app/enterprise/sso/GenericSSOConstants;->DEBUG:Z
 
     if-eqz v10, :cond_2
 
-    .line 1905
     const-string v10, "GenericSSOService"
 
     new-instance v11, Ljava/lang/StringBuilder;
 
     invoke-direct {v11}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v12, "the task "
+    const-string v12, "the task "
 
     invoke-virtual {v11, v12}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -11558,7 +10363,6 @@
 
     goto :goto_1
 
-    .line 1911
     .end local v0    # "am":Landroid/app/ActivityManager;
     .end local v1    # "cmp":Landroid/content/ComponentName;
     .end local v3    # "i$":Ljava/util/Iterator;
@@ -11569,7 +10373,6 @@
     :catch_0
     move-exception v2
 
-    .line 1912
     .local v2, "e":Ljava/lang/Exception;
     const-string v10, "GenericSSOService"
 
@@ -11597,7 +10400,6 @@
 
     invoke-static {v10, v11}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1914
     .end local v2    # "e":Ljava/lang/Exception;
     :cond_3
     invoke-static {v8, v9}, Landroid/os/Binder;->restoreCallingIdentity(J)V
@@ -11614,54 +10416,44 @@
     .prologue
     const/4 v4, -0x1
 
-    .line 2645
     :try_start_0
     invoke-direct {p0, p2}, Lcom/android/server/enterprise/sso/GenericSSOService;->getSSOServiceIntent(Ljava/lang/String;)Landroid/content/Intent;
 
     move-result-object v2
 
-    .line 2646
     .local v2, "serviceIntent":Landroid/content/Intent;
     if-nez v2, :cond_1
 
-    .line 2647
     sget-boolean v5, Landroid/app/enterprise/sso/GenericSSOConstants;->DEBUG:Z
 
     if-eqz v5, :cond_0
 
-    .line 2648
     const-string v5, "GenericSSOService"
 
     const-string v6, "In unRegisterInAuthenticator: cannot get SSO Service intent"
 
     invoke-static {v5, v6}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 2672
     .end local v2    # "serviceIntent":Landroid/content/Intent;
     :cond_0
     :goto_0
     return v4
 
-    .line 2652
     .restart local v2    # "serviceIntent":Landroid/content/Intent;
     :cond_1
     invoke-direct {p0, p1, v2}, Lcom/android/server/enterprise/sso/GenericSSOService;->bindToService(ILandroid/content/Intent;)V
 
-    .line 2653
     invoke-direct {p0, p1}, Lcom/android/server/enterprise/sso/GenericSSOService;->getSSOService(I)Landroid/app/enterprise/sso/GenericSSOSupportSolution;
 
     move-result-object v3
 
-    .line 2654
     .local v3, "ssoService":Landroid/app/enterprise/sso/GenericSSOSupportSolution;
     if-nez v3, :cond_2
 
-    .line 2655
     sget-boolean v5, Landroid/app/enterprise/sso/GenericSSOConstants;->DEBUG:Z
 
     if-eqz v5, :cond_0
 
-    .line 2656
     const-string v5, "GenericSSOService"
 
     const-string v6, "In unRegisterInAuthenticator: sso service is not ready to use"
@@ -11674,13 +10466,11 @@
 
     goto :goto_0
 
-    .line 2661
     .end local v2    # "serviceIntent":Landroid/content/Intent;
     .end local v3    # "ssoService":Landroid/app/enterprise/sso/GenericSSOSupportSolution;
     :catch_0
     move-exception v1
 
-    .line 2663
     .local v1, "npe":Ljava/lang/NullPointerException;
     const-string v5, "GenericSSOService"
 
@@ -11690,7 +10480,6 @@
 
     goto :goto_0
 
-    .line 2660
     .end local v1    # "npe":Ljava/lang/NullPointerException;
     .restart local v2    # "serviceIntent":Landroid/content/Intent;
     .restart local v3    # "ssoService":Landroid/app/enterprise/sso/GenericSSOSupportSolution;
@@ -11706,13 +10495,11 @@
 
     goto :goto_0
 
-    .line 2665
     .end local v2    # "serviceIntent":Landroid/content/Intent;
     .end local v3    # "ssoService":Landroid/app/enterprise/sso/GenericSSOSupportSolution;
     :catch_1
     move-exception v0
 
-    .line 2667
     .local v0, "e":Landroid/os/RemoteException;
     const-string v5, "GenericSSOService"
 
@@ -11722,12 +10509,10 @@
 
     goto :goto_0
 
-    .line 2668
     .end local v0    # "e":Landroid/os/RemoteException;
     :catch_2
     move-exception v0
 
-    .line 2670
     .local v0, "e":Ljava/lang/Exception;
     const-string v5, "GenericSSOService"
 
@@ -11743,40 +10528,34 @@
     .param p1, "userId"    # I
 
     .prologue
-    .line 2676
     const/4 v10, 0x0
 
-    .line 2678
     .local v10, "ret":I
     :try_start_0
     invoke-direct/range {p0 .. p1}, Lcom/android/server/enterprise/sso/GenericSSOService;->getSSOConfigForUserId(I)Lcom/android/server/enterprise/sso/GenericSSOService$RequestConfigDocument;
 
     move-result-object v5
 
-    .line 2679
     .local v5, "configDoc":Lcom/android/server/enterprise/sso/GenericSSOService$RequestConfigDocument;
     # invokes: Lcom/android/server/enterprise/sso/GenericSSOService$RequestConfigDocument;->getEnrolledSSOVendor()Lorg/w3c/dom/Node;
     invoke-static {v5}, Lcom/android/server/enterprise/sso/GenericSSOService$RequestConfigDocument;->access$600(Lcom/android/server/enterprise/sso/GenericSSOService$RequestConfigDocument;)Lorg/w3c/dom/Node;
 
     move-result-object v12
 
-    .line 2680
     .local v12, "ssoNode":Lorg/w3c/dom/Node;
     if-nez v12, :cond_0
 
     move v15, v10
 
-    .line 2728
     .end local v5    # "configDoc":Lcom/android/server/enterprise/sso/GenericSSOService$RequestConfigDocument;
     .end local v12    # "ssoNode":Lorg/w3c/dom/Node;
     :goto_0
     return v15
 
-    .line 2683
     .restart local v5    # "configDoc":Lcom/android/server/enterprise/sso/GenericSSOService$RequestConfigDocument;
     .restart local v12    # "ssoNode":Lorg/w3c/dom/Node;
     :cond_0
-    const-string/jumbo v15, "servicepackagename"
+    const-string v15, "servicepackagename"
 
     move-object/from16 v0, p0
 
@@ -11788,13 +10567,11 @@
 
     move-result-object v14
 
-    .line 2686
     .local v14, "vendorAuthPkgName":Ljava/lang/String;
     const/4 v13, 0x0
 
-    .line 2687
     .local v13, "vendorAuthPkgCert":Ljava/lang/String;
-    const-string/jumbo v15, "servicepackagesignature"
+    const-string v15, "servicepackagesignature"
 
     move-object/from16 v0, p0
 
@@ -11804,8 +10581,7 @@
 
     if-eqz v15, :cond_1
 
-    .line 2689
-    const-string/jumbo v15, "servicepackagesignature"
+    const-string v15, "servicepackagesignature"
 
     move-object/from16 v0, p0
 
@@ -11817,24 +10593,20 @@
 
     move-result-object v13
 
-    .line 2693
     :cond_1
     new-instance v4, Landroid/os/Bundle;
 
     invoke-direct {v4}, Landroid/os/Bundle;-><init>()V
 
-    .line 2694
     .local v4, "configData":Landroid/os/Bundle;
-    const-string/jumbo v15, "servicepackagename"
+    const-string v15, "servicepackagename"
 
     invoke-virtual {v4, v15, v14}, Landroid/os/Bundle;->putString(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 2696
-    const-string/jumbo v15, "servicepackagesignature"
+    const-string v15, "servicepackagesignature"
 
     invoke-virtual {v4, v15, v13}, Landroid/os/Bundle;->putString(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 2699
     move-object/from16 v0, p0
 
     move/from16 v1, p1
@@ -11845,25 +10617,21 @@
 
     if-nez v15, :cond_3
 
-    .line 2700
     sget-boolean v15, Landroid/app/enterprise/sso/GenericSSOConstants;->DEBUG:Z
 
     if-eqz v15, :cond_2
 
-    .line 2701
     const-string v15, "GenericSSOService"
 
     const-string v16, "In unregisterByAuthenticator: Fail to pass the service package cert check"
 
     invoke-static/range {v15 .. v16}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 2703
     :cond_2
     const/16 v15, -0xd
 
     goto :goto_0
 
-    .line 2706
     :cond_3
     move-object/from16 v0, p0
 
@@ -11871,11 +10639,9 @@
 
     move-result-object v2
 
-    .line 2707
     .local v2, "allowedApps":Ljava/util/ArrayList;, "Ljava/util/ArrayList<Lorg/w3c/dom/Node;>;"
     const/4 v3, 0x0
 
-    .line 2708
     .local v3, "appPkgName":Ljava/lang/String;
     invoke-virtual {v2}, Ljava/util/ArrayList;->size()I
 
@@ -11883,7 +10649,6 @@
 
     if-lez v15, :cond_4
 
-    .line 2709
     const/4 v15, 0x0
 
     invoke-virtual {v2, v15}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
@@ -11906,7 +10671,6 @@
 
     move-result-object v3
 
-    .line 2713
     :cond_4
     move-object/from16 v0, p0
 
@@ -11916,13 +10680,11 @@
 
     move-result-object v11
 
-    .line 2714
     .local v11, "ssoConfig":Landroid/os/Bundle;
     invoke-static {}, Landroid/os/Binder;->clearCallingIdentity()J
 
     move-result-wide v8
 
-    .line 2715
     .local v8, "identity":J
     move-object/from16 v0, p0
 
@@ -11932,7 +10694,6 @@
 
     move-result v10
 
-    .line 2717
     invoke-static {v8, v9}, Landroid/os/Binder;->restoreCallingIdentity(J)V
     :try_end_0
     .catch Ljava/lang/NullPointerException; {:try_start_0 .. :try_end_0} :catch_0
@@ -11950,14 +10711,11 @@
     :goto_1
     move v15, v10
 
-    .line 2728
     goto/16 :goto_0
 
-    .line 2718
     :catch_0
     move-exception v7
 
-    .line 2720
     .local v7, "npe":Ljava/lang/NullPointerException;
     const-string v15, "GenericSSOService"
 
@@ -11967,18 +10725,14 @@
 
     invoke-static {v15, v0, v7}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
-    .line 2722
     const/4 v10, -0x1
 
-    .line 2727
     goto :goto_1
 
-    .line 2723
     .end local v7    # "npe":Ljava/lang/NullPointerException;
     :catch_1
     move-exception v6
 
-    .line 2725
     .local v6, "e":Ljava/lang/Exception;
     const-string v15, "GenericSSOService"
 
@@ -11988,7 +10742,6 @@
 
     invoke-static {v15, v0, v6}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
-    .line 2726
     const/4 v10, -0x1
 
     goto :goto_1
@@ -12009,7 +10762,6 @@
     .end annotation
 
     .prologue
-    .line 1603
     const/4 v0, 0x4
 
     sget-object v1, Lcom/android/server/enterprise/sso/GenericSSOService;->mKeyPair:Ljava/security/KeyPair;
@@ -12020,7 +10772,6 @@
 
     invoke-virtual {p1, v0, v1}, Ljavax/crypto/Cipher;->init(ILjava/security/Key;)V
 
-    .line 1604
     const-string v0, "AES"
 
     const/4 v1, 0x3
@@ -12040,45 +10791,37 @@
     .param p2, "configDoc"    # Lcom/android/server/enterprise/sso/GenericSSOService$RequestConfigDocument;
 
     .prologue
-    .line 801
     # invokes: Lcom/android/server/enterprise/sso/GenericSSOService$RequestConfigDocument;->update()V
     invoke-static {p2}, Lcom/android/server/enterprise/sso/GenericSSOService$RequestConfigDocument;->access$700(Lcom/android/server/enterprise/sso/GenericSSOService$RequestConfigDocument;)V
 
-    .line 802
     sget-object v1, Lcom/android/server/enterprise/sso/GenericSSOService;->requestConfigXMLDocs:Landroid/util/SparseArray;
 
     invoke-virtual {v1, p1, p2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    .line 803
     sget-boolean v1, Landroid/app/enterprise/sso/GenericSSOConstants;->DEBUG:Z
 
     if-eqz v1, :cond_0
 
-    .line 804
     const-string v1, "GenericSSOService"
 
     const-string v2, "In updateCacheAndFile: updated sso config doc is updated in requestConfigXMLDocs array"
 
     invoke-static {v1, v2}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 807
     :cond_0
     invoke-direct {p0, p1}, Lcom/android/server/enterprise/sso/GenericSSOService;->getRequestConfigFilePath(I)Ljava/lang/String;
 
     move-result-object v0
 
-    .line 808
     .local v0, "filepath":Ljava/lang/String;
     iget-object v1, p2, Lcom/android/server/enterprise/sso/GenericSSOService$RequestConfigDocument;->XMLDoc:Lorg/w3c/dom/Document;
 
     invoke-direct {p0, v1, v0}, Lcom/android/server/enterprise/sso/GenericSSOService;->saveConfigToFile(Lorg/w3c/dom/Document;Ljava/lang/String;)V
 
-    .line 809
     sget-boolean v1, Landroid/app/enterprise/sso/GenericSSOConstants;->DEBUG:Z
 
     if-eqz v1, :cond_1
 
-    .line 810
     const-string v1, "GenericSSOService"
 
     new-instance v2, Ljava/lang/StringBuilder;
@@ -12111,7 +10854,6 @@
 
     invoke-static {v1, v2}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 813
     :cond_1
     return-void
 .end method
@@ -12122,45 +10864,37 @@
     .param p2, "configDoc"    # Lcom/android/server/enterprise/sso/GenericSSOService$TokenConfigDocument;
 
     .prologue
-    .line 822
     # invokes: Lcom/android/server/enterprise/sso/GenericSSOService$TokenConfigDocument;->update()V
     invoke-static {p2}, Lcom/android/server/enterprise/sso/GenericSSOService$TokenConfigDocument;->access$800(Lcom/android/server/enterprise/sso/GenericSSOService$TokenConfigDocument;)V
 
-    .line 823
     sget-object v1, Lcom/android/server/enterprise/sso/GenericSSOService;->tokenConfigXMLDocs:Landroid/util/SparseArray;
 
     invoke-virtual {v1, p1, p2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    .line 824
     sget-boolean v1, Landroid/app/enterprise/sso/GenericSSOConstants;->DEBUG:Z
 
     if-eqz v1, :cond_0
 
-    .line 825
     const-string v1, "GenericSSOService"
 
     const-string v2, "In updateCacheAndFile: updated sso token doc is updated in tokenConfigXMLDocs array"
 
     invoke-static {v1, v2}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 828
     :cond_0
     invoke-direct {p0, p1}, Lcom/android/server/enterprise/sso/GenericSSOService;->getTokenConfigFilePath(I)Ljava/lang/String;
 
     move-result-object v0
 
-    .line 829
     .local v0, "filepath":Ljava/lang/String;
     iget-object v1, p2, Lcom/android/server/enterprise/sso/GenericSSOService$TokenConfigDocument;->XMLDoc:Lorg/w3c/dom/Document;
 
     invoke-direct {p0, v1, v0}, Lcom/android/server/enterprise/sso/GenericSSOService;->saveConfigToFile(Lorg/w3c/dom/Document;Ljava/lang/String;)V
 
-    .line 830
     sget-boolean v1, Landroid/app/enterprise/sso/GenericSSOConstants;->DEBUG:Z
 
     if-eqz v1, :cond_1
 
-    .line 831
     const-string v1, "GenericSSOService"
 
     new-instance v2, Ljava/lang/StringBuilder;
@@ -12193,7 +10927,6 @@
 
     invoke-static {v1, v2}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 834
     :cond_1
     return-void
 .end method
@@ -12206,22 +10939,19 @@
     .prologue
     const/4 v6, 0x1
 
-    .line 3113
     :try_start_0
     invoke-direct {p0, p1}, Lcom/android/server/enterprise/sso/GenericSSOService;->getSSOConfigForUserId(I)Lcom/android/server/enterprise/sso/GenericSSOService$RequestConfigDocument;
 
     move-result-object v0
 
-    .line 3114
     .local v0, "configDoc":Lcom/android/server/enterprise/sso/GenericSSOService$RequestConfigDocument;
     # invokes: Lcom/android/server/enterprise/sso/GenericSSOService$RequestConfigDocument;->getEnrolledSSOVendor()Lorg/w3c/dom/Node;
     invoke-static {v0}, Lcom/android/server/enterprise/sso/GenericSSOService$RequestConfigDocument;->access$600(Lcom/android/server/enterprise/sso/GenericSSOService$RequestConfigDocument;)Lorg/w3c/dom/Node;
 
     move-result-object v3
 
-    .line 3115
     .local v3, "ssoNode":Lorg/w3c/dom/Node;
-    const-string/jumbo v7, "servicepackagename"
+    const-string v7, "servicepackagename"
 
     invoke-direct {p0, v3, v7}, Lcom/android/server/enterprise/sso/GenericSSOService;->getAttributeNode(Lorg/w3c/dom/Node;Ljava/lang/String;)Lorg/w3c/dom/Node;
 
@@ -12231,9 +10961,8 @@
 
     move-result-object v5
 
-    .line 3118
     .local v5, "vendorAuthPkgName":Ljava/lang/String;
-    const-string/jumbo v7, "servicepackagesignature"
+    const-string v7, "servicepackagesignature"
 
     invoke-direct {p0, v3, v7}, Lcom/android/server/enterprise/sso/GenericSSOService;->getAttributeNode(Lorg/w3c/dom/Node;Ljava/lang/String;)Lorg/w3c/dom/Node;
 
@@ -12241,14 +10970,12 @@
 
     if-nez v7, :cond_1
 
-    .line 3120
     invoke-virtual {p2, v5}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v7
 
     if-eqz v7, :cond_2
 
-    .line 3139
     .end local v0    # "configDoc":Lcom/android/server/enterprise/sso/GenericSSOService$RequestConfigDocument;
     .end local v3    # "ssoNode":Lorg/w3c/dom/Node;
     .end local v5    # "vendorAuthPkgName":Ljava/lang/String;
@@ -12256,12 +10983,11 @@
     :goto_0
     return v6
 
-    .line 3124
     .restart local v0    # "configDoc":Lcom/android/server/enterprise/sso/GenericSSOService$RequestConfigDocument;
     .restart local v3    # "ssoNode":Lorg/w3c/dom/Node;
     .restart local v5    # "vendorAuthPkgName":Ljava/lang/String;
     :cond_1
-    const-string/jumbo v7, "servicepackagesignature"
+    const-string v7, "servicepackagesignature"
 
     invoke-direct {p0, v3, v7}, Lcom/android/server/enterprise/sso/GenericSSOService;->getAttributeNode(Lorg/w3c/dom/Node;Ljava/lang/String;)Lorg/w3c/dom/Node;
 
@@ -12271,13 +10997,11 @@
 
     move-result-object v4
 
-    .line 3127
     .local v4, "vendorAuthPkgCert":Ljava/lang/String;
     invoke-direct {p0, p1, p2}, Lcom/android/server/enterprise/sso/GenericSSOService;->getPackageCertForPkgname(ILjava/lang/String;)Ljava/lang/String;
 
     move-result-object v2
 
-    .line 3129
     .local v2, "packageCert":Ljava/lang/String;
     invoke-virtual {p2, v5}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
@@ -12293,7 +11017,6 @@
 
     if-nez v7, :cond_0
 
-    .line 3139
     .end local v0    # "configDoc":Lcom/android/server/enterprise/sso/GenericSSOService$RequestConfigDocument;
     .end local v2    # "packageCert":Ljava/lang/String;
     .end local v3    # "ssoNode":Lorg/w3c/dom/Node;
@@ -12305,11 +11028,9 @@
 
     goto :goto_0
 
-    .line 3135
     :catch_0
     move-exception v1
 
-    .line 3137
     .local v1, "e":Ljava/lang/Exception;
     const-string v6, "GenericSSOService"
 
@@ -12351,7 +11072,6 @@
     .end annotation
 
     .prologue
-    .line 1596
     const/4 v0, 0x3
 
     sget-object v1, Lcom/android/server/enterprise/sso/GenericSSOService;->mKeyPair:Ljava/security/KeyPair;
@@ -12362,7 +11082,6 @@
 
     invoke-virtual {p1, v0, v1}, Ljavax/crypto/Cipher;->init(ILjava/security/Key;)V
 
-    .line 1597
     invoke-virtual {p1, p2}, Ljavax/crypto/Cipher;->wrap(Ljava/security/Key;)[B
 
     move-result-object v0
@@ -12381,38 +11100,31 @@
     .end annotation
 
     .prologue
-    .line 1609
     sget-boolean v1, Landroid/app/enterprise/sso/GenericSSOConstants;->DEBUG:Z
 
     if-eqz v1, :cond_0
 
-    .line 1610
     const-string v1, "GenericSSOService"
 
     const-string v2, "In writeKeyData: Writing key data to a file"
 
     invoke-static {v1, v2}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1611
     :cond_0
     new-instance v0, Ljava/io/FileOutputStream;
 
     invoke-direct {v0, p0}, Ljava/io/FileOutputStream;-><init>(Ljava/io/File;)V
 
-    .line 1613
     .local v0, "out":Ljava/io/OutputStream;
     :try_start_0
     invoke-virtual {v0, p1}, Ljava/io/OutputStream;->write([B)V
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 1615
     invoke-virtual {v0}, Ljava/io/OutputStream;->close()V
 
-    .line 1617
     return-void
 
-    .line 1615
     :catchall_0
     move-exception v1
 
@@ -12431,9 +11143,8 @@
     .prologue
     const/4 v11, 0x0
 
-    .line 3837
     :try_start_0
-    const-string/jumbo v1, "servicepackagename"
+    const-string v1, "servicepackagename"
 
     invoke-virtual {p2, v1}, Landroid/os/Bundle;->getString(Ljava/lang/String;)Ljava/lang/String;
 
@@ -12443,16 +11154,13 @@
 
     move-result-object v8
 
-    .line 3839
     .local v8, "serviceIntent":Landroid/content/Intent;
     if-nez v8, :cond_2
 
-    .line 3840
     sget-boolean v1, Landroid/app/enterprise/sso/GenericSSOConstants;->DEBUG:Z
 
     if-eqz v1, :cond_0
 
-    .line 3841
     const-string v1, "GenericSSOService"
 
     const-string v2, "In getUserInfo: cannot get SSO Service intent"
@@ -12462,32 +11170,26 @@
     :cond_0
     move-object v10, v11
 
-    .line 3883
     .end local v8    # "serviceIntent":Landroid/content/Intent;
     :cond_1
     :goto_0
     return-object v10
 
-    .line 3846
     .restart local v8    # "serviceIntent":Landroid/content/Intent;
     :cond_2
     invoke-direct {p0, p1, v8}, Lcom/android/server/enterprise/sso/GenericSSOService;->bindToService(ILandroid/content/Intent;)V
 
-    .line 3848
     invoke-direct {p0, p1}, Lcom/android/server/enterprise/sso/GenericSSOService;->getSSOService(I)Landroid/app/enterprise/sso/GenericSSOSupportSolution;
 
     move-result-object v9
 
-    .line 3849
     .local v9, "ssoService":Landroid/app/enterprise/sso/GenericSSOSupportSolution;
     if-nez v9, :cond_4
 
-    .line 3850
     sget-boolean v1, Landroid/app/enterprise/sso/GenericSSOConstants;->DEBUG:Z
 
     if-eqz v1, :cond_3
 
-    .line 3851
     const-string v1, "GenericSSOService"
 
     const-string v2, "In getUserInfo: sso service is not ready to use"
@@ -12497,14 +11199,12 @@
     :cond_3
     move-object v10, v11
 
-    .line 3853
     goto :goto_0
 
-    .line 3856
     :cond_4
     new-instance v0, Landroid/app/enterprise/sso/AuthenticationRequest;
 
-    const-string/jumbo v1, "servicepackagename"
+    const-string v1, "servicepackagename"
 
     invoke-virtual {p2, v1}, Landroid/os/Bundle;->getString(Ljava/lang/String;)Ljava/lang/String;
 
@@ -12524,22 +11224,18 @@
 
     invoke-direct/range {v0 .. v5}, Landroid/app/enterprise/sso/AuthenticationRequest;-><init>(Ljava/lang/String;Ljava/lang/String;Landroid/app/enterprise/sso/TokenInfo;Landroid/os/Bundle;Landroid/app/enterprise/sso/WebServiceRequest;)V
 
-    .line 3863
     .local v0, "request":Landroid/app/enterprise/sso/AuthenticationRequest;
     invoke-interface {v9, v0}, Landroid/app/enterprise/sso/GenericSSOSupportSolution;->acquireUserInfo(Landroid/app/enterprise/sso/AuthenticationRequest;)Landroid/app/enterprise/sso/UserInfo;
 
     move-result-object v10
 
-    .line 3864
     .local v10, "userInfo":Landroid/app/enterprise/sso/UserInfo;
     if-nez v10, :cond_1
 
-    .line 3865
     sget-boolean v1, Landroid/app/enterprise/sso/GenericSSOConstants;->DEBUG:Z
 
     if-eqz v1, :cond_5
 
-    .line 3866
     const-string v1, "GenericSSOService"
 
     const-string v2, "In getUserInfo: Fail to get valid UserInfo from sso service"
@@ -12553,10 +11249,8 @@
     :cond_5
     move-object v10, v11
 
-    .line 3868
     goto :goto_0
 
-    .line 3872
     .end local v0    # "request":Landroid/app/enterprise/sso/AuthenticationRequest;
     .end local v8    # "serviceIntent":Landroid/content/Intent;
     .end local v9    # "ssoService":Landroid/app/enterprise/sso/GenericSSOSupportSolution;
@@ -12564,7 +11258,6 @@
     :catch_0
     move-exception v7
 
-    .line 3874
     .local v7, "npe":Ljava/lang/NullPointerException;
     const-string v1, "GenericSSOService"
 
@@ -12576,14 +11269,11 @@
     :goto_1
     move-object v10, v11
 
-    .line 3883
     goto :goto_0
 
-    .line 3876
     :catch_1
     move-exception v6
 
-    .line 3878
     .local v6, "e":Landroid/os/RemoteException;
     const-string v1, "GenericSSOService"
 
@@ -12593,12 +11283,10 @@
 
     goto :goto_1
 
-    .line 3879
     .end local v6    # "e":Landroid/os/RemoteException;
     :catch_2
     move-exception v6
 
-    .line 3881
     .local v6, "e":Ljava/lang/Exception;
     const-string v1, "GenericSSOService"
 
@@ -12616,7 +11304,6 @@
     .param p3, "token"    # Landroid/app/enterprise/sso/TokenInfo;
 
     .prologue
-    .line 3245
     invoke-direct {p0, p2}, Lcom/android/server/enterprise/sso/GenericSSOService;->isNullOrEmpty(Ljava/lang/String;)Z
 
     move-result v3
@@ -12631,40 +11318,33 @@
 
     if-nez v3, :cond_2
 
-    .line 3247
     :cond_0
     sget-boolean v3, Landroid/app/enterprise/sso/GenericSSOConstants;->DEBUG:Z
 
     if-eqz v3, :cond_1
 
-    .line 3248
     const-string v3, "GenericSSOService"
 
     const-string v4, "In addAppTokenToGenericSSO: appPkgName is null or empty string or token is null"
 
     invoke-static {v3, v4}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 3250
     :cond_1
     const/4 v3, -0x3
 
-    .line 3263
     :goto_0
     return v3
 
-    .line 3252
     :cond_2
     invoke-static {p1}, Lcom/android/server/enterprise/EnterpriseDeviceManagerService;->getCallingOrCurrentUserId(Landroid/app/enterprise/ContextInfo;)I
 
     move-result v2
 
-    .line 3254
     .local v2, "userId":I
     invoke-static {}, Landroid/os/Binder;->getCallingPid()I
 
     move-result v1
 
-    .line 3255
     .local v1, "pid":I
     const/4 v3, 0x0
 
@@ -12672,7 +11352,6 @@
 
     move-result-object v0
 
-    .line 3257
     .local v0, "packageName":Ljava/lang/String;
     invoke-direct {p0, v2, v0}, Lcom/android/server/enterprise/sso/GenericSSOService;->vendorPermissionCheck(ILjava/lang/String;)Z
 
@@ -12680,25 +11359,21 @@
 
     if-nez v3, :cond_4
 
-    .line 3258
     sget-boolean v3, Landroid/app/enterprise/sso/GenericSSOConstants;->DEBUG:Z
 
     if-eqz v3, :cond_3
 
-    .line 3259
     const-string v3, "GenericSSOService"
 
     const-string v4, "In addAppTokenToGenericSSO: authenticator is not permitted to call this API"
 
     invoke-static {v3, v4}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 3261
     :cond_3
     const/4 v3, -0x1
 
     goto :goto_0
 
-    .line 3263
     :cond_4
     invoke-direct {p0, v2, p2, p3}, Lcom/android/server/enterprise/sso/GenericSSOService;->addAppTokenToSecureStorageForUser(ILjava/lang/String;Landroid/app/enterprise/sso/TokenInfo;)I
 
@@ -12713,7 +11388,6 @@
     .param p2, "token"    # Landroid/app/enterprise/sso/TokenInfo;
 
     .prologue
-    .line 3269
     if-eqz p2, :cond_0
 
     invoke-virtual {p2}, Landroid/app/enterprise/sso/TokenInfo;->getResponseBundle()Landroid/os/Bundle;
@@ -12722,40 +11396,33 @@
 
     if-nez v3, :cond_2
 
-    .line 3270
     :cond_0
     sget-boolean v3, Landroid/app/enterprise/sso/GenericSSOConstants;->DEBUG:Z
 
     if-eqz v3, :cond_1
 
-    .line 3271
     const-string v3, "GenericSSOService"
 
     const-string v4, "In addUserAndDeviceCertToGenericSSO: token is null or empty"
 
     invoke-static {v3, v4}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 3273
     :cond_1
     const/4 v3, -0x3
 
-    .line 3286
     :goto_0
     return v3
 
-    .line 3275
     :cond_2
     invoke-static {p1}, Lcom/android/server/enterprise/EnterpriseDeviceManagerService;->getCallingOrCurrentUserId(Landroid/app/enterprise/ContextInfo;)I
 
     move-result v2
 
-    .line 3277
     .local v2, "userId":I
     invoke-static {}, Landroid/os/Binder;->getCallingPid()I
 
     move-result v1
 
-    .line 3278
     .local v1, "pid":I
     const/4 v3, 0x0
 
@@ -12763,7 +11430,6 @@
 
     move-result-object v0
 
-    .line 3280
     .local v0, "packageName":Ljava/lang/String;
     invoke-direct {p0, v2, v0}, Lcom/android/server/enterprise/sso/GenericSSOService;->vendorPermissionCheck(ILjava/lang/String;)Z
 
@@ -12771,25 +11437,21 @@
 
     if-nez v3, :cond_4
 
-    .line 3281
     sget-boolean v3, Landroid/app/enterprise/sso/GenericSSOConstants;->DEBUG:Z
 
     if-eqz v3, :cond_3
 
-    .line 3282
     const-string v3, "GenericSSOService"
 
     const-string v4, "In addUserAndDeviceCertToGenericSSO: authenticator is not permitted to call this API"
 
     invoke-static {v3, v4}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 3284
     :cond_3
     const/4 v3, -0x1
 
     goto :goto_0
 
-    .line 3286
     :cond_4
     invoke-direct {p0, v2, p2}, Lcom/android/server/enterprise/sso/GenericSSOService;->addUserAndDeviceCertificatesForUser(ILandroid/app/enterprise/sso/TokenInfo;)I
 
@@ -12813,48 +11475,39 @@
     .end annotation
 
     .prologue
-    .line 2365
     .local p2, "packages":Ljava/util/List;, "Ljava/util/List<Landroid/app/enterprise/sso/WhiteListPackage;>;"
     invoke-direct/range {p0 .. p1}, Lcom/android/server/enterprise/sso/GenericSSOService;->enforceKnoxSSOPermission(Landroid/app/enterprise/ContextInfo;)Landroid/app/enterprise/ContextInfo;
 
     move-result-object p1
 
-    .line 2366
     if-nez p1, :cond_1
 
-    .line 2367
     sget-boolean v19, Landroid/app/enterprise/sso/GenericSSOConstants;->DEBUG:Z
 
     if-eqz v19, :cond_0
 
-    .line 2368
     const-string v19, "GenericSSOService"
 
     const-string v20, "In addWhiteListPackages: cxtInfo is null"
 
     invoke-static/range {v19 .. v20}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 2369
     :cond_0
     const/16 v19, -0x3
 
-    .line 2464
     :goto_0
     return v19
 
-    .line 2371
     :cond_1
     move-object/from16 v0, p1
 
     iget v13, v0, Landroid/app/enterprise/ContextInfo;->mCallerUid:I
 
-    .line 2373
     .local v13, "mdmUID":I
     invoke-static/range {p1 .. p1}, Lcom/android/server/enterprise/EnterpriseDeviceManagerService;->getCallingOrCurrentUserId(Landroid/app/enterprise/ContextInfo;)I
 
     move-result v17
 
-    .line 2375
     .local v17, "userId":I
     move-object/from16 v0, p0
 
@@ -12866,31 +11519,26 @@
 
     if-nez v19, :cond_3
 
-    .line 2376
     sget-boolean v19, Landroid/app/enterprise/sso/GenericSSOConstants;->DEBUG:Z
 
     if-eqz v19, :cond_2
 
-    .line 2377
     const-string v19, "GenericSSOService"
 
     const-string v20, "In addWhiteListPackages: MDM uid is not matched"
 
     invoke-static/range {v19 .. v20}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 2378
     :cond_2
     const/16 v19, -0xa
 
     goto :goto_0
 
-    .line 2380
     :cond_3
     sget-boolean v19, Landroid/app/enterprise/sso/GenericSSOConstants;->DEBUG:Z
 
     if-eqz v19, :cond_4
 
-    .line 2381
     const-string v19, "GenericSSOService"
 
     new-instance v20, Ljava/lang/StringBuilder;
@@ -12917,32 +11565,27 @@
 
     invoke-static/range {v19 .. v20}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 2382
     :cond_4
     if-eqz p1, :cond_5
 
     if-nez p2, :cond_7
 
-    .line 2383
     :cond_5
     sget-boolean v19, Landroid/app/enterprise/sso/GenericSSOConstants;->DEBUG:Z
 
     if-eqz v19, :cond_6
 
-    .line 2384
     const-string v19, "GenericSSOService"
 
     const-string v20, "In addWhiteListPackage: Invalid Parameters."
 
     invoke-static/range {v19 .. v20}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 2385
     :cond_6
     const/16 v19, -0x3
 
     goto :goto_0
 
-    .line 2387
     :cond_7
     invoke-virtual/range {p0 .. p1}, Lcom/android/server/enterprise/sso/GenericSSOService;->getEnrolledSSOVendor(Landroid/app/enterprise/ContextInfo;)Ljava/lang/String;
 
@@ -12950,25 +11593,21 @@
 
     if-nez v19, :cond_9
 
-    .line 2388
     sget-boolean v19, Landroid/app/enterprise/sso/GenericSSOConstants;->DEBUG:Z
 
     if-eqz v19, :cond_8
 
-    .line 2389
     const-string v19, "GenericSSOService"
 
     const-string v20, "In addWhiteListPackage: No SSO Vendors have been enrolled."
 
     invoke-static/range {v19 .. v20}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 2391
     :cond_8
     const/16 v19, -0x6
 
     goto :goto_0
 
-    .line 2394
     :cond_9
     :try_start_0
     move-object/from16 v0, p0
@@ -12979,18 +11618,15 @@
 
     move-result-object v6
 
-    .line 2395
     .local v6, "configDoc":Lcom/android/server/enterprise/sso/GenericSSOService$RequestConfigDocument;
     # invokes: Lcom/android/server/enterprise/sso/GenericSSOService$RequestConfigDocument;->getEnrolledSSOVendor()Lorg/w3c/dom/Node;
     invoke-static {v6}, Lcom/android/server/enterprise/sso/GenericSSOService$RequestConfigDocument;->access$600(Lcom/android/server/enterprise/sso/GenericSSOService$RequestConfigDocument;)Lorg/w3c/dom/Node;
 
     move-result-object v16
 
-    .line 2396
     .local v16, "solution":Lorg/w3c/dom/Node;
     const/4 v3, 0x0
 
-    .line 2397
     .local v3, "allowedApps":Ljava/util/ArrayList;, "Ljava/util/ArrayList<Lorg/w3c/dom/Node;>;"
     invoke-interface/range {p2 .. p2}, Ljava/util/List;->iterator()Ljava/util/Iterator;
 
@@ -13010,7 +11646,6 @@
 
     check-cast v15, Landroid/app/enterprise/sso/WhiteListPackage;
 
-    .line 2398
     .local v15, "pack":Landroid/app/enterprise/sso/WhiteListPackage;
     move-object/from16 v0, p0
 
@@ -13020,38 +11655,32 @@
 
     move-result-object v3
 
-    .line 2399
     invoke-virtual {v15}, Landroid/app/enterprise/sso/WhiteListPackage;->getPackageName()Ljava/lang/String;
 
     move-result-object v19
 
     if-nez v19, :cond_c
 
-    .line 2400
     sget-boolean v19, Landroid/app/enterprise/sso/GenericSSOConstants;->DEBUG:Z
 
     if-eqz v19, :cond_b
 
-    .line 2401
     const-string v19, "GenericSSOService"
 
     const-string v20, "In addWhiteListPackage: Invalid Parameters. Package Name or Certificate is null"
 
     invoke-static/range {v19 .. v20}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 2403
     :cond_b
     const/16 v19, -0x3
 
     goto/16 :goto_0
 
-    .line 2405
     :cond_c
     invoke-virtual {v15}, Landroid/app/enterprise/sso/WhiteListPackage;->getConfigMap()Ljava/util/Map;
 
     move-result-object v5
 
-    .line 2406
     .local v5, "authConfig":Ljava/util/Map;, "Ljava/util/Map<Ljava/lang/String;Ljava/lang/String;>;"
     const-string v19, "clientpackagename"
 
@@ -13069,16 +11698,13 @@
 
     move-result-object v18
 
-    .line 2409
     .local v18, "whitelistApp":Lorg/w3c/dom/Node;
     if-eqz v18, :cond_e
 
-    .line 2410
     sget-boolean v19, Landroid/app/enterprise/sso/GenericSSOConstants;->DEBUG:Z
 
     if-eqz v19, :cond_a
 
-    .line 2411
     const-string v19, "GenericSSOService"
 
     const-string v20, "In addWhiteListPackage: the given whitelistpkg has already been registered"
@@ -13090,7 +11716,6 @@
 
     goto :goto_1
 
-    .line 2455
     .end local v3    # "allowedApps":Ljava/util/ArrayList;, "Ljava/util/ArrayList<Lorg/w3c/dom/Node;>;"
     .end local v5    # "authConfig":Ljava/util/Map;, "Ljava/util/Map<Ljava/lang/String;Ljava/lang/String;>;"
     .end local v6    # "configDoc":Lcom/android/server/enterprise/sso/GenericSSOService$RequestConfigDocument;
@@ -13100,7 +11725,6 @@
     :catch_0
     move-exception v8
 
-    .line 2457
     .local v8, "e":Ljava/lang/NullPointerException;
     const-string v19, "GenericSSOService"
 
@@ -13112,27 +11736,23 @@
 
     invoke-static {v0, v1, v8}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
-    .line 2462
     .end local v8    # "e":Ljava/lang/NullPointerException;
     :goto_2
     sget-boolean v19, Landroid/app/enterprise/sso/GenericSSOConstants;->DEBUG:Z
 
     if-eqz v19, :cond_d
 
-    .line 2463
     const-string v19, "GenericSSOService"
 
     const-string v20, "In addWhiteListPackage: Returning Fail."
 
     invoke-static/range {v19 .. v20}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 2464
     :cond_d
     const/16 v19, -0x1
 
     goto/16 :goto_0
 
-    .line 2415
     .restart local v3    # "allowedApps":Ljava/util/ArrayList;, "Ljava/util/ArrayList<Lorg/w3c/dom/Node;>;"
     .restart local v5    # "authConfig":Ljava/util/Map;, "Ljava/util/Map<Ljava/lang/String;Ljava/lang/String;>;"
     .restart local v6    # "configDoc":Lcom/android/server/enterprise/sso/GenericSSOService$RequestConfigDocument;
@@ -13145,20 +11765,17 @@
 
     if-eqz v19, :cond_f
 
-    .line 2416
     const-string v19, "GenericSSOService"
 
     const-string v20, "In addWhiteListPackage: the package hasn\'t been whitelisted"
 
     invoke-static/range {v19 .. v20}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 2418
     :cond_f
     iget-object v7, v6, Lcom/android/server/enterprise/sso/GenericSSOService$RequestConfigDocument;->XMLDoc:Lorg/w3c/dom/Document;
 
-    .line 2419
     .local v7, "doc":Lorg/w3c/dom/Document;
-    const-string/jumbo v19, "whitelistpackage"
+    const-string v19, "whitelistpackage"
 
     move-object/from16 v0, v19
 
@@ -13166,7 +11783,6 @@
 
     move-result-object v4
 
-    .line 2420
     .local v4, "app":Lorg/w3c/dom/Element;
     const-string v19, "clientpackagename"
 
@@ -13180,7 +11796,6 @@
 
     invoke-interface {v4, v0, v1}, Lorg/w3c/dom/Element;->setAttribute(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 2423
     invoke-virtual {v15}, Landroid/app/enterprise/sso/WhiteListPackage;->getSignature()Ljava/lang/String;
 
     move-result-object v19
@@ -13195,7 +11810,6 @@
 
     if-nez v19, :cond_12
 
-    .line 2424
     const-string v19, "clientpackagesignature"
 
     invoke-virtual {v15}, Landroid/app/enterprise/sso/WhiteListPackage;->getSignature()Ljava/lang/String;
@@ -13208,17 +11822,14 @@
 
     invoke-interface {v4, v0, v1}, Lorg/w3c/dom/Element;->setAttribute(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 2432
     :cond_10
     :goto_3
     if-eqz v5, :cond_13
 
-    .line 2433
     invoke-interface {v5}, Ljava/util/Map;->keySet()Ljava/util/Set;
 
     move-result-object v12
 
-    .line 2434
     .local v12, "keys":Ljava/util/Set;, "Ljava/util/Set<Ljava/lang/String;>;"
     invoke-interface {v12}, Ljava/util/Set;->iterator()Ljava/util/Iterator;
 
@@ -13239,7 +11850,6 @@
 
     check-cast v11, Ljava/lang/String;
 
-    .line 2435
     .local v11, "key":Ljava/lang/String;
     invoke-interface {v5, v11}, Ljava/util/Map;->get(Ljava/lang/Object;)Ljava/lang/Object;
 
@@ -13257,7 +11867,6 @@
 
     if-nez v19, :cond_11
 
-    .line 2436
     iget-object v0, v6, Lcom/android/server/enterprise/sso/GenericSSOService$RequestConfigDocument;->XMLDoc:Lorg/w3c/dom/Document;
 
     move-object/from16 v19, v0
@@ -13268,9 +11877,8 @@
 
     move-result-object v14
 
-    .line 2438
     .local v14, "node":Lorg/w3c/dom/Element;
-    const-string/jumbo v20, "value"
+    const-string v20, "value"
 
     invoke-interface {v5, v11}, Ljava/util/Map;->get(Ljava/lang/Object;)Ljava/lang/Object;
 
@@ -13284,15 +11892,12 @@
 
     invoke-interface {v14, v0, v1}, Lorg/w3c/dom/Element;->setAttribute(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 2440
     invoke-interface {v4, v14}, Lorg/w3c/dom/Element;->appendChild(Lorg/w3c/dom/Node;)Lorg/w3c/dom/Node;
 
-    .line 2441
     sget-boolean v19, Landroid/app/enterprise/sso/GenericSSOConstants;->DEBUG:Z
 
     if-eqz v19, :cond_11
 
-    .line 2442
     const-string v20, "GenericSSOService"
 
     new-instance v19, Ljava/lang/StringBuilder;
@@ -13386,7 +11991,6 @@
 
     goto/16 :goto_4
 
-    .line 2458
     .end local v3    # "allowedApps":Ljava/util/ArrayList;, "Ljava/util/ArrayList<Lorg/w3c/dom/Node;>;"
     .end local v4    # "app":Lorg/w3c/dom/Element;
     .end local v5    # "authConfig":Ljava/util/Map;, "Ljava/util/Map<Ljava/lang/String;Ljava/lang/String;>;"
@@ -13402,7 +12006,6 @@
     :catch_1
     move-exception v8
 
-    .line 2460
     .local v8, "e":Ljava/lang/Exception;
     const-string v19, "GenericSSOService"
 
@@ -13416,7 +12019,6 @@
 
     goto/16 :goto_2
 
-    .line 2428
     .end local v8    # "e":Ljava/lang/Exception;
     .restart local v3    # "allowedApps":Ljava/util/ArrayList;, "Ljava/util/ArrayList<Lorg/w3c/dom/Node;>;"
     .restart local v4    # "app":Lorg/w3c/dom/Element;
@@ -13432,7 +12034,6 @@
 
     if-eqz v19, :cond_10
 
-    .line 2429
     const-string v19, "GenericSSOService"
 
     const-string v20, "In addWhiteListPackage: the package signature hasn\'t been specified"
@@ -13441,7 +12042,6 @@
 
     goto/16 :goto_3
 
-    .line 2450
     :cond_13
     move-object/from16 v0, v16
 
@@ -13449,7 +12049,6 @@
 
     goto/16 :goto_1
 
-    .line 2453
     .end local v4    # "app":Lorg/w3c/dom/Element;
     .end local v5    # "authConfig":Ljava/util/Map;, "Ljava/util/Map<Ljava/lang/String;Ljava/lang/String;>;"
     .end local v7    # "doc":Lorg/w3c/dom/Document;
@@ -13465,7 +12064,6 @@
     .catch Ljava/lang/NullPointerException; {:try_start_2 .. :try_end_2} :catch_0
     .catch Ljava/lang/Exception; {:try_start_2 .. :try_end_2} :catch_1
 
-    .line 2454
     const/16 v19, 0x0
 
     goto/16 :goto_0
@@ -13477,41 +12075,33 @@
     .param p2, "configData"    # [B
 
     .prologue
-    .line 2207
     invoke-direct/range {p0 .. p1}, Lcom/android/server/enterprise/sso/GenericSSOService;->enforceKnoxSSOPermission(Landroid/app/enterprise/ContextInfo;)Landroid/app/enterprise/ContextInfo;
 
     move-result-object p1
 
-    .line 2208
     if-nez p1, :cond_1
 
-    .line 2209
     sget-boolean v29, Landroid/app/enterprise/sso/GenericSSOConstants;->DEBUG:Z
 
     if-eqz v29, :cond_0
 
-    .line 2210
     const-string v29, "GenericSSOService"
 
     const-string v30, "In configureSSOByFile: cxtInfo is null"
 
     invoke-static/range {v29 .. v30}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 2211
     :cond_0
     const/16 v29, -0x3
 
-    .line 2360
     :goto_0
     return v29
 
-    .line 2213
     :cond_1
     invoke-static/range {p1 .. p1}, Lcom/android/server/enterprise/EnterpriseDeviceManagerService;->getCallingOrCurrentUserId(Landroid/app/enterprise/ContextInfo;)I
 
     move-result v27
 
-    .line 2215
     .local v27, "userId":I
     move-object/from16 v0, p1
 
@@ -13519,7 +12109,6 @@
 
     move/from16 v19, v0
 
-    .line 2216
     .local v19, "mdmUid":I
     move-object/from16 v0, p0
 
@@ -13533,25 +12122,21 @@
 
     if-nez v29, :cond_3
 
-    .line 2217
     sget-boolean v29, Landroid/app/enterprise/sso/GenericSSOConstants;->DEBUG:Z
 
     if-eqz v29, :cond_2
 
-    .line 2218
     const-string v29, "GenericSSOService"
 
     const-string v30, "In configureSSOByFile: MDM uid is not matched"
 
     invoke-static/range {v29 .. v30}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 2219
     :cond_2
     const/16 v29, -0xa
 
     goto :goto_0
 
-    .line 2221
     :cond_3
     if-eqz p2, :cond_4
 
@@ -13563,26 +12148,22 @@
 
     if-nez v29, :cond_6
 
-    .line 2222
     :cond_4
     sget-boolean v29, Landroid/app/enterprise/sso/GenericSSOConstants;->DEBUG:Z
 
     if-eqz v29, :cond_5
 
-    .line 2223
     const-string v29, "GenericSSOService"
 
     const-string v30, "In configureSSOByFile: confContent is null or is empty"
 
     invoke-static/range {v29 .. v30}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 2225
     :cond_5
     const/16 v29, -0x3
 
     goto :goto_0
 
-    .line 2228
     :cond_6
     :try_start_0
     move-object/from16 v0, p0
@@ -13593,27 +12174,23 @@
 
     move-result-object v9
 
-    .line 2229
     .local v9, "configDoc":Lcom/android/server/enterprise/sso/GenericSSOService$RequestConfigDocument;
     # invokes: Lcom/android/server/enterprise/sso/GenericSSOService$RequestConfigDocument;->getEnrolledSSOVendor()Lorg/w3c/dom/Node;
     invoke-static {v9}, Lcom/android/server/enterprise/sso/GenericSSOService$RequestConfigDocument;->access$600(Lcom/android/server/enterprise/sso/GenericSSOService$RequestConfigDocument;)Lorg/w3c/dom/Node;
 
     move-result-object v22
 
-    .line 2230
     .local v22, "solution":Lorg/w3c/dom/Node;
     const/4 v10, 0x0
 
-    .line 2231
     .local v10, "curAuthenPkgName":Ljava/lang/String;
     if-eqz v22, :cond_7
 
-    .line 2232
     invoke-interface/range {v22 .. v22}, Lorg/w3c/dom/Node;->getAttributes()Lorg/w3c/dom/NamedNodeMap;
 
     move-result-object v29
 
-    const-string/jumbo v30, "servicepackagename"
+    const-string v30, "servicepackagename"
 
     invoke-interface/range {v29 .. v30}, Lorg/w3c/dom/NamedNodeMap;->getNamedItem(Ljava/lang/String;)Lorg/w3c/dom/Node;
 
@@ -13623,7 +12200,6 @@
 
     move-result-object v10
 
-    .line 2240
     :cond_7
     move-object/from16 v0, p0
 
@@ -13633,7 +12209,6 @@
 
     move-result-object v26
 
-    .line 2241
     .local v26, "tmpFile":Ljava/lang/String;
     new-instance v24, Ljava/io/File;
 
@@ -13643,7 +12218,6 @@
 
     invoke-direct {v0, v1}, Ljava/io/File;-><init>(Ljava/lang/String;)V
 
-    .line 2242
     .local v24, "tmpConfigDataDir":Ljava/io/File;
     new-instance v8, Ljava/io/BufferedOutputStream;
 
@@ -13663,27 +12237,22 @@
 
     invoke-direct {v8, v0}, Ljava/io/BufferedOutputStream;-><init>(Ljava/io/OutputStream;)V
 
-    .line 2244
     .local v8, "configDataStream":Ljava/io/OutputStream;
     move-object/from16 v0, p2
 
     invoke-virtual {v8, v0}, Ljava/io/OutputStream;->write([B)V
 
-    .line 2245
     invoke-virtual {v8}, Ljava/io/OutputStream;->close()V
 
-    .line 2246
     invoke-static {}, Ljavax/xml/parsers/DocumentBuilderFactory;->newInstance()Ljavax/xml/parsers/DocumentBuilderFactory;
 
     move-result-object v12
 
-    .line 2248
     .local v12, "dbFactory":Ljavax/xml/parsers/DocumentBuilderFactory;
     invoke-virtual {v12}, Ljavax/xml/parsers/DocumentBuilderFactory;->newDocumentBuilder()Ljavax/xml/parsers/DocumentBuilder;
 
     move-result-object v11
 
-    .line 2249
     .local v11, "dBuilder":Ljavax/xml/parsers/DocumentBuilder;
     move-object/from16 v0, v24
 
@@ -13691,7 +12260,6 @@
 
     move-result-object v13
 
-    .line 2250
     .local v13, "doc":Lorg/w3c/dom/Document;
     invoke-interface {v13}, Lorg/w3c/dom/Document;->getDocumentElement()Lorg/w3c/dom/Element;
 
@@ -13699,14 +12267,12 @@
 
     invoke-interface/range {v29 .. v29}, Lorg/w3c/dom/Element;->normalize()V
 
-    .line 2251
     new-instance v25, Lcom/android/server/enterprise/sso/GenericSSOService$RequestConfigDocument;
 
     move-object/from16 v0, v25
 
     invoke-direct {v0, v13}, Lcom/android/server/enterprise/sso/GenericSSOService$RequestConfigDocument;-><init>(Lorg/w3c/dom/Document;)V
 
-    .line 2254
     .local v25, "tmpConfigDoc":Lcom/android/server/enterprise/sso/GenericSSOService$RequestConfigDocument;
     # invokes: Lcom/android/server/enterprise/sso/GenericSSOService$RequestConfigDocument;->getEnrolledSSOVendor()Lorg/w3c/dom/Node;
     invoke-static/range {v25 .. v25}, Lcom/android/server/enterprise/sso/GenericSSOService$RequestConfigDocument;->access$600(Lcom/android/server/enterprise/sso/GenericSSOService$RequestConfigDocument;)Lorg/w3c/dom/Node;
@@ -13715,7 +12281,6 @@
 
     check-cast v23, Lorg/w3c/dom/Element;
 
-    .line 2255
     .local v23, "solutionEle":Lorg/w3c/dom/Element;
     const-string v29, "mdmuid"
 
@@ -13749,8 +12314,7 @@
 
     invoke-interface {v0, v1, v2}, Lorg/w3c/dom/Element;->setAttribute(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 2257
-    const-string/jumbo v29, "servicepackagename"
+    const-string v29, "servicepackagename"
 
     move-object/from16 v0, v23
 
@@ -13760,9 +12324,8 @@
 
     move-result-object v6
 
-    .line 2259
     .local v6, "authenticatorPkgName":Ljava/lang/String;
-    const-string/jumbo v29, "servicepackagesignature"
+    const-string v29, "servicepackagesignature"
 
     move-object/from16 v0, v23
 
@@ -13772,17 +12335,14 @@
 
     move-result-object v5
 
-    .line 2263
     .local v5, "authenticatorPkgCert":Ljava/lang/String;
     # invokes: Lcom/android/server/enterprise/sso/GenericSSOService$RequestConfigDocument;->update()V
     invoke-static/range {v25 .. v25}, Lcom/android/server/enterprise/sso/GenericSSOService$RequestConfigDocument;->access$700(Lcom/android/server/enterprise/sso/GenericSSOService$RequestConfigDocument;)V
 
-    .line 2264
     sget-boolean v29, Landroid/app/enterprise/sso/GenericSSOConstants;->DEBUG:Z
 
     if-eqz v29, :cond_8
 
-    .line 2265
     const-string v29, "GenericSSOService"
 
     new-instance v30, Ljava/lang/StringBuilder;
@@ -13809,7 +12369,6 @@
 
     invoke-static/range {v29 .. v30}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 2269
     :cond_8
     move-object/from16 v0, v25
 
@@ -13825,12 +12384,10 @@
 
     invoke-direct {v0, v1, v2}, Lcom/android/server/enterprise/sso/GenericSSOService;->saveConfigToFile(Lorg/w3c/dom/Document;Ljava/lang/String;)V
 
-    .line 2270
     sget-boolean v29, Landroid/app/enterprise/sso/GenericSSOConstants;->DEBUG:Z
 
     if-eqz v29, :cond_9
 
-    .line 2271
     const-string v29, "GenericSSOService"
 
     new-instance v30, Ljava/lang/StringBuilder;
@@ -13871,13 +12428,11 @@
 
     invoke-static/range {v29 .. v30}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 2275
     :cond_9
     invoke-static {}, Landroid/os/Binder;->clearCallingIdentity()J
 
     move-result-wide v16
 
-    .line 2276
     .local v16, "identity":J
     const-string v29, "application_policy"
 
@@ -13887,11 +12442,9 @@
 
     check-cast v4, Lcom/android/server/enterprise/application/ApplicationPolicy;
 
-    .line 2280
     .local v4, "appService":Lcom/android/server/enterprise/application/ApplicationPolicy;
     if-eqz v4, :cond_d
 
-    .line 2281
     move/from16 v0, v27
 
     invoke-virtual {v4, v6, v0}, Lcom/android/server/enterprise/application/ApplicationPolicy;->isApplicationInstalled(Ljava/lang/String;I)Z
@@ -13900,35 +12453,28 @@
 
     if-nez v29, :cond_b
 
-    .line 2283
     sget-boolean v29, Landroid/app/enterprise/sso/GenericSSOConstants;->DEBUG:Z
 
     if-eqz v29, :cond_a
 
-    .line 2284
     const-string v29, "GenericSSOService"
 
     const-string v30, "In configureSSOByFile: Authenticator not installed"
 
     invoke-static/range {v29 .. v30}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 2286
     :cond_a
     invoke-virtual/range {v24 .. v24}, Ljava/io/File;->delete()Z
 
-    .line 2287
     invoke-static/range {v16 .. v17}, Landroid/os/Binder;->restoreCallingIdentity(J)V
 
-    .line 2288
     const/16 v29, -0xc
 
     goto/16 :goto_0
 
-    .line 2290
     :cond_b
     invoke-static/range {v16 .. v17}, Landroid/os/Binder;->restoreCallingIdentity(J)V
 
-    .line 2291
     move-object/from16 v0, p0
 
     move/from16 v1, v27
@@ -13937,7 +12483,6 @@
 
     move-result-object v18
 
-    .line 2293
     .local v18, "installedAppPkgSig":Ljava/lang/String;
     move-object/from16 v0, p0
 
@@ -13947,7 +12492,6 @@
 
     if-nez v29, :cond_d
 
-    .line 2294
     move-object/from16 v0, v18
 
     invoke-virtual {v5, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
@@ -13956,33 +12500,27 @@
 
     if-nez v29, :cond_d
 
-    .line 2295
     invoke-virtual/range {v24 .. v24}, Ljava/io/File;->delete()Z
 
-    .line 2296
     sget-boolean v29, Landroid/app/enterprise/sso/GenericSSOConstants;->DEBUG:Z
 
     if-eqz v29, :cond_c
 
-    .line 2297
     const-string v29, "GenericSSOService"
 
     const-string v30, "In configureSSOByFile: Authenticator signature is not matched"
 
     invoke-static/range {v29 .. v30}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 2299
     :cond_c
     const/16 v29, -0xd
 
     goto/16 :goto_0
 
-    .line 2304
     .end local v18    # "installedAppPkgSig":Ljava/lang/String;
     :cond_d
     invoke-static/range {v16 .. v17}, Landroid/os/Binder;->restoreCallingIdentity(J)V
 
-    .line 2307
     move-object/from16 v0, p0
 
     invoke-direct {v0, v10}, Lcom/android/server/enterprise/sso/GenericSSOService;->isNullOrEmpty(Ljava/lang/String;)Z
@@ -13997,12 +12535,10 @@
 
     if-nez v29, :cond_f
 
-    .line 2309
     sget-boolean v29, Landroid/app/enterprise/sso/GenericSSOConstants;->DEBUG:Z
 
     if-eqz v29, :cond_e
 
-    .line 2310
     const-string v29, "GenericSSOService"
 
     new-instance v30, Ljava/lang/StringBuilder;
@@ -14035,13 +12571,11 @@
 
     invoke-static/range {v29 .. v30}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 2314
     :cond_e
     const/16 v29, -0x9
 
     goto/16 :goto_0
 
-    .line 2318
     :cond_f
     move-object/from16 v0, p0
 
@@ -14051,13 +12585,11 @@
 
     move-result-object v15
 
-    .line 2319
     .local v15, "filePath":Ljava/lang/String;
     new-instance v7, Ljava/io/File;
 
     invoke-direct {v7, v15}, Ljava/io/File;-><init>(Ljava/lang/String;)V
 
-    .line 2320
     .local v7, "configDataDir":Ljava/io/File;
     invoke-virtual {v7}, Ljava/io/File;->exists()Z
 
@@ -14065,10 +12597,8 @@
 
     if-eqz v29, :cond_10
 
-    .line 2321
     invoke-virtual {v7}, Ljava/io/File;->delete()Z
 
-    .line 2323
     :cond_10
     move-object/from16 v0, v24
 
@@ -14076,29 +12606,24 @@
 
     move-result v21
 
-    .line 2324
     .local v21, "renameSucceed":Z
     if-nez v21, :cond_12
 
-    .line 2325
     sget-boolean v29, Landroid/app/enterprise/sso/GenericSSOConstants;->DEBUG:Z
 
     if-eqz v29, :cond_11
 
-    .line 2326
     const-string v29, "GenericSSOService"
 
     const-string v30, "In configureSSOByFile: tempConfigFile failed to be saved to ssoconfig.xml"
 
     invoke-static/range {v29 .. v30}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 2328
     :cond_11
     const/16 v29, -0x1
 
     goto/16 :goto_0
 
-    .line 2330
     :cond_12
     sget-object v29, Lcom/android/server/enterprise/sso/GenericSSOService;->requestConfigXMLDocs:Landroid/util/SparseArray;
 
@@ -14108,14 +12633,12 @@
 
     invoke-virtual {v0, v1}, Landroid/util/SparseArray;->remove(I)V
 
-    .line 2331
     move-object/from16 v0, p0
 
     move/from16 v1, v27
 
     invoke-direct {v0, v1}, Lcom/android/server/enterprise/sso/GenericSSOService;->initRequestConfigDoc(I)V
 
-    .line 2332
     move-object/from16 v0, p0
 
     move/from16 v1, v27
@@ -14124,7 +12647,6 @@
 
     move-result-object v28
 
-    .line 2333
     .local v28, "vendorBundle":Landroid/os/Bundle;
     move-object/from16 v0, p0
 
@@ -14136,16 +12658,13 @@
 
     move-result v20
 
-    .line 2335
     .local v20, "protocolConfiged":I
     if-eqz v20, :cond_14
 
-    .line 2336
     sget-boolean v29, Landroid/app/enterprise/sso/GenericSSOConstants;->DEBUG:Z
 
     if-eqz v29, :cond_13
 
-    .line 2337
     const-string v29, "GenericSSOService"
 
     const-string v30, "In configureSSOByFile: failed because of pushAuthenticatorConfig()"
@@ -14156,13 +12675,11 @@
     .catch Ljava/io/IOException; {:try_start_0 .. :try_end_0} :catch_1
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_2
 
-    .line 2339
     :cond_13
     const/16 v29, -0x10
 
     goto/16 :goto_0
 
-    .line 2341
     .end local v4    # "appService":Lcom/android/server/enterprise/application/ApplicationPolicy;
     .end local v5    # "authenticatorPkgCert":Ljava/lang/String;
     .end local v6    # "authenticatorPkgName":Ljava/lang/String;
@@ -14186,7 +12703,6 @@
     :catch_0
     move-exception v14
 
-    .line 2343
     .local v14, "e":Ljava/io/FileNotFoundException;
     const-string v29, "GenericSSOService"
 
@@ -14198,17 +12714,14 @@
 
     invoke-static {v0, v1, v14}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
-    .line 2347
     const/16 v29, -0x5
 
     goto/16 :goto_0
 
-    .line 2348
     .end local v14    # "e":Ljava/io/FileNotFoundException;
     :catch_1
     move-exception v14
 
-    .line 2350
     .local v14, "e":Ljava/io/IOException;
     const-string v29, "GenericSSOService"
 
@@ -14220,17 +12733,14 @@
 
     invoke-static {v0, v1, v14}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
-    .line 2354
     const/16 v29, -0x1
 
     goto/16 :goto_0
 
-    .line 2355
     .end local v14    # "e":Ljava/io/IOException;
     :catch_2
     move-exception v14
 
-    .line 2357
     .local v14, "e":Ljava/lang/Exception;
     const-string v29, "GenericSSOService"
 
@@ -14242,12 +12752,10 @@
 
     invoke-static {v0, v1, v14}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
-    .line 2358
     const/16 v29, -0x1
 
     goto/16 :goto_0
 
-    .line 2360
     .end local v14    # "e":Ljava/lang/Exception;
     .restart local v4    # "appService":Lcom/android/server/enterprise/application/ApplicationPolicy;
     .restart local v5    # "authenticatorPkgCert":Ljava/lang/String;
@@ -14295,42 +12803,34 @@
 
     const/4 v10, -0x6
 
-    .line 2472
     invoke-direct {p0, p1}, Lcom/android/server/enterprise/sso/GenericSSOService;->enforceKnoxSSOPermission(Landroid/app/enterprise/ContextInfo;)Landroid/app/enterprise/ContextInfo;
 
     move-result-object p1
 
-    .line 2473
     if-nez p1, :cond_1
 
-    .line 2474
     sget-boolean v10, Landroid/app/enterprise/sso/GenericSSOConstants;->DEBUG:Z
 
     if-eqz v10, :cond_0
 
-    .line 2475
     const-string v10, "GenericSSOService"
 
     const-string v11, "In deleteWhiteListPackages: cxtInfo is null"
 
     invoke-static {v10, v11}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 2535
     :cond_0
     :goto_0
     return v9
 
-    .line 2478
     :cond_1
     iget v4, p1, Landroid/app/enterprise/ContextInfo;->mCallerUid:I
 
-    .line 2480
     .local v4, "mdmUID":I
     invoke-static {p1}, Lcom/android/server/enterprise/EnterpriseDeviceManagerService;->getCallingOrCurrentUserId(Landroid/app/enterprise/ContextInfo;)I
 
     move-result v7
 
-    .line 2482
     .local v7, "userId":I
     invoke-direct {p0, v7, v4}, Lcom/android/server/enterprise/sso/GenericSSOService;->isCallingMDMMatch(II)Z
 
@@ -14338,25 +12838,21 @@
 
     if-nez v11, :cond_3
 
-    .line 2483
     sget-boolean v9, Landroid/app/enterprise/sso/GenericSSOConstants;->DEBUG:Z
 
     if-eqz v9, :cond_2
 
-    .line 2484
     const-string v9, "GenericSSOService"
 
     const-string v10, "In deleteWhiteListPackages: MDM uid is not matched"
 
     invoke-static {v9, v10}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 2485
     :cond_2
     const/16 v9, -0xa
 
     goto :goto_0
 
-    .line 2487
     :cond_3
     if-eqz p1, :cond_4
 
@@ -14368,13 +12864,11 @@
 
     if-nez v11, :cond_5
 
-    .line 2488
     :cond_4
     sget-boolean v10, Landroid/app/enterprise/sso/GenericSSOConstants;->DEBUG:Z
 
     if-eqz v10, :cond_0
 
-    .line 2489
     const-string v10, "GenericSSOService"
 
     const-string v11, "In deleteWhiteListPackage: Invalid Parameters."
@@ -14383,7 +12877,6 @@
 
     goto :goto_0
 
-    .line 2492
     :cond_5
     invoke-virtual {p0, p1}, Lcom/android/server/enterprise/sso/GenericSSOService;->getEnrolledSSOVendor(Landroid/app/enterprise/ContextInfo;)Ljava/lang/String;
 
@@ -14391,12 +12884,10 @@
 
     if-nez v9, :cond_7
 
-    .line 2493
     sget-boolean v9, Landroid/app/enterprise/sso/GenericSSOConstants;->DEBUG:Z
 
     if-eqz v9, :cond_6
 
-    .line 2494
     const-string v9, "GenericSSOService"
 
     const-string v11, "In deletesWhiteListPackage: No SSO Vendors have been enrolled."
@@ -14406,50 +12897,41 @@
     :cond_6
     move v9, v10
 
-    .line 2496
     goto :goto_0
 
-    .line 2499
     :cond_7
     :try_start_0
     invoke-direct {p0, v7}, Lcom/android/server/enterprise/sso/GenericSSOService;->getSSOConfigForUserId(I)Lcom/android/server/enterprise/sso/GenericSSOService$RequestConfigDocument;
 
     move-result-object v1
 
-    .line 2500
     .local v1, "configDoc":Lcom/android/server/enterprise/sso/GenericSSOService$RequestConfigDocument;
     # invokes: Lcom/android/server/enterprise/sso/GenericSSOService$RequestConfigDocument;->getEnrolledSSOVendor()Lorg/w3c/dom/Node;
     invoke-static {v1}, Lcom/android/server/enterprise/sso/GenericSSOService$RequestConfigDocument;->access$600(Lcom/android/server/enterprise/sso/GenericSSOService$RequestConfigDocument;)Lorg/w3c/dom/Node;
 
     move-result-object v6
 
-    .line 2501
     .local v6, "solution":Lorg/w3c/dom/Node;
     if-nez v6, :cond_9
 
-    .line 2502
     sget-boolean v9, Landroid/app/enterprise/sso/GenericSSOConstants;->DEBUG:Z
 
     if-eqz v9, :cond_8
 
-    .line 2503
     const-string v9, "GenericSSOService"
 
-    const-string/jumbo v11, "this sso vendor is not registered"
+    const-string v11, "this sso vendor is not registered"
 
     invoke-static {v9, v11}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
     :cond_8
     move v9, v10
 
-    .line 2504
     goto :goto_0
 
-    .line 2506
     :cond_9
     const/4 v0, 0x0
 
-    .line 2507
     .local v0, "allowedApps":Ljava/util/ArrayList;, "Ljava/util/ArrayList<Lorg/w3c/dom/Node;>;"
     invoke-interface {p2}, Ljava/util/List;->iterator()Ljava/util/Iterator;
 
@@ -14470,32 +12952,27 @@
 
     check-cast v5, Ljava/lang/String;
 
-    .line 2508
     .local v5, "pack":Ljava/lang/String;
     invoke-direct {p0, v6}, Lcom/android/server/enterprise/sso/GenericSSOService;->getWhitelistAppNode(Lorg/w3c/dom/Node;)Ljava/util/ArrayList;
 
     move-result-object v0
 
-    .line 2509
     const-string v9, "clientpackagename"
 
     invoke-direct {p0, v0, v9, v5}, Lcom/android/server/enterprise/sso/GenericSSOService;->findNodeByAttribute(Ljava/util/List;Ljava/lang/String;Ljava/lang/String;)Lorg/w3c/dom/Node;
 
     move-result-object v8
 
-    .line 2511
     .local v8, "whitelistApp":Lorg/w3c/dom/Node;
     if-nez v8, :cond_b
 
-    .line 2512
     sget-boolean v9, Landroid/app/enterprise/sso/GenericSSOConstants;->DEBUG:Z
 
     if-eqz v9, :cond_a
 
-    .line 2513
     const-string v9, "GenericSSOService"
 
-    const-string/jumbo v10, "the package hasn\'t been whitelisted"
+    const-string v10, "the package hasn\'t been whitelisted"
 
     invoke-static {v9, v10}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
     :try_end_0
@@ -14504,7 +12981,6 @@
 
     goto :goto_1
 
-    .line 2528
     .end local v0    # "allowedApps":Ljava/util/ArrayList;, "Ljava/util/ArrayList<Lorg/w3c/dom/Node;>;"
     .end local v1    # "configDoc":Lcom/android/server/enterprise/sso/GenericSSOService$RequestConfigDocument;
     .end local v3    # "i$":Ljava/util/Iterator;
@@ -14514,7 +12990,6 @@
     :catch_0
     move-exception v2
 
-    .line 2530
     .local v2, "e":Ljava/lang/NullPointerException;
     const-string v9, "GenericSSOService"
 
@@ -14522,14 +12997,12 @@
 
     invoke-static {v9, v10, v2}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
-    .line 2535
     .end local v2    # "e":Ljava/lang/NullPointerException;
     :goto_2
     const/4 v9, -0x1
 
     goto/16 :goto_0
 
-    .line 2516
     .restart local v0    # "allowedApps":Ljava/util/ArrayList;, "Ljava/util/ArrayList<Lorg/w3c/dom/Node;>;"
     .restart local v1    # "configDoc":Lcom/android/server/enterprise/sso/GenericSSOService$RequestConfigDocument;
     .restart local v3    # "i$":Ljava/util/Iterator;
@@ -14542,26 +13015,22 @@
 
     if-eqz v9, :cond_c
 
-    .line 2517
     const-string v9, "GenericSSOService"
 
-    const-string/jumbo v10, "package name is found in the whitelist of the given sso ssolution service"
+    const-string v10, "package name is found in the whitelist of the given sso ssolution service"
 
     invoke-static {v9, v10}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 2519
     :cond_c
     invoke-interface {v6, v8}, Lorg/w3c/dom/Node;->removeChild(Lorg/w3c/dom/Node;)Lorg/w3c/dom/Node;
 
-    .line 2520
     sget-boolean v9, Landroid/app/enterprise/sso/GenericSSOConstants;->DEBUG:Z
 
     if-eqz v9, :cond_a
 
-    .line 2521
     const-string v9, "GenericSSOService"
 
-    const-string/jumbo v10, "package name is removed from the whitelist of the given sso ssolution service"
+    const-string v10, "package name is removed from the whitelist of the given sso ssolution service"
 
     invoke-static {v9, v10}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
     :try_end_1
@@ -14570,7 +13039,6 @@
 
     goto :goto_1
 
-    .line 2531
     .end local v0    # "allowedApps":Ljava/util/ArrayList;, "Ljava/util/ArrayList<Lorg/w3c/dom/Node;>;"
     .end local v1    # "configDoc":Lcom/android/server/enterprise/sso/GenericSSOService$RequestConfigDocument;
     .end local v3    # "i$":Ljava/util/Iterator;
@@ -14580,7 +13048,6 @@
     :catch_1
     move-exception v2
 
-    .line 2533
     .local v2, "e":Ljava/lang/Exception;
     const-string v9, "GenericSSOService"
 
@@ -14590,7 +13057,6 @@
 
     goto :goto_2
 
-    .line 2525
     .end local v2    # "e":Ljava/lang/Exception;
     .restart local v0    # "allowedApps":Ljava/util/ArrayList;, "Ljava/util/ArrayList<Lorg/w3c/dom/Node;>;"
     .restart local v1    # "configDoc":Lcom/android/server/enterprise/sso/GenericSSOService$RequestConfigDocument;
@@ -14603,7 +13069,6 @@
     .catch Ljava/lang/NullPointerException; {:try_start_2 .. :try_end_2} :catch_0
     .catch Ljava/lang/Exception; {:try_start_2 .. :try_end_2} :catch_1
 
-    .line 2526
     const/4 v9, 0x0
 
     goto/16 :goto_0
@@ -14617,39 +13082,31 @@
     .param p4, "ssoconfig"    # Landroid/os/Bundle;
 
     .prologue
-    .line 1961
     const/4 v15, 0x0
 
-    .line 1962
     .local v15, "isRegistered":Z
     invoke-direct/range {p0 .. p1}, Lcom/android/server/enterprise/sso/GenericSSOService;->enforceKnoxSSOPermission(Landroid/app/enterprise/ContextInfo;)Landroid/app/enterprise/ContextInfo;
 
     move-result-object p1
 
-    .line 1963
     if-nez p1, :cond_1
 
-    .line 1964
     sget-boolean v24, Landroid/app/enterprise/sso/GenericSSOConstants;->DEBUG:Z
 
     if-eqz v24, :cond_0
 
-    .line 1965
     const-string v24, "GenericSSOService"
 
     const-string v25, "In enrollSSOVendor: cxtInfo is null"
 
     invoke-static/range {v24 .. v25}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1966
     :cond_0
     const/16 v24, -0x3
 
-    .line 2101
     :goto_0
     return v24
 
-    .line 1968
     :cond_1
     move-object/from16 v0, p1
 
@@ -14657,13 +13114,11 @@
 
     move/from16 v17, v0
 
-    .line 1969
     .local v17, "mdmUid":I
     invoke-static/range {p1 .. p1}, Lcom/android/server/enterprise/EnterpriseDeviceManagerService;->getCallingOrCurrentUserId(Landroid/app/enterprise/ContextInfo;)I
 
     move-result v21
 
-    .line 1971
     .local v21, "userId":I
     move-object/from16 v0, p0
 
@@ -14673,14 +13128,12 @@
 
     move-result-object v6
 
-    .line 1972
     .local v6, "configDoc":Lcom/android/server/enterprise/sso/GenericSSOService$RequestConfigDocument;
     # invokes: Lcom/android/server/enterprise/sso/GenericSSOService$RequestConfigDocument;->getEnrolledSSOVendor()Lorg/w3c/dom/Node;
     invoke-static {v6}, Lcom/android/server/enterprise/sso/GenericSSOService$RequestConfigDocument;->access$600(Lcom/android/server/enterprise/sso/GenericSSOService$RequestConfigDocument;)Lorg/w3c/dom/Node;
 
     move-result-object v9
 
-    .line 1973
     .local v9, "enrolledVendor":Lorg/w3c/dom/Node;
     if-eqz v9, :cond_3
 
@@ -14698,25 +13151,21 @@
 
     if-nez v24, :cond_3
 
-    .line 1975
     sget-boolean v24, Landroid/app/enterprise/sso/GenericSSOConstants;->DEBUG:Z
 
     if-eqz v24, :cond_2
 
-    .line 1976
     const-string v24, "GenericSSOService"
 
     const-string v25, "In enrollSSOVendor: there\'s already one sso vendor enrolled"
 
     invoke-static/range {v24 .. v25}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1978
     :cond_2
     const/16 v24, -0x9
 
     goto :goto_0
 
-    .line 1980
     :cond_3
     move-object/from16 v0, p0
 
@@ -14728,31 +13177,26 @@
 
     if-eqz v24, :cond_5
 
-    .line 1981
     sget-boolean v24, Landroid/app/enterprise/sso/GenericSSOConstants;->DEBUG:Z
 
     if-eqz v24, :cond_4
 
-    .line 1982
     const-string v24, "GenericSSOService"
 
     const-string v25, "In enrollSSOVendor: parameter is null or empty"
 
     invoke-static/range {v24 .. v25}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1983
     :cond_4
     const/16 v24, -0x3
 
     goto :goto_0
 
-    .line 1985
     :cond_5
     invoke-static {}, Landroid/os/Binder;->clearCallingIdentity()J
 
     move-result-wide v12
 
-    .line 1986
     .local v12, "identity":J
     const-string v24, "application_policy"
 
@@ -14762,11 +13206,9 @@
 
     check-cast v4, Lcom/android/server/enterprise/application/ApplicationPolicy;
 
-    .line 1988
     .local v4, "appService":Lcom/android/server/enterprise/application/ApplicationPolicy;
     if-eqz v4, :cond_9
 
-    .line 1989
     move-object/from16 v0, p2
 
     move/from16 v1, v21
@@ -14777,28 +13219,23 @@
 
     if-nez v24, :cond_7
 
-    .line 1991
     sget-boolean v24, Landroid/app/enterprise/sso/GenericSSOConstants;->DEBUG:Z
 
     if-eqz v24, :cond_6
 
-    .line 1992
     const-string v24, "GenericSSOService"
 
     const-string v25, "In enrollSSOVendor: Authenticator not installed"
 
     invoke-static/range {v24 .. v25}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1994
     :cond_6
     invoke-static {v12, v13}, Landroid/os/Binder;->restoreCallingIdentity(J)V
 
-    .line 1995
     const/16 v24, -0xc
 
     goto :goto_0
 
-    .line 1997
     :cond_7
     move-object/from16 v0, p0
 
@@ -14810,7 +13247,6 @@
 
     move-result-object v14
 
-    .line 1999
     .local v14, "installedAppPkgSig":Ljava/lang/String;
     move-object/from16 v0, p0
 
@@ -14822,7 +13258,6 @@
 
     if-nez v24, :cond_9
 
-    .line 2000
     move-object/from16 v0, p3
 
     invoke-virtual {v0, v14}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
@@ -14831,41 +13266,33 @@
 
     if-nez v24, :cond_9
 
-    .line 2001
     sget-boolean v24, Landroid/app/enterprise/sso/GenericSSOConstants;->DEBUG:Z
 
     if-eqz v24, :cond_8
 
-    .line 2002
     const-string v24, "GenericSSOService"
 
     const-string v25, "In enrollSSOVendor: Authenticator signature is not matched"
 
     invoke-static/range {v24 .. v25}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 2004
     :cond_8
     invoke-static {v12, v13}, Landroid/os/Binder;->restoreCallingIdentity(J)V
 
-    .line 2005
     const/16 v24, -0xd
 
     goto/16 :goto_0
 
-    .line 2010
     .end local v14    # "installedAppPkgSig":Ljava/lang/String;
     :cond_9
     invoke-static {v12, v13}, Landroid/os/Binder;->restoreCallingIdentity(J)V
 
-    .line 2014
     :try_start_0
     iget-object v7, v6, Lcom/android/server/enterprise/sso/GenericSSOService$RequestConfigDocument;->XMLDoc:Lorg/w3c/dom/Document;
 
-    .line 2015
     .local v7, "doc":Lorg/w3c/dom/Document;
     const/16 v18, 0x0
 
-    .line 2016
     .local v18, "newSolution":Lorg/w3c/dom/Element;
     if-eqz v9, :cond_d
 
@@ -14883,7 +13310,6 @@
 
     if-eqz v24, :cond_d
 
-    .line 2019
     move-object/from16 v0, p0
 
     move/from16 v1, v21
@@ -14896,34 +13322,28 @@
 
     if-nez v24, :cond_b
 
-    .line 2020
     sget-boolean v24, Landroid/app/enterprise/sso/GenericSSOConstants;->DEBUG:Z
 
     if-eqz v24, :cond_a
 
-    .line 2021
     const-string v24, "GenericSSOService"
 
     const-string v25, "In unenrollSSOVendor: MDM uid is not matched"
 
     invoke-static/range {v24 .. v25}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 2023
     :cond_a
     const/16 v24, -0xa
 
     goto/16 :goto_0
 
-    .line 2025
     :cond_b
     const/4 v15, 0x1
 
-    .line 2026
     invoke-interface {v9}, Lorg/w3c/dom/Node;->getChildNodes()Lorg/w3c/dom/NodeList;
 
     move-result-object v5
 
-    .line 2027
     .local v5, "childNodes":Lorg/w3c/dom/NodeList;
     const/4 v10, 0x0
 
@@ -14937,18 +13357,16 @@
 
     if-ge v10, v0, :cond_f
 
-    .line 2028
     invoke-interface {v5, v10}, Lorg/w3c/dom/NodeList;->item(I)Lorg/w3c/dom/Node;
 
     move-result-object v19
 
-    .line 2029
     .local v19, "node":Lorg/w3c/dom/Node;
     invoke-interface/range {v19 .. v19}, Lorg/w3c/dom/Node;->getNodeName()Ljava/lang/String;
 
     move-result-object v24
 
-    const-string/jumbo v25, "whitelistpackage"
+    const-string v25, "whitelistpackage"
 
     invoke-virtual/range {v24 .. v25}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
@@ -14956,23 +13374,20 @@
 
     if-nez v24, :cond_c
 
-    .line 2030
     move-object/from16 v0, v19
 
     invoke-interface {v9, v0}, Lorg/w3c/dom/Node;->removeChild(Lorg/w3c/dom/Node;)Lorg/w3c/dom/Node;
 
-    .line 2027
     :cond_c
     add-int/lit8 v10, v10, 0x1
 
     goto :goto_1
 
-    .line 2034
     .end local v5    # "childNodes":Lorg/w3c/dom/NodeList;
     .end local v10    # "i":I
     .end local v19    # "node":Lorg/w3c/dom/Node;
     :cond_d
-    const-string/jumbo v24, "ssoprovider"
+    const-string v24, "ssoprovider"
 
     move-object/from16 v0, v24
 
@@ -14980,7 +13395,6 @@
 
     move-result-object v18
 
-    .line 2035
     move-object/from16 v0, p0
 
     move-object/from16 v1, p3
@@ -14991,8 +13405,7 @@
 
     if-nez v24, :cond_12
 
-    .line 2036
-    const-string/jumbo v24, "servicepackagesignature"
+    const-string v24, "servicepackagesignature"
 
     move-object/from16 v0, v18
 
@@ -15002,10 +13415,9 @@
 
     invoke-interface {v0, v1, v2}, Lorg/w3c/dom/Element;->setAttribute(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 2044
     :cond_e
     :goto_2
-    const-string/jumbo v24, "servicepackagename"
+    const-string v24, "servicepackagename"
 
     move-object/from16 v0, v18
 
@@ -15015,7 +13427,6 @@
 
     invoke-interface {v0, v1, v2}, Lorg/w3c/dom/Element;->setAttribute(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 2047
     const-string v24, "mdmuid"
 
     new-instance v25, Ljava/lang/StringBuilder;
@@ -15048,7 +13459,6 @@
 
     invoke-interface {v0, v1, v2}, Lorg/w3c/dom/Element;->setAttribute(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 2051
     :cond_f
     move-object/from16 v0, p0
 
@@ -15060,18 +13470,16 @@
 
     if-nez v24, :cond_14
 
-    .line 2052
     iget-object v0, v6, Lcom/android/server/enterprise/sso/GenericSSOService$RequestConfigDocument;->XMLDoc:Lorg/w3c/dom/Document;
 
     move-object/from16 v24, v0
 
-    const-string/jumbo v25, "vendorconfigs"
+    const-string v25, "vendorconfigs"
 
     invoke-interface/range {v24 .. v25}, Lorg/w3c/dom/Document;->createElement(Ljava/lang/String;)Lorg/w3c/dom/Element;
 
     move-result-object v23
 
-    .line 2054
     .local v23, "vendorconfigs":Lorg/w3c/dom/Element;
     invoke-virtual/range {p4 .. p4}, Landroid/os/Bundle;->keySet()Ljava/util/Set;
 
@@ -15096,7 +13504,6 @@
 
     check-cast v16, Ljava/lang/String;
 
-    .line 2055
     .local v16, "key":Ljava/lang/String;
     move-object/from16 v0, p4
 
@@ -15116,10 +13523,8 @@
 
     if-nez v24, :cond_10
 
-    .line 2056
     const/16 v19, 0x0
 
-    .line 2057
     .local v19, "node":Lorg/w3c/dom/Element;
     move-object/from16 v0, p0
 
@@ -15137,7 +13542,6 @@
     .restart local v19    # "node":Lorg/w3c/dom/Element;
     if-nez v19, :cond_11
 
-    .line 2058
     iget-object v0, v6, Lcom/android/server/enterprise/sso/GenericSSOService$RequestConfigDocument;->XMLDoc:Lorg/w3c/dom/Document;
 
     move-object/from16 v24, v0
@@ -15150,16 +13554,14 @@
 
     move-result-object v19
 
-    .line 2059
     move-object/from16 v0, v23
 
     move-object/from16 v1, v19
 
     invoke-interface {v0, v1}, Lorg/w3c/dom/Element;->appendChild(Lorg/w3c/dom/Node;)Lorg/w3c/dom/Node;
 
-    .line 2061
     :cond_11
-    const-string/jumbo v24, "value"
+    const-string v24, "value"
 
     move-object/from16 v0, p4
 
@@ -15177,12 +13579,10 @@
 
     invoke-interface {v0, v1, v2}, Lorg/w3c/dom/Element;->setAttribute(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 2063
     sget-boolean v24, Landroid/app/enterprise/sso/GenericSSOConstants;->DEBUG:Z
 
     if-eqz v24, :cond_10
 
-    .line 2064
     const-string v24, "GenericSSOService"
 
     new-instance v25, Ljava/lang/StringBuilder;
@@ -15245,7 +13645,6 @@
 
     goto/16 :goto_3
 
-    .line 2094
     .end local v7    # "doc":Lorg/w3c/dom/Document;
     .end local v11    # "i$":Ljava/util/Iterator;
     .end local v16    # "key":Ljava/lang/String;
@@ -15255,7 +13654,6 @@
     :catch_0
     move-exception v8
 
-    .line 2095
     .local v8, "e":Ljava/lang/NullPointerException;
     const-string v24, "GenericSSOService"
 
@@ -15267,14 +13665,12 @@
 
     invoke-static {v0, v1, v8}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
-    .line 2101
     .end local v8    # "e":Ljava/lang/NullPointerException;
     :goto_4
     const/16 v24, -0x1
 
     goto/16 :goto_0
 
-    .line 2040
     .restart local v7    # "doc":Lorg/w3c/dom/Document;
     .restart local v18    # "newSolution":Lorg/w3c/dom/Element;
     :cond_12
@@ -15283,7 +13679,6 @@
 
     if-eqz v24, :cond_e
 
-    .line 2041
     const-string v24, "GenericSSOService"
 
     const-string v25, "In enrollSSOVendor: Authenticator signature is not specified"
@@ -15296,13 +13691,11 @@
 
     goto/16 :goto_2
 
-    .line 2096
     .end local v7    # "doc":Lorg/w3c/dom/Document;
     .end local v18    # "newSolution":Lorg/w3c/dom/Element;
     :catch_1
     move-exception v8
 
-    .line 2097
     .local v8, "e":Lorg/w3c/dom/DOMException;
     const-string v24, "GenericSSOService"
 
@@ -15316,7 +13709,6 @@
 
     goto :goto_4
 
-    .line 2070
     .end local v8    # "e":Lorg/w3c/dom/DOMException;
     .restart local v7    # "doc":Lorg/w3c/dom/Document;
     .restart local v11    # "i$":Ljava/util/Iterator;
@@ -15325,7 +13717,6 @@
     :cond_13
     if-nez v15, :cond_17
 
-    .line 2071
     :try_start_2
     move-object/from16 v0, v18
 
@@ -15333,14 +13724,12 @@
 
     invoke-interface {v0, v1}, Lorg/w3c/dom/Element;->appendChild(Lorg/w3c/dom/Node;)Lorg/w3c/dom/Node;
 
-    .line 2075
     .end local v11    # "i$":Ljava/util/Iterator;
     .end local v23    # "vendorconfigs":Lorg/w3c/dom/Element;
     :cond_14
     :goto_5
     if-nez v15, :cond_15
 
-    .line 2076
     iget-object v0, v6, Lcom/android/server/enterprise/sso/GenericSSOService$RequestConfigDocument;->XMLDoc:Lorg/w3c/dom/Document;
 
     move-object/from16 v24, v0
@@ -15355,7 +13744,6 @@
 
     invoke-interface {v0, v1}, Lorg/w3c/dom/Node;->appendChild(Lorg/w3c/dom/Node;)Lorg/w3c/dom/Node;
 
-    .line 2077
     :cond_15
     iget-object v0, v6, Lcom/android/server/enterprise/sso/GenericSSOService$RequestConfigDocument;->XMLDoc:Lorg/w3c/dom/Document;
 
@@ -15367,14 +13755,12 @@
 
     invoke-interface/range {v24 .. v24}, Lorg/w3c/dom/Element;->normalize()V
 
-    .line 2078
     move-object/from16 v0, p0
 
     move/from16 v1, v21
 
     invoke-direct {v0, v1, v6}, Lcom/android/server/enterprise/sso/GenericSSOService;->updateCacheAndFile(ILcom/android/server/enterprise/sso/GenericSSOService$RequestConfigDocument;)V
 
-    .line 2080
     move-object/from16 v0, p0
 
     move/from16 v1, v21
@@ -15383,7 +13769,6 @@
 
     move-result-object v22
 
-    .line 2081
     .local v22, "vendorBundle":Landroid/os/Bundle;
     move-object/from16 v0, p0
 
@@ -15397,29 +13782,24 @@
 
     move-result v20
 
-    .line 2083
     .local v20, "protocolConfiged":I
     if-eqz v20, :cond_18
 
-    .line 2084
     sget-boolean v24, Landroid/app/enterprise/sso/GenericSSOConstants;->DEBUG:Z
 
     if-eqz v24, :cond_16
 
-    .line 2085
     const-string v24, "GenericSSOService"
 
     const-string v25, "In enrollSSOVendor: failed because of pushAuthenticatorConfig()"
 
     invoke-static/range {v24 .. v25}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 2087
     :cond_16
     const/16 v24, -0x10
 
     goto/16 :goto_0
 
-    .line 2073
     .end local v20    # "protocolConfiged":I
     .end local v22    # "vendorBundle":Landroid/os/Bundle;
     .restart local v11    # "i$":Ljava/util/Iterator;
@@ -15435,7 +13815,6 @@
 
     goto :goto_5
 
-    .line 2098
     .end local v7    # "doc":Lorg/w3c/dom/Document;
     .end local v11    # "i$":Ljava/util/Iterator;
     .end local v18    # "newSolution":Lorg/w3c/dom/Element;
@@ -15443,7 +13822,6 @@
     :catch_2
     move-exception v8
 
-    .line 2099
     .local v8, "e":Ljava/lang/Exception;
     const-string v24, "GenericSSOService"
 
@@ -15457,7 +13835,6 @@
 
     goto/16 :goto_4
 
-    .line 2091
     .end local v8    # "e":Ljava/lang/Exception;
     .restart local v7    # "doc":Lorg/w3c/dom/Document;
     .restart local v18    # "newSolution":Lorg/w3c/dom/Element;
@@ -15475,7 +13852,6 @@
     .catch Lorg/w3c/dom/DOMException; {:try_start_3 .. :try_end_3} :catch_1
     .catch Ljava/lang/Exception; {:try_start_3 .. :try_end_3} :catch_2
 
-    .line 2092
     const/16 v24, 0x0
 
     goto/16 :goto_0
@@ -15486,46 +13862,37 @@
     .param p1, "cxtInfo"    # Landroid/app/enterprise/ContextInfo;
 
     .prologue
-    .line 2840
     invoke-direct {p0, p1}, Lcom/android/server/enterprise/sso/GenericSSOService;->enforceKnoxSSOPermission(Landroid/app/enterprise/ContextInfo;)Landroid/app/enterprise/ContextInfo;
 
     move-result-object p1
 
-    .line 2841
     if-nez p1, :cond_1
 
-    .line 2842
     sget-boolean v8, Landroid/app/enterprise/sso/GenericSSOConstants;->DEBUG:Z
 
     if-eqz v8, :cond_0
 
-    .line 2843
     const-string v8, "GenericSSOService"
 
     const-string v9, "In forceAuthenticate: cxtInfo is null"
 
     invoke-static {v8, v9}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 2844
     :cond_0
     const/4 v4, -0x3
 
-    .line 2880
     :goto_0
     return v4
 
-    .line 2846
     :cond_1
     iget v1, p1, Landroid/app/enterprise/ContextInfo;->mCallerUid:I
 
-    .line 2849
     .local v1, "mdmUID":I
     :try_start_0
     invoke-static {p1}, Lcom/android/server/enterprise/EnterpriseDeviceManagerService;->getCallingOrCurrentUserId(Landroid/app/enterprise/ContextInfo;)I
 
     move-result v5
 
-    .line 2851
     .local v5, "userId":I
     invoke-direct {p0, v5, v1}, Lcom/android/server/enterprise/sso/GenericSSOService;->isCallingMDMMatch(II)Z
 
@@ -15533,31 +13900,26 @@
 
     if-nez v8, :cond_3
 
-    .line 2852
     sget-boolean v8, Landroid/app/enterprise/sso/GenericSSOConstants;->DEBUG:Z
 
     if-eqz v8, :cond_2
 
-    .line 2853
     const-string v8, "GenericSSOService"
 
     const-string v9, "In forceAuthenticate: MDM uid is not matched"
 
     invoke-static {v8, v9}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 2854
     :cond_2
     const/16 v4, -0xa
 
     goto :goto_0
 
-    .line 2856
     :cond_3
     sget-boolean v8, Landroid/app/enterprise/sso/GenericSSOConstants;->DEBUG:Z
 
     if-eqz v8, :cond_4
 
-    .line 2857
     const-string v8, "GenericSSOService"
 
     new-instance v9, Ljava/lang/StringBuilder;
@@ -15580,53 +13942,43 @@
 
     invoke-static {v8, v9}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 2859
     :cond_4
     invoke-static {}, Landroid/os/Binder;->clearCallingIdentity()J
 
     move-result-wide v2
 
-    .line 2860
     .local v2, "identity":J
     invoke-direct {p0, v5}, Lcom/android/server/enterprise/sso/GenericSSOService;->reAuthenInAuthenticator(I)I
 
     move-result v4
 
-    .line 2861
     .local v4, "ret":I
     invoke-static {v2, v3}, Landroid/os/Binder;->restoreCallingIdentity(J)V
 
-    .line 2862
     if-eqz v4, :cond_6
 
-    .line 2863
     sget-boolean v8, Landroid/app/enterprise/sso/GenericSSOConstants;->DEBUG:Z
 
     if-eqz v8, :cond_5
 
-    .line 2864
     const-string v8, "GenericSSOService"
 
     const-string v9, "In forceAuthenticate: Fail to clear authenticator\'s records"
 
     invoke-static {v8, v9}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 2866
     :cond_5
     const/16 v4, -0x10
 
     goto :goto_0
 
-    .line 2868
     :cond_6
     invoke-direct {p0, p1}, Lcom/android/server/enterprise/sso/GenericSSOService;->clearUserCertAndAppToken(Landroid/app/enterprise/ContextInfo;)I
 
-    .line 2871
     invoke-static {}, Landroid/os/Binder;->clearCallingIdentity()J
 
     move-result-wide v6
 
-    .line 2872
     .local v6, "token":J
     iget-object v8, p0, Lcom/android/server/enterprise/sso/GenericSSOService;->mContext:Landroid/content/Context;
 
@@ -15642,14 +13994,12 @@
 
     invoke-virtual {v8, v9, v10}, Landroid/content/Context;->sendBroadcastAsUser(Landroid/content/Intent;Landroid/os/UserHandle;)V
 
-    .line 2873
     invoke-static {v6, v7}, Landroid/os/Binder;->restoreCallingIdentity(J)V
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
     goto :goto_0
 
-    .line 2876
     .end local v2    # "identity":J
     .end local v4    # "ret":I
     .end local v5    # "userId":I
@@ -15657,7 +14007,6 @@
     :catch_0
     move-exception v0
 
-    .line 2878
     .local v0, "e":Ljava/lang/Exception;
     const-string v8, "GenericSSOService"
 
@@ -15665,7 +14014,6 @@
 
     invoke-static {v8, v9, v0}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
-    .line 2880
     const/4 v4, -0x1
 
     goto :goto_0
@@ -15679,43 +14027,36 @@
     .prologue
     const/4 v3, 0x0
 
-    .line 3177
     invoke-direct {p0, p2}, Lcom/android/server/enterprise/sso/GenericSSOService;->isNullOrEmpty(Ljava/lang/String;)Z
 
     move-result v4
 
     if-eqz v4, :cond_1
 
-    .line 3178
     sget-boolean v4, Landroid/app/enterprise/sso/GenericSSOConstants;->DEBUG:Z
 
     if-eqz v4, :cond_0
 
-    .line 3179
     const-string v4, "GenericSSOService"
 
     const-string v5, "In getAppTokenFromGenericSSO: appPkgName is null or empty string"
 
     invoke-static {v4, v5}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 3193
     :cond_0
     :goto_0
     return-object v3
 
-    .line 3183
     :cond_1
     invoke-static {p1}, Lcom/android/server/enterprise/EnterpriseDeviceManagerService;->getCallingOrCurrentUserId(Landroid/app/enterprise/ContextInfo;)I
 
     move-result v2
 
-    .line 3185
     .local v2, "userId":I
     invoke-static {}, Landroid/os/Binder;->getCallingPid()I
 
     move-result v1
 
-    .line 3186
     .local v1, "pid":I
     const/4 v4, 0x0
 
@@ -15723,7 +14064,6 @@
 
     move-result-object v0
 
-    .line 3187
     .local v0, "packageName":Ljava/lang/String;
     invoke-direct {p0, v2, v0}, Lcom/android/server/enterprise/sso/GenericSSOService;->vendorPermissionCheck(ILjava/lang/String;)Z
 
@@ -15731,12 +14071,10 @@
 
     if-nez v4, :cond_2
 
-    .line 3188
     sget-boolean v4, Landroid/app/enterprise/sso/GenericSSOConstants;->DEBUG:Z
 
     if-eqz v4, :cond_0
 
-    .line 3189
     const-string v4, "GenericSSOService"
 
     const-string v5, "In getAppTokenFromGenericSSO: authenticator is not permitted to call this API"
@@ -15745,7 +14083,6 @@
 
     goto :goto_0
 
-    .line 3193
     :cond_2
     invoke-direct {p0, v2, p2}, Lcom/android/server/enterprise/sso/GenericSSOService;->getAppTokenFromSecureStorageForUser(ILjava/lang/String;)Landroid/app/enterprise/sso/TokenInfo;
 
@@ -15759,19 +14096,16 @@
     .param p1, "cxtInfo"    # Landroid/app/enterprise/ContextInfo;
 
     .prologue
-    .line 3326
     :try_start_0
     invoke-static/range {p1 .. p1}, Lcom/android/server/enterprise/EnterpriseDeviceManagerService;->getCallingOrCurrentUserId(Landroid/app/enterprise/ContextInfo;)I
 
     move-result v12
 
-    .line 3328
     .local v12, "userId":I
     invoke-static {}, Landroid/os/Binder;->getCallingPid()I
 
     move-result v10
 
-    .line 3329
     .local v10, "pid":I
     const/4 v13, 0x0
 
@@ -15779,7 +14113,6 @@
 
     move-result-object v9
 
-    .line 3330
     .local v9, "packageName":Ljava/lang/String;
     invoke-direct {p0, v12, v9}, Lcom/android/server/enterprise/sso/GenericSSOService;->vendorPermissionCheck(ILjava/lang/String;)Z
 
@@ -15787,23 +14120,19 @@
 
     if-nez v13, :cond_2
 
-    .line 3331
     sget-boolean v13, Landroid/app/enterprise/sso/GenericSSOConstants;->DEBUG:Z
 
     if-eqz v13, :cond_0
 
-    .line 3332
     const-string v13, "GenericSSOService"
 
     const-string v14, "In getCustomerBrandInfo: authenticator is not permitted to call this API"
 
     invoke-static {v13, v14}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 3334
     :cond_0
     const/4 v5, 0x0
 
-    .line 3361
     .end local v9    # "packageName":Ljava/lang/String;
     .end local v10    # "pid":I
     .end local v12    # "userId":I
@@ -15811,7 +14140,6 @@
     :goto_0
     return-object v5
 
-    .line 3336
     .restart local v9    # "packageName":Ljava/lang/String;
     .restart local v10    # "pid":I
     .restart local v12    # "userId":I
@@ -15820,26 +14148,22 @@
 
     move-result-object v4
 
-    .line 3337
     .local v4, "configDoc":Lcom/android/server/enterprise/sso/GenericSSOService$RequestConfigDocument;
     # invokes: Lcom/android/server/enterprise/sso/GenericSSOService$RequestConfigDocument;->getEnrolledSSOVendor()Lorg/w3c/dom/Node;
     invoke-static {v4}, Lcom/android/server/enterprise/sso/GenericSSOService$RequestConfigDocument;->access$600(Lcom/android/server/enterprise/sso/GenericSSOService$RequestConfigDocument;)Lorg/w3c/dom/Node;
 
     move-result-object v11
 
-    .line 3338
     .local v11, "solution":Lorg/w3c/dom/Node;
     new-instance v5, Landroid/os/Bundle;
 
     invoke-direct {v5}, Landroid/os/Bundle;-><init>()V
 
-    .line 3339
     .local v5, "customerInfo":Landroid/os/Bundle;
     invoke-direct {p0, v11}, Lcom/android/server/enterprise/sso/GenericSSOService;->getChildNodes(Lorg/w3c/dom/Node;)Ljava/util/ArrayList;
 
     move-result-object v2
 
-    .line 3340
     .local v2, "childNodes":Ljava/util/ArrayList;, "Ljava/util/ArrayList<Lorg/w3c/dom/Node;>;"
     invoke-virtual {v2}, Ljava/util/ArrayList;->iterator()Ljava/util/Iterator;
 
@@ -15858,7 +14182,6 @@
 
     check-cast v1, Lorg/w3c/dom/Node;
 
-    .line 3341
     .local v1, "childNode":Lorg/w3c/dom/Node;
     invoke-interface {v1}, Lorg/w3c/dom/Node;->getNodeType()S
 
@@ -15880,7 +14203,6 @@
 
     if-eqz v13, :cond_3
 
-    .line 3344
     invoke-direct {p0, v1}, Lcom/android/server/enterprise/sso/GenericSSOService;->getChildNodes(Lorg/w3c/dom/Node;)Ljava/util/ArrayList;
 
     move-result-object v13
@@ -15904,9 +14226,8 @@
 
     check-cast v3, Lorg/w3c/dom/Node;
 
-    .line 3345
     .local v3, "configChildNode":Lorg/w3c/dom/Node;
-    const-string/jumbo v13, "value"
+    const-string v13, "value"
 
     invoke-direct {p0, v3, v13}, Lcom/android/server/enterprise/sso/GenericSSOService;->getAttributeNode(Lorg/w3c/dom/Node;Ljava/lang/String;)Lorg/w3c/dom/Node;
 
@@ -15914,8 +14235,7 @@
 
     if-eqz v13, :cond_4
 
-    .line 3346
-    const-string/jumbo v13, "value"
+    const-string v13, "value"
 
     invoke-direct {p0, v3, v13}, Lcom/android/server/enterprise/sso/GenericSSOService;->getAttributeNode(Lorg/w3c/dom/Node;Ljava/lang/String;)Lorg/w3c/dom/Node;
 
@@ -15931,7 +14251,6 @@
 
     move-result-object v0
 
-    .line 3350
     .local v0, "byteValue":[B
     invoke-interface {v3}, Lorg/w3c/dom/Node;->getNodeName()Ljava/lang/String;
 
@@ -15943,7 +14262,6 @@
 
     goto :goto_1
 
-    .line 3357
     .end local v0    # "byteValue":[B
     .end local v1    # "childNode":Lorg/w3c/dom/Node;
     .end local v2    # "childNodes":Ljava/util/ArrayList;, "Ljava/util/ArrayList<Lorg/w3c/dom/Node;>;"
@@ -15958,7 +14276,6 @@
     :catch_0
     move-exception v6
 
-    .line 3359
     .local v6, "e":Ljava/lang/Exception;
     const-string v13, "GenericSSOService"
 
@@ -15966,7 +14283,6 @@
 
     invoke-static {v13, v14, v6}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
-    .line 3361
     const/4 v5, 0x0
 
     goto :goto_0
@@ -15977,33 +14293,27 @@
     .param p1, "cxtInfo"    # Landroid/app/enterprise/ContextInfo;
 
     .prologue
-    .line 1918
     invoke-direct {p0, p1}, Lcom/android/server/enterprise/sso/GenericSSOService;->enforceKnoxSSOPermission(Landroid/app/enterprise/ContextInfo;)Landroid/app/enterprise/ContextInfo;
 
     move-result-object p1
 
-    .line 1920
     invoke-static {p1}, Lcom/android/server/enterprise/EnterpriseDeviceManagerService;->getCallingOrCurrentUserId(Landroid/app/enterprise/ContextInfo;)I
 
     move-result v1
 
-    .line 1922
     .local v1, "userId":I
     invoke-direct {p0, v1}, Lcom/android/server/enterprise/sso/GenericSSOService;->getSSOConfigForUserId(I)Lcom/android/server/enterprise/sso/GenericSSOService$RequestConfigDocument;
 
     move-result-object v0
 
-    .line 1923
     .local v0, "configDoc":Lcom/android/server/enterprise/sso/GenericSSOService$RequestConfigDocument;
     if-eqz v0, :cond_0
 
-    .line 1924
     # invokes: Lcom/android/server/enterprise/sso/GenericSSOService$RequestConfigDocument;->getEnrolledSSOPackageName()Ljava/lang/String;
     invoke-static {v0}, Lcom/android/server/enterprise/sso/GenericSSOService$RequestConfigDocument;->access$1200(Lcom/android/server/enterprise/sso/GenericSSOService$RequestConfigDocument;)Ljava/lang/String;
 
     move-result-object v2
 
-    .line 1926
     :goto_0
     return-object v2
 
@@ -16020,7 +14330,6 @@
     .param p3, "callback"    # Landroid/app/enterprise/sso/IGenericSSOCallback;
 
     .prologue
-    .line 3699
     :try_start_0
     invoke-direct {p0}, Lcom/android/server/enterprise/sso/GenericSSOService;->isNetworkAvailable()Z
 
@@ -16028,68 +14337,56 @@
 
     if-nez v11, :cond_1
 
-    .line 3700
     const-string v11, "GenericSSOService"
 
     const-string v12, "In getToken: Checking networking connection - Failed."
 
     invoke-static {v11, v12}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 3702
     if-eqz p3, :cond_0
 
-    .line 3703
     const/16 v11, -0xf
 
     move-object/from16 v0, p3
 
     invoke-interface {v0, v11}, Landroid/app/enterprise/sso/IGenericSSOCallback;->onFail(I)V
 
-    .line 3777
     :cond_0
     :goto_0
     return-void
 
-    .line 3706
     :cond_1
     invoke-static {p1}, Lcom/android/server/enterprise/EnterpriseDeviceManagerService;->getCallingOrCurrentUserId(Landroid/app/enterprise/ContextInfo;)I
 
     move-result v10
 
-    .line 3708
     .local v10, "userId":I
     invoke-direct {p0, v10}, Lcom/android/server/enterprise/sso/GenericSSOService;->getSSOConfigForUserId(I)Lcom/android/server/enterprise/sso/GenericSSOService$RequestConfigDocument;
 
     move-result-object v2
 
-    .line 3709
     .local v2, "configDoc":Lcom/android/server/enterprise/sso/GenericSSOService$RequestConfigDocument;
     # invokes: Lcom/android/server/enterprise/sso/GenericSSOService$RequestConfigDocument;->getEnrolledSSOVendor()Lorg/w3c/dom/Node;
     invoke-static {v2}, Lcom/android/server/enterprise/sso/GenericSSOService$RequestConfigDocument;->access$600(Lcom/android/server/enterprise/sso/GenericSSOService$RequestConfigDocument;)Lorg/w3c/dom/Node;
 
     move-result-object v8
 
-    .line 3710
     .local v8, "ssoNode":Lorg/w3c/dom/Node;
     if-nez v8, :cond_3
 
-    .line 3711
     sget-boolean v11, Landroid/app/enterprise/sso/GenericSSOConstants;->DEBUG:Z
 
     if-eqz v11, :cond_2
 
-    .line 3712
     const-string v11, "GenericSSOService"
 
     const-string v12, "In getToken: the SSO Vendor is not registered"
 
     invoke-static {v11, v12}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 3713
     :cond_2
     if-eqz p3, :cond_0
 
-    .line 3714
     const/4 v11, -0x6
 
     move-object/from16 v0, p3
@@ -16101,14 +14398,12 @@
 
     goto :goto_0
 
-    .line 3770
     .end local v2    # "configDoc":Lcom/android/server/enterprise/sso/GenericSSOService$RequestConfigDocument;
     .end local v8    # "ssoNode":Lorg/w3c/dom/Node;
     .end local v10    # "userId":I
     :catch_0
     move-exception v5
 
-    .line 3772
     .local v5, "npe":Ljava/lang/NullPointerException;
     const-string v11, "GenericSSOService"
 
@@ -16118,7 +14413,6 @@
 
     goto :goto_0
 
-    .line 3717
     .end local v5    # "npe":Ljava/lang/NullPointerException;
     .restart local v2    # "configDoc":Lcom/android/server/enterprise/sso/GenericSSOService$RequestConfigDocument;
     .restart local v8    # "ssoNode":Lorg/w3c/dom/Node;
@@ -16129,7 +14423,6 @@
 
     move-result v7
 
-    .line 3718
     .local v7, "pid":I
     const/4 v11, 0x0
 
@@ -16137,7 +14430,6 @@
 
     move-result-object v6
 
-    .line 3719
     .local v6, "packageName":Ljava/lang/String;
     invoke-direct {p0, v6}, Lcom/android/server/enterprise/sso/GenericSSOService;->isNullOrEmpty(Ljava/lang/String;)Z
 
@@ -16145,12 +14437,10 @@
 
     if-eqz v11, :cond_5
 
-    .line 3720
     sget-boolean v11, Landroid/app/enterprise/sso/GenericSSOConstants;->DEBUG:Z
 
     if-eqz v11, :cond_4
 
-    .line 3721
     const-string v11, "GenericSSOService"
 
     new-instance v12, Ljava/lang/StringBuilder;
@@ -16173,11 +14463,9 @@
 
     invoke-static {v11, v12}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 3724
     :cond_4
     if-eqz p3, :cond_0
 
-    .line 3725
     const/4 v11, -0x1
 
     move-object/from16 v0, p3
@@ -16189,7 +14477,6 @@
 
     goto :goto_0
 
-    .line 3773
     .end local v2    # "configDoc":Lcom/android/server/enterprise/sso/GenericSSOService$RequestConfigDocument;
     .end local v6    # "packageName":Ljava/lang/String;
     .end local v7    # "pid":I
@@ -16198,7 +14485,6 @@
     :catch_1
     move-exception v3
 
-    .line 3775
     .local v3, "e":Ljava/lang/Exception;
     const-string v11, "GenericSSOService"
 
@@ -16208,7 +14494,6 @@
 
     goto :goto_0
 
-    .line 3730
     .end local v3    # "e":Ljava/lang/Exception;
     .restart local v2    # "configDoc":Lcom/android/server/enterprise/sso/GenericSSOService$RequestConfigDocument;
     .restart local v6    # "packageName":Ljava/lang/String;
@@ -16221,7 +14506,6 @@
 
     move-result-object v1
 
-    .line 3732
     .local v1, "configData":Landroid/os/Bundle;
     invoke-direct {p0, v7, v6, v1}, Lcom/android/server/enterprise/sso/GenericSSOService;->callingAppIsPermitted(ILjava/lang/String;Landroid/os/Bundle;)Z
 
@@ -16229,12 +14513,10 @@
 
     if-nez v11, :cond_7
 
-    .line 3733
     sget-boolean v11, Landroid/app/enterprise/sso/GenericSSOConstants;->DEBUG:Z
 
     if-eqz v11, :cond_6
 
-    .line 3734
     const-string v11, "GenericSSOService"
 
     new-instance v12, Ljava/lang/StringBuilder;
@@ -16263,11 +14545,9 @@
 
     invoke-static {v11, v12}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 3736
     :cond_6
     if-eqz p3, :cond_0
 
-    .line 3737
     const/4 v11, -0x7
 
     move-object/from16 v0, p3
@@ -16276,35 +14556,28 @@
 
     goto/16 :goto_0
 
-    .line 3741
     :cond_7
     invoke-direct {p0, v10, v6}, Lcom/android/server/enterprise/sso/GenericSSOService;->getConfigData(ILjava/lang/String;)Landroid/os/Bundle;
 
     move-result-object v1
 
-    .line 3742
     if-eqz p2, :cond_8
 
-    .line 3743
     invoke-direct {p0, p1, v1}, Lcom/android/server/enterprise/sso/GenericSSOService;->getTokenFromLocalCache(Landroid/app/enterprise/ContextInfo;Landroid/os/Bundle;)Landroid/app/enterprise/sso/TokenInfo;
 
     move-result-object v9
 
-    .line 3745
     .local v9, "tokenCached":Landroid/app/enterprise/sso/TokenInfo;
     if-eqz v9, :cond_8
 
-    .line 3746
     if-eqz p3, :cond_0
 
-    .line 3747
     move-object/from16 v0, p3
 
     invoke-interface {v0, v9}, Landroid/app/enterprise/sso/IGenericSSOCallback;->tokenInfoSuccess(Landroid/app/enterprise/sso/TokenInfo;)V
 
     goto/16 :goto_0
 
-    .line 3752
     .end local v9    # "tokenCached":Landroid/app/enterprise/sso/TokenInfo;
     :cond_8
     invoke-direct {p0, v10, v1}, Lcom/android/server/enterprise/sso/GenericSSOService;->installedServiceIsPermitted(ILandroid/os/Bundle;)Z
@@ -16313,23 +14586,19 @@
 
     if-nez v11, :cond_a
 
-    .line 3753
     sget-boolean v11, Landroid/app/enterprise/sso/GenericSSOConstants;->DEBUG:Z
 
     if-eqz v11, :cond_9
 
-    .line 3754
     const-string v11, "GenericSSOService"
 
     const-string v12, "In getToken: Fail to pass the service package cert check"
 
     invoke-static {v11, v12}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 3756
     :cond_9
     if-eqz p3, :cond_0
 
-    .line 3757
     const/16 v11, -0xd
 
     move-object/from16 v0, p3
@@ -16338,7 +14607,6 @@
 
     goto/16 :goto_0
 
-    .line 3764
     :cond_a
     invoke-direct {p0}, Lcom/android/server/enterprise/sso/GenericSSOService;->getHandler()Landroid/os/Handler;
 
@@ -16350,19 +14618,15 @@
 
     move-result-object v4
 
-    .line 3765
     .local v4, "message":Landroid/os/Message;
     iput v10, v4, Landroid/os/Message;->arg1:I
 
-    .line 3766
     move-object/from16 v0, p3
 
     iput-object v0, v4, Landroid/os/Message;->obj:Ljava/lang/Object;
 
-    .line 3767
     invoke-virtual {v4, v1}, Landroid/os/Message;->setData(Landroid/os/Bundle;)V
 
-    .line 3768
     invoke-direct {p0}, Lcom/android/server/enterprise/sso/GenericSSOService;->getHandler()Landroid/os/Handler;
 
     move-result-object v11
@@ -16380,18 +14644,15 @@
     .param p1, "cxtInfo"    # Landroid/app/enterprise/ContextInfo;
 
     .prologue
-    .line 3198
     invoke-static {p1}, Lcom/android/server/enterprise/EnterpriseDeviceManagerService;->getCallingOrCurrentUserId(Landroid/app/enterprise/ContextInfo;)I
 
     move-result v2
 
-    .line 3200
     .local v2, "userId":I
     invoke-static {}, Landroid/os/Binder;->getCallingPid()I
 
     move-result v1
 
-    .line 3201
     .local v1, "pid":I
     const/4 v3, 0x0
 
@@ -16399,7 +14660,6 @@
 
     move-result-object v0
 
-    .line 3202
     .local v0, "packageName":Ljava/lang/String;
     invoke-direct {p0, v2, v0}, Lcom/android/server/enterprise/sso/GenericSSOService;->vendorPermissionCheck(ILjava/lang/String;)Z
 
@@ -16407,23 +14667,19 @@
 
     if-nez v3, :cond_1
 
-    .line 3203
     sget-boolean v3, Landroid/app/enterprise/sso/GenericSSOConstants;->DEBUG:Z
 
     if-eqz v3, :cond_0
 
-    .line 3204
     const-string v3, "GenericSSOService"
 
     const-string v4, "In getUserAndDeviceCertFromGenericSSO: authenticator is not permitted to call this API"
 
     invoke-static {v3, v4}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 3206
     :cond_0
     const/4 v3, 0x0
 
-    .line 3209
     :goto_0
     return-object v3
 
@@ -16441,7 +14697,6 @@
     .param p2, "callback"    # Landroid/app/enterprise/sso/IGenericSSOCallback;
 
     .prologue
-    .line 3781
     :try_start_0
     invoke-direct {p0}, Lcom/android/server/enterprise/sso/GenericSSOService;->isNetworkAvailable()Z
 
@@ -16449,66 +14704,54 @@
 
     if-nez v8, :cond_1
 
-    .line 3782
     const-string v8, "GenericSSOService"
 
     const-string v9, "In getUserInfo: Checking networking connection - Failed."
 
     invoke-static {v8, v9}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 3784
     if-eqz p2, :cond_0
 
-    .line 3785
     const/16 v8, -0xf
 
     invoke-interface {p2, v8}, Landroid/app/enterprise/sso/IGenericSSOCallback;->onFail(I)V
 
-    .line 3833
     :cond_0
     :goto_0
     return-void
 
-    .line 3788
     :cond_1
     invoke-static {p1}, Lcom/android/server/enterprise/EnterpriseDeviceManagerService;->getCallingOrCurrentUserId(Landroid/app/enterprise/ContextInfo;)I
 
     move-result v7
 
-    .line 3790
     .local v7, "userId":I
     invoke-direct {p0, v7}, Lcom/android/server/enterprise/sso/GenericSSOService;->getSSOConfigForUserId(I)Lcom/android/server/enterprise/sso/GenericSSOService$RequestConfigDocument;
 
     move-result-object v1
 
-    .line 3791
     .local v1, "configDoc":Lcom/android/server/enterprise/sso/GenericSSOService$RequestConfigDocument;
     # invokes: Lcom/android/server/enterprise/sso/GenericSSOService$RequestConfigDocument;->getEnrolledSSOVendor()Lorg/w3c/dom/Node;
     invoke-static {v1}, Lcom/android/server/enterprise/sso/GenericSSOService$RequestConfigDocument;->access$600(Lcom/android/server/enterprise/sso/GenericSSOService$RequestConfigDocument;)Lorg/w3c/dom/Node;
 
     move-result-object v6
 
-    .line 3792
     .local v6, "ssoNode":Lorg/w3c/dom/Node;
     if-nez v6, :cond_3
 
-    .line 3793
     sget-boolean v8, Landroid/app/enterprise/sso/GenericSSOConstants;->DEBUG:Z
 
     if-eqz v8, :cond_2
 
-    .line 3794
     const-string v8, "GenericSSOService"
 
     const-string v9, "In getToken: the SSO Vendor is not registered"
 
     invoke-static {v8, v9}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 3795
     :cond_2
     if-eqz p2, :cond_0
 
-    .line 3796
     const/4 v8, -0x6
 
     invoke-interface {p2, v8}, Landroid/app/enterprise/sso/IGenericSSOCallback;->onFail(I)V
@@ -16517,14 +14760,12 @@
 
     goto :goto_0
 
-    .line 3829
     .end local v1    # "configDoc":Lcom/android/server/enterprise/sso/GenericSSOService$RequestConfigDocument;
     .end local v6    # "ssoNode":Lorg/w3c/dom/Node;
     .end local v7    # "userId":I
     :catch_0
     move-exception v2
 
-    .line 3831
     .local v2, "e":Ljava/lang/Exception;
     const-string v8, "GenericSSOService"
 
@@ -16534,7 +14775,6 @@
 
     goto :goto_0
 
-    .line 3799
     .end local v2    # "e":Ljava/lang/Exception;
     .restart local v1    # "configDoc":Lcom/android/server/enterprise/sso/GenericSSOService$RequestConfigDocument;
     .restart local v6    # "ssoNode":Lorg/w3c/dom/Node;
@@ -16545,7 +14785,6 @@
 
     move-result v5
 
-    .line 3800
     .local v5, "pid":I
     const/4 v8, 0x0
 
@@ -16553,13 +14792,11 @@
 
     move-result-object v4
 
-    .line 3801
     .local v4, "packageName":Ljava/lang/String;
     invoke-direct {p0, v7, v4}, Lcom/android/server/enterprise/sso/GenericSSOService;->getConfigDataForPkgName(ILjava/lang/String;)Landroid/os/Bundle;
 
     move-result-object v0
 
-    .line 3803
     .local v0, "configData":Landroid/os/Bundle;
     invoke-direct {p0, v5, v4, v0}, Lcom/android/server/enterprise/sso/GenericSSOService;->callingAppIsPermitted(ILjava/lang/String;Landroid/os/Bundle;)Z
 
@@ -16567,12 +14804,10 @@
 
     if-nez v8, :cond_5
 
-    .line 3804
     sget-boolean v8, Landroid/app/enterprise/sso/GenericSSOConstants;->DEBUG:Z
 
     if-eqz v8, :cond_4
 
-    .line 3805
     const-string v8, "GenericSSOService"
 
     new-instance v9, Ljava/lang/StringBuilder;
@@ -16601,54 +14836,45 @@
 
     invoke-static {v8, v9}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 3807
     :cond_4
     if-eqz p2, :cond_0
 
-    .line 3808
     const/4 v8, -0x7
 
     invoke-interface {p2, v8}, Landroid/app/enterprise/sso/IGenericSSOCallback;->onFail(I)V
 
     goto :goto_0
 
-    .line 3813
     :cond_5
     invoke-direct {p0, v7, v4}, Lcom/android/server/enterprise/sso/GenericSSOService;->getConfigData(ILjava/lang/String;)Landroid/os/Bundle;
 
     move-result-object v0
 
-    .line 3814
     invoke-direct {p0, v7, v0}, Lcom/android/server/enterprise/sso/GenericSSOService;->installedServiceIsPermitted(ILandroid/os/Bundle;)Z
 
     move-result v8
 
     if-nez v8, :cond_7
 
-    .line 3815
     sget-boolean v8, Landroid/app/enterprise/sso/GenericSSOConstants;->DEBUG:Z
 
     if-eqz v8, :cond_6
 
-    .line 3816
     const-string v8, "GenericSSOService"
 
     const-string v9, "In getUserInfo: Fail to pass the service package cert check"
 
     invoke-static {v8, v9}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 3818
     :cond_6
     if-eqz p2, :cond_0
 
-    .line 3819
     const/16 v8, -0xd
 
     invoke-interface {p2, v8}, Landroid/app/enterprise/sso/IGenericSSOCallback;->onFail(I)V
 
     goto/16 :goto_0
 
-    .line 3824
     :cond_7
     invoke-direct {p0}, Lcom/android/server/enterprise/sso/GenericSSOService;->getHandler()Landroid/os/Handler;
 
@@ -16660,17 +14886,13 @@
 
     move-result-object v3
 
-    .line 3825
     .local v3, "message":Landroid/os/Message;
     iput v7, v3, Landroid/os/Message;->arg1:I
 
-    .line 3826
     iput-object p2, v3, Landroid/os/Message;->obj:Ljava/lang/Object;
 
-    .line 3827
     invoke-virtual {v3, v0}, Landroid/os/Message;->setData(Landroid/os/Bundle;)V
 
-    .line 3828
     invoke-direct {p0}, Lcom/android/server/enterprise/sso/GenericSSOService;->getHandler()Landroid/os/Handler;
 
     move-result-object v8
@@ -16700,17 +14922,14 @@
     .prologue
     const/4 v8, 0x0
 
-    .line 2539
     invoke-direct {p0, p1}, Lcom/android/server/enterprise/sso/GenericSSOService;->enforceKnoxSSOPermission(Landroid/app/enterprise/ContextInfo;)Landroid/app/enterprise/ContextInfo;
 
     move-result-object p1
 
-    .line 2541
     invoke-static {p1}, Lcom/android/server/enterprise/EnterpriseDeviceManagerService;->getCallingOrCurrentUserId(Landroid/app/enterprise/ContextInfo;)I
 
     move-result v7
 
-    .line 2543
     .local v7, "userId":I
     invoke-virtual {p0, p1}, Lcom/android/server/enterprise/sso/GenericSSOService;->getEnrolledSSOVendor(Landroid/app/enterprise/ContextInfo;)Ljava/lang/String;
 
@@ -16718,12 +14937,10 @@
 
     if-nez v9, :cond_2
 
-    .line 2544
     sget-boolean v9, Landroid/app/enterprise/sso/GenericSSOConstants;->DEBUG:Z
 
     if-eqz v9, :cond_0
 
-    .line 2545
     const-string v9, "GenericSSOService"
 
     const-string v10, "In getWhiteListPackages: No SSO Vendors have been enrolled."
@@ -16733,38 +14950,32 @@
     :cond_0
     move-object v5, v8
 
-    .line 2573
     :cond_1
     :goto_0
     return-object v5
 
-    .line 2550
     :cond_2
     :try_start_0
     invoke-direct {p0, v7}, Lcom/android/server/enterprise/sso/GenericSSOService;->getSSOConfigForUserId(I)Lcom/android/server/enterprise/sso/GenericSSOService$RequestConfigDocument;
 
     move-result-object v1
 
-    .line 2551
     .local v1, "configDoc":Lcom/android/server/enterprise/sso/GenericSSOService$RequestConfigDocument;
     # invokes: Lcom/android/server/enterprise/sso/GenericSSOService$RequestConfigDocument;->getEnrolledSSOVendor()Lorg/w3c/dom/Node;
     invoke-static {v1}, Lcom/android/server/enterprise/sso/GenericSSOService$RequestConfigDocument;->access$600(Lcom/android/server/enterprise/sso/GenericSSOService$RequestConfigDocument;)Lorg/w3c/dom/Node;
 
     move-result-object v6
 
-    .line 2552
     .local v6, "parent":Lorg/w3c/dom/Node;
     invoke-interface {v6}, Lorg/w3c/dom/Node;->getChildNodes()Lorg/w3c/dom/NodeList;
 
     move-result-object v0
 
-    .line 2553
     .local v0, "children":Lorg/w3c/dom/NodeList;
     new-instance v5, Ljava/util/ArrayList;
 
     invoke-direct {v5}, Ljava/util/ArrayList;-><init>()V
 
-    .line 2554
     .local v5, "packageList":Ljava/util/ArrayList;, "Ljava/util/ArrayList<Ljava/lang/String;>;"
     const/4 v3, 0x0
 
@@ -16776,12 +14987,10 @@
 
     if-ge v3, v9, :cond_1
 
-    .line 2555
     invoke-interface {v0, v3}, Lorg/w3c/dom/NodeList;->item(I)Lorg/w3c/dom/Node;
 
     move-result-object v4
 
-    .line 2556
     .local v4, "node":Lorg/w3c/dom/Node;
     invoke-interface {v4}, Lorg/w3c/dom/Node;->getNodeType()S
 
@@ -16795,7 +15004,7 @@
 
     move-result-object v9
 
-    const-string/jumbo v10, "whitelistpackage"
+    const-string v10, "whitelistpackage"
 
     invoke-virtual {v9, v10}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
@@ -16803,7 +15012,6 @@
 
     if-eqz v9, :cond_3
 
-    .line 2558
     invoke-interface {v4}, Lorg/w3c/dom/Node;->getAttributes()Lorg/w3c/dom/NamedNodeMap;
 
     move-result-object v9
@@ -16823,13 +15031,11 @@
     .catch Ljava/lang/NullPointerException; {:try_start_0 .. :try_end_0} :catch_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_1
 
-    .line 2554
     :cond_3
     add-int/lit8 v3, v3, 0x1
 
     goto :goto_1
 
-    .line 2566
     .end local v0    # "children":Lorg/w3c/dom/NodeList;
     .end local v1    # "configDoc":Lcom/android/server/enterprise/sso/GenericSSOService$RequestConfigDocument;
     .end local v3    # "i":I
@@ -16839,7 +15045,6 @@
     :catch_0
     move-exception v2
 
-    .line 2568
     .local v2, "e":Ljava/lang/NullPointerException;
     const-string v9, "GenericSSOService"
 
@@ -16851,14 +15056,11 @@
     :goto_2
     move-object v5, v8
 
-    .line 2573
     goto :goto_0
 
-    .line 2569
     :catch_1
     move-exception v2
 
-    .line 2571
     .local v2, "e":Ljava/lang/Exception;
     const-string v9, "GenericSSOService"
 
@@ -16874,7 +15076,6 @@
     .param p1, "uid"    # I
 
     .prologue
-    .line 4366
     return-void
 .end method
 
@@ -16883,12 +15084,10 @@
     .param p1, "uid"    # I
 
     .prologue
-    .line 4379
     sget-boolean v9, Landroid/app/enterprise/sso/GenericSSOConstants;->DEBUG:Z
 
     if-eqz v9, :cond_0
 
-    .line 4380
     const-string v9, "GenericSSOService"
 
     new-instance v10, Ljava/lang/StringBuilder;
@@ -16911,13 +15110,11 @@
 
     invoke-static {v9, v10}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 4381
     :cond_0
     invoke-static {p1}, Landroid/os/UserHandle;->getUserId(I)I
 
     move-result v8
 
-    .line 4386
     .local v8, "userId":I
     :try_start_0
     invoke-direct {p0, v8, p1}, Lcom/android/server/enterprise/sso/GenericSSOService;->isCallingMDMMatch(II)Z
@@ -16926,24 +15123,20 @@
 
     if-nez v9, :cond_2
 
-    .line 4387
     sget-boolean v9, Landroid/app/enterprise/sso/GenericSSOConstants;->DEBUG:Z
 
     if-eqz v9, :cond_1
 
-    .line 4388
     const-string v9, "GenericSSOService"
 
     const-string v10, "On onAdminRemoved: MDM uid is not matched"
 
     invoke-static {v9, v10}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 4476
     :cond_1
     :goto_0
     return-void
 
-    .line 4393
     :cond_2
     invoke-direct {p0, v8}, Lcom/android/server/enterprise/sso/GenericSSOService;->unregisterByAuthenticator(I)I
 
@@ -16951,23 +15144,19 @@
 
     if-eqz v9, :cond_3
 
-    .line 4394
     sget-boolean v9, Landroid/app/enterprise/sso/GenericSSOConstants;->DEBUG:Z
 
     if-eqz v9, :cond_3
 
-    .line 4395
     const-string v9, "GenericSSOService"
 
     const-string v10, "onAdminRemoved: Fail to clear records remotely"
 
     invoke-static {v9, v10}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 4398
     :cond_3
     const/4 v5, 0x0
 
-    .line 4399
     .local v5, "sendBroadcast":Z
     sget-object v9, Lcom/android/server/enterprise/sso/GenericSSOService;->requestConfigXMLDocs:Landroid/util/SparseArray;
 
@@ -16977,11 +15166,9 @@
 
     check-cast v1, Lcom/android/server/enterprise/sso/GenericSSOService$RequestConfigDocument;
 
-    .line 4400
     .local v1, "configDoc":Lcom/android/server/enterprise/sso/GenericSSOService$RequestConfigDocument;
     if-eqz v1, :cond_4
 
-    .line 4401
     # invokes: Lcom/android/server/enterprise/sso/GenericSSOService$RequestConfigDocument;->getEnrolledSSOPackageName()Ljava/lang/String;
     invoke-static {v1}, Lcom/android/server/enterprise/sso/GenericSSOService$RequestConfigDocument;->access$1200(Lcom/android/server/enterprise/sso/GenericSSOService$RequestConfigDocument;)Ljava/lang/String;
 
@@ -16989,39 +15176,31 @@
 
     if-eqz v9, :cond_4
 
-    .line 4403
     const/4 v5, 0x1
 
-    .line 4407
     :cond_4
     sget-object v9, Lcom/android/server/enterprise/sso/GenericSSOService;->requestConfigXMLDocs:Landroid/util/SparseArray;
 
     invoke-virtual {v9, v8}, Landroid/util/SparseArray;->delete(I)V
 
-    .line 4408
     sget-object v9, Lcom/android/server/enterprise/sso/GenericSSOService;->tokenConfigXMLDocs:Landroid/util/SparseArray;
 
     invoke-virtual {v9, v8}, Landroid/util/SparseArray;->delete(I)V
 
-    .line 4409
     const/4 v9, 0x0
 
     sput-object v9, Lcom/android/server/enterprise/sso/GenericSSOService;->mSecretKey:Ljava/security/Key;
 
-    .line 4410
     const/4 v9, 0x0
 
     sput-object v9, Lcom/android/server/enterprise/sso/GenericSSOService;->mKeyPair:Ljava/security/KeyPair;
 
-    .line 4411
     const/4 v9, 0x0
 
     sput-object v9, Lcom/android/server/enterprise/sso/GenericSSOService;->sSecretKeyFromAndroidKeyStore:Ljavax/crypto/SecretKey;
 
-    .line 4415
     const/4 v3, 0x0
 
-    .line 4416
     .local v3, "file":Ljava/io/File;
     sget-object v9, Lcom/android/server/enterprise/sso/GenericSSOService;->requestConfigXMLDocs:Landroid/util/SparseArray;
 
@@ -17035,24 +15214,21 @@
 
     if-nez v9, :cond_7
 
-    .line 4418
     :cond_5
     invoke-static {}, Landroid/os/Binder;->clearCallingIdentity()J
 
     move-result-wide v6
 
-    .line 4419
     .local v6, "token":J
     invoke-direct {p0}, Lcom/android/server/enterprise/sso/GenericSSOService;->initKeyStore()V
 
-    .line 4420
     sget-object v9, Lcom/android/server/enterprise/sso/GenericSSOService;->mKeystore:Ljava/security/KeyStore;
 
     invoke-virtual {v9}, Ljava/security/KeyStore;->getType()Ljava/lang/String;
 
     move-result-object v9
 
-    const-string/jumbo v10, "timakeystore"
+    const-string v10, "timakeystore"
 
     invoke-virtual {v9, v10}, Ljava/lang/String;->equalsIgnoreCase(Ljava/lang/String;)Z
 
@@ -17060,10 +15236,8 @@
 
     if-eqz v9, :cond_9
 
-    .line 4421
     const-string v0, "GenericSSOService"
 
-    .line 4422
     .local v0, "alias":Ljava/lang/String;
     sget-object v9, Lcom/android/server/enterprise/sso/GenericSSOService;->mKeystore:Ljava/security/KeyStore;
 
@@ -17073,76 +15247,62 @@
 
     if-eqz v9, :cond_6
 
-    .line 4423
     sget-object v9, Lcom/android/server/enterprise/sso/GenericSSOService;->mKeystore:Ljava/security/KeyStore;
 
     invoke-virtual {v9, v0}, Ljava/security/KeyStore;->deleteEntry(Ljava/lang/String;)V
 
-    .line 4424
     sget-boolean v9, Landroid/app/enterprise/sso/GenericSSOConstants;->DEBUG:Z
 
     if-eqz v9, :cond_6
 
-    .line 4425
     const-string v9, "GenericSSOService"
 
     const-string v10, "onAdminRemoved: SecretKey is deleted from TIMAKeystore"
 
     invoke-static {v9, v10}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 4442
     .end local v0    # "alias":Ljava/lang/String;
     :cond_6
     :goto_1
     invoke-static {v6, v7}, Landroid/os/Binder;->restoreCallingIdentity(J)V
 
-    .line 4448
     .end local v6    # "token":J
     :cond_7
     if-nez v8, :cond_8
 
-    .line 4449
     invoke-direct {p0, v8}, Lcom/android/server/enterprise/sso/GenericSSOService;->getRequestConfigFilePath(I)Ljava/lang/String;
 
     move-result-object v4
 
-    .line 4450
     .local v4, "filepath":Ljava/lang/String;
     new-instance v3, Ljava/io/File;
 
     .end local v3    # "file":Ljava/io/File;
     invoke-direct {v3, v4}, Ljava/io/File;-><init>(Ljava/lang/String;)V
 
-    .line 4451
     .restart local v3    # "file":Ljava/io/File;
     invoke-virtual {v3}, Ljava/io/File;->delete()Z
 
-    .line 4453
     invoke-direct {p0, v8}, Lcom/android/server/enterprise/sso/GenericSSOService;->getTokenConfigFilePath(I)Ljava/lang/String;
 
     move-result-object v4
 
-    .line 4454
     new-instance v3, Ljava/io/File;
 
     .end local v3    # "file":Ljava/io/File;
     invoke-direct {v3, v4}, Ljava/io/File;-><init>(Ljava/lang/String;)V
 
-    .line 4455
     .restart local v3    # "file":Ljava/io/File;
     invoke-virtual {v3}, Ljava/io/File;->delete()Z
 
-    .line 4458
     const/4 v9, 0x1
 
     if-ne v5, v9, :cond_8
 
-    .line 4459
     invoke-static {}, Landroid/os/Binder;->clearCallingIdentity()J
 
     move-result-wide v6
 
-    .line 4460
     .restart local v6    # "token":J
     iget-object v9, p0, Lcom/android/server/enterprise/sso/GenericSSOService;->mContext:Landroid/content/Context;
 
@@ -17158,10 +15318,8 @@
 
     invoke-virtual {v9, v10, v11}, Landroid/content/Context;->sendBroadcastAsUser(Landroid/content/Intent;Landroid/os/UserHandle;)V
 
-    .line 4461
     invoke-static {v6, v7}, Landroid/os/Binder;->restoreCallingIdentity(J)V
 
-    .line 4464
     .end local v4    # "filepath":Ljava/lang/String;
     .end local v6    # "token":J
     :cond_8
@@ -17175,14 +15333,12 @@
 
     goto/16 :goto_0
 
-    .line 4465
     .end local v1    # "configDoc":Lcom/android/server/enterprise/sso/GenericSSOService$RequestConfigDocument;
     .end local v3    # "file":Ljava/io/File;
     .end local v5    # "sendBroadcast":Z
     :catch_0
     move-exception v2
 
-    .line 4466
     .local v2, "e":Ljava/lang/SecurityException;
     const-string v9, "GenericSSOService"
 
@@ -17192,7 +15348,6 @@
 
     goto/16 :goto_0
 
-    .line 4428
     .end local v2    # "e":Ljava/lang/SecurityException;
     .restart local v1    # "configDoc":Lcom/android/server/enterprise/sso/GenericSSOService$RequestConfigDocument;
     .restart local v3    # "file":Ljava/io/File;
@@ -17214,10 +15369,8 @@
 
     if-eqz v9, :cond_6
 
-    .line 4430
     const-string v0, "KnoxSSOKey"
 
-    .line 4431
     .restart local v0    # "alias":Ljava/lang/String;
     sget-object v9, Lcom/android/server/enterprise/sso/GenericSSOService;->mKeystore:Ljava/security/KeyStore;
 
@@ -17227,12 +15380,10 @@
 
     if-eqz v9, :cond_6
 
-    .line 4432
     sget-object v9, Lcom/android/server/enterprise/sso/GenericSSOService;->mKeystore:Ljava/security/KeyStore;
 
     invoke-virtual {v9, v0}, Ljava/security/KeyStore;->deleteEntry(Ljava/lang/String;)V
 
-    .line 4434
     new-instance v3, Ljava/io/File;
 
     .end local v3    # "file":Ljava/io/File;
@@ -17240,16 +15391,13 @@
 
     invoke-direct {v3, v9}, Ljava/io/File;-><init>(Ljava/lang/String;)V
 
-    .line 4436
     .restart local v3    # "file":Ljava/io/File;
     invoke-virtual {v3}, Ljava/io/File;->delete()Z
 
-    .line 4437
     sget-boolean v9, Landroid/app/enterprise/sso/GenericSSOConstants;->DEBUG:Z
 
     if-eqz v9, :cond_6
 
-    .line 4438
     const-string v9, "GenericSSOService"
 
     const-string v10, "onAdminRemoved: KeyPair is deleted from AndroidKeyStore, and SecretKey file is deleted"
@@ -17264,7 +15412,6 @@
 
     goto :goto_1
 
-    .line 4467
     .end local v0    # "alias":Ljava/lang/String;
     .end local v1    # "configDoc":Lcom/android/server/enterprise/sso/GenericSSOService$RequestConfigDocument;
     .end local v3    # "file":Ljava/io/File;
@@ -17273,7 +15420,6 @@
     :catch_1
     move-exception v2
 
-    .line 4468
     .local v2, "e":Ljava/security/NoSuchAlgorithmException;
     const-string v9, "GenericSSOService"
 
@@ -17283,12 +15429,10 @@
 
     goto/16 :goto_0
 
-    .line 4469
     .end local v2    # "e":Ljava/security/NoSuchAlgorithmException;
     :catch_2
     move-exception v2
 
-    .line 4470
     .local v2, "e":Ljava/security/KeyStoreException;
     const-string v9, "GenericSSOService"
 
@@ -17298,12 +15442,10 @@
 
     goto/16 :goto_0
 
-    .line 4471
     .end local v2    # "e":Ljava/security/KeyStoreException;
     :catch_3
     move-exception v2
 
-    .line 4472
     .local v2, "e":Ljava/io/IOException;
     const-string v9, "GenericSSOService"
 
@@ -17313,12 +15455,10 @@
 
     goto/16 :goto_0
 
-    .line 4473
     .end local v2    # "e":Ljava/io/IOException;
     :catch_4
     move-exception v2
 
-    .line 4474
     .local v2, "e":Ljava/lang/Exception;
     const-string v9, "GenericSSOService"
 
@@ -17334,12 +15474,10 @@
     .param p1, "uid"    # I
 
     .prologue
-    .line 4371
     sget-boolean v0, Landroid/app/enterprise/sso/GenericSSOConstants;->DEBUG:Z
 
     if-eqz v0, :cond_0
 
-    .line 4372
     const-string v0, "GenericSSOService"
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -17362,7 +15500,6 @@
 
     invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 4373
     :cond_0
     return-void
 .end method
@@ -17373,7 +15510,6 @@
     .param p2, "webServiceRequest"    # Landroid/app/enterprise/sso/WebServiceRequest;
 
     .prologue
-    .line 3889
     :try_start_0
     invoke-direct {p0}, Lcom/android/server/enterprise/sso/GenericSSOService;->isNetworkAvailable()Z
 
@@ -17381,34 +15517,28 @@
 
     if-nez v1, :cond_1
 
-    .line 3890
     const-string v1, "GenericSSOService"
 
     const-string v2, "In processWebServiceRequest: Checking networking connection - Failed."
 
     invoke-static {v1, v2}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 3892
     const/4 v11, 0x0
 
-    .line 3962
     :cond_0
     :goto_0
     return-object v11
 
-    .line 3894
     :cond_1
     invoke-static {p1}, Lcom/android/server/enterprise/EnterpriseDeviceManagerService;->getCallingOrCurrentUserId(Landroid/app/enterprise/ContextInfo;)I
 
     move-result v13
 
-    .line 3896
     .local v13, "userId":I
     invoke-static {}, Landroid/os/Binder;->getCallingPid()I
 
     move-result v9
 
-    .line 3897
     .local v9, "pid":I
     const/4 v1, 0x0
 
@@ -17416,13 +15546,11 @@
 
     move-result-object v8
 
-    .line 3898
     .local v8, "packageName":Ljava/lang/String;
     invoke-direct {p0, v13, v8}, Lcom/android/server/enterprise/sso/GenericSSOService;->getConfigDataForPkgName(ILjava/lang/String;)Landroid/os/Bundle;
 
     move-result-object v4
 
-    .line 3900
     .local v4, "configData":Landroid/os/Bundle;
     invoke-direct {p0, v9, v8, v4}, Lcom/android/server/enterprise/sso/GenericSSOService;->callingAppIsPermitted(ILjava/lang/String;Landroid/os/Bundle;)Z
 
@@ -17430,12 +15558,10 @@
 
     if-nez v1, :cond_3
 
-    .line 3901
     sget-boolean v1, Landroid/app/enterprise/sso/GenericSSOConstants;->DEBUG:Z
 
     if-eqz v1, :cond_2
 
-    .line 3902
     const-string v1, "GenericSSOService"
 
     new-instance v2, Ljava/lang/StringBuilder;
@@ -17464,46 +15590,39 @@
 
     invoke-static {v1, v2}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 3904
     :cond_2
     const/4 v11, 0x0
 
     goto :goto_0
 
-    .line 3906
     :cond_3
     invoke-direct {p0, v13, v8}, Lcom/android/server/enterprise/sso/GenericSSOService;->getConfigData(ILjava/lang/String;)Landroid/os/Bundle;
 
     move-result-object v4
 
-    .line 3907
     invoke-direct {p0, v13, v4}, Lcom/android/server/enterprise/sso/GenericSSOService;->installedServiceIsPermitted(ILandroid/os/Bundle;)Z
 
     move-result v1
 
     if-nez v1, :cond_5
 
-    .line 3908
     sget-boolean v1, Landroid/app/enterprise/sso/GenericSSOConstants;->DEBUG:Z
 
     if-eqz v1, :cond_4
 
-    .line 3909
     const-string v1, "GenericSSOService"
 
     const-string v2, "In processWebServiceRequest: Fail to pass the service package cert check"
 
     invoke-static {v1, v2}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 3911
     :cond_4
     const/4 v11, 0x0
 
     goto :goto_0
 
-    .line 3913
     :cond_5
-    const-string/jumbo v1, "servicepackagename"
+    const-string v1, "servicepackagename"
 
     invoke-virtual {v4, v1}, Landroid/os/Bundle;->getString(Ljava/lang/String;)Ljava/lang/String;
 
@@ -17513,64 +15632,53 @@
 
     move-result-object v10
 
-    .line 3915
     .local v10, "serviceIntent":Landroid/content/Intent;
     if-nez v10, :cond_7
 
-    .line 3916
     sget-boolean v1, Landroid/app/enterprise/sso/GenericSSOConstants;->DEBUG:Z
 
     if-eqz v1, :cond_6
 
-    .line 3917
     const-string v1, "GenericSSOService"
 
     const-string v2, "In processWebServiceRequest: cannot get SSO Service intent"
 
     invoke-static {v1, v2}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 3919
     :cond_6
     const/4 v11, 0x0
 
     goto :goto_0
 
-    .line 3923
     :cond_7
     invoke-direct {p0, v13, v10}, Lcom/android/server/enterprise/sso/GenericSSOService;->bindToService(ILandroid/content/Intent;)V
 
-    .line 3925
     invoke-direct {p0, v13}, Lcom/android/server/enterprise/sso/GenericSSOService;->getSSOService(I)Landroid/app/enterprise/sso/GenericSSOSupportSolution;
 
     move-result-object v12
 
-    .line 3926
     .local v12, "ssoService":Landroid/app/enterprise/sso/GenericSSOSupportSolution;
     if-nez v12, :cond_9
 
-    .line 3927
     sget-boolean v1, Landroid/app/enterprise/sso/GenericSSOConstants;->DEBUG:Z
 
     if-eqz v1, :cond_8
 
-    .line 3928
     const-string v1, "GenericSSOService"
 
     const-string v2, "In processWebServiceRequest: sso service is not ready to use"
 
     invoke-static {v1, v2}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 3930
     :cond_8
     const/4 v11, 0x0
 
     goto/16 :goto_0
 
-    .line 3933
     :cond_9
     new-instance v0, Landroid/app/enterprise/sso/AuthenticationRequest;
 
-    const-string/jumbo v1, "servicepackagename"
+    const-string v1, "servicepackagename"
 
     invoke-virtual {v4, v1}, Landroid/os/Bundle;->getString(Ljava/lang/String;)Ljava/lang/String;
 
@@ -17588,22 +15696,18 @@
 
     invoke-direct/range {v0 .. v5}, Landroid/app/enterprise/sso/AuthenticationRequest;-><init>(Ljava/lang/String;Ljava/lang/String;Landroid/app/enterprise/sso/TokenInfo;Landroid/os/Bundle;Landroid/app/enterprise/sso/WebServiceRequest;)V
 
-    .line 3939
     .local v0, "request":Landroid/app/enterprise/sso/AuthenticationRequest;
     invoke-interface {v12, v0}, Landroid/app/enterprise/sso/GenericSSOSupportSolution;->acquireWebService(Landroid/app/enterprise/sso/AuthenticationRequest;)Landroid/app/enterprise/sso/WebServiceResponse;
 
     move-result-object v11
 
-    .line 3942
     .local v11, "serviceResponse":Landroid/app/enterprise/sso/WebServiceResponse;
     if-nez v11, :cond_0
 
-    .line 3943
     sget-boolean v1, Landroid/app/enterprise/sso/GenericSSOConstants;->DEBUG:Z
 
     if-eqz v1, :cond_a
 
-    .line 3944
     const-string v1, "GenericSSOService"
 
     const-string v2, "In processWebServiceRequest: Fail to acquire valid service response from sso service"
@@ -17614,13 +15718,11 @@
     .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_1
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_2
 
-    .line 3946
     :cond_a
     const/4 v11, 0x0
 
     goto/16 :goto_0
 
-    .line 3950
     .end local v0    # "request":Landroid/app/enterprise/sso/AuthenticationRequest;
     .end local v4    # "configData":Landroid/os/Bundle;
     .end local v8    # "packageName":Ljava/lang/String;
@@ -17632,7 +15734,6 @@
     :catch_0
     move-exception v7
 
-    .line 3952
     .local v7, "npe":Ljava/lang/NullPointerException;
     const-string v1, "GenericSSOService"
 
@@ -17640,18 +15741,15 @@
 
     invoke-static {v1, v2, v7}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
-    .line 3962
     .end local v7    # "npe":Ljava/lang/NullPointerException;
     :goto_1
     const/4 v11, 0x0
 
     goto/16 :goto_0
 
-    .line 3955
     :catch_1
     move-exception v6
 
-    .line 3957
     .local v6, "e":Landroid/os/RemoteException;
     const-string v1, "GenericSSOService"
 
@@ -17661,12 +15759,10 @@
 
     goto :goto_1
 
-    .line 3958
     .end local v6    # "e":Landroid/os/RemoteException;
     :catch_2
     move-exception v6
 
-    .line 3960
     .local v6, "e":Ljava/lang/Exception;
     const-string v1, "GenericSSOService"
 
@@ -17683,38 +15779,32 @@
     .param p2, "appPkgName"    # Ljava/lang/String;
 
     .prologue
-    .line 3291
     invoke-direct {p0, p2}, Lcom/android/server/enterprise/sso/GenericSSOService;->isNullOrEmpty(Ljava/lang/String;)Z
 
     move-result v3
 
     if-eqz v3, :cond_0
 
-    .line 3292
     sget-boolean v3, Landroid/app/enterprise/sso/GenericSSOConstants;->DEBUG:Z
 
     if-eqz v3, :cond_0
 
-    .line 3293
     const-string v3, "GenericSSOService"
 
     const-string v4, "In removeAppTokenFromGenericSSO: appPkgName is null"
 
     invoke-static {v3, v4}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 3296
     :cond_0
     invoke-static {p1}, Lcom/android/server/enterprise/EnterpriseDeviceManagerService;->getCallingOrCurrentUserId(Landroid/app/enterprise/ContextInfo;)I
 
     move-result v2
 
-    .line 3298
     .local v2, "userId":I
     invoke-static {}, Landroid/os/Binder;->getCallingPid()I
 
     move-result v1
 
-    .line 3299
     .local v1, "pid":I
     const/4 v3, 0x0
 
@@ -17722,7 +15812,6 @@
 
     move-result-object v0
 
-    .line 3300
     .local v0, "packageName":Ljava/lang/String;
     invoke-direct {p0, v2, v0}, Lcom/android/server/enterprise/sso/GenericSSOService;->vendorPermissionCheck(ILjava/lang/String;)Z
 
@@ -17730,23 +15819,19 @@
 
     if-nez v3, :cond_2
 
-    .line 3301
     sget-boolean v3, Landroid/app/enterprise/sso/GenericSSOConstants;->DEBUG:Z
 
     if-eqz v3, :cond_1
 
-    .line 3302
     const-string v3, "GenericSSOService"
 
     const-string v4, "In removeAppTokenFromGenericSSO: authenticator is not permitted to call this API"
 
     invoke-static {v3, v4}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 3304
     :cond_1
     const/4 v3, -0x1
 
-    .line 3306
     :goto_0
     return v3
 
@@ -17763,18 +15848,15 @@
     .param p1, "cxtInfo"    # Landroid/app/enterprise/ContextInfo;
 
     .prologue
-    .line 3310
     invoke-static {p1}, Lcom/android/server/enterprise/EnterpriseDeviceManagerService;->getCallingOrCurrentUserId(Landroid/app/enterprise/ContextInfo;)I
 
     move-result v2
 
-    .line 3312
     .local v2, "userId":I
     invoke-static {}, Landroid/os/Binder;->getCallingPid()I
 
     move-result v1
 
-    .line 3313
     .local v1, "pid":I
     const/4 v3, 0x0
 
@@ -17782,7 +15864,6 @@
 
     move-result-object v0
 
-    .line 3314
     .local v0, "packageName":Ljava/lang/String;
     invoke-direct {p0, v2, v0}, Lcom/android/server/enterprise/sso/GenericSSOService;->vendorPermissionCheck(ILjava/lang/String;)Z
 
@@ -17790,23 +15871,19 @@
 
     if-nez v3, :cond_1
 
-    .line 3315
     sget-boolean v3, Landroid/app/enterprise/sso/GenericSSOConstants;->DEBUG:Z
 
     if-eqz v3, :cond_0
 
-    .line 3316
     const-string v3, "GenericSSOService"
 
     const-string v4, "In removeUserAndDeviceCertFromGenericSSO: authenticator is not permitted to call this API"
 
     invoke-static {v3, v4}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 3318
     :cond_0
     const/4 v3, -0x1
 
-    .line 3320
     :goto_0
     return v3
 
@@ -17824,41 +15901,33 @@
     .param p2, "bundle"    # Landroid/os/Bundle;
 
     .prologue
-    .line 2884
     invoke-direct/range {p0 .. p1}, Lcom/android/server/enterprise/sso/GenericSSOService;->enforceKnoxSSOPermission(Landroid/app/enterprise/ContextInfo;)Landroid/app/enterprise/ContextInfo;
 
     move-result-object p1
 
-    .line 2885
     if-nez p1, :cond_1
 
-    .line 2886
     sget-boolean v14, Landroid/app/enterprise/sso/GenericSSOConstants;->DEBUG:Z
 
     if-eqz v14, :cond_0
 
-    .line 2887
     const-string v14, "GenericSSOService"
 
     const-string v15, "In setCustomerBrandInfo: cxtInfo is null"
 
     invoke-static {v14, v15}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 2888
     :cond_0
     const/4 v14, -0x3
 
-    .line 2949
     :goto_0
     return v14
 
-    .line 2890
     :cond_1
     move-object/from16 v0, p1
 
     iget v8, v0, Landroid/app/enterprise/ContextInfo;->mCallerUid:I
 
-    .line 2892
     .local v8, "mdmUID":I
     move-object/from16 v0, p0
 
@@ -17870,32 +15939,27 @@
 
     if-eqz v14, :cond_3
 
-    .line 2893
     sget-boolean v14, Landroid/app/enterprise/sso/GenericSSOConstants;->DEBUG:Z
 
     if-eqz v14, :cond_2
 
-    .line 2894
     const-string v14, "GenericSSOService"
 
     const-string v15, "In setCustomizedBrandingInfo: invalid parameters"
 
     invoke-static {v14, v15}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 2895
     :cond_2
     const/4 v14, -0x3
 
     goto :goto_0
 
-    .line 2898
     :cond_3
     :try_start_0
     invoke-static/range {p1 .. p1}, Lcom/android/server/enterprise/EnterpriseDeviceManagerService;->getCallingOrCurrentUserId(Landroid/app/enterprise/ContextInfo;)I
 
     move-result v12
 
-    .line 2900
     .local v12, "userId":I
     move-object/from16 v0, p0
 
@@ -17905,31 +15969,26 @@
 
     if-nez v14, :cond_5
 
-    .line 2901
     sget-boolean v14, Landroid/app/enterprise/sso/GenericSSOConstants;->DEBUG:Z
 
     if-eqz v14, :cond_4
 
-    .line 2902
     const-string v14, "GenericSSOService"
 
     const-string v15, "In setCustomerBrandInfo: MDM uid is not matched"
 
     invoke-static {v14, v15}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 2904
     :cond_4
     const/16 v14, -0xa
 
     goto :goto_0
 
-    .line 2906
     :cond_5
     sget-boolean v14, Landroid/app/enterprise/sso/GenericSSOConstants;->DEBUG:Z
 
     if-eqz v14, :cond_6
 
-    .line 2907
     const-string v14, "GenericSSOService"
 
     new-instance v15, Ljava/lang/StringBuilder;
@@ -17952,7 +16011,6 @@
 
     invoke-static {v14, v15}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 2908
     :cond_6
     invoke-virtual/range {p0 .. p1}, Lcom/android/server/enterprise/sso/GenericSSOService;->getEnrolledSSOVendor(Landroid/app/enterprise/ContextInfo;)Ljava/lang/String;
 
@@ -17960,25 +16018,21 @@
 
     if-nez v14, :cond_8
 
-    .line 2909
     sget-boolean v14, Landroid/app/enterprise/sso/GenericSSOConstants;->DEBUG:Z
 
     if-eqz v14, :cond_7
 
-    .line 2910
     const-string v14, "GenericSSOService"
 
     const-string v15, "In setCustomizedBrandingInfo: No SSO Vendors have been enrolled."
 
     invoke-static {v14, v15}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 2912
     :cond_7
     const/4 v14, -0x6
 
     goto :goto_0
 
-    .line 2914
     :cond_8
     move-object/from16 v0, p0
 
@@ -17986,22 +16040,18 @@
 
     move-result-object v3
 
-    .line 2915
     .local v3, "configDoc":Lcom/android/server/enterprise/sso/GenericSSOService$RequestConfigDocument;
     # invokes: Lcom/android/server/enterprise/sso/GenericSSOService$RequestConfigDocument;->getEnrolledSSOVendor()Lorg/w3c/dom/Node;
     invoke-static {v3}, Lcom/android/server/enterprise/sso/GenericSSOService$RequestConfigDocument;->access$600(Lcom/android/server/enterprise/sso/GenericSSOService$RequestConfigDocument;)Lorg/w3c/dom/Node;
 
     move-result-object v10
 
-    .line 2916
     .local v10, "solution":Lorg/w3c/dom/Node;
     iget-object v4, v3, Lcom/android/server/enterprise/sso/GenericSSOService$RequestConfigDocument;->XMLDoc:Lorg/w3c/dom/Document;
 
-    .line 2918
     .local v4, "doc":Lorg/w3c/dom/Document;
     const/4 v2, 0x0
 
-    .line 2919
     .local v2, "brandInfo":Lorg/w3c/dom/Element;
     const-string v14, "customerbrand"
 
@@ -18017,17 +16067,14 @@
     .restart local v2    # "brandInfo":Lorg/w3c/dom/Element;
     if-nez v2, :cond_9
 
-    .line 2921
     const-string v14, "customerbrand"
 
     invoke-interface {v4, v14}, Lorg/w3c/dom/Document;->createElement(Ljava/lang/String;)Lorg/w3c/dom/Element;
 
     move-result-object v2
 
-    .line 2922
     invoke-interface {v10, v2}, Lorg/w3c/dom/Node;->appendChild(Lorg/w3c/dom/Node;)Lorg/w3c/dom/Node;
 
-    .line 2924
     :cond_9
     invoke-virtual/range {p2 .. p2}, Landroid/os/Bundle;->keySet()Ljava/util/Set;
 
@@ -18052,7 +16099,6 @@
 
     check-cast v7, Ljava/lang/String;
 
-    .line 2925
     .local v7, "key":Ljava/lang/String;
     move-object/from16 v0, p2
 
@@ -18060,7 +16106,6 @@
 
     move-result-object v13
 
-    .line 2926
     .local v13, "value":[B
     if-eqz v13, :cond_a
 
@@ -18068,10 +16113,8 @@
 
     if-lez v14, :cond_a
 
-    .line 2927
     const/4 v9, 0x0
 
-    .line 2928
     .local v9, "newNode":Lorg/w3c/dom/Element;
     move-object/from16 v0, p0
 
@@ -18085,15 +16128,12 @@
     .restart local v9    # "newNode":Lorg/w3c/dom/Element;
     if-nez v9, :cond_b
 
-    .line 2929
     invoke-interface {v4, v7}, Lorg/w3c/dom/Document;->createElement(Ljava/lang/String;)Lorg/w3c/dom/Element;
 
     move-result-object v9
 
-    .line 2930
     invoke-interface {v2, v9}, Lorg/w3c/dom/Element;->appendChild(Lorg/w3c/dom/Node;)Lorg/w3c/dom/Node;
 
-    .line 2932
     :cond_b
     new-instance v11, Ljava/lang/String;
 
@@ -18107,18 +16147,15 @@
 
     invoke-direct {v11, v14, v15}, Ljava/lang/String;-><init>([BLjava/lang/String;)V
 
-    .line 2934
     .local v11, "strValue":Ljava/lang/String;
-    const-string/jumbo v14, "value"
+    const-string v14, "value"
 
     invoke-interface {v9, v14, v11}, Lorg/w3c/dom/Element;->setAttribute(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 2935
     sget-boolean v14, Landroid/app/enterprise/sso/GenericSSOConstants;->DEBUG:Z
 
     if-eqz v14, :cond_a
 
-    .line 2936
     const-string v14, "GenericSSOService"
 
     new-instance v15, Ljava/lang/StringBuilder;
@@ -18162,7 +16199,6 @@
 
     goto :goto_1
 
-    .line 2942
     .end local v2    # "brandInfo":Lorg/w3c/dom/Element;
     .end local v3    # "configDoc":Lcom/android/server/enterprise/sso/GenericSSOService$RequestConfigDocument;
     .end local v4    # "doc":Lorg/w3c/dom/Document;
@@ -18176,7 +16212,6 @@
     :catch_0
     move-exception v5
 
-    .line 2944
     .local v5, "e":Ljava/lang/NullPointerException;
     const-string v14, "GenericSSOService"
 
@@ -18184,14 +16219,12 @@
 
     invoke-static {v14, v15, v5}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
-    .line 2949
     .end local v5    # "e":Ljava/lang/NullPointerException;
     :goto_2
     const/4 v14, -0x1
 
     goto/16 :goto_0
 
-    .line 2940
     .restart local v2    # "brandInfo":Lorg/w3c/dom/Element;
     .restart local v3    # "configDoc":Lcom/android/server/enterprise/sso/GenericSSOService$RequestConfigDocument;
     .restart local v4    # "doc":Lorg/w3c/dom/Document;
@@ -18207,12 +16240,10 @@
     .catch Ljava/lang/NullPointerException; {:try_start_1 .. :try_end_1} :catch_0
     .catch Ljava/lang/Exception; {:try_start_1 .. :try_end_1} :catch_1
 
-    .line 2941
     const/4 v14, 0x0
 
     goto/16 :goto_0
 
-    .line 2945
     .end local v2    # "brandInfo":Lorg/w3c/dom/Element;
     .end local v3    # "configDoc":Lcom/android/server/enterprise/sso/GenericSSOService$RequestConfigDocument;
     .end local v4    # "doc":Lorg/w3c/dom/Document;
@@ -18222,7 +16253,6 @@
     :catch_1
     move-exception v5
 
-    .line 2947
     .local v5, "e":Ljava/lang/Exception;
     const-string v14, "GenericSSOService"
 
@@ -18237,7 +16267,6 @@
     .locals 0
 
     .prologue
-    .line 4360
     return-void
 .end method
 
@@ -18249,42 +16278,34 @@
     .prologue
     const/4 v4, -0x3
 
-    .line 2147
     invoke-direct {p0, p1}, Lcom/android/server/enterprise/sso/GenericSSOService;->enforceKnoxSSOPermission(Landroid/app/enterprise/ContextInfo;)Landroid/app/enterprise/ContextInfo;
 
     move-result-object p1
 
-    .line 2148
     if-nez p1, :cond_1
 
-    .line 2149
     sget-boolean v8, Landroid/app/enterprise/sso/GenericSSOConstants;->DEBUG:Z
 
     if-eqz v8, :cond_0
 
-    .line 2150
     const-string v8, "GenericSSOService"
 
     const-string v9, "In unenrollSSOVendor: cxtInfo is null"
 
     invoke-static {v8, v9}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 2203
     :cond_0
     :goto_0
     return v4
 
-    .line 2153
     :cond_1
     iget v3, p1, Landroid/app/enterprise/ContextInfo;->mCallerUid:I
 
-    .line 2154
     .local v3, "mdmUid":I
     invoke-static {p1}, Lcom/android/server/enterprise/EnterpriseDeviceManagerService;->getCallingOrCurrentUserId(Landroid/app/enterprise/ContextInfo;)I
 
     move-result v5
 
-    .line 2156
     .local v5, "userId":I
     invoke-direct {p0, v5, v3}, Lcom/android/server/enterprise/sso/GenericSSOService;->isCallingMDMMatch(II)Z
 
@@ -18292,25 +16313,21 @@
 
     if-nez v8, :cond_3
 
-    .line 2157
     sget-boolean v8, Landroid/app/enterprise/sso/GenericSSOConstants;->DEBUG:Z
 
     if-eqz v8, :cond_2
 
-    .line 2158
     const-string v8, "GenericSSOService"
 
     const-string v9, "In unenrollSSOVendor: MDM uid is not matched"
 
     invoke-static {v8, v9}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 2159
     :cond_2
     const/16 v4, -0xa
 
     goto :goto_0
 
-    .line 2161
     :cond_3
     invoke-direct {p0, p2}, Lcom/android/server/enterprise/sso/GenericSSOService;->isNullOrEmpty(Ljava/lang/String;)Z
 
@@ -18318,12 +16335,10 @@
 
     if-eqz v8, :cond_4
 
-    .line 2162
     sget-boolean v8, Landroid/app/enterprise/sso/GenericSSOConstants;->DEBUG:Z
 
     if-eqz v8, :cond_0
 
-    .line 2163
     const-string v8, "GenericSSOService"
 
     const-string v9, "In unenrollSSOVendor: authenticatorPkgName is null or empty"
@@ -18332,21 +16347,18 @@
 
     goto :goto_0
 
-    .line 2168
     :cond_4
     :try_start_0
     invoke-direct {p0, v5}, Lcom/android/server/enterprise/sso/GenericSSOService;->getSSOConfigForUserId(I)Lcom/android/server/enterprise/sso/GenericSSOService$RequestConfigDocument;
 
     move-result-object v0
 
-    .line 2169
     .local v0, "configDoc":Lcom/android/server/enterprise/sso/GenericSSOService$RequestConfigDocument;
     # invokes: Lcom/android/server/enterprise/sso/GenericSSOService$RequestConfigDocument;->getEnrolledSSOVendor()Lorg/w3c/dom/Node;
     invoke-static {v0}, Lcom/android/server/enterprise/sso/GenericSSOService$RequestConfigDocument;->access$600(Lcom/android/server/enterprise/sso/GenericSSOService$RequestConfigDocument;)Lorg/w3c/dom/Node;
 
     move-result-object v2
 
-    .line 2170
     .local v2, "enrolledVendor":Lorg/w3c/dom/Node;
     if-eqz v2, :cond_5
 
@@ -18361,13 +16373,11 @@
 
     if-nez v8, :cond_7
 
-    .line 2173
     :cond_5
     sget-boolean v8, Landroid/app/enterprise/sso/GenericSSOConstants;->DEBUG:Z
 
     if-eqz v8, :cond_6
 
-    .line 2174
     const-string v8, "GenericSSOService"
 
     new-instance v9, Ljava/lang/StringBuilder;
@@ -18396,53 +16406,43 @@
 
     invoke-static {v8, v9}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 2176
     :cond_6
     const/4 v4, -0x6
 
     goto :goto_0
 
-    .line 2179
     :cond_7
     invoke-direct {p0, v5}, Lcom/android/server/enterprise/sso/GenericSSOService;->clearConfigAndTokenForAuthenticator(I)I
 
     move-result v4
 
-    .line 2180
     .local v4, "ret":I
     if-eqz v4, :cond_9
 
-    .line 2181
     sget-boolean v8, Landroid/app/enterprise/sso/GenericSSOConstants;->DEBUG:Z
 
     if-eqz v8, :cond_8
 
-    .line 2182
     const-string v8, "GenericSSOService"
 
     const-string v9, "In unenrollSSOVendor: failed clearConfigAndTokenFor Authenticator"
 
     invoke-static {v8, v9}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 2184
     :cond_8
     const/16 v4, -0x10
 
     goto :goto_0
 
-    .line 2187
     :cond_9
     invoke-direct {p0, v5}, Lcom/android/server/enterprise/sso/GenericSSOService;->cleanUpSSOConnections(I)V
 
-    .line 2188
     invoke-direct {p0, p2, v5}, Lcom/android/server/enterprise/sso/GenericSSOService;->stopAuthenticatorApplication(Ljava/lang/String;I)V
 
-    .line 2191
     invoke-static {}, Landroid/os/Binder;->clearCallingIdentity()J
 
     move-result-wide v6
 
-    .line 2192
     .local v6, "token":J
     iget-object v8, p0, Lcom/android/server/enterprise/sso/GenericSSOService;->mContext:Landroid/content/Context;
 
@@ -18458,7 +16458,6 @@
 
     invoke-virtual {v8, v9, v10}, Landroid/content/Context;->sendBroadcastAsUser(Landroid/content/Intent;Landroid/os/UserHandle;)V
 
-    .line 2193
     invoke-static {v6, v7}, Landroid/os/Binder;->restoreCallingIdentity(J)V
     :try_end_0
     .catch Ljava/lang/NullPointerException; {:try_start_0 .. :try_end_0} :catch_0
@@ -18466,7 +16465,6 @@
 
     goto/16 :goto_0
 
-    .line 2196
     .end local v0    # "configDoc":Lcom/android/server/enterprise/sso/GenericSSOService$RequestConfigDocument;
     .end local v2    # "enrolledVendor":Lorg/w3c/dom/Node;
     .end local v4    # "ret":I
@@ -18474,7 +16472,6 @@
     :catch_0
     move-exception v1
 
-    .line 2198
     .local v1, "e":Ljava/lang/NullPointerException;
     const-string v8, "GenericSSOService"
 
@@ -18482,18 +16479,15 @@
 
     invoke-static {v8, v9, v1}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
-    .line 2203
     .end local v1    # "e":Ljava/lang/NullPointerException;
     :goto_1
     const/4 v4, -0x1
 
     goto/16 :goto_0
 
-    .line 2199
     :catch_1
     move-exception v1
 
-    .line 2201
     .local v1, "e":Ljava/lang/Exception;
     const-string v8, "GenericSSOService"
 

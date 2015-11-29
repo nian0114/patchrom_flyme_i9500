@@ -23,7 +23,6 @@
     .locals 0
 
     .prologue
-    .line 97
     iput-object p1, p0, Landroid/content/pm/AbstractPersonaObserver$PersonaObserverReceiver;->this$0:Landroid/content/pm/AbstractPersonaObserver;
 
     invoke-direct {p0}, Landroid/content/BroadcastReceiver;-><init>()V
@@ -37,7 +36,6 @@
     .param p2, "x1"    # Landroid/content/pm/AbstractPersonaObserver$1;
 
     .prologue
-    .line 97
     invoke-direct {p0, p1}, Landroid/content/pm/AbstractPersonaObserver$PersonaObserverReceiver;-><init>(Landroid/content/pm/AbstractPersonaObserver;)V
 
     return-void
@@ -51,12 +49,10 @@
     .param p2, "intent"    # Landroid/content/Intent;
 
     .prologue
-    .line 102
     invoke-virtual {p2}, Landroid/content/Intent;->getCategories()Ljava/util/Set;
 
     move-result-object v0
 
-    .line 103
     .local v0, "categories":Ljava/util/Set;, "Ljava/util/Set<Ljava/lang/String;>;"
     iget-object v4, p0, Landroid/content/pm/AbstractPersonaObserver$PersonaObserverReceiver;->this$0:Landroid/content/pm/AbstractPersonaObserver;
 
@@ -75,7 +71,6 @@
 
     if-eqz v4, :cond_1
 
-    .line 105
     const-string v4, "com.sec.knox.container.extra.observer.newstate"
 
     invoke-virtual {p2, v4}, Landroid/content/Intent;->getStringExtra(Ljava/lang/String;)Ljava/lang/String;
@@ -86,7 +81,6 @@
 
     move-result-object v2
 
-    .line 106
     .local v2, "newState":Landroid/content/pm/PersonaState;
     const-string v4, "com.sec.knox.container.extra.observer.previousstate"
 
@@ -98,20 +92,17 @@
 
     move-result-object v3
 
-    .line 107
     .local v3, "previousState":Landroid/content/pm/PersonaState;
     iget-object v4, p0, Landroid/content/pm/AbstractPersonaObserver$PersonaObserverReceiver;->this$0:Landroid/content/pm/AbstractPersonaObserver;
 
     invoke-virtual {v4, v2, v3}, Landroid/content/pm/AbstractPersonaObserver;->onStateChange(Landroid/content/pm/PersonaState;Landroid/content/pm/PersonaState;)V
 
-    .line 120
     .end local v2    # "newState":Landroid/content/pm/PersonaState;
     .end local v3    # "previousState":Landroid/content/pm/PersonaState;
     :cond_0
     :goto_0
     return-void
 
-    .line 109
     :cond_1
     iget-object v4, p0, Landroid/content/pm/AbstractPersonaObserver$PersonaObserverReceiver;->this$0:Landroid/content/pm/AbstractPersonaObserver;
 
@@ -130,14 +121,12 @@
 
     if-eqz v4, :cond_2
 
-    .line 111
     iget-object v4, p0, Landroid/content/pm/AbstractPersonaObserver$PersonaObserverReceiver;->this$0:Landroid/content/pm/AbstractPersonaObserver;
 
     invoke-virtual {v4}, Landroid/content/pm/AbstractPersonaObserver;->onSessionExpired()V
 
     goto :goto_0
 
-    .line 113
     :cond_2
     iget-object v4, p0, Landroid/content/pm/AbstractPersonaObserver$PersonaObserverReceiver;->this$0:Landroid/content/pm/AbstractPersonaObserver;
 
@@ -156,7 +145,6 @@
 
     if-eqz v4, :cond_0
 
-    .line 115
     const-string v4, "com.sec.knox.container.extra.observer.keyguardstate"
 
     const/4 v5, 0x1
@@ -165,7 +153,6 @@
 
     move-result v1
 
-    .line 116
     .local v1, "enabled":Z
     iget-object v4, p0, Landroid/content/pm/AbstractPersonaObserver$PersonaObserverReceiver;->this$0:Landroid/content/pm/AbstractPersonaObserver;
 

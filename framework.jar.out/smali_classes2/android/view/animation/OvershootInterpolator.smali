@@ -21,15 +21,12 @@
     .locals 1
 
     .prologue
-    .line 38
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 39
     const/high16 v0, 0x40000000    # 2.0f
 
     iput v0, p0, Landroid/view/animation/OvershootInterpolator;->mTension:F
 
-    .line 40
     return-void
 .end method
 
@@ -38,13 +35,10 @@
     .param p1, "tension"    # F
 
     .prologue
-    .line 47
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 48
     iput p1, p0, Landroid/view/animation/OvershootInterpolator;->mTension:F
 
-    .line 49
     return-void
 .end method
 
@@ -54,7 +48,6 @@
     .param p2, "attrs"    # Landroid/util/AttributeSet;
 
     .prologue
-    .line 52
     invoke-virtual {p1}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
 
     move-result-object v0
@@ -65,7 +58,6 @@
 
     invoke-direct {p0, v0, v1, p2}, Landroid/view/animation/OvershootInterpolator;-><init>(Landroid/content/res/Resources;Landroid/content/res/Resources$Theme;Landroid/util/AttributeSet;)V
 
-    .line 53
     return-void
 .end method
 
@@ -78,20 +70,16 @@
     .prologue
     const/4 v2, 0x0
 
-    .line 56
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 58
     if-eqz p2, :cond_0
 
-    .line 59
     sget-object v1, Lcom/android/internal/R$styleable;->OvershootInterpolator:[I
 
     invoke-virtual {p2, p3, v1, v2, v2}, Landroid/content/res/Resources$Theme;->obtainStyledAttributes(Landroid/util/AttributeSet;[III)Landroid/content/res/TypedArray;
 
     move-result-object v0
 
-    .line 64
     .local v0, "a":Landroid/content/res/TypedArray;
     :goto_0
     const/high16 v1, 0x40000000    # 2.0f
@@ -102,13 +90,10 @@
 
     iput v1, p0, Landroid/view/animation/OvershootInterpolator;->mTension:F
 
-    .line 67
     invoke-virtual {v0}, Landroid/content/res/TypedArray;->recycle()V
 
-    .line 68
     return-void
 
-    .line 61
     .end local v0    # "a":Landroid/content/res/TypedArray;
     :cond_0
     sget-object v1, Lcom/android/internal/R$styleable;->OvershootInterpolator:[I
@@ -127,7 +112,6 @@
     .locals 2
 
     .prologue
-    .line 80
     iget v0, p0, Landroid/view/animation/OvershootInterpolator;->mTension:F
 
     invoke-static {v0}, Lcom/android/internal/view/animation/NativeInterpolatorFactoryHelper;->createOvershootInterpolator(F)J
@@ -144,10 +128,8 @@
     .prologue
     const/high16 v3, 0x3f800000    # 1.0f
 
-    .line 73
     sub-float/2addr p1, v3
 
-    .line 74
     mul-float v0, p1, p1
 
     iget v1, p0, Landroid/view/animation/OvershootInterpolator;->mTension:F

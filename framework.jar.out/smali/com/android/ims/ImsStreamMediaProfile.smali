@@ -64,7 +64,6 @@
     .locals 1
 
     .prologue
-    .line 120
     new-instance v0, Lcom/android/ims/ImsStreamMediaProfile$1;
 
     invoke-direct {v0}, Lcom/android/ims/ImsStreamMediaProfile$1;-><init>()V
@@ -78,30 +77,24 @@
     .locals 1
 
     .prologue
-    .line 70
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 71
     const/4 v0, 0x2
 
     iput v0, p0, Lcom/android/ims/ImsStreamMediaProfile;->mAudioQuality:I
 
-    .line 72
     const/4 v0, 0x3
 
     iput v0, p0, Lcom/android/ims/ImsStreamMediaProfile;->mAudioDirection:I
 
-    .line 73
     const/4 v0, 0x0
 
     iput v0, p0, Lcom/android/ims/ImsStreamMediaProfile;->mVideoQuality:I
 
-    .line 74
     const/4 v0, -0x1
 
     iput v0, p0, Lcom/android/ims/ImsStreamMediaProfile;->mVideoDirection:I
 
-    .line 75
     return-void
 .end method
 
@@ -113,22 +106,16 @@
     .param p4, "videoDirection"    # I
 
     .prologue
-    .line 78
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 79
     iput p1, p0, Lcom/android/ims/ImsStreamMediaProfile;->mAudioQuality:I
 
-    .line 80
     iput p2, p0, Lcom/android/ims/ImsStreamMediaProfile;->mAudioDirection:I
 
-    .line 81
     iput p3, p0, Lcom/android/ims/ImsStreamMediaProfile;->mVideoQuality:I
 
-    .line 82
     iput p4, p0, Lcom/android/ims/ImsStreamMediaProfile;->mVideoDirection:I
 
-    .line 83
     return-void
 .end method
 
@@ -137,13 +124,10 @@
     .param p1, "in"    # Landroid/os/Parcel;
 
     .prologue
-    .line 66
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 67
     invoke-direct {p0, p1}, Lcom/android/ims/ImsStreamMediaProfile;->readFromParcel(Landroid/os/Parcel;)V
 
-    .line 68
     return-void
 .end method
 
@@ -152,35 +136,30 @@
     .param p1, "in"    # Landroid/os/Parcel;
 
     .prologue
-    .line 114
     invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
 
     move-result v0
 
     iput v0, p0, Lcom/android/ims/ImsStreamMediaProfile;->mAudioQuality:I
 
-    .line 115
     invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
 
     move-result v0
 
     iput v0, p0, Lcom/android/ims/ImsStreamMediaProfile;->mAudioDirection:I
 
-    .line 116
     invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
 
     move-result v0
 
     iput v0, p0, Lcom/android/ims/ImsStreamMediaProfile;->mVideoQuality:I
 
-    .line 117
     invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
 
     move-result v0
 
     iput v0, p0, Lcom/android/ims/ImsStreamMediaProfile;->mVideoDirection:I
 
-    .line 118
     return-void
 .end method
 
@@ -191,27 +170,22 @@
     .param p1, "profile"    # Lcom/android/ims/ImsStreamMediaProfile;
 
     .prologue
-    .line 86
     iget v0, p1, Lcom/android/ims/ImsStreamMediaProfile;->mAudioQuality:I
 
     iput v0, p0, Lcom/android/ims/ImsStreamMediaProfile;->mAudioQuality:I
 
-    .line 87
     iget v0, p1, Lcom/android/ims/ImsStreamMediaProfile;->mAudioDirection:I
 
     iput v0, p0, Lcom/android/ims/ImsStreamMediaProfile;->mAudioDirection:I
 
-    .line 88
     iget v0, p1, Lcom/android/ims/ImsStreamMediaProfile;->mVideoQuality:I
 
     iput v0, p0, Lcom/android/ims/ImsStreamMediaProfile;->mVideoQuality:I
 
-    .line 89
     iget v0, p1, Lcom/android/ims/ImsStreamMediaProfile;->mVideoDirection:I
 
     iput v0, p0, Lcom/android/ims/ImsStreamMediaProfile;->mVideoDirection:I
 
-    .line 90
     return-void
 .end method
 
@@ -219,7 +193,6 @@
     .locals 1
 
     .prologue
-    .line 102
     const/4 v0, 0x0
 
     return v0
@@ -229,12 +202,11 @@
     .locals 2
 
     .prologue
-    .line 94
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v1, "{ audioQuality="
+    const-string v1, "{ audioQuality="
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -301,26 +273,21 @@
     .param p2, "flags"    # I
 
     .prologue
-    .line 107
     iget v0, p0, Lcom/android/ims/ImsStreamMediaProfile;->mAudioQuality:I
 
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 108
     iget v0, p0, Lcom/android/ims/ImsStreamMediaProfile;->mAudioDirection:I
 
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 109
     iget v0, p0, Lcom/android/ims/ImsStreamMediaProfile;->mVideoQuality:I
 
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 110
     iget v0, p0, Lcom/android/ims/ImsStreamMediaProfile;->mVideoDirection:I
 
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 111
     return-void
 .end method

@@ -23,7 +23,6 @@
     .locals 0
 
     .prologue
-    .line 535
     iput-object p1, p0, Lcom/android/server/cocktailbar/CocktailBarManagerService$1;->this$0:Lcom/android/server/cocktailbar/CocktailBarManagerService;
 
     invoke-direct {p0}, Landroid/content/BroadcastReceiver;-><init>()V
@@ -41,12 +40,10 @@
     .prologue
     const/4 v4, 0x1
 
-    .line 537
     invoke-virtual {p2}, Landroid/content/Intent;->getAction()Ljava/lang/String;
 
     move-result-object v7
 
-    .line 538
     .local v7, "action":Ljava/lang/String;
     const-string v0, "android.intent.action.BOOT_COMPLETED"
 
@@ -56,7 +53,6 @@
 
     if-eqz v0, :cond_2
 
-    .line 539
     const-string v0, "android.intent.extra.user_handle"
 
     const/16 v1, -0x2710
@@ -65,11 +61,9 @@
 
     move-result v11
 
-    .line 540
     .local v11, "userId":I
     if-ltz v11, :cond_1
 
-    .line 541
     iget-object v0, p0, Lcom/android/server/cocktailbar/CocktailBarManagerService$1;->this$0:Lcom/android/server/cocktailbar/CocktailBarManagerService;
 
     # invokes: Lcom/android/server/cocktailbar/CocktailBarManagerService;->getImplForUser(I)Lcom/android/server/cocktailbar/CocktailBarManagerServiceImpl;
@@ -79,13 +73,11 @@
 
     invoke-virtual {v0}, Lcom/android/server/cocktailbar/CocktailBarManagerServiceImpl;->initialize()V
 
-    .line 579
     .end local v11    # "userId":I
     :cond_0
     :goto_0
     return-void
 
-    .line 543
     .restart local v11    # "userId":I
     :cond_1
     # getter for: Lcom/android/server/cocktailbar/CocktailBarManagerService;->TAG:Ljava/lang/String;
@@ -115,7 +107,6 @@
 
     goto :goto_0
 
-    .line 545
     .end local v11    # "userId":I
     :cond_2
     const-string v0, "android.intent.action.CONFIGURATION_CHANGED"
@@ -126,7 +117,6 @@
 
     if-eqz v0, :cond_3
 
-    .line 546
     const/4 v8, 0x0
 
     .local v8, "i":I
@@ -144,7 +134,6 @@
 
     if-ge v8, v0, :cond_0
 
-    .line 547
     iget-object v0, p0, Lcom/android/server/cocktailbar/CocktailBarManagerService$1;->this$0:Lcom/android/server/cocktailbar/CocktailBarManagerService;
 
     # getter for: Lcom/android/server/cocktailbar/CocktailBarManagerService;->mCocktailBarServices:Landroid/util/SparseArray;
@@ -158,16 +147,13 @@
 
     check-cast v10, Lcom/android/server/cocktailbar/CocktailBarManagerServiceImpl;
 
-    .line 548
     .local v10, "service":Lcom/android/server/cocktailbar/CocktailBarManagerServiceImpl;
     invoke-virtual {v10}, Lcom/android/server/cocktailbar/CocktailBarManagerServiceImpl;->onConfigurationChanged()V
 
-    .line 546
     add-int/lit8 v8, v8, 0x1
 
     goto :goto_1
 
-    .line 550
     .end local v8    # "i":I
     .end local v10    # "service":Lcom/android/server/cocktailbar/CocktailBarManagerServiceImpl;
     :cond_3
@@ -179,14 +165,12 @@
 
     if-eqz v0, :cond_4
 
-    .line 552
     invoke-static {p1}, Landroid/os/PersonaManager;->isKioskModeEnabled(Landroid/content/Context;)Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
-    .line 553
     iget-object v0, p0, Lcom/android/server/cocktailbar/CocktailBarManagerService$1;->this$0:Lcom/android/server/cocktailbar/CocktailBarManagerService;
 
     iget-object v1, p0, Lcom/android/server/cocktailbar/CocktailBarManagerService$1;->this$0:Lcom/android/server/cocktailbar/CocktailBarManagerService;
@@ -208,7 +192,6 @@
 
     goto :goto_0
 
-    .line 562
     :cond_4
     # getter for: Lcom/android/server/cocktailbar/CocktailBarManagerService;->TAG:Ljava/lang/String;
     invoke-static {}, Lcom/android/server/cocktailbar/CocktailBarManagerService;->access$100()Ljava/lang/String;
@@ -219,7 +202,7 @@
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v2, "onReceive : "
+    const-string v2, "onReceive : "
 
     invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -235,7 +218,6 @@
 
     invoke-static {v0, v1}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 563
     iget-object v0, p0, Lcom/android/server/cocktailbar/CocktailBarManagerService$1;->this$0:Lcom/android/server/cocktailbar/CocktailBarManagerService;
 
     # getter for: Lcom/android/server/cocktailbar/CocktailBarManagerService;->mModeManager:Lcom/android/server/cocktailbar/mode/CocktailBarModeManager;
@@ -249,18 +231,15 @@
 
     if-nez v0, :cond_0
 
-    .line 566
     invoke-virtual {p0}, Lcom/android/server/cocktailbar/CocktailBarManagerService$1;->getSendingUserId()I
 
     move-result v9
 
-    .line 567
     .local v9, "sendingUser":I
     const/4 v0, -0x1
 
     if-ne v9, v0, :cond_5
 
-    .line 568
     const/4 v8, 0x0
 
     .restart local v8    # "i":I
@@ -278,7 +257,6 @@
 
     if-ge v8, v0, :cond_0
 
-    .line 569
     iget-object v0, p0, Lcom/android/server/cocktailbar/CocktailBarManagerService$1;->this$0:Lcom/android/server/cocktailbar/CocktailBarManagerService;
 
     # getter for: Lcom/android/server/cocktailbar/CocktailBarManagerService;->mCocktailBarServices:Landroid/util/SparseArray;
@@ -292,16 +270,13 @@
 
     check-cast v10, Lcom/android/server/cocktailbar/CocktailBarManagerServiceImpl;
 
-    .line 570
     .restart local v10    # "service":Lcom/android/server/cocktailbar/CocktailBarManagerServiceImpl;
     invoke-virtual {v10, p2}, Lcom/android/server/cocktailbar/CocktailBarManagerServiceImpl;->onBroadcastReceived(Landroid/content/Intent;)V
 
-    .line 568
     add-int/lit8 v8, v8, 0x1
 
     goto :goto_2
 
-    .line 573
     .end local v8    # "i":I
     .end local v10    # "service":Lcom/android/server/cocktailbar/CocktailBarManagerServiceImpl;
     :cond_5
@@ -318,11 +293,9 @@
 
     check-cast v10, Lcom/android/server/cocktailbar/CocktailBarManagerServiceImpl;
 
-    .line 574
     .restart local v10    # "service":Lcom/android/server/cocktailbar/CocktailBarManagerServiceImpl;
     if-eqz v10, :cond_0
 
-    .line 575
     invoke-virtual {v10, p2}, Lcom/android/server/cocktailbar/CocktailBarManagerServiceImpl;->onBroadcastReceived(Landroid/content/Intent;)V
 
     goto/16 :goto_0

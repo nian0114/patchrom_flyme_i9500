@@ -23,7 +23,6 @@
     .locals 0
 
     .prologue
-    .line 336
     iput-object p1, p0, Landroid/telecom/ConnectionService$3;->this$0:Landroid/telecom/ConnectionService;
 
     invoke-direct {p0}, Landroid/telecom/Conference$Listener;-><init>()V
@@ -39,7 +38,6 @@
     .param p2, "capabilities"    # I
 
     .prologue
-    .line 382
     iget-object v1, p0, Landroid/telecom/ConnectionService$3;->this$0:Landroid/telecom/ConnectionService;
 
     # getter for: Landroid/telecom/ConnectionService;->mIdByConference:Ljava/util/Map;
@@ -53,7 +51,6 @@
 
     check-cast v0, Ljava/lang/String;
 
-    .line 383
     .local v0, "id":Ljava/lang/String;
     const-string v1, "call capabilities: conference: %s"
 
@@ -71,7 +68,6 @@
 
     invoke-static {p0, v1, v2}, Landroid/telecom/Log;->d(Ljava/lang/Object;Ljava/lang/String;[Ljava/lang/Object;)V
 
-    .line 385
     iget-object v1, p0, Landroid/telecom/ConnectionService$3;->this$0:Landroid/telecom/ConnectionService;
 
     # getter for: Landroid/telecom/ConnectionService;->mAdapter:Landroid/telecom/ConnectionServiceAdapter;
@@ -81,7 +77,6 @@
 
     invoke-virtual {v1, v0, p2}, Landroid/telecom/ConnectionServiceAdapter;->setCallCapabilities(Ljava/lang/String;I)V
 
-    .line 386
     return-void
 .end method
 
@@ -100,7 +95,6 @@
     .end annotation
 
     .prologue
-    .line 370
     .local p2, "conferenceableConnections":Ljava/util/List;, "Ljava/util/List<Landroid/telecom/Connection;>;"
     iget-object v0, p0, Landroid/telecom/ConnectionService$3;->this$0:Landroid/telecom/ConnectionService;
 
@@ -131,7 +125,6 @@
 
     invoke-virtual {v1, v0, v2}, Landroid/telecom/ConnectionServiceAdapter;->setConferenceableConnections(Ljava/lang/String;Ljava/util/List;)V
 
-    .line 373
     return-void
 .end method
 
@@ -141,7 +134,6 @@
     .param p2, "connection"    # Landroid/telecom/Connection;
 
     .prologue
-    .line 361
     return-void
 .end method
 
@@ -151,7 +143,6 @@
     .param p2, "connection"    # Landroid/telecom/Connection;
 
     .prologue
-    .line 365
     return-void
 .end method
 
@@ -160,13 +151,11 @@
     .param p1, "conference"    # Landroid/telecom/Conference;
 
     .prologue
-    .line 377
     iget-object v0, p0, Landroid/telecom/ConnectionService$3;->this$0:Landroid/telecom/ConnectionService;
 
     # invokes: Landroid/telecom/ConnectionService;->removeConference(Landroid/telecom/Conference;)V
     invoke-static {v0, p1}, Landroid/telecom/ConnectionService;->access$2300(Landroid/telecom/ConnectionService;Landroid/telecom/Conference;)V
 
-    .line 378
     return-void
 .end method
 
@@ -176,7 +165,6 @@
     .param p2, "disconnectCause"    # Landroid/telecom/DisconnectCause;
 
     .prologue
-    .line 355
     iget-object v1, p0, Landroid/telecom/ConnectionService$3;->this$0:Landroid/telecom/ConnectionService;
 
     # getter for: Landroid/telecom/ConnectionService;->mIdByConference:Ljava/util/Map;
@@ -190,7 +178,6 @@
 
     check-cast v0, Ljava/lang/String;
 
-    .line 356
     .local v0, "id":Ljava/lang/String;
     iget-object v1, p0, Landroid/telecom/ConnectionService$3;->this$0:Landroid/telecom/ConnectionService;
 
@@ -201,7 +188,6 @@
 
     invoke-virtual {v1, v0, p2}, Landroid/telecom/ConnectionServiceAdapter;->setDisconnected(Ljava/lang/String;Landroid/telecom/DisconnectCause;)V
 
-    .line 357
     return-void
 .end method
 
@@ -212,7 +198,6 @@
     .param p3, "newState"    # I
 
     .prologue
-    .line 339
     iget-object v1, p0, Landroid/telecom/ConnectionService$3;->this$0:Landroid/telecom/ConnectionService;
 
     # getter for: Landroid/telecom/ConnectionService;->mIdByConference:Ljava/util/Map;
@@ -226,15 +211,12 @@
 
     check-cast v0, Ljava/lang/String;
 
-    .line 340
     .local v0, "id":Ljava/lang/String;
     packed-switch p3, :pswitch_data_0
 
-    .line 351
     :goto_0
     return-void
 
-    .line 342
     :pswitch_0
     iget-object v1, p0, Landroid/telecom/ConnectionService$3;->this$0:Landroid/telecom/ConnectionService;
 
@@ -247,7 +229,6 @@
 
     goto :goto_0
 
-    .line 345
     :pswitch_1
     iget-object v1, p0, Landroid/telecom/ConnectionService$3;->this$0:Landroid/telecom/ConnectionService;
 
@@ -260,7 +241,6 @@
 
     goto :goto_0
 
-    .line 340
     :pswitch_data_0
     .packed-switch 0x4
         :pswitch_0

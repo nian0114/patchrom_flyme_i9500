@@ -26,7 +26,6 @@
     .locals 0
 
     .prologue
-    .line 666
     iput-object p1, p0, Lcom/android/server/NetworkManagementService$NetdCallbackReceiver;->this$0:Lcom/android/server/NetworkManagementService;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -40,7 +39,6 @@
     .param p2, "x1"    # Lcom/android/server/NetworkManagementService$1;
 
     .prologue
-    .line 666
     invoke-direct {p0, p1}, Lcom/android/server/NetworkManagementService$NetdCallbackReceiver;-><init>(Lcom/android/server/NetworkManagementService;)V
 
     return-void
@@ -53,7 +51,6 @@
     .param p1, "code"    # I
 
     .prologue
-    .line 686
     const/16 v0, 0x265
 
     if-ne p1, v0, :cond_0
@@ -73,7 +70,6 @@
     .locals 2
 
     .prologue
-    .line 671
     iget-object v0, p0, Lcom/android/server/NetworkManagementService$NetdCallbackReceiver;->this$0:Lcom/android/server/NetworkManagementService;
 
     # getter for: Lcom/android/server/NetworkManagementService;->mConnectedSignal:Ljava/util/concurrent/CountDownLatch;
@@ -83,7 +79,6 @@
 
     if-eqz v0, :cond_0
 
-    .line 672
     iget-object v0, p0, Lcom/android/server/NetworkManagementService$NetdCallbackReceiver;->this$0:Lcom/android/server/NetworkManagementService;
 
     # getter for: Lcom/android/server/NetworkManagementService;->mConnectedSignal:Ljava/util/concurrent/CountDownLatch;
@@ -93,7 +88,6 @@
 
     invoke-virtual {v0}, Ljava/util/concurrent/CountDownLatch;->countDown()V
 
-    .line 673
     iget-object v0, p0, Lcom/android/server/NetworkManagementService$NetdCallbackReceiver;->this$0:Lcom/android/server/NetworkManagementService;
 
     const/4 v1, 0x0
@@ -101,11 +95,9 @@
     # setter for: Lcom/android/server/NetworkManagementService;->mConnectedSignal:Ljava/util/concurrent/CountDownLatch;
     invoke-static {v0, v1}, Lcom/android/server/NetworkManagementService;->access$202(Lcom/android/server/NetworkManagementService;Ljava/util/concurrent/CountDownLatch;)Ljava/util/concurrent/CountDownLatch;
 
-    .line 682
     :goto_0
     return-void
 
-    .line 675
     :cond_0
     iget-object v0, p0, Lcom/android/server/NetworkManagementService$NetdCallbackReceiver;->this$0:Lcom/android/server/NetworkManagementService;
 
@@ -130,7 +122,6 @@
     .param p3, "cooked"    # [Ljava/lang/String;
 
     .prologue
-    .line 691
     const-string v4, "Invalid event from daemon (%s)"
 
     const/4 v5, 0x1
@@ -145,17 +136,14 @@
 
     move-result-object v19
 
-    .line 692
     .local v19, "errorMessage":Ljava/lang/String;
     sparse-switch p1, :sswitch_data_0
 
-    .line 914
     const/4 v4, 0x0
 
     :goto_0
     return v4
 
-    .line 701
     :sswitch_0
     move-object/from16 v0, p3
 
@@ -177,7 +165,6 @@
 
     if-nez v4, :cond_1
 
-    .line 702
     :cond_0
     new-instance v4, Ljava/lang/IllegalStateException;
 
@@ -187,7 +174,6 @@
 
     throw v4
 
-    .line 704
     :cond_1
     const/4 v4, 0x2
 
@@ -201,7 +187,6 @@
 
     if-eqz v4, :cond_2
 
-    .line 705
     move-object/from16 v0, p0
 
     iget-object v4, v0, Lcom/android/server/NetworkManagementService$NetdCallbackReceiver;->this$0:Lcom/android/server/NetworkManagementService;
@@ -213,7 +198,6 @@
     # invokes: Lcom/android/server/NetworkManagementService;->notifyInterfaceAdded(Ljava/lang/String;)V
     invoke-static {v4, v5}, Lcom/android/server/NetworkManagementService;->access$500(Lcom/android/server/NetworkManagementService;Ljava/lang/String;)V
 
-    .line 707
     const/4 v4, 0x5
 
     const/4 v5, 0x4
@@ -236,18 +220,16 @@
 
     invoke-static/range {v4 .. v9}, Landroid/sec/enterprise/auditlog/AuditLog;->log(IIZILjava/lang/String;Ljava/lang/String;)V
 
-    .line 711
     const/4 v4, 0x1
 
     goto :goto_0
 
-    .line 712
     :cond_2
     const/4 v4, 0x2
 
     aget-object v4, p3, v4
 
-    const-string/jumbo v5, "removed"
+    const-string v5, "removed"
 
     invoke-virtual {v4, v5}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
@@ -255,7 +237,6 @@
 
     if-eqz v4, :cond_3
 
-    .line 713
     move-object/from16 v0, p0
 
     iget-object v4, v0, Lcom/android/server/NetworkManagementService$NetdCallbackReceiver;->this$0:Lcom/android/server/NetworkManagementService;
@@ -267,7 +248,6 @@
     # invokes: Lcom/android/server/NetworkManagementService;->notifyInterfaceRemoved(Ljava/lang/String;)V
     invoke-static {v4, v5}, Lcom/android/server/NetworkManagementService;->access$600(Lcom/android/server/NetworkManagementService;Ljava/lang/String;)V
 
-    .line 715
     const/4 v4, 0x5
 
     const/4 v5, 0x4
@@ -290,12 +270,10 @@
 
     invoke-static/range {v4 .. v9}, Landroid/sec/enterprise/auditlog/AuditLog;->log(IIZILjava/lang/String;Ljava/lang/String;)V
 
-    .line 719
     const/4 v4, 0x1
 
     goto :goto_0
 
-    .line 720
     :cond_3
     const/4 v4, 0x2
 
@@ -317,7 +295,6 @@
 
     if-ne v4, v5, :cond_4
 
-    .line 721
     move-object/from16 v0, p0
 
     iget-object v4, v0, Lcom/android/server/NetworkManagementService$NetdCallbackReceiver;->this$0:Lcom/android/server/NetworkManagementService;
@@ -330,7 +307,7 @@
 
     aget-object v6, p3, v6
 
-    const-string/jumbo v7, "up"
+    const-string v7, "up"
 
     invoke-virtual {v6, v7}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
@@ -339,7 +316,6 @@
     # invokes: Lcom/android/server/NetworkManagementService;->notifyInterfaceStatusChanged(Ljava/lang/String;Z)V
     invoke-static {v4, v5, v6}, Lcom/android/server/NetworkManagementService;->access$700(Lcom/android/server/NetworkManagementService;Ljava/lang/String;Z)V
 
-    .line 723
     const/4 v4, 0x5
 
     const/4 v5, 0x4
@@ -362,12 +338,10 @@
 
     invoke-static/range {v4 .. v9}, Landroid/sec/enterprise/auditlog/AuditLog;->log(IIZILjava/lang/String;Ljava/lang/String;)V
 
-    .line 727
     const/4 v4, 0x1
 
     goto/16 :goto_0
 
-    .line 728
     :cond_4
     const/4 v4, 0x2
 
@@ -389,7 +363,6 @@
 
     if-ne v4, v5, :cond_5
 
-    .line 729
     move-object/from16 v0, p0
 
     iget-object v4, v0, Lcom/android/server/NetworkManagementService$NetdCallbackReceiver;->this$0:Lcom/android/server/NetworkManagementService;
@@ -402,7 +375,7 @@
 
     aget-object v6, p3, v6
 
-    const-string/jumbo v7, "up"
+    const-string v7, "up"
 
     invoke-virtual {v6, v7}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
@@ -411,7 +384,6 @@
     # invokes: Lcom/android/server/NetworkManagementService;->notifyInterfaceLinkStateChanged(Ljava/lang/String;Z)V
     invoke-static {v4, v5, v6}, Lcom/android/server/NetworkManagementService;->access$800(Lcom/android/server/NetworkManagementService;Ljava/lang/String;Z)V
 
-    .line 731
     const/4 v4, 0x5
 
     const/4 v5, 0x4
@@ -434,12 +406,10 @@
 
     invoke-static/range {v4 .. v9}, Landroid/sec/enterprise/auditlog/AuditLog;->log(IIZILjava/lang/String;Ljava/lang/String;)V
 
-    .line 735
     const/4 v4, 0x1
 
     goto/16 :goto_0
 
-    .line 737
     :cond_5
     new-instance v4, Ljava/lang/IllegalStateException;
 
@@ -449,7 +419,6 @@
 
     throw v4
 
-    .line 744
     :sswitch_1
     move-object/from16 v0, p3
 
@@ -471,7 +440,6 @@
 
     if-nez v4, :cond_7
 
-    .line 745
     :cond_6
     new-instance v4, Ljava/lang/IllegalStateException;
 
@@ -481,7 +449,6 @@
 
     throw v4
 
-    .line 747
     :cond_7
     const/4 v4, 0x2
 
@@ -495,7 +462,6 @@
 
     if-eqz v4, :cond_8
 
-    .line 748
     move-object/from16 v0, p0
 
     iget-object v4, v0, Lcom/android/server/NetworkManagementService$NetdCallbackReceiver;->this$0:Lcom/android/server/NetworkManagementService;
@@ -511,12 +477,10 @@
     # invokes: Lcom/android/server/NetworkManagementService;->notifyLimitReached(Ljava/lang/String;Ljava/lang/String;)V
     invoke-static {v4, v5, v6}, Lcom/android/server/NetworkManagementService;->access$900(Lcom/android/server/NetworkManagementService;Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 749
     const/4 v4, 0x1
 
     goto/16 :goto_0
 
-    .line 751
     :cond_8
     new-instance v4, Ljava/lang/IllegalStateException;
 
@@ -526,7 +490,6 @@
 
     throw v4
 
-    .line 758
     :sswitch_2
     move-object/from16 v0, p3
 
@@ -548,7 +511,6 @@
 
     if-nez v4, :cond_a
 
-    .line 759
     :cond_9
     new-instance v4, Ljava/lang/IllegalStateException;
 
@@ -558,11 +520,9 @@
 
     throw v4
 
-    .line 761
     :cond_a
     const-wide/16 v8, 0x0
 
-    .line 762
     .local v8, "timestampNanos":J
     move-object/from16 v0, p3
 
@@ -572,7 +532,6 @@
 
     if-ne v4, v5, :cond_b
 
-    .line 764
     const/4 v4, 0x4
 
     :try_start_0
@@ -584,7 +543,6 @@
 
     move-result-wide v8
 
-    .line 769
     :goto_1
     const/4 v4, 0x2
 
@@ -596,7 +554,6 @@
 
     move-result v25
 
-    .line 770
     .local v25, "isActive":Z
     move-object/from16 v0, p0
 
@@ -620,12 +577,10 @@
     # invokes: Lcom/android/server/NetworkManagementService;->notifyInterfaceClassActivity(IIJZ)V
     invoke-static/range {v5 .. v10}, Lcom/android/server/NetworkManagementService;->access$100(Lcom/android/server/NetworkManagementService;IIJZ)V
 
-    .line 773
     const/4 v4, 0x1
 
     goto/16 :goto_0
 
-    .line 767
     .end local v25    # "isActive":Z
     :cond_b
     invoke-static {}, Landroid/os/SystemClock;->elapsedRealtimeNanos()J
@@ -634,14 +589,12 @@
 
     goto :goto_1
 
-    .line 770
     .restart local v25    # "isActive":Z
     :cond_c
     sget v7, Landroid/telephony/DataConnectionRealTimeInfo;->DC_POWER_STATE_LOW:I
 
     goto :goto_2
 
-    .line 781
     .end local v8    # "timestampNanos":J
     .end local v25    # "isActive":Z
     :sswitch_3
@@ -665,7 +618,6 @@
 
     if-nez v4, :cond_e
 
-    .line 782
     :cond_d
     new-instance v4, Ljava/lang/IllegalStateException;
 
@@ -675,13 +627,11 @@
 
     throw v4
 
-    .line 785
     :cond_e
     const/4 v4, 0x4
 
     aget-object v23, p3, v4
 
-    .line 788
     .local v23, "iface":Ljava/lang/String;
     const/4 v4, 0x5
 
@@ -692,7 +642,6 @@
 
     move-result v20
 
-    .line 789
     .local v20, "flags":I
     const/4 v4, 0x6
 
@@ -702,7 +651,6 @@
 
     move-result v29
 
-    .line 790
     .local v29, "scope":I
     new-instance v16, Landroid/net/LinkAddress;
 
@@ -721,13 +669,12 @@
     .catch Ljava/lang/NumberFormatException; {:try_start_1 .. :try_end_1} :catch_0
     .catch Ljava/lang/IllegalArgumentException; {:try_start_1 .. :try_end_1} :catch_1
 
-    .line 797
     .local v16, "address":Landroid/net/LinkAddress;
     const/4 v4, 0x2
 
     aget-object v4, p3, v4
 
-    const-string/jumbo v5, "updated"
+    const-string v5, "updated"
 
     invoke-virtual {v4, v5}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
@@ -735,7 +682,6 @@
 
     if-eqz v4, :cond_f
 
-    .line 798
     move-object/from16 v0, p0
 
     iget-object v4, v0, Lcom/android/server/NetworkManagementService$NetdCallbackReceiver;->this$0:Lcom/android/server/NetworkManagementService;
@@ -747,20 +693,17 @@
     # invokes: Lcom/android/server/NetworkManagementService;->notifyAddressUpdated(Ljava/lang/String;Landroid/net/LinkAddress;)V
     invoke-static {v4, v0, v1}, Lcom/android/server/NetworkManagementService;->access$1000(Lcom/android/server/NetworkManagementService;Ljava/lang/String;Landroid/net/LinkAddress;)V
 
-    .line 802
     :goto_3
     const/4 v4, 0x1
 
     goto/16 :goto_0
 
-    .line 791
     .end local v16    # "address":Landroid/net/LinkAddress;
     .end local v20    # "flags":I
     .end local v29    # "scope":I
     :catch_0
     move-exception v18
 
-    .line 792
     .local v18, "e":Ljava/lang/NumberFormatException;
     new-instance v4, Ljava/lang/IllegalStateException;
 
@@ -772,12 +715,10 @@
 
     throw v4
 
-    .line 793
     .end local v18    # "e":Ljava/lang/NumberFormatException;
     :catch_1
     move-exception v18
 
-    .line 794
     .local v18, "e":Ljava/lang/IllegalArgumentException;
     new-instance v4, Ljava/lang/IllegalStateException;
 
@@ -789,7 +730,6 @@
 
     throw v4
 
-    .line 800
     .end local v18    # "e":Ljava/lang/IllegalArgumentException;
     .restart local v16    # "address":Landroid/net/LinkAddress;
     .restart local v20    # "flags":I
@@ -808,7 +748,6 @@
 
     goto :goto_3
 
-    .line 811
     .end local v16    # "address":Landroid/net/LinkAddress;
     .end local v20    # "flags":I
     .end local v23    # "iface":Ljava/lang/String;
@@ -838,7 +777,7 @@
 
     aget-object v4, p3, v4
 
-    const-string/jumbo v5, "servers"
+    const-string v5, "servers"
 
     invoke-virtual {v4, v5}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
@@ -846,7 +785,6 @@
 
     if-eqz v4, :cond_10
 
-    .line 815
     const/4 v4, 0x4
 
     :try_start_2
@@ -858,7 +796,6 @@
 
     move-result-wide v26
 
-    .line 819
     .local v26, "lifetime":J
     const/4 v4, 0x5
 
@@ -870,7 +807,6 @@
 
     move-result-object v30
 
-    .line 820
     .local v30, "servers":[Ljava/lang/String;
     move-object/from16 v0, p0
 
@@ -887,7 +823,6 @@
     # invokes: Lcom/android/server/NetworkManagementService;->notifyInterfaceDnsServerInfo(Ljava/lang/String;J[Ljava/lang/String;)V
     invoke-static {v4, v5, v0, v1, v2}, Lcom/android/server/NetworkManagementService;->access$1200(Lcom/android/server/NetworkManagementService;Ljava/lang/String;J[Ljava/lang/String;)V
 
-    .line 822
     .end local v26    # "lifetime":J
     .end local v30    # "servers":[Ljava/lang/String;
     :cond_10
@@ -895,11 +830,9 @@
 
     goto/16 :goto_0
 
-    .line 816
     :catch_2
     move-exception v18
 
-    .line 817
     .local v18, "e":Ljava/lang/NumberFormatException;
     new-instance v4, Ljava/lang/IllegalStateException;
 
@@ -909,7 +842,6 @@
 
     throw v4
 
-    .line 829
     .end local v18    # "e":Ljava/lang/NumberFormatException;
     :sswitch_5
     const/4 v4, 0x1
@@ -932,7 +864,6 @@
 
     if-ge v4, v5, :cond_12
 
-    .line 830
     :cond_11
     new-instance v4, Ljava/lang/IllegalStateException;
 
@@ -942,19 +873,15 @@
 
     throw v4
 
-    .line 833
     :cond_12
     const/16 v32, 0x0
 
-    .line 834
     .local v32, "via":Ljava/lang/String;
     const/16 v17, 0x0
 
-    .line 835
     .local v17, "dev":Ljava/lang/String;
     const/16 v31, 0x1
 
-    .line 836
     .local v31, "valid":Z
     const/16 v22, 0x4
 
@@ -970,7 +897,6 @@
 
     if-eqz v31, :cond_17
 
-    .line 837
     aget-object v4, p3, v22
 
     const-string v5, "dev"
@@ -981,31 +907,26 @@
 
     if-eqz v4, :cond_14
 
-    .line 838
     if-nez v17, :cond_13
 
-    .line 839
     add-int/lit8 v4, v22, 0x1
 
     aget-object v17, p3, v4
 
-    .line 836
     :goto_5
     add-int/lit8 v22, v22, 0x2
 
     goto :goto_4
 
-    .line 841
     :cond_13
     const/16 v31, 0x0
 
     goto :goto_5
 
-    .line 843
     :cond_14
     aget-object v4, p3, v22
 
-    const-string/jumbo v5, "via"
+    const-string v5, "via"
 
     invoke-virtual {v4, v5}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
@@ -1013,36 +934,29 @@
 
     if-eqz v4, :cond_16
 
-    .line 844
     if-nez v32, :cond_15
 
-    .line 845
     add-int/lit8 v4, v22, 0x1
 
     aget-object v32, p3, v4
 
     goto :goto_5
 
-    .line 847
     :cond_15
     const/16 v31, 0x0
 
     goto :goto_5
 
-    .line 850
     :cond_16
     const/16 v31, 0x0
 
     goto :goto_5
 
-    .line 853
     :cond_17
     if-eqz v31, :cond_19
 
-    .line 856
     const/16 v21, 0x0
 
-    .line 857
     .local v21, "gateway":Ljava/net/InetAddress;
     if-eqz v32, :cond_18
 
@@ -1051,7 +965,6 @@
 
     move-result-object v21
 
-    .line 858
     :cond_18
     new-instance v28, Landroid/net/RouteInfo;
 
@@ -1071,7 +984,6 @@
 
     invoke-direct {v0, v4, v1, v2}, Landroid/net/RouteInfo;-><init>(Landroid/net/IpPrefix;Ljava/net/InetAddress;Ljava/lang/String;)V
 
-    .line 859
     .local v28, "route":Landroid/net/RouteInfo;
     move-object/from16 v0, p0
 
@@ -1088,17 +1000,14 @@
     :try_end_3
     .catch Ljava/lang/IllegalArgumentException; {:try_start_3 .. :try_end_3} :catch_3
 
-    .line 860
     const/4 v4, 0x1
 
     goto/16 :goto_0
 
-    .line 861
     .end local v28    # "route":Landroid/net/RouteInfo;
     :catch_3
     move-exception v4
 
-    .line 863
     .end local v21    # "gateway":Ljava/net/InetAddress;
     :cond_19
     new-instance v4, Ljava/lang/IllegalStateException;
@@ -1109,7 +1018,6 @@
 
     throw v4
 
-    .line 867
     .end local v17    # "dev":Ljava/lang/String;
     .end local v22    # "i":I
     .end local v31    # "valid":Z
@@ -1119,7 +1027,7 @@
 
     aget-object v4, p3, v4
 
-    const-string/jumbo v5, "sta_join"
+    const-string v5, "sta_join"
 
     invoke-virtual {v4, v5}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
@@ -1131,7 +1039,7 @@
 
     aget-object v4, p3, v4
 
-    const-string/jumbo v5, "sta_leave"
+    const-string v5, "sta_leave"
 
     invoke-virtual {v4, v5}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
@@ -1139,13 +1047,12 @@
 
     if-eqz v4, :cond_1f
 
-    .line 869
     :cond_1a
     const/4 v4, 0x2
 
     aget-object v4, p3, v4
 
-    const-string/jumbo v5, "sta_join"
+    const-string v5, "sta_join"
 
     invoke-virtual {v4, v5}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
@@ -1153,7 +1060,6 @@
 
     if-eqz v4, :cond_1e
 
-    .line 870
     const/4 v10, 0x5
 
     const/4 v11, 0x4
@@ -1176,7 +1082,6 @@
 
     invoke-static/range {v10 .. v15}, Landroid/sec/enterprise/auditlog/AuditLog;->log(IIZILjava/lang/String;Ljava/lang/String;)V
 
-    .line 879
     :cond_1b
     :goto_6
     new-instance v24, Landroid/content/Intent;
@@ -1187,7 +1092,6 @@
 
     invoke-direct {v0, v4}, Landroid/content/Intent;-><init>(Ljava/lang/String;)V
 
-    .line 880
     .local v24, "intent":Landroid/content/Intent;
     const-string v4, "EVENT"
 
@@ -1199,7 +1103,6 @@
 
     invoke-virtual {v0, v4, v5}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;
 
-    .line 881
     const-string v4, "NetworkManagementService"
 
     new-instance v5, Ljava/lang/StringBuilder;
@@ -1226,7 +1129,6 @@
 
     invoke-static {v4, v5}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 882
     move-object/from16 v0, p3
 
     array-length v4, v0
@@ -1235,7 +1137,6 @@
 
     if-le v4, v5, :cond_1c
 
-    .line 883
     const-string v4, "NUM"
 
     const/4 v5, 0x3
@@ -1250,7 +1151,6 @@
 
     invoke-virtual {v0, v4, v5}, Landroid/content/Intent;->putExtra(Ljava/lang/String;I)Landroid/content/Intent;
 
-    .line 884
     const-string v4, "NetworkManagementService"
 
     new-instance v5, Ljava/lang/StringBuilder;
@@ -1277,13 +1177,12 @@
 
     invoke-static {v4, v5}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 886
     :cond_1c
     const/4 v4, 0x2
 
     aget-object v4, p3, v4
 
-    const-string/jumbo v5, "sta_leave"
+    const-string v5, "sta_leave"
 
     invoke-virtual {v4, v5}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
@@ -1299,7 +1198,6 @@
 
     if-le v4, v5, :cond_1d
 
-    .line 887
     const-string v4, "MAC"
 
     const/4 v5, 0x4
@@ -1310,7 +1208,6 @@
 
     invoke-virtual {v0, v4, v5}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;
 
-    .line 889
     :cond_1d
     move-object/from16 v0, p0
 
@@ -1325,19 +1222,17 @@
 
     invoke-virtual {v4, v0}, Landroid/content/Context;->sendBroadcast(Landroid/content/Intent;)V
 
-    .line 890
     const/4 v4, 0x1
 
     goto/16 :goto_0
 
-    .line 873
     .end local v24    # "intent":Landroid/content/Intent;
     :cond_1e
     const/4 v4, 0x2
 
     aget-object v4, p3, v4
 
-    const-string/jumbo v5, "sta_leave"
+    const-string v5, "sta_leave"
 
     invoke-virtual {v4, v5}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
@@ -1345,7 +1240,6 @@
 
     if-eqz v4, :cond_1b
 
-    .line 874
     const/4 v10, 0x5
 
     const/4 v11, 0x4
@@ -1370,13 +1264,12 @@
 
     goto/16 :goto_6
 
-    .line 892
     :cond_1f
     const/4 v4, 0x2
 
     aget-object v4, p3, v4
 
-    const-string/jumbo v5, "sta_assoc"
+    const-string v5, "sta_assoc"
 
     invoke-virtual {v4, v5}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
@@ -1384,7 +1277,6 @@
 
     if-eqz v4, :cond_21
 
-    .line 893
     new-instance v24, Landroid/content/Intent;
 
     const-string v4, "android.net.wifi.WIFI_AP_STA_ASSOCIATED_ACTION"
@@ -1393,7 +1285,6 @@
 
     invoke-direct {v0, v4}, Landroid/content/Intent;-><init>(Ljava/lang/String;)V
 
-    .line 894
     .restart local v24    # "intent":Landroid/content/Intent;
     const-string v4, "EVENT"
 
@@ -1405,7 +1296,6 @@
 
     invoke-virtual {v0, v4, v5}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;
 
-    .line 895
     const-string v4, "NetworkManagementService"
 
     new-instance v5, Ljava/lang/StringBuilder;
@@ -1432,7 +1322,6 @@
 
     invoke-static {v4, v5}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 896
     move-object/from16 v0, p3
 
     array-length v4, v0
@@ -1441,7 +1330,6 @@
 
     if-le v4, v5, :cond_20
 
-    .line 897
     const-string v4, "MAC"
 
     const/4 v5, 0x3
@@ -1452,7 +1340,6 @@
 
     invoke-virtual {v0, v4, v5}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;
 
-    .line 899
     :cond_20
     move-object/from16 v0, p0
 
@@ -1467,19 +1354,17 @@
 
     invoke-virtual {v4, v0}, Landroid/content/Context;->sendBroadcast(Landroid/content/Intent;)V
 
-    .line 900
     const/4 v4, 0x1
 
     goto/16 :goto_0
 
-    .line 902
     .end local v24    # "intent":Landroid/content/Intent;
     :cond_21
     const/4 v4, 0x2
 
     aget-object v4, p3, v4
 
-    const-string/jumbo v5, "wps_success"
+    const-string v5, "wps_success"
 
     invoke-virtual {v4, v5}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
@@ -1491,7 +1376,7 @@
 
     aget-object v4, p3, v4
 
-    const-string/jumbo v5, "wps_fail"
+    const-string v5, "wps_fail"
 
     invoke-virtual {v4, v5}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
@@ -1503,7 +1388,7 @@
 
     aget-object v4, p3, v4
 
-    const-string/jumbo v5, "wps_timeout"
+    const-string v5, "wps_timeout"
 
     invoke-virtual {v4, v5}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
@@ -1515,7 +1400,7 @@
 
     aget-object v4, p3, v4
 
-    const-string/jumbo v5, "wps_overlap"
+    const-string v5, "wps_overlap"
 
     invoke-virtual {v4, v5}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
@@ -1527,7 +1412,7 @@
 
     aget-object v4, p3, v4
 
-    const-string/jumbo v5, "wps_pin_needed"
+    const-string v5, "wps_pin_needed"
 
     invoke-virtual {v4, v5}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
@@ -1535,7 +1420,6 @@
 
     if-eqz v4, :cond_23
 
-    .line 903
     :cond_22
     const-string v4, "NetworkManagementService"
 
@@ -1563,7 +1447,6 @@
 
     invoke-static {v4, v5}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 904
     new-instance v24, Landroid/content/Intent;
 
     const-string v4, "android.net.wifi.WIFI_AP_WPS_STATE_ACTION"
@@ -1572,7 +1455,6 @@
 
     invoke-direct {v0, v4}, Landroid/content/Intent;-><init>(Ljava/lang/String;)V
 
-    .line 905
     .restart local v24    # "intent":Landroid/content/Intent;
     const-string v4, "EVENT"
 
@@ -1584,7 +1466,6 @@
 
     invoke-virtual {v0, v4, v5}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;
 
-    .line 906
     move-object/from16 v0, p0
 
     iget-object v4, v0, Lcom/android/server/NetworkManagementService$NetdCallbackReceiver;->this$0:Lcom/android/server/NetworkManagementService;
@@ -1598,12 +1479,10 @@
 
     invoke-virtual {v4, v0}, Landroid/content/Context;->sendBroadcast(Landroid/content/Intent;)V
 
-    .line 907
     const/4 v4, 0x1
 
     goto/16 :goto_0
 
-    .line 909
     .end local v24    # "intent":Landroid/content/Intent;
     :cond_23
     new-instance v4, Ljava/lang/IllegalStateException;
@@ -1626,14 +1505,12 @@
 
     throw v4
 
-    .line 765
     .restart local v8    # "timestampNanos":J
     :catch_4
     move-exception v4
 
     goto/16 :goto_1
 
-    .line 692
     :sswitch_data_0
     .sparse-switch
         0x258 -> :sswitch_0

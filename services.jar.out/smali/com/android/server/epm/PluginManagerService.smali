@@ -40,7 +40,6 @@
     .locals 1
 
     .prologue
-    .line 75
     const-string v0, "PluginManagerService"
 
     sput-object v0, Lcom/android/server/epm/PluginManagerService;->TAG:Ljava/lang/String;
@@ -53,20 +52,16 @@
     .param p1, "context"    # Landroid/content/Context;
 
     .prologue
-    .line 91
     invoke-direct {p0, p1}, Lcom/android/server/SystemService;-><init>(Landroid/content/Context;)V
 
-    .line 84
     new-instance v0, Ljava/util/HashMap;
 
     invoke-direct {v0}, Ljava/util/HashMap;-><init>()V
 
     iput-object v0, p0, Lcom/android/server/epm/PluginManagerService;->mModules:Ljava/util/HashMap;
 
-    .line 94
     iput-object p1, p0, Lcom/android/server/epm/PluginManagerService;->mContext:Landroid/content/Context;
 
-    .line 95
     return-void
 .end method
 
@@ -75,7 +70,6 @@
     .param p0, "x0"    # Lcom/android/server/epm/PluginManagerService;
 
     .prologue
-    .line 70
     iget-object v0, p0, Lcom/android/server/epm/PluginManagerService;->mPackageManager:Landroid/content/pm/PackageManager;
 
     return-object v0
@@ -87,7 +81,6 @@
     .param p1, "x1"    # Landroid/content/pm/PackageManager;
 
     .prologue
-    .line 70
     iput-object p1, p0, Lcom/android/server/epm/PluginManagerService;->mPackageManager:Landroid/content/pm/PackageManager;
 
     return-object p1
@@ -98,7 +91,6 @@
     .param p0, "x0"    # Lcom/android/server/epm/PluginManagerService;
 
     .prologue
-    .line 70
     iget-object v0, p0, Lcom/android/server/epm/PluginManagerService;->mModules:Ljava/util/HashMap;
 
     return-object v0
@@ -110,8 +102,7 @@
     .locals 3
 
     .prologue
-    .line 104
-    const-string/jumbo v0, "samsung_overlay"
+    const-string v0, "samsung_overlay"
 
     new-instance v1, Lcom/android/server/epm/PluginManagerService$PluginBinder;
 
@@ -121,6 +112,5 @@
 
     invoke-virtual {p0, v0, v1}, Lcom/android/server/epm/PluginManagerService;->publishBinderService(Ljava/lang/String;Landroid/os/IBinder;)V
 
-    .line 107
     return-void
 .end method

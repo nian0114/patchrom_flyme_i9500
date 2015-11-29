@@ -26,10 +26,8 @@
     .locals 0
 
     .prologue
-    .line 1
     iput-object p1, p0, Lcom/samsung/android/sconnect/extern/QuickConnectConnector$1;->this$0:Lcom/samsung/android/sconnect/extern/QuickConnectConnector;
 
-    .line 159
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -43,14 +41,12 @@
     .param p2, "service"    # Landroid/os/IBinder;
 
     .prologue
-    .line 178
     const-string v1, "QuickConnectConnector"
 
-    const-string/jumbo v2, "onServiceConnected:"
+    const-string v2, "onServiceConnected:"
 
     invoke-static {v1, v2}, Landroid/util/Log;->v(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 179
     iget-object v1, p0, Lcom/samsung/android/sconnect/extern/QuickConnectConnector$1;->this$0:Lcom/samsung/android/sconnect/extern/QuickConnectConnector;
 
     invoke-static {p2}, Lcom/samsung/android/sconnect/central/extern/ISconnectService$Stub;->asInterface(Landroid/os/IBinder;)Lcom/samsung/android/sconnect/central/extern/ISconnectService;
@@ -59,7 +55,6 @@
 
     invoke-static {v1, v2}, Lcom/samsung/android/sconnect/extern/QuickConnectConnector;->access$3(Lcom/samsung/android/sconnect/extern/QuickConnectConnector;Lcom/samsung/android/sconnect/central/extern/ISconnectService;)V
 
-    .line 180
     iget-object v1, p0, Lcom/samsung/android/sconnect/extern/QuickConnectConnector$1;->this$0:Lcom/samsung/android/sconnect/extern/QuickConnectConnector;
 
     # getter for: Lcom/samsung/android/sconnect/extern/QuickConnectConnector;->mServiceListener:Lcom/samsung/android/sconnect/extern/QuickConnectConnector$IServiceStatusListener;
@@ -69,7 +64,6 @@
 
     if-eqz v1, :cond_0
 
-    .line 181
     iget-object v1, p0, Lcom/samsung/android/sconnect/extern/QuickConnectConnector$1;->this$0:Lcom/samsung/android/sconnect/extern/QuickConnectConnector;
 
     # getter for: Lcom/samsung/android/sconnect/extern/QuickConnectConnector;->mServiceListener:Lcom/samsung/android/sconnect/extern/QuickConnectConnector$IServiceStatusListener;
@@ -79,7 +73,6 @@
 
     invoke-interface {v1}, Lcom/samsung/android/sconnect/extern/QuickConnectConnector$IServiceStatusListener;->onConnected()V
 
-    .line 183
     :cond_0
     iget-object v1, p0, Lcom/samsung/android/sconnect/extern/QuickConnectConnector$1;->this$0:Lcom/samsung/android/sconnect/extern/QuickConnectConnector;
 
@@ -90,18 +83,15 @@
 
     if-nez v1, :cond_1
 
-    .line 184
     const-string v1, "QuickConnectConnector"
 
-    const-string/jumbo v2, "onServiceConnected: mISconnect == null"
+    const-string v2, "onServiceConnected: mISconnect == null"
 
     invoke-static {v1, v2}, Landroid/util/Log;->v(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 194
     :goto_0
     return-void
 
-    .line 188
     :cond_1
     :try_start_0
     iget-object v1, p0, Lcom/samsung/android/sconnect/extern/QuickConnectConnector$1;->this$0:Lcom/samsung/android/sconnect/extern/QuickConnectConnector;
@@ -124,17 +114,15 @@
 
     goto :goto_0
 
-    .line 189
     :catch_0
     move-exception v0
 
-    .line 190
     .local v0, "e":Landroid/os/RemoteException;
     const-string v1, "QuickConnectConnector"
 
     new-instance v2, Ljava/lang/StringBuilder;
 
-    const-string/jumbo v3, "onServiceConnected: RemoteException: "
+    const-string v3, "onServiceConnected: RemoteException: "
 
     invoke-direct {v2, v3}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
@@ -148,7 +136,6 @@
 
     invoke-static {v1, v2}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 191
     invoke-virtual {v0}, Landroid/os/RemoteException;->printStackTrace()V
 
     goto :goto_0
@@ -159,12 +146,11 @@
     .param p1, "name"    # Landroid/content/ComponentName;
 
     .prologue
-    .line 163
     const-string v1, "QuickConnectConnector"
 
     new-instance v2, Ljava/lang/StringBuilder;
 
-    const-string/jumbo v3, "onServiceDisconnected:"
+    const-string v3, "onServiceDisconnected:"
 
     invoke-direct {v2, v3}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
@@ -182,7 +168,6 @@
 
     invoke-static {v1, v2}, Landroid/util/Log;->v(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 164
     iget-object v1, p0, Lcom/samsung/android/sconnect/extern/QuickConnectConnector$1;->this$0:Lcom/samsung/android/sconnect/extern/QuickConnectConnector;
 
     # getter for: Lcom/samsung/android/sconnect/extern/QuickConnectConnector;->mServiceListener:Lcom/samsung/android/sconnect/extern/QuickConnectConnector$IServiceStatusListener;
@@ -192,7 +177,6 @@
 
     if-eqz v1, :cond_0
 
-    .line 165
     iget-object v1, p0, Lcom/samsung/android/sconnect/extern/QuickConnectConnector$1;->this$0:Lcom/samsung/android/sconnect/extern/QuickConnectConnector;
 
     # getter for: Lcom/samsung/android/sconnect/extern/QuickConnectConnector;->mServiceListener:Lcom/samsung/android/sconnect/extern/QuickConnectConnector$IServiceStatusListener;
@@ -202,7 +186,6 @@
 
     invoke-interface {v1}, Lcom/samsung/android/sconnect/extern/QuickConnectConnector$IServiceStatusListener;->onDisconnected()V
 
-    .line 169
     :cond_0
     :try_start_0
     iget-object v1, p0, Lcom/samsung/android/sconnect/extern/QuickConnectConnector$1;->this$0:Lcom/samsung/android/sconnect/extern/QuickConnectConnector;
@@ -223,21 +206,18 @@
     :try_end_0
     .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 174
     :goto_0
     return-void
 
-    .line 170
     :catch_0
     move-exception v0
 
-    .line 171
     .local v0, "e":Landroid/os/RemoteException;
     const-string v1, "QuickConnectConnector"
 
     new-instance v2, Ljava/lang/StringBuilder;
 
-    const-string/jumbo v3, "onServiceDisconnected: RemoteException: "
+    const-string v3, "onServiceDisconnected: RemoteException: "
 
     invoke-direct {v2, v3}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
@@ -251,7 +231,6 @@
 
     invoke-static {v1, v2}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 172
     invoke-virtual {v0}, Landroid/os/RemoteException;->printStackTrace()V
 
     goto :goto_0

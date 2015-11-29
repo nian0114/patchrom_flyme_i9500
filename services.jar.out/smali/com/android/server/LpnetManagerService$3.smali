@@ -24,7 +24,6 @@
     .param p2, "x0"    # Landroid/os/Handler;
 
     .prologue
-    .line 791
     iput-object p1, p0, Lcom/android/server/LpnetManagerService$3;->this$0:Lcom/android/server/LpnetManagerService;
 
     invoke-direct {p0, p2}, Landroid/database/ContentObserver;-><init>(Landroid/os/Handler;)V
@@ -39,7 +38,6 @@
     .param p1, "selfChange"    # Z
 
     .prologue
-    .line 793
     # getter for: Lcom/android/server/LpnetManagerService;->APP_FREEZER_LOG:Z
     invoke-static {}, Lcom/android/server/LpnetManagerService;->access$000()Z
 
@@ -49,11 +47,10 @@
 
     const-string v0, "LpnetManagerService"
 
-    const-string/jumbo v1, "onChange - Default()"
+    const-string v1, "onChange - Default()"
 
     invoke-static {v0, v1}, Landroid/util/Log;->v(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 794
     :cond_0
     iget-object v0, p0, Lcom/android/server/LpnetManagerService$3;->this$0:Lcom/android/server/LpnetManagerService;
 
@@ -67,7 +64,6 @@
     # invokes: Lcom/android/server/LpnetManagerService;->getDBValues(Z)V
     invoke-static {v0, v1}, Lcom/android/server/LpnetManagerService;->access$1600(Lcom/android/server/LpnetManagerService;Z)V
 
-    .line 795
     iget-object v0, p0, Lcom/android/server/LpnetManagerService$3;->this$0:Lcom/android/server/LpnetManagerService;
 
     const/4 v1, 0x0
@@ -75,6 +71,5 @@
     # invokes: Lcom/android/server/LpnetManagerService;->targetPkgInitialization(Z)V
     invoke-static {v0, v1}, Lcom/android/server/LpnetManagerService;->access$1700(Lcom/android/server/LpnetManagerService;Z)V
 
-    .line 796
     return-void
 .end method

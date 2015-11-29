@@ -40,12 +40,10 @@
     .locals 2
 
     .prologue
-    .line 48
     const v0, 0x1b7740
 
     sput v0, Lcom/samsung/android/contextaware/dataprovider/sensorhubprovider/builtin/ActivityTrackerBatchRunner;->DEFAULT_ACTIVITY_RECORDING_PERIOD:I
 
-    .line 51
     const-wide/16 v0, 0x4e20
 
     sput-wide v0, Lcom/samsung/android/contextaware/dataprovider/sensorhubprovider/builtin/ActivityTrackerBatchRunner;->CHECK_PERIOD:J
@@ -61,22 +59,18 @@
     .param p4, "observable"    # Lcom/samsung/android/contextaware/dataprovider/sensorhubprovider/ISensorHubResetObservable;
 
     .prologue
-    .line 81
     invoke-direct {p0, p1, p2, p3, p4}, Lcom/samsung/android/contextaware/dataprovider/sensorhubprovider/handler/builtin/ActivityTrackerProvider;-><init>(ILandroid/content/Context;Landroid/os/Looper;Lcom/samsung/android/contextaware/dataprovider/sensorhubprovider/ISensorHubResetObservable;)V
 
-    .line 54
     const/16 v0, 0x4b0
 
     iput v0, p0, Lcom/samsung/android/contextaware/dataprovider/sensorhubprovider/builtin/ActivityTrackerBatchRunner;->mBatchingPeriod:I
 
-    .line 64
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
     iput-object v0, p0, Lcom/samsung/android/contextaware/dataprovider/sensorhubprovider/builtin/ActivityTrackerBatchRunner;->mListActivityInfo:Ljava/util/ArrayList;
 
-    .line 83
     return-void
 .end method
 
@@ -84,24 +78,21 @@
     .locals 14
 
     .prologue
-    .line 187
     iget-object v9, p0, Lcom/samsung/android/contextaware/dataprovider/sensorhubprovider/builtin/ActivityTrackerBatchRunner;->mListActivityInfo:Ljava/util/ArrayList;
 
     invoke-virtual {v9}, Ljava/util/ArrayList;->size()I
 
     move-result v5
 
-    .line 190
     .local v5, "size":I
     const/4 v4, 0x1
 
-    .line 193
     .local v4, "retActivity":I
     new-instance v9, Ljava/lang/StringBuilder;
 
     invoke-direct {v9}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v10, "size:"
+    const-string v10, "size:"
 
     invoke-virtual {v9, v10}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -117,10 +108,8 @@
 
     invoke-static {v9}, Lcom/samsung/android/contextaware/utilbundle/logger/CaLogger;->info(Ljava/lang/String;)V
 
-    .line 195
     if-lez v5, :cond_0
 
-    .line 197
     iget-object v9, p0, Lcom/samsung/android/contextaware/dataprovider/sensorhubprovider/builtin/ActivityTrackerBatchRunner;->mListActivityInfo:Ljava/util/ArrayList;
 
     add-int/lit8 v10, v5, -0x1
@@ -139,7 +128,6 @@
 
     if-lez v9, :cond_1
 
-    .line 199
     iget-object v9, p0, Lcom/samsung/android/contextaware/dataprovider/sensorhubprovider/builtin/ActivityTrackerBatchRunner;->mListActivityInfo:Ljava/util/ArrayList;
 
     add-int/lit8 v10, v5, -0x1
@@ -152,32 +140,25 @@
 
     iget v4, v9, Lcom/samsung/android/contextaware/dataprovider/sensorhubprovider/builtin/ActivityTrackerBatchRunner$ActivityInfo;->activityType:I
 
-    .line 233
     :cond_0
     :goto_0
     return v4
 
-    .line 201
     :cond_1
     const-wide/16 v6, 0x0
 
-    .line 202
     .local v6, "sumDuration":J
     add-int/lit8 v1, v5, -0x1
 
-    .line 203
     .local v1, "i":I
     const/4 v3, 0x0
 
-    .line 204
     .local v3, "maxWeight":F
     const/4 v2, 0x1
 
-    .line 205
     .local v2, "k":I
     add-int/lit8 v0, v5, -0x1
 
-    .line 207
     .local v0, "actIndex":I
     :goto_1
     const-wide/16 v10, 0x7530
@@ -188,7 +169,6 @@
 
     if-ltz v1, :cond_4
 
-    .line 210
     iget-object v9, p0, Lcom/samsung/android/contextaware/dataprovider/sensorhubprovider/builtin/ActivityTrackerBatchRunner;->mListActivityInfo:Ljava/util/ArrayList;
 
     invoke-virtual {v9, v1}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
@@ -205,13 +185,10 @@
 
     if-gez v9, :cond_2
 
-    .line 211
     add-int/lit8 v1, v1, -0x1
 
-    .line 212
     goto :goto_1
 
-    .line 215
     :cond_2
     iget-object v9, p0, Lcom/samsung/android/contextaware/dataprovider/sensorhubprovider/builtin/ActivityTrackerBatchRunner;->mListActivityInfo:Ljava/util/ArrayList;
 
@@ -229,22 +206,17 @@
 
     long-to-float v8, v10
 
-    .line 216
     .local v8, "weight":F
     cmpg-float v9, v3, v8
 
     if-gez v9, :cond_3
 
-    .line 217
     move v3, v8
 
-    .line 218
     move v0, v1
 
-    .line 219
     add-int/lit8 v2, v2, 0x1
 
-    .line 222
     :cond_3
     iget-object v9, p0, Lcom/samsung/android/contextaware/dataprovider/sensorhubprovider/builtin/ActivityTrackerBatchRunner;->mListActivityInfo:Ljava/util/ArrayList;
 
@@ -258,13 +230,10 @@
 
     add-long/2addr v6, v10
 
-    .line 223
     add-int/lit8 v1, v1, -0x1
 
-    .line 224
     goto :goto_1
 
-    .line 227
     .end local v8    # "weight":F
     :cond_4
     iget-object v9, p0, Lcom/samsung/android/contextaware/dataprovider/sensorhubprovider/builtin/ActivityTrackerBatchRunner;->mListActivityInfo:Ljava/util/ArrayList;
@@ -288,12 +257,10 @@
     .param p4, "totalCnt"    # I
 
     .prologue
-    .line 239
     invoke-virtual/range {p0 .. p0}, Lcom/samsung/android/contextaware/dataprovider/sensorhubprovider/builtin/ActivityTrackerBatchRunner;->getTimeStamp()J
 
     move-result-wide v8
 
-    .line 242
     .local v8, "timeStamp":J
     const/4 v2, 0x0
 
@@ -303,7 +270,6 @@
 
     if-ge v2, v0, :cond_5
 
-    .line 245
     aget v10, p1, v2
 
     if-eqz v10, :cond_0
@@ -312,14 +278,12 @@
 
     if-nez v10, :cond_1
 
-    .line 242
     :cond_0
     :goto_1
     add-int/lit8 v2, v2, 0x1
 
     goto :goto_0
 
-    .line 253
     :cond_1
     move-object/from16 v0, p0
 
@@ -329,11 +293,9 @@
 
     move-result v5
 
-    .line 254
     .local v5, "size":I
     if-eqz v5, :cond_2
 
-    .line 255
     aget v11, p1, v2
 
     move-object/from16 v0, p0
@@ -352,7 +314,6 @@
 
     if-ne v11, v10, :cond_2
 
-    .line 256
     move-object/from16 v0, p0
 
     iget-object v10, v0, Lcom/samsung/android/contextaware/dataprovider/sensorhubprovider/builtin/ActivityTrackerBatchRunner;->mListActivityInfo:Ljava/util/ArrayList;
@@ -375,7 +336,6 @@
 
     goto :goto_1
 
-    .line 262
     :cond_2
     new-instance v3, Lcom/samsung/android/contextaware/dataprovider/sensorhubprovider/builtin/ActivityTrackerBatchRunner$ActivityInfo;
 
@@ -385,42 +345,34 @@
 
     invoke-direct {v3, v0, v10}, Lcom/samsung/android/contextaware/dataprovider/sensorhubprovider/builtin/ActivityTrackerBatchRunner$ActivityInfo;-><init>(Lcom/samsung/android/contextaware/dataprovider/sensorhubprovider/builtin/ActivityTrackerBatchRunner;Lcom/samsung/android/contextaware/dataprovider/sensorhubprovider/builtin/ActivityTrackerBatchRunner$1;)V
 
-    .line 263
     .local v3, "info":Lcom/samsung/android/contextaware/dataprovider/sensorhubprovider/builtin/ActivityTrackerBatchRunner$ActivityInfo;
     aget v10, p1, v2
 
     iput v10, v3, Lcom/samsung/android/contextaware/dataprovider/sensorhubprovider/builtin/ActivityTrackerBatchRunner$ActivityInfo;->activityType:I
 
-    .line 264
     iget v10, v3, Lcom/samsung/android/contextaware/dataprovider/sensorhubprovider/builtin/ActivityTrackerBatchRunner$ActivityInfo;->activityType:I
 
     const/4 v11, 0x4
 
     if-ne v10, v11, :cond_3
 
-    .line 265
     const/4 v10, 0x1
 
     iput v10, v3, Lcom/samsung/android/contextaware/dataprovider/sensorhubprovider/builtin/ActivityTrackerBatchRunner$ActivityInfo;->activityType:I
 
-    .line 268
     :cond_3
     aget-wide v10, p2, v2
 
     iput-wide v10, v3, Lcom/samsung/android/contextaware/dataprovider/sensorhubprovider/builtin/ActivityTrackerBatchRunner$ActivityInfo;->duration:J
 
-    .line 269
     aget v10, p3, v2
 
     iput v10, v3, Lcom/samsung/android/contextaware/dataprovider/sensorhubprovider/builtin/ActivityTrackerBatchRunner$ActivityInfo;->accuracy:I
 
-    .line 270
     if-nez v2, :cond_4
 
-    .line 271
     iput-wide v8, v3, Lcom/samsung/android/contextaware/dataprovider/sensorhubprovider/builtin/ActivityTrackerBatchRunner$ActivityInfo;->timestamp:J
 
-    .line 275
     :goto_2
     move-object/from16 v0, p0
 
@@ -430,7 +382,6 @@
 
     goto :goto_1
 
-    .line 273
     :cond_4
     add-int/lit8 v10, v2, -0x1
 
@@ -442,7 +393,6 @@
 
     goto :goto_2
 
-    .line 279
     .end local v3    # "info":Lcom/samsung/android/contextaware/dataprovider/sensorhubprovider/builtin/ActivityTrackerBatchRunner$ActivityInfo;
     .end local v5    # "size":I
     :cond_5
@@ -456,7 +406,6 @@
 
     sub-long v6, v10, v12
 
-    .line 283
     .local v6, "startTime":J
     const/4 v2, 0x0
 
@@ -471,7 +420,6 @@
 
     if-ge v2, v10, :cond_6
 
-    .line 284
     move-object/from16 v0, p0
 
     iget-object v10, v0, Lcom/samsung/android/contextaware/dataprovider/sensorhubprovider/builtin/ActivityTrackerBatchRunner;->mListActivityInfo:Ljava/util/ArrayList;
@@ -488,7 +436,6 @@
 
     if-ltz v10, :cond_7
 
-    .line 289
     :cond_6
     const/4 v4, 0x0
 
@@ -496,7 +443,6 @@
     :goto_4
     if-ge v4, v2, :cond_8
 
-    .line 290
     move-object/from16 v0, p0
 
     iget-object v10, v0, Lcom/samsung/android/contextaware/dataprovider/sensorhubprovider/builtin/ActivityTrackerBatchRunner;->mListActivityInfo:Ljava/util/ArrayList;
@@ -505,19 +451,16 @@
 
     invoke-virtual {v10, v11}, Ljava/util/ArrayList;->remove(I)Ljava/lang/Object;
 
-    .line 289
     add-int/lit8 v4, v4, 0x1
 
     goto :goto_4
 
-    .line 283
     .end local v4    # "j":I
     :cond_7
     add-int/lit8 v2, v2, 0x1
 
     goto :goto_3
 
-    .line 292
     .restart local v4    # "j":I
     :cond_8
     return-void
@@ -529,18 +472,14 @@
     .locals 1
 
     .prologue
-    .line 326
     invoke-static {}, Lcom/samsung/android/contextaware/utilbundle/logger/CaLogger;->trace()V
 
-    .line 327
     iget-object v0, p0, Lcom/samsung/android/contextaware/dataprovider/sensorhubprovider/builtin/ActivityTrackerBatchRunner;->mListActivityInfo:Ljava/util/ArrayList;
 
     invoke-virtual {v0}, Ljava/util/ArrayList;->clear()V
 
-    .line 328
     invoke-super {p0}, Lcom/samsung/android/contextaware/dataprovider/sensorhubprovider/handler/builtin/ActivityTrackerProvider;->clear()V
 
-    .line 329
     return-void
 .end method
 
@@ -548,13 +487,10 @@
     .locals 0
 
     .prologue
-    .line 314
     invoke-static {}, Lcom/samsung/android/contextaware/utilbundle/logger/CaLogger;->trace()V
 
-    .line 315
     invoke-super {p0}, Lcom/samsung/android/contextaware/dataprovider/sensorhubprovider/handler/builtin/ActivityTrackerProvider;->disable()V
 
-    .line 316
     return-void
 .end method
 
@@ -562,13 +498,10 @@
     .locals 0
 
     .prologue
-    .line 302
     invoke-static {}, Lcom/samsung/android/contextaware/utilbundle/logger/CaLogger;->trace()V
 
-    .line 303
     invoke-super {p0}, Lcom/samsung/android/contextaware/dataprovider/sensorhubprovider/handler/builtin/ActivityTrackerProvider;->enable()V
 
-    .line 304
     return-void
 .end method
 
@@ -576,7 +509,6 @@
     .locals 1
 
     .prologue
-    .line 94
     const/16 v0, 0x4b0
 
     return v0
@@ -586,7 +518,6 @@
     .locals 1
 
     .prologue
-    .line 105
     sget-object v0, Lcom/samsung/android/contextaware/ContextList$ContextType;->SENSORHUB_RUNNER_ACTIVITY_TRACKER_BATCH:Lcom/samsung/android/contextaware/ContextList$ContextType;
 
     invoke-virtual {v0}, Lcom/samsung/android/contextaware/ContextList$ContextType;->getCode()Ljava/lang/String;
@@ -600,7 +531,6 @@
     .locals 3
 
     .prologue
-    .line 129
     const/4 v0, 0x7
 
     new-array v0, v0, [Ljava/lang/String;
@@ -654,7 +584,6 @@
     .locals 1
 
     .prologue
-    .line 362
     invoke-virtual {p0}, Lcom/samsung/android/contextaware/dataprovider/sensorhubprovider/builtin/ActivityTrackerBatchRunner;->checkFaultDetectionResult()Z
 
     move-result v0
@@ -665,7 +594,6 @@
 
     invoke-static {v0}, Lcom/samsung/android/contextaware/utilbundle/logger/CaLogger;->debug(Ljava/lang/String;)V
 
-    .line 363
     invoke-super {p0}, Lcom/samsung/android/contextaware/dataprovider/sensorhubprovider/handler/builtin/ActivityTrackerProvider;->getFaultDetectionResult()Landroid/os/Bundle;
 
     move-result-object v0
@@ -677,7 +605,6 @@
     .locals 1
 
     .prologue
-    .line 117
     const/4 v0, 0x2
 
     return v0
@@ -687,7 +614,6 @@
     .locals 0
 
     .prologue
-    .line 339
     return-object p0
 .end method
 
@@ -695,7 +621,6 @@
     .locals 0
 
     .prologue
-    .line 351
     return-object p0
 .end method
 
@@ -707,10 +632,8 @@
     .prologue
     const/4 v8, -0x1
 
-    .line 141
     move v5, p2
 
-    .line 143
     .local v5, "tmpNext":I
     array-length v9, p1
 
@@ -720,7 +643,6 @@
 
     if-gez v9, :cond_0
 
-    .line 144
     sget-object v9, Lcom/samsung/android/contextaware/dataprovider/sensorhubprovider/SensorHubErrors;->ERROR_PACKET_LOST:Lcom/samsung/android/contextaware/dataprovider/sensorhubprovider/SensorHubErrors;
 
     invoke-virtual {v9}, Lcom/samsung/android/contextaware/dataprovider/sensorhubprovider/SensorHubErrors;->getMessage()Ljava/lang/String;
@@ -731,17 +653,14 @@
 
     move v6, v8
 
-    .line 181
     :goto_0
     return v6
 
-    .line 148
     :cond_0
     invoke-virtual {p0}, Lcom/samsung/android/contextaware/dataprovider/sensorhubprovider/builtin/ActivityTrackerBatchRunner;->getContextValueNames()[Ljava/lang/String;
 
     move-result-object v4
 
-    .line 150
     .local v4, "names":[Ljava/lang/String;
     add-int/lit8 v6, v5, 0x1
 
@@ -749,11 +668,9 @@
     .local v6, "tmpNext":I
     aget-byte v7, p1, v5
 
-    .line 151
     .local v7, "totalCnt":I
     if-gtz v7, :cond_1
 
-    .line 152
     sget-object v9, Lcom/samsung/android/contextaware/dataprovider/sensorhubprovider/SensorHubErrors;->ERROR_BATCH_DATA_COUNT:Lcom/samsung/android/contextaware/dataprovider/sensorhubprovider/SensorHubErrors;
 
     invoke-virtual {v9}, Lcom/samsung/android/contextaware/dataprovider/sensorhubprovider/SensorHubErrors;->getMessage()Ljava/lang/String;
@@ -768,10 +685,8 @@
     .restart local v5    # "tmpNext":I
     move v6, v8
 
-    .line 153
     goto :goto_0
 
-    .line 155
     .end local v5    # "tmpNext":I
     .restart local v6    # "tmpNext":I
     :cond_1
@@ -785,18 +700,14 @@
 
     invoke-virtual {v9, v10, v7}, Lcom/samsung/android/contextaware/manager/ContextBean;->putContext(Ljava/lang/String;I)V
 
-    .line 157
     new-array v1, v7, [I
 
-    .line 158
     .local v1, "activityType":[I
     new-array v0, v7, [I
 
-    .line 159
     .local v0, "accuracy":[I
     new-array v2, v7, [J
 
-    .line 161
     .local v2, "duration":[J
     const/4 v3, 0x0
 
@@ -804,7 +715,6 @@
     :goto_1
     if-ge v3, v7, :cond_3
 
-    .line 162
     array-length v9, p1
 
     sub-int/2addr v9, v6
@@ -813,7 +723,6 @@
 
     if-gez v9, :cond_2
 
-    .line 163
     sget-object v9, Lcom/samsung/android/contextaware/dataprovider/sensorhubprovider/SensorHubErrors;->ERROR_PACKET_LOST:Lcom/samsung/android/contextaware/dataprovider/sensorhubprovider/SensorHubErrors;
 
     invoke-virtual {v9}, Lcom/samsung/android/contextaware/dataprovider/sensorhubprovider/SensorHubErrors;->getMessage()Ljava/lang/String;
@@ -828,10 +737,8 @@
     .restart local v5    # "tmpNext":I
     move v6, v8
 
-    .line 164
     goto :goto_0
 
-    .line 167
     .end local v5    # "tmpNext":I
     .restart local v6    # "tmpNext":I
     :cond_2
@@ -843,7 +750,6 @@
 
     aput v9, v1, v3
 
-    .line 168
     add-int/lit8 v6, v5, 0x1
 
     .end local v5    # "tmpNext":I
@@ -852,7 +758,6 @@
 
     aput v9, v0, v3
 
-    .line 169
     add-int/lit8 v5, v6, 0x1
 
     .end local v6    # "tmpNext":I
@@ -889,7 +794,6 @@
 
     aput-wide v10, v2, v3
 
-    .line 161
     add-int/lit8 v3, v3, 0x1
 
     move v6, v5
@@ -898,7 +802,6 @@
     .restart local v6    # "tmpNext":I
     goto :goto_1
 
-    .line 174
     :cond_3
     invoke-virtual {p0}, Lcom/samsung/android/contextaware/dataprovider/sensorhubprovider/builtin/ActivityTrackerBatchRunner;->getContextBean()Lcom/samsung/android/contextaware/manager/ContextBean;
 
@@ -910,7 +813,6 @@
 
     invoke-virtual {v8, v9, v1}, Lcom/samsung/android/contextaware/manager/ContextBean;->putContext(Ljava/lang/String;[I)V
 
-    .line 175
     invoke-virtual {p0}, Lcom/samsung/android/contextaware/dataprovider/sensorhubprovider/builtin/ActivityTrackerBatchRunner;->getContextBean()Lcom/samsung/android/contextaware/manager/ContextBean;
 
     move-result-object v8
@@ -921,7 +823,6 @@
 
     invoke-virtual {v8, v9, v0}, Lcom/samsung/android/contextaware/manager/ContextBean;->putContext(Ljava/lang/String;[I)V
 
-    .line 176
     invoke-virtual {p0}, Lcom/samsung/android/contextaware/dataprovider/sensorhubprovider/builtin/ActivityTrackerBatchRunner;->getContextBean()Lcom/samsung/android/contextaware/manager/ContextBean;
 
     move-result-object v8
@@ -932,10 +833,8 @@
 
     invoke-virtual {v8, v9, v2}, Lcom/samsung/android/contextaware/manager/ContextBean;->putContext(Ljava/lang/String;[J)V
 
-    .line 178
     invoke-direct {p0, v1, v2, v0, v7}, Lcom/samsung/android/contextaware/dataprovider/sensorhubprovider/builtin/ActivityTrackerBatchRunner;->updateActivityInfo([I[J[II)V
 
-    .line 179
     invoke-virtual {p0}, Lcom/samsung/android/contextaware/dataprovider/sensorhubprovider/builtin/ActivityTrackerBatchRunner;->getContextBean()Lcom/samsung/android/contextaware/manager/ContextBean;
 
     move-result-object v8
@@ -952,7 +851,6 @@
 
     move v5, v6
 
-    .line 181
     .end local v6    # "tmpNext":I
     .restart local v5    # "tmpNext":I
     goto/16 :goto_0

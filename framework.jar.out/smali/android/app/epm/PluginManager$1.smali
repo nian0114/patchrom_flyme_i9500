@@ -23,7 +23,6 @@
     .locals 0
 
     .prologue
-    .line 460
     iput-object p1, p0, Landroid/app/epm/PluginManager$1;->this$0:Landroid/app/epm/PluginManager;
 
     invoke-direct {p0}, Landroid/app/epm/IPluginManagerCallback$Stub;-><init>()V
@@ -44,7 +43,6 @@
     .end annotation
 
     .prologue
-    .line 464
     iget-object v0, p0, Landroid/app/epm/PluginManager$1;->this$0:Landroid/app/epm/PluginManager;
 
     # getter for: Landroid/app/epm/PluginManager;->mClientCallback:Landroid/app/epm/PluginManager$IStatusListener;
@@ -54,7 +52,6 @@
 
     invoke-interface {v0, p1, p2}, Landroid/app/epm/PluginManager$IStatusListener;->onInstallCompleted(Ljava/lang/String;I)V
 
-    .line 465
     return-void
 .end method
 
@@ -68,7 +65,6 @@
     .end annotation
 
     .prologue
-    .line 474
     iget-object v0, p0, Landroid/app/epm/PluginManager$1;->this$0:Landroid/app/epm/PluginManager;
 
     # getter for: Landroid/app/epm/PluginManager;->mClientCallback:Landroid/app/epm/PluginManager$IStatusListener;
@@ -78,7 +74,6 @@
 
     invoke-interface {v0, p1}, Landroid/app/epm/PluginManager$IStatusListener;->onStateChangeCompleted(Ljava/lang/String;)V
 
-    .line 475
     return-void
 .end method
 
@@ -92,7 +87,6 @@
     .end annotation
 
     .prologue
-    .line 469
     iget-object v0, p0, Landroid/app/epm/PluginManager$1;->this$0:Landroid/app/epm/PluginManager;
 
     # getter for: Landroid/app/epm/PluginManager;->mClientCallback:Landroid/app/epm/PluginManager$IStatusListener;
@@ -102,6 +96,5 @@
 
     invoke-interface {v0, p1}, Landroid/app/epm/PluginManager$IStatusListener;->onUninstallCompleted(Ljava/lang/String;)V
 
-    .line 470
     return-void
 .end method

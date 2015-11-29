@@ -26,13 +26,10 @@
     .param p3, "res"    # Landroid/content/res/Resources;
 
     .prologue
-    .line 284
     invoke-direct {p0, p1, p2, p3}, Landroid/graphics/drawable/DrawableContainer$DrawableContainerState;-><init>(Landroid/graphics/drawable/DrawableContainer$DrawableContainerState;Landroid/graphics/drawable/DrawableContainer;Landroid/content/res/Resources;)V
 
-    .line 286
     if-eqz p1, :cond_0
 
-    .line 287
     iget-object v0, p1, Landroid/graphics/drawable/StateListDrawable$StateListState;->mStateSets:[[I
 
     iget-object v1, p1, Landroid/graphics/drawable/StateListDrawable$StateListState;->mStateSets:[[I
@@ -47,11 +44,9 @@
 
     iput-object v0, p0, Landroid/graphics/drawable/StateListDrawable$StateListState;->mStateSets:[[I
 
-    .line 291
     :goto_0
     return-void
 
-    .line 289
     :cond_0
     invoke-virtual {p0}, Landroid/graphics/drawable/StateListDrawable$StateListState;->getCapacity()I
 
@@ -72,18 +67,15 @@
     .param p2, "drawable"    # Landroid/graphics/drawable/Drawable;
 
     .prologue
-    .line 294
     invoke-virtual {p0, p2}, Landroid/graphics/drawable/StateListDrawable$StateListState;->addChild(Landroid/graphics/drawable/Drawable;)I
 
     move-result v0
 
-    .line 295
     .local v0, "pos":I
     iget-object v1, p0, Landroid/graphics/drawable/StateListDrawable$StateListState;->mStateSets:[[I
 
     aput-object p1, v1, v0
 
-    .line 296
     return v0
 .end method
 
@@ -95,22 +87,17 @@
     .prologue
     const/4 v2, 0x0
 
-    .line 322
     invoke-super {p0, p1, p2}, Landroid/graphics/drawable/DrawableContainer$DrawableContainerState;->growArray(II)V
 
-    .line 323
     new-array v0, p2, [[I
 
-    .line 324
     .local v0, "newStateSets":[[I
     iget-object v1, p0, Landroid/graphics/drawable/StateListDrawable$StateListState;->mStateSets:[[I
 
     invoke-static {v1, v2, v0, v2, p1}, Ljava/lang/System;->arraycopy(Ljava/lang/Object;ILjava/lang/Object;II)V
 
-    .line 325
     iput-object v0, p0, Landroid/graphics/drawable/StateListDrawable$StateListState;->mStateSets:[[I
 
-    .line 326
     return-void
 .end method
 
@@ -119,16 +106,13 @@
     .param p1, "stateSet"    # [I
 
     .prologue
-    .line 300
     iget-object v2, p0, Landroid/graphics/drawable/StateListDrawable$StateListState;->mStateSets:[[I
 
-    .line 301
     .local v2, "stateSets":[[I
     invoke-virtual {p0}, Landroid/graphics/drawable/StateListDrawable$StateListState;->getChildCount()I
 
     move-result v0
 
-    .line 302
     .local v0, "N":I
     const/4 v1, 0x0
 
@@ -136,7 +120,6 @@
     :goto_0
     if-ge v1, v0, :cond_1
 
-    .line 303
     aget-object v3, v2, v1
 
     invoke-static {v3, p1}, Landroid/util/StateSet;->stateSetMatches([I[I)Z
@@ -145,19 +128,16 @@
 
     if-eqz v3, :cond_0
 
-    .line 307
     .end local v1    # "i":I
     :goto_1
     return v1
 
-    .line 302
     .restart local v1    # "i":I
     :cond_0
     add-int/lit8 v1, v1, 0x1
 
     goto :goto_0
 
-    .line 307
     :cond_1
     const/4 v1, -0x1
 
@@ -170,7 +150,6 @@
     .prologue
     const/4 v1, 0x0
 
-    .line 312
     new-instance v0, Landroid/graphics/drawable/StateListDrawable;
 
     invoke-direct {v0, p0, v1, v1}, Landroid/graphics/drawable/StateListDrawable;-><init>(Landroid/graphics/drawable/StateListDrawable$StateListState;Landroid/content/res/Resources;Landroid/graphics/drawable/StateListDrawable$1;)V
@@ -183,7 +162,6 @@
     .param p1, "res"    # Landroid/content/res/Resources;
 
     .prologue
-    .line 317
     new-instance v0, Landroid/graphics/drawable/StateListDrawable;
 
     const/4 v1, 0x0

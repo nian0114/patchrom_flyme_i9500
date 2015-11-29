@@ -35,27 +35,22 @@
     .prologue
     const/16 v1, 0x1a
 
-    .line 1380
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 1381
     const-string v0, "/media/audio/ui/HoverPointer.ogg"
 
     iput-object v0, p0, Landroid/view/PointerIcon$HoverEffect;->soundURIs:Ljava/lang/String;
 
-    .line 1385
     const/4 v0, -0x1
 
     iput v0, p0, Landroid/view/PointerIcon$HoverEffect;->mSoundId:I
 
-    .line 1388
     new-array v0, v1, [B
 
     fill-array-data v0, :array_0
 
     iput-object v0, p0, Landroid/view/PointerIcon$HoverEffect;->mIvt_Tablet:[B
 
-    .line 1397
     new-array v0, v1, [B
 
     fill-array-data v0, :array_1
@@ -64,7 +59,6 @@
 
     return-void
 
-    .line 1388
     nop
 
     :array_0
@@ -97,7 +91,6 @@
         -0x5et
     .end array-data
 
-    .line 1397
     nop
 
     :array_1
@@ -136,7 +129,6 @@
     .param p1, "x0"    # Landroid/view/PointerIcon$1;
 
     .prologue
-    .line 1380
     invoke-direct {p0}, Landroid/view/PointerIcon$HoverEffect;-><init>()V
 
     return-void
@@ -155,19 +147,16 @@
 
     const/4 v4, 0x1
 
-    .line 1407
     iget-object v0, p0, Landroid/view/PointerIcon$HoverEffect;->mHoverSound:Landroid/media/SoundPool;
 
     if-nez v0, :cond_0
 
-    .line 1408
     new-instance v0, Landroid/media/SoundPool;
 
     invoke-direct {v0, v4, v4, v5}, Landroid/media/SoundPool;-><init>(III)V
 
     iput-object v0, p0, Landroid/view/PointerIcon$HoverEffect;->mHoverSound:Landroid/media/SoundPool;
 
-    .line 1411
     :cond_0
     iget v0, p0, Landroid/view/PointerIcon$HoverEffect;->mSoundId:I
 
@@ -175,7 +164,6 @@
 
     if-ne v0, v1, :cond_1
 
-    .line 1412
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -198,7 +186,6 @@
 
     move-result-object v8
 
-    .line 1413
     .local v8, "soundPath":Ljava/lang/String;
     iget-object v0, p0, Landroid/view/PointerIcon$HoverEffect;->mHoverSound:Landroid/media/SoundPool;
 
@@ -208,7 +195,6 @@
 
     iput v0, p0, Landroid/view/PointerIcon$HoverEffect;->mSoundId:I
 
-    .line 1416
     .end local v8    # "soundPath":Ljava/lang/String;
     :cond_1
     iget-object v0, p0, Landroid/view/PointerIcon$HoverEffect;->mHoverSound:Landroid/media/SoundPool;
@@ -223,7 +209,6 @@
 
     move-result v7
 
-    .line 1417
     .local v7, "ret":I
     return-void
 .end method
@@ -233,18 +218,16 @@
     .param p1, "type"    # I
 
     .prologue
-    .line 1420
     iget-object v0, p0, Landroid/view/PointerIcon$HoverEffect;->mVibrator:Landroid/os/SystemVibrator;
 
     if-nez v0, :cond_0
 
-    .line 1421
     # getter for: Landroid/view/PointerIcon;->mContext:Landroid/content/Context;
     invoke-static {}, Landroid/view/PointerIcon;->access$300()Landroid/content/Context;
 
     move-result-object v0
 
-    const-string/jumbo v1, "vibrator"
+    const-string v1, "vibrator"
 
     invoke-virtual {v0, v1}, Landroid/content/Context;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
 
@@ -254,7 +237,6 @@
 
     iput-object v0, p0, Landroid/view/PointerIcon$HoverEffect;->mVibrator:Landroid/os/SystemVibrator;
 
-    .line 1425
     :cond_0
     iget-object v0, p0, Landroid/view/PointerIcon$HoverEffect;->mVibrator:Landroid/os/SystemVibrator;
 
@@ -262,6 +244,5 @@
 
     invoke-virtual {v0, v1}, Landroid/os/SystemVibrator;->vibrateImmVibe([B)V
 
-    .line 1429
     return-void
 .end method

@@ -19,7 +19,6 @@
     .locals 1
 
     .prologue
-    .line 60
     invoke-static {}, Ljava/util/Locale;->getDefault()Ljava/util/Locale;
 
     move-result-object v0
@@ -30,7 +29,6 @@
 
     invoke-direct {p0, v0}, Landroid/telephony/PhoneNumberFormattingTextWatcher;-><init>(Ljava/lang/String;)V
 
-    .line 61
     return-void
 .end method
 
@@ -39,15 +37,12 @@
     .param p1, "countryCode"    # Ljava/lang/String;
 
     .prologue
-    .line 69
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 46
     const/4 v0, 0x0
 
     iput-boolean v0, p0, Landroid/telephony/PhoneNumberFormattingTextWatcher;->mSelfChange:Z
 
-    .line 70
     if-nez p1, :cond_0
 
     new-instance v0, Ljava/lang/IllegalArgumentException;
@@ -56,7 +51,6 @@
 
     throw v0
 
-    .line 71
     :cond_0
     invoke-static {}, Lcom/android/i18n/phonenumbers/PhoneNumberUtil;->getInstance()Lcom/android/i18n/phonenumbers/PhoneNumberUtil;
 
@@ -68,7 +62,6 @@
 
     iput-object v0, p0, Landroid/telephony/PhoneNumberFormattingTextWatcher;->mFormatter:Lcom/android/i18n/phonenumbers/AsYouTypeFormatter;
 
-    .line 72
     return-void
 .end method
 
@@ -78,7 +71,6 @@
     .param p2, "hasCursor"    # Z
 
     .prologue
-    .line 155
     if-eqz p2, :cond_0
 
     iget-object v0, p0, Landroid/telephony/PhoneNumberFormattingTextWatcher;->mFormatter:Lcom/android/i18n/phonenumbers/AsYouTypeFormatter;
@@ -107,7 +99,6 @@
     .param p3, "count"    # I
 
     .prologue
-    .line 165
     move v1, p2
 
     .local v1, "i":I
@@ -116,12 +107,10 @@
 
     if-ge v1, v2, :cond_1
 
-    .line 166
     invoke-interface {p1, v1}, Ljava/lang/CharSequence;->charAt(I)C
 
     move-result v0
 
-    .line 167
     .local v0, "c":C
     invoke-static {v0}, Landroid/telephony/PhoneNumberUtils;->isNonSeparator(C)Z
 
@@ -129,22 +118,18 @@
 
     if-nez v2, :cond_0
 
-    .line 168
     const/4 v2, 0x1
 
-    .line 171
     .end local v0    # "c":C
     :goto_1
     return v2
 
-    .line 165
     .restart local v0    # "c":C
     :cond_0
     add-int/lit8 v1, v1, 0x1
 
     goto :goto_0
 
-    .line 171
     .end local v0    # "c":C
     :cond_1
     const/4 v2, 0x0
@@ -158,33 +143,26 @@
     .param p2, "cursor"    # I
 
     .prologue
-    .line 129
     add-int/lit8 v1, p2, -0x1
 
-    .line 130
     .local v1, "curIndex":I
     const/4 v2, 0x0
 
-    .line 131
     .local v2, "formatted":Ljava/lang/String;
     iget-object v7, p0, Landroid/telephony/PhoneNumberFormattingTextWatcher;->mFormatter:Lcom/android/i18n/phonenumbers/AsYouTypeFormatter;
 
     invoke-virtual {v7}, Lcom/android/i18n/phonenumbers/AsYouTypeFormatter;->clear()V
 
-    .line 132
     const/4 v5, 0x0
 
-    .line 133
     .local v5, "lastNonSeparator":C
     const/4 v3, 0x0
 
-    .line 134
     .local v3, "hasCursor":Z
     invoke-interface {p1}, Ljava/lang/CharSequence;->length()I
 
     move-result v6
 
-    .line 135
     .local v6, "len":I
     const/4 v4, 0x0
 
@@ -192,12 +170,10 @@
     :goto_0
     if-ge v4, v6, :cond_3
 
-    .line 136
     invoke-interface {p1, v4}, Ljava/lang/CharSequence;->charAt(I)C
 
     move-result v0
 
-    .line 137
     .local v0, "c":C
     invoke-static {v0}, Landroid/telephony/PhoneNumberUtils;->isNonSeparator(C)Z
 
@@ -205,45 +181,35 @@
 
     if-eqz v7, :cond_1
 
-    .line 138
     if-eqz v5, :cond_0
 
-    .line 139
     invoke-direct {p0, v5, v3}, Landroid/telephony/PhoneNumberFormattingTextWatcher;->getFormattedNumber(CZ)Ljava/lang/String;
 
     move-result-object v2
 
-    .line 140
     const/4 v3, 0x0
 
-    .line 142
     :cond_0
     move v5, v0
 
-    .line 144
     :cond_1
     if-ne v4, v1, :cond_2
 
-    .line 145
     const/4 v3, 0x1
 
-    .line 135
     :cond_2
     add-int/lit8 v4, v4, 0x1
 
     goto :goto_0
 
-    .line 148
     .end local v0    # "c":C
     :cond_3
     if-eqz v5, :cond_4
 
-    .line 149
     invoke-direct {p0, v5, v3}, Landroid/telephony/PhoneNumberFormattingTextWatcher;->getFormattedNumber(CZ)Ljava/lang/String;
 
     move-result-object v2
 
-    .line 151
     :cond_4
     return-object v2
 .end method
@@ -252,17 +218,14 @@
     .locals 1
 
     .prologue
-    .line 160
     const/4 v0, 0x1
 
     iput-boolean v0, p0, Landroid/telephony/PhoneNumberFormattingTextWatcher;->mStopFormatting:Z
 
-    .line 161
     iget-object v0, p0, Landroid/telephony/PhoneNumberFormattingTextWatcher;->mFormatter:Lcom/android/i18n/phonenumbers/AsYouTypeFormatter;
 
     invoke-virtual {v0}, Lcom/android/i18n/phonenumbers/AsYouTypeFormatter;->clear()V
 
-    .line 162
     return-void
 .end method
 
@@ -277,7 +240,6 @@
 
     const/4 v1, 0x0
 
-    .line 99
     monitor-enter p0
 
     :try_start_0
@@ -285,7 +247,6 @@
 
     if-eqz v2, :cond_2
 
-    .line 101
     invoke-interface {p1}, Landroid/text/Editable;->length()I
 
     move-result v2
@@ -297,7 +258,6 @@
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 120
     :cond_0
     :goto_1
     monitor-exit p0
@@ -307,17 +267,14 @@
     :cond_1
     move v0, v1
 
-    .line 101
     goto :goto_0
 
-    .line 104
     :cond_2
     :try_start_1
     iget-boolean v0, p0, Landroid/telephony/PhoneNumberFormattingTextWatcher;->mSelfChange:Z
 
     if-nez v0, :cond_0
 
-    .line 108
     invoke-static {p1}, Landroid/text/Selection;->getSelectionEnd(Ljava/lang/CharSequence;)I
 
     move-result v0
@@ -326,24 +283,20 @@
 
     move-result-object v3
 
-    .line 109
     .local v3, "formatted":Ljava/lang/String;
     if-eqz v3, :cond_0
 
-    .line 110
     iget-object v0, p0, Landroid/telephony/PhoneNumberFormattingTextWatcher;->mFormatter:Lcom/android/i18n/phonenumbers/AsYouTypeFormatter;
 
     invoke-virtual {v0}, Lcom/android/i18n/phonenumbers/AsYouTypeFormatter;->getRememberedPosition()I
 
     move-result v6
 
-    .line 111
     .local v6, "rememberedPos":I
     const/4 v0, 0x1
 
     iput-boolean v0, p0, Landroid/telephony/PhoneNumberFormattingTextWatcher;->mSelfChange:Z
 
-    .line 112
     const/4 v1, 0x0
 
     invoke-interface {p1}, Landroid/text/Editable;->length()I
@@ -360,7 +313,6 @@
 
     invoke-interface/range {v0 .. v5}, Landroid/text/Editable;->replace(IILjava/lang/CharSequence;II)Landroid/text/Editable;
 
-    .line 115
     invoke-virtual {p1}, Ljava/lang/Object;->toString()Ljava/lang/String;
 
     move-result-object v0
@@ -371,10 +323,8 @@
 
     if-eqz v0, :cond_3
 
-    .line 116
     invoke-static {p1, v6}, Landroid/text/Selection;->setSelection(Landroid/text/Spannable;I)V
 
-    .line 118
     :cond_3
     const/4 v0, 0x0
 
@@ -384,7 +334,6 @@
 
     goto :goto_1
 
-    .line 99
     .end local v3    # "formatted":Ljava/lang/String;
     .end local v6    # "rememberedPos":I
     :catchall_0
@@ -403,7 +352,6 @@
     .param p4, "after"    # I
 
     .prologue
-    .line 77
     iget-boolean v0, p0, Landroid/telephony/PhoneNumberFormattingTextWatcher;->mSelfChange:Z
 
     if-nez v0, :cond_0
@@ -412,12 +360,10 @@
 
     if-eqz v0, :cond_1
 
-    .line 84
     :cond_0
     :goto_0
     return-void
 
-    .line 81
     :cond_1
     if-lez p3, :cond_0
 
@@ -427,7 +373,6 @@
 
     if-eqz v0, :cond_0
 
-    .line 82
     invoke-direct {p0}, Landroid/telephony/PhoneNumberFormattingTextWatcher;->stopFormatting()V
 
     goto :goto_0
@@ -441,7 +386,6 @@
     .param p4, "count"    # I
 
     .prologue
-    .line 88
     iget-boolean v0, p0, Landroid/telephony/PhoneNumberFormattingTextWatcher;->mSelfChange:Z
 
     if-nez v0, :cond_0
@@ -450,12 +394,10 @@
 
     if-eqz v0, :cond_1
 
-    .line 95
     :cond_0
     :goto_0
     return-void
 
-    .line 92
     :cond_1
     if-lez p4, :cond_0
 
@@ -465,7 +407,6 @@
 
     if-eqz v0, :cond_0
 
-    .line 93
     invoke-direct {p0}, Landroid/telephony/PhoneNumberFormattingTextWatcher;->stopFormatting()V
 
     goto :goto_0

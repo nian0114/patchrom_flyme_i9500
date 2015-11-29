@@ -26,7 +26,6 @@
     .locals 0
 
     .prologue
-    .line 2756
     iput-object p1, p0, Lcom/android/server/MountService$7;->this$0:Lcom/android/server/MountService;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -40,7 +39,6 @@
     .locals 6
 
     .prologue
-    .line 2759
     :try_start_0
     iget-object v1, p0, Lcom/android/server/MountService$7;->this$0:Lcom/android/server/MountService;
 
@@ -57,7 +55,7 @@
 
     const/4 v4, 0x0
 
-    const-string/jumbo v5, "restart"
+    const-string v5, "restart"
 
     aput-object v5, v3, v4
 
@@ -65,19 +63,16 @@
     :try_end_0
     .catch Lcom/android/server/NativeDaemonConnectorException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 2763
     :goto_0
     return-void
 
-    .line 2760
     :catch_0
     move-exception v0
 
-    .line 2761
     .local v0, "e":Lcom/android/server/NativeDaemonConnectorException;
     const-string v1, "MountService"
 
-    const-string/jumbo v2, "problem executing in background"
+    const-string v2, "problem executing in background"
 
     invoke-static {v1, v2, v0}, Landroid/util/Slog;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 

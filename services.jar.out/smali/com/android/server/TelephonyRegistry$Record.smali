@@ -35,7 +35,6 @@
     .locals 0
 
     .prologue
-    .line 98
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -46,7 +45,6 @@
     .param p1, "x0"    # Lcom/android/server/TelephonyRegistry$1;
 
     .prologue
-    .line 98
     invoke-direct {p0}, Lcom/android/server/TelephonyRegistry$Record;-><init>()V
 
     return-void
@@ -58,12 +56,11 @@
     .locals 4
 
     .prologue
-    .line 115
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v1, "{pkgForDebug="
+    const-string v1, "{pkgForDebug="
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -127,7 +124,7 @@
 
     move-result-object v0
 
-    const-string/jumbo v1, "}"
+    const-string v1, "}"
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 

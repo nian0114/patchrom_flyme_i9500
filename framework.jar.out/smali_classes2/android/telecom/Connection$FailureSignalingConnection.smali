@@ -20,12 +20,9 @@
     .param p1, "disconnectCause"    # Landroid/telecom/DisconnectCause;
 
     .prologue
-    .line 1107
     invoke-direct {p0}, Landroid/telecom/Connection;-><init>()V
 
-    .line 1108
     invoke-virtual {p0, p1}, Landroid/telecom/Connection$FailureSignalingConnection;->setDisconnected(Landroid/telecom/DisconnectCause;)V
 
-    .line 1109
     return-void
 .end method

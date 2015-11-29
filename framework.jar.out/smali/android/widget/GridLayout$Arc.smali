@@ -29,21 +29,16 @@
     .param p2, "value"    # Landroid/widget/GridLayout$MutableInt;
 
     .prologue
-    .line 2209
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 2207
     const/4 v0, 0x1
 
     iput-boolean v0, p0, Landroid/widget/GridLayout$Arc;->valid:Z
 
-    .line 2210
     iput-object p1, p0, Landroid/widget/GridLayout$Arc;->span:Landroid/widget/GridLayout$Interval;
 
-    .line 2211
     iput-object p2, p0, Landroid/widget/GridLayout$Arc;->value:Landroid/widget/GridLayout$MutableInt;
 
-    .line 2212
     return-void
 .end method
 
@@ -53,7 +48,6 @@
     .locals 2
 
     .prologue
-    .line 2216
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V

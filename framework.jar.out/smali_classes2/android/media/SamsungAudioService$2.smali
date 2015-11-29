@@ -23,7 +23,6 @@
     .locals 0
 
     .prologue
-    .line 651
     iput-object p1, p0, Landroid/media/SamsungAudioService$2;->this$0:Landroid/media/SamsungAudioService;
 
     invoke-direct {p0}, Landroid/os/UEventObserver;-><init>()V
@@ -44,7 +43,6 @@
 
     const/4 v1, 0x0
 
-    .line 654
     iget-object v0, p0, Landroid/media/SamsungAudioService$2;->this$0:Landroid/media/SamsungAudioService;
 
     # getter for: Landroid/media/SamsungAudioService;->mSystemReady:Z
@@ -54,12 +52,10 @@
 
     if-nez v0, :cond_1
 
-    .line 683
     :cond_0
     :goto_0
     return-void
 
-    .line 657
     :cond_1
     const-string v0, "USB_CONNECTION"
 
@@ -67,7 +63,6 @@
 
     move-result-object v7
 
-    .line 658
     .local v7, "USB_CONNECTION":Ljava/lang/String;
     # getter for: Landroid/media/SamsungAudioService;->TAG:Ljava/lang/String;
     invoke-static {}, Landroid/media/SamsungAudioService;->access$1000()Ljava/lang/String;
@@ -94,7 +89,6 @@
 
     invoke-static {v0, v3}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 659
     const-string v0, "READY"
 
     invoke-virtual {v0, v7}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
@@ -103,7 +97,6 @@
 
     if-eqz v0, :cond_2
 
-    .line 660
     iget-object v0, p0, Landroid/media/SamsungAudioService$2;->this$0:Landroid/media/SamsungAudioService;
 
     # invokes: Landroid/media/SamsungAudioService;->isUSBCheckStreamActive()Z
@@ -144,7 +137,6 @@
 
     if-nez v0, :cond_0
 
-    .line 661
     iget-object v0, p0, Landroid/media/SamsungAudioService$2;->this$0:Landroid/media/SamsungAudioService;
 
     invoke-virtual {v0}, Landroid/media/SamsungAudioService;->getCurOutDevice()I
@@ -155,7 +147,6 @@
 
     if-ne v0, v3, :cond_0
 
-    .line 662
     # getter for: Landroid/media/SamsungAudioService;->TAG:Ljava/lang/String;
     invoke-static {}, Landroid/media/SamsungAudioService;->access$1000()Ljava/lang/String;
 
@@ -165,18 +156,15 @@
 
     invoke-static {v0, v3}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 663
     iget-object v0, p0, Landroid/media/SamsungAudioService$2;->this$0:Landroid/media/SamsungAudioService;
 
     # setter for: Landroid/media/SamsungAudioService;->mFakeState:Z
     invoke-static {v0, v2}, Landroid/media/SamsungAudioService;->access$1102(Landroid/media/SamsungAudioService;Z)Z
 
-    .line 664
     const-string v0, ""
 
     invoke-static {v5, v2, v0}, Landroid/media/AudioSystem;->setDeviceConnectionState(IILjava/lang/String;)I
 
-    .line 665
     iget-object v0, p0, Landroid/media/SamsungAudioService$2;->this$0:Landroid/media/SamsungAudioService;
 
     # getter for: Landroid/media/SamsungAudioService;->mSamsungAudioServiceHandler:Landroid/media/SamsungAudioService$SamsungAudioServiceHandler;
@@ -197,7 +185,6 @@
 
     goto :goto_0
 
-    .line 668
     :cond_2
     const-string v0, "CONNECTED"
 
@@ -215,7 +202,6 @@
 
     if-eqz v0, :cond_6
 
-    .line 669
     :cond_3
     iget-object v0, p0, Landroid/media/SamsungAudioService$2;->this$0:Landroid/media/SamsungAudioService;
 
@@ -226,7 +212,6 @@
 
     if-eqz v0, :cond_4
 
-    .line 670
     iget-object v0, p0, Landroid/media/SamsungAudioService$2;->this$0:Landroid/media/SamsungAudioService;
 
     # getter for: Landroid/media/SamsungAudioService;->mSamsungAudioServiceHandler:Landroid/media/SamsungAudioService$SamsungAudioServiceHandler;
@@ -236,13 +221,11 @@
 
     invoke-virtual {v0, v1}, Landroid/media/SamsungAudioService$SamsungAudioServiceHandler;->removeMessages(I)V
 
-    .line 671
     iget-object v0, p0, Landroid/media/SamsungAudioService$2;->this$0:Landroid/media/SamsungAudioService;
 
     # setter for: Landroid/media/SamsungAudioService;->mFakeState:Z
     invoke-static {v0, v1}, Landroid/media/SamsungAudioService;->access$1102(Landroid/media/SamsungAudioService;Z)Z
 
-    .line 672
     iget-object v0, p0, Landroid/media/SamsungAudioService$2;->this$0:Landroid/media/SamsungAudioService;
 
     invoke-virtual {v0}, Landroid/media/SamsungAudioService;->getCurOutDevice()I
@@ -253,7 +236,6 @@
 
     if-eqz v0, :cond_4
 
-    .line 673
     # getter for: Landroid/media/SamsungAudioService;->TAG:Ljava/lang/String;
     invoke-static {}, Landroid/media/SamsungAudioService;->access$1000()Ljava/lang/String;
 
@@ -263,12 +245,10 @@
 
     invoke-static {v0, v3}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 674
     const-string v0, ""
 
     invoke-static {v5, v1, v0}, Landroid/media/AudioSystem;->setDeviceConnectionState(IILjava/lang/String;)I
 
-    .line 678
     :cond_4
     iget-object v0, p0, Landroid/media/SamsungAudioService$2;->this$0:Landroid/media/SamsungAudioService;
 
@@ -292,7 +272,6 @@
     # setter for: Landroid/media/SamsungAudioService;->mUSBDetected:Z
     invoke-static {v0, v2}, Landroid/media/SamsungAudioService;->access$3002(Landroid/media/SamsungAudioService;Z)Z
 
-    .line 679
     :cond_5
     const-string v0, "DISCONNECTED"
 
@@ -309,7 +288,6 @@
 
     goto/16 :goto_0
 
-    .line 681
     :cond_6
     # getter for: Landroid/media/SamsungAudioService;->TAG:Ljava/lang/String;
     invoke-static {}, Landroid/media/SamsungAudioService;->access$1000()Ljava/lang/String;

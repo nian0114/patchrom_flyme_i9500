@@ -23,7 +23,6 @@
     .locals 0
 
     .prologue
-    .line 429
     iput-object p1, p0, Lcom/android/server/enterprise/billing/EnterpriseConnectivity$6;->this$0:Lcom/android/server/enterprise/billing/EnterpriseConnectivity;
 
     invoke-direct {p0}, Landroid/content/BroadcastReceiver;-><init>()V
@@ -39,7 +38,6 @@
     .param p2, "intent"    # Landroid/content/Intent;
 
     .prologue
-    .line 432
     const-string v3, "android.intent.action.USER_SWITCHED"
 
     invoke-virtual {p2}, Landroid/content/Intent;->getAction()Ljava/lang/String;
@@ -52,7 +50,6 @@
 
     if-eqz v3, :cond_1
 
-    .line 433
     const-string v3, "android.intent.extra.user_handle"
 
     const/4 v4, -0x1
@@ -61,7 +58,6 @@
 
     move-result v2
 
-    .line 434
     .local v2, "user":I
     new-instance v3, Ljava/lang/StringBuilder;
 
@@ -92,7 +88,6 @@
     # invokes: Lcom/android/server/enterprise/billing/EnterpriseConnectivity;->slogd(Ljava/lang/String;)V
     invoke-static {v3}, Lcom/android/server/enterprise/billing/EnterpriseConnectivity;->access$700(Ljava/lang/String;)V
 
-    .line 436
     iget-object v3, p0, Lcom/android/server/enterprise/billing/EnterpriseConnectivity$6;->this$0:Lcom/android/server/enterprise/billing/EnterpriseConnectivity;
 
     # getter for: Lcom/android/server/enterprise/billing/EnterpriseConnectivity;->mConnections:Ljava/util/ArrayList;
@@ -118,7 +113,6 @@
 
     check-cast v0, Lcom/android/server/enterprise/billing/EnterpriseConnectivity$Connection;
 
-    .line 437
     .local v0, "c":Lcom/android/server/enterprise/billing/EnterpriseConnectivity$Connection;
     invoke-virtual {v0}, Lcom/android/server/enterprise/billing/EnterpriseConnectivity$Connection;->getUserHandle()Ljava/util/List;
 
@@ -134,14 +128,12 @@
 
     if-eqz v3, :cond_0
 
-    .line 438
     const/16 v3, 0x3f5
 
     invoke-virtual {v0, v3}, Lcom/android/server/enterprise/billing/EnterpriseConnectivity$Connection;->sendMessage(I)V
 
     goto :goto_0
 
-    .line 440
     :cond_0
     const/16 v3, 0x3f6
 
@@ -149,7 +141,6 @@
 
     goto :goto_0
 
-    .line 444
     .end local v0    # "c":Lcom/android/server/enterprise/billing/EnterpriseConnectivity$Connection;
     .end local v1    # "i$":Ljava/util/Iterator;
     .end local v2    # "user":I

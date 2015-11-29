@@ -24,37 +24,30 @@
     .locals 1
 
     .prologue
-    .line 69
     const/4 v0, 0x3
 
     invoke-direct {p0, v0}, Landroid/sec/clipboard/data/ClipboardData;-><init>(I)V
 
-    .line 56
     const-string v0, ""
 
     iput-object v0, p0, Landroid/sec/clipboard/data/list/ClipboardDataBitmap;->mValue:Ljava/lang/String;
 
-    .line 58
     const-string v0, ""
 
     iput-object v0, p0, Landroid/sec/clipboard/data/list/ClipboardDataBitmap;->mValueUrl:Ljava/lang/String;
 
-    .line 60
     const-string v0, ""
 
     iput-object v0, p0, Landroid/sec/clipboard/data/list/ClipboardDataBitmap;->mInitBaseValue:Ljava/lang/String;
 
-    .line 61
     const/4 v0, 0x1
 
     iput-boolean v0, p0, Landroid/sec/clipboard/data/list/ClipboardDataBitmap;->mInitBaseValueCheck:Z
 
-    .line 62
     const-string v0, ""
 
     iput-object v0, p0, Landroid/sec/clipboard/data/list/ClipboardDataBitmap;->mExtraDataPath:Ljava/lang/String;
 
-    .line 70
     return-void
 .end method
 
@@ -64,26 +57,20 @@
     .param p2, "dest"    # Ljava/lang/String;
 
     .prologue
-    .line 404
     const/4 v10, 0x5
 
-    .line 405
     .local v10, "compareCount":I
     const/16 v11, 0x80
 
-    .line 407
     .local v11, "compareSize":I
     const/4 v2, 0x0
 
-    .line 408
     .local v2, "Result":Z
     const/16 v17, 0x0
 
-    .line 409
     .local v17, "fisSrc":Ljava/io/FileInputStream;
     const/4 v15, 0x0
 
-    .line 412
     .local v15, "fisDest":Ljava/io/FileInputStream;
     :try_start_0
     new-instance v18, Ljava/io/FileInputStream;
@@ -96,7 +83,6 @@
     :try_end_0
     .catch Ljava/io/FileNotFoundException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 413
     .end local v17    # "fisSrc":Ljava/io/FileInputStream;
     .local v18, "fisSrc":Ljava/io/FileInputStream;
     :try_start_1
@@ -110,12 +96,10 @@
     :try_end_1
     .catch Ljava/io/FileNotFoundException; {:try_start_1 .. :try_end_1} :catch_a
 
-    .line 419
     .end local v15    # "fisDest":Ljava/io/FileInputStream;
     .local v16, "fisDest":Ljava/io/FileInputStream;
     const/4 v14, 0x0
 
-    .line 422
     .local v14, "fileSize":I
     :try_start_2
     invoke-virtual/range {v18 .. v18}, Ljava/io/FileInputStream;->getChannel()Ljava/nio/channels/FileChannel;
@@ -130,7 +114,6 @@
 
     long-to-int v14, v0
 
-    .line 423
     invoke-virtual/range {v16 .. v16}, Ljava/io/FileInputStream;->getChannel()Ljava/nio/channels/FileChannel;
 
     move-result-object v27
@@ -149,10 +132,8 @@
 
     if-eq v14, v0, :cond_0
 
-    .line 425
     invoke-virtual/range {v18 .. v18}, Ljava/io/FileInputStream;->close()V
 
-    .line 426
     invoke-virtual/range {v16 .. v16}, Ljava/io/FileInputStream;->close()V
     :try_end_2
     .catch Ljava/io/IOException; {:try_start_2 .. :try_end_2} :catch_1
@@ -167,31 +148,26 @@
     .restart local v17    # "fisSrc":Ljava/io/FileInputStream;
     move v3, v2
 
-    .line 513
     .end local v2    # "Result":Z
     .end local v14    # "fileSize":I
     .local v3, "Result":I
     :goto_0
     return v3
 
-    .line 414
     .end local v3    # "Result":I
     .restart local v2    # "Result":Z
     :catch_0
     move-exception v12
 
-    .line 415
     .local v12, "e":Ljava/io/FileNotFoundException;
     :goto_1
     invoke-virtual {v12}, Ljava/io/FileNotFoundException;->printStackTrace()V
 
     move v3, v2
 
-    .line 416
     .restart local v3    # "Result":I
     goto :goto_0
 
-    .line 429
     .end local v3    # "Result":I
     .end local v12    # "e":Ljava/io/FileNotFoundException;
     .end local v15    # "fisDest":Ljava/io/FileInputStream;
@@ -202,15 +178,12 @@
     :catch_1
     move-exception v12
 
-    .line 430
     .local v12, "e":Ljava/io/IOException;
     invoke-virtual {v12}, Ljava/io/IOException;->printStackTrace()V
 
-    .line 432
     :try_start_3
     invoke-virtual/range {v18 .. v18}, Ljava/io/FileInputStream;->close()V
 
-    .line 433
     invoke-virtual/range {v16 .. v16}, Ljava/io/FileInputStream;->close()V
     :try_end_3
     .catch Ljava/io/IOException; {:try_start_3 .. :try_end_3} :catch_2
@@ -226,11 +199,9 @@
     .restart local v17    # "fisSrc":Ljava/io/FileInputStream;
     move v3, v2
 
-    .line 437
     .restart local v3    # "Result":I
     goto :goto_0
 
-    .line 434
     .end local v3    # "Result":I
     .end local v15    # "fisDest":Ljava/io/FileInputStream;
     .end local v17    # "fisSrc":Ljava/io/FileInputStream;
@@ -239,13 +210,11 @@
     :catch_2
     move-exception v13
 
-    .line 435
     .local v13, "e1":Ljava/io/IOException;
     invoke-virtual {v13}, Ljava/io/IOException;->printStackTrace()V
 
     goto :goto_2
 
-    .line 440
     .end local v12    # "e":Ljava/io/IOException;
     .end local v13    # "e1":Ljava/io/IOException;
     :cond_0
@@ -255,11 +224,9 @@
 
     if-ge v14, v0, :cond_1
 
-    .line 443
     :try_start_4
     invoke-virtual/range {v18 .. v18}, Ljava/io/FileInputStream;->close()V
 
-    .line 444
     invoke-virtual/range {v16 .. v16}, Ljava/io/FileInputStream;->close()V
     :try_end_4
     .catch Ljava/io/IOException; {:try_start_4 .. :try_end_4} :catch_3
@@ -275,11 +242,9 @@
     .restart local v17    # "fisSrc":Ljava/io/FileInputStream;
     move v3, v2
 
-    .line 448
     .restart local v3    # "Result":I
     goto :goto_0
 
-    .line 445
     .end local v3    # "Result":I
     .end local v15    # "fisDest":Ljava/io/FileInputStream;
     .end local v17    # "fisSrc":Ljava/io/FileInputStream;
@@ -288,13 +253,11 @@
     :catch_3
     move-exception v13
 
-    .line 446
     .restart local v13    # "e1":Ljava/io/IOException;
     invoke-virtual {v13}, Ljava/io/IOException;->printStackTrace()V
 
     goto :goto_3
 
-    .line 451
     .end local v13    # "e1":Ljava/io/IOException;
     :cond_1
     const/16 v27, 0x80
@@ -305,16 +268,13 @@
 
     move v9, v14
 
-    .line 453
     .local v9, "buffSize":I
     :goto_4
     const/16 v21, 0x0
 
-    .line 455
     .local v21, "iCnt":I
     div-int v26, v14, v9
 
-    .line 456
     .local v26, "tmp":I
     const/16 v27, 0x5
 
@@ -326,48 +286,38 @@
 
     const/16 v21, 0x5
 
-    .line 460
     :goto_5
     const/16 v22, 0x0
 
-    .line 462
     .local v22, "offset":I
     mul-int v27, v9, v21
 
     sub-int v26, v14, v27
 
-    .line 463
     div-int v22, v26, v21
 
-    .line 466
     const/4 v4, 0x1
 
-    .line 468
     .local v4, "bSameData":Z
     const/4 v7, 0x0
 
-    .line 469
     .local v7, "bisSrc":Ljava/io/BufferedInputStream;
     const/4 v5, 0x0
 
-    .line 473
     .local v5, "bisDest":Ljava/io/BufferedInputStream;
     const/16 v23, 0x0
 
-    .line 474
     .local v23, "position":I
     :try_start_5
     new-array v0, v9, [B
 
     move-object/from16 v25, v0
 
-    .line 475
     .local v25, "readSrcData":[B
     new-array v0, v9, [B
 
     move-object/from16 v24, v0
 
-    .line 477
     .local v24, "readDestData":[B
     new-instance v8, Ljava/io/BufferedInputStream;
 
@@ -378,7 +328,6 @@
     .catch Ljava/io/IOException; {:try_start_5 .. :try_end_5} :catch_5
     .catchall {:try_start_5 .. :try_end_5} :catchall_0
 
-    .line 478
     .end local v7    # "bisSrc":Ljava/io/BufferedInputStream;
     .local v8, "bisSrc":Ljava/io/BufferedInputStream;
     :try_start_6
@@ -391,7 +340,6 @@
     .catch Ljava/io/IOException; {:try_start_6 .. :try_end_6} :catch_8
     .catchall {:try_start_6 .. :try_end_6} :catchall_1
 
-    .line 480
     .end local v5    # "bisDest":Ljava/io/BufferedInputStream;
     .local v6, "bisDest":Ljava/io/BufferedInputStream;
     const/16 v19, 0x0
@@ -406,7 +354,6 @@
 
     if-eqz v4, :cond_6
 
-    .line 482
     const/16 v27, 0x0
 
     :try_start_7
@@ -416,7 +363,6 @@
 
     invoke-virtual {v8, v0, v1, v9}, Ljava/io/BufferedInputStream;->read([BII)I
 
-    .line 483
     const/16 v27, 0x0
 
     move-object/from16 v0, v24
@@ -425,12 +371,10 @@
 
     invoke-virtual {v6, v0, v1, v9}, Ljava/io/BufferedInputStream;->read([BII)I
 
-    .line 485
     add-int v27, v9, v22
 
     add-int v23, v23, v27
 
-    .line 487
     move/from16 v0, v23
 
     int-to-long v0, v0
@@ -441,7 +385,6 @@
 
     invoke-virtual {v8, v0, v1}, Ljava/io/BufferedInputStream;->skip(J)J
 
-    .line 488
     move/from16 v0, v23
 
     int-to-long v0, v0
@@ -452,7 +395,6 @@
 
     invoke-virtual {v6, v0, v1}, Ljava/io/BufferedInputStream;->skip(J)J
 
-    .line 490
     const/16 v20, 0x0
 
     .local v20, "i2":I
@@ -463,7 +405,6 @@
 
     if-eqz v4, :cond_5
 
-    .line 491
     aget-byte v27, v25, v20
 
     aget-byte v28, v24, v20
@@ -479,13 +420,11 @@
 
     const/4 v4, 0x1
 
-    .line 490
     :goto_8
     add-int/lit8 v20, v20, 0x1
 
     goto :goto_7
 
-    .line 451
     .end local v4    # "bSameData":Z
     .end local v6    # "bisDest":Ljava/io/BufferedInputStream;
     .end local v8    # "bisSrc":Ljava/io/BufferedInputStream;
@@ -509,10 +448,8 @@
     :cond_3
     move/from16 v21, v26
 
-    .line 456
     goto :goto_5
 
-    .line 491
     .restart local v4    # "bSameData":Z
     .restart local v6    # "bisDest":Ljava/io/BufferedInputStream;
     .restart local v8    # "bisSrc":Ljava/io/BufferedInputStream;
@@ -527,13 +464,11 @@
 
     goto :goto_8
 
-    .line 480
     :cond_5
     add-int/lit8 v19, v19, 0x1
 
     goto :goto_6
 
-    .line 501
     .end local v20    # "i2":I
     :cond_6
     if-eqz v8, :cond_7
@@ -541,19 +476,16 @@
     :try_start_8
     invoke-virtual {v8}, Ljava/io/BufferedInputStream;->close()V
 
-    .line 502
     :cond_7
     if-eqz v6, :cond_8
 
     invoke-virtual {v6}, Ljava/io/BufferedInputStream;->close()V
 
-    .line 503
     :cond_8
     if-eqz v18, :cond_9
 
     invoke-virtual/range {v18 .. v18}, Ljava/io/FileInputStream;->close()V
 
-    .line 504
     :cond_9
     if-eqz v16, :cond_a
 
@@ -568,7 +500,6 @@
     .restart local v5    # "bisDest":Ljava/io/BufferedInputStream;
     move-object v7, v8
 
-    .line 511
     .end local v8    # "bisSrc":Ljava/io/BufferedInputStream;
     .end local v19    # "i1":I
     .end local v24    # "readDestData":[B
@@ -588,11 +519,9 @@
     .restart local v17    # "fisSrc":Ljava/io/FileInputStream;
     move v3, v2
 
-    .line 513
     .restart local v3    # "Result":I
     goto/16 :goto_0
 
-    .line 505
     .end local v3    # "Result":I
     .end local v5    # "bisDest":Ljava/io/BufferedInputStream;
     .end local v7    # "bisSrc":Ljava/io/BufferedInputStream;
@@ -608,7 +537,6 @@
     :catch_4
     move-exception v12
 
-    .line 506
     .restart local v12    # "e":Ljava/io/IOException;
     sget-boolean v27, Landroid/sec/clipboard/data/ClipboardDefine;->DEBUG:Z
 
@@ -640,7 +568,6 @@
 
     invoke-static/range {v27 .. v28}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 507
     :cond_c
     invoke-virtual {v12}, Ljava/io/IOException;->printStackTrace()V
 
@@ -650,12 +577,10 @@
     .restart local v5    # "bisDest":Ljava/io/BufferedInputStream;
     move-object v7, v8
 
-    .line 509
     .end local v8    # "bisSrc":Ljava/io/BufferedInputStream;
     .restart local v7    # "bisSrc":Ljava/io/BufferedInputStream;
     goto :goto_9
 
-    .line 494
     .end local v12    # "e":Ljava/io/IOException;
     .end local v19    # "i1":I
     .end local v24    # "readDestData":[B
@@ -663,7 +588,6 @@
     :catch_5
     move-exception v12
 
-    .line 495
     .restart local v12    # "e":Ljava/io/IOException;
     :goto_a
     :try_start_9
@@ -671,28 +595,23 @@
     :try_end_9
     .catchall {:try_start_9 .. :try_end_9} :catchall_0
 
-    .line 496
     const/4 v4, 0x0
 
-    .line 501
     if-eqz v7, :cond_d
 
     :try_start_a
     invoke-virtual {v7}, Ljava/io/BufferedInputStream;->close()V
 
-    .line 502
     :cond_d
     if-eqz v5, :cond_e
 
     invoke-virtual {v5}, Ljava/io/BufferedInputStream;->close()V
 
-    .line 503
     :cond_e
     if-eqz v18, :cond_f
 
     invoke-virtual/range {v18 .. v18}, Ljava/io/FileInputStream;->close()V
 
-    .line 504
     :cond_f
     if-eqz v16, :cond_b
 
@@ -702,11 +621,9 @@
 
     goto :goto_9
 
-    .line 505
     :catch_6
     move-exception v12
 
-    .line 506
     sget-boolean v27, Landroid/sec/clipboard/data/ClipboardDefine;->DEBUG:Z
 
     if-eqz v27, :cond_10
@@ -737,37 +654,31 @@
 
     invoke-static/range {v27 .. v28}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 507
     :cond_10
     invoke-virtual {v12}, Ljava/io/IOException;->printStackTrace()V
 
     goto :goto_9
 
-    .line 500
     .end local v12    # "e":Ljava/io/IOException;
     :catchall_0
     move-exception v27
 
-    .line 501
     :goto_b
     if-eqz v7, :cond_11
 
     :try_start_b
     invoke-virtual {v7}, Ljava/io/BufferedInputStream;->close()V
 
-    .line 502
     :cond_11
     if-eqz v5, :cond_12
 
     invoke-virtual {v5}, Ljava/io/BufferedInputStream;->close()V
 
-    .line 503
     :cond_12
     if-eqz v18, :cond_13
 
     invoke-virtual/range {v18 .. v18}, Ljava/io/FileInputStream;->close()V
 
-    .line 504
     :cond_13
     if-eqz v16, :cond_14
 
@@ -775,16 +686,13 @@
     :try_end_b
     .catch Ljava/io/IOException; {:try_start_b .. :try_end_b} :catch_7
 
-    .line 508
     :cond_14
     :goto_c
     throw v27
 
-    .line 505
     :catch_7
     move-exception v12
 
-    .line 506
     .restart local v12    # "e":Ljava/io/IOException;
     sget-boolean v28, Landroid/sec/clipboard/data/ClipboardDefine;->DEBUG:Z
 
@@ -816,13 +724,11 @@
 
     invoke-static/range {v28 .. v29}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 507
     :cond_15
     invoke-virtual {v12}, Ljava/io/IOException;->printStackTrace()V
 
     goto :goto_c
 
-    .line 500
     .end local v7    # "bisSrc":Ljava/io/BufferedInputStream;
     .end local v12    # "e":Ljava/io/IOException;
     .restart local v8    # "bisSrc":Ljava/io/BufferedInputStream;
@@ -855,7 +761,6 @@
     .restart local v7    # "bisSrc":Ljava/io/BufferedInputStream;
     goto :goto_b
 
-    .line 494
     .end local v7    # "bisSrc":Ljava/io/BufferedInputStream;
     .end local v19    # "i1":I
     .restart local v8    # "bisSrc":Ljava/io/BufferedInputStream;
@@ -886,7 +791,6 @@
     .restart local v7    # "bisSrc":Ljava/io/BufferedInputStream;
     goto/16 :goto_a
 
-    .line 414
     .end local v4    # "bSameData":Z
     .end local v5    # "bisDest":Ljava/io/BufferedInputStream;
     .end local v7    # "bisSrc":Ljava/io/BufferedInputStream;
@@ -917,18 +821,15 @@
     .param p2, "f2"    # Ljava/lang/String;
 
     .prologue
-    .line 383
     new-instance v0, Ljava/io/File;
 
     invoke-direct {v0, p1}, Ljava/io/File;-><init>(Ljava/lang/String;)V
 
-    .line 384
     .local v0, "file1":Ljava/io/File;
     new-instance v1, Ljava/io/File;
 
     invoke-direct {v1, p2}, Ljava/io/File;-><init>(Ljava/lang/String;)V
 
-    .line 386
     .local v1, "file2":Ljava/io/File;
     invoke-virtual {v0}, Ljava/io/File;->length()J
 
@@ -952,10 +853,8 @@
 
     if-lez v2, :cond_0
 
-    .line 387
     const/4 v2, 0x1
 
-    .line 390
     :goto_0
     return v2
 
@@ -973,7 +872,6 @@
     .end annotation
 
     .prologue
-    .line 341
     const/4 v0, 0x0
 
     return-object v0
@@ -983,7 +881,6 @@
     .locals 1
 
     .prologue
-    .line 301
     iget-object v0, p0, Landroid/sec/clipboard/data/list/ClipboardDataBitmap;->mValue:Ljava/lang/String;
 
     return-object v0
@@ -993,7 +890,6 @@
     .locals 1
 
     .prologue
-    .line 324
     iget-object v0, p0, Landroid/sec/clipboard/data/list/ClipboardDataBitmap;->mExtraDataPath:Ljava/lang/String;
 
     return-object v0
@@ -1003,7 +899,6 @@
     .locals 1
 
     .prologue
-    .line 315
     iget-object v0, p0, Landroid/sec/clipboard/data/list/ClipboardDataBitmap;->mValueUrl:Ljava/lang/String;
 
     return-object v0
@@ -1015,7 +910,6 @@
     .prologue
     const/4 v0, 0x1
 
-    .line 331
     iget-object v1, p0, Landroid/sec/clipboard/data/list/ClipboardDataBitmap;->mExtraDataPath:Ljava/lang/String;
 
     if-eqz v1, :cond_0
@@ -1028,11 +922,9 @@
 
     if-ge v1, v0, :cond_1
 
-    .line 332
     :cond_0
     const/4 v0, 0x0
 
-    .line 334
     :cond_1
     return v0
 .end method
@@ -1043,12 +935,10 @@
     .param p2, "altData"    # Landroid/sec/clipboard/data/ClipboardData;
 
     .prologue
-    .line 83
     invoke-super {p0, p1, p2}, Landroid/sec/clipboard/data/ClipboardData;->SetAlternateFormat(ILandroid/sec/clipboard/data/ClipboardData;)Z
 
     move-result v0
 
-    .line 84
     .local v0, "Result":Z
     if-eqz v0, :cond_0
 
@@ -1059,14 +949,12 @@
     :cond_0
     move v1, v0
 
-    .line 129
     .end local v0    # "Result":Z
     .end local p2    # "altData":Landroid/sec/clipboard/data/ClipboardData;
     .local v1, "Result":Z
     :goto_0
     return v1
 
-    .line 86
     .end local v1    # "Result":Z
     .restart local v0    # "Result":Z
     .restart local p2    # "altData":Landroid/sec/clipboard/data/ClipboardData;
@@ -1077,22 +965,18 @@
     :goto_1
     move v1, v0
 
-    .line 129
     .end local v0    # "Result":Z
     .restart local v1    # "Result":Z
     goto :goto_0
 
-    .line 89
     .end local v1    # "Result":Z
     .restart local v0    # "Result":Z
     .restart local p2    # "altData":Landroid/sec/clipboard/data/ClipboardData;
     :pswitch_0
     const/4 v0, 0x0
 
-    .line 90
     goto :goto_1
 
-    .line 94
     :pswitch_1
     check-cast p2, Landroid/sec/clipboard/data/list/ClipboardDataBitmap;
 
@@ -1113,59 +997,44 @@
 
     move-result v0
 
-    .line 97
     goto :goto_1
 
-    .line 100
     .restart local p2    # "altData":Landroid/sec/clipboard/data/ClipboardData;
     :pswitch_2
     const/4 v0, 0x0
 
-    .line 101
     goto :goto_1
 
-    .line 104
     :pswitch_3
     const/4 v0, 0x0
 
-    .line 105
     goto :goto_1
 
-    .line 108
     :pswitch_4
     const/4 v0, 0x0
 
-    .line 109
     goto :goto_1
 
-    .line 113
     :pswitch_5
     const/4 v0, 0x0
 
-    .line 114
     goto :goto_1
 
-    .line 118
     :pswitch_6
     const/4 v0, 0x0
 
-    .line 119
     goto :goto_1
 
-    .line 122
     :pswitch_7
     const/4 v0, 0x0
 
-    .line 123
     goto :goto_1
 
-    .line 125
     :pswitch_8
     const/4 v0, 0x0
 
     goto :goto_1
 
-    .line 86
     :pswitch_data_0
     .packed-switch 0x2
         :pswitch_0
@@ -1187,7 +1056,6 @@
     .end annotation
 
     .prologue
-    .line 176
     const/4 v0, 0x0
 
     return v0
@@ -1198,10 +1066,8 @@
     .param p1, "FilePath"    # Ljava/lang/String;
 
     .prologue
-    .line 187
     const/4 v0, 0x0
 
-    .line 188
     .local v0, "Result":Z
     if-eqz p1, :cond_0
 
@@ -1216,13 +1082,11 @@
     :cond_0
     move v1, v0
 
-    .line 206
     .end local v0    # "Result":Z
     .local v1, "Result":I
     :goto_0
     return v1
 
-    .line 191
     .end local v1    # "Result":I
     .restart local v0    # "Result":Z
     :cond_1
@@ -1230,24 +1094,19 @@
 
     if-eqz v3, :cond_2
 
-    .line 192
     iput-object p1, p0, Landroid/sec/clipboard/data/list/ClipboardDataBitmap;->mInitBaseValue:Ljava/lang/String;
 
-    .line 193
     const/4 v3, 0x0
 
     iput-boolean v3, p0, Landroid/sec/clipboard/data/list/ClipboardDataBitmap;->mInitBaseValueCheck:Z
 
-    .line 197
     :cond_2
     iput-object p1, p0, Landroid/sec/clipboard/data/list/ClipboardDataBitmap;->mValue:Ljava/lang/String;
 
-    .line 199
     new-instance v2, Ljava/io/File;
 
     invoke-direct {v2, p1}, Ljava/io/File;-><init>(Ljava/lang/String;)V
 
-    .line 200
     .local v2, "tempFile":Ljava/io/File;
     invoke-virtual {v2}, Ljava/io/File;->isFile()Z
 
@@ -1255,18 +1114,15 @@
 
     if-eqz v3, :cond_4
 
-    .line 201
     const/4 v0, 0x1
 
     :cond_3
     :goto_1
     move v1, v0
 
-    .line 206
     .restart local v1    # "Result":I
     goto :goto_0
 
-    .line 203
     .end local v1    # "Result":I
     :cond_4
     sget-boolean v3, Landroid/sec/clipboard/data/ClipboardDefine;->DEBUG:Z
@@ -1289,7 +1145,6 @@
     .param p3, "ExtraDataPath"    # Ljava/lang/String;
 
     .prologue
-    .line 222
     sget-boolean v4, Landroid/sec/clipboard/data/ClipboardDefine;->DEBUG:Z
 
     if-eqz v4, :cond_0
@@ -1300,11 +1155,9 @@
 
     invoke-static {v4, v5}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 224
     :cond_0
     const/4 v1, 0x0
 
-    .line 225
     .local v1, "Result":Z
     if-eqz p1, :cond_1
 
@@ -1319,13 +1172,11 @@
     :cond_1
     move v2, v1
 
-    .line 261
     .end local v1    # "Result":Z
     .local v2, "Result":I
     :goto_0
     return v2
 
-    .line 228
     .end local v2    # "Result":I
     .restart local v1    # "Result":Z
     :cond_2
@@ -1333,19 +1184,15 @@
 
     if-eqz v4, :cond_3
 
-    .line 229
     iput-object p1, p0, Landroid/sec/clipboard/data/list/ClipboardDataBitmap;->mInitBaseValue:Ljava/lang/String;
 
-    .line 230
     const/4 v4, 0x0
 
     iput-boolean v4, p0, Landroid/sec/clipboard/data/list/ClipboardDataBitmap;->mInitBaseValueCheck:Z
 
-    .line 232
     :cond_3
     iput-object p1, p0, Landroid/sec/clipboard/data/list/ClipboardDataBitmap;->mValue:Ljava/lang/String;
 
-    .line 235
     if-eqz p2, :cond_5
 
     invoke-virtual {p2}, Ljava/lang/String;->length()I
@@ -1354,7 +1201,6 @@
 
     if-lez v4, :cond_5
 
-    .line 236
     sget-boolean v4, Landroid/sec/clipboard/data/ClipboardDefine;->INFO_DEBUG:Z
 
     if-eqz v4, :cond_4
@@ -1381,11 +1227,9 @@
 
     invoke-static {v4, v5}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 237
     :cond_4
     iput-object p2, p0, Landroid/sec/clipboard/data/list/ClipboardDataBitmap;->mValueUrl:Ljava/lang/String;
 
-    .line 241
     :cond_5
     if-eqz p3, :cond_7
 
@@ -1395,7 +1239,6 @@
 
     if-lez v4, :cond_7
 
-    .line 242
     sget-boolean v4, Landroid/sec/clipboard/data/ClipboardDefine;->INFO_DEBUG:Z
 
     if-eqz v4, :cond_6
@@ -1422,17 +1265,14 @@
 
     invoke-static {v4, v5}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 243
     :cond_6
     iput-object p3, p0, Landroid/sec/clipboard/data/list/ClipboardDataBitmap;->mExtraDataPath:Ljava/lang/String;
 
-    .line 246
     :cond_7
     new-instance v3, Ljava/io/File;
 
     invoke-direct {v3, p1}, Ljava/io/File;-><init>(Ljava/lang/String;)V
 
-    .line 247
     .local v3, "tempFile":Ljava/io/File;
     invoke-virtual {v3}, Ljava/io/File;->isFile()Z
 
@@ -1440,19 +1280,16 @@
 
     if-eqz v4, :cond_b
 
-    .line 248
     invoke-virtual {p0}, Landroid/sec/clipboard/data/list/ClipboardDataBitmap;->HasExtraData()Z
 
     move-result v4
 
     if-eqz v4, :cond_a
 
-    .line 249
     new-instance v0, Ljava/io/File;
 
     invoke-direct {v0, p3}, Ljava/io/File;-><init>(Ljava/lang/String;)V
 
-    .line 250
     .local v0, "ExtraDataFile":Ljava/io/File;
     if-eqz v0, :cond_9
 
@@ -1462,7 +1299,6 @@
 
     if-eqz v4, :cond_9
 
-    .line 251
     const/4 v1, 0x1
 
     .end local v0    # "ExtraDataFile":Ljava/io/File;
@@ -1470,11 +1306,9 @@
     :goto_1
     move v2, v1
 
-    .line 261
     .restart local v2    # "Result":I
     goto :goto_0
 
-    .line 253
     .end local v2    # "Result":I
     .restart local v0    # "ExtraDataFile":Ljava/io/File;
     :cond_9
@@ -1490,14 +1324,12 @@
 
     goto :goto_1
 
-    .line 256
     .end local v0    # "ExtraDataFile":Ljava/io/File;
     :cond_a
     const/4 v1, 0x1
 
     goto :goto_1
 
-    .line 259
     :cond_b
     sget-boolean v4, Landroid/sec/clipboard/data/ClipboardDefine;->DEBUG:Z
 
@@ -1517,10 +1349,8 @@
     .param p1, "FilePath"    # Ljava/lang/String;
 
     .prologue
-    .line 270
     const/4 v0, 0x0
 
-    .line 271
     .local v0, "Result":Z
     if-eqz p1, :cond_0
 
@@ -1535,24 +1365,20 @@
     :cond_0
     move v1, v0
 
-    .line 282
     .end local v0    # "Result":Z
     .local v1, "Result":I
     :goto_0
     return v1
 
-    .line 275
     .end local v1    # "Result":I
     .restart local v0    # "Result":Z
     :cond_1
     iput-object p1, p0, Landroid/sec/clipboard/data/list/ClipboardDataBitmap;->mExtraDataPath:Ljava/lang/String;
 
-    .line 276
     new-instance v2, Ljava/io/File;
 
     invoke-direct {v2, p1}, Ljava/io/File;-><init>(Ljava/lang/String;)V
 
-    .line 277
     .local v2, "tempFile":Ljava/io/File;
     invoke-virtual {v2}, Ljava/io/File;->isFile()Z
 
@@ -1560,18 +1386,15 @@
 
     if-eqz v3, :cond_3
 
-    .line 278
     const/4 v0, 0x1
 
     :cond_2
     :goto_1
     move v1, v0
 
-    .line 282
     .restart local v1    # "Result":I
     goto :goto_0
 
-    .line 280
     .end local v1    # "Result":I
     :cond_3
     sget-boolean v3, Landroid/sec/clipboard/data/ClipboardDefine;->DEBUG:Z
@@ -1591,22 +1414,18 @@
     .locals 1
 
     .prologue
-    .line 138
     const-string v0, ""
 
     iput-object v0, p0, Landroid/sec/clipboard/data/list/ClipboardDataBitmap;->mValue:Ljava/lang/String;
 
-    .line 139
     const-string v0, ""
 
     iput-object v0, p0, Landroid/sec/clipboard/data/list/ClipboardDataBitmap;->mValueUrl:Ljava/lang/String;
 
-    .line 140
     const-string v0, ""
 
     iput-object v0, p0, Landroid/sec/clipboard/data/list/ClipboardDataBitmap;->mExtraDataPath:Ljava/lang/String;
 
-    .line 142
     return-void
 .end method
 
@@ -1615,7 +1434,6 @@
     .param p1, "o"    # Ljava/lang/Object;
 
     .prologue
-    .line 351
     sget-boolean v4, Landroid/sec/clipboard/data/ClipboardDefine;->DEBUG:Z
 
     if-eqz v4, :cond_0
@@ -1626,11 +1444,9 @@
 
     invoke-static {v4, v5}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 352
     :cond_0
     const/4 v0, 0x0
 
-    .line 353
     .local v0, "result":Z
     invoke-super {p0, p1}, Landroid/sec/clipboard/data/ClipboardData;->equals(Ljava/lang/Object;)Z
 
@@ -1640,13 +1456,11 @@
 
     move v1, v0
 
-    .line 370
     .end local v0    # "result":Z
     .local v1, "result":I
     :goto_0
     return v1
 
-    .line 356
     .end local v1    # "result":I
     .restart local v0    # "result":Z
     :cond_1
@@ -1656,7 +1470,6 @@
 
     move v1, v0
 
-    .line 357
     .restart local v1    # "result":I
     goto :goto_0
 
@@ -1664,16 +1477,13 @@
     :cond_2
     move-object v3, p1
 
-    .line 359
     check-cast v3, Landroid/sec/clipboard/data/list/ClipboardDataBitmap;
 
-    .line 360
     .local v3, "trgData":Landroid/sec/clipboard/data/list/ClipboardDataBitmap;
     invoke-virtual {v3}, Landroid/sec/clipboard/data/list/ClipboardDataBitmap;->GetBitmapPath()Ljava/lang/String;
 
     move-result-object v2
 
-    .line 362
     .local v2, "trgBmp":Ljava/lang/String;
     iget-object v4, p0, Landroid/sec/clipboard/data/list/ClipboardDataBitmap;->mInitBaseValue:Ljava/lang/String;
 
@@ -1683,7 +1493,6 @@
 
     if-nez v4, :cond_3
 
-    .line 363
     iget-object v4, p0, Landroid/sec/clipboard/data/list/ClipboardDataBitmap;->mValue:Ljava/lang/String;
 
     invoke-direct {p0, v4, v2}, Landroid/sec/clipboard/data/list/ClipboardDataBitmap;->CompareFile(Ljava/lang/String;Ljava/lang/String;)Z
@@ -1692,10 +1501,8 @@
 
     if-eqz v4, :cond_3
 
-    .line 364
     const/4 v0, 0x1
 
-    .line 365
     sget-boolean v4, Landroid/sec/clipboard/data/ClipboardDefine;->DEBUG:Z
 
     if-eqz v4, :cond_3
@@ -1709,7 +1516,6 @@
     :cond_3
     move v1, v0
 
-    .line 370
     .restart local v1    # "result":I
     goto :goto_0
 .end method
@@ -1719,7 +1525,6 @@
     .param p1, "source"    # Landroid/os/Parcel;
 
     .prologue
-    .line 561
     :try_start_0
     const-class v1, Ljava/lang/String;
 
@@ -1735,7 +1540,6 @@
 
     iput-object v1, p0, Landroid/sec/clipboard/data/list/ClipboardDataBitmap;->mValue:Ljava/lang/String;
 
-    .line 562
     const-class v1, Ljava/lang/String;
 
     invoke-virtual {v1}, Ljava/lang/Class;->getClassLoader()Ljava/lang/ClassLoader;
@@ -1750,7 +1554,6 @@
 
     iput-object v1, p0, Landroid/sec/clipboard/data/list/ClipboardDataBitmap;->mInitBaseValue:Ljava/lang/String;
 
-    .line 563
     const-class v1, Ljava/lang/String;
 
     invoke-virtual {v1}, Ljava/lang/Class;->getClassLoader()Ljava/lang/ClassLoader;
@@ -1765,7 +1568,6 @@
 
     iput-object v1, p0, Landroid/sec/clipboard/data/list/ClipboardDataBitmap;->mValueUrl:Ljava/lang/String;
 
-    .line 564
     const-class v1, Ljava/lang/String;
 
     invoke-virtual {v1}, Ljava/lang/Class;->getClassLoader()Ljava/lang/ClassLoader;
@@ -1780,7 +1582,6 @@
 
     iput-object v1, p0, Landroid/sec/clipboard/data/list/ClipboardDataBitmap;->mExtraDataPath:Ljava/lang/String;
 
-    .line 565
     const-class v1, Landroid/content/ClipData;
 
     invoke-virtual {v1}, Ljava/lang/Class;->getClassLoader()Ljava/lang/ClassLoader;
@@ -1795,7 +1596,6 @@
 
     iput-object v1, p0, Landroid/sec/clipboard/data/ClipboardData;->mClipdata:Landroid/content/ClipData;
 
-    .line 566
     const-class v1, Ljava/lang/Boolean;
 
     invoke-virtual {v1}, Ljava/lang/Class;->getClassLoader()Ljava/lang/ClassLoader;
@@ -1814,7 +1614,6 @@
 
     iput-boolean v1, p0, Landroid/sec/clipboard/data/ClipboardData;->mIsProtected:Z
 
-    .line 567
     sget-boolean v1, Landroid/sec/clipboard/data/ClipboardDefine;->INFO_DEBUG:Z
 
     if-eqz v1, :cond_0
@@ -1845,16 +1644,13 @@
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 573
     :cond_0
     :goto_0
     return-void
 
-    .line 569
     :catch_0
     move-exception v0
 
-    .line 571
     .local v0, "e":Ljava/lang/Exception;
     const-string v1, "ClipboardServiceEx"
 
@@ -1862,7 +1658,7 @@
 
     invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v3, "readFormSource~Exception :"
+    const-string v3, "readFormSource~Exception :"
 
     invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -1891,12 +1687,11 @@
     .prologue
     const/16 v3, 0x14
 
-    .line 581
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v1, "this Bitmap class. Value is "
+    const-string v1, "this Bitmap class. Value is "
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -1941,7 +1736,6 @@
     .param p2, "flags"    # I
 
     .prologue
-    .line 524
     sget-boolean v2, Landroid/sec/clipboard/data/ClipboardDefine;->DEBUG:Z
 
     if-eqz v2, :cond_0
@@ -1952,27 +1746,23 @@
 
     invoke-static {v2, v3}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 525
     :cond_0
     invoke-super {p0, p1, p2}, Landroid/sec/clipboard/data/ClipboardData;->writeToParcel(Landroid/os/Parcel;I)V
 
-    .line 527
     iget-object v2, p0, Landroid/sec/clipboard/data/ClipboardData;->mClipdata:Landroid/content/ClipData;
 
     if-nez v2, :cond_1
 
-    .line 528
     const/4 v2, 0x1
 
     new-array v1, v2, [Ljava/lang/String;
 
     const/4 v2, 0x0
 
-    const-string/jumbo v3, "text/uri-list"
+    const-string v3, "text/uri-list"
 
     aput-object v3, v1, v2
 
-    .line 529
     .local v1, "mimeType":[Ljava/lang/String;
     new-instance v0, Landroid/content/ClipData$Item;
 
@@ -1988,7 +1778,6 @@
 
     invoke-direct {v0, v2}, Landroid/content/ClipData$Item;-><init>(Landroid/net/Uri;)V
 
-    .line 530
     .local v0, "item":Landroid/content/ClipData$Item;
     new-instance v2, Landroid/content/ClipData;
 
@@ -1998,7 +1787,6 @@
 
     iput-object v2, p0, Landroid/sec/clipboard/data/ClipboardData;->mClipdata:Landroid/content/ClipData;
 
-    .line 534
     .end local v0    # "item":Landroid/content/ClipData$Item;
     .end local v1    # "mimeType":[Ljava/lang/String;
     :cond_1
@@ -2006,27 +1794,22 @@
 
     invoke-virtual {p1, v2}, Landroid/os/Parcel;->writeValue(Ljava/lang/Object;)V
 
-    .line 535
     iget-object v2, p0, Landroid/sec/clipboard/data/list/ClipboardDataBitmap;->mInitBaseValue:Ljava/lang/String;
 
     invoke-virtual {p1, v2}, Landroid/os/Parcel;->writeValue(Ljava/lang/Object;)V
 
-    .line 536
     iget-object v2, p0, Landroid/sec/clipboard/data/list/ClipboardDataBitmap;->mValueUrl:Ljava/lang/String;
 
     invoke-virtual {p1, v2}, Landroid/os/Parcel;->writeValue(Ljava/lang/Object;)V
 
-    .line 537
     iget-object v2, p0, Landroid/sec/clipboard/data/list/ClipboardDataBitmap;->mExtraDataPath:Ljava/lang/String;
 
     invoke-virtual {p1, v2}, Landroid/os/Parcel;->writeValue(Ljava/lang/Object;)V
 
-    .line 538
     iget-object v2, p0, Landroid/sec/clipboard/data/ClipboardData;->mClipdata:Landroid/content/ClipData;
 
     invoke-virtual {p1, v2}, Landroid/os/Parcel;->writeValue(Ljava/lang/Object;)V
 
-    .line 539
     iget-boolean v2, p0, Landroid/sec/clipboard/data/ClipboardData;->mIsProtected:Z
 
     invoke-static {v2}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
@@ -2035,6 +1818,5 @@
 
     invoke-virtual {p1, v2}, Landroid/os/Parcel;->writeValue(Ljava/lang/Object;)V
 
-    .line 550
     return-void
 .end method

@@ -23,7 +23,6 @@
     .locals 0
 
     .prologue
-    .line 515
     iput-object p1, p0, Lcom/android/internal/policy/impl/multiwindow/MinimizeAnimator$2;->this$0:Lcom/android/internal/policy/impl/multiwindow/MinimizeAnimator;
 
     invoke-direct {p0}, Landroid/os/Handler;-><init>()V

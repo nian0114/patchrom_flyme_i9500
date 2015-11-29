@@ -26,7 +26,6 @@
     .locals 0
 
     .prologue
-    .line 588
     iput-object p1, p0, Lcom/samsung/android/contextaware/aggregator/lpp/LppAggregator$LPPFusionListener;->this$0:Lcom/samsung/android/contextaware/aggregator/lpp/LppAggregator;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -40,7 +39,6 @@
     .param p2, "x1"    # Lcom/samsung/android/contextaware/aggregator/lpp/LppAggregator$1;
 
     .prologue
-    .line 588
     invoke-direct {p0, p1}, Lcom/samsung/android/contextaware/aggregator/lpp/LppAggregator$LPPFusionListener;-><init>(Lcom/samsung/android/contextaware/aggregator/lpp/LppAggregator;)V
 
     return-void
@@ -52,7 +50,6 @@
     .locals 1
 
     .prologue
-    .line 627
     iget-object v0, p0, Lcom/samsung/android/contextaware/aggregator/lpp/LppAggregator$LPPFusionListener;->this$0:Lcom/samsung/android/contextaware/aggregator/lpp/LppAggregator;
 
     # getter for: Lcom/samsung/android/contextaware/aggregator/lpp/LppAggregator;->mApdrRunner:Lcom/samsung/android/contextaware/dataprovider/sensorhubprovider/builtin/ApdrRunner;
@@ -62,7 +59,6 @@
 
     invoke-virtual {v0}, Lcom/samsung/android/contextaware/dataprovider/sensorhubprovider/builtin/ApdrRunner;->gpsAvailable()V
 
-    .line 628
     return-void
 .end method
 
@@ -70,7 +66,6 @@
     .locals 1
 
     .prologue
-    .line 609
     iget-object v0, p0, Lcom/samsung/android/contextaware/aggregator/lpp/LppAggregator$LPPFusionListener;->this$0:Lcom/samsung/android/contextaware/aggregator/lpp/LppAggregator;
 
     # getter for: Lcom/samsung/android/contextaware/aggregator/lpp/LppAggregator;->mApdrRunner:Lcom/samsung/android/contextaware/dataprovider/sensorhubprovider/builtin/ApdrRunner;
@@ -80,7 +75,6 @@
 
     invoke-virtual {v0}, Lcom/samsung/android/contextaware/dataprovider/sensorhubprovider/builtin/ApdrRunner;->gpsBatchStarted()V
 
-    .line 610
     return-void
 .end method
 
@@ -88,7 +82,6 @@
     .locals 1
 
     .prologue
-    .line 621
     iget-object v0, p0, Lcom/samsung/android/contextaware/aggregator/lpp/LppAggregator$LPPFusionListener;->this$0:Lcom/samsung/android/contextaware/aggregator/lpp/LppAggregator;
 
     # getter for: Lcom/samsung/android/contextaware/aggregator/lpp/LppAggregator;->mApdrRunner:Lcom/samsung/android/contextaware/dataprovider/sensorhubprovider/builtin/ApdrRunner;
@@ -98,7 +91,6 @@
 
     invoke-virtual {v0}, Lcom/samsung/android/contextaware/dataprovider/sensorhubprovider/builtin/ApdrRunner;->gpsOffBatchStopped()V
 
-    .line 622
     return-void
 .end method
 
@@ -106,7 +98,6 @@
     .locals 1
 
     .prologue
-    .line 615
     iget-object v0, p0, Lcom/samsung/android/contextaware/aggregator/lpp/LppAggregator$LPPFusionListener;->this$0:Lcom/samsung/android/contextaware/aggregator/lpp/LppAggregator;
 
     # getter for: Lcom/samsung/android/contextaware/aggregator/lpp/LppAggregator;->mApdrRunner:Lcom/samsung/android/contextaware/dataprovider/sensorhubprovider/builtin/ApdrRunner;
@@ -116,7 +107,6 @@
 
     invoke-virtual {v0}, Lcom/samsung/android/contextaware/dataprovider/sensorhubprovider/builtin/ApdrRunner;->gpsOnBatchStopped()V
 
-    .line 616
     return-void
 .end method
 
@@ -124,7 +114,6 @@
     .locals 1
 
     .prologue
-    .line 633
     iget-object v0, p0, Lcom/samsung/android/contextaware/aggregator/lpp/LppAggregator$LPPFusionListener;->this$0:Lcom/samsung/android/contextaware/aggregator/lpp/LppAggregator;
 
     # getter for: Lcom/samsung/android/contextaware/aggregator/lpp/LppAggregator;->mApdrRunner:Lcom/samsung/android/contextaware/dataprovider/sensorhubprovider/builtin/ApdrRunner;
@@ -134,7 +123,6 @@
 
     invoke-virtual {v0}, Lcom/samsung/android/contextaware/dataprovider/sensorhubprovider/builtin/ApdrRunner;->gpsUnavailable()V
 
-    .line 634
     return-void
 .end method
 
@@ -143,7 +131,6 @@
     .param p1, "str"    # Ljava/lang/String;
 
     .prologue
-    .line 605
     return-void
 .end method
 
@@ -160,7 +147,6 @@
     .end annotation
 
     .prologue
-    .line 599
     .local p1, "listLPPResult":Ljava/util/ArrayList;, "Ljava/util/ArrayList<Landroid/location/Location;>;"
     const-string v0, "LppAggregator"
 
@@ -168,13 +154,11 @@
 
     invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 600
     iget-object v0, p0, Lcom/samsung/android/contextaware/aggregator/lpp/LppAggregator$LPPFusionListener;->this$0:Lcom/samsung/android/contextaware/aggregator/lpp/LppAggregator;
 
     # invokes: Lcom/samsung/android/contextaware/aggregator/lpp/LppAggregator;->notifyPositionContext(Ljava/util/ArrayList;)V
     invoke-static {v0, p1}, Lcom/samsung/android/contextaware/aggregator/lpp/LppAggregator;->access$400(Lcom/samsung/android/contextaware/aggregator/lpp/LppAggregator;Ljava/util/ArrayList;)V
 
-    .line 601
     return-void
 .end method
 
@@ -183,14 +167,13 @@
     .param p1, "loc"    # Landroid/location/Location;
 
     .prologue
-    .line 590
     const-string v0, "LppAggregator"
 
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v2, "loc time:"
+    const-string v2, "loc time:"
 
     invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -210,7 +193,6 @@
 
     invoke-static {v0, v1}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 591
     iget-object v0, p0, Lcom/samsung/android/contextaware/aggregator/lpp/LppAggregator$LPPFusionListener;->this$0:Lcom/samsung/android/contextaware/aggregator/lpp/LppAggregator;
 
     # getter for: Lcom/samsung/android/contextaware/aggregator/lpp/LppAggregator;->mApdrRunner:Lcom/samsung/android/contextaware/dataprovider/sensorhubprovider/builtin/ApdrRunner;
@@ -220,7 +202,6 @@
 
     if-eqz v0, :cond_0
 
-    .line 593
     iget-object v0, p0, Lcom/samsung/android/contextaware/aggregator/lpp/LppAggregator$LPPFusionListener;->this$0:Lcom/samsung/android/contextaware/aggregator/lpp/LppAggregator;
 
     # getter for: Lcom/samsung/android/contextaware/aggregator/lpp/LppAggregator;->mApdrRunner:Lcom/samsung/android/contextaware/dataprovider/sensorhubprovider/builtin/ApdrRunner;
@@ -230,7 +211,6 @@
 
     invoke-virtual {v0, p1}, Lcom/samsung/android/contextaware/dataprovider/sensorhubprovider/builtin/ApdrRunner;->locationUpdate(Landroid/location/Location;)V
 
-    .line 595
     :cond_0
     return-void
 .end method

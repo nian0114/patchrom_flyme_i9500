@@ -26,7 +26,6 @@
     .locals 0
 
     .prologue
-    .line 1244
     iput-object p1, p0, Landroid/widget/TimePickerSpinnerDelegate$5;->this$0:Landroid/widget/TimePickerSpinnerDelegate;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -42,7 +41,6 @@
     .param p2, "hasFocus"    # Z
 
     .prologue
-    .line 1247
     if-nez p2, :cond_0
 
     iget-object v0, p0, Landroid/widget/TimePickerSpinnerDelegate$5;->this$0:Landroid/widget/TimePickerSpinnerDelegate;
@@ -63,20 +61,17 @@
 
     if-eqz v0, :cond_0
 
-    .line 1248
     iget-object v0, p0, Landroid/widget/TimePickerSpinnerDelegate$5;->this$0:Landroid/widget/TimePickerSpinnerDelegate;
 
     # invokes: Landroid/widget/TimePickerSpinnerDelegate;->finishKbMode()V
     invoke-static {v0}, Landroid/widget/TimePickerSpinnerDelegate;->access$900(Landroid/widget/TimePickerSpinnerDelegate;)V
 
-    .line 1250
     iget-object v0, p0, Landroid/widget/TimePickerSpinnerDelegate$5;->this$0:Landroid/widget/TimePickerSpinnerDelegate;
 
     iget-object v0, v0, Landroid/widget/TimePickerSpinnerDelegate;->mOnTimeChangedListener:Landroid/widget/TimePicker$OnTimeChangedListener;
 
     if-eqz v0, :cond_0
 
-    .line 1251
     iget-object v0, p0, Landroid/widget/TimePickerSpinnerDelegate$5;->this$0:Landroid/widget/TimePickerSpinnerDelegate;
 
     iget-object v0, v0, Landroid/widget/TimePickerSpinnerDelegate;->mOnTimeChangedListener:Landroid/widget/TimePicker$OnTimeChangedListener;
@@ -109,7 +104,6 @@
 
     invoke-interface {v0, v1, v2, v3}, Landroid/widget/TimePicker$OnTimeChangedListener;->onTimeChanged(Landroid/widget/TimePicker;II)V
 
-    .line 1256
     :cond_0
     return-void
 .end method

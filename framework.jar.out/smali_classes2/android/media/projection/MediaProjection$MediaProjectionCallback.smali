@@ -23,7 +23,6 @@
     .locals 0
 
     .prologue
-    .line 183
     iput-object p1, p0, Landroid/media/projection/MediaProjection$MediaProjectionCallback;->this$0:Landroid/media/projection/MediaProjection;
 
     invoke-direct {p0}, Landroid/media/projection/IMediaProjectionCallback$Stub;-><init>()V
@@ -37,7 +36,6 @@
     .param p2, "x1"    # Landroid/media/projection/MediaProjection$1;
 
     .prologue
-    .line 183
     invoke-direct {p0, p1}, Landroid/media/projection/MediaProjection$MediaProjectionCallback;-><init>(Landroid/media/projection/MediaProjection;)V
 
     return-void
@@ -49,7 +47,6 @@
     .locals 4
 
     .prologue
-    .line 186
     iget-object v2, p0, Landroid/media/projection/MediaProjection$MediaProjectionCallback;->this$0:Landroid/media/projection/MediaProjection;
 
     # getter for: Landroid/media/projection/MediaProjection;->mCallbacks:Ljava/util/Map;
@@ -61,7 +58,6 @@
 
     move-result v0
 
-    .line 187
     .local v0, "N":I
     const/4 v1, 0x0
 
@@ -69,7 +65,6 @@
     :goto_0
     if-ge v1, v0, :cond_0
 
-    .line 188
     iget-object v2, p0, Landroid/media/projection/MediaProjection$MediaProjectionCallback;->this$0:Landroid/media/projection/MediaProjection;
 
     # getter for: Landroid/media/projection/MediaProjection;->mCallbacks:Ljava/util/Map;
@@ -89,12 +84,10 @@
 
     invoke-virtual {v2}, Landroid/media/projection/MediaProjection$CallbackRecord;->onStop()V
 
-    .line 187
     add-int/lit8 v1, v1, 0x1
 
     goto :goto_0
 
-    .line 190
     :cond_0
     return-void
 .end method

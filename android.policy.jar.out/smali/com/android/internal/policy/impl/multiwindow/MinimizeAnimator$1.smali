@@ -26,7 +26,6 @@
     .locals 0
 
     .prologue
-    .line 319
     iput-object p1, p0, Lcom/android/internal/policy/impl/multiwindow/MinimizeAnimator$1;->this$0:Lcom/android/internal/policy/impl/multiwindow/MinimizeAnimator;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -44,10 +43,8 @@
 
     const/4 v6, 0x0
 
-    .line 322
     const/4 v1, 0x0
 
-    .line 324
     .local v1, "isNeedAdditionalAnimation":Z
     iget-object v3, p0, Lcom/android/internal/policy/impl/multiwindow/MinimizeAnimator$1;->this$0:Lcom/android/internal/policy/impl/multiwindow/MinimizeAnimator;
 
@@ -62,7 +59,6 @@
 
     if-lez v3, :cond_0
 
-    .line 325
     iget-object v3, p0, Lcom/android/internal/policy/impl/multiwindow/MinimizeAnimator$1;->this$0:Lcom/android/internal/policy/impl/multiwindow/MinimizeAnimator;
 
     # getter for: Lcom/android/internal/policy/impl/multiwindow/MinimizeAnimator;->mMovements:Ljava/util/ArrayList;
@@ -76,7 +72,6 @@
 
     check-cast v0, Lcom/android/internal/policy/impl/multiwindow/MinimizeAnimator$Movement;
 
-    .line 326
     .local v0, "currMovements":Lcom/android/internal/policy/impl/multiwindow/MinimizeAnimator$Movement;
     iget-object v3, p0, Lcom/android/internal/policy/impl/multiwindow/MinimizeAnimator$1;->this$0:Lcom/android/internal/policy/impl/multiwindow/MinimizeAnimator;
 
@@ -87,7 +82,6 @@
 
     invoke-virtual {v3, v6}, Ljava/util/ArrayList;->remove(I)Ljava/lang/Object;
 
-    .line 328
     iget-object v3, p0, Lcom/android/internal/policy/impl/multiwindow/MinimizeAnimator$1;->this$0:Lcom/android/internal/policy/impl/multiwindow/MinimizeAnimator;
 
     # getter for: Lcom/android/internal/policy/impl/multiwindow/MinimizeAnimator;->mCurrMoveDistance:Ljava/util/ArrayList;
@@ -105,7 +99,6 @@
 
     iput v4, v3, Lcom/android/internal/policy/impl/multiwindow/MinimizeAnimator$Movement;->movementX:F
 
-    .line 329
     iget-object v3, p0, Lcom/android/internal/policy/impl/multiwindow/MinimizeAnimator$1;->this$0:Lcom/android/internal/policy/impl/multiwindow/MinimizeAnimator;
 
     # getter for: Lcom/android/internal/policy/impl/multiwindow/MinimizeAnimator;->mCurrMoveDistance:Ljava/util/ArrayList;
@@ -123,7 +116,6 @@
 
     iput v4, v3, Lcom/android/internal/policy/impl/multiwindow/MinimizeAnimator$Movement;->movementY:F
 
-    .line 334
     .end local v0    # "currMovements":Lcom/android/internal/policy/impl/multiwindow/MinimizeAnimator$Movement;
     :cond_0
     iget-object v3, p0, Lcom/android/internal/policy/impl/multiwindow/MinimizeAnimator$1;->this$0:Lcom/android/internal/policy/impl/multiwindow/MinimizeAnimator;
@@ -143,7 +135,6 @@
     :goto_0
     if-lez v2, :cond_5
 
-    .line 335
     iget-object v3, p0, Lcom/android/internal/policy/impl/multiwindow/MinimizeAnimator$1;->this$0:Lcom/android/internal/policy/impl/multiwindow/MinimizeAnimator;
 
     # getter for: Lcom/android/internal/policy/impl/multiwindow/MinimizeAnimator;->mCurrMoveDistance:Ljava/util/ArrayList;
@@ -163,7 +154,6 @@
 
     if-eqz v3, :cond_1
 
-    .line 336
     iget-object v3, p0, Lcom/android/internal/policy/impl/multiwindow/MinimizeAnimator$1;->this$0:Lcom/android/internal/policy/impl/multiwindow/MinimizeAnimator;
 
     # getter for: Lcom/android/internal/policy/impl/multiwindow/MinimizeAnimator;->mMinimizeIcons:Ljava/util/ArrayList;
@@ -213,7 +203,6 @@
 
     invoke-virtual {v3, v4}, Landroid/widget/ImageView;->setX(F)V
 
-    .line 339
     iget-object v3, p0, Lcom/android/internal/policy/impl/multiwindow/MinimizeAnimator$1;->this$0:Lcom/android/internal/policy/impl/multiwindow/MinimizeAnimator;
 
     # getter for: Lcom/android/internal/policy/impl/multiwindow/MinimizeAnimator;->mCurrMoveDistance:Ljava/util/ArrayList;
@@ -229,7 +218,6 @@
 
     iput v7, v3, Lcom/android/internal/policy/impl/multiwindow/MinimizeAnimator$Movement;->movementX:F
 
-    .line 341
     :cond_1
     iget-object v3, p0, Lcom/android/internal/policy/impl/multiwindow/MinimizeAnimator$1;->this$0:Lcom/android/internal/policy/impl/multiwindow/MinimizeAnimator;
 
@@ -250,7 +238,6 @@
 
     if-eqz v3, :cond_2
 
-    .line 342
     iget-object v3, p0, Lcom/android/internal/policy/impl/multiwindow/MinimizeAnimator$1;->this$0:Lcom/android/internal/policy/impl/multiwindow/MinimizeAnimator;
 
     # getter for: Lcom/android/internal/policy/impl/multiwindow/MinimizeAnimator;->mMinimizeIcons:Ljava/util/ArrayList;
@@ -300,7 +287,6 @@
 
     invoke-virtual {v3, v4}, Landroid/widget/ImageView;->setY(F)V
 
-    .line 345
     iget-object v3, p0, Lcom/android/internal/policy/impl/multiwindow/MinimizeAnimator$1;->this$0:Lcom/android/internal/policy/impl/multiwindow/MinimizeAnimator;
 
     # getter for: Lcom/android/internal/policy/impl/multiwindow/MinimizeAnimator;->mCurrMoveDistance:Ljava/util/ArrayList;
@@ -316,7 +302,6 @@
 
     iput v7, v3, Lcom/android/internal/policy/impl/multiwindow/MinimizeAnimator$Movement;->movementY:F
 
-    .line 348
     :cond_2
     iget-object v3, p0, Lcom/android/internal/policy/impl/multiwindow/MinimizeAnimator$1;->this$0:Lcom/android/internal/policy/impl/multiwindow/MinimizeAnimator;
 
@@ -339,7 +324,6 @@
 
     if-eqz v3, :cond_3
 
-    .line 349
     iget-object v3, p0, Lcom/android/internal/policy/impl/multiwindow/MinimizeAnimator$1;->this$0:Lcom/android/internal/policy/impl/multiwindow/MinimizeAnimator;
 
     # getter for: Lcom/android/internal/policy/impl/multiwindow/MinimizeAnimator;->mCurrMoveDistance:Ljava/util/ArrayList;
@@ -372,10 +356,8 @@
 
     iput v4, v3, Lcom/android/internal/policy/impl/multiwindow/MinimizeAnimator$Movement;->movementX:F
 
-    .line 350
     const/4 v1, 0x1
 
-    .line 352
     :cond_3
     iget-object v3, p0, Lcom/android/internal/policy/impl/multiwindow/MinimizeAnimator$1;->this$0:Lcom/android/internal/policy/impl/multiwindow/MinimizeAnimator;
 
@@ -398,7 +380,6 @@
 
     if-eqz v3, :cond_4
 
-    .line 353
     iget-object v3, p0, Lcom/android/internal/policy/impl/multiwindow/MinimizeAnimator$1;->this$0:Lcom/android/internal/policy/impl/multiwindow/MinimizeAnimator;
 
     # getter for: Lcom/android/internal/policy/impl/multiwindow/MinimizeAnimator;->mCurrMoveDistance:Ljava/util/ArrayList;
@@ -431,16 +412,13 @@
 
     iput v4, v3, Lcom/android/internal/policy/impl/multiwindow/MinimizeAnimator$Movement;->movementY:F
 
-    .line 354
     const/4 v1, 0x1
 
-    .line 334
     :cond_4
     add-int/lit8 v2, v2, -0x1
 
     goto/16 :goto_0
 
-    .line 358
     :cond_5
     iget-object v3, p0, Lcom/android/internal/policy/impl/multiwindow/MinimizeAnimator$1;->this$0:Lcom/android/internal/policy/impl/multiwindow/MinimizeAnimator;
 
@@ -461,7 +439,6 @@
 
     if-eqz v3, :cond_6
 
-    .line 359
     iget-object v3, p0, Lcom/android/internal/policy/impl/multiwindow/MinimizeAnimator$1;->this$0:Lcom/android/internal/policy/impl/multiwindow/MinimizeAnimator;
 
     # getter for: Lcom/android/internal/policy/impl/multiwindow/MinimizeAnimator;->mMinimizeIcons:Ljava/util/ArrayList;
@@ -511,7 +488,6 @@
 
     invoke-virtual {v3, v4}, Landroid/widget/ImageView;->setX(F)V
 
-    .line 361
     iget-object v3, p0, Lcom/android/internal/policy/impl/multiwindow/MinimizeAnimator$1;->this$0:Lcom/android/internal/policy/impl/multiwindow/MinimizeAnimator;
 
     # getter for: Lcom/android/internal/policy/impl/multiwindow/MinimizeAnimator;->mCurrMoveDistance:Ljava/util/ArrayList;
@@ -527,7 +503,6 @@
 
     iput v7, v3, Lcom/android/internal/policy/impl/multiwindow/MinimizeAnimator$Movement;->movementX:F
 
-    .line 363
     :cond_6
     iget-object v3, p0, Lcom/android/internal/policy/impl/multiwindow/MinimizeAnimator$1;->this$0:Lcom/android/internal/policy/impl/multiwindow/MinimizeAnimator;
 
@@ -548,7 +523,6 @@
 
     if-eqz v3, :cond_7
 
-    .line 364
     iget-object v3, p0, Lcom/android/internal/policy/impl/multiwindow/MinimizeAnimator$1;->this$0:Lcom/android/internal/policy/impl/multiwindow/MinimizeAnimator;
 
     # getter for: Lcom/android/internal/policy/impl/multiwindow/MinimizeAnimator;->mMinimizeIcons:Ljava/util/ArrayList;
@@ -598,7 +572,6 @@
 
     invoke-virtual {v3, v4}, Landroid/widget/ImageView;->setY(F)V
 
-    .line 366
     iget-object v3, p0, Lcom/android/internal/policy/impl/multiwindow/MinimizeAnimator$1;->this$0:Lcom/android/internal/policy/impl/multiwindow/MinimizeAnimator;
 
     # getter for: Lcom/android/internal/policy/impl/multiwindow/MinimizeAnimator;->mCurrMoveDistance:Ljava/util/ArrayList;
@@ -614,7 +587,6 @@
 
     iput v7, v3, Lcom/android/internal/policy/impl/multiwindow/MinimizeAnimator$Movement;->movementY:F
 
-    .line 369
     :cond_7
     iget-object v3, p0, Lcom/android/internal/policy/impl/multiwindow/MinimizeAnimator$1;->this$0:Lcom/android/internal/policy/impl/multiwindow/MinimizeAnimator;
 
@@ -627,7 +599,6 @@
 
     if-eqz v1, :cond_9
 
-    .line 370
     :cond_8
     iget-object v3, p0, Lcom/android/internal/policy/impl/multiwindow/MinimizeAnimator$1;->this$0:Lcom/android/internal/policy/impl/multiwindow/MinimizeAnimator;
 
@@ -639,7 +610,6 @@
 
     invoke-virtual {v3, v4}, Landroid/os/Handler;->post(Ljava/lang/Runnable;)Z
 
-    .line 371
     :cond_9
     return-void
 .end method

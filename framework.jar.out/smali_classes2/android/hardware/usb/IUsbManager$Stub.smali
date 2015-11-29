@@ -84,15 +84,12 @@
     .locals 1
 
     .prologue
-    .line 15
     invoke-direct {p0}, Landroid/os/Binder;-><init>()V
 
-    .line 16
     const-string v0, "android.hardware.usb.IUsbManager"
 
     invoke-virtual {p0, p0, v0}, Landroid/hardware/usb/IUsbManager$Stub;->attachInterface(Landroid/os/IInterface;Ljava/lang/String;)V
 
-    .line 17
     return-void
 .end method
 
@@ -101,17 +98,13 @@
     .param p0, "obj"    # Landroid/os/IBinder;
 
     .prologue
-    .line 24
     if-nez p0, :cond_0
 
-    .line 25
     const/4 v0, 0x0
 
-    .line 31
     :goto_0
     return-object v0
 
-    .line 27
     :cond_0
     const-string v1, "android.hardware.usb.IUsbManager"
 
@@ -119,7 +112,6 @@
 
     move-result-object v0
 
-    .line 28
     .local v0, "iin":Landroid/os/IInterface;
     if-eqz v0, :cond_1
 
@@ -127,12 +119,10 @@
 
     if-eqz v1, :cond_1
 
-    .line 29
     check-cast v0, Landroid/hardware/usb/IUsbManager;
 
     goto :goto_0
 
-    .line 31
     :cond_1
     new-instance v0, Landroid/hardware/usb/IUsbManager$Stub$Proxy;
 
@@ -148,7 +138,6 @@
     .locals 0
 
     .prologue
-    .line 35
     return-object p0
 .end method
 
@@ -169,10 +158,8 @@
 
     const/4 v5, 0x1
 
-    .line 39
     sparse-switch p1, :sswitch_data_0
 
-    .line 385
     invoke-super {p0, p1, p2, p3, p4}, Landroid/os/Binder;->onTransact(ILandroid/os/Parcel;Landroid/os/Parcel;I)Z
 
     move-result v5
@@ -180,7 +167,6 @@
     :goto_0
     return v5
 
-    .line 43
     :sswitch_0
     const-string v4, "android.hardware.usb.IUsbManager"
 
@@ -188,81 +174,64 @@
 
     goto :goto_0
 
-    .line 48
     :sswitch_1
     const-string v6, "android.hardware.usb.IUsbManager"
 
     invoke-virtual {p2, v6}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
 
-    .line 50
     new-instance v0, Landroid/os/Bundle;
 
     invoke-direct {v0}, Landroid/os/Bundle;-><init>()V
 
-    .line 51
     .local v0, "_arg0":Landroid/os/Bundle;
     invoke-virtual {p0, v0}, Landroid/hardware/usb/IUsbManager$Stub;->getDeviceList(Landroid/os/Bundle;)V
 
-    .line 52
     invoke-virtual {p3}, Landroid/os/Parcel;->writeNoException()V
 
-    .line 53
     if-eqz v0, :cond_0
 
-    .line 54
     invoke-virtual {p3, v5}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 55
     invoke-virtual {v0, p3, v5}, Landroid/os/Bundle;->writeToParcel(Landroid/os/Parcel;I)V
 
     goto :goto_0
 
-    .line 58
     :cond_0
     invoke-virtual {p3, v4}, Landroid/os/Parcel;->writeInt(I)V
 
     goto :goto_0
 
-    .line 64
     .end local v0    # "_arg0":Landroid/os/Bundle;
     :sswitch_2
     const-string v6, "android.hardware.usb.IUsbManager"
 
     invoke-virtual {p2, v6}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
 
-    .line 66
     invoke-virtual {p2}, Landroid/os/Parcel;->readString()Ljava/lang/String;
 
     move-result-object v0
 
-    .line 67
     .local v0, "_arg0":Ljava/lang/String;
     invoke-virtual {p0, v0}, Landroid/hardware/usb/IUsbManager$Stub;->openDevice(Ljava/lang/String;)Landroid/os/ParcelFileDescriptor;
 
     move-result-object v3
 
-    .line 68
     .local v3, "_result":Landroid/os/ParcelFileDescriptor;
     invoke-virtual {p3}, Landroid/os/Parcel;->writeNoException()V
 
-    .line 69
     if-eqz v3, :cond_1
 
-    .line 70
     invoke-virtual {p3, v5}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 71
     invoke-virtual {v3, p3, v5}, Landroid/os/ParcelFileDescriptor;->writeToParcel(Landroid/os/Parcel;I)V
 
     goto :goto_0
 
-    .line 74
     :cond_1
     invoke-virtual {p3, v4}, Landroid/os/Parcel;->writeInt(I)V
 
     goto :goto_0
 
-    .line 80
     .end local v0    # "_arg0":Ljava/lang/String;
     .end local v3    # "_result":Landroid/os/ParcelFileDescriptor;
     :sswitch_3
@@ -270,47 +239,38 @@
 
     invoke-virtual {p2, v6}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
 
-    .line 81
     invoke-virtual {p0}, Landroid/hardware/usb/IUsbManager$Stub;->getCurrentAccessory()Landroid/hardware/usb/UsbAccessory;
 
     move-result-object v3
 
-    .line 82
     .local v3, "_result":Landroid/hardware/usb/UsbAccessory;
     invoke-virtual {p3}, Landroid/os/Parcel;->writeNoException()V
 
-    .line 83
     if-eqz v3, :cond_2
 
-    .line 84
     invoke-virtual {p3, v5}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 85
     invoke-virtual {v3, p3, v5}, Landroid/hardware/usb/UsbAccessory;->writeToParcel(Landroid/os/Parcel;I)V
 
     goto :goto_0
 
-    .line 88
     :cond_2
     invoke-virtual {p3, v4}, Landroid/os/Parcel;->writeInt(I)V
 
     goto :goto_0
 
-    .line 94
     .end local v3    # "_result":Landroid/hardware/usb/UsbAccessory;
     :sswitch_4
     const-string v6, "android.hardware.usb.IUsbManager"
 
     invoke-virtual {p2, v6}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
 
-    .line 96
     invoke-virtual {p2}, Landroid/os/Parcel;->readInt()I
 
     move-result v6
 
     if-eqz v6, :cond_3
 
-    .line 97
     sget-object v6, Landroid/hardware/usb/UsbAccessory;->CREATOR:Landroid/os/Parcelable$Creator;
 
     invoke-interface {v6, p2}, Landroid/os/Parcelable$Creator;->createFromParcel(Landroid/os/Parcel;)Ljava/lang/Object;
@@ -319,29 +279,23 @@
 
     check-cast v0, Landroid/hardware/usb/UsbAccessory;
 
-    .line 102
     .local v0, "_arg0":Landroid/hardware/usb/UsbAccessory;
     :goto_1
     invoke-virtual {p0, v0}, Landroid/hardware/usb/IUsbManager$Stub;->openAccessory(Landroid/hardware/usb/UsbAccessory;)Landroid/os/ParcelFileDescriptor;
 
     move-result-object v3
 
-    .line 103
     .local v3, "_result":Landroid/os/ParcelFileDescriptor;
     invoke-virtual {p3}, Landroid/os/Parcel;->writeNoException()V
 
-    .line 104
     if-eqz v3, :cond_4
 
-    .line 105
     invoke-virtual {p3, v5}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 106
     invoke-virtual {v3, p3, v5}, Landroid/os/ParcelFileDescriptor;->writeToParcel(Landroid/os/Parcel;I)V
 
     goto :goto_0
 
-    .line 100
     .end local v0    # "_arg0":Landroid/hardware/usb/UsbAccessory;
     .end local v3    # "_result":Landroid/os/ParcelFileDescriptor;
     :cond_3
@@ -350,14 +304,12 @@
     .restart local v0    # "_arg0":Landroid/hardware/usb/UsbAccessory;
     goto :goto_1
 
-    .line 109
     .restart local v3    # "_result":Landroid/os/ParcelFileDescriptor;
     :cond_4
     invoke-virtual {p3, v4}, Landroid/os/Parcel;->writeInt(I)V
 
     goto/16 :goto_0
 
-    .line 115
     .end local v0    # "_arg0":Landroid/hardware/usb/UsbAccessory;
     .end local v3    # "_result":Landroid/os/ParcelFileDescriptor;
     :sswitch_5
@@ -365,14 +317,12 @@
 
     invoke-virtual {p2, v4}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
 
-    .line 117
     invoke-virtual {p2}, Landroid/os/Parcel;->readInt()I
 
     move-result v4
 
     if-eqz v4, :cond_5
 
-    .line 118
     sget-object v4, Landroid/hardware/usb/UsbDevice;->CREATOR:Landroid/os/Parcelable$Creator;
 
     invoke-interface {v4, p2}, Landroid/os/Parcelable$Creator;->createFromParcel(Landroid/os/Parcel;)Ljava/lang/Object;
@@ -381,29 +331,24 @@
 
     check-cast v0, Landroid/hardware/usb/UsbDevice;
 
-    .line 124
     .local v0, "_arg0":Landroid/hardware/usb/UsbDevice;
     :goto_2
     invoke-virtual {p2}, Landroid/os/Parcel;->readString()Ljava/lang/String;
 
     move-result-object v1
 
-    .line 126
     .local v1, "_arg1":Ljava/lang/String;
     invoke-virtual {p2}, Landroid/os/Parcel;->readInt()I
 
     move-result v2
 
-    .line 127
     .local v2, "_arg2":I
     invoke-virtual {p0, v0, v1, v2}, Landroid/hardware/usb/IUsbManager$Stub;->setDevicePackage(Landroid/hardware/usb/UsbDevice;Ljava/lang/String;I)V
 
-    .line 128
     invoke-virtual {p3}, Landroid/os/Parcel;->writeNoException()V
 
     goto/16 :goto_0
 
-    .line 121
     .end local v0    # "_arg0":Landroid/hardware/usb/UsbDevice;
     .end local v1    # "_arg1":Ljava/lang/String;
     .end local v2    # "_arg2":I
@@ -413,21 +358,18 @@
     .restart local v0    # "_arg0":Landroid/hardware/usb/UsbDevice;
     goto :goto_2
 
-    .line 133
     .end local v0    # "_arg0":Landroid/hardware/usb/UsbDevice;
     :sswitch_6
     const-string v4, "android.hardware.usb.IUsbManager"
 
     invoke-virtual {p2, v4}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
 
-    .line 135
     invoke-virtual {p2}, Landroid/os/Parcel;->readInt()I
 
     move-result v4
 
     if-eqz v4, :cond_6
 
-    .line 136
     sget-object v4, Landroid/hardware/usb/UsbAccessory;->CREATOR:Landroid/os/Parcelable$Creator;
 
     invoke-interface {v4, p2}, Landroid/os/Parcelable$Creator;->createFromParcel(Landroid/os/Parcel;)Ljava/lang/Object;
@@ -436,29 +378,24 @@
 
     check-cast v0, Landroid/hardware/usb/UsbAccessory;
 
-    .line 142
     .local v0, "_arg0":Landroid/hardware/usb/UsbAccessory;
     :goto_3
     invoke-virtual {p2}, Landroid/os/Parcel;->readString()Ljava/lang/String;
 
     move-result-object v1
 
-    .line 144
     .restart local v1    # "_arg1":Ljava/lang/String;
     invoke-virtual {p2}, Landroid/os/Parcel;->readInt()I
 
     move-result v2
 
-    .line 145
     .restart local v2    # "_arg2":I
     invoke-virtual {p0, v0, v1, v2}, Landroid/hardware/usb/IUsbManager$Stub;->setAccessoryPackage(Landroid/hardware/usb/UsbAccessory;Ljava/lang/String;I)V
 
-    .line 146
     invoke-virtual {p3}, Landroid/os/Parcel;->writeNoException()V
 
     goto/16 :goto_0
 
-    .line 139
     .end local v0    # "_arg0":Landroid/hardware/usb/UsbAccessory;
     .end local v1    # "_arg1":Ljava/lang/String;
     .end local v2    # "_arg2":I
@@ -468,21 +405,18 @@
     .restart local v0    # "_arg0":Landroid/hardware/usb/UsbAccessory;
     goto :goto_3
 
-    .line 151
     .end local v0    # "_arg0":Landroid/hardware/usb/UsbAccessory;
     :sswitch_7
     const-string v6, "android.hardware.usb.IUsbManager"
 
     invoke-virtual {p2, v6}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
 
-    .line 153
     invoke-virtual {p2}, Landroid/os/Parcel;->readInt()I
 
     move-result v6
 
     if-eqz v6, :cond_8
 
-    .line 154
     sget-object v6, Landroid/hardware/usb/UsbDevice;->CREATOR:Landroid/os/Parcelable$Creator;
 
     invoke-interface {v6, p2}, Landroid/os/Parcelable$Creator;->createFromParcel(Landroid/os/Parcel;)Ljava/lang/Object;
@@ -491,18 +425,15 @@
 
     check-cast v0, Landroid/hardware/usb/UsbDevice;
 
-    .line 159
     .local v0, "_arg0":Landroid/hardware/usb/UsbDevice;
     :goto_4
     invoke-virtual {p0, v0}, Landroid/hardware/usb/IUsbManager$Stub;->hasDevicePermission(Landroid/hardware/usb/UsbDevice;)Z
 
     move-result v3
 
-    .line 160
     .local v3, "_result":Z
     invoke-virtual {p3}, Landroid/os/Parcel;->writeNoException()V
 
-    .line 161
     if-eqz v3, :cond_7
 
     move v4, v5
@@ -512,7 +443,6 @@
 
     goto/16 :goto_0
 
-    .line 157
     .end local v0    # "_arg0":Landroid/hardware/usb/UsbDevice;
     .end local v3    # "_result":Z
     :cond_8
@@ -521,21 +451,18 @@
     .restart local v0    # "_arg0":Landroid/hardware/usb/UsbDevice;
     goto :goto_4
 
-    .line 166
     .end local v0    # "_arg0":Landroid/hardware/usb/UsbDevice;
     :sswitch_8
     const-string v6, "android.hardware.usb.IUsbManager"
 
     invoke-virtual {p2, v6}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
 
-    .line 168
     invoke-virtual {p2}, Landroid/os/Parcel;->readInt()I
 
     move-result v6
 
     if-eqz v6, :cond_a
 
-    .line 169
     sget-object v6, Landroid/hardware/usb/UsbAccessory;->CREATOR:Landroid/os/Parcelable$Creator;
 
     invoke-interface {v6, p2}, Landroid/os/Parcelable$Creator;->createFromParcel(Landroid/os/Parcel;)Ljava/lang/Object;
@@ -544,18 +471,15 @@
 
     check-cast v0, Landroid/hardware/usb/UsbAccessory;
 
-    .line 174
     .local v0, "_arg0":Landroid/hardware/usb/UsbAccessory;
     :goto_5
     invoke-virtual {p0, v0}, Landroid/hardware/usb/IUsbManager$Stub;->hasAccessoryPermission(Landroid/hardware/usb/UsbAccessory;)Z
 
     move-result v3
 
-    .line 175
     .restart local v3    # "_result":Z
     invoke-virtual {p3}, Landroid/os/Parcel;->writeNoException()V
 
-    .line 176
     if-eqz v3, :cond_9
 
     move v4, v5
@@ -565,7 +489,6 @@
 
     goto/16 :goto_0
 
-    .line 172
     .end local v0    # "_arg0":Landroid/hardware/usb/UsbAccessory;
     .end local v3    # "_result":Z
     :cond_a
@@ -574,21 +497,18 @@
     .restart local v0    # "_arg0":Landroid/hardware/usb/UsbAccessory;
     goto :goto_5
 
-    .line 181
     .end local v0    # "_arg0":Landroid/hardware/usb/UsbAccessory;
     :sswitch_9
     const-string v4, "android.hardware.usb.IUsbManager"
 
     invoke-virtual {p2, v4}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
 
-    .line 183
     invoke-virtual {p2}, Landroid/os/Parcel;->readInt()I
 
     move-result v4
 
     if-eqz v4, :cond_b
 
-    .line 184
     sget-object v4, Landroid/hardware/usb/UsbDevice;->CREATOR:Landroid/os/Parcelable$Creator;
 
     invoke-interface {v4, p2}, Landroid/os/Parcelable$Creator;->createFromParcel(Landroid/os/Parcel;)Ljava/lang/Object;
@@ -597,14 +517,12 @@
 
     check-cast v0, Landroid/hardware/usb/UsbDevice;
 
-    .line 190
     .local v0, "_arg0":Landroid/hardware/usb/UsbDevice;
     :goto_6
     invoke-virtual {p2}, Landroid/os/Parcel;->readString()Ljava/lang/String;
 
     move-result-object v1
 
-    .line 192
     .restart local v1    # "_arg1":Ljava/lang/String;
     invoke-virtual {p2}, Landroid/os/Parcel;->readInt()I
 
@@ -612,7 +530,6 @@
 
     if-eqz v4, :cond_c
 
-    .line 193
     sget-object v4, Landroid/app/PendingIntent;->CREATOR:Landroid/os/Parcelable$Creator;
 
     invoke-interface {v4, p2}, Landroid/os/Parcelable$Creator;->createFromParcel(Landroid/os/Parcel;)Ljava/lang/Object;
@@ -621,17 +538,14 @@
 
     check-cast v2, Landroid/app/PendingIntent;
 
-    .line 198
     .local v2, "_arg2":Landroid/app/PendingIntent;
     :goto_7
     invoke-virtual {p0, v0, v1, v2}, Landroid/hardware/usb/IUsbManager$Stub;->requestDevicePermission(Landroid/hardware/usb/UsbDevice;Ljava/lang/String;Landroid/app/PendingIntent;)V
 
-    .line 199
     invoke-virtual {p3}, Landroid/os/Parcel;->writeNoException()V
 
     goto/16 :goto_0
 
-    .line 187
     .end local v0    # "_arg0":Landroid/hardware/usb/UsbDevice;
     .end local v1    # "_arg1":Ljava/lang/String;
     .end local v2    # "_arg2":Landroid/app/PendingIntent;
@@ -641,7 +555,6 @@
     .restart local v0    # "_arg0":Landroid/hardware/usb/UsbDevice;
     goto :goto_6
 
-    .line 196
     .restart local v1    # "_arg1":Ljava/lang/String;
     :cond_c
     const/4 v2, 0x0
@@ -649,7 +562,6 @@
     .restart local v2    # "_arg2":Landroid/app/PendingIntent;
     goto :goto_7
 
-    .line 204
     .end local v0    # "_arg0":Landroid/hardware/usb/UsbDevice;
     .end local v1    # "_arg1":Ljava/lang/String;
     .end local v2    # "_arg2":Landroid/app/PendingIntent;
@@ -658,14 +570,12 @@
 
     invoke-virtual {p2, v4}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
 
-    .line 206
     invoke-virtual {p2}, Landroid/os/Parcel;->readInt()I
 
     move-result v4
 
     if-eqz v4, :cond_d
 
-    .line 207
     sget-object v4, Landroid/hardware/usb/UsbAccessory;->CREATOR:Landroid/os/Parcelable$Creator;
 
     invoke-interface {v4, p2}, Landroid/os/Parcelable$Creator;->createFromParcel(Landroid/os/Parcel;)Ljava/lang/Object;
@@ -674,14 +584,12 @@
 
     check-cast v0, Landroid/hardware/usb/UsbAccessory;
 
-    .line 213
     .local v0, "_arg0":Landroid/hardware/usb/UsbAccessory;
     :goto_8
     invoke-virtual {p2}, Landroid/os/Parcel;->readString()Ljava/lang/String;
 
     move-result-object v1
 
-    .line 215
     .restart local v1    # "_arg1":Ljava/lang/String;
     invoke-virtual {p2}, Landroid/os/Parcel;->readInt()I
 
@@ -689,7 +597,6 @@
 
     if-eqz v4, :cond_e
 
-    .line 216
     sget-object v4, Landroid/app/PendingIntent;->CREATOR:Landroid/os/Parcelable$Creator;
 
     invoke-interface {v4, p2}, Landroid/os/Parcelable$Creator;->createFromParcel(Landroid/os/Parcel;)Ljava/lang/Object;
@@ -698,17 +605,14 @@
 
     check-cast v2, Landroid/app/PendingIntent;
 
-    .line 221
     .restart local v2    # "_arg2":Landroid/app/PendingIntent;
     :goto_9
     invoke-virtual {p0, v0, v1, v2}, Landroid/hardware/usb/IUsbManager$Stub;->requestAccessoryPermission(Landroid/hardware/usb/UsbAccessory;Ljava/lang/String;Landroid/app/PendingIntent;)V
 
-    .line 222
     invoke-virtual {p3}, Landroid/os/Parcel;->writeNoException()V
 
     goto/16 :goto_0
 
-    .line 210
     .end local v0    # "_arg0":Landroid/hardware/usb/UsbAccessory;
     .end local v1    # "_arg1":Ljava/lang/String;
     .end local v2    # "_arg2":Landroid/app/PendingIntent;
@@ -718,7 +622,6 @@
     .restart local v0    # "_arg0":Landroid/hardware/usb/UsbAccessory;
     goto :goto_8
 
-    .line 219
     .restart local v1    # "_arg1":Ljava/lang/String;
     :cond_e
     const/4 v2, 0x0
@@ -726,7 +629,6 @@
     .restart local v2    # "_arg2":Landroid/app/PendingIntent;
     goto :goto_9
 
-    .line 227
     .end local v0    # "_arg0":Landroid/hardware/usb/UsbAccessory;
     .end local v1    # "_arg1":Ljava/lang/String;
     .end local v2    # "_arg2":Landroid/app/PendingIntent;
@@ -735,14 +637,12 @@
 
     invoke-virtual {p2, v4}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
 
-    .line 229
     invoke-virtual {p2}, Landroid/os/Parcel;->readInt()I
 
     move-result v4
 
     if-eqz v4, :cond_f
 
-    .line 230
     sget-object v4, Landroid/hardware/usb/UsbDevice;->CREATOR:Landroid/os/Parcelable$Creator;
 
     invoke-interface {v4, p2}, Landroid/os/Parcelable$Creator;->createFromParcel(Landroid/os/Parcel;)Ljava/lang/Object;
@@ -751,23 +651,19 @@
 
     check-cast v0, Landroid/hardware/usb/UsbDevice;
 
-    .line 236
     .local v0, "_arg0":Landroid/hardware/usb/UsbDevice;
     :goto_a
     invoke-virtual {p2}, Landroid/os/Parcel;->readInt()I
 
     move-result v1
 
-    .line 237
     .local v1, "_arg1":I
     invoke-virtual {p0, v0, v1}, Landroid/hardware/usb/IUsbManager$Stub;->grantDevicePermission(Landroid/hardware/usb/UsbDevice;I)V
 
-    .line 238
     invoke-virtual {p3}, Landroid/os/Parcel;->writeNoException()V
 
     goto/16 :goto_0
 
-    .line 233
     .end local v0    # "_arg0":Landroid/hardware/usb/UsbDevice;
     .end local v1    # "_arg1":I
     :cond_f
@@ -776,21 +672,18 @@
     .restart local v0    # "_arg0":Landroid/hardware/usb/UsbDevice;
     goto :goto_a
 
-    .line 243
     .end local v0    # "_arg0":Landroid/hardware/usb/UsbDevice;
     :sswitch_c
     const-string v4, "android.hardware.usb.IUsbManager"
 
     invoke-virtual {p2, v4}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
 
-    .line 245
     invoke-virtual {p2}, Landroid/os/Parcel;->readInt()I
 
     move-result v4
 
     if-eqz v4, :cond_10
 
-    .line 246
     sget-object v4, Landroid/hardware/usb/UsbAccessory;->CREATOR:Landroid/os/Parcelable$Creator;
 
     invoke-interface {v4, p2}, Landroid/os/Parcelable$Creator;->createFromParcel(Landroid/os/Parcel;)Ljava/lang/Object;
@@ -799,23 +692,19 @@
 
     check-cast v0, Landroid/hardware/usb/UsbAccessory;
 
-    .line 252
     .local v0, "_arg0":Landroid/hardware/usb/UsbAccessory;
     :goto_b
     invoke-virtual {p2}, Landroid/os/Parcel;->readInt()I
 
     move-result v1
 
-    .line 253
     .restart local v1    # "_arg1":I
     invoke-virtual {p0, v0, v1}, Landroid/hardware/usb/IUsbManager$Stub;->grantAccessoryPermission(Landroid/hardware/usb/UsbAccessory;I)V
 
-    .line 254
     invoke-virtual {p3}, Landroid/os/Parcel;->writeNoException()V
 
     goto/16 :goto_0
 
-    .line 249
     .end local v0    # "_arg0":Landroid/hardware/usb/UsbAccessory;
     .end local v1    # "_arg1":I
     :cond_10
@@ -824,35 +713,29 @@
     .restart local v0    # "_arg0":Landroid/hardware/usb/UsbAccessory;
     goto :goto_b
 
-    .line 259
     .end local v0    # "_arg0":Landroid/hardware/usb/UsbAccessory;
     :sswitch_d
     const-string v6, "android.hardware.usb.IUsbManager"
 
     invoke-virtual {p2, v6}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
 
-    .line 261
     invoke-virtual {p2}, Landroid/os/Parcel;->readString()Ljava/lang/String;
 
     move-result-object v0
 
-    .line 263
     .local v0, "_arg0":Ljava/lang/String;
     invoke-virtual {p2}, Landroid/os/Parcel;->readInt()I
 
     move-result v1
 
-    .line 264
     .restart local v1    # "_arg1":I
     invoke-virtual {p0, v0, v1}, Landroid/hardware/usb/IUsbManager$Stub;->hasDefaults(Ljava/lang/String;I)Z
 
     move-result v3
 
-    .line 265
     .restart local v3    # "_result":Z
     invoke-virtual {p3}, Landroid/os/Parcel;->writeNoException()V
 
-    .line 266
     if-eqz v3, :cond_11
 
     move v4, v5
@@ -862,7 +745,6 @@
 
     goto/16 :goto_0
 
-    .line 271
     .end local v0    # "_arg0":Ljava/lang/String;
     .end local v1    # "_arg1":I
     .end local v3    # "_result":Z
@@ -871,27 +753,22 @@
 
     invoke-virtual {p2, v4}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
 
-    .line 273
     invoke-virtual {p2}, Landroid/os/Parcel;->readString()Ljava/lang/String;
 
     move-result-object v0
 
-    .line 275
     .restart local v0    # "_arg0":Ljava/lang/String;
     invoke-virtual {p2}, Landroid/os/Parcel;->readInt()I
 
     move-result v1
 
-    .line 276
     .restart local v1    # "_arg1":I
     invoke-virtual {p0, v0, v1}, Landroid/hardware/usb/IUsbManager$Stub;->clearDefaults(Ljava/lang/String;I)V
 
-    .line 277
     invoke-virtual {p3}, Landroid/os/Parcel;->writeNoException()V
 
     goto/16 :goto_0
 
-    .line 282
     .end local v0    # "_arg0":Ljava/lang/String;
     .end local v1    # "_arg1":I
     :sswitch_f
@@ -899,12 +776,10 @@
 
     invoke-virtual {p2, v6}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
 
-    .line 284
     invoke-virtual {p2}, Landroid/os/Parcel;->readString()Ljava/lang/String;
 
     move-result-object v0
 
-    .line 286
     .restart local v0    # "_arg0":Ljava/lang/String;
     invoke-virtual {p2}, Landroid/os/Parcel;->readInt()I
 
@@ -914,12 +789,10 @@
 
     move v1, v5
 
-    .line 287
     .local v1, "_arg1":Z
     :goto_c
     invoke-virtual {p0, v0, v1}, Landroid/hardware/usb/IUsbManager$Stub;->setCurrentFunction(Ljava/lang/String;Z)V
 
-    .line 288
     invoke-virtual {p3}, Landroid/os/Parcel;->writeNoException()V
 
     goto/16 :goto_0
@@ -928,38 +801,31 @@
     :cond_12
     move v1, v4
 
-    .line 286
     goto :goto_c
 
-    .line 293
     .end local v0    # "_arg0":Ljava/lang/String;
     :sswitch_10
     const-string v4, "android.hardware.usb.IUsbManager"
 
     invoke-virtual {p2, v4}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
 
-    .line 295
     invoke-virtual {p2}, Landroid/os/Parcel;->readString()Ljava/lang/String;
 
     move-result-object v0
 
-    .line 296
     .restart local v0    # "_arg0":Ljava/lang/String;
     invoke-virtual {p0, v0}, Landroid/hardware/usb/IUsbManager$Stub;->setMassStorageBackingFile(Ljava/lang/String;)V
 
-    .line 297
     invoke-virtual {p3}, Landroid/os/Parcel;->writeNoException()V
 
     goto/16 :goto_0
 
-    .line 302
     .end local v0    # "_arg0":Ljava/lang/String;
     :sswitch_11
     const-string v6, "android.hardware.usb.IUsbManager"
 
     invoke-virtual {p2, v6}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
 
-    .line 304
     invoke-virtual {p2}, Landroid/os/Parcel;->readInt()I
 
     move-result v6
@@ -968,18 +834,15 @@
 
     move v0, v5
 
-    .line 306
     .local v0, "_arg0":Z
     :goto_d
     invoke-virtual {p2}, Landroid/os/Parcel;->readString()Ljava/lang/String;
 
     move-result-object v1
 
-    .line 307
     .local v1, "_arg1":Ljava/lang/String;
     invoke-virtual {p0, v0, v1}, Landroid/hardware/usb/IUsbManager$Stub;->allowUsbDebugging(ZLjava/lang/String;)V
 
-    .line 308
     invoke-virtual {p3}, Landroid/os/Parcel;->writeNoException()V
 
     goto/16 :goto_0
@@ -989,128 +852,103 @@
     :cond_13
     move v0, v4
 
-    .line 304
     goto :goto_d
 
-    .line 313
     :sswitch_12
     const-string v4, "android.hardware.usb.IUsbManager"
 
     invoke-virtual {p2, v4}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
 
-    .line 314
     invoke-virtual {p0}, Landroid/hardware/usb/IUsbManager$Stub;->denyUsbDebugging()V
 
-    .line 315
     invoke-virtual {p3}, Landroid/os/Parcel;->writeNoException()V
 
     goto/16 :goto_0
 
-    .line 320
     :sswitch_13
     const-string v4, "android.hardware.usb.IUsbManager"
 
     invoke-virtual {p2, v4}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
 
-    .line 321
     invoke-virtual {p0}, Landroid/hardware/usb/IUsbManager$Stub;->clearUsbDebuggingKeys()V
 
-    .line 322
     invoke-virtual {p3}, Landroid/os/Parcel;->writeNoException()V
 
     goto/16 :goto_0
 
-    .line 327
     :sswitch_14
     const-string v4, "android.hardware.usb.IUsbManager"
 
     invoke-virtual {p2, v4}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
 
-    .line 328
     invoke-virtual {p0}, Landroid/hardware/usb/IUsbManager$Stub;->getCurrentFunctions()Ljava/lang/String;
 
     move-result-object v3
 
-    .line 329
     .local v3, "_result":Ljava/lang/String;
     invoke-virtual {p3}, Landroid/os/Parcel;->writeNoException()V
 
-    .line 330
     invoke-virtual {p3, v3}, Landroid/os/Parcel;->writeString(Ljava/lang/String;)V
 
     goto/16 :goto_0
 
-    .line 335
     .end local v3    # "_result":Ljava/lang/String;
     :sswitch_15
     const-string v4, "android.hardware.usb.IUsbManager"
 
     invoke-virtual {p2, v4}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
 
-    .line 336
     invoke-virtual {p0}, Landroid/hardware/usb/IUsbManager$Stub;->getDefaultCurrentFunctions()Ljava/lang/String;
 
     move-result-object v3
 
-    .line 337
     .restart local v3    # "_result":Ljava/lang/String;
     invoke-virtual {p3}, Landroid/os/Parcel;->writeNoException()V
 
-    .line 338
     invoke-virtual {p3, v3}, Landroid/os/Parcel;->writeString(Ljava/lang/String;)V
 
     goto/16 :goto_0
 
-    .line 343
     .end local v3    # "_result":Ljava/lang/String;
     :sswitch_16
     const-string v4, "android.hardware.usb.IUsbManager"
 
     invoke-virtual {p2, v4}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
 
-    .line 345
     invoke-virtual {p2}, Landroid/os/Parcel;->readString()Ljava/lang/String;
 
     move-result-object v0
 
-    .line 346
     .local v0, "_arg0":Ljava/lang/String;
     invoke-virtual {p0, v0}, Landroid/hardware/usb/IUsbManager$Stub;->saveCurrentFunctions(Ljava/lang/String;)V
 
-    .line 347
     invoke-virtual {p3}, Landroid/os/Parcel;->writeNoException()V
 
     goto/16 :goto_0
 
-    .line 352
     .end local v0    # "_arg0":Ljava/lang/String;
     :sswitch_17
     const-string v4, "android.hardware.usb.IUsbManager"
 
     invoke-virtual {p2, v4}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
 
-    .line 354
     invoke-virtual {p2}, Landroid/os/Parcel;->readString()Ljava/lang/String;
 
     move-result-object v0
 
-    .line 355
     .restart local v0    # "_arg0":Ljava/lang/String;
     invoke-virtual {p0, v0}, Landroid/hardware/usb/IUsbManager$Stub;->restoreCurrentFunctions(Ljava/lang/String;)V
 
-    .line 356
     invoke-virtual {p3}, Landroid/os/Parcel;->writeNoException()V
 
     goto/16 :goto_0
 
-    .line 361
     .end local v0    # "_arg0":Ljava/lang/String;
     :sswitch_18
     const-string v6, "android.hardware.usb.IUsbManager"
 
     invoke-virtual {p2, v6}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
 
-    .line 363
     invoke-virtual {p2}, Landroid/os/Parcel;->readInt()I
 
     move-result v6
@@ -1119,12 +957,10 @@
 
     move v0, v5
 
-    .line 364
     .local v0, "_arg0":Z
     :goto_e
     invoke-virtual {p0, v0}, Landroid/hardware/usb/IUsbManager$Stub;->setUsb30Mode(Z)V
 
-    .line 365
     invoke-virtual {p3}, Landroid/os/Parcel;->writeNoException()V
 
     goto/16 :goto_0
@@ -1133,25 +969,20 @@
     :cond_14
     move v0, v4
 
-    .line 363
     goto :goto_e
 
-    .line 370
     :sswitch_19
     const-string v6, "android.hardware.usb.IUsbManager"
 
     invoke-virtual {p2, v6}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
 
-    .line 371
     invoke-virtual {p0}, Landroid/hardware/usb/IUsbManager$Stub;->isUsb30Enabled()Z
 
     move-result v3
 
-    .line 372
     .local v3, "_result":Z
     invoke-virtual {p3}, Landroid/os/Parcel;->writeNoException()V
 
-    .line 373
     if-eqz v3, :cond_15
 
     move v4, v5
@@ -1161,23 +992,19 @@
 
     goto/16 :goto_0
 
-    .line 378
     .end local v3    # "_result":Z
     :sswitch_1a
     const-string v6, "android.hardware.usb.IUsbManager"
 
     invoke-virtual {p2, v6}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
 
-    .line 379
     invoke-virtual {p0}, Landroid/hardware/usb/IUsbManager$Stub;->isUsb30Available()Z
 
     move-result v3
 
-    .line 380
     .restart local v3    # "_result":Z
     invoke-virtual {p3}, Landroid/os/Parcel;->writeNoException()V
 
-    .line 381
     if-eqz v3, :cond_16
 
     move v4, v5
@@ -1187,7 +1014,6 @@
 
     goto/16 :goto_0
 
-    .line 39
     nop
 
     :sswitch_data_0

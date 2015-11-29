@@ -22,21 +22,15 @@
     .param p4, "mode"    # I
 
     .prologue
-    .line 241
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 242
     iput-object p2, p0, Lcom/android/server/enterprise/email/AccountSMIMECertificate;->mPath:Ljava/lang/String;
 
-    .line 243
     iput-object p3, p0, Lcom/android/server/enterprise/email/AccountSMIMECertificate;->mPassword:Ljava/lang/String;
 
-    .line 244
     iput p4, p0, Lcom/android/server/enterprise/email/AccountSMIMECertificate;->sMode:I
 
-    .line 245
     iput-object p1, p0, Lcom/android/server/enterprise/email/AccountSMIMECertificate;->mCxtInfo:Landroid/app/enterprise/ContextInfo;
 
-    .line 246
     return-void
 .end method

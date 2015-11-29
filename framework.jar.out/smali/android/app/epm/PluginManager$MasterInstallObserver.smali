@@ -23,7 +23,6 @@
     .locals 0
 
     .prologue
-    .line 392
     iput-object p1, p0, Landroid/app/epm/PluginManager$MasterInstallObserver;->this$0:Landroid/app/epm/PluginManager;
 
     invoke-direct {p0}, Landroid/content/pm/IPackageInstallObserver$Stub;-><init>()V
@@ -39,6 +38,5 @@
     .param p2, "returnCode"    # I
 
     .prologue
-    .line 397
     return-void
 .end method

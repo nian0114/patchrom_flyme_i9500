@@ -21,35 +21,28 @@
     .param p1, "orig"    # Lcom/android/server/pm/PackageSetting;
 
     .prologue
-    .line 55
     invoke-direct {p0, p1}, Lcom/android/server/pm/PackageSettingBase;-><init>(Lcom/android/server/pm/PackageSettingBase;)V
 
-    .line 32
     const/4 v0, 0x0
 
     iput v0, p0, Lcom/android/server/pm/PackageSetting;->mLastScanError:I
 
-    .line 33
     const-string v0, "Oops, What happended during package scanning??"
 
     iput-object v0, p0, Lcom/android/server/pm/PackageSetting;->mLastScanErrorMessage:Ljava/lang/String;
 
-    .line 57
     iget v0, p1, Lcom/android/server/pm/PackageSetting;->appId:I
 
     iput v0, p0, Lcom/android/server/pm/PackageSetting;->appId:I
 
-    .line 58
     iget-object v0, p1, Lcom/android/server/pm/PackageSetting;->pkg:Landroid/content/pm/PackageParser$Package;
 
     iput-object v0, p0, Lcom/android/server/pm/PackageSetting;->pkg:Landroid/content/pm/PackageParser$Package;
 
-    .line 59
     iget-object v0, p1, Lcom/android/server/pm/PackageSetting;->sharedUser:Lcom/android/server/pm/SharedUserSetting;
 
     iput-object v0, p0, Lcom/android/server/pm/PackageSetting;->sharedUser:Lcom/android/server/pm/SharedUserSetting;
 
-    .line 60
     return-void
 .end method
 
@@ -71,20 +64,16 @@
     .param p14, "pkgFlags"    # I
 
     .prologue
-    .line 42
     invoke-direct/range {p0 .. p14}, Lcom/android/server/pm/PackageSettingBase;-><init>(Ljava/lang/String;Ljava/lang/String;Ljava/io/File;Ljava/io/File;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;ZII)V
 
-    .line 32
     const/4 v0, 0x0
 
     iput v0, p0, Lcom/android/server/pm/PackageSetting;->mLastScanError:I
 
-    .line 33
     const-string v0, "Oops, What happended during package scanning??"
 
     iput-object v0, p0, Lcom/android/server/pm/PackageSetting;->mLastScanErrorMessage:Ljava/lang/String;
 
-    .line 48
     return-void
 .end method
 
@@ -94,7 +83,6 @@
     .locals 1
 
     .prologue
-    .line 70
     iget-object v0, p0, Lcom/android/server/pm/PackageSetting;->sharedUser:Lcom/android/server/pm/SharedUserSetting;
 
     if-eqz v0, :cond_0
@@ -116,7 +104,6 @@
     .locals 2
 
     .prologue
-    .line 74
     iget v0, p0, Lcom/android/server/pm/PackageSetting;->pkgFlags:I
 
     const/high16 v1, 0x40000000    # 2.0f
@@ -140,7 +127,6 @@
     .locals 2
 
     .prologue
-    .line 64
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -187,7 +173,7 @@
 
     move-result-object v0
 
-    const-string/jumbo v1, "}"
+    const-string v1, "}"
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 

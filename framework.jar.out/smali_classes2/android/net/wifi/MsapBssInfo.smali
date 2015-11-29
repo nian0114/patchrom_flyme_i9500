@@ -50,7 +50,6 @@
     .locals 1
 
     .prologue
-    .line 145
     new-instance v0, Landroid/net/wifi/MsapBssInfo$1;
 
     invoke-direct {v0}, Landroid/net/wifi/MsapBssInfo$1;-><init>()V
@@ -73,37 +72,26 @@
     .param p9, "sid"    # I
 
     .prologue
-    .line 87
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 88
     iput-object p1, p0, Landroid/net/wifi/MsapBssInfo;->BSSID:Ljava/lang/String;
 
-    .line 89
     iput p2, p0, Landroid/net/wifi/MsapBssInfo;->frequency:I
 
-    .line 90
     iput p3, p0, Landroid/net/wifi/MsapBssInfo;->quality:I
 
-    .line 91
     iput p4, p0, Landroid/net/wifi/MsapBssInfo;->noise:I
 
-    .line 92
     iput p5, p0, Landroid/net/wifi/MsapBssInfo;->level:I
 
-    .line 93
     iput-object p6, p0, Landroid/net/wifi/MsapBssInfo;->SSIDs:Ljava/lang/String;
 
-    .line 94
     iput p7, p0, Landroid/net/wifi/MsapBssInfo;->is_msap:I
 
-    .line 95
     iput-object p8, p0, Landroid/net/wifi/MsapBssInfo;->vhash:Ljava/lang/String;
 
-    .line 96
     iput p9, p0, Landroid/net/wifi/MsapBssInfo;->sid:I
 
-    .line 97
     return-void
 .end method
 
@@ -113,7 +101,6 @@
     .locals 1
 
     .prologue
-    .line 128
     const/4 v0, 0x0
 
     return v0
@@ -123,16 +110,13 @@
     .locals 4
 
     .prologue
-    .line 101
     new-instance v1, Ljava/lang/StringBuffer;
 
     invoke-direct {v1}, Ljava/lang/StringBuffer;-><init>()V
 
-    .line 102
     .local v1, "sb":Ljava/lang/StringBuffer;
     const-string v0, "<none>"
 
-    .line 104
     .local v0, "none":Ljava/lang/String;
     const-string v2, "BSSID: "
 
@@ -249,14 +233,12 @@
 
     invoke-virtual {v2, v3}, Ljava/lang/StringBuffer;->append(I)Ljava/lang/StringBuffer;
 
-    .line 123
     invoke-virtual {v1}, Ljava/lang/StringBuffer;->toString()Ljava/lang/String;
 
     move-result-object v2
 
     return-object v2
 
-    .line 104
     .restart local v0    # "none":Ljava/lang/String;
     :cond_0
     iget-object v2, p0, Landroid/net/wifi/MsapBssInfo;->BSSID:Ljava/lang/String;
@@ -275,51 +257,41 @@
     .param p2, "flags"    # I
 
     .prologue
-    .line 133
     iget-object v0, p0, Landroid/net/wifi/MsapBssInfo;->BSSID:Ljava/lang/String;
 
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeString(Ljava/lang/String;)V
 
-    .line 134
     iget v0, p0, Landroid/net/wifi/MsapBssInfo;->frequency:I
 
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 135
     iget v0, p0, Landroid/net/wifi/MsapBssInfo;->quality:I
 
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 136
     iget v0, p0, Landroid/net/wifi/MsapBssInfo;->noise:I
 
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 137
     iget v0, p0, Landroid/net/wifi/MsapBssInfo;->level:I
 
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 138
     iget-object v0, p0, Landroid/net/wifi/MsapBssInfo;->SSIDs:Ljava/lang/String;
 
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeString(Ljava/lang/String;)V
 
-    .line 139
     iget v0, p0, Landroid/net/wifi/MsapBssInfo;->is_msap:I
 
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 140
     iget-object v0, p0, Landroid/net/wifi/MsapBssInfo;->vhash:Ljava/lang/String;
 
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeString(Ljava/lang/String;)V
 
-    .line 141
     iget v0, p0, Landroid/net/wifi/MsapBssInfo;->sid:I
 
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 142
     return-void
 .end method

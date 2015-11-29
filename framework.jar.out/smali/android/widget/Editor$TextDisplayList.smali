@@ -26,15 +26,12 @@
     .param p1, "name"    # Ljava/lang/String;
 
     .prologue
-    .line 188
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 189
     const/4 v0, 0x1
 
     iput-boolean v0, p0, Landroid/widget/Editor$TextDisplayList;->isDirty:Z
 
-    .line 190
     const/4 v0, 0x0
 
     invoke-static {p1, v0}, Landroid/view/RenderNode;->create(Ljava/lang/String;Landroid/view/View;)Landroid/view/RenderNode;
@@ -43,7 +40,6 @@
 
     iput-object v0, p0, Landroid/widget/Editor$TextDisplayList;->displayList:Landroid/view/RenderNode;
 
-    .line 191
     return-void
 .end method
 
@@ -53,7 +49,6 @@
     .locals 1
 
     .prologue
-    .line 192
     iget-boolean v0, p0, Landroid/widget/Editor$TextDisplayList;->isDirty:Z
 
     if-nez v0, :cond_0

@@ -68,25 +68,19 @@
     .param p3, "inputManager"    # Lcom/android/server/input/InputManagerService;
 
     .prologue
-    .line 92
     invoke-direct {p0}, Lcom/samsung/android/cover/ICoverManager$Stub;-><init>()V
 
-    .line 81
     const/4 v0, 0x0
 
     iput-boolean v0, p0, Lcom/android/server/cover/CoverManagerService;->mSystemReady:Z
 
-    .line 93
     iput-object p1, p0, Lcom/android/server/cover/CoverManagerService;->mContext:Landroid/content/Context;
 
-    .line 95
     iput-object p2, p0, Lcom/android/server/cover/CoverManagerService;->mWindowManager:Lcom/android/server/wm/WindowManagerService;
 
-    .line 96
     iput-object p3, p0, Lcom/android/server/cover/CoverManagerService;->mInputManager:Lcom/android/server/input/InputManagerService;
 
-    .line 98
-    const-string/jumbo v0, "power"
+    const-string v0, "power"
 
     invoke-virtual {p1, v0}, Landroid/content/Context;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
 
@@ -96,7 +90,6 @@
 
     iput-object v0, p0, Lcom/android/server/cover/CoverManagerService;->mPowerManager:Landroid/os/PowerManager;
 
-    .line 100
     new-instance v0, Landroid/os/HandlerThread;
 
     const-string v1, "cover"
@@ -105,12 +98,10 @@
 
     iput-object v0, p0, Lcom/android/server/cover/CoverManagerService;->mThread:Landroid/os/HandlerThread;
 
-    .line 101
     iget-object v0, p0, Lcom/android/server/cover/CoverManagerService;->mThread:Landroid/os/HandlerThread;
 
     invoke-virtual {v0}, Landroid/os/HandlerThread;->start()V
 
-    .line 102
     new-instance v0, Lcom/android/server/cover/CoverManagerService$CoverManagerHandler;
 
     iget-object v1, p0, Lcom/android/server/cover/CoverManagerService;->mThread:Landroid/os/HandlerThread;
@@ -123,7 +114,6 @@
 
     iput-object v0, p0, Lcom/android/server/cover/CoverManagerService;->mHandler:Lcom/android/server/cover/CoverManagerService$CoverManagerHandler;
 
-    .line 103
     iget-object v0, p0, Lcom/android/server/cover/CoverManagerService;->mHandler:Lcom/android/server/cover/CoverManagerService$CoverManagerHandler;
 
     new-instance v1, Lcom/android/server/cover/CoverManagerService$1;
@@ -132,14 +122,12 @@
 
     invoke-virtual {v0, v1}, Lcom/android/server/cover/CoverManagerService$CoverManagerHandler;->post(Ljava/lang/Runnable;)Z
 
-    .line 112
     new-instance v0, Lcom/samsung/android/cover/CoverState;
 
     invoke-direct {v0}, Lcom/samsung/android/cover/CoverState;-><init>()V
 
     iput-object v0, p0, Lcom/android/server/cover/CoverManagerService;->mCoverState:Lcom/samsung/android/cover/CoverState;
 
-    .line 113
     new-instance v0, Lcom/android/server/cover/CoverVerifier;
 
     iget-object v1, p0, Lcom/android/server/cover/CoverManagerService;->mContext:Landroid/content/Context;
@@ -148,7 +136,6 @@
 
     iput-object v0, p0, Lcom/android/server/cover/CoverManagerService;->mCoverVerifier:Lcom/android/server/cover/CoverVerifier;
 
-    .line 114
     new-instance v0, Lcom/android/server/cover/StateNotifier;
 
     iget-object v1, p0, Lcom/android/server/cover/CoverManagerService;->mThread:Landroid/os/HandlerThread;
@@ -163,7 +150,6 @@
 
     iput-object v0, p0, Lcom/android/server/cover/CoverManagerService;->mStateNotifier:Lcom/android/server/cover/StateNotifier;
 
-    .line 115
     new-instance v0, Lcom/android/server/cover/CoverDisabler;
 
     iget-object v1, p0, Lcom/android/server/cover/CoverManagerService;->mThread:Landroid/os/HandlerThread;
@@ -178,7 +164,6 @@
 
     iput-object v0, p0, Lcom/android/server/cover/CoverManagerService;->mCoverDisabler:Lcom/android/server/cover/CoverDisabler;
 
-    .line 116
     new-instance v0, Lcom/android/server/cover/LedCoverController;
 
     iget-object v1, p0, Lcom/android/server/cover/CoverManagerService;->mThread:Landroid/os/HandlerThread;
@@ -193,7 +178,6 @@
 
     iput-object v0, p0, Lcom/android/server/cover/CoverManagerService;->mLedCoverController:Lcom/android/server/cover/LedCoverController;
 
-    .line 117
     new-instance v0, Lcom/android/server/cover/SmartCoverAppController;
 
     iget-object v1, p0, Lcom/android/server/cover/CoverManagerService;->mContext:Landroid/content/Context;
@@ -202,7 +186,6 @@
 
     iput-object v0, p0, Lcom/android/server/cover/CoverManagerService;->mSmartCoverAppController:Lcom/android/server/cover/SmartCoverAppController;
 
-    .line 118
     return-void
 .end method
 
@@ -213,14 +196,12 @@
     .param p3, "height"    # I
 
     .prologue
-    .line 480
     const-string v1, "CoverManager"
 
     const-string v2, "checkNeedThread"
 
     invoke-static {v1, v2}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 482
     const/4 v0, 0x0
 
     .local v0, "i":I
@@ -229,24 +210,20 @@
 
     if-ge v0, v1, :cond_1
 
-    .line 483
     aget-byte v1, p1, v0
 
     if-eqz v1, :cond_0
 
     const/4 v1, 0x1
 
-    .line 486
     :goto_1
     return v1
 
-    .line 482
     :cond_0
     add-int/lit8 v0, v0, 0x1
 
     goto :goto_0
 
-    .line 486
     :cond_1
     const/4 v1, 0x0
 
@@ -261,14 +238,12 @@
     .prologue
     const/4 v1, 0x1
 
-    .line 313
     iget-object v2, p0, Lcom/android/server/cover/CoverManagerService;->mCoverVerifier:Lcom/android/server/cover/CoverVerifier;
 
     invoke-virtual {v2}, Lcom/android/server/cover/CoverVerifier;->isCoverAttached()Z
 
     move-result v0
 
-    .line 314
     .local v0, "coverAttached":Z
     if-eqz v0, :cond_0
 
@@ -278,7 +253,6 @@
 
     if-eqz v2, :cond_1
 
-    .line 318
     .local v1, "coverSwitchState":Z
     :cond_0
     :goto_0
@@ -288,30 +262,25 @@
 
     invoke-virtual {v2, v3, p2}, Lcom/android/server/cover/CoverVerifier;->updateCoverPropertiesLocked(Lcom/samsung/android/cover/CoverState;Lcom/samsung/android/cover/CoverState;)V
 
-    .line 319
     iget-object v2, p0, Lcom/android/server/cover/CoverManagerService;->mCoverState:Lcom/samsung/android/cover/CoverState;
 
     if-nez v2, :cond_2
 
-    .line 321
     const-string v2, "CoverManager"
 
-    const-string/jumbo v3, "sendCoverAttachStateLocked : CoverState is null"
+    const-string v3, "sendCoverAttachStateLocked : CoverState is null"
 
     invoke-static {v2, v3}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 341
     :goto_1
     return-void
 
-    .line 314
     .end local v1    # "coverSwitchState":Z
     :cond_1
     const/4 v1, 0x0
 
     goto :goto_0
 
-    .line 325
     .restart local v1    # "coverSwitchState":Z
     :cond_2
     iget-object v2, p0, Lcom/android/server/cover/CoverManagerService;->mLedCoverController:Lcom/android/server/cover/LedCoverController;
@@ -320,17 +289,14 @@
 
     invoke-virtual {v2, v0, v3}, Lcom/android/server/cover/LedCoverController;->updateLedCoverAttachStateLocked(ZLcom/samsung/android/cover/CoverState;)V
 
-    .line 326
     if-eqz v0, :cond_4
 
-    .line 327
     iget-object v2, p0, Lcom/android/server/cover/CoverManagerService;->mStateNotifier:Lcom/android/server/cover/StateNotifier;
 
     iget-object v3, p0, Lcom/android/server/cover/CoverManagerService;->mCoverState:Lcom/samsung/android/cover/CoverState;
 
     invoke-virtual {v2, v0, v3, p1}, Lcom/android/server/cover/StateNotifier;->updateCoverAttachStateLocked(ZLcom/samsung/android/cover/CoverState;Z)V
 
-    .line 329
     iget-object v2, p0, Lcom/android/server/cover/CoverManagerService;->mCoverDisabler:Lcom/android/server/cover/CoverDisabler;
 
     invoke-virtual {v2}, Lcom/android/server/cover/CoverDisabler;->isCoverManagerDisabled()Z
@@ -339,10 +305,8 @@
 
     if-nez v2, :cond_3
 
-    .line 330
     invoke-direct {p0, v1, p1}, Lcom/android/server/cover/CoverManagerService;->sendCoverSwitchStateLocked(ZZ)V
 
-    .line 338
     :cond_3
     :goto_2
     const-string v2, "CoverManager"
@@ -351,7 +315,7 @@
 
     invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v4, "sendCoverAttachStateLocked : coverAttached = "
+    const-string v4, "sendCoverAttachStateLocked : coverAttached = "
 
     invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -379,11 +343,9 @@
 
     goto :goto_1
 
-    .line 333
     :cond_4
     invoke-direct {p0, v1, p1}, Lcom/android/server/cover/CoverManagerService;->sendCoverSwitchStateLocked(ZZ)V
 
-    .line 334
     iget-object v2, p0, Lcom/android/server/cover/CoverManagerService;->mStateNotifier:Lcom/android/server/cover/StateNotifier;
 
     iget-object v3, p0, Lcom/android/server/cover/CoverManagerService;->mCoverState:Lcom/samsung/android/cover/CoverState;
@@ -399,7 +361,6 @@
     .param p2, "isBoot"    # Z
 
     .prologue
-    .line 228
     iget-object v0, p0, Lcom/android/server/cover/CoverManagerService;->mCoverState:Lcom/samsung/android/cover/CoverState;
 
     invoke-virtual {v0}, Lcom/samsung/android/cover/CoverState;->getSwitchState()Z
@@ -408,43 +369,37 @@
 
     if-ne p1, v0, :cond_0
 
-    .line 230
     const-string v0, "CoverManager"
 
-    const-string/jumbo v1, "updateCoverSwitchState : Returing switch state - it is same"
+    const-string v1, "updateCoverSwitchState : Returing switch state - it is same"
 
     invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 243
     :goto_0
     return-void
 
-    .line 234
     :cond_0
     invoke-direct {p0, p1}, Lcom/android/server/cover/CoverManagerService;->updateCoverSwitchStateLocked(Z)V
 
-    .line 235
     iget-object v0, p0, Lcom/android/server/cover/CoverManagerService;->mWindowManager:Lcom/android/server/wm/WindowManagerService;
 
     iget-object v1, p0, Lcom/android/server/cover/CoverManagerService;->mCoverState:Lcom/samsung/android/cover/CoverState;
 
     invoke-virtual {v0, v1}, Lcom/android/server/wm/WindowManagerService;->updateCoverSwitchState(Lcom/samsung/android/cover/CoverState;)V
 
-    .line 236
     iget-object v0, p0, Lcom/android/server/cover/CoverManagerService;->mStateNotifier:Lcom/android/server/cover/StateNotifier;
 
     iget-object v1, p0, Lcom/android/server/cover/CoverManagerService;->mCoverState:Lcom/samsung/android/cover/CoverState;
 
     invoke-virtual {v0, v1, p2}, Lcom/android/server/cover/StateNotifier;->updateCoverSwitchStateLocked(Lcom/samsung/android/cover/CoverState;Z)V
 
-    .line 238
     const-string v0, "CoverManager"
 
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v2, "sendCoverSwitchStateLocked : switchState = "
+    const-string v2, "sendCoverSwitchStateLocked : switchState = "
 
     invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -529,12 +484,10 @@
     .param p2, "isBoot"    # Z
 
     .prologue
-    .line 289
     const/4 v0, 0x0
 
     invoke-direct {p0, p1, p2, v0}, Lcom/android/server/cover/CoverManagerService;->updateCoverAttachState(ZZLcom/samsung/android/cover/CoverState;)V
 
-    .line 290
     return-void
 .end method
 
@@ -545,12 +498,10 @@
     .param p3, "state"    # Lcom/samsung/android/cover/CoverState;
 
     .prologue
-    .line 293
     iget-object v1, p0, Lcom/android/server/cover/CoverManagerService;->mCoverState:Lcom/samsung/android/cover/CoverState;
 
     monitor-enter v1
 
-    .line 295
     :try_start_0
     const-string v0, "CoverManager"
 
@@ -558,7 +509,7 @@
 
     invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v3, "updateCoverAttachState : attach="
+    const-string v3, "updateCoverAttachState : attach="
 
     invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -584,15 +535,12 @@
 
     invoke-static {v0, v2}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 298
     if-nez p2, :cond_0
 
-    .line 299
     iget-object v0, p0, Lcom/android/server/cover/CoverManagerService;->mContext:Landroid/content/Context;
 
     invoke-static {v0}, Lcom/android/server/cover/CoverManagerUtils;->performCPUBoostCover(Landroid/content/Context;)V
 
-    .line 302
     :cond_0
     iget-object v0, p0, Lcom/android/server/cover/CoverManagerService;->mCoverVerifier:Lcom/android/server/cover/CoverVerifier;
 
@@ -602,27 +550,22 @@
 
     if-eqz v0, :cond_1
 
-    .line 303
     invoke-direct {p0, p2, p3}, Lcom/android/server/cover/CoverManagerService;->sendCoverAttachStateLocked(ZLcom/samsung/android/cover/CoverState;)V
 
-    .line 309
     :goto_0
     monitor-exit v1
 
-    .line 310
     return-void
 
-    .line 306
     :cond_1
     const-string v0, "CoverManager"
 
-    const-string/jumbo v2, "updateCoverVerfiedState : Returing attach state - it is same"
+    const-string v2, "updateCoverVerfiedState : Returing attach state - it is same"
 
     invoke-static {v0, v2}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
     goto :goto_0
 
-    .line 309
     :catchall_0
     move-exception v0
 
@@ -639,12 +582,10 @@
     .param p2, "isBoot"    # Z
 
     .prologue
-    .line 188
     iget-object v2, p0, Lcom/android/server/cover/CoverManagerService;->mCoverState:Lcom/samsung/android/cover/CoverState;
 
     monitor-enter v2
 
-    .line 190
     :try_start_0
     const-string v1, "CoverManager"
 
@@ -652,7 +593,7 @@
 
     invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v4, "updateCoverSwitchState : switchState="
+    const-string v4, "updateCoverSwitchState : switchState="
 
     invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -678,15 +619,12 @@
 
     invoke-static {v1, v3}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 193
     if-nez p2, :cond_0
 
-    .line 194
     iget-object v1, p0, Lcom/android/server/cover/CoverManagerService;->mContext:Landroid/content/Context;
 
     invoke-static {v1}, Lcom/android/server/cover/CoverManagerUtils;->performCPUBoostCover(Landroid/content/Context;)V
 
-    .line 196
     :cond_0
     iget-object v1, p0, Lcom/android/server/cover/CoverManagerService;->mContext:Landroid/content/Context;
 
@@ -700,14 +638,12 @@
 
     if-eqz v1, :cond_2
 
-    .line 198
     iget-object v1, p0, Lcom/android/server/cover/CoverManagerService;->mCoverVerifier:Lcom/android/server/cover/CoverVerifier;
 
     invoke-virtual {v1}, Lcom/android/server/cover/CoverVerifier;->isCoverVerified()Z
 
     move-result v0
 
-    .line 199
     .local v0, "isDetected":Z
     const-string v1, "CoverManager"
 
@@ -751,7 +687,6 @@
 
     invoke-static {v1, v3}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 211
     .end local v0    # "isDetected":Z
     :cond_1
     :goto_0
@@ -763,21 +698,17 @@
 
     if-nez v1, :cond_4
 
-    .line 213
     const-string v1, "CoverManager"
 
-    const-string/jumbo v3, "updateCoverSwitchState : Returing switch state - cover is not attached"
+    const-string v3, "updateCoverSwitchState : Returing switch state - cover is not attached"
 
     invoke-static {v1, v3}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 215
     monitor-exit v2
 
-    .line 225
     :goto_1
     return-void
 
-    .line 202
     :cond_2
     iget-object v1, p0, Lcom/android/server/cover/CoverManagerService;->mContext:Landroid/content/Context;
 
@@ -791,7 +722,6 @@
 
     if-nez v1, :cond_1
 
-    .line 203
     iget-object v1, p0, Lcom/android/server/cover/CoverManagerService;->mCoverVerifier:Lcom/android/server/cover/CoverVerifier;
 
     invoke-virtual {v1}, Lcom/android/server/cover/CoverVerifier;->onUpdateCoverVerifiedLocked()Z
@@ -800,14 +730,12 @@
 
     if-eqz v1, :cond_3
 
-    .line 204
     const/4 v1, 0x0
 
     invoke-direct {p0, p2, v1}, Lcom/android/server/cover/CoverManagerService;->sendCoverAttachStateLocked(ZLcom/samsung/android/cover/CoverState;)V
 
     goto :goto_0
 
-    .line 224
     :catchall_0
     move-exception v1
 
@@ -817,7 +745,6 @@
 
     throw v1
 
-    .line 206
     :cond_3
     :try_start_1
     iget-object v1, p0, Lcom/android/server/cover/CoverManagerService;->mCoverVerifier:Lcom/android/server/cover/CoverVerifier;
@@ -830,7 +757,6 @@
 
     goto :goto_0
 
-    .line 218
     :cond_4
     const/4 v1, 0x1
 
@@ -840,14 +766,12 @@
 
     if-eqz v1, :cond_5
 
-    .line 219
     const-string v1, "CoverManager"
 
     const-string v3, "cover opened wake up"
 
     invoke-static {v1, v3}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 220
     iget-object v1, p0, Lcom/android/server/cover/CoverManagerService;->mPowerManager:Landroid/os/PowerManager;
 
     invoke-static {}, Landroid/os/SystemClock;->uptimeMillis()J
@@ -856,11 +780,9 @@
 
     invoke-virtual {v1, v4, v5}, Landroid/os/PowerManager;->wakeUp(J)V
 
-    .line 223
     :cond_5
     invoke-direct {p0, p1, p2}, Lcom/android/server/cover/CoverManagerService;->sendCoverSwitchStateLocked(ZZ)V
 
-    .line 224
     monitor-exit v2
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
@@ -873,12 +795,10 @@
     .param p1, "switchState"    # Z
 
     .prologue
-    .line 398
     iget-object v0, p0, Lcom/android/server/cover/CoverManagerService;->mCoverState:Lcom/samsung/android/cover/CoverState;
 
     invoke-virtual {v0, p1}, Lcom/samsung/android/cover/CoverState;->setSwitchState(Z)V
 
-    .line 399
     return-void
 .end method
 
@@ -895,7 +815,6 @@
 
     const/4 v2, 0x0
 
-    .line 408
     iget-object v3, p0, Lcom/android/server/cover/CoverManagerService;->mCoverDisabler:Lcom/android/server/cover/CoverDisabler;
 
     invoke-virtual {v3, p1, p2, p3}, Lcom/android/server/cover/CoverDisabler;->disableCoverManager(ZLandroid/os/IBinder;Ljava/lang/String;)Z
@@ -904,18 +823,15 @@
 
     if-eqz v3, :cond_1
 
-    .line 409
     iget-object v3, p0, Lcom/android/server/cover/CoverManagerService;->mCoverDisabler:Lcom/android/server/cover/CoverDisabler;
 
     invoke-virtual {v3}, Lcom/android/server/cover/CoverDisabler;->isCoverManagerDisabled()Z
 
     move-result v1
 
-    .line 410
     .local v1, "disabled":Z
     if-eqz v1, :cond_2
 
-    .line 413
     .local v0, "coverSwitchState":Z
     :cond_0
     :goto_0
@@ -923,24 +839,20 @@
 
     monitor-enter v3
 
-    .line 414
     const/4 v2, 0x0
 
     :try_start_0
     invoke-direct {p0, v0, v2}, Lcom/android/server/cover/CoverManagerService;->sendCoverSwitchStateLocked(ZZ)V
 
-    .line 415
     monitor-exit v3
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 417
     .end local v0    # "coverSwitchState":Z
     .end local v1    # "disabled":Z
     :cond_1
     return-void
 
-    .line 410
     .restart local v1    # "disabled":Z
     :cond_2
     invoke-virtual {p0}, Lcom/android/server/cover/CoverManagerService;->getCoverSwitchStateFromInputManager()I
@@ -953,7 +865,6 @@
 
     goto :goto_0
 
-    .line 415
     .restart local v0    # "coverSwitchState":Z
     :catchall_0
     move-exception v2
@@ -973,7 +884,6 @@
     .param p3, "args"    # [Ljava/lang/String;
 
     .prologue
-    .line 586
     iget-object v0, p0, Lcom/android/server/cover/CoverManagerService;->mContext:Landroid/content/Context;
 
     const-string v1, "android.permission.DUMP"
@@ -984,7 +894,6 @@
 
     if-eqz v0, :cond_0
 
-    .line 588
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -1023,27 +932,22 @@
 
     invoke-virtual {p2, v0}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
-    .line 606
     :goto_0
     return-void
 
-    .line 594
     :cond_0
     const-string v0, "COVER MANAGER SERVICE (dumpsys cover)"
 
     invoke-virtual {p2, v0}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
-    .line 596
     const-string v0, " Current Cover state"
 
     invoke-virtual {p2, v0}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
-    .line 597
     iget-object v1, p0, Lcom/android/server/cover/CoverManagerService;->mCoverState:Lcom/samsung/android/cover/CoverState;
 
     monitor-enter v1
 
-    .line 598
     :try_start_0
     new-instance v0, Ljava/lang/StringBuilder;
 
@@ -1071,22 +975,18 @@
 
     invoke-virtual {p2, v0}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
-    .line 599
     const-string v0, "  "
 
     invoke-virtual {p2, v0}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
-    .line 600
     iget-object v0, p0, Lcom/android/server/cover/CoverManagerService;->mCoverVerifier:Lcom/android/server/cover/CoverVerifier;
 
     invoke-virtual {v0, p1, p2, p3}, Lcom/android/server/cover/CoverVerifier;->dump(Ljava/io/FileDescriptor;Ljava/io/PrintWriter;[Ljava/lang/String;)V
 
-    .line 601
     monitor-exit v1
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 602
     iget-object v0, p0, Lcom/android/server/cover/CoverManagerService;->mContext:Landroid/content/Context;
 
     invoke-static {v0}, Lcom/android/server/cover/Feature;->getInstance(Landroid/content/Context;)Lcom/android/server/cover/Feature;
@@ -1095,24 +995,20 @@
 
     invoke-virtual {v0, p1, p2, p3}, Lcom/android/server/cover/Feature;->dump(Ljava/io/FileDescriptor;Ljava/io/PrintWriter;[Ljava/lang/String;)V
 
-    .line 603
     iget-object v0, p0, Lcom/android/server/cover/CoverManagerService;->mStateNotifier:Lcom/android/server/cover/StateNotifier;
 
     invoke-virtual {v0, p1, p2, p3}, Lcom/android/server/cover/StateNotifier;->dump(Ljava/io/FileDescriptor;Ljava/io/PrintWriter;[Ljava/lang/String;)V
 
-    .line 604
     iget-object v0, p0, Lcom/android/server/cover/CoverManagerService;->mCoverDisabler:Lcom/android/server/cover/CoverDisabler;
 
     invoke-virtual {v0, p1, p2, p3}, Lcom/android/server/cover/CoverDisabler;->dump(Ljava/io/FileDescriptor;Ljava/io/PrintWriter;[Ljava/lang/String;)V
 
-    .line 605
     iget-object v0, p0, Lcom/android/server/cover/CoverManagerService;->mLedCoverController:Lcom/android/server/cover/LedCoverController;
 
     invoke-virtual {v0, p1, p2, p3}, Lcom/android/server/cover/LedCoverController;->dump(Ljava/io/FileDescriptor;Ljava/io/PrintWriter;[Ljava/lang/String;)V
 
     goto :goto_0
 
-    .line 601
     :catchall_0
     move-exception v0
 
@@ -1130,7 +1026,6 @@
     .prologue
     const/4 v2, -0x1
 
-    .line 377
     :try_start_0
     iget-object v3, p0, Lcom/android/server/cover/CoverManagerService;->mInputManager:Lcom/android/server/input/InputManagerService;
 
@@ -1146,35 +1041,28 @@
 
     move-result v1
 
-    .line 379
     .local v1, "sw":I
     if-lez v1, :cond_1
 
-    .line 380
     const/4 v2, 0x1
 
-    .line 388
     .end local v1    # "sw":I
     :cond_0
     :goto_0
     return v2
 
-    .line 381
     .restart local v1    # "sw":I
     :cond_1
     if-nez v1, :cond_0
 
-    .line 382
     const/4 v2, 0x0
 
     goto :goto_0
 
-    .line 386
     .end local v1    # "sw":I
     :catch_0
     move-exception v0
 
-    .line 387
     .local v0, "e":Ljava/lang/Exception;
     const-string v3, "CoverManager"
 
@@ -1189,12 +1077,10 @@
     .locals 2
 
     .prologue
-    .line 345
     iget-object v1, p0, Lcom/android/server/cover/CoverManagerService;->mCoverState:Lcom/samsung/android/cover/CoverState;
 
     monitor-enter v1
 
-    .line 346
     :try_start_0
     iget-object v0, p0, Lcom/android/server/cover/CoverManagerService;->mCoverState:Lcom/samsung/android/cover/CoverState;
 
@@ -1202,7 +1088,6 @@
 
     return-object v0
 
-    .line 347
     :catchall_0
     move-exception v0
 
@@ -1219,7 +1104,6 @@
     .prologue
     const/4 v2, -0x1
 
-    .line 356
     :try_start_0
     iget-object v3, p0, Lcom/android/server/cover/CoverManagerService;->mInputManager:Lcom/android/server/input/InputManagerService;
 
@@ -1235,35 +1119,28 @@
 
     move-result v1
 
-    .line 358
     .local v1, "sw":I
     if-lez v1, :cond_1
 
-    .line 359
     const/4 v2, 0x1
 
-    .line 367
     .end local v1    # "sw":I
     :cond_0
     :goto_0
     return v2
 
-    .line 360
     .restart local v1    # "sw":I
     :cond_1
     if-nez v1, :cond_0
 
-    .line 361
     const/4 v2, 0x0
 
     goto :goto_0
 
-    .line 365
     .end local v1    # "sw":I
     :catch_0
     move-exception v0
 
-    .line 366
     .local v0, "e":Ljava/lang/Exception;
     const-string v3, "CoverManager"
 
@@ -1278,7 +1155,6 @@
     .locals 1
 
     .prologue
-    .line 394
     const/high16 v0, 0x1020000
 
     return v0
@@ -1288,7 +1164,6 @@
     .locals 1
 
     .prologue
-    .line 403
     iget-object v0, p0, Lcom/android/server/cover/CoverManagerService;->mCoverDisabler:Lcom/android/server/cover/CoverDisabler;
 
     invoke-virtual {v0}, Lcom/android/server/cover/CoverDisabler;->isCoverManagerDisabled()Z
@@ -1304,23 +1179,19 @@
     .param p3, "attach"    # Z
 
     .prologue
-    .line 247
     iget-boolean v0, p0, Lcom/android/server/cover/CoverManagerService;->mSystemReady:Z
 
     if-nez v0, :cond_0
 
-    .line 249
     const-string v0, "CoverManager"
 
     const-string v1, "notifyCoverAttachStateChanged : Returing!! not system ready yet!"
 
     invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 257
     :goto_0
     return-void
 
-    .line 253
     :cond_0
     const/4 v0, 0x0
 
@@ -1335,23 +1206,19 @@
     .param p3, "switchState"    # Z
 
     .prologue
-    .line 170
     iget-boolean v0, p0, Lcom/android/server/cover/CoverManagerService;->mSystemReady:Z
 
     if-nez v0, :cond_0
 
-    .line 172
     const-string v0, "CoverManager"
 
     const-string v1, "notifyCoverSwitchStateChanged : Returing!! not system ready yet!"
 
     invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 185
     :goto_0
     return-void
 
-    .line 177
     :cond_0
     iget-object v0, p0, Lcom/android/server/cover/CoverManagerService;->mCoverDisabler:Lcom/android/server/cover/CoverDisabler;
 
@@ -1361,7 +1228,6 @@
 
     if-eqz v0, :cond_1
 
-    .line 179
     const-string v0, "CoverManager"
 
     const-string v1, "notifyCoverSwitchStateChanged : Returing! Cover manager disabled"
@@ -1370,7 +1236,6 @@
 
     goto :goto_0
 
-    .line 184
     :cond_1
     const/4 v0, 0x0
 
@@ -1386,35 +1251,29 @@
     .param p4, "state"    # Lcom/samsung/android/cover/CoverState;
 
     .prologue
-    .line 261
     iget-boolean v0, p0, Lcom/android/server/cover/CoverManagerService;->mSystemReady:Z
 
     if-nez v0, :cond_1
 
-    .line 263
     const-string v0, "CoverManager"
 
     const-string v1, "notifySmartCoverAttachStateChanged : Returing!! not system ready yet!"
 
     invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 286
     :cond_0
     :goto_0
     return-void
 
-    .line 282
     :cond_1
     const/4 v0, 0x0
 
     invoke-direct {p0, p3, v0, p4}, Lcom/android/server/cover/CoverManagerService;->updateCoverAttachState(ZZLcom/samsung/android/cover/CoverState;)V
 
-    .line 283
     iget-object v0, p0, Lcom/android/server/cover/CoverManagerService;->mSmartCoverAppController:Lcom/android/server/cover/SmartCoverAppController;
 
     if-eqz v0, :cond_0
 
-    .line 284
     iget-object v0, p0, Lcom/android/server/cover/CoverManagerService;->mSmartCoverAppController:Lcom/android/server/cover/SmartCoverAppController;
 
     iget-object v1, p0, Lcom/android/server/cover/CoverManagerService;->mCoverState:Lcom/samsung/android/cover/CoverState;
@@ -1431,14 +1290,12 @@
     .param p1, "covered"    # Z
 
     .prologue
-    .line 432
     const-string v0, "CoverManager"
 
-    const-string/jumbo v1, "onCoverAppCovered!!"
+    const-string v1, "onCoverAppCovered!!"
 
     invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 434
     iget-object v0, p0, Lcom/android/server/cover/CoverManagerService;->mStateNotifier:Lcom/android/server/cover/StateNotifier;
 
     invoke-virtual {v0, p1}, Lcom/android/server/cover/StateNotifier;->onCoverAppCovered(Z)I
@@ -1452,10 +1309,8 @@
     .locals 4
 
     .prologue
-    .line 439
     const/4 v0, 0x0
 
-    .line 440
     .local v0, "point":Landroid/graphics/Point;
     const-string v3, "get_x_num"
 
@@ -1463,7 +1318,6 @@
 
     move-result v1
 
-    .line 441
     .local v1, "x":I
     const-string v3, "get_y_num"
 
@@ -1471,22 +1325,18 @@
 
     move-result v2
 
-    .line 446
     .local v2, "y":I
     if-le v1, v2, :cond_0
 
-    .line 447
     new-instance v0, Landroid/graphics/Point;
 
     .end local v0    # "point":Landroid/graphics/Point;
     invoke-direct {v0, v2, v1}, Landroid/graphics/Point;-><init>(II)V
 
-    .line 451
     .restart local v0    # "point":Landroid/graphics/Point;
     :goto_0
     return-object v0
 
-    .line 449
     :cond_0
     new-instance v0, Landroid/graphics/Point;
 
@@ -1508,12 +1358,10 @@
     .end annotation
 
     .prologue
-    .line 154
     const/4 v0, 0x1
 
     invoke-virtual {p0, p1, p2, v0}, Lcom/android/server/cover/CoverManagerService;->registerListenerCallback(Landroid/os/IBinder;Landroid/content/ComponentName;I)V
 
-    .line 155
     return-void
 .end method
 
@@ -1529,12 +1377,10 @@
     .end annotation
 
     .prologue
-    .line 160
     iget-object v0, p0, Lcom/android/server/cover/CoverManagerService;->mStateNotifier:Lcom/android/server/cover/StateNotifier;
 
     invoke-virtual {v0, p1, p2, p3}, Lcom/android/server/cover/StateNotifier;->registerListenerCallback(Landroid/os/IBinder;Landroid/content/ComponentName;I)V
 
-    .line 161
     return-void
 .end method
 
@@ -1549,12 +1395,10 @@
     .end annotation
 
     .prologue
-    .line 421
     iget-object v0, p0, Lcom/android/server/cover/CoverManagerService;->mLedCoverController:Lcom/android/server/cover/LedCoverController;
 
     invoke-virtual {v0, p1, p2}, Lcom/android/server/cover/LedCoverController;->sendDataToLedCover(I[B)Z
 
-    .line 422
     return-void
 .end method
 
@@ -1562,12 +1406,10 @@
     .locals 1
 
     .prologue
-    .line 426
     iget-object v0, p0, Lcom/android/server/cover/CoverManagerService;->mLedCoverController:Lcom/android/server/cover/LedCoverController;
 
     invoke-virtual {v0}, Lcom/android/server/cover/LedCoverController;->sendPowerKeyToCover()V
 
-    .line 427
     return-void
 .end method
 
@@ -1578,44 +1420,37 @@
     .param p3, "height"    # I
 
     .prologue
-    .line 459
     const-string v1, "CoverManager"
 
-    const-string/jumbo v2, "setCoverShape"
+    const-string v2, "setCoverShape"
 
     invoke-static {v1, v2}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 461
     if-nez p1, :cond_0
 
-    .line 462
     const-string v1, "CoverManager"
 
-    const-string/jumbo v2, "setCoverShape : coverShape is null."
+    const-string v2, "setCoverShape : coverShape is null."
 
     invoke-static {v1, v2}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 477
     :goto_0
     return-void
 
-    .line 466
     :cond_0
     if-eqz p2, :cond_1
 
     if-nez p3, :cond_2
 
-    .line 467
     :cond_1
     const-string v1, "CoverManager"
 
-    const-string/jumbo v2, "setCoverShape : width is 0 or height is 0."
+    const-string v2, "setCoverShape : width is 0 or height is 0."
 
     invoke-static {v1, v2}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
     goto :goto_0
 
-    .line 471
     :cond_2
     invoke-direct {p0, p1, p2, p3}, Lcom/android/server/cover/CoverManagerService;->checkNeedThread([BII)Z
 
@@ -1623,23 +1458,20 @@
 
     if-eqz v1, :cond_3
 
-    .line 472
     new-instance v0, Lcom/android/server/cover/CoverManagerService$CoverShapeThread;
 
     invoke-direct {v0, p0, p1, p2, p3}, Lcom/android/server/cover/CoverManagerService$CoverShapeThread;-><init>(Lcom/android/server/cover/CoverManagerService;[BII)V
 
-    .line 473
     .local v0, "coverShapeThread":Lcom/android/server/cover/CoverManagerService$CoverShapeThread;
     invoke-virtual {v0}, Lcom/android/server/cover/CoverManagerService$CoverShapeThread;->start()V
 
     goto :goto_0
 
-    .line 475
     .end local v0    # "coverShapeThread":Lcom/android/server/cover/CoverManagerService$CoverShapeThread;
     :cond_3
     const-string v1, "CoverManager"
 
-    const-string/jumbo v2, "setCoverShape : we don\'t need to start thread because there is no valid value."
+    const-string v2, "setCoverShape : we don\'t need to start thread because there is no valid value."
 
     invoke-static {v1, v2}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
@@ -1654,17 +1486,14 @@
 
     const/4 v2, 0x1
 
-    .line 122
     const-string v1, "CoverManager"
 
-    const-string/jumbo v4, "systemReady!!"
+    const-string v4, "systemReady!!"
 
     invoke-static {v1, v4}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 124
     iput-boolean v2, p0, Lcom/android/server/cover/CoverManagerService;->mSystemReady:Z
 
-    .line 125
     invoke-virtual {p0}, Lcom/android/server/cover/CoverManagerService;->getCoverAttachStateFromInputManager()I
 
     move-result v1
@@ -1676,7 +1505,6 @@
     :goto_0
     invoke-direct {p0, v1, v2}, Lcom/android/server/cover/CoverManagerService;->updateCoverAttachState(ZZ)V
 
-    .line 128
     invoke-virtual {p0}, Lcom/android/server/cover/CoverManagerService;->getCoverSwitchStateFromInputManager()I
 
     move-result v1
@@ -1685,7 +1513,6 @@
 
     move v0, v3
 
-    .line 129
     .local v0, "coverSwitchState":Z
     :goto_1
     iget-object v1, p0, Lcom/android/server/cover/CoverManagerService;->mCoverDisabler:Lcom/android/server/cover/CoverDisabler;
@@ -1696,27 +1523,22 @@
 
     if-eqz v1, :cond_0
 
-    .line 130
     const/4 v0, 0x1
 
-    .line 133
     :cond_0
     invoke-direct {p0, v0, v2}, Lcom/android/server/cover/CoverManagerService;->updateCoverSwitchState(ZZ)V
 
-    .line 134
     return-void
 
     .end local v0    # "coverSwitchState":Z
     :cond_1
     move v1, v3
 
-    .line 125
     goto :goto_0
 
     :cond_2
     move v0, v2
 
-    .line 128
     goto :goto_1
 .end method
 
@@ -1730,7 +1552,6 @@
     .end annotation
 
     .prologue
-    .line 165
     iget-object v0, p0, Lcom/android/server/cover/CoverManagerService;->mStateNotifier:Lcom/android/server/cover/StateNotifier;
 
     invoke-virtual {v0, p1}, Lcom/android/server/cover/StateNotifier;->unregisterCallback(Landroid/os/IBinder;)Z

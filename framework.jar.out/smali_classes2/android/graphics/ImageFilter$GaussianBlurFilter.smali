@@ -19,12 +19,10 @@
     .locals 1
 
     .prologue
-    .line 498
     const/4 v0, 0x1
 
     invoke-direct {p0, v0}, Landroid/graphics/ImageFilter;-><init>(I)V
 
-    .line 499
     return-void
 .end method
 
@@ -33,7 +31,6 @@
     .param p1, "x0"    # Landroid/graphics/ImageFilter$1;
 
     .prologue
-    .line 495
     invoke-direct {p0}, Landroid/graphics/ImageFilter$GaussianBlurFilter;-><init>()V
 
     return-void
@@ -50,7 +47,6 @@
     .end annotation
 
     .prologue
-    .line 495
     invoke-super {p0}, Landroid/graphics/ImageFilter;->clone()Landroid/graphics/ImageFilter;
 
     move-result-object v0
@@ -63,7 +59,6 @@
     .param p1, "radius"    # F
 
     .prologue
-    .line 526
     const/4 v0, 0x0
 
     const/4 v1, 0x0
@@ -80,7 +75,6 @@
 
     invoke-super {p0, v0, v1}, Landroid/graphics/ImageFilter;->setValue(IF)V
 
-    .line 527
     return-void
 .end method
 
@@ -89,7 +83,6 @@
     .param p1, "radius"    # I
 
     .prologue
-    .line 511
     :try_start_0
     new-instance v1, Ljava/lang/Exception;
 
@@ -101,14 +94,11 @@
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 512
     :catch_0
     move-exception v0
 
-    .line 514
     .local v0, "e":Ljava/lang/Exception;
     invoke-virtual {v0}, Ljava/lang/Exception;->printStackTrace()V
 
-    .line 516
     return-void
 .end method

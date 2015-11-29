@@ -25,7 +25,6 @@
     .locals 1
 
     .prologue
-    .line 42
     iput-object p1, p0, Lcom/android/server/location/GpsStatusListenerHelper$2;->this$0:Lcom/android/server/location/GpsStatusListenerHelper;
 
     iput-boolean p2, p0, Lcom/android/server/location/GpsStatusListenerHelper$2;->val$isNavigating:Z
@@ -49,19 +48,15 @@
     .end annotation
 
     .prologue
-    .line 45
     iget-boolean v0, p0, Lcom/android/server/location/GpsStatusListenerHelper$2;->val$isNavigating:Z
 
     if-eqz v0, :cond_0
 
-    .line 46
     invoke-interface {p1}, Landroid/location/IGpsStatusListener;->onGpsStarted()V
 
-    .line 50
     :goto_0
     return-void
 
-    .line 48
     :cond_0
     invoke-interface {p1}, Landroid/location/IGpsStatusListener;->onGpsStopped()V
 
@@ -78,7 +73,6 @@
     .end annotation
 
     .prologue
-    .line 42
     check-cast p1, Landroid/location/IGpsStatusListener;
 
     .end local p1    # "x0":Landroid/os/IInterface;

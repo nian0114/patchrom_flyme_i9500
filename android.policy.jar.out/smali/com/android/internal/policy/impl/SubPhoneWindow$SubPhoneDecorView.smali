@@ -27,13 +27,10 @@
     .param p3, "featureId"    # I
 
     .prologue
-    .line 153
     iput-object p1, p0, Lcom/android/internal/policy/impl/SubPhoneWindow$SubPhoneDecorView;->this$0:Lcom/android/internal/policy/impl/SubPhoneWindow;
 
-    .line 154
     invoke-direct {p0, p1, p2, p3}, Lcom/android/internal/policy/impl/PhoneWindow$DecorView;-><init>(Lcom/android/internal/policy/impl/PhoneWindow;Landroid/content/Context;I)V
 
-    .line 155
     return-void
 .end method
 
@@ -44,7 +41,6 @@
     .prologue
     const/4 v3, -0x1
 
-    .line 226
     iget-object v1, p0, Lcom/android/internal/policy/impl/SubPhoneWindow$SubPhoneDecorView;->this$0:Lcom/android/internal/policy/impl/SubPhoneWindow;
 
     # getter for: Lcom/android/internal/policy/impl/SubPhoneWindow;->mIsBorder:Z
@@ -54,14 +50,12 @@
 
     if-eqz v1, :cond_1
 
-    .line 227
     iget-object v1, p0, Lcom/android/internal/policy/impl/SubPhoneWindow$SubPhoneDecorView;->this$0:Lcom/android/internal/policy/impl/SubPhoneWindow;
 
     invoke-virtual {v1}, Lcom/android/internal/policy/impl/SubPhoneWindow;->getAttributes()Landroid/view/WindowManager$LayoutParams;
 
     move-result-object v0
 
-    .line 228
     .local v0, "attrs":Landroid/view/WindowManager$LayoutParams;
     iget-object v1, p0, Lcom/android/internal/policy/impl/SubPhoneWindow$SubPhoneDecorView;->this$0:Lcom/android/internal/policy/impl/SubPhoneWindow;
 
@@ -86,7 +80,6 @@
 
     if-eq v1, v3, :cond_2
 
-    .line 231
     :cond_0
     iget-object v1, p0, Lcom/android/internal/policy/impl/SubPhoneWindow$SubPhoneDecorView;->this$0:Lcom/android/internal/policy/impl/SubPhoneWindow;
 
@@ -95,13 +88,11 @@
     # setter for: Lcom/android/internal/policy/impl/SubPhoneWindow;->mIsBorder:Z
     invoke-static {v1, v2}, Lcom/android/internal/policy/impl/SubPhoneWindow;->access$202(Lcom/android/internal/policy/impl/SubPhoneWindow;Z)Z
 
-    .line 244
     .end local v0    # "attrs":Landroid/view/WindowManager$LayoutParams;
     :cond_1
     :goto_0
     return-void
 
-    .line 234
     .restart local v0    # "attrs":Landroid/view/WindowManager$LayoutParams;
     :cond_2
     invoke-virtual {p0}, Lcom/android/internal/policy/impl/SubPhoneWindow$SubPhoneDecorView;->getResources()Landroid/content/res/Resources;
@@ -116,7 +107,6 @@
 
     packed-switch v1, :pswitch_data_0
 
-    .line 242
     :goto_1
     iget-object v1, p0, Lcom/android/internal/policy/impl/SubPhoneWindow$SubPhoneDecorView;->this$0:Lcom/android/internal/policy/impl/SubPhoneWindow;
 
@@ -137,7 +127,6 @@
 
     goto :goto_0
 
-    .line 236
     :pswitch_0
     iget-object v1, p0, Lcom/android/internal/policy/impl/SubPhoneWindow$SubPhoneDecorView;->this$0:Lcom/android/internal/policy/impl/SubPhoneWindow;
 
@@ -152,7 +141,6 @@
 
     goto :goto_1
 
-    .line 239
     :pswitch_1
     iget-object v1, p0, Lcom/android/internal/policy/impl/SubPhoneWindow$SubPhoneDecorView;->this$0:Lcom/android/internal/policy/impl/SubPhoneWindow;
 
@@ -167,7 +155,6 @@
 
     goto :goto_1
 
-    .line 234
     :pswitch_data_0
     .packed-switch 0x1
         :pswitch_0
@@ -179,7 +166,6 @@
     .locals 30
 
     .prologue
-    .line 247
     move-object/from16 v0, p0
 
     iget-object v2, v0, Lcom/android/internal/policy/impl/SubPhoneWindow$SubPhoneDecorView;->this$0:Lcom/android/internal/policy/impl/SubPhoneWindow;
@@ -189,23 +175,18 @@
 
     move-result-object v4
 
-    .line 249
     .local v4, "stackBounds":Landroid/graphics/Rect;
     const/4 v8, 0x0
 
-    .line 250
     .local v8, "minWidth":I
     const/4 v9, 0x0
 
-    .line 251
     .local v9, "minHeight":I
     const/4 v10, 0x0
 
-    .line 252
     .local v10, "maxWidth":I
     const/4 v11, 0x0
 
-    .line 253
     .local v11, "maxHeight":I
     move-object/from16 v0, p0
 
@@ -227,7 +208,6 @@
 
     div-float v24, v2, v3
 
-    .line 254
     .local v24, "maxSizeRatio":F
     move-object/from16 v0, p0
 
@@ -247,7 +227,6 @@
 
     if-ne v2, v3, :cond_0
 
-    .line 255
     move-object/from16 v0, p0
 
     iget-object v2, v0, Lcom/android/internal/policy/impl/SubPhoneWindow$SubPhoneDecorView;->this$0:Lcom/android/internal/policy/impl/SubPhoneWindow;
@@ -261,7 +240,6 @@
 
     move-result v8
 
-    .line 256
     move-object/from16 v0, p0
 
     iget-object v2, v0, Lcom/android/internal/policy/impl/SubPhoneWindow$SubPhoneDecorView;->this$0:Lcom/android/internal/policy/impl/SubPhoneWindow;
@@ -275,7 +253,6 @@
 
     move-result v9
 
-    .line 262
     :goto_0
     invoke-static {}, Landroid/hardware/display/DisplayManagerGlobal;->getInstance()Landroid/hardware/display/DisplayManagerGlobal;
 
@@ -291,7 +268,6 @@
 
     move/from16 v26, v0
 
-    .line 263
     .local v26, "screenWidth":I
     invoke-static {}, Landroid/hardware/display/DisplayManagerGlobal;->getInstance()Landroid/hardware/display/DisplayManagerGlobal;
 
@@ -307,7 +283,6 @@
 
     move/from16 v25, v0
 
-    .line 265
     .local v25, "screenHeight":I
     move/from16 v0, v26
 
@@ -317,7 +292,6 @@
 
     float-to-int v10, v2
 
-    .line 266
     move/from16 v0, v25
 
     int-to-float v2, v0
@@ -326,7 +300,6 @@
 
     float-to-int v11, v2
 
-    .line 268
     invoke-virtual {v4}, Landroid/graphics/Rect;->width()I
 
     move-result v2
@@ -339,7 +312,6 @@
 
     div-float v23, v2, v3
 
-    .line 269
     .local v23, "hScale":F
     invoke-virtual {v4}, Landroid/graphics/Rect;->height()I
 
@@ -353,13 +325,11 @@
 
     div-float v29, v2, v3
 
-    .line 271
     .local v29, "vScale":F
     new-instance v5, Landroid/graphics/Rect;
 
     invoke-direct {v5, v4}, Landroid/graphics/Rect;-><init>(Landroid/graphics/Rect;)V
 
-    .line 272
     .local v5, "resizeBounds":Landroid/graphics/Rect;
     invoke-static {}, Landroid/hardware/display/DisplayManagerGlobal;->getInstance()Landroid/hardware/display/DisplayManagerGlobal;
 
@@ -380,7 +350,6 @@
 
     move-result-object v22
 
-    .line 274
     .local v22, "displayInfo":Landroid/view/DisplayInfo;
     move-object/from16 v0, v22
 
@@ -392,7 +361,6 @@
 
     sub-int v27, v2, v3
 
-    .line 275
     .local v27, "test":I
     move/from16 v0, v27
 
@@ -400,7 +368,6 @@
 
     mul-float v28, v2, v23
 
-    .line 276
     .local v28, "test2":F
     move-object/from16 v0, v22
 
@@ -424,7 +391,6 @@
 
     move-result v21
 
-    .line 277
     .local v21, "absWidth":I
     move-object/from16 v0, v22
 
@@ -448,7 +414,6 @@
 
     move-result v20
 
-    .line 279
     .local v20, "absHeight":I
     move-object/from16 v0, v22
 
@@ -456,7 +421,6 @@
 
     packed-switch v2, :pswitch_data_0
 
-    .line 285
     :pswitch_0
     iget v2, v5, Landroid/graphics/Rect;->bottom:I
 
@@ -464,7 +428,6 @@
 
     iput v2, v5, Landroid/graphics/Rect;->bottom:I
 
-    .line 291
     :goto_1
     new-instance v6, Landroid/graphics/Rect;
 
@@ -478,7 +441,6 @@
 
     invoke-direct {v6, v2, v3, v0, v1}, Landroid/graphics/Rect;-><init>(IIII)V
 
-    .line 292
     .local v6, "paddingRect":Landroid/graphics/Rect;
     move-object/from16 v0, p0
 
@@ -486,7 +448,6 @@
 
     if-nez v2, :cond_1
 
-    .line 294
     new-instance v2, Lcom/android/internal/policy/impl/SubPhoneWindow$ResizeHelper;
 
     invoke-virtual/range {p0 .. p0}, Lcom/android/internal/policy/impl/SubPhoneWindow$SubPhoneDecorView;->getContext()Landroid/content/Context;
@@ -505,11 +466,9 @@
 
     iput-object v2, v0, Lcom/android/internal/policy/impl/SubPhoneWindow$SubPhoneDecorView;->mResizeHelper:Lcom/android/internal/policy/impl/SubPhoneWindow$ResizeHelper;
 
-    .line 310
     :goto_2
     return-void
 
-    .line 258
     .end local v5    # "resizeBounds":Landroid/graphics/Rect;
     .end local v6    # "paddingRect":Landroid/graphics/Rect;
     .end local v20    # "absHeight":I
@@ -535,7 +494,6 @@
 
     move-result v8
 
-    .line 259
     move-object/from16 v0, p0
 
     iget-object v2, v0, Lcom/android/internal/policy/impl/SubPhoneWindow$SubPhoneDecorView;->this$0:Lcom/android/internal/policy/impl/SubPhoneWindow;
@@ -551,7 +509,6 @@
 
     goto/16 :goto_0
 
-    .line 282
     .restart local v5    # "resizeBounds":Landroid/graphics/Rect;
     .restart local v20    # "absHeight":I
     .restart local v21    # "absWidth":I
@@ -571,7 +528,6 @@
 
     goto :goto_1
 
-    .line 308
     .restart local v6    # "paddingRect":Landroid/graphics/Rect;
     :cond_1
     move-object/from16 v0, p0
@@ -596,7 +552,6 @@
 
     goto :goto_2
 
-    .line 279
     nop
 
     :pswitch_data_0
@@ -614,13 +569,10 @@
     .param p1, "canvas"    # Landroid/graphics/Canvas;
 
     .prologue
-    .line 198
     invoke-super {p0, p1}, Lcom/android/internal/policy/impl/PhoneWindow$DecorView;->dispatchDraw(Landroid/graphics/Canvas;)V
 
-    .line 199
     invoke-direct {p0, p1}, Lcom/android/internal/policy/impl/SubPhoneWindow$SubPhoneDecorView;->drawBorder(Landroid/graphics/Canvas;)V
 
-    .line 200
     return-void
 .end method
 
@@ -629,7 +581,6 @@
     .param p1, "event"    # Landroid/view/MotionEvent;
 
     .prologue
-    .line 204
     iget-object v0, p0, Lcom/android/internal/policy/impl/SubPhoneWindow$SubPhoneDecorView;->this$0:Lcom/android/internal/policy/impl/SubPhoneWindow;
 
     # getter for: Lcom/android/internal/policy/impl/SubPhoneWindow;->mMultiWindowStyle:Lcom/samsung/android/multiwindow/MultiWindowStyle;
@@ -658,7 +609,6 @@
 
     if-eqz v0, :cond_2
 
-    .line 205
     iget-object v0, p0, Lcom/android/internal/policy/impl/SubPhoneWindow$SubPhoneDecorView;->mResizeHelper:Lcom/android/internal/policy/impl/SubPhoneWindow$ResizeHelper;
 
     if-eqz v0, :cond_0
@@ -671,11 +621,9 @@
 
     if-ne v0, v1, :cond_1
 
-    .line 206
     :cond_0
     invoke-direct {p0}, Lcom/android/internal/policy/impl/SubPhoneWindow$SubPhoneDecorView;->initResizeHelper()V
 
-    .line 208
     :cond_1
     iget-object v0, p0, Lcom/android/internal/policy/impl/SubPhoneWindow$SubPhoneDecorView;->mResizeHelper:Lcom/android/internal/policy/impl/SubPhoneWindow$ResizeHelper;
 
@@ -685,10 +633,8 @@
 
     if-eqz v0, :cond_2
 
-    .line 209
     const/4 v0, 0x1
 
-    .line 212
     :goto_0
     return v0
 
@@ -707,7 +653,6 @@
     .prologue
     const/4 v0, 0x1
 
-    .line 160
     iget-object v1, p0, Lcom/android/internal/policy/impl/SubPhoneWindow$SubPhoneDecorView;->this$0:Lcom/android/internal/policy/impl/SubPhoneWindow;
 
     # getter for: Lcom/android/internal/policy/impl/SubPhoneWindow;->mMultiWindowStyle:Lcom/samsung/android/multiwindow/MultiWindowStyle;
@@ -736,14 +681,12 @@
 
     if-eqz v1, :cond_0
 
-    .line 161
     invoke-virtual {p1}, Landroid/view/MotionEvent;->getAction()I
 
     move-result v1
 
     packed-switch v1, :pswitch_data_0
 
-    .line 187
     :cond_0
     invoke-super {p0, p1}, Lcom/android/internal/policy/impl/PhoneWindow$DecorView;->dispatchTouchEvent(Landroid/view/MotionEvent;)Z
 
@@ -752,11 +695,9 @@
     :goto_0
     return v0
 
-    .line 163
     :pswitch_0
     invoke-direct {p0}, Lcom/android/internal/policy/impl/SubPhoneWindow$SubPhoneDecorView;->initResizeHelper()V
 
-    .line 164
     iget-object v1, p0, Lcom/android/internal/policy/impl/SubPhoneWindow$SubPhoneDecorView;->mResizeHelper:Lcom/android/internal/policy/impl/SubPhoneWindow$ResizeHelper;
 
     invoke-virtual {v1, p1}, Lcom/android/internal/policy/impl/SubPhoneWindow$ResizeHelper;->begin(Landroid/view/MotionEvent;)Z
@@ -765,7 +706,6 @@
 
     if-eqz v1, :cond_0
 
-    .line 165
     iget-object v1, p0, Lcom/android/internal/policy/impl/SubPhoneWindow$SubPhoneDecorView;->this$0:Lcom/android/internal/policy/impl/SubPhoneWindow;
 
     # invokes: Lcom/android/internal/policy/impl/SubPhoneWindow;->forceHideInputMethod()Z
@@ -773,16 +713,13 @@
 
     goto :goto_0
 
-    .line 171
     :pswitch_1
     iget-object v1, p0, Lcom/android/internal/policy/impl/SubPhoneWindow$SubPhoneDecorView;->mResizeHelper:Lcom/android/internal/policy/impl/SubPhoneWindow$ResizeHelper;
 
     if-nez v1, :cond_1
 
-    .line 172
     invoke-direct {p0}, Lcom/android/internal/policy/impl/SubPhoneWindow$SubPhoneDecorView;->initResizeHelper()V
 
-    .line 174
     :cond_1
     iget-object v1, p0, Lcom/android/internal/policy/impl/SubPhoneWindow$SubPhoneDecorView;->mResizeHelper:Lcom/android/internal/policy/impl/SubPhoneWindow$ResizeHelper;
 
@@ -794,7 +731,6 @@
 
     goto :goto_0
 
-    .line 181
     :pswitch_2
     iget-object v1, p0, Lcom/android/internal/policy/impl/SubPhoneWindow$SubPhoneDecorView;->mResizeHelper:Lcom/android/internal/policy/impl/SubPhoneWindow$ResizeHelper;
 
@@ -806,7 +742,6 @@
 
     goto :goto_0
 
-    .line 161
     nop
 
     :pswitch_data_0
@@ -823,13 +758,10 @@
     .param p1, "canvas"    # Landroid/graphics/Canvas;
 
     .prologue
-    .line 192
     invoke-super {p0, p1}, Lcom/android/internal/policy/impl/PhoneWindow$DecorView;->draw(Landroid/graphics/Canvas;)V
 
-    .line 193
     invoke-direct {p0, p1}, Lcom/android/internal/policy/impl/SubPhoneWindow$SubPhoneDecorView;->drawBorder(Landroid/graphics/Canvas;)V
 
-    .line 194
     return-void
 .end method
 
@@ -837,10 +769,8 @@
     .locals 0
 
     .prologue
-    .line 217
     invoke-super {p0}, Lcom/android/internal/policy/impl/PhoneWindow$DecorView;->onAttachedToWindow()V
 
-    .line 218
     return-void
 .end method
 
@@ -849,9 +779,7 @@
     .param p1, "d"    # Landroid/graphics/drawable/Drawable;
 
     .prologue
-    .line 222
     invoke-super {p0, p1}, Lcom/android/internal/policy/impl/PhoneWindow$DecorView;->setBackgroundDrawable(Landroid/graphics/drawable/Drawable;)V
 
-    .line 223
     return-void
 .end method

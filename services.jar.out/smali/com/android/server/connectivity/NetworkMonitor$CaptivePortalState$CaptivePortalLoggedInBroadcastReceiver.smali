@@ -26,15 +26,12 @@
     .param p2, "token"    # I
 
     .prologue
-    .line 524
     iput-object p1, p0, Lcom/android/server/connectivity/NetworkMonitor$CaptivePortalState$CaptivePortalLoggedInBroadcastReceiver;->this$1:Lcom/android/server/connectivity/NetworkMonitor$CaptivePortalState;
 
     invoke-direct {p0}, Landroid/content/BroadcastReceiver;-><init>()V
 
-    .line 525
     iput p2, p0, Lcom/android/server/connectivity/NetworkMonitor$CaptivePortalState$CaptivePortalLoggedInBroadcastReceiver;->mToken:I
 
-    .line 526
     return-void
 .end method
 
@@ -46,7 +43,6 @@
     .param p2, "intent"    # Landroid/content/Intent;
 
     .prologue
-    .line 530
     const-string v0, "android.intent.extra.TEXT"
 
     invoke-virtual {p2, v0}, Landroid/content/Intent;->getStringExtra(Ljava/lang/String;)Ljava/lang/String;
@@ -72,7 +68,6 @@
 
     if-ne v0, v1, :cond_0
 
-    .line 532
     iget-object v0, p0, Lcom/android/server/connectivity/NetworkMonitor$CaptivePortalState$CaptivePortalLoggedInBroadcastReceiver;->this$1:Lcom/android/server/connectivity/NetworkMonitor$CaptivePortalState;
 
     iget-object v0, v0, Lcom/android/server/connectivity/NetworkMonitor$CaptivePortalState;->this$0:Lcom/android/server/connectivity/NetworkMonitor;
@@ -85,7 +80,7 @@
 
     iget v3, p0, Lcom/android/server/connectivity/NetworkMonitor$CaptivePortalState$CaptivePortalLoggedInBroadcastReceiver;->mToken:I
 
-    const-string/jumbo v4, "result"
+    const-string v4, "result"
 
     invoke-virtual {p2, v4}, Landroid/content/Intent;->getStringExtra(Ljava/lang/String;)Ljava/lang/String;
 
@@ -101,7 +96,6 @@
 
     invoke-virtual {v0, v1}, Lcom/android/server/connectivity/NetworkMonitor;->sendMessage(Landroid/os/Message;)V
 
-    .line 535
     :cond_0
     return-void
 .end method

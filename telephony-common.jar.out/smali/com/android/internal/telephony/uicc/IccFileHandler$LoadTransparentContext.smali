@@ -45,24 +45,18 @@
     .param p3, "onLoaded"    # Landroid/os/Message;
 
     .prologue
-    .line 170
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 171
     iput p1, p0, Lcom/android/internal/telephony/uicc/IccFileHandler$LoadTransparentContext;->mEfid:I
 
-    .line 172
     iput p2, p0, Lcom/android/internal/telephony/uicc/IccFileHandler$LoadTransparentContext;->mPhaseNum:I
 
-    .line 173
     iput-object p3, p0, Lcom/android/internal/telephony/uicc/IccFileHandler$LoadTransparentContext;->mOnLoaded:Landroid/os/Message;
 
-    .line 174
     const/4 v0, 0x0
 
     iput-boolean v0, p0, Lcom/android/internal/telephony/uicc/IccFileHandler$LoadTransparentContext;->mLoadAll:Z
 
-    .line 175
     return-void
 .end method
 
@@ -74,21 +68,15 @@
     .prologue
     const/4 v0, 0x1
 
-    .line 177
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 178
     iput p1, p0, Lcom/android/internal/telephony/uicc/IccFileHandler$LoadTransparentContext;->mEfid:I
 
-    .line 179
     iput v0, p0, Lcom/android/internal/telephony/uicc/IccFileHandler$LoadTransparentContext;->mPhaseNum:I
 
-    .line 180
     iput-boolean v0, p0, Lcom/android/internal/telephony/uicc/IccFileHandler$LoadTransparentContext;->mLoadAll:Z
 
-    .line 181
     iput-object p2, p0, Lcom/android/internal/telephony/uicc/IccFileHandler$LoadTransparentContext;->mOnLoaded:Landroid/os/Message;
 
-    .line 182
     return-void
 .end method

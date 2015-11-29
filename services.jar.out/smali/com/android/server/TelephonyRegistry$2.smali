@@ -23,7 +23,6 @@
     .locals 0
 
     .prologue
-    .line 243
     iput-object p1, p0, Lcom/android/server/TelephonyRegistry$2;->this$0:Lcom/android/server/TelephonyRegistry;
 
     invoke-direct {p0}, Landroid/content/BroadcastReceiver;-><init>()V
@@ -41,12 +40,10 @@
     .prologue
     const/4 v5, 0x0
 
-    .line 246
     invoke-virtual {p2}, Landroid/content/Intent;->getAction()Ljava/lang/String;
 
     move-result-object v0
 
-    .line 248
     .local v0, "action":Ljava/lang/String;
     const-string v2, "android.intent.action.USER_SWITCHED"
 
@@ -56,14 +53,12 @@
 
     if-eqz v2, :cond_1
 
-    .line 249
     const-string v2, "android.intent.extra.user_handle"
 
     invoke-virtual {p2, v2, v5}, Landroid/content/Intent;->getIntExtra(Ljava/lang/String;I)I
 
     move-result v1
 
-    .line 251
     .local v1, "userHandle":I
     iget-object v2, p0, Lcom/android/server/TelephonyRegistry$2;->this$0:Lcom/android/server/TelephonyRegistry;
 
@@ -87,13 +82,11 @@
 
     invoke-virtual {v2, v3}, Landroid/os/Handler;->sendMessage(Landroid/os/Message;)Z
 
-    .line 258
     .end local v1    # "userHandle":I
     :cond_0
     :goto_0
     return-void
 
-    .line 252
     :cond_1
     const-string v2, "android.intent.action.ACTION_DEFAULT_SUBSCRIPTION_CHANGED"
 
@@ -103,7 +96,6 @@
 
     if-eqz v2, :cond_0
 
-    .line 256
     iget-object v2, p0, Lcom/android/server/TelephonyRegistry$2;->this$0:Lcom/android/server/TelephonyRegistry;
 
     # getter for: Lcom/android/server/TelephonyRegistry;->mHandler:Landroid/os/Handler;

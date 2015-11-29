@@ -26,7 +26,6 @@
     .locals 0
 
     .prologue
-    .line 136
     iput-object p1, p0, Lcom/movial/ipphone/WifiCallSwitchPreference$3;->this$0:Lcom/movial/ipphone/WifiCallSwitchPreference;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -42,7 +41,6 @@
     .param p2, "isChecked"    # Z
 
     .prologue
-    .line 139
     iget-object v0, p0, Lcom/movial/ipphone/WifiCallSwitchPreference$3;->this$0:Lcom/movial/ipphone/WifiCallSwitchPreference;
 
     invoke-virtual {v0}, Lcom/movial/ipphone/WifiCallSwitchPreference;->isEnabled()Z
@@ -51,11 +49,9 @@
 
     if-nez v0, :cond_0
 
-    .line 148
     :goto_0
     return-void
 
-    .line 142
     :cond_0
     iget-object v0, p0, Lcom/movial/ipphone/WifiCallSwitchPreference$3;->this$0:Lcom/movial/ipphone/WifiCallSwitchPreference;
 
@@ -70,7 +66,6 @@
 
     if-nez v0, :cond_2
 
-    .line 143
     if-nez p2, :cond_1
 
     const/4 v0, 0x1
@@ -85,13 +80,11 @@
 
     goto :goto_1
 
-    .line 146
     :cond_2
     iget-object v0, p0, Lcom/movial/ipphone/WifiCallSwitchPreference$3;->this$0:Lcom/movial/ipphone/WifiCallSwitchPreference;
 
     invoke-virtual {v0, p2}, Lcom/movial/ipphone/WifiCallSwitchPreference;->setChecked(Z)V
 
-    .line 147
     iget-object v0, p0, Lcom/movial/ipphone/WifiCallSwitchPreference$3;->this$0:Lcom/movial/ipphone/WifiCallSwitchPreference;
 
     invoke-virtual {v0}, Lcom/movial/ipphone/WifiCallSwitchPreference;->onSwitchClicked()V

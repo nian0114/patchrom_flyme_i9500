@@ -27,21 +27,16 @@
     .param p3, "looper"    # Landroid/os/Looper;
 
     .prologue
-    .line 512
     iput-object p1, p0, Lcom/samsung/android/smartface/SmartFaceManager$EventHandler;->this$0:Lcom/samsung/android/smartface/SmartFaceManager;
 
-    .line 513
     invoke-direct {p0, p3}, Landroid/os/Handler;-><init>(Landroid/os/Looper;)V
 
-    .line 510
     const/4 v0, 0x0
 
     iput-object v0, p0, Lcom/samsung/android/smartface/SmartFaceManager$EventHandler;->mManager:Lcom/samsung/android/smartface/SmartFaceManager;
 
-    .line 515
     iput-object p2, p0, Lcom/samsung/android/smartface/SmartFaceManager$EventHandler;->mManager:Lcom/samsung/android/smartface/SmartFaceManager;
 
-    .line 516
     return-void
 .end method
 
@@ -52,7 +47,6 @@
     .param p1, "msg"    # Landroid/os/Message;
 
     .prologue
-    .line 520
     iget-object v0, p0, Lcom/samsung/android/smartface/SmartFaceManager$EventHandler;->this$0:Lcom/samsung/android/smartface/SmartFaceManager;
 
     # getter for: Lcom/samsung/android/smartface/SmartFaceManager;->mListener:Lcom/samsung/android/smartface/SmartFaceManager$SmartFaceInfoListener;
@@ -62,16 +56,13 @@
 
     if-eqz v0, :cond_2
 
-    .line 522
     iget v0, p1, Landroid/os/Message;->what:I
 
     packed-switch v0, :pswitch_data_0
 
-    .line 545
     :goto_0
     return-void
 
-    .line 525
     :pswitch_0
     iget-object v0, p0, Lcom/samsung/android/smartface/SmartFaceManager$EventHandler;->this$0:Lcom/samsung/android/smartface/SmartFaceManager;
 
@@ -90,7 +81,6 @@
 
     goto :goto_0
 
-    .line 528
     :pswitch_1
     iget-object v0, p0, Lcom/samsung/android/smartface/SmartFaceManager$EventHandler;->this$0:Lcom/samsung/android/smartface/SmartFaceManager;
 
@@ -103,7 +93,6 @@
 
     if-eqz v0, :cond_0
 
-    .line 529
     iget-object v0, p0, Lcom/samsung/android/smartface/SmartFaceManager$EventHandler;->this$0:Lcom/samsung/android/smartface/SmartFaceManager;
 
     # getter for: Lcom/samsung/android/smartface/SmartFaceManager;->mListener:Lcom/samsung/android/smartface/SmartFaceManager$SmartFaceInfoListener;
@@ -121,7 +110,6 @@
 
     goto :goto_0
 
-    .line 531
     :cond_0
     const-string v0, "SmartFaceManager"
 
@@ -131,7 +119,6 @@
 
     goto :goto_0
 
-    .line 534
     :pswitch_2
     iget-object v0, p0, Lcom/samsung/android/smartface/SmartFaceManager$EventHandler;->this$0:Lcom/samsung/android/smartface/SmartFaceManager;
 
@@ -144,7 +131,6 @@
 
     if-eqz v0, :cond_1
 
-    .line 535
     iget-object v0, p0, Lcom/samsung/android/smartface/SmartFaceManager$EventHandler;->this$0:Lcom/samsung/android/smartface/SmartFaceManager;
 
     # getter for: Lcom/samsung/android/smartface/SmartFaceManager;->mListener:Lcom/samsung/android/smartface/SmartFaceManager$SmartFaceInfoListener;
@@ -162,7 +148,6 @@
 
     goto :goto_0
 
-    .line 537
     :cond_1
     const-string v0, "SmartFaceManager"
 
@@ -172,7 +157,6 @@
 
     goto :goto_0
 
-    .line 543
     :cond_2
     const-string v0, "SmartFaceManager"
 
@@ -182,7 +166,6 @@
 
     goto :goto_0
 
-    .line 522
     :pswitch_data_0
     .packed-switch 0x0
         :pswitch_0

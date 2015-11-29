@@ -28,7 +28,6 @@
     .locals 0
 
     .prologue
-    .line 1960
     iput-object p1, p0, Lcom/android/server/enterprise/restriction/PhoneRestrictionPolicy$SmsMmsDeliveryHandler$1;->this$1:Lcom/android/server/enterprise/restriction/PhoneRestrictionPolicy$SmsMmsDeliveryHandler;
 
     iput p2, p0, Lcom/android/server/enterprise/restriction/PhoneRestrictionPolicy$SmsMmsDeliveryHandler$1;->val$msgType:I
@@ -48,16 +47,13 @@
 
     const/4 v1, 0x0
 
-    .line 1962
     iget v0, p0, Lcom/android/server/enterprise/restriction/PhoneRestrictionPolicy$SmsMmsDeliveryHandler$1;->val$msgType:I
 
     packed-switch v0, :pswitch_data_0
 
-    .line 1976
     :goto_0
     return-void
 
-    .line 1964
     :pswitch_0
     iget-object v0, p0, Lcom/android/server/enterprise/restriction/PhoneRestrictionPolicy$SmsMmsDeliveryHandler$1;->this$1:Lcom/android/server/enterprise/restriction/PhoneRestrictionPolicy$SmsMmsDeliveryHandler;
 
@@ -68,7 +64,6 @@
 
     goto :goto_0
 
-    .line 1967
     :pswitch_1
     iget-object v0, p0, Lcom/android/server/enterprise/restriction/PhoneRestrictionPolicy$SmsMmsDeliveryHandler$1;->this$1:Lcom/android/server/enterprise/restriction/PhoneRestrictionPolicy$SmsMmsDeliveryHandler;
 
@@ -79,7 +74,6 @@
 
     goto :goto_0
 
-    .line 1970
     :pswitch_2
     iget-object v0, p0, Lcom/android/server/enterprise/restriction/PhoneRestrictionPolicy$SmsMmsDeliveryHandler$1;->this$1:Lcom/android/server/enterprise/restriction/PhoneRestrictionPolicy$SmsMmsDeliveryHandler;
 
@@ -88,7 +82,6 @@
     # invokes: Lcom/android/server/enterprise/restriction/PhoneRestrictionPolicy;->deliveryBlockedMsgs(I)V
     invoke-static {v0, v1}, Lcom/android/server/enterprise/restriction/PhoneRestrictionPolicy;->access$100(Lcom/android/server/enterprise/restriction/PhoneRestrictionPolicy;I)V
 
-    .line 1971
     iget-object v0, p0, Lcom/android/server/enterprise/restriction/PhoneRestrictionPolicy$SmsMmsDeliveryHandler$1;->this$1:Lcom/android/server/enterprise/restriction/PhoneRestrictionPolicy$SmsMmsDeliveryHandler;
 
     iget-object v0, v0, Lcom/android/server/enterprise/restriction/PhoneRestrictionPolicy$SmsMmsDeliveryHandler;->this$0:Lcom/android/server/enterprise/restriction/PhoneRestrictionPolicy;
@@ -98,7 +91,6 @@
 
     goto :goto_0
 
-    .line 1962
     nop
 
     :pswitch_data_0

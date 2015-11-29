@@ -56,7 +56,6 @@
     .prologue
     const/4 v0, 0x1
 
-    .line 81
     invoke-static {}, Landroid/os/Debug;->isProductShip()I
 
     move-result v1
@@ -68,7 +67,6 @@
     :cond_0
     sput-boolean v0, Lcom/android/server/enterprise/keystore/TimaKeystoreService;->DBG:Z
 
-    .line 86
     const-string v0, "TimaKeystoreService"
 
     sput-object v0, Lcom/android/server/enterprise/keystore/TimaKeystoreService;->TAG:Ljava/lang/String;
@@ -83,62 +81,50 @@
     .prologue
     const/4 v2, 0x0
 
-    .line 110
     invoke-direct {p0}, Lcom/sec/enterprise/knox/keystore/ITimaKeystore$Stub;-><init>()V
 
-    .line 84
     iput-object v2, p0, Lcom/android/server/enterprise/keystore/TimaKeystoreService;->mContext:Landroid/content/Context;
 
-    .line 90
     iput-object v2, p0, Lcom/android/server/enterprise/keystore/TimaKeystoreService;->mEDM:Landroid/app/enterprise/EnterpriseDeviceManager;
 
-    .line 92
     iput-object v2, p0, Lcom/android/server/enterprise/keystore/TimaKeystoreService;->mEdmStorageProvider:Lcom/android/server/enterprise/storage/EdmStorageProvider;
 
-    .line 102
-    const-string/jumbo v1, "tima"
+    const-string v1, "tima"
 
     iput-object v1, p0, Lcom/android/server/enterprise/keystore/TimaKeystoreService;->TIMA_SERVICE:Ljava/lang/String;
 
-    .line 106
     const/4 v1, 0x0
 
     iput-boolean v1, p0, Lcom/android/server/enterprise/keystore/TimaKeystoreService;->mIsTimaVersion30:Z
 
-    .line 108
     new-instance v1, Lcom/android/server/enterprise/keystore/TimaKeystoreService$SystemPersonaObserver;
 
     invoke-direct {v1, p0, v2}, Lcom/android/server/enterprise/keystore/TimaKeystoreService$SystemPersonaObserver;-><init>(Lcom/android/server/enterprise/keystore/TimaKeystoreService;Lcom/android/server/enterprise/keystore/TimaKeystoreService$1;)V
 
     iput-object v1, p0, Lcom/android/server/enterprise/keystore/TimaKeystoreService;->mPersonaObr:Lcom/android/server/enterprise/keystore/TimaKeystoreService$SystemPersonaObserver;
 
-    .line 362
     new-instance v1, Lcom/android/server/enterprise/keystore/TimaKeystoreService$1;
 
     invoke-direct {v1, p0}, Lcom/android/server/enterprise/keystore/TimaKeystoreService$1;-><init>(Lcom/android/server/enterprise/keystore/TimaKeystoreService;)V
 
     iput-object v1, p0, Lcom/android/server/enterprise/keystore/TimaKeystoreService;->mReceiver:Landroid/content/BroadcastReceiver;
 
-    .line 111
     sget-boolean v1, Lcom/android/server/enterprise/keystore/TimaKeystoreService;->DBG:Z
 
     if-eqz v1, :cond_0
 
-    .line 112
     sget-object v1, Lcom/android/server/enterprise/keystore/TimaKeystoreService;->TAG:Ljava/lang/String;
 
     const-string v2, "TimaKeystoreService Constructor"
 
     invoke-static {v1, v2}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 113
     :cond_0
     iput-object p1, p0, Lcom/android/server/enterprise/keystore/TimaKeystoreService;->mContext:Landroid/content/Context;
 
-    .line 114
     iget-object v1, p0, Lcom/android/server/enterprise/keystore/TimaKeystoreService;->mContext:Landroid/content/Context;
 
-    const-string/jumbo v2, "persona"
+    const-string v2, "persona"
 
     invoke-virtual {v1, v2}, Landroid/content/Context;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
 
@@ -148,14 +134,12 @@
 
     iput-object v1, p0, Lcom/android/server/enterprise/keystore/TimaKeystoreService;->mPersonaMgr:Landroid/os/PersonaManager;
 
-    .line 116
     iget-object v1, p0, Lcom/android/server/enterprise/keystore/TimaKeystoreService;->mPersonaMgr:Landroid/os/PersonaManager;
 
     iget-object v2, p0, Lcom/android/server/enterprise/keystore/TimaKeystoreService;->mPersonaObr:Lcom/android/server/enterprise/keystore/TimaKeystoreService$SystemPersonaObserver;
 
     invoke-virtual {v1, v2}, Landroid/os/PersonaManager;->registerSystemPersonaObserver(Landroid/content/pm/ISystemPersonaObserver;)Z
 
-    .line 117
     new-instance v1, Lcom/android/server/enterprise/storage/EdmStorageProvider;
 
     iget-object v2, p0, Lcom/android/server/enterprise/keystore/TimaKeystoreService;->mContext:Landroid/content/Context;
@@ -164,8 +148,7 @@
 
     iput-object v1, p0, Lcom/android/server/enterprise/keystore/TimaKeystoreService;->mEdmStorageProvider:Lcom/android/server/enterprise/storage/EdmStorageProvider;
 
-    .line 118
-    const-string/jumbo v1, "tima"
+    const-string v1, "tima"
 
     invoke-static {v1}, Landroid/os/ServiceManager;->getService(Ljava/lang/String;)Landroid/os/IBinder;
 
@@ -177,28 +160,23 @@
 
     iput-object v1, p0, Lcom/android/server/enterprise/keystore/TimaKeystoreService;->mTimaService:Landroid/service/tima/ITimaService;
 
-    .line 120
     invoke-direct {p0}, Lcom/android/server/enterprise/keystore/TimaKeystoreService;->setupIntentFilters()V
 
-    .line 123
     iget-object v1, p0, Lcom/android/server/enterprise/keystore/TimaKeystoreService;->mTimaService:Landroid/service/tima/ITimaService;
 
     if-eqz v1, :cond_2
 
-    .line 125
     :try_start_0
     sget-boolean v1, Lcom/android/server/enterprise/keystore/TimaKeystoreService;->DBG:Z
 
     if-eqz v1, :cond_1
 
-    .line 126
     sget-object v1, Lcom/android/server/enterprise/keystore/TimaKeystoreService;->TAG:Ljava/lang/String;
 
     const-string v2, "Called TIMA service getTimaVersion"
 
     invoke-static {v1, v2}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 127
     :cond_1
     iget-object v1, p0, Lcom/android/server/enterprise/keystore/TimaKeystoreService;->mTimaService:Landroid/service/tima/ITimaService;
 
@@ -214,23 +192,19 @@
 
     if-eqz v1, :cond_2
 
-    .line 128
     const/4 v1, 0x1
 
     iput-boolean v1, p0, Lcom/android/server/enterprise/keystore/TimaKeystoreService;->mIsTimaVersion30:Z
     :try_end_0
     .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 134
     :cond_2
     :goto_0
     return-void
 
-    .line 130
     :catch_0
     move-exception v0
 
-    .line 131
     .local v0, "e":Landroid/os/RemoteException;
     sget-object v1, Lcom/android/server/enterprise/keystore/TimaKeystoreService;->TAG:Ljava/lang/String;
 
@@ -247,7 +221,6 @@
     .locals 1
 
     .prologue
-    .line 78
     sget-boolean v0, Lcom/android/server/enterprise/keystore/TimaKeystoreService;->DBG:Z
 
     return v0
@@ -257,7 +230,6 @@
     .locals 1
 
     .prologue
-    .line 78
     sget-object v0, Lcom/android/server/enterprise/keystore/TimaKeystoreService;->TAG:Ljava/lang/String;
 
     return-object v0
@@ -269,7 +241,6 @@
     .param p1, "x1"    # Ljava/io/File;
 
     .prologue
-    .line 78
     invoke-direct {p0, p1}, Lcom/android/server/enterprise/keystore/TimaKeystoreService;->removeUserKeyDirectory(Ljava/io/File;)Z
 
     move-result v0
@@ -282,7 +253,6 @@
     .param p0, "x0"    # Lcom/android/server/enterprise/keystore/TimaKeystoreService;
 
     .prologue
-    .line 78
     invoke-direct {p0}, Lcom/android/server/enterprise/keystore/TimaKeystoreService;->enforcePermission()V
 
     return-void
@@ -296,7 +266,6 @@
     .param p3, "x3"    # Z
 
     .prologue
-    .line 78
     invoke-direct {p0, p1, p2, p3}, Lcom/android/server/enterprise/keystore/TimaKeystoreService;->insertOrUpdatePackageRecord(ILjava/lang/String;Z)Z
 
     move-result v0
@@ -311,7 +280,6 @@
     .param p2, "x2"    # Ljava/lang/String;
 
     .prologue
-    .line 78
     invoke-direct {p0, p1, p2}, Lcom/android/server/enterprise/keystore/TimaKeystoreService;->deletePackageRecord(ILjava/lang/String;)Z
 
     move-result v0
@@ -327,7 +295,6 @@
     .prologue
     const/4 v4, 0x0
 
-    .line 471
     const/4 v5, 0x2
 
     :try_start_0
@@ -335,23 +302,21 @@
 
     const/4 v5, 0x0
 
-    const-string/jumbo v6, "uid"
+    const-string v6, "uid"
 
     aput-object v6, v1, v5
 
     const/4 v5, 0x1
 
-    const-string/jumbo v6, "pkgName"
+    const-string v6, "pkgName"
 
     aput-object v6, v1, v5
 
-    .line 473
     .local v1, "sColumns":[Ljava/lang/String;
     invoke-static {p1}, Ljava/lang/String;->valueOf(I)Ljava/lang/String;
 
     move-result-object v2
 
-    .line 474
     .local v2, "sUid":Ljava/lang/String;
     const/4 v5, 0x2
 
@@ -365,7 +330,6 @@
 
     aput-object p2, v3, v5
 
-    .line 475
     .local v3, "sValues":[Ljava/lang/String;
     iget-object v5, p0, Lcom/android/server/enterprise/keystore/TimaKeystoreService;->mEdmStorageProvider:Lcom/android/server/enterprise/storage/EdmStorageProvider;
 
@@ -377,18 +341,15 @@
 
     move-result v4
 
-    .line 482
     .end local v1    # "sColumns":[Ljava/lang/String;
     .end local v2    # "sUid":Ljava/lang/String;
     .end local v3    # "sValues":[Ljava/lang/String;
     :goto_0
     return v4
 
-    .line 478
     :catch_0
     move-exception v0
 
-    .line 479
     .local v0, "e":Ljava/lang/Exception;
     sget-object v5, Lcom/android/server/enterprise/keystore/TimaKeystoreService;->TAG:Ljava/lang/String;
 
@@ -426,7 +387,6 @@
     .prologue
     const/4 v3, 0x0
 
-    .line 487
     const/4 v4, 0x1
 
     :try_start_0
@@ -434,11 +394,10 @@
 
     const/4 v4, 0x0
 
-    const-string/jumbo v5, "pkgName"
+    const-string v5, "pkgName"
 
     aput-object v5, v1, v4
 
-    .line 488
     .local v1, "sColumns":[Ljava/lang/String;
     const/4 v4, 0x1
 
@@ -448,7 +407,6 @@
 
     aput-object p1, v2, v4
 
-    .line 489
     .local v2, "sValues":[Ljava/lang/String;
     iget-object v4, p0, Lcom/android/server/enterprise/keystore/TimaKeystoreService;->mEdmStorageProvider:Lcom/android/server/enterprise/storage/EdmStorageProvider;
 
@@ -460,17 +418,14 @@
 
     move-result v3
 
-    .line 496
     .end local v1    # "sColumns":[Ljava/lang/String;
     .end local v2    # "sValues":[Ljava/lang/String;
     :goto_0
     return v3
 
-    .line 492
     :catch_0
     move-exception v0
 
-    .line 493
     .local v0, "e":Ljava/lang/Exception;
     sget-object v4, Lcom/android/server/enterprise/keystore/TimaKeystoreService;->TAG:Ljava/lang/String;
 
@@ -505,7 +460,6 @@
     .locals 3
 
     .prologue
-    .line 138
     invoke-static {}, Landroid/os/Binder;->getCallingUid()I
 
     move-result v0
@@ -514,11 +468,9 @@
 
     if-ne v0, v1, :cond_0
 
-    .line 142
     :goto_0
     return-void
 
-    .line 141
     :cond_0
     iget-object v0, p0, Lcom/android/server/enterprise/keystore/TimaKeystoreService;->mContext:Landroid/content/Context;
 
@@ -538,15 +490,13 @@
     .param p3, "enable"    # Z
 
     .prologue
-    .line 449
     :try_start_0
     new-instance v0, Landroid/content/ContentValues;
 
     invoke-direct {v0}, Landroid/content/ContentValues;-><init>()V
 
-    .line 450
     .local v0, "cv":Landroid/content/ContentValues;
-    const-string/jumbo v3, "uid"
+    const-string v3, "uid"
 
     invoke-static {p1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
@@ -554,12 +504,10 @@
 
     invoke-virtual {v0, v3, v4}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/Integer;)V
 
-    .line 451
-    const-string/jumbo v3, "pkgName"
+    const-string v3, "pkgName"
 
     invoke-virtual {v0, v3, p2}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 452
     const-string v3, "enabled"
 
     invoke-static {p3}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
@@ -568,14 +516,12 @@
 
     invoke-virtual {v0, v3, v4}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/Boolean;)V
 
-    .line 454
     new-instance v2, Landroid/content/ContentValues;
 
     invoke-direct {v2}, Landroid/content/ContentValues;-><init>()V
 
-    .line 455
     .local v2, "whereValues":Landroid/content/ContentValues;
-    const-string/jumbo v3, "uid"
+    const-string v3, "uid"
 
     invoke-static {p1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
@@ -583,12 +529,10 @@
 
     invoke-virtual {v2, v3, v4}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/Integer;)V
 
-    .line 456
-    const-string/jumbo v3, "pkgName"
+    const-string v3, "pkgName"
 
     invoke-virtual {v2, v3, p2}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 459
     iget-object v3, p0, Lcom/android/server/enterprise/keystore/TimaKeystoreService;->mEdmStorageProvider:Lcom/android/server/enterprise/storage/EdmStorageProvider;
 
     const-string v4, "TimaKeystorePolicy"
@@ -599,17 +543,14 @@
 
     move-result v3
 
-    .line 466
     .end local v0    # "cv":Landroid/content/ContentValues;
     .end local v2    # "whereValues":Landroid/content/ContentValues;
     :goto_0
     return v3
 
-    .line 461
     :catch_0
     move-exception v1
 
-    .line 462
     .local v1, "e":Ljava/lang/Exception;
     sget-object v3, Lcom/android/server/enterprise/keystore/TimaKeystoreService;->TAG:Ljava/lang/String;
 
@@ -637,7 +578,6 @@
 
     invoke-static {v3, v4}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 466
     const/4 v3, 0x0
 
     goto :goto_0
@@ -648,19 +588,16 @@
     .param p1, "path"    # Ljava/io/File;
 
     .prologue
-    .line 432
     invoke-virtual {p1}, Ljava/io/File;->exists()Z
 
     move-result v5
 
     if-eqz v5, :cond_2
 
-    .line 433
     invoke-virtual {p1}, Ljava/io/File;->listFiles()[Ljava/io/File;
 
     move-result-object v2
 
-    .line 434
     .local v2, "files":[Ljava/io/File;
     move-object v0, v2
 
@@ -676,7 +613,6 @@
 
     aget-object v1, v0, v3
 
-    .line 435
     .local v1, "file":Ljava/io/File;
     invoke-virtual {v1}, Ljava/io/File;->isDirectory()Z
 
@@ -684,29 +620,24 @@
 
     if-eqz v5, :cond_0
 
-    .line 436
     invoke-direct {p0, v1}, Lcom/android/server/enterprise/keystore/TimaKeystoreService;->removeUserKeyDirectory(Ljava/io/File;)Z
 
-    .line 434
     :goto_1
     add-int/lit8 v3, v3, 0x1
 
     goto :goto_0
 
-    .line 438
     :cond_0
     invoke-virtual {v1}, Ljava/io/File;->delete()Z
 
     goto :goto_1
 
-    .line 441
     .end local v1    # "file":Ljava/io/File;
     :cond_1
     invoke-virtual {p1}, Ljava/io/File;->delete()Z
 
     move-result v5
 
-    .line 443
     .end local v0    # "arr$":[Ljava/io/File;
     .end local v2    # "files":[Ljava/io/File;
     .end local v3    # "i$":I
@@ -724,85 +655,70 @@
     .locals 5
 
     .prologue
-    .line 345
     sget-boolean v3, Lcom/android/server/enterprise/keystore/TimaKeystoreService;->DBG:Z
 
     if-eqz v3, :cond_0
 
-    .line 346
     sget-object v3, Lcom/android/server/enterprise/keystore/TimaKeystoreService;->TAG:Ljava/lang/String;
 
     const-string v4, "in setupIntentFilters"
 
     invoke-static {v3, v4}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 347
     :cond_0
     new-instance v2, Lcom/android/server/enterprise/keystore/TimaKeystoreService$KeystoreReceiver;
 
     invoke-direct {v2, p0}, Lcom/android/server/enterprise/keystore/TimaKeystoreService$KeystoreReceiver;-><init>(Lcom/android/server/enterprise/keystore/TimaKeystoreService;)V
 
-    .line 348
     .local v2, "receiver":Lcom/android/server/enterprise/keystore/TimaKeystoreService$KeystoreReceiver;
     new-instance v1, Landroid/content/IntentFilter;
 
     invoke-direct {v1}, Landroid/content/IntentFilter;-><init>()V
 
-    .line 349
     .local v1, "filter":Landroid/content/IntentFilter;
     const-string v3, "android.intent.action.PACKAGE_REMOVED"
 
     invoke-virtual {v1, v3}, Landroid/content/IntentFilter;->addAction(Ljava/lang/String;)V
 
-    .line 350
     const-string v3, "android.intent.action.BOOT_COMPLETED"
 
     invoke-virtual {v1, v3}, Landroid/content/IntentFilter;->addAction(Ljava/lang/String;)V
 
-    .line 351
     const-string v3, "android.intent.category.DEFAULT"
 
     invoke-virtual {v1, v3}, Landroid/content/IntentFilter;->addCategory(Ljava/lang/String;)V
 
-    .line 352
-    const-string/jumbo v3, "package"
+    const-string v3, "package"
 
     invoke-virtual {v1, v3}, Landroid/content/IntentFilter;->addDataScheme(Ljava/lang/String;)V
 
-    .line 353
     iget-object v3, p0, Lcom/android/server/enterprise/keystore/TimaKeystoreService;->mContext:Landroid/content/Context;
 
     invoke-virtual {v3, v2, v1}, Landroid/content/Context;->registerReceiver(Landroid/content/BroadcastReceiver;Landroid/content/IntentFilter;)Landroid/content/Intent;
 
-    .line 355
     new-instance v0, Landroid/content/IntentFilter;
 
     invoke-direct {v0}, Landroid/content/IntentFilter;-><init>()V
 
-    .line 356
     .local v0, "addRemoveUserFilter":Landroid/content/IntentFilter;
     const-string v3, "android.intent.action.USER_REMOVED"
 
     invoke-virtual {v0, v3}, Landroid/content/IntentFilter;->addAction(Ljava/lang/String;)V
 
-    .line 357
     const-string v3, "android.intent.action.USER_ADDED"
 
     invoke-virtual {v0, v3}, Landroid/content/IntentFilter;->addAction(Ljava/lang/String;)V
 
-    .line 358
     const-string v3, "android.intent.action.BOOT_COMPLETED"
 
     invoke-virtual {v0, v3}, Landroid/content/IntentFilter;->addAction(Ljava/lang/String;)V
 
-    .line 359
     iget-object v3, p0, Lcom/android/server/enterprise/keystore/TimaKeystoreService;->mContext:Landroid/content/Context;
 
     iget-object v4, p0, Lcom/android/server/enterprise/keystore/TimaKeystoreService;->mReceiver:Landroid/content/BroadcastReceiver;
 
     invoke-virtual {v3, v4, v0}, Landroid/content/Context;->registerReceiver(Landroid/content/BroadcastReceiver;Landroid/content/IntentFilter;)Landroid/content/Intent;
 
-    .line 360
     return-void
 .end method
 
@@ -819,55 +735,45 @@
     .prologue
     const/4 v3, 0x0
 
-    .line 148
     sget-boolean v4, Lcom/android/server/enterprise/keystore/TimaKeystoreService;->DBG:Z
 
     if-eqz v4, :cond_0
 
-    .line 149
     sget-object v4, Lcom/android/server/enterprise/keystore/TimaKeystoreService;->TAG:Ljava/lang/String;
 
     const-string v5, "in enableTimaKeystore"
 
     invoke-static {v4, v5}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 151
     :cond_0
     invoke-direct {p0}, Lcom/android/server/enterprise/keystore/TimaKeystoreService;->enforcePermission()V
 
-    .line 153
     iget-boolean v4, p0, Lcom/android/server/enterprise/keystore/TimaKeystoreService;->mIsTimaVersion30:Z
 
     if-nez v4, :cond_2
 
-    .line 154
     sget-boolean v4, Lcom/android/server/enterprise/keystore/TimaKeystoreService;->DBG:Z
 
     if-eqz v4, :cond_1
 
-    .line 155
     sget-object v4, Lcom/android/server/enterprise/keystore/TimaKeystoreService;->TAG:Ljava/lang/String;
 
     const-string v5, "enableTimaKeystore - TimaKeystore is available only on TIMA version 3.0"
 
     invoke-static {v4, v5}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 178
     :cond_1
     :goto_0
     return v3
 
-    .line 159
     :cond_2
     if-eqz p1, :cond_1
 
-    .line 162
     :try_start_0
     invoke-static {p1}, Lcom/android/server/enterprise/EnterpriseDeviceManagerService;->getCallingOrCurrentUserId(Landroid/app/enterprise/ContextInfo;)I
 
     move-result v2
 
-    .line 165
     .local v2, "userId":I
     const-string v4, "defaultpackage"
 
@@ -877,14 +783,12 @@
 
     if-nez v4, :cond_3
 
-    .line 166
     sget-object v4, Lcom/android/server/enterprise/keystore/TimaKeystoreService;->TAG:Ljava/lang/String;
 
     const-string v5, "enableTimaKeystore: deletePackageRecord failed"
 
     invoke-static {v4, v5}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 170
     :cond_3
     iget-object v4, p0, Lcom/android/server/enterprise/keystore/TimaKeystoreService;->mContext:Landroid/content/Context;
 
@@ -900,7 +804,6 @@
 
     move-result-object v0
 
-    .line 172
     .local v0, "caller":Ljava/lang/String;
     invoke-static {}, Landroid/os/Binder;->getCallingUid()I
 
@@ -914,13 +817,11 @@
 
     goto :goto_0
 
-    .line 174
     .end local v0    # "caller":Ljava/lang/String;
     .end local v2    # "userId":I
     :catch_0
     move-exception v1
 
-    .line 175
     .local v1, "e":Ljava/lang/Exception;
     sget-object v4, Lcom/android/server/enterprise/keystore/TimaKeystoreService;->TAG:Ljava/lang/String;
 
@@ -940,34 +841,28 @@
 
     const/4 v3, 0x0
 
-    .line 185
     const/4 v2, 0x0
 
-    .line 186
     .local v2, "ret":Z
     sget-boolean v4, Lcom/android/server/enterprise/keystore/TimaKeystoreService;->DBG:Z
 
     if-eqz v4, :cond_0
 
-    .line 187
     sget-object v4, Lcom/android/server/enterprise/keystore/TimaKeystoreService;->TAG:Ljava/lang/String;
 
     const-string v5, "in isTimaKeyStoreDefaultForContainer"
 
     invoke-static {v4, v5}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 189
     :cond_0
     iget-boolean v4, p0, Lcom/android/server/enterprise/keystore/TimaKeystoreService;->mIsTimaVersion30:Z
 
     if-nez v4, :cond_3
 
-    .line 190
     sget-boolean v4, Lcom/android/server/enterprise/keystore/TimaKeystoreService;->DBG:Z
 
     if-eqz v4, :cond_1
 
-    .line 191
     sget-object v4, Lcom/android/server/enterprise/keystore/TimaKeystoreService;->TAG:Ljava/lang/String;
 
     const-string v5, "isTimaKeyStoreDefaultForContainer - TimaKeystore is available only on TIMA version 3.0"
@@ -977,13 +872,11 @@
     :cond_1
     move v2, v3
 
-    .line 210
     .end local v2    # "ret":Z
     :cond_2
     :goto_0
     return v2
 
-    .line 196
     .restart local v2    # "ret":Z
     :cond_3
     :try_start_0
@@ -997,12 +890,10 @@
 
     if-le v4, v1, :cond_4
 
-    .line 198
     .local v1, "isUserContainer":Z
     :goto_1
     if-eqz v1, :cond_5
 
-    .line 199
     invoke-virtual {p0, p1}, Lcom/android/server/enterprise/keystore/TimaKeystoreService;->isTimaKeystoreEnabledInDB(Landroid/app/enterprise/ContextInfo;)Z
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
@@ -1015,14 +906,11 @@
     :cond_4
     move v1, v3
 
-    .line 196
     goto :goto_1
 
-    .line 201
     :catch_0
     move-exception v0
 
-    .line 202
     .local v0, "ex":Ljava/lang/Exception;
     sget-object v3, Lcom/android/server/enterprise/keystore/TimaKeystoreService;->TAG:Ljava/lang/String;
 
@@ -1050,14 +938,12 @@
 
     invoke-static {v3, v4}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 207
     .end local v0    # "ex":Ljava/lang/Exception;
     :cond_5
     sget-boolean v3, Lcom/android/server/enterprise/keystore/TimaKeystoreService;->DBG:Z
 
     if-eqz v3, :cond_2
 
-    .line 208
     sget-object v3, Lcom/android/server/enterprise/keystore/TimaKeystoreService;->TAG:Ljava/lang/String;
 
     new-instance v4, Ljava/lang/StringBuilder;
@@ -1088,45 +974,37 @@
     .param p1, "cxtInfo"    # Landroid/app/enterprise/ContextInfo;
 
     .prologue
-    .line 265
     sget-boolean v0, Lcom/android/server/enterprise/keystore/TimaKeystoreService;->DBG:Z
 
     if-eqz v0, :cond_0
 
-    .line 266
     sget-object v0, Lcom/android/server/enterprise/keystore/TimaKeystoreService;->TAG:Ljava/lang/String;
 
     const-string v1, "in isTimaKeystoreEnabled"
 
     invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 268
     :cond_0
     iget-boolean v0, p0, Lcom/android/server/enterprise/keystore/TimaKeystoreService;->mIsTimaVersion30:Z
 
     if-nez v0, :cond_2
 
-    .line 269
     sget-boolean v0, Lcom/android/server/enterprise/keystore/TimaKeystoreService;->DBG:Z
 
     if-eqz v0, :cond_1
 
-    .line 270
     sget-object v0, Lcom/android/server/enterprise/keystore/TimaKeystoreService;->TAG:Ljava/lang/String;
 
     const-string v1, "isTimaKeystoreEnabled - TimaKeystore is available only on TIMA version 3.0"
 
     invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 271
     :cond_1
     const/4 v0, 0x0
 
-    .line 278
     :goto_0
     return v0
 
-    .line 274
     :cond_2
     invoke-static {}, Landroid/os/Binder;->getCallingUid()I
 
@@ -1136,12 +1014,10 @@
 
     if-ne v0, v1, :cond_3
 
-    .line 275
     const/4 v0, 0x1
 
     goto :goto_0
 
-    .line 278
     :cond_3
     invoke-virtual {p0, p1}, Lcom/android/server/enterprise/keystore/TimaKeystoreService;->isTimaKeystoreEnabledInDB(Landroid/app/enterprise/ContextInfo;)Z
 
@@ -1158,59 +1034,49 @@
     .prologue
     const/4 v10, 0x0
 
-    .line 287
     const/4 v8, 0x0
 
-    .line 288
     .local v8, "ret":Z
     sget-boolean v11, Lcom/android/server/enterprise/keystore/TimaKeystoreService;->DBG:Z
 
     if-eqz v11, :cond_0
 
-    .line 289
     sget-object v11, Lcom/android/server/enterprise/keystore/TimaKeystoreService;->TAG:Ljava/lang/String;
 
     const-string v12, "in isTimaKeystoreEnabledForPackage"
 
     invoke-static {v11, v12}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 291
     :cond_0
     iget-boolean v11, p0, Lcom/android/server/enterprise/keystore/TimaKeystoreService;->mIsTimaVersion30:Z
 
     if-nez v11, :cond_2
 
-    .line 292
     sget-boolean v11, Lcom/android/server/enterprise/keystore/TimaKeystoreService;->DBG:Z
 
     if-eqz v11, :cond_1
 
-    .line 293
     sget-object v11, Lcom/android/server/enterprise/keystore/TimaKeystoreService;->TAG:Ljava/lang/String;
 
     const-string v12, "isTimaKeystoreEnabledForPackage - TimaKeystore is available only on TIMA version 3.0"
 
     invoke-static {v11, v12}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 341
     :cond_1
     :goto_0
     return v10
 
-    .line 299
     :cond_2
     :try_start_0
     invoke-static {p1}, Lcom/android/server/enterprise/EnterpriseDeviceManagerService;->getCallingOrCurrentUserId(Landroid/app/enterprise/ContextInfo;)I
 
     move-result v9
 
-    .line 302
     .local v9, "userId":I
     invoke-static {}, Landroid/app/AppGlobals;->getPackageManager()Landroid/content/pm/IPackageManager;
 
     move-result-object v6
 
-    .line 304
     .local v6, "pm":Landroid/content/pm/IPackageManager;
     const/16 v10, 0x80
 
@@ -1218,7 +1084,6 @@
 
     move-result-object v0
 
-    .line 306
     .local v0, "ai":Landroid/content/pm/ApplicationInfo;
     const/4 v10, 0x1
 
@@ -1230,7 +1095,6 @@
 
     aput-object v11, v1, v10
 
-    .line 308
     .local v1, "columns":[Ljava/lang/String;
     iget-object v10, p0, Lcom/android/server/enterprise/keystore/TimaKeystoreService;->mEdmStorageProvider:Lcom/android/server/enterprise/storage/EdmStorageProvider;
 
@@ -1242,7 +1106,6 @@
 
     move-result-object v7
 
-    .line 311
     .local v7, "results":Ljava/util/List;, "Ljava/util/List<Landroid/content/ContentValues;>;"
     if-eqz v7, :cond_4
 
@@ -1252,20 +1115,16 @@
 
     if-nez v10, :cond_4
 
-    .line 312
     const/4 v2, 0x0
 
-    .line 313
     .local v2, "cv":Landroid/content/ContentValues;
     const/4 v4, 0x0
 
-    .line 314
     .local v4, "isEnabled":Z
     invoke-interface {v7}, Ljava/util/List;->iterator()Ljava/util/Iterator;
 
     move-result-object v5
 
-    .line 316
     .local v5, "it":Ljava/util/Iterator;
     :cond_3
     invoke-interface {v5}, Ljava/util/Iterator;->hasNext()Z
@@ -1274,7 +1133,6 @@
 
     if-eqz v10, :cond_4
 
-    .line 317
     invoke-interface {v5}, Ljava/util/Iterator;->next()Ljava/lang/Object;
 
     move-result-object v2
@@ -1282,7 +1140,6 @@
     .end local v2    # "cv":Landroid/content/ContentValues;
     check-cast v2, Landroid/content/ContentValues;
 
-    .line 318
     .restart local v2    # "cv":Landroid/content/ContentValues;
     const-string v10, "enabled"
 
@@ -1294,13 +1151,10 @@
 
     move-result v4
 
-    .line 321
     if-eqz v4, :cond_3
 
-    .line 322
     const/4 v8, 0x1
 
-    .line 328
     .end local v2    # "cv":Landroid/content/ContentValues;
     .end local v4    # "isEnabled":Z
     .end local v5    # "it":Ljava/util/Iterator;
@@ -1315,10 +1169,8 @@
 
     if-eqz v10, :cond_5
 
-    .line 330
     const/4 v8, 0x1
 
-    .line 338
     .end local v0    # "ai":Landroid/content/pm/ApplicationInfo;
     .end local v1    # "columns":[Ljava/lang/String;
     .end local v6    # "pm":Landroid/content/pm/IPackageManager;
@@ -1330,7 +1182,6 @@
 
     if-eqz v10, :cond_6
 
-    .line 339
     sget-object v10, Lcom/android/server/enterprise/keystore/TimaKeystoreService;->TAG:Ljava/lang/String;
 
     new-instance v11, Ljava/lang/StringBuilder;
@@ -1356,14 +1207,11 @@
     :cond_6
     move v10, v8
 
-    .line 341
     goto :goto_0
 
-    .line 332
     :catch_0
     move-exception v3
 
-    .line 333
     .local v3, "e":Ljava/lang/Exception;
     sget-object v10, Lcom/android/server/enterprise/keystore/TimaKeystoreService;->TAG:Ljava/lang/String;
 
@@ -1401,46 +1249,38 @@
     .prologue
     const/4 v7, 0x0
 
-    .line 217
     const/4 v6, 0x0
 
-    .line 218
     .local v6, "ret":Z
     sget-boolean v8, Lcom/android/server/enterprise/keystore/TimaKeystoreService;->DBG:Z
 
     if-eqz v8, :cond_0
 
-    .line 219
     sget-object v8, Lcom/android/server/enterprise/keystore/TimaKeystoreService;->TAG:Ljava/lang/String;
 
     const-string v9, "in isTimaKeystoreEnabledInDB"
 
     invoke-static {v8, v9}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 221
     :cond_0
     iget-boolean v8, p0, Lcom/android/server/enterprise/keystore/TimaKeystoreService;->mIsTimaVersion30:Z
 
     if-nez v8, :cond_2
 
-    .line 222
     sget-boolean v8, Lcom/android/server/enterprise/keystore/TimaKeystoreService;->DBG:Z
 
     if-eqz v8, :cond_1
 
-    .line 223
     sget-object v8, Lcom/android/server/enterprise/keystore/TimaKeystoreService;->TAG:Ljava/lang/String;
 
     const-string v9, "isTimaKeystoreEnabledInDB - TimaKeystore is available only on TIMA version 3.0"
 
     invoke-static {v8, v9}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 258
     :cond_1
     :goto_0
     return v7
 
-    .line 228
     :cond_2
     const/4 v7, 0x1
 
@@ -1453,7 +1293,6 @@
 
     aput-object v8, v0, v7
 
-    .line 230
     .local v0, "columns":[Ljava/lang/String;
     iget-object v7, p0, Lcom/android/server/enterprise/keystore/TimaKeystoreService;->mEdmStorageProvider:Lcom/android/server/enterprise/storage/EdmStorageProvider;
 
@@ -1465,7 +1304,6 @@
 
     move-result-object v5
 
-    .line 233
     .local v5, "results":Ljava/util/List;, "Ljava/util/List<Landroid/content/ContentValues;>;"
     if-eqz v5, :cond_4
 
@@ -1475,20 +1313,16 @@
 
     if-nez v7, :cond_4
 
-    .line 234
     const/4 v1, 0x0
 
-    .line 235
     .local v1, "cv":Landroid/content/ContentValues;
     const/4 v3, 0x0
 
-    .line 236
     .local v3, "isEnabled":Z
     invoke-interface {v5}, Ljava/util/List;->iterator()Ljava/util/Iterator;
 
     move-result-object v4
 
-    .line 238
     .local v4, "it":Ljava/util/Iterator;
     :cond_3
     invoke-interface {v4}, Ljava/util/Iterator;->hasNext()Z
@@ -1497,7 +1331,6 @@
 
     if-eqz v7, :cond_4
 
-    .line 239
     invoke-interface {v4}, Ljava/util/Iterator;->next()Ljava/lang/Object;
 
     move-result-object v1
@@ -1505,7 +1338,6 @@
     .end local v1    # "cv":Landroid/content/ContentValues;
     check-cast v1, Landroid/content/ContentValues;
 
-    .line 240
     .restart local v1    # "cv":Landroid/content/ContentValues;
     const-string v7, "enabled"
 
@@ -1519,13 +1351,10 @@
 
     move-result v3
 
-    .line 243
     if-eqz v3, :cond_3
 
-    .line 244
     const/4 v6, 0x1
 
-    .line 255
     .end local v0    # "columns":[Ljava/lang/String;
     .end local v1    # "cv":Landroid/content/ContentValues;
     .end local v3    # "isEnabled":Z
@@ -1537,7 +1366,6 @@
 
     if-eqz v7, :cond_5
 
-    .line 256
     sget-object v7, Lcom/android/server/enterprise/keystore/TimaKeystoreService;->TAG:Ljava/lang/String;
 
     new-instance v8, Ljava/lang/StringBuilder;
@@ -1563,14 +1391,11 @@
     :cond_5
     move v7, v6
 
-    .line 258
     goto :goto_0
 
-    .line 249
     :catch_0
     move-exception v2
 
-    .line 250
     .local v2, "ex":Ljava/lang/Exception;
     sget-object v7, Lcom/android/server/enterprise/keystore/TimaKeystoreService;->TAG:Ljava/lang/String;
 
@@ -1606,7 +1431,6 @@
     .param p1, "uid"    # I
 
     .prologue
-    .line 539
     return-void
 .end method
 
@@ -1615,7 +1439,6 @@
     .param p1, "uid"    # I
 
     .prologue
-    .line 551
     return-void
 .end method
 
@@ -1624,7 +1447,6 @@
     .param p1, "uid"    # I
 
     .prologue
-    .line 545
     return-void
 .end method
 
@@ -1632,6 +1454,5 @@
     .locals 0
 
     .prologue
-    .line 533
     return-void
 .end method

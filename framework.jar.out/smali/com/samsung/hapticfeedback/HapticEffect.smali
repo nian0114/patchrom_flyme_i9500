@@ -101,36 +101,26 @@
 
     const/4 v1, 0x0
 
-    .line 123
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 31
     iput v3, p0, Lcom/samsung/hapticfeedback/HapticEffect;->effectStrength:I
 
-    .line 88
     iput-object v1, p0, Lcom/samsung/hapticfeedback/HapticEffect;->mImmVibe:Lcom/immersion/android/ImmVibe;
 
-    .line 89
     iput-object v1, p0, Lcom/samsung/hapticfeedback/HapticEffect;->mDevice:Lcom/immersion/Device;
 
-    .line 90
     iput-object v1, p0, Lcom/samsung/hapticfeedback/HapticEffect;->imm_devHandle:Lcom/immersion/EffectHandle;
 
-    .line 91
     iput-object v1, p0, Lcom/samsung/hapticfeedback/HapticEffect;->mIVTBuffer:Lcom/immersion/IVTBuffer;
 
-    .line 92
     const/4 v0, -0x1
 
     iput v0, p0, Lcom/samsung/hapticfeedback/HapticEffect;->timeLineIndex:I
 
-    .line 94
     iput-object v1, p0, Lcom/samsung/hapticfeedback/HapticEffect;->mContentResolver:Landroid/content/ContentResolver;
 
-    .line 95
     iput-object v1, p0, Lcom/samsung/hapticfeedback/HapticEffect;->mContext:Landroid/content/Context;
 
-    .line 97
     const/4 v0, 0x6
 
     new-array v0, v0, [I
@@ -139,39 +129,28 @@
 
     iput-object v0, p0, Lcom/samsung/hapticfeedback/HapticEffect;->levelToMagnitude:[I
 
-    .line 99
     iput v2, p0, Lcom/samsung/hapticfeedback/HapticEffect;->magnitudeLevel:I
 
-    .line 100
     iput v2, p0, Lcom/samsung/hapticfeedback/HapticEffect;->mImmVibeTouchMagnitude:I
 
-    .line 102
     iput v2, p0, Lcom/samsung/hapticfeedback/HapticEffect;->mTemp:I
 
-    .line 105
     const/16 v0, 0x2710
 
     iput v0, p0, Lcom/samsung/hapticfeedback/HapticEffect;->maxMagnitude:I
 
-    .line 112
     iput v2, p0, Lcom/samsung/hapticfeedback/HapticEffect;->InsLevel:I
 
-    .line 113
     iput v3, p0, Lcom/samsung/hapticfeedback/HapticEffect;->mCount:I
 
-    .line 117
     iput-object v1, p0, Lcom/samsung/hapticfeedback/HapticEffect;->mSettingsContentObserver:Lcom/samsung/hapticfeedback/HapticEffect$SettingsContentObserver;
 
-    .line 118
     iput-boolean v2, p0, Lcom/samsung/hapticfeedback/HapticEffect;->mEnableInSettingMenu:Z
 
-    .line 125
     invoke-direct {p0, p1}, Lcom/samsung/hapticfeedback/HapticEffect;->InitializeLib(Landroid/content/Context;)V
 
-    .line 126
     return-void
 
-    .line 97
     nop
 
     :array_0
@@ -198,36 +177,26 @@
 
     const/4 v4, 0x0
 
-    .line 135
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 31
     iput v5, p0, Lcom/samsung/hapticfeedback/HapticEffect;->effectStrength:I
 
-    .line 88
     iput-object v4, p0, Lcom/samsung/hapticfeedback/HapticEffect;->mImmVibe:Lcom/immersion/android/ImmVibe;
 
-    .line 89
     iput-object v4, p0, Lcom/samsung/hapticfeedback/HapticEffect;->mDevice:Lcom/immersion/Device;
 
-    .line 90
     iput-object v4, p0, Lcom/samsung/hapticfeedback/HapticEffect;->imm_devHandle:Lcom/immersion/EffectHandle;
 
-    .line 91
     iput-object v4, p0, Lcom/samsung/hapticfeedback/HapticEffect;->mIVTBuffer:Lcom/immersion/IVTBuffer;
 
-    .line 92
     const/4 v0, -0x1
 
     iput v0, p0, Lcom/samsung/hapticfeedback/HapticEffect;->timeLineIndex:I
 
-    .line 94
     iput-object v4, p0, Lcom/samsung/hapticfeedback/HapticEffect;->mContentResolver:Landroid/content/ContentResolver;
 
-    .line 95
     iput-object v4, p0, Lcom/samsung/hapticfeedback/HapticEffect;->mContext:Landroid/content/Context;
 
-    .line 97
     const/4 v0, 0x6
 
     new-array v0, v0, [I
@@ -236,39 +205,28 @@
 
     iput-object v0, p0, Lcom/samsung/hapticfeedback/HapticEffect;->levelToMagnitude:[I
 
-    .line 99
     iput v1, p0, Lcom/samsung/hapticfeedback/HapticEffect;->magnitudeLevel:I
 
-    .line 100
     iput v1, p0, Lcom/samsung/hapticfeedback/HapticEffect;->mImmVibeTouchMagnitude:I
 
-    .line 102
     iput v1, p0, Lcom/samsung/hapticfeedback/HapticEffect;->mTemp:I
 
-    .line 105
     const/16 v0, 0x2710
 
     iput v0, p0, Lcom/samsung/hapticfeedback/HapticEffect;->maxMagnitude:I
 
-    .line 112
     iput v1, p0, Lcom/samsung/hapticfeedback/HapticEffect;->InsLevel:I
 
-    .line 113
     iput v5, p0, Lcom/samsung/hapticfeedback/HapticEffect;->mCount:I
 
-    .line 117
     iput-object v4, p0, Lcom/samsung/hapticfeedback/HapticEffect;->mSettingsContentObserver:Lcom/samsung/hapticfeedback/HapticEffect$SettingsContentObserver;
 
-    .line 118
     iput-boolean v1, p0, Lcom/samsung/hapticfeedback/HapticEffect;->mEnableInSettingMenu:Z
 
-    .line 136
     if-eqz p1, :cond_0
 
-    .line 137
     invoke-direct {p0, p1}, Lcom/samsung/hapticfeedback/HapticEffect;->InitializeLib(Landroid/content/Context;)V
 
-    .line 139
     mul-int v0, p2, p2
 
     invoke-static {v0}, Ljava/lang/Math;->abs(I)I
@@ -291,7 +249,6 @@
 
     iput-wide v0, p0, Lcom/samsung/hapticfeedback/HapticEffect;->maxDistance:D
 
-    .line 141
     iget v0, p0, Lcom/samsung/hapticfeedback/HapticEffect;->maxMagnitude:I
 
     int-to-double v0, v0
@@ -306,29 +263,24 @@
 
     iput-wide v0, p0, Lcom/samsung/hapticfeedback/HapticEffect;->MDRatio:J
 
-    .line 143
     iget-object v0, p0, Lcom/samsung/hapticfeedback/HapticEffect;->mSettingsContentObserver:Lcom/samsung/hapticfeedback/HapticEffect$SettingsContentObserver;
 
     if-nez v0, :cond_0
 
-    .line 144
     new-instance v0, Lcom/samsung/hapticfeedback/HapticEffect$SettingsContentObserver;
 
     invoke-direct {v0, p0, v4}, Lcom/samsung/hapticfeedback/HapticEffect$SettingsContentObserver;-><init>(Lcom/samsung/hapticfeedback/HapticEffect;Landroid/os/Handler;)V
 
     iput-object v0, p0, Lcom/samsung/hapticfeedback/HapticEffect;->mSettingsContentObserver:Lcom/samsung/hapticfeedback/HapticEffect$SettingsContentObserver;
 
-    .line 145
     iget-object v0, p0, Lcom/samsung/hapticfeedback/HapticEffect;->mSettingsContentObserver:Lcom/samsung/hapticfeedback/HapticEffect$SettingsContentObserver;
 
     if-eqz v0, :cond_0
 
-    .line 146
     iget-object v0, p0, Lcom/samsung/hapticfeedback/HapticEffect;->mSettingsContentObserver:Lcom/samsung/hapticfeedback/HapticEffect$SettingsContentObserver;
 
     invoke-virtual {v0, p1}, Lcom/samsung/hapticfeedback/HapticEffect$SettingsContentObserver;->setContext(Landroid/content/Context;)V
 
-    .line 147
     invoke-virtual {p1}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
 
     move-result-object v0
@@ -339,18 +291,15 @@
 
     invoke-virtual {v0, v1, v5, v2}, Landroid/content/ContentResolver;->registerContentObserver(Landroid/net/Uri;ZLandroid/database/ContentObserver;)V
 
-    .line 148
     invoke-direct {p0, p1}, Lcom/samsung/hapticfeedback/HapticEffect;->isEnableSettingMenu(Landroid/content/Context;)Z
 
     move-result v0
 
     iput-boolean v0, p0, Lcom/samsung/hapticfeedback/HapticEffect;->mEnableInSettingMenu:Z
 
-    .line 152
     :cond_0
     return-void
 
-    .line 97
     :array_0
     .array-data 4
         0x0
@@ -369,17 +318,14 @@
     .prologue
     const/4 v1, 0x0
 
-    .line 156
     iput-object p1, p0, Lcom/samsung/hapticfeedback/HapticEffect;->mContext:Landroid/content/Context;
 
-    .line 157
     new-instance v0, Lcom/samsung/hapticfeedback/effect/IVTPack;
 
     invoke-direct {v0}, Lcom/samsung/hapticfeedback/effect/IVTPack;-><init>()V
 
     iput-object v0, p0, Lcom/samsung/hapticfeedback/HapticEffect;->mIVTPack:Lcom/samsung/hapticfeedback/effect/IVTPack;
 
-    .line 158
     iget-object v0, p0, Lcom/samsung/hapticfeedback/HapticEffect;->mContext:Landroid/content/Context;
 
     invoke-virtual {v0}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
@@ -388,7 +334,6 @@
 
     iput-object v0, p0, Lcom/samsung/hapticfeedback/HapticEffect;->mContentResolver:Landroid/content/ContentResolver;
 
-    .line 161
     :try_start_0
     invoke-static {}, Lcom/immersion/Device;->newDevice()Lcom/immersion/Device;
 
@@ -398,7 +343,6 @@
     :try_end_0
     .catch Ljava/lang/RuntimeException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 166
     :goto_0
     new-instance v0, Lcom/immersion/MagSweepEffectDefinition;
 
@@ -420,51 +364,41 @@
 
     iput-object v0, p0, Lcom/samsung/hapticfeedback/HapticEffect;->m_MagSweepEffectDefinition:Lcom/immersion/MagSweepEffectDefinition;
 
-    .line 167
     iget-object v0, p0, Lcom/samsung/hapticfeedback/HapticEffect;->m_MagSweepEffectDefinition:Lcom/immersion/MagSweepEffectDefinition;
 
     invoke-virtual {v0, v1}, Lcom/immersion/MagSweepEffectDefinition;->setDuration(I)V
 
-    .line 168
     iget-object v0, p0, Lcom/samsung/hapticfeedback/HapticEffect;->m_MagSweepEffectDefinition:Lcom/immersion/MagSweepEffectDefinition;
 
     invoke-virtual {v0, v1}, Lcom/immersion/MagSweepEffectDefinition;->setMagnitude(I)V
 
-    .line 169
     iget-object v0, p0, Lcom/samsung/hapticfeedback/HapticEffect;->m_MagSweepEffectDefinition:Lcom/immersion/MagSweepEffectDefinition;
 
     invoke-virtual {v0, v1}, Lcom/immersion/MagSweepEffectDefinition;->setAttackLevel(I)V
 
-    .line 170
     iget-object v0, p0, Lcom/samsung/hapticfeedback/HapticEffect;->m_MagSweepEffectDefinition:Lcom/immersion/MagSweepEffectDefinition;
 
     invoke-virtual {v0, v1}, Lcom/immersion/MagSweepEffectDefinition;->setAttackTime(I)V
 
-    .line 171
     iget-object v0, p0, Lcom/samsung/hapticfeedback/HapticEffect;->m_MagSweepEffectDefinition:Lcom/immersion/MagSweepEffectDefinition;
 
     invoke-virtual {v0, v1}, Lcom/immersion/MagSweepEffectDefinition;->setFadeLevel(I)V
 
-    .line 172
     iget-object v0, p0, Lcom/samsung/hapticfeedback/HapticEffect;->m_MagSweepEffectDefinition:Lcom/immersion/MagSweepEffectDefinition;
 
     invoke-virtual {v0, v1}, Lcom/immersion/MagSweepEffectDefinition;->setFadeTime(I)V
 
-    .line 173
     iget-object v0, p0, Lcom/samsung/hapticfeedback/HapticEffect;->m_MagSweepEffectDefinition:Lcom/immersion/MagSweepEffectDefinition;
 
     const/4 v1, 0x2
 
     invoke-virtual {v0, v1}, Lcom/immersion/MagSweepEffectDefinition;->setStyle(I)V
 
-    .line 175
     return-void
 
-    .line 162
     :catch_0
     move-exception v9
 
-    .line 163
     .local v9, "x":Ljava/lang/RuntimeException;
     const-string v0, "HapticEffect"
 
@@ -483,7 +417,6 @@
     .param p1, "x1"    # Z
 
     .prologue
-    .line 26
     iput-boolean p1, p0, Lcom/samsung/hapticfeedback/HapticEffect;->mEnableInSettingMenu:Z
 
     return p1
@@ -495,7 +428,6 @@
     .param p1, "x1"    # Landroid/content/Context;
 
     .prologue
-    .line 26
     invoke-direct {p0, p1}, Lcom/samsung/hapticfeedback/HapticEffect;->isEnableSettingMenu(Landroid/content/Context;)Z
 
     move-result v0
@@ -512,15 +444,13 @@
 
     const/4 v0, 0x0
 
-    .line 598
     if-eqz p1, :cond_0
 
-    .line 600
     invoke-virtual {p1}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
 
     move-result-object v2
 
-    const-string/jumbo v3, "psm_haptic_feedback"
+    const-string v3, "psm_haptic_feedback"
 
     invoke-static {v2, v3, v0}, Landroid/provider/Settings$System;->getInt(Landroid/content/ContentResolver;Ljava/lang/String;I)I
 
@@ -528,18 +458,16 @@
 
     if-ne v2, v1, :cond_1
 
-    .line 608
     :cond_0
     :goto_0
     return v0
 
-    .line 603
     :cond_1
     invoke-virtual {p1}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
 
     move-result-object v2
 
-    const-string/jumbo v3, "spen_feedback_haptic"
+    const-string v3, "spen_feedback_haptic"
 
     invoke-static {v2, v3, v0}, Landroid/provider/Settings$System;->getInt(Landroid/content/ContentResolver;Ljava/lang/String;I)I
 
@@ -551,7 +479,7 @@
 
     move-result-object v2
 
-    const-string/jumbo v3, "pen_writing_haptic_feedback"
+    const-string v3, "pen_writing_haptic_feedback"
 
     invoke-static {v2, v3, v0}, Landroid/provider/Settings$System;->getInt(Landroid/content/ContentResolver;Ljava/lang/String;I)I
 
@@ -561,7 +489,6 @@
 
     move v0, v1
 
-    .line 605
     goto :goto_0
 .end method
 
@@ -579,7 +506,6 @@
 
     const/4 v8, 0x0
 
-    .line 366
     iget-object v2, p0, Lcom/samsung/hapticfeedback/HapticEffect;->mContentResolver:Landroid/content/ContentResolver;
 
     const-string v3, "VIB_FEEDBACK_MAGNITUDE"
@@ -590,19 +516,16 @@
 
     iput v2, p0, Lcom/samsung/hapticfeedback/HapticEffect;->mTemp:I
 
-    .line 367
     iget v2, p0, Lcom/samsung/hapticfeedback/HapticEffect;->mTemp:I
 
     iget v3, p0, Lcom/samsung/hapticfeedback/HapticEffect;->magnitudeLevel:I
 
     if-eq v2, v3, :cond_0
 
-    .line 368
     iget v2, p0, Lcom/samsung/hapticfeedback/HapticEffect;->mTemp:I
 
     iput v2, p0, Lcom/samsung/hapticfeedback/HapticEffect;->magnitudeLevel:I
 
-    .line 369
     iget v2, p0, Lcom/samsung/hapticfeedback/HapticEffect;->magnitudeLevel:I
 
     if-le v2, v4, :cond_3
@@ -612,7 +535,6 @@
     :goto_0
     iput v2, p0, Lcom/samsung/hapticfeedback/HapticEffect;->mImmVibeTouchMagnitude:I
 
-    .line 375
     :cond_0
     iget-wide v2, p0, Lcom/samsung/hapticfeedback/HapticEffect;->aa:D
 
@@ -620,7 +542,6 @@
 
     if-ge v2, v5, :cond_4
 
-    .line 376
     iget-wide v2, p0, Lcom/samsung/hapticfeedback/HapticEffect;->aa:D
 
     iget v4, p0, Lcom/samsung/hapticfeedback/HapticEffect;->mImmVibeTouchMagnitude:I
@@ -633,14 +554,12 @@
 
     iput-wide v2, p0, Lcom/samsung/hapticfeedback/HapticEffect;->aa:D
 
-    .line 377
     iget-object v2, p0, Lcom/samsung/hapticfeedback/HapticEffect;->m_MagSweepEffectDefinition:Lcom/immersion/MagSweepEffectDefinition;
 
     const/16 v3, 0x11
 
     invoke-virtual {v2, v3}, Lcom/immersion/MagSweepEffectDefinition;->setDuration(I)V
 
-    .line 378
     iget-object v2, p0, Lcom/samsung/hapticfeedback/HapticEffect;->m_MagSweepEffectDefinition:Lcom/immersion/MagSweepEffectDefinition;
 
     iget-wide v4, p0, Lcom/samsung/hapticfeedback/HapticEffect;->aa:D
@@ -651,39 +570,32 @@
 
     invoke-virtual {v2, v3}, Lcom/immersion/MagSweepEffectDefinition;->setMagnitude(I)V
 
-    .line 379
     iget-object v2, p0, Lcom/samsung/hapticfeedback/HapticEffect;->m_MagSweepEffectDefinition:Lcom/immersion/MagSweepEffectDefinition;
 
     invoke-virtual {v2, v8}, Lcom/immersion/MagSweepEffectDefinition;->setAttackTime(I)V
 
-    .line 380
     iget-object v2, p0, Lcom/samsung/hapticfeedback/HapticEffect;->m_MagSweepEffectDefinition:Lcom/immersion/MagSweepEffectDefinition;
 
     invoke-virtual {v2, v8}, Lcom/immersion/MagSweepEffectDefinition;->setFadeLevel(I)V
 
-    .line 381
     iget-object v2, p0, Lcom/samsung/hapticfeedback/HapticEffect;->m_MagSweepEffectDefinition:Lcom/immersion/MagSweepEffectDefinition;
 
     invoke-virtual {v2, v8}, Lcom/immersion/MagSweepEffectDefinition;->setFadeTime(I)V
 
-    .line 382
     iget-object v2, p0, Lcom/samsung/hapticfeedback/HapticEffect;->m_MagSweepEffectDefinition:Lcom/immersion/MagSweepEffectDefinition;
 
     invoke-virtual {v2, v8}, Lcom/immersion/MagSweepEffectDefinition;->setStyle(I)V
 
-    .line 383
     iget-object v2, p0, Lcom/samsung/hapticfeedback/HapticEffect;->m_MagSweepEffectDefinition:Lcom/immersion/MagSweepEffectDefinition;
 
     invoke-virtual {v2, v8}, Lcom/immersion/MagSweepEffectDefinition;->setAttackLevel(I)V
 
-    .line 420
     :cond_1
     :goto_1
     iget v2, p0, Lcom/samsung/hapticfeedback/HapticEffect;->mImmVibeTouchMagnitude:I
 
     if-eqz v2, :cond_2
 
-    .line 423
     :try_start_0
     iget-object v2, p0, Lcom/samsung/hapticfeedback/HapticEffect;->mDevice:Lcom/immersion/Device;
 
@@ -693,12 +605,10 @@
     :try_end_0
     .catch Ljava/lang/RuntimeException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 435
     :cond_2
     :goto_2
     return-void
 
-    .line 369
     :cond_3
     iget-object v2, p0, Lcom/samsung/hapticfeedback/HapticEffect;->levelToMagnitude:[I
 
@@ -708,7 +618,6 @@
 
     goto :goto_0
 
-    .line 387
     :cond_4
     iget-wide v2, p0, Lcom/samsung/hapticfeedback/HapticEffect;->aa:D
 
@@ -716,14 +625,12 @@
 
     if-lt v2, v5, :cond_1
 
-    .line 388
     iget v2, p0, Lcom/samsung/hapticfeedback/HapticEffect;->mCount:I
 
     const/4 v3, 0x1
 
     if-ne v2, v3, :cond_6
 
-    .line 389
     iget v2, p0, Lcom/samsung/hapticfeedback/HapticEffect;->mImmVibeTouchMagnitude:I
 
     mul-int/lit16 v2, v2, 0xfa0
@@ -734,26 +641,22 @@
 
     iput-wide v2, p0, Lcom/samsung/hapticfeedback/HapticEffect;->aa1:D
 
-    .line 390
     iget-wide v2, p0, Lcom/samsung/hapticfeedback/HapticEffect;->aa1:D
 
     mul-double/2addr v2, v6
 
     iput-wide v2, p0, Lcom/samsung/hapticfeedback/HapticEffect;->aa2:D
 
-    .line 392
     iget-wide v2, p0, Lcom/samsung/hapticfeedback/HapticEffect;->aa:D
 
     cmpl-double v2, v2, v10
 
     if-lez v2, :cond_5
 
-    .line 393
     iget-wide v2, p0, Lcom/samsung/hapticfeedback/HapticEffect;->aa1:D
 
     iput-wide v2, p0, Lcom/samsung/hapticfeedback/HapticEffect;->aa:D
 
-    .line 400
     :goto_3
     iget-object v2, p0, Lcom/samsung/hapticfeedback/HapticEffect;->m_MagSweepEffectDefinition:Lcom/immersion/MagSweepEffectDefinition;
 
@@ -761,7 +664,6 @@
 
     invoke-virtual {v2, v3}, Lcom/immersion/MagSweepEffectDefinition;->setDuration(I)V
 
-    .line 401
     iget-object v2, p0, Lcom/samsung/hapticfeedback/HapticEffect;->m_MagSweepEffectDefinition:Lcom/immersion/MagSweepEffectDefinition;
 
     iget-wide v4, p0, Lcom/samsung/hapticfeedback/HapticEffect;->aa:D
@@ -770,37 +672,30 @@
 
     invoke-virtual {v2, v3}, Lcom/immersion/MagSweepEffectDefinition;->setMagnitude(I)V
 
-    .line 402
     iget-object v2, p0, Lcom/samsung/hapticfeedback/HapticEffect;->m_MagSweepEffectDefinition:Lcom/immersion/MagSweepEffectDefinition;
 
     invoke-virtual {v2, v8}, Lcom/immersion/MagSweepEffectDefinition;->setAttackTime(I)V
 
-    .line 403
     iget-object v2, p0, Lcom/samsung/hapticfeedback/HapticEffect;->m_MagSweepEffectDefinition:Lcom/immersion/MagSweepEffectDefinition;
 
     invoke-virtual {v2, v8}, Lcom/immersion/MagSweepEffectDefinition;->setFadeLevel(I)V
 
-    .line 404
     iget-object v2, p0, Lcom/samsung/hapticfeedback/HapticEffect;->m_MagSweepEffectDefinition:Lcom/immersion/MagSweepEffectDefinition;
 
     invoke-virtual {v2, v8}, Lcom/immersion/MagSweepEffectDefinition;->setFadeTime(I)V
 
-    .line 405
     iget-object v2, p0, Lcom/samsung/hapticfeedback/HapticEffect;->m_MagSweepEffectDefinition:Lcom/immersion/MagSweepEffectDefinition;
 
     invoke-virtual {v2, v8}, Lcom/immersion/MagSweepEffectDefinition;->setStyle(I)V
 
-    .line 406
     iget-object v2, p0, Lcom/samsung/hapticfeedback/HapticEffect;->m_MagSweepEffectDefinition:Lcom/immersion/MagSweepEffectDefinition;
 
     invoke-virtual {v2, v8}, Lcom/immersion/MagSweepEffectDefinition;->setAttackLevel(I)V
 
-    .line 409
     iput v8, p0, Lcom/samsung/hapticfeedback/HapticEffect;->mCount:I
 
     goto :goto_1
 
-    .line 397
     :cond_5
     iget-wide v2, p0, Lcom/samsung/hapticfeedback/HapticEffect;->aa1:D
 
@@ -830,7 +725,6 @@
 
     goto :goto_3
 
-    .line 414
     :cond_6
     iget v2, p0, Lcom/samsung/hapticfeedback/HapticEffect;->mCount:I
 
@@ -840,11 +734,9 @@
 
     goto :goto_1
 
-    .line 424
     :catch_0
     move-exception v1
 
-    .line 425
     .local v1, "x":Ljava/lang/RuntimeException;
     const-string v2, "HapticEffect"
 
@@ -852,10 +744,8 @@
 
     invoke-static {v2, v3}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 426
     invoke-virtual {v1}, Ljava/lang/RuntimeException;->printStackTrace()V
 
-    .line 428
     :try_start_1
     invoke-static {}, Lcom/immersion/Device;->newDevice()Lcom/immersion/Device;
 
@@ -867,11 +757,9 @@
 
     goto/16 :goto_2
 
-    .line 429
     :catch_1
     move-exception v0
 
-    .line 430
     .local v0, "k":Ljava/lang/RuntimeException;
     invoke-virtual {v0}, Ljava/lang/RuntimeException;->printStackTrace()V
 
@@ -884,7 +772,6 @@
     .locals 3
 
     .prologue
-    .line 552
     :try_start_0
     iget-object v1, p0, Lcom/samsung/hapticfeedback/HapticEffect;->mDevice:Lcom/immersion/Device;
 
@@ -892,7 +779,6 @@
     :try_end_0
     .catch Ljava/lang/RuntimeException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 557
     :goto_0
     iget-object v1, p0, Lcom/samsung/hapticfeedback/HapticEffect;->mSettingsContentObserver:Lcom/samsung/hapticfeedback/HapticEffect$SettingsContentObserver;
 
@@ -902,7 +788,6 @@
 
     if-eqz v1, :cond_0
 
-    .line 558
     iget-object v1, p0, Lcom/samsung/hapticfeedback/HapticEffect;->mContext:Landroid/content/Context;
 
     invoke-virtual {v1}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
@@ -913,20 +798,16 @@
 
     invoke-virtual {v1, v2}, Landroid/content/ContentResolver;->unregisterContentObserver(Landroid/database/ContentObserver;)V
 
-    .line 559
     const/4 v1, 0x0
 
     iput-object v1, p0, Lcom/samsung/hapticfeedback/HapticEffect;->mSettingsContentObserver:Lcom/samsung/hapticfeedback/HapticEffect$SettingsContentObserver;
 
-    .line 561
     :cond_0
     return-void
 
-    .line 553
     :catch_0
     move-exception v0
 
-    .line 554
     .local v0, "x":Ljava/lang/RuntimeException;
     invoke-virtual {v0}, Ljava/lang/RuntimeException;->printStackTrace()V
 
@@ -937,7 +818,6 @@
     .locals 1
 
     .prologue
-    .line 295
     iget-object v0, p0, Lcom/samsung/hapticfeedback/HapticEffect;->m_MagSweepEffectDefinition:Lcom/immersion/MagSweepEffectDefinition;
 
     return-object v0
@@ -947,7 +827,6 @@
     .locals 1
 
     .prologue
-    .line 182
     iget v0, p0, Lcom/samsung/hapticfeedback/HapticEffect;->mDeviceLevel:I
 
     return v0
@@ -957,7 +836,6 @@
     .locals 2
 
     .prologue
-    .line 303
     iget-wide v0, p0, Lcom/samsung/hapticfeedback/HapticEffect;->MDRatio:J
 
     long-to-double v0, v0
@@ -969,14 +847,12 @@
     .locals 4
 
     .prologue
-    .line 238
     iget v1, p0, Lcom/samsung/hapticfeedback/HapticEffect;->timeLineIndex:I
 
     const/4 v2, -0x1
 
     if-le v1, v2, :cond_0
 
-    .line 240
     :try_start_0
     iget-object v1, p0, Lcom/samsung/hapticfeedback/HapticEffect;->mDevice:Lcom/immersion/Device;
 
@@ -992,15 +868,12 @@
     :try_end_0
     .catch Ljava/lang/RuntimeException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 252
     :goto_0
     return-void
 
-    .line 241
     :catch_0
     move-exception v0
 
-    .line 242
     .local v0, "x":Ljava/lang/RuntimeException;
     const-string v1, "HapticEffect"
 
@@ -1012,7 +885,6 @@
 
     goto :goto_0
 
-    .line 246
     .end local v0    # "x":Ljava/lang/RuntimeException;
     :cond_0
     :try_start_1
@@ -1032,11 +904,9 @@
 
     goto :goto_0
 
-    .line 247
     :catch_1
     move-exception v0
 
-    .line 248
     .restart local v0    # "x":Ljava/lang/RuntimeException;
     const-string v1, "HapticEffect"
 
@@ -1054,7 +924,6 @@
     .param p1, "index"    # I
 
     .prologue
-    .line 260
     :try_start_0
     iget-object v1, p0, Lcom/samsung/hapticfeedback/HapticEffect;->mDevice:Lcom/immersion/Device;
 
@@ -1068,15 +937,12 @@
     :try_end_0
     .catch Ljava/lang/RuntimeException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 264
     :goto_0
     return-void
 
-    .line 261
     :catch_0
     move-exception v0
 
-    .line 262
     .local v0, "x":Ljava/lang/RuntimeException;
     const-string v1, "HapticEffect"
 
@@ -1094,12 +960,10 @@
     .param p1, "mEffectDef"    # Lcom/immersion/MagSweepEffectDefinition;
 
     .prologue
-    .line 279
     iget-object v0, p0, Lcom/samsung/hapticfeedback/HapticEffect;->mDevice:Lcom/immersion/Device;
 
     invoke-virtual {v0, p1}, Lcom/immersion/Device;->playMagSweepEffect(Lcom/immersion/MagSweepEffectDefinition;)Lcom/immersion/EffectHandle;
 
-    .line 280
     return-void
 .end method
 
@@ -1108,12 +972,10 @@
     .param p1, "mEffectDef"    # Lcom/immersion/PeriodicEffectDefinition;
 
     .prologue
-    .line 271
     iget-object v0, p0, Lcom/samsung/hapticfeedback/HapticEffect;->mDevice:Lcom/immersion/Device;
 
     invoke-virtual {v0, p1}, Lcom/immersion/Device;->playPeriodicEffect(Lcom/immersion/PeriodicEffectDefinition;)Lcom/immersion/EffectHandle;
 
-    .line 272
     return-void
 .end method
 
@@ -1122,12 +984,10 @@
     .param p1, "distance"    # D
 
     .prologue
-    .line 450
     iget-boolean v0, p0, Lcom/samsung/hapticfeedback/HapticEffect;->mEnableInSettingMenu:Z
 
     if-eqz v0, :cond_0
 
-    .line 451
     iget-wide v0, p0, Lcom/samsung/hapticfeedback/HapticEffect;->MDRatio:J
 
     long-to-double v0, v0
@@ -1146,22 +1006,18 @@
 
     iput-wide v0, p0, Lcom/samsung/hapticfeedback/HapticEffect;->aa:D
 
-    .line 452
     invoke-direct {p0}, Lcom/samsung/hapticfeedback/HapticEffect;->setMagtAttributes()V
 
-    .line 454
     const-wide/high16 v0, 0x3ff0000000000000L    # 1.0
 
     cmpg-double v0, p1, v0
 
     if-gez v0, :cond_1
 
-    .line 462
     :cond_0
     :goto_0
     return-void
 
-    .line 455
     :cond_1
     const-wide/high16 v0, 0x4000000000000000L    # 2.0
 
@@ -1169,7 +1025,6 @@
 
     if-ltz v0, :cond_0
 
-    .line 459
     iget-object v0, p0, Lcom/samsung/hapticfeedback/HapticEffect;->mDevice:Lcom/immersion/Device;
 
     iget-object v1, p0, Lcom/samsung/hapticfeedback/HapticEffect;->m_MagSweepEffectDefinition:Lcom/immersion/MagSweepEffectDefinition;
@@ -1185,12 +1040,10 @@
     .param p3, "Pr"    # F
 
     .prologue
-    .line 469
     iget-boolean v0, p0, Lcom/samsung/hapticfeedback/HapticEffect;->mEnableInSettingMenu:Z
 
     if-eqz v0, :cond_0
 
-    .line 470
     iget-wide v0, p0, Lcom/samsung/hapticfeedback/HapticEffect;->MDRatio:J
 
     long-to-double v0, v0
@@ -1209,22 +1062,18 @@
 
     iput-wide v0, p0, Lcom/samsung/hapticfeedback/HapticEffect;->aa:D
 
-    .line 471
     invoke-direct {p0}, Lcom/samsung/hapticfeedback/HapticEffect;->setMagtAttributes()V
 
-    .line 473
     const-wide/high16 v0, 0x3ff0000000000000L    # 1.0
 
     cmpg-double v0, p1, v0
 
     if-gez v0, :cond_1
 
-    .line 481
     :cond_0
     :goto_0
     return-void
 
-    .line 474
     :cond_1
     const-wide/high16 v0, 0x4000000000000000L    # 2.0
 
@@ -1232,7 +1081,6 @@
 
     if-ltz v0, :cond_0
 
-    .line 478
     iget-object v0, p0, Lcom/samsung/hapticfeedback/HapticEffect;->mDevice:Lcom/immersion/Device;
 
     iget-object v1, p0, Lcom/samsung/hapticfeedback/HapticEffect;->m_MagSweepEffectDefinition:Lcom/immersion/MagSweepEffectDefinition;
@@ -1250,12 +1098,10 @@
     .param p4, "newY"    # F
 
     .prologue
-    .line 492
     iget-boolean v0, p0, Lcom/samsung/hapticfeedback/HapticEffect;->mEnableInSettingMenu:Z
 
     if-eqz v0, :cond_0
 
-    .line 494
     sub-float v0, p3, p1
 
     sub-float v1, p3, p1
@@ -1286,7 +1132,6 @@
 
     iput-wide v0, p0, Lcom/samsung/hapticfeedback/HapticEffect;->distance:D
 
-    .line 496
     iget-wide v0, p0, Lcom/samsung/hapticfeedback/HapticEffect;->distance:D
 
     const-wide/high16 v2, 0x3ff0000000000000L    # 1.0
@@ -1295,12 +1140,10 @@
 
     if-gez v0, :cond_1
 
-    .line 503
     :cond_0
     :goto_0
     return-void
 
-    .line 497
     :cond_1
     iget-wide v0, p0, Lcom/samsung/hapticfeedback/HapticEffect;->distance:D
 
@@ -1310,7 +1153,6 @@
 
     if-ltz v0, :cond_0
 
-    .line 499
     iget-wide v0, p0, Lcom/samsung/hapticfeedback/HapticEffect;->MDRatio:J
 
     long-to-double v0, v0
@@ -1329,7 +1171,6 @@
 
     iput-wide v0, p0, Lcom/samsung/hapticfeedback/HapticEffect;->aa:D
 
-    .line 500
     invoke-direct {p0}, Lcom/samsung/hapticfeedback/HapticEffect;->setMagtAttributes()V
 
     goto :goto_0
@@ -1344,12 +1185,10 @@
     .param p5, "Pr"    # F
 
     .prologue
-    .line 510
     iget-boolean v0, p0, Lcom/samsung/hapticfeedback/HapticEffect;->mEnableInSettingMenu:Z
 
     if-eqz v0, :cond_0
 
-    .line 511
     sub-float v0, p3, p1
 
     sub-float v1, p3, p1
@@ -1380,7 +1219,6 @@
 
     iput-wide v0, p0, Lcom/samsung/hapticfeedback/HapticEffect;->distance:D
 
-    .line 513
     iget-wide v0, p0, Lcom/samsung/hapticfeedback/HapticEffect;->MDRatio:J
 
     long-to-double v0, v0
@@ -1403,10 +1241,8 @@
 
     iput-wide v0, p0, Lcom/samsung/hapticfeedback/HapticEffect;->aa:D
 
-    .line 514
     invoke-direct {p0}, Lcom/samsung/hapticfeedback/HapticEffect;->setMagtAttributes()V
 
-    .line 516
     iget-wide v0, p0, Lcom/samsung/hapticfeedback/HapticEffect;->distance:D
 
     const-wide/high16 v2, 0x3ff0000000000000L    # 1.0
@@ -1415,12 +1251,10 @@
 
     if-gez v0, :cond_1
 
-    .line 524
     :cond_0
     :goto_0
     return-void
 
-    .line 517
     :cond_1
     iget-wide v0, p0, Lcom/samsung/hapticfeedback/HapticEffect;->distance:D
 
@@ -1430,7 +1264,6 @@
 
     if-ltz v0, :cond_0
 
-    .line 521
     iget-object v0, p0, Lcom/samsung/hapticfeedback/HapticEffect;->mDevice:Lcom/immersion/Device;
 
     iget-object v1, p0, Lcom/samsung/hapticfeedback/HapticEffect;->m_MagSweepEffectDefinition:Lcom/immersion/MagSweepEffectDefinition;
@@ -1444,14 +1277,12 @@
     .locals 2
 
     .prologue
-    .line 287
     iget-object v0, p0, Lcom/samsung/hapticfeedback/HapticEffect;->mDevice:Lcom/immersion/Device;
 
     iget-object v1, p0, Lcom/samsung/hapticfeedback/HapticEffect;->m_MagSweepEffectDefinition:Lcom/immersion/MagSweepEffectDefinition;
 
     invoke-virtual {v0, v1}, Lcom/immersion/Device;->playMagSweepEffect(Lcom/immersion/MagSweepEffectDefinition;)Lcom/immersion/EffectHandle;
 
-    .line 288
     return-void
 .end method
 
@@ -1460,20 +1291,16 @@
     .param p1, "path"    # Ljava/lang/String;
 
     .prologue
-    .line 205
     const/4 v0, 0x0
 
-    .line 206
     .local v0, "buf":[B
     new-instance v2, Ljava/io/File;
 
     invoke-direct {v2, p1}, Ljava/io/File;-><init>(Ljava/lang/String;)V
 
-    .line 208
     .local v2, "file":Ljava/io/File;
     const/4 v3, 0x0
 
-    .line 210
     .local v3, "fis":Ljava/io/FileInputStream;
     :try_start_0
     new-instance v4, Ljava/io/FileInputStream;
@@ -1483,7 +1310,6 @@
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_1
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 211
     .end local v3    # "fis":Ljava/io/FileInputStream;
     .local v4, "fis":Ljava/io/FileInputStream;
     :try_start_1
@@ -1493,7 +1319,6 @@
 
     new-array v0, v5, [B
 
-    .line 212
     :cond_0
     invoke-virtual {v4, v0}, Ljava/io/FileInputStream;->read([B)I
     :try_end_1
@@ -1506,10 +1331,8 @@
 
     if-ne v5, v6, :cond_0
 
-    .line 220
     if-eqz v4, :cond_1
 
-    .line 221
     :try_start_2
     invoke-virtual {v4}, Ljava/io/FileInputStream;->close()V
     :try_end_2
@@ -1518,23 +1341,19 @@
     :cond_1
     move-object v3, v4
 
-    .line 228
     .end local v4    # "fis":Ljava/io/FileInputStream;
     .restart local v3    # "fis":Ljava/io/FileInputStream;
     :cond_2
     :goto_0
     invoke-virtual {p0, v0}, Lcom/samsung/hapticfeedback/HapticEffect;->setEffectType([B)V
 
-    .line 230
     return-void
 
-    .line 223
     .end local v3    # "fis":Ljava/io/FileInputStream;
     .restart local v4    # "fis":Ljava/io/FileInputStream;
     :catch_0
     move-exception v1
 
-    .line 224
     .local v1, "e":Ljava/io/IOException;
     const-string v5, "HapticEffect"
 
@@ -1546,17 +1365,14 @@
 
     move-object v3, v4
 
-    .line 226
     .end local v4    # "fis":Ljava/io/FileInputStream;
     .restart local v3    # "fis":Ljava/io/FileInputStream;
     goto :goto_0
 
-    .line 216
     .end local v1    # "e":Ljava/io/IOException;
     :catch_1
     move-exception v1
 
-    .line 217
     .local v1, "e":Ljava/lang/Exception;
     :goto_1
     :try_start_3
@@ -1570,10 +1386,8 @@
     :try_end_3
     .catchall {:try_start_3 .. :try_end_3} :catchall_0
 
-    .line 220
     if-eqz v3, :cond_2
 
-    .line 221
     :try_start_4
     invoke-virtual {v3}, Ljava/io/FileInputStream;->close()V
     :try_end_4
@@ -1581,11 +1395,9 @@
 
     goto :goto_0
 
-    .line 223
     :catch_2
     move-exception v1
 
-    .line 224
     .local v1, "e":Ljava/io/IOException;
     const-string v5, "HapticEffect"
 
@@ -1597,31 +1409,25 @@
 
     goto :goto_0
 
-    .line 219
     .end local v1    # "e":Ljava/io/IOException;
     :catchall_0
     move-exception v5
 
-    .line 220
     :goto_2
     if-eqz v3, :cond_3
 
-    .line 221
     :try_start_5
     invoke-virtual {v3}, Ljava/io/FileInputStream;->close()V
     :try_end_5
     .catch Ljava/io/IOException; {:try_start_5 .. :try_end_5} :catch_3
 
-    .line 225
     :cond_3
     :goto_3
     throw v5
 
-    .line 223
     :catch_3
     move-exception v1
 
-    .line 224
     .restart local v1    # "e":Ljava/io/IOException;
     const-string v6, "HapticEffect"
 
@@ -1633,7 +1439,6 @@
 
     goto :goto_3
 
-    .line 219
     .end local v1    # "e":Ljava/io/IOException;
     .end local v3    # "fis":Ljava/io/FileInputStream;
     .restart local v4    # "fis":Ljava/io/FileInputStream;
@@ -1646,7 +1451,6 @@
     .restart local v3    # "fis":Ljava/io/FileInputStream;
     goto :goto_2
 
-    .line 216
     .end local v3    # "fis":Ljava/io/FileInputStream;
     .restart local v4    # "fis":Ljava/io/FileInputStream;
     :catch_4
@@ -1664,26 +1468,22 @@
     .param p1, "buf"    # [B
 
     .prologue
-    .line 190
     new-instance v3, Lcom/immersion/IVTBuffer;
 
     invoke-direct {v3, p1}, Lcom/immersion/IVTBuffer;-><init>([B)V
 
     iput-object v3, p0, Lcom/samsung/hapticfeedback/HapticEffect;->mIVTBuffer:Lcom/immersion/IVTBuffer;
 
-    .line 191
     const/4 v3, -0x1
 
     iput v3, p0, Lcom/samsung/hapticfeedback/HapticEffect;->timeLineIndex:I
 
-    .line 192
     iget-object v3, p0, Lcom/samsung/hapticfeedback/HapticEffect;->mIVTBuffer:Lcom/immersion/IVTBuffer;
 
     invoke-virtual {v3}, Lcom/immersion/IVTBuffer;->getEffectCount()I
 
     move-result v1
 
-    .line 193
     .local v1, "m_cEffects":I
     const/4 v0, 0x0
 
@@ -1691,29 +1491,24 @@
     :goto_0
     if-ge v0, v1, :cond_1
 
-    .line 194
     iget-object v3, p0, Lcom/samsung/hapticfeedback/HapticEffect;->mIVTBuffer:Lcom/immersion/IVTBuffer;
 
     invoke-virtual {v3, v0}, Lcom/immersion/IVTBuffer;->getEffectType(I)I
 
     move-result v2
 
-    .line 195
     .local v2, "nEffectType":I
     const/4 v3, 0x2
 
     if-ne v2, v3, :cond_0
 
-    .line 196
     iput v0, p0, Lcom/samsung/hapticfeedback/HapticEffect;->timeLineIndex:I
 
-    .line 193
     :cond_0
     add-int/lit8 v0, v0, 0x1
 
     goto :goto_0
 
-    .line 198
     .end local v2    # "nEffectType":I
     :cond_1
     return-void
@@ -1724,10 +1519,8 @@
     .param p1, "Level"    # I
 
     .prologue
-    .line 360
     iput p1, p0, Lcom/samsung/hapticfeedback/HapticEffect;->InsLevel:I
 
-    .line 362
     return-void
 .end method
 
@@ -1741,37 +1534,30 @@
     .param p6, "Style"    # I
 
     .prologue
-    .line 324
     iget-object v0, p0, Lcom/samsung/hapticfeedback/HapticEffect;->m_MagSweepEffectDefinition:Lcom/immersion/MagSweepEffectDefinition;
 
     invoke-virtual {v0, p1}, Lcom/immersion/MagSweepEffectDefinition;->setDuration(I)V
 
-    .line 325
     iget-object v0, p0, Lcom/samsung/hapticfeedback/HapticEffect;->m_MagSweepEffectDefinition:Lcom/immersion/MagSweepEffectDefinition;
 
     invoke-virtual {v0, p2}, Lcom/immersion/MagSweepEffectDefinition;->setAttackLevel(I)V
 
-    .line 326
     iget-object v0, p0, Lcom/samsung/hapticfeedback/HapticEffect;->m_MagSweepEffectDefinition:Lcom/immersion/MagSweepEffectDefinition;
 
     invoke-virtual {v0, p3}, Lcom/immersion/MagSweepEffectDefinition;->setAttackTime(I)V
 
-    .line 327
     iget-object v0, p0, Lcom/samsung/hapticfeedback/HapticEffect;->m_MagSweepEffectDefinition:Lcom/immersion/MagSweepEffectDefinition;
 
     invoke-virtual {v0, p4}, Lcom/immersion/MagSweepEffectDefinition;->setFadeLevel(I)V
 
-    .line 328
     iget-object v0, p0, Lcom/samsung/hapticfeedback/HapticEffect;->m_MagSweepEffectDefinition:Lcom/immersion/MagSweepEffectDefinition;
 
     invoke-virtual {v0, p5}, Lcom/immersion/MagSweepEffectDefinition;->setFadeTime(I)V
 
-    .line 329
     iget-object v0, p0, Lcom/samsung/hapticfeedback/HapticEffect;->m_MagSweepEffectDefinition:Lcom/immersion/MagSweepEffectDefinition;
 
     invoke-virtual {v0, p6}, Lcom/immersion/MagSweepEffectDefinition;->setStyle(I)V
 
-    .line 330
     return-void
 .end method
 
@@ -1780,7 +1566,6 @@
     .param p1, "mEffectDef"    # Lcom/immersion/MagSweepEffectDefinition;
 
     .prologue
-    .line 337
     iget-object v0, p0, Lcom/samsung/hapticfeedback/HapticEffect;->m_MagSweepEffectDefinition:Lcom/immersion/MagSweepEffectDefinition;
 
     invoke-virtual {p1}, Lcom/immersion/MagSweepEffectDefinition;->getDuration()I
@@ -1789,7 +1574,6 @@
 
     invoke-virtual {v0, v1}, Lcom/immersion/MagSweepEffectDefinition;->setDuration(I)V
 
-    .line 338
     iget-object v0, p0, Lcom/samsung/hapticfeedback/HapticEffect;->m_MagSweepEffectDefinition:Lcom/immersion/MagSweepEffectDefinition;
 
     invoke-virtual {p1}, Lcom/immersion/MagSweepEffectDefinition;->getAttackLevel()I
@@ -1798,7 +1582,6 @@
 
     invoke-virtual {v0, v1}, Lcom/immersion/MagSweepEffectDefinition;->setAttackLevel(I)V
 
-    .line 339
     iget-object v0, p0, Lcom/samsung/hapticfeedback/HapticEffect;->m_MagSweepEffectDefinition:Lcom/immersion/MagSweepEffectDefinition;
 
     invoke-virtual {p1}, Lcom/immersion/MagSweepEffectDefinition;->getAttackTime()I
@@ -1807,7 +1590,6 @@
 
     invoke-virtual {v0, v1}, Lcom/immersion/MagSweepEffectDefinition;->setAttackTime(I)V
 
-    .line 340
     iget-object v0, p0, Lcom/samsung/hapticfeedback/HapticEffect;->m_MagSweepEffectDefinition:Lcom/immersion/MagSweepEffectDefinition;
 
     invoke-virtual {p1}, Lcom/immersion/MagSweepEffectDefinition;->getFadeLevel()I
@@ -1816,7 +1598,6 @@
 
     invoke-virtual {v0, v1}, Lcom/immersion/MagSweepEffectDefinition;->setFadeLevel(I)V
 
-    .line 341
     iget-object v0, p0, Lcom/samsung/hapticfeedback/HapticEffect;->m_MagSweepEffectDefinition:Lcom/immersion/MagSweepEffectDefinition;
 
     invoke-virtual {p1}, Lcom/immersion/MagSweepEffectDefinition;->getFadeTime()I
@@ -1825,7 +1606,6 @@
 
     invoke-virtual {v0, v1}, Lcom/immersion/MagSweepEffectDefinition;->setFadeTime(I)V
 
-    .line 342
     iget-object v0, p0, Lcom/samsung/hapticfeedback/HapticEffect;->m_MagSweepEffectDefinition:Lcom/immersion/MagSweepEffectDefinition;
 
     invoke-virtual {p1}, Lcom/immersion/MagSweepEffectDefinition;->getStyle()I
@@ -1834,7 +1614,6 @@
 
     invoke-virtual {v0, v1}, Lcom/immersion/MagSweepEffectDefinition;->setStyle(I)V
 
-    .line 343
     return-void
 .end method
 
@@ -1843,7 +1622,6 @@
     .param p1, "Type"    # [I
 
     .prologue
-    .line 311
     iget-object v0, p0, Lcom/samsung/hapticfeedback/HapticEffect;->m_MagSweepEffectDefinition:Lcom/immersion/MagSweepEffectDefinition;
 
     const/4 v1, 0x0
@@ -1852,7 +1630,6 @@
 
     invoke-virtual {v0, v1}, Lcom/immersion/MagSweepEffectDefinition;->setDuration(I)V
 
-    .line 312
     iget-object v0, p0, Lcom/samsung/hapticfeedback/HapticEffect;->m_MagSweepEffectDefinition:Lcom/immersion/MagSweepEffectDefinition;
 
     const/4 v1, 0x1
@@ -1861,7 +1638,6 @@
 
     invoke-virtual {v0, v1}, Lcom/immersion/MagSweepEffectDefinition;->setAttackLevel(I)V
 
-    .line 313
     iget-object v0, p0, Lcom/samsung/hapticfeedback/HapticEffect;->m_MagSweepEffectDefinition:Lcom/immersion/MagSweepEffectDefinition;
 
     const/4 v1, 0x2
@@ -1870,7 +1646,6 @@
 
     invoke-virtual {v0, v1}, Lcom/immersion/MagSweepEffectDefinition;->setAttackTime(I)V
 
-    .line 314
     iget-object v0, p0, Lcom/samsung/hapticfeedback/HapticEffect;->m_MagSweepEffectDefinition:Lcom/immersion/MagSweepEffectDefinition;
 
     const/4 v1, 0x3
@@ -1879,7 +1654,6 @@
 
     invoke-virtual {v0, v1}, Lcom/immersion/MagSweepEffectDefinition;->setFadeLevel(I)V
 
-    .line 315
     iget-object v0, p0, Lcom/samsung/hapticfeedback/HapticEffect;->m_MagSweepEffectDefinition:Lcom/immersion/MagSweepEffectDefinition;
 
     const/4 v1, 0x4
@@ -1888,7 +1662,6 @@
 
     invoke-virtual {v0, v1}, Lcom/immersion/MagSweepEffectDefinition;->setFadeTime(I)V
 
-    .line 316
     iget-object v0, p0, Lcom/samsung/hapticfeedback/HapticEffect;->m_MagSweepEffectDefinition:Lcom/immersion/MagSweepEffectDefinition;
 
     const/4 v1, 0x5
@@ -1897,7 +1670,6 @@
 
     invoke-virtual {v0, v1}, Lcom/immersion/MagSweepEffectDefinition;->setStyle(I)V
 
-    .line 317
     return-void
 .end method
 
@@ -1906,12 +1678,10 @@
     .param p1, "Magnitude"    # I
 
     .prologue
-    .line 350
     iget-object v0, p0, Lcom/samsung/hapticfeedback/HapticEffect;->m_MagSweepEffectDefinition:Lcom/immersion/MagSweepEffectDefinition;
 
     invoke-virtual {v0, p1}, Lcom/immersion/MagSweepEffectDefinition;->setMagnitude(I)V
 
-    .line 351
     return-void
 .end method
 
@@ -1920,10 +1690,8 @@
     .param p1, "str"    # I
 
     .prologue
-    .line 442
     iput p1, p0, Lcom/samsung/hapticfeedback/HapticEffect;->effectStrength:I
 
-    .line 443
     return-void
 .end method
 
@@ -1931,7 +1699,6 @@
     .locals 4
 
     .prologue
-    .line 533
     :try_start_0
     iget-object v2, p0, Lcom/samsung/hapticfeedback/HapticEffect;->mDevice:Lcom/immersion/Device;
 
@@ -1939,15 +1706,12 @@
     :try_end_0
     .catch Ljava/lang/RuntimeException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 544
     :goto_0
     return-void
 
-    .line 534
     :catch_0
     move-exception v1
 
-    .line 535
     .local v1, "x":Ljava/lang/RuntimeException;
     const-string v2, "HapticEffect"
 
@@ -1955,10 +1719,8 @@
 
     invoke-static {v2, v3}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 536
     invoke-virtual {v1}, Ljava/lang/RuntimeException;->printStackTrace()V
 
-    .line 538
     :try_start_1
     invoke-static {}, Lcom/immersion/Device;->newDevice()Lcom/immersion/Device;
 
@@ -1970,11 +1732,9 @@
 
     goto :goto_0
 
-    .line 539
     :catch_1
     move-exception v0
 
-    .line 540
     .local v0, "k":Ljava/lang/RuntimeException;
     invoke-virtual {v0}, Ljava/lang/RuntimeException;->printStackTrace()V
 

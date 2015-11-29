@@ -118,67 +118,56 @@
     .param p2, "userId"    # I
 
     .prologue
-    .line 236
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 206
     new-instance v0, Ljava/util/HashMap;
 
     invoke-direct {v0}, Ljava/util/HashMap;-><init>()V
 
     iput-object v0, p0, Lcom/android/server/accounts/AccountManagerService$UserAccounts;->credentialsPermissionNotificationIds:Ljava/util/HashMap;
 
-    .line 209
     new-instance v0, Ljava/util/HashMap;
 
     invoke-direct {v0}, Ljava/util/HashMap;-><init>()V
 
     iput-object v0, p0, Lcom/android/server/accounts/AccountManagerService$UserAccounts;->signinRequiredNotificationIds:Ljava/util/HashMap;
 
-    .line 211
     new-instance v0, Ljava/lang/Object;
 
     invoke-direct {v0}, Ljava/lang/Object;-><init>()V
 
     iput-object v0, p0, Lcom/android/server/accounts/AccountManagerService$UserAccounts;->cacheLock:Ljava/lang/Object;
 
-    .line 213
     new-instance v0, Ljava/util/LinkedHashMap;
 
     invoke-direct {v0}, Ljava/util/LinkedHashMap;-><init>()V
 
     iput-object v0, p0, Lcom/android/server/accounts/AccountManagerService$UserAccounts;->accountCache:Ljava/util/HashMap;
 
-    .line 216
     new-instance v0, Ljava/util/HashMap;
 
     invoke-direct {v0}, Ljava/util/HashMap;-><init>()V
 
     iput-object v0, p0, Lcom/android/server/accounts/AccountManagerService$UserAccounts;->userDataCache:Ljava/util/HashMap;
 
-    .line 219
     new-instance v0, Ljava/util/HashMap;
 
     invoke-direct {v0}, Ljava/util/HashMap;-><init>()V
 
     iput-object v0, p0, Lcom/android/server/accounts/AccountManagerService$UserAccounts;->authTokenCache:Ljava/util/HashMap;
 
-    .line 233
     new-instance v0, Ljava/util/HashMap;
 
     invoke-direct {v0}, Ljava/util/HashMap;-><init>()V
 
     iput-object v0, p0, Lcom/android/server/accounts/AccountManagerService$UserAccounts;->previousNameCache:Ljava/util/HashMap;
 
-    .line 237
     iput p2, p0, Lcom/android/server/accounts/AccountManagerService$UserAccounts;->userId:I
 
-    .line 238
     iget-object v1, p0, Lcom/android/server/accounts/AccountManagerService$UserAccounts;->cacheLock:Ljava/lang/Object;
 
     monitor-enter v1
 
-    .line 239
     :try_start_0
     new-instance v0, Lcom/android/server/accounts/AccountManagerService$DatabaseHelper;
 
@@ -186,13 +175,10 @@
 
     iput-object v0, p0, Lcom/android/server/accounts/AccountManagerService$UserAccounts;->openHelper:Lcom/android/server/accounts/AccountManagerService$DatabaseHelper;
 
-    .line 240
     monitor-exit v1
 
-    .line 241
     return-void
 
-    .line 240
     :catchall_0
     move-exception v0
 
@@ -208,7 +194,6 @@
     .param p0, "x0"    # Lcom/android/server/accounts/AccountManagerService$UserAccounts;
 
     .prologue
-    .line 203
     iget-object v0, p0, Lcom/android/server/accounts/AccountManagerService$UserAccounts;->previousNameCache:Ljava/util/HashMap;
 
     return-object v0
@@ -219,7 +204,6 @@
     .param p0, "x0"    # Lcom/android/server/accounts/AccountManagerService$UserAccounts;
 
     .prologue
-    .line 203
     iget-object v0, p0, Lcom/android/server/accounts/AccountManagerService$UserAccounts;->credentialsPermissionNotificationIds:Ljava/util/HashMap;
 
     return-object v0
@@ -230,7 +214,6 @@
     .param p0, "x0"    # Lcom/android/server/accounts/AccountManagerService$UserAccounts;
 
     .prologue
-    .line 203
     iget-object v0, p0, Lcom/android/server/accounts/AccountManagerService$UserAccounts;->signinRequiredNotificationIds:Ljava/util/HashMap;
 
     return-object v0
@@ -241,7 +224,6 @@
     .param p0, "x0"    # Lcom/android/server/accounts/AccountManagerService$UserAccounts;
 
     .prologue
-    .line 203
     iget-object v0, p0, Lcom/android/server/accounts/AccountManagerService$UserAccounts;->cacheLock:Ljava/lang/Object;
 
     return-object v0
@@ -252,7 +234,6 @@
     .param p0, "x0"    # Lcom/android/server/accounts/AccountManagerService$UserAccounts;
 
     .prologue
-    .line 203
     iget-object v0, p0, Lcom/android/server/accounts/AccountManagerService$UserAccounts;->openHelper:Lcom/android/server/accounts/AccountManagerService$DatabaseHelper;
 
     return-object v0
@@ -263,7 +244,6 @@
     .param p0, "x0"    # Lcom/android/server/accounts/AccountManagerService$UserAccounts;
 
     .prologue
-    .line 203
     iget v0, p0, Lcom/android/server/accounts/AccountManagerService$UserAccounts;->userId:I
 
     return v0
@@ -274,7 +254,6 @@
     .param p0, "x0"    # Lcom/android/server/accounts/AccountManagerService$UserAccounts;
 
     .prologue
-    .line 203
     iget-object v0, p0, Lcom/android/server/accounts/AccountManagerService$UserAccounts;->accountCache:Ljava/util/HashMap;
 
     return-object v0
@@ -285,7 +264,6 @@
     .param p0, "x0"    # Lcom/android/server/accounts/AccountManagerService$UserAccounts;
 
     .prologue
-    .line 203
     iget-object v0, p0, Lcom/android/server/accounts/AccountManagerService$UserAccounts;->userDataCache:Ljava/util/HashMap;
 
     return-object v0
@@ -296,7 +274,6 @@
     .param p0, "x0"    # Lcom/android/server/accounts/AccountManagerService$UserAccounts;
 
     .prologue
-    .line 203
     iget-object v0, p0, Lcom/android/server/accounts/AccountManagerService$UserAccounts;->authTokenCache:Ljava/util/HashMap;
 
     return-object v0

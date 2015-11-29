@@ -46,16 +46,12 @@
     .param p3, "res"    # Landroid/content/res/Resources;
 
     .prologue
-    .line 510
     invoke-direct {p0}, Landroid/graphics/drawable/Drawable$ConstantState;-><init>()V
 
-    .line 511
     if-eqz p1, :cond_0
 
-    .line 512
     if-eqz p3, :cond_1
 
-    .line 513
     iget-object v0, p1, Landroid/graphics/drawable/RotateDrawable$RotateState;->mDrawable:Landroid/graphics/drawable/Drawable;
 
     invoke-virtual {v0}, Landroid/graphics/drawable/Drawable;->getConstantState()Landroid/graphics/drawable/Drawable$ConstantState;
@@ -68,13 +64,11 @@
 
     iput-object v0, p0, Landroid/graphics/drawable/RotateDrawable$RotateState;->mDrawable:Landroid/graphics/drawable/Drawable;
 
-    .line 517
     :goto_0
     iget-object v0, p0, Landroid/graphics/drawable/RotateDrawable$RotateState;->mDrawable:Landroid/graphics/drawable/Drawable;
 
     invoke-virtual {v0, p2}, Landroid/graphics/drawable/Drawable;->setCallback(Landroid/graphics/drawable/Drawable$Callback;)V
 
-    .line 518
     iget-object v0, p0, Landroid/graphics/drawable/RotateDrawable$RotateState;->mDrawable:Landroid/graphics/drawable/Drawable;
 
     iget-object v1, p1, Landroid/graphics/drawable/RotateDrawable$RotateState;->mDrawable:Landroid/graphics/drawable/Drawable;
@@ -85,7 +79,6 @@
 
     invoke-virtual {v0, v1}, Landroid/graphics/drawable/Drawable;->setLayoutDirection(I)V
 
-    .line 519
     iget-object v0, p0, Landroid/graphics/drawable/RotateDrawable$RotateState;->mDrawable:Landroid/graphics/drawable/Drawable;
 
     iget-object v1, p1, Landroid/graphics/drawable/RotateDrawable$RotateState;->mDrawable:Landroid/graphics/drawable/Drawable;
@@ -96,7 +89,6 @@
 
     invoke-virtual {v0, v1}, Landroid/graphics/drawable/Drawable;->setBounds(Landroid/graphics/Rect;)V
 
-    .line 520
     iget-object v0, p0, Landroid/graphics/drawable/RotateDrawable$RotateState;->mDrawable:Landroid/graphics/drawable/Drawable;
 
     iget-object v1, p1, Landroid/graphics/drawable/RotateDrawable$RotateState;->mDrawable:Landroid/graphics/drawable/Drawable;
@@ -107,50 +99,41 @@
 
     invoke-virtual {v0, v1}, Landroid/graphics/drawable/Drawable;->setLevel(I)Z
 
-    .line 521
     iget-boolean v0, p1, Landroid/graphics/drawable/RotateDrawable$RotateState;->mPivotXRel:Z
 
     iput-boolean v0, p0, Landroid/graphics/drawable/RotateDrawable$RotateState;->mPivotXRel:Z
 
-    .line 522
     iget v0, p1, Landroid/graphics/drawable/RotateDrawable$RotateState;->mPivotX:F
 
     iput v0, p0, Landroid/graphics/drawable/RotateDrawable$RotateState;->mPivotX:F
 
-    .line 523
     iget-boolean v0, p1, Landroid/graphics/drawable/RotateDrawable$RotateState;->mPivotYRel:Z
 
     iput-boolean v0, p0, Landroid/graphics/drawable/RotateDrawable$RotateState;->mPivotYRel:Z
 
-    .line 524
     iget v0, p1, Landroid/graphics/drawable/RotateDrawable$RotateState;->mPivotY:F
 
     iput v0, p0, Landroid/graphics/drawable/RotateDrawable$RotateState;->mPivotY:F
 
-    .line 525
     iget v0, p1, Landroid/graphics/drawable/RotateDrawable$RotateState;->mFromDegrees:F
 
     iput v0, p0, Landroid/graphics/drawable/RotateDrawable$RotateState;->mCurrentDegrees:F
 
     iput v0, p0, Landroid/graphics/drawable/RotateDrawable$RotateState;->mFromDegrees:F
 
-    .line 526
     iget v0, p1, Landroid/graphics/drawable/RotateDrawable$RotateState;->mToDegrees:F
 
     iput v0, p0, Landroid/graphics/drawable/RotateDrawable$RotateState;->mToDegrees:F
 
-    .line 527
     const/4 v0, 0x1
 
     iput-boolean v0, p0, Landroid/graphics/drawable/RotateDrawable$RotateState;->mCheckedConstantState:Z
 
     iput-boolean v0, p0, Landroid/graphics/drawable/RotateDrawable$RotateState;->mCanConstantState:Z
 
-    .line 529
     :cond_0
     return-void
 
-    .line 515
     :cond_1
     iget-object v0, p1, Landroid/graphics/drawable/RotateDrawable$RotateState;->mDrawable:Landroid/graphics/drawable/Drawable;
 
@@ -175,12 +158,10 @@
     .prologue
     const/4 v1, 0x1
 
-    .line 547
     iget-boolean v0, p0, Landroid/graphics/drawable/RotateDrawable$RotateState;->mCheckedConstantState:Z
 
     if-nez v0, :cond_0
 
-    .line 548
     iget-object v0, p0, Landroid/graphics/drawable/RotateDrawable$RotateState;->mDrawable:Landroid/graphics/drawable/Drawable;
 
     invoke-virtual {v0}, Landroid/graphics/drawable/Drawable;->getConstantState()Landroid/graphics/drawable/Drawable$ConstantState;
@@ -194,16 +175,13 @@
     :goto_0
     iput-boolean v0, p0, Landroid/graphics/drawable/RotateDrawable$RotateState;->mCanConstantState:Z
 
-    .line 549
     iput-boolean v1, p0, Landroid/graphics/drawable/RotateDrawable$RotateState;->mCheckedConstantState:Z
 
-    .line 552
     :cond_0
     iget-boolean v0, p0, Landroid/graphics/drawable/RotateDrawable$RotateState;->mCanConstantState:Z
 
     return v0
 
-    .line 548
     :cond_1
     const/4 v0, 0x0
 
@@ -214,7 +192,6 @@
     .locals 1
 
     .prologue
-    .line 543
     iget v0, p0, Landroid/graphics/drawable/RotateDrawable$RotateState;->mChangingConfigurations:I
 
     return v0
@@ -226,7 +203,6 @@
     .prologue
     const/4 v1, 0x0
 
-    .line 533
     new-instance v0, Landroid/graphics/drawable/RotateDrawable;
 
     invoke-direct {v0, p0, v1, v1}, Landroid/graphics/drawable/RotateDrawable;-><init>(Landroid/graphics/drawable/RotateDrawable$RotateState;Landroid/content/res/Resources;Landroid/graphics/drawable/RotateDrawable$1;)V
@@ -239,7 +215,6 @@
     .param p1, "res"    # Landroid/content/res/Resources;
 
     .prologue
-    .line 538
     new-instance v0, Landroid/graphics/drawable/RotateDrawable;
 
     const/4 v1, 0x0

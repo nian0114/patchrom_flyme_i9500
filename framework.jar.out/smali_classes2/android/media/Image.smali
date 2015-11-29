@@ -23,10 +23,8 @@
     .locals 0
 
     .prologue
-    .line 53
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 54
     return-void
 .end method
 
@@ -41,12 +39,10 @@
     .prologue
     const/4 v3, 0x0
 
-    .line 135
     iget-object v0, p0, Landroid/media/Image;->mCropRect:Landroid/graphics/Rect;
 
     if-nez v0, :cond_0
 
-    .line 136
     new-instance v0, Landroid/graphics/Rect;
 
     invoke-virtual {p0}, Landroid/media/Image;->getWidth()I
@@ -59,7 +55,6 @@
 
     invoke-direct {v0, v3, v3, v1, v2}, Landroid/graphics/Rect;-><init>(IIII)V
 
-    .line 138
     :goto_0
     return-object v0
 
@@ -95,12 +90,10 @@
     .prologue
     const/4 v3, 0x0
 
-    .line 149
     new-instance v0, Landroid/graphics/Rect;
 
     invoke-direct {v0, p1}, Landroid/graphics/Rect;-><init>(Landroid/graphics/Rect;)V
 
-    .line 150
     .end local p1    # "cropRect":Landroid/graphics/Rect;
     .local v0, "cropRect":Landroid/graphics/Rect;
     invoke-virtual {p0}, Landroid/media/Image;->getWidth()I
@@ -113,9 +106,7 @@
 
     invoke-virtual {v0, v3, v3, v1, v2}, Landroid/graphics/Rect;->intersect(IIII)Z
 
-    .line 151
     iput-object v0, p0, Landroid/media/Image;->mCropRect:Landroid/graphics/Rect;
 
-    .line 152
     return-void
 .end method

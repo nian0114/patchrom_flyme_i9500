@@ -26,7 +26,6 @@
     .locals 0
 
     .prologue
-    .line 1402
     iput-object p1, p0, Lcom/android/internal/policy/impl/GlobalActions$11;->this$0:Lcom/android/internal/policy/impl/GlobalActions;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -52,7 +51,6 @@
     .end annotation
 
     .prologue
-    .line 1405
     .local p1, "adapterView":Landroid/widget/AdapterView;, "Landroid/widget/AdapterView<*>;"
     const-string v0, "GlobalActions"
 
@@ -76,7 +74,6 @@
 
     invoke-static {v0, v1}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1406
     # getter for: Lcom/android/internal/policy/impl/GlobalActions;->mCoverViewListView:Landroid/widget/ListView;
     invoke-static {}, Lcom/android/internal/policy/impl/GlobalActions;->access$3100()Landroid/widget/ListView;
 
@@ -86,7 +83,6 @@
 
     invoke-virtual {v0, v1}, Landroid/widget/ListView;->setEnabled(Z)V
 
-    .line 1407
     iget-object v0, p0, Lcom/android/internal/policy/impl/GlobalActions$11;->this$0:Lcom/android/internal/policy/impl/GlobalActions;
 
     # getter for: Lcom/android/internal/policy/impl/GlobalActions;->mAdapter:Lcom/android/internal/policy/impl/GlobalActions$MyAdapter;
@@ -102,6 +98,5 @@
 
     invoke-interface {v0}, Lcom/android/internal/policy/impl/GlobalActions$Action;->onPress()V
 
-    .line 1408
     return-void
 .end method

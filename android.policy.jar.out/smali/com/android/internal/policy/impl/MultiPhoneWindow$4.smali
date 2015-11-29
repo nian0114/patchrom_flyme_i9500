@@ -23,7 +23,6 @@
     .locals 0
 
     .prologue
-    .line 2558
     iput-object p1, p0, Lcom/android/internal/policy/impl/MultiPhoneWindow$4;->this$0:Lcom/android/internal/policy/impl/MultiPhoneWindow;
 
     invoke-direct {p0}, Landroid/os/Handler;-><init>()V
@@ -38,17 +37,14 @@
     .param p1, "msg"    # Landroid/os/Message;
 
     .prologue
-    .line 2560
     iget v1, p1, Landroid/os/Message;->what:I
 
     packed-switch v1, :pswitch_data_0
 
-    .line 2571
     :goto_0
     :pswitch_0
     return-void
 
-    .line 2562
     :pswitch_1
     iget-object v1, p0, Lcom/android/internal/policy/impl/MultiPhoneWindow$4;->this$0:Lcom/android/internal/policy/impl/MultiPhoneWindow;
 
@@ -64,7 +60,6 @@
 
     goto :goto_0
 
-    .line 2566
     :pswitch_2
     iget-object v1, p0, Lcom/android/internal/policy/impl/MultiPhoneWindow$4;->this$0:Lcom/android/internal/policy/impl/MultiPhoneWindow;
 
@@ -73,7 +68,6 @@
 
     move-result-object v0
 
-    .line 2567
     .local v0, "multiWindowStyle":Lcom/samsung/android/multiwindow/MultiWindowStyle;
     const/4 v1, 0x4
 
@@ -81,7 +75,6 @@
 
     invoke-virtual {v0, v1, v2}, Lcom/samsung/android/multiwindow/MultiWindowStyle;->setOption(IZ)V
 
-    .line 2568
     iget-object v1, p0, Lcom/android/internal/policy/impl/MultiPhoneWindow$4;->this$0:Lcom/android/internal/policy/impl/MultiPhoneWindow;
 
     iget-object v2, p0, Lcom/android/internal/policy/impl/MultiPhoneWindow$4;->this$0:Lcom/android/internal/policy/impl/MultiPhoneWindow;
@@ -96,7 +89,6 @@
 
     goto :goto_0
 
-    .line 2560
     nop
 
     :pswitch_data_0

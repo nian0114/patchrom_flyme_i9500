@@ -23,7 +23,6 @@
     .locals 0
 
     .prologue
-    .line 5150
     iput-object p1, p0, Lcom/android/server/power/PowerManagerService$6;->this$0:Lcom/android/server/power/PowerManagerService;
 
     invoke-direct {p0}, Landroid/content/BroadcastReceiver;-><init>()V
@@ -39,7 +38,6 @@
     .param p2, "intent"    # Landroid/content/Intent;
 
     .prologue
-    .line 5152
     iget-object v1, p0, Lcom/android/server/power/PowerManagerService$6;->this$0:Lcom/android/server/power/PowerManagerService;
 
     # getter for: Lcom/android/server/power/PowerManagerService;->mLock:Ljava/lang/Object;
@@ -49,13 +47,11 @@
 
     monitor-enter v2
 
-    .line 5153
     :try_start_0
     invoke-virtual {p2}, Landroid/content/Intent;->getAction()Ljava/lang/String;
 
     move-result-object v0
 
-    .line 5154
     .local v0, "action":Ljava/lang/String;
     const-string v1, "ResponseAxT9Info"
 
@@ -65,7 +61,6 @@
 
     if-eqz v1, :cond_0
 
-    .line 5155
     iget-object v1, p0, Lcom/android/server/power/PowerManagerService$6;->this$0:Lcom/android/server/power/PowerManagerService;
 
     const-string v3, "AxT9IME.isVisibleWindow"
@@ -78,14 +73,11 @@
 
     iput-boolean v3, v1, Lcom/android/server/power/PowerManagerService;->mIsSipVisible:Z
 
-    .line 5157
     :cond_0
     monitor-exit v2
 
-    .line 5158
     return-void
 
-    .line 5157
     .end local v0    # "action":Ljava/lang/String;
     :catchall_0
     move-exception v1

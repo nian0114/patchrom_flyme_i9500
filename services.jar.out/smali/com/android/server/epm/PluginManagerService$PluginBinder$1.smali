@@ -23,7 +23,6 @@
     .locals 0
 
     .prologue
-    .line 352
     iput-object p1, p0, Lcom/android/server/epm/PluginManagerService$PluginBinder$1;->this$1:Lcom/android/server/epm/PluginManagerService$PluginBinder;
 
     invoke-direct {p0}, Landroid/content/BroadcastReceiver;-><init>()V
@@ -39,28 +38,23 @@
     .param p2, "intent"    # Landroid/content/Intent;
 
     .prologue
-    .line 355
     invoke-virtual/range {p2 .. p2}, Landroid/content/Intent;->getAction()Ljava/lang/String;
 
     move-result-object v1
 
-    .line 359
     .local v1, "action":Ljava/lang/String;
     invoke-virtual/range {p2 .. p2}, Landroid/content/Intent;->getData()Landroid/net/Uri;
 
     move-result-object v5
 
-    .line 360
     .local v5, "data":Landroid/net/Uri;
     invoke-virtual {v5}, Landroid/net/Uri;->getEncodedSchemeSpecificPart()Ljava/lang/String;
 
     move-result-object v12
 
-    .line 365
     .local v12, "packageName":Ljava/lang/String;
     if-eqz v12, :cond_3
 
-    .line 367
     const-string v15, "android.intent.action.PACKAGE_ADDED"
 
     invoke-virtual {v1, v15}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
@@ -85,7 +79,6 @@
 
     if-eqz v15, :cond_6
 
-    .line 372
     :cond_0
     :try_start_0
     move-object/from16 v0, p0
@@ -107,7 +100,6 @@
 
     move-result-object v14
 
-    .line 375
     .local v14, "pkgInfo":Landroid/content/pm/PackageInfo;
     if-eqz v14, :cond_3
 
@@ -115,7 +107,6 @@
 
     if-eqz v15, :cond_3
 
-    .line 378
     iget-object v3, v14, Landroid/content/pm/PackageInfo;->requestedPermissions:[Ljava/lang/String;
 
     .local v3, "arr$":[Ljava/lang/String;
@@ -130,7 +121,6 @@
 
     aget-object v13, v3, v8
 
-    .line 381
     .local v13, "permission":Ljava/lang/String;
     move-object/from16 v0, p0
 
@@ -141,11 +131,9 @@
 
     move-result-object v7
 
-    .line 385
     .local v7, "helper":Lcom/android/server/epm/IPluginHelper;
     if-eqz v7, :cond_1
 
-    .line 387
     const-string v15, "android.intent.action.PACKAGE_ADDED"
 
     invoke-virtual {v1, v15}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
@@ -154,32 +142,26 @@
 
     if-eqz v15, :cond_2
 
-    .line 388
     new-instance v11, Landroid/os/Message;
 
     invoke-direct {v11}, Landroid/os/Message;-><init>()V
 
-    .line 389
     .local v11, "msg":Landroid/os/Message;
     const/4 v15, 0x6
 
     iput v15, v11, Landroid/os/Message;->what:I
 
-    .line 390
     new-instance v4, Landroid/os/Bundle;
 
     invoke-direct {v4}, Landroid/os/Bundle;-><init>()V
 
-    .line 391
     .local v4, "bdl":Landroid/os/Bundle;
-    const-string/jumbo v15, "packageName"
+    const-string v15, "packageName"
 
     invoke-virtual {v4, v15, v12}, Landroid/os/Bundle;->putString(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 392
     iput-object v4, v11, Landroid/os/Message;->obj:Ljava/lang/Object;
 
-    .line 393
     move-object/from16 v0, p0
 
     iget-object v15, v0, Lcom/android/server/epm/PluginManagerService$PluginBinder$1;->this$1:Lcom/android/server/epm/PluginManagerService$PluginBinder;
@@ -205,7 +187,6 @@
 
     invoke-virtual {v15, v11}, Landroid/os/Handler;->sendMessage(Landroid/os/Message;)Z
 
-    .line 378
     .end local v4    # "bdl":Landroid/os/Bundle;
     .end local v11    # "msg":Landroid/os/Message;
     :cond_1
@@ -214,7 +195,6 @@
 
     goto :goto_0
 
-    .line 395
     :cond_2
     const-string v15, "android.intent.action.PACKAGE_CHANGED"
 
@@ -224,7 +204,6 @@
 
     if-eqz v15, :cond_5
 
-    .line 397
     move-object/from16 v0, p0
 
     iget-object v15, v0, Lcom/android/server/epm/PluginManagerService$PluginBinder$1;->this$1:Lcom/android/server/epm/PluginManagerService$PluginBinder;
@@ -244,7 +223,6 @@
 
     move-result-object v9
 
-    .line 400
     .local v9, "info":Landroid/content/pm/ApplicationInfo;
     if-eqz v9, :cond_4
 
@@ -252,14 +230,12 @@
 
     if-eqz v15, :cond_4
 
-    .line 404
     invoke-interface {v7, v12}, Lcom/android/server/epm/IPluginHelper;->onPluginEnabled(Ljava/lang/String;)V
     :try_end_0
     .catch Landroid/content/pm/PackageManager$NameNotFoundException; {:try_start_0 .. :try_end_0} :catch_0
 
     goto :goto_1
 
-    .line 418
     .end local v3    # "arr$":[Ljava/lang/String;
     .end local v7    # "helper":Lcom/android/server/epm/IPluginHelper;
     .end local v8    # "i$":I
@@ -270,16 +246,13 @@
     :catch_0
     move-exception v6
 
-    .line 419
     .local v6, "e":Landroid/content/pm/PackageManager$NameNotFoundException;
     invoke-virtual {v6}, Landroid/content/pm/PackageManager$NameNotFoundException;->printStackTrace()V
 
-    .line 431
     .end local v6    # "e":Landroid/content/pm/PackageManager$NameNotFoundException;
     :cond_3
     return-void
 
-    .line 406
     .restart local v3    # "arr$":[Ljava/lang/String;
     .restart local v7    # "helper":Lcom/android/server/epm/IPluginHelper;
     .restart local v8    # "i$":I
@@ -295,12 +268,10 @@
 
     if-nez v15, :cond_1
 
-    .line 410
     invoke-interface {v7, v12}, Lcom/android/server/epm/IPluginHelper;->onPluginDisabled(Ljava/lang/String;)V
 
     goto :goto_1
 
-    .line 413
     .end local v9    # "info":Landroid/content/pm/ApplicationInfo;
     :cond_5
     invoke-interface {v7}, Lcom/android/server/epm/IPluginHelper;->onBootCompleted()V
@@ -309,7 +280,6 @@
 
     goto :goto_1
 
-    .line 422
     .end local v3    # "arr$":[Ljava/lang/String;
     .end local v7    # "helper":Lcom/android/server/epm/IPluginHelper;
     .end local v8    # "i$":I
@@ -325,7 +295,6 @@
 
     if-eqz v15, :cond_3
 
-    .line 423
     move-object/from16 v0, p0
 
     iget-object v15, v0, Lcom/android/server/epm/PluginManagerService$PluginBinder$1;->this$1:Lcom/android/server/epm/PluginManagerService$PluginBinder;
@@ -341,7 +310,6 @@
 
     move-result-object v2
 
-    .line 424
     .local v2, "allHelper":Ljava/util/Collection;, "Ljava/util/Collection<Lcom/android/server/epm/IPluginHelper;>;"
     invoke-interface {v2}, Ljava/util/Collection;->iterator()Ljava/util/Iterator;
 
@@ -362,11 +330,9 @@
 
     check-cast v7, Lcom/android/server/epm/IPluginHelper;
 
-    .line 425
     .restart local v7    # "helper":Lcom/android/server/epm/IPluginHelper;
     if-eqz v7, :cond_7
 
-    .line 426
     move-object/from16 v0, p0
 
     iget-object v15, v0, Lcom/android/server/epm/PluginManagerService$PluginBinder$1;->this$1:Lcom/android/server/epm/PluginManagerService$PluginBinder;

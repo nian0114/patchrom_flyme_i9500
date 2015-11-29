@@ -31,10 +31,8 @@
     .prologue
     const/4 v6, 0x0
 
-    .line 55
     invoke-direct {p0}, Landroid/os/ITactileAssistService$Stub;-><init>()V
 
-    .line 56
     const-string v4, "TactileAssistService"
 
     const/4 v5, 0x4
@@ -45,14 +43,12 @@
 
     if-eqz v4, :cond_0
 
-    .line 57
     const-string v4, "TactileAssistService"
 
     const-string v5, "TactileAssist Service started"
 
     invoke-static {v4, v5}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 59
     :cond_0
     invoke-virtual {p1}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
 
@@ -64,7 +60,6 @@
 
     move-result v3
 
-    .line 61
     .local v3, "tactileassistLevel":I
     invoke-virtual {p1}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
 
@@ -76,7 +71,6 @@
 
     move-result v1
 
-    .line 64
     .local v1, "tactileassistEnable":I
     invoke-virtual {p1}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
 
@@ -88,7 +82,6 @@
 
     move-result v2
 
-    .line 68
     .local v2, "tactileassistInternalEnable":I
     invoke-virtual {p1}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
 
@@ -96,7 +89,6 @@
 
     sput-object v4, Lcom/android/server/TactileAssistService;->mContentResolver:Landroid/content/ContentResolver;
 
-    .line 70
     :try_start_0
     const-string v4, "com.android.settings"
 
@@ -110,7 +102,6 @@
     :try_end_0
     .catch Landroid/content/pm/PackageManager$NameNotFoundException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 76
     :goto_0
     iget-object v4, p0, Lcom/android/server/TactileAssistService;->mContext:Landroid/content/Context;
 
@@ -120,21 +111,17 @@
 
     iput-object v4, p0, Lcom/android/server/TactileAssistService;->mTactileAssistSettings:Lcom/android/server/TactileAssistSettings;
 
-    .line 77
     iget-object v4, p0, Lcom/android/server/TactileAssistService;->mTactileAssistSettings:Lcom/android/server/TactileAssistSettings;
 
     const/4 v5, 0x1
 
     invoke-virtual {v4, v1, v2, v3, v5}, Lcom/android/server/TactileAssistSettings;->storeTactileAssistSettings(IIIZ)V
 
-    .line 81
     return-void
 
-    .line 72
     :catch_0
     move-exception v0
 
-    .line 73
     .local v0, "e1":Landroid/content/pm/PackageManager$NameNotFoundException;
     const-string v4, "TactileAssistService"
 
@@ -176,7 +163,6 @@
     .end annotation
 
     .prologue
-    .line 85
     iget-object v0, p0, Lcom/android/server/TactileAssistService;->mTactileAssistSettings:Lcom/android/server/TactileAssistSettings;
 
     invoke-virtual {v0}, Lcom/android/server/TactileAssistSettings;->getActuators()[I
@@ -197,16 +183,13 @@
     .end annotation
 
     .prologue
-    .line 150
     invoke-static {}, Landroid/os/Binder;->clearCallingIdentity()J
 
     move-result-wide v2
 
-    .line 151
     .local v2, "token":J
     const/4 v0, 0x0
 
-    .line 152
     .local v0, "result":Z
     const/16 v1, 0xf
 
@@ -217,15 +200,12 @@
     :cond_0
     const/4 v1, 0x0
 
-    .line 176
     :goto_0
     return v1
 
-    .line 153
     :cond_1
     packed-switch p1, :pswitch_data_0
 
-    .line 171
     :pswitch_0
     sget-object v1, Lcom/android/server/TactileAssistService;->mContentResolver:Landroid/content/ContentResolver;
 
@@ -235,16 +215,13 @@
 
     move-result v0
 
-    .line 175
     :goto_1
     invoke-static {v2, v3}, Landroid/os/Binder;->restoreCallingIdentity(J)V
 
     move v1, v0
 
-    .line 176
     goto :goto_0
 
-    .line 155
     :pswitch_1
     sget-object v1, Lcom/android/server/TactileAssistService;->mContentResolver:Landroid/content/ContentResolver;
 
@@ -254,10 +231,8 @@
 
     move-result v0
 
-    .line 157
     goto :goto_1
 
-    .line 159
     :pswitch_2
     sget-object v1, Lcom/android/server/TactileAssistService;->mContentResolver:Landroid/content/ContentResolver;
 
@@ -267,10 +242,8 @@
 
     move-result v0
 
-    .line 161
     goto :goto_1
 
-    .line 163
     :pswitch_3
     sget-object v1, Lcom/android/server/TactileAssistService;->mContentResolver:Landroid/content/ContentResolver;
 
@@ -280,10 +253,8 @@
 
     move-result v0
 
-    .line 165
     goto :goto_1
 
-    .line 167
     :pswitch_4
     sget-object v1, Lcom/android/server/TactileAssistService;->mContentResolver:Landroid/content/ContentResolver;
 
@@ -293,10 +264,8 @@
 
     move-result v0
 
-    .line 169
     goto :goto_1
 
-    .line 153
     nop
 
     :pswitch_data_0
@@ -323,12 +292,10 @@
     .end annotation
 
     .prologue
-    .line 90
     invoke-static {}, Landroid/os/Binder;->clearCallingIdentity()J
 
     move-result-wide v2
 
-    .line 91
     .local v2, "token":J
     sget-object v4, Lcom/android/server/TactileAssistService;->mContentResolver:Landroid/content/ContentResolver;
 
@@ -343,11 +310,9 @@
 
     move-result v0
 
-    .line 93
     .local v0, "result":Z
     invoke-static {v2, v3}, Landroid/os/Binder;->restoreCallingIdentity(J)V
 
-    .line 94
     const-string v1, "TactileAssistService"
 
     new-instance v4, Ljava/lang/StringBuilder;
@@ -370,10 +335,8 @@
 
     invoke-static {v1, v4}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 95
     return v0
 
-    .line 91
     .end local v0    # "result":Z
     :cond_0
     const/4 v1, 0x0
@@ -391,12 +354,10 @@
     .end annotation
 
     .prologue
-    .line 100
     invoke-static {}, Landroid/os/Binder;->clearCallingIdentity()J
 
     move-result-wide v2
 
-    .line 101
     .local v2, "token":J
     sget-object v4, Lcom/android/server/TactileAssistService;->mContentResolver:Landroid/content/ContentResolver;
 
@@ -411,14 +372,11 @@
 
     move-result v0
 
-    .line 103
     .local v0, "result":Z
     invoke-static {v2, v3}, Landroid/os/Binder;->restoreCallingIdentity(J)V
 
-    .line 104
     return v0
 
-    .line 101
     .end local v0    # "result":Z
     :cond_0
     const/4 v1, 0x0
@@ -436,12 +394,10 @@
     .end annotation
 
     .prologue
-    .line 109
     invoke-static {}, Landroid/os/Binder;->clearCallingIdentity()J
 
     move-result-wide v2
 
-    .line 110
     .local v2, "token":J
     const/4 v1, 0x3
 
@@ -454,11 +410,9 @@
     :cond_0
     const/4 v0, 0x0
 
-    .line 114
     :goto_0
     return v0
 
-    .line 111
     :cond_1
     sget-object v1, Lcom/android/server/TactileAssistService;->mContentResolver:Landroid/content/ContentResolver;
 
@@ -468,7 +422,6 @@
 
     move-result v0
 
-    .line 113
     .local v0, "result":Z
     invoke-static {v2, v3}, Landroid/os/Binder;->restoreCallingIdentity(J)V
 
@@ -486,16 +439,13 @@
     .end annotation
 
     .prologue
-    .line 181
     invoke-static {}, Landroid/os/Binder;->clearCallingIdentity()J
 
     move-result-wide v2
 
-    .line 182
     .local v2, "token":J
     const/4 v0, 0x0
 
-    .line 183
     .local v0, "result":Z
     const/16 v1, 0xf
 
@@ -506,25 +456,20 @@
     :cond_0
     const/4 v1, 0x0
 
-    .line 203
     :goto_0
     return v1
 
-    .line 184
     :cond_1
     packed-switch p1, :pswitch_data_0
 
-    .line 202
     :goto_1
     :pswitch_0
     invoke-static {v2, v3}, Landroid/os/Binder;->restoreCallingIdentity(J)V
 
     move v1, v0
 
-    .line 203
     goto :goto_0
 
-    .line 186
     :pswitch_1
     sget-object v1, Lcom/android/server/TactileAssistService;->mContentResolver:Landroid/content/ContentResolver;
 
@@ -534,10 +479,8 @@
 
     move-result v0
 
-    .line 188
     goto :goto_1
 
-    .line 190
     :pswitch_2
     sget-object v1, Lcom/android/server/TactileAssistService;->mContentResolver:Landroid/content/ContentResolver;
 
@@ -547,10 +490,8 @@
 
     move-result v0
 
-    .line 192
     goto :goto_1
 
-    .line 194
     :pswitch_3
     sget-object v1, Lcom/android/server/TactileAssistService;->mContentResolver:Landroid/content/ContentResolver;
 
@@ -560,10 +501,8 @@
 
     move-result v0
 
-    .line 196
     goto :goto_1
 
-    .line 198
     :pswitch_4
     sget-object v1, Lcom/android/server/TactileAssistService;->mContentResolver:Landroid/content/ContentResolver;
 
@@ -575,7 +514,6 @@
 
     goto :goto_1
 
-    .line 184
     nop
 
     :pswitch_data_0
@@ -603,16 +541,13 @@
     .end annotation
 
     .prologue
-    .line 119
     invoke-static {}, Landroid/os/Binder;->clearCallingIdentity()J
 
     move-result-wide v2
 
-    .line 120
     .local v2, "token":J
     const/4 v0, 0x0
 
-    .line 121
     .local v0, "result":Z
     const/16 v1, 0xf
 
@@ -623,15 +558,12 @@
     :cond_0
     const/4 v1, 0x0
 
-    .line 145
     :goto_0
     return v1
 
-    .line 122
     :cond_1
     packed-switch p1, :pswitch_data_0
 
-    .line 140
     :pswitch_0
     sget-object v1, Lcom/android/server/TactileAssistService;->mContentResolver:Landroid/content/ContentResolver;
 
@@ -641,16 +573,13 @@
 
     move-result v0
 
-    .line 144
     :goto_1
     invoke-static {v2, v3}, Landroid/os/Binder;->restoreCallingIdentity(J)V
 
     move v1, v0
 
-    .line 145
     goto :goto_0
 
-    .line 124
     :pswitch_1
     sget-object v1, Lcom/android/server/TactileAssistService;->mContentResolver:Landroid/content/ContentResolver;
 
@@ -660,10 +589,8 @@
 
     move-result v0
 
-    .line 126
     goto :goto_1
 
-    .line 128
     :pswitch_2
     sget-object v1, Lcom/android/server/TactileAssistService;->mContentResolver:Landroid/content/ContentResolver;
 
@@ -673,10 +600,8 @@
 
     move-result v0
 
-    .line 130
     goto :goto_1
 
-    .line 132
     :pswitch_3
     sget-object v1, Lcom/android/server/TactileAssistService;->mContentResolver:Landroid/content/ContentResolver;
 
@@ -686,10 +611,8 @@
 
     move-result v0
 
-    .line 134
     goto :goto_1
 
-    .line 136
     :pswitch_4
     sget-object v1, Lcom/android/server/TactileAssistService;->mContentResolver:Landroid/content/ContentResolver;
 
@@ -699,10 +622,8 @@
 
     move-result v0
 
-    .line 138
     goto :goto_1
 
-    .line 122
     nop
 
     :pswitch_data_0
@@ -732,11 +653,9 @@
 
     const/4 v1, -0x1
 
-    .line 208
     iget-object v0, p0, Lcom/android/server/TactileAssistService;->mTactileAssistSettings:Lcom/android/server/TactileAssistSettings;
 
     invoke-virtual {v0, v1, v1, v1, v2}, Lcom/android/server/TactileAssistSettings;->storeTactileAssistSettings(IIIZ)V
 
-    .line 209
     return v2
 .end method

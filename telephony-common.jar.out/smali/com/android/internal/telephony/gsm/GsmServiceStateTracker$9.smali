@@ -26,7 +26,6 @@
     .locals 0
 
     .prologue
-    .line 5062
     iput-object p1, p0, Lcom/android/internal/telephony/gsm/GsmServiceStateTracker$9;->this$0:Lcom/android/internal/telephony/gsm/GsmServiceStateTracker;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -44,20 +43,15 @@
     .prologue
     const/4 v6, 0x0
 
-    .line 5064
     invoke-interface {p1}, Landroid/content/DialogInterface;->dismiss()V
 
-    .line 5066
     packed-switch p2, :pswitch_data_0
 
-    .line 5080
     :goto_0
     sput-object v6, Lcom/android/internal/telephony/gsm/GsmServiceStateTracker;->mRescanDialog:Landroid/app/AlertDialog;
 
-    .line 5081
     return-void
 
-    .line 5068
     :pswitch_0
     new-instance v0, Landroid/content/Intent;
 
@@ -65,7 +59,6 @@
 
     invoke-direct {v0, v1}, Landroid/content/Intent;-><init>(Ljava/lang/String;)V
 
-    .line 5069
     .local v0, "intent":Landroid/content/Intent;
     const-string v1, "com.android.phone"
 
@@ -73,19 +66,16 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/content/Intent;->setClassName(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;
 
-    .line 5070
     const/high16 v1, 0x10000000
 
     invoke-virtual {v0, v1}, Landroid/content/Intent;->addFlags(I)Landroid/content/Intent;
 
-    .line 5071
     const-string v1, "search-type"
 
     const-string v2, "manual"
 
     invoke-virtual {v0, v1, v2}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;
 
-    .line 5072
     iget-object v1, p0, Lcom/android/internal/telephony/gsm/GsmServiceStateTracker$9;->this$0:Lcom/android/internal/telephony/gsm/GsmServiceStateTracker;
 
     iget-object v1, v1, Lcom/android/internal/telephony/gsm/GsmServiceStateTracker;->mPhone:Lcom/android/internal/telephony/gsm/GSMPhone;
@@ -98,7 +88,6 @@
 
     goto :goto_0
 
-    .line 5076
     .end local v0    # "intent":Landroid/content/Intent;
     :pswitch_1
     const-string v1, "ManualSelectionReceiver"
@@ -107,7 +96,6 @@
 
     invoke-static {v1, v2}, Landroid/telephony/Rlog;->v(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 5077
     iget-object v1, p0, Lcom/android/internal/telephony/gsm/GsmServiceStateTracker$9;->this$0:Lcom/android/internal/telephony/gsm/GsmServiceStateTracker;
 
     iget-object v2, p0, Lcom/android/internal/telephony/gsm/GsmServiceStateTracker$9;->this$0:Lcom/android/internal/telephony/gsm/GsmServiceStateTracker;
@@ -124,7 +112,6 @@
 
     goto :goto_0
 
-    .line 5066
     nop
 
     :pswitch_data_0

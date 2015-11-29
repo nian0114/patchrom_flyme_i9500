@@ -26,7 +26,6 @@
     .locals 0
 
     .prologue
-    .line 311
     iput-object p1, p0, Landroid/widget/Toast$1;->val$result:Landroid/widget/Toast;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -42,7 +41,6 @@
     .param p2, "event"    # Landroid/view/MotionEvent;
 
     .prologue
-    .line 313
     invoke-virtual {p2}, Landroid/view/MotionEvent;->getAction()I
 
     move-result v0
@@ -57,13 +55,11 @@
 
     if-ne v0, v1, :cond_1
 
-    .line 314
     :cond_0
     iget-object v0, p0, Landroid/widget/Toast$1;->val$result:Landroid/widget/Toast;
 
     invoke-virtual {v0}, Landroid/widget/Toast;->cancel()V
 
-    .line 316
     :cond_1
     const/4 v0, 0x1
 

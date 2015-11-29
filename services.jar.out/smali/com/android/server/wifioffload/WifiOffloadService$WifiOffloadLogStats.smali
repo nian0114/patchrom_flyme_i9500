@@ -23,7 +23,6 @@
     .locals 1
 
     .prologue
-    .line 712
     const/4 v0, 0x0
 
     sput-object v0, Lcom/android/server/wifioffload/WifiOffloadService$WifiOffloadLogStats;->sCriticalStats:Lcom/android/server/wifioffload/WifiOffloadLogger;
@@ -35,7 +34,6 @@
     .locals 0
 
     .prologue
-    .line 711
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -45,19 +43,16 @@
     .locals 2
 
     .prologue
-    .line 719
     sget-object v0, Lcom/android/server/wifioffload/WifiOffloadService$WifiOffloadLogStats;->sCriticalStats:Lcom/android/server/wifioffload/WifiOffloadLogger;
 
     if-eqz v0, :cond_0
 
-    .line 720
     sget-object v0, Lcom/android/server/wifioffload/WifiOffloadService$WifiOffloadLogStats;->sCriticalStats:Lcom/android/server/wifioffload/WifiOffloadLogger;
 
     const/4 v1, 0x1
 
     invoke-virtual {v0, v1}, Lcom/android/server/wifioffload/WifiOffloadLogger;->logLastDiscourse(Z)V
 
-    .line 722
     :cond_0
     return-void
 .end method
@@ -67,19 +62,16 @@
     .param p0, "writer"    # Ljava/io/PrintWriter;
 
     .prologue
-    .line 725
     sget-object v0, Lcom/android/server/wifioffload/WifiOffloadService$WifiOffloadLogStats;->sCriticalStats:Lcom/android/server/wifioffload/WifiOffloadLogger;
 
     if-eqz v0, :cond_0
 
-    .line 726
     sget-object v0, Lcom/android/server/wifioffload/WifiOffloadService$WifiOffloadLogStats;->sCriticalStats:Lcom/android/server/wifioffload/WifiOffloadLogger;
 
     const-string v1, "  "
 
     invoke-virtual {v0, p0, v1}, Lcom/android/server/wifioffload/WifiOffloadLogger;->logLastDiscourse(Ljava/io/PrintWriter;Ljava/lang/String;)V
 
-    .line 728
     :cond_0
     return-void
 .end method
@@ -88,7 +80,6 @@
     .locals 3
 
     .prologue
-    .line 715
     new-instance v0, Lcom/android/server/wifioffload/WifiOffloadLogger;
 
     const/16 v1, 0x19
@@ -99,7 +90,6 @@
 
     sput-object v0, Lcom/android/server/wifioffload/WifiOffloadService$WifiOffloadLogStats;->sCriticalStats:Lcom/android/server/wifioffload/WifiOffloadLogger;
 
-    .line 716
     return-void
 .end method
 
@@ -108,17 +98,14 @@
     .param p0, "msg"    # Ljava/lang/String;
 
     .prologue
-    .line 731
     sget-object v0, Lcom/android/server/wifioffload/WifiOffloadService$WifiOffloadLogStats;->sCriticalStats:Lcom/android/server/wifioffload/WifiOffloadLogger;
 
     if-eqz v0, :cond_0
 
-    .line 732
     sget-object v0, Lcom/android/server/wifioffload/WifiOffloadService$WifiOffloadLogStats;->sCriticalStats:Lcom/android/server/wifioffload/WifiOffloadLogger;
 
     invoke-virtual {v0, p0}, Lcom/android/server/wifioffload/WifiOffloadLogger;->logString(Ljava/lang/String;)V
 
-    .line 734
     :cond_0
     return-void
 .end method

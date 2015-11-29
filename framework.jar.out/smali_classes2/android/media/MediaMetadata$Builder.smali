@@ -23,17 +23,14 @@
     .locals 1
 
     .prologue
-    .line 532
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 533
     new-instance v0, Landroid/os/Bundle;
 
     invoke-direct {v0}, Landroid/os/Bundle;-><init>()V
 
     iput-object v0, p0, Landroid/media/MediaMetadata$Builder;->mBundle:Landroid/os/Bundle;
 
-    .line 534
     return-void
 .end method
 
@@ -42,10 +39,8 @@
     .param p1, "source"    # Landroid/media/MediaMetadata;
 
     .prologue
-    .line 543
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 544
     new-instance v0, Landroid/os/Bundle;
 
     # getter for: Landroid/media/MediaMetadata;->mBundle:Landroid/os/Bundle;
@@ -57,7 +52,6 @@
 
     iput-object v0, p0, Landroid/media/MediaMetadata$Builder;->mBundle:Landroid/os/Bundle;
 
-    .line 545
     return-void
 .end method
 
@@ -67,7 +61,6 @@
     .locals 3
 
     .prologue
-    .line 703
     new-instance v0, Landroid/media/MediaMetadata;
 
     iget-object v1, p0, Landroid/media/MediaMetadata$Builder;->mBundle:Landroid/os/Bundle;
@@ -85,7 +78,6 @@
     .param p2, "value"    # Landroid/graphics/Bitmap;
 
     .prologue
-    .line 687
     # getter for: Landroid/media/MediaMetadata;->METADATA_KEYS_TYPE:Landroid/util/ArrayMap;
     invoke-static {}, Landroid/media/MediaMetadata;->access$200()Landroid/util/ArrayMap;
 
@@ -97,7 +89,6 @@
 
     if-eqz v0, :cond_0
 
-    .line 688
     # getter for: Landroid/media/MediaMetadata;->METADATA_KEYS_TYPE:Landroid/util/ArrayMap;
     invoke-static {}, Landroid/media/MediaMetadata;->access$200()Landroid/util/ArrayMap;
 
@@ -117,7 +108,6 @@
 
     if-eq v0, v1, :cond_0
 
-    .line 689
     new-instance v0, Ljava/lang/IllegalArgumentException;
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -148,13 +138,11 @@
 
     throw v0
 
-    .line 693
     :cond_0
     iget-object v0, p0, Landroid/media/MediaMetadata$Builder;->mBundle:Landroid/os/Bundle;
 
     invoke-virtual {v0, p1, p2}, Landroid/os/Bundle;->putParcelable(Ljava/lang/String;Landroid/os/Parcelable;)V
 
-    .line 694
     return-object p0
 .end method
 
@@ -164,7 +152,6 @@
     .param p2, "value"    # J
 
     .prologue
-    .line 638
     # getter for: Landroid/media/MediaMetadata;->METADATA_KEYS_TYPE:Landroid/util/ArrayMap;
     invoke-static {}, Landroid/media/MediaMetadata;->access$200()Landroid/util/ArrayMap;
 
@@ -176,7 +163,6 @@
 
     if-eqz v0, :cond_0
 
-    .line 639
     # getter for: Landroid/media/MediaMetadata;->METADATA_KEYS_TYPE:Landroid/util/ArrayMap;
     invoke-static {}, Landroid/media/MediaMetadata;->access$200()Landroid/util/ArrayMap;
 
@@ -194,7 +180,6 @@
 
     if-eqz v0, :cond_0
 
-    .line 640
     new-instance v0, Ljava/lang/IllegalArgumentException;
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -225,13 +210,11 @@
 
     throw v0
 
-    .line 644
     :cond_0
     iget-object v0, p0, Landroid/media/MediaMetadata$Builder;->mBundle:Landroid/os/Bundle;
 
     invoke-virtual {v0, p1, p2, p3}, Landroid/os/Bundle;->putLong(Ljava/lang/String;J)V
 
-    .line 645
     return-object p0
 .end method
 
@@ -241,7 +224,6 @@
     .param p2, "value"    # Landroid/media/Rating;
 
     .prologue
-    .line 662
     # getter for: Landroid/media/MediaMetadata;->METADATA_KEYS_TYPE:Landroid/util/ArrayMap;
     invoke-static {}, Landroid/media/MediaMetadata;->access$200()Landroid/util/ArrayMap;
 
@@ -253,7 +235,6 @@
 
     if-eqz v0, :cond_0
 
-    .line 663
     # getter for: Landroid/media/MediaMetadata;->METADATA_KEYS_TYPE:Landroid/util/ArrayMap;
     invoke-static {}, Landroid/media/MediaMetadata;->access$200()Landroid/util/ArrayMap;
 
@@ -273,7 +254,6 @@
 
     if-eq v0, v1, :cond_0
 
-    .line 664
     new-instance v0, Ljava/lang/IllegalArgumentException;
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -304,13 +284,11 @@
 
     throw v0
 
-    .line 668
     :cond_0
     iget-object v0, p0, Landroid/media/MediaMetadata$Builder;->mBundle:Landroid/os/Bundle;
 
     invoke-virtual {v0, p1, p2}, Landroid/os/Bundle;->putParcelable(Ljava/lang/String;Landroid/os/Parcelable;)V
 
-    .line 669
     return-object p0
 .end method
 
@@ -320,7 +298,6 @@
     .param p2, "value"    # Ljava/lang/String;
 
     .prologue
-    .line 611
     # getter for: Landroid/media/MediaMetadata;->METADATA_KEYS_TYPE:Landroid/util/ArrayMap;
     invoke-static {}, Landroid/media/MediaMetadata;->access$200()Landroid/util/ArrayMap;
 
@@ -332,7 +309,6 @@
 
     if-eqz v0, :cond_0
 
-    .line 612
     # getter for: Landroid/media/MediaMetadata;->METADATA_KEYS_TYPE:Landroid/util/ArrayMap;
     invoke-static {}, Landroid/media/MediaMetadata;->access$200()Landroid/util/ArrayMap;
 
@@ -352,7 +328,6 @@
 
     if-eq v0, v1, :cond_0
 
-    .line 613
     new-instance v0, Ljava/lang/IllegalArgumentException;
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -383,13 +358,11 @@
 
     throw v0
 
-    .line 617
     :cond_0
     iget-object v0, p0, Landroid/media/MediaMetadata$Builder;->mBundle:Landroid/os/Bundle;
 
     invoke-virtual {v0, p1, p2}, Landroid/os/Bundle;->putCharSequence(Ljava/lang/String;Ljava/lang/CharSequence;)V
 
-    .line 618
     return-object p0
 .end method
 
@@ -399,7 +372,6 @@
     .param p2, "value"    # Ljava/lang/CharSequence;
 
     .prologue
-    .line 574
     # getter for: Landroid/media/MediaMetadata;->METADATA_KEYS_TYPE:Landroid/util/ArrayMap;
     invoke-static {}, Landroid/media/MediaMetadata;->access$200()Landroid/util/ArrayMap;
 
@@ -411,7 +383,6 @@
 
     if-eqz v0, :cond_0
 
-    .line 575
     # getter for: Landroid/media/MediaMetadata;->METADATA_KEYS_TYPE:Landroid/util/ArrayMap;
     invoke-static {}, Landroid/media/MediaMetadata;->access$200()Landroid/util/ArrayMap;
 
@@ -431,7 +402,6 @@
 
     if-eq v0, v1, :cond_0
 
-    .line 576
     new-instance v0, Ljava/lang/IllegalArgumentException;
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -462,12 +432,10 @@
 
     throw v0
 
-    .line 580
     :cond_0
     iget-object v0, p0, Landroid/media/MediaMetadata$Builder;->mBundle:Landroid/os/Bundle;
 
     invoke-virtual {v0, p1, p2}, Landroid/os/Bundle;->putCharSequence(Ljava/lang/String;Ljava/lang/CharSequence;)V
 
-    .line 581
     return-object p0
 .end method

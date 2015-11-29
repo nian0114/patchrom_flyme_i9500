@@ -28,7 +28,6 @@
     .locals 0
 
     .prologue
-    .line 1089
     iput-object p1, p0, Lcom/android/internal/policy/impl/multiwindow/MultiPhoneWindowManager$5;->this$0:Lcom/android/internal/policy/impl/multiwindow/MultiPhoneWindowManager;
 
     iput-boolean p2, p0, Lcom/android/internal/policy/impl/multiwindow/MultiPhoneWindowManager$5;->val$forceShow:Z
@@ -44,7 +43,6 @@
     .locals 4
 
     .prologue
-    .line 1091
     iget-object v2, p0, Lcom/android/internal/policy/impl/multiwindow/MultiPhoneWindowManager$5;->this$0:Lcom/android/internal/policy/impl/multiwindow/MultiPhoneWindowManager;
 
     # invokes: Lcom/android/internal/policy/impl/multiwindow/MultiPhoneWindowManager;->isDeviceProvisioned()Z
@@ -54,7 +52,6 @@
 
     if-eqz v2, :cond_0
 
-    .line 1093
     :try_start_0
     iget-object v2, p0, Lcom/android/internal/policy/impl/multiwindow/MultiPhoneWindowManager$5;->this$0:Lcom/android/internal/policy/impl/multiwindow/MultiPhoneWindowManager;
 
@@ -69,7 +66,6 @@
 
     check-cast v1, Landroid/content/Intent;
 
-    .line 1094
     .local v1, "updateSettingsIntent":Landroid/content/Intent;
     iget-object v2, p0, Lcom/android/internal/policy/impl/multiwindow/MultiPhoneWindowManager$5;->this$0:Lcom/android/internal/policy/impl/multiwindow/MultiPhoneWindowManager;
 
@@ -80,27 +76,23 @@
 
     if-nez v2, :cond_1
 
-    .line 1095
     const-string v2, "MultiPhoneWindowManager"
 
     const-string v3, "updateMultiWindowTrayBar() -> stopService : com.sec.android.app.FlashBarService.MultiWindowTrayService"
 
     invoke-static {v2, v3}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1097
     iget-object v2, p0, Lcom/android/internal/policy/impl/multiwindow/MultiPhoneWindowManager$5;->this$0:Lcom/android/internal/policy/impl/multiwindow/MultiPhoneWindowManager;
 
     iget-object v2, v2, Lcom/android/internal/policy/impl/multiwindow/MultiPhoneWindowManager;->mContext:Landroid/content/Context;
 
     invoke-virtual {v2, v1}, Landroid/content/Context;->stopService(Landroid/content/Intent;)Z
 
-    .line 1108
     .end local v1    # "updateSettingsIntent":Landroid/content/Intent;
     :cond_0
     :goto_0
     return-void
 
-    .line 1099
     .restart local v1    # "updateSettingsIntent":Landroid/content/Intent;
     :cond_1
     const-string v2, "com.sec.android.multiwindow.ui.forceshow"
@@ -109,14 +101,12 @@
 
     invoke-virtual {v1, v2, v3}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Z)Landroid/content/Intent;
 
-    .line 1100
     const-string v2, "MultiPhoneWindowManager"
 
     const-string v3, "updateMultiWindowTrayBar() -> startService : com.sec.android.app.FlashBarService.MultiWindowTrayService"
 
     invoke-static {v2, v3}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1102
     iget-object v2, p0, Lcom/android/internal/policy/impl/multiwindow/MultiPhoneWindowManager$5;->this$0:Lcom/android/internal/policy/impl/multiwindow/MultiPhoneWindowManager;
 
     iget-object v2, v2, Lcom/android/internal/policy/impl/multiwindow/MultiPhoneWindowManager;->mContext:Landroid/content/Context;
@@ -127,12 +117,10 @@
 
     goto :goto_0
 
-    .line 1104
     .end local v1    # "updateSettingsIntent":Landroid/content/Intent;
     :catch_0
     move-exception v0
 
-    .line 1105
     .local v0, "e":Ljava/lang/Exception;
     invoke-virtual {v0}, Ljava/lang/Exception;->printStackTrace()V
 

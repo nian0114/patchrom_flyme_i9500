@@ -11,10 +11,8 @@
     .locals 0
 
     .prologue
-    .line 87
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 88
     return-void
 .end method
 
@@ -24,10 +22,8 @@
     .param p2, "attrs"    # Landroid/util/AttributeSet;
 
     .prologue
-    .line 96
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 97
     return-void
 .end method
 
@@ -38,7 +34,6 @@
     .prologue
     const-wide/high16 v0, 0x3ff0000000000000L    # 1.0
 
-    .line 104
     const/high16 v2, 0x3f800000    # 1.0f
 
     cmpl-float v2, p1, v2
@@ -77,7 +72,6 @@
     .param p1, "t"    # F
 
     .prologue
-    .line 100
     invoke-direct {p0, p1}, Landroid/view/animation/interpolator/ExpoEaseOut;->out(F)F
 
     move-result v0

@@ -26,7 +26,6 @@
     .locals 0
 
     .prologue
-    .line 530
     iput-object p1, p0, Lcom/android/internal/policy/impl/PhoneWindowManager$TwToolBoxPointerEventListener;->this$0:Lcom/android/internal/policy/impl/PhoneWindowManager;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -40,7 +39,6 @@
     .param p2, "x1"    # Lcom/android/internal/policy/impl/PhoneWindowManager$1;
 
     .prologue
-    .line 530
     invoke-direct {p0, p1}, Lcom/android/internal/policy/impl/PhoneWindowManager$TwToolBoxPointerEventListener;-><init>(Lcom/android/internal/policy/impl/PhoneWindowManager;)V
 
     return-void
@@ -53,21 +51,18 @@
     .param p1, "motionEvent"    # Landroid/view/MotionEvent;
 
     .prologue
-    .line 533
     iget-object v0, p0, Lcom/android/internal/policy/impl/PhoneWindowManager$TwToolBoxPointerEventListener;->this$0:Lcom/android/internal/policy/impl/PhoneWindowManager;
 
     iget-object v0, v0, Lcom/android/internal/policy/impl/PhoneWindowManager;->mTwToolBoxFloatingViewer:Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer;
 
     if-eqz v0, :cond_0
 
-    .line 534
     iget-object v0, p0, Lcom/android/internal/policy/impl/PhoneWindowManager$TwToolBoxPointerEventListener;->this$0:Lcom/android/internal/policy/impl/PhoneWindowManager;
 
     iget-object v0, v0, Lcom/android/internal/policy/impl/PhoneWindowManager;->mTwToolBoxFloatingViewer:Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer;
 
     invoke-virtual {v0, p1}, Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer;->onTouchEvent(Landroid/view/MotionEvent;)Z
 
-    .line 536
     :cond_0
     return-void
 .end method

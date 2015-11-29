@@ -12,7 +12,6 @@
     .locals 0
 
     .prologue
-    .line 3551
     iput-object p1, p0, Lcom/absolute/android/persistservice/k;->a:Lcom/absolute/android/persistservice/ABTPersistenceService;
 
     invoke-direct {p0}, Landroid/content/BroadcastReceiver;-><init>()V
@@ -24,7 +23,6 @@
     .locals 0
 
     .prologue
-    .line 3551
     invoke-direct {p0, p1}, Lcom/absolute/android/persistservice/k;-><init>(Lcom/absolute/android/persistservice/ABTPersistenceService;)V
 
     return-void
@@ -34,22 +32,18 @@
     .locals 2
 
     .prologue
-    .line 3554
     new-instance v0, Landroid/content/IntentFilter;
 
     invoke-direct {v0}, Landroid/content/IntentFilter;-><init>()V
 
-    .line 3555
     const-string v1, "android.intent.action.PACKAGE_REMOVED"
 
     invoke-virtual {v0, v1}, Landroid/content/IntentFilter;->addAction(Ljava/lang/String;)V
 
-    .line 3556
-    const-string/jumbo v1, "package"
+    const-string v1, "package"
 
     invoke-virtual {v0, v1}, Landroid/content/IntentFilter;->addDataScheme(Ljava/lang/String;)V
 
-    .line 3558
     iget-object v1, p0, Lcom/absolute/android/persistservice/k;->a:Lcom/absolute/android/persistservice/ABTPersistenceService;
 
     invoke-static {v1}, Lcom/absolute/android/persistservice/ABTPersistenceService;->c(Lcom/absolute/android/persistservice/ABTPersistenceService;)Landroid/content/Context;
@@ -58,7 +52,6 @@
 
     invoke-virtual {v1, p0, v0}, Landroid/content/Context;->registerReceiver(Landroid/content/BroadcastReceiver;Landroid/content/IntentFilter;)Landroid/content/Intent;
 
-    .line 3559
     return-void
 .end method
 
@@ -66,7 +59,6 @@
     .locals 2
 
     .prologue
-    .line 3551
     new-instance v0, Landroid/content/IntentFilter;
 
     invoke-direct {v0}, Landroid/content/IntentFilter;-><init>()V
@@ -75,7 +67,7 @@
 
     invoke-virtual {v0, v1}, Landroid/content/IntentFilter;->addAction(Ljava/lang/String;)V
 
-    const-string/jumbo v1, "package"
+    const-string v1, "package"
 
     invoke-virtual {v0, v1}, Landroid/content/IntentFilter;->addDataScheme(Ljava/lang/String;)V
 
@@ -98,7 +90,6 @@
     .prologue
     const/4 v6, 0x1
 
-    .line 3568
     const-string v0, "android.intent.action.PACKAGE_REMOVED"
 
     invoke-virtual {p2}, Landroid/content/Intent;->getAction()Ljava/lang/String;
@@ -111,7 +102,6 @@
 
     if-eqz v0, :cond_1
 
-    .line 3569
     invoke-virtual {p2}, Landroid/content/Intent;->getData()Landroid/net/Uri;
 
     move-result-object v0
@@ -120,7 +110,6 @@
 
     move-result-object v0
 
-    .line 3571
     iget-object v1, p0, Lcom/absolute/android/persistservice/k;->a:Lcom/absolute/android/persistservice/ABTPersistenceService;
 
     invoke-static {v1}, Lcom/absolute/android/persistservice/ABTPersistenceService;->b(Lcom/absolute/android/persistservice/ABTPersistenceService;)Lcom/absolute/android/persistservice/n;
@@ -131,23 +120,18 @@
 
     move-result-object v1
 
-    .line 3572
     if-eqz v1, :cond_1
 
-    .line 3573
     invoke-virtual {v1}, Lcom/absolute/android/persistservice/PersistedAppInfo;->a()Lcom/absolute/android/persistence/AppProfile;
 
     move-result-object v2
 
-    .line 3574
     invoke-virtual {v1}, Lcom/absolute/android/persistservice/PersistedAppInfo;->d()I
 
     move-result v1
 
-    .line 3575
     if-eqz v2, :cond_1
 
-    .line 3581
     iget-object v3, p0, Lcom/absolute/android/persistservice/k;->a:Lcom/absolute/android/persistservice/ABTPersistenceService;
 
     invoke-static {v3, v0}, Lcom/absolute/android/persistservice/ABTPersistenceService;->a(Lcom/absolute/android/persistservice/ABTPersistenceService;Ljava/lang/String;)I
@@ -164,7 +148,6 @@
 
     if-nez v3, :cond_1
 
-    .line 3590
     iget-object v3, p0, Lcom/absolute/android/persistservice/k;->a:Lcom/absolute/android/persistservice/ABTPersistenceService;
 
     invoke-static {v3}, Lcom/absolute/android/persistservice/ABTPersistenceService;->a(Lcom/absolute/android/persistservice/ABTPersistenceService;)Lcom/absolute/android/persistservice/y;
@@ -199,14 +182,12 @@
 
     invoke-virtual {v3, v4}, Lcom/absolute/android/persistservice/y;->c(Ljava/lang/String;)V
 
-    .line 3594
     invoke-virtual {v2}, Lcom/absolute/android/persistence/AppProfile;->getIsMonitored()Z
 
     move-result v3
 
     if-ne v3, v6, :cond_0
 
-    .line 3595
     iget-object v3, p0, Lcom/absolute/android/persistservice/k;->a:Lcom/absolute/android/persistservice/ABTPersistenceService;
 
     invoke-static {v3}, Lcom/absolute/android/persistservice/ABTPersistenceService;->f(Lcom/absolute/android/persistservice/ABTPersistenceService;)Lcom/absolute/android/persistservice/o;
@@ -215,7 +196,6 @@
 
     invoke-virtual {v3, v0}, Lcom/absolute/android/persistservice/o;->a(Ljava/lang/String;)V
 
-    .line 3600
     :cond_0
     iget-object v3, p0, Lcom/absolute/android/persistservice/k;->a:Lcom/absolute/android/persistservice/ABTPersistenceService;
 
@@ -239,17 +219,14 @@
 
     if-nez v1, :cond_2
 
-    .line 3603
     iget-object v1, p0, Lcom/absolute/android/persistservice/k;->a:Lcom/absolute/android/persistservice/ABTPersistenceService;
 
     invoke-static {v1, v0}, Lcom/absolute/android/persistservice/ABTPersistenceService;->b(Lcom/absolute/android/persistservice/ABTPersistenceService;Ljava/lang/String;)Z
 
-    .line 3618
     :cond_1
     :goto_0
     return-void
 
-    .line 3607
     :cond_2
     invoke-virtual {v2}, Lcom/absolute/android/persistence/AppProfile;->getIsPersisted()Z
 
@@ -257,7 +234,6 @@
 
     if-nez v1, :cond_1
 
-    .line 3609
     iget-object v1, p0, Lcom/absolute/android/persistservice/k;->a:Lcom/absolute/android/persistservice/ABTPersistenceService;
 
     invoke-static {v1}, Lcom/absolute/android/persistservice/ABTPersistenceService;->a(Lcom/absolute/android/persistservice/ABTPersistenceService;)Lcom/absolute/android/persistservice/y;
@@ -280,7 +256,6 @@
 
     invoke-virtual {v1, v2}, Lcom/absolute/android/persistservice/y;->c(Ljava/lang/String;)V
 
-    .line 3612
     iget-object v1, p0, Lcom/absolute/android/persistservice/k;->a:Lcom/absolute/android/persistservice/ABTPersistenceService;
 
     invoke-static {v1, v0}, Lcom/absolute/android/persistservice/ABTPersistenceService;->c(Lcom/absolute/android/persistservice/ABTPersistenceService;Ljava/lang/String;)V

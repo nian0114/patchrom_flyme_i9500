@@ -26,7 +26,6 @@
     .locals 0
 
     .prologue
-    .line 190
     iput-object p1, p0, Lcom/samsung/android/privatemode/PrivateModeManager$2;->this$0:Lcom/samsung/android/privatemode/PrivateModeManager;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -42,14 +41,13 @@
     .param p2, "service"    # Landroid/os/IBinder;
 
     .prologue
-    .line 201
     const-string v1, "PPS_PrivateModeManager"
 
     new-instance v2, Ljava/lang/StringBuilder;
 
     invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v3, "onServiceConnected: name="
+    const-string v3, "onServiceConnected: name="
 
     invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -75,13 +73,11 @@
 
     invoke-static {v1, v2}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 202
     const/4 v1, 0x1
 
     # setter for: Lcom/samsung/android/privatemode/PrivateModeManager;->mIsServiceBind:Z
     invoke-static {v1}, Lcom/samsung/android/privatemode/PrivateModeManager;->access$002(Z)Z
 
-    .line 203
     invoke-static {p2}, Lcom/samsung/android/privatemode/IPrivateModeManager$Stub;->asInterface(Landroid/os/IBinder;)Lcom/samsung/android/privatemode/IPrivateModeManager;
 
     move-result-object v1
@@ -89,7 +85,6 @@
     # setter for: Lcom/samsung/android/privatemode/PrivateModeManager;->mService:Lcom/samsung/android/privatemode/IPrivateModeManager;
     invoke-static {v1}, Lcom/samsung/android/privatemode/PrivateModeManager;->access$102(Lcom/samsung/android/privatemode/IPrivateModeManager;)Lcom/samsung/android/privatemode/IPrivateModeManager;
 
-    .line 205
     :try_start_0
     # getter for: Lcom/samsung/android/privatemode/PrivateModeManager;->mHandler:Landroid/os/Handler;
     invoke-static {}, Lcom/samsung/android/privatemode/PrivateModeManager;->access$200()Landroid/os/Handler;
@@ -98,7 +93,6 @@
 
     if-eqz v1, :cond_0
 
-    .line 206
     # getter for: Lcom/samsung/android/privatemode/PrivateModeManager;->mHandler:Landroid/os/Handler;
     invoke-static {}, Lcom/samsung/android/privatemode/PrivateModeManager;->access$200()Landroid/os/Handler;
 
@@ -112,20 +106,17 @@
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 225
     :cond_0
     :goto_0
     return-void
 
-    .line 222
     :catch_0
     move-exception v0
 
-    .line 223
     .local v0, "e":Ljava/lang/Exception;
     iget-object v1, p0, Lcom/samsung/android/privatemode/PrivateModeManager$2;->this$0:Lcom/samsung/android/privatemode/PrivateModeManager;
 
-    const-string/jumbo v2, "onServiceConnected"
+    const-string v2, "onServiceConnected"
 
     const/4 v3, 0x0
 
@@ -140,14 +131,13 @@
     .param p1, "name"    # Landroid/content/ComponentName;
 
     .prologue
-    .line 194
     const-string v0, "PPS_PrivateModeManager"
 
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v2, "onServiceDisconnected: name="
+    const-string v2, "onServiceDisconnected: name="
 
     invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -163,18 +153,15 @@
 
     invoke-static {v0, v1}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 195
     const/4 v0, 0x0
 
     # setter for: Lcom/samsung/android/privatemode/PrivateModeManager;->mIsServiceBind:Z
     invoke-static {v0}, Lcom/samsung/android/privatemode/PrivateModeManager;->access$002(Z)Z
 
-    .line 196
     const/4 v0, 0x0
 
     # setter for: Lcom/samsung/android/privatemode/PrivateModeManager;->mService:Lcom/samsung/android/privatemode/IPrivateModeManager;
     invoke-static {v0}, Lcom/samsung/android/privatemode/PrivateModeManager;->access$102(Lcom/samsung/android/privatemode/IPrivateModeManager;)Lcom/samsung/android/privatemode/IPrivateModeManager;
 
-    .line 197
     return-void
 .end method

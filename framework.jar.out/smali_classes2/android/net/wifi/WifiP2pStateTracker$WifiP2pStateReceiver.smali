@@ -23,7 +23,6 @@
     .locals 0
 
     .prologue
-    .line 257
     iput-object p1, p0, Landroid/net/wifi/WifiP2pStateTracker$WifiP2pStateReceiver;->this$0:Landroid/net/wifi/WifiP2pStateTracker;
 
     invoke-direct {p0}, Landroid/content/BroadcastReceiver;-><init>()V
@@ -37,7 +36,6 @@
     .param p2, "x1"    # Landroid/net/wifi/WifiP2pStateTracker$1;
 
     .prologue
-    .line 257
     invoke-direct {p0, p1}, Landroid/net/wifi/WifiP2pStateTracker$WifiP2pStateReceiver;-><init>(Landroid/net/wifi/WifiP2pStateTracker;)V
 
     return-void
@@ -51,12 +49,10 @@
     .param p2, "intent"    # Landroid/content/Intent;
 
     .prologue
-    .line 261
     invoke-virtual {p2}, Landroid/content/Intent;->getAction()Ljava/lang/String;
 
     move-result-object v0
 
-    .line 262
     .local v0, "action":Ljava/lang/String;
     const-string v2, "WifiP2pStateTracker"
 
@@ -80,7 +76,6 @@
 
     invoke-static {v2, v3}, Landroid/util/Slog;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 264
     const-string v2, "android.net.wifi.p2p.CONNECTION_STATE_CHANGE"
 
     invoke-virtual {v0, v2}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
@@ -89,7 +84,6 @@
 
     if-eqz v2, :cond_1
 
-    .line 265
     iget-object v3, p0, Landroid/net/wifi/WifiP2pStateTracker$WifiP2pStateReceiver;->this$0:Landroid/net/wifi/WifiP2pStateTracker;
 
     const-string v2, "networkInfo"
@@ -103,7 +97,6 @@
     # setter for: Landroid/net/wifi/WifiP2pStateTracker;->mNetworkInfo:Landroid/net/NetworkInfo;
     invoke-static {v3, v2}, Landroid/net/wifi/WifiP2pStateTracker;->access$102(Landroid/net/wifi/WifiP2pStateTracker;Landroid/net/NetworkInfo;)Landroid/net/NetworkInfo;
 
-    .line 267
     iget-object v3, p0, Landroid/net/wifi/WifiP2pStateTracker$WifiP2pStateReceiver;->this$0:Landroid/net/wifi/WifiP2pStateTracker;
 
     const-string v2, "linkProperties"
@@ -117,7 +110,6 @@
     # setter for: Landroid/net/wifi/WifiP2pStateTracker;->mLinkProperties:Landroid/net/LinkProperties;
     invoke-static {v3, v2}, Landroid/net/wifi/WifiP2pStateTracker;->access$202(Landroid/net/wifi/WifiP2pStateTracker;Landroid/net/LinkProperties;)Landroid/net/LinkProperties;
 
-    .line 269
     iget-object v2, p0, Landroid/net/wifi/WifiP2pStateTracker$WifiP2pStateReceiver;->this$0:Landroid/net/wifi/WifiP2pStateTracker;
 
     # getter for: Landroid/net/wifi/WifiP2pStateTracker;->mLinkProperties:Landroid/net/LinkProperties;
@@ -127,7 +119,6 @@
 
     if-nez v2, :cond_0
 
-    .line 270
     iget-object v2, p0, Landroid/net/wifi/WifiP2pStateTracker$WifiP2pStateReceiver;->this$0:Landroid/net/wifi/WifiP2pStateTracker;
 
     new-instance v3, Landroid/net/LinkProperties;
@@ -137,12 +128,10 @@
     # setter for: Landroid/net/wifi/WifiP2pStateTracker;->mLinkProperties:Landroid/net/LinkProperties;
     invoke-static {v2, v3}, Landroid/net/wifi/WifiP2pStateTracker;->access$202(Landroid/net/wifi/WifiP2pStateTracker;Landroid/net/LinkProperties;)Landroid/net/LinkProperties;
 
-    .line 284
     :cond_0
     :goto_0
     return-void
 
-    .line 278
     :cond_1
     const-string v2, "android.net.wifi.LINK_CONFIGURATION_CHANGED"
 
@@ -152,7 +141,6 @@
 
     if-eqz v2, :cond_0
 
-    .line 279
     iget-object v3, p0, Landroid/net/wifi/WifiP2pStateTracker$WifiP2pStateReceiver;->this$0:Landroid/net/wifi/WifiP2pStateTracker;
 
     const-string v2, "linkProperties"
@@ -166,7 +154,6 @@
     # setter for: Landroid/net/wifi/WifiP2pStateTracker;->mLinkProperties:Landroid/net/LinkProperties;
     invoke-static {v3, v2}, Landroid/net/wifi/WifiP2pStateTracker;->access$202(Landroid/net/wifi/WifiP2pStateTracker;Landroid/net/LinkProperties;)Landroid/net/LinkProperties;
 
-    .line 281
     iget-object v2, p0, Landroid/net/wifi/WifiP2pStateTracker$WifiP2pStateReceiver;->this$0:Landroid/net/wifi/WifiP2pStateTracker;
 
     # getter for: Landroid/net/wifi/WifiP2pStateTracker;->mCsHandler:Landroid/os/Handler;
@@ -187,7 +174,6 @@
 
     move-result-object v1
 
-    .line 282
     .local v1, "msg":Landroid/os/Message;
     invoke-virtual {v1}, Landroid/os/Message;->sendToTarget()V
 

@@ -57,42 +57,33 @@
     .end annotation
 
     .prologue
-    .line 67
     .local p1, "verifierPackages":Ljava/util/ArrayList;, "Ljava/util/ArrayList<Lcom/android/server/pm/PackageManagerService$VerifierPackage;>;"
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 68
     iput-object p1, p0, Lcom/android/server/pm/PackageVerificationState;->mVerifierPackages:Ljava/util/ArrayList;
 
-    .line 69
     iput-object p2, p0, Lcom/android/server/pm/PackageVerificationState;->mVerificationIntent:Landroid/content/Intent;
 
-    .line 70
     iput p3, p0, Lcom/android/server/pm/PackageVerificationState;->mVerificationId:I
 
-    .line 71
     iput-object p4, p0, Lcom/android/server/pm/PackageVerificationState;->mArgs:Lcom/android/server/pm/PackageManagerService$InstallArgs;
 
-    .line 72
     new-instance v0, Landroid/util/SparseBooleanArray;
 
     invoke-direct {v0}, Landroid/util/SparseBooleanArray;-><init>()V
 
     iput-object v0, p0, Lcom/android/server/pm/PackageVerificationState;->mRequiredVerifierUids:Landroid/util/SparseBooleanArray;
 
-    .line 73
     new-instance v0, Landroid/util/SparseBooleanArray;
 
     invoke-direct {v0}, Landroid/util/SparseBooleanArray;-><init>()V
 
     iput-object v0, p0, Lcom/android/server/pm/PackageVerificationState;->mSufficientVerifierUids:Landroid/util/SparseBooleanArray;
 
-    .line 74
     const/4 v0, 0x0
 
     iput-boolean v0, p0, Lcom/android/server/pm/PackageVerificationState;->mExtendedTimeout:Z
 
-    .line 75
     return-void
 .end method
 
@@ -103,14 +94,12 @@
     .param p1, "uid"    # I
 
     .prologue
-    .line 107
     iget-object v0, p0, Lcom/android/server/pm/PackageVerificationState;->mRequiredVerifierUids:Landroid/util/SparseBooleanArray;
 
     const/4 v1, 0x1
 
     invoke-virtual {v0, p1, v1}, Landroid/util/SparseBooleanArray;->put(IZ)V
 
-    .line 108
     return-void
 .end method
 
@@ -119,14 +108,12 @@
     .param p1, "uid"    # I
 
     .prologue
-    .line 116
     iget-object v0, p0, Lcom/android/server/pm/PackageVerificationState;->mSufficientVerifierUids:Landroid/util/SparseBooleanArray;
 
     const/4 v1, 0x1
 
     invoke-virtual {v0, p1, v1}, Landroid/util/SparseBooleanArray;->put(IZ)V
 
-    .line 117
     return-void
 .end method
 
@@ -134,12 +121,10 @@
     .locals 1
 
     .prologue
-    .line 123
     iget-object v0, p0, Lcom/android/server/pm/PackageVerificationState;->mSufficientVerifierUids:Landroid/util/SparseBooleanArray;
 
     invoke-virtual {v0}, Landroid/util/SparseBooleanArray;->clear()V
 
-    .line 124
     return-void
 .end method
 
@@ -147,17 +132,14 @@
     .locals 1
 
     .prologue
-    .line 214
     iget-boolean v0, p0, Lcom/android/server/pm/PackageVerificationState;->mExtendedTimeout:Z
 
     if-nez v0, :cond_0
 
-    .line 215
     const/4 v0, 0x1
 
     iput-boolean v0, p0, Lcom/android/server/pm/PackageVerificationState;->mExtendedTimeout:Z
 
-    .line 217
     :cond_0
     return-void
 .end method
@@ -166,7 +148,6 @@
     .locals 1
 
     .prologue
-    .line 98
     iget-object v0, p0, Lcom/android/server/pm/PackageVerificationState;->mArgs:Lcom/android/server/pm/PackageManagerService$InstallArgs;
 
     return-object v0
@@ -176,7 +157,6 @@
     .locals 1
 
     .prologue
-    .line 94
     iget v0, p0, Lcom/android/server/pm/PackageVerificationState;->mVerificationId:I
 
     return v0
@@ -186,7 +166,6 @@
     .locals 1
 
     .prologue
-    .line 90
     iget-object v0, p0, Lcom/android/server/pm/PackageVerificationState;->mVerificationIntent:Landroid/content/Intent;
 
     return-object v0
@@ -197,7 +176,6 @@
     .param p1, "index"    # I
 
     .prologue
-    .line 78
     iget-object v0, p0, Lcom/android/server/pm/PackageVerificationState;->mVerifierPackages:Ljava/util/ArrayList;
 
     invoke-virtual {v0, p1}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
@@ -213,7 +191,6 @@
     .locals 1
 
     .prologue
-    .line 86
     iget-object v0, p0, Lcom/android/server/pm/PackageVerificationState;->mVerifierPackages:Ljava/util/ArrayList;
 
     invoke-virtual {v0}, Ljava/util/ArrayList;->size()I
@@ -227,12 +204,10 @@
     .locals 1
 
     .prologue
-    .line 232
     const/4 v0, 0x0
 
     iput-boolean v0, p0, Lcom/android/server/pm/PackageVerificationState;->mExtendedTimeout:Z
 
-    .line 233
     return-void
 .end method
 
@@ -240,30 +215,24 @@
     .locals 1
 
     .prologue
-    .line 199
     iget-boolean v0, p0, Lcom/android/server/pm/PackageVerificationState;->mRequiredVerificationPassed:Z
 
     if-nez v0, :cond_0
 
-    .line 200
     const/4 v0, 0x0
 
-    .line 207
     :goto_0
     return v0
 
-    .line 203
     :cond_0
     iget-boolean v0, p0, Lcom/android/server/pm/PackageVerificationState;->mSufficientVerificationComplete:Z
 
     if-eqz v0, :cond_1
 
-    .line 204
     iget-boolean v0, p0, Lcom/android/server/pm/PackageVerificationState;->mSufficientVerificationPassed:Z
 
     goto :goto_0
 
-    .line 207
     :cond_1
     const/4 v0, 0x1
 
@@ -274,19 +243,15 @@
     .locals 1
 
     .prologue
-    .line 181
     iget-boolean v0, p0, Lcom/android/server/pm/PackageVerificationState;->mRequiredVerificationComplete:Z
 
     if-nez v0, :cond_0
 
-    .line 182
     const/4 v0, 0x0
 
-    .line 189
     :goto_0
     return v0
 
-    .line 185
     :cond_0
     iget-object v0, p0, Lcom/android/server/pm/PackageVerificationState;->mSufficientVerifierUids:Landroid/util/SparseBooleanArray;
 
@@ -296,12 +261,10 @@
 
     if-nez v0, :cond_1
 
-    .line 186
     const/4 v0, 0x1
 
     goto :goto_0
 
-    .line 189
     :cond_1
     iget-boolean v0, p0, Lcom/android/server/pm/PackageVerificationState;->mSufficientVerificationComplete:Z
 
@@ -313,12 +276,10 @@
     .param p1, "index"    # I
 
     .prologue
-    .line 82
     iget-object v0, p0, Lcom/android/server/pm/PackageVerificationState;->mVerifierPackages:Ljava/util/ArrayList;
 
     invoke-virtual {v0, p1}, Ljava/util/ArrayList;->remove(I)Ljava/lang/Object;
 
-    .line 83
     return-void
 .end method
 
@@ -332,7 +293,6 @@
 
     const/4 v0, 0x1
 
-    .line 134
     iget-object v2, p0, Lcom/android/server/pm/PackageVerificationState;->mRequiredVerifierUids:Landroid/util/SparseBooleanArray;
 
     invoke-virtual {v2, p1}, Landroid/util/SparseBooleanArray;->get(I)Z
@@ -341,43 +301,34 @@
 
     if-eqz v2, :cond_1
 
-    .line 135
     packed-switch p2, :pswitch_data_0
 
-    .line 147
     iget-object v2, p0, Lcom/android/server/pm/PackageVerificationState;->mRequiredVerifierUids:Landroid/util/SparseBooleanArray;
 
     invoke-virtual {v2}, Landroid/util/SparseBooleanArray;->clear()V
 
-    .line 148
     iget-object v2, p0, Lcom/android/server/pm/PackageVerificationState;->mSufficientVerifierUids:Landroid/util/SparseBooleanArray;
 
     invoke-virtual {v2}, Landroid/util/SparseBooleanArray;->clear()V
 
-    .line 149
     iput-boolean v0, p0, Lcom/android/server/pm/PackageVerificationState;->mRequiredVerificationComplete:Z
 
-    .line 150
     iput-boolean v1, p0, Lcom/android/server/pm/PackageVerificationState;->mRequiredVerificationPassed:Z
 
-    .line 170
     :cond_0
     :goto_0
     return v0
 
-    .line 137
     :pswitch_0
     iget-object v1, p0, Lcom/android/server/pm/PackageVerificationState;->mSufficientVerifierUids:Landroid/util/SparseBooleanArray;
 
     invoke-virtual {v1}, Landroid/util/SparseBooleanArray;->clear()V
 
-    .line 140
     :pswitch_1
     iget-object v1, p0, Lcom/android/server/pm/PackageVerificationState;->mRequiredVerifierUids:Landroid/util/SparseBooleanArray;
 
     invoke-virtual {v1, p1}, Landroid/util/SparseBooleanArray;->delete(I)V
 
-    .line 141
     iget-object v1, p0, Lcom/android/server/pm/PackageVerificationState;->mRequiredVerifierUids:Landroid/util/SparseBooleanArray;
 
     invoke-virtual {v1}, Landroid/util/SparseBooleanArray;->size()I
@@ -386,15 +337,12 @@
 
     if-nez v1, :cond_0
 
-    .line 142
     iput-boolean v0, p0, Lcom/android/server/pm/PackageVerificationState;->mRequiredVerificationComplete:Z
 
-    .line 143
     iput-boolean v0, p0, Lcom/android/server/pm/PackageVerificationState;->mRequiredVerificationPassed:Z
 
     goto :goto_0
 
-    .line 155
     :cond_1
     iget-object v2, p0, Lcom/android/server/pm/PackageVerificationState;->mSufficientVerifierUids:Landroid/util/SparseBooleanArray;
 
@@ -404,22 +352,17 @@
 
     if-eqz v2, :cond_3
 
-    .line 156
     if-ne p2, v0, :cond_2
 
-    .line 157
     iput-boolean v0, p0, Lcom/android/server/pm/PackageVerificationState;->mSufficientVerificationComplete:Z
 
-    .line 158
     iput-boolean v0, p0, Lcom/android/server/pm/PackageVerificationState;->mSufficientVerificationPassed:Z
 
-    .line 161
     :cond_2
     iget-object v1, p0, Lcom/android/server/pm/PackageVerificationState;->mSufficientVerifierUids:Landroid/util/SparseBooleanArray;
 
     invoke-virtual {v1, p1}, Landroid/util/SparseBooleanArray;->delete(I)V
 
-    .line 162
     iget-object v1, p0, Lcom/android/server/pm/PackageVerificationState;->mSufficientVerifierUids:Landroid/util/SparseBooleanArray;
 
     invoke-virtual {v1}, Landroid/util/SparseBooleanArray;->size()I
@@ -428,7 +371,6 @@
 
     if-nez v1, :cond_0
 
-    .line 163
     iput-boolean v0, p0, Lcom/android/server/pm/PackageVerificationState;->mSufficientVerificationComplete:Z
 
     goto :goto_0
@@ -436,10 +378,8 @@
     :cond_3
     move v0, v1
 
-    .line 170
     goto :goto_0
 
-    .line 135
     nop
 
     :pswitch_data_0
@@ -453,7 +393,6 @@
     .locals 1
 
     .prologue
-    .line 225
     iget-boolean v0, p0, Lcom/android/server/pm/PackageVerificationState;->mExtendedTimeout:Z
 
     return v0

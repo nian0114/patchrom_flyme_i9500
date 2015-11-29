@@ -26,7 +26,6 @@
     .locals 0
 
     .prologue
-    .line 1937
     iput-object p1, p0, Lcom/android/internal/policy/impl/GlobalActions$19;->this$0:Lcom/android/internal/policy/impl/GlobalActions;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -42,13 +41,11 @@
     .param p2, "which"    # I
 
     .prologue
-    .line 1939
     iget-object v0, p0, Lcom/android/internal/policy/impl/GlobalActions$19;->this$0:Lcom/android/internal/policy/impl/GlobalActions;
 
     const/4 v1, 0x1
 
     invoke-virtual {v0, v1}, Lcom/android/internal/policy/impl/GlobalActions;->airplaneModeClickAction(Z)V
 
-    .line 1940
     return-void
 .end method

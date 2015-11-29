@@ -23,7 +23,6 @@
     .locals 0
 
     .prologue
-    .line 14157
     iput-object p1, p0, Lcom/android/server/wm/WindowManagerService$LocalService;->this$0:Lcom/android/server/wm/WindowManagerService;
 
     invoke-direct {p0}, Landroid/view/WindowManagerInternal;-><init>()V
@@ -37,7 +36,6 @@
     .param p2, "x1"    # Lcom/android/server/wm/WindowManagerService$1;
 
     .prologue
-    .line 14157
     invoke-direct {p0, p1}, Lcom/android/server/wm/WindowManagerService$LocalService;-><init>(Lcom/android/server/wm/WindowManagerService;)V
 
     return-void
@@ -52,14 +50,12 @@
     .prologue
     const/4 v2, 0x0
 
-    .line 14179
     iget-object v3, p0, Lcom/android/server/wm/WindowManagerService$LocalService;->this$0:Lcom/android/server/wm/WindowManagerService;
 
     iget-object v3, v3, Lcom/android/server/wm/WindowManagerService;->mWindowMap:Ljava/util/HashMap;
 
     monitor-enter v3
 
-    .line 14180
     :try_start_0
     iget-object v4, p0, Lcom/android/server/wm/WindowManagerService$LocalService;->this$0:Lcom/android/server/wm/WindowManagerService;
 
@@ -71,24 +67,19 @@
 
     check-cast v1, Lcom/android/server/wm/WindowState;
 
-    .line 14181
     .local v1, "windowState":Lcom/android/server/wm/WindowState;
     if-nez v1, :cond_0
 
-    .line 14182
     monitor-exit v3
 
     move-object v0, v2
 
-    .line 14193
     :goto_0
     return-object v0
 
-    .line 14184
     :cond_0
     const/4 v0, 0x0
 
-    .line 14185
     .local v0, "spec":Landroid/view/MagnificationSpec;
     iget-object v4, p0, Lcom/android/server/wm/WindowManagerService$LocalService;->this$0:Lcom/android/server/wm/WindowManagerService;
 
@@ -96,7 +87,6 @@
 
     if-eqz v4, :cond_1
 
-    .line 14186
     iget-object v4, p0, Lcom/android/server/wm/WindowManagerService$LocalService;->this$0:Lcom/android/server/wm/WindowManagerService;
 
     iget-object v4, v4, Lcom/android/server/wm/WindowManagerService;->mAccessibilityController:Lcom/android/server/wm/AccessibilityController;
@@ -105,7 +95,6 @@
 
     move-result-object v0
 
-    .line 14188
     :cond_1
     if-eqz v0, :cond_2
 
@@ -124,14 +113,12 @@
 
     if-nez v4, :cond_3
 
-    .line 14189
     monitor-exit v3
 
     move-object v0, v2
 
     goto :goto_0
 
-    .line 14191
     :cond_3
     if-nez v0, :cond_4
 
@@ -139,7 +126,6 @@
 
     move-result-object v0
 
-    .line 14192
     :goto_1
     iget v2, v0, Landroid/view/MagnificationSpec;->scale:F
 
@@ -149,12 +135,10 @@
 
     iput v2, v0, Landroid/view/MagnificationSpec;->scale:F
 
-    .line 14193
     monitor-exit v3
 
     goto :goto_0
 
-    .line 14194
     .end local v0    # "spec":Landroid/view/MagnificationSpec;
     .end local v1    # "windowState":Lcom/android/server/wm/WindowState;
     :catchall_0
@@ -166,7 +150,6 @@
 
     throw v2
 
-    .line 14191
     .restart local v0    # "spec":Landroid/view/MagnificationSpec;
     .restart local v1    # "windowState":Lcom/android/server/wm/WindowState;
     :cond_4
@@ -184,14 +167,12 @@
     .locals 3
 
     .prologue
-    .line 14232
     iget-object v1, p0, Lcom/android/server/wm/WindowManagerService$LocalService;->this$0:Lcom/android/server/wm/WindowManagerService;
 
     iget-object v2, v1, Lcom/android/server/wm/WindowManagerService;->mWindowMap:Ljava/util/HashMap;
 
     monitor-enter v2
 
-    .line 14233
     :try_start_0
     iget-object v1, p0, Lcom/android/server/wm/WindowManagerService$LocalService;->this$0:Lcom/android/server/wm/WindowManagerService;
 
@@ -200,11 +181,9 @@
 
     move-result-object v0
 
-    .line 14234
     .local v0, "windowState":Lcom/android/server/wm/WindowState;
     if-eqz v0, :cond_0
 
-    .line 14235
     iget-object v1, v0, Lcom/android/server/wm/WindowState;->mClient:Landroid/view/IWindow;
 
     invoke-interface {v1}, Landroid/view/IWindow;->asBinder()Landroid/os/IBinder;
@@ -213,7 +192,6 @@
 
     monitor-exit v2
 
-    .line 14237
     :goto_0
     return-object v1
 
@@ -224,7 +202,6 @@
 
     goto :goto_0
 
-    .line 14238
     .end local v0    # "windowState":Lcom/android/server/wm/WindowState;
     :catchall_0
     move-exception v1
@@ -242,14 +219,12 @@
     .param p2, "outBounds"    # Landroid/graphics/Rect;
 
     .prologue
-    .line 14253
     iget-object v1, p0, Lcom/android/server/wm/WindowManagerService$LocalService;->this$0:Lcom/android/server/wm/WindowManagerService;
 
     iget-object v2, v1, Lcom/android/server/wm/WindowManagerService;->mWindowMap:Ljava/util/HashMap;
 
     monitor-enter v2
 
-    .line 14254
     :try_start_0
     iget-object v1, p0, Lcom/android/server/wm/WindowManagerService$LocalService;->this$0:Lcom/android/server/wm/WindowManagerService;
 
@@ -261,29 +236,23 @@
 
     check-cast v0, Lcom/android/server/wm/WindowState;
 
-    .line 14255
     .local v0, "windowState":Lcom/android/server/wm/WindowState;
     if-eqz v0, :cond_0
 
-    .line 14256
     iget-object v1, v0, Lcom/android/server/wm/WindowState;->mFrame:Landroid/graphics/Rect;
 
     invoke-virtual {p2, v1}, Landroid/graphics/Rect;->set(Landroid/graphics/Rect;)V
 
-    .line 14260
     :goto_0
     monitor-exit v2
 
-    .line 14261
     return-void
 
-    .line 14258
     :cond_0
     invoke-virtual {p2}, Landroid/graphics/Rect;->setEmpty()V
 
     goto :goto_0
 
-    .line 14260
     .end local v0    # "windowState":Lcom/android/server/wm/WindowState;
     :catchall_0
     move-exception v1
@@ -299,7 +268,6 @@
     .locals 1
 
     .prologue
-    .line 14243
     iget-object v0, p0, Lcom/android/server/wm/WindowManagerService$LocalService;->this$0:Lcom/android/server/wm/WindowManagerService;
 
     invoke-virtual {v0}, Lcom/android/server/wm/WindowManagerService;->isKeyguardLocked()Z
@@ -313,12 +281,10 @@
     .locals 1
 
     .prologue
-    .line 14160
     iget-object v0, p0, Lcom/android/server/wm/WindowManagerService$LocalService;->this$0:Lcom/android/server/wm/WindowManagerService;
 
     invoke-virtual {v0}, Lcom/android/server/wm/WindowManagerService;->requestTraversal()V
 
-    .line 14161
     return-void
 .end method
 
@@ -327,14 +293,12 @@
     .param p1, "filter"    # Landroid/view/IInputFilter;
 
     .prologue
-    .line 14227
     iget-object v0, p0, Lcom/android/server/wm/WindowManagerService$LocalService;->this$0:Lcom/android/server/wm/WindowManagerService;
 
     iget-object v0, v0, Lcom/android/server/wm/WindowManagerService;->mInputManager:Lcom/android/server/input/InputManagerService;
 
     invoke-virtual {v0, p1}, Lcom/android/server/input/InputManagerService;->setInputFilter(Landroid/view/IInputFilter;)V
 
-    .line 14228
     return-void
 .end method
 
@@ -343,14 +307,12 @@
     .param p1, "callbacks"    # Landroid/view/WindowManagerInternal$MagnificationCallbacks;
 
     .prologue
-    .line 14199
     iget-object v0, p0, Lcom/android/server/wm/WindowManagerService$LocalService;->this$0:Lcom/android/server/wm/WindowManagerService;
 
     iget-object v1, v0, Lcom/android/server/wm/WindowManagerService;->mWindowMap:Ljava/util/HashMap;
 
     monitor-enter v1
 
-    .line 14200
     :try_start_0
     iget-object v0, p0, Lcom/android/server/wm/WindowManagerService$LocalService;->this$0:Lcom/android/server/wm/WindowManagerService;
 
@@ -358,7 +320,6 @@
 
     if-nez v0, :cond_0
 
-    .line 14201
     iget-object v0, p0, Lcom/android/server/wm/WindowManagerService$LocalService;->this$0:Lcom/android/server/wm/WindowManagerService;
 
     new-instance v2, Lcom/android/server/wm/AccessibilityController;
@@ -369,7 +330,6 @@
 
     iput-object v2, v0, Lcom/android/server/wm/WindowManagerService;->mAccessibilityController:Lcom/android/server/wm/AccessibilityController;
 
-    .line 14204
     :cond_0
     iget-object v0, p0, Lcom/android/server/wm/WindowManagerService$LocalService;->this$0:Lcom/android/server/wm/WindowManagerService;
 
@@ -377,7 +337,6 @@
 
     invoke-virtual {v0, p1}, Lcom/android/server/wm/AccessibilityController;->setMagnificationCallbacksLocked(Landroid/view/WindowManagerInternal$MagnificationCallbacks;)V
 
-    .line 14205
     iget-object v0, p0, Lcom/android/server/wm/WindowManagerService$LocalService;->this$0:Lcom/android/server/wm/WindowManagerService;
 
     iget-object v0, v0, Lcom/android/server/wm/WindowManagerService;->mAccessibilityController:Lcom/android/server/wm/AccessibilityController;
@@ -388,21 +347,17 @@
 
     if-nez v0, :cond_1
 
-    .line 14206
     iget-object v0, p0, Lcom/android/server/wm/WindowManagerService$LocalService;->this$0:Lcom/android/server/wm/WindowManagerService;
 
     const/4 v2, 0x0
 
     iput-object v2, v0, Lcom/android/server/wm/WindowManagerService;->mAccessibilityController:Lcom/android/server/wm/AccessibilityController;
 
-    .line 14208
     :cond_1
     monitor-exit v1
 
-    .line 14209
     return-void
 
-    .line 14208
     :catchall_0
     move-exception v0
 
@@ -418,14 +373,12 @@
     .param p1, "spec"    # Landroid/view/MagnificationSpec;
 
     .prologue
-    .line 14165
     iget-object v0, p0, Lcom/android/server/wm/WindowManagerService$LocalService;->this$0:Lcom/android/server/wm/WindowManagerService;
 
     iget-object v1, v0, Lcom/android/server/wm/WindowManagerService;->mWindowMap:Ljava/util/HashMap;
 
     monitor-enter v1
 
-    .line 14166
     :try_start_0
     iget-object v0, p0, Lcom/android/server/wm/WindowManagerService$LocalService;->this$0:Lcom/android/server/wm/WindowManagerService;
 
@@ -433,19 +386,16 @@
 
     if-eqz v0, :cond_1
 
-    .line 14167
     iget-object v0, p0, Lcom/android/server/wm/WindowManagerService$LocalService;->this$0:Lcom/android/server/wm/WindowManagerService;
 
     iget-object v0, v0, Lcom/android/server/wm/WindowManagerService;->mAccessibilityController:Lcom/android/server/wm/AccessibilityController;
 
     invoke-virtual {v0, p1}, Lcom/android/server/wm/AccessibilityController;->setMagnificationSpecLocked(Landroid/view/MagnificationSpec;)V
 
-    .line 14171
     monitor-exit v1
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 14172
     invoke-static {}, Landroid/os/Binder;->getCallingPid()I
 
     move-result v0
@@ -456,14 +406,11 @@
 
     if-eq v0, v1, :cond_0
 
-    .line 14173
     invoke-virtual {p1}, Landroid/view/MagnificationSpec;->recycle()V
 
-    .line 14175
     :cond_0
     return-void
 
-    .line 14169
     :cond_1
     :try_start_1
     new-instance v0, Ljava/lang/IllegalStateException;
@@ -474,7 +421,6 @@
 
     throw v0
 
-    .line 14171
     :catchall_0
     move-exception v0
 
@@ -490,14 +436,12 @@
     .param p1, "callback"    # Landroid/view/WindowManagerInternal$WindowsForAccessibilityCallback;
 
     .prologue
-    .line 14213
     iget-object v0, p0, Lcom/android/server/wm/WindowManagerService$LocalService;->this$0:Lcom/android/server/wm/WindowManagerService;
 
     iget-object v1, v0, Lcom/android/server/wm/WindowManagerService;->mWindowMap:Ljava/util/HashMap;
 
     monitor-enter v1
 
-    .line 14214
     :try_start_0
     iget-object v0, p0, Lcom/android/server/wm/WindowManagerService$LocalService;->this$0:Lcom/android/server/wm/WindowManagerService;
 
@@ -505,7 +449,6 @@
 
     if-nez v0, :cond_0
 
-    .line 14215
     iget-object v0, p0, Lcom/android/server/wm/WindowManagerService$LocalService;->this$0:Lcom/android/server/wm/WindowManagerService;
 
     new-instance v2, Lcom/android/server/wm/AccessibilityController;
@@ -516,7 +459,6 @@
 
     iput-object v2, v0, Lcom/android/server/wm/WindowManagerService;->mAccessibilityController:Lcom/android/server/wm/AccessibilityController;
 
-    .line 14218
     :cond_0
     iget-object v0, p0, Lcom/android/server/wm/WindowManagerService$LocalService;->this$0:Lcom/android/server/wm/WindowManagerService;
 
@@ -524,7 +466,6 @@
 
     invoke-virtual {v0, p1}, Lcom/android/server/wm/AccessibilityController;->setWindowsForAccessibilityCallback(Landroid/view/WindowManagerInternal$WindowsForAccessibilityCallback;)V
 
-    .line 14219
     iget-object v0, p0, Lcom/android/server/wm/WindowManagerService$LocalService;->this$0:Lcom/android/server/wm/WindowManagerService;
 
     iget-object v0, v0, Lcom/android/server/wm/WindowManagerService;->mAccessibilityController:Lcom/android/server/wm/AccessibilityController;
@@ -535,21 +476,17 @@
 
     if-nez v0, :cond_1
 
-    .line 14220
     iget-object v0, p0, Lcom/android/server/wm/WindowManagerService$LocalService;->this$0:Lcom/android/server/wm/WindowManagerService;
 
     const/4 v2, 0x0
 
     iput-object v2, v0, Lcom/android/server/wm/WindowManagerService;->mAccessibilityController:Lcom/android/server/wm/AccessibilityController;
 
-    .line 14222
     :cond_1
     monitor-exit v1
 
-    .line 14223
     return-void
 
-    .line 14222
     :catchall_0
     move-exception v0
 
@@ -564,12 +501,10 @@
     .locals 1
 
     .prologue
-    .line 14248
     iget-object v0, p0, Lcom/android/server/wm/WindowManagerService$LocalService;->this$0:Lcom/android/server/wm/WindowManagerService;
 
     invoke-virtual {v0}, Lcom/android/server/wm/WindowManagerService;->showGlobalActions()V
 
-    .line 14249
     return-void
 .end method
 
@@ -577,14 +512,12 @@
     .locals 1
 
     .prologue
-    .line 14305
     iget-object v0, p0, Lcom/android/server/wm/WindowManagerService$LocalService;->this$0:Lcom/android/server/wm/WindowManagerService;
 
     iget-object v0, v0, Lcom/android/server/wm/WindowManagerService;->mPolicy:Landroid/view/WindowManagerPolicy;
 
     invoke-interface {v0}, Landroid/view/WindowManagerPolicy;->showStatusBarByNotification()V
 
-    .line 14306
     return-void
 .end method
 
@@ -596,27 +529,23 @@
     .prologue
     const/16 v9, 0x18
 
-    .line 14265
     iget-object v3, p0, Lcom/android/server/wm/WindowManagerService$LocalService;->this$0:Lcom/android/server/wm/WindowManagerService;
 
     iget-object v4, v3, Lcom/android/server/wm/WindowManagerService;->mWindowMap:Ljava/util/HashMap;
 
     monitor-enter v4
 
-    .line 14266
     :try_start_0
     iget-object v3, p0, Lcom/android/server/wm/WindowManagerService$LocalService;->this$0:Lcom/android/server/wm/WindowManagerService;
 
     iput-object p1, v3, Lcom/android/server/wm/WindowManagerService;->mWaitingForDrawnCallback:Ljava/lang/Runnable;
 
-    .line 14267
     iget-object v3, p0, Lcom/android/server/wm/WindowManagerService$LocalService;->this$0:Lcom/android/server/wm/WindowManagerService;
 
     invoke-virtual {v3}, Lcom/android/server/wm/WindowManagerService;->getDefaultWindowListLocked()Lcom/android/server/wm/WindowList;
 
     move-result-object v2
 
-    .line 14268
     .local v2, "windows":Lcom/android/server/wm/WindowList;
     invoke-virtual {v2}, Lcom/android/server/wm/WindowList;->size()I
 
@@ -628,14 +557,12 @@
     :goto_0
     if-ltz v1, :cond_3
 
-    .line 14269
     invoke-virtual {v2, v1}, Lcom/android/server/wm/WindowList;->get(I)Ljava/lang/Object;
 
     move-result-object v0
 
     check-cast v0, Lcom/android/server/wm/WindowState;
 
-    .line 14271
     .local v0, "win":Lcom/android/server/wm/WindowState;
     iget-object v3, v0, Lcom/android/server/wm/WindowState;->mAttrs:Landroid/view/WindowManager$LayoutParams;
 
@@ -651,14 +578,12 @@
 
     if-eqz v3, :cond_0
 
-    .line 14272
     iget-object v3, v0, Lcom/android/server/wm/WindowState;->mWinAnimator:Lcom/android/server/wm/WindowStateAnimator;
 
     const/4 v5, 0x1
 
     iput-boolean v5, v3, Lcom/android/server/wm/WindowStateAnimator;->mAnimationSkipRequested:Z
 
-    .line 14275
     :cond_0
     invoke-virtual {v0}, Lcom/android/server/wm/WindowState;->isVisibleLw()Z
 
@@ -686,7 +611,6 @@
 
     if-ne v3, v5, :cond_2
 
-    .line 14285
     :cond_1
     iget-object v3, v0, Lcom/android/server/wm/WindowState;->mWinAnimator:Lcom/android/server/wm/WindowStateAnimator;
 
@@ -694,7 +618,6 @@
 
     iput v5, v3, Lcom/android/server/wm/WindowStateAnimator;->mDrawState:I
 
-    .line 14287
     iget-object v3, v0, Lcom/android/server/wm/WindowState;->mLastContentInsets:Landroid/graphics/Rect;
 
     const/4 v5, -0x1
@@ -707,39 +630,33 @@
 
     invoke-virtual {v3, v5, v6, v7, v8}, Landroid/graphics/Rect;->set(IIII)V
 
-    .line 14288
     iget-object v3, p0, Lcom/android/server/wm/WindowManagerService$LocalService;->this$0:Lcom/android/server/wm/WindowManagerService;
 
     iget-object v3, v3, Lcom/android/server/wm/WindowManagerService;->mWaitingForDrawn:Ljava/util/ArrayList;
 
     invoke-virtual {v3, v0}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 14268
     :cond_2
     add-int/lit8 v1, v1, -0x1
 
     goto :goto_0
 
-    .line 14291
     .end local v0    # "win":Lcom/android/server/wm/WindowState;
     :cond_3
     iget-object v3, p0, Lcom/android/server/wm/WindowManagerService$LocalService;->this$0:Lcom/android/server/wm/WindowManagerService;
 
     invoke-virtual {v3}, Lcom/android/server/wm/WindowManagerService;->requestTraversalLocked()V
 
-    .line 14292
     monitor-exit v4
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 14293
     iget-object v3, p0, Lcom/android/server/wm/WindowManagerService$LocalService;->this$0:Lcom/android/server/wm/WindowManagerService;
 
     iget-object v3, v3, Lcom/android/server/wm/WindowManagerService;->mH:Lcom/android/server/wm/WindowManagerService$H;
 
     invoke-virtual {v3, v9}, Lcom/android/server/wm/WindowManagerService$H;->removeMessages(I)V
 
-    .line 14294
     iget-object v3, p0, Lcom/android/server/wm/WindowManagerService$LocalService;->this$0:Lcom/android/server/wm/WindowManagerService;
 
     iget-object v3, v3, Lcom/android/server/wm/WindowManagerService;->mWaitingForDrawn:Ljava/util/ArrayList;
@@ -750,14 +667,11 @@
 
     if-eqz v3, :cond_4
 
-    .line 14295
     invoke-interface {p1}, Ljava/lang/Runnable;->run()V
 
-    .line 14300
     :goto_1
     return-void
 
-    .line 14292
     .end local v1    # "winNdx":I
     .end local v2    # "windows":Lcom/android/server/wm/WindowList;
     :catchall_0
@@ -770,7 +684,6 @@
 
     throw v3
 
-    .line 14297
     .restart local v1    # "winNdx":I
     .restart local v2    # "windows":Lcom/android/server/wm/WindowList;
     :cond_4
@@ -780,7 +693,6 @@
 
     invoke-virtual {v3, v9, p2, p3}, Lcom/android/server/wm/WindowManagerService$H;->sendEmptyMessageDelayed(IJ)Z
 
-    .line 14298
     iget-object v3, p0, Lcom/android/server/wm/WindowManagerService$LocalService;->this$0:Lcom/android/server/wm/WindowManagerService;
 
     invoke-virtual {v3}, Lcom/android/server/wm/WindowManagerService;->checkDrawnWindowsLocked()V

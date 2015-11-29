@@ -61,7 +61,6 @@
 
     const/4 v2, 0x0
 
-    .line 123
     const-string v0, "eng"
 
     sget-object v3, Landroid/os/Build;->TYPE:Ljava/lang/String;
@@ -89,10 +88,9 @@
     :goto_0
     sput-boolean v0, Lcom/android/server/AlarmManagerServiceExt;->APP_SYNC_LOG:Z
 
-    .line 125
     const-string v0, "0x494d"
 
-    const-string/jumbo v3, "ro.debug_level"
+    const-string v3, "ro.debug_level"
 
     invoke-static {v3}, Landroid/os/SystemProperties;->get(Ljava/lang/String;)Ljava/lang/String;
 
@@ -109,7 +107,6 @@
     :goto_1
     sput-boolean v0, Lcom/android/server/AlarmManagerServiceExt;->DEBUG_MID:Z
 
-    .line 137
     sget v0, Landroid/os/Build$VERSION;->SDK_INT:I
 
     const/16 v3, 0x13
@@ -121,8 +118,7 @@
     :goto_2
     sput-boolean v0, Lcom/android/server/AlarmManagerServiceExt;->NEW_ALARM_MANAGER:Z
 
-    .line 270
-    const-string/jumbo v0, "ro.csc.country_code"
+    const-string v0, "ro.csc.country_code"
 
     invoke-static {v0}, Landroid/os/SystemProperties;->get(Ljava/lang/String;)Ljava/lang/String;
 
@@ -130,7 +126,6 @@
 
     sput-object v0, Lcom/android/server/AlarmManagerServiceExt;->sCountryCode:Ljava/lang/String;
 
-    .line 272
     const-string v0, "USA"
 
     sget-object v3, Lcom/android/server/AlarmManagerServiceExt;->sCountryCode:Ljava/lang/String;
@@ -167,7 +162,6 @@
     :goto_3
     sput-boolean v0, Lcom/android/server/AlarmManagerServiceExt;->COUNTRY_CODE_NA:Z
 
-    .line 276
     const-string v0, "CHINA"
 
     sget-object v3, Lcom/android/server/AlarmManagerServiceExt;->sCountryCode:Ljava/lang/String;
@@ -204,7 +198,6 @@
     :cond_2
     sput-boolean v2, Lcom/android/server/AlarmManagerServiceExt;->COUNTRY_CODE_CHN:Z
 
-    .line 280
     const-string v0, "jp"
 
     sget-object v1, Lcom/android/server/AlarmManagerServiceExt;->sCountryCode:Ljava/lang/String;
@@ -220,25 +213,21 @@
     :cond_3
     move v0, v2
 
-    .line 123
     goto :goto_0
 
     :cond_4
     move v0, v2
 
-    .line 125
     goto :goto_1
 
     :cond_5
     move v0, v2
 
-    .line 137
     goto :goto_2
 
     :cond_6
     move v0, v2
 
-    .line 272
     goto :goto_3
 .end method
 
@@ -249,17 +238,14 @@
     .param p3, "lock"    # Ljava/lang/Object;
 
     .prologue
-    .line 144
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 145
     new-instance v0, Lcom/android/server/AlarmManagerServiceExt$SyncScheduler;
 
     invoke-direct {v0, p1, p2, p3}, Lcom/android/server/AlarmManagerServiceExt$SyncScheduler;-><init>(Landroid/content/Context;Lcom/android/server/AlarmManagerService;Ljava/lang/Object;)V
 
     iput-object v0, p0, Lcom/android/server/AlarmManagerServiceExt;->mSyncScheduler:Lcom/android/server/AlarmManagerServiceExt$SyncScheduler;
 
-    .line 146
     return-void
 .end method
 
@@ -267,7 +253,6 @@
     .locals 1
 
     .prologue
-    .line 121
     sget-boolean v0, Lcom/android/server/AlarmManagerServiceExt;->APP_SYNC_LOG:Z
 
     return v0
@@ -277,7 +262,6 @@
     .locals 1
 
     .prologue
-    .line 121
     sget-boolean v0, Lcom/android/server/AlarmManagerServiceExt;->NEW_ALARM_MANAGER:Z
 
     return v0
@@ -287,7 +271,6 @@
     .locals 1
 
     .prologue
-    .line 121
     sget-boolean v0, Lcom/android/server/AlarmManagerServiceExt;->DEBUG_MID:Z
 
     return v0
@@ -299,20 +282,16 @@
     .param p2, "window"    # J
 
     .prologue
-    .line 245
     move-wide v4, p0
 
-    .line 246
     .local v4, "ret":J
     add-long v2, p0, p2
 
-    .line 247
     .local v2, "maxInterval":J
     const-wide/16 v8, 0x2
 
     div-long v0, p0, v8
 
-    .line 248
     .local v0, "halfInterval":J
     const-wide/16 v8, 0x0
 
@@ -322,13 +301,11 @@
 
     move-wide v6, v4
 
-    .line 267
     .end local v4    # "ret":J
     .local v6, "ret":J
     :goto_0
     return-wide v6
 
-    .line 252
     .end local v6    # "ret":J
     .restart local v4    # "ret":J
     :cond_0
@@ -338,7 +315,6 @@
 
     if-ltz v8, :cond_1
 
-    .line 253
     long-to-double v8, v2
 
     long-to-double v10, v0
@@ -356,12 +332,10 @@
     :goto_1
     move-wide v6, v4
 
-    .line 267
     .end local v4    # "ret":J
     .restart local v6    # "ret":J
     goto :goto_0
 
-    .line 258
     .end local v6    # "ret":J
     .restart local v4    # "ret":J
     :cond_1
@@ -371,7 +345,6 @@
 
     if-ltz v8, :cond_2
 
-    .line 259
     long-to-double v8, v2
 
     const-wide v10, 0x41224f8000000000L    # 600000.0
@@ -390,7 +363,6 @@
 
     goto :goto_1
 
-    .line 265
     :cond_2
     long-to-double v8, v2
 
@@ -417,7 +389,6 @@
     .locals 1
 
     .prologue
-    .line 152
     iget-object v0, p0, Lcom/android/server/AlarmManagerServiceExt;->mSyncScheduler:Lcom/android/server/AlarmManagerServiceExt$SyncScheduler;
 
     return-object v0

@@ -30,17 +30,14 @@
     .param p4, "app"    # Lcom/android/server/am/ProcessRecord;
 
     .prologue
-    .line 52
     invoke-direct {p0, p1}, Lcom/android/server/am/BaseErrorDialog;-><init>(Landroid/content/Context;)V
 
-    .line 142
     new-instance v9, Lcom/android/server/am/AppErrorDialog$2;
 
     invoke-direct {v9, p0}, Lcom/android/server/am/AppErrorDialog$2;-><init>(Lcom/android/server/am/AppErrorDialog;)V
 
     iput-object v9, p0, Lcom/android/server/am/AppErrorDialog;->mHandler:Landroid/os/Handler;
 
-    .line 55
     const-string v9, "com.android.phone"
 
     move-object/from16 v0, p4
@@ -53,36 +50,30 @@
 
     if-eqz v9, :cond_0
 
-    .line 56
     const-string v9, "PA"
 
     const-string v10, "EX"
 
     invoke-static {v9, v10}, Landroid/os/Debug;->dumpResetReason(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 60
     :cond_0
     invoke-virtual {p1}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
 
     move-result-object v7
 
-    .line 62
     .local v7, "res":Landroid/content/res/Resources;
     move-object/from16 v0, p2
 
     iput-object v0, p0, Lcom/android/server/am/AppErrorDialog;->mService:Lcom/android/server/am/ActivityManagerService;
 
-    .line 63
     move-object/from16 v0, p4
 
     iput-object v0, p0, Lcom/android/server/am/AppErrorDialog;->mProc:Lcom/android/server/am/ProcessRecord;
 
-    .line 64
     move-object/from16 v0, p3
 
     iput-object v0, p0, Lcom/android/server/am/AppErrorDialog;->mResult:Lcom/android/server/am/AppErrorResult;
 
-    .line 67
     move-object/from16 v0, p4
 
     iget-object v9, v0, Lcom/android/server/am/ProcessRecord;->pkgList:Landroid/util/ArrayMap;
@@ -110,7 +101,6 @@
     .local v6, "name":Ljava/lang/CharSequence;
     if-eqz v6, :cond_7
 
-    .line 69
     new-instance v9, Ljava/lang/StringBuilder;
 
     invoke-direct {v9}, Ljava/lang/StringBuilder;-><init>()V
@@ -164,18 +154,15 @@
 
     invoke-virtual {p0, v9}, Lcom/android/server/am/AppErrorDialog;->setMessage(Ljava/lang/CharSequence;)V
 
-    .line 79
     :goto_1
     sget-boolean v9, Lcom/android/server/am/ActivityManagerService;->mIsSPDError:Z
 
     if-nez v9, :cond_1
 
-    .line 81
     const-string v3, "-k -t -z -d -o /data/log/dumpstate_app_error"
 
-    .line 82
     .local v3, "dumpCmd":Ljava/lang/String;
-    const-string/jumbo v9, "user"
+    const-string v9, "user"
 
     sget-object v10, Landroid/os/Build;->TYPE:Ljava/lang/String;
 
@@ -185,7 +172,6 @@
 
     if-eqz v9, :cond_9
 
-    .line 83
     new-instance v9, Ljava/lang/Thread;
 
     new-instance v10, Lcom/android/server/am/AppErrorDialog$1;
@@ -198,7 +184,6 @@
 
     invoke-virtual {v9}, Ljava/lang/Thread;->start()V
 
-    .line 93
     .end local v3    # "dumpCmd":Ljava/lang/String;
     :cond_1
     :goto_2
@@ -206,7 +191,6 @@
 
     invoke-virtual {p0, v9}, Lcom/android/server/am/AppErrorDialog;->setCancelable(Z)V
 
-    .line 95
     const/4 v9, -0x1
 
     const v10, 0x104048a
@@ -225,17 +209,14 @@
 
     invoke-virtual {p0, v9, v10, v11}, Lcom/android/server/am/AppErrorDialog;->setButton(ILjava/lang/CharSequence;Landroid/os/Message;)V
 
-    .line 99
     move-object/from16 v0, p4
 
     iget-object v9, v0, Lcom/android/server/am/ProcessRecord;->errorReportReceiver:Landroid/content/ComponentName;
 
     if-eqz v9, :cond_3
 
-    .line 101
     const/4 v8, 0x0
 
-    .line 102
     .local v8, "rp":Landroid/app/enterprise/RestrictionPolicy;
     const-string v9, "enterprise_policy"
 
@@ -245,16 +226,13 @@
 
     check-cast v4, Landroid/app/enterprise/EnterpriseDeviceManager;
 
-    .line 104
     .local v4, "edm":Landroid/app/enterprise/EnterpriseDeviceManager;
     if-eqz v4, :cond_2
 
-    .line 105
     invoke-virtual {v4}, Landroid/app/enterprise/EnterpriseDeviceManager;->getRestrictionPolicy()Landroid/app/enterprise/RestrictionPolicy;
 
     move-result-object v8
 
-    .line 108
     :cond_2
     if-eqz v8, :cond_3
 
@@ -268,7 +246,6 @@
 
     if-eqz v9, :cond_3
 
-    .line 109
     const/4 v9, -0x2
 
     const v10, 0x104048b
@@ -287,7 +264,6 @@
 
     invoke-virtual {p0, v9, v10, v11}, Lcom/android/server/am/AppErrorDialog;->setButton(ILjava/lang/CharSequence;Landroid/os/Message;)V
 
-    .line 120
     .end local v4    # "edm":Landroid/app/enterprise/EnterpriseDeviceManager;
     .end local v8    # "rp":Landroid/app/enterprise/RestrictionPolicy;
     :cond_3
@@ -299,7 +275,6 @@
 
     invoke-virtual {p0, v9}, Lcom/android/server/am/AppErrorDialog;->setTitle(Ljava/lang/CharSequence;)V
 
-    .line 121
     invoke-virtual {p0}, Lcom/android/server/am/AppErrorDialog;->getWindow()Landroid/view/Window;
 
     move-result-object v9
@@ -308,7 +283,6 @@
 
     move-result-object v2
 
-    .line 122
     .local v2, "attrs":Landroid/view/WindowManager$LayoutParams;
     new-instance v9, Ljava/lang/StringBuilder;
 
@@ -336,28 +310,24 @@
 
     invoke-virtual {v2, v9}, Landroid/view/WindowManager$LayoutParams;->setTitle(Ljava/lang/CharSequence;)V
 
-    .line 123
     iget v9, v2, Landroid/view/WindowManager$LayoutParams;->privateFlags:I
 
     or-int/lit16 v9, v9, 0x110
 
     iput v9, v2, Landroid/view/WindowManager$LayoutParams;->privateFlags:I
 
-    .line 125
     invoke-virtual {p0}, Lcom/android/server/am/AppErrorDialog;->getWindow()Landroid/view/Window;
 
     move-result-object v9
 
     invoke-virtual {v9, v2}, Landroid/view/Window;->setAttributes(Landroid/view/WindowManager$LayoutParams;)V
 
-    .line 126
     move-object/from16 v0, p4
 
     iget-boolean v9, v0, Lcom/android/server/am/ProcessRecord;->persistent:Z
 
     if-eqz v9, :cond_4
 
-    .line 127
     invoke-virtual {p0}, Lcom/android/server/am/AppErrorDialog;->getWindow()Landroid/view/Window;
 
     move-result-object v9
@@ -366,7 +336,6 @@
 
     invoke-virtual {v9, v10}, Landroid/view/Window;->setType(I)V
 
-    .line 131
     :cond_4
     const-string v9, "com.samsung.android.service.aircommand"
 
@@ -380,11 +349,9 @@
 
     move-result v5
 
-    .line 132
     .local v5, "isAirCommandService":Z
     if-eqz v5, :cond_5
 
-    .line 133
     invoke-virtual {p0}, Lcom/android/server/am/AppErrorDialog;->getWindow()Landroid/view/Window;
 
     move-result-object v9
@@ -393,7 +360,6 @@
 
     invoke-virtual {v9, v10}, Landroid/view/Window;->setType(I)V
 
-    .line 137
     :cond_5
     iget-object v9, p0, Lcom/android/server/am/AppErrorDialog;->mHandler:Landroid/os/Handler;
 
@@ -409,10 +375,8 @@
 
     invoke-virtual {v9, v10, v12, v13}, Landroid/os/Handler;->sendMessageDelayed(Landroid/os/Message;J)Z
 
-    .line 140
     return-void
 
-    .line 69
     .end local v2    # "attrs":Landroid/view/WindowManager$LayoutParams;
     .end local v5    # "isAirCommandService":Z
     :cond_6
@@ -420,14 +384,12 @@
 
     goto/16 :goto_0
 
-    .line 73
     .end local v6    # "name":Ljava/lang/CharSequence;
     :cond_7
     move-object/from16 v0, p4
 
     iget-object v6, v0, Lcom/android/server/am/ProcessRecord;->processName:Ljava/lang/String;
 
-    .line 74
     .restart local v6    # "name":Ljava/lang/CharSequence;
     new-instance v9, Ljava/lang/StringBuilder;
 
@@ -479,7 +441,6 @@
 
     goto :goto_3
 
-    .line 89
     .restart local v3    # "dumpCmd":Ljava/lang/String;
     :cond_9
     const-string v9, "-k -t -z -d -o /data/log/dumpstate_app_error"
@@ -494,7 +455,6 @@
     .param p0, "x0"    # Lcom/android/server/am/AppErrorDialog;
 
     .prologue
-    .line 38
     iget-object v0, p0, Lcom/android/server/am/AppErrorDialog;->mService:Lcom/android/server/am/ActivityManagerService;
 
     return-object v0
@@ -505,7 +465,6 @@
     .param p0, "x0"    # Lcom/android/server/am/AppErrorDialog;
 
     .prologue
-    .line 38
     iget-object v0, p0, Lcom/android/server/am/AppErrorDialog;->mProc:Lcom/android/server/am/ProcessRecord;
 
     return-object v0
@@ -516,7 +475,6 @@
     .param p0, "x0"    # Lcom/android/server/am/AppErrorDialog;
 
     .prologue
-    .line 38
     iget-object v0, p0, Lcom/android/server/am/AppErrorDialog;->mResult:Lcom/android/server/am/AppErrorResult;
 
     return-object v0
@@ -528,7 +486,6 @@
     .locals 1
 
     .prologue
-    .line 162
     iget-object v0, p0, Lcom/android/server/am/AppErrorDialog;->mProc:Lcom/android/server/am/ProcessRecord;
 
     if-eqz v0, :cond_0

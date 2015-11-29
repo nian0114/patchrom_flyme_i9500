@@ -30,7 +30,6 @@
     .locals 1
 
     .prologue
-    .line 32
     const-string v0, "15.1-SNAPSHOT"
 
     sput-object v0, Lcom/itsoninc/android/ItsOnOemApiBase;->FRAMEWORK_INTEGRATION_VERSION:Ljava/lang/String;
@@ -44,21 +43,16 @@
     .prologue
     const/4 v1, 0x0
 
-    .line 19
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 21
     const-string v0, "ItsOnAPI"
 
     iput-object v0, p0, Lcom/itsoninc/android/ItsOnOemApiBase;->LOGTAG:Ljava/lang/String;
 
-    .line 24
     iput-object v1, p0, Lcom/itsoninc/android/ItsOnOemApiBase;->mIfImpl:Lcom/itsoninc/android/ItsOnOemInterface;
 
-    .line 25
     iput-object v1, p0, Lcom/itsoninc/android/ItsOnOemApiBase;->context:Landroid/content/Context;
 
-    .line 26
     iput-object v1, p0, Lcom/itsoninc/android/ItsOnOemApiBase;->frameworkIf:Lcom/itsoninc/android/ItsOnFrameworkInterface;
 
     return-void
@@ -68,7 +62,6 @@
     .locals 1
 
     .prologue
-    .line 210
     sget-object v0, Lcom/itsoninc/android/ItsOnOemApiBase;->FRAMEWORK_INTEGRATION_VERSION:Ljava/lang/String;
 
     return-object v0
@@ -81,7 +74,6 @@
     .prologue
     const/4 v3, 0x0
 
-    .line 197
     invoke-virtual {p0}, Ljava/lang/String;->length()I
 
     move-result v1
@@ -96,7 +88,6 @@
 
     if-ne v1, v2, :cond_0
 
-    .line 198
     new-instance v0, Ljava/lang/String;
 
     invoke-virtual {p0}, Ljava/lang/String;->length()I
@@ -115,7 +106,6 @@
     .local v0, "path":Ljava/lang/String;
     move-object p0, v0
 
-    .line 202
     .end local v0    # "path":Ljava/lang/String;
     .restart local p0    # "path":Ljava/lang/String;
     :cond_0
@@ -127,7 +117,6 @@
 
     if-eqz v1, :cond_1
 
-    .line 203
     new-instance v0, Ljava/lang/String;
 
     invoke-virtual {p0}, Ljava/lang/String;->length()I
@@ -152,7 +141,6 @@
     .restart local v0    # "path":Ljava/lang/String;
     move-object p0, v0
 
-    .line 206
     .end local v0    # "path":Ljava/lang/String;
     .restart local p0    # "path":Ljava/lang/String;
     :cond_1
@@ -163,7 +151,6 @@
     .locals 3
 
     .prologue
-    .line 184
     const-string v1, "ro.itson.path"
 
     const-string v2, ""
@@ -172,7 +159,6 @@
 
     move-result-object v0
 
-    .line 187
     .local v0, "path":Ljava/lang/String;
     if-eqz v0, :cond_0
 
@@ -184,11 +170,9 @@
 
     if-eqz v1, :cond_1
 
-    .line 188
     :cond_0
     const-string v1, "/system/framework/"
 
-    .line 191
     :goto_0
     return-object v1
 
@@ -228,7 +212,6 @@
     .locals 2
 
     .prologue
-    .line 181
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -260,12 +243,10 @@
     .locals 1
 
     .prologue
-    .line 165
     iget-object v0, p0, Lcom/itsoninc/android/ItsOnOemApiBase;->mIfImpl:Lcom/itsoninc/android/ItsOnOemInterface;
 
     invoke-interface {v0}, Lcom/itsoninc/android/ItsOnOemInterface;->acceptCall()V
 
-    .line 166
     return-void
 .end method
 
@@ -274,12 +255,10 @@
     .param p1, "transactionId"    # Ljava/lang/String;
 
     .prologue
-    .line 145
     iget-object v0, p0, Lcom/itsoninc/android/ItsOnOemApiBase;->mIfImpl:Lcom/itsoninc/android/ItsOnOemInterface;
 
     invoke-interface {v0, p1}, Lcom/itsoninc/android/ItsOnOemInterface;->accountMms(Ljava/lang/String;)V
 
-    .line 146
     return-void
 .end method
 
@@ -289,7 +268,6 @@
     .param p2, "transactionId"    # Ljava/lang/String;
 
     .prologue
-    .line 141
     iget-object v0, p0, Lcom/itsoninc/android/ItsOnOemApiBase;->mIfImpl:Lcom/itsoninc/android/ItsOnOemInterface;
 
     invoke-interface {v0, p1, p2}, Lcom/itsoninc/android/ItsOnOemInterface;->authorizeIncomingMms(Ljava/lang/String;Ljava/lang/String;)Z
@@ -306,7 +284,6 @@
     .param p3, "mimeType"    # Ljava/lang/String;
 
     .prologue
-    .line 118
     iget-object v0, p0, Lcom/itsoninc/android/ItsOnOemApiBase;->mIfImpl:Lcom/itsoninc/android/ItsOnOemInterface;
 
     invoke-interface {v0, p1, p2, p3}, Lcom/itsoninc/android/ItsOnOemInterface;->authorizeIncomingSms(Ljava/lang/String;Lcom/itsoninc/android/SmsType;Ljava/lang/String;)Z
@@ -321,7 +298,6 @@
     .param p1, "pdu"    # [B
 
     .prologue
-    .line 122
     iget-object v0, p0, Lcom/itsoninc/android/ItsOnOemApiBase;->mIfImpl:Lcom/itsoninc/android/ItsOnOemInterface;
 
     invoke-interface {v0, p1}, Lcom/itsoninc/android/ItsOnOemInterface;->authorizeIncomingSms([B)Z
@@ -336,7 +312,6 @@
     .param p1, "address"    # Ljava/lang/String;
 
     .prologue
-    .line 95
     iget-object v0, p0, Lcom/itsoninc/android/ItsOnOemApiBase;->mIfImpl:Lcom/itsoninc/android/ItsOnOemInterface;
 
     invoke-interface {v0, p1}, Lcom/itsoninc/android/ItsOnOemInterface;->authorizeIncomingVoice(Ljava/lang/String;)Z
@@ -352,7 +327,6 @@
     .param p2, "transactionId"    # Ljava/lang/String;
 
     .prologue
-    .line 134
     iget-object v0, p0, Lcom/itsoninc/android/ItsOnOemApiBase;->mIfImpl:Lcom/itsoninc/android/ItsOnOemInterface;
 
     invoke-interface {v0, p1, p2}, Lcom/itsoninc/android/ItsOnOemInterface;->authorizeOutgoingMms(Ljava/lang/String;Ljava/lang/String;)Z
@@ -378,7 +352,6 @@
     .end annotation
 
     .prologue
-    .line 137
     .local p1, "addresses":Ljava/util/List;, "Ljava/util/List<Ljava/lang/String;>;"
     iget-object v0, p0, Lcom/itsoninc/android/ItsOnOemApiBase;->mIfImpl:Lcom/itsoninc/android/ItsOnOemInterface;
 
@@ -395,7 +368,6 @@
     .param p2, "serial"    # I
 
     .prologue
-    .line 114
     iget-object v0, p0, Lcom/itsoninc/android/ItsOnOemApiBase;->mIfImpl:Lcom/itsoninc/android/ItsOnOemInterface;
 
     invoke-interface {v0, p1, p2}, Lcom/itsoninc/android/ItsOnOemInterface;->authorizeOutgoingSms(Ljava/lang/String;I)Z
@@ -411,7 +383,6 @@
     .param p2, "serial"    # I
 
     .prologue
-    .line 110
     iget-object v0, p0, Lcom/itsoninc/android/ItsOnOemApiBase;->mIfImpl:Lcom/itsoninc/android/ItsOnOemInterface;
 
     invoke-interface {v0, p1, p2}, Lcom/itsoninc/android/ItsOnOemInterface;->authorizeOutgoingSms([BI)Z
@@ -426,7 +397,6 @@
     .param p1, "address"    # Ljava/lang/String;
 
     .prologue
-    .line 99
     iget-object v0, p0, Lcom/itsoninc/android/ItsOnOemApiBase;->mIfImpl:Lcom/itsoninc/android/ItsOnOemInterface;
 
     invoke-interface {v0, p1}, Lcom/itsoninc/android/ItsOnOemInterface;->authorizeOutgoingVoice(Ljava/lang/String;)Z
@@ -441,7 +411,6 @@
     .param p1, "number"    # Ljava/lang/String;
 
     .prologue
-    .line 169
     iget-object v0, p0, Lcom/itsoninc/android/ItsOnOemApiBase;->mIfImpl:Lcom/itsoninc/android/ItsOnOemInterface;
 
     invoke-interface {v0, p1}, Lcom/itsoninc/android/ItsOnOemInterface;->callWaiting(Ljava/lang/String;)Z
@@ -456,12 +425,10 @@
     .param p1, "transactionId"    # Ljava/lang/String;
 
     .prologue
-    .line 149
     iget-object v0, p0, Lcom/itsoninc/android/ItsOnOemApiBase;->mIfImpl:Lcom/itsoninc/android/ItsOnOemInterface;
 
     invoke-interface {v0, p1}, Lcom/itsoninc/android/ItsOnOemInterface;->cleanupMms(Ljava/lang/String;)V
 
-    .line 150
     return-void
 .end method
 
@@ -469,17 +436,14 @@
     .locals 1
 
     .prologue
-    .line 70
     iget-object v0, p0, Lcom/itsoninc/android/ItsOnOemApiBase;->mIfImpl:Lcom/itsoninc/android/ItsOnOemInterface;
 
     invoke-interface {v0}, Lcom/itsoninc/android/ItsOnOemInterface;->destroy()V
 
-    .line 71
     const/4 v0, 0x0
 
     iput-object v0, p0, Lcom/itsoninc/android/ItsOnOemApiBase;->context:Landroid/content/Context;
 
-    .line 72
     return-void
 .end method
 
@@ -488,7 +452,6 @@
     .param p1, "address"    # Ljava/lang/String;
 
     .prologue
-    .line 157
     iget-object v0, p0, Lcom/itsoninc/android/ItsOnOemApiBase;->mIfImpl:Lcom/itsoninc/android/ItsOnOemInterface;
 
     invoke-interface {v0, p1}, Lcom/itsoninc/android/ItsOnOemInterface;->dial(Ljava/lang/String;)Z
@@ -503,7 +466,6 @@
     .param p1, "featureCode"    # Ljava/lang/String;
 
     .prologue
-    .line 161
     iget-object v0, p0, Lcom/itsoninc/android/ItsOnOemApiBase;->mIfImpl:Lcom/itsoninc/android/ItsOnOemInterface;
 
     invoke-interface {v0, p1}, Lcom/itsoninc/android/ItsOnOemInterface;->flash(Ljava/lang/String;)Z
@@ -518,15 +480,12 @@
     .param p1, "context"    # Landroid/content/Context;
 
     .prologue
-    .line 60
     iget-object v0, p0, Lcom/itsoninc/android/ItsOnOemApiBase;->mIfImpl:Lcom/itsoninc/android/ItsOnOemInterface;
 
     invoke-interface {v0, p1}, Lcom/itsoninc/android/ItsOnOemInterface;->initFramework(Landroid/content/Context;)V
 
-    .line 61
     iput-object p1, p0, Lcom/itsoninc/android/ItsOnOemApiBase;->context:Landroid/content/Context;
 
-    .line 62
     return-void
 .end method
 
@@ -535,15 +494,12 @@
     .param p1, "context"    # Landroid/content/Context;
 
     .prologue
-    .line 65
     iget-object v0, p0, Lcom/itsoninc/android/ItsOnOemApiBase;->mIfImpl:Lcom/itsoninc/android/ItsOnOemInterface;
 
     invoke-interface {v0, p1}, Lcom/itsoninc/android/ItsOnOemInterface;->initTelephony(Landroid/content/Context;)V
 
-    .line 66
     iput-object p1, p0, Lcom/itsoninc/android/ItsOnOemApiBase;->context:Landroid/content/Context;
 
-    .line 67
     return-void
 .end method
 
@@ -553,7 +509,6 @@
     .param p3, "operatorNumeric"    # Ljava/lang/String;
 
     .prologue
-    .line 214
     iget-object v0, p0, Lcom/itsoninc/android/ItsOnOemApiBase;->mIfImpl:Lcom/itsoninc/android/ItsOnOemInterface;
 
     invoke-interface {v0, p1, p2, p3}, Lcom/itsoninc/android/ItsOnOemInterface;->isDataAllowed(JLjava/lang/String;)Z
@@ -572,12 +527,10 @@
     .param p2, "nitzReceiveTime"    # J
 
     .prologue
-    .line 153
     iget-object v0, p0, Lcom/itsoninc/android/ItsOnOemApiBase;->mIfImpl:Lcom/itsoninc/android/ItsOnOemInterface;
 
     invoke-interface {v0, p1, p2, p3}, Lcom/itsoninc/android/ItsOnOemInterface;->nitzTimeReceived(Ljava/lang/String;J)V
 
-    .line 154
     return-void
 .end method
 
@@ -588,12 +541,10 @@
     .param p3, "foregroundActivities"    # Z
 
     .prologue
-    .line 83
     iget-object v0, p0, Lcom/itsoninc/android/ItsOnOemApiBase;->mIfImpl:Lcom/itsoninc/android/ItsOnOemInterface;
 
     invoke-interface {v0, p1, p2, p3}, Lcom/itsoninc/android/ItsOnOemInterface;->onForegroundActivitiesChanged(IIZ)V
 
-    .line 84
     return-void
 .end method
 
@@ -604,12 +555,10 @@
     .param p3, "importance"    # I
 
     .prologue
-    .line 87
     iget-object v0, p0, Lcom/itsoninc/android/ItsOnOemApiBase;->mIfImpl:Lcom/itsoninc/android/ItsOnOemInterface;
 
     invoke-interface {v0, p1, p2, p3}, Lcom/itsoninc/android/ItsOnOemInterface;->onImportanceChanged(III)V
 
-    .line 88
     return-void
 .end method
 
@@ -620,12 +569,10 @@
     .param p3, "apnType"    # Ljava/lang/String;
 
     .prologue
-    .line 79
     iget-object v0, p0, Lcom/itsoninc/android/ItsOnOemApiBase;->mIfImpl:Lcom/itsoninc/android/ItsOnOemInterface;
 
     invoke-interface {v0, p1, p2, p3}, Lcom/itsoninc/android/ItsOnOemInterface;->onNewDataSession(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 80
     return-void
 .end method
 
@@ -635,12 +582,10 @@
     .param p2, "uid"    # I
 
     .prologue
-    .line 91
     iget-object v0, p0, Lcom/itsoninc/android/ItsOnOemApiBase;->mIfImpl:Lcom/itsoninc/android/ItsOnOemInterface;
 
     invoke-interface {v0, p1, p2}, Lcom/itsoninc/android/ItsOnOemInterface;->onProcessDied(II)V
 
-    .line 92
     return-void
 .end method
 
@@ -657,13 +602,11 @@
     .end annotation
 
     .prologue
-    .line 173
     .local p1, "callList":Ljava/util/List;, "Ljava/util/List<Lcom/itsoninc/android/DeviceCall;>;"
     iget-object v0, p0, Lcom/itsoninc/android/ItsOnOemApiBase;->mIfImpl:Lcom/itsoninc/android/ItsOnOemInterface;
 
     invoke-interface {v0, p1}, Lcom/itsoninc/android/ItsOnOemInterface;->processCDMACallList(Ljava/util/List;)V
 
-    .line 174
     return-void
 .end method
 
@@ -680,13 +623,11 @@
     .end annotation
 
     .prologue
-    .line 106
     .local p1, "callList":Ljava/util/List;, "Ljava/util/List<Lcom/itsoninc/android/DeviceCall;>;"
     iget-object v0, p0, Lcom/itsoninc/android/ItsOnOemApiBase;->mIfImpl:Lcom/itsoninc/android/ItsOnOemInterface;
 
     invoke-interface {v0, p1}, Lcom/itsoninc/android/ItsOnOemInterface;->processCallList(Ljava/util/List;)V
 
-    .line 107
     return-void
 .end method
 
@@ -696,12 +637,10 @@
     .param p2, "uid"    # I
 
     .prologue
-    .line 45
     iget-object v0, p0, Lcom/itsoninc/android/ItsOnOemApiBase;->mIfImpl:Lcom/itsoninc/android/ItsOnOemInterface;
 
     invoke-interface {v0, p1, p2}, Lcom/itsoninc/android/ItsOnOemInterface;->registerActivityMapping(Ljava/lang/String;I)V
 
-    .line 46
     return-void
 .end method
 
@@ -710,12 +649,10 @@
     .param p1, "url"    # Ljava/lang/String;
 
     .prologue
-    .line 37
     iget-object v0, p0, Lcom/itsoninc/android/ItsOnOemApiBase;->mIfImpl:Lcom/itsoninc/android/ItsOnOemInterface;
 
     invoke-interface {v0, p1}, Lcom/itsoninc/android/ItsOnOemInterface;->registerDownloadMapping(Ljava/lang/String;)V
 
-    .line 38
     return-void
 .end method
 
@@ -724,12 +661,10 @@
     .param p1, "url"    # Ljava/lang/String;
 
     .prologue
-    .line 41
     iget-object v0, p0, Lcom/itsoninc/android/ItsOnOemApiBase;->mIfImpl:Lcom/itsoninc/android/ItsOnOemInterface;
 
     invoke-interface {v0, p1}, Lcom/itsoninc/android/ItsOnOemInterface;->registerMediaMapping(Ljava/lang/String;)V
 
-    .line 42
     return-void
 .end method
 
@@ -737,12 +672,10 @@
     .locals 1
 
     .prologue
-    .line 103
     iget-object v0, p0, Lcom/itsoninc/android/ItsOnOemApiBase;->mIfImpl:Lcom/itsoninc/android/ItsOnOemInterface;
 
     invoke-interface {v0}, Lcom/itsoninc/android/ItsOnOemInterface;->rejectCall()V
 
-    .line 104
     return-void
 .end method
 
@@ -753,15 +686,12 @@
     .end annotation
 
     .prologue
-    .line 55
     iget-object v0, p0, Lcom/itsoninc/android/ItsOnOemApiBase;->mIfImpl:Lcom/itsoninc/android/ItsOnOemInterface;
 
     invoke-interface {v0, p1}, Lcom/itsoninc/android/ItsOnOemInterface;->setContext(Landroid/content/Context;)V
 
-    .line 56
     iput-object p1, p0, Lcom/itsoninc/android/ItsOnOemApiBase;->context:Landroid/content/Context;
 
-    .line 57
     return-void
 .end method
 
@@ -771,12 +701,10 @@
     .param p2, "trySetupDataMessage"    # Landroid/os/Message;
 
     .prologue
-    .line 218
     iget-object v0, p0, Lcom/itsoninc/android/ItsOnOemApiBase;->mIfImpl:Lcom/itsoninc/android/ItsOnOemInterface;
 
     invoke-interface {v0, p1, p2}, Lcom/itsoninc/android/ItsOnOemInterface;->setDataConnectionHandler(Landroid/os/Handler;Landroid/os/Message;)V
 
-    .line 219
     return-void
 .end method
 
@@ -785,12 +713,10 @@
     .param p1, "inEmergencyMode"    # Z
 
     .prologue
-    .line 177
     iget-object v0, p0, Lcom/itsoninc/android/ItsOnOemApiBase;->mIfImpl:Lcom/itsoninc/android/ItsOnOemInterface;
 
     invoke-interface {v0, p1}, Lcom/itsoninc/android/ItsOnOemInterface;->setEmergencyMode(Z)V
 
-    .line 178
     return-void
 .end method
 
@@ -799,15 +725,12 @@
     .param p1, "frameworkIf"    # Lcom/itsoninc/android/ItsOnFrameworkInterface;
 
     .prologue
-    .line 75
     iget-object v0, p0, Lcom/itsoninc/android/ItsOnOemApiBase;->mIfImpl:Lcom/itsoninc/android/ItsOnOemInterface;
 
     invoke-interface {v0, p1}, Lcom/itsoninc/android/ItsOnOemInterface;->setFrameworkInterface(Lcom/itsoninc/android/ItsOnFrameworkInterface;)V
 
-    .line 76
     iput-object p1, p0, Lcom/itsoninc/android/ItsOnOemApiBase;->frameworkIf:Lcom/itsoninc/android/ItsOnFrameworkInterface;
 
-    .line 77
     return-void
 .end method
 
@@ -816,12 +739,10 @@
     .param p1, "serial"    # I
 
     .prologue
-    .line 130
     iget-object v0, p0, Lcom/itsoninc/android/ItsOnOemApiBase;->mIfImpl:Lcom/itsoninc/android/ItsOnOemInterface;
 
     invoke-interface {v0, p1}, Lcom/itsoninc/android/ItsOnOemInterface;->smsDone(I)V
 
-    .line 131
     return-void
 .end method
 
@@ -830,11 +751,9 @@
     .param p1, "serial"    # I
 
     .prologue
-    .line 126
     iget-object v0, p0, Lcom/itsoninc/android/ItsOnOemApiBase;->mIfImpl:Lcom/itsoninc/android/ItsOnOemInterface;
 
     invoke-interface {v0, p1}, Lcom/itsoninc/android/ItsOnOemInterface;->smsError(I)V
 
-    .line 127
     return-void
 .end method

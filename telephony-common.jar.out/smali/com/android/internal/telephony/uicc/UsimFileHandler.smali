@@ -18,10 +18,8 @@
     .param p3, "ci"    # Lcom/android/internal/telephony/CommandsInterface;
 
     .prologue
-    .line 41
     invoke-direct {p0, p1, p2, p3}, Lcom/android/internal/telephony/uicc/IccFileHandler;-><init>(Lcom/android/internal/telephony/uicc/UiccCardApplication;Ljava/lang/String;Lcom/android/internal/telephony/CommandsInterface;)V
 
-    .line 42
     return-void
 .end method
 
@@ -34,7 +32,6 @@
     .prologue
     const/4 v6, 0x1
 
-    .line 46
     invoke-static {}, Landroid/telephony/TelephonyManager;->getDefault()Landroid/telephony/TelephonyManager;
 
     move-result-object v4
@@ -45,7 +42,6 @@
 
     if-le v4, v6, :cond_8
 
-    .line 47
     const-string v4, "DCG"
 
     const-string v5, ""
@@ -96,7 +92,6 @@
 
     if-eqz v4, :cond_8
 
-    .line 52
     :cond_0
     invoke-virtual {p0}, Lcom/android/internal/telephony/uicc/UsimFileHandler;->getPhoneId()I
 
@@ -104,7 +99,6 @@
 
     if-nez v4, :cond_8
 
-    .line 53
     const-string v4, "ril.IsCSIM"
 
     const-string v5, "0"
@@ -117,45 +111,37 @@
 
     move-result v0
 
-    .line 54
     .local v0, "isCsim":I
     const/16 v4, 0x6f3c
 
     if-ne p1, v4, :cond_4
 
-    .line 55
     invoke-static {}, Landroid/telephony/TelephonyManager;->isSelectTelecomDF()Z
 
     move-result v4
 
     if-eqz v4, :cond_3
 
-    .line 56
     if-ne v0, v6, :cond_2
 
-    .line 57
     const-string v1, "3F007FFF"
 
-    .line 140
     .end local v0    # "isCsim":I
     :cond_1
     :goto_0
     return-object v1
 
-    .line 59
     .restart local v0    # "isCsim":I
     :cond_2
     const-string v1, "3F007F25"
 
     goto :goto_0
 
-    .line 62
     :cond_3
     invoke-static {}, Landroid/telephony/SubscriptionManager;->getDefaultSmsSubId()J
 
     move-result-wide v2
 
-    .line 63
     .local v2, "subId":J
     invoke-static {v2, v3}, Landroid/telephony/SubscriptionManager;->getPhoneId(J)I
 
@@ -163,33 +149,27 @@
 
     if-nez v4, :cond_8
 
-    .line 64
     const-string v1, "3F007F10"
 
     goto :goto_0
 
-    .line 67
     .end local v2    # "subId":J
     :cond_4
     const/16 v4, 0x6f22
 
     if-ne p1, v4, :cond_6
 
-    .line 68
     if-ne v0, v6, :cond_5
 
-    .line 69
     const-string v1, "3F007FFF"
 
     goto :goto_0
 
-    .line 71
     :cond_5
     const-string v1, "3F007F25"
 
     goto :goto_0
 
-    .line 73
     :cond_6
     const/16 v4, 0x4f20
 
@@ -203,63 +183,52 @@
 
     if-ne p1, v4, :cond_8
 
-    .line 74
     :cond_7
     const-string v1, "3F007F105F3C"
 
     goto :goto_0
 
-    .line 79
     .end local v0    # "isCsim":I
     :cond_8
     sparse-switch p1, :sswitch_data_0
 
-    .line 133
     invoke-virtual {p0, p1}, Lcom/android/internal/telephony/uicc/UsimFileHandler;->getCommonIccEFPath(I)Ljava/lang/String;
 
     move-result-object v1
 
-    .line 134
     .local v1, "path":Ljava/lang/String;
     if-nez v1, :cond_1
 
-    .line 138
     const-string v1, "3F007F105F3A"
 
     goto :goto_0
 
-    .line 111
     .end local v1    # "path":Ljava/lang/String;
     :sswitch_0
     const-string v1, "3F007FFF"
 
     goto :goto_0
 
-    .line 116
     :sswitch_1
     const-string v1, "3F007FFF5F3D"
 
     goto :goto_0
 
-    .line 121
     :sswitch_2
     const-string v1, "3F007F105F3A"
 
     goto :goto_0
 
-    .line 125
     :sswitch_3
     const-string v1, "3F007FFF5F50"
 
     goto :goto_0
 
-    .line 130
     :sswitch_4
     const-string v1, "3F007F43"
 
     goto :goto_0
 
-    .line 79
     :sswitch_data_0
     .sparse-switch
         0x4f22 -> :sswitch_1
@@ -302,12 +271,10 @@
     .param p1, "msg"    # Ljava/lang/String;
 
     .prologue
-    .line 145
     const-string v0, "UsimFH"
 
     invoke-static {v0, p1}, Landroid/telephony/Rlog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 146
     return-void
 .end method
 
@@ -316,11 +283,9 @@
     .param p1, "msg"    # Ljava/lang/String;
 
     .prologue
-    .line 150
     const-string v0, "UsimFH"
 
     invoke-static {v0, p1}, Landroid/telephony/Rlog;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 151
     return-void
 .end method

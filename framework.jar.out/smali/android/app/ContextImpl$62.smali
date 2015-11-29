@@ -19,7 +19,6 @@
     .locals 0
 
     .prologue
-    .line 874
     invoke-direct {p0}, Landroid/app/ContextImpl$ServiceFetcher;-><init>()V
 
     return-void
@@ -32,20 +31,17 @@
     .param p1, "ctx"    # Landroid/app/ContextImpl;
 
     .prologue
-    .line 876
     const-string v2, "ABTPersistenceService"
 
     invoke-static {v2}, Landroid/os/ServiceManager;->getService(Ljava/lang/String;)Landroid/os/IBinder;
 
     move-result-object v0
 
-    .line 877
     .local v0, "b":Landroid/os/IBinder;
     invoke-static {v0}, Lcom/absolute/android/persistence/IABTPersistence$Stub;->asInterface(Landroid/os/IBinder;)Lcom/absolute/android/persistence/IABTPersistence;
 
     move-result-object v1
 
-    .line 878
     .local v1, "service":Lcom/absolute/android/persistence/IABTPersistence;
     new-instance v2, Lcom/absolute/android/persistence/ABTPersistenceManager;
 

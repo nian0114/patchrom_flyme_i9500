@@ -75,56 +75,46 @@
     .prologue
     const/4 v1, 0x0
 
-    .line 16
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 18
     new-instance v0, Ljava/util/HashSet;
 
     invoke-direct {v0}, Ljava/util/HashSet;-><init>()V
 
     iput-object v0, p0, Lcom/samsung/appdisabler/ImsiItem;->packageToHide:Ljava/util/Set;
 
-    .line 19
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
     iput-object v0, p0, Lcom/samsung/appdisabler/ImsiItem;->simNumeric:Ljava/util/List;
 
-    .line 20
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
     iput-object v0, p0, Lcom/samsung/appdisabler/ImsiItem;->imsiNumericBase:Ljava/util/List;
 
-    .line 21
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
     iput-object v0, p0, Lcom/samsung/appdisabler/ImsiItem;->simSpn:Ljava/util/List;
 
-    .line 22
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
     iput-object v0, p0, Lcom/samsung/appdisabler/ImsiItem;->networkNumeric:Ljava/util/List;
 
-    .line 23
     iput-boolean v1, p0, Lcom/samsung/appdisabler/ImsiItem;->addShortcutToScreen:Z
 
-    .line 24
     const/4 v0, 0x1
 
     iput-boolean v0, p0, Lcom/samsung/appdisabler/ImsiItem;->hideAfterTimeout:Z
 
-    .line 25
     iput-boolean v1, p0, Lcom/samsung/appdisabler/ImsiItem;->forceApplicationTurnOff:Z
 
-    .line 27
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -142,21 +132,17 @@
     .prologue
     const/4 v1, 0x1
 
-    .line 310
     invoke-static {p1}, Ljava/lang/Boolean;->parseBoolean(Ljava/lang/String;)Z
 
     move-result v0
 
-    .line 311
     .local v0, "valueToCheck":Z
     if-eqz v0, :cond_1
 
-    .line 319
     :cond_0
     :goto_0
     return v1
 
-    .line 314
     :cond_1
     const-string v2, "false"
 
@@ -166,7 +152,6 @@
 
     if-nez v2, :cond_0
 
-    .line 317
     iget-object v1, p0, Lcom/samsung/appdisabler/ImsiItem;->errorStringBuilder:Ljava/lang/StringBuilder;
 
     new-instance v2, Ljava/lang/StringBuilder;
@@ -199,7 +184,6 @@
 
     invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 319
     const/4 v1, 0x0
 
     goto :goto_0
@@ -211,7 +195,6 @@
     .param p2, "elementName"    # Ljava/lang/String;
 
     .prologue
-    .line 287
     if-eqz p1, :cond_0
 
     invoke-virtual {p1}, Ljava/lang/String;->trim()Ljava/lang/String;
@@ -224,7 +207,6 @@
 
     if-eqz v0, :cond_1
 
-    .line 288
     :cond_0
     iget-object v0, p0, Lcom/samsung/appdisabler/ImsiItem;->errorStringBuilder:Ljava/lang/StringBuilder;
 
@@ -248,14 +230,12 @@
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 289
     iget-object v0, p0, Lcom/samsung/appdisabler/ImsiItem;->errorStringBuilder:Ljava/lang/StringBuilder;
 
     const-string v1, "\n"
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 290
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -276,10 +256,8 @@
 
     invoke-static {v0}, Lcom/samsung/appdisabler/Utils;->LogW(Ljava/lang/String;)V
 
-    .line 292
     const/4 v0, 0x1
 
-    .line 295
     :goto_0
     return v0
 
@@ -295,33 +273,26 @@
     .param p2, "imsiToNormalize"    # Ljava/lang/String;
 
     .prologue
-    .line 259
     const/4 v3, 0x0
 
-    .line 260
     .local v3, "normalizeImsi":Ljava/lang/String;
     invoke-virtual {p1}, Ljava/lang/String;->length()I
 
     move-result v4
 
-    .line 261
     .local v4, "size":I
     invoke-virtual {p2}, Ljava/lang/String;->length()I
 
     move-result v5
 
-    .line 262
     .local v5, "sizeItem":I
     sub-int v1, v4, v5
 
-    .line 263
     .local v1, "diff":I
     if-lez v1, :cond_1
 
-    .line 265
     const-string v0, ""
 
-    .line 266
     .local v0, "add":Ljava/lang/String;
     const/4 v2, 0x0
 
@@ -329,7 +300,6 @@
     :goto_0
     if-ge v2, v1, :cond_0
 
-    .line 267
     new-instance v6, Ljava/lang/StringBuilder;
 
     invoke-direct {v6}, Ljava/lang/StringBuilder;-><init>()V
@@ -348,12 +318,10 @@
 
     move-result-object v0
 
-    .line 266
     add-int/lit8 v2, v2, 0x1
 
     goto :goto_0
 
-    .line 269
     :cond_0
     new-instance v6, Ljava/lang/StringBuilder;
 
@@ -371,7 +339,6 @@
 
     move-result-object v3
 
-    .line 272
     .end local v0    # "add":Ljava/lang/String;
     .end local v2    # "i":I
     :cond_1
@@ -384,33 +351,26 @@
     .param p2, "imsiToNormalize"    # Ljava/lang/String;
 
     .prologue
-    .line 234
     const/4 v3, 0x0
 
-    .line 235
     .local v3, "normalizeImsi":Ljava/lang/String;
     invoke-virtual {p1}, Ljava/lang/String;->length()I
 
     move-result v4
 
-    .line 236
     .local v4, "size":I
     invoke-virtual {p2}, Ljava/lang/String;->length()I
 
     move-result v5
 
-    .line 237
     .local v5, "sizeItem":I
     sub-int v1, v4, v5
 
-    .line 238
     .local v1, "diff":I
     if-lez v1, :cond_1
 
-    .line 240
     const-string v0, ""
 
-    .line 241
     .local v0, "add":Ljava/lang/String;
     const/4 v2, 0x0
 
@@ -418,7 +378,6 @@
     :goto_0
     if-ge v2, v1, :cond_0
 
-    .line 242
     new-instance v6, Ljava/lang/StringBuilder;
 
     invoke-direct {v6}, Ljava/lang/StringBuilder;-><init>()V
@@ -437,12 +396,10 @@
 
     move-result-object v0
 
-    .line 241
     add-int/lit8 v2, v2, 0x1
 
     goto :goto_0
 
-    .line 244
     :cond_0
     new-instance v6, Ljava/lang/StringBuilder;
 
@@ -460,7 +417,6 @@
 
     move-result-object v3
 
-    .line 247
     .end local v0    # "add":Ljava/lang/String;
     .end local v2    # "i":I
     :cond_1
@@ -472,10 +428,8 @@
     .param p1, "value"    # Ljava/lang/String;
 
     .prologue
-    .line 215
     const-wide/16 v2, -0x1
 
-    .line 218
     .local v2, "intValue":J
     :try_start_0
     invoke-static {p1}, Ljava/lang/Long;->valueOf(Ljava/lang/String;)Ljava/lang/Long;
@@ -488,15 +442,12 @@
 
     move-result-wide v2
 
-    .line 223
     :goto_0
     return-wide v2
 
-    .line 219
     :catch_0
     move-exception v0
 
-    .line 220
     .local v0, "e":Ljava/lang/NumberFormatException;
     new-instance v1, Ljava/lang/StringBuilder;
 
@@ -528,19 +479,16 @@
     .param p1, "errorMsg"    # Ljava/lang/String;
 
     .prologue
-    .line 428
     iget-object v0, p0, Lcom/samsung/appdisabler/ImsiItem;->errorStringBuilder:Ljava/lang/StringBuilder;
 
     invoke-virtual {v0, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 429
     iget-object v0, p0, Lcom/samsung/appdisabler/ImsiItem;->errorStringBuilder:Ljava/lang/StringBuilder;
 
     const-string v1, "\n"
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 430
     return-void
 .end method
 
@@ -557,7 +505,6 @@
     .end annotation
 
     .prologue
-    .line 63
     iget-object v0, p0, Lcom/samsung/appdisabler/ImsiItem;->imsiNumericBase:Ljava/util/List;
 
     return-object v0
@@ -576,7 +523,6 @@
     .end annotation
 
     .prologue
-    .line 86
     iget-object v0, p0, Lcom/samsung/appdisabler/ImsiItem;->networkNumeric:Ljava/util/List;
 
     return-object v0
@@ -595,7 +541,6 @@
     .end annotation
 
     .prologue
-    .line 30
     iget-object v0, p0, Lcom/samsung/appdisabler/ImsiItem;->packageToHide:Ljava/util/Set;
 
     return-object v0
@@ -614,7 +559,6 @@
     .end annotation
 
     .prologue
-    .line 41
     iget-object v0, p0, Lcom/samsung/appdisabler/ImsiItem;->simNumeric:Ljava/util/List;
 
     return-object v0
@@ -633,7 +577,6 @@
     .end annotation
 
     .prologue
-    .line 59
     iget-object v0, p0, Lcom/samsung/appdisabler/ImsiItem;->simSpn:Ljava/util/List;
 
     return-object v0
@@ -643,7 +586,6 @@
     .locals 1
 
     .prologue
-    .line 97
     iget-boolean v0, p0, Lcom/samsung/appdisabler/ImsiItem;->addShortcutToScreen:Z
 
     return v0
@@ -653,7 +595,6 @@
     .locals 1
 
     .prologue
-    .line 130
     iget-boolean v0, p0, Lcom/samsung/appdisabler/ImsiItem;->forceApplicationTurnOff:Z
 
     return v0
@@ -663,7 +604,6 @@
     .locals 1
 
     .prologue
-    .line 114
     iget-boolean v0, p0, Lcom/samsung/appdisabler/ImsiItem;->hideAfterTimeout:Z
 
     return v0
@@ -674,17 +614,13 @@
     .param p1, "imsi"    # Ljava/lang/String;
 
     .prologue
-    .line 168
     if-nez p1, :cond_0
 
-    .line 169
     const/4 v13, 0x0
 
-    .line 210
     :goto_0
     return v13
 
-    .line 172
     :cond_0
     move-object/from16 v0, p0
 
@@ -702,13 +638,11 @@
 
     if-nez v13, :cond_2
 
-    .line 173
     :cond_1
     const/4 v13, 0x0
 
     goto :goto_0
 
-    .line 176
     :cond_2
     move-object/from16 v0, p0
 
@@ -732,25 +666,21 @@
 
     check-cast v8, Lcom/samsung/appdisabler/ImsiNumeric;
 
-    .line 177
     .local v8, "singleImsiNumericBase":Lcom/samsung/appdisabler/ImsiNumeric;
     invoke-virtual {v8}, Lcom/samsung/appdisabler/ImsiNumeric;->getImsiRangeStart()Ljava/lang/String;
 
     move-result-object v5
 
-    .line 178
     .local v5, "imsiRangeStart":Ljava/lang/String;
     invoke-virtual {v8}, Lcom/samsung/appdisabler/ImsiNumeric;->getImsiRangeEnd()Ljava/lang/String;
 
     move-result-object v4
 
-    .line 179
     .local v4, "imsiRangeEnd":Ljava/lang/String;
     invoke-virtual {v8}, Lcom/samsung/appdisabler/ImsiNumeric;->getImsiNumericBase()Ljava/lang/String;
 
     move-result-object v3
 
-    .line 181
     .local v3, "imsiNumericBase":Ljava/lang/String;
     new-instance v13, Ljava/lang/StringBuilder;
 
@@ -768,7 +698,6 @@
 
     move-result-object v12
 
-    .line 182
     .local v12, "xmlImsiStart":Ljava/lang/String;
     new-instance v13, Ljava/lang/StringBuilder;
 
@@ -786,11 +715,9 @@
 
     move-result-object v9
 
-    .line 184
     .local v9, "xmlImsiEnd":Ljava/lang/String;
     if-nez v4, :cond_4
 
-    .line 185
     move-object/from16 v0, p1
 
     invoke-virtual {v0, v12}, Ljava/lang/String;->startsWith(Ljava/lang/String;)Z
@@ -799,7 +726,6 @@
 
     if-eqz v13, :cond_3
 
-    .line 186
     new-instance v13, Ljava/lang/StringBuilder;
 
     invoke-direct {v13}, Ljava/lang/StringBuilder;-><init>()V
@@ -844,12 +770,10 @@
 
     invoke-static {v13}, Lcom/samsung/appdisabler/Utils;->LogI(Ljava/lang/String;)V
 
-    .line 187
     const/4 v13, 0x1
 
     goto/16 :goto_0
 
-    .line 191
     :cond_4
     move-object/from16 v0, p0
 
@@ -859,7 +783,6 @@
 
     move-result-object v12
 
-    .line 192
     move-object/from16 v0, p0
 
     move-object/from16 v1, p1
@@ -868,24 +791,20 @@
 
     move-result-object v9
 
-    .line 193
     if-eqz v12, :cond_5
 
     if-nez v9, :cond_6
 
-    .line 194
     :cond_5
     const/4 v13, 0x0
 
     goto/16 :goto_0
 
-    .line 196
     :cond_6
     invoke-direct/range {p0 .. p1}, Lcom/samsung/appdisabler/ImsiItem;->stringToLong(Ljava/lang/String;)J
 
     move-result-wide v6
 
-    .line 197
     .local v6, "simImsi":J
     move-object/from16 v0, p0
 
@@ -893,7 +812,6 @@
 
     move-result-wide v14
 
-    .line 198
     .local v14, "xmlImsiStartInt":J
     move-object/from16 v0, p0
 
@@ -901,7 +819,6 @@
 
     move-result-wide v10
 
-    .line 200
     .local v10, "xmlImsiEndInt":J
     const-wide/16 v16, -0x1
 
@@ -921,13 +838,11 @@
 
     if-nez v13, :cond_8
 
-    .line 201
     :cond_7
     const/4 v13, 0x0
 
     goto/16 :goto_0
 
-    .line 203
     :cond_8
     cmp-long v13, v14, v6
 
@@ -937,7 +852,6 @@
 
     if-gtz v13, :cond_3
 
-    .line 204
     new-instance v13, Ljava/lang/StringBuilder;
 
     invoke-direct {v13}, Ljava/lang/StringBuilder;-><init>()V
@@ -982,12 +896,10 @@
 
     invoke-static {v13}, Lcom/samsung/appdisabler/Utils;->LogI(Ljava/lang/String;)V
 
-    .line 205
     const/4 v13, 0x1
 
     goto/16 :goto_0
 
-    .line 210
     .end local v3    # "imsiNumericBase":Ljava/lang/String;
     .end local v4    # "imsiRangeEnd":Ljava/lang/String;
     .end local v5    # "imsiRangeStart":Ljava/lang/String;
@@ -1008,7 +920,6 @@
     .param p1, "addShortcutToScreen"    # Ljava/lang/String;
 
     .prologue
-    .line 104
     const-string v0, "add_shortcut_to_homescreen"
 
     invoke-direct {p0, p1, v0}, Lcom/samsung/appdisabler/ImsiItem;->isElementEmpty(Ljava/lang/String;Ljava/lang/String;)Z
@@ -1017,12 +928,10 @@
 
     if-eqz v0, :cond_1
 
-    .line 111
     :cond_0
     :goto_0
     return-void
 
-    .line 108
     :cond_1
     const-string v0, "add_shortcut_to_homescreen"
 
@@ -1032,7 +941,6 @@
 
     if-eqz v0, :cond_0
 
-    .line 109
     invoke-static {p1}, Ljava/lang/Boolean;->parseBoolean(Ljava/lang/String;)Z
 
     move-result v0
@@ -1047,7 +955,6 @@
     .param p1, "forceApplicationTurnOff"    # Ljava/lang/String;
 
     .prologue
-    .line 137
     const-string v0, "force_application_turn_off"
 
     invoke-direct {p0, p1, v0}, Lcom/samsung/appdisabler/ImsiItem;->isElementEmpty(Ljava/lang/String;Ljava/lang/String;)Z
@@ -1056,12 +963,10 @@
 
     if-eqz v0, :cond_1
 
-    .line 143
     :cond_0
     :goto_0
     return-void
 
-    .line 140
     :cond_1
     const-string v0, "force_application_turn_off"
 
@@ -1071,7 +976,6 @@
 
     if-eqz v0, :cond_0
 
-    .line 141
     invoke-static {p1}, Ljava/lang/Boolean;->parseBoolean(Ljava/lang/String;)Z
 
     move-result v0
@@ -1086,7 +990,6 @@
     .param p1, "hideAfterTimeout"    # Ljava/lang/String;
 
     .prologue
-    .line 121
     const-string v0, "hide_after_timeout"
 
     invoke-direct {p0, p1, v0}, Lcom/samsung/appdisabler/ImsiItem;->isElementEmpty(Ljava/lang/String;Ljava/lang/String;)Z
@@ -1095,12 +998,10 @@
 
     if-eqz v0, :cond_1
 
-    .line 127
     :cond_0
     :goto_0
     return-void
 
-    .line 124
     :cond_1
     const-string v0, "hide_after_timeout"
 
@@ -1110,7 +1011,6 @@
 
     if-eqz v0, :cond_0
 
-    .line 125
     invoke-static {p1}, Ljava/lang/Boolean;->parseBoolean(Ljava/lang/String;)Z
 
     move-result v0
@@ -1125,7 +1025,6 @@
     .param p1, "imsiNumericBase"    # Lcom/samsung/appdisabler/ImsiNumeric;
 
     .prologue
-    .line 67
     iget-object v0, p0, Lcom/samsung/appdisabler/ImsiItem;->simNumeric:Ljava/util/List;
 
     invoke-interface {v0}, Ljava/util/List;->isEmpty()Z
@@ -1134,23 +1033,19 @@
 
     if-nez v0, :cond_0
 
-    .line 68
     const-string v0, "can\'t use imsi_numeric_base and sim_numeric in one item"
 
     invoke-static {v0}, Lcom/samsung/appdisabler/Utils;->LogW(Ljava/lang/String;)V
 
-    .line 70
     iget-object v0, p0, Lcom/samsung/appdisabler/ImsiItem;->errorStringBuilder:Ljava/lang/StringBuilder;
 
     const-string v1, "can\'t use imsi_numeric_base and sim_numeric in one item"
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 76
     :goto_0
     return-void
 
-    .line 75
     :cond_0
     iget-object v0, p0, Lcom/samsung/appdisabler/ImsiItem;->imsiNumericBase:Ljava/util/List;
 
@@ -1164,7 +1059,6 @@
     .param p1, "networkNumeric"    # Ljava/lang/String;
 
     .prologue
-    .line 90
     const-string v0, "network_numeric"
 
     invoke-direct {p0, p1, v0}, Lcom/samsung/appdisabler/ImsiItem;->isElementEmpty(Ljava/lang/String;Ljava/lang/String;)Z
@@ -1173,11 +1067,9 @@
 
     if-eqz v0, :cond_0
 
-    .line 94
     :goto_0
     return-void
 
-    .line 93
     :cond_0
     iget-object v0, p0, Lcom/samsung/appdisabler/ImsiItem;->networkNumeric:Ljava/util/List;
 
@@ -1191,8 +1083,7 @@
     .param p1, "packageToHide"    # Ljava/lang/String;
 
     .prologue
-    .line 34
-    const-string/jumbo v0, "package_to_hide"
+    const-string v0, "package_to_hide"
 
     invoke-direct {p0, p1, v0}, Lcom/samsung/appdisabler/ImsiItem;->isElementEmpty(Ljava/lang/String;Ljava/lang/String;)Z
 
@@ -1200,11 +1091,9 @@
 
     if-eqz v0, :cond_0
 
-    .line 38
     :goto_0
     return-void
 
-    .line 37
     :cond_0
     iget-object v0, p0, Lcom/samsung/appdisabler/ImsiItem;->packageToHide:Ljava/util/Set;
 
@@ -1218,8 +1107,7 @@
     .param p1, "simNumeric"    # Ljava/lang/String;
 
     .prologue
-    .line 45
-    const-string/jumbo v0, "sim_numeric"
+    const-string v0, "sim_numeric"
 
     invoke-direct {p0, p1, v0}, Lcom/samsung/appdisabler/ImsiItem;->isElementEmpty(Ljava/lang/String;Ljava/lang/String;)Z
 
@@ -1227,11 +1115,9 @@
 
     if-eqz v0, :cond_0
 
-    .line 56
     :goto_0
     return-void
 
-    .line 47
     :cond_0
     iget-object v0, p0, Lcom/samsung/appdisabler/ImsiItem;->imsiNumericBase:Ljava/util/List;
 
@@ -1241,12 +1127,10 @@
 
     if-nez v0, :cond_1
 
-    .line 48
     const-string v0, "can\'t use imsi_numeric_base and sim_numeric in one item"
 
     invoke-static {v0}, Lcom/samsung/appdisabler/Utils;->LogW(Ljava/lang/String;)V
 
-    .line 50
     iget-object v0, p0, Lcom/samsung/appdisabler/ImsiItem;->errorStringBuilder:Ljava/lang/StringBuilder;
 
     const-string v1, "can\'t use imsi_numeric_base and sim_numeric in one item"
@@ -1255,7 +1139,6 @@
 
     goto :goto_0
 
-    .line 55
     :cond_1
     iget-object v0, p0, Lcom/samsung/appdisabler/ImsiItem;->simNumeric:Ljava/util/List;
 
@@ -1269,8 +1152,7 @@
     .param p1, "simSpn"    # Ljava/lang/String;
 
     .prologue
-    .line 79
-    const-string/jumbo v0, "sim_spn"
+    const-string v0, "sim_spn"
 
     invoke-direct {p0, p1, v0}, Lcom/samsung/appdisabler/ImsiItem;->isElementEmpty(Ljava/lang/String;Ljava/lang/String;)Z
 
@@ -1278,11 +1160,9 @@
 
     if-eqz v0, :cond_0
 
-    .line 83
     :goto_0
     return-void
 
-    .line 82
     :cond_0
     iget-object v0, p0, Lcom/samsung/appdisabler/ImsiItem;->simSpn:Ljava/util/List;
 
@@ -1295,7 +1175,6 @@
     .locals 3
 
     .prologue
-    .line 147
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -1314,7 +1193,7 @@
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v2, "packageToHide="
+    const-string v2, "packageToHide="
 
     invoke-virtual {v0, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -1353,7 +1232,7 @@
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v2, "simNumeric="
+    const-string v2, "simNumeric="
 
     invoke-virtual {v0, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -1431,7 +1310,7 @@
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v2, "simSpn="
+    const-string v2, "simSpn="
 
     invoke-virtual {v0, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -1575,10 +1454,8 @@
     .locals 21
 
     .prologue
-    .line 333
     const-string v7, "[0-9]{5,6}"
 
-    .line 334
     .local v7, "numericMatchPattern":Ljava/lang/String;
     move-object/from16 v0, p0
 
@@ -1605,7 +1482,6 @@
 
     check-cast v10, Ljava/lang/String;
 
-    .line 335
     .local v10, "simNumericTemp":Ljava/lang/String;
     if-eqz v10, :cond_0
 
@@ -1615,7 +1491,6 @@
 
     if-nez v18, :cond_0
 
-    .line 336
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/samsung/appdisabler/ImsiItem;->errorStringBuilder:Ljava/lang/StringBuilder;
@@ -1644,7 +1519,6 @@
 
     invoke-virtual/range {v18 .. v19}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 337
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/samsung/appdisabler/ImsiItem;->errorStringBuilder:Ljava/lang/StringBuilder;
@@ -1655,7 +1529,6 @@
 
     invoke-virtual/range {v18 .. v19}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 338
     new-instance v18, Ljava/lang/StringBuilder;
 
     invoke-direct/range {v18 .. v18}, Ljava/lang/StringBuilder;-><init>()V
@@ -1680,7 +1553,6 @@
 
     goto :goto_0
 
-    .line 342
     .end local v10    # "simNumericTemp":Ljava/lang/String;
     :cond_1
     move-object/from16 v0, p0
@@ -1707,7 +1579,6 @@
 
     check-cast v6, Ljava/lang/String;
 
-    .line 343
     .local v6, "networkNumericTemp":Ljava/lang/String;
     if-eqz v6, :cond_2
 
@@ -1717,7 +1588,6 @@
 
     if-nez v18, :cond_2
 
-    .line 344
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/samsung/appdisabler/ImsiItem;->errorStringBuilder:Ljava/lang/StringBuilder;
@@ -1746,7 +1616,6 @@
 
     invoke-virtual/range {v18 .. v19}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 345
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/samsung/appdisabler/ImsiItem;->errorStringBuilder:Ljava/lang/StringBuilder;
@@ -1757,7 +1626,6 @@
 
     invoke-virtual/range {v18 .. v19}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 346
     new-instance v18, Ljava/lang/StringBuilder;
 
     invoke-direct/range {v18 .. v18}, Ljava/lang/StringBuilder;-><init>()V
@@ -1782,20 +1650,16 @@
 
     goto :goto_1
 
-    .line 350
     .end local v6    # "networkNumericTemp":Ljava/lang/String;
     :cond_3
     const/4 v11, 0x0
 
-    .line 351
     .local v11, "tempImsiBase":Ljava/lang/String;
     const/4 v15, 0x0
 
-    .line 352
     .local v15, "tempImsiRangeStart":Ljava/lang/String;
     const/4 v14, 0x0
 
-    .line 353
     .local v14, "tempImsiRangeEnd":Ljava/lang/String;
     move-object/from16 v0, p0
 
@@ -1821,26 +1685,21 @@
 
     check-cast v16, Lcom/samsung/appdisabler/ImsiNumeric;
 
-    .line 354
     .local v16, "tempItem":Lcom/samsung/appdisabler/ImsiNumeric;
     invoke-virtual/range {v16 .. v16}, Lcom/samsung/appdisabler/ImsiNumeric;->getImsiNumericBase()Ljava/lang/String;
 
     move-result-object v11
 
-    .line 355
     invoke-virtual/range {v16 .. v16}, Lcom/samsung/appdisabler/ImsiNumeric;->getImsiRangeStart()Ljava/lang/String;
 
     move-result-object v15
 
-    .line 356
     invoke-virtual/range {v16 .. v16}, Lcom/samsung/appdisabler/ImsiNumeric;->getImsiRangeEnd()Ljava/lang/String;
 
     move-result-object v14
 
-    .line 358
     const-string v5, "[0-9]{3}|[0-9]{5,6}"
 
-    .line 359
     .local v5, "imsiBasePattern":Ljava/lang/String;
     const-string v18, "imsi_numeric_base"
 
@@ -1854,12 +1713,10 @@
 
     if-eqz v18, :cond_8
 
-    .line 368
     :cond_5
     :goto_3
     const-string v8, "[0-9]{2,10}"
 
-    .line 369
     .local v8, "onlyDigitsPattern":Ljava/lang/String;
     const-string v18, "imsi_range_start"
 
@@ -1873,7 +1730,6 @@
 
     if-eqz v18, :cond_9
 
-    .line 376
     :cond_6
     :goto_4
     const-string v18, "imsi_range_end"
@@ -1888,7 +1744,6 @@
 
     if-eqz v18, :cond_a
 
-    .line 386
     :cond_7
     :goto_5
     :try_start_0
@@ -1896,19 +1751,16 @@
 
     move-result-wide v12
 
-    .line 387
     .local v12, "start":J
     invoke-static {v14}, Ljava/lang/Long;->parseLong(Ljava/lang/String;)J
 
     move-result-wide v2
 
-    .line 388
     .local v2, "end":J
     cmp-long v18, v12, v2
 
     if-lez v18, :cond_4
 
-    .line 389
     new-instance v18, Ljava/lang/StringBuilder;
 
     invoke-direct/range {v18 .. v18}, Ljava/lang/StringBuilder;-><init>()V
@@ -1943,7 +1795,6 @@
 
     invoke-static/range {v18 .. v18}, Lcom/samsung/appdisabler/Utils;->LogW(Ljava/lang/String;)V
 
-    .line 390
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/samsung/appdisabler/ImsiItem;->errorStringBuilder:Ljava/lang/StringBuilder;
@@ -1958,7 +1809,6 @@
 
     goto :goto_2
 
-    .line 392
     .end local v2    # "end":J
     .end local v12    # "start":J
     :catch_0
@@ -1966,7 +1816,6 @@
 
     goto :goto_2
 
-    .line 361
     .end local v8    # "onlyDigitsPattern":Ljava/lang/String;
     :cond_8
     invoke-virtual {v11, v5}, Ljava/lang/String;->matches(Ljava/lang/String;)Z
@@ -1975,7 +1824,6 @@
 
     if-nez v18, :cond_5
 
-    .line 362
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/samsung/appdisabler/ImsiItem;->errorStringBuilder:Ljava/lang/StringBuilder;
@@ -2004,7 +1852,6 @@
 
     invoke-virtual/range {v18 .. v19}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 363
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/samsung/appdisabler/ImsiItem;->errorStringBuilder:Ljava/lang/StringBuilder;
@@ -2015,7 +1862,6 @@
 
     invoke-virtual/range {v18 .. v19}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 364
     new-instance v18, Ljava/lang/StringBuilder;
 
     invoke-direct/range {v18 .. v18}, Ljava/lang/StringBuilder;-><init>()V
@@ -2040,7 +1886,6 @@
 
     goto/16 :goto_3
 
-    .line 371
     .restart local v8    # "onlyDigitsPattern":Ljava/lang/String;
     :cond_9
     invoke-virtual {v15, v8}, Ljava/lang/String;->matches(Ljava/lang/String;)Z
@@ -2049,7 +1894,6 @@
 
     if-nez v18, :cond_6
 
-    .line 372
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/samsung/appdisabler/ImsiItem;->errorStringBuilder:Ljava/lang/StringBuilder;
@@ -2096,7 +1940,6 @@
 
     invoke-virtual/range {v18 .. v19}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 373
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/samsung/appdisabler/ImsiItem;->errorStringBuilder:Ljava/lang/StringBuilder;
@@ -2107,7 +1950,6 @@
 
     invoke-virtual/range {v18 .. v19}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 374
     new-instance v18, Ljava/lang/StringBuilder;
 
     invoke-direct/range {v18 .. v18}, Ljava/lang/StringBuilder;-><init>()V
@@ -2150,7 +1992,6 @@
 
     goto/16 :goto_4
 
-    .line 378
     :cond_a
     invoke-virtual {v14, v8}, Ljava/lang/String;->matches(Ljava/lang/String;)Z
 
@@ -2158,7 +1999,6 @@
 
     if-nez v18, :cond_7
 
-    .line 379
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/samsung/appdisabler/ImsiItem;->errorStringBuilder:Ljava/lang/StringBuilder;
@@ -2205,7 +2045,6 @@
 
     invoke-virtual/range {v18 .. v19}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 380
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/samsung/appdisabler/ImsiItem;->errorStringBuilder:Ljava/lang/StringBuilder;
@@ -2216,7 +2055,6 @@
 
     invoke-virtual/range {v18 .. v19}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 381
     new-instance v18, Ljava/lang/StringBuilder;
 
     invoke-direct/range {v18 .. v18}, Ljava/lang/StringBuilder;-><init>()V
@@ -2259,14 +2097,12 @@
 
     goto/16 :goto_5
 
-    .line 401
     .end local v5    # "imsiBasePattern":Ljava/lang/String;
     .end local v8    # "onlyDigitsPattern":Ljava/lang/String;
     .end local v16    # "tempItem":Lcom/samsung/appdisabler/ImsiNumeric;
     :cond_b
     const-string v9, "([a-zA-Z_$][a-zA-Z0-9_$]*\\.)*[a-zA-Z_$][a-zA-Z0-9_$]*"
 
-    .line 402
     .local v9, "packageNamePattern":Ljava/lang/String;
     move-object/from16 v0, p0
 
@@ -2292,7 +2128,6 @@
 
     check-cast v17, Ljava/lang/String;
 
-    .line 403
     .local v17, "tempPackageName":Ljava/lang/String;
     if-eqz v17, :cond_c
 
@@ -2304,7 +2139,6 @@
 
     if-nez v18, :cond_c
 
-    .line 404
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/samsung/appdisabler/ImsiItem;->errorStringBuilder:Ljava/lang/StringBuilder;
@@ -2335,7 +2169,6 @@
 
     invoke-virtual/range {v18 .. v19}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 405
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/samsung/appdisabler/ImsiItem;->errorStringBuilder:Ljava/lang/StringBuilder;
@@ -2346,7 +2179,6 @@
 
     invoke-virtual/range {v18 .. v19}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 406
     new-instance v18, Ljava/lang/StringBuilder;
 
     invoke-direct/range {v18 .. v18}, Ljava/lang/StringBuilder;-><init>()V
@@ -2373,7 +2205,6 @@
 
     goto :goto_6
 
-    .line 411
     .end local v17    # "tempPackageName":Ljava/lang/String;
     :cond_d
     move-object/from16 v0, p0
@@ -2388,18 +2219,16 @@
 
     if-eqz v18, :cond_e
 
-    .line 412
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/samsung/appdisabler/ImsiItem;->errorStringBuilder:Ljava/lang/StringBuilder;
 
     move-object/from16 v18, v0
 
-    const-string/jumbo v19, "there must be at least one package_to_hide inside application tag"
+    const-string v19, "there must be at least one package_to_hide inside application tag"
 
     invoke-virtual/range {v18 .. v19}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 417
     :cond_e
     move-object/from16 v0, p0
 

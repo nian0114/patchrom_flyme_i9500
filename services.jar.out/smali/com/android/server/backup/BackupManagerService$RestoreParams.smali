@@ -45,40 +45,30 @@
     .prologue
     const/4 v1, 0x0
 
-    .line 446
     iput-object p1, p0, Lcom/android/server/backup/BackupManagerService$RestoreParams;->this$0:Lcom/android/server/backup/BackupManagerService;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 447
     iput-object p2, p0, Lcom/android/server/backup/BackupManagerService$RestoreParams;->transport:Lcom/android/internal/backup/IBackupTransport;
 
-    .line 448
     iput-object p3, p0, Lcom/android/server/backup/BackupManagerService$RestoreParams;->dirName:Ljava/lang/String;
 
-    .line 449
     iput-object p4, p0, Lcom/android/server/backup/BackupManagerService$RestoreParams;->observer:Landroid/app/backup/IRestoreObserver;
 
-    .line 450
     iput-wide p5, p0, Lcom/android/server/backup/BackupManagerService$RestoreParams;->token:J
 
-    .line 451
     iput-object v1, p0, Lcom/android/server/backup/BackupManagerService$RestoreParams;->pkgInfo:Landroid/content/pm/PackageInfo;
 
-    .line 452
     const/4 v0, 0x0
 
     iput v0, p0, Lcom/android/server/backup/BackupManagerService$RestoreParams;->pmToken:I
 
-    .line 453
     const/4 v0, 0x1
 
     iput-boolean v0, p0, Lcom/android/server/backup/BackupManagerService$RestoreParams;->isSystemRestore:Z
 
-    .line 454
     iput-object v1, p0, Lcom/android/server/backup/BackupManagerService$RestoreParams;->filterSet:[Ljava/lang/String;
 
-    .line 455
     return-void
 .end method
 
@@ -92,40 +82,30 @@
     .param p8, "_pmToken"    # I
 
     .prologue
-    .line 432
     iput-object p1, p0, Lcom/android/server/backup/BackupManagerService$RestoreParams;->this$0:Lcom/android/server/backup/BackupManagerService;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 433
     iput-object p2, p0, Lcom/android/server/backup/BackupManagerService$RestoreParams;->transport:Lcom/android/internal/backup/IBackupTransport;
 
-    .line 434
     iput-object p3, p0, Lcom/android/server/backup/BackupManagerService$RestoreParams;->dirName:Ljava/lang/String;
 
-    .line 435
     iput-object p4, p0, Lcom/android/server/backup/BackupManagerService$RestoreParams;->observer:Landroid/app/backup/IRestoreObserver;
 
-    .line 436
     iput-wide p5, p0, Lcom/android/server/backup/BackupManagerService$RestoreParams;->token:J
 
-    .line 437
     iput-object p7, p0, Lcom/android/server/backup/BackupManagerService$RestoreParams;->pkgInfo:Landroid/content/pm/PackageInfo;
 
-    .line 438
     iput p8, p0, Lcom/android/server/backup/BackupManagerService$RestoreParams;->pmToken:I
 
-    .line 439
     const/4 v0, 0x0
 
     iput-boolean v0, p0, Lcom/android/server/backup/BackupManagerService$RestoreParams;->isSystemRestore:Z
 
-    .line 440
     const/4 v0, 0x0
 
     iput-object v0, p0, Lcom/android/server/backup/BackupManagerService$RestoreParams;->filterSet:[Ljava/lang/String;
 
-    .line 441
     return-void
 .end method
 
@@ -139,39 +119,29 @@
     .param p8, "_isSystemRestore"    # Z
 
     .prologue
-    .line 460
     iput-object p1, p0, Lcom/android/server/backup/BackupManagerService$RestoreParams;->this$0:Lcom/android/server/backup/BackupManagerService;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 461
     iput-object p2, p0, Lcom/android/server/backup/BackupManagerService$RestoreParams;->transport:Lcom/android/internal/backup/IBackupTransport;
 
-    .line 462
     iput-object p3, p0, Lcom/android/server/backup/BackupManagerService$RestoreParams;->dirName:Ljava/lang/String;
 
-    .line 463
     iput-object p4, p0, Lcom/android/server/backup/BackupManagerService$RestoreParams;->observer:Landroid/app/backup/IRestoreObserver;
 
-    .line 464
     iput-wide p5, p0, Lcom/android/server/backup/BackupManagerService$RestoreParams;->token:J
 
-    .line 465
     const/4 v0, 0x0
 
     iput-object v0, p0, Lcom/android/server/backup/BackupManagerService$RestoreParams;->pkgInfo:Landroid/content/pm/PackageInfo;
 
-    .line 466
     const/4 v0, 0x0
 
     iput v0, p0, Lcom/android/server/backup/BackupManagerService$RestoreParams;->pmToken:I
 
-    .line 467
     iput-boolean p8, p0, Lcom/android/server/backup/BackupManagerService$RestoreParams;->isSystemRestore:Z
 
-    .line 468
     iput-object p7, p0, Lcom/android/server/backup/BackupManagerService$RestoreParams;->filterSet:[Ljava/lang/String;
 
-    .line 469
     return-void
 .end method

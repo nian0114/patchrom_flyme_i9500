@@ -22,7 +22,6 @@
     .locals 0
 
     .prologue
-    .line 26
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -32,7 +31,6 @@
     .locals 1
 
     .prologue
-    .line 61
     const-string v0, "1"
 
     return-object v0
@@ -43,22 +41,18 @@
     .param p0, "context"    # Landroid/content/Context;
 
     .prologue
-    .line 36
     const-string v2, "N/A"
 
-    .line 37
     .local v2, "version":Ljava/lang/String;
     if-nez p0, :cond_0
 
     move-object v3, v2
 
-    .line 56
     .end local v2    # "version":Ljava/lang/String;
     .local v3, "version":Ljava/lang/String;
     :goto_0
     return-object v3
 
-    .line 41
     .end local v3    # "version":Ljava/lang/String;
     .restart local v2    # "version":Ljava/lang/String;
     :cond_0
@@ -71,7 +65,6 @@
 
     check-cast v1, Landroid/app/enterprise/EnterpriseDeviceManager;
 
-    .line 42
     .local v1, "edm":Landroid/app/enterprise/EnterpriseDeviceManager;
     invoke-virtual {v1}, Landroid/app/enterprise/EnterpriseDeviceManager;->getEnterpriseSdkVer()Landroid/app/enterprise/EnterpriseDeviceManager$EnterpriseSdkVersion;
 
@@ -89,19 +82,16 @@
 
     if-ge v4, v5, :cond_1
 
-    .line 43
     const-string v2, "1.0.0"
 
     .end local v1    # "edm":Landroid/app/enterprise/EnterpriseDeviceManager;
     :goto_1
     move-object v3, v2
 
-    .line 56
     .end local v2    # "version":Ljava/lang/String;
     .restart local v3    # "version":Ljava/lang/String;
     goto :goto_0
 
-    .line 45
     .end local v3    # "version":Ljava/lang/String;
     .restart local v1    # "edm":Landroid/app/enterprise/EnterpriseDeviceManager;
     .restart local v2    # "version":Ljava/lang/String;
@@ -114,16 +104,13 @@
 
     goto :goto_1
 
-    .line 46
     .end local v1    # "edm":Landroid/app/enterprise/EnterpriseDeviceManager;
     :catch_0
     move-exception v0
 
-    .line 47
     .local v0, "e":Ljava/lang/NullPointerException;
     invoke-virtual {v0}, Ljava/lang/NullPointerException;->printStackTrace()V
 
-    .line 48
     const-string v4, "SSOVersion"
 
     new-instance v5, Ljava/lang/StringBuilder;
@@ -152,16 +139,13 @@
 
     goto :goto_1
 
-    .line 49
     .end local v0    # "e":Ljava/lang/NullPointerException;
     :catch_1
     move-exception v0
 
-    .line 50
     .local v0, "e":Ljava/lang/RuntimeException;
     invoke-virtual {v0}, Ljava/lang/RuntimeException;->printStackTrace()V
 
-    .line 51
     const-string v4, "SSOVersion"
 
     new-instance v5, Ljava/lang/StringBuilder;
@@ -190,16 +174,13 @@
 
     goto :goto_1
 
-    .line 52
     .end local v0    # "e":Ljava/lang/RuntimeException;
     :catch_2
     move-exception v0
 
-    .line 53
     .local v0, "e":Ljava/lang/Exception;
     invoke-virtual {v0}, Ljava/lang/Exception;->printStackTrace()V
 
-    .line 54
     const-string v4, "SSOVersion"
 
     new-instance v5, Ljava/lang/StringBuilder;
@@ -234,14 +215,13 @@
     .param p0, "context"    # Landroid/content/Context;
 
     .prologue
-    .line 66
     const-string v0, "SSOVersion"
 
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v2, "writeVersionInProperties : "
+    const-string v2, "writeVersionInProperties : "
 
     invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -261,7 +241,6 @@
 
     invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 67
     const-string v0, "net.knoxsso.version"
 
     invoke-static {p0}, Lcom/android/server/enterprise/sso/SSOVersion;->getVersion(Landroid/content/Context;)Ljava/lang/String;
@@ -270,6 +249,5 @@
 
     invoke-static {v0, v1}, Landroid/os/SystemProperties;->set(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 68
     return-void
 .end method

@@ -29,16 +29,12 @@
     .param p2, "binder"    # Landroid/os/IBinder;
 
     .prologue
-    .line 3511
     iput-object p1, p0, Lcom/android/server/power/PowerManagerService$AlpmLock;->this$0:Lcom/android/server/power/PowerManagerService;
 
-    .line 3512
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 3513
     iput-object p2, p0, Lcom/android/server/power/PowerManagerService$AlpmLock;->binder:Landroid/os/IBinder;
 
-    .line 3516
     const/4 v1, 0x0
 
     :try_start_0
@@ -46,15 +42,12 @@
     :try_end_0
     .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 3520
     :goto_0
     return-void
 
-    .line 3517
     :catch_0
     move-exception v0
 
-    .line 3518
     .local v0, "e":Landroid/os/RemoteException;
     invoke-virtual {p0}, Lcom/android/server/power/PowerManagerService$AlpmLock;->binderDied()V
 
@@ -69,7 +62,6 @@
     .prologue
     const/4 v2, 0x0
 
-    .line 3522
     iget-object v0, p0, Lcom/android/server/power/PowerManagerService$AlpmLock;->this$0:Lcom/android/server/power/PowerManagerService;
 
     iget-object v1, p0, Lcom/android/server/power/PowerManagerService$AlpmLock;->binder:Landroid/os/IBinder;
@@ -77,6 +69,5 @@
     # invokes: Lcom/android/server/power/PowerManagerService;->setAlpmModeLockedInternal(ZIILandroid/os/IBinder;)V
     invoke-static {v0, v2, v2, v2, v1}, Lcom/android/server/power/PowerManagerService;->access$3300(Lcom/android/server/power/PowerManagerService;ZIILandroid/os/IBinder;)V
 
-    .line 3523
     return-void
 .end method

@@ -23,7 +23,6 @@
     .locals 0
 
     .prologue
-    .line 6695
     iput-object p1, p0, Lcom/android/internal/telephony/dataconnection/DcTracker$4;->this$0:Lcom/android/internal/telephony/dataconnection/DcTracker;
 
     invoke-direct {p0}, Landroid/content/BroadcastReceiver;-><init>()V
@@ -39,12 +38,10 @@
     .param p2, "intent"    # Landroid/content/Intent;
 
     .prologue
-    .line 6697
     invoke-virtual {p2}, Landroid/content/Intent;->getAction()Ljava/lang/String;
 
     move-result-object v0
 
-    .line 6698
     .local v0, "action":Ljava/lang/String;
     iget-object v1, p0, Lcom/android/internal/telephony/dataconnection/DcTracker$4;->this$0:Lcom/android/internal/telephony/dataconnection/DcTracker;
 
@@ -68,7 +65,6 @@
 
     invoke-virtual {v1, v2}, Lcom/android/internal/telephony/dataconnection/DcTracker;->log(Ljava/lang/String;)V
 
-    .line 6699
     const-string v1, "android.intent.action.ACTION_SUBINFO_RECORD_UPDATED"
 
     invoke-virtual {v0, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
@@ -85,13 +81,11 @@
 
     if-eqz v1, :cond_1
 
-    .line 6701
     :cond_0
     iget-object v1, p0, Lcom/android/internal/telephony/dataconnection/DcTracker$4;->this$0:Lcom/android/internal/telephony/dataconnection/DcTracker;
 
     invoke-virtual {v1}, Lcom/android/internal/telephony/dataconnection/DcTracker;->getInsertedSimCount()V
 
-    .line 6703
     :cond_1
     return-void
 .end method

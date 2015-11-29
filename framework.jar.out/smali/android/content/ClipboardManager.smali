@@ -47,7 +47,6 @@
     .locals 1
 
     .prologue
-    .line 71
     new-instance v0, Ljava/lang/Object;
 
     invoke-direct {v0}, Ljava/lang/Object;-><init>()V
@@ -63,34 +62,28 @@
     .param p2, "handler"    # Landroid/os/Handler;
 
     .prologue
-    .line 146
     invoke-direct {p0}, Landroid/text/ClipboardManager;-><init>()V
 
-    .line 81
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
     iput-object v0, p0, Landroid/content/ClipboardManager;->mPrimaryClipChangedListeners:Ljava/util/ArrayList;
 
-    .line 84
     new-instance v0, Landroid/content/ClipboardManager$1;
 
     invoke-direct {v0, p0}, Landroid/content/ClipboardManager$1;-><init>(Landroid/content/ClipboardManager;)V
 
     iput-object v0, p0, Landroid/content/ClipboardManager;->mPrimaryClipChangedServiceListener:Landroid/content/IOnPrimaryClipChangedListener$Stub;
 
-    .line 93
     new-instance v0, Landroid/content/ClipboardManager$2;
 
     invoke-direct {v0, p0}, Landroid/content/ClipboardManager$2;-><init>(Landroid/content/ClipboardManager;)V
 
     iput-object v0, p0, Landroid/content/ClipboardManager;->mHandler:Landroid/os/Handler;
 
-    .line 147
     iput-object p1, p0, Landroid/content/ClipboardManager;->mContext:Landroid/content/Context;
 
-    .line 148
     return-void
 .end method
 
@@ -99,7 +92,6 @@
     .param p0, "x0"    # Landroid/content/ClipboardManager;
 
     .prologue
-    .line 70
     iget-object v0, p0, Landroid/content/ClipboardManager;->mHandler:Landroid/os/Handler;
 
     return-object v0
@@ -113,23 +105,19 @@
 
     const/4 v9, 0x0
 
-    .line 353
     const/4 v3, 0x0
 
-    .line 355
     .local v3, "packageName":Ljava/lang/String;
     iget-object v7, p0, Landroid/content/ClipboardManager;->mContext:Landroid/content/Context;
 
     if-eqz v7, :cond_0
 
-    .line 356
     iget-object v7, p0, Landroid/content/ClipboardManager;->mContext:Landroid/content/Context;
 
     invoke-virtual {v7}, Landroid/content/Context;->getPackageManager()Landroid/content/pm/PackageManager;
 
     move-result-object v4
 
-    .line 358
     .local v4, "pm":Landroid/content/pm/PackageManager;
     if-eqz v4, :cond_3
 
@@ -147,7 +135,6 @@
 
     if-nez v7, :cond_3
 
-    .line 360
     :try_start_0
     iget-object v7, p0, Landroid/content/ClipboardManager;->mContext:Landroid/content/Context;
 
@@ -159,7 +146,6 @@
 
     check-cast v0, Landroid/app/ActivityManager;
 
-    .line 361
     .local v0, "am":Landroid/app/ActivityManager;
     const/4 v7, 0x1
 
@@ -167,7 +153,6 @@
 
     move-result-object v5
 
-    .line 362
     .local v5, "taskInfo":Ljava/util/List;, "Ljava/util/List<Landroid/app/ActivityManager$RunningTaskInfo;>;"
     const/4 v7, 0x0
 
@@ -179,7 +164,6 @@
 
     iget-object v6, v7, Landroid/app/ActivityManager$RunningTaskInfo;->topActivity:Landroid/content/ComponentName;
 
-    .line 364
     .local v6, "topActivity":Landroid/content/ComponentName;
     invoke-virtual {v6}, Landroid/content/ComponentName;->getPackageName()Ljava/lang/String;
     :try_end_0
@@ -187,7 +171,6 @@
 
     move-result-object v3
 
-    .line 373
     .end local v0    # "am":Landroid/app/ActivityManager;
     .end local v4    # "pm":Landroid/content/pm/PackageManager;
     .end local v5    # "taskInfo":Ljava/util/List;, "Ljava/util/List<Landroid/app/ActivityManager$RunningTaskInfo;>;"
@@ -196,8 +179,7 @@
     :goto_0
     if-eqz v3, :cond_1
 
-    .line 374
-    const-string/jumbo v7, "sec_container_1."
+    const-string v7, "sec_container_1."
 
     invoke-virtual {v3, v7}, Ljava/lang/String;->startsWith(Ljava/lang/String;)Z
 
@@ -205,17 +187,14 @@
 
     if-eqz v7, :cond_4
 
-    .line 375
     iput v10, p0, Landroid/content/ClipboardManager;->mContainerID:I
 
-    .line 381
     :cond_1
     :goto_1
     sget-object v7, Landroid/content/ClipboardManager;->sServiceEx:Landroid/sec/clipboard/IClipboardService;
 
     if-eqz v7, :cond_5
 
-    .line 383
     :try_start_1
     sget-object v7, Landroid/content/ClipboardManager;->sServiceEx:Landroid/sec/clipboard/IClipboardService;
 
@@ -225,7 +204,6 @@
     :try_end_1
     .catch Ljava/lang/Exception; {:try_start_1 .. :try_end_1} :catch_1
 
-    .line 403
     :cond_2
     :goto_2
     :try_start_2
@@ -239,22 +217,18 @@
     :try_end_2
     .catch Ljava/lang/Exception; {:try_start_2 .. :try_end_2} :catch_3
 
-    .line 408
     :goto_3
     return-void
 
-    .line 365
     .restart local v4    # "pm":Landroid/content/pm/PackageManager;
     :catch_0
     move-exception v2
 
-    .line 366
     .local v2, "e":Ljava/lang/Exception;
     invoke-virtual {v2}, Ljava/lang/Exception;->printStackTrace()V
 
     goto :goto_0
 
-    .line 369
     .end local v2    # "e":Ljava/lang/Exception;
     :cond_3
     iget-object v7, p0, Landroid/content/ClipboardManager;->mContext:Landroid/content/Context;
@@ -265,18 +239,15 @@
 
     goto :goto_0
 
-    .line 377
     .end local v4    # "pm":Landroid/content/pm/PackageManager;
     :cond_4
     iput v9, p0, Landroid/content/ClipboardManager;->mContainerID:I
 
     goto :goto_1
 
-    .line 384
     :catch_1
     move-exception v2
 
-    .line 385
     .restart local v2    # "e":Ljava/lang/Exception;
     const-string v7, "ClipboardServiceEx"
 
@@ -284,12 +255,10 @@
 
     invoke-static {v7, v8}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 386
     invoke-virtual {v2}, Ljava/lang/Exception;->printStackTrace()V
 
     goto :goto_2
 
-    .line 389
     .end local v2    # "e":Ljava/lang/Exception;
     :cond_5
     const-string v7, "clipboardEx"
@@ -298,7 +267,6 @@
 
     move-result-object v1
 
-    .line 390
     .local v1, "b":Landroid/os/IBinder;
     invoke-static {v1}, Landroid/sec/clipboard/IClipboardService$Stub;->asInterface(Landroid/os/IBinder;)Landroid/sec/clipboard/IClipboardService;
 
@@ -306,12 +274,10 @@
 
     sput-object v7, Landroid/content/ClipboardManager;->sServiceEx:Landroid/sec/clipboard/IClipboardService;
 
-    .line 391
     sget-object v7, Landroid/content/ClipboardManager;->sServiceEx:Landroid/sec/clipboard/IClipboardService;
 
     if-eqz v7, :cond_2
 
-    .line 393
     :try_start_3
     sget-object v7, Landroid/content/ClipboardManager;->sServiceEx:Landroid/sec/clipboard/IClipboardService;
 
@@ -323,11 +289,9 @@
 
     goto :goto_2
 
-    .line 394
     :catch_2
     move-exception v2
 
-    .line 395
     .restart local v2    # "e":Ljava/lang/Exception;
     const-string v7, "ClipboardServiceEx"
 
@@ -335,18 +299,15 @@
 
     invoke-static {v7, v8}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 396
     invoke-virtual {v2}, Ljava/lang/Exception;->printStackTrace()V
 
     goto :goto_2
 
-    .line 404
     .end local v1    # "b":Landroid/os/IBinder;
     .end local v2    # "e":Ljava/lang/Exception;
     :catch_3
     move-exception v2
 
-    .line 405
     .restart local v2    # "e":Ljava/lang/Exception;
     const-string v7, "ClipboardServiceEx"
 
@@ -354,7 +315,6 @@
 
     invoke-static {v7, v8}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 406
     invoke-virtual {v2}, Ljava/lang/Exception;->printStackTrace()V
 
     goto :goto_3
@@ -364,28 +324,23 @@
     .locals 3
 
     .prologue
-    .line 121
     sget-object v2, Landroid/content/ClipboardManager;->sStaticLock:Ljava/lang/Object;
 
     monitor-enter v2
 
-    .line 122
     :try_start_0
     sget-object v1, Landroid/content/ClipboardManager;->sService:Landroid/content/IClipboard;
 
     if-eqz v1, :cond_0
 
-    .line 123
     sget-object v1, Landroid/content/ClipboardManager;->sService:Landroid/content/IClipboard;
 
     monitor-exit v2
 
-    .line 127
     .local v0, "b":Landroid/os/IBinder;
     :goto_0
     return-object v1
 
-    .line 125
     .end local v0    # "b":Landroid/os/IBinder;
     :cond_0
     const-string v1, "clipboard"
@@ -394,7 +349,6 @@
 
     move-result-object v0
 
-    .line 126
     .restart local v0    # "b":Landroid/os/IBinder;
     invoke-static {v0}, Landroid/content/IClipboard$Stub;->asInterface(Landroid/os/IBinder;)Landroid/content/IClipboard;
 
@@ -402,14 +356,12 @@
 
     sput-object v1, Landroid/content/ClipboardManager;->sService:Landroid/content/IClipboard;
 
-    .line 127
     sget-object v1, Landroid/content/ClipboardManager;->sService:Landroid/content/IClipboard;
 
     monitor-exit v2
 
     goto :goto_0
 
-    .line 128
     :catchall_0
     move-exception v1
 
@@ -424,20 +376,16 @@
     .locals 2
 
     .prologue
-    .line 133
     sget-object v1, Landroid/content/ClipboardManager;->sServiceEx:Landroid/sec/clipboard/IClipboardService;
 
     if-eqz v1, :cond_0
 
-    .line 134
     sget-object v1, Landroid/content/ClipboardManager;->sServiceEx:Landroid/sec/clipboard/IClipboardService;
 
-    .line 140
     .local v0, "b":Landroid/os/IBinder;
     :goto_0
     return-object v1
 
-    .line 137
     .end local v0    # "b":Landroid/os/IBinder;
     :cond_0
     const-string v1, "clipboardEx"
@@ -446,7 +394,6 @@
 
     move-result-object v0
 
-    .line 138
     .restart local v0    # "b":Landroid/os/IBinder;
     invoke-static {v0}, Landroid/sec/clipboard/IClipboardService$Stub;->asInterface(Landroid/os/IBinder;)Landroid/sec/clipboard/IClipboardService;
 
@@ -454,7 +401,6 @@
 
     sput-object v1, Landroid/content/ClipboardManager;->sServiceEx:Landroid/sec/clipboard/IClipboardService;
 
-    .line 140
     sget-object v1, Landroid/content/ClipboardManager;->sServiceEx:Landroid/sec/clipboard/IClipboardService;
 
     goto :goto_0
@@ -467,12 +413,10 @@
     .param p1, "what"    # Landroid/content/ClipboardManager$OnPrimaryClipChangedListener;
 
     .prologue
-    .line 273
     iget-object v2, p0, Landroid/content/ClipboardManager;->mPrimaryClipChangedListeners:Ljava/util/ArrayList;
 
     monitor-enter v2
 
-    .line 274
     :try_start_0
     iget-object v1, p0, Landroid/content/ClipboardManager;->mPrimaryClipChangedListeners:Ljava/util/ArrayList;
 
@@ -484,11 +428,9 @@
 
     if-nez v1, :cond_0
 
-    .line 276
     :try_start_1
     invoke-direct {p0}, Landroid/content/ClipboardManager;->checkCurrentMode()V
 
-    .line 277
     invoke-static {}, Landroid/content/ClipboardManager;->getService()Landroid/content/IClipboard;
 
     move-result-object v1
@@ -506,7 +448,6 @@
     .catch Ljava/lang/Exception; {:try_start_1 .. :try_end_1} :catch_0
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
-    .line 283
     :cond_0
     :goto_0
     :try_start_2
@@ -514,23 +455,18 @@
 
     invoke-virtual {v1, p1}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 284
     monitor-exit v2
 
-    .line 285
     return-void
 
-    .line 279
     :catch_0
     move-exception v0
 
-    .line 280
     .local v0, "e":Ljava/lang/Exception;
     invoke-virtual {v0}, Ljava/lang/Exception;->printStackTrace()V
 
     goto :goto_0
 
-    .line 284
     .end local v0    # "e":Ljava/lang/Exception;
     :catchall_0
     move-exception v1
@@ -546,11 +482,9 @@
     .locals 3
 
     .prologue
-    .line 237
     :try_start_0
     invoke-direct {p0}, Landroid/content/ClipboardManager;->checkCurrentMode()V
 
-    .line 238
     invoke-static {}, Landroid/content/ClipboardManager;->getService()Landroid/content/IClipboard;
 
     move-result-object v1
@@ -567,19 +501,15 @@
 
     move-result-object v1
 
-    .line 241
     :goto_0
     return-object v1
 
-    .line 239
     :catch_0
     move-exception v0
 
-    .line 240
     .local v0, "e":Ljava/lang/Exception;
     invoke-virtual {v0}, Ljava/lang/Exception;->printStackTrace()V
 
-    .line 241
     const/4 v1, 0x0
 
     goto :goto_0
@@ -589,11 +519,9 @@
     .locals 3
 
     .prologue
-    .line 251
     :try_start_0
     invoke-direct {p0}, Landroid/content/ClipboardManager;->checkCurrentMode()V
 
-    .line 252
     invoke-static {}, Landroid/content/ClipboardManager;->getService()Landroid/content/IClipboard;
 
     move-result-object v1
@@ -610,19 +538,15 @@
 
     move-result-object v1
 
-    .line 255
     :goto_0
     return-object v1
 
-    .line 253
     :catch_0
     move-exception v0
 
-    .line 254
     .local v0, "e":Ljava/lang/Exception;
     invoke-virtual {v0}, Ljava/lang/Exception;->printStackTrace()V
 
-    .line 255
     const/4 v1, 0x0
 
     goto :goto_0
@@ -632,12 +556,10 @@
     .locals 3
 
     .prologue
-    .line 307
     invoke-virtual {p0}, Landroid/content/ClipboardManager;->getPrimaryClip()Landroid/content/ClipData;
 
     move-result-object v0
 
-    .line 308
     .local v0, "clip":Landroid/content/ClipData;
     if-eqz v0, :cond_0
 
@@ -647,7 +569,6 @@
 
     if-lez v1, :cond_0
 
-    .line 309
     const/4 v1, 0x0
 
     invoke-virtual {v0, v1}, Landroid/content/ClipData;->getItemAt(I)Landroid/content/ClipData$Item;
@@ -660,7 +581,6 @@
 
     move-result-object v1
 
-    .line 311
     :goto_0
     return-object v1
 
@@ -674,11 +594,9 @@
     .locals 3
 
     .prologue
-    .line 264
     :try_start_0
     invoke-direct {p0}, Landroid/content/ClipboardManager;->checkCurrentMode()V
 
-    .line 265
     invoke-static {}, Landroid/content/ClipboardManager;->getService()Landroid/content/IClipboard;
 
     move-result-object v1
@@ -695,19 +613,15 @@
 
     move-result v1
 
-    .line 268
     :goto_0
     return v1
 
-    .line 266
     :catch_0
     move-exception v0
 
-    .line 267
     .local v0, "e":Ljava/lang/Exception;
     invoke-virtual {v0}, Ljava/lang/Exception;->printStackTrace()V
 
-    .line 268
     const/4 v1, 0x0
 
     goto :goto_0
@@ -717,11 +631,9 @@
     .locals 3
 
     .prologue
-    .line 328
     :try_start_0
     invoke-direct {p0}, Landroid/content/ClipboardManager;->checkCurrentMode()V
 
-    .line 329
     invoke-static {}, Landroid/content/ClipboardManager;->getService()Landroid/content/IClipboard;
 
     move-result-object v1
@@ -738,19 +650,15 @@
 
     move-result v1
 
-    .line 332
     :goto_0
     return v1
 
-    .line 330
     :catch_0
     move-exception v0
 
-    .line 331
     .local v0, "e":Ljava/lang/Exception;
     invoke-virtual {v0}, Ljava/lang/Exception;->printStackTrace()V
 
-    .line 332
     const/4 v1, 0x0
 
     goto :goto_0
@@ -761,18 +669,15 @@
     .param p1, "what"    # Landroid/content/ClipboardManager$OnPrimaryClipChangedListener;
 
     .prologue
-    .line 288
     iget-object v2, p0, Landroid/content/ClipboardManager;->mPrimaryClipChangedListeners:Ljava/util/ArrayList;
 
     monitor-enter v2
 
-    .line 289
     :try_start_0
     iget-object v1, p0, Landroid/content/ClipboardManager;->mPrimaryClipChangedListeners:Ljava/util/ArrayList;
 
     invoke-virtual {v1, p1}, Ljava/util/ArrayList;->remove(Ljava/lang/Object;)Z
 
-    .line 290
     iget-object v1, p0, Landroid/content/ClipboardManager;->mPrimaryClipChangedListeners:Ljava/util/ArrayList;
 
     invoke-virtual {v1}, Ljava/util/ArrayList;->size()I
@@ -783,11 +688,9 @@
 
     if-nez v1, :cond_0
 
-    .line 292
     :try_start_1
     invoke-direct {p0}, Landroid/content/ClipboardManager;->checkCurrentMode()V
 
-    .line 293
     invoke-static {}, Landroid/content/ClipboardManager;->getService()Landroid/content/IClipboard;
 
     move-result-object v1
@@ -799,26 +702,21 @@
     .catch Ljava/lang/Exception; {:try_start_1 .. :try_end_1} :catch_0
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
-    .line 299
     :cond_0
     :goto_0
     :try_start_2
     monitor-exit v2
 
-    .line 300
     return-void
 
-    .line 295
     :catch_0
     move-exception v0
 
-    .line 296
     .local v0, "e":Ljava/lang/Exception;
     invoke-virtual {v0}, Ljava/lang/Exception;->printStackTrace()V
 
     goto :goto_0
 
-    .line 299
     .end local v0    # "e":Ljava/lang/Exception;
     :catchall_0
     move-exception v1
@@ -834,12 +732,10 @@
     .locals 5
 
     .prologue
-    .line 339
     iget-object v4, p0, Landroid/content/ClipboardManager;->mPrimaryClipChangedListeners:Ljava/util/ArrayList;
 
     monitor-enter v4
 
-    .line 340
     :try_start_0
     iget-object v3, p0, Landroid/content/ClipboardManager;->mPrimaryClipChangedListeners:Ljava/util/ArrayList;
 
@@ -847,18 +743,14 @@
 
     move-result v0
 
-    .line 341
     .local v0, "N":I
     if-gtz v0, :cond_1
 
-    .line 342
     monitor-exit v4
 
-    .line 350
     :cond_0
     return-void
 
-    .line 344
     :cond_1
     iget-object v3, p0, Landroid/content/ClipboardManager;->mPrimaryClipChangedListeners:Ljava/util/ArrayList;
 
@@ -866,13 +758,11 @@
 
     move-result-object v2
 
-    .line 345
     .local v2, "listeners":[Ljava/lang/Object;
     monitor-exit v4
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 347
     const/4 v1, 0x0
 
     .local v1, "i":I
@@ -881,19 +771,16 @@
 
     if-ge v1, v3, :cond_0
 
-    .line 348
     aget-object v3, v2, v1
 
     check-cast v3, Landroid/content/ClipboardManager$OnPrimaryClipChangedListener;
 
     invoke-interface {v3}, Landroid/content/ClipboardManager$OnPrimaryClipChangedListener;->onPrimaryClipChanged()V
 
-    .line 347
     add-int/lit8 v1, v1, 0x1
 
     goto :goto_0
 
-    .line 345
     .end local v0    # "N":I
     .end local v1    # "i":I
     .end local v2    # "listeners":[Ljava/lang/Object;
@@ -913,18 +800,14 @@
     .param p1, "clip"    # Landroid/content/ClipData;
 
     .prologue
-    .line 158
     if-eqz p1, :cond_0
 
-    .line 159
     :try_start_0
     invoke-virtual {p1}, Landroid/content/ClipData;->prepareToLeaveProcess()V
 
-    .line 161
     :cond_0
     invoke-direct {p0}, Landroid/content/ClipboardManager;->checkCurrentMode()V
 
-    .line 162
     invoke-static {}, Landroid/content/ClipboardManager;->getService()Landroid/content/IClipboard;
 
     move-result-object v6
@@ -937,10 +820,8 @@
 
     invoke-interface {v6, p1, v7}, Landroid/content/IClipboard;->setPrimaryClip(Landroid/content/ClipData;Ljava/lang/String;)V
 
-    .line 164
     if-eqz p1, :cond_1
 
-    .line 171
     invoke-virtual {p1}, Landroid/content/ClipData;->getDescription()Landroid/content/ClipDescription;
 
     move-result-object v6
@@ -951,7 +832,6 @@
 
     if-lez v6, :cond_1
 
-    .line 172
     invoke-virtual {p1}, Landroid/content/ClipData;->getDescription()Landroid/content/ClipDescription;
 
     move-result-object v6
@@ -962,7 +842,7 @@
 
     move-result-object v6
 
-    const-string/jumbo v7, "text/plain"
+    const-string v7, "text/plain"
 
     invoke-virtual {v6, v7}, Ljava/lang/String;->compareTo(Ljava/lang/String;)I
 
@@ -970,12 +850,10 @@
 
     if-nez v6, :cond_3
 
-    .line 173
     new-instance v3, Landroid/sec/clipboard/data/list/ClipboardDataText;
 
     invoke-direct {v3}, Landroid/sec/clipboard/data/list/ClipboardDataText;-><init>()V
 
-    .line 174
     .local v3, "txt":Landroid/sec/clipboard/data/list/ClipboardDataText;
     invoke-virtual {p1}, Landroid/content/ClipData;->getItemCount()I
 
@@ -983,7 +861,6 @@
 
     if-lez v6, :cond_1
 
-    .line 175
     invoke-static {}, Landroid/content/ClipboardManager;->getServiceEx()Landroid/sec/clipboard/IClipboardService;
 
     move-result-object v6
@@ -992,7 +869,6 @@
 
     if-eqz v3, :cond_2
 
-    .line 176
     const/4 v6, 0x0
 
     invoke-virtual {p1, v6}, Landroid/content/ClipData;->getItemAt(I)Landroid/content/ClipData$Item;
@@ -1005,7 +881,6 @@
 
     invoke-virtual {v3, v6}, Landroid/sec/clipboard/data/list/ClipboardDataText;->SetText(Ljava/lang/CharSequence;)Z
 
-    .line 177
     sget-object v6, Landroid/content/ClipboardManager;->sServiceEx:Landroid/sec/clipboard/IClipboardService;
 
     invoke-virtual {v3}, Landroid/sec/clipboard/data/list/ClipboardDataText;->GetFomat()I
@@ -1014,13 +889,11 @@
 
     invoke-interface {v6, v7, v3}, Landroid/sec/clipboard/IClipboardService;->SetClipboardDataOriginalToEx(ILandroid/sec/clipboard/data/ClipboardData;)Z
 
-    .line 230
     .end local v3    # "txt":Landroid/sec/clipboard/data/list/ClipboardDataText;
     :cond_1
     :goto_0
     return-void
 
-    .line 179
     .restart local v3    # "txt":Landroid/sec/clipboard/data/list/ClipboardDataText;
     :cond_2
     const-string v6, "ClipboardServiceEx"
@@ -1061,18 +934,15 @@
 
     goto :goto_0
 
-    .line 227
     .end local v3    # "txt":Landroid/sec/clipboard/data/list/ClipboardDataText;
     :catch_0
     move-exception v1
 
-    .line 228
     .local v1, "e":Ljava/lang/Exception;
     invoke-virtual {v1}, Ljava/lang/Exception;->printStackTrace()V
 
     goto :goto_0
 
-    .line 182
     .end local v1    # "e":Ljava/lang/Exception;
     :cond_3
     :try_start_1
@@ -1086,7 +956,7 @@
 
     move-result-object v6
 
-    const-string/jumbo v7, "text/html"
+    const-string v7, "text/html"
 
     invoke-virtual {v6, v7}, Ljava/lang/String;->compareTo(Ljava/lang/String;)I
 
@@ -1094,12 +964,10 @@
 
     if-nez v6, :cond_5
 
-    .line 183
     new-instance v3, Landroid/sec/clipboard/data/list/ClipboardDataText;
 
     invoke-direct {v3}, Landroid/sec/clipboard/data/list/ClipboardDataText;-><init>()V
 
-    .line 184
     .restart local v3    # "txt":Landroid/sec/clipboard/data/list/ClipboardDataText;
     invoke-virtual {p1}, Landroid/content/ClipData;->getItemCount()I
 
@@ -1107,7 +975,6 @@
 
     if-lez v6, :cond_1
 
-    .line 185
     invoke-static {}, Landroid/content/ClipboardManager;->getServiceEx()Landroid/sec/clipboard/IClipboardService;
 
     move-result-object v6
@@ -1116,7 +983,6 @@
 
     if-eqz v3, :cond_4
 
-    .line 186
     const/4 v6, 0x0
 
     invoke-virtual {p1, v6}, Landroid/content/ClipData;->getItemAt(I)Landroid/content/ClipData$Item;
@@ -1129,7 +995,6 @@
 
     invoke-virtual {v3, v6}, Landroid/sec/clipboard/data/list/ClipboardDataText;->SetText(Ljava/lang/CharSequence;)Z
 
-    .line 187
     sget-object v6, Landroid/content/ClipboardManager;->sServiceEx:Landroid/sec/clipboard/IClipboardService;
 
     invoke-virtual {v3}, Landroid/sec/clipboard/data/list/ClipboardDataText;->GetFomat()I
@@ -1140,7 +1005,6 @@
 
     goto :goto_0
 
-    .line 189
     :cond_4
     const-string v6, "ClipboardServiceEx"
 
@@ -1178,7 +1042,6 @@
 
     goto/16 :goto_0
 
-    .line 192
     .end local v3    # "txt":Landroid/sec/clipboard/data/list/ClipboardDataText;
     :cond_5
     invoke-virtual {p1}, Landroid/content/ClipData;->getDescription()Landroid/content/ClipDescription;
@@ -1191,7 +1054,7 @@
 
     move-result-object v6
 
-    const-string/jumbo v7, "text/uri-list"
+    const-string v7, "text/uri-list"
 
     invoke-virtual {v6, v7}, Ljava/lang/String;->compareTo(Ljava/lang/String;)I
 
@@ -1199,12 +1062,10 @@
 
     if-nez v6, :cond_7
 
-    .line 193
     new-instance v5, Landroid/sec/clipboard/data/list/ClipboardDataUri;
 
     invoke-direct {v5}, Landroid/sec/clipboard/data/list/ClipboardDataUri;-><init>()V
 
-    .line 194
     .local v5, "uriData":Landroid/sec/clipboard/data/list/ClipboardDataUri;
     invoke-virtual {p1}, Landroid/content/ClipData;->getItemCount()I
 
@@ -1212,7 +1073,6 @@
 
     if-lez v6, :cond_1
 
-    .line 195
     const/4 v6, 0x0
 
     invoke-virtual {p1, v6}, Landroid/content/ClipData;->getItemAt(I)Landroid/content/ClipData$Item;
@@ -1223,7 +1083,6 @@
 
     move-result-object v4
 
-    .line 196
     .local v4, "uri":Landroid/net/Uri;
     invoke-static {}, Landroid/content/ClipboardManager;->getServiceEx()Landroid/sec/clipboard/IClipboardService;
 
@@ -1233,10 +1092,8 @@
 
     if-eqz v5, :cond_6
 
-    .line 197
     invoke-virtual {v5, v4}, Landroid/sec/clipboard/data/list/ClipboardDataUri;->SetUri(Landroid/net/Uri;)Z
 
-    .line 198
     sget-object v6, Landroid/content/ClipboardManager;->sServiceEx:Landroid/sec/clipboard/IClipboardService;
 
     invoke-virtual {v5}, Landroid/sec/clipboard/data/list/ClipboardDataUri;->GetFomat()I
@@ -1247,7 +1104,6 @@
 
     goto/16 :goto_0
 
-    .line 200
     :cond_6
     const-string v6, "ClipboardServiceEx"
 
@@ -1285,7 +1141,6 @@
 
     goto/16 :goto_0
 
-    .line 203
     .end local v4    # "uri":Landroid/net/Uri;
     .end local v5    # "uriData":Landroid/sec/clipboard/data/list/ClipboardDataUri;
     :cond_7
@@ -1299,7 +1154,7 @@
 
     move-result-object v6
 
-    const-string/jumbo v7, "text/vnd.android.intent"
+    const-string v7, "text/vnd.android.intent"
 
     invoke-virtual {v6, v7}, Ljava/lang/String;->compareTo(Ljava/lang/String;)I
 
@@ -1307,12 +1162,10 @@
 
     if-nez v6, :cond_9
 
-    .line 204
     new-instance v2, Landroid/sec/clipboard/data/list/ClipboardDataIntent;
 
     invoke-direct {v2}, Landroid/sec/clipboard/data/list/ClipboardDataIntent;-><init>()V
 
-    .line 205
     .local v2, "intent":Landroid/sec/clipboard/data/list/ClipboardDataIntent;
     invoke-virtual {p1}, Landroid/content/ClipData;->getItemCount()I
 
@@ -1320,7 +1173,6 @@
 
     if-lez v6, :cond_1
 
-    .line 206
     invoke-static {}, Landroid/content/ClipboardManager;->getServiceEx()Landroid/sec/clipboard/IClipboardService;
 
     move-result-object v6
@@ -1329,7 +1181,6 @@
 
     if-eqz v2, :cond_8
 
-    .line 207
     const/4 v6, 0x0
 
     invoke-virtual {p1, v6}, Landroid/content/ClipData;->getItemAt(I)Landroid/content/ClipData$Item;
@@ -1342,7 +1193,6 @@
 
     invoke-virtual {v2, v6}, Landroid/sec/clipboard/data/list/ClipboardDataIntent;->SetIntent(Landroid/content/Intent;)Z
 
-    .line 208
     sget-object v6, Landroid/content/ClipboardManager;->sServiceEx:Landroid/sec/clipboard/IClipboardService;
 
     invoke-virtual {v2}, Landroid/sec/clipboard/data/list/ClipboardDataIntent;->GetFomat()I
@@ -1353,7 +1203,6 @@
 
     goto/16 :goto_0
 
-    .line 210
     :cond_8
     const-string v6, "ClipboardServiceEx"
 
@@ -1391,7 +1240,6 @@
 
     goto/16 :goto_0
 
-    .line 214
     .end local v2    # "intent":Landroid/sec/clipboard/data/list/ClipboardDataIntent;
     :cond_9
     const/4 v6, 0x0
@@ -1406,13 +1254,11 @@
 
     move-result-object v0
 
-    .line 215
     .local v0, "data":Ljava/lang/CharSequence;
     new-instance v3, Landroid/sec/clipboard/data/list/ClipboardDataText;
 
     invoke-direct {v3}, Landroid/sec/clipboard/data/list/ClipboardDataText;-><init>()V
 
-    .line 216
     .restart local v3    # "txt":Landroid/sec/clipboard/data/list/ClipboardDataText;
     if-eqz v0, :cond_1
 
@@ -1424,7 +1270,6 @@
 
     if-eqz v3, :cond_1
 
-    .line 217
     invoke-static {}, Landroid/content/ClipboardManager;->getServiceEx()Landroid/sec/clipboard/IClipboardService;
 
     move-result-object v6
@@ -1433,10 +1278,8 @@
 
     if-eqz v3, :cond_a
 
-    .line 218
     invoke-virtual {v3, v0}, Landroid/sec/clipboard/data/list/ClipboardDataText;->SetText(Ljava/lang/CharSequence;)Z
 
-    .line 219
     sget-object v6, Landroid/content/ClipboardManager;->sServiceEx:Landroid/sec/clipboard/IClipboardService;
 
     invoke-virtual {v3}, Landroid/sec/clipboard/data/list/ClipboardDataText;->GetFomat()I
@@ -1447,7 +1290,6 @@
 
     goto/16 :goto_0
 
-    .line 221
     :cond_a
     const-string v6, "ClipboardServiceEx"
 
@@ -1493,7 +1335,6 @@
     .param p1, "text"    # Ljava/lang/CharSequence;
 
     .prologue
-    .line 320
     const/4 v0, 0x0
 
     invoke-static {v0, p1}, Landroid/content/ClipData;->newPlainText(Ljava/lang/CharSequence;Ljava/lang/CharSequence;)Landroid/content/ClipData;
@@ -1502,6 +1343,5 @@
 
     invoke-virtual {p0, v0}, Landroid/content/ClipboardManager;->setPrimaryClip(Landroid/content/ClipData;)V
 
-    .line 321
     return-void
 .end method

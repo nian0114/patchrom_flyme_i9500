@@ -39,25 +39,20 @@
     .param p1, "config"    # Landroid/media/audiopolicy/AudioPolicyConfig;
 
     .prologue
-    .line 65
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 52
     const/4 v0, 0x0
 
     iput-object v0, p0, Landroid/media/audiopolicy/AudioPolicy;->mStatusListener:Landroid/media/audiopolicy/AudioPolicy$AudioPolicyStatusListener;
 
-    .line 54
     new-instance v0, Landroid/os/Binder;
 
     invoke-direct {v0}, Landroid/os/Binder;-><init>()V
 
     iput-object v0, p0, Landroid/media/audiopolicy/AudioPolicy;->mToken:Landroid/os/IBinder;
 
-    .line 66
     iput-object p1, p0, Landroid/media/audiopolicy/AudioPolicy;->mConfig:Landroid/media/audiopolicy/AudioPolicyConfig;
 
-    .line 67
     iget-object v0, p0, Landroid/media/audiopolicy/AudioPolicy;->mConfig:Landroid/media/audiopolicy/AudioPolicyConfig;
 
     iget-object v0, v0, Landroid/media/audiopolicy/AudioPolicyConfig;->mMixes:Ljava/util/ArrayList;
@@ -68,16 +63,13 @@
 
     if-eqz v0, :cond_0
 
-    .line 68
     const/4 v0, 0x0
 
     iput v0, p0, Landroid/media/audiopolicy/AudioPolicy;->mStatus:I
 
-    .line 72
     :goto_0
     return-void
 
-    .line 70
     :cond_0
     const/4 v0, 0x1
 
@@ -92,7 +84,6 @@
     .param p2, "x1"    # Landroid/media/audiopolicy/AudioPolicy$1;
 
     .prologue
-    .line 34
     invoke-direct {p0, p1}, Landroid/media/audiopolicy/AudioPolicy;-><init>(Landroid/media/audiopolicy/AudioPolicyConfig;)V
 
     return-void
@@ -104,7 +95,6 @@
     .locals 1
 
     .prologue
-    .line 60
     iget-object v0, p0, Landroid/media/audiopolicy/AudioPolicy;->mConfig:Landroid/media/audiopolicy/AudioPolicyConfig;
 
     return-object v0
@@ -114,7 +104,6 @@
     .locals 1
 
     .prologue
-    .line 108
     iget v0, p0, Landroid/media/audiopolicy/AudioPolicy;->mStatus:I
 
     return v0
@@ -125,10 +114,8 @@
     .param p1, "l"    # Landroid/media/audiopolicy/AudioPolicy$AudioPolicyStatusListener;
 
     .prologue
-    .line 117
     iput-object p1, p0, Landroid/media/audiopolicy/AudioPolicy;->mStatusListener:Landroid/media/audiopolicy/AudioPolicy$AudioPolicyStatusListener;
 
-    .line 118
     return-void
 .end method
 
@@ -136,14 +123,12 @@
     .locals 3
 
     .prologue
-    .line 123
     new-instance v0, Ljava/lang/String;
 
     const-string v1, "android.media.audiopolicy.AudioPolicy:\n"
 
     invoke-direct {v0, v1}, Ljava/lang/String;-><init>(Ljava/lang/String;)V
 
-    .line 124
     .local v0, "textDump":Ljava/lang/String;
     new-instance v1, Ljava/lang/StringBuilder;
 
@@ -173,7 +158,6 @@
 
     move-result-object v0
 
-    .line 125
     return-object v0
 .end method
 
@@ -181,7 +165,6 @@
     .locals 1
 
     .prologue
-    .line 56
     iget-object v0, p0, Landroid/media/audiopolicy/AudioPolicy;->mToken:Landroid/os/IBinder;
 
     return-object v0

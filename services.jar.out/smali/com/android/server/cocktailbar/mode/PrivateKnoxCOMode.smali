@@ -11,10 +11,8 @@
     .param p3, "listener"    # Lcom/android/server/cocktailbar/mode/CocktailBarMode$OnCocktailBarModeListener;
 
     .prologue
-    .line 11
     invoke-direct {p0, p1, p2, p3}, Lcom/android/server/cocktailbar/mode/AbsPrivateMode;-><init>(Landroid/content/Context;ILcom/android/server/cocktailbar/mode/CocktailBarMode$OnCocktailBarModeListener;)V
 
-    .line 12
     return-void
 .end method
 
@@ -24,7 +22,6 @@
     .locals 1
 
     .prologue
-    .line 33
     const/4 v0, 0x1
 
     return v0
@@ -34,7 +31,6 @@
     .locals 1
 
     .prologue
-    .line 17
     const/4 v0, 0x2
 
     return v0
@@ -44,7 +40,6 @@
     .locals 1
 
     .prologue
-    .line 23
     const-string v0, "knoxmode"
 
     return-object v0
@@ -54,7 +49,6 @@
     .locals 1
 
     .prologue
-    .line 28
     iget-object v0, p0, Lcom/android/server/cocktailbar/mode/PrivateKnoxCOMode;->mContext:Landroid/content/Context;
 
     invoke-static {v0}, Lcom/android/server/cocktailbar/utils/CocktailBarUtils;->isExistKioskContainers(Landroid/content/Context;)Z

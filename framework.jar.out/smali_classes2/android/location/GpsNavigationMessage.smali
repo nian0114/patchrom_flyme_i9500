@@ -50,14 +50,12 @@
     .locals 1
 
     .prologue
-    .line 33
     const/4 v0, 0x0
 
     new-array v0, v0, [B
 
     sput-object v0, Landroid/location/GpsNavigationMessage;->EMPTY_ARRAY:[B
 
-    .line 208
     new-instance v0, Landroid/location/GpsNavigationMessage$1;
 
     invoke-direct {v0}, Landroid/location/GpsNavigationMessage$1;-><init>()V
@@ -71,13 +69,10 @@
     .locals 0
 
     .prologue
-    .line 70
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 71
     invoke-direct {p0}, Landroid/location/GpsNavigationMessage;->initialize()V
 
-    .line 72
     return-void
 .end method
 
@@ -85,48 +80,40 @@
     .locals 1
 
     .prologue
-    .line 123
     iget-byte v0, p0, Landroid/location/GpsNavigationMessage;->mType:B
 
     packed-switch v0, :pswitch_data_0
 
-    .line 135
     const-string v0, "<Invalid>"
 
     :goto_0
     return-object v0
 
-    .line 125
     :pswitch_0
     const-string v0, "Unknown"
 
     goto :goto_0
 
-    .line 127
     :pswitch_1
     const-string v0, "L1 C/A"
 
     goto :goto_0
 
-    .line 129
     :pswitch_2
     const-string v0, "L2-CNAV"
 
     goto :goto_0
 
-    .line 131
     :pswitch_3
     const-string v0, "L5-CNAV"
 
     goto :goto_0
 
-    .line 133
     :pswitch_4
     const-string v0, "CNAV-2"
 
     goto :goto_0
 
-    .line 123
     nop
 
     :pswitch_data_0
@@ -147,24 +134,18 @@
 
     const/4 v0, -0x1
 
-    .line 270
     iput-byte v1, p0, Landroid/location/GpsNavigationMessage;->mType:B
 
-    .line 271
     iput-byte v1, p0, Landroid/location/GpsNavigationMessage;->mPrn:B
 
-    .line 272
     iput-short v0, p0, Landroid/location/GpsNavigationMessage;->mMessageId:S
 
-    .line 273
     iput-short v0, p0, Landroid/location/GpsNavigationMessage;->mSubmessageId:S
 
-    .line 274
     sget-object v0, Landroid/location/GpsNavigationMessage;->EMPTY_ARRAY:[B
 
     iput-object v0, p0, Landroid/location/GpsNavigationMessage;->mData:[B
 
-    .line 275
     return-void
 .end method
 
@@ -174,7 +155,6 @@
     .locals 1
 
     .prologue
-    .line 244
     const/4 v0, 0x0
 
     return v0
@@ -184,7 +164,6 @@
     .locals 1
 
     .prologue
-    .line 194
     iget-object v0, p0, Landroid/location/GpsNavigationMessage;->mData:[B
 
     return-object v0
@@ -194,7 +173,6 @@
     .locals 1
 
     .prologue
-    .line 161
     iget-short v0, p0, Landroid/location/GpsNavigationMessage;->mMessageId:S
 
     return v0
@@ -204,7 +182,6 @@
     .locals 1
 
     .prologue
-    .line 144
     iget-byte v0, p0, Landroid/location/GpsNavigationMessage;->mPrn:B
 
     return v0
@@ -214,7 +191,6 @@
     .locals 1
 
     .prologue
-    .line 178
     iget-short v0, p0, Landroid/location/GpsNavigationMessage;->mSubmessageId:S
 
     return v0
@@ -224,7 +200,6 @@
     .locals 1
 
     .prologue
-    .line 96
     iget-byte v0, p0, Landroid/location/GpsNavigationMessage;->mType:B
 
     return v0
@@ -234,10 +209,8 @@
     .locals 0
 
     .prologue
-    .line 89
     invoke-direct {p0}, Landroid/location/GpsNavigationMessage;->initialize()V
 
-    .line 90
     return-void
 .end method
 
@@ -246,32 +219,26 @@
     .param p1, "navigationMessage"    # Landroid/location/GpsNavigationMessage;
 
     .prologue
-    .line 78
     iget-byte v0, p1, Landroid/location/GpsNavigationMessage;->mType:B
 
     iput-byte v0, p0, Landroid/location/GpsNavigationMessage;->mType:B
 
-    .line 79
     iget-byte v0, p1, Landroid/location/GpsNavigationMessage;->mPrn:B
 
     iput-byte v0, p0, Landroid/location/GpsNavigationMessage;->mPrn:B
 
-    .line 80
     iget-short v0, p1, Landroid/location/GpsNavigationMessage;->mMessageId:S
 
     iput-short v0, p0, Landroid/location/GpsNavigationMessage;->mMessageId:S
 
-    .line 81
     iget-short v0, p1, Landroid/location/GpsNavigationMessage;->mSubmessageId:S
 
     iput-short v0, p0, Landroid/location/GpsNavigationMessage;->mSubmessageId:S
 
-    .line 82
     iget-object v0, p1, Landroid/location/GpsNavigationMessage;->mData:[B
 
     iput-object v0, p0, Landroid/location/GpsNavigationMessage;->mData:[B
 
-    .line 83
     return-void
 .end method
 
@@ -280,10 +247,8 @@
     .param p1, "value"    # [B
 
     .prologue
-    .line 201
     if-nez p1, :cond_0
 
-    .line 202
     new-instance v0, Ljava/security/InvalidParameterException;
 
     const-string v1, "Data must be a non-null array"
@@ -292,11 +257,9 @@
 
     throw v0
 
-    .line 205
     :cond_0
     iput-object p1, p0, Landroid/location/GpsNavigationMessage;->mData:[B
 
-    .line 206
     return-void
 .end method
 
@@ -305,10 +268,8 @@
     .param p1, "value"    # S
 
     .prologue
-    .line 168
     iput-short p1, p0, Landroid/location/GpsNavigationMessage;->mMessageId:S
 
-    .line 169
     return-void
 .end method
 
@@ -317,10 +278,8 @@
     .param p1, "value"    # B
 
     .prologue
-    .line 151
     iput-byte p1, p0, Landroid/location/GpsNavigationMessage;->mPrn:B
 
-    .line 152
     return-void
 .end method
 
@@ -329,10 +288,8 @@
     .param p1, "value"    # S
 
     .prologue
-    .line 185
     iput-short p1, p0, Landroid/location/GpsNavigationMessage;->mSubmessageId:S
 
-    .line 186
     return-void
 .end method
 
@@ -341,10 +298,8 @@
     .param p1, "value"    # B
 
     .prologue
-    .line 103
     packed-switch p1, :pswitch_data_0
 
-    .line 112
     const-string v0, "GpsNavigationMessage"
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -367,22 +322,18 @@
 
     invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 113
     const/4 v0, 0x0
 
     iput-byte v0, p0, Landroid/location/GpsNavigationMessage;->mType:B
 
-    .line 116
     :goto_0
     return-void
 
-    .line 109
     :pswitch_0
     iput-byte p1, p0, Landroid/location/GpsNavigationMessage;->mType:B
 
     goto :goto_0
 
-    .line 103
     :pswitch_data_0
     .packed-switch 0x0
         :pswitch_0
@@ -403,10 +354,8 @@
 
     const/4 v10, 0x0
 
-    .line 249
     const-string v2, "   %-15s = %s\n"
 
-    .line 250
     .local v2, "format":Ljava/lang/String;
     new-instance v1, Ljava/lang/StringBuilder;
 
@@ -414,7 +363,6 @@
 
     invoke-direct {v1, v7}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    .line 252
     .local v1, "builder":Ljava/lang/StringBuilder;
     const-string v7, "   %-15s = %s\n"
 
@@ -436,7 +384,6 @@
 
     invoke-virtual {v1, v7}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 253
     const-string v7, "   %-15s = %s\n"
 
     new-array v8, v12, [Ljava/lang/Object;
@@ -459,7 +406,6 @@
 
     invoke-virtual {v1, v7}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 254
     const-string v7, "   %-15s = %s\n"
 
     new-array v8, v12, [Ljava/lang/Object;
@@ -482,7 +428,6 @@
 
     invoke-virtual {v1, v7}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 255
     const-string v7, "   %-15s = %s\n"
 
     new-array v8, v12, [Ljava/lang/Object;
@@ -505,7 +450,6 @@
 
     invoke-virtual {v1, v7}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 257
     const-string v7, "   %-15s = %s\n"
 
     new-array v8, v12, [Ljava/lang/Object;
@@ -514,7 +458,7 @@
 
     aput-object v9, v8, v10
 
-    const-string/jumbo v9, "{"
+    const-string v9, "{"
 
     aput-object v9, v8, v11
 
@@ -524,10 +468,8 @@
 
     invoke-virtual {v1, v7}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 258
     const-string v5, "        "
 
-    .line 259
     .local v5, "prefix":Ljava/lang/String;
     iget-object v0, p0, Landroid/location/GpsNavigationMessage;->mData:[B
 
@@ -543,29 +485,23 @@
 
     aget-byte v6, v0, v3
 
-    .line 260
     .local v6, "value":B
     invoke-virtual {v1, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 261
     invoke-virtual {v1, v6}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
-    .line 262
     const-string v5, ", "
 
-    .line 259
     add-int/lit8 v3, v3, 0x1
 
     goto :goto_0
 
-    .line 264
     .end local v6    # "value":B
     :cond_0
     const-string v7, " }"
 
     invoke-virtual {v1, v7}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 266
     invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
     move-result-object v7
@@ -579,38 +515,31 @@
     .param p2, "flags"    # I
 
     .prologue
-    .line 234
     iget-byte v0, p0, Landroid/location/GpsNavigationMessage;->mType:B
 
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeByte(B)V
 
-    .line 235
     iget-byte v0, p0, Landroid/location/GpsNavigationMessage;->mPrn:B
 
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeByte(B)V
 
-    .line 236
     iget-short v0, p0, Landroid/location/GpsNavigationMessage;->mMessageId:S
 
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 237
     iget-short v0, p0, Landroid/location/GpsNavigationMessage;->mSubmessageId:S
 
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 238
     iget-object v0, p0, Landroid/location/GpsNavigationMessage;->mData:[B
 
     array-length v0, v0
 
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 239
     iget-object v0, p0, Landroid/location/GpsNavigationMessage;->mData:[B
 
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeByteArray([B)V
 
-    .line 240
     return-void
 .end method

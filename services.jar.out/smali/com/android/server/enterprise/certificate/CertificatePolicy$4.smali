@@ -23,7 +23,6 @@
     .locals 0
 
     .prologue
-    .line 1809
     iput-object p1, p0, Lcom/android/server/enterprise/certificate/CertificatePolicy$4;->this$0:Lcom/android/server/enterprise/certificate/CertificatePolicy;
 
     invoke-direct {p0}, Landroid/content/BroadcastReceiver;-><init>()V
@@ -39,12 +38,10 @@
     .param p2, "intent"    # Landroid/content/Intent;
 
     .prologue
-    .line 1812
     invoke-virtual {p2}, Landroid/content/Intent;->getAction()Ljava/lang/String;
 
     move-result-object v0
 
-    .line 1813
     .local v0, "action":Ljava/lang/String;
     if-eqz v0, :cond_1
 
@@ -64,7 +61,6 @@
 
     if-eqz v1, :cond_1
 
-    .line 1816
     :cond_0
     iget-object v1, p0, Lcom/android/server/enterprise/certificate/CertificatePolicy$4;->this$0:Lcom/android/server/enterprise/certificate/CertificatePolicy;
 
@@ -73,7 +69,6 @@
     # setter for: Lcom/android/server/enterprise/certificate/CertificatePolicy;->mBootCompleted:Z
     invoke-static {v1, v2}, Lcom/android/server/enterprise/certificate/CertificatePolicy;->access$2102(Lcom/android/server/enterprise/certificate/CertificatePolicy;Z)Z
 
-    .line 1817
     iget-object v1, p0, Lcom/android/server/enterprise/certificate/CertificatePolicy$4;->this$0:Lcom/android/server/enterprise/certificate/CertificatePolicy;
 
     # getter for: Lcom/android/server/enterprise/certificate/CertificatePolicy;->mContext:Landroid/content/Context;
@@ -90,7 +85,6 @@
 
     invoke-virtual {v1, v2}, Landroid/content/Context;->unregisterReceiver(Landroid/content/BroadcastReceiver;)V
 
-    .line 1819
     :cond_1
     return-void
 .end method

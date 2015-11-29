@@ -68,29 +68,22 @@
     .prologue
     const/4 v3, 0x0
 
-    .line 65
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 63
     const/16 v0, 0xf
 
     iput v0, p0, Lcom/android/internal/policy/impl/multiwindow/Border;->mDrawOption:I
 
-    .line 66
     iput-object p1, p0, Lcom/android/internal/policy/impl/multiwindow/Border;->mContext:Landroid/content/Context;
 
-    .line 67
     iput-object p2, p0, Lcom/android/internal/policy/impl/multiwindow/Border;->mWindowManager:Landroid/view/WindowManager;
 
-    .line 69
     iput-boolean v3, p0, Lcom/android/internal/policy/impl/multiwindow/Border;->mIsSupportUnfocusedShadow:Z
 
-    .line 71
     iget-boolean v0, p0, Lcom/android/internal/policy/impl/multiwindow/Border;->mIsSupportUnfocusedShadow:Z
 
     if-eqz v0, :cond_0
 
-    .line 72
     iget-object v0, p0, Lcom/android/internal/policy/impl/multiwindow/Border;->mContext:Landroid/content/Context;
 
     invoke-virtual {v0}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
@@ -105,7 +98,6 @@
 
     iput v0, p0, Lcom/android/internal/policy/impl/multiwindow/Border;->mThicknessForUnFocused:I
 
-    .line 73
     iget-object v0, p0, Lcom/android/internal/policy/impl/multiwindow/Border;->mContext:Landroid/content/Context;
 
     invoke-virtual {v0}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
@@ -120,7 +112,6 @@
 
     iput-object v0, p0, Lcom/android/internal/policy/impl/multiwindow/Border;->mUnfocusedFrameLeftBitmap:Landroid/graphics/Bitmap;
 
-    .line 74
     iget-object v0, p0, Lcom/android/internal/policy/impl/multiwindow/Border;->mContext:Landroid/content/Context;
 
     invoke-virtual {v0}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
@@ -135,7 +126,6 @@
 
     iput-object v0, p0, Lcom/android/internal/policy/impl/multiwindow/Border;->mUnfocusedFrameRightBitmap:Landroid/graphics/Bitmap;
 
-    .line 75
     iget-object v0, p0, Lcom/android/internal/policy/impl/multiwindow/Border;->mContext:Landroid/content/Context;
 
     invoke-virtual {v0}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
@@ -150,7 +140,6 @@
 
     iput-object v0, p0, Lcom/android/internal/policy/impl/multiwindow/Border;->mUnfocusedFrameTopBitmap:Landroid/graphics/Bitmap;
 
-    .line 76
     iget-object v0, p0, Lcom/android/internal/policy/impl/multiwindow/Border;->mContext:Landroid/content/Context;
 
     invoke-virtual {v0}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
@@ -165,7 +154,6 @@
 
     iput-object v0, p0, Lcom/android/internal/policy/impl/multiwindow/Border;->mUnfocusedFrameBottomBitmap:Landroid/graphics/Bitmap;
 
-    .line 77
     new-instance v0, Landroid/graphics/Rect;
 
     iget-object v1, p0, Lcom/android/internal/policy/impl/multiwindow/Border;->mUnfocusedFrameLeftBitmap:Landroid/graphics/Bitmap;
@@ -184,7 +172,6 @@
 
     iput-object v0, p0, Lcom/android/internal/policy/impl/multiwindow/Border;->mUnfocusedFrameLeftRect:Landroid/graphics/Rect;
 
-    .line 78
     new-instance v0, Landroid/graphics/Rect;
 
     iget-object v1, p0, Lcom/android/internal/policy/impl/multiwindow/Border;->mUnfocusedFrameRightBitmap:Landroid/graphics/Bitmap;
@@ -203,7 +190,6 @@
 
     iput-object v0, p0, Lcom/android/internal/policy/impl/multiwindow/Border;->mUnfocusedFrameRightRect:Landroid/graphics/Rect;
 
-    .line 79
     new-instance v0, Landroid/graphics/Rect;
 
     iget-object v1, p0, Lcom/android/internal/policy/impl/multiwindow/Border;->mUnfocusedFrameTopBitmap:Landroid/graphics/Bitmap;
@@ -222,7 +208,6 @@
 
     iput-object v0, p0, Lcom/android/internal/policy/impl/multiwindow/Border;->mUnfocusedFrameTopRect:Landroid/graphics/Rect;
 
-    .line 80
     new-instance v0, Landroid/graphics/Rect;
 
     iget-object v1, p0, Lcom/android/internal/policy/impl/multiwindow/Border;->mUnfocusedFrameBottomBitmap:Landroid/graphics/Bitmap;
@@ -241,7 +226,6 @@
 
     iput-object v0, p0, Lcom/android/internal/policy/impl/multiwindow/Border;->mUnfocusedFrameBottomRect:Landroid/graphics/Rect;
 
-    .line 83
     :cond_0
     iget-object v0, p0, Lcom/android/internal/policy/impl/multiwindow/Border;->mContext:Landroid/content/Context;
 
@@ -257,7 +241,6 @@
 
     iput v0, p0, Lcom/android/internal/policy/impl/multiwindow/Border;->mFocusLineColor:I
 
-    .line 84
     iget-object v0, p0, Lcom/android/internal/policy/impl/multiwindow/Border;->mContext:Landroid/content/Context;
 
     invoke-virtual {v0}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
@@ -272,7 +255,6 @@
 
     iput v0, p0, Lcom/android/internal/policy/impl/multiwindow/Border;->mUnFocusLineColor:I
 
-    .line 85
     iget-object v0, p0, Lcom/android/internal/policy/impl/multiwindow/Border;->mContext:Landroid/content/Context;
 
     invoke-virtual {v0}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
@@ -287,7 +269,6 @@
 
     iput v0, p0, Lcom/android/internal/policy/impl/multiwindow/Border;->mFocusOutLineColor:I
 
-    .line 86
     iget-object v0, p0, Lcom/android/internal/policy/impl/multiwindow/Border;->mContext:Landroid/content/Context;
 
     invoke-virtual {v0}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
@@ -302,17 +283,14 @@
 
     iput v0, p0, Lcom/android/internal/policy/impl/multiwindow/Border;->mUnFocusOutLineColor:I
 
-    .line 87
     iget v0, p0, Lcom/android/internal/policy/impl/multiwindow/Border;->mFocusLineColor:I
 
     iput v0, p0, Lcom/android/internal/policy/impl/multiwindow/Border;->mInnerLineColor:I
 
-    .line 88
     iget v0, p0, Lcom/android/internal/policy/impl/multiwindow/Border;->mFocusOutLineColor:I
 
     iput v0, p0, Lcom/android/internal/policy/impl/multiwindow/Border;->mOutLineColor:I
 
-    .line 90
     invoke-virtual {p1}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
 
     move-result-object v0
@@ -327,7 +305,6 @@
 
     iput v0, p0, Lcom/android/internal/policy/impl/multiwindow/Border;->mThicknessBorderPaintInner:F
 
-    .line 91
     invoke-virtual {p1}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
 
     move-result-object v0
@@ -342,7 +319,6 @@
 
     iput v0, p0, Lcom/android/internal/policy/impl/multiwindow/Border;->mThicknessBorderPaintOuter:F
 
-    .line 92
     return-void
 .end method
 
@@ -355,14 +331,11 @@
     .param p5, "color"    # I
 
     .prologue
-    .line 114
     const/4 v6, 0x0
 
-    .line 115
     .local v6, "rotationAdjX":I
     const/4 v7, 0x0
 
-    .line 136
     .local v7, "rotationAdjY":I
     const/4 v0, 0x0
 
@@ -370,7 +343,6 @@
 
     if-lez v0, :cond_4
 
-    .line 137
     int-to-float v1, v6
 
     int-to-float v2, v7
@@ -389,7 +361,6 @@
 
     invoke-virtual/range {v0 .. v5}, Landroid/graphics/Canvas;->clipRect(FFFFLandroid/graphics/Region$Op;)Z
 
-    .line 138
     int-to-float v0, v6
 
     add-float v1, v0, p4
@@ -416,14 +387,12 @@
 
     invoke-virtual/range {v0 .. v5}, Landroid/graphics/Canvas;->clipRect(FFFFLandroid/graphics/Region$Op;)Z
 
-    .line 140
     iget v0, p0, Lcom/android/internal/policy/impl/multiwindow/Border;->mDrawOption:I
 
     and-int/lit8 v0, v0, 0x4
 
     if-nez v0, :cond_0
 
-    .line 141
     int-to-float v1, v6
 
     int-to-float v2, v7
@@ -442,7 +411,6 @@
 
     invoke-virtual/range {v0 .. v5}, Landroid/graphics/Canvas;->clipRect(FFFFLandroid/graphics/Region$Op;)Z
 
-    .line 143
     :cond_0
     iget v0, p0, Lcom/android/internal/policy/impl/multiwindow/Border;->mDrawOption:I
 
@@ -450,7 +418,6 @@
 
     if-nez v0, :cond_1
 
-    .line 144
     int-to-float v1, v6
 
     add-int v0, v7, p3
@@ -473,7 +440,6 @@
 
     invoke-virtual/range {v0 .. v5}, Landroid/graphics/Canvas;->clipRect(FFFFLandroid/graphics/Region$Op;)Z
 
-    .line 146
     :cond_1
     iget v0, p0, Lcom/android/internal/policy/impl/multiwindow/Border;->mDrawOption:I
 
@@ -481,7 +447,6 @@
 
     if-nez v0, :cond_2
 
-    .line 147
     int-to-float v1, v6
 
     int-to-float v2, v7
@@ -500,7 +465,6 @@
 
     invoke-virtual/range {v0 .. v5}, Landroid/graphics/Canvas;->clipRect(FFFFLandroid/graphics/Region$Op;)Z
 
-    .line 149
     :cond_2
     iget v0, p0, Lcom/android/internal/policy/impl/multiwindow/Border;->mDrawOption:I
 
@@ -508,7 +472,6 @@
 
     if-nez v0, :cond_3
 
-    .line 150
     add-int v0, v6, p2
 
     int-to-float v0, v0
@@ -531,11 +494,9 @@
 
     invoke-virtual/range {v0 .. v5}, Landroid/graphics/Canvas;->clipRect(FFFFLandroid/graphics/Region$Op;)Z
 
-    .line 152
     :cond_3
     invoke-virtual {p1, p5}, Landroid/graphics/Canvas;->drawColor(I)V
 
-    .line 154
     :cond_4
     return-void
 .end method
@@ -556,17 +517,14 @@
 
     const/4 v4, 0x0
 
-    .line 157
     iget-boolean v2, p0, Lcom/android/internal/policy/impl/multiwindow/Border;->mIsSupportUnfocusedShadow:Z
 
     if-eqz v2, :cond_0
 
-    .line 158
     new-instance v1, Landroid/graphics/Rect;
 
     invoke-direct {v1}, Landroid/graphics/Rect;-><init>()V
 
-    .line 159
     .local v1, "mTmpDrawRect":Landroid/graphics/Rect;
     iget-object v2, p0, Lcom/android/internal/policy/impl/multiwindow/Border;->mContext:Landroid/content/Context;
 
@@ -576,85 +534,71 @@
 
     if-eqz v2, :cond_1
 
-    .line 161
     iget v2, p0, Lcom/android/internal/policy/impl/multiwindow/Border;->mThicknessForUnFocused:I
 
     invoke-virtual {v1, v4, v4, v2, p3}, Landroid/graphics/Rect;->set(IIII)V
 
-    .line 162
     sget-object v2, Landroid/graphics/Region$Op;->INTERSECT:Landroid/graphics/Region$Op;
 
     invoke-virtual {p1, v1, v2}, Landroid/graphics/Canvas;->clipRect(Landroid/graphics/Rect;Landroid/graphics/Region$Op;)Z
 
-    .line 163
     iget-object v2, p0, Lcom/android/internal/policy/impl/multiwindow/Border;->mUnfocusedFrameLeftBitmap:Landroid/graphics/Bitmap;
 
     iget-object v3, p0, Lcom/android/internal/policy/impl/multiwindow/Border;->mUnfocusedFrameLeftRect:Landroid/graphics/Rect;
 
     invoke-virtual {p1, v2, v3, v1, v5}, Landroid/graphics/Canvas;->drawBitmap(Landroid/graphics/Bitmap;Landroid/graphics/Rect;Landroid/graphics/Rect;Landroid/graphics/Paint;)V
 
-    .line 165
     iget v2, p0, Lcom/android/internal/policy/impl/multiwindow/Border;->mThicknessForUnFocused:I
 
     invoke-virtual {v1, v4, v4, p2, v2}, Landroid/graphics/Rect;->set(IIII)V
 
-    .line 166
     sget-object v2, Landroid/graphics/Region$Op;->INTERSECT:Landroid/graphics/Region$Op;
 
     invoke-virtual {p1, v1, v2}, Landroid/graphics/Canvas;->clipRect(Landroid/graphics/Rect;Landroid/graphics/Region$Op;)Z
 
-    .line 167
     iget-object v2, p0, Lcom/android/internal/policy/impl/multiwindow/Border;->mUnfocusedFrameTopBitmap:Landroid/graphics/Bitmap;
 
     iget-object v3, p0, Lcom/android/internal/policy/impl/multiwindow/Border;->mUnfocusedFrameTopRect:Landroid/graphics/Rect;
 
     invoke-virtual {p1, v2, v3, v1, v5}, Landroid/graphics/Canvas;->drawBitmap(Landroid/graphics/Bitmap;Landroid/graphics/Rect;Landroid/graphics/Rect;Landroid/graphics/Paint;)V
 
-    .line 169
     iget v2, p0, Lcom/android/internal/policy/impl/multiwindow/Border;->mThicknessForUnFocused:I
 
     sub-int v2, p2, v2
 
     invoke-virtual {v1, v2, v4, p2, p3}, Landroid/graphics/Rect;->set(IIII)V
 
-    .line 170
     sget-object v2, Landroid/graphics/Region$Op;->INTERSECT:Landroid/graphics/Region$Op;
 
     invoke-virtual {p1, v1, v2}, Landroid/graphics/Canvas;->clipRect(Landroid/graphics/Rect;Landroid/graphics/Region$Op;)Z
 
-    .line 171
     iget-object v2, p0, Lcom/android/internal/policy/impl/multiwindow/Border;->mUnfocusedFrameRightBitmap:Landroid/graphics/Bitmap;
 
     iget-object v3, p0, Lcom/android/internal/policy/impl/multiwindow/Border;->mUnfocusedFrameRightRect:Landroid/graphics/Rect;
 
     invoke-virtual {p1, v2, v3, v1, v5}, Landroid/graphics/Canvas;->drawBitmap(Landroid/graphics/Bitmap;Landroid/graphics/Rect;Landroid/graphics/Rect;Landroid/graphics/Paint;)V
 
-    .line 173
     iget v2, p0, Lcom/android/internal/policy/impl/multiwindow/Border;->mThicknessForUnFocused:I
 
     sub-int v2, p3, v2
 
     invoke-virtual {v1, v4, v2, p2, p3}, Landroid/graphics/Rect;->set(IIII)V
 
-    .line 174
     sget-object v2, Landroid/graphics/Region$Op;->INTERSECT:Landroid/graphics/Region$Op;
 
     invoke-virtual {p1, v1, v2}, Landroid/graphics/Canvas;->clipRect(Landroid/graphics/Rect;Landroid/graphics/Region$Op;)Z
 
-    .line 175
     iget-object v2, p0, Lcom/android/internal/policy/impl/multiwindow/Border;->mUnfocusedFrameBottomBitmap:Landroid/graphics/Bitmap;
 
     iget-object v3, p0, Lcom/android/internal/policy/impl/multiwindow/Border;->mUnfocusedFrameBottomRect:Landroid/graphics/Rect;
 
     invoke-virtual {p1, v2, v3, v1, v5}, Landroid/graphics/Canvas;->drawBitmap(Landroid/graphics/Bitmap;Landroid/graphics/Rect;Landroid/graphics/Rect;Landroid/graphics/Paint;)V
 
-    .line 206
     .end local v1    # "mTmpDrawRect":Landroid/graphics/Rect;
     :cond_0
     :goto_0
     return-void
 
-    .line 177
     .restart local v1    # "mTmpDrawRect":Landroid/graphics/Rect;
     :cond_1
     iget-object v2, p0, Lcom/android/internal/policy/impl/multiwindow/Border;->mContext:Landroid/content/Context;
@@ -667,30 +611,25 @@
 
     move-result-object v0
 
-    .line 179
     .local v0, "conf":Landroid/content/res/Configuration;
     const/4 v2, 0x3
 
     if-ne p4, v2, :cond_3
 
-    .line 180
     iget v2, v0, Landroid/content/res/Configuration;->orientation:I
 
     if-ne v2, v3, :cond_2
 
-    .line 182
     iget v2, p0, Lcom/android/internal/policy/impl/multiwindow/Border;->mThicknessForUnFocused:I
 
     sub-int v2, p2, v2
 
     invoke-virtual {v1, v2, v4, p2, p3}, Landroid/graphics/Rect;->set(IIII)V
 
-    .line 183
     sget-object v2, Landroid/graphics/Region$Op;->INTERSECT:Landroid/graphics/Region$Op;
 
     invoke-virtual {p1, v1, v2}, Landroid/graphics/Canvas;->clipRect(Landroid/graphics/Rect;Landroid/graphics/Region$Op;)Z
 
-    .line 184
     iget-object v2, p0, Lcom/android/internal/policy/impl/multiwindow/Border;->mUnfocusedFrameRightBitmap:Landroid/graphics/Bitmap;
 
     iget-object v3, p0, Lcom/android/internal/policy/impl/multiwindow/Border;->mUnfocusedFrameRightRect:Landroid/graphics/Rect;
@@ -699,7 +638,6 @@
 
     goto :goto_0
 
-    .line 187
     :cond_2
     iget v2, p0, Lcom/android/internal/policy/impl/multiwindow/Border;->mThicknessForUnFocused:I
 
@@ -707,12 +645,10 @@
 
     invoke-virtual {v1, v4, v2, p2, p3}, Landroid/graphics/Rect;->set(IIII)V
 
-    .line 188
     sget-object v2, Landroid/graphics/Region$Op;->INTERSECT:Landroid/graphics/Region$Op;
 
     invoke-virtual {p1, v1, v2}, Landroid/graphics/Canvas;->clipRect(Landroid/graphics/Rect;Landroid/graphics/Region$Op;)Z
 
-    .line 189
     iget-object v2, p0, Lcom/android/internal/policy/impl/multiwindow/Border;->mUnfocusedFrameBottomBitmap:Landroid/graphics/Bitmap;
 
     iget-object v3, p0, Lcom/android/internal/policy/impl/multiwindow/Border;->mUnfocusedFrameBottomRect:Landroid/graphics/Rect;
@@ -721,23 +657,19 @@
 
     goto :goto_0
 
-    .line 192
     :cond_3
     iget v2, v0, Landroid/content/res/Configuration;->orientation:I
 
     if-ne v2, v3, :cond_4
 
-    .line 194
     iget v2, p0, Lcom/android/internal/policy/impl/multiwindow/Border;->mThicknessForUnFocused:I
 
     invoke-virtual {v1, v4, v4, v2, p3}, Landroid/graphics/Rect;->set(IIII)V
 
-    .line 195
     sget-object v2, Landroid/graphics/Region$Op;->INTERSECT:Landroid/graphics/Region$Op;
 
     invoke-virtual {p1, v1, v2}, Landroid/graphics/Canvas;->clipRect(Landroid/graphics/Rect;Landroid/graphics/Region$Op;)Z
 
-    .line 196
     iget-object v2, p0, Lcom/android/internal/policy/impl/multiwindow/Border;->mUnfocusedFrameLeftBitmap:Landroid/graphics/Bitmap;
 
     iget-object v3, p0, Lcom/android/internal/policy/impl/multiwindow/Border;->mUnfocusedFrameLeftRect:Landroid/graphics/Rect;
@@ -746,18 +678,15 @@
 
     goto :goto_0
 
-    .line 199
     :cond_4
     iget v2, p0, Lcom/android/internal/policy/impl/multiwindow/Border;->mThicknessForUnFocused:I
 
     invoke-virtual {v1, v4, v4, p2, v2}, Landroid/graphics/Rect;->set(IIII)V
 
-    .line 200
     sget-object v2, Landroid/graphics/Region$Op;->INTERSECT:Landroid/graphics/Region$Op;
 
     invoke-virtual {p1, v1, v2}, Landroid/graphics/Canvas;->clipRect(Landroid/graphics/Rect;Landroid/graphics/Region$Op;)Z
 
-    .line 201
     iget-object v2, p0, Lcom/android/internal/policy/impl/multiwindow/Border;->mUnfocusedFrameTopBitmap:Landroid/graphics/Bitmap;
 
     iget-object v3, p0, Lcom/android/internal/policy/impl/multiwindow/Border;->mUnfocusedFrameTopRect:Landroid/graphics/Rect;
@@ -774,7 +703,6 @@
     .param p3, "bottom"    # I
 
     .prologue
-    .line 109
     iget v4, p0, Lcom/android/internal/policy/impl/multiwindow/Border;->mThicknessBorderPaintInner:F
 
     iget v5, p0, Lcom/android/internal/policy/impl/multiwindow/Border;->mInnerLineColor:I
@@ -789,7 +717,6 @@
 
     invoke-direct/range {v0 .. v5}, Lcom/android/internal/policy/impl/multiwindow/Border;->drawBorderLine(Landroid/graphics/Canvas;IIFI)V
 
-    .line 110
     iget v4, p0, Lcom/android/internal/policy/impl/multiwindow/Border;->mThicknessBorderPaintOuter:F
 
     iget v5, p0, Lcom/android/internal/policy/impl/multiwindow/Border;->mOutLineColor:I
@@ -804,7 +731,6 @@
 
     invoke-direct/range {v0 .. v5}, Lcom/android/internal/policy/impl/multiwindow/Border;->drawBorderLine(Landroid/graphics/Canvas;IIFI)V
 
-    .line 111
     return-void
 .end method
 
@@ -813,10 +739,8 @@
     .param p1, "option"    # I
 
     .prologue
-    .line 95
     iput p1, p0, Lcom/android/internal/policy/impl/multiwindow/Border;->mDrawOption:I
 
-    .line 96
     return-void
 .end method
 
@@ -825,30 +749,24 @@
     .param p1, "focus"    # Z
 
     .prologue
-    .line 99
     if-eqz p1, :cond_0
 
-    .line 100
     iget v0, p0, Lcom/android/internal/policy/impl/multiwindow/Border;->mFocusLineColor:I
 
     iput v0, p0, Lcom/android/internal/policy/impl/multiwindow/Border;->mInnerLineColor:I
 
-    .line 101
     iget v0, p0, Lcom/android/internal/policy/impl/multiwindow/Border;->mFocusOutLineColor:I
 
     iput v0, p0, Lcom/android/internal/policy/impl/multiwindow/Border;->mOutLineColor:I
 
-    .line 106
     :goto_0
     return-void
 
-    .line 103
     :cond_0
     iget v0, p0, Lcom/android/internal/policy/impl/multiwindow/Border;->mUnFocusLineColor:I
 
     iput v0, p0, Lcom/android/internal/policy/impl/multiwindow/Border;->mInnerLineColor:I
 
-    .line 104
     iget v0, p0, Lcom/android/internal/policy/impl/multiwindow/Border;->mUnFocusOutLineColor:I
 
     iput v0, p0, Lcom/android/internal/policy/impl/multiwindow/Border;->mOutLineColor:I

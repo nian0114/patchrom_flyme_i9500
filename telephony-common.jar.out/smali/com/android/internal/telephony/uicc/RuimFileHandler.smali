@@ -15,10 +15,8 @@
     .param p3, "ci"    # Lcom/android/internal/telephony/CommandsInterface;
 
     .prologue
-    .line 41
     invoke-direct {p0, p1, p2, p3}, Lcom/android/internal/telephony/uicc/IccFileHandler;-><init>(Lcom/android/internal/telephony/uicc/UiccCardApplication;Ljava/lang/String;Lcom/android/internal/telephony/CommandsInterface;)V
 
-    .line 42
     return-void
 .end method
 
@@ -31,7 +29,6 @@
     .prologue
     const/4 v3, 0x1
 
-    .line 65
     invoke-static {}, Landroid/telephony/TelephonyManager;->getDefault()Landroid/telephony/TelephonyManager;
 
     move-result-object v1
@@ -42,7 +39,6 @@
 
     if-le v1, v3, :cond_7
 
-    .line 66
     const-string v1, "DCG"
 
     const-string v2, ""
@@ -93,7 +89,6 @@
 
     if-eqz v1, :cond_7
 
-    .line 71
     :cond_0
     invoke-virtual {p0}, Lcom/android/internal/telephony/uicc/RuimFileHandler;->getPhoneId()I
 
@@ -101,7 +96,6 @@
 
     if-nez v1, :cond_7
 
-    .line 72
     const-string v1, "ril.IsCSIM"
 
     const-string v2, "0"
@@ -114,64 +108,52 @@
 
     move-result v0
 
-    .line 73
     .local v0, "isCsim":I
     const/16 v1, 0x6f3c
 
     if-ne p1, v1, :cond_3
 
-    .line 74
     invoke-static {}, Landroid/telephony/TelephonyManager;->isSelectTelecomDF()Z
 
     move-result v1
 
     if-eqz v1, :cond_1
 
-    .line 75
     const-string v1, "3F007F10"
 
-    .line 113
     .end local v0    # "isCsim":I
     :goto_0
     return-object v1
 
-    .line 77
     .restart local v0    # "isCsim":I
     :cond_1
     if-ne v0, v3, :cond_2
 
-    .line 78
     const-string v1, "3F007FFF"
 
     goto :goto_0
 
-    .line 80
     :cond_2
     const-string v1, "3F007F25"
 
     goto :goto_0
 
-    .line 83
     :cond_3
     const/16 v1, 0x6f22
 
     if-ne p1, v1, :cond_5
 
-    .line 84
     if-ne v0, v3, :cond_4
 
-    .line 85
     const-string v1, "3F007FFF"
 
     goto :goto_0
 
-    .line 87
     :cond_4
     const-string v1, "3F007F25"
 
     goto :goto_0
 
-    .line 89
     :cond_5
     const/16 v1, 0x4f20
 
@@ -185,25 +167,21 @@
 
     if-ne p1, v1, :cond_7
 
-    .line 90
     :cond_6
     const-string v1, "3F007F105F3C"
 
     goto :goto_0
 
-    .line 95
     .end local v0    # "isCsim":I
     :cond_7
     sparse-switch p1, :sswitch_data_0
 
-    .line 113
     invoke-virtual {p0, p1}, Lcom/android/internal/telephony/uicc/RuimFileHandler;->getCommonIccEFPath(I)Ljava/lang/String;
 
     move-result-object v1
 
     goto :goto_0
 
-    .line 99
     :sswitch_0
     invoke-static {}, Landroid/telephony/TelephonyManager;->isSelectTelecomDF()Z
 
@@ -220,13 +198,11 @@
 
     goto :goto_0
 
-    .line 111
     :sswitch_1
     const-string v1, "3F007F25"
 
     goto :goto_0
 
-    .line 95
     :sswitch_data_0
     .sparse-switch
         0x6f22 -> :sswitch_1
@@ -249,7 +225,6 @@
     .param p5, "onLoaded"    # Landroid/os/Message;
 
     .prologue
-    .line 49
     const/16 v1, 0xa
 
     const/4 v2, 0x0
@@ -260,7 +235,6 @@
 
     move-result-object v11
 
-    .line 58
     .local v11, "response":Landroid/os/Message;
     iget-object v1, p0, Lcom/android/internal/telephony/uicc/RuimFileHandler;->mCi:Lcom/android/internal/telephony/CommandsInterface;
 
@@ -288,7 +262,6 @@
 
     invoke-interface/range {v1 .. v11}, Lcom/android/internal/telephony/CommandsInterface;->iccIOForApp(IILjava/lang/String;IIILjava/lang/String;Ljava/lang/String;Ljava/lang/String;Landroid/os/Message;)V
 
-    .line 61
     return-void
 .end method
 
@@ -297,7 +270,6 @@
     .param p1, "msg"    # Ljava/lang/String;
 
     .prologue
-    .line 118
     const-string v0, "RuimFH"
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -320,7 +292,6 @@
 
     invoke-static {v0, v1}, Landroid/telephony/Rlog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 119
     return-void
 .end method
 
@@ -329,7 +300,6 @@
     .param p1, "msg"    # Ljava/lang/String;
 
     .prologue
-    .line 123
     const-string v0, "RuimFH"
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -352,6 +322,5 @@
 
     invoke-static {v0, v1}, Landroid/telephony/Rlog;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 124
     return-void
 .end method

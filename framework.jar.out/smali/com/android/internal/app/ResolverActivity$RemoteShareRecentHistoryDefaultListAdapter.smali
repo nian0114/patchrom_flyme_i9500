@@ -44,30 +44,25 @@
     .param p5, "launchedFromUid"    # I
 
     .prologue
-    .line 2174
     iput-object p1, p0, Lcom/android/internal/app/ResolverActivity$RemoteShareRecentHistoryDefaultListAdapter;->this$0:Lcom/android/internal/app/ResolverActivity;
 
     invoke-direct {p0}, Landroid/widget/BaseAdapter;-><init>()V
 
-    .line 2175
     new-instance v0, Landroid/content/Intent;
 
     invoke-direct {v0, p3}, Landroid/content/Intent;-><init>(Landroid/content/Intent;)V
 
     iput-object v0, p0, Lcom/android/internal/app/ResolverActivity$RemoteShareRecentHistoryDefaultListAdapter;->mIntent:Landroid/content/Intent;
 
-    .line 2176
     iget-object v0, p0, Lcom/android/internal/app/ResolverActivity$RemoteShareRecentHistoryDefaultListAdapter;->mIntent:Landroid/content/Intent;
 
     const/4 v1, 0x0
 
     invoke-virtual {v0, v1}, Landroid/content/Intent;->setComponent(Landroid/content/ComponentName;)Landroid/content/Intent;
 
-    .line 2177
     iput-object p4, p0, Lcom/android/internal/app/ResolverActivity$RemoteShareRecentHistoryDefaultListAdapter;->mInitialIntents:[Landroid/content/Intent;
 
-    .line 2178
-    const-string/jumbo v0, "layout_inflater"
+    const-string v0, "layout_inflater"
 
     invoke-virtual {p2, v0}, Landroid/content/Context;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
 
@@ -77,14 +72,12 @@
 
     iput-object v0, p0, Lcom/android/internal/app/ResolverActivity$RemoteShareRecentHistoryDefaultListAdapter;->mInflater:Landroid/view/LayoutInflater;
 
-    .line 2179
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
     iput-object v0, p0, Lcom/android/internal/app/ResolverActivity$RemoteShareRecentHistoryDefaultListAdapter;->mRemoteShareRecentHistoryDefaultList:Ljava/util/List;
 
-    .line 2181
     iget-object v0, p0, Lcom/android/internal/app/ResolverActivity$RemoteShareRecentHistoryDefaultListAdapter;->mRemoteShareRecentHistoryDefaultList:Ljava/util/List;
 
     new-instance v1, Lcom/android/internal/app/ResolverActivity$RemoteShareRecentHistoryDefaultListInfo;
@@ -103,7 +96,6 @@
 
     invoke-interface {v0, v1}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    .line 2182
     return-void
 .end method
 
@@ -112,7 +104,6 @@
     .param p0, "x0"    # Lcom/android/internal/app/ResolverActivity$RemoteShareRecentHistoryDefaultListAdapter;
 
     .prologue
-    .line 2168
     iget-object v0, p0, Lcom/android/internal/app/ResolverActivity$RemoteShareRecentHistoryDefaultListAdapter;->mRemoteShareRecentHistoryDefaultList:Ljava/util/List;
 
     return-object v0
@@ -126,7 +117,6 @@
     .prologue
     const v4, 0x1020492
 
-    .line 2218
     const v3, 0x1020014
 
     invoke-virtual {p1, v3}, Landroid/view/View;->findViewById(I)Landroid/view/View;
@@ -135,7 +125,6 @@
 
     check-cast v1, Landroid/widget/TextView;
 
-    .line 2219
     .local v1, "text":Landroid/widget/TextView;
     const v3, 0x1020015
 
@@ -145,40 +134,33 @@
 
     check-cast v2, Landroid/widget/TextView;
 
-    .line 2221
     .local v2, "textIconName":Landroid/widget/TextView;
     iget-object v3, p2, Lcom/android/internal/app/ResolverActivity$RemoteShareRecentHistoryDefaultListInfo;->displayLabel:Ljava/lang/CharSequence;
 
     invoke-virtual {v1, v3}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
 
-    .line 2222
     iget-object v3, p2, Lcom/android/internal/app/ResolverActivity$RemoteShareRecentHistoryDefaultListInfo;->extraInfo:Ljava/lang/CharSequence;
 
     invoke-virtual {v2, v3}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
 
-    .line 2225
     iget-object v3, p2, Lcom/android/internal/app/ResolverActivity$RemoteShareRecentHistoryDefaultListInfo;->displayIcon:Landroid/graphics/drawable/Drawable;
 
     if-eqz v3, :cond_0
 
-    .line 2226
     invoke-virtual {p1, v4}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
     move-result-object v0
 
     check-cast v0, Landroid/widget/ImageView;
 
-    .line 2227
     .local v0, "icon":Landroid/widget/ImageView;
     iget-object v3, p2, Lcom/android/internal/app/ResolverActivity$RemoteShareRecentHistoryDefaultListInfo;->displayIcon:Landroid/graphics/drawable/Drawable;
 
     invoke-virtual {v0, v3}, Landroid/widget/ImageView;->setImageDrawable(Landroid/graphics/drawable/Drawable;)V
 
-    .line 2233
     :goto_0
     return-void
 
-    .line 2229
     .end local v0    # "icon":Landroid/widget/ImageView;
     :cond_0
     invoke-virtual {p1, v4}, Landroid/view/View;->findViewById(I)Landroid/view/View;
@@ -187,7 +169,6 @@
 
     check-cast v0, Landroid/widget/ImageView;
 
-    .line 2230
     .restart local v0    # "icon":Landroid/widget/ImageView;
     const v3, 0x1080b22
 
@@ -202,7 +183,6 @@
     .locals 1
 
     .prologue
-    .line 2188
     iget-object v0, p0, Lcom/android/internal/app/ResolverActivity$RemoteShareRecentHistoryDefaultListAdapter;->mRemoteShareRecentHistoryDefaultList:Ljava/util/List;
 
     invoke-interface {v0}, Ljava/util/List;->size()I
@@ -216,7 +196,6 @@
     .locals 1
 
     .prologue
-    .line 2236
     iget-object v0, p0, Lcom/android/internal/app/ResolverActivity$RemoteShareRecentHistoryDefaultListAdapter;->mIntent:Landroid/content/Intent;
 
     return-object v0
@@ -227,7 +206,6 @@
     .param p1, "position"    # I
 
     .prologue
-    .line 2193
     iget-object v0, p0, Lcom/android/internal/app/ResolverActivity$RemoteShareRecentHistoryDefaultListAdapter;->mRemoteShareRecentHistoryDefaultList:Ljava/util/List;
 
     invoke-interface {v0, p1}, Ljava/util/List;->get(I)Ljava/lang/Object;
@@ -242,7 +220,6 @@
     .param p1, "position"    # I
 
     .prologue
-    .line 2198
     int-to-long v0, p1
 
     return-wide v0
@@ -255,10 +232,8 @@
     .param p3, "parent"    # Landroid/view/ViewGroup;
 
     .prologue
-    .line 2204
     if-nez p2, :cond_0
 
-    .line 2205
     iget-object v1, p0, Lcom/android/internal/app/ResolverActivity$RemoteShareRecentHistoryDefaultListAdapter;->mInflater:Landroid/view/LayoutInflater;
 
     const v2, 0x1090134
@@ -269,7 +244,6 @@
 
     move-result-object v0
 
-    .line 2210
     .local v0, "view":Landroid/view/View;
     :goto_0
     iget-object v1, p0, Lcom/android/internal/app/ResolverActivity$RemoteShareRecentHistoryDefaultListAdapter;->mRemoteShareRecentHistoryDefaultList:Ljava/util/List;
@@ -282,10 +256,8 @@
 
     invoke-direct {p0, v0, v1}, Lcom/android/internal/app/ResolverActivity$RemoteShareRecentHistoryDefaultListAdapter;->bindView(Landroid/view/View;Lcom/android/internal/app/ResolverActivity$RemoteShareRecentHistoryDefaultListInfo;)V
 
-    .line 2212
     return-object v0
 
-    .line 2207
     .end local v0    # "view":Landroid/view/View;
     :cond_0
     move-object v0, p2

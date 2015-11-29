@@ -31,7 +31,6 @@
     .prologue
     const/4 v0, 0x1
 
-    .line 47
     invoke-static {}, Landroid/os/Debug;->isProductShip()I
 
     move-result v1
@@ -51,13 +50,10 @@
     .param p1, "ctx"    # Landroid/content/Context;
 
     .prologue
-    .line 50
     invoke-direct {p0}, Lcom/samsung/android/cepproxyks/ISCEPKeystoreService$Stub;-><init>()V
 
-    .line 51
     iput-object p1, p0, Lcom/android/server/enterprise/scep/ScepKeystoreProxyService;->mContext:Landroid/content/Context;
 
-    .line 52
     return-void
 .end method
 
@@ -66,7 +62,6 @@
     .param p0, "x0"    # Lcom/android/server/enterprise/scep/ScepKeystoreProxyService;
 
     .prologue
-    .line 45
     iget-object v0, p0, Lcom/android/server/enterprise/scep/ScepKeystoreProxyService;->mContext:Landroid/content/Context;
 
     return-object v0
@@ -86,10 +81,8 @@
     .prologue
     const/4 v11, 0x1
 
-    .line 506
     if-nez p0, :cond_0
 
-    .line 507
     new-instance v8, Ljava/lang/NullPointerException;
 
     const-string v9, "context == null"
@@ -98,22 +91,18 @@
 
     throw v8
 
-    .line 509
     :cond_0
     invoke-static {p0}, Lcom/android/server/enterprise/scep/ScepKeystoreProxyService;->ensureNotOnMainThread(Landroid/content/Context;)V
 
-    .line 510
     new-instance v6, Ljava/util/concurrent/LinkedBlockingQueue;
 
     invoke-direct {v6, v11}, Ljava/util/concurrent/LinkedBlockingQueue;-><init>(I)V
 
-    .line 512
     .local v6, "q":Ljava/util/concurrent/BlockingQueue;, "Ljava/util/concurrent/BlockingQueue<Landroid/security/IKeyChainService;>;"
     new-instance v5, Lcom/android/server/enterprise/scep/ScepKeystoreProxyService$2;
 
     invoke-direct {v5, v6}, Lcom/android/server/enterprise/scep/ScepKeystoreProxyService$2;-><init>(Ljava/util/concurrent/BlockingQueue;)V
 
-    .line 536
     .local v5, "keyChainServiceConnection":Landroid/content/ServiceConnection;
     new-instance v3, Landroid/content/Intent;
 
@@ -125,7 +114,6 @@
 
     invoke-direct {v3, v8}, Landroid/content/Intent;-><init>(Ljava/lang/String;)V
 
-    .line 537
     .local v3, "intent":Landroid/content/Intent;
     invoke-virtual {p0}, Landroid/content/Context;->getPackageManager()Landroid/content/pm/PackageManager;
 
@@ -137,16 +125,13 @@
 
     move-result-object v2
 
-    .line 538
     .local v2, "comp":Landroid/content/ComponentName;
     invoke-virtual {v3, v2}, Landroid/content/Intent;->setComponent(Landroid/content/ComponentName;)Landroid/content/Intent;
 
-    .line 540
     sget-boolean v8, Lcom/android/server/enterprise/scep/ScepKeystoreProxyService;->DBG:Z
 
     if-eqz v8, :cond_1
 
-    .line 541
     const-string v8, "SCEPKeystoreProxyService"
 
     new-instance v9, Ljava/lang/StringBuilder;
@@ -173,7 +158,6 @@
 
     invoke-static {v8, v9}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 543
     :cond_1
     new-instance v7, Landroid/os/UserHandle;
 
@@ -183,26 +167,21 @@
 
     invoke-direct {v7, v8}, Landroid/os/UserHandle;-><init>(I)V
 
-    .line 544
     .local v7, "userHandle":Landroid/os/UserHandle;
     invoke-static {}, Landroid/os/Binder;->clearCallingIdentity()J
 
     move-result-wide v0
 
-    .line 545
     .local v0, "backupUID":J
     invoke-virtual {p0, v3, v5, v11, v7}, Landroid/content/Context;->bindServiceAsUser(Landroid/content/Intent;Landroid/content/ServiceConnection;ILandroid/os/UserHandle;)Z
 
     move-result v4
 
-    .line 546
     .local v4, "isBound":Z
     invoke-static {v0, v1}, Landroid/os/Binder;->restoreCallingIdentity(J)V
 
-    .line 547
     if-nez v4, :cond_2
 
-    .line 548
     new-instance v8, Ljava/lang/AssertionError;
 
     const-string v9, "Could not bind to KeyChainService"
@@ -211,7 +190,6 @@
 
     throw v8
 
-    .line 550
     :cond_2
     new-instance v9, Lcom/android/server/enterprise/scep/ScepKeystoreProxyService$KeyChainConnection;
 
@@ -232,20 +210,17 @@
     .locals 2
 
     .prologue
-    .line 356
     new-instance v0, Landroid/content/Intent;
 
     const-string v1, "android.security.STORAGE_CHANGED"
 
     invoke-direct {v0, v1}, Landroid/content/Intent;-><init>(Ljava/lang/String;)V
 
-    .line 357
     .local v0, "intent":Landroid/content/Intent;
     iget-object v1, p0, Lcom/android/server/enterprise/scep/ScepKeystoreProxyService;->mContext:Landroid/content/Context;
 
     invoke-virtual {v1, v0}, Landroid/content/Context;->sendBroadcast(Landroid/content/Intent;)V
 
-    .line 358
     return-void
 .end method
 
@@ -253,12 +228,10 @@
     .locals 3
 
     .prologue
-    .line 449
     invoke-direct {p0}, Lcom/android/server/enterprise/scep/ScepKeystoreProxyService;->checkCaller()Ljava/lang/String;
 
     move-result-object v0
 
-    .line 450
     .local v0, "actualForSCEP":Ljava/lang/String;
     iget-object v2, p0, Lcom/android/server/enterprise/scep/ScepKeystoreProxyService;->mContext:Landroid/content/Context;
 
@@ -266,7 +239,6 @@
 
     move-result-object v1
 
-    .line 451
     .local v1, "packageManager":Landroid/content/pm/PackageManager;
     if-eqz v0, :cond_0
 
@@ -278,10 +250,8 @@
 
     if-nez v2, :cond_0
 
-    .line 452
     const/4 v2, 0x1
 
-    .line 454
     :goto_0
     return v2
 
@@ -295,7 +265,6 @@
     .locals 3
 
     .prologue
-    .line 458
     iget-object v1, p0, Lcom/android/server/enterprise/scep/ScepKeystoreProxyService;->mContext:Landroid/content/Context;
 
     invoke-virtual {v1}, Landroid/content/Context;->getPackageManager()Landroid/content/pm/PackageManager;
@@ -310,7 +279,6 @@
 
     move-result-object v0
 
-    .line 459
     .local v0, "actualPackage":Ljava/lang/String;
     return-object v0
 .end method
@@ -320,12 +288,10 @@
     .param p0, "context"    # Landroid/content/Context;
 
     .prologue
-    .line 554
     invoke-static {}, Landroid/os/Looper;->myLooper()Landroid/os/Looper;
 
     move-result-object v0
 
-    .line 555
     .local v0, "looper":Landroid/os/Looper;
     if-eqz v0, :cond_0
 
@@ -335,7 +301,6 @@
 
     if-ne v0, v1, :cond_0
 
-    .line 556
     new-instance v1, Ljava/lang/IllegalStateException;
 
     const-string v2, "calling this from your main thread can lead to deadlock"
@@ -344,7 +309,6 @@
 
     throw v1
 
-    .line 558
     :cond_0
     return-void
 .end method
@@ -356,7 +320,6 @@
     .prologue
     const/4 v5, 0x0
 
-    .line 561
     :try_start_0
     new-instance v2, Lcom/android/org/bouncycastle/asn1/ASN1InputStream;
 
@@ -366,7 +329,6 @@
 
     invoke-direct {v2, v6}, Lcom/android/org/bouncycastle/asn1/ASN1InputStream;-><init>(Ljava/io/InputStream;)V
 
-    .line 562
     .local v2, "bIn":Lcom/android/org/bouncycastle/asn1/ASN1InputStream;
     invoke-virtual {v2}, Lcom/android/org/bouncycastle/asn1/ASN1InputStream;->readObject()Lcom/android/org/bouncycastle/asn1/ASN1Primitive;
 
@@ -376,18 +338,15 @@
 
     move-result-object v4
 
-    .line 563
     .local v4, "pki":Lcom/android/org/bouncycastle/asn1/pkcs/PrivateKeyInfo;
     if-nez v4, :cond_1
 
-    .line 575
     .end local v2    # "bIn":Lcom/android/org/bouncycastle/asn1/ASN1InputStream;
     .end local v4    # "pki":Lcom/android/org/bouncycastle/asn1/pkcs/PrivateKeyInfo;
     :cond_0
     :goto_0
     return v5
 
-    .line 565
     .restart local v2    # "bIn":Lcom/android/org/bouncycastle/asn1/ASN1InputStream;
     .restart local v4    # "pki":Lcom/android/org/bouncycastle/asn1/pkcs/PrivateKeyInfo;
     :cond_1
@@ -403,20 +362,16 @@
 
     move-result-object v0
 
-    .line 566
     .local v0, "algId":Ljava/lang/String;
     if-eqz v0, :cond_0
 
-    .line 568
     invoke-static {v0}, Lorg/apache/harmony/security/utils/AlgNameMapper;->map2AlgName(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v1
 
-    .line 569
     .local v1, "algName":Ljava/lang/String;
     if-eqz v1, :cond_0
 
-    .line 571
     invoke-static {v1}, Landroid/security/KeyChain;->isBoundKeyAlgorithm(Ljava/lang/String;)Z
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
@@ -425,7 +380,6 @@
 
     goto :goto_0
 
-    .line 572
     .end local v0    # "algId":Ljava/lang/String;
     .end local v1    # "algName":Ljava/lang/String;
     .end local v2    # "bIn":Lcom/android/org/bouncycastle/asn1/ASN1InputStream;
@@ -433,11 +387,9 @@
     :catch_0
     move-exception v3
 
-    .line 573
     .local v3, "e":Ljava/lang/Exception;
     invoke-virtual {v3}, Ljava/lang/Exception;->printStackTrace()V
 
-    .line 574
     const-string v6, "System Service"
 
     const-string v7, "Failed to parse key data"
@@ -457,14 +409,12 @@
     .end annotation
 
     .prologue
-    .line 463
     const-string v1, "X.509"
 
     invoke-static {v1}, Ljava/security/cert/CertificateFactory;->getInstance(Ljava/lang/String;)Ljava/security/cert/CertificateFactory;
 
     move-result-object v0
 
-    .line 464
     .local v0, "cf":Ljava/security/cert/CertificateFactory;
     new-instance v1, Ljava/io/ByteArrayInputStream;
 
@@ -494,20 +444,16 @@
     .prologue
     const/4 v6, 0x1
 
-    .line 231
     const/4 v0, 0x0
 
-    .line 232
     .local v0, "UidoftheCert":I
     invoke-static {}, Landroid/os/UserHandle;->myUserId()I
 
     move-result v5
 
-    .line 233
     .local v5, "processId":I
     const/4 v1, 0x0
 
-    .line 235
     .local v1, "UidoftheCertSystem":I
     invoke-direct {p0}, Lcom/android/server/enterprise/scep/ScepKeystoreProxyService;->checkCEPCaller()Z
 
@@ -515,19 +461,16 @@
 
     if-nez v7, :cond_1
 
-    .line 314
     :cond_0
     :goto_0
     return v6
 
-    .line 240
     :cond_1
     :try_start_0
     sget-boolean v7, Lcom/android/server/enterprise/scep/ScepKeystoreProxyService;->DBG:Z
 
     if-eqz v7, :cond_2
 
-    .line 241
     const-string v7, "SCEPKeystoreProxyService"
 
     new-instance v8, Ljava/lang/StringBuilder;
@@ -554,14 +497,11 @@
 
     invoke-static {v7, v8}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 243
     :cond_2
     if-nez p2, :cond_5
 
-    .line 244
     const/4 v0, -0x1
 
-    .line 245
     invoke-static {}, Landroid/os/Binder;->getCallingUid()I
 
     move-result v7
@@ -570,7 +510,6 @@
 
     move-result v5
 
-    .line 246
     invoke-static {}, Landroid/os/Binder;->getCallingUid()I
 
     move-result v7
@@ -585,13 +524,11 @@
 
     move-result v1
 
-    .line 252
     :goto_1
     sget-boolean v7, Lcom/android/server/enterprise/scep/ScepKeystoreProxyService;->DBG:Z
 
     if-eqz v7, :cond_3
 
-    .line 253
     const-string v7, "SCEPKeystoreProxyService"
 
     new-instance v8, Ljava/lang/StringBuilder;
@@ -614,13 +551,11 @@
 
     invoke-static {v7, v8}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 254
     :cond_3
     sget-boolean v7, Lcom/android/server/enterprise/scep/ScepKeystoreProxyService;->DBG:Z
 
     if-eqz v7, :cond_4
 
-    .line 255
     const-string v7, "SCEPKeystoreProxyService"
 
     new-instance v8, Ljava/lang/StringBuilder;
@@ -643,17 +578,14 @@
 
     invoke-static {v7, v8}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 257
     :cond_4
     const/4 v2, 0x0
 
-    .line 259
     .local v2, "bDeleted":Z
     invoke-static {}, Landroid/security/KeyStore;->getInstance()Landroid/security/KeyStore;
 
     move-result-object v4
 
-    .line 260
     .local v4, "mAndroid":Landroid/security/KeyStore;
     new-instance v7, Ljava/lang/StringBuilder;
 
@@ -679,7 +611,6 @@
 
     if-eqz v7, :cond_8
 
-    .line 261
     new-instance v7, Ljava/lang/StringBuilder;
 
     invoke-direct {v7}, Ljava/lang/StringBuilder;-><init>()V
@@ -704,12 +635,10 @@
 
     if-nez v7, :cond_6
 
-    .line 262
     sget-boolean v7, Lcom/android/server/enterprise/scep/ScepKeystoreProxyService;->DBG:Z
 
     if-eqz v7, :cond_0
 
-    .line 263
     const-string v7, "SCEPKeystoreProxyService"
 
     const-string v8, "deleteCertificateEntry delete user cert: failure"
@@ -720,22 +649,18 @@
 
     goto/16 :goto_0
 
-    .line 309
     .end local v2    # "bDeleted":Z
     .end local v4    # "mAndroid":Landroid/security/KeyStore;
     :catch_0
     move-exception v3
 
-    .line 311
     .local v3, "e":Ljava/lang/Exception;
     invoke-virtual {v3}, Ljava/lang/Exception;->printStackTrace()V
 
-    .line 312
     sget-boolean v7, Lcom/android/server/enterprise/scep/ScepKeystoreProxyService;->DBG:Z
 
     if-eqz v7, :cond_0
 
-    .line 313
     const-string v7, "SCEPKeystoreProxyService"
 
     const-string v8, "deleteCertificateEntry return exception"
@@ -744,41 +669,34 @@
 
     goto/16 :goto_0
 
-    .line 248
     .end local v3    # "e":Ljava/lang/Exception;
     :cond_5
     const/16 v0, 0x3f2
 
-    .line 249
     :try_start_1
     invoke-static {}, Landroid/os/UserHandle;->myUserId()I
 
     move-result v5
 
-    .line 250
     const/16 v1, 0x3f2
 
     goto/16 :goto_1
 
-    .line 266
     .restart local v2    # "bDeleted":Z
     .restart local v4    # "mAndroid":Landroid/security/KeyStore;
     :cond_6
     const/4 v2, 0x1
 
-    .line 267
     sget-boolean v7, Lcom/android/server/enterprise/scep/ScepKeystoreProxyService;->DBG:Z
 
     if-eqz v7, :cond_7
 
-    .line 268
     const-string v7, "SCEPKeystoreProxyService"
 
     const-string v8, "deleteCertificateEntry delete user cert: success"
 
     invoke-static {v7, v8}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 275
     :cond_7
     :goto_2
     new-instance v7, Ljava/lang/StringBuilder;
@@ -805,7 +723,6 @@
 
     if-eqz v7, :cond_b
 
-    .line 276
     new-instance v7, Ljava/lang/StringBuilder;
 
     invoke-direct {v7}, Ljava/lang/StringBuilder;-><init>()V
@@ -830,12 +747,10 @@
 
     if-nez v7, :cond_9
 
-    .line 277
     sget-boolean v7, Lcom/android/server/enterprise/scep/ScepKeystoreProxyService;->DBG:Z
 
     if-eqz v7, :cond_0
 
-    .line 278
     const-string v7, "SCEPKeystoreProxyService"
 
     const-string v8, "deleteCertificateEntry delete CA Cert: failure"
@@ -844,13 +759,11 @@
 
     goto/16 :goto_0
 
-    .line 271
     :cond_8
     sget-boolean v7, Lcom/android/server/enterprise/scep/ScepKeystoreProxyService;->DBG:Z
 
     if-eqz v7, :cond_7
 
-    .line 272
     const-string v7, "SCEPKeystoreProxyService"
 
     new-instance v8, Ljava/lang/StringBuilder;
@@ -875,23 +788,19 @@
 
     goto :goto_2
 
-    .line 281
     :cond_9
     const/4 v2, 0x1
 
-    .line 282
     sget-boolean v7, Lcom/android/server/enterprise/scep/ScepKeystoreProxyService;->DBG:Z
 
     if-eqz v7, :cond_a
 
-    .line 283
     const-string v7, "SCEPKeystoreProxyService"
 
     const-string v8, "deleteCertificateEntry delete CA cert: success"
 
     invoke-static {v7, v8}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 290
     :cond_a
     :goto_3
     new-instance v7, Ljava/lang/StringBuilder;
@@ -918,7 +827,6 @@
 
     if-eqz v7, :cond_e
 
-    .line 291
     new-instance v7, Ljava/lang/StringBuilder;
 
     invoke-direct {v7}, Ljava/lang/StringBuilder;-><init>()V
@@ -943,12 +851,10 @@
 
     if-nez v7, :cond_c
 
-    .line 292
     sget-boolean v7, Lcom/android/server/enterprise/scep/ScepKeystoreProxyService;->DBG:Z
 
     if-eqz v7, :cond_0
 
-    .line 293
     const-string v7, "SCEPKeystoreProxyService"
 
     const-string v8, "deleteCertificateEntry delKeyAsUser: failure"
@@ -957,13 +863,11 @@
 
     goto/16 :goto_0
 
-    .line 286
     :cond_b
     sget-boolean v7, Lcom/android/server/enterprise/scep/ScepKeystoreProxyService;->DBG:Z
 
     if-eqz v7, :cond_a
 
-    .line 287
     const-string v7, "SCEPKeystoreProxyService"
 
     new-instance v8, Ljava/lang/StringBuilder;
@@ -988,39 +892,32 @@
 
     goto :goto_3
 
-    .line 296
     :cond_c
     const/4 v2, 0x1
 
-    .line 297
     sget-boolean v7, Lcom/android/server/enterprise/scep/ScepKeystoreProxyService;->DBG:Z
 
     if-eqz v7, :cond_d
 
-    .line 298
     const-string v7, "SCEPKeystoreProxyService"
 
     const-string v8, "deleteCertificateEntry delKeyAsUser: success"
 
     invoke-static {v7, v8}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 305
     :cond_d
     :goto_4
     if-ne v6, v2, :cond_0
 
-    .line 306
     const/4 v6, 0x0
 
     goto/16 :goto_0
 
-    .line 301
     :cond_e
     sget-boolean v7, Lcom/android/server/enterprise/scep/ScepKeystoreProxyService;->DBG:Z
 
     if-eqz v7, :cond_d
 
-    .line 302
     const-string v7, "SCEPKeystoreProxyService"
 
     new-instance v8, Ljava/lang/StringBuilder;
@@ -1060,7 +957,6 @@
     .prologue
     const/4 v9, 0x0
 
-    .line 58
     invoke-direct {p0}, Lcom/android/server/enterprise/scep/ScepKeystoreProxyService;->checkCEPCaller()Z
 
     move-result v8
@@ -1069,30 +965,25 @@
 
     move-object v6, v9
 
-    .line 89
     :cond_0
     :goto_0
     return-object v6
 
-    .line 62
     :cond_1
     invoke-static {}, Landroid/security/KeyStore;->getInstance()Landroid/security/KeyStore;
 
     move-result-object v4
 
-    .line 64
     .local v4, "mAndroid":Landroid/security/KeyStore;
     new-instance v6, Lcom/samsung/android/cepproxyks/CertificateAKS;
 
     invoke-direct {v6}, Lcom/samsung/android/cepproxyks/CertificateAKS;-><init>()V
 
-    .line 65
     .local v6, "mCertObj":Lcom/samsung/android/cepproxyks/CertificateAKS;
     sget-boolean v8, Lcom/android/server/enterprise/scep/ScepKeystoreProxyService;->DBG:Z
 
     if-eqz v8, :cond_2
 
-    .line 66
     const-string v8, "SCEPKeystoreProxyService"
 
     new-instance v10, Ljava/lang/StringBuilder;
@@ -1119,7 +1010,6 @@
 
     invoke-static {v8, v10}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 68
     :cond_2
     :try_start_0
     invoke-static {}, Landroid/os/Binder;->getCallingUid()I
@@ -1136,11 +1026,9 @@
 
     move-result v0
 
-    .line 69
     .local v0, "UidoftheCertSystem":I
     const/16 v1, 0x3f2
 
-    .line 70
     .local v1, "UidoftheCertWifi":I
     new-instance v8, Ljava/lang/StringBuilder;
 
@@ -1166,7 +1054,6 @@
 
     if-eqz v8, :cond_4
 
-    .line 71
     invoke-static {}, Landroid/os/Binder;->getCallingUid()I
 
     move-result v8
@@ -1183,7 +1070,6 @@
 
     iput v8, p0, Lcom/android/server/enterprise/scep/ScepKeystoreProxyService;->UidoftheCert:I
 
-    .line 75
     :cond_3
     :goto_1
     new-instance v8, Ljava/lang/StringBuilder;
@@ -1210,16 +1096,13 @@
 
     move-result-object v7
 
-    .line 76
     .local v7, "mWificert":[B
     if-nez v7, :cond_5
 
     move-object v6, v9
 
-    .line 77
     goto :goto_0
 
-    .line 72
     .end local v7    # "mWificert":[B
     :cond_4
     new-instance v8, Ljava/lang/StringBuilder;
@@ -1246,7 +1129,6 @@
 
     if-eqz v8, :cond_3
 
-    .line 73
     const/16 v8, 0x3f2
 
     iput v8, p0, Lcom/android/server/enterprise/scep/ScepKeystoreProxyService;->UidoftheCert:I
@@ -1255,22 +1137,18 @@
 
     goto :goto_1
 
-    .line 85
     .end local v0    # "UidoftheCertSystem":I
     .end local v1    # "UidoftheCertWifi":I
     :catch_0
     move-exception v3
 
-    .line 87
     .local v3, "e":Ljava/lang/Exception;
     invoke-virtual {v3}, Ljava/lang/Exception;->printStackTrace()V
 
     move-object v6, v9
 
-    .line 89
     goto/16 :goto_0
 
-    .line 78
     .end local v3    # "e":Ljava/lang/Exception;
     .restart local v0    # "UidoftheCertSystem":I
     .restart local v1    # "UidoftheCertWifi":I
@@ -1281,7 +1159,6 @@
 
     move-result-object v5
 
-    .line 79
     .local v5, "mCertList":Ljava/util/List;, "Ljava/util/List<Ljava/security/cert/X509Certificate;>;"
     if-eqz v5, :cond_0
 
@@ -1291,12 +1168,10 @@
 
     if-lez v8, :cond_0
 
-    .line 80
     const/4 v8, 0x1
 
     new-array v2, v8, [Ljava/security/cert/Certificate;
 
-    .line 81
     .local v2, "cert":[Ljava/security/cert/Certificate;
     const/4 v10, 0x0
 
@@ -1310,7 +1185,6 @@
 
     aput-object v8, v2, v10
 
-    .line 82
     iput-object v2, v6, Lcom/samsung/android/cepproxyks/CertificateAKS;->mCertificate:[Ljava/security/cert/Certificate;
     :try_end_1
     .catch Ljava/lang/Exception; {:try_start_1 .. :try_end_1} :catch_0
@@ -1329,19 +1203,16 @@
     .end annotation
 
     .prologue
-    .line 391
     invoke-direct {p0}, Lcom/android/server/enterprise/scep/ScepKeystoreProxyService;->checkCEPCaller()Z
 
     move-result v0
 
     if-nez v0, :cond_1
 
-    .line 418
     :cond_0
     :goto_0
     return-void
 
-    .line 394
     :cond_1
     if-eqz p2, :cond_0
 
@@ -1361,7 +1232,6 @@
 
     if-eq p1, v0, :cond_0
 
-    .line 398
     new-instance v0, Ljava/lang/Thread;
 
     new-instance v1, Lcom/android/server/enterprise/scep/ScepKeystoreProxyService$1;
@@ -1387,10 +1257,8 @@
     .prologue
     const/4 v6, 0x1
 
-    .line 363
     const/4 v2, 0x0
 
-    .line 364
     .local v2, "keyChainConnection":Lcom/android/server/enterprise/scep/ScepKeystoreProxyService$KeyChainConnection;
     invoke-direct {p0}, Lcom/android/server/enterprise/scep/ScepKeystoreProxyService;->checkCEPCaller()Z
 
@@ -1398,22 +1266,18 @@
 
     if-nez v7, :cond_1
 
-    .line 383
     :cond_0
     :goto_0
     return v6
 
-    .line 367
     :cond_1
     if-eqz p1, :cond_0
 
-    .line 370
     :try_start_0
     invoke-static {}, Landroid/os/Binder;->getCallingUid()I
 
     move-result v5
 
-    .line 371
     .local v5, "uidscep":I
     iget-object v7, p0, Lcom/android/server/enterprise/scep/ScepKeystoreProxyService;->mContext:Landroid/content/Context;
 
@@ -1421,16 +1285,13 @@
 
     move-result-object v2
 
-    .line 372
     invoke-virtual {v2}, Lcom/android/server/enterprise/scep/ScepKeystoreProxyService$KeyChainConnection;->getService()Landroid/security/IKeyChainService;
 
     move-result-object v3
 
-    .line 373
     .local v3, "keyChainService":Landroid/security/IKeyChainService;
     iget-object v4, p1, Lcom/samsung/android/cepproxyks/CertificateAKS;->mCertificate:[Ljava/security/cert/Certificate;
 
-    .line 374
     .local v4, "mCertArray":[Ljava/security/cert/Certificate;
     const/4 v1, 0x0
 
@@ -1440,7 +1301,6 @@
 
     if-ge v1, v7, :cond_2
 
-    .line 375
     aget-object v7, v4, v1
 
     invoke-virtual {v7}, Ljava/security/cert/Certificate;->getEncoded()[B
@@ -1452,24 +1312,20 @@
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 374
     add-int/lit8 v1, v1, 0x1
 
     goto :goto_1
 
-    .line 381
     :cond_2
     if-eqz v2, :cond_3
 
     invoke-virtual {v2}, Lcom/android/server/enterprise/scep/ScepKeystoreProxyService$KeyChainConnection;->close()V
 
-    .line 383
     :cond_3
     const/4 v6, 0x0
 
     goto :goto_0
 
-    .line 376
     .end local v1    # "i":I
     .end local v3    # "keyChainService":Landroid/security/IKeyChainService;
     .end local v4    # "mCertArray":[Ljava/security/cert/Certificate;
@@ -1477,14 +1333,12 @@
     :catch_0
     move-exception v0
 
-    .line 378
     .local v0, "e":Ljava/lang/Exception;
     :try_start_1
     invoke-virtual {v0}, Ljava/lang/Exception;->printStackTrace()V
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
-    .line 381
     if-eqz v2, :cond_0
 
     invoke-virtual {v2}, Lcom/android/server/enterprise/scep/ScepKeystoreProxyService$KeyChainConnection;->close()V
@@ -1518,41 +1372,33 @@
 
     const/4 v5, 0x1
 
-    .line 422
     invoke-direct {p0}, Lcom/android/server/enterprise/scep/ScepKeystoreProxyService;->checkCEPCaller()Z
 
     move-result v7
 
     if-nez v7, :cond_0
 
-    .line 445
     :goto_0
     return v5
 
-    .line 426
     :cond_0
     const/4 v0, 0x0
 
-    .line 427
     .local v0, "UidoftheCert":I
     const/16 v0, 0x3f2
 
-    .line 428
     invoke-static {}, Landroid/security/KeyStore;->getInstance()Landroid/security/KeyStore;
 
     move-result-object v4
 
-    .line 430
     .local v4, "keystoreService":Landroid/security/KeyStore;
     invoke-static {}, Landroid/os/Binder;->clearCallingIdentity()J
 
     move-result-wide v2
 
-    .line 432
     .local v2, "id":J
     if-eqz p1, :cond_1
 
-    .line 433
     :try_start_0
     new-instance v7, Ljava/lang/StringBuilder;
 
@@ -1589,7 +1435,6 @@
 
     if-nez v7, :cond_2
 
-    .line 443
     invoke-static {v2, v3}, Landroid/os/Binder;->restoreCallingIdentity(J)V
 
     goto :goto_0
@@ -1604,21 +1449,17 @@
 
     move v5, v6
 
-    .line 445
     goto :goto_0
 
-    .line 439
     :catch_0
     move-exception v1
 
-    .line 440
     .local v1, "e":Ljava/lang/Exception;
     :try_start_1
     invoke-virtual {v1}, Ljava/lang/Exception;->printStackTrace()V
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
-    .line 443
     invoke-static {v2, v3}, Landroid/os/Binder;->restoreCallingIdentity(J)V
 
     goto :goto_0
@@ -1637,12 +1478,10 @@
     .param p1, "caCertificate"    # [B
 
     .prologue
-    .line 321
     new-instance v3, Lcom/android/org/conscrypt/TrustedCertificateStore;
 
     invoke-direct {v3}, Lcom/android/org/conscrypt/TrustedCertificateStore;-><init>()V
 
-    .line 323
     .local v3, "mTrustedCertificateStore":Lcom/android/org/conscrypt/TrustedCertificateStore;
     :try_start_0
     monitor-enter v3
@@ -1650,48 +1489,39 @@
     .catch Ljava/io/IOException; {:try_start_0 .. :try_end_0} :catch_0
     .catch Ljava/security/cert/CertificateException; {:try_start_0 .. :try_end_0} :catch_1
 
-    .line 324
     :try_start_1
     invoke-direct {p0, p1}, Lcom/android/server/enterprise/scep/ScepKeystoreProxyService;->parseCertificate([B)Ljava/security/cert/X509Certificate;
 
     move-result-object v1
 
-    .line 325
     .local v1, "certificate":Ljava/security/cert/X509Certificate;
     if-nez v1, :cond_1
 
-    .line 326
     sget-boolean v4, Lcom/android/server/enterprise/scep/ScepKeystoreProxyService;->DBG:Z
 
     if-eqz v4, :cond_0
 
-    .line 327
     const-string v4, "SCEPKeystoreProxyService"
 
     const-string v5, "CA Certificate parse error"
 
     invoke-static {v4, v5}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 329
     :cond_0
     monitor-exit v3
 
-    .line 353
     .end local v1    # "certificate":Ljava/security/cert/X509Certificate;
     :goto_0
     return-void
 
-    .line 331
     .restart local v1    # "certificate":Ljava/security/cert/X509Certificate;
     :cond_1
     invoke-virtual {v3, v1}, Lcom/android/org/conscrypt/TrustedCertificateStore;->installCertificate(Ljava/security/cert/X509Certificate;)V
 
-    .line 334
     invoke-direct {p0, p1}, Lcom/android/server/enterprise/scep/ScepKeystoreProxyService;->parseCertificate([B)Ljava/security/cert/X509Certificate;
 
     move-result-object v0
 
-    .line 335
     .local v0, "c":Ljava/security/cert/X509Certificate;
     invoke-virtual {v3, v0}, Lcom/android/org/conscrypt/TrustedCertificateStore;->getCertificateAlias(Ljava/security/cert/Certificate;)Ljava/lang/String;
 
@@ -1699,25 +1529,21 @@
 
     if-eqz v4, :cond_2
 
-    .line 336
     sget-boolean v4, Lcom/android/server/enterprise/scep/ScepKeystoreProxyService;->DBG:Z
 
     if-eqz v4, :cond_2
 
-    .line 337
     const-string v4, "SCEPKeystoreProxyService"
 
     const-string v5, "CA Certificate successfully installed"
 
     invoke-static {v4, v5}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 340
     :cond_2
     monitor-exit v3
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
-    .line 352
     .end local v0    # "c":Ljava/security/cert/X509Certificate;
     .end local v1    # "certificate":Ljava/security/cert/X509Certificate;
     :goto_1
@@ -1725,7 +1551,6 @@
 
     goto :goto_0
 
-    .line 340
     :catchall_0
     move-exception v4
 
@@ -1740,48 +1565,40 @@
     .catch Ljava/io/IOException; {:try_start_3 .. :try_end_3} :catch_0
     .catch Ljava/security/cert/CertificateException; {:try_start_3 .. :try_end_3} :catch_1
 
-    .line 341
     :catch_0
     move-exception v2
 
-    .line 342
     .local v2, "e":Ljava/io/IOException;
     sget-boolean v4, Lcom/android/server/enterprise/scep/ScepKeystoreProxyService;->DBG:Z
 
     if-eqz v4, :cond_3
 
-    .line 343
     const-string v4, "SCEPKeystoreProxyService"
 
     const-string v5, "IOException while installing CA Certificate"
 
     invoke-static {v4, v5}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 345
     :cond_3
     invoke-virtual {v2}, Ljava/io/IOException;->printStackTrace()V
 
     goto :goto_1
 
-    .line 346
     .end local v2    # "e":Ljava/io/IOException;
     :catch_1
     move-exception v2
 
-    .line 347
     .local v2, "e":Ljava/security/cert/CertificateException;
     sget-boolean v4, Lcom/android/server/enterprise/scep/ScepKeystoreProxyService;->DBG:Z
 
     if-eqz v4, :cond_4
 
-    .line 348
     const-string v4, "SCEPKeystoreProxyService"
 
     const-string v5, "CertificateException while installing CA Certificate"
 
     invoke-static {v4, v5}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 350
     :cond_4
     invoke-virtual {v2}, Ljava/security/cert/CertificateException;->printStackTrace()V
 
@@ -1802,34 +1619,27 @@
     .end annotation
 
     .prologue
-    .line 132
     invoke-direct/range {p0 .. p0}, Lcom/android/server/enterprise/scep/ScepKeystoreProxyService;->checkCEPCaller()Z
 
     move-result v3
 
     if-nez v3, :cond_0
 
-    .line 133
     const/4 v3, 0x1
 
-    .line 223
     :goto_0
     return v3
 
-    .line 135
     :cond_0
     if-nez p1, :cond_1
 
-    .line 136
     const/4 v3, 0x1
 
     goto :goto_0
 
-    .line 138
     :cond_1
     const-wide/16 v10, 0x0
 
-    .line 140
     .local v10, "id":J
     :try_start_0
     const-string v3, "PKCS12"
@@ -1838,7 +1648,6 @@
 
     move-result-object v13
 
-    .line 141
     .local v13, "mJavaKey":Ljava/security/KeyStore;
     move-object/from16 v0, p1
 
@@ -1846,13 +1655,11 @@
 
     new-array v12, v3, [B
 
-    .line 142
     .local v12, "mCertficate":[B
     move-object/from16 v0, p1
 
     iget-object v12, v0, Lcom/samsung/android/cepproxyks/CertByte;->certBytes:[B
 
-    .line 143
     new-instance v3, Ljava/io/ByteArrayInputStream;
 
     invoke-direct {v3, v12}, Ljava/io/ByteArrayInputStream;-><init>([B)V
@@ -1861,7 +1668,6 @@
 
     invoke-virtual {v13, v3, v0}, Ljava/security/KeyStore;->load(Ljava/io/InputStream;[C)V
 
-    .line 144
     move-object/from16 v0, p2
 
     invoke-virtual {v13, v0}, Ljava/security/KeyStore;->getCertificate(Ljava/lang/String;)Ljava/security/cert/Certificate;
@@ -1870,7 +1676,6 @@
 
     check-cast v15, Ljava/security/cert/X509Certificate;
 
-    .line 145
     .local v15, "mcert":Ljava/security/cert/X509Certificate;
     move-object/from16 v0, p2
 
@@ -1880,29 +1685,24 @@
 
     move-result-object v14
 
-    .line 146
     .local v14, "mPriv":Ljava/security/Key;
     const/4 v3, 0x1
 
     new-array v8, v3, [Ljava/security/cert/Certificate;
 
-    .line 147
     .local v8, "certchain":[Ljava/security/cert/Certificate;
     const/4 v3, 0x0
 
     aput-object v15, v8, v3
 
-    .line 148
     invoke-static {}, Landroid/os/Binder;->clearCallingIdentity()J
 
     move-result-wide v10
 
-    .line 150
     sget-boolean v3, Lcom/android/server/enterprise/scep/ScepKeystoreProxyService;->DBG:Z
 
     if-eqz v3, :cond_2
 
-    .line 151
     const-string v3, "SCEPKeystoreProxyService"
 
     new-instance v4, Ljava/lang/StringBuilder;
@@ -1929,16 +1729,13 @@
 
     invoke-static {v3, v4}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 153
     :cond_2
     if-eqz p4, :cond_6
 
-    .line 154
     invoke-static {}, Landroid/security/KeyStore;->getInstance()Landroid/security/KeyStore;
 
     move-result-object v2
 
-    .line 156
     .local v2, "keystoreService":Landroid/security/KeyStore;
     new-instance v3, Ljava/lang/StringBuilder;
 
@@ -1990,15 +1787,12 @@
 
     if-nez v3, :cond_3
 
-    .line 158
     const/4 v3, 0x1
 
-    .line 223
     invoke-static {v10, v11}, Landroid/os/Binder;->restoreCallingIdentity(J)V
 
     goto/16 :goto_0
 
-    .line 160
     :cond_3
     :try_start_1
     invoke-interface {v14}, Ljava/security/Key;->getEncoded()[B
@@ -2013,7 +1807,6 @@
 
     if-eqz v3, :cond_4
 
-    .line 161
     new-instance v3, Ljava/lang/StringBuilder;
 
     invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
@@ -2056,15 +1849,12 @@
 
     if-nez v3, :cond_5
 
-    .line 163
     const/4 v3, 0x1
 
-    .line 223
     invoke-static {v10, v11}, Landroid/os/Binder;->restoreCallingIdentity(J)V
 
     goto/16 :goto_0
 
-    .line 166
     :cond_4
     :try_start_2
     new-instance v3, Ljava/lang/StringBuilder;
@@ -2109,15 +1899,12 @@
 
     if-nez v3, :cond_5
 
-    .line 168
     const/4 v3, 0x1
 
-    .line 223
     invoke-static {v10, v11}, Landroid/os/Binder;->restoreCallingIdentity(J)V
 
     goto/16 :goto_0
 
-    .line 171
     :cond_5
     :try_start_3
     move-object/from16 v0, p1
@@ -2126,7 +1913,6 @@
 
     if-lez v3, :cond_9
 
-    .line 172
     new-instance v3, Ljava/lang/StringBuilder;
 
     invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
@@ -2169,15 +1955,12 @@
 
     if-nez v3, :cond_9
 
-    .line 174
     const/4 v3, 0x1
 
-    .line 223
     invoke-static {v10, v11}, Landroid/os/Binder;->restoreCallingIdentity(J)V
 
     goto/16 :goto_0
 
-    .line 180
     .end local v2    # "keystoreService":Landroid/security/KeyStore;
     :cond_6
     :try_start_4
@@ -2185,7 +1968,6 @@
 
     move-result-object v2
 
-    .line 182
     .restart local v2    # "keystoreService":Landroid/security/KeyStore;
     new-instance v3, Ljava/lang/StringBuilder;
 
@@ -2241,15 +2023,12 @@
 
     if-nez v3, :cond_7
 
-    .line 184
     const/4 v3, 0x1
 
-    .line 223
     invoke-static {v10, v11}, Landroid/os/Binder;->restoreCallingIdentity(J)V
 
     goto/16 :goto_0
 
-    .line 186
     :cond_7
     :try_start_5
     new-instance v3, Ljava/lang/StringBuilder;
@@ -2298,15 +2077,12 @@
 
     if-nez v3, :cond_8
 
-    .line 188
     const/4 v3, 0x1
 
-    .line 223
     invoke-static {v10, v11}, Landroid/os/Binder;->restoreCallingIdentity(J)V
 
     goto/16 :goto_0
 
-    .line 190
     :cond_8
     :try_start_6
     move-object/from16 v0, p1
@@ -2315,7 +2091,6 @@
 
     if-lez v3, :cond_9
 
-    .line 191
     new-instance v3, Ljava/lang/StringBuilder;
 
     invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
@@ -2362,24 +2137,19 @@
 
     if-nez v3, :cond_9
 
-    .line 193
     const/4 v3, 0x1
 
-    .line 223
     invoke-static {v10, v11}, Landroid/os/Binder;->restoreCallingIdentity(J)V
 
     goto/16 :goto_0
 
-    .line 197
     :cond_9
     const/4 v3, 0x0
 
-    .line 223
     invoke-static {v10, v11}, Landroid/os/Binder;->restoreCallingIdentity(J)V
 
     goto/16 :goto_0
 
-    .line 199
     .end local v2    # "keystoreService":Landroid/security/KeyStore;
     .end local v8    # "certchain":[Ljava/security/cert/Certificate;
     .end local v12    # "mCertficate":[B
@@ -2389,117 +2159,94 @@
     :catch_0
     move-exception v9
 
-    .line 201
     .local v9, "e":Ljava/security/KeyStoreException;
     :try_start_7
     invoke-virtual {v9}, Ljava/security/KeyStoreException;->printStackTrace()V
     :try_end_7
     .catchall {:try_start_7 .. :try_end_7} :catchall_0
 
-    .line 202
     const/4 v3, 0x2
 
-    .line 223
     invoke-static {v10, v11}, Landroid/os/Binder;->restoreCallingIdentity(J)V
 
     goto/16 :goto_0
 
-    .line 203
     .end local v9    # "e":Ljava/security/KeyStoreException;
     :catch_1
     move-exception v9
 
-    .line 205
     .local v9, "e":Ljava/security/NoSuchAlgorithmException;
     :try_start_8
     invoke-virtual {v9}, Ljava/security/NoSuchAlgorithmException;->printStackTrace()V
     :try_end_8
     .catchall {:try_start_8 .. :try_end_8} :catchall_0
 
-    .line 206
     const/4 v3, 0x2
 
-    .line 223
     invoke-static {v10, v11}, Landroid/os/Binder;->restoreCallingIdentity(J)V
 
     goto/16 :goto_0
 
-    .line 207
     .end local v9    # "e":Ljava/security/NoSuchAlgorithmException;
     :catch_2
     move-exception v9
 
-    .line 209
     .local v9, "e":Ljava/security/cert/CertificateException;
     :try_start_9
     invoke-virtual {v9}, Ljava/security/cert/CertificateException;->printStackTrace()V
     :try_end_9
     .catchall {:try_start_9 .. :try_end_9} :catchall_0
 
-    .line 210
     const/4 v3, 0x3
 
-    .line 223
     invoke-static {v10, v11}, Landroid/os/Binder;->restoreCallingIdentity(J)V
 
     goto/16 :goto_0
 
-    .line 211
     .end local v9    # "e":Ljava/security/cert/CertificateException;
     :catch_3
     move-exception v9
 
-    .line 213
     .local v9, "e":Ljava/io/IOException;
     :try_start_a
     invoke-virtual {v9}, Ljava/io/IOException;->printStackTrace()V
     :try_end_a
     .catchall {:try_start_a .. :try_end_a} :catchall_0
 
-    .line 214
     const/4 v3, 0x4
 
-    .line 223
     invoke-static {v10, v11}, Landroid/os/Binder;->restoreCallingIdentity(J)V
 
     goto/16 :goto_0
 
-    .line 215
     .end local v9    # "e":Ljava/io/IOException;
     :catch_4
     move-exception v9
 
-    .line 217
     .local v9, "e":Ljava/security/UnrecoverableKeyException;
     :try_start_b
     invoke-virtual {v9}, Ljava/security/UnrecoverableKeyException;->printStackTrace()V
     :try_end_b
     .catchall {:try_start_b .. :try_end_b} :catchall_0
 
-    .line 218
     const/4 v3, 0x2
 
-    .line 223
     invoke-static {v10, v11}, Landroid/os/Binder;->restoreCallingIdentity(J)V
 
     goto/16 :goto_0
 
-    .line 219
     .end local v9    # "e":Ljava/security/UnrecoverableKeyException;
     :catch_5
     move-exception v9
 
-    .line 220
     .local v9, "e":Ljava/lang/Exception;
     :try_start_c
     invoke-virtual {v9}, Ljava/lang/Exception;->printStackTrace()V
     :try_end_c
     .catchall {:try_start_c .. :try_end_c} :catchall_0
 
-    .line 221
     const/4 v3, 0x4
 
-    .line 223
     invoke-static {v10, v11}, Landroid/os/Binder;->restoreCallingIdentity(J)V
 
     goto/16 :goto_0
@@ -2528,25 +2275,21 @@
 
     const/4 v4, 0x1
 
-    .line 96
     invoke-direct {p0}, Lcom/android/server/enterprise/scep/ScepKeystoreProxyService;->checkCEPCaller()Z
 
     move-result v6
 
     if-nez v6, :cond_1
 
-    .line 125
     :cond_0
     :goto_0
     return v4
 
-    .line 100
     :cond_1
     sget-boolean v6, Lcom/android/server/enterprise/scep/ScepKeystoreProxyService;->DBG:Z
 
     if-eqz v6, :cond_2
 
-    .line 101
     const-string v6, "SCEPKeystoreProxyService"
 
     new-instance v7, Ljava/lang/StringBuilder;
@@ -2573,7 +2316,6 @@
 
     invoke-static {v6, v7}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 104
     :cond_2
     :try_start_0
     invoke-static {}, Landroid/os/Binder;->getCallingUid()I
@@ -2590,21 +2332,17 @@
 
     move-result v0
 
-    .line 105
     .local v0, "UidoftheCertSystem":I
     const/16 v1, 0x3f2
 
-    .line 106
     .local v1, "UidoftheCertWifi":I
     invoke-static {}, Landroid/security/KeyStore;->getInstance()Landroid/security/KeyStore;
 
     move-result-object v3
 
-    .line 107
     .local v3, "mAndroid":Landroid/security/KeyStore;
     if-eqz p2, :cond_4
 
-    .line 108
     new-instance v6, Ljava/lang/StringBuilder;
 
     invoke-direct {v6}, Ljava/lang/StringBuilder;-><init>()V
@@ -2680,10 +2418,8 @@
     :cond_3
     move v4, v5
 
-    .line 111
     goto/16 :goto_0
 
-    .line 114
     :cond_4
     new-instance v6, Ljava/lang/StringBuilder;
 
@@ -2762,17 +2498,14 @@
     :cond_5
     move v4, v5
 
-    .line 117
     goto/16 :goto_0
 
-    .line 120
     .end local v0    # "UidoftheCertSystem":I
     .end local v1    # "UidoftheCertWifi":I
     .end local v3    # "mAndroid":Landroid/security/KeyStore;
     :catch_0
     move-exception v2
 
-    .line 122
     .local v2, "e":Ljava/lang/Exception;
     invoke-virtual {v2}, Ljava/lang/Exception;->printStackTrace()V
 
@@ -2784,7 +2517,6 @@
     .param p1, "bytes"    # [B
 
     .prologue
-    .line 489
     :try_start_0
     const-string v3, "RSA"
 
@@ -2792,7 +2524,6 @@
 
     move-result-object v1
 
-    .line 490
     .local v1, "keyFactory":Ljava/security/KeyFactory;
     new-instance v3, Ljava/security/spec/PKCS8EncodedKeySpec;
 
@@ -2805,17 +2536,14 @@
 
     move-result-object v2
 
-    .line 491
     .local v2, "mUserKey":Ljava/security/PrivateKey;
     return-object v2
 
-    .line 492
     .end local v1    # "keyFactory":Ljava/security/KeyFactory;
     .end local v2    # "mUserKey":Ljava/security/PrivateKey;
     :catch_0
     move-exception v0
 
-    .line 493
     .local v0, "e":Ljava/security/NoSuchAlgorithmException;
     new-instance v3, Ljava/lang/AssertionError;
 
@@ -2823,12 +2551,10 @@
 
     throw v3
 
-    .line 494
     .end local v0    # "e":Ljava/security/NoSuchAlgorithmException;
     :catch_1
     move-exception v0
 
-    .line 495
     .local v0, "e":Ljava/security/spec/InvalidKeySpecException;
     new-instance v3, Ljava/lang/AssertionError;
 

@@ -14,7 +14,6 @@
     .locals 0
 
     .prologue
-    .line 11
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -24,7 +23,6 @@
     .locals 3
 
     .prologue
-    .line 48
     const-class v1, Lcom/sensoryinc/fluentsoftsdk/SensoryUDTSIDEngineWrapper;
 
     monitor-enter v1
@@ -36,19 +34,16 @@
 
     invoke-static {v0, v2}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 49
     const/4 v0, 0x0
 
     sput-object v0, Lcom/sensoryinc/fluentsoftsdk/SensoryUDTSIDEngineWrapper;->uniqueInstance:Lcom/sensoryinc/fluentsoftsdk/SensoryUDTSIDEngine;
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 50
     monitor-exit v1
 
     return-void
 
-    .line 48
     :catchall_0
     move-exception v0
 
@@ -61,7 +56,6 @@
     .locals 5
 
     .prologue
-    .line 15
     const-class v3, Lcom/sensoryinc/fluentsoftsdk/SensoryUDTSIDEngineWrapper;
 
     monitor-enter v3
@@ -71,21 +65,18 @@
 
     if-nez v2, :cond_1
 
-    .line 17
     const-string v2, "SensoryUDTSIDEngineWrapper"
 
     const-string v4, "getInstance() : make new SensoryUDTSIDEngine"
 
     invoke-static {v2, v4}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 19
     invoke-static {}, Lcom/sensoryinc/fluentsoftsdk/SensoryUDTSIDEngine;->init()I
 
     move-result v2
 
     if-nez v2, :cond_0
 
-    .line 21
     new-instance v2, Lcom/sensoryinc/fluentsoftsdk/SensoryUDTSIDEngine;
 
     invoke-direct {v2}, Lcom/sensoryinc/fluentsoftsdk/SensoryUDTSIDEngine;-><init>()V
@@ -94,7 +85,6 @@
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 25
     :try_start_1
     sget-object v2, Lcom/sensoryinc/fluentsoftsdk/SensoryUDTSIDEngineWrapper;->uniqueInstance:Lcom/sensoryinc/fluentsoftsdk/SensoryUDTSIDEngine;
 
@@ -102,7 +92,6 @@
 
     move-result-object v1
 
-    .line 26
     .local v1, "strVersion":Ljava/lang/String;
     sget-object v2, Lcom/sensoryinc/fluentsoftsdk/SensoryUDTSIDEngineWrapper;->uniqueInstance:Lcom/sensoryinc/fluentsoftsdk/SensoryUDTSIDEngine;
 
@@ -112,7 +101,6 @@
     .catch Ljava/lang/Exception; {:try_start_1 .. :try_end_1} :catch_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
-    .line 43
     :cond_0
     :goto_0
     :try_start_2
@@ -124,11 +112,9 @@
 
     return-object v2
 
-    .line 28
     :catch_0
     move-exception v0
 
-    .line 30
     .local v0, "e":Ljava/lang/UnsatisfiedLinkError;
     :try_start_3
     const-string v2, "SensoryUDTSIDEngineWrapper"
@@ -143,7 +129,6 @@
 
     goto :goto_0
 
-    .line 15
     .end local v0    # "e":Ljava/lang/UnsatisfiedLinkError;
     :catchall_0
     move-exception v2
@@ -152,18 +137,15 @@
 
     throw v2
 
-    .line 32
     :catch_1
     move-exception v0
 
-    .line 34
     .local v0, "e":Ljava/lang/Exception;
     :try_start_4
     invoke-virtual {v0}, Ljava/lang/Exception;->printStackTrace()V
 
     goto :goto_0
 
-    .line 40
     .end local v0    # "e":Ljava/lang/Exception;
     .end local v1    # "strVersion":Ljava/lang/String;
     :cond_1

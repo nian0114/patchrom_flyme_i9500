@@ -63,7 +63,6 @@
     .locals 1
 
     .prologue
-    .line 175
     new-instance v0, Lcom/android/server/analytics/data/collection/logcat/LogcatReader$1;
 
     invoke-direct {v0}, Lcom/android/server/analytics/data/collection/logcat/LogcatReader$1;-><init>()V
@@ -82,36 +81,27 @@
     .param p5, "processor"    # Lcom/android/server/analytics/data/collection/logcat/LogcatReader$LogcatRecordProcessor;
 
     .prologue
-    .line 240
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 241
     iput-object p1, p0, Lcom/android/server/analytics/data/collection/logcat/LogcatReader;->mFormat:Ljava/lang/String;
 
-    .line 242
     iput-object p2, p0, Lcom/android/server/analytics/data/collection/logcat/LogcatReader;->mBuffer:Ljava/lang/String;
 
-    .line 243
     iput-object p3, p0, Lcom/android/server/analytics/data/collection/logcat/LogcatReader;->mFilterSpecs:[Ljava/lang/String;
 
-    .line 244
     iput-boolean p4, p0, Lcom/android/server/analytics/data/collection/logcat/LogcatReader;->mClearBuffer:Z
 
-    .line 245
     if-nez p5, :cond_0
 
-    .line 246
     new-instance v0, Lcom/android/server/analytics/data/collection/logcat/LogcatReader$2;
 
     invoke-direct {v0, p0}, Lcom/android/server/analytics/data/collection/logcat/LogcatReader$2;-><init>(Lcom/android/server/analytics/data/collection/logcat/LogcatReader;)V
 
     iput-object v0, p0, Lcom/android/server/analytics/data/collection/logcat/LogcatReader;->mProcessor:Lcom/android/server/analytics/data/collection/logcat/LogcatReader$LogcatRecordProcessor;
 
-    .line 261
     :goto_0
     return-void
 
-    .line 260
     :cond_0
     iput-object p5, p0, Lcom/android/server/analytics/data/collection/logcat/LogcatReader;->mProcessor:Lcom/android/server/analytics/data/collection/logcat/LogcatReader$LogcatRecordProcessor;
 
@@ -123,7 +113,6 @@
     .param p0, "x0"    # Lcom/android/server/analytics/data/collection/logcat/LogcatReader;
 
     .prologue
-    .line 89
     iget-object v0, p0, Lcom/android/server/analytics/data/collection/logcat/LogcatReader;->mFormat:Ljava/lang/String;
 
     return-object v0
@@ -134,7 +123,6 @@
     .param p0, "x0"    # Lcom/android/server/analytics/data/collection/logcat/LogcatReader;
 
     .prologue
-    .line 89
     iget-object v0, p0, Lcom/android/server/analytics/data/collection/logcat/LogcatReader;->mBuffer:Ljava/lang/String;
 
     return-object v0
@@ -145,7 +133,6 @@
     .param p0, "x0"    # Lcom/android/server/analytics/data/collection/logcat/LogcatReader;
 
     .prologue
-    .line 89
     iget-object v0, p0, Lcom/android/server/analytics/data/collection/logcat/LogcatReader;->mFilterSpecs:[Ljava/lang/String;
 
     return-object v0
@@ -156,7 +143,6 @@
     .param p0, "x0"    # Lcom/android/server/analytics/data/collection/logcat/LogcatReader;
 
     .prologue
-    .line 89
     iget-object v0, p0, Lcom/android/server/analytics/data/collection/logcat/LogcatReader;->mProcess:Ljava/lang/Process;
 
     return-object v0
@@ -168,7 +154,6 @@
     .param p1, "x1"    # Ljava/lang/Process;
 
     .prologue
-    .line 89
     iput-object p1, p0, Lcom/android/server/analytics/data/collection/logcat/LogcatReader;->mProcess:Ljava/lang/Process;
 
     return-object p1
@@ -179,7 +164,6 @@
     .param p0, "x0"    # Lcom/android/server/analytics/data/collection/logcat/LogcatReader;
 
     .prologue
-    .line 89
     iget-object v0, p0, Lcom/android/server/analytics/data/collection/logcat/LogcatReader;->mProcessor:Lcom/android/server/analytics/data/collection/logcat/LogcatReader$LogcatRecordProcessor;
 
     return-object v0
@@ -189,7 +173,6 @@
     .locals 6
 
     .prologue
-    .line 267
     :try_start_0
     invoke-static {}, Ljava/lang/Runtime;->getRuntime()Ljava/lang/Runtime;
 
@@ -225,7 +208,6 @@
 
     move-result-object v2
 
-    .line 269
     .local v2, "process":Ljava/lang/Process;
     new-instance v0, Ljava/io/BufferedReader;
 
@@ -239,7 +221,6 @@
 
     invoke-direct {v0, v3}, Ljava/io/BufferedReader;-><init>(Ljava/io/Reader;)V
 
-    .line 271
     .local v0, "bufferedReader":Ljava/io/BufferedReader;
     :cond_0
     invoke-virtual {v0}, Ljava/io/BufferedReader;->readLine()Ljava/lang/String;
@@ -248,22 +229,18 @@
 
     if-nez v3, :cond_0
 
-    .line 273
     invoke-virtual {v0}, Ljava/io/BufferedReader;->close()V
     :try_end_0
     .catch Ljava/io/IOException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 277
     .end local v0    # "bufferedReader":Ljava/io/BufferedReader;
     .end local v2    # "process":Ljava/lang/Process;
     :goto_0
     return-void
 
-    .line 274
     :catch_0
     move-exception v1
 
-    .line 275
     .local v1, "e":Ljava/io/IOException;
     invoke-virtual {v1}, Ljava/io/IOException;->printStackTrace()V
 
@@ -276,22 +253,18 @@
     .locals 2
 
     .prologue
-    .line 283
     const-string v0, "LogcatReader"
 
-    const-string/jumbo v1, "startReadingLogs"
+    const-string v1, "startReadingLogs"
 
     invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 284
     iget-boolean v0, p0, Lcom/android/server/analytics/data/collection/logcat/LogcatReader;->mClearBuffer:Z
 
     if-eqz v0, :cond_0
 
-    .line 285
     invoke-direct {p0}, Lcom/android/server/analytics/data/collection/logcat/LogcatReader;->clearBuffer()V
 
-    .line 289
     :cond_0
     invoke-static {}, Ljava/util/concurrent/Executors;->newSingleThreadExecutor()Ljava/util/concurrent/ExecutorService;
 
@@ -303,7 +276,6 @@
 
     invoke-interface {v0, v1}, Ljava/util/concurrent/ExecutorService;->submit(Ljava/lang/Runnable;)Ljava/util/concurrent/Future;
 
-    .line 339
     return-void
 .end method
 
@@ -311,18 +283,15 @@
     .locals 2
 
     .prologue
-    .line 345
     const-string v0, "LogcatReader"
 
-    const-string/jumbo v1, "stopReadingLogs"
+    const-string v1, "stopReadingLogs"
 
     invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 348
     iget-object v0, p0, Lcom/android/server/analytics/data/collection/logcat/LogcatReader;->mProcess:Ljava/lang/Process;
 
     invoke-virtual {v0}, Ljava/lang/Process;->destroy()V
 
-    .line 349
     return-void
 .end method

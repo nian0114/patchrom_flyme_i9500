@@ -16,7 +16,6 @@
     .locals 0
 
     .prologue
-    .line 28
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -32,7 +31,6 @@
     .param p1, "result"    # I
 
     .prologue
-    .line 243
     return-void
 .end method
 
@@ -41,7 +39,6 @@
     .param p1, "result"    # I
 
     .prologue
-    .line 51
     return-void
 .end method
 
@@ -50,6 +47,5 @@
     .param p1, "data"    # Landroid/hardware/hdmi/HdmiRecordListener$TimerStatusData;
 
     .prologue
-    .line 59
     return-void
 .end method

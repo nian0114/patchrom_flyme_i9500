@@ -52,29 +52,24 @@
     .param p2, "token"    # Landroid/os/IBinder;
 
     .prologue
-    .line 632
     iput-object p1, p0, Landroid/hardware/scontext/SContextService$Listener;->this$0:Landroid/hardware/scontext/SContextService;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 633
     iput-object p2, p0, Landroid/hardware/scontext/SContextService$Listener;->mToken:Landroid/os/IBinder;
 
-    .line 634
     new-instance v0, Ljava/util/HashSet;
 
     invoke-direct {v0}, Ljava/util/HashSet;-><init>()V
 
     iput-object v0, p0, Landroid/hardware/scontext/SContextService$Listener;->mServices:Ljava/util/HashSet;
 
-    .line 635
     new-instance v0, Ljava/util/concurrent/ConcurrentHashMap;
 
     invoke-direct {v0}, Ljava/util/concurrent/ConcurrentHashMap;-><init>()V
 
     iput-object v0, p0, Landroid/hardware/scontext/SContextService$Listener;->mPropertyMap:Ljava/util/concurrent/ConcurrentHashMap;
 
-    .line 636
     return-void
 .end method
 
@@ -83,7 +78,6 @@
     .param p0, "x0"    # Landroid/hardware/scontext/SContextService$Listener;
 
     .prologue
-    .line 618
     iget-object v0, p0, Landroid/hardware/scontext/SContextService$Listener;->mToken:Landroid/os/IBinder;
 
     return-object v0
@@ -94,7 +88,6 @@
     .param p0, "x0"    # Landroid/hardware/scontext/SContextService$Listener;
 
     .prologue
-    .line 618
     iget-object v0, p0, Landroid/hardware/scontext/SContextService$Listener;->mServices:Ljava/util/HashSet;
 
     return-object v0
@@ -105,7 +98,6 @@
     .param p0, "x0"    # Landroid/hardware/scontext/SContextService$Listener;
 
     .prologue
-    .line 618
     iget-object v0, p0, Landroid/hardware/scontext/SContextService$Listener;->mPropertyMap:Ljava/util/concurrent/ConcurrentHashMap;
 
     return-object v0
@@ -116,7 +108,6 @@
     .param p1, "service"    # I
 
     .prologue
-    .line 718
     # getter for: Landroid/hardware/scontext/SContextService;->mProviderMap:Ljava/util/concurrent/ConcurrentHashMap;
     invoke-static {}, Landroid/hardware/scontext/SContextService;->access$500()Ljava/util/concurrent/ConcurrentHashMap;
 
@@ -134,7 +125,6 @@
 
     invoke-virtual {v0}, Landroid/hardware/scontext/provider/Provider;->handleDiedBinder()V
 
-    .line 719
     return-void
 .end method
 
@@ -146,7 +136,6 @@
     .prologue
     const/16 v8, 0x1b
 
-    .line 646
     iget-object v4, p0, Landroid/hardware/scontext/SContextService$Listener;->this$0:Landroid/hardware/scontext/SContextService;
 
     # getter for: Landroid/hardware/scontext/SContextService;->mMutex:Ljava/util/concurrent/locks/ReentrantLock;
@@ -156,7 +145,6 @@
 
     invoke-virtual {v4}, Ljava/util/concurrent/locks/ReentrantLock;->lock()V
 
-    .line 648
     :try_start_0
     iget-object v4, p0, Landroid/hardware/scontext/SContextService$Listener;->mServices:Ljava/util/HashSet;
 
@@ -172,7 +160,6 @@
 
     if-eqz v4, :cond_6
 
-    .line 649
     invoke-interface {v1}, Ljava/util/Iterator;->next()Ljava/lang/Object;
 
     move-result-object v4
@@ -183,7 +170,6 @@
 
     move-result v3
 
-    .line 651
     .local v3, "service":I
     const-string v5, "SContextService"
 
@@ -256,7 +242,6 @@
 
     invoke-static {v5, v4}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 656
     iget-object v4, p0, Landroid/hardware/scontext/SContextService$Listener;->this$0:Landroid/hardware/scontext/SContextService;
 
     # getter for: Landroid/hardware/scontext/SContextService;->mUsedServiceMap:Ljava/util/concurrent/ConcurrentHashMap;
@@ -282,7 +267,6 @@
 
     if-ne v4, v5, :cond_4
 
-    .line 657
     const/4 v4, 0x2
 
     if-eq v3, v4, :cond_0
@@ -291,7 +275,6 @@
 
     if-ne v3, v4, :cond_2
 
-    .line 659
     :cond_0
     # getter for: Landroid/hardware/scontext/SContextService;->mProviderMap:Ljava/util/concurrent/ConcurrentHashMap;
     invoke-static {}, Landroid/hardware/scontext/SContextService;->access$500()Ljava/util/concurrent/ConcurrentHashMap;
@@ -308,7 +291,6 @@
 
     if-eqz v4, :cond_1
 
-    .line 660
     # getter for: Landroid/hardware/scontext/SContextService;->mProviderMap:Ljava/util/concurrent/ConcurrentHashMap;
     invoke-static {}, Landroid/hardware/scontext/SContextService;->access$500()Ljava/util/concurrent/ConcurrentHashMap;
 
@@ -326,10 +308,8 @@
 
     invoke-virtual {v4}, Landroid/hardware/scontext/provider/Provider;->onBinderDied()V
 
-    .line 661
     invoke-direct {p0, v3}, Landroid/hardware/scontext/SContextService$Listener;->handleDiedBinder(I)V
 
-    .line 673
     :cond_1
     :goto_1
     iget-object v4, p0, Landroid/hardware/scontext/SContextService$Listener;->this$0:Landroid/hardware/scontext/SContextService;
@@ -349,7 +329,6 @@
 
     goto/16 :goto_0
 
-    .line 692
     .end local v1    # "i":Ljava/util/Iterator;, "Ljava/util/Iterator<Ljava/lang/Integer;>;"
     .end local v3    # "service":I
     :catchall_0
@@ -366,13 +345,11 @@
 
     throw v4
 
-    .line 664
     .restart local v1    # "i":Ljava/util/Iterator;, "Ljava/util/Iterator<Ljava/lang/Integer;>;"
     .restart local v3    # "service":I
     :cond_2
     if-ne v3, v8, :cond_3
 
-    .line 665
     :try_start_1
     # getter for: Landroid/hardware/scontext/SContextService;->mProviderMap:Ljava/util/concurrent/ConcurrentHashMap;
     invoke-static {}, Landroid/hardware/scontext/SContextService;->access$500()Ljava/util/concurrent/ConcurrentHashMap;
@@ -389,7 +366,6 @@
 
     if-eqz v4, :cond_3
 
-    .line 666
     iget-object v4, p0, Landroid/hardware/scontext/SContextService$Listener;->mPropertyMap:Ljava/util/concurrent/ConcurrentHashMap;
 
     invoke-static {v3}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
@@ -402,7 +378,6 @@
 
     check-cast v0, Landroid/hardware/scontext/SContextAttribute;
 
-    .line 667
     .local v0, "attribute":Landroid/hardware/scontext/SContextAttribute;
     # getter for: Landroid/hardware/scontext/SContextService;->mProviderMap:Ljava/util/concurrent/ConcurrentHashMap;
     invoke-static {}, Landroid/hardware/scontext/SContextService;->access$500()Ljava/util/concurrent/ConcurrentHashMap;
@@ -421,7 +396,6 @@
 
     invoke-virtual {v4, p0, v0}, Landroid/hardware/scontext/provider/caeprovider/ActivityNotificationImpl;->removeAction(Landroid/hardware/scontext/SContextService$Listener;Landroid/hardware/scontext/SContextAttribute;)V
 
-    .line 671
     .end local v0    # "attribute":Landroid/hardware/scontext/SContextAttribute;
     :cond_3
     iget-object v4, p0, Landroid/hardware/scontext/SContextService$Listener;->this$0:Landroid/hardware/scontext/SContextService;
@@ -431,7 +405,6 @@
 
     goto :goto_1
 
-    .line 675
     :cond_4
     iget-object v4, p0, Landroid/hardware/scontext/SContextService$Listener;->this$0:Landroid/hardware/scontext/SContextService;
 
@@ -450,11 +423,9 @@
 
     check-cast v2, Ljava/util/ArrayList;
 
-    .line 676
     .local v2, "listenerList":Ljava/util/ArrayList;, "Ljava/util/ArrayList<Landroid/hardware/scontext/SContextService$Listener;>;"
     if-ne v3, v8, :cond_5
 
-    .line 677
     # getter for: Landroid/hardware/scontext/SContextService;->mProviderMap:Ljava/util/concurrent/ConcurrentHashMap;
     invoke-static {}, Landroid/hardware/scontext/SContextService;->access$500()Ljava/util/concurrent/ConcurrentHashMap;
 
@@ -470,7 +441,6 @@
 
     if-eqz v4, :cond_5
 
-    .line 678
     iget-object v4, p0, Landroid/hardware/scontext/SContextService$Listener;->mPropertyMap:Ljava/util/concurrent/ConcurrentHashMap;
 
     invoke-static {v3}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
@@ -483,7 +453,6 @@
 
     check-cast v0, Landroid/hardware/scontext/SContextAttribute;
 
-    .line 679
     .restart local v0    # "attribute":Landroid/hardware/scontext/SContextAttribute;
     # getter for: Landroid/hardware/scontext/SContextService;->mProviderMap:Ljava/util/concurrent/ConcurrentHashMap;
     invoke-static {}, Landroid/hardware/scontext/SContextService;->access$500()Ljava/util/concurrent/ConcurrentHashMap;
@@ -502,12 +471,10 @@
 
     invoke-virtual {v4, p0, v0}, Landroid/hardware/scontext/provider/caeprovider/ActivityNotificationImpl;->removeAction(Landroid/hardware/scontext/SContextService$Listener;Landroid/hardware/scontext/SContextAttribute;)V
 
-    .line 683
     .end local v0    # "attribute":Landroid/hardware/scontext/SContextAttribute;
     :cond_5
     invoke-virtual {v2, p0}, Ljava/util/ArrayList;->remove(Ljava/lang/Object;)Z
 
-    .line 684
     iget-object v4, p0, Landroid/hardware/scontext/SContextService$Listener;->this$0:Landroid/hardware/scontext/SContextService;
 
     # getter for: Landroid/hardware/scontext/SContextService;->mUsedServiceMap:Ljava/util/concurrent/ConcurrentHashMap;
@@ -523,7 +490,6 @@
 
     goto/16 :goto_0
 
-    .line 688
     .end local v2    # "listenerList":Ljava/util/ArrayList;, "Ljava/util/ArrayList<Landroid/hardware/scontext/SContextService$Listener;>;"
     .end local v3    # "service":I
     :cond_6
@@ -533,7 +499,6 @@
 
     invoke-interface {v4, p0, v5}, Landroid/os/IBinder;->unlinkToDeath(Landroid/os/IBinder$DeathRecipient;I)Z
 
-    .line 689
     iget-object v4, p0, Landroid/hardware/scontext/SContextService$Listener;->this$0:Landroid/hardware/scontext/SContextService;
 
     # getter for: Landroid/hardware/scontext/SContextService;->mListeners:Ljava/util/concurrent/CopyOnWriteArrayList;
@@ -543,7 +508,6 @@
 
     invoke-virtual {v4, p0}, Ljava/util/concurrent/CopyOnWriteArrayList;->remove(Ljava/lang/Object;)Z
 
-    .line 690
     iget-object v4, p0, Landroid/hardware/scontext/SContextService$Listener;->this$0:Landroid/hardware/scontext/SContextService;
 
     # invokes: Landroid/hardware/scontext/SContextService;->showListenerList()V
@@ -551,7 +515,6 @@
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
-    .line 692
     iget-object v4, p0, Landroid/hardware/scontext/SContextService$Listener;->this$0:Landroid/hardware/scontext/SContextService;
 
     # getter for: Landroid/hardware/scontext/SContextService;->mMutex:Ljava/util/concurrent/locks/ReentrantLock;
@@ -561,7 +524,6 @@
 
     invoke-virtual {v4}, Ljava/util/concurrent/locks/ReentrantLock;->unlock()V
 
-    .line 694
     return-void
 .end method
 
@@ -570,7 +532,6 @@
     .param p1, "event"    # Landroid/hardware/scontext/SContextEvent;
 
     .prologue
-    .line 705
     :try_start_0
     iget-object v2, p0, Landroid/hardware/scontext/SContextService$Listener;->mToken:Landroid/os/IBinder;
 
@@ -578,26 +539,21 @@
 
     move-result-object v0
 
-    .line 706
     .local v0, "cb":Landroid/hardware/scontext/ISContextCallback;
     if-eqz v0, :cond_0
 
-    .line 707
     invoke-interface {v0, p1}, Landroid/hardware/scontext/ISContextCallback;->scontextCallback(Landroid/hardware/scontext/SContextEvent;)V
     :try_end_0
     .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 712
     .end local v0    # "cb":Landroid/hardware/scontext/ISContextCallback;
     :cond_0
     :goto_0
     return-void
 
-    .line 709
     :catch_0
     move-exception v1
 
-    .line 710
     .local v1, "e":Landroid/os/RemoteException;
     const-string v2, "SContextService"
 

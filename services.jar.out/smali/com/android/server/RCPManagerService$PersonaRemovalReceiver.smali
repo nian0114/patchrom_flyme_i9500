@@ -23,7 +23,6 @@
     .locals 0
 
     .prologue
-    .line 1292
     iput-object p1, p0, Lcom/android/server/RCPManagerService$PersonaRemovalReceiver;->this$0:Lcom/android/server/RCPManagerService;
 
     invoke-direct {p0}, Landroid/content/BroadcastReceiver;-><init>()V
@@ -39,7 +38,6 @@
     .param p2, "intent"    # Landroid/content/Intent;
 
     .prologue
-    .line 1295
     # getter for: Lcom/android/server/RCPManagerService;->TAG:Ljava/lang/String;
     invoke-static {}, Lcom/android/server/RCPManagerService;->access$200()Ljava/lang/String;
 
@@ -90,7 +88,6 @@
     :goto_0
     invoke-static {v4, v3}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1297
     const-string v3, "com.sec.knox.container.action.containerremovalstarted"
 
     invoke-virtual {p2}, Landroid/content/Intent;->getAction()Ljava/lang/String;
@@ -103,7 +100,6 @@
 
     if-eqz v3, :cond_0
 
-    .line 1298
     const-string v3, "com.sec.knox.container.category.observer.containerid"
 
     const/4 v4, -0x1
@@ -122,7 +118,6 @@
 
     move-result v2
 
-    .line 1300
     .local v2, "personaId":I
     iget-object v3, p0, Lcom/android/server/RCPManagerService$PersonaRemovalReceiver;->this$0:Lcom/android/server/RCPManagerService;
 
@@ -143,11 +138,9 @@
 
     check-cast v0, Landroid/content/ISyncCallBack;
 
-    .line 1301
     .local v0, "callback":Landroid/content/ISyncCallBack;
     if-eqz v0, :cond_0
 
-    .line 1302
     # getter for: Lcom/android/server/RCPManagerService;->TAG:Ljava/lang/String;
     invoke-static {}, Lcom/android/server/RCPManagerService;->access$200()Ljava/lang/String;
 
@@ -173,32 +166,27 @@
 
     invoke-static {v3, v4}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1304
     :try_start_0
     invoke-interface {v0, v2}, Landroid/content/ISyncCallBack;->deleteShortcuts(I)V
     :try_end_0
     .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 1310
     .end local v0    # "callback":Landroid/content/ISyncCallBack;
     .end local v2    # "personaId":I
     :cond_0
     :goto_1
     return-void
 
-    .line 1295
     :cond_1
     const-string v3, " intent is null "
 
     goto :goto_0
 
-    .line 1305
     .restart local v0    # "callback":Landroid/content/ISyncCallBack;
     .restart local v2    # "personaId":I
     :catch_0
     move-exception v1
 
-    .line 1306
     .local v1, "e":Landroid/os/RemoteException;
     # getter for: Lcom/android/server/RCPManagerService;->TAG:Ljava/lang/String;
     invoke-static {}, Lcom/android/server/RCPManagerService;->access$200()Ljava/lang/String;

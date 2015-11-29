@@ -43,30 +43,25 @@
     .locals 1
 
     .prologue
-    .line 709
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 710
     new-instance v0, Ljava/util/HashSet;
 
     invoke-direct {v0}, Ljava/util/HashSet;-><init>()V
 
     iput-object v0, p0, Lcom/android/server/PermissionPackage;->seinfos:Ljava/util/HashSet;
 
-    .line 711
     new-instance v0, Ljava/util/HashSet;
 
     invoke-direct {v0}, Ljava/util/HashSet;-><init>()V
 
     iput-object v0, p0, Lcom/android/server/PermissionPackage;->packages:Ljava/util/HashSet;
 
-    .line 712
     new-instance v0, Ljava/util/HashSet;
 
     invoke-direct {v0}, Ljava/util/HashSet;-><init>()V
 
     iput-object v0, p0, Lcom/android/server/PermissionPackage;->agentTypes:Ljava/util/HashSet;
 
-    .line 713
     return-void
 .end method

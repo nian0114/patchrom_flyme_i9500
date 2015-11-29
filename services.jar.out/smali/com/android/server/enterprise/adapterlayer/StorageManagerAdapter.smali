@@ -22,10 +22,8 @@
     .locals 0
 
     .prologue
-    .line 43
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 44
     return-void
 .end method
 
@@ -34,7 +32,6 @@
     .param p0, "ctx"    # Landroid/content/Context;
 
     .prologue
-    .line 47
     const-class v1, Lcom/android/server/enterprise/adapterlayer/StorageManagerAdapter;
 
     monitor-enter v1
@@ -44,20 +41,17 @@
 
     if-nez v0, :cond_0
 
-    .line 48
     sput-object p0, Lcom/android/server/enterprise/adapterlayer/StorageManagerAdapter;->mContext:Landroid/content/Context;
 
-    .line 49
     new-instance v0, Lcom/android/server/enterprise/adapterlayer/StorageManagerAdapter;
 
     invoke-direct {v0}, Lcom/android/server/enterprise/adapterlayer/StorageManagerAdapter;-><init>()V
 
     sput-object v0, Lcom/android/server/enterprise/adapterlayer/StorageManagerAdapter;->mInstance:Lcom/android/server/enterprise/adapterlayer/StorageManagerAdapter;
 
-    .line 50
     sget-object v0, Lcom/android/server/enterprise/adapterlayer/StorageManagerAdapter;->mContext:Landroid/content/Context;
 
-    const-string/jumbo v2, "storage"
+    const-string v2, "storage"
 
     invoke-virtual {v0, v2}, Landroid/content/Context;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
 
@@ -67,7 +61,6 @@
 
     sput-object v0, Lcom/android/server/enterprise/adapterlayer/StorageManagerAdapter;->mStorageManager:Landroid/os/storage/StorageManager;
 
-    .line 53
     :cond_0
     sget-object v0, Lcom/android/server/enterprise/adapterlayer/StorageManagerAdapter;->mInstance:Lcom/android/server/enterprise/adapterlayer/StorageManagerAdapter;
     :try_end_0
@@ -77,7 +70,6 @@
 
     return-object v0
 
-    .line 47
     :catchall_0
     move-exception v0
 
@@ -96,27 +88,22 @@
 
     const/4 v5, 0x1
 
-    .line 81
     sget-object v4, Lcom/android/server/enterprise/adapterlayer/StorageManagerAdapter;->mStorageManager:Landroid/os/storage/StorageManager;
 
     invoke-virtual {v4}, Landroid/os/storage/StorageManager;->getVolumeList()[Landroid/os/storage/StorageVolume;
 
     move-result-object v2
 
-    .line 82
     .local v2, "storageVolumes":[Landroid/os/storage/StorageVolume;
     if-nez v2, :cond_1
 
-    .line 96
     :cond_0
     :goto_0
     return-object v3
 
-    .line 85
     :cond_1
     array-length v0, v2
 
-    .line 89
     .local v0, "length":I
     if-le v0, v5, :cond_0
 
@@ -128,10 +115,8 @@
 
     if-eqz v4, :cond_0
 
-    .line 90
     aget-object v1, v2, v5
 
-    .line 91
     .local v1, "storageVolume":Landroid/os/storage/StorageVolume;
     const-string v3, "StorageManagerAdapter"
 
@@ -159,7 +144,6 @@
 
     invoke-static {v3, v4}, Lcom/android/server/enterprise/log/Log;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 92
     const-string v3, "StorageManagerAdapter"
 
     new-instance v4, Ljava/lang/StringBuilder;
@@ -186,7 +170,6 @@
 
     invoke-static {v3, v4}, Lcom/android/server/enterprise/log/Log;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 93
     invoke-virtual {v1}, Landroid/os/storage/StorageVolume;->getPath()Ljava/lang/String;
 
     move-result-object v3
@@ -198,19 +181,15 @@
     .locals 2
 
     .prologue
-    .line 65
     invoke-virtual {p0}, Lcom/android/server/enterprise/adapterlayer/StorageManagerAdapter;->getExternalSdCardPath()Ljava/lang/String;
 
     move-result-object v0
 
-    .line 66
     .local v0, "externalSdCardPath":Ljava/lang/String;
     if-nez v0, :cond_0
 
-    .line 67
     const/4 v1, 0x0
 
-    .line 69
     :goto_0
     return-object v1
 
@@ -232,27 +211,22 @@
 
     const/4 v5, 0x0
 
-    .line 100
     sget-object v4, Lcom/android/server/enterprise/adapterlayer/StorageManagerAdapter;->mStorageManager:Landroid/os/storage/StorageManager;
 
     invoke-virtual {v4}, Landroid/os/storage/StorageManager;->getVolumeList()[Landroid/os/storage/StorageVolume;
 
     move-result-object v2
 
-    .line 101
     .local v2, "storageVolumes":[Landroid/os/storage/StorageVolume;
     if-nez v2, :cond_1
 
-    .line 117
     :cond_0
     :goto_0
     return-object v3
 
-    .line 104
     :cond_1
     array-length v0, v2
 
-    .line 108
     .local v0, "length":I
     if-lez v0, :cond_0
 
@@ -264,10 +238,8 @@
 
     if-eqz v4, :cond_0
 
-    .line 109
     aget-object v1, v2, v5
 
-    .line 112
     .local v1, "storageVolume":Landroid/os/storage/StorageVolume;
     invoke-virtual {v1}, Landroid/os/storage/StorageVolume;->getSubSystem()Ljava/lang/String;
 
@@ -281,12 +253,10 @@
 
     if-eqz v3, :cond_2
 
-    .line 113
     const-string v3, "/"
 
     goto :goto_0
 
-    .line 115
     :cond_2
     invoke-virtual {v1}, Landroid/os/storage/StorageVolume;->getPath()Ljava/lang/String;
 
@@ -299,19 +269,15 @@
     .locals 2
 
     .prologue
-    .line 73
     invoke-virtual {p0}, Lcom/android/server/enterprise/adapterlayer/StorageManagerAdapter;->getInternalSdCardPath()Ljava/lang/String;
 
     move-result-object v0
 
-    .line 74
     .local v0, "internalSdCardPath":Ljava/lang/String;
     if-nez v0, :cond_0
 
-    .line 75
     const/4 v1, 0x0
 
-    .line 77
     :goto_0
     return-object v1
 
@@ -329,7 +295,6 @@
     .locals 1
 
     .prologue
-    .line 121
     sget-object v0, Lcom/android/server/enterprise/adapterlayer/StorageManagerAdapter;->mStorageManager:Landroid/os/storage/StorageManager;
 
     invoke-virtual {v0}, Landroid/os/storage/StorageManager;->getVolumeList()[Landroid/os/storage/StorageVolume;
@@ -344,7 +309,6 @@
     .param p1, "path"    # Ljava/lang/String;
 
     .prologue
-    .line 126
     sget-object v0, Lcom/android/server/enterprise/adapterlayer/StorageManagerAdapter;->mStorageManager:Landroid/os/storage/StorageManager;
 
     invoke-virtual {v0, p1}, Landroid/os/storage/StorageManager;->getVolumeState(Ljava/lang/String;)Ljava/lang/String;
@@ -358,14 +322,12 @@
     .locals 3
 
     .prologue
-    .line 57
     sget-object v1, Lcom/android/server/enterprise/adapterlayer/StorageManagerAdapter;->mStorageManager:Landroid/os/storage/StorageManager;
 
     invoke-virtual {v1}, Landroid/os/storage/StorageManager;->getVolumeList()[Landroid/os/storage/StorageVolume;
 
     move-result-object v0
 
-    .line 58
     .local v0, "storageVolumes":[Landroid/os/storage/StorageVolume;
     if-eqz v0, :cond_0
 
@@ -375,10 +337,8 @@
 
     if-lt v1, v2, :cond_0
 
-    .line 59
     const/4 v1, 0x1
 
-    .line 61
     :goto_0
     return v1
 

@@ -26,7 +26,6 @@
     .locals 0
 
     .prologue
-    .line 1079
     .local p0, "this":Landroid/widget/AdapterView$SelectionNotifier;, "Landroid/widget/AdapterView<TT;>.SelectionNotifier;"
     iput-object p1, p0, Landroid/widget/AdapterView$SelectionNotifier;->this$0:Landroid/widget/AdapterView;
 
@@ -41,7 +40,6 @@
     .param p2, "x1"    # Landroid/widget/AdapterView$1;
 
     .prologue
-    .line 1079
     .local p0, "this":Landroid/widget/AdapterView$SelectionNotifier;, "Landroid/widget/AdapterView<TT;>.SelectionNotifier;"
     invoke-direct {p0, p1}, Landroid/widget/AdapterView$SelectionNotifier;-><init>(Landroid/widget/AdapterView;)V
 
@@ -54,7 +52,6 @@
     .locals 1
 
     .prologue
-    .line 1081
     .local p0, "this":Landroid/widget/AdapterView$SelectionNotifier;, "Landroid/widget/AdapterView<TT;>.SelectionNotifier;"
     iget-object v0, p0, Landroid/widget/AdapterView$SelectionNotifier;->this$0:Landroid/widget/AdapterView;
 
@@ -62,7 +59,6 @@
 
     if-eqz v0, :cond_1
 
-    .line 1085
     iget-object v0, p0, Landroid/widget/AdapterView$SelectionNotifier;->this$0:Landroid/widget/AdapterView;
 
     invoke-virtual {v0}, Landroid/widget/AdapterView;->getAdapter()Landroid/widget/Adapter;
@@ -71,24 +67,20 @@
 
     if-eqz v0, :cond_0
 
-    .line 1086
     iget-object v0, p0, Landroid/widget/AdapterView$SelectionNotifier;->this$0:Landroid/widget/AdapterView;
 
     invoke-virtual {v0, p0}, Landroid/widget/AdapterView;->post(Ljava/lang/Runnable;)Z
 
-    .line 1092
     :cond_0
     :goto_0
     return-void
 
-    .line 1089
     :cond_1
     iget-object v0, p0, Landroid/widget/AdapterView$SelectionNotifier;->this$0:Landroid/widget/AdapterView;
 
     # invokes: Landroid/widget/AdapterView;->fireOnSelected()V
     invoke-static {v0}, Landroid/widget/AdapterView;->access$200(Landroid/widget/AdapterView;)V
 
-    .line 1090
     iget-object v0, p0, Landroid/widget/AdapterView$SelectionNotifier;->this$0:Landroid/widget/AdapterView;
 
     # invokes: Landroid/widget/AdapterView;->performAccessibilityActionsOnSelected()V

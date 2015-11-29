@@ -20,10 +20,8 @@
     .locals 0
 
     .prologue
-    .line 25
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 35
     return-void
 .end method
 
@@ -31,42 +29,35 @@
     .locals 2
 
     .prologue
-    .line 308
     sget-object v0, Lcom/samsung/android/contextaware/ContextList;->instance:Lcom/samsung/android/contextaware/ContextList;
 
     if-nez v0, :cond_1
 
-    .line 309
     const-class v1, Lcom/samsung/android/contextaware/ContextList;
 
     monitor-enter v1
 
-    .line 310
     :try_start_0
     sget-object v0, Lcom/samsung/android/contextaware/ContextList;->instance:Lcom/samsung/android/contextaware/ContextList;
 
     if-nez v0, :cond_0
 
-    .line 311
     new-instance v0, Lcom/samsung/android/contextaware/ContextList;
 
     invoke-direct {v0}, Lcom/samsung/android/contextaware/ContextList;-><init>()V
 
     sput-object v0, Lcom/samsung/android/contextaware/ContextList;->instance:Lcom/samsung/android/contextaware/ContextList;
 
-    .line 313
     :cond_0
     monitor-exit v1
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 315
     :cond_1
     sget-object v0, Lcom/samsung/android/contextaware/ContextList;->instance:Lcom/samsung/android/contextaware/ContextList;
 
     return-object v0
 
-    .line 313
     :catchall_0
     move-exception v0
 
@@ -85,10 +76,8 @@
     .param p1, "serviceOrdinal"    # I
 
     .prologue
-    .line 346
     const-string v1, ""
 
-    .line 348
     .local v1, "code":Ljava/lang/String;
     invoke-static {}, Lcom/samsung/android/contextaware/ContextList$ContextType;->values()[Lcom/samsung/android/contextaware/ContextList$ContextType;
 
@@ -106,7 +95,6 @@
 
     aget-object v2, v0, v3
 
-    .line 349
     .local v2, "i":Lcom/samsung/android/contextaware/ContextList$ContextType;
     invoke-virtual {v2}, Lcom/samsung/android/contextaware/ContextList$ContextType;->ordinal()I
 
@@ -114,12 +102,10 @@
 
     if-ne v5, p1, :cond_2
 
-    .line 350
     invoke-virtual {v2}, Lcom/samsung/android/contextaware/ContextList$ContextType;->getCode()Ljava/lang/String;
 
     move-result-object v1
 
-    .line 355
     .end local v2    # "i":Lcom/samsung/android/contextaware/ContextList$ContextType;
     :cond_0
     invoke-virtual {v1}, Ljava/lang/String;->isEmpty()Z
@@ -128,7 +114,6 @@
 
     if-eqz v5, :cond_1
 
-    .line 356
     sget-object v5, Lcom/samsung/android/contextaware/manager/ContextAwareServiceErrors;->ERROR_SERVICE_CODE_NULL_EXCEPTION:Lcom/samsung/android/contextaware/manager/ContextAwareServiceErrors;
 
     invoke-virtual {v5}, Lcom/samsung/android/contextaware/manager/ContextAwareServiceErrors;->getCode()I
@@ -141,11 +126,9 @@
 
     invoke-static {v5}, Lcom/samsung/android/contextaware/utilbundle/logger/CaLogger;->error(Ljava/lang/String;)V
 
-    .line 361
     :cond_1
     return-object v1
 
-    .line 348
     .restart local v2    # "i":Lcom/samsung/android/contextaware/ContextList$ContextType;
     :cond_2
     add-int/lit8 v3, v3, 0x1
@@ -158,10 +141,8 @@
     .param p1, "serviceCode"    # Ljava/lang/String;
 
     .prologue
-    .line 326
     const/4 v4, 0x0
 
-    .line 328
     .local v4, "ordinal":I
     invoke-static {}, Lcom/samsung/android/contextaware/ContextList$ContextType;->values()[Lcom/samsung/android/contextaware/ContextList$ContextType;
 
@@ -179,7 +160,6 @@
 
     aget-object v1, v0, v2
 
-    .line 329
     .local v1, "i":Lcom/samsung/android/contextaware/ContextList$ContextType;
     invoke-virtual {v1}, Lcom/samsung/android/contextaware/ContextList$ContextType;->getCode()Ljava/lang/String;
 
@@ -191,17 +171,14 @@
 
     if-eqz v5, :cond_1
 
-    .line 330
     invoke-virtual {v1}, Lcom/samsung/android/contextaware/ContextList$ContextType;->ordinal()I
 
     move-result v4
 
-    .line 335
     .end local v1    # "i":Lcom/samsung/android/contextaware/ContextList$ContextType;
     :cond_0
     return v4
 
-    .line 328
     .restart local v1    # "i":Lcom/samsung/android/contextaware/ContextList$ContextType;
     :cond_1
     add-int/lit8 v2, v2, 0x1

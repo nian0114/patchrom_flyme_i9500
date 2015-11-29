@@ -23,7 +23,6 @@
     .locals 0
 
     .prologue
-    .line 128
     iput-object p1, p0, Lcom/android/internal/os/storage/ExternalStorageFormatter$2;->this$0:Lcom/android/internal/os/storage/ExternalStorageFormatter;
 
     invoke-direct {p0}, Landroid/telephony/PhoneStateListener;-><init>()V
@@ -39,18 +38,15 @@
     .param p2, "incomingNumber"    # Ljava/lang/String;
 
     .prologue
-    .line 130
     const/4 v0, 0x1
 
     if-ne p1, v0, :cond_0
 
-    .line 131
     iget-object v0, p0, Lcom/android/internal/os/storage/ExternalStorageFormatter$2;->this$0:Lcom/android/internal/os/storage/ExternalStorageFormatter;
 
     # invokes: Lcom/android/internal/os/storage/ExternalStorageFormatter;->hideProgreesBar()V
     invoke-static {v0}, Lcom/android/internal/os/storage/ExternalStorageFormatter;->access$100(Lcom/android/internal/os/storage/ExternalStorageFormatter;)V
 
-    .line 133
     :cond_0
     return-void
 .end method

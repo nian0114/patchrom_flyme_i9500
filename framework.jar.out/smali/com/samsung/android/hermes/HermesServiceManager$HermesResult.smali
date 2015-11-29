@@ -31,24 +31,18 @@
     .prologue
     const/4 v1, 0x0
 
-    .line 939
     iput-object p1, p0, Lcom/samsung/android/hermes/HermesServiceManager$HermesResult;->this$0:Lcom/samsung/android/hermes/HermesServiceManager;
 
-    .line 940
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 932
     const/4 v0, 0x0
 
     iput v0, p0, Lcom/samsung/android/hermes/HermesServiceManager$HermesResult;->id:I
 
-    .line 934
     iput-object v1, p0, Lcom/samsung/android/hermes/HermesServiceManager$HermesResult;->data:Ljava/lang/Object;
 
-    .line 936
     iput-object v1, p0, Lcom/samsung/android/hermes/HermesServiceManager$HermesResult;->event:Lcom/samsung/android/hermes/HermesServiceManager$HermesEvent;
 
-    .line 941
     return-void
 .end method
 
@@ -60,32 +54,24 @@
     .prologue
     const/4 v1, 0x0
 
-    .line 944
     iput-object p1, p0, Lcom/samsung/android/hermes/HermesServiceManager$HermesResult;->this$0:Lcom/samsung/android/hermes/HermesServiceManager;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 932
     const/4 v0, 0x0
 
     iput v0, p0, Lcom/samsung/android/hermes/HermesServiceManager$HermesResult;->id:I
 
-    .line 934
     iput-object v1, p0, Lcom/samsung/android/hermes/HermesServiceManager$HermesResult;->data:Ljava/lang/Object;
 
-    .line 936
     iput-object v1, p0, Lcom/samsung/android/hermes/HermesServiceManager$HermesResult;->event:Lcom/samsung/android/hermes/HermesServiceManager$HermesEvent;
 
-    .line 945
     iput p2, p0, Lcom/samsung/android/hermes/HermesServiceManager$HermesResult;->id:I
 
-    .line 946
     iput-object p3, p0, Lcom/samsung/android/hermes/HermesServiceManager$HermesResult;->data:Ljava/lang/Object;
 
-    .line 947
     iput-object v1, p0, Lcom/samsung/android/hermes/HermesServiceManager$HermesResult;->event:Lcom/samsung/android/hermes/HermesServiceManager$HermesEvent;
 
-    .line 948
     return-void
 .end method
 
@@ -98,32 +84,24 @@
     .prologue
     const/4 v1, 0x0
 
-    .line 951
     iput-object p1, p0, Lcom/samsung/android/hermes/HermesServiceManager$HermesResult;->this$0:Lcom/samsung/android/hermes/HermesServiceManager;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 932
     const/4 v0, 0x0
 
     iput v0, p0, Lcom/samsung/android/hermes/HermesServiceManager$HermesResult;->id:I
 
-    .line 934
     iput-object v1, p0, Lcom/samsung/android/hermes/HermesServiceManager$HermesResult;->data:Ljava/lang/Object;
 
-    .line 936
     iput-object v1, p0, Lcom/samsung/android/hermes/HermesServiceManager$HermesResult;->event:Lcom/samsung/android/hermes/HermesServiceManager$HermesEvent;
 
-    .line 952
     iput p2, p0, Lcom/samsung/android/hermes/HermesServiceManager$HermesResult;->id:I
 
-    .line 953
     iput-object p3, p0, Lcom/samsung/android/hermes/HermesServiceManager$HermesResult;->data:Ljava/lang/Object;
 
-    .line 954
     iput-object p4, p0, Lcom/samsung/android/hermes/HermesServiceManager$HermesResult;->event:Lcom/samsung/android/hermes/HermesServiceManager$HermesEvent;
 
-    .line 955
     return-void
 .end method
 
@@ -133,7 +111,6 @@
     .param p1, "x1"    # I
 
     .prologue
-    .line 931
     invoke-direct {p0, p1}, Lcom/samsung/android/hermes/HermesServiceManager$HermesResult;->setId(I)V
 
     return-void
@@ -145,7 +122,6 @@
     .param p1, "x1"    # Ljava/lang/Object;
 
     .prologue
-    .line 931
     invoke-direct {p0, p1}, Lcom/samsung/android/hermes/HermesServiceManager$HermesResult;->setData(Ljava/lang/Object;)V
 
     return-void
@@ -157,7 +133,6 @@
     .param p1, "x1"    # Lcom/samsung/android/hermes/HermesServiceManager$HermesEvent;
 
     .prologue
-    .line 931
     invoke-direct {p0, p1}, Lcom/samsung/android/hermes/HermesServiceManager$HermesResult;->setEvent(Lcom/samsung/android/hermes/HermesServiceManager$HermesEvent;)V
 
     return-void
@@ -168,10 +143,8 @@
     .param p1, "obj"    # Ljava/lang/Object;
 
     .prologue
-    .line 980
     iput-object p1, p0, Lcom/samsung/android/hermes/HermesServiceManager$HermesResult;->data:Ljava/lang/Object;
 
-    .line 981
     return-void
 .end method
 
@@ -180,10 +153,8 @@
     .param p1, "event"    # Lcom/samsung/android/hermes/HermesServiceManager$HermesEvent;
 
     .prologue
-    .line 993
     iput-object p1, p0, Lcom/samsung/android/hermes/HermesServiceManager$HermesResult;->event:Lcom/samsung/android/hermes/HermesServiceManager$HermesEvent;
 
-    .line 994
     return-void
 .end method
 
@@ -192,10 +163,8 @@
     .param p1, "id"    # I
 
     .prologue
-    .line 967
     iput p1, p0, Lcom/samsung/android/hermes/HermesServiceManager$HermesResult;->id:I
 
-    .line 968
     return-void
 .end method
 
@@ -205,7 +174,6 @@
     .locals 1
 
     .prologue
-    .line 976
     iget-object v0, p0, Lcom/samsung/android/hermes/HermesServiceManager$HermesResult;->data:Ljava/lang/Object;
 
     return-object v0
@@ -215,7 +183,6 @@
     .locals 1
 
     .prologue
-    .line 989
     iget-object v0, p0, Lcom/samsung/android/hermes/HermesServiceManager$HermesResult;->event:Lcom/samsung/android/hermes/HermesServiceManager$HermesEvent;
 
     return-object v0
@@ -225,7 +192,6 @@
     .locals 1
 
     .prologue
-    .line 963
     iget v0, p0, Lcom/samsung/android/hermes/HermesServiceManager$HermesResult;->id:I
 
     return v0

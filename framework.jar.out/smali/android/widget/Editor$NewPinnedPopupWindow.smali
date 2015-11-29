@@ -54,75 +54,58 @@
     .prologue
     const/4 v1, 0x0
 
-    .line 3480
     iput-object p1, p0, Landroid/widget/Editor$NewPinnedPopupWindow;->this$0:Landroid/widget/Editor;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 3465
     const/16 v0, 0x47
 
     iput v0, p0, Landroid/widget/Editor$NewPinnedPopupWindow;->ITEM_WIDTH:I
 
-    .line 3466
     iput v1, p0, Landroid/widget/Editor$NewPinnedPopupWindow;->mItemWidth:I
 
-    .line 3467
     iput v1, p0, Landroid/widget/Editor$NewPinnedPopupWindow;->mPopupWidthPortrait:I
 
-    .line 3468
     iput v1, p0, Landroid/widget/Editor$NewPinnedPopupWindow;->mPopupWidthLandscape:I
 
-    .line 3469
     iput v1, p0, Landroid/widget/Editor$NewPinnedPopupWindow;->mPopupBgPaddingWidth:I
 
-    .line 3470
     iput v1, p0, Landroid/widget/Editor$NewPinnedPopupWindow;->mPopupBgPaddingHeight:I
 
-    .line 3471
     iput v1, p0, Landroid/widget/Editor$NewPinnedPopupWindow;->mDividerWidth:I
 
-    .line 3472
     iput v1, p0, Landroid/widget/Editor$NewPinnedPopupWindow;->mMenuItemCount:I
 
-    .line 3481
     invoke-virtual {p0}, Landroid/widget/Editor$NewPinnedPopupWindow;->createPopupWindow()V
 
-    .line 3483
     iget-object v0, p0, Landroid/widget/Editor$NewPinnedPopupWindow;->mPopupWindow:Landroid/widget/PopupWindow;
 
     const/16 v1, 0x3ea
 
     invoke-virtual {v0, v1}, Landroid/widget/PopupWindow;->setWindowLayoutType(I)V
 
-    .line 3484
     iget-object v0, p0, Landroid/widget/Editor$NewPinnedPopupWindow;->mPopupWindow:Landroid/widget/PopupWindow;
 
     iget v1, p0, Landroid/widget/Editor$NewPinnedPopupWindow;->mPopupWidthPortrait:I
 
     invoke-virtual {v0, v1}, Landroid/widget/PopupWindow;->setWidth(I)V
 
-    .line 3485
     iget-object v0, p0, Landroid/widget/Editor$NewPinnedPopupWindow;->mPopupWindow:Landroid/widget/PopupWindow;
 
     const/4 v1, -0x2
 
     invoke-virtual {v0, v1}, Landroid/widget/PopupWindow;->setHeight(I)V
 
-    .line 3487
     invoke-virtual {p0}, Landroid/widget/Editor$NewPinnedPopupWindow;->initContentView()V
 
-    .line 3488
     invoke-virtual {p0}, Landroid/widget/Editor$NewPinnedPopupWindow;->setHeight()V
 
-    .line 3489
     iget-object v0, p0, Landroid/widget/Editor$NewPinnedPopupWindow;->mPopupWindow:Landroid/widget/PopupWindow;
 
     iget-object v1, p0, Landroid/widget/Editor$NewPinnedPopupWindow;->mHorizontalScrollView:Landroid/widget/HorizontalScrollView;
 
     invoke-virtual {v0, v1}, Landroid/widget/PopupWindow;->setContentView(Landroid/view/View;)V
 
-    .line 3490
     return-void
 .end method
 
@@ -130,33 +113,27 @@
     .locals 2
 
     .prologue
-    .line 3587
     invoke-virtual {p0}, Landroid/widget/Editor$NewPinnedPopupWindow;->measureContent()V
 
-    .line 3588
     const/4 v1, 0x2
 
     new-array v0, v1, [I
 
-    .line 3589
     .local v0, "position":[I
     invoke-virtual {p0, v0}, Landroid/widget/Editor$NewPinnedPopupWindow;->getNewActionPopupPosition([I)V
 
-    .line 3590
     const/4 v1, 0x0
 
     aget v1, v0, v1
 
     iput v1, p0, Landroid/widget/Editor$NewPinnedPopupWindow;->mPositionX:I
 
-    .line 3591
     const/4 v1, 0x1
 
     aget v1, v0, v1
 
     iput v1, p0, Landroid/widget/Editor$NewPinnedPopupWindow;->mPositionY:I
 
-    .line 3592
     return-void
 .end method
 
@@ -164,7 +141,6 @@
     .locals 2
 
     .prologue
-    .line 3552
     iget-object v0, p0, Landroid/widget/Editor$NewPinnedPopupWindow;->this$0:Landroid/widget/Editor;
 
     # getter for: Landroid/widget/Editor;->mTextView:Landroid/widget/TextView;
@@ -190,10 +166,8 @@
 
     if-ne v0, v1, :cond_0
 
-    .line 3553
     const/4 v0, 0x4
 
-    .line 3555
     :goto_0
     return v0
 
@@ -208,12 +182,10 @@
     .param p1, "menuLimit"    # I
 
     .prologue
-    .line 3560
     iget v0, p0, Landroid/widget/Editor$NewPinnedPopupWindow;->mMenuItemCount:I
 
     if-ge v0, p1, :cond_0
 
-    .line 3561
     iget-object v0, p0, Landroid/widget/Editor$NewPinnedPopupWindow;->mPopupWindow:Landroid/widget/PopupWindow;
 
     iget v1, p0, Landroid/widget/Editor$NewPinnedPopupWindow;->mDividerWidth:I
@@ -238,11 +210,9 @@
 
     invoke-virtual {v0, v1}, Landroid/widget/PopupWindow;->setWidth(I)V
 
-    .line 3569
     :goto_0
     return-void
 
-    .line 3563
     :cond_0
     iget-object v0, p0, Landroid/widget/Editor$NewPinnedPopupWindow;->this$0:Landroid/widget/Editor;
 
@@ -269,7 +239,6 @@
 
     if-ne v0, v1, :cond_1
 
-    .line 3564
     iget-object v0, p0, Landroid/widget/Editor$NewPinnedPopupWindow;->mPopupWindow:Landroid/widget/PopupWindow;
 
     iget v1, p0, Landroid/widget/Editor$NewPinnedPopupWindow;->mPopupWidthPortrait:I
@@ -278,7 +247,6 @@
 
     goto :goto_0
 
-    .line 3566
     :cond_1
     iget-object v0, p0, Landroid/widget/Editor$NewPinnedPopupWindow;->mPopupWindow:Landroid/widget/PopupWindow;
 
@@ -295,14 +263,12 @@
     .prologue
     const/4 v3, -0x1
 
-    .line 3596
     invoke-virtual {p0}, Landroid/widget/Editor$NewPinnedPopupWindow;->isShowing()Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
-    .line 3597
     iget-object v0, p0, Landroid/widget/Editor$NewPinnedPopupWindow;->mPopupWindow:Landroid/widget/PopupWindow;
 
     iget v1, p0, Landroid/widget/Editor$NewPinnedPopupWindow;->mPositionX:I
@@ -311,11 +277,9 @@
 
     invoke-virtual {v0, v1, v2, v3, v3}, Landroid/widget/PopupWindow;->update(IIII)V
 
-    .line 3602
     :goto_0
     return-void
 
-    .line 3599
     :cond_0
     iget-object v0, p0, Landroid/widget/Editor$NewPinnedPopupWindow;->mPopupWindow:Landroid/widget/PopupWindow;
 
@@ -352,12 +316,10 @@
     .locals 1
 
     .prologue
-    .line 3605
     iget-object v0, p0, Landroid/widget/Editor$NewPinnedPopupWindow;->mPopupWindow:Landroid/widget/PopupWindow;
 
     invoke-virtual {v0}, Landroid/widget/PopupWindow;->dismiss()V
 
-    .line 3606
     iget-object v0, p0, Landroid/widget/Editor$NewPinnedPopupWindow;->this$0:Landroid/widget/Editor;
 
     # invokes: Landroid/widget/Editor;->getPositionListener()Landroid/widget/Editor$PositionListener;
@@ -367,7 +329,6 @@
 
     invoke-virtual {v0, p0}, Landroid/widget/Editor$PositionListener;->removeSubscriber(Landroid/widget/Editor$TextViewPositionListener;)V
 
-    .line 3607
     return-void
 .end method
 
@@ -378,7 +339,6 @@
     .locals 1
 
     .prologue
-    .line 3621
     iget-object v0, p0, Landroid/widget/Editor$NewPinnedPopupWindow;->mPopupWindow:Landroid/widget/PopupWindow;
 
     invoke-virtual {v0}, Landroid/widget/PopupWindow;->isShowing()Z
@@ -394,7 +354,6 @@
     .prologue
     const/high16 v4, -0x80000000
 
-    .line 3572
     iget-object v1, p0, Landroid/widget/Editor$NewPinnedPopupWindow;->this$0:Landroid/widget/Editor;
 
     # getter for: Landroid/widget/Editor;->mTextView:Landroid/widget/TextView;
@@ -410,7 +369,6 @@
 
     move-result-object v0
 
-    .line 3574
     .local v0, "displayMetrics":Landroid/util/DisplayMetrics;
     iget-object v1, p0, Landroid/widget/Editor$NewPinnedPopupWindow;->mHorizontalScrollView:Landroid/widget/HorizontalScrollView;
 
@@ -428,7 +386,6 @@
 
     invoke-virtual {v1, v2, v3}, Landroid/widget/HorizontalScrollView;->measure(II)V
 
-    .line 3580
     return-void
 .end method
 
@@ -437,23 +394,18 @@
     .param p1, "offset"    # I
 
     .prologue
-    .line 3625
     if-ltz p1, :cond_0
 
-    .line 3626
     invoke-direct {p0}, Landroid/widget/Editor$NewPinnedPopupWindow;->computeLocalPosition()V
 
-    .line 3627
     invoke-direct {p0}, Landroid/widget/Editor$NewPinnedPopupWindow;->getMenuLimit()I
 
     move-result v0
 
     invoke-direct {p0, v0}, Landroid/widget/Editor$NewPinnedPopupWindow;->setPopupWindowWidth(I)V
 
-    .line 3628
     invoke-direct {p0}, Landroid/widget/Editor$NewPinnedPopupWindow;->updateNewActionPopupPosition()V
 
-    .line 3630
     :cond_0
     return-void
 .end method
@@ -469,10 +421,8 @@
 
     const/4 v10, 0x0
 
-    .line 3494
     const/4 v6, 0x1
 
-    .line 3495
     .local v6, "menuItemCount":I
     iget-object v11, p0, Landroid/widget/Editor$NewPinnedPopupWindow;->this$0:Landroid/widget/Editor;
 
@@ -485,13 +435,11 @@
 
     move-result v2
 
-    .line 3496
     .local v2, "canCut":Z
     if-eqz v2, :cond_0
 
     add-int/lit8 v6, v6, 0x1
 
-    .line 3497
     :cond_0
     iget-object v11, p0, Landroid/widget/Editor$NewPinnedPopupWindow;->this$0:Landroid/widget/Editor;
 
@@ -504,13 +452,11 @@
 
     move-result v1
 
-    .line 3498
     .local v1, "canCopy":Z
     if-eqz v1, :cond_1
 
     add-int/lit8 v6, v6, 0x1
 
-    .line 3499
     :cond_1
     iget-object v11, p0, Landroid/widget/Editor$NewPinnedPopupWindow;->this$0:Landroid/widget/Editor;
 
@@ -523,13 +469,11 @@
 
     move-result v4
 
-    .line 3500
     .local v4, "canPaste":Z
     if-eqz v4, :cond_2
 
     add-int/lit8 v6, v6, 0x1
 
-    .line 3501
     :cond_2
     iget-object v11, p0, Landroid/widget/Editor$NewPinnedPopupWindow;->this$0:Landroid/widget/Editor;
 
@@ -593,14 +537,12 @@
 
     move v0, v5
 
-    .line 3504
     .local v0, "canClipboard":Z
     :goto_0
     if-eqz v0, :cond_3
 
     add-int/lit8 v6, v6, 0x1
 
-    .line 3505
     :cond_3
     iget-object v11, p0, Landroid/widget/Editor$NewPinnedPopupWindow;->this$0:Landroid/widget/Editor;
 
@@ -621,14 +563,12 @@
 
     if-eqz v11, :cond_a
 
-    .line 3506
     .local v5, "canTranslate":Z
     :goto_1
     if-eqz v5, :cond_4
 
     add-int/lit8 v6, v6, 0x1
 
-    .line 3507
     :cond_4
     iget-object v11, p0, Landroid/widget/Editor$NewPinnedPopupWindow;->this$0:Landroid/widget/Editor;
 
@@ -638,7 +578,6 @@
 
     add-int/lit8 v6, v6, 0x1
 
-    .line 3508
     :cond_5
     iget-object v11, p0, Landroid/widget/Editor$NewPinnedPopupWindow;->this$0:Landroid/widget/Editor;
 
@@ -648,7 +587,6 @@
 
     add-int/lit8 v6, v6, 0x1
 
-    .line 3509
     :cond_6
     iget-object v11, p0, Landroid/widget/Editor$NewPinnedPopupWindow;->this$0:Landroid/widget/Editor;
 
@@ -657,34 +595,27 @@
 
     move-result v3
 
-    .line 3510
     .local v3, "canDictionary":Z
     if-eqz v3, :cond_7
 
     add-int/lit8 v6, v6, 0x1
 
-    .line 3511
     :cond_7
     iput v6, p0, Landroid/widget/Editor$NewPinnedPopupWindow;->mMenuItemCount:I
 
-    .line 3513
     invoke-direct {p0}, Landroid/widget/Editor$NewPinnedPopupWindow;->computeLocalPosition()V
 
-    .line 3515
     invoke-direct {p0}, Landroid/widget/Editor$NewPinnedPopupWindow;->getMenuLimit()I
 
     move-result v8
 
-    .line 3516
     .local v8, "menuLimit":I
     invoke-direct {p0, v8}, Landroid/widget/Editor$NewPinnedPopupWindow;->setPopupWindowWidth(I)V
 
-    .line 3518
     iget-object v11, p0, Landroid/widget/Editor$NewPinnedPopupWindow;->mPopupWindow:Landroid/widget/PopupWindow;
 
     invoke-virtual {v11}, Landroid/widget/PopupWindow;->update()V
 
-    .line 3519
     iget-object v11, p0, Landroid/widget/Editor$NewPinnedPopupWindow;->mPopupWindow:Landroid/widget/PopupWindow;
 
     iget-object v12, p0, Landroid/widget/Editor$NewPinnedPopupWindow;->this$0:Landroid/widget/Editor;
@@ -700,7 +631,6 @@
 
     invoke-virtual {v11, v12, v10, v13, v14}, Landroid/widget/PopupWindow;->showAtLocation(Landroid/view/View;III)V
 
-    .line 3521
     iget-object v11, p0, Landroid/widget/Editor$NewPinnedPopupWindow;->this$0:Landroid/widget/Editor;
 
     # invokes: Landroid/widget/Editor;->getPositionListener()Landroid/widget/Editor$PositionListener;
@@ -710,16 +640,12 @@
 
     invoke-virtual {v11, p0, v10}, Landroid/widget/Editor$PositionListener;->addSubscriber(Landroid/widget/Editor$TextViewPositionListener;Z)V
 
-    .line 3523
     invoke-direct {p0}, Landroid/widget/Editor$NewPinnedPopupWindow;->updateNewActionPopupPosition()V
 
-    .line 3525
     if-le v6, v8, :cond_8
 
-    .line 3526
     sub-int v7, v6, v8
 
-    .line 3528
     .local v7, "menuItemDiff":I
     iget-object v11, p0, Landroid/widget/Editor$NewPinnedPopupWindow;->mHorizontalScrollView:Landroid/widget/HorizontalScrollView;
 
@@ -750,7 +676,6 @@
 
     invoke-virtual {v11, v12, v10}, Landroid/widget/HorizontalScrollView;->scrollTo(II)V
 
-    .line 3529
     new-instance v9, Ljava/lang/Thread;
 
     new-instance v10, Landroid/widget/Editor$NewPinnedPopupWindow$1;
@@ -759,11 +684,9 @@
 
     invoke-direct {v9, v10}, Ljava/lang/Thread;-><init>(Ljava/lang/Runnable;)V
 
-    .line 3547
     .local v9, "thread":Ljava/lang/Thread;
     invoke-virtual {v9}, Ljava/lang/Thread;->start()V
 
-    .line 3549
     .end local v7    # "menuItemDiff":I
     .end local v9    # "thread":Ljava/lang/Thread;
     :cond_8
@@ -776,14 +699,12 @@
     :cond_9
     move v0, v10
 
-    .line 3501
     goto/16 :goto_0
 
     .restart local v0    # "canClipboard":Z
     :cond_a
     move v5, v10
 
-    .line 3505
     goto :goto_1
 .end method
 
@@ -795,7 +716,6 @@
     .param p4, "parentScrolled"    # Z
 
     .prologue
-    .line 3612
     invoke-virtual {p0}, Landroid/widget/Editor$NewPinnedPopupWindow;->isShowing()Z
 
     move-result v0
@@ -815,20 +735,16 @@
 
     if-eqz v0, :cond_1
 
-    .line 3613
     if-eqz p4, :cond_0
 
     invoke-direct {p0}, Landroid/widget/Editor$NewPinnedPopupWindow;->computeLocalPosition()V
 
-    .line 3614
     :cond_0
     invoke-direct {p0}, Landroid/widget/Editor$NewPinnedPopupWindow;->updateNewActionPopupPosition()V
 
-    .line 3618
     :goto_0
     return-void
 
-    .line 3616
     :cond_1
     invoke-virtual {p0}, Landroid/widget/Editor$NewPinnedPopupWindow;->hide()V
 

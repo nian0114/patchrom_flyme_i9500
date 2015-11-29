@@ -32,7 +32,6 @@
     .locals 0
 
     .prologue
-    .line 71
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -49,12 +48,10 @@
 
     const/4 v2, 0x1
 
-    .line 74
     new-instance v0, Landroid/net/NetworkMisc;
 
     invoke-direct {v0}, Landroid/net/NetworkMisc;-><init>()V
 
-    .line 75
     .local v0, "networkMisc":Landroid/net/NetworkMisc;
     invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
 
@@ -67,7 +64,6 @@
     :goto_0
     iput-boolean v1, v0, Landroid/net/NetworkMisc;->allowBypass:Z
 
-    .line 76
     invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
 
     move-result v1
@@ -79,7 +75,6 @@
     :goto_1
     iput-boolean v1, v0, Landroid/net/NetworkMisc;->explicitlySelected:Z
 
-    .line 77
     invoke-virtual {p1}, Landroid/os/Parcel;->readByte()B
 
     move-result v1
@@ -89,32 +84,27 @@
     :goto_2
     iput-boolean v2, v0, Landroid/net/NetworkMisc;->knoxProfile:Z
 
-    .line 78
     invoke-virtual {p1}, Landroid/os/Parcel;->readString()Ljava/lang/String;
 
     move-result-object v1
 
     iput-object v1, v0, Landroid/net/NetworkMisc;->knoxProfileName:Ljava/lang/String;
 
-    .line 79
     return-object v0
 
     :cond_0
     move v1, v3
 
-    .line 75
     goto :goto_0
 
     :cond_1
     move v1, v3
 
-    .line 76
     goto :goto_1
 
     :cond_2
     move v2, v3
 
-    .line 77
     goto :goto_2
 .end method
 
@@ -123,7 +113,6 @@
     .param p1, "x0"    # Landroid/os/Parcel;
 
     .prologue
-    .line 71
     invoke-virtual {p0, p1}, Landroid/net/NetworkMisc$1;->createFromParcel(Landroid/os/Parcel;)Landroid/net/NetworkMisc;
 
     move-result-object v0
@@ -136,7 +125,6 @@
     .param p1, "size"    # I
 
     .prologue
-    .line 84
     new-array v0, p1, [Landroid/net/NetworkMisc;
 
     return-object v0
@@ -147,7 +135,6 @@
     .param p1, "x0"    # I
 
     .prologue
-    .line 71
     invoke-virtual {p0, p1}, Landroid/net/NetworkMisc$1;->newArray(I)[Landroid/net/NetworkMisc;
 
     move-result-object v0

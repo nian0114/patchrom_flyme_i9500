@@ -29,17 +29,13 @@
     .param p3, "d"    # Landroid/os/IBinder$DeathRecipient;
 
     .prologue
-    .line 574
     iput-object p1, p0, Lcom/android/server/wm/WindowManagerService$RotationWatcher;->this$0:Lcom/android/server/wm/WindowManagerService;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 575
     iput-object p2, p0, Lcom/android/server/wm/WindowManagerService$RotationWatcher;->watcher:Landroid/view/IRotationWatcher;
 
-    .line 576
     iput-object p3, p0, Lcom/android/server/wm/WindowManagerService$RotationWatcher;->deathRecipient:Landroid/os/IBinder$DeathRecipient;
 
-    .line 577
     return-void
 .end method

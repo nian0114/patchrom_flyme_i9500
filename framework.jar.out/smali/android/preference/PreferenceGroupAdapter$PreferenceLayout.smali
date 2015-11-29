@@ -40,7 +40,6 @@
     .locals 0
 
     .prologue
-    .line 110
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -51,7 +50,6 @@
     .param p1, "x0"    # Landroid/preference/PreferenceGroupAdapter$1;
 
     .prologue
-    .line 110
     invoke-direct {p0}, Landroid/preference/PreferenceGroupAdapter$PreferenceLayout;-><init>()V
 
     return-void
@@ -63,7 +61,6 @@
     .param p1, "x1"    # Ljava/lang/String;
 
     .prologue
-    .line 110
     iput-object p1, p0, Landroid/preference/PreferenceGroupAdapter$PreferenceLayout;->name:Ljava/lang/String;
 
     return-object p1
@@ -75,7 +72,6 @@
     .param p1, "x1"    # I
 
     .prologue
-    .line 110
     iput p1, p0, Landroid/preference/PreferenceGroupAdapter$PreferenceLayout;->resId:I
 
     return p1
@@ -87,7 +83,6 @@
     .param p1, "x1"    # I
 
     .prologue
-    .line 110
     iput p1, p0, Landroid/preference/PreferenceGroupAdapter$PreferenceLayout;->widgetResId:I
 
     return p1
@@ -100,7 +95,6 @@
     .param p1, "other"    # Landroid/preference/PreferenceGroupAdapter$PreferenceLayout;
 
     .prologue
-    .line 116
     iget-object v1, p0, Landroid/preference/PreferenceGroupAdapter$PreferenceLayout;->name:Ljava/lang/String;
 
     iget-object v2, p1, Landroid/preference/PreferenceGroupAdapter$PreferenceLayout;->name:Ljava/lang/String;
@@ -109,34 +103,28 @@
 
     move-result v0
 
-    .line 117
     .local v0, "compareNames":I
     if-nez v0, :cond_0
 
-    .line 118
     iget v1, p0, Landroid/preference/PreferenceGroupAdapter$PreferenceLayout;->resId:I
 
     iget v2, p1, Landroid/preference/PreferenceGroupAdapter$PreferenceLayout;->resId:I
 
     if-ne v1, v2, :cond_2
 
-    .line 119
     iget v1, p0, Landroid/preference/PreferenceGroupAdapter$PreferenceLayout;->widgetResId:I
 
     iget v2, p1, Landroid/preference/PreferenceGroupAdapter$PreferenceLayout;->widgetResId:I
 
     if-ne v1, v2, :cond_1
 
-    .line 120
     const/4 v0, 0x0
 
-    .line 128
     .end local v0    # "compareNames":I
     :cond_0
     :goto_0
     return v0
 
-    .line 122
     .restart local v0    # "compareNames":I
     :cond_1
     iget v1, p0, Landroid/preference/PreferenceGroupAdapter$PreferenceLayout;->widgetResId:I
@@ -147,7 +135,6 @@
 
     goto :goto_0
 
-    .line 125
     :cond_2
     iget v1, p0, Landroid/preference/PreferenceGroupAdapter$PreferenceLayout;->resId:I
 
@@ -163,7 +150,6 @@
     .param p1, "x0"    # Ljava/lang/Object;
 
     .prologue
-    .line 110
     check-cast p1, Landroid/preference/PreferenceGroupAdapter$PreferenceLayout;
 
     .end local p1    # "x0":Ljava/lang/Object;

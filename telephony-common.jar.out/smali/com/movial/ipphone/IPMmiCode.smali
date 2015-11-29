@@ -141,7 +141,6 @@
     .locals 1
 
     .prologue
-    .line 171
     const-string v0, "((\\*)(\\d{2})(\\+{0,1})(\\d{0,}))"
 
     invoke-static {v0}, Ljava/util/regex/Pattern;->compile(Ljava/lang/String;)Ljava/util/regex/Pattern;
@@ -150,7 +149,6 @@
 
     sput-object v0, Lcom/movial/ipphone/IPMmiCode;->sPatternSuppServiceGlobalDev:Ljava/util/regex/Pattern;
 
-    .line 186
     const-string v0, "((\\*|#|\\*#|\\*\\*|##)(\\d{2,3})(\\*([^*#]*)(\\*([^*#]*)(\\*([^*#]*)(\\*([^*#]*))?)?)?)?#)(.*)"
 
     invoke-static {v0}, Ljava/util/regex/Pattern;->compile(Ljava/lang/String;)Ljava/util/regex/Pattern;
@@ -167,25 +165,20 @@
     .param p1, "phone"    # Lcom/movial/ipphone/IPPhone;
 
     .prologue
-    .line 452
     invoke-direct {p0}, Landroid/os/Handler;-><init>()V
 
-    .line 166
     sget-object v0, Lcom/android/internal/telephony/MmiCode$State;->PENDING:Lcom/android/internal/telephony/MmiCode$State;
 
     iput-object v0, p0, Lcom/movial/ipphone/IPMmiCode;->state:Lcom/android/internal/telephony/MmiCode$State;
 
-    .line 457
     iput-object p1, p0, Lcom/movial/ipphone/IPMmiCode;->phone:Lcom/movial/ipphone/IPPhone;
 
-    .line 458
     invoke-virtual {p1}, Lcom/movial/ipphone/IPPhone;->getContext()Landroid/content/Context;
 
     move-result-object v0
 
     iput-object v0, p0, Lcom/movial/ipphone/IPMmiCode;->context:Landroid/content/Context;
 
-    .line 459
     return-void
 .end method
 
@@ -194,7 +187,6 @@
     .param p1, "serviceClass"    # I
 
     .prologue
-    .line 1338
     new-instance v1, Ljava/lang/StringBuilder;
 
     iget-object v2, p0, Lcom/movial/ipphone/IPMmiCode;->context:Landroid/content/Context;
@@ -207,28 +199,23 @@
 
     invoke-direct {v1, v2}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/CharSequence;)V
 
-    .line 1340
     .local v1, "sb":Ljava/lang/StringBuilder;
     const/4 v0, 0x1
 
-    .line 1341
     .local v0, "classMask":I
     :goto_0
     const/16 v2, 0x80
 
     if-gt v0, v2, :cond_1
 
-    .line 1344
     and-int v2, v0, p1
 
     if-eqz v2, :cond_0
 
-    .line 1345
     const-string v2, "\n"
 
     invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 1346
     and-int v2, v0, p1
 
     invoke-direct {p0, v2}, Lcom/movial/ipphone/IPMmiCode;->serviceClassToCFString(I)Ljava/lang/CharSequence;
@@ -237,13 +224,11 @@
 
     invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/CharSequence;)Ljava/lang/StringBuilder;
 
-    .line 1342
     :cond_0
     shl-int/lit8 v0, v0, 0x1
 
     goto :goto_0
 
-    .line 1349
     :cond_1
     return-object v1
 .end method
@@ -253,7 +238,6 @@
     .param p1, "serviceClass"    # I
 
     .prologue
-    .line 1321
     new-instance v1, Ljava/lang/StringBuilder;
 
     iget-object v2, p0, Lcom/movial/ipphone/IPMmiCode;->context:Landroid/content/Context;
@@ -266,28 +250,23 @@
 
     invoke-direct {v1, v2}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/CharSequence;)V
 
-    .line 1324
     .local v1, "sb":Ljava/lang/StringBuilder;
     const/4 v0, 0x1
 
-    .line 1325
     .local v0, "classMask":I
     :goto_0
     const/16 v2, 0x80
 
     if-gt v0, v2, :cond_1
 
-    .line 1328
     and-int v2, v0, p1
 
     if-eqz v2, :cond_0
 
-    .line 1329
     const-string v2, "\n"
 
     invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 1330
     and-int v2, v0, p1
 
     invoke-direct {p0, v2}, Lcom/movial/ipphone/IPMmiCode;->serviceClassToCFString(I)Ljava/lang/CharSequence;
@@ -296,13 +275,11 @@
 
     invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/CharSequence;)Ljava/lang/StringBuilder;
 
-    .line 1326
     :cond_0
     shl-int/lit8 v0, v0, 0x1
 
     goto :goto_0
 
-    .line 1333
     :cond_1
     return-object v1
 .end method
@@ -311,12 +288,10 @@
     .locals 2
 
     .prologue
-    .line 964
     iget-object v0, p0, Lcom/movial/ipphone/IPMmiCode;->sc:Ljava/lang/String;
 
     if-eqz v0, :cond_6
 
-    .line 965
     iget-object v0, p0, Lcom/movial/ipphone/IPMmiCode;->sc:Ljava/lang/String;
 
     invoke-static {v0}, Lcom/movial/ipphone/IPMmiCode;->isServiceCodeCallBarring(Ljava/lang/String;)Z
@@ -325,7 +300,6 @@
 
     if-eqz v0, :cond_0
 
-    .line 966
     iget-object v0, p0, Lcom/movial/ipphone/IPMmiCode;->context:Landroid/content/Context;
 
     const v1, 0x10400a5
@@ -334,11 +308,9 @@
 
     move-result-object v0
 
-    .line 982
     :goto_0
     return-object v0
 
-    .line 967
     :cond_0
     iget-object v0, p0, Lcom/movial/ipphone/IPMmiCode;->sc:Ljava/lang/String;
 
@@ -348,7 +320,6 @@
 
     if-eqz v0, :cond_1
 
-    .line 968
     iget-object v0, p0, Lcom/movial/ipphone/IPMmiCode;->context:Landroid/content/Context;
 
     const v1, 0x10400a3
@@ -359,7 +330,6 @@
 
     goto :goto_0
 
-    .line 969
     :cond_1
     iget-object v0, p0, Lcom/movial/ipphone/IPMmiCode;->sc:Ljava/lang/String;
 
@@ -371,7 +341,6 @@
 
     if-eqz v0, :cond_2
 
-    .line 970
     iget-object v0, p0, Lcom/movial/ipphone/IPMmiCode;->context:Landroid/content/Context;
 
     const v1, 0x104009f
@@ -382,7 +351,6 @@
 
     goto :goto_0
 
-    .line 971
     :cond_2
     iget-object v0, p0, Lcom/movial/ipphone/IPMmiCode;->sc:Ljava/lang/String;
 
@@ -394,7 +362,6 @@
 
     if-eqz v0, :cond_3
 
-    .line 972
     iget-object v0, p0, Lcom/movial/ipphone/IPMmiCode;->context:Landroid/content/Context;
 
     const v1, 0x10400a0
@@ -405,7 +372,6 @@
 
     goto :goto_0
 
-    .line 973
     :cond_3
     iget-object v0, p0, Lcom/movial/ipphone/IPMmiCode;->sc:Ljava/lang/String;
 
@@ -417,7 +383,6 @@
 
     if-eqz v0, :cond_4
 
-    .line 974
     iget-object v0, p0, Lcom/movial/ipphone/IPMmiCode;->context:Landroid/content/Context;
 
     const v1, 0x10400a6
@@ -428,7 +393,6 @@
 
     goto :goto_0
 
-    .line 975
     :cond_4
     iget-object v0, p0, Lcom/movial/ipphone/IPMmiCode;->sc:Ljava/lang/String;
 
@@ -440,7 +404,6 @@
 
     if-eqz v0, :cond_5
 
-    .line 976
     iget-object v0, p0, Lcom/movial/ipphone/IPMmiCode;->context:Landroid/content/Context;
 
     const v1, 0x10400a4
@@ -451,7 +414,6 @@
 
     goto :goto_0
 
-    .line 977
     :cond_5
     invoke-virtual {p0}, Lcom/movial/ipphone/IPMmiCode;->isPinCommand()Z
 
@@ -459,7 +421,6 @@
 
     if-eqz v0, :cond_6
 
-    .line 978
     iget-object v0, p0, Lcom/movial/ipphone/IPMmiCode;->context:Landroid/content/Context;
 
     const v1, 0x10400a7
@@ -470,7 +431,6 @@
 
     goto :goto_0
 
-    .line 982
     :cond_6
     const-string v0, ""
 
@@ -482,12 +442,10 @@
     .param p1, "res"    # I
 
     .prologue
-    .line 824
     sget-object v1, Lcom/android/internal/telephony/MmiCode$State;->FAILED:Lcom/android/internal/telephony/MmiCode$State;
 
     iput-object v1, p0, Lcom/movial/ipphone/IPMmiCode;->state:Lcom/android/internal/telephony/MmiCode$State;
 
-    .line 825
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {p0}, Lcom/movial/ipphone/IPMmiCode;->getScString()Ljava/lang/CharSequence;
@@ -496,13 +454,11 @@
 
     invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/CharSequence;)V
 
-    .line 826
     .local v0, "sb":Ljava/lang/StringBuilder;
     const-string v1, "\n"
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 827
     iget-object v1, p0, Lcom/movial/ipphone/IPMmiCode;->context:Landroid/content/Context;
 
     invoke-virtual {v1, p1}, Landroid/content/Context;->getText(I)Ljava/lang/CharSequence;
@@ -511,15 +467,12 @@
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/CharSequence;)Ljava/lang/StringBuilder;
 
-    .line 828
     iput-object v0, p0, Lcom/movial/ipphone/IPMmiCode;->message:Ljava/lang/CharSequence;
 
-    .line 829
     iget-object v1, p0, Lcom/movial/ipphone/IPMmiCode;->phone:Lcom/movial/ipphone/IPPhone;
 
     invoke-virtual {v1, p0}, Lcom/movial/ipphone/IPPhone;->onMMIDone(Lcom/movial/ipphone/IPMmiCode;)V
 
-    .line 830
     return-void
 .end method
 
@@ -528,7 +481,6 @@
     .param p0, "s"    # Ljava/lang/CharSequence;
 
     .prologue
-    .line 325
     if-eqz p0, :cond_0
 
     invoke-interface {p0}, Ljava/lang/CharSequence;->length()I
@@ -554,7 +506,6 @@
     .param p0, "sc"    # Ljava/lang/String;
 
     .prologue
-    .line 412
     if-eqz p0, :cond_1
 
     const-string v0, "33"
@@ -638,7 +589,6 @@
     .param p0, "sc"    # Ljava/lang/String;
 
     .prologue
-    .line 403
     if-eqz p0, :cond_1
 
     const-string v0, "21"
@@ -711,7 +661,6 @@
 
     const/4 v0, 0x0
 
-    .line 538
     if-eqz p0, :cond_2
 
     invoke-virtual {p0}, Ljava/lang/String;->length()I
@@ -784,7 +733,6 @@
 
     const/4 v4, 0x1
 
-    .line 1175
     new-array v2, v7, [Ljava/lang/String;
 
     const-string v6, "{0}"
@@ -799,11 +747,9 @@
 
     aput-object v6, v2, v8
 
-    .line 1176
     .local v2, "sources":[Ljava/lang/String;
     new-array v0, v7, [Ljava/lang/CharSequence;
 
-    .line 1182
     .local v0, "destinations":[Ljava/lang/CharSequence;
     iget v6, p1, Lcom/android/internal/telephony/CallForwardInfo;->reason:I
 
@@ -811,17 +757,14 @@
 
     move v1, v4
 
-    .line 1185
     .local v1, "needTimeTemplate":Z
     :goto_0
     iget v6, p1, Lcom/android/internal/telephony/CallForwardInfo;->status:I
 
     if-ne v6, v4, :cond_3
 
-    .line 1186
     if-eqz v1, :cond_2
 
-    .line 1187
     iget-object v6, p0, Lcom/movial/ipphone/IPMmiCode;->context:Landroid/content/Context;
 
     const v7, 0x10400d5
@@ -830,7 +773,6 @@
 
     move-result-object v3
 
-    .line 1214
     .local v3, "template":Ljava/lang/CharSequence;
     :goto_1
     iget v6, p1, Lcom/android/internal/telephony/CallForwardInfo;->serviceClass:I
@@ -843,7 +785,6 @@
 
     aput-object v6, v0, v5
 
-    .line 1215
     iget-object v5, p1, Lcom/android/internal/telephony/CallForwardInfo;->number:Ljava/lang/String;
 
     iget v6, p1, Lcom/android/internal/telephony/CallForwardInfo;->toa:I
@@ -854,7 +795,6 @@
 
     aput-object v5, v0, v4
 
-    .line 1216
     iget v5, p1, Lcom/android/internal/telephony/CallForwardInfo;->timeSeconds:I
 
     invoke-static {v5}, Ljava/lang/Integer;->toString(I)Ljava/lang/String;
@@ -863,7 +803,6 @@
 
     aput-object v5, v0, v8
 
-    .line 1218
     iget v5, p1, Lcom/android/internal/telephony/CallForwardInfo;->reason:I
 
     if-nez v5, :cond_0
@@ -874,12 +813,10 @@
 
     if-ne v5, v4, :cond_0
 
-    .line 1221
     iget v5, p1, Lcom/android/internal/telephony/CallForwardInfo;->status:I
 
     if-ne v5, v4, :cond_0
 
-    .line 1226
     :cond_0
     invoke-static {v3, v2, v0}, Landroid/text/TextUtils;->replace(Ljava/lang/CharSequence;[Ljava/lang/String;[Ljava/lang/CharSequence;)Ljava/lang/CharSequence;
 
@@ -892,10 +829,8 @@
     :cond_1
     move v1, v5
 
-    .line 1182
     goto :goto_0
 
-    .line 1190
     .restart local v1    # "needTimeTemplate":Z
     :cond_2
     iget-object v6, p0, Lcom/movial/ipphone/IPMmiCode;->context:Landroid/content/Context;
@@ -909,7 +844,6 @@
     .restart local v3    # "template":Ljava/lang/CharSequence;
     goto :goto_1
 
-    .line 1193
     .end local v3    # "template":Ljava/lang/CharSequence;
     :cond_3
     iget v6, p1, Lcom/android/internal/telephony/CallForwardInfo;->status:I
@@ -924,7 +858,6 @@
 
     if-eqz v6, :cond_4
 
-    .line 1194
     iget-object v6, p0, Lcom/movial/ipphone/IPMmiCode;->context:Landroid/content/Context;
 
     const v7, 0x10400d3
@@ -936,12 +869,10 @@
     .restart local v3    # "template":Ljava/lang/CharSequence;
     goto :goto_1
 
-    .line 1200
     .end local v3    # "template":Ljava/lang/CharSequence;
     :cond_4
     if-eqz v1, :cond_5
 
-    .line 1201
     iget-object v6, p0, Lcom/movial/ipphone/IPMmiCode;->context:Landroid/content/Context;
 
     const v7, 0x10400d7
@@ -953,7 +884,6 @@
     .restart local v3    # "template":Ljava/lang/CharSequence;
     goto :goto_1
 
-    .line 1204
     .end local v3    # "template":Ljava/lang/CharSequence;
     :cond_5
     iget-object v6, p0, Lcom/movial/ipphone/IPMmiCode;->context:Landroid/content/Context;
@@ -973,7 +903,6 @@
     .param p0, "s"    # Ljava/lang/String;
 
     .prologue
-    .line 317
     if-eqz p0, :cond_0
 
     invoke-virtual {p0}, Ljava/lang/String;->length()I
@@ -984,7 +913,6 @@
 
     const/4 p0, 0x0
 
-    .line 319
     .end local p0    # "s":Ljava/lang/String;
     :cond_0
     return-object p0
@@ -1000,10 +928,8 @@
 
     const/4 v8, 0x3
 
-    .line 230
     const/4 v5, 0x0
 
-    .line 233
     .local v5, "ret":Lcom/movial/ipphone/IPMmiCode;
     sget-object v6, Lcom/movial/ipphone/IPMmiCode;->sPatternSuppServiceGlobalDev:Ljava/util/regex/Pattern;
 
@@ -1011,7 +937,6 @@
 
     move-result-object v3
 
-    .line 234
     .local v3, "gm":Ljava/util/regex/Matcher;
     invoke-virtual {v3}, Ljava/util/regex/Matcher;->matches()Z
 
@@ -1019,7 +944,6 @@
 
     if-eqz v6, :cond_0
 
-    .line 235
     invoke-virtual {v3, v8}, Ljava/util/regex/Matcher;->group(I)Ljava/lang/String;
 
     move-result-object v6
@@ -1028,7 +952,6 @@
 
     move-result-object v0
 
-    .line 236
     .local v0, "DialCode":Ljava/lang/String;
     const/4 v6, 0x4
 
@@ -1036,7 +959,6 @@
 
     move-result-object v2
 
-    .line 237
     .local v2, "DialPrefix":Ljava/lang/String;
     invoke-virtual {v3, v9}, Ljava/util/regex/Matcher;->group(I)Ljava/lang/String;
 
@@ -1046,7 +968,6 @@
 
     move-result-object v1
 
-    .line 238
     .local v1, "DialNumber":Ljava/lang/String;
     const-string v6, "67"
 
@@ -1058,7 +979,6 @@
 
     if-eqz v1, :cond_2
 
-    .line 240
     new-instance v6, Ljava/lang/StringBuilder;
 
     invoke-direct {v6}, Ljava/lang/StringBuilder;-><init>()V
@@ -1081,7 +1001,6 @@
 
     move-result-object p0
 
-    .line 249
     .end local v0    # "DialCode":Ljava/lang/String;
     .end local v1    # "DialNumber":Ljava/lang/String;
     .end local v2    # "DialPrefix":Ljava/lang/String;
@@ -1093,7 +1012,6 @@
 
     move-result-object v4
 
-    .line 252
     .local v4, "m":Ljava/util/regex/Matcher;
     invoke-virtual {v4}, Ljava/util/regex/Matcher;->matches()Z
 
@@ -1101,13 +1019,11 @@
 
     if-eqz v6, :cond_3
 
-    .line 253
     new-instance v5, Lcom/movial/ipphone/IPMmiCode;
 
     .end local v5    # "ret":Lcom/movial/ipphone/IPMmiCode;
     invoke-direct {v5, p1}, Lcom/movial/ipphone/IPMmiCode;-><init>(Lcom/movial/ipphone/IPPhone;)V
 
-    .line 254
     .restart local v5    # "ret":Lcom/movial/ipphone/IPMmiCode;
     const/4 v6, 0x1
 
@@ -1121,7 +1037,6 @@
 
     iput-object v6, v5, Lcom/movial/ipphone/IPMmiCode;->poundString:Ljava/lang/String;
 
-    .line 255
     const/4 v6, 0x2
 
     invoke-virtual {v4, v6}, Ljava/util/regex/Matcher;->group(I)Ljava/lang/String;
@@ -1134,7 +1049,6 @@
 
     iput-object v6, v5, Lcom/movial/ipphone/IPMmiCode;->action:Ljava/lang/String;
 
-    .line 256
     invoke-virtual {v4, v8}, Ljava/util/regex/Matcher;->group(I)Ljava/lang/String;
 
     move-result-object v6
@@ -1145,7 +1059,6 @@
 
     iput-object v6, v5, Lcom/movial/ipphone/IPMmiCode;->sc:Ljava/lang/String;
 
-    .line 257
     invoke-virtual {v4, v9}, Ljava/util/regex/Matcher;->group(I)Ljava/lang/String;
 
     move-result-object v6
@@ -1156,7 +1069,6 @@
 
     iput-object v6, v5, Lcom/movial/ipphone/IPMmiCode;->sia:Ljava/lang/String;
 
-    .line 258
     const/4 v6, 0x7
 
     invoke-virtual {v4, v6}, Ljava/util/regex/Matcher;->group(I)Ljava/lang/String;
@@ -1169,7 +1081,6 @@
 
     iput-object v6, v5, Lcom/movial/ipphone/IPMmiCode;->sib:Ljava/lang/String;
 
-    .line 259
     const/16 v6, 0x9
 
     invoke-virtual {v4, v6}, Ljava/util/regex/Matcher;->group(I)Ljava/lang/String;
@@ -1182,7 +1093,6 @@
 
     iput-object v6, v5, Lcom/movial/ipphone/IPMmiCode;->sic:Ljava/lang/String;
 
-    .line 260
     const/16 v6, 0xb
 
     invoke-virtual {v4, v6}, Ljava/util/regex/Matcher;->group(I)Ljava/lang/String;
@@ -1195,7 +1105,6 @@
 
     iput-object v6, v5, Lcom/movial/ipphone/IPMmiCode;->pwd:Ljava/lang/String;
 
-    .line 261
     const/16 v6, 0xc
 
     invoke-virtual {v4, v6}, Ljava/util/regex/Matcher;->group(I)Ljava/lang/String;
@@ -1208,12 +1117,10 @@
 
     iput-object v6, v5, Lcom/movial/ipphone/IPMmiCode;->dialingNumber:Ljava/lang/String;
 
-    .line 276
     :cond_1
     :goto_1
     return-object v5
 
-    .line 242
     .end local v4    # "m":Ljava/util/regex/Matcher;
     .restart local v0    # "DialCode":Ljava/lang/String;
     .restart local v1    # "DialNumber":Ljava/lang/String;
@@ -1229,7 +1136,6 @@
 
     if-eqz v1, :cond_0
 
-    .line 244
     new-instance v6, Ljava/lang/StringBuilder;
 
     invoke-direct {v6}, Ljava/lang/StringBuilder;-><init>()V
@@ -1254,7 +1160,6 @@
 
     goto/16 :goto_0
 
-    .line 263
     .end local v0    # "DialCode":Ljava/lang/String;
     .end local v1    # "DialNumber":Ljava/lang/String;
     .end local v2    # "DialPrefix":Ljava/lang/String;
@@ -1268,19 +1173,16 @@
 
     if-eqz v6, :cond_4
 
-    .line 268
     new-instance v5, Lcom/movial/ipphone/IPMmiCode;
 
     .end local v5    # "ret":Lcom/movial/ipphone/IPMmiCode;
     invoke-direct {v5, p1}, Lcom/movial/ipphone/IPMmiCode;-><init>(Lcom/movial/ipphone/IPPhone;)V
 
-    .line 269
     .restart local v5    # "ret":Lcom/movial/ipphone/IPMmiCode;
     iput-object p0, v5, Lcom/movial/ipphone/IPMmiCode;->poundString:Ljava/lang/String;
 
     goto :goto_1
 
-    .line 270
     :cond_4
     invoke-static {p0, p1}, Lcom/movial/ipphone/IPMmiCode;->isShortCode(Ljava/lang/String;Lcom/movial/ipphone/IPPhone;)Z
 
@@ -1288,13 +1190,11 @@
 
     if-eqz v6, :cond_1
 
-    .line 272
     new-instance v5, Lcom/movial/ipphone/IPMmiCode;
 
     .end local v5    # "ret":Lcom/movial/ipphone/IPMmiCode;
     invoke-direct {v5, p1}, Lcom/movial/ipphone/IPMmiCode;-><init>(Lcom/movial/ipphone/IPPhone;)V
 
-    .line 273
     .restart local v5    # "ret":Lcom/movial/ipphone/IPMmiCode;
     iput-object p0, v5, Lcom/movial/ipphone/IPMmiCode;->dialingNumber:Ljava/lang/String;
 
@@ -1307,26 +1207,21 @@
     .param p1, "phone"    # Lcom/movial/ipphone/IPPhone;
 
     .prologue
-    .line 301
     new-instance v0, Lcom/movial/ipphone/IPMmiCode;
 
     invoke-direct {v0, p1}, Lcom/movial/ipphone/IPMmiCode;-><init>(Lcom/movial/ipphone/IPPhone;)V
 
-    .line 303
     .local v0, "ret":Lcom/movial/ipphone/IPMmiCode;
     iput-object p0, v0, Lcom/movial/ipphone/IPMmiCode;->message:Ljava/lang/CharSequence;
 
-    .line 304
     sget-object v1, Lcom/android/internal/telephony/MmiCode$State;->PENDING:Lcom/android/internal/telephony/MmiCode$State;
 
     iput-object v1, v0, Lcom/movial/ipphone/IPMmiCode;->state:Lcom/android/internal/telephony/MmiCode$State;
 
-    .line 305
     const/4 v1, 0x1
 
     iput-boolean v1, v0, Lcom/movial/ipphone/IPMmiCode;->isPendingUSSD:Z
 
-    .line 307
     return-object v0
 .end method
 
@@ -1337,36 +1232,28 @@
     .param p2, "phone"    # Lcom/movial/ipphone/IPPhone;
 
     .prologue
-    .line 284
     new-instance v0, Lcom/movial/ipphone/IPMmiCode;
 
     invoke-direct {v0, p2}, Lcom/movial/ipphone/IPMmiCode;-><init>(Lcom/movial/ipphone/IPPhone;)V
 
-    .line 286
     .local v0, "ret":Lcom/movial/ipphone/IPMmiCode;
     iput-object p0, v0, Lcom/movial/ipphone/IPMmiCode;->message:Ljava/lang/CharSequence;
 
-    .line 287
     iput-boolean p1, v0, Lcom/movial/ipphone/IPMmiCode;->isUssdRequest:Z
 
-    .line 290
     if-eqz p1, :cond_0
 
-    .line 291
     const/4 v1, 0x1
 
     iput-boolean v1, v0, Lcom/movial/ipphone/IPMmiCode;->isPendingUSSD:Z
 
-    .line 292
     sget-object v1, Lcom/android/internal/telephony/MmiCode$State;->PENDING:Lcom/android/internal/telephony/MmiCode$State;
 
     iput-object v1, v0, Lcom/movial/ipphone/IPMmiCode;->state:Lcom/android/internal/telephony/MmiCode$State;
 
-    .line 297
     :goto_0
     return-object v0
 
-    .line 294
     :cond_0
     sget-object v1, Lcom/android/internal/telephony/MmiCode$State;->COMPLETE:Lcom/android/internal/telephony/MmiCode$State;
 
@@ -1388,7 +1275,6 @@
 
     const/4 v3, 0x0
 
-    .line 1061
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {p0}, Lcom/movial/ipphone/IPMmiCode;->getScString()Ljava/lang/CharSequence;
@@ -1397,23 +1283,19 @@
 
     invoke-direct {v1, v2}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/CharSequence;)V
 
-    .line 1062
     .local v1, "sb":Ljava/lang/StringBuilder;
     const-string v2, "\n"
 
     invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 1064
     iget-object v2, p1, Landroid/os/AsyncResult;->exception:Ljava/lang/Throwable;
 
     if-eqz v2, :cond_0
 
-    .line 1065
     sget-object v2, Lcom/android/internal/telephony/MmiCode$State;->FAILED:Lcom/android/internal/telephony/MmiCode$State;
 
     iput-object v2, p0, Lcom/movial/ipphone/IPMmiCode;->state:Lcom/android/internal/telephony/MmiCode$State;
 
-    .line 1066
     iget-object v2, p0, Lcom/movial/ipphone/IPMmiCode;->context:Landroid/content/Context;
 
     invoke-virtual {v2, v4}, Landroid/content/Context;->getText(I)Ljava/lang/CharSequence;
@@ -1422,19 +1304,15 @@
 
     invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/CharSequence;)Ljava/lang/StringBuilder;
 
-    .line 1136
     :goto_0
     iput-object v1, p0, Lcom/movial/ipphone/IPMmiCode;->message:Ljava/lang/CharSequence;
 
-    .line 1137
     iget-object v2, p0, Lcom/movial/ipphone/IPMmiCode;->phone:Lcom/movial/ipphone/IPPhone;
 
     invoke-virtual {v2, p0}, Lcom/movial/ipphone/IPPhone;->onMMIDone(Lcom/movial/ipphone/IPMmiCode;)V
 
-    .line 1138
     return-void
 
-    .line 1070
     :cond_0
     iget-object v2, p1, Landroid/os/AsyncResult;->result:Ljava/lang/Object;
 
@@ -1444,7 +1322,6 @@
 
     check-cast v0, [I
 
-    .line 1073
     .local v0, "clirArgs":[I
     const/4 v2, 0x1
 
@@ -1454,7 +1331,6 @@
 
     goto :goto_0
 
-    .line 1075
     :pswitch_0
     iget-object v2, p0, Lcom/movial/ipphone/IPMmiCode;->context:Landroid/content/Context;
 
@@ -1466,14 +1342,12 @@
 
     invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/CharSequence;)Ljava/lang/StringBuilder;
 
-    .line 1077
     sget-object v2, Lcom/android/internal/telephony/MmiCode$State;->COMPLETE:Lcom/android/internal/telephony/MmiCode$State;
 
     iput-object v2, p0, Lcom/movial/ipphone/IPMmiCode;->state:Lcom/android/internal/telephony/MmiCode$State;
 
     goto :goto_0
 
-    .line 1081
     :pswitch_1
     iget-object v2, p0, Lcom/movial/ipphone/IPMmiCode;->context:Landroid/content/Context;
 
@@ -1485,14 +1359,12 @@
 
     invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/CharSequence;)Ljava/lang/StringBuilder;
 
-    .line 1083
     sget-object v2, Lcom/android/internal/telephony/MmiCode$State;->COMPLETE:Lcom/android/internal/telephony/MmiCode$State;
 
     iput-object v2, p0, Lcom/movial/ipphone/IPMmiCode;->state:Lcom/android/internal/telephony/MmiCode$State;
 
     goto :goto_0
 
-    .line 1087
     :pswitch_2
     iget-object v2, p0, Lcom/movial/ipphone/IPMmiCode;->context:Landroid/content/Context;
 
@@ -1502,20 +1374,17 @@
 
     invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/CharSequence;)Ljava/lang/StringBuilder;
 
-    .line 1089
     sget-object v2, Lcom/android/internal/telephony/MmiCode$State;->FAILED:Lcom/android/internal/telephony/MmiCode$State;
 
     iput-object v2, p0, Lcom/movial/ipphone/IPMmiCode;->state:Lcom/android/internal/telephony/MmiCode$State;
 
     goto :goto_0
 
-    .line 1095
     :pswitch_3
     aget v2, v0, v3
 
     packed-switch v2, :pswitch_data_1
 
-    .line 1098
     iget-object v2, p0, Lcom/movial/ipphone/IPMmiCode;->context:Landroid/content/Context;
 
     invoke-virtual {v2, v5}, Landroid/content/Context;->getText(I)Ljava/lang/CharSequence;
@@ -1524,7 +1393,6 @@
 
     invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/CharSequence;)Ljava/lang/StringBuilder;
 
-    .line 1110
     :goto_1
     sget-object v2, Lcom/android/internal/telephony/MmiCode$State;->COMPLETE:Lcom/android/internal/telephony/MmiCode$State;
 
@@ -1532,7 +1400,6 @@
 
     goto :goto_0
 
-    .line 1102
     :pswitch_4
     iget-object v2, p0, Lcom/movial/ipphone/IPMmiCode;->context:Landroid/content/Context;
 
@@ -1544,7 +1411,6 @@
 
     goto :goto_1
 
-    .line 1106
     :pswitch_5
     iget-object v2, p0, Lcom/movial/ipphone/IPMmiCode;->context:Landroid/content/Context;
 
@@ -1558,13 +1424,11 @@
 
     goto :goto_1
 
-    .line 1115
     :pswitch_6
     aget v2, v0, v3
 
     packed-switch v2, :pswitch_data_2
 
-    .line 1118
     iget-object v2, p0, Lcom/movial/ipphone/IPMmiCode;->context:Landroid/content/Context;
 
     invoke-virtual {v2, v6}, Landroid/content/Context;->getText(I)Ljava/lang/CharSequence;
@@ -1573,7 +1437,6 @@
 
     invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/CharSequence;)Ljava/lang/StringBuilder;
 
-    .line 1131
     :goto_2
     sget-object v2, Lcom/android/internal/telephony/MmiCode$State;->COMPLETE:Lcom/android/internal/telephony/MmiCode$State;
 
@@ -1581,7 +1444,6 @@
 
     goto/16 :goto_0
 
-    .line 1122
     :pswitch_7
     iget-object v2, p0, Lcom/movial/ipphone/IPMmiCode;->context:Landroid/content/Context;
 
@@ -1595,7 +1457,6 @@
 
     goto :goto_2
 
-    .line 1126
     :pswitch_8
     iget-object v2, p0, Lcom/movial/ipphone/IPMmiCode;->context:Landroid/content/Context;
 
@@ -1607,7 +1468,6 @@
 
     goto :goto_2
 
-    .line 1073
     :pswitch_data_0
     .packed-switch 0x0
         :pswitch_0
@@ -1617,14 +1477,12 @@
         :pswitch_6
     .end packed-switch
 
-    .line 1095
     :pswitch_data_1
     .packed-switch 0x1
         :pswitch_4
         :pswitch_5
     .end packed-switch
 
-    .line 1115
     :pswitch_data_2
     .packed-switch 0x1
         :pswitch_7
@@ -1637,7 +1495,6 @@
     .param p1, "ar"    # Landroid/os/AsyncResult;
 
     .prologue
-    .line 1232
     new-instance v3, Ljava/lang/StringBuilder;
 
     invoke-direct {p0}, Lcom/movial/ipphone/IPMmiCode;->getScString()Ljava/lang/CharSequence;
@@ -1646,23 +1503,19 @@
 
     invoke-direct {v3, v6}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/CharSequence;)V
 
-    .line 1233
     .local v3, "sb":Ljava/lang/StringBuilder;
     const-string v6, "\n"
 
     invoke-virtual {v3, v6}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 1235
     iget-object v6, p1, Landroid/os/AsyncResult;->exception:Ljava/lang/Throwable;
 
     if-eqz v6, :cond_0
 
-    .line 1236
     sget-object v6, Lcom/android/internal/telephony/MmiCode$State;->FAILED:Lcom/android/internal/telephony/MmiCode$State;
 
     iput-object v6, p0, Lcom/movial/ipphone/IPMmiCode;->state:Lcom/android/internal/telephony/MmiCode$State;
 
-    .line 1237
     iget-object v6, p0, Lcom/movial/ipphone/IPMmiCode;->context:Landroid/content/Context;
 
     const v7, 0x104008c
@@ -1673,19 +1526,15 @@
 
     invoke-virtual {v3, v6}, Ljava/lang/StringBuilder;->append(Ljava/lang/CharSequence;)Ljava/lang/StringBuilder;
 
-    .line 1278
     :goto_0
     iput-object v3, p0, Lcom/movial/ipphone/IPMmiCode;->message:Ljava/lang/CharSequence;
 
-    .line 1279
     iget-object v6, p0, Lcom/movial/ipphone/IPMmiCode;->phone:Lcom/movial/ipphone/IPPhone;
 
     invoke-virtual {v6, p0}, Lcom/movial/ipphone/IPPhone;->onMMIDone(Lcom/movial/ipphone/IPMmiCode;)V
 
-    .line 1281
     return-void
 
-    .line 1241
     :cond_0
     iget-object v6, p1, Landroid/os/AsyncResult;->result:Ljava/lang/Object;
 
@@ -1695,13 +1544,11 @@
 
     check-cast v1, [Lcom/android/internal/telephony/CallForwardInfo;
 
-    .line 1243
     .local v1, "infos":[Lcom/android/internal/telephony/CallForwardInfo;
     array-length v6, v1
 
     if-nez v6, :cond_1
 
-    .line 1245
     iget-object v6, p0, Lcom/movial/ipphone/IPMmiCode;->context:Landroid/content/Context;
 
     const v7, 0x1040090
@@ -1712,7 +1559,6 @@
 
     invoke-virtual {v3, v6}, Ljava/lang/StringBuilder;->append(Ljava/lang/CharSequence;)Ljava/lang/StringBuilder;
 
-    .line 1275
     :goto_1
     sget-object v6, Lcom/android/internal/telephony/MmiCode$State;->COMPLETE:Lcom/android/internal/telephony/MmiCode$State;
 
@@ -1720,24 +1566,20 @@
 
     goto :goto_0
 
-    .line 1252
     :cond_1
     new-instance v5, Landroid/text/SpannableStringBuilder;
 
     invoke-direct {v5}, Landroid/text/SpannableStringBuilder;-><init>()V
 
-    .line 1260
     .local v5, "tb":Landroid/text/SpannableStringBuilder;
     const/4 v4, 0x1
 
-    .line 1261
     .local v4, "serviceClassMask":I
     :goto_2
     const/16 v6, 0x80
 
     if-gt v4, v6, :cond_4
 
-    .line 1264
     const/4 v0, 0x0
 
     .local v0, "i":I
@@ -1747,7 +1589,6 @@
     :goto_3
     if-ge v0, v2, :cond_3
 
-    .line 1265
     aget-object v6, v1, v0
 
     iget v6, v6, Lcom/android/internal/telephony/CallForwardInfo;->serviceClass:I
@@ -1756,7 +1597,6 @@
 
     if-eqz v6, :cond_2
 
-    .line 1266
     aget-object v6, v1, v0
 
     invoke-direct {p0, v6, v4}, Lcom/movial/ipphone/IPMmiCode;->makeCFQueryResultMessage(Lcom/android/internal/telephony/CallForwardInfo;I)Ljava/lang/CharSequence;
@@ -1765,24 +1605,20 @@
 
     invoke-virtual {v5, v6}, Landroid/text/SpannableStringBuilder;->append(Ljava/lang/CharSequence;)Landroid/text/SpannableStringBuilder;
 
-    .line 1268
     const-string v6, "\n"
 
     invoke-virtual {v5, v6}, Landroid/text/SpannableStringBuilder;->append(Ljava/lang/CharSequence;)Landroid/text/SpannableStringBuilder;
 
-    .line 1264
     :cond_2
     add-int/lit8 v0, v0, 0x1
 
     goto :goto_3
 
-    .line 1262
     :cond_3
     shl-int/lit8 v4, v4, 0x1
 
     goto :goto_2
 
-    .line 1272
     .end local v0    # "i":I
     .end local v2    # "s":I
     :cond_4
@@ -1802,7 +1638,6 @@
 
     const/4 v4, 0x0
 
-    .line 1285
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {p0}, Lcom/movial/ipphone/IPMmiCode;->getScString()Ljava/lang/CharSequence;
@@ -1811,23 +1646,19 @@
 
     invoke-direct {v1, v2}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/CharSequence;)V
 
-    .line 1286
     .local v1, "sb":Ljava/lang/StringBuilder;
     const-string v2, "\n"
 
     invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 1288
     iget-object v2, p1, Landroid/os/AsyncResult;->exception:Ljava/lang/Throwable;
 
     if-eqz v2, :cond_0
 
-    .line 1289
     sget-object v2, Lcom/android/internal/telephony/MmiCode$State;->FAILED:Lcom/android/internal/telephony/MmiCode$State;
 
     iput-object v2, p0, Lcom/movial/ipphone/IPMmiCode;->state:Lcom/android/internal/telephony/MmiCode$State;
 
-    .line 1290
     iget-object v2, p0, Lcom/movial/ipphone/IPMmiCode;->context:Landroid/content/Context;
 
     invoke-virtual {v2, v5}, Landroid/content/Context;->getText(I)Ljava/lang/CharSequence;
@@ -1836,19 +1667,15 @@
 
     invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/CharSequence;)Ljava/lang/StringBuilder;
 
-    .line 1315
     :goto_0
     iput-object v1, p0, Lcom/movial/ipphone/IPMmiCode;->message:Ljava/lang/CharSequence;
 
-    .line 1316
     iget-object v2, p0, Lcom/movial/ipphone/IPMmiCode;->phone:Lcom/movial/ipphone/IPPhone;
 
     invoke-virtual {v2, p0}, Lcom/movial/ipphone/IPPhone;->onMMIDone(Lcom/movial/ipphone/IPMmiCode;)V
 
-    .line 1317
     return-void
 
-    .line 1292
     :cond_0
     iget-object v2, p1, Landroid/os/AsyncResult;->result:Ljava/lang/Object;
 
@@ -1858,18 +1685,15 @@
 
     check-cast v0, [I
 
-    .line 1294
     .local v0, "ints":[I
     array-length v2, v0
 
     if-eqz v2, :cond_5
 
-    .line 1295
     aget v2, v0, v4
 
     if-nez v2, :cond_1
 
-    .line 1296
     iget-object v2, p0, Lcom/movial/ipphone/IPMmiCode;->context:Landroid/content/Context;
 
     const v3, 0x1040090
@@ -1880,7 +1704,6 @@
 
     invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/CharSequence;)Ljava/lang/StringBuilder;
 
-    .line 1312
     :goto_1
     sget-object v2, Lcom/android/internal/telephony/MmiCode$State;->COMPLETE:Lcom/android/internal/telephony/MmiCode$State;
 
@@ -1888,7 +1711,6 @@
 
     goto :goto_0
 
-    .line 1297
     :cond_1
     iget-object v2, p0, Lcom/movial/ipphone/IPMmiCode;->sc:Ljava/lang/String;
 
@@ -1900,7 +1722,6 @@
 
     if-eqz v2, :cond_2
 
-    .line 1299
     aget v2, v0, v6
 
     invoke-direct {p0, v2}, Lcom/movial/ipphone/IPMmiCode;->createQueryCallWaitingResultMessage(I)Ljava/lang/CharSequence;
@@ -1911,7 +1732,6 @@
 
     goto :goto_1
 
-    .line 1300
     :cond_2
     iget-object v2, p0, Lcom/movial/ipphone/IPMmiCode;->sc:Ljava/lang/String;
 
@@ -1921,7 +1741,6 @@
 
     if-eqz v2, :cond_3
 
-    .line 1302
     aget v2, v0, v4
 
     invoke-direct {p0, v2}, Lcom/movial/ipphone/IPMmiCode;->createQueryCallBarringResultMessage(I)Ljava/lang/CharSequence;
@@ -1932,13 +1751,11 @@
 
     goto :goto_1
 
-    .line 1303
     :cond_3
     aget v2, v0, v4
 
     if-ne v2, v6, :cond_4
 
-    .line 1305
     iget-object v2, p0, Lcom/movial/ipphone/IPMmiCode;->context:Landroid/content/Context;
 
     const v3, 0x104008e
@@ -1951,7 +1768,6 @@
 
     goto :goto_1
 
-    .line 1307
     :cond_4
     iget-object v2, p0, Lcom/movial/ipphone/IPMmiCode;->context:Landroid/content/Context;
 
@@ -1963,7 +1779,6 @@
 
     goto :goto_1
 
-    .line 1310
     :cond_5
     iget-object v2, p0, Lcom/movial/ipphone/IPMmiCode;->context:Landroid/content/Context;
 
@@ -1985,7 +1800,6 @@
 
     const v3, 0x104008c
 
-    .line 987
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {p0}, Lcom/movial/ipphone/IPMmiCode;->getScString()Ljava/lang/CharSequence;
@@ -1994,30 +1808,25 @@
 
     invoke-direct {v1, v2}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/CharSequence;)V
 
-    .line 988
     .local v1, "sb":Ljava/lang/StringBuilder;
     const-string v2, "\n"
 
     invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 990
     iget-object v2, p1, Landroid/os/AsyncResult;->exception:Ljava/lang/Throwable;
 
     if-eqz v2, :cond_7
 
-    .line 991
     sget-object v2, Lcom/android/internal/telephony/MmiCode$State;->FAILED:Lcom/android/internal/telephony/MmiCode$State;
 
     iput-object v2, p0, Lcom/movial/ipphone/IPMmiCode;->state:Lcom/android/internal/telephony/MmiCode$State;
 
-    .line 992
     iget-object v2, p1, Landroid/os/AsyncResult;->exception:Ljava/lang/Throwable;
 
     instance-of v2, v2, Lcom/android/internal/telephony/CommandException;
 
     if-eqz v2, :cond_6
 
-    .line 993
     iget-object v2, p1, Landroid/os/AsyncResult;->exception:Ljava/lang/Throwable;
 
     check-cast v2, Lcom/android/internal/telephony/CommandException;
@@ -2028,20 +1837,17 @@
 
     move-result-object v0
 
-    .line 994
     .local v0, "err":Lcom/android/internal/telephony/CommandException$Error;
     sget-object v2, Lcom/android/internal/telephony/CommandException$Error;->PASSWORD_INCORRECT:Lcom/android/internal/telephony/CommandException$Error;
 
     if-ne v0, v2, :cond_4
 
-    .line 995
     invoke-virtual {p0}, Lcom/movial/ipphone/IPMmiCode;->isPinCommand()Z
 
     move-result v2
 
     if-eqz v2, :cond_3
 
-    .line 998
     iget-object v2, p0, Lcom/movial/ipphone/IPMmiCode;->sc:Ljava/lang/String;
 
     const-string v3, "05"
@@ -2062,7 +1868,6 @@
 
     if-eqz v2, :cond_2
 
-    .line 999
     :cond_0
     iget-object v2, p0, Lcom/movial/ipphone/IPMmiCode;->context:Landroid/content/Context;
 
@@ -2074,21 +1879,17 @@
 
     invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/CharSequence;)Ljava/lang/StringBuilder;
 
-    .line 1055
     .end local v0    # "err":Lcom/android/internal/telephony/CommandException$Error;
     :cond_1
     :goto_0
     iput-object v1, p0, Lcom/movial/ipphone/IPMmiCode;->message:Ljava/lang/CharSequence;
 
-    .line 1056
     iget-object v2, p0, Lcom/movial/ipphone/IPMmiCode;->phone:Lcom/movial/ipphone/IPPhone;
 
     invoke-virtual {v2, p0}, Lcom/movial/ipphone/IPPhone;->onMMIDone(Lcom/movial/ipphone/IPMmiCode;)V
 
-    .line 1057
     return-void
 
-    .line 1002
     .restart local v0    # "err":Lcom/android/internal/telephony/CommandException$Error;
     :cond_2
     iget-object v2, p0, Lcom/movial/ipphone/IPMmiCode;->context:Landroid/content/Context;
@@ -2101,7 +1902,6 @@
 
     goto :goto_0
 
-    .line 1006
     :cond_3
     iget-object v2, p0, Lcom/movial/ipphone/IPMmiCode;->context:Landroid/content/Context;
 
@@ -2115,13 +1915,11 @@
 
     goto :goto_0
 
-    .line 1009
     :cond_4
     sget-object v2, Lcom/android/internal/telephony/CommandException$Error;->SIM_PUK2:Lcom/android/internal/telephony/CommandException$Error;
 
     if-ne v0, v2, :cond_5
 
-    .line 1010
     iget-object v2, p0, Lcom/movial/ipphone/IPMmiCode;->context:Landroid/content/Context;
 
     invoke-virtual {v2, v4}, Landroid/content/Context;->getText(I)Ljava/lang/CharSequence;
@@ -2130,12 +1928,10 @@
 
     invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/CharSequence;)Ljava/lang/StringBuilder;
 
-    .line 1012
     const-string v2, "\n"
 
     invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 1013
     iget-object v2, p0, Lcom/movial/ipphone/IPMmiCode;->context:Landroid/content/Context;
 
     const v3, 0x104009b
@@ -2148,7 +1944,6 @@
 
     goto :goto_0
 
-    .line 1016
     :cond_5
     iget-object v2, p0, Lcom/movial/ipphone/IPMmiCode;->context:Landroid/content/Context;
 
@@ -2160,7 +1955,6 @@
 
     goto :goto_0
 
-    .line 1020
     .end local v0    # "err":Lcom/android/internal/telephony/CommandException$Error;
     :cond_6
     iget-object v2, p0, Lcom/movial/ipphone/IPMmiCode;->context:Landroid/content/Context;
@@ -2173,7 +1967,6 @@
 
     goto :goto_0
 
-    .line 1023
     :cond_7
     invoke-virtual {p0}, Lcom/movial/ipphone/IPMmiCode;->isActivate()Z
 
@@ -2181,12 +1974,10 @@
 
     if-eqz v2, :cond_8
 
-    .line 1024
     sget-object v2, Lcom/android/internal/telephony/MmiCode$State;->COMPLETE:Lcom/android/internal/telephony/MmiCode$State;
 
     iput-object v2, p0, Lcom/movial/ipphone/IPMmiCode;->state:Lcom/android/internal/telephony/MmiCode$State;
 
-    .line 1025
     iget-object v2, p0, Lcom/movial/ipphone/IPMmiCode;->context:Landroid/content/Context;
 
     const v3, 0x104008e
@@ -2197,7 +1988,6 @@
 
     invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/CharSequence;)Ljava/lang/StringBuilder;
 
-    .line 1028
     iget-object v2, p0, Lcom/movial/ipphone/IPMmiCode;->sc:Ljava/lang/String;
 
     const-string v3, "31"
@@ -2210,7 +2000,6 @@
 
     goto :goto_0
 
-    .line 1032
     :cond_8
     invoke-virtual {p0}, Lcom/movial/ipphone/IPMmiCode;->isDeactivate()Z
 
@@ -2218,12 +2007,10 @@
 
     if-eqz v2, :cond_9
 
-    .line 1033
     sget-object v2, Lcom/android/internal/telephony/MmiCode$State;->COMPLETE:Lcom/android/internal/telephony/MmiCode$State;
 
     iput-object v2, p0, Lcom/movial/ipphone/IPMmiCode;->state:Lcom/android/internal/telephony/MmiCode$State;
 
-    .line 1034
     iget-object v2, p0, Lcom/movial/ipphone/IPMmiCode;->context:Landroid/content/Context;
 
     const v3, 0x1040090
@@ -2234,7 +2021,6 @@
 
     invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/CharSequence;)Ljava/lang/StringBuilder;
 
-    .line 1037
     iget-object v2, p0, Lcom/movial/ipphone/IPMmiCode;->sc:Ljava/lang/String;
 
     const-string v3, "31"
@@ -2247,7 +2033,6 @@
 
     goto/16 :goto_0
 
-    .line 1041
     :cond_9
     invoke-virtual {p0}, Lcom/movial/ipphone/IPMmiCode;->isRegister()Z
 
@@ -2255,12 +2040,10 @@
 
     if-eqz v2, :cond_a
 
-    .line 1042
     sget-object v2, Lcom/android/internal/telephony/MmiCode$State;->COMPLETE:Lcom/android/internal/telephony/MmiCode$State;
 
     iput-object v2, p0, Lcom/movial/ipphone/IPMmiCode;->state:Lcom/android/internal/telephony/MmiCode$State;
 
-    .line 1043
     iget-object v2, p0, Lcom/movial/ipphone/IPMmiCode;->context:Landroid/content/Context;
 
     const v3, 0x1040091
@@ -2273,7 +2056,6 @@
 
     goto/16 :goto_0
 
-    .line 1045
     :cond_a
     invoke-virtual {p0}, Lcom/movial/ipphone/IPMmiCode;->isErasure()Z
 
@@ -2281,12 +2063,10 @@
 
     if-eqz v2, :cond_b
 
-    .line 1046
     sget-object v2, Lcom/android/internal/telephony/MmiCode$State;->COMPLETE:Lcom/android/internal/telephony/MmiCode$State;
 
     iput-object v2, p0, Lcom/movial/ipphone/IPMmiCode;->state:Lcom/android/internal/telephony/MmiCode$State;
 
-    .line 1047
     iget-object v2, p0, Lcom/movial/ipphone/IPMmiCode;->context:Landroid/content/Context;
 
     const v3, 0x1040092
@@ -2299,13 +2079,11 @@
 
     goto/16 :goto_0
 
-    .line 1050
     :cond_b
     sget-object v2, Lcom/android/internal/telephony/MmiCode$State;->FAILED:Lcom/android/internal/telephony/MmiCode$State;
 
     iput-object v2, p0, Lcom/movial/ipphone/IPMmiCode;->state:Lcom/android/internal/telephony/MmiCode$State;
 
-    .line 1051
     iget-object v2, p0, Lcom/movial/ipphone/IPMmiCode;->context:Landroid/content/Context;
 
     invoke-virtual {v2, v3}, Landroid/content/Context;->getText(I)Ljava/lang/CharSequence;
@@ -2322,10 +2100,8 @@
     .param p0, "sc"    # Ljava/lang/String;
 
     .prologue
-    .line 425
     if-nez p0, :cond_0
 
-    .line 426
     new-instance v0, Ljava/lang/RuntimeException;
 
     const-string v1, "invalid call barring sc"
@@ -2334,7 +2110,6 @@
 
     throw v0
 
-    .line 429
     :cond_0
     const-string v0, "33"
 
@@ -2344,14 +2119,11 @@
 
     if-eqz v0, :cond_1
 
-    .line 430
     const-string v0, "AO"
 
-    .line 444
     :goto_0
     return-object v0
 
-    .line 431
     :cond_1
     const-string v0, "331"
 
@@ -2361,12 +2133,10 @@
 
     if-eqz v0, :cond_2
 
-    .line 432
     const-string v0, "OI"
 
     goto :goto_0
 
-    .line 433
     :cond_2
     const-string v0, "332"
 
@@ -2376,12 +2146,10 @@
 
     if-eqz v0, :cond_3
 
-    .line 434
     const-string v0, "OX"
 
     goto :goto_0
 
-    .line 435
     :cond_3
     const-string v0, "35"
 
@@ -2391,12 +2159,10 @@
 
     if-eqz v0, :cond_4
 
-    .line 436
     const-string v0, "AI"
 
     goto :goto_0
 
-    .line 437
     :cond_4
     const-string v0, "351"
 
@@ -2406,12 +2172,10 @@
 
     if-eqz v0, :cond_5
 
-    .line 438
     const-string v0, "IR"
 
     goto :goto_0
 
-    .line 439
     :cond_5
     const-string v0, "330"
 
@@ -2421,12 +2185,10 @@
 
     if-eqz v0, :cond_6
 
-    .line 440
     const-string v0, "AB"
 
     goto :goto_0
 
-    .line 441
     :cond_6
     const-string v0, "333"
 
@@ -2436,12 +2198,10 @@
 
     if-eqz v0, :cond_7
 
-    .line 442
     const-string v0, "AG"
 
     goto :goto_0
 
-    .line 443
     :cond_7
     const-string v0, "353"
 
@@ -2451,12 +2211,10 @@
 
     if-eqz v0, :cond_8
 
-    .line 444
     const-string v0, "AC"
 
     goto :goto_0
 
-    .line 446
     :cond_8
     new-instance v0, Ljava/lang/RuntimeException;
 
@@ -2472,10 +2230,8 @@
     .param p0, "sc"    # Ljava/lang/String;
 
     .prologue
-    .line 331
     if-nez p0, :cond_0
 
-    .line 332
     new-instance v0, Ljava/lang/RuntimeException;
 
     const-string v1, "invalid call forward sc"
@@ -2484,7 +2240,6 @@
 
     throw v0
 
-    .line 335
     :cond_0
     const-string v0, "002"
 
@@ -2494,14 +2249,11 @@
 
     if-eqz v0, :cond_1
 
-    .line 336
     const/4 v0, 0x4
 
-    .line 346
     :goto_0
     return v0
 
-    .line 337
     :cond_1
     const-string v0, "21"
 
@@ -2511,12 +2263,10 @@
 
     if-eqz v0, :cond_2
 
-    .line 338
     const/4 v0, 0x0
 
     goto :goto_0
 
-    .line 339
     :cond_2
     const-string v0, "67"
 
@@ -2526,12 +2276,10 @@
 
     if-eqz v0, :cond_3
 
-    .line 340
     const/4 v0, 0x1
 
     goto :goto_0
 
-    .line 341
     :cond_3
     const-string v0, "62"
 
@@ -2541,12 +2289,10 @@
 
     if-eqz v0, :cond_4
 
-    .line 342
     const/4 v0, 0x3
 
     goto :goto_0
 
-    .line 343
     :cond_4
     const-string v0, "61"
 
@@ -2556,12 +2302,10 @@
 
     if-eqz v0, :cond_5
 
-    .line 344
     const/4 v0, 0x2
 
     goto :goto_0
 
-    .line 345
     :cond_5
     const-string v0, "004"
 
@@ -2571,12 +2315,10 @@
 
     if-eqz v0, :cond_6
 
-    .line 346
     const/4 v0, 0x5
 
     goto :goto_0
 
-    .line 348
     :cond_6
     new-instance v0, Ljava/lang/RuntimeException;
 
@@ -2592,16 +2334,13 @@
     .param p1, "serviceClass"    # I
 
     .prologue
-    .line 1148
     sparse-switch p1, :sswitch_data_0
 
-    .line 1166
     const/4 v0, 0x0
 
     :goto_0
     return-object v0
 
-    .line 1150
     :sswitch_0
     iget-object v0, p0, Lcom/movial/ipphone/IPMmiCode;->context:Landroid/content/Context;
 
@@ -2613,7 +2352,6 @@
 
     goto :goto_0
 
-    .line 1152
     :sswitch_1
     iget-object v0, p0, Lcom/movial/ipphone/IPMmiCode;->context:Landroid/content/Context;
 
@@ -2625,7 +2363,6 @@
 
     goto :goto_0
 
-    .line 1154
     :sswitch_2
     iget-object v0, p0, Lcom/movial/ipphone/IPMmiCode;->context:Landroid/content/Context;
 
@@ -2637,7 +2374,6 @@
 
     goto :goto_0
 
-    .line 1156
     :sswitch_3
     iget-object v0, p0, Lcom/movial/ipphone/IPMmiCode;->context:Landroid/content/Context;
 
@@ -2649,7 +2385,6 @@
 
     goto :goto_0
 
-    .line 1158
     :sswitch_4
     iget-object v0, p0, Lcom/movial/ipphone/IPMmiCode;->context:Landroid/content/Context;
 
@@ -2661,7 +2396,6 @@
 
     goto :goto_0
 
-    .line 1160
     :sswitch_5
     iget-object v0, p0, Lcom/movial/ipphone/IPMmiCode;->context:Landroid/content/Context;
 
@@ -2673,7 +2407,6 @@
 
     goto :goto_0
 
-    .line 1162
     :sswitch_6
     iget-object v0, p0, Lcom/movial/ipphone/IPMmiCode;->context:Landroid/content/Context;
 
@@ -2685,7 +2418,6 @@
 
     goto :goto_0
 
-    .line 1164
     :sswitch_7
     iget-object v0, p0, Lcom/movial/ipphone/IPMmiCode;->context:Landroid/content/Context;
 
@@ -2697,7 +2429,6 @@
 
     goto :goto_0
 
-    .line 1148
     nop
 
     :sswitch_data_0
@@ -2718,7 +2449,6 @@
     .param p0, "si"    # Ljava/lang/String;
 
     .prologue
-    .line 354
     if-eqz p0, :cond_0
 
     invoke-virtual {p0}, Ljava/lang/String;->length()I
@@ -2727,15 +2457,12 @@
 
     if-nez v1, :cond_1
 
-    .line 355
     :cond_0
     const/4 v1, 0x0
 
-    .line 383
     :goto_0
     return v1
 
-    .line 358
     :cond_1
     const/16 v1, 0xa
 
@@ -2743,11 +2470,9 @@
 
     move-result v0
 
-    .line 360
     .local v0, "serviceCode":I
     sparse-switch v0, :sswitch_data_0
 
-    .line 386
     new-instance v1, Ljava/lang/RuntimeException;
 
     new-instance v2, Ljava/lang/StringBuilder;
@@ -2772,85 +2497,71 @@
 
     throw v1
 
-    .line 361
     :sswitch_0
     const/16 v1, 0xd
 
     goto :goto_0
 
-    .line 362
     :sswitch_1
     const/4 v1, 0x1
 
     goto :goto_0
 
-    .line 363
     :sswitch_2
     const/16 v1, 0xc
 
     goto :goto_0
 
-    .line 364
     :sswitch_3
     const/4 v1, 0x4
 
     goto :goto_0
 
-    .line 366
     :sswitch_4
     const/16 v1, 0x8
 
     goto :goto_0
 
-    .line 368
     :sswitch_5
     const/4 v1, 0x5
 
     goto :goto_0
 
-    .line 376
     :sswitch_6
     const/16 v1, 0x30
 
     goto :goto_0
 
-    .line 378
     :sswitch_7
     const/16 v1, 0xa0
 
     goto :goto_0
 
-    .line 379
     :sswitch_8
     const/16 v1, 0x50
 
     goto :goto_0
 
-    .line 380
     :sswitch_9
     const/16 v1, 0x10
 
     goto :goto_0
 
-    .line 381
     :sswitch_a
     const/16 v1, 0x20
 
     goto :goto_0
 
-    .line 382
     :sswitch_b
     const/16 v1, 0x11
 
     goto :goto_0
 
-    .line 383
     :sswitch_c
     const/16 v1, 0x40
 
     goto :goto_0
 
-    .line 360
     :sswitch_data_0
     .sparse-switch
         0xa -> :sswitch_0
@@ -2874,7 +2585,6 @@
     .param p0, "si"    # Ljava/lang/String;
 
     .prologue
-    .line 393
     if-eqz p0, :cond_0
 
     invoke-virtual {p0}, Ljava/lang/String;->length()I
@@ -2883,11 +2593,9 @@
 
     if-nez v0, :cond_1
 
-    .line 394
     :cond_0
     const/4 v0, 0x0
 
-    .line 397
     :goto_0
     return v0
 
@@ -2907,7 +2615,6 @@
     .locals 2
 
     .prologue
-    .line 482
     iget-object v0, p0, Lcom/movial/ipphone/IPMmiCode;->state:Lcom/android/internal/telephony/MmiCode$State;
 
     sget-object v1, Lcom/android/internal/telephony/MmiCode$State;->COMPLETE:Lcom/android/internal/telephony/MmiCode$State;
@@ -2920,23 +2627,19 @@
 
     if-ne v0, v1, :cond_1
 
-    .line 507
     :cond_0
     :goto_0
     return-void
 
-    .line 486
     :cond_1
     sget-object v0, Lcom/android/internal/telephony/MmiCode$State;->CANCELLED:Lcom/android/internal/telephony/MmiCode$State;
 
     iput-object v0, p0, Lcom/movial/ipphone/IPMmiCode;->state:Lcom/android/internal/telephony/MmiCode$State;
 
-    .line 488
     iget-boolean v0, p0, Lcom/movial/ipphone/IPMmiCode;->isPendingUSSD:Z
 
     if-eqz v0, :cond_2
 
-    .line 493
     iget-object v0, p0, Lcom/movial/ipphone/IPMmiCode;->phone:Lcom/movial/ipphone/IPPhone;
 
     const/4 v1, 0x7
@@ -2949,7 +2652,6 @@
 
     goto :goto_0
 
-    .line 504
     :cond_2
     iget-object v0, p0, Lcom/movial/ipphone/IPMmiCode;->phone:Lcom/movial/ipphone/IPPhone;
 
@@ -2962,7 +2664,6 @@
     .locals 2
 
     .prologue
-    .line 576
     iget-object v0, p0, Lcom/movial/ipphone/IPMmiCode;->sc:Ljava/lang/String;
 
     if-eqz v0, :cond_1
@@ -2977,21 +2678,17 @@
 
     if-eqz v0, :cond_1
 
-    .line 577
     invoke-virtual {p0}, Lcom/movial/ipphone/IPMmiCode;->isActivate()Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
-    .line 578
     const/4 v0, 0x2
 
-    .line 584
     :goto_0
     return v0
 
-    .line 579
     :cond_0
     invoke-virtual {p0}, Lcom/movial/ipphone/IPMmiCode;->isDeactivate()Z
 
@@ -2999,12 +2696,10 @@
 
     if-eqz v0, :cond_1
 
-    .line 580
     const/4 v0, 0x1
 
     goto :goto_0
 
-    .line 584
     :cond_1
     const/4 v0, 0x0
 
@@ -3015,7 +2710,6 @@
     .locals 1
 
     .prologue
-    .line 1364
     const/4 v0, 0x0
 
     return-object v0
@@ -3025,7 +2719,6 @@
     .locals 1
 
     .prologue
-    .line 470
     iget-object v0, p0, Lcom/movial/ipphone/IPMmiCode;->message:Ljava/lang/CharSequence;
 
     return-object v0
@@ -3035,7 +2728,6 @@
     .locals 1
 
     .prologue
-    .line 475
     iget-object v0, p0, Lcom/movial/ipphone/IPMmiCode;->phone:Lcom/movial/ipphone/IPPhone;
 
     return-object v0
@@ -3045,7 +2737,6 @@
     .locals 1
 
     .prologue
-    .line 465
     iget-object v0, p0, Lcom/movial/ipphone/IPMmiCode;->state:Lcom/android/internal/telephony/MmiCode$State;
 
     return-object v0
@@ -3055,7 +2746,6 @@
     .locals 1
 
     .prologue
-    .line 1360
     const/4 v0, 0x0
 
     return-object v0
@@ -3068,17 +2758,14 @@
     .prologue
     const/4 v4, 0x1
 
-    .line 893
     iget v3, p1, Landroid/os/Message;->what:I
 
     packed-switch v3, :pswitch_data_0
 
-    .line 960
     :cond_0
     :goto_0
     return-void
 
-    .line 895
     :pswitch_0
     iget-object v3, p1, Landroid/os/Message;->obj:Ljava/lang/Object;
 
@@ -3088,13 +2775,11 @@
 
     check-cast v1, Landroid/os/AsyncResult;
 
-    .line 897
     .local v1, "ar":Landroid/os/AsyncResult;
     invoke-direct {p0, v1}, Lcom/movial/ipphone/IPMmiCode;->onSetComplete(Landroid/os/AsyncResult;)V
 
     goto :goto_0
 
-    .line 901
     .end local v1    # "ar":Landroid/os/AsyncResult;
     :pswitch_1
     iget-object v3, p1, Landroid/os/Message;->obj:Ljava/lang/Object;
@@ -3105,7 +2790,6 @@
 
     check-cast v1, Landroid/os/AsyncResult;
 
-    .line 907
     .restart local v1    # "ar":Landroid/os/AsyncResult;
     iget-object v3, v1, Landroid/os/AsyncResult;->exception:Ljava/lang/Throwable;
 
@@ -3115,14 +2799,12 @@
 
     if-ne v3, v4, :cond_1
 
-    .line 908
     iget v3, p1, Landroid/os/Message;->arg2:I
 
     if-ne v3, v4, :cond_2
 
     move v2, v4
 
-    .line 914
     .local v2, "cffEnabled":Z
     :goto_1
     iget-object v3, p0, Lcom/movial/ipphone/IPMmiCode;->phone:Lcom/movial/ipphone/IPPhone;
@@ -3135,18 +2817,15 @@
 
     move-result-object v0
 
-    .line 915
     .local v0, "app":Lcom/android/internal/telephony/uicc/UiccCardApplication;
     if-eqz v0, :cond_1
 
-    .line 916
     invoke-virtual {v0}, Lcom/android/internal/telephony/uicc/UiccCardApplication;->getIccRecords()Lcom/android/internal/telephony/uicc/IccRecords;
 
     move-result-object v3
 
     invoke-virtual {v3, v4, v2}, Lcom/android/internal/telephony/uicc/IccRecords;->setVoiceCallForwardingFlag(IZ)V
 
-    .line 920
     .end local v0    # "app":Lcom/android/internal/telephony/uicc/UiccCardApplication;
     .end local v2    # "cffEnabled":Z
     :cond_1
@@ -3154,13 +2833,11 @@
 
     goto :goto_0
 
-    .line 908
     :cond_2
     const/4 v2, 0x0
 
     goto :goto_1
 
-    .line 924
     .end local v1    # "ar":Landroid/os/AsyncResult;
     :pswitch_2
     iget-object v3, p1, Landroid/os/Message;->obj:Ljava/lang/Object;
@@ -3171,13 +2848,11 @@
 
     check-cast v1, Landroid/os/AsyncResult;
 
-    .line 925
     .restart local v1    # "ar":Landroid/os/AsyncResult;
     invoke-direct {p0, v1}, Lcom/movial/ipphone/IPMmiCode;->onGetClirComplete(Landroid/os/AsyncResult;)V
 
     goto :goto_0
 
-    .line 929
     .end local v1    # "ar":Landroid/os/AsyncResult;
     :pswitch_3
     iget-object v3, p1, Landroid/os/Message;->obj:Ljava/lang/Object;
@@ -3188,13 +2863,11 @@
 
     check-cast v1, Landroid/os/AsyncResult;
 
-    .line 930
     .restart local v1    # "ar":Landroid/os/AsyncResult;
     invoke-direct {p0, v1}, Lcom/movial/ipphone/IPMmiCode;->onQueryCfComplete(Landroid/os/AsyncResult;)V
 
     goto :goto_0
 
-    .line 934
     .end local v1    # "ar":Landroid/os/AsyncResult;
     :pswitch_4
     iget-object v3, p1, Landroid/os/Message;->obj:Ljava/lang/Object;
@@ -3205,13 +2878,11 @@
 
     check-cast v1, Landroid/os/AsyncResult;
 
-    .line 935
     .restart local v1    # "ar":Landroid/os/AsyncResult;
     invoke-direct {p0, v1}, Lcom/movial/ipphone/IPMmiCode;->onQueryComplete(Landroid/os/AsyncResult;)V
 
     goto :goto_0
 
-    .line 939
     .end local v1    # "ar":Landroid/os/AsyncResult;
     :pswitch_5
     iget-object v3, p1, Landroid/os/Message;->obj:Ljava/lang/Object;
@@ -3222,18 +2893,15 @@
 
     check-cast v1, Landroid/os/AsyncResult;
 
-    .line 941
     .restart local v1    # "ar":Landroid/os/AsyncResult;
     iget-object v3, v1, Landroid/os/AsyncResult;->exception:Ljava/lang/Throwable;
 
     if-eqz v3, :cond_0
 
-    .line 942
     sget-object v3, Lcom/android/internal/telephony/MmiCode$State;->FAILED:Lcom/android/internal/telephony/MmiCode$State;
 
     iput-object v3, p0, Lcom/movial/ipphone/IPMmiCode;->state:Lcom/android/internal/telephony/MmiCode$State;
 
-    .line 943
     iget-object v3, p0, Lcom/movial/ipphone/IPMmiCode;->context:Landroid/content/Context;
 
     const v4, 0x104008c
@@ -3244,14 +2912,12 @@
 
     iput-object v3, p0, Lcom/movial/ipphone/IPMmiCode;->message:Ljava/lang/CharSequence;
 
-    .line 946
     iget-object v3, p0, Lcom/movial/ipphone/IPMmiCode;->phone:Lcom/movial/ipphone/IPPhone;
 
     invoke-virtual {v3, p0}, Lcom/movial/ipphone/IPPhone;->onMMIDone(Lcom/movial/ipphone/IPMmiCode;)V
 
     goto :goto_0
 
-    .line 957
     .end local v1    # "ar":Landroid/os/AsyncResult;
     :pswitch_6
     iget-object v3, p0, Lcom/movial/ipphone/IPMmiCode;->phone:Lcom/movial/ipphone/IPPhone;
@@ -3260,7 +2926,6 @@
 
     goto :goto_0
 
-    .line 893
     :pswitch_data_0
     .packed-switch 0x1
         :pswitch_0
@@ -3277,7 +2942,6 @@
     .locals 2
 
     .prologue
-    .line 588
     iget-object v0, p0, Lcom/movial/ipphone/IPMmiCode;->action:Ljava/lang/String;
 
     if-eqz v0, :cond_0
@@ -3307,7 +2971,6 @@
     .locals 1
 
     .prologue
-    .line 511
     iget-boolean v0, p0, Lcom/movial/ipphone/IPMmiCode;->isPendingUSSD:Z
 
     return v0
@@ -3317,7 +2980,6 @@
     .locals 2
 
     .prologue
-    .line 592
     iget-object v0, p0, Lcom/movial/ipphone/IPMmiCode;->action:Ljava/lang/String;
 
     if-eqz v0, :cond_0
@@ -3347,7 +3009,6 @@
     .locals 2
 
     .prologue
-    .line 604
     iget-object v0, p0, Lcom/movial/ipphone/IPMmiCode;->action:Ljava/lang/String;
 
     if-eqz v0, :cond_0
@@ -3377,7 +3038,6 @@
     .locals 2
 
     .prologue
-    .line 596
     iget-object v0, p0, Lcom/movial/ipphone/IPMmiCode;->action:Ljava/lang/String;
 
     if-eqz v0, :cond_0
@@ -3407,7 +3067,6 @@
     .locals 1
 
     .prologue
-    .line 519
     iget-object v0, p0, Lcom/movial/ipphone/IPMmiCode;->poundString:Ljava/lang/String;
 
     if-eqz v0, :cond_0
@@ -3427,7 +3086,6 @@
     .locals 1
 
     .prologue
-    .line 612
     iget-boolean v0, p0, Lcom/movial/ipphone/IPMmiCode;->isPendingUSSD:Z
 
     return v0
@@ -3437,7 +3095,6 @@
     .locals 2
 
     .prologue
-    .line 552
     iget-object v0, p0, Lcom/movial/ipphone/IPMmiCode;->sc:Ljava/lang/String;
 
     if-eqz v0, :cond_1
@@ -3498,7 +3155,6 @@
     .locals 2
 
     .prologue
-    .line 600
     iget-object v0, p0, Lcom/movial/ipphone/IPMmiCode;->action:Ljava/lang/String;
 
     if-eqz v0, :cond_0
@@ -3528,7 +3184,6 @@
     .locals 2
 
     .prologue
-    .line 525
     iget-object v0, p0, Lcom/movial/ipphone/IPMmiCode;->poundString:Ljava/lang/String;
 
     if-nez v0, :cond_0
@@ -3562,7 +3217,6 @@
     .locals 2
 
     .prologue
-    .line 566
     iget-object v0, p0, Lcom/movial/ipphone/IPMmiCode;->sc:Ljava/lang/String;
 
     if-eqz v0, :cond_1
@@ -3609,7 +3263,6 @@
     .locals 1
 
     .prologue
-    .line 616
     iget-boolean v0, p0, Lcom/movial/ipphone/IPMmiCode;->isUssdRequest:Z
 
     return v0
@@ -3621,17 +3274,14 @@
     .param p2, "isUssdRequest"    # Z
 
     .prologue
-    .line 843
     iget-object v0, p0, Lcom/movial/ipphone/IPMmiCode;->state:Lcom/android/internal/telephony/MmiCode$State;
 
     sget-object v1, Lcom/android/internal/telephony/MmiCode$State;->PENDING:Lcom/android/internal/telephony/MmiCode$State;
 
     if-ne v0, v1, :cond_1
 
-    .line 844
     if-nez p1, :cond_2
 
-    .line 845
     iget-object v0, p0, Lcom/movial/ipphone/IPMmiCode;->context:Landroid/content/Context;
 
     const v1, 0x1040094
@@ -3642,29 +3292,23 @@
 
     iput-object v0, p0, Lcom/movial/ipphone/IPMmiCode;->message:Ljava/lang/CharSequence;
 
-    .line 849
     :goto_0
     iput-boolean p2, p0, Lcom/movial/ipphone/IPMmiCode;->isUssdRequest:Z
 
-    .line 851
     if-nez p2, :cond_0
 
-    .line 852
     sget-object v0, Lcom/android/internal/telephony/MmiCode$State;->COMPLETE:Lcom/android/internal/telephony/MmiCode$State;
 
     iput-object v0, p0, Lcom/movial/ipphone/IPMmiCode;->state:Lcom/android/internal/telephony/MmiCode$State;
 
-    .line 855
     :cond_0
     iget-object v0, p0, Lcom/movial/ipphone/IPMmiCode;->phone:Lcom/movial/ipphone/IPPhone;
 
     invoke-virtual {v0, p0}, Lcom/movial/ipphone/IPPhone;->onMMIDone(Lcom/movial/ipphone/IPMmiCode;)V
 
-    .line 857
     :cond_1
     return-void
 
-    .line 847
     :cond_2
     iput-object p1, p0, Lcom/movial/ipphone/IPMmiCode;->message:Ljava/lang/CharSequence;
 
@@ -3675,19 +3319,16 @@
     .locals 2
 
     .prologue
-    .line 867
     iget-object v0, p0, Lcom/movial/ipphone/IPMmiCode;->state:Lcom/android/internal/telephony/MmiCode$State;
 
     sget-object v1, Lcom/android/internal/telephony/MmiCode$State;->PENDING:Lcom/android/internal/telephony/MmiCode$State;
 
     if-ne v0, v1, :cond_0
 
-    .line 868
     sget-object v0, Lcom/android/internal/telephony/MmiCode$State;->FAILED:Lcom/android/internal/telephony/MmiCode$State;
 
     iput-object v0, p0, Lcom/movial/ipphone/IPMmiCode;->state:Lcom/android/internal/telephony/MmiCode$State;
 
-    .line 869
     iget-object v0, p0, Lcom/movial/ipphone/IPMmiCode;->context:Landroid/content/Context;
 
     const v1, 0x104008c
@@ -3698,12 +3339,10 @@
 
     iput-object v0, p0, Lcom/movial/ipphone/IPMmiCode;->message:Ljava/lang/CharSequence;
 
-    .line 871
     iget-object v0, p0, Lcom/movial/ipphone/IPMmiCode;->phone:Lcom/movial/ipphone/IPPhone;
 
     invoke-virtual {v0, p0}, Lcom/movial/ipphone/IPPhone;->onMMIDone(Lcom/movial/ipphone/IPMmiCode;)V
 
-    .line 873
     :cond_0
     return-void
 .end method
@@ -3716,7 +3355,6 @@
 
     const/4 v0, 0x1
 
-    .line 623
     :try_start_0
     invoke-virtual {p0}, Lcom/movial/ipphone/IPMmiCode;->isShortCode()Z
 
@@ -3724,29 +3362,24 @@
 
     if-eqz v5, :cond_0
 
-    .line 624
     const-string v0, "IPMmiCode"
 
     const-string v5, "isShortCode"
 
     invoke-static {v0, v5}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 626
     iget-object v0, p0, Lcom/movial/ipphone/IPMmiCode;->dialingNumber:Ljava/lang/String;
 
     invoke-virtual {p0, v0}, Lcom/movial/ipphone/IPMmiCode;->sendUssd(Ljava/lang/String;)V
 
-    .line 821
     :goto_0
     return-void
 
-    .line 627
     :cond_0
     iget-object v5, p0, Lcom/movial/ipphone/IPMmiCode;->dialingNumber:Ljava/lang/String;
 
     if-eqz v5, :cond_1
 
-    .line 629
     new-instance v0, Ljava/lang/RuntimeException;
 
     const-string v5, "Invalid or Unsupported MMI Code"
@@ -3757,17 +3390,14 @@
     :try_end_0
     .catch Ljava/lang/RuntimeException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 816
     :catch_0
     move-exception v6
 
-    .line 817
     .local v6, "exc":Ljava/lang/RuntimeException;
     sget-object v0, Lcom/android/internal/telephony/MmiCode$State;->FAILED:Lcom/android/internal/telephony/MmiCode$State;
 
     iput-object v0, p0, Lcom/movial/ipphone/IPMmiCode;->state:Lcom/android/internal/telephony/MmiCode$State;
 
-    .line 818
     iget-object v0, p0, Lcom/movial/ipphone/IPMmiCode;->context:Landroid/content/Context;
 
     const v5, 0x104008c
@@ -3778,14 +3408,12 @@
 
     iput-object v0, p0, Lcom/movial/ipphone/IPMmiCode;->message:Ljava/lang/CharSequence;
 
-    .line 819
     iget-object v0, p0, Lcom/movial/ipphone/IPMmiCode;->phone:Lcom/movial/ipphone/IPPhone;
 
     invoke-virtual {v0, p0}, Lcom/movial/ipphone/IPPhone;->onMMIDone(Lcom/movial/ipphone/IPMmiCode;)V
 
     goto :goto_0
 
-    .line 630
     .end local v6    # "exc":Ljava/lang/RuntimeException;
     :cond_1
     :try_start_1
@@ -3803,21 +3431,18 @@
 
     if-eqz v5, :cond_5
 
-    .line 631
     const-string v0, "IPMmiCode"
 
     const-string v5, "is CLIP"
 
     invoke-static {v0, v5}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 632
     invoke-virtual {p0}, Lcom/movial/ipphone/IPMmiCode;->isInterrogate()Z
 
     move-result v0
 
     if-eqz v0, :cond_2
 
-    .line 635
     new-instance v0, Ljava/lang/RuntimeException;
 
     const-string v5, "Invalid or Unsupported MMI Code"
@@ -3826,7 +3451,6 @@
 
     throw v0
 
-    .line 636
     :cond_2
     invoke-virtual {p0}, Lcom/movial/ipphone/IPMmiCode;->isActivate()Z
 
@@ -3834,7 +3458,6 @@
 
     if-eqz v0, :cond_3
 
-    .line 637
     iget-object v0, p0, Lcom/movial/ipphone/IPMmiCode;->context:Landroid/content/Context;
 
     invoke-virtual {v0}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
@@ -3847,12 +3470,10 @@
 
     invoke-static {v0, v5, v11}, Lcom/movial/ipphone/IPPhoneSettings;->putBoolean(Landroid/content/ContentResolver;Ljava/lang/String;Z)Z
 
-    .line 638
     sget-object v0, Lcom/android/internal/telephony/MmiCode$State;->COMPLETE:Lcom/android/internal/telephony/MmiCode$State;
 
     iput-object v0, p0, Lcom/movial/ipphone/IPMmiCode;->state:Lcom/android/internal/telephony/MmiCode$State;
 
-    .line 639
     new-instance v9, Ljava/lang/StringBuilder;
 
     invoke-direct {p0}, Lcom/movial/ipphone/IPMmiCode;->getScString()Ljava/lang/CharSequence;
@@ -3861,13 +3482,11 @@
 
     invoke-direct {v9, v0}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/CharSequence;)V
 
-    .line 640
     .local v9, "sb":Ljava/lang/StringBuilder;
     const-string v0, "\n"
 
     invoke-virtual {v9, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 641
     iget-object v0, p0, Lcom/movial/ipphone/IPMmiCode;->context:Landroid/content/Context;
 
     const v5, 0x104008e
@@ -3878,17 +3497,14 @@
 
     invoke-virtual {v9, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/CharSequence;)Ljava/lang/StringBuilder;
 
-    .line 642
     iput-object v9, p0, Lcom/movial/ipphone/IPMmiCode;->message:Ljava/lang/CharSequence;
 
-    .line 643
     iget-object v0, p0, Lcom/movial/ipphone/IPMmiCode;->phone:Lcom/movial/ipphone/IPPhone;
 
     invoke-virtual {v0, p0}, Lcom/movial/ipphone/IPPhone;->onMMIDone(Lcom/movial/ipphone/IPMmiCode;)V
 
     goto :goto_0
 
-    .line 644
     .end local v9    # "sb":Ljava/lang/StringBuilder;
     :cond_3
     invoke-virtual {p0}, Lcom/movial/ipphone/IPMmiCode;->isDeactivate()Z
@@ -3897,7 +3513,6 @@
 
     if-eqz v0, :cond_4
 
-    .line 645
     iget-object v0, p0, Lcom/movial/ipphone/IPMmiCode;->context:Landroid/content/Context;
 
     invoke-virtual {v0}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
@@ -3910,12 +3525,10 @@
 
     invoke-static {v0, v5, v11}, Lcom/movial/ipphone/IPPhoneSettings;->putBoolean(Landroid/content/ContentResolver;Ljava/lang/String;Z)Z
 
-    .line 646
     sget-object v0, Lcom/android/internal/telephony/MmiCode$State;->COMPLETE:Lcom/android/internal/telephony/MmiCode$State;
 
     iput-object v0, p0, Lcom/movial/ipphone/IPMmiCode;->state:Lcom/android/internal/telephony/MmiCode$State;
 
-    .line 647
     new-instance v9, Ljava/lang/StringBuilder;
 
     invoke-direct {p0}, Lcom/movial/ipphone/IPMmiCode;->getScString()Ljava/lang/CharSequence;
@@ -3924,13 +3537,11 @@
 
     invoke-direct {v9, v0}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/CharSequence;)V
 
-    .line 648
     .restart local v9    # "sb":Ljava/lang/StringBuilder;
     const-string v0, "\n"
 
     invoke-virtual {v9, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 649
     iget-object v0, p0, Lcom/movial/ipphone/IPMmiCode;->context:Landroid/content/Context;
 
     const v5, 0x1040090
@@ -3941,17 +3552,14 @@
 
     invoke-virtual {v9, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/CharSequence;)Ljava/lang/StringBuilder;
 
-    .line 650
     iput-object v9, p0, Lcom/movial/ipphone/IPMmiCode;->message:Ljava/lang/CharSequence;
 
-    .line 651
     iget-object v0, p0, Lcom/movial/ipphone/IPMmiCode;->phone:Lcom/movial/ipphone/IPPhone;
 
     invoke-virtual {v0, p0}, Lcom/movial/ipphone/IPPhone;->onMMIDone(Lcom/movial/ipphone/IPMmiCode;)V
 
     goto/16 :goto_0
 
-    .line 653
     .end local v9    # "sb":Ljava/lang/StringBuilder;
     :cond_4
     new-instance v0, Ljava/lang/RuntimeException;
@@ -3962,7 +3570,6 @@
 
     throw v0
 
-    .line 655
     :cond_5
     iget-object v5, p0, Lcom/movial/ipphone/IPMmiCode;->sc:Ljava/lang/String;
 
@@ -3978,21 +3585,18 @@
 
     if-eqz v5, :cond_9
 
-    .line 656
     const-string v0, "IPMmiCode"
 
     const-string v5, "is CLIR"
 
     invoke-static {v0, v5}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 657
     invoke-virtual {p0}, Lcom/movial/ipphone/IPMmiCode;->isActivate()Z
 
     move-result v0
 
     if-eqz v0, :cond_6
 
-    .line 658
     iget-object v0, p0, Lcom/movial/ipphone/IPMmiCode;->phone:Lcom/movial/ipphone/IPPhone;
 
     const/4 v5, 0x1
@@ -4007,7 +3611,6 @@
 
     goto/16 :goto_0
 
-    .line 660
     :cond_6
     invoke-virtual {p0}, Lcom/movial/ipphone/IPMmiCode;->isDeactivate()Z
 
@@ -4015,7 +3618,6 @@
 
     if-eqz v0, :cond_7
 
-    .line 661
     iget-object v0, p0, Lcom/movial/ipphone/IPMmiCode;->phone:Lcom/movial/ipphone/IPPhone;
 
     const/4 v5, 0x2
@@ -4030,7 +3632,6 @@
 
     goto/16 :goto_0
 
-    .line 663
     :cond_7
     invoke-virtual {p0}, Lcom/movial/ipphone/IPMmiCode;->isInterrogate()Z
 
@@ -4038,7 +3639,6 @@
 
     if-eqz v0, :cond_8
 
-    .line 664
     iget-object v0, p0, Lcom/movial/ipphone/IPMmiCode;->phone:Lcom/movial/ipphone/IPPhone;
 
     const/4 v5, 0x1
@@ -4051,7 +3651,6 @@
 
     goto/16 :goto_0
 
-    .line 667
     :cond_8
     new-instance v0, Ljava/lang/RuntimeException;
 
@@ -4061,7 +3660,6 @@
 
     throw v0
 
-    .line 669
     :cond_9
     iget-object v5, p0, Lcom/movial/ipphone/IPMmiCode;->sc:Ljava/lang/String;
 
@@ -4071,17 +3669,14 @@
 
     if-eqz v5, :cond_14
 
-    .line 670
     const-string v5, "IPMmiCode"
 
     const-string v11, "is CF"
 
     invoke-static {v5, v11}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 672
     iget-object v3, p0, Lcom/movial/ipphone/IPMmiCode;->sia:Ljava/lang/String;
 
-    .line 673
     .local v3, "dialingNumber":Ljava/lang/String;
     iget-object v5, p0, Lcom/movial/ipphone/IPMmiCode;->sib:Ljava/lang/String;
 
@@ -4089,7 +3684,6 @@
 
     move-result v10
 
-    .line 674
     .local v10, "serviceClass":I
     iget-object v5, p0, Lcom/movial/ipphone/IPMmiCode;->sc:Ljava/lang/String;
 
@@ -4097,7 +3691,6 @@
 
     move-result v2
 
-    .line 675
     .local v2, "reason":I
     iget-object v5, p0, Lcom/movial/ipphone/IPMmiCode;->sic:Ljava/lang/String;
 
@@ -4105,7 +3698,6 @@
 
     move-result v4
 
-    .line 677
     .local v4, "time":I
     invoke-virtual {p0}, Lcom/movial/ipphone/IPMmiCode;->isInterrogate()Z
 
@@ -4113,7 +3705,6 @@
 
     if-eqz v5, :cond_a
 
-    .line 681
     new-instance v0, Ljava/lang/RuntimeException;
 
     const-string v5, "Invalid or Unsupported MMI Code"
@@ -4122,7 +3713,6 @@
 
     throw v0
 
-    .line 685
     :cond_a
     invoke-virtual {p0}, Lcom/movial/ipphone/IPMmiCode;->isActivate()Z
 
@@ -4130,10 +3720,8 @@
 
     if-eqz v5, :cond_f
 
-    .line 686
     const/4 v1, 0x1
 
-    .line 697
     .local v1, "cfAction":I
     :goto_1
     if-eqz v2, :cond_b
@@ -4152,7 +3740,6 @@
     :cond_c
     move v8, v0
 
-    .line 703
     .local v8, "isSettingUnconditionalVoice":I
     :goto_2
     if-eq v1, v0, :cond_d
@@ -4164,7 +3751,6 @@
     :cond_d
     move v7, v0
 
-    .line 707
     .local v7, "isEnableDesired":I
     :cond_e
     const-string v0, "IPMmiCode"
@@ -4173,7 +3759,6 @@
 
     invoke-static {v0, v5}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 708
     iget-object v0, p0, Lcom/movial/ipphone/IPMmiCode;->phone:Lcom/movial/ipphone/IPPhone;
 
     const/4 v5, 0x6
@@ -4186,7 +3771,6 @@
 
     goto/16 :goto_0
 
-    .line 687
     .end local v1    # "cfAction":I
     .end local v7    # "isEnableDesired":I
     .end local v8    # "isSettingUnconditionalVoice":I
@@ -4197,13 +3781,11 @@
 
     if-eqz v5, :cond_10
 
-    .line 688
     const/4 v1, 0x0
 
     .restart local v1    # "cfAction":I
     goto :goto_1
 
-    .line 689
     .end local v1    # "cfAction":I
     :cond_10
     invoke-virtual {p0}, Lcom/movial/ipphone/IPMmiCode;->isRegister()Z
@@ -4212,13 +3794,11 @@
 
     if-eqz v5, :cond_11
 
-    .line 690
     const/4 v1, 0x3
 
     .restart local v1    # "cfAction":I
     goto :goto_1
 
-    .line 691
     .end local v1    # "cfAction":I
     :cond_11
     invoke-virtual {p0}, Lcom/movial/ipphone/IPMmiCode;->isErasure()Z
@@ -4227,13 +3807,11 @@
 
     if-eqz v5, :cond_12
 
-    .line 692
     const/4 v1, 0x4
 
     .restart local v1    # "cfAction":I
     goto :goto_1
 
-    .line 694
     .end local v1    # "cfAction":I
     :cond_12
     new-instance v0, Ljava/lang/RuntimeException;
@@ -4248,10 +3826,8 @@
     :cond_13
     move v8, v7
 
-    .line 697
     goto :goto_2
 
-    .line 761
     .end local v1    # "cfAction":I
     .end local v2    # "reason":I
     .end local v3    # "dialingNumber":Ljava/lang/String;
@@ -4272,14 +3848,12 @@
 
     if-eqz v0, :cond_18
 
-    .line 763
     iget-object v0, p0, Lcom/movial/ipphone/IPMmiCode;->sia:Ljava/lang/String;
 
     invoke-static {v0}, Lcom/movial/ipphone/IPMmiCode;->siToServiceClass(Ljava/lang/String;)I
 
     move-result v10
 
-    .line 765
     .restart local v10    # "serviceClass":I
     invoke-virtual {p0}, Lcom/movial/ipphone/IPMmiCode;->isActivate()Z
 
@@ -4293,7 +3867,6 @@
 
     if-eqz v0, :cond_16
 
-    .line 766
     :cond_15
     iget-object v0, p0, Lcom/movial/ipphone/IPMmiCode;->phone:Lcom/movial/ipphone/IPPhone;
 
@@ -4311,7 +3884,6 @@
 
     goto/16 :goto_0
 
-    .line 767
     :cond_16
     invoke-virtual {p0}, Lcom/movial/ipphone/IPMmiCode;->isInterrogate()Z
 
@@ -4319,7 +3891,6 @@
 
     if-eqz v0, :cond_17
 
-    .line 770
     new-instance v0, Ljava/lang/RuntimeException;
 
     const-string v5, "Invalid or Unsupported MMI Code"
@@ -4328,7 +3899,6 @@
 
     throw v0
 
-    .line 772
     :cond_17
     new-instance v0, Ljava/lang/RuntimeException;
 
@@ -4338,21 +3908,18 @@
 
     throw v0
 
-    .line 811
     .end local v10    # "serviceClass":I
     :cond_18
     iget-object v0, p0, Lcom/movial/ipphone/IPMmiCode;->poundString:Ljava/lang/String;
 
     if-eqz v0, :cond_19
 
-    .line 812
     iget-object v0, p0, Lcom/movial/ipphone/IPMmiCode;->poundString:Ljava/lang/String;
 
     invoke-virtual {p0, v0}, Lcom/movial/ipphone/IPMmiCode;->sendUssd(Ljava/lang/String;)V
 
     goto/16 :goto_0
 
-    .line 814
     :cond_19
     new-instance v0, Ljava/lang/RuntimeException;
 
@@ -4370,12 +3937,10 @@
     .param p1, "ussdMessage"    # Ljava/lang/String;
 
     .prologue
-    .line 877
     const/4 v0, 0x1
 
     iput-boolean v0, p0, Lcom/movial/ipphone/IPMmiCode;->isPendingUSSD:Z
 
-    .line 884
     iget-object v0, p0, Lcom/movial/ipphone/IPMmiCode;->phone:Lcom/movial/ipphone/IPPhone;
 
     const/4 v1, 0x4
@@ -4386,6 +3951,5 @@
 
     invoke-virtual {v0, p1, v1}, Lcom/movial/ipphone/IPPhone;->sendUSSD(Ljava/lang/String;Landroid/os/Message;)V
 
-    .line 886
     return-void
 .end method

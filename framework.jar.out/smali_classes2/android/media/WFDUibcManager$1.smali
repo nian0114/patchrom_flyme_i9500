@@ -23,7 +23,6 @@
     .locals 0
 
     .prologue
-    .line 105
     iput-object p1, p0, Landroid/media/WFDUibcManager$1;->this$0:Landroid/media/WFDUibcManager;
 
     invoke-direct {p0}, Landroid/content/BroadcastReceiver;-><init>()V
@@ -43,12 +42,10 @@
 
     const/4 v6, -0x1
 
-    .line 108
     invoke-virtual {p2}, Landroid/content/Intent;->getAction()Ljava/lang/String;
 
     move-result-object v0
 
-    .line 109
     .local v0, "action":Ljava/lang/String;
     const-string v3, "WFDUibcManager"
 
@@ -72,7 +69,6 @@
 
     invoke-static {v3, v4}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 111
     const-string v3, "com.samsung.intent.action.SEC_PRESENTATION_START"
 
     invoke-virtual {v0, v3}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
@@ -81,14 +77,12 @@
 
     if-eqz v3, :cond_1
 
-    .line 112
     const-string v3, "displayName"
 
     invoke-virtual {p2, v3, v7}, Landroid/content/Intent;->getIntExtra(Ljava/lang/String;I)I
 
     move-result v2
 
-    .line 113
     .local v2, "name":I
     const-string v3, "displayID"
 
@@ -96,7 +90,6 @@
 
     move-result v1
 
-    .line 114
     .local v1, "id":I
     # getter for: Landroid/media/WFDUibcManager;->DISPLAY_MAP:Ljava/util/HashMap;
     invoke-static {}, Landroid/media/WFDUibcManager;->access$000()Ljava/util/HashMap;
@@ -113,7 +106,6 @@
 
     invoke-virtual {v3, v4, v5}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 115
     const-string v3, "WFDUibcManager"
 
     new-instance v4, Ljava/lang/StringBuilder;
@@ -146,14 +138,12 @@
 
     invoke-static {v3, v4}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 121
     .end local v1    # "id":I
     .end local v2    # "name":I
     :cond_0
     :goto_0
     return-void
 
-    .line 116
     :cond_1
     const-string v3, "com.samsung.intent.action.SEC_PRESENTATION_STOP"
 
@@ -163,14 +153,12 @@
 
     if-eqz v3, :cond_0
 
-    .line 117
     const-string v3, "displayName"
 
     invoke-virtual {p2, v3, v7}, Landroid/content/Intent;->getIntExtra(Ljava/lang/String;I)I
 
     move-result v2
 
-    .line 118
     .restart local v2    # "name":I
     # getter for: Landroid/media/WFDUibcManager;->DISPLAY_MAP:Ljava/util/HashMap;
     invoke-static {}, Landroid/media/WFDUibcManager;->access$000()Ljava/util/HashMap;
@@ -187,7 +175,6 @@
 
     invoke-virtual {v3, v4, v5}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 119
     const-string v3, "WFDUibcManager"
 
     new-instance v4, Ljava/lang/StringBuilder;

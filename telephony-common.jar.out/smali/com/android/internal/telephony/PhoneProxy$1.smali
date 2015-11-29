@@ -23,7 +23,6 @@
     .locals 0
 
     .prologue
-    .line 112
     iput-object p1, p0, Lcom/android/internal/telephony/PhoneProxy$1;->this$0:Lcom/android/internal/telephony/PhoneProxy;
 
     invoke-direct {p0}, Landroid/content/BroadcastReceiver;-><init>()V
@@ -45,7 +44,6 @@
 
     const/4 v4, 0x0
 
-    .line 115
     iget-object v1, p0, Lcom/android/internal/telephony/PhoneProxy$1;->this$0:Lcom/android/internal/telephony/PhoneProxy;
 
     new-instance v2, Ljava/lang/StringBuilder;
@@ -73,7 +71,6 @@
     # invokes: Lcom/android/internal/telephony/PhoneProxy;->logd(Ljava/lang/String;)V
     invoke-static {v1, v2}, Lcom/android/internal/telephony/PhoneProxy;->access$000(Lcom/android/internal/telephony/PhoneProxy;Ljava/lang/String;)V
 
-    .line 116
     invoke-virtual {p2}, Landroid/content/Intent;->getAction()Ljava/lang/String;
 
     move-result-object v1
@@ -86,7 +83,6 @@
 
     if-eqz v1, :cond_2
 
-    .line 117
     iget-object v1, p0, Lcom/android/internal/telephony/PhoneProxy$1;->this$0:Lcom/android/internal/telephony/PhoneProxy;
 
     # getter for: Lcom/android/internal/telephony/PhoneProxy;->mActivePhone:Lcom/android/internal/telephony/Phone;
@@ -100,19 +96,16 @@
 
     if-nez v1, :cond_0
 
-    .line 118
     const-string v1, "PhoneProxy"
 
     const-string v2, "disableDataConnectivity"
 
     invoke-static {v1, v2}, Landroid/telephony/Rlog;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 119
     iget-object v1, p0, Lcom/android/internal/telephony/PhoneProxy$1;->this$0:Lcom/android/internal/telephony/PhoneProxy;
 
     invoke-virtual {v1, v4}, Lcom/android/internal/telephony/PhoneProxy;->setInternalDataEnabled(Z)V
 
-    .line 120
     const-string v1, "lte_mode"
 
     invoke-virtual {p2, v1, v4}, Landroid/content/Intent;->getBooleanExtra(Ljava/lang/String;Z)Z
@@ -121,7 +114,6 @@
 
     if-eqz v1, :cond_1
 
-    .line 121
     iget-object v1, p0, Lcom/android/internal/telephony/PhoneProxy$1;->this$0:Lcom/android/internal/telephony/PhoneProxy;
 
     iget-object v2, p0, Lcom/android/internal/telephony/PhoneProxy$1;->this$0:Lcom/android/internal/telephony/PhoneProxy;
@@ -134,12 +126,10 @@
 
     invoke-virtual {v1, v2, v6, v7}, Lcom/android/internal/telephony/PhoneProxy;->sendMessageDelayed(Landroid/os/Message;J)Z
 
-    .line 140
     :cond_0
     :goto_0
     return-void
 
-    .line 124
     :cond_1
     iget-object v1, p0, Lcom/android/internal/telephony/PhoneProxy$1;->this$0:Lcom/android/internal/telephony/PhoneProxy;
 
@@ -155,7 +145,6 @@
 
     goto :goto_0
 
-    .line 127
     :cond_2
     const-string v1, "android.provider.Telephony.SECRET_CODE"
 
@@ -169,7 +158,6 @@
 
     if-eqz v1, :cond_0
 
-    .line 128
     invoke-virtual {p2}, Landroid/content/Intent;->getData()Landroid/net/Uri;
 
     move-result-object v1
@@ -178,7 +166,6 @@
 
     move-result-object v0
 
-    .line 130
     .local v0, "host":Ljava/lang/String;
     const-string v1, "147235981"
 
@@ -188,7 +175,6 @@
 
     if-eqz v1, :cond_3
 
-    .line 132
     iget-object v1, p0, Lcom/android/internal/telephony/PhoneProxy$1;->this$0:Lcom/android/internal/telephony/PhoneProxy;
 
     const/4 v2, 0x5
@@ -203,7 +189,6 @@
 
     goto :goto_0
 
-    .line 134
     :cond_3
     const-string v1, "1472359810"
 
@@ -213,7 +198,6 @@
 
     if-eqz v1, :cond_0
 
-    .line 136
     iget-object v1, p0, Lcom/android/internal/telephony/PhoneProxy$1;->this$0:Lcom/android/internal/telephony/PhoneProxy;
 
     const/4 v2, 0x4

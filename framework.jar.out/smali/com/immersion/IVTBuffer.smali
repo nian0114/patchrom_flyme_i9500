@@ -13,10 +13,8 @@
     .param p1, "nBufferSize"    # I
 
     .prologue
-    .line 73
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 74
     invoke-static {}, Lcom/immersion/ImmVibe;->getInstance()Lcom/immersion/ImmVibe;
 
     move-result-object v0
@@ -27,7 +25,6 @@
 
     iput-object v0, p0, Lcom/immersion/IVTBuffer;->pIVT:[B
 
-    .line 75
     return-void
 .end method
 
@@ -36,13 +33,10 @@
     .param p1, "pIVT"    # [B
 
     .prologue
-    .line 47
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 48
     iput-object p1, p0, Lcom/immersion/IVTBuffer;->pIVT:[B
 
-    .line 49
     return-void
 .end method
 
@@ -51,14 +45,12 @@
     .param p0, "strPathName"    # Ljava/lang/String;
 
     .prologue
-    .line 416
     invoke-static {}, Lcom/immersion/ImmVibe;->getInstance()Lcom/immersion/ImmVibe;
 
     move-result-object v0
 
     invoke-virtual {v0, p0}, Lcom/immersion/ImmVibe;->deleteIVTFile(Ljava/lang/String;)V
 
-    .line 417
     return-void
 .end method
 
@@ -66,7 +58,6 @@
     .locals 2
 
     .prologue
-    .line 38
     new-instance v0, Lcom/immersion/IVTBuffer;
 
     invoke-static {}, Lcom/immersion/ImmVibe;->getInstance()Lcom/immersion/ImmVibe;
@@ -88,7 +79,6 @@
     .locals 1
 
     .prologue
-    .line 649
     iget-object v0, p0, Lcom/immersion/IVTBuffer;->pIVT:[B
 
     return-object v0
@@ -98,7 +88,6 @@
     .locals 2
 
     .prologue
-    .line 94
     invoke-static {}, Lcom/immersion/ImmVibe;->getInstance()Lcom/immersion/ImmVibe;
 
     move-result-object v0
@@ -117,7 +106,6 @@
     .param p1, "nEffectIndex"    # I
 
     .prologue
-    .line 228
     invoke-static {}, Lcom/immersion/ImmVibe;->getInstance()Lcom/immersion/ImmVibe;
 
     move-result-object v0
@@ -136,7 +124,6 @@
     .param p1, "strEffectName"    # Ljava/lang/String;
 
     .prologue
-    .line 153
     invoke-static {}, Lcom/immersion/ImmVibe;->getInstance()Lcom/immersion/ImmVibe;
 
     move-result-object v0
@@ -155,7 +142,6 @@
     .param p1, "nEffectIndex"    # I
 
     .prologue
-    .line 130
     invoke-static {}, Lcom/immersion/ImmVibe;->getInstance()Lcom/immersion/ImmVibe;
 
     move-result-object v0
@@ -174,7 +160,6 @@
     .param p1, "nEffectIndex"    # I
 
     .prologue
-    .line 193
     invoke-static {}, Lcom/immersion/ImmVibe;->getInstance()Lcom/immersion/ImmVibe;
 
     move-result-object v0
@@ -193,48 +178,40 @@
     .param p1, "nEffectIndex"    # I
 
     .prologue
-    .line 267
     const/4 v1, 0x1
 
     new-array v4, v1, [I
 
-    .line 268
     .local v4, "pnDuration":[I
     const/4 v1, 0x1
 
     new-array v5, v1, [I
 
-    .line 269
     .local v5, "pnMagnitude":[I
     const/4 v1, 0x1
 
     new-array v6, v1, [I
 
-    .line 270
     .local v6, "pnStyle":[I
     const/4 v1, 0x1
 
     new-array v7, v1, [I
 
-    .line 271
     .local v7, "pnAttackTime":[I
     const/4 v1, 0x1
 
     new-array v8, v1, [I
 
-    .line 272
     .local v8, "pnAttackLevel":[I
     const/4 v1, 0x1
 
     new-array v9, v1, [I
 
-    .line 273
     .local v9, "pnFadeTime":[I
     const/4 v1, 0x1
 
     new-array v10, v1, [I
 
-    .line 275
     .local v10, "pnFadeLevel":[I
     invoke-static {}, Lcom/immersion/ImmVibe;->getInstance()Lcom/immersion/ImmVibe;
 
@@ -248,7 +225,6 @@
 
     invoke-virtual/range {v1 .. v10}, Lcom/immersion/ImmVibe;->getIVTMagSweepEffectDefinition([BI[I[I[I[I[I[I[I)V
 
-    .line 285
     new-instance v11, Lcom/immersion/MagSweepEffectDefinition;
 
     const/4 v1, 0x0
@@ -291,54 +267,45 @@
     .param p1, "nEffectIndex"    # I
 
     .prologue
-    .line 331
     const/4 v1, 0x1
 
     new-array v4, v1, [I
 
-    .line 332
     .local v4, "pnDuration":[I
     const/4 v1, 0x1
 
     new-array v5, v1, [I
 
-    .line 333
     .local v5, "pnMagnitude":[I
     const/4 v1, 0x1
 
     new-array v6, v1, [I
 
-    .line 334
     .local v6, "pnPeriod":[I
     const/4 v1, 0x1
 
     new-array v7, v1, [I
 
-    .line 335
     .local v7, "pnStyle":[I
     const/4 v1, 0x1
 
     new-array v8, v1, [I
 
-    .line 336
     .local v8, "pnAttackTime":[I
     const/4 v1, 0x1
 
     new-array v9, v1, [I
 
-    .line 337
     .local v9, "pnAttackLevel":[I
     const/4 v1, 0x1
 
     new-array v10, v1, [I
 
-    .line 338
     .local v10, "pnFadeTime":[I
     const/4 v1, 0x1
 
     new-array v11, v1, [I
 
-    .line 340
     .local v11, "pnFadeLevel":[I
     invoke-static {}, Lcom/immersion/ImmVibe;->getInstance()Lcom/immersion/ImmVibe;
 
@@ -352,7 +319,6 @@
 
     invoke-virtual/range {v1 .. v11}, Lcom/immersion/ImmVibe;->getIVTPeriodicEffectDefinition([BI[I[I[I[I[I[I[I[I)V
 
-    .line 351
     new-instance v12, Lcom/immersion/PeriodicEffectDefinition;
 
     const/4 v1, 0x0
@@ -398,7 +364,6 @@
     .locals 2
 
     .prologue
-    .line 456
     invoke-static {}, Lcom/immersion/ImmVibe;->getInstance()Lcom/immersion/ImmVibe;
 
     move-result-object v0
@@ -418,7 +383,6 @@
     .param p2, "pIVTElement"    # Lcom/immersion/IVTElement;
 
     .prologue
-    .line 512
     invoke-virtual {p2}, Lcom/immersion/IVTElement;->getType()I
 
     move-result v0
@@ -427,7 +391,6 @@
 
     if-ne v0, v1, :cond_0
 
-    .line 514
     invoke-static {}, Lcom/immersion/ImmVibe;->getInstance()Lcom/immersion/ImmVibe;
 
     move-result-object v0
@@ -455,11 +418,9 @@
 
     iput-object v0, p0, Lcom/immersion/IVTBuffer;->pIVT:[B
 
-    .line 520
     :goto_0
     return-void
 
-    .line 518
     .restart local p2    # "pIVTElement":Lcom/immersion/IVTElement;
     :cond_0
     invoke-static {}, Lcom/immersion/ImmVibe;->getInstance()Lcom/immersion/ImmVibe;
@@ -489,7 +450,6 @@
     .param p2, "nElementIndex"    # I
 
     .prologue
-    .line 632
     invoke-static {}, Lcom/immersion/ImmVibe;->getInstance()Lcom/immersion/ImmVibe;
 
     move-result-object v1
@@ -504,7 +464,6 @@
 
     move-result-object v0
 
-    .line 634
     .local v0, "retVal":Lcom/immersion/IVTElement;
     invoke-virtual {v0}, Lcom/immersion/IVTElement;->getType()I
 
@@ -516,7 +475,6 @@
 
     move-object v1, v0
 
-    .line 636
     check-cast v1, Lcom/immersion/IVTWaveformElement;
 
     invoke-virtual {v1}, Lcom/immersion/IVTWaveformElement;->getDefinition()Lcom/immersion/WaveformEffectDefinition;
@@ -535,7 +493,6 @@
 
     invoke-virtual {v1, v2}, Lcom/immersion/WaveformEffectDefinition;->setData([B)V
 
-    .line 639
     :cond_0
     return-object v0
 .end method
@@ -546,7 +503,6 @@
     .param p2, "nElementIndex"    # I
 
     .prologue
-    .line 578
     invoke-static {}, Lcom/immersion/ImmVibe;->getInstance()Lcom/immersion/ImmVibe;
 
     move-result-object v0
@@ -559,7 +515,6 @@
 
     iput-object v0, p0, Lcom/immersion/IVTBuffer;->pIVT:[B
 
-    .line 579
     return-void
 .end method
 
@@ -568,7 +523,6 @@
     .param p1, "strPathName"    # Ljava/lang/String;
 
     .prologue
-    .line 393
     invoke-static {}, Lcom/immersion/ImmVibe;->getInstance()Lcom/immersion/ImmVibe;
 
     move-result-object v0
@@ -577,6 +531,5 @@
 
     invoke-virtual {v0, v1, p1}, Lcom/immersion/ImmVibe;->saveIVTFile([BLjava/lang/String;)V
 
-    .line 394
     return-void
 .end method

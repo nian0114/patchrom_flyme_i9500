@@ -26,7 +26,6 @@
     .locals 0
 
     .prologue
-    .line 1674
     iput-object p1, p0, Lcom/android/server/epm/overlay/ThemeManagerService$4;->this$0:Lcom/android/server/epm/overlay/ThemeManagerService;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -43,7 +42,6 @@
     .prologue
     const/4 v4, 0x0
 
-    .line 1677
     iget-object v2, p0, Lcom/android/server/epm/overlay/ThemeManagerService$4;->this$0:Lcom/android/server/epm/overlay/ThemeManagerService;
 
     # getter for: Lcom/android/server/epm/overlay/ThemeManagerService;->mViewClicked:Z
@@ -53,11 +51,9 @@
 
     if-nez v2, :cond_0
 
-    .line 1714
     :goto_0
     return-void
 
-    .line 1680
     :cond_0
     iget-object v2, p0, Lcom/android/server/epm/overlay/ThemeManagerService$4;->this$0:Lcom/android/server/epm/overlay/ThemeManagerService;
 
@@ -75,10 +71,8 @@
 
     invoke-interface {v2, v3}, Landroid/view/WindowManager;->removeView(Landroid/view/View;)V
 
-    .line 1681
     sput-boolean v4, Lcom/android/server/epm/overlay/ThemeManagerService;->isVisible:Z
 
-    .line 1682
     new-instance v0, Landroid/app/AlertDialog$Builder;
 
     iget-object v2, p0, Lcom/android/server/epm/overlay/ThemeManagerService$4;->this$0:Lcom/android/server/epm/overlay/ThemeManagerService;
@@ -90,7 +84,6 @@
 
     invoke-direct {v0, v2}, Landroid/app/AlertDialog$Builder;-><init>(Landroid/content/Context;)V
 
-    .line 1683
     .local v0, "alertBuilder":Landroid/app/AlertDialog$Builder;
     const-string v2, "Event Theme"
 
@@ -126,12 +119,10 @@
 
     invoke-virtual {v2, v3, v4}, Landroid/app/AlertDialog$Builder;->setNegativeButton(ILandroid/content/DialogInterface$OnClickListener;)Landroid/app/AlertDialog$Builder;
 
-    .line 1709
     invoke-virtual {v0}, Landroid/app/AlertDialog$Builder;->create()Landroid/app/AlertDialog;
 
     move-result-object v1
 
-    .line 1710
     .local v1, "dialog":Landroid/app/AlertDialog;
     invoke-virtual {v1}, Landroid/app/AlertDialog;->getWindow()Landroid/view/Window;
 
@@ -141,7 +132,6 @@
 
     invoke-virtual {v2, v3}, Landroid/view/Window;->setType(I)V
 
-    .line 1712
     invoke-virtual {v1}, Landroid/app/AlertDialog;->show()V
 
     goto :goto_0

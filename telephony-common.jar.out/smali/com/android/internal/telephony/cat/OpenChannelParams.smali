@@ -33,22 +33,16 @@
     .param p5, "textMessage"    # Lcom/android/internal/telephony/cat/TextMessage;
 
     .prologue
-    .line 405
     invoke-direct {p0, p1}, Lcom/android/internal/telephony/cat/CommandParams;-><init>(Lcom/android/internal/telephony/cat/CommandDetails;)V
 
-    .line 406
     iput p2, p0, Lcom/android/internal/telephony/cat/OpenChannelParams;->mBufferSize:I
 
-    .line 407
     iput-object p3, p0, Lcom/android/internal/telephony/cat/OpenChannelParams;->mTransportLevel:Lcom/android/internal/telephony/cat/TransportLevel;
 
-    .line 408
     iput-object p4, p0, Lcom/android/internal/telephony/cat/OpenChannelParams;->mDataDestinationAddress:Lcom/android/internal/telephony/cat/DataDestinationAddress;
 
-    .line 409
     iput-object p5, p0, Lcom/android/internal/telephony/cat/OpenChannelParams;->mTextMessage:Lcom/android/internal/telephony/cat/TextMessage;
 
-    .line 410
     return-void
 .end method
 
@@ -66,36 +60,25 @@
     .param p10, "passwordTextMessage"    # Lcom/android/internal/telephony/cat/TextMessage;
 
     .prologue
-    .line 391
     invoke-direct {p0, p1}, Lcom/android/internal/telephony/cat/CommandParams;-><init>(Lcom/android/internal/telephony/cat/CommandDetails;)V
 
-    .line 392
     iput-object p2, p0, Lcom/android/internal/telephony/cat/OpenChannelParams;->mBearerDesc:Lcom/android/internal/telephony/cat/BearerDescription;
 
-    .line 393
     iput p3, p0, Lcom/android/internal/telephony/cat/OpenChannelParams;->mBufferSize:I
 
-    .line 394
     iput-object p4, p0, Lcom/android/internal/telephony/cat/OpenChannelParams;->mTransportLevel:Lcom/android/internal/telephony/cat/TransportLevel;
 
-    .line 395
     iput-object p5, p0, Lcom/android/internal/telephony/cat/OpenChannelParams;->mDataDestinationAddress:Lcom/android/internal/telephony/cat/DataDestinationAddress;
 
-    .line 396
     iput-object p6, p0, Lcom/android/internal/telephony/cat/OpenChannelParams;->mNetworkAccessName:Ljava/lang/String;
 
-    .line 397
     iput-object p7, p0, Lcom/android/internal/telephony/cat/OpenChannelParams;->mBearerMode:Lcom/android/internal/telephony/cat/BearerMode;
 
-    .line 398
     iput-object p8, p0, Lcom/android/internal/telephony/cat/OpenChannelParams;->mTextMessage:Lcom/android/internal/telephony/cat/TextMessage;
 
-    .line 399
     iput-object p9, p0, Lcom/android/internal/telephony/cat/OpenChannelParams;->mUsernameTextMessage:Lcom/android/internal/telephony/cat/TextMessage;
 
-    .line 400
     iput-object p10, p0, Lcom/android/internal/telephony/cat/OpenChannelParams;->mPasswordTextMessage:Lcom/android/internal/telephony/cat/TextMessage;
 
-    .line 401
     return-void
 .end method

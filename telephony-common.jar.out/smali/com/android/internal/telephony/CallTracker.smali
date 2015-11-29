@@ -96,42 +96,30 @@
 
     const/4 v1, 0x0
 
-    .line 116
     invoke-direct {p0}, Landroid/os/Handler;-><init>()V
 
-    .line 54
     iput-boolean v1, p0, Lcom/android/internal/telephony/CallTracker;->mNumberConverted:Z
 
-    .line 55
     const/4 v0, 0x3
 
     iput v0, p0, Lcom/android/internal/telephony/CallTracker;->VALID_COMPARE_LENGTH:I
 
-    .line 58
     iput v1, p0, Lcom/android/internal/telephony/CallTracker;->mCsFallback:I
 
-    .line 61
     iput-boolean v1, p0, Lcom/android/internal/telephony/CallTracker;->mSkipDisableDataConnection:Z
 
-    .line 63
     iput-boolean v1, p0, Lcom/android/internal/telephony/CallTracker;->mHasVolteCall:Z
 
-    .line 64
     iput-boolean v1, p0, Lcom/android/internal/telephony/CallTracker;->mHasVideoCall:Z
 
-    .line 65
     iput-boolean v1, p0, Lcom/android/internal/telephony/CallTracker;->mHasEpdgCall:Z
 
-    .line 102
     iput-boolean v1, p0, Lcom/android/internal/telephony/CallTracker;->mIsDmHdvAlarmEvent:Z
 
-    .line 113
     iput-object v2, p0, Lcom/android/internal/telephony/CallTracker;->mDeviceInfo:Landroid/sec/enterprise/DeviceInventory;
 
-    .line 114
     iput-object v2, p0, Lcom/android/internal/telephony/CallTracker;->mPhoneRP:Landroid/sec/enterprise/PhoneRestrictionPolicy;
 
-    .line 118
     invoke-static {}, Landroid/sec/enterprise/EnterpriseDeviceManager;->getInstance()Landroid/sec/enterprise/EnterpriseDeviceManager;
 
     move-result-object v0
@@ -142,7 +130,6 @@
 
     iput-object v0, p0, Lcom/android/internal/telephony/CallTracker;->mDeviceInfo:Landroid/sec/enterprise/DeviceInventory;
 
-    .line 119
     invoke-static {}, Landroid/sec/enterprise/EnterpriseDeviceManager;->getInstance()Landroid/sec/enterprise/EnterpriseDeviceManager;
 
     move-result-object v0
@@ -153,7 +140,6 @@
 
     iput-object v0, p0, Lcom/android/internal/telephony/CallTracker;->mPhoneRP:Landroid/sec/enterprise/PhoneRestrictionPolicy;
 
-    .line 121
     return-void
 .end method
 
@@ -161,7 +147,6 @@
     .locals 1
 
     .prologue
-    .line 212
     iget v0, p0, Lcom/android/internal/telephony/CallTracker;->mPendingOperations:I
 
     if-nez v0, :cond_0
@@ -183,22 +168,18 @@
     .param p2, "serviceGid1"    # Ljava/lang/String;
 
     .prologue
-    .line 310
     invoke-virtual {p1}, Lcom/android/internal/telephony/PhoneBase;->getGroupIdLevel1()Ljava/lang/String;
 
     move-result-object v0
 
-    .line 311
     .local v0, "gid1":Ljava/lang/String;
     invoke-virtual {p2}, Ljava/lang/String;->length()I
 
     move-result v1
 
-    .line 312
     .local v1, "gid_length":I
     const/4 v2, 0x1
 
-    .line 314
     .local v2, "ret":Z
     if-eqz p2, :cond_0
 
@@ -210,7 +191,6 @@
 
     if-eqz v4, :cond_1
 
-    .line 315
     :cond_0
     new-instance v4, Ljava/lang/StringBuilder;
 
@@ -234,13 +214,11 @@
 
     move v3, v2
 
-    .line 325
     .end local v2    # "ret":Z
     .local v3, "ret":I
     :goto_0
     return v3
 
-    .line 319
     .end local v3    # "ret":I
     .restart local v2    # "ret":Z
     :cond_1
@@ -264,7 +242,6 @@
 
     if-nez v4, :cond_3
 
-    .line 321
     :cond_2
     new-instance v4, Ljava/lang/StringBuilder;
 
@@ -296,10 +273,8 @@
 
     invoke-virtual {p0, v4}, Lcom/android/internal/telephony/CallTracker;->log(Ljava/lang/String;)V
 
-    .line 322
     const/4 v2, 0x0
 
-    .line 324
     :cond_3
     new-instance v4, Ljava/lang/StringBuilder;
 
@@ -328,11 +303,9 @@
 
     move v3, v2
 
-    .line 325
     .restart local v3    # "ret":I
     goto :goto_0
 
-    .line 324
     .end local v3    # "ret":I
     :cond_4
     const-string v4, "Different"
@@ -347,27 +320,22 @@
     .param p1, "isIncoming"    # Z
 
     .prologue
-    .line 138
     iget-object v0, p0, Lcom/android/internal/telephony/CallTracker;->mPhoneRP:Landroid/sec/enterprise/PhoneRestrictionPolicy;
 
     if-nez v0, :cond_0
 
-    .line 148
     :goto_0
     return-void
 
-    .line 142
     :cond_0
     if-eqz p1, :cond_1
 
-    .line 143
     iget-object v0, p0, Lcom/android/internal/telephony/CallTracker;->mPhoneRP:Landroid/sec/enterprise/PhoneRestrictionPolicy;
 
     invoke-virtual {v0}, Landroid/sec/enterprise/PhoneRestrictionPolicy;->addNumberOfIncomingCalls()Z
 
     goto :goto_0
 
-    .line 145
     :cond_1
     iget-object v0, p0, Lcom/android/internal/telephony/CallTracker;->mPhoneRP:Landroid/sec/enterprise/PhoneRestrictionPolicy;
 
@@ -383,14 +351,12 @@
     .prologue
     const/4 v4, 0x1
 
-    .line 237
     const-string v2, "ril.test.emergencynumber"
 
     invoke-static {v2}, Landroid/os/SystemProperties;->get(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 
-    .line 242
     .local v0, "testEn":Ljava/lang/String;
     invoke-static {v0}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
 
@@ -398,14 +364,12 @@
 
     if-nez v2, :cond_0
 
-    .line 243
     const-string v2, ":"
 
     invoke-virtual {v0, v2}, Ljava/lang/String;->split(Ljava/lang/String;)[Ljava/lang/String;
 
     move-result-object v1
 
-    .line 244
     .local v1, "values":[Ljava/lang/String;
     new-instance v2, Ljava/lang/StringBuilder;
 
@@ -429,14 +393,12 @@
 
     invoke-virtual {p0, v2}, Lcom/android/internal/telephony/CallTracker;->log(Ljava/lang/String;)V
 
-    .line 245
     array-length v2, v1
 
     const/4 v3, 0x2
 
     if-ne v2, v3, :cond_0
 
-    .line 246
     const/4 v2, 0x0
 
     aget-object v2, v1, v2
@@ -451,12 +413,10 @@
 
     if-eqz v2, :cond_0
 
-    .line 248
     iget-object v2, p0, Lcom/android/internal/telephony/CallTracker;->mCi:Lcom/android/internal/telephony/CommandsInterface;
 
     invoke-interface {v2}, Lcom/android/internal/telephony/CommandsInterface;->testingEmergencyCall()V
 
-    .line 249
     new-instance v2, Ljava/lang/StringBuilder;
 
     invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
@@ -489,10 +449,8 @@
 
     invoke-virtual {p0, v2}, Lcom/android/internal/telephony/CallTracker;->log(Ljava/lang/String;)V
 
-    .line 251
     aget-object p1, v1, v4
 
-    .line 255
     .end local v1    # "values":[Ljava/lang/String;
     :cond_0
     return-object p1
@@ -508,16 +466,13 @@
 
     const/4 v11, 0x0
 
-    .line 259
     if-nez p2, :cond_1
 
-    .line 305
     .end local p2    # "dialNumber":Ljava/lang/String;
     :cond_0
     :goto_0
     return-object p2
 
-    .line 262
     .restart local p2    # "dialNumber":Ljava/lang/String;
     :cond_1
     invoke-virtual {p1}, Lcom/android/internal/telephony/PhoneBase;->getContext()Landroid/content/Context;
@@ -534,7 +489,6 @@
 
     move-result-object v2
 
-    .line 264
     .local v2, "convertMaps":[Ljava/lang/String;
     new-instance v9, Ljava/lang/StringBuilder;
 
@@ -572,7 +526,6 @@
 
     invoke-virtual {p0, v9}, Lcom/android/internal/telephony/CallTracker;->log(Ljava/lang/String;)V
 
-    .line 268
     array-length v9, v2
 
     if-lt v9, v12, :cond_0
@@ -585,10 +538,8 @@
 
     if-lt v9, v10, :cond_0
 
-    .line 274
     const-string v6, ""
 
-    .line 275
     .local v6, "outNumber":Ljava/lang/String;
     move-object v0, v2
 
@@ -604,7 +555,6 @@
 
     aget-object v1, v0, v4
 
-    .line 276
     .local v1, "convertMap":Ljava/lang/String;
     new-instance v9, Ljava/lang/StringBuilder;
 
@@ -626,20 +576,17 @@
 
     invoke-virtual {p0, v9}, Lcom/android/internal/telephony/CallTracker;->log(Ljava/lang/String;)V
 
-    .line 277
     const-string v9, ":"
 
     invoke-virtual {v1, v9}, Ljava/lang/String;->split(Ljava/lang/String;)[Ljava/lang/String;
 
     move-result-object v3
 
-    .line 278
     .local v3, "entry":[Ljava/lang/String;
     array-length v9, v3
 
     if-le v9, v12, :cond_3
 
-    .line 279
     aget-object v9, v3, v12
 
     const-string v10, ","
@@ -648,7 +595,6 @@
 
     move-result-object v8
 
-    .line 280
     .local v8, "tmpArray":[Ljava/lang/String;
     aget-object v9, v3, v11
 
@@ -666,7 +612,6 @@
 
     if-eqz v9, :cond_3
 
-    .line 281
     array-length v9, v8
 
     const/4 v10, 0x2
@@ -681,7 +626,6 @@
 
     if-nez v9, :cond_4
 
-    .line 282
     aget-object v9, v8, v12
 
     invoke-direct {p0, p1, v9}, Lcom/android/internal/telephony/CallTracker;->compareGid1(Lcom/android/internal/telephony/PhoneBase;Ljava/lang/String;)Z
@@ -690,17 +634,14 @@
 
     if-eqz v9, :cond_2
 
-    .line 283
     iput-boolean v12, p0, Lcom/android/internal/telephony/CallTracker;->mNumberConverted:Z
 
-    .line 288
     :cond_2
     :goto_2
     iget-boolean v9, p0, Lcom/android/internal/telephony/CallTracker;->mNumberConverted:Z
 
     if-eqz v9, :cond_3
 
-    .line 289
     aget-object v9, v8, v11
 
     invoke-static {v9}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
@@ -719,7 +660,6 @@
 
     if-eqz v9, :cond_5
 
-    .line 290
     aget-object v9, v8, v11
 
     aget-object v10, v8, v11
@@ -734,7 +674,6 @@
 
     move-result-object v7
 
-    .line 291
     .local v7, "prefix":Ljava/lang/String;
     new-instance v9, Ljava/lang/StringBuilder;
 
@@ -756,7 +695,6 @@
 
     move-result-object v6
 
-    .line 275
     .end local v7    # "prefix":Ljava/lang/String;
     .end local v8    # "tmpArray":[Ljava/lang/String;
     :cond_3
@@ -765,7 +703,6 @@
 
     goto/16 :goto_1
 
-    .line 285
     .restart local v8    # "tmpArray":[Ljava/lang/String;
     :cond_4
     invoke-virtual {v6}, Ljava/lang/String;->isEmpty()Z
@@ -774,18 +711,15 @@
 
     if-eqz v9, :cond_2
 
-    .line 286
     iput-boolean v12, p0, Lcom/android/internal/telephony/CallTracker;->mNumberConverted:Z
 
     goto :goto_2
 
-    .line 293
     :cond_5
     aget-object v6, v8, v11
 
     goto :goto_3
 
-    .line 300
     .end local v1    # "convertMap":Ljava/lang/String;
     .end local v3    # "entry":[Ljava/lang/String;
     .end local v8    # "tmpArray":[Ljava/lang/String;
@@ -794,14 +728,12 @@
 
     if-eqz v9, :cond_0
 
-    .line 301
     const-string v9, "convertNumberIfNecessary: convert service number"
 
     invoke-virtual {p0, v9}, Lcom/android/internal/telephony/CallTracker;->log(Ljava/lang/String;)V
 
     move-object p2, v6
 
-    .line 302
     goto/16 :goto_0
 .end method
 
@@ -812,12 +744,10 @@
     .param p3, "args"    # [Ljava/lang/String;
 
     .prologue
-    .line 374
     const-string v0, "CallTracker:"
 
     invoke-virtual {p2, v0}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
-    .line 375
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -840,7 +770,6 @@
 
     invoke-virtual {p2, v0}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
-    .line 376
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -863,7 +792,6 @@
 
     invoke-virtual {p2, v0}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
-    .line 377
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -886,7 +814,6 @@
 
     invoke-virtual {p2, v0}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
-    .line 378
     return-void
 .end method
 
@@ -895,23 +822,18 @@
     .param p1, "call"    # Lcom/android/internal/telephony/Call;
 
     .prologue
-    .line 342
     invoke-virtual {p1}, Lcom/android/internal/telephony/Call;->getEarliestConnection()Lcom/android/internal/telephony/Connection;
 
     move-result-object v0
 
-    .line 344
     .local v0, "conn":Lcom/android/internal/telephony/Connection;
     if-nez v0, :cond_0
 
-    .line 345
     const/16 v1, 0xa
 
-    .line 353
     :goto_0
     return v1
 
-    .line 348
     :cond_0
     invoke-virtual {v0}, Lcom/android/internal/telephony/Connection;->getCallDetails()Lcom/android/internal/telephony/CallDetails;
 
@@ -919,17 +841,14 @@
 
     if-nez v1, :cond_1
 
-    .line 349
     const-string v1, "getCallType(): callDetails is null. default to CALL_TYPE_VOICE."
 
     invoke-virtual {p0, v1}, Lcom/android/internal/telephony/CallTracker;->log(Ljava/lang/String;)V
 
-    .line 350
     const/4 v1, 0x0
 
     goto :goto_0
 
-    .line 353
     :cond_1
     invoke-virtual {v0}, Lcom/android/internal/telephony/Connection;->getCallDetails()Lcom/android/internal/telephony/CallDetails;
 
@@ -944,7 +863,6 @@
     .locals 2
 
     .prologue
-    .line 385
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -967,7 +885,6 @@
 
     invoke-virtual {p0, v0}, Lcom/android/internal/telephony/CallTracker;->log(Ljava/lang/String;)V
 
-    .line 386
     iget-boolean v0, p0, Lcom/android/internal/telephony/CallTracker;->mIsDmHdvAlarmEvent:Z
 
     return v0
@@ -983,10 +900,8 @@
     .locals 0
 
     .prologue
-    .line 186
     invoke-virtual {p0}, Lcom/android/internal/telephony/CallTracker;->pollCallsWhenSafe()V
 
-    .line 187
     return-void
 .end method
 
@@ -994,7 +909,6 @@
     .locals 1
 
     .prologue
-    .line 359
     const/4 v0, 0x0
 
     return v0
@@ -1005,7 +919,6 @@
     .param p1, "e"    # Ljava/lang/Throwable;
 
     .prologue
-    .line 170
     if-eqz p1, :cond_0
 
     instance-of v0, p1, Lcom/android/internal/telephony/CommandException;
@@ -1046,23 +959,19 @@
     .param p7, "isIncoming"    # Z
 
     .prologue
-    .line 125
     iget-object v0, p0, Lcom/android/internal/telephony/CallTracker;->mDeviceInfo:Landroid/sec/enterprise/DeviceInventory;
 
     if-nez v0, :cond_1
 
-    .line 134
     :cond_0
     :goto_0
     return-void
 
-    .line 129
     :cond_1
     iget-object v0, p0, Lcom/android/internal/telephony/CallTracker;->mDeviceInfo:Landroid/sec/enterprise/DeviceInventory;
 
     invoke-virtual {v0, p1}, Landroid/sec/enterprise/DeviceInventory;->addCallsCount(Ljava/lang/String;)V
 
-    .line 130
     iget-object v0, p0, Lcom/android/internal/telephony/CallTracker;->mDeviceInfo:Landroid/sec/enterprise/DeviceInventory;
 
     invoke-virtual {v0}, Landroid/sec/enterprise/DeviceInventory;->isCallingCaptureEnabled()Z
@@ -1071,7 +980,6 @@
 
     if-eqz v0, :cond_0
 
-    .line 131
     iget-object v0, p0, Lcom/android/internal/telephony/CallTracker;->mDeviceInfo:Landroid/sec/enterprise/DeviceInventory;
 
     invoke-static {p3, p4}, Ljava/lang/Long;->toString(J)Ljava/lang/String;
@@ -1104,12 +1012,10 @@
     .end annotation
 
     .prologue
-    .line 336
     iget-object v0, p0, Lcom/android/internal/telephony/CallTracker;->mCi:Lcom/android/internal/telephony/CommandsInterface;
 
     invoke-interface {v0, p2, p1}, Lcom/android/internal/telephony/CommandsInterface;->modifyCallConfirm(Lcom/android/internal/telephony/CallModify;Landroid/os/Message;)V
 
-    .line 337
     return-void
 .end method
 
@@ -1124,12 +1030,10 @@
     .end annotation
 
     .prologue
-    .line 331
     iget-object v0, p0, Lcom/android/internal/telephony/CallTracker;->mCi:Lcom/android/internal/telephony/CommandsInterface;
 
     invoke-interface {v0, p2, p1}, Lcom/android/internal/telephony/CommandsInterface;->modifyCallInitiate(Lcom/android/internal/telephony/CallModify;Landroid/os/Message;)V
 
-    .line 332
     return-void
 .end method
 
@@ -1139,26 +1043,21 @@
     .param p2, "c"    # Lcom/android/internal/telephony/Connection;
 
     .prologue
-    .line 178
     sget-object v0, Lcom/android/internal/telephony/Call$SrvccState;->STARTED:Lcom/android/internal/telephony/Call$SrvccState;
 
     if-ne p1, v0, :cond_1
 
-    .line 179
     iput-object p2, p0, Lcom/android/internal/telephony/CallTracker;->mHandoverConnection:Lcom/android/internal/telephony/Connection;
 
-    .line 183
     :cond_0
     :goto_0
     return-void
 
-    .line 180
     :cond_1
     sget-object v0, Lcom/android/internal/telephony/Call$SrvccState;->COMPLETED:Lcom/android/internal/telephony/Call$SrvccState;
 
     if-eq p1, v0, :cond_0
 
-    .line 181
     const/4 v0, 0x0
 
     iput-object v0, p0, Lcom/android/internal/telephony/CallTracker;->mHandoverConnection:Lcom/android/internal/telephony/Connection;
@@ -1171,19 +1070,16 @@
     .param p1, "what"    # I
 
     .prologue
-    .line 199
     iget v0, p0, Lcom/android/internal/telephony/CallTracker;->mPendingOperations:I
 
     add-int/lit8 v0, v0, 0x1
 
     iput v0, p0, Lcom/android/internal/telephony/CallTracker;->mPendingOperations:I
 
-    .line 200
     const/4 v0, 0x0
 
     iput-object v0, p0, Lcom/android/internal/telephony/CallTracker;->mLastRelevantPoll:Landroid/os/Message;
 
-    .line 201
     invoke-virtual {p0, p1}, Lcom/android/internal/telephony/CallTracker;->obtainMessage(I)Landroid/os/Message;
 
     move-result-object v0
@@ -1195,23 +1091,19 @@
     .locals 4
 
     .prologue
-    .line 162
     invoke-virtual {p0}, Lcom/android/internal/telephony/CallTracker;->obtainMessage()Landroid/os/Message;
 
     move-result-object v0
 
-    .line 164
     .local v0, "msg":Landroid/os/Message;
     const/4 v1, 0x3
 
     iput v1, v0, Landroid/os/Message;->what:I
 
-    .line 165
     const-wide/16 v2, 0xfa
 
     invoke-virtual {p0, v0, v2, v3}, Lcom/android/internal/telephony/CallTracker;->sendMessageDelayed(Landroid/os/Message;J)Z
 
-    .line 166
     return-void
 .end method
 
@@ -1221,31 +1113,26 @@
     .prologue
     const/4 v1, 0x1
 
-    .line 152
     iput-boolean v1, p0, Lcom/android/internal/telephony/CallTracker;->mNeedsPoll:Z
 
-    .line 154
     invoke-direct {p0}, Lcom/android/internal/telephony/CallTracker;->checkNoOperationsPending()Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
-    .line 155
     invoke-virtual {p0, v1}, Lcom/android/internal/telephony/CallTracker;->obtainMessage(I)Landroid/os/Message;
 
     move-result-object v0
 
     iput-object v0, p0, Lcom/android/internal/telephony/CallTracker;->mLastRelevantPoll:Landroid/os/Message;
 
-    .line 156
     iget-object v0, p0, Lcom/android/internal/telephony/CallTracker;->mCi:Lcom/android/internal/telephony/CommandsInterface;
 
     iget-object v1, p0, Lcom/android/internal/telephony/CallTracker;->mLastRelevantPoll:Landroid/os/Message;
 
     invoke-interface {v0, v1}, Lcom/android/internal/telephony/CommandsInterface;->getCurrentCalls(Landroid/os/Message;)V
 
-    .line 158
     :cond_0
     return-void
 .end method
@@ -1261,7 +1148,6 @@
     .param p1, "onoff"    # Z
 
     .prologue
-    .line 381
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -1282,10 +1168,8 @@
 
     invoke-virtual {p0, v0}, Lcom/android/internal/telephony/CallTracker;->log(Ljava/lang/String;)V
 
-    .line 382
     iput-boolean p1, p0, Lcom/android/internal/telephony/CallTracker;->mIsDmHdvAlarmEvent:Z
 
-    .line 383
     return-void
 .end method
 

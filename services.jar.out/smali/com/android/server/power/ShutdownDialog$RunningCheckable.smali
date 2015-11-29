@@ -28,12 +28,10 @@
     .locals 1
 
     .prologue
-    .line 392
     iput-object p1, p0, Lcom/android/server/power/ShutdownDialog$RunningCheckable;->this$0:Lcom/android/server/power/ShutdownDialog;
 
     invoke-direct {p0}, Ljava/lang/Thread;-><init>()V
 
-    .line 393
     const/4 v0, 0x1
 
     iput-boolean v0, p0, Lcom/android/server/power/ShutdownDialog$RunningCheckable;->running:Z
@@ -47,7 +45,6 @@
     .param p2, "x1"    # Lcom/android/server/power/ShutdownDialog$1;
 
     .prologue
-    .line 392
     invoke-direct {p0, p1}, Lcom/android/server/power/ShutdownDialog$RunningCheckable;-><init>(Lcom/android/server/power/ShutdownDialog;)V
 
     return-void
@@ -59,7 +56,6 @@
     .locals 1
 
     .prologue
-    .line 395
     iget-boolean v0, p0, Lcom/android/server/power/ShutdownDialog$RunningCheckable;->running:Z
 
     return v0

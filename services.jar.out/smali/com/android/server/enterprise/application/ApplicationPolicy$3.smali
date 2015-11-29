@@ -23,7 +23,6 @@
     .locals 0
 
     .prologue
-    .line 5498
     iput-object p1, p0, Lcom/android/server/enterprise/application/ApplicationPolicy$3;->this$0:Lcom/android/server/enterprise/application/ApplicationPolicy;
 
     invoke-direct {p0}, Landroid/content/BroadcastReceiver;-><init>()V
@@ -39,19 +38,17 @@
     .param p2, "intent"    # Landroid/content/Intent;
 
     .prologue
-    .line 5500
     const-string v4, "ApplicationPolicy"
 
     const-string v5, "boot completed - refreshWidgetStatus"
 
     invoke-static {v4, v5}, Lcom/android/server/enterprise/log/Log;->v(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 5501
     iget-object v4, p0, Lcom/android/server/enterprise/application/ApplicationPolicy$3;->this$0:Lcom/android/server/enterprise/application/ApplicationPolicy;
 
     iget-object v4, v4, Lcom/android/server/enterprise/application/ApplicationPolicy;->mContext:Landroid/content/Context;
 
-    const-string/jumbo v5, "user"
+    const-string v5, "user"
 
     invoke-virtual {v4, v5}, Landroid/content/Context;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
 
@@ -59,20 +56,16 @@
 
     check-cast v2, Landroid/os/UserManager;
 
-    .line 5502
     .local v2, "userManager":Landroid/os/UserManager;
     if-eqz v2, :cond_0
 
-    .line 5503
     invoke-virtual {v2}, Landroid/os/UserManager;->getUsers()Ljava/util/List;
 
     move-result-object v3
 
-    .line 5504
     .local v3, "users":Ljava/util/List;, "Ljava/util/List<Landroid/content/pm/UserInfo;>;"
     if-eqz v3, :cond_0
 
-    .line 5505
     invoke-interface {v3}, Ljava/util/List;->iterator()Ljava/util/Iterator;
 
     move-result-object v0
@@ -91,7 +84,6 @@
 
     check-cast v1, Landroid/content/pm/UserInfo;
 
-    .line 5506
     .local v1, "user":Landroid/content/pm/UserInfo;
     iget-object v4, p0, Lcom/android/server/enterprise/application/ApplicationPolicy$3;->this$0:Lcom/android/server/enterprise/application/ApplicationPolicy;
 
@@ -102,7 +94,6 @@
 
     goto :goto_0
 
-    .line 5511
     .end local v0    # "i$":Ljava/util/Iterator;
     .end local v1    # "user":Landroid/content/pm/UserInfo;
     .end local v3    # "users":Ljava/util/List;, "Ljava/util/List<Landroid/content/pm/UserInfo;>;"

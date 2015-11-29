@@ -23,7 +23,6 @@
     .locals 0
 
     .prologue
-    .line 4999
     iput-object p1, p0, Lcom/android/internal/telephony/gsm/GsmServiceStateTracker$SSTBroadcastReceiver;->this$0:Lcom/android/internal/telephony/gsm/GsmServiceStateTracker;
 
     invoke-direct {p0}, Landroid/content/BroadcastReceiver;-><init>()V
@@ -37,7 +36,6 @@
     .param p2, "x1"    # Lcom/android/internal/telephony/gsm/GsmServiceStateTracker$1;
 
     .prologue
-    .line 4999
     invoke-direct {p0, p1}, Lcom/android/internal/telephony/gsm/GsmServiceStateTracker$SSTBroadcastReceiver;-><init>(Lcom/android/internal/telephony/gsm/GsmServiceStateTracker;)V
 
     return-void
@@ -53,12 +51,10 @@
     .prologue
     const/4 v5, 0x1
 
-    .line 5002
     invoke-virtual {p2}, Landroid/content/Intent;->getAction()Ljava/lang/String;
 
     move-result-object v0
 
-    .line 5003
     .local v0, "action":Ljava/lang/String;
     const-string v2, "android.intent.action.CONFIGURATION_CHANGED"
 
@@ -68,17 +64,14 @@
 
     if-eqz v2, :cond_1
 
-    .line 5004
     iget-object v2, p0, Lcom/android/internal/telephony/gsm/GsmServiceStateTracker$SSTBroadcastReceiver;->this$0:Lcom/android/internal/telephony/gsm/GsmServiceStateTracker;
 
     invoke-virtual {v2}, Lcom/android/internal/telephony/gsm/GsmServiceStateTracker;->updateSpnDisplay()V
 
-    .line 5016
     :cond_0
     :goto_0
     return-void
 
-    .line 5005
     :cond_1
     const-string v2, "action_wfc_switch_profile_broadcast"
 
@@ -88,21 +81,18 @@
 
     if-eqz v2, :cond_0
 
-    .line 5006
     const-string v2, "oem_request"
 
     invoke-virtual {p2, v2}, Landroid/content/Intent;->getByteArrayExtra(Ljava/lang/String;)[B
 
     move-result-object v1
 
-    .line 5007
     .local v1, "data":[B
     const/4 v2, 0x0
 
     # setter for: Lcom/android/internal/telephony/gsm/GsmServiceStateTracker;->isWfcWifiOnlyMode:Z
     invoke-static {v2}, Lcom/android/internal/telephony/gsm/GsmServiceStateTracker;->access$2202(Z)Z
 
-    .line 5008
     iget-object v2, p0, Lcom/android/internal/telephony/gsm/GsmServiceStateTracker$SSTBroadcastReceiver;->this$0:Lcom/android/internal/telephony/gsm/GsmServiceStateTracker;
 
     const/4 v3, 0x4
@@ -111,7 +101,6 @@
 
     iput-byte v3, v2, Lcom/android/internal/telephony/gsm/GsmServiceStateTracker;->mWfcPrefMode:B
 
-    .line 5009
     iget-object v2, p0, Lcom/android/internal/telephony/gsm/GsmServiceStateTracker$SSTBroadcastReceiver;->this$0:Lcom/android/internal/telephony/gsm/GsmServiceStateTracker;
 
     const/4 v3, 0x5
@@ -120,7 +109,6 @@
 
     iput-byte v3, v2, Lcom/android/internal/telephony/gsm/GsmServiceStateTracker;->mWfcStatus:B
 
-    .line 5010
     iget-object v2, p0, Lcom/android/internal/telephony/gsm/GsmServiceStateTracker$SSTBroadcastReceiver;->this$0:Lcom/android/internal/telephony/gsm/GsmServiceStateTracker;
 
     new-instance v3, Ljava/lang/StringBuilder;
@@ -147,7 +135,6 @@
 
     invoke-virtual {v2, v3}, Lcom/android/internal/telephony/gsm/GsmServiceStateTracker;->log(Ljava/lang/String;)V
 
-    .line 5011
     iget-object v2, p0, Lcom/android/internal/telephony/gsm/GsmServiceStateTracker$SSTBroadcastReceiver;->this$0:Lcom/android/internal/telephony/gsm/GsmServiceStateTracker;
 
     new-instance v3, Ljava/lang/StringBuilder;
@@ -174,7 +161,6 @@
 
     invoke-virtual {v2, v3}, Lcom/android/internal/telephony/gsm/GsmServiceStateTracker;->log(Ljava/lang/String;)V
 
-    .line 5012
     iget-object v2, p0, Lcom/android/internal/telephony/gsm/GsmServiceStateTracker$SSTBroadcastReceiver;->this$0:Lcom/android/internal/telephony/gsm/GsmServiceStateTracker;
 
     iget-byte v2, v2, Lcom/android/internal/telephony/gsm/GsmServiceStateTracker;->mWfcStatus:B
@@ -189,7 +175,6 @@
 
     if-ne v2, v3, :cond_0
 
-    .line 5013
     # setter for: Lcom/android/internal/telephony/gsm/GsmServiceStateTracker;->isWfcWifiOnlyMode:Z
     invoke-static {v5}, Lcom/android/internal/telephony/gsm/GsmServiceStateTracker;->access$2202(Z)Z
 

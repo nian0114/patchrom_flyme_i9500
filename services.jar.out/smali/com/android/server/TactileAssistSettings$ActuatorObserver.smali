@@ -26,20 +26,16 @@
     .param p2, "actuatorType"    # I
 
     .prologue
-    .line 602
     iput-object p1, p0, Lcom/android/server/TactileAssistSettings$ActuatorObserver;->this$0:Lcom/android/server/TactileAssistSettings;
 
-    .line 603
     new-instance v0, Landroid/os/Handler;
 
     invoke-direct {v0}, Landroid/os/Handler;-><init>()V
 
     invoke-direct {p0, v0}, Landroid/database/ContentObserver;-><init>(Landroid/os/Handler;)V
 
-    .line 604
     iput p2, p0, Lcom/android/server/TactileAssistSettings$ActuatorObserver;->mActuatorType:I
 
-    .line 605
     return-void
 .end method
 
@@ -52,18 +48,14 @@
     .prologue
     const/4 v6, 0x0
 
-    .line 608
     const/4 v2, -0x1
 
-    .line 609
     .local v2, "strength":I
     const/4 v0, -0x1
 
-    .line 610
     .local v0, "density":I
     const/4 v1, -0x1
 
-    .line 612
     .local v1, "sharpness":I
     const-string v3, "TactileAssist"
 
@@ -75,7 +67,6 @@
 
     if-eqz v3, :cond_0
 
-    .line 613
     const-string v3, "TactileAssist"
 
     new-instance v4, Ljava/lang/StringBuilder;
@@ -105,13 +96,11 @@
 
     invoke-static {v3, v4}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 616
     :cond_0
     iget v3, p0, Lcom/android/server/TactileAssistSettings$ActuatorObserver;->mActuatorType:I
 
     packed-switch v3, :pswitch_data_0
 
-    .line 650
     :goto_0
     :pswitch_0
     iget-object v3, p0, Lcom/android/server/TactileAssistSettings$ActuatorObserver;->this$0:Lcom/android/server/TactileAssistSettings;
@@ -121,10 +110,8 @@
     # invokes: Lcom/android/server/TactileAssistSettings;->storeLevels(IIII)V
     invoke-static {v3, v4, v2, v0, v1}, Lcom/android/server/TactileAssistSettings;->access$200(Lcom/android/server/TactileAssistSettings;IIII)V
 
-    .line 651
     return-void
 
-    .line 618
     :pswitch_1
     # getter for: Lcom/android/server/TactileAssistSettings;->mContentResolver:Landroid/content/ContentResolver;
     invoke-static {}, Lcom/android/server/TactileAssistSettings;->access$000()Landroid/content/ContentResolver;
@@ -137,7 +124,6 @@
 
     move-result v2
 
-    .line 620
     # getter for: Lcom/android/server/TactileAssistSettings;->mContentResolver:Landroid/content/ContentResolver;
     invoke-static {}, Lcom/android/server/TactileAssistSettings;->access$000()Landroid/content/ContentResolver;
 
@@ -149,7 +135,6 @@
 
     move-result v0
 
-    .line 622
     # getter for: Lcom/android/server/TactileAssistSettings;->mContentResolver:Landroid/content/ContentResolver;
     invoke-static {}, Lcom/android/server/TactileAssistSettings;->access$000()Landroid/content/ContentResolver;
 
@@ -161,10 +146,8 @@
 
     move-result v1
 
-    .line 624
     goto :goto_0
 
-    .line 626
     :pswitch_2
     # getter for: Lcom/android/server/TactileAssistSettings;->mContentResolver:Landroid/content/ContentResolver;
     invoke-static {}, Lcom/android/server/TactileAssistSettings;->access$000()Landroid/content/ContentResolver;
@@ -177,7 +160,6 @@
 
     move-result v2
 
-    .line 628
     # getter for: Lcom/android/server/TactileAssistSettings;->mContentResolver:Landroid/content/ContentResolver;
     invoke-static {}, Lcom/android/server/TactileAssistSettings;->access$000()Landroid/content/ContentResolver;
 
@@ -189,7 +171,6 @@
 
     move-result v0
 
-    .line 630
     # getter for: Lcom/android/server/TactileAssistSettings;->mContentResolver:Landroid/content/ContentResolver;
     invoke-static {}, Lcom/android/server/TactileAssistSettings;->access$000()Landroid/content/ContentResolver;
 
@@ -201,10 +182,8 @@
 
     move-result v1
 
-    .line 632
     goto :goto_0
 
-    .line 634
     :pswitch_3
     # getter for: Lcom/android/server/TactileAssistSettings;->mContentResolver:Landroid/content/ContentResolver;
     invoke-static {}, Lcom/android/server/TactileAssistSettings;->access$000()Landroid/content/ContentResolver;
@@ -217,7 +196,6 @@
 
     move-result v2
 
-    .line 636
     # getter for: Lcom/android/server/TactileAssistSettings;->mContentResolver:Landroid/content/ContentResolver;
     invoke-static {}, Lcom/android/server/TactileAssistSettings;->access$000()Landroid/content/ContentResolver;
 
@@ -229,7 +207,6 @@
 
     move-result v0
 
-    .line 638
     # getter for: Lcom/android/server/TactileAssistSettings;->mContentResolver:Landroid/content/ContentResolver;
     invoke-static {}, Lcom/android/server/TactileAssistSettings;->access$000()Landroid/content/ContentResolver;
 
@@ -241,10 +218,8 @@
 
     move-result v1
 
-    .line 640
     goto :goto_0
 
-    .line 642
     :pswitch_4
     # getter for: Lcom/android/server/TactileAssistSettings;->mContentResolver:Landroid/content/ContentResolver;
     invoke-static {}, Lcom/android/server/TactileAssistSettings;->access$000()Landroid/content/ContentResolver;
@@ -257,7 +232,6 @@
 
     move-result v2
 
-    .line 644
     # getter for: Lcom/android/server/TactileAssistSettings;->mContentResolver:Landroid/content/ContentResolver;
     invoke-static {}, Lcom/android/server/TactileAssistSettings;->access$000()Landroid/content/ContentResolver;
 
@@ -269,7 +243,6 @@
 
     move-result v0
 
-    .line 646
     # getter for: Lcom/android/server/TactileAssistSettings;->mContentResolver:Landroid/content/ContentResolver;
     invoke-static {}, Lcom/android/server/TactileAssistSettings;->access$000()Landroid/content/ContentResolver;
 
@@ -283,7 +256,6 @@
 
     goto/16 :goto_0
 
-    .line 616
     nop
 
     :pswitch_data_0

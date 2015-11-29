@@ -19,7 +19,6 @@
     .locals 0
 
     .prologue
-    .line 282
     invoke-direct {p0}, Ljava/util/logging/Formatter;-><init>()V
 
     return-void
@@ -30,7 +29,6 @@
     .param p1, "x0"    # Lcom/android/server/am/PreferredPackageManager$1;
 
     .prologue
-    .line 282
     invoke-direct {p0}, Lcom/android/server/am/PreferredPackageManager$PPMLogFormatter;-><init>()V
 
     return-void
@@ -43,20 +41,17 @@
     .param p1, "r"    # Ljava/util/logging/LogRecord;
 
     .prologue
-    .line 285
     new-instance v2, Ljava/lang/StringBuffer;
 
     invoke-direct {v2}, Ljava/lang/StringBuffer;-><init>()V
 
-    .line 288
     .local v2, "sb":Ljava/lang/StringBuffer;
     invoke-virtual {p1}, Ljava/util/logging/LogRecord;->getMillis()J
 
     move-result-wide v4
 
-    .line 289
     .local v4, "time":J
-    const-string/jumbo v3, "{0, time}"
+    const-string v3, "{0, time}"
 
     const/4 v6, 0x1
 
@@ -74,7 +69,6 @@
 
     move-result-object v0
 
-    .line 291
     .local v0, "date":Ljava/lang/String;
     new-instance v3, Ljava/lang/StringBuilder;
 
@@ -106,26 +100,21 @@
 
     invoke-virtual {v2, v3}, Ljava/lang/StringBuffer;->append(Ljava/lang/String;)Ljava/lang/StringBuffer;
 
-    .line 292
     const-string v3, "\t"
 
     invoke-virtual {v2, v3}, Ljava/lang/StringBuffer;->append(Ljava/lang/String;)Ljava/lang/StringBuffer;
 
-    .line 295
     invoke-virtual {p0, p1}, Lcom/android/server/am/PreferredPackageManager$PPMLogFormatter;->formatMessage(Ljava/util/logging/LogRecord;)Ljava/lang/String;
 
     move-result-object v1
 
-    .line 296
     .local v1, "message":Ljava/lang/String;
     invoke-virtual {v2, v1}, Ljava/lang/StringBuffer;->append(Ljava/lang/String;)Ljava/lang/StringBuffer;
 
-    .line 297
     const-string v3, "\n"
 
     invoke-virtual {v2, v3}, Ljava/lang/StringBuffer;->append(Ljava/lang/String;)Ljava/lang/StringBuffer;
 
-    .line 299
     invoke-virtual {v2}, Ljava/lang/StringBuffer;->toString()Ljava/lang/String;
 
     move-result-object v3

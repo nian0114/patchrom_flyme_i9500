@@ -88,47 +88,36 @@
 
     const/4 v1, 0x0
 
-    .line 74
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 49
     new-instance v0, Lcom/android/server/display/MagnifierDisplayPolicy$DisplayInfo;
 
     invoke-direct {v0, p0}, Lcom/android/server/display/MagnifierDisplayPolicy$DisplayInfo;-><init>(Lcom/android/server/display/MagnifierDisplayPolicy;)V
 
     iput-object v0, p0, Lcom/android/server/display/MagnifierDisplayPolicy;->mLastDisplayInfo:Lcom/android/server/display/MagnifierDisplayPolicy$DisplayInfo;
 
-    .line 56
     iput v1, p0, Lcom/android/server/display/MagnifierDisplayPolicy;->mDefaultWidth:I
 
-    .line 57
     iput v1, p0, Lcom/android/server/display/MagnifierDisplayPolicy;->mDefaultHeight:I
 
-    .line 62
     iput v1, p0, Lcom/android/server/display/MagnifierDisplayPolicy;->mPointerSize:I
 
-    .line 63
     iput v2, p0, Lcom/android/server/display/MagnifierDisplayPolicy;->mCropWidth:F
 
-    .line 64
     iput v2, p0, Lcom/android/server/display/MagnifierDisplayPolicy;->mCropHeight:F
 
-    .line 65
     const/high16 v0, 0x40000000    # 2.0f
 
     iput v0, p0, Lcom/android/server/display/MagnifierDisplayPolicy;->mScale:F
 
-    .line 68
     iput v2, p0, Lcom/android/server/display/MagnifierDisplayPolicy;->mPointerMargin:F
 
-    .line 307
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
     iput-object v0, p0, Lcom/android/server/display/MagnifierDisplayPolicy;->mOnSizeChangeListener:Ljava/util/ArrayList;
 
-    .line 385
     new-instance v0, Lcom/android/server/display/MagnifierDisplayPolicy$1;
 
     new-instance v2, Landroid/os/Handler;
@@ -139,10 +128,8 @@
 
     iput-object v0, p0, Lcom/android/server/display/MagnifierDisplayPolicy;->mHoverZoomObserver:Landroid/database/ContentObserver;
 
-    .line 75
     iput-object p1, p0, Lcom/android/server/display/MagnifierDisplayPolicy;->mContext:Landroid/content/Context;
 
-    .line 77
     iget-object v0, p0, Lcom/android/server/display/MagnifierDisplayPolicy;->mContext:Landroid/content/Context;
 
     invoke-virtual {v0}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
@@ -162,7 +149,6 @@
     :goto_0
     iput-boolean v0, p0, Lcom/android/server/display/MagnifierDisplayPolicy;->mIsHoverZoom:Z
 
-    .line 78
     iget-object v0, p0, Lcom/android/server/display/MagnifierDisplayPolicy;->mContext:Landroid/content/Context;
 
     invoke-virtual {v0}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
@@ -179,7 +165,6 @@
 
     invoke-virtual {v0, v2, v1, v3}, Landroid/content/ContentResolver;->registerContentObserver(Landroid/net/Uri;ZLandroid/database/ContentObserver;)V
 
-    .line 80
     iget-object v0, p0, Lcom/android/server/display/MagnifierDisplayPolicy;->mContext:Landroid/content/Context;
 
     invoke-virtual {v0}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
@@ -194,13 +179,11 @@
 
     iput v0, p0, Lcom/android/server/display/MagnifierDisplayPolicy;->mPointerSize:I
 
-    .line 81
     return-void
 
     :cond_0
     move v0, v1
 
-    .line 77
     goto :goto_0
 .end method
 
@@ -209,7 +192,6 @@
     .param p0, "x0"    # Lcom/android/server/display/MagnifierDisplayPolicy;
 
     .prologue
-    .line 45
     iget-object v0, p0, Lcom/android/server/display/MagnifierDisplayPolicy;->mContext:Landroid/content/Context;
 
     return-object v0
@@ -220,7 +202,6 @@
     .param p0, "x0"    # Lcom/android/server/display/MagnifierDisplayPolicy;
 
     .prologue
-    .line 45
     iget-boolean v0, p0, Lcom/android/server/display/MagnifierDisplayPolicy;->mIsHoverZoom:Z
 
     return v0
@@ -232,7 +213,6 @@
     .param p1, "x1"    # Z
 
     .prologue
-    .line 45
     iput-boolean p1, p0, Lcom/android/server/display/MagnifierDisplayPolicy;->mIsHoverZoom:Z
 
     return p1
@@ -243,7 +223,6 @@
     .param p0, "x0"    # Lcom/android/server/display/MagnifierDisplayPolicy;
 
     .prologue
-    .line 45
     invoke-direct {p0}, Lcom/android/server/display/MagnifierDisplayPolicy;->setPointMargin()V
 
     return-void
@@ -253,12 +232,10 @@
     .locals 2
 
     .prologue
-    .line 361
     iget-boolean v0, p0, Lcom/android/server/display/MagnifierDisplayPolicy;->mIsHoverZoom:Z
 
     if-eqz v0, :cond_0
 
-    .line 362
     iget-object v0, p0, Lcom/android/server/display/MagnifierDisplayPolicy;->mContext:Landroid/content/Context;
 
     invoke-virtual {v0}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
@@ -275,11 +252,9 @@
 
     iput v0, p0, Lcom/android/server/display/MagnifierDisplayPolicy;->mPointerMargin:F
 
-    .line 366
     :goto_0
     return-void
 
-    .line 364
     :cond_0
     iget v0, p0, Lcom/android/server/display/MagnifierDisplayPolicy;->mCropHeight:F
 
@@ -311,7 +286,6 @@
     .param p1, "displayInfo"    # Landroid/view/DisplayInfo;
 
     .prologue
-    .line 238
     if-eqz p1, :cond_0
 
     iget v0, p0, Lcom/android/server/display/MagnifierDisplayPolicy;->mDefaultWidth:I
@@ -326,26 +300,21 @@
 
     if-ne v0, v1, :cond_1
 
-    .line 241
     :cond_0
     const/4 v0, 0x0
 
-    .line 252
     :goto_0
     return v0
 
-    .line 243
     :cond_1
     iget v0, p1, Landroid/view/DisplayInfo;->logicalWidth:I
 
     iput v0, p0, Lcom/android/server/display/MagnifierDisplayPolicy;->mDefaultWidth:I
 
-    .line 244
     iget v0, p1, Landroid/view/DisplayInfo;->logicalHeight:I
 
     iput v0, p0, Lcom/android/server/display/MagnifierDisplayPolicy;->mDefaultHeight:I
 
-    .line 246
     iget v0, p0, Lcom/android/server/display/MagnifierDisplayPolicy;->mFixedWidth:I
 
     int-to-float v0, v0
@@ -360,7 +329,6 @@
 
     iput v0, p0, Lcom/android/server/display/MagnifierDisplayPolicy;->mCropWidth:F
 
-    .line 247
     iget v0, p0, Lcom/android/server/display/MagnifierDisplayPolicy;->mFixedHeight:I
 
     int-to-float v0, v0
@@ -375,10 +343,8 @@
 
     iput v0, p0, Lcom/android/server/display/MagnifierDisplayPolicy;->mCropHeight:F
 
-    .line 250
     invoke-virtual {p0}, Lcom/android/server/display/MagnifierDisplayPolicy;->setPrecision()V
 
-    .line 252
     const/4 v0, 0x1
 
     goto :goto_0
@@ -391,12 +357,10 @@
     .param p1, "listener"    # Lcom/android/server/display/MagnifierDisplayPolicy$OnSizeChangeListener;
 
     .prologue
-    .line 317
     iget-object v0, p0, Lcom/android/server/display/MagnifierDisplayPolicy;->mOnSizeChangeListener:Ljava/util/ArrayList;
 
     invoke-virtual {v0, p1}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 318
     return-void
 .end method
 
@@ -406,15 +370,13 @@
     .prologue
     const/4 v5, 0x0
 
-    .line 338
     iget-object v3, p0, Lcom/android/server/display/MagnifierDisplayPolicy;->mDefaultDisplayInfo:Landroid/view/DisplayInfo;
 
     if-nez v3, :cond_0
 
-    .line 339
     iget-object v3, p0, Lcom/android/server/display/MagnifierDisplayPolicy;->mContext:Landroid/content/Context;
 
-    const-string/jumbo v4, "window"
+    const-string v4, "window"
 
     invoke-virtual {v3, v4}, Landroid/content/Context;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
 
@@ -424,7 +386,6 @@
 
     iput-object v3, p0, Lcom/android/server/display/MagnifierDisplayPolicy;->mWindowManager:Landroid/view/WindowManager;
 
-    .line 341
     iget-object v3, p0, Lcom/android/server/display/MagnifierDisplayPolicy;->mWindowManager:Landroid/view/WindowManager;
 
     invoke-interface {v3}, Landroid/view/WindowManager;->getDefaultDisplay()Landroid/view/Display;
@@ -433,7 +394,6 @@
 
     iput-object v3, p0, Lcom/android/server/display/MagnifierDisplayPolicy;->mDefaultDisplay:Landroid/view/Display;
 
-    .line 343
     const-string v3, "display"
 
     invoke-static {v3}, Landroid/os/ServiceManager;->getService(Ljava/lang/String;)Landroid/os/IBinder;
@@ -446,7 +406,6 @@
 
     iput-object v3, p0, Lcom/android/server/display/MagnifierDisplayPolicy;->mDm:Landroid/hardware/display/IDisplayManager;
 
-    .line 347
     :cond_0
     :try_start_0
     iget-object v3, p0, Lcom/android/server/display/MagnifierDisplayPolicy;->mDm:Landroid/hardware/display/IDisplayManager;
@@ -461,7 +420,6 @@
     :try_end_0
     .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 352
     :goto_0
     iget-object v3, p0, Lcom/android/server/display/MagnifierDisplayPolicy;->mDefaultDisplayInfo:Landroid/view/DisplayInfo;
 
@@ -471,7 +429,6 @@
 
     if-eqz v3, :cond_1
 
-    .line 353
     iget-object v3, p0, Lcom/android/server/display/MagnifierDisplayPolicy;->mOnSizeChangeListener:Ljava/util/ArrayList;
 
     invoke-virtual {v3}, Ljava/util/ArrayList;->iterator()Ljava/util/Iterator;
@@ -492,7 +449,6 @@
 
     check-cast v2, Lcom/android/server/display/MagnifierDisplayPolicy$OnSizeChangeListener;
 
-    .line 354
     .local v2, "listener":Lcom/android/server/display/MagnifierDisplayPolicy$OnSizeChangeListener;
     const/4 v3, 0x1
 
@@ -500,19 +456,16 @@
 
     goto :goto_1
 
-    .line 348
     .end local v1    # "i$":Ljava/util/Iterator;
     .end local v2    # "listener":Lcom/android/server/display/MagnifierDisplayPolicy$OnSizeChangeListener;
     :catch_0
     move-exception v0
 
-    .line 349
     .local v0, "e":Landroid/os/RemoteException;
     invoke-virtual {v0}, Landroid/os/RemoteException;->printStackTrace()V
 
     goto :goto_0
 
-    .line 357
     .end local v0    # "e":Landroid/os/RemoteException;
     :cond_1
     return v5
@@ -523,14 +476,12 @@
     .param p1, "pw"    # Ljava/io/PrintWriter;
 
     .prologue
-    .line 303
     invoke-virtual {p0}, Lcom/android/server/display/MagnifierDisplayPolicy;->toString()Ljava/lang/String;
 
     move-result-object v0
 
     invoke-virtual {p1, v0}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
-    .line 304
     return-void
 .end method
 
@@ -538,15 +489,12 @@
     .locals 1
 
     .prologue
-    .line 325
     iget-object v0, p0, Lcom/android/server/display/MagnifierDisplayPolicy;->mDefaultDisplay:Landroid/view/Display;
 
     if-nez v0, :cond_0
 
-    .line 326
     invoke-virtual {p0}, Lcom/android/server/display/MagnifierDisplayPolicy;->checkUpdateDisplayInfo()Z
 
-    .line 328
     :cond_0
     iget-object v0, p0, Lcom/android/server/display/MagnifierDisplayPolicy;->mDefaultDisplay:Landroid/view/Display;
 
@@ -557,15 +505,12 @@
     .locals 1
 
     .prologue
-    .line 331
     iget-object v0, p0, Lcom/android/server/display/MagnifierDisplayPolicy;->mDefaultDisplayInfo:Landroid/view/DisplayInfo;
 
     if-nez v0, :cond_0
 
-    .line 332
     invoke-virtual {p0}, Lcom/android/server/display/MagnifierDisplayPolicy;->checkUpdateDisplayInfo()Z
 
-    .line 334
     :cond_0
     iget-object v0, p0, Lcom/android/server/display/MagnifierDisplayPolicy;->mDefaultDisplayInfo:Landroid/view/DisplayInfo;
 
@@ -577,7 +522,6 @@
     .param p1, "spec"    # Landroid/view/MagnificationSpec;
 
     .prologue
-    .line 115
     move-object/from16 v0, p1
 
     iget v0, v0, Landroid/view/MagnificationSpec;->offsetX:F
@@ -594,7 +538,6 @@
 
     int-to-float v15, v0
 
-    .line 116
     .local v15, "x":F
     move-object/from16 v0, p1
 
@@ -614,13 +557,11 @@
 
     move/from16 v16, v0
 
-    .line 117
     .local v16, "y":F
     move-object/from16 v0, p0
 
     iget v11, v0, Lcom/android/server/display/MagnifierDisplayPolicy;->mScale:F
 
-    .line 119
     .local v11, "scale":F
     move-object/from16 v0, p0
 
@@ -634,7 +575,6 @@
 
     sub-float v4, v15, v17
 
-    .line 120
     .local v4, "left":F
     move-object/from16 v0, p0
 
@@ -648,31 +588,24 @@
 
     sub-float v14, v16, v17
 
-    .line 122
     .local v14, "top":F
     const/4 v12, 0x0
 
-    .line 123
     .local v12, "surfaceOffsetX":F
     const/4 v13, 0x0
 
-    .line 124
     .local v13, "surfaceOffsetY":F
     const/4 v2, 0x0
 
-    .line 125
     .local v2, "absOffsetX":F
     const/4 v3, 0x0
 
-    .line 126
     .local v3, "absOffsetY":F
     const/4 v5, 0x0
 
-    .line 127
     .local v5, "pointOffsetX":F
     const/4 v6, 0x0
 
-    .line 129
     .local v6, "pointOffsetY":F
     move-object/from16 v0, p0
 
@@ -690,27 +623,21 @@
 
     if-gez v17, :cond_3
 
-    .line 130
     const/16 v17, 0x0
 
     cmpg-float v17, v4, v17
 
     if-gez v17, :cond_2
 
-    .line 131
     const/4 v12, 0x0
 
-    .line 132
     const/4 v4, 0x0
 
-    .line 133
     mul-float v5, v15, v11
 
-    .line 138
     :goto_0
     const/4 v2, 0x0
 
-    .line 155
     :goto_1
     move-object/from16 v0, p0
 
@@ -726,19 +653,14 @@
 
     if-gez v17, :cond_6
 
-    .line 156
     const/4 v14, 0x0
 
-    .line 157
     const/4 v13, 0x0
 
-    .line 158
     const/4 v3, 0x0
 
-    .line 159
     mul-float v6, v16, v11
 
-    .line 198
     :goto_2
     move-object/from16 v0, p0
 
@@ -761,7 +683,6 @@
 
     iput v0, v1, Landroid/graphics/Point;->x:I
 
-    .line 199
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/android/server/display/MagnifierDisplayPolicy;->mLastDisplayInfo:Lcom/android/server/display/MagnifierDisplayPolicy$DisplayInfo;
@@ -783,7 +704,6 @@
 
     iput v0, v1, Landroid/graphics/Point;->y:I
 
-    .line 201
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/android/server/display/MagnifierDisplayPolicy;->mLastDisplayInfo:Lcom/android/server/display/MagnifierDisplayPolicy$DisplayInfo;
@@ -805,7 +725,6 @@
 
     iput v0, v1, Landroid/graphics/Point;->x:I
 
-    .line 202
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/android/server/display/MagnifierDisplayPolicy;->mLastDisplayInfo:Lcom/android/server/display/MagnifierDisplayPolicy$DisplayInfo;
@@ -827,7 +746,6 @@
 
     iput v0, v1, Landroid/graphics/Point;->y:I
 
-    .line 204
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/android/server/display/MagnifierDisplayPolicy;->mLastDisplayInfo:Lcom/android/server/display/MagnifierDisplayPolicy$DisplayInfo;
@@ -859,7 +777,6 @@
 
     iput v0, v1, Landroid/graphics/Point;->x:I
 
-    .line 205
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/android/server/display/MagnifierDisplayPolicy;->mLastDisplayInfo:Lcom/android/server/display/MagnifierDisplayPolicy$DisplayInfo;
@@ -891,7 +808,6 @@
 
     iput v0, v1, Landroid/graphics/Point;->y:I
 
-    .line 207
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/android/server/display/MagnifierDisplayPolicy;->mLastDisplayInfo:Lcom/android/server/display/MagnifierDisplayPolicy$DisplayInfo;
@@ -911,7 +827,6 @@
 
     if-gez v17, :cond_e
 
-    .line 208
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/android/server/display/MagnifierDisplayPolicy;->mLastDisplayInfo:Lcom/android/server/display/MagnifierDisplayPolicy$DisplayInfo;
@@ -931,7 +846,6 @@
 
     iput v0, v1, Landroid/graphics/Point;->x:I
 
-    .line 213
     :cond_0
     :goto_3
     move-object/from16 v0, p0
@@ -953,7 +867,6 @@
 
     if-gez v17, :cond_f
 
-    .line 214
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/android/server/display/MagnifierDisplayPolicy;->mLastDisplayInfo:Lcom/android/server/display/MagnifierDisplayPolicy$DisplayInfo;
@@ -973,7 +886,6 @@
 
     iput v0, v1, Landroid/graphics/Point;->y:I
 
-    .line 219
     :cond_1
     :goto_4
     move-object/from16 v0, p0
@@ -984,7 +896,6 @@
 
     add-float v8, v4, v17
 
-    .line 220
     .local v8, "rectLeft":F
     move-object/from16 v0, p0
 
@@ -994,7 +905,6 @@
 
     add-float v10, v14, v17
 
-    .line 221
     .local v10, "rectTop":F
     move-object/from16 v0, p0
 
@@ -1012,7 +922,6 @@
 
     sub-float v9, v17, v18
 
-    .line 222
     .local v9, "rectRight":F
     move-object/from16 v0, p0
 
@@ -1030,7 +939,6 @@
 
     sub-float v7, v17, v18
 
-    .line 224
     .local v7, "rectBottom":F
     move-object/from16 v0, p0
 
@@ -1073,7 +981,6 @@
 
     invoke-virtual/range {v17 .. v21}, Landroid/graphics/Rect;->set(IIII)V
 
-    .line 225
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/android/server/display/MagnifierDisplayPolicy;->mLastDisplayInfo:Lcom/android/server/display/MagnifierDisplayPolicy$DisplayInfo;
@@ -1119,7 +1026,6 @@
 
     iput v0, v1, Landroid/graphics/Point;->x:I
 
-    .line 226
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/android/server/display/MagnifierDisplayPolicy;->mLastDisplayInfo:Lcom/android/server/display/MagnifierDisplayPolicy$DisplayInfo;
@@ -1165,7 +1071,6 @@
 
     iput v0, v1, Landroid/graphics/Point;->y:I
 
-    .line 234
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/android/server/display/MagnifierDisplayPolicy;->mLastDisplayInfo:Lcom/android/server/display/MagnifierDisplayPolicy$DisplayInfo;
@@ -1174,7 +1079,6 @@
 
     return-object v17
 
-    .line 135
     .end local v7    # "rectBottom":F
     .end local v8    # "rectLeft":F
     .end local v9    # "rectRight":F
@@ -1194,7 +1098,6 @@
 
     mul-float v12, v17, v11
 
-    .line 136
     move-object/from16 v0, p0
 
     iget v0, v0, Lcom/android/server/display/MagnifierDisplayPolicy;->mCropWidth:F
@@ -1209,7 +1112,6 @@
 
     goto/16 :goto_0
 
-    .line 139
     :cond_3
     move-object/from16 v0, p0
 
@@ -1241,7 +1143,6 @@
 
     if-lez v17, :cond_5
 
-    .line 140
     move-object/from16 v0, p0
 
     iget v0, v0, Lcom/android/server/display/MagnifierDisplayPolicy;->mDefaultWidth:I
@@ -1266,7 +1167,6 @@
 
     if-lez v17, :cond_4
 
-    .line 141
     move-object/from16 v0, p0
 
     iget v0, v0, Lcom/android/server/display/MagnifierDisplayPolicy;->mDefaultWidth:I
@@ -1285,7 +1185,6 @@
 
     mul-float v12, v17, v18
 
-    .line 142
     move-object/from16 v0, p0
 
     iget v0, v0, Lcom/android/server/display/MagnifierDisplayPolicy;->mDefaultWidth:I
@@ -1316,7 +1215,6 @@
 
     sub-float v5, v17, v18
 
-    .line 143
     move-object/from16 v0, p0
 
     iget v0, v0, Lcom/android/server/display/MagnifierDisplayPolicy;->mDefaultWidth:I
@@ -1337,7 +1235,6 @@
 
     sub-float v4, v17, v18
 
-    .line 148
     :goto_5
     move-object/from16 v0, p0
 
@@ -1363,7 +1260,6 @@
 
     goto/16 :goto_1
 
-    .line 145
     :cond_4
     move-object/from16 v0, p0
 
@@ -1393,7 +1289,6 @@
 
     sub-float v12, v17, v18
 
-    .line 146
     move-object/from16 v0, p0
 
     iget v0, v0, Lcom/android/server/display/MagnifierDisplayPolicy;->mDefaultWidth:I
@@ -1422,7 +1317,6 @@
 
     goto :goto_5
 
-    .line 150
     :cond_5
     neg-float v0, v15
 
@@ -1434,7 +1328,6 @@
 
     mul-float v12, v17, v18
 
-    .line 151
     move-object/from16 v0, p0
 
     iget v0, v0, Lcom/android/server/display/MagnifierDisplayPolicy;->mCropWidth:F
@@ -1449,12 +1342,10 @@
 
     sub-float v2, v15, v17
 
-    .line 152
     move v5, v15
 
     goto/16 :goto_1
 
-    .line 160
     :cond_6
     move-object/from16 v0, p0
 
@@ -1476,7 +1367,6 @@
 
     if-gez v17, :cond_7
 
-    .line 161
     move/from16 v0, v16
 
     neg-float v0, v0
@@ -1499,10 +1389,8 @@
 
     add-float v13, v17, v18
 
-    .line 162
     const/4 v3, 0x0
 
-    .line 163
     move-object/from16 v0, p0
 
     iget v0, v0, Lcom/android/server/display/MagnifierDisplayPolicy;->mCropHeight:F
@@ -1517,7 +1405,6 @@
 
     goto/16 :goto_2
 
-    .line 164
     :cond_7
     move/from16 v0, v16
 
@@ -1561,7 +1448,6 @@
 
     if-lez v17, :cond_c
 
-    .line 165
     move-object/from16 v0, p0
 
     iget v0, v0, Lcom/android/server/display/MagnifierDisplayPolicy;->mDefaultHeight:I
@@ -1590,7 +1476,6 @@
 
     if-lez v17, :cond_9
 
-    .line 166
     move-object/from16 v0, p0
 
     iget v0, v0, Lcom/android/server/display/MagnifierDisplayPolicy;->mDefaultHeight:I
@@ -1611,7 +1496,6 @@
 
     sub-float v14, v17, v18
 
-    .line 167
     move-object/from16 v0, p0
 
     iget v0, v0, Lcom/android/server/display/MagnifierDisplayPolicy;->mPointerMargin:F
@@ -1624,7 +1508,6 @@
 
     if-lez v17, :cond_8
 
-    .line 168
     move-object/from16 v0, p0
 
     iget v0, v0, Lcom/android/server/display/MagnifierDisplayPolicy;->mDefaultHeight:I
@@ -1649,7 +1532,6 @@
 
     sub-float v13, v17, v18
 
-    .line 169
     move-object/from16 v0, p0
 
     iget v0, v0, Lcom/android/server/display/MagnifierDisplayPolicy;->mCropHeight:F
@@ -1704,7 +1586,6 @@
 
     sub-float v6, v17, v18
 
-    .line 183
     :goto_6
     move-object/from16 v0, p0
 
@@ -1718,7 +1599,6 @@
 
     if-lez v17, :cond_b
 
-    .line 184
     move-object/from16 v0, p0
 
     iget v0, v0, Lcom/android/server/display/MagnifierDisplayPolicy;->mCropHeight:F
@@ -1751,7 +1631,6 @@
 
     goto/16 :goto_2
 
-    .line 171
     :cond_8
     move-object/from16 v0, p0
 
@@ -1797,7 +1676,6 @@
 
     neg-float v13, v0
 
-    .line 172
     move-object/from16 v0, p0
 
     iget v0, v0, Lcom/android/server/display/MagnifierDisplayPolicy;->mDefaultHeight:I
@@ -1830,7 +1708,6 @@
 
     goto :goto_6
 
-    .line 175
     :cond_9
     move-object/from16 v0, p0
 
@@ -1844,7 +1721,6 @@
 
     if-lez v17, :cond_a
 
-    .line 176
     const/high16 v17, 0x3f800000    # 1.0f
 
     sub-float v17, v11, v17
@@ -1879,7 +1755,6 @@
 
     sub-float v13, v17, v18
 
-    .line 177
     move-object/from16 v0, p0
 
     iget v0, v0, Lcom/android/server/display/MagnifierDisplayPolicy;->mCropHeight:F
@@ -1904,7 +1779,6 @@
 
     goto/16 :goto_6
 
-    .line 179
     :cond_a
     move-object/from16 v0, p0
 
@@ -1934,7 +1808,6 @@
 
     sub-float v13, v17, v18
 
-    .line 180
     move-object/from16 v0, p0
 
     iget v0, v0, Lcom/android/server/display/MagnifierDisplayPolicy;->mDefaultHeight:I
@@ -1963,7 +1836,6 @@
 
     goto/16 :goto_6
 
-    .line 186
     :cond_b
     move-object/from16 v0, p0
 
@@ -1989,7 +1861,6 @@
 
     goto/16 :goto_2
 
-    .line 189
     :cond_c
     const/high16 v17, 0x3f800000    # 1.0f
 
@@ -2025,7 +1896,6 @@
 
     sub-float v13, v17, v18
 
-    .line 190
     move-object/from16 v0, p0
 
     iget v0, v0, Lcom/android/server/display/MagnifierDisplayPolicy;->mCropHeight:F
@@ -2056,7 +1926,6 @@
 
     sub-float v3, v17, v18
 
-    .line 191
     move-object/from16 v0, p0
 
     iget v0, v0, Lcom/android/server/display/MagnifierDisplayPolicy;->mPointerMargin:F
@@ -2069,7 +1938,6 @@
 
     if-lez v17, :cond_d
 
-    .line 192
     move-object/from16 v0, p0
 
     iget v0, v0, Lcom/android/server/display/MagnifierDisplayPolicy;->mCropHeight:F
@@ -2094,13 +1962,11 @@
 
     goto/16 :goto_2
 
-    .line 194
     :cond_d
     move/from16 v6, v16
 
     goto/16 :goto_2
 
-    .line 209
     :cond_e
     move-object/from16 v0, p0
 
@@ -2139,7 +2005,6 @@
 
     if-le v0, v1, :cond_0
 
-    .line 210
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/android/server/display/MagnifierDisplayPolicy;->mLastDisplayInfo:Lcom/android/server/display/MagnifierDisplayPolicy$DisplayInfo;
@@ -2173,7 +2038,6 @@
 
     goto/16 :goto_3
 
-    .line 215
     :cond_f
     move-object/from16 v0, p0
 
@@ -2212,7 +2076,6 @@
 
     if-le v0, v1, :cond_1
 
-    .line 216
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/android/server/display/MagnifierDisplayPolicy;->mLastDisplayInfo:Lcom/android/server/display/MagnifierDisplayPolicy$DisplayInfo;
@@ -2251,7 +2114,6 @@
     .locals 2
 
     .prologue
-    .line 290
     iget v0, p0, Lcom/android/server/display/MagnifierDisplayPolicy;->mCropHeight:F
 
     iget v1, p0, Lcom/android/server/display/MagnifierDisplayPolicy;->mScale:F
@@ -2271,7 +2133,6 @@
     .locals 1
 
     .prologue
-    .line 282
     iget v0, p0, Lcom/android/server/display/MagnifierDisplayPolicy;->mPointerSize:I
 
     return v0
@@ -2282,7 +2143,6 @@
     .param p1, "length"    # F
 
     .prologue
-    .line 256
     iget v1, p0, Lcom/android/server/display/MagnifierDisplayPolicy;->mBorderPadding:F
 
     sub-float v1, p1, v1
@@ -2301,7 +2161,6 @@
 
     int-to-float v0, v1
 
-    .line 257
     .local v0, "diff":F
     iget v1, p0, Lcom/android/server/display/MagnifierDisplayPolicy;->mBorderPadding:F
 
@@ -2320,7 +2179,6 @@
     .locals 2
 
     .prologue
-    .line 286
     iget v0, p0, Lcom/android/server/display/MagnifierDisplayPolicy;->mCropWidth:F
 
     iget v1, p0, Lcom/android/server/display/MagnifierDisplayPolicy;->mScale:F
@@ -2340,7 +2198,6 @@
     .locals 1
 
     .prologue
-    .line 382
     iget-boolean v0, p0, Lcom/android/server/display/MagnifierDisplayPolicy;->mIsHoverZoom:Z
 
     return v0
@@ -2351,12 +2208,10 @@
     .param p1, "listener"    # Lcom/android/server/display/MagnifierDisplayPolicy$OnSizeChangeListener;
 
     .prologue
-    .line 321
     iget-object v0, p0, Lcom/android/server/display/MagnifierDisplayPolicy;->mOnSizeChangeListener:Ljava/util/ArrayList;
 
     invoke-virtual {v0, p1}, Ljava/util/ArrayList;->remove(Ljava/lang/Object;)Z
 
-    .line 322
     return-void
 .end method
 
@@ -2365,7 +2220,6 @@
     .param p1, "padding"    # Landroid/graphics/Rect;
 
     .prologue
-    .line 278
     iget v0, p1, Landroid/graphics/Rect;->left:I
 
     int-to-float v0, v0
@@ -2376,7 +2230,6 @@
 
     iput v0, p0, Lcom/android/server/display/MagnifierDisplayPolicy;->mBorderPadding:F
 
-    .line 279
     return-void
 .end method
 
@@ -2384,7 +2237,6 @@
     .locals 2
 
     .prologue
-    .line 261
     iget v0, p0, Lcom/android/server/display/MagnifierDisplayPolicy;->mCropWidth:F
 
     iget v1, p0, Lcom/android/server/display/MagnifierDisplayPolicy;->mCropWidth:F
@@ -2397,7 +2249,6 @@
 
     iput v0, p0, Lcom/android/server/display/MagnifierDisplayPolicy;->mCropWidth:F
 
-    .line 262
     iget v0, p0, Lcom/android/server/display/MagnifierDisplayPolicy;->mCropHeight:F
 
     iget v1, p0, Lcom/android/server/display/MagnifierDisplayPolicy;->mCropHeight:F
@@ -2410,10 +2261,8 @@
 
     iput v0, p0, Lcom/android/server/display/MagnifierDisplayPolicy;->mCropHeight:F
 
-    .line 265
     invoke-direct {p0}, Lcom/android/server/display/MagnifierDisplayPolicy;->setPointMargin()V
 
-    .line 267
     iget v0, p0, Lcom/android/server/display/MagnifierDisplayPolicy;->mCropWidth:F
 
     iget v1, p0, Lcom/android/server/display/MagnifierDisplayPolicy;->mScale:F
@@ -2428,14 +2277,12 @@
 
     if-lez v0, :cond_0
 
-    .line 269
     iget v0, p0, Lcom/android/server/display/MagnifierDisplayPolicy;->mFixedWidth:I
 
     add-int/lit8 v0, v0, -0x1
 
     iput v0, p0, Lcom/android/server/display/MagnifierDisplayPolicy;->mFixedWidth:I
 
-    .line 270
     iget v0, p0, Lcom/android/server/display/MagnifierDisplayPolicy;->mFixedWidth:I
 
     int-to-float v0, v0
@@ -2450,7 +2297,6 @@
 
     iput v0, p0, Lcom/android/server/display/MagnifierDisplayPolicy;->mCropWidth:F
 
-    .line 271
     iget v0, p0, Lcom/android/server/display/MagnifierDisplayPolicy;->mCropWidth:F
 
     iget v1, p0, Lcom/android/server/display/MagnifierDisplayPolicy;->mCropWidth:F
@@ -2463,7 +2309,6 @@
 
     iput v0, p0, Lcom/android/server/display/MagnifierDisplayPolicy;->mCropWidth:F
 
-    .line 273
     :cond_0
     return-void
 .end method
@@ -2472,23 +2317,19 @@
     .locals 2
 
     .prologue
-    .line 295
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
 
-    .line 296
     .local v0, "builder":Ljava/lang/StringBuilder;
     const-string v1, "Last:"
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 297
     iget-object v1, p0, Lcom/android/server/display/MagnifierDisplayPolicy;->mLastDisplayInfo:Lcom/android/server/display/MagnifierDisplayPolicy$DisplayInfo;
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 
-    .line 298
     invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
     move-result-object v1
@@ -2503,16 +2344,12 @@
     .param p3, "scale"    # F
 
     .prologue
-    .line 369
     iput p1, p0, Lcom/android/server/display/MagnifierDisplayPolicy;->mFixedWidth:I
 
-    .line 370
     iput p2, p0, Lcom/android/server/display/MagnifierDisplayPolicy;->mFixedHeight:I
 
-    .line 371
     iput p3, p0, Lcom/android/server/display/MagnifierDisplayPolicy;->mScale:F
 
-    .line 373
     iget v2, p0, Lcom/android/server/display/MagnifierDisplayPolicy;->mFixedWidth:I
 
     int-to-float v2, v2
@@ -2527,7 +2364,6 @@
 
     iput v2, p0, Lcom/android/server/display/MagnifierDisplayPolicy;->mCropWidth:F
 
-    .line 374
     iget v2, p0, Lcom/android/server/display/MagnifierDisplayPolicy;->mFixedHeight:I
 
     int-to-float v2, v2
@@ -2542,7 +2378,6 @@
 
     iput v2, p0, Lcom/android/server/display/MagnifierDisplayPolicy;->mCropHeight:F
 
-    .line 376
     iget-object v2, p0, Lcom/android/server/display/MagnifierDisplayPolicy;->mOnSizeChangeListener:Ljava/util/ArrayList;
 
     invoke-virtual {v2}, Ljava/util/ArrayList;->iterator()Ljava/util/Iterator;
@@ -2563,7 +2398,6 @@
 
     check-cast v1, Lcom/android/server/display/MagnifierDisplayPolicy$OnSizeChangeListener;
 
-    .line 377
     .local v1, "listener":Lcom/android/server/display/MagnifierDisplayPolicy$OnSizeChangeListener;
     const/4 v2, 0x0
 
@@ -2571,7 +2405,6 @@
 
     goto :goto_0
 
-    .line 379
     .end local v1    # "listener":Lcom/android/server/display/MagnifierDisplayPolicy$OnSizeChangeListener;
     :cond_0
     return-void

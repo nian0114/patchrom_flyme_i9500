@@ -26,7 +26,6 @@
     .locals 0
 
     .prologue
-    .line 651
     iput-object p1, p0, Landroid/hardware/camera2/CameraManager$CameraServiceDeathListener;->this$0:Landroid/hardware/camera2/CameraManager;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -40,7 +39,6 @@
     .param p2, "x1"    # Landroid/hardware/camera2/CameraManager$1;
 
     .prologue
-    .line 651
     invoke-direct {p0, p1}, Landroid/hardware/camera2/CameraManager$CameraServiceDeathListener;-><init>(Landroid/hardware/camera2/CameraManager;)V
 
     return-void
@@ -52,7 +50,6 @@
     .locals 5
 
     .prologue
-    .line 653
     iget-object v2, p0, Landroid/hardware/camera2/CameraManager$CameraServiceDeathListener;->this$0:Landroid/hardware/camera2/CameraManager;
 
     # getter for: Landroid/hardware/camera2/CameraManager;->mLock:Ljava/lang/Object;
@@ -62,7 +59,6 @@
 
     monitor-enter v3
 
-    .line 654
     :try_start_0
     iget-object v2, p0, Landroid/hardware/camera2/CameraManager$CameraServiceDeathListener;->this$0:Landroid/hardware/camera2/CameraManager;
 
@@ -71,7 +67,6 @@
     # setter for: Landroid/hardware/camera2/CameraManager;->mCameraService:Landroid/hardware/ICameraService;
     invoke-static {v2, v4}, Landroid/hardware/camera2/CameraManager;->access$302(Landroid/hardware/camera2/CameraManager;Landroid/hardware/ICameraService;)Landroid/hardware/ICameraService;
 
-    .line 661
     iget-object v2, p0, Landroid/hardware/camera2/CameraManager$CameraServiceDeathListener;->this$0:Landroid/hardware/camera2/CameraManager;
 
     # getter for: Landroid/hardware/camera2/CameraManager;->mDeviceIdList:Ljava/util/ArrayList;
@@ -97,7 +92,6 @@
 
     check-cast v0, Ljava/lang/String;
 
-    .line 662
     .local v0, "cameraId":Ljava/lang/String;
     iget-object v2, p0, Landroid/hardware/camera2/CameraManager$CameraServiceDeathListener;->this$0:Landroid/hardware/camera2/CameraManager;
 
@@ -112,7 +106,6 @@
 
     goto :goto_0
 
-    .line 665
     .end local v0    # "cameraId":Ljava/lang/String;
     .end local v1    # "i$":Ljava/util/Iterator;
     :catchall_0
@@ -131,6 +124,5 @@
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
-    .line 666
     return-void
 .end method

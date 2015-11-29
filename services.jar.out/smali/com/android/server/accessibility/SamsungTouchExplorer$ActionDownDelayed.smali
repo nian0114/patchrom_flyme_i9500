@@ -26,7 +26,6 @@
     .locals 0
 
     .prologue
-    .line 2802
     iput-object p1, p0, Lcom/android/server/accessibility/SamsungTouchExplorer$ActionDownDelayed;->this$0:Lcom/android/server/accessibility/SamsungTouchExplorer;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -41,7 +40,6 @@
     .param p1, "event"    # Landroid/view/MotionEvent;
 
     .prologue
-    .line 2806
     iget-object v1, p0, Lcom/android/server/accessibility/SamsungTouchExplorer$ActionDownDelayed;->this$0:Lcom/android/server/accessibility/SamsungTouchExplorer;
 
     # getter for: Lcom/android/server/accessibility/SamsungTouchExplorer;->mContext:Landroid/content/Context;
@@ -53,7 +51,7 @@
 
     move-result-object v1
 
-    const-string/jumbo v2, "status_bar_height"
+    const-string v2, "status_bar_height"
 
     const-string v3, "dimen"
 
@@ -63,7 +61,6 @@
 
     move-result v0
 
-    .line 2807
     .local v0, "resourceId":I
     const/4 v1, 0x0
 
@@ -119,7 +116,6 @@
 
     if-gtz v1, :cond_0
 
-    .line 2809
     iget-object v1, p0, Lcom/android/server/accessibility/SamsungTouchExplorer$ActionDownDelayed;->this$0:Lcom/android/server/accessibility/SamsungTouchExplorer;
 
     # getter for: Lcom/android/server/accessibility/SamsungTouchExplorer;->mHandler:Landroid/os/Handler;
@@ -129,11 +125,9 @@
 
     invoke-virtual {v1, p0}, Landroid/os/Handler;->post(Ljava/lang/Runnable;)Z
 
-    .line 2813
     :goto_0
     return-void
 
-    .line 2811
     :cond_0
     iget-object v1, p0, Lcom/android/server/accessibility/SamsungTouchExplorer$ActionDownDelayed;->this$0:Lcom/android/server/accessibility/SamsungTouchExplorer;
 
@@ -153,7 +147,6 @@
     .locals 2
 
     .prologue
-    .line 2817
     iget-object v0, p0, Lcom/android/server/accessibility/SamsungTouchExplorer$ActionDownDelayed;->this$0:Lcom/android/server/accessibility/SamsungTouchExplorer;
 
     const/4 v1, 0x0
@@ -161,6 +154,5 @@
     # setter for: Lcom/android/server/accessibility/SamsungTouchExplorer;->mActionDownLock:Z
     invoke-static {v0, v1}, Lcom/android/server/accessibility/SamsungTouchExplorer;->access$4002(Lcom/android/server/accessibility/SamsungTouchExplorer;Z)Z
 
-    .line 2818
     return-void
 .end method

@@ -26,7 +26,6 @@
     .locals 0
 
     .prologue
-    .line 243
     iput-object p1, p0, Lcom/android/internal/policy/impl/MultiPhoneWindow$1;->this$0:Lcom/android/internal/policy/impl/MultiPhoneWindow;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -40,7 +39,6 @@
     .locals 4
 
     .prologue
-    .line 247
     :try_start_0
     iget-object v1, p0, Lcom/android/internal/policy/impl/MultiPhoneWindow$1;->this$0:Lcom/android/internal/policy/impl/MultiPhoneWindow;
 
@@ -71,7 +69,6 @@
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 251
     :goto_0
     iget-object v1, p0, Lcom/android/internal/policy/impl/MultiPhoneWindow$1;->this$0:Lcom/android/internal/policy/impl/MultiPhoneWindow;
 
@@ -95,28 +92,23 @@
 
     if-ne v1, v2, :cond_1
 
-    .line 252
     :cond_0
     iget-object v1, p0, Lcom/android/internal/policy/impl/MultiPhoneWindow$1;->this$0:Lcom/android/internal/policy/impl/MultiPhoneWindow;
 
     # invokes: Lcom/android/internal/policy/impl/MultiPhoneWindow;->dismissGuide()V
     invoke-static {v1}, Lcom/android/internal/policy/impl/MultiPhoneWindow;->access$300(Lcom/android/internal/policy/impl/MultiPhoneWindow;)V
 
-    .line 256
     :goto_1
     return-void
 
-    .line 248
     :catch_0
     move-exception v0
 
-    .line 249
     .local v0, "e":Ljava/lang/Exception;
     invoke-virtual {v0}, Ljava/lang/Exception;->printStackTrace()V
 
     goto :goto_0
 
-    .line 254
     .end local v0    # "e":Ljava/lang/Exception;
     :cond_1
     iget-object v1, p0, Lcom/android/internal/policy/impl/MultiPhoneWindow$1;->this$0:Lcom/android/internal/policy/impl/MultiPhoneWindow;

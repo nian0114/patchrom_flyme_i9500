@@ -80,21 +80,16 @@
     .prologue
     const/4 v1, -0x1
 
-    .line 46
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 80
     const/4 v0, 0x0
 
     iput-boolean v0, p0, Lcom/android/server/enterprise/vpn/knoxvpn/profile/VpnProfileInfo;->mIsRetry:Z
 
-    .line 82
     iput v1, p0, Lcom/android/server/enterprise/vpn/knoxvpn/profile/VpnProfileInfo;->mVendorUid:I
 
-    .line 84
     iput v1, p0, Lcom/android/server/enterprise/vpn/knoxvpn/profile/VpnProfileInfo;->mNetId:I
 
-    .line 86
     new-instance v0, Ljava/util/concurrent/ConcurrentHashMap;
 
     invoke-direct {v0}, Ljava/util/concurrent/ConcurrentHashMap;-><init>()V
@@ -113,7 +108,6 @@
     .param p3, "cid"    # I
 
     .prologue
-    .line 281
     monitor-enter p0
 
     :try_start_0
@@ -121,7 +115,6 @@
 
     invoke-direct {v0, p1, p2, p3}, Lcom/android/server/enterprise/vpn/knoxvpn/profile/VpnPackageInfo;-><init>(Ljava/lang/String;II)V
 
-    .line 282
     .local v0, "pkgInfo":Lcom/android/server/enterprise/vpn/knoxvpn/profile/VpnPackageInfo;
     iget-object v1, p0, Lcom/android/server/enterprise/vpn/knoxvpn/profile/VpnProfileInfo;->mPackageMap:Ljava/util/concurrent/ConcurrentHashMap;
 
@@ -129,12 +122,10 @@
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 283
     monitor-exit p0
 
     return-void
 
-    .line 281
     .end local v0    # "pkgInfo":Lcom/android/server/enterprise/vpn/knoxvpn/profile/VpnPackageInfo;
     :catchall_0
     move-exception v1
@@ -148,7 +139,6 @@
     .locals 1
 
     .prologue
-    .line 170
     monitor-enter p0
 
     :try_start_0
@@ -172,7 +162,6 @@
     .locals 1
 
     .prologue
-    .line 138
     monitor-enter p0
 
     :try_start_0
@@ -196,7 +185,6 @@
     .locals 1
 
     .prologue
-    .line 182
     monitor-enter p0
 
     :try_start_0
@@ -229,7 +217,6 @@
     .end annotation
 
     .prologue
-    .line 227
     iget-object v0, p0, Lcom/android/server/enterprise/vpn/knoxvpn/profile/VpnProfileInfo;->mDnsList:Ljava/util/List;
 
     return-object v0
@@ -239,7 +226,6 @@
     .locals 1
 
     .prologue
-    .line 106
     monitor-enter p0
 
     :try_start_0
@@ -263,7 +249,6 @@
     .locals 1
 
     .prologue
-    .line 90
     monitor-enter p0
 
     :try_start_0
@@ -287,7 +272,6 @@
     .locals 1
 
     .prologue
-    .line 178
     monitor-enter p0
 
     :try_start_0
@@ -311,7 +295,6 @@
     .locals 1
 
     .prologue
-    .line 122
     monitor-enter p0
 
     :try_start_0
@@ -336,7 +319,6 @@
     .param p1, "packageName"    # Ljava/lang/String;
 
     .prologue
-    .line 256
     iget-object v0, p0, Lcom/android/server/enterprise/vpn/knoxvpn/profile/VpnProfileInfo;->mPackageMap:Ljava/util/concurrent/ConcurrentHashMap;
 
     invoke-virtual {v0, p1}, Ljava/util/concurrent/ConcurrentHashMap;->containsKey(Ljava/lang/Object;)Z
@@ -345,10 +327,8 @@
 
     if-nez v0, :cond_0
 
-    .line 257
     const/4 v0, 0x0
 
-    .line 259
     :goto_0
     return-object v0
 
@@ -368,7 +348,6 @@
     .locals 1
 
     .prologue
-    .line 273
     iget-object v0, p0, Lcom/android/server/enterprise/vpn/knoxvpn/profile/VpnProfileInfo;->mPackageMap:Ljava/util/concurrent/ConcurrentHashMap;
 
     invoke-virtual {v0}, Ljava/util/concurrent/ConcurrentHashMap;->size()I
@@ -383,7 +362,6 @@
     .param p1, "uid"    # I
 
     .prologue
-    .line 263
     iget-object v3, p0, Lcom/android/server/enterprise/vpn/knoxvpn/profile/VpnProfileInfo;->mPackageMap:Ljava/util/concurrent/ConcurrentHashMap;
 
     invoke-virtual {v3}, Ljava/util/concurrent/ConcurrentHashMap;->values()Ljava/util/Collection;
@@ -408,13 +386,11 @@
 
     check-cast v1, Lcom/android/server/enterprise/vpn/knoxvpn/profile/VpnPackageInfo;
 
-    .line 264
     .local v1, "p":Lcom/android/server/enterprise/vpn/knoxvpn/profile/VpnPackageInfo;
     invoke-virtual {v1}, Lcom/android/server/enterprise/vpn/knoxvpn/profile/VpnPackageInfo;->getPackageName()Ljava/lang/String;
 
     move-result-object v2
 
-    .line 265
     .local v2, "packageName":Ljava/lang/String;
     invoke-virtual {v1}, Lcom/android/server/enterprise/vpn/knoxvpn/profile/VpnPackageInfo;->getUid()I
 
@@ -422,7 +398,6 @@
 
     if-ne v3, p1, :cond_0
 
-    .line 269
     .end local v1    # "p":Lcom/android/server/enterprise/vpn/knoxvpn/profile/VpnPackageInfo;
     .end local v2    # "packageName":Ljava/lang/String;
     :goto_0
@@ -447,7 +422,6 @@
     .end annotation
 
     .prologue
-    .line 243
     iget-object v0, p0, Lcom/android/server/enterprise/vpn/knoxvpn/profile/VpnProfileInfo;->mPackageMap:Ljava/util/concurrent/ConcurrentHashMap;
 
     invoke-virtual {v0}, Ljava/util/concurrent/ConcurrentHashMap;->values()Ljava/util/Collection;
@@ -471,7 +445,6 @@
     .end annotation
 
     .prologue
-    .line 239
     iget-object v0, p0, Lcom/android/server/enterprise/vpn/knoxvpn/profile/VpnProfileInfo;->mPackageMap:Ljava/util/concurrent/ConcurrentHashMap;
 
     return-object v0
@@ -481,7 +454,6 @@
     .locals 1
 
     .prologue
-    .line 146
     monitor-enter p0
 
     :try_start_0
@@ -505,7 +477,6 @@
     .locals 1
 
     .prologue
-    .line 98
     monitor-enter p0
 
     :try_start_0
@@ -529,7 +500,6 @@
     .locals 1
 
     .prologue
-    .line 162
     monitor-enter p0
 
     :try_start_0
@@ -553,7 +523,6 @@
     .locals 1
 
     .prologue
-    .line 154
     monitor-enter p0
 
     :try_start_0
@@ -586,7 +555,6 @@
     .end annotation
 
     .prologue
-    .line 235
     iget-object v0, p0, Lcom/android/server/enterprise/vpn/knoxvpn/profile/VpnProfileInfo;->mSearchDomainList:Ljava/util/List;
 
     return-object v0
@@ -596,7 +564,6 @@
     .locals 1
 
     .prologue
-    .line 192
     monitor-enter p0
 
     :try_start_0
@@ -620,7 +587,6 @@
     .locals 1
 
     .prologue
-    .line 114
     monitor-enter p0
 
     :try_start_0
@@ -644,7 +610,6 @@
     .locals 1
 
     .prologue
-    .line 210
     monitor-enter p0
 
     :try_start_0
@@ -668,7 +633,6 @@
     .locals 1
 
     .prologue
-    .line 202
     monitor-enter p0
 
     :try_start_0
@@ -692,7 +656,6 @@
     .locals 1
 
     .prologue
-    .line 251
     monitor-enter p0
 
     :try_start_0
@@ -717,7 +680,6 @@
     .param p1, "packageName"    # Ljava/lang/String;
 
     .prologue
-    .line 286
     monitor-enter p0
 
     :try_start_0
@@ -731,13 +693,11 @@
 
     if-nez v0, :cond_0
 
-    .line 290
     :goto_0
     monitor-exit p0
 
     return-void
 
-    .line 289
     :cond_0
     :try_start_1
     iget-object v0, p0, Lcom/android/server/enterprise/vpn/knoxvpn/profile/VpnProfileInfo;->mPackageMap:Ljava/util/concurrent/ConcurrentHashMap;
@@ -748,7 +708,6 @@
 
     goto :goto_0
 
-    .line 286
     :catchall_0
     move-exception v0
 
@@ -762,7 +721,6 @@
     .param p1, "activateState"    # I
 
     .prologue
-    .line 174
     monitor-enter p0
 
     :try_start_0
@@ -770,12 +728,10 @@
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 175
     monitor-exit p0
 
     return-void
 
-    .line 174
     :catchall_0
     move-exception v0
 
@@ -789,7 +745,6 @@
     .param p1, "adminid"    # I
 
     .prologue
-    .line 142
     monitor-enter p0
 
     :try_start_0
@@ -797,12 +752,10 @@
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 143
     monitor-exit p0
 
     return-void
 
-    .line 142
     :catchall_0
     move-exception v0
 
@@ -816,7 +769,6 @@
     .param p1, "chainingEnabled"    # I
 
     .prologue
-    .line 186
     monitor-enter p0
 
     :try_start_0
@@ -824,12 +776,10 @@
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 187
     monitor-exit p0
 
     return-void
 
-    .line 186
     :catchall_0
     move-exception v0
 
@@ -851,11 +801,9 @@
     .end annotation
 
     .prologue
-    .line 223
     .local p1, "dnsList":Ljava/util/List;, "Ljava/util/List<Ljava/lang/String;>;"
     iput-object p1, p0, Lcom/android/server/enterprise/vpn/knoxvpn/profile/VpnProfileInfo;->mDnsList:Ljava/util/List;
 
-    .line 224
     return-void
 .end method
 
@@ -864,7 +812,6 @@
     .param p1, "interfaceName"    # Ljava/lang/String;
 
     .prologue
-    .line 110
     monitor-enter p0
 
     :try_start_0
@@ -872,12 +819,10 @@
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 111
     monitor-exit p0
 
     return-void
 
-    .line 110
     :catchall_0
     move-exception v0
 
@@ -891,7 +836,6 @@
     .param p1, "set"    # Z
 
     .prologue
-    .line 94
     monitor-enter p0
 
     :try_start_0
@@ -899,12 +843,10 @@
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 95
     monitor-exit p0
 
     return-void
 
-    .line 94
     :catchall_0
     move-exception v0
 
@@ -918,7 +860,6 @@
     .param p1, "markProfileForDeletion"    # Z
 
     .prologue
-    .line 219
     monitor-enter p0
 
     :try_start_0
@@ -926,12 +867,10 @@
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 220
     monitor-exit p0
 
     return-void
 
-    .line 219
     :catchall_0
     move-exception v0
 
@@ -945,7 +884,6 @@
     .param p1, "netId"    # I
 
     .prologue
-    .line 126
     monitor-enter p0
 
     :try_start_0
@@ -953,12 +891,10 @@
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 127
     monitor-exit p0
 
     return-void
 
-    .line 126
     :catchall_0
     move-exception v0
 
@@ -972,7 +908,6 @@
     .param p1, "personaId"    # I
 
     .prologue
-    .line 150
     monitor-enter p0
 
     :try_start_0
@@ -980,12 +915,10 @@
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 151
     monitor-exit p0
 
     return-void
 
-    .line 150
     :catchall_0
     move-exception v0
 
@@ -999,7 +932,6 @@
     .param p1, "profileName"    # Ljava/lang/String;
 
     .prologue
-    .line 102
     monitor-enter p0
 
     :try_start_0
@@ -1007,12 +939,10 @@
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 103
     monitor-exit p0
 
     return-void
 
-    .line 102
     :catchall_0
     move-exception v0
 
@@ -1026,7 +956,6 @@
     .param p1, "protocolType"    # Ljava/lang/String;
 
     .prologue
-    .line 166
     monitor-enter p0
 
     :try_start_0
@@ -1034,12 +963,10 @@
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 167
     monitor-exit p0
 
     return-void
 
-    .line 166
     :catchall_0
     move-exception v0
 
@@ -1053,7 +980,6 @@
     .param p1, "routeType"    # I
 
     .prologue
-    .line 158
     monitor-enter p0
 
     :try_start_0
@@ -1061,12 +987,10 @@
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 159
     monitor-exit p0
 
     return-void
 
-    .line 158
     :catchall_0
     move-exception v0
 
@@ -1088,11 +1012,9 @@
     .end annotation
 
     .prologue
-    .line 231
     .local p1, "searchDomainList":Ljava/util/List;, "Ljava/util/List<Ljava/lang/String;>;"
     iput-object p1, p0, Lcom/android/server/enterprise/vpn/knoxvpn/profile/VpnProfileInfo;->mSearchDomainList:Ljava/util/List;
 
-    .line 232
     return-void
 .end method
 
@@ -1101,7 +1023,6 @@
     .param p1, "uidPidSearchEnabled"    # I
 
     .prologue
-    .line 197
     monitor-enter p0
 
     :try_start_0
@@ -1109,12 +1030,10 @@
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 198
     monitor-exit p0
 
     return-void
 
-    .line 197
     :catchall_0
     move-exception v0
 
@@ -1128,7 +1047,6 @@
     .param p1, "vendorPkgName"    # Ljava/lang/String;
 
     .prologue
-    .line 118
     monitor-enter p0
 
     :try_start_0
@@ -1136,12 +1054,10 @@
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 119
     monitor-exit p0
 
     return-void
 
-    .line 118
     :catchall_0
     move-exception v0
 
@@ -1155,7 +1071,6 @@
     .param p1, "uid"    # I
 
     .prologue
-    .line 206
     monitor-enter p0
 
     :try_start_0
@@ -1163,12 +1078,10 @@
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 207
     monitor-exit p0
 
     return-void
 
-    .line 206
     :catchall_0
     move-exception v0
 
@@ -1182,7 +1095,6 @@
     .param p1, "vpnConnectionType"    # I
 
     .prologue
-    .line 215
     monitor-enter p0
 
     :try_start_0
@@ -1190,12 +1102,10 @@
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 216
     monitor-exit p0
 
     return-void
 
-    .line 215
     :catchall_0
     move-exception v0
 
@@ -1209,7 +1119,6 @@
     .param p1, "type"    # I
 
     .prologue
-    .line 247
     monitor-enter p0
 
     :try_start_0
@@ -1217,12 +1126,10 @@
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 248
     monitor-exit p0
 
     return-void
 
-    .line 247
     :catchall_0
     move-exception v0
 

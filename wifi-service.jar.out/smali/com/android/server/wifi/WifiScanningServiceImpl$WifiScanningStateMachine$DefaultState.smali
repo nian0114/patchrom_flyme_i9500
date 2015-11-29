@@ -23,7 +23,6 @@
     .locals 0
 
     .prologue
-    .line 277
     iput-object p1, p0, Lcom/android/server/wifi/WifiScanningServiceImpl$WifiScanningStateMachine$DefaultState;->this$1:Lcom/android/server/wifi/WifiScanningServiceImpl$WifiScanningStateMachine;
 
     invoke-direct {p0}, Lcom/android/internal/util/State;-><init>()V
@@ -37,14 +36,12 @@
     .locals 2
 
     .prologue
-    .line 280
     const-string v0, "WifiScanningService"
 
     const-string v1, "DefaultState"
 
     invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 281
     return-void
 .end method
 
@@ -53,7 +50,6 @@
     .param p1, "msg"    # Landroid/os/Message;
 
     .prologue
-    .line 285
     const-string v2, "WifiScanningService"
 
     new-instance v3, Ljava/lang/StringBuilder;
@@ -76,7 +72,6 @@
 
     invoke-static {v2, v3}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 287
     iget-object v2, p0, Lcom/android/server/wifi/WifiScanningServiceImpl$WifiScanningStateMachine$DefaultState;->this$1:Lcom/android/server/wifi/WifiScanningServiceImpl$WifiScanningStateMachine;
 
     iget-object v2, v2, Lcom/android/server/wifi/WifiScanningServiceImpl$WifiScanningStateMachine;->this$0:Lcom/android/server/wifi/WifiScanningServiceImpl;
@@ -91,19 +86,16 @@
 
     check-cast v1, Lcom/android/server/wifi/WifiScanningServiceImpl$ClientInfo;
 
-    .line 289
     .local v1, "ci":Lcom/android/server/wifi/WifiScanningServiceImpl$ClientInfo;
     iget v2, p1, Landroid/os/Message;->what:I
 
     sparse-switch v2, :sswitch_data_0
 
-    .line 326
     :goto_0
     const/4 v2, 0x1
 
     return v2
 
-    .line 291
     :sswitch_0
     invoke-static {}, Lcom/android/server/wifi/WifiNative;->startHal()Z
 
@@ -117,12 +109,10 @@
 
     if-eqz v2, :cond_1
 
-    .line 292
     new-instance v0, Lcom/android/server/wifi/WifiNative$ScanCapabilities;
 
     invoke-direct {v0}, Lcom/android/server/wifi/WifiNative$ScanCapabilities;-><init>()V
 
-    .line 294
     .local v0, "capabilities":Lcom/android/server/wifi/WifiNative$ScanCapabilities;
     invoke-static {v0}, Lcom/android/server/wifi/WifiNative;->getScanCapabilities(Lcom/android/server/wifi/WifiNative$ScanCapabilities;)Z
 
@@ -130,7 +120,6 @@
 
     if-eqz v2, :cond_0
 
-    .line 295
     iget-object v2, p0, Lcom/android/server/wifi/WifiScanningServiceImpl$WifiScanningStateMachine$DefaultState;->this$1:Lcom/android/server/wifi/WifiScanningServiceImpl$WifiScanningStateMachine;
 
     iget-object v3, p0, Lcom/android/server/wifi/WifiScanningServiceImpl$WifiScanningStateMachine$DefaultState;->this$1:Lcom/android/server/wifi/WifiScanningServiceImpl$WifiScanningStateMachine;
@@ -145,7 +134,6 @@
 
     goto :goto_0
 
-    .line 297
     :cond_0
     iget-object v2, p0, Lcom/android/server/wifi/WifiScanningServiceImpl$WifiScanningStateMachine$DefaultState;->this$1:Lcom/android/server/wifi/WifiScanningServiceImpl$WifiScanningStateMachine;
 
@@ -156,7 +144,6 @@
 
     goto :goto_0
 
-    .line 300
     .end local v0    # "capabilities":Lcom/android/server/wifi/WifiNative$ScanCapabilities;
     :cond_1
     iget-object v2, p0, Lcom/android/server/wifi/WifiScanningServiceImpl$WifiScanningStateMachine$DefaultState;->this$1:Lcom/android/server/wifi/WifiScanningServiceImpl$WifiScanningStateMachine;
@@ -168,7 +155,6 @@
 
     goto :goto_0
 
-    .line 311
     :sswitch_1
     iget-object v2, p0, Lcom/android/server/wifi/WifiScanningServiceImpl$WifiScanningStateMachine$DefaultState;->this$1:Lcom/android/server/wifi/WifiScanningServiceImpl$WifiScanningStateMachine;
 
@@ -182,7 +168,6 @@
 
     goto :goto_0
 
-    .line 315
     :sswitch_2
     iget-object v2, p0, Lcom/android/server/wifi/WifiScanningServiceImpl$WifiScanningStateMachine$DefaultState;->this$1:Lcom/android/server/wifi/WifiScanningServiceImpl$WifiScanningStateMachine;
 
@@ -193,7 +178,6 @@
 
     goto :goto_0
 
-    .line 319
     :sswitch_3
     iget-object v2, p0, Lcom/android/server/wifi/WifiScanningServiceImpl$WifiScanningStateMachine$DefaultState;->this$1:Lcom/android/server/wifi/WifiScanningServiceImpl$WifiScanningStateMachine;
 
@@ -204,7 +188,6 @@
 
     goto :goto_0
 
-    .line 289
     nop
 
     :sswitch_data_0

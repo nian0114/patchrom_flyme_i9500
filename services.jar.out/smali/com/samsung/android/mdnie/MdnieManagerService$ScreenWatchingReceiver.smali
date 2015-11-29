@@ -23,7 +23,6 @@
     .locals 0
 
     .prologue
-    .line 153
     iput-object p1, p0, Lcom/samsung/android/mdnie/MdnieManagerService$ScreenWatchingReceiver;->this$0:Lcom/samsung/android/mdnie/MdnieManagerService;
 
     invoke-direct {p0}, Landroid/content/BroadcastReceiver;-><init>()V
@@ -37,7 +36,6 @@
     .param p2, "x1"    # Lcom/samsung/android/mdnie/MdnieManagerService$1;
 
     .prologue
-    .line 153
     invoke-direct {p0, p1}, Lcom/samsung/android/mdnie/MdnieManagerService$ScreenWatchingReceiver;-><init>(Lcom/samsung/android/mdnie/MdnieManagerService;)V
 
     return-void
@@ -55,12 +53,10 @@
 
     const/4 v2, 0x0
 
-    .line 156
     invoke-virtual {p2}, Landroid/content/Intent;->getAction()Ljava/lang/String;
 
     move-result-object v0
 
-    .line 158
     .local v0, "action":Ljava/lang/String;
     const-string v3, "android.intent.action.BOOT_COMPLETED"
 
@@ -70,12 +66,10 @@
 
     if-eqz v3, :cond_1
 
-    .line 171
     :cond_0
     :goto_0
     return-void
 
-    .line 161
     :cond_1
     const-string v3, "android.intent.action.SCREEN_ON"
 
@@ -85,13 +79,11 @@
 
     if-eqz v3, :cond_3
 
-    .line 162
     iget-object v3, p0, Lcom/samsung/android/mdnie/MdnieManagerService$ScreenWatchingReceiver;->this$0:Lcom/samsung/android/mdnie/MdnieManagerService;
 
     # setter for: Lcom/samsung/android/mdnie/MdnieManagerService;->mDisplayOn:Z
     invoke-static {v3, v1}, Lcom/samsung/android/mdnie/MdnieManagerService;->access$102(Lcom/samsung/android/mdnie/MdnieManagerService;Z)Z
 
-    .line 163
     iget-object v3, p0, Lcom/samsung/android/mdnie/MdnieManagerService$ScreenWatchingReceiver;->this$0:Lcom/samsung/android/mdnie/MdnieManagerService;
 
     iget-object v4, p0, Lcom/samsung/android/mdnie/MdnieManagerService$ScreenWatchingReceiver;->this$0:Lcom/samsung/android/mdnie/MdnieManagerService;
@@ -123,7 +115,6 @@
 
     goto :goto_1
 
-    .line 166
     :cond_3
     const-string v3, "android.intent.action.SCREEN_OFF"
 
@@ -133,13 +124,11 @@
 
     if-eqz v3, :cond_0
 
-    .line 167
     iget-object v3, p0, Lcom/samsung/android/mdnie/MdnieManagerService$ScreenWatchingReceiver;->this$0:Lcom/samsung/android/mdnie/MdnieManagerService;
 
     # setter for: Lcom/samsung/android/mdnie/MdnieManagerService;->mDisplayOn:Z
     invoke-static {v3, v2}, Lcom/samsung/android/mdnie/MdnieManagerService;->access$102(Lcom/samsung/android/mdnie/MdnieManagerService;Z)Z
 
-    .line 168
     iget-object v3, p0, Lcom/samsung/android/mdnie/MdnieManagerService$ScreenWatchingReceiver;->this$0:Lcom/samsung/android/mdnie/MdnieManagerService;
 
     iget-object v4, p0, Lcom/samsung/android/mdnie/MdnieManagerService$ScreenWatchingReceiver;->this$0:Lcom/samsung/android/mdnie/MdnieManagerService;

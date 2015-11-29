@@ -23,7 +23,6 @@
     .locals 0
 
     .prologue
-    .line 100
     iput-object p1, p0, Landroid/bluetooth/BluetoothSapClient$1;->this$0:Landroid/bluetooth/BluetoothSapClient;
 
     invoke-direct {p0}, Landroid/bluetooth/IBluetoothStateChangeCallback$Stub;-><init>()V
@@ -38,14 +37,13 @@
     .param p1, "up"    # Z
 
     .prologue
-    .line 102
     const-string v1, "BluetoothSapClient"
 
     new-instance v2, Ljava/lang/StringBuilder;
 
     invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v3, "onBluetoothStateChange: up="
+    const-string v3, "onBluetoothStateChange: up="
 
     invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -61,17 +59,14 @@
 
     invoke-static {v1, v2}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 103
     if-nez p1, :cond_0
 
-    .line 104
     const-string v1, "BluetoothSapClient"
 
     const-string v2, "Unbinding service..."
 
     invoke-static {v1, v2}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 105
     iget-object v1, p0, Landroid/bluetooth/BluetoothSapClient$1;->this$0:Landroid/bluetooth/BluetoothSapClient;
 
     # getter for: Landroid/bluetooth/BluetoothSapClient;->mConnection:Landroid/content/ServiceConnection;
@@ -81,7 +76,6 @@
 
     monitor-enter v2
 
-    .line 107
     :try_start_0
     iget-object v1, p0, Landroid/bluetooth/BluetoothSapClient$1;->this$0:Landroid/bluetooth/BluetoothSapClient;
 
@@ -90,7 +84,6 @@
     # setter for: Landroid/bluetooth/BluetoothSapClient;->mSapService:Landroid/bluetooth/IBluetoothSapClient;
     invoke-static {v1, v3}, Landroid/bluetooth/BluetoothSapClient;->access$102(Landroid/bluetooth/BluetoothSapClient;Landroid/bluetooth/IBluetoothSapClient;)Landroid/bluetooth/IBluetoothSapClient;
 
-    .line 108
     iget-object v1, p0, Landroid/bluetooth/BluetoothSapClient$1;->this$0:Landroid/bluetooth/BluetoothSapClient;
 
     # getter for: Landroid/bluetooth/BluetoothSapClient;->mContext:Landroid/content/Context;
@@ -110,20 +103,16 @@
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 112
     :goto_0
     :try_start_1
     monitor-exit v2
 
-    .line 125
     :goto_1
     return-void
 
-    .line 109
     :catch_0
     move-exception v0
 
-    .line 110
     .local v0, "re":Ljava/lang/Exception;
     const-string v1, "BluetoothSapClient"
 
@@ -133,7 +122,6 @@
 
     goto :goto_0
 
-    .line 112
     .end local v0    # "re":Ljava/lang/Exception;
     :catchall_0
     move-exception v1
@@ -144,7 +132,6 @@
 
     throw v1
 
-    .line 114
     :cond_0
     iget-object v1, p0, Landroid/bluetooth/BluetoothSapClient$1;->this$0:Landroid/bluetooth/BluetoothSapClient;
 
@@ -155,7 +142,6 @@
 
     monitor-enter v2
 
-    .line 116
     :try_start_2
     iget-object v1, p0, Landroid/bluetooth/BluetoothSapClient$1;->this$0:Landroid/bluetooth/BluetoothSapClient;
 
@@ -166,14 +152,12 @@
 
     if-nez v1, :cond_1
 
-    .line 117
     const-string v1, "BluetoothSapClient"
 
     const-string v3, "Binding service..."
 
     invoke-static {v1, v3}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 118
     iget-object v1, p0, Landroid/bluetooth/BluetoothSapClient$1;->this$0:Landroid/bluetooth/BluetoothSapClient;
 
     invoke-virtual {v1}, Landroid/bluetooth/BluetoothSapClient;->doBind()Z
@@ -181,7 +165,6 @@
     .catch Ljava/lang/Exception; {:try_start_2 .. :try_end_2} :catch_1
     .catchall {:try_start_2 .. :try_end_2} :catchall_1
 
-    .line 123
     :cond_1
     :goto_2
     :try_start_3
@@ -198,11 +181,9 @@
 
     throw v1
 
-    .line 120
     :catch_1
     move-exception v0
 
-    .line 121
     .restart local v0    # "re":Ljava/lang/Exception;
     :try_start_4
     const-string v1, "BluetoothSapClient"

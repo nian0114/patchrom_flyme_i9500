@@ -30,7 +30,6 @@
     .locals 0
 
     .prologue
-    .line 1321
     iput-object p1, p0, Lcom/android/server/display/WifiDisplayAdapter$16;->this$0:Lcom/android/server/display/WifiDisplayAdapter;
 
     iput-object p2, p0, Lcom/android/server/display/WifiDisplayAdapter$16;->val$device:Landroid/net/wifi/p2p/WifiP2pDevice;
@@ -48,7 +47,6 @@
     .locals 3
 
     .prologue
-    .line 1324
     iget-object v0, p0, Lcom/android/server/display/WifiDisplayAdapter$16;->this$0:Lcom/android/server/display/WifiDisplayAdapter;
 
     # getter for: Lcom/android/server/display/WifiDisplayAdapter;->mIpRemoteDisplayController:Lcom/android/server/display/IpRemoteDisplayController;
@@ -58,7 +56,6 @@
 
     if-eqz v0, :cond_0
 
-    .line 1325
     iget-object v0, p0, Lcom/android/server/display/WifiDisplayAdapter$16;->this$0:Lcom/android/server/display/WifiDisplayAdapter;
 
     # getter for: Lcom/android/server/display/WifiDisplayAdapter;->mIpRemoteDisplayController:Lcom/android/server/display/IpRemoteDisplayController;
@@ -72,7 +69,6 @@
 
     invoke-virtual {v0, v1, v2}, Lcom/android/server/display/IpRemoteDisplayController;->requestEnableWifiDisplay(Landroid/net/wifi/p2p/WifiP2pDevice;I)V
 
-    .line 1327
     :cond_0
     return-void
 .end method

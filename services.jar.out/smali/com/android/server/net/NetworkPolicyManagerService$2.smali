@@ -23,7 +23,6 @@
     .locals 0
 
     .prologue
-    .line 507
     iput-object p1, p0, Lcom/android/server/net/NetworkPolicyManagerService$2;->this$0:Lcom/android/server/net/NetworkPolicyManagerService;
 
     invoke-direct {p0}, Landroid/app/IProcessObserver$Stub;-><init>()V
@@ -40,7 +39,6 @@
     .param p3, "foregroundActivities"    # Z
 
     .prologue
-    .line 510
     return-void
 .end method
 
@@ -50,14 +48,12 @@
     .param p2, "uid"    # I
 
     .prologue
-    .line 531
     iget-object v1, p0, Lcom/android/server/net/NetworkPolicyManagerService$2;->this$0:Lcom/android/server/net/NetworkPolicyManagerService;
 
     iget-object v2, v1, Lcom/android/server/net/NetworkPolicyManagerService;->mRulesLock:Ljava/lang/Object;
 
     monitor-enter v2
 
-    .line 533
     :try_start_0
     iget-object v1, p0, Lcom/android/server/net/NetworkPolicyManagerService$2;->this$0:Lcom/android/server/net/NetworkPolicyManagerService;
 
@@ -69,41 +65,33 @@
 
     check-cast v0, Landroid/util/SparseIntArray;
 
-    .line 534
     .local v0, "pidState":Landroid/util/SparseIntArray;
     if-eqz v0, :cond_1
 
-    .line 535
     invoke-virtual {v0, p1}, Landroid/util/SparseIntArray;->delete(I)V
 
-    .line 536
     invoke-virtual {v0}, Landroid/util/SparseIntArray;->size()I
 
     move-result v1
 
     if-gtz v1, :cond_0
 
-    .line 537
     iget-object v1, p0, Lcom/android/server/net/NetworkPolicyManagerService$2;->this$0:Lcom/android/server/net/NetworkPolicyManagerService;
 
     iget-object v1, v1, Lcom/android/server/net/NetworkPolicyManagerService;->mUidPidState:Landroid/util/SparseArray;
 
     invoke-virtual {v1, p2}, Landroid/util/SparseArray;->remove(I)V
 
-    .line 539
     :cond_0
     iget-object v1, p0, Lcom/android/server/net/NetworkPolicyManagerService$2;->this$0:Lcom/android/server/net/NetworkPolicyManagerService;
 
     invoke-virtual {v1, p2}, Lcom/android/server/net/NetworkPolicyManagerService;->computeUidStateLocked(I)V
 
-    .line 541
     :cond_1
     monitor-exit v2
 
-    .line 542
     return-void
 
-    .line 541
     .end local v0    # "pidState":Landroid/util/SparseIntArray;
     :catchall_0
     move-exception v1
@@ -122,14 +110,12 @@
     .param p3, "procState"    # I
 
     .prologue
-    .line 514
     iget-object v1, p0, Lcom/android/server/net/NetworkPolicyManagerService$2;->this$0:Lcom/android/server/net/NetworkPolicyManagerService;
 
     iget-object v2, v1, Lcom/android/server/net/NetworkPolicyManagerService;->mRulesLock:Ljava/lang/Object;
 
     monitor-enter v2
 
-    .line 519
     :try_start_0
     iget-object v1, p0, Lcom/android/server/net/NetworkPolicyManagerService$2;->this$0:Lcom/android/server/net/NetworkPolicyManagerService;
 
@@ -141,11 +127,9 @@
 
     check-cast v0, Landroid/util/SparseIntArray;
 
-    .line 520
     .local v0, "pidState":Landroid/util/SparseIntArray;
     if-nez v0, :cond_0
 
-    .line 521
     new-instance v0, Landroid/util/SparseIntArray;
 
     .end local v0    # "pidState":Landroid/util/SparseIntArray;
@@ -153,7 +137,6 @@
 
     invoke-direct {v0, v1}, Landroid/util/SparseIntArray;-><init>(I)V
 
-    .line 522
     .restart local v0    # "pidState":Landroid/util/SparseIntArray;
     iget-object v1, p0, Lcom/android/server/net/NetworkPolicyManagerService$2;->this$0:Lcom/android/server/net/NetworkPolicyManagerService;
 
@@ -161,22 +144,17 @@
 
     invoke-virtual {v1, p2, v0}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    .line 524
     :cond_0
     invoke-virtual {v0, p1, p3}, Landroid/util/SparseIntArray;->put(II)V
 
-    .line 525
     iget-object v1, p0, Lcom/android/server/net/NetworkPolicyManagerService$2;->this$0:Lcom/android/server/net/NetworkPolicyManagerService;
 
     invoke-virtual {v1, p2}, Lcom/android/server/net/NetworkPolicyManagerService;->computeUidStateLocked(I)V
 
-    .line 526
     monitor-exit v2
 
-    .line 527
     return-void
 
-    .line 526
     .end local v0    # "pidState":Landroid/util/SparseIntArray;
     :catchall_0
     move-exception v1

@@ -19,13 +19,10 @@
     .param p1, "service"    # Landroid/os/IRCPManager;
 
     .prologue
-    .line 134
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 135
     iput-object p1, p0, Landroid/os/RCPManager;->mService:Landroid/os/IRCPManager;
 
-    .line 136
     return-void
 .end method
 
@@ -41,17 +38,14 @@
     .end annotation
 
     .prologue
-    .line 344
     iget-object v0, p0, Landroid/os/RCPManager;->mService:Landroid/os/IRCPManager;
 
     if-eqz v0, :cond_0
 
-    .line 345
     iget-object v0, p0, Landroid/os/RCPManager;->mService:Landroid/os/IRCPManager;
 
     invoke-interface {v0, p1, p2}, Landroid/os/IRCPManager;->cancelCopyChunks(J)V
 
-    .line 347
     :cond_0
     return-void
 .end method
@@ -69,19 +63,16 @@
     .end annotation
 
     .prologue
-    .line 306
     iget-object v0, p0, Landroid/os/RCPManager;->mService:Landroid/os/IRCPManager;
 
     if-eqz v0, :cond_0
 
-    .line 307
     iget-object v0, p0, Landroid/os/RCPManager;->mService:Landroid/os/IRCPManager;
 
     invoke-interface {v0, p1, p2, p3, p4}, Landroid/os/IRCPManager;->changePermissionMigration(Ljava/lang/String;III)I
 
     move-result v0
 
-    .line 309
     :goto_0
     return v0
 
@@ -97,7 +88,6 @@
     .param p2, "callback"    # Landroid/content/ISAccountCallback;
 
     .prologue
-    .line 230
     :try_start_0
     iget-object v1, p0, Landroid/os/RCPManager;->mService:Landroid/os/IRCPManager;
 
@@ -105,15 +95,12 @@
     :try_end_0
     .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 235
     :goto_0
     return-void
 
-    .line 231
     :catch_0
     move-exception v0
 
-    .line 232
     .local v0, "e":Landroid/os/RemoteException;
     const-string v1, "RCPManager"
 
@@ -121,7 +108,6 @@
 
     invoke-static {v1, v2, v0}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
-    .line 233
     invoke-virtual {v0}, Landroid/os/RemoteException;->printStackTrace()V
 
     goto :goto_0
@@ -133,7 +119,6 @@
     .param p2, "callback"    # Landroid/content/ISAccountCallback;
 
     .prologue
-    .line 239
     :try_start_0
     iget-object v1, p0, Landroid/os/RCPManager;->mService:Landroid/os/IRCPManager;
 
@@ -141,15 +126,12 @@
     :try_end_0
     .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 244
     :goto_0
     return-void
 
-    .line 240
     :catch_0
     move-exception v0
 
-    .line 241
     .local v0, "e":Landroid/os/RemoteException;
     const-string v1, "RCPManager"
 
@@ -157,7 +139,6 @@
 
     invoke-static {v1, v2, v0}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
-    .line 242
     invoke-virtual {v0}, Landroid/os/RemoteException;->printStackTrace()V
 
     goto :goto_0
@@ -180,12 +161,10 @@
     .end annotation
 
     .prologue
-    .line 336
     iget-object v0, p0, Landroid/os/RCPManager;->mService:Landroid/os/IRCPManager;
 
     if-eqz v0, :cond_0
 
-    .line 337
     iget-object v0, p0, Landroid/os/RCPManager;->mService:Landroid/os/IRCPManager;
 
     move v1, p1
@@ -208,7 +187,6 @@
 
     move-result v0
 
-    .line 340
     :goto_0
     return v0
 
@@ -225,12 +203,10 @@
     .param p3, "permissions"    # I
 
     .prologue
-    .line 195
     iget-object v1, p0, Landroid/os/RCPManager;->mService:Landroid/os/IRCPManager;
 
     if-eqz v1, :cond_0
 
-    .line 197
     :try_start_0
     iget-object v1, p0, Landroid/os/RCPManager;->mService:Landroid/os/IRCPManager;
 
@@ -240,15 +216,12 @@
 
     move-result v1
 
-    .line 203
     :goto_0
     return v1
 
-    .line 198
     :catch_0
     move-exception v0
 
-    .line 199
     .local v0, "e":Landroid/os/RemoteException;
     const-string v1, "RCPManager"
 
@@ -256,10 +229,8 @@
 
     invoke-static {v1, v2, v0}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
-    .line 200
     invoke-virtual {v0}, Landroid/os/RemoteException;->printStackTrace()V
 
-    .line 203
     .end local v0    # "e":Landroid/os/RemoteException;
     :cond_0
     const/4 v1, 0x0
@@ -280,12 +251,10 @@
     .end annotation
 
     .prologue
-    .line 416
     iget-object v0, p0, Landroid/os/RCPManager;->mService:Landroid/os/IRCPManager;
 
     if-eqz v0, :cond_0
 
-    .line 417
     const-string v0, "RCPManager"
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -338,14 +307,12 @@
 
     invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 419
     iget-object v0, p0, Landroid/os/RCPManager;->mService:Landroid/os/IRCPManager;
 
     invoke-interface {v0, p1, p2, p3, p4}, Landroid/os/IRCPManager;->copyFile(ILjava/lang/String;ILjava/lang/String;)I
 
     move-result v0
 
-    .line 421
     :goto_0
     return v0
 
@@ -368,19 +335,16 @@
     .end annotation
 
     .prologue
-    .line 288
     iget-object v0, p0, Landroid/os/RCPManager;->mService:Landroid/os/IRCPManager;
 
     if-eqz v0, :cond_0
 
-    .line 289
     iget-object v0, p0, Landroid/os/RCPManager;->mService:Landroid/os/IRCPManager;
 
     invoke-interface {v0, p1, p2, p3, p4}, Landroid/os/IRCPManager;->copyFileInternal(ILjava/lang/String;ILjava/lang/String;)I
 
     move-result v0
 
-    .line 291
     :goto_0
     return v0
 
@@ -395,12 +359,10 @@
     .param p1, "path"    # Ljava/lang/String;
 
     .prologue
-    .line 207
     iget-object v1, p0, Landroid/os/RCPManager;->mService:Landroid/os/IRCPManager;
 
     if-eqz v1, :cond_0
 
-    .line 209
     :try_start_0
     iget-object v1, p0, Landroid/os/RCPManager;->mService:Landroid/os/IRCPManager;
 
@@ -408,16 +370,13 @@
     :try_end_0
     .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 215
     :cond_0
     :goto_0
     return-void
 
-    .line 210
     :catch_0
     move-exception v0
 
-    .line 211
     .local v0, "e":Landroid/os/RemoteException;
     const-string v1, "RCPManager"
 
@@ -425,7 +384,6 @@
 
     invoke-static {v1, v2, v0}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
-    .line 212
     invoke-virtual {v0}, Landroid/os/RemoteException;->printStackTrace()V
 
     goto :goto_0
@@ -442,19 +400,16 @@
     .end annotation
 
     .prologue
-    .line 354
     iget-object v0, p0, Landroid/os/RCPManager;->mService:Landroid/os/IRCPManager;
 
     if-eqz v0, :cond_0
 
-    .line 355
     iget-object v0, p0, Landroid/os/RCPManager;->mService:Landroid/os/IRCPManager;
 
     invoke-interface {v0, p1, p2}, Landroid/os/IRCPManager;->deleteFile(Ljava/lang/String;I)Z
 
     move-result v0
 
-    .line 357
     :goto_0
     return v0
 
@@ -476,17 +431,14 @@
     .end annotation
 
     .prologue
-    .line 370
     iget-object v1, p0, Landroid/os/RCPManager;->mService:Landroid/os/IRCPManager;
 
     if-eqz v1, :cond_0
 
-    .line 372
     invoke-virtual {p1}, Landroid/content/Context;->getPackageName()Ljava/lang/String;
 
     move-result-object v0
 
-    .line 373
     .local v0, "pkgName":Ljava/lang/String;
     iget-object v1, p0, Landroid/os/RCPManager;->mService:Landroid/os/IRCPManager;
 
@@ -494,7 +446,6 @@
 
     move-result-object v1
 
-    .line 375
     .end local v0    # "pkgName":Ljava/lang/String;
     :goto_0
     return-object v1
@@ -510,12 +461,10 @@
     .param p1, "command"    # Landroid/app/Command;
 
     .prologue
-    .line 184
     iget-object v1, p0, Landroid/os/RCPManager;->mService:Landroid/os/IRCPManager;
 
     if-eqz v1, :cond_0
 
-    .line 186
     :try_start_0
     iget-object v1, p0, Landroid/os/RCPManager;->mService:Landroid/os/IRCPManager;
 
@@ -523,16 +472,13 @@
     :try_end_0
     .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 192
     :cond_0
     :goto_0
     return-void
 
-    .line 187
     :catch_0
     move-exception v0
 
-    .line 188
     .local v0, "e":Landroid/os/RemoteException;
     const-string v1, "RCPManager"
 
@@ -540,7 +486,6 @@
 
     invoke-static {v1, v2, v0}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
-    .line 189
     invoke-virtual {v0}, Landroid/os/RemoteException;->printStackTrace()V
 
     goto :goto_0
@@ -551,12 +496,10 @@
     .param p1, "contactRefUriAsString"    # Ljava/lang/String;
 
     .prologue
-    .line 272
     iget-object v1, p0, Landroid/os/RCPManager;->mService:Landroid/os/IRCPManager;
 
     if-eqz v1, :cond_0
 
-    .line 274
     :try_start_0
     iget-object v1, p0, Landroid/os/RCPManager;->mService:Landroid/os/IRCPManager;
 
@@ -566,15 +509,12 @@
 
     move-result-object v1
 
-    .line 280
     :goto_0
     return-object v1
 
-    .line 275
     :catch_0
     move-exception v0
 
-    .line 276
     .local v0, "e":Landroid/os/RemoteException;
     const-string v1, "RCPManager"
 
@@ -582,10 +522,8 @@
 
     invoke-static {v1, v2, v0}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
-    .line 277
     invoke-virtual {v0}, Landroid/os/RemoteException;->printStackTrace()V
 
-    .line 280
     .end local v0    # "e":Landroid/os/RemoteException;
     :cond_0
     const/4 v1, 0x0
@@ -604,19 +542,16 @@
     .end annotation
 
     .prologue
-    .line 328
     iget-object v0, p0, Landroid/os/RCPManager;->mService:Landroid/os/IRCPManager;
 
     if-eqz v0, :cond_0
 
-    .line 329
     iget-object v0, p0, Landroid/os/RCPManager;->mService:Landroid/os/IRCPManager;
 
     invoke-interface {v0, p1, p2}, Landroid/os/IRCPManager;->getFileInfo(Ljava/lang/String;I)Landroid/os/Bundle;
 
     move-result-object v0
 
-    .line 331
     :goto_0
     return-object v0
 
@@ -649,19 +584,16 @@
     .end annotation
 
     .prologue
-    .line 321
     iget-object v0, p0, Landroid/os/RCPManager;->mService:Landroid/os/IRCPManager;
 
     if-eqz v0, :cond_0
 
-    .line 322
     iget-object v0, p0, Landroid/os/RCPManager;->mService:Landroid/os/IRCPManager;
 
     invoke-interface {v0, p1, p2}, Landroid/os/IRCPManager;->getFiles(Ljava/lang/String;I)Ljava/util/List;
 
     move-result-object v0
 
-    .line 324
     :goto_0
     return-object v0
 
@@ -675,12 +607,10 @@
     .locals 3
 
     .prologue
-    .line 260
     iget-object v1, p0, Landroid/os/RCPManager;->mService:Landroid/os/IRCPManager;
 
     if-eqz v1, :cond_0
 
-    .line 262
     :try_start_0
     iget-object v1, p0, Landroid/os/RCPManager;->mService:Landroid/os/IRCPManager;
 
@@ -690,15 +620,12 @@
 
     move-result-object v1
 
-    .line 268
     :goto_0
     return-object v1
 
-    .line 263
     :catch_0
     move-exception v0
 
-    .line 264
     .local v0, "e":Landroid/os/RemoteException;
     const-string v1, "RCPManager"
 
@@ -706,10 +633,8 @@
 
     invoke-static {v1, v2, v0}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
-    .line 265
     invoke-virtual {v0}, Landroid/os/RemoteException;->printStackTrace()V
 
-    .line 268
     .end local v0    # "e":Landroid/os/RemoteException;
     :cond_0
     const/4 v1, 0x0
@@ -721,12 +646,10 @@
     .locals 3
 
     .prologue
-    .line 247
     iget-object v1, p0, Landroid/os/RCPManager;->mService:Landroid/os/IRCPManager;
 
     if-eqz v1, :cond_0
 
-    .line 249
     :try_start_0
     iget-object v1, p0, Landroid/os/RCPManager;->mService:Landroid/os/IRCPManager;
 
@@ -736,15 +659,12 @@
 
     move-result-object v1
 
-    .line 255
     :goto_0
     return-object v1
 
-    .line 250
     :catch_0
     move-exception v0
 
-    .line 251
     .local v0, "e":Landroid/os/RemoteException;
     const-string v1, "RCPManager"
 
@@ -752,10 +672,8 @@
 
     invoke-static {v1, v2, v0}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
-    .line 252
     invoke-virtual {v0}, Landroid/os/RemoteException;->printStackTrace()V
 
-    .line 255
     .end local v0    # "e":Landroid/os/RemoteException;
     :cond_0
     const/4 v1, 0x0
@@ -768,12 +686,10 @@
     .param p1, "providerName"    # Ljava/lang/String;
 
     .prologue
-    .line 150
     iget-object v1, p0, Landroid/os/RCPManager;->mService:Landroid/os/IRCPManager;
 
     if-eqz v1, :cond_0
 
-    .line 152
     :try_start_0
     iget-object v1, p0, Landroid/os/RCPManager;->mService:Landroid/os/IRCPManager;
 
@@ -783,15 +699,12 @@
 
     move-result-object v1
 
-    .line 158
     :goto_0
     return-object v1
 
-    .line 153
     :catch_0
     move-exception v0
 
-    .line 154
     .local v0, "e":Landroid/os/RemoteException;
     const-string v1, "RCPManager"
 
@@ -799,10 +712,8 @@
 
     invoke-static {v1, v2, v0}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
-    .line 155
     invoke-virtual {v0}, Landroid/os/RemoteException;->printStackTrace()V
 
-    .line 158
     .end local v0    # "e":Landroid/os/RemoteException;
     :cond_0
     const/4 v1, 0x0
@@ -820,7 +731,6 @@
     .param p6, "createOrRemove"    # Ljava/lang/String;
 
     .prologue
-    .line 389
     const-string v0, "RCPManager"
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -853,12 +763,10 @@
 
     invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 390
     iget-object v0, p0, Landroid/os/RCPManager;->mService:Landroid/os/IRCPManager;
 
     if-eqz v0, :cond_0
 
-    .line 392
     :try_start_0
     iget-object v0, p0, Landroid/os/RCPManager;->mService:Landroid/os/IRCPManager;
 
@@ -878,16 +786,13 @@
     :try_end_0
     .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 399
     :cond_0
     :goto_0
     return-void
 
-    .line 394
     :catch_0
     move-exception v7
 
-    .line 395
     .local v7, "e":Landroid/os/RemoteException;
     const-string v0, "RCPManager"
 
@@ -895,7 +800,6 @@
 
     invoke-static {v0, v1, v7}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
-    .line 396
     invoke-virtual {v7}, Landroid/os/RemoteException;->printStackTrace()V
 
     goto :goto_0
@@ -912,19 +816,16 @@
     .end annotation
 
     .prologue
-    .line 314
     iget-object v0, p0, Landroid/os/RCPManager;->mService:Landroid/os/IRCPManager;
 
     if-eqz v0, :cond_0
 
-    .line 315
     iget-object v0, p0, Landroid/os/RCPManager;->mService:Landroid/os/IRCPManager;
 
     invoke-interface {v0, p1, p2}, Landroid/os/IRCPManager;->isFileExist(Ljava/lang/String;I)Z
 
     move-result v0
 
-    .line 317
     :goto_0
     return v0
 
@@ -947,19 +848,16 @@
     .end annotation
 
     .prologue
-    .line 296
     iget-object v0, p0, Landroid/os/RCPManager;->mService:Landroid/os/IRCPManager;
 
     if-eqz v0, :cond_0
 
-    .line 297
     iget-object v0, p0, Landroid/os/RCPManager;->mService:Landroid/os/IRCPManager;
 
     invoke-interface {v0, p1, p2, p3, p4}, Landroid/os/IRCPManager;->moveFile(ILjava/lang/String;ILjava/lang/String;)I
 
     move-result v0
 
-    .line 299
     :goto_0
     return v0
 
@@ -993,21 +891,18 @@
     .end annotation
 
     .prologue
-    .line 435
     .local p2, "srcFilePaths":Ljava/util/List;, "Ljava/util/List<Ljava/lang/String;>;"
     .local p3, "destFilePaths":Ljava/util/List;, "Ljava/util/List<Ljava/lang/String;>;"
     iget-object v0, p0, Landroid/os/RCPManager;->mService:Landroid/os/IRCPManager;
 
     if-eqz v0, :cond_0
 
-    .line 436
     iget-object v0, p0, Landroid/os/RCPManager;->mService:Landroid/os/IRCPManager;
 
     invoke-interface {v0, p1, p2, p3}, Landroid/os/IRCPManager;->moveFilesForApp(ILjava/util/List;Ljava/util/List;)J
 
     move-result-wide v0
 
-    .line 438
     :goto_0
     return-wide v0
 
@@ -1046,12 +941,10 @@
     .end annotation
 
     .prologue
-    .line 53
     iget-object v0, p0, Landroid/os/RCPManager;->mService:Landroid/os/IRCPManager;
 
     if-eqz v0, :cond_0
 
-    .line 55
     :try_start_0
     const-string v0, "RCPManager"
 
@@ -1075,7 +968,6 @@
 
     invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 56
     iget-object v0, p0, Landroid/os/RCPManager;->mService:Landroid/os/IRCPManager;
 
     move-object v1, p1
@@ -1098,15 +990,12 @@
 
     move-result-object v0
 
-    .line 63
     :goto_0
     return-object v0
 
-    .line 58
     :catch_0
     move-exception v8
 
-    .line 59
     .local v8, "e":Landroid/os/RemoteException;
     const-string v0, "RCPManager"
 
@@ -1114,10 +1003,8 @@
 
     invoke-static {v0, v1, v8}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
-    .line 60
     invoke-virtual {v8}, Landroid/os/RemoteException;->printStackTrace()V
 
-    .line 63
     .end local v8    # "e":Landroid/os/RemoteException;
     :cond_0
     const/4 v0, 0x0
@@ -1136,12 +1023,10 @@
     .param p7, "sortOrder"    # Ljava/lang/String;
 
     .prologue
-    .line 37
     iget-object v0, p0, Landroid/os/RCPManager;->mService:Landroid/os/IRCPManager;
 
     if-eqz v0, :cond_0
 
-    .line 39
     :try_start_0
     const-string v0, "RCPManager"
 
@@ -1165,7 +1050,6 @@
 
     invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 40
     iget-object v0, p0, Landroid/os/RCPManager;->mService:Landroid/os/IRCPManager;
 
     move-object v1, p1
@@ -1188,15 +1072,12 @@
 
     move-result-object v0
 
-    .line 47
     :goto_0
     return-object v0
 
-    .line 42
     :catch_0
     move-exception v8
 
-    .line 43
     .local v8, "e":Landroid/os/RemoteException;
     const-string v0, "RCPManager"
 
@@ -1204,10 +1085,8 @@
 
     invoke-static {v0, v1, v8}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
-    .line 44
     invoke-virtual {v8}, Landroid/os/RemoteException;->printStackTrace()V
 
-    .line 47
     .end local v8    # "e":Landroid/os/RemoteException;
     :cond_0
     const/4 v0, 0x0
@@ -1219,12 +1098,10 @@
     .locals 3
 
     .prologue
-    .line 218
     iget-object v1, p0, Landroid/os/RCPManager;->mService:Landroid/os/IRCPManager;
 
     if-eqz v1, :cond_0
 
-    .line 220
     :try_start_0
     iget-object v1, p0, Landroid/os/RCPManager;->mService:Landroid/os/IRCPManager;
 
@@ -1232,16 +1109,13 @@
     :try_end_0
     .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 226
     :cond_0
     :goto_0
     return-void
 
-    .line 221
     :catch_0
     move-exception v0
 
-    .line 222
     .local v0, "e":Landroid/os/RemoteException;
     const-string v1, "RCPManager"
 
@@ -1249,7 +1123,6 @@
 
     invoke-static {v1, v2, v0}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
-    .line 223
     invoke-virtual {v0}, Landroid/os/RemoteException;->printStackTrace()V
 
     goto :goto_0
@@ -1260,12 +1133,10 @@
     .param p1, "callback"    # Landroid/content/ICommandExeCallBack;
 
     .prologue
-    .line 92
     iget-object v1, p0, Landroid/os/RCPManager;->mService:Landroid/os/IRCPManager;
 
     if-eqz v1, :cond_0
 
-    .line 94
     :try_start_0
     const-string v1, "RCPManager"
 
@@ -1289,20 +1160,16 @@
 
     invoke-static {v1, v2}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 95
     if-eqz p1, :cond_1
 
-    .line 96
     iget-object v1, p0, Landroid/os/RCPManager;->mService:Landroid/os/IRCPManager;
 
     invoke-interface {v1, p1}, Landroid/os/IRCPManager;->registerCommandExe(Landroid/content/ICommandExeCallBack;)V
 
-    .line 106
     :cond_0
     :goto_0
     return-void
 
-    .line 98
     :cond_1
     const-string v1, "RCPManager"
 
@@ -1314,11 +1181,9 @@
 
     goto :goto_0
 
-    .line 100
     :catch_0
     move-exception v0
 
-    .line 101
     .local v0, "e":Landroid/os/RemoteException;
     const-string v1, "RCPManager"
 
@@ -1326,7 +1191,6 @@
 
     invoke-static {v1, v2, v0}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
-    .line 103
     invoke-virtual {v0}, Landroid/os/RemoteException;->printStackTrace()V
 
     goto :goto_0
@@ -1343,17 +1207,14 @@
     .end annotation
 
     .prologue
-    .line 361
     iget-object v1, p0, Landroid/os/RCPManager;->mService:Landroid/os/IRCPManager;
 
     if-eqz v1, :cond_0
 
-    .line 363
     invoke-virtual {p1}, Landroid/content/Context;->getPackageName()Ljava/lang/String;
 
     move-result-object v0
 
-    .line 364
     .local v0, "pkgName":Ljava/lang/String;
     iget-object v1, p0, Landroid/os/RCPManager;->mService:Landroid/os/IRCPManager;
 
@@ -1361,7 +1222,6 @@
 
     move-result v1
 
-    .line 366
     .end local v0    # "pkgName":Ljava/lang/String;
     :goto_0
     return v1
@@ -1383,17 +1243,14 @@
     .end annotation
 
     .prologue
-    .line 379
     iget-object v1, p0, Landroid/os/RCPManager;->mService:Landroid/os/IRCPManager;
 
     if-eqz v1, :cond_0
 
-    .line 381
     invoke-virtual {p1}, Landroid/content/Context;->getPackageName()Ljava/lang/String;
 
     move-result-object v0
 
-    .line 382
     .local v0, "pkgName":Ljava/lang/String;
     iget-object v1, p0, Landroid/os/RCPManager;->mService:Landroid/os/IRCPManager;
 
@@ -1401,7 +1258,6 @@
 
     move-result v1
 
-    .line 384
     .end local v0    # "pkgName":Ljava/lang/String;
     :goto_0
     return v1
@@ -1418,12 +1274,10 @@
     .param p2, "mProvider"    # Landroid/content/IProviderCallBack;
 
     .prologue
-    .line 67
     iget-object v1, p0, Landroid/os/RCPManager;->mService:Landroid/os/IRCPManager;
 
     if-eqz v1, :cond_0
 
-    .line 69
     :try_start_0
     const-string v1, "RCPManager"
 
@@ -1447,23 +1301,19 @@
 
     invoke-static {v1, v2}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 70
     iget-object v1, p0, Landroid/os/RCPManager;->mService:Landroid/os/IRCPManager;
 
     invoke-interface {v1, p1, p2}, Landroid/os/IRCPManager;->registerProvider(Ljava/lang/String;Landroid/content/IProviderCallBack;)V
     :try_end_0
     .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 76
     :cond_0
     :goto_0
     return-void
 
-    .line 71
     :catch_0
     move-exception v0
 
-    .line 72
     .local v0, "e":Landroid/os/RemoteException;
     const-string v1, "RCPManager"
 
@@ -1471,7 +1321,6 @@
 
     invoke-static {v1, v2, v0}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
-    .line 73
     invoke-virtual {v0}, Landroid/os/RemoteException;->printStackTrace()V
 
     goto :goto_0
@@ -1482,12 +1331,10 @@
     .param p1, "globalContactsDir"    # Landroid/content/IRCPGlobalContactsDir;
 
     .prologue
-    .line 109
     iget-object v1, p0, Landroid/os/RCPManager;->mService:Landroid/os/IRCPManager;
 
     if-eqz v1, :cond_0
 
-    .line 111
     :try_start_0
     const-string v1, "RCPManager"
 
@@ -1511,23 +1358,19 @@
 
     invoke-static {v1, v2}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 112
     iget-object v1, p0, Landroid/os/RCPManager;->mService:Landroid/os/IRCPManager;
 
     invoke-interface {v1, p1}, Landroid/os/IRCPManager;->registerRCPGlobalContactsDir(Landroid/content/IRCPGlobalContactsDir;)V
     :try_end_0
     .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 118
     :cond_0
     :goto_0
     return-void
 
-    .line 113
     :catch_0
     move-exception v0
 
-    .line 114
     .local v0, "e":Landroid/os/RemoteException;
     const-string v1, "RCPManager"
 
@@ -1535,7 +1378,6 @@
 
     invoke-static {v1, v2, v0}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
-    .line 115
     invoke-virtual {v0}, Landroid/os/RemoteException;->printStackTrace()V
 
     goto :goto_0
@@ -1546,12 +1388,10 @@
     .param p1, "rcpInterface"    # Landroid/content/IRCPInterface;
 
     .prologue
-    .line 122
     iget-object v1, p0, Landroid/os/RCPManager;->mService:Landroid/os/IRCPManager;
 
     if-eqz v1, :cond_0
 
-    .line 124
     :try_start_0
     const-string v1, "RCPManager"
 
@@ -1575,23 +1415,19 @@
 
     invoke-static {v1, v2}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 125
     iget-object v1, p0, Landroid/os/RCPManager;->mService:Landroid/os/IRCPManager;
 
     invoke-interface {v1, p1}, Landroid/os/IRCPManager;->registerRCPInterface(Landroid/content/IRCPInterface;)V
     :try_end_0
     .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 131
     :cond_0
     :goto_0
     return-void
 
-    .line 126
     :catch_0
     move-exception v0
 
-    .line 127
     .local v0, "e":Landroid/os/RemoteException;
     const-string v1, "RCPManager"
 
@@ -1599,7 +1435,6 @@
 
     invoke-static {v1, v2, v0}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
-    .line 128
     invoke-virtual {v0}, Landroid/os/RemoteException;->printStackTrace()V
 
     goto :goto_0
@@ -1610,12 +1445,10 @@
     .param p1, "callback"    # Landroid/content/ISyncCallBack;
 
     .prologue
-    .line 80
     iget-object v1, p0, Landroid/os/RCPManager;->mService:Landroid/os/IRCPManager;
 
     if-eqz v1, :cond_0
 
-    .line 82
     :try_start_0
     const-string v1, "RCPManager"
 
@@ -1639,23 +1472,19 @@
 
     invoke-static {v1, v2}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 83
     iget-object v1, p0, Landroid/os/RCPManager;->mService:Landroid/os/IRCPManager;
 
     invoke-interface {v1, p1}, Landroid/os/IRCPManager;->registerSync(Landroid/content/ISyncCallBack;)V
     :try_end_0
     .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 89
     :cond_0
     :goto_0
     return-void
 
-    .line 84
     :catch_0
     move-exception v0
 
-    .line 85
     .local v0, "e":Landroid/os/RemoteException;
     const-string v1, "RCPManager"
 
@@ -1663,7 +1492,6 @@
 
     invoke-static {v1, v2, v0}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
-    .line 86
     invoke-virtual {v0}, Landroid/os/RemoteException;->printStackTrace()V
 
     goto :goto_0
@@ -1674,12 +1502,10 @@
     .param p1, "toUser"    # I
 
     .prologue
-    .line 173
     iget-object v1, p0, Landroid/os/RCPManager;->mService:Landroid/os/IRCPManager;
 
     if-eqz v1, :cond_0
 
-    .line 175
     :try_start_0
     iget-object v1, p0, Landroid/os/RCPManager;->mService:Landroid/os/IRCPManager;
 
@@ -1687,16 +1513,13 @@
     :try_end_0
     .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 181
     :cond_0
     :goto_0
     return-void
 
-    .line 176
     :catch_0
     move-exception v0
 
-    .line 177
     .local v0, "e":Landroid/os/RemoteException;
     const-string v1, "RCPManager"
 
@@ -1704,7 +1527,6 @@
 
     invoke-static {v1, v2, v0}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
-    .line 178
     invoke-virtual {v0}, Landroid/os/RemoteException;->printStackTrace()V
 
     goto :goto_0
@@ -1714,12 +1536,10 @@
     .locals 3
 
     .prologue
-    .line 162
     iget-object v1, p0, Landroid/os/RCPManager;->mService:Landroid/os/IRCPManager;
 
     if-eqz v1, :cond_0
 
-    .line 164
     :try_start_0
     iget-object v1, p0, Landroid/os/RCPManager;->mService:Landroid/os/IRCPManager;
 
@@ -1727,16 +1547,13 @@
     :try_end_0
     .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 170
     :cond_0
     :goto_0
     return-void
 
-    .line 165
     :catch_0
     move-exception v0
 
-    .line 166
     .local v0, "e":Landroid/os/RemoteException;
     const-string v1, "RCPManager"
 
@@ -1744,7 +1561,6 @@
 
     invoke-static {v1, v2, v0}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
-    .line 167
     invoke-virtual {v0}, Landroid/os/RemoteException;->printStackTrace()V
 
     goto :goto_0
@@ -1755,12 +1571,10 @@
     .param p1, "id"    # I
 
     .prologue
-    .line 139
     iget-object v1, p0, Landroid/os/RCPManager;->mService:Landroid/os/IRCPManager;
 
     if-eqz v1, :cond_0
 
-    .line 141
     :try_start_0
     iget-object v1, p0, Landroid/os/RCPManager;->mService:Landroid/os/IRCPManager;
 
@@ -1768,16 +1582,13 @@
     :try_end_0
     .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 147
     :cond_0
     :goto_0
     return-void
 
-    .line 142
     :catch_0
     move-exception v0
 
-    .line 143
     .local v0, "e":Landroid/os/RemoteException;
     const-string v1, "RCPManager"
 
@@ -1785,7 +1596,6 @@
 
     invoke-static {v1, v2, v0}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
-    .line 144
     invoke-virtual {v0}, Landroid/os/RemoteException;->printStackTrace()V
 
     goto :goto_0

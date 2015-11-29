@@ -29,7 +29,6 @@
     .locals 0
 
     .prologue
-    .line 475
     iput-object p1, p0, Lcom/android/server/connectivity/NetworkMonitor$UserPromptedState;->this$0:Lcom/android/server/connectivity/NetworkMonitor;
 
     invoke-direct {p0}, Lcom/android/internal/util/State;-><init>()V
@@ -43,7 +42,6 @@
     .param p2, "x1"    # Lcom/android/server/connectivity/NetworkMonitor$1;
 
     .prologue
-    .line 475
     invoke-direct {p0, p1}, Lcom/android/server/connectivity/NetworkMonitor$UserPromptedState;-><init>(Lcom/android/server/connectivity/NetworkMonitor;)V
 
     return-void
@@ -57,7 +55,6 @@
     .prologue
     const/4 v6, 0x1
 
-    .line 484
     iget-object v1, p0, Lcom/android/server/connectivity/NetworkMonitor$UserPromptedState;->this$0:Lcom/android/server/connectivity/NetworkMonitor;
 
     # getter for: Lcom/android/server/connectivity/NetworkMonitor;->mConnectivityServiceHandler:Landroid/os/Handler;
@@ -84,7 +81,6 @@
 
     invoke-virtual {v1, v2}, Landroid/os/Handler;->sendMessage(Landroid/os/Message;)Z
 
-    .line 487
     new-instance v1, Lcom/android/server/connectivity/NetworkMonitor$CustomIntentReceiver;
 
     iget-object v2, p0, Lcom/android/server/connectivity/NetworkMonitor$UserPromptedState;->this$0:Lcom/android/server/connectivity/NetworkMonitor;
@@ -104,7 +100,6 @@
 
     iput-object v1, p0, Lcom/android/server/connectivity/NetworkMonitor$UserPromptedState;->mUserRespondedBroadcastReceiver:Lcom/android/server/connectivity/NetworkMonitor$CustomIntentReceiver;
 
-    .line 490
     iget-object v1, p0, Lcom/android/server/connectivity/NetworkMonitor$UserPromptedState;->this$0:Lcom/android/server/connectivity/NetworkMonitor;
 
     const v2, 0x8200b
@@ -130,7 +125,6 @@
 
     move-result-object v0
 
-    .line 493
     .local v0, "message":Landroid/os/Message;
     iget-object v1, p0, Lcom/android/server/connectivity/NetworkMonitor$UserPromptedState;->this$0:Lcom/android/server/connectivity/NetworkMonitor;
 
@@ -141,7 +135,6 @@
 
     invoke-virtual {v1, v0}, Landroid/os/Handler;->sendMessage(Landroid/os/Message;)Z
 
-    .line 494
     return-void
 .end method
 
@@ -151,7 +144,6 @@
     .prologue
     const/4 v5, 0x0
 
-    .line 512
     iget-object v1, p0, Lcom/android/server/connectivity/NetworkMonitor$UserPromptedState;->this$0:Lcom/android/server/connectivity/NetworkMonitor;
 
     const v2, 0x8200b
@@ -173,7 +165,6 @@
 
     move-result-object v0
 
-    .line 514
     .local v0, "message":Landroid/os/Message;
     iget-object v1, p0, Lcom/android/server/connectivity/NetworkMonitor$UserPromptedState;->this$0:Lcom/android/server/connectivity/NetworkMonitor;
 
@@ -184,7 +175,6 @@
 
     invoke-virtual {v1, v0}, Landroid/os/Handler;->sendMessage(Landroid/os/Message;)Z
 
-    .line 515
     iget-object v1, p0, Lcom/android/server/connectivity/NetworkMonitor$UserPromptedState;->this$0:Lcom/android/server/connectivity/NetworkMonitor;
 
     # getter for: Lcom/android/server/connectivity/NetworkMonitor;->mContext:Landroid/content/Context;
@@ -196,10 +186,8 @@
 
     invoke-virtual {v1, v2}, Landroid/content/Context;->unregisterReceiver(Landroid/content/BroadcastReceiver;)V
 
-    .line 516
     iput-object v5, p0, Lcom/android/server/connectivity/NetworkMonitor$UserPromptedState;->mUserRespondedBroadcastReceiver:Lcom/android/server/connectivity/NetworkMonitor$CustomIntentReceiver;
 
-    .line 517
     return-void
 .end method
 
@@ -210,7 +198,6 @@
     .prologue
     const/4 v0, 0x1
 
-    .line 498
     iget-object v1, p0, Lcom/android/server/connectivity/NetworkMonitor$UserPromptedState;->this$0:Lcom/android/server/connectivity/NetworkMonitor;
 
     new-instance v2, Ljava/lang/StringBuilder;
@@ -240,19 +227,16 @@
     # invokes: Lcom/android/server/connectivity/NetworkMonitor;->log(Ljava/lang/String;)V
     invoke-static {v1, v2}, Lcom/android/server/connectivity/NetworkMonitor;->access$4500(Lcom/android/server/connectivity/NetworkMonitor;Ljava/lang/String;)V
 
-    .line 499
     iget v1, p1, Landroid/os/Message;->what:I
 
     packed-switch v1, :pswitch_data_0
 
-    .line 506
     const/4 v0, 0x0
 
     :cond_0
     :goto_0
     return v0
 
-    .line 501
     :pswitch_0
     iget v1, p1, Landroid/os/Message;->arg1:I
 
@@ -265,7 +249,6 @@
 
     if-ne v1, v2, :cond_0
 
-    .line 503
     iget-object v1, p0, Lcom/android/server/connectivity/NetworkMonitor$UserPromptedState;->this$0:Lcom/android/server/connectivity/NetworkMonitor;
 
     iget-object v2, p0, Lcom/android/server/connectivity/NetworkMonitor$UserPromptedState;->this$0:Lcom/android/server/connectivity/NetworkMonitor;
@@ -280,7 +263,6 @@
 
     goto :goto_0
 
-    .line 499
     :pswitch_data_0
     .packed-switch 0x8200a
         :pswitch_0

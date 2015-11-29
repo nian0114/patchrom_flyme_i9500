@@ -24,13 +24,10 @@
     .param p1, "hardwareInterface"    # Landroid/media/tv/ITvInputHardware;
 
     .prologue
-    .line 1770
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 1771
     iput-object p1, p0, Landroid/media/tv/TvInputManager$Hardware;->mInterface:Landroid/media/tv/ITvInputHardware;
 
-    .line 1772
     return-void
 .end method
 
@@ -40,7 +37,6 @@
     .param p2, "x1"    # Landroid/media/tv/TvInputManager$1;
 
     .prologue
-    .line 1767
     invoke-direct {p0, p1}, Landroid/media/tv/TvInputManager$Hardware;-><init>(Landroid/media/tv/ITvInputHardware;)V
 
     return-void
@@ -51,7 +47,6 @@
     .param p0, "x0"    # Landroid/media/tv/TvInputManager$Hardware;
 
     .prologue
-    .line 1767
     invoke-direct {p0}, Landroid/media/tv/TvInputManager$Hardware;->getInterface()Landroid/media/tv/ITvInputHardware;
 
     move-result-object v0
@@ -63,7 +58,6 @@
     .locals 1
 
     .prologue
-    .line 1775
     iget-object v0, p0, Landroid/media/tv/TvInputManager$Hardware;->mInterface:Landroid/media/tv/ITvInputHardware;
 
     return-object v0
@@ -76,7 +70,6 @@
     .param p1, "event"    # Landroid/view/KeyEvent;
 
     .prologue
-    .line 1796
     :try_start_0
     iget-object v1, p0, Landroid/media/tv/TvInputManager$Hardware;->mInterface:Landroid/media/tv/ITvInputHardware;
 
@@ -88,11 +81,9 @@
 
     return v1
 
-    .line 1797
     :catch_0
     move-exception v0
 
-    .line 1798
     .local v0, "e":Landroid/os/RemoteException;
     new-instance v1, Ljava/lang/RuntimeException;
 
@@ -110,7 +101,6 @@
     .param p5, "format"    # I
 
     .prologue
-    .line 1805
     :try_start_0
     iget-object v0, p0, Landroid/media/tv/TvInputManager$Hardware;->mInterface:Landroid/media/tv/ITvInputHardware;
 
@@ -128,14 +118,11 @@
     :try_end_0
     .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 1810
     return-void
 
-    .line 1807
     :catch_0
     move-exception v6
 
-    .line 1808
     .local v6, "e":Landroid/os/RemoteException;
     new-instance v0, Ljava/lang/RuntimeException;
 
@@ -149,7 +136,6 @@
     .param p1, "volume"    # F
 
     .prologue
-    .line 1788
     :try_start_0
     iget-object v1, p0, Landroid/media/tv/TvInputManager$Hardware;->mInterface:Landroid/media/tv/ITvInputHardware;
 
@@ -157,14 +143,11 @@
     :try_end_0
     .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 1792
     return-void
 
-    .line 1789
     :catch_0
     move-exception v0
 
-    .line 1790
     .local v0, "e":Landroid/os/RemoteException;
     new-instance v1, Ljava/lang/RuntimeException;
 
@@ -179,7 +162,6 @@
     .param p2, "config"    # Landroid/media/tv/TvStreamConfig;
 
     .prologue
-    .line 1780
     :try_start_0
     iget-object v1, p0, Landroid/media/tv/TvInputManager$Hardware;->mInterface:Landroid/media/tv/ITvInputHardware;
 
@@ -191,11 +173,9 @@
 
     return v1
 
-    .line 1781
     :catch_0
     move-exception v0
 
-    .line 1782
     .local v0, "e":Landroid/os/RemoteException;
     new-instance v1, Ljava/lang/RuntimeException;
 

@@ -30,37 +30,32 @@
     .locals 2
 
     .prologue
-    .line 58
     new-instance v0, Lcom/android/server/firewall/SenderFilter$1;
 
-    const-string/jumbo v1, "sender"
+    const-string v1, "sender"
 
     invoke-direct {v0, v1}, Lcom/android/server/firewall/SenderFilter$1;-><init>(Ljava/lang/String;)V
 
     sput-object v0, Lcom/android/server/firewall/SenderFilter;->FACTORY:Lcom/android/server/firewall/FilterFactory;
 
-    .line 80
     new-instance v0, Lcom/android/server/firewall/SenderFilter$2;
 
     invoke-direct {v0}, Lcom/android/server/firewall/SenderFilter$2;-><init>()V
 
     sput-object v0, Lcom/android/server/firewall/SenderFilter;->SIGNATURE:Lcom/android/server/firewall/Filter;
 
-    .line 88
     new-instance v0, Lcom/android/server/firewall/SenderFilter$3;
 
     invoke-direct {v0}, Lcom/android/server/firewall/SenderFilter$3;-><init>()V
 
     sput-object v0, Lcom/android/server/firewall/SenderFilter;->SYSTEM:Lcom/android/server/firewall/Filter;
 
-    .line 96
     new-instance v0, Lcom/android/server/firewall/SenderFilter$4;
 
     invoke-direct {v0}, Lcom/android/server/firewall/SenderFilter$4;-><init>()V
 
     sput-object v0, Lcom/android/server/firewall/SenderFilter;->SYSTEM_OR_SIGNATURE:Lcom/android/server/firewall/Filter;
 
-    .line 105
     new-instance v0, Lcom/android/server/firewall/SenderFilter$5;
 
     invoke-direct {v0}, Lcom/android/server/firewall/SenderFilter$5;-><init>()V
@@ -74,7 +69,6 @@
     .locals 0
 
     .prologue
-    .line 33
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -84,7 +78,6 @@
     .locals 1
 
     .prologue
-    .line 33
     sget-object v0, Lcom/android/server/firewall/SenderFilter;->SYSTEM:Lcom/android/server/firewall/Filter;
 
     return-object v0
@@ -94,7 +87,6 @@
     .locals 1
 
     .prologue
-    .line 33
     sget-object v0, Lcom/android/server/firewall/SenderFilter;->SIGNATURE:Lcom/android/server/firewall/Filter;
 
     return-object v0
@@ -104,7 +96,6 @@
     .locals 1
 
     .prologue
-    .line 33
     sget-object v0, Lcom/android/server/firewall/SenderFilter;->SYSTEM_OR_SIGNATURE:Lcom/android/server/firewall/Filter;
 
     return-object v0
@@ -114,7 +105,6 @@
     .locals 1
 
     .prologue
-    .line 33
     sget-object v0, Lcom/android/server/firewall/SenderFilter;->USER_ID:Lcom/android/server/firewall/Filter;
 
     return-object v0
@@ -130,7 +120,6 @@
 
     const/4 v3, 0x0
 
-    .line 42
     const/16 v4, 0x3e8
 
     if-eq p0, v4, :cond_0
@@ -145,18 +134,15 @@
 
     if-nez p1, :cond_1
 
-    .line 55
     :cond_0
     :goto_0
     return v2
 
-    .line 47
     :cond_1
     invoke-static {}, Landroid/app/AppGlobals;->getPackageManager()Landroid/content/pm/IPackageManager;
 
     move-result-object v1
 
-    .line 49
     .local v1, "pm":Landroid/content/pm/IPackageManager;
     :try_start_0
     invoke-interface {v1, p0}, Landroid/content/pm/IPackageManager;->getFlagsForUid(I)I
@@ -175,11 +161,9 @@
 
     goto :goto_0
 
-    .line 50
     :catch_0
     move-exception v0
 
-    .line 51
     .local v0, "ex":Landroid/os/RemoteException;
     const-string v2, "IntentFirewall"
 
@@ -189,6 +173,5 @@
 
     move v2, v3
 
-    .line 55
     goto :goto_0
 .end method

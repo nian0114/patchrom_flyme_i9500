@@ -26,7 +26,6 @@
     .locals 0
 
     .prologue
-    .line 1573
     iput-object p1, p0, Lcom/android/server/display/WifiDisplayController$17;->this$0:Lcom/android/server/display/WifiDisplayController;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -40,7 +39,6 @@
     .locals 2
 
     .prologue
-    .line 1582
     iget-object v0, p0, Lcom/android/server/display/WifiDisplayController$17;->this$0:Lcom/android/server/display/WifiDisplayController;
 
     # getter for: Lcom/android/server/display/WifiDisplayController;->mWifiDisplayOnSetting:Z
@@ -50,14 +48,12 @@
 
     if-eqz v0, :cond_0
 
-    .line 1583
     const-string v0, "WifiDisplayController"
 
-    const-string/jumbo v1, "onHeadSetConnected! we disconnect WFD!"
+    const-string v1, "onHeadSetConnected! we disconnect WFD!"
 
     invoke-static {v0, v1}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1584
     iget-object v0, p0, Lcom/android/server/display/WifiDisplayController$17;->this$0:Lcom/android/server/display/WifiDisplayController;
 
     const v1, 0x2208e
@@ -65,13 +61,11 @@
     # invokes: Lcom/android/server/display/WifiDisplayController;->requestPopup(I)V
     invoke-static {v0, v1}, Lcom/android/server/display/WifiDisplayController;->access$2300(Lcom/android/server/display/WifiDisplayController;I)V
 
-    .line 1585
     iget-object v0, p0, Lcom/android/server/display/WifiDisplayController$17;->this$0:Lcom/android/server/display/WifiDisplayController;
 
     # invokes: Lcom/android/server/display/WifiDisplayController;->disconnect()V
     invoke-static {v0}, Lcom/android/server/display/WifiDisplayController;->access$2500(Lcom/android/server/display/WifiDisplayController;)V
 
-    .line 1587
     :cond_0
     return-void
 .end method
@@ -81,7 +75,6 @@
     .param p1, "level"    # I
 
     .prologue
-    .line 1600
     iget-object v0, p0, Lcom/android/server/display/WifiDisplayController$17;->this$0:Lcom/android/server/display/WifiDisplayController;
 
     # getter for: Lcom/android/server/display/WifiDisplayController;->mRemoteDisplayConnected:Z
@@ -91,14 +84,13 @@
 
     if-eqz v0, :cond_0
 
-    .line 1601
     const-string v0, "WifiDisplayController"
 
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v2, "onQoSLevelChanged! level : "
+    const-string v2, "onQoSLevelChanged! level : "
 
     invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -114,7 +106,6 @@
 
     invoke-static {v0, v1}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1604
     :cond_0
     return-void
 .end method
@@ -123,20 +114,17 @@
     .locals 2
 
     .prologue
-    .line 1576
     const-string v0, "WifiDisplayController"
 
-    const-string/jumbo v1, "onTerminateRequested! we will disconnect WFD!"
+    const-string v1, "onTerminateRequested! we will disconnect WFD!"
 
     invoke-static {v0, v1}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1577
     iget-object v0, p0, Lcom/android/server/display/WifiDisplayController$17;->this$0:Lcom/android/server/display/WifiDisplayController;
 
     # invokes: Lcom/android/server/display/WifiDisplayController;->disconnect()V
     invoke-static {v0}, Lcom/android/server/display/WifiDisplayController;->access$2500(Lcom/android/server/display/WifiDisplayController;)V
 
-    .line 1578
     return-void
 .end method
 
@@ -145,7 +133,6 @@
     .param p1, "nRtpType"    # I
 
     .prologue
-    .line 1608
     iget-object v0, p0, Lcom/android/server/display/WifiDisplayController$17;->this$0:Lcom/android/server/display/WifiDisplayController;
 
     # getter for: Lcom/android/server/display/WifiDisplayController;->mRemoteDisplayConnected:Z
@@ -155,14 +142,13 @@
 
     if-eqz v0, :cond_0
 
-    .line 1609
     const-string v0, "WifiDisplayController"
 
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v2, "onTransportChanged! << "
+    const-string v2, "onTransportChanged! << "
 
     invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -178,7 +164,6 @@
 
     invoke-static {v0, v1}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1611
     :cond_0
     return-void
 .end method
@@ -187,7 +172,6 @@
     .locals 3
 
     .prologue
-    .line 1591
     iget-object v0, p0, Lcom/android/server/display/WifiDisplayController$17;->this$0:Lcom/android/server/display/WifiDisplayController;
 
     # getter for: Lcom/android/server/display/WifiDisplayController;->mRemoteDisplayConnected:Z
@@ -197,14 +181,12 @@
 
     if-eqz v0, :cond_0
 
-    .line 1592
     const-string v0, "WifiDisplayController"
 
-    const-string/jumbo v1, "onWeakNetwork! we show toast!"
+    const-string v1, "onWeakNetwork! we show toast!"
 
     invoke-static {v0, v1}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1593
     iget-object v0, p0, Lcom/android/server/display/WifiDisplayController$17;->this$0:Lcom/android/server/display/WifiDisplayController;
 
     # getter for: Lcom/android/server/display/WifiDisplayController;->mContext:Landroid/content/Context;
@@ -230,7 +212,6 @@
 
     invoke-virtual {v0}, Landroid/widget/Toast;->show()V
 
-    .line 1596
     :cond_0
     return-void
 .end method

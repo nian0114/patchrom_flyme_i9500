@@ -23,7 +23,6 @@
     .locals 0
 
     .prologue
-    .line 1119
     iput-object p1, p0, Lcom/android/server/epm/overlay/ThemeManagerService$ThemesUninstallObserver;->this$0:Lcom/android/server/epm/overlay/ThemeManagerService;
 
     invoke-direct {p0}, Landroid/content/pm/IPackageDeleteObserver$Stub;-><init>()V
@@ -37,7 +36,6 @@
     .param p2, "x1"    # Lcom/android/server/epm/overlay/ThemeManagerService$1;
 
     .prologue
-    .line 1119
     invoke-direct {p0, p1}, Lcom/android/server/epm/overlay/ThemeManagerService$ThemesUninstallObserver;-><init>(Lcom/android/server/epm/overlay/ThemeManagerService;)V
 
     return-void
@@ -51,6 +49,5 @@
     .param p2, "returnCode"    # I
 
     .prologue
-    .line 1126
     return-void
 .end method

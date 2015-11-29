@@ -19,7 +19,6 @@
     .locals 0
 
     .prologue
-    .line 40
     invoke-direct {p0}, Ljava/util/ArrayList;-><init>()V
 
     return-void

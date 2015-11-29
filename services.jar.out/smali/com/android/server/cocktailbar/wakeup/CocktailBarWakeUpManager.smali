@@ -48,7 +48,6 @@
     .locals 1
 
     .prologue
-    .line 8
     const-class v0, Lcom/android/server/cocktailbar/wakeup/CocktailBarWakeUpManager;
 
     invoke-virtual {v0}, Ljava/lang/Class;->getSimpleName()Ljava/lang/String;
@@ -66,29 +65,22 @@
     .param p2, "listener"    # Lcom/android/server/cocktailbar/wakeup/CocktailBarWakeUpManager$OnCocktailBarWakeUpListener;
 
     .prologue
-    .line 39
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 16
     const/4 v0, 0x0
 
     iput-boolean v0, p0, Lcom/android/server/cocktailbar/wakeup/CocktailBarWakeUpManager;->mCocktaiBarWakeUpState:Z
 
-    .line 35
     const/16 v0, 0x3e8
 
     iput v0, p0, Lcom/android/server/cocktailbar/wakeup/CocktailBarWakeUpManager;->SECOND_SCREEN_WAKEUP_BOOST_TIMEOUT:I
 
-    .line 40
     iput-object p1, p0, Lcom/android/server/cocktailbar/wakeup/CocktailBarWakeUpManager;->mContext:Landroid/content/Context;
 
-    .line 41
     iput-object p2, p0, Lcom/android/server/cocktailbar/wakeup/CocktailBarWakeUpManager;->mListener:Lcom/android/server/cocktailbar/wakeup/CocktailBarWakeUpManager$OnCocktailBarWakeUpListener;
 
-    .line 42
     invoke-direct {p0}, Lcom/android/server/cocktailbar/wakeup/CocktailBarWakeUpManager;->prepareBooster()V
 
-    .line 43
     return-void
 .end method
 
@@ -97,50 +89,41 @@
     .param p1, "time"    # I
 
     .prologue
-    .line 90
     iget-object v0, p0, Lcom/android/server/cocktailbar/wakeup/CocktailBarWakeUpManager;->supportedCPUFreqTable:[I
 
     if-eqz v0, :cond_0
 
-    .line 91
     iget-object v0, p0, Lcom/android/server/cocktailbar/wakeup/CocktailBarWakeUpManager;->cpuMinFreqBooster:Landroid/os/DVFSHelper;
 
     invoke-virtual {v0, p1}, Landroid/os/DVFSHelper;->acquire(I)V
 
-    .line 94
     :cond_0
     iget-object v0, p0, Lcom/android/server/cocktailbar/wakeup/CocktailBarWakeUpManager;->supportedCPUCoreTable:[I
 
     if-eqz v0, :cond_1
 
-    .line 95
     iget-object v0, p0, Lcom/android/server/cocktailbar/wakeup/CocktailBarWakeUpManager;->cpuCoreBooster:Landroid/os/DVFSHelper;
 
     invoke-virtual {v0, p1}, Landroid/os/DVFSHelper;->acquire(I)V
 
-    .line 98
     :cond_1
     iget-object v0, p0, Lcom/android/server/cocktailbar/wakeup/CocktailBarWakeUpManager;->supportedGPUFreqTable:[I
 
     if-eqz v0, :cond_2
 
-    .line 99
     iget-object v0, p0, Lcom/android/server/cocktailbar/wakeup/CocktailBarWakeUpManager;->gpuMinFreqBooster:Landroid/os/DVFSHelper;
 
     invoke-virtual {v0, p1}, Landroid/os/DVFSHelper;->acquire(I)V
 
-    .line 102
     :cond_2
     iget-object v0, p0, Lcom/android/server/cocktailbar/wakeup/CocktailBarWakeUpManager;->supportedBUSFreqTable:[I
 
     if-eqz v0, :cond_3
 
-    .line 103
     iget-object v0, p0, Lcom/android/server/cocktailbar/wakeup/CocktailBarWakeUpManager;->busMinFreqBooster:Landroid/os/DVFSHelper;
 
     invoke-virtual {v0, p1}, Landroid/os/DVFSHelper;->acquire(I)V
 
-    .line 105
     :cond_3
     return-void
 .end method
@@ -153,7 +136,6 @@
 
     const/4 v6, 0x0
 
-    .line 46
     new-instance v0, Landroid/os/DVFSHelper;
 
     iget-object v1, p0, Lcom/android/server/cocktailbar/wakeup/CocktailBarWakeUpManager;->mContext:Landroid/content/Context;
@@ -166,7 +148,6 @@
 
     iput-object v0, p0, Lcom/android/server/cocktailbar/wakeup/CocktailBarWakeUpManager;->cpuMinFreqBooster:Landroid/os/DVFSHelper;
 
-    .line 48
     iget-object v0, p0, Lcom/android/server/cocktailbar/wakeup/CocktailBarWakeUpManager;->cpuMinFreqBooster:Landroid/os/DVFSHelper;
 
     invoke-virtual {v0}, Landroid/os/DVFSHelper;->getSupportedCPUFrequencyForSSRM()[I
@@ -175,12 +156,10 @@
 
     iput-object v0, p0, Lcom/android/server/cocktailbar/wakeup/CocktailBarWakeUpManager;->supportedCPUFreqTable:[I
 
-    .line 49
     iget-object v0, p0, Lcom/android/server/cocktailbar/wakeup/CocktailBarWakeUpManager;->supportedCPUFreqTable:[I
 
     if-eqz v0, :cond_0
 
-    .line 50
     iget-object v0, p0, Lcom/android/server/cocktailbar/wakeup/CocktailBarWakeUpManager;->cpuMinFreqBooster:Landroid/os/DVFSHelper;
 
     const-string v1, "CPU"
@@ -193,7 +172,6 @@
 
     invoke-virtual {v0, v1, v2, v3}, Landroid/os/DVFSHelper;->addExtraOption(Ljava/lang/String;J)V
 
-    .line 53
     :cond_0
     new-instance v0, Landroid/os/DVFSHelper;
 
@@ -207,7 +185,6 @@
 
     iput-object v0, p0, Lcom/android/server/cocktailbar/wakeup/CocktailBarWakeUpManager;->cpuCoreBooster:Landroid/os/DVFSHelper;
 
-    .line 55
     iget-object v0, p0, Lcom/android/server/cocktailbar/wakeup/CocktailBarWakeUpManager;->cpuCoreBooster:Landroid/os/DVFSHelper;
 
     invoke-virtual {v0}, Landroid/os/DVFSHelper;->getSupportedCPUCoreNum()[I
@@ -216,12 +193,10 @@
 
     iput-object v0, p0, Lcom/android/server/cocktailbar/wakeup/CocktailBarWakeUpManager;->supportedCPUCoreTable:[I
 
-    .line 56
     iget-object v0, p0, Lcom/android/server/cocktailbar/wakeup/CocktailBarWakeUpManager;->supportedCPUCoreTable:[I
 
     if-eqz v0, :cond_1
 
-    .line 57
     iget-object v0, p0, Lcom/android/server/cocktailbar/wakeup/CocktailBarWakeUpManager;->cpuCoreBooster:Landroid/os/DVFSHelper;
 
     const-string v1, "CORE_NUM"
@@ -234,7 +209,6 @@
 
     invoke-virtual {v0, v1, v2, v3}, Landroid/os/DVFSHelper;->addExtraOption(Ljava/lang/String;J)V
 
-    .line 60
     :cond_1
     new-instance v0, Landroid/os/DVFSHelper;
 
@@ -248,7 +222,6 @@
 
     iput-object v0, p0, Lcom/android/server/cocktailbar/wakeup/CocktailBarWakeUpManager;->gpuMinFreqBooster:Landroid/os/DVFSHelper;
 
-    .line 62
     iget-object v0, p0, Lcom/android/server/cocktailbar/wakeup/CocktailBarWakeUpManager;->gpuMinFreqBooster:Landroid/os/DVFSHelper;
 
     invoke-virtual {v0}, Landroid/os/DVFSHelper;->getSupportedGPUFrequency()[I
@@ -257,12 +230,10 @@
 
     iput-object v0, p0, Lcom/android/server/cocktailbar/wakeup/CocktailBarWakeUpManager;->supportedGPUFreqTable:[I
 
-    .line 63
     iget-object v0, p0, Lcom/android/server/cocktailbar/wakeup/CocktailBarWakeUpManager;->supportedGPUFreqTable:[I
 
     if-eqz v0, :cond_2
 
-    .line 64
     iget-object v0, p0, Lcom/android/server/cocktailbar/wakeup/CocktailBarWakeUpManager;->gpuMinFreqBooster:Landroid/os/DVFSHelper;
 
     const-string v1, "GPU"
@@ -275,7 +246,6 @@
 
     invoke-virtual {v0, v1, v2, v3}, Landroid/os/DVFSHelper;->addExtraOption(Ljava/lang/String;J)V
 
-    .line 67
     :cond_2
     new-instance v0, Landroid/os/DVFSHelper;
 
@@ -289,7 +259,6 @@
 
     iput-object v0, p0, Lcom/android/server/cocktailbar/wakeup/CocktailBarWakeUpManager;->busMinFreqBooster:Landroid/os/DVFSHelper;
 
-    .line 69
     iget-object v0, p0, Lcom/android/server/cocktailbar/wakeup/CocktailBarWakeUpManager;->busMinFreqBooster:Landroid/os/DVFSHelper;
 
     invoke-virtual {v0}, Landroid/os/DVFSHelper;->getSupportedBUSFrequency()[I
@@ -298,12 +267,10 @@
 
     iput-object v0, p0, Lcom/android/server/cocktailbar/wakeup/CocktailBarWakeUpManager;->supportedBUSFreqTable:[I
 
-    .line 70
     iget-object v0, p0, Lcom/android/server/cocktailbar/wakeup/CocktailBarWakeUpManager;->supportedBUSFreqTable:[I
 
     if-eqz v0, :cond_3
 
-    .line 71
     iget-object v0, p0, Lcom/android/server/cocktailbar/wakeup/CocktailBarWakeUpManager;->busMinFreqBooster:Landroid/os/DVFSHelper;
 
     const-string v1, "BUS"
@@ -316,7 +283,6 @@
 
     invoke-virtual {v0, v1, v2, v3}, Landroid/os/DVFSHelper;->addExtraOption(Ljava/lang/String;J)V
 
-    .line 73
     :cond_3
     return-void
 .end method
@@ -327,7 +293,6 @@
     .locals 1
 
     .prologue
-    .line 86
     iget-boolean v0, p0, Lcom/android/server/cocktailbar/wakeup/CocktailBarWakeUpManager;->mCocktaiBarWakeUpState:Z
 
     return v0
@@ -339,29 +304,23 @@
     .param p2, "keyCode"    # I
 
     .prologue
-    .line 76
     iput-boolean p1, p0, Lcom/android/server/cocktailbar/wakeup/CocktailBarWakeUpManager;->mCocktaiBarWakeUpState:Z
 
-    .line 77
     if-eqz p1, :cond_0
 
-    .line 78
     const/16 v0, 0x3e8
 
     invoke-direct {p0, v0}, Lcom/android/server/cocktailbar/wakeup/CocktailBarWakeUpManager;->applyBooster(I)V
 
-    .line 79
     iget-object v0, p0, Lcom/android/server/cocktailbar/wakeup/CocktailBarWakeUpManager;->mListener:Lcom/android/server/cocktailbar/wakeup/CocktailBarWakeUpManager$OnCocktailBarWakeUpListener;
 
     const/4 v1, 0x1
 
     invoke-interface {v0, v1, p2}, Lcom/android/server/cocktailbar/wakeup/CocktailBarWakeUpManager$OnCocktailBarWakeUpListener;->onNotifyCocktailBarWakeUp(ZI)V
 
-    .line 83
     :goto_0
     return-void
 
-    .line 81
     :cond_0
     iget-object v0, p0, Lcom/android/server/cocktailbar/wakeup/CocktailBarWakeUpManager;->mListener:Lcom/android/server/cocktailbar/wakeup/CocktailBarWakeUpManager$OnCocktailBarWakeUpListener;
 

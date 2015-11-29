@@ -23,7 +23,6 @@
     .locals 0
 
     .prologue
-    .line 824
     iput-object p1, p0, Lcom/android/server/enterprise/billing/EnterpriseBillingPolicy$1;->this$0:Lcom/android/server/enterprise/billing/EnterpriseBillingPolicy;
 
     invoke-direct {p0}, Landroid/content/BroadcastReceiver;-><init>()V
@@ -39,14 +38,13 @@
     .param p2, "intent"    # Landroid/content/Intent;
 
     .prologue
-    .line 830
     const-string v18, "EnterpriseBillingPolicy"
 
     new-instance v19, Ljava/lang/StringBuilder;
 
     invoke-direct/range {v19 .. v19}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v20, "packageModificationReceiver - onreceive - start - "
+    const-string v20, "packageModificationReceiver - onreceive - start - "
 
     invoke-virtual/range {v19 .. v20}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -66,7 +64,6 @@
 
     invoke-static/range {v18 .. v19}, Landroid/util/Log;->v(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 831
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/android/server/enterprise/billing/EnterpriseBillingPolicy$1;->this$0:Lcom/android/server/enterprise/billing/EnterpriseBillingPolicy;
@@ -82,16 +79,13 @@
 
     move-result-object v10
 
-    .line 832
     .local v10, "packageName":Ljava/lang/String;
     if-eqz v10, :cond_4
 
-    .line 833
     invoke-virtual {v10}, Ljava/lang/String;->trim()Ljava/lang/String;
 
     move-result-object v10
 
-    .line 834
     const-string v18, "android.intent.extra.UID"
 
     const/16 v19, -0x1
@@ -106,7 +100,6 @@
 
     move-result v16
 
-    .line 835
     .local v16, "uID":I
     const-string v18, "EnterpriseBillingPolicy"
 
@@ -114,7 +107,7 @@
 
     invoke-direct/range {v19 .. v19}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v20, "uID is "
+    const-string v20, "uID is "
 
     invoke-virtual/range {v19 .. v20}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -134,19 +127,15 @@
 
     invoke-static/range {v18 .. v19}, Landroid/util/Log;->v(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 836
     const/16 v17, -0x1
 
-    .line 837
     .local v17, "userId":I
     if-lez v16, :cond_0
 
-    .line 838
     invoke-static/range {v16 .. v16}, Landroid/os/UserHandle;->getUserId(I)I
 
     move-result v17
 
-    .line 841
     :cond_0
     const-string v18, "EnterpriseBillingPolicy"
 
@@ -174,7 +163,6 @@
 
     invoke-static/range {v18 .. v19}, Landroid/util/Log;->v(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 842
     const/16 v18, 0x64
 
     move/from16 v0, v17
@@ -183,7 +171,6 @@
 
     if-lt v0, v1, :cond_5
 
-    .line 843
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/android/server/enterprise/billing/EnterpriseBillingPolicy$1;->this$0:Lcom/android/server/enterprise/billing/EnterpriseBillingPolicy;
@@ -205,7 +192,6 @@
 
     if-eqz v18, :cond_3
 
-    .line 845
     const-string v18, "EnterpriseBillingPolicy"
 
     new-instance v19, Ljava/lang/StringBuilder;
@@ -232,7 +218,6 @@
 
     invoke-static/range {v18 .. v19}, Landroid/util/Log;->v(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 847
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/android/server/enterprise/billing/EnterpriseBillingPolicy$1;->this$0:Lcom/android/server/enterprise/billing/EnterpriseBillingPolicy;
@@ -252,11 +237,9 @@
 
     move-result-object v13
 
-    .line 849
     .local v13, "profiles":[Ljava/lang/String;
     if-eqz v13, :cond_3
 
-    .line 851
     const-string v18, "EnterpriseBillingPolicy"
 
     new-instance v19, Ljava/lang/StringBuilder;
@@ -283,7 +266,6 @@
 
     invoke-static/range {v18 .. v19}, Landroid/util/Log;->v(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 852
     move-object v4, v13
 
     .local v4, "arr$":[Ljava/lang/String;
@@ -298,7 +280,6 @@
 
     aget-object v12, v4, v7
 
-    .line 853
     .local v12, "profileName":Ljava/lang/String;
     move-object/from16 v0, p0
 
@@ -321,7 +302,6 @@
 
     if-eqz v18, :cond_2
 
-    .line 854
     const-string v18, "EnterpriseBillingPolicy"
 
     new-instance v19, Ljava/lang/StringBuilder;
@@ -360,7 +340,6 @@
 
     invoke-static/range {v18 .. v19}, Landroid/util/Log;->v(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 855
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/android/server/enterprise/billing/EnterpriseBillingPolicy$1;->this$0:Lcom/android/server/enterprise/billing/EnterpriseBillingPolicy;
@@ -378,7 +357,6 @@
 
     move-result-object v3
 
-    .line 856
     .local v3, "apn":Lcom/sec/enterprise/knox/billing/EnterpriseApn;
     move-object/from16 v0, p0
 
@@ -397,7 +375,6 @@
 
     move-result-object v6
 
-    .line 858
     .local v6, "defaultType":Ljava/lang/String;
     const-string v18, "EnterpriseBillingPolicy"
 
@@ -435,12 +412,10 @@
 
     invoke-static/range {v18 .. v19}, Landroid/util/Log;->v(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 859
     if-eqz v6, :cond_1
 
     if-eqz v3, :cond_1
 
-    .line 860
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/android/server/enterprise/billing/EnterpriseBillingPolicy$1;->this$0:Lcom/android/server/enterprise/billing/EnterpriseBillingPolicy;
@@ -456,7 +431,6 @@
 
     invoke-static {v0, v3, v6}, Lcom/android/server/enterprise/billing/EnterpriseBillingTelephonyInterface;->updateApnType(Landroid/content/Context;Lcom/sec/enterprise/knox/billing/EnterpriseApn;Ljava/lang/String;)I
 
-    .line 862
     :cond_1
     move-object/from16 v0, p0
 
@@ -473,7 +447,6 @@
 
     invoke-virtual {v0, v12}, Lcom/android/server/enterprise/billing/EnterpriseBillingPolicyStorageHelper;->removeProfileMapping(Ljava/lang/String;)I
 
-    .line 863
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/android/server/enterprise/billing/EnterpriseBillingPolicy$1;->this$0:Lcom/android/server/enterprise/billing/EnterpriseBillingPolicy;
@@ -491,7 +464,6 @@
 
     move-result v8
 
-    .line 864
     .local v8, "isDone":Z
     const-string v18, "EnterpriseBillingPolicy"
 
@@ -517,7 +489,6 @@
 
     invoke-static/range {v18 .. v19}, Landroid/util/Log;->v(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 865
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/android/server/enterprise/billing/EnterpriseBillingPolicy$1;->this$0:Lcom/android/server/enterprise/billing/EnterpriseBillingPolicy;
@@ -535,7 +506,6 @@
 
     move-result v14
 
-    .line 866
     .local v14, "removedProfile":I
     const-string v18, "EnterpriseBillingPolicy"
 
@@ -561,7 +531,6 @@
 
     invoke-static/range {v18 .. v19}, Landroid/util/Log;->v(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 867
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/android/server/enterprise/billing/EnterpriseBillingPolicy$1;->this$0:Lcom/android/server/enterprise/billing/EnterpriseBillingPolicy;
@@ -573,7 +542,6 @@
     # invokes: Lcom/android/server/enterprise/billing/EnterpriseBillingPolicy;->deactivateSplitBillingIfLastTime(Ljava/lang/String;)V
     invoke-static {v0, v12}, Lcom/android/server/enterprise/billing/EnterpriseBillingPolicy;->access$400(Lcom/android/server/enterprise/billing/EnterpriseBillingPolicy;Ljava/lang/String;)V
 
-    .line 852
     .end local v3    # "apn":Lcom/sec/enterprise/knox/billing/EnterpriseApn;
     .end local v6    # "defaultType":Ljava/lang/String;
     .end local v8    # "isDone":Z
@@ -583,7 +551,6 @@
 
     goto/16 :goto_0
 
-    .line 874
     .end local v4    # "arr$":[Ljava/lang/String;
     .end local v7    # "i$":I
     .end local v9    # "len$":I
@@ -592,11 +559,10 @@
     :cond_3
     const-string v18, "EnterpriseBillingPolicy"
 
-    const-string/jumbo v19, "packageModificationReceiver - onreceive - container application "
+    const-string v19, "packageModificationReceiver - onreceive - container application "
 
     invoke-static/range {v18 .. v19}, Landroid/util/Log;->v(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 875
     new-instance v18, Ljava/lang/StringBuilder;
 
     invoke-direct/range {v18 .. v18}, Ljava/lang/StringBuilder;-><init>()V
@@ -635,7 +601,6 @@
 
     move-result v5
 
-    .line 876
     .local v5, "containerId":I
     move-object/from16 v0, p0
 
@@ -654,11 +619,9 @@
 
     move-result-object v11
 
-    .line 877
     .local v11, "profile":Lcom/sec/enterprise/knox/billing/EnterpriseBillingProfile;
     if-eqz v11, :cond_4
 
-    .line 879
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/android/server/enterprise/billing/EnterpriseBillingPolicy$1;->this$0:Lcom/android/server/enterprise/billing/EnterpriseBillingPolicy;
@@ -676,7 +639,6 @@
 
     invoke-virtual/range {v18 .. v19}, Lcom/android/server/enterprise/billing/EnterpriseBillingEngine;->informMappingChanged(Ljava/lang/String;)V
 
-    .line 907
     .end local v5    # "containerId":I
     .end local v11    # "profile":Lcom/sec/enterprise/knox/billing/EnterpriseBillingProfile;
     .end local v16    # "uID":I
@@ -685,7 +647,6 @@
     :goto_1
     return-void
 
-    .line 883
     .restart local v16    # "uID":I
     .restart local v17    # "userId":I
     :cond_5
@@ -706,7 +667,6 @@
 
     move-result-object v11
 
-    .line 884
     .restart local v11    # "profile":Lcom/sec/enterprise/knox/billing/EnterpriseBillingProfile;
     const-string v18, "EnterpriseBillingPolicy"
 
@@ -714,7 +674,7 @@
 
     invoke-direct/range {v19 .. v19}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v20, "packageModificationReceiver - onreceive - personal application - profile "
+    const-string v20, "packageModificationReceiver - onreceive - personal application - profile "
 
     invoke-virtual/range {v19 .. v20}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -732,10 +692,8 @@
 
     invoke-static/range {v18 .. v19}, Landroid/util/Log;->v(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 885
     if-eqz v11, :cond_7
 
-    .line 887
     invoke-virtual/range {p2 .. p2}, Landroid/content/Intent;->getAction()Ljava/lang/String;
 
     move-result-object v18
@@ -760,7 +718,6 @@
 
     if-eqz v18, :cond_4
 
-    .line 888
     :cond_6
     const-string v18, "EnterpriseBillingPolicy"
 
@@ -768,7 +725,7 @@
 
     invoke-direct/range {v19 .. v19}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v20, "packageModificationReceiver - onreceive - pcakge removal update "
+    const-string v20, "packageModificationReceiver - onreceive - pcakge removal update "
 
     invoke-virtual/range {v19 .. v20}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -786,7 +743,6 @@
 
     invoke-static/range {v18 .. v19}, Landroid/util/Log;->v(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 889
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/android/server/enterprise/billing/EnterpriseBillingPolicy$1;->this$0:Lcom/android/server/enterprise/billing/EnterpriseBillingPolicy;
@@ -802,10 +758,8 @@
 
     invoke-virtual {v0, v10}, Lcom/android/server/enterprise/billing/EnterpriseBillingPolicyStorageHelper;->removeApplicationFromProfile(Ljava/lang/String;)I
 
-    .line 890
     if-eqz v11, :cond_4
 
-    .line 891
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/android/server/enterprise/billing/EnterpriseBillingPolicy$1;->this$0:Lcom/android/server/enterprise/billing/EnterpriseBillingPolicy;
@@ -825,7 +779,6 @@
 
     move-result v15
 
-    .line 892
     .local v15, "returnValue":Z
     if-eqz v15, :cond_4
 
@@ -846,7 +799,6 @@
 
     if-nez v18, :cond_4
 
-    .line 893
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/android/server/enterprise/billing/EnterpriseBillingPolicy$1;->this$0:Lcom/android/server/enterprise/billing/EnterpriseBillingPolicy;
@@ -862,16 +814,14 @@
 
     goto/16 :goto_1
 
-    .line 898
     .end local v15    # "returnValue":Z
     :cond_7
     const-string v18, "EnterpriseBillingPolicy"
 
-    const-string/jumbo v19, "packageModificationReceiver - onreceive - might be a vpn vendor package "
+    const-string v19, "packageModificationReceiver - onreceive - might be a vpn vendor package "
 
     invoke-static/range {v18 .. v19}, Landroid/util/Log;->v(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 899
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/android/server/enterprise/billing/EnterpriseBillingPolicy$1;->this$0:Lcom/android/server/enterprise/billing/EnterpriseBillingPolicy;
@@ -889,11 +839,9 @@
 
     move-result-object v12
 
-    .line 900
     .restart local v12    # "profileName":Ljava/lang/String;
     if-eqz v12, :cond_4
 
-    .line 901
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/android/server/enterprise/billing/EnterpriseBillingPolicy$1;->this$0:Lcom/android/server/enterprise/billing/EnterpriseBillingPolicy;

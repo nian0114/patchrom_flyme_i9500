@@ -29,37 +29,31 @@
 
     const/4 v5, 0x0
 
-    .line 269
     const/4 v6, 0x0
 
     invoke-direct {p0, v6}, Landroid/graphics/drawable/AnimatedStateListDrawable$Transition;-><init>(Landroid/graphics/drawable/AnimatedStateListDrawable$1;)V
 
-    .line 270
     invoke-virtual {p1}, Landroid/graphics/drawable/AnimationDrawable;->getNumberOfFrames()I
 
     move-result v1
 
-    .line 271
     .local v1, "frameCount":I
     if-eqz p2, :cond_0
 
     add-int/lit8 v2, v1, -0x1
 
-    .line 272
     .local v2, "fromFrame":I
     :goto_0
     if-eqz p2, :cond_1
 
     move v4, v5
 
-    .line 273
     .local v4, "toFrame":I
     :goto_1
     new-instance v3, Landroid/graphics/drawable/AnimatedStateListDrawable$FrameInterpolator;
 
     invoke-direct {v3, p1, p2}, Landroid/graphics/drawable/AnimatedStateListDrawable$FrameInterpolator;-><init>(Landroid/graphics/drawable/AnimationDrawable;Z)V
 
-    .line 274
     .local v3, "interp":Landroid/graphics/drawable/AnimatedStateListDrawable$FrameInterpolator;
     const-string v6, "currentIndex"
 
@@ -75,11 +69,9 @@
 
     move-result-object v0
 
-    .line 275
     .local v0, "anim":Landroid/animation/ObjectAnimator;
     invoke-virtual {v0, v8}, Landroid/animation/ObjectAnimator;->setAutoCancel(Z)V
 
-    .line 276
     invoke-virtual {v3}, Landroid/graphics/drawable/AnimatedStateListDrawable$FrameInterpolator;->getTotalDuration()I
 
     move-result v5
@@ -88,13 +80,10 @@
 
     invoke-virtual {v0, v6, v7}, Landroid/animation/ObjectAnimator;->setDuration(J)Landroid/animation/ObjectAnimator;
 
-    .line 277
     invoke-virtual {v0, v3}, Landroid/animation/ObjectAnimator;->setInterpolator(Landroid/animation/TimeInterpolator;)V
 
-    .line 279
     iput-object v0, p0, Landroid/graphics/drawable/AnimatedStateListDrawable$AnimationDrawableTransition;->mAnim:Landroid/animation/ObjectAnimator;
 
-    .line 280
     return-void
 
     .end local v0    # "anim":Landroid/animation/ObjectAnimator;
@@ -104,10 +93,8 @@
     :cond_0
     move v2, v5
 
-    .line 271
     goto :goto_0
 
-    .line 272
     .restart local v2    # "fromFrame":I
     :cond_1
     add-int/lit8 v4, v1, -0x1
@@ -121,7 +108,6 @@
     .locals 1
 
     .prologue
-    .line 284
     const/4 v0, 0x1
 
     return v0
@@ -131,12 +117,10 @@
     .locals 1
 
     .prologue
-    .line 294
     iget-object v0, p0, Landroid/graphics/drawable/AnimatedStateListDrawable$AnimationDrawableTransition;->mAnim:Landroid/animation/ObjectAnimator;
 
     invoke-virtual {v0}, Landroid/animation/ObjectAnimator;->reverse()V
 
-    .line 295
     return-void
 .end method
 
@@ -144,12 +128,10 @@
     .locals 1
 
     .prologue
-    .line 289
     iget-object v0, p0, Landroid/graphics/drawable/AnimatedStateListDrawable$AnimationDrawableTransition;->mAnim:Landroid/animation/ObjectAnimator;
 
     invoke-virtual {v0}, Landroid/animation/ObjectAnimator;->start()V
 
-    .line 290
     return-void
 .end method
 
@@ -157,11 +139,9 @@
     .locals 1
 
     .prologue
-    .line 299
     iget-object v0, p0, Landroid/graphics/drawable/AnimatedStateListDrawable$AnimationDrawableTransition;->mAnim:Landroid/animation/ObjectAnimator;
 
     invoke-virtual {v0}, Landroid/animation/ObjectAnimator;->cancel()V
 
-    .line 300
     return-void
 .end method

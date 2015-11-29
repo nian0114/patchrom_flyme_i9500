@@ -18,7 +18,6 @@
     .locals 1
 
     .prologue
-    .line 52
     const-class v0, Lcom/android/server/epm/overlay/LanguagePackService;
 
     invoke-virtual {v0}, Ljava/lang/Class;->getName()Ljava/lang/String;
@@ -35,13 +34,10 @@
     .param p1, "context"    # Landroid/content/Context;
 
     .prologue
-    .line 64
     invoke-direct {p0, p1}, Lcom/android/server/epm/overlay/OverlayManagerService;-><init>(Landroid/content/Context;)V
 
-    .line 67
     iput-object p1, p0, Lcom/android/server/epm/overlay/LanguagePackService;->mContext:Landroid/content/Context;
 
-    .line 68
     return-void
 .end method
 
@@ -52,7 +48,6 @@
     .param p3, "fileText"    # Ljava/lang/String;
 
     .prologue
-    .line 139
     :try_start_0
     invoke-direct {p0, p1, p2}, Lcom/android/server/epm/overlay/LanguagePackService;->existsInXML(Ljava/lang/String;Ljava/lang/String;)Z
 
@@ -66,24 +61,20 @@
 
     if-eqz v10, :cond_1
 
-    .line 170
     :cond_0
     :goto_0
     return-void
 
-    .line 144
     :cond_1
     invoke-static {}, Ljavax/xml/parsers/DocumentBuilderFactory;->newInstance()Ljavax/xml/parsers/DocumentBuilderFactory;
 
     move-result-object v2
 
-    .line 146
     .local v2, "documentBuilderFactory":Ljavax/xml/parsers/DocumentBuilderFactory;
     invoke-virtual {v2}, Ljavax/xml/parsers/DocumentBuilderFactory;->newDocumentBuilder()Ljavax/xml/parsers/DocumentBuilder;
 
     move-result-object v1
 
-    .line 147
     .local v1, "documentBuilder":Ljavax/xml/parsers/DocumentBuilder;
     new-instance v10, Ljava/io/FileInputStream;
 
@@ -97,13 +88,11 @@
 
     move-result-object v0
 
-    .line 148
     .local v0, "document":Lorg/w3c/dom/Document;
     invoke-interface {v0}, Lorg/w3c/dom/Document;->getDocumentElement()Lorg/w3c/dom/Element;
 
     move-result-object v9
 
-    .line 150
     .local v9, "rootElement":Lorg/w3c/dom/Element;
     const-string v10, "family"
 
@@ -111,7 +100,6 @@
 
     move-result-object v4
 
-    .line 151
     .local v4, "family":Lorg/w3c/dom/Element;
     const-string v10, "nameset"
 
@@ -119,7 +107,6 @@
 
     move-result-object v8
 
-    .line 153
     .local v8, "nameset":Lorg/w3c/dom/Element;
     const-string v10, "fileset"
 
@@ -127,7 +114,6 @@
 
     move-result-object v6
 
-    .line 155
     .local v6, "fileset":Lorg/w3c/dom/Element;
     const-string v10, "name"
 
@@ -135,7 +121,6 @@
 
     move-result-object v7
 
-    .line 157
     .local v7, "name":Lorg/w3c/dom/Element;
     const-string v10, "file"
 
@@ -143,7 +128,6 @@
 
     move-result-object v5
 
-    .line 159
     .local v5, "file":Lorg/w3c/dom/Element;
     invoke-interface {v0, p2}, Lorg/w3c/dom/Document;->createTextNode(Ljava/lang/String;)Lorg/w3c/dom/Text;
 
@@ -151,36 +135,28 @@
 
     invoke-interface {v7, v10}, Lorg/w3c/dom/Element;->appendChild(Lorg/w3c/dom/Node;)Lorg/w3c/dom/Node;
 
-    .line 160
     invoke-interface {v0, p3}, Lorg/w3c/dom/Document;->createTextNode(Ljava/lang/String;)Lorg/w3c/dom/Text;
 
     move-result-object v10
 
     invoke-interface {v5, v10}, Lorg/w3c/dom/Element;->appendChild(Lorg/w3c/dom/Node;)Lorg/w3c/dom/Node;
 
-    .line 161
     invoke-interface {v8, v7}, Lorg/w3c/dom/Element;->appendChild(Lorg/w3c/dom/Node;)Lorg/w3c/dom/Node;
 
-    .line 162
     invoke-interface {v6, v5}, Lorg/w3c/dom/Element;->appendChild(Lorg/w3c/dom/Node;)Lorg/w3c/dom/Node;
 
-    .line 163
     invoke-interface {v4, v8}, Lorg/w3c/dom/Element;->appendChild(Lorg/w3c/dom/Node;)Lorg/w3c/dom/Node;
 
-    .line 164
     invoke-interface {v4, v6}, Lorg/w3c/dom/Element;->appendChild(Lorg/w3c/dom/Node;)Lorg/w3c/dom/Node;
 
-    .line 165
     invoke-interface {v9, v4}, Lorg/w3c/dom/Element;->appendChild(Lorg/w3c/dom/Node;)Lorg/w3c/dom/Node;
 
-    .line 166
     invoke-direct {p0, v0, p1}, Lcom/android/server/epm/overlay/LanguagePackService;->commitXML(Lorg/w3c/dom/Document;Ljava/lang/String;)V
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
     goto :goto_0
 
-    .line 167
     .end local v0    # "document":Lorg/w3c/dom/Document;
     .end local v1    # "documentBuilder":Ljavax/xml/parsers/DocumentBuilder;
     .end local v2    # "documentBuilderFactory":Ljavax/xml/parsers/DocumentBuilderFactory;
@@ -193,7 +169,6 @@
     :catch_0
     move-exception v3
 
-    .line 168
     .local v3, "e":Ljava/lang/Exception;
     invoke-virtual {v3}, Ljava/lang/Exception;->printStackTrace()V
 
@@ -206,37 +181,31 @@
     .param p2, "xmlFilePath"    # Ljava/lang/String;
 
     .prologue
-    .line 213
     :try_start_0
     new-instance v2, Ljavax/xml/transform/dom/DOMSource;
 
     invoke-direct {v2, p1}, Ljavax/xml/transform/dom/DOMSource;-><init>(Lorg/w3c/dom/Node;)V
 
-    .line 214
     .local v2, "source":Ljavax/xml/transform/dom/DOMSource;
     invoke-static {}, Ljavax/xml/transform/TransformerFactory;->newInstance()Ljavax/xml/transform/TransformerFactory;
 
     move-result-object v4
 
-    .line 215
     .local v4, "transformerFactory":Ljavax/xml/transform/TransformerFactory;
     invoke-virtual {v4}, Ljavax/xml/transform/TransformerFactory;->newTransformer()Ljavax/xml/transform/Transformer;
 
     move-result-object v3
 
-    .line 216
     .local v3, "transformer":Ljavax/xml/transform/Transformer;
     new-instance v1, Ljavax/xml/transform/stream/StreamResult;
 
     invoke-direct {v1, p2}, Ljavax/xml/transform/stream/StreamResult;-><init>(Ljava/lang/String;)V
 
-    .line 217
     .local v1, "result":Ljavax/xml/transform/stream/StreamResult;
     invoke-virtual {v3, v2, v1}, Ljavax/xml/transform/Transformer;->transform(Ljavax/xml/transform/Source;Ljavax/xml/transform/Result;)V
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 221
     .end local v1    # "result":Ljavax/xml/transform/stream/StreamResult;
     .end local v2    # "source":Ljavax/xml/transform/dom/DOMSource;
     .end local v3    # "transformer":Ljavax/xml/transform/Transformer;
@@ -244,11 +213,9 @@
     :goto_0
     return-void
 
-    .line 218
     :catch_0
     move-exception v0
 
-    .line 219
     .local v0, "e":Ljava/lang/Exception;
     invoke-virtual {v0}, Ljava/lang/Exception;->printStackTrace()V
 
@@ -261,19 +228,16 @@
     .param p2, "strToBeDeleted"    # Ljava/lang/String;
 
     .prologue
-    .line 174
     :try_start_0
     invoke-static {}, Ljavax/xml/parsers/DocumentBuilderFactory;->newInstance()Ljavax/xml/parsers/DocumentBuilderFactory;
 
     move-result-object v3
 
-    .line 176
     .local v3, "documentBuilderFactory":Ljavax/xml/parsers/DocumentBuilderFactory;
     invoke-virtual {v3}, Ljavax/xml/parsers/DocumentBuilderFactory;->newDocumentBuilder()Ljavax/xml/parsers/DocumentBuilder;
 
     move-result-object v2
 
-    .line 177
     .local v2, "documentBuilder":Ljavax/xml/parsers/DocumentBuilder;
     new-instance v14, Ljava/io/FileInputStream;
 
@@ -289,7 +253,6 @@
 
     move-result-object v1
 
-    .line 179
     .local v1, "doc":Lorg/w3c/dom/Document;
     const-string v14, "family"
 
@@ -297,7 +260,6 @@
 
     move-result-object v12
 
-    .line 182
     .local v12, "nodes":Lorg/w3c/dom/NodeList;
     const/4 v8, 0x0
 
@@ -309,14 +271,12 @@
 
     if-ge v8, v14, :cond_2
 
-    .line 183
     invoke-interface {v12, v8}, Lorg/w3c/dom/NodeList;->item(I)Lorg/w3c/dom/Node;
 
     move-result-object v5
 
     check-cast v5, Lorg/w3c/dom/Element;
 
-    .line 184
     .local v5, "family":Lorg/w3c/dom/Element;
     const-string v14, "fileset"
 
@@ -324,7 +284,6 @@
 
     move-result-object v7
 
-    .line 187
     .local v7, "fileset":Lorg/w3c/dom/NodeList;
     const/4 v14, 0x0
 
@@ -334,13 +293,11 @@
 
     check-cast v6, Lorg/w3c/dom/Element;
 
-    .line 188
     .local v6, "file":Lorg/w3c/dom/Element;
     invoke-interface {v6}, Lorg/w3c/dom/Element;->getTextContent()Ljava/lang/String;
 
     move-result-object v13
 
-    .line 189
     .local v13, "ttfName":Ljava/lang/String;
     invoke-virtual {v13}, Ljava/lang/String;->trim()Ljava/lang/String;
 
@@ -356,10 +313,8 @@
 
     if-eqz v14, :cond_0
 
-    .line 190
     const/4 v14, 0x1
 
-    .line 208
     .end local v1    # "doc":Lorg/w3c/dom/Document;
     .end local v2    # "documentBuilder":Ljavax/xml/parsers/DocumentBuilder;
     .end local v3    # "documentBuilderFactory":Ljavax/xml/parsers/DocumentBuilderFactory;
@@ -372,7 +327,6 @@
     :goto_1
     return v14
 
-    .line 193
     .restart local v1    # "doc":Lorg/w3c/dom/Document;
     .restart local v2    # "documentBuilder":Ljavax/xml/parsers/DocumentBuilder;
     .restart local v3    # "documentBuilderFactory":Ljavax/xml/parsers/DocumentBuilderFactory;
@@ -389,7 +343,6 @@
 
     move-result-object v11
 
-    .line 196
     .local v11, "nameset":Lorg/w3c/dom/NodeList;
     const/4 v14, 0x0
 
@@ -399,13 +352,11 @@
 
     check-cast v10, Lorg/w3c/dom/Element;
 
-    .line 197
     .local v10, "name":Lorg/w3c/dom/Element;
     invoke-interface {v10}, Lorg/w3c/dom/Element;->getTextContent()Ljava/lang/String;
 
     move-result-object v9
 
-    .line 201
     .local v9, "langName":Ljava/lang/String;
     invoke-virtual {v9}, Ljava/lang/String;->trim()Ljava/lang/String;
 
@@ -423,18 +374,15 @@
 
     if-eqz v14, :cond_1
 
-    .line 202
     const/4 v14, 0x1
 
     goto :goto_1
 
-    .line 182
     :cond_1
     add-int/lit8 v8, v8, 0x1
 
     goto :goto_0
 
-    .line 205
     .end local v1    # "doc":Lorg/w3c/dom/Document;
     .end local v2    # "documentBuilder":Ljavax/xml/parsers/DocumentBuilder;
     .end local v3    # "documentBuilderFactory":Ljavax/xml/parsers/DocumentBuilderFactory;
@@ -450,11 +398,9 @@
     :catch_0
     move-exception v4
 
-    .line 206
     .local v4, "e":Ljava/lang/Exception;
     invoke-virtual {v4}, Ljava/lang/Exception;->printStackTrace()V
 
-    .line 208
     .end local v4    # "e":Ljava/lang/Exception;
     :cond_2
     const/4 v14, 0x0
@@ -466,14 +412,12 @@
     .locals 5
 
     .prologue
-    .line 121
     new-instance v0, Ljava/io/File;
 
     const-string v4, "/data/downloaded_fonts/downloaded_fonts.xml"
 
     invoke-direct {v0, v4}, Ljava/io/File;-><init>(Ljava/lang/String;)V
 
-    .line 122
     .local v0, "downloaded_fonts_file":Ljava/io/File;
     invoke-virtual {v0}, Ljava/io/File;->exists()Z
 
@@ -481,20 +425,16 @@
 
     if-nez v4, :cond_0
 
-    .line 124
     :try_start_0
     invoke-virtual {v0}, Ljava/io/File;->createNewFile()Z
 
-    .line 125
     new-instance v2, Ljava/io/FileOutputStream;
 
     invoke-direct {v2, v0}, Ljava/io/FileOutputStream;-><init>(Ljava/io/File;)V
 
-    .line 126
     .local v2, "fos":Ljava/io/FileOutputStream;
     const-string v3, "<familyset>\n\n</familyset>"
 
-    .line 127
     .local v3, "initialData":Ljava/lang/String;
     invoke-virtual {v3}, Ljava/lang/String;->getBytes()[B
 
@@ -502,26 +442,21 @@
 
     invoke-virtual {v2, v4}, Ljava/io/FileOutputStream;->write([B)V
 
-    .line 128
     invoke-virtual {v2}, Ljava/io/FileOutputStream;->flush()V
 
-    .line 129
     invoke-virtual {v2}, Ljava/io/FileOutputStream;->close()V
     :try_end_0
     .catch Ljava/io/IOException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 134
     .end local v2    # "fos":Ljava/io/FileOutputStream;
     .end local v3    # "initialData":Ljava/lang/String;
     :cond_0
     :goto_0
     return-void
 
-    .line 130
     :catch_0
     move-exception v1
 
-    .line 131
     .local v1, "e":Ljava/io/IOException;
     invoke-virtual {v1}, Ljava/io/IOException;->printStackTrace()V
 
@@ -537,7 +472,6 @@
     .prologue
     const/4 v8, 0x0
 
-    .line 104
     :try_start_0
     iget-object v4, p0, Lcom/android/server/epm/overlay/LanguagePackService;->mContext:Landroid/content/Context;
 
@@ -545,7 +479,6 @@
 
     move-result-object v0
 
-    .line 105
     .local v0, "am":Landroid/content/res/AssetManager;
     new-instance v1, Ljava/io/File;
 
@@ -553,7 +486,6 @@
 
     invoke-direct {v1, v4}, Ljava/io/File;-><init>(Ljava/lang/String;)V
 
-    .line 106
     .local v1, "downloadedDir":Ljava/io/File;
     invoke-virtual {v1}, Ljava/io/File;->exists()Z
 
@@ -561,13 +493,10 @@
 
     if-nez v4, :cond_0
 
-    .line 107
     invoke-virtual {v1}, Ljava/io/File;->mkdir()Z
 
-    .line 108
     invoke-direct {p0}, Lcom/android/server/epm/overlay/LanguagePackService;->initXmlFile()V
 
-    .line 110
     :cond_0
     const-string v4, ""
 
@@ -575,7 +504,6 @@
 
     move-result-object v3
 
-    .line 112
     .local v3, "fontFileList":[Ljava/lang/String;
     const-string v4, "/data/downloaded_fonts/downloaded_fonts.xml"
 
@@ -601,7 +529,6 @@
 
     invoke-direct {p0, v4, v5, v6}, Lcom/android/server/epm/overlay/LanguagePackService;->appendNewData(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 113
     invoke-static {}, Ljava/lang/Runtime;->getRuntime()Ljava/lang/Runtime;
 
     move-result-object v4
@@ -612,7 +539,6 @@
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 117
     .end local v0    # "am":Landroid/content/res/AssetManager;
     .end local v1    # "downloadedDir":Ljava/io/File;
     .end local v3    # "fontFileList":[Ljava/lang/String;
@@ -651,14 +577,11 @@
 
     invoke-virtual {v4}, Landroid/widget/Toast;->show()V
 
-    .line 118
     return-void
 
-    .line 114
     :catch_0
     move-exception v2
 
-    .line 115
     .local v2, "e":Ljava/lang/Exception;
     invoke-virtual {v2}, Ljava/lang/Exception;->printStackTrace()V
 
@@ -669,7 +592,6 @@
     .locals 1
 
     .prologue
-    .line 75
     const/4 v0, 0x2
 
     return v0
@@ -682,13 +604,10 @@
     .param p3, "packageName"    # Ljava/lang/String;
 
     .prologue
-    .line 85
     invoke-super {p0, p1, p2, p3}, Lcom/android/server/epm/overlay/OverlayManagerService;->onPluginInstalled(Landroid/content/Context;Landroid/content/pm/PackageManager;Ljava/lang/String;)V
 
-    .line 86
     iput-object p1, p0, Lcom/android/server/epm/overlay/LanguagePackService;->mContext:Landroid/content/Context;
 
-    .line 89
     :try_start_0
     iget-object v2, p0, Lcom/android/server/epm/overlay/LanguagePackService;->mContext:Landroid/content/Context;
 
@@ -702,7 +621,6 @@
 
     move-result-object v0
 
-    .line 90
     .local v0, "appInfo":Landroid/content/pm/ApplicationInfo;
     if-eqz v0, :cond_0
 
@@ -710,7 +628,6 @@
 
     if-eqz v2, :cond_0
 
-    .line 91
     iget-object v2, v0, Landroid/content/pm/ApplicationInfo;->metaData:Landroid/os/Bundle;
 
     const-string v3, "elastic.language.ttf"
@@ -723,17 +640,14 @@
     :try_end_0
     .catch Landroid/content/pm/PackageManager$NameNotFoundException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 96
     .end local v0    # "appInfo":Landroid/content/pm/ApplicationInfo;
     :cond_0
     :goto_0
     return-void
 
-    .line 93
     :catch_0
     move-exception v1
 
-    .line 94
     .local v1, "e":Landroid/content/pm/PackageManager$NameNotFoundException;
     invoke-virtual {v1}, Landroid/content/pm/PackageManager$NameNotFoundException;->printStackTrace()V
 

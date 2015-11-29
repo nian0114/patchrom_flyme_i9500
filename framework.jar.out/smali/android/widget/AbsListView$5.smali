@@ -26,7 +26,6 @@
     .locals 0
 
     .prologue
-    .line 9596
     iput-object p1, p0, Landroid/widget/AbsListView$5;->this$0:Landroid/widget/AbsListView;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -40,7 +39,6 @@
     .locals 6
 
     .prologue
-    .line 9599
     iget-object v1, p0, Landroid/widget/AbsListView$5;->this$0:Landroid/widget/AbsListView;
 
     # getter for: Landroid/widget/AbsListView;->mQCScrollTo:I
@@ -65,7 +63,6 @@
 
     if-ge v1, v2, :cond_0
 
-    .line 9600
     iget-object v1, p0, Landroid/widget/AbsListView$5;->this$0:Landroid/widget/AbsListView;
 
     iget-object v2, p0, Landroid/widget/AbsListView$5;->this$0:Landroid/widget/AbsListView;
@@ -77,11 +74,9 @@
 
     invoke-virtual {v1, v2}, Landroid/widget/AbsListView;->smoothScrollToPosition(I)V
 
-    .line 9614
     :goto_0
     return-void
 
-    .line 9602
     :cond_0
     iget-object v1, p0, Landroid/widget/AbsListView$5;->this$0:Landroid/widget/AbsListView;
 
@@ -133,14 +128,12 @@
 
     float-to-int v0, v1
 
-    .line 9604
     .local v0, "movingDistance":I
     iget-object v1, p0, Landroid/widget/AbsListView$5;->this$0:Landroid/widget/AbsListView;
 
     # operator++ for: Landroid/widget/AbsListView;->mQCScrollingCount:I
     invoke-static {v1}, Landroid/widget/AbsListView;->access$5908(Landroid/widget/AbsListView;)I
 
-    .line 9605
     iget-object v1, p0, Landroid/widget/AbsListView$5;->this$0:Landroid/widget/AbsListView;
 
     # getter for: Landroid/widget/AbsListView;->mQCScrollDirection:I
@@ -152,13 +145,11 @@
 
     if-ne v1, v2, :cond_1
 
-    .line 9606
     iget-object v1, p0, Landroid/widget/AbsListView$5;->this$0:Landroid/widget/AbsListView;
 
     # setter for: Landroid/widget/AbsListView;->mQCScrollNext:I
     invoke-static {v1, v0}, Landroid/widget/AbsListView;->access$5702(Landroid/widget/AbsListView;I)I
 
-    .line 9607
     iget-object v1, p0, Landroid/widget/AbsListView$5;->this$0:Landroid/widget/AbsListView;
 
     iget-object v2, p0, Landroid/widget/AbsListView$5;->this$0:Landroid/widget/AbsListView;
@@ -170,7 +161,6 @@
 
     invoke-virtual {v1, v2}, Landroid/widget/AbsListView;->setSelection(I)V
 
-    .line 9612
     :goto_1
     iget-object v1, p0, Landroid/widget/AbsListView$5;->this$0:Landroid/widget/AbsListView;
 
@@ -187,7 +177,6 @@
 
     goto :goto_0
 
-    .line 9609
     :cond_1
     iget-object v1, p0, Landroid/widget/AbsListView$5;->this$0:Landroid/widget/AbsListView;
 
@@ -203,7 +192,6 @@
     # setter for: Landroid/widget/AbsListView;->mQCScrollNext:I
     invoke-static {v1, v2}, Landroid/widget/AbsListView;->access$5702(Landroid/widget/AbsListView;I)I
 
-    .line 9610
     iget-object v1, p0, Landroid/widget/AbsListView$5;->this$0:Landroid/widget/AbsListView;
 
     iget-object v2, p0, Landroid/widget/AbsListView$5;->this$0:Landroid/widget/AbsListView;

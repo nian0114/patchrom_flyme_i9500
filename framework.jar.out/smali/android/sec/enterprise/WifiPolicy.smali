@@ -36,7 +36,6 @@
     .locals 1
 
     .prologue
-    .line 43
     const-string v0, "WifiPolicy"
 
     sput-object v0, Landroid/sec/enterprise/WifiPolicy;->TAG:Ljava/lang/String;
@@ -48,7 +47,6 @@
     .locals 0
 
     .prologue
-    .line 41
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -62,32 +60,26 @@
     .param p2, "netSSID"    # Ljava/lang/String;
 
     .prologue
-    .line 196
     :try_start_0
     invoke-static {}, Landroid/sec/enterprise/EnterpriseDeviceManager$EDMProxyServiceHelper;->getService()Landroid/sec/enterprise/IEDMProxy;
 
     move-result-object v1
 
-    .line 197
     .local v1, "lService":Landroid/sec/enterprise/IEDMProxy;
     if-eqz v1, :cond_0
 
-    .line 198
     invoke-interface {v1, p1, p2}, Landroid/sec/enterprise/IEDMProxy;->edmAddOrUpdate(Landroid/net/wifi/WifiConfiguration;Ljava/lang/String;)V
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 203
     .end local v1    # "lService":Landroid/sec/enterprise/IEDMProxy;
     :cond_0
     :goto_0
     return-void
 
-    .line 200
     :catch_0
     move-exception v0
 
-    .line 201
     .local v0, "e":Ljava/lang/Exception;
     sget-object v2, Landroid/sec/enterprise/WifiPolicy;->TAG:Ljava/lang/String;
 
@@ -102,33 +94,27 @@
     .locals 4
 
     .prologue
-    .line 116
     :try_start_0
     invoke-static {}, Landroid/sec/enterprise/EnterpriseDeviceManager$EDMProxyServiceHelper;->getService()Landroid/sec/enterprise/IEDMProxy;
 
     move-result-object v1
 
-    .line 117
     .local v1, "lService":Landroid/sec/enterprise/IEDMProxy;
     if-eqz v1, :cond_0
 
-    .line 118
     invoke-interface {v1}, Landroid/sec/enterprise/IEDMProxy;->getAllowUserPolicyChanges()Z
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
     move-result v2
 
-    .line 123
     .end local v1    # "lService":Landroid/sec/enterprise/IEDMProxy;
     :goto_0
     return v2
 
-    .line 120
     :catch_0
     move-exception v0
 
-    .line 121
     .local v0, "e":Ljava/lang/Exception;
     sget-object v2, Landroid/sec/enterprise/WifiPolicy;->TAG:Ljava/lang/String;
 
@@ -136,7 +122,6 @@
 
     invoke-static {v2, v3}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 123
     .end local v0    # "e":Ljava/lang/Exception;
     :cond_0
     const/4 v2, 0x1
@@ -150,33 +135,27 @@
     .param p2, "userId"    # I
 
     .prologue
-    .line 135
     :try_start_0
     invoke-static {}, Landroid/sec/enterprise/EnterpriseDeviceManager$EDMProxyServiceHelper;->getService()Landroid/sec/enterprise/IEDMProxy;
 
     move-result-object v1
 
-    .line 136
     .local v1, "lService":Landroid/sec/enterprise/IEDMProxy;
     if-eqz v1, :cond_0
 
-    .line 137
     invoke-interface {v1, p1, p2}, Landroid/sec/enterprise/IEDMProxy;->getAllowUserProfiles(ZI)Z
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
     move-result v2
 
-    .line 142
     .end local v1    # "lService":Landroid/sec/enterprise/IEDMProxy;
     :goto_0
     return v2
 
-    .line 139
     :catch_0
     move-exception v0
 
-    .line 140
     .local v0, "e":Ljava/lang/Exception;
     sget-object v2, Landroid/sec/enterprise/WifiPolicy;->TAG:Ljava/lang/String;
 
@@ -184,7 +163,6 @@
 
     invoke-static {v2, v3}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 142
     .end local v0    # "e":Ljava/lang/Exception;
     :cond_0
     const/4 v2, 0x1
@@ -196,33 +174,27 @@
     .locals 4
 
     .prologue
-    .line 255
     :try_start_0
     invoke-static {}, Landroid/sec/enterprise/EnterpriseDeviceManager$EDMProxyServiceHelper;->getService()Landroid/sec/enterprise/IEDMProxy;
 
     move-result-object v1
 
-    .line 256
     .local v1, "lService":Landroid/sec/enterprise/IEDMProxy;
     if-eqz v1, :cond_0
 
-    .line 257
     invoke-interface {v1}, Landroid/sec/enterprise/IEDMProxy;->getAutomaticConnectionToWifi()Z
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
     move-result v2
 
-    .line 262
     .end local v1    # "lService":Landroid/sec/enterprise/IEDMProxy;
     :goto_0
     return v2
 
-    .line 259
     :catch_0
     move-exception v0
 
-    .line 260
     .local v0, "e":Ljava/lang/Exception;
     sget-object v2, Landroid/sec/enterprise/WifiPolicy;->TAG:Ljava/lang/String;
 
@@ -230,7 +202,6 @@
 
     invoke-static {v2, v3}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 262
     .end local v0    # "e":Ljava/lang/Exception;
     :cond_0
     const/4 v2, 0x1
@@ -251,33 +222,27 @@
     .end annotation
 
     .prologue
-    .line 98
     :try_start_0
     invoke-static {}, Landroid/sec/enterprise/EnterpriseDeviceManager$EDMProxyServiceHelper;->getService()Landroid/sec/enterprise/IEDMProxy;
 
     move-result-object v1
 
-    .line 99
     .local v1, "lService":Landroid/sec/enterprise/IEDMProxy;
     if-eqz v1, :cond_0
 
-    .line 100
     invoke-interface {v1}, Landroid/sec/enterprise/IEDMProxy;->getBlockedNetworks()Ljava/util/List;
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
     move-result-object v2
 
-    .line 105
     .end local v1    # "lService":Landroid/sec/enterprise/IEDMProxy;
     :goto_0
     return-object v2
 
-    .line 102
     :catch_0
     move-exception v0
 
-    .line 103
     .local v0, "e":Ljava/lang/Exception;
     sget-object v2, Landroid/sec/enterprise/WifiPolicy;->TAG:Ljava/lang/String;
 
@@ -285,7 +250,6 @@
 
     invoke-static {v2, v3}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 105
     .end local v0    # "e":Ljava/lang/Exception;
     :cond_0
     new-instance v2, Ljava/util/ArrayList;
@@ -301,33 +265,27 @@
     .locals 4
 
     .prologue
-    .line 180
     :try_start_0
     invoke-static {}, Landroid/sec/enterprise/EnterpriseDeviceManager$EDMProxyServiceHelper;->getService()Landroid/sec/enterprise/IEDMProxy;
 
     move-result-object v1
 
-    .line 181
     .local v1, "lService":Landroid/sec/enterprise/IEDMProxy;
     if-eqz v1, :cond_0
 
-    .line 182
     invoke-interface {v1}, Landroid/sec/enterprise/IEDMProxy;->getMinimumRequiredSecurity()I
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
     move-result v2
 
-    .line 187
     .end local v1    # "lService":Landroid/sec/enterprise/IEDMProxy;
     :goto_0
     return v2
 
-    .line 184
     :catch_0
     move-exception v0
 
-    .line 185
     .local v0, "e":Ljava/lang/Exception;
     sget-object v2, Landroid/sec/enterprise/WifiPolicy;->TAG:Ljava/lang/String;
 
@@ -335,7 +293,6 @@
 
     invoke-static {v2, v3}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 187
     .end local v0    # "e":Ljava/lang/Exception;
     :cond_0
     const/4 v2, 0x0
@@ -356,33 +313,27 @@
     .end annotation
 
     .prologue
-    .line 81
     :try_start_0
     invoke-static {}, Landroid/sec/enterprise/EnterpriseDeviceManager$EDMProxyServiceHelper;->getService()Landroid/sec/enterprise/IEDMProxy;
 
     move-result-object v1
 
-    .line 82
     .local v1, "lService":Landroid/sec/enterprise/IEDMProxy;
     if-eqz v1, :cond_0
 
-    .line 83
     invoke-interface {v1}, Landroid/sec/enterprise/IEDMProxy;->getNetworkSSIDList()Ljava/util/List;
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
     move-result-object v2
 
-    .line 88
     .end local v1    # "lService":Landroid/sec/enterprise/IEDMProxy;
     :goto_0
     return-object v2
 
-    .line 85
     :catch_0
     move-exception v0
 
-    .line 86
     .local v0, "e":Ljava/lang/Exception;
     sget-object v2, Landroid/sec/enterprise/WifiPolicy;->TAG:Ljava/lang/String;
 
@@ -390,7 +341,6 @@
 
     invoke-static {v2, v3}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 88
     .end local v0    # "e":Ljava/lang/Exception;
     :cond_0
     new-instance v2, Ljava/util/ArrayList;
@@ -406,33 +356,27 @@
     .locals 4
 
     .prologue
-    .line 153
     :try_start_0
     invoke-static {}, Landroid/sec/enterprise/EnterpriseDeviceManager$EDMProxyServiceHelper;->getService()Landroid/sec/enterprise/IEDMProxy;
 
     move-result-object v1
 
-    .line 154
     .local v1, "lService":Landroid/sec/enterprise/IEDMProxy;
     if-eqz v1, :cond_0
 
-    .line 155
     invoke-interface {v1}, Landroid/sec/enterprise/IEDMProxy;->getPromptCredentialsEnabled()Z
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
     move-result v2
 
-    .line 160
     .end local v1    # "lService":Landroid/sec/enterprise/IEDMProxy;
     :goto_0
     return v2
 
-    .line 157
     :catch_0
     move-exception v0
 
-    .line 158
     .local v0, "e":Ljava/lang/Exception;
     sget-object v2, Landroid/sec/enterprise/WifiPolicy;->TAG:Ljava/lang/String;
 
@@ -440,7 +384,6 @@
 
     invoke-static {v2, v3}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 160
     .end local v0    # "e":Ljava/lang/Exception;
     :cond_0
     const/4 v2, 0x1
@@ -462,33 +405,27 @@
     .end annotation
 
     .prologue
-    .line 272
     :try_start_0
     invoke-static {}, Landroid/sec/enterprise/EnterpriseDeviceManager$EDMProxyServiceHelper;->getService()Landroid/sec/enterprise/IEDMProxy;
 
     move-result-object v1
 
-    .line 273
     .local v1, "lService":Landroid/sec/enterprise/IEDMProxy;
     if-eqz v1, :cond_0
 
-    .line 274
     invoke-interface {v1, p1}, Landroid/sec/enterprise/IEDMProxy;->getWifiSsidRestrictionList(I)Ljava/util/List;
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
     move-result-object v2
 
-    .line 279
     .end local v1    # "lService":Landroid/sec/enterprise/IEDMProxy;
     :goto_0
     return-object v2
 
-    .line 276
     :catch_0
     move-exception v0
 
-    .line 277
     .local v0, "e":Ljava/lang/Exception;
     sget-object v2, Landroid/sec/enterprise/WifiPolicy;->TAG:Ljava/lang/String;
 
@@ -496,7 +433,6 @@
 
     invoke-static {v2, v3}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 279
     .end local v0    # "e":Ljava/lang/Exception;
     :cond_0
     new-instance v2, Ljava/util/ArrayList;
@@ -510,33 +446,27 @@
     .locals 4
 
     .prologue
-    .line 237
     :try_start_0
     invoke-static {}, Landroid/sec/enterprise/EnterpriseDeviceManager$EDMProxyServiceHelper;->getService()Landroid/sec/enterprise/IEDMProxy;
 
     move-result-object v1
 
-    .line 238
     .local v1, "lService":Landroid/sec/enterprise/IEDMProxy;
     if-eqz v1, :cond_0
 
-    .line 239
     invoke-interface {v1}, Landroid/sec/enterprise/IEDMProxy;->isWifiStateChangeAllowed()Z
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
     move-result v2
 
-    .line 244
     .end local v1    # "lService":Landroid/sec/enterprise/IEDMProxy;
     :goto_0
     return v2
 
-    .line 241
     :catch_0
     move-exception v0
 
-    .line 242
     .local v0, "e":Ljava/lang/Exception;
     sget-object v2, Landroid/sec/enterprise/WifiPolicy;->TAG:Ljava/lang/String;
 
@@ -544,7 +474,6 @@
 
     invoke-static {v2, v3}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 244
     .end local v0    # "e":Ljava/lang/Exception;
     :cond_0
     const/4 v2, 0x1
@@ -557,33 +486,27 @@
     .param p1, "ssid"    # Ljava/lang/String;
 
     .prologue
-    .line 221
     :try_start_0
     invoke-static {}, Landroid/sec/enterprise/EnterpriseDeviceManager$EDMProxyServiceHelper;->getService()Landroid/sec/enterprise/IEDMProxy;
 
     move-result-object v1
 
-    .line 222
     .local v1, "lService":Landroid/sec/enterprise/IEDMProxy;
     if-eqz v1, :cond_0
 
-    .line 223
     invoke-interface {v1, p1}, Landroid/sec/enterprise/IEDMProxy;->removeNetworkConfiguration(Ljava/lang/String;)Z
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
     move-result v2
 
-    .line 228
     .end local v1    # "lService":Landroid/sec/enterprise/IEDMProxy;
     :goto_0
     return v2
 
-    .line 225
     :catch_0
     move-exception v0
 
-    .line 226
     .local v0, "e":Ljava/lang/Exception;
     sget-object v2, Landroid/sec/enterprise/WifiPolicy;->TAG:Ljava/lang/String;
 
@@ -591,7 +514,6 @@
 
     invoke-static {v2, v3}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 228
     .end local v0    # "e":Ljava/lang/Exception;
     :cond_0
     const/4 v2, 0x0

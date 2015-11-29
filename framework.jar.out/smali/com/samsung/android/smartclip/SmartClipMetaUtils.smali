@@ -12,7 +12,6 @@
     .locals 1
 
     .prologue
-    .line 48
     const-class v0, Lcom/samsung/android/smartclip/SmartClipMetaUtils;
 
     invoke-virtual {v0}, Ljava/lang/Class;->getSimpleName()Ljava/lang/String;
@@ -28,7 +27,6 @@
     .locals 0
 
     .prologue
-    .line 47
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -42,7 +40,6 @@
     .prologue
     const/4 v0, 0x0
 
-    .line 74
     if-eqz p1, :cond_0
 
     invoke-virtual {p1}, Lcom/samsung/android/sdk/look/smartclip/SlookSmartClipMetaTag;->getType()Ljava/lang/String;
@@ -51,12 +48,10 @@
 
     if-nez v1, :cond_1
 
-    .line 80
     :cond_0
     :goto_0
     return v0
 
-    .line 77
     :cond_1
     invoke-static {p1}, Lcom/samsung/android/smartclip/SmartClipMetaUtils;->isValidMetaTag(Lcom/samsung/android/sdk/look/smartclip/SlookSmartClipMetaTag;)Z
 
@@ -66,7 +61,6 @@
 
     if-ne v1, v2, :cond_0
 
-    .line 78
     invoke-virtual {p0, p1}, Landroid/view/View;->addSmartClipTag(Lcom/samsung/android/sdk/look/smartclip/SlookSmartClipMetaTag;)Z
 
     move-result v0
@@ -79,13 +73,10 @@
     .param p0, "view"    # Landroid/view/View;
 
     .prologue
-    .line 105
     if-nez p0, :cond_0
 
-    .line 106
     const/4 v0, 0x0
 
-    .line 108
     :goto_0
     return v0
 
@@ -104,13 +95,10 @@
     .param p2, "croppedArea"    # Lcom/samsung/android/sdk/look/smartclip/SlookSmartClipCroppedArea;
 
     .prologue
-    .line 190
     if-nez p0, :cond_0
 
-    .line 191
     const/4 v0, 0x0
 
-    .line 194
     :goto_0
     return v0
 
@@ -128,10 +116,8 @@
     .param p1, "packageName"    # Ljava/lang/String;
 
     .prologue
-    .line 272
     const/4 v2, 0x0
 
-    .line 274
     .local v2, "chromeViewName":Ljava/lang/String;
     :try_start_0
     invoke-virtual {p0}, Landroid/content/Context;->getPackageManager()Landroid/content/pm/PackageManager;
@@ -144,11 +130,9 @@
 
     move-result-object v0
 
-    .line 275
     .local v0, "ai":Landroid/content/pm/ApplicationInfo;
     if-nez v0, :cond_0
 
-    .line 276
     sget-object v3, Lcom/samsung/android/smartclip/SmartClipMetaUtils;->TAG:Ljava/lang/String;
 
     new-instance v4, Ljava/lang/StringBuilder;
@@ -171,34 +155,27 @@
 
     invoke-static {v3, v4}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 277
     const/4 v3, 0x0
 
-    .line 289
     .end local v0    # "ai":Landroid/content/pm/ApplicationInfo;
     :goto_0
     return-object v3
 
-    .line 280
     .restart local v0    # "ai":Landroid/content/pm/ApplicationInfo;
     :cond_0
     iget-object v1, v0, Landroid/content/pm/ApplicationInfo;->metaData:Landroid/os/Bundle;
 
-    .line 281
     .local v1, "bundle":Landroid/os/Bundle;
     if-eqz v1, :cond_1
 
-    .line 282
-    const-string/jumbo v3, "org.chromium.content.browser.SMART_CLIP_PROVIDER"
+    const-string v3, "org.chromium.content.browser.SMART_CLIP_PROVIDER"
 
     invoke-virtual {v1, v3}, Landroid/os/Bundle;->getString(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v2
 
-    .line 283
     if-eqz v2, :cond_1
 
-    .line 284
     sget-object v3, Lcom/samsung/android/smartclip/SmartClipMetaUtils;->TAG:Ljava/lang/String;
 
     new-instance v4, Ljava/lang/StringBuilder;
@@ -229,10 +206,8 @@
     :goto_1
     move-object v3, v2
 
-    .line 289
     goto :goto_0
 
-    .line 287
     :catch_0
     move-exception v3
 
@@ -244,36 +219,30 @@
     .param p0, "view"    # Landroid/view/View;
 
     .prologue
-    .line 245
     new-instance v1, Landroid/graphics/Point;
 
     invoke-direct {v1}, Landroid/graphics/Point;-><init>()V
 
-    .line 246
     .local v1, "screenPointOfView":Landroid/graphics/Point;
     const/4 v2, 0x2
 
     new-array v0, v2, [I
 
-    .line 247
     .local v0, "screenOffsetOfView":[I
     invoke-virtual {p0, v0}, Landroid/view/View;->getLocationOnScreen([I)V
 
-    .line 248
     const/4 v2, 0x0
 
     aget v2, v0, v2
 
     iput v2, v1, Landroid/graphics/Point;->x:I
 
-    .line 249
     const/4 v2, 0x1
 
     aget v2, v0, v2
 
     iput v2, v1, Landroid/graphics/Point;->y:I
 
-    .line 250
     return-object v1
 .end method
 
@@ -282,29 +251,24 @@
     .param p0, "view"    # Landroid/view/View;
 
     .prologue
-    .line 226
     new-instance v1, Landroid/graphics/Rect;
 
     invoke-direct {v1}, Landroid/graphics/Rect;-><init>()V
 
-    .line 227
     .local v1, "screenRectOfView":Landroid/graphics/Rect;
     invoke-static {p0}, Lcom/samsung/android/smartclip/SmartClipMetaUtils;->getScreenPointOfView(Landroid/view/View;)Landroid/graphics/Point;
 
     move-result-object v0
 
-    .line 229
     .local v0, "screenPointOfView":Landroid/graphics/Point;
     iget v2, v0, Landroid/graphics/Point;->x:I
 
     iput v2, v1, Landroid/graphics/Rect;->left:I
 
-    .line 230
     iget v2, v0, Landroid/graphics/Point;->y:I
 
     iput v2, v1, Landroid/graphics/Rect;->top:I
 
-    .line 231
     iget v2, v1, Landroid/graphics/Rect;->left:I
 
     invoke-virtual {p0}, Landroid/view/View;->getWidth()I
@@ -315,7 +279,6 @@
 
     iput v2, v1, Landroid/graphics/Rect;->right:I
 
-    .line 232
     iget v2, v1, Landroid/graphics/Rect;->top:I
 
     invoke-virtual {p0}, Landroid/view/View;->getHeight()I
@@ -326,7 +289,6 @@
 
     iput v2, v1, Landroid/graphics/Rect;->bottom:I
 
-    .line 234
     return-object v1
 .end method
 
@@ -338,21 +300,17 @@
     .prologue
     const/4 v1, 0x0
 
-    .line 255
     if-eqz p0, :cond_0
 
     if-nez p1, :cond_1
 
-    .line 267
     :cond_0
     :goto_0
     return v1
 
-    .line 259
     :cond_1
     const/4 v0, 0x0
 
-    .line 261
     .local v0, "targetClass":Ljava/lang/Class;, "Ljava/lang/Class<*>;"
     const/4 v2, 0x1
 
@@ -369,7 +327,6 @@
 
     move-result-object v0
 
-    .line 262
     invoke-virtual {v0, p0}, Ljava/lang/Class;->isInstance(Ljava/lang/Object;)Z
     :try_end_0
     .catch Ljava/lang/ClassNotFoundException; {:try_start_0 .. :try_end_0} :catch_0
@@ -378,7 +335,6 @@
 
     goto :goto_0
 
-    .line 263
     :catch_0
     move-exception v2
 
@@ -394,7 +350,6 @@
 
     const/4 v2, 0x1
 
-    .line 113
     if-eqz p0, :cond_0
 
     invoke-virtual {p0}, Lcom/samsung/android/sdk/look/smartclip/SlookSmartClipMetaTag;->getType()Ljava/lang/String;
@@ -403,24 +358,21 @@
 
     if-nez v3, :cond_1
 
-    .line 125
     :cond_0
     :goto_0
     return v1
 
-    .line 117
     :cond_1
     invoke-virtual {p0}, Lcom/samsung/android/sdk/look/smartclip/SlookSmartClipMetaTag;->getValue()Ljava/lang/String;
 
     move-result-object v0
 
-    .line 119
     .local v0, "metaValue":Ljava/lang/String;
     invoke-virtual {p0}, Lcom/samsung/android/sdk/look/smartclip/SlookSmartClipMetaTag;->getType()Ljava/lang/String;
 
     move-result-object v3
 
-    const-string/jumbo v4, "url"
+    const-string v4, "url"
 
     invoke-virtual {v3, v4}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
@@ -428,7 +380,6 @@
 
     if-ne v3, v2, :cond_2
 
-    .line 120
     if-eqz v0, :cond_0
 
     const-string v3, "about:"
@@ -450,7 +401,6 @@
     :cond_2
     move v1, v2
 
-    .line 125
     goto :goto_0
 .end method
 
@@ -460,16 +410,13 @@
     .param p1, "tagType"    # Ljava/lang/String;
 
     .prologue
-    .line 92
     if-eqz p0, :cond_0
 
     if-nez p1, :cond_1
 
-    .line 93
     :cond_0
     const/4 v0, 0x0
 
-    .line 95
     :goto_0
     return v0
 
@@ -487,21 +434,16 @@
     .param p1, "listener"    # Lcom/samsung/android/smartclip/SmartClipDataExtractionListener;
 
     .prologue
-    .line 172
     if-nez p0, :cond_0
 
-    .line 173
     const/4 v0, 0x0
 
-    .line 176
     :goto_0
     return v0
 
-    .line 175
     :cond_0
     invoke-virtual {p0, p1}, Landroid/view/View;->setSmartClipDataExtractionListener(Lcom/samsung/android/smartclip/SmartClipDataExtractionListener;)Z
 
-    .line 176
     const/4 v0, 0x1
 
     goto :goto_0
@@ -517,20 +459,16 @@
 
     const/4 v4, 0x0
 
-    .line 130
     if-nez p0, :cond_0
 
     move v3, v4
 
-    .line 161
     :goto_0
     return v3
 
-    .line 134
     :cond_0
     move-object v2, p0
 
-    .line 136
     .local v2, "rootView":Landroid/view/View;
     :goto_1
     instance-of v3, v2, Landroid/view/ViewGroup;
@@ -539,7 +477,6 @@
 
     move-object v3, p0
 
-    .line 137
     check-cast v3, Landroid/view/ViewGroup;
 
     invoke-virtual {v3}, Landroid/view/ViewGroup;->getParent()Landroid/view/ViewParent;
@@ -548,11 +485,9 @@
 
     check-cast v1, Landroid/view/View;
 
-    .line 138
     .local v1, "parent":Landroid/view/View;
     if-nez v1, :cond_2
 
-    .line 149
     .end local v1    # "parent":Landroid/view/View;
     :cond_1
     invoke-virtual {p0}, Landroid/view/View;->getContext()Landroid/content/Context;
@@ -565,21 +500,17 @@
 
     if-ne v3, v5, :cond_4
 
-    .line 150
     invoke-static {p1}, Lcom/samsung/android/smartclip/SmartClipIntentUtils;->marshall(Landroid/content/Intent;)[B
 
     move-result-object v0
 
-    .line 151
     .local v0, "intentData":[B
     if-eqz v0, :cond_3
 
-    .line 152
     const-string v3, "app_launch_info"
 
     invoke-static {v2, v3}, Lcom/samsung/android/smartclip/SmartClipMetaUtils;->removeMetaTag(Landroid/view/View;Ljava/lang/String;)Z
 
-    .line 153
     new-instance v3, Lcom/samsung/android/smartclip/SmartClipMetaTagImpl;
 
     const-string v4, "app_launch_info"
@@ -592,16 +523,13 @@
 
     move v3, v5
 
-    .line 161
     goto :goto_0
 
-    .line 141
     .end local v0    # "intentData":[B
     .restart local v1    # "parent":Landroid/view/View;
     :cond_2
     move-object v2, v1
 
-    .line 143
     goto :goto_1
 
     .end local v1    # "parent":Landroid/view/View;
@@ -609,14 +537,12 @@
     :cond_3
     move v3, v4
 
-    .line 155
     goto :goto_0
 
     .end local v0    # "intentData":[B
     :cond_4
     move v3, v4
 
-    .line 158
     goto :goto_0
 .end method
 
@@ -628,10 +554,8 @@
     .prologue
     const/4 v3, 0x0
 
-    .line 205
     if-nez p1, :cond_1
 
-    .line 215
     :cond_0
     :goto_0
     return v3
@@ -639,16 +563,13 @@
     :cond_1
     move-object v1, p1
 
-    .line 208
     check-cast v1, Lcom/samsung/android/smartclip/SmartClipDataElementImpl;
 
-    .line 209
     .local v1, "element":Lcom/samsung/android/smartclip/SmartClipDataElementImpl;
     invoke-virtual {v1}, Lcom/samsung/android/smartclip/SmartClipDataElementImpl;->getDataRepository()Lcom/samsung/android/smartclip/SmartClipDataRepositoryImpl;
 
     move-result-object v2
 
-    .line 210
     .local v2, "repository":Lcom/samsung/android/smartclip/SmartClipDataRepositoryImpl;
     if-eqz v2, :cond_2
 
@@ -656,19 +577,16 @@
 
     move-result-object v0
 
-    .line 212
     .local v0, "cropper":Lcom/samsung/android/smartclip/SmartClipDataCropper;
     :goto_1
     if-eqz v0, :cond_0
 
-    .line 215
     invoke-virtual {v0, p0, p1}, Lcom/samsung/android/smartclip/SmartClipDataCropper;->setPendingExtractionResult(Landroid/view/View;Lcom/samsung/android/sdk/look/smartclip/SlookSmartClipDataElement;)Z
 
     move-result v3
 
     goto :goto_0
 
-    .line 210
     .end local v0    # "cropper":Lcom/samsung/android/smartclip/SmartClipDataCropper;
     :cond_2
     const/4 v0, 0x0
@@ -682,7 +600,6 @@
     .param p1, "metaTag"    # Lcom/samsung/android/sdk/look/smartclip/SlookSmartClipMetaTag;
 
     .prologue
-    .line 58
     if-eqz p1, :cond_0
 
     invoke-virtual {p1}, Lcom/samsung/android/sdk/look/smartclip/SlookSmartClipMetaTag;->getType()Ljava/lang/String;
@@ -691,25 +608,20 @@
 
     if-nez v1, :cond_1
 
-    .line 59
     :cond_0
     const/4 v1, 0x0
 
-    .line 63
     :goto_0
     return v1
 
-    .line 61
     :cond_1
     invoke-virtual {p1}, Lcom/samsung/android/sdk/look/smartclip/SlookSmartClipMetaTag;->getType()Ljava/lang/String;
 
     move-result-object v0
 
-    .line 62
     .local v0, "type":Ljava/lang/String;
     invoke-virtual {p0, v0}, Landroid/view/View;->removeSmartClipTag(Ljava/lang/String;)Z
 
-    .line 63
     invoke-virtual {p0, p1}, Landroid/view/View;->addSmartClipTag(Lcom/samsung/android/sdk/look/smartclip/SlookSmartClipMetaTag;)Z
 
     move-result v1

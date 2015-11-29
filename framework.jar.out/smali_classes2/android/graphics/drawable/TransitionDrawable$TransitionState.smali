@@ -22,10 +22,8 @@
     .param p3, "res"    # Landroid/content/res/Resources;
 
     .prologue
-    .line 250
     invoke-direct {p0, p1, p2, p3}, Landroid/graphics/drawable/LayerDrawable$LayerState;-><init>(Landroid/graphics/drawable/LayerDrawable$LayerState;Landroid/graphics/drawable/LayerDrawable;Landroid/content/res/Resources;)V
 
-    .line 251
     return-void
 .end method
 
@@ -35,7 +33,6 @@
     .locals 1
 
     .prologue
-    .line 270
     iget v0, p0, Landroid/graphics/drawable/TransitionDrawable$TransitionState;->mChangingConfigurations:I
 
     return v0
@@ -47,7 +44,6 @@
     .prologue
     const/4 v1, 0x0
 
-    .line 255
     new-instance v0, Landroid/graphics/drawable/TransitionDrawable;
 
     invoke-direct {v0, p0, v1, v1, v1}, Landroid/graphics/drawable/TransitionDrawable;-><init>(Landroid/graphics/drawable/TransitionDrawable$TransitionState;Landroid/content/res/Resources;Landroid/content/res/Resources$Theme;Landroid/graphics/drawable/TransitionDrawable$1;)V
@@ -62,7 +58,6 @@
     .prologue
     const/4 v1, 0x0
 
-    .line 260
     new-instance v0, Landroid/graphics/drawable/TransitionDrawable;
 
     invoke-direct {v0, p0, p1, v1, v1}, Landroid/graphics/drawable/TransitionDrawable;-><init>(Landroid/graphics/drawable/TransitionDrawable$TransitionState;Landroid/content/res/Resources;Landroid/content/res/Resources$Theme;Landroid/graphics/drawable/TransitionDrawable$1;)V
@@ -76,7 +71,6 @@
     .param p2, "theme"    # Landroid/content/res/Resources$Theme;
 
     .prologue
-    .line 265
     new-instance v0, Landroid/graphics/drawable/TransitionDrawable;
 
     const/4 v1, 0x0

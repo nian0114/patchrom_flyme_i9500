@@ -29,12 +29,10 @@
     .param p2, "cecKeycode"    # I
 
     .prologue
-    .line 186
     const/4 v0, 0x1
 
     invoke-direct {p0, p1, p2, v0}, Lcom/android/server/hdmi/HdmiCecKeycode$KeycodeEntry;-><init>(IIZ)V
 
-    .line 187
     return-void
 .end method
 
@@ -45,7 +43,6 @@
     .param p3, "x2"    # Lcom/android/server/hdmi/HdmiCecKeycode$1;
 
     .prologue
-    .line 174
     invoke-direct {p0, p1, p2}, Lcom/android/server/hdmi/HdmiCecKeycode$KeycodeEntry;-><init>(II)V
 
     return-void
@@ -58,19 +55,14 @@
     .param p3, "isRepeatable"    # Z
 
     .prologue
-    .line 179
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 180
     iput p1, p0, Lcom/android/server/hdmi/HdmiCecKeycode$KeycodeEntry;->mAndroidKeycode:I
 
-    .line 181
     iput p2, p0, Lcom/android/server/hdmi/HdmiCecKeycode$KeycodeEntry;->mCecKeycode:I
 
-    .line 182
     iput-boolean p3, p0, Lcom/android/server/hdmi/HdmiCecKeycode$KeycodeEntry;->mIsRepeatable:Z
 
-    .line 183
     return-void
 .end method
 
@@ -82,7 +74,6 @@
     .param p4, "x3"    # Lcom/android/server/hdmi/HdmiCecKeycode$1;
 
     .prologue
-    .line 174
     invoke-direct {p0, p1, p2, p3}, Lcom/android/server/hdmi/HdmiCecKeycode$KeycodeEntry;-><init>(IIZ)V
 
     return-void
@@ -94,7 +85,6 @@
     .param p1, "x1"    # I
 
     .prologue
-    .line 174
     invoke-direct {p0, p1}, Lcom/android/server/hdmi/HdmiCecKeycode$KeycodeEntry;->toCecKeycodeIfMatched(I)I
 
     move-result v0
@@ -108,7 +98,6 @@
     .param p1, "x1"    # I
 
     .prologue
-    .line 174
     invoke-direct {p0, p1}, Lcom/android/server/hdmi/HdmiCecKeycode$KeycodeEntry;->toAndroidKeycodeIfMatched(I)I
 
     move-result v0
@@ -122,7 +111,6 @@
     .param p1, "x1"    # I
 
     .prologue
-    .line 174
     invoke-direct {p0, p1}, Lcom/android/server/hdmi/HdmiCecKeycode$KeycodeEntry;->isRepeatableIfMatched(I)Ljava/lang/Boolean;
 
     move-result-object v0
@@ -135,19 +123,16 @@
     .param p1, "androidKeycode"    # I
 
     .prologue
-    .line 206
     iget v0, p0, Lcom/android/server/hdmi/HdmiCecKeycode$KeycodeEntry;->mAndroidKeycode:I
 
     if-ne v0, p1, :cond_0
 
-    .line 207
     iget-boolean v0, p0, Lcom/android/server/hdmi/HdmiCecKeycode$KeycodeEntry;->mIsRepeatable:Z
 
     invoke-static {v0}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
 
     move-result-object v0
 
-    .line 209
     :goto_0
     return-object v0
 
@@ -162,15 +147,12 @@
     .param p1, "cecKeycode"    # I
 
     .prologue
-    .line 198
     iget v0, p0, Lcom/android/server/hdmi/HdmiCecKeycode$KeycodeEntry;->mCecKeycode:I
 
     if-ne p1, v0, :cond_0
 
-    .line 199
     iget v0, p0, Lcom/android/server/hdmi/HdmiCecKeycode$KeycodeEntry;->mAndroidKeycode:I
 
-    .line 201
     :goto_0
     return v0
 
@@ -185,15 +167,12 @@
     .param p1, "androidKeycode"    # I
 
     .prologue
-    .line 190
     iget v0, p0, Lcom/android/server/hdmi/HdmiCecKeycode$KeycodeEntry;->mAndroidKeycode:I
 
     if-ne v0, p1, :cond_0
 
-    .line 191
     iget v0, p0, Lcom/android/server/hdmi/HdmiCecKeycode$KeycodeEntry;->mCecKeycode:I
 
-    .line 193
     :goto_0
     return v0
 

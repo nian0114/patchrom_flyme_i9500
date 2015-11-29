@@ -26,7 +26,6 @@
     .locals 0
 
     .prologue
-    .line 457
     iput-object p1, p0, Landroid/preference/SeekBarVolumizer$1;->this$0:Landroid/preference/SeekBarVolumizer;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -41,14 +40,13 @@
     .param p1, "focusChange"    # I
 
     .prologue
-    .line 459
     const-string v0, "SeekBarVolumizer"
 
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v2, "onAudioFocusChange - focusChange : "
+    const-string v2, "onAudioFocusChange - focusChange : "
 
     invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -64,14 +62,11 @@
 
     invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 460
     packed-switch p1, :pswitch_data_0
 
-    .line 470
     :goto_0
     return-void
 
-    .line 464
     :pswitch_0
     iget-object v0, p0, Landroid/preference/SeekBarVolumizer$1;->this$0:Landroid/preference/SeekBarVolumizer;
 
@@ -79,7 +74,6 @@
 
     goto :goto_0
 
-    .line 460
     nop
 
     :pswitch_data_0

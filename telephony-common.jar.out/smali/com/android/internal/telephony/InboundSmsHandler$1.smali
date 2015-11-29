@@ -23,7 +23,6 @@
     .locals 0
 
     .prologue
-    .line 1696
     iput-object p1, p0, Lcom/android/internal/telephony/InboundSmsHandler$1;->this$0:Lcom/android/internal/telephony/InboundSmsHandler;
 
     invoke-direct {p0}, Landroid/os/Handler;-><init>()V
@@ -38,16 +37,13 @@
     .param p1, "msg"    # Landroid/os/Message;
 
     .prologue
-    .line 1700
     iget v2, p1, Landroid/os/Message;->what:I
 
     packed-switch v2, :pswitch_data_0
 
-    .line 1712
     :goto_0
     return-void
 
-    .line 1702
     :pswitch_0
     const-string v2, "InboundSmsHandler"
 
@@ -55,18 +51,15 @@
 
     invoke-static {v2, v3}, Landroid/util/Log;->secD(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1703
     iget-object v0, p1, Landroid/os/Message;->obj:Ljava/lang/Object;
 
     check-cast v0, Landroid/os/AsyncResult;
 
-    .line 1704
     .local v0, "ar":Landroid/os/AsyncResult;
     iget-object v1, v0, Landroid/os/AsyncResult;->result:Ljava/lang/Object;
 
     check-cast v1, Landroid/telephony/SmsMessage;
 
-    .line 1705
     .local v1, "sms":Landroid/telephony/SmsMessage;
     iget-object v2, p0, Lcom/android/internal/telephony/InboundSmsHandler$1;->this$0:Lcom/android/internal/telephony/InboundSmsHandler;
 
@@ -74,7 +67,6 @@
 
     goto :goto_0
 
-    .line 1708
     .end local v0    # "ar":Landroid/os/AsyncResult;
     .end local v1    # "sms":Landroid/telephony/SmsMessage;
     :pswitch_1
@@ -84,7 +76,6 @@
 
     invoke-static {v2, v3}, Landroid/util/Log;->secD(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1709
     const/16 v2, 0x17
 
     iget-object v3, p1, Landroid/os/Message;->obj:Ljava/lang/Object;
@@ -93,7 +84,6 @@
 
     goto :goto_0
 
-    .line 1700
     :pswitch_data_0
     .packed-switch 0x17
         :pswitch_0

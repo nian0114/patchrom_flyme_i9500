@@ -16,15 +16,11 @@
     .param p2, "i"    # I
 
     .prologue
-    .line 26
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 27
     iput-object p1, p0, Landroid/app/usage/PreferredScoreInfo;->pkgName:Ljava/lang/String;
 
-    .line 28
     iput p2, p0, Landroid/app/usage/PreferredScoreInfo;->score:I
 
-    .line 29
     return-void
 .end method

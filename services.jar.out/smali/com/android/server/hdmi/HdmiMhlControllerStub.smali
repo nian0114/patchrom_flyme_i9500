@@ -29,14 +29,12 @@
     .locals 1
 
     .prologue
-    .line 32
     new-instance v0, Landroid/util/SparseArray;
 
     invoke-direct {v0}, Landroid/util/SparseArray;-><init>()V
 
     sput-object v0, Lcom/android/server/hdmi/HdmiMhlControllerStub;->mLocalDevices:Landroid/util/SparseArray;
 
-    .line 33
     const/4 v0, 0x0
 
     new-array v0, v0, [Landroid/hardware/hdmi/HdmiPortInfo;
@@ -51,10 +49,8 @@
     .param p1, "service"    # Lcom/android/server/hdmi/HdmiControlService;
 
     .prologue
-    .line 39
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 40
     return-void
 .end method
 
@@ -63,7 +59,6 @@
     .param p0, "service"    # Lcom/android/server/hdmi/HdmiControlService;
 
     .prologue
-    .line 48
     new-instance v0, Lcom/android/server/hdmi/HdmiMhlControllerStub;
 
     invoke-direct {v0, p0}, Lcom/android/server/hdmi/HdmiMhlControllerStub;-><init>(Lcom/android/server/hdmi/HdmiControlService;)V
@@ -78,7 +73,6 @@
     .param p1, "device"    # Lcom/android/server/hdmi/HdmiMhlLocalDeviceStub;
 
     .prologue
-    .line 92
     const/4 v0, 0x0
 
     return-object v0
@@ -88,7 +82,6 @@
     .locals 0
 
     .prologue
-    .line 96
     return-void
 .end method
 
@@ -105,7 +98,6 @@
     .end annotation
 
     .prologue
-    .line 74
     sget-object v0, Lcom/android/server/hdmi/HdmiMhlControllerStub;->mLocalDevices:Landroid/util/SparseArray;
 
     return-object v0
@@ -116,7 +108,6 @@
     .param p1, "portId"    # I
 
     .prologue
-    .line 136
     const/4 v0, 0x0
 
     return v0
@@ -127,7 +118,6 @@
     .param p1, "portId"    # I
 
     .prologue
-    .line 61
     const/4 v0, 0x0
 
     return-object v0
@@ -138,7 +128,6 @@
     .param p1, "deviceId"    # I
 
     .prologue
-    .line 70
     const/4 v0, 0x0
 
     return-object v0
@@ -149,7 +138,6 @@
     .param p1, "portId"    # I
 
     .prologue
-    .line 111
     const/4 v0, 0x0
 
     return v0
@@ -160,7 +148,6 @@
     .param p1, "portId"    # I
 
     .prologue
-    .line 120
     const/4 v0, 0x0
 
     return v0
@@ -170,7 +157,6 @@
     .locals 1
 
     .prologue
-    .line 52
     sget-object v0, Lcom/android/server/hdmi/HdmiMhlControllerStub;->EMPTY_PORT_INFO:[Landroid/hardware/hdmi/HdmiPortInfo;
 
     return-object v0
@@ -181,7 +167,6 @@
     .param p1, "portId"    # I
 
     .prologue
-    .line 128
     const/4 v0, 0x0
 
     return v0
@@ -191,7 +176,6 @@
     .locals 1
 
     .prologue
-    .line 44
     const/4 v0, 0x0
 
     return v0
@@ -202,7 +186,6 @@
     .param p1, "portId"    # I
 
     .prologue
-    .line 83
     const/4 v0, 0x0
 
     return-object v0
@@ -216,7 +199,6 @@
     .param p4, "data"    # [B
 
     .prologue
-    .line 99
     return-void
 .end method
 
@@ -226,6 +208,5 @@
     .param p2, "value"    # I
 
     .prologue
-    .line 102
     return-void
 .end method

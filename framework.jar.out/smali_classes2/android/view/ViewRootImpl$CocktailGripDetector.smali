@@ -25,12 +25,10 @@
     .locals 1
 
     .prologue
-    .line 8027
     iput-object p1, p0, Landroid/view/ViewRootImpl$CocktailGripDetector;->this$0:Landroid/view/ViewRootImpl;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 8025
     const-class v0, Landroid/view/ViewRootImpl$CocktailGripDetector;
 
     invoke-virtual {v0}, Ljava/lang/Class;->getSimpleName()Ljava/lang/String;
@@ -39,7 +37,6 @@
 
     iput-object v0, p0, Landroid/view/ViewRootImpl$CocktailGripDetector;->TAG:Ljava/lang/String;
 
-    .line 8028
     return-void
 .end method
 
@@ -52,7 +49,6 @@
     .prologue
     const/4 v0, 0x1
 
-    .line 8031
     invoke-virtual {p1}, Landroid/view/MotionEvent;->getAction()I
 
     move-result v1
@@ -61,14 +57,12 @@
 
     packed-switch v1, :pswitch_data_0
 
-    .line 8042
     :cond_0
     const/4 v0, 0x0
 
     :goto_0
     return v0
 
-    .line 8033
     :pswitch_0
     invoke-virtual {p1}, Landroid/view/MotionEvent;->getActionIndex()I
 
@@ -80,7 +74,6 @@
 
     if-ne v1, v0, :cond_0
 
-    .line 8034
     const/16 v1, 0x31
 
     invoke-virtual {p1}, Landroid/view/MotionEvent;->getActionIndex()I
@@ -97,7 +90,6 @@
 
     if-lez v1, :cond_0
 
-    .line 8035
     iget-object v1, p0, Landroid/view/ViewRootImpl$CocktailGripDetector;->TAG:Ljava/lang/String;
 
     const-string v2, "Touch Block : Grip Flag !!!"
@@ -106,7 +98,6 @@
 
     goto :goto_0
 
-    .line 8031
     nop
 
     :pswitch_data_0

@@ -23,7 +23,6 @@
     .locals 0
 
     .prologue
-    .line 211
     iput-object p1, p0, Lcom/android/server/im/InjectionManagerService$1;->this$0:Lcom/android/server/im/InjectionManagerService;
 
     invoke-direct {p0}, Landroid/content/BroadcastReceiver;-><init>()V
@@ -41,12 +40,10 @@
     .prologue
     const/4 v6, 0x1
 
-    .line 214
     invoke-virtual {p2}, Landroid/content/Intent;->getAction()Ljava/lang/String;
 
     move-result-object v0
 
-    .line 217
     .local v0, "action":Ljava/lang/String;
     const-string v5, "android.intent.action.BOOT_COMPLETED"
 
@@ -56,13 +53,11 @@
 
     if-eqz v5, :cond_1
 
-    .line 218
     iget-object v5, p0, Lcom/android/server/im/InjectionManagerService$1;->this$0:Lcom/android/server/im/InjectionManagerService;
 
     # setter for: Lcom/android/server/im/InjectionManagerService;->isBootComplete:Z
     invoke-static {v5, v6}, Lcom/android/server/im/InjectionManagerService;->access$002(Lcom/android/server/im/InjectionManagerService;Z)Z
 
-    .line 219
     iget-object v5, p0, Lcom/android/server/im/InjectionManagerService$1;->this$0:Lcom/android/server/im/InjectionManagerService;
 
     # getter for: Lcom/android/server/im/InjectionManagerService;->isBootAllParsingDone:Z
@@ -72,38 +67,31 @@
 
     if-ne v5, v6, :cond_0
 
-    .line 222
     iget-object v5, p0, Lcom/android/server/im/InjectionManagerService$1;->this$0:Lcom/android/server/im/InjectionManagerService;
 
     # invokes: Lcom/android/server/im/InjectionManagerService;->killAllParent()V
     invoke-static {v5}, Lcom/android/server/im/InjectionManagerService;->access$200(Lcom/android/server/im/InjectionManagerService;)V
 
-    .line 250
     :cond_0
     :goto_0
     return-void
 
-    .line 226
     :cond_1
     invoke-virtual {p2}, Landroid/content/Intent;->getData()Landroid/net/Uri;
 
     move-result-object v1
 
-    .line 227
     .local v1, "data":Landroid/net/Uri;
     invoke-virtual {v1}, Landroid/net/Uri;->getEncodedSchemeSpecificPart()Ljava/lang/String;
 
     move-result-object v4
 
-    .line 232
     .local v4, "packageName":Ljava/lang/String;
     const/4 v3, 0x0
 
-    .line 233
     .local v3, "isFeatureApp":Z
     if-eqz v4, :cond_0
 
-    .line 234
     const-string v5, "android.intent.action.PACKAGE_ADDED"
 
     invoke-virtual {v0, v5}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
@@ -112,7 +100,6 @@
 
     if-eqz v5, :cond_2
 
-    .line 235
     iget-object v5, p0, Lcom/android/server/im/InjectionManagerService$1;->this$0:Lcom/android/server/im/InjectionManagerService;
 
     # invokes: Lcom/android/server/im/InjectionManagerService;->doAdd(Landroid/content/Intent;Ljava/lang/String;)V
@@ -120,7 +107,6 @@
 
     goto :goto_0
 
-    .line 236
     :cond_2
     const-string v5, "android.intent.action.PACKAGE_REMOVED"
 
@@ -130,7 +116,6 @@
 
     if-eqz v5, :cond_3
 
-    .line 237
     iget-object v5, p0, Lcom/android/server/im/InjectionManagerService$1;->this$0:Lcom/android/server/im/InjectionManagerService;
 
     # invokes: Lcom/android/server/im/InjectionManagerService;->doRemove(Landroid/content/Intent;Ljava/lang/String;)V
@@ -138,7 +123,6 @@
 
     goto :goto_0
 
-    .line 238
     :cond_3
     const-string v5, "android.intent.action.PACKAGE_CHANGED"
 
@@ -148,7 +132,6 @@
 
     if-eqz v5, :cond_0
 
-    .line 240
     :try_start_0
     iget-object v5, p0, Lcom/android/server/im/InjectionManagerService$1;->this$0:Lcom/android/server/im/InjectionManagerService;
 
@@ -167,7 +150,6 @@
 
     move-result-object v2
 
-    .line 241
     .local v2, "info":Landroid/content/pm/ApplicationInfo;
     if-eqz v2, :cond_4
 
@@ -175,7 +157,6 @@
 
     if-eqz v5, :cond_4
 
-    .line 242
     iget-object v5, p0, Lcom/android/server/im/InjectionManagerService$1;->this$0:Lcom/android/server/im/InjectionManagerService;
 
     # invokes: Lcom/android/server/im/InjectionManagerService;->doAdd(Landroid/content/Intent;Ljava/lang/String;)V
@@ -183,14 +164,12 @@
 
     goto :goto_0
 
-    .line 245
     .end local v2    # "info":Landroid/content/pm/ApplicationInfo;
     :catch_0
     move-exception v5
 
     goto :goto_0
 
-    .line 243
     .restart local v2    # "info":Landroid/content/pm/ApplicationInfo;
     :cond_4
     if-eqz v2, :cond_0
@@ -199,7 +178,6 @@
 
     if-nez v5, :cond_0
 
-    .line 244
     iget-object v5, p0, Lcom/android/server/im/InjectionManagerService$1;->this$0:Lcom/android/server/im/InjectionManagerService;
 
     # invokes: Lcom/android/server/im/InjectionManagerService;->doRemove(Landroid/content/Intent;Ljava/lang/String;)V

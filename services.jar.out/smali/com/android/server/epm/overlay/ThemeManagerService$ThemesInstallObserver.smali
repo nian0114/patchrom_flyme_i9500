@@ -23,7 +23,6 @@
     .locals 0
 
     .prologue
-    .line 576
     iput-object p1, p0, Lcom/android/server/epm/overlay/ThemeManagerService$ThemesInstallObserver;->this$0:Lcom/android/server/epm/overlay/ThemeManagerService;
 
     invoke-direct {p0}, Landroid/content/pm/IPackageInstallObserver$Stub;-><init>()V
@@ -37,7 +36,6 @@
     .param p2, "x1"    # Lcom/android/server/epm/overlay/ThemeManagerService$1;
 
     .prologue
-    .line 576
     invoke-direct {p0, p1}, Lcom/android/server/epm/overlay/ThemeManagerService$ThemesInstallObserver;-><init>(Lcom/android/server/epm/overlay/ThemeManagerService;)V
 
     return-void
@@ -51,10 +49,8 @@
     .param p2, "returnCode"    # I
 
     .prologue
-    .line 583
     if-eqz p1, :cond_2
 
-    .line 585
     :try_start_0
     # getter for: Lcom/android/server/epm/overlay/ThemeManagerService;->TAG:Ljava/lang/String;
     invoke-static {}, Lcom/android/server/epm/overlay/ThemeManagerService;->access$300()Ljava/lang/String;
@@ -65,7 +61,7 @@
 
     invoke-direct {v7}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v8, "packageInstalled --> packageName = "
+    const-string v8, "packageInstalled --> packageName = "
 
     invoke-virtual {v7, v8}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -99,7 +95,6 @@
 
     invoke-static {v6, v7}, Landroid/util/Slog;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 586
     iget-object v6, p0, Lcom/android/server/epm/overlay/ThemeManagerService$ThemesInstallObserver;->this$0:Lcom/android/server/epm/overlay/ThemeManagerService;
 
     # getter for: Lcom/android/server/epm/overlay/ThemeManagerService;->mHandler:Landroid/os/Handler;
@@ -111,7 +106,6 @@
 
     invoke-virtual {v6, v7}, Landroid/os/Handler;->sendEmptyMessage(I)Z
 
-    .line 587
     new-instance v1, Ljava/io/File;
 
     new-instance v6, Ljava/lang/StringBuilder;
@@ -140,7 +134,6 @@
 
     invoke-direct {v1, v6}, Ljava/io/File;-><init>(Ljava/lang/String;)V
 
-    .line 588
     .local v1, "fl":Ljava/io/File;
     invoke-virtual {v1}, Ljava/io/File;->exists()Z
 
@@ -148,10 +141,8 @@
 
     if-eqz v6, :cond_0
 
-    .line 589
     invoke-virtual {v1}, Ljava/io/File;->delete()Z
 
-    .line 592
     :cond_0
     iget-object v6, p0, Lcom/android/server/epm/overlay/ThemeManagerService$ThemesInstallObserver;->this$0:Lcom/android/server/epm/overlay/ThemeManagerService;
 
@@ -168,7 +159,6 @@
 
     move-result-object v3
 
-    .line 593
     .local v3, "r":Landroid/content/res/Resources;
     const-string v6, "lockscreen_wallpaper"
 
@@ -178,11 +168,9 @@
 
     move-result v4
 
-    .line 594
     .local v4, "resId":I
     if-eqz v4, :cond_1
 
-    .line 595
     new-instance v6, Ljava/lang/StringBuilder;
 
     invoke-direct {v6}, Ljava/lang/StringBuilder;-><init>()V
@@ -209,7 +197,6 @@
 
     move-result-object v5
 
-    .line 596
     .local v5, "wallName":Ljava/lang/String;
     new-instance v2, Ljava/io/File;
 
@@ -233,7 +220,6 @@
 
     invoke-direct {v2, v6}, Ljava/io/File;-><init>(Ljava/lang/String;)V
 
-    .line 597
     .local v2, "locWall":Ljava/io/File;
     invoke-virtual {v2}, Ljava/io/File;->exists()Z
 
@@ -241,7 +227,6 @@
 
     if-nez v6, :cond_1
 
-    .line 598
     iget-object v6, p0, Lcom/android/server/epm/overlay/ThemeManagerService$ThemesInstallObserver;->this$0:Lcom/android/server/epm/overlay/ThemeManagerService;
 
     invoke-virtual {v3, v4}, Landroid/content/res/Resources;->openRawResource(I)Ljava/io/InputStream;
@@ -253,7 +238,6 @@
     # invokes: Lcom/android/server/epm/overlay/ThemeManagerService;->doCopy(Ljava/lang/String;Ljava/io/InputStream;Ljava/lang/String;)Ljava/io/File;
     invoke-static {v6, v5, v7, v8}, Lcom/android/server/epm/overlay/ThemeManagerService;->access$600(Lcom/android/server/epm/overlay/ThemeManagerService;Ljava/lang/String;Ljava/io/InputStream;Ljava/lang/String;)Ljava/io/File;
 
-    .line 602
     .end local v2    # "locWall":Ljava/io/File;
     .end local v5    # "wallName":Ljava/lang/String;
     :cond_1
@@ -272,7 +256,6 @@
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 609
     .end local v1    # "fl":Ljava/io/File;
     .end local v3    # "r":Landroid/content/res/Resources;
     .end local v4    # "resId":I
@@ -280,11 +263,9 @@
     :goto_0
     return-void
 
-    .line 605
     :catch_0
     move-exception v0
 
-    .line 606
     .local v0, "e":Ljava/lang/Exception;
     invoke-virtual {v0}, Ljava/lang/Exception;->printStackTrace()V
 

@@ -28,7 +28,6 @@
     .locals 0
 
     .prologue
-    .line 3004
     iput-object p1, p0, Lcom/android/internal/policy/impl/MultiPhoneWindow$PenWindowController$2;->this$1:Lcom/android/internal/policy/impl/MultiPhoneWindow$PenWindowController;
 
     iput-object p2, p0, Lcom/android/internal/policy/impl/MultiPhoneWindow$PenWindowController$2;->val$checkBox:Landroid/widget/CheckBox;
@@ -46,7 +45,6 @@
     .param p2, "which"    # I
 
     .prologue
-    .line 3007
     iget-object v0, p0, Lcom/android/internal/policy/impl/MultiPhoneWindow$PenWindowController$2;->val$checkBox:Landroid/widget/CheckBox;
 
     invoke-virtual {v0}, Landroid/widget/CheckBox;->isChecked()Z
@@ -55,7 +53,6 @@
 
     if-eqz v0, :cond_0
 
-    .line 3014
     iget-object v0, p0, Lcom/android/internal/policy/impl/MultiPhoneWindow$PenWindowController$2;->this$1:Lcom/android/internal/policy/impl/MultiPhoneWindow$PenWindowController;
 
     iget-object v0, v0, Lcom/android/internal/policy/impl/MultiPhoneWindow$PenWindowController;->this$0:Lcom/android/internal/policy/impl/MultiPhoneWindow;
@@ -71,7 +68,6 @@
 
     invoke-virtual {v0, v1, v2}, Lcom/samsung/android/multiwindow/MultiWindowFacade;->updateSettingThroughSystemProcess(Ljava/lang/String;I)V
 
-    .line 3017
     :cond_0
     return-void
 .end method

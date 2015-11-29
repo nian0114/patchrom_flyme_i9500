@@ -26,7 +26,6 @@
     .locals 0
 
     .prologue
-    .line 837
     iput-object p1, p0, Lcom/samsung/android/fingerprint/FingerprintManager$3;->this$0:Lcom/samsung/android/fingerprint/FingerprintManager;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -42,14 +41,12 @@
     .param p2, "savedInstanceState"    # Landroid/os/Bundle;
 
     .prologue
-    .line 841
     const-string v0, "FingerprintManager"
 
-    const-string/jumbo v1, "onActivityCreated"
+    const-string v1, "onActivityCreated"
 
     invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 842
     return-void
 .end method
 
@@ -58,14 +55,12 @@
     .param p1, "activity"    # Landroid/app/Activity;
 
     .prologue
-    .line 846
     const-string v0, "FingerprintManager"
 
-    const-string/jumbo v1, "onActivityDestroyed"
+    const-string v1, "onActivityDestroyed"
 
     invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 847
     # getter for: Lcom/samsung/android/fingerprint/FingerprintManager;->mCallerActivity:Landroid/app/Activity;
     invoke-static {}, Lcom/samsung/android/fingerprint/FingerprintManager;->access$200()Landroid/app/Activity;
 
@@ -84,13 +79,11 @@
 
     if-eqz v0, :cond_0
 
-    .line 848
     iget-object v0, p0, Lcom/samsung/android/fingerprint/FingerprintManager$3;->this$0:Lcom/samsung/android/fingerprint/FingerprintManager;
 
     # invokes: Lcom/samsung/android/fingerprint/FingerprintManager;->unregisterActivityLifeCallback()V
     invoke-static {v0}, Lcom/samsung/android/fingerprint/FingerprintManager;->access$300(Lcom/samsung/android/fingerprint/FingerprintManager;)V
 
-    .line 850
     :cond_0
     return-void
 .end method
@@ -100,14 +93,12 @@
     .param p1, "activity"    # Landroid/app/Activity;
 
     .prologue
-    .line 854
     const-string v0, "FingerprintManager"
 
-    const-string/jumbo v1, "onActivityPaused"
+    const-string v1, "onActivityPaused"
 
     invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 855
     # getter for: Lcom/samsung/android/fingerprint/FingerprintManager;->mCallerActivity:Landroid/app/Activity;
     invoke-static {}, Lcom/samsung/android/fingerprint/FingerprintManager;->access$200()Landroid/app/Activity;
 
@@ -126,7 +117,6 @@
 
     if-eqz v0, :cond_0
 
-    .line 856
     iget-object v0, p0, Lcom/samsung/android/fingerprint/FingerprintManager$3;->this$0:Lcom/samsung/android/fingerprint/FingerprintManager;
 
     const/4 v1, 0x1
@@ -135,13 +125,11 @@
 
     invoke-virtual {v0, v1, v2}, Lcom/samsung/android/fingerprint/FingerprintManager;->notifyAppActivityState(ILandroid/os/Bundle;)V
 
-    .line 857
     iget-object v0, p0, Lcom/samsung/android/fingerprint/FingerprintManager$3;->this$0:Lcom/samsung/android/fingerprint/FingerprintManager;
 
     # invokes: Lcom/samsung/android/fingerprint/FingerprintManager;->unregisterActivityLifeCallback()V
     invoke-static {v0}, Lcom/samsung/android/fingerprint/FingerprintManager;->access$300(Lcom/samsung/android/fingerprint/FingerprintManager;)V
 
-    .line 859
     :cond_0
     return-void
 .end method
@@ -151,14 +139,12 @@
     .param p1, "activity"    # Landroid/app/Activity;
 
     .prologue
-    .line 863
     const-string v0, "FingerprintManager"
 
-    const-string/jumbo v1, "onActivityResumed"
+    const-string v1, "onActivityResumed"
 
     invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 864
     return-void
 .end method
 
@@ -168,14 +154,12 @@
     .param p2, "outState"    # Landroid/os/Bundle;
 
     .prologue
-    .line 868
     const-string v0, "FingerprintManager"
 
-    const-string/jumbo v1, "onActivitySaveInstanceState"
+    const-string v1, "onActivitySaveInstanceState"
 
     invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 869
     return-void
 .end method
 
@@ -184,14 +168,12 @@
     .param p1, "activity"    # Landroid/app/Activity;
 
     .prologue
-    .line 873
     const-string v0, "FingerprintManager"
 
-    const-string/jumbo v1, "onActivityStarted"
+    const-string v1, "onActivityStarted"
 
     invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 874
     return-void
 .end method
 
@@ -200,14 +182,12 @@
     .param p1, "activity"    # Landroid/app/Activity;
 
     .prologue
-    .line 878
     const-string v0, "FingerprintManager"
 
-    const-string/jumbo v1, "onActivityStopped"
+    const-string v1, "onActivityStopped"
 
     invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 879
     # getter for: Lcom/samsung/android/fingerprint/FingerprintManager;->mCallerActivity:Landroid/app/Activity;
     invoke-static {}, Lcom/samsung/android/fingerprint/FingerprintManager;->access$200()Landroid/app/Activity;
 
@@ -226,7 +206,6 @@
 
     if-eqz v0, :cond_0
 
-    .line 880
     iget-object v0, p0, Lcom/samsung/android/fingerprint/FingerprintManager$3;->this$0:Lcom/samsung/android/fingerprint/FingerprintManager;
 
     const/4 v1, 0x2
@@ -235,13 +214,11 @@
 
     invoke-virtual {v0, v1, v2}, Lcom/samsung/android/fingerprint/FingerprintManager;->notifyAppActivityState(ILandroid/os/Bundle;)V
 
-    .line 881
     iget-object v0, p0, Lcom/samsung/android/fingerprint/FingerprintManager$3;->this$0:Lcom/samsung/android/fingerprint/FingerprintManager;
 
     # invokes: Lcom/samsung/android/fingerprint/FingerprintManager;->unregisterActivityLifeCallback()V
     invoke-static {v0}, Lcom/samsung/android/fingerprint/FingerprintManager;->access$300(Lcom/samsung/android/fingerprint/FingerprintManager;)V
 
-    .line 883
     :cond_0
     return-void
 .end method

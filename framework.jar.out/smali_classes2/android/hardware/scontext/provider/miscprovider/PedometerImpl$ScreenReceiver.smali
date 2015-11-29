@@ -23,7 +23,6 @@
     .locals 0
 
     .prologue
-    .line 578
     iput-object p1, p0, Landroid/hardware/scontext/provider/miscprovider/PedometerImpl$ScreenReceiver;->this$0:Landroid/hardware/scontext/provider/miscprovider/PedometerImpl;
 
     invoke-direct {p0}, Landroid/content/BroadcastReceiver;-><init>()V
@@ -37,7 +36,6 @@
     .param p2, "x1"    # Landroid/hardware/scontext/provider/miscprovider/PedometerImpl$1;
 
     .prologue
-    .line 578
     invoke-direct {p0, p1}, Landroid/hardware/scontext/provider/miscprovider/PedometerImpl$ScreenReceiver;-><init>(Landroid/hardware/scontext/provider/miscprovider/PedometerImpl;)V
 
     return-void
@@ -51,7 +49,6 @@
     .param p2, "intent"    # Landroid/content/Intent;
 
     .prologue
-    .line 583
     invoke-virtual {p2}, Landroid/content/Intent;->getAction()Ljava/lang/String;
 
     move-result-object v0
@@ -64,7 +61,6 @@
 
     if-eqz v0, :cond_1
 
-    .line 584
     iget-object v0, p0, Landroid/hardware/scontext/provider/miscprovider/PedometerImpl$ScreenReceiver;->this$0:Landroid/hardware/scontext/provider/miscprovider/PedometerImpl;
 
     # getter for: Landroid/hardware/scontext/provider/miscprovider/PedometerImpl;->mHandler:Landroid/os/Handler;
@@ -76,12 +72,10 @@
 
     invoke-virtual {v0, v1}, Landroid/os/Handler;->sendEmptyMessage(I)Z
 
-    .line 588
     :cond_0
     :goto_0
     return-void
 
-    .line 585
     :cond_1
     invoke-virtual {p2}, Landroid/content/Intent;->getAction()Ljava/lang/String;
 
@@ -95,7 +89,6 @@
 
     if-eqz v0, :cond_0
 
-    .line 586
     iget-object v0, p0, Landroid/hardware/scontext/provider/miscprovider/PedometerImpl$ScreenReceiver;->this$0:Landroid/hardware/scontext/provider/miscprovider/PedometerImpl;
 
     # getter for: Landroid/hardware/scontext/provider/miscprovider/PedometerImpl;->mHandler:Landroid/os/Handler;

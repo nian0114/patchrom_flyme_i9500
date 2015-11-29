@@ -12,19 +12,15 @@
     .locals 5
 
     .prologue
-    .line 35
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 36
     invoke-static {p1, p2}, Lcom/absolute/android/logutil/LogUtil;->init(Landroid/content/Context;Ljava/lang/String;)V
 
-    .line 39
     :try_start_0
     sget-object v0, Lcom/absolute/android/sslutil/SslUtil;->a:Ljavax/net/ssl/X509TrustManager;
 
     if-nez v0, :cond_0
 
-    .line 40
     invoke-static {}, Ljavax/net/ssl/TrustManagerFactory;->getDefaultAlgorithm()Ljava/lang/String;
 
     move-result-object v0
@@ -33,17 +29,14 @@
 
     move-result-object v0
 
-    .line 42
     const/4 v1, 0x0
 
     invoke-virtual {v0, v1}, Ljavax/net/ssl/TrustManagerFactory;->init(Ljava/security/KeyStore;)V
 
-    .line 44
     invoke-virtual {v0}, Ljavax/net/ssl/TrustManagerFactory;->getTrustManagers()[Ljavax/net/ssl/TrustManager;
 
     move-result-object v2
 
-    .line 45
     array-length v3, v2
 
     const/4 v0, 0x0
@@ -55,24 +48,20 @@
 
     aget-object v0, v2, v1
 
-    .line 46
     instance-of v4, v0, Ljavax/net/ssl/X509TrustManager;
 
     if-eqz v4, :cond_1
 
-    .line 47
     check-cast v0, Ljavax/net/ssl/X509TrustManager;
 
     sput-object v0, Lcom/absolute/android/sslutil/SslUtil;->a:Ljavax/net/ssl/X509TrustManager;
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 56
     :cond_0
     :goto_1
     return-void
 
-    .line 45
     :cond_1
     add-int/lit8 v0, v1, 0x1
 
@@ -80,11 +69,9 @@
 
     goto :goto_0
 
-    .line 52
     :catch_0
     move-exception v0
 
-    .line 53
     invoke-static {}, Lcom/absolute/android/logutil/LogUtil;->get()Lcom/absolute/android/logutil/LogUtil;
 
     move-result-object v1
@@ -118,7 +105,6 @@
     .locals 1
 
     .prologue
-    .line 31
     sget-object v0, Lcom/absolute/android/sslutil/SslUtil;->a:Ljavax/net/ssl/X509TrustManager;
 
     return-object v0
@@ -132,7 +118,6 @@
     .prologue
     const/4 v6, 0x6
 
-    .line 70
     :try_start_0
     new-instance v0, Lcom/absolute/android/sslutil/a;
 
@@ -140,17 +125,14 @@
 
     invoke-static {v0}, Ljavax/net/ssl/HttpsURLConnection;->setDefaultHostnameVerifier(Ljavax/net/ssl/HostnameVerifier;)V
 
-    .line 81
     const-string v0, "TLS"
 
     invoke-static {v0}, Ljavax/net/ssl/SSLContext;->getInstance(Ljava/lang/String;)Ljavax/net/ssl/SSLContext;
 
     move-result-object v0
 
-    .line 82
     if-eqz p2, :cond_0
 
-    .line 83
     const/4 v1, 0x0
 
     const/4 v2, 0x1
@@ -173,24 +155,20 @@
 
     invoke-virtual {v0, v1, v2, v3}, Ljavax/net/ssl/SSLContext;->init([Ljavax/net/ssl/KeyManager;[Ljavax/net/ssl/TrustManager;Ljava/security/SecureRandom;)V
 
-    .line 84
     invoke-virtual {v0}, Ljavax/net/ssl/SSLContext;->getSocketFactory()Ljavax/net/ssl/SSLSocketFactory;
 
     move-result-object v0
 
     invoke-static {v0}, Ljavax/net/ssl/HttpsURLConnection;->setDefaultSSLSocketFactory(Ljavax/net/ssl/SSLSocketFactory;)V
 
-    .line 96
     :goto_0
     return-void
 
-    .line 86
     :cond_0
     sget-object v1, Lcom/absolute/android/sslutil/SslUtil;->a:Ljavax/net/ssl/X509TrustManager;
 
     if-eqz v1, :cond_1
 
-    .line 87
     const/4 v1, 0x0
 
     const/4 v2, 0x1
@@ -213,7 +191,6 @@
 
     invoke-virtual {v0, v1, v2, v3}, Ljavax/net/ssl/SSLContext;->init([Ljavax/net/ssl/KeyManager;[Ljavax/net/ssl/TrustManager;Ljava/security/SecureRandom;)V
 
-    .line 88
     invoke-virtual {v0}, Ljavax/net/ssl/SSLContext;->getSocketFactory()Ljavax/net/ssl/SSLSocketFactory;
 
     move-result-object v0
@@ -224,18 +201,16 @@
 
     goto :goto_0
 
-    .line 93
     :catch_0
     move-exception v0
 
-    .line 94
     invoke-static {}, Lcom/absolute/android/logutil/LogUtil;->get()Lcom/absolute/android/logutil/LogUtil;
 
     move-result-object v1
 
     new-instance v2, Ljava/lang/StringBuilder;
 
-    const-string/jumbo v3, "trustOurHost: "
+    const-string v3, "trustOurHost: "
 
     invoke-direct {v2, v3}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
@@ -255,7 +230,6 @@
 
     goto :goto_0
 
-    .line 90
     :cond_1
     :try_start_1
     invoke-static {}, Lcom/absolute/android/logutil/LogUtil;->get()Lcom/absolute/android/logutil/LogUtil;

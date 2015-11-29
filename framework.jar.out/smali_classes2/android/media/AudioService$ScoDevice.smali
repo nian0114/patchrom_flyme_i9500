@@ -27,7 +27,6 @@
     .locals 0
 
     .prologue
-    .line 572
     iput-object p1, p0, Landroid/media/AudioService$ScoDevice;->this$0:Landroid/media/AudioService;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -41,7 +40,6 @@
     .param p2, "x1"    # Landroid/media/AudioService$1;
 
     .prologue
-    .line 572
     invoke-direct {p0, p1}, Landroid/media/AudioService$ScoDevice;-><init>(Landroid/media/AudioService;)V
 
     return-void

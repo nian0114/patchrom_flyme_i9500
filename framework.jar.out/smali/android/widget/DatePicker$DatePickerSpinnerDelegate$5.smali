@@ -26,7 +26,6 @@
     .locals 0
 
     .prologue
-    .line 869
     iput-object p1, p0, Landroid/widget/DatePicker$DatePickerSpinnerDelegate$5;->this$0:Landroid/widget/DatePicker$DatePickerSpinnerDelegate;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -41,7 +40,6 @@
     .param p1, "text"    # Ljava/lang/CharSequence;
 
     .prologue
-    .line 872
     invoke-interface {p1}, Ljava/lang/CharSequence;->toString()Ljava/lang/String;
 
     move-result-object v9
@@ -52,7 +50,6 @@
 
     move-result-object v3
 
-    .line 873
     .local v3, "numString":[Ljava/lang/String;
     array-length v9, v3
 
@@ -60,49 +57,40 @@
 
     if-ge v9, v10, :cond_0
 
-    .line 908
     :goto_0
     return-void
 
-    .line 876
     :cond_0
     const/4 v8, -0x1
 
-    .line 877
     .local v8, "year":I
     const/4 v2, -0x1
 
-    .line 878
     .local v2, "month":I
     const/4 v0, -0x1
 
-    .line 879
     .local v0, "day":I
     const-string v7, ""
 
-    .line 880
     .local v7, "tmpStr":Ljava/lang/String;
     invoke-static {}, Ljava/util/Locale;->getDefault()Ljava/util/Locale;
 
     move-result-object v9
 
-    const-string/jumbo v10, "yyyyMMMdd"
+    const-string v10, "yyyyMMMdd"
 
     invoke-static {v9, v10}, Landroid/text/format/DateFormat;->getBestDateTimePattern(Ljava/util/Locale;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v5
 
-    .line 882
     .local v5, "pattern":Ljava/lang/String;
     invoke-static {v5}, Llibcore/icu/ICU;->getDateFormatOrder(Ljava/lang/String;)[C
 
     move-result-object v4
 
-    .line 883
     .local v4, "order":[C
     array-length v6, v4
 
-    .line 884
     .local v6, "spinnerCount":I
     const/4 v1, 0x0
 
@@ -110,18 +98,15 @@
     :goto_1
     if-ge v1, v6, :cond_4
 
-    .line 885
     aget-char v9, v4, v1
 
     sparse-switch v9, :sswitch_data_0
 
-    .line 884
     :goto_2
     add-int/lit8 v1, v1, 0x1
 
     goto :goto_1
 
-    .line 887
     :sswitch_0
     aget-object v9, v3, v1
 
@@ -133,7 +118,6 @@
 
     move-result-object v7
 
-    .line 888
     :goto_3
     iget-object v9, p0, Landroid/widget/DatePicker$DatePickerSpinnerDelegate$5;->this$0:Landroid/widget/DatePicker$DatePickerSpinnerDelegate;
 
@@ -144,16 +128,13 @@
 
     move-result v0
 
-    .line 889
     goto :goto_2
 
-    .line 887
     :cond_1
     const-string v7, ""
 
     goto :goto_3
 
-    .line 891
     :sswitch_1
     aget-object v9, v3, v1
 
@@ -165,7 +146,6 @@
 
     move-result-object v7
 
-    .line 892
     :goto_4
     iget-object v9, p0, Landroid/widget/DatePicker$DatePickerSpinnerDelegate$5;->this$0:Landroid/widget/DatePicker$DatePickerSpinnerDelegate;
 
@@ -176,16 +156,13 @@
 
     move-result v2
 
-    .line 893
     goto :goto_2
 
-    .line 891
     :cond_2
     const-string v7, ""
 
     goto :goto_4
 
-    .line 895
     :sswitch_2
     aget-object v9, v3, v1
 
@@ -197,7 +174,6 @@
 
     move-result-object v7
 
-    .line 896
     :goto_5
     iget-object v9, p0, Landroid/widget/DatePicker$DatePickerSpinnerDelegate$5;->this$0:Landroid/widget/DatePicker$DatePickerSpinnerDelegate;
 
@@ -208,16 +184,13 @@
 
     move-result v8
 
-    .line 897
     goto :goto_2
 
-    .line 895
     :cond_3
     const-string v7, ""
 
     goto :goto_5
 
-    .line 902
     :cond_4
     iget-object v10, p0, Landroid/widget/DatePicker$DatePickerSpinnerDelegate$5;->this$0:Landroid/widget/DatePicker$DatePickerSpinnerDelegate;
 
@@ -237,19 +210,16 @@
     # invokes: Landroid/widget/DatePicker$DatePickerSpinnerDelegate;->setDate(III)V
     invoke-static {v10, v8, v9, v0}, Landroid/widget/DatePicker$DatePickerSpinnerDelegate;->access$500(Landroid/widget/DatePicker$DatePickerSpinnerDelegate;III)V
 
-    .line 905
     iget-object v9, p0, Landroid/widget/DatePicker$DatePickerSpinnerDelegate$5;->this$0:Landroid/widget/DatePicker$DatePickerSpinnerDelegate;
 
     # invokes: Landroid/widget/DatePicker$DatePickerSpinnerDelegate;->updateSpinners()V
     invoke-static {v9}, Landroid/widget/DatePicker$DatePickerSpinnerDelegate;->access$600(Landroid/widget/DatePicker$DatePickerSpinnerDelegate;)V
 
-    .line 906
     iget-object v9, p0, Landroid/widget/DatePicker$DatePickerSpinnerDelegate$5;->this$0:Landroid/widget/DatePicker$DatePickerSpinnerDelegate;
 
     # invokes: Landroid/widget/DatePicker$DatePickerSpinnerDelegate;->updateCalendarView()V
     invoke-static {v9}, Landroid/widget/DatePicker$DatePickerSpinnerDelegate;->access$700(Landroid/widget/DatePicker$DatePickerSpinnerDelegate;)V
 
-    .line 907
     iget-object v9, p0, Landroid/widget/DatePicker$DatePickerSpinnerDelegate$5;->this$0:Landroid/widget/DatePicker$DatePickerSpinnerDelegate;
 
     # invokes: Landroid/widget/DatePicker$DatePickerSpinnerDelegate;->notifyDateChanged()V
@@ -257,7 +227,6 @@
 
     goto :goto_0
 
-    .line 902
     .restart local v0    # "day":I
     .restart local v8    # "year":I
     :cond_5
@@ -309,7 +278,6 @@
 
     goto :goto_8
 
-    .line 885
     :sswitch_data_0
     .sparse-switch
         0x4d -> :sswitch_1

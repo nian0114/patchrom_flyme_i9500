@@ -23,7 +23,6 @@
     .locals 0
 
     .prologue
-    .line 591
     iput-object p1, p0, Landroid/hardware/scontext/provider/miscprovider/PedometerImpl$1;->this$0:Landroid/hardware/scontext/provider/miscprovider/PedometerImpl;
 
     invoke-direct {p0}, Landroid/os/Handler;-><init>()V
@@ -40,12 +39,10 @@
     .prologue
     const/4 v1, 0x1
 
-    .line 594
     iget v0, p1, Landroid/os/Message;->what:I
 
     if-nez v0, :cond_1
 
-    .line 595
     iget-object v0, p0, Landroid/hardware/scontext/provider/miscprovider/PedometerImpl$1;->this$0:Landroid/hardware/scontext/provider/miscprovider/PedometerImpl;
 
     # getter for: Landroid/hardware/scontext/provider/miscprovider/PedometerImpl;->mPedometer:Landroid/hardware/scontext/provider/miscprovider/PedometerVendorImpl;
@@ -55,18 +52,15 @@
 
     invoke-virtual {v0, v1}, Landroid/hardware/scontext/provider/miscprovider/PedometerVendorImpl;->setLoggingMode(Z)V
 
-    .line 599
     :cond_0
     :goto_0
     return-void
 
-    .line 596
     :cond_1
     iget v0, p1, Landroid/os/Message;->what:I
 
     if-ne v0, v1, :cond_0
 
-    .line 597
     iget-object v0, p0, Landroid/hardware/scontext/provider/miscprovider/PedometerImpl$1;->this$0:Landroid/hardware/scontext/provider/miscprovider/PedometerImpl;
 
     # getter for: Landroid/hardware/scontext/provider/miscprovider/PedometerImpl;->mPedometer:Landroid/hardware/scontext/provider/miscprovider/PedometerVendorImpl;

@@ -28,7 +28,6 @@
     .locals 0
 
     .prologue
-    .line 1139
     iput-object p1, p0, Lcom/android/server/hdmi/HdmiControlService$BinderService$5;->this$1:Lcom/android/server/hdmi/HdmiControlService$BinderService;
 
     iput-object p2, p0, Lcom/android/server/hdmi/HdmiControlService$BinderService$5;->val$callback:Landroid/hardware/hdmi/IHdmiControlCallback;
@@ -44,7 +43,6 @@
     .locals 2
 
     .prologue
-    .line 1142
     iget-object v0, p0, Lcom/android/server/hdmi/HdmiControlService$BinderService$5;->this$1:Lcom/android/server/hdmi/HdmiControlService$BinderService;
 
     iget-object v0, v0, Lcom/android/server/hdmi/HdmiControlService$BinderService;->this$0:Lcom/android/server/hdmi/HdmiControlService;
@@ -54,6 +52,5 @@
     # invokes: Lcom/android/server/hdmi/HdmiControlService;->queryDisplayStatus(Landroid/hardware/hdmi/IHdmiControlCallback;)V
     invoke-static {v0, v1}, Lcom/android/server/hdmi/HdmiControlService;->access$2700(Lcom/android/server/hdmi/HdmiControlService;Landroid/hardware/hdmi/IHdmiControlCallback;)V
 
-    .line 1143
     return-void
 .end method

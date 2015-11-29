@@ -196,23 +196,19 @@
 
     const/16 v2, 0xe
 
-    .line 48
     sput-boolean v3, Lcom/android/server/am/ProcessList;->DEBUG:Z
 
-    .line 133
     const/4 v0, 0x0
 
     sput-object v0, Lcom/android/server/am/ProcessList;->mInfo:Lcom/android/internal/util/MemInfoReader;
 
-    .line 135
     invoke-static {}, Lcom/android/server/am/ProcessList;->totalDeviceMemory()J
 
     move-result-wide v0
 
     sput-wide v0, Lcom/android/server/am/ProcessList;->TOTAL_DEVICE_MEMORY:J
 
-    .line 157
-    const-string/jumbo v0, "ro.config.dha_cached_max"
+    const-string v0, "ro.config.dha_cached_max"
 
     const-string v1, "6"
 
@@ -226,8 +222,7 @@
 
     sput v0, Lcom/android/server/am/ProcessList;->INIT_CACHED_APPS:I
 
-    .line 161
-    const-string/jumbo v0, "ro.config.dha_cached_min"
+    const-string v0, "ro.config.dha_cached_min"
 
     const-string v1, "2"
 
@@ -241,8 +236,7 @@
 
     sput v0, Lcom/android/server/am/ProcessList;->MIN_CACHED_APPS:I
 
-    .line 163
-    const-string/jumbo v0, "ro.config.dha_cached_max"
+    const-string v0, "ro.config.dha_cached_max"
 
     const-string v1, "6"
 
@@ -256,8 +250,7 @@
 
     sput v0, Lcom/android/server/am/ProcessList;->MAX_CACHED_APPS:I
 
-    .line 169
-    const-string/jumbo v0, "ro.config.dha_empty_init"
+    const-string v0, "ro.config.dha_empty_init"
 
     const-string v1, "30"
 
@@ -271,8 +264,7 @@
 
     sput v0, Lcom/android/server/am/ProcessList;->INIT_EMPTY_APPS:I
 
-    .line 171
-    const-string/jumbo v0, "ro.config.dha_empty_min"
+    const-string v0, "ro.config.dha_empty_min"
 
     const-string v1, "6"
 
@@ -286,8 +278,7 @@
 
     sput v0, Lcom/android/server/am/ProcessList;->MIN_EMPTY_APPS_FOR_DHA:I
 
-    .line 173
-    const-string/jumbo v0, "ro.config.dha_empty_max"
+    const-string v0, "ro.config.dha_empty_max"
 
     const-string v1, "30"
 
@@ -301,30 +292,25 @@
 
     sput v0, Lcom/android/server/am/ProcessList;->MAX_EMPTY_APPS:I
 
-    .line 177
     sget v0, Lcom/android/server/am/ProcessList;->MAX_EMPTY_APPS:I
 
     div-int/lit8 v0, v0, 0x3
 
     sput v0, Lcom/android/server/am/ProcessList;->TRIM_EMPTY_APPS:I
 
-    .line 181
     sget v0, Lcom/android/server/am/ProcessList;->MAX_CACHED_APPS:I
 
     div-int/lit8 v0, v0, 0x3
 
     sput v0, Lcom/android/server/am/ProcessList;->TRIM_CACHED_APPS:I
 
-    .line 184
     sput v4, Lcom/android/server/am/ProcessList;->TRIM_CRITICAL_THRESHOLD:I
 
-    .line 187
     const/4 v0, 0x5
 
     sput v0, Lcom/android/server/am/ProcessList;->TRIM_LOW_THRESHOLD:I
 
-    .line 234
-    const-string/jumbo v0, "ro.config.64bit_lmk_enable"
+    const-string v0, "ro.config.64bit_lmk_enable"
 
     const-string v1, "false"
 
@@ -338,10 +324,9 @@
 
     sput-boolean v0, Lcom/android/server/am/ProcessList;->mb64bitLMKEnable:Z
 
-    .line 237
-    const-string/jumbo v0, "ro.config.dha_ils_enable"
+    const-string v0, "ro.config.dha_ils_enable"
 
-    const-string/jumbo v1, "true"
+    const-string v1, "true"
 
     invoke-static {v0, v1}, Landroid/os/SystemProperties;->get(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
@@ -353,8 +338,7 @@
 
     sput-boolean v0, Lcom/android/server/am/ProcessList;->mILS_Enable:Z
 
-    .line 239
-    const-string/jumbo v0, "ro.config.dha_ils_rate"
+    const-string v0, "ro.config.dha_ils_rate"
 
     const-string v1, "0.5"
 
@@ -368,16 +352,13 @@
 
     sput v0, Lcom/android/server/am/ProcessList;->mSzILSRate:F
 
-    .line 241
     sput-boolean v3, Lcom/android/server/am/ProcessList;->mSzILSFlag:Z
 
-    .line 243
     sget v0, Lcom/android/server/am/ProcessList;->INIT_CACHED_APPS:I
 
     sput v0, Lcom/android/server/am/ProcessList;->mMaxCached:I
 
-    .line 245
-    const-string/jumbo v0, "ro.config.dha_whitelist_enable"
+    const-string v0, "ro.config.dha_whitelist_enable"
 
     const-string v1, "2"
 
@@ -391,8 +372,7 @@
 
     sput v0, Lcom/android/server/am/ProcessList;->mWhitelistEnable:I
 
-    .line 247
-    const-string/jumbo v0, "ro.config.dha_goldenlist_enable"
+    const-string v0, "ro.config.dha_goldenlist_enable"
 
     const-string v1, "0"
 
@@ -406,8 +386,7 @@
 
     sput v0, Lcom/android/server/am/ProcessList;->mGoldenlistEnable:I
 
-    .line 250
-    const-string/jumbo v0, "ro.config.dha_HEC_enable"
+    const-string v0, "ro.config.dha_HEC_enable"
 
     const-string v1, "0"
 
@@ -421,8 +400,7 @@
 
     sput v0, Lcom/android/server/am/ProcessList;->mHECEnable:I
 
-    .line 253
-    const-string/jumbo v0, "ro.config.dha_frag_enable"
+    const-string v0, "ro.config.dha_frag_enable"
 
     const-string v1, "0"
 
@@ -436,34 +414,28 @@
 
     sput v0, Lcom/android/server/am/ProcessList;->mFragEnable:I
 
-    .line 259
     const-wide/32 v0, 0x200000
 
     sput-wide v0, Lcom/android/server/am/ProcessList;->DHA_INCREASE_THRESHOLD:J
 
-    .line 268
     const/16 v0, 0x28
 
     sput v0, Lcom/android/server/am/ProcessList;->SMART_DHA_BG_APPS_MAX:I
 
-    .line 269
     sput v4, Lcom/android/server/am/ProcessList;->SMART_DHA_BG_APPS_MIN:I
 
-    .line 599
     new-array v0, v2, [I
 
     fill-array-data v0, :array_0
 
     sput-object v0, Lcom/android/server/am/ProcessList;->sProcStateToProcMem:[I
 
-    .line 616
     new-array v0, v2, [J
 
     fill-array-data v0, :array_1
 
     sput-object v0, Lcom/android/server/am/ProcessList;->sFirstAwakePssTimes:[J
 
-    .line 633
     new-array v0, v2, [J
 
     fill-array-data v0, :array_2
@@ -472,7 +444,6 @@
 
     return-void
 
-    .line 599
     nop
 
     :array_0
@@ -493,7 +464,6 @@
         0x4
     .end array-data
 
-    .line 616
     :array_1
     .array-data 8
         0x1d4c0
@@ -512,7 +482,6 @@
         0x7530
     .end array-data
 
-    .line 633
     :array_2
     .array-data 8
         0xdbba0
@@ -540,36 +509,30 @@
 
     const/4 v8, 0x0
 
-    .line 279
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 50
     const/4 v1, 0x0
 
     iput v1, p0, Lcom/android/server/am/ProcessList;->scaleILS:F
 
-    .line 202
     new-array v1, v4, [I
 
     fill-array-data v1, :array_0
 
     iput-object v1, p0, Lcom/android/server/am/ProcessList;->mOomAdj:[I
 
-    .line 208
     new-array v1, v4, [I
 
     fill-array-data v1, :array_1
 
     iput-object v1, p0, Lcom/android/server/am/ProcessList;->mOomMinFreeLow:[I
 
-    .line 214
     new-array v1, v4, [I
 
     fill-array-data v1, :array_2
 
     iput-object v1, p0, Lcom/android/server/am/ProcessList;->mOomMinFreeHigh:[I
 
-    .line 221
     iget-object v1, p0, Lcom/android/server/am/ProcessList;->mOomAdj:[I
 
     array-length v1, v1
@@ -578,46 +541,37 @@
 
     iput-object v1, p0, Lcom/android/server/am/ProcessList;->mOomMinFree:[I
 
-    .line 225
     const-wide/32 v4, 0x2000000
 
     iput-wide v4, p0, Lcom/android/server/am/ProcessList;->mSzDHAThreshold:J
 
-    .line 227
     const-wide/32 v4, 0x800000
 
     iput-wide v4, p0, Lcom/android/server/am/ProcessList;->mSzDHADefendThreshold:J
 
-    .line 229
     const/4 v1, 0x2
 
     iput v1, p0, Lcom/android/server/am/ProcessList;->mSzDHAStep:I
 
-    .line 231
     const/high16 v1, 0x40000000    # 2.0f
 
     iput v1, p0, Lcom/android/server/am/ProcessList;->mSzDHAThresholdRate:F
 
-    .line 262
     const-wide/32 v4, 0x1400000
 
     iput-wide v4, p0, Lcom/android/server/am/ProcessList;->mSmartDHAKswapdWatermark:J
 
-    .line 263
     const-wide/32 v4, 0x3200000
 
     iput-wide v4, p0, Lcom/android/server/am/ProcessList;->mSmartDHADefaultMargin:J
 
-    .line 280
     new-instance v0, Lcom/android/internal/util/MemInfoReader;
 
     invoke-direct {v0}, Lcom/android/internal/util/MemInfoReader;-><init>()V
 
-    .line 281
     .local v0, "minfo":Lcom/android/internal/util/MemInfoReader;
     invoke-virtual {v0}, Lcom/android/internal/util/MemInfoReader;->readMemInfo()V
 
-    .line 282
     invoke-virtual {v0}, Lcom/android/internal/util/MemInfoReader;->getTotalSize()J
 
     move-result-wide v4
@@ -628,12 +582,10 @@
 
     iput-wide v4, p0, Lcom/android/server/am/ProcessList;->mTotalMemMb:J
 
-    .line 285
     invoke-virtual {v0}, Lcom/android/internal/util/MemInfoReader;->getWatermark()J
 
     move-result-wide v2
 
-    .line 286
     .local v2, "watermark":J
     const-wide/16 v4, 0x0
 
@@ -643,7 +595,6 @@
 
     iput-wide v2, p0, Lcom/android/server/am/ProcessList;->mSmartDHAKswapdWatermark:J
 
-    .line 288
     :cond_0
     invoke-static {}, Landroid/app/ActivityManager;->isLowRamDeviceStatic()Z
 
@@ -655,14 +606,11 @@
 
     sput v1, Lcom/android/server/am/ProcessList;->MAX_EMPTY_APPS:I
 
-    .line 290
     :cond_1
     invoke-direct {p0, v8, v8, v8}, Lcom/android/server/am/ProcessList;->updateOomLevels(IIZ)V
 
-    .line 291
     return-void
 
-    .line 202
     nop
 
     :array_0
@@ -675,7 +623,6 @@
         0xf
     .end array-data
 
-    .line 208
     :array_1
     .array-data 4
         0x2000
@@ -686,7 +633,6 @@
         0x8000
     .end array-data
 
-    .line 214
     :array_2
     .array-data 4
         0x12000
@@ -704,7 +650,6 @@
     .param p1, "ramKb"    # J
 
     .prologue
-    .line 555
     const/4 v1, 0x0
 
     .local v1, "j":I
@@ -716,19 +661,16 @@
 
     if-ge v1, v2, :cond_1
 
-    .line 556
     int-to-long v2, v0
 
     cmp-long v2, p1, v2
 
     if-gez v2, :cond_0
 
-    .line 557
     const/16 v2, 0x20
 
     invoke-virtual {p0, v2}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
 
-    .line 555
     :cond_0
     add-int/lit8 v1, v1, 0x1
 
@@ -736,11 +678,9 @@
 
     goto :goto_0
 
-    .line 560
     :cond_1
     invoke-virtual {p0, p1, p2}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
 
-    .line 561
     return-void
 .end method
 
@@ -752,18 +692,14 @@
     .param p3, "base"    # I
 
     .prologue
-    .line 458
     if-ne p2, p3, :cond_1
 
-    .line 459
     if-nez p1, :cond_0
 
-    .line 462
     .end local p0    # "prefix":Ljava/lang/String;
     :goto_0
     return-object p0
 
-    .line 460
     .restart local p0    # "prefix":Ljava/lang/String;
     :cond_0
     new-instance v0, Ljava/lang/StringBuilder;
@@ -786,7 +722,6 @@
 
     goto :goto_0
 
-    .line 462
     :cond_1
     new-instance v0, Ljava/lang/StringBuilder;
 
@@ -824,7 +759,6 @@
     .param p0, "totalProcessLimit"    # I
 
     .prologue
-    .line 454
     mul-int/lit8 v0, p0, 0x2
 
     div-int/lit8 v0, v0, 0x3
@@ -840,14 +774,12 @@
     .param p3, "now"    # J
 
     .prologue
-    .line 656
     if-eqz p2, :cond_1
 
     if-eqz p1, :cond_0
 
     sget-object v0, Lcom/android/server/am/ProcessList;->sFirstAwakePssTimes:[J
 
-    .line 665
     .local v0, "table":[J
     :goto_0
     const/4 v1, -0x1
@@ -858,11 +790,9 @@
 
     add-long/2addr v2, p3
 
-    .line 667
     :goto_1
     return-wide v2
 
-    .line 656
     .end local v0    # "table":[J
     :cond_0
     sget-object v0, Lcom/android/server/am/ProcessList;->sSameAwakePssTimes:[J
@@ -881,7 +811,6 @@
 
     goto :goto_0
 
-    .line 667
     .restart local v0    # "table":[J
     :cond_3
     aget-wide v2, v0, p0
@@ -906,12 +835,10 @@
 
     const/4 v2, 0x0
 
-    .line 466
     const/16 v0, 0x9
 
     if-lt p0, v0, :cond_0
 
-    .line 467
     const-string v0, "cch"
 
     const-string v1, "  "
@@ -922,18 +849,15 @@
 
     move-result-object v0
 
-    .line 495
     :goto_0
     return-object v0
 
-    .line 468
     :cond_0
     const/16 v0, 0x8
 
     if-lt p0, v0, :cond_1
 
-    .line 469
-    const-string/jumbo v0, "svcb "
+    const-string v0, "svcb "
 
     const/16 v1, 0x8
 
@@ -943,14 +867,12 @@
 
     goto :goto_0
 
-    .line 470
     :cond_1
     const/4 v0, 0x7
 
     if-lt p0, v0, :cond_2
 
-    .line 471
-    const-string/jumbo v0, "prev "
+    const-string v0, "prev "
 
     const/4 v1, 0x7
 
@@ -960,13 +882,11 @@
 
     goto :goto_0
 
-    .line 472
     :cond_2
     const/4 v0, 0x6
 
     if-lt p0, v0, :cond_3
 
-    .line 473
     const-string v0, "home "
 
     const/4 v1, 0x6
@@ -977,14 +897,12 @@
 
     goto :goto_0
 
-    .line 474
     :cond_3
     const/4 v0, 0x5
 
     if-lt p0, v0, :cond_4
 
-    .line 475
-    const-string/jumbo v0, "svc  "
+    const-string v0, "svc  "
 
     const/4 v1, 0x5
 
@@ -994,13 +912,11 @@
 
     goto :goto_0
 
-    .line 476
     :cond_4
     const/4 v0, 0x4
 
     if-lt p0, v0, :cond_5
 
-    .line 477
     const-string v0, "hvy  "
 
     const/4 v1, 0x4
@@ -1011,13 +927,11 @@
 
     goto :goto_0
 
-    .line 478
     :cond_5
     const/4 v0, 0x3
 
     if-lt p0, v0, :cond_6
 
-    .line 479
     const-string v0, "bkup "
 
     const/4 v1, 0x3
@@ -1028,14 +942,12 @@
 
     goto :goto_0
 
-    .line 480
     :cond_6
     const/4 v0, 0x2
 
     if-lt p0, v0, :cond_7
 
-    .line 481
-    const-string/jumbo v0, "prcp "
+    const-string v0, "prcp "
 
     const/4 v1, 0x2
 
@@ -1045,14 +957,12 @@
 
     goto :goto_0
 
-    .line 482
     :cond_7
     const/4 v0, 0x1
 
     if-lt p0, v0, :cond_8
 
-    .line 483
-    const-string/jumbo v0, "vis  "
+    const-string v0, "vis  "
 
     const/4 v1, 0x1
 
@@ -1062,11 +972,9 @@
 
     goto :goto_0
 
-    .line 484
     :cond_8
     if-ltz p0, :cond_9
 
-    .line 485
     const-string v0, "fore "
 
     const/4 v1, 0x0
@@ -1077,12 +985,10 @@
 
     goto :goto_0
 
-    .line 486
     :cond_9
     if-lt p0, v5, :cond_a
 
-    .line 487
-    const-string/jumbo v0, "psvc "
+    const-string v0, "psvc "
 
     invoke-static {v0, v2, p0, v5}, Lcom/android/server/am/ProcessList;->buildOomTag(Ljava/lang/String;Ljava/lang/String;II)Ljava/lang/String;
 
@@ -1090,12 +996,10 @@
 
     goto :goto_0
 
-    .line 488
     :cond_a
     if-lt p0, v4, :cond_b
 
-    .line 489
-    const-string/jumbo v0, "pers "
+    const-string v0, "pers "
 
     invoke-static {v0, v2, p0, v4}, Lcom/android/server/am/ProcessList;->buildOomTag(Ljava/lang/String;Ljava/lang/String;II)Ljava/lang/String;
 
@@ -1103,12 +1007,10 @@
 
     goto :goto_0
 
-    .line 490
     :cond_b
     if-lt p0, v3, :cond_c
 
-    .line 491
-    const-string/jumbo v0, "sys  "
+    const-string v0, "sys  "
 
     invoke-static {v0, v2, p0, v3}, Lcom/android/server/am/ProcessList;->buildOomTag(Ljava/lang/String;Ljava/lang/String;II)Ljava/lang/String;
 
@@ -1116,11 +1018,9 @@
 
     goto/16 :goto_0
 
-    .line 492
     :cond_c
     if-lt p0, v1, :cond_d
 
-    .line 493
     const-string v0, "ntv  "
 
     invoke-static {v0, v2, p0, v1}, Lcom/android/server/am/ProcessList;->buildOomTag(Ljava/lang/String;Ljava/lang/String;II)Ljava/lang/String;
@@ -1129,7 +1029,6 @@
 
     goto/16 :goto_0
 
-    .line 495
     :cond_d
     invoke-static {p0}, Ljava/lang/Integer;->toString(I)Ljava/lang/String;
 
@@ -1143,153 +1042,119 @@
     .param p0, "curProcState"    # I
 
     .prologue
-    .line 501
     packed-switch p0, :pswitch_data_0
 
-    .line 548
     const-string v0, "??"
 
-    .line 551
     .local v0, "procState":Ljava/lang/String;
     :goto_0
     return-object v0
 
-    .line 503
     .end local v0    # "procState":Ljava/lang/String;
     :pswitch_0
     const-string v0, "N "
 
-    .line 504
     .restart local v0    # "procState":Ljava/lang/String;
     goto :goto_0
 
-    .line 506
     .end local v0    # "procState":Ljava/lang/String;
     :pswitch_1
     const-string v0, "P "
 
-    .line 507
     .restart local v0    # "procState":Ljava/lang/String;
     goto :goto_0
 
-    .line 509
     .end local v0    # "procState":Ljava/lang/String;
     :pswitch_2
     const-string v0, "PU"
 
-    .line 510
     .restart local v0    # "procState":Ljava/lang/String;
     goto :goto_0
 
-    .line 512
     .end local v0    # "procState":Ljava/lang/String;
     :pswitch_3
     const-string v0, "T "
 
-    .line 513
     .restart local v0    # "procState":Ljava/lang/String;
     goto :goto_0
 
-    .line 515
     .end local v0    # "procState":Ljava/lang/String;
     :pswitch_4
     const-string v0, "IF"
 
-    .line 516
     .restart local v0    # "procState":Ljava/lang/String;
     goto :goto_0
 
-    .line 518
     .end local v0    # "procState":Ljava/lang/String;
     :pswitch_5
     const-string v0, "IB"
 
-    .line 519
     .restart local v0    # "procState":Ljava/lang/String;
     goto :goto_0
 
-    .line 521
     .end local v0    # "procState":Ljava/lang/String;
     :pswitch_6
     const-string v0, "BU"
 
-    .line 522
     .restart local v0    # "procState":Ljava/lang/String;
     goto :goto_0
 
-    .line 524
     .end local v0    # "procState":Ljava/lang/String;
     :pswitch_7
     const-string v0, "HW"
 
-    .line 525
     .restart local v0    # "procState":Ljava/lang/String;
     goto :goto_0
 
-    .line 527
     .end local v0    # "procState":Ljava/lang/String;
     :pswitch_8
     const-string v0, "S "
 
-    .line 528
     .restart local v0    # "procState":Ljava/lang/String;
     goto :goto_0
 
-    .line 530
     .end local v0    # "procState":Ljava/lang/String;
     :pswitch_9
     const-string v0, "R "
 
-    .line 531
     .restart local v0    # "procState":Ljava/lang/String;
     goto :goto_0
 
-    .line 533
     .end local v0    # "procState":Ljava/lang/String;
     :pswitch_a
     const-string v0, "HO"
 
-    .line 534
     .restart local v0    # "procState":Ljava/lang/String;
     goto :goto_0
 
-    .line 536
     .end local v0    # "procState":Ljava/lang/String;
     :pswitch_b
     const-string v0, "LA"
 
-    .line 537
     .restart local v0    # "procState":Ljava/lang/String;
     goto :goto_0
 
-    .line 539
     .end local v0    # "procState":Ljava/lang/String;
     :pswitch_c
     const-string v0, "CA"
 
-    .line 540
     .restart local v0    # "procState":Ljava/lang/String;
     goto :goto_0
 
-    .line 542
     .end local v0    # "procState":Ljava/lang/String;
     :pswitch_d
     const-string v0, "Ca"
 
-    .line 543
     .restart local v0    # "procState":Ljava/lang/String;
     goto :goto_0
 
-    .line 545
     .end local v0    # "procState":Ljava/lang/String;
     :pswitch_e
     const-string v0, "CE"
 
-    .line 546
     .restart local v0    # "procState":Ljava/lang/String;
     goto :goto_0
 
-    .line 501
     nop
 
     :pswitch_data_0
@@ -1316,7 +1181,6 @@
     .locals 5
 
     .prologue
-    .line 751
     :try_start_0
     new-instance v1, Landroid/net/LocalSocket;
 
@@ -1326,7 +1190,6 @@
 
     sput-object v1, Lcom/android/server/am/ProcessList;->sLmkdSocket:Landroid/net/LocalSocket;
 
-    .line 752
     sget-object v1, Lcom/android/server/am/ProcessList;->sLmkdSocket:Landroid/net/LocalSocket;
 
     new-instance v2, Landroid/net/LocalSocketAddress;
@@ -1339,7 +1202,6 @@
 
     invoke-virtual {v1, v2}, Landroid/net/LocalSocket;->connect(Landroid/net/LocalSocketAddress;)V
 
-    .line 755
     sget-object v1, Lcom/android/server/am/ProcessList;->sLmkdSocket:Landroid/net/LocalSocket;
 
     invoke-virtual {v1}, Landroid/net/LocalSocket;->getOutputStream()Ljava/io/OutputStream;
@@ -1350,19 +1212,16 @@
     :try_end_0
     .catch Ljava/io/IOException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 763
     const/4 v1, 0x1
 
     .local v0, "ex":Ljava/io/IOException;
     :goto_0
     return v1
 
-    .line 756
     .end local v0    # "ex":Ljava/io/IOException;
     :catch_0
     move-exception v0
 
-    .line 757
     .restart local v0    # "ex":Ljava/io/IOException;
     const-string v1, "ActivityManager"
 
@@ -1370,12 +1229,10 @@
 
     invoke-static {v1, v2}, Landroid/util/Slog;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 759
     const/4 v1, 0x0
 
     sput-object v1, Lcom/android/server/am/ProcessList;->sLmkdSocket:Landroid/net/LocalSocket;
 
-    .line 760
     const/4 v1, 0x0
 
     goto :goto_0
@@ -1387,7 +1244,6 @@
     .param p1, "procState2"    # I
 
     .prologue
-    .line 651
     sget-object v0, Lcom/android/server/am/ProcessList;->sProcStateToProcMem:[I
 
     aget v0, v0, p0
@@ -1414,26 +1270,21 @@
     .param p0, "pid"    # I
 
     .prologue
-    .line 743
     const/16 v1, 0x8
 
     invoke-static {v1}, Ljava/nio/ByteBuffer;->allocate(I)Ljava/nio/ByteBuffer;
 
     move-result-object v0
 
-    .line 744
     .local v0, "buf":Ljava/nio/ByteBuffer;
     const/4 v1, 0x2
 
     invoke-virtual {v0, v1}, Ljava/nio/ByteBuffer;->putInt(I)Ljava/nio/ByteBuffer;
 
-    .line 745
     invoke-virtual {v0, p0}, Ljava/nio/ByteBuffer;->putInt(I)Ljava/nio/ByteBuffer;
 
-    .line 746
     invoke-static {v0}, Lcom/android/server/am/ProcessList;->writeLmkd(Ljava/nio/ByteBuffer;)V
 
-    .line 747
     return-void
 .end method
 
@@ -1446,50 +1297,39 @@
     .prologue
     const/16 v1, 0x10
 
-    .line 722
     if-ne p2, v1, :cond_1
 
-    .line 737
     :cond_0
     :goto_0
     return-void
 
-    .line 725
     :cond_1
     invoke-static {}, Landroid/os/SystemClock;->elapsedRealtime()J
 
     move-result-wide v4
 
-    .line 726
     .local v4, "start":J
     invoke-static {v1}, Ljava/nio/ByteBuffer;->allocate(I)Ljava/nio/ByteBuffer;
 
     move-result-object v0
 
-    .line 727
     .local v0, "buf":Ljava/nio/ByteBuffer;
     const/4 v1, 0x1
 
     invoke-virtual {v0, v1}, Ljava/nio/ByteBuffer;->putInt(I)Ljava/nio/ByteBuffer;
 
-    .line 728
     invoke-virtual {v0, p0}, Ljava/nio/ByteBuffer;->putInt(I)Ljava/nio/ByteBuffer;
 
-    .line 729
     invoke-virtual {v0, p1}, Ljava/nio/ByteBuffer;->putInt(I)Ljava/nio/ByteBuffer;
 
-    .line 730
     invoke-virtual {v0, p2}, Ljava/nio/ByteBuffer;->putInt(I)Ljava/nio/ByteBuffer;
 
-    .line 731
     invoke-static {v0}, Lcom/android/server/am/ProcessList;->writeLmkd(Ljava/nio/ByteBuffer;)V
 
-    .line 732
     invoke-static {}, Landroid/os/SystemClock;->elapsedRealtime()J
 
     move-result-wide v2
 
-    .line 733
     .local v2, "now":J
     sub-long v6, v2, v4
 
@@ -1499,7 +1339,6 @@
 
     if-lez v1, :cond_0
 
-    .line 734
     const-string v1, "ActivityManager"
 
     new-instance v6, Ljava/lang/StringBuilder;
@@ -1551,25 +1390,21 @@
     .locals 4
 
     .prologue
-    .line 138
     sget-object v0, Lcom/android/server/am/ProcessList;->mInfo:Lcom/android/internal/util/MemInfoReader;
 
     if-nez v0, :cond_0
 
-    .line 139
     new-instance v0, Lcom/android/internal/util/MemInfoReader;
 
     invoke-direct {v0}, Lcom/android/internal/util/MemInfoReader;-><init>()V
 
     sput-object v0, Lcom/android/server/am/ProcessList;->mInfo:Lcom/android/internal/util/MemInfoReader;
 
-    .line 141
     :cond_0
     sget-object v0, Lcom/android/server/am/ProcessList;->mInfo:Lcom/android/internal/util/MemInfoReader;
 
     invoke-virtual {v0}, Lcom/android/internal/util/MemInfoReader;->readMemInfo()V
 
-    .line 143
     sget-object v0, Lcom/android/server/am/ProcessList;->mInfo:Lcom/android/internal/util/MemInfoReader;
 
     invoke-virtual {v0}, Lcom/android/internal/util/MemInfoReader;->getTotalSize()J
@@ -1588,21 +1423,17 @@
     .param p0, "pName"    # Ljava/lang/String;
 
     .prologue
-    .line 904
     sget-boolean v1, Lcom/android/server/am/ProcessList;->mILS_Enable:Z
 
     if-nez v1, :cond_1
 
-    .line 913
     :cond_0
     :goto_0
     return-void
 
-    .line 906
     :cond_1
     sget-boolean v0, Lcom/android/server/am/ProcessList;->mSzILSFlag:Z
 
-    .line 908
     .local v0, "ILSPrevFlag":Z
     invoke-static {p0}, Lcom/android/server/am/ProcessList$ILS_Q;->isAppsLaunchFreq(Ljava/lang/String;)Z
 
@@ -1610,12 +1441,10 @@
 
     sput-boolean v1, Lcom/android/server/am/ProcessList;->mSzILSFlag:Z
 
-    .line 910
     sget-boolean v1, Lcom/android/server/am/ProcessList;->mSzILSFlag:Z
 
     if-eq v0, v1, :cond_0
 
-    .line 911
     const-string v1, "ActivityManager"
 
     new-instance v2, Ljava/lang/StringBuilder;
@@ -1670,7 +1499,6 @@
     .param p3, "write"    # Z
 
     .prologue
-    .line 307
     move-object/from16 v0, p0
 
     iget-wide v0, v0, Lcom/android/server/am/ProcessList;->mTotalMemMb:J
@@ -1691,15 +1519,12 @@
 
     div-float v19, v20, v21
 
-    .line 310
     .local v19, "scaleMem":F
     const v11, 0x5dc00
 
-    .line 311
     .local v11, "minSize":I
     const v10, 0xfa000
 
-    .line 313
     .local v10, "maxSize":I
     invoke-static {}, Landroid/app/ActivityManager;->isLowRamDeviceStatic()Z
 
@@ -1729,7 +1554,6 @@
 
     if-lt v0, v1, :cond_1
 
-    .line 315
     :cond_0
     move-object/from16 v0, p0
 
@@ -1751,13 +1575,10 @@
 
     div-float v19, v20, v21
 
-    .line 317
     const v11, 0x25800
 
-    .line 318
     const v10, 0x1fa400
 
-    .line 321
     :cond_1
     mul-int v20, p1, p2
 
@@ -1783,7 +1604,6 @@
 
     div-float v18, v20, v21
 
-    .line 328
     .local v18, "scaleDisp":F
     cmpl-float v20, v19, v18
 
@@ -1791,7 +1611,6 @@
 
     move/from16 v17, v19
 
-    .line 330
     .local v17, "scale":F
     :goto_0
     const/16 v20, 0x0
@@ -1802,18 +1621,16 @@
 
     const/16 v17, 0x0
 
-    .line 335
     :cond_2
     :goto_1
-    const-string/jumbo v20, "ro.product.name"
+    const-string v20, "ro.product.name"
 
-    const-string/jumbo v21, "xxx"
+    const-string v21, "xxx"
 
     invoke-static/range {v20 .. v21}, Landroid/os/SystemProperties;->get(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v9
 
-    .line 336
     .local v9, "mProductName":Ljava/lang/String;
     const-string v20, "fortuna3g"
 
@@ -1845,13 +1662,11 @@
 
     if-eqz v20, :cond_4
 
-    .line 337
     :cond_3
     const v17, 0x3f2e978d    # 0.682f
 
-    .line 341
     :cond_4
-    const-string/jumbo v20, "ro.config.dha_lmk_scale"
+    const-string v20, "ro.config.dha_lmk_scale"
 
     const-string v21, "-1"
 
@@ -1863,7 +1678,6 @@
 
     move-result v5
 
-    .line 343
     .local v5, "dha_lmk_scale_property":F
     const/high16 v20, -0x40800000    # -1.0f
 
@@ -1871,10 +1685,8 @@
 
     if-eqz v20, :cond_5
 
-    .line 344
     move/from16 v17, v5
 
-    .line 347
     :cond_5
     invoke-static {}, Landroid/content/res/Resources;->getSystem()Landroid/content/res/Resources;
 
@@ -1886,7 +1698,6 @@
 
     move-result v13
 
-    .line 349
     .local v13, "minfree_adj":I
     invoke-static {}, Landroid/content/res/Resources;->getSystem()Landroid/content/res/Resources;
 
@@ -1898,7 +1709,6 @@
 
     move-result v12
 
-    .line 355
     .local v12, "minfree_abs":I
     sget v20, Lcom/android/server/am/ProcessList;->mSzILSRate:F
 
@@ -1914,7 +1724,6 @@
 
     iput v0, v1, Lcom/android/server/am/ProcessList;->scaleILS:F
 
-    .line 357
     sget-object v20, Landroid/os/Build;->SUPPORTED_64_BIT_ABIS:[Ljava/lang/String;
 
     move-object/from16 v0, v20
@@ -1929,7 +1738,6 @@
 
     if-eqz v20, :cond_6
 
-    .line 359
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/android/server/am/ProcessList;->mOomMinFreeHigh:[I
@@ -1942,7 +1750,6 @@
 
     aput v22, v20, v21
 
-    .line 360
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/android/server/am/ProcessList;->mOomMinFreeHigh:[I
@@ -1955,7 +1762,6 @@
 
     aput v22, v20, v21
 
-    .line 363
     :cond_6
     const/4 v7, 0x0
 
@@ -1977,7 +1783,6 @@
 
     if-ge v7, v0, :cond_9
 
-    .line 364
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/android/server/am/ProcessList;->mOomMinFreeLow:[I
@@ -1986,7 +1791,6 @@
 
     aget v8, v20, v7
 
-    .line 365
     .local v8, "low":I
     move-object/from16 v0, p0
 
@@ -1996,7 +1800,6 @@
 
     aget v6, v20, v7
 
-    .line 366
     .local v6, "high":I
     move-object/from16 v0, p0
 
@@ -2028,7 +1831,6 @@
 
     aput v21, v20, v7
 
-    .line 363
     add-int/lit8 v7, v7, 0x1
 
     goto :goto_2
@@ -2044,10 +1846,8 @@
     :cond_7
     move/from16 v17, v18
 
-    .line 328
     goto/16 :goto_0
 
-    .line 331
     .restart local v17    # "scale":F
     :cond_8
     const/high16 v20, 0x3f800000    # 1.0f
@@ -2060,7 +1860,6 @@
 
     goto/16 :goto_1
 
-    .line 369
     .restart local v5    # "dha_lmk_scale_property":F
     .restart local v7    # "i":I
     .restart local v9    # "mProductName":Ljava/lang/String;
@@ -2069,7 +1868,6 @@
     :cond_9
     if-ltz v12, :cond_a
 
-    .line 370
     const/4 v7, 0x0
 
     :goto_3
@@ -2089,7 +1887,6 @@
 
     if-ge v7, v0, :cond_a
 
-    .line 371
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/android/server/am/ProcessList;->mOomMinFree:[I
@@ -2154,16 +1951,13 @@
 
     aput v21, v20, v7
 
-    .line 370
     add-int/lit8 v7, v7, 0x1
 
     goto :goto_3
 
-    .line 376
     :cond_a
     if-eqz v13, :cond_c
 
-    .line 377
     const/4 v7, 0x0
 
     :goto_4
@@ -2183,7 +1977,6 @@
 
     if-ge v7, v0, :cond_c
 
-    .line 378
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/android/server/am/ProcessList;->mOomMinFree:[I
@@ -2252,7 +2045,6 @@
 
     aput v21, v20, v7
 
-    .line 380
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/android/server/am/ProcessList;->mOomMinFree:[I
@@ -2263,7 +2055,6 @@
 
     if-gez v20, :cond_b
 
-    .line 381
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/android/server/am/ProcessList;->mOomMinFree:[I
@@ -2274,13 +2065,11 @@
 
     aput v21, v20, v7
 
-    .line 377
     :cond_b
     add-int/lit8 v7, v7, 0x1
 
     goto :goto_4
 
-    .line 389
     :cond_c
     const/16 v20, 0xf
 
@@ -2306,7 +2095,6 @@
 
     iput-wide v0, v2, Lcom/android/server/am/ProcessList;->mCachedRestoreLevel:J
 
-    .line 393
     mul-int v20, p1, p2
 
     mul-int/lit8 v20, v20, 0x4
@@ -2317,7 +2105,6 @@
 
     div-int/lit16 v14, v0, 0x400
 
-    .line 394
     .local v14, "reserve":I
     invoke-static {}, Landroid/content/res/Resources;->getSystem()Landroid/content/res/Resources;
 
@@ -2329,7 +2116,6 @@
 
     move-result v16
 
-    .line 395
     .local v16, "reserve_adj":I
     invoke-static {}, Landroid/content/res/Resources;->getSystem()Landroid/content/res/Resources;
 
@@ -2341,31 +2127,23 @@
 
     move-result v15
 
-    .line 397
     .local v15, "reserve_abs":I
     if-ltz v15, :cond_d
 
-    .line 398
     move v14, v15
 
-    .line 401
     :cond_d
     if-eqz v16, :cond_e
 
-    .line 402
     add-int v14, v14, v16
 
-    .line 403
     if-gez v14, :cond_e
 
-    .line 404
     const/4 v14, 0x0
 
-    .line 408
     :cond_e
     if-eqz p3, :cond_10
 
-    .line 409
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/android/server/am/ProcessList;->mOomAdj:[I
@@ -2388,7 +2166,6 @@
 
     move-result-object v4
 
-    .line 410
     .local v4, "buf":Ljava/nio/ByteBuffer;
     const/16 v20, 0x0
 
@@ -2396,7 +2173,6 @@
 
     invoke-virtual {v4, v0}, Ljava/nio/ByteBuffer;->putInt(I)Ljava/nio/ByteBuffer;
 
-    .line 411
     const/4 v7, 0x0
 
     :goto_5
@@ -2416,7 +2192,6 @@
 
     if-ge v7, v0, :cond_f
 
-    .line 412
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/android/server/am/ProcessList;->mOomMinFree:[I
@@ -2441,7 +2216,6 @@
 
     invoke-virtual {v4, v0}, Ljava/nio/ByteBuffer;->putInt(I)Ljava/nio/ByteBuffer;
 
-    .line 413
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/android/server/am/ProcessList;->mOomAdj:[I
@@ -2454,17 +2228,14 @@
 
     invoke-virtual {v4, v0}, Ljava/nio/ByteBuffer;->putInt(I)Ljava/nio/ByteBuffer;
 
-    .line 411
     add-int/lit8 v7, v7, 0x1
 
     goto :goto_5
 
-    .line 416
     :cond_f
     invoke-static {v4}, Lcom/android/server/am/ProcessList;->writeLmkd(Ljava/nio/ByteBuffer;)V
 
-    .line 417
-    const-string/jumbo v20, "sys.sysctl.extra_free_kbytes"
+    const-string v20, "sys.sysctl.extra_free_kbytes"
 
     invoke-static {v14}, Ljava/lang/Integer;->toString(I)Ljava/lang/String;
 
@@ -2472,7 +2243,6 @@
 
     invoke-static/range {v20 .. v21}, Landroid/os/SystemProperties;->set(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 422
     .end local v4    # "buf":Ljava/nio/ByteBuffer;
     :cond_10
     const/16 v20, 0xf
@@ -2491,7 +2261,6 @@
 
     iput-wide v0, v2, Lcom/android/server/am/ProcessList;->mSzDHAThreshold:J
 
-    .line 423
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/android/server/am/ProcessList;->mOomMinFreeLow:[I
@@ -2528,8 +2297,7 @@
 
     iput-wide v0, v2, Lcom/android/server/am/ProcessList;->mSzDHADefendThreshold:J
 
-    .line 426
-    const-string/jumbo v20, "ro.com.google.gmsversion"
+    const-string v20, "ro.com.google.gmsversion"
 
     const-string v21, "none"
 
@@ -2545,8 +2313,7 @@
 
     if-eqz v20, :cond_11
 
-    .line 427
-    const-string/jumbo v20, "ro.config.dha_empty_max"
+    const-string v20, "ro.config.dha_empty_max"
 
     const-string v21, "30"
 
@@ -2562,7 +2329,6 @@
 
     sput v20, Lcom/android/server/am/ProcessList;->MAX_EMPTY_APPS:I
 
-    .line 428
     const-string v20, "DHA_PROPERTY"
 
     new-instance v21, Ljava/lang/StringBuilder;
@@ -2587,9 +2353,8 @@
 
     invoke-static/range {v20 .. v21}, Landroid/util/Slog;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 432
     :cond_11
-    const-string/jumbo v20, "ro.config.dha_step"
+    const-string v20, "ro.config.dha_step"
 
     move-object/from16 v0, p0
 
@@ -2615,8 +2380,7 @@
 
     iput v0, v1, Lcom/android/server/am/ProcessList;->mSzDHAStep:I
 
-    .line 434
-    const-string/jumbo v20, "ro.config.dha_th_rate"
+    const-string v20, "ro.config.dha_th_rate"
 
     move-object/from16 v0, p0
 
@@ -2642,8 +2406,7 @@
 
     iput v0, v1, Lcom/android/server/am/ProcessList;->mSzDHAThresholdRate:F
 
-    .line 436
-    const-string/jumbo v20, "ro.config.dha_th_level"
+    const-string v20, "ro.config.dha_th_level"
 
     const-string v21, "15"
 
@@ -2669,14 +2432,13 @@
 
     iput-wide v0, v2, Lcom/android/server/am/ProcessList;->mSzDHAThreshold:J
 
-    .line 437
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/android/server/am/ProcessList;->mOomMinFreeLow:[I
 
     move-object/from16 v20, v0
 
-    const-string/jumbo v21, "ro.config.dha_defend_th_level"
+    const-string v21, "ro.config.dha_defend_th_level"
 
     const-string v22, "3"
 
@@ -2716,8 +2478,7 @@
 
     iput-wide v0, v2, Lcom/android/server/am/ProcessList;->mSzDHADefendThreshold:J
 
-    .line 438
-    const-string/jumbo v20, "ro.config.dha_increase_th"
+    const-string v20, "ro.config.dha_increase_th"
 
     sget-wide v22, Lcom/android/server/am/ProcessList;->DHA_INCREASE_THRESHOLD:J
 
@@ -2735,7 +2496,6 @@
 
     sput-wide v20, Lcom/android/server/am/ProcessList;->DHA_INCREASE_THRESHOLD:J
 
-    .line 440
     const-string v20, "DHA_PROPERTY"
 
     new-instance v21, Ljava/lang/StringBuilder;
@@ -2764,7 +2524,6 @@
 
     invoke-static/range {v20 .. v21}, Landroid/util/Slog;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 441
     const-string v20, "DHA_PROPERTY"
 
     new-instance v21, Ljava/lang/StringBuilder;
@@ -2793,7 +2552,6 @@
 
     invoke-static/range {v20 .. v21}, Landroid/util/Slog;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 442
     const-string v20, "DHA_PROPERTY"
 
     new-instance v21, Ljava/lang/StringBuilder;
@@ -2822,7 +2580,6 @@
 
     invoke-static/range {v20 .. v21}, Landroid/util/Slog;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 443
     const-string v20, "DHA_PROPERTY"
 
     new-instance v21, Ljava/lang/StringBuilder;
@@ -2851,7 +2608,6 @@
 
     invoke-static/range {v20 .. v21}, Landroid/util/Slog;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 444
     const-string v20, "DHA_PROPERTY"
 
     new-instance v21, Ljava/lang/StringBuilder;
@@ -2876,7 +2632,6 @@
 
     invoke-static/range {v20 .. v21}, Landroid/util/Slog;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 447
     const/high16 v20, 0x4ba00000    # 2.097152E7f
 
     const/high16 v21, 0x4bf00000    # 3.145728E7f
@@ -2897,7 +2652,6 @@
 
     iput-wide v0, v2, Lcom/android/server/am/ProcessList;->mSmartDHADefaultMargin:J
 
-    .line 451
     return-void
 .end method
 
@@ -2906,7 +2660,6 @@
     .param p0, "buf"    # Ljava/nio/ByteBuffer;
 
     .prologue
-    .line 768
     const/4 v1, 0x0
 
     .local v1, "i":I
@@ -2915,19 +2668,16 @@
 
     if-ge v1, v2, :cond_1
 
-    .line 769
     sget-object v2, Lcom/android/server/am/ProcessList;->sLmkdSocket:Landroid/net/LocalSocket;
 
     if-nez v2, :cond_0
 
-    .line 770
     invoke-static {}, Lcom/android/server/am/ProcessList;->openLmkdSocket()Z
 
     move-result v2
 
     if-nez v2, :cond_0
 
-    .line 772
     const-wide/16 v2, 0x3e8
 
     :try_start_0
@@ -2935,13 +2685,11 @@
     :try_end_0
     .catch Ljava/lang/InterruptedException; {:try_start_0 .. :try_end_0} :catch_1
 
-    .line 768
     :goto_1
     add-int/lit8 v1, v1, 0x1
 
     goto :goto_0
 
-    .line 780
     :cond_0
     :try_start_1
     sget-object v2, Lcom/android/server/am/ProcessList;->sLmkdOutputStream:Ljava/io/OutputStream;
@@ -2960,15 +2708,12 @@
     :try_end_1
     .catch Ljava/io/IOException; {:try_start_1 .. :try_end_1} :catch_0
 
-    .line 794
     :cond_1
     return-void
 
-    .line 782
     :catch_0
     move-exception v0
 
-    .line 783
     .local v0, "ex":Ljava/io/IOException;
     const-string v2, "ActivityManager"
 
@@ -2976,7 +2721,6 @@
 
     invoke-static {v2, v3}, Landroid/util/Slog;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 787
     :try_start_2
     sget-object v2, Lcom/android/server/am/ProcessList;->sLmkdSocket:Landroid/net/LocalSocket;
 
@@ -2984,7 +2728,6 @@
     :try_end_2
     .catch Ljava/io/IOException; {:try_start_2 .. :try_end_2} :catch_2
 
-    .line 791
     :goto_2
     const/4 v2, 0x0
 
@@ -2992,14 +2735,12 @@
 
     goto :goto_1
 
-    .line 773
     .end local v0    # "ex":Ljava/io/IOException;
     :catch_1
     move-exception v2
 
     goto :goto_1
 
-    .line 788
     .restart local v0    # "ex":Ljava/io/IOException;
     :catch_2
     move-exception v2
@@ -3016,23 +2757,19 @@
     .prologue
     const/4 v3, 0x1
 
-    .line 294
     iget-boolean v1, p0, Lcom/android/server/am/ProcessList;->mHaveDisplaySize:Z
 
     if-nez v1, :cond_0
 
-    .line 295
     new-instance v0, Landroid/graphics/Point;
 
     invoke-direct {v0}, Landroid/graphics/Point;-><init>()V
 
-    .line 296
     .local v0, "p":Landroid/graphics/Point;
     const/4 v1, 0x0
 
     invoke-virtual {p1, v1, v0}, Lcom/android/server/wm/WindowManagerService;->getBaseDisplaySize(ILandroid/graphics/Point;)V
 
-    .line 297
     iget v1, v0, Landroid/graphics/Point;->x:I
 
     if-eqz v1, :cond_0
@@ -3041,17 +2778,14 @@
 
     if-eqz v1, :cond_0
 
-    .line 298
     iget v1, v0, Landroid/graphics/Point;->x:I
 
     iget v2, v0, Landroid/graphics/Point;->y:I
 
     invoke-direct {p0, v1, v2, v3}, Lcom/android/server/am/ProcessList;->updateOomLevels(IIZ)V
 
-    .line 299
     iput-boolean v3, p0, Lcom/android/server/am/ProcessList;->mHaveDisplaySize:Z
 
-    .line 302
     .end local v0    # "p":Landroid/graphics/Point;
     :cond_0
     return-void
@@ -3064,40 +2798,32 @@
     .param p3, "cached"    # I
 
     .prologue
-    .line 859
     iget v1, p0, Lcom/android/server/am/ProcessList;->mSzDHAStep:I
 
     sub-int v0, p2, v1
 
-    .line 861
     .local v0, "ret":I
     if-le p1, v0, :cond_2
 
-    .line 862
     sget v1, Lcom/android/server/am/ProcessList;->MIN_EMPTY_APPS_FOR_DHA:I
 
     if-ge v0, v1, :cond_0
 
-    .line 863
     sget v0, Lcom/android/server/am/ProcessList;->MIN_EMPTY_APPS_FOR_DHA:I
 
-    .line 865
     :cond_0
     sget v1, Lcom/android/server/am/ProcessList;->MIN_CACHED_APPS:I
 
     if-le p3, v1, :cond_1
 
-    .line 866
     add-int/lit8 v1, p3, -0x1
 
     sput v1, Lcom/android/server/am/ProcessList;->mMaxCached:I
 
-    .line 873
     :cond_1
     :goto_0
     return v0
 
-    .line 870
     :cond_2
     move v0, p1
 
@@ -3108,7 +2834,6 @@
     .locals 2
 
     .prologue
-    .line 684
     iget-wide v0, p0, Lcom/android/server/am/ProcessList;->mCachedRestoreLevel:J
 
     return-wide v0
@@ -3118,7 +2843,6 @@
     .locals 2
 
     .prologue
-    .line 704
     iget-wide v0, p0, Lcom/android/server/am/ProcessList;->mSmartDHAKswapdWatermark:J
 
     return-wide v0
@@ -3131,7 +2855,6 @@
     .prologue
     const/16 v0, 0xf
 
-    .line 690
     if-ge p1, v0, :cond_0
 
     const/16 v0, 0x9
@@ -3149,7 +2872,6 @@
     .param p1, "adjustment"    # I
 
     .prologue
-    .line 671
     const/4 v0, 0x0
 
     .local v0, "i":I
@@ -3160,14 +2882,12 @@
 
     if-ge v0, v1, :cond_1
 
-    .line 672
     iget-object v1, p0, Lcom/android/server/am/ProcessList;->mOomAdj:[I
 
     aget v1, v1, v0
 
     if-gt p1, v1, :cond_0
 
-    .line 673
     iget-object v1, p0, Lcom/android/server/am/ProcessList;->mOomMinFree:[I
 
     aget v1, v1, v0
@@ -3176,17 +2896,14 @@
 
     int-to-long v2, v1
 
-    .line 676
     :goto_1
     return-wide v2
 
-    .line 671
     :cond_0
     add-int/lit8 v0, v0, 0x1
 
     goto :goto_0
 
-    .line 676
     :cond_1
     iget-object v1, p0, Lcom/android/server/am/ProcessList;->mOomMinFree:[I
 
@@ -3209,7 +2926,6 @@
     .locals 1
 
     .prologue
-    .line 53
     iget v0, p0, Lcom/android/server/am/ProcessList;->scaleILS:F
 
     return v0
@@ -3219,16 +2935,13 @@
     .locals 4
 
     .prologue
-    .line 694
     iget-wide v0, p0, Lcom/android/server/am/ProcessList;->mSmartDHADefaultMargin:J
 
-    .line 696
     .local v0, "margin_ILS":J
     sget-boolean v2, Lcom/android/server/am/ProcessList;->mSzILSFlag:Z
 
     if-eqz v2, :cond_0
 
-    .line 697
     const/high16 v2, 0x4c480000    # 5.24288E7f
 
     invoke-virtual {p0}, Lcom/android/server/am/ProcessList;->getScaleILS()F
@@ -3241,7 +2954,6 @@
 
     add-long/2addr v0, v2
 
-    .line 700
     :cond_0
     return-wide v0
 .end method
@@ -3253,21 +2965,17 @@
     .param p3, "cached"    # I
 
     .prologue
-    .line 877
     iget v1, p0, Lcom/android/server/am/ProcessList;->mSzDHAStep:I
 
     add-int v0, p1, v1
 
-    .line 880
     .local v0, "ret":I
     sget v1, Lcom/android/server/am/ProcessList;->MAX_EMPTY_APPS:I
 
     if-le v0, v1, :cond_0
 
-    .line 881
     sget v0, Lcom/android/server/am/ProcessList;->MAX_EMPTY_APPS:I
 
-    .line 884
     :cond_0
     return v0
 .end method
@@ -3277,10 +2985,8 @@
     .param p1, "margin"    # J
 
     .prologue
-    .line 708
     iput-wide p1, p0, Lcom/android/server/am/ProcessList;->mSmartDHADefaultMargin:J
 
-    .line 709
     return-void
 .end method
 
@@ -3289,10 +2995,8 @@
     .param p1, "lValue"    # I
 
     .prologue
-    .line 892
     sput p1, Lcom/android/server/am/ProcessList;->TRIM_CACHED_APPS:I
 
-    .line 893
     return-void
 .end method
 
@@ -3301,10 +3005,8 @@
     .param p1, "lValue"    # I
 
     .prologue
-    .line 896
     sput p1, Lcom/android/server/am/ProcessList;->TRIM_CRITICAL_THRESHOLD:I
 
-    .line 897
     return-void
 .end method
 
@@ -3313,10 +3015,8 @@
     .param p1, "lValue"    # I
 
     .prologue
-    .line 888
     sput p1, Lcom/android/server/am/ProcessList;->TRIM_EMPTY_APPS:I
 
-    .line 889
     return-void
 .end method
 
@@ -3325,10 +3025,8 @@
     .param p1, "lValue"    # I
 
     .prologue
-    .line 900
     sput p1, Lcom/android/server/am/ProcessList;->TRIM_LOW_THRESHOLD:I
 
-    .line 901
     return-void
 .end method
 
@@ -3339,28 +3037,23 @@
     .param p3, "curEmpty"    # I
 
     .prologue
-    .line 798
     move/from16 v5, p1
 
-    .line 800
     .local v5, "ret":I
     sget-object v7, Lcom/android/server/am/ProcessList;->mInfo:Lcom/android/internal/util/MemInfoReader;
 
     if-eqz v7, :cond_7
 
-    .line 802
     sget-object v7, Lcom/android/server/am/ProcessList;->mInfo:Lcom/android/internal/util/MemInfoReader;
 
     invoke-virtual {v7}, Lcom/android/internal/util/MemInfoReader;->readMemInfo()V
 
-    .line 805
     sget-object v7, Lcom/android/server/am/ProcessList;->mInfo:Lcom/android/internal/util/MemInfoReader;
 
     invoke-virtual {v7}, Lcom/android/internal/util/MemInfoReader;->getFreeSize()J
 
     move-result-wide v12
 
-    .line 806
     .local v12, "szFreeMem":J
     sget-object v7, Lcom/android/server/am/ProcessList;->mInfo:Lcom/android/internal/util/MemInfoReader;
 
@@ -3376,11 +3069,9 @@
 
     add-long v8, v14, v16
 
-    .line 807
     .local v8, "szAvailableMem":J
     const-wide/16 v10, 0x0
 
-    .line 808
     .local v10, "szFragMem":J
     sget v7, Lcom/android/server/am/ProcessList;->mFragEnable:I
 
@@ -3400,37 +3091,31 @@
 
     if-gez v7, :cond_0
 
-    .line 809
     sget-object v7, Lcom/android/server/am/ProcessList;->mInfo:Lcom/android/internal/util/MemInfoReader;
 
     invoke-virtual {v7}, Lcom/android/internal/util/MemInfoReader;->readBuddyInfo()V
 
-    .line 810
     sget-object v7, Lcom/android/server/am/ProcessList;->mInfo:Lcom/android/internal/util/MemInfoReader;
 
     invoke-virtual {v7}, Lcom/android/internal/util/MemInfoReader;->getFragRate()J
 
     move-result-wide v10
 
-    .line 813
     :cond_0
     div-int/lit8 v7, p1, 0x2
 
     sput v7, Lcom/android/server/am/ProcessList;->mMaxCached:I
 
-    .line 815
     sget v7, Lcom/android/server/am/ProcessList;->mMaxCached:I
 
     sget v14, Lcom/android/server/am/ProcessList;->MIN_CACHED_APPS:I
 
     if-ge v7, v14, :cond_1
 
-    .line 816
     sget v7, Lcom/android/server/am/ProcessList;->MIN_CACHED_APPS:I
 
     sput v7, Lcom/android/server/am/ProcessList;->mMaxCached:I
 
-    .line 818
     :cond_1
     sget v7, Lcom/android/server/am/ProcessList;->mMaxCached:I
 
@@ -3438,18 +3123,15 @@
 
     if-le v7, v14, :cond_2
 
-    .line 819
     sget v7, Lcom/android/server/am/ProcessList;->MAX_CACHED_APPS:I
 
     sput v7, Lcom/android/server/am/ProcessList;->mMaxCached:I
 
-    .line 822
     :cond_2
     sget-boolean v7, Lcom/android/server/am/ProcessList;->DEBUG:Z
 
     if-eqz v7, :cond_3
 
-    .line 823
     const-string v7, "ActivityManager"
 
     new-instance v14, Ljava/lang/StringBuilder;
@@ -3610,7 +3292,6 @@
 
     invoke-static {v7, v14}, Landroid/util/Slog;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 829
     :cond_3
     const-wide/16 v14, 0x0
 
@@ -3620,7 +3301,6 @@
 
     move v6, v5
 
-    .line 855
     .end local v5    # "ret":I
     .end local v8    # "szAvailableMem":J
     .end local v10    # "szFragMem":J
@@ -3629,7 +3309,6 @@
     :goto_0
     return v6
 
-    .line 832
     .end local v6    # "ret":I
     .restart local v5    # "ret":I
     .restart local v8    # "szAvailableMem":J
@@ -3640,13 +3319,11 @@
 
     iget v4, v0, Lcom/android/server/am/ProcessList;->mSzDHAThresholdRate:F
 
-    .line 834
     .local v4, "mFinalDHAThresholdRate":F
     sget-boolean v7, Lcom/android/server/am/ProcessList;->mSzILSFlag:Z
 
     if-eqz v7, :cond_5
 
-    .line 835
     move-object/from16 v0, p0
 
     iget v7, v0, Lcom/android/server/am/ProcessList;->mSzDHAThresholdRate:F
@@ -3658,7 +3335,6 @@
 
     mul-float v4, v7, v14
 
-    .line 839
     :cond_5
     sub-long v14, v8, v10
 
@@ -3688,7 +3364,6 @@
 
     if-gez v7, :cond_8
 
-    .line 840
     :cond_6
     move-object/from16 v0, p0
 
@@ -3702,12 +3377,10 @@
 
     move-result v5
 
-    .line 841
     sget-boolean v7, Lcom/android/server/am/ProcessList;->DEBUG:Z
 
     if-eqz v7, :cond_7
 
-    .line 842
     const-string v7, "ActivityManager"
 
     new-instance v14, Ljava/lang/StringBuilder;
@@ -3726,7 +3399,7 @@
 
     move-result-object v14
 
-    const-string/jumbo v15, "to "
+    const-string v15, "to "
 
     invoke-virtual {v14, v15}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -3750,12 +3423,10 @@
     :goto_1
     move v6, v5
 
-    .line 855
     .end local v5    # "ret":I
     .restart local v6    # "ret":I
     goto :goto_0
 
-    .line 847
     .end local v6    # "ret":I
     .restart local v4    # "mFinalDHAThresholdRate":F
     .restart local v5    # "ret":I
@@ -3793,7 +3464,6 @@
 
     if-lt v0, v1, :cond_7
 
-    .line 848
     move-object/from16 v0, p0
 
     move/from16 v1, p1
@@ -3806,12 +3476,10 @@
 
     move-result v5
 
-    .line 849
     sget-boolean v7, Lcom/android/server/am/ProcessList;->DEBUG:Z
 
     if-eqz v7, :cond_7
 
-    .line 850
     const-string v7, "ActivityManager"
 
     new-instance v14, Ljava/lang/StringBuilder;
@@ -3830,7 +3498,7 @@
 
     move-result-object v14
 
-    const-string/jumbo v15, "to "
+    const-string v15, "to "
 
     invoke-virtual {v14, v15}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 

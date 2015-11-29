@@ -52,7 +52,6 @@
     .locals 3
 
     .prologue
-    .line 2178
     const/4 v0, 0x1
 
     new-array v0, v0, [Ljava/lang/String;
@@ -65,7 +64,6 @@
 
     sput-object v0, Landroid/provider/Telephony$Threads;->ID_PROJECTION:[Ljava/lang/String;
 
-    .line 2184
     const-string v0, "content://mms-sms/threadID"
 
     invoke-static {v0}, Landroid/net/Uri;->parse(Ljava/lang/String;)Landroid/net/Uri;
@@ -74,7 +72,6 @@
 
     sput-object v0, Landroid/provider/Telephony$Threads;->THREAD_ID_CONTENT_URI:Landroid/net/Uri;
 
-    .line 2190
     sget-object v0, Landroid/provider/Telephony$MmsSms;->CONTENT_URI:Landroid/net/Uri;
 
     const-string v1, "conversations"
@@ -85,7 +82,6 @@
 
     sput-object v0, Landroid/provider/Telephony$Threads;->CONTENT_URI:Landroid/net/Uri;
 
-    .line 2196
     sget-object v0, Landroid/provider/Telephony$Threads;->CONTENT_URI:Landroid/net/Uri;
 
     const-string v1, "obsolete"
@@ -103,10 +99,8 @@
     .locals 0
 
     .prologue
-    .line 2232
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 2233
     return-void
 .end method
 
@@ -116,16 +110,13 @@
     .param p1, "recipient"    # Ljava/lang/String;
 
     .prologue
-    .line 2244
     new-instance v0, Ljava/util/HashSet;
 
     invoke-direct {v0}, Ljava/util/HashSet;-><init>()V
 
-    .line 2246
     .local v0, "recipients":Ljava/util/Set;, "Ljava/util/Set<Ljava/lang/String;>;"
     invoke-interface {v0, p1}, Ljava/util/Set;->add(Ljava/lang/Object;)Z
 
-    .line 2247
     invoke-static {p0, v0}, Landroid/provider/Telephony$Threads;->getOrCreateThreadId(Landroid/content/Context;Ljava/util/Set;)J
 
     move-result-wide v2
@@ -140,16 +131,13 @@
     .param p2, "simSlot"    # I
 
     .prologue
-    .line 2258
     new-instance v0, Ljava/util/HashSet;
 
     invoke-direct {v0}, Ljava/util/HashSet;-><init>()V
 
-    .line 2260
     .local v0, "recipients":Ljava/util/Set;, "Ljava/util/Set<Ljava/lang/String;>;"
     invoke-interface {v0, p1}, Ljava/util/Set;->add(Ljava/lang/Object;)Z
 
-    .line 2261
     invoke-static {p0, v0, p2}, Landroid/provider/Telephony$Threads;->getOrCreateThreadId(Landroid/content/Context;Ljava/util/Set;I)J
 
     move-result-wide v2
@@ -172,7 +160,6 @@
     .end annotation
 
     .prologue
-    .line 2296
     .local p1, "recipients":Ljava/util/Set;, "Ljava/util/Set<Ljava/lang/String;>;"
     const/4 v0, 0x1
 
@@ -201,7 +188,6 @@
     .end annotation
 
     .prologue
-    .line 2305
     .local p1, "recipients":Ljava/util/Set;, "Ljava/util/Set<Ljava/lang/String;>;"
     const/4 v0, 0x1
 
@@ -228,7 +214,6 @@
     .end annotation
 
     .prologue
-    .line 2313
     .local p1, "recipients":Ljava/util/Set;, "Ljava/util/Set<Ljava/lang/String;>;"
     const/4 v0, 0x0
 
@@ -259,14 +244,12 @@
     .local p1, "recipients":Ljava/util/Set;, "Ljava/util/Set<Ljava/lang/String;>;"
     const/4 v4, 0x0
 
-    .line 2328
     sget-object v0, Landroid/provider/Telephony$Threads;->THREAD_ID_CONTENT_URI:Landroid/net/Uri;
 
     invoke-virtual {v0}, Landroid/net/Uri;->buildUpon()Landroid/net/Uri$Builder;
 
     move-result-object v10
 
-    .line 2331
     .local v10, "uriBuilder":Landroid/net/Uri$Builder;
     invoke-static {p1}, Landroid/provider/Telephony$Threads;->isTempRecipient(Ljava/util/Set;)Z
 
@@ -274,14 +257,11 @@
 
     if-eqz v0, :cond_0
 
-    .line 2332
     const-wide v0, 0x7ffffffffffffffeL
 
-    .line 2369
     :goto_0
     return-wide v0
 
-    .line 2336
     :cond_0
     invoke-interface {p1}, Ljava/util/Set;->iterator()Ljava/util/Iterator;
 
@@ -301,7 +281,6 @@
 
     check-cast v9, Ljava/lang/String;
 
-    .line 2337
     .local v9, "recipient":Ljava/lang/String;
     invoke-static {v9}, Landroid/provider/Telephony$Mms;->isEmailAddress(Ljava/lang/String;)Z
 
@@ -309,12 +288,10 @@
 
     if-eqz v0, :cond_1
 
-    .line 2338
     invoke-static {v9}, Landroid/provider/Telephony$Mms;->extractAddrSpec(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v9
 
-    .line 2341
     :cond_1
     const-string v0, "recipient"
 
@@ -322,7 +299,6 @@
 
     goto :goto_1
 
-    .line 2344
     .end local v9    # "recipient":Ljava/lang/String;
     :cond_2
     const-string v0, "createthread"
@@ -333,12 +309,10 @@
 
     invoke-virtual {v10, v0, v1}, Landroid/net/Uri$Builder;->appendQueryParameter(Ljava/lang/String;Ljava/lang/String;)Landroid/net/Uri$Builder;
 
-    .line 2348
     invoke-virtual {v10}, Landroid/net/Uri$Builder;->build()Landroid/net/Uri;
 
     move-result-object v2
 
-    .line 2351
     .local v2, "uri":Landroid/net/Uri;
     invoke-virtual {p0}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
 
@@ -356,11 +330,9 @@
 
     move-result-object v7
 
-    .line 2353
     .local v7, "cursor":Landroid/database/Cursor;
     if-eqz v7, :cond_4
 
-    .line 2355
     :try_start_0
     invoke-interface {v7}, Landroid/database/Cursor;->moveToFirst()Z
 
@@ -368,7 +340,6 @@
 
     if-eqz v0, :cond_3
 
-    .line 2356
     const/4 v0, 0x0
 
     invoke-interface {v7, v0}, Landroid/database/Cursor;->getLong(I)J
@@ -377,12 +348,10 @@
 
     move-result-wide v0
 
-    .line 2361
     invoke-interface {v7}, Landroid/database/Cursor;->close()V
 
     goto :goto_0
 
-    .line 2358
     :cond_3
     :try_start_1
     const-string v0, "Telephony"
@@ -393,10 +362,8 @@
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
-    .line 2361
     invoke-interface {v7}, Landroid/database/Cursor;->close()V
 
-    .line 2365
     :cond_4
     const-string v0, "Telephony"
 
@@ -424,10 +391,8 @@
 
     invoke-static {v0, v1}, Landroid/telephony/Rlog;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 2366
     if-eqz p2, :cond_5
 
-    .line 2367
     new-instance v0, Ljava/lang/IllegalArgumentException;
 
     const-string v1, "Unable to find or allocate a thread ID."
@@ -436,7 +401,6 @@
 
     throw v0
 
-    .line 2361
     :catchall_0
     move-exception v0
 
@@ -444,7 +408,6 @@
 
     throw v0
 
-    .line 2369
     :cond_5
     const-wide/16 v0, -0x1
 
@@ -464,7 +427,6 @@
     .end annotation
 
     .prologue
-    .line 2271
     .local p0, "recipients":Ljava/util/Set;, "Ljava/util/Set<Ljava/lang/String;>;"
     invoke-interface {p0}, Ljava/util/Set;->size()I
 
@@ -474,7 +436,6 @@
 
     if-ne v2, v3, :cond_0
 
-    .line 2273
     invoke-interface {p0}, Ljava/util/Set;->iterator()Ljava/util/Iterator;
 
     move-result-object v0
@@ -492,7 +453,6 @@
 
     check-cast v1, Ljava/lang/String;
 
-    .line 2274
     .local v1, "recipient":Ljava/lang/String;
     const-wide v2, 0x7ffffffffffffffeL
 
@@ -504,7 +464,6 @@
 
     move-result v2
 
-    .line 2277
     .end local v0    # "i$":Ljava/util/Iterator;
     .end local v1    # "recipient":Ljava/lang/String;
     :goto_0

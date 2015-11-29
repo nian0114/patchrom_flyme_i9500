@@ -29,21 +29,16 @@
     .param p2, "parsingTime"    # J
 
     .prologue
-    .line 426
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 427
     const-wide/16 v0, 0x1
 
     iput-wide v0, p0, Landroid/media/MediaScanner$FileParsingTime;->mNumber:J
 
-    .line 428
     iput-wide p2, p0, Landroid/media/MediaScanner$FileParsingTime;->mTotalTime:J
 
-    .line 429
     iput-object p1, p0, Landroid/media/MediaScanner$FileParsingTime;->mExtention:Ljava/lang/String;
 
-    .line 430
     return-void
 .end method
 
@@ -54,7 +49,6 @@
     .param p1, "parsingTime"    # J
 
     .prologue
-    .line 433
     iget-wide v0, p0, Landroid/media/MediaScanner$FileParsingTime;->mNumber:J
 
     const-wide/16 v2, 0x1
@@ -63,14 +57,12 @@
 
     iput-wide v0, p0, Landroid/media/MediaScanner$FileParsingTime;->mNumber:J
 
-    .line 434
     iget-wide v0, p0, Landroid/media/MediaScanner$FileParsingTime;->mTotalTime:J
 
     add-long/2addr v0, p1
 
     iput-wide v0, p0, Landroid/media/MediaScanner$FileParsingTime;->mTotalTime:J
 
-    .line 435
     return-void
 .end method
 
@@ -78,10 +70,8 @@
     .locals 6
 
     .prologue
-    .line 439
     const-wide/16 v0, 0x0
 
-    .line 440
     .local v0, "averageTime":J
     iget-wide v2, p0, Landroid/media/MediaScanner$FileParsingTime;->mNumber:J
 
@@ -97,7 +87,6 @@
 
     div-long v0, v2, v4
 
-    .line 441
     :cond_0
     new-instance v2, Ljava/lang/StringBuilder;
 

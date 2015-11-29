@@ -23,7 +23,6 @@
     .locals 0
 
     .prologue
-    .line 621
     iput-object p1, p0, Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer$7;->this$0:Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer;
 
     invoke-direct {p0}, Lcom/samsung/android/cover/CoverManager$StateListener;-><init>()V
@@ -38,7 +37,6 @@
     .param p1, "state"    # Lcom/samsung/android/cover/CoverState;
 
     .prologue
-    .line 624
     iget-object v0, p0, Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer$7;->this$0:Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer;
 
     iget-object v1, p0, Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer$7;->this$0:Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer;
@@ -50,7 +48,6 @@
 
     invoke-virtual {v0, v1}, Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer;->removeCallbacks(Ljava/lang/Runnable;)Z
 
-    .line 625
     iget-object v0, p0, Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer$7;->this$0:Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer;
 
     iget-object v1, p0, Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer$7;->this$0:Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer;
@@ -64,6 +61,5 @@
 
     invoke-virtual {v0, v1, v2, v3}, Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer;->postDelayed(Ljava/lang/Runnable;J)Z
 
-    .line 626
     return-void
 .end method

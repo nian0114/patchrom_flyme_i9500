@@ -23,7 +23,6 @@
     .locals 0
 
     .prologue
-    .line 389
     iput-object p1, p0, Lcom/android/server/DrmEventService$1;->this$0:Lcom/android/server/DrmEventService;
 
     invoke-direct {p0}, Landroid/content/BroadcastReceiver;-><init>()V
@@ -39,18 +38,15 @@
     .param p2, "intent"    # Landroid/content/Intent;
 
     .prologue
-    .line 392
     invoke-virtual {p2}, Landroid/content/Intent;->getAction()Ljava/lang/String;
 
     move-result-object v0
 
-    .line 393
     .local v0, "action":Ljava/lang/String;
     sget-boolean v3, Lcom/android/server/DrmEventService;->isLogEnabled:Z
 
     if-eqz v3, :cond_0
 
-    .line 394
     const-string v3, "DrmEventService"
 
     new-instance v4, Ljava/lang/StringBuilder;
@@ -73,7 +69,6 @@
 
     invoke-static {v3, v4}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 396
     :cond_0
     const-string v3, "android.intent.action.HDMI_PLUGGED"
 
@@ -83,8 +78,7 @@
 
     if-eqz v3, :cond_3
 
-    .line 398
-    const-string/jumbo v3, "state"
+    const-string v3, "state"
 
     const/4 v4, 0x0
 
@@ -92,13 +86,11 @@
 
     move-result v1
 
-    .line 400
     .local v1, "isHDMIPlugged":Z
     sget-boolean v3, Lcom/android/server/DrmEventService;->isLogEnabled:Z
 
     if-eqz v3, :cond_1
 
-    .line 401
     const-string v3, "DrmEventService"
 
     new-instance v4, Ljava/lang/StringBuilder;
@@ -121,11 +113,9 @@
 
     invoke-static {v3, v4}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 403
     :cond_1
     if-eqz v1, :cond_4
 
-    .line 404
     new-instance v2, Landroid/drm/DrmInfoRequest;
 
     const/16 v3, 0xb
@@ -134,7 +124,6 @@
 
     invoke-direct {v2, v3, v4}, Landroid/drm/DrmInfoRequest;-><init>(ILjava/lang/String;)V
 
-    .line 405
     .local v2, "request":Landroid/drm/DrmInfoRequest;
     const-string v3, "dummy"
 
@@ -142,19 +131,16 @@
 
     invoke-virtual {v2, v3, v4}, Landroid/drm/DrmInfoRequest;->put(Ljava/lang/String;Ljava/lang/Object;)V
 
-    .line 406
     sget-boolean v3, Lcom/android/server/DrmEventService;->isLogEnabled:Z
 
     if-eqz v3, :cond_2
 
-    .line 407
     const-string v3, "DrmEventService"
 
     const-string v4, "TVOUT intent is sent to Plugin"
 
     invoke-static {v3, v4}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 408
     :cond_2
     iget-object v3, p0, Lcom/android/server/DrmEventService$1;->this$0:Lcom/android/server/DrmEventService;
 
@@ -162,14 +148,12 @@
 
     invoke-virtual {v3, v2}, Landroid/drm/DrmManagerClient;->acquireDrmInfo(Landroid/drm/DrmInfoRequest;)Landroid/drm/DrmInfo;
 
-    .line 419
     .end local v1    # "isHDMIPlugged":Z
     .end local v2    # "request":Landroid/drm/DrmInfoRequest;
     :cond_3
     :goto_0
     return-void
 
-    .line 411
     .restart local v1    # "isHDMIPlugged":Z
     :cond_4
     new-instance v2, Landroid/drm/DrmInfoRequest;
@@ -180,7 +164,6 @@
 
     invoke-direct {v2, v3, v4}, Landroid/drm/DrmInfoRequest;-><init>(ILjava/lang/String;)V
 
-    .line 412
     .restart local v2    # "request":Landroid/drm/DrmInfoRequest;
     const-string v3, "dummy1"
 
@@ -188,19 +171,16 @@
 
     invoke-virtual {v2, v3, v4}, Landroid/drm/DrmInfoRequest;->put(Ljava/lang/String;Ljava/lang/Object;)V
 
-    .line 413
     sget-boolean v3, Lcom/android/server/DrmEventService;->isLogEnabled:Z
 
     if-eqz v3, :cond_5
 
-    .line 414
     const-string v3, "DrmEventService"
 
     const-string v4, "TVOUT Unplugged"
 
     invoke-static {v3, v4}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 415
     :cond_5
     iget-object v3, p0, Lcom/android/server/DrmEventService$1;->this$0:Lcom/android/server/DrmEventService;
 

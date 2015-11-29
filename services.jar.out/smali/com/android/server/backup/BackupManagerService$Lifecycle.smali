@@ -20,17 +20,14 @@
     .param p1, "context"    # Landroid/content/Context;
 
     .prologue
-    .line 362
     invoke-direct {p0, p1}, Lcom/android/server/SystemService;-><init>(Landroid/content/Context;)V
 
-    .line 363
     new-instance v0, Lcom/android/server/backup/BackupManagerService;
 
     invoke-direct {v0, p1}, Lcom/android/server/backup/BackupManagerService;-><init>(Landroid/content/Context;)V
 
     sput-object v0, Lcom/android/server/backup/BackupManagerService;->sInstance:Lcom/android/server/backup/BackupManagerService;
 
-    .line 364
     return-void
 .end method
 
@@ -43,12 +40,10 @@
     .prologue
     const/4 v0, 0x0
 
-    .line 373
     const/16 v2, 0x258
 
     if-ne p1, v2, :cond_1
 
-    .line 374
     sget-object v2, Lcom/android/server/backup/BackupManagerService;->sInstance:Lcom/android/server/backup/BackupManagerService;
 
     iget-object v2, v2, Lcom/android/server/backup/BackupManagerService;->mContext:Landroid/content/Context;
@@ -57,7 +52,6 @@
 
     move-result-object v1
 
-    .line 375
     .local v1, "r":Landroid/content/ContentResolver;
     const-string v2, "backup_enabled"
 
@@ -69,14 +63,12 @@
 
     const/4 v0, 0x1
 
-    .line 377
     .local v0, "areEnabled":Z
     :cond_0
     sget-object v2, Lcom/android/server/backup/BackupManagerService;->sInstance:Lcom/android/server/backup/BackupManagerService;
 
     invoke-virtual {v2, v0}, Lcom/android/server/backup/BackupManagerService;->setBackupEnabled(Z)V
 
-    .line 379
     .end local v0    # "areEnabled":Z
     .end local v1    # "r":Landroid/content/ContentResolver;
     :cond_1
@@ -87,13 +79,11 @@
     .locals 2
 
     .prologue
-    .line 368
     const-string v0, "backup"
 
     sget-object v1, Lcom/android/server/backup/BackupManagerService;->sInstance:Lcom/android/server/backup/BackupManagerService;
 
     invoke-virtual {p0, v0, v1}, Lcom/android/server/backup/BackupManagerService$Lifecycle;->publishBinderService(Ljava/lang/String;Landroid/os/IBinder;)V
 
-    .line 369
     return-void
 .end method

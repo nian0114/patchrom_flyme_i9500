@@ -23,7 +23,6 @@
     .locals 0
 
     .prologue
-    .line 2786
     iput-object p1, p0, Lcom/android/server/enterprise/vpn/knoxvpn/KnoxVpnEngineService$VpnReceiver;->this$0:Lcom/android/server/enterprise/vpn/knoxvpn/KnoxVpnEngineService;
 
     invoke-direct {p0}, Landroid/content/BroadcastReceiver;-><init>()V
@@ -47,12 +46,10 @@
 
     const/4 v9, -0x1
 
-    .line 2789
     invoke-virtual {p2}, Landroid/content/Intent;->getAction()Ljava/lang/String;
 
     move-result-object v0
 
-    .line 2790
     .local v0, "action":Ljava/lang/String;
     const-string v6, "KnoxVpnEngineService"
 
@@ -76,19 +73,16 @@
 
     invoke-static {v6, v7}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 2792
     invoke-virtual {p0}, Lcom/android/server/enterprise/vpn/knoxvpn/KnoxVpnEngineService$VpnReceiver;->isInitialStickyBroadcast()Z
 
     move-result v6
 
     if-nez v6, :cond_1
 
-    .line 2793
     new-instance v2, Landroid/os/Bundle;
 
     invoke-direct {v2}, Landroid/os/Bundle;-><init>()V
 
-    .line 2795
     .local v2, "map":Landroid/os/Bundle;
     const-string v6, "com.sec.knox.migrationagent.START_VPN_MIGRATION"
 
@@ -98,14 +92,12 @@
 
     if-eqz v6, :cond_6
 
-    .line 2796
     const-string v6, "KnoxVpnEngineService"
 
     const-string v7, "KnoxVpnMigration : Receive a migration intent"
 
     invoke-static {v6, v7}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 2797
     invoke-static {}, Lcom/android/server/enterprise/vpn/knoxvpn/KnoxVpnMigration;->isFail()Z
 
     move-result v6
@@ -118,19 +110,16 @@
 
     if-eqz v6, :cond_4
 
-    .line 2798
     const-string v6, "KnoxVpnEngineService"
 
     const-string v7, "KnoxVpnMigration : Have to do a migration"
 
     invoke-static {v6, v7}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 2799
     invoke-virtual {p2}, Landroid/content/Intent;->getExtras()Landroid/os/Bundle;
 
     move-result-object v2
 
-    .line 2801
     # getter for: Lcom/android/server/enterprise/vpn/knoxvpn/KnoxVpnEngineService;->mMigration:Lcom/android/server/enterprise/vpn/knoxvpn/KnoxVpnMigration;
     invoke-static {}, Lcom/android/server/enterprise/vpn/knoxvpn/KnoxVpnEngineService;->access$900()Lcom/android/server/enterprise/vpn/knoxvpn/KnoxVpnMigration;
 
@@ -138,7 +127,6 @@
 
     if-nez v6, :cond_0
 
-    .line 2802
     new-instance v6, Lcom/android/server/enterprise/vpn/knoxvpn/KnoxVpnMigration;
 
     iget-object v7, p0, Lcom/android/server/enterprise/vpn/knoxvpn/KnoxVpnEngineService$VpnReceiver;->this$0:Lcom/android/server/enterprise/vpn/knoxvpn/KnoxVpnEngineService;
@@ -165,7 +153,6 @@
     # setter for: Lcom/android/server/enterprise/vpn/knoxvpn/KnoxVpnEngineService;->mMigration:Lcom/android/server/enterprise/vpn/knoxvpn/KnoxVpnMigration;
     invoke-static {v6}, Lcom/android/server/enterprise/vpn/knoxvpn/KnoxVpnEngineService;->access$902(Lcom/android/server/enterprise/vpn/knoxvpn/KnoxVpnMigration;)Lcom/android/server/enterprise/vpn/knoxvpn/KnoxVpnMigration;
 
-    .line 2804
     :cond_0
     # getter for: Lcom/android/server/enterprise/vpn/knoxvpn/KnoxVpnEngineService;->mMigration:Lcom/android/server/enterprise/vpn/knoxvpn/KnoxVpnMigration;
     invoke-static {}, Lcom/android/server/enterprise/vpn/knoxvpn/KnoxVpnEngineService;->access$900()Lcom/android/server/enterprise/vpn/knoxvpn/KnoxVpnMigration;
@@ -178,20 +165,17 @@
 
     if-eqz v6, :cond_2
 
-    .line 2805
     const-string v6, "KnoxVpnEngineService"
 
     const-string v7, "KnoxVpnMigration : have received a multiple request for a migration"
 
     invoke-static {v6, v7}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 2893
     .end local v2    # "map":Landroid/os/Bundle;
     :cond_1
     :goto_0
     return-void
 
-    .line 2808
     .restart local v2    # "map":Landroid/os/Bundle;
     :cond_2
     const-string v6, "KnoxVpnEngineService"
@@ -225,7 +209,6 @@
 
     invoke-static {v6, v7}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 2809
     # getter for: Lcom/android/server/enterprise/vpn/knoxvpn/KnoxVpnEngineService;->mMigration:Lcom/android/server/enterprise/vpn/knoxvpn/KnoxVpnMigration;
     invoke-static {}, Lcom/android/server/enterprise/vpn/knoxvpn/KnoxVpnEngineService;->access$900()Lcom/android/server/enterprise/vpn/knoxvpn/KnoxVpnMigration;
 
@@ -243,7 +226,6 @@
 
     if-ne v6, v7, :cond_3
 
-    .line 2810
     # getter for: Lcom/android/server/enterprise/vpn/knoxvpn/KnoxVpnEngineService;->mMigration:Lcom/android/server/enterprise/vpn/knoxvpn/KnoxVpnMigration;
     invoke-static {}, Lcom/android/server/enterprise/vpn/knoxvpn/KnoxVpnEngineService;->access$900()Lcom/android/server/enterprise/vpn/knoxvpn/KnoxVpnMigration;
 
@@ -253,7 +235,6 @@
 
     goto :goto_0
 
-    .line 2813
     :cond_3
     new-instance v6, Lcom/android/server/enterprise/vpn/knoxvpn/KnoxVpnMigration;
 
@@ -281,7 +262,6 @@
     # setter for: Lcom/android/server/enterprise/vpn/knoxvpn/KnoxVpnEngineService;->mMigration:Lcom/android/server/enterprise/vpn/knoxvpn/KnoxVpnMigration;
     invoke-static {v6}, Lcom/android/server/enterprise/vpn/knoxvpn/KnoxVpnEngineService;->access$902(Lcom/android/server/enterprise/vpn/knoxvpn/KnoxVpnMigration;)Lcom/android/server/enterprise/vpn/knoxvpn/KnoxVpnMigration;
 
-    .line 2814
     # getter for: Lcom/android/server/enterprise/vpn/knoxvpn/KnoxVpnEngineService;->mMigration:Lcom/android/server/enterprise/vpn/knoxvpn/KnoxVpnMigration;
     invoke-static {}, Lcom/android/server/enterprise/vpn/knoxvpn/KnoxVpnEngineService;->access$900()Lcom/android/server/enterprise/vpn/knoxvpn/KnoxVpnMigration;
 
@@ -291,7 +271,6 @@
 
     goto :goto_0
 
-    .line 2820
     :cond_4
     # getter for: Lcom/android/server/enterprise/vpn/knoxvpn/KnoxVpnEngineService;->mMigration:Lcom/android/server/enterprise/vpn/knoxvpn/KnoxVpnMigration;
     invoke-static {}, Lcom/android/server/enterprise/vpn/knoxvpn/KnoxVpnEngineService;->access$900()Lcom/android/server/enterprise/vpn/knoxvpn/KnoxVpnMigration;
@@ -300,7 +279,6 @@
 
     if-nez v6, :cond_5
 
-    .line 2821
     new-instance v6, Lcom/android/server/enterprise/vpn/knoxvpn/KnoxVpnMigration;
 
     iget-object v7, p0, Lcom/android/server/enterprise/vpn/knoxvpn/KnoxVpnEngineService$VpnReceiver;->this$0:Lcom/android/server/enterprise/vpn/knoxvpn/KnoxVpnEngineService;
@@ -327,7 +305,6 @@
     # setter for: Lcom/android/server/enterprise/vpn/knoxvpn/KnoxVpnEngineService;->mMigration:Lcom/android/server/enterprise/vpn/knoxvpn/KnoxVpnMigration;
     invoke-static {v6}, Lcom/android/server/enterprise/vpn/knoxvpn/KnoxVpnEngineService;->access$902(Lcom/android/server/enterprise/vpn/knoxvpn/KnoxVpnMigration;)Lcom/android/server/enterprise/vpn/knoxvpn/KnoxVpnMigration;
 
-    .line 2823
     :cond_5
     # getter for: Lcom/android/server/enterprise/vpn/knoxvpn/KnoxVpnEngineService;->mMigration:Lcom/android/server/enterprise/vpn/knoxvpn/KnoxVpnMigration;
     invoke-static {}, Lcom/android/server/enterprise/vpn/knoxvpn/KnoxVpnEngineService;->access$900()Lcom/android/server/enterprise/vpn/knoxvpn/KnoxVpnMigration;
@@ -340,7 +317,6 @@
 
     goto :goto_0
 
-    .line 2828
     :cond_6
     const-string v6, "android.intent.action.PACKAGE_ADDED"
 
@@ -350,12 +326,10 @@
 
     if-eqz v6, :cond_a
 
-    .line 2829
     invoke-virtual {p2}, Landroid/content/Intent;->getData()Landroid/net/Uri;
 
     move-result-object v5
 
-    .line 2830
     .local v5, "uri":Landroid/net/Uri;
     if-eqz v5, :cond_7
 
@@ -363,7 +337,6 @@
 
     move-result-object v3
 
-    .line 2831
     .local v3, "packageName":Ljava/lang/String;
     :cond_7
     const-string v6, "android.intent.extra.REPLACING"
@@ -372,7 +345,6 @@
 
     move-result v1
 
-    .line 2832
     .local v1, "extra_replacing":Z
     # getter for: Lcom/android/server/enterprise/vpn/knoxvpn/KnoxVpnEngineService;->DBG:Z
     invoke-static {}, Lcom/android/server/enterprise/vpn/knoxvpn/KnoxVpnEngineService;->access$000()Z
@@ -403,7 +375,6 @@
 
     invoke-static {v6, v7}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 2833
     :cond_8
     const-string v6, "android.intent.extra.UID"
 
@@ -411,11 +382,9 @@
 
     move-result v4
 
-    .line 2834
     .local v4, "uid":I
     if-le v4, v9, :cond_1
 
-    .line 2835
     # getter for: Lcom/android/server/enterprise/vpn/knoxvpn/KnoxVpnEngineService;->DBG:Z
     invoke-static {}, Lcom/android/server/enterprise/vpn/knoxvpn/KnoxVpnEngineService;->access$000()Z
 
@@ -445,23 +414,19 @@
 
     invoke-static {v6, v7}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 2836
     :cond_9
-    const-string/jumbo v6, "uid"
+    const-string v6, "uid"
 
     invoke-virtual {v2, v6, v4}, Landroid/os/Bundle;->putInt(Ljava/lang/String;I)V
 
-    .line 2837
-    const-string/jumbo v6, "package"
+    const-string v6, "package"
 
     invoke-virtual {v2, v6, v3}, Landroid/os/Bundle;->putString(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 2838
     const-string v6, "new_install_or_update"
 
     invoke-virtual {v2, v6, v1}, Landroid/os/Bundle;->putBoolean(Ljava/lang/String;Z)V
 
-    .line 2839
     iget-object v6, p0, Lcom/android/server/enterprise/vpn/knoxvpn/KnoxVpnEngineService$VpnReceiver;->this$0:Lcom/android/server/enterprise/vpn/knoxvpn/KnoxVpnEngineService;
 
     const/4 v7, 0x2
@@ -471,7 +436,6 @@
 
     goto/16 :goto_0
 
-    .line 2842
     .end local v1    # "extra_replacing":Z
     .end local v3    # "packageName":Ljava/lang/String;
     .end local v4    # "uid":I
@@ -485,12 +449,10 @@
 
     if-eqz v6, :cond_d
 
-    .line 2843
     invoke-virtual {p2}, Landroid/content/Intent;->getData()Landroid/net/Uri;
 
     move-result-object v5
 
-    .line 2844
     .restart local v5    # "uri":Landroid/net/Uri;
     if-eqz v5, :cond_b
 
@@ -498,7 +460,6 @@
 
     move-result-object v3
 
-    .line 2845
     .restart local v3    # "packageName":Ljava/lang/String;
     :cond_b
     const-string v6, "android.intent.extra.UID"
@@ -507,7 +468,6 @@
 
     move-result v4
 
-    .line 2846
     .restart local v4    # "uid":I
     const-string v6, "android.intent.extra.REPLACING"
 
@@ -515,7 +475,6 @@
 
     move-result v1
 
-    .line 2847
     .restart local v1    # "extra_replacing":Z
     # getter for: Lcom/android/server/enterprise/vpn/knoxvpn/KnoxVpnEngineService;->DBG:Z
     invoke-static {}, Lcom/android/server/enterprise/vpn/knoxvpn/KnoxVpnEngineService;->access$000()Z
@@ -546,23 +505,19 @@
 
     invoke-static {v6, v7}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 2848
     :cond_c
-    const-string/jumbo v6, "uid"
+    const-string v6, "uid"
 
     invoke-virtual {v2, v6, v4}, Landroid/os/Bundle;->putInt(Ljava/lang/String;I)V
 
-    .line 2849
-    const-string/jumbo v6, "package"
+    const-string v6, "package"
 
     invoke-virtual {v2, v6, v3}, Landroid/os/Bundle;->putString(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 2850
     const-string v6, "new_install_or_update"
 
     invoke-virtual {v2, v6, v1}, Landroid/os/Bundle;->putBoolean(Ljava/lang/String;Z)V
 
-    .line 2851
     iget-object v6, p0, Lcom/android/server/enterprise/vpn/knoxvpn/KnoxVpnEngineService$VpnReceiver;->this$0:Lcom/android/server/enterprise/vpn/knoxvpn/KnoxVpnEngineService;
 
     const/4 v7, 0x3
@@ -572,7 +527,6 @@
 
     goto/16 :goto_0
 
-    .line 2853
     .end local v1    # "extra_replacing":Z
     .end local v3    # "packageName":Ljava/lang/String;
     .end local v4    # "uid":I
@@ -586,12 +540,10 @@
 
     if-eqz v6, :cond_e
 
-    .line 2854
     invoke-virtual {p2}, Landroid/content/Intent;->getExtras()Landroid/os/Bundle;
 
     move-result-object v2
 
-    .line 2855
     iget-object v6, p0, Lcom/android/server/enterprise/vpn/knoxvpn/KnoxVpnEngineService$VpnReceiver;->this$0:Lcom/android/server/enterprise/vpn/knoxvpn/KnoxVpnEngineService;
 
     const/16 v7, 0x9
@@ -601,7 +553,6 @@
 
     goto/16 :goto_0
 
-    .line 2857
     :cond_e
     const-string v6, "android.intent.action.USER_SWITCHED"
 
@@ -611,12 +562,10 @@
 
     if-eqz v6, :cond_f
 
-    .line 2858
     invoke-virtual {p2}, Landroid/content/Intent;->getExtras()Landroid/os/Bundle;
 
     move-result-object v2
 
-    .line 2859
     iget-object v6, p0, Lcom/android/server/enterprise/vpn/knoxvpn/KnoxVpnEngineService$VpnReceiver;->this$0:Lcom/android/server/enterprise/vpn/knoxvpn/KnoxVpnEngineService;
 
     const/16 v7, 0xd
@@ -626,7 +575,6 @@
 
     goto/16 :goto_0
 
-    .line 2861
     :cond_f
     const-string v6, "android.net.conn.CONNECTIVITY_CHANGE"
 
@@ -636,12 +584,10 @@
 
     if-eqz v6, :cond_10
 
-    .line 2862
     invoke-virtual {p2}, Landroid/content/Intent;->getExtras()Landroid/os/Bundle;
 
     move-result-object v2
 
-    .line 2863
     iget-object v6, p0, Lcom/android/server/enterprise/vpn/knoxvpn/KnoxVpnEngineService$VpnReceiver;->this$0:Lcom/android/server/enterprise/vpn/knoxvpn/KnoxVpnEngineService;
 
     const/4 v7, 0x4
@@ -651,7 +597,6 @@
 
     goto/16 :goto_0
 
-    .line 2866
     :cond_10
     const-string v6, "android.intent.action.USER_REMOVED"
 
@@ -661,12 +606,10 @@
 
     if-eqz v6, :cond_11
 
-    .line 2867
     invoke-virtual {p2}, Landroid/content/Intent;->getExtras()Landroid/os/Bundle;
 
     move-result-object v2
 
-    .line 2868
     iget-object v6, p0, Lcom/android/server/enterprise/vpn/knoxvpn/KnoxVpnEngineService$VpnReceiver;->this$0:Lcom/android/server/enterprise/vpn/knoxvpn/KnoxVpnEngineService;
 
     const/4 v7, 0x6
@@ -676,7 +619,6 @@
 
     goto/16 :goto_0
 
-    .line 2871
     :cond_11
     const-string v6, "com.sec.enterprise.mdm.services.vpn.INTERFACE_STATUS"
 
@@ -686,12 +628,10 @@
 
     if-eqz v6, :cond_12
 
-    .line 2872
     invoke-virtual {p2}, Landroid/content/Intent;->getExtras()Landroid/os/Bundle;
 
     move-result-object v2
 
-    .line 2873
     iget-object v6, p0, Lcom/android/server/enterprise/vpn/knoxvpn/KnoxVpnEngineService$VpnReceiver;->this$0:Lcom/android/server/enterprise/vpn/knoxvpn/KnoxVpnEngineService;
 
     # invokes: Lcom/android/server/enterprise/vpn/knoxvpn/KnoxVpnEngineService;->sendMessageToHandler(ILandroid/os/Bundle;)V
@@ -699,7 +639,6 @@
 
     goto/16 :goto_0
 
-    .line 2885
     :cond_12
     const-string v6, "com.sec.enterprise.mdm.services.vpn.RETRY"
 
@@ -709,12 +648,10 @@
 
     if-eqz v6, :cond_13
 
-    .line 2886
     invoke-virtual {p2}, Landroid/content/Intent;->getExtras()Landroid/os/Bundle;
 
     move-result-object v2
 
-    .line 2887
     iget-object v6, p0, Lcom/android/server/enterprise/vpn/knoxvpn/KnoxVpnEngineService$VpnReceiver;->this$0:Lcom/android/server/enterprise/vpn/knoxvpn/KnoxVpnEngineService;
 
     const/16 v7, 0xb
@@ -724,7 +661,6 @@
 
     goto/16 :goto_0
 
-    .line 2888
     :cond_13
     const-string v6, "enterprise.container.admin.changed"
 
@@ -734,7 +670,6 @@
 
     if-eqz v6, :cond_1
 
-    .line 2889
     const-string v6, "android.intent.extra.user_handle"
 
     const-string v7, "containerid"
@@ -745,7 +680,6 @@
 
     invoke-virtual {v2, v6, v7}, Landroid/os/Bundle;->putInt(Ljava/lang/String;I)V
 
-    .line 2890
     iget-object v6, p0, Lcom/android/server/enterprise/vpn/knoxvpn/KnoxVpnEngineService$VpnReceiver;->this$0:Lcom/android/server/enterprise/vpn/knoxvpn/KnoxVpnEngineService;
 
     const/16 v7, 0xc

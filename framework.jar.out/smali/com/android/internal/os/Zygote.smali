@@ -32,7 +32,6 @@
     .locals 1
 
     .prologue
-    .line 54
     new-instance v0, Ldalvik/system/ZygoteHooks;
 
     invoke-direct {v0}, Ldalvik/system/ZygoteHooks;-><init>()V
@@ -46,7 +45,6 @@
     .locals 0
 
     .prologue
-    .line 56
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -58,7 +56,6 @@
     .param p1, "args"    # [Ljava/lang/String;
 
     .prologue
-    .line 196
     move-object v1, p1
 
     .local v1, "arr$":[Ljava/lang/String;
@@ -73,7 +70,6 @@
 
     aget-object v0, v1, v2
 
-    .line 197
     .local v0, "arg":Ljava/lang/String;
     const-string v4, " \'"
 
@@ -97,12 +93,10 @@
 
     invoke-virtual {v4, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 196
     add-int/lit8 v2, v2, 0x1
 
     goto :goto_0
 
-    .line 199
     .end local v0    # "arg":Ljava/lang/String;
     :cond_0
     return-void
@@ -114,23 +108,19 @@
     .param p1, "instructionSet"    # Ljava/lang/String;
 
     .prologue
-    .line 164
     invoke-static {}, Landroid/os/SystemClock;->elapsedRealtime()J
 
     move-result-wide v0
 
-    .line 165
     .local v0, "startTime":J
     sget-object v2, Lcom/android/internal/os/Zygote;->VM_HOOKS:Ldalvik/system/ZygoteHooks;
 
     invoke-virtual {v2, p0, p1}, Ldalvik/system/ZygoteHooks;->postForkChild(ILjava/lang/String;)V
 
-    .line 166
     const-string v2, "Zygote.callPostForkChildHooks"
 
     invoke-static {v0, v1, v2}, Lcom/android/internal/os/Zygote;->checkTime(JLjava/lang/String;)V
 
-    .line 167
     return-void
 .end method
 
@@ -140,12 +130,10 @@
     .param p2, "where"    # Ljava/lang/String;
 
     .prologue
-    .line 121
     invoke-static {}, Landroid/os/SystemClock;->elapsedRealtime()J
 
     move-result-wide v0
 
-    .line 122
     .local v0, "now":J
     sub-long v2, v0, p0
 
@@ -155,7 +143,6 @@
 
     if-lez v2, :cond_0
 
-    .line 124
     const-string v2, "Zygote"
 
     new-instance v3, Ljava/lang/StringBuilder;
@@ -174,7 +161,7 @@
 
     move-result-object v3
 
-    const-string/jumbo v4, "ms so far, now at "
+    const-string v4, "ms so far, now at "
 
     invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -190,7 +177,6 @@
 
     invoke-static {v2, v3}, Landroid/util/Slog;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 126
     :cond_0
     return-void
 .end method
@@ -202,7 +188,6 @@
     .prologue
     const/4 v3, 0x0
 
-    .line 178
     const/4 v2, 0x3
 
     new-array v0, v2, [Ljava/lang/String;
@@ -221,7 +206,6 @@
 
     aput-object p0, v0, v2
 
-    .line 180
     .local v0, "args":[Ljava/lang/String;
     const/4 v2, 0x0
 
@@ -232,14 +216,11 @@
     :try_end_0
     .catch Landroid/system/ErrnoException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 184
     return-void
 
-    .line 181
     :catch_0
     move-exception v1
 
-    .line 182
     .local v1, "e":Landroid/system/ErrnoException;
     new-instance v2, Ljava/lang/RuntimeException;
 
@@ -265,51 +246,41 @@
     .param p12, "appDataDir"    # Ljava/lang/String;
 
     .prologue
-    .line 93
     invoke-static {}, Landroid/os/SystemClock;->elapsedRealtime()J
 
     move-result-wide v2
 
-    .line 94
     .local v2, "startTime":J
     sget-object v1, Lcom/android/internal/os/Zygote;->VM_HOOKS:Ldalvik/system/ZygoteHooks;
 
     invoke-virtual {v1}, Ldalvik/system/ZygoteHooks;->preFork()V
 
-    .line 95
     const-string v1, "Zygote.preFork"
 
     invoke-static {v2, v3, v1}, Lcom/android/internal/os/Zygote;->checkTime(JLjava/lang/String;)V
 
-    .line 96
     invoke-static/range {p0 .. p12}, Lcom/android/internal/os/Zygote;->nativeForkAndSpecialize(II[II[[IILjava/lang/String;IILjava/lang/String;[ILjava/lang/String;Ljava/lang/String;)I
 
     move-result v0
 
-    .line 99
     .local v0, "pid":I
     const-string v1, "Zygote.nativeForkAndSpecialize"
 
     invoke-static {v2, v3, v1}, Lcom/android/internal/os/Zygote;->checkTime(JLjava/lang/String;)V
 
-    .line 102
     if-nez v0, :cond_0
 
-    .line 103
     sget-object v1, Lcom/android/internal/os/Zygote;->VM_HOOKS:Ldalvik/system/ZygoteHooks;
 
     invoke-virtual {v1}, Ldalvik/system/ZygoteHooks;->postForkCommonInThread()V
 
-    .line 107
     :goto_0
     const-string v1, "Zygote.postForkCommon"
 
     invoke-static {v2, v3, v1}, Lcom/android/internal/os/Zygote;->checkTime(JLjava/lang/String;)V
 
-    .line 108
     return v0
 
-    .line 105
     :cond_0
     sget-object v1, Lcom/android/internal/os/Zygote;->VM_HOOKS:Ldalvik/system/ZygoteHooks;
 
@@ -329,23 +300,19 @@
     .param p7, "effectiveCapabilities"    # J
 
     .prologue
-    .line 153
     sget-object v1, Lcom/android/internal/os/Zygote;->VM_HOOKS:Ldalvik/system/ZygoteHooks;
 
     invoke-virtual {v1}, Ldalvik/system/ZygoteHooks;->preFork()V
 
-    .line 154
     invoke-static/range {p0 .. p8}, Lcom/android/internal/os/Zygote;->nativeForkSystemServer(II[II[[IJJ)I
 
     move-result v0
 
-    .line 156
     .local v0, "pid":I
     sget-object v1, Lcom/android/internal/os/Zygote;->VM_HOOKS:Ldalvik/system/ZygoteHooks;
 
     invoke-virtual {v1}, Ldalvik/system/ZygoteHooks;->postForkCommon()V
 
-    .line 157
     return v0
 .end method
 

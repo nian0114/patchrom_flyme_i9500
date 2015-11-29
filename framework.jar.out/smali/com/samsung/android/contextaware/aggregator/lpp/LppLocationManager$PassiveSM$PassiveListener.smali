@@ -26,7 +26,6 @@
     .locals 0
 
     .prologue
-    .line 1440
     iput-object p1, p0, Lcom/samsung/android/contextaware/aggregator/lpp/LppLocationManager$PassiveSM$PassiveListener;->this$1:Lcom/samsung/android/contextaware/aggregator/lpp/LppLocationManager$PassiveSM;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -40,7 +39,6 @@
     .param p2, "x1"    # Lcom/samsung/android/contextaware/aggregator/lpp/LppLocationManager$1;
 
     .prologue
-    .line 1440
     invoke-direct {p0, p1}, Lcom/samsung/android/contextaware/aggregator/lpp/LppLocationManager$PassiveSM$PassiveListener;-><init>(Lcom/samsung/android/contextaware/aggregator/lpp/LppLocationManager$PassiveSM;)V
 
     return-void
@@ -53,14 +51,11 @@
     .param p1, "loc"    # Landroid/location/Location;
 
     .prologue
-    .line 1445
     if-nez p1, :cond_0
 
-    .line 1451
     :goto_0
     return-void
 
-    .line 1448
     :cond_0
     const-string v0, "LppLocationManager"
 
@@ -88,7 +83,6 @@
 
     invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1449
     iget-object v0, p0, Lcom/samsung/android/contextaware/aggregator/lpp/LppLocationManager$PassiveSM$PassiveListener;->this$1:Lcom/samsung/android/contextaware/aggregator/lpp/LppLocationManager$PassiveSM;
 
     iget-object v0, v0, Lcom/samsung/android/contextaware/aggregator/lpp/LppLocationManager$PassiveSM;->this$0:Lcom/samsung/android/contextaware/aggregator/lpp/LppLocationManager;
@@ -110,7 +104,6 @@
 
     invoke-virtual {v0, v1, v2}, Lcom/samsung/android/contextaware/aggregator/lpp/LppLocationManager$PassiveSM;->sendMessage(ILjava/lang/Object;)V
 
-    .line 1450
     iget-object v0, p0, Lcom/samsung/android/contextaware/aggregator/lpp/LppLocationManager$PassiveSM$PassiveListener;->this$1:Lcom/samsung/android/contextaware/aggregator/lpp/LppLocationManager$PassiveSM;
 
     iget-object v0, v0, Lcom/samsung/android/contextaware/aggregator/lpp/LppLocationManager$PassiveSM;->this$0:Lcom/samsung/android/contextaware/aggregator/lpp/LppLocationManager;
@@ -136,7 +129,6 @@
     .param p1, "arg0"    # Ljava/lang/String;
 
     .prologue
-    .line 1457
     return-void
 .end method
 
@@ -145,7 +137,6 @@
     .param p1, "arg0"    # Ljava/lang/String;
 
     .prologue
-    .line 1463
     return-void
 .end method
 
@@ -156,6 +147,5 @@
     .param p3, "arg2"    # Landroid/os/Bundle;
 
     .prologue
-    .line 1469
     return-void
 .end method

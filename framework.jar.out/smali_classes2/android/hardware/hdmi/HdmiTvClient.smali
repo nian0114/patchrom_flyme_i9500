@@ -25,10 +25,8 @@
     .param p1, "service"    # Landroid/hardware/hdmi/IHdmiControlService;
 
     .prologue
-    .line 44
     invoke-direct {p0, p1}, Landroid/hardware/hdmi/HdmiClient;-><init>(Landroid/hardware/hdmi/IHdmiControlService;)V
 
-    .line 45
     return-void
 .end method
 
@@ -37,10 +35,8 @@
     .param p1, "sourceType"    # I
 
     .prologue
-    .line 305
     packed-switch p1, :pswitch_data_0
 
-    .line 311
     new-instance v0, Ljava/lang/IllegalArgumentException;
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -65,11 +61,9 @@
 
     throw v0
 
-    .line 313
     :pswitch_0
     return-void
 
-    .line 305
     nop
 
     :pswitch_data_0
@@ -85,7 +79,6 @@
     .param p0, "service"    # Landroid/hardware/hdmi/IHdmiControlService;
 
     .prologue
-    .line 50
     new-instance v0, Landroid/hardware/hdmi/HdmiTvClient;
 
     invoke-direct {v0, p0}, Landroid/hardware/hdmi/HdmiTvClient;-><init>(Landroid/hardware/hdmi/IHdmiControlService;)V
@@ -98,7 +91,6 @@
     .param p0, "callback"    # Landroid/hardware/hdmi/HdmiTvClient$SelectCallback;
 
     .prologue
-    .line 89
     new-instance v0, Landroid/hardware/hdmi/HdmiTvClient$1;
 
     invoke-direct {v0, p0}, Landroid/hardware/hdmi/HdmiTvClient$1;-><init>(Landroid/hardware/hdmi/HdmiTvClient$SelectCallback;)V
@@ -111,7 +103,6 @@
     .param p0, "listener"    # Landroid/hardware/hdmi/HdmiTvClient$InputChangeListener;
 
     .prologue
-    .line 144
     new-instance v0, Landroid/hardware/hdmi/HdmiTvClient$2;
 
     invoke-direct {v0, p0}, Landroid/hardware/hdmi/HdmiTvClient$2;-><init>(Landroid/hardware/hdmi/HdmiTvClient$InputChangeListener;)V
@@ -124,7 +115,6 @@
     .param p1, "listener"    # Landroid/hardware/hdmi/HdmiTvClient$HdmiMhlVendorCommandListener;
 
     .prologue
-    .line 359
     new-instance v0, Landroid/hardware/hdmi/HdmiTvClient$4;
 
     invoke-direct {v0, p0, p1}, Landroid/hardware/hdmi/HdmiTvClient$4;-><init>(Landroid/hardware/hdmi/HdmiTvClient;Landroid/hardware/hdmi/HdmiTvClient$HdmiMhlVendorCommandListener;)V
@@ -137,7 +127,6 @@
     .param p0, "callback"    # Landroid/hardware/hdmi/HdmiRecordListener;
 
     .prologue
-    .line 197
     new-instance v0, Landroid/hardware/hdmi/HdmiTvClient$3;
 
     invoke-direct {v0, p0}, Landroid/hardware/hdmi/HdmiTvClient$3;-><init>(Landroid/hardware/hdmi/HdmiRecordListener;)V
@@ -154,23 +143,19 @@
     .param p3, "source"    # Landroid/hardware/hdmi/HdmiTimerRecordSources$TimerRecordSource;
 
     .prologue
-    .line 320
     if-nez p3, :cond_0
 
-    .line 321
     new-instance v2, Ljava/lang/IllegalArgumentException;
 
-    const-string/jumbo v3, "source must not be null."
+    const-string v3, "source must not be null."
 
     invoke-direct {v2, v3}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
 
     throw v2
 
-    .line 324
     :cond_0
     invoke-direct {p0, p2}, Landroid/hardware/hdmi/HdmiTvClient;->checkTimerRecordingSourceType(I)V
 
-    .line 326
     :try_start_0
     invoke-virtual {p3}, Landroid/hardware/hdmi/HdmiTimerRecordSources$TimerRecordSource;->getDataSize()I
 
@@ -178,29 +163,24 @@
 
     new-array v0, v2, [B
 
-    .line 327
     .local v0, "data":[B
     const/4 v2, 0x0
 
     invoke-virtual {p3, v0, v2}, Landroid/hardware/hdmi/HdmiTimerRecordSources$TimerRecordSource;->toByteArray([BI)I
 
-    .line 328
     iget-object v2, p0, Landroid/hardware/hdmi/HdmiTvClient;->mService:Landroid/hardware/hdmi/IHdmiControlService;
 
     invoke-interface {v2, p1, p2, v0}, Landroid/hardware/hdmi/IHdmiControlService;->clearTimerRecording(II[B)V
     :try_end_0
     .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 332
     .end local v0    # "data":[B
     :goto_0
     return-void
 
-    .line 329
     :catch_0
     move-exception v1
 
-    .line 330
     .local v1, "e":Landroid/os/RemoteException;
     const-string v2, "HdmiTvClient"
 
@@ -217,10 +197,8 @@
     .param p2, "callback"    # Landroid/hardware/hdmi/HdmiTvClient$SelectCallback;
 
     .prologue
-    .line 78
     if-nez p2, :cond_0
 
-    .line 79
     new-instance v1, Ljava/lang/IllegalArgumentException;
 
     const-string v2, "callback must not be null."
@@ -229,7 +207,6 @@
 
     throw v1
 
-    .line 82
     :cond_0
     :try_start_0
     iget-object v1, p0, Landroid/hardware/hdmi/HdmiTvClient;->mService:Landroid/hardware/hdmi/IHdmiControlService;
@@ -242,15 +219,12 @@
     :try_end_0
     .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 86
     :goto_0
     return-void
 
-    .line 83
     :catch_0
     move-exception v0
 
-    .line 84
     .local v0, "e":Landroid/os/RemoteException;
     const-string v1, "HdmiTvClient"
 
@@ -265,7 +239,6 @@
     .locals 1
 
     .prologue
-    .line 55
     const/4 v0, 0x0
 
     return v0
@@ -277,10 +250,8 @@
     .param p2, "callback"    # Landroid/hardware/hdmi/HdmiTvClient$SelectCallback;
 
     .prologue
-    .line 105
     if-nez p2, :cond_0
 
-    .line 106
     new-instance v1, Ljava/lang/IllegalArgumentException;
 
     const-string v2, "Callback must not be null"
@@ -289,7 +260,6 @@
 
     throw v1
 
-    .line 109
     :cond_0
     :try_start_0
     iget-object v1, p0, Landroid/hardware/hdmi/HdmiTvClient;->mService:Landroid/hardware/hdmi/IHdmiControlService;
@@ -302,15 +272,12 @@
     :try_end_0
     .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 113
     :goto_0
     return-void
 
-    .line 110
     :catch_0
     move-exception v0
 
-    .line 111
     .local v0, "e":Landroid/os/RemoteException;
     const-string v1, "HdmiTvClient"
 
@@ -331,14 +298,12 @@
     .prologue
     const/16 v2, 0x10
 
-    .line 377
     if-eqz p4, :cond_0
 
     array-length v1, p4
 
     if-eq v1, v2, :cond_1
 
-    .line 378
     :cond_0
     new-instance v1, Ljava/lang/IllegalArgumentException;
 
@@ -348,13 +313,11 @@
 
     throw v1
 
-    .line 380
     :cond_1
     if-ltz p2, :cond_2
 
     if-lt p2, v2, :cond_3
 
-    .line 381
     :cond_2
     new-instance v1, Ljava/lang/IllegalArgumentException;
 
@@ -380,7 +343,6 @@
 
     throw v1
 
-    .line 383
     :cond_3
     if-ltz p3, :cond_4
 
@@ -388,7 +350,6 @@
 
     if-le v1, v2, :cond_5
 
-    .line 384
     :cond_4
     new-instance v1, Ljava/lang/IllegalArgumentException;
 
@@ -414,7 +375,6 @@
 
     throw v1
 
-    .line 388
     :cond_5
     :try_start_0
     iget-object v1, p0, Landroid/hardware/hdmi/HdmiTvClient;->mService:Landroid/hardware/hdmi/IHdmiControlService;
@@ -423,15 +383,12 @@
     :try_end_0
     .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 392
     :goto_0
     return-void
 
-    .line 389
     :catch_0
     move-exception v0
 
-    .line 390
     .local v0, "e":Landroid/os/RemoteException;
     const-string v1, "HdmiTvClient"
 
@@ -447,10 +404,8 @@
     .param p1, "listener"    # Landroid/hardware/hdmi/HdmiTvClient$HdmiMhlVendorCommandListener;
 
     .prologue
-    .line 347
     if-nez p1, :cond_0
 
-    .line 348
     new-instance v1, Ljava/lang/IllegalArgumentException;
 
     const-string v2, "listener must not be null."
@@ -459,7 +414,6 @@
 
     throw v1
 
-    .line 351
     :cond_0
     :try_start_0
     iget-object v1, p0, Landroid/hardware/hdmi/HdmiTvClient;->mService:Landroid/hardware/hdmi/IHdmiControlService;
@@ -472,15 +426,12 @@
     :try_end_0
     .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 355
     :goto_0
     return-void
 
-    .line 352
     :catch_0
     move-exception v0
 
-    .line 353
     .local v0, "e":Landroid/os/RemoteException;
     const-string v1, "HdmiTvClient"
 
@@ -496,10 +447,8 @@
     .param p1, "listener"    # Landroid/hardware/hdmi/HdmiTvClient$InputChangeListener;
 
     .prologue
-    .line 133
     if-nez p1, :cond_0
 
-    .line 134
     new-instance v1, Ljava/lang/IllegalArgumentException;
 
     const-string v2, "listener must not be null."
@@ -508,7 +457,6 @@
 
     throw v1
 
-    .line 137
     :cond_0
     :try_start_0
     iget-object v1, p0, Landroid/hardware/hdmi/HdmiTvClient;->mService:Landroid/hardware/hdmi/IHdmiControlService;
@@ -521,15 +469,12 @@
     :try_end_0
     .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 141
     :goto_0
     return-void
 
-    .line 138
     :catch_0
     move-exception v0
 
-    .line 139
     .local v0, "e":Landroid/os/RemoteException;
     const-string v1, "TAG"
 
@@ -545,10 +490,8 @@
     .param p1, "listener"    # Landroid/hardware/hdmi/HdmiRecordListener;
 
     .prologue
-    .line 186
     if-nez p1, :cond_0
 
-    .line 187
     new-instance v1, Ljava/lang/IllegalArgumentException;
 
     const-string v2, "listener must not be null."
@@ -557,7 +500,6 @@
 
     throw v1
 
-    .line 190
     :cond_0
     :try_start_0
     iget-object v1, p0, Landroid/hardware/hdmi/HdmiTvClient;->mService:Landroid/hardware/hdmi/IHdmiControlService;
@@ -570,15 +512,12 @@
     :try_end_0
     .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 194
     :goto_0
     return-void
 
-    .line 191
     :catch_0
     move-exception v0
 
-    .line 192
     .local v0, "e":Landroid/os/RemoteException;
     const-string v1, "HdmiTvClient"
 
@@ -594,7 +533,6 @@
     .param p1, "mute"    # Z
 
     .prologue
-    .line 174
     :try_start_0
     iget-object v1, p0, Landroid/hardware/hdmi/HdmiTvClient;->mService:Landroid/hardware/hdmi/IHdmiControlService;
 
@@ -602,15 +540,12 @@
     :try_end_0
     .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 178
     :goto_0
     return-void
 
-    .line 175
     :catch_0
     move-exception v0
 
-    .line 176
     .local v0, "e":Landroid/os/RemoteException;
     const-string v1, "HdmiTvClient"
 
@@ -628,7 +563,6 @@
     .param p3, "maxIndex"    # I
 
     .prologue
-    .line 161
     :try_start_0
     iget-object v1, p0, Landroid/hardware/hdmi/HdmiTvClient;->mService:Landroid/hardware/hdmi/IHdmiControlService;
 
@@ -636,15 +570,12 @@
     :try_end_0
     .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 165
     :goto_0
     return-void
 
-    .line 162
     :catch_0
     move-exception v0
 
-    .line 163
     .local v0, "e":Landroid/os/RemoteException;
     const-string v1, "HdmiTvClient"
 
@@ -661,19 +592,16 @@
     .param p2, "source"    # Landroid/hardware/hdmi/HdmiRecordSources$RecordSource;
 
     .prologue
-    .line 240
     if-nez p2, :cond_0
 
-    .line 241
     new-instance v2, Ljava/lang/IllegalArgumentException;
 
-    const-string/jumbo v3, "source must not be null."
+    const-string v3, "source must not be null."
 
     invoke-direct {v2, v3}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
 
     throw v2
 
-    .line 245
     :cond_0
     const/4 v2, 0x1
 
@@ -684,7 +612,6 @@
 
     new-array v0, v2, [B
 
-    .line 246
     .local v0, "data":[B
     const/4 v2, 0x1
 
@@ -692,23 +619,19 @@
 
     invoke-virtual {p2, v2, v0, v3}, Landroid/hardware/hdmi/HdmiRecordSources$RecordSource;->toByteArray(Z[BI)I
 
-    .line 247
     iget-object v2, p0, Landroid/hardware/hdmi/HdmiTvClient;->mService:Landroid/hardware/hdmi/IHdmiControlService;
 
     invoke-interface {v2, p1, v0}, Landroid/hardware/hdmi/IHdmiControlService;->startOneTouchRecord(I[B)V
     :try_end_0
     .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 251
     .end local v0    # "data":[B
     :goto_0
     return-void
 
-    .line 248
     :catch_0
     move-exception v1
 
-    .line 249
     .local v1, "e":Landroid/os/RemoteException;
     const-string v2, "HdmiTvClient"
 
@@ -726,23 +649,19 @@
     .param p3, "source"    # Landroid/hardware/hdmi/HdmiTimerRecordSources$TimerRecordSource;
 
     .prologue
-    .line 289
     if-nez p3, :cond_0
 
-    .line 290
     new-instance v2, Ljava/lang/IllegalArgumentException;
 
-    const-string/jumbo v3, "source must not be null."
+    const-string v3, "source must not be null."
 
     invoke-direct {v2, v3}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
 
     throw v2
 
-    .line 293
     :cond_0
     invoke-direct {p0, p2}, Landroid/hardware/hdmi/HdmiTvClient;->checkTimerRecordingSourceType(I)V
 
-    .line 296
     :try_start_0
     invoke-virtual {p3}, Landroid/hardware/hdmi/HdmiTimerRecordSources$TimerRecordSource;->getDataSize()I
 
@@ -750,29 +669,24 @@
 
     new-array v0, v2, [B
 
-    .line 297
     .local v0, "data":[B
     const/4 v2, 0x0
 
     invoke-virtual {p3, v0, v2}, Landroid/hardware/hdmi/HdmiTimerRecordSources$TimerRecordSource;->toByteArray([BI)I
 
-    .line 298
     iget-object v2, p0, Landroid/hardware/hdmi/HdmiTvClient;->mService:Landroid/hardware/hdmi/IHdmiControlService;
 
     invoke-interface {v2, p1, p2, v0}, Landroid/hardware/hdmi/IHdmiControlService;->startTimerRecording(II[B)V
     :try_end_0
     .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 302
     .end local v0    # "data":[B
     :goto_0
     return-void
 
-    .line 299
     :catch_0
     move-exception v1
 
-    .line 300
     .local v1, "e":Landroid/os/RemoteException;
     const-string v2, "HdmiTvClient"
 
@@ -788,7 +702,6 @@
     .param p1, "recorderAddress"    # I
 
     .prologue
-    .line 260
     :try_start_0
     iget-object v1, p0, Landroid/hardware/hdmi/HdmiTvClient;->mService:Landroid/hardware/hdmi/IHdmiControlService;
 
@@ -796,15 +709,12 @@
     :try_end_0
     .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 264
     :goto_0
     return-void
 
-    .line 261
     :catch_0
     move-exception v0
 
-    .line 262
     .local v0, "e":Landroid/os/RemoteException;
     const-string v1, "HdmiTvClient"
 

@@ -23,7 +23,6 @@
     .locals 0
 
     .prologue
-    .line 647
     iput-object p1, p0, Lcom/samsung/android/audiofw/ExtDeviceInfoManager$1;->this$0:Lcom/samsung/android/audiofw/ExtDeviceInfoManager;
 
     invoke-direct {p0}, Landroid/os/Handler;-><init>()V
@@ -38,7 +37,6 @@
     .param p1, "msg"    # Landroid/os/Message;
 
     .prologue
-    .line 650
     iget-object v1, p0, Lcom/samsung/android/audiofw/ExtDeviceInfoManager$1;->this$0:Lcom/samsung/android/audiofw/ExtDeviceInfoManager;
 
     iget-object v0, p1, Landroid/os/Message;->obj:Ljava/lang/Object;
@@ -48,7 +46,6 @@
     # invokes: Lcom/samsung/android/audiofw/ExtDeviceInfoManager;->sendUSBAudioIntent(Lcom/samsung/android/audiofw/ExtDeviceInfoManager$UsbAudioData;)V
     invoke-static {v1, v0}, Lcom/samsung/android/audiofw/ExtDeviceInfoManager;->access$600(Lcom/samsung/android/audiofw/ExtDeviceInfoManager;Lcom/samsung/android/audiofw/ExtDeviceInfoManager$UsbAudioData;)V
 
-    .line 651
     iget-object v0, p0, Lcom/samsung/android/audiofw/ExtDeviceInfoManager$1;->this$0:Lcom/samsung/android/audiofw/ExtDeviceInfoManager;
 
     # getter for: Lcom/samsung/android/audiofw/ExtDeviceInfoManager;->mWakeLock:Landroid/os/PowerManager$WakeLock;
@@ -58,6 +55,5 @@
 
     invoke-virtual {v0}, Landroid/os/PowerManager$WakeLock;->release()V
 
-    .line 652
     return-void
 .end method

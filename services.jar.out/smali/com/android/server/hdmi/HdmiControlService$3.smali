@@ -26,7 +26,6 @@
     .locals 0
 
     .prologue
-    .line 1956
     iput-object p1, p0, Lcom/android/server/hdmi/HdmiControlService$3;->this$0:Lcom/android/server/hdmi/HdmiControlService;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -41,18 +40,15 @@
     .param p1, "device"    # Lcom/android/server/hdmi/HdmiCecLocalDevice;
 
     .prologue
-    .line 1959
     iget-object v0, p0, Lcom/android/server/hdmi/HdmiControlService$3;->this$0:Lcom/android/server/hdmi/HdmiControlService;
 
     # invokes: Lcom/android/server/hdmi/HdmiControlService;->assertRunOnServiceThread()V
     invoke-static {v0}, Lcom/android/server/hdmi/HdmiControlService;->access$000(Lcom/android/server/hdmi/HdmiControlService;)V
 
-    .line 1960
     iget-object v0, p0, Lcom/android/server/hdmi/HdmiControlService$3;->this$0:Lcom/android/server/hdmi/HdmiControlService;
 
     # invokes: Lcom/android/server/hdmi/HdmiControlService;->clearLocalDevices()V
     invoke-static {v0}, Lcom/android/server/hdmi/HdmiControlService;->access$5100(Lcom/android/server/hdmi/HdmiControlService;)V
 
-    .line 1961
     return-void
 .end method

@@ -126,27 +126,22 @@
 
     const/4 v7, 0x0
 
-    .line 78
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 90
     new-instance v0, Landroid/os/Handler;
 
     invoke-direct {v0}, Landroid/os/Handler;-><init>()V
 
     iput-object v0, p0, Lcom/android/internal/policy/impl/multiwindow/MultiPhoneWindowManager;->mHandler:Landroid/os/Handler;
 
-    .line 91
     new-instance v0, Ljava/lang/Object;
 
     invoke-direct {v0}, Ljava/lang/Object;-><init>()V
 
     iput-object v0, p0, Lcom/android/internal/policy/impl/multiwindow/MultiPhoneWindowManager;->mLock:Ljava/lang/Object;
 
-    .line 95
     iput v7, p0, Lcom/android/internal/policy/impl/multiwindow/MultiPhoneWindowManager;->mStatusBarHeight:I
 
-    .line 101
     new-instance v0, Lcom/android/internal/policy/impl/BarController;
 
     const-string v1, "StatusBar"
@@ -163,75 +158,54 @@
 
     iput-object v0, p0, Lcom/android/internal/policy/impl/multiwindow/MultiPhoneWindowManager;->mStatusBarController:Lcom/android/internal/policy/impl/BarController;
 
-    .line 109
     iput-boolean v7, p0, Lcom/android/internal/policy/impl/multiwindow/MultiPhoneWindowManager;->mIsRecentUI:Z
 
-    .line 110
     iput-boolean v7, p0, Lcom/android/internal/policy/impl/multiwindow/MultiPhoneWindowManager;->mIsTrayBarUI:Z
 
-    .line 112
     new-instance v0, Landroid/graphics/Rect;
 
     invoke-direct {v0}, Landroid/graphics/Rect;-><init>()V
 
     iput-object v0, p0, Lcom/android/internal/policy/impl/multiwindow/MultiPhoneWindowManager;->mFloatingPadding:Landroid/graphics/Rect;
 
-    .line 113
     iput v7, p0, Lcom/android/internal/policy/impl/multiwindow/MultiPhoneWindowManager;->mMinimizeSize:I
 
-    .line 114
     iput v7, p0, Lcom/android/internal/policy/impl/multiwindow/MultiPhoneWindowManager;->mScaleWindowResizableSize:I
 
-    .line 115
     iput-object v8, p0, Lcom/android/internal/policy/impl/multiwindow/MultiPhoneWindowManager;->mMultiWindowUIIntent:Landroid/content/Intent;
 
-    .line 116
     iput-boolean v7, p0, Lcom/android/internal/policy/impl/multiwindow/MultiPhoneWindowManager;->mIsIsolatedSplitUsed:Z
 
-    .line 117
     iput-boolean v7, p0, Lcom/android/internal/policy/impl/multiwindow/MultiPhoneWindowManager;->mStatusBarTransient:Z
 
-    .line 126
     iput-boolean v7, p0, Lcom/android/internal/policy/impl/multiwindow/MultiPhoneWindowManager;->mConsumeBackKeyUp:Z
 
-    .line 127
     iput-boolean v7, p0, Lcom/android/internal/policy/impl/multiwindow/MultiPhoneWindowManager;->mFirstRecentKeyClick:Z
 
-    .line 128
     iput-boolean v7, p0, Lcom/android/internal/policy/impl/multiwindow/MultiPhoneWindowManager;->mFirstMultiWindowSettingOn:Z
 
-    .line 129
     iput-boolean v7, p0, Lcom/android/internal/policy/impl/multiwindow/MultiPhoneWindowManager;->mForceHideCascade:Z
 
-    .line 134
     iput v7, p0, Lcom/android/internal/policy/impl/multiwindow/MultiPhoneWindowManager;->mEnableMultiWindowUISetting:I
 
-    .line 139
     iput-object v8, p0, Lcom/android/internal/policy/impl/multiwindow/MultiPhoneWindowManager;->mInputMethodWindow:Landroid/view/WindowManagerPolicy$WindowState;
 
-    .line 141
     iput-boolean v7, p0, Lcom/android/internal/policy/impl/multiwindow/MultiPhoneWindowManager;->mCanBeForceHide:Z
 
-    .line 142
     iput-boolean v7, p0, Lcom/android/internal/policy/impl/multiwindow/MultiPhoneWindowManager;->mForceHideCenterbar:Z
 
-    .line 143
     iput-boolean v7, p0, Lcom/android/internal/policy/impl/multiwindow/MultiPhoneWindowManager;->mIsMultiWindowTrayOpen:Z
 
-    .line 147
     iput-boolean v7, p0, Lcom/android/internal/policy/impl/multiwindow/MultiPhoneWindowManager;->mForceHidePenWindowController:Z
 
-    .line 148
     iput-object v8, p0, Lcom/android/internal/policy/impl/multiwindow/MultiPhoneWindowManager;->mForceHidePenWindowControllerTargetToken:Landroid/view/IApplicationToken;
 
-    .line 154
     new-instance v0, Lcom/android/internal/policy/impl/multiwindow/MultiPhoneWindowManager$1;
 
     invoke-direct {v0, p0}, Lcom/android/internal/policy/impl/multiwindow/MultiPhoneWindowManager$1;-><init>(Lcom/android/internal/policy/impl/multiwindow/MultiPhoneWindowManager;)V
 
     iput-object v0, p0, Lcom/android/internal/policy/impl/multiwindow/MultiPhoneWindowManager;->mMultiuserReceiver:Landroid/content/BroadcastReceiver;
 
-    .line 939
     new-instance v0, Landroid/graphics/Rect;
 
     invoke-direct {v0}, Landroid/graphics/Rect;-><init>()V
@@ -246,7 +220,6 @@
     .param p0, "x0"    # Lcom/android/internal/policy/impl/multiwindow/MultiPhoneWindowManager;
 
     .prologue
-    .line 78
     iget v0, p0, Lcom/android/internal/policy/impl/multiwindow/MultiPhoneWindowManager;->mEnableMultiWindowUISetting:I
 
     return v0
@@ -258,7 +231,6 @@
     .param p1, "x1"    # I
 
     .prologue
-    .line 78
     iput p1, p0, Lcom/android/internal/policy/impl/multiwindow/MultiPhoneWindowManager;->mEnableMultiWindowUISetting:I
 
     return p1
@@ -269,7 +241,6 @@
     .param p0, "x0"    # Lcom/android/internal/policy/impl/multiwindow/MultiPhoneWindowManager;
 
     .prologue
-    .line 78
     iget-boolean v0, p0, Lcom/android/internal/policy/impl/multiwindow/MultiPhoneWindowManager;->mIsRecentUI:Z
 
     return v0
@@ -280,7 +251,6 @@
     .param p0, "x0"    # Lcom/android/internal/policy/impl/multiwindow/MultiPhoneWindowManager;
 
     .prologue
-    .line 78
     iget-boolean v0, p0, Lcom/android/internal/policy/impl/multiwindow/MultiPhoneWindowManager;->mFirstMultiWindowSettingOn:Z
 
     return v0
@@ -292,7 +262,6 @@
     .param p1, "x1"    # Z
 
     .prologue
-    .line 78
     iput-boolean p1, p0, Lcom/android/internal/policy/impl/multiwindow/MultiPhoneWindowManager;->mFirstMultiWindowSettingOn:Z
 
     return p1
@@ -303,7 +272,6 @@
     .param p0, "x0"    # Lcom/android/internal/policy/impl/multiwindow/MultiPhoneWindowManager;
 
     .prologue
-    .line 78
     iget-object v0, p0, Lcom/android/internal/policy/impl/multiwindow/MultiPhoneWindowManager;->mMultiWindowUIIntent:Landroid/content/Intent;
 
     return-object v0
@@ -314,7 +282,6 @@
     .param p0, "x0"    # Lcom/android/internal/policy/impl/multiwindow/MultiPhoneWindowManager;
 
     .prologue
-    .line 78
     invoke-direct {p0}, Lcom/android/internal/policy/impl/multiwindow/MultiPhoneWindowManager;->isDeviceProvisioned()Z
 
     move-result v0
@@ -328,7 +295,6 @@
     .prologue
     const/4 v0, 0x0
 
-    .line 887
     iget-object v1, p0, Lcom/android/internal/policy/impl/multiwindow/MultiPhoneWindowManager;->mContext:Landroid/content/Context;
 
     invoke-virtual {v1}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
@@ -355,7 +321,6 @@
     .prologue
     const/16 v1, 0x1000
 
-    .line 876
     iget-object v0, p0, Lcom/android/internal/policy/impl/multiwindow/MultiPhoneWindowManager;->mTopFullscreenOpaqueWindowStateZoneA:Landroid/view/WindowManagerPolicy$WindowState;
 
     if-eqz v0, :cond_1
@@ -388,11 +353,9 @@
 
     if-eqz v0, :cond_1
 
-    .line 880
     :cond_0
     const/4 v0, 0x1
 
-    .line 882
     :goto_0
     return v0
 
@@ -406,7 +369,6 @@
     .locals 1
 
     .prologue
-    .line 910
     iget-object v0, p0, Lcom/android/internal/policy/impl/multiwindow/MultiPhoneWindowManager;->mKeyguardDelegate:Lcom/android/internal/policy/impl/keyguard/KeyguardServiceDelegate;
 
     if-nez v0, :cond_0
@@ -430,7 +392,6 @@
     .locals 1
 
     .prologue
-    .line 903
     invoke-direct {p0}, Lcom/android/internal/policy/impl/multiwindow/MultiPhoneWindowManager;->keyguardIsShowingTq()Z
 
     move-result v0
@@ -470,12 +431,10 @@
     .prologue
     const/4 v6, 0x1
 
-    .line 1002
     invoke-virtual {p0, p1}, Lcom/android/internal/policy/impl/multiwindow/MultiPhoneWindowManager;->getFloatingWindowPadding(Landroid/view/WindowManagerPolicy$WindowState;)Landroid/graphics/Rect;
 
     move-result-object v2
 
-    .line 1003
     .local v2, "rect":Landroid/graphics/Rect;
     iget v4, v2, Landroid/graphics/Rect;->top:I
 
@@ -483,7 +442,6 @@
 
     add-int v0, v4, v5
 
-    .line 1004
     .local v0, "height":I
     iget v4, v2, Landroid/graphics/Rect;->left:I
 
@@ -491,7 +449,6 @@
 
     add-int v3, v4, v5
 
-    .line 1005
     .local v3, "width":I
     iget-object v4, p0, Lcom/android/internal/policy/impl/multiwindow/MultiPhoneWindowManager;->mContext:Landroid/content/Context;
 
@@ -505,7 +462,6 @@
 
     iget v1, v4, Landroid/content/res/Configuration;->orientation:I
 
-    .line 1007
     .local v1, "orientation":I
     invoke-interface {p1}, Landroid/view/WindowManagerPolicy$WindowState;->getRequestedOrientation()I
 
@@ -539,21 +495,18 @@
 
     if-eqz v4, :cond_3
 
-    .line 1010
     iget v4, p2, Landroid/graphics/Rect;->bottom:I
 
     add-int/2addr v4, v3
 
     iput v4, p2, Landroid/graphics/Rect;->bottom:I
 
-    .line 1011
     iget v4, p2, Landroid/graphics/Rect;->right:I
 
     add-int/2addr v4, v0
 
     iput v4, p2, Landroid/graphics/Rect;->right:I
 
-    .line 1016
     :goto_0
     invoke-interface {p1}, Landroid/view/WindowManagerPolicy$WindowState;->getAttrs()Landroid/view/WindowManager$LayoutParams;
 
@@ -565,7 +518,6 @@
 
     if-eqz v4, :cond_2
 
-    .line 1017
     const/16 v4, -0x2710
 
     iput v4, p6, Landroid/graphics/Rect;->top:I
@@ -584,7 +536,6 @@
 
     iput v4, p3, Landroid/graphics/Rect;->left:I
 
-    .line 1018
     const/16 v4, 0x2710
 
     iput v4, p6, Landroid/graphics/Rect;->bottom:I
@@ -603,11 +554,9 @@
 
     iput v4, p3, Landroid/graphics/Rect;->right:I
 
-    .line 1021
     :cond_2
     return-void
 
-    .line 1013
     :cond_3
     iget v4, p2, Landroid/graphics/Rect;->bottom:I
 
@@ -615,7 +564,6 @@
 
     iput v4, p2, Landroid/graphics/Rect;->bottom:I
 
-    .line 1014
     iget v4, p2, Landroid/graphics/Rect;->right:I
 
     add-int/2addr v4, v3
@@ -630,7 +578,6 @@
     .param p1, "type"    # I
 
     .prologue
-    .line 1439
     iget-boolean v0, p0, Lcom/android/internal/policy/impl/multiwindow/MultiPhoneWindowManager;->mIsRecentUI:Z
 
     if-eqz v0, :cond_0
@@ -639,12 +586,10 @@
 
     if-ne p1, v0, :cond_0
 
-    .line 1440
     const/4 v0, 0x1
 
     iput-boolean v0, p0, Lcom/android/internal/policy/impl/multiwindow/MultiPhoneWindowManager;->mForceHideStatusBar:Z
 
-    .line 1443
     :cond_0
     return-void
 .end method
@@ -661,12 +606,10 @@
 
     const/4 v2, 0x1
 
-    .line 699
     invoke-interface {p1}, Landroid/view/WindowManagerPolicy$WindowState;->getMultiWindowStyleLw()Lcom/samsung/android/multiwindow/MultiWindowStyle;
 
     move-result-object v1
 
-    .line 700
     .local v1, "multiWindowStyle":Lcom/samsung/android/multiwindow/MultiWindowStyle;
     iget v3, p2, Landroid/view/WindowManager$LayoutParams;->type:I
 
@@ -691,27 +634,21 @@
 
     move v0, v2
 
-    .line 704
     .local v0, "isMultiWindowTarget":Z
     :goto_0
     iget-object v3, p0, Lcom/android/internal/policy/impl/multiwindow/MultiPhoneWindowManager;->mTopApplicationWindowState:Landroid/view/WindowManagerPolicy$WindowState;
 
     if-nez v3, :cond_1
 
-    .line 705
     if-eqz v0, :cond_1
 
-    .line 706
     iput-object p1, p0, Lcom/android/internal/policy/impl/multiwindow/MultiPhoneWindowManager;->mTopApplicationWindowState:Landroid/view/WindowManagerPolicy$WindowState;
 
-    .line 707
     iput-object v1, p0, Lcom/android/internal/policy/impl/multiwindow/MultiPhoneWindowManager;->mTopApplicationWindowMode:Lcom/samsung/android/multiwindow/MultiWindowStyle;
 
-    .line 711
     :cond_1
     if-eqz v0, :cond_2
 
-    .line 712
     const/high16 v3, 0x200000
 
     invoke-virtual {v1, v3}, Lcom/samsung/android/multiwindow/MultiWindowStyle;->isEnabled(I)Z
@@ -720,10 +657,8 @@
 
     if-eqz v3, :cond_6
 
-    .line 713
     iput-boolean v2, p0, Lcom/android/internal/policy/impl/multiwindow/MultiPhoneWindowManager;->mForceHideCenterbar:Z
 
-    .line 727
     :cond_2
     :goto_1
     iget v3, p2, Landroid/view/WindowManager$LayoutParams;->type:I
@@ -745,28 +680,23 @@
 
     if-eqz v3, :cond_4
 
-    .line 728
     iput-boolean v2, p0, Lcom/android/internal/policy/impl/multiwindow/MultiPhoneWindowManager;->mForceHidePenWindowController:Z
 
-    .line 729
     invoke-interface {p1}, Landroid/view/WindowManagerPolicy$WindowState;->getTargetAppToken()Landroid/view/IApplicationToken;
 
     move-result-object v2
 
     iput-object v2, p0, Lcom/android/internal/policy/impl/multiwindow/MultiPhoneWindowManager;->mForceHidePenWindowControllerTargetToken:Landroid/view/IApplicationToken;
 
-    .line 732
     :cond_4
     return-void
 
-    .line 700
     .end local v0    # "isMultiWindowTarget":Z
     :cond_5
     const/4 v0, 0x0
 
     goto :goto_0
 
-    .line 714
     .restart local v0    # "isMultiWindowTarget":Z
     :cond_6
     invoke-virtual {v1}, Lcom/samsung/android/multiwindow/MultiWindowStyle;->getType()I
@@ -775,19 +705,16 @@
 
     if-ne v3, v2, :cond_8
 
-    .line 715
     invoke-virtual {v1}, Lcom/samsung/android/multiwindow/MultiWindowStyle;->getZone()I
 
     move-result v3
 
     if-ne v3, v5, :cond_7
 
-    .line 716
     iput-object p1, p0, Lcom/android/internal/policy/impl/multiwindow/MultiPhoneWindowManager;->mTopFullscreenOpaqueWindowStateZoneA:Landroid/view/WindowManagerPolicy$WindowState;
 
     goto :goto_1
 
-    .line 718
     :cond_7
     invoke-virtual {v1}, Lcom/samsung/android/multiwindow/MultiWindowStyle;->getZone()I
 
@@ -797,12 +724,10 @@
 
     if-ne v3, v4, :cond_2
 
-    .line 719
     iput-object p1, p0, Lcom/android/internal/policy/impl/multiwindow/MultiPhoneWindowManager;->mTopFullscreenOpaqueWindowStateZoneB:Landroid/view/WindowManagerPolicy$WindowState;
 
     goto :goto_1
 
-    .line 721
     :cond_8
     invoke-virtual {v1}, Lcom/samsung/android/multiwindow/MultiWindowStyle;->getType()I
 
@@ -810,10 +735,8 @@
 
     if-nez v3, :cond_2
 
-    .line 722
     iput-object v6, p0, Lcom/android/internal/policy/impl/multiwindow/MultiPhoneWindowManager;->mTopFullscreenOpaqueWindowStateZoneA:Landroid/view/WindowManagerPolicy$WindowState;
 
-    .line 723
     iput-object v6, p0, Lcom/android/internal/policy/impl/multiwindow/MultiPhoneWindowManager;->mTopFullscreenOpaqueWindowStateZoneB:Landroid/view/WindowManagerPolicy$WindowState;
 
     goto :goto_1
@@ -825,19 +748,14 @@
     .prologue
     const/4 v0, 0x0
 
-    .line 675
     iput-boolean v0, p0, Lcom/android/internal/policy/impl/multiwindow/MultiPhoneWindowManager;->mCanBeForceHide:Z
 
-    .line 676
     iput-boolean v0, p0, Lcom/android/internal/policy/impl/multiwindow/MultiPhoneWindowManager;->mForceHideCenterbar:Z
 
-    .line 677
     iput-boolean v0, p0, Lcom/android/internal/policy/impl/multiwindow/MultiPhoneWindowManager;->mStatusBarTransient:Z
 
-    .line 678
     iput-boolean v0, p0, Lcom/android/internal/policy/impl/multiwindow/MultiPhoneWindowManager;->mIsIsolatedSplitUsed:Z
 
-    .line 680
     return-void
 .end method
 
@@ -849,19 +767,14 @@
 
     const/4 v0, 0x0
 
-    .line 738
     iput-object v1, p0, Lcom/android/internal/policy/impl/multiwindow/MultiPhoneWindowManager;->mTopApplicationWindowState:Landroid/view/WindowManagerPolicy$WindowState;
 
-    .line 739
     iput-boolean v0, p0, Lcom/android/internal/policy/impl/multiwindow/MultiPhoneWindowManager;->mForceHideStatusBar:Z
 
-    .line 740
     iput-boolean v0, p0, Lcom/android/internal/policy/impl/multiwindow/MultiPhoneWindowManager;->mForceHidePenWindowController:Z
 
-    .line 741
     iput-object v1, p0, Lcom/android/internal/policy/impl/multiwindow/MultiPhoneWindowManager;->mForceHidePenWindowControllerTargetToken:Landroid/view/IApplicationToken;
 
-    .line 743
     return-void
 .end method
 
@@ -870,15 +783,12 @@
     .param p1, "type"    # I
 
     .prologue
-    .line 1408
     const/16 v0, 0x8d4
 
     if-ne p1, v0, :cond_0
 
-    .line 1409
     const/4 v0, 0x0
 
-    .line 1412
     :goto_0
     return v0
 
@@ -895,7 +805,6 @@
     .prologue
     const/4 v0, 0x0
 
-    .line 1050
     iget-object v1, p0, Lcom/android/internal/policy/impl/multiwindow/MultiPhoneWindowManager;->mMultiWindowTrayBar:Landroid/view/WindowManagerPolicy$WindowState;
 
     if-eqz v1, :cond_0
@@ -904,7 +813,6 @@
 
     if-eqz v1, :cond_2
 
-    .line 1052
     :cond_0
     const-string v1, "MultiPhoneWindowManager"
 
@@ -942,12 +850,10 @@
 
     invoke-static {v1, v2}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1082
     :cond_1
     :goto_0
     return v0
 
-    .line 1058
     :cond_2
     iget-object v1, p0, Lcom/android/internal/policy/impl/multiwindow/MultiPhoneWindowManager;->mMultiWindowTrayBar:Landroid/view/WindowManagerPolicy$WindowState;
 
@@ -957,12 +863,10 @@
 
     if-eqz v1, :cond_1
 
-    .line 1062
     iget-boolean v1, p0, Lcom/android/internal/policy/impl/multiwindow/MultiPhoneWindowManager;->mIsMultiWindowTrayOpen:Z
 
     if-eqz v1, :cond_1
 
-    .line 1063
     iget-object v1, p0, Lcom/android/internal/policy/impl/multiwindow/MultiPhoneWindowManager;->mHandler:Landroid/os/Handler;
 
     new-instance v2, Lcom/android/internal/policy/impl/multiwindow/MultiPhoneWindowManager$4;
@@ -971,13 +875,10 @@
 
     invoke-virtual {v1, v2}, Landroid/os/Handler;->post(Ljava/lang/Runnable;)Z
 
-    .line 1076
     if-eqz p1, :cond_3
 
-    .line 1077
     iput-boolean v0, p0, Lcom/android/internal/policy/impl/multiwindow/MultiPhoneWindowManager;->mIsMultiWindowTrayOpen:Z
 
-    .line 1079
     :cond_3
     const/4 v0, 0x1
 
@@ -991,7 +892,6 @@
     .param p3, "args"    # [Ljava/lang/String;
 
     .prologue
-    .line 1450
     return-void
 .end method
 
@@ -1000,7 +900,6 @@
     .param p1, "targetWin"    # Landroid/view/WindowManagerPolicy$WindowState;
 
     .prologue
-    .line 1245
     iget-object v0, p0, Lcom/android/internal/policy/impl/multiwindow/MultiPhoneWindowManager;->mCurrentInputMethodTarget:Landroid/view/WindowManagerPolicy$WindowState;
 
     if-eqz v0, :cond_1
@@ -1029,16 +928,13 @@
 
     if-lez v0, :cond_1
 
-    .line 1249
     if-nez p1, :cond_0
 
     const/4 v0, 0x1
 
-    .line 1252
     :goto_0
     return v0
 
-    .line 1249
     :cond_0
     iget-object v0, p0, Lcom/android/internal/policy/impl/multiwindow/MultiPhoneWindowManager;->mCurrentInputMethodTarget:Landroid/view/WindowManagerPolicy$WindowState;
 
@@ -1048,7 +944,6 @@
 
     goto :goto_0
 
-    .line 1252
     :cond_1
     const/4 v0, 0x0
 
@@ -1064,14 +959,12 @@
 
     const/4 v5, 0x1
 
-    .line 805
     invoke-virtual {p0, p1}, Lcom/android/internal/policy/impl/multiwindow/MultiPhoneWindowManager;->needHideTrayBar(Landroid/view/WindowManagerPolicy$WindowState;)Z
 
     move-result v4
 
     if-eqz v4, :cond_4
 
-    .line 806
     iget-object v4, p0, Lcom/android/internal/policy/impl/multiwindow/MultiPhoneWindowManager;->mMultiWindowTrayBar:Landroid/view/WindowManagerPolicy$WindowState;
 
     if-eqz v4, :cond_1
@@ -1084,7 +977,6 @@
 
     if-eqz v4, :cond_1
 
-    .line 807
     iget-object v4, p0, Lcom/android/internal/policy/impl/multiwindow/MultiPhoneWindowManager;->mMultiWindowEditMode:Landroid/view/WindowManagerPolicy$WindowState;
 
     if-eqz v4, :cond_0
@@ -1097,13 +989,11 @@
 
     if-nez v4, :cond_1
 
-    .line 808
     :cond_0
     iget-object v4, p0, Lcom/android/internal/policy/impl/multiwindow/MultiPhoneWindowManager;->mMultiWindowTrayBar:Landroid/view/WindowManagerPolicy$WindowState;
 
     invoke-interface {v4, v5, v5, v5}, Landroid/view/WindowManagerPolicy$WindowState;->hideLw(ZZZ)Z
 
-    .line 809
     iget-object v4, p0, Lcom/android/internal/policy/impl/multiwindow/MultiPhoneWindowManager;->mMultiWindowGuide:Landroid/view/WindowManagerPolicy$WindowState;
 
     if-eqz v4, :cond_1
@@ -1116,17 +1006,14 @@
 
     if-eqz v4, :cond_1
 
-    .line 810
     iget-object v4, p0, Lcom/android/internal/policy/impl/multiwindow/MultiPhoneWindowManager;->mMultiWindowGuide:Landroid/view/WindowManagerPolicy$WindowState;
 
     invoke-interface {v4, v5, v5, v5}, Landroid/view/WindowManagerPolicy$WindowState;->hideLw(ZZZ)Z
 
-    .line 820
     :cond_1
     :goto_0
     const/4 v0, 0x0
 
-    .line 821
     .local v0, "showCenterBar":Z
     if-eqz p1, :cond_2
 
@@ -1164,7 +1051,6 @@
 
     if-nez v4, :cond_2
 
-    .line 829
     invoke-interface {p1}, Landroid/view/WindowManagerPolicy$WindowState;->getMultiWindowStyleLw()Lcom/samsung/android/multiwindow/MultiWindowStyle;
 
     move-result-object v4
@@ -1173,7 +1059,6 @@
 
     move-result v2
 
-    .line 830
     .local v2, "topFullAppZone":I
     iget-object v4, p0, Lcom/android/internal/policy/impl/multiwindow/MultiPhoneWindowManager;->mTopApplicationWindowState:Landroid/view/WindowManagerPolicy$WindowState;
 
@@ -1181,7 +1066,6 @@
 
     move v1, v3
 
-    .line 833
     .local v1, "topAppZone":I
     :goto_1
     if-ne v2, v1, :cond_6
@@ -1198,17 +1082,14 @@
 
     if-eqz v4, :cond_6
 
-    .line 836
     const/4 v0, 0x0
 
-    .line 842
     .end local v1    # "topAppZone":I
     .end local v2    # "topFullAppZone":I
     :cond_2
     :goto_2
     if-eqz v0, :cond_8
 
-    .line 843
     iget-object v4, p0, Lcom/android/internal/policy/impl/multiwindow/MultiPhoneWindowManager;->mMultiWindowCenterBar:Landroid/view/WindowManagerPolicy$WindowState;
 
     if-nez v4, :cond_7
@@ -1217,7 +1098,6 @@
 
     if-ne v4, v5, :cond_7
 
-    .line 844
     iget-object v3, p0, Lcom/android/internal/policy/impl/multiwindow/MultiPhoneWindowManager;->mHandler:Landroid/os/Handler;
 
     new-instance v4, Lcom/android/internal/policy/impl/multiwindow/MultiPhoneWindowManager$3;
@@ -1226,12 +1106,10 @@
 
     invoke-virtual {v3, v4}, Landroid/os/Handler;->post(Ljava/lang/Runnable;)Z
 
-    .line 868
     :cond_3
     :goto_3
     return-void
 
-    .line 815
     .end local v0    # "showCenterBar":Z
     :cond_4
     iget-object v4, p0, Lcom/android/internal/policy/impl/multiwindow/MultiPhoneWindowManager;->mMultiWindowTrayBar:Landroid/view/WindowManagerPolicy$WindowState;
@@ -1246,14 +1124,12 @@
 
     if-nez v4, :cond_1
 
-    .line 816
     iget-object v4, p0, Lcom/android/internal/policy/impl/multiwindow/MultiPhoneWindowManager;->mMultiWindowTrayBar:Landroid/view/WindowManagerPolicy$WindowState;
 
     invoke-interface {v4, v5}, Landroid/view/WindowManagerPolicy$WindowState;->showLw(Z)Z
 
     goto :goto_0
 
-    .line 830
     .restart local v0    # "showCenterBar":Z
     .restart local v2    # "topFullAppZone":I
     :cond_5
@@ -1269,17 +1145,14 @@
 
     goto :goto_1
 
-    .line 837
     .restart local v1    # "topAppZone":I
     :cond_6
     if-eqz v1, :cond_2
 
-    .line 838
     const/4 v0, 0x1
 
     goto :goto_2
 
-    .line 858
     .end local v1    # "topAppZone":I
     .end local v2    # "topFullAppZone":I
     :cond_7
@@ -1287,20 +1160,17 @@
 
     if-eqz v4, :cond_3
 
-    .line 859
     iget-object v4, p0, Lcom/android/internal/policy/impl/multiwindow/MultiPhoneWindowManager;->mMultiWindowCenterBar:Landroid/view/WindowManagerPolicy$WindowState;
 
     invoke-interface {v4, v3, v3, v5}, Landroid/view/WindowManagerPolicy$WindowState;->showLw(ZZZ)Z
 
     goto :goto_3
 
-    .line 863
     :cond_8
     iget-object v4, p0, Lcom/android/internal/policy/impl/multiwindow/MultiPhoneWindowManager;->mMultiWindowCenterBar:Landroid/view/WindowManagerPolicy$WindowState;
 
     if-eqz v4, :cond_3
 
-    .line 864
     iget-object v4, p0, Lcom/android/internal/policy/impl/multiwindow/MultiPhoneWindowManager;->mMultiWindowCenterBar:Landroid/view/WindowManagerPolicy$WindowState;
 
     invoke-interface {v4, v3, v5, v5}, Landroid/view/WindowManagerPolicy$WindowState;->hideLw(ZZZ)Z
@@ -1315,21 +1185,17 @@
     .prologue
     const/4 v5, 0x0
 
-    .line 956
     if-eqz p1, :cond_0
 
-    .line 957
     invoke-interface {p1}, Landroid/view/WindowManagerPolicy$WindowState;->getTopFullWindowInSameTask()Landroid/view/WindowManagerPolicy$WindowState;
 
     move-result-object v1
 
-    .line 958
     .local v1, "mainWin":Landroid/view/WindowManagerPolicy$WindowState;
     if-eqz v1, :cond_1
 
     move-object v4, v1
 
-    .line 959
     .local v4, "targetWin":Landroid/view/WindowManagerPolicy$WindowState;
     :goto_0
     invoke-interface {v4}, Landroid/view/WindowManagerPolicy$WindowState;->getAttrs()Landroid/view/WindowManager$LayoutParams;
@@ -1338,13 +1204,11 @@
 
     iget v0, v6, Landroid/view/WindowManager$LayoutParams;->flags:I
 
-    .line 960
     .local v0, "fl":I
     invoke-interface {v4}, Landroid/view/WindowManagerPolicy$WindowState;->getSystemUiVisibility()I
 
     move-result v3
 
-    .line 961
     .local v3, "sysUiFl":I
     invoke-interface {p1}, Landroid/view/WindowManagerPolicy$WindowState;->getAttrs()Landroid/view/WindowManager$LayoutParams;
 
@@ -1352,13 +1216,11 @@
 
     iget v2, v6, Landroid/view/WindowManager$LayoutParams;->multiWindowFlags:I
 
-    .line 963
     .local v2, "multiWindowFl":I
     and-int/lit8 v6, v2, 0x8
 
     if-eqz v6, :cond_2
 
-    .line 976
     .end local v0    # "fl":I
     .end local v1    # "mainWin":Landroid/view/WindowManagerPolicy$WindowState;
     .end local v2    # "multiWindowFl":I
@@ -1372,10 +1234,8 @@
     :cond_1
     move-object v4, p1
 
-    .line 958
     goto :goto_0
 
-    .line 967
     .restart local v0    # "fl":I
     .restart local v2    # "multiWindowFl":I
     .restart local v3    # "sysUiFl":I
@@ -1400,7 +1260,6 @@
 
     if-nez v6, :cond_0
 
-    .line 972
     :cond_4
     iget v5, p0, Lcom/android/internal/policy/impl/multiwindow/MultiPhoneWindowManager;->mStatusBarHeight:I
 
@@ -1412,14 +1271,12 @@
     .param p1, "win"    # Landroid/view/WindowManagerPolicy$WindowState;
 
     .prologue
-    .line 945
     iget-object v0, p0, Lcom/android/internal/policy/impl/multiwindow/MultiPhoneWindowManager;->mFloatingPaddingTemp:Landroid/graphics/Rect;
 
     iget-object v1, p0, Lcom/android/internal/policy/impl/multiwindow/MultiPhoneWindowManager;->mFloatingPadding:Landroid/graphics/Rect;
 
     invoke-virtual {v0, v1}, Landroid/graphics/Rect;->set(Landroid/graphics/Rect;)V
 
-    .line 946
     iget-object v0, p0, Lcom/android/internal/policy/impl/multiwindow/MultiPhoneWindowManager;->mFloatingPaddingTemp:Landroid/graphics/Rect;
 
     iget v1, v0, Landroid/graphics/Rect;->top:I
@@ -1432,7 +1289,6 @@
 
     iput v1, v0, Landroid/graphics/Rect;->top:I
 
-    .line 947
     iget-object v0, p0, Lcom/android/internal/policy/impl/multiwindow/MultiPhoneWindowManager;->mFloatingPaddingTemp:Landroid/graphics/Rect;
 
     return-object v0
@@ -1445,32 +1301,25 @@
     .param p3, "topFullScreenOpaqueWindowState"    # Landroid/view/WindowManagerPolicy$WindowState;
 
     .prologue
-    .line 1381
     iget-object v4, p0, Lcom/android/internal/policy/impl/multiwindow/MultiPhoneWindowManager;->mLock:Ljava/lang/Object;
 
     monitor-enter v4
 
-    .line 1382
     const/4 v2, 0x4
 
-    .line 1383
     .local v2, "visibility":I
     if-eqz p1, :cond_2
 
-    .line 1384
     const/4 v1, 0x0
 
-    .line 1385
     .local v1, "topIsFullscreen":Z
     if-eqz p3, :cond_1
 
-    .line 1386
     :try_start_0
     invoke-interface {p3}, Landroid/view/WindowManagerPolicy$WindowState;->getAttrs()Landroid/view/WindowManager$LayoutParams;
 
     move-result-object v0
 
-    .line 1388
     .local v0, "lp":Landroid/view/WindowManager$LayoutParams;
     iget v3, v0, Landroid/view/WindowManager$LayoutParams;->flags:I
 
@@ -1485,7 +1334,6 @@
     :cond_0
     const/4 v1, 0x1
 
-    .line 1391
     .end local v0    # "lp":Landroid/view/WindowManager$LayoutParams;
     :cond_1
     :goto_0
@@ -1505,20 +1353,16 @@
 
     if-nez v3, :cond_2
 
-    .line 1393
     const/4 v2, 0x0
 
-    .line 1395
     .end local v1    # "topIsFullscreen":Z
     :cond_2
     invoke-virtual {p0, v2}, Lcom/android/internal/policy/impl/multiwindow/MultiPhoneWindowManager;->notifySystemUiVisibility(I)V
 
-    .line 1396
     monitor-exit v4
 
     return v2
 
-    .line 1388
     .restart local v0    # "lp":Landroid/view/WindowManager$LayoutParams;
     .restart local v1    # "topIsFullscreen":Z
     :cond_3
@@ -1526,7 +1370,6 @@
 
     goto :goto_0
 
-    .line 1397
     .end local v0    # "lp":Landroid/view/WindowManager$LayoutParams;
     .end local v1    # "topIsFullscreen":Z
     :catchall_0
@@ -1543,7 +1386,6 @@
     .locals 1
 
     .prologue
-    .line 983
     iget v0, p0, Lcom/android/internal/policy/impl/multiwindow/MultiPhoneWindowManager;->mMinimizeSize:I
 
     return v0
@@ -1553,7 +1395,6 @@
     .locals 1
 
     .prologue
-    .line 992
     iget v0, p0, Lcom/android/internal/policy/impl/multiwindow/MultiPhoneWindowManager;->mScaleWindowResizableSize:I
 
     return v0
@@ -1563,7 +1404,6 @@
     .locals 1
 
     .prologue
-    .line 919
     iget-object v0, p0, Lcom/android/internal/policy/impl/multiwindow/MultiPhoneWindowManager;->mKeyguardDelegate:Lcom/android/internal/policy/impl/keyguard/KeyguardServiceDelegate;
 
     if-nez v0, :cond_0
@@ -1592,16 +1432,12 @@
     .param p5, "phoneWindowManager"    # Lcom/android/internal/policy/impl/PhoneWindowManager;
 
     .prologue
-    .line 176
     iput-object p1, p0, Lcom/android/internal/policy/impl/multiwindow/MultiPhoneWindowManager;->mContext:Landroid/content/Context;
 
-    .line 177
     iput-object p2, p0, Lcom/android/internal/policy/impl/multiwindow/MultiPhoneWindowManager;->mWindowManager:Landroid/view/IWindowManager;
 
-    .line 178
     iput-object p3, p0, Lcom/android/internal/policy/impl/multiwindow/MultiPhoneWindowManager;->mWindowManagerFuncs:Landroid/view/WindowManagerPolicy$WindowManagerFuncs;
 
-    .line 179
     const-class v2, Landroid/view/WindowManagerInternal;
 
     invoke-static {v2}, Lcom/android/server/LocalServices;->getService(Ljava/lang/Class;)Ljava/lang/Object;
@@ -1612,13 +1448,10 @@
 
     iput-object v2, p0, Lcom/android/internal/policy/impl/multiwindow/MultiPhoneWindowManager;->mWindowManagerInternal:Landroid/view/WindowManagerInternal;
 
-    .line 180
     iput-object p5, p0, Lcom/android/internal/policy/impl/multiwindow/MultiPhoneWindowManager;->mPhoneWindowManager:Lcom/android/internal/policy/impl/PhoneWindowManager;
 
-    .line 181
     iput-object p4, p0, Lcom/android/internal/policy/impl/multiwindow/MultiPhoneWindowManager;->mSPWM:Lcom/android/internal/policy/impl/sec/SamsungPhoneWindowManager;
 
-    .line 183
     iget-object v2, p0, Lcom/android/internal/policy/impl/multiwindow/MultiPhoneWindowManager;->mContext:Landroid/content/Context;
 
     invoke-virtual {v2}, Landroid/content/Context;->getPackageManager()Landroid/content/pm/PackageManager;
@@ -1633,7 +1466,6 @@
 
     iput-boolean v2, p0, Lcom/android/internal/policy/impl/multiwindow/MultiPhoneWindowManager;->mIsRecentUI:Z
 
-    .line 184
     iget-object v2, p0, Lcom/android/internal/policy/impl/multiwindow/MultiPhoneWindowManager;->mContext:Landroid/content/Context;
 
     invoke-virtual {v2}, Landroid/content/Context;->getPackageManager()Landroid/content/pm/PackageManager;
@@ -1653,7 +1485,6 @@
     :goto_0
     iput-boolean v2, p0, Lcom/android/internal/policy/impl/multiwindow/MultiPhoneWindowManager;->mIsTrayBarUI:Z
 
-    .line 186
     new-instance v2, Landroid/content/Intent;
 
     const-string v3, "android.intent.action.MAIN"
@@ -1662,7 +1493,6 @@
 
     iput-object v2, p0, Lcom/android/internal/policy/impl/multiwindow/MultiPhoneWindowManager;->mMultiWindowUIIntent:Landroid/content/Intent;
 
-    .line 187
     iget-object v2, p0, Lcom/android/internal/policy/impl/multiwindow/MultiPhoneWindowManager;->mMultiWindowUIIntent:Landroid/content/Intent;
 
     const-string v3, "com.sec.android.app.FlashBarService"
@@ -1671,7 +1501,6 @@
 
     invoke-virtual {v2, v3, v4}, Landroid/content/Intent;->setClassName(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;
 
-    .line 190
     new-instance v2, Lcom/android/internal/policy/impl/multiwindow/MultiPhoneWindowManager$SettingsObserver;
 
     iget-object v3, p0, Lcom/android/internal/policy/impl/multiwindow/MultiPhoneWindowManager;->mHandler:Landroid/os/Handler;
@@ -1680,32 +1509,27 @@
 
     iput-object v2, p0, Lcom/android/internal/policy/impl/multiwindow/MultiPhoneWindowManager;->mSettingsObserver:Lcom/android/internal/policy/impl/multiwindow/MultiPhoneWindowManager$SettingsObserver;
 
-    .line 191
     iget-object v2, p0, Lcom/android/internal/policy/impl/multiwindow/MultiPhoneWindowManager;->mSettingsObserver:Lcom/android/internal/policy/impl/multiwindow/MultiPhoneWindowManager$SettingsObserver;
 
     invoke-virtual {v2}, Lcom/android/internal/policy/impl/multiwindow/MultiPhoneWindowManager$SettingsObserver;->observe()V
 
-    .line 194
     new-instance v0, Landroid/content/IntentFilter;
 
     const-string v2, "android.intent.action.USER_SWITCHED"
 
     invoke-direct {v0, v2}, Landroid/content/IntentFilter;-><init>(Ljava/lang/String;)V
 
-    .line 195
     .local v0, "filter":Landroid/content/IntentFilter;
     iget-object v2, p0, Lcom/android/internal/policy/impl/multiwindow/MultiPhoneWindowManager;->mMultiuserReceiver:Landroid/content/BroadcastReceiver;
 
     invoke-virtual {p1, v2, v0}, Landroid/content/Context;->registerReceiver(Landroid/content/BroadcastReceiver;Landroid/content/IntentFilter;)Landroid/content/Intent;
 
-    .line 197
     iget-object v2, p0, Lcom/android/internal/policy/impl/multiwindow/MultiPhoneWindowManager;->mContext:Landroid/content/Context;
 
     invoke-virtual {v2}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
 
     move-result-object v1
 
-    .line 198
     .local v1, "res":Landroid/content/res/Resources;
     const v2, 0x1050010
 
@@ -1715,10 +1539,8 @@
 
     iput v2, p0, Lcom/android/internal/policy/impl/multiwindow/MultiPhoneWindowManager;->mStatusBarHeight:I
 
-    .line 202
     return-void
 
-    .line 184
     .end local v0    # "filter":Landroid/content/IntentFilter;
     .end local v1    # "res":Landroid/content/res/Resources;
     :cond_0
@@ -1741,7 +1563,6 @@
 
     const/4 v1, -0x1
 
-    .line 288
     iget-object v3, p0, Lcom/android/internal/policy/impl/multiwindow/MultiPhoneWindowManager;->mSPWM:Lcom/android/internal/policy/impl/sec/SamsungPhoneWindowManager;
 
     invoke-virtual {v3}, Lcom/android/internal/policy/impl/sec/SamsungPhoneWindowManager;->isHMTSupportAndConnected()Z
@@ -1750,7 +1571,6 @@
 
     if-eqz v3, :cond_2
 
-    .line 289
     if-ne p2, v4, :cond_0
 
     if-eqz p3, :cond_1
@@ -1758,21 +1578,17 @@
     :cond_0
     if-eqz p3, :cond_2
 
-    .line 321
     :cond_1
     :goto_0
     return v1
 
-    .line 294
     :cond_2
     if-eqz p1, :cond_5
 
-    .line 295
     iget v3, p0, Lcom/android/internal/policy/impl/multiwindow/MultiPhoneWindowManager;->mEnableMultiWindowUISetting:I
 
     if-eqz v3, :cond_4
 
-    .line 296
     if-ne p2, v4, :cond_3
 
     if-nez p3, :cond_3
@@ -1781,14 +1597,12 @@
 
     if-eqz v3, :cond_3
 
-    .line 297
     invoke-virtual {p0, p4}, Lcom/android/internal/policy/impl/multiwindow/MultiPhoneWindowManager;->toggleMultiWindowTray(Landroid/view/WindowManagerPolicy$WindowState;)Z
 
     move-result v2
 
     iput-boolean v2, p0, Lcom/android/internal/policy/impl/multiwindow/MultiPhoneWindowManager;->mConsumeBackKeyUp:Z
 
-    .line 298
     const-string v2, "MultiPhoneWindowManager"
 
     new-instance v3, Ljava/lang/StringBuilder;
@@ -1815,7 +1629,6 @@
 
     goto :goto_0
 
-    .line 300
     :cond_3
     iget-boolean v3, p0, Lcom/android/internal/policy/impl/multiwindow/MultiPhoneWindowManager;->mConsumeBackKeyUp:Z
 
@@ -1826,10 +1639,8 @@
     :cond_4
     move v1, v2
 
-    .line 321
     goto :goto_0
 
-    .line 306
     :cond_5
     iget v3, p0, Lcom/android/internal/policy/impl/multiwindow/MultiPhoneWindowManager;->mEnableMultiWindowUISetting:I
 
@@ -1841,17 +1652,14 @@
 
     if-nez v3, :cond_4
 
-    .line 307
     iget-boolean v3, p0, Lcom/android/internal/policy/impl/multiwindow/MultiPhoneWindowManager;->mConsumeBackKeyUp:Z
 
     if-eqz v3, :cond_6
 
-    .line 308
     iput-boolean v2, p0, Lcom/android/internal/policy/impl/multiwindow/MultiPhoneWindowManager;->mConsumeBackKeyUp:Z
 
     goto :goto_0
 
-    .line 311
     :cond_6
     const/4 v3, 0x1
 
@@ -1861,18 +1669,15 @@
 
     if-eqz v3, :cond_4
 
-    .line 312
     new-instance v0, Landroid/content/Intent;
 
     invoke-direct {v0}, Landroid/content/Intent;-><init>()V
 
-    .line 313
     .local v0, "intent":Landroid/content/Intent;
     const-string v2, "com.sec.android.intent.action.BACK_KEY"
 
     invoke-virtual {v0, v2}, Landroid/content/Intent;->setAction(Ljava/lang/String;)Landroid/content/Intent;
 
-    .line 314
     iget-object v2, p0, Lcom/android/internal/policy/impl/multiwindow/MultiPhoneWindowManager;->mContext:Landroid/content/Context;
 
     invoke-virtual {v2, v0}, Landroid/content/Context;->sendBroadcast(Landroid/content/Intent;)V
@@ -1884,14 +1689,11 @@
     .locals 8
 
     .prologue
-    .line 1460
     const/16 v1, 0x3a
 
-    .line 1461
     .local v1, "ENABLED_SERVICES_SEPARATOR":C
     const-string v0, "com.google.android.marvin.talkback"
 
-    .line 1462
     .local v0, "DEFAULT_SCREENREADER_NAME":Ljava/lang/String;
     new-instance v5, Landroid/text/TextUtils$SimpleStringSplitter;
 
@@ -1899,7 +1701,6 @@
 
     invoke-direct {v5, v6}, Landroid/text/TextUtils$SimpleStringSplitter;-><init>(C)V
 
-    .line 1464
     .local v5, "splitter":Landroid/text/TextUtils$SimpleStringSplitter;
     iget-object v6, p0, Lcom/android/internal/policy/impl/multiwindow/MultiPhoneWindowManager;->mContext:Landroid/content/Context;
 
@@ -1913,18 +1714,14 @@
 
     move-result-object v4
 
-    .line 1467
     .local v4, "enabledServicesSetting":Ljava/lang/String;
     if-nez v4, :cond_0
 
-    .line 1468
     const-string v4, ""
 
-    .line 1471
     :cond_0
     invoke-virtual {v5, v4}, Landroid/text/TextUtils$SimpleStringSplitter;->setString(Ljava/lang/String;)V
 
-    .line 1473
     :cond_1
     invoke-virtual {v5}, Landroid/text/TextUtils$SimpleStringSplitter;->hasNext()Z
 
@@ -1932,22 +1729,18 @@
 
     if-eqz v6, :cond_2
 
-    .line 1474
     invoke-virtual {v5}, Landroid/text/TextUtils$SimpleStringSplitter;->next()Ljava/lang/String;
 
     move-result-object v2
 
-    .line 1475
     .local v2, "componentNameString":Ljava/lang/String;
     invoke-static {v2}, Landroid/content/ComponentName;->unflattenFromString(Ljava/lang/String;)Landroid/content/ComponentName;
 
     move-result-object v3
 
-    .line 1477
     .local v3, "enabledService":Landroid/content/ComponentName;
     if-eqz v3, :cond_1
 
-    .line 1478
     const-string v6, "com.google.android.marvin.talkback"
 
     invoke-virtual {v3}, Landroid/content/ComponentName;->getPackageName()Ljava/lang/String;
@@ -1960,10 +1753,8 @@
 
     if-eqz v6, :cond_1
 
-    .line 1479
     const/4 v6, 0x1
 
-    .line 1482
     .end local v2    # "componentNameString":Ljava/lang/String;
     .end local v3    # "enabledService":Landroid/content/ComponentName;
     :goto_0
@@ -1979,7 +1770,6 @@
     .locals 1
 
     .prologue
-    .line 226
     iget-boolean v0, p0, Lcom/android/internal/policy/impl/multiwindow/MultiPhoneWindowManager;->mForceHideStatusBar:Z
 
     return v0
@@ -1991,7 +1781,6 @@
     .prologue
     const/4 v0, 0x1
 
-    .line 689
     iget-object v1, p0, Lcom/android/internal/policy/impl/multiwindow/MultiPhoneWindowManager;->mTopApplicationWindowMode:Lcom/samsung/android/multiwindow/MultiWindowStyle;
 
     if-eqz v1, :cond_0
@@ -2017,7 +1806,6 @@
     .locals 1
 
     .prologue
-    .line 209
     iget-boolean v0, p0, Lcom/android/internal/policy/impl/multiwindow/MultiPhoneWindowManager;->mStatusBarTransient:Z
 
     return v0
@@ -2049,12 +1837,10 @@
     .param p22, "canHideNavigationBar"    # Z
 
     .prologue
-    .line 428
     invoke-interface/range {p1 .. p1}, Landroid/view/WindowManagerPolicy$WindowState;->getAttrs()Landroid/view/WindowManager$LayoutParams;
 
     move-result-object v16
 
-    .line 429
     .local v16, "attrs":Landroid/view/WindowManager$LayoutParams;
     move-object/from16 v0, p1
 
@@ -2064,7 +1850,6 @@
 
     move-result v5
 
-    .line 430
     .local v5, "fl":I
     move-object/from16 v0, v16
 
@@ -2072,7 +1857,6 @@
 
     and-int/lit16 v6, v3, 0xf0
 
-    .line 431
     .local v6, "adjust":I
     const/4 v3, 0x0
 
@@ -2082,19 +1866,16 @@
 
     move-result v29
 
-    .line 433
     .local v29, "sysUiFl":I
     invoke-interface/range {p1 .. p1}, Landroid/view/WindowManagerPolicy$WindowState;->getStackBounds()Landroid/graphics/Rect;
 
     move-result-object v27
 
-    .line 434
     .local v27, "stackBounds":Landroid/graphics/Rect;
     invoke-interface/range {p1 .. p1}, Landroid/view/WindowManagerPolicy$WindowState;->getMultiWindowStyleLw()Lcom/samsung/android/multiwindow/MultiWindowStyle;
 
     move-result-object v14
 
-    .line 435
     .local v14, "multiWindowStyle":Lcom/samsung/android/multiwindow/MultiWindowStyle;
     const/16 v3, 0x800
 
@@ -2102,7 +1883,6 @@
 
     move-result v24
 
-    .line 436
     .local v24, "optionScale":Z
     invoke-virtual {v14}, Lcom/samsung/android/multiwindow/MultiWindowStyle;->getType()I
 
@@ -2114,7 +1894,6 @@
 
     const/16 v30, 0x1
 
-    .line 437
     .local v30, "typeCascade":Z
     :goto_0
     invoke-interface/range {p1 .. p1}, Landroid/view/WindowManagerPolicy$WindowState;->getAttrs()Landroid/view/WindowManager$LayoutParams;
@@ -2129,7 +1908,6 @@
 
     const/4 v15, 0x1
 
-    .line 439
     .local v15, "absLayout":Z
     :goto_1
     invoke-virtual {v14}, Lcom/samsung/android/multiwindow/MultiWindowStyle;->isNormal()Z
@@ -2151,7 +1929,6 @@
     :cond_0
     if-nez v15, :cond_27
 
-    .line 441
     invoke-virtual {v14}, Lcom/samsung/android/multiwindow/MultiWindowStyle;->getType()I
 
     move-result v3
@@ -2160,21 +1937,18 @@
 
     if-ne v3, v4, :cond_2
 
-    .line 442
     invoke-interface/range {p1 .. p1}, Landroid/view/WindowManagerPolicy$WindowState;->isVisibleLw()Z
 
     move-result v3
 
     if-eqz v3, :cond_1
 
-    .line 443
     const/4 v3, 0x1
 
     move-object/from16 v0, p0
 
     iput-boolean v3, v0, Lcom/android/internal/policy/impl/multiwindow/MultiPhoneWindowManager;->mStatusBarTransient:Z
 
-    .line 445
     :cond_1
     const/16 v3, 0x1000
 
@@ -2184,14 +1958,12 @@
 
     if-eqz v3, :cond_2
 
-    .line 446
     const/4 v3, 0x1
 
     move-object/from16 v0, p0
 
     iput-boolean v3, v0, Lcom/android/internal/policy/impl/multiwindow/MultiPhoneWindowManager;->mIsIsolatedSplitUsed:Z
 
-    .line 449
     :cond_2
     move/from16 v0, p4
 
@@ -2201,7 +1973,6 @@
 
     const/16 v23, 0x1
 
-    .line 451
     .local v23, "isPortrait":Z
     :goto_2
     move-object/from16 v0, p0
@@ -2216,7 +1987,6 @@
 
     if-eqz v3, :cond_21
 
-    .line 452
     invoke-virtual {v14}, Lcom/samsung/android/multiwindow/MultiWindowStyle;->getType()I
 
     move-result v3
@@ -2225,14 +1995,12 @@
 
     if-nez p2, :cond_20
 
-    .line 454
     move-object/from16 v0, v27
 
     iget v0, v0, Landroid/graphics/Rect;->left:I
 
     move/from16 v20, v0
 
-    .line 455
     .local v20, "currentWinLeft":I
     move-object/from16 v0, v27
 
@@ -2240,29 +2008,24 @@
 
     move/from16 v18, v0
 
-    .line 456
     .local v18, "currentWinBottom":I
     invoke-virtual/range {v27 .. v27}, Landroid/graphics/Rect;->width()I
 
     move-result v21
 
-    .line 457
     .local v21, "currentWinWidth":I
     invoke-virtual/range {v27 .. v27}, Landroid/graphics/Rect;->height()I
 
     move-result v19
 
-    .line 458
     .local v19, "currentWinHeight":I
     invoke-interface/range {p1 .. p1}, Landroid/view/WindowManagerPolicy$WindowState;->getScaleFactor()Landroid/graphics/PointF;
 
     move-result-object v26
 
-    .line 459
     .local v26, "scale":Landroid/graphics/PointF;
     move/from16 v17, v19
 
-    .line 461
     .local v17, "currentStackHeight":I
     invoke-interface/range {p1 .. p1}, Landroid/view/WindowManagerPolicy$WindowState;->isFloating()Z
 
@@ -2270,17 +2033,14 @@
 
     if-eqz v3, :cond_3
 
-    .line 462
     invoke-interface/range {p1 .. p1}, Landroid/view/WindowManagerPolicy$WindowState;->getRequestedWidthLw()I
 
     move-result v21
 
-    .line 463
     invoke-interface/range {p1 .. p1}, Landroid/view/WindowManagerPolicy$WindowState;->getRequestedHeightLw()I
 
     move-result v19
 
-    .line 464
     move-object/from16 v0, v27
 
     iget v3, v0, Landroid/graphics/Rect;->left:I
@@ -2295,7 +2055,6 @@
 
     add-int v20, v3, v4
 
-    .line 467
     :cond_3
     move/from16 v0, v18
 
@@ -2309,7 +2068,6 @@
 
     if-eqz v3, :cond_1d
 
-    .line 468
     :cond_4
     move-object/from16 v0, v27
 
@@ -2317,14 +2075,12 @@
 
     if-gez v3, :cond_5
 
-    .line 469
     const/4 v3, 0x0
 
     move-object/from16 v0, p20
 
     iput v3, v0, Landroid/graphics/Rect;->top:I
 
-    .line 472
     :cond_5
     move-object/from16 v0, v16
 
@@ -2338,7 +2094,6 @@
 
     iput v3, v0, Landroid/view/WindowManager$LayoutParams;->gravity:I
 
-    .line 474
     move-object/from16 v0, p0
 
     iget-object v3, v0, Lcom/android/internal/policy/impl/multiwindow/MultiPhoneWindowManager;->mInputMethodWindow:Landroid/view/WindowManagerPolicy$WindowState;
@@ -2361,11 +2116,9 @@
 
     add-int v22, v3, v4
 
-    .line 476
     .local v22, "heightUpperInputMethod":I
     move-object/from16 v28, v27
 
-    .line 478
     .local v28, "stackBoxBounds":Landroid/graphics/Rect;
     invoke-interface/range {p1 .. p1}, Landroid/view/WindowManagerPolicy$WindowState;->isFloating()Z
 
@@ -2391,21 +2144,18 @@
 
     if-ge v0, v1, :cond_11
 
-    .line 481
     move-object/from16 v0, v28
 
     iget v3, v0, Landroid/graphics/Rect;->top:I
 
     if-gez v3, :cond_6
 
-    .line 482
     const/4 v3, 0x0
 
     move-object/from16 v0, p18
 
     iput v3, v0, Landroid/graphics/Rect;->top:I
 
-    .line 484
     :cond_6
     sub-int v3, v22, v19
 
@@ -2413,7 +2163,6 @@
 
     iput v3, v0, Landroid/graphics/Rect;->top:I
 
-    .line 485
     move/from16 v0, p12
 
     move-object/from16 v1, p18
@@ -2426,7 +2175,6 @@
 
     iput v0, v1, Landroid/graphics/Rect;->bottom:I
 
-    .line 486
     invoke-virtual/range {v28 .. v28}, Landroid/graphics/Rect;->width()I
 
     move-result v3
@@ -2435,21 +2183,18 @@
 
     if-ge v3, v0, :cond_10
 
-    .line 487
     move/from16 v0, v20
 
     move-object/from16 v1, p17
 
     iput v0, v1, Landroid/graphics/Rect;->left:I
 
-    .line 488
     add-int v3, v20, v21
 
     move-object/from16 v0, p17
 
     iput v3, v0, Landroid/graphics/Rect;->right:I
 
-    .line 493
     :goto_3
     const/16 v3, 0x10
 
@@ -2459,7 +2204,6 @@
 
     if-ne v6, v3, :cond_8
 
-    .line 494
     :cond_7
     move/from16 v0, p7
 
@@ -2467,7 +2211,6 @@
 
     iput v0, v1, Landroid/graphics/Rect;->bottom:I
 
-    .line 497
     :cond_8
     move-object/from16 v0, v16
 
@@ -2481,7 +2224,6 @@
 
     iput v3, v0, Landroid/view/WindowManager$LayoutParams;->gravity:I
 
-    .line 562
     .end local v19    # "currentWinHeight":I
     .end local p8    # "stableTop":I
     :goto_4
@@ -2491,21 +2233,18 @@
 
     if-nez v24, :cond_1c
 
-    .line 563
     move/from16 v0, p10
 
     move-object/from16 v1, p21
 
     iput v0, v1, Landroid/graphics/Rect;->top:I
 
-    .line 564
     move/from16 v0, p11
 
     move-object/from16 v1, p21
 
     iput v0, v1, Landroid/graphics/Rect;->bottom:I
 
-    .line 613
     .end local v17    # "currentStackHeight":I
     .end local v18    # "currentWinBottom":I
     .end local v20    # "currentWinLeft":I
@@ -2549,7 +2288,6 @@
 
     if-ne v3, v4, :cond_c
 
-    .line 618
     :cond_a
     invoke-interface/range {p2 .. p2}, Landroid/view/WindowManagerPolicy$WindowState;->getAttrs()Landroid/view/WindowManager$LayoutParams;
 
@@ -2581,7 +2319,6 @@
 
     if-nez v3, :cond_c
 
-    .line 620
     :cond_b
     const v3, 0x10500
 
@@ -2595,7 +2332,6 @@
 
     if-nez v3, :cond_26
 
-    .line 622
     move-object/from16 v0, p0
 
     iget-object v3, v0, Lcom/android/internal/policy/impl/multiwindow/MultiPhoneWindowManager;->mPhoneWindowManager:Lcom/android/internal/policy/impl/PhoneWindowManager;
@@ -2618,13 +2354,11 @@
 
     invoke-virtual/range {v3 .. v14}, Lcom/android/internal/policy/impl/PhoneWindowManager;->setAttachedWindowFrames(Landroid/view/WindowManagerPolicy$WindowState;IILandroid/view/WindowManagerPolicy$WindowState;ZLandroid/graphics/Rect;Landroid/graphics/Rect;Landroid/graphics/Rect;Landroid/graphics/Rect;Landroid/graphics/Rect;Lcom/samsung/android/multiwindow/MultiWindowStyle;)V
 
-    .line 668
     .end local v23    # "isPortrait":Z
     :cond_c
     :goto_6
     return-void
 
-    .line 436
     .end local v15    # "absLayout":Z
     .end local v30    # "typeCascade":Z
     .restart local p8    # "stableTop":I
@@ -2633,21 +2367,18 @@
 
     goto/16 :goto_0
 
-    .line 437
     .restart local v30    # "typeCascade":Z
     :cond_e
     const/4 v15, 0x0
 
     goto/16 :goto_1
 
-    .line 449
     .restart local v15    # "absLayout":Z
     :cond_f
     const/16 v23, 0x0
 
     goto/16 :goto_2
 
-    .line 490
     .restart local v17    # "currentStackHeight":I
     .restart local v18    # "currentWinBottom":I
     .restart local v19    # "currentWinHeight":I
@@ -2664,7 +2395,6 @@
 
     iput v0, v1, Landroid/graphics/Rect;->left:I
 
-    .line 491
     add-int v3, p13, p15
 
     move-object/from16 v0, p17
@@ -2673,7 +2403,6 @@
 
     goto/16 :goto_3
 
-    .line 498
     :cond_11
     if-eqz v30, :cond_12
 
@@ -2687,10 +2416,8 @@
 
     if-ge v0, v1, :cond_15
 
-    .line 501
     if-eqz v30, :cond_13
 
-    .line 502
     sub-int v3, p12, v17
 
     move/from16 v0, p8
@@ -2723,7 +2450,6 @@
 
     iput v3, v0, Landroid/graphics/Rect;->top:I
 
-    .line 504
     move-object/from16 v0, p17
 
     iget v3, v0, Landroid/graphics/Rect;->bottom:I
@@ -2738,7 +2464,6 @@
 
     iput v3, v0, Landroid/graphics/Rect;->bottom:I
 
-    .line 505
     move-object/from16 v0, p18
 
     iget v3, v0, Landroid/graphics/Rect;->bottom:I
@@ -2753,7 +2478,6 @@
 
     iput v3, v0, Landroid/graphics/Rect;->bottom:I
 
-    .line 518
     :goto_7
     move-object/from16 v0, v16
 
@@ -2769,7 +2493,6 @@
 
     goto/16 :goto_4
 
-    .line 507
     :cond_13
     move/from16 v0, p3
 
@@ -2783,7 +2506,6 @@
 
     iput v0, v1, Landroid/graphics/Rect;->top:I
 
-    .line 508
     move/from16 v0, p12
 
     move-object/from16 v1, p18
@@ -2796,7 +2518,6 @@
 
     iput v0, v1, Landroid/graphics/Rect;->bottom:I
 
-    .line 509
     invoke-interface/range {p1 .. p1}, Landroid/view/WindowManagerPolicy$WindowState;->isFloating()Z
 
     move-result v3
@@ -2811,7 +2532,6 @@
 
     if-ne v3, v4, :cond_14
 
-    .line 510
     move-object/from16 v0, v28
 
     iget v3, v0, Landroid/graphics/Rect;->left:I
@@ -2820,7 +2540,6 @@
 
     iput v3, v0, Landroid/graphics/Rect;->left:I
 
-    .line 511
     move-object/from16 v0, v28
 
     iget v3, v0, Landroid/graphics/Rect;->left:I
@@ -2837,7 +2556,6 @@
 
     goto :goto_7
 
-    .line 513
     :cond_14
     move/from16 v0, v20
 
@@ -2845,7 +2563,6 @@
 
     iput v0, v1, Landroid/graphics/Rect;->left:I
 
-    .line 514
     add-int v3, v20, v21
 
     move-object/from16 v0, p17
@@ -2854,13 +2571,11 @@
 
     goto :goto_7
 
-    .line 520
     :cond_15
     if-eqz v24, :cond_16
 
     if-eqz v30, :cond_16
 
-    .line 521
     move/from16 v0, p8
 
     move-object/from16 v1, p20
@@ -2879,7 +2594,6 @@
 
     iput v0, v1, Landroid/graphics/Rect;->top:I
 
-    .line 522
     sub-int v3, v22, p8
 
     int-to-float v3, v3
@@ -2952,7 +2666,6 @@
 
     iput v3, v0, Landroid/graphics/Rect;->bottom:I
 
-    .line 525
     move-object/from16 v0, v16
 
     iget v3, v0, Landroid/view/WindowManager$LayoutParams;->gravity:I
@@ -2967,7 +2680,6 @@
 
     goto/16 :goto_4
 
-    .line 527
     :cond_16
     if-eqz v30, :cond_19
 
@@ -2991,14 +2703,12 @@
 
     iput v0, v1, Landroid/graphics/Rect;->top:I
 
-    .line 528
     move/from16 v0, v20
 
     move-object/from16 v1, p17
 
     iput v0, v1, Landroid/graphics/Rect;->left:I
 
-    .line 529
     move-object/from16 v0, p17
 
     iget v3, v0, Landroid/graphics/Rect;->left:I
@@ -3009,7 +2719,6 @@
 
     iput v3, v0, Landroid/graphics/Rect;->right:I
 
-    .line 530
     if-eqz p22, :cond_1a
 
     move/from16 v0, v29
@@ -3034,7 +2743,6 @@
 
     if-gt v3, v4, :cond_1a
 
-    .line 534
     add-int v3, p3, p5
 
     move-object/from16 v0, p18
@@ -3045,7 +2753,6 @@
 
     iput v3, v0, Landroid/graphics/Rect;->bottom:I
 
-    .line 540
     :goto_9
     invoke-interface/range {p1 .. p1}, Landroid/view/WindowManagerPolicy$WindowState;->isFloating()Z
 
@@ -3053,7 +2760,6 @@
 
     if-eqz v3, :cond_17
 
-    .line 541
     move/from16 v0, p12
 
     move-object/from16 v1, p18
@@ -3066,27 +2772,23 @@
 
     iput v0, v1, Landroid/graphics/Rect;->bottom:I
 
-    .line 542
     move/from16 v0, p13
 
     move-object/from16 v1, p18
 
     iput v0, v1, Landroid/graphics/Rect;->left:I
 
-    .line 543
     add-int v3, p13, p15
 
     move-object/from16 v0, p18
 
     iput v3, v0, Landroid/graphics/Rect;->right:I
 
-    .line 547
     :cond_17
     const/16 v3, 0x10
 
     if-eq v6, v3, :cond_18
 
-    .line 548
     move/from16 v0, p7
 
     move-object/from16 v1, p20
@@ -3099,7 +2801,6 @@
 
     iput v0, v1, Landroid/graphics/Rect;->bottom:I
 
-    .line 550
     :cond_18
     invoke-interface/range {p1 .. p1}, Landroid/view/WindowManagerPolicy$WindowState;->isFloating()Z
 
@@ -3107,7 +2808,6 @@
 
     if-eqz v3, :cond_1b
 
-    .line 551
     move-object/from16 v0, v16
 
     iget v3, v0, Landroid/view/WindowManager$LayoutParams;->gravity:I
@@ -3122,14 +2822,12 @@
 
     goto/16 :goto_4
 
-    .line 527
     .restart local p8    # "stableTop":I
     :cond_19
     const/16 p8, 0x0
 
     goto/16 :goto_8
 
-    .line 536
     .end local p8    # "stableTop":I
     :cond_1a
     add-int v3, p14, p16
@@ -3144,7 +2842,6 @@
 
     goto :goto_9
 
-    .line 553
     :cond_1b
     const/high16 v3, 0x40000000    # 2.0f
 
@@ -3154,7 +2851,6 @@
 
     goto/16 :goto_4
 
-    .line 566
     :cond_1c
     move-object/from16 v0, p21
 
@@ -3164,7 +2860,6 @@
 
     goto/16 :goto_5
 
-    .line 571
     .end local v22    # "heightUpperInputMethod":I
     .end local v28    # "stackBoxBounds":Landroid/graphics/Rect;
     .restart local v19    # "currentWinHeight":I
@@ -3176,7 +2871,6 @@
 
     if-eqz v3, :cond_9
 
-    .line 572
     move-object/from16 v0, v27
 
     iget v3, v0, Landroid/graphics/Rect;->top:I
@@ -3185,7 +2879,6 @@
 
     if-le v3, v0, :cond_1f
 
-    .line 573
     move/from16 v0, p8
 
     move-object/from16 v1, p18
@@ -3198,7 +2891,6 @@
 
     iput v0, v1, Landroid/graphics/Rect;->top:I
 
-    .line 577
     :cond_1e
     :goto_a
     move/from16 v0, p12
@@ -3213,14 +2905,12 @@
 
     iput v0, v1, Landroid/graphics/Rect;->bottom:I
 
-    .line 578
     move/from16 v0, v20
 
     move-object/from16 v1, p17
 
     iput v0, v1, Landroid/graphics/Rect;->left:I
 
-    .line 579
     move-object/from16 v0, p17
 
     iget v3, v0, Landroid/graphics/Rect;->left:I
@@ -3231,12 +2921,10 @@
 
     iput v3, v0, Landroid/graphics/Rect;->right:I
 
-    .line 582
     const/16 v3, 0x10
 
     if-eq v6, v3, :cond_9
 
-    .line 583
     move/from16 v0, p6
 
     move-object/from16 v1, p20
@@ -3249,7 +2937,6 @@
 
     iput v0, v1, Landroid/graphics/Rect;->top:I
 
-    .line 584
     move/from16 v0, p7
 
     move-object/from16 v1, p20
@@ -3264,7 +2951,6 @@
 
     goto/16 :goto_5
 
-    .line 574
     :cond_1f
     move-object/from16 v0, v27
 
@@ -3272,7 +2958,6 @@
 
     if-gez v3, :cond_1e
 
-    .line 575
     const/4 v3, 0x0
 
     move-object/from16 v0, p18
@@ -3285,7 +2970,6 @@
 
     goto :goto_a
 
-    .line 590
     .end local v17    # "currentStackHeight":I
     .end local v18    # "currentWinBottom":I
     .end local v19    # "currentWinHeight":I
@@ -3299,7 +2983,6 @@
 
     if-eqz v3, :cond_9
 
-    .line 591
     move-object/from16 v0, v16
 
     iget v3, v0, Landroid/view/WindowManager$LayoutParams;->gravity:I
@@ -3314,7 +2997,6 @@
 
     goto/16 :goto_5
 
-    .line 595
     :cond_21
     invoke-interface/range {p1 .. p1}, Landroid/view/WindowManagerPolicy$WindowState;->isArrangedUpperSideInputMethod()Z
 
@@ -3322,7 +3004,6 @@
 
     if-eqz v3, :cond_22
 
-    .line 596
     move-object/from16 v0, v16
 
     iget v3, v0, Landroid/view/WindowManager$LayoutParams;->gravity:I
@@ -3335,7 +3016,6 @@
 
     iput v3, v0, Landroid/view/WindowManager$LayoutParams;->gravity:I
 
-    .line 599
     :cond_22
     if-eqz v14, :cond_9
 
@@ -3379,7 +3059,6 @@
 
     if-eqz v3, :cond_9
 
-    .line 602
     move-object/from16 v0, p18
 
     iget v3, v0, Landroid/graphics/Rect;->bottom:I
@@ -3388,14 +3067,12 @@
 
     if-ge v3, v0, :cond_23
 
-    .line 603
     move/from16 v0, p9
 
     move-object/from16 v1, p18
 
     iput v0, v1, Landroid/graphics/Rect;->bottom:I
 
-    .line 604
     :cond_23
     move-object/from16 v0, p19
 
@@ -3405,14 +3082,12 @@
 
     if-ge v3, v0, :cond_24
 
-    .line 605
     move/from16 v0, p9
 
     move-object/from16 v1, p19
 
     iput v0, v1, Landroid/graphics/Rect;->bottom:I
 
-    .line 606
     :cond_24
     move-object/from16 v0, p20
 
@@ -3422,14 +3097,12 @@
 
     if-ge v3, v0, :cond_25
 
-    .line 607
     move/from16 v0, p9
 
     move-object/from16 v1, p20
 
     iput v0, v1, Landroid/graphics/Rect;->bottom:I
 
-    .line 608
     :cond_25
     move-object/from16 v0, p21
 
@@ -3439,7 +3112,6 @@
 
     if-ge v3, v0, :cond_9
 
-    .line 609
     move/from16 v0, p9
 
     move-object/from16 v1, p21
@@ -3448,7 +3120,6 @@
 
     goto/16 :goto_5
 
-    .line 624
     .end local p8    # "stableTop":I
     :cond_26
     move-object/from16 v0, p0
@@ -3475,7 +3146,6 @@
 
     goto/16 :goto_6
 
-    .line 628
     .end local v23    # "isPortrait":Z
     .restart local p8    # "stableTop":I
     :cond_27
@@ -3503,7 +3173,6 @@
 
     if-eqz v3, :cond_c
 
-    .line 632
     :cond_28
     invoke-interface/range {p1 .. p1}, Landroid/view/WindowManagerPolicy$WindowState;->isArrangedUpperSideInputMethod()Z
 
@@ -3511,7 +3180,6 @@
 
     if-eqz v3, :cond_29
 
-    .line 633
     move-object/from16 v0, v16
 
     iget v3, v0, Landroid/view/WindowManager$LayoutParams;->gravity:I
@@ -3524,7 +3192,6 @@
 
     iput v3, v0, Landroid/view/WindowManager$LayoutParams;->gravity:I
 
-    .line 635
     :cond_29
     move-object/from16 v0, p0
 
@@ -3542,7 +3209,6 @@
 
     move/from16 v25, v0
 
-    .line 637
     .local v25, "orientation":I
     invoke-interface/range {p1 .. p1}, Landroid/view/WindowManagerPolicy$WindowState;->getRequestedOrientation()I
 
@@ -3568,21 +3234,18 @@
 
     if-eqz v3, :cond_2c
 
-    .line 640
     move/from16 v0, p3
 
     move-object/from16 v1, p17
 
     iput v0, v1, Landroid/graphics/Rect;->top:I
 
-    .line 641
     move/from16 v0, p5
 
     move-object/from16 v1, p17
 
     iput v0, v1, Landroid/graphics/Rect;->bottom:I
 
-    .line 646
     :goto_b
     move-object/from16 v0, p0
 
@@ -3620,7 +3283,6 @@
 
     if-lez v3, :cond_c
 
-    .line 649
     move-object/from16 v0, p0
 
     iget-object v3, v0, Lcom/android/internal/policy/impl/multiwindow/MultiPhoneWindowManager;->mCurrentInputMethodTarget:Landroid/view/WindowManagerPolicy$WindowState;
@@ -3653,7 +3315,6 @@
 
     if-eqz v3, :cond_2b
 
-    .line 651
     :cond_2a
     move/from16 v0, p11
 
@@ -3661,7 +3322,6 @@
 
     iput v0, v1, Landroid/graphics/Rect;->bottom:I
 
-    .line 654
     :cond_2b
     move-object/from16 v0, p0
 
@@ -3703,7 +3363,6 @@
 
     if-ne v3, v4, :cond_c
 
-    .line 657
     move-object/from16 v0, p0
 
     iget-object v3, v0, Lcom/android/internal/policy/impl/multiwindow/MultiPhoneWindowManager;->mInputMethodWindow:Landroid/view/WindowManagerPolicy$WindowState;
@@ -3726,7 +3385,6 @@
 
     add-int v22, v3, v4
 
-    .line 659
     .restart local v22    # "heightUpperInputMethod":I
     invoke-virtual/range {v27 .. v27}, Landroid/graphics/Rect;->height()I
 
@@ -3736,7 +3394,6 @@
 
     if-ge v3, v0, :cond_2d
 
-    .line 660
     invoke-virtual/range {v27 .. v27}, Landroid/graphics/Rect;->height()I
 
     move-result v3
@@ -3753,7 +3410,6 @@
 
     goto/16 :goto_6
 
-    .line 643
     .end local v22    # "heightUpperInputMethod":I
     :cond_2c
     move-object/from16 v0, p17
@@ -3774,7 +3430,6 @@
 
     goto/16 :goto_b
 
-    .line 662
     .restart local v22    # "heightUpperInputMethod":I
     :cond_2d
     move/from16 v0, p14
@@ -3803,7 +3458,6 @@
 
     const/4 v3, 0x1
 
-    .line 1301
     if-eqz p2, :cond_1
 
     iget v4, p2, Landroid/view/WindowManager$LayoutParams;->type:I
@@ -3812,12 +3466,10 @@
 
     if-ne v4, v5, :cond_1
 
-    .line 1363
     :cond_0
     :goto_0
     return v2
 
-    .line 1305
     :cond_1
     iget v4, p2, Landroid/view/WindowManager$LayoutParams;->type:I
 
@@ -3846,10 +3498,8 @@
     :cond_2
     move v2, v3
 
-    .line 1309
     goto :goto_0
 
-    .line 1312
     :cond_3
     if-eqz p5, :cond_4
 
@@ -3867,10 +3517,8 @@
 
     move v2, v3
 
-    .line 1314
     goto :goto_0
 
-    .line 1317
     :cond_4
     invoke-virtual {p3}, Lcom/samsung/android/multiwindow/MultiWindowStyle;->isCascade()Z
 
@@ -3889,12 +3537,10 @@
     :cond_5
     move v0, v3
 
-    .line 1318
     .local v0, "isCascade":Z
     :goto_1
     if-eqz v0, :cond_0
 
-    .line 1319
     if-eqz p7, :cond_7
 
     invoke-interface {p7}, Landroid/view/WindowManagerPolicy$WindowState;->getAttrs()Landroid/view/WindowManager$LayoutParams;
@@ -3907,29 +3553,24 @@
 
     if-eqz v4, :cond_7
 
-    .line 1322
     iput-boolean v3, p0, Lcom/android/internal/policy/impl/multiwindow/MultiPhoneWindowManager;->mForceHideCascade:Z
 
     move v2, v3
 
-    .line 1323
     goto :goto_0
 
     .end local v0    # "isCascade":Z
     :cond_6
     move v0, v2
 
-    .line 1317
     goto :goto_1
 
-    .line 1325
     .restart local v0    # "isCascade":Z
     :cond_7
     iget-boolean v4, p0, Lcom/android/internal/policy/impl/multiwindow/MultiPhoneWindowManager;->mForceHideCascade:Z
 
     if-eqz v4, :cond_a
 
-    .line 1326
     if-eqz p7, :cond_8
 
     invoke-interface {p7}, Landroid/view/WindowManagerPolicy$WindowState;->isVisibleLw()Z
@@ -3941,14 +3582,11 @@
     :cond_8
     move v2, v3
 
-    .line 1327
     goto :goto_0
 
-    .line 1329
     :cond_9
     iput-boolean v2, p0, Lcom/android/internal/policy/impl/multiwindow/MultiPhoneWindowManager;->mForceHideCascade:Z
 
-    .line 1332
     :cond_a
     iget-boolean v4, p0, Lcom/android/internal/policy/impl/multiwindow/MultiPhoneWindowManager;->mForceHidePenWindowController:Z
 
@@ -3966,7 +3604,6 @@
 
     if-ne v4, v5, :cond_c
 
-    .line 1333
     :cond_b
     iget-object v4, p0, Lcom/android/internal/policy/impl/multiwindow/MultiPhoneWindowManager;->mForceHidePenWindowControllerTargetToken:Landroid/view/IApplicationToken;
 
@@ -3982,10 +3619,8 @@
 
     move v2, v3
 
-    .line 1334
     goto :goto_0
 
-    .line 1338
     :cond_c
     invoke-direct {p0}, Lcom/android/internal/policy/impl/multiwindow/MultiPhoneWindowManager;->keyguardOn()Z
 
@@ -3993,7 +3628,6 @@
 
     if-eqz v4, :cond_10
 
-    .line 1339
     iget-boolean v4, p0, Lcom/android/internal/policy/impl/multiwindow/MultiPhoneWindowManager;->mCanBeForceHide:Z
 
     if-nez v4, :cond_d
@@ -4006,26 +3640,21 @@
 
     if-eqz v4, :cond_0
 
-    .line 1348
     :cond_d
     const/high16 v1, 0x480000
 
-    .line 1350
     .local v1, "mask":I
     if-eqz p2, :cond_e
 
-    .line 1351
     iget v4, p2, Landroid/view/WindowManager$LayoutParams;->flags:I
 
     and-int/2addr v4, v1
 
     if-nez v4, :cond_0
 
-    .line 1355
     :cond_e
     if-eqz p5, :cond_f
 
-    .line 1356
     iget v4, p5, Landroid/view/WindowManager$LayoutParams;->flags:I
 
     and-int/2addr v4, v1
@@ -4035,10 +3664,8 @@
     :cond_f
     move v2, v3
 
-    .line 1360
     goto/16 :goto_0
 
-    .line 1343
     .end local v1    # "mask":I
     :cond_10
     iget-boolean v4, p0, Lcom/android/internal/policy/impl/multiwindow/MultiPhoneWindowManager;->mCanBeForceHide:Z
@@ -4059,7 +3686,6 @@
 
     const/4 v8, 0x1
 
-    .line 1119
     const-string v9, "true"
 
     const-string v10, "dev.knoxapp.running"
@@ -4078,11 +3704,9 @@
 
     move v7, v8
 
-    .line 1225
     :goto_0
     return v7
 
-    .line 1122
     :cond_0
     iget-object v9, p0, Lcom/android/internal/policy/impl/multiwindow/MultiPhoneWindowManager;->mTopFullscreenOpaqueWindowStateZoneA:Landroid/view/WindowManagerPolicy$WindowState;
 
@@ -4090,7 +3714,6 @@
 
     move-object v3, v7
 
-    .line 1124
     .local v3, "lpZoneA":Landroid/view/WindowManager$LayoutParams;
     :goto_1
     iget-object v9, p0, Lcom/android/internal/policy/impl/multiwindow/MultiPhoneWindowManager;->mTopFullscreenOpaqueWindowStateZoneB:Landroid/view/WindowManagerPolicy$WindowState;
@@ -4099,7 +3722,6 @@
 
     move-object v4, v7
 
-    .line 1126
     .local v4, "lpZoneB":Landroid/view/WindowManager$LayoutParams;
     :goto_2
     iget-object v9, p0, Lcom/android/internal/policy/impl/multiwindow/MultiPhoneWindowManager;->mTopFullscreenOpaqueWindowStateZoneA:Landroid/view/WindowManagerPolicy$WindowState;
@@ -4108,7 +3730,6 @@
 
     move-object v5, v7
 
-    .line 1128
     .local v5, "styleA":Lcom/samsung/android/multiwindow/MultiWindowStyle;
     :goto_3
     iget-object v9, p0, Lcom/android/internal/policy/impl/multiwindow/MultiPhoneWindowManager;->mTopFullscreenOpaqueWindowStateZoneB:Landroid/view/WindowManagerPolicy$WindowState;
@@ -4117,7 +3738,6 @@
 
     move-object v6, v7
 
-    .line 1131
     .local v6, "styleB":Lcom/samsung/android/multiwindow/MultiWindowStyle;
     :goto_4
     iget-object v7, p0, Lcom/android/internal/policy/impl/multiwindow/MultiPhoneWindowManager;->mKeyguardDelegate:Lcom/android/internal/policy/impl/keyguard/KeyguardServiceDelegate;
@@ -4134,10 +3754,8 @@
 
     move v7, v8
 
-    .line 1132
     goto :goto_0
 
-    .line 1122
     .end local v3    # "lpZoneA":Landroid/view/WindowManager$LayoutParams;
     .end local v4    # "lpZoneB":Landroid/view/WindowManager$LayoutParams;
     .end local v5    # "styleA":Lcom/samsung/android/multiwindow/MultiWindowStyle;
@@ -4151,7 +3769,6 @@
 
     goto :goto_1
 
-    .line 1124
     .restart local v3    # "lpZoneA":Landroid/view/WindowManager$LayoutParams;
     :cond_2
     iget-object v9, p0, Lcom/android/internal/policy/impl/multiwindow/MultiPhoneWindowManager;->mTopFullscreenOpaqueWindowStateZoneB:Landroid/view/WindowManagerPolicy$WindowState;
@@ -4162,7 +3779,6 @@
 
     goto :goto_2
 
-    .line 1126
     .restart local v4    # "lpZoneB":Landroid/view/WindowManager$LayoutParams;
     :cond_3
     iget-object v9, p0, Lcom/android/internal/policy/impl/multiwindow/MultiPhoneWindowManager;->mTopFullscreenOpaqueWindowStateZoneA:Landroid/view/WindowManagerPolicy$WindowState;
@@ -4173,7 +3789,6 @@
 
     goto :goto_3
 
-    .line 1128
     .restart local v5    # "styleA":Lcom/samsung/android/multiwindow/MultiWindowStyle;
     :cond_4
     iget-object v7, p0, Lcom/android/internal/policy/impl/multiwindow/MultiPhoneWindowManager;->mTopFullscreenOpaqueWindowStateZoneB:Landroid/view/WindowManagerPolicy$WindowState;
@@ -4184,25 +3799,21 @@
 
     goto :goto_4
 
-    .line 1135
     .restart local v6    # "styleB":Lcom/samsung/android/multiwindow/MultiWindowStyle;
     :cond_5
     iget-object v7, p0, Lcom/android/internal/policy/impl/multiwindow/MultiPhoneWindowManager;->mTopApplicationWindowState:Landroid/view/WindowManagerPolicy$WindowState;
 
     if-eqz v7, :cond_9
 
-    .line 1136
     iget-object v7, p0, Lcom/android/internal/policy/impl/multiwindow/MultiPhoneWindowManager;->mTopApplicationWindowState:Landroid/view/WindowManagerPolicy$WindowState;
 
     invoke-interface {v7}, Landroid/view/WindowManagerPolicy$WindowState;->getAttrs()Landroid/view/WindowManager$LayoutParams;
 
     move-result-object v1
 
-    .line 1137
     .local v1, "lpApp":Landroid/view/WindowManager$LayoutParams;
     move-object v2, v1
 
-    .line 1139
     .local v2, "lpTopFullApp":Landroid/view/WindowManager$LayoutParams;
     if-eqz p1, :cond_6
 
@@ -4210,23 +3821,19 @@
 
     if-eq v7, v8, :cond_6
 
-    .line 1141
     invoke-interface {p1}, Landroid/view/WindowManagerPolicy$WindowState;->getAttrs()Landroid/view/WindowManager$LayoutParams;
 
     move-result-object v2
 
-    .line 1144
     :cond_6
     if-eqz v2, :cond_9
 
-    .line 1160
     iget v7, v2, Landroid/view/WindowManager$LayoutParams;->multiWindowFlags:I
 
     and-int/lit8 v7, v7, 0x2
 
     if-eqz v7, :cond_9
 
-    .line 1161
     iget-object v7, p0, Lcom/android/internal/policy/impl/multiwindow/MultiPhoneWindowManager;->mWindowManagerFuncs:Landroid/view/WindowManagerPolicy$WindowManagerFuncs;
 
     invoke-interface {v7}, Landroid/view/WindowManagerPolicy$WindowManagerFuncs;->isPreviewScaleEnabled()Z
@@ -4235,7 +3842,6 @@
 
     if-eqz v7, :cond_7
 
-    .line 1162
     iget-object v7, p0, Lcom/android/internal/policy/impl/multiwindow/MultiPhoneWindowManager;->mMultiWindowTrayBar:Landroid/view/WindowManagerPolicy$WindowState;
 
     if-eqz v7, :cond_9
@@ -4248,15 +3854,12 @@
 
     if-nez v7, :cond_9
 
-    .line 1163
     invoke-virtual {p0, v8}, Lcom/android/internal/policy/impl/multiwindow/MultiPhoneWindowManager;->closeMultiWindowTrayBar(Z)Z
 
     move v7, v8
 
-    .line 1164
     goto :goto_0
 
-    .line 1167
     :cond_7
     iget-object v7, p0, Lcom/android/internal/policy/impl/multiwindow/MultiPhoneWindowManager;->mMultiWindowTrayBar:Landroid/view/WindowManagerPolicy$WindowState;
 
@@ -4264,10 +3867,8 @@
 
     move v7, v8
 
-    .line 1168
     goto :goto_0
 
-    .line 1170
     :cond_8
     iget-object v7, p0, Lcom/android/internal/policy/impl/multiwindow/MultiPhoneWindowManager;->mMultiWindowTrayBar:Landroid/view/WindowManagerPolicy$WindowState;
 
@@ -4283,10 +3884,8 @@
 
     move v7, v8
 
-    .line 1171
     goto/16 :goto_0
 
-    .line 1178
     .end local v1    # "lpApp":Landroid/view/WindowManager$LayoutParams;
     .end local v2    # "lpTopFullApp":Landroid/view/WindowManager$LayoutParams;
     :cond_9
@@ -4300,10 +3899,8 @@
 
     move v7, v8
 
-    .line 1180
     goto/16 :goto_0
 
-    .line 1182
     :cond_a
     if-eqz v4, :cond_b
 
@@ -4315,10 +3912,8 @@
 
     move v7, v8
 
-    .line 1184
     goto/16 :goto_0
 
-    .line 1187
     :cond_b
     if-eqz v5, :cond_c
 
@@ -4340,10 +3935,8 @@
     :cond_d
     move v7, v8
 
-    .line 1189
     goto/16 :goto_0
 
-    .line 1192
     :cond_e
     iget-object v7, p0, Lcom/android/internal/policy/impl/multiwindow/MultiPhoneWindowManager;->mWindowManagerFuncs:Landroid/view/WindowManagerPolicy$WindowManagerFuncs;
 
@@ -4353,10 +3946,8 @@
 
     if-nez v7, :cond_10
 
-    .line 1193
     if-eqz v3, :cond_f
 
-    .line 1194
     iget v7, v3, Landroid/view/WindowManager$LayoutParams;->multiWindowFlags:I
 
     and-int/lit8 v7, v7, 0x2
@@ -4365,14 +3956,11 @@
 
     move v7, v8
 
-    .line 1195
     goto/16 :goto_0
 
-    .line 1199
     :cond_f
     if-eqz v4, :cond_10
 
-    .line 1200
     iget v7, v4, Landroid/view/WindowManager$LayoutParams;->multiWindowFlags:I
 
     and-int/lit8 v7, v7, 0x2
@@ -4381,16 +3969,13 @@
 
     move v7, v8
 
-    .line 1201
     goto/16 :goto_0
 
-    .line 1206
     :cond_10
     iget-object v7, p0, Lcom/android/internal/policy/impl/multiwindow/MultiPhoneWindowManager;->mSPWM:Lcom/android/internal/policy/impl/sec/SamsungPhoneWindowManager;
 
     if-eqz v7, :cond_12
 
-    .line 1207
     iget-object v7, p0, Lcom/android/internal/policy/impl/multiwindow/MultiPhoneWindowManager;->mSPWM:Lcom/android/internal/policy/impl/sec/SamsungPhoneWindowManager;
 
     invoke-virtual {v7}, Lcom/android/internal/policy/impl/sec/SamsungPhoneWindowManager;->isKidsModeEnabled()Z
@@ -4424,27 +4009,22 @@
     :cond_11
     move v7, v8
 
-    .line 1211
     goto/16 :goto_0
 
-    .line 1215
     :cond_12
     iget-object v7, p0, Lcom/android/internal/policy/impl/multiwindow/MultiPhoneWindowManager;->mMultiWindowEditMode:Landroid/view/WindowManagerPolicy$WindowState;
 
     if-eqz v7, :cond_13
 
-    .line 1216
     iget-object v7, p0, Lcom/android/internal/policy/impl/multiwindow/MultiPhoneWindowManager;->mMultiWindowEditMode:Landroid/view/WindowManagerPolicy$WindowState;
 
     invoke-interface {v7}, Landroid/view/WindowManagerPolicy$WindowState;->getAttrs()Landroid/view/WindowManager$LayoutParams;
 
     move-result-object v0
 
-    .line 1217
     .local v0, "lp":Landroid/view/WindowManager$LayoutParams;
     if-eqz v0, :cond_13
 
-    .line 1218
     iget v7, v0, Landroid/view/WindowManager$LayoutParams;->multiWindowFlags:I
 
     and-int/lit8 v7, v7, 0x2
@@ -4453,10 +4033,8 @@
 
     move v7, v8
 
-    .line 1219
     goto/16 :goto_0
 
-    .line 1225
     .end local v0    # "lp":Landroid/view/WindowManager$LayoutParams;
     :cond_13
     const/4 v7, 0x0
@@ -4469,7 +4047,6 @@
     .param p1, "visibility"    # I
 
     .prologue
-    .line 1232
     iget-object v0, p0, Lcom/android/internal/policy/impl/multiwindow/MultiPhoneWindowManager;->mHandler:Landroid/os/Handler;
 
     new-instance v1, Lcom/android/internal/policy/impl/multiwindow/MultiPhoneWindowManager$6;
@@ -4478,7 +4055,6 @@
 
     invoke-virtual {v0, v1}, Landroid/os/Handler;->post(Ljava/lang/Runnable;)Z
 
-    .line 1239
     return-void
 .end method
 
@@ -4487,10 +4063,8 @@
     .param p1, "keyguardDelegate"    # Lcom/android/internal/policy/impl/keyguard/KeyguardServiceDelegate;
 
     .prologue
-    .line 897
     iput-object p1, p0, Lcom/android/internal/policy/impl/multiwindow/MultiPhoneWindowManager;->mKeyguardDelegate:Lcom/android/internal/policy/impl/keyguard/KeyguardServiceDelegate;
 
-    .line 899
     return-void
 .end method
 
@@ -4500,54 +4074,45 @@
     .param p2, "attrs"    # Landroid/view/WindowManager$LayoutParams;
 
     .prologue
-    .line 774
     iget v0, p2, Landroid/view/WindowManager$LayoutParams;->type:I
 
     packed-switch v0, :pswitch_data_0
 
-    .line 792
     :goto_0
     const/4 v0, 0x0
 
     :goto_1
     return v0
 
-    .line 776
     :pswitch_0
     iput-object p1, p0, Lcom/android/internal/policy/impl/multiwindow/MultiPhoneWindowManager;->mMultiWindowCenterBar:Landroid/view/WindowManagerPolicy$WindowState;
 
     goto :goto_0
 
-    .line 779
     :pswitch_1
     iput-object p1, p0, Lcom/android/internal/policy/impl/multiwindow/MultiPhoneWindowManager;->mMultiWindowGuide:Landroid/view/WindowManagerPolicy$WindowState;
 
     goto :goto_0
 
-    .line 782
     :pswitch_2
     iget-object v0, p0, Lcom/android/internal/policy/impl/multiwindow/MultiPhoneWindowManager;->mMultiWindowTrayBar:Landroid/view/WindowManagerPolicy$WindowState;
 
     if-eqz v0, :cond_0
 
-    .line 783
     const/4 v0, -0x7
 
     goto :goto_1
 
-    .line 785
     :cond_0
     iput-object p1, p0, Lcom/android/internal/policy/impl/multiwindow/MultiPhoneWindowManager;->mMultiWindowTrayBar:Landroid/view/WindowManagerPolicy$WindowState;
 
     goto :goto_0
 
-    .line 788
     :pswitch_3
     iput-object p1, p0, Lcom/android/internal/policy/impl/multiwindow/MultiPhoneWindowManager;->mMultiWindowEditMode:Landroid/view/WindowManagerPolicy$WindowState;
 
     goto :goto_0
 
-    .line 774
     nop
 
     :pswitch_data_0
@@ -4566,48 +4131,39 @@
     .prologue
     const/4 v1, 0x0
 
-    .line 749
     iget-object v0, p0, Lcom/android/internal/policy/impl/multiwindow/MultiPhoneWindowManager;->mMultiWindowTrayBar:Landroid/view/WindowManagerPolicy$WindowState;
 
     if-ne v0, p1, :cond_1
 
-    .line 750
     iput-object v1, p0, Lcom/android/internal/policy/impl/multiwindow/MultiPhoneWindowManager;->mMultiWindowTrayBar:Landroid/view/WindowManagerPolicy$WindowState;
 
-    .line 759
     :cond_0
     :goto_0
     return-void
 
-    .line 751
     :cond_1
     iget-object v0, p0, Lcom/android/internal/policy/impl/multiwindow/MultiPhoneWindowManager;->mMultiWindowEditMode:Landroid/view/WindowManagerPolicy$WindowState;
 
     if-ne v0, p1, :cond_2
 
-    .line 752
     iput-object v1, p0, Lcom/android/internal/policy/impl/multiwindow/MultiPhoneWindowManager;->mMultiWindowEditMode:Landroid/view/WindowManagerPolicy$WindowState;
 
     goto :goto_0
 
-    .line 753
     :cond_2
     iget-object v0, p0, Lcom/android/internal/policy/impl/multiwindow/MultiPhoneWindowManager;->mMultiWindowCenterBar:Landroid/view/WindowManagerPolicy$WindowState;
 
     if-ne v0, p1, :cond_3
 
-    .line 754
     iput-object v1, p0, Lcom/android/internal/policy/impl/multiwindow/MultiPhoneWindowManager;->mMultiWindowCenterBar:Landroid/view/WindowManagerPolicy$WindowState;
 
     goto :goto_0
 
-    .line 755
     :cond_3
     iget-object v0, p0, Lcom/android/internal/policy/impl/multiwindow/MultiPhoneWindowManager;->mMultiWindowGuide:Landroid/view/WindowManagerPolicy$WindowState;
 
     if-ne v0, p1, :cond_0
 
-    .line 756
     iput-object v1, p0, Lcom/android/internal/policy/impl/multiwindow/MultiPhoneWindowManager;->mMultiWindowGuide:Landroid/view/WindowManagerPolicy$WindowState;
 
     goto :goto_0
@@ -4618,10 +4174,8 @@
     .param p1, "forceHide"    # Z
 
     .prologue
-    .line 218
     iput-boolean p1, p0, Lcom/android/internal/policy/impl/multiwindow/MultiPhoneWindowManager;->mCanBeForceHide:Z
 
-    .line 220
     return-void
 .end method
 
@@ -4630,15 +4184,12 @@
     .param p1, "inputTargetWindow"    # Landroid/view/WindowManagerPolicy$WindowState;
 
     .prologue
-    .line 931
     iget-object v0, p0, Lcom/android/internal/policy/impl/multiwindow/MultiPhoneWindowManager;->mCurrentInputMethodTarget:Landroid/view/WindowManagerPolicy$WindowState;
 
     if-eq v0, p1, :cond_0
 
-    .line 932
     iput-object p1, p0, Lcom/android/internal/policy/impl/multiwindow/MultiPhoneWindowManager;->mCurrentInputMethodTarget:Landroid/view/WindowManagerPolicy$WindowState;
 
-    .line 934
     const-string v0, "MultiPhoneWindowManager"
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -4663,7 +4214,6 @@
 
     invoke-static {v0, v1}, Landroid/util/Slog;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 937
     :cond_0
     return-void
 .end method
@@ -4672,14 +4222,12 @@
     .locals 3
 
     .prologue
-    .line 265
     iget-object v1, p0, Lcom/android/internal/policy/impl/multiwindow/MultiPhoneWindowManager;->mContext:Landroid/content/Context;
 
     invoke-virtual {v1}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
 
     move-result-object v0
 
-    .line 267
     .local v0, "res":Landroid/content/res/Resources;
     iget-object v1, p0, Lcom/android/internal/policy/impl/multiwindow/MultiPhoneWindowManager;->mContext:Landroid/content/Context;
 
@@ -4689,7 +4237,6 @@
 
     if-nez v1, :cond_0
 
-    .line 268
     iget-object v1, p0, Lcom/android/internal/policy/impl/multiwindow/MultiPhoneWindowManager;->mFloatingPadding:Landroid/graphics/Rect;
 
     const v2, 0x10501c9
@@ -4700,7 +4247,6 @@
 
     iput v2, v1, Landroid/graphics/Rect;->top:I
 
-    .line 270
     :cond_0
     const v1, 0x10501c8
 
@@ -4710,7 +4256,6 @@
 
     iput v1, p0, Lcom/android/internal/policy/impl/multiwindow/MultiPhoneWindowManager;->mMinimizeSize:I
 
-    .line 271
     const v1, 0x10501db
 
     invoke-virtual {v0, v1}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
@@ -4719,7 +4264,6 @@
 
     iput v1, p0, Lcom/android/internal/policy/impl/multiwindow/MultiPhoneWindowManager;->mScaleWindowResizableSize:I
 
-    .line 273
     return-void
 .end method
 
@@ -4728,15 +4272,12 @@
     .param p1, "inputMethodWindow"    # Landroid/view/WindowManagerPolicy$WindowState;
 
     .prologue
-    .line 235
     iget-object v0, p0, Lcom/android/internal/policy/impl/multiwindow/MultiPhoneWindowManager;->mInputMethodWindow:Landroid/view/WindowManagerPolicy$WindowState;
 
     if-eq v0, p1, :cond_0
 
-    .line 236
     iput-object p1, p0, Lcom/android/internal/policy/impl/multiwindow/MultiPhoneWindowManager;->mInputMethodWindow:Landroid/view/WindowManagerPolicy$WindowState;
 
-    .line 237
     const-string v0, "MultiPhoneWindowManager"
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -4761,7 +4302,6 @@
 
     invoke-static {v0, v1}, Landroid/util/Slog;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 240
     :cond_0
     return-void
 .end method
@@ -4771,10 +4311,8 @@
     .param p1, "open"    # Z
 
     .prologue
-    .line 1371
     iput-boolean p1, p0, Lcom/android/internal/policy/impl/multiwindow/MultiPhoneWindowManager;->mIsMultiWindowTrayOpen:Z
 
-    .line 1373
     return-void
 .end method
 
@@ -4788,28 +4326,23 @@
 
     const/4 v3, 0x0
 
-    .line 1263
     if-nez p1, :cond_1
 
-    .line 1264
     const-string v1, "MultiPhoneWindowManager"
 
     const-string v2, "shouldMoveUpWindow() return false -> win is null"
 
     invoke-static {v1, v2}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1291
     :cond_0
     :goto_0
     return v3
 
-    .line 1268
     :cond_1
     invoke-interface {p1}, Landroid/view/WindowManagerPolicy$WindowState;->getMultiWindowStyleLw()Lcom/samsung/android/multiwindow/MultiWindowStyle;
 
     move-result-object v0
 
-    .line 1269
     .local v0, "mwStyle":Lcom/samsung/android/multiwindow/MultiWindowStyle;
     invoke-virtual {v0}, Lcom/samsung/android/multiwindow/MultiWindowStyle;->isNormal()Z
 
@@ -4826,10 +4359,8 @@
 
     if-eqz v1, :cond_0
 
-    .line 1270
     if-eqz p2, :cond_4
 
-    .line 1271
     invoke-virtual {v0}, Lcom/samsung/android/multiwindow/MultiWindowStyle;->getZone()I
 
     move-result v1
@@ -4838,13 +4369,11 @@
 
     if-nez v1, :cond_0
 
-    .line 1282
     :cond_2
     iget-object v1, p0, Lcom/android/internal/policy/impl/multiwindow/MultiPhoneWindowManager;->mCurrentInputMethodTarget:Landroid/view/WindowManagerPolicy$WindowState;
 
     if-ne p1, v1, :cond_5
 
-    .line 1284
     const-string v1, "MultiPhoneWindowManager"
 
     new-instance v3, Ljava/lang/StringBuilder;
@@ -4869,16 +4398,13 @@
 
     move v3, v2
 
-    .line 1285
     goto :goto_0
 
-    .line 1269
     :cond_3
     const/4 v1, 0x0
 
     goto :goto_1
 
-    .line 1275
     :cond_4
     invoke-virtual {v0}, Lcom/samsung/android/multiwindow/MultiWindowStyle;->getType()I
 
@@ -4910,7 +4436,6 @@
 
     goto :goto_0
 
-    .line 1286
     :cond_5
     invoke-virtual {v0}, Lcom/samsung/android/multiwindow/MultiWindowStyle;->isCascade()Z
 
@@ -4926,7 +4451,6 @@
 
     if-nez v1, :cond_0
 
-    .line 1287
     invoke-interface {p1}, Landroid/view/WindowManagerPolicy$WindowState;->getGroupId()I
 
     move-result v1
@@ -4959,7 +4483,6 @@
     .prologue
     const/4 v1, 0x0
 
-    .line 1027
     invoke-direct {p0}, Lcom/android/internal/policy/impl/multiwindow/MultiPhoneWindowManager;->isDeviceProvisioned()Z
 
     move-result v2
@@ -4980,7 +4503,6 @@
 
     if-eqz v2, :cond_1
 
-    .line 1029
     :cond_0
     const-string v2, "MultiPhoneWindowManager"
 
@@ -4988,11 +4510,9 @@
 
     invoke-static {v2, v3}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1040
     :goto_0
     return v1
 
-    .line 1033
     :cond_1
     iget-object v2, p0, Lcom/android/internal/policy/impl/multiwindow/MultiPhoneWindowManager;->mPhoneWindowManager:Lcom/android/internal/policy/impl/PhoneWindowManager;
 
@@ -5000,7 +4520,6 @@
 
     invoke-virtual {v2, v3, v1, v1}, Lcom/android/internal/policy/impl/PhoneWindowManager;->performHapticFeedbackLw(Landroid/view/WindowManagerPolicy$WindowState;IZ)Z
 
-    .line 1036
     :try_start_0
     iget-object v1, p0, Lcom/android/internal/policy/impl/multiwindow/MultiPhoneWindowManager;->mContext:Landroid/content/Context;
 
@@ -5010,17 +4529,14 @@
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 1040
     :goto_1
     const/4 v1, 0x1
 
     goto :goto_0
 
-    .line 1037
     :catch_0
     move-exception v0
 
-    .line 1038
     .local v0, "e":Ljava/lang/Exception;
     invoke-virtual {v0}, Ljava/lang/Exception;->printStackTrace()V
 
@@ -5031,7 +4547,6 @@
     .locals 3
 
     .prologue
-    .line 1420
     iget v2, p0, Lcom/android/internal/policy/impl/multiwindow/MultiPhoneWindowManager;->mEnableMultiWindowUISetting:I
 
     if-eqz v2, :cond_0
@@ -5044,12 +4559,10 @@
 
     if-eqz v2, :cond_0
 
-    .line 1422
     const/4 v2, 0x1
 
     iput-boolean v2, p0, Lcom/android/internal/policy/impl/multiwindow/MultiPhoneWindowManager;->mFirstRecentKeyClick:Z
 
-    .line 1424
     :try_start_0
     iget-object v2, p0, Lcom/android/internal/policy/impl/multiwindow/MultiPhoneWindowManager;->mMultiWindowUIIntent:Landroid/content/Intent;
 
@@ -5059,30 +4572,25 @@
 
     check-cast v1, Landroid/content/Intent;
 
-    .line 1425
     .local v1, "recentIntent":Landroid/content/Intent;
     const-string v2, "com.sec.android.multiwindow.recentkey.start"
 
     invoke-virtual {v1, v2}, Landroid/content/Intent;->setAction(Ljava/lang/String;)Landroid/content/Intent;
 
-    .line 1426
     iget-object v2, p0, Lcom/android/internal/policy/impl/multiwindow/MultiPhoneWindowManager;->mContext:Landroid/content/Context;
 
     invoke-virtual {v2, v1}, Landroid/content/Context;->startService(Landroid/content/Intent;)Landroid/content/ComponentName;
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 1432
     .end local v1    # "recentIntent":Landroid/content/Intent;
     :cond_0
     :goto_0
     return-void
 
-    .line 1427
     :catch_0
     move-exception v0
 
-    .line 1428
     .local v0, "e":Ljava/lang/Exception;
     invoke-virtual {v0}, Ljava/lang/Exception;->printStackTrace()V
 
@@ -5094,7 +4602,6 @@
     .param p1, "forceShow"    # Z
 
     .prologue
-    .line 1089
     iget-object v0, p0, Lcom/android/internal/policy/impl/multiwindow/MultiPhoneWindowManager;->mHandler:Landroid/os/Handler;
 
     new-instance v1, Lcom/android/internal/policy/impl/multiwindow/MultiPhoneWindowManager$5;
@@ -5103,7 +4610,6 @@
 
     invoke-virtual {v0, v1}, Landroid/os/Handler;->post(Ljava/lang/Runnable;)Z
 
-    .line 1111
     return-void
 .end method
 
@@ -5115,35 +4621,29 @@
 
     const/4 v1, 0x1
 
-    .line 373
     iget-object v8, p0, Lcom/android/internal/policy/impl/multiwindow/MultiPhoneWindowManager;->mContext:Landroid/content/Context;
 
     invoke-virtual {v8}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
 
     move-result-object v5
 
-    .line 374
     .local v5, "resolver":Landroid/content/ContentResolver;
     iget-object v8, p0, Lcom/android/internal/policy/impl/multiwindow/MultiPhoneWindowManager;->mLock:Ljava/lang/Object;
 
     monitor-enter v8
 
-    .line 375
     :try_start_0
     iget-boolean v9, p0, Lcom/android/internal/policy/impl/multiwindow/MultiPhoneWindowManager;->mIsRecentUI:Z
 
     if-nez v9, :cond_0
 
-    .line 376
     const/4 v9, 0x1
 
     iput-boolean v9, p0, Lcom/android/internal/policy/impl/multiwindow/MultiPhoneWindowManager;->mFirstMultiWindowSettingOn:Z
 
-    .line 379
     :cond_0
     iget v4, p0, Lcom/android/internal/policy/impl/multiwindow/MultiPhoneWindowManager;->mEnableMultiWindowUISetting:I
 
-    .line 380
     .local v4, "prevEnableMultiWindowUISetting":I
     const-string v9, "multi_window_enabled"
 
@@ -5157,7 +4657,6 @@
 
     iput v9, p0, Lcom/android/internal/policy/impl/multiwindow/MultiPhoneWindowManager;->mEnableMultiWindowUISetting:I
 
-    .line 382
     const-string v9, "MultiPhoneWindowManager"
 
     new-instance v10, Ljava/lang/StringBuilder;
@@ -5182,7 +4681,6 @@
 
     invoke-static {v9, v10}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 383
     iget-boolean v9, p0, Lcom/android/internal/policy/impl/multiwindow/MultiPhoneWindowManager;->mFirstMultiWindowSettingOn:Z
 
     if-eqz v9, :cond_3
@@ -5191,21 +4689,17 @@
 
     if-eqz v9, :cond_3
 
-    .line 384
     iget v9, p0, Lcom/android/internal/policy/impl/multiwindow/MultiPhoneWindowManager;->mEnableMultiWindowUISetting:I
 
     if-eq v9, v4, :cond_3
 
-    .line 385
     const/4 v2, 0x1
 
-    .line 386
     .local v2, "isUpdateMultiWindowTrayNeeded":Z
     invoke-static {}, Landroid/os/PersonaManager;->getKnoxInfo()Landroid/os/Bundle;
 
     move-result-object v6
 
-    .line 387
     .local v6, "versionInfo":Landroid/os/Bundle;
     const-string v9, "2.0"
 
@@ -5221,7 +4715,6 @@
 
     if-eqz v9, :cond_1
 
-    .line 388
     iget-object v9, p0, Lcom/android/internal/policy/impl/multiwindow/MultiPhoneWindowManager;->mContext:Landroid/content/Context;
 
     const-string v10, "persona"
@@ -5232,28 +4725,23 @@
 
     check-cast v3, Landroid/os/PersonaManager;
 
-    .line 389
     .local v3, "pm":Landroid/os/PersonaManager;
     invoke-virtual {v3}, Landroid/os/PersonaManager;->getForegroundUser()I
 
     move-result v0
 
-    .line 390
     .local v0, "currUser":I
     const/16 v9, 0x64
 
     if-lt v0, v9, :cond_1
 
-    .line 391
     const/4 v2, 0x0
 
-    .line 393
     .end local v0    # "currUser":I
     .end local v3    # "pm":Landroid/os/PersonaManager;
     :cond_1
     if-eqz v2, :cond_3
 
-    .line 394
     iget-object v9, p0, Lcom/android/internal/policy/impl/multiwindow/MultiPhoneWindowManager;->mContext:Landroid/content/Context;
 
     invoke-virtual {v9}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
@@ -5272,12 +4760,10 @@
 
     if-ne v9, v1, :cond_4
 
-    .line 396
     .local v1, "forceShow":Z
     :goto_0
     if-nez v1, :cond_2
 
-    .line 397
     iget-object v7, p0, Lcom/android/internal/policy/impl/multiwindow/MultiPhoneWindowManager;->mContext:Landroid/content/Context;
 
     invoke-virtual {v7}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
@@ -5292,16 +4778,13 @@
 
     invoke-static {v7, v9, v10, v11}, Landroid/provider/Settings$System;->putIntForUser(Landroid/content/ContentResolver;Ljava/lang/String;II)Z
 
-    .line 399
     :cond_2
     invoke-virtual {p0, v1}, Lcom/android/internal/policy/impl/multiwindow/MultiPhoneWindowManager;->updateMultiWindowTrayBar(Z)V
 
-    .line 400
     iget-boolean v7, p0, Lcom/android/internal/policy/impl/multiwindow/MultiPhoneWindowManager;->mSystemBooted:Z
 
     if-eqz v7, :cond_3
 
-    .line 401
     iget-object v7, p0, Lcom/android/internal/policy/impl/multiwindow/MultiPhoneWindowManager;->mHandler:Landroid/os/Handler;
 
     new-instance v9, Lcom/android/internal/policy/impl/multiwindow/MultiPhoneWindowManager$2;
@@ -5310,14 +4793,12 @@
 
     invoke-virtual {v7, v9}, Landroid/os/Handler;->post(Ljava/lang/Runnable;)Z
 
-    .line 410
     .end local v1    # "forceShow":Z
     .end local v2    # "isUpdateMultiWindowTrayNeeded":Z
     .end local v6    # "versionInfo":Landroid/os/Bundle;
     :cond_3
     monitor-exit v8
 
-    .line 412
     return-void
 
     .restart local v2    # "isUpdateMultiWindowTrayNeeded":Z
@@ -5325,10 +4806,8 @@
     :cond_4
     move v1, v7
 
-    .line 394
     goto :goto_0
 
-    .line 410
     .end local v2    # "isUpdateMultiWindowTrayNeeded":Z
     .end local v4    # "prevEnableMultiWindowUISetting":I
     .end local v6    # "versionInfo":Landroid/os/Bundle;
@@ -5347,19 +4826,15 @@
     .param p1, "type"    # I
 
     .prologue
-    .line 249
     const/16 v0, 0x899
 
     if-ne p1, v0, :cond_0
 
-    .line 250
     const/4 v0, 0x5
 
-    .line 257
     :goto_0
     return v0
 
-    .line 251
     :cond_0
     const/16 v0, 0x89a
 
@@ -5369,24 +4844,20 @@
 
     if-ne p1, v0, :cond_2
 
-    .line 252
     :cond_1
     const/4 v0, 0x4
 
     goto :goto_0
 
-    .line 253
     :cond_2
     const/16 v0, 0x8d4
 
     if-ne p1, v0, :cond_3
 
-    .line 254
     const/16 v0, 0xb
 
     goto :goto_0
 
-    .line 257
     :cond_3
     const/4 v0, -0x1
 

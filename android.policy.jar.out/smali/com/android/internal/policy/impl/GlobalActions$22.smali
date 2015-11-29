@@ -23,7 +23,6 @@
     .locals 0
 
     .prologue
-    .line 2730
     iput-object p1, p0, Lcom/android/internal/policy/impl/GlobalActions$22;->this$0:Lcom/android/internal/policy/impl/GlobalActions;
 
     invoke-direct {p0}, Landroid/content/BroadcastReceiver;-><init>()V
@@ -43,12 +42,10 @@
 
     const/4 v5, 0x0
 
-    .line 2732
     invoke-virtual {p2}, Landroid/content/Intent;->getAction()Ljava/lang/String;
 
     move-result-object v0
 
-    .line 2733
     .local v0, "action":Ljava/lang/String;
     const-string v2, "GlobalActions"
 
@@ -72,7 +69,6 @@
 
     invoke-static {v2, v3}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 2734
     const-string v2, "android.intent.action.CLOSE_SYSTEM_DIALOGS"
 
     invoke-virtual {v2, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
@@ -97,7 +93,6 @@
 
     if-eqz v2, :cond_2
 
-    .line 2739
     :cond_0
     const-string v2, "reason"
 
@@ -105,7 +100,6 @@
 
     move-result-object v1
 
-    .line 2740
     .local v1, "reason":Ljava/lang/String;
     const-string v2, "globalactions"
 
@@ -115,14 +109,12 @@
 
     if-nez v2, :cond_1
 
-    .line 2741
     const-string v2, "GlobalActions"
 
     const-string v3, "mBroadcastReceiver : onReceive : sendEmptyMessage(MESSAGE_DISMISS) reason #1"
 
     invoke-static {v2, v3}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 2742
     iget-object v2, p0, Lcom/android/internal/policy/impl/GlobalActions$22;->this$0:Lcom/android/internal/policy/impl/GlobalActions;
 
     # getter for: Lcom/android/internal/policy/impl/GlobalActions;->mHandler:Landroid/os/Handler;
@@ -132,13 +124,11 @@
 
     invoke-virtual {v2, v5}, Landroid/os/Handler;->sendEmptyMessage(I)Z
 
-    .line 2756
     .end local v1    # "reason":Ljava/lang/String;
     :cond_1
     :goto_0
     return-void
 
-    .line 2744
     :cond_2
     const-string v2, "android.intent.action.EMERGENCY_CALLBACK_MODE_CHANGED"
 
@@ -148,7 +138,6 @@
 
     if-eqz v2, :cond_3
 
-    .line 2747
     const-string v2, "PHONE_IN_ECM_STATE"
 
     invoke-virtual {p2, v2, v5}, Landroid/content/Intent;->getBooleanExtra(Ljava/lang/String;Z)Z
@@ -166,20 +155,17 @@
 
     if-eqz v2, :cond_1
 
-    .line 2749
     iget-object v2, p0, Lcom/android/internal/policy/impl/GlobalActions$22;->this$0:Lcom/android/internal/policy/impl/GlobalActions;
 
     # setter for: Lcom/android/internal/policy/impl/GlobalActions;->mIsWaitingForEcmExit:Z
     invoke-static {v2, v5}, Lcom/android/internal/policy/impl/GlobalActions;->access$1502(Lcom/android/internal/policy/impl/GlobalActions;Z)Z
 
-    .line 2750
     const-string v2, "GlobalActions"
 
     const-string v3, "mBroadcastReceiver changeAirplaneModeSystemSetting called "
 
     invoke-static {v2, v3}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 2751
     iget-object v2, p0, Lcom/android/internal/policy/impl/GlobalActions$22;->this$0:Lcom/android/internal/policy/impl/GlobalActions;
 
     # invokes: Lcom/android/internal/policy/impl/GlobalActions;->changeAirplaneModeSystemSetting(Z)V
@@ -187,7 +173,6 @@
 
     goto :goto_0
 
-    .line 2753
     :cond_3
     const-string v2, "ACTION_DUALMODE_SETTING"
 
@@ -197,7 +182,6 @@
 
     if-eqz v2, :cond_1
 
-    .line 2754
     iget-object v2, p0, Lcom/android/internal/policy/impl/GlobalActions$22;->this$0:Lcom/android/internal/policy/impl/GlobalActions;
 
     # getter for: Lcom/android/internal/policy/impl/GlobalActions;->mHandler:Landroid/os/Handler;

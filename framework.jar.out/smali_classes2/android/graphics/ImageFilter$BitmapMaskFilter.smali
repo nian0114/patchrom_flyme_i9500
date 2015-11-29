@@ -19,12 +19,10 @@
     .locals 3
 
     .prologue
-    .line 1384
     const/16 v1, 0x34
 
     invoke-direct {p0, v1}, Landroid/graphics/ImageFilter;-><init>(I)V
 
-    .line 1386
     :try_start_0
     new-instance v1, Ljava/lang/Exception;
 
@@ -36,15 +34,12 @@
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 1387
     :catch_0
     move-exception v0
 
-    .line 1389
     .local v0, "e":Ljava/lang/Exception;
     invoke-virtual {v0}, Ljava/lang/Exception;->printStackTrace()V
 
-    .line 1391
     return-void
 .end method
 
@@ -59,7 +54,6 @@
     .end annotation
 
     .prologue
-    .line 1381
     invoke-super {p0}, Landroid/graphics/ImageFilter;->clone()Landroid/graphics/ImageFilter;
 
     move-result-object v0
@@ -72,7 +66,6 @@
     .param p1, "bitmap"    # Landroid/graphics/Bitmap;
 
     .prologue
-    .line 1401
     :try_start_0
     new-instance v1, Ljava/lang/Exception;
 
@@ -84,15 +77,12 @@
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 1402
     :catch_0
     move-exception v0
 
-    .line 1404
     .local v0, "e":Ljava/lang/Exception;
     invoke-virtual {v0}, Ljava/lang/Exception;->printStackTrace()V
 
-    .line 1406
     return-void
 .end method
 
@@ -104,7 +94,6 @@
     .param p4, "alpha"    # F
 
     .prologue
-    .line 1416
     :try_start_0
     new-instance v1, Ljava/lang/Exception;
 
@@ -116,14 +105,11 @@
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 1417
     :catch_0
     move-exception v0
 
-    .line 1419
     .local v0, "e":Ljava/lang/Exception;
     invoke-virtual {v0}, Ljava/lang/Exception;->printStackTrace()V
 
-    .line 1421
     return-void
 .end method

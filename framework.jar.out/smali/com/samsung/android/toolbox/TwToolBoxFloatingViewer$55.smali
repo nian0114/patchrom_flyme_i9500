@@ -28,7 +28,6 @@
     .locals 0
 
     .prologue
-    .line 2189
     iput-object p1, p0, Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer$55;->this$0:Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer;
 
     iput-object p2, p0, Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer$55;->val$m:Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer$ToolBoxMenu;
@@ -44,7 +43,6 @@
     .locals 4
 
     .prologue
-    .line 2192
     :try_start_0
     iget-object v2, p0, Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer$55;->val$m:Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer$ToolBoxMenu;
 
@@ -62,7 +60,6 @@
     :goto_0
     iput-boolean v1, v2, Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer$ToolBoxMenu;->toggleStatus:Z
 
-    .line 2193
     iget-object v1, p0, Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer$55;->this$0:Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer;
 
     # invokes: Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer;->toggleTorch()V
@@ -70,23 +67,19 @@
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 2197
     :goto_1
     return-void
 
-    .line 2192
     :cond_0
     const/4 v1, 0x0
 
     goto :goto_0
 
-    .line 2194
     :catch_0
     move-exception v0
 
-    .line 2195
     .local v0, "ex":Ljava/lang/Exception;
-    const-string/jumbo v1, "toolbox"
+    const-string v1, "toolbox"
 
     new-instance v2, Ljava/lang/StringBuilder;
 
@@ -115,7 +108,6 @@
     .locals 2
 
     .prologue
-    .line 2200
     iget-object v0, p0, Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer$55;->val$m:Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer$ToolBoxMenu;
 
     iget-object v1, p0, Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer$55;->this$0:Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer;
@@ -127,6 +119,5 @@
 
     iput-boolean v1, v0, Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer$ToolBoxMenu;->toggleStatus:Z
 
-    .line 2201
     return-void
 .end method

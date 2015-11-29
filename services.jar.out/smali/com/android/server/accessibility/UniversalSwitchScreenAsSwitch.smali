@@ -35,21 +35,16 @@
     .param p2, "service"    # Lcom/android/server/accessibility/AccessibilityManagerService;
 
     .prologue
-    .line 45
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 40
     const-string v0, "SWITCHCONTROL_SCREEN_AS_SWITCH_CLICK_ACTION"
 
     iput-object v0, p0, Lcom/android/server/accessibility/UniversalSwitchScreenAsSwitch;->SCREEN_AS_SWITCH_BROADCAST_ACTION:Ljava/lang/String;
 
-    .line 46
     iput-object p1, p0, Lcom/android/server/accessibility/UniversalSwitchScreenAsSwitch;->mContext:Landroid/content/Context;
 
-    .line 47
     iput-object p2, p0, Lcom/android/server/accessibility/UniversalSwitchScreenAsSwitch;->mAms:Lcom/android/server/accessibility/AccessibilityManagerService;
 
-    .line 48
     invoke-static {p1}, Landroid/view/ViewConfiguration;->get(Landroid/content/Context;)Landroid/view/ViewConfiguration;
 
     move-result-object v0
@@ -60,14 +55,12 @@
 
     iput v0, p0, Lcom/android/server/accessibility/UniversalSwitchScreenAsSwitch;->mTouchSlop:I
 
-    .line 49
     invoke-static {}, Landroid/view/ViewConfiguration;->getTapTimeout()I
 
     move-result v0
 
     iput v0, p0, Lcom/android/server/accessibility/UniversalSwitchScreenAsSwitch;->mTapTimeout:I
 
-    .line 50
     return-void
 .end method
 
@@ -77,7 +70,6 @@
     .locals 0
 
     .prologue
-    .line 91
     return-void
 .end method
 
@@ -86,7 +78,6 @@
     .param p1, "event"    # Landroid/view/accessibility/AccessibilityEvent;
 
     .prologue
-    .line 102
     return-void
 .end method
 
@@ -94,7 +85,6 @@
     .locals 0
 
     .prologue
-    .line 105
     return-void
 .end method
 
@@ -105,7 +95,6 @@
     .param p3, "policyFlags"    # I
 
     .prologue
-    .line 82
     return-void
 .end method
 
@@ -113,7 +102,6 @@
     .locals 0
 
     .prologue
-    .line 99
     return-void
 .end method
 
@@ -122,9 +110,7 @@
     .param p1, "next"    # Lcom/android/server/accessibility/EventStreamTransformation;
 
     .prologue
-    .line 54
     iput-object p1, p0, Lcom/android/server/accessibility/UniversalSwitchScreenAsSwitch;->mNext:Lcom/android/server/accessibility/EventStreamTransformation;
 
-    .line 55
     return-void
 .end method

@@ -75,7 +75,6 @@
     .locals 1
 
     .prologue
-    .line 421
     new-instance v0, Landroid/telecom/PhoneAccount$1;
 
     invoke-direct {v0}, Landroid/telecom/PhoneAccount$1;-><init>()V
@@ -90,17 +89,14 @@
     .param p1, "in"    # Landroid/os/Parcel;
 
     .prologue
-    .line 434
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 435
     const-class v2, Landroid/telecom/PhoneAccount;
 
     invoke-virtual {v2}, Ljava/lang/Class;->getClassLoader()Ljava/lang/ClassLoader;
 
     move-result-object v0
 
-    .line 437
     .local v0, "classLoader":Ljava/lang/ClassLoader;
     invoke-virtual {p0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
@@ -118,7 +114,6 @@
 
     iput-object v2, p0, Landroid/telecom/PhoneAccount;->mAccountHandle:Landroid/telecom/PhoneAccountHandle;
 
-    .line 438
     invoke-virtual {p0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
     move-result-object v2
@@ -135,7 +130,6 @@
 
     iput-object v2, p0, Landroid/telecom/PhoneAccount;->mAddress:Landroid/net/Uri;
 
-    .line 439
     invoke-virtual {p0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
     move-result-object v2
@@ -152,51 +146,43 @@
 
     iput-object v2, p0, Landroid/telecom/PhoneAccount;->mSubscriptionAddress:Landroid/net/Uri;
 
-    .line 440
     invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
 
     move-result v2
 
     iput v2, p0, Landroid/telecom/PhoneAccount;->mCapabilities:I
 
-    .line 441
     invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
 
     move-result v2
 
     iput v2, p0, Landroid/telecom/PhoneAccount;->mIconResId:I
 
-    .line 442
     invoke-virtual {p1}, Landroid/os/Parcel;->readCharSequence()Ljava/lang/CharSequence;
 
     move-result-object v2
 
     iput-object v2, p0, Landroid/telecom/PhoneAccount;->mLabel:Ljava/lang/CharSequence;
 
-    .line 443
     invoke-virtual {p1}, Landroid/os/Parcel;->readCharSequence()Ljava/lang/CharSequence;
 
     move-result-object v2
 
     iput-object v2, p0, Landroid/telecom/PhoneAccount;->mShortDescription:Ljava/lang/CharSequence;
 
-    .line 445
     new-instance v1, Ljava/util/ArrayList;
 
     invoke-direct {v1}, Ljava/util/ArrayList;-><init>()V
 
-    .line 446
     .local v1, "supportedUriSchemes":Ljava/util/List;, "Ljava/util/List<Ljava/lang/String;>;"
     invoke-virtual {p1, v1, v0}, Landroid/os/Parcel;->readList(Ljava/util/List;Ljava/lang/ClassLoader;)V
 
-    .line 447
     invoke-static {v1}, Ljava/util/Collections;->unmodifiableList(Ljava/util/List;)Ljava/util/List;
 
     move-result-object v2
 
     iput-object v2, p0, Landroid/telecom/PhoneAccount;->mSupportedUriSchemes:Ljava/util/List;
 
-    .line 448
     return-void
 .end method
 
@@ -206,7 +192,6 @@
     .param p2, "x1"    # Landroid/telecom/PhoneAccount$1;
 
     .prologue
-    .line 41
     invoke-direct {p0, p1}, Landroid/telecom/PhoneAccount;-><init>(Landroid/os/Parcel;)V
 
     return-void
@@ -238,39 +223,29 @@
     .end annotation
 
     .prologue
-    .line 239
     .local p8, "supportedUriSchemes":Ljava/util/List;, "Ljava/util/List<Ljava/lang/String;>;"
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 240
     iput-object p1, p0, Landroid/telecom/PhoneAccount;->mAccountHandle:Landroid/telecom/PhoneAccountHandle;
 
-    .line 241
     iput-object p2, p0, Landroid/telecom/PhoneAccount;->mAddress:Landroid/net/Uri;
 
-    .line 242
     iput-object p3, p0, Landroid/telecom/PhoneAccount;->mSubscriptionAddress:Landroid/net/Uri;
 
-    .line 243
     iput p4, p0, Landroid/telecom/PhoneAccount;->mCapabilities:I
 
-    .line 244
     iput p5, p0, Landroid/telecom/PhoneAccount;->mIconResId:I
 
-    .line 245
     iput-object p6, p0, Landroid/telecom/PhoneAccount;->mLabel:Ljava/lang/CharSequence;
 
-    .line 246
     iput-object p7, p0, Landroid/telecom/PhoneAccount;->mShortDescription:Ljava/lang/CharSequence;
 
-    .line 247
     invoke-static {p8}, Ljava/util/Collections;->unmodifiableList(Ljava/util/List;)Ljava/util/List;
 
     move-result-object v0
 
     iput-object v0, p0, Landroid/telecom/PhoneAccount;->mSupportedUriSchemes:Ljava/util/List;
 
-    .line 248
     return-void
 .end method
 
@@ -287,7 +262,6 @@
     .param p9, "x8"    # Landroid/telecom/PhoneAccount$1;
 
     .prologue
-    .line 41
     invoke-direct/range {p0 .. p8}, Landroid/telecom/PhoneAccount;-><init>(Landroid/telecom/PhoneAccountHandle;Landroid/net/Uri;Landroid/net/Uri;IILjava/lang/CharSequence;Ljava/lang/CharSequence;Ljava/util/List;)V
 
     return-void
@@ -299,7 +273,6 @@
     .param p1, "label"    # Ljava/lang/CharSequence;
 
     .prologue
-    .line 253
     new-instance v0, Landroid/telecom/PhoneAccount$Builder;
 
     invoke-direct {v0, p0, p1}, Landroid/telecom/PhoneAccount$Builder;-><init>(Landroid/telecom/PhoneAccountHandle;Ljava/lang/CharSequence;)V
@@ -319,7 +292,6 @@
 
     const/4 v6, 0x0
 
-    .line 385
     :try_start_0
     iget-object v3, p0, Landroid/telecom/PhoneAccount;->mAccountHandle:Landroid/telecom/PhoneAccountHandle;
 
@@ -339,7 +311,6 @@
 
     move-result-object v1
 
-    .line 392
     .local v1, "packageContext":Landroid/content/Context;
     :try_start_1
     invoke-virtual {v1, p2}, Landroid/content/Context;->getDrawable(I)Landroid/graphics/drawable/Drawable;
@@ -349,16 +320,13 @@
 
     move-result-object v2
 
-    .line 396
     .end local v1    # "packageContext":Landroid/content/Context;
     :goto_0
     return-object v2
 
-    .line 387
     :catch_0
     move-exception v0
 
-    .line 388
     .local v0, "e":Landroid/content/pm/PackageManager$NameNotFoundException;
     const-string v3, "Cannot find package %s"
 
@@ -380,13 +348,11 @@
 
     goto :goto_0
 
-    .line 393
     .end local v0    # "e":Landroid/content/pm/PackageManager$NameNotFoundException;
     .restart local v1    # "packageContext":Landroid/content/Context;
     :catch_1
     move-exception v0
 
-    .line 394
     .local v0, "e":Ljava/lang/RuntimeException;
     :goto_1
     const-string v3, "Cannot find icon %d in package %s"
@@ -417,7 +383,6 @@
 
     goto :goto_0
 
-    .line 393
     .end local v0    # "e":Ljava/lang/RuntimeException;
     :catch_2
     move-exception v0
@@ -431,7 +396,6 @@
     .locals 1
 
     .prologue
-    .line 406
     const/4 v0, 0x0
 
     return v0
@@ -441,7 +405,6 @@
     .locals 1
 
     .prologue
-    .line 270
     iget-object v0, p0, Landroid/telecom/PhoneAccount;->mAccountHandle:Landroid/telecom/PhoneAccountHandle;
 
     return-object v0
@@ -451,7 +414,6 @@
     .locals 1
 
     .prologue
-    .line 282
     iget-object v0, p0, Landroid/telecom/PhoneAccount;->mAddress:Landroid/net/Uri;
 
     return-object v0
@@ -461,7 +423,6 @@
     .locals 1
 
     .prologue
-    .line 302
     iget v0, p0, Landroid/telecom/PhoneAccount;->mCapabilities:I
 
     return v0
@@ -472,7 +433,6 @@
     .param p1, "context"    # Landroid/content/Context;
 
     .prologue
-    .line 379
     iget v0, p0, Landroid/telecom/PhoneAccount;->mIconResId:I
 
     invoke-direct {p0, p1, v0}, Landroid/telecom/PhoneAccount;->getIcon(Landroid/content/Context;I)Landroid/graphics/drawable/Drawable;
@@ -486,7 +446,6 @@
     .locals 1
 
     .prologue
-    .line 370
     iget v0, p0, Landroid/telecom/PhoneAccount;->mIconResId:I
 
     return v0
@@ -496,7 +455,6 @@
     .locals 1
 
     .prologue
-    .line 322
     iget-object v0, p0, Landroid/telecom/PhoneAccount;->mLabel:Ljava/lang/CharSequence;
 
     return-object v0
@@ -506,7 +464,6 @@
     .locals 1
 
     .prologue
-    .line 331
     iget-object v0, p0, Landroid/telecom/PhoneAccount;->mShortDescription:Ljava/lang/CharSequence;
 
     return-object v0
@@ -516,7 +473,6 @@
     .locals 1
 
     .prologue
-    .line 293
     iget-object v0, p0, Landroid/telecom/PhoneAccount;->mSubscriptionAddress:Landroid/net/Uri;
 
     return-object v0
@@ -535,7 +491,6 @@
     .end annotation
 
     .prologue
-    .line 340
     iget-object v0, p0, Landroid/telecom/PhoneAccount;->mSupportedUriSchemes:Ljava/util/List;
 
     return-object v0
@@ -546,7 +501,6 @@
     .param p1, "capability"    # I
 
     .prologue
-    .line 313
     iget v0, p0, Landroid/telecom/PhoneAccount;->mCapabilities:I
 
     and-int/2addr v0, p1
@@ -571,19 +525,16 @@
     .prologue
     const/4 v2, 0x0
 
-    .line 352
     iget-object v3, p0, Landroid/telecom/PhoneAccount;->mSupportedUriSchemes:Ljava/util/List;
 
     if-eqz v3, :cond_0
 
     if-nez p1, :cond_1
 
-    .line 361
     :cond_0
     :goto_0
     return v2
 
-    .line 356
     :cond_1
     iget-object v3, p0, Landroid/telecom/PhoneAccount;->mSupportedUriSchemes:Ljava/util/List;
 
@@ -605,7 +556,6 @@
 
     check-cast v1, Ljava/lang/String;
 
-    .line 357
     .local v1, "scheme":Ljava/lang/String;
     if-eqz v1, :cond_2
 
@@ -615,7 +565,6 @@
 
     if-eqz v3, :cond_2
 
-    .line 358
     const/4 v2, 0x1
 
     goto :goto_0
@@ -625,7 +574,6 @@
     .locals 1
 
     .prologue
-    .line 262
     new-instance v0, Landroid/telecom/PhoneAccount$Builder;
 
     invoke-direct {v0, p0}, Landroid/telecom/PhoneAccount$Builder;-><init>(Landroid/telecom/PhoneAccount;)V
@@ -641,46 +589,37 @@
     .prologue
     const/4 v1, 0x0
 
-    .line 411
     iget-object v0, p0, Landroid/telecom/PhoneAccount;->mAccountHandle:Landroid/telecom/PhoneAccountHandle;
 
     invoke-virtual {p1, v0, v1}, Landroid/os/Parcel;->writeParcelable(Landroid/os/Parcelable;I)V
 
-    .line 412
     iget-object v0, p0, Landroid/telecom/PhoneAccount;->mAddress:Landroid/net/Uri;
 
     invoke-virtual {p1, v0, v1}, Landroid/os/Parcel;->writeParcelable(Landroid/os/Parcelable;I)V
 
-    .line 413
     iget-object v0, p0, Landroid/telecom/PhoneAccount;->mSubscriptionAddress:Landroid/net/Uri;
 
     invoke-virtual {p1, v0, v1}, Landroid/os/Parcel;->writeParcelable(Landroid/os/Parcelable;I)V
 
-    .line 414
     iget v0, p0, Landroid/telecom/PhoneAccount;->mCapabilities:I
 
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 415
     iget v0, p0, Landroid/telecom/PhoneAccount;->mIconResId:I
 
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 416
     iget-object v0, p0, Landroid/telecom/PhoneAccount;->mLabel:Ljava/lang/CharSequence;
 
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeCharSequence(Ljava/lang/CharSequence;)V
 
-    .line 417
     iget-object v0, p0, Landroid/telecom/PhoneAccount;->mShortDescription:Ljava/lang/CharSequence;
 
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeCharSequence(Ljava/lang/CharSequence;)V
 
-    .line 418
     iget-object v0, p0, Landroid/telecom/PhoneAccount;->mSupportedUriSchemes:Ljava/util/List;
 
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeList(Ljava/util/List;)V
 
-    .line 419
     return-void
 .end method

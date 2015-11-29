@@ -50,7 +50,6 @@
     .prologue
     const/4 v0, 0x1
 
-    .line 47
     invoke-static {}, Landroid/os/Debug;->isProductShip()I
 
     move-result v1
@@ -73,72 +72,56 @@
     .prologue
     const/4 v1, 0x0
 
-    .line 63
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 52
     new-instance v0, Landroid/os/Handler;
 
     invoke-direct {v0}, Landroid/os/Handler;-><init>()V
 
     iput-object v0, p0, Lcom/android/internal/policy/impl/sec/MultitapKeyManager;->mHandler:Landroid/os/Handler;
 
-    .line 54
     iput-boolean v1, p0, Lcom/android/internal/policy/impl/sec/MultitapKeyManager;->mHomeDoubleTapPending:Z
 
-    .line 55
     iput-boolean v1, p0, Lcom/android/internal/policy/impl/sec/MultitapKeyManager;->mHomeTripleTapPending:Z
 
-    .line 56
     iput-boolean v1, p0, Lcom/android/internal/policy/impl/sec/MultitapKeyManager;->mHomeConsumed:Z
 
-    .line 57
     iput-boolean v1, p0, Lcom/android/internal/policy/impl/sec/MultitapKeyManager;->mPowerDoubleTapPending:Z
 
-    .line 58
     iput-boolean v1, p0, Lcom/android/internal/policy/impl/sec/MultitapKeyManager;->mPowerTripleTapPending:Z
 
-    .line 59
     iput-boolean v1, p0, Lcom/android/internal/policy/impl/sec/MultitapKeyManager;->mPowerTripleTapReady:Z
 
-    .line 60
     iput-boolean v1, p0, Lcom/android/internal/policy/impl/sec/MultitapKeyManager;->mPowerConsumed:Z
 
-    .line 191
     new-instance v0, Lcom/android/internal/policy/impl/sec/MultitapKeyManager$1;
 
     invoke-direct {v0, p0}, Lcom/android/internal/policy/impl/sec/MultitapKeyManager$1;-><init>(Lcom/android/internal/policy/impl/sec/MultitapKeyManager;)V
 
     iput-object v0, p0, Lcom/android/internal/policy/impl/sec/MultitapKeyManager;->mHomeDoubleTapTimeoutRunnable:Ljava/lang/Runnable;
 
-    .line 212
     new-instance v0, Lcom/android/internal/policy/impl/sec/MultitapKeyManager$2;
 
     invoke-direct {v0, p0}, Lcom/android/internal/policy/impl/sec/MultitapKeyManager$2;-><init>(Lcom/android/internal/policy/impl/sec/MultitapKeyManager;)V
 
     iput-object v0, p0, Lcom/android/internal/policy/impl/sec/MultitapKeyManager;->mHomeTripleTapTimeoutRunnable:Ljava/lang/Runnable;
 
-    .line 237
     new-instance v0, Lcom/android/internal/policy/impl/sec/MultitapKeyManager$3;
 
     invoke-direct {v0, p0}, Lcom/android/internal/policy/impl/sec/MultitapKeyManager$3;-><init>(Lcom/android/internal/policy/impl/sec/MultitapKeyManager;)V
 
     iput-object v0, p0, Lcom/android/internal/policy/impl/sec/MultitapKeyManager;->mPowerDoubleTapTimeoutRunnable:Ljava/lang/Runnable;
 
-    .line 254
     new-instance v0, Lcom/android/internal/policy/impl/sec/MultitapKeyManager$4;
 
     invoke-direct {v0, p0}, Lcom/android/internal/policy/impl/sec/MultitapKeyManager$4;-><init>(Lcom/android/internal/policy/impl/sec/MultitapKeyManager;)V
 
     iput-object v0, p0, Lcom/android/internal/policy/impl/sec/MultitapKeyManager;->mPowerTripleTapTimeoutRunnable:Ljava/lang/Runnable;
 
-    .line 64
     iput-object p1, p0, Lcom/android/internal/policy/impl/sec/MultitapKeyManager;->mPWM:Lcom/android/internal/policy/impl/PhoneWindowManager;
 
-    .line 65
     iput-object p2, p0, Lcom/android/internal/policy/impl/sec/MultitapKeyManager;->mSPWM:Lcom/android/internal/policy/impl/sec/SamsungPhoneWindowManager;
 
-    .line 66
     return-void
 .end method
 
@@ -147,7 +130,6 @@
     .param p0, "x0"    # Lcom/android/internal/policy/impl/sec/MultitapKeyManager;
 
     .prologue
-    .line 44
     iget-boolean v0, p0, Lcom/android/internal/policy/impl/sec/MultitapKeyManager;->mHomeDoubleTapPending:Z
 
     return v0
@@ -159,7 +141,6 @@
     .param p1, "x1"    # Z
 
     .prologue
-    .line 44
     iput-boolean p1, p0, Lcom/android/internal/policy/impl/sec/MultitapKeyManager;->mHomeDoubleTapPending:Z
 
     return p1
@@ -170,7 +151,6 @@
     .param p0, "x0"    # Lcom/android/internal/policy/impl/sec/MultitapKeyManager;
 
     .prologue
-    .line 44
     iget-boolean v0, p0, Lcom/android/internal/policy/impl/sec/MultitapKeyManager;->mHomeTripleTapPending:Z
 
     return v0
@@ -182,7 +162,6 @@
     .param p1, "x1"    # Z
 
     .prologue
-    .line 44
     iput-boolean p1, p0, Lcom/android/internal/policy/impl/sec/MultitapKeyManager;->mHomeTripleTapPending:Z
 
     return p1
@@ -193,7 +172,6 @@
     .param p0, "x0"    # Lcom/android/internal/policy/impl/sec/MultitapKeyManager;
 
     .prologue
-    .line 44
     iget-boolean v0, p0, Lcom/android/internal/policy/impl/sec/MultitapKeyManager;->mPowerDoubleTapPending:Z
 
     return v0
@@ -205,7 +183,6 @@
     .param p1, "x1"    # Z
 
     .prologue
-    .line 44
     iput-boolean p1, p0, Lcom/android/internal/policy/impl/sec/MultitapKeyManager;->mPowerDoubleTapPending:Z
 
     return p1
@@ -217,7 +194,6 @@
     .param p1, "x1"    # Z
 
     .prologue
-    .line 44
     iput-boolean p1, p0, Lcom/android/internal/policy/impl/sec/MultitapKeyManager;->mPowerTripleTapPending:Z
 
     return p1
@@ -229,7 +205,6 @@
     .param p1, "x1"    # Z
 
     .prologue
-    .line 44
     iput-boolean p1, p0, Lcom/android/internal/policy/impl/sec/MultitapKeyManager;->mPowerTripleTapReady:Z
 
     return p1
@@ -239,24 +214,20 @@
     .locals 2
 
     .prologue
-    .line 232
     const-string v0, "MultitapKeyManager"
 
     const-string v1, "handleDoubleTapOnPower()"
 
     invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 233
     const/4 v0, 0x1
 
     iput-boolean v0, p0, Lcom/android/internal/policy/impl/sec/MultitapKeyManager;->mPowerConsumed:Z
 
-    .line 234
     iget-object v0, p0, Lcom/android/internal/policy/impl/sec/MultitapKeyManager;->mSPWM:Lcom/android/internal/policy/impl/sec/SamsungPhoneWindowManager;
 
     invoke-virtual {v0}, Lcom/android/internal/policy/impl/sec/SamsungPhoneWindowManager;->callAccessibilityScreenCurtain()V
 
-    .line 235
     return-void
 .end method
 
@@ -264,12 +235,10 @@
     .locals 2
 
     .prologue
-    .line 202
     const/4 v0, 0x1
 
     iput-boolean v0, p0, Lcom/android/internal/policy/impl/sec/MultitapKeyManager;->mHomeConsumed:Z
 
-    .line 203
     iget-object v0, p0, Lcom/android/internal/policy/impl/sec/MultitapKeyManager;->mSPWM:Lcom/android/internal/policy/impl/sec/SamsungPhoneWindowManager;
 
     invoke-virtual {v0}, Lcom/android/internal/policy/impl/sec/SamsungPhoneWindowManager;->isDeviceProvisioned()Z
@@ -278,23 +247,19 @@
 
     if-eqz v0, :cond_0
 
-    .line 204
     const-string v0, "MultitapKeyManager"
 
     const-string v1, "Home tripleTap : DeviceProvisioned"
 
     invoke-static {v0, v1}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 205
     iget-object v0, p0, Lcom/android/internal/policy/impl/sec/MultitapKeyManager;->mSPWM:Lcom/android/internal/policy/impl/sec/SamsungPhoneWindowManager;
 
     invoke-virtual {v0}, Lcom/android/internal/policy/impl/sec/SamsungPhoneWindowManager;->sendBroadcastForAccessibility()V
 
-    .line 210
     :goto_0
     return-void
 
-    .line 207
     :cond_0
     const-string v0, "MultitapKeyManager"
 
@@ -302,7 +267,6 @@
 
     invoke-static {v0, v1}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 208
     iget-object v0, p0, Lcom/android/internal/policy/impl/sec/MultitapKeyManager;->mSPWM:Lcom/android/internal/policy/impl/sec/SamsungPhoneWindowManager;
 
     invoke-virtual {v0}, Lcom/android/internal/policy/impl/sec/SamsungPhoneWindowManager;->callAccessibilityTalkbackMode()V
@@ -314,24 +278,20 @@
     .locals 2
 
     .prologue
-    .line 248
     const-string v0, "MultitapKeyManager"
 
     const-string v1, "handleTripleTapOnPower()"
 
     invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 249
     const/4 v0, 0x1
 
     iput-boolean v0, p0, Lcom/android/internal/policy/impl/sec/MultitapKeyManager;->mPowerConsumed:Z
 
-    .line 250
     iget-object v0, p0, Lcom/android/internal/policy/impl/sec/MultitapKeyManager;->mSPWM:Lcom/android/internal/policy/impl/sec/SamsungPhoneWindowManager;
 
     invoke-virtual {v0}, Lcom/android/internal/policy/impl/sec/SamsungPhoneWindowManager;->sendBroadcastForSafetyAssurance()V
 
-    .line 251
     return-void
 .end method
 
@@ -342,7 +302,6 @@
     .param p1, "event"    # Landroid/view/KeyEvent;
 
     .prologue
-    .line 69
     const/4 v0, 0x0
 
     invoke-virtual {p0, p1, v0}, Lcom/android/internal/policy/impl/sec/MultitapKeyManager;->dispatchMultitapKeyEvent(Landroid/view/KeyEvent;Z)Z
@@ -362,18 +321,15 @@
 
     const/4 v3, 0x1
 
-    .line 73
     invoke-virtual {p1}, Landroid/view/KeyEvent;->getKeyCode()I
 
     move-result v1
 
-    .line 74
     .local v1, "keyCode":I
     invoke-virtual {p1}, Landroid/view/KeyEvent;->getRepeatCount()I
 
     move-result v2
 
-    .line 75
     .local v2, "repeatCount":I
     invoke-virtual {p1}, Landroid/view/KeyEvent;->getAction()I
 
@@ -383,7 +339,6 @@
 
     move v0, v3
 
-    .line 77
     .local v0, "down":Z
     :goto_0
     sparse-switch v1, :sswitch_data_0
@@ -391,7 +346,6 @@
     :cond_0
     move v3, v4
 
-    .line 162
     :cond_1
     :goto_1
     return v3
@@ -400,38 +354,31 @@
     :cond_2
     move v0, v4
 
-    .line 75
     goto :goto_0
 
-    .line 79
     .restart local v0    # "down":Z
     :sswitch_0
     if-nez v0, :cond_6
 
-    .line 80
     iget-boolean v5, p0, Lcom/android/internal/policy/impl/sec/MultitapKeyManager;->mHomeConsumed:Z
 
     if-eqz v5, :cond_3
 
-    .line 81
     iput-boolean v4, p0, Lcom/android/internal/policy/impl/sec/MultitapKeyManager;->mHomeConsumed:Z
 
     goto :goto_1
 
-    .line 85
     :cond_3
     iget-boolean v5, p0, Lcom/android/internal/policy/impl/sec/MultitapKeyManager;->mHomeTripleTapPending:Z
 
     if-eqz v5, :cond_4
 
-    .line 86
     iget-object v4, p0, Lcom/android/internal/policy/impl/sec/MultitapKeyManager;->mHandler:Landroid/os/Handler;
 
     iget-object v5, p0, Lcom/android/internal/policy/impl/sec/MultitapKeyManager;->mHomeTripleTapTimeoutRunnable:Ljava/lang/Runnable;
 
     invoke-virtual {v4, v5}, Landroid/os/Handler;->removeCallbacks(Ljava/lang/Runnable;)V
 
-    .line 87
     iget-object v4, p0, Lcom/android/internal/policy/impl/sec/MultitapKeyManager;->mHandler:Landroid/os/Handler;
 
     iget-object v5, p0, Lcom/android/internal/policy/impl/sec/MultitapKeyManager;->mHomeTripleTapTimeoutRunnable:Ljava/lang/Runnable;
@@ -444,7 +391,6 @@
 
     invoke-virtual {v4, v5, v6, v7}, Landroid/os/Handler;->postDelayed(Ljava/lang/Runnable;J)Z
 
-    .line 88
     sget-boolean v4, Lcom/android/internal/policy/impl/sec/MultitapKeyManager;->SAFE_DEBUG:Z
 
     if-eqz v4, :cond_1
@@ -457,7 +403,6 @@
 
     goto :goto_1
 
-    .line 90
     :cond_4
     iget-object v5, p0, Lcom/android/internal/policy/impl/sec/MultitapKeyManager;->mSPWM:Lcom/android/internal/policy/impl/sec/SamsungPhoneWindowManager;
 
@@ -475,7 +420,6 @@
 
     if-eqz v5, :cond_0
 
-    .line 91
     :cond_5
     iget-object v4, p0, Lcom/android/internal/policy/impl/sec/MultitapKeyManager;->mHandler:Landroid/os/Handler;
 
@@ -483,10 +427,8 @@
 
     invoke-virtual {v4, v5}, Landroid/os/Handler;->removeCallbacks(Ljava/lang/Runnable;)V
 
-    .line 92
     iput-boolean v3, p0, Lcom/android/internal/policy/impl/sec/MultitapKeyManager;->mHomeDoubleTapPending:Z
 
-    .line 93
     iget-object v4, p0, Lcom/android/internal/policy/impl/sec/MultitapKeyManager;->mHandler:Landroid/os/Handler;
 
     iget-object v5, p0, Lcom/android/internal/policy/impl/sec/MultitapKeyManager;->mHomeDoubleTapTimeoutRunnable:Ljava/lang/Runnable;
@@ -499,7 +441,6 @@
 
     invoke-virtual {v4, v5, v6, v7}, Landroid/os/Handler;->postDelayed(Ljava/lang/Runnable;J)Z
 
-    .line 94
     sget-boolean v4, Lcom/android/internal/policy/impl/sec/MultitapKeyManager;->SAFE_DEBUG:Z
 
     if-eqz v4, :cond_1
@@ -512,29 +453,23 @@
 
     goto :goto_1
 
-    .line 98
     :cond_6
     if-nez v2, :cond_0
 
-    .line 99
     iput-boolean v4, p0, Lcom/android/internal/policy/impl/sec/MultitapKeyManager;->mHomeConsumed:Z
 
-    .line 100
     iget-boolean v5, p0, Lcom/android/internal/policy/impl/sec/MultitapKeyManager;->mHomeDoubleTapPending:Z
 
     if-eqz v5, :cond_8
 
-    .line 101
     iput-boolean v4, p0, Lcom/android/internal/policy/impl/sec/MultitapKeyManager;->mHomeDoubleTapPending:Z
 
-    .line 102
     iget-object v4, p0, Lcom/android/internal/policy/impl/sec/MultitapKeyManager;->mHandler:Landroid/os/Handler;
 
     iget-object v5, p0, Lcom/android/internal/policy/impl/sec/MultitapKeyManager;->mHomeDoubleTapTimeoutRunnable:Ljava/lang/Runnable;
 
     invoke-virtual {v4, v5}, Landroid/os/Handler;->removeCallbacks(Ljava/lang/Runnable;)V
 
-    .line 103
     iget-object v4, p0, Lcom/android/internal/policy/impl/sec/MultitapKeyManager;->mSPWM:Lcom/android/internal/policy/impl/sec/SamsungPhoneWindowManager;
 
     invoke-virtual {v4}, Lcom/android/internal/policy/impl/sec/SamsungPhoneWindowManager;->isTripleTapOnHomeEnabled()Z
@@ -543,53 +478,43 @@
 
     if-eqz v4, :cond_7
 
-    .line 104
     iput-boolean v3, p0, Lcom/android/internal/policy/impl/sec/MultitapKeyManager;->mHomeTripleTapPending:Z
 
     goto :goto_1
 
-    .line 106
     :cond_7
     invoke-virtual {p0}, Lcom/android/internal/policy/impl/sec/MultitapKeyManager;->handleDoubleTapOnHome()V
 
     goto :goto_1
 
-    .line 109
     :cond_8
     iget-boolean v5, p0, Lcom/android/internal/policy/impl/sec/MultitapKeyManager;->mHomeTripleTapPending:Z
 
     if-eqz v5, :cond_0
 
-    .line 110
     iput-boolean v4, p0, Lcom/android/internal/policy/impl/sec/MultitapKeyManager;->mHomeTripleTapPending:Z
 
-    .line 111
     iget-object v4, p0, Lcom/android/internal/policy/impl/sec/MultitapKeyManager;->mHandler:Landroid/os/Handler;
 
     iget-object v5, p0, Lcom/android/internal/policy/impl/sec/MultitapKeyManager;->mHomeTripleTapTimeoutRunnable:Ljava/lang/Runnable;
 
     invoke-virtual {v4, v5}, Landroid/os/Handler;->removeCallbacks(Ljava/lang/Runnable;)V
 
-    .line 112
     invoke-direct {p0}, Lcom/android/internal/policy/impl/sec/MultitapKeyManager;->handleTripleTapOnHome()V
 
     goto/16 :goto_1
 
-    .line 118
     :sswitch_1
     if-nez v0, :cond_b
 
-    .line 119
     iget-boolean v5, p0, Lcom/android/internal/policy/impl/sec/MultitapKeyManager;->mPowerConsumed:Z
 
     if-eqz v5, :cond_9
 
-    .line 120
     iput-boolean v4, p0, Lcom/android/internal/policy/impl/sec/MultitapKeyManager;->mPowerConsumed:Z
 
     goto/16 :goto_1
 
-    .line 124
     :cond_9
     iget-object v5, p0, Lcom/android/internal/policy/impl/sec/MultitapKeyManager;->mSPWM:Lcom/android/internal/policy/impl/sec/SamsungPhoneWindowManager;
 
@@ -599,10 +524,8 @@
 
     if-eqz v5, :cond_a
 
-    .line 125
     iput-boolean v3, p0, Lcom/android/internal/policy/impl/sec/MultitapKeyManager;->mPowerTripleTapPending:Z
 
-    .line 126
     invoke-virtual {p1}, Landroid/view/KeyEvent;->getEventTime()J
 
     move-result-wide v6
@@ -617,7 +540,6 @@
 
     iput-wide v6, p0, Lcom/android/internal/policy/impl/sec/MultitapKeyManager;->mPowerTripleEventTime:J
 
-    .line 127
     sget-boolean v5, Lcom/android/internal/policy/impl/sec/MultitapKeyManager;->SAFE_DEBUG:Z
 
     if-eqz v5, :cond_a
@@ -628,7 +550,6 @@
 
     invoke-static {v5, v6}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 129
     :cond_a
     iget-object v5, p0, Lcom/android/internal/policy/impl/sec/MultitapKeyManager;->mSPWM:Lcom/android/internal/policy/impl/sec/SamsungPhoneWindowManager;
 
@@ -640,17 +561,14 @@
 
     if-nez p2, :cond_0
 
-    .line 130
     iget-object v4, p0, Lcom/android/internal/policy/impl/sec/MultitapKeyManager;->mHandler:Landroid/os/Handler;
 
     iget-object v5, p0, Lcom/android/internal/policy/impl/sec/MultitapKeyManager;->mPowerDoubleTapTimeoutRunnable:Ljava/lang/Runnable;
 
     invoke-virtual {v4, v5}, Landroid/os/Handler;->removeCallbacks(Ljava/lang/Runnable;)V
 
-    .line 131
     iput-boolean v3, p0, Lcom/android/internal/policy/impl/sec/MultitapKeyManager;->mPowerDoubleTapPending:Z
 
-    .line 132
     iget-object v4, p0, Lcom/android/internal/policy/impl/sec/MultitapKeyManager;->mHandler:Landroid/os/Handler;
 
     iget-object v5, p0, Lcom/android/internal/policy/impl/sec/MultitapKeyManager;->mPowerDoubleTapTimeoutRunnable:Ljava/lang/Runnable;
@@ -663,7 +581,6 @@
 
     invoke-virtual {v4, v5, v6, v7}, Landroid/os/Handler;->postDelayed(Ljava/lang/Runnable;J)Z
 
-    .line 133
     sget-boolean v4, Lcom/android/internal/policy/impl/sec/MultitapKeyManager;->SAFE_DEBUG:Z
 
     if-eqz v4, :cond_1
@@ -676,22 +593,17 @@
 
     goto/16 :goto_1
 
-    .line 137
     :cond_b
     if-nez v2, :cond_0
 
-    .line 138
     iput-boolean v4, p0, Lcom/android/internal/policy/impl/sec/MultitapKeyManager;->mPowerConsumed:Z
 
-    .line 139
     iget-boolean v5, p0, Lcom/android/internal/policy/impl/sec/MultitapKeyManager;->mPowerTripleTapPending:Z
 
     if-eqz v5, :cond_c
 
-    .line 140
     iput-boolean v4, p0, Lcom/android/internal/policy/impl/sec/MultitapKeyManager;->mPowerTripleTapPending:Z
 
-    .line 141
     invoke-virtual {p1}, Landroid/view/KeyEvent;->getEventTime()J
 
     move-result-wide v6
@@ -702,46 +614,37 @@
 
     if-gez v5, :cond_e
 
-    .line 142
     iget-boolean v5, p0, Lcom/android/internal/policy/impl/sec/MultitapKeyManager;->mPowerTripleTapReady:Z
 
     if-eqz v5, :cond_d
 
-    .line 143
     iput-boolean v4, p0, Lcom/android/internal/policy/impl/sec/MultitapKeyManager;->mPowerTripleTapReady:Z
 
-    .line 144
     invoke-direct {p0}, Lcom/android/internal/policy/impl/sec/MultitapKeyManager;->handleTripleTapOnPower()V
 
-    .line 153
     :cond_c
     :goto_2
     iget-boolean v5, p0, Lcom/android/internal/policy/impl/sec/MultitapKeyManager;->mPowerDoubleTapPending:Z
 
     if-eqz v5, :cond_0
 
-    .line 154
     iput-boolean v4, p0, Lcom/android/internal/policy/impl/sec/MultitapKeyManager;->mPowerDoubleTapPending:Z
 
-    .line 155
     iget-object v4, p0, Lcom/android/internal/policy/impl/sec/MultitapKeyManager;->mHandler:Landroid/os/Handler;
 
     iget-object v5, p0, Lcom/android/internal/policy/impl/sec/MultitapKeyManager;->mPowerDoubleTapTimeoutRunnable:Ljava/lang/Runnable;
 
     invoke-virtual {v4, v5}, Landroid/os/Handler;->removeCallbacks(Ljava/lang/Runnable;)V
 
-    .line 156
     invoke-direct {p0}, Lcom/android/internal/policy/impl/sec/MultitapKeyManager;->handleDoubleTapOnPower()V
 
     goto/16 :goto_1
 
-    .line 146
     :cond_d
     iput-boolean v3, p0, Lcom/android/internal/policy/impl/sec/MultitapKeyManager;->mPowerTripleTapReady:Z
 
     goto :goto_2
 
-    .line 149
     :cond_e
     const-string v5, "MultitapKeyManager"
 
@@ -749,12 +652,10 @@
 
     invoke-static {v5, v6}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 150
     iput-boolean v4, p0, Lcom/android/internal/policy/impl/sec/MultitapKeyManager;->mPowerTripleTapReady:Z
 
     goto :goto_2
 
-    .line 77
     :sswitch_data_0
     .sparse-switch
         0x3 -> :sswitch_0
@@ -766,14 +667,12 @@
     .locals 3
 
     .prologue
-    .line 167
     iget-object v1, p0, Lcom/android/internal/policy/impl/sec/MultitapKeyManager;->mSPWM:Lcom/android/internal/policy/impl/sec/SamsungPhoneWindowManager;
 
     invoke-virtual {v1}, Lcom/android/internal/policy/impl/sec/SamsungPhoneWindowManager;->getKnoxCustomManager()Landroid/app/enterprise/knoxcustom/KnoxCustomManager;
 
     move-result-object v0
 
-    .line 168
     .local v0, "knoxCustomManager":Landroid/app/enterprise/knoxcustom/KnoxCustomManager;
     if-eqz v0, :cond_0
 
@@ -783,11 +682,9 @@
 
     if-eqz v1, :cond_0
 
-    .line 189
     :goto_0
     return-void
 
-    .line 174
     :cond_0
     iget-object v1, p0, Lcom/android/internal/policy/impl/sec/MultitapKeyManager;->mSPWM:Lcom/android/internal/policy/impl/sec/SamsungPhoneWindowManager;
 
@@ -797,7 +694,6 @@
 
     if-eqz v1, :cond_1
 
-    .line 175
     const-string v1, "MultitapKeyManager"
 
     const-string v2, "Home doubletap block in kidsmode and container only mode"
@@ -806,7 +702,6 @@
 
     goto :goto_0
 
-    .line 181
     :cond_1
     iget-object v1, p0, Lcom/android/internal/policy/impl/sec/MultitapKeyManager;->mSPWM:Lcom/android/internal/policy/impl/sec/SamsungPhoneWindowManager;
 
@@ -816,7 +711,6 @@
 
     if-eqz v1, :cond_2
 
-    .line 182
     const-string v1, "MultitapKeyManager"
 
     const-string v2, "Home doubletap block in access control"
@@ -825,13 +719,11 @@
 
     goto :goto_0
 
-    .line 187
     :cond_2
     const/4 v1, 0x1
 
     iput-boolean v1, p0, Lcom/android/internal/policy/impl/sec/MultitapKeyManager;->mHomeConsumed:Z
 
-    .line 188
     iget-object v1, p0, Lcom/android/internal/policy/impl/sec/MultitapKeyManager;->mSPWM:Lcom/android/internal/policy/impl/sec/SamsungPhoneWindowManager;
 
     invoke-virtual {v1}, Lcom/android/internal/policy/impl/sec/SamsungPhoneWindowManager;->launchVoiceCommand()V
@@ -843,7 +735,6 @@
     .locals 1
 
     .prologue
-    .line 228
     iget-boolean v0, p0, Lcom/android/internal/policy/impl/sec/MultitapKeyManager;->mHomeConsumed:Z
 
     if-nez v0, :cond_0

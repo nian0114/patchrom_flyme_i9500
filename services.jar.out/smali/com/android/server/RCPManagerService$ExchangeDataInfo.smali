@@ -37,7 +37,6 @@
     .locals 0
 
     .prologue
-    .line 2260
     iput-object p1, p0, Lcom/android/server/RCPManagerService$ExchangeDataInfo;->this$0:Lcom/android/server/RCPManagerService;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -51,7 +50,6 @@
     .param p2, "x1"    # Lcom/android/server/RCPManagerService$1;
 
     .prologue
-    .line 2260
     invoke-direct {p0, p1}, Lcom/android/server/RCPManagerService$ExchangeDataInfo;-><init>(Lcom/android/server/RCPManagerService;)V
 
     return-void

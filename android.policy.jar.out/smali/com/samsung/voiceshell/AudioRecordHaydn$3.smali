@@ -26,7 +26,6 @@
     .locals 0
 
     .prologue
-    .line 270
     iput-object p1, p0, Lcom/samsung/voiceshell/AudioRecordHaydn$3;->this$0:Lcom/samsung/voiceshell/AudioRecordHaydn;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -40,7 +39,6 @@
     .locals 18
 
     .prologue
-    .line 273
     :cond_0
     :goto_0
     :try_start_0
@@ -55,7 +53,6 @@
 
     if-eqz v2, :cond_1
 
-    .line 274
     move-object/from16 v0, p0
 
     iget-object v2, v0, Lcom/samsung/voiceshell/AudioRecordHaydn$3;->this$0:Lcom/samsung/voiceshell/AudioRecordHaydn;
@@ -67,7 +64,6 @@
 
     if-nez v2, :cond_2
 
-    .line 276
     const-wide/16 v2, 0xa
 
     invoke-static {v2, v3}, Ljava/lang/Thread;->sleep(J)V
@@ -76,11 +72,9 @@
 
     goto :goto_0
 
-    .line 425
     :catch_0
     move-exception v14
 
-    .line 426
     .local v14, "t":Ljava/lang/Throwable;
     move-object/from16 v0, p0
 
@@ -111,24 +105,19 @@
 
     invoke-static {v2, v3}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 428
     .end local v14    # "t":Ljava/lang/Throwable;
     :cond_1
     return-void
 
-    .line 280
     :cond_2
     const/4 v11, 0x0
 
-    .line 281
     .local v11, "iResult":I
     const/16 v16, 0x0
 
-    .line 282
     .local v16, "vResult":I
     const/4 v15, 0x0
 
-    .line 284
     .local v15, "uResult":I
     :try_start_1
     move-object/from16 v0, p0
@@ -143,7 +132,6 @@
 
     aput-short v4, v2, v3
 
-    .line 285
     move-object/from16 v0, p0
 
     iget-object v2, v0, Lcom/samsung/voiceshell/AudioRecordHaydn$3;->this$0:Lcom/samsung/voiceshell/AudioRecordHaydn;
@@ -178,7 +166,6 @@
     # setter for: Lcom/samsung/voiceshell/AudioRecordHaydn;->readLength:I
     invoke-static {v2, v3}, Lcom/samsung/voiceshell/AudioRecordHaydn;->access$402(Lcom/samsung/voiceshell/AudioRecordHaydn;I)I
 
-    .line 287
     move-object/from16 v0, p0
 
     iget-object v2, v0, Lcom/samsung/voiceshell/AudioRecordHaydn$3;->this$0:Lcom/samsung/voiceshell/AudioRecordHaydn;
@@ -212,7 +199,6 @@
 
     if-ne v2, v3, :cond_6
 
-    .line 338
     :cond_3
     :goto_1
     move-object/from16 v0, p0
@@ -241,7 +227,6 @@
 
     if-ne v2, v3, :cond_c
 
-    .line 358
     :cond_4
     :goto_2
     move-object/from16 v0, p0
@@ -271,7 +256,6 @@
     # setter for: Lcom/samsung/voiceshell/AudioRecordHaydn;->processedSample:I
     invoke-static {v2, v3}, Lcom/samsung/voiceshell/AudioRecordHaydn;->access$1102(Lcom/samsung/voiceshell/AudioRecordHaydn;I)I
 
-    .line 361
     move-object/from16 v0, p0
 
     iget-object v2, v0, Lcom/samsung/voiceshell/AudioRecordHaydn$3;->this$0:Lcom/samsung/voiceshell/AudioRecordHaydn;
@@ -306,7 +290,6 @@
 
     move-result v13
 
-    .line 363
     .local v13, "rms":I
     const-wide v2, 0x3ff3333333333333L    # 1.2
 
@@ -322,7 +305,6 @@
 
     double-to-int v13, v2
 
-    .line 365
     move-object/from16 v0, p0
 
     iget-object v2, v0, Lcom/samsung/voiceshell/AudioRecordHaydn$3;->this$0:Lcom/samsung/voiceshell/AudioRecordHaydn;
@@ -334,7 +316,6 @@
 
     if-le v13, v2, :cond_e
 
-    .line 366
     const-wide v2, 0x3feccccccccccccdL    # 0.9
 
     int-to-float v4, v13
@@ -364,7 +345,6 @@
 
     double-to-int v13, v2
 
-    .line 370
     :goto_3
     move-object/from16 v0, p0
 
@@ -373,7 +353,6 @@
     # setter for: Lcom/samsung/voiceshell/AudioRecordHaydn;->oldrms:I
     invoke-static {v2, v13}, Lcom/samsung/voiceshell/AudioRecordHaydn;->access$1202(Lcom/samsung/voiceshell/AudioRecordHaydn;I)I
 
-    .line 372
     move-object/from16 v0, p0
 
     iget-object v2, v0, Lcom/samsung/voiceshell/AudioRecordHaydn$3;->this$0:Lcom/samsung/voiceshell/AudioRecordHaydn;
@@ -387,14 +366,12 @@
 
     if-le v2, v3, :cond_5
 
-    .line 374
     move-object/from16 v0, p0
 
     iget-object v2, v0, Lcom/samsung/voiceshell/AudioRecordHaydn$3;->this$0:Lcom/samsung/voiceshell/AudioRecordHaydn;
 
     invoke-virtual {v2, v13}, Lcom/samsung/voiceshell/AudioRecordHaydn;->rmsSendHandlerMessage(I)V
 
-    .line 378
     :cond_5
     const/4 v12, 0x0
 
@@ -411,7 +388,6 @@
 
     if-ge v12, v2, :cond_f
 
-    .line 380
     move-object/from16 v0, p0
 
     iget-object v2, v0, Lcom/samsung/voiceshell/AudioRecordHaydn$3;->this$0:Lcom/samsung/voiceshell/AudioRecordHaydn;
@@ -431,7 +407,6 @@
     :try_end_1
     .catch Ljava/lang/Throwable; {:try_start_1 .. :try_end_1} :catch_0
 
-    .line 382
     :try_start_2
     move-object/from16 v0, p0
 
@@ -454,7 +429,6 @@
     .catch Ljava/lang/NoSuchMethodError; {:try_start_2 .. :try_end_2} :catch_1
     .catch Ljava/lang/Throwable; {:try_start_2 .. :try_end_2} :catch_0
 
-    .line 386
     :goto_5
     :try_start_3
     move-object/from16 v0, p0
@@ -468,7 +442,6 @@
 
     invoke-virtual {v2, v3}, Lcom/samsung/voiceshell/AudioRecordHaydn;->spectrumSendHandlerMessage([I)V
 
-    .line 378
     move-object/from16 v0, p0
 
     iget-object v2, v0, Lcom/samsung/voiceshell/AudioRecordHaydn$3;->this$0:Lcom/samsung/voiceshell/AudioRecordHaydn;
@@ -484,7 +457,6 @@
 
     goto :goto_4
 
-    .line 290
     .end local v12    # "index":I
     .end local v13    # "rms":I
     :cond_6
@@ -495,7 +467,6 @@
 
     if-nez v2, :cond_9
 
-    .line 292
     move-object/from16 v0, p0
 
     iget-object v2, v0, Lcom/samsung/voiceshell/AudioRecordHaydn$3;->this$0:Lcom/samsung/voiceshell/AudioRecordHaydn;
@@ -512,12 +483,10 @@
 
     if-nez v2, :cond_8
 
-    .line 294
     const/4 v2, 0x1
 
     invoke-static {v2}, Lcom/samsung/voiceshell/WakeUpCmdRecognizer;->SetProcessLock(Z)V
 
-    .line 295
     move-object/from16 v0, p0
 
     iget-object v2, v0, Lcom/samsung/voiceshell/AudioRecordHaydn$3;->this$0:Lcom/samsung/voiceshell/AudioRecordHaydn;
@@ -543,17 +512,14 @@
 
     move-result v15
 
-    .line 296
     const/4 v2, 0x0
 
     invoke-static {v2}, Lcom/samsung/voiceshell/WakeUpCmdRecognizer;->SetProcessLock(Z)V
 
-    .line 298
     const/4 v2, 0x2
 
     if-ne v15, v2, :cond_7
 
-    .line 300
     move-object/from16 v0, p0
 
     iget-object v2, v0, Lcom/samsung/voiceshell/AudioRecordHaydn$3;->this$0:Lcom/samsung/voiceshell/AudioRecordHaydn;
@@ -562,7 +528,6 @@
 
     iput-boolean v3, v2, Lcom/samsung/voiceshell/AudioRecordHaydn;->isPipeRecogEnrollSuccess:Z
 
-    .line 301
     move-object/from16 v0, p0
 
     iget-object v2, v0, Lcom/samsung/voiceshell/AudioRecordHaydn$3;->this$0:Lcom/samsung/voiceshell/AudioRecordHaydn;
@@ -576,7 +541,6 @@
 
     invoke-static {v2, v3}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 302
     move-object/from16 v0, p0
 
     iget-object v2, v0, Lcom/samsung/voiceshell/AudioRecordHaydn$3;->this$0:Lcom/samsung/voiceshell/AudioRecordHaydn;
@@ -622,11 +586,9 @@
 
     goto/16 :goto_1
 
-    .line 304
     :cond_7
     if-nez v15, :cond_3
 
-    .line 306
     move-object/from16 v0, p0
 
     iget-object v2, v0, Lcom/samsung/voiceshell/AudioRecordHaydn$3;->this$0:Lcom/samsung/voiceshell/AudioRecordHaydn;
@@ -656,7 +618,6 @@
 
     invoke-static {v2, v3}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 307
     move-object/from16 v0, p0
 
     iget-object v2, v0, Lcom/samsung/voiceshell/AudioRecordHaydn$3;->this$0:Lcom/samsung/voiceshell/AudioRecordHaydn;
@@ -667,7 +628,6 @@
 
     goto/16 :goto_1
 
-    .line 310
     :cond_8
     move-object/from16 v0, p0
 
@@ -677,7 +637,6 @@
 
     if-nez v2, :cond_3
 
-    .line 312
     move-object/from16 v0, p0
 
     iget-object v2, v0, Lcom/samsung/voiceshell/AudioRecordHaydn$3;->this$0:Lcom/samsung/voiceshell/AudioRecordHaydn;
@@ -703,12 +662,10 @@
 
     move-result v11
 
-    .line 313
     const/4 v11, 0x0
 
     goto/16 :goto_1
 
-    .line 316
     :cond_9
     # getter for: Lcom/samsung/voiceshell/AudioRecordHaydn;->m_nRecordingMode:I
     invoke-static {}, Lcom/samsung/voiceshell/AudioRecordHaydn;->access$700()I
@@ -719,7 +676,6 @@
 
     if-ne v2, v3, :cond_b
 
-    .line 318
     move-object/from16 v0, p0
 
     iget-object v2, v0, Lcom/samsung/voiceshell/AudioRecordHaydn$3;->this$0:Lcom/samsung/voiceshell/AudioRecordHaydn;
@@ -728,7 +684,6 @@
 
     if-eqz v2, :cond_a
 
-    .line 320
     move-object/from16 v0, p0
 
     iget-object v2, v0, Lcom/samsung/voiceshell/AudioRecordHaydn$3;->this$0:Lcom/samsung/voiceshell/AudioRecordHaydn;
@@ -764,7 +719,6 @@
 
     goto/16 :goto_1
 
-    .line 324
     :cond_a
     move-object/from16 v0, p0
 
@@ -805,7 +759,6 @@
 
     move-result v11
 
-    .line 325
     move-object/from16 v0, p0
 
     iget-object v2, v0, Lcom/samsung/voiceshell/AudioRecordHaydn$3;->this$0:Lcom/samsung/voiceshell/AudioRecordHaydn;
@@ -857,7 +810,6 @@
 
     goto/16 :goto_1
 
-    .line 331
     :cond_b
     move-object/from16 v0, p0
 
@@ -872,7 +824,6 @@
 
     if-ne v2, v3, :cond_3
 
-    .line 333
     move-object/from16 v0, p0
 
     iget-object v2, v0, Lcom/samsung/voiceshell/AudioRecordHaydn$3;->this$0:Lcom/samsung/voiceshell/AudioRecordHaydn;
@@ -926,12 +877,10 @@
 
     invoke-static {v2, v3}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 334
     const/16 v11, -0xc
 
     goto/16 :goto_1
 
-    .line 341
     :cond_c
     move-object/from16 v0, p0
 
@@ -952,7 +901,6 @@
 
     if-eqz v2, :cond_d
 
-    .line 343
     move-object/from16 v0, p0
 
     iget-object v2, v0, Lcom/samsung/voiceshell/AudioRecordHaydn$3;->this$0:Lcom/samsung/voiceshell/AudioRecordHaydn;
@@ -961,7 +909,6 @@
 
     if-eqz v2, :cond_4
 
-    .line 345
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/samsung/voiceshell/AudioRecordHaydn$3;->this$0:Lcom/samsung/voiceshell/AudioRecordHaydn;
@@ -1016,7 +963,6 @@
 
     iput-object v2, v0, Lcom/samsung/voiceshell/AudioRecordHaydn;->consoleResult:Ljava/lang/String;
 
-    .line 346
     move-object/from16 v0, p0
 
     iget-object v2, v0, Lcom/samsung/voiceshell/AudioRecordHaydn$3;->this$0:Lcom/samsung/voiceshell/AudioRecordHaydn;
@@ -1054,7 +1000,6 @@
 
     goto/16 :goto_2
 
-    .line 349
     :cond_d
     move-object/from16 v0, p0
 
@@ -1080,7 +1025,6 @@
 
     if-nez v2, :cond_4
 
-    .line 351
     move-object/from16 v0, p0
 
     iget-object v2, v0, Lcom/samsung/voiceshell/AudioRecordHaydn$3;->this$0:Lcom/samsung/voiceshell/AudioRecordHaydn;
@@ -1089,7 +1033,6 @@
 
     if-eqz v2, :cond_4
 
-    .line 353
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/samsung/voiceshell/AudioRecordHaydn$3;->this$0:Lcom/samsung/voiceshell/AudioRecordHaydn;
@@ -1144,7 +1087,6 @@
 
     iput-object v2, v0, Lcom/samsung/voiceshell/AudioRecordHaydn;->consoleResult:Ljava/lang/String;
 
-    .line 354
     move-object/from16 v0, p0
 
     iget-object v2, v0, Lcom/samsung/voiceshell/AudioRecordHaydn$3;->this$0:Lcom/samsung/voiceshell/AudioRecordHaydn;
@@ -1182,7 +1124,6 @@
 
     goto/16 :goto_2
 
-    .line 368
     .restart local v13    # "rms":I
     :cond_e
     const-wide/high16 v2, 0x3fd0000000000000L    # 0.25
@@ -1216,12 +1157,10 @@
 
     goto/16 :goto_3
 
-    .line 383
     .restart local v12    # "index":I
     :catch_1
     move-exception v10
 
-    .line 384
     .local v10, "e":Ljava/lang/NoSuchMethodError;
     const-string v2, "test_engine"
 
@@ -1231,7 +1170,6 @@
 
     goto/16 :goto_5
 
-    .line 389
     .end local v10    # "e":Ljava/lang/NoSuchMethodError;
     :cond_f
     move-object/from16 v0, p0
@@ -1250,7 +1188,6 @@
 
     iput-short v3, v2, Lcom/samsung/voiceshell/AudioRecordHaydn;->VerifiedCommand:S
 
-    .line 391
     move-object/from16 v0, p0
 
     iget-object v2, v0, Lcom/samsung/voiceshell/AudioRecordHaydn$3;->this$0:Lcom/samsung/voiceshell/AudioRecordHaydn;
@@ -1259,7 +1196,6 @@
 
     if-eqz v2, :cond_10
 
-    .line 393
     move-object/from16 v0, p0
 
     iget-object v2, v0, Lcom/samsung/voiceshell/AudioRecordHaydn$3;->this$0:Lcom/samsung/voiceshell/AudioRecordHaydn;
@@ -1270,7 +1206,6 @@
 
     invoke-virtual {v2, v3, v4}, Lcom/samsung/voiceshell/AudioRecordHaydn;->SendHandlerMessage(IS)V
 
-    .line 394
     move-object/from16 v0, p0
 
     iget-object v2, v0, Lcom/samsung/voiceshell/AudioRecordHaydn$3;->this$0:Lcom/samsung/voiceshell/AudioRecordHaydn;
@@ -1281,7 +1216,6 @@
 
     goto/16 :goto_0
 
-    .line 396
     :cond_10
     const/4 v2, 0x1
 
@@ -1289,7 +1223,6 @@
 
     if-ne v0, v2, :cond_12
 
-    .line 398
     move-object/from16 v0, p0
 
     iget-object v2, v0, Lcom/samsung/voiceshell/AudioRecordHaydn$3;->this$0:Lcom/samsung/voiceshell/AudioRecordHaydn;
@@ -1301,7 +1234,6 @@
 
     if-eqz v2, :cond_11
 
-    .line 399
     move-object/from16 v0, p0
 
     iget-object v2, v0, Lcom/samsung/voiceshell/AudioRecordHaydn$3;->this$0:Lcom/samsung/voiceshell/AudioRecordHaydn;
@@ -1312,7 +1244,6 @@
 
     invoke-virtual {v2, v0, v3}, Lcom/samsung/voiceshell/AudioRecordHaydn;->SendHandlerMessage(IS)V
 
-    .line 401
     :cond_11
     move-object/from16 v0, p0
 
@@ -1325,26 +1256,22 @@
 
     goto/16 :goto_0
 
-    .line 403
     :cond_12
     const/4 v2, 0x1
 
     if-ne v11, v2, :cond_14
 
-    .line 405
     const/4 v2, 0x2
 
     # setter for: Lcom/samsung/voiceshell/AudioRecordHaydn;->m_nRecordingMode:I
     invoke-static {v2}, Lcom/samsung/voiceshell/AudioRecordHaydn;->access$702(I)I
 
-    .line 407
     move-object/from16 v0, p0
 
     iget-object v2, v0, Lcom/samsung/voiceshell/AudioRecordHaydn$3;->this$0:Lcom/samsung/voiceshell/AudioRecordHaydn;
 
     invoke-virtual {v2, v11}, Lcom/samsung/voiceshell/AudioRecordHaydn;->setAdaptation(I)I
 
-    .line 409
     move-object/from16 v0, p0
 
     iget-object v2, v0, Lcom/samsung/voiceshell/AudioRecordHaydn$3;->this$0:Lcom/samsung/voiceshell/AudioRecordHaydn;
@@ -1356,7 +1283,6 @@
 
     if-eqz v2, :cond_13
 
-    .line 410
     move-object/from16 v0, p0
 
     iget-object v2, v0, Lcom/samsung/voiceshell/AudioRecordHaydn$3;->this$0:Lcom/samsung/voiceshell/AudioRecordHaydn;
@@ -1369,7 +1295,6 @@
 
     invoke-virtual {v2, v11, v3}, Lcom/samsung/voiceshell/AudioRecordHaydn;->SendHandlerMessage(IS)V
 
-    .line 412
     :cond_13
     move-object/from16 v0, p0
 
@@ -1382,7 +1307,6 @@
 
     goto/16 :goto_0
 
-    .line 414
     :cond_14
     const/4 v2, -0x3
 
@@ -1392,14 +1316,12 @@
 
     if-ne v11, v2, :cond_0
 
-    .line 416
     :cond_15
     const/4 v2, 0x2
 
     # setter for: Lcom/samsung/voiceshell/AudioRecordHaydn;->m_nRecordingMode:I
     invoke-static {v2}, Lcom/samsung/voiceshell/AudioRecordHaydn;->access$702(I)I
 
-    .line 418
     move-object/from16 v0, p0
 
     iget-object v2, v0, Lcom/samsung/voiceshell/AudioRecordHaydn$3;->this$0:Lcom/samsung/voiceshell/AudioRecordHaydn;
@@ -1411,7 +1333,6 @@
 
     if-eqz v2, :cond_16
 
-    .line 419
     move-object/from16 v0, p0
 
     iget-object v2, v0, Lcom/samsung/voiceshell/AudioRecordHaydn$3;->this$0:Lcom/samsung/voiceshell/AudioRecordHaydn;
@@ -1424,7 +1345,6 @@
 
     invoke-virtual {v2, v11, v3}, Lcom/samsung/voiceshell/AudioRecordHaydn;->SendHandlerMessage(IS)V
 
-    .line 421
     :cond_16
     move-object/from16 v0, p0
 

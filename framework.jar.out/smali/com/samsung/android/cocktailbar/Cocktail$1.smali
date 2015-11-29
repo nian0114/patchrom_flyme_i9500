@@ -32,7 +32,6 @@
     .locals 0
 
     .prologue
-    .line 143
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -45,16 +44,13 @@
     .param p1, "in"    # Landroid/os/Parcel;
 
     .prologue
-    .line 145
     new-instance v0, Lcom/samsung/android/cocktailbar/Cocktail;
 
     invoke-direct {v0}, Lcom/samsung/android/cocktailbar/Cocktail;-><init>()V
 
-    .line 146
     .local v0, "data":Lcom/samsung/android/cocktailbar/Cocktail;
     invoke-virtual {v0, p1}, Lcom/samsung/android/cocktailbar/Cocktail;->readFromParcel(Landroid/os/Parcel;)V
 
-    .line 147
     return-object v0
 .end method
 
@@ -63,7 +59,6 @@
     .param p1, "x0"    # Landroid/os/Parcel;
 
     .prologue
-    .line 143
     invoke-virtual {p0, p1}, Lcom/samsung/android/cocktailbar/Cocktail$1;->createFromParcel(Landroid/os/Parcel;)Lcom/samsung/android/cocktailbar/Cocktail;
 
     move-result-object v0
@@ -76,7 +71,6 @@
     .param p1, "size"    # I
 
     .prologue
-    .line 151
     new-array v0, p1, [Lcom/samsung/android/cocktailbar/Cocktail;
 
     return-object v0
@@ -87,7 +81,6 @@
     .param p1, "x0"    # I
 
     .prologue
-    .line 143
     invoke-virtual {p0, p1}, Lcom/samsung/android/cocktailbar/Cocktail$1;->newArray(I)[Lcom/samsung/android/cocktailbar/Cocktail;
 
     move-result-object v0

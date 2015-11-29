@@ -16,16 +16,12 @@
     .param p2, "hEffectHandle"    # I
 
     .prologue
-    .line 29
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 30
     iput p1, p0, Lcom/immersion/EffectHandle;->hDeviceHandle:I
 
-    .line 31
     iput p2, p0, Lcom/immersion/EffectHandle;->hEffectHandle:I
 
-    .line 32
     return-void
 .end method
 
@@ -35,7 +31,6 @@
     .locals 3
 
     .prologue
-    .line 415
     invoke-static {}, Lcom/immersion/ImmVibe;->getInstance()Lcom/immersion/ImmVibe;
 
     move-result-object v0
@@ -46,7 +41,6 @@
 
     invoke-virtual {v0, v1, v2}, Lcom/immersion/ImmVibe;->destroyStreamingEffect(II)V
 
-    .line 416
     return-void
 .end method
 
@@ -54,7 +48,6 @@
     .locals 3
 
     .prologue
-    .line 146
     invoke-static {}, Lcom/immersion/ImmVibe;->getInstance()Lcom/immersion/ImmVibe;
 
     move-result-object v0
@@ -74,7 +67,6 @@
     .locals 2
 
     .prologue
-    .line 194
     invoke-virtual {p0}, Lcom/immersion/EffectHandle;->getState()I
 
     move-result v0
@@ -100,7 +92,6 @@
     .prologue
     const/4 v0, 0x1
 
-    .line 170
     invoke-virtual {p0}, Lcom/immersion/EffectHandle;->getState()I
 
     move-result v1
@@ -121,7 +112,6 @@
     .param p1, "definition"    # Lcom/immersion/MagSweepEffectDefinition;
 
     .prologue
-    .line 66
     invoke-static {}, Lcom/immersion/ImmVibe;->getInstance()Lcom/immersion/ImmVibe;
 
     move-result-object v0
@@ -160,7 +150,6 @@
 
     invoke-virtual/range {v0 .. v9}, Lcom/immersion/ImmVibe;->modifyPlayingMagSweepEffect(IIIIIIIII)V
 
-    .line 75
     return-void
 .end method
 
@@ -169,7 +158,6 @@
     .param p1, "definition"    # Lcom/immersion/PeriodicEffectDefinition;
 
     .prologue
-    .line 109
     invoke-static {}, Lcom/immersion/ImmVibe;->getInstance()Lcom/immersion/ImmVibe;
 
     move-result-object v0
@@ -212,7 +200,6 @@
 
     invoke-virtual/range {v0 .. v10}, Lcom/immersion/ImmVibe;->modifyPlayingPeriodicEffect(IIIIIIIIII)V
 
-    .line 119
     return-void
 .end method
 
@@ -220,7 +207,6 @@
     .locals 3
 
     .prologue
-    .line 224
     invoke-static {}, Lcom/immersion/ImmVibe;->getInstance()Lcom/immersion/ImmVibe;
 
     move-result-object v0
@@ -231,7 +217,6 @@
 
     invoke-virtual {v0, v1, v2}, Lcom/immersion/ImmVibe;->pausePlayingEffect(II)V
 
-    .line 225
     return-void
 .end method
 
@@ -241,7 +226,6 @@
     .param p2, "nSize"    # I
 
     .prologue
-    .line 333
     invoke-static {}, Lcom/immersion/ImmVibe;->getInstance()Lcom/immersion/ImmVibe;
 
     move-result-object v0
@@ -252,7 +236,6 @@
 
     invoke-virtual {v0, v1, v2, p1, p2}, Lcom/immersion/ImmVibe;->playStreamingSample(II[BI)V
 
-    .line 334
     return-void
 .end method
 
@@ -263,7 +246,6 @@
     .param p3, "nOffsetTime"    # I
 
     .prologue
-    .line 384
     invoke-static {}, Lcom/immersion/ImmVibe;->getInstance()Lcom/immersion/ImmVibe;
 
     move-result-object v0
@@ -280,7 +262,6 @@
 
     invoke-virtual/range {v0 .. v5}, Lcom/immersion/ImmVibe;->playStreamingSampleWithOffset(II[BII)V
 
-    .line 385
     return-void
 .end method
 
@@ -288,7 +269,6 @@
     .locals 3
 
     .prologue
-    .line 258
     invoke-static {}, Lcom/immersion/ImmVibe;->getInstance()Lcom/immersion/ImmVibe;
 
     move-result-object v0
@@ -299,7 +279,6 @@
 
     invoke-virtual {v0, v1, v2}, Lcom/immersion/ImmVibe;->resumePausedEffect(II)V
 
-    .line 259
     return-void
 .end method
 
@@ -307,7 +286,6 @@
     .locals 3
 
     .prologue
-    .line 288
     invoke-static {}, Lcom/immersion/ImmVibe;->getInstance()Lcom/immersion/ImmVibe;
 
     move-result-object v0
@@ -318,6 +296,5 @@
 
     invoke-virtual {v0, v1, v2}, Lcom/immersion/ImmVibe;->stopPlayingEffect(II)V
 
-    .line 289
     return-void
 .end method

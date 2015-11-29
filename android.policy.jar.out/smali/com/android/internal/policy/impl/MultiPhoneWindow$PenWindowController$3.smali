@@ -28,7 +28,6 @@
     .locals 0
 
     .prologue
-    .line 3022
     iput-object p1, p0, Lcom/android/internal/policy/impl/MultiPhoneWindow$PenWindowController$3;->this$1:Lcom/android/internal/policy/impl/MultiPhoneWindow$PenWindowController;
 
     iput-object p2, p0, Lcom/android/internal/policy/impl/MultiPhoneWindow$PenWindowController$3;->val$context:Landroid/content/Context;
@@ -45,7 +44,6 @@
     .param p1, "dialog"    # Landroid/content/DialogInterface;
 
     .prologue
-    .line 3024
     iget-object v1, p0, Lcom/android/internal/policy/impl/MultiPhoneWindow$PenWindowController$3;->this$1:Lcom/android/internal/policy/impl/MultiPhoneWindow$PenWindowController;
 
     iget-object v1, v1, Lcom/android/internal/policy/impl/MultiPhoneWindow$PenWindowController;->this$0:Lcom/android/internal/policy/impl/MultiPhoneWindow;
@@ -72,17 +70,14 @@
 
     if-nez v1, :cond_0
 
-    .line 3036
     :goto_0
     return-void
 
-    .line 3027
     :cond_0
     new-instance v0, Landroid/content/Intent;
 
     invoke-direct {v0}, Landroid/content/Intent;-><init>()V
 
-    .line 3028
     .local v0, "intent":Landroid/content/Intent;
     const-string v1, "com.sec.android.app.FlashBarService"
 
@@ -90,17 +85,14 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/content/Intent;->setClassName(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;
 
-    .line 3030
     iget-object v1, p0, Lcom/android/internal/policy/impl/MultiPhoneWindow$PenWindowController$3;->val$context:Landroid/content/Context;
 
     invoke-virtual {v1, v0}, Landroid/content/Context;->startService(Landroid/content/Intent;)Landroid/content/ComponentName;
 
-    .line 3031
     iget-object v1, p0, Lcom/android/internal/policy/impl/MultiPhoneWindow$PenWindowController$3;->this$1:Lcom/android/internal/policy/impl/MultiPhoneWindow$PenWindowController;
 
     invoke-virtual {v1}, Lcom/android/internal/policy/impl/MultiPhoneWindow$PenWindowController;->performStartDragMode()V
 
-    .line 3032
     iget-object v1, p0, Lcom/android/internal/policy/impl/MultiPhoneWindow$PenWindowController$3;->this$1:Lcom/android/internal/policy/impl/MultiPhoneWindow$PenWindowController;
 
     iget-object v1, v1, Lcom/android/internal/policy/impl/MultiPhoneWindow$PenWindowController;->this$0:Lcom/android/internal/policy/impl/MultiPhoneWindow;

@@ -30,10 +30,8 @@
     .prologue
     const/4 v0, 0x0
 
-    .line 55
     invoke-direct {p0, v0, v0}, Landroid/graphics/drawable/ScaleDrawable;-><init>(Landroid/graphics/drawable/ScaleDrawable$ScaleState;Landroid/content/res/Resources;)V
 
-    .line 56
     return-void
 .end method
 
@@ -47,36 +45,28 @@
     .prologue
     const/4 v0, 0x0
 
-    .line 59
     invoke-direct {p0, v0, v0}, Landroid/graphics/drawable/ScaleDrawable;-><init>(Landroid/graphics/drawable/ScaleDrawable$ScaleState;Landroid/content/res/Resources;)V
 
-    .line 61
     iget-object v0, p0, Landroid/graphics/drawable/ScaleDrawable;->mScaleState:Landroid/graphics/drawable/ScaleDrawable$ScaleState;
 
     iput-object p1, v0, Landroid/graphics/drawable/ScaleDrawable$ScaleState;->mDrawable:Landroid/graphics/drawable/Drawable;
 
-    .line 62
     iget-object v0, p0, Landroid/graphics/drawable/ScaleDrawable;->mScaleState:Landroid/graphics/drawable/ScaleDrawable$ScaleState;
 
     iput p2, v0, Landroid/graphics/drawable/ScaleDrawable$ScaleState;->mGravity:I
 
-    .line 63
     iget-object v0, p0, Landroid/graphics/drawable/ScaleDrawable;->mScaleState:Landroid/graphics/drawable/ScaleDrawable$ScaleState;
 
     iput p3, v0, Landroid/graphics/drawable/ScaleDrawable$ScaleState;->mScaleWidth:F
 
-    .line 64
     iget-object v0, p0, Landroid/graphics/drawable/ScaleDrawable;->mScaleState:Landroid/graphics/drawable/ScaleDrawable$ScaleState;
 
     iput p4, v0, Landroid/graphics/drawable/ScaleDrawable$ScaleState;->mScaleHeight:F
 
-    .line 66
     if-eqz p1, :cond_0
 
-    .line 67
     invoke-virtual {p1, p0}, Landroid/graphics/drawable/Drawable;->setCallback(Landroid/graphics/drawable/Drawable$Callback;)V
 
-    .line 69
     :cond_0
     return-void
 .end method
@@ -87,24 +77,20 @@
     .param p2, "res"    # Landroid/content/res/Resources;
 
     .prologue
-    .line 334
     invoke-direct {p0}, Landroid/graphics/drawable/Drawable;-><init>()V
 
-    .line 52
     new-instance v0, Landroid/graphics/Rect;
 
     invoke-direct {v0}, Landroid/graphics/Rect;-><init>()V
 
     iput-object v0, p0, Landroid/graphics/drawable/ScaleDrawable;->mTmpRect:Landroid/graphics/Rect;
 
-    .line 335
     new-instance v0, Landroid/graphics/drawable/ScaleDrawable$ScaleState;
 
     invoke-direct {v0, p1, p0, p2}, Landroid/graphics/drawable/ScaleDrawable$ScaleState;-><init>(Landroid/graphics/drawable/ScaleDrawable$ScaleState;Landroid/graphics/drawable/ScaleDrawable;Landroid/content/res/Resources;)V
 
     iput-object v0, p0, Landroid/graphics/drawable/ScaleDrawable;->mScaleState:Landroid/graphics/drawable/ScaleDrawable$ScaleState;
 
-    .line 336
     return-void
 .end method
 
@@ -115,7 +101,6 @@
     .param p3, "x2"    # Landroid/graphics/drawable/ScaleDrawable$1;
 
     .prologue
-    .line 49
     invoke-direct {p0, p1, p2}, Landroid/graphics/drawable/ScaleDrawable;-><init>(Landroid/graphics/drawable/ScaleDrawable$ScaleState;Landroid/content/res/Resources;)V
 
     return-void
@@ -127,16 +112,13 @@
     .param p1, "name"    # I
 
     .prologue
-    .line 79
     invoke-virtual {p0, p1}, Landroid/content/res/TypedArray;->getString(I)Ljava/lang/String;
 
     move-result-object v1
 
-    .line 80
     .local v1, "s":Ljava/lang/String;
     if-eqz v1, :cond_0
 
-    .line 81
     const-string v2, "%"
 
     invoke-virtual {v1, v2}, Ljava/lang/String;->endsWith(Ljava/lang/String;)Z
@@ -145,7 +127,6 @@
 
     if-eqz v2, :cond_0
 
-    .line 82
     const/4 v2, 0x0
 
     invoke-virtual {v1}, Ljava/lang/String;->length()I
@@ -158,7 +139,6 @@
 
     move-result-object v0
 
-    .line 83
     .local v0, "f":Ljava/lang/String;
     invoke-static {v0}, Ljava/lang/Float;->parseFloat(Ljava/lang/String;)F
 
@@ -168,7 +148,6 @@
 
     div-float/2addr v2, v3
 
-    .line 86
     .end local v0    # "f":Ljava/lang/String;
     :goto_0
     return v2
@@ -186,7 +165,6 @@
     .param p1, "canvas"    # Landroid/graphics/Canvas;
 
     .prologue
-    .line 155
     iget-object v0, p0, Landroid/graphics/drawable/ScaleDrawable;->mScaleState:Landroid/graphics/drawable/ScaleDrawable$ScaleState;
 
     iget-object v0, v0, Landroid/graphics/drawable/ScaleDrawable$ScaleState;->mDrawable:Landroid/graphics/drawable/Drawable;
@@ -197,14 +175,12 @@
 
     if-eqz v0, :cond_0
 
-    .line 156
     iget-object v0, p0, Landroid/graphics/drawable/ScaleDrawable;->mScaleState:Landroid/graphics/drawable/ScaleDrawable$ScaleState;
 
     iget-object v0, v0, Landroid/graphics/drawable/ScaleDrawable$ScaleState;->mDrawable:Landroid/graphics/drawable/Drawable;
 
     invoke-virtual {v0, p1}, Landroid/graphics/drawable/Drawable;->draw(Landroid/graphics/Canvas;)V
 
-    .line 157
     :cond_0
     return-void
 .end method
@@ -213,7 +189,6 @@
     .locals 1
 
     .prologue
-    .line 185
     iget-object v0, p0, Landroid/graphics/drawable/ScaleDrawable;->mScaleState:Landroid/graphics/drawable/ScaleDrawable$ScaleState;
 
     iget-object v0, v0, Landroid/graphics/drawable/ScaleDrawable$ScaleState;->mDrawable:Landroid/graphics/drawable/Drawable;
@@ -229,7 +204,6 @@
     .locals 2
 
     .prologue
-    .line 161
     invoke-super {p0}, Landroid/graphics/drawable/Drawable;->getChangingConfigurations()I
 
     move-result v0
@@ -257,7 +231,6 @@
     .locals 2
 
     .prologue
-    .line 263
     iget-object v0, p0, Landroid/graphics/drawable/ScaleDrawable;->mScaleState:Landroid/graphics/drawable/ScaleDrawable$ScaleState;
 
     invoke-virtual {v0}, Landroid/graphics/drawable/ScaleDrawable$ScaleState;->canConstantState()Z
@@ -266,7 +239,6 @@
 
     if-eqz v0, :cond_0
 
-    .line 264
     iget-object v0, p0, Landroid/graphics/drawable/ScaleDrawable;->mScaleState:Landroid/graphics/drawable/ScaleDrawable$ScaleState;
 
     invoke-virtual {p0}, Landroid/graphics/drawable/ScaleDrawable;->getChangingConfigurations()I
@@ -275,10 +247,8 @@
 
     iput v1, v0, Landroid/graphics/drawable/ScaleDrawable$ScaleState;->mChangingConfigurations:I
 
-    .line 265
     iget-object v0, p0, Landroid/graphics/drawable/ScaleDrawable;->mScaleState:Landroid/graphics/drawable/ScaleDrawable$ScaleState;
 
-    .line 267
     :goto_0
     return-object v0
 
@@ -292,7 +262,6 @@
     .locals 1
 
     .prologue
-    .line 75
     iget-object v0, p0, Landroid/graphics/drawable/ScaleDrawable;->mScaleState:Landroid/graphics/drawable/ScaleDrawable$ScaleState;
 
     iget-object v0, v0, Landroid/graphics/drawable/ScaleDrawable$ScaleState;->mDrawable:Landroid/graphics/drawable/Drawable;
@@ -304,7 +273,6 @@
     .locals 1
 
     .prologue
-    .line 258
     iget-object v0, p0, Landroid/graphics/drawable/ScaleDrawable;->mScaleState:Landroid/graphics/drawable/ScaleDrawable$ScaleState;
 
     iget-object v0, v0, Landroid/graphics/drawable/ScaleDrawable$ScaleState;->mDrawable:Landroid/graphics/drawable/Drawable;
@@ -320,7 +288,6 @@
     .locals 1
 
     .prologue
-    .line 253
     iget-object v0, p0, Landroid/graphics/drawable/ScaleDrawable;->mScaleState:Landroid/graphics/drawable/ScaleDrawable$ScaleState;
 
     iget-object v0, v0, Landroid/graphics/drawable/ScaleDrawable$ScaleState;->mDrawable:Landroid/graphics/drawable/Drawable;
@@ -336,7 +303,6 @@
     .locals 1
 
     .prologue
-    .line 205
     iget-object v0, p0, Landroid/graphics/drawable/ScaleDrawable;->mScaleState:Landroid/graphics/drawable/ScaleDrawable$ScaleState;
 
     iget-object v0, v0, Landroid/graphics/drawable/ScaleDrawable$ScaleState;->mDrawable:Landroid/graphics/drawable/Drawable;
@@ -353,7 +319,6 @@
     .param p1, "padding"    # Landroid/graphics/Rect;
 
     .prologue
-    .line 169
     iget-object v0, p0, Landroid/graphics/drawable/ScaleDrawable;->mScaleState:Landroid/graphics/drawable/ScaleDrawable$ScaleState;
 
     iget-object v0, v0, Landroid/graphics/drawable/ScaleDrawable$ScaleState;->mDrawable:Landroid/graphics/drawable/Drawable;
@@ -379,17 +344,14 @@
     .end annotation
 
     .prologue
-    .line 92
     invoke-super {p0, p1, p2, p3, p4}, Landroid/graphics/drawable/Drawable;->inflate(Landroid/content/res/Resources;Lorg/xmlpull/v1/XmlPullParser;Landroid/util/AttributeSet;Landroid/content/res/Resources$Theme;)V
 
-    .line 96
     sget-object v8, Lcom/android/internal/R$styleable;->ScaleDrawable:[I
 
     invoke-static {p1, p4, p3, v8}, Landroid/graphics/drawable/ScaleDrawable;->obtainAttributes(Landroid/content/res/Resources;Landroid/content/res/Resources$Theme;Landroid/util/AttributeSet;[I)Landroid/content/res/TypedArray;
 
     move-result-object v0
 
-    .line 99
     .local v0, "a":Landroid/content/res/TypedArray;
     const/4 v8, 0x1
 
@@ -397,7 +359,6 @@
 
     move-result v6
 
-    .line 100
     .local v6, "sw":F
     const/4 v8, 0x2
 
@@ -405,7 +366,6 @@
 
     move-result v5
 
-    .line 101
     .local v5, "sh":F
     const/4 v8, 0x3
 
@@ -415,7 +375,6 @@
 
     move-result v2
 
-    .line 102
     .local v2, "g":I
     const/4 v8, 0x4
 
@@ -425,7 +384,6 @@
 
     move-result v3
 
-    .line 104
     .local v3, "min":Z
     const/4 v8, 0x0
 
@@ -433,16 +391,13 @@
 
     move-result-object v1
 
-    .line 106
     .local v1, "dr":Landroid/graphics/drawable/Drawable;
     invoke-virtual {v0}, Landroid/content/res/TypedArray;->recycle()V
 
-    .line 108
     invoke-interface {p2}, Lorg/xmlpull/v1/XmlPullParser;->getDepth()I
 
     move-result v4
 
-    .line 110
     .local v4, "outerDepth":I
     :cond_0
     :goto_0
@@ -465,24 +420,20 @@
 
     if-le v8, v4, :cond_2
 
-    .line 111
     :cond_1
     const/4 v8, 0x2
 
     if-ne v7, v8, :cond_0
 
-    .line 114
     invoke-static {p1, p2, p3, p4}, Landroid/graphics/drawable/Drawable;->createFromXmlInner(Landroid/content/res/Resources;Lorg/xmlpull/v1/XmlPullParser;Landroid/util/AttributeSet;Landroid/content/res/Resources$Theme;)Landroid/graphics/drawable/Drawable;
 
     move-result-object v1
 
     goto :goto_0
 
-    .line 117
     :cond_2
     if-nez v1, :cond_3
 
-    .line 118
     new-instance v8, Ljava/lang/IllegalArgumentException;
 
     const-string v9, "No drawable specified for <scale>"
@@ -491,39 +442,31 @@
 
     throw v8
 
-    .line 121
     :cond_3
     iget-object v8, p0, Landroid/graphics/drawable/ScaleDrawable;->mScaleState:Landroid/graphics/drawable/ScaleDrawable$ScaleState;
 
     iput-object v1, v8, Landroid/graphics/drawable/ScaleDrawable$ScaleState;->mDrawable:Landroid/graphics/drawable/Drawable;
 
-    .line 122
     iget-object v8, p0, Landroid/graphics/drawable/ScaleDrawable;->mScaleState:Landroid/graphics/drawable/ScaleDrawable$ScaleState;
 
     iput v6, v8, Landroid/graphics/drawable/ScaleDrawable$ScaleState;->mScaleWidth:F
 
-    .line 123
     iget-object v8, p0, Landroid/graphics/drawable/ScaleDrawable;->mScaleState:Landroid/graphics/drawable/ScaleDrawable$ScaleState;
 
     iput v5, v8, Landroid/graphics/drawable/ScaleDrawable$ScaleState;->mScaleHeight:F
 
-    .line 124
     iget-object v8, p0, Landroid/graphics/drawable/ScaleDrawable;->mScaleState:Landroid/graphics/drawable/ScaleDrawable$ScaleState;
 
     iput v2, v8, Landroid/graphics/drawable/ScaleDrawable$ScaleState;->mGravity:I
 
-    .line 125
     iget-object v8, p0, Landroid/graphics/drawable/ScaleDrawable;->mScaleState:Landroid/graphics/drawable/ScaleDrawable$ScaleState;
 
     iput-boolean v3, v8, Landroid/graphics/drawable/ScaleDrawable$ScaleState;->mUseIntrinsicSizeAsMin:Z
 
-    .line 126
     if-eqz v1, :cond_4
 
-    .line 127
     invoke-virtual {v1, p0}, Landroid/graphics/drawable/Drawable;->setCallback(Landroid/graphics/drawable/Drawable$Callback;)V
 
-    .line 129
     :cond_4
     return-void
 .end method
@@ -533,21 +476,18 @@
     .param p1, "who"    # Landroid/graphics/drawable/Drawable;
 
     .prologue
-    .line 134
     invoke-virtual {p0}, Landroid/graphics/drawable/ScaleDrawable;->getCallback()Landroid/graphics/drawable/Drawable$Callback;
 
     move-result-object v0
 
     if-eqz v0, :cond_0
 
-    .line 135
     invoke-virtual {p0}, Landroid/graphics/drawable/ScaleDrawable;->getCallback()Landroid/graphics/drawable/Drawable$Callback;
 
     move-result-object v0
 
     invoke-interface {v0, p0}, Landroid/graphics/drawable/Drawable$Callback;->invalidateDrawable(Landroid/graphics/drawable/Drawable;)V
 
-    .line 137
     :cond_0
     return-void
 .end method
@@ -556,7 +496,6 @@
     .locals 1
 
     .prologue
-    .line 210
     iget-object v0, p0, Landroid/graphics/drawable/ScaleDrawable;->mScaleState:Landroid/graphics/drawable/ScaleDrawable$ScaleState;
 
     iget-object v0, v0, Landroid/graphics/drawable/ScaleDrawable$ScaleState;->mDrawable:Landroid/graphics/drawable/Drawable;
@@ -572,7 +511,6 @@
     .locals 1
 
     .prologue
-    .line 272
     iget-boolean v0, p0, Landroid/graphics/drawable/ScaleDrawable;->mMutated:Z
 
     if-nez v0, :cond_0
@@ -583,19 +521,16 @@
 
     if-ne v0, p0, :cond_0
 
-    .line 273
     iget-object v0, p0, Landroid/graphics/drawable/ScaleDrawable;->mScaleState:Landroid/graphics/drawable/ScaleDrawable$ScaleState;
 
     iget-object v0, v0, Landroid/graphics/drawable/ScaleDrawable$ScaleState;->mDrawable:Landroid/graphics/drawable/Drawable;
 
     invoke-virtual {v0}, Landroid/graphics/drawable/Drawable;->mutate()Landroid/graphics/drawable/Drawable;
 
-    .line 274
     const/4 v0, 0x1
 
     iput-boolean v0, p0, Landroid/graphics/drawable/ScaleDrawable;->mMutated:Z
 
-    .line 276
     :cond_0
     return-object p0
 .end method
@@ -611,28 +546,23 @@
 
     const/4 v11, 0x0
 
-    .line 230
     iget-object v4, p0, Landroid/graphics/drawable/ScaleDrawable;->mTmpRect:Landroid/graphics/Rect;
 
-    .line 231
     .local v4, "r":Landroid/graphics/Rect;
     iget-object v3, p0, Landroid/graphics/drawable/ScaleDrawable;->mScaleState:Landroid/graphics/drawable/ScaleDrawable$ScaleState;
 
     iget-boolean v9, v3, Landroid/graphics/drawable/ScaleDrawable$ScaleState;->mUseIntrinsicSizeAsMin:Z
 
-    .line 232
     .local v9, "min":Z
     invoke-virtual {p0}, Landroid/graphics/drawable/ScaleDrawable;->getLevel()I
 
     move-result v8
 
-    .line 233
     .local v8, "level":I
     invoke-virtual {p1}, Landroid/graphics/Rect;->width()I
 
     move-result v1
 
-    .line 234
     .local v1, "w":I
     iget-object v3, p0, Landroid/graphics/drawable/ScaleDrawable;->mScaleState:Landroid/graphics/drawable/ScaleDrawable$ScaleState;
 
@@ -642,7 +572,6 @@
 
     if-lez v3, :cond_0
 
-    .line 235
     if-eqz v9, :cond_3
 
     iget-object v3, p0, Landroid/graphics/drawable/ScaleDrawable;->mScaleState:Landroid/graphics/drawable/ScaleDrawable$ScaleState;
@@ -653,7 +582,6 @@
 
     move-result v7
 
-    .line 236
     .local v7, "iw":I
     :goto_0
     sub-int v3, v1, v7
@@ -676,14 +604,12 @@
 
     sub-int/2addr v1, v3
 
-    .line 238
     .end local v7    # "iw":I
     :cond_0
     invoke-virtual {p1}, Landroid/graphics/Rect;->height()I
 
     move-result v2
 
-    .line 239
     .local v2, "h":I
     iget-object v3, p0, Landroid/graphics/drawable/ScaleDrawable;->mScaleState:Landroid/graphics/drawable/ScaleDrawable$ScaleState;
 
@@ -693,7 +619,6 @@
 
     if-lez v3, :cond_1
 
-    .line 240
     if-eqz v9, :cond_4
 
     iget-object v0, p0, Landroid/graphics/drawable/ScaleDrawable;->mScaleState:Landroid/graphics/drawable/ScaleDrawable$ScaleState;
@@ -704,7 +629,6 @@
 
     move-result v6
 
-    .line 241
     .local v6, "ih":I
     :goto_1
     sub-int v0, v2, v6
@@ -727,14 +651,12 @@
 
     sub-int/2addr v2, v0
 
-    .line 243
     .end local v6    # "ih":I
     :cond_1
     invoke-virtual {p0}, Landroid/graphics/drawable/ScaleDrawable;->getLayoutDirection()I
 
     move-result v5
 
-    .line 244
     .local v5, "layoutDirection":I
     iget-object v0, p0, Landroid/graphics/drawable/ScaleDrawable;->mScaleState:Landroid/graphics/drawable/ScaleDrawable$ScaleState;
 
@@ -744,12 +666,10 @@
 
     invoke-static/range {v0 .. v5}, Landroid/view/Gravity;->apply(IIILandroid/graphics/Rect;Landroid/graphics/Rect;I)V
 
-    .line 246
     if-lez v1, :cond_2
 
     if-lez v2, :cond_2
 
-    .line 247
     iget-object v0, p0, Landroid/graphics/drawable/ScaleDrawable;->mScaleState:Landroid/graphics/drawable/ScaleDrawable$ScaleState;
 
     iget-object v0, v0, Landroid/graphics/drawable/ScaleDrawable$ScaleState;->mDrawable:Landroid/graphics/drawable/Drawable;
@@ -764,7 +684,6 @@
 
     invoke-virtual {v0, v3, v10, v11, v12}, Landroid/graphics/drawable/Drawable;->setBounds(IIII)V
 
-    .line 249
     :cond_2
     return-void
 
@@ -773,14 +692,12 @@
     :cond_3
     move v7, v0
 
-    .line 235
     goto :goto_0
 
     .restart local v2    # "h":I
     :cond_4
     move v6, v0
 
-    .line 240
     goto :goto_1
 .end method
 
@@ -789,24 +706,20 @@
     .param p1, "level"    # I
 
     .prologue
-    .line 222
     iget-object v0, p0, Landroid/graphics/drawable/ScaleDrawable;->mScaleState:Landroid/graphics/drawable/ScaleDrawable$ScaleState;
 
     iget-object v0, v0, Landroid/graphics/drawable/ScaleDrawable$ScaleState;->mDrawable:Landroid/graphics/drawable/Drawable;
 
     invoke-virtual {v0, p1}, Landroid/graphics/drawable/Drawable;->setLevel(I)Z
 
-    .line 223
     invoke-virtual {p0}, Landroid/graphics/drawable/ScaleDrawable;->getBounds()Landroid/graphics/Rect;
 
     move-result-object v0
 
     invoke-virtual {p0, v0}, Landroid/graphics/drawable/ScaleDrawable;->onBoundsChange(Landroid/graphics/Rect;)V
 
-    .line 224
     invoke-virtual {p0}, Landroid/graphics/drawable/ScaleDrawable;->invalidateSelf()V
 
-    .line 225
     const/4 v0, 0x1
 
     return v0
@@ -817,7 +730,6 @@
     .param p1, "state"    # [I
 
     .prologue
-    .line 215
     iget-object v1, p0, Landroid/graphics/drawable/ScaleDrawable;->mScaleState:Landroid/graphics/drawable/ScaleDrawable$ScaleState;
 
     iget-object v1, v1, Landroid/graphics/drawable/ScaleDrawable$ScaleState;->mDrawable:Landroid/graphics/drawable/Drawable;
@@ -826,7 +738,6 @@
 
     move-result v0
 
-    .line 216
     .local v0, "changed":Z
     invoke-virtual {p0}, Landroid/graphics/drawable/ScaleDrawable;->getBounds()Landroid/graphics/Rect;
 
@@ -834,7 +745,6 @@
 
     invoke-virtual {p0, v1}, Landroid/graphics/drawable/ScaleDrawable;->onBoundsChange(Landroid/graphics/Rect;)V
 
-    .line 217
     return v0
 .end method
 
@@ -845,21 +755,18 @@
     .param p3, "when"    # J
 
     .prologue
-    .line 140
     invoke-virtual {p0}, Landroid/graphics/drawable/ScaleDrawable;->getCallback()Landroid/graphics/drawable/Drawable$Callback;
 
     move-result-object v0
 
     if-eqz v0, :cond_0
 
-    .line 141
     invoke-virtual {p0}, Landroid/graphics/drawable/ScaleDrawable;->getCallback()Landroid/graphics/drawable/Drawable$Callback;
 
     move-result-object v0
 
     invoke-interface {v0, p0, p2, p3, p4}, Landroid/graphics/drawable/Drawable$Callback;->scheduleDrawable(Landroid/graphics/drawable/Drawable;Ljava/lang/Runnable;J)V
 
-    .line 143
     :cond_0
     return-void
 .end method
@@ -869,14 +776,12 @@
     .param p1, "alpha"    # I
 
     .prologue
-    .line 180
     iget-object v0, p0, Landroid/graphics/drawable/ScaleDrawable;->mScaleState:Landroid/graphics/drawable/ScaleDrawable$ScaleState;
 
     iget-object v0, v0, Landroid/graphics/drawable/ScaleDrawable$ScaleState;->mDrawable:Landroid/graphics/drawable/Drawable;
 
     invoke-virtual {v0, p1}, Landroid/graphics/drawable/Drawable;->setAlpha(I)V
 
-    .line 181
     return-void
 .end method
 
@@ -885,14 +790,12 @@
     .param p1, "cf"    # Landroid/graphics/ColorFilter;
 
     .prologue
-    .line 190
     iget-object v0, p0, Landroid/graphics/drawable/ScaleDrawable;->mScaleState:Landroid/graphics/drawable/ScaleDrawable$ScaleState;
 
     iget-object v0, v0, Landroid/graphics/drawable/ScaleDrawable$ScaleState;->mDrawable:Landroid/graphics/drawable/Drawable;
 
     invoke-virtual {v0, p1}, Landroid/graphics/drawable/Drawable;->setColorFilter(Landroid/graphics/ColorFilter;)V
 
-    .line 191
     return-void
 .end method
 
@@ -901,14 +804,12 @@
     .param p1, "tint"    # Landroid/content/res/ColorStateList;
 
     .prologue
-    .line 195
     iget-object v0, p0, Landroid/graphics/drawable/ScaleDrawable;->mScaleState:Landroid/graphics/drawable/ScaleDrawable$ScaleState;
 
     iget-object v0, v0, Landroid/graphics/drawable/ScaleDrawable$ScaleState;->mDrawable:Landroid/graphics/drawable/Drawable;
 
     invoke-virtual {v0, p1}, Landroid/graphics/drawable/Drawable;->setTintList(Landroid/content/res/ColorStateList;)V
 
-    .line 196
     return-void
 .end method
 
@@ -917,14 +818,12 @@
     .param p1, "tintMode"    # Landroid/graphics/PorterDuff$Mode;
 
     .prologue
-    .line 200
     iget-object v0, p0, Landroid/graphics/drawable/ScaleDrawable;->mScaleState:Landroid/graphics/drawable/ScaleDrawable$ScaleState;
 
     iget-object v0, v0, Landroid/graphics/drawable/ScaleDrawable$ScaleState;->mDrawable:Landroid/graphics/drawable/Drawable;
 
     invoke-virtual {v0, p1}, Landroid/graphics/drawable/Drawable;->setTintMode(Landroid/graphics/PorterDuff$Mode;)V
 
-    .line 201
     return-void
 .end method
 
@@ -934,14 +833,12 @@
     .param p2, "restart"    # Z
 
     .prologue
-    .line 174
     iget-object v0, p0, Landroid/graphics/drawable/ScaleDrawable;->mScaleState:Landroid/graphics/drawable/ScaleDrawable$ScaleState;
 
     iget-object v0, v0, Landroid/graphics/drawable/ScaleDrawable$ScaleState;->mDrawable:Landroid/graphics/drawable/Drawable;
 
     invoke-virtual {v0, p1, p2}, Landroid/graphics/drawable/Drawable;->setVisible(ZZ)Z
 
-    .line 175
     invoke-super {p0, p1, p2}, Landroid/graphics/drawable/Drawable;->setVisible(ZZ)Z
 
     move-result v0
@@ -955,21 +852,18 @@
     .param p2, "what"    # Ljava/lang/Runnable;
 
     .prologue
-    .line 146
     invoke-virtual {p0}, Landroid/graphics/drawable/ScaleDrawable;->getCallback()Landroid/graphics/drawable/Drawable$Callback;
 
     move-result-object v0
 
     if-eqz v0, :cond_0
 
-    .line 147
     invoke-virtual {p0}, Landroid/graphics/drawable/ScaleDrawable;->getCallback()Landroid/graphics/drawable/Drawable$Callback;
 
     move-result-object v0
 
     invoke-interface {v0, p0, p2}, Landroid/graphics/drawable/Drawable$Callback;->unscheduleDrawable(Landroid/graphics/drawable/Drawable;Ljava/lang/Runnable;)V
 
-    .line 149
     :cond_0
     return-void
 .end method

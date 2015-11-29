@@ -23,7 +23,6 @@
     .locals 0
 
     .prologue
-    .line 2014
     iput-object p1, p0, Lcom/android/server/wallpaper/WallpaperManagerService$4;->this$0:Lcom/android/server/wallpaper/WallpaperManagerService;
 
     invoke-direct {p0}, Landroid/os/Handler;-><init>()V
@@ -40,27 +39,22 @@
     .prologue
     const/4 v0, 0x1
 
-    .line 2018
     iget v4, p1, Landroid/os/Message;->what:I
 
     packed-switch v4, :pswitch_data_0
 
-    .line 2047
     :cond_0
     :goto_0
     return-void
 
-    .line 2021
     :pswitch_0
     iget v2, p1, Landroid/os/Message;->arg1:I
 
-    .line 2022
     .local v2, "userId":I
     const/16 v4, 0x64
 
     if-lt v2, v4, :cond_1
 
-    .line 2023
     const-string v4, "WallpaperManagerService"
 
     new-instance v5, Ljava/lang/StringBuilder;
@@ -83,21 +77,18 @@
 
     invoke-static {v4, v5}, Landroid/util/Slog;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 2024
     iget-object v4, p0, Lcom/android/server/wallpaper/WallpaperManagerService$4;->this$0:Lcom/android/server/wallpaper/WallpaperManagerService;
 
     iget-object v5, v4, Lcom/android/server/wallpaper/WallpaperManagerService;->mLock:Ljava/lang/Object;
 
     monitor-enter v5
 
-    .line 2025
     :try_start_0
     iget-object v4, p0, Lcom/android/server/wallpaper/WallpaperManagerService$4;->this$0:Lcom/android/server/wallpaper/WallpaperManagerService;
 
     # invokes: Lcom/android/server/wallpaper/WallpaperManagerService;->loadSettingsLocked(I)V
     invoke-static {v4, v2}, Lcom/android/server/wallpaper/WallpaperManagerService;->access$700(Lcom/android/server/wallpaper/WallpaperManagerService;I)V
 
-    .line 2026
     monitor-exit v5
 
     goto :goto_0
@@ -111,7 +102,6 @@
 
     throw v4
 
-    .line 2028
     :cond_1
     const-string v4, "WallpaperManagerService"
 
@@ -121,18 +111,15 @@
 
     goto :goto_0
 
-    .line 2033
     .end local v2    # "userId":I
     :pswitch_1
     iget v1, p1, Landroid/os/Message;->arg1:I
 
-    .line 2034
     .local v1, "personaId":I
     iget v4, p1, Landroid/os/Message;->arg2:I
 
     if-ne v4, v0, :cond_3
 
-    .line 2035
     .local v0, "forced":Z
     :goto_1
     const-string v4, "WallpaperManagerService"
@@ -198,7 +185,6 @@
 
     invoke-static {v4, v5}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 2037
     if-nez v0, :cond_2
 
     iget-object v4, p0, Lcom/android/server/wallpaper/WallpaperManagerService$4;->this$0:Lcom/android/server/wallpaper/WallpaperManagerService;
@@ -220,7 +206,6 @@
 
     if-eq v4, v5, :cond_0
 
-    .line 2038
     :cond_2
     const-string v4, "WallpaperManagerService"
 
@@ -228,7 +213,6 @@
 
     invoke-static {v4, v5}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 2039
     iget-object v4, p0, Lcom/android/server/wallpaper/WallpaperManagerService$4;->this$0:Lcom/android/server/wallpaper/WallpaperManagerService;
 
     iget-object v5, p0, Lcom/android/server/wallpaper/WallpaperManagerService$4;->this$0:Lcom/android/server/wallpaper/WallpaperManagerService;
@@ -238,7 +222,6 @@
     # setter for: Lcom/android/server/wallpaper/WallpaperManagerService;->mCurrentPersonaId:I
     invoke-static {v4, v5}, Lcom/android/server/wallpaper/WallpaperManagerService;->access$802(Lcom/android/server/wallpaper/WallpaperManagerService;I)I
 
-    .line 2040
     iget-object v4, p0, Lcom/android/server/wallpaper/WallpaperManagerService$4;->this$0:Lcom/android/server/wallpaper/WallpaperManagerService;
 
     iget-object v4, v4, Lcom/android/server/wallpaper/WallpaperManagerService;->mWallpaperMap:Landroid/util/SparseArray;
@@ -249,7 +232,6 @@
 
     check-cast v3, Lcom/android/server/wallpaper/WallpaperManagerService$WallpaperData;
 
-    .line 2041
     .local v3, "wallpaper":Lcom/android/server/wallpaper/WallpaperManagerService$WallpaperData;
     iget-object v4, p0, Lcom/android/server/wallpaper/WallpaperManagerService$4;->this$0:Lcom/android/server/wallpaper/WallpaperManagerService;
 
@@ -259,7 +241,6 @@
 
     goto/16 :goto_0
 
-    .line 2034
     .end local v0    # "forced":Z
     .end local v3    # "wallpaper":Lcom/android/server/wallpaper/WallpaperManagerService$WallpaperData;
     :cond_3
@@ -267,7 +248,6 @@
 
     goto :goto_1
 
-    .line 2018
     :pswitch_data_0
     .packed-switch 0x3e9
         :pswitch_0

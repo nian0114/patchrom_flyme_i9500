@@ -27,7 +27,6 @@
     .locals 0
 
     .prologue
-    .line 17607
     iput-object p1, p0, Lcom/android/server/pm/PackageManagerService$19;->this$0:Lcom/android/server/pm/PackageManagerService;
 
     iput-object p2, p0, Lcom/android/server/pm/PackageManagerService$19;->val$packageName:Ljava/lang/String;
@@ -54,7 +53,6 @@
     .end annotation
 
     .prologue
-    .line 17616
     const-string v2, "PackageManager"
 
     new-instance v3, Ljava/lang/StringBuilder;
@@ -81,12 +79,10 @@
 
     invoke-static {v2, v3}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 17622
     sget-object v3, Lcom/android/server/pm/PackageManagerService;->mPackages:Ljava/util/HashMap;
 
     monitor-enter v3
 
-    .line 17623
     :try_start_0
     sget-object v2, Lcom/android/server/pm/PackageManagerService;->mPackages:Ljava/util/HashMap;
 
@@ -98,31 +94,25 @@
 
     check-cast v0, Landroid/content/pm/PackageParser$Package;
 
-    .line 17624
     .local v0, "pkg":Landroid/content/pm/PackageParser$Package;
     if-eqz v0, :cond_0
 
-    .line 17625
     const/4 v2, 0x0
 
     iput-boolean v2, v0, Landroid/content/pm/PackageParser$Package;->mOperationPending:Z
 
-    .line 17627
     :cond_0
     monitor-exit v3
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 17629
     invoke-static {p2}, Landroid/content/pm/PackageManager;->installStatusToPublicStatus(I)I
 
     move-result v1
 
-    .line 17630
     .local v1, "status":I
     sparse-switch v1, :sswitch_data_0
 
-    .line 17638
     iget-object v2, p0, Lcom/android/server/pm/PackageManagerService$19;->val$observer:Landroid/content/pm/IPackageMoveObserver;
 
     iget-object v3, p0, Lcom/android/server/pm/PackageManagerService$19;->val$packageName:Ljava/lang/String;
@@ -131,11 +121,9 @@
 
     invoke-interface {v2, v3, v4}, Landroid/content/pm/IPackageMoveObserver;->packageMoved(Ljava/lang/String;I)V
 
-    .line 17641
     :goto_0
     return-void
 
-    .line 17627
     .end local v0    # "pkg":Landroid/content/pm/PackageParser$Package;
     .end local v1    # "status":I
     :catchall_0
@@ -148,7 +136,6 @@
 
     throw v2
 
-    .line 17632
     .restart local v0    # "pkg":Landroid/content/pm/PackageParser$Package;
     .restart local v1    # "status":I
     :sswitch_0
@@ -162,7 +149,6 @@
 
     goto :goto_0
 
-    .line 17635
     :sswitch_1
     iget-object v2, p0, Lcom/android/server/pm/PackageManagerService$19;->val$observer:Landroid/content/pm/IPackageMoveObserver;
 
@@ -174,7 +160,6 @@
 
     goto :goto_0
 
-    .line 17630
     :sswitch_data_0
     .sparse-switch
         0x0 -> :sswitch_0
@@ -192,7 +177,6 @@
     .end annotation
 
     .prologue
-    .line 17610
     new-instance v0, Ljava/lang/IllegalStateException;
 
     invoke-direct {v0}, Ljava/lang/IllegalStateException;-><init>()V

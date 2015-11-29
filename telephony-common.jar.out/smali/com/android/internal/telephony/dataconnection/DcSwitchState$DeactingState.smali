@@ -23,7 +23,6 @@
     .locals 0
 
     .prologue
-    .line 329
     iput-object p1, p0, Lcom/android/internal/telephony/dataconnection/DcSwitchState$DeactingState;->this$0:Lcom/android/internal/telephony/dataconnection/DcSwitchState;
 
     invoke-direct {p0}, Lcom/android/internal/util/State;-><init>()V
@@ -37,7 +36,6 @@
     .param p2, "x1"    # Lcom/android/internal/telephony/dataconnection/DcSwitchState$1;
 
     .prologue
-    .line 329
     invoke-direct {p0, p1}, Lcom/android/internal/telephony/dataconnection/DcSwitchState$DeactingState;-><init>(Lcom/android/internal/telephony/dataconnection/DcSwitchState;)V
 
     return-void
@@ -50,27 +48,22 @@
     .param p1, "msg"    # Landroid/os/Message;
 
     .prologue
-    .line 334
     iget v2, p1, Landroid/os/Message;->what:I
 
     sparse-switch v2, :sswitch_data_0
 
-    .line 387
     const/4 v0, 0x0
 
-    .line 390
     .local v0, "retVal":Z
     :goto_0
     return v0
 
-    .line 337
     .end local v0    # "retVal":Z
     :sswitch_0
     iget-object v1, p1, Landroid/os/Message;->obj:Ljava/lang/Object;
 
     check-cast v1, Ljava/lang/String;
 
-    .line 339
     .local v1, "type":Ljava/lang/String;
     iget-object v2, p0, Lcom/android/internal/telephony/dataconnection/DcSwitchState$DeactingState;->this$0:Lcom/android/internal/telephony/dataconnection/DcSwitchState;
 
@@ -112,7 +105,6 @@
 
     invoke-virtual {v2, v3}, Lcom/android/internal/telephony/dataconnection/DcSwitchState;->log(Ljava/lang/String;)V
 
-    .line 342
     iget-object v2, p0, Lcom/android/internal/telephony/dataconnection/DcSwitchState$DeactingState;->this$0:Lcom/android/internal/telephony/dataconnection/DcSwitchState;
 
     iget-object v3, p0, Lcom/android/internal/telephony/dataconnection/DcSwitchState$DeactingState;->this$0:Lcom/android/internal/telephony/dataconnection/DcSwitchState;
@@ -126,14 +118,12 @@
     # invokes: Lcom/android/internal/telephony/dataconnection/DcSwitchState;->deferMessage(Landroid/os/Message;)V
     invoke-static {v2, v3}, Lcom/android/internal/telephony/dataconnection/DcSwitchState;->access$1800(Lcom/android/internal/telephony/dataconnection/DcSwitchState;Landroid/os/Message;)V
 
-    .line 343
     iget v2, p1, Landroid/os/Message;->what:I
 
     const v3, 0x44000
 
     if-ne v2, v3, :cond_0
 
-    .line 344
     iget-object v2, p0, Lcom/android/internal/telephony/dataconnection/DcSwitchState$DeactingState;->this$0:Lcom/android/internal/telephony/dataconnection/DcSwitchState;
 
     # getter for: Lcom/android/internal/telephony/dataconnection/DcSwitchState;->mAc:Lcom/android/internal/util/AsyncChannel;
@@ -147,15 +137,12 @@
 
     invoke-virtual {v2, p1, v3, v4}, Lcom/android/internal/util/AsyncChannel;->replyToMessage(Landroid/os/Message;II)V
 
-    .line 347
     :cond_0
     const/4 v0, 0x1
 
-    .line 348
     .restart local v0    # "retVal":Z
     goto :goto_0
 
-    .line 351
     .end local v0    # "retVal":Z
     .end local v1    # "type":Ljava/lang/String;
     :sswitch_1
@@ -163,7 +150,6 @@
 
     check-cast v1, Ljava/lang/String;
 
-    .line 353
     .restart local v1    # "type":Ljava/lang/String;
     iget-object v2, p0, Lcom/android/internal/telephony/dataconnection/DcSwitchState$DeactingState;->this$0:Lcom/android/internal/telephony/dataconnection/DcSwitchState;
 
@@ -187,7 +173,6 @@
 
     invoke-virtual {v2, v3}, Lcom/android/internal/telephony/dataconnection/DcSwitchState;->log(Ljava/lang/String;)V
 
-    .line 355
     iget-object v2, p0, Lcom/android/internal/telephony/dataconnection/DcSwitchState$DeactingState;->this$0:Lcom/android/internal/telephony/dataconnection/DcSwitchState;
 
     # getter for: Lcom/android/internal/telephony/dataconnection/DcSwitchState;->mAc:Lcom/android/internal/util/AsyncChannel;
@@ -201,14 +186,11 @@
 
     invoke-virtual {v2, p1, v3, v4}, Lcom/android/internal/util/AsyncChannel;->replyToMessage(Landroid/os/Message;II)V
 
-    .line 357
     const/4 v0, 0x1
 
-    .line 358
     .restart local v0    # "retVal":Z
     goto :goto_0
 
-    .line 362
     .end local v0    # "retVal":Z
     .end local v1    # "type":Ljava/lang/String;
     :sswitch_2
@@ -218,7 +200,6 @@
 
     invoke-virtual {v2, v3}, Lcom/android/internal/telephony/dataconnection/DcSwitchState;->log(Ljava/lang/String;)V
 
-    .line 364
     iget-object v2, p0, Lcom/android/internal/telephony/dataconnection/DcSwitchState$DeactingState;->this$0:Lcom/android/internal/telephony/dataconnection/DcSwitchState;
 
     iget-object v3, p0, Lcom/android/internal/telephony/dataconnection/DcSwitchState$DeactingState;->this$0:Lcom/android/internal/telephony/dataconnection/DcSwitchState;
@@ -231,14 +212,11 @@
     # invokes: Lcom/android/internal/telephony/dataconnection/DcSwitchState;->transitionTo(Lcom/android/internal/util/IState;)V
     invoke-static {v2, v3}, Lcom/android/internal/telephony/dataconnection/DcSwitchState;->access$2000(Lcom/android/internal/telephony/dataconnection/DcSwitchState;Lcom/android/internal/util/IState;)V
 
-    .line 365
     const/4 v0, 0x1
 
-    .line 366
     .restart local v0    # "retVal":Z
     goto/16 :goto_0
 
-    .line 370
     .end local v0    # "retVal":Z
     :sswitch_3
     iget-object v2, p0, Lcom/android/internal/telephony/dataconnection/DcSwitchState$DeactingState;->this$0:Lcom/android/internal/telephony/dataconnection/DcSwitchState;
@@ -247,14 +225,11 @@
 
     invoke-virtual {v2, v3}, Lcom/android/internal/telephony/dataconnection/DcSwitchState;->log(Ljava/lang/String;)V
 
-    .line 372
     const/4 v0, 0x1
 
-    .line 373
     .restart local v0    # "retVal":Z
     goto/16 :goto_0
 
-    .line 377
     .end local v0    # "retVal":Z
     :sswitch_4
     iget-object v2, p0, Lcom/android/internal/telephony/dataconnection/DcSwitchState$DeactingState;->this$0:Lcom/android/internal/telephony/dataconnection/DcSwitchState;
@@ -263,14 +238,11 @@
 
     invoke-virtual {v2, v3}, Lcom/android/internal/telephony/dataconnection/DcSwitchState;->log(Ljava/lang/String;)V
 
-    .line 379
     const/4 v0, 0x1
 
-    .line 380
     .restart local v0    # "retVal":Z
     goto/16 :goto_0
 
-    .line 334
     nop
 
     :sswitch_data_0

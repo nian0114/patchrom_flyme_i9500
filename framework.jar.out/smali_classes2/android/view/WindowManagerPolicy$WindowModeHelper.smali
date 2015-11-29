@@ -19,7 +19,6 @@
     .locals 0
 
     .prologue
-    .line 278
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -30,7 +29,6 @@
     .param p0, "params"    # I
 
     .prologue
-    .line 280
     const/high16 v0, -0x1000000
 
     and-int/2addr v0, p0
@@ -43,7 +41,6 @@
     .param p0, "params"    # I
 
     .prologue
-    .line 283
     const v0, 0xffffff
 
     and-int/2addr v0, p0
@@ -57,12 +54,10 @@
     .param p1, "toWindowMode"    # I
 
     .prologue
-    .line 292
     const/high16 v0, 0x4c0000
 
     and-int/2addr p1, v0
 
-    .line 293
     const v0, -0x4c0001
 
     and-int/2addr v0, p0
@@ -77,7 +72,6 @@
     .param p0, "params"    # I
 
     .prologue
-    .line 286
     and-int/lit8 v0, p0, 0xf
 
     return v0
@@ -88,7 +82,6 @@
     .param p0, "params"    # I
 
     .prologue
-    .line 289
     const/high16 v0, 0x30000
 
     and-int/2addr v0, p0

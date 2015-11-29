@@ -30,7 +30,6 @@
     .locals 1
 
     .prologue
-    .line 81
     new-instance v0, Lcom/absolute/android/persistence/MethodReturnValue$1;
 
     invoke-direct {v0}, Lcom/absolute/android/persistence/MethodReturnValue$1;-><init>()V
@@ -44,7 +43,6 @@
     .locals 0
 
     .prologue
-    .line 106
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -55,22 +53,18 @@
     .param p1, "source"    # Landroid/os/Parcel;
 
     .prologue
-    .line 92
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 94
     invoke-virtual {p1}, Landroid/os/Parcel;->readString()Ljava/lang/String;
 
     move-result-object v0
 
     iput-object v0, p0, Lcom/absolute/android/persistence/MethodReturnValue;->m_apkOrJarPath:Ljava/lang/String;
 
-    .line 96
     iget-object v0, p0, Lcom/absolute/android/persistence/MethodReturnValue;->m_apkOrJarPath:Ljava/lang/String;
 
     if-nez v0, :cond_0
 
-    .line 97
     const/4 v0, 0x0
 
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->readValue(Ljava/lang/ClassLoader;)Ljava/lang/Object;
@@ -79,10 +73,8 @@
 
     iput-object v0, p0, Lcom/absolute/android/persistence/MethodReturnValue;->m_returnValue:Ljava/lang/Object;
 
-    .line 102
     return-void
 
-    .line 100
     :cond_0
     new-instance v0, Ljava/lang/IllegalArgumentException;
 
@@ -99,7 +91,6 @@
     .param p2, "x1"    # Lcom/absolute/android/persistence/MethodReturnValue$1;
 
     .prologue
-    .line 18
     invoke-direct {p0, p1}, Lcom/absolute/android/persistence/MethodReturnValue;-><init>(Landroid/os/Parcel;)V
 
     return-void
@@ -111,16 +102,12 @@
     .param p2, "apkOrJarPath"    # Ljava/lang/String;
 
     .prologue
-    .line 34
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 35
     iput-object p1, p0, Lcom/absolute/android/persistence/MethodReturnValue;->m_returnValue:Ljava/lang/Object;
 
-    .line 36
     iput-object p2, p0, Lcom/absolute/android/persistence/MethodReturnValue;->m_apkOrJarPath:Ljava/lang/String;
 
-    .line 37
     return-void
 .end method
 
@@ -130,7 +117,6 @@
     .locals 1
 
     .prologue
-    .line 66
     const/4 v0, 0x0
 
     return v0
@@ -140,7 +126,6 @@
     .locals 1
 
     .prologue
-    .line 56
     iget-object v0, p0, Lcom/absolute/android/persistence/MethodReturnValue;->m_apkOrJarPath:Ljava/lang/String;
 
     return-object v0
@@ -150,7 +135,6 @@
     .locals 1
 
     .prologue
-    .line 45
     iget-object v0, p0, Lcom/absolute/android/persistence/MethodReturnValue;->m_returnValue:Ljava/lang/Object;
 
     return-object v0
@@ -162,16 +146,13 @@
     .param p2, "flags"    # I
 
     .prologue
-    .line 74
     iget-object v0, p0, Lcom/absolute/android/persistence/MethodReturnValue;->m_apkOrJarPath:Ljava/lang/String;
 
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeString(Ljava/lang/String;)V
 
-    .line 75
     iget-object v0, p0, Lcom/absolute/android/persistence/MethodReturnValue;->m_returnValue:Ljava/lang/Object;
 
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeValue(Ljava/lang/Object;)V
 
-    .line 76
     return-void
 .end method

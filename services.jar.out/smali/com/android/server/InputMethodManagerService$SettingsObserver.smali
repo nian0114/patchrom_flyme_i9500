@@ -30,25 +30,20 @@
 
     const/4 v2, 0x0
 
-    .line 588
     iput-object p1, p0, Lcom/android/server/InputMethodManagerService$SettingsObserver;->this$0:Lcom/android/server/InputMethodManagerService;
 
-    .line 589
     invoke-direct {p0, p2}, Landroid/database/ContentObserver;-><init>(Landroid/os/Handler;)V
 
-    .line 586
     const-string v1, ""
 
     iput-object v1, p0, Lcom/android/server/InputMethodManagerService$SettingsObserver;->mLastEnabled:Ljava/lang/String;
 
-    .line 590
     iget-object v1, p1, Lcom/android/server/InputMethodManagerService;->mContext:Landroid/content/Context;
 
     invoke-virtual {v1}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
 
     move-result-object v0
 
-    .line 593
     .local v0, "resolver":Landroid/content/ContentResolver;
     const-string v1, "default_input_method"
 
@@ -58,7 +53,6 @@
 
     invoke-virtual {v0, v1, v2, p0, v3}, Landroid/content/ContentResolver;->registerContentObserver(Landroid/net/Uri;ZLandroid/database/ContentObserver;I)V
 
-    .line 595
     const-string v1, "enabled_input_methods"
 
     invoke-static {v1}, Landroid/provider/Settings$Secure;->getUriFor(Ljava/lang/String;)Landroid/net/Uri;
@@ -67,8 +61,7 @@
 
     invoke-virtual {v0, v1, v2, p0, v3}, Landroid/content/ContentResolver;->registerContentObserver(Landroid/net/Uri;ZLandroid/database/ContentObserver;I)V
 
-    .line 597
-    const-string/jumbo v1, "selected_input_method_subtype"
+    const-string v1, "selected_input_method_subtype"
 
     invoke-static {v1}, Landroid/provider/Settings$Secure;->getUriFor(Ljava/lang/String;)Landroid/net/Uri;
 
@@ -76,8 +69,7 @@
 
     invoke-virtual {v0, v1, v2, p0, v3}, Landroid/content/ContentResolver;->registerContentObserver(Landroid/net/Uri;ZLandroid/database/ContentObserver;I)V
 
-    .line 599
-    const-string/jumbo v1, "show_ime_with_hard_keyboard"
+    const-string v1, "show_ime_with_hard_keyboard"
 
     invoke-static {v1}, Landroid/provider/Settings$Secure;->getUriFor(Ljava/lang/String;)Landroid/net/Uri;
 
@@ -85,7 +77,6 @@
 
     invoke-virtual {v0, v1, v2, p0}, Landroid/content/ContentResolver;->registerContentObserver(Landroid/net/Uri;ZLandroid/database/ContentObserver;)V
 
-    .line 602
     return-void
 .end method
 
@@ -97,14 +88,12 @@
     .param p2, "uri"    # Landroid/net/Uri;
 
     .prologue
-    .line 605
-    const-string/jumbo v3, "show_ime_with_hard_keyboard"
+    const-string v3, "show_ime_with_hard_keyboard"
 
     invoke-static {v3}, Landroid/provider/Settings$Secure;->getUriFor(Ljava/lang/String;)Landroid/net/Uri;
 
     move-result-object v2
 
-    .line 607
     .local v2, "showImeUri":Landroid/net/Uri;
     iget-object v3, p0, Lcom/android/server/InputMethodManagerService$SettingsObserver;->this$0:Lcom/android/server/InputMethodManagerService;
 
@@ -112,7 +101,6 @@
 
     monitor-enter v4
 
-    .line 608
     :try_start_0
     invoke-virtual {v2, p2}, Landroid/net/Uri;->equals(Ljava/lang/Object;)Z
 
@@ -120,23 +108,18 @@
 
     if-eqz v3, :cond_0
 
-    .line 609
     iget-object v3, p0, Lcom/android/server/InputMethodManagerService$SettingsObserver;->this$0:Lcom/android/server/InputMethodManagerService;
 
     invoke-virtual {v3}, Lcom/android/server/InputMethodManagerService;->updateKeyboardFromSettingsLocked()V
 
-    .line 619
     :goto_0
     monitor-exit v4
 
-    .line 620
     return-void
 
-    .line 611
     :cond_0
     const/4 v0, 0x0
 
-    .line 612
     .local v0, "enabledChanged":Z
     iget-object v3, p0, Lcom/android/server/InputMethodManagerService$SettingsObserver;->this$0:Lcom/android/server/InputMethodManagerService;
 
@@ -146,7 +129,6 @@
 
     move-result-object v1
 
-    .line 613
     .local v1, "newEnabled":Ljava/lang/String;
     iget-object v3, p0, Lcom/android/server/InputMethodManagerService$SettingsObserver;->mLastEnabled:Ljava/lang/String;
 
@@ -156,13 +138,10 @@
 
     if-nez v3, :cond_1
 
-    .line 614
     iput-object v1, p0, Lcom/android/server/InputMethodManagerService$SettingsObserver;->mLastEnabled:Ljava/lang/String;
 
-    .line 615
     const/4 v0, 0x1
 
-    .line 617
     :cond_1
     iget-object v3, p0, Lcom/android/server/InputMethodManagerService$SettingsObserver;->this$0:Lcom/android/server/InputMethodManagerService;
 
@@ -170,7 +149,6 @@
 
     goto :goto_0
 
-    .line 619
     .end local v0    # "enabledChanged":Z
     .end local v1    # "newEnabled":Ljava/lang/String;
     :catchall_0

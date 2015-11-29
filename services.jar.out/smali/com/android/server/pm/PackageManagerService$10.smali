@@ -27,7 +27,6 @@
     .locals 0
 
     .prologue
-    .line 12137
     iput-object p1, p0, Lcom/android/server/pm/PackageManagerService$10;->this$0:Lcom/android/server/pm/PackageManagerService;
 
     iput p2, p0, Lcom/android/server/pm/PackageManagerService$10;->val$verificationId:I
@@ -47,7 +46,6 @@
     .param p2, "intent"    # Landroid/content/Intent;
 
     .prologue
-    .line 12140
     iget-object v1, p0, Lcom/android/server/pm/PackageManagerService$10;->this$0:Lcom/android/server/pm/PackageManagerService;
 
     iget-object v1, v1, Lcom/android/server/pm/PackageManagerService;->mHandler:Lcom/android/server/pm/PackageManagerService$PackageHandler;
@@ -58,18 +56,15 @@
 
     move-result-object v0
 
-    .line 12141
     .local v0, "msg":Landroid/os/Message;
     iget v1, p0, Lcom/android/server/pm/PackageManagerService$10;->val$verificationId:I
 
     iput v1, v0, Landroid/os/Message;->arg1:I
 
-    .line 12142
     iget-object v1, p0, Lcom/android/server/pm/PackageManagerService$10;->val$response:Lcom/android/server/pm/PackageVerificationResponse;
 
     iput-object v1, v0, Landroid/os/Message;->obj:Ljava/lang/Object;
 
-    .line 12143
     iget-object v1, p0, Lcom/android/server/pm/PackageManagerService$10;->this$0:Lcom/android/server/pm/PackageManagerService;
 
     iget-object v1, v1, Lcom/android/server/pm/PackageManagerService;->mHandler:Lcom/android/server/pm/PackageManagerService$PackageHandler;
@@ -83,6 +78,5 @@
 
     invoke-virtual {v1, v0, v2, v3}, Lcom/android/server/pm/PackageManagerService$PackageHandler;->sendMessageDelayed(Landroid/os/Message;J)Z
 
-    .line 12144
     return-void
 .end method

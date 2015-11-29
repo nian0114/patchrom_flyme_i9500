@@ -41,45 +41,32 @@
     .prologue
     const/4 v1, 0x0
 
-    .line 50
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 39
     const/4 v0, 0x1
 
     iput v0, p0, Lcom/android/server/cover/CoverVerifier;->mDefaultCoverType:I
 
-    .line 40
     iput v1, p0, Lcom/android/server/cover/CoverVerifier;->mDefaultCoverColor:I
 
-    .line 41
     iput v1, p0, Lcom/android/server/cover/CoverVerifier;->mDefaultCoverModel:I
 
-    .line 42
     iput v1, p0, Lcom/android/server/cover/CoverVerifier;->mDefaultSViewCoverWidth:I
 
-    .line 43
     iput v1, p0, Lcom/android/server/cover/CoverVerifier;->mDefaultSViewCoverHeight:I
 
-    .line 44
     iput v1, p0, Lcom/android/server/cover/CoverVerifier;->mDefaultMiniSViewCoverWidth:I
 
-    .line 45
     iput v1, p0, Lcom/android/server/cover/CoverVerifier;->mDefaultMiniSViewCoverHeight:I
 
-    .line 47
     iput-boolean v1, p0, Lcom/android/server/cover/CoverVerifier;->mIsCoverVerified:Z
 
-    .line 48
     iput-boolean v1, p0, Lcom/android/server/cover/CoverVerifier;->mIsCoverAttached:Z
 
-    .line 51
     iput-object p1, p0, Lcom/android/server/cover/CoverVerifier;->mContext:Landroid/content/Context;
 
-    .line 52
     invoke-direct {p0}, Lcom/android/server/cover/CoverVerifier;->initializeDefaultCoverState()V
 
-    .line 53
     return-void
 .end method
 
@@ -93,7 +80,6 @@
 
     const/4 v2, 0x0
 
-    .line 56
     iget-object v3, p0, Lcom/android/server/cover/CoverVerifier;->mContext:Landroid/content/Context;
 
     invoke-static {v3}, Lcom/android/server/cover/Feature;->getInstance(Landroid/content/Context;)Lcom/android/server/cover/Feature;
@@ -106,7 +92,6 @@
 
     if-eqz v3, :cond_3
 
-    .line 57
     iget-object v2, p0, Lcom/android/server/cover/CoverVerifier;->mContext:Landroid/content/Context;
 
     invoke-static {v2}, Lcom/android/server/cover/Feature;->getInstance(Landroid/content/Context;)Lcom/android/server/cover/Feature;
@@ -119,12 +104,10 @@
 
     if-eqz v2, :cond_1
 
-    .line 77
     :cond_0
     :goto_0
     return v0
 
-    .line 59
     :cond_1
     iget-object v0, p0, Lcom/android/server/cover/CoverVerifier;->mContext:Landroid/content/Context;
 
@@ -138,7 +121,6 @@
 
     if-eqz v0, :cond_2
 
-    .line 60
     const/4 v0, 0x6
 
     goto :goto_0
@@ -146,10 +128,8 @@
     :cond_2
     move v0, v1
 
-    .line 62
     goto :goto_0
 
-    .line 65
     :cond_3
     iget-object v3, p0, Lcom/android/server/cover/CoverVerifier;->mContext:Landroid/content/Context;
 
@@ -163,7 +143,6 @@
 
     if-eqz v3, :cond_4
 
-    .line 66
     iget-object v0, p0, Lcom/android/server/cover/CoverVerifier;->mContext:Landroid/content/Context;
 
     invoke-static {v0}, Lcom/android/server/cover/Feature;->getInstance(Landroid/content/Context;)Lcom/android/server/cover/Feature;
@@ -178,10 +157,8 @@
 
     move v0, v2
 
-    .line 67
     goto :goto_0
 
-    .line 70
     :cond_4
     iget-object v3, p0, Lcom/android/server/cover/CoverVerifier;->mContext:Landroid/content/Context;
 
@@ -195,7 +172,6 @@
 
     if-nez v3, :cond_0
 
-    .line 72
     iget-object v0, p0, Lcom/android/server/cover/CoverVerifier;->mContext:Landroid/content/Context;
 
     invoke-static {v0}, Lcom/android/server/cover/Feature;->getInstance(Landroid/content/Context;)Lcom/android/server/cover/Feature;
@@ -210,13 +186,11 @@
 
     move v0, v2
 
-    .line 73
     goto :goto_0
 
     :cond_5
     move v0, v1
 
-    .line 77
     goto :goto_0
 .end method
 
@@ -225,37 +199,29 @@
     .param p1, "coverType"    # I
 
     .prologue
-    .line 98
     packed-switch p1, :pswitch_data_0
 
-    .line 107
     :pswitch_0
     const/4 v0, 0x0
 
-    .line 109
     .local v0, "supportSViewCoverHeight":I
     :goto_0
     return v0
 
-    .line 101
     .end local v0    # "supportSViewCoverHeight":I
     :pswitch_1
     iget v0, p0, Lcom/android/server/cover/CoverVerifier;->mDefaultSViewCoverHeight:I
 
-    .line 102
     .restart local v0    # "supportSViewCoverHeight":I
     goto :goto_0
 
-    .line 104
     .end local v0    # "supportSViewCoverHeight":I
     :pswitch_2
     iget v0, p0, Lcom/android/server/cover/CoverVerifier;->mDefaultMiniSViewCoverHeight:I
 
-    .line 105
     .restart local v0    # "supportSViewCoverHeight":I
     goto :goto_0
 
-    .line 98
     nop
 
     :pswitch_data_0
@@ -274,37 +240,29 @@
     .param p1, "coverType"    # I
 
     .prologue
-    .line 82
     packed-switch p1, :pswitch_data_0
 
-    .line 91
     :pswitch_0
     const/4 v0, 0x0
 
-    .line 93
     .local v0, "supportSViewCoverWidth":I
     :goto_0
     return v0
 
-    .line 85
     .end local v0    # "supportSViewCoverWidth":I
     :pswitch_1
     iget v0, p0, Lcom/android/server/cover/CoverVerifier;->mDefaultSViewCoverWidth:I
 
-    .line 86
     .restart local v0    # "supportSViewCoverWidth":I
     goto :goto_0
 
-    .line 88
     .end local v0    # "supportSViewCoverWidth":I
     :pswitch_2
     iget v0, p0, Lcom/android/server/cover/CoverVerifier;->mDefaultMiniSViewCoverWidth:I
 
-    .line 89
     .restart local v0    # "supportSViewCoverWidth":I
     goto :goto_0
 
-    .line 82
     nop
 
     :pswitch_data_0
@@ -322,18 +280,15 @@
     .locals 2
 
     .prologue
-    .line 113
     iget-object v1, p0, Lcom/android/server/cover/CoverVerifier;->mContext:Landroid/content/Context;
 
     invoke-virtual {v1}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
 
     move-result-object v0
 
-    .line 114
     .local v0, "resources":Landroid/content/res/Resources;
     if-eqz v0, :cond_0
 
-    .line 115
     const v1, 0x105011a
 
     invoke-virtual {v0, v1}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
@@ -342,7 +297,6 @@
 
     iput v1, p0, Lcom/android/server/cover/CoverVerifier;->mDefaultSViewCoverWidth:I
 
-    .line 117
     const v1, 0x105011b
 
     invoke-virtual {v0, v1}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
@@ -351,7 +305,6 @@
 
     iput v1, p0, Lcom/android/server/cover/CoverVerifier;->mDefaultSViewCoverHeight:I
 
-    .line 119
     const v1, 0x105011c
 
     invoke-virtual {v0, v1}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
@@ -360,7 +313,6 @@
 
     iput v1, p0, Lcom/android/server/cover/CoverVerifier;->mDefaultMiniSViewCoverWidth:I
 
-    .line 121
     const v1, 0x105011d
 
     invoke-virtual {v0, v1}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
@@ -369,7 +321,6 @@
 
     iput v1, p0, Lcom/android/server/cover/CoverVerifier;->mDefaultMiniSViewCoverHeight:I
 
-    .line 124
     :cond_0
     invoke-direct {p0}, Lcom/android/server/cover/CoverVerifier;->getDefaultTypeOfCover()I
 
@@ -377,7 +328,6 @@
 
     iput v1, p0, Lcom/android/server/cover/CoverVerifier;->mDefaultCoverType:I
 
-    .line 125
     return-void
 .end method
 
@@ -385,14 +335,12 @@
     .locals 2
 
     .prologue
-    .line 268
-    const-string/jumbo v1, "ro.factory.factory_binary"
+    const-string v1, "ro.factory.factory_binary"
 
     invoke-static {v1}, Landroid/os/SystemProperties;->get(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 
-    .line 269
     .local v0, "strFactoryProp":Ljava/lang/String;
     const-string v1, "factory"
 
@@ -412,12 +360,10 @@
     .param p3, "args"    # [Ljava/lang/String;
 
     .prologue
-    .line 273
     const-string v0, " Current CoverVerifier state:"
 
     invoke-virtual {p2, v0}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
-    .line 274
     const-string v0, "  mIsCoverVerified="
 
     invoke-virtual {p2, v0}, Ljava/io/PrintWriter;->print(Ljava/lang/String;)V
@@ -426,7 +372,6 @@
 
     invoke-virtual {p2, v0}, Ljava/io/PrintWriter;->print(Z)V
 
-    .line 275
     const-string v0, "  mIsCoverAttached="
 
     invoke-virtual {p2, v0}, Ljava/io/PrintWriter;->print(Ljava/lang/String;)V
@@ -435,7 +380,6 @@
 
     invoke-virtual {p2, v0}, Ljava/io/PrintWriter;->println(Z)V
 
-    .line 276
     const-string v0, "  mDefaultCoverType="
 
     invoke-virtual {p2, v0}, Ljava/io/PrintWriter;->print(Ljava/lang/String;)V
@@ -444,7 +388,6 @@
 
     invoke-virtual {p2, v0}, Ljava/io/PrintWriter;->print(I)V
 
-    .line 277
     const-string v0, "  mDefaultCoverColor="
 
     invoke-virtual {p2, v0}, Ljava/io/PrintWriter;->print(Ljava/lang/String;)V
@@ -453,7 +396,6 @@
 
     invoke-virtual {p2, v0}, Ljava/io/PrintWriter;->println(I)V
 
-    .line 278
     const-string v0, "  mDefaultSViewCoverWidth="
 
     invoke-virtual {p2, v0}, Ljava/io/PrintWriter;->print(Ljava/lang/String;)V
@@ -462,7 +404,6 @@
 
     invoke-virtual {p2, v0}, Ljava/io/PrintWriter;->print(I)V
 
-    .line 279
     const-string v0, "  mDefaultSViewCoverHeight="
 
     invoke-virtual {p2, v0}, Ljava/io/PrintWriter;->print(Ljava/lang/String;)V
@@ -471,7 +412,6 @@
 
     invoke-virtual {p2, v0}, Ljava/io/PrintWriter;->print(I)V
 
-    .line 280
     const-string v0, "  mDefaultMiniSViewCoverWidth="
 
     invoke-virtual {p2, v0}, Ljava/io/PrintWriter;->print(Ljava/lang/String;)V
@@ -480,7 +420,6 @@
 
     invoke-virtual {p2, v0}, Ljava/io/PrintWriter;->print(I)V
 
-    .line 281
     const-string v0, "  mDefaultMiniSViewCoverHeight="
 
     invoke-virtual {p2, v0}, Ljava/io/PrintWriter;->print(Ljava/lang/String;)V
@@ -489,12 +428,10 @@
 
     invoke-virtual {p2, v0}, Ljava/io/PrintWriter;->println(I)V
 
-    .line 282
     const-string v0, "  "
 
     invoke-virtual {p2, v0}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
-    .line 283
     return-void
 .end method
 
@@ -502,7 +439,6 @@
     .locals 1
 
     .prologue
-    .line 264
     iget-boolean v0, p0, Lcom/android/server/cover/CoverVerifier;->mIsCoverAttached:Z
 
     return v0
@@ -512,7 +448,6 @@
     .locals 1
 
     .prologue
-    .line 260
     iget-boolean v0, p0, Lcom/android/server/cover/CoverVerifier;->mIsCoverVerified:Z
 
     return v0
@@ -522,7 +457,6 @@
     .locals 1
 
     .prologue
-    .line 256
     iget-boolean v0, p0, Lcom/android/server/cover/CoverVerifier;->mIsCoverVerified:Z
 
     if-eqz v0, :cond_0
@@ -549,10 +483,8 @@
     .prologue
     const/4 v3, 0x1
 
-    .line 218
     const/4 v0, 0x0
 
-    .line 219
     .local v0, "change":Z
     iget-object v1, p0, Lcom/android/server/cover/CoverVerifier;->mContext:Landroid/content/Context;
 
@@ -566,32 +498,27 @@
 
     if-eqz v1, :cond_1
 
-    .line 220
     iget-boolean v1, p0, Lcom/android/server/cover/CoverVerifier;->mIsCoverAttached:Z
 
     if-eq v1, p1, :cond_0
 
-    .line 221
     iput-boolean p1, p0, Lcom/android/server/cover/CoverVerifier;->mIsCoverAttached:Z
 
-    .line 222
     const/4 v0, 0x1
 
-    .line 247
     :cond_0
     :goto_0
     iget-boolean v1, p0, Lcom/android/server/cover/CoverVerifier;->mIsCoverAttached:Z
 
     iput-boolean v1, p0, Lcom/android/server/cover/CoverVerifier;->mIsCoverVerified:Z
 
-    .line 249
     const-string v1, "CoverManager.CoverVerifier"
 
     new-instance v2, Ljava/lang/StringBuilder;
 
     invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v3, "onUpdateCoverAttachedLocked : mIsCoverVerified ="
+    const-string v3, "onUpdateCoverAttachedLocked : mIsCoverVerified ="
 
     invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -629,10 +556,8 @@
 
     invoke-static {v1, v2}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 252
     return v0
 
-    .line 224
     :cond_1
     iget-object v1, p0, Lcom/android/server/cover/CoverVerifier;->mContext:Landroid/content/Context;
 
@@ -646,7 +571,6 @@
 
     if-eqz v1, :cond_4
 
-    .line 225
     iget-object v1, p0, Lcom/android/server/cover/CoverVerifier;->mContext:Landroid/content/Context;
 
     invoke-static {v1}, Lcom/android/server/cover/Feature;->getInstance(Landroid/content/Context;)Lcom/android/server/cover/Feature;
@@ -671,51 +595,41 @@
 
     if-eqz v1, :cond_3
 
-    .line 227
     :cond_2
     iget-boolean v1, p0, Lcom/android/server/cover/CoverVerifier;->mIsCoverAttached:Z
 
     if-nez v1, :cond_0
 
-    .line 228
     iput-boolean v3, p0, Lcom/android/server/cover/CoverVerifier;->mIsCoverAttached:Z
 
-    .line 229
     const/4 v0, 0x1
 
     goto :goto_0
 
-    .line 232
     :cond_3
     iget-boolean v1, p0, Lcom/android/server/cover/CoverVerifier;->mIsCoverAttached:Z
 
     if-eq v1, p1, :cond_0
 
-    .line 233
     iput-boolean p1, p0, Lcom/android/server/cover/CoverVerifier;->mIsCoverAttached:Z
 
-    .line 234
     const/4 v0, 0x1
 
     goto :goto_0
 
-    .line 239
     :cond_4
     const-string v1, "CoverManager.CoverVerifier"
 
-    const-string/jumbo v2, "updateCoverAttachedLocked : This device is not support cover attach"
+    const-string v2, "updateCoverAttachedLocked : This device is not support cover attach"
 
     invoke-static {v1, v2}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 242
     iget-boolean v1, p0, Lcom/android/server/cover/CoverVerifier;->mIsCoverAttached:Z
 
     if-nez v1, :cond_0
 
-    .line 243
     iput-boolean v3, p0, Lcom/android/server/cover/CoverVerifier;->mIsCoverAttached:Z
 
-    .line 244
     const/4 v0, 0x1
 
     goto :goto_0
@@ -727,10 +641,8 @@
     .prologue
     const/4 v1, 0x1
 
-    .line 173
     const/4 v0, 0x0
 
-    .line 179
     .local v0, "change":Z
     iget-object v2, p0, Lcom/android/server/cover/CoverVerifier;->mContext:Landroid/content/Context;
 
@@ -744,32 +656,27 @@
 
     if-eqz v2, :cond_1
 
-    .line 180
     iget-boolean v2, p0, Lcom/android/server/cover/CoverVerifier;->mIsCoverVerified:Z
 
     if-nez v2, :cond_0
 
-    .line 181
     iput-boolean v1, p0, Lcom/android/server/cover/CoverVerifier;->mIsCoverVerified:Z
 
-    .line 182
     const/4 v0, 0x1
 
-    .line 209
     :cond_0
     :goto_0
     iget-boolean v2, p0, Lcom/android/server/cover/CoverVerifier;->mIsCoverVerified:Z
 
     iput-boolean v2, p0, Lcom/android/server/cover/CoverVerifier;->mIsCoverAttached:Z
 
-    .line 211
     const-string v2, "CoverManager.CoverVerifier"
 
     new-instance v3, Ljava/lang/StringBuilder;
 
     invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v4, "updateCoverVerificationLocked : mIsCoverVerified ="
+    const-string v4, "updateCoverVerificationLocked : mIsCoverVerified ="
 
     invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -797,10 +704,8 @@
 
     invoke-static {v2, v3}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 214
     return v0
 
-    .line 184
     :cond_1
     iget-object v2, p0, Lcom/android/server/cover/CoverVerifier;->mContext:Landroid/content/Context;
 
@@ -814,7 +719,6 @@
 
     if-eqz v2, :cond_5
 
-    .line 185
     iget-object v2, p0, Lcom/android/server/cover/CoverVerifier;->mContext:Landroid/content/Context;
 
     invoke-static {v2}, Lcom/android/server/cover/Feature;->getInstance(Landroid/content/Context;)Lcom/android/server/cover/Feature;
@@ -839,21 +743,17 @@
 
     if-eqz v2, :cond_3
 
-    .line 187
     :cond_2
     iget-boolean v2, p0, Lcom/android/server/cover/CoverVerifier;->mIsCoverVerified:Z
 
     if-nez v2, :cond_0
 
-    .line 188
     iput-boolean v1, p0, Lcom/android/server/cover/CoverVerifier;->mIsCoverVerified:Z
 
-    .line 189
     const/4 v0, 0x1
 
     goto :goto_0
 
-    .line 192
     :cond_3
     const-string v2, "/sys/devices/w1_bus_master1/w1_master_verify_mac"
 
@@ -865,45 +765,37 @@
 
     if-nez v2, :cond_4
 
-    .line 194
     .local v1, "verified":Z
     :goto_1
     iget-boolean v2, p0, Lcom/android/server/cover/CoverVerifier;->mIsCoverVerified:Z
 
     if-eq v2, v1, :cond_0
 
-    .line 195
     iput-boolean v1, p0, Lcom/android/server/cover/CoverVerifier;->mIsCoverVerified:Z
 
-    .line 196
     const/4 v0, 0x1
 
     goto :goto_0
 
-    .line 192
     .end local v1    # "verified":Z
     :cond_4
     const/4 v1, 0x0
 
     goto :goto_1
 
-    .line 201
     :cond_5
     const-string v2, "CoverManager.CoverVerifier"
 
-    const-string/jumbo v3, "updateCoverVerificationLocked : This device is not support cover verify"
+    const-string v3, "updateCoverVerificationLocked : This device is not support cover verify"
 
     invoke-static {v2, v3}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 204
     iget-boolean v2, p0, Lcom/android/server/cover/CoverVerifier;->mIsCoverVerified:Z
 
     if-nez v2, :cond_0
 
-    .line 205
     iput-boolean v1, p0, Lcom/android/server/cover/CoverVerifier;->mIsCoverVerified:Z
 
-    .line 206
     const/4 v0, 0x1
 
     goto :goto_0
@@ -915,7 +807,6 @@
     .param p2, "srcCoverState"    # Lcom/samsung/android/cover/CoverState;
 
     .prologue
-    .line 129
     iget-object v0, p0, Lcom/android/server/cover/CoverVerifier;->mContext:Landroid/content/Context;
 
     invoke-static {v0}, Lcom/android/server/cover/Feature;->getInstance(Landroid/content/Context;)Lcom/android/server/cover/Feature;
@@ -928,22 +819,18 @@
 
     if-eqz v0, :cond_2
 
-    .line 131
     if-nez p2, :cond_1
 
-    .line 133
     const-string v0, "CoverManager.CoverVerifier"
 
     const-string v5, "[SmartCover] CoverVerify : updateCoverPropertiesLocked : srcCoverState is null"
 
     invoke-static {v0, v5}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 170
     :cond_0
     :goto_0
     return-void
 
-    .line 137
     :cond_1
     invoke-static {}, Lcom/android/server/cover/CoverVerifier;->isFactoryMode()Z
 
@@ -951,10 +838,8 @@
 
     if-nez v0, :cond_0
 
-    .line 138
     invoke-virtual {p1, p2}, Lcom/samsung/android/cover/CoverState;->copyFrom(Lcom/samsung/android/cover/CoverState;)V
 
-    .line 140
     const-string v0, "CoverManager.CoverVerifier"
 
     new-instance v5, Ljava/lang/StringBuilder;
@@ -1011,7 +896,6 @@
 
     goto :goto_0
 
-    .line 146
     :cond_2
     iget-object v0, p0, Lcom/android/server/cover/CoverVerifier;->mContext:Landroid/content/Context;
 
@@ -1041,7 +925,6 @@
 
     if-eqz v0, :cond_4
 
-    .line 149
     const-string v0, "/sys/devices/w1_bus_master1/w1_master_check_id"
 
     iget v5, p0, Lcom/android/server/cover/CoverVerifier;->mDefaultCoverType:I
@@ -1050,7 +933,6 @@
 
     move-result v1
 
-    .line 151
     .local v1, "type":I
     const-string v0, "/sys/devices/w1_bus_master1/w1_master_check_color"
 
@@ -1060,7 +942,6 @@
 
     move-result v2
 
-    .line 153
     .local v2, "color":I
     const-string v0, "/sys/bus/w1/devices/w1_bus_master1/w1_master_check_model"
 
@@ -1070,20 +951,17 @@
 
     move-result v6
 
-    .line 160
     .local v6, "model":I
     :goto_1
     invoke-direct {p0, v1}, Lcom/android/server/cover/CoverVerifier;->getSupportSViewCoverWidth(I)I
 
     move-result v3
 
-    .line 161
     .local v3, "widthPixel":I
     invoke-direct {p0, v1}, Lcom/android/server/cover/CoverVerifier;->getSupportSViewCoverHeight(I)I
 
     move-result v4
 
-    .line 162
     .local v4, "heightPixel":I
     invoke-static {}, Lcom/android/server/cover/CoverVerifier;->isFactoryMode()Z
 
@@ -1091,14 +969,12 @@
 
     if-nez v0, :cond_3
 
-    .line 163
     iget-boolean v5, p0, Lcom/android/server/cover/CoverVerifier;->mIsCoverAttached:Z
 
     move-object v0, p1
 
     invoke-virtual/range {v0 .. v6}, Lcom/samsung/android/cover/CoverState;->updateCoverState(IIIIZI)V
 
-    .line 166
     :cond_3
     const-string v0, "CoverManager.CoverVerifier"
 
@@ -1106,7 +982,7 @@
 
     invoke-direct {v5}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v7, "updateCoverPropertiesLocked : mIsCoverAttached ="
+    const-string v7, "updateCoverPropertiesLocked : mIsCoverAttached ="
 
     invoke-virtual {v5, v7}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -1156,7 +1032,6 @@
 
     goto/16 :goto_0
 
-    .line 156
     .end local v1    # "type":I
     .end local v2    # "color":I
     .end local v3    # "widthPixel":I
@@ -1165,11 +1040,9 @@
     :cond_4
     iget v1, p0, Lcom/android/server/cover/CoverVerifier;->mDefaultCoverType:I
 
-    .line 157
     .restart local v1    # "type":I
     iget v2, p0, Lcom/android/server/cover/CoverVerifier;->mDefaultCoverColor:I
 
-    .line 158
     .restart local v2    # "color":I
     iget v6, p0, Lcom/android/server/cover/CoverVerifier;->mDefaultCoverModel:I
 

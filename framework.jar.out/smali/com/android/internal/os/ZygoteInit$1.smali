@@ -22,7 +22,6 @@
     .locals 0
 
     .prologue
-    .line 299
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -34,42 +33,35 @@
     .locals 3
 
     .prologue
-    .line 303
     const/16 v1, -0x10
 
     :try_start_0
     invoke-static {v1}, Landroid/os/Process;->setThreadPriority(I)V
 
-    .line 305
     const-string v1, "Zygote"
 
     const-string v2, "!@Boot: beginofpreloadResources()"
 
     invoke-static {v1, v2}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 306
     # invokes: Lcom/android/internal/os/ZygoteInit;->preloadResources()V
     invoke-static {}, Lcom/android/internal/os/ZygoteInit;->access$000()V
 
-    .line 307
     const-string v1, "Zygote"
 
     const-string v2, "!@Boot: End of preloadResources()"
 
     invoke-static {v1, v2}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 308
     const/4 v1, 0x0
 
     sput-boolean v1, Lcom/android/internal/os/ZygoteInit;->isParallelThreadRunning:Z
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 310
     :goto_0
     return-void
 
-    .line 309
     :catch_0
     move-exception v0
 

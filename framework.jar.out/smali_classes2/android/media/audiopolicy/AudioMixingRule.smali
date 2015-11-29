@@ -46,14 +46,11 @@
     .end annotation
 
     .prologue
-    .line 40
     .local p1, "criteria":Ljava/util/ArrayList;, "Ljava/util/ArrayList<Landroid/media/audiopolicy/AudioMixingRule$AttributeMatchCriterion;>;"
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 41
     iput-object p1, p0, Landroid/media/audiopolicy/AudioMixingRule;->mCriteria:Ljava/util/ArrayList;
 
-    .line 42
     return-void
 .end method
 
@@ -63,7 +60,6 @@
     .param p2, "x1"    # Landroid/media/audiopolicy/AudioMixingRule$1;
 
     .prologue
-    .line 38
     invoke-direct {p0, p1}, Landroid/media/audiopolicy/AudioMixingRule;-><init>(Ljava/util/ArrayList;)V
 
     return-void
@@ -84,7 +80,6 @@
     .end annotation
 
     .prologue
-    .line 64
     iget-object v0, p0, Landroid/media/audiopolicy/AudioMixingRule;->mCriteria:Ljava/util/ArrayList;
 
     return-object v0

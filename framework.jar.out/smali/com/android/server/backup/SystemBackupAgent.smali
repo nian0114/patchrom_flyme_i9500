@@ -30,7 +30,6 @@
     .prologue
     const/4 v1, 0x0
 
-    .line 51
     invoke-static {v1}, Landroid/os/Environment;->getUserSystemDirectory(I)Ljava/io/File;
 
     move-result-object v0
@@ -41,12 +40,10 @@
 
     sput-object v0, Lcom/android/server/backup/SystemBackupAgent;->WALLPAPER_IMAGE_DIR:Ljava/lang/String;
 
-    .line 53
     sget-object v0, Landroid/app/backup/WallpaperBackupHelper;->WALLPAPER_IMAGE:Ljava/lang/String;
 
     sput-object v0, Lcom/android/server/backup/SystemBackupAgent;->WALLPAPER_IMAGE:Ljava/lang/String;
 
-    .line 56
     invoke-static {v1}, Landroid/os/Environment;->getUserSystemDirectory(I)Ljava/io/File;
 
     move-result-object v0
@@ -57,7 +54,6 @@
 
     sput-object v0, Lcom/android/server/backup/SystemBackupAgent;->WALLPAPER_INFO_DIR:Ljava/lang/String;
 
-    .line 58
     sget-object v0, Landroid/app/backup/WallpaperBackupHelper;->WALLPAPER_INFO:Ljava/lang/String;
 
     sput-object v0, Lcom/android/server/backup/SystemBackupAgent;->WALLPAPER_INFO:Ljava/lang/String;
@@ -69,7 +65,6 @@
     .locals 0
 
     .prologue
-    .line 41
     invoke-direct {p0}, Landroid/app/backup/BackupAgentHelper;-><init>()V
 
     return-void
@@ -82,12 +77,11 @@
     .prologue
     const/4 v2, 0x0
 
-    .line 100
     invoke-virtual {p0}, Lcom/android/server/backup/SystemBackupAgent;->getPackageName()Ljava/lang/String;
 
     move-result-object v0
 
-    const-string/jumbo v1, "r"
+    const-string v1, "r"
 
     sget-object v3, Lcom/android/server/backup/SystemBackupAgent;->WALLPAPER_INFO_DIR:Ljava/lang/String;
 
@@ -99,12 +93,11 @@
 
     invoke-static/range {v0 .. v5}, Landroid/app/backup/FullBackup;->backupToTar(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Landroid/app/backup/BackupDataOutput;)I
 
-    .line 102
     invoke-virtual {p0}, Lcom/android/server/backup/SystemBackupAgent;->getPackageName()Ljava/lang/String;
 
     move-result-object v0
 
-    const-string/jumbo v1, "r"
+    const-string v1, "r"
 
     sget-object v3, Lcom/android/server/backup/SystemBackupAgent;->WALLPAPER_IMAGE_DIR:Ljava/lang/String;
 
@@ -116,7 +109,6 @@
 
     invoke-static/range {v0 .. v5}, Landroid/app/backup/FullBackup;->backupToTar(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Landroid/app/backup/BackupDataOutput;)I
 
-    .line 104
     return-void
 .end method
 
@@ -140,8 +132,7 @@
 
     const/4 v8, 0x0
 
-    .line 67
-    const-string/jumbo v7, "wallpaper"
+    const-string v7, "wallpaper"
 
     invoke-static {v7}, Landroid/os/ServiceManager;->getService(Ljava/lang/String;)Landroid/os/IBinder;
 
@@ -149,7 +140,6 @@
 
     check-cast v5, Landroid/app/IWallpaperManager;
 
-    .line 69
     .local v5, "wallpaper":Landroid/app/IWallpaperManager;
     new-array v0, v10, [Ljava/lang/String;
 
@@ -161,7 +151,6 @@
 
     aput-object v7, v0, v9
 
-    .line 70
     .local v0, "files":[Ljava/lang/String;
     new-array v2, v10, [Ljava/lang/String;
 
@@ -173,17 +162,14 @@
 
     aput-object v7, v2, v9
 
-    .line 71
     .local v2, "keys":[Ljava/lang/String;
     if-eqz v5, :cond_0
 
-    .line 73
     :try_start_0
     invoke-interface {v5}, Landroid/app/IWallpaperManager;->getName()Ljava/lang/String;
 
     move-result-object v6
 
-    .line 74
     .local v6, "wallpaperName":Ljava/lang/String;
     if-eqz v6, :cond_0
 
@@ -193,7 +179,6 @@
 
     if-lez v7, :cond_0
 
-    .line 78
     const/4 v7, 0x1
 
     new-array v1, v7, [Ljava/lang/String;
@@ -206,7 +191,6 @@
     :try_end_0
     .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 79
     .end local v0    # "files":[Ljava/lang/String;
     .local v1, "files":[Ljava/lang/String;
     const/4 v7, 0x1
@@ -230,13 +214,12 @@
     .restart local v2    # "keys":[Ljava/lang/String;
     move-object v0, v1
 
-    .line 85
     .end local v1    # "files":[Ljava/lang/String;
     .end local v6    # "wallpaperName":Ljava/lang/String;
     .restart local v0    # "files":[Ljava/lang/String;
     :cond_0
     :goto_0
-    const-string/jumbo v7, "wallpaper"
+    const-string v7, "wallpaper"
 
     new-instance v8, Landroid/app/backup/WallpaperBackupHelper;
 
@@ -244,17 +227,13 @@
 
     invoke-virtual {p0, v7, v8}, Lcom/android/server/backup/SystemBackupAgent;->addHelper(Ljava/lang/String;Landroid/app/backup/BackupHelper;)V
 
-    .line 86
     invoke-super {p0, p1, p2, p3}, Landroid/app/backup/BackupAgentHelper;->onBackup(Landroid/os/ParcelFileDescriptor;Landroid/app/backup/BackupDataOutput;Landroid/os/ParcelFileDescriptor;)V
 
-    .line 87
     return-void
 
-    .line 81
     :catch_0
     move-exception v4
 
-    .line 82
     .local v4, "re":Landroid/os/RemoteException;
     :goto_1
     const-string v7, "SystemBackupAgent"
@@ -281,7 +260,6 @@
 
     goto :goto_0
 
-    .line 81
     .end local v0    # "files":[Ljava/lang/String;
     .end local v4    # "re":Landroid/os/RemoteException;
     .restart local v1    # "files":[Ljava/lang/String;
@@ -306,10 +284,8 @@
     .end annotation
 
     .prologue
-    .line 92
     invoke-direct {p0, p1}, Lcom/android/server/backup/SystemBackupAgent;->fullWallpaperBackup(Landroid/app/backup/FullBackupDataOutput;)V
 
-    .line 93
     return-void
 .end method
 
@@ -331,8 +307,7 @@
 
     const/4 v8, 0x0
 
-    .line 110
-    const-string/jumbo v3, "wallpaper"
+    const-string v3, "wallpaper"
 
     new-instance v4, Landroid/app/backup/WallpaperBackupHelper;
 
@@ -360,8 +335,7 @@
 
     invoke-virtual {p0, v3, v4}, Lcom/android/server/backup/SystemBackupAgent;->addHelper(Ljava/lang/String;Landroid/app/backup/BackupHelper;)V
 
-    .line 113
-    const-string/jumbo v3, "system_files"
+    const-string v3, "system_files"
 
     new-instance v4, Landroid/app/backup/WallpaperBackupHelper;
 
@@ -381,12 +355,10 @@
 
     invoke-virtual {p0, v3, v4}, Lcom/android/server/backup/SystemBackupAgent;->addHelper(Ljava/lang/String;Landroid/app/backup/BackupHelper;)V
 
-    .line 118
     :try_start_0
     invoke-super {p0, p1, p2, p3}, Landroid/app/backup/BackupAgentHelper;->onRestore(Landroid/app/backup/BackupDataInput;ILandroid/os/ParcelFileDescriptor;)V
 
-    .line 120
-    const-string/jumbo v3, "wallpaper"
+    const-string v3, "wallpaper"
 
     invoke-static {v3}, Landroid/os/ServiceManager;->getService(Ljava/lang/String;)Landroid/os/IBinder;
 
@@ -396,29 +368,24 @@
     :try_end_0
     .catch Ljava/io/IOException; {:try_start_0 .. :try_end_0} :catch_1
 
-    .line 122
     .local v2, "wallpaper":Landroid/app/IWallpaperManager;
     if-eqz v2, :cond_0
 
-    .line 124
     :try_start_1
     invoke-interface {v2}, Landroid/app/IWallpaperManager;->settingsRestored()V
     :try_end_1
     .catch Landroid/os/RemoteException; {:try_start_1 .. :try_end_1} :catch_0
     .catch Ljava/io/IOException; {:try_start_1 .. :try_end_1} :catch_1
 
-    .line 136
     .end local v2    # "wallpaper":Landroid/app/IWallpaperManager;
     :cond_0
     :goto_0
     return-void
 
-    .line 125
     .restart local v2    # "wallpaper":Landroid/app/IWallpaperManager;
     :catch_0
     move-exception v1
 
-    .line 126
     .local v1, "re":Landroid/os/RemoteException;
     :try_start_2
     const-string v3, "SystemBackupAgent"
@@ -447,21 +414,18 @@
 
     goto :goto_0
 
-    .line 129
     .end local v1    # "re":Landroid/os/RemoteException;
     .end local v2    # "wallpaper":Landroid/app/IWallpaperManager;
     :catch_1
     move-exception v0
 
-    .line 132
     .local v0, "ex":Ljava/io/IOException;
     const-string v3, "SystemBackupAgent"
 
-    const-string/jumbo v4, "restore failed"
+    const-string v4, "restore failed"
 
     invoke-static {v3, v4, v0}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
-    .line 133
     new-instance v3, Ljava/io/File;
 
     sget-object v4, Lcom/android/server/backup/SystemBackupAgent;->WALLPAPER_IMAGE:Ljava/lang/String;
@@ -470,7 +434,6 @@
 
     invoke-virtual {v3}, Ljava/io/File;->delete()Z
 
-    .line 134
     new-instance v3, Ljava/io/File;
 
     sget-object v4, Lcom/android/server/backup/SystemBackupAgent;->WALLPAPER_INFO:Ljava/lang/String;
@@ -498,7 +461,6 @@
     .end annotation
 
     .prologue
-    .line 142
     const-string v2, "SystemBackupAgent"
 
     new-instance v3, Ljava/lang/StringBuilder;
@@ -535,16 +497,13 @@
 
     invoke-static {v2, v3}, Landroid/util/Slog;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 145
     const/4 v13, 0x0
 
-    .line 147
     .local v13, "restoredWallpaper":Z
     const/4 v10, 0x0
 
-    .line 149
     .local v10, "outFile":Ljava/io/File;
-    const-string/jumbo v2, "r"
+    const-string v2, "r"
 
     move-object/from16 v0, p5
 
@@ -554,8 +513,7 @@
 
     if-eqz v2, :cond_0
 
-    .line 150
-    const-string/jumbo v2, "wallpaper_info.xml"
+    const-string v2, "wallpaper_info.xml"
 
     move-object/from16 v0, p6
 
@@ -565,7 +523,6 @@
 
     if-eqz v2, :cond_3
 
-    .line 151
     new-instance v10, Ljava/io/File;
 
     .end local v10    # "outFile":Ljava/io/File;
@@ -573,16 +530,13 @@
 
     invoke-direct {v10, v2}, Ljava/io/File;-><init>(Ljava/lang/String;)V
 
-    .line 152
     .restart local v10    # "outFile":Ljava/io/File;
     const/4 v13, 0x1
 
-    .line 160
     :cond_0
     :goto_0
     if-nez v10, :cond_1
 
-    .line 161
     :try_start_0
     const-string v2, "SystemBackupAgent"
 
@@ -637,14 +591,11 @@
 
     move-wide/from16 v8, p9
 
-    .line 163
     invoke-static/range {v2 .. v10}, Landroid/app/backup/FullBackup;->restoreFile(Landroid/os/ParcelFileDescriptor;JIJJLjava/io/File;)V
 
-    .line 165
     if-eqz v13, :cond_2
 
-    .line 166
-    const-string/jumbo v2, "wallpaper"
+    const-string v2, "wallpaper"
 
     invoke-static {v2}, Landroid/os/ServiceManager;->getService(Ljava/lang/String;)Landroid/os/IBinder;
 
@@ -654,26 +605,22 @@
     :try_end_0
     .catch Ljava/io/IOException; {:try_start_0 .. :try_end_0} :catch_1
 
-    .line 169
     .local v14, "wallpaper":Landroid/app/IWallpaperManager;
     if-eqz v14, :cond_2
 
-    .line 171
     :try_start_1
     invoke-interface {v14}, Landroid/app/IWallpaperManager;->settingsRestored()V
     :try_end_1
     .catch Landroid/os/RemoteException; {:try_start_1 .. :try_end_1} :catch_0
     .catch Ljava/io/IOException; {:try_start_1 .. :try_end_1} :catch_1
 
-    .line 184
     .end local v14    # "wallpaper":Landroid/app/IWallpaperManager;
     :cond_2
     :goto_1
     return-void
 
-    .line 153
     :cond_3
-    const-string/jumbo v2, "wallpaper"
+    const-string v2, "wallpaper"
 
     move-object/from16 v0, p6
 
@@ -683,7 +630,6 @@
 
     if-eqz v2, :cond_0
 
-    .line 154
     new-instance v10, Ljava/io/File;
 
     .end local v10    # "outFile":Ljava/io/File;
@@ -691,18 +637,15 @@
 
     invoke-direct {v10, v2}, Ljava/io/File;-><init>(Ljava/lang/String;)V
 
-    .line 155
     .restart local v10    # "outFile":Ljava/io/File;
     const/4 v13, 0x1
 
     goto :goto_0
 
-    .line 172
     .restart local v14    # "wallpaper":Landroid/app/IWallpaperManager;
     :catch_0
     move-exception v12
 
-    .line 173
     .local v12, "re":Landroid/os/RemoteException;
     :try_start_2
     const-string v2, "SystemBackupAgent"
@@ -731,17 +674,14 @@
 
     goto :goto_1
 
-    .line 177
     .end local v12    # "re":Landroid/os/RemoteException;
     .end local v14    # "wallpaper":Landroid/app/IWallpaperManager;
     :catch_1
     move-exception v11
 
-    .line 178
     .local v11, "e":Ljava/io/IOException;
     if-eqz v13, :cond_2
 
-    .line 180
     new-instance v2, Ljava/io/File;
 
     sget-object v3, Lcom/android/server/backup/SystemBackupAgent;->WALLPAPER_IMAGE:Ljava/lang/String;
@@ -750,7 +690,6 @@
 
     invoke-virtual {v2}, Ljava/io/File;->delete()Z
 
-    .line 181
     new-instance v2, Ljava/io/File;
 
     sget-object v3, Lcom/android/server/backup/SystemBackupAgent;->WALLPAPER_INFO:Ljava/lang/String;

@@ -22,7 +22,6 @@
 
     const/16 v4, 0x2c
 
-    .line 7
     new-array v0, v7, [[[B
 
     const/16 v1, 0xe
@@ -1934,7 +1933,6 @@
     .locals 0
 
     .prologue
-    .line 2
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void

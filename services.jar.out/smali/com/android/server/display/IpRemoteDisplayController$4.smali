@@ -28,7 +28,6 @@
     .locals 0
 
     .prologue
-    .line 267
     iput-object p1, p0, Lcom/android/server/display/IpRemoteDisplayController$4;->this$0:Lcom/android/server/display/IpRemoteDisplayController;
 
     iput p2, p0, Lcom/android/server/display/IpRemoteDisplayController$4;->val$connectedMode:I
@@ -44,7 +43,6 @@
     .locals 2
 
     .prologue
-    .line 270
     iget-object v0, p0, Lcom/android/server/display/IpRemoteDisplayController$4;->this$0:Lcom/android/server/display/IpRemoteDisplayController;
 
     iget v1, p0, Lcom/android/server/display/IpRemoteDisplayController$4;->val$connectedMode:I
@@ -52,6 +50,5 @@
     # invokes: Lcom/android/server/display/IpRemoteDisplayController;->disableWifiDisplay(I)V
     invoke-static {v0, v1}, Lcom/android/server/display/IpRemoteDisplayController;->access$1000(Lcom/android/server/display/IpRemoteDisplayController;I)V
 
-    .line 271
     return-void
 .end method

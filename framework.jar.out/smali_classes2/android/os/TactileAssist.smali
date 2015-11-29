@@ -16,11 +16,9 @@
     .locals 1
 
     .prologue
-    .line 35
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 36
-    const-string/jumbo v0, "tactileassist"
+    const-string v0, "tactileassist"
 
     invoke-static {v0}, Landroid/os/ServiceManager;->getService(Ljava/lang/String;)Landroid/os/IBinder;
 
@@ -32,7 +30,6 @@
 
     iput-object v0, p0, Landroid/os/TactileAssist;->mService:Landroid/os/ITactileAssistService;
 
-    .line 37
     return-void
 .end method
 
@@ -42,7 +39,6 @@
     .locals 3
 
     .prologue
-    .line 41
     :try_start_0
     iget-object v1, p0, Landroid/os/TactileAssist;->mService:Landroid/os/ITactileAssistService;
 
@@ -52,23 +48,19 @@
 
     move-result-object v1
 
-    .line 45
     :goto_0
     return-object v1
 
-    .line 42
     :catch_0
     move-exception v0
 
-    .line 43
     .local v0, "e":Landroid/os/RemoteException;
     const-string v1, "TactileAssist"
 
-    const-string/jumbo v2, "service unable to get Actuators"
+    const-string v2, "service unable to get Actuators"
 
     invoke-static {v1, v2}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 45
     const/4 v1, 0x0
 
     goto :goto_0
@@ -82,18 +74,15 @@
     .prologue
     const/4 v2, 0x0
 
-    .line 108
     invoke-static {}, Landroid/os/Binder;->getCallingUid()I
 
     move-result v1
 
-    .line 109
     .local v1, "uid":I
     const/16 v3, 0x3e8
 
     if-eq v1, v3, :cond_0
 
-    .line 110
     const-string v3, "TactileAssist"
 
     new-instance v4, Ljava/lang/StringBuilder;
@@ -116,11 +105,9 @@
 
     invoke-static {v3, v4}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 118
     :goto_0
     return v2
 
-    .line 114
     :cond_0
     :try_start_0
     iget-object v3, p0, Landroid/os/TactileAssist;->mService:Landroid/os/ITactileAssistService;
@@ -133,15 +120,13 @@
 
     goto :goto_0
 
-    .line 115
     :catch_0
     move-exception v0
 
-    .line 116
     .local v0, "e":Landroid/os/RemoteException;
     const-string v3, "TactileAssist"
 
-    const-string/jumbo v4, "service unable to set TactileAssist density"
+    const-string v4, "service unable to set TactileAssist density"
 
     invoke-static {v3, v4}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
@@ -155,18 +140,15 @@
     .prologue
     const/4 v2, 0x0
 
-    .line 49
     invoke-static {}, Landroid/os/Binder;->getCallingUid()I
 
     move-result v1
 
-    .line 50
     .local v1, "uid":I
     const/16 v3, 0x3e8
 
     if-eq v1, v3, :cond_0
 
-    .line 51
     const-string v3, "TactileAssist"
 
     new-instance v4, Ljava/lang/StringBuilder;
@@ -189,11 +171,9 @@
 
     invoke-static {v3, v4}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 60
     :goto_0
     return v2
 
-    .line 55
     :cond_0
     :try_start_0
     const-string v3, "TactileAssist"
@@ -218,7 +198,6 @@
 
     invoke-static {v3, v4}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 56
     iget-object v3, p0, Landroid/os/TactileAssist;->mService:Landroid/os/ITactileAssistService;
 
     invoke-interface {v3, p1}, Landroid/os/ITactileAssistService;->setEnable(Z)Z
@@ -229,15 +208,13 @@
 
     goto :goto_0
 
-    .line 57
     :catch_0
     move-exception v0
 
-    .line 58
     .local v0, "e":Landroid/os/RemoteException;
     const-string v3, "TactileAssist"
 
-    const-string/jumbo v4, "service unable to enable TactileAssist"
+    const-string v4, "service unable to enable TactileAssist"
 
     invoke-static {v3, v4}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
@@ -251,18 +228,15 @@
     .prologue
     const/4 v2, 0x0
 
-    .line 64
     invoke-static {}, Landroid/os/Binder;->getCallingUid()I
 
     move-result v1
 
-    .line 65
     .local v1, "uid":I
     const/16 v3, 0x3e8
 
     if-eq v1, v3, :cond_0
 
-    .line 66
     const-string v3, "TactileAssist"
 
     new-instance v4, Ljava/lang/StringBuilder;
@@ -285,11 +259,9 @@
 
     invoke-static {v3, v4}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 74
     :goto_0
     return v2
 
-    .line 70
     :cond_0
     :try_start_0
     iget-object v3, p0, Landroid/os/TactileAssist;->mService:Landroid/os/ITactileAssistService;
@@ -302,15 +274,13 @@
 
     goto :goto_0
 
-    .line 71
     :catch_0
     move-exception v0
 
-    .line 72
     .local v0, "e":Landroid/os/RemoteException;
     const-string v3, "TactileAssist"
 
-    const-string/jumbo v4, "service unable to internal enable TactileAssist"
+    const-string v4, "service unable to internal enable TactileAssist"
 
     invoke-static {v3, v4}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
@@ -324,18 +294,15 @@
     .prologue
     const/4 v2, 0x0
 
-    .line 78
     invoke-static {}, Landroid/os/Binder;->getCallingUid()I
 
     move-result v1
 
-    .line 79
     .local v1, "uid":I
     const/16 v3, 0x3e8
 
     if-eq v1, v3, :cond_0
 
-    .line 80
     const-string v3, "TactileAssist"
 
     new-instance v4, Ljava/lang/StringBuilder;
@@ -358,11 +325,9 @@
 
     invoke-static {v3, v4}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 88
     :goto_0
     return v2
 
-    .line 84
     :cond_0
     :try_start_0
     iget-object v3, p0, Landroid/os/TactileAssist;->mService:Landroid/os/ITactileAssistService;
@@ -375,15 +340,13 @@
 
     goto :goto_0
 
-    .line 85
     :catch_0
     move-exception v0
 
-    .line 86
     .local v0, "e":Landroid/os/RemoteException;
     const-string v3, "TactileAssist"
 
-    const-string/jumbo v4, "service unable to set TactileAssist Level"
+    const-string v4, "service unable to set TactileAssist Level"
 
     invoke-static {v3, v4}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
@@ -398,18 +361,15 @@
     .prologue
     const/4 v2, 0x0
 
-    .line 122
     invoke-static {}, Landroid/os/Binder;->getCallingUid()I
 
     move-result v1
 
-    .line 123
     .local v1, "uid":I
     const/16 v3, 0x3e8
 
     if-eq v1, v3, :cond_0
 
-    .line 124
     const-string v3, "TactileAssist"
 
     new-instance v4, Ljava/lang/StringBuilder;
@@ -432,11 +392,9 @@
 
     invoke-static {v3, v4}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 132
     :goto_0
     return v2
 
-    .line 128
     :cond_0
     :try_start_0
     iget-object v3, p0, Landroid/os/TactileAssist;->mService:Landroid/os/ITactileAssistService;
@@ -449,15 +407,13 @@
 
     goto :goto_0
 
-    .line 129
     :catch_0
     move-exception v0
 
-    .line 130
     .local v0, "e":Landroid/os/RemoteException;
     const-string v3, "TactileAssist"
 
-    const-string/jumbo v4, "service unable to set TactileAssist sharpness"
+    const-string v4, "service unable to set TactileAssist sharpness"
 
     invoke-static {v3, v4}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
@@ -472,18 +428,15 @@
     .prologue
     const/4 v2, 0x0
 
-    .line 93
     invoke-static {}, Landroid/os/Binder;->getCallingUid()I
 
     move-result v1
 
-    .line 94
     .local v1, "uid":I
     const/16 v3, 0x3e8
 
     if-eq v1, v3, :cond_0
 
-    .line 95
     const-string v3, "TactileAssist"
 
     new-instance v4, Ljava/lang/StringBuilder;
@@ -506,11 +459,9 @@
 
     invoke-static {v3, v4}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 103
     :goto_0
     return v2
 
-    .line 99
     :cond_0
     :try_start_0
     iget-object v3, p0, Landroid/os/TactileAssist;->mService:Landroid/os/ITactileAssistService;
@@ -523,15 +474,13 @@
 
     goto :goto_0
 
-    .line 100
     :catch_0
     move-exception v0
 
-    .line 101
     .local v0, "e":Landroid/os/RemoteException;
     const-string v3, "TactileAssist"
 
-    const-string/jumbo v4, "service unable to set TactileAssist strength"
+    const-string v4, "service unable to set TactileAssist strength"
 
     invoke-static {v3, v4}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
@@ -542,7 +491,6 @@
     .locals 3
 
     .prologue
-    .line 138
     :try_start_0
     iget-object v1, p0, Landroid/os/TactileAssist;->mService:Landroid/os/ITactileAssistService;
 
@@ -552,23 +500,19 @@
 
     move-result v1
 
-    .line 142
     :goto_0
     return v1
 
-    .line 139
     :catch_0
     move-exception v0
 
-    .line 140
     .local v0, "e":Landroid/os/RemoteException;
     const-string v1, "TactileAssist"
 
-    const-string/jumbo v2, "service unable to store app list"
+    const-string v2, "service unable to store app list"
 
     invoke-static {v1, v2}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 142
     const/4 v1, 0x0
 
     goto :goto_0

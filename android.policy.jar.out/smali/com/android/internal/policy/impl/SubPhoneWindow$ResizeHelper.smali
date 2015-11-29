@@ -76,43 +76,36 @@
     .param p9, "maxHeight"    # I
 
     .prologue
-    .line 424
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 401
     const/4 v0, 0x1
 
     iput-boolean v0, p0, Lcom/android/internal/policy/impl/SubPhoneWindow$ResizeHelper;->DEBUG:Z
 
-    .line 404
     new-instance v0, Landroid/graphics/Rect;
 
     invoke-direct {v0}, Landroid/graphics/Rect;-><init>()V
 
     iput-object v0, p0, Lcom/android/internal/policy/impl/SubPhoneWindow$ResizeHelper;->mContentsBounds:Landroid/graphics/Rect;
 
-    .line 405
     new-instance v0, Landroid/graphics/Rect;
 
     invoke-direct {v0}, Landroid/graphics/Rect;-><init>()V
 
     iput-object v0, p0, Lcom/android/internal/policy/impl/SubPhoneWindow$ResizeHelper;->mResizeBounds:Landroid/graphics/Rect;
 
-    .line 406
     new-instance v0, Landroid/graphics/Rect;
 
     invoke-direct {v0}, Landroid/graphics/Rect;-><init>()V
 
     iput-object v0, p0, Lcom/android/internal/policy/impl/SubPhoneWindow$ResizeHelper;->mPaddingRect:Landroid/graphics/Rect;
 
-    .line 407
     new-instance v0, Landroid/graphics/Rect;
 
     invoke-direct {v0}, Landroid/graphics/Rect;-><init>()V
 
     iput-object v0, p0, Lcom/android/internal/policy/impl/SubPhoneWindow$ResizeHelper;->mResizablePadding:Landroid/graphics/Rect;
 
-    .line 408
     new-instance v0, Lcom/android/internal/policy/impl/multiwindow/EdgeInspector;
 
     const/4 v1, 0x0
@@ -125,23 +118,18 @@
 
     iput-object v0, p0, Lcom/android/internal/policy/impl/SubPhoneWindow$ResizeHelper;->mTouchEdgeInspector:Lcom/android/internal/policy/impl/multiwindow/EdgeInspector;
 
-    .line 416
     const/4 v0, 0x0
 
     iput-boolean v0, p0, Lcom/android/internal/policy/impl/SubPhoneWindow$ResizeHelper;->mMoving:Z
 
-    .line 581
     const/4 v0, -0x1
 
     iput v0, p0, Lcom/android/internal/policy/impl/SubPhoneWindow$ResizeHelper;->mHoverIcon:I
 
-    .line 426
     iput-object p1, p0, Lcom/android/internal/policy/impl/SubPhoneWindow$ResizeHelper;->mContext:Landroid/content/Context;
 
-    .line 427
     iput-object p5, p0, Lcom/android/internal/policy/impl/SubPhoneWindow$ResizeHelper;->mListener:Lcom/android/internal/policy/impl/SubPhoneWindow$ResizeHelper$Listener;
 
-    .line 429
     iget-object v0, p0, Lcom/android/internal/policy/impl/SubPhoneWindow$ResizeHelper;->mContext:Landroid/content/Context;
 
     invoke-virtual {v0}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
@@ -156,7 +144,6 @@
 
     float-to-int v8, v0
 
-    .line 430
     .local v8, "resizableSize":I
     iget-object v0, p0, Lcom/android/internal/policy/impl/SubPhoneWindow$ResizeHelper;->mResizablePadding:Landroid/graphics/Rect;
 
@@ -178,10 +165,8 @@
 
     move/from16 v7, p9
 
-    .line 432
     invoke-virtual/range {v0 .. v7}, Lcom/android/internal/policy/impl/SubPhoneWindow$ResizeHelper;->set(Landroid/graphics/Rect;Landroid/graphics/Rect;Landroid/graphics/Rect;IIII)V
 
-    .line 433
     return-void
 .end method
 
@@ -189,7 +174,6 @@
     .locals 6
 
     .prologue
-    .line 657
     new-instance v0, Lcom/samsung/android/multiwindow/ui/GuideView;
 
     iget-object v1, p0, Lcom/android/internal/policy/impl/SubPhoneWindow$ResizeHelper;->mContext:Landroid/content/Context;
@@ -202,12 +186,10 @@
 
     iput-object v0, p0, Lcom/android/internal/policy/impl/SubPhoneWindow$ResizeHelper;->mGuideView:Lcom/samsung/android/multiwindow/ui/GuideView;
 
-    .line 660
     iget-object v0, p0, Lcom/android/internal/policy/impl/SubPhoneWindow$ResizeHelper;->mGuideView:Lcom/samsung/android/multiwindow/ui/GuideView;
 
     invoke-virtual {v0}, Lcom/samsung/android/multiwindow/ui/GuideView;->init()V
 
-    .line 662
     iget-object v0, p0, Lcom/android/internal/policy/impl/SubPhoneWindow$ResizeHelper;->mGuideView:Lcom/samsung/android/multiwindow/ui/GuideView;
 
     iget-object v1, p0, Lcom/android/internal/policy/impl/SubPhoneWindow$ResizeHelper;->mPaddingRect:Landroid/graphics/Rect;
@@ -228,7 +210,6 @@
 
     invoke-virtual {v0, v1, v2, v3, v4}, Lcom/samsung/android/multiwindow/ui/GuideView;->setGuidePadding(IIII)V
 
-    .line 663
     iget-object v0, p0, Lcom/android/internal/policy/impl/SubPhoneWindow$ResizeHelper;->mGuideView:Lcom/samsung/android/multiwindow/ui/GuideView;
 
     iget-object v1, p0, Lcom/android/internal/policy/impl/SubPhoneWindow$ResizeHelper;->mContentsBounds:Landroid/graphics/Rect;
@@ -261,7 +242,6 @@
 
     invoke-virtual {v0, v1, v2, v3, v4}, Lcom/samsung/android/multiwindow/ui/GuideView;->show(IIII)V
 
-    .line 664
     return-void
 .end method
 
@@ -269,21 +249,17 @@
     .locals 2
 
     .prologue
-    .line 649
     invoke-static {}, Landroid/view/inputmethod/InputMethodManager;->peekInstance()Landroid/view/inputmethod/InputMethodManager;
 
     move-result-object v0
 
-    .line 650
     .local v0, "imm":Landroid/view/inputmethod/InputMethodManager;
     if-eqz v0, :cond_0
 
-    .line 651
     invoke-virtual {v0}, Landroid/view/inputmethod/InputMethodManager;->isInputMethodShown()Z
 
     move-result v1
 
-    .line 653
     :goto_0
     return v1
 
@@ -300,12 +276,10 @@
     .param p1, "ev"    # Landroid/view/MotionEvent;
 
     .prologue
-    .line 466
     iget-object v0, p0, Lcom/android/internal/policy/impl/SubPhoneWindow$ResizeHelper;->mTouchEdgeInspector:Lcom/android/internal/policy/impl/multiwindow/EdgeInspector;
 
     invoke-virtual {v0}, Lcom/android/internal/policy/impl/multiwindow/EdgeInspector;->clear()V
 
-    .line 467
     iget-object v0, p0, Lcom/android/internal/policy/impl/SubPhoneWindow$ResizeHelper;->mTouchEdgeInspector:Lcom/android/internal/policy/impl/multiwindow/EdgeInspector;
 
     iget-object v1, p0, Lcom/android/internal/policy/impl/SubPhoneWindow$ResizeHelper;->mResizeBounds:Landroid/graphics/Rect;
@@ -314,7 +288,6 @@
 
     invoke-virtual {v0, v1, v2}, Lcom/android/internal/policy/impl/multiwindow/EdgeInspector;->set(Landroid/graphics/Rect;Landroid/graphics/Rect;)V
 
-    .line 468
     iget-object v0, p0, Lcom/android/internal/policy/impl/SubPhoneWindow$ResizeHelper;->mContext:Landroid/content/Context;
 
     invoke-virtual {v0}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
@@ -329,7 +302,6 @@
 
     packed-switch v0, :pswitch_data_0
 
-    .line 477
     :goto_0
     invoke-virtual {p1}, Landroid/view/MotionEvent;->getRawXForScaledWindow()F
 
@@ -339,7 +311,6 @@
 
     iput v0, p0, Lcom/android/internal/policy/impl/SubPhoneWindow$ResizeHelper;->mBeginX:I
 
-    .line 478
     invoke-virtual {p1}, Landroid/view/MotionEvent;->getRawYForScaledWindow()F
 
     move-result v0
@@ -348,7 +319,6 @@
 
     iput v0, p0, Lcom/android/internal/policy/impl/SubPhoneWindow$ResizeHelper;->mBeginY:I
 
-    .line 479
     iget-object v0, p0, Lcom/android/internal/policy/impl/SubPhoneWindow$ResizeHelper;->mTouchEdgeInspector:Lcom/android/internal/policy/impl/multiwindow/EdgeInspector;
 
     iget v1, p0, Lcom/android/internal/policy/impl/SubPhoneWindow$ResizeHelper;->mBeginX:I
@@ -357,7 +327,6 @@
 
     invoke-virtual {v0, v1, v2}, Lcom/android/internal/policy/impl/multiwindow/EdgeInspector;->check(II)V
 
-    .line 480
     iget-object v0, p0, Lcom/android/internal/policy/impl/SubPhoneWindow$ResizeHelper;->mTouchEdgeInspector:Lcom/android/internal/policy/impl/multiwindow/EdgeInspector;
 
     invoke-virtual {v0}, Lcom/android/internal/policy/impl/multiwindow/EdgeInspector;->isCorner()Z
@@ -366,28 +335,23 @@
 
     iput-boolean v0, p0, Lcom/android/internal/policy/impl/SubPhoneWindow$ResizeHelper;->mMoving:Z
 
-    .line 481
     iget-boolean v0, p0, Lcom/android/internal/policy/impl/SubPhoneWindow$ResizeHelper;->mMoving:Z
 
     if-eqz v0, :cond_0
 
-    .line 483
     const-string v0, "ResizeHelper"
 
     const-string v1, "Start to resize."
 
     invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 485
     invoke-direct {p0}, Lcom/android/internal/policy/impl/SubPhoneWindow$ResizeHelper;->initGuideView()V
 
-    .line 489
     :goto_1
     iget-boolean v0, p0, Lcom/android/internal/policy/impl/SubPhoneWindow$ResizeHelper;->mMoving:Z
 
     return v0
 
-    .line 470
     :pswitch_0
     iget-object v0, p0, Lcom/android/internal/policy/impl/SubPhoneWindow$ResizeHelper;->mTouchEdgeInspector:Lcom/android/internal/policy/impl/multiwindow/EdgeInspector;
 
@@ -397,7 +361,6 @@
 
     goto :goto_0
 
-    .line 473
     :pswitch_1
     iget-object v0, p0, Lcom/android/internal/policy/impl/SubPhoneWindow$ResizeHelper;->mTouchEdgeInspector:Lcom/android/internal/policy/impl/multiwindow/EdgeInspector;
 
@@ -407,7 +370,6 @@
 
     goto :goto_0
 
-    .line 487
     :cond_0
     const-string v0, "ResizeHelper"
 
@@ -471,7 +433,6 @@
 
     goto :goto_1
 
-    .line 468
     :pswitch_data_0
     .packed-switch 0x1
         :pswitch_0
@@ -494,7 +455,6 @@
 
     const/4 v8, -0x1
 
-    .line 585
     invoke-virtual {p1, v2}, Landroid/view/MotionEvent;->getToolType(I)I
 
     move-result v6
@@ -505,23 +465,19 @@
 
     move v2, v3
 
-    .line 586
     .local v2, "isMouse":Z
     :cond_0
     const/4 v1, 0x0
 
-    .line 587
     .local v1, "isConsume":Z
     iput v8, p0, Lcom/android/internal/policy/impl/SubPhoneWindow$ResizeHelper;->mHoverIcon:I
 
-    .line 589
     invoke-virtual {p1}, Landroid/view/MotionEvent;->getAction()I
 
     move-result v6
 
     packed-switch v6, :pswitch_data_0
 
-    .line 631
     :goto_0
     :pswitch_0
     :try_start_0
@@ -529,10 +485,8 @@
 
     if-lez v3, :cond_1
 
-    .line 632
     if-eqz v2, :cond_c
 
-    .line 633
     iget v3, p0, Lcom/android/internal/policy/impl/SubPhoneWindow$ResizeHelper;->mHoverIcon:I
 
     const/4 v4, -0x1
@@ -541,18 +495,15 @@
     :try_end_0
     .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 644
     :cond_1
     :goto_1
     return v1
 
-    .line 591
     :pswitch_1
     iget-object v6, p0, Lcom/android/internal/policy/impl/SubPhoneWindow$ResizeHelper;->mTouchEdgeInspector:Lcom/android/internal/policy/impl/multiwindow/EdgeInspector;
 
     invoke-virtual {v6}, Lcom/android/internal/policy/impl/multiwindow/EdgeInspector;->clear()V
 
-    .line 592
     iget-object v6, p0, Lcom/android/internal/policy/impl/SubPhoneWindow$ResizeHelper;->mTouchEdgeInspector:Lcom/android/internal/policy/impl/multiwindow/EdgeInspector;
 
     iget-object v7, p0, Lcom/android/internal/policy/impl/SubPhoneWindow$ResizeHelper;->mResizeBounds:Landroid/graphics/Rect;
@@ -561,7 +512,6 @@
 
     invoke-virtual {v6, v7, v8}, Lcom/android/internal/policy/impl/multiwindow/EdgeInspector;->set(Landroid/graphics/Rect;Landroid/graphics/Rect;)V
 
-    .line 593
     iget-object v6, p0, Lcom/android/internal/policy/impl/SubPhoneWindow$ResizeHelper;->mContext:Landroid/content/Context;
 
     invoke-virtual {v6}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
@@ -576,14 +526,12 @@
 
     packed-switch v6, :pswitch_data_1
 
-    .line 604
     :goto_2
     :pswitch_2
     iget-object v6, p0, Lcom/android/internal/policy/impl/SubPhoneWindow$ResizeHelper;->mTouchEdgeInspector:Lcom/android/internal/policy/impl/multiwindow/EdgeInspector;
 
     invoke-virtual {v6}, Lcom/android/internal/policy/impl/multiwindow/EdgeInspector;->clear()V
 
-    .line 605
     iget-object v6, p0, Lcom/android/internal/policy/impl/SubPhoneWindow$ResizeHelper;->mTouchEdgeInspector:Lcom/android/internal/policy/impl/multiwindow/EdgeInspector;
 
     invoke-virtual {p1}, Landroid/view/MotionEvent;->getRawXForScaledWindow()F
@@ -600,7 +548,6 @@
 
     invoke-virtual {v6, v7, v8}, Lcom/android/internal/policy/impl/multiwindow/EdgeInspector;->check(II)V
 
-    .line 607
     iget-object v6, p0, Lcom/android/internal/policy/impl/SubPhoneWindow$ResizeHelper;->mTouchEdgeInspector:Lcom/android/internal/policy/impl/multiwindow/EdgeInspector;
 
     invoke-virtual {v6}, Lcom/android/internal/policy/impl/multiwindow/EdgeInspector;->isCorner()Z
@@ -615,7 +562,6 @@
 
     if-nez v6, :cond_9
 
-    .line 608
     iget-object v3, p0, Lcom/android/internal/policy/impl/SubPhoneWindow$ResizeHelper;->mTouchEdgeInspector:Lcom/android/internal/policy/impl/multiwindow/EdgeInspector;
 
     const/4 v6, 0x6
@@ -626,7 +572,6 @@
 
     if-eqz v3, :cond_3
 
-    .line 609
     if-eqz v2, :cond_2
 
     const/16 v3, 0x6d
@@ -634,12 +579,10 @@
     :goto_3
     iput v3, p0, Lcom/android/internal/policy/impl/SubPhoneWindow$ResizeHelper;->mHoverIcon:I
 
-    .line 610
     const/4 v1, 0x1
 
     goto :goto_0
 
-    .line 595
     :pswitch_3
     iget-object v6, p0, Lcom/android/internal/policy/impl/SubPhoneWindow$ResizeHelper;->mTouchEdgeInspector:Lcom/android/internal/policy/impl/multiwindow/EdgeInspector;
 
@@ -649,7 +592,6 @@
 
     goto :goto_2
 
-    .line 598
     :pswitch_4
     iget-object v6, p0, Lcom/android/internal/policy/impl/SubPhoneWindow$ResizeHelper;->mTouchEdgeInspector:Lcom/android/internal/policy/impl/multiwindow/EdgeInspector;
 
@@ -662,10 +604,8 @@
     :cond_2
     move v3, v4
 
-    .line 609
     goto :goto_3
 
-    .line 611
     :cond_3
     iget-object v3, p0, Lcom/android/internal/policy/impl/SubPhoneWindow$ResizeHelper;->mTouchEdgeInspector:Lcom/android/internal/policy/impl/multiwindow/EdgeInspector;
 
@@ -677,7 +617,6 @@
 
     if-eqz v3, :cond_5
 
-    .line 612
     if-eqz v2, :cond_4
 
     const/16 v3, 0x6c
@@ -685,7 +624,6 @@
     :goto_4
     iput v3, p0, Lcom/android/internal/policy/impl/SubPhoneWindow$ResizeHelper;->mHoverIcon:I
 
-    .line 613
     const/4 v1, 0x1
 
     goto :goto_0
@@ -693,10 +631,8 @@
     :cond_4
     move v3, v5
 
-    .line 612
     goto :goto_4
 
-    .line 614
     :cond_5
     iget-object v3, p0, Lcom/android/internal/policy/impl/SubPhoneWindow$ResizeHelper;->mTouchEdgeInspector:Lcom/android/internal/policy/impl/multiwindow/EdgeInspector;
 
@@ -708,7 +644,6 @@
 
     if-eqz v3, :cond_7
 
-    .line 615
     if-eqz v2, :cond_6
 
     const/16 v5, 0x6c
@@ -716,12 +651,10 @@
     :cond_6
     iput v5, p0, Lcom/android/internal/policy/impl/SubPhoneWindow$ResizeHelper;->mHoverIcon:I
 
-    .line 616
     const/4 v1, 0x1
 
     goto/16 :goto_0
 
-    .line 618
     :cond_7
     if-eqz v2, :cond_8
 
@@ -730,12 +663,10 @@
     :cond_8
     iput v4, p0, Lcom/android/internal/policy/impl/SubPhoneWindow$ResizeHelper;->mHoverIcon:I
 
-    .line 619
     const/4 v1, 0x1
 
     goto/16 :goto_0
 
-    .line 622
     :cond_9
     if-eqz v2, :cond_a
 
@@ -746,7 +677,6 @@
 
     goto/16 :goto_0
 
-    .line 626
     :pswitch_5
     if-eqz v2, :cond_b
 
@@ -757,7 +687,6 @@
 
     goto/16 :goto_0
 
-    .line 635
     :cond_c
     :try_start_1
     iget v3, p0, Lcom/android/internal/policy/impl/SubPhoneWindow$ResizeHelper;->mHoverIcon:I
@@ -770,11 +699,9 @@
 
     goto/16 :goto_1
 
-    .line 639
     :catch_0
     move-exception v0
 
-    .line 640
     .local v0, "e":Landroid/os/RemoteException;
     const-string v3, "ResizeHelper"
 
@@ -800,7 +727,6 @@
 
     goto/16 :goto_1
 
-    .line 589
     :pswitch_data_0
     .packed-switch 0x7
         :pswitch_2
@@ -809,7 +735,6 @@
         :pswitch_5
     .end packed-switch
 
-    .line 593
     :pswitch_data_1
     .packed-switch 0x1
         :pswitch_3
@@ -824,39 +749,31 @@
     .prologue
     const/4 v3, 0x0
 
-    .line 561
     iget-object v0, p0, Lcom/android/internal/policy/impl/SubPhoneWindow$ResizeHelper;->mGuideView:Lcom/samsung/android/multiwindow/ui/GuideView;
 
     if-eqz v0, :cond_0
 
-    .line 562
     iget-object v0, p0, Lcom/android/internal/policy/impl/SubPhoneWindow$ResizeHelper;->mGuideView:Lcom/samsung/android/multiwindow/ui/GuideView;
 
     invoke-virtual {v0}, Lcom/samsung/android/multiwindow/ui/GuideView;->dismiss()V
 
-    .line 565
     :cond_0
     iget-boolean v0, p0, Lcom/android/internal/policy/impl/SubPhoneWindow$ResizeHelper;->mMoving:Z
 
     if-nez v0, :cond_1
 
-    .line 566
     iput-object v3, p0, Lcom/android/internal/policy/impl/SubPhoneWindow$ResizeHelper;->mGuideView:Lcom/samsung/android/multiwindow/ui/GuideView;
 
-    .line 567
     const/4 v0, 0x0
 
-    .line 578
     :goto_0
     return v0
 
-    .line 570
     :cond_1
     iget-object v0, p0, Lcom/android/internal/policy/impl/SubPhoneWindow$ResizeHelper;->mGuideView:Lcom/samsung/android/multiwindow/ui/GuideView;
 
     if-eqz v0, :cond_2
 
-    .line 571
     const-string v0, "ResizeHelper"
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -885,13 +802,11 @@
 
     invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 574
     :cond_2
     iget-object v0, p0, Lcom/android/internal/policy/impl/SubPhoneWindow$ResizeHelper;->mGuideView:Lcom/samsung/android/multiwindow/ui/GuideView;
 
     if-eqz v0, :cond_3
 
-    .line 575
     iget-object v0, p0, Lcom/android/internal/policy/impl/SubPhoneWindow$ResizeHelper;->mListener:Lcom/android/internal/policy/impl/SubPhoneWindow$ResizeHelper$Listener;
 
     iget-object v1, p0, Lcom/android/internal/policy/impl/SubPhoneWindow$ResizeHelper;->mGuideView:Lcom/samsung/android/multiwindow/ui/GuideView;
@@ -902,10 +817,8 @@
 
     invoke-interface {v0, v1}, Lcom/android/internal/policy/impl/SubPhoneWindow$ResizeHelper$Listener;->onResizeFinish(Landroid/graphics/Rect;)V
 
-    .line 576
     iput-object v3, p0, Lcom/android/internal/policy/impl/SubPhoneWindow$ResizeHelper;->mGuideView:Lcom/samsung/android/multiwindow/ui/GuideView;
 
-    .line 578
     :cond_3
     const/4 v0, 0x1
 
@@ -916,7 +829,6 @@
     .locals 1
 
     .prologue
-    .line 463
     iget-boolean v0, p0, Lcom/android/internal/policy/impl/SubPhoneWindow$ResizeHelper;->mMoving:Z
 
     return v0
@@ -937,12 +849,10 @@
 
     const/4 v4, 0x0
 
-    .line 493
     iget-boolean v6, p0, Lcom/android/internal/policy/impl/SubPhoneWindow$ResizeHelper;->mMoving:Z
 
     if-nez v6, :cond_1
 
-    .line 494
     iget-object v5, p0, Lcom/android/internal/policy/impl/SubPhoneWindow$ResizeHelper;->mTouchEdgeInspector:Lcom/android/internal/policy/impl/multiwindow/EdgeInspector;
 
     invoke-virtual {v5}, Lcom/android/internal/policy/impl/multiwindow/EdgeInspector;->isCandidate()Z
@@ -951,7 +861,6 @@
 
     if-eqz v5, :cond_0
 
-    .line 495
     invoke-virtual {p1}, Landroid/view/MotionEvent;->getRawXForScaledWindow()F
 
     move-result v5
@@ -960,7 +869,6 @@
 
     iput v5, p0, Lcom/android/internal/policy/impl/SubPhoneWindow$ResizeHelper;->mBeginX:I
 
-    .line 496
     invoke-virtual {p1}, Landroid/view/MotionEvent;->getRawYForScaledWindow()F
 
     move-result v5
@@ -969,7 +877,6 @@
 
     iput v5, p0, Lcom/android/internal/policy/impl/SubPhoneWindow$ResizeHelper;->mBeginY:I
 
-    .line 497
     iget-object v5, p0, Lcom/android/internal/policy/impl/SubPhoneWindow$ResizeHelper;->mTouchEdgeInspector:Lcom/android/internal/policy/impl/multiwindow/EdgeInspector;
 
     iget v6, p0, Lcom/android/internal/policy/impl/SubPhoneWindow$ResizeHelper;->mBeginX:I
@@ -978,7 +885,6 @@
 
     invoke-virtual {v5, v6, v7}, Lcom/android/internal/policy/impl/multiwindow/EdgeInspector;->check(II)V
 
-    .line 499
     iget-object v5, p0, Lcom/android/internal/policy/impl/SubPhoneWindow$ResizeHelper;->mTouchEdgeInspector:Lcom/android/internal/policy/impl/multiwindow/EdgeInspector;
 
     invoke-virtual {v5}, Lcom/android/internal/policy/impl/multiwindow/EdgeInspector;->isCorner()Z
@@ -989,26 +895,21 @@
 
     if-eqz v5, :cond_0
 
-    .line 501
     const-string v5, "TAG"
 
     const-string v6, "Start to resize."
 
     invoke-static {v5, v6}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 503
     invoke-direct {p0}, Lcom/android/internal/policy/impl/SubPhoneWindow$ResizeHelper;->initGuideView()V
 
-    .line 557
     :cond_0
     :goto_0
     return v4
 
-    .line 509
     :cond_1
     const/4 v0, 0x0
 
-    .line 510
     .local v0, "dx":I
     iget-object v6, p0, Lcom/android/internal/policy/impl/SubPhoneWindow$ResizeHelper;->mTouchEdgeInspector:Lcom/android/internal/policy/impl/multiwindow/EdgeInspector;
 
@@ -1018,7 +919,6 @@
 
     if-eqz v6, :cond_6
 
-    .line 511
     iget v6, p0, Lcom/android/internal/policy/impl/SubPhoneWindow$ResizeHelper;->mBeginX:I
 
     invoke-virtual {p1}, Landroid/view/MotionEvent;->getRawXForScaledWindow()F
@@ -1029,7 +929,6 @@
 
     sub-int v0, v6, v7
 
-    .line 519
     :cond_2
     :goto_1
     iget-object v6, p0, Lcom/android/internal/policy/impl/SubPhoneWindow$ResizeHelper;->mContentsBounds:Landroid/graphics/Rect;
@@ -1040,7 +939,6 @@
 
     add-int v3, v6, v0
 
-    .line 520
     .local v3, "width":I
     iget-object v6, p0, Lcom/android/internal/policy/impl/SubPhoneWindow$ResizeHelper;->mContentsBounds:Landroid/graphics/Rect;
 
@@ -1065,7 +963,6 @@
     :cond_3
     move v2, v5
 
-    .line 522
     .local v2, "lastBoundIsMax":Z
     :goto_2
     int-to-float v6, v3
@@ -1078,16 +975,13 @@
 
     move-result v1
 
-    .line 525
     .local v1, "height":I
     iget v6, p0, Lcom/android/internal/policy/impl/SubPhoneWindow$ResizeHelper;->mMinWidth:I
 
     if-ge v3, v6, :cond_a
 
-    .line 526
     iget v3, p0, Lcom/android/internal/policy/impl/SubPhoneWindow$ResizeHelper;->mMinWidth:I
 
-    .line 527
     int-to-float v6, v3
 
     iget v7, p0, Lcom/android/internal/policy/impl/SubPhoneWindow$ResizeHelper;->mFixedRatio:F
@@ -1098,12 +992,10 @@
 
     move-result v1
 
-    .line 528
     iget-object v6, p0, Lcom/android/internal/policy/impl/SubPhoneWindow$ResizeHelper;->mGuideView:Lcom/samsung/android/multiwindow/ui/GuideView;
 
     invoke-virtual {v6, v5}, Lcom/samsung/android/multiwindow/ui/GuideView;->setGuideState(I)V
 
-    .line 545
     :goto_3
     invoke-static {}, Landroid/hardware/display/DisplayManagerGlobal;->getInstance()Landroid/hardware/display/DisplayManagerGlobal;
 
@@ -1129,7 +1021,6 @@
 
     if-ne v1, v6, :cond_d
 
-    .line 547
     :cond_4
     iget-object v6, p0, Lcom/android/internal/policy/impl/SubPhoneWindow$ResizeHelper;->mGuideView:Lcom/samsung/android/multiwindow/ui/GuideView;
 
@@ -1139,10 +1030,8 @@
     :goto_4
     move v4, v5
 
-    .line 557
     goto :goto_0
 
-    .line 512
     .end local v1    # "height":I
     .end local v2    # "lastBoundIsMax":Z
     .end local v3    # "width":I
@@ -1155,7 +1044,6 @@
 
     if-eqz v6, :cond_7
 
-    .line 513
     invoke-virtual {p1}, Landroid/view/MotionEvent;->getRawXForScaledWindow()F
 
     move-result v6
@@ -1168,7 +1056,6 @@
 
     goto :goto_1
 
-    .line 514
     :cond_7
     iget-object v6, p0, Lcom/android/internal/policy/impl/SubPhoneWindow$ResizeHelper;->mTouchEdgeInspector:Lcom/android/internal/policy/impl/multiwindow/EdgeInspector;
 
@@ -1178,7 +1065,6 @@
 
     if-eqz v6, :cond_8
 
-    .line 515
     iget v6, p0, Lcom/android/internal/policy/impl/SubPhoneWindow$ResizeHelper;->mBeginX:I
 
     invoke-virtual {p1}, Landroid/view/MotionEvent;->getRawXForScaledWindow()F
@@ -1191,7 +1077,6 @@
 
     goto :goto_1
 
-    .line 516
     :cond_8
     iget-object v6, p0, Lcom/android/internal/policy/impl/SubPhoneWindow$ResizeHelper;->mTouchEdgeInspector:Lcom/android/internal/policy/impl/multiwindow/EdgeInspector;
 
@@ -1203,7 +1088,6 @@
 
     if-eqz v6, :cond_2
 
-    .line 517
     invoke-virtual {p1}, Landroid/view/MotionEvent;->getRawXForScaledWindow()F
 
     move-result v6
@@ -1220,10 +1104,8 @@
     :cond_9
     move v2, v4
 
-    .line 520
     goto :goto_2
 
-    .line 530
     .restart local v1    # "height":I
     .restart local v2    # "lastBoundIsMax":Z
     :cond_a
@@ -1231,10 +1113,8 @@
 
     if-le v3, v6, :cond_c
 
-    .line 531
     if-eqz v2, :cond_b
 
-    .line 532
     invoke-static {}, Landroid/hardware/display/DisplayManagerGlobal;->getInstance()Landroid/hardware/display/DisplayManagerGlobal;
 
     move-result-object v6
@@ -1245,7 +1125,6 @@
 
     iget v3, v6, Landroid/view/DisplayInfo;->appWidth:I
 
-    .line 533
     invoke-static {}, Landroid/hardware/display/DisplayManagerGlobal;->getInstance()Landroid/hardware/display/DisplayManagerGlobal;
 
     move-result-object v6
@@ -1256,7 +1135,6 @@
 
     iget v1, v6, Landroid/view/DisplayInfo;->appHeight:I
 
-    .line 534
     iget-object v6, p0, Lcom/android/internal/policy/impl/SubPhoneWindow$ResizeHelper;->mGuideView:Lcom/samsung/android/multiwindow/ui/GuideView;
 
     const/4 v7, 0x2
@@ -1265,11 +1143,9 @@
 
     goto :goto_3
 
-    .line 537
     :cond_b
     iget v3, p0, Lcom/android/internal/policy/impl/SubPhoneWindow$ResizeHelper;->mMaxWidth:I
 
-    .line 538
     int-to-float v6, v3
 
     iget v7, p0, Lcom/android/internal/policy/impl/SubPhoneWindow$ResizeHelper;->mFixedRatio:F
@@ -1282,7 +1158,6 @@
 
     goto/16 :goto_3
 
-    .line 541
     :cond_c
     iget-object v6, p0, Lcom/android/internal/policy/impl/SubPhoneWindow$ResizeHelper;->mGuideView:Lcom/samsung/android/multiwindow/ui/GuideView;
 
@@ -1290,7 +1165,6 @@
 
     goto/16 :goto_3
 
-    .line 548
     :cond_d
     iget-object v4, p0, Lcom/android/internal/policy/impl/SubPhoneWindow$ResizeHelper;->mTouchEdgeInspector:Lcom/android/internal/policy/impl/multiwindow/EdgeInspector;
 
@@ -1300,7 +1174,6 @@
 
     if-eqz v4, :cond_e
 
-    .line 549
     iget-object v4, p0, Lcom/android/internal/policy/impl/SubPhoneWindow$ResizeHelper;->mGuideView:Lcom/samsung/android/multiwindow/ui/GuideView;
 
     iget-object v6, p0, Lcom/android/internal/policy/impl/SubPhoneWindow$ResizeHelper;->mContentsBounds:Landroid/graphics/Rect;
@@ -1319,7 +1192,6 @@
 
     goto/16 :goto_4
 
-    .line 550
     :cond_e
     iget-object v4, p0, Lcom/android/internal/policy/impl/SubPhoneWindow$ResizeHelper;->mTouchEdgeInspector:Lcom/android/internal/policy/impl/multiwindow/EdgeInspector;
 
@@ -1329,7 +1201,6 @@
 
     if-eqz v4, :cond_f
 
-    .line 551
     iget-object v4, p0, Lcom/android/internal/policy/impl/SubPhoneWindow$ResizeHelper;->mGuideView:Lcom/samsung/android/multiwindow/ui/GuideView;
 
     iget-object v6, p0, Lcom/android/internal/policy/impl/SubPhoneWindow$ResizeHelper;->mContentsBounds:Landroid/graphics/Rect;
@@ -1346,7 +1217,6 @@
 
     goto/16 :goto_4
 
-    .line 552
     :cond_f
     iget-object v4, p0, Lcom/android/internal/policy/impl/SubPhoneWindow$ResizeHelper;->mTouchEdgeInspector:Lcom/android/internal/policy/impl/multiwindow/EdgeInspector;
 
@@ -1356,7 +1226,6 @@
 
     if-eqz v4, :cond_10
 
-    .line 553
     iget-object v4, p0, Lcom/android/internal/policy/impl/SubPhoneWindow$ResizeHelper;->mGuideView:Lcom/samsung/android/multiwindow/ui/GuideView;
 
     iget-object v6, p0, Lcom/android/internal/policy/impl/SubPhoneWindow$ResizeHelper;->mContentsBounds:Landroid/graphics/Rect;
@@ -1373,7 +1242,6 @@
 
     goto/16 :goto_4
 
-    .line 554
     :cond_10
     iget-object v4, p0, Lcom/android/internal/policy/impl/SubPhoneWindow$ResizeHelper;->mTouchEdgeInspector:Lcom/android/internal/policy/impl/multiwindow/EdgeInspector;
 
@@ -1385,7 +1253,6 @@
 
     if-eqz v4, :cond_5
 
-    .line 555
     iget-object v4, p0, Lcom/android/internal/policy/impl/SubPhoneWindow$ResizeHelper;->mGuideView:Lcom/samsung/android/multiwindow/ui/GuideView;
 
     iget-object v6, p0, Lcom/android/internal/policy/impl/SubPhoneWindow$ResizeHelper;->mContentsBounds:Landroid/graphics/Rect;
@@ -1412,12 +1279,10 @@
     .param p7, "maxHeight"    # I
 
     .prologue
-    .line 436
     if-eqz p1, :cond_0
 
     if-nez p2, :cond_1
 
-    .line 437
     :cond_0
     const-string v0, "ResizeHelper"
 
@@ -1451,7 +1316,6 @@
 
     invoke-static {v0, v1}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 438
     new-instance v0, Ljava/lang/IllegalArgumentException;
 
     const-string v1, "The parameter was wrong."
@@ -1460,7 +1324,6 @@
 
     throw v0
 
-    .line 441
     :cond_1
     const-string v0, "ResizeHelper"
 
@@ -1494,38 +1357,29 @@
 
     invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 444
     iget-object v0, p0, Lcom/android/internal/policy/impl/SubPhoneWindow$ResizeHelper;->mContentsBounds:Landroid/graphics/Rect;
 
     invoke-virtual {v0, p1}, Landroid/graphics/Rect;->set(Landroid/graphics/Rect;)V
 
-    .line 445
     iget-object v0, p0, Lcom/android/internal/policy/impl/SubPhoneWindow$ResizeHelper;->mResizeBounds:Landroid/graphics/Rect;
 
     invoke-virtual {v0, p2}, Landroid/graphics/Rect;->set(Landroid/graphics/Rect;)V
 
-    .line 446
     if-eqz p3, :cond_2
 
-    .line 447
     iget-object v0, p0, Lcom/android/internal/policy/impl/SubPhoneWindow$ResizeHelper;->mPaddingRect:Landroid/graphics/Rect;
 
     invoke-virtual {v0, p3}, Landroid/graphics/Rect;->set(Landroid/graphics/Rect;)V
 
-    .line 452
     :goto_0
     iput p4, p0, Lcom/android/internal/policy/impl/SubPhoneWindow$ResizeHelper;->mMinWidth:I
 
-    .line 453
     iput p5, p0, Lcom/android/internal/policy/impl/SubPhoneWindow$ResizeHelper;->mMinHeight:I
 
-    .line 455
     iput p6, p0, Lcom/android/internal/policy/impl/SubPhoneWindow$ResizeHelper;->mMaxWidth:I
 
-    .line 456
     iput p7, p0, Lcom/android/internal/policy/impl/SubPhoneWindow$ResizeHelper;->mMaxHeight:I
 
-    .line 458
     iget-object v0, p0, Lcom/android/internal/policy/impl/SubPhoneWindow$ResizeHelper;->mContentsBounds:Landroid/graphics/Rect;
 
     invoke-virtual {v0}, Landroid/graphics/Rect;->width()I
@@ -1546,10 +1400,8 @@
 
     iput v0, p0, Lcom/android/internal/policy/impl/SubPhoneWindow$ResizeHelper;->mFixedRatio:F
 
-    .line 460
     return-void
 
-    .line 449
     :cond_2
     iget-object v0, p0, Lcom/android/internal/policy/impl/SubPhoneWindow$ResizeHelper;->mPaddingRect:Landroid/graphics/Rect;
 

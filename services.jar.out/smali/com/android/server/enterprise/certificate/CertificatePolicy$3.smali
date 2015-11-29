@@ -23,7 +23,6 @@
     .locals 0
 
     .prologue
-    .line 1781
     iput-object p1, p0, Lcom/android/server/enterprise/certificate/CertificatePolicy$3;->this$0:Lcom/android/server/enterprise/certificate/CertificatePolicy;
 
     invoke-direct {p0}, Ljava/lang/Thread;-><init>()V
@@ -37,12 +36,10 @@
     .locals 5
 
     .prologue
-    .line 1783
     invoke-static {}, Landroid/os/Binder;->clearCallingIdentity()J
 
     move-result-wide v0
 
-    .line 1784
     .local v0, "token":J
     iget-object v2, p0, Lcom/android/server/enterprise/certificate/CertificatePolicy$3;->this$0:Lcom/android/server/enterprise/certificate/CertificatePolicy;
 
@@ -62,9 +59,7 @@
 
     invoke-virtual {v2, v3, v4}, Landroid/content/Context;->sendBroadcast(Landroid/content/Intent;Ljava/lang/String;)V
 
-    .line 1785
     invoke-static {v0, v1}, Landroid/os/Binder;->restoreCallingIdentity(J)V
 
-    .line 1786
     return-void
 .end method

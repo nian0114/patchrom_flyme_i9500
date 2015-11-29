@@ -26,7 +26,6 @@
     .locals 0
 
     .prologue
-    .line 854
     iput-object p1, p0, Lcom/android/server/smartclip/SpenGestureManagerService$6;->this$0:Lcom/android/server/smartclip/SpenGestureManagerService;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -43,10 +42,8 @@
     .param p3, "data"    # Ljava/lang/Object;
 
     .prologue
-    .line 861
     const/4 v7, 0x0
 
-    .line 862
     .local v7, "intent":Landroid/content/Intent;
     move-object/from16 v0, p0
 
@@ -57,7 +54,6 @@
 
     move-result-object v2
 
-    .line 863
     .local v2, "currentTopMostActivity":Ljava/lang/String;
     # getter for: Lcom/android/server/smartclip/SpenGestureManagerService;->TAG:Ljava/lang/String;
     invoke-static {}, Lcom/android/server/smartclip/SpenGestureManagerService;->access$000()Ljava/lang/String;
@@ -84,7 +80,6 @@
 
     invoke-static {v13, v14}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 865
     new-instance v5, Landroid/content/Intent;
 
     # getter for: Lcom/android/server/smartclip/SpenGestureManagerService;->GLOBAL_AIR_COMMAND_SELECTED_FOR_ACTIONMEMO:Ljava/lang/String;
@@ -94,7 +89,6 @@
 
     invoke-direct {v5, v13}, Landroid/content/Intent;-><init>(Ljava/lang/String;)V
 
-    .line 866
     .local v5, "gacIntentActionMemo":Landroid/content/Intent;
     new-instance v6, Landroid/content/Intent;
 
@@ -105,22 +99,18 @@
 
     invoke-direct {v6, v13}, Landroid/content/Intent;-><init>(Ljava/lang/String;)V
 
-    .line 868
     .local v6, "gacIntentRakeInService":Landroid/content/Intent;
     invoke-static {}, Landroid/app/ActivityManager;->getCurrentUser()I
 
     move-result v9
 
-    .line 870
     .local v9, "personID":I
     packed-switch p2, :pswitch_data_0
 
-    .line 1104
     :cond_0
     :goto_0
     return-void
 
-    .line 872
     :pswitch_0
     # getter for: Lcom/android/server/smartclip/SpenGestureManagerService;->TAG:Ljava/lang/String;
     invoke-static {}, Lcom/android/server/smartclip/SpenGestureManagerService;->access$000()Ljava/lang/String;
@@ -131,17 +121,15 @@
 
     invoke-static {v13, v14}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 873
     const/4 v8, 0x0
 
-    .line 875
     .local v8, "isCallState":Z
     # getter for: Lcom/android/server/smartclip/SpenGestureManagerService;->mContext:Landroid/content/Context;
     invoke-static {}, Lcom/android/server/smartclip/SpenGestureManagerService;->access$500()Landroid/content/Context;
 
     move-result-object v13
 
-    const-string/jumbo v14, "phone"
+    const-string v14, "phone"
 
     invoke-virtual {v13, v14}, Landroid/content/Context;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
 
@@ -149,15 +137,12 @@
 
     check-cast v11, Landroid/telephony/TelephonyManager;
 
-    .line 880
     .local v11, "tmgr":Landroid/telephony/TelephonyManager;
     const/4 v12, 0x0
 
-    .line 882
     .local v12, "tmgr2":Landroid/telephony/TelephonyManager;
     if-eqz v12, :cond_2
 
-    .line 883
     invoke-virtual {v12}, Landroid/telephony/TelephonyManager;->getCallState()I
 
     move-result v13
@@ -177,12 +162,10 @@
     :cond_1
     const/4 v8, 0x1
 
-    .line 886
     :cond_2
     :goto_1
     if-eqz v11, :cond_4
 
-    .line 887
     if-nez v8, :cond_3
 
     invoke-virtual {v11}, Landroid/telephony/TelephonyManager;->getCallState()I
@@ -204,12 +187,10 @@
     :cond_3
     const/4 v8, 0x1
 
-    .line 892
     :cond_4
     :goto_2
     if-eqz v8, :cond_8
 
-    .line 893
     move-object/from16 v0, p0
 
     iget-object v13, v0, Lcom/android/server/smartclip/SpenGestureManagerService$6;->this$0:Lcom/android/server/smartclip/SpenGestureManagerService;
@@ -223,7 +204,6 @@
 
     if-ne v13, v14, :cond_7
 
-    .line 894
     # getter for: Lcom/android/server/smartclip/SpenGestureManagerService;->mContext:Landroid/content/Context;
     invoke-static {}, Lcom/android/server/smartclip/SpenGestureManagerService;->access$500()Landroid/content/Context;
 
@@ -237,15 +217,13 @@
 
     invoke-virtual {v13, v14}, Landroid/content/Context;->sendBroadcast(Landroid/content/Intent;)V
 
-    .line 901
     :goto_3
-    const-string/jumbo v13, "selectIndex"
+    const-string v13, "selectIndex"
 
     const/4 v14, 0x0
 
     invoke-virtual {v6, v13, v14}, Landroid/content/Intent;->putExtra(Ljava/lang/String;I)Landroid/content/Intent;
 
-    .line 902
     # getter for: Lcom/android/server/smartclip/SpenGestureManagerService;->mContext:Landroid/content/Context;
     invoke-static {}, Lcom/android/server/smartclip/SpenGestureManagerService;->access$500()Landroid/content/Context;
 
@@ -255,7 +233,6 @@
 
     invoke-virtual {v13, v6, v14}, Landroid/content/Context;->sendBroadcastAsUser(Landroid/content/Intent;Landroid/os/UserHandle;)V
 
-    .line 904
     # getter for: Lcom/android/server/smartclip/SpenGestureManagerService;->mAirCommandItemLoggingEnabled:Z
     invoke-static {}, Lcom/android/server/smartclip/SpenGestureManagerService;->access$2400()Z
 
@@ -263,7 +240,6 @@
 
     if-eqz v13, :cond_0
 
-    .line 905
     move-object/from16 v0, p0
 
     iget-object v13, v0, Lcom/android/server/smartclip/SpenGestureManagerService$6;->this$0:Lcom/android/server/smartclip/SpenGestureManagerService;
@@ -275,19 +251,16 @@
 
     goto :goto_0
 
-    .line 883
     :cond_5
     const/4 v8, 0x0
 
     goto :goto_1
 
-    .line 887
     :cond_6
     const/4 v8, 0x0
 
     goto :goto_2
 
-    .line 896
     :cond_7
     # getter for: Lcom/android/server/smartclip/SpenGestureManagerService;->mContext:Landroid/content/Context;
     invoke-static {}, Lcom/android/server/smartclip/SpenGestureManagerService;->access$500()Landroid/content/Context;
@@ -313,7 +286,6 @@
 
     goto :goto_3
 
-    .line 898
     :cond_8
     # getter for: Lcom/android/server/smartclip/SpenGestureManagerService;->mContext:Landroid/content/Context;
     invoke-static {}, Lcom/android/server/smartclip/SpenGestureManagerService;->access$500()Landroid/content/Context;
@@ -339,7 +311,6 @@
 
     goto :goto_3
 
-    .line 909
     .end local v8    # "isCallState":Z
     .end local v11    # "tmgr":Landroid/telephony/TelephonyManager;
     .end local v12    # "tmgr2":Landroid/telephony/TelephonyManager;
@@ -353,7 +324,6 @@
 
     invoke-static {v13, v14}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 911
     move-object/from16 v0, p0
 
     iget-object v13, v0, Lcom/android/server/smartclip/SpenGestureManagerService$6;->this$0:Lcom/android/server/smartclip/SpenGestureManagerService;
@@ -365,7 +335,6 @@
 
     if-eqz v13, :cond_0
 
-    .line 915
     # getter for: Lcom/android/server/smartclip/SpenGestureManagerService;->ACTIVITY_NAME_RAKEIN_CONTENT:Ljava/lang/String;
     invoke-static {}, Lcom/android/server/smartclip/SpenGestureManagerService;->access$2700()Ljava/lang/String;
 
@@ -379,7 +348,6 @@
 
     if-ne v13, v14, :cond_9
 
-    .line 916
     # getter for: Lcom/android/server/smartclip/SpenGestureManagerService;->TAG:Ljava/lang/String;
     invoke-static {}, Lcom/android/server/smartclip/SpenGestureManagerService;->access$000()Ljava/lang/String;
 
@@ -407,7 +375,6 @@
 
     goto/16 :goto_0
 
-    .line 923
     :cond_9
     move-object/from16 v0, p0
 
@@ -424,13 +391,11 @@
 
     if-ne v13, v14, :cond_a
 
-    .line 924
     new-instance v7, Landroid/content/Intent;
 
     .end local v7    # "intent":Landroid/content/Intent;
     invoke-direct {v7}, Landroid/content/Intent;-><init>()V
 
-    .line 925
     .restart local v7    # "intent":Landroid/content/Intent;
     const-string v13, "com.sec.android.app.SmartClipService"
 
@@ -438,14 +403,12 @@
 
     invoke-virtual {v7, v13, v14}, Landroid/content/Intent;->setClassName(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;
 
-    .line 926
-    const-string/jumbo v13, "selectIndex"
+    const-string v13, "selectIndex"
 
     const/4 v14, 0x1
 
     invoke-virtual {v7, v13, v14}, Landroid/content/Intent;->putExtra(Ljava/lang/String;I)Landroid/content/Intent;
 
-    .line 927
     # getter for: Lcom/android/server/smartclip/SpenGestureManagerService;->mContext:Landroid/content/Context;
     invoke-static {}, Lcom/android/server/smartclip/SpenGestureManagerService;->access$500()Landroid/content/Context;
 
@@ -455,7 +418,6 @@
 
     invoke-virtual {v13, v7, v14}, Landroid/content/Context;->startServiceAsUser(Landroid/content/Intent;Landroid/os/UserHandle;)Landroid/content/ComponentName;
 
-    .line 929
     # getter for: Lcom/android/server/smartclip/SpenGestureManagerService;->mContext:Landroid/content/Context;
     invoke-static {}, Lcom/android/server/smartclip/SpenGestureManagerService;->access$500()Landroid/content/Context;
 
@@ -465,14 +427,12 @@
 
     invoke-virtual {v13, v5, v14}, Landroid/content/Context;->sendBroadcastAsUser(Landroid/content/Intent;Landroid/os/UserHandle;)V
 
-    .line 931
-    const-string/jumbo v13, "selectIndex"
+    const-string v13, "selectIndex"
 
     const/4 v14, 0x1
 
     invoke-virtual {v6, v13, v14}, Landroid/content/Intent;->putExtra(Ljava/lang/String;I)Landroid/content/Intent;
 
-    .line 932
     # getter for: Lcom/android/server/smartclip/SpenGestureManagerService;->mContext:Landroid/content/Context;
     invoke-static {}, Lcom/android/server/smartclip/SpenGestureManagerService;->access$500()Landroid/content/Context;
 
@@ -482,7 +442,6 @@
 
     invoke-virtual {v13, v6, v14}, Landroid/content/Context;->sendBroadcastAsUser(Landroid/content/Intent;Landroid/os/UserHandle;)V
 
-    .line 938
     :goto_4
     # getter for: Lcom/android/server/smartclip/SpenGestureManagerService;->mAirCommandItemLoggingEnabled:Z
     invoke-static {}, Lcom/android/server/smartclip/SpenGestureManagerService;->access$2400()Z
@@ -491,7 +450,6 @@
 
     if-eqz v13, :cond_0
 
-    .line 939
     move-object/from16 v0, p0
 
     iget-object v13, v0, Lcom/android/server/smartclip/SpenGestureManagerService$6;->this$0:Lcom/android/server/smartclip/SpenGestureManagerService;
@@ -503,18 +461,16 @@
 
     goto/16 :goto_0
 
-    .line 934
     :cond_a
     # getter for: Lcom/android/server/smartclip/SpenGestureManagerService;->TAG:Ljava/lang/String;
     invoke-static {}, Lcom/android/server/smartclip/SpenGestureManagerService;->access$000()Ljava/lang/String;
 
     move-result-object v13
 
-    const-string/jumbo v14, "onItemSelected : Pinboard is not installed or activated"
+    const-string v14, "onItemSelected : Pinboard is not installed or activated"
 
     invoke-static {v13, v14}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 935
     # getter for: Lcom/android/server/smartclip/SpenGestureManagerService;->mContext:Landroid/content/Context;
     invoke-static {}, Lcom/android/server/smartclip/SpenGestureManagerService;->access$500()Landroid/content/Context;
 
@@ -532,7 +488,6 @@
 
     goto :goto_4
 
-    .line 943
     :pswitch_2
     # getter for: Lcom/android/server/smartclip/SpenGestureManagerService;->TAG:Ljava/lang/String;
     invoke-static {}, Lcom/android/server/smartclip/SpenGestureManagerService;->access$000()Ljava/lang/String;
@@ -543,7 +498,6 @@
 
     invoke-static {v13, v14}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 945
     move-object/from16 v0, p0
 
     iget-object v13, v0, Lcom/android/server/smartclip/SpenGestureManagerService$6;->this$0:Lcom/android/server/smartclip/SpenGestureManagerService;
@@ -555,7 +509,6 @@
 
     if-eqz v13, :cond_0
 
-    .line 949
     # getter for: Lcom/android/server/smartclip/SpenGestureManagerService;->ACTIVITY_NAME_RAKEIN_CONTENT:Ljava/lang/String;
     invoke-static {}, Lcom/android/server/smartclip/SpenGestureManagerService;->access$2700()Ljava/lang/String;
 
@@ -569,7 +522,6 @@
 
     if-ne v13, v14, :cond_b
 
-    .line 950
     # getter for: Lcom/android/server/smartclip/SpenGestureManagerService;->TAG:Ljava/lang/String;
     invoke-static {}, Lcom/android/server/smartclip/SpenGestureManagerService;->access$000()Ljava/lang/String;
 
@@ -597,13 +549,11 @@
 
     goto/16 :goto_0
 
-    .line 954
     :cond_b
     const/16 v13, 0x64
 
     if-lt v9, v13, :cond_c
 
-    .line 955
     # getter for: Lcom/android/server/smartclip/SpenGestureManagerService;->mContext:Landroid/content/Context;
     invoke-static {}, Lcom/android/server/smartclip/SpenGestureManagerService;->access$500()Landroid/content/Context;
 
@@ -617,13 +567,11 @@
 
     move-result-object v1
 
-    .line 959
     .local v1, "cheatSheet":Landroid/widget/Toast;
     invoke-virtual {v1}, Landroid/widget/Toast;->show()V
 
     goto/16 :goto_0
 
-    .line 961
     .end local v1    # "cheatSheet":Landroid/widget/Toast;
     :cond_c
     move-object/from16 v0, p0
@@ -641,13 +589,11 @@
 
     if-ne v13, v14, :cond_d
 
-    .line 962
     new-instance v7, Landroid/content/Intent;
 
     .end local v7    # "intent":Landroid/content/Intent;
     invoke-direct {v7}, Landroid/content/Intent;-><init>()V
 
-    .line 963
     .restart local v7    # "intent":Landroid/content/Intent;
     const-string v13, "com.sec.android.app.SmartClipService"
 
@@ -655,14 +601,12 @@
 
     invoke-virtual {v7, v13, v14}, Landroid/content/Intent;->setClassName(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;
 
-    .line 964
-    const-string/jumbo v13, "selectIndex"
+    const-string v13, "selectIndex"
 
     const/4 v14, 0x7
 
     invoke-virtual {v7, v13, v14}, Landroid/content/Intent;->putExtra(Ljava/lang/String;I)Landroid/content/Intent;
 
-    .line 965
     # getter for: Lcom/android/server/smartclip/SpenGestureManagerService;->mContext:Landroid/content/Context;
     invoke-static {}, Lcom/android/server/smartclip/SpenGestureManagerService;->access$500()Landroid/content/Context;
 
@@ -672,14 +616,12 @@
 
     invoke-virtual {v13, v7, v14}, Landroid/content/Context;->startServiceAsUser(Landroid/content/Intent;Landroid/os/UserHandle;)Landroid/content/ComponentName;
 
-    .line 969
-    const-string/jumbo v13, "selectIndex"
+    const-string v13, "selectIndex"
 
     const/4 v14, 0x7
 
     invoke-virtual {v6, v13, v14}, Landroid/content/Intent;->putExtra(Ljava/lang/String;I)Landroid/content/Intent;
 
-    .line 970
     # getter for: Lcom/android/server/smartclip/SpenGestureManagerService;->mContext:Landroid/content/Context;
     invoke-static {}, Lcom/android/server/smartclip/SpenGestureManagerService;->access$500()Landroid/content/Context;
 
@@ -689,7 +631,6 @@
 
     invoke-virtual {v13, v6, v14}, Landroid/content/Context;->sendBroadcastAsUser(Landroid/content/Intent;Landroid/os/UserHandle;)V
 
-    .line 976
     :goto_5
     # getter for: Lcom/android/server/smartclip/SpenGestureManagerService;->mAirCommandItemLoggingEnabled:Z
     invoke-static {}, Lcom/android/server/smartclip/SpenGestureManagerService;->access$2400()Z
@@ -698,7 +639,6 @@
 
     if-eqz v13, :cond_0
 
-    .line 977
     move-object/from16 v0, p0
 
     iget-object v13, v0, Lcom/android/server/smartclip/SpenGestureManagerService$6;->this$0:Lcom/android/server/smartclip/SpenGestureManagerService;
@@ -710,18 +650,16 @@
 
     goto/16 :goto_0
 
-    .line 972
     :cond_d
     # getter for: Lcom/android/server/smartclip/SpenGestureManagerService;->TAG:Ljava/lang/String;
     invoke-static {}, Lcom/android/server/smartclip/SpenGestureManagerService;->access$000()Ljava/lang/String;
 
     move-result-object v13
 
-    const-string/jumbo v14, "onItemSelected : Pinboard is not installed or activated"
+    const-string v14, "onItemSelected : Pinboard is not installed or activated"
 
     invoke-static {v13, v14}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 973
     # getter for: Lcom/android/server/smartclip/SpenGestureManagerService;->mContext:Landroid/content/Context;
     invoke-static {}, Lcom/android/server/smartclip/SpenGestureManagerService;->access$500()Landroid/content/Context;
 
@@ -739,7 +677,6 @@
 
     goto :goto_5
 
-    .line 982
     :pswitch_3
     # getter for: Lcom/android/server/smartclip/SpenGestureManagerService;->TAG:Ljava/lang/String;
     invoke-static {}, Lcom/android/server/smartclip/SpenGestureManagerService;->access$000()Ljava/lang/String;
@@ -750,7 +687,6 @@
 
     invoke-static {v13, v14}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 984
     move-object/from16 v0, p0
 
     iget-object v13, v0, Lcom/android/server/smartclip/SpenGestureManagerService$6;->this$0:Lcom/android/server/smartclip/SpenGestureManagerService;
@@ -762,7 +698,6 @@
 
     if-eqz v13, :cond_0
 
-    .line 988
     # getter for: Lcom/android/server/smartclip/SpenGestureManagerService;->ACTIVITY_NAME_FLASH_ANNOTATION:Ljava/lang/String;
     invoke-static {}, Lcom/android/server/smartclip/SpenGestureManagerService;->access$2900()Ljava/lang/String;
 
@@ -776,7 +711,6 @@
 
     if-ne v13, v14, :cond_e
 
-    .line 989
     # getter for: Lcom/android/server/smartclip/SpenGestureManagerService;->TAG:Ljava/lang/String;
     invoke-static {}, Lcom/android/server/smartclip/SpenGestureManagerService;->access$000()Ljava/lang/String;
 
@@ -804,27 +738,23 @@
 
     goto/16 :goto_0
 
-    .line 993
     :cond_e
     new-instance v7, Landroid/content/Intent;
 
     .end local v7    # "intent":Landroid/content/Intent;
     invoke-direct {v7}, Landroid/content/Intent;-><init>()V
 
-    .line 994
     .restart local v7    # "intent":Landroid/content/Intent;
     const/high16 v13, 0x14000000
 
     invoke-virtual {v7, v13}, Landroid/content/Intent;->setFlags(I)Landroid/content/Intent;
 
-    .line 995
     const-string v13, "com.sec.spen.flashannotatesvc"
 
     const-string v14, "com.sec.spen.flashannotatesvc.flashannotateservice"
 
     invoke-virtual {v7, v13, v14}, Landroid/content/Intent;->setClassName(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;
 
-    .line 996
     move-object/from16 v0, p0
 
     iget-object v13, v0, Lcom/android/server/smartclip/SpenGestureManagerService$6;->this$0:Lcom/android/server/smartclip/SpenGestureManagerService;
@@ -836,7 +766,6 @@
 
     if-eqz v13, :cond_f
 
-    .line 997
     const/4 v13, 0x1
 
     move-object/from16 v0, p0
@@ -854,7 +783,6 @@
 
     if-ne v13, v14, :cond_f
 
-    .line 998
     move-object/from16 v0, p0
 
     iget-object v13, v0, Lcom/android/server/smartclip/SpenGestureManagerService$6;->this$0:Lcom/android/server/smartclip/SpenGestureManagerService;
@@ -866,7 +794,6 @@
 
     invoke-virtual {v13}, Lcom/samsung/android/airbutton/AirButtonImpl;->hide()V
 
-    .line 1001
     :cond_f
     # getter for: Lcom/android/server/smartclip/SpenGestureManagerService;->mContext:Landroid/content/Context;
     invoke-static {}, Lcom/android/server/smartclip/SpenGestureManagerService;->access$500()Landroid/content/Context;
@@ -877,14 +804,12 @@
 
     invoke-virtual {v13, v7, v14}, Landroid/content/Context;->startServiceAsUser(Landroid/content/Intent;Landroid/os/UserHandle;)Landroid/content/ComponentName;
 
-    .line 1003
-    const-string/jumbo v13, "selectIndex"
+    const-string v13, "selectIndex"
 
     const/4 v14, 0x2
 
     invoke-virtual {v6, v13, v14}, Landroid/content/Intent;->putExtra(Ljava/lang/String;I)Landroid/content/Intent;
 
-    .line 1004
     # getter for: Lcom/android/server/smartclip/SpenGestureManagerService;->mContext:Landroid/content/Context;
     invoke-static {}, Lcom/android/server/smartclip/SpenGestureManagerService;->access$500()Landroid/content/Context;
 
@@ -894,7 +819,6 @@
 
     invoke-virtual {v13, v6, v14}, Landroid/content/Context;->sendBroadcastAsUser(Landroid/content/Intent;Landroid/os/UserHandle;)V
 
-    .line 1006
     # getter for: Lcom/android/server/smartclip/SpenGestureManagerService;->mAirCommandItemLoggingEnabled:Z
     invoke-static {}, Lcom/android/server/smartclip/SpenGestureManagerService;->access$2400()Z
 
@@ -902,7 +826,6 @@
 
     if-eqz v13, :cond_0
 
-    .line 1007
     move-object/from16 v0, p0
 
     iget-object v13, v0, Lcom/android/server/smartclip/SpenGestureManagerService$6;->this$0:Lcom/android/server/smartclip/SpenGestureManagerService;
@@ -914,7 +837,6 @@
 
     goto/16 :goto_0
 
-    .line 1011
     :pswitch_4
     # getter for: Lcom/android/server/smartclip/SpenGestureManagerService;->TAG:Ljava/lang/String;
     invoke-static {}, Lcom/android/server/smartclip/SpenGestureManagerService;->access$000()Ljava/lang/String;
@@ -925,12 +847,10 @@
 
     invoke-static {v13, v14}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1013
     const/16 v13, 0x64
 
     if-lt v9, v13, :cond_10
 
-    .line 1014
     # getter for: Lcom/android/server/smartclip/SpenGestureManagerService;->mContext:Landroid/content/Context;
     invoke-static {}, Lcom/android/server/smartclip/SpenGestureManagerService;->access$500()Landroid/content/Context;
 
@@ -944,13 +864,11 @@
 
     move-result-object v1
 
-    .line 1018
     .restart local v1    # "cheatSheet":Landroid/widget/Toast;
     invoke-virtual {v1}, Landroid/widget/Toast;->show()V
 
     goto/16 :goto_0
 
-    .line 1020
     .end local v1    # "cheatSheet":Landroid/widget/Toast;
     :cond_10
     new-instance v7, Landroid/content/Intent;
@@ -958,13 +876,11 @@
     .end local v7    # "intent":Landroid/content/Intent;
     invoke-direct {v7}, Landroid/content/Intent;-><init>()V
 
-    .line 1021
     .restart local v7    # "intent":Landroid/content/Intent;
     const/high16 v13, 0x14000000
 
     invoke-virtual {v7, v13}, Landroid/content/Intent;->setFlags(I)Landroid/content/Intent;
 
-    .line 1022
     new-instance v13, Landroid/content/ComponentName;
 
     const-string v14, "com.samsung.android.app.galaxyfinder"
@@ -975,14 +891,12 @@
 
     invoke-virtual {v7, v13}, Landroid/content/Intent;->setComponent(Landroid/content/ComponentName;)Landroid/content/Intent;
 
-    .line 1023
     const-string v13, "callername"
 
     const/4 v14, 0x1
 
     invoke-virtual {v7, v13, v14}, Landroid/content/Intent;->putExtra(Ljava/lang/String;I)Landroid/content/Intent;
 
-    .line 1024
     # getter for: Lcom/android/server/smartclip/SpenGestureManagerService;->mContext:Landroid/content/Context;
     invoke-static {}, Lcom/android/server/smartclip/SpenGestureManagerService;->access$500()Landroid/content/Context;
 
@@ -992,7 +906,6 @@
 
     invoke-virtual {v13, v7, v14}, Landroid/content/Context;->startActivityAsUser(Landroid/content/Intent;Landroid/os/UserHandle;)V
 
-    .line 1026
     # getter for: Lcom/android/server/smartclip/SpenGestureManagerService;->mContext:Landroid/content/Context;
     invoke-static {}, Lcom/android/server/smartclip/SpenGestureManagerService;->access$500()Landroid/content/Context;
 
@@ -1002,14 +915,12 @@
 
     invoke-virtual {v13, v5, v14}, Landroid/content/Context;->sendBroadcastAsUser(Landroid/content/Intent;Landroid/os/UserHandle;)V
 
-    .line 1028
-    const-string/jumbo v13, "selectIndex"
+    const-string v13, "selectIndex"
 
     const/4 v14, 0x3
 
     invoke-virtual {v6, v13, v14}, Landroid/content/Intent;->putExtra(Ljava/lang/String;I)Landroid/content/Intent;
 
-    .line 1029
     # getter for: Lcom/android/server/smartclip/SpenGestureManagerService;->mContext:Landroid/content/Context;
     invoke-static {}, Lcom/android/server/smartclip/SpenGestureManagerService;->access$500()Landroid/content/Context;
 
@@ -1021,7 +932,6 @@
 
     goto/16 :goto_0
 
-    .line 1034
     :pswitch_5
     # getter for: Lcom/android/server/smartclip/SpenGestureManagerService;->TAG:Ljava/lang/String;
     invoke-static {}, Lcom/android/server/smartclip/SpenGestureManagerService;->access$000()Ljava/lang/String;
@@ -1032,12 +942,10 @@
 
     invoke-static {v13, v14}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1036
     const/16 v13, 0x64
 
     if-lt v9, v13, :cond_11
 
-    .line 1037
     # getter for: Lcom/android/server/smartclip/SpenGestureManagerService;->mContext:Landroid/content/Context;
     invoke-static {}, Lcom/android/server/smartclip/SpenGestureManagerService;->access$500()Landroid/content/Context;
 
@@ -1051,13 +959,11 @@
 
     move-result-object v1
 
-    .line 1041
     .restart local v1    # "cheatSheet":Landroid/widget/Toast;
     invoke-virtual {v1}, Landroid/widget/Toast;->show()V
 
     goto/16 :goto_0
 
-    .line 1043
     .end local v1    # "cheatSheet":Landroid/widget/Toast;
     :cond_11
     new-instance v7, Landroid/content/Intent;
@@ -1065,7 +971,6 @@
     .end local v7    # "intent":Landroid/content/Intent;
     invoke-direct {v7}, Landroid/content/Intent;-><init>()V
 
-    .line 1044
     .restart local v7    # "intent":Landroid/content/Intent;
     const-string v13, "com.sec.android.app.FlashBarService"
 
@@ -1073,21 +978,18 @@
 
     invoke-virtual {v7, v13, v14}, Landroid/content/Intent;->setClassName(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;
 
-    .line 1045
-    const-string/jumbo v13, "selectIndex"
+    const-string v13, "selectIndex"
 
     const/4 v14, 0x4
 
     invoke-virtual {v7, v13, v14}, Landroid/content/Intent;->putExtra(Ljava/lang/String;I)Landroid/content/Intent;
 
-    .line 1046
     const-string v13, "multiwindow"
 
     const/4 v14, 0x1
 
     invoke-virtual {v7, v13, v14}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Z)Landroid/content/Intent;
 
-    .line 1047
     # getter for: Lcom/android/server/smartclip/SpenGestureManagerService;->mContext:Landroid/content/Context;
     invoke-static {}, Lcom/android/server/smartclip/SpenGestureManagerService;->access$500()Landroid/content/Context;
 
@@ -1097,7 +999,6 @@
 
     invoke-virtual {v13, v7, v14}, Landroid/content/Context;->startServiceAsUser(Landroid/content/Intent;Landroid/os/UserHandle;)Landroid/content/ComponentName;
 
-    .line 1049
     # getter for: Lcom/android/server/smartclip/SpenGestureManagerService;->mContext:Landroid/content/Context;
     invoke-static {}, Lcom/android/server/smartclip/SpenGestureManagerService;->access$500()Landroid/content/Context;
 
@@ -1107,14 +1008,12 @@
 
     invoke-virtual {v13, v5, v14}, Landroid/content/Context;->sendBroadcastAsUser(Landroid/content/Intent;Landroid/os/UserHandle;)V
 
-    .line 1051
-    const-string/jumbo v13, "selectIndex"
+    const-string v13, "selectIndex"
 
     const/4 v14, 0x4
 
     invoke-virtual {v6, v13, v14}, Landroid/content/Intent;->putExtra(Ljava/lang/String;I)Landroid/content/Intent;
 
-    .line 1052
     # getter for: Lcom/android/server/smartclip/SpenGestureManagerService;->mContext:Landroid/content/Context;
     invoke-static {}, Lcom/android/server/smartclip/SpenGestureManagerService;->access$500()Landroid/content/Context;
 
@@ -1126,7 +1025,6 @@
 
     goto/16 :goto_0
 
-    .line 1057
     :pswitch_6
     # getter for: Lcom/android/server/smartclip/SpenGestureManagerService;->TAG:Ljava/lang/String;
     invoke-static {}, Lcom/android/server/smartclip/SpenGestureManagerService;->access$000()Ljava/lang/String;
@@ -1137,7 +1035,6 @@
 
     invoke-static {v13, v14}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1060
     move-object/from16 v0, p0
 
     iget-object v13, v0, Lcom/android/server/smartclip/SpenGestureManagerService$6;->this$0:Lcom/android/server/smartclip/SpenGestureManagerService;
@@ -1149,12 +1046,10 @@
 
     if-eqz v13, :cond_0
 
-    .line 1065
     const/16 v13, 0x64
 
     if-lt v9, v13, :cond_12
 
-    .line 1066
     # getter for: Lcom/android/server/smartclip/SpenGestureManagerService;->mContext:Landroid/content/Context;
     invoke-static {}, Lcom/android/server/smartclip/SpenGestureManagerService;->access$500()Landroid/content/Context;
 
@@ -1168,13 +1063,11 @@
 
     move-result-object v1
 
-    .line 1070
     .restart local v1    # "cheatSheet":Landroid/widget/Toast;
     invoke-virtual {v1}, Landroid/widget/Toast;->show()V
 
     goto/16 :goto_0
 
-    .line 1072
     .end local v1    # "cheatSheet":Landroid/widget/Toast;
     :cond_12
     # getter for: Lcom/android/server/smartclip/SpenGestureManagerService;->ACTIVITY_NAME_RESHAPE_TUTORIAL:Ljava/lang/String;
@@ -1190,7 +1083,6 @@
 
     if-ne v13, v14, :cond_13
 
-    .line 1073
     # getter for: Lcom/android/server/smartclip/SpenGestureManagerService;->TAG:Ljava/lang/String;
     invoke-static {}, Lcom/android/server/smartclip/SpenGestureManagerService;->access$000()Ljava/lang/String;
 
@@ -1216,7 +1108,6 @@
 
     invoke-static {v13, v14}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1074
     # getter for: Lcom/android/server/smartclip/SpenGestureManagerService;->mContext:Landroid/content/Context;
     invoke-static {}, Lcom/android/server/smartclip/SpenGestureManagerService;->access$500()Landroid/content/Context;
 
@@ -1228,7 +1119,6 @@
 
     move-result-object v3
 
-    .line 1075
     .local v3, "easyClip":Ljava/lang/String;
     # getter for: Lcom/android/server/smartclip/SpenGestureManagerService;->mContext:Landroid/content/Context;
     invoke-static {}, Lcom/android/server/smartclip/SpenGestureManagerService;->access$500()Landroid/content/Context;
@@ -1249,7 +1139,6 @@
 
     move-result-object v4
 
-    .line 1076
     .local v4, "easyClipRunning":Ljava/lang/String;
     # getter for: Lcom/android/server/smartclip/SpenGestureManagerService;->mContext:Landroid/content/Context;
     invoke-static {}, Lcom/android/server/smartclip/SpenGestureManagerService;->access$500()Landroid/content/Context;
@@ -1266,7 +1155,6 @@
 
     goto/16 :goto_0
 
-    .line 1080
     .end local v3    # "easyClip":Ljava/lang/String;
     .end local v4    # "easyClipRunning":Ljava/lang/String;
     :cond_13
@@ -1275,7 +1163,6 @@
     .end local v7    # "intent":Landroid/content/Intent;
     invoke-direct {v7}, Landroid/content/Intent;-><init>()V
 
-    .line 1081
     .restart local v7    # "intent":Landroid/content/Intent;
     const-string v13, "com.sec.android.app.SmartClipService"
 
@@ -1283,14 +1170,12 @@
 
     invoke-virtual {v7, v13, v14}, Landroid/content/Intent;->setClassName(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;
 
-    .line 1082
-    const-string/jumbo v13, "selectIndex"
+    const-string v13, "selectIndex"
 
     const/4 v14, 0x5
 
     invoke-virtual {v7, v13, v14}, Landroid/content/Intent;->putExtra(Ljava/lang/String;I)Landroid/content/Intent;
 
-    .line 1083
     # getter for: Lcom/android/server/smartclip/SpenGestureManagerService;->mContext:Landroid/content/Context;
     invoke-static {}, Lcom/android/server/smartclip/SpenGestureManagerService;->access$500()Landroid/content/Context;
 
@@ -1300,14 +1185,12 @@
 
     invoke-virtual {v13, v7, v14}, Landroid/content/Context;->startServiceAsUser(Landroid/content/Intent;Landroid/os/UserHandle;)Landroid/content/ComponentName;
 
-    .line 1085
-    const-string/jumbo v13, "selectIndex"
+    const-string v13, "selectIndex"
 
     const/4 v14, 0x5
 
     invoke-virtual {v6, v13, v14}, Landroid/content/Intent;->putExtra(Ljava/lang/String;I)Landroid/content/Intent;
 
-    .line 1086
     # getter for: Lcom/android/server/smartclip/SpenGestureManagerService;->mContext:Landroid/content/Context;
     invoke-static {}, Lcom/android/server/smartclip/SpenGestureManagerService;->access$500()Landroid/content/Context;
 
@@ -1317,7 +1200,6 @@
 
     invoke-virtual {v13, v6, v14}, Landroid/content/Context;->sendBroadcastAsUser(Landroid/content/Intent;Landroid/os/UserHandle;)V
 
-    .line 1088
     # getter for: Lcom/android/server/smartclip/SpenGestureManagerService;->mAirCommandItemLoggingEnabled:Z
     invoke-static {}, Lcom/android/server/smartclip/SpenGestureManagerService;->access$2400()Z
 
@@ -1325,7 +1207,6 @@
 
     if-eqz v13, :cond_0
 
-    .line 1089
     move-object/from16 v0, p0
 
     iget-object v13, v0, Lcom/android/server/smartclip/SpenGestureManagerService$6;->this$0:Lcom/android/server/smartclip/SpenGestureManagerService;
@@ -1337,7 +1218,6 @@
 
     goto/16 :goto_0
 
-    .line 1093
     :pswitch_7
     # getter for: Lcom/android/server/smartclip/SpenGestureManagerService;->TAG:Ljava/lang/String;
     invoke-static {}, Lcom/android/server/smartclip/SpenGestureManagerService;->access$000()Ljava/lang/String;
@@ -1348,10 +1228,8 @@
 
     invoke-static {v13, v14}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1094
     const-string v10, "com.samsung.android.snote"
 
-    .line 1095
     .local v10, "sNotePackage":Ljava/lang/String;
     # getter for: Lcom/android/server/smartclip/SpenGestureManagerService;->mContext:Landroid/content/Context;
     invoke-static {}, Lcom/android/server/smartclip/SpenGestureManagerService;->access$500()Landroid/content/Context;
@@ -1366,7 +1244,6 @@
 
     move-result-object v7
 
-    .line 1096
     # getter for: Lcom/android/server/smartclip/SpenGestureManagerService;->mContext:Landroid/content/Context;
     invoke-static {}, Lcom/android/server/smartclip/SpenGestureManagerService;->access$500()Landroid/content/Context;
 
@@ -1376,7 +1253,6 @@
 
     invoke-virtual {v13, v7, v14}, Landroid/content/Context;->startActivityAsUser(Landroid/content/Intent;Landroid/os/UserHandle;)V
 
-    .line 1098
     # getter for: Lcom/android/server/smartclip/SpenGestureManagerService;->mAirCommandItemLoggingEnabled:Z
     invoke-static {}, Lcom/android/server/smartclip/SpenGestureManagerService;->access$2400()Z
 
@@ -1384,7 +1260,6 @@
 
     if-eqz v13, :cond_0
 
-    .line 1099
     move-object/from16 v0, p0
 
     iget-object v13, v0, Lcom/android/server/smartclip/SpenGestureManagerService$6;->this$0:Lcom/android/server/smartclip/SpenGestureManagerService;
@@ -1396,7 +1271,6 @@
 
     goto/16 :goto_0
 
-    .line 870
     :pswitch_data_0
     .packed-switch 0x0
         :pswitch_0

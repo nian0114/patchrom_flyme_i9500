@@ -58,15 +58,12 @@
     .locals 1
 
     .prologue
-    .line 15
     invoke-direct {p0}, Landroid/os/Binder;-><init>()V
 
-    .line 16
     const-string v0, "com.sec.android.emergencymode.IEmergencyManager"
 
     invoke-virtual {p0, p0, v0}, Lcom/sec/android/emergencymode/IEmergencyManager$Stub;->attachInterface(Landroid/os/IInterface;Ljava/lang/String;)V
 
-    .line 17
     return-void
 .end method
 
@@ -75,17 +72,13 @@
     .param p0, "obj"    # Landroid/os/IBinder;
 
     .prologue
-    .line 24
     if-nez p0, :cond_0
 
-    .line 25
     const/4 v0, 0x0
 
-    .line 31
     :goto_0
     return-object v0
 
-    .line 27
     :cond_0
     const-string v1, "com.sec.android.emergencymode.IEmergencyManager"
 
@@ -93,7 +86,6 @@
 
     move-result-object v0
 
-    .line 28
     .local v0, "iin":Landroid/os/IInterface;
     if-eqz v0, :cond_1
 
@@ -101,12 +93,10 @@
 
     if-eqz v1, :cond_1
 
-    .line 29
     check-cast v0, Lcom/sec/android/emergencymode/IEmergencyManager;
 
     goto :goto_0
 
-    .line 31
     :cond_1
     new-instance v0, Lcom/sec/android/emergencymode/IEmergencyManager$Stub$Proxy;
 
@@ -122,7 +112,6 @@
     .locals 0
 
     .prologue
-    .line 35
     return-object p0
 .end method
 
@@ -143,10 +132,8 @@
 
     const/4 v5, 0x1
 
-    .line 39
     sparse-switch p1, :sswitch_data_0
 
-    .line 175
     invoke-super {p0, p1, p2, p3, p4}, Landroid/os/Binder;->onTransact(ILandroid/os/Parcel;Landroid/os/Parcel;I)Z
 
     move-result v5
@@ -154,7 +141,6 @@
     :goto_0
     return v5
 
-    .line 43
     :sswitch_0
     const-string v4, "com.sec.android.emergencymode.IEmergencyManager"
 
@@ -162,22 +148,18 @@
 
     goto :goto_0
 
-    .line 48
     :sswitch_1
     const-string v6, "com.sec.android.emergencymode.IEmergencyManager"
 
     invoke-virtual {p2, v6}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
 
-    .line 49
     invoke-virtual {p0}, Lcom/sec/android/emergencymode/IEmergencyManager$Stub;->isEmergencyMode()Z
 
     move-result v3
 
-    .line 50
     .local v3, "_result":Z
     invoke-virtual {p3}, Landroid/os/Parcel;->writeNoException()V
 
-    .line 51
     if-eqz v3, :cond_0
 
     move v4, v5
@@ -187,41 +169,34 @@
 
     goto :goto_0
 
-    .line 56
     .end local v3    # "_result":Z
     :sswitch_2
     const-string v6, "com.sec.android.emergencymode.IEmergencyManager"
 
     invoke-virtual {p2, v6}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
 
-    .line 58
     invoke-virtual {p2}, Landroid/os/Parcel;->readString()Ljava/lang/String;
 
     move-result-object v0
 
-    .line 60
     .local v0, "_arg0":Ljava/lang/String;
     invoke-virtual {p2}, Landroid/os/Parcel;->readString()Ljava/lang/String;
 
     move-result-object v1
 
-    .line 62
     .local v1, "_arg1":Ljava/lang/String;
     invoke-virtual {p2}, Landroid/os/Parcel;->readInt()I
 
     move-result v2
 
-    .line 63
     .local v2, "_arg2":I
     invoke-virtual {p0, v0, v1, v2}, Lcom/sec/android/emergencymode/IEmergencyManager$Stub;->checkValidPackage(Ljava/lang/String;Ljava/lang/String;I)Z
 
     move-result v3
 
-    .line 64
     .restart local v3    # "_result":Z
     invoke-virtual {p3}, Landroid/os/Parcel;->writeNoException()V
 
-    .line 65
     if-eqz v3, :cond_1
 
     move v4, v5
@@ -231,7 +206,6 @@
 
     goto :goto_0
 
-    .line 70
     .end local v0    # "_arg0":Ljava/lang/String;
     .end local v1    # "_arg1":Ljava/lang/String;
     .end local v2    # "_arg2":I
@@ -241,28 +215,23 @@
 
     invoke-virtual {p2, v6}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
 
-    .line 72
     invoke-virtual {p2}, Landroid/os/Parcel;->readString()Ljava/lang/String;
 
     move-result-object v0
 
-    .line 74
     .restart local v0    # "_arg0":Ljava/lang/String;
     invoke-virtual {p2}, Landroid/os/Parcel;->readString()Ljava/lang/String;
 
     move-result-object v1
 
-    .line 75
     .restart local v1    # "_arg1":Ljava/lang/String;
     invoke-virtual {p0, v0, v1}, Lcom/sec/android/emergencymode/IEmergencyManager$Stub;->checkValidIntentAction(Ljava/lang/String;Ljava/lang/String;)Z
 
     move-result v3
 
-    .line 76
     .restart local v3    # "_result":Z
     invoke-virtual {p3}, Landroid/os/Parcel;->writeNoException()V
 
-    .line 77
     if-eqz v3, :cond_2
 
     move v4, v5
@@ -272,7 +241,6 @@
 
     goto :goto_0
 
-    .line 82
     .end local v0    # "_arg0":Ljava/lang/String;
     .end local v1    # "_arg1":Ljava/lang/String;
     .end local v3    # "_result":Z
@@ -281,22 +249,18 @@
 
     invoke-virtual {p2, v6}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
 
-    .line 84
     invoke-virtual {p2}, Landroid/os/Parcel;->readString()Ljava/lang/String;
 
     move-result-object v0
 
-    .line 85
     .restart local v0    # "_arg0":Ljava/lang/String;
     invoke-virtual {p0, v0}, Lcom/sec/android/emergencymode/IEmergencyManager$Stub;->checkInvalidProcess(Ljava/lang/String;)Z
 
     move-result v3
 
-    .line 86
     .restart local v3    # "_result":Z
     invoke-virtual {p3}, Landroid/os/Parcel;->writeNoException()V
 
-    .line 87
     if-eqz v3, :cond_3
 
     move v4, v5
@@ -306,7 +270,6 @@
 
     goto :goto_0
 
-    .line 92
     .end local v0    # "_arg0":Ljava/lang/String;
     .end local v3    # "_result":Z
     :sswitch_5
@@ -314,28 +277,23 @@
 
     invoke-virtual {p2, v6}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
 
-    .line 94
     invoke-virtual {p2}, Landroid/os/Parcel;->readString()Ljava/lang/String;
 
     move-result-object v0
 
-    .line 96
     .restart local v0    # "_arg0":Ljava/lang/String;
     invoke-virtual {p2}, Landroid/os/Parcel;->readString()Ljava/lang/String;
 
     move-result-object v1
 
-    .line 97
     .restart local v1    # "_arg1":Ljava/lang/String;
     invoke-virtual {p0, v0, v1}, Lcom/sec/android/emergencymode/IEmergencyManager$Stub;->checkInvalidBroadcast(Ljava/lang/String;Ljava/lang/String;)Z
 
     move-result v3
 
-    .line 98
     .restart local v3    # "_result":Z
     invoke-virtual {p3}, Landroid/os/Parcel;->writeNoException()V
 
-    .line 99
     if-eqz v3, :cond_4
 
     move v4, v5
@@ -345,7 +303,6 @@
 
     goto/16 :goto_0
 
-    .line 104
     .end local v0    # "_arg0":Ljava/lang/String;
     .end local v1    # "_arg1":Ljava/lang/String;
     .end local v3    # "_result":Z
@@ -354,16 +311,13 @@
 
     invoke-virtual {p2, v6}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
 
-    .line 105
     invoke-virtual {p0}, Lcom/sec/android/emergencymode/IEmergencyManager$Stub;->needMobileDataBlock()Z
 
     move-result v3
 
-    .line 106
     .restart local v3    # "_result":Z
     invoke-virtual {p3}, Landroid/os/Parcel;->writeNoException()V
 
-    .line 107
     if-eqz v3, :cond_5
 
     move v4, v5
@@ -373,23 +327,19 @@
 
     goto/16 :goto_0
 
-    .line 112
     .end local v3    # "_result":Z
     :sswitch_7
     const-string v6, "com.sec.android.emergencymode.IEmergencyManager"
 
     invoke-virtual {p2, v6}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
 
-    .line 113
     invoke-virtual {p0}, Lcom/sec/android/emergencymode/IEmergencyManager$Stub;->isScreenOn()Z
 
     move-result v3
 
-    .line 114
     .restart local v3    # "_result":Z
     invoke-virtual {p3}, Landroid/os/Parcel;->writeNoException()V
 
-    .line 115
     if-eqz v3, :cond_6
 
     move v4, v5
@@ -399,14 +349,12 @@
 
     goto/16 :goto_0
 
-    .line 120
     .end local v3    # "_result":Z
     :sswitch_8
     const-string v6, "com.sec.android.emergencymode.IEmergencyManager"
 
     invoke-virtual {p2, v6}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
 
-    .line 122
     invoke-virtual {p2}, Landroid/os/Parcel;->readInt()I
 
     move-result v6
@@ -415,12 +363,10 @@
 
     move v0, v5
 
-    .line 123
     .local v0, "_arg0":Z
     :goto_1
     invoke-virtual {p0, v0}, Lcom/sec/android/emergencymode/IEmergencyManager$Stub;->setforceBlockUserPkg(Z)V
 
-    .line 124
     invoke-virtual {p3}, Landroid/os/Parcel;->writeNoException()V
 
     goto/16 :goto_0
@@ -429,25 +375,20 @@
     :cond_7
     move v0, v4
 
-    .line 122
     goto :goto_1
 
-    .line 129
     :sswitch_9
     const-string v6, "com.sec.android.emergencymode.IEmergencyManager"
 
     invoke-virtual {p2, v6}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
 
-    .line 130
     invoke-virtual {p0}, Lcom/sec/android/emergencymode/IEmergencyManager$Stub;->getforceBlockUserPkg()Z
 
     move-result v3
 
-    .line 131
     .restart local v3    # "_result":Z
     invoke-virtual {p3}, Landroid/os/Parcel;->writeNoException()V
 
-    .line 132
     if-eqz v3, :cond_8
 
     move v4, v5
@@ -457,23 +398,19 @@
 
     goto/16 :goto_0
 
-    .line 137
     .end local v3    # "_result":Z
     :sswitch_a
     const-string v6, "com.sec.android.emergencymode.IEmergencyManager"
 
     invoke-virtual {p2, v6}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
 
-    .line 138
     invoke-virtual {p0}, Lcom/sec/android/emergencymode/IEmergencyManager$Stub;->isModifying()Z
 
     move-result v3
 
-    .line 139
     .restart local v3    # "_result":Z
     invoke-virtual {p3}, Landroid/os/Parcel;->writeNoException()V
 
-    .line 140
     if-eqz v3, :cond_9
 
     move v4, v5
@@ -483,14 +420,12 @@
 
     goto/16 :goto_0
 
-    .line 145
     .end local v3    # "_result":Z
     :sswitch_b
     const-string v6, "com.sec.android.emergencymode.IEmergencyManager"
 
     invoke-virtual {p2, v6}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
 
-    .line 147
     invoke-virtual {p2}, Landroid/os/Parcel;->readInt()I
 
     move-result v6
@@ -499,12 +434,10 @@
 
     move v0, v5
 
-    .line 148
     .restart local v0    # "_arg0":Z
     :goto_2
     invoke-virtual {p0, v0}, Lcom/sec/android/emergencymode/IEmergencyManager$Stub;->setLocationProvider(Z)V
 
-    .line 149
     invoke-virtual {p3}, Landroid/os/Parcel;->writeNoException()V
 
     goto/16 :goto_0
@@ -513,21 +446,17 @@
     :cond_a
     move v0, v4
 
-    .line 147
     goto :goto_2
 
-    .line 154
     :sswitch_c
     const-string v6, "com.sec.android.emergencymode.IEmergencyManager"
 
     invoke-virtual {p2, v6}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
 
-    .line 156
     invoke-virtual {p2}, Landroid/os/Parcel;->readString()Ljava/lang/String;
 
     move-result-object v0
 
-    .line 158
     .local v0, "_arg0":Ljava/lang/String;
     invoke-virtual {p2}, Landroid/os/Parcel;->readInt()I
 
@@ -537,18 +466,15 @@
 
     move v1, v5
 
-    .line 159
     .local v1, "_arg1":Z
     :goto_3
     invoke-virtual {p0, v0, v1}, Lcom/sec/android/emergencymode/IEmergencyManager$Stub;->addAppToLauncher(Ljava/lang/String;Z)Z
 
     move-result v3
 
-    .line 160
     .restart local v3    # "_result":Z
     invoke-virtual {p3}, Landroid/os/Parcel;->writeNoException()V
 
-    .line 161
     if-eqz v3, :cond_b
 
     move v4, v5
@@ -563,32 +489,26 @@
     :cond_c
     move v1, v4
 
-    .line 158
     goto :goto_3
 
-    .line 166
     .end local v0    # "_arg0":Ljava/lang/String;
     :sswitch_d
     const-string v6, "com.sec.android.emergencymode.IEmergencyManager"
 
     invoke-virtual {p2, v6}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
 
-    .line 168
     invoke-virtual {p2}, Landroid/os/Parcel;->readInt()I
 
     move-result v0
 
-    .line 169
     .local v0, "_arg0":I
     invoke-virtual {p0, v0}, Lcom/sec/android/emergencymode/IEmergencyManager$Stub;->checkModeType(I)Z
 
     move-result v3
 
-    .line 170
     .restart local v3    # "_result":Z
     invoke-virtual {p3}, Landroid/os/Parcel;->writeNoException()V
 
-    .line 171
     if-eqz v3, :cond_d
 
     move v4, v5
@@ -598,7 +518,6 @@
 
     goto/16 :goto_0
 
-    .line 39
     nop
 
     :sswitch_data_0

@@ -8,7 +8,6 @@
     .locals 0
 
     .prologue
-    .line 48
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -25,31 +24,24 @@
 
     const/4 v11, -0x1
 
-    .line 56
     const/4 v6, 0x0
 
-    .line 57
     .local v6, "url":Ljava/net/URL;
     const/4 v0, 0x0
 
-    .line 58
     .local v0, "Result":Landroid/graphics/Bitmap;
     const/4 v5, 0x2
 
-    .line 60
     .local v5, "sampleSize":I
     new-instance v2, Landroid/graphics/BitmapFactory$Options;
 
     invoke-direct {v2}, Landroid/graphics/BitmapFactory$Options;-><init>()V
 
-    .line 61
     .local v2, "bitmapOption":Landroid/graphics/BitmapFactory$Options;
     iput-boolean v8, v2, Landroid/graphics/BitmapFactory$Options;->inJustDecodeBounds:Z
 
-    .line 64
     iput-boolean v8, v2, Landroid/graphics/BitmapFactory$Options;->inPurgeable:Z
 
-    .line 68
     :try_start_0
     new-instance v7, Ljava/net/URL;
 
@@ -59,7 +51,6 @@
     .catch Ljava/io/IOException; {:try_start_0 .. :try_end_0} :catch_1
     .catch Ljava/lang/OutOfMemoryError; {:try_start_0 .. :try_end_0} :catch_2
 
-    .line 70
     .end local v6    # "url":Ljava/net/URL;
     .local v7, "url":Ljava/net/URL;
     :try_start_1
@@ -67,18 +58,15 @@
 
     move-result-object v3
 
-    .line 71
     .local v3, "connection":Ljava/net/URLConnection;
     const/16 v8, 0x7d0
 
     invoke-virtual {v3, v8}, Ljava/net/URLConnection;->setConnectTimeout(I)V
 
-    .line 72
     const/16 v8, 0xbb8
 
     invoke-virtual {v3, v8}, Ljava/net/URLConnection;->setReadTimeout(I)V
 
-    .line 75
     invoke-virtual {v3}, Ljava/net/URLConnection;->getInputStream()Ljava/io/InputStream;
 
     move-result-object v8
@@ -93,7 +81,6 @@
 
     move-result-object v0
 
-    .line 93
     .end local v3    # "connection":Ljava/net/URLConnection;
     :goto_0
     if-eqz v2, :cond_0
@@ -107,13 +94,11 @@
 
     if-gt v8, v11, :cond_9
 
-    .line 94
     :cond_1
     sget-boolean v8, Landroid/sec/clipboard/data/ClipboardDefine;->DEBUG:Z
 
     if-eqz v8, :cond_2
 
-    .line 95
     const-string v8, "ClipboardServiceEx"
 
     new-instance v9, Ljava/lang/StringBuilder;
@@ -157,19 +142,16 @@
     .restart local v6    # "url":Ljava/net/URL;
     move-object v1, v0
 
-    .line 131
     .end local v0    # "Result":Landroid/graphics/Bitmap;
     .local v1, "Result":Landroid/graphics/Bitmap;
     :goto_1
     return-object v1
 
-    .line 78
     .end local v1    # "Result":Landroid/graphics/Bitmap;
     .restart local v0    # "Result":Landroid/graphics/Bitmap;
     :catch_0
     move-exception v4
 
-    .line 79
     .local v4, "e":Ljava/net/MalformedURLException;
     :goto_2
     sget-boolean v8, Landroid/sec/clipboard/data/ClipboardDefine;->DEBUG:Z
@@ -202,7 +184,6 @@
 
     invoke-static {v8, v9}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 80
     :cond_3
     sget-boolean v8, Landroid/sec/clipboard/data/ClipboardDefine;->INFO_DEBUG:Z
 
@@ -230,25 +211,21 @@
 
     invoke-static {v8, v9}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 81
     :cond_4
     const/4 v0, 0x0
 
     move-object v7, v6
 
-    .line 91
     .end local v6    # "url":Ljava/net/URL;
     .restart local v7    # "url":Ljava/net/URL;
     goto :goto_0
 
-    .line 82
     .end local v4    # "e":Ljava/net/MalformedURLException;
     .end local v7    # "url":Ljava/net/URL;
     .restart local v6    # "url":Ljava/net/URL;
     :catch_1
     move-exception v4
 
-    .line 83
     .local v4, "e":Ljava/io/IOException;
     :goto_3
     sget-boolean v8, Landroid/sec/clipboard/data/ClipboardDefine;->DEBUG:Z
@@ -281,7 +258,6 @@
 
     invoke-static {v8, v9}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 84
     :cond_5
     sget-boolean v8, Landroid/sec/clipboard/data/ClipboardDefine;->INFO_DEBUG:Z
 
@@ -309,25 +285,21 @@
 
     invoke-static {v8, v9}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 85
     :cond_6
     const/4 v0, 0x0
 
     move-object v1, v0
 
-    .line 86
     .end local v0    # "Result":Landroid/graphics/Bitmap;
     .restart local v1    # "Result":Landroid/graphics/Bitmap;
     goto :goto_1
 
-    .line 87
     .end local v1    # "Result":Landroid/graphics/Bitmap;
     .end local v4    # "e":Ljava/io/IOException;
     .restart local v0    # "Result":Landroid/graphics/Bitmap;
     :catch_2
     move-exception v4
 
-    .line 88
     .local v4, "e":Ljava/lang/OutOfMemoryError;
     :goto_4
     sget-boolean v8, Landroid/sec/clipboard/data/ClipboardDefine;->DEBUG:Z
@@ -360,7 +332,6 @@
 
     invoke-static {v8, v9}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 89
     :cond_7
     sget-boolean v8, Landroid/sec/clipboard/data/ClipboardDefine;->INFO_DEBUG:Z
 
@@ -388,7 +359,6 @@
 
     invoke-static {v8, v9}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 90
     :cond_8
     const/4 v0, 0x0
 
@@ -398,7 +368,6 @@
     .restart local v7    # "url":Ljava/net/URL;
     goto/16 :goto_0
 
-    .line 100
     .end local v4    # "e":Ljava/lang/OutOfMemoryError;
     :cond_9
     :goto_5
@@ -414,28 +383,22 @@
 
     if-lt v8, p2, :cond_a
 
-    .line 101
     add-int/lit8 v5, v5, 0x1
 
     goto :goto_5
 
-    .line 103
     :cond_a
     add-int/lit8 v5, v5, -0x1
 
-    .line 104
     iput v5, v2, Landroid/graphics/BitmapFactory$Options;->inSampleSize:I
 
-    .line 107
     const/4 v8, 0x0
 
     :try_start_2
     iput-boolean v8, v2, Landroid/graphics/BitmapFactory$Options;->inJustDecodeBounds:Z
 
-    .line 109
     if-nez v7, :cond_11
 
-    .line 110
     new-instance v6, Ljava/net/URL;
 
     invoke-direct {v6, p0}, Ljava/net/URL;-><init>(Ljava/lang/String;)V
@@ -444,7 +407,6 @@
     .catch Ljava/io/IOException; {:try_start_2 .. :try_end_2} :catch_4
     .catch Ljava/lang/OutOfMemoryError; {:try_start_2 .. :try_end_2} :catch_5
 
-    .line 112
     .end local v7    # "url":Ljava/net/URL;
     .restart local v6    # "url":Ljava/net/URL;
     :goto_6
@@ -453,18 +415,15 @@
 
     move-result-object v3
 
-    .line 113
     .restart local v3    # "connection":Ljava/net/URLConnection;
     const/16 v8, 0x7d0
 
     invoke-virtual {v3, v8}, Ljava/net/URLConnection;->setConnectTimeout(I)V
 
-    .line 114
     const/16 v8, 0xbb8
 
     invoke-virtual {v3, v8}, Ljava/net/URLConnection;->setReadTimeout(I)V
 
-    .line 116
     invoke-virtual {v3}, Ljava/net/URLConnection;->getInputStream()Ljava/io/InputStream;
 
     move-result-object v8
@@ -483,12 +442,10 @@
     :goto_7
     move-object v1, v0
 
-    .line 131
     .end local v0    # "Result":Landroid/graphics/Bitmap;
     .restart local v1    # "Result":Landroid/graphics/Bitmap;
     goto/16 :goto_1
 
-    .line 117
     .end local v1    # "Result":Landroid/graphics/Bitmap;
     .end local v6    # "url":Ljava/net/URL;
     .restart local v0    # "Result":Landroid/graphics/Bitmap;
@@ -498,7 +455,6 @@
 
     move-object v6, v7
 
-    .line 118
     .end local v7    # "url":Ljava/net/URL;
     .local v4, "e":Ljava/net/MalformedURLException;
     .restart local v6    # "url":Ljava/net/URL;
@@ -533,7 +489,6 @@
 
     invoke-static {v8, v9}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 119
     :cond_b
     sget-boolean v8, Landroid/sec/clipboard/data/ClipboardDefine;->INFO_DEBUG:Z
 
@@ -561,14 +516,11 @@
 
     invoke-static {v8, v9}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 120
     :cond_c
     const/4 v0, 0x0
 
-    .line 129
     goto :goto_7
 
-    .line 121
     .end local v4    # "e":Ljava/net/MalformedURLException;
     .end local v6    # "url":Ljava/net/URL;
     .restart local v7    # "url":Ljava/net/URL;
@@ -577,7 +529,6 @@
 
     move-object v6, v7
 
-    .line 122
     .end local v7    # "url":Ljava/net/URL;
     .local v4, "e":Ljava/io/IOException;
     .restart local v6    # "url":Ljava/net/URL;
@@ -612,7 +563,6 @@
 
     invoke-static {v8, v9}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 123
     :cond_d
     sget-boolean v8, Landroid/sec/clipboard/data/ClipboardDefine;->INFO_DEBUG:Z
 
@@ -640,14 +590,11 @@
 
     invoke-static {v8, v9}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 124
     :cond_e
     const/4 v0, 0x0
 
-    .line 129
     goto/16 :goto_7
 
-    .line 125
     .end local v4    # "e":Ljava/io/IOException;
     .end local v6    # "url":Ljava/net/URL;
     .restart local v7    # "url":Ljava/net/URL;
@@ -656,7 +603,6 @@
 
     move-object v6, v7
 
-    .line 126
     .end local v7    # "url":Ljava/net/URL;
     .local v4, "e":Ljava/lang/OutOfMemoryError;
     .restart local v6    # "url":Ljava/net/URL;
@@ -691,7 +637,6 @@
 
     invoke-static {v8, v9}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 127
     :cond_f
     sget-boolean v8, Landroid/sec/clipboard/data/ClipboardDefine;->INFO_DEBUG:Z
 
@@ -719,32 +664,27 @@
 
     invoke-static {v8, v9}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 128
     :cond_10
     const/4 v0, 0x0
 
     goto/16 :goto_7
 
-    .line 125
     .end local v4    # "e":Ljava/lang/OutOfMemoryError;
     :catch_6
     move-exception v4
 
     goto :goto_a
 
-    .line 121
     :catch_7
     move-exception v4
 
     goto/16 :goto_9
 
-    .line 117
     :catch_8
     move-exception v4
 
     goto/16 :goto_8
 
-    .line 87
     .end local v6    # "url":Ljava/net/URL;
     .restart local v7    # "url":Ljava/net/URL;
     :catch_9
@@ -756,7 +696,6 @@
     .restart local v6    # "url":Ljava/net/URL;
     goto/16 :goto_4
 
-    .line 82
     .end local v6    # "url":Ljava/net/URL;
     .restart local v7    # "url":Ljava/net/URL;
     :catch_a
@@ -768,7 +707,6 @@
     .restart local v6    # "url":Ljava/net/URL;
     goto/16 :goto_3
 
-    .line 78
     .end local v6    # "url":Ljava/net/URL;
     .restart local v7    # "url":Ljava/net/URL;
     :catch_b
@@ -798,14 +736,11 @@
     .prologue
     const/4 v13, -0x1
 
-    .line 233
     const/4 v11, -0x1
 
-    .line 234
     .local v11, "orientation":I
     const/4 v6, 0x0
 
-    .line 236
     .local v6, "_data":Ljava/lang/String;
     const-string v0, "content"
 
@@ -819,10 +754,8 @@
 
     if-eqz v0, :cond_6
 
-    .line 237
     const/4 v7, 0x0
 
-    .line 240
     .local v7, "c":Landroid/database/Cursor;
     const/4 v2, 0x0
 
@@ -841,7 +774,6 @@
 
     move-result-object v7
 
-    .line 241
     if-eqz v7, :cond_1
 
     invoke-interface {v7}, Landroid/database/Cursor;->moveToNext()Z
@@ -850,25 +782,21 @@
 
     if-eqz v0, :cond_1
 
-    .line 243
     const-string v0, "_data"
 
     invoke-interface {v7, v0}, Landroid/database/Cursor;->getColumnIndex(Ljava/lang/String;)I
 
     move-result v8
 
-    .line 244
     .local v8, "columnIdx":I
     if-eq v8, v13, :cond_0
 
-    .line 245
     invoke-interface {v7, v8}, Landroid/database/Cursor;->getString(I)Ljava/lang/String;
 
     move-result-object v6
 
-    .line 249
     :cond_0
-    const-string/jumbo v0, "orientation"
+    const-string v0, "orientation"
 
     invoke-interface {v7, v0}, Landroid/database/Cursor;->getColumnIndex(Ljava/lang/String;)I
     :try_end_0
@@ -877,10 +805,8 @@
 
     move-result v8
 
-    .line 250
     if-eq v8, v13, :cond_1
 
-    .line 252
     :try_start_1
     invoke-interface {v7, v8}, Landroid/database/Cursor;->getString(I)Ljava/lang/String;
 
@@ -894,39 +820,31 @@
 
     move-result v11
 
-    .line 260
     .end local v8    # "columnIdx":I
     :cond_1
     :goto_0
     if-eqz v7, :cond_2
 
-    .line 261
     invoke-interface {v7}, Landroid/database/Cursor;->close()V
 
-    .line 268
     .end local v7    # "c":Landroid/database/Cursor;
     :cond_2
     :goto_1
     if-ne v11, v13, :cond_3
 
-    .line 269
     if-nez v6, :cond_7
 
-    .line 270
     const/4 v11, 0x0
 
-    .line 280
     :cond_3
     :goto_2
     return v11
 
-    .line 253
     .restart local v7    # "c":Landroid/database/Cursor;
     .restart local v8    # "columnIdx":I
     :catch_0
     move-exception v10
 
-    .line 254
     .local v10, "nfe":Ljava/lang/NumberFormatException;
     :try_start_2
     sget-boolean v0, Landroid/sec/clipboard/data/ClipboardDefine;->DEBUG:Z
@@ -960,13 +878,11 @@
 
     goto :goto_0
 
-    .line 257
     .end local v8    # "columnIdx":I
     .end local v10    # "nfe":Ljava/lang/NumberFormatException;
     :catch_1
     move-exception v12
 
-    .line 258
     .local v12, "sqle":Landroid/database/SQLException;
     :try_start_3
     sget-boolean v0, Landroid/sec/clipboard/data/ClipboardDefine;->DEBUG:Z
@@ -997,29 +913,24 @@
     :try_end_3
     .catchall {:try_start_3 .. :try_end_3} :catchall_0
 
-    .line 260
     :cond_4
     if-eqz v7, :cond_2
 
-    .line 261
     invoke-interface {v7}, Landroid/database/Cursor;->close()V
 
     goto :goto_1
 
-    .line 260
     .end local v12    # "sqle":Landroid/database/SQLException;
     :catchall_0
     move-exception v0
 
     if-eqz v7, :cond_5
 
-    .line 261
     invoke-interface {v7}, Landroid/database/Cursor;->close()V
 
     :cond_5
     throw v0
 
-    .line 264
     .end local v7    # "c":Landroid/database/Cursor;
     :cond_6
     const-string v0, "file"
@@ -1034,14 +945,12 @@
 
     if-eqz v0, :cond_2
 
-    .line 265
     invoke-virtual {p1}, Landroid/net/Uri;->getPath()Ljava/lang/String;
 
     move-result-object v6
 
     goto :goto_1
 
-    .line 273
     :cond_7
     :try_start_4
     invoke-static {v6}, Landroid/sec/clipboard/util/ClipboardDataBitmapUrl;->getExifOrientation(Ljava/lang/String;)I
@@ -1052,11 +961,9 @@
 
     goto :goto_2
 
-    .line 274
     :catch_2
     move-exception v9
 
-    .line 275
     .local v9, "e":Ljava/lang/Exception;
     sget-boolean v0, Landroid/sec/clipboard/data/ClipboardDefine;->DEBUG:Z
 
@@ -1084,7 +991,6 @@
 
     invoke-static {v0, v1}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 276
     :cond_8
     const/4 v11, 0x0
 
@@ -1098,14 +1004,11 @@
     .prologue
     const/4 v7, -0x1
 
-    .line 284
     const/4 v0, 0x0
 
-    .line 285
     .local v0, "degree":I
     const/4 v2, 0x0
 
-    .line 287
     .local v2, "exif":Landroid/media/ExifInterface;
     :try_start_0
     new-instance v3, Landroid/media/ExifInterface;
@@ -1118,39 +1021,32 @@
     .local v3, "exif":Landroid/media/ExifInterface;
     move-object v2, v3
 
-    .line 291
     .end local v3    # "exif":Landroid/media/ExifInterface;
     .restart local v2    # "exif":Landroid/media/ExifInterface;
     :cond_0
     :goto_0
     if-eqz v2, :cond_1
 
-    .line 292
     const-string v5, "Orientation"
 
     invoke-virtual {v2, v5, v7}, Landroid/media/ExifInterface;->getAttributeInt(Ljava/lang/String;I)I
 
     move-result v4
 
-    .line 294
     .local v4, "orientation":I
     if-eq v4, v7, :cond_1
 
-    .line 296
     packed-switch v4, :pswitch_data_0
 
-    .line 309
     .end local v4    # "orientation":I
     :cond_1
     :goto_1
     :pswitch_0
     return v0
 
-    .line 288
     :catch_0
     move-exception v1
 
-    .line 289
     .local v1, "ex":Ljava/io/IOException;
     sget-boolean v5, Landroid/sec/clipboard/data/ClipboardDefine;->DEBUG:Z
 
@@ -1164,29 +1060,23 @@
 
     goto :goto_0
 
-    .line 298
     .end local v1    # "ex":Ljava/io/IOException;
     .restart local v4    # "orientation":I
     :pswitch_1
     const/16 v0, 0x5a
 
-    .line 299
     goto :goto_1
 
-    .line 301
     :pswitch_2
     const/16 v0, 0xb4
 
-    .line 302
     goto :goto_1
 
-    .line 304
     :pswitch_3
     const/16 v0, 0x10e
 
     goto :goto_1
 
-    .line 296
     nop
 
     :pswitch_data_0
@@ -1209,27 +1099,21 @@
     .prologue
     const/4 v4, 0x1
 
-    .line 142
     const/4 v3, 0x2
 
-    .line 143
     .local v3, "sampleSize":I
     const/4 v1, 0x0
 
-    .line 145
     .local v1, "bm":Landroid/graphics/Bitmap;
     new-instance v0, Landroid/graphics/BitmapFactory$Options;
 
     invoke-direct {v0}, Landroid/graphics/BitmapFactory$Options;-><init>()V
 
-    .line 148
     .local v0, "bitmapOption":Landroid/graphics/BitmapFactory$Options;
     iput-boolean v4, v0, Landroid/graphics/BitmapFactory$Options;->inJustDecodeBounds:Z
 
-    .line 151
     iput-boolean v4, v0, Landroid/graphics/BitmapFactory$Options;->inPurgeable:Z
 
-    .line 156
     :try_start_0
     invoke-static {p0, v0}, Landroid/graphics/BitmapFactory;->decodeFile(Ljava/lang/String;Landroid/graphics/BitmapFactory$Options;)Landroid/graphics/Bitmap;
     :try_end_0
@@ -1237,7 +1121,6 @@
 
     move-result-object v1
 
-    .line 164
     :goto_0
     iget v4, v0, Landroid/graphics/BitmapFactory$Options;->outWidth:I
 
@@ -1251,16 +1134,13 @@
 
     if-lt v4, p2, :cond_1
 
-    .line 166
     add-int/lit8 v3, v3, 0x1
 
     goto :goto_0
 
-    .line 157
     :catch_0
     move-exception v2
 
-    .line 159
     .local v2, "e":Ljava/lang/Exception;
     sget-boolean v4, Landroid/sec/clipboard/data/ClipboardDefine;->DEBUG:Z
 
@@ -1272,29 +1152,23 @@
 
     invoke-static {v4, v5}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 161
     :cond_0
     const/4 v4, 0x0
 
-    .line 182
     .end local v2    # "e":Ljava/lang/Exception;
     :goto_1
     return-object v4
 
-    .line 168
     :cond_1
     add-int/lit8 v3, v3, -0x1
 
-    .line 170
     iput v3, v0, Landroid/graphics/BitmapFactory$Options;->inSampleSize:I
 
-    .line 174
     const/4 v4, 0x0
 
     :try_start_1
     iput-boolean v4, v0, Landroid/graphics/BitmapFactory$Options;->inJustDecodeBounds:Z
 
-    .line 175
     invoke-static {p0, v0}, Landroid/graphics/BitmapFactory;->decodeFile(Ljava/lang/String;Landroid/graphics/BitmapFactory$Options;)Landroid/graphics/Bitmap;
     :try_end_1
     .catch Ljava/lang/Exception; {:try_start_1 .. :try_end_1} :catch_1
@@ -1305,14 +1179,11 @@
     :goto_2
     move-object v4, v1
 
-    .line 182
     goto :goto_1
 
-    .line 176
     :catch_1
     move-exception v2
 
-    .line 178
     .restart local v2    # "e":Ljava/lang/Exception;
     sget-boolean v4, Landroid/sec/clipboard/data/ClipboardDefine;->DEBUG:Z
 
@@ -1339,35 +1210,27 @@
 
     const/4 v5, 0x0
 
-    .line 190
     const/4 v4, 0x2
 
-    .line 191
     .local v4, "sampleSize":I
     const/4 v1, 0x0
 
-    .line 193
     .local v1, "bm":Landroid/graphics/Bitmap;
     new-instance v0, Landroid/graphics/BitmapFactory$Options;
 
     invoke-direct {v0}, Landroid/graphics/BitmapFactory$Options;-><init>()V
 
-    .line 194
     .local v0, "bitmapOption":Landroid/graphics/BitmapFactory$Options;
     iput-boolean v6, v0, Landroid/graphics/BitmapFactory$Options;->inJustDecodeBounds:Z
 
-    .line 195
     iput-boolean v6, v0, Landroid/graphics/BitmapFactory$Options;->inPurgeable:Z
 
-    .line 197
     if-nez p0, :cond_1
 
-    .line 229
     :cond_0
     :goto_0
     return-object v5
 
-    .line 202
     :cond_1
     :try_start_0
     invoke-virtual {p0, p1}, Landroid/content/ContentResolver;->openInputStream(Landroid/net/Uri;)Ljava/io/InputStream;
@@ -1382,7 +1245,6 @@
 
     move-result-object v1
 
-    .line 209
     :goto_1
     iget v5, v0, Landroid/graphics/BitmapFactory$Options;->outWidth:I
 
@@ -1396,16 +1258,13 @@
 
     if-lt v5, p3, :cond_2
 
-    .line 210
     add-int/lit8 v4, v4, 0x1
 
     goto :goto_1
 
-    .line 203
     :catch_0
     move-exception v3
 
-    .line 204
     .local v3, "e":Ljava/lang/Exception;
     sget-boolean v6, Landroid/sec/clipboard/data/ClipboardDefine;->DEBUG:Z
 
@@ -1419,21 +1278,17 @@
 
     goto :goto_0
 
-    .line 212
     .end local v3    # "e":Ljava/lang/Exception;
     :cond_2
     add-int/lit8 v4, v4, -0x1
 
-    .line 214
     iput v4, v0, Landroid/graphics/BitmapFactory$Options;->inSampleSize:I
 
-    .line 217
     const/4 v5, 0x0
 
     :try_start_1
     iput-boolean v5, v0, Landroid/graphics/BitmapFactory$Options;->inJustDecodeBounds:Z
 
-    .line 218
     invoke-virtual {p0, p1}, Landroid/content/ContentResolver;->openInputStream(Landroid/net/Uri;)Ljava/io/InputStream;
 
     move-result-object v5
@@ -1446,18 +1301,15 @@
 
     move-result-object v1
 
-    .line 224
     :cond_3
     :goto_2
     invoke-static {p0, p1}, Landroid/sec/clipboard/util/ClipboardDataBitmapUrl;->findImageDegree(Landroid/content/ContentResolver;Landroid/net/Uri;)I
 
     move-result v2
 
-    .line 225
     .local v2, "degree":I
     if-eqz v2, :cond_4
 
-    .line 226
     invoke-static {v1, v2}, Landroid/sec/clipboard/util/ClipboardDataBitmapUrl;->rotateBitmap(Landroid/graphics/Bitmap;I)Landroid/graphics/Bitmap;
 
     move-result-object v1
@@ -1465,15 +1317,12 @@
     :cond_4
     move-object v5, v1
 
-    .line 229
     goto :goto_0
 
-    .line 219
     .end local v2    # "degree":I
     :catch_1
     move-exception v3
 
-    .line 220
     .restart local v3    # "e":Ljava/lang/Exception;
     sget-boolean v5, Landroid/sec/clipboard/data/ClipboardDefine;->DEBUG:Z
 
@@ -1496,17 +1345,14 @@
     .prologue
     const/high16 v3, 0x40000000    # 2.0f
 
-    .line 313
     if-eqz p1, :cond_0
 
     if-eqz p0, :cond_0
 
-    .line 314
     new-instance v5, Landroid/graphics/Matrix;
 
     invoke-direct {v5}, Landroid/graphics/Matrix;-><init>()V
 
-    .line 315
     .local v5, "m":Landroid/graphics/Matrix;
     int-to-float v0, p1
 
@@ -1528,7 +1374,6 @@
 
     invoke-virtual {v5, v0, v1, v2}, Landroid/graphics/Matrix;->setRotate(FFF)V
 
-    .line 318
     const/4 v1, 0x0
 
     const/4 v2, 0x0
@@ -1550,31 +1395,25 @@
 
     move-result-object v7
 
-    .line 319
     .local v7, "converted":Landroid/graphics/Bitmap;
     if-eq p0, v7, :cond_0
 
-    .line 320
     invoke-virtual {p0}, Landroid/graphics/Bitmap;->recycle()V
     :try_end_0
     .catch Ljava/lang/OutOfMemoryError; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 321
     move-object p0, v7
 
-    .line 328
     .end local v5    # "m":Landroid/graphics/Matrix;
     .end local v7    # "converted":Landroid/graphics/Bitmap;
     :cond_0
     :goto_0
     return-object p0
 
-    .line 324
     .restart local v5    # "m":Landroid/graphics/Matrix;
     :catch_0
     move-exception v8
 
-    .line 325
     .local v8, "ex":Ljava/lang/OutOfMemoryError;
     sget-boolean v0, Landroid/sec/clipboard/data/ClipboardDefine;->DEBUG:Z
 
@@ -1582,7 +1421,7 @@
 
     const-string v0, "ClipboardServiceEx"
 
-    const-string/jumbo v1, "out of memory"
+    const-string v1, "out of memory"
 
     invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 

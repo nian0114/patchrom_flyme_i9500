@@ -28,7 +28,6 @@
     .locals 0
 
     .prologue
-    .line 1788
     iput-object p1, p0, Lcom/android/server/epm/overlay/ThemeManagerService$6;->this$0:Lcom/android/server/epm/overlay/ThemeManagerService;
 
     iput-object p2, p0, Lcom/android/server/epm/overlay/ThemeManagerService$6;->val$wallManager:Landroid/app/WallpaperManager;
@@ -44,7 +43,6 @@
     .locals 6
 
     .prologue
-    .line 1791
     iget-object v5, p0, Lcom/android/server/epm/overlay/ThemeManagerService$6;->this$0:Lcom/android/server/epm/overlay/ThemeManagerService;
 
     iget-object v4, p0, Lcom/android/server/epm/overlay/ThemeManagerService$6;->val$wallManager:Landroid/app/WallpaperManager;
@@ -58,7 +56,6 @@
     # setter for: Lcom/android/server/epm/overlay/ThemeManagerService;->mDrawable:Landroid/graphics/drawable/BitmapDrawable;
     invoke-static {v5, v4}, Lcom/android/server/epm/overlay/ThemeManagerService;->access$2202(Lcom/android/server/epm/overlay/ThemeManagerService;Landroid/graphics/drawable/BitmapDrawable;)Landroid/graphics/drawable/BitmapDrawable;
 
-    .line 1794
     iget-object v4, p0, Lcom/android/server/epm/overlay/ThemeManagerService$6;->this$0:Lcom/android/server/epm/overlay/ThemeManagerService;
 
     # getter for: Lcom/android/server/epm/overlay/ThemeManagerService;->mDrawable:Landroid/graphics/drawable/BitmapDrawable;
@@ -68,7 +65,6 @@
 
     if-eqz v4, :cond_0
 
-    .line 1795
     iget-object v4, p0, Lcom/android/server/epm/overlay/ThemeManagerService$6;->this$0:Lcom/android/server/epm/overlay/ThemeManagerService;
 
     # getter for: Lcom/android/server/epm/overlay/ThemeManagerService;->mDrawable:Landroid/graphics/drawable/BitmapDrawable;
@@ -80,7 +76,6 @@
 
     move-result-object v2
 
-    .line 1796
     .local v2, "mBitmap":Landroid/graphics/Bitmap;
     new-instance v0, Ljava/io/File;
 
@@ -90,14 +85,12 @@
 
     invoke-direct {v0, v4, v5}, Ljava/io/File;-><init>(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 1799
     .local v0, "dest":Ljava/io/File;
     :try_start_0
     new-instance v3, Ljava/io/FileOutputStream;
 
     invoke-direct {v3, v0}, Ljava/io/FileOutputStream;-><init>(Ljava/io/File;)V
 
-    .line 1800
     .local v3, "out":Ljava/io/FileOutputStream;
     sget-object v4, Landroid/graphics/Bitmap$CompressFormat;->PNG:Landroid/graphics/Bitmap$CompressFormat;
 
@@ -105,16 +98,13 @@
 
     invoke-virtual {v2, v4, v5, v3}, Landroid/graphics/Bitmap;->compress(Landroid/graphics/Bitmap$CompressFormat;ILjava/io/OutputStream;)Z
 
-    .line 1801
     invoke-virtual {v3}, Ljava/io/FileOutputStream;->flush()V
 
-    .line 1802
     invoke-virtual {v3}, Ljava/io/FileOutputStream;->close()V
     :try_end_0
     .catch Ljava/io/FileNotFoundException; {:try_start_0 .. :try_end_0} :catch_0
     .catch Ljava/io/IOException; {:try_start_0 .. :try_end_0} :catch_1
 
-    .line 1809
     .end local v0    # "dest":Ljava/io/File;
     .end local v2    # "mBitmap":Landroid/graphics/Bitmap;
     .end local v3    # "out":Ljava/io/FileOutputStream;
@@ -122,24 +112,20 @@
     :goto_0
     return-void
 
-    .line 1803
     .restart local v0    # "dest":Ljava/io/File;
     .restart local v2    # "mBitmap":Landroid/graphics/Bitmap;
     :catch_0
     move-exception v1
 
-    .line 1804
     .local v1, "e":Ljava/io/FileNotFoundException;
     invoke-virtual {v1}, Ljava/io/FileNotFoundException;->printStackTrace()V
 
     goto :goto_0
 
-    .line 1805
     .end local v1    # "e":Ljava/io/FileNotFoundException;
     :catch_1
     move-exception v1
 
-    .line 1806
     .local v1, "e":Ljava/io/IOException;
     invoke-virtual {v1}, Ljava/io/IOException;->printStackTrace()V
 

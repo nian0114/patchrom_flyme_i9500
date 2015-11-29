@@ -35,22 +35,18 @@
     .param p3, "handler"    # Landroid/os/Handler;
 
     .prologue
-    .line 1162
     iput-object p1, p0, Landroid/hardware/scontext/SContextManager$SContextListenerDelegate;->this$0:Landroid/hardware/scontext/SContextManager;
 
     invoke-direct {p0}, Landroid/hardware/scontext/ISContextCallback$Stub;-><init>()V
 
-    .line 1164
     iput-object p2, p0, Landroid/hardware/scontext/SContextManager$SContextListenerDelegate;->mListener:Landroid/hardware/scontext/SContextListener;
 
-    .line 1166
     if-eqz p3, :cond_0
 
     invoke-virtual {p3}, Landroid/os/Handler;->getLooper()Landroid/os/Looper;
 
     move-result-object v0
 
-    .line 1168
     .local v0, "looper":Landroid/os/Looper;
     :goto_0
     new-instance v1, Landroid/hardware/scontext/SContextManager$SContextListenerDelegate$1;
@@ -59,10 +55,8 @@
 
     iput-object v1, p0, Landroid/hardware/scontext/SContextManager$SContextListenerDelegate;->mHandler:Landroid/os/Handler;
 
-    .line 1178
     return-void
 
-    .line 1166
     .end local v0    # "looper":Landroid/os/Looper;
     :cond_0
     iget-object v0, p1, Landroid/hardware/scontext/SContextManager;->mMainLooper:Landroid/os/Looper;
@@ -75,7 +69,6 @@
     .param p0, "x0"    # Landroid/hardware/scontext/SContextManager$SContextListenerDelegate;
 
     .prologue
-    .line 1149
     iget-object v0, p0, Landroid/hardware/scontext/SContextManager$SContextListenerDelegate;->mListener:Landroid/hardware/scontext/SContextListener;
 
     return-object v0
@@ -87,7 +80,6 @@
     .locals 1
 
     .prologue
-    .line 1186
     iget-object v0, p0, Landroid/hardware/scontext/SContextManager$SContextListenerDelegate;->mListener:Landroid/hardware/scontext/SContextListener;
 
     return-object v0
@@ -103,7 +95,6 @@
     .end annotation
 
     .prologue
-    .line 1213
     iget-object v0, p0, Landroid/hardware/scontext/SContextManager$SContextListenerDelegate;->mListener:Landroid/hardware/scontext/SContextListener;
 
     invoke-virtual {v0}, Ljava/lang/Object;->toString()Ljava/lang/String;
@@ -123,7 +114,6 @@
     .end annotation
 
     .prologue
-    .line 1198
     monitor-enter p0
 
     :try_start_0
@@ -131,31 +121,25 @@
 
     move-result-object v0
 
-    .line 1199
     .local v0, "msg":Landroid/os/Message;
     const/4 v1, 0x0
 
     iput v1, v0, Landroid/os/Message;->what:I
 
-    .line 1200
     iput-object p1, v0, Landroid/os/Message;->obj:Ljava/lang/Object;
 
-    .line 1201
     iget-object v1, p0, Landroid/hardware/scontext/SContextManager$SContextListenerDelegate;->mHandler:Landroid/os/Handler;
 
     invoke-virtual {v1, v0}, Landroid/os/Handler;->sendMessage(Landroid/os/Message;)Z
 
-    .line 1203
     invoke-virtual {p0}, Ljava/lang/Object;->notifyAll()V
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 1204
     monitor-exit p0
 
     return-void
 
-    .line 1198
     .end local v0    # "msg":Landroid/os/Message;
     :catchall_0
     move-exception v1

@@ -26,7 +26,6 @@
     .locals 0
 
     .prologue
-    .line 903
     iput-object p1, p0, Lcom/android/server/LpnetManagerService$5$3;->this$1:Lcom/android/server/LpnetManagerService$5;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -40,7 +39,6 @@
     .locals 22
 
     .prologue
-    .line 906
     move-object/from16 v0, p0
 
     iget-object v2, v0, Lcom/android/server/LpnetManagerService$5$3;->this$1:Lcom/android/server/LpnetManagerService$5;
@@ -54,7 +52,6 @@
 
     monitor-enter v3
 
-    .line 907
     :try_start_0
     move-object/from16 v0, p0
 
@@ -69,7 +66,6 @@
 
     invoke-interface {v2}, Ljava/util/Map;->clear()V
 
-    .line 908
     move-object/from16 v0, p0
 
     iget-object v2, v0, Lcom/android/server/LpnetManagerService$5$3;->this$1:Lcom/android/server/LpnetManagerService$5;
@@ -83,12 +79,10 @@
 
     invoke-interface {v2}, Ljava/util/Map;->clear()V
 
-    .line 909
     monitor-exit v3
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_1
 
-    .line 911
     :try_start_1
     move-object/from16 v0, p0
 
@@ -100,7 +94,6 @@
 
     if-eqz v2, :cond_4
 
-    .line 912
     move-object/from16 v0, p0
 
     iget-object v2, v0, Lcom/android/server/LpnetManagerService$5$3;->this$1:Lcom/android/server/LpnetManagerService$5;
@@ -116,11 +109,9 @@
 
     move-result-object v15
 
-    .line 913
     .local v15, "runningApps":Ljava/util/List;, "Ljava/util/List<Landroid/app/ActivityManager$RunningAppProcessInfo;>;"
     if-eqz v15, :cond_4
 
-    .line 914
     move-object/from16 v0, p0
 
     iget-object v2, v0, Lcom/android/server/LpnetManagerService$5$3;->this$1:Lcom/android/server/LpnetManagerService$5;
@@ -136,7 +127,6 @@
     :try_end_1
     .catch Landroid/os/RemoteException; {:try_start_1 .. :try_end_1} :catch_0
 
-    .line 915
     :try_start_2
     invoke-interface {v15}, Ljava/util/List;->iterator()Ljava/util/Iterator;
 
@@ -156,15 +146,12 @@
 
     check-cast v19, Landroid/app/ActivityManager$RunningAppProcessInfo;
 
-    .line 916
     .local v19, "theApp":Landroid/app/ActivityManager$RunningAppProcessInfo;
     const/4 v8, 0x0
 
-    .line 917
     .local v8, "appInfo":Landroid/content/pm/ApplicationInfo;
     const/16 v18, 0x0
 
-    .line 918
     .local v18, "targetPackage":Ljava/lang/String;
     move-object/from16 v0, p0
 
@@ -179,7 +166,6 @@
 
     if-eqz v2, :cond_1
 
-    .line 919
     move-object/from16 v0, v19
 
     iget-object v9, v0, Landroid/app/ActivityManager$RunningAppProcessInfo;->pkgList:[Ljava/lang/String;
@@ -196,7 +182,6 @@
 
     aget-object v14, v9, v12
 
-    .line 920
     .local v14, "pkg":Ljava/lang/String;
     move-object/from16 v0, p0
 
@@ -211,10 +196,8 @@
 
     if-eqz v2, :cond_5
 
-    .line 921
     move-object/from16 v18, v14
 
-    .line 926
     .end local v9    # "arr$":[Ljava/lang/String;
     .end local v12    # "i$":I
     .end local v13    # "len$":I
@@ -222,7 +205,6 @@
     :cond_1
     if-nez v18, :cond_2
 
-    .line 927
     move-object/from16 v0, v19
 
     iget-object v0, v0, Landroid/app/ActivityManager$RunningAppProcessInfo;->processName:Ljava/lang/String;
@@ -231,7 +213,6 @@
     :try_end_2
     .catchall {:try_start_2 .. :try_end_2} :catchall_0
 
-    .line 930
     :cond_2
     :try_start_3
     move-object/from16 v0, p0
@@ -256,10 +237,8 @@
 
     move-result-object v8
 
-    .line 935
     if-eqz v8, :cond_0
 
-    .line 937
     :try_start_4
     iget v2, v8, Landroid/content/pm/ApplicationInfo;->flags:I
 
@@ -269,14 +248,12 @@
 
     if-eq v2, v4, :cond_0
 
-    .line 938
     iget v2, v8, Landroid/content/pm/ApplicationInfo;->uid:I
 
     invoke-static {v2}, Landroid/net/TrafficStats;->getUidTxBytes(I)J
 
     move-result-wide v20
 
-    .line 939
     .local v20, "txbytestime":J
     move-object/from16 v0, p0
 
@@ -297,7 +274,6 @@
 
     if-nez v2, :cond_3
 
-    .line 940
     move-object/from16 v0, p0
 
     iget-object v2, v0, Lcom/android/server/LpnetManagerService$5$3;->this$1:Lcom/android/server/LpnetManagerService$5;
@@ -317,7 +293,6 @@
 
     invoke-interface {v2, v0, v4}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 941
     # getter for: Lcom/android/server/LpnetManagerService;->APP_FREEZER_LOG:Z
     invoke-static {}, Lcom/android/server/LpnetManagerService;->access$000()Z
 
@@ -361,7 +336,6 @@
 
     invoke-static {v2, v4}, Landroid/util/Log;->v(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 943
     :cond_3
     iget v2, v8, Landroid/content/pm/ApplicationInfo;->uid:I
 
@@ -369,7 +343,6 @@
 
     move-result-wide v16
 
-    .line 944
     .local v16, "rxbytestime":J
     move-object/from16 v0, p0
 
@@ -390,7 +363,6 @@
 
     if-nez v2, :cond_0
 
-    .line 945
     move-object/from16 v0, p0
 
     iget-object v2, v0, Lcom/android/server/LpnetManagerService$5$3;->this$1:Lcom/android/server/LpnetManagerService$5;
@@ -410,7 +382,6 @@
 
     invoke-interface {v2, v0, v4}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 946
     # getter for: Lcom/android/server/LpnetManagerService;->APP_FREEZER_LOG:Z
     invoke-static {}, Lcom/android/server/LpnetManagerService;->access$000()Z
 
@@ -456,7 +427,6 @@
 
     goto/16 :goto_0
 
-    .line 950
     .end local v8    # "appInfo":Landroid/content/pm/ApplicationInfo;
     .end local v16    # "rxbytestime":J
     .end local v18    # "targetPackage":Ljava/lang/String;
@@ -474,12 +444,10 @@
     :try_end_5
     .catch Landroid/os/RemoteException; {:try_start_5 .. :try_end_5} :catch_0
 
-    .line 953
     .end local v15    # "runningApps":Ljava/util/List;, "Ljava/util/List<Landroid/app/ActivityManager$RunningAppProcessInfo;>;"
     :catch_0
     move-exception v10
 
-    .line 954
     .local v10, "e":Landroid/os/RemoteException;
     const-string v2, "LpnetManagerService"
 
@@ -521,7 +489,6 @@
 
     invoke-static {v2, v3}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 958
     .end local v10    # "e":Landroid/os/RemoteException;
     :cond_4
     :goto_2
@@ -540,10 +507,8 @@
     # invokes: Lcom/android/server/LpnetManagerService;->setAlarm(Ljava/lang/String;JJ)V
     invoke-static/range {v2 .. v7}, Lcom/android/server/LpnetManagerService;->access$3400(Lcom/android/server/LpnetManagerService;Ljava/lang/String;JJ)V
 
-    .line 959
     return-void
 
-    .line 909
     :catchall_1
     move-exception v2
 
@@ -554,7 +519,6 @@
 
     throw v2
 
-    .line 919
     .restart local v8    # "appInfo":Landroid/content/pm/ApplicationInfo;
     .restart local v9    # "arr$":[Ljava/lang/String;
     .restart local v12    # "i$":I
@@ -568,7 +532,6 @@
 
     goto/16 :goto_1
 
-    .line 931
     .end local v9    # "arr$":[Ljava/lang/String;
     .end local v12    # "i$":I
     .end local v13    # "len$":I
@@ -576,11 +539,9 @@
     :catch_1
     move-exception v10
 
-    .line 933
     .local v10, "e":Landroid/content/pm/PackageManager$NameNotFoundException;
     goto/16 :goto_0
 
-    .line 950
     .end local v8    # "appInfo":Landroid/content/pm/ApplicationInfo;
     .end local v10    # "e":Landroid/content/pm/PackageManager$NameNotFoundException;
     .end local v18    # "targetPackage":Ljava/lang/String;

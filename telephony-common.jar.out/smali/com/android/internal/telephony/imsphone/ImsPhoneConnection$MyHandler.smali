@@ -24,7 +24,6 @@
     .param p2, "l"    # Landroid/os/Looper;
 
     .prologue
-    .line 100
     iput-object p1, p0, Lcom/android/internal/telephony/imsphone/ImsPhoneConnection$MyHandler;->this$0:Lcom/android/internal/telephony/imsphone/ImsPhoneConnection;
 
     invoke-direct {p0, p2}, Landroid/os/Handler;-><init>(Landroid/os/Looper;)V
@@ -39,16 +38,13 @@
     .param p1, "msg"    # Landroid/os/Message;
 
     .prologue
-    .line 106
     iget v0, p1, Landroid/os/Message;->what:I
 
     packed-switch v0, :pswitch_data_0
 
-    .line 116
     :goto_0
     return-void
 
-    .line 110
     :pswitch_0
     iget-object v0, p0, Lcom/android/internal/telephony/imsphone/ImsPhoneConnection$MyHandler;->this$0:Lcom/android/internal/telephony/imsphone/ImsPhoneConnection;
 
@@ -57,7 +53,6 @@
 
     goto :goto_0
 
-    .line 113
     :pswitch_1
     iget-object v0, p0, Lcom/android/internal/telephony/imsphone/ImsPhoneConnection$MyHandler;->this$0:Lcom/android/internal/telephony/imsphone/ImsPhoneConnection;
 
@@ -65,7 +60,6 @@
 
     goto :goto_0
 
-    .line 106
     :pswitch_data_0
     .packed-switch 0x1
         :pswitch_0

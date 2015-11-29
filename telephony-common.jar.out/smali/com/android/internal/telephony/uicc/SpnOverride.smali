@@ -49,7 +49,6 @@
     .locals 1
 
     .prologue
-    .line 104
     new-instance v0, Lcom/android/internal/telephony/uicc/SpnOverride$1;
 
     invoke-direct {v0}, Lcom/android/internal/telephony/uicc/SpnOverride$1;-><init>()V
@@ -63,20 +62,16 @@
     .locals 1
 
     .prologue
-    .line 122
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 125
     new-instance v0, Ljava/util/HashMap;
 
     invoke-direct {v0}, Ljava/util/HashMap;-><init>()V
 
     iput-object v0, p0, Lcom/android/internal/telephony/uicc/SpnOverride;->mCarrierSpnMap:Ljava/util/HashMap;
 
-    .line 127
     invoke-direct {p0}, Lcom/android/internal/telephony/uicc/SpnOverride;->loadSpnOverrides()V
 
-    .line 128
     return-void
 .end method
 
@@ -90,7 +85,6 @@
 
     const/4 v4, 0x0
 
-    .line 292
     if-eqz p2, :cond_0
 
     if-nez p1, :cond_1
@@ -98,11 +92,9 @@
     :cond_0
     move-object v3, v4
 
-    .line 313
     :goto_0
     return-object v3
 
-    .line 296
     :cond_1
     const-string v5, "SpnOverride"
 
@@ -148,7 +140,6 @@
 
     invoke-static {v5, v6}, Landroid/telephony/Rlog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 298
     iget-object v5, p0, Lcom/android/internal/telephony/uicc/SpnOverride;->mCarrierSpnMap:Ljava/util/HashMap;
 
     invoke-virtual {v5, p1}, Ljava/util/HashMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
@@ -157,11 +148,9 @@
 
     check-cast v0, Ljava/util/List;
 
-    .line 299
     .local v0, "aSoi":Ljava/util/List;, "Ljava/util/List<Lcom/android/internal/telephony/uicc/SpnOverride$SpnOverrideInfo;>;"
     if-nez v0, :cond_2
 
-    .line 300
     const-string v5, "SpnOverride"
 
     new-instance v6, Ljava/lang/StringBuilder;
@@ -192,10 +181,8 @@
 
     move-object v3, v4
 
-    .line 301
     goto :goto_0
 
-    .line 304
     :cond_2
     invoke-interface {v0}, Ljava/util/List;->iterator()Ljava/util/Iterator;
 
@@ -215,13 +202,11 @@
 
     check-cast v3, Lcom/android/internal/telephony/uicc/SpnOverride$SpnOverrideInfo;
 
-    .line 305
     .local v3, "soi":Lcom/android/internal/telephony/uicc/SpnOverride$SpnOverrideInfo;
     invoke-virtual {v3}, Lcom/android/internal/telephony/uicc/SpnOverride$SpnOverrideInfo;->getImsiSubset()Ljava/lang/String;
 
     move-result-object v2
 
-    .line 306
     .local v2, "imsiSubset":Ljava/lang/String;
     const-string v5, "SpnOverride"
 
@@ -251,7 +236,6 @@
 
     invoke-static {v5, v6}, Landroid/telephony/Rlog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 307
     invoke-virtual {p1}, Ljava/lang/String;->length()I
 
     move-result v5
@@ -268,7 +252,6 @@
 
     goto/16 :goto_0
 
-    .line 312
     .end local v2    # "imsiSubset":Ljava/lang/String;
     .end local v3    # "soi":Lcom/android/internal/telephony/uicc/SpnOverride$SpnOverrideInfo;
     :cond_4
@@ -280,7 +263,6 @@
 
     move-object v3, v4
 
-    .line 313
     goto/16 :goto_0
 .end method
 
@@ -288,7 +270,6 @@
     .locals 15
 
     .prologue
-    .line 158
     new-instance v13, Ljava/io/File;
 
     invoke-static {}, Landroid/os/Environment;->getRootDirectory()Ljava/io/File;
@@ -299,7 +280,6 @@
 
     invoke-direct {v13, v1, v2}, Ljava/io/File;-><init>(Ljava/io/File;Ljava/lang/String;)V
 
-    .line 162
     .local v13, "spnFile":Ljava/io/File;
     :try_start_0
     new-instance v14, Ljava/io/FileReader;
@@ -308,32 +288,26 @@
     :try_end_0
     .catch Ljava/io/FileNotFoundException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 170
     .local v14, "spnReader":Ljava/io/FileReader;
     :try_start_1
     invoke-static {}, Landroid/util/Xml;->newPullParser()Lorg/xmlpull/v1/XmlPullParser;
 
     move-result-object v12
 
-    .line 171
     .local v12, "parser":Lorg/xmlpull/v1/XmlPullParser;
     invoke-interface {v12, v14}, Lorg/xmlpull/v1/XmlPullParser;->setInput(Ljava/io/Reader;)V
 
-    .line 173
     const-string v1, "spnOverrides"
 
     invoke-static {v12, v1}, Lcom/android/internal/util/XmlUtils;->beginDocument(Lorg/xmlpull/v1/XmlPullParser;Ljava/lang/String;)V
 
-    .line 176
     :goto_0
     invoke-static {v12}, Lcom/android/internal/util/XmlUtils;->nextElement(Lorg/xmlpull/v1/XmlPullParser;)V
 
-    .line 178
     invoke-interface {v12}, Lorg/xmlpull/v1/XmlPullParser;->getName()Ljava/lang/String;
 
     move-result-object v11
 
-    .line 179
     .local v11, "name":Ljava/lang/String;
     const-string v1, "spnOverride"
 
@@ -343,23 +317,19 @@
 
     if-nez v1, :cond_1
 
-    .line 210
     invoke-virtual {v14}, Ljava/io/FileReader;->close()V
     :try_end_1
     .catch Lorg/xmlpull/v1/XmlPullParserException; {:try_start_1 .. :try_end_1} :catch_1
     .catch Ljava/io/IOException; {:try_start_1 .. :try_end_1} :catch_3
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
-    .line 218
     if-eqz v14, :cond_0
 
-    .line 219
     :try_start_2
     invoke-virtual {v14}, Ljava/io/FileReader;->close()V
     :try_end_2
     .catch Ljava/io/IOException; {:try_start_2 .. :try_end_2} :catch_5
 
-    .line 226
     .end local v11    # "name":Ljava/lang/String;
     .end local v12    # "parser":Lorg/xmlpull/v1/XmlPullParser;
     .end local v14    # "spnReader":Ljava/io/FileReader;
@@ -367,11 +337,9 @@
     :goto_1
     return-void
 
-    .line 163
     :catch_0
     move-exception v10
 
-    .line 164
     .local v10, "e":Ljava/io/FileNotFoundException;
     const-string v1, "SpnOverride"
 
@@ -413,7 +381,6 @@
 
     goto :goto_1
 
-    .line 190
     .end local v10    # "e":Ljava/io/FileNotFoundException;
     .restart local v11    # "name":Ljava/lang/String;
     .restart local v12    # "parser":Lorg/xmlpull/v1/XmlPullParser;
@@ -482,7 +449,6 @@
 
     invoke-direct/range {v0 .. v8}, Lcom/android/internal/telephony/uicc/SpnOverride$SpnOverrideInfo;-><init>(Lcom/android/internal/telephony/uicc/SpnOverride;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 199
     .local v0, "newSoi":Lcom/android/internal/telephony/uicc/SpnOverride$SpnOverrideInfo;
     iget-object v1, p0, Lcom/android/internal/telephony/uicc/SpnOverride;->mCarrierSpnMap:Ljava/util/HashMap;
 
@@ -497,11 +463,9 @@
 
     check-cast v9, Ljava/util/List;
 
-    .line 200
     .local v9, "aSoi":Ljava/util/List;, "Ljava/util/List<Lcom/android/internal/telephony/uicc/SpnOverride$SpnOverrideInfo;>;"
     if-nez v9, :cond_2
 
-    .line 201
     new-instance v9, Ljava/util/ArrayList;
 
     .end local v9    # "aSoi":Ljava/util/List;, "Ljava/util/List<Lcom/android/internal/telephony/uicc/SpnOverride$SpnOverrideInfo;>;"
@@ -509,17 +473,14 @@
 
     invoke-direct {v9, v1}, Ljava/util/ArrayList;-><init>(I)V
 
-    .line 203
     .restart local v9    # "aSoi":Ljava/util/List;, "Ljava/util/List<Lcom/android/internal/telephony/uicc/SpnOverride$SpnOverrideInfo;>;"
     :cond_2
     invoke-interface {v9, v0}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    .line 205
     sget-object v1, Lcom/android/internal/telephony/uicc/SpnOverride;->COMPARATOR_IMSI_SUBSET:Ljava/util/Comparator;
 
     invoke-static {v9, v1}, Ljava/util/Collections;->sort(Ljava/util/List;Ljava/util/Comparator;)V
 
-    .line 207
     iget-object v1, p0, Lcom/android/internal/telephony/uicc/SpnOverride;->mCarrierSpnMap:Ljava/util/HashMap;
 
     # getter for: Lcom/android/internal/telephony/uicc/SpnOverride$SpnOverrideInfo;->numeric:Ljava/lang/String;
@@ -535,7 +496,6 @@
 
     goto/16 :goto_0
 
-    .line 211
     .end local v0    # "newSoi":Lcom/android/internal/telephony/uicc/SpnOverride$SpnOverrideInfo;
     .end local v9    # "aSoi":Ljava/util/List;, "Ljava/util/List<Lcom/android/internal/telephony/uicc/SpnOverride$SpnOverrideInfo;>;"
     .end local v11    # "name":Ljava/lang/String;
@@ -543,7 +503,6 @@
     :catch_1
     move-exception v10
 
-    .line 212
     .local v10, "e":Lorg/xmlpull/v1/XmlPullParserException;
     :try_start_4
     const-string v1, "SpnOverride"
@@ -570,10 +529,8 @@
     :try_end_4
     .catchall {:try_start_4 .. :try_end_4} :catchall_0
 
-    .line 218
     if-eqz v14, :cond_0
 
-    .line 219
     :try_start_5
     invoke-virtual {v14}, Ljava/io/FileReader;->close()V
     :try_end_5
@@ -581,18 +538,15 @@
 
     goto/16 :goto_1
 
-    .line 221
     :catch_2
     move-exception v1
 
     goto/16 :goto_1
 
-    .line 213
     .end local v10    # "e":Lorg/xmlpull/v1/XmlPullParserException;
     :catch_3
     move-exception v10
 
-    .line 214
     .local v10, "e":Ljava/io/IOException;
     :try_start_6
     const-string v1, "SpnOverride"
@@ -619,10 +573,8 @@
     :try_end_6
     .catchall {:try_start_6 .. :try_end_6} :catchall_0
 
-    .line 218
     if-eqz v14, :cond_0
 
-    .line 219
     :try_start_7
     invoke-virtual {v14}, Ljava/io/FileReader;->close()V
     :try_end_7
@@ -630,32 +582,26 @@
 
     goto/16 :goto_1
 
-    .line 221
     :catch_4
     move-exception v1
 
     goto/16 :goto_1
 
-    .line 217
     .end local v10    # "e":Ljava/io/IOException;
     :catchall_0
     move-exception v1
 
-    .line 218
     if-eqz v14, :cond_3
 
-    .line 219
     :try_start_8
     invoke-virtual {v14}, Ljava/io/FileReader;->close()V
     :try_end_8
     .catch Ljava/io/IOException; {:try_start_8 .. :try_end_8} :catch_6
 
-    .line 223
     :cond_3
     :goto_2
     throw v1
 
-    .line 221
     .restart local v11    # "name":Ljava/lang/String;
     .restart local v12    # "parser":Lorg/xmlpull/v1/XmlPullParser;
     :catch_5
@@ -678,7 +624,6 @@
     .param p1, "carrier"    # Ljava/lang/String;
 
     .prologue
-    .line 131
     iget-object v0, p0, Lcom/android/internal/telephony/uicc/SpnOverride;->mCarrierSpnMap:Ljava/util/HashMap;
 
     invoke-virtual {v0, p1}, Ljava/util/HashMap;->containsKey(Ljava/lang/Object;)Z
@@ -694,28 +639,23 @@
     .param p2, "imsi"    # Ljava/lang/String;
 
     .prologue
-    .line 235
     const/4 v0, -0x1
 
-    .line 237
     .local v0, "result":I
     invoke-direct {p0, p1, p2}, Lcom/android/internal/telephony/uicc/SpnOverride;->getMatchingSpnOverrideInfo(Ljava/lang/String;Ljava/lang/String;)Lcom/android/internal/telephony/uicc/SpnOverride$SpnOverrideInfo;
 
     move-result-object v3
 
-    .line 239
     .local v3, "soi":Lcom/android/internal/telephony/uicc/SpnOverride$SpnOverrideInfo;
     if-nez v3, :cond_0
 
     move v1, v0
 
-    .line 256
     .end local v0    # "result":I
     .local v1, "result":I
     :goto_0
     return v1
 
-    .line 243
     .end local v1    # "result":I
     .restart local v0    # "result":I
     :cond_0
@@ -723,24 +663,20 @@
 
     move-result-object v2
 
-    .line 244
     .local v2, "rule":Ljava/lang/String;
     if-nez v2, :cond_1
 
     move v1, v0
 
-    .line 245
     .end local v0    # "result":I
     .restart local v1    # "result":I
     goto :goto_0
 
-    .line 248
     .end local v1    # "result":I
     .restart local v0    # "result":I
     :cond_1
     const/4 v0, 0x0
 
-    .line 249
     const-string v4, "SPN_RULE_SHOW_SPN"
 
     invoke-virtual {v2, v4}, Ljava/lang/String;->contains(Ljava/lang/CharSequence;)Z
@@ -749,10 +685,8 @@
 
     if-eqz v4, :cond_2
 
-    .line 250
     add-int/lit8 v0, v0, 0x1
 
-    .line 252
     :cond_2
     const-string v4, "SPN_RULE_SHOW_PLMN"
 
@@ -762,13 +696,11 @@
 
     if-eqz v4, :cond_3
 
-    .line 253
     add-int/lit8 v0, v0, 0x2
 
     :cond_3
     move v1, v0
 
-    .line 256
     .end local v0    # "result":I
     .restart local v1    # "result":I
     goto :goto_0
@@ -780,19 +712,15 @@
     .param p2, "imsi"    # Ljava/lang/String;
 
     .prologue
-    .line 274
     invoke-direct {p0, p1, p2}, Lcom/android/internal/telephony/uicc/SpnOverride;->getMatchingSpnOverrideInfo(Ljava/lang/String;Ljava/lang/String;)Lcom/android/internal/telephony/uicc/SpnOverride$SpnOverrideInfo;
 
     move-result-object v0
 
-    .line 275
     .local v0, "soi":Lcom/android/internal/telephony/uicc/SpnOverride$SpnOverrideInfo;
     if-nez v0, :cond_0
 
-    .line 276
     const/4 v1, 0x0
 
-    .line 279
     :goto_0
     return-object v1
 
@@ -810,19 +738,15 @@
     .param p2, "imsi"    # Ljava/lang/String;
 
     .prologue
-    .line 283
     invoke-direct {p0, p1, p2}, Lcom/android/internal/telephony/uicc/SpnOverride;->getMatchingSpnOverrideInfo(Ljava/lang/String;Ljava/lang/String;)Lcom/android/internal/telephony/uicc/SpnOverride$SpnOverrideInfo;
 
     move-result-object v0
 
-    .line 284
     .local v0, "soi":Lcom/android/internal/telephony/uicc/SpnOverride$SpnOverrideInfo;
     if-nez v0, :cond_0
 
-    .line 285
     const/4 v1, 0x0
 
-    .line 288
     :goto_0
     return-object v1
 
@@ -840,19 +764,15 @@
     .param p2, "imsi"    # Ljava/lang/String;
 
     .prologue
-    .line 265
     invoke-direct {p0, p1, p2}, Lcom/android/internal/telephony/uicc/SpnOverride;->getMatchingSpnOverrideInfo(Ljava/lang/String;Ljava/lang/String;)Lcom/android/internal/telephony/uicc/SpnOverride$SpnOverrideInfo;
 
     move-result-object v0
 
-    .line 266
     .local v0, "soi":Lcom/android/internal/telephony/uicc/SpnOverride$SpnOverrideInfo;
     if-nez v0, :cond_0
 
-    .line 267
     const/4 v1, 0x0
 
-    .line 270
     :goto_0
     return-object v1
 
@@ -870,21 +790,17 @@
     .param p2, "imsi"    # Ljava/lang/String;
 
     .prologue
-    .line 147
     invoke-direct {p0, p1, p2}, Lcom/android/internal/telephony/uicc/SpnOverride;->getMatchingSpnOverrideInfo(Ljava/lang/String;Ljava/lang/String;)Lcom/android/internal/telephony/uicc/SpnOverride$SpnOverrideInfo;
 
     move-result-object v0
 
-    .line 148
     .local v0, "soi":Lcom/android/internal/telephony/uicc/SpnOverride$SpnOverrideInfo;
     if-eqz v0, :cond_0
 
-    .line 149
     invoke-virtual {v0}, Lcom/android/internal/telephony/uicc/SpnOverride$SpnOverrideInfo;->getSpn()Ljava/lang/String;
 
     move-result-object v1
 
-    .line 151
     :goto_0
     return-object v1
 

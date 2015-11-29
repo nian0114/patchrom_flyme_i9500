@@ -30,7 +30,6 @@
     .param p2, "x0"    # Ljava/lang/String;
 
     .prologue
-    .line 69
     iput-object p1, p0, Lcom/android/server/pm/BackgroundDexOptService$1;->this$0:Lcom/android/server/pm/BackgroundDexOptService;
 
     iput-object p3, p0, Lcom/android/server/pm/BackgroundDexOptService$1;->val$pkgs:Ljava/util/HashSet;
@@ -50,7 +49,6 @@
     .locals 5
 
     .prologue
-    .line 72
     iget-object v2, p0, Lcom/android/server/pm/BackgroundDexOptService$1;->val$pkgs:Ljava/util/HashSet;
 
     invoke-virtual {v2}, Ljava/util/HashSet;->iterator()Ljava/util/Iterator;
@@ -71,7 +69,6 @@
 
     check-cast v1, Ljava/lang/String;
 
-    .line 73
     .local v1, "pkg":Ljava/lang/String;
     iget-object v2, p0, Lcom/android/server/pm/BackgroundDexOptService$1;->this$0:Lcom/android/server/pm/BackgroundDexOptService;
 
@@ -91,18 +88,15 @@
 
     if-eqz v2, :cond_1
 
-    .line 75
     :cond_0
     iget-object v2, p0, Lcom/android/server/pm/BackgroundDexOptService$1;->this$0:Lcom/android/server/pm/BackgroundDexOptService;
 
     invoke-static {v2}, Lcom/android/server/pm/BackgroundDexOptService;->schedule(Landroid/content/Context;)V
 
-    .line 82
     .end local v1    # "pkg":Ljava/lang/String;
     :goto_1
     return-void
 
-    .line 78
     .restart local v1    # "pkg":Ljava/lang/String;
     :cond_1
     iget-object v2, p0, Lcom/android/server/pm/BackgroundDexOptService$1;->val$pm:Lcom/android/server/pm/PackageManagerService;
@@ -115,7 +109,6 @@
 
     goto :goto_0
 
-    .line 81
     .end local v1    # "pkg":Ljava/lang/String;
     :cond_2
     iget-object v2, p0, Lcom/android/server/pm/BackgroundDexOptService$1;->this$0:Lcom/android/server/pm/BackgroundDexOptService;

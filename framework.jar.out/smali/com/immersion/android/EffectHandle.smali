@@ -10,10 +10,8 @@
     .param p2, "hEffectHandle"    # I
 
     .prologue
-    .line 30
     invoke-direct {p0, p1, p2}, Lcom/immersion/EffectHandle;-><init>(II)V
 
-    .line 31
     return-void
 .end method
 
@@ -27,7 +25,6 @@
 
     const/4 v1, -0x1
 
-    .line 62
     iget v0, p0, Lcom/immersion/android/EffectHandle;->hDeviceHandle:I
 
     if-eq v1, v0, :cond_0
@@ -42,7 +39,6 @@
 
     if-ne v0, v2, :cond_0
 
-    .line 66
     invoke-static {}, Lcom/immersion/android/ImmVibe;->getInstance()Lcom/immersion/ImmVibe;
 
     move-result-object v0
@@ -53,7 +49,6 @@
 
     invoke-virtual {v0, v1, v2}, Lcom/immersion/ImmVibe;->destroyStreamingEffect(II)V
 
-    .line 68
     :cond_0
     return-void
 .end method

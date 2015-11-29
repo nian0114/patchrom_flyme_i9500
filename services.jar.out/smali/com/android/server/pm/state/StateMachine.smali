@@ -98,44 +98,36 @@
     .local p4, "previousState":Ljava/lang/Object;, "TS;"
     const/4 v3, 0x0
 
-    .line 31
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 28
     new-instance v0, Ljava/util/HashMap;
 
     invoke-direct {v0}, Ljava/util/HashMap;-><init>()V
 
     iput-object v0, p0, Lcom/android/server/pm/state/StateMachine;->states:Ljava/util/Map;
 
-    .line 29
     new-instance v0, Ljava/util/HashSet;
 
     invoke-direct {v0}, Ljava/util/HashSet;-><init>()V
 
     iput-object v0, p0, Lcom/android/server/pm/state/StateMachine;->attributes:Ljava/util/Set;
 
-    .line 32
     iput-object p1, p0, Lcom/android/server/pm/state/StateMachine;->pms:Lcom/android/server/pm/PersonaManagerService;
 
-    .line 33
     iput p2, p0, Lcom/android/server/pm/state/StateMachine;->personaId:I
 
-    .line 34
     new-instance v0, Lcom/android/server/pm/state/StateMachine$StateWrapper;
 
     invoke-direct {v0, p0, p3, v3}, Lcom/android/server/pm/state/StateMachine$StateWrapper;-><init>(Lcom/android/server/pm/state/StateMachine;Ljava/lang/Object;Lcom/android/server/pm/state/StateMachine$1;)V
 
     iput-object v0, p0, Lcom/android/server/pm/state/StateMachine;->currentState:Lcom/android/server/pm/state/StateMachine$StateWrapper;
 
-    .line 36
     iget-object v0, p0, Lcom/android/server/pm/state/StateMachine;->states:Ljava/util/Map;
 
     iget-object v1, p0, Lcom/android/server/pm/state/StateMachine;->currentState:Lcom/android/server/pm/state/StateMachine$StateWrapper;
 
     invoke-interface {v0, p3, v1}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 39
     const-string v0, "StateMachine"
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -187,24 +179,20 @@
 
     invoke-virtual {p0, v0, v1}, Lcom/android/server/pm/state/StateMachine;->log(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 41
     if-eq p3, p4, :cond_0
 
-    .line 42
     new-instance v0, Lcom/android/server/pm/state/StateMachine$StateWrapper;
 
     invoke-direct {v0, p0, p4, v3}, Lcom/android/server/pm/state/StateMachine$StateWrapper;-><init>(Lcom/android/server/pm/state/StateMachine;Ljava/lang/Object;Lcom/android/server/pm/state/StateMachine$1;)V
 
     iput-object v0, p0, Lcom/android/server/pm/state/StateMachine;->previousState:Lcom/android/server/pm/state/StateMachine$StateWrapper;
 
-    .line 43
     iget-object v0, p0, Lcom/android/server/pm/state/StateMachine;->states:Ljava/util/Map;
 
     iget-object v1, p0, Lcom/android/server/pm/state/StateMachine;->previousState:Lcom/android/server/pm/state/StateMachine$StateWrapper;
 
     invoke-interface {v0, p4, v1}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 46
     const-string v0, "StateMachine"
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -256,17 +244,14 @@
 
     invoke-virtual {p0, v0, v1}, Lcom/android/server/pm/state/StateMachine;->log(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 55
     :goto_0
     return-void
 
-    .line 49
     :cond_0
     iget-object v0, p0, Lcom/android/server/pm/state/StateMachine;->currentState:Lcom/android/server/pm/state/StateMachine$StateWrapper;
 
     iput-object v0, p0, Lcom/android/server/pm/state/StateMachine;->previousState:Lcom/android/server/pm/state/StateMachine$StateWrapper;
 
-    .line 50
     const-string v0, "StateMachine"
 
     const-string v1, "addState() previousState same as initialState"
@@ -282,7 +267,6 @@
     .param p1, "x1"    # Ljava/lang/Object;
 
     .prologue
-    .line 16
     invoke-direct {p0, p1}, Lcom/android/server/pm/state/StateMachine;->stateExists(Ljava/lang/Object;)Z
 
     move-result v0
@@ -295,7 +279,6 @@
     .param p0, "x0"    # Lcom/android/server/pm/state/StateMachine;
 
     .prologue
-    .line 16
     iget-object v0, p0, Lcom/android/server/pm/state/StateMachine;->states:Ljava/util/Map;
 
     return-object v0
@@ -312,7 +295,6 @@
     .end annotation
 
     .prologue
-    .line 191
     .local p0, "this":Lcom/android/server/pm/state/StateMachine;, "Lcom/android/server/pm/state/StateMachine<TS;TT;TA;>;"
     .local p1, "state":Ljava/lang/Object;, "TS;"
     .local p2, "trigger":Ljava/lang/Object;, "TT;"
@@ -324,11 +306,9 @@
 
     check-cast v0, Lcom/android/server/pm/state/StateMachine$StateWrapper;
 
-    .line 192
     .local v0, "newState":Lcom/android/server/pm/state/StateMachine$StateWrapper;, "Lcom/android/server/pm/state/StateMachine$StateWrapper<TS;TT;TA;>;"
     if-eqz v0, :cond_0
 
-    .line 193
     # getter for: Lcom/android/server/pm/state/StateMachine$StateWrapper;->triggerExceptionMaps:Ljava/util/Map;
     invoke-static {v0}, Lcom/android/server/pm/state/StateMachine$StateWrapper;->access$400(Lcom/android/server/pm/state/StateMachine$StateWrapper;)Ljava/util/Map;
 
@@ -340,11 +320,9 @@
 
     check-cast v1, Ljava/util/HashMap;
 
-    .line 194
     .local v1, "triggerSet":Ljava/util/HashMap;, "Ljava/util/HashMap<TA;TS;>;"
     if-eqz v1, :cond_0
 
-    .line 195
     # getter for: Lcom/android/server/pm/state/StateMachine$StateWrapper;->triggerExceptionMaps:Ljava/util/Map;
     invoke-static {v0}, Lcom/android/server/pm/state/StateMachine$StateWrapper;->access$400(Lcom/android/server/pm/state/StateMachine$StateWrapper;)Ljava/util/Map;
 
@@ -360,7 +338,6 @@
 
     move-result-object v2
 
-    .line 198
     .end local v1    # "triggerSet":Ljava/util/HashMap;, "Ljava/util/HashMap<TA;TS;>;"
     :goto_0
     return-object v2
@@ -382,7 +359,6 @@
     .end annotation
 
     .prologue
-    .line 206
     .local p0, "this":Lcom/android/server/pm/state/StateMachine;, "Lcom/android/server/pm/state/StateMachine<TS;TT;TA;>;"
     .local p1, "state":Ljava/lang/Object;, "TS;"
     iget-object v0, p0, Lcom/android/server/pm/state/StateMachine;->states:Ljava/util/Map;
@@ -407,7 +383,6 @@
     .end annotation
 
     .prologue
-    .line 59
     .local p0, "this":Lcom/android/server/pm/state/StateMachine;, "Lcom/android/server/pm/state/StateMachine<TS;TT;TA;>;"
     .local p1, "state":Ljava/lang/Object;, "TS;"
     iget-object v1, p0, Lcom/android/server/pm/state/StateMachine;->states:Ljava/util/Map;
@@ -418,11 +393,9 @@
 
     check-cast v0, Lcom/android/server/pm/state/StateMachine$StateWrapper;
 
-    .line 60
     .local v0, "newState":Lcom/android/server/pm/state/StateMachine$StateWrapper;, "Lcom/android/server/pm/state/StateMachine$StateWrapper<TS;TT;TA;>;"
     if-nez v0, :cond_0
 
-    .line 61
     new-instance v0, Lcom/android/server/pm/state/StateMachine$StateWrapper;
 
     .end local v0    # "newState":Lcom/android/server/pm/state/StateMachine$StateWrapper;, "Lcom/android/server/pm/state/StateMachine$StateWrapper<TS;TT;TA;>;"
@@ -430,13 +403,11 @@
 
     invoke-direct {v0, p0, p1, v1}, Lcom/android/server/pm/state/StateMachine$StateWrapper;-><init>(Lcom/android/server/pm/state/StateMachine;Ljava/lang/Object;Lcom/android/server/pm/state/StateMachine$1;)V
 
-    .line 62
     .restart local v0    # "newState":Lcom/android/server/pm/state/StateMachine$StateWrapper;, "Lcom/android/server/pm/state/StateMachine$StateWrapper<TS;TT;TA;>;"
     iget-object v1, p0, Lcom/android/server/pm/state/StateMachine;->states:Ljava/util/Map;
 
     invoke-interface {v1, p1, v0}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 64
     const-string v1, "StateMachine"
 
     new-instance v2, Ljava/lang/StringBuilder;
@@ -486,7 +457,6 @@
 
     invoke-virtual {p0, v1, v2}, Lcom/android/server/pm/state/StateMachine;->log(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 69
     :cond_0
     return-object v0
 .end method
@@ -502,7 +472,6 @@
     .end annotation
 
     .prologue
-    .line 73
     .local p0, "this":Lcom/android/server/pm/state/StateMachine;, "Lcom/android/server/pm/state/StateMachine<TS;TT;TA;>;"
     .local p1, "state":Ljava/lang/Object;, "TS;"
     iget-object v1, p0, Lcom/android/server/pm/state/StateMachine;->states:Ljava/util/Map;
@@ -513,7 +482,6 @@
 
     check-cast v0, Lcom/android/server/pm/state/StateMachine$StateWrapper;
 
-    .line 74
     .local v0, "configureState":Lcom/android/server/pm/state/StateMachine$StateWrapper;, "Lcom/android/server/pm/state/StateMachine$StateWrapper<TS;TT;TA;>;"
     return-object v0
 .end method
@@ -528,7 +496,6 @@
     .end annotation
 
     .prologue
-    .line 124
     .local p0, "this":Lcom/android/server/pm/state/StateMachine;, "Lcom/android/server/pm/state/StateMachine<TS;TT;TA;>;"
     .local p1, "trigger":Ljava/lang/Object;, "TT;"
     iget-object v5, p0, Lcom/android/server/pm/state/StateMachine;->currentState:Lcom/android/server/pm/state/StateMachine$StateWrapper;
@@ -544,7 +511,6 @@
 
     if-eqz v5, :cond_5
 
-    .line 126
     const-string v5, "StateMachine"
 
     new-instance v6, Ljava/lang/StringBuilder;
@@ -584,10 +550,8 @@
 
     invoke-virtual {p0, v5, v6}, Lcom/android/server/pm/state/StateMachine;->log(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 128
     const/4 v1, 0x0
 
-    .line 129
     .local v1, "exceptionExists":Z
     iget-object v5, p0, Lcom/android/server/pm/state/StateMachine;->currentState:Lcom/android/server/pm/state/StateMachine$StateWrapper;
 
@@ -596,7 +560,6 @@
 
     move-result-object v4
 
-    .line 131
     .local v4, "newState":Ljava/lang/Object;, "TS;"
     iget-object v5, p0, Lcom/android/server/pm/state/StateMachine;->currentState:Lcom/android/server/pm/state/StateMachine$StateWrapper;
 
@@ -609,7 +572,6 @@
 
     move-result-object v2
 
-    .line 132
     .local v2, "exceptionsByAttribute":Ljava/util/Set;, "Ljava/util/Set<TA;>;"
     invoke-interface {v2}, Ljava/util/Set;->iterator()Ljava/util/Iterator;
 
@@ -627,7 +589,6 @@
 
     move-result-object v0
 
-    .line 134
     .local v0, "exceptionAttribute":Ljava/lang/Object;, "TA;"
     iget-object v5, p0, Lcom/android/server/pm/state/StateMachine;->attributes:Ljava/util/Set;
 
@@ -637,7 +598,6 @@
 
     if-eqz v5, :cond_0
 
-    .line 135
     const-string v5, "StateMachine"
 
     new-instance v6, Ljava/lang/StringBuilder;
@@ -670,10 +630,8 @@
 
     invoke-virtual {p0, v5, v6}, Lcom/android/server/pm/state/StateMachine;->log(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 136
     const/4 v1, 0x1
 
-    .line 137
     iget-object v5, p0, Lcom/android/server/pm/state/StateMachine;->currentState:Lcom/android/server/pm/state/StateMachine$StateWrapper;
 
     # getter for: Lcom/android/server/pm/state/StateMachine$StateWrapper;->triggerExceptionMaps:Ljava/util/Map;
@@ -691,12 +649,10 @@
 
     move-result-object v4
 
-    .line 141
     .end local v0    # "exceptionAttribute":Ljava/lang/Object;, "TA;"
     :cond_1
     if-nez v1, :cond_2
 
-    .line 142
     iget-object v5, p0, Lcom/android/server/pm/state/StateMachine;->currentState:Lcom/android/server/pm/state/StateMachine$StateWrapper;
 
     # getter for: Lcom/android/server/pm/state/StateMachine$StateWrapper;->allowedTransitions:Ljava/util/Map;
@@ -708,7 +664,6 @@
 
     move-result-object v4
 
-    .line 145
     :cond_2
     invoke-direct {p0, v4}, Lcom/android/server/pm/state/StateMachine;->stateExists(Ljava/lang/Object;)Z
 
@@ -729,7 +684,6 @@
 
     if-nez v5, :cond_4
 
-    .line 147
     const-string v5, "StateMachine"
 
     new-instance v6, Ljava/lang/StringBuilder;
@@ -752,12 +706,10 @@
 
     invoke-virtual {p0, v5, v6}, Lcom/android/server/pm/state/StateMachine;->log(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 149
     iget-object v5, p0, Lcom/android/server/pm/state/StateMachine;->currentState:Lcom/android/server/pm/state/StateMachine$StateWrapper;
 
     iput-object v5, p0, Lcom/android/server/pm/state/StateMachine;->previousState:Lcom/android/server/pm/state/StateMachine$StateWrapper;
 
-    .line 150
     iget-object v5, p0, Lcom/android/server/pm/state/StateMachine;->states:Ljava/util/Map;
 
     invoke-interface {v5, v4}, Ljava/util/Map;->get(Ljava/lang/Object;)Ljava/lang/Object;
@@ -768,24 +720,20 @@
 
     iput-object v5, p0, Lcom/android/server/pm/state/StateMachine;->currentState:Lcom/android/server/pm/state/StateMachine$StateWrapper;
 
-    .line 151
     iget-object v5, p0, Lcom/android/server/pm/state/StateMachine;->pms:Lcom/android/server/pm/PersonaManagerService;
 
     iget v6, p0, Lcom/android/server/pm/state/StateMachine;->personaId:I
 
     invoke-virtual {v5, v6}, Lcom/android/server/pm/PersonaManagerService;->persistPersonaInfo(I)V
 
-    .line 152
     if-eqz p2, :cond_3
 
-    .line 153
     iget-object v5, p0, Lcom/android/server/pm/state/StateMachine;->pms:Lcom/android/server/pm/PersonaManagerService;
 
     iget v6, p0, Lcom/android/server/pm/state/StateMachine;->personaId:I
 
     invoke-virtual {v5, v6}, Lcom/android/server/pm/PersonaManagerService;->propagateNewStateChange(I)V
 
-    .line 163
     .end local v1    # "exceptionExists":Z
     .end local v2    # "exceptionsByAttribute":Ljava/util/Set;, "Ljava/util/Set<TA;>;"
     .end local v3    # "i$":Ljava/util/Iterator;
@@ -800,7 +748,6 @@
 
     return-object v5
 
-    .line 157
     .restart local v1    # "exceptionExists":Z
     .restart local v2    # "exceptionsByAttribute":Ljava/util/Set;, "Ljava/util/Set<TA;>;"
     .restart local v3    # "i$":Ljava/util/Iterator;
@@ -814,7 +761,6 @@
 
     goto :goto_0
 
-    .line 161
     .end local v1    # "exceptionExists":Z
     .end local v2    # "exceptionsByAttribute":Ljava/util/Set;, "Ljava/util/Set<TA;>;"
     .end local v3    # "i$":Ljava/util/Iterator;
@@ -871,7 +817,6 @@
     .end annotation
 
     .prologue
-    .line 96
     .local p0, "this":Lcom/android/server/pm/state/StateMachine;, "Lcom/android/server/pm/state/StateMachine<TS;TT;TA;>;"
     const-string v0, "StateMachine"
 
@@ -901,7 +846,6 @@
 
     invoke-virtual {p0, v0, v1}, Lcom/android/server/pm/state/StateMachine;->log(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 98
     iget-object v0, p0, Lcom/android/server/pm/state/StateMachine;->previousState:Lcom/android/server/pm/state/StateMachine$StateWrapper;
 
     invoke-virtual {v0}, Lcom/android/server/pm/state/StateMachine$StateWrapper;->getState()Ljava/lang/Object;
@@ -920,7 +864,6 @@
     .end annotation
 
     .prologue
-    .line 81
     .local p0, "this":Lcom/android/server/pm/state/StateMachine;, "Lcom/android/server/pm/state/StateMachine<TS;TT;TA;>;"
     iget-object v0, p0, Lcom/android/server/pm/state/StateMachine;->currentState:Lcom/android/server/pm/state/StateMachine$StateWrapper;
 
@@ -940,7 +883,6 @@
     .end annotation
 
     .prologue
-    .line 104
     .local p0, "this":Lcom/android/server/pm/state/StateMachine;, "Lcom/android/server/pm/state/StateMachine<TS;TT;TA;>;"
     .local p1, "state":Ljava/lang/Object;, "TS;"
     const-string v1, "StateMachine"
@@ -965,14 +907,12 @@
 
     invoke-virtual {p0, v1, v2}, Lcom/android/server/pm/state/StateMachine;->log(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 106
     invoke-direct {p0, p1}, Lcom/android/server/pm/state/StateMachine;->stateExists(Ljava/lang/Object;)Z
 
     move-result v1
 
     if-eqz v1, :cond_0
 
-    .line 107
     iget-object v1, p0, Lcom/android/server/pm/state/StateMachine;->states:Ljava/util/Map;
 
     invoke-interface {v1, p1}, Ljava/util/Map;->get(Ljava/lang/Object;)Ljava/lang/Object;
@@ -981,7 +921,6 @@
 
     check-cast v0, Lcom/android/server/pm/state/StateMachine$StateWrapper;
 
-    .line 108
     .local v0, "queryState":Lcom/android/server/pm/state/StateMachine$StateWrapper;, "Lcom/android/server/pm/state/StateMachine$StateWrapper<TS;TT;TA;>;"
     iget-object v1, p0, Lcom/android/server/pm/state/StateMachine;->currentState:Lcom/android/server/pm/state/StateMachine$StateWrapper;
 
@@ -994,7 +933,6 @@
 
     move-result v1
 
-    .line 109
     .end local v0    # "queryState":Lcom/android/server/pm/state/StateMachine$StateWrapper;, "Lcom/android/server/pm/state/StateMachine$StateWrapper<TS;TT;TA;>;"
     :goto_0
     return v1
@@ -1014,7 +952,6 @@
     .end annotation
 
     .prologue
-    .line 114
     .local p0, "this":Lcom/android/server/pm/state/StateMachine;, "Lcom/android/server/pm/state/StateMachine<TS;TT;TA;>;"
     .local p1, "substate":Ljava/lang/Object;, "TS;"
     .local p2, "parentState":Ljava/lang/Object;, "TS;"
@@ -1056,7 +993,6 @@
 
     invoke-virtual {p0, v1, v2}, Lcom/android/server/pm/state/StateMachine;->log(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 116
     invoke-direct {p0, p1}, Lcom/android/server/pm/state/StateMachine;->stateExists(Ljava/lang/Object;)Z
 
     move-result v1
@@ -1069,7 +1005,6 @@
 
     if-eqz v1, :cond_0
 
-    .line 117
     iget-object v1, p0, Lcom/android/server/pm/state/StateMachine;->states:Ljava/util/Map;
 
     invoke-interface {v1, p2}, Ljava/util/Map;->get(Ljava/lang/Object;)Ljava/lang/Object;
@@ -1078,14 +1013,12 @@
 
     check-cast v0, Lcom/android/server/pm/state/StateMachine$StateWrapper;
 
-    .line 118
     .local v0, "queryState":Lcom/android/server/pm/state/StateMachine$StateWrapper;, "Lcom/android/server/pm/state/StateMachine$StateWrapper<TS;TT;TA;>;"
     # invokes: Lcom/android/server/pm/state/StateMachine$StateWrapper;->isMyChild(Ljava/lang/Object;)Z
     invoke-static {v0, p1}, Lcom/android/server/pm/state/StateMachine$StateWrapper;->access$200(Lcom/android/server/pm/state/StateMachine$StateWrapper;Ljava/lang/Object;)Z
 
     move-result v1
 
-    .line 120
     .end local v0    # "queryState":Lcom/android/server/pm/state/StateMachine$StateWrapper;, "Lcom/android/server/pm/state/StateMachine$StateWrapper<TS;TT;TA;>;"
     :goto_0
     return v1
@@ -1101,7 +1034,6 @@
     .param p1, "attribute"    # Landroid/content/pm/PersonaAttribute;
 
     .prologue
-    .line 168
     .local p0, "this":Lcom/android/server/pm/state/StateMachine;, "Lcom/android/server/pm/state/StateMachine<TS;TT;TA;>;"
     const-string v0, "StateMachine"
 
@@ -1145,7 +1077,6 @@
 
     invoke-virtual {p0, v0, v1}, Lcom/android/server/pm/state/StateMachine;->log(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 170
     iget-object v0, p0, Lcom/android/server/pm/state/StateMachine;->attributes:Ljava/util/Set;
 
     invoke-interface {v0, p1}, Ljava/util/Set;->contains(Ljava/lang/Object;)Z
@@ -1168,7 +1099,6 @@
     .end annotation
 
     .prologue
-    .line 186
     .local p0, "this":Lcom/android/server/pm/state/StateMachine;, "Lcom/android/server/pm/state/StateMachine<TS;TT;TA;>;"
     iget-object v0, p0, Lcom/android/server/pm/state/StateMachine;->attributes:Ljava/util/Set;
 
@@ -1185,11 +1115,9 @@
     .param p2, "message"    # Ljava/lang/String;
 
     .prologue
-    .line 211
     .local p0, "this":Lcom/android/server/pm/state/StateMachine;, "Lcom/android/server/pm/state/StateMachine<TS;TT;TA;>;"
     invoke-static {p1, p2}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 214
     return-void
 .end method
 
@@ -1199,7 +1127,6 @@
     .param p2, "enabled"    # Z
 
     .prologue
-    .line 175
     .local p0, "this":Lcom/android/server/pm/state/StateMachine;, "Lcom/android/server/pm/state/StateMachine<TS;TT;TA;>;"
     const-string v0, "StateMachine"
 
@@ -1207,7 +1134,7 @@
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v2, "setAttribute() "
+    const-string v2, "setAttribute() "
 
     invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -1237,15 +1164,12 @@
 
     invoke-virtual {p0, v0, v1}, Lcom/android/server/pm/state/StateMachine;->log(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 177
     if-eqz p2, :cond_0
 
-    .line 178
     iget-object v0, p0, Lcom/android/server/pm/state/StateMachine;->attributes:Ljava/util/Set;
 
     invoke-interface {v0, p1}, Ljava/util/Set;->add(Ljava/lang/Object;)Z
 
-    .line 182
     :goto_0
     iget-object v0, p0, Lcom/android/server/pm/state/StateMachine;->attributes:Ljava/util/Set;
 
@@ -1255,7 +1179,6 @@
 
     return v0
 
-    .line 180
     :cond_0
     iget-object v0, p0, Lcom/android/server/pm/state/StateMachine;->attributes:Ljava/util/Set;
 
@@ -1268,7 +1191,6 @@
     .locals 2
 
     .prologue
-    .line 202
     .local p0, "this":Lcom/android/server/pm/state/StateMachine;, "Lcom/android/server/pm/state/StateMachine<TS;TT;TA;>;"
     new-instance v0, Ljava/lang/StringBuilder;
 

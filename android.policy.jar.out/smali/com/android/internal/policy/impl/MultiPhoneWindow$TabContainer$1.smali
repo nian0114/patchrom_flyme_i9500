@@ -28,7 +28,6 @@
     .locals 0
 
     .prologue
-    .line 2737
     iput-object p1, p0, Lcom/android/internal/policy/impl/MultiPhoneWindow$TabContainer$1;->this$1:Lcom/android/internal/policy/impl/MultiPhoneWindow$TabContainer;
 
     iput-object p2, p0, Lcom/android/internal/policy/impl/MultiPhoneWindow$TabContainer$1;->val$this$0:Lcom/android/internal/policy/impl/MultiPhoneWindow;
@@ -45,7 +44,6 @@
     .param p1, "tabId"    # Ljava/lang/String;
 
     .prologue
-    .line 2740
     const-string v1, "MultiPhoneWindow"
 
     new-instance v2, Ljava/lang/StringBuilder;
@@ -68,7 +66,6 @@
 
     invoke-static {v1, v2}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 2741
     iget-object v1, p0, Lcom/android/internal/policy/impl/MultiPhoneWindow$TabContainer$1;->this$1:Lcom/android/internal/policy/impl/MultiPhoneWindow$TabContainer;
 
     iget-object v1, v1, Lcom/android/internal/policy/impl/MultiPhoneWindow$TabContainer;->this$0:Lcom/android/internal/policy/impl/MultiPhoneWindow;
@@ -80,7 +77,6 @@
 
     if-eqz v1, :cond_0
 
-    .line 2743
     :try_start_0
     iget-object v1, p0, Lcom/android/internal/policy/impl/MultiPhoneWindow$TabContainer$1;->this$1:Lcom/android/internal/policy/impl/MultiPhoneWindow$TabContainer;
 
@@ -117,7 +113,6 @@
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 2747
     :goto_0
     iget-object v1, p0, Lcom/android/internal/policy/impl/MultiPhoneWindow$TabContainer$1;->this$1:Lcom/android/internal/policy/impl/MultiPhoneWindow$TabContainer;
 
@@ -151,7 +146,6 @@
 
     if-eqz v1, :cond_1
 
-    .line 2748
     const-string v1, "MultiPhoneWindow"
 
     new-instance v2, Ljava/lang/StringBuilder;
@@ -180,22 +174,18 @@
 
     invoke-static {v1, v2}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 2755
     :cond_0
     :goto_1
     return-void
 
-    .line 2744
     :catch_0
     move-exception v0
 
-    .line 2745
     .local v0, "e":Ljava/lang/Exception;
     invoke-virtual {v0}, Ljava/lang/Exception;->printStackTrace()V
 
     goto :goto_0
 
-    .line 2751
     .end local v0    # "e":Ljava/lang/Exception;
     :cond_1
     iget-object v1, p0, Lcom/android/internal/policy/impl/MultiPhoneWindow$TabContainer$1;->this$1:Lcom/android/internal/policy/impl/MultiPhoneWindow$TabContainer;
@@ -219,7 +209,6 @@
 
     invoke-virtual {v1, v2, v3}, Lcom/samsung/android/multiwindow/MultiWindowFacade;->setFocusedStack(IZ)V
 
-    .line 2753
     iget-object v1, p0, Lcom/android/internal/policy/impl/MultiPhoneWindow$TabContainer$1;->this$1:Lcom/android/internal/policy/impl/MultiPhoneWindow$TabContainer;
 
     iget-object v2, p0, Lcom/android/internal/policy/impl/MultiPhoneWindow$TabContainer$1;->this$1:Lcom/android/internal/policy/impl/MultiPhoneWindow$TabContainer;

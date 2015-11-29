@@ -12,10 +12,8 @@
     .locals 1
 
     .prologue
-    .line 27
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 29
     new-instance v0, Lcom/samsung/android/privatemode/PrivateModeListener$1;
 
     invoke-direct {v0, p0}, Lcom/samsung/android/privatemode/PrivateModeListener$1;-><init>(Lcom/samsung/android/privatemode/PrivateModeListener;)V
@@ -31,7 +29,6 @@
     .locals 1
 
     .prologue
-    .line 40
     iget-object v0, p0, Lcom/samsung/android/privatemode/PrivateModeListener;->mClient:Lcom/samsung/android/privatemode/IPrivateModeClient;
 
     return-object v0

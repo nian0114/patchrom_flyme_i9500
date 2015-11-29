@@ -30,7 +30,6 @@
     .locals 0
 
     .prologue
-    .line 4214
     iput-object p1, p0, Landroid/view/View$1;->this$0:Landroid/view/View;
 
     iput-object p2, p0, Landroid/view/View$1;->val$handlerName:Ljava/lang/String;
@@ -47,12 +46,10 @@
     .param p1, "v"    # Landroid/view/View;
 
     .prologue
-    .line 4218
     iget-object v3, p0, Landroid/view/View$1;->mHandler:Ljava/lang/reflect/Method;
 
     if-nez v3, :cond_0
 
-    .line 4220
     :try_start_0
     iget-object v3, p0, Landroid/view/View$1;->this$0:Landroid/view/View;
 
@@ -84,7 +81,6 @@
     :try_end_0
     .catch Ljava/lang/NoSuchMethodException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 4235
     :cond_0
     :try_start_1
     iget-object v3, p0, Landroid/view/View$1;->mHandler:Ljava/lang/reflect/Method;
@@ -110,14 +106,11 @@
     .catch Ljava/lang/IllegalAccessException; {:try_start_1 .. :try_end_1} :catch_1
     .catch Ljava/lang/reflect/InvocationTargetException; {:try_start_1 .. :try_end_1} :catch_2
 
-    .line 4243
     return-void
 
-    .line 4222
     :catch_0
     move-exception v0
 
-    .line 4223
     .local v0, "e":Ljava/lang/NoSuchMethodException;
     iget-object v3, p0, Landroid/view/View$1;->this$0:Landroid/view/View;
 
@@ -125,7 +118,6 @@
 
     move-result v1
 
-    .line 4224
     .local v1, "id":I
     const/4 v3, -0x1
 
@@ -133,7 +125,6 @@
 
     const-string v2, ""
 
-    .line 4227
     .local v2, "idText":Ljava/lang/String;
     :goto_0
     new-instance v3, Ljava/lang/IllegalStateException;
@@ -208,7 +199,6 @@
 
     throw v3
 
-    .line 4224
     .end local v2    # "idText":Ljava/lang/String;
     :cond_1
     new-instance v3, Ljava/lang/StringBuilder;
@@ -251,13 +241,11 @@
 
     goto :goto_0
 
-    .line 4236
     .end local v0    # "e":Ljava/lang/NoSuchMethodException;
     .end local v1    # "id":I
     :catch_1
     move-exception v0
 
-    .line 4237
     .local v0, "e":Ljava/lang/IllegalAccessException;
     new-instance v3, Ljava/lang/IllegalStateException;
 
@@ -267,12 +255,10 @@
 
     throw v3
 
-    .line 4239
     .end local v0    # "e":Ljava/lang/IllegalAccessException;
     :catch_2
     move-exception v0
 
-    .line 4240
     .local v0, "e":Ljava/lang/reflect/InvocationTargetException;
     new-instance v3, Ljava/lang/IllegalStateException;
 

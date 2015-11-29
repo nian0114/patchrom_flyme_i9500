@@ -23,7 +23,6 @@
     .locals 0
 
     .prologue
-    .line 100
     iput-object p1, p0, Lcom/android/server/usb/UsbStorageNotification$1;->this$0:Lcom/android/server/usb/UsbStorageNotification;
 
     invoke-direct {p0}, Landroid/os/storage/StorageEventListener;-><init>()V
@@ -40,19 +39,16 @@
     .param p3, "newState"    # Ljava/lang/String;
 
     .prologue
-    .line 107
     iget-object v0, p0, Lcom/android/server/usb/UsbStorageNotification$1;->this$0:Lcom/android/server/usb/UsbStorageNotification;
 
     # invokes: Lcom/android/server/usb/UsbStorageNotification;->onUsbHostStateChanged(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
     invoke-static {v0, p1, p2, p3}, Lcom/android/server/usb/UsbStorageNotification;->access$000(Lcom/android/server/usb/UsbStorageNotification;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 108
     iget-object v0, p0, Lcom/android/server/usb/UsbStorageNotification$1;->this$0:Lcom/android/server/usb/UsbStorageNotification;
 
     # invokes: Lcom/android/server/usb/UsbStorageNotification;->onWaterProofing(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
     invoke-static {v0, p1, p2, p3}, Lcom/android/server/usb/UsbStorageNotification;->access$100(Lcom/android/server/usb/UsbStorageNotification;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 109
     return-void
 .end method
 
@@ -61,6 +57,5 @@
     .param p1, "connected"    # Z
 
     .prologue
-    .line 103
     return-void
 .end method

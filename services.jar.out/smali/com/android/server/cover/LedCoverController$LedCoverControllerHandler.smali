@@ -24,17 +24,14 @@
     .param p2, "looper"    # Landroid/os/Looper;
 
     .prologue
-    .line 91
     iput-object p1, p0, Lcom/android/server/cover/LedCoverController$LedCoverControllerHandler;->this$0:Lcom/android/server/cover/LedCoverController;
 
-    .line 92
     const/4 v0, 0x0
 
     const/4 v1, 0x1
 
     invoke-direct {p0, p2, v0, v1}, Landroid/os/Handler;-><init>(Landroid/os/Looper;Landroid/os/Handler$Callback;Z)V
 
-    .line 93
     return-void
 .end method
 
@@ -49,17 +46,14 @@
 
     const/4 v1, 0x0
 
-    .line 97
     iget v2, p1, Landroid/os/Message;->what:I
 
     packed-switch v2, :pswitch_data_0
 
-    .line 120
     :cond_0
     :goto_0
     return-void
 
-    .line 99
     :pswitch_0
     iget v2, p1, Landroid/os/Message;->arg1:I
 
@@ -67,13 +61,11 @@
 
     if-ne v2, v3, :cond_2
 
-    .line 100
     iget-object v0, p0, Lcom/android/server/cover/LedCoverController$LedCoverControllerHandler;->this$0:Lcom/android/server/cover/LedCoverController;
 
     # setter for: Lcom/android/server/cover/LedCoverController;->mIsLedOn:Z
     invoke-static {v0, v1}, Lcom/android/server/cover/LedCoverController;->access$002(Lcom/android/server/cover/LedCoverController;Z)Z
 
-    .line 106
     :cond_1
     :goto_1
     iget-object v1, p0, Lcom/android/server/cover/LedCoverController$LedCoverControllerHandler;->this$0:Lcom/android/server/cover/LedCoverController;
@@ -91,7 +83,6 @@
 
     goto :goto_0
 
-    .line 101
     :cond_2
     iget v1, p1, Landroid/os/Message;->arg1:I
 
@@ -99,7 +90,6 @@
 
     if-eq v1, v2, :cond_1
 
-    .line 104
     iget-object v1, p0, Lcom/android/server/cover/LedCoverController$LedCoverControllerHandler;->this$0:Lcom/android/server/cover/LedCoverController;
 
     # setter for: Lcom/android/server/cover/LedCoverController;->mIsLedOn:Z
@@ -107,7 +97,6 @@
 
     goto :goto_1
 
-    .line 109
     :pswitch_1
     iget-object v2, p0, Lcom/android/server/cover/LedCoverController$LedCoverControllerHandler;->this$0:Lcom/android/server/cover/LedCoverController;
 
@@ -126,14 +115,12 @@
 
     goto :goto_2
 
-    .line 112
     :pswitch_2
     iget-object v0, p0, Lcom/android/server/cover/LedCoverController$LedCoverControllerHandler;->this$0:Lcom/android/server/cover/LedCoverController;
 
     # setter for: Lcom/android/server/cover/LedCoverController;->mIsLedOn:Z
     invoke-static {v0, v1}, Lcom/android/server/cover/LedCoverController;->access$002(Lcom/android/server/cover/LedCoverController;Z)Z
 
-    .line 113
     iget-object v0, p0, Lcom/android/server/cover/LedCoverController$LedCoverControllerHandler;->this$0:Lcom/android/server/cover/LedCoverController;
 
     # getter for: Lcom/android/server/cover/LedCoverController;->mLedOnOffWakeLock:Landroid/os/PowerManager$WakeLock;
@@ -147,7 +134,6 @@
 
     if-eqz v0, :cond_0
 
-    .line 114
     iget-object v0, p0, Lcom/android/server/cover/LedCoverController$LedCoverControllerHandler;->this$0:Lcom/android/server/cover/LedCoverController;
 
     # getter for: Lcom/android/server/cover/LedCoverController;->mLedOnOffWakeLock:Landroid/os/PowerManager$WakeLock;
@@ -159,7 +145,6 @@
 
     goto :goto_0
 
-    .line 97
     :pswitch_data_0
     .packed-switch 0x0
         :pswitch_0

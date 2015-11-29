@@ -30,24 +30,20 @@
     .prologue
     const/4 v7, 0x0
 
-    .line 2304
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 2305
     iput-object p1, p0, Lcom/android/server/DeviceManager3LMService$PublicKey3LM;->mContext:Landroid/content/Context;
 
-    .line 2306
     iget-object v5, p0, Lcom/android/server/DeviceManager3LMService$PublicKey3LM;->mContext:Landroid/content/Context;
 
     invoke-virtual {v5}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
 
     move-result-object v4
 
-    .line 2309
     .local v4, "resources":Landroid/content/res/Resources;
     const-string v5, "1"
 
-    const-string/jumbo v6, "ro.3lm.production"
+    const-string v6, "ro.3lm.production"
 
     invoke-static {v6}, Landroid/os/SystemProperties;->get(Ljava/lang/String;)Ljava/lang/String;
 
@@ -59,14 +55,12 @@
 
     if-eqz v5, :cond_0
 
-    .line 2310
     const v5, 0x1040950
 
     invoke-virtual {v4, v5}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
 
     move-result-object v0
 
-    .line 2311
     .local v0, "cert":Ljava/lang/String;
     const v5, 0x10406f5
 
@@ -74,7 +68,6 @@
 
     move-result-object v1
 
-    .line 2316
     .local v1, "certAF":Ljava/lang/String;
     :goto_0
     invoke-static {v0, v7}, Landroid/util/Base64;->decode(Ljava/lang/String;I)[B
@@ -85,7 +78,6 @@
 
     move-result-object v2
 
-    .line 2317
     .local v2, "key":Ljava/security/PublicKey;
     invoke-interface {v2}, Ljava/security/PublicKey;->getEncoded()[B
 
@@ -93,7 +85,6 @@
 
     iput-object v5, p0, Lcom/android/server/DeviceManager3LMService$PublicKey3LM;->m3LMPublicKey:[B
 
-    .line 2318
     invoke-static {v1, v7}, Landroid/util/Base64;->decode(Ljava/lang/String;I)[B
 
     move-result-object v5
@@ -102,7 +93,6 @@
 
     move-result-object v3
 
-    .line 2319
     .local v3, "keyAF":Ljava/security/PublicKey;
     invoke-interface {v3}, Ljava/security/PublicKey;->getEncoded()[B
 
@@ -110,10 +100,8 @@
 
     iput-object v5, p0, Lcom/android/server/DeviceManager3LMService$PublicKey3LM;->mAFPublicKey:[B
 
-    .line 2320
     return-void
 
-    .line 2313
     .end local v0    # "cert":Ljava/lang/String;
     .end local v1    # "certAF":Ljava/lang/String;
     .end local v2    # "key":Ljava/security/PublicKey;
@@ -125,7 +113,6 @@
 
     move-result-object v0
 
-    .line 2314
     .restart local v0    # "cert":Ljava/lang/String;
     const v5, 0x10406f6
 
@@ -142,7 +129,6 @@
     .param p1, "blob"    # [B
 
     .prologue
-    .line 2324
     const/4 v0, 0x0
 
     return-object v0
@@ -156,7 +142,6 @@
     .param p2, "onlyAF"    # Z
 
     .prologue
-    .line 2343
     const/4 v0, 0x0
 
     return v0

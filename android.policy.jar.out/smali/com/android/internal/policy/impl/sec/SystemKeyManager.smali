@@ -91,7 +91,6 @@
     .prologue
     const/4 v0, 0x1
 
-    .line 40
     invoke-static {}, Landroid/os/Debug;->isProductShip()I
 
     move-result v1
@@ -110,62 +109,52 @@
     .locals 3
 
     .prologue
-    .line 52
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 42
     new-instance v0, Ljava/util/HashSet;
 
     invoke-direct {v0}, Ljava/util/HashSet;-><init>()V
 
     iput-object v0, p0, Lcom/android/internal/policy/impl/sec/SystemKeyManager;->mHomeKeyRequestedComponents:Ljava/util/HashSet;
 
-    .line 43
     new-instance v0, Ljava/util/HashSet;
 
     invoke-direct {v0}, Ljava/util/HashSet;-><init>()V
 
     iput-object v0, p0, Lcom/android/internal/policy/impl/sec/SystemKeyManager;->mPowerKeyRequestedComponents:Ljava/util/HashSet;
 
-    .line 44
     new-instance v0, Ljava/util/HashSet;
 
     invoke-direct {v0}, Ljava/util/HashSet;-><init>()V
 
     iput-object v0, p0, Lcom/android/internal/policy/impl/sec/SystemKeyManager;->mRecentKeyRequestedComponents:Ljava/util/HashSet;
 
-    .line 45
     new-instance v0, Ljava/util/HashSet;
 
     invoke-direct {v0}, Ljava/util/HashSet;-><init>()V
 
     iput-object v0, p0, Lcom/android/internal/policy/impl/sec/SystemKeyManager;->mEndCallKeyRequestedComponents:Ljava/util/HashSet;
 
-    .line 46
     new-instance v0, Ljava/util/HashSet;
 
     invoke-direct {v0}, Ljava/util/HashSet;-><init>()V
 
     iput-object v0, p0, Lcom/android/internal/policy/impl/sec/SystemKeyManager;->mMetaKeyRequestedComponents:Ljava/util/HashSet;
 
-    .line 47
     new-instance v0, Ljava/util/HashMap;
 
     invoke-direct {v0}, Ljava/util/HashMap;-><init>()V
 
     iput-object v0, p0, Lcom/android/internal/policy/impl/sec/SystemKeyManager;->mKeyComponentsMap:Ljava/util/HashMap;
 
-    .line 49
     const/4 v0, 0x0
 
     iput-object v0, p0, Lcom/android/internal/policy/impl/sec/SystemKeyManager;->mTopActivity:Landroid/content/ComponentName;
 
-    .line 50
     const/4 v0, 0x0
 
     iput-boolean v0, p0, Lcom/android/internal/policy/impl/sec/SystemKeyManager;->mMetaKeyPass:Z
 
-    .line 53
     iget-object v0, p0, Lcom/android/internal/policy/impl/sec/SystemKeyManager;->mKeyComponentsMap:Ljava/util/HashMap;
 
     const/4 v1, 0x3
@@ -178,7 +167,6 @@
 
     invoke-virtual {v0, v1, v2}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 54
     iget-object v0, p0, Lcom/android/internal/policy/impl/sec/SystemKeyManager;->mKeyComponentsMap:Ljava/util/HashMap;
 
     const/16 v1, 0x1a
@@ -191,7 +179,6 @@
 
     invoke-virtual {v0, v1, v2}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 55
     iget-object v0, p0, Lcom/android/internal/policy/impl/sec/SystemKeyManager;->mKeyComponentsMap:Ljava/util/HashMap;
 
     const/16 v1, 0xbb
@@ -204,7 +191,6 @@
 
     invoke-virtual {v0, v1, v2}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 56
     iget-object v0, p0, Lcom/android/internal/policy/impl/sec/SystemKeyManager;->mKeyComponentsMap:Ljava/util/HashMap;
 
     const/4 v1, 0x6
@@ -217,7 +203,6 @@
 
     invoke-virtual {v0, v1, v2}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 57
     return-void
 .end method
 
@@ -229,10 +214,8 @@
     .prologue
     const/4 v4, 0x0
 
-    .line 175
     const/4 v2, 0x0
 
-    .line 178
     .local v2, "out":Ljava/io/FileOutputStream;
     :try_start_0
     new-instance v3, Ljava/io/FileOutputStream;
@@ -246,7 +229,6 @@
     .catch Ljava/io/FileNotFoundException; {:try_start_0 .. :try_end_0} :catch_0
     .catch Ljava/io/IOException; {:try_start_0 .. :try_end_0} :catch_1
 
-    .line 183
     .end local v2    # "out":Ljava/io/FileOutputStream;
     .local v3, "out":Ljava/io/FileOutputStream;
     :try_start_1
@@ -256,12 +238,10 @@
 
     invoke-virtual {v3, v5}, Ljava/io/FileOutputStream;->write([B)V
 
-    .line 184
     invoke-virtual {v3}, Ljava/io/FileOutputStream;->close()V
     :try_end_1
     .catch Ljava/io/IOException; {:try_start_1 .. :try_end_1} :catch_3
 
-    .line 194
     const/4 v4, 0x1
 
     move-object v2, v3
@@ -271,11 +251,9 @@
     :goto_0
     return v4
 
-    .line 179
     :catch_0
     move-exception v0
 
-    .line 180
     .local v0, "e":Ljava/io/FileNotFoundException;
     :try_start_2
     invoke-virtual {v0}, Ljava/io/FileNotFoundException;->printStackTrace()V
@@ -284,17 +262,14 @@
 
     goto :goto_0
 
-    .line 185
     .end local v0    # "e":Ljava/io/FileNotFoundException;
     :catch_1
     move-exception v0
 
-    .line 186
     .local v0, "e":Ljava/io/IOException;
     :goto_1
     invoke-virtual {v0}, Ljava/io/IOException;->printStackTrace()V
 
-    .line 188
     :try_start_3
     invoke-virtual {v2}, Ljava/io/FileOutputStream;->close()V
     :try_end_3
@@ -302,17 +277,14 @@
 
     goto :goto_0
 
-    .line 189
     :catch_2
     move-exception v1
 
-    .line 190
     .local v1, "err":Ljava/lang/Exception;
     invoke-virtual {v1}, Ljava/lang/Exception;->printStackTrace()V
 
     goto :goto_0
 
-    .line 185
     .end local v0    # "e":Ljava/io/IOException;
     .end local v1    # "err":Ljava/lang/Exception;
     .end local v2    # "out":Ljava/io/FileOutputStream;
@@ -335,10 +307,8 @@
     .param p2, "pw"    # Ljava/io/PrintWriter;
 
     .prologue
-    .line 198
     monitor-enter p0
 
-    .line 199
     :try_start_0
     iget-object v5, p0, Lcom/android/internal/policy/impl/sec/SystemKeyManager;->mKeyComponentsMap:Ljava/util/HashMap;
 
@@ -350,7 +320,6 @@
 
     move-result-object v2
 
-    .line 200
     .local v2, "iIterator":Ljava/util/Iterator;, "Ljava/util/Iterator<Ljava/lang/Integer;>;"
     :cond_0
     invoke-interface {v2}, Ljava/util/Iterator;->hasNext()Z
@@ -359,14 +328,12 @@
 
     if-eqz v5, :cond_1
 
-    .line 201
     invoke-interface {v2}, Ljava/util/Iterator;->next()Ljava/lang/Object;
 
     move-result-object v4
 
     check-cast v4, Ljava/lang/Integer;
 
-    .line 202
     .local v4, "keyCode":Ljava/lang/Integer;
     iget-object v5, p0, Lcom/android/internal/policy/impl/sec/SystemKeyManager;->mKeyComponentsMap:Ljava/util/HashMap;
 
@@ -376,7 +343,6 @@
 
     check-cast v0, Ljava/util/HashSet;
 
-    .line 203
     .local v0, "components":Ljava/util/HashSet;, "Ljava/util/HashSet<Landroid/content/ComponentName;>;"
     invoke-virtual {v0}, Ljava/util/HashSet;->iterator()Ljava/util/Iterator;
 
@@ -396,16 +362,13 @@
 
     check-cast v3, Landroid/content/ComponentName;
 
-    .line 204
     .local v3, "info":Landroid/content/ComponentName;
     const-string v5, "  "
 
     invoke-virtual {p2, v5}, Ljava/io/PrintWriter;->print(Ljava/lang/String;)V
 
-    .line 205
     invoke-virtual {p2, p1}, Ljava/io/PrintWriter;->print(Ljava/lang/String;)V
 
-    .line 206
     invoke-virtual {v4}, Ljava/lang/Integer;->intValue()I
 
     move-result v5
@@ -416,12 +379,10 @@
 
     invoke-virtual {p2, v5}, Ljava/io/PrintWriter;->print(Ljava/lang/String;)V
 
-    .line 207
     const-string v5, "="
 
     invoke-virtual {p2, v5}, Ljava/io/PrintWriter;->print(Ljava/lang/String;)V
 
-    .line 208
     invoke-virtual {v3}, Landroid/content/ComponentName;->flattenToString()Ljava/lang/String;
 
     move-result-object v5
@@ -430,7 +391,6 @@
 
     goto :goto_0
 
-    .line 217
     .end local v0    # "components":Ljava/util/HashSet;, "Ljava/util/HashSet<Landroid/content/ComponentName;>;"
     .end local v1    # "i$":Ljava/util/Iterator;
     .end local v2    # "iIterator":Ljava/util/Iterator;, "Ljava/util/Iterator<Ljava/lang/Integer;>;"
@@ -445,7 +405,6 @@
 
     throw v5
 
-    .line 211
     .restart local v2    # "iIterator":Ljava/util/Iterator;, "Ljava/util/Iterator<Ljava/lang/Integer;>;"
     :cond_1
     :try_start_1
@@ -469,21 +428,17 @@
 
     check-cast v3, Landroid/content/ComponentName;
 
-    .line 212
     .restart local v3    # "info":Landroid/content/ComponentName;
     const-string v5, "  "
 
     invoke-virtual {p2, v5}, Ljava/io/PrintWriter;->print(Ljava/lang/String;)V
 
-    .line 213
     invoke-virtual {p2, p1}, Ljava/io/PrintWriter;->print(Ljava/lang/String;)V
 
-    .line 214
     const-string v5, "META_KEY="
 
     invoke-virtual {p2, v5}, Ljava/io/PrintWriter;->print(Ljava/lang/String;)V
 
-    .line 215
     invoke-virtual {v3}, Landroid/content/ComponentName;->flattenToString()Ljava/lang/String;
 
     move-result-object v5
@@ -492,14 +447,12 @@
 
     goto :goto_1
 
-    .line 217
     .end local v3    # "info":Landroid/content/ComponentName;
     :cond_2
     monitor-exit p0
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
-    .line 218
     return-void
 .end method
 
@@ -507,7 +460,6 @@
     .locals 1
 
     .prologue
-    .line 154
     iget-object v0, p0, Lcom/android/internal/policy/impl/sec/SystemKeyManager;->mTopActivity:Landroid/content/ComponentName;
 
     return-object v0
@@ -517,16 +469,13 @@
     .locals 3
 
     .prologue
-    .line 143
     monitor-enter p0
 
-    .line 144
     :try_start_0
     iget-boolean v0, p0, Lcom/android/internal/policy/impl/sec/SystemKeyManager;->mMetaKeyPass:Z
 
     if-eqz v0, :cond_1
 
-    .line 145
     sget-boolean v0, Lcom/android/internal/policy/impl/sec/SystemKeyManager;->SAFE_DEBUG:Z
 
     if-eqz v0, :cond_0
@@ -555,13 +504,11 @@
 
     invoke-static {v0, v1}, Landroid/util/Slog;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 146
     :cond_0
     const/4 v0, 0x1
 
     monitor-exit p0
 
-    .line 148
     :goto_0
     return v0
 
@@ -572,7 +519,6 @@
 
     goto :goto_0
 
-    .line 150
     :catchall_0
     move-exception v0
 
@@ -588,10 +534,8 @@
     .param p1, "componentName"    # Landroid/content/ComponentName;
 
     .prologue
-    .line 137
     monitor-enter p0
 
-    .line 138
     :try_start_0
     iget-object v0, p0, Lcom/android/internal/policy/impl/sec/SystemKeyManager;->mMetaKeyRequestedComponents:Ljava/util/HashSet;
 
@@ -603,7 +547,6 @@
 
     return v0
 
-    .line 139
     :catchall_0
     move-exception v0
 
@@ -619,10 +562,8 @@
     .param p1, "keyCode"    # I
 
     .prologue
-    .line 126
     monitor-enter p0
 
-    .line 127
     :try_start_0
     iget-object v0, p0, Lcom/android/internal/policy/impl/sec/SystemKeyManager;->mTopActivity:Landroid/content/ComponentName;
 
@@ -632,7 +573,6 @@
 
     if-eqz v0, :cond_1
 
-    .line 128
     sget-boolean v0, Lcom/android/internal/policy/impl/sec/SystemKeyManager;->SAFE_DEBUG:Z
 
     if-eqz v0, :cond_0
@@ -671,13 +611,11 @@
 
     invoke-static {v0, v1}, Landroid/util/Slog;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 129
     :cond_0
     const/4 v0, 0x1
 
     monitor-exit p0
 
-    .line 131
     :goto_0
     return v0
 
@@ -688,7 +626,6 @@
 
     goto :goto_0
 
-    .line 133
     :catchall_0
     move-exception v0
 
@@ -705,10 +642,8 @@
     .param p2, "componentName"    # Landroid/content/ComponentName;
 
     .prologue
-    .line 116
     monitor-enter p0
 
-    .line 117
     :try_start_0
     iget-object v1, p0, Lcom/android/internal/policy/impl/sec/SystemKeyManager;->mKeyComponentsMap:Ljava/util/HashMap;
 
@@ -722,18 +657,15 @@
 
     check-cast v0, Ljava/util/HashSet;
 
-    .line 118
     .local v0, "components":Ljava/util/HashSet;
     if-eqz v0, :cond_0
 
-    .line 119
     invoke-virtual {v0, p2}, Ljava/util/HashSet;->contains(Ljava/lang/Object;)Z
 
     move-result v1
 
     monitor-exit p0
 
-    .line 121
     :goto_0
     return v1
 
@@ -744,7 +676,6 @@
 
     goto :goto_0
 
-    .line 122
     .end local v0    # "components":Ljava/util/HashSet;
     :catchall_0
     move-exception v1
@@ -762,26 +693,20 @@
     .param p2, "request"    # Z
 
     .prologue
-    .line 95
     monitor-enter p0
 
-    .line 96
     if-eqz p2, :cond_0
 
-    .line 97
     :try_start_0
     iget-object v0, p0, Lcom/android/internal/policy/impl/sec/SystemKeyManager;->mMetaKeyRequestedComponents:Ljava/util/HashSet;
 
     invoke-virtual {v0, p1}, Ljava/util/HashSet;->add(Ljava/lang/Object;)Z
 
-    .line 101
     :goto_0
     monitor-exit p0
 
-    .line 102
     return-void
 
-    .line 99
     :cond_0
     iget-object v0, p0, Lcom/android/internal/policy/impl/sec/SystemKeyManager;->mMetaKeyRequestedComponents:Ljava/util/HashSet;
 
@@ -789,7 +714,6 @@
 
     goto :goto_0
 
-    .line 101
     :catchall_0
     move-exception v0
 
@@ -807,7 +731,6 @@
     .param p3, "request"    # Z
 
     .prologue
-    .line 76
     const/16 v1, 0x1a
 
     if-eq p1, v1, :cond_0
@@ -824,21 +747,16 @@
 
     if-eq p1, v1, :cond_0
 
-    .line 77
     const/4 v1, 0x0
 
-    .line 88
     :goto_0
     return v1
 
-    .line 80
     :cond_0
     monitor-enter p0
 
-    .line 81
     if-eqz p3, :cond_1
 
-    .line 82
     :try_start_0
     iget-object v1, p0, Lcom/android/internal/policy/impl/sec/SystemKeyManager;->mKeyComponentsMap:Ljava/util/HashMap;
 
@@ -852,11 +770,9 @@
 
     check-cast v0, Ljava/util/HashSet;
 
-    .line 83
     .local v0, "components":Ljava/util/HashSet;
     invoke-virtual {v0, p2}, Ljava/util/HashSet;->add(Ljava/lang/Object;)Z
 
-    .line 88
     :goto_1
     const/4 v1, 0x1
 
@@ -864,7 +780,6 @@
 
     goto :goto_0
 
-    .line 89
     .end local v0    # "components":Ljava/util/HashSet;
     :catchall_0
     move-exception v1
@@ -875,7 +790,6 @@
 
     throw v1
 
-    .line 85
     :cond_1
     :try_start_1
     iget-object v1, p0, Lcom/android/internal/policy/impl/sec/SystemKeyManager;->mKeyComponentsMap:Ljava/util/HashMap;
@@ -890,7 +804,6 @@
 
     check-cast v0, Ljava/util/HashSet;
 
-    .line 86
     .restart local v0    # "components":Ljava/util/HashSet;
     invoke-virtual {v0, p2}, Ljava/util/HashSet;->remove(Ljava/lang/Object;)Z
     :try_end_1
@@ -904,14 +817,11 @@
     .param p1, "componentName"    # Landroid/content/ComponentName;
 
     .prologue
-    .line 159
     monitor-enter p0
 
-    .line 160
     :try_start_0
     iput-object p1, p0, Lcom/android/internal/policy/impl/sec/SystemKeyManager;->mTopActivity:Landroid/content/ComponentName;
 
-    .line 162
     iget-object v0, p0, Lcom/android/internal/policy/impl/sec/SystemKeyManager;->mMetaKeyRequestedComponents:Ljava/util/HashSet;
 
     invoke-virtual {v0, p1}, Ljava/util/HashSet;->contains(Ljava/lang/Object;)Z
@@ -920,38 +830,31 @@
 
     if-eqz v0, :cond_1
 
-    .line 163
     const/4 v0, 0x1
 
     iput-boolean v0, p0, Lcom/android/internal/policy/impl/sec/SystemKeyManager;->mMetaKeyPass:Z
 
-    .line 165
     const-string v0, "/sys/class/sec/sec_key/reject_key_comb"
 
     const-string v1, "ENABLE"
 
     invoke-direct {p0, v0, v1}, Lcom/android/internal/policy/impl/sec/SystemKeyManager;->sysfsWrite(Ljava/lang/String;Ljava/lang/String;)Z
 
-    .line 171
     :cond_0
     :goto_0
     monitor-exit p0
 
-    .line 172
     return-void
 
-    .line 166
     :cond_1
     iget-boolean v0, p0, Lcom/android/internal/policy/impl/sec/SystemKeyManager;->mMetaKeyPass:Z
 
     if-eqz v0, :cond_0
 
-    .line 167
     const/4 v0, 0x0
 
     iput-boolean v0, p0, Lcom/android/internal/policy/impl/sec/SystemKeyManager;->mMetaKeyPass:Z
 
-    .line 169
     const-string v0, "/sys/class/sec/sec_key/reject_key_comb"
 
     const-string v1, "DISABLE"
@@ -960,7 +863,6 @@
 
     goto :goto_0
 
-    .line 171
     :catchall_0
     move-exception v0
 

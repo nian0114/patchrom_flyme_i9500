@@ -26,7 +26,6 @@
     .locals 0
 
     .prologue
-    .line 199
     iput-object p1, p0, Landroid/widget/TimePickerSpinnerDelegate$1;->this$0:Landroid/widget/TimePickerSpinnerDelegate;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -43,7 +42,6 @@
     .prologue
     const/4 v2, 0x1
 
-    .line 202
     iget-object v0, p0, Landroid/widget/TimePickerSpinnerDelegate$1;->this$0:Landroid/widget/TimePickerSpinnerDelegate;
 
     const/4 v1, 0x0
@@ -51,12 +49,10 @@
     # invokes: Landroid/widget/TimePickerSpinnerDelegate;->setCurrentItemShowing(IZZ)V
     invoke-static {v0, v1, v2, v2}, Landroid/widget/TimePickerSpinnerDelegate;->access$000(Landroid/widget/TimePickerSpinnerDelegate;IZZ)V
 
-    .line 203
     iget-object v0, p0, Landroid/widget/TimePickerSpinnerDelegate$1;->this$0:Landroid/widget/TimePickerSpinnerDelegate;
 
     # invokes: Landroid/widget/TimePickerSpinnerDelegate;->tryVibrate()V
     invoke-static {v0}, Landroid/widget/TimePickerSpinnerDelegate;->access$100(Landroid/widget/TimePickerSpinnerDelegate;)V
 
-    .line 204
     return-void
 .end method

@@ -15,13 +15,10 @@
     .param p3, "ssString"    # Ljava/lang/String;
 
     .prologue
-    .line 294
     invoke-direct {p0, p1, p2}, Lcom/android/internal/telephony/cat/DisplayTextParams;-><init>(Lcom/android/internal/telephony/cat/CommandDetails;Lcom/android/internal/telephony/cat/TextMessage;)V
 
-    .line 295
     iput-object p3, p0, Lcom/android/internal/telephony/cat/SendSSParams;->ssString:Ljava/lang/String;
 
-    .line 296
     return-void
 .end method
 
@@ -33,12 +30,9 @@
     .param p4, "hasIcon"    # Z
 
     .prologue
-    .line 298
     invoke-direct {p0, p1, p2, p3}, Lcom/android/internal/telephony/cat/SendSSParams;-><init>(Lcom/android/internal/telephony/cat/CommandDetails;Lcom/android/internal/telephony/cat/TextMessage;Ljava/lang/String;)V
 
-    .line 299
     invoke-virtual {p0, p4}, Lcom/android/internal/telephony/cat/SendSSParams;->setHasIconTag(Z)V
 
-    .line 300
     return-void
 .end method

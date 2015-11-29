@@ -112,7 +112,6 @@
     .locals 4
 
     .prologue
-    .line 131
     new-instance v0, Landroid/content/UriMatcher;
 
     const/4 v1, -0x1
@@ -121,7 +120,6 @@
 
     sput-object v0, Lcom/android/server/enterprise/content/SecContentProvider;->URI_MATCHER:Landroid/content/UriMatcher;
 
-    .line 132
     sget-object v0, Lcom/android/server/enterprise/content/SecContentProvider;->URI_MATCHER:Landroid/content/UriMatcher;
 
     const-string v1, "com.sec.knox.provider"
@@ -132,7 +130,6 @@
 
     invoke-virtual {v0, v1, v2, v3}, Landroid/content/UriMatcher;->addURI(Ljava/lang/String;Ljava/lang/String;I)V
 
-    .line 133
     sget-object v0, Lcom/android/server/enterprise/content/SecContentProvider;->URI_MATCHER:Landroid/content/UriMatcher;
 
     const-string v1, "com.sec.knox.provider"
@@ -143,7 +140,6 @@
 
     invoke-virtual {v0, v1, v2, v3}, Landroid/content/UriMatcher;->addURI(Ljava/lang/String;Ljava/lang/String;I)V
 
-    .line 134
     sget-object v0, Lcom/android/server/enterprise/content/SecContentProvider;->URI_MATCHER:Landroid/content/UriMatcher;
 
     const-string v1, "com.sec.knox.provider"
@@ -154,7 +150,6 @@
 
     invoke-virtual {v0, v1, v2, v3}, Landroid/content/UriMatcher;->addURI(Ljava/lang/String;Ljava/lang/String;I)V
 
-    .line 135
     sget-object v0, Lcom/android/server/enterprise/content/SecContentProvider;->URI_MATCHER:Landroid/content/UriMatcher;
 
     const-string v1, "com.sec.knox.provider"
@@ -165,7 +160,6 @@
 
     invoke-virtual {v0, v1, v2, v3}, Landroid/content/UriMatcher;->addURI(Ljava/lang/String;Ljava/lang/String;I)V
 
-    .line 136
     sget-object v0, Lcom/android/server/enterprise/content/SecContentProvider;->URI_MATCHER:Landroid/content/UriMatcher;
 
     const-string v1, "com.sec.knox.provider"
@@ -176,7 +170,6 @@
 
     invoke-virtual {v0, v1, v2, v3}, Landroid/content/UriMatcher;->addURI(Ljava/lang/String;Ljava/lang/String;I)V
 
-    .line 137
     sget-object v0, Lcom/android/server/enterprise/content/SecContentProvider;->URI_MATCHER:Landroid/content/UriMatcher;
 
     const-string v1, "com.sec.knox.provider"
@@ -187,7 +180,6 @@
 
     invoke-virtual {v0, v1, v2, v3}, Landroid/content/UriMatcher;->addURI(Ljava/lang/String;Ljava/lang/String;I)V
 
-    .line 138
     sget-object v0, Lcom/android/server/enterprise/content/SecContentProvider;->URI_MATCHER:Landroid/content/UriMatcher;
 
     const-string v1, "com.sec.knox.provider"
@@ -198,7 +190,6 @@
 
     invoke-virtual {v0, v1, v2, v3}, Landroid/content/UriMatcher;->addURI(Ljava/lang/String;Ljava/lang/String;I)V
 
-    .line 139
     sget-object v0, Lcom/android/server/enterprise/content/SecContentProvider;->URI_MATCHER:Landroid/content/UriMatcher;
 
     const-string v1, "com.sec.knox.provider"
@@ -209,7 +200,6 @@
 
     invoke-virtual {v0, v1, v2, v3}, Landroid/content/UriMatcher;->addURI(Ljava/lang/String;Ljava/lang/String;I)V
 
-    .line 140
     sget-object v0, Lcom/android/server/enterprise/content/SecContentProvider;->URI_MATCHER:Landroid/content/UriMatcher;
 
     const-string v1, "com.sec.knox.provider"
@@ -220,7 +210,6 @@
 
     invoke-virtual {v0, v1, v2, v3}, Landroid/content/UriMatcher;->addURI(Ljava/lang/String;Ljava/lang/String;I)V
 
-    .line 141
     sget-object v0, Lcom/android/server/enterprise/content/SecContentProvider;->URI_MATCHER:Landroid/content/UriMatcher;
 
     const-string v1, "com.sec.knox.provider"
@@ -231,7 +220,6 @@
 
     invoke-virtual {v0, v1, v2, v3}, Landroid/content/UriMatcher;->addURI(Ljava/lang/String;Ljava/lang/String;I)V
 
-    .line 142
     sget-object v0, Lcom/android/server/enterprise/content/SecContentProvider;->URI_MATCHER:Landroid/content/UriMatcher;
 
     const-string v1, "com.sec.knox.provider"
@@ -242,7 +230,6 @@
 
     invoke-virtual {v0, v1, v2, v3}, Landroid/content/UriMatcher;->addURI(Ljava/lang/String;Ljava/lang/String;I)V
 
-    .line 143
     sget-object v0, Lcom/android/server/enterprise/content/SecContentProvider;->URI_MATCHER:Landroid/content/UriMatcher;
 
     const-string v1, "com.sec.knox.provider"
@@ -253,7 +240,6 @@
 
     invoke-virtual {v0, v1, v2, v3}, Landroid/content/UriMatcher;->addURI(Ljava/lang/String;Ljava/lang/String;I)V
 
-    .line 144
     sget-object v0, Lcom/android/server/enterprise/content/SecContentProvider;->URI_MATCHER:Landroid/content/UriMatcher;
 
     const-string v1, "com.sec.knox.provider"
@@ -264,7 +250,6 @@
 
     invoke-virtual {v0, v1, v2, v3}, Landroid/content/UriMatcher;->addURI(Ljava/lang/String;Ljava/lang/String;I)V
 
-    .line 145
     sget-object v0, Lcom/android/server/enterprise/content/SecContentProvider;->URI_MATCHER:Landroid/content/UriMatcher;
 
     const-string v1, "com.sec.knox.provider"
@@ -275,7 +260,6 @@
 
     invoke-virtual {v0, v1, v2, v3}, Landroid/content/UriMatcher;->addURI(Ljava/lang/String;Ljava/lang/String;I)V
 
-    .line 146
     sget-object v0, Lcom/android/server/enterprise/content/SecContentProvider;->URI_MATCHER:Landroid/content/UriMatcher;
 
     const-string v1, "com.sec.knox.provider"
@@ -286,7 +270,6 @@
 
     invoke-virtual {v0, v1, v2, v3}, Landroid/content/UriMatcher;->addURI(Ljava/lang/String;Ljava/lang/String;I)V
 
-    .line 147
     sget-object v0, Lcom/android/server/enterprise/content/SecContentProvider;->URI_MATCHER:Landroid/content/UriMatcher;
 
     const-string v1, "com.sec.knox.provider"
@@ -297,7 +280,6 @@
 
     invoke-virtual {v0, v1, v2, v3}, Landroid/content/UriMatcher;->addURI(Ljava/lang/String;Ljava/lang/String;I)V
 
-    .line 148
     sget-object v0, Lcom/android/server/enterprise/content/SecContentProvider;->URI_MATCHER:Landroid/content/UriMatcher;
 
     const-string v1, "com.sec.knox.provider"
@@ -308,7 +290,6 @@
 
     invoke-virtual {v0, v1, v2, v3}, Landroid/content/UriMatcher;->addURI(Ljava/lang/String;Ljava/lang/String;I)V
 
-    .line 149
     sget-object v0, Lcom/android/server/enterprise/content/SecContentProvider;->URI_MATCHER:Landroid/content/UriMatcher;
 
     const-string v1, "com.sec.knox.provider"
@@ -319,7 +300,6 @@
 
     invoke-virtual {v0, v1, v2, v3}, Landroid/content/UriMatcher;->addURI(Ljava/lang/String;Ljava/lang/String;I)V
 
-    .line 150
     sget-object v0, Lcom/android/server/enterprise/content/SecContentProvider;->URI_MATCHER:Landroid/content/UriMatcher;
 
     const-string v1, "com.sec.knox.provider"
@@ -330,7 +310,6 @@
 
     invoke-virtual {v0, v1, v2, v3}, Landroid/content/UriMatcher;->addURI(Ljava/lang/String;Ljava/lang/String;I)V
 
-    .line 151
     sget-object v0, Lcom/android/server/enterprise/content/SecContentProvider;->URI_MATCHER:Landroid/content/UriMatcher;
 
     const-string v1, "com.sec.knox.provider"
@@ -341,7 +320,6 @@
 
     invoke-virtual {v0, v1, v2, v3}, Landroid/content/UriMatcher;->addURI(Ljava/lang/String;Ljava/lang/String;I)V
 
-    .line 152
     sget-object v0, Lcom/android/server/enterprise/content/SecContentProvider;->URI_MATCHER:Landroid/content/UriMatcher;
 
     const-string v1, "com.sec.knox.provider"
@@ -352,7 +330,6 @@
 
     invoke-virtual {v0, v1, v2, v3}, Landroid/content/UriMatcher;->addURI(Ljava/lang/String;Ljava/lang/String;I)V
 
-    .line 153
     sget-object v0, Lcom/android/server/enterprise/content/SecContentProvider;->URI_MATCHER:Landroid/content/UriMatcher;
 
     const-string v1, "com.sec.knox.provider"
@@ -363,7 +340,6 @@
 
     invoke-virtual {v0, v1, v2, v3}, Landroid/content/UriMatcher;->addURI(Ljava/lang/String;Ljava/lang/String;I)V
 
-    .line 154
     sget-object v0, Lcom/android/server/enterprise/content/SecContentProvider;->URI_MATCHER:Landroid/content/UriMatcher;
 
     const-string v1, "com.sec.knox.provider"
@@ -374,7 +350,6 @@
 
     invoke-virtual {v0, v1, v2, v3}, Landroid/content/UriMatcher;->addURI(Ljava/lang/String;Ljava/lang/String;I)V
 
-    .line 155
     sget-object v0, Lcom/android/server/enterprise/content/SecContentProvider;->URI_MATCHER:Landroid/content/UriMatcher;
 
     const-string v1, "com.sec.knox.provider"
@@ -385,7 +360,6 @@
 
     invoke-virtual {v0, v1, v2, v3}, Landroid/content/UriMatcher;->addURI(Ljava/lang/String;Ljava/lang/String;I)V
 
-    .line 156
     return-void
 .end method
 
@@ -393,7 +367,6 @@
     .locals 0
 
     .prologue
-    .line 89
     invoke-direct {p0}, Landroid/content/ContentProvider;-><init>()V
 
     return-void
@@ -406,7 +379,6 @@
     .param p2, "userId"    # I
 
     .prologue
-    .line 2596
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
@@ -429,13 +401,11 @@
 
     move-result-object v0
 
-    .line 2597
     .local v0, "content_uri":Landroid/net/Uri;
     invoke-static {}, Landroid/os/Binder;->clearCallingIdentity()J
 
     move-result-wide v2
 
-    .line 2598
     .local v2, "token":J
     invoke-virtual {p0}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
 
@@ -447,10 +417,8 @@
 
     invoke-virtual {v1, v0, v4, v5, p2}, Landroid/content/ContentResolver;->notifyChange(Landroid/net/Uri;Landroid/database/ContentObserver;ZI)V
 
-    .line 2599
     invoke-static {v2, v3}, Landroid/os/Binder;->restoreCallingIdentity(J)V
 
-    .line 2600
     return-void
 .end method
 
@@ -463,7 +431,6 @@
     .param p3, "selectionArgs"    # [Ljava/lang/String;
 
     .prologue
-    .line 2579
     const/4 v0, 0x0
 
     return v0
@@ -474,7 +441,6 @@
     .param p1, "uri"    # Landroid/net/Uri;
 
     .prologue
-    .line 2585
     const/4 v0, 0x0
 
     return-object v0
@@ -486,12 +452,10 @@
     .param p2, "values"    # Landroid/content/ContentValues;
 
     .prologue
-    .line 2485
     invoke-static {}, Landroid/os/Binder;->getCallingUid()I
 
     move-result v10
 
-    .line 2487
     .local v10, "callingUid":I
     sget-object v2, Lcom/android/server/enterprise/content/SecContentProvider;->URI_MATCHER:Landroid/content/UriMatcher;
 
@@ -503,7 +467,6 @@
 
     sparse-switch v2, :sswitch_data_0
 
-    .line 2573
     :cond_0
     :goto_0
     :sswitch_0
@@ -511,7 +474,6 @@
 
     return-object v2
 
-    .line 2495
     :sswitch_1
     const-string v2, "firewall_policy"
 
@@ -521,11 +483,9 @@
 
     check-cast v13, Lcom/android/server/enterprise/firewall/FirewallPolicy;
 
-    .line 2498
     .local v13, "lFirewallPolicy":Lcom/android/server/enterprise/firewall/FirewallPolicy;
     if-eqz v13, :cond_0
 
-    .line 2499
     const-string v2, "API"
 
     move-object/from16 v0, p2
@@ -534,11 +494,10 @@
 
     move-result-object v9
 
-    .line 2500
     .local v9, "api":Ljava/lang/String;
     if-eqz v9, :cond_0
 
-    const-string/jumbo v2, "saveURLBlockedReport"
+    const-string v2, "saveURLBlockedReport"
 
     invoke-virtual {v9, v2}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
@@ -546,12 +505,11 @@
 
     if-eqz v2, :cond_0
 
-    .line 2501
     new-instance v2, Landroid/app/enterprise/ContextInfo;
 
     invoke-direct {v2, v10}, Landroid/app/enterprise/ContextInfo;-><init>(I)V
 
-    const-string/jumbo v3, "url"
+    const-string v3, "url"
 
     move-object/from16 v0, p2
 
@@ -563,7 +521,6 @@
 
     goto :goto_0
 
-    .line 2511
     .end local v9    # "api":Ljava/lang/String;
     .end local v13    # "lFirewallPolicy":Lcom/android/server/enterprise/firewall/FirewallPolicy;
     :sswitch_2
@@ -575,11 +532,9 @@
 
     check-cast v12, Lcom/android/server/enterprise/certificate/CertificatePolicy;
 
-    .line 2514
     .local v12, "lCertificatePolicy":Lcom/android/server/enterprise/certificate/CertificatePolicy;
     if-eqz v12, :cond_0
 
-    .line 2515
     const-string v2, "API"
 
     move-object/from16 v0, p2
@@ -588,7 +543,6 @@
 
     move-result-object v9
 
-    .line 2516
     .restart local v9    # "api":Ljava/lang/String;
     const-string v2, "fail"
 
@@ -598,7 +552,6 @@
 
     move-result-object v11
 
-    .line 2517
     .local v11, "fail":Ljava/lang/Integer;
     if-eqz v9, :cond_0
 
@@ -612,7 +565,6 @@
 
     if-eqz v11, :cond_0
 
-    .line 2518
     const-string v2, "module"
 
     move-object/from16 v0, p2
@@ -631,7 +583,6 @@
 
     goto :goto_0
 
-    .line 2530
     .end local v9    # "api":Ljava/lang/String;
     .end local v11    # "fail":Ljava/lang/Integer;
     .end local v12    # "lCertificatePolicy":Lcom/android/server/enterprise/certificate/CertificatePolicy;
@@ -644,16 +595,14 @@
 
     check-cast v1, Lcom/android/server/enterprise/auditlog/AuditLogService;
 
-    .line 2533
     .local v1, "lAuditLogService":Lcom/android/server/enterprise/auditlog/AuditLogService;
     if-eqz v1, :cond_0
 
-    .line 2534
     new-instance v2, Landroid/app/enterprise/ContextInfo;
 
     invoke-direct {v2, v10}, Landroid/app/enterprise/ContextInfo;-><init>(I)V
 
-    const-string/jumbo v3, "severity"
+    const-string v3, "severity"
 
     move-object/from16 v0, p2
 
@@ -677,7 +626,7 @@
 
     move-result v4
 
-    const-string/jumbo v5, "outcome"
+    const-string v5, "outcome"
 
     move-object/from16 v0, p2
 
@@ -696,7 +645,7 @@
     const/4 v5, 0x1
 
     :goto_1
-    const-string/jumbo v6, "uid"
+    const-string v6, "uid"
 
     move-object/from16 v0, p2
 
@@ -733,10 +682,9 @@
 
     goto :goto_1
 
-    .line 2548
     .end local v1    # "lAuditLogService":Lcom/android/server/enterprise/auditlog/AuditLogService;
     :sswitch_4
-    const-string/jumbo v2, "password_policy"
+    const-string v2, "password_policy"
 
     invoke-static {v2}, Lcom/android/server/enterprise/EnterpriseDeviceManagerService;->getPolicyService(Ljava/lang/String;)Ljava/lang/Object;
 
@@ -744,11 +692,9 @@
 
     check-cast v14, Lcom/android/server/enterprise/security/PasswordPolicy;
 
-    .line 2551
     .local v14, "lPasswordPolicy":Lcom/android/server/enterprise/security/PasswordPolicy;
     if-eqz v14, :cond_0
 
-    .line 2552
     const-string v2, "API"
 
     move-object/from16 v0, p2
@@ -757,11 +703,10 @@
 
     move-result-object v9
 
-    .line 2553
     .restart local v9    # "api":Ljava/lang/String;
     if-eqz v9, :cond_0
 
-    const-string/jumbo v2, "setPwdChangeRequested"
+    const-string v2, "setPwdChangeRequested"
 
     invoke-virtual {v9, v2}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
@@ -769,7 +714,6 @@
 
     if-eqz v2, :cond_0
 
-    .line 2554
     new-instance v2, Landroid/app/enterprise/ContextInfo;
 
     invoke-direct {v2, v10}, Landroid/app/enterprise/ContextInfo;-><init>(I)V
@@ -790,11 +734,10 @@
 
     goto/16 :goto_0
 
-    .line 2560
     .end local v9    # "api":Ljava/lang/String;
     .end local v14    # "lPasswordPolicy":Lcom/android/server/enterprise/security/PasswordPolicy;
     :sswitch_5
-    const-string/jumbo v2, "security_policy"
+    const-string v2, "security_policy"
 
     invoke-static {v2}, Lcom/android/server/enterprise/EnterpriseDeviceManagerService;->getPolicyService(Ljava/lang/String;)Ljava/lang/Object;
 
@@ -802,11 +745,9 @@
 
     check-cast v15, Lcom/android/server/enterprise/security/SecurityPolicy;
 
-    .line 2562
     .local v15, "lSecurityPolicy":Lcom/android/server/enterprise/security/SecurityPolicy;
     if-eqz v15, :cond_0
 
-    .line 2563
     const-string v2, "API"
 
     move-object/from16 v0, p2
@@ -815,11 +756,10 @@
 
     move-result-object v9
 
-    .line 2564
     .restart local v9    # "api":Ljava/lang/String;
     if-eqz v9, :cond_0
 
-    const-string/jumbo v2, "setDodBannerVisibleStatus"
+    const-string v2, "setDodBannerVisibleStatus"
 
     invoke-virtual {v9, v2}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
@@ -827,7 +767,6 @@
 
     if-eqz v2, :cond_0
 
-    .line 2565
     new-instance v2, Landroid/app/enterprise/ContextInfo;
 
     invoke-direct {v2, v10}, Landroid/app/enterprise/ContextInfo;-><init>(I)V
@@ -848,7 +787,6 @@
 
     goto/16 :goto_0
 
-    .line 2487
     nop
 
     :sswitch_data_0
@@ -866,14 +804,12 @@
     .locals 1
 
     .prologue
-    .line 193
     invoke-virtual {p0}, Lcom/android/server/enterprise/content/SecContentProvider;->getContext()Landroid/content/Context;
 
     move-result-object v0
 
     iput-object v0, p0, Lcom/android/server/enterprise/content/SecContentProvider;->mContext:Landroid/content/Context;
 
-    .line 194
     const/4 v0, 0x1
 
     return v0
@@ -888,22 +824,18 @@
     .param p5, "sortOrder"    # Ljava/lang/String;
 
     .prologue
-    .line 200
     invoke-static {}, Landroid/os/Binder;->getCallingUid()I
 
     move-result v19
 
-    .line 201
     .local v19, "callingUid":I
     invoke-static/range {v19 .. v19}, Landroid/os/UserHandle;->getUserId(I)I
 
     move-result v55
 
-    .line 210
     .local v55, "userId":I
     const/16 v43, 0x0
 
-    .line 212
     .local v43, "mCursor":Landroid/database/MatrixCursor;
     const-string v57, "SecContentProvider"
 
@@ -911,7 +843,7 @@
 
     invoke-direct/range {v58 .. v58}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v59, "uri = "
+    const-string v59, "uri = "
 
     invoke-virtual/range {v58 .. v59}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -951,7 +883,6 @@
 
     invoke-static/range {v57 .. v58}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 214
     sget-object v57, Lcom/android/server/enterprise/content/SecContentProvider;->URI_MATCHER:Landroid/content/UriMatcher;
 
     move-object/from16 v0, v57
@@ -964,7 +895,6 @@
 
     packed-switch v57, :pswitch_data_0
 
-    .line 2479
     :cond_0
     :pswitch_0
     const/16 v57, 0x0
@@ -972,9 +902,8 @@
     :goto_0
     return-object v57
 
-    .line 216
     :pswitch_1
-    const-string/jumbo v57, "restriction_policy"
+    const-string v57, "restriction_policy"
 
     invoke-static/range {v57 .. v57}, Lcom/android/server/enterprise/EnterpriseDeviceManagerService;->getPolicyService(Ljava/lang/String;)Ljava/lang/Object;
 
@@ -982,13 +911,11 @@
 
     check-cast v35, Lcom/android/server/enterprise/restriction/RestrictionPolicy;
 
-    .line 218
     .local v35, "lRestrictionPolicy":Lcom/android/server/enterprise/restriction/RestrictionPolicy;
     if-eqz v35, :cond_0
 
     if-eqz p3, :cond_0
 
-    .line 219
     const/16 v57, -0x1
 
     invoke-virtual/range {p3 .. p3}, Ljava/lang/String;->hashCode()I
@@ -1001,12 +928,10 @@
     :goto_1
     packed-switch v57, :pswitch_data_1
 
-    .line 475
     const/16 v57, 0x0
 
     goto :goto_0
 
-    .line 219
     :sswitch_0
     const-string v58, "checkPackageSource"
 
@@ -1313,7 +1238,6 @@
 
     goto/16 :goto_1
 
-    .line 221
     :pswitch_2
     if-eqz p4, :cond_2
 
@@ -1323,13 +1247,11 @@
 
     if-gtz v57, :cond_3
 
-    .line 222
     :cond_2
     const/16 v57, 0x0
 
     goto/16 :goto_0
 
-    .line 224
     :cond_3
     const/16 v57, 0x0
 
@@ -1345,7 +1267,6 @@
 
     move-result v48
 
-    .line 227
     .local v48, "result":Z
     new-instance v43, Landroid/database/MatrixCursor;
 
@@ -1370,7 +1291,6 @@
 
     invoke-direct {v0, v1}, Landroid/database/MatrixCursor;-><init>([Ljava/lang/String;)V
 
-    .line 230
     .restart local v43    # "mCursor":Landroid/database/MatrixCursor;
     const/16 v57, 0x1
 
@@ -1397,10 +1317,8 @@
     :goto_2
     move-object/from16 v57, v43
 
-    .line 478
     goto/16 :goto_0
 
-    .line 235
     .end local v48    # "result":Z
     :pswitch_3
     if-eqz p4, :cond_4
@@ -1411,13 +1329,11 @@
 
     if-gtz v57, :cond_5
 
-    .line 236
     :cond_4
     const/16 v57, 0x0
 
     goto/16 :goto_0
 
-    .line 238
     :cond_5
     new-instance v57, Landroid/app/enterprise/ContextInfo;
 
@@ -1445,7 +1361,6 @@
 
     move-result v48
 
-    .line 242
     .restart local v48    # "result":Z
     new-instance v43, Landroid/database/MatrixCursor;
 
@@ -1470,7 +1385,6 @@
 
     invoke-direct {v0, v1}, Landroid/database/MatrixCursor;-><init>([Ljava/lang/String;)V
 
-    .line 245
     .restart local v43    # "mCursor":Landroid/database/MatrixCursor;
     const/16 v57, 0x1
 
@@ -1496,12 +1410,10 @@
 
     goto :goto_2
 
-    .line 251
     .end local v48    # "result":Z
     :pswitch_4
     const/4 v6, 0x0
 
-    .line 252
     .local v6, "arg":Z
     if-eqz p4, :cond_6
 
@@ -1511,7 +1423,6 @@
 
     if-lez v57, :cond_6
 
-    .line 253
     const/16 v57, 0x0
 
     aget-object v57, p4, v57
@@ -1520,7 +1431,6 @@
 
     move-result v6
 
-    .line 254
     :cond_6
     move-object/from16 v0, v35
 
@@ -1528,7 +1438,6 @@
 
     move-result v48
 
-    .line 257
     .restart local v48    # "result":Z
     new-instance v43, Landroid/database/MatrixCursor;
 
@@ -1553,7 +1462,6 @@
 
     invoke-direct {v0, v1}, Landroid/database/MatrixCursor;-><init>([Ljava/lang/String;)V
 
-    .line 260
     .restart local v43    # "mCursor":Landroid/database/MatrixCursor;
     const/16 v57, 0x1
 
@@ -1579,13 +1487,11 @@
 
     goto/16 :goto_2
 
-    .line 266
     .end local v6    # "arg":Z
     .end local v48    # "result":Z
     :pswitch_5
     const/4 v6, 0x0
 
-    .line 267
     .restart local v6    # "arg":Z
     if-eqz p4, :cond_7
 
@@ -1595,7 +1501,6 @@
 
     if-lez v57, :cond_7
 
-    .line 268
     const/16 v57, 0x0
 
     aget-object v57, p4, v57
@@ -1604,7 +1509,6 @@
 
     move-result v6
 
-    .line 269
     :cond_7
     new-instance v57, Landroid/app/enterprise/ContextInfo;
 
@@ -1622,7 +1526,6 @@
 
     move-result v48
 
-    .line 272
     .restart local v48    # "result":Z
     new-instance v43, Landroid/database/MatrixCursor;
 
@@ -1647,7 +1550,6 @@
 
     invoke-direct {v0, v1}, Landroid/database/MatrixCursor;-><init>([Ljava/lang/String;)V
 
-    .line 275
     .restart local v43    # "mCursor":Landroid/database/MatrixCursor;
     const/16 v57, 0x1
 
@@ -1673,13 +1575,11 @@
 
     goto/16 :goto_2
 
-    .line 281
     .end local v6    # "arg":Z
     .end local v48    # "result":Z
     :pswitch_6
     const/4 v6, 0x0
 
-    .line 282
     .restart local v6    # "arg":Z
     if-eqz p4, :cond_8
 
@@ -1689,7 +1589,6 @@
 
     if-lez v57, :cond_8
 
-    .line 283
     const/16 v57, 0x0
 
     aget-object v57, p4, v57
@@ -1698,7 +1597,6 @@
 
     move-result v6
 
-    .line 284
     :cond_8
     new-instance v57, Landroid/app/enterprise/ContextInfo;
 
@@ -1716,7 +1614,6 @@
 
     move-result v48
 
-    .line 287
     .restart local v48    # "result":Z
     new-instance v43, Landroid/database/MatrixCursor;
 
@@ -1741,7 +1638,6 @@
 
     invoke-direct {v0, v1}, Landroid/database/MatrixCursor;-><init>([Ljava/lang/String;)V
 
-    .line 290
     .restart local v43    # "mCursor":Landroid/database/MatrixCursor;
     const/16 v57, 0x1
 
@@ -1767,7 +1663,6 @@
 
     goto/16 :goto_2
 
-    .line 296
     .end local v6    # "arg":Z
     .end local v48    # "result":Z
     :pswitch_7
@@ -1787,7 +1682,6 @@
 
     move-result v48
 
-    .line 299
     .restart local v48    # "result":Z
     new-instance v43, Landroid/database/MatrixCursor;
 
@@ -1812,7 +1706,6 @@
 
     invoke-direct {v0, v1}, Landroid/database/MatrixCursor;-><init>([Ljava/lang/String;)V
 
-    .line 302
     .restart local v43    # "mCursor":Landroid/database/MatrixCursor;
     const/16 v57, 0x1
 
@@ -1838,7 +1731,6 @@
 
     goto/16 :goto_2
 
-    .line 308
     .end local v48    # "result":Z
     :pswitch_8
     new-instance v57, Landroid/app/enterprise/ContextInfo;
@@ -1857,7 +1749,6 @@
 
     move-result v48
 
-    .line 311
     .restart local v48    # "result":Z
     new-instance v43, Landroid/database/MatrixCursor;
 
@@ -1882,7 +1773,6 @@
 
     invoke-direct {v0, v1}, Landroid/database/MatrixCursor;-><init>([Ljava/lang/String;)V
 
-    .line 314
     .restart local v43    # "mCursor":Landroid/database/MatrixCursor;
     const/16 v57, 0x1
 
@@ -1908,7 +1798,6 @@
 
     goto/16 :goto_2
 
-    .line 320
     .end local v48    # "result":Z
     :pswitch_9
     if-eqz p4, :cond_9
@@ -1919,13 +1808,11 @@
 
     if-gtz v57, :cond_a
 
-    .line 321
     :cond_9
     const/16 v57, 0x0
 
     goto/16 :goto_0
 
-    .line 322
     :cond_a
     new-instance v57, Landroid/app/enterprise/ContextInfo;
 
@@ -1953,7 +1840,6 @@
 
     move-result v48
 
-    .line 326
     .restart local v48    # "result":Z
     new-instance v43, Landroid/database/MatrixCursor;
 
@@ -1978,7 +1864,6 @@
 
     invoke-direct {v0, v1}, Landroid/database/MatrixCursor;-><init>([Ljava/lang/String;)V
 
-    .line 329
     .restart local v43    # "mCursor":Landroid/database/MatrixCursor;
     const/16 v57, 0x1
 
@@ -2004,7 +1889,6 @@
 
     goto/16 :goto_2
 
-    .line 335
     .end local v48    # "result":Z
     :pswitch_a
     new-instance v57, Landroid/app/enterprise/ContextInfo;
@@ -2023,7 +1907,6 @@
 
     move-result v48
 
-    .line 338
     .restart local v48    # "result":Z
     new-instance v43, Landroid/database/MatrixCursor;
 
@@ -2048,7 +1931,6 @@
 
     invoke-direct {v0, v1}, Landroid/database/MatrixCursor;-><init>([Ljava/lang/String;)V
 
-    .line 341
     .restart local v43    # "mCursor":Landroid/database/MatrixCursor;
     const/16 v57, 0x1
 
@@ -2074,7 +1956,6 @@
 
     goto/16 :goto_2
 
-    .line 347
     .end local v48    # "result":Z
     :pswitch_b
     if-eqz p4, :cond_b
@@ -2085,13 +1966,11 @@
 
     if-gtz v57, :cond_c
 
-    .line 348
     :cond_b
     const/16 v57, 0x0
 
     goto/16 :goto_0
 
-    .line 349
     :cond_c
     new-instance v57, Landroid/app/enterprise/ContextInfo;
 
@@ -2119,7 +1998,6 @@
 
     move-result v48
 
-    .line 352
     .restart local v48    # "result":Z
     new-instance v43, Landroid/database/MatrixCursor;
 
@@ -2144,7 +2022,6 @@
 
     invoke-direct {v0, v1}, Landroid/database/MatrixCursor;-><init>([Ljava/lang/String;)V
 
-    .line 355
     .restart local v43    # "mCursor":Landroid/database/MatrixCursor;
     const/16 v57, 0x1
 
@@ -2170,7 +2047,6 @@
 
     goto/16 :goto_2
 
-    .line 361
     .end local v48    # "result":Z
     :pswitch_c
     new-instance v57, Landroid/app/enterprise/ContextInfo;
@@ -2189,7 +2065,6 @@
 
     move-result v48
 
-    .line 364
     .restart local v48    # "result":Z
     new-instance v43, Landroid/database/MatrixCursor;
 
@@ -2214,7 +2089,6 @@
 
     invoke-direct {v0, v1}, Landroid/database/MatrixCursor;-><init>([Ljava/lang/String;)V
 
-    .line 367
     .restart local v43    # "mCursor":Landroid/database/MatrixCursor;
     const/16 v57, 0x1
 
@@ -2240,7 +2114,6 @@
 
     goto/16 :goto_2
 
-    .line 373
     .end local v48    # "result":Z
     :pswitch_d
     if-eqz p4, :cond_d
@@ -2251,7 +2124,6 @@
 
     if-gtz v57, :cond_e
 
-    .line 375
     :cond_d
     new-instance v57, Landroid/app/enterprise/ContextInfo;
 
@@ -2273,7 +2145,6 @@
 
     move-result v48
 
-    .line 382
     .restart local v48    # "result":Z
     :goto_3
     new-instance v43, Landroid/database/MatrixCursor;
@@ -2299,7 +2170,6 @@
 
     invoke-direct {v0, v1}, Landroid/database/MatrixCursor;-><init>([Ljava/lang/String;)V
 
-    .line 385
     .restart local v43    # "mCursor":Landroid/database/MatrixCursor;
     const/16 v57, 0x1
 
@@ -2325,7 +2195,6 @@
 
     goto/16 :goto_2
 
-    .line 377
     .end local v48    # "result":Z
     :cond_e
     new-instance v57, Landroid/app/enterprise/ContextInfo;
@@ -2357,7 +2226,6 @@
     .restart local v48    # "result":Z
     goto :goto_3
 
-    .line 391
     .end local v48    # "result":Z
     :pswitch_e
     if-eqz p4, :cond_f
@@ -2374,13 +2242,11 @@
 
     if-ge v0, v1, :cond_10
 
-    .line 392
     :cond_f
     const/16 v57, 0x0
 
     goto/16 :goto_0
 
-    .line 393
     :cond_10
     const/16 v57, 0x0
 
@@ -2408,7 +2274,6 @@
 
     move-result v48
 
-    .line 394
     .restart local v48    # "result":Z
     const-string v57, "SecContentProvider"
 
@@ -2436,7 +2301,6 @@
 
     invoke-static/range {v57 .. v58}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 396
     new-instance v43, Landroid/database/MatrixCursor;
 
     .end local v43    # "mCursor":Landroid/database/MatrixCursor;
@@ -2460,7 +2324,6 @@
 
     invoke-direct {v0, v1}, Landroid/database/MatrixCursor;-><init>([Ljava/lang/String;)V
 
-    .line 399
     .restart local v43    # "mCursor":Landroid/database/MatrixCursor;
     const/16 v57, 0x1
 
@@ -2486,7 +2349,6 @@
 
     goto/16 :goto_2
 
-    .line 406
     .end local v48    # "result":Z
     :pswitch_f
     if-eqz p4, :cond_11
@@ -2497,13 +2359,11 @@
 
     if-gtz v57, :cond_12
 
-    .line 407
     :cond_11
     const/16 v57, 0x0
 
     goto/16 :goto_0
 
-    .line 408
     :cond_12
     const/16 v57, 0x0
 
@@ -2521,7 +2381,6 @@
 
     move-result v48
 
-    .line 411
     .restart local v48    # "result":Z
     new-instance v43, Landroid/database/MatrixCursor;
 
@@ -2546,7 +2405,6 @@
 
     invoke-direct {v0, v1}, Landroid/database/MatrixCursor;-><init>([Ljava/lang/String;)V
 
-    .line 414
     .restart local v43    # "mCursor":Landroid/database/MatrixCursor;
     const/16 v57, 0x1
 
@@ -2572,7 +2430,6 @@
 
     goto/16 :goto_2
 
-    .line 420
     .end local v48    # "result":Z
     :pswitch_10
     new-instance v57, Landroid/app/enterprise/ContextInfo;
@@ -2591,7 +2448,6 @@
 
     move-result v48
 
-    .line 423
     .restart local v48    # "result":Z
     new-instance v43, Landroid/database/MatrixCursor;
 
@@ -2616,7 +2472,6 @@
 
     invoke-direct {v0, v1}, Landroid/database/MatrixCursor;-><init>([Ljava/lang/String;)V
 
-    .line 426
     .restart local v43    # "mCursor":Landroid/database/MatrixCursor;
     const/16 v57, 0x1
 
@@ -2642,12 +2497,10 @@
 
     goto/16 :goto_2
 
-    .line 432
     .end local v48    # "result":Z
     :pswitch_11
     const/4 v6, 0x0
 
-    .line 433
     .restart local v6    # "arg":Z
     if-eqz p4, :cond_13
 
@@ -2657,7 +2510,6 @@
 
     if-lez v57, :cond_13
 
-    .line 434
     const/16 v57, 0x0
 
     aget-object v57, p4, v57
@@ -2666,7 +2518,6 @@
 
     move-result v6
 
-    .line 435
     :cond_13
     new-instance v57, Landroid/app/enterprise/ContextInfo;
 
@@ -2684,7 +2535,6 @@
 
     move-result v48
 
-    .line 438
     .restart local v48    # "result":Z
     new-instance v43, Landroid/database/MatrixCursor;
 
@@ -2709,7 +2559,6 @@
 
     invoke-direct {v0, v1}, Landroid/database/MatrixCursor;-><init>([Ljava/lang/String;)V
 
-    .line 441
     .restart local v43    # "mCursor":Landroid/database/MatrixCursor;
     const/16 v57, 0x1
 
@@ -2735,10 +2584,8 @@
 
     move-object/from16 v57, v43
 
-    .line 446
     goto/16 :goto_0
 
-    .line 448
     .end local v6    # "arg":Z
     .end local v48    # "result":Z
     :pswitch_12
@@ -2758,7 +2605,6 @@
 
     move-result v48
 
-    .line 451
     .restart local v48    # "result":Z
     new-instance v43, Landroid/database/MatrixCursor;
 
@@ -2783,7 +2629,6 @@
 
     invoke-direct {v0, v1}, Landroid/database/MatrixCursor;-><init>([Ljava/lang/String;)V
 
-    .line 454
     .restart local v43    # "mCursor":Landroid/database/MatrixCursor;
     const/16 v57, 0x1
 
@@ -2809,7 +2654,6 @@
 
     goto/16 :goto_2
 
-    .line 460
     .end local v48    # "result":Z
     :pswitch_13
     if-eqz p4, :cond_14
@@ -2826,12 +2670,10 @@
 
     if-ge v0, v1, :cond_14
 
-    .line 461
     const/16 v57, 0x0
 
     goto/16 :goto_0
 
-    .line 463
     :cond_14
     new-instance v57, Landroid/app/enterprise/ContextInfo;
 
@@ -2859,7 +2701,6 @@
 
     move-result v48
 
-    .line 464
     .restart local v48    # "result":Z
     const-string v57, "SecContentProvider"
 
@@ -2887,7 +2728,6 @@
 
     invoke-static/range {v57 .. v58}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 466
     new-instance v43, Landroid/database/MatrixCursor;
 
     .end local v43    # "mCursor":Landroid/database/MatrixCursor;
@@ -2911,7 +2751,6 @@
 
     invoke-direct {v0, v1}, Landroid/database/MatrixCursor;-><init>([Ljava/lang/String;)V
 
-    .line 469
     .restart local v43    # "mCursor":Landroid/database/MatrixCursor;
     const/16 v57, 0x1
 
@@ -2937,11 +2776,10 @@
 
     goto/16 :goto_2
 
-    .line 482
     .end local v35    # "lRestrictionPolicy":Lcom/android/server/enterprise/restriction/RestrictionPolicy;
     .end local v48    # "result":Z
     :pswitch_14
-    const-string/jumbo v57, "restriction_policy"
+    const-string v57, "restriction_policy"
 
     invoke-static/range {v57 .. v57}, Lcom/android/server/enterprise/EnterpriseDeviceManagerService;->getPolicyService(Ljava/lang/String;)Ljava/lang/Object;
 
@@ -2949,13 +2787,11 @@
 
     check-cast v35, Lcom/android/server/enterprise/restriction/RestrictionPolicy;
 
-    .line 484
     .restart local v35    # "lRestrictionPolicy":Lcom/android/server/enterprise/restriction/RestrictionPolicy;
     if-eqz v35, :cond_0
 
     if-eqz p3, :cond_0
 
-    .line 485
     const/16 v57, -0x1
 
     invoke-virtual/range {p3 .. p3}, Ljava/lang/String;->hashCode()I
@@ -2968,19 +2804,16 @@
     :goto_4
     packed-switch v57, :pswitch_data_2
 
-    .line 757
     const-string v57, "SecContentProvider"
 
-    const-string/jumbo v58, "return null"
+    const-string v58, "return null"
 
     invoke-static/range {v57 .. v58}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 758
     const/16 v57, 0x0
 
     goto/16 :goto_0
 
-    .line 485
     :sswitch_12
     const-string v58, "isFirmwareAutoUpdateAllowed"
 
@@ -3270,7 +3103,6 @@
 
     goto/16 :goto_4
 
-    .line 487
     :pswitch_15
     if-eqz p4, :cond_16
 
@@ -3280,13 +3112,11 @@
 
     if-gtz v57, :cond_17
 
-    .line 488
     :cond_16
     const/16 v57, 0x0
 
     goto/16 :goto_0
 
-    .line 490
     :cond_17
     new-instance v57, Landroid/app/enterprise/ContextInfo;
 
@@ -3314,7 +3144,6 @@
 
     move-result v48
 
-    .line 494
     .restart local v48    # "result":Z
     new-instance v43, Landroid/database/MatrixCursor;
 
@@ -3339,7 +3168,6 @@
 
     invoke-direct {v0, v1}, Landroid/database/MatrixCursor;-><init>([Ljava/lang/String;)V
 
-    .line 497
     .restart local v43    # "mCursor":Landroid/database/MatrixCursor;
     const/16 v57, 0x1
 
@@ -3366,10 +3194,8 @@
     :goto_5
     move-object/from16 v57, v43
 
-    .line 761
     goto/16 :goto_0
 
-    .line 503
     .end local v48    # "result":Z
     :pswitch_16
     if-eqz p4, :cond_18
@@ -3380,13 +3206,11 @@
 
     if-gtz v57, :cond_19
 
-    .line 504
     :cond_18
     const/16 v57, 0x0
 
     goto/16 :goto_0
 
-    .line 506
     :cond_19
     new-instance v57, Landroid/app/enterprise/ContextInfo;
 
@@ -3414,7 +3238,6 @@
 
     move-result v48
 
-    .line 510
     .restart local v48    # "result":Z
     new-instance v43, Landroid/database/MatrixCursor;
 
@@ -3439,7 +3262,6 @@
 
     invoke-direct {v0, v1}, Landroid/database/MatrixCursor;-><init>([Ljava/lang/String;)V
 
-    .line 513
     .restart local v43    # "mCursor":Landroid/database/MatrixCursor;
     const/16 v57, 0x1
 
@@ -3465,7 +3287,6 @@
 
     goto :goto_5
 
-    .line 519
     .end local v48    # "result":Z
     :pswitch_17
     new-instance v57, Landroid/app/enterprise/ContextInfo;
@@ -3484,7 +3305,6 @@
 
     move-result v48
 
-    .line 522
     .restart local v48    # "result":Z
     new-instance v43, Landroid/database/MatrixCursor;
 
@@ -3509,7 +3329,6 @@
 
     invoke-direct {v0, v1}, Landroid/database/MatrixCursor;-><init>([Ljava/lang/String;)V
 
-    .line 525
     .restart local v43    # "mCursor":Landroid/database/MatrixCursor;
     const/16 v57, 0x1
 
@@ -3535,7 +3354,6 @@
 
     goto/16 :goto_5
 
-    .line 531
     .end local v48    # "result":Z
     :pswitch_18
     new-instance v57, Landroid/app/enterprise/ContextInfo;
@@ -3554,7 +3372,6 @@
 
     move-result v48
 
-    .line 534
     .restart local v48    # "result":Z
     new-instance v43, Landroid/database/MatrixCursor;
 
@@ -3579,7 +3396,6 @@
 
     invoke-direct {v0, v1}, Landroid/database/MatrixCursor;-><init>([Ljava/lang/String;)V
 
-    .line 537
     .restart local v43    # "mCursor":Landroid/database/MatrixCursor;
     const/16 v57, 0x1
 
@@ -3605,7 +3421,6 @@
 
     goto/16 :goto_5
 
-    .line 543
     .end local v48    # "result":Z
     :pswitch_19
     if-eqz p4, :cond_1a
@@ -3616,13 +3431,11 @@
 
     if-gtz v57, :cond_1b
 
-    .line 544
     :cond_1a
     const/16 v57, 0x0
 
     goto/16 :goto_0
 
-    .line 545
     :cond_1b
     new-instance v57, Landroid/app/enterprise/ContextInfo;
 
@@ -3650,7 +3463,6 @@
 
     move-result v48
 
-    .line 549
     .restart local v48    # "result":Z
     new-instance v43, Landroid/database/MatrixCursor;
 
@@ -3675,7 +3487,6 @@
 
     invoke-direct {v0, v1}, Landroid/database/MatrixCursor;-><init>([Ljava/lang/String;)V
 
-    .line 552
     .restart local v43    # "mCursor":Landroid/database/MatrixCursor;
     const/16 v57, 0x1
 
@@ -3701,12 +3512,10 @@
 
     goto/16 :goto_5
 
-    .line 558
     .end local v48    # "result":Z
     :pswitch_1a
     const/4 v6, 0x0
 
-    .line 559
     .restart local v6    # "arg":Z
     if-eqz p4, :cond_1c
 
@@ -3716,7 +3525,6 @@
 
     if-lez v57, :cond_1c
 
-    .line 560
     const/16 v57, 0x0
 
     aget-object v57, p4, v57
@@ -3725,7 +3533,6 @@
 
     move-result v6
 
-    .line 561
     :cond_1c
     new-instance v57, Landroid/app/enterprise/ContextInfo;
 
@@ -3743,7 +3550,6 @@
 
     move-result v48
 
-    .line 564
     .restart local v48    # "result":Z
     new-instance v43, Landroid/database/MatrixCursor;
 
@@ -3768,7 +3574,6 @@
 
     invoke-direct {v0, v1}, Landroid/database/MatrixCursor;-><init>([Ljava/lang/String;)V
 
-    .line 567
     .restart local v43    # "mCursor":Landroid/database/MatrixCursor;
     const/16 v57, 0x1
 
@@ -3794,13 +3599,11 @@
 
     goto/16 :goto_5
 
-    .line 573
     .end local v6    # "arg":Z
     .end local v48    # "result":Z
     :pswitch_1b
     if-nez p4, :cond_1d
 
-    .line 574
     new-instance v57, Landroid/app/enterprise/ContextInfo;
 
     move-object/from16 v0, v57
@@ -3817,7 +3620,6 @@
 
     move-result v48
 
-    .line 575
     .restart local v48    # "result":Z
     const-string v57, "SecContentProvider"
 
@@ -3859,7 +3661,6 @@
 
     invoke-static/range {v57 .. v58}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 582
     :goto_6
     new-instance v43, Landroid/database/MatrixCursor;
 
@@ -3884,7 +3685,6 @@
 
     invoke-direct {v0, v1}, Landroid/database/MatrixCursor;-><init>([Ljava/lang/String;)V
 
-    .line 585
     .restart local v43    # "mCursor":Landroid/database/MatrixCursor;
     const/16 v57, 0x1
 
@@ -3910,7 +3710,6 @@
 
     goto/16 :goto_5
 
-    .line 578
     .end local v48    # "result":Z
     :cond_1d
     new-instance v57, Landroid/app/enterprise/ContextInfo;
@@ -3933,7 +3732,6 @@
 
     move-result v48
 
-    .line 579
     .restart local v48    # "result":Z
     const-string v57, "SecContentProvider"
 
@@ -3981,7 +3779,6 @@
 
     goto :goto_6
 
-    .line 591
     .end local v48    # "result":Z
     :pswitch_1c
     if-eqz p4, :cond_1e
@@ -3992,13 +3789,11 @@
 
     if-gtz v57, :cond_1f
 
-    .line 592
     :cond_1e
     const/16 v57, 0x0
 
     goto/16 :goto_0
 
-    .line 593
     :cond_1f
     new-instance v57, Landroid/app/enterprise/ContextInfo;
 
@@ -4026,7 +3821,6 @@
 
     move-result v48
 
-    .line 597
     .restart local v48    # "result":Z
     new-instance v43, Landroid/database/MatrixCursor;
 
@@ -4051,7 +3845,6 @@
 
     invoke-direct {v0, v1}, Landroid/database/MatrixCursor;-><init>([Ljava/lang/String;)V
 
-    .line 600
     .restart local v43    # "mCursor":Landroid/database/MatrixCursor;
     const/16 v57, 0x1
 
@@ -4077,7 +3870,6 @@
 
     goto/16 :goto_5
 
-    .line 606
     .end local v48    # "result":Z
     :pswitch_1d
     if-eqz p4, :cond_20
@@ -4094,13 +3886,11 @@
 
     if-ge v0, v1, :cond_21
 
-    .line 607
     :cond_20
     const/16 v57, 0x0
 
     goto/16 :goto_0
 
-    .line 608
     :cond_21
     invoke-static/range {p4 .. p4}, Ljava/lang/reflect/Array;->getLength(Ljava/lang/Object;)I
 
@@ -4114,7 +3904,6 @@
 
     if-ne v0, v1, :cond_22
 
-    .line 609
     new-instance v57, Landroid/app/enterprise/ContextInfo;
 
     const/16 v58, 0x0
@@ -4145,7 +3934,6 @@
 
     move-result v48
 
-    .line 616
     .restart local v48    # "result":Z
     :goto_7
     const-string v57, "SecContentProvider"
@@ -4174,7 +3962,6 @@
 
     invoke-static/range {v57 .. v58}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 618
     new-instance v43, Landroid/database/MatrixCursor;
 
     .end local v43    # "mCursor":Landroid/database/MatrixCursor;
@@ -4198,7 +3985,6 @@
 
     invoke-direct {v0, v1}, Landroid/database/MatrixCursor;-><init>([Ljava/lang/String;)V
 
-    .line 621
     .restart local v43    # "mCursor":Landroid/database/MatrixCursor;
     const/16 v57, 0x1
 
@@ -4224,7 +4010,6 @@
 
     goto/16 :goto_5
 
-    .line 613
     .end local v48    # "result":Z
     :cond_22
     new-instance v57, Landroid/app/enterprise/ContextInfo;
@@ -4256,7 +4041,6 @@
     .restart local v48    # "result":Z
     goto :goto_7
 
-    .line 627
     .end local v48    # "result":Z
     :pswitch_1e
     if-eqz p4, :cond_23
@@ -4273,13 +4057,11 @@
 
     if-ge v0, v1, :cond_24
 
-    .line 628
     :cond_23
     const/16 v57, 0x0
 
     goto/16 :goto_0
 
-    .line 629
     :cond_24
     invoke-static/range {p4 .. p4}, Ljava/lang/reflect/Array;->getLength(Ljava/lang/Object;)I
 
@@ -4293,7 +4075,6 @@
 
     if-ne v0, v1, :cond_25
 
-    .line 630
     new-instance v57, Landroid/app/enterprise/ContextInfo;
 
     const/16 v58, 0x0
@@ -4324,7 +4105,6 @@
 
     move-result v48
 
-    .line 637
     .restart local v48    # "result":Z
     :goto_8
     const-string v57, "SecContentProvider"
@@ -4353,7 +4133,6 @@
 
     invoke-static/range {v57 .. v58}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 639
     new-instance v43, Landroid/database/MatrixCursor;
 
     .end local v43    # "mCursor":Landroid/database/MatrixCursor;
@@ -4377,7 +4156,6 @@
 
     invoke-direct {v0, v1}, Landroid/database/MatrixCursor;-><init>([Ljava/lang/String;)V
 
-    .line 642
     .restart local v43    # "mCursor":Landroid/database/MatrixCursor;
     const/16 v57, 0x1
 
@@ -4403,7 +4181,6 @@
 
     goto/16 :goto_5
 
-    .line 634
     .end local v48    # "result":Z
     :cond_25
     new-instance v57, Landroid/app/enterprise/ContextInfo;
@@ -4435,7 +4212,6 @@
     .restart local v48    # "result":Z
     goto :goto_8
 
-    .line 648
     .end local v48    # "result":Z
     :pswitch_1f
     if-eqz p4, :cond_26
@@ -4452,13 +4228,11 @@
 
     if-ge v0, v1, :cond_27
 
-    .line 649
     :cond_26
     const/16 v57, 0x0
 
     goto/16 :goto_0
 
-    .line 650
     :cond_27
     const/16 v57, 0x0
 
@@ -4486,7 +4260,6 @@
 
     move-result v48
 
-    .line 652
     .restart local v48    # "result":Z
     const-string v57, "SecContentProvider"
 
@@ -4514,7 +4287,6 @@
 
     invoke-static/range {v57 .. v58}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 654
     new-instance v43, Landroid/database/MatrixCursor;
 
     .end local v43    # "mCursor":Landroid/database/MatrixCursor;
@@ -4538,7 +4310,6 @@
 
     invoke-direct {v0, v1}, Landroid/database/MatrixCursor;-><init>([Ljava/lang/String;)V
 
-    .line 657
     .restart local v43    # "mCursor":Landroid/database/MatrixCursor;
     const/16 v57, 0x1
 
@@ -4564,12 +4335,10 @@
 
     goto/16 :goto_5
 
-    .line 664
     .end local v48    # "result":Z
     :pswitch_20
     if-nez p4, :cond_28
 
-    .line 665
     new-instance v57, Landroid/app/enterprise/ContextInfo;
 
     move-object/from16 v0, v57
@@ -4586,7 +4355,6 @@
 
     move-result v48
 
-    .line 666
     .restart local v48    # "result":Z
     const-string v57, "SecContentProvider"
 
@@ -4614,7 +4382,6 @@
 
     invoke-static/range {v57 .. v58}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 672
     :goto_9
     const-string v57, "SecContentProvider"
 
@@ -4642,7 +4409,6 @@
 
     invoke-static/range {v57 .. v58}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 674
     new-instance v43, Landroid/database/MatrixCursor;
 
     .end local v43    # "mCursor":Landroid/database/MatrixCursor;
@@ -4666,7 +4432,6 @@
 
     invoke-direct {v0, v1}, Landroid/database/MatrixCursor;-><init>([Ljava/lang/String;)V
 
-    .line 677
     .restart local v43    # "mCursor":Landroid/database/MatrixCursor;
     const/16 v57, 0x1
 
@@ -4692,7 +4457,6 @@
 
     goto/16 :goto_5
 
-    .line 669
     .end local v48    # "result":Z
     :cond_28
     new-instance v57, Landroid/app/enterprise/ContextInfo;
@@ -4715,7 +4479,6 @@
 
     move-result v48
 
-    .line 670
     .restart local v48    # "result":Z
     const-string v57, "SecContentProvider"
 
@@ -4749,7 +4512,6 @@
 
     goto/16 :goto_9
 
-    .line 683
     .end local v48    # "result":Z
     :pswitch_21
     if-eqz p4, :cond_29
@@ -4760,13 +4522,11 @@
 
     if-gtz v57, :cond_2a
 
-    .line 684
     :cond_29
     const/16 v57, 0x0
 
     goto/16 :goto_0
 
-    .line 685
     :cond_2a
     new-instance v57, Landroid/app/enterprise/ContextInfo;
 
@@ -4794,7 +4554,6 @@
 
     move-result v48
 
-    .line 689
     .restart local v48    # "result":Z
     new-instance v43, Landroid/database/MatrixCursor;
 
@@ -4819,7 +4578,6 @@
 
     invoke-direct {v0, v1}, Landroid/database/MatrixCursor;-><init>([Ljava/lang/String;)V
 
-    .line 692
     .restart local v43    # "mCursor":Landroid/database/MatrixCursor;
     const/16 v57, 0x1
 
@@ -4845,14 +4603,12 @@
 
     goto/16 :goto_5
 
-    .line 698
     .end local v48    # "result":Z
     :pswitch_22
     invoke-virtual/range {v35 .. v35}, Lcom/android/server/enterprise/restriction/RestrictionPolicy;->isNFCEnabled()Z
 
     move-result v48
 
-    .line 701
     .restart local v48    # "result":Z
     new-instance v43, Landroid/database/MatrixCursor;
 
@@ -4877,7 +4633,6 @@
 
     invoke-direct {v0, v1}, Landroid/database/MatrixCursor;-><init>([Ljava/lang/String;)V
 
-    .line 704
     .restart local v43    # "mCursor":Landroid/database/MatrixCursor;
     const/16 v57, 0x1
 
@@ -4903,12 +4658,10 @@
 
     goto/16 :goto_5
 
-    .line 710
     .end local v48    # "result":Z
     :pswitch_23
     const/16 v50, 0x0
 
-    .line 711
     .local v50, "showMsg":Z
     if-eqz p4, :cond_2b
 
@@ -4924,11 +4677,9 @@
 
     if-ge v0, v1, :cond_2c
 
-    .line 712
     :cond_2b
     const/16 v50, 0x0
 
-    .line 716
     :goto_a
     move-object/from16 v0, v35
 
@@ -4938,7 +4689,6 @@
 
     move-result v48
 
-    .line 719
     .restart local v48    # "result":Z
     new-instance v43, Landroid/database/MatrixCursor;
 
@@ -4963,7 +4713,6 @@
 
     invoke-direct {v0, v1}, Landroid/database/MatrixCursor;-><init>([Ljava/lang/String;)V
 
-    .line 722
     .restart local v43    # "mCursor":Landroid/database/MatrixCursor;
     const/16 v57, 0x1
 
@@ -4989,7 +4738,6 @@
 
     goto/16 :goto_5
 
-    .line 714
     .end local v48    # "result":Z
     :cond_2c
     const/16 v57, 0x0
@@ -5002,12 +4750,10 @@
 
     goto :goto_a
 
-    .line 728
     .end local v50    # "showMsg":Z
     :pswitch_24
     if-eqz p4, :cond_2d
 
-    .line 729
     new-instance v57, Landroid/app/enterprise/ContextInfo;
 
     const/16 v58, 0x0
@@ -5028,7 +4774,6 @@
 
     move-result v48
 
-    .line 736
     .restart local v48    # "result":Z
     :goto_b
     new-instance v43, Landroid/database/MatrixCursor;
@@ -5054,7 +4799,6 @@
 
     invoke-direct {v0, v1}, Landroid/database/MatrixCursor;-><init>([Ljava/lang/String;)V
 
-    .line 739
     .restart local v43    # "mCursor":Landroid/database/MatrixCursor;
     const/16 v57, 0x1
 
@@ -5080,7 +4824,6 @@
 
     goto/16 :goto_5
 
-    .line 732
     .end local v48    # "result":Z
     :cond_2d
     new-instance v57, Landroid/app/enterprise/ContextInfo;
@@ -5102,7 +4845,6 @@
     .restart local v48    # "result":Z
     goto :goto_b
 
-    .line 745
     .end local v48    # "result":Z
     :pswitch_25
     new-instance v57, Landroid/app/enterprise/ContextInfo;
@@ -5121,7 +4863,6 @@
 
     move-result v48
 
-    .line 748
     .restart local v48    # "result":Z
     new-instance v43, Landroid/database/MatrixCursor;
 
@@ -5146,7 +4887,6 @@
 
     invoke-direct {v0, v1}, Landroid/database/MatrixCursor;-><init>([Ljava/lang/String;)V
 
-    .line 751
     .restart local v43    # "mCursor":Landroid/database/MatrixCursor;
     const/16 v57, 0x1
 
@@ -5172,11 +4912,10 @@
 
     goto/16 :goto_5
 
-    .line 765
     .end local v35    # "lRestrictionPolicy":Lcom/android/server/enterprise/restriction/RestrictionPolicy;
     .end local v48    # "result":Z
     :pswitch_26
-    const-string/jumbo v57, "restriction_policy"
+    const-string v57, "restriction_policy"
 
     invoke-static/range {v57 .. v57}, Lcom/android/server/enterprise/EnterpriseDeviceManagerService;->getPolicyService(Ljava/lang/String;)Ljava/lang/Object;
 
@@ -5184,13 +4923,11 @@
 
     check-cast v35, Lcom/android/server/enterprise/restriction/RestrictionPolicy;
 
-    .line 767
     .restart local v35    # "lRestrictionPolicy":Lcom/android/server/enterprise/restriction/RestrictionPolicy;
     if-eqz v35, :cond_0
 
     if-eqz p3, :cond_0
 
-    .line 768
     const/16 v57, -0x1
 
     invoke-virtual/range {p3 .. p3}, Ljava/lang/String;->hashCode()I
@@ -5203,12 +4940,10 @@
     :goto_c
     packed-switch v57, :pswitch_data_3
 
-    .line 976
     const/16 v57, 0x0
 
     goto/16 :goto_0
 
-    .line 768
     :sswitch_23
     const-string v58, "isSettingsChangesAllowed"
 
@@ -5447,7 +5182,6 @@
 
     goto/16 :goto_c
 
-    .line 770
     :pswitch_27
     if-eqz p4, :cond_2f
 
@@ -5463,13 +5197,11 @@
 
     if-ge v0, v1, :cond_30
 
-    .line 771
     :cond_2f
     const/16 v57, 0x0
 
     goto/16 :goto_0
 
-    .line 772
     :cond_30
     invoke-static/range {p4 .. p4}, Ljava/lang/reflect/Array;->getLength(Ljava/lang/Object;)I
 
@@ -5483,7 +5215,6 @@
 
     if-ne v0, v1, :cond_31
 
-    .line 773
     new-instance v57, Landroid/app/enterprise/ContextInfo;
 
     const/16 v58, 0x1
@@ -5514,7 +5245,6 @@
 
     move-result v48
 
-    .line 782
     .restart local v48    # "result":Z
     :goto_d
     new-instance v43, Landroid/database/MatrixCursor;
@@ -5540,7 +5270,6 @@
 
     invoke-direct {v0, v1}, Landroid/database/MatrixCursor;-><init>([Ljava/lang/String;)V
 
-    .line 785
     .restart local v43    # "mCursor":Landroid/database/MatrixCursor;
     const/16 v57, 0x1
 
@@ -5567,10 +5296,8 @@
     :goto_e
     move-object/from16 v57, v43
 
-    .line 979
     goto/16 :goto_0
 
-    .line 777
     .end local v48    # "result":Z
     :cond_31
     new-instance v57, Landroid/app/enterprise/ContextInfo;
@@ -5602,7 +5329,6 @@
     .restart local v48    # "result":Z
     goto :goto_d
 
-    .line 791
     .end local v48    # "result":Z
     :pswitch_28
     new-instance v57, Landroid/app/enterprise/ContextInfo;
@@ -5621,7 +5347,6 @@
 
     move-result v48
 
-    .line 794
     .restart local v48    # "result":Z
     new-instance v43, Landroid/database/MatrixCursor;
 
@@ -5646,7 +5371,6 @@
 
     invoke-direct {v0, v1}, Landroid/database/MatrixCursor;-><init>([Ljava/lang/String;)V
 
-    .line 797
     .restart local v43    # "mCursor":Landroid/database/MatrixCursor;
     const/16 v57, 0x1
 
@@ -5672,7 +5396,6 @@
 
     goto :goto_e
 
-    .line 803
     .end local v48    # "result":Z
     :pswitch_29
     new-instance v57, Landroid/app/enterprise/ContextInfo;
@@ -5691,7 +5414,6 @@
 
     move-result v48
 
-    .line 806
     .restart local v48    # "result":Z
     new-instance v43, Landroid/database/MatrixCursor;
 
@@ -5716,7 +5438,6 @@
 
     invoke-direct {v0, v1}, Landroid/database/MatrixCursor;-><init>([Ljava/lang/String;)V
 
-    .line 809
     .restart local v43    # "mCursor":Landroid/database/MatrixCursor;
     const/16 v57, 0x1
 
@@ -5742,15 +5463,12 @@
 
     move-object/from16 v57, v43
 
-    .line 814
     goto/16 :goto_0
 
-    .line 816
     .end local v48    # "result":Z
     :pswitch_2a
     const/4 v6, 0x0
 
-    .line 817
     .restart local v6    # "arg":Z
     if-eqz p4, :cond_32
 
@@ -5760,7 +5478,6 @@
 
     if-lez v57, :cond_32
 
-    .line 818
     const/16 v57, 0x0
 
     aget-object v57, p4, v57
@@ -5769,7 +5486,6 @@
 
     move-result v6
 
-    .line 820
     :cond_32
     new-instance v57, Landroid/app/enterprise/ContextInfo;
 
@@ -5787,7 +5503,6 @@
 
     move-result v48
 
-    .line 823
     .restart local v48    # "result":Z
     new-instance v43, Landroid/database/MatrixCursor;
 
@@ -5812,7 +5527,6 @@
 
     invoke-direct {v0, v1}, Landroid/database/MatrixCursor;-><init>([Ljava/lang/String;)V
 
-    .line 826
     .restart local v43    # "mCursor":Landroid/database/MatrixCursor;
     const/16 v57, 0x1
 
@@ -5838,7 +5552,6 @@
 
     goto/16 :goto_e
 
-    .line 832
     .end local v6    # "arg":Z
     .end local v48    # "result":Z
     :pswitch_2b
@@ -5858,7 +5571,6 @@
 
     move-result v48
 
-    .line 835
     .restart local v48    # "result":Z
     new-instance v43, Landroid/database/MatrixCursor;
 
@@ -5883,7 +5595,6 @@
 
     invoke-direct {v0, v1}, Landroid/database/MatrixCursor;-><init>([Ljava/lang/String;)V
 
-    .line 838
     .restart local v43    # "mCursor":Landroid/database/MatrixCursor;
     const/16 v57, 0x1
 
@@ -5909,12 +5620,10 @@
 
     goto/16 :goto_e
 
-    .line 844
     .end local v48    # "result":Z
     :pswitch_2c
     const/4 v6, 0x0
 
-    .line 845
     .restart local v6    # "arg":Z
     if-eqz p4, :cond_33
 
@@ -5924,7 +5633,6 @@
 
     if-lez v57, :cond_33
 
-    .line 846
     const/16 v57, 0x0
 
     aget-object v57, p4, v57
@@ -5933,7 +5641,6 @@
 
     move-result v6
 
-    .line 847
     :cond_33
     new-instance v57, Landroid/app/enterprise/ContextInfo;
 
@@ -5951,7 +5658,6 @@
 
     move-result v48
 
-    .line 850
     .restart local v48    # "result":Z
     new-instance v43, Landroid/database/MatrixCursor;
 
@@ -5976,7 +5682,6 @@
 
     invoke-direct {v0, v1}, Landroid/database/MatrixCursor;-><init>([Ljava/lang/String;)V
 
-    .line 853
     .restart local v43    # "mCursor":Landroid/database/MatrixCursor;
     const/16 v57, 0x1
 
@@ -6002,7 +5707,6 @@
 
     goto/16 :goto_e
 
-    .line 859
     .end local v6    # "arg":Z
     .end local v48    # "result":Z
     :pswitch_2d
@@ -6014,13 +5718,11 @@
 
     if-gtz v57, :cond_35
 
-    .line 860
     :cond_34
     const/16 v57, 0x0
 
     goto/16 :goto_0
 
-    .line 861
     :cond_35
     new-instance v57, Landroid/app/enterprise/ContextInfo;
 
@@ -6048,7 +5750,6 @@
 
     move-result v48
 
-    .line 865
     .restart local v48    # "result":Z
     new-instance v43, Landroid/database/MatrixCursor;
 
@@ -6073,7 +5774,6 @@
 
     invoke-direct {v0, v1}, Landroid/database/MatrixCursor;-><init>([Ljava/lang/String;)V
 
-    .line 868
     .restart local v43    # "mCursor":Landroid/database/MatrixCursor;
     const/16 v57, 0x1
 
@@ -6099,7 +5799,6 @@
 
     goto/16 :goto_e
 
-    .line 874
     .end local v48    # "result":Z
     :pswitch_2e
     new-instance v57, Landroid/app/enterprise/ContextInfo;
@@ -6118,7 +5817,6 @@
 
     move-result v48
 
-    .line 877
     .restart local v48    # "result":Z
     new-instance v43, Landroid/database/MatrixCursor;
 
@@ -6143,7 +5841,6 @@
 
     invoke-direct {v0, v1}, Landroid/database/MatrixCursor;-><init>([Ljava/lang/String;)V
 
-    .line 880
     .restart local v43    # "mCursor":Landroid/database/MatrixCursor;
     const/16 v57, 0x1
 
@@ -6169,7 +5866,6 @@
 
     goto/16 :goto_e
 
-    .line 886
     .end local v48    # "result":Z
     :pswitch_2f
     if-eqz p4, :cond_36
@@ -6180,13 +5876,11 @@
 
     if-gtz v57, :cond_37
 
-    .line 887
     :cond_36
     const/16 v57, 0x0
 
     goto/16 :goto_0
 
-    .line 888
     :cond_37
     new-instance v57, Landroid/app/enterprise/ContextInfo;
 
@@ -6214,7 +5908,6 @@
 
     move-result v48
 
-    .line 892
     .restart local v48    # "result":Z
     new-instance v43, Landroid/database/MatrixCursor;
 
@@ -6239,7 +5932,6 @@
 
     invoke-direct {v0, v1}, Landroid/database/MatrixCursor;-><init>([Ljava/lang/String;)V
 
-    .line 895
     .restart local v43    # "mCursor":Landroid/database/MatrixCursor;
     const/16 v57, 0x1
 
@@ -6265,12 +5957,10 @@
 
     goto/16 :goto_e
 
-    .line 901
     .end local v48    # "result":Z
     :pswitch_30
     const/4 v6, 0x0
 
-    .line 902
     .restart local v6    # "arg":Z
     if-eqz p4, :cond_38
 
@@ -6280,7 +5970,6 @@
 
     if-lez v57, :cond_38
 
-    .line 903
     const/16 v57, 0x0
 
     aget-object v57, p4, v57
@@ -6289,7 +5978,6 @@
 
     move-result v6
 
-    .line 904
     :cond_38
     move-object/from16 v0, v35
 
@@ -6297,7 +5985,6 @@
 
     move-result v48
 
-    .line 907
     .restart local v48    # "result":Z
     new-instance v43, Landroid/database/MatrixCursor;
 
@@ -6322,7 +6009,6 @@
 
     invoke-direct {v0, v1}, Landroid/database/MatrixCursor;-><init>([Ljava/lang/String;)V
 
-    .line 910
     .restart local v43    # "mCursor":Landroid/database/MatrixCursor;
     const/16 v57, 0x1
 
@@ -6348,13 +6034,11 @@
 
     goto/16 :goto_e
 
-    .line 916
     .end local v6    # "arg":Z
     .end local v48    # "result":Z
     :pswitch_31
     const/4 v6, 0x0
 
-    .line 917
     .restart local v6    # "arg":Z
     if-eqz p4, :cond_39
 
@@ -6364,7 +6048,6 @@
 
     if-lez v57, :cond_39
 
-    .line 918
     const/16 v57, 0x0
 
     aget-object v57, p4, v57
@@ -6373,7 +6056,6 @@
 
     move-result v6
 
-    .line 919
     :cond_39
     move-object/from16 v0, v35
 
@@ -6383,7 +6065,6 @@
 
     move-result v48
 
-    .line 922
     .restart local v48    # "result":Z
     new-instance v43, Landroid/database/MatrixCursor;
 
@@ -6408,7 +6089,6 @@
 
     invoke-direct {v0, v1}, Landroid/database/MatrixCursor;-><init>([Ljava/lang/String;)V
 
-    .line 925
     .restart local v43    # "mCursor":Landroid/database/MatrixCursor;
     const/16 v57, 0x1
 
@@ -6434,7 +6114,6 @@
 
     goto/16 :goto_e
 
-    .line 931
     .end local v6    # "arg":Z
     .end local v48    # "result":Z
     :pswitch_32
@@ -6454,7 +6133,6 @@
 
     move-result v48
 
-    .line 934
     .restart local v48    # "result":Z
     new-instance v43, Landroid/database/MatrixCursor;
 
@@ -6479,7 +6157,6 @@
 
     invoke-direct {v0, v1}, Landroid/database/MatrixCursor;-><init>([Ljava/lang/String;)V
 
-    .line 937
     .restart local v43    # "mCursor":Landroid/database/MatrixCursor;
     const/16 v57, 0x1
 
@@ -6505,16 +6182,13 @@
 
     goto/16 :goto_e
 
-    .line 943
     .end local v48    # "result":Z
     :pswitch_33
     const/4 v6, 0x0
 
-    .line 944
     .restart local v6    # "arg":Z
     move/from16 v53, v19
 
-    .line 945
     .local v53, "uid":I
     if-eqz p4, :cond_3b
 
@@ -6530,7 +6204,6 @@
 
     if-ne v0, v1, :cond_3b
 
-    .line 946
     const/16 v57, 0x0
 
     aget-object v57, p4, v57
@@ -6539,7 +6212,6 @@
 
     move-result v6
 
-    .line 952
     :cond_3a
     :goto_f
     new-instance v57, Landroid/app/enterprise/ContextInfo;
@@ -6558,7 +6230,6 @@
 
     move-result v48
 
-    .line 953
     .restart local v48    # "result":Z
     const-string v57, "SecContentProvider"
 
@@ -6600,7 +6271,6 @@
 
     invoke-static/range {v57 .. v58}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 955
     new-instance v43, Landroid/database/MatrixCursor;
 
     .end local v43    # "mCursor":Landroid/database/MatrixCursor;
@@ -6624,7 +6294,6 @@
 
     invoke-direct {v0, v1}, Landroid/database/MatrixCursor;-><init>([Ljava/lang/String;)V
 
-    .line 958
     .restart local v43    # "mCursor":Landroid/database/MatrixCursor;
     const/16 v57, 0x1
 
@@ -6650,7 +6319,6 @@
 
     goto/16 :goto_e
 
-    .line 948
     .end local v48    # "result":Z
     :cond_3b
     if-eqz p4, :cond_3a
@@ -6667,7 +6335,6 @@
 
     if-ne v0, v1, :cond_3a
 
-    .line 949
     const/16 v57, 0x0
 
     aget-object v57, p4, v57
@@ -6676,7 +6343,6 @@
 
     move-result v6
 
-    .line 950
     const/16 v57, 0x1
 
     aget-object v57, p4, v57
@@ -6687,7 +6353,6 @@
 
     goto/16 :goto_f
 
-    .line 964
     .end local v6    # "arg":Z
     .end local v53    # "uid":I
     :pswitch_34
@@ -6707,7 +6372,6 @@
 
     move-result v48
 
-    .line 967
     .restart local v48    # "result":Z
     new-instance v43, Landroid/database/MatrixCursor;
 
@@ -6732,7 +6396,6 @@
 
     invoke-direct {v0, v1}, Landroid/database/MatrixCursor;-><init>([Ljava/lang/String;)V
 
-    .line 970
     .restart local v43    # "mCursor":Landroid/database/MatrixCursor;
     const/16 v57, 0x1
 
@@ -6758,11 +6421,10 @@
 
     goto/16 :goto_e
 
-    .line 983
     .end local v35    # "lRestrictionPolicy":Lcom/android/server/enterprise/restriction/RestrictionPolicy;
     .end local v48    # "result":Z
     :pswitch_35
-    const-string/jumbo v57, "restriction_policy"
+    const-string v57, "restriction_policy"
 
     invoke-static/range {v57 .. v57}, Lcom/android/server/enterprise/EnterpriseDeviceManagerService;->getPolicyService(Ljava/lang/String;)Ljava/lang/Object;
 
@@ -6770,13 +6432,11 @@
 
     check-cast v35, Lcom/android/server/enterprise/restriction/RestrictionPolicy;
 
-    .line 985
     .restart local v35    # "lRestrictionPolicy":Lcom/android/server/enterprise/restriction/RestrictionPolicy;
     if-eqz v35, :cond_0
 
     if-eqz p3, :cond_0
 
-    .line 986
     const/16 v57, -0x1
 
     invoke-virtual/range {p3 .. p3}, Ljava/lang/String;->hashCode()I
@@ -6789,12 +6449,10 @@
     :goto_10
     packed-switch v57, :pswitch_data_4
 
-    .line 1176
     const/16 v57, 0x0
 
     goto/16 :goto_0
 
-    .line 986
     :sswitch_31
     const-string v58, "isUsbHostStorageAllowed"
 
@@ -7016,11 +6674,9 @@
 
     goto/16 :goto_10
 
-    .line 988
     :pswitch_36
     const/4 v6, 0x0
 
-    .line 989
     .restart local v6    # "arg":Z
     if-eqz p4, :cond_3d
 
@@ -7030,7 +6686,6 @@
 
     if-lez v57, :cond_3d
 
-    .line 990
     const/16 v57, 0x0
 
     aget-object v57, p4, v57
@@ -7039,7 +6694,6 @@
 
     move-result v6
 
-    .line 991
     :cond_3d
     new-instance v57, Landroid/app/enterprise/ContextInfo;
 
@@ -7057,7 +6711,6 @@
 
     move-result v48
 
-    .line 995
     .restart local v48    # "result":Z
     new-instance v43, Landroid/database/MatrixCursor;
 
@@ -7082,7 +6735,6 @@
 
     invoke-direct {v0, v1}, Landroid/database/MatrixCursor;-><init>([Ljava/lang/String;)V
 
-    .line 998
     .restart local v43    # "mCursor":Landroid/database/MatrixCursor;
     const/16 v57, 0x1
 
@@ -7110,10 +6762,8 @@
     :goto_11
     move-object/from16 v57, v43
 
-    .line 1179
     goto/16 :goto_0
 
-    .line 1004
     .end local v48    # "result":Z
     :pswitch_37
     if-eqz p4, :cond_3e
@@ -7124,13 +6774,11 @@
 
     if-gtz v57, :cond_3f
 
-    .line 1005
     :cond_3e
     const/16 v57, 0x0
 
     goto/16 :goto_0
 
-    .line 1006
     :cond_3f
     new-instance v57, Landroid/app/enterprise/ContextInfo;
 
@@ -7158,7 +6806,6 @@
 
     move-result v48
 
-    .line 1010
     .restart local v48    # "result":Z
     new-instance v43, Landroid/database/MatrixCursor;
 
@@ -7183,7 +6830,6 @@
 
     invoke-direct {v0, v1}, Landroid/database/MatrixCursor;-><init>([Ljava/lang/String;)V
 
-    .line 1013
     .restart local v43    # "mCursor":Landroid/database/MatrixCursor;
     const/16 v57, 0x1
 
@@ -7209,7 +6855,6 @@
 
     goto :goto_11
 
-    .line 1019
     .end local v48    # "result":Z
     :pswitch_38
     if-eqz p4, :cond_40
@@ -7220,13 +6865,11 @@
 
     if-gtz v57, :cond_41
 
-    .line 1020
     :cond_40
     const/16 v57, 0x0
 
     goto/16 :goto_0
 
-    .line 1021
     :cond_41
     new-instance v57, Landroid/app/enterprise/ContextInfo;
 
@@ -7254,7 +6897,6 @@
 
     move-result v48
 
-    .line 1025
     .restart local v48    # "result":Z
     new-instance v43, Landroid/database/MatrixCursor;
 
@@ -7279,7 +6921,6 @@
 
     invoke-direct {v0, v1}, Landroid/database/MatrixCursor;-><init>([Ljava/lang/String;)V
 
-    .line 1028
     .restart local v43    # "mCursor":Landroid/database/MatrixCursor;
     const/16 v57, 0x1
 
@@ -7305,7 +6946,6 @@
 
     goto/16 :goto_11
 
-    .line 1034
     .end local v48    # "result":Z
     :pswitch_39
     new-instance v57, Landroid/app/enterprise/ContextInfo;
@@ -7324,7 +6964,6 @@
 
     move-result v48
 
-    .line 1038
     .restart local v48    # "result":Z
     new-instance v43, Landroid/database/MatrixCursor;
 
@@ -7349,7 +6988,6 @@
 
     invoke-direct {v0, v1}, Landroid/database/MatrixCursor;-><init>([Ljava/lang/String;)V
 
-    .line 1041
     .restart local v43    # "mCursor":Landroid/database/MatrixCursor;
     const/16 v57, 0x1
 
@@ -7375,7 +7013,6 @@
 
     goto/16 :goto_11
 
-    .line 1047
     .end local v48    # "result":Z
     :pswitch_3a
     new-instance v57, Landroid/app/enterprise/ContextInfo;
@@ -7394,7 +7031,6 @@
 
     move-result v48
 
-    .line 1051
     .restart local v48    # "result":Z
     new-instance v43, Landroid/database/MatrixCursor;
 
@@ -7419,7 +7055,6 @@
 
     invoke-direct {v0, v1}, Landroid/database/MatrixCursor;-><init>([Ljava/lang/String;)V
 
-    .line 1054
     .restart local v43    # "mCursor":Landroid/database/MatrixCursor;
     const/16 v57, 0x1
 
@@ -7445,7 +7080,6 @@
 
     goto/16 :goto_11
 
-    .line 1060
     .end local v48    # "result":Z
     :pswitch_3b
     new-instance v57, Landroid/app/enterprise/ContextInfo;
@@ -7464,7 +7098,6 @@
 
     move-result v48
 
-    .line 1064
     .restart local v48    # "result":Z
     new-instance v43, Landroid/database/MatrixCursor;
 
@@ -7489,7 +7122,6 @@
 
     invoke-direct {v0, v1}, Landroid/database/MatrixCursor;-><init>([Ljava/lang/String;)V
 
-    .line 1067
     .restart local v43    # "mCursor":Landroid/database/MatrixCursor;
     const/16 v57, 0x1
 
@@ -7515,12 +7147,10 @@
 
     goto/16 :goto_11
 
-    .line 1073
     .end local v48    # "result":Z
     :pswitch_3c
     const/4 v6, 0x0
 
-    .line 1074
     .restart local v6    # "arg":Z
     if-eqz p4, :cond_42
 
@@ -7530,7 +7160,6 @@
 
     if-lez v57, :cond_42
 
-    .line 1075
     const/16 v57, 0x0
 
     aget-object v57, p4, v57
@@ -7539,7 +7168,6 @@
 
     move-result v6
 
-    .line 1076
     :cond_42
     new-instance v57, Landroid/app/enterprise/ContextInfo;
 
@@ -7557,7 +7185,6 @@
 
     move-result v48
 
-    .line 1080
     .restart local v48    # "result":Z
     new-instance v43, Landroid/database/MatrixCursor;
 
@@ -7582,7 +7209,6 @@
 
     invoke-direct {v0, v1}, Landroid/database/MatrixCursor;-><init>([Ljava/lang/String;)V
 
-    .line 1083
     .restart local v43    # "mCursor":Landroid/database/MatrixCursor;
     const/16 v57, 0x1
 
@@ -7608,7 +7234,6 @@
 
     goto/16 :goto_11
 
-    .line 1089
     .end local v6    # "arg":Z
     .end local v48    # "result":Z
     :pswitch_3d
@@ -7628,7 +7253,6 @@
 
     move-result v48
 
-    .line 1093
     .restart local v48    # "result":Z
     new-instance v43, Landroid/database/MatrixCursor;
 
@@ -7653,7 +7277,6 @@
 
     invoke-direct {v0, v1}, Landroid/database/MatrixCursor;-><init>([Ljava/lang/String;)V
 
-    .line 1096
     .restart local v43    # "mCursor":Landroid/database/MatrixCursor;
     const/16 v57, 0x1
 
@@ -7679,12 +7302,10 @@
 
     goto/16 :goto_11
 
-    .line 1102
     .end local v48    # "result":Z
     :pswitch_3e
     const/4 v6, 0x0
 
-    .line 1103
     .restart local v6    # "arg":Z
     if-eqz p4, :cond_43
 
@@ -7694,7 +7315,6 @@
 
     if-lez v57, :cond_43
 
-    .line 1104
     const/16 v57, 0x0
 
     aget-object v57, p4, v57
@@ -7703,7 +7323,6 @@
 
     move-result v6
 
-    .line 1105
     :cond_43
     new-instance v57, Landroid/app/enterprise/ContextInfo;
 
@@ -7721,7 +7340,6 @@
 
     move-result v48
 
-    .line 1109
     .restart local v48    # "result":Z
     new-instance v43, Landroid/database/MatrixCursor;
 
@@ -7746,7 +7364,6 @@
 
     invoke-direct {v0, v1}, Landroid/database/MatrixCursor;-><init>([Ljava/lang/String;)V
 
-    .line 1112
     .restart local v43    # "mCursor":Landroid/database/MatrixCursor;
     const/16 v57, 0x1
 
@@ -7772,13 +7389,11 @@
 
     goto/16 :goto_11
 
-    .line 1118
     .end local v6    # "arg":Z
     .end local v48    # "result":Z
     :pswitch_3f
     const/4 v6, 0x0
 
-    .line 1119
     .restart local v6    # "arg":Z
     if-eqz p4, :cond_44
 
@@ -7788,7 +7403,6 @@
 
     if-lez v57, :cond_44
 
-    .line 1120
     const/16 v57, 0x0
 
     aget-object v57, p4, v57
@@ -7797,7 +7411,6 @@
 
     move-result v6
 
-    .line 1121
     :cond_44
     new-instance v57, Landroid/app/enterprise/ContextInfo;
 
@@ -7815,7 +7428,6 @@
 
     move-result v48
 
-    .line 1125
     .restart local v48    # "result":Z
     new-instance v43, Landroid/database/MatrixCursor;
 
@@ -7840,7 +7452,6 @@
 
     invoke-direct {v0, v1}, Landroid/database/MatrixCursor;-><init>([Ljava/lang/String;)V
 
-    .line 1128
     .restart local v43    # "mCursor":Landroid/database/MatrixCursor;
     const/16 v57, 0x1
 
@@ -7866,7 +7477,6 @@
 
     goto/16 :goto_11
 
-    .line 1134
     .end local v6    # "arg":Z
     .end local v48    # "result":Z
     :pswitch_40
@@ -7886,7 +7496,6 @@
 
     move-result v48
 
-    .line 1138
     .restart local v48    # "result":Z
     new-instance v43, Landroid/database/MatrixCursor;
 
@@ -7911,7 +7520,6 @@
 
     invoke-direct {v0, v1}, Landroid/database/MatrixCursor;-><init>([Ljava/lang/String;)V
 
-    .line 1141
     .restart local v43    # "mCursor":Landroid/database/MatrixCursor;
     const/16 v57, 0x1
 
@@ -7937,7 +7545,6 @@
 
     goto/16 :goto_11
 
-    .line 1147
     .end local v48    # "result":Z
     :pswitch_41
     new-instance v57, Landroid/app/enterprise/ContextInfo;
@@ -7956,7 +7563,6 @@
 
     move-result v48
 
-    .line 1151
     .restart local v48    # "result":Z
     new-instance v43, Landroid/database/MatrixCursor;
 
@@ -7981,7 +7587,6 @@
 
     invoke-direct {v0, v1}, Landroid/database/MatrixCursor;-><init>([Ljava/lang/String;)V
 
-    .line 1154
     .restart local v43    # "mCursor":Landroid/database/MatrixCursor;
     const/16 v57, 0x1
 
@@ -8007,10 +7612,9 @@
 
     goto/16 :goto_11
 
-    .line 1159
     .end local v48    # "result":Z
     :pswitch_42
-    const-string/jumbo v57, "wifi_policy"
+    const-string v57, "wifi_policy"
 
     invoke-static/range {v57 .. v57}, Lcom/android/server/enterprise/EnterpriseDeviceManagerService;->getPolicyService(Ljava/lang/String;)Ljava/lang/Object;
 
@@ -8018,11 +7622,9 @@
 
     check-cast v39, Lcom/android/server/enterprise/wifi/WifiPolicy;
 
-    .line 1161
     .local v39, "lWifiPolicy":Lcom/android/server/enterprise/wifi/WifiPolicy;
     if-eqz v39, :cond_45
 
-    .line 1162
     new-instance v57, Landroid/app/enterprise/ContextInfo;
 
     move-object/from16 v0, v57
@@ -8049,7 +7651,6 @@
 
     move-result v48
 
-    .line 1164
     .restart local v48    # "result":Z
     new-instance v43, Landroid/database/MatrixCursor;
 
@@ -8074,7 +7675,6 @@
 
     invoke-direct {v0, v1}, Landroid/database/MatrixCursor;-><init>([Ljava/lang/String;)V
 
-    .line 1167
     .restart local v43    # "mCursor":Landroid/database/MatrixCursor;
     const/16 v57, 0x1
 
@@ -8100,14 +7700,12 @@
 
     goto/16 :goto_11
 
-    .line 1172
     .end local v48    # "result":Z
     :cond_45
     const/16 v57, 0x0
 
     goto/16 :goto_0
 
-    .line 1183
     .end local v35    # "lRestrictionPolicy":Lcom/android/server/enterprise/restriction/RestrictionPolicy;
     .end local v39    # "lWifiPolicy":Lcom/android/server/enterprise/wifi/WifiPolicy;
     :pswitch_43
@@ -8119,13 +7717,11 @@
 
     check-cast v30, Lcom/android/server/enterprise/certificate/CertificatePolicy;
 
-    .line 1185
     .local v30, "lCertificatePolicy":Lcom/android/server/enterprise/certificate/CertificatePolicy;
     if-eqz v30, :cond_0
 
     if-eqz p3, :cond_0
 
-    .line 1186
     const/16 v57, -0x1
 
     invoke-virtual/range {p3 .. p3}, Ljava/lang/String;->hashCode()I
@@ -8142,10 +7738,8 @@
     :goto_13
     move-object/from16 v57, v43
 
-    .line 1347
     goto/16 :goto_0
 
-    .line 1186
     :sswitch_3e
     const-string v58, "isCaCertificateTrusted"
 
@@ -8300,7 +7894,7 @@
     goto/16 :goto_12
 
     :sswitch_47
-    const-string/jumbo v58, "validateCertificateAtInstall"
+    const-string v58, "validateCertificateAtInstall"
 
     move-object/from16 v0, p3
 
@@ -8317,7 +7911,7 @@
     goto/16 :goto_12
 
     :sswitch_48
-    const-string/jumbo v58, "validateChainAtInstall"
+    const-string v58, "validateChainAtInstall"
 
     move-object/from16 v0, p3
 
@@ -8350,7 +7944,6 @@
 
     goto/16 :goto_12
 
-    .line 1188
     :pswitch_44
     if-eqz p4, :cond_48
 
@@ -8366,13 +7959,11 @@
 
     if-gt v0, v1, :cond_49
 
-    .line 1189
     :cond_48
     const/16 v57, 0x0
 
     goto/16 :goto_0
 
-    .line 1190
     :cond_49
     new-instance v58, Landroid/app/enterprise/ContextInfo;
 
@@ -8412,7 +8003,6 @@
 
     move-result v48
 
-    .line 1194
     .restart local v48    # "result":Z
     new-instance v43, Landroid/database/MatrixCursor;
 
@@ -8437,7 +8027,6 @@
 
     invoke-direct {v0, v1}, Landroid/database/MatrixCursor;-><init>([Ljava/lang/String;)V
 
-    .line 1198
     .restart local v43    # "mCursor":Landroid/database/MatrixCursor;
     const/16 v57, 0x1
 
@@ -8463,7 +8052,6 @@
 
     goto/16 :goto_13
 
-    .line 1203
     .end local v48    # "result":Z
     :pswitch_45
     if-eqz p4, :cond_4a
@@ -8474,13 +8062,11 @@
 
     if-gtz v57, :cond_4b
 
-    .line 1204
     :cond_4a
     const/16 v57, 0x0
 
     goto/16 :goto_0
 
-    .line 1205
     :cond_4b
     new-instance v57, Landroid/app/enterprise/ContextInfo;
 
@@ -8504,7 +8090,6 @@
 
     move-result v48
 
-    .line 1208
     .restart local v48    # "result":Z
     new-instance v43, Landroid/database/MatrixCursor;
 
@@ -8529,7 +8114,6 @@
 
     invoke-direct {v0, v1}, Landroid/database/MatrixCursor;-><init>([Ljava/lang/String;)V
 
-    .line 1212
     .restart local v43    # "mCursor":Landroid/database/MatrixCursor;
     const/16 v57, 0x1
 
@@ -8555,7 +8139,6 @@
 
     goto/16 :goto_13
 
-    .line 1217
     .end local v48    # "result":Z
     :pswitch_46
     new-instance v57, Landroid/app/enterprise/ContextInfo;
@@ -8574,7 +8157,6 @@
 
     move-result v48
 
-    .line 1220
     .restart local v48    # "result":Z
     new-instance v43, Landroid/database/MatrixCursor;
 
@@ -8599,7 +8181,6 @@
 
     invoke-direct {v0, v1}, Landroid/database/MatrixCursor;-><init>([Ljava/lang/String;)V
 
-    .line 1224
     .restart local v43    # "mCursor":Landroid/database/MatrixCursor;
     const/16 v57, 0x1
 
@@ -8625,7 +8206,6 @@
 
     goto/16 :goto_13
 
-    .line 1229
     .end local v48    # "result":Z
     :pswitch_47
     if-eqz p4, :cond_4c
@@ -8636,13 +8216,11 @@
 
     if-gtz v57, :cond_4d
 
-    .line 1230
     :cond_4c
     const/16 v57, 0x0
 
     goto/16 :goto_0
 
-    .line 1231
     :cond_4d
     new-instance v57, Landroid/app/enterprise/ContextInfo;
 
@@ -8670,7 +8248,6 @@
 
     move-result v48
 
-    .line 1234
     .restart local v48    # "result":Z
     new-instance v43, Landroid/database/MatrixCursor;
 
@@ -8695,7 +8272,6 @@
 
     invoke-direct {v0, v1}, Landroid/database/MatrixCursor;-><init>([Ljava/lang/String;)V
 
-    .line 1238
     .restart local v43    # "mCursor":Landroid/database/MatrixCursor;
     const/16 v57, 0x1
 
@@ -8721,7 +8297,6 @@
 
     goto/16 :goto_13
 
-    .line 1243
     .end local v48    # "result":Z
     :pswitch_48
     if-eqz p4, :cond_4e
@@ -8732,13 +8307,11 @@
 
     if-gtz v57, :cond_4f
 
-    .line 1244
     :cond_4e
     const/16 v57, 0x0
 
     goto/16 :goto_0
 
-    .line 1245
     :cond_4f
     new-instance v58, Landroid/app/enterprise/ContextInfo;
 
@@ -8770,7 +8343,6 @@
 
     move-result-object v42
 
-    .line 1248
     .local v42, "list":Ljava/util/List;, "Ljava/util/List<[Ljava/lang/String;>;"
     new-instance v43, Landroid/database/MatrixCursor;
 
@@ -8795,7 +8367,6 @@
 
     invoke-direct {v0, v1}, Landroid/database/MatrixCursor;-><init>([Ljava/lang/String;)V
 
-    .line 1252
     .restart local v43    # "mCursor":Landroid/database/MatrixCursor;
     if-eqz v42, :cond_47
 
@@ -8805,7 +8376,6 @@
 
     if-nez v57, :cond_47
 
-    .line 1254
     invoke-interface/range {v42 .. v42}, Ljava/util/List;->iterator()Ljava/util/Iterator;
 
     move-result-object v23
@@ -8823,7 +8393,6 @@
 
     check-cast v56, [Ljava/lang/String;
 
-    .line 1255
     .local v56, "value":[Ljava/lang/String;
     move-object/from16 v7, v56
 
@@ -8845,7 +8414,6 @@
 
     aget-object v25, v7, v24
 
-    .line 1256
     .local v25, "internalValue":Ljava/lang/String;
     const/16 v57, 0x1
 
@@ -8865,12 +8433,10 @@
 
     invoke-virtual {v0, v1}, Landroid/database/MatrixCursor;->addRow([Ljava/lang/Object;)V
 
-    .line 1255
     add-int/lit8 v24, v24, 0x1
 
     goto :goto_14
 
-    .line 1264
     .end local v7    # "arr$":[Ljava/lang/String;
     .end local v24    # "i$":I
     .end local v25    # "internalValue":Ljava/lang/String;
@@ -8892,13 +8458,11 @@
 
     if-gt v0, v1, :cond_52
 
-    .line 1265
     :cond_51
     const/16 v57, 0x0
 
     goto/16 :goto_0
 
-    .line 1266
     :cond_52
     const/16 v57, 0x0
 
@@ -8926,13 +8490,10 @@
 
     invoke-virtual {v0, v1, v2, v3}, Lcom/android/server/enterprise/certificate/CertificatePolicy;->notifyCertificateFailure(Ljava/lang/String;Ljava/lang/String;Z)V
 
-    .line 1268
     const/16 v43, 0x0
 
-    .line 1269
     goto/16 :goto_13
 
-    .line 1271
     :pswitch_4a
     new-instance v57, Landroid/app/enterprise/ContextInfo;
 
@@ -8950,7 +8511,6 @@
 
     move-result v48
 
-    .line 1274
     .restart local v48    # "result":Z
     new-instance v43, Landroid/database/MatrixCursor;
 
@@ -8975,7 +8535,6 @@
 
     invoke-direct {v0, v1}, Landroid/database/MatrixCursor;-><init>([Ljava/lang/String;)V
 
-    .line 1278
     .restart local v43    # "mCursor":Landroid/database/MatrixCursor;
     const/16 v57, 0x1
 
@@ -9001,7 +8560,6 @@
 
     goto/16 :goto_13
 
-    .line 1283
     .end local v48    # "result":Z
     :pswitch_4b
     new-instance v57, Landroid/app/enterprise/ContextInfo;
@@ -9020,7 +8578,6 @@
 
     move-result v48
 
-    .line 1286
     .restart local v48    # "result":Z
     new-instance v43, Landroid/database/MatrixCursor;
 
@@ -9045,7 +8602,6 @@
 
     invoke-direct {v0, v1}, Landroid/database/MatrixCursor;-><init>([Ljava/lang/String;)V
 
-    .line 1290
     .restart local v43    # "mCursor":Landroid/database/MatrixCursor;
     const/16 v57, 0x1
 
@@ -9071,7 +8627,6 @@
 
     goto/16 :goto_13
 
-    .line 1295
     .end local v48    # "result":Z
     :pswitch_4c
     new-instance v57, Landroid/app/enterprise/ContextInfo;
@@ -9090,7 +8645,6 @@
 
     move-result v48
 
-    .line 1298
     .restart local v48    # "result":Z
     new-instance v43, Landroid/database/MatrixCursor;
 
@@ -9115,7 +8669,6 @@
 
     invoke-direct {v0, v1}, Landroid/database/MatrixCursor;-><init>([Ljava/lang/String;)V
 
-    .line 1302
     .restart local v43    # "mCursor":Landroid/database/MatrixCursor;
     const/16 v57, 0x1
 
@@ -9141,7 +8694,6 @@
 
     goto/16 :goto_13
 
-    .line 1307
     .end local v48    # "result":Z
     :pswitch_4d
     if-eqz p4, :cond_53
@@ -9152,13 +8704,11 @@
 
     if-gtz v57, :cond_54
 
-    .line 1308
     :cond_53
     const/16 v57, 0x0
 
     goto/16 :goto_0
 
-    .line 1309
     :cond_54
     const/16 v57, 0x0
 
@@ -9178,7 +8728,6 @@
 
     move-result v47
 
-    .line 1311
     .local v47, "res":I
     new-instance v43, Landroid/database/MatrixCursor;
 
@@ -9193,7 +8742,7 @@
 
     const/16 v58, 0x0
 
-    const-string/jumbo v59, "validateCertificateAtInstall"
+    const-string v59, "validateCertificateAtInstall"
 
     aput-object v59, v57, v58
 
@@ -9203,7 +8752,6 @@
 
     invoke-direct {v0, v1}, Landroid/database/MatrixCursor;-><init>([Ljava/lang/String;)V
 
-    .line 1315
     .restart local v43    # "mCursor":Landroid/database/MatrixCursor;
     const/16 v57, 0x1
 
@@ -9229,7 +8777,6 @@
 
     goto/16 :goto_13
 
-    .line 1320
     .end local v47    # "res":I
     :pswitch_4e
     if-eqz p4, :cond_55
@@ -9240,13 +8787,11 @@
 
     if-gtz v57, :cond_56
 
-    .line 1321
     :cond_55
     const/16 v57, 0x0
 
     goto/16 :goto_0
 
-    .line 1322
     :cond_56
     const/16 v57, 0x0
 
@@ -9266,7 +8811,6 @@
 
     move-result v47
 
-    .line 1324
     .restart local v47    # "res":I
     new-instance v43, Landroid/database/MatrixCursor;
 
@@ -9281,7 +8825,7 @@
 
     const/16 v58, 0x0
 
-    const-string/jumbo v59, "validateChainAtInstall"
+    const-string v59, "validateChainAtInstall"
 
     aput-object v59, v57, v58
 
@@ -9291,7 +8835,6 @@
 
     invoke-direct {v0, v1}, Landroid/database/MatrixCursor;-><init>([Ljava/lang/String;)V
 
-    .line 1328
     .restart local v43    # "mCursor":Landroid/database/MatrixCursor;
     const/16 v57, 0x1
 
@@ -9317,7 +8860,6 @@
 
     goto/16 :goto_13
 
-    .line 1333
     .end local v47    # "res":I
     :pswitch_4f
     if-eqz p4, :cond_57
@@ -9334,13 +8876,11 @@
 
     if-gt v0, v1, :cond_58
 
-    .line 1334
     :cond_57
     const/16 v57, 0x0
 
     goto/16 :goto_0
 
-    .line 1335
     :cond_58
     new-instance v57, Landroid/app/enterprise/ContextInfo;
 
@@ -9380,7 +8920,6 @@
 
     move-result-object v52
 
-    .line 1338
     .local v52, "stringResult":Ljava/lang/String;
     new-instance v43, Landroid/database/MatrixCursor;
 
@@ -9405,7 +8944,6 @@
 
     invoke-direct {v0, v1}, Landroid/database/MatrixCursor;-><init>([Ljava/lang/String;)V
 
-    .line 1342
     .restart local v43    # "mCursor":Landroid/database/MatrixCursor;
     const/16 v57, 0x1
 
@@ -9427,11 +8965,10 @@
 
     goto/16 :goto_13
 
-    .line 1351
     .end local v30    # "lCertificatePolicy":Lcom/android/server/enterprise/certificate/CertificatePolicy;
     .end local v52    # "stringResult":Ljava/lang/String;
     :pswitch_50
-    const-string/jumbo v57, "password_policy"
+    const-string v57, "password_policy"
 
     invoke-static/range {v57 .. v57}, Lcom/android/server/enterprise/EnterpriseDeviceManagerService;->getPolicyService(Ljava/lang/String;)Ljava/lang/Object;
 
@@ -9439,13 +8976,11 @@
 
     check-cast v34, Lcom/android/server/enterprise/security/PasswordPolicy;
 
-    .line 1353
     .local v34, "lPasswordPolicy":Lcom/android/server/enterprise/security/PasswordPolicy;
     if-eqz v34, :cond_0
 
     if-eqz p3, :cond_0
 
-    .line 1354
     const/16 v57, -0x1
 
     invoke-virtual/range {p3 .. p3}, Ljava/lang/String;->hashCode()I
@@ -9458,12 +8993,10 @@
     :goto_15
     packed-switch v57, :pswitch_data_6
 
-    .line 1544
     const/16 v57, 0x0
 
     goto/16 :goto_0
 
-    .line 1354
     :sswitch_4a
     const-string v58, "getForbiddenStrings"
 
@@ -9668,7 +9201,6 @@
 
     goto/16 :goto_15
 
-    .line 1356
     :pswitch_51
     if-eqz p4, :cond_5a
 
@@ -9678,13 +9210,11 @@
 
     if-gtz v57, :cond_5b
 
-    .line 1357
     :cond_5a
     const/16 v57, 0x0
 
     goto/16 :goto_0
 
-    .line 1358
     :cond_5b
     new-instance v57, Landroid/app/enterprise/ContextInfo;
 
@@ -9712,7 +9242,6 @@
 
     move-result-object v41
 
-    .line 1362
     .local v41, "list":Ljava/util/List;, "Ljava/util/List<Ljava/lang/String;>;"
     new-instance v43, Landroid/database/MatrixCursor;
 
@@ -9737,7 +9266,6 @@
 
     invoke-direct {v0, v1}, Landroid/database/MatrixCursor;-><init>([Ljava/lang/String;)V
 
-    .line 1366
     .restart local v43    # "mCursor":Landroid/database/MatrixCursor;
     if-eqz v41, :cond_5c
 
@@ -9747,7 +9275,6 @@
 
     if-nez v57, :cond_5c
 
-    .line 1369
     invoke-interface/range {v41 .. v41}, Ljava/util/List;->iterator()Ljava/util/Iterator;
 
     move-result-object v23
@@ -9766,7 +9293,6 @@
 
     check-cast v56, Ljava/lang/String;
 
-    .line 1370
     .local v56, "value":Ljava/lang/String;
     const/16 v57, 0x1
 
@@ -9788,7 +9314,6 @@
 
     goto :goto_16
 
-    .line 1378
     .end local v23    # "i$":Ljava/util/Iterator;
     .end local v41    # "list":Ljava/util/List;, "Ljava/util/List<Ljava/lang/String;>;"
     .end local v56    # "value":Ljava/lang/String;
@@ -9809,7 +9334,6 @@
 
     move-result v47
 
-    .line 1382
     .restart local v47    # "res":I
     new-instance v43, Landroid/database/MatrixCursor;
 
@@ -9834,7 +9358,6 @@
 
     invoke-direct {v0, v1}, Landroid/database/MatrixCursor;-><init>([Ljava/lang/String;)V
 
-    .line 1386
     .restart local v43    # "mCursor":Landroid/database/MatrixCursor;
     const/16 v57, 0x1
 
@@ -9863,10 +9386,8 @@
     :goto_17
     move-object/from16 v57, v43
 
-    .line 1547
     goto/16 :goto_0
 
-    .line 1392
     :pswitch_53
     new-instance v57, Landroid/app/enterprise/ContextInfo;
 
@@ -9884,7 +9405,6 @@
 
     move-result v47
 
-    .line 1396
     .restart local v47    # "res":I
     new-instance v43, Landroid/database/MatrixCursor;
 
@@ -9909,7 +9429,6 @@
 
     invoke-direct {v0, v1}, Landroid/database/MatrixCursor;-><init>([Ljava/lang/String;)V
 
-    .line 1400
     .restart local v43    # "mCursor":Landroid/database/MatrixCursor;
     const/16 v57, 0x1
 
@@ -9935,7 +9454,6 @@
 
     goto :goto_17
 
-    .line 1406
     .end local v47    # "res":I
     :pswitch_54
     new-instance v57, Landroid/app/enterprise/ContextInfo;
@@ -9954,7 +9472,6 @@
 
     move-result v47
 
-    .line 1410
     .restart local v47    # "res":I
     new-instance v43, Landroid/database/MatrixCursor;
 
@@ -9979,7 +9496,6 @@
 
     invoke-direct {v0, v1}, Landroid/database/MatrixCursor;-><init>([Ljava/lang/String;)V
 
-    .line 1414
     .restart local v43    # "mCursor":Landroid/database/MatrixCursor;
     const/16 v57, 0x1
 
@@ -10005,7 +9521,6 @@
 
     goto/16 :goto_17
 
-    .line 1420
     .end local v47    # "res":I
     :pswitch_55
     new-instance v57, Landroid/app/enterprise/ContextInfo;
@@ -10024,7 +9539,6 @@
 
     move-result v47
 
-    .line 1424
     .restart local v47    # "res":I
     new-instance v43, Landroid/database/MatrixCursor;
 
@@ -10049,7 +9563,6 @@
 
     invoke-direct {v0, v1}, Landroid/database/MatrixCursor;-><init>([Ljava/lang/String;)V
 
-    .line 1428
     .restart local v43    # "mCursor":Landroid/database/MatrixCursor;
     const/16 v57, 0x1
 
@@ -10075,7 +9588,6 @@
 
     goto/16 :goto_17
 
-    .line 1434
     .end local v47    # "res":I
     :pswitch_56
     new-instance v57, Landroid/app/enterprise/ContextInfo;
@@ -10094,7 +9606,6 @@
 
     move-result v47
 
-    .line 1438
     .restart local v47    # "res":I
     new-instance v43, Landroid/database/MatrixCursor;
 
@@ -10119,7 +9630,6 @@
 
     invoke-direct {v0, v1}, Landroid/database/MatrixCursor;-><init>([Ljava/lang/String;)V
 
-    .line 1442
     .restart local v43    # "mCursor":Landroid/database/MatrixCursor;
     const/16 v57, 0x1
 
@@ -10145,7 +9655,6 @@
 
     goto/16 :goto_17
 
-    .line 1448
     .end local v47    # "res":I
     :pswitch_57
     if-eqz p4, :cond_5d
@@ -10156,13 +9665,11 @@
 
     if-gtz v57, :cond_5e
 
-    .line 1449
     :cond_5d
     const/16 v57, 0x0
 
     goto/16 :goto_0
 
-    .line 1450
     :cond_5e
     new-instance v57, Landroid/app/enterprise/ContextInfo;
 
@@ -10190,7 +9697,6 @@
 
     move-result-object v51
 
-    .line 1454
     .local v51, "str":Ljava/lang/String;
     new-instance v43, Landroid/database/MatrixCursor;
 
@@ -10215,7 +9721,6 @@
 
     invoke-direct {v0, v1}, Landroid/database/MatrixCursor;-><init>([Ljava/lang/String;)V
 
-    .line 1458
     .restart local v43    # "mCursor":Landroid/database/MatrixCursor;
     const/16 v57, 0x1
 
@@ -10237,7 +9742,6 @@
 
     goto/16 :goto_17
 
-    .line 1464
     .end local v51    # "str":Ljava/lang/String;
     :pswitch_58
     if-eqz p4, :cond_5f
@@ -10248,13 +9752,11 @@
 
     if-gtz v57, :cond_60
 
-    .line 1465
     :cond_5f
     const/16 v57, 0x0
 
     goto/16 :goto_0
 
-    .line 1466
     :cond_60
     new-instance v57, Landroid/app/enterprise/ContextInfo;
 
@@ -10278,7 +9780,6 @@
 
     move-result v48
 
-    .line 1470
     .restart local v48    # "result":Z
     new-instance v43, Landroid/database/MatrixCursor;
 
@@ -10303,7 +9804,6 @@
 
     invoke-direct {v0, v1}, Landroid/database/MatrixCursor;-><init>([Ljava/lang/String;)V
 
-    .line 1474
     .restart local v43    # "mCursor":Landroid/database/MatrixCursor;
     const/16 v57, 0x1
 
@@ -10329,7 +9829,6 @@
 
     goto/16 :goto_17
 
-    .line 1480
     .end local v48    # "result":Z
     :pswitch_59
     if-eqz p4, :cond_61
@@ -10340,13 +9839,11 @@
 
     if-gtz v57, :cond_62
 
-    .line 1481
     :cond_61
     const/16 v57, 0x0
 
     goto/16 :goto_0
 
-    .line 1482
     :cond_62
     new-instance v57, Landroid/app/enterprise/ContextInfo;
 
@@ -10370,7 +9867,6 @@
 
     move-result v48
 
-    .line 1486
     .restart local v48    # "result":Z
     new-instance v43, Landroid/database/MatrixCursor;
 
@@ -10395,7 +9891,6 @@
 
     invoke-direct {v0, v1}, Landroid/database/MatrixCursor;-><init>([Ljava/lang/String;)V
 
-    .line 1490
     .restart local v43    # "mCursor":Landroid/database/MatrixCursor;
     const/16 v57, 0x1
 
@@ -10421,7 +9916,6 @@
 
     goto/16 :goto_17
 
-    .line 1496
     .end local v48    # "result":Z
     :pswitch_5a
     if-eqz p4, :cond_63
@@ -10432,13 +9926,11 @@
 
     if-gtz v57, :cond_64
 
-    .line 1497
     :cond_63
     const/16 v57, 0x0
 
     goto/16 :goto_0
 
-    .line 1498
     :cond_64
     new-instance v57, Landroid/app/enterprise/ContextInfo;
 
@@ -10462,7 +9954,6 @@
 
     move-result v48
 
-    .line 1502
     .restart local v48    # "result":Z
     new-instance v43, Landroid/database/MatrixCursor;
 
@@ -10487,7 +9978,6 @@
 
     invoke-direct {v0, v1}, Landroid/database/MatrixCursor;-><init>([Ljava/lang/String;)V
 
-    .line 1506
     .restart local v43    # "mCursor":Landroid/database/MatrixCursor;
     const/16 v57, 0x1
 
@@ -10513,7 +10003,6 @@
 
     goto/16 :goto_17
 
-    .line 1512
     .end local v48    # "result":Z
     :pswitch_5b
     if-eqz p4, :cond_65
@@ -10530,13 +10019,11 @@
 
     if-gt v0, v1, :cond_66
 
-    .line 1513
     :cond_65
     const/16 v57, 0x0
 
     goto/16 :goto_0
 
-    .line 1514
     :cond_66
     new-instance v57, Landroid/app/enterprise/ContextInfo;
 
@@ -10566,7 +10053,6 @@
 
     move-result v48
 
-    .line 1518
     .restart local v48    # "result":Z
     new-instance v43, Landroid/database/MatrixCursor;
 
@@ -10591,7 +10077,6 @@
 
     invoke-direct {v0, v1}, Landroid/database/MatrixCursor;-><init>([Ljava/lang/String;)V
 
-    .line 1522
     .restart local v43    # "mCursor":Landroid/database/MatrixCursor;
     const/16 v57, 0x1
 
@@ -10617,7 +10102,6 @@
 
     goto/16 :goto_17
 
-    .line 1528
     .end local v48    # "result":Z
     :pswitch_5c
     if-eqz p4, :cond_67
@@ -10628,13 +10112,11 @@
 
     if-gtz v57, :cond_68
 
-    .line 1529
     :cond_67
     const/16 v57, 0x0
 
     goto/16 :goto_0
 
-    .line 1530
     :cond_68
     new-instance v57, Landroid/app/enterprise/ContextInfo;
 
@@ -10658,7 +10140,6 @@
 
     move-result v48
 
-    .line 1534
     .restart local v48    # "result":Z
     new-instance v43, Landroid/database/MatrixCursor;
 
@@ -10683,7 +10164,6 @@
 
     invoke-direct {v0, v1}, Landroid/database/MatrixCursor;-><init>([Ljava/lang/String;)V
 
-    .line 1538
     .restart local v43    # "mCursor":Landroid/database/MatrixCursor;
     const/16 v57, 0x1
 
@@ -10709,11 +10189,10 @@
 
     goto/16 :goto_17
 
-    .line 1551
     .end local v34    # "lPasswordPolicy":Lcom/android/server/enterprise/security/PasswordPolicy;
     .end local v48    # "result":Z
     :pswitch_5d
-    const-string/jumbo v57, "password_policy"
+    const-string v57, "password_policy"
 
     invoke-static/range {v57 .. v57}, Lcom/android/server/enterprise/EnterpriseDeviceManagerService;->getPolicyService(Ljava/lang/String;)Ljava/lang/Object;
 
@@ -10721,13 +10200,11 @@
 
     check-cast v34, Lcom/android/server/enterprise/security/PasswordPolicy;
 
-    .line 1553
     .restart local v34    # "lPasswordPolicy":Lcom/android/server/enterprise/security/PasswordPolicy;
     if-eqz v34, :cond_0
 
     if-eqz p3, :cond_0
 
-    .line 1554
     const/16 v57, -0x1
 
     invoke-virtual/range {p3 .. p3}, Ljava/lang/String;->hashCode()I
@@ -10740,12 +10217,10 @@
     :goto_18
     packed-switch v57, :pswitch_data_7
 
-    .line 1723
     const/16 v57, 0x0
 
     goto/16 :goto_0
 
-    .line 1554
     :sswitch_56
     const-string v58, "isBiometricAuthenticationEnabled"
 
@@ -10899,7 +10374,6 @@
 
     goto/16 :goto_18
 
-    .line 1556
     :pswitch_5e
     if-eqz p4, :cond_6a
 
@@ -10909,13 +10383,11 @@
 
     if-gtz v57, :cond_6b
 
-    .line 1557
     :cond_6a
     const/16 v57, 0x0
 
     goto/16 :goto_0
 
-    .line 1558
     :cond_6b
     new-instance v57, Landroid/app/enterprise/ContextInfo;
 
@@ -10943,7 +10415,6 @@
 
     move-result v48
 
-    .line 1562
     .restart local v48    # "result":Z
     new-instance v43, Landroid/database/MatrixCursor;
 
@@ -10968,7 +10439,6 @@
 
     invoke-direct {v0, v1}, Landroid/database/MatrixCursor;-><init>([Ljava/lang/String;)V
 
-    .line 1566
     .restart local v43    # "mCursor":Landroid/database/MatrixCursor;
     const/16 v57, 0x1
 
@@ -10996,10 +10466,8 @@
     :goto_19
     move-object/from16 v57, v43
 
-    .line 1726
     goto/16 :goto_0
 
-    .line 1572
     :pswitch_5f
     new-instance v57, Landroid/app/enterprise/ContextInfo;
 
@@ -11017,7 +10485,6 @@
 
     move-result v47
 
-    .line 1576
     .restart local v47    # "res":I
     new-instance v43, Landroid/database/MatrixCursor;
 
@@ -11042,7 +10509,6 @@
 
     invoke-direct {v0, v1}, Landroid/database/MatrixCursor;-><init>([Ljava/lang/String;)V
 
-    .line 1580
     .restart local v43    # "mCursor":Landroid/database/MatrixCursor;
     const/16 v57, 0x1
 
@@ -11068,12 +10534,10 @@
 
     goto :goto_19
 
-    .line 1586
     .end local v47    # "res":I
     :pswitch_60
     if-eqz p4, :cond_6c
 
-    .line 1587
     const-string v57, "SecContentProvider"
 
     new-instance v58, Ljava/lang/StringBuilder;
@@ -11100,7 +10564,6 @@
 
     invoke-static/range {v57 .. v58}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1588
     new-instance v57, Landroid/app/enterprise/ContextInfo;
 
     const/16 v58, 0x0
@@ -11121,7 +10584,6 @@
 
     move-result v48
 
-    .line 1595
     .restart local v48    # "result":Z
     :goto_1a
     const-string v57, "SecContentProvider"
@@ -11150,7 +10612,6 @@
 
     invoke-static/range {v57 .. v58}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1597
     new-instance v43, Landroid/database/MatrixCursor;
 
     .end local v43    # "mCursor":Landroid/database/MatrixCursor;
@@ -11174,7 +10635,6 @@
 
     invoke-direct {v0, v1}, Landroid/database/MatrixCursor;-><init>([Ljava/lang/String;)V
 
-    .line 1601
     .restart local v43    # "mCursor":Landroid/database/MatrixCursor;
     const/16 v57, 0x1
 
@@ -11200,7 +10660,6 @@
 
     goto/16 :goto_19
 
-    .line 1592
     .end local v48    # "result":Z
     :cond_6c
     new-instance v57, Landroid/app/enterprise/ContextInfo;
@@ -11222,7 +10681,6 @@
     .restart local v48    # "result":Z
     goto :goto_1a
 
-    .line 1607
     .end local v48    # "result":Z
     :pswitch_61
     if-eqz p4, :cond_6d
@@ -11233,13 +10691,11 @@
 
     if-gtz v57, :cond_6e
 
-    .line 1608
     :cond_6d
     const/16 v57, 0x0
 
     goto/16 :goto_0
 
-    .line 1609
     :cond_6e
     new-instance v57, Landroid/app/enterprise/ContextInfo;
 
@@ -11263,7 +10719,6 @@
 
     move-result v48
 
-    .line 1613
     .restart local v48    # "result":Z
     new-instance v43, Landroid/database/MatrixCursor;
 
@@ -11288,7 +10743,6 @@
 
     invoke-direct {v0, v1}, Landroid/database/MatrixCursor;-><init>([Ljava/lang/String;)V
 
-    .line 1617
     .restart local v43    # "mCursor":Landroid/database/MatrixCursor;
     const/16 v57, 0x1
 
@@ -11314,12 +10768,10 @@
 
     goto/16 :goto_19
 
-    .line 1623
     .end local v48    # "result":Z
     :pswitch_62
     if-nez p4, :cond_6f
 
-    .line 1624
     new-instance v57, Landroid/app/enterprise/ContextInfo;
 
     move-object/from16 v0, v57
@@ -11336,7 +10788,6 @@
 
     move-result v48
 
-    .line 1626
     .restart local v48    # "result":Z
     const-string v57, "SecContentProvider"
 
@@ -11364,7 +10815,6 @@
 
     invoke-static/range {v57 .. v58}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1633
     :goto_1b
     const-string v57, "SecContentProvider"
 
@@ -11392,7 +10842,6 @@
 
     invoke-static/range {v57 .. v58}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1635
     new-instance v43, Landroid/database/MatrixCursor;
 
     .end local v43    # "mCursor":Landroid/database/MatrixCursor;
@@ -11416,7 +10865,6 @@
 
     invoke-direct {v0, v1}, Landroid/database/MatrixCursor;-><init>([Ljava/lang/String;)V
 
-    .line 1639
     .restart local v43    # "mCursor":Landroid/database/MatrixCursor;
     const/16 v57, 0x1
 
@@ -11442,7 +10890,6 @@
 
     goto/16 :goto_19
 
-    .line 1629
     .end local v48    # "result":Z
     :cond_6f
     new-instance v57, Landroid/app/enterprise/ContextInfo;
@@ -11465,7 +10912,6 @@
 
     move-result v48
 
-    .line 1631
     .restart local v48    # "result":Z
     const-string v57, "SecContentProvider"
 
@@ -11499,7 +10945,6 @@
 
     goto/16 :goto_1b
 
-    .line 1646
     .end local v48    # "result":Z
     :pswitch_63
     if-eqz p4, :cond_70
@@ -11516,13 +10961,11 @@
 
     if-ge v0, v1, :cond_71
 
-    .line 1647
     :cond_70
     const/16 v57, 0x0
 
     goto/16 :goto_0
 
-    .line 1648
     :cond_71
     const/16 v57, 0x0
 
@@ -11540,7 +10983,6 @@
 
     move-result v48
 
-    .line 1650
     .restart local v48    # "result":Z
     const-string v57, "SecContentProvider"
 
@@ -11568,7 +11010,6 @@
 
     invoke-static/range {v57 .. v58}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1652
     new-instance v43, Landroid/database/MatrixCursor;
 
     .end local v43    # "mCursor":Landroid/database/MatrixCursor;
@@ -11592,7 +11033,6 @@
 
     invoke-direct {v0, v1}, Landroid/database/MatrixCursor;-><init>([Ljava/lang/String;)V
 
-    .line 1656
     .restart local v43    # "mCursor":Landroid/database/MatrixCursor;
     const/16 v57, 0x1
 
@@ -11618,7 +11058,6 @@
 
     goto/16 :goto_19
 
-    .line 1662
     .end local v48    # "result":Z
     :pswitch_64
     new-instance v57, Landroid/app/enterprise/ContextInfo;
@@ -11637,7 +11076,6 @@
 
     move-result v47
 
-    .line 1666
     .restart local v47    # "res":I
     new-instance v43, Landroid/database/MatrixCursor;
 
@@ -11662,7 +11100,6 @@
 
     invoke-direct {v0, v1}, Landroid/database/MatrixCursor;-><init>([Ljava/lang/String;)V
 
-    .line 1670
     .restart local v43    # "mCursor":Landroid/database/MatrixCursor;
     const/16 v57, 0x1
 
@@ -11688,12 +11125,10 @@
 
     goto/16 :goto_19
 
-    .line 1676
     .end local v47    # "res":I
     :pswitch_65
     if-eqz p4, :cond_72
 
-    .line 1677
     const-string v57, "SecContentProvider"
 
     new-instance v58, Ljava/lang/StringBuilder;
@@ -11720,7 +11155,6 @@
 
     invoke-static/range {v57 .. v58}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1678
     new-instance v57, Landroid/app/enterprise/ContextInfo;
 
     const/16 v58, 0x0
@@ -11741,7 +11175,6 @@
 
     move-result v47
 
-    .line 1685
     .restart local v47    # "res":I
     :goto_1c
     const-string v57, "SecContentProvider"
@@ -11770,7 +11203,6 @@
 
     invoke-static/range {v57 .. v58}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1688
     new-instance v43, Landroid/database/MatrixCursor;
 
     .end local v43    # "mCursor":Landroid/database/MatrixCursor;
@@ -11794,7 +11226,6 @@
 
     invoke-direct {v0, v1}, Landroid/database/MatrixCursor;-><init>([Ljava/lang/String;)V
 
-    .line 1691
     .restart local v43    # "mCursor":Landroid/database/MatrixCursor;
     const/16 v57, 0x1
 
@@ -11820,7 +11251,6 @@
 
     goto/16 :goto_19
 
-    .line 1682
     .end local v47    # "res":I
     :cond_72
     new-instance v57, Landroid/app/enterprise/ContextInfo;
@@ -11842,7 +11272,6 @@
     .restart local v47    # "res":I
     goto :goto_1c
 
-    .line 1697
     .end local v47    # "res":I
     :pswitch_66
     if-eqz p4, :cond_73
@@ -11859,13 +11288,11 @@
 
     if-ge v0, v1, :cond_74
 
-    .line 1698
     :cond_73
     const/16 v57, 0x0
 
     goto/16 :goto_0
 
-    .line 1700
     :cond_74
     const/16 v57, 0x0
 
@@ -11873,10 +11300,8 @@
 
     if-nez v57, :cond_75
 
-    .line 1701
     const/16 v20, 0x0
 
-    .line 1704
     .local v20, "cn":Landroid/content/ComponentName;
     :goto_1d
     invoke-static/range {p4 .. p4}, Ljava/lang/reflect/Array;->getLength(Ljava/lang/Object;)I
@@ -11891,7 +11316,6 @@
 
     if-ne v0, v1, :cond_76
 
-    .line 1705
     const-string v57, "SecContentProvider"
 
     new-instance v58, Ljava/lang/StringBuilder;
@@ -11918,7 +11342,6 @@
 
     invoke-static/range {v57 .. v58}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1706
     new-instance v57, Landroid/app/enterprise/ContextInfo;
 
     const/16 v58, 0x1
@@ -11941,7 +11364,6 @@
 
     move-result v47
 
-    .line 1713
     .restart local v47    # "res":I
     :goto_1e
     const-string v57, "SecContentProvider"
@@ -11970,7 +11392,6 @@
 
     invoke-static/range {v57 .. v58}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1715
     new-instance v43, Landroid/database/MatrixCursor;
 
     .end local v43    # "mCursor":Landroid/database/MatrixCursor;
@@ -11994,7 +11415,6 @@
 
     invoke-direct {v0, v1}, Landroid/database/MatrixCursor;-><init>([Ljava/lang/String;)V
 
-    .line 1718
     .restart local v43    # "mCursor":Landroid/database/MatrixCursor;
     const/16 v57, 0x1
 
@@ -12020,7 +11440,6 @@
 
     goto/16 :goto_19
 
-    .line 1703
     .end local v20    # "cn":Landroid/content/ComponentName;
     .end local v47    # "res":I
     :cond_75
@@ -12035,7 +11454,6 @@
     .restart local v20    # "cn":Landroid/content/ComponentName;
     goto/16 :goto_1d
 
-    .line 1710
     :cond_76
     new-instance v57, Landroid/app/enterprise/ContextInfo;
 
@@ -12058,7 +11476,6 @@
     .restart local v47    # "res":I
     goto :goto_1e
 
-    .line 1731
     .end local v20    # "cn":Landroid/content/ComponentName;
     .end local v34    # "lPasswordPolicy":Lcom/android/server/enterprise/security/PasswordPolicy;
     .end local v47    # "res":I
@@ -12071,13 +11488,11 @@
 
     check-cast v29, Lcom/android/server/enterprise/browser/BrowserPolicy;
 
-    .line 1734
     .local v29, "lBrowserPolicy":Lcom/android/server/enterprise/browser/BrowserPolicy;
     if-eqz v29, :cond_0
 
     if-eqz p3, :cond_0
 
-    .line 1735
     const/16 v57, -0x1
 
     invoke-virtual/range {p3 .. p3}, Ljava/lang/String;->hashCode()I
@@ -12090,12 +11505,10 @@
     :goto_1f
     packed-switch v57, :pswitch_data_8
 
-    .line 1828
     const/16 v57, 0x0
 
     goto/16 :goto_0
 
-    .line 1735
     :sswitch_5f
     const-string v58, "getHttpProxy"
 
@@ -12198,7 +11611,6 @@
 
     goto :goto_1f
 
-    .line 1737
     :pswitch_68
     new-instance v57, Landroid/app/enterprise/ContextInfo;
 
@@ -12216,7 +11628,6 @@
 
     move-result-object v46
 
-    .line 1740
     .local v46, "proxy":Ljava/lang/String;
     new-instance v43, Landroid/database/MatrixCursor;
 
@@ -12241,7 +11652,6 @@
 
     invoke-direct {v0, v1}, Landroid/database/MatrixCursor;-><init>([Ljava/lang/String;)V
 
-    .line 1743
     .restart local v43    # "mCursor":Landroid/database/MatrixCursor;
     const/16 v57, 0x1
 
@@ -12265,10 +11675,8 @@
     :goto_20
     move-object/from16 v57, v43
 
-    .line 1831
     goto/16 :goto_0
 
-    .line 1750
     :pswitch_69
     new-instance v57, Landroid/app/enterprise/ContextInfo;
 
@@ -12290,7 +11698,6 @@
 
     move-result v8
 
-    .line 1755
     .local v8, "bAutoFill":Z
     new-instance v43, Landroid/database/MatrixCursor;
 
@@ -12315,7 +11722,6 @@
 
     invoke-direct {v0, v1}, Landroid/database/MatrixCursor;-><init>([Ljava/lang/String;)V
 
-    .line 1759
     .restart local v43    # "mCursor":Landroid/database/MatrixCursor;
     const/16 v57, 0x1
 
@@ -12341,7 +11747,6 @@
 
     goto :goto_20
 
-    .line 1767
     .end local v8    # "bAutoFill":Z
     :pswitch_6a
     new-instance v57, Landroid/app/enterprise/ContextInfo;
@@ -12364,7 +11769,6 @@
 
     move-result v9
 
-    .line 1772
     .local v9, "bCookiesSettings":Z
     new-instance v43, Landroid/database/MatrixCursor;
 
@@ -12389,7 +11793,6 @@
 
     invoke-direct {v0, v1}, Landroid/database/MatrixCursor;-><init>([Ljava/lang/String;)V
 
-    .line 1775
     .restart local v43    # "mCursor":Landroid/database/MatrixCursor;
     const/16 v57, 0x1
 
@@ -12415,7 +11818,6 @@
 
     goto/16 :goto_20
 
-    .line 1782
     .end local v9    # "bCookiesSettings":Z
     :pswitch_6b
     new-instance v57, Landroid/app/enterprise/ContextInfo;
@@ -12438,7 +11840,6 @@
 
     move-result v15
 
-    .line 1787
     .local v15, "bJavaScriptSetting":Z
     new-instance v43, Landroid/database/MatrixCursor;
 
@@ -12463,7 +11864,6 @@
 
     invoke-direct {v0, v1}, Landroid/database/MatrixCursor;-><init>([Ljava/lang/String;)V
 
-    .line 1791
     .restart local v43    # "mCursor":Landroid/database/MatrixCursor;
     const/16 v57, 0x1
 
@@ -12489,7 +11889,6 @@
 
     goto/16 :goto_20
 
-    .line 1799
     .end local v15    # "bJavaScriptSetting":Z
     :pswitch_6c
     new-instance v57, Landroid/app/enterprise/ContextInfo;
@@ -12512,7 +11911,6 @@
 
     move-result v16
 
-    .line 1804
     .local v16, "bPopupSettings":Z
     new-instance v43, Landroid/database/MatrixCursor;
 
@@ -12537,7 +11935,6 @@
 
     invoke-direct {v0, v1}, Landroid/database/MatrixCursor;-><init>([Ljava/lang/String;)V
 
-    .line 1807
     .restart local v43    # "mCursor":Landroid/database/MatrixCursor;
     const/16 v57, 0x1
 
@@ -12563,7 +11960,6 @@
 
     goto/16 :goto_20
 
-    .line 1814
     .end local v16    # "bPopupSettings":Z
     :pswitch_6d
     new-instance v57, Landroid/app/enterprise/ContextInfo;
@@ -12586,7 +11982,6 @@
 
     move-result v10
 
-    .line 1819
     .local v10, "bForceWarning":Z
     new-instance v43, Landroid/database/MatrixCursor;
 
@@ -12611,7 +12006,6 @@
 
     invoke-direct {v0, v1}, Landroid/database/MatrixCursor;-><init>([Ljava/lang/String;)V
 
-    .line 1822
     .restart local v43    # "mCursor":Landroid/database/MatrixCursor;
     const/16 v57, 0x1
 
@@ -12637,7 +12031,6 @@
 
     goto/16 :goto_20
 
-    .line 1837
     .end local v10    # "bForceWarning":Z
     .end local v29    # "lBrowserPolicy":Lcom/android/server/enterprise/browser/BrowserPolicy;
     :pswitch_6e
@@ -12649,13 +12042,11 @@
 
     check-cast v28, Lcom/android/server/enterprise/bluetooth/BluetoothPolicy;
 
-    .line 1839
     .local v28, "lBluetoothPolicy":Lcom/android/server/enterprise/bluetooth/BluetoothPolicy;
     if-eqz v28, :cond_0
 
     if-eqz p3, :cond_0
 
-    .line 1840
     const/16 v57, -0x1
 
     invoke-virtual/range {p3 .. p3}, Ljava/lang/String;->hashCode()I
@@ -12668,12 +12059,10 @@
     :goto_21
     packed-switch v57, :pswitch_data_9
 
-    .line 1950
     const/16 v57, 0x0
 
     goto/16 :goto_0
 
-    .line 1840
     :sswitch_65
     const-string v58, "isBluetoothEnabled"
 
@@ -12810,7 +12199,6 @@
 
     goto :goto_21
 
-    .line 1842
     :pswitch_6f
     new-instance v57, Landroid/app/enterprise/ContextInfo;
 
@@ -12828,7 +12216,6 @@
 
     move-result v48
 
-    .line 1843
     .restart local v48    # "result":Z
     const-string v57, "SecContentProvider"
 
@@ -12856,7 +12243,6 @@
 
     invoke-static/range {v57 .. v58}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1845
     new-instance v43, Landroid/database/MatrixCursor;
 
     .end local v43    # "mCursor":Landroid/database/MatrixCursor;
@@ -12880,7 +12266,6 @@
 
     invoke-direct {v0, v1}, Landroid/database/MatrixCursor;-><init>([Ljava/lang/String;)V
 
-    .line 1849
     .restart local v43    # "mCursor":Landroid/database/MatrixCursor;
     const/16 v57, 0x1
 
@@ -12907,10 +12292,8 @@
     :goto_22
     move-object/from16 v57, v43
 
-    .line 1953
     goto/16 :goto_0
 
-    .line 1855
     .end local v48    # "result":Z
     :pswitch_70
     if-eqz p4, :cond_79
@@ -12921,13 +12304,11 @@
 
     if-gtz v57, :cond_7a
 
-    .line 1856
     :cond_79
     const/16 v57, 0x0
 
     goto/16 :goto_0
 
-    .line 1857
     :cond_7a
     const/16 v57, 0x0
 
@@ -12945,7 +12326,6 @@
 
     move-result v48
 
-    .line 1859
     .restart local v48    # "result":Z
     const-string v57, "SecContentProvider"
 
@@ -12973,7 +12353,6 @@
 
     invoke-static/range {v57 .. v58}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1861
     new-instance v43, Landroid/database/MatrixCursor;
 
     .end local v43    # "mCursor":Landroid/database/MatrixCursor;
@@ -12997,7 +12376,6 @@
 
     invoke-direct {v0, v1}, Landroid/database/MatrixCursor;-><init>([Ljava/lang/String;)V
 
-    .line 1865
     .restart local v43    # "mCursor":Landroid/database/MatrixCursor;
     const/16 v57, 0x1
 
@@ -13023,7 +12401,6 @@
 
     goto :goto_22
 
-    .line 1871
     .end local v48    # "result":Z
     :pswitch_71
     if-eqz p4, :cond_7b
@@ -13034,13 +12411,11 @@
 
     if-gtz v57, :cond_7c
 
-    .line 1872
     :cond_7b
     const/16 v57, 0x0
 
     goto/16 :goto_0
 
-    .line 1873
     :cond_7c
     const/16 v57, 0x0
 
@@ -13058,7 +12433,6 @@
 
     move-result v48
 
-    .line 1875
     .restart local v48    # "result":Z
     const-string v57, "SecContentProvider"
 
@@ -13086,7 +12460,6 @@
 
     invoke-static/range {v57 .. v58}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1877
     new-instance v43, Landroid/database/MatrixCursor;
 
     .end local v43    # "mCursor":Landroid/database/MatrixCursor;
@@ -13110,7 +12483,6 @@
 
     invoke-direct {v0, v1}, Landroid/database/MatrixCursor;-><init>([Ljava/lang/String;)V
 
-    .line 1881
     .restart local v43    # "mCursor":Landroid/database/MatrixCursor;
     const/16 v57, 0x1
 
@@ -13136,7 +12508,6 @@
 
     goto/16 :goto_22
 
-    .line 1887
     .end local v48    # "result":Z
     :pswitch_72
     new-instance v57, Landroid/app/enterprise/ContextInfo;
@@ -13155,7 +12526,6 @@
 
     move-result v48
 
-    .line 1890
     .restart local v48    # "result":Z
     new-instance v43, Landroid/database/MatrixCursor;
 
@@ -13180,7 +12550,6 @@
 
     invoke-direct {v0, v1}, Landroid/database/MatrixCursor;-><init>([Ljava/lang/String;)V
 
-    .line 1894
     .restart local v43    # "mCursor":Landroid/database/MatrixCursor;
     const/16 v57, 0x1
 
@@ -13206,7 +12575,6 @@
 
     goto/16 :goto_22
 
-    .line 1899
     .end local v48    # "result":Z
     :pswitch_73
     new-instance v57, Landroid/app/enterprise/ContextInfo;
@@ -13225,7 +12593,6 @@
 
     move-result v48
 
-    .line 1902
     .restart local v48    # "result":Z
     new-instance v43, Landroid/database/MatrixCursor;
 
@@ -13250,7 +12617,6 @@
 
     invoke-direct {v0, v1}, Landroid/database/MatrixCursor;-><init>([Ljava/lang/String;)V
 
-    .line 1906
     .restart local v43    # "mCursor":Landroid/database/MatrixCursor;
     const/16 v57, 0x1
 
@@ -13276,7 +12642,6 @@
 
     goto/16 :goto_22
 
-    .line 1911
     .end local v48    # "result":Z
     :pswitch_74
     new-instance v57, Landroid/app/enterprise/ContextInfo;
@@ -13295,7 +12660,6 @@
 
     move-result v48
 
-    .line 1914
     .restart local v48    # "result":Z
     new-instance v43, Landroid/database/MatrixCursor;
 
@@ -13320,7 +12684,6 @@
 
     invoke-direct {v0, v1}, Landroid/database/MatrixCursor;-><init>([Ljava/lang/String;)V
 
-    .line 1918
     .restart local v43    # "mCursor":Landroid/database/MatrixCursor;
     const/16 v57, 0x1
 
@@ -13346,7 +12709,6 @@
 
     goto/16 :goto_22
 
-    .line 1923
     .end local v48    # "result":Z
     :pswitch_75
     if-eqz p4, :cond_7d
@@ -13363,13 +12725,11 @@
 
     if-ge v0, v1, :cond_7e
 
-    .line 1924
     :cond_7d
     const/16 v57, 0x0
 
     goto/16 :goto_0
 
-    .line 1925
     :cond_7e
     new-instance v57, Landroid/app/enterprise/ContextInfo;
 
@@ -13399,7 +12759,6 @@
 
     move-result v48
 
-    .line 1929
     .restart local v48    # "result":Z
     new-instance v43, Landroid/database/MatrixCursor;
 
@@ -13424,7 +12783,6 @@
 
     invoke-direct {v0, v1}, Landroid/database/MatrixCursor;-><init>([Ljava/lang/String;)V
 
-    .line 1933
     .restart local v43    # "mCursor":Landroid/database/MatrixCursor;
     const/16 v57, 0x1
 
@@ -13450,7 +12808,6 @@
 
     goto/16 :goto_22
 
-    .line 1938
     .end local v48    # "result":Z
     :pswitch_76
     new-instance v57, Landroid/app/enterprise/ContextInfo;
@@ -13469,7 +12826,6 @@
 
     move-result v48
 
-    .line 1941
     .restart local v48    # "result":Z
     new-instance v43, Landroid/database/MatrixCursor;
 
@@ -13494,7 +12850,6 @@
 
     invoke-direct {v0, v1}, Landroid/database/MatrixCursor;-><init>([Ljava/lang/String;)V
 
-    .line 1945
     .restart local v43    # "mCursor":Landroid/database/MatrixCursor;
     const/16 v57, 0x1
 
@@ -13520,13 +12875,11 @@
 
     goto/16 :goto_22
 
-    .line 1957
     .end local v28    # "lBluetoothPolicy":Lcom/android/server/enterprise/bluetooth/BluetoothPolicy;
     .end local v48    # "result":Z
     :pswitch_77
     if-eqz p3, :cond_0
 
-    .line 1958
     const/16 v57, -0x1
 
     invoke-virtual/range {p3 .. p3}, Ljava/lang/String;->hashCode()I
@@ -13542,10 +12895,8 @@
     :goto_24
     move-object/from16 v57, v43
 
-    .line 2072
     goto/16 :goto_0
 
-    .line 1958
     :sswitch_6d
     const-string v58, "isProfileAuthorizedBySecurityPolicy"
 
@@ -13716,7 +13067,6 @@
 
     goto/16 :goto_23
 
-    .line 1960
     :pswitch_78
     if-eqz p4, :cond_80
 
@@ -13726,13 +13076,11 @@
 
     if-gtz v57, :cond_81
 
-    .line 1961
     :cond_80
     const/16 v57, 0x0
 
     goto/16 :goto_0
 
-    .line 1962
     :cond_81
     const/16 v57, 0x0
 
@@ -13746,7 +13094,6 @@
 
     move-result v48
 
-    .line 1965
     .restart local v48    # "result":Z
     new-instance v43, Landroid/database/MatrixCursor;
 
@@ -13771,7 +13118,6 @@
 
     invoke-direct {v0, v1}, Landroid/database/MatrixCursor;-><init>([Ljava/lang/String;)V
 
-    .line 1969
     .restart local v43    # "mCursor":Landroid/database/MatrixCursor;
     const/16 v57, 0x1
 
@@ -13797,14 +13143,12 @@
 
     goto/16 :goto_24
 
-    .line 1974
     .end local v48    # "result":Z
     :pswitch_79
     invoke-static {}, Landroid/sec/enterprise/BluetoothUtils;->isBluetoothLogEnabled()Z
 
     move-result v48
 
-    .line 1977
     .restart local v48    # "result":Z
     new-instance v43, Landroid/database/MatrixCursor;
 
@@ -13829,7 +13173,6 @@
 
     invoke-direct {v0, v1}, Landroid/database/MatrixCursor;-><init>([Ljava/lang/String;)V
 
-    .line 1981
     .restart local v43    # "mCursor":Landroid/database/MatrixCursor;
     const/16 v57, 0x1
 
@@ -13855,7 +13198,6 @@
 
     goto/16 :goto_24
 
-    .line 1986
     .end local v48    # "result":Z
     :pswitch_7a
     if-eqz p4, :cond_82
@@ -13866,13 +13208,11 @@
 
     if-gtz v57, :cond_83
 
-    .line 1987
     :cond_82
     const/16 v57, 0x0
 
     goto/16 :goto_0
 
-    .line 1988
     :cond_83
     const/16 v57, 0x0
 
@@ -13882,7 +13222,6 @@
 
     move-result v48
 
-    .line 1989
     .restart local v48    # "result":Z
     const-string v57, "SecContentProvider"
 
@@ -13910,7 +13249,6 @@
 
     invoke-static/range {v57 .. v58}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1991
     new-instance v43, Landroid/database/MatrixCursor;
 
     .end local v43    # "mCursor":Landroid/database/MatrixCursor;
@@ -13934,7 +13272,6 @@
 
     invoke-direct {v0, v1}, Landroid/database/MatrixCursor;-><init>([Ljava/lang/String;)V
 
-    .line 1995
     .restart local v43    # "mCursor":Landroid/database/MatrixCursor;
     const/16 v57, 0x1
 
@@ -13960,7 +13297,6 @@
 
     goto/16 :goto_24
 
-    .line 2000
     .end local v48    # "result":Z
     :pswitch_7b
     if-eqz p4, :cond_84
@@ -13971,13 +13307,11 @@
 
     if-gtz v57, :cond_85
 
-    .line 2001
     :cond_84
     const/16 v57, 0x0
 
     goto/16 :goto_0
 
-    .line 2002
     :cond_85
     invoke-static {}, Landroid/bluetooth/BluetoothAdapter;->getDefaultAdapter()Landroid/bluetooth/BluetoothAdapter;
 
@@ -13995,7 +13329,6 @@
 
     move-result v48
 
-    .line 2005
     .restart local v48    # "result":Z
     new-instance v43, Landroid/database/MatrixCursor;
 
@@ -14020,7 +13353,6 @@
 
     invoke-direct {v0, v1}, Landroid/database/MatrixCursor;-><init>([Ljava/lang/String;)V
 
-    .line 2009
     .restart local v43    # "mCursor":Landroid/database/MatrixCursor;
     const/16 v57, 0x1
 
@@ -14046,7 +13378,6 @@
 
     goto/16 :goto_24
 
-    .line 2014
     .end local v48    # "result":Z
     :pswitch_7c
     if-eqz p4, :cond_86
@@ -14063,13 +13394,11 @@
 
     if-ge v0, v1, :cond_87
 
-    .line 2015
     :cond_86
     const/16 v57, 0x0
 
     goto/16 :goto_0
 
-    .line 2016
     :cond_87
     invoke-static {}, Landroid/bluetooth/BluetoothAdapter;->getDefaultAdapter()Landroid/bluetooth/BluetoothAdapter;
 
@@ -14111,7 +13440,6 @@
 
     move-result v48
 
-    .line 2019
     .restart local v48    # "result":Z
     new-instance v43, Landroid/database/MatrixCursor;
 
@@ -14136,7 +13464,6 @@
 
     invoke-direct {v0, v1}, Landroid/database/MatrixCursor;-><init>([Ljava/lang/String;)V
 
-    .line 2023
     .restart local v43    # "mCursor":Landroid/database/MatrixCursor;
     const/16 v57, 0x1
 
@@ -14162,7 +13489,6 @@
 
     goto/16 :goto_24
 
-    .line 2028
     .end local v48    # "result":Z
     :pswitch_7d
     if-eqz p4, :cond_88
@@ -14179,13 +13505,11 @@
 
     if-ge v0, v1, :cond_89
 
-    .line 2029
     :cond_88
     const/16 v57, 0x0
 
     goto/16 :goto_0
 
-    .line 2030
     :cond_89
     const/16 v57, 0x0
 
@@ -14223,7 +13547,6 @@
 
     goto/16 :goto_24
 
-    .line 2034
     :pswitch_7e
     if-eqz p4, :cond_8a
 
@@ -14233,13 +13556,11 @@
 
     if-gtz v57, :cond_8b
 
-    .line 2035
     :cond_8a
     const/16 v57, 0x0
 
     goto/16 :goto_0
 
-    .line 2036
     :cond_8b
     const/16 v57, 0x0
 
@@ -14253,7 +13574,6 @@
 
     move-result v48
 
-    .line 2040
     .restart local v48    # "result":Z
     new-instance v43, Landroid/database/MatrixCursor;
 
@@ -14278,7 +13598,6 @@
 
     invoke-direct {v0, v1}, Landroid/database/MatrixCursor;-><init>([Ljava/lang/String;)V
 
-    .line 2044
     .restart local v43    # "mCursor":Landroid/database/MatrixCursor;
     const/16 v57, 0x1
 
@@ -14304,7 +13623,6 @@
 
     goto/16 :goto_24
 
-    .line 2049
     .end local v48    # "result":Z
     :pswitch_7f
     if-eqz p4, :cond_8c
@@ -14327,13 +13645,11 @@
 
     if-nez v57, :cond_8d
 
-    .line 2050
     :cond_8c
     const/16 v57, 0x0
 
     goto/16 :goto_0
 
-    .line 2051
     :cond_8d
     const/16 v57, 0x0
 
@@ -14347,7 +13663,6 @@
 
     goto/16 :goto_24
 
-    .line 2054
     :pswitch_80
     if-eqz p4, :cond_8e
 
@@ -14369,13 +13684,11 @@
 
     if-nez v57, :cond_8f
 
-    .line 2055
     :cond_8e
     const/16 v57, 0x0
 
     goto/16 :goto_0
 
-    .line 2056
     :cond_8f
     const/16 v57, 0x0
 
@@ -14393,7 +13706,6 @@
 
     goto/16 :goto_24
 
-    .line 2060
     :pswitch_81
     if-eqz p4, :cond_90
 
@@ -14415,13 +13727,11 @@
 
     if-nez v57, :cond_91
 
-    .line 2061
     :cond_90
     const/16 v57, 0x0
 
     goto/16 :goto_0
 
-    .line 2062
     :cond_91
     const/16 v57, 0x2
 
@@ -14429,7 +13739,6 @@
 
     if-nez v57, :cond_92
 
-    .line 2063
     const/16 v57, 0x0
 
     aget-object v57, p4, v57
@@ -14448,7 +13757,6 @@
 
     goto/16 :goto_24
 
-    .line 2067
     :cond_92
     const/16 v57, 0x0
 
@@ -14478,9 +13786,8 @@
 
     goto/16 :goto_24
 
-    .line 2076
     :pswitch_82
-    const-string/jumbo v57, "roaming_policy"
+    const-string v57, "roaming_policy"
 
     invoke-static/range {v57 .. v57}, Lcom/android/server/enterprise/EnterpriseDeviceManagerService;->getPolicyService(Ljava/lang/String;)Ljava/lang/Object;
 
@@ -14488,13 +13795,11 @@
 
     check-cast v36, Lcom/android/server/enterprise/restriction/RoamingPolicy;
 
-    .line 2078
     .local v36, "lRoamingPolicy":Lcom/android/server/enterprise/restriction/RoamingPolicy;
     if-eqz v36, :cond_0
 
     if-eqz p3, :cond_0
 
-    .line 2079
     const/16 v57, -0x1
 
     invoke-virtual/range {p3 .. p3}, Ljava/lang/String;->hashCode()I
@@ -14507,12 +13812,10 @@
     :goto_25
     packed-switch v57, :pswitch_data_b
 
-    .line 2133
     const/16 v57, 0x0
 
     goto/16 :goto_0
 
-    .line 2079
     :sswitch_77
     const-string v58, "isRoamingSyncEnabled"
 
@@ -14581,7 +13884,6 @@
 
     goto :goto_25
 
-    .line 2081
     :pswitch_83
     new-instance v57, Landroid/app/enterprise/ContextInfo;
 
@@ -14599,7 +13901,6 @@
 
     move-result v48
 
-    .line 2084
     .restart local v48    # "result":Z
     new-instance v43, Landroid/database/MatrixCursor;
 
@@ -14624,7 +13925,6 @@
 
     invoke-direct {v0, v1}, Landroid/database/MatrixCursor;-><init>([Ljava/lang/String;)V
 
-    .line 2088
     .restart local v43    # "mCursor":Landroid/database/MatrixCursor;
     const/16 v57, 0x1
 
@@ -14651,10 +13951,8 @@
     :goto_26
     move-object/from16 v57, v43
 
-    .line 2136
     goto/16 :goto_0
 
-    .line 2094
     .end local v48    # "result":Z
     :pswitch_84
     new-instance v57, Landroid/app/enterprise/ContextInfo;
@@ -14673,7 +13971,6 @@
 
     move-result v48
 
-    .line 2097
     .restart local v48    # "result":Z
     new-instance v43, Landroid/database/MatrixCursor;
 
@@ -14698,7 +13995,6 @@
 
     invoke-direct {v0, v1}, Landroid/database/MatrixCursor;-><init>([Ljava/lang/String;)V
 
-    .line 2101
     .restart local v43    # "mCursor":Landroid/database/MatrixCursor;
     const/16 v57, 0x1
 
@@ -14724,7 +14020,6 @@
 
     goto :goto_26
 
-    .line 2107
     .end local v48    # "result":Z
     :pswitch_85
     new-instance v57, Landroid/app/enterprise/ContextInfo;
@@ -14743,7 +14038,6 @@
 
     move-result v48
 
-    .line 2110
     .restart local v48    # "result":Z
     new-instance v43, Landroid/database/MatrixCursor;
 
@@ -14768,7 +14062,6 @@
 
     invoke-direct {v0, v1}, Landroid/database/MatrixCursor;-><init>([Ljava/lang/String;)V
 
-    .line 2114
     .restart local v43    # "mCursor":Landroid/database/MatrixCursor;
     const/16 v57, 0x1
 
@@ -14794,7 +14087,6 @@
 
     goto/16 :goto_26
 
-    .line 2120
     .end local v48    # "result":Z
     :pswitch_86
     new-instance v57, Landroid/app/enterprise/ContextInfo;
@@ -14813,7 +14105,6 @@
 
     move-result v48
 
-    .line 2123
     .restart local v48    # "result":Z
     new-instance v43, Landroid/database/MatrixCursor;
 
@@ -14838,7 +14129,6 @@
 
     invoke-direct {v0, v1}, Landroid/database/MatrixCursor;-><init>([Ljava/lang/String;)V
 
-    .line 2127
     .restart local v43    # "mCursor":Landroid/database/MatrixCursor;
     const/16 v57, 0x1
 
@@ -14864,7 +14154,6 @@
 
     goto/16 :goto_26
 
-    .line 2142
     .end local v36    # "lRoamingPolicy":Lcom/android/server/enterprise/restriction/RoamingPolicy;
     .end local v48    # "result":Z
     :pswitch_87
@@ -14876,13 +14165,11 @@
 
     check-cast v33, Lcom/android/server/enterprise/location/LocationPolicy;
 
-    .line 2144
     .local v33, "lLocationPolicy":Lcom/android/server/enterprise/location/LocationPolicy;
     if-eqz v33, :cond_0
 
     if-eqz p3, :cond_0
 
-    .line 2145
     const/16 v57, -0x1
 
     invoke-virtual/range {p3 .. p3}, Ljava/lang/String;->hashCode()I
@@ -14895,12 +14182,10 @@
     :goto_27
     packed-switch v57, :pswitch_data_c
 
-    .line 2195
     const/16 v57, 0x0
 
     goto/16 :goto_0
 
-    .line 2145
     :sswitch_7b
     const-string v58, "isLocationProviderBlocked"
 
@@ -14952,7 +14237,6 @@
 
     goto :goto_27
 
-    .line 2147
     :pswitch_88
     if-eqz p4, :cond_95
 
@@ -14962,13 +14246,11 @@
 
     if-gtz v57, :cond_96
 
-    .line 2148
     :cond_95
     const/16 v57, 0x0
 
     goto/16 :goto_0
 
-    .line 2149
     :cond_96
     const/16 v57, 0x0
 
@@ -14982,7 +14264,6 @@
 
     move-result v48
 
-    .line 2152
     .restart local v48    # "result":Z
     new-instance v43, Landroid/database/MatrixCursor;
 
@@ -15007,7 +14288,6 @@
 
     invoke-direct {v0, v1}, Landroid/database/MatrixCursor;-><init>([Ljava/lang/String;)V
 
-    .line 2156
     .restart local v43    # "mCursor":Landroid/database/MatrixCursor;
     const/16 v57, 0x1
 
@@ -15034,10 +14314,8 @@
     :goto_28
     move-object/from16 v57, v43
 
-    .line 2198
     goto/16 :goto_0
 
-    .line 2162
     .end local v48    # "result":Z
     :pswitch_89
     if-eqz p4, :cond_97
@@ -15054,13 +14332,11 @@
 
     if-ge v0, v1, :cond_98
 
-    .line 2163
     :cond_97
     const/16 v57, 0x0
 
     goto/16 :goto_0
 
-    .line 2164
     :cond_98
     invoke-static/range {p4 .. p4}, Ljava/lang/reflect/Array;->getLength(Ljava/lang/Object;)I
 
@@ -15074,7 +14350,6 @@
 
     if-ne v0, v1, :cond_99
 
-    .line 2165
     const/16 v57, 0x0
 
     aget-object v57, p4, v57
@@ -15097,7 +14372,6 @@
 
     move-result v48
 
-    .line 2172
     .restart local v48    # "result":Z
     :goto_29
     new-instance v43, Landroid/database/MatrixCursor;
@@ -15123,7 +14397,6 @@
 
     invoke-direct {v0, v1}, Landroid/database/MatrixCursor;-><init>([Ljava/lang/String;)V
 
-    .line 2176
     .restart local v43    # "mCursor":Landroid/database/MatrixCursor;
     const/16 v57, 0x1
 
@@ -15149,7 +14422,6 @@
 
     goto :goto_28
 
-    .line 2168
     .end local v48    # "result":Z
     :cond_99
     const/16 v57, 0x0
@@ -15169,7 +14441,6 @@
     .restart local v48    # "result":Z
     goto :goto_29
 
-    .line 2182
     .end local v48    # "result":Z
     :pswitch_8a
     new-instance v57, Landroid/app/enterprise/ContextInfo;
@@ -15188,7 +14459,6 @@
 
     move-result v48
 
-    .line 2185
     .restart local v48    # "result":Z
     new-instance v43, Landroid/database/MatrixCursor;
 
@@ -15213,7 +14483,6 @@
 
     invoke-direct {v0, v1}, Landroid/database/MatrixCursor;-><init>([Ljava/lang/String;)V
 
-    .line 2189
     .restart local v43    # "mCursor":Landroid/database/MatrixCursor;
     const/16 v57, 0x1
 
@@ -15239,7 +14508,6 @@
 
     goto/16 :goto_28
 
-    .line 2202
     .end local v33    # "lLocationPolicy":Lcom/android/server/enterprise/location/LocationPolicy;
     .end local v48    # "result":Z
     :pswitch_8b
@@ -15251,11 +14519,9 @@
 
     check-cast v27, Lcom/android/server/enterprise/auditlog/AuditLogService;
 
-    .line 2205
     .local v27, "lAuditLogService":Lcom/android/server/enterprise/auditlog/AuditLogService;
     if-eqz v27, :cond_0
 
-    .line 2206
     if-eqz p3, :cond_0
 
     const-string v57, "isAuditLogEnabled"
@@ -15270,12 +14536,10 @@
 
     if-eqz v57, :cond_0
 
-    .line 2208
     invoke-virtual/range {v27 .. v27}, Lcom/android/server/enterprise/auditlog/AuditLogService;->isAuditServiceRunning()Z
 
     move-result v13
 
-    .line 2211
     .local v13, "bIsAuditLogEnabled":Z
     new-instance v43, Landroid/database/MatrixCursor;
 
@@ -15300,7 +14564,6 @@
 
     invoke-direct {v0, v1}, Landroid/database/MatrixCursor;-><init>([Ljava/lang/String;)V
 
-    .line 2214
     .restart local v43    # "mCursor":Landroid/database/MatrixCursor;
     const/16 v57, 0x1
 
@@ -15326,14 +14589,12 @@
 
     move-object/from16 v57, v43
 
-    .line 2219
     goto/16 :goto_0
 
-    .line 2227
     .end local v13    # "bIsAuditLogEnabled":Z
     .end local v27    # "lAuditLogService":Lcom/android/server/enterprise/auditlog/AuditLogService;
     :pswitch_8c
-    const-string/jumbo v57, "smartcard_browser_policy"
+    const-string v57, "smartcard_browser_policy"
 
     invoke-static/range {v57 .. v57}, Lcom/android/server/enterprise/EnterpriseDeviceManagerService;->getPolicyService(Ljava/lang/String;)Ljava/lang/Object;
 
@@ -15341,11 +14602,9 @@
 
     check-cast v38, Lcom/android/server/enterprise/smartcard/SmartCardBrowserPolicy;
 
-    .line 2230
     .local v38, "lSmartCardBrowserPolicy":Lcom/android/server/enterprise/smartcard/SmartCardBrowserPolicy;
     if-eqz v38, :cond_0
 
-    .line 2231
     if-eqz p3, :cond_9a
 
     const-string v57, "isAuthenticationEnabled"
@@ -15360,7 +14619,6 @@
 
     if-eqz v57, :cond_9a
 
-    .line 2233
     new-instance v57, Landroid/app/enterprise/ContextInfo;
 
     move-object/from16 v0, v57
@@ -15377,7 +14635,6 @@
 
     move-result v14
 
-    .line 2237
     .local v14, "bIsAuthenticationEnabled":Z
     new-instance v43, Landroid/database/MatrixCursor;
 
@@ -15402,7 +14659,6 @@
 
     invoke-direct {v0, v1}, Landroid/database/MatrixCursor;-><init>([Ljava/lang/String;)V
 
-    .line 2241
     .restart local v43    # "mCursor":Landroid/database/MatrixCursor;
     const/16 v57, 0x1
 
@@ -15428,10 +14684,8 @@
 
     move-object/from16 v57, v43
 
-    .line 2246
     goto/16 :goto_0
 
-    .line 2248
     .end local v14    # "bIsAuthenticationEnabled":Z
     :cond_9a
     if-eqz p3, :cond_0
@@ -15448,7 +14702,6 @@
 
     if-eqz v57, :cond_0
 
-    .line 2251
     if-eqz p4, :cond_9b
 
     invoke-static/range {p4 .. p4}, Ljava/lang/reflect/Array;->getLength(Ljava/lang/Object;)I
@@ -15457,13 +14710,11 @@
 
     if-gtz v57, :cond_9c
 
-    .line 2252
     :cond_9b
     const/16 v57, 0x0
 
     goto/16 :goto_0
 
-    .line 2254
     :cond_9c
     new-instance v57, Landroid/app/enterprise/ContextInfo;
 
@@ -15497,7 +14748,6 @@
 
     move-result-object v49
 
-    .line 2259
     .local v49, "sGetClientCertificateAlias":Ljava/lang/String;
     new-instance v43, Landroid/database/MatrixCursor;
 
@@ -15522,7 +14772,6 @@
 
     invoke-direct {v0, v1}, Landroid/database/MatrixCursor;-><init>([Ljava/lang/String;)V
 
-    .line 2264
     .restart local v43    # "mCursor":Landroid/database/MatrixCursor;
     const/16 v57, 0x1
 
@@ -15544,14 +14793,12 @@
 
     move-object/from16 v57, v43
 
-    .line 2269
     goto/16 :goto_0
 
-    .line 2275
     .end local v38    # "lSmartCardBrowserPolicy":Lcom/android/server/enterprise/smartcard/SmartCardBrowserPolicy;
     .end local v49    # "sGetClientCertificateAlias":Ljava/lang/String;
     :pswitch_8d
-    const-string/jumbo v57, "security_policy"
+    const-string v57, "security_policy"
 
     invoke-static/range {v57 .. v57}, Lcom/android/server/enterprise/EnterpriseDeviceManagerService;->getPolicyService(Ljava/lang/String;)Ljava/lang/Object;
 
@@ -15559,13 +14806,11 @@
 
     check-cast v37, Lcom/android/server/enterprise/security/SecurityPolicy;
 
-    .line 2278
     .local v37, "lSecurityPolicy":Lcom/android/server/enterprise/security/SecurityPolicy;
     if-eqz v37, :cond_0
 
     if-eqz p3, :cond_0
 
-    .line 2279
     const/16 v57, -0x1
 
     invoke-virtual/range {p3 .. p3}, Ljava/lang/String;->hashCode()I
@@ -15578,12 +14823,10 @@
     :goto_2a
     packed-switch v57, :pswitch_data_e
 
-    .line 2296
     const/16 v57, 0x0
 
     goto/16 :goto_0
 
-    .line 2279
     :pswitch_8e
     const-string v58, "isDodBannerVisible"
 
@@ -15601,7 +14844,6 @@
 
     goto :goto_2a
 
-    .line 2283
     :pswitch_8f
     new-instance v57, Landroid/app/enterprise/ContextInfo;
 
@@ -15619,7 +14861,6 @@
 
     move-result v21
 
-    .line 2286
     .local v21, "dodbanner":Z
     new-instance v43, Landroid/database/MatrixCursor;
 
@@ -15644,7 +14885,6 @@
 
     invoke-direct {v0, v1}, Landroid/database/MatrixCursor;-><init>([Ljava/lang/String;)V
 
-    .line 2290
     .restart local v43    # "mCursor":Landroid/database/MatrixCursor;
     const/16 v57, 0x1
 
@@ -15670,10 +14910,8 @@
 
     move-object/from16 v57, v43
 
-    .line 2299
     goto/16 :goto_0
 
-    .line 2304
     .end local v21    # "dodbanner":Z
     .end local v37    # "lSecurityPolicy":Lcom/android/server/enterprise/security/SecurityPolicy;
     :pswitch_90
@@ -15685,13 +14923,11 @@
 
     check-cast v32, Lcom/android/server/enterprise/firewall/FirewallPolicy;
 
-    .line 2307
     .local v32, "lFirewallPolicy":Lcom/android/server/enterprise/firewall/FirewallPolicy;
     if-eqz v32, :cond_0
 
     if-eqz p3, :cond_0
 
-    .line 2308
     const/16 v57, -0x1
 
     invoke-virtual/range {p3 .. p3}, Ljava/lang/String;->hashCode()I
@@ -15704,12 +14940,10 @@
     :goto_2b
     packed-switch v57, :pswitch_data_f
 
-    .line 2397
     const/16 v57, 0x0
 
     goto/16 :goto_0
 
-    .line 2308
     :sswitch_7e
     const-string v58, "getURLFilterEnabled"
 
@@ -15795,7 +15029,6 @@
 
     goto :goto_2b
 
-    .line 2312
     :pswitch_91
     new-instance v57, Landroid/app/enterprise/ContextInfo;
 
@@ -15821,7 +15054,6 @@
 
     move-result v11
 
-    .line 2316
     .local v11, "bGetURLFilterEnabled":Z
     new-instance v43, Landroid/database/MatrixCursor;
 
@@ -15846,7 +15078,6 @@
 
     invoke-direct {v0, v1}, Landroid/database/MatrixCursor;-><init>([Ljava/lang/String;)V
 
-    .line 2320
     .restart local v43    # "mCursor":Landroid/database/MatrixCursor;
     const/16 v57, 0x1
 
@@ -15875,10 +15106,8 @@
     :goto_2c
     move-object/from16 v57, v43
 
-    .line 2400
     goto/16 :goto_0
 
-    .line 2329
     :pswitch_92
     new-instance v57, Landroid/app/enterprise/ContextInfo;
 
@@ -15904,7 +15133,6 @@
 
     move-result-object v54
 
-    .line 2332
     .local v54, "urFilterList":Ljava/util/List;, "Ljava/util/List<Ljava/lang/String;>;"
     new-instance v43, Landroid/database/MatrixCursor;
 
@@ -15929,7 +15157,6 @@
 
     invoke-direct {v0, v1}, Landroid/database/MatrixCursor;-><init>([Ljava/lang/String;)V
 
-    .line 2337
     .restart local v43    # "mCursor":Landroid/database/MatrixCursor;
     if-eqz v54, :cond_9f
 
@@ -15939,7 +15166,6 @@
 
     if-nez v57, :cond_9f
 
-    .line 2340
     invoke-interface/range {v54 .. v54}, Ljava/util/List;->iterator()Ljava/util/Iterator;
 
     move-result-object v23
@@ -15958,7 +15184,6 @@
 
     check-cast v22, Ljava/lang/String;
 
-    .line 2341
     .local v22, "filterList":Ljava/lang/String;
     const/16 v57, 0x1
 
@@ -15980,7 +15205,6 @@
 
     goto :goto_2d
 
-    .line 2352
     .end local v22    # "filterList":Ljava/lang/String;
     .end local v23    # "i$":Ljava/util/Iterator;
     .end local v54    # "urFilterList":Ljava/util/List;, "Ljava/util/List<Ljava/lang/String;>;"
@@ -16013,7 +15237,6 @@
 
     move-result-object v18
 
-    .line 2356
     .local v18, "bUrlFilterReportEnable":Ljava/lang/Boolean;
     new-instance v43, Landroid/database/MatrixCursor;
 
@@ -16038,7 +15261,6 @@
 
     invoke-direct {v0, v1}, Landroid/database/MatrixCursor;-><init>([Ljava/lang/String;)V
 
-    .line 2360
     .restart local v43    # "mCursor":Landroid/database/MatrixCursor;
     const/16 v57, 0x1
 
@@ -16060,7 +15282,6 @@
 
     goto/16 :goto_2c
 
-    .line 2366
     .end local v18    # "bUrlFilterReportEnable":Ljava/lang/Boolean;
     :pswitch_94
     if-eqz p4, :cond_a0
@@ -16071,13 +15292,11 @@
 
     if-gtz v57, :cond_a1
 
-    .line 2367
     :cond_a0
     const/16 v57, 0x0
 
     goto/16 :goto_0
 
-    .line 2368
     :cond_a1
     new-instance v57, Landroid/app/enterprise/ContextInfo;
 
@@ -16105,7 +15324,6 @@
 
     move-result-object v17
 
-    .line 2372
     .local v17, "bUrlBlocked":Ljava/lang/Boolean;
     new-instance v43, Landroid/database/MatrixCursor;
 
@@ -16130,7 +15348,6 @@
 
     invoke-direct {v0, v1}, Landroid/database/MatrixCursor;-><init>([Ljava/lang/String;)V
 
-    .line 2376
     .restart local v43    # "mCursor":Landroid/database/MatrixCursor;
     const/16 v57, 0x1
 
@@ -16152,7 +15369,6 @@
 
     goto/16 :goto_2c
 
-    .line 2382
     .end local v17    # "bUrlBlocked":Ljava/lang/Boolean;
     :pswitch_95
     if-eqz p4, :cond_a2
@@ -16163,13 +15379,11 @@
 
     if-gtz v57, :cond_a3
 
-    .line 2383
     :cond_a2
     const/16 v57, 0x0
 
     goto/16 :goto_0
 
-    .line 2384
     :cond_a3
     invoke-virtual/range {v32 .. v32}, Lcom/android/server/enterprise/firewall/FirewallPolicy;->isGlobalProxyAllowed()Z
 
@@ -16179,7 +15393,6 @@
 
     move-result-object v12
 
-    .line 2387
     .local v12, "bGlobalProxy":Ljava/lang/Boolean;
     new-instance v43, Landroid/database/MatrixCursor;
 
@@ -16204,7 +15417,6 @@
 
     invoke-direct {v0, v1}, Landroid/database/MatrixCursor;-><init>([Ljava/lang/String;)V
 
-    .line 2391
     .restart local v43    # "mCursor":Landroid/database/MatrixCursor;
     const/16 v57, 0x1
 
@@ -16226,7 +15438,6 @@
 
     goto/16 :goto_2c
 
-    .line 2416
     .end local v12    # "bGlobalProxy":Ljava/lang/Boolean;
     .end local v32    # "lFirewallPolicy":Lcom/android/server/enterprise/firewall/FirewallPolicy;
     :pswitch_96
@@ -16238,13 +15449,11 @@
 
     check-cast v26, Lcom/android/server/enterprise/application/ApplicationPermissionControlPolicy;
 
-    .line 2419
     .local v26, "lAppPermissionControlPol":Lcom/android/server/enterprise/application/ApplicationPermissionControlPolicy;
     if-eqz v26, :cond_0
 
     if-eqz p3, :cond_0
 
-    .line 2420
     if-eqz p4, :cond_a4
 
     invoke-static/range {p4 .. p4}, Ljava/lang/reflect/Array;->getLength(Ljava/lang/Object;)I
@@ -16259,13 +15468,11 @@
 
     if-gt v0, v1, :cond_a5
 
-    .line 2421
     :cond_a4
     const/16 v57, 0x0
 
     goto/16 :goto_0
 
-    .line 2423
     :cond_a5
     const-string v57, "getPermissionBlockedList"
 
@@ -16279,12 +15486,10 @@
 
     if-eqz v57, :cond_0
 
-    .line 2424
     new-instance v5, Ljava/util/ArrayList;
 
     invoke-direct {v5}, Ljava/util/ArrayList;-><init>()V
 
-    .line 2425
     .local v5, "appList":Ljava/util/List;, "Ljava/util/List<Ljava/lang/String;>;"
     const/16 v57, 0x1
 
@@ -16297,7 +15502,6 @@
     .end local v5    # "appList":Ljava/util/List;, "Ljava/util/List<Ljava/lang/String;>;"
     check-cast v5, Ljava/util/List;
 
-    .line 2426
     .restart local v5    # "appList":Ljava/util/List;, "Ljava/util/List<Ljava/lang/String;>;"
     new-instance v57, Landroid/app/enterprise/ContextInfo;
 
@@ -16321,7 +15525,6 @@
 
     move-result-object v45
 
-    .line 2430
     .local v45, "permList":Ljava/util/List;, "Ljava/util/List<Ljava/lang/String;>;"
     new-instance v43, Landroid/database/MatrixCursor;
 
@@ -16346,7 +15549,6 @@
 
     invoke-direct {v0, v1}, Landroid/database/MatrixCursor;-><init>([Ljava/lang/String;)V
 
-    .line 2435
     .restart local v43    # "mCursor":Landroid/database/MatrixCursor;
     if-eqz v45, :cond_a6
 
@@ -16356,7 +15558,6 @@
 
     if-nez v57, :cond_a6
 
-    .line 2438
     invoke-interface/range {v45 .. v45}, Ljava/util/List;->iterator()Ljava/util/Iterator;
 
     move-result-object v23
@@ -16375,7 +15576,6 @@
 
     check-cast v44, Ljava/lang/String;
 
-    .line 2439
     .local v44, "perm":Ljava/lang/String;
     const/16 v57, 0x1
 
@@ -16402,10 +15602,8 @@
     :cond_a6
     move-object/from16 v57, v43
 
-    .line 2446
     goto/16 :goto_0
 
-    .line 2452
     .end local v5    # "appList":Ljava/util/List;, "Ljava/util/List<Ljava/lang/String;>;"
     .end local v26    # "lAppPermissionControlPol":Lcom/android/server/enterprise/application/ApplicationPermissionControlPolicy;
     .end local v45    # "permList":Ljava/util/List;, "Ljava/util/List<Ljava/lang/String;>;"
@@ -16418,13 +15616,11 @@
 
     check-cast v31, Lcom/android/server/enterprise/datetime/DateTimePolicy;
 
-    .line 2455
     .local v31, "lDateTimePolicy":Lcom/android/server/enterprise/datetime/DateTimePolicy;
     if-eqz v31, :cond_0
 
     if-eqz p3, :cond_0
 
-    .line 2456
     const-string v57, "isDateTimeChangeEnalbed"
 
     move-object/from16 v0, p3
@@ -16437,7 +15633,6 @@
 
     if-eqz v57, :cond_0
 
-    .line 2457
     new-instance v57, Landroid/app/enterprise/ContextInfo;
 
     move-object/from16 v0, v57
@@ -16454,7 +15649,6 @@
 
     move-result v48
 
-    .line 2461
     .restart local v48    # "result":Z
     new-instance v43, Landroid/database/MatrixCursor;
 
@@ -16479,7 +15673,6 @@
 
     invoke-direct {v0, v1}, Landroid/database/MatrixCursor;-><init>([Ljava/lang/String;)V
 
-    .line 2466
     .restart local v43    # "mCursor":Landroid/database/MatrixCursor;
     const/16 v57, 0x1
 
@@ -16505,10 +15698,8 @@
 
     move-object/from16 v57, v43
 
-    .line 2471
     goto/16 :goto_0
 
-    .line 214
     :pswitch_data_0
     .packed-switch 0x1
         :pswitch_0
@@ -16537,7 +15728,6 @@
         :pswitch_97
     .end packed-switch
 
-    .line 219
     :sswitch_data_0
     .sparse-switch
         -0x5d9fe8ab -> :sswitch_8
@@ -16582,7 +15772,6 @@
         :pswitch_13
     .end packed-switch
 
-    .line 485
     :sswitch_data_1
     .sparse-switch
         -0x74a4d725 -> :sswitch_20
@@ -16625,7 +15814,6 @@
         :pswitch_25
     .end packed-switch
 
-    .line 768
     :sswitch_data_2
     .sparse-switch
         -0x5eef4930 -> :sswitch_28
@@ -16662,7 +15850,6 @@
         :pswitch_34
     .end packed-switch
 
-    .line 986
     :sswitch_data_3
     .sparse-switch
         -0x562f9482 -> :sswitch_33
@@ -16697,7 +15884,6 @@
         :pswitch_42
     .end packed-switch
 
-    .line 1186
     :sswitch_data_4
     .sparse-switch
         -0x7f682541 -> :sswitch_46
@@ -16730,7 +15916,6 @@
         :pswitch_4f
     .end packed-switch
 
-    .line 1354
     :sswitch_data_5
     .sparse-switch
         -0x7f91d479 -> :sswitch_4e
@@ -16763,7 +15948,6 @@
         :pswitch_5c
     .end packed-switch
 
-    .line 1554
     :sswitch_data_6
     .sparse-switch
         -0x4e857510 -> :sswitch_5d
@@ -16790,7 +15974,6 @@
         :pswitch_66
     .end packed-switch
 
-    .line 1735
     :sswitch_data_7
     .sparse-switch
         -0x74ddc0dd -> :sswitch_64
@@ -16811,7 +15994,6 @@
         :pswitch_6d
     .end packed-switch
 
-    .line 1840
     :sswitch_data_8
     .sparse-switch
         -0x625ba203 -> :sswitch_65
@@ -16836,7 +16018,6 @@
         :pswitch_76
     .end packed-switch
 
-    .line 1958
     :sswitch_data_9
     .sparse-switch
         -0x74fa9afd -> :sswitch_6d
@@ -16865,7 +16046,6 @@
         :pswitch_81
     .end packed-switch
 
-    .line 2079
     :sswitch_data_a
     .sparse-switch
         -0x3edf31d1 -> :sswitch_7a
@@ -16882,7 +16062,6 @@
         :pswitch_86
     .end packed-switch
 
-    .line 2145
     :sswitch_data_b
     .sparse-switch
         -0x66608807 -> :sswitch_7c
@@ -16897,7 +16076,6 @@
         :pswitch_8a
     .end packed-switch
 
-    .line 2279
     :pswitch_data_d
     .packed-switch -0x6e1bb3c9
         :pswitch_8e
@@ -16908,7 +16086,6 @@
         :pswitch_8f
     .end packed-switch
 
-    .line 2308
     :sswitch_data_c
     .sparse-switch
         -0x7bb5f0b1 -> :sswitch_7f
@@ -16936,7 +16113,6 @@
     .param p4, "selectionArgs"    # [Ljava/lang/String;
 
     .prologue
-    .line 2592
     const/4 v0, 0x0
 
     return v0

@@ -28,7 +28,6 @@
     .locals 0
 
     .prologue
-    .line 350
     iput-object p1, p0, Landroid/media/tv/TvInputManager$SessionCallbackRecord$4;->this$0:Landroid/media/tv/TvInputManager$SessionCallbackRecord;
 
     iput-object p2, p0, Landroid/media/tv/TvInputManager$SessionCallbackRecord$4;->val$tracks:Ljava/util/List;
@@ -44,7 +43,6 @@
     .locals 5
 
     .prologue
-    .line 353
     iget-object v2, p0, Landroid/media/tv/TvInputManager$SessionCallbackRecord$4;->this$0:Landroid/media/tv/TvInputManager$SessionCallbackRecord;
 
     # getter for: Landroid/media/tv/TvInputManager$SessionCallbackRecord;->mSession:Landroid/media/tv/TvInputManager$Session;
@@ -59,7 +57,6 @@
 
     invoke-interface {v2}, Ljava/util/List;->clear()V
 
-    .line 354
     iget-object v2, p0, Landroid/media/tv/TvInputManager$SessionCallbackRecord$4;->this$0:Landroid/media/tv/TvInputManager$SessionCallbackRecord;
 
     # getter for: Landroid/media/tv/TvInputManager$SessionCallbackRecord;->mSession:Landroid/media/tv/TvInputManager$Session;
@@ -74,7 +71,6 @@
 
     invoke-interface {v2}, Ljava/util/List;->clear()V
 
-    .line 355
     iget-object v2, p0, Landroid/media/tv/TvInputManager$SessionCallbackRecord$4;->this$0:Landroid/media/tv/TvInputManager$SessionCallbackRecord;
 
     # getter for: Landroid/media/tv/TvInputManager$SessionCallbackRecord;->mSession:Landroid/media/tv/TvInputManager$Session;
@@ -89,7 +85,6 @@
 
     invoke-interface {v2}, Ljava/util/List;->clear()V
 
-    .line 356
     iget-object v2, p0, Landroid/media/tv/TvInputManager$SessionCallbackRecord$4;->val$tracks:Ljava/util/List;
 
     invoke-interface {v2}, Ljava/util/List;->iterator()Ljava/util/Iterator;
@@ -111,7 +106,6 @@
 
     check-cast v1, Landroid/media/tv/TvTrackInfo;
 
-    .line 357
     .local v1, "track":Landroid/media/tv/TvTrackInfo;
     invoke-virtual {v1}, Landroid/media/tv/TvTrackInfo;->getType()I
 
@@ -119,7 +113,6 @@
 
     if-nez v2, :cond_1
 
-    .line 358
     iget-object v2, p0, Landroid/media/tv/TvInputManager$SessionCallbackRecord$4;->this$0:Landroid/media/tv/TvInputManager$SessionCallbackRecord;
 
     # getter for: Landroid/media/tv/TvInputManager$SessionCallbackRecord;->mSession:Landroid/media/tv/TvInputManager$Session;
@@ -136,7 +129,6 @@
 
     goto :goto_0
 
-    .line 359
     :cond_1
     invoke-virtual {v1}, Landroid/media/tv/TvTrackInfo;->getType()I
 
@@ -146,7 +138,6 @@
 
     if-ne v2, v3, :cond_2
 
-    .line 360
     iget-object v2, p0, Landroid/media/tv/TvInputManager$SessionCallbackRecord$4;->this$0:Landroid/media/tv/TvInputManager$SessionCallbackRecord;
 
     # getter for: Landroid/media/tv/TvInputManager$SessionCallbackRecord;->mSession:Landroid/media/tv/TvInputManager$Session;
@@ -163,7 +154,6 @@
 
     goto :goto_0
 
-    .line 361
     :cond_2
     invoke-virtual {v1}, Landroid/media/tv/TvTrackInfo;->getType()I
 
@@ -173,7 +163,6 @@
 
     if-ne v2, v3, :cond_0
 
-    .line 362
     iget-object v2, p0, Landroid/media/tv/TvInputManager$SessionCallbackRecord$4;->this$0:Landroid/media/tv/TvInputManager$SessionCallbackRecord;
 
     # getter for: Landroid/media/tv/TvInputManager$SessionCallbackRecord;->mSession:Landroid/media/tv/TvInputManager$Session;
@@ -190,7 +179,6 @@
 
     goto :goto_0
 
-    .line 367
     .end local v1    # "track":Landroid/media/tv/TvTrackInfo;
     :cond_3
     iget-object v2, p0, Landroid/media/tv/TvInputManager$SessionCallbackRecord$4;->this$0:Landroid/media/tv/TvInputManager$SessionCallbackRecord;
@@ -211,6 +199,5 @@
 
     invoke-virtual {v2, v3, v4}, Landroid/media/tv/TvInputManager$SessionCallback;->onTracksChanged(Landroid/media/tv/TvInputManager$Session;Ljava/util/List;)V
 
-    .line 368
     return-void
 .end method

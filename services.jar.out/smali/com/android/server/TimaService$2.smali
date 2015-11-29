@@ -23,7 +23,6 @@
     .locals 0
 
     .prologue
-    .line 1733
     iput-object p1, p0, Lcom/android/server/TimaService$2;->this$0:Lcom/android/server/TimaService;
 
     invoke-direct {p0}, Landroid/content/BroadcastReceiver;-><init>()V
@@ -39,13 +38,11 @@
     .param p2, "intent"    # Landroid/content/Intent;
 
     .prologue
-    .line 1737
     :try_start_0
     invoke-virtual {p2}, Landroid/content/Intent;->getAction()Ljava/lang/String;
 
     move-result-object v0
 
-    .line 1740
     .local v0, "action":Ljava/lang/String;
     const-string v8, "TimaService"
 
@@ -69,7 +66,6 @@
 
     invoke-static {v8, v9}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1742
     iget-object v8, p0, Lcom/android/server/TimaService$2;->this$0:Lcom/android/server/TimaService;
 
     # invokes: Lcom/android/server/TimaService;->isKapSupported()Z
@@ -87,42 +83,35 @@
 
     if-eqz v8, :cond_1
 
-    .line 1743
     invoke-static {}, Landroid/os/Binder;->clearCallingIdentity()J
 
     move-result-wide v6
 
-    .line 1745
     .local v6, "token":J
     iget-object v8, p0, Lcom/android/server/TimaService$2;->this$0:Lcom/android/server/TimaService;
 
     # invokes: Lcom/android/server/TimaService;->notifyKapEnabled()V
     invoke-static {v8}, Lcom/android/server/TimaService;->access$300(Lcom/android/server/TimaService;)V
 
-    .line 1748
     new-instance v2, Landroid/content/Intent;
 
     invoke-direct {v2}, Landroid/content/Intent;-><init>()V
 
-    .line 1749
     .local v2, "kapIntent":Landroid/content/Intent;
     const-string v8, "com.samsung.action.knox.kap.KAP_NOTIFICATION"
 
     invoke-virtual {v2, v8}, Landroid/content/Intent;->setAction(Ljava/lang/String;)Landroid/content/Intent;
 
-    .line 1750
     const-string v8, "com.samsung.klmsagent"
 
     invoke-virtual {v2, v8}, Landroid/content/Intent;->setPackage(Ljava/lang/String;)Landroid/content/Intent;
 
-    .line 1751
     const-string v8, "KAP_LICENSE_STATUS_REQUEST"
 
     const/4 v9, 0x1
 
     invoke-virtual {v2, v8, v9}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Z)Landroid/content/Intent;
 
-    .line 1752
     iget-object v8, p0, Lcom/android/server/TimaService$2;->this$0:Lcom/android/server/TimaService;
 
     # getter for: Lcom/android/server/TimaService;->mContext:Landroid/content/Context;
@@ -136,10 +125,8 @@
 
     invoke-virtual {v8, v2, v9, v10}, Landroid/content/Context;->sendBroadcastAsUser(Landroid/content/Intent;Landroid/os/UserHandle;Ljava/lang/String;)V
 
-    .line 1753
     invoke-static {v6, v7}, Landroid/os/Binder;->restoreCallingIdentity(J)V
 
-    .line 1769
     .end local v0    # "action":Ljava/lang/String;
     .end local v2    # "kapIntent":Landroid/content/Intent;
     .end local v6    # "token":J
@@ -147,7 +134,6 @@
     :goto_0
     return-void
 
-    .line 1754
     .restart local v0    # "action":Ljava/lang/String;
     :cond_1
     iget-object v8, p0, Lcom/android/server/TimaService$2;->this$0:Lcom/android/server/TimaService;
@@ -167,16 +153,13 @@
 
     if-eqz v8, :cond_0
 
-    .line 1755
     invoke-virtual {p2}, Landroid/content/Intent;->getExtras()Landroid/os/Bundle;
 
     move-result-object v4
 
-    .line 1756
     .local v4, "msgData":Landroid/os/Bundle;
     if-nez v4, :cond_2
 
-    .line 1758
     const-string v8, "TimaService"
 
     const-string v9, "null msgData"
@@ -187,19 +170,16 @@
 
     goto :goto_0
 
-    .line 1766
     .end local v0    # "action":Ljava/lang/String;
     .end local v4    # "msgData":Landroid/os/Bundle;
     :catch_0
     move-exception v1
 
-    .line 1767
     .local v1, "e":Ljava/lang/Exception;
     invoke-virtual {v1}, Ljava/lang/Exception;->printStackTrace()V
 
     goto :goto_0
 
-    .line 1762
     .end local v1    # "e":Ljava/lang/Exception;
     .restart local v0    # "action":Ljava/lang/String;
     .restart local v4    # "msgData":Landroid/os/Bundle;
@@ -211,7 +191,6 @@
 
     move-result v5
 
-    .line 1763
     .local v5, "notiTrigger":I
     const-string v8, "KLMS_LICENSE_STATUS"
 
@@ -223,7 +202,6 @@
 
     move-result-object v3
 
-    .line 1764
     .local v3, "licenseStatus":Ljava/lang/Boolean;
     iget-object v8, p0, Lcom/android/server/TimaService$2;->this$0:Lcom/android/server/TimaService;
 

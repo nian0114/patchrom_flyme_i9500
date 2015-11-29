@@ -52,7 +52,6 @@
 
     const/4 v2, 0x0
 
-    .line 59
     new-instance v0, Lcom/android/internal/telephony/Subscription$SubscriptionStatus;
 
     const-string v1, "SUB_DEACTIVATE"
@@ -61,7 +60,6 @@
 
     sput-object v0, Lcom/android/internal/telephony/Subscription$SubscriptionStatus;->SUB_DEACTIVATE:Lcom/android/internal/telephony/Subscription$SubscriptionStatus;
 
-    .line 60
     new-instance v0, Lcom/android/internal/telephony/Subscription$SubscriptionStatus;
 
     const-string v1, "SUB_ACTIVATE"
@@ -70,7 +68,6 @@
 
     sput-object v0, Lcom/android/internal/telephony/Subscription$SubscriptionStatus;->SUB_ACTIVATE:Lcom/android/internal/telephony/Subscription$SubscriptionStatus;
 
-    .line 61
     new-instance v0, Lcom/android/internal/telephony/Subscription$SubscriptionStatus;
 
     const-string v1, "SUB_ACTIVATED"
@@ -79,7 +76,6 @@
 
     sput-object v0, Lcom/android/internal/telephony/Subscription$SubscriptionStatus;->SUB_ACTIVATED:Lcom/android/internal/telephony/Subscription$SubscriptionStatus;
 
-    .line 62
     new-instance v0, Lcom/android/internal/telephony/Subscription$SubscriptionStatus;
 
     const-string v1, "SUB_DEACTIVATED"
@@ -88,7 +84,6 @@
 
     sput-object v0, Lcom/android/internal/telephony/Subscription$SubscriptionStatus;->SUB_DEACTIVATED:Lcom/android/internal/telephony/Subscription$SubscriptionStatus;
 
-    .line 63
     new-instance v0, Lcom/android/internal/telephony/Subscription$SubscriptionStatus;
 
     const-string v1, "SUB_INVALID"
@@ -97,7 +92,6 @@
 
     sput-object v0, Lcom/android/internal/telephony/Subscription$SubscriptionStatus;->SUB_INVALID:Lcom/android/internal/telephony/Subscription$SubscriptionStatus;
 
-    .line 58
     const/4 v0, 0x5
 
     new-array v0, v0, [Lcom/android/internal/telephony/Subscription$SubscriptionStatus;
@@ -136,7 +130,6 @@
     .end annotation
 
     .prologue
-    .line 58
     invoke-direct {p0, p1, p2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
     return-void
@@ -147,7 +140,6 @@
     .param p0, "name"    # Ljava/lang/String;
 
     .prologue
-    .line 58
     const-class v0, Lcom/android/internal/telephony/Subscription$SubscriptionStatus;
 
     invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
@@ -163,7 +155,6 @@
     .locals 1
 
     .prologue
-    .line 58
     sget-object v0, Lcom/android/internal/telephony/Subscription$SubscriptionStatus;->$VALUES:[Lcom/android/internal/telephony/Subscription$SubscriptionStatus;
 
     invoke-virtual {v0}, [Lcom/android/internal/telephony/Subscription$SubscriptionStatus;->clone()Ljava/lang/Object;

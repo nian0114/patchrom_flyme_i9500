@@ -74,17 +74,14 @@
     .param p1, "service"    # Lcom/android/internal/widget/ILockSettings;
 
     .prologue
-    .line 61
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 46
     new-instance v1, Landroid/util/ArrayMap;
 
     invoke-direct {v1}, Landroid/util/ArrayMap;-><init>()V
 
     iput-object v1, p0, Lcom/android/internal/widget/LockPatternUtilsCache;->mCache:Landroid/util/ArrayMap;
 
-    .line 49
     new-instance v1, Lcom/android/internal/widget/LockPatternUtilsCache$CacheKey;
 
     const/4 v2, 0x0
@@ -93,17 +90,14 @@
 
     iput-object v1, p0, Lcom/android/internal/widget/LockPatternUtilsCache;->mCacheKey:Lcom/android/internal/widget/LockPatternUtilsCache$CacheKey;
 
-    .line 237
     new-instance v1, Lcom/android/internal/widget/LockPatternUtilsCache$1;
 
     invoke-direct {v1, p0}, Lcom/android/internal/widget/LockPatternUtilsCache$1;-><init>(Lcom/android/internal/widget/LockPatternUtilsCache;)V
 
     iput-object v1, p0, Lcom/android/internal/widget/LockPatternUtilsCache;->mObserver:Lcom/android/internal/widget/ILockSettingsObserver;
 
-    .line 62
     iput-object p1, p0, Lcom/android/internal/widget/LockPatternUtilsCache;->mService:Lcom/android/internal/widget/ILockSettings;
 
-    .line 64
     :try_start_0
     iget-object v1, p0, Lcom/android/internal/widget/LockPatternUtilsCache;->mObserver:Lcom/android/internal/widget/ILockSettingsObserver;
 
@@ -111,14 +105,11 @@
     :try_end_0
     .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 70
     return-void
 
-    .line 65
     :catch_0
     move-exception v0
 
-    .line 68
     .local v0, "e":Landroid/os/RemoteException;
     new-instance v1, Ljava/lang/RuntimeException;
 
@@ -134,7 +125,6 @@
     .param p2, "x2"    # I
 
     .prologue
-    .line 30
     invoke-direct {p0, p1, p2}, Lcom/android/internal/widget/LockPatternUtilsCache;->invalidateCache(Ljava/lang/String;I)V
 
     return-void
@@ -145,7 +135,6 @@
     .param p0, "service"    # Lcom/android/internal/widget/ILockSettings;
 
     .prologue
-    .line 53
     const-class v1, Lcom/android/internal/widget/LockPatternUtilsCache;
 
     monitor-enter v1
@@ -155,14 +144,12 @@
 
     if-nez v0, :cond_0
 
-    .line 54
     new-instance v0, Lcom/android/internal/widget/LockPatternUtilsCache;
 
     invoke-direct {v0, p0}, Lcom/android/internal/widget/LockPatternUtilsCache;-><init>(Lcom/android/internal/widget/ILockSettings;)V
 
     sput-object v0, Lcom/android/internal/widget/LockPatternUtilsCache;->sInstance:Lcom/android/internal/widget/LockPatternUtilsCache;
 
-    .line 56
     :cond_0
     sget-object v0, Lcom/android/internal/widget/LockPatternUtilsCache;->sInstance:Lcom/android/internal/widget/LockPatternUtilsCache;
     :try_end_0
@@ -172,7 +159,6 @@
 
     return-object v0
 
-    .line 53
     :catchall_0
     move-exception v0
 
@@ -187,12 +173,10 @@
     .param p2, "userId"    # I
 
     .prologue
-    .line 231
     iget-object v1, p0, Lcom/android/internal/widget/LockPatternUtilsCache;->mCache:Landroid/util/ArrayMap;
 
     monitor-enter v1
 
-    .line 233
     :try_start_0
     iget-object v0, p0, Lcom/android/internal/widget/LockPatternUtilsCache;->mCache:Landroid/util/ArrayMap;
 
@@ -204,13 +188,10 @@
 
     invoke-virtual {v0, v2}, Landroid/util/ArrayMap;->remove(Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 234
     monitor-exit v1
 
-    .line 235
     return-void
 
-    .line 234
     :catchall_0
     move-exception v0
 
@@ -227,12 +208,10 @@
     .param p2, "userId"    # I
 
     .prologue
-    .line 217
     iget-object v1, p0, Lcom/android/internal/widget/LockPatternUtilsCache;->mCache:Landroid/util/ArrayMap;
 
     monitor-enter v1
 
-    .line 219
     :try_start_0
     iget-object v0, p0, Lcom/android/internal/widget/LockPatternUtilsCache;->mCache:Landroid/util/ArrayMap;
 
@@ -250,7 +229,6 @@
 
     return-object v0
 
-    .line 220
     :catchall_0
     move-exception v0
 
@@ -268,12 +246,10 @@
     .param p3, "value"    # Ljava/lang/Object;
 
     .prologue
-    .line 224
     iget-object v1, p0, Lcom/android/internal/widget/LockPatternUtilsCache;->mCache:Landroid/util/ArrayMap;
 
     monitor-enter v1
 
-    .line 226
     :try_start_0
     iget-object v0, p0, Lcom/android/internal/widget/LockPatternUtilsCache;->mCache:Landroid/util/ArrayMap;
 
@@ -289,13 +265,10 @@
 
     invoke-virtual {v0, v2, p3}, Landroid/util/ArrayMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 227
     monitor-exit v1
 
-    .line 228
     return-void
 
-    .line 227
     :catchall_0
     move-exception v0
 
@@ -312,7 +285,6 @@
     .locals 1
 
     .prologue
-    .line 211
     iget-object v0, p0, Lcom/android/internal/widget/LockPatternUtilsCache;->mService:Lcom/android/internal/widget/ILockSettings;
 
     invoke-interface {v0}, Lcom/android/internal/widget/ILockSettings;->asBinder()Landroid/os/IBinder;
@@ -333,7 +305,6 @@
     .end annotation
 
     .prologue
-    .line 153
     iget-object v0, p0, Lcom/android/internal/widget/LockPatternUtilsCache;->mService:Lcom/android/internal/widget/ILockSettings;
 
     invoke-interface {v0, p1, p2}, Lcom/android/internal/widget/ILockSettings;->checkBackupPin(Ljava/lang/String;I)Z
@@ -354,7 +325,6 @@
     .end annotation
 
     .prologue
-    .line 538
     iget-object v0, p0, Lcom/android/internal/widget/LockPatternUtilsCache;->mService:Lcom/android/internal/widget/ILockSettings;
 
     invoke-interface {v0, p1, p2}, Lcom/android/internal/widget/ILockSettings;->checkCarrierPassword(Ljava/lang/String;I)Z
@@ -375,7 +345,6 @@
     .end annotation
 
     .prologue
-    .line 496
     iget-object v0, p0, Lcom/android/internal/widget/LockPatternUtilsCache;->mService:Lcom/android/internal/widget/ILockSettings;
 
     invoke-interface {v0, p1, p2}, Lcom/android/internal/widget/ILockSettings;->checkFMMPassword(Ljava/lang/String;I)Z
@@ -396,7 +365,6 @@
     .end annotation
 
     .prologue
-    .line 293
     iget-object v0, p0, Lcom/android/internal/widget/LockPatternUtilsCache;->mService:Lcom/android/internal/widget/ILockSettings;
 
     invoke-interface {v0, p1, p2}, Lcom/android/internal/widget/ILockSettings;->checkFingerprintPassword(Ljava/lang/String;I)Z
@@ -417,7 +385,6 @@
     .end annotation
 
     .prologue
-    .line 316
     iget-object v0, p0, Lcom/android/internal/widget/LockPatternUtilsCache;->mService:Lcom/android/internal/widget/ILockSettings;
 
     invoke-interface {v0, p1, p2}, Lcom/android/internal/widget/ILockSettings;->checkParentControlPassword([BI)Z
@@ -438,7 +405,6 @@
     .end annotation
 
     .prologue
-    .line 141
     iget-object v0, p0, Lcom/android/internal/widget/LockPatternUtilsCache;->mService:Lcom/android/internal/widget/ILockSettings;
 
     invoke-interface {v0, p1, p2}, Lcom/android/internal/widget/ILockSettings;->checkPassword(Ljava/lang/String;I)Z
@@ -459,7 +425,6 @@
     .end annotation
 
     .prologue
-    .line 129
     iget-object v0, p0, Lcom/android/internal/widget/LockPatternUtilsCache;->mService:Lcom/android/internal/widget/ILockSettings;
 
     invoke-interface {v0, p1, p2}, Lcom/android/internal/widget/ILockSettings;->checkPattern(Ljava/lang/String;I)Z
@@ -480,7 +445,6 @@
     .end annotation
 
     .prologue
-    .line 423
     iget-object v0, p0, Lcom/android/internal/widget/LockPatternUtilsCache;->mService:Lcom/android/internal/widget/ILockSettings;
 
     invoke-interface {v0, p1, p2}, Lcom/android/internal/widget/ILockSettings;->checkPersonalModeBackupPin(Ljava/lang/String;I)Z
@@ -501,7 +465,6 @@
     .end annotation
 
     .prologue
-    .line 429
     iget-object v0, p0, Lcom/android/internal/widget/LockPatternUtilsCache;->mService:Lcom/android/internal/widget/ILockSettings;
 
     invoke-interface {v0, p1, p2}, Lcom/android/internal/widget/ILockSettings;->checkPersonalModeFingerprintPassword(Ljava/lang/String;I)Z
@@ -522,7 +485,6 @@
     .end annotation
 
     .prologue
-    .line 413
     iget-object v0, p0, Lcom/android/internal/widget/LockPatternUtilsCache;->mService:Lcom/android/internal/widget/ILockSettings;
 
     invoke-interface {v0, p1, p2}, Lcom/android/internal/widget/ILockSettings;->checkPersonalModePassword(Ljava/lang/String;I)Z
@@ -543,7 +505,6 @@
     .end annotation
 
     .prologue
-    .line 418
     iget-object v0, p0, Lcom/android/internal/widget/LockPatternUtilsCache;->mService:Lcom/android/internal/widget/ILockSettings;
 
     invoke-interface {v0, p1, p2}, Lcom/android/internal/widget/ILockSettings;->checkPersonalModePattern(Ljava/lang/String;I)Z
@@ -564,7 +525,6 @@
     .end annotation
 
     .prologue
-    .line 408
     iget-object v0, p0, Lcom/android/internal/widget/LockPatternUtilsCache;->mService:Lcom/android/internal/widget/ILockSettings;
 
     invoke-interface {v0, p1, p2}, Lcom/android/internal/widget/ILockSettings;->checkPersonalModePin(Ljava/lang/String;I)Z
@@ -585,7 +545,6 @@
     .end annotation
 
     .prologue
-    .line 362
     iget-object v0, p0, Lcom/android/internal/widget/LockPatternUtilsCache;->mService:Lcom/android/internal/widget/ILockSettings;
 
     invoke-interface {v0, p1, p2}, Lcom/android/internal/widget/ILockSettings;->checkSignatureBackupPin([BI)Z
@@ -605,7 +564,6 @@
     .end annotation
 
     .prologue
-    .line 158
     iget-object v0, p0, Lcom/android/internal/widget/LockPatternUtilsCache;->mService:Lcom/android/internal/widget/ILockSettings;
 
     invoke-interface {v0, p1}, Lcom/android/internal/widget/ILockSettings;->checkVoldPassword(I)Z
@@ -627,18 +585,15 @@
     .end annotation
 
     .prologue
-    .line 111
     invoke-direct {p0, p1, p3}, Lcom/android/internal/widget/LockPatternUtilsCache;->peekCache(Ljava/lang/String;I)Ljava/lang/Object;
 
     move-result-object v1
 
-    .line 112
     .local v1, "value":Ljava/lang/Object;
     instance-of v2, v1, Ljava/lang/Boolean;
 
     if-eqz v2, :cond_0
 
-    .line 113
     check-cast v1, Ljava/lang/Boolean;
 
     .end local v1    # "value":Ljava/lang/Object;
@@ -646,11 +601,9 @@
 
     move-result v0
 
-    .line 117
     :goto_0
     return v0
 
-    .line 115
     .restart local v1    # "value":Ljava/lang/Object;
     :cond_0
     iget-object v2, p0, Lcom/android/internal/widget/LockPatternUtilsCache;->mService:Lcom/android/internal/widget/ILockSettings;
@@ -659,7 +612,6 @@
 
     move-result v0
 
-    .line 116
     .local v0, "result":Z
     invoke-static {v0}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
 
@@ -680,20 +632,17 @@
     .end annotation
 
     .prologue
-    .line 512
     const-string v2, "LockPatternUtils.Cache.IsCarrierLockPlusEnabledCacheKey"
 
     invoke-direct {p0, v2, p1}, Lcom/android/internal/widget/LockPatternUtilsCache;->peekCache(Ljava/lang/String;I)Ljava/lang/Object;
 
     move-result-object v1
 
-    .line 513
     .local v1, "value":Ljava/lang/Object;
     instance-of v2, v1, Ljava/lang/Boolean;
 
     if-eqz v2, :cond_0
 
-    .line 514
     check-cast v1, Ljava/lang/Boolean;
 
     .end local v1    # "value":Ljava/lang/Object;
@@ -701,11 +650,9 @@
 
     move-result v0
 
-    .line 518
     :goto_0
     return v0
 
-    .line 516
     .restart local v1    # "value":Ljava/lang/Object;
     :cond_0
     iget-object v2, p0, Lcom/android/internal/widget/LockPatternUtilsCache;->mService:Lcom/android/internal/widget/ILockSettings;
@@ -714,7 +661,6 @@
 
     move-result v0
 
-    .line 517
     .local v0, "result":Z
     const-string v2, "LockPatternUtils.Cache.IsCarrierLockPlusEnabledCacheKey"
 
@@ -739,18 +685,15 @@
     .end annotation
 
     .prologue
-    .line 91
     invoke-direct {p0, p1, p4}, Lcom/android/internal/widget/LockPatternUtilsCache;->peekCache(Ljava/lang/String;I)Ljava/lang/Object;
 
     move-result-object v2
 
-    .line 92
     .local v2, "value":Ljava/lang/Object;
     instance-of v3, v2, Ljava/lang/Long;
 
     if-eqz v3, :cond_0
 
-    .line 93
     check-cast v2, Ljava/lang/Long;
 
     .end local v2    # "value":Ljava/lang/Object;
@@ -758,11 +701,9 @@
 
     move-result-wide v0
 
-    .line 97
     :goto_0
     return-wide v0
 
-    .line 95
     .restart local v2    # "value":Ljava/lang/Object;
     :cond_0
     iget-object v3, p0, Lcom/android/internal/widget/LockPatternUtilsCache;->mService:Lcom/android/internal/widget/ILockSettings;
@@ -771,7 +712,6 @@
 
     move-result-wide v0
 
-    .line 96
     .local v0, "result":J
     invoke-static {v0, v1}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
 
@@ -792,14 +732,12 @@
     .end annotation
 
     .prologue
-    .line 336
     iget-object v1, p0, Lcom/android/internal/widget/LockPatternUtilsCache;->mService:Lcom/android/internal/widget/ILockSettings;
 
     invoke-interface {v1, p1}, Lcom/android/internal/widget/ILockSettings;->getParentControlPasswordHashSize(I)I
 
     move-result v0
 
-    .line 337
     .local v0, "result":I
     const-string v1, "LockPatternUtils.Cache.HasLockParentControlPasswordHashSizeCacheKey"
 
@@ -809,7 +747,6 @@
 
     invoke-direct {p0, v1, p1, v2}, Lcom/android/internal/widget/LockPatternUtilsCache;->putCache(Ljava/lang/String;ILjava/lang/Object;)V
 
-    .line 338
     return v0
 .end method
 
@@ -823,7 +760,6 @@
     .end annotation
 
     .prologue
-    .line 367
     iget-object v0, p0, Lcom/android/internal/widget/LockPatternUtilsCache;->mService:Lcom/android/internal/widget/ILockSettings;
 
     invoke-interface {v0, p1}, Lcom/android/internal/widget/ILockSettings;->getSignatureInfo(I)[B
@@ -845,26 +781,21 @@
     .end annotation
 
     .prologue
-    .line 101
     invoke-direct {p0, p1, p3}, Lcom/android/internal/widget/LockPatternUtilsCache;->peekCache(Ljava/lang/String;I)Ljava/lang/Object;
 
     move-result-object v1
 
-    .line 102
     .local v1, "value":Ljava/lang/Object;
     instance-of v2, v1, Ljava/lang/String;
 
     if-eqz v2, :cond_0
 
-    .line 103
     check-cast v1, Ljava/lang/String;
 
-    .line 107
     .end local v1    # "value":Ljava/lang/Object;
     :goto_0
     return-object v1
 
-    .line 105
     .restart local v1    # "value":Ljava/lang/Object;
     :cond_0
     iget-object v2, p0, Lcom/android/internal/widget/LockPatternUtilsCache;->mService:Lcom/android/internal/widget/ILockSettings;
@@ -873,13 +804,11 @@
 
     move-result-object v0
 
-    .line 106
     .local v0, "result":Ljava/lang/String;
     invoke-direct {p0, p1, p3, v0}, Lcom/android/internal/widget/LockPatternUtilsCache;->putCache(Ljava/lang/String;ILjava/lang/Object;)V
 
     move-object v1, v0
 
-    .line 107
     goto :goto_0
 .end method
 
@@ -893,20 +822,17 @@
     .end annotation
 
     .prologue
-    .line 185
     const-string v2, "LockPatternUtils.Cache.HasLockBackupPinCacheKey"
 
     invoke-direct {p0, v2, p1}, Lcom/android/internal/widget/LockPatternUtilsCache;->peekCache(Ljava/lang/String;I)Ljava/lang/Object;
 
     move-result-object v1
 
-    .line 186
     .local v1, "value":Ljava/lang/Object;
     instance-of v2, v1, Ljava/lang/Boolean;
 
     if-eqz v2, :cond_0
 
-    .line 187
     check-cast v1, Ljava/lang/Boolean;
 
     .end local v1    # "value":Ljava/lang/Object;
@@ -914,11 +840,9 @@
 
     move-result v0
 
-    .line 191
     :goto_0
     return v0
 
-    .line 189
     .restart local v1    # "value":Ljava/lang/Object;
     :cond_0
     iget-object v2, p0, Lcom/android/internal/widget/LockPatternUtilsCache;->mService:Lcom/android/internal/widget/ILockSettings;
@@ -927,7 +851,6 @@
 
     move-result v0
 
-    .line 190
     .local v0, "result":Z
     const-string v2, "LockPatternUtils.Cache.HasLockBackupPinCacheKey"
 
@@ -950,20 +873,17 @@
     .end annotation
 
     .prologue
-    .line 543
     const-string v2, "LockPatternUtils.Cache.HasLockCarrierPasswordCacheKey"
 
     invoke-direct {p0, v2, p1}, Lcom/android/internal/widget/LockPatternUtilsCache;->peekCache(Ljava/lang/String;I)Ljava/lang/Object;
 
     move-result-object v1
 
-    .line 544
     .local v1, "value":Ljava/lang/Object;
     instance-of v2, v1, Ljava/lang/Boolean;
 
     if-eqz v2, :cond_0
 
-    .line 545
     check-cast v1, Ljava/lang/Boolean;
 
     .end local v1    # "value":Ljava/lang/Object;
@@ -971,11 +891,9 @@
 
     move-result v0
 
-    .line 549
     :goto_0
     return v0
 
-    .line 547
     .restart local v1    # "value":Ljava/lang/Object;
     :cond_0
     iget-object v2, p0, Lcom/android/internal/widget/LockPatternUtilsCache;->mService:Lcom/android/internal/widget/ILockSettings;
@@ -984,7 +902,6 @@
 
     move-result v0
 
-    .line 548
     .local v0, "result":Z
     const-string v2, "LockPatternUtils.Cache.HasLockCarrierPasswordCacheKey"
 
@@ -1007,20 +924,17 @@
     .end annotation
 
     .prologue
-    .line 501
     const-string v2, "LockPatternUtils.Cache.HasLockFMMPasswordCacheKey"
 
     invoke-direct {p0, v2, p1}, Lcom/android/internal/widget/LockPatternUtilsCache;->peekCache(Ljava/lang/String;I)Ljava/lang/Object;
 
     move-result-object v1
 
-    .line 502
     .local v1, "value":Ljava/lang/Object;
     instance-of v2, v1, Ljava/lang/Boolean;
 
     if-eqz v2, :cond_0
 
-    .line 503
     check-cast v1, Ljava/lang/Boolean;
 
     .end local v1    # "value":Ljava/lang/Object;
@@ -1028,11 +942,9 @@
 
     move-result v0
 
-    .line 507
     :goto_0
     return v0
 
-    .line 505
     .restart local v1    # "value":Ljava/lang/Object;
     :cond_0
     iget-object v2, p0, Lcom/android/internal/widget/LockPatternUtilsCache;->mService:Lcom/android/internal/widget/ILockSettings;
@@ -1041,7 +953,6 @@
 
     move-result v0
 
-    .line 506
     .local v0, "result":Z
     const-string v2, "LockPatternUtils.Cache.HasLockFMMPasswordCacheKey"
 
@@ -1064,20 +975,17 @@
     .end annotation
 
     .prologue
-    .line 298
     const-string v2, "LockPatternUtils.Cache.HasLockFingerprintPasswordCacheKey"
 
     invoke-direct {p0, v2, p1}, Lcom/android/internal/widget/LockPatternUtilsCache;->peekCache(Ljava/lang/String;I)Ljava/lang/Object;
 
     move-result-object v1
 
-    .line 299
     .local v1, "value":Ljava/lang/Object;
     instance-of v2, v1, Ljava/lang/Boolean;
 
     if-eqz v2, :cond_0
 
-    .line 300
     check-cast v1, Ljava/lang/Boolean;
 
     .end local v1    # "value":Ljava/lang/Object;
@@ -1085,11 +993,9 @@
 
     move-result v0
 
-    .line 304
     :goto_0
     return v0
 
-    .line 302
     .restart local v1    # "value":Ljava/lang/Object;
     :cond_0
     iget-object v2, p0, Lcom/android/internal/widget/LockPatternUtilsCache;->mService:Lcom/android/internal/widget/ILockSettings;
@@ -1098,7 +1004,6 @@
 
     move-result v0
 
-    .line 303
     .local v0, "result":Z
     const-string v2, "LockPatternUtils.Cache.HasLockFingerprintPasswordCacheKey"
 
@@ -1121,20 +1026,17 @@
     .end annotation
 
     .prologue
-    .line 321
     const-string v2, "LockPatternUtils.Cache.HasLockParentControlPasswordCacheKey"
 
     invoke-direct {p0, v2, p1}, Lcom/android/internal/widget/LockPatternUtilsCache;->peekCache(Ljava/lang/String;I)Ljava/lang/Object;
 
     move-result-object v1
 
-    .line 322
     .local v1, "value":Ljava/lang/Object;
     instance-of v2, v1, Ljava/lang/Boolean;
 
     if-eqz v2, :cond_0
 
-    .line 323
     check-cast v1, Ljava/lang/Boolean;
 
     .end local v1    # "value":Ljava/lang/Object;
@@ -1142,11 +1044,9 @@
 
     move-result v0
 
-    .line 327
     :goto_0
     return v0
 
-    .line 325
     .restart local v1    # "value":Ljava/lang/Object;
     :cond_0
     iget-object v2, p0, Lcom/android/internal/widget/LockPatternUtilsCache;->mService:Lcom/android/internal/widget/ILockSettings;
@@ -1155,7 +1055,6 @@
 
     move-result v0
 
-    .line 326
     .local v0, "result":Z
     const-string v2, "LockPatternUtils.Cache.HasLockParentControlPasswordCacheKey"
 
@@ -1178,20 +1077,17 @@
     .end annotation
 
     .prologue
-    .line 174
     const-string v2, "LockPatternUtils.Cache.HasLockPasswordCacheKey"
 
     invoke-direct {p0, v2, p1}, Lcom/android/internal/widget/LockPatternUtilsCache;->peekCache(Ljava/lang/String;I)Ljava/lang/Object;
 
     move-result-object v1
 
-    .line 175
     .local v1, "value":Ljava/lang/Object;
     instance-of v2, v1, Ljava/lang/Boolean;
 
     if-eqz v2, :cond_0
 
-    .line 176
     check-cast v1, Ljava/lang/Boolean;
 
     .end local v1    # "value":Ljava/lang/Object;
@@ -1199,11 +1095,9 @@
 
     move-result v0
 
-    .line 180
     :goto_0
     return v0
 
-    .line 178
     .restart local v1    # "value":Ljava/lang/Object;
     :cond_0
     iget-object v2, p0, Lcom/android/internal/widget/LockPatternUtilsCache;->mService:Lcom/android/internal/widget/ILockSettings;
@@ -1212,7 +1106,6 @@
 
     move-result v0
 
-    .line 179
     .local v0, "result":Z
     const-string v2, "LockPatternUtils.Cache.HasLockPasswordCacheKey"
 
@@ -1235,20 +1128,17 @@
     .end annotation
 
     .prologue
-    .line 163
     const-string v2, "LockPatternUtils.Cache.HasLockPatternCacheKey"
 
     invoke-direct {p0, v2, p1}, Lcom/android/internal/widget/LockPatternUtilsCache;->peekCache(Ljava/lang/String;I)Ljava/lang/Object;
 
     move-result-object v1
 
-    .line 164
     .local v1, "value":Ljava/lang/Object;
     instance-of v2, v1, Ljava/lang/Boolean;
 
     if-eqz v2, :cond_0
 
-    .line 165
     check-cast v1, Ljava/lang/Boolean;
 
     .end local v1    # "value":Ljava/lang/Object;
@@ -1256,11 +1146,9 @@
 
     move-result v0
 
-    .line 169
     :goto_0
     return v0
 
-    .line 167
     .restart local v1    # "value":Ljava/lang/Object;
     :cond_0
     iget-object v2, p0, Lcom/android/internal/widget/LockPatternUtilsCache;->mService:Lcom/android/internal/widget/ILockSettings;
@@ -1269,7 +1157,6 @@
 
     move-result v0
 
-    .line 168
     .local v0, "result":Z
     const-string v2, "LockPatternUtils.Cache.HasLockPatternCacheKey"
 
@@ -1292,20 +1179,17 @@
     .end annotation
 
     .prologue
-    .line 467
     const-string v2, "LockPatternUtils.Cache.HasLockPersonalModeBackupPinCacheKey"
 
     invoke-direct {p0, v2, p1}, Lcom/android/internal/widget/LockPatternUtilsCache;->peekCache(Ljava/lang/String;I)Ljava/lang/Object;
 
     move-result-object v1
 
-    .line 468
     .local v1, "value":Ljava/lang/Object;
     instance-of v2, v1, Ljava/lang/Boolean;
 
     if-eqz v2, :cond_0
 
-    .line 469
     check-cast v1, Ljava/lang/Boolean;
 
     .end local v1    # "value":Ljava/lang/Object;
@@ -1313,11 +1197,9 @@
 
     move-result v0
 
-    .line 473
     :goto_0
     return v0
 
-    .line 471
     .restart local v1    # "value":Ljava/lang/Object;
     :cond_0
     iget-object v2, p0, Lcom/android/internal/widget/LockPatternUtilsCache;->mService:Lcom/android/internal/widget/ILockSettings;
@@ -1326,7 +1208,6 @@
 
     move-result v0
 
-    .line 472
     .local v0, "result":Z
     const-string v2, "LockPatternUtils.Cache.HasLockPersonalModeBackupPinCacheKey"
 
@@ -1349,20 +1230,17 @@
     .end annotation
 
     .prologue
-    .line 478
     const-string v2, "LockPatternUtils.Cache.HasLockPersonalModeFingerprintPasswordCacheKey"
 
     invoke-direct {p0, v2, p1}, Lcom/android/internal/widget/LockPatternUtilsCache;->peekCache(Ljava/lang/String;I)Ljava/lang/Object;
 
     move-result-object v1
 
-    .line 479
     .local v1, "value":Ljava/lang/Object;
     instance-of v2, v1, Ljava/lang/Boolean;
 
     if-eqz v2, :cond_0
 
-    .line 480
     check-cast v1, Ljava/lang/Boolean;
 
     .end local v1    # "value":Ljava/lang/Object;
@@ -1370,11 +1248,9 @@
 
     move-result v0
 
-    .line 484
     :goto_0
     return v0
 
-    .line 482
     .restart local v1    # "value":Ljava/lang/Object;
     :cond_0
     iget-object v2, p0, Lcom/android/internal/widget/LockPatternUtilsCache;->mService:Lcom/android/internal/widget/ILockSettings;
@@ -1383,7 +1259,6 @@
 
     move-result v0
 
-    .line 483
     .local v0, "result":Z
     const-string v2, "LockPatternUtils.Cache.HasLockPersonalModeFingerprintPasswordCacheKey"
 
@@ -1406,20 +1281,17 @@
     .end annotation
 
     .prologue
-    .line 445
     const-string v2, "LockPatternUtils.Cache.HasLockPersonalModePasswordCacheKey"
 
     invoke-direct {p0, v2, p1}, Lcom/android/internal/widget/LockPatternUtilsCache;->peekCache(Ljava/lang/String;I)Ljava/lang/Object;
 
     move-result-object v1
 
-    .line 446
     .local v1, "value":Ljava/lang/Object;
     instance-of v2, v1, Ljava/lang/Boolean;
 
     if-eqz v2, :cond_0
 
-    .line 447
     check-cast v1, Ljava/lang/Boolean;
 
     .end local v1    # "value":Ljava/lang/Object;
@@ -1427,11 +1299,9 @@
 
     move-result v0
 
-    .line 451
     :goto_0
     return v0
 
-    .line 449
     .restart local v1    # "value":Ljava/lang/Object;
     :cond_0
     iget-object v2, p0, Lcom/android/internal/widget/LockPatternUtilsCache;->mService:Lcom/android/internal/widget/ILockSettings;
@@ -1440,7 +1310,6 @@
 
     move-result v0
 
-    .line 450
     .local v0, "result":Z
     const-string v2, "LockPatternUtils.Cache.HasLockPersonalModePasswordCacheKey"
 
@@ -1463,20 +1332,17 @@
     .end annotation
 
     .prologue
-    .line 456
     const-string v2, "LockPatternUtils.Cache.HasLockPersonalModePatternCacheKey"
 
     invoke-direct {p0, v2, p1}, Lcom/android/internal/widget/LockPatternUtilsCache;->peekCache(Ljava/lang/String;I)Ljava/lang/Object;
 
     move-result-object v1
 
-    .line 457
     .local v1, "value":Ljava/lang/Object;
     instance-of v2, v1, Ljava/lang/Boolean;
 
     if-eqz v2, :cond_0
 
-    .line 458
     check-cast v1, Ljava/lang/Boolean;
 
     .end local v1    # "value":Ljava/lang/Object;
@@ -1484,11 +1350,9 @@
 
     move-result v0
 
-    .line 462
     :goto_0
     return v0
 
-    .line 460
     .restart local v1    # "value":Ljava/lang/Object;
     :cond_0
     iget-object v2, p0, Lcom/android/internal/widget/LockPatternUtilsCache;->mService:Lcom/android/internal/widget/ILockSettings;
@@ -1497,7 +1361,6 @@
 
     move-result v0
 
-    .line 461
     .local v0, "result":Z
     const-string v2, "LockPatternUtils.Cache.HasLockPersonalModePatternCacheKey"
 
@@ -1520,20 +1383,17 @@
     .end annotation
 
     .prologue
-    .line 434
     const-string v2, "LockPatternUtils.Cache.HasLockPersonalModePinCacheKey"
 
     invoke-direct {p0, v2, p1}, Lcom/android/internal/widget/LockPatternUtilsCache;->peekCache(Ljava/lang/String;I)Ljava/lang/Object;
 
     move-result-object v1
 
-    .line 435
     .local v1, "value":Ljava/lang/Object;
     instance-of v2, v1, Ljava/lang/Boolean;
 
     if-eqz v2, :cond_0
 
-    .line 436
     check-cast v1, Ljava/lang/Boolean;
 
     .end local v1    # "value":Ljava/lang/Object;
@@ -1541,11 +1401,9 @@
 
     move-result v0
 
-    .line 440
     :goto_0
     return v0
 
-    .line 438
     .restart local v1    # "value":Ljava/lang/Object;
     :cond_0
     iget-object v2, p0, Lcom/android/internal/widget/LockPatternUtilsCache;->mService:Lcom/android/internal/widget/ILockSettings;
@@ -1554,7 +1412,6 @@
 
     move-result v0
 
-    .line 439
     .local v0, "result":Z
     const-string v2, "LockPatternUtils.Cache.HasLockPersonalModePinCacheKey"
 
@@ -1577,7 +1434,6 @@
     .end annotation
 
     .prologue
-    .line 347
     iget-object v0, p0, Lcom/android/internal/widget/LockPatternUtilsCache;->mService:Lcom/android/internal/widget/ILockSettings;
 
     invoke-interface {v0, p1}, Lcom/android/internal/widget/ILockSettings;->haveSignature(I)Z
@@ -1597,7 +1453,6 @@
     .end annotation
 
     .prologue
-    .line 352
     iget-object v0, p0, Lcom/android/internal/widget/LockPatternUtilsCache;->mService:Lcom/android/internal/widget/ILockSettings;
 
     invoke-interface {v0, p1}, Lcom/android/internal/widget/ILockSettings;->haveSignatureBackupPin(I)Z
@@ -1617,12 +1472,10 @@
     .end annotation
 
     .prologue
-    .line 201
     iget-object v0, p0, Lcom/android/internal/widget/LockPatternUtilsCache;->mService:Lcom/android/internal/widget/ILockSettings;
 
     invoke-interface {v0, p1}, Lcom/android/internal/widget/ILockSettings;->registerObserver(Lcom/android/internal/widget/ILockSettingsObserver;)V
 
-    .line 202
     return-void
 .end method
 
@@ -1636,12 +1489,10 @@
     .end annotation
 
     .prologue
-    .line 196
     iget-object v0, p0, Lcom/android/internal/widget/LockPatternUtilsCache;->mService:Lcom/android/internal/widget/ILockSettings;
 
     invoke-interface {v0, p1}, Lcom/android/internal/widget/ILockSettings;->removeUser(I)V
 
-    .line 197
     return-void
 .end method
 
@@ -1657,22 +1508,18 @@
     .end annotation
 
     .prologue
-    .line 73
     invoke-direct {p0, p1, p3}, Lcom/android/internal/widget/LockPatternUtilsCache;->invalidateCache(Ljava/lang/String;I)V
 
-    .line 74
     iget-object v0, p0, Lcom/android/internal/widget/LockPatternUtilsCache;->mService:Lcom/android/internal/widget/ILockSettings;
 
     invoke-interface {v0, p1, p2, p3}, Lcom/android/internal/widget/ILockSettings;->setBoolean(Ljava/lang/String;ZI)V
 
-    .line 75
     invoke-static {p2}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
 
     move-result-object v0
 
     invoke-direct {p0, p1, p3, v0}, Lcom/android/internal/widget/LockPatternUtilsCache;->putCache(Ljava/lang/String;ILjava/lang/Object;)V
 
-    .line 76
     return-void
 .end method
 
@@ -1686,25 +1533,21 @@
     .end annotation
 
     .prologue
-    .line 523
     const-string v1, "LockPatternUtils.Cache.IsCarrierLockPlusEnabledCacheKey"
 
     invoke-direct {p0, v1, p1}, Lcom/android/internal/widget/LockPatternUtilsCache;->invalidateCache(Ljava/lang/String;I)V
 
-    .line 524
     iget-object v1, p0, Lcom/android/internal/widget/LockPatternUtilsCache;->mService:Lcom/android/internal/widget/ILockSettings;
 
     invoke-interface {v1, p1}, Lcom/android/internal/widget/ILockSettings;->getCarrierLockPlusMode(I)Z
 
     move-result v0
 
-    .line 525
     .local v0, "result":Z
     iget-object v1, p0, Lcom/android/internal/widget/LockPatternUtilsCache;->mService:Lcom/android/internal/widget/ILockSettings;
 
     invoke-interface {v1, p1}, Lcom/android/internal/widget/ILockSettings;->setCarrierLockPlusEnabled(I)V
 
-    .line 526
     const-string v1, "LockPatternUtils.Cache.IsCarrierLockPlusEnabledCacheKey"
 
     invoke-static {v0}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
@@ -1713,7 +1556,6 @@
 
     invoke-direct {p0, v1, p1, v2}, Lcom/android/internal/widget/LockPatternUtilsCache;->putCache(Ljava/lang/String;ILjava/lang/Object;)V
 
-    .line 527
     return-void
 .end method
 
@@ -1728,17 +1570,14 @@
     .end annotation
 
     .prologue
-    .line 146
     const-string v0, "LockPatternUtils.Cache.HasLockBackupPinCacheKey"
 
     invoke-direct {p0, v0, p2}, Lcom/android/internal/widget/LockPatternUtilsCache;->invalidateCache(Ljava/lang/String;I)V
 
-    .line 147
     iget-object v0, p0, Lcom/android/internal/widget/LockPatternUtilsCache;->mService:Lcom/android/internal/widget/ILockSettings;
 
     invoke-interface {v0, p1, p2}, Lcom/android/internal/widget/ILockSettings;->setLockBackupPin(Ljava/lang/String;I)V
 
-    .line 148
     const-string v1, "LockPatternUtils.Cache.HasLockBackupPinCacheKey"
 
     if-eqz p1, :cond_0
@@ -1752,10 +1591,8 @@
 
     invoke-direct {p0, v1, p2, v0}, Lcom/android/internal/widget/LockPatternUtilsCache;->putCache(Ljava/lang/String;ILjava/lang/Object;)V
 
-    .line 149
     return-void
 
-    .line 148
     :cond_0
     const/4 v0, 0x0
 
@@ -1773,17 +1610,14 @@
     .end annotation
 
     .prologue
-    .line 531
     const-string v0, "LockPatternUtils.Cache.HasLockCarrierPasswordCacheKey"
 
     invoke-direct {p0, v0, p2}, Lcom/android/internal/widget/LockPatternUtilsCache;->invalidateCache(Ljava/lang/String;I)V
 
-    .line 532
     iget-object v0, p0, Lcom/android/internal/widget/LockPatternUtilsCache;->mService:Lcom/android/internal/widget/ILockSettings;
 
     invoke-interface {v0, p1, p2}, Lcom/android/internal/widget/ILockSettings;->setLockCarrierPassword(Ljava/lang/String;I)V
 
-    .line 533
     const-string v1, "LockPatternUtils.Cache.HasLockCarrierPasswordCacheKey"
 
     if-eqz p1, :cond_0
@@ -1797,10 +1631,8 @@
 
     invoke-direct {p0, v1, p2, v0}, Lcom/android/internal/widget/LockPatternUtilsCache;->putCache(Ljava/lang/String;ILjava/lang/Object;)V
 
-    .line 534
     return-void
 
-    .line 533
     :cond_0
     const/4 v0, 0x0
 
@@ -1818,17 +1650,14 @@
     .end annotation
 
     .prologue
-    .line 489
     const-string v0, "LockPatternUtils.Cache.HasLockFMMPasswordCacheKey"
 
     invoke-direct {p0, v0, p2}, Lcom/android/internal/widget/LockPatternUtilsCache;->invalidateCache(Ljava/lang/String;I)V
 
-    .line 490
     iget-object v0, p0, Lcom/android/internal/widget/LockPatternUtilsCache;->mService:Lcom/android/internal/widget/ILockSettings;
 
     invoke-interface {v0, p1, p2}, Lcom/android/internal/widget/ILockSettings;->setLockFMMPassword(Ljava/lang/String;I)V
 
-    .line 491
     const-string v1, "LockPatternUtils.Cache.HasLockFMMPasswordCacheKey"
 
     if-eqz p1, :cond_0
@@ -1842,10 +1671,8 @@
 
     invoke-direct {p0, v1, p2, v0}, Lcom/android/internal/widget/LockPatternUtilsCache;->putCache(Ljava/lang/String;ILjava/lang/Object;)V
 
-    .line 492
     return-void
 
-    .line 491
     :cond_0
     const/4 v0, 0x0
 
@@ -1863,17 +1690,14 @@
     .end annotation
 
     .prologue
-    .line 286
     const-string v0, "LockPatternUtils.Cache.HasLockFingerprintPasswordCacheKey"
 
     invoke-direct {p0, v0, p2}, Lcom/android/internal/widget/LockPatternUtilsCache;->invalidateCache(Ljava/lang/String;I)V
 
-    .line 287
     iget-object v0, p0, Lcom/android/internal/widget/LockPatternUtilsCache;->mService:Lcom/android/internal/widget/ILockSettings;
 
     invoke-interface {v0, p1, p2}, Lcom/android/internal/widget/ILockSettings;->setLockFingerprintPassword(Ljava/lang/String;I)V
 
-    .line 288
     const-string v1, "LockPatternUtils.Cache.HasLockFingerprintPasswordCacheKey"
 
     if-eqz p1, :cond_0
@@ -1887,10 +1711,8 @@
 
     invoke-direct {p0, v1, p2, v0}, Lcom/android/internal/widget/LockPatternUtilsCache;->putCache(Ljava/lang/String;ILjava/lang/Object;)V
 
-    .line 289
     return-void
 
-    .line 288
     :cond_0
     const/4 v0, 0x0
 
@@ -1908,17 +1730,14 @@
     .end annotation
 
     .prologue
-    .line 309
     const-string v0, "LockPatternUtils.Cache.HasLockParentControlPasswordCacheKey"
 
     invoke-direct {p0, v0, p2}, Lcom/android/internal/widget/LockPatternUtilsCache;->invalidateCache(Ljava/lang/String;I)V
 
-    .line 310
     iget-object v0, p0, Lcom/android/internal/widget/LockPatternUtilsCache;->mService:Lcom/android/internal/widget/ILockSettings;
 
     invoke-interface {v0, p1, p2}, Lcom/android/internal/widget/ILockSettings;->setLockParentControlPassword([BI)V
 
-    .line 311
     const-string v1, "LockPatternUtils.Cache.HasLockParentControlPasswordCacheKey"
 
     if-eqz p1, :cond_0
@@ -1932,10 +1751,8 @@
 
     invoke-direct {p0, v1, p2, v0}, Lcom/android/internal/widget/LockPatternUtilsCache;->putCache(Ljava/lang/String;ILjava/lang/Object;)V
 
-    .line 312
     return-void
 
-    .line 311
     :cond_0
     const/4 v0, 0x0
 
@@ -1953,17 +1770,14 @@
     .end annotation
 
     .prologue
-    .line 134
     const-string v0, "LockPatternUtils.Cache.HasLockPasswordCacheKey"
 
     invoke-direct {p0, v0, p2}, Lcom/android/internal/widget/LockPatternUtilsCache;->invalidateCache(Ljava/lang/String;I)V
 
-    .line 135
     iget-object v0, p0, Lcom/android/internal/widget/LockPatternUtilsCache;->mService:Lcom/android/internal/widget/ILockSettings;
 
     invoke-interface {v0, p1, p2}, Lcom/android/internal/widget/ILockSettings;->setLockPassword(Ljava/lang/String;I)V
 
-    .line 136
     const-string v1, "LockPatternUtils.Cache.HasLockPasswordCacheKey"
 
     if-eqz p1, :cond_0
@@ -1977,10 +1791,8 @@
 
     invoke-direct {p0, v1, p2, v0}, Lcom/android/internal/widget/LockPatternUtilsCache;->putCache(Ljava/lang/String;ILjava/lang/Object;)V
 
-    .line 137
     return-void
 
-    .line 136
     :cond_0
     const/4 v0, 0x0
 
@@ -1998,17 +1810,14 @@
     .end annotation
 
     .prologue
-    .line 122
     const-string v0, "LockPatternUtils.Cache.HasLockPatternCacheKey"
 
     invoke-direct {p0, v0, p2}, Lcom/android/internal/widget/LockPatternUtilsCache;->invalidateCache(Ljava/lang/String;I)V
 
-    .line 123
     iget-object v0, p0, Lcom/android/internal/widget/LockPatternUtilsCache;->mService:Lcom/android/internal/widget/ILockSettings;
 
     invoke-interface {v0, p1, p2}, Lcom/android/internal/widget/ILockSettings;->setLockPattern(Ljava/lang/String;I)V
 
-    .line 124
     const-string v1, "LockPatternUtils.Cache.HasLockPatternCacheKey"
 
     if-eqz p1, :cond_0
@@ -2022,10 +1831,8 @@
 
     invoke-direct {p0, v1, p2, v0}, Lcom/android/internal/widget/LockPatternUtilsCache;->putCache(Ljava/lang/String;ILjava/lang/Object;)V
 
-    .line 125
     return-void
 
-    .line 124
     :cond_0
     const/4 v0, 0x0
 
@@ -2044,22 +1851,18 @@
     .end annotation
 
     .prologue
-    .line 79
     invoke-direct {p0, p1, p4}, Lcom/android/internal/widget/LockPatternUtilsCache;->invalidateCache(Ljava/lang/String;I)V
 
-    .line 80
     iget-object v0, p0, Lcom/android/internal/widget/LockPatternUtilsCache;->mService:Lcom/android/internal/widget/ILockSettings;
 
     invoke-interface {v0, p1, p2, p3, p4}, Lcom/android/internal/widget/ILockSettings;->setLong(Ljava/lang/String;JI)V
 
-    .line 81
     invoke-static {p2, p3}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
 
     move-result-object v0
 
     invoke-direct {p0, p1, p4, v0}, Lcom/android/internal/widget/LockPatternUtilsCache;->putCache(Ljava/lang/String;ILjava/lang/Object;)V
 
-    .line 82
     return-void
 .end method
 
@@ -2074,17 +1877,14 @@
     .end annotation
 
     .prologue
-    .line 401
     const-string v0, "LockPatternUtils.Cache.HasLockPersonalModeFingerprintPasswordCacheKey"
 
     invoke-direct {p0, v0, p2}, Lcom/android/internal/widget/LockPatternUtilsCache;->invalidateCache(Ljava/lang/String;I)V
 
-    .line 402
     iget-object v0, p0, Lcom/android/internal/widget/LockPatternUtilsCache;->mService:Lcom/android/internal/widget/ILockSettings;
 
     invoke-interface {v0, p1, p2}, Lcom/android/internal/widget/ILockSettings;->setPersonalModeFingerprintPassword(Ljava/lang/String;I)V
 
-    .line 403
     const-string v1, "LockPatternUtils.Cache.HasLockPersonalModeFingerprintPasswordCacheKey"
 
     if-eqz p1, :cond_0
@@ -2098,10 +1898,8 @@
 
     invoke-direct {p0, v1, p2, v0}, Lcom/android/internal/widget/LockPatternUtilsCache;->putCache(Ljava/lang/String;ILjava/lang/Object;)V
 
-    .line 404
     return-void
 
-    .line 403
     :cond_0
     const/4 v0, 0x0
 
@@ -2119,17 +1917,14 @@
     .end annotation
 
     .prologue
-    .line 393
     const-string v0, "LockPatternUtils.Cache.HasLockPersonalModeBackupPinCacheKey"
 
     invoke-direct {p0, v0, p2}, Lcom/android/internal/widget/LockPatternUtilsCache;->invalidateCache(Ljava/lang/String;I)V
 
-    .line 394
     iget-object v0, p0, Lcom/android/internal/widget/LockPatternUtilsCache;->mService:Lcom/android/internal/widget/ILockSettings;
 
     invoke-interface {v0, p1, p2}, Lcom/android/internal/widget/ILockSettings;->setPersonalModeLockBackupPin(Ljava/lang/String;I)V
 
-    .line 395
     const-string v1, "LockPatternUtils.Cache.HasLockPersonalModeBackupPinCacheKey"
 
     if-eqz p1, :cond_0
@@ -2143,10 +1938,8 @@
 
     invoke-direct {p0, v1, p2, v0}, Lcom/android/internal/widget/LockPatternUtilsCache;->putCache(Ljava/lang/String;ILjava/lang/Object;)V
 
-    .line 396
     return-void
 
-    .line 395
     :cond_0
     const/4 v0, 0x0
 
@@ -2164,17 +1957,14 @@
     .end annotation
 
     .prologue
-    .line 379
     const-string v0, "LockPatternUtils.Cache.HasLockPersonalModePasswordCacheKey"
 
     invoke-direct {p0, v0, p2}, Lcom/android/internal/widget/LockPatternUtilsCache;->invalidateCache(Ljava/lang/String;I)V
 
-    .line 380
     iget-object v0, p0, Lcom/android/internal/widget/LockPatternUtilsCache;->mService:Lcom/android/internal/widget/ILockSettings;
 
     invoke-interface {v0, p1, p2}, Lcom/android/internal/widget/ILockSettings;->setPersonalModeLockPassword(Ljava/lang/String;I)V
 
-    .line 381
     const-string v1, "LockPatternUtils.Cache.HasLockPersonalModePasswordCacheKey"
 
     if-eqz p1, :cond_0
@@ -2188,10 +1978,8 @@
 
     invoke-direct {p0, v1, p2, v0}, Lcom/android/internal/widget/LockPatternUtilsCache;->putCache(Ljava/lang/String;ILjava/lang/Object;)V
 
-    .line 382
     return-void
 
-    .line 381
     :cond_0
     const/4 v0, 0x0
 
@@ -2209,17 +1997,14 @@
     .end annotation
 
     .prologue
-    .line 386
     const-string v0, "LockPatternUtils.Cache.HasLockPersonalModePatternCacheKey"
 
     invoke-direct {p0, v0, p2}, Lcom/android/internal/widget/LockPatternUtilsCache;->invalidateCache(Ljava/lang/String;I)V
 
-    .line 387
     iget-object v0, p0, Lcom/android/internal/widget/LockPatternUtilsCache;->mService:Lcom/android/internal/widget/ILockSettings;
 
     invoke-interface {v0, p1, p2}, Lcom/android/internal/widget/ILockSettings;->setPersonalModeLockPattern(Ljava/lang/String;I)V
 
-    .line 388
     const-string v1, "LockPatternUtils.Cache.HasLockPersonalModePatternCacheKey"
 
     if-eqz p1, :cond_0
@@ -2233,10 +2018,8 @@
 
     invoke-direct {p0, v1, p2, v0}, Lcom/android/internal/widget/LockPatternUtilsCache;->putCache(Ljava/lang/String;ILjava/lang/Object;)V
 
-    .line 389
     return-void
 
-    .line 388
     :cond_0
     const/4 v0, 0x0
 
@@ -2254,17 +2037,14 @@
     .end annotation
 
     .prologue
-    .line 372
     const-string v0, "LockPatternUtils.Cache.HasLockPersonalModePinCacheKey"
 
     invoke-direct {p0, v0, p2}, Lcom/android/internal/widget/LockPatternUtilsCache;->invalidateCache(Ljava/lang/String;I)V
 
-    .line 373
     iget-object v0, p0, Lcom/android/internal/widget/LockPatternUtilsCache;->mService:Lcom/android/internal/widget/ILockSettings;
 
     invoke-interface {v0, p1, p2}, Lcom/android/internal/widget/ILockSettings;->setPersonalModeLockPin(Ljava/lang/String;I)V
 
-    .line 374
     const-string v1, "LockPatternUtils.Cache.HasLockPersonalModePinCacheKey"
 
     if-eqz p1, :cond_0
@@ -2278,10 +2058,8 @@
 
     invoke-direct {p0, v1, p2, v0}, Lcom/android/internal/widget/LockPatternUtilsCache;->putCache(Ljava/lang/String;ILjava/lang/Object;)V
 
-    .line 375
     return-void
 
-    .line 374
     :cond_0
     const/4 v0, 0x0
 
@@ -2299,12 +2077,10 @@
     .end annotation
 
     .prologue
-    .line 343
     iget-object v0, p0, Lcom/android/internal/widget/LockPatternUtilsCache;->mService:Lcom/android/internal/widget/ILockSettings;
 
     invoke-interface {v0, p1, p2}, Lcom/android/internal/widget/ILockSettings;->setSignatureBackupPin([BI)V
 
-    .line 344
     return-void
 .end method
 
@@ -2319,12 +2095,10 @@
     .end annotation
 
     .prologue
-    .line 357
     iget-object v0, p0, Lcom/android/internal/widget/LockPatternUtilsCache;->mService:Lcom/android/internal/widget/ILockSettings;
 
     invoke-interface {v0, p1, p2}, Lcom/android/internal/widget/ILockSettings;->setSignatureInfo([BI)V
 
-    .line 358
     return-void
 .end method
 
@@ -2340,18 +2114,14 @@
     .end annotation
 
     .prologue
-    .line 85
     invoke-direct {p0, p1, p3}, Lcom/android/internal/widget/LockPatternUtilsCache;->invalidateCache(Ljava/lang/String;I)V
 
-    .line 86
     iget-object v0, p0, Lcom/android/internal/widget/LockPatternUtilsCache;->mService:Lcom/android/internal/widget/ILockSettings;
 
     invoke-interface {v0, p1, p2, p3}, Lcom/android/internal/widget/ILockSettings;->setString(Ljava/lang/String;Ljava/lang/String;I)V
 
-    .line 87
     invoke-direct {p0, p1, p3, p2}, Lcom/android/internal/widget/LockPatternUtilsCache;->putCache(Ljava/lang/String;ILjava/lang/Object;)V
 
-    .line 88
     return-void
 .end method
 
@@ -2365,11 +2135,9 @@
     .end annotation
 
     .prologue
-    .line 206
     iget-object v0, p0, Lcom/android/internal/widget/LockPatternUtilsCache;->mService:Lcom/android/internal/widget/ILockSettings;
 
     invoke-interface {v0, p1}, Lcom/android/internal/widget/ILockSettings;->unregisterObserver(Lcom/android/internal/widget/ILockSettingsObserver;)V
 
-    .line 207
     return-void
 .end method

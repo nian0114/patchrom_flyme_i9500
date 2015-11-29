@@ -26,7 +26,6 @@
     .locals 0
 
     .prologue
-    .line 154
     iput-object p1, p0, Landroid/hardware/scontext/provider/sensorhubprovider/SensorHubProvider$1;->this$0:Landroid/hardware/scontext/provider/sensorhubprovider/SensorHubProvider;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -41,28 +40,23 @@
     .param p1, "event"    # Lcom/samsung/android/sensorhub/SensorHubEvent;
 
     .prologue
-    .line 158
     iget-object v2, p1, Lcom/samsung/android/sensorhub/SensorHubEvent;->sensorhub:Lcom/samsung/android/sensorhub/SensorHub;
 
     invoke-virtual {v2}, Lcom/samsung/android/sensorhub/SensorHub;->getType()I
 
     move-result v1
 
-    .line 159
     .local v1, "type":I
     new-instance v0, Landroid/os/Bundle;
 
     invoke-direct {v0}, Landroid/os/Bundle;-><init>()V
 
-    .line 160
     .local v0, "context":Landroid/os/Bundle;
     packed-switch v1, :pswitch_data_0
 
-    .line 166
     :goto_0
     return-void
 
-    .line 162
     :pswitch_0
     const-string v2, "Values"
 
@@ -70,7 +64,6 @@
 
     invoke-virtual {v0, v2, v3}, Landroid/os/Bundle;->putFloatArray(Ljava/lang/String;[F)V
 
-    .line 163
     iget-object v2, p0, Landroid/hardware/scontext/provider/sensorhubprovider/SensorHubProvider$1;->this$0:Landroid/hardware/scontext/provider/sensorhubprovider/SensorHubProvider;
 
     # getter for: Landroid/hardware/scontext/provider/sensorhubprovider/SensorHubProvider;->mListener:Landroid/hardware/scontext/provider/EventListener;
@@ -84,7 +77,6 @@
 
     goto :goto_0
 
-    .line 160
     nop
 
     :pswitch_data_0

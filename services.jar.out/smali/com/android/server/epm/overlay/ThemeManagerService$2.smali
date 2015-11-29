@@ -36,7 +36,6 @@
     .locals 0
 
     .prologue
-    .line 1459
     iput-object p1, p0, Lcom/android/server/epm/overlay/ThemeManagerService$2;->this$0:Lcom/android/server/epm/overlay/ThemeManagerService;
 
     iput-object p2, p0, Lcom/android/server/epm/overlay/ThemeManagerService$2;->val$r:Landroid/content/res/Resources;
@@ -60,7 +59,6 @@
     .locals 6
 
     .prologue
-    .line 1463
     iget-object v2, p0, Lcom/android/server/epm/overlay/ThemeManagerService$2;->val$r:Landroid/content/res/Resources;
 
     iget-object v3, p0, Lcom/android/server/epm/overlay/ThemeManagerService$2;->val$bitmapId:Ljava/lang/String;
@@ -73,11 +71,9 @@
 
     move-result v1
 
-    .line 1464
     .local v1, "resId":I
     if-eqz v1, :cond_0
 
-    .line 1469
     :try_start_0
     iget-object v2, p0, Lcom/android/server/epm/overlay/ThemeManagerService$2;->val$hl:Landroid/os/Handler;
 
@@ -89,16 +85,13 @@
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 1495
     :cond_0
     :goto_0
     return-void
 
-    .line 1488
     :catch_0
     move-exception v0
 
-    .line 1489
     .local v0, "e":Ljava/lang/Exception;
     invoke-virtual {v0}, Ljava/lang/Exception;->printStackTrace()V
 

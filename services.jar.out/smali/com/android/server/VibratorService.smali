@@ -135,7 +135,6 @@
     .prologue
     const/4 v3, 0x0
 
-    .line 79
     const/4 v0, 0x3
 
     new-array v0, v0, [Ljava/lang/String;
@@ -158,7 +157,6 @@
 
     sput-object v0, Lcom/android/server/VibratorService;->mTypeURIs:[Ljava/lang/String;
 
-    .line 84
     const/4 v0, 0x6
 
     new-array v0, v0, [I
@@ -167,10 +165,8 @@
 
     sput-object v0, Lcom/android/server/VibratorService;->LEVEL_TO_MAGNITUDE:[I
 
-    .line 85
     sput v3, Lcom/android/server/VibratorService;->HAS_DUAL_MOTORS:I
 
-    .line 86
     invoke-static {}, Lcom/samsung/android/feature/FloatingFeature;->getInstance()Lcom/samsung/android/feature/FloatingFeature;
 
     move-result-object v0
@@ -183,7 +179,6 @@
 
     sput-boolean v0, Lcom/android/server/VibratorService;->USE_VIBETONZ:Z
 
-    .line 87
     const-string v0, "Max"
 
     invoke-static {}, Lcom/sec/android/app/CscFeature;->getInstance()Lcom/sec/android/app/CscFeature;
@@ -204,7 +199,6 @@
 
     return-void
 
-    .line 84
     nop
 
     :array_0
@@ -231,103 +225,84 @@
 
     const/4 v3, 0x5
 
-    .line 205
     invoke-direct {p0}, Landroid/os/IVibratorService$Stub;-><init>()V
 
-    .line 91
     iput v4, p0, Lcom/android/server/VibratorService;->mDevHandle:I
 
-    .line 92
     const/16 v2, 0x7d0
 
     iput v2, p0, Lcom/android/server/VibratorService;->mImmVibeAlertOnCallMagnitude:I
 
-    .line 93
     sget-object v2, Lcom/android/server/VibratorService;->LEVEL_TO_MAGNITUDE:[I
 
     aget v2, v2, v3
 
     iput v2, p0, Lcom/android/server/VibratorService;->mImmVibeTouchMagnitude:I
 
-    .line 94
     sget-object v2, Lcom/android/server/VibratorService;->LEVEL_TO_MAGNITUDE:[I
 
     aget v2, v2, v3
 
     iput v2, p0, Lcom/android/server/VibratorService;->mImmVibeCallMagnitude:I
 
-    .line 95
     sget-object v2, Lcom/android/server/VibratorService;->LEVEL_TO_MAGNITUDE:[I
 
     aget v2, v2, v3
 
     iput v2, p0, Lcom/android/server/VibratorService;->mImmVibeNotiMagnitude:I
 
-    .line 96
     sget-object v2, Lcom/android/server/VibratorService;->LEVEL_TO_MAGNITUDE:[I
 
     aget v2, v2, v3
 
     iput v2, p0, Lcom/android/server/VibratorService;->mDefaultMagnitude:I
 
-    .line 104
     iput-boolean v4, p0, Lcom/android/server/VibratorService;->mHMTMount:Z
 
-    .line 109
     new-instance v2, Landroid/os/WorkSource;
 
     invoke-direct {v2}, Landroid/os/WorkSource;-><init>()V
 
     iput-object v2, p0, Lcom/android/server/VibratorService;->mTmpWorkSource:Landroid/os/WorkSource;
 
-    .line 110
     new-instance v2, Landroid/os/Handler;
 
     invoke-direct {v2}, Landroid/os/Handler;-><init>()V
 
     iput-object v2, p0, Lcom/android/server/VibratorService;->mH:Landroid/os/Handler;
 
-    .line 123
     new-instance v2, Ljava/util/ArrayList;
 
     invoke-direct {v2}, Ljava/util/ArrayList;-><init>()V
 
     iput-object v2, p0, Lcom/android/server/VibratorService;->mInputDeviceVibrators:Ljava/util/ArrayList;
 
-    .line 127
     iput v6, p0, Lcom/android/server/VibratorService;->mCurVibUid:I
 
-    .line 450
     new-instance v2, Lcom/android/server/VibratorService$3;
 
     invoke-direct {v2, p0}, Lcom/android/server/VibratorService$3;-><init>(Lcom/android/server/VibratorService;)V
 
     iput-object v2, p0, Lcom/android/server/VibratorService;->mVibrationRunnable:Ljava/lang/Runnable;
 
-    .line 815
     new-instance v2, Lcom/android/server/VibratorService$4;
 
     invoke-direct {v2, p0}, Lcom/android/server/VibratorService$4;-><init>(Lcom/android/server/VibratorService;)V
 
     iput-object v2, p0, Lcom/android/server/VibratorService;->mIntentReceiver:Landroid/content/BroadcastReceiver;
 
-    .line 1147
     iput v6, p0, Lcom/android/server/VibratorService;->mTempMagnitude:I
 
-    .line 208
     sget-boolean v2, Lcom/android/server/VibratorService;->USE_VIBETONZ:Z
 
     if-nez v2, :cond_0
 
-    .line 209
     invoke-static {}, Lcom/android/server/VibratorService;->vibratorOff()V
 
-    .line 212
     :cond_0
     iput-object p1, p0, Lcom/android/server/VibratorService;->mContext:Landroid/content/Context;
 
-    .line 213
-    const-string/jumbo v2, "power"
+    const-string v2, "power"
 
     invoke-virtual {p1, v2}, Landroid/content/Context;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
 
@@ -335,7 +310,6 @@
 
     check-cast v1, Landroid/os/PowerManager;
 
-    .line 215
     .local v1, "pm":Landroid/os/PowerManager;
     const-string v2, "VibratorService"
 
@@ -345,12 +319,10 @@
 
     iput-object v2, p0, Lcom/android/server/VibratorService;->mWakeLock:Landroid/os/PowerManager$WakeLock;
 
-    .line 216
     iget-object v2, p0, Lcom/android/server/VibratorService;->mWakeLock:Landroid/os/PowerManager$WakeLock;
 
     invoke-virtual {v2, v5}, Landroid/os/PowerManager$WakeLock;->setReferenceCounted(Z)V
 
-    .line 218
     const-string v2, "appops"
 
     invoke-static {v2}, Landroid/os/ServiceManager;->getService(Ljava/lang/String;)Landroid/os/IBinder;
@@ -363,7 +335,6 @@
 
     iput-object v2, p0, Lcom/android/server/VibratorService;->mAppOpsService:Lcom/android/internal/app/IAppOpsService;
 
-    .line 219
     const-string v2, "batterystats"
 
     invoke-static {v2}, Landroid/os/ServiceManager;->getService(Ljava/lang/String;)Landroid/os/IBinder;
@@ -376,66 +347,55 @@
 
     iput-object v2, p0, Lcom/android/server/VibratorService;->mBatteryStatsService:Lcom/android/internal/app/IBatteryStats;
 
-    .line 222
     new-instance v2, Ljava/util/LinkedList;
 
     invoke-direct {v2}, Ljava/util/LinkedList;-><init>()V
 
     iput-object v2, p0, Lcom/android/server/VibratorService;->mVibrations:Ljava/util/LinkedList;
 
-    .line 224
     new-instance v0, Landroid/content/IntentFilter;
 
     invoke-direct {v0}, Landroid/content/IntentFilter;-><init>()V
 
-    .line 225
     .local v0, "filter":Landroid/content/IntentFilter;
     const-string v2, "android.intent.action.SCREEN_OFF"
 
     invoke-virtual {v0, v2}, Landroid/content/IntentFilter;->addAction(Ljava/lang/String;)V
 
-    .line 228
     const-string v2, "android.intent.action.proximity_sensor"
 
     invoke-virtual {v0, v2}, Landroid/content/IntentFilter;->addAction(Ljava/lang/String;)V
 
-    .line 229
     const-string v2, "android.intent.action.DOCK_EVENT"
 
     invoke-virtual {v0, v2}, Landroid/content/IntentFilter;->addAction(Ljava/lang/String;)V
 
-    .line 232
     iget-object v2, p0, Lcom/android/server/VibratorService;->mIntentReceiver:Landroid/content/BroadcastReceiver;
 
     invoke-virtual {p1, v2, v0}, Landroid/content/Context;->registerReceiver(Landroid/content/BroadcastReceiver;Landroid/content/IntentFilter;)Landroid/content/Intent;
 
-    .line 234
     sget-boolean v2, Lcom/android/server/VibratorService;->USE_VIBETONZ:Z
 
     if-eqz v2, :cond_1
 
-    .line 242
     invoke-virtual {p1}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
 
     move-result-object v2
 
     iput-object v2, p0, Lcom/android/server/VibratorService;->mContentResolver:Landroid/content/ContentResolver;
 
-    .line 243
     new-instance v2, Lcom/android/server/VibratorService$SecSettingsObserver;
 
     invoke-direct {v2, p0, v4}, Lcom/android/server/VibratorService$SecSettingsObserver;-><init>(Lcom/android/server/VibratorService;I)V
 
     iput-object v2, p0, Lcom/android/server/VibratorService;->mTouchMagnitudeObserver:Lcom/android/server/VibratorService$SecSettingsObserver;
 
-    .line 244
     new-instance v2, Lcom/android/server/VibratorService$SecSettingsObserver;
 
     invoke-direct {v2, p0, v5}, Lcom/android/server/VibratorService$SecSettingsObserver;-><init>(Lcom/android/server/VibratorService;I)V
 
     iput-object v2, p0, Lcom/android/server/VibratorService;->mCallMagnitudeObserver:Lcom/android/server/VibratorService$SecSettingsObserver;
 
-    .line 245
     new-instance v2, Lcom/android/server/VibratorService$SecSettingsObserver;
 
     const/4 v3, 0x2
@@ -444,10 +404,8 @@
 
     iput-object v2, p0, Lcom/android/server/VibratorService;->mNotiMagnitudeObserver:Lcom/android/server/VibratorService$SecSettingsObserver;
 
-    .line 247
     invoke-direct {p0, p1}, Lcom/android/server/VibratorService;->openDevice(Landroid/content/Context;)V
 
-    .line 249
     :cond_1
     return-void
 .end method
@@ -457,7 +415,6 @@
     .param p0, "x0"    # Lcom/android/server/VibratorService;
 
     .prologue
-    .line 67
     iget-object v0, p0, Lcom/android/server/VibratorService;->mVibrations:Ljava/util/LinkedList;
 
     return-object v0
@@ -468,7 +425,6 @@
     .param p0, "x0"    # Lcom/android/server/VibratorService;
 
     .prologue
-    .line 67
     iget-object v0, p0, Lcom/android/server/VibratorService;->mCurrentVibration:Lcom/android/server/VibratorService$Vibration;
 
     return-object v0
@@ -479,7 +435,6 @@
     .param p0, "x0"    # Lcom/android/server/VibratorService;
 
     .prologue
-    .line 67
     iget-object v0, p0, Lcom/android/server/VibratorService;->mTmpWorkSource:Landroid/os/WorkSource;
 
     return-object v0
@@ -490,7 +445,6 @@
     .param p0, "x0"    # Lcom/android/server/VibratorService;
 
     .prologue
-    .line 67
     iget-object v0, p0, Lcom/android/server/VibratorService;->mWakeLock:Landroid/os/PowerManager$WakeLock;
 
     return-object v0
@@ -500,7 +454,6 @@
     .locals 1
 
     .prologue
-    .line 67
     sget-boolean v0, Lcom/android/server/VibratorService;->USE_VIBETONZ:Z
 
     return v0
@@ -511,7 +464,6 @@
     .param p0, "x0"    # Lcom/android/server/VibratorService;
 
     .prologue
-    .line 67
     iget v0, p0, Lcom/android/server/VibratorService;->mDefaultMagnitude:I
 
     return v0
@@ -523,7 +475,6 @@
     .param p1, "x1"    # I
 
     .prologue
-    .line 67
     iput p1, p0, Lcom/android/server/VibratorService;->mDefaultMagnitude:I
 
     return p1
@@ -539,7 +490,6 @@
     .param p6, "x5"    # I
 
     .prologue
-    .line 67
     invoke-direct/range {p0 .. p6}, Lcom/android/server/VibratorService;->doVibratorOn(JIILjava/lang/String;I)V
 
     return-void
@@ -553,7 +503,6 @@
     .param p4, "x3"    # I
 
     .prologue
-    .line 67
     invoke-direct {p0, p1, p2, p3, p4}, Lcom/android/server/VibratorService;->doVibratorOn(JII)V
 
     return-void
@@ -564,7 +513,6 @@
     .param p0, "x0"    # Lcom/android/server/VibratorService;
 
     .prologue
-    .line 67
     invoke-direct {p0}, Lcom/android/server/VibratorService;->doCancelVibrateLocked()V
 
     return-void
@@ -576,7 +524,6 @@
     .param p1, "x1"    # Lcom/android/server/VibratorService$Vibration;
 
     .prologue
-    .line 67
     invoke-direct {p0, p1}, Lcom/android/server/VibratorService;->unlinkVibration(Lcom/android/server/VibratorService$Vibration;)V
 
     return-void
@@ -588,7 +535,6 @@
     .param p1, "x1"    # Z
 
     .prologue
-    .line 67
     iput-boolean p1, p0, Lcom/android/server/VibratorService;->mHMTMount:Z
 
     return p1
@@ -598,7 +544,6 @@
     .locals 1
 
     .prologue
-    .line 67
     sget-object v0, Lcom/android/server/VibratorService;->mTypeURIs:[Ljava/lang/String;
 
     return-object v0
@@ -609,7 +554,6 @@
     .param p0, "x0"    # Lcom/android/server/VibratorService;
 
     .prologue
-    .line 67
     iget-object v0, p0, Lcom/android/server/VibratorService;->mContentResolver:Landroid/content/ContentResolver;
 
     return-object v0
@@ -620,7 +564,6 @@
     .param p0, "x0"    # Lcom/android/server/VibratorService;
 
     .prologue
-    .line 67
     iget-object v0, p0, Lcom/android/server/VibratorService;->mVibe:Lcom/immersion/android/ImmVibe;
 
     return-object v0
@@ -632,7 +575,6 @@
     .param p1, "x1"    # I
 
     .prologue
-    .line 67
     iput p1, p0, Lcom/android/server/VibratorService;->mImmVibeTouchMagnitude:I
 
     return p1
@@ -642,7 +584,6 @@
     .locals 1
 
     .prologue
-    .line 67
     sget-object v0, Lcom/android/server/VibratorService;->LEVEL_TO_MAGNITUDE:[I
 
     return-object v0
@@ -654,7 +595,6 @@
     .param p1, "x1"    # I
 
     .prologue
-    .line 67
     iput p1, p0, Lcom/android/server/VibratorService;->mImmVibeCallMagnitude:I
 
     return p1
@@ -665,7 +605,6 @@
     .param p0, "x0"    # Lcom/android/server/VibratorService;
 
     .prologue
-    .line 67
     iget v0, p0, Lcom/android/server/VibratorService;->mImmVibeNotiMagnitude:I
 
     return v0
@@ -677,7 +616,6 @@
     .param p1, "x1"    # I
 
     .prologue
-    .line 67
     iput p1, p0, Lcom/android/server/VibratorService;->mImmVibeNotiMagnitude:I
 
     return p1
@@ -687,7 +625,6 @@
     .locals 1
 
     .prologue
-    .line 67
     sget-boolean v0, Lcom/android/server/VibratorService;->USE_SET_MAX_MAGNITUE:Z
 
     return v0
@@ -698,7 +635,6 @@
     .param p0, "x0"    # Lcom/android/server/VibratorService;
 
     .prologue
-    .line 67
     invoke-direct {p0}, Lcom/android/server/VibratorService;->startNextVibrationLocked()V
 
     return-void
@@ -709,7 +645,6 @@
     .param p0, "x0"    # Lcom/android/server/VibratorService;
 
     .prologue
-    .line 67
     invoke-direct {p0}, Lcom/android/server/VibratorService;->updateInputDeviceVibrators()V
 
     return-void
@@ -720,7 +655,6 @@
     .param p1, "context"    # Landroid/content/Context;
 
     .prologue
-    .line 1236
     :try_start_0
     iget-object v2, p0, Lcom/android/server/VibratorService;->mVibe:Lcom/immersion/android/ImmVibe;
 
@@ -728,7 +662,6 @@
 
     invoke-virtual {v2, v3}, Lcom/immersion/android/ImmVibe;->closeDevice(I)V
 
-    .line 1237
     iget-object v2, p0, Lcom/android/server/VibratorService;->mVibe:Lcom/immersion/android/ImmVibe;
 
     invoke-virtual {v2}, Lcom/immersion/android/ImmVibe;->terminate()V
@@ -736,15 +669,12 @@
     .catch Ljava/lang/RuntimeException; {:try_start_0 .. :try_end_0} :catch_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_1
 
-    .line 1243
     :goto_0
     return-void
 
-    .line 1238
     :catch_0
     move-exception v1
 
-    .line 1239
     .local v1, "re":Ljava/lang/RuntimeException;
     const-string v2, "VibratorService"
 
@@ -754,12 +684,10 @@
 
     goto :goto_0
 
-    .line 1240
     .end local v1    # "re":Ljava/lang/RuntimeException;
     :catch_1
     move-exception v0
 
-    .line 1241
     .local v0, "e":Ljava/lang/Exception;
     const-string v2, "VibratorService"
 
@@ -774,17 +702,14 @@
     .locals 3
 
     .prologue
-    .line 462
     iget-object v0, p0, Lcom/android/server/VibratorService;->mThread:Lcom/android/server/VibratorService$VibrateThread;
 
     if-eqz v0, :cond_0
 
-    .line 463
     iget-object v1, p0, Lcom/android/server/VibratorService;->mThread:Lcom/android/server/VibratorService$VibrateThread;
 
     monitor-enter v1
 
-    .line 464
     :try_start_0
     iget-object v0, p0, Lcom/android/server/VibratorService;->mThread:Lcom/android/server/VibratorService$VibrateThread;
 
@@ -792,39 +717,31 @@
 
     iput-boolean v2, v0, Lcom/android/server/VibratorService$VibrateThread;->mDone:Z
 
-    .line 465
     iget-object v0, p0, Lcom/android/server/VibratorService;->mThread:Lcom/android/server/VibratorService$VibrateThread;
 
     invoke-virtual {v0}, Ljava/lang/Object;->notify()V
 
-    .line 466
     monitor-exit v1
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 467
     const/4 v0, 0x0
 
     iput-object v0, p0, Lcom/android/server/VibratorService;->mThread:Lcom/android/server/VibratorService$VibrateThread;
 
-    .line 469
     :cond_0
     invoke-direct {p0}, Lcom/android/server/VibratorService;->doVibratorOff()V
 
-    .line 470
     iget-object v0, p0, Lcom/android/server/VibratorService;->mH:Landroid/os/Handler;
 
     iget-object v1, p0, Lcom/android/server/VibratorService;->mVibrationRunnable:Ljava/lang/Runnable;
 
     invoke-virtual {v0, v1}, Landroid/os/Handler;->removeCallbacks(Ljava/lang/Runnable;)V
 
-    .line 471
     invoke-direct {p0}, Lcom/android/server/VibratorService;->reportFinishVibrationLocked()V
 
-    .line 472
     return-void
 
-    .line 466
     :catchall_0
     move-exception v0
 
@@ -840,7 +757,6 @@
     .locals 1
 
     .prologue
-    .line 644
     invoke-static {}, Lcom/android/server/VibratorService;->vibratorExists()Z
 
     move-result v0
@@ -852,12 +768,10 @@
     .locals 5
 
     .prologue
-    .line 694
     iget-object v3, p0, Lcom/android/server/VibratorService;->mInputDeviceVibrators:Ljava/util/ArrayList;
 
     monitor-enter v3
 
-    .line 698
     :try_start_0
     iget v2, p0, Lcom/android/server/VibratorService;->mCurVibUid:I
     :try_end_0
@@ -865,7 +779,6 @@
 
     if-ltz v2, :cond_0
 
-    .line 700
     :try_start_1
     iget-object v2, p0, Lcom/android/server/VibratorService;->mBatteryStatsService:Lcom/android/internal/app/IBatteryStats;
 
@@ -876,14 +789,12 @@
     .catch Landroid/os/RemoteException; {:try_start_1 .. :try_end_1} :catch_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
-    .line 703
     :goto_0
     const/4 v2, -0x1
 
     :try_start_2
     iput v2, p0, Lcom/android/server/VibratorService;->mCurVibUid:I
 
-    .line 705
     :cond_0
     iget-object v2, p0, Lcom/android/server/VibratorService;->mInputDeviceVibrators:Ljava/util/ArrayList;
 
@@ -891,18 +802,15 @@
 
     move-result v1
 
-    .line 706
     .local v1, "vibratorCount":I
     if-eqz v1, :cond_1
 
-    .line 707
     const/4 v0, 0x0
 
     .local v0, "i":I
     :goto_1
     if-ge v0, v1, :cond_3
 
-    .line 708
     iget-object v2, p0, Lcom/android/server/VibratorService;->mInputDeviceVibrators:Ljava/util/ArrayList;
 
     invoke-virtual {v2, v0}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
@@ -913,30 +821,25 @@
 
     invoke-virtual {v2}, Landroid/os/Vibrator;->cancel()V
 
-    .line 707
     add-int/lit8 v0, v0, 0x1
 
     goto :goto_1
 
-    .line 711
     .end local v0    # "i":I
     :cond_1
     sget-boolean v2, Lcom/android/server/VibratorService;->USE_VIBETONZ:Z
 
     if-eqz v2, :cond_4
 
-    .line 712
     iget-object v2, p0, Lcom/android/server/VibratorService;->mVibe:Lcom/immersion/android/ImmVibe;
 
     if-nez v2, :cond_2
 
     monitor-exit v3
 
-    .line 724
     :goto_2
     return-void
 
-    .line 713
     :cond_2
     const-string v2, "VibratorService"
 
@@ -946,7 +849,6 @@
     :try_end_2
     .catchall {:try_start_2 .. :try_end_2} :catchall_0
 
-    .line 715
     :try_start_3
     iget-object v2, p0, Lcom/android/server/VibratorService;->mVibe:Lcom/immersion/android/ImmVibe;
 
@@ -957,7 +859,6 @@
     .catch Ljava/lang/RuntimeException; {:try_start_3 .. :try_end_3} :catch_0
     .catchall {:try_start_3 .. :try_end_3} :catchall_0
 
-    .line 723
     :cond_3
     :goto_3
     :try_start_4
@@ -975,7 +876,6 @@
 
     throw v2
 
-    .line 719
     .restart local v1    # "vibratorCount":I
     :cond_4
     :try_start_5
@@ -985,20 +885,17 @@
 
     invoke-static {v2, v4}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 720
     invoke-static {}, Lcom/android/server/VibratorService;->vibratorOff()V
     :try_end_5
     .catchall {:try_start_5 .. :try_end_5} :catchall_0
 
     goto :goto_3
 
-    .line 716
     :catch_0
     move-exception v2
 
     goto :goto_3
 
-    .line 701
     .end local v1    # "vibratorCount":I
     :catch_1
     move-exception v2
@@ -1013,24 +910,20 @@
     .param p4, "usageHint"    # I
 
     .prologue
-    .line 648
     iget-object v4, p0, Lcom/android/server/VibratorService;->mInputDeviceVibrators:Ljava/util/ArrayList;
 
     monitor-enter v4
 
-    .line 653
     :try_start_0
     iget-object v3, p0, Lcom/android/server/VibratorService;->mBatteryStatsService:Lcom/android/internal/app/IBatteryStats;
 
     invoke-interface {v3, p3, p1, p2}, Lcom/android/internal/app/IBatteryStats;->noteVibratorOn(IJ)V
 
-    .line 654
     iput p3, p0, Lcom/android/server/VibratorService;->mCurVibUid:I
     :try_end_0
     .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 657
     :goto_0
     :try_start_1
     iget-object v3, p0, Lcom/android/server/VibratorService;->mInputDeviceVibrators:Ljava/util/ArrayList;
@@ -1039,11 +932,9 @@
 
     move-result v2
 
-    .line 658
     .local v2, "vibratorCount":I
     if-eqz v2, :cond_0
 
-    .line 659
     new-instance v3, Landroid/media/AudioAttributes$Builder;
 
     invoke-direct {v3}, Landroid/media/AudioAttributes$Builder;-><init>()V
@@ -1056,7 +947,6 @@
 
     move-result-object v0
 
-    .line 661
     .local v0, "attributes":Landroid/media/AudioAttributes;
     const/4 v1, 0x0
 
@@ -1064,7 +954,6 @@
     :goto_1
     if-ge v1, v2, :cond_1
 
-    .line 662
     iget-object v3, p0, Lcom/android/server/VibratorService;->mInputDeviceVibrators:Ljava/util/ArrayList;
 
     invoke-virtual {v3, v1}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
@@ -1075,25 +964,20 @@
 
     invoke-virtual {v3, p1, p2, v0}, Landroid/os/Vibrator;->vibrate(JLandroid/media/AudioAttributes;)V
 
-    .line 661
     add-int/lit8 v1, v1, 0x1
 
     goto :goto_1
 
-    .line 665
     .end local v0    # "attributes":Landroid/media/AudioAttributes;
     .end local v1    # "i":I
     :cond_0
     invoke-static {p1, p2}, Lcom/android/server/VibratorService;->vibratorOn(J)V
 
-    .line 667
     :cond_1
     monitor-exit v4
 
-    .line 668
     return-void
 
-    .line 667
     .end local v2    # "vibratorCount":I
     :catchall_0
     move-exception v3
@@ -1104,7 +988,6 @@
 
     throw v3
 
-    .line 655
     :catch_0
     move-exception v3
 
@@ -1120,14 +1003,12 @@
     .param p6, "magnitude"    # I
 
     .prologue
-    .line 671
     move-object/from16 v0, p0
 
     iget-object v15, v0, Lcom/android/server/VibratorService;->mInputDeviceVibrators:Ljava/util/ArrayList;
 
     monitor-enter v15
 
-    .line 676
     :try_start_0
     move-object/from16 v0, p0
 
@@ -1139,7 +1020,6 @@
 
     invoke-interface {v5, v0, v1, v2}, Lcom/android/internal/app/IBatteryStats;->noteVibratorOn(IJ)V
 
-    .line 677
     move/from16 v0, p3
 
     move-object/from16 v1, p0
@@ -1149,7 +1029,6 @@
     .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 680
     :goto_0
     :try_start_1
     move-object/from16 v0, p0
@@ -1160,11 +1039,9 @@
 
     move-result v14
 
-    .line 681
     .local v14, "vibratorCount":I
     if-eqz v14, :cond_0
 
-    .line 682
     new-instance v5, Landroid/media/AudioAttributes$Builder;
 
     invoke-direct {v5}, Landroid/media/AudioAttributes$Builder;-><init>()V
@@ -1179,7 +1056,6 @@
 
     move-result-object v4
 
-    .line 684
     .local v4, "attributes":Landroid/media/AudioAttributes;
     const/4 v13, 0x0
 
@@ -1187,7 +1063,6 @@
     :goto_1
     if-ge v13, v14, :cond_1
 
-    .line 685
     move-object/from16 v0, p0
 
     iget-object v5, v0, Lcom/android/server/VibratorService;->mInputDeviceVibrators:Ljava/util/ArrayList;
@@ -1202,12 +1077,10 @@
 
     invoke-virtual {v5, v0, v1, v4}, Landroid/os/Vibrator;->vibrate(JLandroid/media/AudioAttributes;)V
 
-    .line 684
     add-int/lit8 v13, v13, 0x1
 
     goto :goto_1
 
-    .line 688
     .end local v4    # "attributes":Landroid/media/AudioAttributes;
     .end local v13    # "i":I
     :cond_0
@@ -1227,14 +1100,11 @@
 
     invoke-virtual/range {v5 .. v12}, Lcom/android/server/VibratorService;->vibrateMagnitude(ILjava/lang/String;JILandroid/os/IBinder;I)V
 
-    .line 690
     :cond_1
     monitor-exit v15
 
-    .line 691
     return-void
 
-    .line 690
     .end local v14    # "vibratorCount":I
     :catchall_0
     move-exception v5
@@ -1245,7 +1115,6 @@
 
     throw v5
 
-    .line 678
     :catch_0
     move-exception v5
 
@@ -1257,10 +1126,8 @@
     .param p1, "pattern"    # [J
 
     .prologue
-    .line 356
     array-length v0, p1
 
-    .line 357
     .local v0, "N":I
     const/4 v1, 0x0
 
@@ -1268,7 +1135,6 @@
     :goto_0
     if-ge v1, v0, :cond_1
 
-    .line 358
     aget-wide v2, p1, v1
 
     const-wide/16 v4, 0x0
@@ -1277,20 +1143,16 @@
 
     if-eqz v2, :cond_0
 
-    .line 359
     const/4 v2, 0x0
 
-    .line 362
     :goto_1
     return v2
 
-    .line 357
     :cond_0
     add-int/lit8 v1, v1, 0x1
 
     goto :goto_0
 
-    .line 362
     :cond_1
     const/4 v2, 0x1
 
@@ -1304,7 +1166,6 @@
     .prologue
     const/4 v6, 0x5
 
-    .line 1203
     :try_start_0
     new-instance v2, Lcom/immersion/android/ImmVibe;
 
@@ -1312,12 +1173,10 @@
 
     iput-object v2, p0, Lcom/android/server/VibratorService;->mVibe:Lcom/immersion/android/ImmVibe;
 
-    .line 1204
     iget-object v2, p0, Lcom/android/server/VibratorService;->mVibe:Lcom/immersion/android/ImmVibe;
 
     invoke-virtual {v2}, Lcom/immersion/android/ImmVibe;->initialize()V
 
-    .line 1210
     iget-object v2, p0, Lcom/android/server/VibratorService;->mVibe:Lcom/immersion/android/ImmVibe;
 
     const/4 v3, 0x0
@@ -1330,12 +1189,10 @@
 
     iput v2, p0, Lcom/android/server/VibratorService;->mDevHandle:I
 
-    .line 1211
     const/4 v2, 0x0
 
     sput v2, Lcom/android/server/VibratorService;->HAS_DUAL_MOTORS:I
 
-    .line 1215
     iget-object v2, p0, Lcom/android/server/VibratorService;->mContentResolver:Landroid/content/ContentResolver;
 
     sget-object v3, Lcom/android/server/VibratorService;->mTypeURIs:[Ljava/lang/String;
@@ -1352,7 +1209,6 @@
 
     move-result v1
 
-    .line 1216
     .local v1, "magnitudeLevel":I
     if-le v1, v6, :cond_1
 
@@ -1360,7 +1216,6 @@
     :goto_0
     iput v1, p0, Lcom/android/server/VibratorService;->mImmVibeTouchMagnitude:I
 
-    .line 1218
     iget-object v2, p0, Lcom/android/server/VibratorService;->mContentResolver:Landroid/content/ContentResolver;
 
     sget-object v3, Lcom/android/server/VibratorService;->mTypeURIs:[Ljava/lang/String;
@@ -1377,7 +1232,6 @@
 
     move-result v1
 
-    .line 1219
     .restart local v1    # "magnitudeLevel":I
     if-le v1, v6, :cond_2
 
@@ -1385,7 +1239,6 @@
     :goto_1
     iput v1, p0, Lcom/android/server/VibratorService;->mImmVibeCallMagnitude:I
 
-    .line 1221
     iget-object v2, p0, Lcom/android/server/VibratorService;->mContentResolver:Landroid/content/ContentResolver;
 
     sget-object v3, Lcom/android/server/VibratorService;->mTypeURIs:[Ljava/lang/String;
@@ -1402,7 +1255,6 @@
 
     move-result v1
 
-    .line 1222
     .restart local v1    # "magnitudeLevel":I
     if-le v1, v6, :cond_3
 
@@ -1410,22 +1262,18 @@
     :goto_2
     iput v1, p0, Lcom/android/server/VibratorService;->mImmVibeNotiMagnitude:I
 
-    .line 1224
     sget-boolean v2, Lcom/android/server/VibratorService;->USE_SET_MAX_MAGNITUE:Z
 
     if-nez v2, :cond_0
 
-    .line 1225
     iget v2, p0, Lcom/android/server/VibratorService;->mImmVibeNotiMagnitude:I
 
     iput v2, p0, Lcom/android/server/VibratorService;->mDefaultMagnitude:I
 
-    .line 1232
     :cond_0
     :goto_3
     return-void
 
-    .line 1216
     .restart local v1    # "magnitudeLevel":I
     :cond_1
     sget-object v2, Lcom/android/server/VibratorService;->LEVEL_TO_MAGNITUDE:[I
@@ -1434,7 +1282,6 @@
 
     goto :goto_0
 
-    .line 1219
     :cond_2
     sget-object v2, Lcom/android/server/VibratorService;->LEVEL_TO_MAGNITUDE:[I
 
@@ -1442,7 +1289,6 @@
 
     goto :goto_1
 
-    .line 1222
     :cond_3
     sget-object v2, Lcom/android/server/VibratorService;->LEVEL_TO_MAGNITUDE:[I
 
@@ -1453,12 +1299,10 @@
 
     goto :goto_2
 
-    .line 1227
     .end local v1    # "magnitudeLevel":I
     :catch_0
     move-exception v0
 
-    .line 1228
     .local v0, "e":Ljava/lang/Error;
     const-string v2, "VibratorService"
 
@@ -1488,12 +1332,10 @@
 
     goto :goto_3
 
-    .line 1229
     .end local v0    # "e":Ljava/lang/Error;
     :catch_1
     move-exception v0
 
-    .line 1230
     .local v0, "e":Ljava/lang/Exception;
     const-string v2, "VibratorService"
 
@@ -1529,7 +1371,6 @@
     .param p1, "token"    # Landroid/os/IBinder;
 
     .prologue
-    .line 540
     iget-object v2, p0, Lcom/android/server/VibratorService;->mVibrations:Ljava/util/LinkedList;
 
     const/4 v3, 0x0
@@ -1538,7 +1379,6 @@
 
     move-result-object v0
 
-    .line 541
     .local v0, "iter":Ljava/util/ListIterator;, "Ljava/util/ListIterator<Lcom/android/server/VibratorService$Vibration;>;"
     :cond_0
     invoke-interface {v0}, Ljava/util/ListIterator;->hasNext()Z
@@ -1547,14 +1387,12 @@
 
     if-eqz v2, :cond_1
 
-    .line 542
     invoke-interface {v0}, Ljava/util/ListIterator;->next()Ljava/lang/Object;
 
     move-result-object v1
 
     check-cast v1, Lcom/android/server/VibratorService$Vibration;
 
-    .line 543
     .local v1, "vib":Lcom/android/server/VibratorService$Vibration;
     # getter for: Lcom/android/server/VibratorService$Vibration;->mToken:Landroid/os/IBinder;
     invoke-static {v1}, Lcom/android/server/VibratorService$Vibration;->access$900(Lcom/android/server/VibratorService$Vibration;)Landroid/os/IBinder;
@@ -1563,18 +1401,14 @@
 
     if-ne v2, p1, :cond_0
 
-    .line 544
     invoke-interface {v0}, Ljava/util/ListIterator;->remove()V
 
-    .line 545
     invoke-direct {p0, v1}, Lcom/android/server/VibratorService;->unlinkVibration(Lcom/android/server/VibratorService$Vibration;)V
 
-    .line 555
     .end local v1    # "vib":Lcom/android/server/VibratorService$Vibration;
     :goto_0
     return-object v1
 
-    .line 551
     :cond_1
     iget-object v2, p0, Lcom/android/server/VibratorService;->mCurrentVibration:Lcom/android/server/VibratorService$Vibration;
 
@@ -1589,17 +1423,14 @@
 
     if-ne v2, p1, :cond_2
 
-    .line 552
     iget-object v2, p0, Lcom/android/server/VibratorService;->mCurrentVibration:Lcom/android/server/VibratorService$Vibration;
 
     invoke-direct {p0, v2}, Lcom/android/server/VibratorService;->unlinkVibration(Lcom/android/server/VibratorService$Vibration;)V
 
-    .line 553
     iget-object v1, p0, Lcom/android/server/VibratorService;->mCurrentVibration:Lcom/android/server/VibratorService$Vibration;
 
     goto :goto_0
 
-    .line 555
     :cond_2
     const/4 v1, 0x0
 
@@ -1610,12 +1441,10 @@
     .locals 5
 
     .prologue
-    .line 527
     iget-object v0, p0, Lcom/android/server/VibratorService;->mCurrentVibration:Lcom/android/server/VibratorService$Vibration;
 
     if-eqz v0, :cond_0
 
-    .line 529
     :try_start_0
     iget-object v0, p0, Lcom/android/server/VibratorService;->mAppOpsService:Lcom/android/internal/app/IAppOpsService;
 
@@ -1645,17 +1474,14 @@
     :try_end_0
     .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 534
     :goto_0
     const/4 v0, 0x0
 
     iput-object v0, p0, Lcom/android/server/VibratorService;->mCurrentVibration:Lcom/android/server/VibratorService$Vibration;
 
-    .line 536
     :cond_0
     return-void
 
-    .line 532
     :catch_0
     move-exception v0
 
@@ -1667,7 +1493,6 @@
     .param p1, "strength"    # I
 
     .prologue
-    .line 865
     :try_start_0
     iget-object v2, p0, Lcom/android/server/VibratorService;->mVibe:Lcom/immersion/android/ImmVibe;
 
@@ -1680,15 +1505,12 @@
     .catch Ljava/lang/RuntimeException; {:try_start_0 .. :try_end_0} :catch_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_1
 
-    .line 871
     :goto_0
     return-void
 
-    .line 866
     :catch_0
     move-exception v1
 
-    .line 867
     .local v1, "re":Ljava/lang/RuntimeException;
     const-string v2, "VibratorService"
 
@@ -1698,12 +1520,10 @@
 
     goto :goto_0
 
-    .line 868
     .end local v1    # "re":Ljava/lang/RuntimeException;
     :catch_1
     move-exception v0
 
-    .line 869
     .local v0, "e":Ljava/lang/Exception;
     const-string v2, "VibratorService"
 
@@ -1718,7 +1538,6 @@
     .locals 1
 
     .prologue
-    .line 476
     iget-object v0, p0, Lcom/android/server/VibratorService;->mVibrations:Ljava/util/LinkedList;
 
     invoke-virtual {v0}, Ljava/util/LinkedList;->size()I
@@ -1727,19 +1546,15 @@
 
     if-gtz v0, :cond_0
 
-    .line 477
     invoke-direct {p0}, Lcom/android/server/VibratorService;->reportFinishVibrationLocked()V
 
-    .line 478
     const/4 v0, 0x0
 
     iput-object v0, p0, Lcom/android/server/VibratorService;->mCurrentVibration:Lcom/android/server/VibratorService$Vibration;
 
-    .line 483
     :goto_0
     return-void
 
-    .line 481
     :cond_0
     iget-object v0, p0, Lcom/android/server/VibratorService;->mVibrations:Ljava/util/LinkedList;
 
@@ -1751,7 +1566,6 @@
 
     iput-object v0, p0, Lcom/android/server/VibratorService;->mCurrentVibration:Lcom/android/server/VibratorService$Vibration;
 
-    .line 482
     iget-object v0, p0, Lcom/android/server/VibratorService;->mCurrentVibration:Lcom/android/server/VibratorService$Vibration;
 
     invoke-direct {p0, v0}, Lcom/android/server/VibratorService;->startVibrationLocked(Lcom/android/server/VibratorService$Vibration;)V
@@ -1764,7 +1578,6 @@
     .param p1, "vib"    # Lcom/android/server/VibratorService$Vibration;
 
     .prologue
-    .line 488
     :try_start_0
     iget-boolean v1, p0, Lcom/android/server/VibratorService;->mLowPowerMode:Z
 
@@ -1779,11 +1592,9 @@
 
     if-eq v1, v2, :cond_0
 
-    .line 524
     :goto_0
     return-void
 
-    .line 493
     :cond_0
     iget-object v1, p0, Lcom/android/server/VibratorService;->mAppOpsService:Lcom/android/internal/app/IAppOpsService;
 
@@ -1808,11 +1619,9 @@
 
     move-result v0
 
-    .line 495
     .local v0, "mode":I
     if-nez v0, :cond_1
 
-    .line 496
     iget-object v1, p0, Lcom/android/server/VibratorService;->mAppOpsService:Lcom/android/internal/app/IAppOpsService;
 
     iget-object v2, p0, Lcom/android/server/VibratorService;->mAppOpsService:Lcom/android/internal/app/IAppOpsService;
@@ -1837,16 +1646,13 @@
 
     move-result v0
 
-    .line 499
     :cond_1
     if-eqz v0, :cond_3
 
-    .line 500
     const/4 v1, 0x2
 
     if-ne v0, v1, :cond_2
 
-    .line 501
     const-string v1, "VibratorService"
 
     new-instance v2, Ljava/lang/StringBuilder;
@@ -1874,7 +1680,6 @@
 
     invoke-static {v1, v2}, Landroid/util/Slog;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 503
     :cond_2
     iget-object v1, p0, Lcom/android/server/VibratorService;->mH:Landroid/os/Handler;
 
@@ -1886,12 +1691,10 @@
 
     goto :goto_0
 
-    .line 506
     .end local v0    # "mode":I
     :catch_0
     move-exception v1
 
-    .line 508
     :cond_3
     # getter for: Lcom/android/server/VibratorService$Vibration;->mTimeout:J
     invoke-static {p1}, Lcom/android/server/VibratorService$Vibration;->access$800(Lcom/android/server/VibratorService$Vibration;)J
@@ -1904,17 +1707,14 @@
 
     if-eqz v1, :cond_6
 
-    .line 509
     sget-boolean v1, Lcom/android/server/VibratorService;->USE_VIBETONZ:Z
 
     if-eqz v1, :cond_5
 
-    .line 511
     const/4 v1, 0x0
 
     iput-object v1, p0, Lcom/android/server/VibratorService;->mCurrentVibration:Lcom/android/server/VibratorService$Vibration;
 
-    .line 512
     # getter for: Lcom/android/server/VibratorService$Vibration;->mUid:I
     invoke-static {p1}, Lcom/android/server/VibratorService$Vibration;->access$600(Lcom/android/server/VibratorService$Vibration;)I
 
@@ -1954,7 +1754,6 @@
 
     invoke-virtual/range {v1 .. v8}, Lcom/android/server/VibratorService;->vibrateMagnitude(ILjava/lang/String;JILandroid/os/IBinder;I)V
 
-    .line 517
     :goto_2
     iget-object v1, p0, Lcom/android/server/VibratorService;->mH:Landroid/os/Handler;
 
@@ -1969,13 +1768,11 @@
 
     goto/16 :goto_0
 
-    .line 512
     :cond_4
     iget v8, p0, Lcom/android/server/VibratorService;->mDefaultMagnitude:I
 
     goto :goto_1
 
-    .line 515
     :cond_5
     # getter for: Lcom/android/server/VibratorService$Vibration;->mTimeout:J
     invoke-static {p1}, Lcom/android/server/VibratorService$Vibration;->access$800(Lcom/android/server/VibratorService$Vibration;)J
@@ -1996,7 +1793,6 @@
 
     goto :goto_2
 
-    .line 521
     :cond_6
     new-instance v1, Lcom/android/server/VibratorService$VibrateThread;
 
@@ -2004,7 +1800,6 @@
 
     iput-object v1, p0, Lcom/android/server/VibratorService;->mThread:Lcom/android/server/VibratorService$VibrateThread;
 
-    .line 522
     iget-object v1, p0, Lcom/android/server/VibratorService;->mThread:Lcom/android/server/VibratorService$VibrateThread;
 
     invoke-virtual {v1}, Lcom/android/server/VibratorService$VibrateThread;->start()V
@@ -2017,7 +1812,6 @@
     .param p1, "vib"    # Lcom/android/server/VibratorService$Vibration;
 
     .prologue
-    .line 559
     # getter for: Lcom/android/server/VibratorService$Vibration;->mPattern:[J
     invoke-static {p1}, Lcom/android/server/VibratorService$Vibration;->access$1200(Lcom/android/server/VibratorService$Vibration;)[J
 
@@ -2025,7 +1819,6 @@
 
     if-eqz v0, :cond_0
 
-    .line 563
     :try_start_0
     # getter for: Lcom/android/server/VibratorService$Vibration;->mToken:Landroid/os/IBinder;
     invoke-static {p1}, Lcom/android/server/VibratorService$Vibration;->access$900(Lcom/android/server/VibratorService$Vibration;)Landroid/os/IBinder;
@@ -2038,12 +1831,10 @@
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 568
     :cond_0
     :goto_0
     return-void
 
-    .line 564
     :catch_0
     move-exception v0
 
@@ -2058,23 +1849,19 @@
 
     const/4 v5, 0x0
 
-    .line 571
     iget-object v6, p0, Lcom/android/server/VibratorService;->mVibrations:Ljava/util/LinkedList;
 
     monitor-enter v6
 
-    .line 572
     :try_start_0
     invoke-direct {p0}, Lcom/android/server/VibratorService;->doCancelVibrateLocked()V
 
-    .line 574
     iget-object v7, p0, Lcom/android/server/VibratorService;->mInputDeviceVibrators:Ljava/util/ArrayList;
 
     monitor-enter v7
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_1
 
-    .line 575
     const/4 v8, 0x0
 
     :try_start_1
@@ -2082,7 +1869,6 @@
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
-    .line 577
     :try_start_2
     iget-object v8, p0, Lcom/android/server/VibratorService;->mContext:Landroid/content/Context;
 
@@ -2090,7 +1876,7 @@
 
     move-result-object v8
 
-    const-string/jumbo v9, "vibrate_input_devices"
+    const-string v9, "vibrate_input_devices"
 
     const/4 v10, -0x2
 
@@ -2106,7 +1892,6 @@
     .catch Landroid/provider/Settings$SettingNotFoundException; {:try_start_2 .. :try_end_2} :catch_0
     .catchall {:try_start_2 .. :try_end_2} :catchall_0
 
-    .line 583
     :goto_1
     :try_start_3
     iget-object v4, p0, Lcom/android/server/VibratorService;->mPowerManagerInternal:Landroid/os/PowerManagerInternal;
@@ -2117,48 +1902,40 @@
 
     iput-boolean v4, p0, Lcom/android/server/VibratorService;->mLowPowerMode:Z
 
-    .line 585
     iget-boolean v4, p0, Lcom/android/server/VibratorService;->mVibrateInputDevicesSetting:Z
 
     if-eqz v4, :cond_3
 
-    .line 586
     iget-boolean v4, p0, Lcom/android/server/VibratorService;->mInputDeviceListenerRegistered:Z
 
     if-nez v4, :cond_0
 
-    .line 587
     const/4 v4, 0x1
 
     iput-boolean v4, p0, Lcom/android/server/VibratorService;->mInputDeviceListenerRegistered:Z
 
-    .line 588
     iget-object v4, p0, Lcom/android/server/VibratorService;->mIm:Landroid/hardware/input/InputManager;
 
     iget-object v5, p0, Lcom/android/server/VibratorService;->mH:Landroid/os/Handler;
 
     invoke-virtual {v4, p0, v5}, Landroid/hardware/input/InputManager;->registerInputDeviceListener(Landroid/hardware/input/InputManager$InputDeviceListener;Landroid/os/Handler;)V
 
-    .line 597
     :cond_0
     :goto_2
     iget-object v4, p0, Lcom/android/server/VibratorService;->mInputDeviceVibrators:Ljava/util/ArrayList;
 
     invoke-virtual {v4}, Ljava/util/ArrayList;->clear()V
 
-    .line 598
     iget-boolean v4, p0, Lcom/android/server/VibratorService;->mVibrateInputDevicesSetting:Z
 
     if-eqz v4, :cond_4
 
-    .line 599
     iget-object v4, p0, Lcom/android/server/VibratorService;->mIm:Landroid/hardware/input/InputManager;
 
     invoke-virtual {v4}, Landroid/hardware/input/InputManager;->getInputDeviceIds()[I
 
     move-result-object v2
 
-    .line 600
     .local v2, "ids":[I
     const/4 v1, 0x0
 
@@ -2168,7 +1945,6 @@
 
     if-ge v1, v4, :cond_4
 
-    .line 601
     iget-object v4, p0, Lcom/android/server/VibratorService;->mIm:Landroid/hardware/input/InputManager;
 
     aget v5, v2, v1
@@ -2177,13 +1953,11 @@
 
     move-result-object v0
 
-    .line 602
     .local v0, "device":Landroid/view/InputDevice;
     invoke-virtual {v0}, Landroid/view/InputDevice;->getVibrator()Landroid/os/Vibrator;
 
     move-result-object v3
 
-    .line 603
     .local v3, "vibrator":Landroid/os/Vibrator;
     invoke-virtual {v3}, Landroid/os/Vibrator;->hasVibrator()Z
 
@@ -2191,12 +1965,10 @@
 
     if-eqz v4, :cond_1
 
-    .line 604
     iget-object v4, p0, Lcom/android/server/VibratorService;->mInputDeviceVibrators:Ljava/util/ArrayList;
 
     invoke-virtual {v4, v3}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 600
     :cond_1
     add-int/lit8 v1, v1, 0x1
 
@@ -2209,28 +1981,23 @@
     :cond_2
     move v4, v5
 
-    .line 577
     goto :goto_0
 
-    .line 591
     :cond_3
     iget-boolean v4, p0, Lcom/android/server/VibratorService;->mInputDeviceListenerRegistered:Z
 
     if-eqz v4, :cond_0
 
-    .line 592
     const/4 v4, 0x0
 
     iput-boolean v4, p0, Lcom/android/server/VibratorService;->mInputDeviceListenerRegistered:Z
 
-    .line 593
     iget-object v4, p0, Lcom/android/server/VibratorService;->mIm:Landroid/hardware/input/InputManager;
 
     invoke-virtual {v4, p0}, Landroid/hardware/input/InputManager;->unregisterInputDeviceListener(Landroid/hardware/input/InputManager$InputDeviceListener;)V
 
     goto :goto_2
 
-    .line 614
     :catchall_0
     move-exception v4
 
@@ -2241,7 +2008,6 @@
     :try_start_4
     throw v4
 
-    .line 617
     :catchall_1
     move-exception v4
 
@@ -2251,26 +2017,21 @@
 
     throw v4
 
-    .line 614
     :cond_4
     :try_start_5
     monitor-exit v7
     :try_end_5
     .catchall {:try_start_5 .. :try_end_5} :catchall_0
 
-    .line 616
     :try_start_6
     invoke-direct {p0}, Lcom/android/server/VibratorService;->startNextVibrationLocked()V
 
-    .line 617
     monitor-exit v6
     :try_end_6
     .catchall {:try_start_6 .. :try_end_6} :catchall_1
 
-    .line 618
     return-void
 
-    .line 580
     :catch_0
     move-exception v4
 
@@ -2282,19 +2043,16 @@
     .param p1, "uid"    # I
 
     .prologue
-    .line 297
     invoke-static {}, Landroid/os/Binder;->getCallingUid()I
 
     move-result v0
 
     if-ne p1, v0, :cond_1
 
-    .line 305
     :cond_0
     :goto_0
     return-void
 
-    .line 300
     :cond_1
     invoke-static {}, Landroid/os/Binder;->getCallingPid()I
 
@@ -2306,7 +2064,6 @@
 
     if-eq v0, v1, :cond_0
 
-    .line 303
     iget-object v0, p0, Lcom/android/server/VibratorService;->mContext:Landroid/content/Context;
 
     const-string v1, "android.permission.UPDATE_APP_OPS_STATS"
@@ -2334,17 +2091,13 @@
     .param p4, "type"    # I
 
     .prologue
-    .line 874
     const/4 v0, 0x0
 
-    .line 875
     .local v0, "duration":I
     sparse-switch p4, :sswitch_data_0
 
-    .line 902
     const/16 v0, 0x28
 
-    .line 905
     :goto_0
     int-to-long v4, v0
 
@@ -2360,45 +2113,33 @@
 
     invoke-virtual/range {v1 .. v7}, Lcom/android/server/VibratorService;->vibrate(ILjava/lang/String;JILandroid/os/IBinder;)V
 
-    .line 906
     return-void
 
-    .line 884
     :sswitch_0
     const/16 v0, 0x32
 
-    .line 885
     goto :goto_0
 
-    .line 887
     :sswitch_1
     const/16 v0, 0x64
 
-    .line 888
     goto :goto_0
 
-    .line 890
     :sswitch_2
     const/16 v0, 0x1f4
 
-    .line 891
     goto :goto_0
 
-    .line 896
     :sswitch_3
     const/16 v0, 0x5dc
 
-    .line 897
     goto :goto_0
 
-    .line 899
     :sswitch_4
     const/16 v0, 0xb
 
-    .line 900
     goto :goto_0
 
-    .line 875
     nop
 
     :sswitch_data_0
@@ -2436,7 +2177,6 @@
     .param p1, "token"    # Landroid/os/IBinder;
 
     .prologue
-    .line 427
     iget-object v3, p0, Lcom/android/server/VibratorService;->mContext:Landroid/content/Context;
 
     const-string v4, "android.permission.VIBRATE"
@@ -2445,12 +2185,10 @@
 
     invoke-virtual {v3, v4, v5}, Landroid/content/Context;->enforceCallingOrSelfPermission(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 432
     invoke-static {}, Landroid/os/Binder;->clearCallingIdentity()J
 
     move-result-wide v0
 
-    .line 434
     .local v0, "identity":J
     :try_start_0
     iget-object v4, p0, Lcom/android/server/VibratorService;->mVibrations:Ljava/util/LinkedList;
@@ -2459,37 +2197,29 @@
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_1
 
-    .line 435
     :try_start_1
     invoke-direct {p0, p1}, Lcom/android/server/VibratorService;->removeVibrationLocked(Landroid/os/IBinder;)Lcom/android/server/VibratorService$Vibration;
 
     move-result-object v2
 
-    .line 436
     .local v2, "vib":Lcom/android/server/VibratorService$Vibration;
     iget-object v3, p0, Lcom/android/server/VibratorService;->mCurrentVibration:Lcom/android/server/VibratorService$Vibration;
 
     if-ne v2, v3, :cond_0
 
-    .line 440
     invoke-direct {p0}, Lcom/android/server/VibratorService;->doCancelVibrateLocked()V
 
-    .line 441
     invoke-direct {p0}, Lcom/android/server/VibratorService;->startNextVibrationLocked()V
 
-    .line 443
     :cond_0
     monitor-exit v4
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
-    .line 446
     invoke-static {v0, v1}, Landroid/os/Binder;->restoreCallingIdentity(J)V
 
-    .line 448
     return-void
 
-    .line 443
     .end local v2    # "vib":Lcom/android/server/VibratorService$Vibration;
     :catchall_0
     move-exception v3
@@ -2504,7 +2234,6 @@
     :try_end_3
     .catchall {:try_start_3 .. :try_end_3} :catchall_1
 
-    .line 446
     :catchall_1
     move-exception v3
 
@@ -2518,12 +2247,10 @@
     .param p1, "type"    # Ljava/lang/String;
 
     .prologue
-    .line 1187
     invoke-static {p1}, Landroid/os/SystemVibrator$MagnitudeType;->valueOf(Ljava/lang/String;)Landroid/os/SystemVibrator$MagnitudeType;
 
     move-result-object v0
 
-    .line 1188
     .local v0, "magnitudeType":Landroid/os/SystemVibrator$MagnitudeType;
     sget-object v1, Lcom/android/server/VibratorService$5;->$SwitchMap$android$os$SystemVibrator$MagnitudeType:[I
 
@@ -2535,31 +2262,26 @@
 
     packed-switch v1, :pswitch_data_0
 
-    .line 1198
     const/4 v1, 0x0
 
     :goto_0
     return v1
 
-    .line 1190
     :pswitch_0
     iget v1, p0, Lcom/android/server/VibratorService;->mImmVibeTouchMagnitude:I
 
     goto :goto_0
 
-    .line 1192
     :pswitch_1
     iget v1, p0, Lcom/android/server/VibratorService;->mImmVibeNotiMagnitude:I
 
     goto :goto_0
 
-    .line 1194
     :pswitch_2
     iget v1, p0, Lcom/android/server/VibratorService;->mImmVibeCallMagnitude:I
 
     goto :goto_0
 
-    .line 1196
     :pswitch_3
     invoke-virtual {p0}, Lcom/android/server/VibratorService;->getMaxMagnitude()I
 
@@ -2567,7 +2289,6 @@
 
     goto :goto_0
 
-    .line 1188
     nop
 
     :pswitch_data_0
@@ -2583,10 +2304,8 @@
     .locals 4
 
     .prologue
-    .line 1177
     const/16 v1, 0x2710
 
-    .line 1179
     .local v1, "magnitude":I
     :try_start_0
     sget-object v2, Lcom/android/server/VibratorService;->LEVEL_TO_MAGNITUDE:[I
@@ -2601,15 +2320,12 @@
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 1183
     :goto_0
     return v1
 
-    .line 1180
     :catch_0
     move-exception v0
 
-    .line 1181
     .local v0, "ex":Ljava/lang/Exception;
     const-string v2, "VibratorService"
 
@@ -2624,7 +2340,6 @@
     .locals 3
 
     .prologue
-    .line 292
     const-string v0, "VibratorService"
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -2649,7 +2364,6 @@
 
     invoke-static {v0, v1}, Landroid/util/Slog;->v(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 293
     invoke-direct {p0}, Lcom/android/server/VibratorService;->doVibratorExists()Z
 
     move-result v0
@@ -2662,10 +2376,8 @@
     .param p1, "deviceId"    # I
 
     .prologue
-    .line 622
     invoke-direct {p0}, Lcom/android/server/VibratorService;->updateInputDeviceVibrators()V
 
-    .line 623
     return-void
 .end method
 
@@ -2674,10 +2386,8 @@
     .param p1, "deviceId"    # I
 
     .prologue
-    .line 627
     invoke-direct {p0}, Lcom/android/server/VibratorService;->updateInputDeviceVibrators()V
 
-    .line 628
     return-void
 .end method
 
@@ -2686,10 +2396,8 @@
     .param p1, "deviceId"    # I
 
     .prologue
-    .line 632
     invoke-direct {p0}, Lcom/android/server/VibratorService;->updateInputDeviceVibrators()V
 
-    .line 633
     return-void
 .end method
 
@@ -2697,27 +2405,22 @@
     .locals 1
 
     .prologue
-    .line 1246
     sget-boolean v0, Lcom/android/server/VibratorService;->USE_VIBETONZ:Z
 
     if-eqz v0, :cond_0
 
-    .line 1247
     iget-object v0, p0, Lcom/android/server/VibratorService;->mTouchMagnitudeObserver:Lcom/android/server/VibratorService$SecSettingsObserver;
 
     invoke-virtual {v0}, Lcom/android/server/VibratorService$SecSettingsObserver;->reload()V
 
-    .line 1248
     iget-object v0, p0, Lcom/android/server/VibratorService;->mCallMagnitudeObserver:Lcom/android/server/VibratorService$SecSettingsObserver;
 
     invoke-virtual {v0}, Lcom/android/server/VibratorService$SecSettingsObserver;->reload()V
 
-    .line 1249
     iget-object v0, p0, Lcom/android/server/VibratorService;->mNotiMagnitudeObserver:Lcom/android/server/VibratorService$SecSettingsObserver;
 
     invoke-virtual {v0}, Lcom/android/server/VibratorService$SecSettingsObserver;->reload()V
 
-    .line 1251
     :cond_0
     return-void
 .end method
@@ -2726,7 +2429,6 @@
     .locals 2
 
     .prologue
-    .line 1164
     iget-object v0, p0, Lcom/android/server/VibratorService;->mContext:Landroid/content/Context;
 
     const-string v1, "android.permission.VIBRATE"
@@ -2737,7 +2439,6 @@
 
     if-eqz v0, :cond_0
 
-    .line 1166
     new-instance v0, Ljava/lang/SecurityException;
 
     const-string v1, "Requires VIBRATE permission"
@@ -2746,23 +2447,19 @@
 
     throw v0
 
-    .line 1169
     :cond_0
     iget v0, p0, Lcom/android/server/VibratorService;->mTempMagnitude:I
 
     if-gez v0, :cond_1
 
-    .line 1174
     :goto_0
     return-void
 
-    .line 1172
     :cond_1
     iget v0, p0, Lcom/android/server/VibratorService;->mTempMagnitude:I
 
     iput v0, p0, Lcom/android/server/VibratorService;->mImmVibeTouchMagnitude:I
 
-    .line 1173
     const/4 v0, -0x1
 
     iput v0, p0, Lcom/android/server/VibratorService;->mTempMagnitude:I
@@ -2775,7 +2472,6 @@
     .param p1, "magnitude"    # I
 
     .prologue
-    .line 1149
     iget-object v0, p0, Lcom/android/server/VibratorService;->mContext:Landroid/content/Context;
 
     const-string v1, "android.permission.VIBRATE"
@@ -2786,7 +2482,6 @@
 
     if-eqz v0, :cond_0
 
-    .line 1151
     new-instance v0, Ljava/lang/SecurityException;
 
     const-string v1, "Requires VIBRATE permission"
@@ -2795,33 +2490,26 @@
 
     throw v0
 
-    .line 1154
     :cond_0
     if-gez p1, :cond_2
 
-    .line 1155
     const/4 p1, 0x0
 
-    .line 1159
     :cond_1
     :goto_0
     iget v0, p0, Lcom/android/server/VibratorService;->mImmVibeTouchMagnitude:I
 
     iput v0, p0, Lcom/android/server/VibratorService;->mTempMagnitude:I
 
-    .line 1160
     iput p1, p0, Lcom/android/server/VibratorService;->mImmVibeTouchMagnitude:I
 
-    .line 1161
     return-void
 
-    .line 1156
     :cond_2
     const/16 v0, 0x2710
 
     if-le p1, v0, :cond_1
 
-    .line 1157
     const/16 p1, 0x2710
 
     goto :goto_0
@@ -2831,7 +2519,6 @@
     .locals 5
 
     .prologue
-    .line 252
     iget-object v0, p0, Lcom/android/server/VibratorService;->mContext:Landroid/content/Context;
 
     const-string v1, "input"
@@ -2844,7 +2531,6 @@
 
     iput-object v0, p0, Lcom/android/server/VibratorService;->mIm:Landroid/hardware/input/InputManager;
 
-    .line 253
     new-instance v0, Lcom/android/server/VibratorService$SettingsObserver;
 
     iget-object v1, p0, Lcom/android/server/VibratorService;->mH:Landroid/os/Handler;
@@ -2853,7 +2539,6 @@
 
     iput-object v0, p0, Lcom/android/server/VibratorService;->mSettingObserver:Lcom/android/server/VibratorService$SettingsObserver;
 
-    .line 255
     const-class v0, Landroid/os/PowerManagerInternal;
 
     invoke-static {v0}, Lcom/android/server/LocalServices;->getService(Ljava/lang/Class;)Ljava/lang/Object;
@@ -2864,7 +2549,6 @@
 
     iput-object v0, p0, Lcom/android/server/VibratorService;->mPowerManagerInternal:Landroid/os/PowerManagerInternal;
 
-    .line 256
     iget-object v0, p0, Lcom/android/server/VibratorService;->mPowerManagerInternal:Landroid/os/PowerManagerInternal;
 
     new-instance v1, Lcom/android/server/VibratorService$1;
@@ -2873,14 +2557,13 @@
 
     invoke-virtual {v0, v1}, Landroid/os/PowerManagerInternal;->registerLowPowerModeObserver(Landroid/os/PowerManagerInternal$LowPowerModeListener;)V
 
-    .line 264
     iget-object v0, p0, Lcom/android/server/VibratorService;->mContext:Landroid/content/Context;
 
     invoke-virtual {v0}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
 
     move-result-object v0
 
-    const-string/jumbo v1, "vibrate_input_devices"
+    const-string v1, "vibrate_input_devices"
 
     invoke-static {v1}, Landroid/provider/Settings$System;->getUriFor(Ljava/lang/String;)Landroid/net/Uri;
 
@@ -2894,7 +2577,6 @@
 
     invoke-virtual {v0, v1, v2, v3, v4}, Landroid/content/ContentResolver;->registerContentObserver(Landroid/net/Uri;ZLandroid/database/ContentObserver;I)V
 
-    .line 268
     iget-object v0, p0, Lcom/android/server/VibratorService;->mContext:Landroid/content/Context;
 
     new-instance v1, Lcom/android/server/VibratorService$2;
@@ -2913,10 +2595,8 @@
 
     invoke-virtual {v0, v1, v2, v3, v4}, Landroid/content/Context;->registerReceiver(Landroid/content/BroadcastReceiver;Landroid/content/IntentFilter;Ljava/lang/String;Landroid/os/Handler;)Landroid/content/Intent;
 
-    .line 276
     invoke-direct {p0}, Lcom/android/server/VibratorService;->updateInputDeviceVibrators()V
 
-    .line 277
     return-void
 .end method
 
@@ -2929,7 +2609,6 @@
     .param p6, "token"    # Landroid/os/IBinder;
 
     .prologue
-    .line 310
     iget-object v2, p0, Lcom/android/server/VibratorService;->mContext:Landroid/content/Context;
 
     const-string v4, "android.permission.VIBRATE"
@@ -2940,7 +2619,6 @@
 
     if-eqz v2, :cond_0
 
-    .line 312
     new-instance v2, Ljava/lang/SecurityException;
 
     const-string v4, "Requires VIBRATE permission"
@@ -2949,22 +2627,18 @@
 
     throw v2
 
-    .line 316
     :cond_0
     iget-boolean v2, p0, Lcom/android/server/VibratorService;->mHMTMount:Z
 
     if-eqz v2, :cond_2
 
-    .line 353
     :cond_1
     :goto_0
     return-void
 
-    .line 321
     :cond_2
     invoke-direct/range {p0 .. p1}, Lcom/android/server/VibratorService;->verifyIncomingUid(I)V
 
-    .line 325
     const-wide/16 v4, 0x0
 
     cmp-long v2, p3, v4
@@ -2985,7 +2659,6 @@
 
     if-nez v2, :cond_1
 
-    .line 337
     :cond_3
     const-string v2, "VibratorService"
 
@@ -2993,7 +2666,7 @@
 
     invoke-direct {v4}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v5, "vibrate - package: "
+    const-string v5, "vibrate - package: "
 
     invoke-virtual {v4, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -3035,7 +2708,6 @@
 
     invoke-static {v2, v4}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 340
     new-instance v3, Lcom/android/server/VibratorService$Vibration;
 
     move-object v4, p0
@@ -3052,13 +2724,11 @@
 
     invoke-direct/range {v3 .. v10}, Lcom/android/server/VibratorService$Vibration;-><init>(Lcom/android/server/VibratorService;Landroid/os/IBinder;JIILjava/lang/String;)V
 
-    .line 342
     .local v3, "vib":Lcom/android/server/VibratorService$Vibration;
     invoke-static {}, Landroid/os/Binder;->clearCallingIdentity()J
 
     move-result-wide v12
 
-    .line 344
     .local v12, "ident":J
     :try_start_0
     iget-object v4, p0, Lcom/android/server/VibratorService;->mVibrations:Ljava/util/LinkedList;
@@ -3067,32 +2737,25 @@
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_1
 
-    .line 345
     :try_start_1
     move-object/from16 v0, p6
 
     invoke-direct {p0, v0}, Lcom/android/server/VibratorService;->removeVibrationLocked(Landroid/os/IBinder;)Lcom/android/server/VibratorService$Vibration;
 
-    .line 346
     invoke-direct {p0}, Lcom/android/server/VibratorService;->doCancelVibrateLocked()V
 
-    .line 347
     iput-object v3, p0, Lcom/android/server/VibratorService;->mCurrentVibration:Lcom/android/server/VibratorService$Vibration;
 
-    .line 348
     invoke-direct {p0, v3}, Lcom/android/server/VibratorService;->startVibrationLocked(Lcom/android/server/VibratorService$Vibration;)V
 
-    .line 349
     monitor-exit v4
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
-    .line 351
     invoke-static {v12, v13}, Landroid/os/Binder;->restoreCallingIdentity(J)V
 
     goto :goto_0
 
-    .line 349
     :catchall_0
     move-exception v2
 
@@ -3106,7 +2769,6 @@
     :try_end_3
     .catchall {:try_start_3 .. :try_end_3} :catchall_1
 
-    .line 351
     :catchall_1
     move-exception v2
 
@@ -3125,7 +2787,6 @@
     .prologue
     const/4 v4, 0x0
 
-    .line 1056
     iget-object v2, p0, Lcom/android/server/VibratorService;->mContext:Landroid/content/Context;
 
     const-string v3, "android.permission.VIBRATE"
@@ -3136,7 +2797,6 @@
 
     if-eqz v2, :cond_0
 
-    .line 1058
     new-instance v2, Ljava/lang/SecurityException;
 
     const-string v3, "Requires VIBRATE permission"
@@ -3145,29 +2805,24 @@
 
     throw v2
 
-    .line 1062
     :cond_0
     iget-boolean v2, p0, Lcom/android/server/VibratorService;->mHMTMount:Z
 
     if-eqz v2, :cond_2
 
-    .line 1102
     :cond_1
     :goto_0
     return-void
 
-    .line 1067
     :cond_2
     sget-boolean v2, Lcom/android/server/VibratorService;->USE_VIBETONZ:Z
 
     if-nez v2, :cond_3
 
-    .line 1068
     invoke-direct {p0, p1, p2, v4, p3}, Lcom/android/server/VibratorService;->vibrate(ILjava/lang/String;II)V
 
     goto :goto_0
 
-    .line 1072
     :cond_3
     iget-object v2, p0, Lcom/android/server/VibratorService;->mVibe:Lcom/immersion/android/ImmVibe;
 
@@ -3181,27 +2836,21 @@
 
     if-gt p3, v2, :cond_1
 
-    .line 1077
     if-nez p4, :cond_4
 
-    .line 1078
     invoke-direct {p0}, Lcom/android/server/VibratorService;->doVibratorOff()V
 
     goto :goto_0
 
-    .line 1082
     :cond_4
     if-gez p4, :cond_6
 
-    .line 1083
     iget p4, p0, Lcom/android/server/VibratorService;->mDefaultMagnitude:I
 
-    .line 1088
     :cond_5
     :goto_1
     invoke-direct {p0}, Lcom/android/server/VibratorService;->doVibratorOff()V
 
-    .line 1092
     :try_start_0
     const-string v2, "VibratorService"
 
@@ -3209,7 +2858,7 @@
 
     invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v4, "vibrateImmVibe - package: "
+    const-string v4, "vibrateImmVibe - package: "
 
     invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -3245,17 +2894,14 @@
 
     invoke-static {v2, v3}, Landroid/util/Slog;->v(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1094
     invoke-direct {p0, p4}, Lcom/android/server/VibratorService;->setVibeStrength(I)V
 
-    .line 1095
     iget-object v2, p0, Lcom/android/server/VibratorService;->mVibe:Lcom/immersion/android/ImmVibe;
 
     iget v3, p0, Lcom/android/server/VibratorService;->mDevHandle:I
 
     invoke-virtual {v2, v3}, Lcom/immersion/android/ImmVibe;->stopAllPlayingEffects(I)V
 
-    .line 1096
     iget-object v2, p0, Lcom/android/server/VibratorService;->mVibe:Lcom/immersion/android/ImmVibe;
 
     iget v3, p0, Lcom/android/server/VibratorService;->mDevHandle:I
@@ -3279,11 +2925,9 @@
 
     goto :goto_0
 
-    .line 1097
     :catch_0
     move-exception v1
 
-    .line 1098
     .local v1, "re":Ljava/lang/RuntimeException;
     const-string v2, "VibratorService"
 
@@ -3293,23 +2937,19 @@
 
     goto :goto_0
 
-    .line 1084
     .end local v1    # "re":Ljava/lang/RuntimeException;
     :cond_6
     const/16 v2, 0x2710
 
     if-le p4, v2, :cond_5
 
-    .line 1085
     const/16 p4, 0x2710
 
     goto :goto_1
 
-    .line 1099
     :catch_1
     move-exception v0
 
-    .line 1100
     .local v0, "e":Ljava/lang/Exception;
     const-string v2, "VibratorService"
 
@@ -3330,7 +2970,6 @@
     .prologue
     const/4 v6, 0x0
 
-    .line 1105
     iget-object v1, p0, Lcom/android/server/VibratorService;->mContext:Landroid/content/Context;
 
     const-string v2, "android.permission.VIBRATE"
@@ -3341,7 +2980,6 @@
 
     if-eqz v1, :cond_0
 
-    .line 1107
     new-instance v1, Ljava/lang/SecurityException;
 
     const-string v2, "Requires VIBRATE permission"
@@ -3350,24 +2988,20 @@
 
     throw v1
 
-    .line 1111
     :cond_0
     iget-boolean v1, p0, Lcom/android/server/VibratorService;->mHMTMount:Z
 
     if-eqz v1, :cond_2
 
-    .line 1145
     :cond_1
     :goto_0
     return-void
 
-    .line 1116
     :cond_2
     sget-boolean v1, Lcom/android/server/VibratorService;->USE_VIBETONZ:Z
 
     if-nez v1, :cond_3
 
-    .line 1117
     const-wide/16 v4, 0x64
 
     const/4 v7, 0x0
@@ -3382,7 +3016,6 @@
 
     goto :goto_0
 
-    .line 1121
     :cond_3
     iget-object v1, p0, Lcom/android/server/VibratorService;->mVibe:Lcom/immersion/android/ImmVibe;
 
@@ -3390,18 +3023,14 @@
 
     if-eqz p3, :cond_1
 
-    .line 1125
     if-gez p4, :cond_5
 
-    .line 1126
     iget p4, p0, Lcom/android/server/VibratorService;->mDefaultMagnitude:I
 
-    .line 1131
     :cond_4
     :goto_1
     invoke-direct {p0}, Lcom/android/server/VibratorService;->doVibratorOff()V
 
-    .line 1135
     :try_start_0
     const-string v1, "VibratorService"
 
@@ -3409,7 +3038,7 @@
 
     invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v3, "vibrateImmVibePattern - package: "
+    const-string v3, "vibrateImmVibePattern - package: "
 
     invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -3435,17 +3064,14 @@
 
     invoke-static {v1, v2}, Landroid/util/Slog;->v(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1137
     invoke-direct {p0, p4}, Lcom/android/server/VibratorService;->setVibeStrength(I)V
 
-    .line 1138
     iget-object v1, p0, Lcom/android/server/VibratorService;->mVibe:Lcom/immersion/android/ImmVibe;
 
     iget v2, p0, Lcom/android/server/VibratorService;->mDevHandle:I
 
     invoke-virtual {v1, v2}, Lcom/immersion/android/ImmVibe;->stopAllPlayingEffects(I)V
 
-    .line 1139
     iget-object v1, p0, Lcom/android/server/VibratorService;->mVibe:Lcom/immersion/android/ImmVibe;
 
     iget v2, p0, Lcom/android/server/VibratorService;->mDevHandle:I
@@ -3459,11 +3085,9 @@
 
     goto :goto_0
 
-    .line 1140
     :catch_0
     move-exception v8
 
-    .line 1141
     .local v8, "re":Ljava/lang/RuntimeException;
     const-string v1, "VibratorService"
 
@@ -3473,23 +3097,19 @@
 
     goto :goto_0
 
-    .line 1127
     .end local v8    # "re":Ljava/lang/RuntimeException;
     :cond_5
     const/16 v1, 0x2710
 
     if-le p4, v1, :cond_4
 
-    .line 1128
     const/16 p4, 0x2710
 
     goto :goto_1
 
-    .line 1142
     :catch_1
     move-exception v0
 
-    .line 1143
     .local v0, "e":Ljava/lang/Exception;
     const-string v1, "VibratorService"
 
@@ -3510,7 +3130,6 @@
     .param p7, "magnitude"    # I
 
     .prologue
-    .line 910
     iget-object v2, p0, Lcom/android/server/VibratorService;->mContext:Landroid/content/Context;
 
     const-string v3, "android.permission.VIBRATE"
@@ -3521,7 +3140,6 @@
 
     if-eqz v2, :cond_0
 
-    .line 912
     new-instance v2, Ljava/lang/SecurityException;
 
     const-string v3, "Requires VIBRATE permission"
@@ -3530,33 +3148,27 @@
 
     throw v2
 
-    .line 916
     :cond_0
     iget-boolean v2, p0, Lcom/android/server/VibratorService;->mHMTMount:Z
 
     if-eqz v2, :cond_2
 
-    .line 974
     :cond_1
     :goto_0
     return-void
 
-    .line 921
     :cond_2
     sget-boolean v2, Lcom/android/server/VibratorService;->USE_VIBETONZ:Z
 
     if-nez v2, :cond_3
 
-    .line 922
     invoke-virtual/range {p0 .. p6}, Lcom/android/server/VibratorService;->vibrate(ILjava/lang/String;JILandroid/os/IBinder;)V
 
     goto :goto_0
 
-    .line 926
     :cond_3
     invoke-direct/range {p0 .. p1}, Lcom/android/server/VibratorService;->verifyIncomingUid(I)V
 
-    .line 930
     const-wide/16 v2, 0x0
 
     cmp-long v2, p3, v2
@@ -3577,35 +3189,28 @@
 
     if-nez v2, :cond_1
 
-    .line 937
     :cond_4
     iget-object v2, p0, Lcom/android/server/VibratorService;->mVibe:Lcom/immersion/android/ImmVibe;
 
     if-eqz v2, :cond_1
 
-    .line 940
     if-nez p7, :cond_5
 
-    .line 941
     invoke-direct {p0}, Lcom/android/server/VibratorService;->doVibratorOff()V
 
     goto :goto_0
 
-    .line 945
     :cond_5
     if-gez p7, :cond_7
 
-    .line 946
     iget v0, p0, Lcom/android/server/VibratorService;->mDefaultMagnitude:I
 
     move/from16 p7, v0
 
-    .line 951
     :cond_6
     :goto_1
     invoke-direct {p0}, Lcom/android/server/VibratorService;->doVibratorOff()V
 
-    .line 955
     :try_start_0
     const-string v2, "VibratorService"
 
@@ -3613,7 +3218,7 @@
 
     invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v4, "vibrateMagnitude - package: "
+    const-string v4, "vibrateMagnitude - package: "
 
     invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -3667,12 +3272,10 @@
 
     invoke-static {v2, v3}, Landroid/util/Slog;->v(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 957
     const/16 v2, 0x2710
 
     invoke-direct {p0, v2}, Lcom/android/server/VibratorService;->setVibeStrength(I)V
 
-    .line 959
     const-wide/32 v2, 0x7fffffff
 
     cmp-long v2, p3, v2
@@ -3681,7 +3284,6 @@
 
     const v11, 0x7fffffff
 
-    .line 960
     .local v11, "duration":I
     :goto_2
     iget-object v2, p0, Lcom/android/server/VibratorService;->mVibe:Lcom/immersion/android/ImmVibe;
@@ -3690,7 +3292,6 @@
 
     invoke-virtual {v2, v3}, Lcom/immersion/android/ImmVibe;->stopAllPlayingEffects(I)V
 
-    .line 961
     iget-object v2, p0, Lcom/android/server/VibratorService;->mVibe:Lcom/immersion/android/ImmVibe;
 
     iget v3, p0, Lcom/android/server/VibratorService;->mDevHandle:I
@@ -3718,12 +3319,10 @@
 
     goto/16 :goto_0
 
-    .line 969
     .end local v11    # "duration":I
     :catch_0
     move-exception v13
 
-    .line 970
     .local v13, "re":Ljava/lang/RuntimeException;
     const-string v2, "VibratorService"
 
@@ -3733,7 +3332,6 @@
 
     goto/16 :goto_0
 
-    .line 947
     .end local v13    # "re":Ljava/lang/RuntimeException;
     :cond_7
     const/16 v2, 0x2710
@@ -3742,12 +3340,10 @@
 
     if-le v0, v2, :cond_6
 
-    .line 948
     const/16 p7, 0x2710
 
     goto :goto_1
 
-    .line 959
     :cond_8
     move-wide/from16 v0, p3
 
@@ -3755,11 +3351,9 @@
 
     goto :goto_2
 
-    .line 971
     :catch_1
     move-exception v12
 
-    .line 972
     .local v12, "e":Ljava/lang/Exception;
     const-string v2, "VibratorService"
 
@@ -3780,7 +3374,6 @@
     .param p6, "token"    # Landroid/os/IBinder;
 
     .prologue
-    .line 368
     iget-object v3, p0, Lcom/android/server/VibratorService;->mContext:Landroid/content/Context;
 
     const-string v4, "android.permission.VIBRATE"
@@ -3791,7 +3384,6 @@
 
     if-eqz v3, :cond_0
 
-    .line 370
     new-instance v3, Ljava/lang/SecurityException;
 
     const-string v4, "Requires VIBRATE permission"
@@ -3800,26 +3392,21 @@
 
     throw v3
 
-    .line 374
     :cond_0
     iget-boolean v3, p0, Lcom/android/server/VibratorService;->mHMTMount:Z
 
     if-eqz v3, :cond_1
 
-    .line 423
     :goto_0
     return-void
 
-    .line 379
     :cond_1
     invoke-direct {p0, p1}, Lcom/android/server/VibratorService;->verifyIncomingUid(I)V
 
-    .line 381
     invoke-static {}, Landroid/os/Binder;->clearCallingIdentity()J
 
     move-result-wide v12
 
-    .line 393
     .local v12, "identity":J
     if-eqz p3, :cond_2
 
@@ -3850,13 +3437,11 @@
 
     if-nez p6, :cond_3
 
-    .line 421
     :cond_2
     invoke-static {v12, v13}, Landroid/os/Binder;->restoreCallingIdentity(J)V
 
     goto :goto_0
 
-    .line 399
     :cond_3
     :try_start_1
     new-instance v2, Lcom/android/server/VibratorService$Vibration;
@@ -3879,7 +3464,6 @@
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_1
 
-    .line 401
     .local v2, "vib":Lcom/android/server/VibratorService$Vibration;
     const/4 v3, 0x0
 
@@ -3891,7 +3475,6 @@
     .catch Landroid/os/RemoteException; {:try_start_2 .. :try_end_2} :catch_0
     .catchall {:try_start_2 .. :try_end_2} :catchall_1
 
-    .line 406
     :try_start_3
     iget-object v4, p0, Lcom/android/server/VibratorService;->mVibrations:Ljava/util/LinkedList;
 
@@ -3899,59 +3482,47 @@
     :try_end_3
     .catchall {:try_start_3 .. :try_end_3} :catchall_1
 
-    .line 407
     :try_start_4
     move-object/from16 v0, p6
 
     invoke-direct {p0, v0}, Lcom/android/server/VibratorService;->removeVibrationLocked(Landroid/os/IBinder;)Lcom/android/server/VibratorService$Vibration;
 
-    .line 408
     invoke-direct {p0}, Lcom/android/server/VibratorService;->doCancelVibrateLocked()V
 
-    .line 409
     if-ltz p4, :cond_4
 
-    .line 410
     iget-object v3, p0, Lcom/android/server/VibratorService;->mVibrations:Ljava/util/LinkedList;
 
     invoke-virtual {v3, v2}, Ljava/util/LinkedList;->addFirst(Ljava/lang/Object;)V
 
-    .line 411
     invoke-direct {p0}, Lcom/android/server/VibratorService;->startNextVibrationLocked()V
 
-    .line 418
     :goto_1
     monitor-exit v4
     :try_end_4
     .catchall {:try_start_4 .. :try_end_4} :catchall_0
 
-    .line 421
     invoke-static {v12, v13}, Landroid/os/Binder;->restoreCallingIdentity(J)V
 
     goto :goto_0
 
-    .line 402
     :catch_0
     move-exception v10
 
-    .line 421
     .local v10, "e":Landroid/os/RemoteException;
     invoke-static {v12, v13}, Landroid/os/Binder;->restoreCallingIdentity(J)V
 
     goto :goto_0
 
-    .line 415
     .end local v10    # "e":Landroid/os/RemoteException;
     :cond_4
     :try_start_5
     iput-object v2, p0, Lcom/android/server/VibratorService;->mCurrentVibration:Lcom/android/server/VibratorService$Vibration;
 
-    .line 416
     invoke-direct {p0, v2}, Lcom/android/server/VibratorService;->startVibrationLocked(Lcom/android/server/VibratorService$Vibration;)V
 
     goto :goto_1
 
-    .line 418
     :catchall_0
     move-exception v3
 
@@ -3964,7 +3535,6 @@
     :try_end_6
     .catchall {:try_start_6 .. :try_end_6} :catchall_1
 
-    .line 421
     .end local v2    # "vib":Lcom/android/server/VibratorService$Vibration;
     :catchall_1
     move-exception v3
@@ -3985,7 +3555,6 @@
     .param p7, "magnitude"    # I
 
     .prologue
-    .line 978
     iget-object v3, p0, Lcom/android/server/VibratorService;->mContext:Landroid/content/Context;
 
     const-string v4, "android.permission.VIBRATE"
@@ -3996,7 +3565,6 @@
 
     if-eqz v3, :cond_0
 
-    .line 980
     new-instance v3, Ljava/lang/SecurityException;
 
     const-string v4, "Requires VIBRATE permission"
@@ -4005,26 +3573,21 @@
 
     throw v3
 
-    .line 984
     :cond_0
     iget-boolean v3, p0, Lcom/android/server/VibratorService;->mHMTMount:Z
 
     if-eqz v3, :cond_1
 
-    .line 1053
     :goto_0
     return-void
 
-    .line 989
     :cond_1
     invoke-direct {p0, p1}, Lcom/android/server/VibratorService;->verifyIncomingUid(I)V
 
-    .line 991
     invoke-static {}, Landroid/os/Binder;->clearCallingIdentity()J
 
     move-result-wide v12
 
-    .line 1003
     .local v12, "identity":J
     if-eqz p3, :cond_2
 
@@ -4053,22 +3616,19 @@
 
     if-nez p6, :cond_3
 
-    .line 1006
     :cond_2
     const-string v3, "VibratorService"
 
-    const-string/jumbo v4, "vibratePatternMagnitude() is failed by illegal argument."
+    const-string v4, "vibratePatternMagnitude() is failed by illegal argument."
 
     invoke-static {v3, v4}, Landroid/util/Slog;->e(Ljava/lang/String;Ljava/lang/String;)I
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_1
 
-    .line 1051
     invoke-static {v12, v13}, Landroid/os/Binder;->restoreCallingIdentity(J)V
 
     goto :goto_0
 
-    .line 1011
     :cond_3
     const/4 v3, -0x1
 
@@ -4076,7 +3636,6 @@
 
     if-ne v0, v3, :cond_4
 
-    .line 1013
     :try_start_1
     const-string v3, "VibratorService"
 
@@ -4084,7 +3643,7 @@
 
     invoke-direct {v4}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v5, "vibratePatternMagnitude - package: "
+    const-string v5, "vibratePatternMagnitude - package: "
 
     invoke-virtual {v4, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -4126,7 +3685,6 @@
 
     invoke-static {v3, v4}, Landroid/util/Slog;->v(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1015
     new-instance v2, Lcom/android/server/VibratorService$Vibration;
 
     move-object v3, p0
@@ -4147,7 +3705,6 @@
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_1
 
-    .line 1031
     .local v2, "vib":Lcom/android/server/VibratorService$Vibration;
     :goto_1
     const/4 v3, 0x0
@@ -4160,7 +3717,6 @@
     .catch Landroid/os/RemoteException; {:try_start_2 .. :try_end_2} :catch_0
     .catchall {:try_start_2 .. :try_end_2} :catchall_1
 
-    .line 1036
     :try_start_3
     iget-object v4, p0, Lcom/android/server/VibratorService;->mVibrations:Ljava/util/LinkedList;
 
@@ -4168,43 +3724,34 @@
     :try_end_3
     .catchall {:try_start_3 .. :try_end_3} :catchall_1
 
-    .line 1037
     :try_start_4
     move-object/from16 v0, p6
 
     invoke-direct {p0, v0}, Lcom/android/server/VibratorService;->removeVibrationLocked(Landroid/os/IBinder;)Lcom/android/server/VibratorService$Vibration;
 
-    .line 1038
     invoke-direct {p0}, Lcom/android/server/VibratorService;->doCancelVibrateLocked()V
 
-    .line 1039
     if-ltz p4, :cond_6
 
-    .line 1040
     iget-object v3, p0, Lcom/android/server/VibratorService;->mVibrations:Ljava/util/LinkedList;
 
     invoke-virtual {v3, v2}, Ljava/util/LinkedList;->addFirst(Ljava/lang/Object;)V
 
-    .line 1041
     invoke-direct {p0}, Lcom/android/server/VibratorService;->startNextVibrationLocked()V
 
-    .line 1048
     :goto_2
     monitor-exit v4
     :try_end_4
     .catchall {:try_start_4 .. :try_end_4} :catchall_2
 
-    .line 1051
     invoke-static {v12, v13}, Landroid/os/Binder;->restoreCallingIdentity(J)V
 
     goto/16 :goto_0
 
-    .line 1017
     .end local v2    # "vib":Lcom/android/server/VibratorService$Vibration;
     :cond_4
     if-nez p7, :cond_5
 
-    .line 1018
     :try_start_5
     iget-object v4, p0, Lcom/android/server/VibratorService;->mVibrations:Ljava/util/LinkedList;
 
@@ -4212,26 +3759,21 @@
     :try_end_5
     .catchall {:try_start_5 .. :try_end_5} :catchall_1
 
-    .line 1019
     :try_start_6
     move-object/from16 v0, p6
 
     invoke-direct {p0, v0}, Lcom/android/server/VibratorService;->removeVibrationLocked(Landroid/os/IBinder;)Lcom/android/server/VibratorService$Vibration;
 
-    .line 1020
     invoke-direct {p0}, Lcom/android/server/VibratorService;->doCancelVibrateLocked()V
 
-    .line 1021
     monitor-exit v4
     :try_end_6
     .catchall {:try_start_6 .. :try_end_6} :catchall_0
 
-    .line 1051
     invoke-static {v12, v13}, Landroid/os/Binder;->restoreCallingIdentity(J)V
 
     goto/16 :goto_0
 
-    .line 1021
     :catchall_0
     move-exception v3
 
@@ -4245,7 +3787,6 @@
     :try_end_8
     .catchall {:try_start_8 .. :try_end_8} :catchall_1
 
-    .line 1051
     :catchall_1
     move-exception v3
 
@@ -4253,7 +3794,6 @@
 
     throw v3
 
-    .line 1025
     :cond_5
     :try_start_9
     const-string v3, "VibratorService"
@@ -4262,7 +3802,7 @@
 
     invoke-direct {v4}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v5, "vibratePatternMagnitude - package: "
+    const-string v5, "vibratePatternMagnitude - package: "
 
     invoke-virtual {v4, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -4316,7 +3856,6 @@
 
     invoke-static {v3, v4}, Landroid/util/Slog;->v(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1028
     new-instance v2, Lcom/android/server/VibratorService$Vibration;
 
     move-object v3, p0
@@ -4342,28 +3881,23 @@
     .restart local v2    # "vib":Lcom/android/server/VibratorService$Vibration;
     goto/16 :goto_1
 
-    .line 1032
     :catch_0
     move-exception v11
 
-    .line 1051
     .local v11, "e":Landroid/os/RemoteException;
     invoke-static {v12, v13}, Landroid/os/Binder;->restoreCallingIdentity(J)V
 
     goto/16 :goto_0
 
-    .line 1045
     .end local v11    # "e":Landroid/os/RemoteException;
     :cond_6
     :try_start_a
     iput-object v2, p0, Lcom/android/server/VibratorService;->mCurrentVibration:Lcom/android/server/VibratorService$Vibration;
 
-    .line 1046
     invoke-direct {p0, v2}, Lcom/android/server/VibratorService;->startVibrationLocked(Lcom/android/server/VibratorService$Vibration;)V
 
     goto :goto_2
 
-    .line 1048
     :catchall_2
     move-exception v3
 

@@ -56,7 +56,6 @@
     .locals 1
 
     .prologue
-    .line 146
     new-instance v0, Landroid/bluetooth/le/ScanFilter$1;
 
     invoke-direct {v0}, Landroid/bluetooth/le/ScanFilter$1;-><init>()V
@@ -80,40 +79,28 @@
     .param p10, "manufacturerDataMask"    # [B
 
     .prologue
-    .line 77
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 78
     iput-object p1, p0, Landroid/bluetooth/le/ScanFilter;->mDeviceName:Ljava/lang/String;
 
-    .line 79
     iput-object p3, p0, Landroid/bluetooth/le/ScanFilter;->mServiceUuid:Landroid/os/ParcelUuid;
 
-    .line 80
     iput-object p4, p0, Landroid/bluetooth/le/ScanFilter;->mServiceUuidMask:Landroid/os/ParcelUuid;
 
-    .line 81
     iput-object p2, p0, Landroid/bluetooth/le/ScanFilter;->mDeviceAddress:Ljava/lang/String;
 
-    .line 82
     iput-object p5, p0, Landroid/bluetooth/le/ScanFilter;->mServiceDataUuid:Landroid/os/ParcelUuid;
 
-    .line 83
     iput-object p6, p0, Landroid/bluetooth/le/ScanFilter;->mServiceData:[B
 
-    .line 84
     iput-object p7, p0, Landroid/bluetooth/le/ScanFilter;->mServiceDataMask:[B
 
-    .line 85
     iput p8, p0, Landroid/bluetooth/le/ScanFilter;->mManufacturerId:I
 
-    .line 86
     iput-object p9, p0, Landroid/bluetooth/le/ScanFilter;->mManufacturerData:[B
 
-    .line 87
     iput-object p10, p0, Landroid/bluetooth/le/ScanFilter;->mManufacturerDataMask:[B
 
-    .line 88
     return-void
 .end method
 
@@ -132,7 +119,6 @@
     .param p11, "x10"    # Landroid/bluetooth/le/ScanFilter$1;
 
     .prologue
-    .line 47
     invoke-direct/range {p0 .. p10}, Landroid/bluetooth/le/ScanFilter;-><init>(Ljava/lang/String;Ljava/lang/String;Landroid/os/ParcelUuid;Landroid/os/ParcelUuid;Landroid/os/ParcelUuid;[B[BI[B[B)V
 
     return-void
@@ -147,31 +133,25 @@
     .prologue
     const/4 v4, 0x0
 
-    .line 384
     if-nez p3, :cond_1
 
-    .line 400
     :cond_0
     :goto_0
     return v4
 
-    .line 387
     :cond_1
     const/4 v3, 0x0
 
-    .line 388
     .local v3, "matches":Z
     new-instance v1, Ljava/util/ArrayList;
 
     invoke-direct {v1}, Ljava/util/ArrayList;-><init>()V
 
-    .line 389
     .local v1, "manuDatalist":Ljava/util/ArrayList;, "Ljava/util/ArrayList<[B>;"
     invoke-virtual {p3}, Landroid/bluetooth/le/ScanRecord;->getManudataList()Ljava/util/ArrayList;
 
     move-result-object v1
 
-    .line 390
     const/4 v0, 0x0
 
     .local v0, "i":I
@@ -182,40 +162,33 @@
 
     if-ge v0, v5, :cond_2
 
-    .line 391
     invoke-virtual {v1, v0}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
 
     move-result-object v2
 
     check-cast v2, [B
 
-    .line 392
     .local v2, "manudata":[B
     invoke-direct {p0, p1, p2, v2}, Landroid/bluetooth/le/ScanFilter;->matchesPartialData([B[B[B)Z
 
     move-result v3
 
-    .line 394
     if-eqz v3, :cond_3
 
-    .line 395
     const-string v5, "ScanFilter"
 
-    const-string/jumbo v6, "manu data matches"
+    const-string v6, "manu data matches"
 
     invoke-static {v5, v6}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 399
     .end local v2    # "manudata":[B
     :cond_2
     if-eqz v3, :cond_0
 
-    .line 400
     const/4 v4, 0x1
 
     goto :goto_0
 
-    .line 390
     .restart local v2    # "manudata":[B
     :cond_3
     add-int/lit8 v0, v0, 0x1
@@ -234,7 +207,6 @@
 
     const/4 v1, 0x0
 
-    .line 364
     if-eqz p3, :cond_0
 
     array-length v3, p3
@@ -243,16 +215,13 @@
 
     if-ge v3, v4, :cond_1
 
-    .line 380
     :cond_0
     :goto_0
     return v1
 
-    .line 367
     :cond_1
     if-nez p2, :cond_3
 
-    .line 368
     const/4 v0, 0x0
 
     .local v0, "i":I
@@ -261,14 +230,12 @@
 
     if-ge v0, v3, :cond_2
 
-    .line 369
     aget-byte v3, p3, v0
 
     aget-byte v4, p1, v0
 
     if-ne v3, v4, :cond_0
 
-    .line 368
     add-int/lit8 v0, v0, 0x1
 
     goto :goto_1
@@ -276,10 +243,8 @@
     :cond_2
     move v1, v2
 
-    .line 373
     goto :goto_0
 
-    .line 375
     .end local v0    # "i":I
     :cond_3
     const/4 v0, 0x0
@@ -290,7 +255,6 @@
 
     if-ge v0, v3, :cond_4
 
-    .line 376
     aget-byte v3, p2, v0
 
     aget-byte v4, p3, v0
@@ -305,7 +269,6 @@
 
     if-ne v3, v4, :cond_0
 
-    .line 375
     add-int/lit8 v0, v0, 0x1
 
     goto :goto_2
@@ -313,7 +276,6 @@
     :cond_4
     move v1, v2
 
-    .line 380
     goto :goto_0
 .end method
 
@@ -326,20 +288,16 @@
     .prologue
     const/4 v0, 0x0
 
-    .line 351
     if-nez p2, :cond_1
 
-    .line 352
     invoke-virtual {p1, p3}, Ljava/util/UUID;->equals(Ljava/lang/Object;)Z
 
     move-result v0
 
-    .line 358
     :cond_0
     :goto_0
     return v0
 
-    .line 354
     :cond_1
     invoke-virtual {p1}, Ljava/util/UUID;->getLeastSignificantBits()J
 
@@ -365,7 +323,6 @@
 
     if-nez v1, :cond_0
 
-    .line 358
     invoke-virtual {p1}, Ljava/util/UUID;->getMostSignificantBits()J
 
     move-result-wide v2
@@ -417,23 +374,18 @@
 
     const/4 v4, 0x0
 
-    .line 333
     if-nez p1, :cond_0
 
-    .line 346
     :goto_0
     return v3
 
-    .line 336
     :cond_0
     if-nez p3, :cond_1
 
     move v3, v4
 
-    .line 337
     goto :goto_0
 
-    .line 340
     :cond_1
     invoke-interface {p3}, Ljava/util/List;->iterator()Ljava/util/Iterator;
 
@@ -453,13 +405,11 @@
 
     check-cast v1, Landroid/os/ParcelUuid;
 
-    .line 341
     .local v1, "parcelUuid":Landroid/os/ParcelUuid;
     if-nez p2, :cond_3
 
     const/4 v2, 0x0
 
-    .line 342
     .local v2, "uuidMask":Ljava/util/UUID;
     :goto_1
     invoke-virtual {p1}, Landroid/os/ParcelUuid;->getUuid()Ljava/util/UUID;
@@ -478,7 +428,6 @@
 
     goto :goto_0
 
-    .line 341
     .end local v2    # "uuidMask":Ljava/util/UUID;
     :cond_3
     invoke-virtual {p2}, Landroid/os/ParcelUuid;->getUuid()Ljava/util/UUID;
@@ -491,7 +440,6 @@
     :cond_4
     move v3, v4
 
-    .line 346
     goto :goto_0
 .end method
 
@@ -501,7 +449,6 @@
     .locals 1
 
     .prologue
-    .line 92
     const/4 v0, 0x0
 
     return v0
@@ -516,15 +463,12 @@
 
     const/4 v2, 0x0
 
-    .line 424
     if-ne p0, p1, :cond_1
 
-    .line 431
     :cond_0
     :goto_0
     return v1
 
-    .line 427
     :cond_1
     if-eqz p1, :cond_2
 
@@ -541,16 +485,13 @@
     :cond_2
     move v1, v2
 
-    .line 428
     goto :goto_0
 
     :cond_3
     move-object v0, p1
 
-    .line 430
     check-cast v0, Landroid/bluetooth/le/ScanFilter;
 
-    .line 431
     .local v0, "other":Landroid/bluetooth/le/ScanFilter;
     iget-object v3, p0, Landroid/bluetooth/le/ScanFilter;->mDeviceName:Ljava/lang/String;
 
@@ -658,7 +599,6 @@
     .locals 1
 
     .prologue
-    .line 233
     iget-object v0, p0, Landroid/bluetooth/le/ScanFilter;->mDeviceAddress:Ljava/lang/String;
 
     return-object v0
@@ -668,7 +608,6 @@
     .locals 1
 
     .prologue
-    .line 215
     iget-object v0, p0, Landroid/bluetooth/le/ScanFilter;->mDeviceName:Ljava/lang/String;
 
     return-object v0
@@ -678,7 +617,6 @@
     .locals 1
 
     .prologue
-    .line 260
     iget-object v0, p0, Landroid/bluetooth/le/ScanFilter;->mManufacturerData:[B
 
     return-object v0
@@ -688,7 +626,6 @@
     .locals 1
 
     .prologue
-    .line 265
     iget-object v0, p0, Landroid/bluetooth/le/ScanFilter;->mManufacturerDataMask:[B
 
     return-object v0
@@ -698,7 +635,6 @@
     .locals 1
 
     .prologue
-    .line 255
     iget v0, p0, Landroid/bluetooth/le/ScanFilter;->mManufacturerId:I
 
     return v0
@@ -708,7 +644,6 @@
     .locals 1
 
     .prologue
-    .line 238
     iget-object v0, p0, Landroid/bluetooth/le/ScanFilter;->mServiceData:[B
 
     return-object v0
@@ -718,7 +653,6 @@
     .locals 1
 
     .prologue
-    .line 243
     iget-object v0, p0, Landroid/bluetooth/le/ScanFilter;->mServiceDataMask:[B
 
     return-object v0
@@ -728,7 +662,6 @@
     .locals 1
 
     .prologue
-    .line 248
     iget-object v0, p0, Landroid/bluetooth/le/ScanFilter;->mServiceDataUuid:Landroid/os/ParcelUuid;
 
     return-object v0
@@ -738,7 +671,6 @@
     .locals 1
 
     .prologue
-    .line 223
     iget-object v0, p0, Landroid/bluetooth/le/ScanFilter;->mServiceUuid:Landroid/os/ParcelUuid;
 
     return-object v0
@@ -748,7 +680,6 @@
     .locals 1
 
     .prologue
-    .line 228
     iget-object v0, p0, Landroid/bluetooth/le/ScanFilter;->mServiceUuidMask:Landroid/os/ParcelUuid;
 
     return-object v0
@@ -758,7 +689,6 @@
     .locals 3
 
     .prologue
-    .line 417
     const/16 v0, 0xa
 
     new-array v0, v0, [Ljava/lang/Object;
@@ -843,21 +773,17 @@
 
     const/4 v3, 0x0
 
-    .line 273
     if-nez p1, :cond_1
 
-    .line 327
     :cond_0
     :goto_0
     return v3
 
-    .line 276
     :cond_1
     invoke-virtual {p1}, Landroid/bluetooth/le/ScanResult;->getDevice()Landroid/bluetooth/BluetoothDevice;
 
     move-result-object v1
 
-    .line 278
     .local v1, "device":Landroid/bluetooth/BluetoothDevice;
     iget-object v5, p0, Landroid/bluetooth/le/ScanFilter;->mDeviceAddress:Ljava/lang/String;
 
@@ -877,13 +803,11 @@
 
     if-eqz v5, :cond_0
 
-    .line 283
     :cond_2
     invoke-virtual {p1}, Landroid/bluetooth/le/ScanResult;->getScanRecord()Landroid/bluetooth/le/ScanRecord;
 
     move-result-object v2
 
-    .line 286
     .local v2, "scanRecord":Landroid/bluetooth/le/ScanRecord;
     if-nez v2, :cond_3
 
@@ -903,7 +827,6 @@
 
     if-nez v5, :cond_0
 
-    .line 293
     :cond_3
     iget-object v5, p0, Landroid/bluetooth/le/ScanFilter;->mDeviceName:Ljava/lang/String;
 
@@ -921,7 +844,6 @@
 
     if-eqz v5, :cond_0
 
-    .line 298
     :cond_4
     iget-object v5, p0, Landroid/bluetooth/le/ScanFilter;->mServiceUuid:Landroid/os/ParcelUuid;
 
@@ -941,13 +863,11 @@
 
     if-eqz v5, :cond_0
 
-    .line 304
     :cond_5
     iget-object v5, p0, Landroid/bluetooth/le/ScanFilter;->mServiceDataUuid:Landroid/os/ParcelUuid;
 
     if-eqz v5, :cond_6
 
-    .line 305
     iget-object v5, p0, Landroid/bluetooth/le/ScanFilter;->mServiceData:[B
 
     iget-object v6, p0, Landroid/bluetooth/le/ScanFilter;->mServiceDataMask:[B
@@ -964,29 +884,24 @@
 
     if-eqz v5, :cond_0
 
-    .line 312
     :cond_6
     iget v5, p0, Landroid/bluetooth/le/ScanFilter;->mManufacturerId:I
 
     if-ltz v5, :cond_7
 
-    .line 313
     invoke-virtual {v2}, Landroid/bluetooth/le/ScanRecord;->isMultiManudata()Z
 
     move-result v0
 
-    .line 314
     .local v0, "IsSamsungManudata":Z
     if-ne v0, v4, :cond_8
 
-    .line 315
     const-string v5, "ScanFilter"
 
     const-string v6, "Multi manu data"
 
     invoke-static {v5, v6}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 316
     iget-object v5, p0, Landroid/bluetooth/le/ScanFilter;->mManufacturerData:[B
 
     iget-object v6, p0, Landroid/bluetooth/le/ScanFilter;->mManufacturerDataMask:[B
@@ -1001,10 +916,8 @@
     :cond_7
     move v3, v4
 
-    .line 327
     goto :goto_0
 
-    .line 321
     .restart local v0    # "IsSamsungManudata":Z
     :cond_8
     iget-object v5, p0, Landroid/bluetooth/le/ScanFilter;->mManufacturerData:[B
@@ -1030,7 +943,6 @@
     .locals 2
 
     .prologue
-    .line 405
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -1198,7 +1110,6 @@
 
     const/4 v1, 0x0
 
-    .line 97
     iget-object v0, p0, Landroid/bluetooth/le/ScanFilter;->mDeviceName:Ljava/lang/String;
 
     if-nez v0, :cond_5
@@ -1208,17 +1119,14 @@
     :goto_0
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 98
     iget-object v0, p0, Landroid/bluetooth/le/ScanFilter;->mDeviceName:Ljava/lang/String;
 
     if-eqz v0, :cond_0
 
-    .line 99
     iget-object v0, p0, Landroid/bluetooth/le/ScanFilter;->mDeviceName:Ljava/lang/String;
 
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeString(Ljava/lang/String;)V
 
-    .line 101
     :cond_0
     iget-object v0, p0, Landroid/bluetooth/le/ScanFilter;->mDeviceAddress:Ljava/lang/String;
 
@@ -1229,17 +1137,14 @@
     :goto_1
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 102
     iget-object v0, p0, Landroid/bluetooth/le/ScanFilter;->mDeviceAddress:Ljava/lang/String;
 
     if-eqz v0, :cond_1
 
-    .line 103
     iget-object v0, p0, Landroid/bluetooth/le/ScanFilter;->mDeviceAddress:Ljava/lang/String;
 
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeString(Ljava/lang/String;)V
 
-    .line 105
     :cond_1
     iget-object v0, p0, Landroid/bluetooth/le/ScanFilter;->mServiceUuid:Landroid/os/ParcelUuid;
 
@@ -1250,17 +1155,14 @@
     :goto_2
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 106
     iget-object v0, p0, Landroid/bluetooth/le/ScanFilter;->mServiceUuid:Landroid/os/ParcelUuid;
 
     if-eqz v0, :cond_2
 
-    .line 107
     iget-object v0, p0, Landroid/bluetooth/le/ScanFilter;->mServiceUuid:Landroid/os/ParcelUuid;
 
     invoke-virtual {p1, v0, p2}, Landroid/os/Parcel;->writeParcelable(Landroid/os/Parcelable;I)V
 
-    .line 108
     iget-object v0, p0, Landroid/bluetooth/le/ScanFilter;->mServiceUuidMask:Landroid/os/ParcelUuid;
 
     if-nez v0, :cond_8
@@ -1270,17 +1172,14 @@
     :goto_3
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 109
     iget-object v0, p0, Landroid/bluetooth/le/ScanFilter;->mServiceUuidMask:Landroid/os/ParcelUuid;
 
     if-eqz v0, :cond_2
 
-    .line 110
     iget-object v0, p0, Landroid/bluetooth/le/ScanFilter;->mServiceUuidMask:Landroid/os/ParcelUuid;
 
     invoke-virtual {p1, v0, p2}, Landroid/os/Parcel;->writeParcelable(Landroid/os/Parcelable;I)V
 
-    .line 113
     :cond_2
     iget-object v0, p0, Landroid/bluetooth/le/ScanFilter;->mServiceDataUuid:Landroid/os/ParcelUuid;
 
@@ -1291,17 +1190,14 @@
     :goto_4
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 114
     iget-object v0, p0, Landroid/bluetooth/le/ScanFilter;->mServiceDataUuid:Landroid/os/ParcelUuid;
 
     if-eqz v0, :cond_3
 
-    .line 115
     iget-object v0, p0, Landroid/bluetooth/le/ScanFilter;->mServiceDataUuid:Landroid/os/ParcelUuid;
 
     invoke-virtual {p1, v0, p2}, Landroid/os/Parcel;->writeParcelable(Landroid/os/Parcelable;I)V
 
-    .line 116
     iget-object v0, p0, Landroid/bluetooth/le/ScanFilter;->mServiceData:[B
 
     if-nez v0, :cond_a
@@ -1311,24 +1207,20 @@
     :goto_5
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 117
     iget-object v0, p0, Landroid/bluetooth/le/ScanFilter;->mServiceData:[B
 
     if-eqz v0, :cond_3
 
-    .line 118
     iget-object v0, p0, Landroid/bluetooth/le/ScanFilter;->mServiceData:[B
 
     array-length v0, v0
 
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 119
     iget-object v0, p0, Landroid/bluetooth/le/ScanFilter;->mServiceData:[B
 
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeByteArray([B)V
 
-    .line 121
     iget-object v0, p0, Landroid/bluetooth/le/ScanFilter;->mServiceDataMask:[B
 
     if-nez v0, :cond_b
@@ -1338,30 +1230,25 @@
     :goto_6
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 122
     iget-object v0, p0, Landroid/bluetooth/le/ScanFilter;->mServiceDataMask:[B
 
     if-eqz v0, :cond_3
 
-    .line 123
     iget-object v0, p0, Landroid/bluetooth/le/ScanFilter;->mServiceDataMask:[B
 
     array-length v0, v0
 
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 124
     iget-object v0, p0, Landroid/bluetooth/le/ScanFilter;->mServiceDataMask:[B
 
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeByteArray([B)V
 
-    .line 128
     :cond_3
     iget v0, p0, Landroid/bluetooth/le/ScanFilter;->mManufacturerId:I
 
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 129
     iget-object v0, p0, Landroid/bluetooth/le/ScanFilter;->mManufacturerData:[B
 
     if-nez v0, :cond_c
@@ -1371,24 +1258,20 @@
     :goto_7
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 130
     iget-object v0, p0, Landroid/bluetooth/le/ScanFilter;->mManufacturerData:[B
 
     if-eqz v0, :cond_4
 
-    .line 131
     iget-object v0, p0, Landroid/bluetooth/le/ScanFilter;->mManufacturerData:[B
 
     array-length v0, v0
 
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 132
     iget-object v0, p0, Landroid/bluetooth/le/ScanFilter;->mManufacturerData:[B
 
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeByteArray([B)V
 
-    .line 134
     iget-object v0, p0, Landroid/bluetooth/le/ScanFilter;->mManufacturerDataMask:[B
 
     if-nez v0, :cond_d
@@ -1396,78 +1279,65 @@
     :goto_8
     invoke-virtual {p1, v1}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 135
     iget-object v0, p0, Landroid/bluetooth/le/ScanFilter;->mManufacturerDataMask:[B
 
     if-eqz v0, :cond_4
 
-    .line 136
     iget-object v0, p0, Landroid/bluetooth/le/ScanFilter;->mManufacturerDataMask:[B
 
     array-length v0, v0
 
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 137
     iget-object v0, p0, Landroid/bluetooth/le/ScanFilter;->mManufacturerDataMask:[B
 
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeByteArray([B)V
 
-    .line 140
     :cond_4
     return-void
 
     :cond_5
     move v0, v2
 
-    .line 97
     goto/16 :goto_0
 
     :cond_6
     move v0, v2
 
-    .line 101
     goto/16 :goto_1
 
     :cond_7
     move v0, v2
 
-    .line 105
     goto/16 :goto_2
 
     :cond_8
     move v0, v2
 
-    .line 108
     goto/16 :goto_3
 
     :cond_9
     move v0, v2
 
-    .line 113
     goto :goto_4
 
     :cond_a
     move v0, v2
 
-    .line 116
     goto :goto_5
 
     :cond_b
     move v0, v2
 
-    .line 121
     goto :goto_6
 
     :cond_c
     move v0, v2
 
-    .line 129
     goto :goto_7
 
     :cond_d
     move v1, v2
 
-    .line 134
     goto :goto_8
 .end method

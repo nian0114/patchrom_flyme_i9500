@@ -24,13 +24,10 @@
     .param p2, "handler"    # Landroid/os/Handler;
 
     .prologue
-    .line 3691
     iput-object p1, p0, Lcom/android/server/notification/NotificationManagerService$PickupSettingsObserver;->this$0:Lcom/android/server/notification/NotificationManagerService;
 
-    .line 3692
     invoke-direct {p0, p2}, Landroid/database/ContentObserver;-><init>(Landroid/os/Handler;)V
 
-    .line 3693
     return-void
 .end method
 
@@ -40,7 +37,6 @@
     .locals 3
 
     .prologue
-    .line 3696
     iget-object v1, p0, Lcom/android/server/notification/NotificationManagerService$PickupSettingsObserver;->this$0:Lcom/android/server/notification/NotificationManagerService;
 
     invoke-virtual {v1}, Lcom/android/server/notification/NotificationManagerService;->getContext()Landroid/content/Context;
@@ -51,7 +47,6 @@
 
     move-result-object v0
 
-    .line 3697
     .local v0, "resolver":Landroid/content/ContentResolver;
     const-string v1, "motion_pick_up"
 
@@ -63,10 +58,8 @@
 
     invoke-virtual {v0, v1, v2, p0}, Landroid/content/ContentResolver;->registerContentObserver(Landroid/net/Uri;ZLandroid/database/ContentObserver;)V
 
-    .line 3699
     invoke-virtual {p0}, Lcom/android/server/notification/NotificationManagerService$PickupSettingsObserver;->update()V
 
-    .line 3700
     return-void
 .end method
 
@@ -75,10 +68,8 @@
     .param p1, "selfChange"    # Z
 
     .prologue
-    .line 3704
     invoke-virtual {p0}, Lcom/android/server/notification/NotificationManagerService$PickupSettingsObserver;->update()V
 
-    .line 3705
     return-void
 .end method
 
@@ -88,7 +79,6 @@
     .prologue
     const/4 v0, 0x0
 
-    .line 3708
     iget-object v1, p0, Lcom/android/server/notification/NotificationManagerService$PickupSettingsObserver;->this$0:Lcom/android/server/notification/NotificationManagerService;
 
     invoke-virtual {v1}, Lcom/android/server/notification/NotificationManagerService;->getContext()Landroid/content/Context;
@@ -109,7 +99,6 @@
 
     const/4 v0, 0x1
 
-    .line 3710
     .local v0, "isON":Z
     :cond_0
     iget-object v1, p0, Lcom/android/server/notification/NotificationManagerService$PickupSettingsObserver;->this$0:Lcom/android/server/notification/NotificationManagerService;
@@ -118,7 +107,6 @@
 
     invoke-virtual {v1, v0}, Lcom/android/server/notification/NotificationManagerService$PickupPlayer;->setPickupMotionEnabled(Z)V
 
-    .line 3711
     const-string v1, "NotificationService"
 
     new-instance v2, Ljava/lang/StringBuilder;
@@ -141,6 +129,5 @@
 
     invoke-static {v1, v2}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 3712
     return-void
 .end method

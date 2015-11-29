@@ -189,31 +189,27 @@
     .locals 3
 
     .prologue
-    .line 592
     new-instance v0, Lcom/samsung/android/multiwindow/MultiWindowStyle$1;
 
     invoke-direct {v0}, Lcom/samsung/android/multiwindow/MultiWindowStyle$1;-><init>()V
 
     sput-object v0, Lcom/samsung/android/multiwindow/MultiWindowStyle;->CREATOR:Landroid/os/Parcelable$Creator;
 
-    .line 979
     new-instance v0, Ljava/util/HashMap;
 
     invoke-direct {v0}, Ljava/util/HashMap;-><init>()V
 
     sput-object v0, Lcom/samsung/android/multiwindow/MultiWindowStyle;->sStyleStrings:Ljava/util/HashMap;
 
-    .line 980
     new-instance v0, Ljava/util/HashMap;
 
     invoke-direct {v0}, Ljava/util/HashMap;-><init>()V
 
     sput-object v0, Lcom/samsung/android/multiwindow/MultiWindowStyle;->sTypeStrings:Ljava/util/HashMap;
 
-    .line 982
     sget-object v0, Lcom/samsung/android/multiwindow/MultiWindowStyle;->sStyleStrings:Ljava/util/HashMap;
 
-    const-string/jumbo v1, "noTitleBar"
+    const-string v1, "noTitleBar"
 
     const/16 v2, 0x10
 
@@ -223,7 +219,6 @@
 
     invoke-virtual {v0, v1, v2}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 983
     sget-object v0, Lcom/samsung/android/multiwindow/MultiWindowStyle;->sStyleStrings:Ljava/util/HashMap;
 
     const-string v1, "forceTitleBar"
@@ -236,7 +231,6 @@
 
     invoke-virtual {v0, v1, v2}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 984
     sget-object v0, Lcom/samsung/android/multiwindow/MultiWindowStyle;->sStyleStrings:Ljava/util/HashMap;
 
     const-string v1, "isolatedSplit"
@@ -249,7 +243,6 @@
 
     invoke-virtual {v0, v1, v2}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 985
     sget-object v0, Lcom/samsung/android/multiwindow/MultiWindowStyle;->sStyleStrings:Ljava/util/HashMap;
 
     const-string v1, "fixedSize"
@@ -262,7 +255,6 @@
 
     invoke-virtual {v0, v1, v2}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 986
     sget-object v0, Lcom/samsung/android/multiwindow/MultiWindowStyle;->sStyleStrings:Ljava/util/HashMap;
 
     const-string v1, "fixedRatio"
@@ -275,7 +267,6 @@
 
     invoke-virtual {v0, v1, v2}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 987
     sget-object v0, Lcom/samsung/android/multiwindow/MultiWindowStyle;->sStyleStrings:Ljava/util/HashMap;
 
     const-string v1, "fixedOrientation"
@@ -288,7 +279,6 @@
 
     invoke-virtual {v0, v1, v2}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 988
     sget-object v0, Lcom/samsung/android/multiwindow/MultiWindowStyle;->sStyleStrings:Ljava/util/HashMap;
 
     const-string v1, "fullscreenOnly"
@@ -301,7 +291,6 @@
 
     invoke-virtual {v0, v1, v2}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 989
     sget-object v0, Lcom/samsung/android/multiwindow/MultiWindowStyle;->sTypeStrings:Ljava/util/HashMap;
 
     const-string v1, "freestyleOnly"
@@ -314,7 +303,6 @@
 
     invoke-virtual {v0, v1, v2}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 995
     new-instance v0, Lcom/samsung/android/multiwindow/MultiWindowStyle$2;
 
     const/4 v1, 0x0
@@ -334,35 +322,26 @@
 
     const/4 v1, 0x0
 
-    .line 343
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 45
     iput v0, p0, Lcom/samsung/android/multiwindow/MultiWindowStyle;->mAppRequestOrientation:I
 
-    .line 46
     iput v1, p0, Lcom/samsung/android/multiwindow/MultiWindowStyle;->mOnTransaction:I
 
-    .line 56
     iput v0, p0, Lcom/samsung/android/multiwindow/MultiWindowStyle;->mSpecificTaskId:I
 
-    .line 226
     iput v1, p0, Lcom/samsung/android/multiwindow/MultiWindowStyle;->mZone:I
 
-    .line 534
     new-instance v0, Landroid/graphics/Point;
 
     invoke-direct {v0}, Landroid/graphics/Point;-><init>()V
 
     iput-object v0, p0, Lcom/samsung/android/multiwindow/MultiWindowStyle;->mIsolatedCenterPoint:Landroid/graphics/Point;
 
-    .line 720
     iput-boolean v1, p0, Lcom/samsung/android/multiwindow/MultiWindowStyle;->mIsNull:Z
 
-    .line 344
     iput v1, p0, Lcom/samsung/android/multiwindow/MultiWindowStyle;->mType:I
 
-    .line 345
     return-void
 .end method
 
@@ -375,35 +354,26 @@
 
     const/4 v1, 0x0
 
-    .line 357
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 45
     iput v0, p0, Lcom/samsung/android/multiwindow/MultiWindowStyle;->mAppRequestOrientation:I
 
-    .line 46
     iput v1, p0, Lcom/samsung/android/multiwindow/MultiWindowStyle;->mOnTransaction:I
 
-    .line 56
     iput v0, p0, Lcom/samsung/android/multiwindow/MultiWindowStyle;->mSpecificTaskId:I
 
-    .line 226
     iput v1, p0, Lcom/samsung/android/multiwindow/MultiWindowStyle;->mZone:I
 
-    .line 534
     new-instance v0, Landroid/graphics/Point;
 
     invoke-direct {v0}, Landroid/graphics/Point;-><init>()V
 
     iput-object v0, p0, Lcom/samsung/android/multiwindow/MultiWindowStyle;->mIsolatedCenterPoint:Landroid/graphics/Point;
 
-    .line 720
     iput-boolean v1, p0, Lcom/samsung/android/multiwindow/MultiWindowStyle;->mIsNull:Z
 
-    .line 358
     iput p1, p0, Lcom/samsung/android/multiwindow/MultiWindowStyle;->mType:I
 
-    .line 359
     return-void
 .end method
 
@@ -416,35 +386,26 @@
 
     const/4 v1, 0x0
 
-    .line 350
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 45
     iput v0, p0, Lcom/samsung/android/multiwindow/MultiWindowStyle;->mAppRequestOrientation:I
 
-    .line 46
     iput v1, p0, Lcom/samsung/android/multiwindow/MultiWindowStyle;->mOnTransaction:I
 
-    .line 56
     iput v0, p0, Lcom/samsung/android/multiwindow/MultiWindowStyle;->mSpecificTaskId:I
 
-    .line 226
     iput v1, p0, Lcom/samsung/android/multiwindow/MultiWindowStyle;->mZone:I
 
-    .line 534
     new-instance v0, Landroid/graphics/Point;
 
     invoke-direct {v0}, Landroid/graphics/Point;-><init>()V
 
     iput-object v0, p0, Lcom/samsung/android/multiwindow/MultiWindowStyle;->mIsolatedCenterPoint:Landroid/graphics/Point;
 
-    .line 720
     iput-boolean v1, p0, Lcom/samsung/android/multiwindow/MultiWindowStyle;->mIsNull:Z
 
-    .line 351
     invoke-direct {p0, p1}, Lcom/samsung/android/multiwindow/MultiWindowStyle;->readFromParcel(Landroid/os/Parcel;)V
 
-    .line 352
     return-void
 .end method
 
@@ -457,37 +418,28 @@
 
     const/4 v1, 0x0
 
-    .line 364
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 45
     iput v0, p0, Lcom/samsung/android/multiwindow/MultiWindowStyle;->mAppRequestOrientation:I
 
-    .line 46
     iput v1, p0, Lcom/samsung/android/multiwindow/MultiWindowStyle;->mOnTransaction:I
 
-    .line 56
     iput v0, p0, Lcom/samsung/android/multiwindow/MultiWindowStyle;->mSpecificTaskId:I
 
-    .line 226
     iput v1, p0, Lcom/samsung/android/multiwindow/MultiWindowStyle;->mZone:I
 
-    .line 534
     new-instance v0, Landroid/graphics/Point;
 
     invoke-direct {v0}, Landroid/graphics/Point;-><init>()V
 
     iput-object v0, p0, Lcom/samsung/android/multiwindow/MultiWindowStyle;->mIsolatedCenterPoint:Landroid/graphics/Point;
 
-    .line 720
     iput-boolean v1, p0, Lcom/samsung/android/multiwindow/MultiWindowStyle;->mIsNull:Z
 
-    .line 365
     const/4 v0, 0x1
 
     invoke-virtual {p0, p1, v0}, Lcom/samsung/android/multiwindow/MultiWindowStyle;->setTo(Lcom/samsung/android/multiwindow/MultiWindowStyle;Z)V
 
-    .line 366
     return-void
 .end method
 
@@ -500,35 +452,26 @@
 
     const/4 v1, 0x0
 
-    .line 725
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 45
     iput v0, p0, Lcom/samsung/android/multiwindow/MultiWindowStyle;->mAppRequestOrientation:I
 
-    .line 46
     iput v1, p0, Lcom/samsung/android/multiwindow/MultiWindowStyle;->mOnTransaction:I
 
-    .line 56
     iput v0, p0, Lcom/samsung/android/multiwindow/MultiWindowStyle;->mSpecificTaskId:I
 
-    .line 226
     iput v1, p0, Lcom/samsung/android/multiwindow/MultiWindowStyle;->mZone:I
 
-    .line 534
     new-instance v0, Landroid/graphics/Point;
 
     invoke-direct {v0}, Landroid/graphics/Point;-><init>()V
 
     iput-object v0, p0, Lcom/samsung/android/multiwindow/MultiWindowStyle;->mIsolatedCenterPoint:Landroid/graphics/Point;
 
-    .line 720
     iput-boolean v1, p0, Lcom/samsung/android/multiwindow/MultiWindowStyle;->mIsNull:Z
 
-    .line 726
     iput-boolean p1, p0, Lcom/samsung/android/multiwindow/MultiWindowStyle;->mIsNull:Z
 
-    .line 727
     return-void
 .end method
 
@@ -537,16 +480,13 @@
     .param p0, "intent"    # Landroid/content/Intent;
 
     .prologue
-    .line 1110
     invoke-virtual {p0}, Landroid/content/Intent;->getMultiWindowStyle()Lcom/samsung/android/multiwindow/MultiWindowStyle;
 
     move-result-object v0
 
-    .line 1111
     .local v0, "mws":Lcom/samsung/android/multiwindow/MultiWindowStyle;
     invoke-static {v0}, Lcom/samsung/android/multiwindow/MultiWindowStyle;->isMultiWindowLaunchInSame(Lcom/samsung/android/multiwindow/MultiWindowStyle;)Z
 
-    .line 1112
     return-void
 .end method
 
@@ -555,14 +495,11 @@
     .param p0, "mws"    # Lcom/samsung/android/multiwindow/MultiWindowStyle;
 
     .prologue
-    .line 1118
     if-nez p0, :cond_0
 
-    .line 1122
     :goto_0
     return-void
 
-    .line 1121
     :cond_0
     const/high16 v0, 0x100000
 
@@ -578,12 +515,10 @@
     .param p0, "intent"    # Landroid/content/Intent;
 
     .prologue
-    .line 1093
     invoke-virtual {p0}, Landroid/content/Intent;->getMultiWindowStyle()Lcom/samsung/android/multiwindow/MultiWindowStyle;
 
     move-result-object v0
 
-    .line 1094
     .local v0, "mws":Lcom/samsung/android/multiwindow/MultiWindowStyle;
     invoke-static {v0}, Lcom/samsung/android/multiwindow/MultiWindowStyle;->isMultiWindowLaunchInSame(Lcom/samsung/android/multiwindow/MultiWindowStyle;)Z
 
@@ -597,13 +532,10 @@
     .param p0, "mws"    # Lcom/samsung/android/multiwindow/MultiWindowStyle;
 
     .prologue
-    .line 1101
     if-nez p0, :cond_0
 
-    .line 1102
     const/4 v0, 0x0
 
-    .line 1103
     :goto_0
     return v0
 
@@ -622,18 +554,14 @@
     .param p1, "stylesString"    # Ljava/lang/String;
 
     .prologue
-    .line 1057
     if-nez p1, :cond_0
 
-    .line 1075
     :goto_0
     return-void
 
-    .line 1061
     :cond_0
     const/4 v1, 0x0
 
-    .line 1062
     .local v1, "options":I
     new-instance v3, Ljava/util/ArrayList;
 
@@ -649,7 +577,6 @@
 
     invoke-direct {v3, v4}, Ljava/util/ArrayList;-><init>(Ljava/util/Collection;)V
 
-    .line 1063
     .local v3, "styles":Ljava/util/ArrayList;, "Ljava/util/ArrayList<Ljava/lang/String;>;"
     invoke-virtual {v3}, Ljava/util/ArrayList;->iterator()Ljava/util/Iterator;
 
@@ -670,7 +597,6 @@
 
     check-cast v2, Ljava/lang/String;
 
-    .line 1064
     .local v2, "style":Ljava/lang/String;
     sget-object v4, Lcom/samsung/android/multiwindow/MultiWindowStyle;->sStyleStrings:Ljava/util/HashMap;
 
@@ -680,7 +606,6 @@
 
     if-eqz v4, :cond_2
 
-    .line 1065
     sget-object v4, Lcom/samsung/android/multiwindow/MultiWindowStyle;->sStyleStrings:Ljava/util/HashMap;
 
     invoke-virtual {v4, v2}, Ljava/util/HashMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
@@ -697,7 +622,6 @@
 
     goto :goto_1
 
-    .line 1066
     :cond_2
     sget-object v4, Lcom/samsung/android/multiwindow/MultiWindowStyle;->sTypeStrings:Ljava/util/HashMap;
 
@@ -707,7 +631,6 @@
 
     if-eqz v4, :cond_1
 
-    .line 1068
     invoke-virtual {p0}, Lcom/samsung/android/multiwindow/MultiWindowStyle;->getType()I
 
     move-result v4
@@ -724,7 +647,6 @@
 
     if-nez v4, :cond_1
 
-    .line 1069
     :cond_3
     sget-object v4, Lcom/samsung/android/multiwindow/MultiWindowStyle;->sTypeStrings:Ljava/util/HashMap;
 
@@ -742,7 +664,6 @@
 
     goto :goto_1
 
-    .line 1074
     .end local v2    # "style":Ljava/lang/String;
     :cond_4
     iget v4, p0, Lcom/samsung/android/multiwindow/MultiWindowStyle;->mOptionFlags:I
@@ -759,49 +680,42 @@
     .param p1, "parcelledData"    # Landroid/os/Parcel;
 
     .prologue
-    .line 578
     invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
 
     move-result v0
 
     invoke-virtual {p0, v0}, Lcom/samsung/android/multiwindow/MultiWindowStyle;->setType(I)V
 
-    .line 579
     invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
 
     move-result v0
 
     invoke-virtual {p0, v0}, Lcom/samsung/android/multiwindow/MultiWindowStyle;->setZone(I)V
 
-    .line 580
     invoke-virtual {p1}, Landroid/os/Parcel;->readFloat()F
 
     move-result v0
 
     invoke-virtual {p0, v0}, Lcom/samsung/android/multiwindow/MultiWindowStyle;->setScale(F)V
 
-    .line 581
     invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
 
     move-result v0
 
     invoke-virtual {p0, v0}, Lcom/samsung/android/multiwindow/MultiWindowStyle;->setSpecificTaskId(I)V
 
-    .line 582
     invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
 
     move-result v0
 
     iput v0, p0, Lcom/samsung/android/multiwindow/MultiWindowStyle;->mOptionFlags:I
 
-    .line 583
     invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
 
     move-result v0
 
     if-eqz v0, :cond_0
 
-    .line 584
     sget-object v0, Landroid/graphics/Rect;->CREATOR:Landroid/os/Parcelable$Creator;
 
     invoke-interface {v0, p1}, Landroid/os/Parcelable$Creator;->createFromParcel(Landroid/os/Parcel;)Ljava/lang/Object;
@@ -812,7 +726,6 @@
 
     iput-object v0, p0, Lcom/samsung/android/multiwindow/MultiWindowStyle;->mBounds:Landroid/graphics/Rect;
 
-    .line 586
     :cond_0
     sget-object v0, Landroid/graphics/Point;->CREATOR:Landroid/os/Parcelable$Creator;
 
@@ -824,7 +737,6 @@
 
     iput-object v0, p0, Lcom/samsung/android/multiwindow/MultiWindowStyle;->mIsolatedCenterPoint:Landroid/graphics/Point;
 
-    .line 587
     return-void
 .end method
 
@@ -833,22 +745,18 @@
     .param p0, "intent"    # Landroid/content/Intent;
 
     .prologue
-    .line 1081
     invoke-virtual {p0}, Landroid/content/Intent;->getMultiWindowStyle()Lcom/samsung/android/multiwindow/MultiWindowStyle;
 
     move-result-object v0
 
-    .line 1082
     .local v0, "mws":Lcom/samsung/android/multiwindow/MultiWindowStyle;
     if-nez v0, :cond_0
 
-    .line 1083
     new-instance v0, Lcom/samsung/android/multiwindow/MultiWindowStyle;
 
     .end local v0    # "mws":Lcom/samsung/android/multiwindow/MultiWindowStyle;
     invoke-direct {v0}, Lcom/samsung/android/multiwindow/MultiWindowStyle;-><init>()V
 
-    .line 1085
     .restart local v0    # "mws":Lcom/samsung/android/multiwindow/MultiWindowStyle;
     :cond_0
     const/high16 v1, 0x100000
@@ -857,10 +765,8 @@
 
     invoke-virtual {v0, v1, v2}, Lcom/samsung/android/multiwindow/MultiWindowStyle;->setOption(IZ)V
 
-    .line 1086
     invoke-virtual {p0, v0}, Landroid/content/Intent;->setMultiWindowStyle(Lcom/samsung/android/multiwindow/MultiWindowStyle;)V
 
-    .line 1087
     return-void
 .end method
 
@@ -869,10 +775,8 @@
     .param p0, "zone"    # I
 
     .prologue
-    .line 674
     packed-switch p0, :pswitch_data_0
 
-    .line 690
     :pswitch_0
     new-instance v0, Ljava/lang/StringBuilder;
 
@@ -895,49 +799,41 @@
     :goto_0
     return-object v0
 
-    .line 676
     :pswitch_1
     const-string v0, "ZONE_A"
 
     goto :goto_0
 
-    .line 678
     :pswitch_2
     const-string v0, "ZONE_B"
 
     goto :goto_0
 
-    .line 680
     :pswitch_3
     const-string v0, "ZONE_C"
 
     goto :goto_0
 
-    .line 682
     :pswitch_4
     const-string v0, "ZONE_D"
 
     goto :goto_0
 
-    .line 684
     :pswitch_5
     const-string v0, "ZONE_E"
 
     goto :goto_0
 
-    .line 686
     :pswitch_6
     const-string v0, "ZONE_F"
 
     goto :goto_0
 
-    .line 688
     :pswitch_7
     const-string v0, "ZONE_UNKNOWN"
 
     goto :goto_0
 
-    .line 674
     :pswitch_data_0
     .packed-switch 0x0
         :pswitch_7
@@ -963,12 +859,10 @@
     .param p1, "mode"    # I
 
     .prologue
-    .line 783
     new-instance v0, Lcom/samsung/android/multiwindow/MultiWindowStyle$CompatMultiWindowStyle;
 
     invoke-direct {v0, p0, p0, p1}, Lcom/samsung/android/multiwindow/MultiWindowStyle$CompatMultiWindowStyle;-><init>(Lcom/samsung/android/multiwindow/MultiWindowStyle;Lcom/samsung/android/multiwindow/MultiWindowStyle;I)V
 
-    .line 784
     .local v0, "style":Lcom/samsung/android/multiwindow/MultiWindowStyle$CompatMultiWindowStyle;
     invoke-virtual {v0}, Lcom/samsung/android/multiwindow/MultiWindowStyle$CompatMultiWindowStyle;->getMultiWindowStyle()Lcom/samsung/android/multiwindow/MultiWindowStyle;
 
@@ -981,7 +875,6 @@
     .locals 4
 
     .prologue
-    .line 775
     new-instance v0, Lcom/samsung/android/multiwindow/MultiWindowStyle$CompatWindowMode;
 
     iget v1, p0, Lcom/samsung/android/multiwindow/MultiWindowStyle;->mType:I
@@ -992,7 +885,6 @@
 
     invoke-direct {v0, p0, v1, v2, v3}, Lcom/samsung/android/multiwindow/MultiWindowStyle$CompatWindowMode;-><init>(Lcom/samsung/android/multiwindow/MultiWindowStyle;III)V
 
-    .line 776
     .local v0, "mode":Lcom/samsung/android/multiwindow/MultiWindowStyle$CompatWindowMode;
     invoke-virtual {v0}, Lcom/samsung/android/multiwindow/MultiWindowStyle$CompatWindowMode;->getCurrentMode()I
 
@@ -1005,7 +897,6 @@
     .locals 1
 
     .prologue
-    .line 555
     const/4 v0, 0x0
 
     return v0
@@ -1018,19 +909,16 @@
     .prologue
     const/4 v0, 0x0
 
-    .line 606
     iget v1, p0, Lcom/samsung/android/multiwindow/MultiWindowStyle;->mType:I
 
     iget v2, p1, Lcom/samsung/android/multiwindow/MultiWindowStyle;->mType:I
 
     if-eq v1, v2, :cond_1
 
-    .line 629
     :cond_0
     :goto_0
     return v0
 
-    .line 610
     :cond_1
     iget v1, p0, Lcom/samsung/android/multiwindow/MultiWindowStyle;->mZone:I
 
@@ -1038,14 +926,12 @@
 
     if-ne v1, v2, :cond_0
 
-    .line 614
     iget v1, p0, Lcom/samsung/android/multiwindow/MultiWindowStyle;->mOptionFlags:I
 
     iget v2, p1, Lcom/samsung/android/multiwindow/MultiWindowStyle;->mOptionFlags:I
 
     if-ne v1, v2, :cond_0
 
-    .line 618
     iget-object v1, p0, Lcom/samsung/android/multiwindow/MultiWindowStyle;->mIsolatedCenterPoint:Landroid/graphics/Point;
 
     iget-object v2, p1, Lcom/samsung/android/multiwindow/MultiWindowStyle;->mIsolatedCenterPoint:Landroid/graphics/Point;
@@ -1056,7 +942,6 @@
 
     if-eqz v1, :cond_0
 
-    .line 622
     iget-object v1, p0, Lcom/samsung/android/multiwindow/MultiWindowStyle;->mBounds:Landroid/graphics/Rect;
 
     if-eqz v1, :cond_2
@@ -1071,7 +956,6 @@
 
     if-eqz v1, :cond_0
 
-    .line 626
     :cond_2
     iget v1, p0, Lcom/samsung/android/multiwindow/MultiWindowStyle;->mScale:F
 
@@ -1081,7 +965,6 @@
 
     if-nez v1, :cond_0
 
-    .line 629
     const/4 v0, 0x1
 
     goto :goto_0
@@ -1092,39 +975,30 @@
     .param p1, "requestZone"    # I
 
     .prologue
-    .line 246
     const/16 v0, 0xf
 
-    .line 247
     .local v0, "baseZone":I
     packed-switch p1, :pswitch_data_0
 
-    .line 263
     :goto_0
     :pswitch_0
     return v0
 
-    .line 250
     :pswitch_1
     const/16 v0, 0xf
 
-    .line 251
     goto :goto_0
 
-    .line 255
     :pswitch_2
     const/4 v0, 0x3
 
-    .line 256
     goto :goto_0
 
-    .line 260
     :pswitch_3
     const/16 v0, 0xc
 
     goto :goto_0
 
-    .line 247
     :pswitch_data_0
     .packed-switch 0x1
         :pswitch_2
@@ -1146,7 +1020,6 @@
     .locals 1
 
     .prologue
-    .line 115
     iget v0, p0, Lcom/samsung/android/multiwindow/MultiWindowStyle;->mAppRequestOrientation:I
 
     return v0
@@ -1156,7 +1029,6 @@
     .locals 1
 
     .prologue
-    .line 531
     iget-object v0, p0, Lcom/samsung/android/multiwindow/MultiWindowStyle;->mBounds:Landroid/graphics/Rect;
 
     return-object v0
@@ -1166,25 +1038,21 @@
     .locals 1
 
     .prologue
-    .line 311
     iget v0, p0, Lcom/samsung/android/multiwindow/MultiWindowStyle;->mZone:I
 
     packed-switch v0, :pswitch_data_0
 
-    .line 318
     :pswitch_0
     const/4 v0, 0x0
 
     :goto_0
     return v0
 
-    .line 315
     :pswitch_1
     const/4 v0, 0x1
 
     goto :goto_0
 
-    .line 311
     nop
 
     :pswitch_data_0
@@ -1200,7 +1068,6 @@
     .locals 1
 
     .prologue
-    .line 547
     iget-object v0, p0, Lcom/samsung/android/multiwindow/MultiWindowStyle;->mIsolatedCenterPoint:Landroid/graphics/Point;
 
     return-object v0
@@ -1212,12 +1079,10 @@
     .prologue
     const/4 v0, 0x2
 
-    .line 142
     iget v1, p0, Lcom/samsung/android/multiwindow/MultiWindowStyle;->mType:I
 
     if-ne v1, v0, :cond_1
 
-    .line 143
     const/4 v1, 0x4
 
     invoke-virtual {p0, v1}, Lcom/samsung/android/multiwindow/MultiWindowStyle;->isEnabled(I)Z
@@ -1226,17 +1091,14 @@
 
     if-eqz v1, :cond_0
 
-    .line 148
     :goto_0
     return v0
 
-    .line 146
     :cond_0
     const/4 v0, 0x1
 
     goto :goto_0
 
-    .line 148
     :cond_1
     const/4 v0, 0x0
 
@@ -1247,14 +1109,12 @@
     .locals 2
 
     .prologue
-    .line 270
     iget v1, p0, Lcom/samsung/android/multiwindow/MultiWindowStyle;->mZone:I
 
     invoke-virtual {p0, v1}, Lcom/samsung/android/multiwindow/MultiWindowStyle;->findBaseZone(I)I
 
     move-result v0
 
-    .line 271
     .local v0, "baseZone":I
     iget v1, p0, Lcom/samsung/android/multiwindow/MultiWindowStyle;->mZone:I
 
@@ -1269,7 +1129,6 @@
     .locals 1
 
     .prologue
-    .line 155
     iget v0, p0, Lcom/samsung/android/multiwindow/MultiWindowStyle;->mOptionFlags:I
 
     return v0
@@ -1279,7 +1138,6 @@
     .locals 1
 
     .prologue
-    .line 69
     iget v0, p0, Lcom/samsung/android/multiwindow/MultiWindowStyle;->mScale:F
 
     return v0
@@ -1289,7 +1147,6 @@
     .locals 1
 
     .prologue
-    .line 90
     iget v0, p0, Lcom/samsung/android/multiwindow/MultiWindowStyle;->mSpecificTaskId:I
 
     return v0
@@ -1299,7 +1156,6 @@
     .locals 1
 
     .prologue
-    .line 135
     iget v0, p0, Lcom/samsung/android/multiwindow/MultiWindowStyle;->mType:I
 
     return v0
@@ -1309,7 +1165,6 @@
     .locals 1
 
     .prologue
-    .line 239
     iget v0, p0, Lcom/samsung/android/multiwindow/MultiWindowStyle;->mZone:I
 
     return v0
@@ -1319,24 +1174,20 @@
     .locals 1
 
     .prologue
-    .line 278
     iget v0, p0, Lcom/samsung/android/multiwindow/MultiWindowStyle;->mType:I
 
     packed-switch v0, :pswitch_data_0
 
-    .line 287
     const/16 v0, 0xf
 
     :goto_0
     return v0
 
-    .line 281
     :pswitch_0
     iget v0, p0, Lcom/samsung/android/multiwindow/MultiWindowStyle;->mZone:I
 
     goto :goto_0
 
-    .line 278
     nop
 
     :pswitch_data_0
@@ -1350,31 +1201,26 @@
     .locals 1
 
     .prologue
-    .line 325
     iget v0, p0, Lcom/samsung/android/multiwindow/MultiWindowStyle;->mZone:I
 
     packed-switch v0, :pswitch_data_0
 
-    .line 337
     :pswitch_0
     const/4 v0, 0x0
 
     :goto_0
     return v0
 
-    .line 328
     :pswitch_1
     const/4 v0, 0x1
 
     goto :goto_0
 
-    .line 334
     :pswitch_2
     const/4 v0, 0x2
 
     goto :goto_0
 
-    .line 325
     nop
 
     :pswitch_data_0
@@ -1398,7 +1244,6 @@
     .locals 2
 
     .prologue
-    .line 1128
     iget v0, p0, Lcom/samsung/android/multiwindow/MultiWindowStyle;->mOptionFlags:I
 
     const/high16 v1, 0x200000
@@ -1422,7 +1267,6 @@
     .locals 2
 
     .prologue
-    .line 162
     iget v0, p0, Lcom/samsung/android/multiwindow/MultiWindowStyle;->mType:I
 
     const/4 v1, 0x2
@@ -1445,7 +1289,6 @@
     .param p1, "option"    # I
 
     .prologue
-    .line 481
     iget v0, p0, Lcom/samsung/android/multiwindow/MultiWindowStyle;->mOptionFlags:I
 
     and-int/2addr v0, p1
@@ -1467,25 +1310,21 @@
     .locals 1
 
     .prologue
-    .line 294
     iget v0, p0, Lcom/samsung/android/multiwindow/MultiWindowStyle;->mZone:I
 
     packed-switch v0, :pswitch_data_0
 
-    .line 304
     :pswitch_0
     const/4 v0, 0x1
 
     :goto_0
     return v0
 
-    .line 301
     :pswitch_1
     const/4 v0, 0x0
 
     goto :goto_0
 
-    .line 294
     nop
 
     :pswitch_data_0
@@ -1511,12 +1350,10 @@
     .param p2, "context"    # Landroid/content/Context;
 
     .prologue
-    .line 495
     invoke-static {}, Lcom/samsung/android/multiwindow/MultiWindowApplicationInfos;->getInstance()Lcom/samsung/android/multiwindow/MultiWindowApplicationInfos;
 
     move-result-object v0
 
-    .line 496
     .local v0, "infos":Lcom/samsung/android/multiwindow/MultiWindowApplicationInfos;
     const/high16 v1, 0x20000
 
@@ -1555,11 +1392,9 @@
 
     if-nez v1, :cond_2
 
-    .line 500
     :cond_1
     const/4 v1, 0x1
 
-    .line 502
     :goto_0
     return v1
 
@@ -1573,7 +1408,6 @@
     .locals 1
 
     .prologue
-    .line 176
     iget v0, p0, Lcom/samsung/android/multiwindow/MultiWindowStyle;->mType:I
 
     if-nez v0, :cond_0
@@ -1593,7 +1427,6 @@
     .locals 1
 
     .prologue
-    .line 740
     iget-boolean v0, p0, Lcom/samsung/android/multiwindow/MultiWindowStyle;->mIsNull:Z
 
     return v0
@@ -1603,15 +1436,12 @@
     .locals 1
 
     .prologue
-    .line 1149
     iget v0, p0, Lcom/samsung/android/multiwindow/MultiWindowStyle;->mOnTransaction:I
 
     if-eqz v0, :cond_0
 
-    .line 1150
     const/4 v0, 0x1
 
-    .line 1152
     :goto_0
     return v0
 
@@ -1627,7 +1457,6 @@
     .prologue
     const/4 v0, 0x1
 
-    .line 169
     iget v1, p0, Lcom/samsung/android/multiwindow/MultiWindowStyle;->mType:I
 
     if-ne v1, v0, :cond_0
@@ -1645,7 +1474,6 @@
     .locals 1
 
     .prologue
-    .line 488
     const/4 v0, 0x2
 
     invoke-virtual {p0, v0}, Lcom/samsung/android/multiwindow/MultiWindowStyle;->isEnabled(I)Z
@@ -1661,25 +1489,20 @@
     .param p2, "aInfo"    # Landroid/content/pm/ActivityInfo;
 
     .prologue
-    .line 1021
     if-nez p2, :cond_1
 
-    .line 1054
     :cond_0
     :goto_0
     return-void
 
-    .line 1025
     :cond_1
     iget-object v10, p2, Landroid/content/pm/ActivityInfo;->applicationInfo:Landroid/content/pm/ApplicationInfo;
 
     iget-object v3, v10, Landroid/content/pm/ApplicationInfo;->metaData:Landroid/os/Bundle;
 
-    .line 1026
     .local v3, "applicationMetaData":Landroid/os/Bundle;
     if-eqz v3, :cond_2
 
-    .line 1027
     const-string v10, "com.sec.android.multiwindow.STYLE"
 
     invoke-virtual {v3, v10}, Landroid/os/Bundle;->getString(Ljava/lang/String;)Ljava/lang/String;
@@ -1688,15 +1511,12 @@
 
     invoke-direct {p0, v10}, Lcom/samsung/android/multiwindow/MultiWindowStyle;->parseStyleOptions(Ljava/lang/String;)V
 
-    .line 1030
     :cond_2
     iget-object v2, p2, Landroid/content/pm/ActivityInfo;->metaData:Landroid/os/Bundle;
 
-    .line 1031
     .local v2, "activityMetaData":Landroid/os/Bundle;
     if-eqz v2, :cond_3
 
-    .line 1032
     const-string v10, "com.sec.android.multiwindow.activity.STYLE"
 
     invoke-virtual {v2, v10}, Landroid/os/Bundle;->getString(Ljava/lang/String;)Ljava/lang/String;
@@ -1705,7 +1525,6 @@
 
     invoke-direct {p0, v10}, Lcom/samsung/android/multiwindow/MultiWindowStyle;->parseStyleOptions(Ljava/lang/String;)V
 
-    .line 1035
     :cond_3
     const/16 v10, 0x1000
 
@@ -1715,14 +1534,11 @@
 
     if-eqz v10, :cond_0
 
-    .line 1037
     const-string v0, "com.sec.android.multiwindow.isolatedSplit.centerPoint.portrait.x"
 
-    .line 1038
     .local v0, "METADATA_ISOLATED_SPLIT_CENTER_POINT_X":Ljava/lang/String;
     const-string v1, "com.sec.android.multiwindow.isolatedSplit.centerPoint.portrait.y"
 
-    .line 1040
     .local v1, "METADATA_ISOLATED_SPLIT_CENTER_POINT_Y":Ljava/lang/String;
     const-string v10, "com.sec.android.multiwindow.isolatedSplit.centerPoint.portrait.x"
 
@@ -1730,7 +1546,6 @@
 
     move-result v8
 
-    .line 1041
     .local v8, "isolatedCenterPointXResId":I
     const-string v10, "com.sec.android.multiwindow.isolatedSplit.centerPoint.portrait.y"
 
@@ -1738,7 +1553,6 @@
 
     move-result v9
 
-    .line 1045
     .local v9, "isolatedCenterPointYResId":I
     :try_start_0
     iget-object v10, p2, Landroid/content/pm/ActivityInfo;->packageName:Ljava/lang/String;
@@ -1749,7 +1563,6 @@
 
     move-result-object v6
 
-    .line 1046
     .local v6, "context":Landroid/content/Context;
     invoke-virtual {v6}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
 
@@ -1759,7 +1572,6 @@
 
     move-result v4
 
-    .line 1047
     .local v4, "centerPointX":I
     invoke-virtual {v6}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
 
@@ -1769,7 +1581,6 @@
 
     move-result v5
 
-    .line 1048
     .local v5, "centerPointY":I
     iget-object v10, p0, Lcom/samsung/android/multiwindow/MultiWindowStyle;->mIsolatedCenterPoint:Landroid/graphics/Point;
 
@@ -1780,7 +1591,6 @@
 
     goto :goto_0
 
-    .line 1049
     .end local v4    # "centerPointX":I
     .end local v5    # "centerPointY":I
     .end local v6    # "context":Landroid/content/Context;
@@ -1789,11 +1599,9 @@
 
     goto :goto_0
 
-    .line 1050
     :catch_1
     move-exception v7
 
-    .line 1051
     .local v7, "e":Landroid/content/pm/PackageManager$NameNotFoundException;
     invoke-virtual {v7}, Landroid/content/pm/PackageManager$NameNotFoundException;->printStackTrace()V
 
@@ -1804,12 +1612,10 @@
     .locals 1
 
     .prologue
-    .line 1159
     const/4 v0, 0x0
 
     iput v0, p0, Lcom/samsung/android/multiwindow/MultiWindowStyle;->mOnTransaction:I
 
-    .line 1160
     return-void
 .end method
 
@@ -1817,7 +1623,6 @@
     .locals 2
 
     .prologue
-    .line 1135
     iget v0, p0, Lcom/samsung/android/multiwindow/MultiWindowStyle;->mOptionFlags:I
 
     const v1, -0x200001
@@ -1826,7 +1631,6 @@
 
     iput v0, p0, Lcom/samsung/android/multiwindow/MultiWindowStyle;->mOptionFlags:I
 
-    .line 1136
     return-void
 .end method
 
@@ -1834,12 +1638,10 @@
     .locals 1
 
     .prologue
-    .line 76
     const/4 v0, -0x1
 
     iput v0, p0, Lcom/samsung/android/multiwindow/MultiWindowStyle;->mSpecificTaskId:I
 
-    .line 77
     return-void
 .end method
 
@@ -1848,10 +1650,8 @@
     .param p1, "orientation"    # I
 
     .prologue
-    .line 108
     iput p1, p0, Lcom/samsung/android/multiwindow/MultiWindowStyle;->mAppRequestOrientation:I
 
-    .line 109
     return-void
 .end method
 
@@ -1860,25 +1660,21 @@
     .param p1, "bound"    # Landroid/graphics/Rect;
 
     .prologue
-    .line 509
     if-nez p1, :cond_0
 
-    .line 510
     new-instance v0, Ljava/lang/IllegalArgumentException;
 
-    const-string/jumbo v1, "rect is null"
+    const-string v1, "rect is null"
 
     invoke-direct {v0, v1}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
 
     throw v0
 
-    .line 515
     :cond_0
     iget-object v0, p0, Lcom/samsung/android/multiwindow/MultiWindowStyle;->mBounds:Landroid/graphics/Rect;
 
     if-eqz v0, :cond_1
 
-    .line 516
     iget-object v0, p0, Lcom/samsung/android/multiwindow/MultiWindowStyle;->mBounds:Landroid/graphics/Rect;
 
     invoke-virtual {v0, p1}, Landroid/graphics/Rect;->equals(Ljava/lang/Object;)Z
@@ -1887,17 +1683,14 @@
 
     if-eqz v0, :cond_1
 
-    .line 525
     :goto_0
     return-void
 
-    .line 520
     :cond_1
     iget-object v0, p0, Lcom/samsung/android/multiwindow/MultiWindowStyle;->mBounds:Landroid/graphics/Rect;
 
     if-nez v0, :cond_2
 
-    .line 521
     new-instance v0, Landroid/graphics/Rect;
 
     invoke-direct {v0, p1}, Landroid/graphics/Rect;-><init>(Landroid/graphics/Rect;)V
@@ -1906,7 +1699,6 @@
 
     goto :goto_0
 
-    .line 523
     :cond_2
     iget-object v0, p0, Lcom/samsung/android/multiwindow/MultiWindowStyle;->mBounds:Landroid/graphics/Rect;
 
@@ -1920,7 +1712,6 @@
     .param p1, "centerPoint"    # Landroid/graphics/Point;
 
     .prologue
-    .line 540
     iget-object v0, p0, Lcom/samsung/android/multiwindow/MultiWindowStyle;->mIsolatedCenterPoint:Landroid/graphics/Point;
 
     iget v1, p1, Landroid/graphics/Point;->x:I
@@ -1929,7 +1720,6 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/graphics/Point;->set(II)V
 
-    .line 541
     return-void
 .end method
 
@@ -1938,10 +1728,8 @@
     .param p1, "isNull"    # Z
 
     .prologue
-    .line 733
     iput-boolean p1, p0, Lcom/samsung/android/multiwindow/MultiWindowStyle;->mIsNull:Z
 
-    .line 734
     return-void
 .end method
 
@@ -1949,12 +1737,10 @@
     .locals 1
 
     .prologue
-    .line 1142
     const/4 v0, 0x1
 
     iput v0, p0, Lcom/samsung/android/multiwindow/MultiWindowStyle;->mOnTransaction:I
 
-    .line 1143
     return-void
 .end method
 
@@ -1964,7 +1750,6 @@
     .param p2, "mask"    # I
 
     .prologue
-    .line 463
     iget v0, p0, Lcom/samsung/android/multiwindow/MultiWindowStyle;->mOptionFlags:I
 
     xor-int/lit8 v1, p2, -0x1
@@ -1973,7 +1758,6 @@
 
     iput v0, p0, Lcom/samsung/android/multiwindow/MultiWindowStyle;->mOptionFlags:I
 
-    .line 464
     iget v0, p0, Lcom/samsung/android/multiwindow/MultiWindowStyle;->mOptionFlags:I
 
     and-int v1, p1, p2
@@ -1982,7 +1766,6 @@
 
     iput v0, p0, Lcom/samsung/android/multiwindow/MultiWindowStyle;->mOptionFlags:I
 
-    .line 465
     return-void
 .end method
 
@@ -1992,7 +1775,6 @@
     .param p2, "value"    # Z
 
     .prologue
-    .line 471
     iget v0, p0, Lcom/samsung/android/multiwindow/MultiWindowStyle;->mOptionFlags:I
 
     xor-int/lit8 v1, p1, -0x1
@@ -2001,17 +1783,14 @@
 
     iput v0, p0, Lcom/samsung/android/multiwindow/MultiWindowStyle;->mOptionFlags:I
 
-    .line 472
     if-eqz p2, :cond_0
 
-    .line 473
     iget v0, p0, Lcom/samsung/android/multiwindow/MultiWindowStyle;->mOptionFlags:I
 
     or-int/2addr v0, p1
 
     iput v0, p0, Lcom/samsung/android/multiwindow/MultiWindowStyle;->mOptionFlags:I
 
-    .line 475
     :cond_0
     return-void
 .end method
@@ -2021,10 +1800,8 @@
     .param p1, "scale"    # F
 
     .prologue
-    .line 62
     iput p1, p0, Lcom/samsung/android/multiwindow/MultiWindowStyle;->mScale:F
 
-    .line 63
     return-void
 .end method
 
@@ -2033,10 +1810,8 @@
     .param p1, "taskId"    # I
 
     .prologue
-    .line 83
     iput p1, p0, Lcom/samsung/android/multiwindow/MultiWindowStyle;->mSpecificTaskId:I
 
-    .line 84
     return-void
 .end method
 
@@ -2045,12 +1820,10 @@
     .param p1, "other"    # Lcom/samsung/android/multiwindow/MultiWindowStyle;
 
     .prologue
-    .line 636
     const/4 v0, 0x0
 
     invoke-virtual {p0, p1, v0}, Lcom/samsung/android/multiwindow/MultiWindowStyle;->setTo(Lcom/samsung/android/multiwindow/MultiWindowStyle;Z)V
 
-    .line 637
     return-void
 .end method
 
@@ -2060,30 +1833,24 @@
     .param p2, "includeUniqueOptions"    # Z
 
     .prologue
-    .line 643
     if-nez p1, :cond_0
 
-    .line 668
     :goto_0
     return-void
 
-    .line 646
     :cond_0
     iget v1, p1, Lcom/samsung/android/multiwindow/MultiWindowStyle;->mType:I
 
     iput v1, p0, Lcom/samsung/android/multiwindow/MultiWindowStyle;->mType:I
 
-    .line 647
     iget v1, p1, Lcom/samsung/android/multiwindow/MultiWindowStyle;->mZone:I
 
     invoke-virtual {p0, v1}, Lcom/samsung/android/multiwindow/MultiWindowStyle;->setZone(I)V
 
-    .line 648
     iget v1, p1, Lcom/samsung/android/multiwindow/MultiWindowStyle;->mScale:F
 
     iput v1, p0, Lcom/samsung/android/multiwindow/MultiWindowStyle;->mScale:F
 
-    .line 650
     if-nez p2, :cond_1
 
     iget v1, p1, Lcom/samsung/android/multiwindow/MultiWindowStyle;->mOptionFlags:I
@@ -2092,26 +1859,22 @@
 
     if-eqz v1, :cond_4
 
-    .line 651
     :cond_1
     iget v1, p1, Lcom/samsung/android/multiwindow/MultiWindowStyle;->mOptionFlags:I
 
     iput v1, p0, Lcom/samsung/android/multiwindow/MultiWindowStyle;->mOptionFlags:I
 
-    .line 652
     iget v1, p0, Lcom/samsung/android/multiwindow/MultiWindowStyle;->mOptionFlags:I
 
     and-int/lit16 v1, v1, -0x4001
 
     iput v1, p0, Lcom/samsung/android/multiwindow/MultiWindowStyle;->mOptionFlags:I
 
-    .line 660
     :goto_1
     iget-object v1, p1, Lcom/samsung/android/multiwindow/MultiWindowStyle;->mBounds:Landroid/graphics/Rect;
 
     if-eqz v1, :cond_2
 
-    .line 661
     new-instance v1, Landroid/graphics/Rect;
 
     iget-object v2, p1, Lcom/samsung/android/multiwindow/MultiWindowStyle;->mBounds:Landroid/graphics/Rect;
@@ -2120,13 +1883,11 @@
 
     iput-object v1, p0, Lcom/samsung/android/multiwindow/MultiWindowStyle;->mBounds:Landroid/graphics/Rect;
 
-    .line 663
     :cond_2
     iget-object v1, p1, Lcom/samsung/android/multiwindow/MultiWindowStyle;->mIsolatedCenterPoint:Landroid/graphics/Point;
 
     if-eqz v1, :cond_3
 
-    .line 664
     new-instance v1, Landroid/graphics/Point;
 
     iget-object v2, p1, Lcom/samsung/android/multiwindow/MultiWindowStyle;->mIsolatedCenterPoint:Landroid/graphics/Point;
@@ -2135,7 +1896,6 @@
 
     iput-object v1, p0, Lcom/samsung/android/multiwindow/MultiWindowStyle;->mIsolatedCenterPoint:Landroid/graphics/Point;
 
-    .line 667
     :cond_3
     const/4 v1, 0x0
 
@@ -2143,7 +1903,6 @@
 
     goto :goto_0
 
-    .line 654
     :cond_4
     iget v1, p0, Lcom/samsung/android/multiwindow/MultiWindowStyle;->mOptionFlags:I
 
@@ -2151,7 +1910,6 @@
 
     and-int v0, v1, v2
 
-    .line 655
     .local v0, "unitaryOption":I
     iget v1, p0, Lcom/samsung/android/multiwindow/MultiWindowStyle;->mOptionFlags:I
 
@@ -2161,7 +1919,6 @@
 
     iput v1, p0, Lcom/samsung/android/multiwindow/MultiWindowStyle;->mOptionFlags:I
 
-    .line 656
     iget v1, p0, Lcom/samsung/android/multiwindow/MultiWindowStyle;->mOptionFlags:I
 
     iget v2, p1, Lcom/samsung/android/multiwindow/MultiWindowStyle;->mOptionFlags:I
@@ -2174,7 +1931,6 @@
 
     iput v1, p0, Lcom/samsung/android/multiwindow/MultiWindowStyle;->mOptionFlags:I
 
-    .line 657
     iget v1, p0, Lcom/samsung/android/multiwindow/MultiWindowStyle;->mOptionFlags:I
 
     const v2, -0x200001
@@ -2183,7 +1939,6 @@
 
     iput v1, p0, Lcom/samsung/android/multiwindow/MultiWindowStyle;->mOptionFlags:I
 
-    .line 658
     iget v1, p0, Lcom/samsung/android/multiwindow/MultiWindowStyle;->mOptionFlags:I
 
     or-int/2addr v1, v0
@@ -2198,15 +1953,12 @@
     .param p1, "type"    # I
 
     .prologue
-    .line 122
     iput p1, p0, Lcom/samsung/android/multiwindow/MultiWindowStyle;->mType:I
 
-    .line 123
     const/4 v0, 0x0
 
     invoke-virtual {p0, v0}, Lcom/samsung/android/multiwindow/MultiWindowStyle;->setZone(I)V
 
-    .line 125
     iget v0, p0, Lcom/samsung/android/multiwindow/MultiWindowStyle;->mType:I
 
     const/4 v1, 0x2
@@ -2217,14 +1969,12 @@
 
     if-nez v0, :cond_0
 
-    .line 126
     new-instance v0, Landroid/graphics/Rect;
 
     invoke-direct {v0}, Landroid/graphics/Rect;-><init>()V
 
     iput-object v0, p0, Lcom/samsung/android/multiwindow/MultiWindowStyle;->mBounds:Landroid/graphics/Rect;
 
-    .line 128
     :cond_0
     iget v0, p0, Lcom/samsung/android/multiwindow/MultiWindowStyle;->mOptionFlags:I
 
@@ -2234,7 +1984,6 @@
 
     iput v0, p0, Lcom/samsung/android/multiwindow/MultiWindowStyle;->mOptionFlags:I
 
-    .line 129
     return-void
 .end method
 
@@ -2244,17 +1993,13 @@
     .param p2, "resetOptions"    # Z
 
     .prologue
-    .line 97
     if-eqz p2, :cond_0
 
-    .line 98
     invoke-virtual {p0, p1}, Lcom/samsung/android/multiwindow/MultiWindowStyle;->setType(I)V
 
-    .line 102
     :goto_0
     return-void
 
-    .line 100
     :cond_0
     iput p1, p0, Lcom/samsung/android/multiwindow/MultiWindowStyle;->mType:I
 
@@ -2266,10 +2011,8 @@
     .param p1, "zone"    # I
 
     .prologue
-    .line 232
     iput p1, p0, Lcom/samsung/android/multiwindow/MultiWindowStyle;->mZone:I
 
-    .line 233
     return-void
 .end method
 
@@ -2277,14 +2020,12 @@
     .locals 5
 
     .prologue
-    .line 698
     new-instance v0, Ljava/lang/StringBuilder;
 
     const/16 v1, 0x80
 
     invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(I)V
 
-    .line 699
     .local v0, "out":Ljava/lang/StringBuilder;
     invoke-virtual {p0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
@@ -2296,22 +2037,18 @@
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 700
-    const-string/jumbo v1, "{type="
+    const-string v1, "{type="
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 701
     iget v1, p0, Lcom/samsung/android/multiwindow/MultiWindowStyle;->mType:I
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
-    .line 702
     const-string v1, ", zone="
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 703
     iget v1, p0, Lcom/samsung/android/multiwindow/MultiWindowStyle;->mZone:I
 
     invoke-static {v1}, Lcom/samsung/android/multiwindow/MultiWindowStyle;->zoneToString(I)Ljava/lang/String;
@@ -2320,12 +2057,10 @@
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 704
     const-string v1, ", option=0x"
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 705
     const-string v1, "%08x"
 
     const/4 v2, 0x1
@@ -2348,64 +2083,52 @@
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 706
     const-string v1, ", bounds="
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 707
     iget-object v1, p0, Lcom/samsung/android/multiwindow/MultiWindowStyle;->mBounds:Landroid/graphics/Rect;
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 
-    .line 708
     const-string v1, ", isNull="
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 709
     invoke-virtual {p0}, Lcom/samsung/android/multiwindow/MultiWindowStyle;->isNull()Z
 
     move-result v1
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
 
-    .line 710
     const-string v1, ", isolatedCenterPoint="
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 711
     iget-object v1, p0, Lcom/samsung/android/multiwindow/MultiWindowStyle;->mIsolatedCenterPoint:Landroid/graphics/Point;
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 
-    .line 712
     const-string v1, ", scale="
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 713
     iget v1, p0, Lcom/samsung/android/multiwindow/MultiWindowStyle;->mScale:F
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(F)Ljava/lang/StringBuilder;
 
-    .line 714
     const-string v1, ", specificTaskId="
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 715
     iget v1, p0, Lcom/samsung/android/multiwindow/MultiWindowStyle;->mSpecificTaskId:I
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
-    .line 716
     const/16 v1, 0x7d
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
 
-    .line 717
     invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
     move-result-object v1
@@ -2419,56 +2142,45 @@
     .param p2, "flags"    # I
 
     .prologue
-    .line 563
     iget v0, p0, Lcom/samsung/android/multiwindow/MultiWindowStyle;->mType:I
 
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 564
     iget v0, p0, Lcom/samsung/android/multiwindow/MultiWindowStyle;->mZone:I
 
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 565
     iget v0, p0, Lcom/samsung/android/multiwindow/MultiWindowStyle;->mScale:F
 
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeFloat(F)V
 
-    .line 566
     iget v0, p0, Lcom/samsung/android/multiwindow/MultiWindowStyle;->mSpecificTaskId:I
 
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 567
     iget v0, p0, Lcom/samsung/android/multiwindow/MultiWindowStyle;->mOptionFlags:I
 
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 568
     iget-object v0, p0, Lcom/samsung/android/multiwindow/MultiWindowStyle;->mBounds:Landroid/graphics/Rect;
 
     if-eqz v0, :cond_0
 
-    .line 569
     const/4 v0, 0x1
 
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 570
     iget-object v0, p0, Lcom/samsung/android/multiwindow/MultiWindowStyle;->mBounds:Landroid/graphics/Rect;
 
     invoke-virtual {v0, p1, p2}, Landroid/graphics/Rect;->writeToParcel(Landroid/os/Parcel;I)V
 
-    .line 574
     :goto_0
     iget-object v0, p0, Lcom/samsung/android/multiwindow/MultiWindowStyle;->mIsolatedCenterPoint:Landroid/graphics/Point;
 
     invoke-virtual {v0, p1, p2}, Landroid/graphics/Point;->writeToParcel(Landroid/os/Parcel;I)V
 
-    .line 575
     return-void
 
-    .line 572
     :cond_0
     const/4 v0, 0x0
 

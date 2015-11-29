@@ -36,7 +36,6 @@
     .locals 0
 
     .prologue
-    .line 1146
     iput-object p1, p0, Lcom/android/server/am/ActivityStackSupervisor$1;->this$0:Lcom/android/server/am/ActivityStackSupervisor;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -52,14 +51,11 @@
     .param p2, "rhs"    # Landroid/app/ActivityManager$RunningTaskInfo;
 
     .prologue
-    .line 1150
     iget-wide v2, p1, Landroid/app/ActivityManager$RunningTaskInfo;->lastActiveElapsedTime:J
 
-    .line 1151
     .local v2, "time1_elapsed":J
     iget-wide v6, p2, Landroid/app/ActivityManager$RunningTaskInfo;->lastActiveElapsedTime:J
 
-    .line 1152
     .local v6, "time2_elapsed":J
     sub-long v8, v2, v6
 
@@ -69,14 +65,11 @@
 
     if-lez v8, :cond_0
 
-    .line 1153
     const/4 v8, -0x1
 
-    .line 1167
     :goto_0
     return v8
 
-    .line 1155
     :cond_0
     sub-long v8, v2, v6
 
@@ -86,20 +79,16 @@
 
     if-gez v8, :cond_1
 
-    .line 1156
     const/4 v8, 0x1
 
     goto :goto_0
 
-    .line 1159
     :cond_1
     iget-wide v0, p1, Landroid/app/ActivityManager$RunningTaskInfo;->lastActiveTime:J
 
-    .line 1160
     .local v0, "time1":J
     iget-wide v4, p2, Landroid/app/ActivityManager$RunningTaskInfo;->lastActiveTime:J
 
-    .line 1161
     .local v4, "time2":J
     sub-long v8, v0, v4
 
@@ -109,12 +98,10 @@
 
     if-lez v8, :cond_2
 
-    .line 1162
     const/4 v8, -0x1
 
     goto :goto_0
 
-    .line 1164
     :cond_2
     sub-long v8, v0, v4
 
@@ -124,12 +111,10 @@
 
     if-gez v8, :cond_3
 
-    .line 1165
     const/4 v8, 0x1
 
     goto :goto_0
 
-    .line 1167
     :cond_3
     const/4 v8, 0x0
 
@@ -142,7 +127,6 @@
     .param p2, "x1"    # Ljava/lang/Object;
 
     .prologue
-    .line 1146
     check-cast p1, Landroid/app/ActivityManager$RunningTaskInfo;
 
     .end local p1    # "x0":Ljava/lang/Object;

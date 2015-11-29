@@ -35,24 +35,18 @@
     .param p5, "device"    # I
 
     .prologue
-    .line 1409
     iput-object p1, p0, Landroid/media/AudioService$StreamVolumeCommand;->this$0:Landroid/media/AudioService;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 1410
     iput p2, p0, Landroid/media/AudioService$StreamVolumeCommand;->mStreamType:I
 
-    .line 1411
     iput p3, p0, Landroid/media/AudioService$StreamVolumeCommand;->mIndex:I
 
-    .line 1412
     iput p4, p0, Landroid/media/AudioService$StreamVolumeCommand;->mFlags:I
 
-    .line 1413
     iput p5, p0, Landroid/media/AudioService$StreamVolumeCommand;->mDevice:I
 
-    .line 1414
     return-void
 .end method
 
@@ -62,12 +56,11 @@
     .locals 2
 
     .prologue
-    .line 1417
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v1, "{streamType="
+    const-string v1, "{streamType="
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 

@@ -23,7 +23,6 @@
     .locals 0
 
     .prologue
-    .line 237
     iput-object p1, p0, Lcom/android/internal/widget/LockPatternUtilsCache$1;->this$0:Lcom/android/internal/widget/LockPatternUtilsCache;
 
     invoke-direct {p0}, Lcom/android/internal/widget/ILockSettingsObserver$Stub;-><init>()V
@@ -44,12 +43,10 @@
     .end annotation
 
     .prologue
-    .line 240
     iget-object v0, p0, Lcom/android/internal/widget/LockPatternUtilsCache$1;->this$0:Lcom/android/internal/widget/LockPatternUtilsCache;
 
     # invokes: Lcom/android/internal/widget/LockPatternUtilsCache;->invalidateCache(Ljava/lang/String;I)V
     invoke-static {v0, p1, p2}, Lcom/android/internal/widget/LockPatternUtilsCache;->access$100(Lcom/android/internal/widget/LockPatternUtilsCache;Ljava/lang/String;I)V
 
-    .line 241
     return-void
 .end method

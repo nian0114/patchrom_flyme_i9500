@@ -20,7 +20,6 @@
 
     const/4 v1, 0x0
 
-    .line 27
     const-string v2, "ro.debuggable"
 
     invoke-static {v2, v1}, Landroid/os/SystemProperties;->getInt(Ljava/lang/String;I)I
@@ -32,7 +31,6 @@
     :goto_0
     sput-boolean v0, Lcom/android/internal/telephony/cat/CatLog;->DEBUG:Z
 
-    .line 28
     const-string v0, "ro.product_ship"
 
     const-string v1, "false"
@@ -52,7 +50,6 @@
     :cond_0
     move v0, v1
 
-    .line 27
     goto :goto_0
 .end method
 
@@ -60,7 +57,6 @@
     .locals 0
 
     .prologue
-    .line 24
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -72,18 +68,15 @@
     .param p1, "msg"    # Ljava/lang/String;
 
     .prologue
-    .line 34
     invoke-static {}, Lcom/android/internal/telephony/cat/CatLog;->isDebuggable()Z
 
     move-result v1
 
     if-nez v1, :cond_0
 
-    .line 41
     :goto_0
     return-void
 
-    .line 38
     :cond_0
     invoke-virtual {p0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
@@ -93,7 +86,6 @@
 
     move-result-object v0
 
-    .line 39
     .local v0, "className":Ljava/lang/String;
     const-string v1, "CAT"
 
@@ -143,18 +135,15 @@
     .param p2, "msg"    # Ljava/lang/String;
 
     .prologue
-    .line 53
     invoke-static {}, Lcom/android/internal/telephony/cat/CatLog;->isDebuggable()Z
 
     move-result v1
 
     if-nez v1, :cond_0
 
-    .line 60
     :goto_0
     return-void
 
-    .line 57
     :cond_0
     invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
@@ -164,7 +153,6 @@
 
     move-result-object v0
 
-    .line 58
     .local v0, "className":Ljava/lang/String;
     const-string v1, "CAT"
 
@@ -229,18 +217,15 @@
     .param p1, "msg"    # Ljava/lang/String;
 
     .prologue
-    .line 44
     invoke-static {}, Lcom/android/internal/telephony/cat/CatLog;->isDebuggable()Z
 
     move-result v0
 
     if-nez v0, :cond_0
 
-    .line 49
     :goto_0
     return-void
 
-    .line 48
     :cond_0
     const-string v0, "CAT"
 
@@ -275,7 +260,6 @@
     .locals 2
 
     .prologue
-    .line 63
     sget-object v0, Lcom/android/internal/telephony/cat/CatLog;->SHIP:Ljava/lang/String;
 
     const-string v1, "true"

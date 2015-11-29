@@ -26,7 +26,6 @@
     .locals 0
 
     .prologue
-    .line 1961
     iput-object p1, p0, Lcom/android/server/epm/overlay/ThemeManagerService$7$1;->this$1:Lcom/android/server/epm/overlay/ThemeManagerService$7;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -40,7 +39,6 @@
     .locals 3
 
     .prologue
-    .line 1965
     iget-object v0, p0, Lcom/android/server/epm/overlay/ThemeManagerService$7$1;->this$1:Lcom/android/server/epm/overlay/ThemeManagerService$7;
 
     iget-object v0, v0, Lcom/android/server/epm/overlay/ThemeManagerService$7;->this$0:Lcom/android/server/epm/overlay/ThemeManagerService;
@@ -60,6 +58,5 @@
 
     invoke-virtual {v0}, Landroid/widget/Toast;->show()V
 
-    .line 1966
     return-void
 .end method

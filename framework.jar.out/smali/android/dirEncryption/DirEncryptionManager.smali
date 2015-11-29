@@ -109,8 +109,7 @@
     .locals 2
 
     .prologue
-    .line 30
-    const-string/jumbo v0, "ro.sec.fle.encryption"
+    const-string v0, "ro.sec.fle.encryption"
 
     const-string v1, "false"
 
@@ -118,7 +117,7 @@
 
     move-result-object v0
 
-    const-string/jumbo v1, "true"
+    const-string v1, "true"
 
     invoke-virtual {v0, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
@@ -126,12 +125,10 @@
 
     sput-boolean v0, Landroid/dirEncryption/DirEncryptionManager;->DIR_ENCRYPTION:Z
 
-    .line 58
     const v0, -0x35014542    # -8346975.0f
 
     sput v0, Landroid/dirEncryption/DirEncryptionManager;->SECURITY_POLICY_NOTIFICATION_ID:I
 
-    .line 119
     const/4 v0, 0x0
 
     sput-boolean v0, Landroid/dirEncryption/DirEncryptionManager;->mPolicyChanged:Z
@@ -146,22 +143,16 @@
     .prologue
     const/4 v2, 0x0
 
-    .line 126
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 116
     iput-object v2, p0, Landroid/dirEncryption/DirEncryptionManager;->mContext:Landroid/content/Context;
 
-    .line 117
     iput-object v2, p0, Landroid/dirEncryption/DirEncryptionManager;->mDew:Landroid/dirEncryption/DirEncryptionWrapper;
 
-    .line 118
     iput-object v2, p0, Landroid/dirEncryption/DirEncryptionManager;->m_InstDirEncSvc:Landroid/os/storage/IDirEncryptService;
 
-    .line 127
     iput-object p1, p0, Landroid/dirEncryption/DirEncryptionManager;->mContext:Landroid/content/Context;
 
-    .line 129
     new-instance v0, Landroid/dirEncryption/DirEncryptionWrapper;
 
     iget-object v1, p0, Landroid/dirEncryption/DirEncryptionManager;->mContext:Landroid/content/Context;
@@ -170,7 +161,6 @@
 
     iput-object v0, p0, Landroid/dirEncryption/DirEncryptionManager;->mDew:Landroid/dirEncryption/DirEncryptionWrapper;
 
-    .line 130
     const-string v0, "DirEncryptService"
 
     invoke-static {v0}, Landroid/os/ServiceManager;->getService(Ljava/lang/String;)Landroid/os/IBinder;
@@ -183,31 +173,25 @@
 
     iput-object v0, p0, Landroid/dirEncryption/DirEncryptionManager;->m_InstDirEncSvc:Landroid/os/storage/IDirEncryptService;
 
-    .line 132
     iget-object v0, p0, Landroid/dirEncryption/DirEncryptionManager;->m_InstDirEncSvc:Landroid/os/storage/IDirEncryptService;
 
     if-nez v0, :cond_0
 
-    .line 133
     const-string v0, "Unable to get DirEncryptService instance."
 
     invoke-static {v0}, Landroid/dirEncryption/DirEncryptionManager;->log(Ljava/lang/String;)V
 
-    .line 135
     :cond_0
     sget-boolean v0, Landroid/dirEncryption/DirEncryptionManager;->DIR_ENCRYPTION:Z
 
     if-nez v0, :cond_1
 
-    .line 136
     const-string v0, "Dir Encryption not available"
 
     invoke-static {v0}, Landroid/dirEncryption/DirEncryptionManager;->log(Ljava/lang/String;)V
 
-    .line 137
     iput-object v2, p0, Landroid/dirEncryption/DirEncryptionManager;->m_InstDirEncSvc:Landroid/os/storage/IDirEncryptService;
 
-    .line 139
     :cond_1
     return-void
 .end method
@@ -216,15 +200,12 @@
     .locals 1
 
     .prologue
-    .line 182
     sget-boolean v0, Landroid/dirEncryption/DirEncryptionManager;->DIR_ENCRYPTION:Z
 
     if-eqz v0, :cond_0
 
-    .line 183
     const/4 v0, 0x1
 
-    .line 185
     :goto_0
     return v0
 
@@ -239,12 +220,10 @@
     .param p0, "msg"    # Ljava/lang/String;
 
     .prologue
-    .line 123
     const-string v0, "DirEncryptionManager"
 
     invoke-static {v0, p0}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 124
     return-void
 .end method
 
@@ -255,25 +234,21 @@
     .param p1, "in"    # Z
 
     .prologue
-    .line 357
     invoke-virtual {p0}, Landroid/dirEncryption/DirEncryptionManager;->isEncryptionSupported()Z
 
     move-result v1
 
     if-nez v1, :cond_1
 
-    .line 368
     :cond_0
     :goto_0
     return-void
 
-    .line 360
     :cond_1
     iget-object v1, p0, Landroid/dirEncryption/DirEncryptionManager;->m_InstDirEncSvc:Landroid/os/storage/IDirEncryptService;
 
     if-eqz v1, :cond_0
 
-    .line 364
     :try_start_0
     iget-object v1, p0, Landroid/dirEncryption/DirEncryptionManager;->m_InstDirEncSvc:Landroid/os/storage/IDirEncryptService;
 
@@ -283,11 +258,9 @@
 
     goto :goto_0
 
-    .line 365
     :catch_0
     move-exception v0
 
-    .line 366
     .local v0, "re":Landroid/os/RemoteException;
     const-string v1, "Unable to communicate with DirEncryptService"
 
@@ -301,10 +274,8 @@
     .param p1, "path"    # Ljava/lang/String;
 
     .prologue
-    .line 467
     const/16 v1, 0xc8
 
-    .line 469
     .local v1, "result":I
     iget-object v3, p0, Landroid/dirEncryption/DirEncryptionManager;->m_InstDirEncSvc:Landroid/os/storage/IDirEncryptService;
 
@@ -312,13 +283,11 @@
 
     move v2, v1
 
-    .line 477
     .end local v1    # "result":I
     .local v2, "result":I
     :goto_0
     return v2
 
-    .line 473
     .end local v2    # "result":I
     .restart local v1    # "result":I
     :cond_0
@@ -334,18 +303,15 @@
     :goto_1
     move v2, v1
 
-    .line 477
     .end local v1    # "result":I
     .restart local v2    # "result":I
     goto :goto_0
 
-    .line 474
     .end local v2    # "result":I
     .restart local v1    # "result":I
     :catch_0
     move-exception v0
 
-    .line 475
     .local v0, "re":Landroid/os/RemoteException;
     const-string v3, "Unable to communicate with DirEncryptService"
 
@@ -358,10 +324,8 @@
     .locals 4
 
     .prologue
-    .line 531
     const/16 v1, 0xc8
 
-    .line 533
     .local v1, "result":I
     invoke-virtual {p0}, Landroid/dirEncryption/DirEncryptionManager;->isEncryptionSupported()Z
 
@@ -371,13 +335,11 @@
 
     move v2, v1
 
-    .line 544
     .end local v1    # "result":I
     .local v2, "result":I
     :goto_0
     return v2
 
-    .line 536
     .end local v2    # "result":I
     .restart local v1    # "result":I
     :cond_0
@@ -387,12 +349,10 @@
 
     move v2, v1
 
-    .line 537
     .end local v1    # "result":I
     .restart local v2    # "result":I
     goto :goto_0
 
-    .line 540
     .end local v2    # "result":I
     .restart local v1    # "result":I
     :cond_1
@@ -408,18 +368,15 @@
     :goto_1
     move v2, v1
 
-    .line 544
     .end local v1    # "result":I
     .restart local v2    # "result":I
     goto :goto_0
 
-    .line 541
     .end local v2    # "result":I
     .restart local v1    # "result":I
     :catch_0
     move-exception v0
 
-    .line 542
     .local v0, "re":Landroid/os/RemoteException;
     const-string v3, "Unable to communicate with DirEncryptService"
 
@@ -432,10 +389,8 @@
     .locals 4
 
     .prologue
-    .line 486
     const/16 v1, 0xc8
 
-    .line 488
     .local v1, "result":I
     invoke-virtual {p0}, Landroid/dirEncryption/DirEncryptionManager;->isEncryptionSupported()Z
 
@@ -445,13 +400,11 @@
 
     move v2, v1
 
-    .line 500
     .end local v1    # "result":I
     .local v2, "result":I
     :goto_0
     return v2
 
-    .line 491
     .end local v2    # "result":I
     .restart local v1    # "result":I
     :cond_0
@@ -461,12 +414,10 @@
 
     move v2, v1
 
-    .line 492
     .end local v1    # "result":I
     .restart local v2    # "result":I
     goto :goto_0
 
-    .line 495
     .end local v2    # "result":I
     .restart local v1    # "result":I
     :cond_1
@@ -482,18 +433,15 @@
     :goto_1
     move v2, v1
 
-    .line 500
     .end local v1    # "result":I
     .restart local v2    # "result":I
     goto :goto_0
 
-    .line 496
     .end local v2    # "result":I
     .restart local v1    # "result":I
     :catch_0
     move-exception v0
 
-    .line 497
     .local v0, "re":Landroid/os/RemoteException;
     const-string v3, "Unable to communicate with DirEncryptService"
 
@@ -506,7 +454,6 @@
     .locals 1
 
     .prologue
-    .line 306
     iget-object v0, p0, Landroid/dirEncryption/DirEncryptionManager;->mDew:Landroid/dirEncryption/DirEncryptionWrapper;
 
     invoke-virtual {v0}, Landroid/dirEncryption/DirEncryptionWrapper;->getCurrentUserID()I
@@ -520,7 +467,6 @@
     .locals 1
 
     .prologue
-    .line 215
     iget-object v0, p0, Landroid/dirEncryption/DirEncryptionManager;->mDew:Landroid/dirEncryption/DirEncryptionWrapper;
 
     invoke-virtual {v0}, Landroid/dirEncryption/DirEncryptionWrapper;->getExternalSdPath()Ljava/lang/String;
@@ -534,7 +480,6 @@
     .locals 1
 
     .prologue
-    .line 233
     iget-object v0, p0, Landroid/dirEncryption/DirEncryptionManager;->mDew:Landroid/dirEncryption/DirEncryptionWrapper;
 
     invoke-virtual {v0}, Landroid/dirEncryption/DirEncryptionWrapper;->getKeyguardStoredPasswordQuality()I
@@ -548,10 +493,8 @@
     .locals 4
 
     .prologue
-    .line 509
     const/16 v1, 0xc8
 
-    .line 511
     .local v1, "result":I
     invoke-virtual {p0}, Landroid/dirEncryption/DirEncryptionManager;->isEncryptionSupported()Z
 
@@ -561,13 +504,11 @@
 
     move v2, v1
 
-    .line 522
     .end local v1    # "result":I
     .local v2, "result":I
     :goto_0
     return v2
 
-    .line 514
     .end local v2    # "result":I
     .restart local v1    # "result":I
     :cond_0
@@ -577,12 +518,10 @@
 
     move v2, v1
 
-    .line 515
     .end local v1    # "result":I
     .restart local v2    # "result":I
     goto :goto_0
 
-    .line 518
     .end local v2    # "result":I
     .restart local v1    # "result":I
     :cond_1
@@ -598,18 +537,15 @@
     :goto_1
     move v2, v1
 
-    .line 522
     .end local v1    # "result":I
     .restart local v2    # "result":I
     goto :goto_0
 
-    .line 519
     .end local v2    # "result":I
     .restart local v1    # "result":I
     :catch_0
     move-exception v0
 
-    .line 520
     .local v0, "re":Landroid/os/RemoteException;
     const-string v3, "Unable to communicate with DirEncryptService"
 
@@ -622,7 +558,6 @@
     .locals 1
 
     .prologue
-    .line 613
     sget-boolean v0, Landroid/dirEncryption/DirEncryptionManager;->mPolicyChanged:Z
 
     return v0
@@ -632,23 +567,18 @@
     .locals 3
 
     .prologue
-    .line 553
     iget-object v2, p0, Landroid/dirEncryption/DirEncryptionManager;->m_InstDirEncSvc:Landroid/os/storage/IDirEncryptService;
 
     if-nez v2, :cond_0
 
-    .line 554
     const/4 v0, 0x0
 
-    .line 562
     :goto_0
     return-object v0
 
-    .line 556
     :cond_0
     const/4 v0, 0x0
 
-    .line 558
     .local v0, "policies":Landroid/dirEncryption/SDCardEncryptionPolicies;
     :try_start_0
     iget-object v2, p0, Landroid/dirEncryption/DirEncryptionManager;->m_InstDirEncSvc:Landroid/os/storage/IDirEncryptService;
@@ -661,11 +591,9 @@
 
     goto :goto_0
 
-    .line 559
     :catch_0
     move-exception v1
 
-    .line 560
     .local v1, "re":Landroid/os/RemoteException;
     const-string v2, "Unable to communicate with DirEncryptService"
 
@@ -678,7 +606,6 @@
     .locals 1
 
     .prologue
-    .line 297
     iget-object v0, p0, Landroid/dirEncryption/DirEncryptionManager;->mDew:Landroid/dirEncryption/DirEncryptionWrapper;
 
     invoke-virtual {v0}, Landroid/dirEncryption/DirEncryptionWrapper;->getSavedUserID()I
@@ -692,7 +619,6 @@
     .locals 1
 
     .prologue
-    .line 279
     iget-object v0, p0, Landroid/dirEncryption/DirEncryptionManager;->mDew:Landroid/dirEncryption/DirEncryptionWrapper;
 
     invoke-virtual {v0}, Landroid/dirEncryption/DirEncryptionWrapper;->getUserDiff()Z
@@ -706,7 +632,6 @@
     .locals 1
 
     .prologue
-    .line 224
     iget-object v0, p0, Landroid/dirEncryption/DirEncryptionManager;->mDew:Landroid/dirEncryption/DirEncryptionWrapper;
 
     invoke-virtual {v0}, Landroid/dirEncryption/DirEncryptionWrapper;->getVolumeState()Ljava/lang/String;
@@ -720,7 +645,6 @@
     .locals 1
 
     .prologue
-    .line 194
     sget-boolean v0, Landroid/dirEncryption/DirEncryptionManager;->DIR_ENCRYPTION:Z
 
     if-eqz v0, :cond_0
@@ -739,10 +663,8 @@
 
     if-nez v0, :cond_0
 
-    .line 195
     const/4 v0, 0x1
 
-    .line 197
     :goto_0
     return v0
 
@@ -756,7 +678,6 @@
     .locals 1
 
     .prologue
-    .line 206
     iget-object v0, p0, Landroid/dirEncryption/DirEncryptionManager;->mDew:Landroid/dirEncryption/DirEncryptionWrapper;
 
     invoke-virtual {v0}, Landroid/dirEncryption/DirEncryptionWrapper;->isExternalSDRemovable()Z
@@ -772,10 +693,8 @@
     .prologue
     const/4 v3, 0x1
 
-    .line 417
     const/4 v1, 0x0
 
-    .line 419
     .local v1, "result":Z
     invoke-virtual {p0}, Landroid/dirEncryption/DirEncryptionManager;->isEncryptionSupported()Z
 
@@ -785,13 +704,11 @@
 
     move v2, v1
 
-    .line 430
     .end local v1    # "result":Z
     .local v2, "result":I
     :goto_0
     return v2
 
-    .line 422
     .end local v2    # "result":I
     .restart local v1    # "result":Z
     :cond_0
@@ -801,11 +718,9 @@
 
     move v2, v1
 
-    .line 423
     .restart local v2    # "result":I
     goto :goto_0
 
-    .line 426
     .end local v2    # "result":I
     :cond_1
     :try_start_0
@@ -824,22 +739,18 @@
     :goto_1
     move v2, v1
 
-    .line 430
     .restart local v2    # "result":I
     goto :goto_0
 
-    .line 426
     .end local v2    # "result":I
     :cond_2
     const/4 v1, 0x0
 
     goto :goto_1
 
-    .line 427
     :catch_0
     move-exception v0
 
-    .line 428
     .local v0, "re":Landroid/os/RemoteException;
     const-string v3, "Unable to communicate with DirEncryptService"
 
@@ -852,7 +763,6 @@
     .locals 1
 
     .prologue
-    .line 242
     iget-object v0, p0, Landroid/dirEncryption/DirEncryptionManager;->mDew:Landroid/dirEncryption/DirEncryptionWrapper;
 
     invoke-virtual {v0}, Landroid/dirEncryption/DirEncryptionWrapper;->mountVolume()Z
@@ -867,16 +777,13 @@
     .param p1, "listener"    # Landroid/os/storage/IDirEncryptServiceListener;
 
     .prologue
-    .line 149
     iget-object v1, p0, Landroid/dirEncryption/DirEncryptionManager;->m_InstDirEncSvc:Landroid/os/storage/IDirEncryptService;
 
     if-nez v1, :cond_0
 
-    .line 157
     :goto_0
     return-void
 
-    .line 153
     :cond_0
     :try_start_0
     iget-object v1, p0, Landroid/dirEncryption/DirEncryptionManager;->m_InstDirEncSvc:Landroid/os/storage/IDirEncryptService;
@@ -887,11 +794,9 @@
 
     goto :goto_0
 
-    .line 154
     :catch_0
     move-exception v0
 
-    .line 155
     .local v0, "re":Landroid/os/RemoteException;
     const-string v1, "Unable to communicate with DirEncryptService"
 
@@ -906,21 +811,17 @@
     .param p2, "container_id"    # I
 
     .prologue
-    .line 338
     iget-object v1, p0, Landroid/dirEncryption/DirEncryptionManager;->m_InstDirEncSvc:Landroid/os/storage/IDirEncryptService;
 
     if-nez v1, :cond_0
 
-    .line 339
     const-string v1, "No DirEncSvc for Knox migration."
 
     invoke-static {v1}, Landroid/dirEncryption/DirEncryptionManager;->log(Ljava/lang/String;)V
 
-    .line 348
     :goto_0
     return-void
 
-    .line 344
     :cond_0
     :try_start_0
     iget-object v1, p0, Landroid/dirEncryption/DirEncryptionManager;->m_InstDirEncSvc:Landroid/os/storage/IDirEncryptService;
@@ -931,11 +832,9 @@
 
     goto :goto_0
 
-    .line 345
     :catch_0
     move-exception v0
 
-    .line 346
     .local v0, "re":Landroid/os/RemoteException;
     const-string v1, "Unable to communicate with DirEncryptService"
 
@@ -949,25 +848,21 @@
     .param p1, "in"    # Z
 
     .prologue
-    .line 322
     invoke-virtual {p0}, Landroid/dirEncryption/DirEncryptionManager;->isEncryptionSupported()Z
 
     move-result v1
 
     if-nez v1, :cond_1
 
-    .line 333
     :cond_0
     :goto_0
     return-void
 
-    .line 325
     :cond_1
     iget-object v1, p0, Landroid/dirEncryption/DirEncryptionManager;->m_InstDirEncSvc:Landroid/os/storage/IDirEncryptService;
 
     if-eqz v1, :cond_0
 
-    .line 329
     :try_start_0
     iget-object v1, p0, Landroid/dirEncryption/DirEncryptionManager;->m_InstDirEncSvc:Landroid/os/storage/IDirEncryptService;
 
@@ -977,11 +872,9 @@
 
     goto :goto_0
 
-    .line 330
     :catch_0
     move-exception v0
 
-    .line 331
     .local v0, "re":Landroid/os/RemoteException;
     const-string v1, "Unable to communicate with DirEncryptService"
 
@@ -994,10 +887,8 @@
     .locals 4
 
     .prologue
-    .line 586
     const/16 v1, 0xc8
 
-    .line 587
     .local v1, "result":I
     iget-object v3, p0, Landroid/dirEncryption/DirEncryptionManager;->m_InstDirEncSvc:Landroid/os/storage/IDirEncryptService;
 
@@ -1005,13 +896,11 @@
 
     move v2, v1
 
-    .line 595
     .end local v1    # "result":I
     .local v2, "result":I
     :goto_0
     return v2
 
-    .line 591
     .end local v2    # "result":I
     .restart local v1    # "result":I
     :cond_0
@@ -1027,18 +916,15 @@
     :goto_1
     move v2, v1
 
-    .line 595
     .end local v1    # "result":I
     .restart local v2    # "result":I
     goto :goto_0
 
-    .line 592
     .end local v2    # "result":I
     .restart local v1    # "result":I
     :catch_0
     move-exception v0
 
-    .line 593
     .local v0, "re":Landroid/os/RemoteException;
     const-string v3, "Unable to communicate with DirEncryptService"
 
@@ -1052,10 +938,8 @@
     .param p1, "password"    # Ljava/lang/String;
 
     .prologue
-    .line 442
     const/16 v1, 0xc8
 
-    .line 444
     .local v1, "result":I
     invoke-virtual {p0}, Landroid/dirEncryption/DirEncryptionManager;->isEncryptionSupported()Z
 
@@ -1065,13 +949,11 @@
 
     move v2, v1
 
-    .line 456
     .end local v1    # "result":I
     .local v2, "result":I
     :goto_0
     return v2
 
-    .line 447
     .end local v2    # "result":I
     .restart local v1    # "result":I
     :cond_0
@@ -1081,12 +963,10 @@
 
     move v2, v1
 
-    .line 448
     .end local v1    # "result":I
     .restart local v2    # "result":I
     goto :goto_0
 
-    .line 451
     .end local v2    # "result":I
     .restart local v1    # "result":I
     :cond_1
@@ -1102,18 +982,15 @@
     :goto_1
     move v2, v1
 
-    .line 456
     .end local v1    # "result":I
     .restart local v2    # "result":I
     goto :goto_0
 
-    .line 452
     .end local v2    # "result":I
     .restart local v1    # "result":I
     :catch_0
     move-exception v0
 
-    .line 453
     .local v0, "re":Landroid/os/RemoteException;
     const-string v3, "Unable to communicate with DirEncryptService"
 
@@ -1127,10 +1004,8 @@
     .param p1, "in"    # Z
 
     .prologue
-    .line 604
     sput-boolean p1, Landroid/dirEncryption/DirEncryptionManager;->mPolicyChanged:Z
 
-    .line 605
     return-void
 .end method
 
@@ -1139,12 +1014,10 @@
     .param p1, "in"    # I
 
     .prologue
-    .line 288
     iget-object v0, p0, Landroid/dirEncryption/DirEncryptionManager;->mDew:Landroid/dirEncryption/DirEncryptionWrapper;
 
     invoke-virtual {v0, p1}, Landroid/dirEncryption/DirEncryptionWrapper;->setSavedUserID(I)V
 
-    .line 289
     return-void
 .end method
 
@@ -1155,10 +1028,8 @@
     .param p3, "excludeMediaFiles"    # I
 
     .prologue
-    .line 384
     const/16 v1, 0xc8
 
-    .line 386
     .local v1, "result":I
     invoke-virtual {p0}, Landroid/dirEncryption/DirEncryptionManager;->isEncryptionSupported()Z
 
@@ -1168,13 +1039,11 @@
 
     move v2, v1
 
-    .line 407
     .end local v1    # "result":I
     .local v2, "result":I
     :goto_0
     return v2
 
-    .line 389
     .end local v2    # "result":I
     .restart local v1    # "result":I
     :cond_0
@@ -1184,12 +1053,10 @@
 
     move v2, v1
 
-    .line 390
     .end local v1    # "result":I
     .restart local v2    # "result":I
     goto :goto_0
 
-    .line 393
     .end local v2    # "result":I
     .restart local v1    # "result":I
     :cond_1
@@ -1202,13 +1069,12 @@
 
     move-result v1
 
-    .line 399
     :goto_1
     new-instance v3, Ljava/lang/StringBuilder;
 
     invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v4, "setStorageCardEncryptionPolicy result : "
+    const-string v4, "setStorageCardEncryptionPolicy result : "
 
     invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -1224,7 +1090,6 @@
 
     invoke-static {v3}, Landroid/dirEncryption/DirEncryptionManager;->log(Ljava/lang/String;)V
 
-    .line 400
     const/16 v3, 0x8
 
     if-eq v1, v3, :cond_2
@@ -1233,16 +1098,13 @@
 
     if-ne v1, v3, :cond_3
 
-    .line 401
     :cond_2
-    const-string/jumbo v3, "result : POLICY_SAVED || POLICY_ALREADY_SET"
+    const-string v3, "result : POLICY_SAVED || POLICY_ALREADY_SET"
 
     invoke-static {v3}, Landroid/dirEncryption/DirEncryptionManager;->log(Ljava/lang/String;)V
 
-    .line 402
     invoke-virtual {p0}, Landroid/dirEncryption/DirEncryptionManager;->unmountSDCardByAdmin()V
 
-    .line 405
     :cond_3
     const/4 v3, 0x1
 
@@ -1250,18 +1112,15 @@
 
     move v2, v1
 
-    .line 407
     .end local v1    # "result":I
     .restart local v2    # "result":I
     goto :goto_0
 
-    .line 394
     .end local v2    # "result":I
     .restart local v1    # "result":I
     :catch_0
     move-exception v0
 
-    .line 395
     .local v0, "re":Landroid/os/RemoteException;
     const-string v3, "Unable to communicate with DirEncryptService"
 
@@ -1275,12 +1134,10 @@
     .param p1, "in"    # Z
 
     .prologue
-    .line 270
     iget-object v0, p0, Landroid/dirEncryption/DirEncryptionManager;->mDew:Landroid/dirEncryption/DirEncryptionWrapper;
 
     invoke-virtual {v0, p1}, Landroid/dirEncryption/DirEncryptionWrapper;->setUserDiff(Z)V
 
-    .line 271
     return-void
 .end method
 
@@ -1288,16 +1145,13 @@
     .locals 2
 
     .prologue
-    .line 570
     iget-object v1, p0, Landroid/dirEncryption/DirEncryptionManager;->m_InstDirEncSvc:Landroid/os/storage/IDirEncryptService;
 
     if-nez v1, :cond_0
 
-    .line 578
     :goto_0
     return-void
 
-    .line 574
     :cond_0
     :try_start_0
     iget-object v1, p0, Landroid/dirEncryption/DirEncryptionManager;->m_InstDirEncSvc:Landroid/os/storage/IDirEncryptService;
@@ -1308,11 +1162,9 @@
 
     goto :goto_0
 
-    .line 575
     :catch_0
     move-exception v0
 
-    .line 576
     .local v0, "re":Landroid/os/RemoteException;
     const-string v1, "Unable to communicate with DirEncryptService"
 
@@ -1325,22 +1177,18 @@
     .locals 3
 
     .prologue
-    .line 252
     invoke-virtual {p0}, Landroid/dirEncryption/DirEncryptionManager;->getSDCardEncryptionPrefs()Landroid/dirEncryption/SDCardEncryptionPolicies;
 
     move-result-object v0
 
-    .line 253
     .local v0, "sdPolicies":Landroid/dirEncryption/SDCardEncryptionPolicies;
     if-nez v0, :cond_0
 
-    .line 254
     new-instance v0, Landroid/dirEncryption/SDCardEncryptionPolicies;
 
     .end local v0    # "sdPolicies":Landroid/dirEncryption/SDCardEncryptionPolicies;
     invoke-direct {v0}, Landroid/dirEncryption/SDCardEncryptionPolicies;-><init>()V
 
-    .line 257
     .restart local v0    # "sdPolicies":Landroid/dirEncryption/SDCardEncryptionPolicies;
     :cond_0
     const/4 v1, 0x2
@@ -1349,14 +1197,12 @@
 
     if-ne v1, v2, :cond_1
 
-    .line 258
     iget-object v1, p0, Landroid/dirEncryption/DirEncryptionManager;->mDew:Landroid/dirEncryption/DirEncryptionWrapper;
 
     invoke-virtual {v1}, Landroid/dirEncryption/DirEncryptionWrapper;->unmountVolumeByDiffUser()Z
 
     move-result v1
 
-    .line 260
     :goto_0
     return v1
 
@@ -1371,16 +1217,13 @@
     .param p1, "listener"    # Landroid/os/storage/IDirEncryptServiceListener;
 
     .prologue
-    .line 166
     iget-object v1, p0, Landroid/dirEncryption/DirEncryptionManager;->m_InstDirEncSvc:Landroid/os/storage/IDirEncryptService;
 
     if-nez v1, :cond_0
 
-    .line 174
     :goto_0
     return-void
 
-    .line 170
     :cond_0
     :try_start_0
     iget-object v1, p0, Landroid/dirEncryption/DirEncryptionManager;->m_InstDirEncSvc:Landroid/os/storage/IDirEncryptService;
@@ -1391,11 +1234,9 @@
 
     goto :goto_0
 
-    .line 171
     :catch_0
     move-exception v0
 
-    .line 172
     .local v0, "re":Landroid/os/RemoteException;
     const-string v1, "Unable to communicate with DirEncryptService"
 
@@ -1408,11 +1249,9 @@
     .locals 1
 
     .prologue
-    .line 313
     iget-object v0, p0, Landroid/dirEncryption/DirEncryptionManager;->mDew:Landroid/dirEncryption/DirEncryptionWrapper;
 
     invoke-virtual {v0}, Landroid/dirEncryption/DirEncryptionWrapper;->updateSDcardState()V
 
-    .line 314
     return-void
 .end method

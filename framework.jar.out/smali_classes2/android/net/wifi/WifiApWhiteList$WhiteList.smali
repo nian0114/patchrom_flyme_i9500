@@ -27,16 +27,12 @@
     .param p2, "name"    # Ljava/lang/String;
 
     .prologue
-    .line 20
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 21
     iput-object p1, p0, Landroid/net/wifi/WifiApWhiteList$WhiteList;->mMac:Ljava/lang/String;
 
-    .line 22
     iput-object p2, p0, Landroid/net/wifi/WifiApWhiteList$WhiteList;->mName:Ljava/lang/String;
 
-    .line 23
     return-void
 .end method
 
@@ -46,7 +42,6 @@
     .locals 1
 
     .prologue
-    .line 30
     iget-object v0, p0, Landroid/net/wifi/WifiApWhiteList$WhiteList;->mMac:Ljava/lang/String;
 
     return-object v0
@@ -56,7 +51,6 @@
     .locals 1
 
     .prologue
-    .line 34
     iget-object v0, p0, Landroid/net/wifi/WifiApWhiteList$WhiteList;->mName:Ljava/lang/String;
 
     return-object v0
@@ -67,9 +61,7 @@
     .param p1, "name"    # Ljava/lang/String;
 
     .prologue
-    .line 26
     iput-object p1, p0, Landroid/net/wifi/WifiApWhiteList$WhiteList;->mName:Ljava/lang/String;
 
-    .line 27
     return-void
 .end method

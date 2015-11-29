@@ -23,7 +23,6 @@
     .locals 0
 
     .prologue
-    .line 848
     iput-object p1, p0, Lcom/android/internal/telephony/dataconnection/DcTracker$SIMStatusBroadcastReceiver;->this$0:Lcom/android/internal/telephony/dataconnection/DcTracker;
 
     invoke-direct {p0}, Landroid/content/BroadcastReceiver;-><init>()V
@@ -39,14 +38,12 @@
     .param p2, "intent"    # Landroid/content/Intent;
 
     .prologue
-    .line 851
     const-string v1, "ss"
 
     invoke-virtual {p2, v1}, Landroid/content/Intent;->getStringExtra(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 
-    .line 852
     .local v0, "iccState":Ljava/lang/String;
     const-string v1, "IMSI"
 
@@ -56,21 +53,18 @@
 
     if-eqz v1, :cond_0
 
-    .line 853
     iget-object v1, p0, Lcom/android/internal/telephony/dataconnection/DcTracker$SIMStatusBroadcastReceiver;->this$0:Lcom/android/internal/telephony/dataconnection/DcTracker;
 
     const-string v2, "SIMStatusBroadcastReceiver: INTENT_VALUE_ICC_IMSI"
 
     invoke-virtual {v1, v2}, Lcom/android/internal/telephony/dataconnection/DcTracker;->log(Ljava/lang/String;)V
 
-    .line 854
     new-instance v1, Lcom/android/internal/telephony/dataconnection/DcTracker$SIMStatusBroadcastReceiver$1;
 
     invoke-direct {v1, p0}, Lcom/android/internal/telephony/dataconnection/DcTracker$SIMStatusBroadcastReceiver$1;-><init>(Lcom/android/internal/telephony/dataconnection/DcTracker$SIMStatusBroadcastReceiver;)V
 
     invoke-virtual {v1}, Lcom/android/internal/telephony/dataconnection/DcTracker$SIMStatusBroadcastReceiver$1;->start()V
 
-    .line 870
     :cond_0
     return-void
 .end method

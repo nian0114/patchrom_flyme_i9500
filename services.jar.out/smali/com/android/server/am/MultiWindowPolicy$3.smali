@@ -24,7 +24,6 @@
     .param p2, "x0"    # Landroid/os/Handler;
 
     .prologue
-    .line 246
     iput-object p1, p0, Lcom/android/server/am/MultiWindowPolicy$3;->this$0:Lcom/android/server/am/MultiWindowPolicy;
 
     invoke-direct {p0, p2}, Landroid/database/ContentObserver;-><init>(Landroid/os/Handler;)V
@@ -41,7 +40,6 @@
     .prologue
     const/4 v3, 0x0
 
-    .line 248
     iget-object v4, p0, Lcom/android/server/am/MultiWindowPolicy$3;->this$0:Lcom/android/server/am/MultiWindowPolicy;
 
     # getter for: Lcom/android/server/am/MultiWindowPolicy;->mContext:Landroid/content/Context;
@@ -59,7 +57,6 @@
 
     move-result v2
 
-    .line 249
     .local v2, "bMultiWindow":I
     iget-object v4, p0, Lcom/android/server/am/MultiWindowPolicy$3;->this$0:Lcom/android/server/am/MultiWindowPolicy;
 
@@ -78,7 +75,6 @@
 
     move-result v1
 
-    .line 250
     .local v1, "bKidsMode":I
     iget-object v4, p0, Lcom/android/server/am/MultiWindowPolicy$3;->this$0:Lcom/android/server/am/MultiWindowPolicy;
 
@@ -97,7 +93,6 @@
 
     move-result v0
 
-    .line 251
     .local v0, "bCarMode":I
     const-string v4, "MultiWindowPolicy"
 
@@ -141,14 +136,12 @@
 
     invoke-static {v4, v5}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 252
     if-eqz v2, :cond_0
 
     if-gtz v1, :cond_0
 
     if-lez v0, :cond_1
 
-    .line 253
     :cond_0
     iget-object v4, p0, Lcom/android/server/am/MultiWindowPolicy$3;->this$0:Lcom/android/server/am/MultiWindowPolicy;
 
@@ -166,7 +159,6 @@
 
     invoke-virtual {v4, v5}, Lcom/android/server/am/MultiWindowPolicy$H;->sendMessage(Landroid/os/Message;)Z
 
-    .line 255
     :cond_1
     if-eqz v2, :cond_2
 
@@ -175,6 +167,5 @@
     :cond_2
     sput-boolean v3, Lcom/android/server/am/MultiWindowPolicy;->sExposuerTitleBarMenu:Z
 
-    .line 256
     return-void
 .end method

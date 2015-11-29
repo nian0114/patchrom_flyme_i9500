@@ -26,7 +26,6 @@
     .param p2, "x0"    # Landroid/os/Looper;
 
     .prologue
-    .line 721
     iput-object p1, p0, Lcom/samsung/android/motion/MotionRecognitionManager$MRListenerDelegate$1;->this$1:Lcom/samsung/android/motion/MotionRecognitionManager$MRListenerDelegate;
 
     iput-object p3, p0, Lcom/samsung/android/motion/MotionRecognitionManager$MRListenerDelegate$1;->val$this$0:Lcom/samsung/android/motion/MotionRecognitionManager;
@@ -43,7 +42,6 @@
     .param p1, "msg"    # Landroid/os/Message;
 
     .prologue
-    .line 726
     :try_start_0
     iget-object v2, p0, Lcom/samsung/android/motion/MotionRecognitionManager$MRListenerDelegate$1;->this$1:Lcom/samsung/android/motion/MotionRecognitionManager$MRListenerDelegate;
 
@@ -54,7 +52,6 @@
 
     if-eqz v2, :cond_0
 
-    .line 727
     if-eqz p1, :cond_0
 
     iget v2, p1, Landroid/os/Message;->what:I
@@ -63,12 +60,10 @@
 
     if-ne v2, v3, :cond_0
 
-    .line 729
     iget-object v1, p1, Landroid/os/Message;->obj:Ljava/lang/Object;
 
     check-cast v1, Lcom/samsung/android/motion/MREvent;
 
-    .line 730
     .local v1, "motionEvent":Lcom/samsung/android/motion/MREvent;
     iget-object v2, p0, Lcom/samsung/android/motion/MotionRecognitionManager$MRListenerDelegate$1;->this$1:Lcom/samsung/android/motion/MotionRecognitionManager$MRListenerDelegate;
 
@@ -81,17 +76,14 @@
     :try_end_0
     .catch Ljava/lang/ClassCastException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 736
     .end local v1    # "motionEvent":Lcom/samsung/android/motion/MREvent;
     :cond_0
     :goto_0
     return-void
 
-    .line 733
     :catch_0
     move-exception v0
 
-    .line 734
     .local v0, "e":Ljava/lang/ClassCastException;
     const-string v2, "MotionRecognitionManager"
 

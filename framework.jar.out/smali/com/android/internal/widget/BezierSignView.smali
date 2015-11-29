@@ -25,10 +25,8 @@
     .param p1, "context"    # Landroid/content/Context;
 
     .prologue
-    .line 34
     invoke-direct {p0, p1}, Lcom/android/internal/widget/SignView;-><init>(Landroid/content/Context;)V
 
-    .line 35
     return-void
 .end method
 
@@ -41,7 +39,6 @@
 
     const/high16 v12, 0x40000000    # 2.0f
 
-    .line 112
     iget-object v9, p0, Lcom/android/internal/widget/BezierSignView;->mSignatureInputData:[Ljava/util/ArrayList;
 
     invoke-virtual {p0}, Lcom/android/internal/widget/BezierSignView;->getIndex()I
@@ -54,21 +51,17 @@
 
     move-result v1
 
-    .line 114
     .local v1, "currentArraySize":I
     iget v2, p0, Lcom/android/internal/widget/BezierSignView;->mX:F
 
-    .line 115
     .local v2, "drawX":F
     iget v3, p0, Lcom/android/internal/widget/BezierSignView;->mY:F
 
-    .line 117
     .local v3, "drawY":F
     sget-boolean v9, Lcom/android/internal/widget/BezierSignView;->DBG_TOUCH:Z
 
     if-eqz v9, :cond_0
 
-    .line 118
     const-string v9, "BezierSignView"
 
     new-instance v10, Ljava/lang/StringBuilder;
@@ -101,7 +94,6 @@
 
     invoke-static {v9, v10}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 120
     :cond_0
     move v6, p1
 
@@ -109,7 +101,6 @@
     :goto_0
     if-ge v6, v1, :cond_3
 
-    .line 121
     iget-object v9, p0, Lcom/android/internal/widget/BezierSignView;->mSignatureInputData:[Ljava/util/ArrayList;
 
     invoke-virtual {p0}, Lcom/android/internal/widget/BezierSignView;->getIndex()I
@@ -124,15 +115,12 @@
 
     check-cast v0, Lcom/android/internal/widget/SignView$SignatureInput;
 
-    .line 122
     .local v0, "addedPoint":Lcom/android/internal/widget/SignView$SignatureInput;
     iget v7, v0, Lcom/android/internal/widget/SignView$SignatureInput;->mX:F
 
-    .line 123
     .local v7, "x":F
     iget v8, v0, Lcom/android/internal/widget/SignView$SignatureInput;->mY:F
 
-    .line 124
     .local v8, "y":F
     sub-float v9, v7, v2
 
@@ -140,7 +128,6 @@
 
     move-result v4
 
-    .line 125
     .local v4, "dx":F
     sub-float v9, v8, v3
 
@@ -148,7 +135,6 @@
 
     move-result v5
 
-    .line 127
     .local v5, "dy":F
     cmpl-float v9, v4, v13
 
@@ -158,7 +144,6 @@
 
     if-ltz v9, :cond_2
 
-    .line 128
     :cond_1
     iget-object v9, p0, Lcom/android/internal/widget/BezierSignView;->mPath:Landroid/graphics/Path;
 
@@ -172,19 +157,15 @@
 
     invoke-virtual {v9, v2, v3, v10, v11}, Landroid/graphics/Path;->quadTo(FFFF)V
 
-    .line 133
     :goto_1
     move v2, v7
 
-    .line 134
     move v3, v8
 
-    .line 120
     add-int/lit8 v6, v6, 0x1
 
     goto :goto_0
 
-    .line 130
     :cond_2
     iget-object v9, p0, Lcom/android/internal/widget/BezierSignView;->mPath:Landroid/graphics/Path;
 
@@ -192,7 +173,6 @@
 
     goto :goto_1
 
-    .line 137
     .end local v0    # "addedPoint":Lcom/android/internal/widget/SignView$SignatureInput;
     .end local v4    # "dx":F
     .end local v5    # "dy":F
@@ -203,12 +183,10 @@
 
     iput v9, p0, Lcom/android/internal/widget/BezierSignView;->mX:F
 
-    .line 138
     iget v9, p0, Lcom/android/internal/widget/BezierSignView;->mBezierY:F
 
     iput v9, p0, Lcom/android/internal/widget/BezierSignView;->mY:F
 
-    .line 139
     return-void
 .end method
 
@@ -225,7 +203,6 @@
     .param p8, "pressure"    # F
 
     .prologue
-    .line 143
     move-object/from16 v0, p0
 
     iget-object v2, v0, Lcom/android/internal/widget/BezierSignView;->mSignatureInputData:[Ljava/util/ArrayList;
@@ -244,7 +221,6 @@
 
     check-cast v25, Lcom/android/internal/widget/SignView$SignatureInput;
 
-    .line 144
     .local v25, "startPoint":Lcom/android/internal/widget/SignView$SignatureInput;
     move-object/from16 v0, p0
 
@@ -264,7 +240,6 @@
 
     check-cast v24, Lcom/android/internal/widget/SignView$SignatureInput;
 
-    .line 146
     .local v24, "controlPoint":Lcom/android/internal/widget/SignView$SignatureInput;
     move-object/from16 v0, v25
 
@@ -272,7 +247,6 @@
 
     move/from16 v18, v0
 
-    .line 147
     .local v18, "P0X":F
     move-object/from16 v0, v25
 
@@ -280,7 +254,6 @@
 
     move/from16 v19, v0
 
-    .line 148
     .local v19, "P0Y":F
     move-object/from16 v0, v24
 
@@ -288,7 +261,6 @@
 
     move/from16 v20, v0
 
-    .line 149
     .local v20, "P1X":F
     move-object/from16 v0, v24
 
@@ -296,7 +268,6 @@
 
     move/from16 v21, v0
 
-    .line 150
     .local v21, "P1Y":F
     add-float v2, p4, p2
 
@@ -304,7 +275,6 @@
 
     div-float v22, v2, v3
 
-    .line 151
     .local v22, "P2X":F
     add-float v2, p5, p3
 
@@ -312,7 +282,6 @@
 
     div-float v23, v2, v3
 
-    .line 153
     .local v23, "P2Y":F
     const/high16 v2, 0x3f000000    # 0.5f
 
@@ -346,7 +315,6 @@
 
     add-float v4, v2, v3
 
-    .line 154
     .local v4, "middleX":F
     const/high16 v2, 0x3f000000    # 0.5f
 
@@ -380,35 +348,28 @@
 
     add-float v5, v2, v3
 
-    .line 155
     .local v5, "middleY":F
     move-object/from16 v0, v24
 
     iget-wide v6, v0, Lcom/android/internal/widget/SignView$SignatureInput;->mTime:J
 
-    .line 156
     .local v6, "middleTime":J
     move-object/from16 v0, v24
 
     iget v9, v0, Lcom/android/internal/widget/SignView$SignatureInput;->mPressure:F
 
-    .line 158
     .local v9, "middlePressure":F
     move/from16 v12, v22
 
-    .line 159
     .local v12, "endX":F
     move/from16 v13, v23
 
-    .line 160
     .local v13, "endY":F
     move-wide/from16 v14, p6
 
-    .line 161
     .local v14, "endTime":J
     move/from16 v17, p8
 
-    .line 164
     .local v17, "endPressure":F
     move-object/from16 v0, p0
 
@@ -424,7 +385,6 @@
 
     invoke-virtual {v2, v3}, Ljava/util/ArrayList;->remove(I)Ljava/lang/Object;
 
-    .line 165
     move-object/from16 v0, p0
 
     iget-object v2, v0, Lcom/android/internal/widget/BezierSignView;->mSignatureInputData:[Ljava/util/ArrayList;
@@ -445,12 +405,10 @@
 
     invoke-virtual {v10, v2}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 167
     sget-boolean v2, Lcom/android/internal/widget/BezierSignView;->DBG_TOUCH:Z
 
     if-eqz v2, :cond_0
 
-    .line 168
     const-string v2, "BezierSignView"
 
     new-instance v3, Ljava/lang/StringBuilder;
@@ -509,7 +467,6 @@
 
     invoke-static {v2, v3}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 172
     :cond_0
     move-object/from16 v0, p0
 
@@ -531,12 +488,10 @@
 
     invoke-virtual {v2, v10}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 174
     sget-boolean v2, Lcom/android/internal/widget/BezierSignView;->DBG_TOUCH:Z
 
     if-eqz v2, :cond_1
 
-    .line 175
     const-string v2, "BezierSignView"
 
     new-instance v3, Ljava/lang/StringBuilder;
@@ -591,7 +546,6 @@
 
     invoke-static {v2, v3}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 177
     :cond_1
     return-void
 .end method
@@ -603,28 +557,22 @@
     .param p3, "y"    # F
 
     .prologue
-    .line 46
     const/4 v0, 0x0
 
     iput-boolean v0, p0, Lcom/android/internal/widget/BezierSignView;->mBezierEnabled:Z
 
-    .line 47
     iput p2, p0, Lcom/android/internal/widget/BezierSignView;->mBezierX:F
 
-    .line 48
     iput p3, p0, Lcom/android/internal/widget/BezierSignView;->mBezierY:F
 
-    .line 50
     iget-object v0, p0, Lcom/android/internal/widget/BezierSignView;->mPath:Landroid/graphics/Path;
 
     invoke-virtual {v0}, Landroid/graphics/Path;->reset()V
 
-    .line 51
     iget-object v0, p0, Lcom/android/internal/widget/BezierSignView;->mPath:Landroid/graphics/Path;
 
     invoke-virtual {v0, p2, p3}, Landroid/graphics/Path;->moveTo(FF)V
 
-    .line 52
     return-void
 .end method
 
@@ -635,7 +583,6 @@
     .param p3, "y"    # F
 
     .prologue
-    .line 56
     iget-object v1, p0, Lcom/android/internal/widget/BezierSignView;->mSignatureInputData:[Ljava/util/ArrayList;
 
     invoke-virtual {p0}, Lcom/android/internal/widget/BezierSignView;->getIndex()I
@@ -648,13 +595,11 @@
 
     move-result v0
 
-    .line 58
     .local v0, "arraySizeSaved":I
     iget-boolean v1, p0, Lcom/android/internal/widget/BezierSignView;->mUseHistoricalEvent:Z
 
     if-eqz v1, :cond_0
 
-    .line 60
     const/4 v7, 0x0
 
     .local v7, "i":I
@@ -665,7 +610,6 @@
 
     if-ge v7, v1, :cond_0
 
-    .line 61
     invoke-virtual {p1, v7}, Landroid/view/MotionEvent;->getHistoricalX(I)F
 
     move-result v1
@@ -694,12 +638,10 @@
 
     invoke-virtual/range {v1 .. v6}, Lcom/android/internal/widget/BezierSignView;->handleMoveEventWithBezier(IIJF)V
 
-    .line 60
     add-int/lit8 v7, v7, 0x1
 
     goto :goto_0
 
-    .line 69
     .end local v7    # "i":I
     :cond_0
     float-to-int v2, p2
@@ -722,13 +664,10 @@
 
     invoke-virtual/range {v1 .. v6}, Lcom/android/internal/widget/BezierSignView;->handleMoveEventWithBezier(IIJF)V
 
-    .line 71
     invoke-direct {p0, v0}, Lcom/android/internal/widget/BezierSignView;->addToPathForDrawing(I)V
 
-    .line 72
     invoke-virtual {p0}, Lcom/android/internal/widget/BezierSignView;->invalidate()V
 
-    .line 73
     return-void
 .end method
 
@@ -740,12 +679,10 @@
     .param p5, "pressure"    # F
 
     .prologue
-    .line 76
     sget-boolean v2, Lcom/android/internal/widget/BezierSignView;->DBG_TOUCH:Z
 
     if-eqz v2, :cond_0
 
-    .line 77
     const-string v2, "BezierSignView"
 
     new-instance v4, Ljava/lang/StringBuilder;
@@ -788,7 +725,6 @@
 
     invoke-static {v2, v4}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 79
     :cond_0
     move-object/from16 v0, p0
 
@@ -804,13 +740,11 @@
 
     move-result v3
 
-    .line 80
     .local v3, "arraySize":I
     const/4 v2, 0x2
 
     if-lt v3, v2, :cond_1
 
-    .line 81
     move-object/from16 v0, p0
 
     iget-object v2, v0, Lcom/android/internal/widget/BezierSignView;->mSignatureInputData:[Ljava/util/ArrayList;
@@ -829,7 +763,6 @@
 
     check-cast v15, Lcom/android/internal/widget/SignView$SignatureInput;
 
-    .line 82
     .local v15, "startPoint":Lcom/android/internal/widget/SignView$SignatureInput;
     move-object/from16 v0, p0
 
@@ -849,7 +782,6 @@
 
     check-cast v12, Lcom/android/internal/widget/SignView$SignatureInput;
 
-    .line 84
     .local v12, "controlPoint":Lcom/android/internal/widget/SignView$SignatureInput;
     iget v2, v15, Lcom/android/internal/widget/SignView$SignatureInput;->mTag:I
 
@@ -863,14 +795,12 @@
 
     if-ne v2, v4, :cond_1
 
-    .line 86
     const/4 v2, 0x1
 
     move-object/from16 v0, p0
 
     iput-boolean v2, v0, Lcom/android/internal/widget/BezierSignView;->mBezierEnabled:Z
 
-    .line 90
     .end local v12    # "controlPoint":Lcom/android/internal/widget/SignView$SignatureInput;
     .end local v15    # "startPoint":Lcom/android/internal/widget/SignView$SignatureInput;
     :cond_1
@@ -888,7 +818,6 @@
 
     move-result v13
 
-    .line 91
     .local v13, "dx":F
     move/from16 v0, p2
 
@@ -904,7 +833,6 @@
 
     move-result v14
 
-    .line 93
     .local v14, "dy":F
     move-object/from16 v0, p0
 
@@ -932,7 +860,6 @@
 
     if-ltz v2, :cond_4
 
-    .line 95
     :cond_2
     sget-boolean v2, Lcom/android/internal/widget/BezierSignView;->DBG_TOUCH:Z
 
@@ -944,7 +871,6 @@
 
     invoke-static {v2, v4}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 97
     :cond_3
     move-object/from16 v0, p0
 
@@ -970,7 +896,6 @@
 
     invoke-virtual/range {v2 .. v10}, Lcom/android/internal/widget/BezierSignView;->doBezier(IFFFFJF)V
 
-    .line 99
     move/from16 v0, p1
 
     int-to-float v2, v0
@@ -993,7 +918,6 @@
 
     iput v2, v0, Lcom/android/internal/widget/BezierSignView;->mBezierX:F
 
-    .line 100
     move/from16 v0, p2
 
     int-to-float v2, v0
@@ -1016,11 +940,9 @@
 
     iput v2, v0, Lcom/android/internal/widget/BezierSignView;->mBezierY:F
 
-    .line 108
     :goto_0
     return-void
 
-    .line 102
     :cond_4
     sget-boolean v2, Lcom/android/internal/widget/BezierSignView;->DBG_TOUCH:Z
 
@@ -1032,7 +954,6 @@
 
     invoke-static {v2, v4}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 103
     :cond_5
     move-object/from16 v0, p0
 
@@ -1066,7 +987,6 @@
 
     invoke-virtual {v2, v4}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 105
     move/from16 v0, p1
 
     int-to-float v2, v0
@@ -1075,7 +995,6 @@
 
     iput v2, v0, Lcom/android/internal/widget/BezierSignView;->mBezierX:F
 
-    .line 106
     move/from16 v0, p2
 
     int-to-float v2, v0
@@ -1092,14 +1011,11 @@
     .param p1, "context"    # Landroid/content/Context;
 
     .prologue
-    .line 39
     invoke-super {p0, p1}, Lcom/android/internal/widget/SignView;->init(Landroid/content/Context;)V
 
-    .line 41
     const/4 v0, 0x0
 
     iput-boolean v0, p0, Lcom/android/internal/widget/BezierSignView;->mBezierEnabled:Z
 
-    .line 42
     return-void
 .end method

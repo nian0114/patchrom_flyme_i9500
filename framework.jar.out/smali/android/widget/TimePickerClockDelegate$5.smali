@@ -26,7 +26,6 @@
     .locals 0
 
     .prologue
-    .line 244
     iput-object p1, p0, Landroid/widget/TimePickerClockDelegate$5;->this$0:Landroid/widget/TimePickerClockDelegate;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -42,20 +41,17 @@
     .param p2, "event"    # Landroid/view/MotionEvent;
 
     .prologue
-    .line 246
     invoke-virtual {p2}, Landroid/view/MotionEvent;->getAction()I
 
     move-result v0
 
     packed-switch v0, :pswitch_data_0
 
-    .line 251
     :goto_0
     const/4 v0, 0x0
 
     return v0
 
-    .line 248
     :pswitch_0
     iget-object v0, p0, Landroid/widget/TimePickerClockDelegate$5;->this$0:Landroid/widget/TimePickerClockDelegate;
 
@@ -64,7 +60,6 @@
 
     goto :goto_0
 
-    .line 246
     nop
 
     :pswitch_data_0

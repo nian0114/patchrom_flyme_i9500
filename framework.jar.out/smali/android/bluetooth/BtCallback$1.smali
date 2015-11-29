@@ -23,7 +23,6 @@
     .locals 0
 
     .prologue
-    .line 175
     iput-object p1, p0, Landroid/bluetooth/BtCallback$1;->this$0:Landroid/bluetooth/BtCallback;
 
     invoke-direct {p0}, Landroid/bluetooth/IBtUCallback$Stub;-><init>()V
@@ -38,7 +37,6 @@
     .param p1, "bundle"    # Landroid/os/Bundle;
 
     .prologue
-    .line 178
     const-string v4, "Service"
 
     invoke-virtual {p1, v4}, Landroid/os/Bundle;->getCharSequence(Ljava/lang/String;)Ljava/lang/CharSequence;
@@ -49,7 +47,6 @@
 
     move-result-object v3
 
-    .line 179
     .local v3, "serviceName":Ljava/lang/String;
     const-string v4, "BtCallback"
 
@@ -73,7 +70,6 @@
 
     invoke-static {v4, v5}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 180
     iget-object v4, p0, Landroid/bluetooth/BtCallback$1;->this$0:Landroid/bluetooth/BtCallback;
 
     # getter for: Landroid/bluetooth/BtCallback;->mUCallback:Landroid/bluetooth/IBtUCallback;
@@ -83,7 +79,6 @@
 
     monitor-enter v5
 
-    .line 181
     :try_start_0
     iget-object v4, p0, Landroid/bluetooth/BtCallback$1;->this$0:Landroid/bluetooth/BtCallback;
 
@@ -96,7 +91,6 @@
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_1
 
-    .line 182
     :try_start_1
     iget-object v4, p0, Landroid/bluetooth/BtCallback$1;->this$0:Landroid/bluetooth/BtCallback;
 
@@ -113,7 +107,6 @@
 
     move-result-object v1
 
-    .line 183
     .local v1, "it":Ljava/util/Iterator;
     :cond_0
     :goto_0
@@ -123,14 +116,12 @@
 
     if-eqz v4, :cond_1
 
-    .line 184
     invoke-interface {v1}, Ljava/util/Iterator;->next()Ljava/lang/Object;
 
     move-result-object v2
 
     check-cast v2, Ljava/util/Map$Entry;
 
-    .line 186
     .local v2, "pairs":Ljava/util/Map$Entry;
     const-string v4, "BtCallback"
 
@@ -138,7 +129,7 @@
 
     invoke-direct {v7}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v8, "onCallback: Key is "
+    const-string v8, "onCallback: Key is "
 
     invoke-virtual {v7, v8}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -158,7 +149,6 @@
 
     invoke-static {v4, v7}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 187
     invoke-interface {v2}, Ljava/util/Map$Entry;->getKey()Ljava/lang/Object;
 
     move-result-object v4
@@ -169,20 +159,17 @@
 
     if-eqz v4, :cond_0
 
-    .line 188
     invoke-interface {v2}, Ljava/util/Map$Entry;->getValue()Ljava/lang/Object;
 
     move-result-object v0
 
     check-cast v0, Landroid/bluetooth/BtCallback$BluetoothUniversalCb;
 
-    .line 189
     .local v0, "cb":Landroid/bluetooth/BtCallback$BluetoothUniversalCb;
     invoke-interface {v0, p1}, Landroid/bluetooth/BtCallback$BluetoothUniversalCb;->onCallback(Landroid/os/Bundle;)V
 
     goto :goto_0
 
-    .line 192
     .end local v0    # "cb":Landroid/bluetooth/BtCallback$BluetoothUniversalCb;
     .end local v1    # "it":Ljava/util/Iterator;
     .end local v2    # "pairs":Ljava/util/Map$Entry;
@@ -196,7 +183,6 @@
     :try_start_2
     throw v4
 
-    .line 193
     :catchall_1
     move-exception v4
 
@@ -206,7 +192,6 @@
 
     throw v4
 
-    .line 192
     .restart local v1    # "it":Ljava/util/Iterator;
     :cond_1
     :try_start_3
@@ -214,12 +199,10 @@
     :try_end_3
     .catchall {:try_start_3 .. :try_end_3} :catchall_0
 
-    .line 193
     :try_start_4
     monitor-exit v5
     :try_end_4
     .catchall {:try_start_4 .. :try_end_4} :catchall_1
 
-    .line 194
     return-void
 .end method

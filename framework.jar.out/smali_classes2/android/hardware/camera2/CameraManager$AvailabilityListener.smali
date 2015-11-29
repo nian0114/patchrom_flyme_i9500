@@ -19,7 +19,6 @@
     .locals 0
 
     .prologue
-    .line 450
     invoke-direct {p0}, Landroid/hardware/camera2/CameraManager$AvailabilityCallback;-><init>()V
 
     return-void

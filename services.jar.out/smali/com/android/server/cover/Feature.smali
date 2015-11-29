@@ -66,7 +66,6 @@
 
     const/4 v1, 0x0
 
-    .line 40
     invoke-static {}, Landroid/os/Debug;->isProductShip()I
 
     move-result v2
@@ -78,55 +77,38 @@
     :cond_0
     sput-boolean v0, Lcom/android/server/cover/Feature;->SAFE_DEBUG:Z
 
-    .line 42
     sput-object v3, Lcom/android/server/cover/Feature;->sInstance:Lcom/android/server/cover/Feature;
 
-    .line 44
     sput-boolean v1, Lcom/android/server/cover/Feature;->sIsSystemFeatureQueried:Z
 
-    .line 45
     sput-boolean v1, Lcom/android/server/cover/Feature;->sIsSupportFlipCover:Z
 
-    .line 46
     sput-boolean v1, Lcom/android/server/cover/Feature;->sIsSupportSViewCover:Z
 
-    .line 47
     sput-boolean v1, Lcom/android/server/cover/Feature;->sIsSupportLEDCover:Z
 
-    .line 48
     sput-boolean v1, Lcom/android/server/cover/Feature;->sIsSupportLEDCoverQCOM:Z
 
-    .line 49
     sput-boolean v1, Lcom/android/server/cover/Feature;->sIsSupportLEDCoverLSI:Z
 
-    .line 51
     sput-boolean v1, Lcom/android/server/cover/Feature;->sIsSupportSViewCoverTestMode:Z
 
-    .line 52
     sput-boolean v1, Lcom/android/server/cover/Feature;->sIsSupportMiniSViewCoverTestMode:Z
 
-    .line 53
     sput-boolean v1, Lcom/android/server/cover/Feature;->sIsSupportSmartCoverTestMode:Z
 
-    .line 55
     sput-boolean v1, Lcom/android/server/cover/Feature;->sIsDeviceSupportQueried:Z
 
-    .line 56
     sput-boolean v1, Lcom/android/server/cover/Feature;->sIsDeviceSupportVerityCover:Z
 
-    .line 57
     sput-boolean v1, Lcom/android/server/cover/Feature;->sIsDeviceSupportDetectCover:Z
 
-    .line 70
     sput-boolean v1, Lcom/android/server/cover/Feature;->sIsSmartCoverSystemFeatureEnabled:Z
 
-    .line 71
     sput-boolean v1, Lcom/android/server/cover/Feature;->sIsNfcAuthSystemFeatureEnabled:Z
 
-    .line 73
     sput-object v3, Lcom/android/server/cover/Feature;->sHardwareProperty:Ljava/lang/String;
 
-    .line 74
     sput-object v3, Lcom/android/server/cover/Feature;->sDeviceTypeProperty:Ljava/lang/String;
 
     return-void
@@ -137,19 +119,14 @@
     .param p1, "context"    # Landroid/content/Context;
 
     .prologue
-    .line 87
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 88
     invoke-direct {p0}, Lcom/android/server/cover/Feature;->getSystemProperties()V
 
-    .line 89
     invoke-direct {p0, p1}, Lcom/android/server/cover/Feature;->updateSystemFeature(Landroid/content/Context;)V
 
-    .line 90
     invoke-direct {p0}, Lcom/android/server/cover/Feature;->updateDeviceSupportFeature()V
 
-    .line 91
     return-void
 .end method
 
@@ -158,19 +135,16 @@
     .param p0, "context"    # Landroid/content/Context;
 
     .prologue
-    .line 81
     sget-object v0, Lcom/android/server/cover/Feature;->sInstance:Lcom/android/server/cover/Feature;
 
     if-nez v0, :cond_0
 
-    .line 82
     new-instance v0, Lcom/android/server/cover/Feature;
 
     invoke-direct {v0, p0}, Lcom/android/server/cover/Feature;-><init>(Landroid/content/Context;)V
 
     sput-object v0, Lcom/android/server/cover/Feature;->sInstance:Lcom/android/server/cover/Feature;
 
-    .line 84
     :cond_0
     sget-object v0, Lcom/android/server/cover/Feature;->sInstance:Lcom/android/server/cover/Feature;
 
@@ -181,13 +155,11 @@
     .locals 1
 
     .prologue
-    .line 122
     sget-object v0, Lcom/android/server/cover/Feature;->sHardwareProperty:Ljava/lang/String;
 
     if-nez v0, :cond_0
 
-    .line 123
-    const-string/jumbo v0, "ro.hardware"
+    const-string v0, "ro.hardware"
 
     invoke-static {v0}, Landroid/os/SystemProperties;->get(Ljava/lang/String;)Ljava/lang/String;
 
@@ -195,14 +167,12 @@
 
     sput-object v0, Lcom/android/server/cover/Feature;->sHardwareProperty:Ljava/lang/String;
 
-    .line 125
     :cond_0
     sget-object v0, Lcom/android/server/cover/Feature;->sDeviceTypeProperty:Ljava/lang/String;
 
     if-nez v0, :cond_1
 
-    .line 126
-    const-string/jumbo v0, "ro.build.characteristics"
+    const-string v0, "ro.build.characteristics"
 
     invoke-static {v0}, Landroid/os/SystemProperties;->get(Ljava/lang/String;)Ljava/lang/String;
 
@@ -210,7 +180,6 @@
 
     sput-object v0, Lcom/android/server/cover/Feature;->sDeviceTypeProperty:Ljava/lang/String;
 
-    .line 128
     :cond_1
     return-void
 .end method
@@ -223,12 +192,10 @@
 
     const/4 v1, 0x1
 
-    .line 108
     sget-boolean v0, Lcom/android/server/cover/Feature;->sIsDeviceSupportQueried:Z
 
     if-nez v0, :cond_2
 
-    .line 109
     const-string v0, "/sys/devices/w1_bus_master1/w1_master_check_id"
 
     invoke-static {v0}, Lcom/android/server/cover/CoverManagerUtils;->isFileExists(Ljava/lang/String;)Z
@@ -250,7 +217,6 @@
     :goto_0
     sput-boolean v0, Lcom/android/server/cover/Feature;->sIsDeviceSupportVerityCover:Z
 
-    .line 111
     const-string v0, "/sys/bus/w1/devices/w1_bus_master1/w1_master_check_detect"
 
     invoke-static {v0}, Lcom/android/server/cover/CoverManagerUtils;->isFileExists(Ljava/lang/String;)Z
@@ -259,7 +225,6 @@
 
     sput-boolean v0, Lcom/android/server/cover/Feature;->sIsDeviceSupportDetectCover:Z
 
-    .line 112
     const-string v0, "/sys/class/sec/expander/expgpio"
 
     invoke-static {v0}, Lcom/android/server/cover/CoverManagerUtils;->isFileExists(Ljava/lang/String;)Z
@@ -268,7 +233,6 @@
 
     sput-boolean v0, Lcom/android/server/cover/Feature;->sIsSupportLEDCoverQCOM:Z
 
-    .line 114
     const-string v0, "/sys/class/sec/ledcover/cover_pwr"
 
     invoke-static {v0}, Lcom/android/server/cover/CoverManagerUtils;->isFileExists(Ljava/lang/String;)Z
@@ -277,7 +241,6 @@
 
     sput-boolean v0, Lcom/android/server/cover/Feature;->sIsSupportLEDCoverLSI:Z
 
-    .line 116
     sget-boolean v0, Lcom/android/server/cover/Feature;->sIsSupportLEDCoverQCOM:Z
 
     if-nez v0, :cond_0
@@ -292,17 +255,14 @@
     :cond_1
     sput-boolean v2, Lcom/android/server/cover/Feature;->sIsSupportLEDCover:Z
 
-    .line 117
     sput-boolean v1, Lcom/android/server/cover/Feature;->sIsDeviceSupportQueried:Z
 
-    .line 119
     :cond_2
     return-void
 
     :cond_3
     move v0, v2
 
-    .line 109
     goto :goto_0
 .end method
 
@@ -311,17 +271,14 @@
     .param p1, "context"    # Landroid/content/Context;
 
     .prologue
-    .line 94
     sget-boolean v1, Lcom/android/server/cover/Feature;->sIsSystemFeatureQueried:Z
 
     if-nez v1, :cond_0
 
-    .line 95
     invoke-virtual {p1}, Landroid/content/Context;->getPackageManager()Landroid/content/pm/PackageManager;
 
     move-result-object v0
 
-    .line 96
     .local v0, "pm":Landroid/content/pm/PackageManager;
     const-string v1, "com.sec.feature.cover.flip"
 
@@ -331,7 +288,6 @@
 
     sput-boolean v1, Lcom/android/server/cover/Feature;->sIsSupportFlipCover:Z
 
-    .line 97
     const-string v1, "com.sec.feature.cover.sview"
 
     invoke-virtual {v0, v1}, Landroid/content/pm/PackageManager;->hasSystemFeature(Ljava/lang/String;)Z
@@ -340,7 +296,6 @@
 
     sput-boolean v1, Lcom/android/server/cover/Feature;->sIsSupportSViewCover:Z
 
-    .line 98
     const-string v1, "com.sec.feature.cover.sview.testmode"
 
     invoke-virtual {v0, v1}, Landroid/content/pm/PackageManager;->hasSystemFeature(Ljava/lang/String;)Z
@@ -349,7 +304,6 @@
 
     sput-boolean v1, Lcom/android/server/cover/Feature;->sIsSupportSViewCoverTestMode:Z
 
-    .line 99
     const-string v1, "com.sec.feature.cover.sview.wallet.testmode"
 
     invoke-virtual {v0, v1}, Landroid/content/pm/PackageManager;->hasSystemFeature(Ljava/lang/String;)Z
@@ -358,7 +312,6 @@
 
     sput-boolean v1, Lcom/android/server/cover/Feature;->sIsSupportMiniSViewCoverTestMode:Z
 
-    .line 100
     const-string v1, "com.sec.feature.cover.smartcover.testmode"
 
     invoke-virtual {v0, v1}, Landroid/content/pm/PackageManager;->hasSystemFeature(Ljava/lang/String;)Z
@@ -367,7 +320,6 @@
 
     sput-boolean v1, Lcom/android/server/cover/Feature;->sIsSupportSmartCoverTestMode:Z
 
-    .line 101
     const-string v1, "com.sec.feature.cover.smartcover"
 
     invoke-virtual {v0, v1}, Landroid/content/pm/PackageManager;->hasSystemFeature(Ljava/lang/String;)Z
@@ -376,7 +328,6 @@
 
     sput-boolean v1, Lcom/android/server/cover/Feature;->sIsSmartCoverSystemFeatureEnabled:Z
 
-    .line 102
     const-string v1, "com.sec.feature.cover.nfc_authentication"
 
     invoke-virtual {v0, v1}, Landroid/content/pm/PackageManager;->hasSystemFeature(Ljava/lang/String;)Z
@@ -385,12 +336,10 @@
 
     sput-boolean v1, Lcom/android/server/cover/Feature;->sIsNfcAuthSystemFeatureEnabled:Z
 
-    .line 103
     const/4 v1, 0x1
 
     sput-boolean v1, Lcom/android/server/cover/Feature;->sIsSystemFeatureQueried:Z
 
-    .line 105
     .end local v0    # "pm":Landroid/content/pm/PackageManager;
     :cond_0
     return-void
@@ -405,12 +354,10 @@
     .param p3, "args"    # [Ljava/lang/String;
 
     .prologue
-    .line 191
     const-string v0, " Current Feature state:"
 
     invoke-virtual {p2, v0}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
-    .line 192
     const-string v0, "  sIsDeviceSupportVerityCover="
 
     invoke-virtual {p2, v0}, Ljava/io/PrintWriter;->print(Ljava/lang/String;)V
@@ -419,7 +366,6 @@
 
     invoke-virtual {p2, v0}, Ljava/io/PrintWriter;->print(Z)V
 
-    .line 193
     const-string v0, "  sIsDeviceSupportDetectCover="
 
     invoke-virtual {p2, v0}, Ljava/io/PrintWriter;->print(Ljava/lang/String;)V
@@ -428,7 +374,6 @@
 
     invoke-virtual {p2, v0}, Ljava/io/PrintWriter;->println(Z)V
 
-    .line 194
     const-string v0, "  sIsSupportFlipCover="
 
     invoke-virtual {p2, v0}, Ljava/io/PrintWriter;->print(Ljava/lang/String;)V
@@ -437,7 +382,6 @@
 
     invoke-virtual {p2, v0}, Ljava/io/PrintWriter;->print(Z)V
 
-    .line 195
     const-string v0, "  sIsSupportSViewCover="
 
     invoke-virtual {p2, v0}, Ljava/io/PrintWriter;->print(Ljava/lang/String;)V
@@ -446,7 +390,6 @@
 
     invoke-virtual {p2, v0}, Ljava/io/PrintWriter;->println(Z)V
 
-    .line 196
     const-string v0, "  sIsSupportLEDCover="
 
     invoke-virtual {p2, v0}, Ljava/io/PrintWriter;->print(Ljava/lang/String;)V
@@ -455,7 +398,6 @@
 
     invoke-virtual {p2, v0}, Ljava/io/PrintWriter;->print(Z)V
 
-    .line 197
     const-string v0, "  sIsSupportLEDCoverQCOM="
 
     invoke-virtual {p2, v0}, Ljava/io/PrintWriter;->print(Ljava/lang/String;)V
@@ -464,7 +406,6 @@
 
     invoke-virtual {p2, v0}, Ljava/io/PrintWriter;->print(Z)V
 
-    .line 198
     const-string v0, "  sIsSupportLEDCoverLSI="
 
     invoke-virtual {p2, v0}, Ljava/io/PrintWriter;->print(Ljava/lang/String;)V
@@ -473,7 +414,6 @@
 
     invoke-virtual {p2, v0}, Ljava/io/PrintWriter;->println(Z)V
 
-    .line 199
     const-string v0, "  isSViewCoverTestMode="
 
     invoke-virtual {p2, v0}, Ljava/io/PrintWriter;->print(Ljava/lang/String;)V
@@ -484,7 +424,6 @@
 
     invoke-virtual {p2, v0}, Ljava/io/PrintWriter;->print(Z)V
 
-    .line 200
     const-string v0, "  isMiniSViewCoverTestMode="
 
     invoke-virtual {p2, v0}, Ljava/io/PrintWriter;->print(Ljava/lang/String;)V
@@ -495,12 +434,10 @@
 
     invoke-virtual {p2, v0}, Ljava/io/PrintWriter;->println(Z)V
 
-    .line 201
     const-string v0, "  "
 
     invoke-virtual {p2, v0}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
-    .line 202
     return-void
 .end method
 
@@ -508,10 +445,9 @@
     .locals 2
 
     .prologue
-    .line 187
     const-string v0, "CHINA"
 
-    const-string/jumbo v1, "ro.csc.country_code"
+    const-string v1, "ro.csc.country_code"
 
     invoke-static {v1}, Landroid/os/SystemProperties;->get(Ljava/lang/String;)Ljava/lang/String;
 
@@ -528,7 +464,6 @@
     .locals 1
 
     .prologue
-    .line 171
     sget-boolean v0, Lcom/android/server/cover/Feature;->SAFE_DEBUG:Z
 
     if-eqz v0, :cond_0
@@ -552,7 +487,6 @@
     .locals 1
 
     .prologue
-    .line 151
     sget-boolean v0, Lcom/android/server/cover/Feature;->sIsNfcAuthSystemFeatureEnabled:Z
 
     return v0
@@ -562,7 +496,6 @@
     .locals 1
 
     .prologue
-    .line 183
     const/4 v0, 0x0
 
     return v0
@@ -572,7 +505,6 @@
     .locals 1
 
     .prologue
-    .line 167
     sget-boolean v0, Lcom/android/server/cover/Feature;->SAFE_DEBUG:Z
 
     if-eqz v0, :cond_0
@@ -596,7 +528,6 @@
     .locals 1
 
     .prologue
-    .line 175
     sget-boolean v0, Lcom/android/server/cover/Feature;->SAFE_DEBUG:Z
 
     if-eqz v0, :cond_0
@@ -620,7 +551,6 @@
     .locals 1
 
     .prologue
-    .line 135
     sget-boolean v0, Lcom/android/server/cover/Feature;->sIsDeviceSupportDetectCover:Z
 
     return v0
@@ -630,7 +560,6 @@
     .locals 1
 
     .prologue
-    .line 139
     sget-boolean v0, Lcom/android/server/cover/Feature;->sIsSupportFlipCover:Z
 
     return v0
@@ -640,7 +569,6 @@
     .locals 1
 
     .prologue
-    .line 163
     sget-boolean v0, Lcom/android/server/cover/Feature;->sIsSupportLEDCover:Z
 
     return v0
@@ -650,7 +578,6 @@
     .locals 1
 
     .prologue
-    .line 159
     sget-boolean v0, Lcom/android/server/cover/Feature;->sIsSupportLEDCoverLSI:Z
 
     return v0
@@ -660,7 +587,6 @@
     .locals 1
 
     .prologue
-    .line 155
     sget-boolean v0, Lcom/android/server/cover/Feature;->sIsSupportLEDCoverQCOM:Z
 
     return v0
@@ -670,7 +596,6 @@
     .locals 1
 
     .prologue
-    .line 143
     sget-boolean v0, Lcom/android/server/cover/Feature;->sIsSupportSViewCover:Z
 
     return v0
@@ -680,7 +605,6 @@
     .locals 1
 
     .prologue
-    .line 147
     sget-boolean v0, Lcom/android/server/cover/Feature;->sIsSmartCoverSystemFeatureEnabled:Z
 
     return v0
@@ -690,7 +614,6 @@
     .locals 1
 
     .prologue
-    .line 131
     sget-boolean v0, Lcom/android/server/cover/Feature;->sIsDeviceSupportVerityCover:Z
 
     return v0
@@ -700,14 +623,13 @@
     .locals 2
 
     .prologue
-    .line 179
     sget-object v0, Lcom/android/server/cover/Feature;->sDeviceTypeProperty:Ljava/lang/String;
 
     if-eqz v0, :cond_0
 
     sget-object v0, Lcom/android/server/cover/Feature;->sDeviceTypeProperty:Ljava/lang/String;
 
-    const-string/jumbo v1, "tablet"
+    const-string v1, "tablet"
 
     invoke-virtual {v0, v1}, Ljava/lang/String;->contains(Ljava/lang/CharSequence;)Z
 

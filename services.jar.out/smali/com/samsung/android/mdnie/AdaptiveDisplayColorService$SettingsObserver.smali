@@ -24,13 +24,10 @@
     .param p2, "handler"    # Landroid/os/Handler;
 
     .prologue
-    .line 391
     iput-object p1, p0, Lcom/samsung/android/mdnie/AdaptiveDisplayColorService$SettingsObserver;->this$0:Lcom/samsung/android/mdnie/AdaptiveDisplayColorService;
 
-    .line 392
     invoke-direct {p0, p2}, Landroid/database/ContentObserver;-><init>(Landroid/os/Handler;)V
 
-    .line 393
     return-void
 .end method
 
@@ -42,7 +39,6 @@
     .param p2, "uri"    # Landroid/net/Uri;
 
     .prologue
-    .line 397
     iget-object v0, p0, Lcom/samsung/android/mdnie/AdaptiveDisplayColorService$SettingsObserver;->this$0:Lcom/samsung/android/mdnie/AdaptiveDisplayColorService;
 
     # getter for: Lcom/samsung/android/mdnie/AdaptiveDisplayColorService;->DEBUG:Z
@@ -52,7 +48,6 @@
 
     if-eqz v0, :cond_0
 
-    .line 398
     const-string v0, "AdaptiveDisplayColorService"
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -75,13 +70,11 @@
 
     invoke-static {v0, v1}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 401
     :cond_0
     iget-object v0, p0, Lcom/samsung/android/mdnie/AdaptiveDisplayColorService$SettingsObserver;->this$0:Lcom/samsung/android/mdnie/AdaptiveDisplayColorService;
 
     # invokes: Lcom/samsung/android/mdnie/AdaptiveDisplayColorService;->setting_is_changed()V
     invoke-static {v0}, Lcom/samsung/android/mdnie/AdaptiveDisplayColorService;->access$900(Lcom/samsung/android/mdnie/AdaptiveDisplayColorService;)V
 
-    .line 402
     return-void
 .end method

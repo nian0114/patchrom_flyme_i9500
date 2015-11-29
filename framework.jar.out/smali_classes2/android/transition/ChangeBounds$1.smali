@@ -34,11 +34,9 @@
     .param p2, "x1"    # Ljava/lang/String;
 
     .prologue
-    .line 63
     .local p1, "x0":Ljava/lang/Class;, "Ljava/lang/Class<Landroid/graphics/PointF;>;"
     invoke-direct {p0, p1, p2}, Landroid/util/Property;-><init>(Ljava/lang/Class;Ljava/lang/String;)V
 
-    .line 64
     new-instance v0, Landroid/graphics/Rect;
 
     invoke-direct {v0}, Landroid/graphics/Rect;-><init>()V
@@ -55,12 +53,10 @@
     .param p1, "object"    # Landroid/graphics/drawable/Drawable;
 
     .prologue
-    .line 75
     iget-object v0, p0, Landroid/transition/ChangeBounds$1;->mBounds:Landroid/graphics/Rect;
 
     invoke-virtual {p1, v0}, Landroid/graphics/drawable/Drawable;->copyBounds(Landroid/graphics/Rect;)V
 
-    .line 76
     new-instance v0, Landroid/graphics/PointF;
 
     iget-object v1, p0, Landroid/transition/ChangeBounds$1;->mBounds:Landroid/graphics/Rect;
@@ -85,7 +81,6 @@
     .param p1, "x0"    # Ljava/lang/Object;
 
     .prologue
-    .line 63
     check-cast p1, Landroid/graphics/drawable/Drawable;
 
     .end local p1    # "x0":Ljava/lang/Object;
@@ -102,12 +97,10 @@
     .param p2, "value"    # Landroid/graphics/PointF;
 
     .prologue
-    .line 68
     iget-object v0, p0, Landroid/transition/ChangeBounds$1;->mBounds:Landroid/graphics/Rect;
 
     invoke-virtual {p1, v0}, Landroid/graphics/drawable/Drawable;->copyBounds(Landroid/graphics/Rect;)V
 
-    .line 69
     iget-object v0, p0, Landroid/transition/ChangeBounds$1;->mBounds:Landroid/graphics/Rect;
 
     iget v1, p2, Landroid/graphics/PointF;->x:F
@@ -124,12 +117,10 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/graphics/Rect;->offsetTo(II)V
 
-    .line 70
     iget-object v0, p0, Landroid/transition/ChangeBounds$1;->mBounds:Landroid/graphics/Rect;
 
     invoke-virtual {p1, v0}, Landroid/graphics/drawable/Drawable;->setBounds(Landroid/graphics/Rect;)V
 
-    .line 71
     return-void
 .end method
 
@@ -139,7 +130,6 @@
     .param p2, "x1"    # Ljava/lang/Object;
 
     .prologue
-    .line 63
     check-cast p1, Landroid/graphics/drawable/Drawable;
 
     .end local p1    # "x0":Ljava/lang/Object;

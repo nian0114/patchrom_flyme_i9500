@@ -28,7 +28,6 @@
     .locals 0
 
     .prologue
-    .line 1225
     iput-object p1, p0, Lcom/android/server/accessibility/AccessibilityManagerService$7$1;->this$1:Lcom/android/server/accessibility/AccessibilityManagerService$7;
 
     iput p2, p0, Lcom/android/server/accessibility/AccessibilityManagerService$7$1;->val$checkScreenCurtain:I
@@ -44,10 +43,8 @@
     .locals 3
 
     .prologue
-    .line 1228
     const-string v0, ""
 
-    .line 1229
     .local v0, "descriptionText":Ljava/lang/String;
     iget v1, p0, Lcom/android/server/accessibility/AccessibilityManagerService$7$1;->val$checkScreenCurtain:I
 
@@ -55,7 +52,6 @@
 
     if-ne v1, v2, :cond_1
 
-    .line 1230
     iget-object v1, p0, Lcom/android/server/accessibility/AccessibilityManagerService$7$1;->this$1:Lcom/android/server/accessibility/AccessibilityManagerService$7;
 
     iget-object v1, v1, Lcom/android/server/accessibility/AccessibilityManagerService$7;->this$0:Lcom/android/server/accessibility/AccessibilityManagerService;
@@ -71,7 +67,6 @@
 
     move-result-object v0
 
-    .line 1235
     :cond_0
     :goto_0
     iget-object v1, p0, Lcom/android/server/accessibility/AccessibilityManagerService$7$1;->this$1:Lcom/android/server/accessibility/AccessibilityManagerService$7;
@@ -81,10 +76,8 @@
     # invokes: Lcom/android/server/accessibility/AccessibilityManagerService;->curtainModeWarning(Ljava/lang/String;)V
     invoke-static {v1, v0}, Lcom/android/server/accessibility/AccessibilityManagerService;->access$1600(Lcom/android/server/accessibility/AccessibilityManagerService;Ljava/lang/String;)V
 
-    .line 1236
     return-void
 
-    .line 1232
     :cond_1
     iget v1, p0, Lcom/android/server/accessibility/AccessibilityManagerService$7$1;->val$checkScreenCurtain:I
 
@@ -92,7 +85,6 @@
 
     if-ne v1, v2, :cond_0
 
-    .line 1233
     iget-object v1, p0, Lcom/android/server/accessibility/AccessibilityManagerService$7$1;->this$1:Lcom/android/server/accessibility/AccessibilityManagerService$7;
 
     iget-object v1, v1, Lcom/android/server/accessibility/AccessibilityManagerService$7;->this$0:Lcom/android/server/accessibility/AccessibilityManagerService;

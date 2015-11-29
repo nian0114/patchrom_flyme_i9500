@@ -32,7 +32,6 @@
     .locals 1
 
     .prologue
-    .line 2005
     new-instance v0, Landroid/preference/Preference$BaseSavedState$1;
 
     invoke-direct {v0}, Landroid/preference/Preference$BaseSavedState$1;-><init>()V
@@ -47,10 +46,8 @@
     .param p1, "source"    # Landroid/os/Parcel;
 
     .prologue
-    .line 1998
     invoke-direct {p0, p1}, Landroid/view/AbsSavedState;-><init>(Landroid/os/Parcel;)V
 
-    .line 1999
     return-void
 .end method
 
@@ -59,9 +56,7 @@
     .param p1, "superState"    # Landroid/os/Parcelable;
 
     .prologue
-    .line 2002
     invoke-direct {p0, p1}, Landroid/view/AbsSavedState;-><init>(Landroid/os/Parcelable;)V
 
-    .line 2003
     return-void
 .end method

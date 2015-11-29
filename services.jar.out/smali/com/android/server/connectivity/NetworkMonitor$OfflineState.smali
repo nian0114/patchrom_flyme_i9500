@@ -23,7 +23,6 @@
     .locals 0
 
     .prologue
-    .line 315
     iput-object p1, p0, Lcom/android/server/connectivity/NetworkMonitor$OfflineState;->this$0:Lcom/android/server/connectivity/NetworkMonitor;
 
     invoke-direct {p0}, Lcom/android/internal/util/State;-><init>()V
@@ -37,7 +36,6 @@
     .param p2, "x1"    # Lcom/android/server/connectivity/NetworkMonitor$1;
 
     .prologue
-    .line 315
     invoke-direct {p0, p1}, Lcom/android/server/connectivity/NetworkMonitor$OfflineState;-><init>(Lcom/android/server/connectivity/NetworkMonitor;)V
 
     return-void
@@ -49,7 +47,6 @@
     .locals 6
 
     .prologue
-    .line 318
     iget-object v0, p0, Lcom/android/server/connectivity/NetworkMonitor$OfflineState;->this$0:Lcom/android/server/connectivity/NetworkMonitor;
 
     # getter for: Lcom/android/server/connectivity/NetworkMonitor;->mConnectivityServiceHandler:Landroid/os/Handler;
@@ -78,7 +75,6 @@
 
     invoke-virtual {v0, v1}, Landroid/os/Handler;->sendMessage(Landroid/os/Message;)Z
 
-    .line 320
     return-void
 .end method
 
@@ -89,7 +85,6 @@
     .prologue
     const/4 v0, 0x0
 
-    .line 324
     iget-object v1, p0, Lcom/android/server/connectivity/NetworkMonitor$OfflineState;->this$0:Lcom/android/server/connectivity/NetworkMonitor;
 
     new-instance v2, Ljava/lang/StringBuilder;
@@ -119,17 +114,14 @@
     # invokes: Lcom/android/server/connectivity/NetworkMonitor;->log(Ljava/lang/String;)V
     invoke-static {v1, v2}, Lcom/android/server/connectivity/NetworkMonitor;->access$2100(Lcom/android/server/connectivity/NetworkMonitor;Ljava/lang/String;)V
 
-    .line 325
     iget v1, p1, Landroid/os/Message;->what:I
 
     packed-switch v1, :pswitch_data_0
 
-    .line 332
     :cond_0
     :goto_0
     return v0
 
-    .line 330
     :pswitch_0
     iget-object v1, p0, Lcom/android/server/connectivity/NetworkMonitor$OfflineState;->this$0:Lcom/android/server/connectivity/NetworkMonitor;
 
@@ -144,7 +136,6 @@
 
     goto :goto_0
 
-    .line 325
     nop
 
     :pswitch_data_0

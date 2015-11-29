@@ -34,27 +34,22 @@
     .param p4, "observable"    # Lcom/samsung/android/contextaware/dataprovider/sensorhubprovider/ISensorHubResetObservable;
 
     .prologue
-    .line 87
     invoke-direct {p0, p1, p2, p3, p4}, Lcom/samsung/android/contextaware/dataprovider/sensorhubprovider/LibTypeProvider;-><init>(ILandroid/content/Context;Landroid/os/Looper;Lcom/samsung/android/contextaware/dataprovider/sensorhubprovider/ISensorHubResetObservable;)V
 
-    .line 62
     const/16 v0, 0x12c
 
     iput v0, p0, Lcom/samsung/android/contextaware/dataprovider/sensorhubprovider/builtin/LifeLogComponentRunner;->mStopPeriod:I
 
-    .line 65
     const/16 v0, 0x5dc
 
     iput v0, p0, Lcom/samsung/android/contextaware/dataprovider/sensorhubprovider/builtin/LifeLogComponentRunner;->mWaitPeriod:I
 
-    .line 88
     new-instance v0, Lcom/samsung/android/contextaware/utilbundle/CaPassiveCurrentPositionManager;
 
     invoke-direct {v0, p2, p3, p0}, Lcom/samsung/android/contextaware/utilbundle/CaPassiveCurrentPositionManager;-><init>(Landroid/content/Context;Landroid/os/Looper;Lcom/samsung/android/contextaware/dataprovider/sensorhubprovider/IPassiveCurrrentPositionObserver;)V
 
     iput-object v0, p0, Lcom/samsung/android/contextaware/dataprovider/sensorhubprovider/builtin/LifeLogComponentRunner;->mPassiveCurrentPosition:Lcom/samsung/android/contextaware/utilbundle/CaPassiveCurrentPositionManager;
 
-    .line 90
     new-instance v0, Lcom/samsung/android/contextaware/dataprovider/sensorhubprovider/request/builtin/CurrentPositionRequestRunner;
 
     invoke-virtual {p0}, Lcom/samsung/android/contextaware/dataprovider/sensorhubprovider/builtin/LifeLogComponentRunner;->getContext()Landroid/content/Context;
@@ -69,19 +64,16 @@
 
     iput-object v0, p0, Lcom/samsung/android/contextaware/dataprovider/sensorhubprovider/builtin/LifeLogComponentRunner;->mCurrentPositionRequest:Lcom/samsung/android/contextaware/dataprovider/sensorhubprovider/request/builtin/ICurrentPositionRequest;
 
-    .line 92
     iget-object v0, p0, Lcom/samsung/android/contextaware/dataprovider/sensorhubprovider/builtin/LifeLogComponentRunner;->mCurrentPositionRequest:Lcom/samsung/android/contextaware/dataprovider/sensorhubprovider/request/builtin/ICurrentPositionRequest;
 
     invoke-interface {v0, p0}, Lcom/samsung/android/contextaware/dataprovider/sensorhubprovider/request/builtin/ICurrentPositionRequest;->registerObserver(Lcom/samsung/android/contextaware/dataprovider/sensorhubprovider/ICurrentPositionRequestObserver;)V
 
-    .line 93
     iget-object v0, p0, Lcom/samsung/android/contextaware/dataprovider/sensorhubprovider/builtin/LifeLogComponentRunner;->mCurrentPositionRequest:Lcom/samsung/android/contextaware/dataprovider/sensorhubprovider/request/builtin/ICurrentPositionRequest;
 
     check-cast v0, Lcom/samsung/android/contextaware/dataprovider/sensorhubprovider/request/builtin/ISensorHubRequestParser;
 
     invoke-virtual {p0, v0}, Lcom/samsung/android/contextaware/dataprovider/sensorhubprovider/builtin/LifeLogComponentRunner;->addRequestParser(Lcom/samsung/android/contextaware/dataprovider/sensorhubprovider/request/builtin/ISensorHubRequestParser;)V
 
-    .line 94
     return-void
 .end method
 
@@ -91,7 +83,6 @@
     .param p2, "next"    # I
 
     .prologue
-    .line 291
     add-int/lit8 v0, p2, 0x5
 
     array-length v1, p1
@@ -115,7 +106,6 @@
     .param p2, "next"    # I
 
     .prologue
-    .line 278
     add-int/lit8 v0, p2, 0x17
 
     array-length v1, p1
@@ -141,10 +131,8 @@
     .param p5, "curTimeMillis"    # J
 
     .prologue
-    .line 417
     move/from16 v19, p2
 
-    .line 419
     .local v19, "tmpNext":I
     move-object/from16 v0, p1
 
@@ -156,7 +144,6 @@
 
     if-gez v5, :cond_0
 
-    .line 420
     sget-object v5, Lcom/samsung/android/contextaware/dataprovider/sensorhubprovider/SensorHubErrors;->ERROR_PACKET_LOST:Lcom/samsung/android/contextaware/dataprovider/sensorhubprovider/SensorHubErrors;
 
     invoke-virtual {v5}, Lcom/samsung/android/contextaware/dataprovider/sensorhubprovider/SensorHubErrors;->getMessage()Ljava/lang/String;
@@ -165,14 +152,11 @@
 
     invoke-static {v5}, Lcom/samsung/android/contextaware/utilbundle/logger/CaLogger;->error(Ljava/lang/String;)V
 
-    .line 421
     const/16 v20, -0x1
 
-    .line 465
     :goto_0
     return v20
 
-    .line 424
     :cond_0
     add-int/lit8 v20, v19, 0x1
 
@@ -220,7 +204,6 @@
 
     int-to-long v10, v5
 
-    .line 429
     .local v10, "timeStamp":J
     invoke-static {}, Lcom/samsung/android/contextaware/utilbundle/CaTimeManager;->getInstance()Lcom/samsung/android/contextaware/utilbundle/CaTimeManager;
 
@@ -234,7 +217,6 @@
 
     move-result-wide v16
 
-    .line 432
     .local v16, "movingTimeStamp":J
     move-object/from16 v0, p1
 
@@ -246,7 +228,6 @@
 
     if-gez v5, :cond_1
 
-    .line 433
     sget-object v5, Lcom/samsung/android/contextaware/dataprovider/sensorhubprovider/SensorHubErrors;->ERROR_PACKET_LOST:Lcom/samsung/android/contextaware/dataprovider/sensorhubprovider/SensorHubErrors;
 
     invoke-virtual {v5}, Lcom/samsung/android/contextaware/dataprovider/sensorhubprovider/SensorHubErrors;->getMessage()Ljava/lang/String;
@@ -255,12 +236,10 @@
 
     invoke-static {v5}, Lcom/samsung/android/contextaware/utilbundle/logger/CaLogger;->error(Ljava/lang/String;)V
 
-    .line 434
     const/16 v20, -0x1
 
     goto :goto_0
 
-    .line 436
     :cond_1
     add-int/lit8 v20, v19, 0x1
 
@@ -268,32 +247,26 @@
     .restart local v20    # "tmpNext":I
     aget-byte v14, p1, v19
 
-    .line 437
     .local v14, "movingCount":I
     if-gtz v14, :cond_2
 
     move/from16 v19, v20
 
-    .line 438
     .end local v20    # "tmpNext":I
     .restart local v19    # "tmpNext":I
     goto :goto_0
 
-    .line 441
     .end local v19    # "tmpNext":I
     .restart local v20    # "tmpNext":I
     :cond_2
     new-array v13, v14, [I
 
-    .line 442
     .local v13, "movingActivity":[I
     new-array v12, v14, [I
 
-    .line 443
     .local v12, "movingAccuracy":[I
     new-array v15, v14, [I
 
-    .line 445
     .local v15, "movingTimeDuration":[I
     const/4 v4, 0x0
 
@@ -301,7 +274,6 @@
     :goto_1
     if-ge v4, v14, :cond_5
 
-    .line 446
     move-object/from16 v0, p0
 
     move-object/from16 v1, p1
@@ -318,7 +290,6 @@
 
     if-le v4, v5, :cond_4
 
-    .line 447
     :cond_3
     sget-object v5, Lcom/samsung/android/contextaware/dataprovider/sensorhubprovider/SensorHubErrors;->ERROR_PACKET_LOST:Lcom/samsung/android/contextaware/dataprovider/sensorhubprovider/SensorHubErrors;
 
@@ -328,7 +299,6 @@
 
     invoke-static {v5}, Lcom/samsung/android/contextaware/utilbundle/logger/CaLogger;->error(Ljava/lang/String;)V
 
-    .line 448
     const/4 v5, -0x1
 
     move/from16 v19, v20
@@ -339,7 +309,6 @@
 
     goto :goto_0
 
-    .line 451
     .end local v19    # "tmpNext":I
     .restart local v20    # "tmpNext":I
     :cond_4
@@ -351,7 +320,6 @@
 
     aput v5, v13, v4
 
-    .line 452
     add-int/lit8 v20, v19, 0x1
 
     .end local v19    # "tmpNext":I
@@ -360,7 +328,6 @@
 
     aput v5, v12, v4
 
-    .line 453
     add-int/lit8 v19, v20, 0x1
 
     .end local v20    # "tmpNext":I
@@ -395,7 +362,6 @@
 
     aput v5, v15, v4
 
-    .line 445
     add-int/lit8 v4, v4, 0x1
 
     move/from16 v20, v19
@@ -404,13 +370,11 @@
     .restart local v20    # "tmpNext":I
     goto :goto_1
 
-    .line 458
     :cond_5
     invoke-virtual/range {p0 .. p0}, Lcom/samsung/android/contextaware/dataprovider/sensorhubprovider/builtin/LifeLogComponentRunner;->getContextValueNames()[Ljava/lang/String;
 
     move-result-object v18
 
-    .line 459
     .local v18, "names":[Ljava/lang/String;
     invoke-virtual/range {p0 .. p0}, Lcom/samsung/android/contextaware/dataprovider/sensorhubprovider/builtin/LifeLogComponentRunner;->getContextBean()Lcom/samsung/android/contextaware/manager/ContextBean;
 
@@ -422,7 +386,6 @@
 
     invoke-virtual {v5, v6, v14}, Lcom/samsung/android/contextaware/manager/ContextBean;->putContext(Ljava/lang/String;I)V
 
-    .line 460
     invoke-virtual/range {p0 .. p0}, Lcom/samsung/android/contextaware/dataprovider/sensorhubprovider/builtin/LifeLogComponentRunner;->getContextBean()Lcom/samsung/android/contextaware/manager/ContextBean;
 
     move-result-object v5
@@ -435,7 +398,6 @@
 
     invoke-virtual {v5, v6, v0, v1}, Lcom/samsung/android/contextaware/manager/ContextBean;->putContext(Ljava/lang/String;J)V
 
-    .line 461
     invoke-virtual/range {p0 .. p0}, Lcom/samsung/android/contextaware/dataprovider/sensorhubprovider/builtin/LifeLogComponentRunner;->getContextBean()Lcom/samsung/android/contextaware/manager/ContextBean;
 
     move-result-object v5
@@ -446,7 +408,6 @@
 
     invoke-virtual {v5, v6, v13}, Lcom/samsung/android/contextaware/manager/ContextBean;->putContext(Ljava/lang/String;[I)V
 
-    .line 462
     invoke-virtual/range {p0 .. p0}, Lcom/samsung/android/contextaware/dataprovider/sensorhubprovider/builtin/LifeLogComponentRunner;->getContextBean()Lcom/samsung/android/contextaware/manager/ContextBean;
 
     move-result-object v5
@@ -457,7 +418,6 @@
 
     invoke-virtual {v5, v6, v12}, Lcom/samsung/android/contextaware/manager/ContextBean;->putContext(Ljava/lang/String;[I)V
 
-    .line 463
     invoke-virtual/range {p0 .. p0}, Lcom/samsung/android/contextaware/dataprovider/sensorhubprovider/builtin/LifeLogComponentRunner;->getContextBean()Lcom/samsung/android/contextaware/manager/ContextBean;
 
     move-result-object v5
@@ -470,7 +430,6 @@
 
     move/from16 v19, v20
 
-    .line 465
     .end local v20    # "tmpNext":I
     .restart local v19    # "tmpNext":I
     goto/16 :goto_0
@@ -484,10 +443,8 @@
     .param p5, "curTimeMillis"    # J
 
     .prologue
-    .line 332
     move/from16 v21, p2
 
-    .line 334
     .local v21, "tmpNext":I
     move-object/from16 v0, p1
 
@@ -499,7 +456,6 @@
 
     if-gez v5, :cond_0
 
-    .line 335
     sget-object v5, Lcom/samsung/android/contextaware/dataprovider/sensorhubprovider/SensorHubErrors;->ERROR_PACKET_LOST:Lcom/samsung/android/contextaware/dataprovider/sensorhubprovider/SensorHubErrors;
 
     invoke-virtual {v5}, Lcom/samsung/android/contextaware/dataprovider/sensorhubprovider/SensorHubErrors;->getMessage()Ljava/lang/String;
@@ -508,14 +464,11 @@
 
     invoke-static {v5}, Lcom/samsung/android/contextaware/utilbundle/logger/CaLogger;->error(Ljava/lang/String;)V
 
-    .line 336
     const/16 v22, -0x1
 
-    .line 399
     :goto_0
     return v22
 
-    .line 339
     :cond_0
     add-int/lit8 v22, v21, 0x1
 
@@ -523,18 +476,15 @@
     .local v22, "tmpNext":I
     aget-byte v14, p1, v21
 
-    .line 340
     .local v14, "stayingAreaCount":I
     if-gtz v14, :cond_1
 
     move/from16 v21, v22
 
-    .line 341
     .end local v22    # "tmpNext":I
     .restart local v21    # "tmpNext":I
     goto :goto_0
 
-    .line 344
     .end local v21    # "tmpNext":I
     .restart local v22    # "tmpNext":I
     :cond_1
@@ -542,39 +492,32 @@
 
     move-object/from16 v20, v0
 
-    .line 346
     .local v20, "stayingAreaTimeStamp":[J
     new-array v15, v14, [D
 
-    .line 347
     .local v15, "stayingAreaLatitude":[D
     new-array v0, v14, [D
 
     move-object/from16 v16, v0
 
-    .line 348
     .local v16, "stayingAreaLongitude":[D
     new-array v13, v14, [D
 
-    .line 349
     .local v13, "stayingAreaAltitude":[D
     new-array v0, v14, [I
 
     move-object/from16 v19, v0
 
-    .line 350
     .local v19, "stayingAreaTimeDuration":[I
     new-array v0, v14, [I
 
     move-object/from16 v17, v0
 
-    .line 351
     .local v17, "stayingAreaRadius":[I
     new-array v0, v14, [I
 
     move-object/from16 v18, v0
 
-    .line 353
     .local v18, "stayingAreaStatus":[I
     const/4 v4, 0x0
 
@@ -582,7 +525,6 @@
     :goto_1
     if-ge v4, v14, :cond_3
 
-    .line 354
     move-object/from16 v0, p0
 
     move-object/from16 v1, p1
@@ -599,7 +541,6 @@
 
     if-lt v4, v5, :cond_2
 
-    .line 356
     sget-object v5, Lcom/samsung/android/contextaware/dataprovider/sensorhubprovider/SensorHubErrors;->ERROR_PACKET_LOST:Lcom/samsung/android/contextaware/dataprovider/sensorhubprovider/SensorHubErrors;
 
     invoke-virtual {v5}, Lcom/samsung/android/contextaware/dataprovider/sensorhubprovider/SensorHubErrors;->getMessage()Ljava/lang/String;
@@ -608,7 +549,6 @@
 
     invoke-static {v5}, Lcom/samsung/android/contextaware/utilbundle/logger/CaLogger;->error(Ljava/lang/String;)V
 
-    .line 357
     const/4 v5, -0x1
 
     move/from16 v21, v22
@@ -619,7 +559,6 @@
 
     goto :goto_0
 
-    .line 360
     .end local v21    # "tmpNext":I
     .restart local v22    # "tmpNext":I
     :cond_2
@@ -669,7 +608,6 @@
 
     int-to-long v10, v5
 
-    .line 365
     .local v10, "timeStamp":J
     invoke-static {}, Lcom/samsung/android/contextaware/utilbundle/CaTimeManager;->getInstance()Lcom/samsung/android/contextaware/utilbundle/CaTimeManager;
 
@@ -685,7 +623,6 @@
 
     aput-wide v6, v20, v4
 
-    .line 368
     add-int/lit8 v21, v22, 0x1
 
     .end local v22    # "tmpNext":I
@@ -738,7 +675,6 @@
 
     aput-wide v6, v15, v4
 
-    .line 371
     add-int/lit8 v21, v22, 0x1
 
     .end local v22    # "tmpNext":I
@@ -791,7 +727,6 @@
 
     aput-wide v6, v16, v4
 
-    .line 374
     add-int/lit8 v21, v22, 0x1
 
     .end local v22    # "tmpNext":I
@@ -844,7 +779,6 @@
 
     aput-wide v6, v13, v4
 
-    .line 378
     add-int/lit8 v21, v22, 0x1
 
     .end local v22    # "tmpNext":I
@@ -891,7 +825,6 @@
 
     aput v5, v19, v4
 
-    .line 382
     add-int/lit8 v21, v22, 0x1
 
     .end local v22    # "tmpNext":I
@@ -914,7 +847,6 @@
 
     aput v5, v17, v4
 
-    .line 385
     add-int/lit8 v21, v22, 0x1
 
     .end local v22    # "tmpNext":I
@@ -923,7 +855,6 @@
 
     aput v5, v18, v4
 
-    .line 353
     add-int/lit8 v4, v4, 0x1
 
     move/from16 v22, v21
@@ -932,14 +863,12 @@
     .restart local v22    # "tmpNext":I
     goto/16 :goto_1
 
-    .line 389
     .end local v10    # "timeStamp":J
     :cond_3
     invoke-virtual/range {p0 .. p0}, Lcom/samsung/android/contextaware/dataprovider/sensorhubprovider/builtin/LifeLogComponentRunner;->getContextValueNames()[Ljava/lang/String;
 
     move-result-object v12
 
-    .line 390
     .local v12, "names":[Ljava/lang/String;
     invoke-virtual/range {p0 .. p0}, Lcom/samsung/android/contextaware/dataprovider/sensorhubprovider/builtin/LifeLogComponentRunner;->getContextBean()Lcom/samsung/android/contextaware/manager/ContextBean;
 
@@ -951,7 +880,6 @@
 
     invoke-virtual {v5, v6, v14}, Lcom/samsung/android/contextaware/manager/ContextBean;->putContext(Ljava/lang/String;I)V
 
-    .line 391
     invoke-virtual/range {p0 .. p0}, Lcom/samsung/android/contextaware/dataprovider/sensorhubprovider/builtin/LifeLogComponentRunner;->getContextBean()Lcom/samsung/android/contextaware/manager/ContextBean;
 
     move-result-object v5
@@ -964,7 +892,6 @@
 
     invoke-virtual {v5, v6, v0}, Lcom/samsung/android/contextaware/manager/ContextBean;->putContext(Ljava/lang/String;[J)V
 
-    .line 392
     invoke-virtual/range {p0 .. p0}, Lcom/samsung/android/contextaware/dataprovider/sensorhubprovider/builtin/LifeLogComponentRunner;->getContextBean()Lcom/samsung/android/contextaware/manager/ContextBean;
 
     move-result-object v5
@@ -975,7 +902,6 @@
 
     invoke-virtual {v5, v6, v15}, Lcom/samsung/android/contextaware/manager/ContextBean;->putContext(Ljava/lang/String;[D)V
 
-    .line 393
     invoke-virtual/range {p0 .. p0}, Lcom/samsung/android/contextaware/dataprovider/sensorhubprovider/builtin/LifeLogComponentRunner;->getContextBean()Lcom/samsung/android/contextaware/manager/ContextBean;
 
     move-result-object v5
@@ -988,7 +914,6 @@
 
     invoke-virtual {v5, v6, v0}, Lcom/samsung/android/contextaware/manager/ContextBean;->putContext(Ljava/lang/String;[D)V
 
-    .line 394
     invoke-virtual/range {p0 .. p0}, Lcom/samsung/android/contextaware/dataprovider/sensorhubprovider/builtin/LifeLogComponentRunner;->getContextBean()Lcom/samsung/android/contextaware/manager/ContextBean;
 
     move-result-object v5
@@ -999,7 +924,6 @@
 
     invoke-virtual {v5, v6, v13}, Lcom/samsung/android/contextaware/manager/ContextBean;->putContext(Ljava/lang/String;[D)V
 
-    .line 395
     invoke-virtual/range {p0 .. p0}, Lcom/samsung/android/contextaware/dataprovider/sensorhubprovider/builtin/LifeLogComponentRunner;->getContextBean()Lcom/samsung/android/contextaware/manager/ContextBean;
 
     move-result-object v5
@@ -1012,7 +936,6 @@
 
     invoke-virtual {v5, v6, v0}, Lcom/samsung/android/contextaware/manager/ContextBean;->putContext(Ljava/lang/String;[I)V
 
-    .line 396
     invoke-virtual/range {p0 .. p0}, Lcom/samsung/android/contextaware/dataprovider/sensorhubprovider/builtin/LifeLogComponentRunner;->getContextBean()Lcom/samsung/android/contextaware/manager/ContextBean;
 
     move-result-object v5
@@ -1025,7 +948,6 @@
 
     invoke-virtual {v5, v6, v0}, Lcom/samsung/android/contextaware/manager/ContextBean;->putContext(Ljava/lang/String;[I)V
 
-    .line 397
     invoke-virtual/range {p0 .. p0}, Lcom/samsung/android/contextaware/dataprovider/sensorhubprovider/builtin/LifeLogComponentRunner;->getContextBean()Lcom/samsung/android/contextaware/manager/ContextBean;
 
     move-result-object v5
@@ -1040,7 +962,6 @@
 
     move/from16 v21, v22
 
-    .line 399
     .end local v22    # "tmpNext":I
     .restart local v21    # "tmpNext":I
     goto/16 :goto_0
@@ -1052,13 +973,10 @@
     .locals 0
 
     .prologue
-    .line 502
     invoke-static {}, Lcom/samsung/android/contextaware/utilbundle/logger/CaLogger;->trace()V
 
-    .line 503
     invoke-super {p0}, Lcom/samsung/android/contextaware/dataprovider/sensorhubprovider/LibTypeProvider;->clear()V
 
-    .line 504
     return-void
 .end method
 
@@ -1066,18 +984,14 @@
     .locals 1
 
     .prologue
-    .line 489
     invoke-static {}, Lcom/samsung/android/contextaware/utilbundle/logger/CaLogger;->trace()V
 
-    .line 490
     iget-object v0, p0, Lcom/samsung/android/contextaware/dataprovider/sensorhubprovider/builtin/LifeLogComponentRunner;->mPassiveCurrentPosition:Lcom/samsung/android/contextaware/utilbundle/CaPassiveCurrentPositionManager;
 
     invoke-virtual {v0}, Lcom/samsung/android/contextaware/utilbundle/CaPassiveCurrentPositionManager;->disable()V
 
-    .line 491
     invoke-super {p0}, Lcom/samsung/android/contextaware/dataprovider/sensorhubprovider/LibTypeProvider;->disable()V
 
-    .line 492
     return-void
 .end method
 
@@ -1085,7 +999,6 @@
     .locals 0
 
     .prologue
-    .line 266
     return-void
 .end method
 
@@ -1093,18 +1006,14 @@
     .locals 1
 
     .prologue
-    .line 476
     invoke-static {}, Lcom/samsung/android/contextaware/utilbundle/logger/CaLogger;->trace()V
 
-    .line 477
     iget-object v0, p0, Lcom/samsung/android/contextaware/dataprovider/sensorhubprovider/builtin/LifeLogComponentRunner;->mPassiveCurrentPosition:Lcom/samsung/android/contextaware/utilbundle/CaPassiveCurrentPositionManager;
 
     invoke-virtual {v0}, Lcom/samsung/android/contextaware/utilbundle/CaPassiveCurrentPositionManager;->enable()V
 
-    .line 478
     invoke-super {p0}, Lcom/samsung/android/contextaware/dataprovider/sensorhubprovider/LibTypeProvider;->enable()V
 
-    .line 479
     return-void
 .end method
 
@@ -1112,7 +1021,6 @@
     .locals 1
 
     .prologue
-    .line 104
     sget-object v0, Lcom/samsung/android/contextaware/ContextList$ContextType;->SENSORHUB_RUNNER_LIFE_LOG_COMPONENT:Lcom/samsung/android/contextaware/ContextList$ContextType;
 
     invoke-virtual {v0}, Lcom/samsung/android/contextaware/ContextList$ContextType;->getCode()Ljava/lang/String;
@@ -1126,7 +1034,6 @@
     .locals 3
 
     .prologue
-    .line 158
     const/16 v0, 0xd
 
     new-array v0, v0, [Ljava/lang/String;
@@ -1222,12 +1129,10 @@
 
     const/4 v5, 0x0
 
-    .line 126
     const/16 v3, 0x9
 
     new-array v1, v3, [B
 
-    .line 128
     .local v1, "packet":[B
     iget v3, p0, Lcom/samsung/android/contextaware/dataprovider/sensorhubprovider/builtin/LifeLogComponentRunner;->mStopPeriod:I
 
@@ -1235,58 +1140,49 @@
 
     move-result-object v0
 
-    .line 129
     .local v0, "data":[B
     aget-byte v3, v0, v5
 
     aput-byte v3, v1, v5
 
-    .line 130
     aget-byte v3, v0, v6
 
     aput-byte v3, v1, v6
 
-    .line 132
     iget v3, p0, Lcom/samsung/android/contextaware/dataprovider/sensorhubprovider/builtin/LifeLogComponentRunner;->mWaitPeriod:I
 
     invoke-static {v3, v7}, Lcom/samsung/android/contextaware/utilbundle/CaConvertUtil;->intToByteArr(II)[B
 
     move-result-object v0
 
-    .line 133
     aget-byte v3, v0, v5
 
     aput-byte v3, v1, v7
 
-    .line 134
     const/4 v3, 0x3
 
     aget-byte v4, v0, v6
 
     aput-byte v4, v1, v3
 
-    .line 136
     const v3, 0xffff
 
     invoke-static {v3, v7}, Lcom/samsung/android/contextaware/utilbundle/CaConvertUtil;->intToByteArr(II)[B
 
     move-result-object v0
 
-    .line 137
     const/4 v3, 0x4
 
     aget-byte v4, v0, v5
 
     aput-byte v4, v1, v3
 
-    .line 138
     const/4 v3, 0x5
 
     aget-byte v4, v0, v6
 
     aput-byte v4, v1, v3
 
-    .line 140
     invoke-static {}, Lcom/samsung/android/contextaware/utilbundle/CaCurrentUtcTimeManager;->getInstance()Lcom/samsung/android/contextaware/utilbundle/CaCurrentUtcTimeManager;
 
     move-result-object v3
@@ -1295,7 +1191,6 @@
 
     move-result-object v2
 
-    .line 143
     .local v2, "utcTime":[I
     const/4 v3, 0x6
 
@@ -1309,7 +1204,6 @@
 
     aput-byte v4, v1, v3
 
-    .line 144
     const/4 v3, 0x7
 
     aget v4, v2, v6
@@ -1322,7 +1216,6 @@
 
     aput-byte v4, v1, v3
 
-    .line 145
     const/16 v3, 0x8
 
     aget v4, v2, v7
@@ -1335,7 +1228,6 @@
 
     aput-byte v4, v1, v3
 
-    .line 147
     return-object v1
 .end method
 
@@ -1343,7 +1235,6 @@
     .locals 1
 
     .prologue
-    .line 579
     invoke-virtual {p0}, Lcom/samsung/android/contextaware/dataprovider/sensorhubprovider/builtin/LifeLogComponentRunner;->checkFaultDetectionResult()Z
 
     move-result v0
@@ -1354,7 +1245,6 @@
 
     invoke-static {v0}, Lcom/samsung/android/contextaware/utilbundle/logger/CaLogger;->debug(Ljava/lang/String;)V
 
-    .line 580
     invoke-super {p0}, Lcom/samsung/android/contextaware/dataprovider/sensorhubprovider/LibTypeProvider;->getFaultDetectionResult()Landroid/os/Bundle;
 
     move-result-object v0
@@ -1366,7 +1256,6 @@
     .locals 1
 
     .prologue
-    .line 115
     const/16 v0, 0x1d
 
     return v0
@@ -1376,7 +1265,6 @@
     .locals 0
 
     .prologue
-    .line 302
     return-object p0
 .end method
 
@@ -1384,7 +1272,6 @@
     .locals 0
 
     .prologue
-    .line 314
     return-object p0
 .end method
 
@@ -1394,10 +1281,8 @@
     .param p2, "next"    # I
 
     .prologue
-    .line 174
     move/from16 v3, p2
 
-    .line 176
     .local v3, "tmpNext":I
     new-instance v1, Ljava/util/SimpleTimeZone;
 
@@ -1411,7 +1296,6 @@
 
     move-result-object v0
 
-    .line 178
     .local v0, "calender":Ljava/util/Calendar;
     const/16 v1, 0xb
 
@@ -1419,7 +1303,6 @@
 
     move-result v8
 
-    .line 179
     .local v8, "hour":I
     const/16 v1, 0xc
 
@@ -1427,7 +1310,6 @@
 
     move-result v10
 
-    .line 180
     .local v10, "minute":I
     const/16 v1, 0xd
 
@@ -1435,7 +1317,6 @@
 
     move-result v11
 
-    .line 181
     .local v11, "second":I
     const/16 v1, 0xe
 
@@ -1443,7 +1324,6 @@
 
     move-result v9
 
-    .line 183
     .local v9, "milliSec":I
     mul-int/lit16 v1, v8, 0xe10
 
@@ -1459,19 +1339,17 @@
 
     int-to-long v4, v1
 
-    .line 184
     .local v4, "curUtcTime":J
     invoke-virtual {v0}, Ljava/util/Calendar;->getTimeInMillis()J
 
     move-result-wide v6
 
-    .line 186
     .local v6, "curTimeMillis":J
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v2, "parse start:"
+    const-string v2, "parse start:"
 
     invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -1491,17 +1369,14 @@
 
     move-object v2, p1
 
-    .line 188
     invoke-direct/range {v1 .. v7}, Lcom/samsung/android/contextaware/dataprovider/sensorhubprovider/builtin/LifeLogComponentRunner;->parseForStayingArea([BIJJ)I
 
     move-result v3
 
-    .line 190
     if-gtz v3, :cond_0
 
     move v12, v3
 
-    .line 203
     .end local v3    # "tmpNext":I
     .local v12, "tmpNext":I
     :goto_0
@@ -1514,33 +1389,28 @@
 
     move-object v2, p1
 
-    .line 194
     invoke-direct/range {v1 .. v7}, Lcom/samsung/android/contextaware/dataprovider/sensorhubprovider/builtin/LifeLogComponentRunner;->parseForMoving([BIJJ)I
 
     move-result v3
 
-    .line 195
     if-gtz v3, :cond_1
 
     move v12, v3
 
-    .line 196
     .end local v3    # "tmpNext":I
     .restart local v12    # "tmpNext":I
     goto :goto_0
 
-    .line 199
     .end local v12    # "tmpNext":I
     .restart local v3    # "tmpNext":I
     :cond_1
     invoke-super {p0}, Lcom/samsung/android/contextaware/dataprovider/sensorhubprovider/LibTypeProvider;->notifyObserver()V
 
-    .line 201
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v2, "parse end:"
+    const-string v2, "parse end:"
 
     invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -1558,7 +1428,6 @@
 
     move v12, v3
 
-    .line 203
     .end local v3    # "tmpNext":I
     .restart local v12    # "tmpNext":I
     goto :goto_0
@@ -1583,16 +1452,13 @@
 
     const/4 v7, 0x2
 
-    .line 215
     const/4 v0, 0x1
 
-    .line 217
     .local v0, "result":Z
     const/16 v5, 0x1c
 
     if-ne p1, v5, :cond_0
 
-    .line 218
     check-cast p2, Lcom/samsung/android/contextaware/manager/ContextAwarePropertyBundle;
 
     .end local p2    # "value":Ljava/lang/Object;, "TE;"
@@ -1606,7 +1472,6 @@
 
     move-result v3
 
-    .line 220
     .local v3, "stopPeriod":I
     new-instance v5, Ljava/lang/StringBuilder;
 
@@ -1632,10 +1497,8 @@
 
     invoke-static {v5}, Lcom/samsung/android/contextaware/utilbundle/logger/CaLogger;->info(Ljava/lang/String;)V
 
-    .line 221
     iput v3, p0, Lcom/samsung/android/contextaware/dataprovider/sensorhubprovider/builtin/LifeLogComponentRunner;->mStopPeriod:I
 
-    .line 222
     const/4 v5, 0x1
 
     invoke-static {v3, v7}, Lcom/samsung/android/contextaware/utilbundle/CaConvertUtil;->intToByteArr(II)[B
@@ -1646,17 +1509,14 @@
 
     move-result v0
 
-    .line 260
     .end local v3    # "stopPeriod":I
     :goto_0
     return v0
 
-    .line 227
     .restart local p2    # "value":Ljava/lang/Object;, "TE;"
     :cond_0
     if-ne p1, v8, :cond_1
 
-    .line 228
     check-cast p2, Lcom/samsung/android/contextaware/manager/ContextAwarePropertyBundle;
 
     .end local p2    # "value":Ljava/lang/Object;, "TE;"
@@ -1670,7 +1530,6 @@
 
     move-result v4
 
-    .line 230
     .local v4, "waitPeriod":I
     new-instance v5, Ljava/lang/StringBuilder;
 
@@ -1696,10 +1555,8 @@
 
     invoke-static {v5}, Lcom/samsung/android/contextaware/utilbundle/logger/CaLogger;->info(Ljava/lang/String;)V
 
-    .line 231
     iput v4, p0, Lcom/samsung/android/contextaware/dataprovider/sensorhubprovider/builtin/LifeLogComponentRunner;->mWaitPeriod:I
 
-    .line 232
     invoke-static {v4, v7}, Lcom/samsung/android/contextaware/utilbundle/CaConvertUtil;->intToByteArr(II)[B
 
     move-result-object v5
@@ -1708,7 +1565,6 @@
 
     move-result v0
 
-    .line 237
     goto :goto_0
 
     .end local v4    # "waitPeriod":I
@@ -1718,7 +1574,6 @@
 
     if-ne p1, v5, :cond_2
 
-    .line 238
     check-cast p2, Lcom/samsung/android/contextaware/manager/ContextAwarePropertyBundle;
 
     .end local p2    # "value":Ljava/lang/Object;, "TE;"
@@ -1732,7 +1587,6 @@
 
     move-result v2
 
-    .line 240
     .local v2, "stayingRadius":I
     new-instance v5, Ljava/lang/StringBuilder;
 
@@ -1758,7 +1612,6 @@
 
     invoke-static {v5}, Lcom/samsung/android/contextaware/utilbundle/logger/CaLogger;->info(Ljava/lang/String;)V
 
-    .line 241
     const/4 v5, 0x3
 
     invoke-static {v2, v7}, Lcom/samsung/android/contextaware/utilbundle/CaConvertUtil;->intToByteArr(II)[B
@@ -1769,7 +1622,6 @@
 
     move-result v0
 
-    .line 246
     goto :goto_0
 
     .end local v2    # "stayingRadius":I
@@ -1779,7 +1631,6 @@
 
     if-ne p1, v5, :cond_3
 
-    .line 247
     check-cast p2, Lcom/samsung/android/contextaware/manager/ContextAwarePropertyBundle;
 
     .end local p2    # "value":Ljava/lang/Object;, "TE;"
@@ -1793,7 +1644,6 @@
 
     move-result v1
 
-    .line 249
     .local v1, "stayingAreaRadius":I
     new-instance v5, Ljava/lang/StringBuilder;
 
@@ -1819,7 +1669,6 @@
 
     invoke-static {v5}, Lcom/samsung/android/contextaware/utilbundle/logger/CaLogger;->info(Ljava/lang/String;)V
 
-    .line 251
     const/4 v5, 0x4
 
     invoke-static {v1, v7}, Lcom/samsung/android/contextaware/utilbundle/CaConvertUtil;->intToByteArr(II)[B
@@ -1830,10 +1679,8 @@
 
     move-result v0
 
-    .line 256
     goto/16 :goto_0
 
-    .line 257
     .end local v1    # "stayingAreaRadius":I
     .restart local p2    # "value":Ljava/lang/Object;, "TE;"
     :cond_3
@@ -1855,30 +1702,25 @@
     .param p13, "satelliteCount"    # I
 
     .prologue
-    .line 596
     invoke-virtual {p0}, Lcom/samsung/android/contextaware/dataprovider/sensorhubprovider/builtin/LifeLogComponentRunner;->isDisable()Z
 
     move-result v1
 
     if-eqz v1, :cond_1
 
-    .line 608
     :cond_0
     :goto_0
     return-void
 
-    .line 600
     :cond_1
-    const-string/jumbo v1, "send the passive current position to SensorHub"
+    const-string v1, "send the passive current position to SensorHub"
 
     invoke-static {v1}, Lcom/samsung/android/contextaware/utilbundle/logger/CaLogger;->debug(Ljava/lang/String;)V
 
-    .line 602
     invoke-static/range {p1 .. p13}, Lcom/samsung/android/contextaware/utilbundle/CaPassiveCurrentPositionManager;->sendPositionToSensorHub(I[IDDDDFFI)I
 
     move-result v0
 
-    .line 605
     .local v0, "result":I
     sget-object v1, Lcom/samsung/android/contextaware/dataprovider/sensorhubprovider/SensorHubErrors;->SUCCESS:Lcom/samsung/android/contextaware/dataprovider/sensorhubprovider/SensorHubErrors;
 
@@ -1888,7 +1730,6 @@
 
     if-eq v0, v1, :cond_0
 
-    .line 606
     invoke-static {v0}, Lcom/samsung/android/contextaware/dataprovider/sensorhubprovider/SensorHubErrors;->getMessage(I)Ljava/lang/String;
 
     move-result-object v1
@@ -1903,22 +1744,18 @@
     .param p1, "position"    # Lcom/samsung/android/contextaware/dataprovider/sensorhubprovider/request/builtin/CurrentPositionRequestRunner$Position;
 
     .prologue
-    .line 517
     invoke-virtual/range {p0 .. p0}, Lcom/samsung/android/contextaware/dataprovider/sensorhubprovider/builtin/LifeLogComponentRunner;->isDisable()Z
 
     move-result v14
 
     if-eqz v14, :cond_0
 
-    .line 568
     :goto_0
     return-void
 
-    .line 521
     :cond_0
     if-nez p1, :cond_1
 
-    .line 522
     sget-object v14, Lcom/samsung/android/contextaware/dataprovider/sensorhubprovider/SensorHubErrors;->ERROR_CURRENT_POSITION_NULL_EXCEPTION:Lcom/samsung/android/contextaware/dataprovider/sensorhubprovider/SensorHubErrors;
 
     invoke-virtual {v14}, Lcom/samsung/android/contextaware/dataprovider/sensorhubprovider/SensorHubErrors;->getCode()I
@@ -1933,11 +1770,9 @@
 
     goto :goto_0
 
-    .line 528
     :cond_1
     move-object/from16 v8, p1
 
-    .line 530
     .local v8, "pos":Lcom/samsung/android/contextaware/dataprovider/sensorhubprovider/request/builtin/CurrentPositionRequestRunner$Position;
     invoke-virtual {v8}, Lcom/samsung/android/contextaware/dataprovider/sensorhubprovider/request/builtin/CurrentPositionRequestRunner$Position;->getLatitude()D
 
@@ -1949,7 +1784,6 @@
 
     double-to-int v6, v14
 
-    .line 531
     .local v6, "latitude":I
     invoke-virtual {v8}, Lcom/samsung/android/contextaware/dataprovider/sensorhubprovider/request/builtin/CurrentPositionRequestRunner$Position;->getLongitude()D
 
@@ -1961,7 +1795,6 @@
 
     double-to-int v7, v14
 
-    .line 532
     .local v7, "longitude":I
     invoke-virtual {v8}, Lcom/samsung/android/contextaware/dataprovider/sensorhubprovider/request/builtin/CurrentPositionRequestRunner$Position;->getAltitude()D
 
@@ -1973,7 +1806,6 @@
 
     double-to-int v3, v14
 
-    .line 533
     .local v3, "altitude":I
     invoke-virtual {v8}, Lcom/samsung/android/contextaware/dataprovider/sensorhubprovider/request/builtin/CurrentPositionRequestRunner$Position;->getAccuracy()F
 
@@ -1981,19 +1813,16 @@
 
     float-to-int v2, v14
 
-    .line 534
     .local v2, "accuracy":I
     invoke-virtual {v8}, Lcom/samsung/android/contextaware/dataprovider/sensorhubprovider/request/builtin/CurrentPositionRequestRunner$Position;->getUtcTime()[I
 
     move-result-object v13
 
-    .line 535
     .local v13, "utcTime":[I
     invoke-virtual {v8}, Lcom/samsung/android/contextaware/dataprovider/sensorhubprovider/request/builtin/CurrentPositionRequestRunner$Position;->getSatelliteCount()I
 
     move-result v9
 
-    .line 536
     .local v9, "satelliteCount":I
     invoke-virtual {v8}, Lcom/samsung/android/contextaware/dataprovider/sensorhubprovider/request/builtin/CurrentPositionRequestRunner$Position;->getSpeed()F
 
@@ -2005,7 +1834,6 @@
 
     float-to-int v11, v14
 
-    .line 537
     .local v11, "speed":I
     invoke-virtual {v8}, Lcom/samsung/android/contextaware/dataprovider/sensorhubprovider/request/builtin/CurrentPositionRequestRunner$Position;->getDistance()D
 
@@ -2017,23 +1845,19 @@
 
     double-to-int v5, v14
 
-    .line 538
     .local v5, "distance":I
     invoke-virtual {v8}, Lcom/samsung/android/contextaware/dataprovider/sensorhubprovider/request/builtin/CurrentPositionRequestRunner$Position;->getType()I
 
     move-result v12
 
-    .line 540
     .local v12, "type":I
     const/16 v14, 0x16
 
     new-array v4, v14, [B
 
-    .line 541
     .local v4, "dataPacket":[B
     const/4 v10, 0x0
 
-    .line 543
     .local v10, "size":I
     const/4 v14, 0x4
 
@@ -2049,7 +1873,6 @@
 
     invoke-static {v14, v15, v4, v10, v0}, Ljava/lang/System;->arraycopy([BI[BII)V
 
-    .line 545
     const/4 v14, 0x4
 
     invoke-static {v7, v14}, Lcom/samsung/android/contextaware/utilbundle/CaConvertUtil;->intToByteArr(II)[B
@@ -2066,7 +1889,6 @@
 
     invoke-static {v14, v15, v4, v10, v0}, Ljava/lang/System;->arraycopy([BI[BII)V
 
-    .line 547
     const/4 v14, 0x4
 
     invoke-static {v3, v14}, Lcom/samsung/android/contextaware/utilbundle/CaConvertUtil;->intToByteArr(II)[B
@@ -2083,7 +1905,6 @@
 
     invoke-static {v14, v15, v4, v10, v0}, Ljava/lang/System;->arraycopy([BI[BII)V
 
-    .line 549
     const/4 v14, 0x1
 
     invoke-static {v2, v14}, Lcom/samsung/android/contextaware/utilbundle/CaConvertUtil;->intToByteArr(II)[B
@@ -2100,7 +1921,6 @@
 
     invoke-static {v14, v15, v4, v10, v0}, Ljava/lang/System;->arraycopy([BI[BII)V
 
-    .line 551
     const/4 v14, 0x0
 
     aget v14, v13, v14
@@ -2121,7 +1941,6 @@
 
     invoke-static {v14, v15, v4, v10, v0}, Ljava/lang/System;->arraycopy([BI[BII)V
 
-    .line 553
     const/4 v14, 0x1
 
     aget v14, v13, v14
@@ -2142,7 +1961,6 @@
 
     invoke-static {v14, v15, v4, v10, v0}, Ljava/lang/System;->arraycopy([BI[BII)V
 
-    .line 555
     const/4 v14, 0x2
 
     aget v14, v13, v14
@@ -2163,7 +1981,6 @@
 
     invoke-static {v14, v15, v4, v10, v0}, Ljava/lang/System;->arraycopy([BI[BII)V
 
-    .line 557
     const/4 v14, 0x1
 
     invoke-static {v9, v14}, Lcom/samsung/android/contextaware/utilbundle/CaConvertUtil;->intToByteArr(II)[B
@@ -2180,7 +1997,6 @@
 
     invoke-static {v14, v15, v4, v10, v0}, Ljava/lang/System;->arraycopy([BI[BII)V
 
-    .line 559
     const/4 v14, 0x2
 
     invoke-static {v11, v14}, Lcom/samsung/android/contextaware/utilbundle/CaConvertUtil;->intToByteArr(II)[B
@@ -2197,7 +2013,6 @@
 
     invoke-static {v14, v15, v4, v10, v0}, Ljava/lang/System;->arraycopy([BI[BII)V
 
-    .line 561
     const/4 v14, 0x2
 
     invoke-static {v5, v14}, Lcom/samsung/android/contextaware/utilbundle/CaConvertUtil;->intToByteArr(II)[B
@@ -2214,7 +2029,6 @@
 
     invoke-static {v14, v15, v4, v10, v0}, Ljava/lang/System;->arraycopy([BI[BII)V
 
-    .line 563
     const/4 v14, 0x1
 
     invoke-static {v12, v14}, Lcom/samsung/android/contextaware/utilbundle/CaConvertUtil;->intToByteArr(II)[B
@@ -2231,7 +2045,6 @@
 
     invoke-static {v14, v15, v4, v10, v0}, Ljava/lang/System;->arraycopy([BI[BII)V
 
-    .line 566
     const/16 v14, 0x16
 
     move-object/from16 v0, p0

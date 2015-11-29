@@ -46,15 +46,12 @@
     .param p2, "service"    # Lcom/android/server/pm/PersonaManagerService;
 
     .prologue
-    .line 94
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 45
     const/16 v0, -0x2710
 
     iput v0, p0, Lcom/android/server/pm/KnoxKeyguardDelegate;->mVisibleKeyguardOwner:I
 
-    .line 54
     new-instance v0, Lcom/android/server/pm/KnoxKeyguardDelegate$KeyguardHandler;
 
     const/4 v1, 0x0
@@ -63,19 +60,15 @@
 
     iput-object v0, p0, Lcom/android/server/pm/KnoxKeyguardDelegate;->mHandler:Lcom/android/server/pm/KnoxKeyguardDelegate$KeyguardHandler;
 
-    .line 57
     const/4 v0, 0x0
 
     iput-boolean v0, p0, Lcom/android/server/pm/KnoxKeyguardDelegate;->isHomeShowPending:Z
 
-    .line 95
     iput-object p1, p0, Lcom/android/server/pm/KnoxKeyguardDelegate;->mContext:Landroid/content/Context;
 
-    .line 96
     iput-object p2, p0, Lcom/android/server/pm/KnoxKeyguardDelegate;->mService:Lcom/android/server/pm/PersonaManagerService;
 
-    .line 98
-    const-string/jumbo v0, "window"
+    const-string v0, "window"
 
     invoke-virtual {p1, v0}, Landroid/content/Context;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
 
@@ -85,10 +78,8 @@
 
     iput-object v0, p0, Lcom/android/server/pm/KnoxKeyguardDelegate;->mWm:Landroid/view/WindowManager;
 
-    .line 99
     invoke-direct {p0}, Lcom/android/server/pm/KnoxKeyguardDelegate;->createScrim()V
 
-    .line 100
     return-void
 .end method
 
@@ -98,7 +89,6 @@
     .param p1, "x1"    # I
 
     .prologue
-    .line 30
     invoke-direct {p0, p1}, Lcom/android/server/pm/KnoxKeyguardDelegate;->handleHomeShow(I)V
 
     return-void
@@ -110,7 +100,6 @@
     .param p1, "x1"    # I
 
     .prologue
-    .line 30
     invoke-direct {p0, p1}, Lcom/android/server/pm/KnoxKeyguardDelegate;->show(I)V
 
     return-void
@@ -122,7 +111,6 @@
     .param p1, "x1"    # I
 
     .prologue
-    .line 30
     invoke-direct {p0, p1}, Lcom/android/server/pm/KnoxKeyguardDelegate;->hide(I)V
 
     return-void
@@ -133,7 +121,6 @@
     .param p0, "x0"    # Lcom/android/server/pm/KnoxKeyguardDelegate;
 
     .prologue
-    .line 30
     iget-object v0, p0, Lcom/android/server/pm/KnoxKeyguardDelegate;->mKnoxKeyguardScrim:Lcom/android/server/pm/KnoxNativeKeyguardHost;
 
     return-object v0
@@ -145,7 +132,6 @@
     .prologue
     const/4 v1, -0x1
 
-    .line 221
     new-instance v2, Lcom/android/server/pm/KnoxNativeKeyguardHost;
 
     iget-object v3, p0, Lcom/android/server/pm/KnoxKeyguardDelegate;->mContext:Landroid/content/Context;
@@ -154,21 +140,16 @@
 
     iput-object v2, p0, Lcom/android/server/pm/KnoxKeyguardDelegate;->mKnoxKeyguardScrim:Lcom/android/server/pm/KnoxNativeKeyguardHost;
 
-    .line 223
     const v4, 0x110900
 
-    .line 228
     .local v4, "flags":I
     or-int/lit16 v4, v4, 0x400
 
-    .line 230
     const/4 v6, -0x1
 
-    .line 231
     .local v6, "stretch":I
     const/16 v7, 0x7d8
 
-    .line 233
     .local v7, "type":I
     new-instance v0, Landroid/view/WindowManager$LayoutParams;
 
@@ -180,37 +161,31 @@
 
     invoke-direct/range {v0 .. v5}, Landroid/view/WindowManager$LayoutParams;-><init>(IIIII)V
 
-    .line 236
     .local v0, "lp":Landroid/view/WindowManager$LayoutParams;
     const/4 v1, 0x3
 
     iput v1, v0, Landroid/view/WindowManager$LayoutParams;->softInputMode:I
 
-    .line 237
     const/4 v1, 0x5
 
     iput v1, v0, Landroid/view/WindowManager$LayoutParams;->screenOrientation:I
 
-    .line 239
     const-string v1, "ContainerKeyguardScrim"
 
     invoke-virtual {v0, v1}, Landroid/view/WindowManager$LayoutParams;->setTitle(Ljava/lang/CharSequence;)V
 
-    .line 241
     iget-object v1, p0, Lcom/android/server/pm/KnoxKeyguardDelegate;->mWm:Landroid/view/WindowManager;
 
     iget-object v2, p0, Lcom/android/server/pm/KnoxKeyguardDelegate;->mKnoxKeyguardScrim:Lcom/android/server/pm/KnoxNativeKeyguardHost;
 
     invoke-interface {v1, v2, v0}, Landroid/view/WindowManager;->addView(Landroid/view/View;Landroid/view/ViewGroup$LayoutParams;)V
 
-    .line 242
     iget-object v1, p0, Lcom/android/server/pm/KnoxKeyguardDelegate;->mKnoxKeyguardScrim:Lcom/android/server/pm/KnoxNativeKeyguardHost;
 
     const/16 v2, 0x8
 
     invoke-virtual {v1, v2}, Lcom/android/server/pm/KnoxNativeKeyguardHost;->setVisibility(I)V
 
-    .line 243
     return-void
 .end method
 
@@ -218,19 +193,16 @@
     .locals 2
 
     .prologue
-    .line 266
     iget-object v1, p0, Lcom/android/server/pm/KnoxKeyguardDelegate;->mWindowManagerService:Lcom/android/server/wm/WindowManagerService;
 
     if-nez v1, :cond_0
 
-    .line 267
-    const-string/jumbo v1, "window"
+    const-string v1, "window"
 
     invoke-static {v1}, Landroid/os/ServiceManager;->getService(Ljava/lang/String;)Landroid/os/IBinder;
 
     move-result-object v0
 
-    .line 268
     .local v0, "b":Landroid/os/IBinder;
     invoke-static {v0}, Landroid/view/IWindowManager$Stub;->asInterface(Landroid/os/IBinder;)Landroid/view/IWindowManager;
 
@@ -240,7 +212,6 @@
 
     iput-object v1, p0, Lcom/android/server/pm/KnoxKeyguardDelegate;->mWindowManagerService:Lcom/android/server/wm/WindowManagerService;
 
-    .line 270
     .end local v0    # "b":Landroid/os/IBinder;
     :cond_0
     iget-object v1, p0, Lcom/android/server/pm/KnoxKeyguardDelegate;->mWindowManagerService:Lcom/android/server/wm/WindowManagerService;
@@ -253,33 +224,28 @@
     .param p1, "userId"    # I
 
     .prologue
-    .line 296
     if-nez p1, :cond_0
 
     iget-boolean v0, p0, Lcom/android/server/pm/KnoxKeyguardDelegate;->isHomeShowPending:Z
 
     if-eqz v0, :cond_0
 
-    .line 297
     const-string v0, "KnoxKeyguardDelegate"
 
     const-string v1, " unfreeze the screen"
 
     invoke-static {v0, v1}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 298
     invoke-direct {p0}, Lcom/android/server/pm/KnoxKeyguardDelegate;->getWindowManagerLocked()Lcom/android/server/wm/WindowManagerService;
 
     move-result-object v0
 
     invoke-virtual {v0}, Lcom/android/server/wm/WindowManagerService;->stopFreezingScreen()V
 
-    .line 299
     const/4 v0, 0x0
 
     iput-boolean v0, p0, Lcom/android/server/pm/KnoxKeyguardDelegate;->isHomeShowPending:Z
 
-    .line 301
     :cond_0
     return-void
 .end method
@@ -291,39 +257,33 @@
     .prologue
     const/16 v3, -0x2710
 
-    .line 174
     const/4 v0, -0x1
 
     if-ne p1, v0, :cond_2
 
-    .line 177
     iget v0, p0, Lcom/android/server/pm/KnoxKeyguardDelegate;->mVisibleKeyguardOwner:I
 
     if-ne v0, v3, :cond_0
 
-    .line 178
     const-string v0, "KnoxKeyguardDelegate"
 
     const-string v1, "no keyguard needs to be dismissed"
 
     invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 194
     :goto_0
     return-void
 
-    .line 182
     :cond_0
     iget p1, p0, Lcom/android/server/pm/KnoxKeyguardDelegate;->mVisibleKeyguardOwner:I
 
-    .line 183
     const-string v0, "KnoxKeyguardDelegate"
 
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v2, "trying to dismiss keyguard for "
+    const-string v2, "trying to dismiss keyguard for "
 
     invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -345,7 +305,6 @@
 
     invoke-static {v0, v1}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 191
     :cond_1
     const-string v0, "KnoxKeyguardDelegate"
 
@@ -353,7 +312,7 @@
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v2, "real hide for "
+    const-string v2, "real hide for "
 
     invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -369,23 +328,19 @@
 
     invoke-static {v0, v1}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 192
     const/4 v0, 0x0
 
     invoke-direct {p0, p1, v0}, Lcom/android/server/pm/KnoxKeyguardDelegate;->sendKeyguardCommand(IZ)V
 
-    .line 193
     iput v3, p0, Lcom/android/server/pm/KnoxKeyguardDelegate;->mVisibleKeyguardOwner:I
 
     goto :goto_0
 
-    .line 185
     :cond_2
     iget v0, p0, Lcom/android/server/pm/KnoxKeyguardDelegate;->mVisibleKeyguardOwner:I
 
     if-eq p1, v0, :cond_1
 
-    .line 186
     const-string v0, "KnoxKeyguardDelegate"
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -431,7 +386,6 @@
     .prologue
     const/4 v3, 0x1
 
-    .line 202
     iget-object v1, p0, Lcom/android/server/pm/KnoxKeyguardDelegate;->mService:Lcom/android/server/pm/PersonaManagerService;
 
     sget-object v2, Landroid/content/pm/PersonaState;->SUPER_LOCKED:Landroid/content/pm/PersonaState;
@@ -442,14 +396,13 @@
 
     if-eqz v1, :cond_0
 
-    .line 203
     const-string v1, "KnoxKeyguardDelegate"
 
     new-instance v2, Ljava/lang/StringBuilder;
 
     invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v3, "user  "
+    const-string v3, "user  "
 
     invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -471,29 +424,23 @@
 
     invoke-static {v1, v2}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 218
     :goto_0
     return-void
 
-    .line 206
     :cond_0
     new-instance v0, Landroid/content/Intent;
 
     invoke-direct {v0}, Landroid/content/Intent;-><init>()V
 
-    .line 208
     .local v0, "intent":Landroid/content/Intent;
     if-eqz p2, :cond_1
 
-    .line 209
-    const-string/jumbo v1, "resetKeyguard"
+    const-string v1, "resetKeyguard"
 
     invoke-virtual {v0, v1, v3}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Z)Landroid/content/Intent;
 
-    .line 210
     invoke-virtual {p0}, Lcom/android/server/pm/KnoxKeyguardDelegate;->showScrim()V
 
-    .line 215
     :goto_1
     new-instance v1, Landroid/content/ComponentName;
 
@@ -505,7 +452,6 @@
 
     invoke-virtual {v0, v1}, Landroid/content/Intent;->setComponent(Landroid/content/ComponentName;)Landroid/content/Intent;
 
-    .line 217
     iget-object v1, p0, Lcom/android/server/pm/KnoxKeyguardDelegate;->mContext:Landroid/content/Context;
 
     new-instance v2, Landroid/os/UserHandle;
@@ -516,7 +462,6 @@
 
     goto :goto_0
 
-    .line 212
     :cond_1
     const-string v1, "dismissKeyguard"
 
@@ -530,29 +475,24 @@
     .param p1, "userId"    # I
 
     .prologue
-    .line 119
     iget v0, p0, Lcom/android/server/pm/KnoxKeyguardDelegate;->mVisibleKeyguardOwner:I
 
     if-ne p1, v0, :cond_0
 
-    .line 120
     const-string v0, "KnoxKeyguardDelegate"
 
     const-string v1, " keyguard already visible"
 
     invoke-static {v0, v1}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 133
     :goto_0
     return-void
 
-    .line 122
     :cond_0
     iget-boolean v0, p0, Lcom/android/server/pm/KnoxKeyguardDelegate;->isHomeShowPending:Z
 
     if-eqz v0, :cond_1
 
-    .line 123
     const-string v0, "KnoxKeyguardDelegate"
 
     const-string v1, " is personal home launching"
@@ -561,7 +501,6 @@
 
     goto :goto_0
 
-    .line 125
     :cond_1
     iget v0, p0, Lcom/android/server/pm/KnoxKeyguardDelegate;->mVisibleKeyguardOwner:I
 
@@ -569,7 +508,6 @@
 
     if-eq v0, v1, :cond_2
 
-    .line 126
     const-string v0, "KnoxKeyguardDelegate"
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -600,14 +538,12 @@
 
     invoke-static {v0, v1}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 127
     iget v0, p0, Lcom/android/server/pm/KnoxKeyguardDelegate;->mVisibleKeyguardOwner:I
 
     const/4 v1, 0x0
 
     invoke-direct {p0, v0, v1}, Lcom/android/server/pm/KnoxKeyguardDelegate;->sendKeyguardCommand(IZ)V
 
-    .line 130
     :cond_2
     const-string v0, "KnoxKeyguardDelegate"
 
@@ -631,12 +567,10 @@
 
     invoke-static {v0, v1}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 131
     const/4 v0, 0x1
 
     invoke-direct {p0, p1, v0}, Lcom/android/server/pm/KnoxKeyguardDelegate;->sendKeyguardCommand(IZ)V
 
-    .line 132
     iput p1, p0, Lcom/android/server/pm/KnoxKeyguardDelegate;->mVisibleKeyguardOwner:I
 
     goto :goto_0
@@ -648,7 +582,6 @@
     .locals 1
 
     .prologue
-    .line 304
     iget v0, p0, Lcom/android/server/pm/KnoxKeyguardDelegate;->mVisibleKeyguardOwner:I
 
     return v0
@@ -658,7 +591,6 @@
     .locals 2
 
     .prologue
-    .line 255
     iget-object v0, p0, Lcom/android/server/pm/KnoxKeyguardDelegate;->mKnoxKeyguardScrim:Lcom/android/server/pm/KnoxNativeKeyguardHost;
 
     new-instance v1, Lcom/android/server/pm/KnoxKeyguardDelegate$2;
@@ -667,7 +599,6 @@
 
     invoke-virtual {v0, v1}, Lcom/android/server/pm/KnoxNativeKeyguardHost;->post(Ljava/lang/Runnable;)Z
 
-    .line 262
     return-void
 .end method
 
@@ -677,7 +608,6 @@
     .param p2, "isShown"    # Z
 
     .prologue
-    .line 141
     monitor-enter p0
 
     :try_start_0
@@ -713,22 +643,18 @@
 
     invoke-static {v2, v3}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 143
     if-eqz p2, :cond_1
 
-    .line 144
     const-string v2, "KnoxKeyguardDelegate"
 
     const-string v3, " unfreeze due to keyguard show"
 
     invoke-static {v2, v3}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 145
     invoke-static {}, Landroid/os/Binder;->clearCallingIdentity()J
 
     move-result-wide v0
 
-    .line 146
     .local v0, "ident":J
     invoke-direct {p0}, Lcom/android/server/pm/KnoxKeyguardDelegate;->getWindowManagerLocked()Lcom/android/server/wm/WindowManagerService;
 
@@ -736,29 +662,23 @@
 
     invoke-virtual {v2}, Lcom/android/server/wm/WindowManagerService;->stopFreezingScreen()V
 
-    .line 147
     invoke-static {v0, v1}, Landroid/os/Binder;->restoreCallingIdentity(J)V
 
-    .line 148
     iput p1, p0, Lcom/android/server/pm/KnoxKeyguardDelegate;->mVisibleKeyguardOwner:I
 
-    .line 153
     .end local v0    # "ident":J
     :goto_0
     if-nez p2, :cond_0
 
-    .line 154
     invoke-virtual {p0}, Lcom/android/server/pm/KnoxKeyguardDelegate;->hideScrim()V
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 156
     :cond_0
     monitor-exit p0
 
     return-void
 
-    .line 150
     :cond_1
     const/16 v2, -0x2710
 
@@ -769,7 +689,6 @@
 
     goto :goto_0
 
-    .line 141
     :catchall_0
     move-exception v2
 
@@ -783,7 +702,6 @@
     .param p1, "userId"    # I
 
     .prologue
-    .line 287
     iget-object v1, p0, Lcom/android/server/pm/KnoxKeyguardDelegate;->mHandler:Lcom/android/server/pm/KnoxKeyguardDelegate$KeyguardHandler;
 
     const/4 v2, 0x1
@@ -794,13 +712,11 @@
 
     move-result-object v0
 
-    .line 288
     .local v0, "msg":Landroid/os/Message;
     iget-object v1, p0, Lcom/android/server/pm/KnoxKeyguardDelegate;->mHandler:Lcom/android/server/pm/KnoxKeyguardDelegate$KeyguardHandler;
 
     invoke-virtual {v1, v0}, Lcom/android/server/pm/KnoxKeyguardDelegate$KeyguardHandler;->sendMessage(Landroid/os/Message;)Z
 
-    .line 289
     return-void
 .end method
 
@@ -811,24 +727,20 @@
     .prologue
     const/4 v1, 0x0
 
-    .line 278
     invoke-direct {p0}, Lcom/android/server/pm/KnoxKeyguardDelegate;->getWindowManagerLocked()Lcom/android/server/wm/WindowManagerService;
 
     move-result-object v0
 
     invoke-virtual {v0, v1, v1}, Lcom/android/server/wm/WindowManagerService;->startFreezingScreen(II)V
 
-    .line 279
     const/4 v0, 0x1
 
     iput-boolean v0, p0, Lcom/android/server/pm/KnoxKeyguardDelegate;->isHomeShowPending:Z
 
-    .line 280
     iget-object v0, p0, Lcom/android/server/pm/KnoxKeyguardDelegate;->mService:Lcom/android/server/pm/PersonaManagerService;
 
     invoke-virtual {v0, v1}, Lcom/android/server/pm/PersonaManagerService;->launchPersonaHome(I)Z
 
-    .line 281
     return-void
 .end method
 
@@ -839,12 +751,10 @@
     .prologue
     const/4 v3, 0x3
 
-    .line 163
     iget-object v1, p0, Lcom/android/server/pm/KnoxKeyguardDelegate;->mHandler:Lcom/android/server/pm/KnoxKeyguardDelegate$KeyguardHandler;
 
     invoke-virtual {v1, v3}, Lcom/android/server/pm/KnoxKeyguardDelegate$KeyguardHandler;->removeMessages(I)V
 
-    .line 164
     iget-object v1, p0, Lcom/android/server/pm/KnoxKeyguardDelegate;->mHandler:Lcom/android/server/pm/KnoxKeyguardDelegate$KeyguardHandler;
 
     const/4 v2, 0x0
@@ -853,13 +763,11 @@
 
     move-result-object v0
 
-    .line 165
     .local v0, "msg":Landroid/os/Message;
     iget-object v1, p0, Lcom/android/server/pm/KnoxKeyguardDelegate;->mHandler:Lcom/android/server/pm/KnoxKeyguardDelegate$KeyguardHandler;
 
     invoke-virtual {v1, v0}, Lcom/android/server/pm/KnoxKeyguardDelegate$KeyguardHandler;->sendMessage(Landroid/os/Message;)Z
 
-    .line 166
     return-void
 .end method
 
@@ -870,12 +778,10 @@
     .prologue
     const/4 v3, 0x2
 
-    .line 107
     iget-object v1, p0, Lcom/android/server/pm/KnoxKeyguardDelegate;->mHandler:Lcom/android/server/pm/KnoxKeyguardDelegate$KeyguardHandler;
 
     invoke-virtual {v1, v3}, Lcom/android/server/pm/KnoxKeyguardDelegate$KeyguardHandler;->removeMessages(I)V
 
-    .line 108
     iget-object v1, p0, Lcom/android/server/pm/KnoxKeyguardDelegate;->mHandler:Lcom/android/server/pm/KnoxKeyguardDelegate$KeyguardHandler;
 
     const/4 v2, 0x0
@@ -884,13 +790,11 @@
 
     move-result-object v0
 
-    .line 109
     .local v0, "msg":Landroid/os/Message;
     iget-object v1, p0, Lcom/android/server/pm/KnoxKeyguardDelegate;->mHandler:Lcom/android/server/pm/KnoxKeyguardDelegate$KeyguardHandler;
 
     invoke-virtual {v1, v0}, Lcom/android/server/pm/KnoxKeyguardDelegate$KeyguardHandler;->sendMessage(Landroid/os/Message;)Z
 
-    .line 110
     return-void
 .end method
 
@@ -898,7 +802,6 @@
     .locals 2
 
     .prologue
-    .line 246
     iget-object v0, p0, Lcom/android/server/pm/KnoxKeyguardDelegate;->mKnoxKeyguardScrim:Lcom/android/server/pm/KnoxNativeKeyguardHost;
 
     new-instance v1, Lcom/android/server/pm/KnoxKeyguardDelegate$1;
@@ -907,6 +810,5 @@
 
     invoke-virtual {v0, v1}, Lcom/android/server/pm/KnoxNativeKeyguardHost;->post(Ljava/lang/Runnable;)Z
 
-    .line 252
     return-void
 .end method

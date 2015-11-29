@@ -12,7 +12,6 @@
     .locals 0
 
     .prologue
-    .line 3445
     iput-object p1, p0, Lcom/absolute/android/persistservice/c;->a:Lcom/absolute/android/persistservice/ABTPersistenceService;
 
     invoke-direct {p0}, Landroid/content/BroadcastReceiver;-><init>()V
@@ -24,7 +23,6 @@
     .locals 0
 
     .prologue
-    .line 3445
     invoke-direct {p0, p1}, Lcom/absolute/android/persistservice/c;-><init>(Lcom/absolute/android/persistservice/ABTPersistenceService;)V
 
     return-void
@@ -34,17 +32,14 @@
     .locals 2
 
     .prologue
-    .line 3448
     new-instance v0, Landroid/content/IntentFilter;
 
     invoke-direct {v0}, Landroid/content/IntentFilter;-><init>()V
 
-    .line 3449
     const-string v1, "android.intent.action.BOOT_COMPLETED"
 
     invoke-virtual {v0, v1}, Landroid/content/IntentFilter;->addAction(Ljava/lang/String;)V
 
-    .line 3450
     iget-object v1, p0, Lcom/absolute/android/persistservice/c;->a:Lcom/absolute/android/persistservice/ABTPersistenceService;
 
     invoke-static {v1}, Lcom/absolute/android/persistservice/ABTPersistenceService;->c(Lcom/absolute/android/persistservice/ABTPersistenceService;)Landroid/content/Context;
@@ -53,7 +48,6 @@
 
     invoke-virtual {v1, p0, v0}, Landroid/content/Context;->registerReceiver(Landroid/content/BroadcastReceiver;Landroid/content/IntentFilter;)Landroid/content/Intent;
 
-    .line 3451
     return-void
 .end method
 
@@ -61,7 +55,6 @@
     .locals 2
 
     .prologue
-    .line 3445
     new-instance v0, Landroid/content/IntentFilter;
 
     invoke-direct {v0}, Landroid/content/IntentFilter;-><init>()V
@@ -89,7 +82,6 @@
     .prologue
     const/4 v0, 0x0
 
-    .line 3460
     const-string v1, "android.intent.action.BOOT_COMPLETED"
 
     invoke-virtual {p2}, Landroid/content/Intent;->getAction()Ljava/lang/String;
@@ -102,7 +94,6 @@
 
     if-eqz v1, :cond_5
 
-    .line 3471
     new-instance v1, Ljava/io/File;
 
     invoke-static {}, Lcom/absolute/android/persistservice/ABTPersistenceService;->a()Ljava/lang/String;
@@ -111,7 +102,6 @@
 
     invoke-direct {v1, v2}, Ljava/io/File;-><init>(Ljava/lang/String;)V
 
-    .line 3472
     invoke-virtual {v1}, Ljava/io/File;->exists()Z
 
     move-result v2
@@ -130,7 +120,6 @@
 
     if-nez v1, :cond_1
 
-    .line 3473
     :cond_0
     iget-object v1, p0, Lcom/absolute/android/persistservice/c;->a:Lcom/absolute/android/persistservice/ABTPersistenceService;
 
@@ -166,25 +155,21 @@
 
     invoke-virtual {v1, v2, v3}, Lcom/absolute/android/persistservice/y;->a(Ljava/lang/String;Ljava/lang/Throwable;)V
 
-    .line 3487
     :cond_1
     iget-object v1, p0, Lcom/absolute/android/persistservice/c;->a:Lcom/absolute/android/persistservice/ABTPersistenceService;
 
     invoke-static {v1}, Lcom/absolute/android/persistservice/ABTPersistenceService;->d(Lcom/absolute/android/persistservice/ABTPersistenceService;)V
 
-    .line 3490
     iget-object v1, p0, Lcom/absolute/android/persistservice/c;->a:Lcom/absolute/android/persistservice/ABTPersistenceService;
 
     iget-boolean v1, v1, Lcom/absolute/android/persistservice/ABTPersistenceService;->l:Z
 
     if-eqz v1, :cond_2
 
-    .line 3491
     iget-object v1, p0, Lcom/absolute/android/persistservice/c;->a:Lcom/absolute/android/persistservice/ABTPersistenceService;
 
     invoke-static {v1}, Lcom/absolute/android/persistservice/ABTPersistenceService;->e(Lcom/absolute/android/persistservice/ABTPersistenceService;)V
 
-    .line 3495
     :cond_2
     iget-object v1, p0, Lcom/absolute/android/persistservice/c;->a:Lcom/absolute/android/persistservice/ABTPersistenceService;
 
@@ -198,10 +183,8 @@
 
     if-nez v1, :cond_5
 
-    .line 3499
     const/16 v1, 0x258
 
-    .line 3501
     :try_start_0
     new-instance v2, Ljava/io/File;
 
@@ -211,14 +194,12 @@
 
     invoke-direct {v2, v3}, Ljava/io/File;-><init>(Ljava/lang/String;)V
 
-    .line 3502
     invoke-virtual {v2}, Ljava/io/File;->exists()Z
 
     move-result v3
 
     if-eqz v3, :cond_6
 
-    .line 3503
     new-instance v3, Lcom/absolute/android/persistservice/b;
 
     iget-object v4, p0, Lcom/absolute/android/persistservice/c;->a:Lcom/absolute/android/persistservice/ABTPersistenceService;
@@ -229,14 +210,12 @@
 
     move-result-object v2
 
-    .line 3504
     if-eqz v2, :cond_4
 
     array-length v3, v2
 
     if-lez v3, :cond_4
 
-    .line 3506
     array-length v3, v2
 
     :goto_0
@@ -244,7 +223,6 @@
 
     aget-object v4, v2, v0
 
-    .line 3507
     iget-object v5, p0, Lcom/absolute/android/persistservice/c;->a:Lcom/absolute/android/persistservice/ABTPersistenceService;
 
     invoke-static {v5}, Lcom/absolute/android/persistservice/ABTPersistenceService;->a(Lcom/absolute/android/persistservice/ABTPersistenceService;)Lcom/absolute/android/persistservice/y;
@@ -269,16 +247,13 @@
     :try_end_0
     .catch Ljava/lang/Throwable; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 3506
     add-int/lit8 v0, v0, 0x1
 
     goto :goto_0
 
-    .line 3514
     :cond_3
     const v0, 0x15180
 
-    .line 3526
     :cond_4
     :goto_1
     iget-object v1, p0, Lcom/absolute/android/persistservice/c;->a:Lcom/absolute/android/persistservice/ABTPersistenceService;
@@ -303,23 +278,18 @@
 
     invoke-virtual {v1, v2}, Lcom/absolute/android/persistservice/y;->c(Ljava/lang/String;)V
 
-    .line 3528
     if-lez v0, :cond_5
 
-    .line 3529
     iget-object v1, p0, Lcom/absolute/android/persistservice/c;->a:Lcom/absolute/android/persistservice/ABTPersistenceService;
 
     invoke-static {v1, v0}, Lcom/absolute/android/persistservice/ABTPersistenceService;->a(Lcom/absolute/android/persistservice/ABTPersistenceService;I)V
 
-    .line 3533
     :cond_5
     return-void
 
-    .line 3522
     :catch_0
     move-exception v0
 
-    .line 3523
     iget-object v2, p0, Lcom/absolute/android/persistservice/c;->a:Lcom/absolute/android/persistservice/ABTPersistenceService;
 
     invoke-static {v2}, Lcom/absolute/android/persistservice/ABTPersistenceService;->a(Lcom/absolute/android/persistservice/ABTPersistenceService;)Lcom/absolute/android/persistservice/y;

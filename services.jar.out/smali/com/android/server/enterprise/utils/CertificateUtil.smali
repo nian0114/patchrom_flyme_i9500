@@ -36,33 +36,26 @@
     .prologue
     const/4 v1, 0x0
 
-    .line 107
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 99
     invoke-static {}, Landroid/security/KeyStore;->getInstance()Landroid/security/KeyStore;
 
     move-result-object v0
 
     iput-object v0, p0, Lcom/android/server/enterprise/utils/CertificateUtil;->mKeyStore:Landroid/security/KeyStore;
 
-    .line 101
     iput-object v1, p0, Lcom/android/server/enterprise/utils/CertificateUtil;->mUserKey:Ljava/security/PrivateKey;
 
-    .line 102
     iput-object v1, p0, Lcom/android/server/enterprise/utils/CertificateUtil;->mUserCert:Ljava/security/cert/X509Certificate;
 
-    .line 103
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
     iput-object v0, p0, Lcom/android/server/enterprise/utils/CertificateUtil;->mCaCerts:Ljava/util/List;
 
-    .line 108
     iput-object p1, p0, Lcom/android/server/enterprise/utils/CertificateUtil;->mContext:Landroid/content/Context;
 
-    .line 109
     return-void
 .end method
 
@@ -72,34 +65,28 @@
     .param p1, "userId"    # I
 
     .prologue
-    .line 374
     const/4 v0, -0x1
 
-    .line 375
     .local v0, "ret":I
     const/4 v1, 0x4
 
     if-ne p0, v1, :cond_1
 
-    .line 376
     const v1, 0x186a0
 
     mul-int/2addr v1, p1
 
     add-int/lit16 v0, v1, 0x3e8
 
-    .line 380
     :cond_0
     :goto_0
     return v0
 
-    .line 377
     :cond_1
     const/4 v1, 0x2
 
     if-ne p0, v1, :cond_0
 
-    .line 378
     const/16 v0, 0x3f2
 
     goto :goto_0
@@ -110,30 +97,24 @@
     .param p0, "storeType"    # I
 
     .prologue
-    .line 347
     const/4 v0, -0x1
 
-    .line 348
     .local v0, "ret":I
     const/4 v1, 0x4
 
     if-ne p0, v1, :cond_1
 
-    .line 349
     const/4 v0, -0x1
 
-    .line 353
     :cond_0
     :goto_0
     return v0
 
-    .line 350
     :cond_1
     const/4 v1, 0x2
 
     if-ne p0, v1, :cond_0
 
-    .line 351
     const/16 v0, 0x3f2
 
     goto :goto_0
@@ -147,15 +128,12 @@
     .prologue
     const/4 v6, 0x0
 
-    .line 276
     if-nez p2, :cond_1
 
-    .line 301
     :cond_0
     :goto_0
     return v6
 
-    .line 280
     :cond_1
     :try_start_0
     const-string v7, "PKCS12"
@@ -164,7 +142,6 @@
 
     move-result-object v4
 
-    .line 281
     .local v4, "keystore":Ljava/security/KeyStore;
     new-instance v5, Ljava/security/KeyStore$PasswordProtection;
 
@@ -174,7 +151,6 @@
 
     invoke-direct {v5, v7}, Ljava/security/KeyStore$PasswordProtection;-><init>([C)V
 
-    .line 282
     .local v5, "passwordProtection":Ljava/security/KeyStore$PasswordProtection;
     new-instance v7, Ljava/io/ByteArrayInputStream;
 
@@ -186,12 +162,10 @@
 
     invoke-virtual {v4, v7, v8}, Ljava/security/KeyStore;->load(Ljava/io/InputStream;[C)V
 
-    .line 284
     invoke-virtual {v4}, Ljava/security/KeyStore;->aliases()Ljava/util/Enumeration;
 
     move-result-object v1
 
-    .line 285
     .local v1, "aliases":Ljava/util/Enumeration;, "Ljava/util/Enumeration<Ljava/lang/String;>;"
     invoke-interface {v1}, Ljava/util/Enumeration;->hasMoreElements()Z
 
@@ -199,7 +173,6 @@
 
     if-eqz v7, :cond_0
 
-    .line 288
     :cond_2
     invoke-interface {v1}, Ljava/util/Enumeration;->hasMoreElements()Z
 
@@ -207,26 +180,22 @@
 
     if-eqz v7, :cond_0
 
-    .line 289
     invoke-interface {v1}, Ljava/util/Enumeration;->nextElement()Ljava/lang/Object;
 
     move-result-object v0
 
     check-cast v0, Ljava/lang/String;
 
-    .line 290
     .local v0, "alias":Ljava/lang/String;
     invoke-virtual {v4, v0, v5}, Ljava/security/KeyStore;->getEntry(Ljava/lang/String;Ljava/security/KeyStore$ProtectionParameter;)Ljava/security/KeyStore$Entry;
 
     move-result-object v3
 
-    .line 294
     .local v3, "entry":Ljava/security/KeyStore$Entry;
     instance-of v7, v3, Ljava/security/KeyStore$PrivateKeyEntry;
 
     if-eqz v7, :cond_2
 
-    .line 295
     check-cast v3, Ljava/security/KeyStore$PrivateKeyEntry;
 
     .end local v3    # "entry":Ljava/security/KeyStore$Entry;
@@ -238,7 +207,6 @@
 
     goto :goto_0
 
-    .line 298
     .end local v0    # "alias":Ljava/lang/String;
     .end local v1    # "aliases":Ljava/util/Enumeration;, "Ljava/util/Enumeration<Ljava/lang/String;>;"
     .end local v4    # "keystore":Ljava/security/KeyStore;
@@ -246,7 +214,6 @@
     :catch_0
     move-exception v2
 
-    .line 299
     .local v2, "e":Ljava/lang/Exception;
     const-string v7, "CertificateUtil"
 
@@ -278,7 +245,6 @@
     .param p1, "entry"    # Ljava/security/KeyStore$PrivateKeyEntry;
 
     .prologue
-    .line 306
     monitor-enter p0
 
     :try_start_0
@@ -294,7 +260,6 @@
 
     move-result-object v6
 
-    .line 309
     .local v6, "certPolicy":Lcom/sec/enterprise/knox/certificate/ICertificatePolicy;
     const/4 v14, 0x0
 
@@ -305,12 +270,10 @@
 
     if-eqz v14, :cond_1
 
-    .line 310
     invoke-virtual/range {p1 .. p1}, Ljava/security/KeyStore$PrivateKeyEntry;->getCertificateChain()[Ljava/security/cert/Certificate;
 
     move-result-object v2
 
-    .line 311
     .local v2, "arrayChain":[Ljava/security/cert/Certificate;
     new-instance v11, Ljava/util/ArrayList;
 
@@ -318,7 +281,6 @@
 
     invoke-direct {v11, v14}, Ljava/util/ArrayList;-><init>(I)V
 
-    .line 312
     .local v11, "listChain":Ljava/util/List;, "Ljava/util/List<Landroid/app/enterprise/CertificateInfo;>;"
     move-object v1, v2
 
@@ -334,7 +296,6 @@
 
     aget-object v5, v1, v9
 
-    .line 313
     .local v5, "cert":Ljava/security/cert/Certificate;
     new-instance v14, Landroid/app/enterprise/CertificateInfo;
 
@@ -345,31 +306,26 @@
 
     invoke-interface {v11, v14}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    .line 312
     add-int/lit8 v9, v9, 0x1
 
     goto :goto_0
 
-    .line 315
     :cond_0
     invoke-interface {v6, v11}, Lcom/sec/enterprise/knox/certificate/ICertificatePolicy;->validateChainAtInstall(Ljava/util/List;)I
 
     move-result v13
 
-    .line 316
     .local v13, "resultCode":I
     const/4 v14, -0x1
 
     if-eq v13, v14, :cond_1
 
-    .line 317
     const-string v14, "CertificateUtil"
 
     const-string v15, "certificate failed during validation"
 
     invoke-static {v14, v15}, Lcom/android/server/enterprise/log/Log;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 318
     const-string v14, "installer_module"
 
     invoke-static {v13}, Ljava/lang/String;->valueOf(I)Ljava/lang/String;
@@ -386,10 +342,8 @@
     .catch Ljava/lang/NullPointerException; {:try_start_1 .. :try_end_1} :catch_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
-    .line 320
     const/4 v14, 0x0
 
-    .line 342
     .end local v2    # "arrayChain":[Ljava/security/cert/Certificate;
     .end local v11    # "listChain":Ljava/util/List;, "Ljava/util/List<Landroid/app/enterprise/CertificateInfo;>;"
     .end local v13    # "resultCode":I
@@ -398,14 +352,12 @@
 
     return v14
 
-    .line 323
     .end local v1    # "arr$":[Ljava/security/cert/Certificate;
     .end local v9    # "i$":I
     .end local v10    # "len$":I
     :catch_0
     move-exception v8
 
-    .line 324
     .local v8, "e":Landroid/os/RemoteException;
     :try_start_2
     const-string v14, "CertificateUtil"
@@ -414,7 +366,6 @@
 
     invoke-static {v14, v15}, Lcom/android/server/enterprise/log/Log;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 329
     .end local v8    # "e":Landroid/os/RemoteException;
     :cond_1
     :goto_2
@@ -426,7 +377,6 @@
 
     iput-object v14, v0, Lcom/android/server/enterprise/utils/CertificateUtil;->mUserKey:Ljava/security/PrivateKey;
 
-    .line 330
     invoke-virtual/range {p1 .. p1}, Ljava/security/KeyStore$PrivateKeyEntry;->getCertificate()Ljava/security/cert/Certificate;
 
     move-result-object v14
@@ -437,12 +387,10 @@
 
     iput-object v14, v0, Lcom/android/server/enterprise/utils/CertificateUtil;->mUserCert:Ljava/security/cert/X509Certificate;
 
-    .line 332
     invoke-virtual/range {p1 .. p1}, Ljava/security/KeyStore$PrivateKeyEntry;->getCertificateChain()[Ljava/security/cert/Certificate;
 
     move-result-object v7
 
-    .line 333
     .local v7, "certs":[Ljava/security/cert/Certificate;
     const-string v14, "CertificateUtil"
 
@@ -470,7 +418,6 @@
 
     invoke-static {v14, v15}, Lcom/android/server/enterprise/log/Log;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 334
     new-instance v4, Ljava/util/ArrayList;
 
     array-length v14, v7
@@ -481,7 +428,6 @@
 
     iput-object v4, v0, Lcom/android/server/enterprise/utils/CertificateUtil;->mCaCerts:Ljava/util/List;
 
-    .line 335
     .local v4, "caCerts":Ljava/util/List;, "Ljava/util/List<Ljava/security/cert/X509Certificate;>;"
     move-object v1, v7
 
@@ -497,7 +443,6 @@
 
     aget-object v3, v1, v9
 
-    .line 336
     .local v3, "c":Ljava/security/cert/Certificate;
     move-object v0, v3
 
@@ -505,7 +450,6 @@
 
     move-object v5, v0
 
-    .line 337
     .local v5, "cert":Ljava/security/cert/X509Certificate;
     move-object/from16 v0, p0
 
@@ -515,16 +459,13 @@
 
     if-eqz v14, :cond_2
 
-    .line 338
     invoke-interface {v4, v5}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    .line 335
     :cond_2
     add-int/lit8 v9, v9, 0x1
 
     goto :goto_3
 
-    .line 325
     .end local v1    # "arr$":[Ljava/security/cert/Certificate;
     .end local v3    # "c":Ljava/security/cert/Certificate;
     .end local v4    # "caCerts":Ljava/util/List;, "Ljava/util/List<Ljava/security/cert/X509Certificate;>;"
@@ -535,7 +476,6 @@
     :catch_1
     move-exception v12
 
-    .line 326
     .local v12, "nex":Ljava/lang/NullPointerException;
     const-string v14, "CertificateUtil"
 
@@ -547,7 +487,6 @@
 
     goto :goto_2
 
-    .line 306
     .end local v6    # "certPolicy":Lcom/sec/enterprise/knox/certificate/ICertificatePolicy;
     .end local v12    # "nex":Ljava/lang/NullPointerException;
     :catchall_0
@@ -557,7 +496,6 @@
 
     throw v14
 
-    .line 340
     .restart local v1    # "arr$":[Ljava/security/cert/Certificate;
     .restart local v4    # "caCerts":Ljava/util/List;, "Ljava/util/List<Ljava/security/cert/X509Certificate;>;"
     .restart local v6    # "certPolicy":Lcom/sec/enterprise/knox/certificate/ICertificatePolicy;
@@ -600,7 +538,6 @@
     :try_end_3
     .catchall {:try_start_3 .. :try_end_3} :catchall_0
 
-    .line 342
     const/4 v14, 0x1
 
     goto/16 :goto_1
@@ -613,7 +550,6 @@
     .prologue
     const/4 v5, 0x0
 
-    .line 261
     :try_start_0
     const-string v6, "2.5.29.19"
 
@@ -621,16 +557,13 @@
 
     move-result-object v0
 
-    .line 262
     .local v0, "asn1EncodedBytes":[B
     if-nez v0, :cond_0
 
-    .line 271
     .end local v0    # "asn1EncodedBytes":[B
     :goto_0
     return v5
 
-    .line 265
     .restart local v0    # "asn1EncodedBytes":[B
     :cond_0
     new-instance v6, Lcom/android/org/bouncycastle/asn1/ASN1InputStream;
@@ -643,13 +576,11 @@
 
     check-cast v1, Lcom/android/org/bouncycastle/asn1/DEROctetString;
 
-    .line 267
     .local v1, "derOctetString":Lcom/android/org/bouncycastle/asn1/DEROctetString;
     invoke-virtual {v1}, Lcom/android/org/bouncycastle/asn1/DEROctetString;->getOctets()[B
 
     move-result-object v3
 
-    .line 268
     .local v3, "octets":[B
     new-instance v6, Lcom/android/org/bouncycastle/asn1/ASN1InputStream;
 
@@ -661,7 +592,6 @@
 
     check-cast v4, Lcom/android/org/bouncycastle/asn1/ASN1Sequence;
 
-    .line 269
     .local v4, "sequence":Lcom/android/org/bouncycastle/asn1/ASN1Sequence;
     invoke-static {v4}, Lcom/android/org/bouncycastle/asn1/x509/BasicConstraints;->getInstance(Ljava/lang/Object;)Lcom/android/org/bouncycastle/asn1/x509/BasicConstraints;
 
@@ -675,7 +605,6 @@
 
     goto :goto_0
 
-    .line 270
     .end local v0    # "asn1EncodedBytes":[B
     .end local v1    # "derOctetString":Lcom/android/org/bouncycastle/asn1/DEROctetString;
     .end local v3    # "octets":[B
@@ -683,7 +612,6 @@
     :catch_0
     move-exception v2
 
-    .line 271
     .local v2, "e":Ljava/io/IOException;
     goto :goto_0
 .end method
@@ -695,10 +623,8 @@
     .prologue
     const/4 v8, 0x0
 
-    .line 217
     const/4 v7, 0x0
 
-    .line 219
     .local v7, "ret":Z
     :try_start_0
     const-string v9, "X.509"
@@ -707,7 +633,6 @@
 
     move-result-object v1
 
-    .line 220
     .local v1, "certFactory":Ljava/security/cert/CertificateFactory;
     new-instance v9, Ljava/io/ByteArrayInputStream;
 
@@ -719,7 +644,6 @@
 
     check-cast v0, Ljava/security/cert/X509Certificate;
 
-    .line 224
     .local v0, "cert":Ljava/security/cert/X509Certificate;
     const-string v9, "certificate_policy"
 
@@ -733,7 +657,6 @@
 
     move-result-object v3
 
-    .line 227
     .local v3, "certPolicy":Lcom/sec/enterprise/knox/certificate/ICertificatePolicy;
     const/4 v9, 0x0
 
@@ -744,31 +667,26 @@
 
     if-eqz v9, :cond_0
 
-    .line 228
     new-instance v2, Landroid/app/enterprise/CertificateInfo;
 
     invoke-direct {v2, v0}, Landroid/app/enterprise/CertificateInfo;-><init>(Ljava/security/cert/Certificate;)V
 
-    .line 229
     .local v2, "certInfo":Landroid/app/enterprise/CertificateInfo;
     invoke-interface {v3, v2}, Lcom/sec/enterprise/knox/certificate/ICertificatePolicy;->validateCertificateAtInstall(Landroid/app/enterprise/CertificateInfo;)I
 
     move-result v6
 
-    .line 230
     .local v6, "resultCode":I
     const/4 v9, -0x1
 
     if-eq v6, v9, :cond_0
 
-    .line 231
     const-string v9, "CertificateUtil"
 
     const-string v10, "certificate failed during validation"
 
     invoke-static {v9, v10}, Lcom/android/server/enterprise/log/Log;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 232
     const-string v9, "installer_module"
 
     invoke-static {v6}, Ljava/lang/String;->valueOf(I)Ljava/lang/String;
@@ -783,7 +701,6 @@
     .catch Ljava/lang/NullPointerException; {:try_start_1 .. :try_end_1} :catch_1
     .catch Ljava/security/cert/CertificateException; {:try_start_1 .. :try_end_1} :catch_2
 
-    .line 256
     .end local v0    # "cert":Ljava/security/cert/X509Certificate;
     .end local v1    # "certFactory":Ljava/security/cert/CertificateFactory;
     .end local v2    # "certInfo":Landroid/app/enterprise/CertificateInfo;
@@ -792,14 +709,12 @@
     :goto_0
     return v8
 
-    .line 237
     .restart local v0    # "cert":Ljava/security/cert/X509Certificate;
     .restart local v1    # "certFactory":Ljava/security/cert/CertificateFactory;
     .restart local v3    # "certPolicy":Lcom/sec/enterprise/knox/certificate/ICertificatePolicy;
     :catch_0
     move-exception v4
 
-    .line 238
     .local v4, "e":Landroid/os/RemoteException;
     :try_start_2
     const-string v8, "CertificateUtil"
@@ -808,7 +723,6 @@
 
     invoke-static {v8, v9}, Lcom/android/server/enterprise/log/Log;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 243
     .end local v4    # "e":Landroid/os/RemoteException;
     :cond_0
     :goto_1
@@ -818,19 +732,16 @@
 
     if-eqz v8, :cond_1
 
-    .line 244
     const-string v8, "CertificateUtil"
 
     const-string v9, "got a CA cert"
 
     invoke-static {v8, v9}, Lcom/android/server/enterprise/log/Log;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 245
     iget-object v8, p0, Lcom/android/server/enterprise/utils/CertificateUtil;->mCaCerts:Ljava/util/List;
 
     invoke-interface {v8, v0}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    .line 246
     const/4 v7, 0x1
 
     .end local v0    # "cert":Ljava/security/cert/X509Certificate;
@@ -839,17 +750,14 @@
     :goto_2
     move v8, v7
 
-    .line 256
     goto :goto_0
 
-    .line 239
     .restart local v0    # "cert":Ljava/security/cert/X509Certificate;
     .restart local v1    # "certFactory":Ljava/security/cert/CertificateFactory;
     .restart local v3    # "certPolicy":Lcom/sec/enterprise/knox/certificate/ICertificatePolicy;
     :catch_1
     move-exception v5
 
-    .line 240
     .local v5, "nex":Ljava/lang/NullPointerException;
     const-string v8, "CertificateUtil"
 
@@ -861,7 +769,6 @@
 
     goto :goto_1
 
-    .line 252
     .end local v0    # "cert":Ljava/security/cert/X509Certificate;
     .end local v1    # "certFactory":Ljava/security/cert/CertificateFactory;
     .end local v3    # "certPolicy":Lcom/sec/enterprise/knox/certificate/ICertificatePolicy;
@@ -869,7 +776,6 @@
     :catch_2
     move-exception v4
 
-    .line 253
     .local v4, "e":Ljava/security/cert/CertificateException;
     const-string v8, "CertificateUtil"
 
@@ -877,7 +783,7 @@
 
     invoke-direct {v9}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v10, "parseCert(): "
+    const-string v10, "parseCert(): "
 
     invoke-virtual {v9, v10}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -893,12 +799,10 @@
 
     invoke-static {v8, v9}, Lcom/android/server/enterprise/log/Log;->w(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 254
     const/4 v7, 0x0
 
     goto :goto_2
 
-    .line 248
     .end local v4    # "e":Ljava/security/cert/CertificateException;
     .restart local v0    # "cert":Ljava/security/cert/X509Certificate;
     .restart local v1    # "certFactory":Ljava/security/cert/CertificateFactory;
@@ -911,12 +815,10 @@
 
     invoke-static {v8, v9}, Lcom/android/server/enterprise/log/Log;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 249
     iput-object v0, p0, Lcom/android/server/enterprise/utils/CertificateUtil;->mUserCert:Ljava/security/cert/X509Certificate;
     :try_end_3
     .catch Ljava/security/cert/CertificateException; {:try_start_3 .. :try_end_3} :catch_2
 
-    .line 250
     const/4 v7, 0x1
 
     goto :goto_2
@@ -932,7 +834,6 @@
     .param p4, "password"    # Ljava/lang/String;
 
     .prologue
-    .line 113
     const/4 v5, 0x7
 
     const/4 v6, 0x0
@@ -964,10 +865,8 @@
     .param p6, "userId"    # I
 
     .prologue
-    .line 119
     const/4 v13, 0x1
 
-    .line 123
     .local v13, "ret":Z
     const-string v2, ".crt"
 
@@ -989,7 +888,6 @@
 
     if-eqz v2, :cond_4
 
-    .line 125
     :cond_0
     move-object/from16 v0, p2
 
@@ -999,12 +897,10 @@
 
     and-int/2addr v13, v2
 
-    .line 133
     .end local v13    # "ret":Z
     :goto_0
     if-eqz v13, :cond_3
 
-    .line 135
     :try_start_0
     iget-object v2, p0, Lcom/android/server/enterprise/utils/CertificateUtil;->mCaCerts:Ljava/util/List;
 
@@ -1014,7 +910,6 @@
 
     if-nez v2, :cond_9
 
-    .line 136
     iget-object v2, p0, Lcom/android/server/enterprise/utils/CertificateUtil;->mCaCerts:Ljava/util/List;
 
     iget-object v3, p0, Lcom/android/server/enterprise/utils/CertificateUtil;->mCaCerts:Ljava/util/List;
@@ -1031,13 +926,11 @@
 
     check-cast v9, [Ljava/security/cert/X509Certificate;
 
-    .line 138
     .local v9, "caCerts":[Ljava/security/cert/X509Certificate;
     and-int/lit8 v2, p5, 0x2
 
     if-eqz v2, :cond_1
 
-    .line 139
     iget-object v2, p0, Lcom/android/server/enterprise/utils/CertificateUtil;->mKeyStore:Landroid/security/KeyStore;
 
     new-instance v3, Ljava/lang/StringBuilder;
@@ -1078,7 +971,6 @@
 
     and-int/2addr v13, v2
 
-    .line 143
     .restart local v13    # "ret":Z
     const-string v2, "CertificateUtil"
 
@@ -1102,14 +994,12 @@
 
     invoke-static {v2, v3}, Lcom/android/server/enterprise/log/Log;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 145
     .end local v13    # "ret":Z
     :cond_1
     and-int/lit8 v2, p5, 0x4
 
     if-eqz v2, :cond_2
 
-    .line 146
     iget-object v2, p0, Lcom/android/server/enterprise/utils/CertificateUtil;->mKeyStore:Landroid/security/KeyStore;
 
     new-instance v3, Ljava/lang/StringBuilder;
@@ -1152,7 +1042,6 @@
 
     and-int/2addr v13, v2
 
-    .line 150
     .restart local v13    # "ret":Z
     const-string v2, "CertificateUtil"
 
@@ -1176,14 +1065,12 @@
 
     invoke-static {v2, v3}, Lcom/android/server/enterprise/log/Log;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 152
     .end local v13    # "ret":Z
     :cond_2
     and-int/lit8 v2, p5, 0x1
 
     if-eqz v2, :cond_8
 
-    .line 153
     iget-object v2, p0, Lcom/android/server/enterprise/utils/CertificateUtil;->mContext:Landroid/content/Context;
 
     new-instance v3, Landroid/os/UserHandle;
@@ -1196,7 +1083,6 @@
 
     move-result-object v12
 
-    .line 156
     .local v12, "keyChainConnection":Landroid/security/KeyChain$KeyChainConnection;
     invoke-virtual {v12}, Landroid/security/KeyChain$KeyChainConnection;->getService()Landroid/security/IKeyChainService;
     :try_end_0
@@ -1204,7 +1090,6 @@
 
     move-result-object v14
 
-    .line 158
     .local v14, "service":Landroid/security/IKeyChainService;
     :try_start_1
     iget-object v2, p0, Lcom/android/server/enterprise/utils/CertificateUtil;->mCaCerts:Ljava/util/List;
@@ -1227,7 +1112,6 @@
 
     check-cast v8, Ljava/security/cert/X509Certificate;
 
-    .line 159
     .local v8, "ca":Ljava/security/cert/X509Certificate;
     const/4 v2, 0x1
 
@@ -1247,7 +1131,6 @@
 
     goto :goto_1
 
-    .line 162
     .end local v8    # "ca":Ljava/security/cert/X509Certificate;
     .end local v11    # "i$":Ljava/util/Iterator;
     :catchall_0
@@ -1260,14 +1143,12 @@
     :try_end_2
     .catch Ljava/lang/Exception; {:try_start_2 .. :try_end_2} :catch_0
 
-    .line 208
     .end local v9    # "caCerts":[Ljava/security/cert/X509Certificate;
     .end local v12    # "keyChainConnection":Landroid/security/KeyChain$KeyChainConnection;
     .end local v14    # "service":Landroid/security/IKeyChainService;
     :catch_0
     move-exception v10
 
-    .line 209
     .local v10, "e":Ljava/lang/Exception;
     const-string v2, "CertificateUtil"
 
@@ -1275,13 +1156,11 @@
 
     invoke-static {v2, v3}, Lcom/android/server/enterprise/log/Log;->w(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 212
     .end local v10    # "e":Ljava/lang/Exception;
     :cond_3
     :goto_2
     return v13
 
-    .line 126
     .restart local v13    # "ret":Z
     :cond_4
     const-string v2, ".p12"
@@ -1304,7 +1183,6 @@
 
     if-eqz v2, :cond_6
 
-    .line 128
     :cond_5
     move-object/from16 v0, p2
 
@@ -1318,14 +1196,12 @@
 
     goto/16 :goto_0
 
-    .line 130
     :cond_6
     and-int/lit8 v13, v13, 0x0
 
     .local v13, "ret":I
     goto/16 :goto_0
 
-    .line 162
     .end local v13    # "ret":I
     .restart local v9    # "caCerts":[Ljava/security/cert/X509Certificate;
     .restart local v11    # "i$":Ljava/util/Iterator;
@@ -1335,7 +1211,6 @@
     :try_start_3
     invoke-virtual {v12}, Landroid/security/KeyChain$KeyChainConnection;->close()V
 
-    .line 165
     .end local v11    # "i$":Ljava/util/Iterator;
     .end local v12    # "keyChainConnection":Landroid/security/KeyChain$KeyChainConnection;
     .end local v14    # "service":Landroid/security/IKeyChainService;
@@ -1362,19 +1237,16 @@
 
     invoke-static {v2, v3}, Lcom/android/server/enterprise/log/Log;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 167
     .end local v9    # "caCerts":[Ljava/security/cert/X509Certificate;
     :cond_9
     iget-object v2, p0, Lcom/android/server/enterprise/utils/CertificateUtil;->mUserCert:Ljava/security/cert/X509Certificate;
 
     if-eqz v2, :cond_d
 
-    .line 168
     and-int/lit8 v2, p5, 0x2
 
     if-eqz v2, :cond_a
 
-    .line 169
     iget-object v2, p0, Lcom/android/server/enterprise/utils/CertificateUtil;->mKeyStore:Landroid/security/KeyStore;
 
     new-instance v3, Ljava/lang/StringBuilder;
@@ -1425,7 +1297,6 @@
 
     and-int/2addr v13, v2
 
-    .line 173
     .local v13, "ret":Z
     const-string v2, "CertificateUtil"
 
@@ -1449,14 +1320,12 @@
 
     invoke-static {v2, v3}, Lcom/android/server/enterprise/log/Log;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 175
     .end local v13    # "ret":Z
     :cond_a
     and-int/lit8 v2, p5, 0x4
 
     if-eqz v2, :cond_b
 
-    .line 176
     iget-object v2, p0, Lcom/android/server/enterprise/utils/CertificateUtil;->mKeyStore:Landroid/security/KeyStore;
 
     new-instance v3, Ljava/lang/StringBuilder;
@@ -1509,7 +1378,6 @@
 
     and-int/2addr v13, v2
 
-    .line 180
     .restart local v13    # "ret":Z
     const-string v2, "CertificateUtil"
 
@@ -1533,7 +1401,6 @@
 
     invoke-static {v2, v3}, Lcom/android/server/enterprise/log/Log;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 182
     .end local v13    # "ret":Z
     :cond_b
     and-int/lit8 v2, p5, 0x1
@@ -1560,22 +1427,18 @@
 
     if-eqz v2, :cond_d
 
-    .line 185
     :cond_c
     and-int/lit8 v13, v13, 0x0
 
-    .line 188
     :cond_d
     iget-object v2, p0, Lcom/android/server/enterprise/utils/CertificateUtil;->mUserKey:Ljava/security/PrivateKey;
 
     if-eqz v2, :cond_3
 
-    .line 189
     and-int/lit8 v2, p5, 0x2
 
     if-eqz v2, :cond_e
 
-    .line 190
     iget-object v2, p0, Lcom/android/server/enterprise/utils/CertificateUtil;->mKeyStore:Landroid/security/KeyStore;
 
     new-instance v3, Ljava/lang/StringBuilder;
@@ -1618,7 +1481,6 @@
 
     and-int/2addr v13, v2
 
-    .line 193
     .restart local v13    # "ret":Z
     const-string v2, "CertificateUtil"
 
@@ -1642,14 +1504,12 @@
 
     invoke-static {v2, v3}, Lcom/android/server/enterprise/log/Log;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 195
     .end local v13    # "ret":Z
     :cond_e
     and-int/lit8 v2, p5, 0x4
 
     if-eqz v2, :cond_f
 
-    .line 196
     iget-object v2, p0, Lcom/android/server/enterprise/utils/CertificateUtil;->mKeyStore:Landroid/security/KeyStore;
 
     new-instance v3, Ljava/lang/StringBuilder;
@@ -1694,7 +1554,6 @@
 
     and-int/2addr v13, v2
 
-    .line 200
     .restart local v13    # "ret":Z
     const-string v2, "CertificateUtil"
 
@@ -1718,7 +1577,6 @@
 
     invoke-static {v2, v3}, Lcom/android/server/enterprise/log/Log;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 202
     .end local v13    # "ret":Z
     :cond_f
     and-int/lit8 v2, p5, 0x1
@@ -1747,7 +1605,6 @@
 
     if-eqz v2, :cond_3
 
-    .line 205
     :cond_10
     and-int/lit8 v13, v13, 0x0
 

@@ -23,7 +23,6 @@
     .locals 0
 
     .prologue
-    .line 195
     iput-object p1, p0, Lcom/android/server/wifi/WifiController$1;->this$0:Lcom/android/server/wifi/WifiController;
 
     invoke-direct {p0}, Landroid/content/BroadcastReceiver;-><init>()V
@@ -39,12 +38,10 @@
     .param p2, "intent"    # Landroid/content/Intent;
 
     .prologue
-    .line 198
     invoke-virtual {p2}, Landroid/content/Intent;->getAction()Ljava/lang/String;
 
     move-result-object v0
 
-    .line 199
     .local v0, "action":Ljava/lang/String;
     const-string v2, "com.android.server.WifiManager.action.DEVICE_IDLE"
 
@@ -54,19 +51,16 @@
 
     if-eqz v2, :cond_1
 
-    .line 200
     iget-object v2, p0, Lcom/android/server/wifi/WifiController$1;->this$0:Lcom/android/server/wifi/WifiController;
 
     const v3, 0x26005
 
     invoke-virtual {v2, v3}, Lcom/android/server/wifi/WifiController;->sendMessage(I)V
 
-    .line 211
     :cond_0
     :goto_0
     return-void
 
-    .line 201
     :cond_1
     const-string v2, "android.net.wifi.STATE_CHANGE"
 
@@ -76,7 +70,6 @@
 
     if-eqz v2, :cond_2
 
-    .line 202
     iget-object v3, p0, Lcom/android/server/wifi/WifiController$1;->this$0:Lcom/android/server/wifi/WifiController;
 
     const-string v2, "networkInfo"
@@ -91,7 +84,6 @@
 
     goto :goto_0
 
-    .line 204
     :cond_2
     const-string v2, "android.net.wifi.ERROR"
 
@@ -101,7 +93,6 @@
 
     if-eqz v2, :cond_0
 
-    .line 206
     const-string v2, "errorCode"
 
     const/4 v3, 0x0
@@ -110,13 +101,11 @@
 
     move-result v1
 
-    .line 207
     .local v1, "errorCode":I
     const/16 v2, 0xa
 
     if-ne v1, v2, :cond_0
 
-    .line 208
     iget-object v2, p0, Lcom/android/server/wifi/WifiController$1;->this$0:Lcom/android/server/wifi/WifiController;
 
     const v3, 0x26014

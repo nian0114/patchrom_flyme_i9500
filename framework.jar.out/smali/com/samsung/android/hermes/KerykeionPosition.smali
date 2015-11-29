@@ -34,7 +34,6 @@
     .locals 1
 
     .prologue
-    .line 78
     new-instance v0, Lcom/samsung/android/hermes/KerykeionPosition$1;
 
     invoke-direct {v0}, Lcom/samsung/android/hermes/KerykeionPosition$1;-><init>()V
@@ -48,10 +47,8 @@
     .locals 0
 
     .prologue
-    .line 21
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 23
     return-void
 .end method
 
@@ -60,30 +57,24 @@
     .param p1, "position"    # Landroid/graphics/Rect;
 
     .prologue
-    .line 32
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 33
     iget v0, p1, Landroid/graphics/Rect;->left:I
 
     iput v0, p0, Lcom/samsung/android/hermes/KerykeionPosition;->left:I
 
-    .line 34
     iget v0, p1, Landroid/graphics/Rect;->top:I
 
     iput v0, p0, Lcom/samsung/android/hermes/KerykeionPosition;->top:I
 
-    .line 35
     iget v0, p1, Landroid/graphics/Rect;->right:I
 
     iput v0, p0, Lcom/samsung/android/hermes/KerykeionPosition;->right:I
 
-    .line 36
     iget v0, p1, Landroid/graphics/Rect;->bottom:I
 
     iput v0, p0, Lcom/samsung/android/hermes/KerykeionPosition;->bottom:I
 
-    .line 37
     return-void
 .end method
 
@@ -93,7 +84,6 @@
     .locals 1
 
     .prologue
-    .line 52
     const/4 v0, 0x0
 
     return v0
@@ -103,7 +93,6 @@
     .locals 5
 
     .prologue
-    .line 45
     new-instance v0, Landroid/graphics/Rect;
 
     iget v1, p0, Lcom/samsung/android/hermes/KerykeionPosition;->left:I
@@ -124,35 +113,30 @@
     .param p1, "in"    # Landroid/os/Parcel;
 
     .prologue
-    .line 69
     invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
 
     move-result v0
 
     iput v0, p0, Lcom/samsung/android/hermes/KerykeionPosition;->left:I
 
-    .line 70
     invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
 
     move-result v0
 
     iput v0, p0, Lcom/samsung/android/hermes/KerykeionPosition;->top:I
 
-    .line 71
     invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
 
     move-result v0
 
     iput v0, p0, Lcom/samsung/android/hermes/KerykeionPosition;->right:I
 
-    .line 72
     invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
 
     move-result v0
 
     iput v0, p0, Lcom/samsung/android/hermes/KerykeionPosition;->bottom:I
 
-    .line 73
     return-void
 .end method
 
@@ -162,26 +146,21 @@
     .param p2, "flags"    # I
 
     .prologue
-    .line 59
     iget v0, p0, Lcom/samsung/android/hermes/KerykeionPosition;->left:I
 
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 60
     iget v0, p0, Lcom/samsung/android/hermes/KerykeionPosition;->top:I
 
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 61
     iget v0, p0, Lcom/samsung/android/hermes/KerykeionPosition;->right:I
 
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 62
     iget v0, p0, Lcom/samsung/android/hermes/KerykeionPosition;->bottom:I
 
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 63
     return-void
 .end method

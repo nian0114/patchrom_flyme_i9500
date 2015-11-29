@@ -23,7 +23,6 @@
     .locals 0
 
     .prologue
-    .line 1009
     iput-object p1, p0, Lcom/android/server/FMRadioService$17;->this$0:Lcom/android/server/FMRadioService;
 
     invoke-direct {p0}, Landroid/content/BroadcastReceiver;-><init>()V
@@ -39,19 +38,16 @@
     .param p2, "intent"    # Landroid/content/Intent;
 
     .prologue
-    .line 1011
     const-string v1, "Alarm onReceive"
 
     invoke-static {v1}, Lcom/android/server/FMRadioService;->log(Ljava/lang/String;)V
 
-    .line 1012
     const-string v1, "command"
 
     invoke-virtual {p2, v1}, Landroid/content/Intent;->getStringExtra(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 
-    .line 1017
     .local v0, "cmdStr":Ljava/lang/String;
     const-string v1, "TTSstart"
 
@@ -61,12 +57,10 @@
 
     if-eqz v1, :cond_0
 
-    .line 1018
     const-string v1, "TTSstart play"
 
     invoke-static {v1}, Lcom/android/server/FMRadioService;->log(Ljava/lang/String;)V
 
-    .line 1019
     iget-object v1, p0, Lcom/android/server/FMRadioService$17;->this$0:Lcom/android/server/FMRadioService;
 
     const/4 v2, 0x1
@@ -74,7 +68,6 @@
     # setter for: Lcom/android/server/FMRadioService;->alarmTTSPlay:Z
     invoke-static {v1, v2}, Lcom/android/server/FMRadioService;->access$3302(Lcom/android/server/FMRadioService;Z)Z
 
-    .line 1022
     :cond_0
     const-string v1, "TTSstop"
 
@@ -84,12 +77,10 @@
 
     if-eqz v1, :cond_1
 
-    .line 1023
     const-string v1, "TTSstop play"
 
     invoke-static {v1}, Lcom/android/server/FMRadioService;->log(Ljava/lang/String;)V
 
-    .line 1024
     iget-object v1, p0, Lcom/android/server/FMRadioService$17;->this$0:Lcom/android/server/FMRadioService;
 
     const/4 v2, 0x0
@@ -97,7 +88,6 @@
     # setter for: Lcom/android/server/FMRadioService;->alarmTTSPlay:Z
     invoke-static {v1, v2}, Lcom/android/server/FMRadioService;->access$3302(Lcom/android/server/FMRadioService;Z)Z
 
-    .line 1027
     :cond_1
     return-void
 .end method

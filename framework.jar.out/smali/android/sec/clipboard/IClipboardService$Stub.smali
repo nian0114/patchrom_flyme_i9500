@@ -82,15 +82,12 @@
     .locals 1
 
     .prologue
-    .line 23
     invoke-direct {p0}, Landroid/os/Binder;-><init>()V
 
-    .line 24
     const-string v0, "android.sec.clipboard.IClipboardService"
 
     invoke-virtual {p0, p0, v0}, Landroid/sec/clipboard/IClipboardService$Stub;->attachInterface(Landroid/os/IInterface;Ljava/lang/String;)V
 
-    .line 25
     return-void
 .end method
 
@@ -99,17 +96,13 @@
     .param p0, "obj"    # Landroid/os/IBinder;
 
     .prologue
-    .line 37
     if-nez p0, :cond_0
 
-    .line 38
     const/4 v0, 0x0
 
-    .line 44
     :goto_0
     return-object v0
 
-    .line 40
     :cond_0
     const-string v1, "android.sec.clipboard.IClipboardService"
 
@@ -117,7 +110,6 @@
 
     move-result-object v0
 
-    .line 41
     .local v0, "iin":Landroid/os/IInterface;
     if-eqz v0, :cond_1
 
@@ -125,12 +117,10 @@
 
     if-eqz v1, :cond_1
 
-    .line 42
     check-cast v0, Landroid/sec/clipboard/IClipboardService;
 
     goto :goto_0
 
-    .line 44
     :cond_1
     new-instance v0, Landroid/sec/clipboard/IClipboardService$Stub$Proxy;
 
@@ -146,7 +136,6 @@
     .locals 0
 
     .prologue
-    .line 53
     return-object p0
 .end method
 
@@ -167,10 +156,8 @@
 
     const/4 v6, 0x1
 
-    .line 62
     sparse-switch p1, :sswitch_data_0
 
-    .line 349
     invoke-super {p0, p1, p2, p3, p4}, Landroid/os/Binder;->onTransact(ILandroid/os/Parcel;Landroid/os/Parcel;I)Z
 
     move-result v6
@@ -178,7 +165,6 @@
     :goto_0
     return v6
 
-    .line 66
     :sswitch_0
     const-string v5, "android.sec.clipboard.IClipboardService"
 
@@ -186,13 +172,11 @@
 
     goto :goto_0
 
-    .line 71
     :sswitch_1
     const-string v7, "android.sec.clipboard.IClipboardService"
 
     invoke-virtual {p2, v7}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
 
-    .line 73
     invoke-virtual {p2}, Landroid/os/Parcel;->readStrongBinder()Landroid/os/IBinder;
 
     move-result-object v7
@@ -201,17 +185,14 @@
 
     move-result-object v0
 
-    .line 74
     .local v0, "_arg0":Landroid/sec/clipboard/IClipboardFormatListener;
     invoke-virtual {p0, v0}, Landroid/sec/clipboard/IClipboardService$Stub;->AddClipboardFormatListener(Landroid/sec/clipboard/IClipboardFormatListener;)Z
 
     move-result v3
 
-    .line 75
     .local v3, "_result":Z
     invoke-virtual {p3}, Landroid/os/Parcel;->writeNoException()V
 
-    .line 76
     if-eqz v3, :cond_0
 
     move v5, v6
@@ -221,7 +202,6 @@
 
     goto :goto_0
 
-    .line 81
     .end local v0    # "_arg0":Landroid/sec/clipboard/IClipboardFormatListener;
     .end local v3    # "_result":Z
     :sswitch_2
@@ -229,41 +209,33 @@
 
     invoke-virtual {p2, v5}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
 
-    .line 82
     invoke-virtual {p0}, Landroid/sec/clipboard/IClipboardService$Stub;->dismissUIDataDialog()V
 
-    .line 83
     invoke-virtual {p3}, Landroid/os/Parcel;->writeNoException()V
 
     goto :goto_0
 
-    .line 88
     :sswitch_3
     const-string v5, "android.sec.clipboard.IClipboardService"
 
     invoke-virtual {p2, v5}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
 
-    .line 90
     invoke-virtual {p2}, Landroid/os/Parcel;->readInt()I
 
     move-result v0
 
-    .line 91
     .local v0, "_arg0":I
     invoke-virtual {p0, v0}, Landroid/sec/clipboard/IClipboardService$Stub;->GetClipboardFormatName(I)Ljava/lang/String;
 
     move-result-object v3
 
-    .line 92
     .local v3, "_result":Ljava/lang/String;
     invoke-virtual {p3}, Landroid/os/Parcel;->writeNoException()V
 
-    .line 93
     invoke-virtual {p3, v3}, Landroid/os/Parcel;->writeString(Ljava/lang/String;)V
 
     goto :goto_0
 
-    .line 98
     .end local v0    # "_arg0":I
     .end local v3    # "_result":Ljava/lang/String;
     :sswitch_4
@@ -271,39 +243,31 @@
 
     invoke-virtual {p2, v7}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
 
-    .line 100
     invoke-virtual {p2}, Landroid/os/Parcel;->readInt()I
 
     move-result v0
 
-    .line 101
     .restart local v0    # "_arg0":I
     invoke-virtual {p0, v0}, Landroid/sec/clipboard/IClipboardService$Stub;->GetClipboardData(I)Landroid/sec/clipboard/data/ClipboardData;
 
     move-result-object v3
 
-    .line 102
     .local v3, "_result":Landroid/sec/clipboard/data/ClipboardData;
     invoke-virtual {p3}, Landroid/os/Parcel;->writeNoException()V
 
-    .line 103
     if-eqz v3, :cond_1
 
-    .line 104
     invoke-virtual {p3, v6}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 105
     invoke-virtual {v3, p3, v6}, Landroid/sec/clipboard/data/ClipboardData;->writeToParcel(Landroid/os/Parcel;I)V
 
     goto :goto_0
 
-    .line 108
     :cond_1
     invoke-virtual {p3, v5}, Landroid/os/Parcel;->writeInt(I)V
 
     goto :goto_0
 
-    .line 114
     .end local v0    # "_arg0":I
     .end local v3    # "_result":Landroid/sec/clipboard/data/ClipboardData;
     :sswitch_5
@@ -311,37 +275,30 @@
 
     invoke-virtual {p2, v5}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
 
-    .line 115
     invoke-virtual {p0}, Landroid/sec/clipboard/IClipboardService$Stub;->getDataSize()I
 
     move-result v3
 
-    .line 116
     .local v3, "_result":I
     invoke-virtual {p3}, Landroid/os/Parcel;->writeNoException()V
 
-    .line 117
     invoke-virtual {p3, v3}, Landroid/os/Parcel;->writeInt(I)V
 
     goto :goto_0
 
-    .line 122
     .end local v3    # "_result":I
     :sswitch_6
     const-string v7, "android.sec.clipboard.IClipboardService"
 
     invoke-virtual {p2, v7}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
 
-    .line 123
     invoke-virtual {p0}, Landroid/sec/clipboard/IClipboardService$Stub;->IsShowUIClipboardData()Z
 
     move-result v3
 
-    .line 124
     .local v3, "_result":Z
     invoke-virtual {p3}, Landroid/os/Parcel;->writeNoException()V
 
-    .line 125
     if-eqz v3, :cond_2
 
     move v5, v6
@@ -351,19 +308,16 @@
 
     goto/16 :goto_0
 
-    .line 130
     .end local v3    # "_result":Z
     :sswitch_7
     const-string v5, "android.sec.clipboard.IClipboardService"
 
     invoke-virtual {p2, v5}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
 
-    .line 132
     invoke-virtual {p2}, Landroid/os/Parcel;->readInt()I
 
     move-result v0
 
-    .line 134
     .restart local v0    # "_arg0":I
     invoke-virtual {p2}, Landroid/os/Parcel;->readInt()I
 
@@ -371,7 +325,6 @@
 
     if-eqz v5, :cond_3
 
-    .line 135
     sget-object v5, Landroid/sec/clipboard/data/ClipboardData;->CREATOR:Landroid/os/Parcelable$Creator;
 
     invoke-interface {v5, p2}, Landroid/os/Parcelable$Creator;->createFromParcel(Landroid/os/Parcel;)Ljava/lang/Object;
@@ -380,17 +333,14 @@
 
     check-cast v1, Landroid/sec/clipboard/data/ClipboardData;
 
-    .line 140
     .local v1, "_arg1":Landroid/sec/clipboard/data/ClipboardData;
     :goto_1
     invoke-virtual {p0, v0, v1}, Landroid/sec/clipboard/IClipboardService$Stub;->ObserverUpdate(ILandroid/sec/clipboard/data/ClipboardData;)V
 
-    .line 141
     invoke-virtual {p3}, Landroid/os/Parcel;->writeNoException()V
 
     goto/16 :goto_0
 
-    .line 138
     .end local v1    # "_arg1":Landroid/sec/clipboard/data/ClipboardData;
     :cond_3
     const/4 v1, 0x0
@@ -398,7 +348,6 @@
     .restart local v1    # "_arg1":Landroid/sec/clipboard/data/ClipboardData;
     goto :goto_1
 
-    .line 146
     .end local v0    # "_arg0":I
     .end local v1    # "_arg1":Landroid/sec/clipboard/data/ClipboardData;
     :sswitch_8
@@ -406,27 +355,22 @@
 
     invoke-virtual {p2, v5}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
 
-    .line 148
     invoke-virtual {p2}, Landroid/os/Parcel;->readString()Ljava/lang/String;
 
     move-result-object v0
 
-    .line 149
     .local v0, "_arg0":Ljava/lang/String;
     invoke-virtual {p0, v0}, Landroid/sec/clipboard/IClipboardService$Stub;->RegisterClipboardFormat(Ljava/lang/String;)I
 
     move-result v3
 
-    .line 150
     .local v3, "_result":I
     invoke-virtual {p3}, Landroid/os/Parcel;->writeNoException()V
 
-    .line 151
     invoke-virtual {p3, v3}, Landroid/os/Parcel;->writeInt(I)V
 
     goto/16 :goto_0
 
-    .line 156
     .end local v0    # "_arg0":Ljava/lang/String;
     .end local v3    # "_result":I
     :sswitch_9
@@ -434,7 +378,6 @@
 
     invoke-virtual {p2, v5}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
 
-    .line 158
     invoke-virtual {p2}, Landroid/os/Parcel;->readStrongBinder()Landroid/os/IBinder;
 
     move-result-object v5
@@ -443,23 +386,19 @@
 
     move-result-object v0
 
-    .line 159
     .local v0, "_arg0":Landroid/sec/clipboard/IClipboardWorkingFormUiInterface;
     invoke-virtual {p0, v0}, Landroid/sec/clipboard/IClipboardService$Stub;->RegistClipboardWorkingFormUiInterface(Landroid/sec/clipboard/IClipboardWorkingFormUiInterface;)V
 
-    .line 160
     invoke-virtual {p3}, Landroid/os/Parcel;->writeNoException()V
 
     goto/16 :goto_0
 
-    .line 165
     .end local v0    # "_arg0":Landroid/sec/clipboard/IClipboardWorkingFormUiInterface;
     :sswitch_a
     const-string v5, "android.sec.clipboard.IClipboardService"
 
     invoke-virtual {p2, v5}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
 
-    .line 167
     invoke-virtual {p2}, Landroid/os/Parcel;->readStrongBinder()Landroid/os/IBinder;
 
     move-result-object v5
@@ -468,23 +407,19 @@
 
     move-result-object v0
 
-    .line 168
     .restart local v0    # "_arg0":Landroid/sec/clipboard/IClipboardWorkingFormUiInterface;
     invoke-virtual {p0, v0}, Landroid/sec/clipboard/IClipboardService$Stub;->RegistScrapWorkingFormUiInterface(Landroid/sec/clipboard/IClipboardWorkingFormUiInterface;)V
 
-    .line 169
     invoke-virtual {p3}, Landroid/os/Parcel;->writeNoException()V
 
     goto/16 :goto_0
 
-    .line 174
     .end local v0    # "_arg0":Landroid/sec/clipboard/IClipboardWorkingFormUiInterface;
     :sswitch_b
     const-string v7, "android.sec.clipboard.IClipboardService"
 
     invoke-virtual {p2, v7}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
 
-    .line 176
     invoke-virtual {p2}, Landroid/os/Parcel;->readStrongBinder()Landroid/os/IBinder;
 
     move-result-object v7
@@ -493,17 +428,14 @@
 
     move-result-object v0
 
-    .line 177
     .local v0, "_arg0":Landroid/sec/clipboard/IClipboardFormatListener;
     invoke-virtual {p0, v0}, Landroid/sec/clipboard/IClipboardService$Stub;->RemoveClipboardFormatListener(Landroid/sec/clipboard/IClipboardFormatListener;)Z
 
     move-result v3
 
-    .line 178
     .local v3, "_result":Z
     invoke-virtual {p3}, Landroid/os/Parcel;->writeNoException()V
 
-    .line 179
     if-eqz v3, :cond_4
 
     move v5, v6
@@ -513,7 +445,6 @@
 
     goto/16 :goto_0
 
-    .line 184
     .end local v0    # "_arg0":Landroid/sec/clipboard/IClipboardFormatListener;
     .end local v3    # "_result":Z
     :sswitch_c
@@ -521,42 +452,34 @@
 
     invoke-virtual {p2, v5}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
 
-    .line 185
     invoke-virtual {p0}, Landroid/sec/clipboard/IClipboardService$Stub;->showUIDataDialog()V
 
-    .line 186
     invoke-virtual {p3}, Landroid/os/Parcel;->writeNoException()V
 
     goto/16 :goto_0
 
-    .line 191
     :sswitch_d
     const-string v5, "android.sec.clipboard.IClipboardService"
 
     invoke-virtual {p2, v5}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
 
-    .line 192
     invoke-virtual {p0}, Landroid/sec/clipboard/IClipboardService$Stub;->unRegistClipboardWorkingFormUiInterface()V
 
-    .line 193
     invoke-virtual {p3}, Landroid/os/Parcel;->writeNoException()V
 
     goto/16 :goto_0
 
-    .line 198
     :sswitch_e
     const-string v7, "android.sec.clipboard.IClipboardService"
 
     invoke-virtual {p2, v7}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
 
-    .line 200
     invoke-virtual {p2}, Landroid/os/Parcel;->readInt()I
 
     move-result v7
 
     if-eqz v7, :cond_6
 
-    .line 201
     sget-object v7, Landroid/text/TextUtils;->CHAR_SEQUENCE_CREATOR:Landroid/os/Parcelable$Creator;
 
     invoke-interface {v7, p2}, Landroid/os/Parcelable$Creator;->createFromParcel(Landroid/os/Parcel;)Ljava/lang/Object;
@@ -565,18 +488,15 @@
 
     check-cast v0, Ljava/lang/CharSequence;
 
-    .line 206
     .local v0, "_arg0":Ljava/lang/CharSequence;
     :goto_2
     invoke-virtual {p0, v0}, Landroid/sec/clipboard/IClipboardService$Stub;->SetSyncClipboardData(Ljava/lang/CharSequence;)Z
 
     move-result v3
 
-    .line 207
     .restart local v3    # "_result":Z
     invoke-virtual {p3}, Landroid/os/Parcel;->writeNoException()V
 
-    .line 208
     if-eqz v3, :cond_5
 
     move v5, v6
@@ -586,7 +506,6 @@
 
     goto/16 :goto_0
 
-    .line 204
     .end local v0    # "_arg0":Ljava/lang/CharSequence;
     .end local v3    # "_result":Z
     :cond_6
@@ -595,19 +514,16 @@
     .restart local v0    # "_arg0":Ljava/lang/CharSequence;
     goto :goto_2
 
-    .line 213
     .end local v0    # "_arg0":Ljava/lang/CharSequence;
     :sswitch_f
     const-string v7, "android.sec.clipboard.IClipboardService"
 
     invoke-virtual {p2, v7}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
 
-    .line 215
     invoke-virtual {p2}, Landroid/os/Parcel;->readInt()I
 
     move-result v0
 
-    .line 217
     .local v0, "_arg0":I
     invoke-virtual {p2}, Landroid/os/Parcel;->readInt()I
 
@@ -615,7 +531,6 @@
 
     if-eqz v7, :cond_8
 
-    .line 218
     sget-object v7, Landroid/sec/clipboard/data/ClipboardData;->CREATOR:Landroid/os/Parcelable$Creator;
 
     invoke-interface {v7, p2}, Landroid/os/Parcelable$Creator;->createFromParcel(Landroid/os/Parcel;)Ljava/lang/Object;
@@ -624,24 +539,20 @@
 
     check-cast v1, Landroid/sec/clipboard/data/ClipboardData;
 
-    .line 224
     .restart local v1    # "_arg1":Landroid/sec/clipboard/data/ClipboardData;
     :goto_3
     invoke-virtual {p2}, Landroid/os/Parcel;->readString()Ljava/lang/String;
 
     move-result-object v2
 
-    .line 225
     .local v2, "_arg2":Ljava/lang/String;
     invoke-virtual {p0, v0, v1, v2}, Landroid/sec/clipboard/IClipboardService$Stub;->SetClipboardData(ILandroid/sec/clipboard/data/ClipboardData;Ljava/lang/String;)Z
 
     move-result v3
 
-    .line 226
     .restart local v3    # "_result":Z
     invoke-virtual {p3}, Landroid/os/Parcel;->writeNoException()V
 
-    .line 227
     if-eqz v3, :cond_7
 
     move v5, v6
@@ -651,7 +562,6 @@
 
     goto/16 :goto_0
 
-    .line 221
     .end local v1    # "_arg1":Landroid/sec/clipboard/data/ClipboardData;
     .end local v2    # "_arg2":Ljava/lang/String;
     .end local v3    # "_result":Z
@@ -661,7 +571,6 @@
     .restart local v1    # "_arg1":Landroid/sec/clipboard/data/ClipboardData;
     goto :goto_3
 
-    .line 232
     .end local v0    # "_arg0":I
     .end local v1    # "_arg1":Landroid/sec/clipboard/data/ClipboardData;
     :sswitch_10
@@ -669,12 +578,10 @@
 
     invoke-virtual {p2, v7}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
 
-    .line 234
     invoke-virtual {p2}, Landroid/os/Parcel;->readInt()I
 
     move-result v0
 
-    .line 236
     .restart local v0    # "_arg0":I
     invoke-virtual {p2}, Landroid/os/Parcel;->readInt()I
 
@@ -682,7 +589,6 @@
 
     if-eqz v7, :cond_a
 
-    .line 237
     sget-object v7, Landroid/sec/clipboard/data/ClipboardData;->CREATOR:Landroid/os/Parcelable$Creator;
 
     invoke-interface {v7, p2}, Landroid/os/Parcelable$Creator;->createFromParcel(Landroid/os/Parcel;)Ljava/lang/Object;
@@ -691,18 +597,15 @@
 
     check-cast v1, Landroid/sec/clipboard/data/ClipboardData;
 
-    .line 242
     .restart local v1    # "_arg1":Landroid/sec/clipboard/data/ClipboardData;
     :goto_4
     invoke-virtual {p0, v0, v1}, Landroid/sec/clipboard/IClipboardService$Stub;->SetClipboardDataOriginalToEx(ILandroid/sec/clipboard/data/ClipboardData;)Z
 
     move-result v3
 
-    .line 243
     .restart local v3    # "_result":Z
     invoke-virtual {p3}, Landroid/os/Parcel;->writeNoException()V
 
-    .line 244
     if-eqz v3, :cond_9
 
     move v5, v6
@@ -712,7 +615,6 @@
 
     goto/16 :goto_0
 
-    .line 240
     .end local v1    # "_arg1":Landroid/sec/clipboard/data/ClipboardData;
     .end local v3    # "_result":Z
     :cond_a
@@ -721,7 +623,6 @@
     .restart local v1    # "_arg1":Landroid/sec/clipboard/data/ClipboardData;
     goto :goto_4
 
-    .line 249
     .end local v0    # "_arg0":I
     .end local v1    # "_arg1":Landroid/sec/clipboard/data/ClipboardData;
     :sswitch_11
@@ -729,12 +630,10 @@
 
     invoke-virtual {p2, v5}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
 
-    .line 251
     invoke-virtual {p2}, Landroid/os/Parcel;->readInt()I
 
     move-result v0
 
-    .line 253
     .restart local v0    # "_arg0":I
     invoke-virtual {p2}, Landroid/os/Parcel;->readStrongBinder()Landroid/os/IBinder;
 
@@ -744,16 +643,13 @@
 
     move-result-object v1
 
-    .line 254
     .local v1, "_arg1":Landroid/sec/clipboard/IClipboardDataPasteEvent;
     invoke-virtual {p0, v0, v1}, Landroid/sec/clipboard/IClipboardService$Stub;->ShowUIClipboardData(ILandroid/sec/clipboard/IClipboardDataPasteEvent;)V
 
-    .line 255
     invoke-virtual {p3}, Landroid/os/Parcel;->writeNoException()V
 
     goto/16 :goto_0
 
-    .line 260
     .end local v0    # "_arg0":I
     .end local v1    # "_arg1":Landroid/sec/clipboard/IClipboardDataPasteEvent;
     :sswitch_12
@@ -761,12 +657,10 @@
 
     invoke-virtual {p2, v5}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
 
-    .line 262
     invoke-virtual {p2}, Landroid/os/Parcel;->readInt()I
 
     move-result v0
 
-    .line 264
     .restart local v0    # "_arg0":I
     invoke-virtual {p2}, Landroid/os/Parcel;->readStrongBinder()Landroid/os/IBinder;
 
@@ -776,16 +670,13 @@
 
     move-result-object v1
 
-    .line 265
     .restart local v1    # "_arg1":Landroid/sec/clipboard/IClipboardDataPasteEvent;
     invoke-virtual {p0, v0, v1}, Landroid/sec/clipboard/IClipboardService$Stub;->UpdateUIClipboardData(ILandroid/sec/clipboard/IClipboardDataPasteEvent;)V
 
-    .line 266
     invoke-virtual {p3}, Landroid/os/Parcel;->writeNoException()V
 
     goto/16 :goto_0
 
-    .line 271
     .end local v0    # "_arg0":I
     .end local v1    # "_arg1":Landroid/sec/clipboard/IClipboardDataPasteEvent;
     :sswitch_13
@@ -793,54 +684,44 @@
 
     invoke-virtual {p2, v5}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
 
-    .line 273
     invoke-virtual {p2}, Landroid/os/Parcel;->readInt()I
 
     move-result v0
 
-    .line 274
     .restart local v0    # "_arg0":I
     invoke-virtual {p0, v0}, Landroid/sec/clipboard/IClipboardService$Stub;->UpdateClipboardDB(I)V
 
-    .line 275
     invoke-virtual {p3}, Landroid/os/Parcel;->writeNoException()V
 
     goto/16 :goto_0
 
-    .line 280
     .end local v0    # "_arg0":I
     :sswitch_14
     const-string v5, "android.sec.clipboard.IClipboardService"
 
     invoke-virtual {p2, v5}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
 
-    .line 282
     invoke-virtual {p2}, Landroid/os/Parcel;->readInt()I
 
     move-result v0
 
-    .line 284
     .restart local v0    # "_arg0":I
     invoke-virtual {p2}, Landroid/os/Parcel;->readInt()I
 
     move-result v1
 
-    .line 285
     .local v1, "_arg1":I
     invoke-virtual {p0, v0, v1}, Landroid/sec/clipboard/IClipboardService$Stub;->getClipedStrings(II)Ljava/util/ArrayList;
 
     move-result-object v4
 
-    .line 286
     .local v4, "_result":Ljava/util/ArrayList;, "Ljava/util/ArrayList<Ljava/lang/String;>;"
     invoke-virtual {p3}, Landroid/os/Parcel;->writeNoException()V
 
-    .line 287
     invoke-virtual {p3, v4}, Landroid/os/Parcel;->writeStringList(Ljava/util/List;)V
 
     goto/16 :goto_0
 
-    .line 292
     .end local v0    # "_arg0":I
     .end local v1    # "_arg1":I
     .end local v4    # "_result":Ljava/util/ArrayList;, "Ljava/util/ArrayList<Ljava/lang/String;>;"
@@ -849,16 +730,13 @@
 
     invoke-virtual {p2, v7}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
 
-    .line 293
     invoke-virtual {p0}, Landroid/sec/clipboard/IClipboardService$Stub;->iscalledPasteMenuFromApp()Z
 
     move-result v3
 
-    .line 294
     .restart local v3    # "_result":Z
     invoke-virtual {p3}, Landroid/os/Parcel;->writeNoException()V
 
-    .line 295
     if-eqz v3, :cond_b
 
     move v5, v6
@@ -868,40 +746,33 @@
 
     goto/16 :goto_0
 
-    .line 300
     .end local v3    # "_result":Z
     :sswitch_16
     const-string v5, "android.sec.clipboard.IClipboardService"
 
     invoke-virtual {p2, v5}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
 
-    .line 302
     invoke-virtual {p2}, Landroid/os/Parcel;->readInt()I
 
     move-result v0
 
-    .line 303
     .restart local v0    # "_arg0":I
     invoke-virtual {p0, v0}, Landroid/sec/clipboard/IClipboardService$Stub;->callPasteMenuFromApp(I)V
 
-    .line 304
     invoke-virtual {p3}, Landroid/os/Parcel;->writeNoException()V
 
     goto/16 :goto_0
 
-    .line 309
     .end local v0    # "_arg0":I
     :sswitch_17
     const-string v7, "android.sec.clipboard.IClipboardService"
 
     invoke-virtual {p2, v7}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
 
-    .line 311
     invoke-virtual {p2}, Landroid/os/Parcel;->readInt()I
 
     move-result v0
 
-    .line 313
     .restart local v0    # "_arg0":I
     invoke-virtual {p2}, Landroid/os/Parcel;->readInt()I
 
@@ -909,7 +780,6 @@
 
     if-eqz v7, :cond_d
 
-    .line 314
     sget-object v7, Landroid/sec/clipboard/data/ClipboardData;->CREATOR:Landroid/os/Parcelable$Creator;
 
     invoke-interface {v7, p2}, Landroid/os/Parcelable$Creator;->createFromParcel(Landroid/os/Parcel;)Ljava/lang/Object;
@@ -918,24 +788,20 @@
 
     check-cast v1, Landroid/sec/clipboard/data/ClipboardData;
 
-    .line 320
     .local v1, "_arg1":Landroid/sec/clipboard/data/ClipboardData;
     :goto_5
     invoke-virtual {p2}, Landroid/os/Parcel;->readString()Ljava/lang/String;
 
     move-result-object v2
 
-    .line 321
     .restart local v2    # "_arg2":Ljava/lang/String;
     invoke-virtual {p0, v0, v1, v2}, Landroid/sec/clipboard/IClipboardService$Stub;->SetClipboardDataWithoutSendingOrginalClipboard(ILandroid/sec/clipboard/data/ClipboardData;Ljava/lang/String;)Z
 
     move-result v3
 
-    .line 322
     .restart local v3    # "_result":Z
     invoke-virtual {p3}, Landroid/os/Parcel;->writeNoException()V
 
-    .line 323
     if-eqz v3, :cond_c
 
     move v5, v6
@@ -945,7 +811,6 @@
 
     goto/16 :goto_0
 
-    .line 317
     .end local v1    # "_arg1":Landroid/sec/clipboard/data/ClipboardData;
     .end local v2    # "_arg2":Ljava/lang/String;
     .end local v3    # "_result":Z
@@ -955,7 +820,6 @@
     .restart local v1    # "_arg1":Landroid/sec/clipboard/data/ClipboardData;
     goto :goto_5
 
-    .line 328
     .end local v0    # "_arg0":I
     .end local v1    # "_arg1":Landroid/sec/clipboard/data/ClipboardData;
     :sswitch_18
@@ -963,14 +827,12 @@
 
     invoke-virtual {p2, v5}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
 
-    .line 330
     invoke-virtual {p2}, Landroid/os/Parcel;->readInt()I
 
     move-result v5
 
     if-eqz v5, :cond_e
 
-    .line 331
     sget-object v5, Landroid/sec/clipboard/data/list/ClipboardDataSmartClip;->CREATOR:Landroid/os/Parcelable$Creator;
 
     invoke-interface {v5, p2}, Landroid/os/Parcelable$Creator;->createFromParcel(Landroid/os/Parcel;)Ljava/lang/Object;
@@ -979,17 +841,14 @@
 
     check-cast v0, Landroid/sec/clipboard/data/list/ClipboardDataSmartClip;
 
-    .line 336
     .local v0, "_arg0":Landroid/sec/clipboard/data/list/ClipboardDataSmartClip;
     :goto_6
     invoke-virtual {p0, v0}, Landroid/sec/clipboard/IClipboardService$Stub;->updateScrapData(Landroid/sec/clipboard/data/list/ClipboardDataSmartClip;)V
 
-    .line 337
     invoke-virtual {p3}, Landroid/os/Parcel;->writeNoException()V
 
     goto/16 :goto_0
 
-    .line 334
     .end local v0    # "_arg0":Landroid/sec/clipboard/data/list/ClipboardDataSmartClip;
     :cond_e
     const/4 v0, 0x0
@@ -997,28 +856,23 @@
     .restart local v0    # "_arg0":Landroid/sec/clipboard/data/list/ClipboardDataSmartClip;
     goto :goto_6
 
-    .line 342
     .end local v0    # "_arg0":Landroid/sec/clipboard/data/list/ClipboardDataSmartClip;
     :sswitch_19
     const-string v5, "android.sec.clipboard.IClipboardService"
 
     invoke-virtual {p2, v5}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
 
-    .line 343
     invoke-virtual {p0}, Landroid/sec/clipboard/IClipboardService$Stub;->getScrapDataNumber()I
 
     move-result v3
 
-    .line 344
     .local v3, "_result":I
     invoke-virtual {p3}, Landroid/os/Parcel;->writeNoException()V
 
-    .line 345
     invoke-virtual {p3, v3}, Landroid/os/Parcel;->writeInt(I)V
 
     goto/16 :goto_0
 
-    .line 62
     nop
 
     :sswitch_data_0

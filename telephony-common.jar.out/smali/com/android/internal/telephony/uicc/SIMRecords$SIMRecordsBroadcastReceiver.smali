@@ -23,7 +23,6 @@
     .locals 0
 
     .prologue
-    .line 504
     iput-object p1, p0, Lcom/android/internal/telephony/uicc/SIMRecords$SIMRecordsBroadcastReceiver;->this$0:Lcom/android/internal/telephony/uicc/SIMRecords;
 
     invoke-direct {p0}, Landroid/content/BroadcastReceiver;-><init>()V
@@ -37,7 +36,6 @@
     .param p2, "x1"    # Lcom/android/internal/telephony/uicc/SIMRecords$1;
 
     .prologue
-    .line 504
     invoke-direct {p0, p1}, Lcom/android/internal/telephony/uicc/SIMRecords$SIMRecordsBroadcastReceiver;-><init>(Lcom/android/internal/telephony/uicc/SIMRecords;)V
 
     return-void
@@ -53,12 +51,10 @@
     .prologue
     const/4 v6, 0x1
 
-    .line 507
     invoke-virtual {p2}, Landroid/content/Intent;->getAction()Ljava/lang/String;
 
     move-result-object v1
 
-    .line 508
     .local v1, "action":Ljava/lang/String;
     const-string v3, "com.samsung.intent.action.setCardDataInit"
 
@@ -68,14 +64,12 @@
 
     if-eqz v3, :cond_3
 
-    .line 509
     iget-object v3, p0, Lcom/android/internal/telephony/uicc/SIMRecords$SIMRecordsBroadcastReceiver;->this$0:Lcom/android/internal/telephony/uicc/SIMRecords;
 
     const-string v4, "com.samsung.intent.action.setCardDataInit"
 
     invoke-virtual {v3, v4}, Lcom/android/internal/telephony/uicc/SIMRecords;->log(Ljava/lang/String;)V
 
-    .line 510
     invoke-static {}, Landroid/telephony/TelephonyManager;->getDefault()Landroid/telephony/TelephonyManager;
 
     move-result-object v3
@@ -116,7 +110,6 @@
 
     if-eqz v3, :cond_2
 
-    .line 514
     :cond_0
     iget-object v3, p0, Lcom/android/internal/telephony/uicc/SIMRecords$SIMRecordsBroadcastReceiver;->this$0:Lcom/android/internal/telephony/uicc/SIMRecords;
 
@@ -128,25 +121,21 @@
 
     if-nez v3, :cond_1
 
-    .line 515
     const-string v3, "gsm.sim.selectnetwork"
 
     const-string v4, "GSM"
 
     invoke-static {v3, v4}, Landroid/os/SystemProperties;->set(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 516
     iget-object v3, p0, Lcom/android/internal/telephony/uicc/SIMRecords$SIMRecordsBroadcastReceiver;->this$0:Lcom/android/internal/telephony/uicc/SIMRecords;
 
     # invokes: Lcom/android/internal/telephony/uicc/SIMRecords;->setCardDataInit()V
     invoke-static {v3}, Lcom/android/internal/telephony/uicc/SIMRecords;->access$100(Lcom/android/internal/telephony/uicc/SIMRecords;)V
 
-    .line 567
     :cond_1
     :goto_0
     return-void
 
-    .line 519
     :cond_2
     const-string v3, "gsm.sim.selectnetwork"
 
@@ -154,7 +143,6 @@
 
     invoke-static {v3, v4}, Landroid/os/SystemProperties;->set(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 520
     iget-object v3, p0, Lcom/android/internal/telephony/uicc/SIMRecords$SIMRecordsBroadcastReceiver;->this$0:Lcom/android/internal/telephony/uicc/SIMRecords;
 
     # invokes: Lcom/android/internal/telephony/uicc/SIMRecords;->setCardDataInit()V
@@ -162,7 +150,6 @@
 
     goto :goto_0
 
-    .line 522
     :cond_3
     const-string v3, "com.samsung.intent.action.Slot2SwitchCompleted"
 
@@ -172,7 +159,6 @@
 
     if-eqz v3, :cond_5
 
-    .line 523
     const-string v3, "DCGS"
 
     const-string v4, ""
@@ -193,7 +179,6 @@
 
     if-eqz v3, :cond_1
 
-    .line 525
     :cond_4
     iget-object v3, p0, Lcom/android/internal/telephony/uicc/SIMRecords$SIMRecordsBroadcastReceiver;->this$0:Lcom/android/internal/telephony/uicc/SIMRecords;
 
@@ -201,7 +186,6 @@
 
     invoke-virtual {v3, v4}, Lcom/android/internal/telephony/uicc/SIMRecords;->log(Ljava/lang/String;)V
 
-    .line 526
     iget-object v3, p0, Lcom/android/internal/telephony/uicc/SIMRecords$SIMRecordsBroadcastReceiver;->this$0:Lcom/android/internal/telephony/uicc/SIMRecords;
 
     # invokes: Lcom/android/internal/telephony/uicc/SIMRecords;->setCardDataInit()V
@@ -209,7 +193,6 @@
 
     goto :goto_0
 
-    .line 528
     :cond_5
     const-string v3, "com.samsung.intent.action.Slot2OnCompleted"
 
@@ -219,7 +202,6 @@
 
     if-eqz v3, :cond_7
 
-    .line 529
     const-string v3, "DCGS"
 
     const-string v4, ""
@@ -240,7 +222,6 @@
 
     if-eqz v3, :cond_1
 
-    .line 531
     :cond_6
     iget-object v3, p0, Lcom/android/internal/telephony/uicc/SIMRecords$SIMRecordsBroadcastReceiver;->this$0:Lcom/android/internal/telephony/uicc/SIMRecords;
 
@@ -248,7 +229,6 @@
 
     invoke-virtual {v3, v4}, Lcom/android/internal/telephony/uicc/SIMRecords;->log(Ljava/lang/String;)V
 
-    .line 532
     iget-object v3, p0, Lcom/android/internal/telephony/uicc/SIMRecords$SIMRecordsBroadcastReceiver;->this$0:Lcom/android/internal/telephony/uicc/SIMRecords;
 
     # invokes: Lcom/android/internal/telephony/uicc/SIMRecords;->setCardDataInit()V
@@ -256,7 +236,6 @@
 
     goto :goto_0
 
-    .line 536
     :cond_7
     const-string v3, "android.intent.action.CSC_UPDATE_NETWORK_DONE"
 
@@ -266,21 +245,18 @@
 
     if-eqz v3, :cond_b
 
-    .line 537
     iget-object v3, p0, Lcom/android/internal/telephony/uicc/SIMRecords$SIMRecordsBroadcastReceiver;->this$0:Lcom/android/internal/telephony/uicc/SIMRecords;
 
     const-string v4, "[Voicemail] receive android.intent.action.CSC_UPDATE_NETWORK_DONE"
 
     invoke-virtual {v3, v4}, Lcom/android/internal/telephony/uicc/SIMRecords;->log(Ljava/lang/String;)V
 
-    .line 538
     const-string v3, "networkName"
 
     invoke-virtual {p2, v3}, Landroid/content/Intent;->getStringExtra(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v2
 
-    .line 539
     .local v2, "mNetworkName":Ljava/lang/String;
     if-eqz v2, :cond_8
 
@@ -290,7 +266,6 @@
 
     if-eqz v3, :cond_9
 
-    .line 540
     :cond_8
     iget-object v3, p0, Lcom/android/internal/telephony/uicc/SIMRecords$SIMRecordsBroadcastReceiver;->this$0:Lcom/android/internal/telephony/uicc/SIMRecords;
 
@@ -300,7 +275,6 @@
 
     goto/16 :goto_0
 
-    .line 541
     :cond_9
     iget-object v3, p0, Lcom/android/internal/telephony/uicc/SIMRecords$SIMRecordsBroadcastReceiver;->this$0:Lcom/android/internal/telephony/uicc/SIMRecords;
 
@@ -310,7 +284,6 @@
 
     if-nez v3, :cond_1
 
-    .line 542
     iget-object v3, p0, Lcom/android/internal/telephony/uicc/SIMRecords$SIMRecordsBroadcastReceiver;->this$0:Lcom/android/internal/telephony/uicc/SIMRecords;
 
     new-instance v4, Ljava/lang/StringBuilder;
@@ -333,7 +306,6 @@
 
     invoke-virtual {v3, v4}, Lcom/android/internal/telephony/uicc/SIMRecords;->log(Ljava/lang/String;)V
 
-    .line 543
     invoke-static {}, Landroid/telephony/TelephonyManager;->getDefault()Landroid/telephony/TelephonyManager;
 
     move-result-object v3
@@ -344,7 +316,6 @@
 
     if-le v3, v6, :cond_a
 
-    .line 544
     const-string v3, "SLOT_ID"
 
     const/4 v4, 0x0
@@ -353,7 +324,6 @@
 
     move-result v0
 
-    .line 545
     .local v0, "SlotID":I
     iget-object v3, p0, Lcom/android/internal/telephony/uicc/SIMRecords$SIMRecordsBroadcastReceiver;->this$0:Lcom/android/internal/telephony/uicc/SIMRecords;
 
@@ -365,13 +335,11 @@
 
     if-ne v3, v0, :cond_1
 
-    .line 546
     iget-object v3, p0, Lcom/android/internal/telephony/uicc/SIMRecords$SIMRecordsBroadcastReceiver;->this$0:Lcom/android/internal/telephony/uicc/SIMRecords;
 
     # invokes: Lcom/android/internal/telephony/uicc/SIMRecords;->setVoiceMailByCountry(Ljava/lang/String;)V
     invoke-static {v3, v2}, Lcom/android/internal/telephony/uicc/SIMRecords;->access$200(Lcom/android/internal/telephony/uicc/SIMRecords;Ljava/lang/String;)V
 
-    .line 547
     iget-object v3, p0, Lcom/android/internal/telephony/uicc/SIMRecords$SIMRecordsBroadcastReceiver;->this$0:Lcom/android/internal/telephony/uicc/SIMRecords;
 
     # setter for: Lcom/android/internal/telephony/uicc/SIMRecords;->selectedNwkName:Ljava/lang/String;
@@ -379,7 +347,6 @@
 
     goto/16 :goto_0
 
-    .line 550
     .end local v0    # "SlotID":I
     :cond_a
     iget-object v3, p0, Lcom/android/internal/telephony/uicc/SIMRecords$SIMRecordsBroadcastReceiver;->this$0:Lcom/android/internal/telephony/uicc/SIMRecords;
@@ -387,7 +354,6 @@
     # invokes: Lcom/android/internal/telephony/uicc/SIMRecords;->setVoiceMailByCountry(Ljava/lang/String;)V
     invoke-static {v3, v2}, Lcom/android/internal/telephony/uicc/SIMRecords;->access$200(Lcom/android/internal/telephony/uicc/SIMRecords;Ljava/lang/String;)V
 
-    .line 551
     iget-object v3, p0, Lcom/android/internal/telephony/uicc/SIMRecords$SIMRecordsBroadcastReceiver;->this$0:Lcom/android/internal/telephony/uicc/SIMRecords;
 
     # setter for: Lcom/android/internal/telephony/uicc/SIMRecords;->selectedNwkName:Ljava/lang/String;
@@ -395,7 +361,6 @@
 
     goto/16 :goto_0
 
-    .line 554
     .end local v2    # "mNetworkName":Ljava/lang/String;
     :cond_b
     const-string v3, "android.intent.action.CSC_UPDATE_VOICEMAIL_DONE"
@@ -406,21 +371,18 @@
 
     if-eqz v3, :cond_1
 
-    .line 555
     iget-object v3, p0, Lcom/android/internal/telephony/uicc/SIMRecords$SIMRecordsBroadcastReceiver;->this$0:Lcom/android/internal/telephony/uicc/SIMRecords;
 
     const-string v4, "[Voicemail] receive android.intent.action.CSC_UPDATE_VOICEMAIL_DONE"
 
     invoke-virtual {v3, v4}, Lcom/android/internal/telephony/uicc/SIMRecords;->log(Ljava/lang/String;)V
 
-    .line 556
     iget-object v3, p0, Lcom/android/internal/telephony/uicc/SIMRecords$SIMRecordsBroadcastReceiver;->this$0:Lcom/android/internal/telephony/uicc/SIMRecords;
 
     iget-object v3, v3, Lcom/android/internal/telephony/uicc/SIMRecords;->mVmConfig:Lcom/android/internal/telephony/uicc/VoiceMailConstants;
 
     if-eqz v3, :cond_c
 
-    .line 557
     iget-object v3, p0, Lcom/android/internal/telephony/uicc/SIMRecords$SIMRecordsBroadcastReceiver;->this$0:Lcom/android/internal/telephony/uicc/SIMRecords;
 
     new-instance v4, Lcom/android/internal/telephony/uicc/VoiceMailConstants;
@@ -429,14 +391,12 @@
 
     iput-object v4, v3, Lcom/android/internal/telephony/uicc/SIMRecords;->mVmConfig:Lcom/android/internal/telephony/uicc/VoiceMailConstants;
 
-    .line 558
     iget-object v3, p0, Lcom/android/internal/telephony/uicc/SIMRecords$SIMRecordsBroadcastReceiver;->this$0:Lcom/android/internal/telephony/uicc/SIMRecords;
 
     const-string v4, "[Voicemail] Reload voicemail-conf.xml as it could be changed."
 
     invoke-virtual {v3, v4}, Lcom/android/internal/telephony/uicc/SIMRecords;->log(Ljava/lang/String;)V
 
-    .line 560
     :cond_c
     iget-object v3, p0, Lcom/android/internal/telephony/uicc/SIMRecords$SIMRecordsBroadcastReceiver;->this$0:Lcom/android/internal/telephony/uicc/SIMRecords;
 
@@ -446,7 +406,6 @@
 
     if-nez v3, :cond_1
 
-    .line 561
     iget-object v3, p0, Lcom/android/internal/telephony/uicc/SIMRecords$SIMRecordsBroadcastReceiver;->this$0:Lcom/android/internal/telephony/uicc/SIMRecords;
 
     # getter for: Lcom/android/internal/telephony/uicc/SIMRecords;->selectedNwkName:Ljava/lang/String;
@@ -456,7 +415,6 @@
 
     if-eqz v3, :cond_1
 
-    .line 562
     iget-object v3, p0, Lcom/android/internal/telephony/uicc/SIMRecords$SIMRecordsBroadcastReceiver;->this$0:Lcom/android/internal/telephony/uicc/SIMRecords;
 
     iget-object v4, p0, Lcom/android/internal/telephony/uicc/SIMRecords$SIMRecordsBroadcastReceiver;->this$0:Lcom/android/internal/telephony/uicc/SIMRecords;

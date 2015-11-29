@@ -28,7 +28,6 @@
     .locals 1
 
     .prologue
-    .line 33
     const/4 v0, 0x0
 
     sput-object v0, Landroid/os/DssHelper;->mInstance:Landroid/os/DssHelper;
@@ -40,22 +39,18 @@
     .locals 2
 
     .prologue
-    .line 30
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 28
     new-instance v0, Ljava/util/HashMap;
 
     invoke-direct {v0}, Ljava/util/HashMap;-><init>()V
 
     iput-object v0, p0, Landroid/os/DssHelper;->mWhiteList:Ljava/util/HashMap;
 
-    .line 65
     const-wide/high16 v0, 0x3fe0000000000000L    # 0.5
 
     iput-wide v0, p0, Landroid/os/DssHelper;->DEFAULT_FACTOR:D
 
-    .line 31
     return-void
 .end method
 
@@ -63,19 +58,16 @@
     .locals 1
 
     .prologue
-    .line 36
     sget-object v0, Landroid/os/DssHelper;->mInstance:Landroid/os/DssHelper;
 
     if-nez v0, :cond_0
 
-    .line 37
     new-instance v0, Landroid/os/DssHelper;
 
     invoke-direct {v0}, Landroid/os/DssHelper;-><init>()V
 
     sput-object v0, Landroid/os/DssHelper;->mInstance:Landroid/os/DssHelper;
 
-    .line 39
     :cond_0
     sget-object v0, Landroid/os/DssHelper;->mInstance:Landroid/os/DssHelper;
 
@@ -90,7 +82,6 @@
     .param p2, "scalingFactor"    # D
 
     .prologue
-    .line 47
     monitor-enter p0
 
     const-wide/high16 v0, 0x3ff0000000000000L    # 1.0
@@ -99,7 +90,6 @@
 
     if-nez v0, :cond_1
 
-    .line 48
     :try_start_0
     iget-object v0, p0, Landroid/os/DssHelper;->mWhiteList:Ljava/util/HashMap;
 
@@ -109,21 +99,18 @@
 
     if-eqz v0, :cond_0
 
-    .line 49
     iget-object v0, p0, Landroid/os/DssHelper;->mWhiteList:Ljava/util/HashMap;
 
     invoke-virtual {v0, p1}, Ljava/util/HashMap;->remove(Ljava/lang/Object;)Ljava/lang/Object;
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 54
     :cond_0
     :goto_0
     monitor-exit p0
 
     return-void
 
-    .line 52
     :cond_1
     :try_start_1
     iget-object v0, p0, Landroid/os/DssHelper;->mWhiteList:Ljava/util/HashMap;
@@ -138,7 +125,6 @@
 
     goto :goto_0
 
-    .line 47
     :catchall_0
     move-exception v0
 
@@ -151,7 +137,6 @@
     .locals 2
 
     .prologue
-    .line 68
     monitor-enter p0
 
     const-wide/high16 v0, 0x3fe0000000000000L    # 0.5
@@ -166,7 +151,6 @@
     .param p1, "packageName"    # Ljava/lang/String;
 
     .prologue
-    .line 72
     monitor-enter p0
 
     :try_start_0
@@ -178,7 +162,6 @@
 
     if-eqz v0, :cond_0
 
-    .line 73
     iget-object v0, p0, Landroid/os/DssHelper;->mWhiteList:Ljava/util/HashMap;
 
     invoke-virtual {v0, p1}, Ljava/util/HashMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
@@ -193,7 +176,6 @@
 
     move-result-wide v0
 
-    .line 75
     :goto_0
     monitor-exit p0
 
@@ -204,7 +186,6 @@
 
     goto :goto_0
 
-    .line 72
     :catchall_0
     move-exception v0
 
@@ -217,24 +198,20 @@
     .locals 10
 
     .prologue
-    .line 79
     new-instance v5, Ljava/lang/StringBuilder;
 
     invoke-direct {v5}, Ljava/lang/StringBuilder;-><init>()V
 
-    .line 81
     .local v5, "sb":Ljava/lang/StringBuilder;
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
-    .line 82
     .local v0, "dss0_5List":Ljava/util/ArrayList;, "Ljava/util/ArrayList<Ljava/lang/String;>;"
     new-instance v1, Ljava/util/ArrayList;
 
     invoke-direct {v1}, Ljava/util/ArrayList;-><init>()V
 
-    .line 84
     .local v1, "dss0_75List":Ljava/util/ArrayList;, "Ljava/util/ArrayList<Ljava/lang/String;>;"
     iget-object v6, p0, Landroid/os/DssHelper;->mWhiteList:Ljava/util/HashMap;
 
@@ -261,7 +238,6 @@
 
     check-cast v2, Ljava/util/Map$Entry;
 
-    .line 85
     .local v2, "elem":Ljava/util/Map$Entry;, "Ljava/util/Map$Entry<Ljava/lang/String;Ljava/lang/Double;>;"
     invoke-interface {v2}, Ljava/util/Map$Entry;->getValue()Ljava/lang/Object;
 
@@ -279,7 +255,6 @@
 
     if-nez v6, :cond_1
 
-    .line 86
     invoke-interface {v2}, Ljava/util/Map$Entry;->getKey()Ljava/lang/Object;
 
     move-result-object v6
@@ -288,7 +263,6 @@
 
     goto :goto_0
 
-    .line 87
     :cond_1
     invoke-interface {v2}, Ljava/util/Map$Entry;->getValue()Ljava/lang/Object;
 
@@ -306,7 +280,6 @@
 
     if-nez v6, :cond_0
 
-    .line 88
     invoke-interface {v2}, Ljava/util/Map$Entry;->getKey()Ljava/lang/Object;
 
     move-result-object v6
@@ -315,19 +288,16 @@
 
     goto :goto_0
 
-    .line 92
     .end local v2    # "elem":Ljava/util/Map$Entry;, "Ljava/util/Map$Entry<Ljava/lang/String;Ljava/lang/Double;>;"
     :cond_2
     const-string v6, "DSS 0.5 Group\n"
 
     invoke-virtual {v5, v6}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 93
     const-string v6, "=============\n"
 
     invoke-virtual {v5, v6}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 94
     invoke-virtual {v0}, Ljava/util/ArrayList;->iterator()Ljava/util/Iterator;
 
     move-result-object v3
@@ -345,35 +315,29 @@
 
     check-cast v4, Ljava/lang/String;
 
-    .line 95
     .local v4, "packageName":Ljava/lang/String;
     invoke-virtual {v5, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 96
     const-string v6, "\n"
 
     invoke-virtual {v5, v6}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     goto :goto_1
 
-    .line 98
     .end local v4    # "packageName":Ljava/lang/String;
     :cond_3
     const-string v6, "\n"
 
     invoke-virtual {v5, v6}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 100
     const-string v6, "DSS 0.75 Group\n"
 
     invoke-virtual {v5, v6}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 101
     const-string v6, "=============\n"
 
     invoke-virtual {v5, v6}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 102
     invoke-virtual {v1}, Ljava/util/ArrayList;->iterator()Ljava/util/Iterator;
 
     move-result-object v3
@@ -391,25 +355,21 @@
 
     check-cast v4, Ljava/lang/String;
 
-    .line 103
     .restart local v4    # "packageName":Ljava/lang/String;
     invoke-virtual {v5, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 104
     const-string v6, "\n"
 
     invoke-virtual {v5, v6}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     goto :goto_2
 
-    .line 106
     .end local v4    # "packageName":Ljava/lang/String;
     :cond_4
     const-string v6, "\n"
 
     invoke-virtual {v5, v6}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 108
     return-object v5
 .end method
 
@@ -418,7 +378,6 @@
     .param p1, "packageName"    # Ljava/lang/String;
 
     .prologue
-    .line 57
     monitor-enter p0
 
     :try_start_0
@@ -447,7 +406,6 @@
     .param p1, "packageName"    # Ljava/lang/String;
 
     .prologue
-    .line 61
     monitor-enter p0
 
     :try_start_0
@@ -457,20 +415,17 @@
 
     if-eqz v0, :cond_0
 
-    .line 62
     iget-object v0, p0, Landroid/os/DssHelper;->mWhiteList:Ljava/util/HashMap;
 
     invoke-virtual {v0, p1}, Ljava/util/HashMap;->remove(Ljava/lang/Object;)Ljava/lang/Object;
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 63
     :cond_0
     monitor-exit p0
 
     return-void
 
-    .line 61
     :catchall_0
     move-exception v0
 

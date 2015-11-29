@@ -28,13 +28,10 @@
     .param p1, "tag"    # Ljava/lang/String;
 
     .prologue
-    .line 145
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 146
     iput-object p1, p0, Lcom/android/internal/telephony/uicc/UiccCarrierPrivilegeRules$TLV;->tag:Ljava/lang/String;
 
-    .line 147
     return-void
 .end method
 
@@ -43,7 +40,6 @@
     .param p0, "x0"    # Lcom/android/internal/telephony/uicc/UiccCarrierPrivilegeRules$TLV;
 
     .prologue
-    .line 140
     iget-object v0, p0, Lcom/android/internal/telephony/uicc/UiccCarrierPrivilegeRules$TLV;->value:Ljava/lang/String;
 
     return-object v0
@@ -57,7 +53,6 @@
     .param p2, "shouldConsumeAll"    # Z
 
     .prologue
-    .line 150
     const-string v2, "UiccCarrierPrivilegeRules"
 
     new-instance v3, Ljava/lang/StringBuilder;
@@ -82,7 +77,6 @@
 
     invoke-static {v2, v3}, Landroid/telephony/Rlog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 151
     iget-object v2, p0, Lcom/android/internal/telephony/uicc/UiccCarrierPrivilegeRules$TLV;->tag:Ljava/lang/String;
 
     invoke-virtual {p1, v2}, Ljava/lang/String;->startsWith(Ljava/lang/String;)Z
@@ -91,7 +85,6 @@
 
     if-nez v2, :cond_0
 
-    .line 152
     new-instance v2, Ljava/lang/IllegalArgumentException;
 
     const-string v3, "Tags don\'t match."
@@ -100,7 +93,6 @@
 
     throw v2
 
-    .line 154
     :cond_0
     iget-object v2, p0, Lcom/android/internal/telephony/uicc/UiccCarrierPrivilegeRules$TLV;->tag:Ljava/lang/String;
 
@@ -108,7 +100,6 @@
 
     move-result v0
 
-    .line 155
     .local v0, "index":I
     add-int/lit8 v2, v0, 0x2
 
@@ -118,7 +109,6 @@
 
     if-le v2, v3, :cond_1
 
-    .line 156
     new-instance v2, Ljava/lang/IllegalArgumentException;
 
     const-string v3, "No length."
@@ -127,7 +117,6 @@
 
     throw v2
 
-    .line 158
     :cond_1
     new-instance v2, Ljava/lang/Integer;
 
@@ -149,10 +138,8 @@
 
     iput-object v2, p0, Lcom/android/internal/telephony/uicc/UiccCarrierPrivilegeRules$TLV;->length:Ljava/lang/Integer;
 
-    .line 160
     add-int/lit8 v0, v0, 0x2
 
-    .line 162
     invoke-virtual {p1}, Ljava/lang/String;->length()I
 
     move-result v2
@@ -167,11 +154,9 @@
 
     sub-int v1, v2, v3
 
-    .line 163
     .local v1, "remainingLength":I
     if-gez v1, :cond_2
 
-    .line 164
     new-instance v2, Ljava/lang/IllegalArgumentException;
 
     const-string v3, "Not enough data."
@@ -180,13 +165,11 @@
 
     throw v2
 
-    .line 166
     :cond_2
     if-eqz p2, :cond_3
 
     if-eqz v1, :cond_3
 
-    .line 167
     new-instance v2, Ljava/lang/IllegalArgumentException;
 
     const-string v3, "Did not consume all."
@@ -195,7 +178,6 @@
 
     throw v2
 
-    .line 169
     :cond_3
     iget-object v2, p0, Lcom/android/internal/telephony/uicc/UiccCarrierPrivilegeRules$TLV;->length:Ljava/lang/Integer;
 
@@ -211,7 +193,6 @@
 
     iput-object v2, p0, Lcom/android/internal/telephony/uicc/UiccCarrierPrivilegeRules$TLV;->value:Ljava/lang/String;
 
-    .line 171
     const-string v2, "UiccCarrierPrivilegeRules"
 
     new-instance v3, Ljava/lang/StringBuilder;
@@ -260,7 +241,6 @@
 
     invoke-static {v2, v3}, Landroid/telephony/Rlog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 173
     iget-object v2, p0, Lcom/android/internal/telephony/uicc/UiccCarrierPrivilegeRules$TLV;->length:Ljava/lang/Integer;
 
     invoke-virtual {v2}, Ljava/lang/Integer;->intValue()I

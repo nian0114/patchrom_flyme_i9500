@@ -28,18 +28,14 @@
     .param p4, "force"    # Z
 
     .prologue
-    .line 460
     iput-object p1, p0, Lcom/android/server/MountService$UmsEnableCallBack;->this$0:Lcom/android/server/MountService;
 
-    .line 461
     const/4 v0, 0x0
 
     invoke-direct {p0, p1, p2, p4, v0}, Lcom/android/server/MountService$UnmountCallBack;-><init>(Lcom/android/server/MountService;Ljava/lang/String;ZZ)V
 
-    .line 462
     iput-object p3, p0, Lcom/android/server/MountService$UmsEnableCallBack;->method:Ljava/lang/String;
 
-    .line 463
     return-void
 .end method
 
@@ -49,10 +45,8 @@
     .locals 4
 
     .prologue
-    .line 467
     invoke-super {p0}, Lcom/android/server/MountService$UnmountCallBack;->handleFinished()V
 
-    .line 468
     iget-object v0, p0, Lcom/android/server/MountService$UmsEnableCallBack;->this$0:Lcom/android/server/MountService;
 
     iget-object v1, p0, Lcom/android/server/MountService$UmsEnableCallBack;->path:Ljava/lang/String;
@@ -64,6 +58,5 @@
     # invokes: Lcom/android/server/MountService;->doShareUnshareVolume(Ljava/lang/String;Ljava/lang/String;Z)V
     invoke-static {v0, v1, v2, v3}, Lcom/android/server/MountService;->access$200(Lcom/android/server/MountService;Ljava/lang/String;Ljava/lang/String;Z)V
 
-    .line 469
     return-void
 .end method

@@ -8,7 +8,6 @@
     .locals 0
 
     .prologue
-    .line 113
     invoke-direct {p0}, Landroid/sec/enterprise/IEDMProxy$Stub;-><init>()V
 
     return-void
@@ -26,7 +25,6 @@
     .param p6, "logMessage"    # Ljava/lang/String;
 
     .prologue
-    .line 493
     const-string v0, "auditlog"
 
     invoke-static {v0}, Lcom/android/server/enterprise/EnterpriseDeviceManagerService;->getPolicyService(Ljava/lang/String;)Ljava/lang/Object;
@@ -51,7 +49,6 @@
 
     invoke-virtual/range {v0 .. v7}, Lcom/android/server/enterprise/auditlog/AuditLogService;->AuditLogger(Landroid/app/enterprise/ContextInfo;IIZILjava/lang/String;Ljava/lang/String;)V
 
-    .line 495
     return-void
 .end method
 
@@ -65,7 +62,6 @@
     .param p6, "logMessage"    # Ljava/lang/String;
 
     .prologue
-    .line 499
     const-string v0, "auditlog"
 
     invoke-static {v0}, Lcom/android/server/enterprise/EnterpriseDeviceManagerService;->getPolicyService(Ljava/lang/String;)Ljava/lang/Object;
@@ -90,7 +86,6 @@
 
     invoke-virtual/range {v0 .. v7}, Lcom/android/server/enterprise/auditlog/AuditLogService;->AuditLoggerMMS(Landroid/app/enterprise/ContextInfo;IIZILjava/lang/String;Ljava/lang/String;)V
 
-    .line 501
     return-void
 .end method
 
@@ -99,7 +94,6 @@
     .param p1, "callType"    # Ljava/lang/String;
 
     .prologue
-    .line 116
     const-string v0, "device_info"
 
     invoke-static {v0}, Lcom/android/server/enterprise/EnterpriseDeviceManagerService;->getPolicyService(Ljava/lang/String;)Ljava/lang/Object;
@@ -110,7 +104,6 @@
 
     invoke-virtual {v0, p1}, Lcom/android/server/enterprise/device/DeviceInfo;->addCallsCount(Ljava/lang/String;)V
 
-    .line 118
     return-void
 .end method
 
@@ -118,8 +111,7 @@
     .locals 1
 
     .prologue
-    .line 311
-    const-string/jumbo v0, "phone_restriction_policy"
+    const-string v0, "phone_restriction_policy"
 
     invoke-static {v0}, Lcom/android/server/enterprise/EnterpriseDeviceManagerService;->getPolicyService(Ljava/lang/String;)Ljava/lang/Object;
 
@@ -138,8 +130,7 @@
     .locals 1
 
     .prologue
-    .line 327
-    const-string/jumbo v0, "phone_restriction_policy"
+    const-string v0, "phone_restriction_policy"
 
     invoke-static {v0}, Lcom/android/server/enterprise/EnterpriseDeviceManagerService;->getPolicyService(Ljava/lang/String;)Ljava/lang/Object;
 
@@ -158,8 +149,7 @@
     .locals 1
 
     .prologue
-    .line 316
-    const-string/jumbo v0, "phone_restriction_policy"
+    const-string v0, "phone_restriction_policy"
 
     invoke-static {v0}, Lcom/android/server/enterprise/EnterpriseDeviceManagerService;->getPolicyService(Ljava/lang/String;)Ljava/lang/Object;
 
@@ -178,8 +168,7 @@
     .locals 1
 
     .prologue
-    .line 332
-    const-string/jumbo v0, "phone_restriction_policy"
+    const-string v0, "phone_restriction_policy"
 
     invoke-static {v0}, Lcom/android/server/enterprise/EnterpriseDeviceManagerService;->getPolicyService(Ljava/lang/String;)Ljava/lang/Object;
 
@@ -200,7 +189,6 @@
     .param p2, "msg"    # Ljava/lang/String;
 
     .prologue
-    .line 438
     const-string v0, "bluetooth_policy"
 
     invoke-static {v0}, Lcom/android/server/enterprise/EnterpriseDeviceManagerService;->getPolicyService(Ljava/lang/String;)Ljava/lang/Object;
@@ -219,7 +207,6 @@
 
     invoke-virtual {v0, v1, p1, p2}, Lcom/android/server/enterprise/bluetooth/BluetoothPolicy;->bluetoothLog(Landroid/app/enterprise/ContextInfo;Ljava/lang/String;Ljava/lang/String;)Z
 
-    .line 441
     return-void
 .end method
 
@@ -228,8 +215,7 @@
     .param p1, "phoneNumber"    # Ljava/lang/String;
 
     .prologue
-    .line 295
-    const-string/jumbo v0, "phone_restriction_policy"
+    const-string v0, "phone_restriction_policy"
 
     invoke-static {v0}, Lcom/android/server/enterprise/EnterpriseDeviceManagerService;->getPolicyService(Ljava/lang/String;)Ljava/lang/Object;
 
@@ -249,8 +235,7 @@
     .param p1, "phoneNumber"    # Ljava/lang/String;
 
     .prologue
-    .line 347
-    const-string/jumbo v0, "phone_restriction_policy"
+    const-string v0, "phone_restriction_policy"
 
     invoke-static {v0}, Lcom/android/server/enterprise/EnterpriseDeviceManagerService;->getPolicyService(Ljava/lang/String;)Ljava/lang/Object;
 
@@ -270,8 +255,7 @@
     .param p1, "phoneNumber"    # Ljava/lang/String;
 
     .prologue
-    .line 300
-    const-string/jumbo v0, "phone_restriction_policy"
+    const-string v0, "phone_restriction_policy"
 
     invoke-static {v0}, Lcom/android/server/enterprise/EnterpriseDeviceManagerService;->getPolicyService(Ljava/lang/String;)Ljava/lang/Object;
 
@@ -291,8 +275,7 @@
     .param p1, "phoneNumber"    # Ljava/lang/String;
 
     .prologue
-    .line 342
-    const-string/jumbo v0, "phone_restriction_policy"
+    const-string v0, "phone_restriction_policy"
 
     invoke-static {v0}, Lcom/android/server/enterprise/EnterpriseDeviceManagerService;->getPolicyService(Ljava/lang/String;)Ljava/lang/Object;
 
@@ -311,8 +294,7 @@
     .locals 1
 
     .prologue
-    .line 337
-    const-string/jumbo v0, "phone_restriction_policy"
+    const-string v0, "phone_restriction_policy"
 
     invoke-static {v0}, Lcom/android/server/enterprise/EnterpriseDeviceManagerService;->getPolicyService(Ljava/lang/String;)Ljava/lang/Object;
 
@@ -333,8 +315,7 @@
     .param p2, "netSSID"    # Ljava/lang/String;
 
     .prologue
-    .line 387
-    const-string/jumbo v0, "wifi_policy"
+    const-string v0, "wifi_policy"
 
     invoke-static {v0}, Lcom/android/server/enterprise/EnterpriseDeviceManagerService;->getPolicyService(Ljava/lang/String;)Ljava/lang/Object;
 
@@ -344,7 +325,6 @@
 
     invoke-virtual {v0, p1, p2}, Lcom/android/server/enterprise/wifi/WifiPolicy;->edmAddOrUpdate(Landroid/net/wifi/WifiConfiguration;Ljava/lang/String;)V
 
-    .line 389
     return-void
 .end method
 
@@ -352,7 +332,6 @@
     .locals 1
 
     .prologue
-    .line 166
     const-string v0, "application_policy"
 
     invoke-static {v0}, Lcom/android/server/enterprise/EnterpriseDeviceManagerService;->getPolicyService(Ljava/lang/String;)Ljava/lang/Object;
@@ -384,7 +363,6 @@
     .end annotation
 
     .prologue
-    .line 770
     const-string v0, "knox_ccm_policy"
 
     invoke-static {v0}, Lcom/android/server/enterprise/EnterpriseDeviceManagerService;->getPolicyService(Ljava/lang/String;)Ljava/lang/Object;
@@ -421,7 +399,6 @@
     .end annotation
 
     .prologue
-    .line 788
     const-string v0, "knox_ccm_policy"
 
     invoke-static {v0}, Lcom/android/server/enterprise/EnterpriseDeviceManagerService;->getPolicyService(Ljava/lang/String;)Ljava/lang/Object;
@@ -442,7 +419,6 @@
     .param p1, "showMsg"    # Z
 
     .prologue
-    .line 176
     const-string v0, "bluetooth_policy"
 
     invoke-static {v0}, Lcom/android/server/enterprise/EnterpriseDeviceManagerService;->getPolicyService(Ljava/lang/String;)Ljava/lang/Object;
@@ -464,8 +440,7 @@
     .locals 2
 
     .prologue
-    .line 362
-    const-string/jumbo v0, "wifi_policy"
+    const-string v0, "wifi_policy"
 
     invoke-static {v0}, Lcom/android/server/enterprise/EnterpriseDeviceManagerService;->getPolicyService(Ljava/lang/String;)Ljava/lang/Object;
 
@@ -488,8 +463,7 @@
     .param p2, "userId"    # I
 
     .prologue
-    .line 367
-    const-string/jumbo v0, "wifi_policy"
+    const-string v0, "wifi_policy"
 
     invoke-static {v0}, Lcom/android/server/enterprise/EnterpriseDeviceManagerService;->getPolicyService(Ljava/lang/String;)Ljava/lang/Object;
 
@@ -512,7 +486,6 @@
     .param p2, "userId"    # I
 
     .prologue
-    .line 160
     const-string v0, "application_policy"
 
     invoke-static {v0}, Lcom/android/server/enterprise/EnterpriseDeviceManagerService;->getPolicyService(Ljava/lang/String;)Ljava/lang/Object;
@@ -534,7 +507,6 @@
     .param p2, "userId"    # I
 
     .prologue
-    .line 668
     const-string v0, "application_policy"
 
     invoke-static {v0}, Lcom/android/server/enterprise/EnterpriseDeviceManagerService;->getPolicyService(Ljava/lang/String;)Ljava/lang/Object;
@@ -556,7 +528,6 @@
     .param p2, "showMsg"    # Z
 
     .prologue
-    .line 420
     const-string v0, "application_policy"
 
     invoke-static {v0}, Lcom/android/server/enterprise/EnterpriseDeviceManagerService;->getPolicyService(Ljava/lang/String;)Ljava/lang/Object;
@@ -587,7 +558,6 @@
     .param p3, "userId"    # I
 
     .prologue
-    .line 426
     const-string v0, "application_policy"
 
     invoke-static {v0}, Lcom/android/server/enterprise/EnterpriseDeviceManagerService;->getPolicyService(Ljava/lang/String;)Ljava/lang/Object;
@@ -607,8 +577,7 @@
     .locals 2
 
     .prologue
-    .line 556
-    const-string/jumbo v0, "wifi_policy"
+    const-string v0, "wifi_policy"
 
     invoke-static {v0}, Lcom/android/server/enterprise/EnterpriseDeviceManagerService;->getPolicyService(Ljava/lang/String;)Ljava/lang/Object;
 
@@ -638,8 +607,7 @@
     .end annotation
 
     .prologue
-    .line 357
-    const-string/jumbo v0, "wifi_policy"
+    const-string v0, "wifi_policy"
 
     invoke-static {v0}, Lcom/android/server/enterprise/EnterpriseDeviceManagerService;->getPolicyService(Ljava/lang/String;)Ljava/lang/Object;
 
@@ -667,7 +635,6 @@
     .param p1, "setting"    # I
 
     .prologue
-    .line 227
     const-string v0, "browser_policy"
 
     invoke-static {v0}, Lcom/android/server/enterprise/EnterpriseDeviceManagerService;->getPolicyService(Ljava/lang/String;)Ljava/lang/Object;
@@ -704,7 +671,6 @@
     .end annotation
 
     .prologue
-    .line 797
     const-string v0, "knox_ccm_policy"
 
     invoke-static {v0}, Lcom/android/server/enterprise/EnterpriseDeviceManagerService;->getPolicyService(Ljava/lang/String;)Ljava/lang/Object;
@@ -744,7 +710,6 @@
     .end annotation
 
     .prologue
-    .line 737
     const-string v0, "enterprise_license_policy"
 
     invoke-static {v0}, Lcom/android/server/enterprise/EnterpriseDeviceManagerService;->getPolicyService(Ljava/lang/String;)Ljava/lang/Object;
@@ -765,8 +730,7 @@
     .param p1, "allAdmins"    # Z
 
     .prologue
-    .line 305
-    const-string/jumbo v0, "phone_restriction_policy"
+    const-string v0, "phone_restriction_policy"
 
     invoke-static {v0}, Lcom/android/server/enterprise/EnterpriseDeviceManagerService;->getPolicyService(Ljava/lang/String;)Ljava/lang/Object;
 
@@ -793,8 +757,7 @@
     .locals 2
 
     .prologue
-    .line 377
-    const-string/jumbo v0, "wifi_policy"
+    const-string v0, "wifi_policy"
 
     invoke-static {v0}, Lcom/android/server/enterprise/EnterpriseDeviceManagerService;->getPolicyService(Ljava/lang/String;)Ljava/lang/Object;
 
@@ -824,8 +787,7 @@
     .end annotation
 
     .prologue
-    .line 352
-    const-string/jumbo v0, "wifi_policy"
+    const-string v0, "wifi_policy"
 
     invoke-static {v0}, Lcom/android/server/enterprise/EnterpriseDeviceManagerService;->getPolicyService(Ljava/lang/String;)Ljava/lang/Object;
 
@@ -852,8 +814,7 @@
     .locals 2
 
     .prologue
-    .line 372
-    const-string/jumbo v0, "wifi_policy"
+    const-string v0, "wifi_policy"
 
     invoke-static {v0}, Lcom/android/server/enterprise/EnterpriseDeviceManagerService;->getPolicyService(Ljava/lang/String;)Ljava/lang/Object;
 
@@ -874,7 +835,6 @@
     .locals 1
 
     .prologue
-    .line 710
     const-string v0, "knoxcustom"
 
     invoke-static {v0}, Lcom/android/server/enterprise/EnterpriseDeviceManagerService;->getPolicyService(Ljava/lang/String;)Ljava/lang/Object;
@@ -894,7 +854,6 @@
     .locals 1
 
     .prologue
-    .line 703
     const-string v0, "knoxcustom"
 
     invoke-static {v0}, Lcom/android/server/enterprise/EnterpriseDeviceManagerService;->getPolicyService(Ljava/lang/String;)Ljava/lang/Object;
@@ -914,7 +873,6 @@
     .locals 1
 
     .prologue
-    .line 699
     const-string v0, "knoxcustom"
 
     invoke-static {v0}, Lcom/android/server/enterprise/EnterpriseDeviceManagerService;->getPolicyService(Ljava/lang/String;)Ljava/lang/Object;
@@ -935,7 +893,6 @@
     .param p1, "alias"    # Ljava/lang/String;
 
     .prologue
-    .line 749
     const-string v0, "knox_ccm_policy"
 
     invoke-static {v0}, Lcom/android/server/enterprise/EnterpriseDeviceManagerService;->getPolicyService(Ljava/lang/String;)Ljava/lang/Object;
@@ -965,7 +922,6 @@
     .param p2, "alias"    # Ljava/lang/String;
 
     .prologue
-    .line 761
     const-string v0, "knox_ccm_policy"
 
     invoke-static {v0}, Lcom/android/server/enterprise/EnterpriseDeviceManagerService;->getPolicyService(Ljava/lang/String;)Ljava/lang/Object;
@@ -1003,8 +959,7 @@
     .end annotation
 
     .prologue
-    .line 661
-    const-string/jumbo v0, "wifi_policy"
+    const-string v0, "wifi_policy"
 
     invoke-static {v0}, Lcom/android/server/enterprise/EnterpriseDeviceManagerService;->getPolicyService(Ljava/lang/String;)Ljava/lang/Object;
 
@@ -1025,7 +980,6 @@
     .locals 3
 
     .prologue
-    .line 779
     const-string v0, "knox_ccm_policy"
 
     invoke-static {v0}, Lcom/android/server/enterprise/EnterpriseDeviceManagerService;->getPolicyService(Ljava/lang/String;)Ljava/lang/Object;
@@ -1056,7 +1010,6 @@
     .param p3, "showMsg"    # Z
 
     .prologue
-    .line 649
     const-string v0, "device_account_policy"
 
     invoke-static {v0}, Lcom/android/server/enterprise/EnterpriseDeviceManagerService;->getPolicyService(Ljava/lang/String;)Ljava/lang/Object;
@@ -1079,7 +1032,6 @@
     .param p3, "showMsg"    # Z
 
     .prologue
-    .line 643
     const-string v0, "device_account_policy"
 
     invoke-static {v0}, Lcom/android/server/enterprise/EnterpriseDeviceManagerService;->getPolicyService(Ljava/lang/String;)Ljava/lang/Object;
@@ -1100,8 +1052,7 @@
     .param p1, "showMsg"    # Z
 
     .prologue
-    .line 638
-    const-string/jumbo v0, "restriction_policy"
+    const-string v0, "restriction_policy"
 
     invoke-static {v0}, Lcom/android/server/enterprise/EnterpriseDeviceManagerService;->getPolicyService(Ljava/lang/String;)Ljava/lang/Object;
 
@@ -1128,7 +1079,6 @@
     .param p6, "showMsg"    # Z
 
     .prologue
-    .line 478
     const-string v0, "application_policy"
 
     invoke-static {v0}, Lcom/android/server/enterprise/EnterpriseDeviceManagerService;->getPolicyService(Ljava/lang/String;)Ljava/lang/Object;
@@ -1161,8 +1111,7 @@
     .param p1, "showMsg"    # Z
 
     .prologue
-    .line 543
-    const-string/jumbo v0, "restriction_policy"
+    const-string v0, "restriction_policy"
 
     invoke-static {v0}, Lcom/android/server/enterprise/EnterpriseDeviceManagerService;->getPolicyService(Ljava/lang/String;)Ljava/lang/Object;
 
@@ -1190,8 +1139,7 @@
     .param p1, "userId"    # I
 
     .prologue
-    .line 717
-    const-string/jumbo v0, "smartcard_access_policy"
+    const-string v0, "smartcard_access_policy"
 
     invoke-static {v0}, Lcom/android/server/enterprise/EnterpriseDeviceManagerService;->getPolicyService(Ljava/lang/String;)Ljava/lang/Object;
 
@@ -1218,8 +1166,7 @@
     .locals 2
 
     .prologue
-    .line 585
-    const-string/jumbo v0, "restriction_policy"
+    const-string v0, "restriction_policy"
 
     invoke-static {v0}, Lcom/android/server/enterprise/EnterpriseDeviceManagerService;->getPolicyService(Ljava/lang/String;)Ljava/lang/Object;
 
@@ -1241,8 +1188,7 @@
     .param p1, "showMsg"    # Z
 
     .prologue
-    .line 415
-    const-string/jumbo v0, "restriction_policy"
+    const-string v0, "restriction_policy"
 
     invoke-static {v0}, Lcom/android/server/enterprise/EnterpriseDeviceManagerService;->getPolicyService(Ljava/lang/String;)Ljava/lang/Object;
 
@@ -1263,8 +1209,7 @@
     .locals 3
 
     .prologue
-    .line 609
-    const-string/jumbo v0, "phone_restriction_policy"
+    const-string v0, "phone_restriction_policy"
 
     invoke-static {v0}, Lcom/android/server/enterprise/EnterpriseDeviceManagerService;->getPolicyService(Ljava/lang/String;)Ljava/lang/Object;
 
@@ -1291,8 +1236,7 @@
     .locals 3
 
     .prologue
-    .line 603
-    const-string/jumbo v0, "phone_restriction_policy"
+    const-string v0, "phone_restriction_policy"
 
     invoke-static {v0}, Lcom/android/server/enterprise/EnterpriseDeviceManagerService;->getPolicyService(Ljava/lang/String;)Ljava/lang/Object;
 
@@ -1320,7 +1264,6 @@
     .param p1, "address"    # Ljava/lang/String;
 
     .prologue
-    .line 202
     const-string v0, "bluetooth_policy"
 
     invoke-static {v0}, Lcom/android/server/enterprise/EnterpriseDeviceManagerService;->getPolicyService(Ljava/lang/String;)Ljava/lang/Object;
@@ -1342,7 +1285,6 @@
     .locals 2
 
     .prologue
-    .line 222
     const-string v0, "bluetooth_policy"
 
     invoke-static {v0}, Lcom/android/server/enterprise/EnterpriseDeviceManagerService;->getPolicyService(Ljava/lang/String;)Ljava/lang/Object;
@@ -1364,7 +1306,6 @@
     .locals 2
 
     .prologue
-    .line 433
     const-string v0, "bluetooth_policy"
 
     invoke-static {v0}, Lcom/android/server/enterprise/EnterpriseDeviceManagerService;->getPolicyService(Ljava/lang/String;)Ljava/lang/Object;
@@ -1387,7 +1328,6 @@
     .param p1, "uuid"    # Ljava/lang/String;
 
     .prologue
-    .line 192
     const-string v0, "bluetooth_policy"
 
     invoke-static {v0}, Lcom/android/server/enterprise/EnterpriseDeviceManagerService;->getPolicyService(Ljava/lang/String;)Ljava/lang/Object;
@@ -1407,7 +1347,6 @@
     .locals 3
 
     .prologue
-    .line 743
     const-string v0, "knox_ccm_policy"
 
     invoke-static {v0}, Lcom/android/server/enterprise/EnterpriseDeviceManagerService;->getPolicyService(Ljava/lang/String;)Ljava/lang/Object;
@@ -1436,7 +1375,6 @@
     .param p1, "packageName"    # Ljava/lang/String;
 
     .prologue
-    .line 755
     const-string v0, "knox_ccm_policy"
 
     invoke-static {v0}, Lcom/android/server/enterprise/EnterpriseDeviceManagerService;->getPolicyService(Ljava/lang/String;)Ljava/lang/Object;
@@ -1466,10 +1404,8 @@
     .param p2, "showMsg"    # Z
 
     .prologue
-    .line 510
     const/4 v9, 0x1
 
-    .line 511
     .local v9, "ret":Z
     new-instance v4, Landroid/app/enterprise/ContextInfo;
 
@@ -1479,11 +1415,9 @@
 
     invoke-direct {v4, v10}, Landroid/app/enterprise/ContextInfo;-><init>(I)V
 
-    .line 512
     .local v4, "cxtInfo":Landroid/app/enterprise/ContextInfo;
     const/4 v8, 0x0
 
-    .line 514
     .local v8, "list":Ljava/util/List;, "Ljava/util/List<Ljava/security/cert/X509Certificate;>;"
     :try_start_0
     invoke-static {p1}, Landroid/security/Credentials;->convertFromPem([B)Ljava/util/List;
@@ -1494,28 +1428,22 @@
 
     move-result-object v8
 
-    .line 526
     if-nez v8, :cond_0
 
-    .line 527
     const-string v10, "EDMProxyService"
 
     const-string v11, "Could not convert one certificate."
 
     invoke-static {v10, v11}, Lcom/android/server/enterprise/log/Log;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 528
     const/4 v10, 0x1
 
-    .line 539
     :goto_0
     return v10
 
-    .line 515
     :catch_0
     move-exception v5
 
-    .line 516
     .local v5, "e":Ljava/io/IOException;
     const-string v10, "EDMProxyService"
 
@@ -1523,17 +1451,14 @@
 
     invoke-static {v10, v11}, Lcom/android/server/enterprise/log/Log;->e(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 517
     const/4 v10, 0x1
 
     goto :goto_0
 
-    .line 518
     .end local v5    # "e":Ljava/io/IOException;
     :catch_1
     move-exception v0
 
-    .line 519
     .local v0, "cer":Ljava/security/cert/CertificateException;
     const-string v10, "EDMProxyService"
 
@@ -1541,17 +1466,14 @@
 
     invoke-static {v10, v11}, Lcom/android/server/enterprise/log/Log;->e(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 520
     const/4 v10, 0x1
 
     goto :goto_0
 
-    .line 521
     .end local v0    # "cer":Ljava/security/cert/CertificateException;
     :catch_2
     move-exception v7
 
-    .line 522
     .local v7, "ile":Ljava/lang/IllegalArgumentException;
     const-string v10, "EDMProxyService"
 
@@ -1579,12 +1501,10 @@
 
     invoke-static {v10, v11}, Lcom/android/server/enterprise/log/Log;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 523
     const/4 v10, 0x1
 
     goto :goto_0
 
-    .line 531
     .end local v7    # "ile":Ljava/lang/IllegalArgumentException;
     :cond_0
     const-string v10, "certificate_policy"
@@ -1595,7 +1515,6 @@
 
     check-cast v3, Lcom/android/server/enterprise/certificate/CertificatePolicy;
 
-    .line 534
     .local v3, "certPolicy":Lcom/android/server/enterprise/certificate/CertificatePolicy;
     invoke-interface {v8}, Ljava/util/List;->iterator()Ljava/util/Iterator;
 
@@ -1615,13 +1534,11 @@
 
     check-cast v1, Ljava/security/cert/X509Certificate;
 
-    .line 535
     .local v1, "cert":Ljava/security/cert/X509Certificate;
     new-instance v2, Landroid/app/enterprise/CertificateInfo;
 
     invoke-direct {v2, v1}, Landroid/app/enterprise/CertificateInfo;-><init>(Ljava/security/cert/Certificate;)V
 
-    .line 536
     .local v2, "certInfo":Landroid/app/enterprise/CertificateInfo;
     invoke-virtual {v3, v4, v2, p2}, Lcom/android/server/enterprise/certificate/CertificatePolicy;->isCaCertificateTrusted(Landroid/app/enterprise/ContextInfo;Landroid/app/enterprise/CertificateInfo;Z)Z
 
@@ -1629,7 +1546,6 @@
 
     and-int/2addr v9, v10
 
-    .line 537
     if-nez v9, :cond_1
 
     const/4 v10, 0x0
@@ -1641,7 +1557,6 @@
     :cond_2
     move v10, v9
 
-    .line 539
     goto :goto_0
 .end method
 
@@ -1649,7 +1564,6 @@
     .locals 3
 
     .prologue
-    .line 121
     const-string v0, "device_info"
 
     invoke-static {v0}, Lcom/android/server/enterprise/EnterpriseDeviceManagerService;->getPolicyService(Ljava/lang/String;)Ljava/lang/Object;
@@ -1678,8 +1592,7 @@
     .param p1, "showMsg"    # Z
 
     .prologue
-    .line 261
-    const-string/jumbo v0, "restriction_policy"
+    const-string v0, "restriction_policy"
 
     invoke-static {v0}, Lcom/android/server/enterprise/EnterpriseDeviceManagerService;->getPolicyService(Ljava/lang/String;)Ljava/lang/Object;
 
@@ -1706,8 +1619,7 @@
     .locals 3
 
     .prologue
-    .line 233
-    const-string/jumbo v0, "password_policy"
+    const-string v0, "password_policy"
 
     invoke-static {v0}, Lcom/android/server/enterprise/EnterpriseDeviceManagerService;->getPolicyService(Ljava/lang/String;)Ljava/lang/Object;
 
@@ -1735,8 +1647,7 @@
     .param p1, "showMsg"    # Z
 
     .prologue
-    .line 277
-    const-string/jumbo v0, "restriction_policy"
+    const-string v0, "restriction_policy"
 
     invoke-static {v0}, Lcom/android/server/enterprise/EnterpriseDeviceManagerService;->getPolicyService(Ljava/lang/String;)Ljava/lang/Object;
 
@@ -1763,8 +1674,7 @@
     .locals 3
 
     .prologue
-    .line 597
-    const-string/jumbo v0, "restriction_policy"
+    const-string v0, "restriction_policy"
 
     invoke-static {v0}, Lcom/android/server/enterprise/EnterpriseDeviceManagerService;->getPolicyService(Ljava/lang/String;)Ljava/lang/Object;
 
@@ -1792,8 +1702,7 @@
     .param p1, "message"    # I
 
     .prologue
-    .line 674
-    const-string/jumbo v0, "phone_restriction_policy"
+    const-string v0, "phone_restriction_policy"
 
     invoke-static {v0}, Lcom/android/server/enterprise/EnterpriseDeviceManagerService;->getPolicyService(Ljava/lang/String;)Ljava/lang/Object;
 
@@ -1812,7 +1721,6 @@
     .locals 3
 
     .prologue
-    .line 392
     const-string v0, "date_time_policy"
 
     invoke-static {v0}, Lcom/android/server/enterprise/EnterpriseDeviceManagerService;->getPolicyService(Ljava/lang/String;)Ljava/lang/Object;
@@ -1840,7 +1748,6 @@
     .locals 2
 
     .prologue
-    .line 187
     const-string v0, "bluetooth_policy"
 
     invoke-static {v0}, Lcom/android/server/enterprise/EnterpriseDeviceManagerService;->getPolicyService(Ljava/lang/String;)Ljava/lang/Object;
@@ -1862,7 +1769,6 @@
     .locals 2
 
     .prologue
-    .line 212
     const-string v0, "bluetooth_policy"
 
     invoke-static {v0}, Lcom/android/server/enterprise/EnterpriseDeviceManagerService;->getPolicyService(Ljava/lang/String;)Ljava/lang/Object;
@@ -1884,8 +1790,7 @@
     .locals 3
 
     .prologue
-    .line 404
-    const-string/jumbo v0, "restriction_policy"
+    const-string v0, "restriction_policy"
 
     invoke-static {v0}, Lcom/android/server/enterprise/EnterpriseDeviceManagerService;->getPolicyService(Ljava/lang/String;)Ljava/lang/Object;
 
@@ -1914,7 +1819,6 @@
     .param p2, "showMsg"    # Z
 
     .prologue
-    .line 444
     const-string v0, "kioskmode"
 
     invoke-static {v0}, Lcom/android/server/enterprise/EnterpriseDeviceManagerService;->getPolicyService(Ljava/lang/String;)Ljava/lang/Object;
@@ -1942,8 +1846,7 @@
     .locals 2
 
     .prologue
-    .line 484
-    const-string/jumbo v0, "phone_restriction_policy"
+    const-string v0, "phone_restriction_policy"
 
     invoke-static {v0}, Lcom/android/server/enterprise/EnterpriseDeviceManagerService;->getPolicyService(Ljava/lang/String;)Ljava/lang/Object;
 
@@ -1964,8 +1867,7 @@
     .locals 3
 
     .prologue
-    .line 460
-    const-string/jumbo v0, "phone_restriction_policy"
+    const-string v0, "phone_restriction_policy"
 
     invoke-static {v0}, Lcom/android/server/enterprise/EnterpriseDeviceManagerService;->getPolicyService(Ljava/lang/String;)Ljava/lang/Object;
 
@@ -1993,7 +1895,6 @@
     .param p1, "intent"    # Landroid/content/Intent;
 
     .prologue
-    .line 171
     const-string v0, "application_policy"
 
     invoke-static {v0}, Lcom/android/server/enterprise/EnterpriseDeviceManagerService;->getPolicyService(Ljava/lang/String;)Ljava/lang/Object;
@@ -2013,8 +1914,7 @@
     .locals 2
 
     .prologue
-    .line 591
-    const-string/jumbo v0, "restriction_policy"
+    const-string v0, "restriction_policy"
 
     invoke-static {v0}, Lcom/android/server/enterprise/EnterpriseDeviceManagerService;->getPolicyService(Ljava/lang/String;)Ljava/lang/Object;
 
@@ -2035,8 +1935,7 @@
     .locals 3
 
     .prologue
-    .line 321
-    const-string/jumbo v0, "phone_restriction_policy"
+    const-string v0, "phone_restriction_policy"
 
     invoke-static {v0}, Lcom/android/server/enterprise/EnterpriseDeviceManagerService;->getPolicyService(Ljava/lang/String;)Ljava/lang/Object;
 
@@ -2063,7 +1962,6 @@
     .locals 2
 
     .prologue
-    .line 217
     const-string v0, "bluetooth_policy"
 
     invoke-static {v0}, Lcom/android/server/enterprise/EnterpriseDeviceManagerService;->getPolicyService(Ljava/lang/String;)Ljava/lang/Object;
@@ -2086,7 +1984,6 @@
     .param p1, "provider"    # Ljava/lang/String;
 
     .prologue
-    .line 155
     const-string v0, "location_policy"
 
     invoke-static {v0}, Lcom/android/server/enterprise/EnterpriseDeviceManagerService;->getPolicyService(Ljava/lang/String;)Ljava/lang/Object;
@@ -2106,7 +2003,6 @@
     .locals 3
 
     .prologue
-    .line 144
     const-string v0, "device_info"
 
     invoke-static {v0}, Lcom/android/server/enterprise/EnterpriseDeviceManagerService;->getPolicyService(Ljava/lang/String;)Ljava/lang/Object;
@@ -2135,8 +2031,7 @@
     .param p1, "showMsg"    # Z
 
     .prologue
-    .line 283
-    const-string/jumbo v0, "restriction_policy"
+    const-string v0, "restriction_policy"
 
     invoke-static {v0}, Lcom/android/server/enterprise/EnterpriseDeviceManagerService;->getPolicyService(Ljava/lang/String;)Ljava/lang/Object;
 
@@ -2163,8 +2058,7 @@
     .locals 1
 
     .prologue
-    .line 267
-    const-string/jumbo v0, "restriction_policy"
+    const-string v0, "restriction_policy"
 
     invoke-static {v0}, Lcom/android/server/enterprise/EnterpriseDeviceManagerService;->getPolicyService(Ljava/lang/String;)Ljava/lang/Object;
 
@@ -2184,8 +2078,7 @@
     .param p1, "showMsg"    # Z
 
     .prologue
-    .line 272
-    const-string/jumbo v0, "restriction_policy"
+    const-string v0, "restriction_policy"
 
     invoke-static {v0}, Lcom/android/server/enterprise/EnterpriseDeviceManagerService;->getPolicyService(Ljava/lang/String;)Ljava/lang/Object;
 
@@ -2204,7 +2097,6 @@
     .locals 1
 
     .prologue
-    .line 679
     const-string v0, "misc_policy"
 
     invoke-static {v0}, Lcom/android/server/enterprise/EnterpriseDeviceManagerService;->getPolicyService(Ljava/lang/String;)Ljava/lang/Object;
@@ -2224,8 +2116,7 @@
     .locals 3
 
     .prologue
-    .line 255
-    const-string/jumbo v0, "restriction_policy"
+    const-string v0, "restriction_policy"
 
     invoke-static {v0}, Lcom/android/server/enterprise/EnterpriseDeviceManagerService;->getPolicyService(Ljava/lang/String;)Ljava/lang/Object;
 
@@ -2252,7 +2143,6 @@
     .locals 3
 
     .prologue
-    .line 567
     const-string v0, "certificate_policy"
 
     invoke-static {v0}, Lcom/android/server/enterprise/EnterpriseDeviceManagerService;->getPolicyService(Ljava/lang/String;)Ljava/lang/Object;
@@ -2280,7 +2170,6 @@
     .locals 2
 
     .prologue
-    .line 182
     const-string v0, "bluetooth_policy"
 
     invoke-static {v0}, Lcom/android/server/enterprise/EnterpriseDeviceManagerService;->getPolicyService(Ljava/lang/String;)Ljava/lang/Object;
@@ -2302,8 +2191,7 @@
     .locals 3
 
     .prologue
-    .line 466
-    const-string/jumbo v0, "phone_restriction_policy"
+    const-string v0, "phone_restriction_policy"
 
     invoke-static {v0}, Lcom/android/server/enterprise/EnterpriseDeviceManagerService;->getPolicyService(Ljava/lang/String;)Ljava/lang/Object;
 
@@ -2331,8 +2219,7 @@
     .param p1, "pkgName"    # Ljava/lang/String;
 
     .prologue
-    .line 723
-    const-string/jumbo v0, "smartcard_access_policy"
+    const-string v0, "smartcard_access_policy"
 
     invoke-static {v0}, Lcom/android/server/enterprise/EnterpriseDeviceManagerService;->getPolicyService(Ljava/lang/String;)Ljava/lang/Object;
 
@@ -2360,8 +2247,7 @@
     .param p1, "calling_Uid"    # I
 
     .prologue
-    .line 729
-    const-string/jumbo v0, "smartcard_access_policy"
+    const-string v0, "smartcard_access_policy"
 
     invoke-static {v0}, Lcom/android/server/enterprise/EnterpriseDeviceManagerService;->getPolicyService(Ljava/lang/String;)Ljava/lang/Object;
 
@@ -2388,7 +2274,6 @@
     .locals 2
 
     .prologue
-    .line 207
     const-string v0, "bluetooth_policy"
 
     invoke-static {v0}, Lcom/android/server/enterprise/EnterpriseDeviceManagerService;->getPolicyService(Ljava/lang/String;)Ljava/lang/Object;
@@ -2411,8 +2296,7 @@
     .param p1, "showMsg"    # Z
 
     .prologue
-    .line 454
-    const-string/jumbo v0, "restriction_policy"
+    const-string v0, "restriction_policy"
 
     invoke-static {v0}, Lcom/android/server/enterprise/EnterpriseDeviceManagerService;->getPolicyService(Ljava/lang/String;)Ljava/lang/Object;
 
@@ -2440,7 +2324,6 @@
     .param p1, "setting"    # I
 
     .prologue
-    .line 197
     const-string v0, "bluetooth_policy"
 
     invoke-static {v0}, Lcom/android/server/enterprise/EnterpriseDeviceManagerService;->getPolicyService(Ljava/lang/String;)Ljava/lang/Object;
@@ -2462,7 +2345,6 @@
     .locals 3
 
     .prologue
-    .line 561
     const-string v0, "certificate_policy"
 
     invoke-static {v0}, Lcom/android/server/enterprise/EnterpriseDeviceManagerService;->getPolicyService(Ljava/lang/String;)Ljava/lang/Object;
@@ -2490,8 +2372,7 @@
     .locals 2
 
     .prologue
-    .line 239
-    const-string/jumbo v0, "roaming_policy"
+    const-string v0, "roaming_policy"
 
     invoke-static {v0}, Lcom/android/server/enterprise/EnterpriseDeviceManagerService;->getPolicyService(Ljava/lang/String;)Ljava/lang/Object;
 
@@ -2512,8 +2393,7 @@
     .locals 2
 
     .prologue
-    .line 244
-    const-string/jumbo v0, "roaming_policy"
+    const-string v0, "roaming_policy"
 
     invoke-static {v0}, Lcom/android/server/enterprise/EnterpriseDeviceManagerService;->getPolicyService(Ljava/lang/String;)Ljava/lang/Object;
 
@@ -2535,8 +2415,7 @@
     .param p1, "showMsg"    # Z
 
     .prologue
-    .line 633
-    const-string/jumbo v0, "restriction_policy"
+    const-string v0, "restriction_policy"
 
     invoke-static {v0}, Lcom/android/server/enterprise/EnterpriseDeviceManagerService;->getPolicyService(Ljava/lang/String;)Ljava/lang/Object;
 
@@ -2557,7 +2436,6 @@
     .locals 3
 
     .prologue
-    .line 133
     const-string v0, "device_info"
 
     invoke-static {v0}, Lcom/android/server/enterprise/EnterpriseDeviceManagerService;->getPolicyService(Ljava/lang/String;)Ljava/lang/Object;
@@ -2586,8 +2464,7 @@
     .param p1, "showMsg"    # Z
 
     .prologue
-    .line 622
-    const-string/jumbo v0, "restriction_policy"
+    const-string v0, "restriction_policy"
 
     invoke-static {v0}, Lcom/android/server/enterprise/EnterpriseDeviceManagerService;->getPolicyService(Ljava/lang/String;)Ljava/lang/Object;
 
@@ -2615,8 +2492,7 @@
     .param p1, "showMsg"    # Z
 
     .prologue
-    .line 289
-    const-string/jumbo v0, "restriction_policy"
+    const-string v0, "restriction_policy"
 
     invoke-static {v0}, Lcom/android/server/enterprise/EnterpriseDeviceManagerService;->getPolicyService(Ljava/lang/String;)Ljava/lang/Object;
 
@@ -2643,8 +2519,7 @@
     .locals 3
 
     .prologue
-    .line 398
-    const-string/jumbo v0, "password_policy"
+    const-string v0, "password_policy"
 
     invoke-static {v0}, Lcom/android/server/enterprise/EnterpriseDeviceManagerService;->getPolicyService(Ljava/lang/String;)Ljava/lang/Object;
 
@@ -2672,8 +2547,7 @@
     .param p1, "showMsg"    # Z
 
     .prologue
-    .line 249
-    const-string/jumbo v0, "restriction_policy"
+    const-string v0, "restriction_policy"
 
     invoke-static {v0}, Lcom/android/server/enterprise/EnterpriseDeviceManagerService;->getPolicyService(Ljava/lang/String;)Ljava/lang/Object;
 
@@ -2701,8 +2575,7 @@
     .param p1, "iccId"    # Ljava/lang/String;
 
     .prologue
-    .line 655
-    const-string/jumbo v0, "phone_restriction_policy"
+    const-string v0, "phone_restriction_policy"
 
     invoke-static {v0}, Lcom/android/server/enterprise/EnterpriseDeviceManagerService;->getPolicyService(Ljava/lang/String;)Ljava/lang/Object;
 
@@ -2722,7 +2595,6 @@
     .param p1, "showMsg"    # Z
 
     .prologue
-    .line 449
     const-string v0, "kioskmode"
 
     invoke-static {v0}, Lcom/android/server/enterprise/EnterpriseDeviceManagerService;->getPolicyService(Ljava/lang/String;)Ljava/lang/Object;
@@ -2750,7 +2622,6 @@
     .locals 3
 
     .prologue
-    .line 807
     const-string v0, "knox_timakeystore_policy"
 
     invoke-static {v0}, Lcom/android/server/enterprise/EnterpriseDeviceManagerService;->getPolicyService(Ljava/lang/String;)Ljava/lang/Object;
@@ -2779,7 +2650,6 @@
     .param p1, "packageName"    # Ljava/lang/String;
 
     .prologue
-    .line 813
     const-string v0, "knox_timakeystore_policy"
 
     invoke-static {v0}, Lcom/android/server/enterprise/EnterpriseDeviceManagerService;->getPolicyService(Ljava/lang/String;)Ljava/lang/Object;
@@ -2808,7 +2678,6 @@
     .param p1, "url"    # Ljava/lang/String;
 
     .prologue
-    .line 472
     const-string v0, "firewall_policy"
 
     invoke-static {v0}, Lcom/android/server/enterprise/EnterpriseDeviceManagerService;->getPolicyService(Ljava/lang/String;)Ljava/lang/Object;
@@ -2828,7 +2697,6 @@
     .locals 2
 
     .prologue
-    .line 684
     const-string v0, "certificate_policy"
 
     invoke-static {v0}, Lcom/android/server/enterprise/EnterpriseDeviceManagerService;->getPolicyService(Ljava/lang/String;)Ljava/lang/Object;
@@ -2851,8 +2719,7 @@
     .param p1, "showMsg"    # Z
 
     .prologue
-    .line 549
-    const-string/jumbo v0, "restriction_policy"
+    const-string v0, "restriction_policy"
 
     invoke-static {v0}, Lcom/android/server/enterprise/EnterpriseDeviceManagerService;->getPolicyService(Ljava/lang/String;)Ljava/lang/Object;
 
@@ -2879,8 +2746,7 @@
     .locals 2
 
     .prologue
-    .line 628
-    const-string/jumbo v0, "phone_restriction_policy"
+    const-string v0, "phone_restriction_policy"
 
     invoke-static {v0}, Lcom/android/server/enterprise/EnterpriseDeviceManagerService;->getPolicyService(Ljava/lang/String;)Ljava/lang/Object;
 
@@ -2902,8 +2768,7 @@
     .param p1, "showMsg"    # Z
 
     .prologue
-    .line 580
-    const-string/jumbo v0, "restriction_policy"
+    const-string v0, "restriction_policy"
 
     invoke-static {v0}, Lcom/android/server/enterprise/EnterpriseDeviceManagerService;->getPolicyService(Ljava/lang/String;)Ljava/lang/Object;
 
@@ -2924,8 +2789,7 @@
     .locals 2
 
     .prologue
-    .line 410
-    const-string/jumbo v0, "wifi_policy"
+    const-string v0, "wifi_policy"
 
     invoke-static {v0}, Lcom/android/server/enterprise/EnterpriseDeviceManagerService;->getPolicyService(Ljava/lang/String;)Ljava/lang/Object;
 
@@ -2949,7 +2813,6 @@
     .param p3, "showMsg"    # Z
 
     .prologue
-    .line 504
     const-string v0, "certificate_policy"
 
     invoke-static {v0}, Lcom/android/server/enterprise/EnterpriseDeviceManagerService;->getPolicyService(Ljava/lang/String;)Ljava/lang/Object;
@@ -2960,7 +2823,6 @@
 
     invoke-virtual {v0, p1, p2, p3}, Lcom/android/server/enterprise/certificate/CertificatePolicy;->notifyCertificateFailure(Ljava/lang/String;Ljava/lang/String;Z)V
 
-    .line 507
     return-void
 .end method
 
@@ -2969,7 +2831,6 @@
     .param p1, "subject"    # Ljava/lang/String;
 
     .prologue
-    .line 573
     const-string v0, "certificate_policy"
 
     invoke-static {v0}, Lcom/android/server/enterprise/EnterpriseDeviceManagerService;->getPolicyService(Ljava/lang/String;)Ljava/lang/Object;
@@ -2980,7 +2841,6 @@
 
     invoke-virtual {v0, p1}, Lcom/android/server/enterprise/certificate/CertificatePolicy;->notifyCertificateRemoved(Ljava/lang/String;)V
 
-    .line 575
     return-void
 .end method
 
@@ -2989,7 +2849,6 @@
     .param p1, "userId"    # I
 
     .prologue
-    .line 689
     const-string v0, "certificate_policy"
 
     invoke-static {v0}, Lcom/android/server/enterprise/EnterpriseDeviceManagerService;->getPolicyService(Ljava/lang/String;)Ljava/lang/Object;
@@ -3000,7 +2859,6 @@
 
     invoke-virtual {v0, p1}, Lcom/android/server/enterprise/certificate/CertificatePolicy;->notifyUserKeystoreUnlocked(I)V
 
-    .line 692
     const-string v0, "knox_scep_policy"
 
     invoke-static {v0}, Lcom/android/server/enterprise/EnterpriseDeviceManagerService;->getPolicyService(Ljava/lang/String;)Ljava/lang/Object;
@@ -3011,7 +2869,6 @@
 
     invoke-virtual {v0, p1}, Lcom/android/server/enterprise/scep/EnterpriseCertEnrollPolicy;->notifyUserKeystoreUnlocked(I)V
 
-    .line 694
     return-void
 .end method
 
@@ -3020,8 +2877,7 @@
     .param p1, "ssid"    # Ljava/lang/String;
 
     .prologue
-    .line 382
-    const-string/jumbo v0, "wifi_policy"
+    const-string v0, "wifi_policy"
 
     invoke-static {v0}, Lcom/android/server/enterprise/EnterpriseDeviceManagerService;->getPolicyService(Ljava/lang/String;)Ljava/lang/Object;
 
@@ -3053,8 +2909,7 @@
     .param p5, "timeStamp"    # Ljava/lang/String;
 
     .prologue
-    .line 616
-    const-string/jumbo v0, "phone_restriction_policy"
+    const-string v0, "phone_restriction_policy"
 
     invoke-static {v0}, Lcom/android/server/enterprise/EnterpriseDeviceManagerService;->getPolicyService(Ljava/lang/String;)Ljava/lang/Object;
 
@@ -3074,7 +2929,6 @@
 
     invoke-virtual/range {v0 .. v5}, Lcom/android/server/enterprise/restriction/PhoneRestrictionPolicy;->storeBlockedSmsMms(Z[BLjava/lang/String;ILjava/lang/String;)V
 
-    .line 619
     return-void
 .end method
 
@@ -3087,7 +2941,6 @@
     .param p5, "isIncoming"    # Z
 
     .prologue
-    .line 128
     const-string v0, "device_info"
 
     invoke-static {v0}, Lcom/android/server/enterprise/EnterpriseDeviceManagerService;->getPolicyService(Ljava/lang/String;)Ljava/lang/Object;
@@ -3108,7 +2961,6 @@
 
     invoke-virtual/range {v0 .. v5}, Lcom/android/server/enterprise/device/DeviceInfo;->storeCalling(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Z)V
 
-    .line 130
     return-void
 .end method
 
@@ -3120,7 +2972,6 @@
     .param p4, "isInbound"    # Z
 
     .prologue
-    .line 150
     const-string v0, "device_info"
 
     invoke-static {v0}, Lcom/android/server/enterprise/EnterpriseDeviceManagerService;->getPolicyService(Ljava/lang/String;)Ljava/lang/Object;
@@ -3131,7 +2982,6 @@
 
     invoke-virtual {v0, p1, p2, p3, p4}, Lcom/android/server/enterprise/device/DeviceInfo;->storeMMS(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Z)V
 
-    .line 152
     return-void
 .end method
 
@@ -3143,7 +2993,6 @@
     .param p4, "isInbound"    # Z
 
     .prologue
-    .line 139
     const-string v0, "device_info"
 
     invoke-static {v0}, Lcom/android/server/enterprise/EnterpriseDeviceManagerService;->getPolicyService(Ljava/lang/String;)Ljava/lang/Object;
@@ -3154,6 +3003,5 @@
 
     invoke-virtual {v0, p1, p2, p3, p4}, Lcom/android/server/enterprise/device/DeviceInfo;->storeSMS(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Z)V
 
-    .line 141
     return-void
 .end method

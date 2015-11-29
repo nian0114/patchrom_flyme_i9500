@@ -26,7 +26,6 @@
     .locals 0
 
     .prologue
-    .line 1717
     iput-object p1, p0, Lcom/android/server/epm/overlay/ThemeManagerService$5;->this$0:Lcom/android/server/epm/overlay/ThemeManagerService;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -46,7 +45,6 @@
 
     const/high16 v2, 0x41200000    # 10.0f
 
-    .line 1720
     invoke-virtual {p2}, Landroid/view/MotionEvent;->getAction()I
 
     move-result v0
@@ -55,7 +53,6 @@
 
     packed-switch v0, :pswitch_data_0
 
-    .line 1739
     :cond_0
     :goto_0
     :pswitch_0
@@ -69,7 +66,6 @@
 
     if-eqz v0, :cond_1
 
-    .line 1740
     iget-object v0, p0, Lcom/android/server/epm/overlay/ThemeManagerService$5;->this$0:Lcom/android/server/epm/overlay/ThemeManagerService;
 
     # getter for: Lcom/android/server/epm/overlay/ThemeManagerService;->mWindowParams:Landroid/view/WindowManager$LayoutParams;
@@ -87,7 +83,6 @@
 
     iput v1, v0, Landroid/view/WindowManager$LayoutParams;->x:I
 
-    .line 1741
     iget-object v0, p0, Lcom/android/server/epm/overlay/ThemeManagerService$5;->this$0:Lcom/android/server/epm/overlay/ThemeManagerService;
 
     # getter for: Lcom/android/server/epm/overlay/ThemeManagerService;->mWindowParams:Landroid/view/WindowManager$LayoutParams;
@@ -105,7 +100,6 @@
 
     iput v1, v0, Landroid/view/WindowManager$LayoutParams;->y:I
 
-    .line 1742
     iget-object v0, p0, Lcom/android/server/epm/overlay/ThemeManagerService$5;->this$0:Lcom/android/server/epm/overlay/ThemeManagerService;
 
     # getter for: Lcom/android/server/epm/overlay/ThemeManagerService;->mWindowManager:Landroid/view/WindowManager;
@@ -129,11 +123,9 @@
 
     invoke-interface {v0, v1, v2}, Landroid/view/WindowManager;->updateViewLayout(Landroid/view/View;Landroid/view/ViewGroup$LayoutParams;)V
 
-    .line 1744
     :cond_1
     return v3
 
-    .line 1722
     :pswitch_1
     iget-object v0, p0, Lcom/android/server/epm/overlay/ThemeManagerService$5;->this$0:Lcom/android/server/epm/overlay/ThemeManagerService;
 
@@ -144,7 +136,6 @@
     # setter for: Lcom/android/server/epm/overlay/ThemeManagerService;->mInitX:F
     invoke-static {v0, v1}, Lcom/android/server/epm/overlay/ThemeManagerService;->access$1902(Lcom/android/server/epm/overlay/ThemeManagerService;F)F
 
-    .line 1723
     iget-object v0, p0, Lcom/android/server/epm/overlay/ThemeManagerService$5;->this$0:Lcom/android/server/epm/overlay/ThemeManagerService;
 
     invoke-virtual {p2}, Landroid/view/MotionEvent;->getRawY()F
@@ -154,7 +145,6 @@
     # setter for: Lcom/android/server/epm/overlay/ThemeManagerService;->mInitY:F
     invoke-static {v0, v1}, Lcom/android/server/epm/overlay/ThemeManagerService;->access$2002(Lcom/android/server/epm/overlay/ThemeManagerService;F)F
 
-    .line 1724
     iget-object v0, p0, Lcom/android/server/epm/overlay/ThemeManagerService$5;->this$0:Lcom/android/server/epm/overlay/ThemeManagerService;
 
     const/4 v1, 0x1
@@ -164,7 +154,6 @@
 
     goto :goto_0
 
-    .line 1730
     :pswitch_2
     iget-object v0, p0, Lcom/android/server/epm/overlay/ThemeManagerService$5;->this$0:Lcom/android/server/epm/overlay/ThemeManagerService;
 
@@ -217,7 +206,6 @@
 
     if-lez v0, :cond_0
 
-    .line 1733
     :cond_2
     iget-object v0, p0, Lcom/android/server/epm/overlay/ThemeManagerService$5;->this$0:Lcom/android/server/epm/overlay/ThemeManagerService;
 
@@ -226,7 +214,6 @@
 
     goto/16 :goto_0
 
-    .line 1720
     nop
 
     :pswitch_data_0

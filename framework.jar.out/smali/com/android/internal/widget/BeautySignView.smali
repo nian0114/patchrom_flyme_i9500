@@ -63,17 +63,14 @@
     .locals 1
 
     .prologue
-    .line 34
     const v0, 0x3e4ccccd    # 0.2f
 
     sput v0, Lcom/android/internal/widget/BeautySignView;->VELOCITY_FILTER_WEIGHT:F
 
-    .line 35
     const/high16 v0, 0x40800000    # 4.0f
 
     sput v0, Lcom/android/internal/widget/BeautySignView;->SPEED_MAX:F
 
-    .line 36
     const/high16 v0, 0x3f800000    # 1.0f
 
     sput v0, Lcom/android/internal/widget/BeautySignView;->SPEED_MIN:F
@@ -86,15 +83,12 @@
     .param p1, "context"    # Landroid/content/Context;
 
     .prologue
-    .line 58
     invoke-direct {p0, p1}, Lcom/android/internal/widget/SignView;-><init>(Landroid/content/Context;)V
 
-    .line 39
     const/16 v0, 0xa
 
     iput v0, p0, Lcom/android/internal/widget/BeautySignView;->MAX_WIDTH:I
 
-    .line 59
     return-void
 .end method
 
@@ -103,22 +97,18 @@
     .param p1, "prevArraySize"    # I
 
     .prologue
-    .line 254
     move-object/from16 v0, p0
 
     iget v3, v0, Lcom/android/internal/widget/BeautySignView;->mX:F
 
-    .line 255
     .local v3, "drawX":F
     move-object/from16 v0, p0
 
     iget v4, v0, Lcom/android/internal/widget/BeautySignView;->mY:F
 
-    .line 256
     .local v4, "drawY":F
     const/4 v9, 0x0
 
-    .line 258
     .local v9, "velocity":F
     move-object/from16 v0, p0
 
@@ -128,7 +118,6 @@
 
     move-result v2
 
-    .line 261
     .local v2, "currentArraySize":I
     const-string v12, "BeautySignView"
 
@@ -164,14 +153,12 @@
 
     invoke-static {v12, v13}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 264
     move/from16 v7, p1
 
     .local v7, "i":I
     :goto_0
     if-ge v7, v2, :cond_7
 
-    .line 265
     move-object/from16 v0, p0
 
     iget-object v12, v0, Lcom/android/internal/widget/BeautySignView;->mBeautyEffectInputData:Ljava/util/ArrayList;
@@ -182,15 +169,12 @@
 
     check-cast v1, Lcom/android/internal/widget/SignView$SignatureInput;
 
-    .line 267
     .local v1, "addedPoint":Lcom/android/internal/widget/SignView$SignatureInput;
     iget v10, v1, Lcom/android/internal/widget/SignView$SignatureInput;->mX:F
 
-    .line 268
     .local v10, "x":F
     iget v11, v1, Lcom/android/internal/widget/SignView$SignatureInput;->mY:F
 
-    .line 269
     .local v11, "y":F
     sub-float v12, v10, v3
 
@@ -198,7 +182,6 @@
 
     move-result v5
 
-    .line 270
     .local v5, "dx":F
     sub-float v12, v11, v4
 
@@ -206,7 +189,6 @@
 
     move-result v6
 
-    .line 272
     .local v6, "dy":F
     const/high16 v12, 0x41200000    # 10.0f
 
@@ -220,7 +202,6 @@
 
     if-ltz v12, :cond_5
 
-    .line 273
     :cond_0
     move-object/from16 v0, p0
 
@@ -240,7 +221,6 @@
 
     invoke-virtual {v12, v13, v14}, Landroid/graphics/Point;->set(II)V
 
-    .line 274
     move-object/from16 v0, p0
 
     iget-object v12, v0, Lcom/android/internal/widget/BeautySignView;->mMidControlPoint:Landroid/graphics/Point;
@@ -251,7 +231,6 @@
 
     invoke-virtual {v12, v13, v14}, Landroid/graphics/Point;->set(II)V
 
-    .line 280
     :goto_1
     move-object/from16 v0, p0
 
@@ -263,7 +242,6 @@
 
     move-result v9
 
-    .line 281
     sget v12, Lcom/android/internal/widget/BeautySignView;->VELOCITY_FILTER_WEIGHT:F
 
     mul-float/2addr v12, v9
@@ -282,17 +260,14 @@
 
     add-float v9, v12, v13
 
-    .line 285
     sget v12, Lcom/android/internal/widget/BeautySignView;->SPEED_MAX:F
 
     cmpl-float v12, v9, v12
 
     if-lez v12, :cond_1
 
-    .line 286
     sget v9, Lcom/android/internal/widget/BeautySignView;->SPEED_MAX:F
 
-    .line 288
     :cond_1
     sget v12, Lcom/android/internal/widget/BeautySignView;->SPEED_MIN:F
 
@@ -300,10 +275,8 @@
 
     if-gez v12, :cond_2
 
-    .line 289
     sget v9, Lcom/android/internal/widget/BeautySignView;->SPEED_MIN:F
 
-    .line 292
     :cond_2
     move-object/from16 v0, p0
 
@@ -315,10 +288,8 @@
 
     iput v12, v0, Lcom/android/internal/widget/BeautySignView;->mCurrentStrokeWidth:F
 
-    .line 293
     const v8, 0x3e4ccccd    # 0.2f
 
-    .line 294
     .local v8, "varLimit":F
     move-object/from16 v0, p0
 
@@ -346,7 +317,6 @@
 
     if-lez v12, :cond_3
 
-    .line 295
     move-object/from16 v0, p0
 
     iget v12, v0, Lcom/android/internal/widget/BeautySignView;->mCurrentStrokeWidth:F
@@ -359,7 +329,6 @@
 
     if-lez v12, :cond_6
 
-    .line 296
     const v12, 0x3f99999a    # 1.2f
 
     move-object/from16 v0, p0
@@ -372,22 +341,18 @@
 
     iput v12, v0, Lcom/android/internal/widget/BeautySignView;->mCurrentStrokeWidth:F
 
-    .line 304
     :cond_3
     :goto_2
     move v3, v10
 
-    .line 305
     move v4, v11
 
-    .line 307
     move-object/from16 v0, p0
 
     iget-boolean v12, v0, Lcom/android/internal/widget/BeautySignView;->mInitWidthVarRatio:Z
 
     if-nez v12, :cond_4
 
-    .line 308
     move-object/from16 v0, p0
 
     iget v12, v0, Lcom/android/internal/widget/BeautySignView;->mCurrentStrokeWidth:F
@@ -396,7 +361,6 @@
 
     iput v12, v0, Lcom/android/internal/widget/BeautySignView;->mLastStrokeWidth:F
 
-    .line 311
     :cond_4
     move-object/from16 v0, p0
 
@@ -418,14 +382,12 @@
 
     invoke-direct {v0, v12, v13, v14, v15}, Lcom/android/internal/widget/BeautySignView;->drawBeautyEffect(Landroid/graphics/Canvas;Landroid/graphics/Paint;FF)V
 
-    .line 313
     const/4 v12, 0x1
 
     move-object/from16 v0, p0
 
     iput-boolean v12, v0, Lcom/android/internal/widget/BeautySignView;->mInitWidthVarRatio:Z
 
-    .line 314
     move-object/from16 v0, p0
 
     iget-object v12, v0, Lcom/android/internal/widget/BeautySignView;->mLastDrawPoint:Landroid/graphics/Point;
@@ -444,12 +406,10 @@
 
     invoke-virtual {v12, v13, v14}, Landroid/graphics/Point;->set(II)V
 
-    .line 315
     move-object/from16 v0, p0
 
     iput v9, v0, Lcom/android/internal/widget/BeautySignView;->mLastVelocity:F
 
-    .line 316
     move-object/from16 v0, p0
 
     iget v12, v0, Lcom/android/internal/widget/BeautySignView;->mCurrentStrokeWidth:F
@@ -458,12 +418,10 @@
 
     iput v12, v0, Lcom/android/internal/widget/BeautySignView;->mLastStrokeWidth:F
 
-    .line 264
     add-int/lit8 v7, v7, 0x1
 
     goto/16 :goto_0
 
-    .line 276
     .end local v8    # "varLimit":F
     :cond_5
     move-object/from16 v0, p0
@@ -476,7 +434,6 @@
 
     invoke-virtual {v12, v13, v14}, Landroid/graphics/Point;->set(II)V
 
-    .line 277
     move-object/from16 v0, p0
 
     iget-object v12, v0, Lcom/android/internal/widget/BeautySignView;->mMidControlPoint:Landroid/graphics/Point;
@@ -497,7 +454,6 @@
 
     goto/16 :goto_1
 
-    .line 298
     .restart local v8    # "varLimit":F
     :cond_6
     const v12, 0x3f4ccccd    # 0.8f
@@ -514,7 +470,6 @@
 
     goto :goto_2
 
-    .line 319
     .end local v1    # "addedPoint":Lcom/android/internal/widget/SignView$SignatureInput;
     .end local v5    # "dx":F
     .end local v6    # "dy":F
@@ -530,7 +485,6 @@
 
     iput v12, v0, Lcom/android/internal/widget/BeautySignView;->mX:F
 
-    .line 320
     move-object/from16 v0, p0
 
     iget v12, v0, Lcom/android/internal/widget/BeautySignView;->mBezierY:F
@@ -539,7 +493,6 @@
 
     iput v12, v0, Lcom/android/internal/widget/BeautySignView;->mY:F
 
-    .line 321
     return-void
 .end method
 
@@ -548,7 +501,6 @@
     .param p1, "end"    # Landroid/graphics/Point;
 
     .prologue
-    .line 331
     iget v0, p1, Landroid/graphics/Point;->x:I
 
     iget-object v1, p0, Lcom/android/internal/widget/BeautySignView;->mLastDrawPoint:Landroid/graphics/Point;
@@ -606,16 +558,13 @@
     .param p4, "endWidth"    # F
 
     .prologue
-    .line 347
     invoke-virtual {p2}, Landroid/graphics/Paint;->getStrokeWidth()F
 
     move-result v2
 
-    .line 348
     .local v2, "originalWidth":F
     sub-float v7, p4, p3
 
-    .line 350
     .local v7, "widthDelta":F
     iget-object v10, p0, Lcom/android/internal/widget/BeautySignView;->mMidControlPoint:Landroid/graphics/Point;
 
@@ -649,7 +598,6 @@
 
     int-to-float v0, v10
 
-    .line 352
     .local v0, "drawSteps":F
     iget-object v10, p0, Lcom/android/internal/widget/BeautySignView;->mMidControlPoint:Landroid/graphics/Point;
 
@@ -685,12 +633,10 @@
 
     add-float/2addr v0, v10
 
-    .line 354
     const/high16 v10, 0x3f000000    # 0.5f
 
     add-float/2addr v0, v10
 
-    .line 359
     const/4 v1, 0x0
 
     .local v1, "i":I
@@ -699,26 +645,21 @@
 
     if-ge v1, v10, :cond_0
 
-    .line 361
     int-to-float v10, v1
 
     div-float v3, v10, v0
 
-    .line 362
     .local v3, "t":F
     mul-float v4, v3, v3
 
-    .line 363
     .local v4, "tt":F
     const/high16 v10, 0x3f800000    # 1.0f
 
     sub-float v5, v10, v3
 
-    .line 364
     .local v5, "u":F
     mul-float v6, v5, v5
 
-    .line 366
     .local v6, "uu":F
     iget-object v10, p0, Lcom/android/internal/widget/BeautySignView;->mLastDrawPoint:Landroid/graphics/Point;
 
@@ -728,7 +669,6 @@
 
     mul-float v8, v6, v10
 
-    .line 367
     .local v8, "x":F
     const/high16 v10, 0x40000000    # 2.0f
 
@@ -746,7 +686,6 @@
 
     add-float/2addr v8, v10
 
-    .line 368
     iget-object v10, p0, Lcom/android/internal/widget/BeautySignView;->mCurrentEndPoint:Landroid/graphics/Point;
 
     iget v10, v10, Landroid/graphics/Point;->x:I
@@ -757,7 +696,6 @@
 
     add-float/2addr v8, v10
 
-    .line 370
     iget-object v10, p0, Lcom/android/internal/widget/BeautySignView;->mLastDrawPoint:Landroid/graphics/Point;
 
     iget v10, v10, Landroid/graphics/Point;->y:I
@@ -766,7 +704,6 @@
 
     mul-float v9, v6, v10
 
-    .line 371
     .local v9, "y":F
     const/high16 v10, 0x40000000    # 2.0f
 
@@ -784,7 +721,6 @@
 
     add-float/2addr v9, v10
 
-    .line 372
     iget-object v10, p0, Lcom/android/internal/widget/BeautySignView;->mCurrentEndPoint:Landroid/graphics/Point;
 
     iget v10, v10, Landroid/graphics/Point;->y:I
@@ -795,22 +731,18 @@
 
     add-float/2addr v9, v10
 
-    .line 375
     mul-float v10, v3, v7
 
     add-float v10, v10, p3
 
     invoke-virtual {p2, v10}, Landroid/graphics/Paint;->setStrokeWidth(F)V
 
-    .line 379
     invoke-virtual {p1, v8, v9, p2}, Landroid/graphics/Canvas;->drawPoint(FFLandroid/graphics/Paint;)V
 
-    .line 359
     add-int/lit8 v1, v1, 0x1
 
     goto :goto_0
 
-    .line 382
     .end local v3    # "t":F
     .end local v4    # "tt":F
     .end local v5    # "u":F
@@ -820,7 +752,6 @@
     :cond_0
     invoke-virtual {p2, v2}, Landroid/graphics/Paint;->setStrokeWidth(F)V
 
-    .line 383
     return-void
 .end method
 
@@ -829,7 +760,6 @@
     .param p1, "velocity"    # F
 
     .prologue
-    .line 338
     iget v5, p0, Lcom/android/internal/widget/BeautySignView;->MAX_WIDTH:I
 
     int-to-float v5, v5
@@ -838,7 +768,6 @@
 
     mul-float v0, v5, v6
 
-    .line 339
     .local v0, "WidthMax":F
     iget v5, p0, Lcom/android/internal/widget/BeautySignView;->MAX_WIDTH:I
 
@@ -848,7 +777,6 @@
 
     mul-float v1, v5, v6
 
-    .line 340
     .local v1, "WidthMin":F
     sub-float v5, v1, v0
 
@@ -860,7 +788,6 @@
 
     div-float v2, v5, v6
 
-    .line 341
     .local v2, "a":F
     sget v5, Lcom/android/internal/widget/BeautySignView;->SPEED_MIN:F
 
@@ -868,13 +795,11 @@
 
     sub-float v3, v0, v5
 
-    .line 342
     .local v3, "b":F
     mul-float v5, v2, p1
 
     add-float v4, v5, v3
 
-    .line 343
     .local v4, "retValue":F
     return v4
 .end method
@@ -884,10 +809,8 @@
     .param p1, "end"    # Landroid/graphics/Point;
 
     .prologue
-    .line 324
     const/4 v0, 0x0
 
-    .line 325
     .local v0, "retVal":F
     invoke-direct {p0, p1}, Lcom/android/internal/widget/BeautySignView;->distanceTo(Landroid/graphics/Point;)F
 
@@ -905,14 +828,12 @@
 
     div-float v0, v1, v2
 
-    .line 326
     invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
 
     move-result-wide v2
 
     iput-wide v2, p0, Lcom/android/internal/widget/BeautySignView;->mLastPointTime:J
 
-    .line 327
     return v0
 .end method
 
@@ -922,12 +843,10 @@
     .locals 1
 
     .prologue
-    .line 167
     iget-object v0, p0, Lcom/android/internal/widget/BeautySignView;->mBeautyEffectInputData:Ljava/util/ArrayList;
 
     invoke-virtual {v0}, Ljava/util/ArrayList;->clear()V
 
-    .line 168
     return-void
 .end method
 
@@ -935,12 +854,10 @@
     .locals 1
 
     .prologue
-    .line 172
     iget-object v0, p0, Lcom/android/internal/widget/BeautySignView;->mBeautyEffectInputData:Ljava/util/ArrayList;
 
     invoke-virtual {v0}, Ljava/util/ArrayList;->clear()V
 
-    .line 173
     return-void
 .end method
 
@@ -955,7 +872,6 @@
     .param p8, "pressure"    # F
 
     .prologue
-    .line 214
     move-object/from16 v0, p0
 
     iget-object v2, v0, Lcom/android/internal/widget/BeautySignView;->mBeautyEffectInputData:Ljava/util/ArrayList;
@@ -968,7 +884,6 @@
 
     check-cast v25, Lcom/android/internal/widget/SignView$SignatureInput;
 
-    .line 215
     .local v25, "startPoint":Lcom/android/internal/widget/SignView$SignatureInput;
     move-object/from16 v0, p0
 
@@ -982,7 +897,6 @@
 
     check-cast v24, Lcom/android/internal/widget/SignView$SignatureInput;
 
-    .line 217
     .local v24, "controlPoint":Lcom/android/internal/widget/SignView$SignatureInput;
     move-object/from16 v0, v25
 
@@ -990,7 +904,6 @@
 
     move/from16 v18, v0
 
-    .line 218
     .local v18, "P0X":F
     move-object/from16 v0, v25
 
@@ -998,7 +911,6 @@
 
     move/from16 v19, v0
 
-    .line 219
     .local v19, "P0Y":F
     move-object/from16 v0, v24
 
@@ -1006,7 +918,6 @@
 
     move/from16 v20, v0
 
-    .line 220
     .local v20, "P1X":F
     move-object/from16 v0, v24
 
@@ -1014,7 +925,6 @@
 
     move/from16 v21, v0
 
-    .line 221
     .local v21, "P1Y":F
     add-float v2, p4, p2
 
@@ -1022,7 +932,6 @@
 
     div-float v22, v2, v3
 
-    .line 222
     .local v22, "P2X":F
     add-float v2, p5, p3
 
@@ -1030,7 +939,6 @@
 
     div-float v23, v2, v3
 
-    .line 225
     .local v23, "P2Y":F
     const/high16 v2, 0x3f000000    # 0.5f
 
@@ -1064,7 +972,6 @@
 
     add-float v4, v2, v3
 
-    .line 226
     .local v4, "middleX":F
     const/high16 v2, 0x3f000000    # 0.5f
 
@@ -1098,19 +1005,16 @@
 
     add-float v5, v2, v3
 
-    .line 227
     .local v5, "middleY":F
     move-object/from16 v0, v24
 
     iget-wide v6, v0, Lcom/android/internal/widget/SignView$SignatureInput;->mTime:J
 
-    .line 228
     .local v6, "middleTime":J
     move-object/from16 v0, v24
 
     iget v9, v0, Lcom/android/internal/widget/SignView$SignatureInput;->mPressure:F
 
-    .line 230
     .local v9, "middlePressure":F
     move-object/from16 v0, p0
 
@@ -1120,7 +1024,6 @@
 
     invoke-virtual {v2, v3}, Ljava/util/ArrayList;->remove(I)Ljava/lang/Object;
 
-    .line 231
     move-object/from16 v0, p0
 
     iget-object v10, v0, Lcom/android/internal/widget/BeautySignView;->mBeautyEffectInputData:Ljava/util/ArrayList;
@@ -1135,7 +1038,6 @@
 
     invoke-virtual {v10, v2}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 234
     const-string v2, "BeautySignView"
 
     new-instance v3, Ljava/lang/StringBuilder;
@@ -1194,22 +1096,17 @@
 
     invoke-static {v2, v3}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 239
     move/from16 v12, v22
 
-    .line 240
     .local v12, "endX":F
     move/from16 v13, v23
 
-    .line 241
     .local v13, "endY":F
     move-wide/from16 v14, p6
 
-    .line 242
     .local v14, "endTime":J
     move/from16 v17, p8
 
-    .line 244
     .local v17, "endPressure":F
     move-object/from16 v0, p0
 
@@ -1225,7 +1122,6 @@
 
     invoke-virtual {v2, v10}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 247
     const-string v2, "BeautySignView"
 
     new-instance v3, Ljava/lang/StringBuilder;
@@ -1280,7 +1176,6 @@
 
     invoke-static {v2, v3}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 250
     return-void
 .end method
 
@@ -1293,16 +1188,12 @@
     .prologue
     const/4 v6, 0x0
 
-    .line 93
     iput-boolean v6, p0, Lcom/android/internal/widget/BeautySignView;->mBezierEnabled:Z
 
-    .line 94
     iput p2, p0, Lcom/android/internal/widget/BeautySignView;->mBezierX:F
 
-    .line 95
     iput p3, p0, Lcom/android/internal/widget/BeautySignView;->mBezierY:F
 
-    .line 97
     iget-object v0, p0, Lcom/android/internal/widget/BeautySignView;->mLastDrawPoint:Landroid/graphics/Point;
 
     float-to-int v1, p2
@@ -1311,7 +1202,6 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/graphics/Point;->set(II)V
 
-    .line 98
     iget-object v0, p0, Lcom/android/internal/widget/BeautySignView;->mSignPaint:Landroid/graphics/Paint;
 
     invoke-virtual {v0}, Landroid/graphics/Paint;->getStrokeWidth()F
@@ -1320,7 +1210,6 @@
 
     iput v0, p0, Lcom/android/internal/widget/BeautySignView;->mLastStrokeWidth:F
 
-    .line 99
     iget-object v0, p0, Lcom/android/internal/widget/BeautySignView;->mSignPaint:Landroid/graphics/Paint;
 
     invoke-virtual {v0}, Landroid/graphics/Paint;->getStrokeWidth()F
@@ -1329,14 +1218,12 @@
 
     iput v0, p0, Lcom/android/internal/widget/BeautySignView;->mCurrentStrokeWidth:F
 
-    .line 100
     invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
 
     move-result-wide v0
 
     iput-wide v0, p0, Lcom/android/internal/widget/BeautySignView;->mLastPointTime:J
 
-    .line 103
     iget-object v8, p0, Lcom/android/internal/widget/BeautySignView;->mBeautyEffectInputData:Ljava/util/ArrayList;
 
     new-instance v0, Lcom/android/internal/widget/SignView$SignatureInput;
@@ -1361,7 +1248,6 @@
 
     invoke-virtual {v8, v0}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 105
     return-void
 .end method
 
@@ -1372,7 +1258,6 @@
     .param p3, "y"    # F
 
     .prologue
-    .line 109
     iget-object v0, p0, Lcom/android/internal/widget/BeautySignView;->mSignatureInputData:[Ljava/util/ArrayList;
 
     invoke-virtual {p0}, Lcom/android/internal/widget/BeautySignView;->getIndex()I
@@ -1385,13 +1270,11 @@
 
     move-result v8
 
-    .line 112
     .local v8, "arraySizeSaved":I
     iget-boolean v0, p0, Lcom/android/internal/widget/BeautySignView;->mUseHistoricalEvent:Z
 
     if-eqz v0, :cond_0
 
-    .line 114
     const/4 v9, 0x0
 
     .local v9, "i":I
@@ -1402,7 +1285,6 @@
 
     if-ge v9, v0, :cond_0
 
-    .line 116
     iget-object v0, p0, Lcom/android/internal/widget/BeautySignView;->mSignatureInputData:[Ljava/util/ArrayList;
 
     invoke-virtual {p0}, Lcom/android/internal/widget/BeautySignView;->getIndex()I
@@ -1449,7 +1331,6 @@
 
     invoke-virtual {v10, v0}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 123
     const-string v0, "BeautySignView"
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -1496,12 +1377,10 @@
 
     invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 114
     add-int/lit8 v9, v9, 0x1
 
     goto :goto_0
 
-    .line 129
     .end local v9    # "i":I
     :cond_0
     invoke-virtual {p1}, Landroid/view/MotionEvent;->getEventTime()J
@@ -1514,7 +1393,6 @@
 
     iput-wide v0, p0, Lcom/android/internal/widget/BeautySignView;->mTimeStamp:J
 
-    .line 130
     iget-object v0, p0, Lcom/android/internal/widget/BeautySignView;->mSignatureInputData:[Ljava/util/ArrayList;
 
     invoke-virtual {p0}, Lcom/android/internal/widget/BeautySignView;->getIndex()I
@@ -1543,7 +1421,6 @@
 
     invoke-virtual {v10, v0}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 133
     const-string v0, "BeautySignView"
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -1582,12 +1459,10 @@
 
     invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 137
     iget-boolean v0, p0, Lcom/android/internal/widget/BeautySignView;->mUseHistoricalEvent:Z
 
     if-eqz v0, :cond_1
 
-    .line 139
     const/4 v9, 0x0
 
     .restart local v9    # "i":I
@@ -1598,7 +1473,6 @@
 
     if-ge v9, v0, :cond_1
 
-    .line 140
     invoke-virtual {p1, v9}, Landroid/view/MotionEvent;->getHistoricalX(I)F
 
     move-result v0
@@ -1627,12 +1501,10 @@
 
     invoke-virtual/range {v1 .. v6}, Lcom/android/internal/widget/BeautySignView;->handleMoveEventWithBezier(IIJF)V
 
-    .line 139
     add-int/lit8 v9, v9, 0x1
 
     goto :goto_1
 
-    .line 148
     .end local v9    # "i":I
     :cond_1
     float-to-int v2, p2
@@ -1649,13 +1521,10 @@
 
     invoke-virtual/range {v1 .. v6}, Lcom/android/internal/widget/BeautySignView;->handleMoveEventWithBezier(IIJF)V
 
-    .line 151
     invoke-direct {p0, v8}, Lcom/android/internal/widget/BeautySignView;->addToPathForDrawing(I)V
 
-    .line 152
     invoke-virtual {p0}, Lcom/android/internal/widget/BeautySignView;->invalidate()V
 
-    .line 153
     return-void
 .end method
 
@@ -1666,7 +1535,6 @@
     .param p3, "y"    # F
 
     .prologue
-    .line 157
     iget-object v8, p0, Lcom/android/internal/widget/BeautySignView;->mBeautyEffectInputData:Ljava/util/ArrayList;
 
     new-instance v0, Lcom/android/internal/widget/SignView$SignatureInput;
@@ -1695,7 +1563,6 @@
 
     invoke-virtual {v8, v0}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 160
     iget-object v0, p0, Lcom/android/internal/widget/BeautySignView;->mSignPaint:Landroid/graphics/Paint;
 
     invoke-virtual {v0}, Landroid/graphics/Paint;->getStrokeWidth()F
@@ -1704,7 +1571,6 @@
 
     iput v0, p0, Lcom/android/internal/widget/BeautySignView;->mLastStrokeWidth:F
 
-    .line 161
     iget-object v0, p0, Lcom/android/internal/widget/BeautySignView;->mSignPaint:Landroid/graphics/Paint;
 
     invoke-virtual {v0}, Landroid/graphics/Paint;->getStrokeWidth()F
@@ -1713,14 +1579,12 @@
 
     iput v0, p0, Lcom/android/internal/widget/BeautySignView;->mCurrentStrokeWidth:F
 
-    .line 162
     invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
 
     move-result-wide v0
 
     iput-wide v0, p0, Lcom/android/internal/widget/BeautySignView;->mLastPointTime:J
 
-    .line 163
     return-void
 .end method
 
@@ -1732,7 +1596,6 @@
     .param p5, "pressure"    # F
 
     .prologue
-    .line 177
     const-string v2, "BeautySignView"
 
     new-instance v4, Ljava/lang/StringBuilder;
@@ -1775,7 +1638,6 @@
 
     invoke-static {v2, v4}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 180
     move-object/from16 v0, p0
 
     iget-object v2, v0, Lcom/android/internal/widget/BeautySignView;->mBeautyEffectInputData:Ljava/util/ArrayList;
@@ -1784,13 +1646,11 @@
 
     move-result v3
 
-    .line 181
     .local v3, "arraySize":I
     const/4 v2, 0x2
 
     if-lt v3, v2, :cond_0
 
-    .line 182
     move-object/from16 v0, p0
 
     iget-object v2, v0, Lcom/android/internal/widget/BeautySignView;->mBeautyEffectInputData:Ljava/util/ArrayList;
@@ -1803,7 +1663,6 @@
 
     check-cast v15, Lcom/android/internal/widget/SignView$SignatureInput;
 
-    .line 183
     .local v15, "startPoint":Lcom/android/internal/widget/SignView$SignatureInput;
     move-object/from16 v0, p0
 
@@ -1817,7 +1676,6 @@
 
     check-cast v12, Lcom/android/internal/widget/SignView$SignatureInput;
 
-    .line 185
     .local v12, "controlPoint":Lcom/android/internal/widget/SignView$SignatureInput;
     move-object/from16 v0, p0
 
@@ -1837,14 +1695,12 @@
 
     if-ne v2, v4, :cond_0
 
-    .line 187
     const/4 v2, 0x1
 
     move-object/from16 v0, p0
 
     iput-boolean v2, v0, Lcom/android/internal/widget/BeautySignView;->mBezierEnabled:Z
 
-    .line 191
     .end local v12    # "controlPoint":Lcom/android/internal/widget/SignView$SignatureInput;
     .end local v15    # "startPoint":Lcom/android/internal/widget/SignView$SignatureInput;
     :cond_0
@@ -1862,7 +1718,6 @@
 
     move-result v13
 
-    .line 192
     .local v13, "dx":F
     move/from16 v0, p2
 
@@ -1878,7 +1733,6 @@
 
     move-result v14
 
-    .line 193
     .local v14, "dy":F
     move-object/from16 v0, p0
 
@@ -1898,7 +1752,6 @@
 
     if-ltz v2, :cond_2
 
-    .line 194
     :cond_1
     const-string v2, "BeautySignView"
 
@@ -1906,7 +1759,6 @@
 
     invoke-static {v2, v4}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 196
     move-object/from16 v0, p0
 
     iget v4, v0, Lcom/android/internal/widget/BeautySignView;->mBezierX:F
@@ -1931,7 +1783,6 @@
 
     invoke-virtual/range {v2 .. v10}, Lcom/android/internal/widget/BeautySignView;->doBezier(IFFFFJF)V
 
-    .line 198
     move/from16 v0, p1
 
     int-to-float v2, v0
@@ -1954,7 +1805,6 @@
 
     iput v2, v0, Lcom/android/internal/widget/BeautySignView;->mBezierX:F
 
-    .line 199
     move/from16 v0, p2
 
     int-to-float v2, v0
@@ -1977,11 +1827,9 @@
 
     iput v2, v0, Lcom/android/internal/widget/BeautySignView;->mBezierY:F
 
-    .line 210
     :goto_0
     return-void
 
-    .line 202
     :cond_2
     const-string v2, "BeautySignView"
 
@@ -1989,7 +1837,6 @@
 
     invoke-static {v2, v4}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 205
     move-object/from16 v0, p0
 
     iget-object v2, v0, Lcom/android/internal/widget/BeautySignView;->mBeautyEffectInputData:Ljava/util/ArrayList;
@@ -2016,7 +1863,6 @@
 
     invoke-virtual {v2, v4}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 207
     move/from16 v0, p1
 
     int-to-float v2, v0
@@ -2025,7 +1871,6 @@
 
     iput v2, v0, Lcom/android/internal/widget/BeautySignView;->mBezierX:F
 
-    .line 208
     move/from16 v0, p2
 
     int-to-float v2, v0
@@ -2046,58 +1891,46 @@
 
     const/4 v0, 0x0
 
-    .line 63
     invoke-super {p0, p1}, Lcom/android/internal/widget/SignView;->init(Landroid/content/Context;)V
 
-    .line 65
     iput-boolean v2, p0, Lcom/android/internal/widget/BeautySignView;->mBezierEnabled:Z
 
-    .line 67
     iput v0, p0, Lcom/android/internal/widget/BeautySignView;->mLastStrokeWidth:F
 
-    .line 68
     iput v0, p0, Lcom/android/internal/widget/BeautySignView;->mCurrentStrokeWidth:F
 
-    .line 69
     iput v0, p0, Lcom/android/internal/widget/BeautySignView;->mLastVelocity:F
 
-    .line 70
     const-wide/16 v0, 0x0
 
     iput-wide v0, p0, Lcom/android/internal/widget/BeautySignView;->mLastPointTime:J
 
-    .line 71
     iput-boolean v2, p0, Lcom/android/internal/widget/BeautySignView;->mInitWidthVarRatio:Z
 
-    .line 73
     new-instance v0, Landroid/graphics/Point;
 
     invoke-direct {v0}, Landroid/graphics/Point;-><init>()V
 
     iput-object v0, p0, Lcom/android/internal/widget/BeautySignView;->mCurrentEndPoint:Landroid/graphics/Point;
 
-    .line 74
     new-instance v0, Landroid/graphics/Point;
 
     invoke-direct {v0}, Landroid/graphics/Point;-><init>()V
 
     iput-object v0, p0, Lcom/android/internal/widget/BeautySignView;->mMidControlPoint:Landroid/graphics/Point;
 
-    .line 75
     new-instance v0, Landroid/graphics/Point;
 
     invoke-direct {v0}, Landroid/graphics/Point;-><init>()V
 
     iput-object v0, p0, Lcom/android/internal/widget/BeautySignView;->mLastDrawPoint:Landroid/graphics/Point;
 
-    .line 77
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
     iput-object v0, p0, Lcom/android/internal/widget/BeautySignView;->mBeautyEffectInputData:Ljava/util/ArrayList;
 
-    .line 78
     return-void
 .end method
 
@@ -2108,17 +1941,14 @@
     .prologue
     const/4 v2, 0x0
 
-    .line 82
     iget-boolean v0, p0, Lcom/android/internal/widget/BeautySignView;->mSignatureVisible:Z
 
     if-eqz v0, :cond_0
 
-    .line 83
     const/4 v0, 0x0
 
     invoke-virtual {p1, v0}, Landroid/graphics/Canvas;->drawColor(I)V
 
-    .line 84
     iget-object v0, p0, Lcom/android/internal/widget/BeautySignView;->mSignBmpWrite:Landroid/graphics/Bitmap;
 
     if-eqz v0, :cond_0
@@ -2139,14 +1969,12 @@
 
     if-lez v0, :cond_0
 
-    .line 86
     iget-object v0, p0, Lcom/android/internal/widget/BeautySignView;->mSignBmpWrite:Landroid/graphics/Bitmap;
 
     iget-object v1, p0, Lcom/android/internal/widget/BeautySignView;->mSignPaint:Landroid/graphics/Paint;
 
     invoke-virtual {p1, v0, v2, v2, v1}, Landroid/graphics/Canvas;->drawBitmap(Landroid/graphics/Bitmap;FFLandroid/graphics/Paint;)V
 
-    .line 89
     :cond_0
     return-void
 .end method

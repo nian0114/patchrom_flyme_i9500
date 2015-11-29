@@ -16,7 +16,6 @@
     .prologue
     const/4 v0, 0x1
 
-    .line 13
     invoke-static {}, Lcom/samsung/android/telephony/MultiSimManager;->getSimSlotCount()I
 
     move-result v1
@@ -38,7 +37,6 @@
     .locals 0
 
     .prologue
-    .line 10
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -48,15 +46,12 @@
     .locals 1
 
     .prologue
-    .line 17
     sget-boolean v0, Lcom/android/server/enterprise/billing/EnterpriseBillingPolicyFeatureMonitor;->IS_MULTI_SIM_SLOT_PRESENT:Z
 
     if-nez v0, :cond_0
 
-    .line 18
     const/4 v0, 0x1
 
-    .line 20
     :goto_0
     return v0
 

@@ -28,16 +28,12 @@
     .prologue
     const/4 v0, 0x0
 
-    .line 65
     sput-object v0, Lcom/android/server/enterprise/vpn/knoxvpn/KnoxVpnApiValidation;->mKnoxVpnApiValidation:Lcom/android/server/enterprise/vpn/knoxvpn/KnoxVpnApiValidation;
 
-    .line 69
     sput-object v0, Lcom/android/server/enterprise/vpn/knoxvpn/KnoxVpnApiValidation;->mPersonaManager:Landroid/os/IPersonaManager;
 
-    .line 71
     sput-object v0, Lcom/android/server/enterprise/vpn/knoxvpn/KnoxVpnApiValidation;->mEnterpriseDeviceManager:Landroid/app/enterprise/IEnterpriseDeviceManager;
 
-    .line 73
     sput-object v0, Lcom/android/server/enterprise/vpn/knoxvpn/KnoxVpnApiValidation;->mEdmStorageProvider:Lcom/android/server/enterprise/storage/EdmStorageProvider;
 
     return-void
@@ -48,36 +44,30 @@
     .param p1, "context"    # Landroid/content/Context;
 
     .prologue
-    .line 78
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 75
     const/4 v0, 0x0
 
     iput-object v0, p0, Lcom/android/server/enterprise/vpn/knoxvpn/KnoxVpnApiValidation;->mKnoxVpnHelper:Lcom/android/server/enterprise/vpn/knoxvpn/KnoxVpnHelper;
 
-    .line 79
     invoke-static {}, Lcom/android/server/enterprise/vpn/knoxvpn/profile/VpnProfileConfig;->getInstance()Lcom/android/server/enterprise/vpn/knoxvpn/profile/VpnProfileConfig;
 
     move-result-object v0
 
     iput-object v0, p0, Lcom/android/server/enterprise/vpn/knoxvpn/KnoxVpnApiValidation;->vpnConfig:Lcom/android/server/enterprise/vpn/knoxvpn/profile/VpnProfileConfig;
 
-    .line 80
     new-instance v0, Lcom/android/server/enterprise/storage/EdmStorageProvider;
 
     invoke-direct {v0, p1}, Lcom/android/server/enterprise/storage/EdmStorageProvider;-><init>(Landroid/content/Context;)V
 
     sput-object v0, Lcom/android/server/enterprise/vpn/knoxvpn/KnoxVpnApiValidation;->mEdmStorageProvider:Lcom/android/server/enterprise/storage/EdmStorageProvider;
 
-    .line 81
     invoke-static {p1}, Lcom/android/server/enterprise/vpn/knoxvpn/KnoxVpnHelper;->getInstance(Landroid/content/Context;)Lcom/android/server/enterprise/vpn/knoxvpn/KnoxVpnHelper;
 
     move-result-object v0
 
     iput-object v0, p0, Lcom/android/server/enterprise/vpn/knoxvpn/KnoxVpnApiValidation;->mKnoxVpnHelper:Lcom/android/server/enterprise/vpn/knoxvpn/KnoxVpnHelper;
 
-    .line 82
     return-void
 .end method
 
@@ -85,12 +75,10 @@
     .locals 1
 
     .prologue
-    .line 99
     sget-object v0, Lcom/android/server/enterprise/vpn/knoxvpn/KnoxVpnApiValidation;->mEnterpriseDeviceManager:Landroid/app/enterprise/IEnterpriseDeviceManager;
 
     if-nez v0, :cond_0
 
-    .line 100
     const-string v0, "enterprise_policy"
 
     invoke-static {v0}, Landroid/os/ServiceManager;->getService(Ljava/lang/String;)Landroid/os/IBinder;
@@ -103,7 +91,6 @@
 
     sput-object v0, Lcom/android/server/enterprise/vpn/knoxvpn/KnoxVpnApiValidation;->mEnterpriseDeviceManager:Landroid/app/enterprise/IEnterpriseDeviceManager;
 
-    .line 102
     :cond_0
     sget-object v0, Lcom/android/server/enterprise/vpn/knoxvpn/KnoxVpnApiValidation;->mEnterpriseDeviceManager:Landroid/app/enterprise/IEnterpriseDeviceManager;
 
@@ -115,7 +102,6 @@
     .param p0, "context"    # Landroid/content/Context;
 
     .prologue
-    .line 85
     const-class v1, Lcom/android/server/enterprise/vpn/knoxvpn/KnoxVpnApiValidation;
 
     monitor-enter v1
@@ -125,14 +111,12 @@
 
     if-nez v0, :cond_0
 
-    .line 86
     new-instance v0, Lcom/android/server/enterprise/vpn/knoxvpn/KnoxVpnApiValidation;
 
     invoke-direct {v0, p0}, Lcom/android/server/enterprise/vpn/knoxvpn/KnoxVpnApiValidation;-><init>(Landroid/content/Context;)V
 
     sput-object v0, Lcom/android/server/enterprise/vpn/knoxvpn/KnoxVpnApiValidation;->mKnoxVpnApiValidation:Lcom/android/server/enterprise/vpn/knoxvpn/KnoxVpnApiValidation;
 
-    .line 88
     :cond_0
     sget-object v0, Lcom/android/server/enterprise/vpn/knoxvpn/KnoxVpnApiValidation;->mKnoxVpnApiValidation:Lcom/android/server/enterprise/vpn/knoxvpn/KnoxVpnApiValidation;
     :try_end_0
@@ -142,7 +126,6 @@
 
     return-object v0
 
-    .line 85
     :catchall_0
     move-exception v0
 
@@ -155,13 +138,11 @@
     .locals 1
 
     .prologue
-    .line 92
     sget-object v0, Lcom/android/server/enterprise/vpn/knoxvpn/KnoxVpnApiValidation;->mPersonaManager:Landroid/os/IPersonaManager;
 
     if-nez v0, :cond_0
 
-    .line 93
-    const-string/jumbo v0, "persona"
+    const-string v0, "persona"
 
     invoke-static {v0}, Landroid/os/ServiceManager;->getService(Ljava/lang/String;)Landroid/os/IBinder;
 
@@ -173,7 +154,6 @@
 
     sput-object v0, Lcom/android/server/enterprise/vpn/knoxvpn/KnoxVpnApiValidation;->mPersonaManager:Landroid/os/IPersonaManager;
 
-    .line 95
     :cond_0
     sget-object v0, Lcom/android/server/enterprise/vpn/knoxvpn/KnoxVpnApiValidation;->mPersonaManager:Landroid/os/IPersonaManager;
 
@@ -189,10 +169,8 @@
     .param p3, "enable"    # Z
 
     .prologue
-    .line 392
     const/16 v4, 0x64
 
-    .line 395
     .local v4, "validationResult":I
     if-eqz p2, :cond_0
 
@@ -201,19 +179,16 @@
 
     if-nez v6, :cond_1
 
-    .line 396
     :cond_0
     const/16 v4, 0x68
 
     move v5, v4
 
-    .line 436
     .end local v4    # "validationResult":I
     .local v5, "validationResult":I
     :goto_0
     return v5
 
-    .line 400
     .end local v5    # "validationResult":I
     .restart local v4    # "validationResult":I
     :cond_1
@@ -223,21 +198,17 @@
 
     move-result-object v2
 
-    .line 401
     .local v2, "profileInfo":Lcom/android/server/enterprise/vpn/knoxvpn/profile/VpnProfileInfo;
     if-nez v2, :cond_2
 
-    .line 402
     const/16 v4, 0x6c
 
     move v5, v4
 
-    .line 403
     .end local v4    # "validationResult":I
     .restart local v5    # "validationResult":I
     goto :goto_0
 
-    .line 405
     .end local v5    # "validationResult":I
     .restart local v4    # "validationResult":I
     :cond_2
@@ -249,17 +220,14 @@
 
     if-eq v6, v7, :cond_3
 
-    .line 406
     const/16 v4, 0x70
 
     move v5, v4
 
-    .line 407
     .end local v4    # "validationResult":I
     .restart local v5    # "validationResult":I
     goto :goto_0
 
-    .line 411
     .end local v5    # "validationResult":I
     .restart local v4    # "validationResult":I
     :cond_3
@@ -267,48 +235,39 @@
 
     move-result v3
 
-    .line 412
     .local v3, "routeType":I
     if-nez v3, :cond_4
 
-    .line 413
     const/16 v4, 0x6d
 
     move v5, v4
 
-    .line 414
     .end local v4    # "validationResult":I
     .restart local v5    # "validationResult":I
     goto :goto_0
 
-    .line 417
     .end local v5    # "validationResult":I
     .restart local v4    # "validationResult":I
     :cond_4
     if-eqz p3, :cond_5
 
-    .line 418
     invoke-virtual {v2}, Lcom/android/server/enterprise/vpn/knoxvpn/profile/VpnProfileInfo;->getActivateState()I
 
     move-result v0
 
-    .line 419
     .local v0, "currentStateOfProfile":I
     const/4 v6, 0x1
 
     if-ne v0, v6, :cond_6
 
-    .line 420
     const/16 v4, 0x73
 
     move v5, v4
 
-    .line 421
     .end local v4    # "validationResult":I
     .restart local v5    # "validationResult":I
     goto :goto_0
 
-    .line 424
     .end local v0    # "currentStateOfProfile":I
     .end local v5    # "validationResult":I
     .restart local v4    # "validationResult":I
@@ -319,21 +278,17 @@
 
     move-result v0
 
-    .line 425
     .restart local v0    # "currentStateOfProfile":I
     if-nez v0, :cond_6
 
-    .line 426
     const/16 v4, 0x74
 
     move v5, v4
 
-    .line 427
     .end local v4    # "validationResult":I
     .restart local v5    # "validationResult":I
     goto :goto_0
 
-    .line 431
     .end local v0    # "currentStateOfProfile":I
     .end local v2    # "profileInfo":Lcom/android/server/enterprise/vpn/knoxvpn/profile/VpnProfileInfo;
     .end local v3    # "routeType":I
@@ -342,7 +297,6 @@
     :catch_0
     move-exception v1
 
-    .line 432
     .local v1, "e":Ljava/lang/Exception;
     const-string v6, "KnoxVpnApiValidation"
 
@@ -370,10 +324,8 @@
 
     invoke-static {v6, v7}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 433
     const/16 v4, 0x65
 
-    .line 435
     .end local v1    # "e":Ljava/lang/Exception;
     :cond_6
     const-string v6, "KnoxVpnApiValidation"
@@ -400,7 +352,6 @@
 
     move v5, v4
 
-    .line 436
     .end local v4    # "validationResult":I
     .restart local v5    # "validationResult":I
     goto :goto_0
@@ -413,10 +364,8 @@
     .param p3, "profileName"    # Ljava/lang/String;
 
     .prologue
-    .line 657
     const/16 v5, 0x64
 
-    .line 661
     .local v5, "validationResult":I
     if-eqz p3, :cond_0
 
@@ -425,19 +374,16 @@
 
     if-nez v7, :cond_1
 
-    .line 662
     :cond_0
     const/16 v5, 0x68
 
     move v6, v5
 
-    .line 717
     .end local v5    # "validationResult":I
     .local v6, "validationResult":I
     :goto_0
     return v6
 
-    .line 666
     .end local v6    # "validationResult":I
     .restart local v5    # "validationResult":I
     :cond_1
@@ -447,21 +393,17 @@
 
     move-result-object v3
 
-    .line 667
     .local v3, "profileInfo":Lcom/android/server/enterprise/vpn/knoxvpn/profile/VpnProfileInfo;
     if-nez v3, :cond_2
 
-    .line 668
     const/16 v5, 0x6c
 
     move v6, v5
 
-    .line 669
     .end local v5    # "validationResult":I
     .restart local v6    # "validationResult":I
     goto :goto_0
 
-    .line 671
     .end local v6    # "validationResult":I
     .restart local v5    # "validationResult":I
     :cond_2
@@ -473,17 +415,14 @@
 
     if-eq v7, v8, :cond_3
 
-    .line 672
     const/16 v5, 0x70
 
     move v6, v5
 
-    .line 673
     .end local v5    # "validationResult":I
     .restart local v6    # "validationResult":I
     goto :goto_0
 
-    .line 677
     .end local v6    # "validationResult":I
     .restart local v5    # "validationResult":I
     :cond_3
@@ -491,21 +430,17 @@
 
     move-result v4
 
-    .line 678
     .local v4, "routeType":I
     if-nez v4, :cond_4
 
-    .line 679
     const/16 v5, 0x6d
 
     move v6, v5
 
-    .line 680
     .end local v5    # "validationResult":I
     .restart local v6    # "validationResult":I
     goto :goto_0
 
-    .line 683
     .end local v6    # "validationResult":I
     .restart local v5    # "validationResult":I
     :cond_4
@@ -517,21 +452,17 @@
 
     move-result v2
 
-    .line 684
     .local v2, "isPersonaIdIsValid":Z
     if-nez v2, :cond_5
 
-    .line 685
     const/16 v5, 0x71
 
     move v6, v5
 
-    .line 686
     .end local v5    # "validationResult":I
     .restart local v6    # "validationResult":I
     goto :goto_0
 
-    .line 689
     .end local v6    # "validationResult":I
     .restart local v5    # "validationResult":I
     :cond_5
@@ -541,23 +472,19 @@
 
     move-result v0
 
-    .line 690
     .local v0, "containerOwner":I
     iget v7, p1, Lcom/sec/enterprise/knox/KnoxVpnContext;->adminId:I
 
     if-eq v0, v7, :cond_6
 
-    .line 691
     const/16 v5, 0x72
 
     move v6, v5
 
-    .line 692
     .end local v5    # "validationResult":I
     .restart local v6    # "validationResult":I
     goto :goto_0
 
-    .line 695
     .end local v6    # "validationResult":I
     .restart local v5    # "validationResult":I
     :cond_6
@@ -569,7 +496,6 @@
 
     if-eqz v7, :cond_7
 
-    .line 696
     iget-object v7, p0, Lcom/android/server/enterprise/vpn/knoxvpn/KnoxVpnApiValidation;->mKnoxVpnHelper:Lcom/android/server/enterprise/vpn/knoxvpn/KnoxVpnHelper;
 
     iget v8, p1, Lcom/sec/enterprise/knox/KnoxVpnContext;->personaId:I
@@ -580,17 +506,14 @@
 
     if-nez v7, :cond_7
 
-    .line 697
     const/16 v5, 0x7b
 
     move v6, v5
 
-    .line 698
     .end local v5    # "validationResult":I
     .restart local v6    # "validationResult":I
     goto :goto_0
 
-    .line 702
     .end local v6    # "validationResult":I
     .restart local v5    # "validationResult":I
     :cond_7
@@ -602,7 +525,6 @@
 
     if-eqz v7, :cond_9
 
-    .line 703
     iget-object v7, p0, Lcom/android/server/enterprise/vpn/knoxvpn/KnoxVpnApiValidation;->mKnoxVpnHelper:Lcom/android/server/enterprise/vpn/knoxvpn/KnoxVpnHelper;
 
     invoke-virtual {v7, p2}, Lcom/android/server/enterprise/vpn/knoxvpn/KnoxVpnHelper;->getAdminIdForUserVpn(I)I
@@ -615,17 +537,14 @@
 
     if-ne v7, v8, :cond_8
 
-    .line 704
     const/16 v5, 0x75
 
     move v6, v5
 
-    .line 705
     .end local v5    # "validationResult":I
     .restart local v6    # "validationResult":I
     goto :goto_0
 
-    .line 707
     .end local v6    # "validationResult":I
     .restart local v5    # "validationResult":I
     :cond_8
@@ -633,12 +552,10 @@
 
     move v6, v5
 
-    .line 708
     .end local v5    # "validationResult":I
     .restart local v6    # "validationResult":I
     goto :goto_0
 
-    .line 712
     .end local v0    # "containerOwner":I
     .end local v2    # "isPersonaIdIsValid":Z
     .end local v3    # "profileInfo":Lcom/android/server/enterprise/vpn/knoxvpn/profile/VpnProfileInfo;
@@ -648,7 +565,6 @@
     :catch_0
     move-exception v1
 
-    .line 713
     .local v1, "e":Ljava/lang/Exception;
     const-string v7, "KnoxVpnApiValidation"
 
@@ -676,10 +592,8 @@
 
     invoke-static {v7, v8}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 714
     const/16 v5, 0x65
 
-    .line 716
     .end local v1    # "e":Ljava/lang/Exception;
     :cond_9
     const-string v7, "KnoxVpnApiValidation"
@@ -706,7 +620,6 @@
 
     move v6, v5
 
-    .line 717
     .end local v5    # "validationResult":I
     .restart local v6    # "validationResult":I
     goto/16 :goto_0
@@ -718,10 +631,8 @@
     .param p2, "profileName"    # Ljava/lang/String;
 
     .prologue
-    .line 776
     const/16 v3, 0x64
 
-    .line 780
     .local v3, "validationResult":I
     if-eqz p2, :cond_0
 
@@ -730,19 +641,16 @@
 
     if-nez v5, :cond_1
 
-    .line 781
     :cond_0
     const/16 v3, 0x68
 
     move v4, v3
 
-    .line 824
     .end local v3    # "validationResult":I
     .local v4, "validationResult":I
     :goto_0
     return v4
 
-    .line 785
     .end local v4    # "validationResult":I
     .restart local v3    # "validationResult":I
     :cond_1
@@ -752,21 +660,17 @@
 
     move-result-object v1
 
-    .line 786
     .local v1, "profileInfo":Lcom/android/server/enterprise/vpn/knoxvpn/profile/VpnProfileInfo;
     if-nez v1, :cond_2
 
-    .line 787
     const/16 v3, 0x6c
 
     move v4, v3
 
-    .line 788
     .end local v3    # "validationResult":I
     .restart local v4    # "validationResult":I
     goto :goto_0
 
-    .line 790
     .end local v4    # "validationResult":I
     .restart local v3    # "validationResult":I
     :cond_2
@@ -778,17 +682,14 @@
 
     if-eq v5, v6, :cond_3
 
-    .line 791
     const/16 v3, 0x70
 
     move v4, v3
 
-    .line 792
     .end local v3    # "validationResult":I
     .restart local v4    # "validationResult":I
     goto :goto_0
 
-    .line 796
     .end local v4    # "validationResult":I
     .restart local v3    # "validationResult":I
     :cond_3
@@ -796,21 +697,17 @@
 
     move-result v2
 
-    .line 797
     .local v2, "routeType":I
     if-nez v2, :cond_4
 
-    .line 798
     const/16 v3, 0x6d
 
     move v4, v3
 
-    .line 799
     .end local v3    # "validationResult":I
     .restart local v4    # "validationResult":I
     goto :goto_0
 
-    .line 802
     .end local v4    # "validationResult":I
     .restart local v3    # "validationResult":I
     :cond_4
@@ -824,7 +721,6 @@
 
     if-eqz v5, :cond_5
 
-    .line 803
     iget-object v5, p0, Lcom/android/server/enterprise/vpn/knoxvpn/KnoxVpnApiValidation;->mKnoxVpnHelper:Lcom/android/server/enterprise/vpn/knoxvpn/KnoxVpnHelper;
 
     iget v6, p1, Lcom/sec/enterprise/knox/KnoxVpnContext;->personaId:I
@@ -835,17 +731,14 @@
 
     if-nez v5, :cond_5
 
-    .line 804
     const/16 v3, 0x7b
 
     move v4, v3
 
-    .line 805
     .end local v3    # "validationResult":I
     .restart local v4    # "validationResult":I
     goto :goto_0
 
-    .line 809
     .end local v4    # "validationResult":I
     .restart local v3    # "validationResult":I
     :cond_5
@@ -859,7 +752,6 @@
 
     if-eqz v5, :cond_7
 
-    .line 810
     iget-object v5, p0, Lcom/android/server/enterprise/vpn/knoxvpn/KnoxVpnApiValidation;->mKnoxVpnHelper:Lcom/android/server/enterprise/vpn/knoxvpn/KnoxVpnHelper;
 
     iget v6, p1, Lcom/sec/enterprise/knox/KnoxVpnContext;->personaId:I
@@ -874,17 +766,14 @@
 
     if-ne v5, v6, :cond_6
 
-    .line 811
     const/16 v3, 0x75
 
     move v4, v3
 
-    .line 812
     .end local v3    # "validationResult":I
     .restart local v4    # "validationResult":I
     goto :goto_0
 
-    .line 814
     .end local v4    # "validationResult":I
     .restart local v3    # "validationResult":I
     :cond_6
@@ -892,12 +781,10 @@
 
     move v4, v3
 
-    .line 815
     .end local v3    # "validationResult":I
     .restart local v4    # "validationResult":I
     goto :goto_0
 
-    .line 819
     .end local v1    # "profileInfo":Lcom/android/server/enterprise/vpn/knoxvpn/profile/VpnProfileInfo;
     .end local v2    # "routeType":I
     .end local v4    # "validationResult":I
@@ -905,7 +792,6 @@
     :catch_0
     move-exception v0
 
-    .line 820
     .local v0, "e":Ljava/lang/Exception;
     const-string v5, "KnoxVpnApiValidation"
 
@@ -933,10 +819,8 @@
 
     invoke-static {v5, v6}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 821
     const/16 v3, 0x65
 
-    .line 823
     .end local v0    # "e":Ljava/lang/Exception;
     :cond_7
     const-string v5, "KnoxVpnApiValidation"
@@ -963,7 +847,6 @@
 
     move v4, v3
 
-    .line 824
     .end local v3    # "validationResult":I
     .restart local v4    # "validationResult":I
     goto/16 :goto_0
@@ -977,10 +860,8 @@
     .param p4, "profileName"    # Ljava/lang/String;
 
     .prologue
-    .line 472
     const/16 v11, 0x64
 
-    .line 476
     .local v11, "validationResult":I
     if-eqz p4, :cond_0
 
@@ -1001,19 +882,16 @@
 
     if-nez v13, :cond_1
 
-    .line 477
     :cond_0
     const/16 v11, 0x68
 
     move v12, v11
 
-    .line 543
     .end local v11    # "validationResult":I
     .local v12, "validationResult":I
     :goto_0
     return v12
 
-    .line 481
     .end local v12    # "validationResult":I
     .restart local v11    # "validationResult":I
     :cond_1
@@ -1027,21 +905,17 @@
 
     move-result-object v7
 
-    .line 482
     .local v7, "profileInfo":Lcom/android/server/enterprise/vpn/knoxvpn/profile/VpnProfileInfo;
     if-nez v7, :cond_2
 
-    .line 483
     const/16 v11, 0x6c
 
     move v12, v11
 
-    .line 484
     .end local v11    # "validationResult":I
     .restart local v12    # "validationResult":I
     goto :goto_0
 
-    .line 486
     .end local v12    # "validationResult":I
     .restart local v11    # "validationResult":I
     :cond_2
@@ -1055,17 +929,14 @@
 
     if-eq v13, v14, :cond_3
 
-    .line 487
     const/16 v11, 0x70
 
     move v12, v11
 
-    .line 488
     .end local v11    # "validationResult":I
     .restart local v12    # "validationResult":I
     goto :goto_0
 
-    .line 492
     .end local v12    # "validationResult":I
     .restart local v11    # "validationResult":I
     :cond_3
@@ -1073,21 +944,17 @@
 
     move-result v9
 
-    .line 493
     .local v9, "routeType":I
     if-nez v9, :cond_4
 
-    .line 494
     const/16 v11, 0x6d
 
     move v12, v11
 
-    .line 495
     .end local v11    # "validationResult":I
     .restart local v12    # "validationResult":I
     goto :goto_0
 
-    .line 498
     .end local v12    # "validationResult":I
     .restart local v11    # "validationResult":I
     :cond_4
@@ -1101,21 +968,17 @@
 
     move-result v5
 
-    .line 499
     .local v5, "isPersonaIdIsValid":Z
     if-nez v5, :cond_5
 
-    .line 500
     const/16 v11, 0x71
 
     move v12, v11
 
-    .line 501
     .end local v11    # "validationResult":I
     .restart local v12    # "validationResult":I
     goto :goto_0
 
-    .line 504
     .end local v12    # "validationResult":I
     .restart local v11    # "validationResult":I
     :cond_5
@@ -1127,7 +990,6 @@
 
     move-result v2
 
-    .line 505
     .local v2, "containerOwner":I
     move-object/from16 v0, p1
 
@@ -1135,17 +997,14 @@
 
     if-eq v2, v13, :cond_6
 
-    .line 506
     const/16 v11, 0x72
 
     move v12, v11
 
-    .line 507
     .end local v11    # "validationResult":I
     .restart local v12    # "validationResult":I
     goto :goto_0
 
-    .line 510
     .end local v12    # "validationResult":I
     .restart local v11    # "validationResult":I
     :cond_6
@@ -1163,7 +1022,6 @@
 
     aget-object v10, v1, v4
 
-    .line 511
     .local v10, "tempPackage":Ljava/lang/String;
     move-object/from16 v0, p0
 
@@ -1183,17 +1041,14 @@
 
     if-eqz v13, :cond_7
 
-    .line 512
     const/16 v11, 0x89
 
     move v12, v11
 
-    .line 513
     .end local v11    # "validationResult":I
     .restart local v12    # "validationResult":I
     goto :goto_0
 
-    .line 510
     .end local v12    # "validationResult":I
     .restart local v11    # "validationResult":I
     :cond_7
@@ -1201,7 +1056,6 @@
 
     goto :goto_1
 
-    .line 517
     .end local v10    # "tempPackage":Ljava/lang/String;
     :cond_8
     move-object/from16 v0, p0
@@ -1216,7 +1070,6 @@
 
     if-eqz v13, :cond_a
 
-    .line 518
     move-object/from16 v0, p0
 
     iget-object v13, v0, Lcom/android/server/enterprise/vpn/knoxvpn/KnoxVpnApiValidation;->mKnoxVpnHelper:Lcom/android/server/enterprise/vpn/knoxvpn/KnoxVpnHelper;
@@ -1233,7 +1086,6 @@
 
     if-ne v13, v14, :cond_9
 
-    .line 521
     move-object/from16 v0, p0
 
     iget-object v13, v0, Lcom/android/server/enterprise/vpn/knoxvpn/KnoxVpnApiValidation;->mKnoxVpnHelper:Lcom/android/server/enterprise/vpn/knoxvpn/KnoxVpnHelper;
@@ -1254,7 +1106,6 @@
 
     move-result-object v8
 
-    .line 522
     .local v8, "profileOwningPackage":Ljava/lang/String;
     move-object/from16 v0, p4
 
@@ -1264,7 +1115,6 @@
 
     if-nez v13, :cond_a
 
-    .line 523
     move-object/from16 v0, p0
 
     iget-object v13, v0, Lcom/android/server/enterprise/vpn/knoxvpn/KnoxVpnApiValidation;->mKnoxVpnHelper:Lcom/android/server/enterprise/vpn/knoxvpn/KnoxVpnHelper;
@@ -1277,12 +1127,10 @@
 
     packed-switch v13, :pswitch_data_0
 
-    .line 527
     const/16 v11, 0x77
 
     move v12, v11
 
-    .line 528
     .end local v11    # "validationResult":I
     .restart local v12    # "validationResult":I
     goto/16 :goto_0
@@ -1292,12 +1140,10 @@
     :pswitch_0
     move v12, v11
 
-    .line 525
     .end local v11    # "validationResult":I
     .restart local v12    # "validationResult":I
     goto/16 :goto_0
 
-    .line 533
     .end local v8    # "profileOwningPackage":Ljava/lang/String;
     .end local v12    # "validationResult":I
     .restart local v11    # "validationResult":I
@@ -1306,12 +1152,10 @@
 
     move v12, v11
 
-    .line 534
     .end local v11    # "validationResult":I
     .restart local v12    # "validationResult":I
     goto/16 :goto_0
 
-    .line 538
     .end local v1    # "arr$":[Ljava/lang/String;
     .end local v2    # "containerOwner":I
     .end local v4    # "i$":I
@@ -1324,7 +1168,6 @@
     :catch_0
     move-exception v3
 
-    .line 539
     .local v3, "e":Ljava/lang/Exception;
     const-string v13, "KnoxVpnApiValidation"
 
@@ -1352,10 +1195,8 @@
 
     invoke-static {v13, v14}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 540
     const/16 v11, 0x65
 
-    .line 542
     .end local v3    # "e":Ljava/lang/Exception;
     :cond_a
     const-string v13, "KnoxVpnApiValidation"
@@ -1382,12 +1223,10 @@
 
     move v12, v11
 
-    .line 543
     .end local v11    # "validationResult":I
     .restart local v12    # "validationResult":I
     goto/16 :goto_0
 
-    .line 523
     nop
 
     :pswitch_data_0
@@ -1403,10 +1242,8 @@
     .param p3, "profileName"    # Ljava/lang/String;
 
     .prologue
-    .line 277
     const/16 v9, 0x64
 
-    .line 280
     .local v9, "validationResult":I
     if-eqz p3, :cond_0
 
@@ -1427,19 +1264,16 @@
 
     if-nez v11, :cond_1
 
-    .line 281
     :cond_0
     const/16 v9, 0x68
 
     move v10, v9
 
-    .line 333
     .end local v9    # "validationResult":I
     .local v10, "validationResult":I
     :goto_0
     return v10
 
-    .line 285
     .end local v10    # "validationResult":I
     .restart local v9    # "validationResult":I
     :cond_1
@@ -1451,21 +1285,17 @@
 
     move-result-object v5
 
-    .line 286
     .local v5, "profileInfo":Lcom/android/server/enterprise/vpn/knoxvpn/profile/VpnProfileInfo;
     if-nez v5, :cond_2
 
-    .line 287
     const/16 v9, 0x6c
 
     move v10, v9
 
-    .line 288
     .end local v9    # "validationResult":I
     .restart local v10    # "validationResult":I
     goto :goto_0
 
-    .line 290
     .end local v10    # "validationResult":I
     .restart local v9    # "validationResult":I
     :cond_2
@@ -1479,17 +1309,14 @@
 
     if-eq v11, v12, :cond_3
 
-    .line 291
     const/16 v9, 0x70
 
     move v10, v9
 
-    .line 292
     .end local v9    # "validationResult":I
     .restart local v10    # "validationResult":I
     goto :goto_0
 
-    .line 296
     .end local v10    # "validationResult":I
     .restart local v9    # "validationResult":I
     :cond_3
@@ -1497,21 +1324,17 @@
 
     move-result v7
 
-    .line 297
     .local v7, "routeType":I
     if-nez v7, :cond_4
 
-    .line 298
     const/16 v9, 0x6d
 
     move v10, v9
 
-    .line 299
     .end local v9    # "validationResult":I
     .restart local v10    # "validationResult":I
     goto :goto_0
 
-    .line 302
     .end local v10    # "validationResult":I
     .restart local v9    # "validationResult":I
     :cond_4
@@ -1529,7 +1352,6 @@
 
     aget-object v8, v1, v3
 
-    .line 303
     .local v8, "tempPackage":Ljava/lang/String;
     iget-object v11, p0, Lcom/android/server/enterprise/vpn/knoxvpn/KnoxVpnApiValidation;->mKnoxVpnHelper:Lcom/android/server/enterprise/vpn/knoxvpn/KnoxVpnHelper;
 
@@ -1549,17 +1371,14 @@
 
     if-eqz v11, :cond_5
 
-    .line 304
     const/16 v9, 0x89
 
     move v10, v9
 
-    .line 305
     .end local v9    # "validationResult":I
     .restart local v10    # "validationResult":I
     goto :goto_0
 
-    .line 302
     .end local v10    # "validationResult":I
     .restart local v9    # "validationResult":I
     :cond_5
@@ -1567,7 +1386,6 @@
 
     goto :goto_1
 
-    .line 309
     .end local v8    # "tempPackage":Ljava/lang/String;
     :cond_6
     iget-object v11, p0, Lcom/android/server/enterprise/vpn/knoxvpn/KnoxVpnApiValidation;->mKnoxVpnHelper:Lcom/android/server/enterprise/vpn/knoxvpn/KnoxVpnHelper;
@@ -1582,7 +1400,6 @@
 
     if-eqz v11, :cond_8
 
-    .line 310
     iget-object v11, p0, Lcom/android/server/enterprise/vpn/knoxvpn/KnoxVpnApiValidation;->mKnoxVpnHelper:Lcom/android/server/enterprise/vpn/knoxvpn/KnoxVpnHelper;
 
     move-object/from16 v0, p1
@@ -1599,7 +1416,6 @@
 
     if-ne v11, v12, :cond_7
 
-    .line 312
     iget-object v11, p0, Lcom/android/server/enterprise/vpn/knoxvpn/KnoxVpnApiValidation;->mKnoxVpnHelper:Lcom/android/server/enterprise/vpn/knoxvpn/KnoxVpnHelper;
 
     iget-object v12, p0, Lcom/android/server/enterprise/vpn/knoxvpn/KnoxVpnApiValidation;->mKnoxVpnHelper:Lcom/android/server/enterprise/vpn/knoxvpn/KnoxVpnHelper;
@@ -1618,7 +1434,6 @@
 
     move-result-object v6
 
-    .line 313
     .local v6, "profileOwningPackage":Ljava/lang/String;
     move-object/from16 v0, p3
 
@@ -1628,7 +1443,6 @@
 
     if-nez v11, :cond_8
 
-    .line 314
     iget-object v11, p0, Lcom/android/server/enterprise/vpn/knoxvpn/KnoxVpnApiValidation;->mKnoxVpnHelper:Lcom/android/server/enterprise/vpn/knoxvpn/KnoxVpnHelper;
 
     invoke-virtual {v11, v6}, Lcom/android/server/enterprise/vpn/knoxvpn/KnoxVpnHelper;->checkIfProfileHasChainingFeature(Ljava/lang/String;)I
@@ -1639,12 +1453,10 @@
 
     packed-switch v11, :pswitch_data_0
 
-    .line 318
     const/16 v9, 0x77
 
     move v10, v9
 
-    .line 319
     .end local v9    # "validationResult":I
     .restart local v10    # "validationResult":I
     goto/16 :goto_0
@@ -1654,12 +1466,10 @@
     :pswitch_0
     move v10, v9
 
-    .line 316
     .end local v9    # "validationResult":I
     .restart local v10    # "validationResult":I
     goto/16 :goto_0
 
-    .line 323
     .end local v6    # "profileOwningPackage":Ljava/lang/String;
     .end local v10    # "validationResult":I
     .restart local v9    # "validationResult":I
@@ -1668,12 +1478,10 @@
 
     move v10, v9
 
-    .line 324
     .end local v9    # "validationResult":I
     .restart local v10    # "validationResult":I
     goto/16 :goto_0
 
-    .line 328
     .end local v1    # "arr$":[Ljava/lang/String;
     .end local v3    # "i$":I
     .end local v4    # "len$":I
@@ -1684,7 +1492,6 @@
     :catch_0
     move-exception v2
 
-    .line 329
     .local v2, "e":Ljava/lang/Exception;
     const-string v11, "KnoxVpnApiValidation"
 
@@ -1712,10 +1519,8 @@
 
     invoke-static {v11, v12}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 330
     const/16 v9, 0x65
 
-    .line 332
     .end local v2    # "e":Ljava/lang/Exception;
     :cond_8
     const-string v11, "KnoxVpnApiValidation"
@@ -1742,12 +1547,10 @@
 
     move v10, v9
 
-    .line 333
     .end local v9    # "validationResult":I
     .restart local v10    # "validationResult":I
     goto/16 :goto_0
 
-    .line 314
     nop
 
     :pswitch_data_0
@@ -1762,10 +1565,8 @@
     .param p2, "jsonProfile"    # Ljava/lang/String;
 
     .prologue
-    .line 106
     const/16 v23, 0x64
 
-    .line 109
     .local v23, "validationResult":I
     if-eqz p2, :cond_0
 
@@ -1778,19 +1579,16 @@
 
     if-nez v26, :cond_1
 
-    .line 110
     :cond_0
     const/16 v23, 0x68
 
     move/from16 v24, v23
 
-    .line 213
     .end local v23    # "validationResult":I
     .local v24, "validationResult":I
     :goto_0
     return v24
 
-    .line 114
     .end local v24    # "validationResult":I
     .restart local v23    # "validationResult":I
     :cond_1
@@ -1802,7 +1600,6 @@
 
     invoke-direct {v0, v1}, Lorg/json/JSONObject;-><init>(Ljava/lang/String;)V
 
-    .line 115
     .local v18, "profileObj":Lorg/json/JSONObject;
     const-string v26, "KNOX_VPN_PARAMETERS"
 
@@ -1814,9 +1611,8 @@
 
     move-result-object v12
 
-    .line 116
     .local v12, "parentAttrObj":Lorg/json/JSONObject;
-    const-string/jumbo v26, "profile_attribute"
+    const-string v26, "profile_attribute"
 
     move-object/from16 v0, v26
 
@@ -1824,7 +1620,6 @@
 
     move-result-object v14
 
-    .line 117
     .local v14, "profileAttrObj":Lorg/json/JSONObject;
     const-string v26, "knox"
 
@@ -1834,9 +1629,8 @@
 
     move-result-object v10
 
-    .line 119
     .local v10, "knoxAttrObj":Lorg/json/JSONObject;
-    const-string/jumbo v26, "profileName"
+    const-string v26, "profileName"
 
     move-object/from16 v0, v26
 
@@ -1844,9 +1638,8 @@
 
     move-result-object v17
 
-    .line 120
     .local v17, "profileName":Ljava/lang/String;
-    const-string/jumbo v26, "vpn_type"
+    const-string v26, "vpn_type"
 
     move-object/from16 v0, v26
 
@@ -1854,9 +1647,8 @@
 
     move-result-object v19
 
-    .line 121
     .local v19, "protocolType":Ljava/lang/String;
-    const-string/jumbo v26, "vpn_route_type"
+    const-string v26, "vpn_route_type"
 
     move-object/from16 v0, v26
 
@@ -1864,7 +1656,6 @@
 
     move-result v20
 
-    .line 123
     .local v20, "routeType":I
     const-string v26, "chaining_enabled"
 
@@ -1878,9 +1669,8 @@
 
     move-result v3
 
-    .line 124
     .local v3, "chainingEnabled":I
-    const-string/jumbo v26, "uidpid_search_enabled"
+    const-string v26, "uidpid_search_enabled"
 
     move-object/from16 v0, v26
 
@@ -1888,7 +1678,6 @@
 
     move-result v21
 
-    .line 125
     .local v21, "uidPidSearchEnabled":I
     const-string v26, "connectionType"
 
@@ -1902,7 +1691,6 @@
 
     move-result-object v5
 
-    .line 128
     .local v5, "connectionType":Ljava/lang/String;
     if-eqz v17, :cond_2
 
@@ -1918,24 +1706,20 @@
 
     if-eqz v20, :cond_3
 
-    .line 129
     :cond_2
     const/16 v23, 0x69
 
     move/from16 v24, v23
 
-    .line 130
     .end local v23    # "validationResult":I
     .restart local v24    # "validationResult":I
     goto :goto_0
 
-    .line 133
     .end local v24    # "validationResult":I
     .restart local v23    # "validationResult":I
     :cond_3
     if-nez v20, :cond_6
 
-    .line 134
     if-eqz v3, :cond_4
 
     const/16 v26, 0x1
@@ -1944,22 +1728,19 @@
 
     if-ne v3, v0, :cond_5
 
-    .line 135
     :cond_4
     const/16 v23, 0x1f9
 
     move/from16 v24, v23
 
-    .line 136
     .end local v23    # "validationResult":I
     .restart local v24    # "validationResult":I
     goto/16 :goto_0
 
-    .line 138
     .end local v24    # "validationResult":I
     .restart local v23    # "validationResult":I
     :cond_5
-    const-string/jumbo v26, "ondemand"
+    const-string v26, "ondemand"
 
     move-object/from16 v0, v26
 
@@ -1969,17 +1750,14 @@
 
     if-eqz v26, :cond_6
 
-    .line 139
     const/16 v23, 0x2be
 
     move/from16 v24, v23
 
-    .line 140
     .end local v23    # "validationResult":I
     .restart local v24    # "validationResult":I
     goto/16 :goto_0
 
-    .line 144
     .end local v24    # "validationResult":I
     .restart local v23    # "validationResult":I
     :cond_6
@@ -1997,17 +1775,14 @@
 
     if-eq v3, v0, :cond_7
 
-    .line 145
     const/16 v23, 0x1f5
 
     move/from16 v24, v23
 
-    .line 146
     .end local v23    # "validationResult":I
     .restart local v24    # "validationResult":I
     goto/16 :goto_0
 
-    .line 149
     .end local v24    # "validationResult":I
     .restart local v23    # "validationResult":I
     :cond_7
@@ -2021,17 +1796,14 @@
 
     if-eqz v21, :cond_8
 
-    .line 150
     const/16 v23, 0x259
 
     move/from16 v24, v23
 
-    .line 151
     .end local v23    # "validationResult":I
     .restart local v24    # "validationResult":I
     goto/16 :goto_0
 
-    .line 154
     .end local v24    # "validationResult":I
     .restart local v23    # "validationResult":I
     :cond_8
@@ -2045,7 +1817,7 @@
 
     if-eqz v26, :cond_9
 
-    const-string/jumbo v26, "ondemand"
+    const-string v26, "ondemand"
 
     move-object/from16 v0, v26
 
@@ -2055,21 +1827,18 @@
 
     if-eqz v26, :cond_9
 
-    .line 155
     const/16 v23, 0x2bd
 
     move/from16 v24, v23
 
-    .line 156
     .end local v23    # "validationResult":I
     .restart local v24    # "validationResult":I
     goto/16 :goto_0
 
-    .line 159
     .end local v24    # "validationResult":I
     .restart local v23    # "validationResult":I
     :cond_9
-    const-string/jumbo v26, "ondemand"
+    const-string v26, "ondemand"
 
     move-object/from16 v0, v26
 
@@ -2081,17 +1850,14 @@
 
     if-nez v3, :cond_a
 
-    .line 160
     const/16 v23, 0x2be
 
     move/from16 v24, v23
 
-    .line 161
     .end local v23    # "validationResult":I
     .restart local v24    # "validationResult":I
     goto/16 :goto_0
 
-    .line 164
     .end local v24    # "validationResult":I
     .restart local v23    # "validationResult":I
     :cond_a
@@ -2101,7 +1867,6 @@
 
     move-result-object v13
 
-    .line 165
     .local v13, "pattern":Ljava/util/regex/Pattern;
     move-object/from16 v0, v17
 
@@ -2109,27 +1874,22 @@
 
     move-result-object v11
 
-    .line 166
     .local v11, "matcher":Ljava/util/regex/Matcher;
     invoke-virtual {v11}, Ljava/util/regex/Matcher;->find()Z
 
     move-result v7
 
-    .line 167
     .local v7, "found":Z
     if-eqz v7, :cond_b
 
-    .line 168
     const/16 v23, 0x6a
 
     move/from16 v24, v23
 
-    .line 169
     .end local v23    # "validationResult":I
     .restart local v24    # "validationResult":I
     goto/16 :goto_0
 
-    .line 172
     .end local v24    # "validationResult":I
     .restart local v23    # "validationResult":I
     :cond_b
@@ -2137,7 +1897,6 @@
 
     move-result v16
 
-    .line 173
     .local v16, "profileLength":I
     const/16 v26, 0x1
 
@@ -2155,18 +1914,15 @@
 
     if-le v0, v1, :cond_d
 
-    .line 174
     :cond_c
     const/16 v23, 0x6b
 
     move/from16 v24, v23
 
-    .line 175
     .end local v23    # "validationResult":I
     .restart local v24    # "validationResult":I
     goto/16 :goto_0
 
-    .line 178
     .end local v24    # "validationResult":I
     .restart local v23    # "validationResult":I
     :cond_d
@@ -2184,11 +1940,9 @@
 
     move-result-object v15
 
-    .line 179
     .local v15, "profileInfo":Lcom/android/server/enterprise/vpn/knoxvpn/profile/VpnProfileInfo;
     if-eqz v15, :cond_f
 
-    .line 180
     invoke-virtual {v15}, Lcom/android/server/enterprise/vpn/knoxvpn/profile/VpnProfileInfo;->getAdminId()I
 
     move-result v26
@@ -2205,17 +1959,14 @@
 
     if-ne v0, v1, :cond_e
 
-    .line 181
     const/16 v23, 0x6f
 
     move/from16 v24, v23
 
-    .line 182
     .end local v23    # "validationResult":I
     .restart local v24    # "validationResult":I
     goto/16 :goto_0
 
-    .line 184
     .end local v24    # "validationResult":I
     .restart local v23    # "validationResult":I
     :cond_e
@@ -2223,12 +1974,10 @@
 
     move/from16 v24, v23
 
-    .line 185
     .end local v23    # "validationResult":I
     .restart local v24    # "validationResult":I
     goto/16 :goto_0
 
-    .line 189
     .end local v24    # "validationResult":I
     .restart local v23    # "validationResult":I
     :cond_f
@@ -2238,7 +1987,6 @@
 
     move-object/from16 v25, v0
 
-    .line 190
     .local v25, "vendorName":Ljava/lang/String;
     move-object/from16 v0, p1
 
@@ -2246,7 +1994,6 @@
 
     move/from16 v22, v0
 
-    .line 192
     .local v22, "userId":I
     const-string v26, "chaining_enabled"
 
@@ -2260,7 +2007,6 @@
 
     move-result v4
 
-    .line 193
     .local v4, "chainingValue":I
     const/16 v26, -0x1
 
@@ -2268,7 +2014,6 @@
 
     if-ne v4, v0, :cond_12
 
-    .line 194
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/android/server/enterprise/vpn/knoxvpn/KnoxVpnApiValidation;->mKnoxVpnHelper:Lcom/android/server/enterprise/vpn/knoxvpn/KnoxVpnHelper;
@@ -2300,7 +2045,6 @@
 
     move-result v8
 
-    .line 195
     .local v8, "isChainingEnabled":I
     const/16 v26, 0x1
 
@@ -2310,11 +2054,9 @@
 
     if-nez v8, :cond_11
 
-    .line 196
     :cond_10
     const/16 v23, 0x1f7
 
-    .line 212
     .end local v3    # "chainingEnabled":I
     .end local v4    # "chainingValue":I
     .end local v5    # "connectionType":Ljava/lang/String;
@@ -2364,12 +2106,10 @@
 
     move/from16 v24, v23
 
-    .line 213
     .end local v23    # "validationResult":I
     .restart local v24    # "validationResult":I
     goto/16 :goto_0
 
-    .line 199
     .end local v24    # "validationResult":I
     .restart local v3    # "chainingEnabled":I
     .restart local v4    # "chainingValue":I
@@ -2423,7 +2163,6 @@
 
     move-result v9
 
-    .line 200
     .local v9, "isVpnEnabled":I
     const/16 v26, -0x1
 
@@ -2431,12 +2170,10 @@
 
     if-ne v9, v0, :cond_11
 
-    .line 201
     const/16 v23, 0x1f8
 
     goto :goto_1
 
-    .line 205
     .end local v3    # "chainingEnabled":I
     .end local v4    # "chainingValue":I
     .end local v5    # "connectionType":Ljava/lang/String;
@@ -2459,7 +2196,6 @@
     :catch_0
     move-exception v6
 
-    .line 206
     .local v6, "e":Lorg/json/JSONException;
     const-string v26, "KnoxVpnApiValidation"
 
@@ -2487,18 +2223,14 @@
 
     invoke-static/range {v26 .. v27}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 207
     const/16 v23, 0x67
 
-    .line 211
     goto :goto_1
 
-    .line 208
     .end local v6    # "e":Lorg/json/JSONException;
     :catch_1
     move-exception v6
 
-    .line 209
     .local v6, "e":Ljava/lang/Exception;
     const-string v26, "KnoxVpnApiValidation"
 
@@ -2526,7 +2258,6 @@
 
     invoke-static/range {v26 .. v27}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 210
     const/16 v23, 0x65
 
     goto/16 :goto_1
@@ -2541,7 +2272,6 @@
     .prologue
     const/4 v5, 0x0
 
-    .line 615
     if-eqz p3, :cond_0
 
     :try_start_0
@@ -2549,7 +2279,6 @@
 
     if-nez v6, :cond_2
 
-    .line 616
     :cond_0
     const-string v6, "KnoxVpnApiValidation"
 
@@ -2559,13 +2288,11 @@
 
     move-object p3, v5
 
-    .line 653
     .end local p3    # "profileName":Ljava/lang/String;
     :cond_1
     :goto_0
     return-object p3
 
-    .line 620
     .restart local p3    # "profileName":Ljava/lang/String;
     :cond_2
     iget-object v6, p0, Lcom/android/server/enterprise/vpn/knoxvpn/KnoxVpnApiValidation;->vpnConfig:Lcom/android/server/enterprise/vpn/knoxvpn/profile/VpnProfileConfig;
@@ -2574,11 +2301,9 @@
 
     move-result-object v3
 
-    .line 621
     .local v3, "profileInfo":Lcom/android/server/enterprise/vpn/knoxvpn/profile/VpnProfileInfo;
     if-nez v3, :cond_3
 
-    .line 622
     const-string v6, "KnoxVpnApiValidation"
 
     const-string v7, "getAllContainerPackagesInVpnProfileValidation: profileInfo value is null"
@@ -2587,10 +2312,8 @@
 
     move-object p3, v5
 
-    .line 623
     goto :goto_0
 
-    .line 625
     :cond_3
     invoke-virtual {v3}, Lcom/android/server/enterprise/vpn/knoxvpn/profile/VpnProfileInfo;->getAdminId()I
 
@@ -2600,7 +2323,6 @@
 
     if-eq v6, v7, :cond_4
 
-    .line 626
     const-string v6, "KnoxVpnApiValidation"
 
     const-string v7, "getAllContainerPackagesInVpnProfileValidation: Not the same admin"
@@ -2609,20 +2331,16 @@
 
     move-object p3, v5
 
-    .line 627
     goto :goto_0
 
-    .line 631
     :cond_4
     invoke-virtual {v3}, Lcom/android/server/enterprise/vpn/knoxvpn/profile/VpnProfileInfo;->getRouteType()I
 
     move-result v4
 
-    .line 632
     .local v4, "routeType":I
     if-nez v4, :cond_5
 
-    .line 633
     const-string v6, "KnoxVpnApiValidation"
 
     const-string v7, "getAllContainerPackagesInVpnProfileValidation: profile is of system type"
@@ -2631,10 +2349,8 @@
 
     move-object p3, v5
 
-    .line 634
     goto :goto_0
 
-    .line 637
     :cond_5
     invoke-static {}, Lcom/android/server/enterprise/vpn/knoxvpn/KnoxVpnApiValidation;->getPersonaManager()Landroid/os/IPersonaManager;
 
@@ -2644,11 +2360,9 @@
 
     move-result v2
 
-    .line 638
     .local v2, "isPersonaIdIsValid":Z
     if-nez v2, :cond_6
 
-    .line 639
     const-string v6, "KnoxVpnApiValidation"
 
     const-string v7, "getAllContainerPackagesInVpnProfileValidation: user id is not valid"
@@ -2657,10 +2371,8 @@
 
     move-object p3, v5
 
-    .line 640
     goto :goto_0
 
-    .line 643
     :cond_6
     sget-object v6, Lcom/android/server/enterprise/vpn/knoxvpn/KnoxVpnApiValidation;->mEdmStorageProvider:Lcom/android/server/enterprise/storage/EdmStorageProvider;
 
@@ -2668,13 +2380,11 @@
 
     move-result v0
 
-    .line 644
     .local v0, "containerOwner":I
     iget v6, p1, Lcom/sec/enterprise/knox/KnoxVpnContext;->adminId:I
 
     if-eq v0, v6, :cond_1
 
-    .line 645
     const-string v6, "KnoxVpnApiValidation"
 
     const-string v7, "getAllContainerPackagesInVpnProfileValidation: Admin does not own the container"
@@ -2685,10 +2395,8 @@
 
     move-object p3, v5
 
-    .line 646
     goto :goto_0
 
-    .line 649
     .end local v0    # "containerOwner":I
     .end local v2    # "isPersonaIdIsValid":Z
     .end local v3    # "profileInfo":Lcom/android/server/enterprise/vpn/knoxvpn/profile/VpnProfileInfo;
@@ -2696,7 +2404,6 @@
     :catch_0
     move-exception v1
 
-    .line 650
     .local v1, "e":Ljava/lang/Exception;
     const-string v6, "KnoxVpnApiValidation"
 
@@ -2726,7 +2433,6 @@
 
     move-object p3, v5
 
-    .line 651
     goto :goto_0
 .end method
 
@@ -2738,7 +2444,6 @@
     .prologue
     const/4 v3, 0x0
 
-    .line 442
     if-eqz p2, :cond_0
 
     :try_start_0
@@ -2746,7 +2451,6 @@
 
     if-nez v4, :cond_2
 
-    .line 443
     :cond_0
     const-string v4, "KnoxVpnApiValidation"
 
@@ -2756,13 +2460,11 @@
 
     move-object p2, v3
 
-    .line 468
     .end local p2    # "profileName":Ljava/lang/String;
     :cond_1
     :goto_0
     return-object p2
 
-    .line 447
     .restart local p2    # "profileName":Ljava/lang/String;
     :cond_2
     iget-object v4, p0, Lcom/android/server/enterprise/vpn/knoxvpn/KnoxVpnApiValidation;->vpnConfig:Lcom/android/server/enterprise/vpn/knoxvpn/profile/VpnProfileConfig;
@@ -2771,11 +2473,9 @@
 
     move-result-object v1
 
-    .line 448
     .local v1, "profileInfo":Lcom/android/server/enterprise/vpn/knoxvpn/profile/VpnProfileInfo;
     if-nez v1, :cond_3
 
-    .line 449
     const-string v4, "KnoxVpnApiValidation"
 
     const-string v5, "getAllPackagesInVpnProfileValidation: profileInfo value is null"
@@ -2784,10 +2484,8 @@
 
     move-object p2, v3
 
-    .line 450
     goto :goto_0
 
-    .line 452
     :cond_3
     invoke-virtual {v1}, Lcom/android/server/enterprise/vpn/knoxvpn/profile/VpnProfileInfo;->getAdminId()I
 
@@ -2797,7 +2495,6 @@
 
     if-eq v4, v5, :cond_4
 
-    .line 453
     const-string v4, "KnoxVpnApiValidation"
 
     const-string v5, "getAllPackagesInVpnProfileValidation: Not the same Admin"
@@ -2806,20 +2503,16 @@
 
     move-object p2, v3
 
-    .line 454
     goto :goto_0
 
-    .line 458
     :cond_4
     invoke-virtual {v1}, Lcom/android/server/enterprise/vpn/knoxvpn/profile/VpnProfileInfo;->getRouteType()I
 
     move-result v2
 
-    .line 459
     .local v2, "routeType":I
     if-nez v2, :cond_1
 
-    .line 460
     const-string v4, "KnoxVpnApiValidation"
 
     const-string v5, "getAllPackagesInVpnProfileValidation: profile is of system type"
@@ -2830,16 +2523,13 @@
 
     move-object p2, v3
 
-    .line 461
     goto :goto_0
 
-    .line 464
     .end local v1    # "profileInfo":Lcom/android/server/enterprise/vpn/knoxvpn/profile/VpnProfileInfo;
     .end local v2    # "routeType":I
     :catch_0
     move-exception v0
 
-    .line 465
     .local v0, "e":Ljava/lang/Exception;
     const-string v4, "KnoxVpnApiValidation"
 
@@ -2869,7 +2559,6 @@
 
     move-object p2, v3
 
-    .line 466
     goto :goto_0
 .end method
 
@@ -2881,7 +2570,6 @@
     .prologue
     const/4 v2, 0x0
 
-    .line 219
     if-eqz p2, :cond_0
 
     :try_start_0
@@ -2889,7 +2577,6 @@
 
     if-nez v3, :cond_2
 
-    .line 220
     :cond_0
     const-string v3, "KnoxVpnApiValidation"
 
@@ -2899,13 +2586,11 @@
 
     move-object p2, v2
 
-    .line 238
     .end local p2    # "profileName":Ljava/lang/String;
     :cond_1
     :goto_0
     return-object p2
 
-    .line 224
     .restart local p2    # "profileName":Ljava/lang/String;
     :cond_2
     iget-object v3, p0, Lcom/android/server/enterprise/vpn/knoxvpn/KnoxVpnApiValidation;->vpnConfig:Lcom/android/server/enterprise/vpn/knoxvpn/profile/VpnProfileConfig;
@@ -2914,11 +2599,9 @@
 
     move-result-object v1
 
-    .line 225
     .local v1, "profileInfo":Lcom/android/server/enterprise/vpn/knoxvpn/profile/VpnProfileInfo;
     if-nez v1, :cond_3
 
-    .line 226
     const-string v3, "KnoxVpnApiValidation"
 
     const-string v4, "getVpnProfileValidation: profileInfo value is null"
@@ -2927,10 +2610,8 @@
 
     move-object p2, v2
 
-    .line 227
     goto :goto_0
 
-    .line 229
     :cond_3
     invoke-virtual {v1}, Lcom/android/server/enterprise/vpn/knoxvpn/profile/VpnProfileInfo;->getAdminId()I
 
@@ -2940,7 +2621,6 @@
 
     if-eq v3, v4, :cond_1
 
-    .line 230
     const-string v3, "KnoxVpnApiValidation"
 
     const-string v4, "getVpnProfileValidation: Not the same admin"
@@ -2951,15 +2631,12 @@
 
     move-object p2, v2
 
-    .line 231
     goto :goto_0
 
-    .line 234
     .end local v1    # "profileInfo":Lcom/android/server/enterprise/vpn/knoxvpn/profile/VpnProfileInfo;
     :catch_0
     move-exception v0
 
-    .line 235
     .local v0, "e":Ljava/lang/Exception;
     const-string v2, "KnoxVpnApiValidation"
 
@@ -2997,10 +2674,8 @@
     .param p3, "profileName"    # Ljava/lang/String;
 
     .prologue
-    .line 722
     const/16 v5, 0x64
 
-    .line 726
     .local v5, "validationResult":I
     if-eqz p3, :cond_0
 
@@ -3009,19 +2684,16 @@
 
     if-nez v7, :cond_1
 
-    .line 727
     :cond_0
     const/16 v5, 0x68
 
     move v6, v5
 
-    .line 772
     .end local v5    # "validationResult":I
     .local v6, "validationResult":I
     :goto_0
     return v6
 
-    .line 731
     .end local v6    # "validationResult":I
     .restart local v5    # "validationResult":I
     :cond_1
@@ -3031,21 +2703,17 @@
 
     move-result-object v3
 
-    .line 732
     .local v3, "profileInfo":Lcom/android/server/enterprise/vpn/knoxvpn/profile/VpnProfileInfo;
     if-nez v3, :cond_2
 
-    .line 733
     const/16 v5, 0x6c
 
     move v6, v5
 
-    .line 734
     .end local v5    # "validationResult":I
     .restart local v6    # "validationResult":I
     goto :goto_0
 
-    .line 736
     .end local v6    # "validationResult":I
     .restart local v5    # "validationResult":I
     :cond_2
@@ -3057,17 +2725,14 @@
 
     if-eq v7, v8, :cond_3
 
-    .line 737
     const/16 v5, 0x70
 
     move v6, v5
 
-    .line 738
     .end local v5    # "validationResult":I
     .restart local v6    # "validationResult":I
     goto :goto_0
 
-    .line 742
     .end local v6    # "validationResult":I
     .restart local v5    # "validationResult":I
     :cond_3
@@ -3075,21 +2740,17 @@
 
     move-result v4
 
-    .line 743
     .local v4, "routeType":I
     if-nez v4, :cond_4
 
-    .line 744
     const/16 v5, 0x6d
 
     move v6, v5
 
-    .line 745
     .end local v5    # "validationResult":I
     .restart local v6    # "validationResult":I
     goto :goto_0
 
-    .line 748
     .end local v6    # "validationResult":I
     .restart local v5    # "validationResult":I
     :cond_4
@@ -3101,21 +2762,17 @@
 
     move-result v2
 
-    .line 749
     .local v2, "isPersonaIdIsValid":Z
     if-nez v2, :cond_5
 
-    .line 750
     const/16 v5, 0x71
 
     move v6, v5
 
-    .line 751
     .end local v5    # "validationResult":I
     .restart local v6    # "validationResult":I
     goto :goto_0
 
-    .line 754
     .end local v6    # "validationResult":I
     .restart local v5    # "validationResult":I
     :cond_5
@@ -3125,23 +2782,19 @@
 
     move-result v0
 
-    .line 755
     .local v0, "containerOwner":I
     iget v7, p1, Lcom/sec/enterprise/knox/KnoxVpnContext;->adminId:I
 
     if-eq v0, v7, :cond_6
 
-    .line 756
     const/16 v5, 0x72
 
     move v6, v5
 
-    .line 757
     .end local v5    # "validationResult":I
     .restart local v6    # "validationResult":I
     goto :goto_0
 
-    .line 760
     .end local v6    # "validationResult":I
     .restart local v5    # "validationResult":I
     :cond_6
@@ -3153,7 +2806,6 @@
 
     if-eqz v7, :cond_7
 
-    .line 761
     iget-object v7, p0, Lcom/android/server/enterprise/vpn/knoxvpn/KnoxVpnApiValidation;->mKnoxVpnHelper:Lcom/android/server/enterprise/vpn/knoxvpn/KnoxVpnHelper;
 
     iget v8, p1, Lcom/sec/enterprise/knox/KnoxVpnContext;->personaId:I
@@ -3166,17 +2818,14 @@
 
     if-nez v7, :cond_7
 
-    .line 762
     const/16 v5, 0x7c
 
     move v6, v5
 
-    .line 763
     .end local v5    # "validationResult":I
     .restart local v6    # "validationResult":I
     goto :goto_0
 
-    .line 767
     .end local v0    # "containerOwner":I
     .end local v2    # "isPersonaIdIsValid":Z
     .end local v3    # "profileInfo":Lcom/android/server/enterprise/vpn/knoxvpn/profile/VpnProfileInfo;
@@ -3186,7 +2835,6 @@
     :catch_0
     move-exception v1
 
-    .line 768
     .local v1, "e":Ljava/lang/Exception;
     const-string v7, "KnoxVpnApiValidation"
 
@@ -3214,10 +2862,8 @@
 
     invoke-static {v7, v8}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 769
     const/16 v5, 0x65
 
-    .line 771
     .end local v1    # "e":Ljava/lang/Exception;
     :cond_7
     const-string v7, "KnoxVpnApiValidation"
@@ -3226,7 +2872,7 @@
 
     invoke-direct {v8}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v9, "removeAllPackagesFromVpnValidation : validationResult value is "
+    const-string v9, "removeAllPackagesFromVpnValidation : validationResult value is "
 
     invoke-virtual {v8, v9}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -3244,7 +2890,6 @@
 
     move v6, v5
 
-    .line 772
     .end local v5    # "validationResult":I
     .restart local v6    # "validationResult":I
     goto/16 :goto_0
@@ -3256,10 +2901,8 @@
     .param p2, "profileName"    # Ljava/lang/String;
 
     .prologue
-    .line 828
     const/16 v3, 0x64
 
-    .line 831
     .local v3, "validationResult":I
     if-eqz p2, :cond_0
 
@@ -3268,19 +2911,16 @@
 
     if-nez v5, :cond_1
 
-    .line 832
     :cond_0
     const/16 v3, 0x68
 
     move v4, v3
 
-    .line 865
     .end local v3    # "validationResult":I
     .local v4, "validationResult":I
     :goto_0
     return v4
 
-    .line 836
     .end local v4    # "validationResult":I
     .restart local v3    # "validationResult":I
     :cond_1
@@ -3290,21 +2930,17 @@
 
     move-result-object v1
 
-    .line 837
     .local v1, "profileInfo":Lcom/android/server/enterprise/vpn/knoxvpn/profile/VpnProfileInfo;
     if-nez v1, :cond_2
 
-    .line 838
     const/16 v3, 0x6c
 
     move v4, v3
 
-    .line 839
     .end local v3    # "validationResult":I
     .restart local v4    # "validationResult":I
     goto :goto_0
 
-    .line 841
     .end local v4    # "validationResult":I
     .restart local v3    # "validationResult":I
     :cond_2
@@ -3316,17 +2952,14 @@
 
     if-eq v5, v6, :cond_3
 
-    .line 842
     const/16 v3, 0x70
 
     move v4, v3
 
-    .line 843
     .end local v3    # "validationResult":I
     .restart local v4    # "validationResult":I
     goto :goto_0
 
-    .line 847
     .end local v4    # "validationResult":I
     .restart local v3    # "validationResult":I
     :cond_3
@@ -3334,21 +2967,17 @@
 
     move-result v2
 
-    .line 848
     .local v2, "routeType":I
     if-nez v2, :cond_4
 
-    .line 849
     const/16 v3, 0x6d
 
     move v4, v3
 
-    .line 850
     .end local v3    # "validationResult":I
     .restart local v4    # "validationResult":I
     goto :goto_0
 
-    .line 853
     .end local v4    # "validationResult":I
     .restart local v3    # "validationResult":I
     :cond_4
@@ -3362,7 +2991,6 @@
 
     if-eqz v5, :cond_5
 
-    .line 854
     iget-object v5, p0, Lcom/android/server/enterprise/vpn/knoxvpn/KnoxVpnApiValidation;->mKnoxVpnHelper:Lcom/android/server/enterprise/vpn/knoxvpn/KnoxVpnHelper;
 
     iget v6, p1, Lcom/sec/enterprise/knox/KnoxVpnContext;->personaId:I
@@ -3375,17 +3003,14 @@
 
     if-nez v5, :cond_5
 
-    .line 855
     const/16 v3, 0x7c
 
     move v4, v3
 
-    .line 856
     .end local v3    # "validationResult":I
     .restart local v4    # "validationResult":I
     goto :goto_0
 
-    .line 860
     .end local v1    # "profileInfo":Lcom/android/server/enterprise/vpn/knoxvpn/profile/VpnProfileInfo;
     .end local v2    # "routeType":I
     .end local v4    # "validationResult":I
@@ -3393,7 +3018,6 @@
     :catch_0
     move-exception v0
 
-    .line 861
     .local v0, "e":Ljava/lang/Exception;
     const-string v5, "KnoxVpnApiValidation"
 
@@ -3421,10 +3045,8 @@
 
     invoke-static {v5, v6}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 862
     const/16 v3, 0x65
 
-    .line 864
     .end local v0    # "e":Ljava/lang/Exception;
     :cond_5
     const-string v5, "KnoxVpnApiValidation"
@@ -3433,7 +3055,7 @@
 
     invoke-direct {v6}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v7, "removeAllPackagesFromVpnValidation : validationResult value is "
+    const-string v7, "removeAllPackagesFromVpnValidation : validationResult value is "
 
     invoke-virtual {v6, v7}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -3451,7 +3073,6 @@
 
     move v4, v3
 
-    .line 865
     .end local v3    # "validationResult":I
     .restart local v4    # "validationResult":I
     goto :goto_0
@@ -3465,10 +3086,8 @@
     .param p4, "profileName"    # Ljava/lang/String;
 
     .prologue
-    .line 547
     const/16 v6, 0x64
 
-    .line 550
     .local v6, "validationResult":I
     if-eqz p4, :cond_0
 
@@ -3485,19 +3104,16 @@
 
     if-nez v8, :cond_1
 
-    .line 551
     :cond_0
     const/16 v6, 0x68
 
     move v7, v6
 
-    .line 610
     .end local v6    # "validationResult":I
     .local v7, "validationResult":I
     :goto_0
     return v7
 
-    .line 555
     .end local v7    # "validationResult":I
     .restart local v6    # "validationResult":I
     :cond_1
@@ -3507,21 +3123,17 @@
 
     move-result-object v3
 
-    .line 556
     .local v3, "profileInfo":Lcom/android/server/enterprise/vpn/knoxvpn/profile/VpnProfileInfo;
     if-nez v3, :cond_2
 
-    .line 557
     const/16 v6, 0x6c
 
     move v7, v6
 
-    .line 558
     .end local v6    # "validationResult":I
     .restart local v7    # "validationResult":I
     goto :goto_0
 
-    .line 560
     .end local v7    # "validationResult":I
     .restart local v6    # "validationResult":I
     :cond_2
@@ -3533,17 +3145,14 @@
 
     if-eq v8, v9, :cond_3
 
-    .line 561
     const/16 v6, 0x70
 
     move v7, v6
 
-    .line 562
     .end local v6    # "validationResult":I
     .restart local v7    # "validationResult":I
     goto :goto_0
 
-    .line 566
     .end local v7    # "validationResult":I
     .restart local v6    # "validationResult":I
     :cond_3
@@ -3551,21 +3160,17 @@
 
     move-result v5
 
-    .line 567
     .local v5, "routeType":I
     if-nez v5, :cond_4
 
-    .line 568
     const/16 v6, 0x6d
 
     move v7, v6
 
-    .line 569
     .end local v6    # "validationResult":I
     .restart local v7    # "validationResult":I
     goto :goto_0
 
-    .line 572
     .end local v7    # "validationResult":I
     .restart local v6    # "validationResult":I
     :cond_4
@@ -3577,21 +3182,17 @@
 
     move-result v2
 
-    .line 573
     .local v2, "isPersonaIdIsValid":Z
     if-nez v2, :cond_5
 
-    .line 574
     const/16 v6, 0x71
 
     move v7, v6
 
-    .line 575
     .end local v6    # "validationResult":I
     .restart local v7    # "validationResult":I
     goto :goto_0
 
-    .line 578
     .end local v7    # "validationResult":I
     .restart local v6    # "validationResult":I
     :cond_5
@@ -3601,23 +3202,19 @@
 
     move-result v0
 
-    .line 579
     .local v0, "containerOwner":I
     iget v8, p1, Lcom/sec/enterprise/knox/KnoxVpnContext;->adminId:I
 
     if-eq v0, v8, :cond_6
 
-    .line 580
     const/16 v6, 0x72
 
     move v7, v6
 
-    .line 581
     .end local v6    # "validationResult":I
     .restart local v7    # "validationResult":I
     goto :goto_0
 
-    .line 584
     .end local v7    # "validationResult":I
     .restart local v6    # "validationResult":I
     :cond_6
@@ -3629,7 +3226,6 @@
 
     if-eqz v8, :cond_8
 
-    .line 585
     iget-object v8, p0, Lcom/android/server/enterprise/vpn/knoxvpn/KnoxVpnApiValidation;->mKnoxVpnHelper:Lcom/android/server/enterprise/vpn/knoxvpn/KnoxVpnHelper;
 
     invoke-virtual {v8, p2}, Lcom/android/server/enterprise/vpn/knoxvpn/KnoxVpnHelper;->getAdminIdForUserVpn(I)I
@@ -3640,7 +3236,6 @@
 
     if-ne v8, v9, :cond_7
 
-    .line 588
     iget-object v8, p0, Lcom/android/server/enterprise/vpn/knoxvpn/KnoxVpnApiValidation;->mKnoxVpnHelper:Lcom/android/server/enterprise/vpn/knoxvpn/KnoxVpnHelper;
 
     iget-object v9, p0, Lcom/android/server/enterprise/vpn/knoxvpn/KnoxVpnApiValidation;->mKnoxVpnHelper:Lcom/android/server/enterprise/vpn/knoxvpn/KnoxVpnHelper;
@@ -3655,7 +3250,6 @@
 
     move-result-object v4
 
-    .line 589
     .local v4, "profileOwningPackage":Ljava/lang/String;
     invoke-virtual {v4, p4}, Ljava/lang/String;->equalsIgnoreCase(Ljava/lang/String;)Z
 
@@ -3663,7 +3257,6 @@
 
     if-nez v8, :cond_8
 
-    .line 590
     iget-object v8, p0, Lcom/android/server/enterprise/vpn/knoxvpn/KnoxVpnApiValidation;->mKnoxVpnHelper:Lcom/android/server/enterprise/vpn/knoxvpn/KnoxVpnHelper;
 
     invoke-virtual {v8, v4}, Lcom/android/server/enterprise/vpn/knoxvpn/KnoxVpnHelper;->checkIfProfileHasChainingFeature(Ljava/lang/String;)I
@@ -3674,12 +3267,10 @@
 
     packed-switch v8, :pswitch_data_0
 
-    .line 594
     const/16 v6, 0x79
 
     move v7, v6
 
-    .line 595
     .end local v6    # "validationResult":I
     .restart local v7    # "validationResult":I
     goto :goto_0
@@ -3689,12 +3280,10 @@
     :pswitch_0
     move v7, v6
 
-    .line 592
     .end local v6    # "validationResult":I
     .restart local v7    # "validationResult":I
     goto :goto_0
 
-    .line 600
     .end local v4    # "profileOwningPackage":Ljava/lang/String;
     .end local v7    # "validationResult":I
     .restart local v6    # "validationResult":I
@@ -3703,12 +3292,10 @@
 
     move v7, v6
 
-    .line 601
     .end local v6    # "validationResult":I
     .restart local v7    # "validationResult":I
     goto :goto_0
 
-    .line 605
     .end local v0    # "containerOwner":I
     .end local v2    # "isPersonaIdIsValid":Z
     .end local v3    # "profileInfo":Lcom/android/server/enterprise/vpn/knoxvpn/profile/VpnProfileInfo;
@@ -3718,7 +3305,6 @@
     :catch_0
     move-exception v1
 
-    .line 606
     .local v1, "e":Ljava/lang/Exception;
     const-string v8, "KnoxVpnApiValidation"
 
@@ -3746,10 +3332,8 @@
 
     invoke-static {v8, v9}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 607
     const/16 v6, 0x65
 
-    .line 609
     .end local v1    # "e":Ljava/lang/Exception;
     :cond_8
     const-string v8, "KnoxVpnApiValidation"
@@ -3758,7 +3342,7 @@
 
     invoke-direct {v9}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v10, "removeContainerPackagesFromVpnValidation : validationResult value is "
+    const-string v10, "removeContainerPackagesFromVpnValidation : validationResult value is "
 
     invoke-virtual {v9, v10}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -3776,12 +3360,10 @@
 
     move v7, v6
 
-    .line 610
     .end local v6    # "validationResult":I
     .restart local v7    # "validationResult":I
     goto/16 :goto_0
 
-    .line 590
     :pswitch_data_0
     .packed-switch 0x1
         :pswitch_0
@@ -3795,10 +3377,8 @@
     .param p3, "profileName"    # Ljava/lang/String;
 
     .prologue
-    .line 337
     const/16 v4, 0x64
 
-    .line 340
     .local v4, "validationResult":I
     if-eqz p3, :cond_0
 
@@ -3815,19 +3395,16 @@
 
     if-nez v6, :cond_1
 
-    .line 341
     :cond_0
     const/16 v4, 0x68
 
     move v5, v4
 
-    .line 388
     .end local v4    # "validationResult":I
     .local v5, "validationResult":I
     :goto_0
     return v5
 
-    .line 345
     .end local v5    # "validationResult":I
     .restart local v4    # "validationResult":I
     :cond_1
@@ -3837,21 +3414,17 @@
 
     move-result-object v1
 
-    .line 346
     .local v1, "profileInfo":Lcom/android/server/enterprise/vpn/knoxvpn/profile/VpnProfileInfo;
     if-nez v1, :cond_2
 
-    .line 347
     const/16 v4, 0x6c
 
     move v5, v4
 
-    .line 348
     .end local v4    # "validationResult":I
     .restart local v5    # "validationResult":I
     goto :goto_0
 
-    .line 350
     .end local v5    # "validationResult":I
     .restart local v4    # "validationResult":I
     :cond_2
@@ -3863,17 +3436,14 @@
 
     if-eq v6, v7, :cond_3
 
-    .line 351
     const/16 v4, 0x70
 
     move v5, v4
 
-    .line 352
     .end local v4    # "validationResult":I
     .restart local v5    # "validationResult":I
     goto :goto_0
 
-    .line 356
     .end local v5    # "validationResult":I
     .restart local v4    # "validationResult":I
     :cond_3
@@ -3881,21 +3451,17 @@
 
     move-result v3
 
-    .line 357
     .local v3, "routeType":I
     if-nez v3, :cond_4
 
-    .line 358
     const/16 v4, 0x6d
 
     move v5, v4
 
-    .line 359
     .end local v4    # "validationResult":I
     .restart local v5    # "validationResult":I
     goto :goto_0
 
-    .line 362
     .end local v5    # "validationResult":I
     .restart local v4    # "validationResult":I
     :cond_4
@@ -3909,7 +3475,6 @@
 
     if-eqz v6, :cond_6
 
-    .line 363
     iget-object v6, p0, Lcom/android/server/enterprise/vpn/knoxvpn/KnoxVpnApiValidation;->mKnoxVpnHelper:Lcom/android/server/enterprise/vpn/knoxvpn/KnoxVpnHelper;
 
     iget v7, p1, Lcom/sec/enterprise/knox/KnoxVpnContext;->personaId:I
@@ -3922,7 +3487,6 @@
 
     if-ne v6, v7, :cond_5
 
-    .line 366
     iget-object v6, p0, Lcom/android/server/enterprise/vpn/knoxvpn/KnoxVpnApiValidation;->mKnoxVpnHelper:Lcom/android/server/enterprise/vpn/knoxvpn/KnoxVpnHelper;
 
     iget-object v7, p0, Lcom/android/server/enterprise/vpn/knoxvpn/KnoxVpnApiValidation;->mKnoxVpnHelper:Lcom/android/server/enterprise/vpn/knoxvpn/KnoxVpnHelper;
@@ -3939,7 +3503,6 @@
 
     move-result-object v2
 
-    .line 367
     .local v2, "profileOwningPackage":Ljava/lang/String;
     invoke-virtual {v2, p3}, Ljava/lang/String;->equalsIgnoreCase(Ljava/lang/String;)Z
 
@@ -3947,7 +3510,6 @@
 
     if-nez v6, :cond_6
 
-    .line 368
     iget-object v6, p0, Lcom/android/server/enterprise/vpn/knoxvpn/KnoxVpnApiValidation;->mKnoxVpnHelper:Lcom/android/server/enterprise/vpn/knoxvpn/KnoxVpnHelper;
 
     invoke-virtual {v6, v2}, Lcom/android/server/enterprise/vpn/knoxvpn/KnoxVpnHelper;->checkIfProfileHasChainingFeature(Ljava/lang/String;)I
@@ -3958,12 +3520,10 @@
 
     packed-switch v6, :pswitch_data_0
 
-    .line 372
     const/16 v4, 0x79
 
     move v5, v4
 
-    .line 373
     .end local v4    # "validationResult":I
     .restart local v5    # "validationResult":I
     goto :goto_0
@@ -3973,12 +3533,10 @@
     :pswitch_0
     move v5, v4
 
-    .line 370
     .end local v4    # "validationResult":I
     .restart local v5    # "validationResult":I
     goto :goto_0
 
-    .line 378
     .end local v2    # "profileOwningPackage":Ljava/lang/String;
     .end local v5    # "validationResult":I
     .restart local v4    # "validationResult":I
@@ -3987,12 +3545,10 @@
 
     move v5, v4
 
-    .line 379
     .end local v4    # "validationResult":I
     .restart local v5    # "validationResult":I
     goto :goto_0
 
-    .line 383
     .end local v1    # "profileInfo":Lcom/android/server/enterprise/vpn/knoxvpn/profile/VpnProfileInfo;
     .end local v3    # "routeType":I
     .end local v5    # "validationResult":I
@@ -4000,7 +3556,6 @@
     :catch_0
     move-exception v0
 
-    .line 384
     .local v0, "e":Ljava/lang/Exception;
     const-string v6, "KnoxVpnApiValidation"
 
@@ -4028,10 +3583,8 @@
 
     invoke-static {v6, v7}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 385
     const/16 v4, 0x65
 
-    .line 387
     .end local v0    # "e":Ljava/lang/Exception;
     :cond_6
     const-string v6, "KnoxVpnApiValidation"
@@ -4040,7 +3593,7 @@
 
     invoke-direct {v7}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v8, "removePackagesFromVpnValidation : validationResult value is "
+    const-string v8, "removePackagesFromVpnValidation : validationResult value is "
 
     invoke-virtual {v7, v8}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -4058,12 +3611,10 @@
 
     move v5, v4
 
-    .line 388
     .end local v4    # "validationResult":I
     .restart local v5    # "validationResult":I
     goto/16 :goto_0
 
-    .line 368
     :pswitch_data_0
     .packed-switch 0x1
         :pswitch_0
@@ -4078,10 +3629,8 @@
     .prologue
     const/4 v8, 0x1
 
-    .line 243
     const/16 v4, 0x64
 
-    .line 246
     .local v4, "validationResult":I
     if-eqz p2, :cond_0
 
@@ -4090,19 +3639,16 @@
 
     if-nez v6, :cond_1
 
-    .line 247
     :cond_0
     const/16 v4, 0x68
 
     move v5, v4
 
-    .line 273
     .end local v4    # "validationResult":I
     .local v5, "validationResult":I
     :goto_0
     return v5
 
-    .line 251
     .end local v5    # "validationResult":I
     .restart local v4    # "validationResult":I
     :cond_1
@@ -4112,21 +3658,17 @@
 
     move-result-object v1
 
-    .line 252
     .local v1, "profileInfo":Lcom/android/server/enterprise/vpn/knoxvpn/profile/VpnProfileInfo;
     if-nez v1, :cond_2
 
-    .line 253
     const/16 v4, 0x6c
 
     move v5, v4
 
-    .line 254
     .end local v4    # "validationResult":I
     .restart local v5    # "validationResult":I
     goto :goto_0
 
-    .line 256
     .end local v5    # "validationResult":I
     .restart local v4    # "validationResult":I
     :cond_2
@@ -4138,17 +3680,14 @@
 
     if-eq v6, v7, :cond_3
 
-    .line 257
     const/16 v4, 0x70
 
     move v5, v4
 
-    .line 258
     .end local v4    # "validationResult":I
     .restart local v5    # "validationResult":I
     goto :goto_0
 
-    .line 262
     .end local v5    # "validationResult":I
     .restart local v4    # "validationResult":I
     :cond_3
@@ -4156,7 +3695,6 @@
 
     move-result v3
 
-    .line 263
     .local v3, "routeType":I
     invoke-virtual {v1}, Lcom/android/server/enterprise/vpn/knoxvpn/profile/VpnProfileInfo;->getActivateState()I
     :try_end_0
@@ -4164,16 +3702,13 @@
 
     move-result v2
 
-    .line 264
     .local v2, "profileState":I
     if-ne v3, v8, :cond_4
 
     if-ne v2, v8, :cond_4
 
-    .line 265
     const/16 v4, 0x7d
 
-    .line 272
     .end local v1    # "profileInfo":Lcom/android/server/enterprise/vpn/knoxvpn/profile/VpnProfileInfo;
     .end local v2    # "profileState":I
     .end local v3    # "routeType":I
@@ -4185,7 +3720,7 @@
 
     invoke-direct {v7}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v8, "removeVpnProfileValidation : validationResult value is "
+    const-string v8, "removeVpnProfileValidation : validationResult value is "
 
     invoke-virtual {v7, v8}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -4203,18 +3738,15 @@
 
     move v5, v4
 
-    .line 273
     .end local v4    # "validationResult":I
     .restart local v5    # "validationResult":I
     goto :goto_0
 
-    .line 268
     .end local v5    # "validationResult":I
     .restart local v4    # "validationResult":I
     :catch_0
     move-exception v0
 
-    .line 269
     .local v0, "e":Ljava/lang/Exception;
     const-string v6, "KnoxVpnApiValidation"
 
@@ -4242,7 +3774,6 @@
 
     invoke-static {v6, v7}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 270
     const/16 v4, 0x65
 
     goto :goto_1

@@ -23,7 +23,6 @@
     .prologue
     const/4 v2, 0x1
 
-    .line 39
     invoke-static {p6}, Landroid/media/AudioManager;->isInputDevice(I)Z
 
     move-result v0
@@ -45,16 +44,12 @@
 
     invoke-direct/range {v0 .. v6}, Landroid/media/AudioPort;-><init>(Landroid/media/AudioHandle;I[I[I[I[Landroid/media/AudioGain;)V
 
-    .line 43
     iput p6, p0, Landroid/media/AudioDevicePort;->mType:I
 
-    .line 44
     iput-object p7, p0, Landroid/media/AudioDevicePort;->mAddress:Ljava/lang/String;
 
-    .line 45
     return-void
 
-    .line 39
     :cond_0
     const/4 v2, 0x2
 
@@ -67,7 +62,6 @@
     .locals 1
 
     .prologue
-    .line 66
     iget-object v0, p0, Landroid/media/AudioDevicePort;->mAddress:Ljava/lang/String;
 
     return-object v0
@@ -81,7 +75,6 @@
     .param p4, "gain"    # Landroid/media/AudioGainConfig;
 
     .prologue
-    .line 75
     new-instance v0, Landroid/media/AudioDevicePortConfig;
 
     move-object v1, p0
@@ -107,7 +100,6 @@
     .param p4, "x3"    # Landroid/media/AudioGainConfig;
 
     .prologue
-    .line 32
     invoke-virtual {p0, p1, p2, p3, p4}, Landroid/media/AudioDevicePort;->buildConfig(IIILandroid/media/AudioGainConfig;)Landroid/media/AudioDevicePortConfig;
 
     move-result-object v0
@@ -120,18 +112,15 @@
     .param p1, "o"    # Ljava/lang/Object;
 
     .prologue
-    .line 80
     if-eqz p1, :cond_0
 
     instance-of v0, p1, Landroid/media/AudioDevicePort;
 
     if-nez v0, :cond_1
 
-    .line 81
     :cond_0
     const/4 v0, 0x0
 
-    .line 83
     :goto_0
     return v0
 
@@ -147,12 +136,11 @@
     .locals 2
 
     .prologue
-    .line 88
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v1, "{"
+    const-string v1, "{"
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -190,7 +178,7 @@
 
     move-result-object v0
 
-    const-string/jumbo v1, "}"
+    const-string v1, "}"
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -207,7 +195,6 @@
     .locals 1
 
     .prologue
-    .line 51
     iget v0, p0, Landroid/media/AudioDevicePort;->mType:I
 
     return v0

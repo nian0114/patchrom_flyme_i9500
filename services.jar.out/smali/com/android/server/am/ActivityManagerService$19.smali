@@ -25,7 +25,6 @@
     .param p4, "x1"    # J
 
     .prologue
-    .line 14494
     iput-object p1, p0, Lcom/android/server/am/ActivityManagerService$19;->this$0:Lcom/android/server/am/ActivityManagerService;
 
     invoke-direct {p0, p2, p3, p4, p5}, Landroid/os/CountDownTimer;-><init>(JJ)V
@@ -39,14 +38,12 @@
     .locals 2
 
     .prologue
-    .line 14519
     const-string v0, "BootTimer"
 
-    const-string/jumbo v1, "onFinish"
+    const-string v1, "onFinish"
 
     invoke-static {v0, v1}, Landroid/util/Slog;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 14520
     # getter for: Lcom/android/server/am/ActivityManagerService;->cpuCheckTimer:Landroid/os/CountDownTimer;
     invoke-static {}, Lcom/android/server/am/ActivityManagerService;->access$1600()Landroid/os/CountDownTimer;
 
@@ -54,13 +51,11 @@
 
     invoke-virtual {v0}, Landroid/os/CountDownTimer;->cancel()V
 
-    .line 14521
     const/4 v0, 0x0
 
     # setter for: Lcom/android/server/am/ActivityManagerService;->cpuCheckTimer:Landroid/os/CountDownTimer;
     invoke-static {v0}, Lcom/android/server/am/ActivityManagerService;->access$1602(Landroid/os/CountDownTimer;)Landroid/os/CountDownTimer;
 
-    .line 14522
     return-void
 .end method
 
@@ -69,14 +64,11 @@
     .param p1, "duration"    # J
 
     .prologue
-    .line 14496
     const/4 v1, 0x0
 
-    .line 14497
     .local v1, "freq":Ljava/io/BufferedReader;
     const/4 v3, 0x0
 
-    .line 14499
     .local v3, "online":Ljava/io/BufferedReader;
     :try_start_0
     new-instance v2, Ljava/io/BufferedReader;
@@ -92,7 +84,6 @@
     .catch Ljava/io/IOException; {:try_start_0 .. :try_end_0} :catch_1
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 14500
     .end local v1    # "freq":Ljava/io/BufferedReader;
     .local v2, "freq":Ljava/io/BufferedReader;
     :try_start_1
@@ -109,7 +100,6 @@
     .catch Ljava/io/IOException; {:try_start_1 .. :try_end_1} :catch_4
     .catchall {:try_start_1 .. :try_end_1} :catchall_1
 
-    .line 14501
     .end local v3    # "online":Ljava/io/BufferedReader;
     .local v4, "online":Ljava/io/BufferedReader;
     :try_start_2
@@ -150,18 +140,14 @@
     .catch Ljava/io/IOException; {:try_start_2 .. :try_end_2} :catch_5
     .catchall {:try_start_2 .. :try_end_2} :catchall_2
 
-    .line 14506
     if-eqz v2, :cond_0
 
-    .line 14507
     :try_start_3
     invoke-virtual {v2}, Ljava/io/BufferedReader;->close()V
 
-    .line 14509
     :cond_0
     if-eqz v4, :cond_1
 
-    .line 14510
     invoke-virtual {v4}, Ljava/io/BufferedReader;->close()V
     :try_end_3
     .catch Ljava/io/IOException; {:try_start_3 .. :try_end_3} :catch_0
@@ -173,14 +159,12 @@
     .restart local v3    # "online":Ljava/io/BufferedReader;
     move-object v1, v2
 
-    .line 14516
     .end local v2    # "freq":Ljava/io/BufferedReader;
     .restart local v1    # "freq":Ljava/io/BufferedReader;
     :cond_2
     :goto_0
     return-void
 
-    .line 14512
     .end local v1    # "freq":Ljava/io/BufferedReader;
     .end local v3    # "online":Ljava/io/BufferedReader;
     .restart local v2    # "freq":Ljava/io/BufferedReader;
@@ -188,7 +172,6 @@
     :catch_0
     move-exception v0
 
-    .line 14513
     .local v0, "e":Ljava/io/IOException;
     const-string v5, "BootTimer"
 
@@ -202,17 +185,14 @@
     .restart local v3    # "online":Ljava/io/BufferedReader;
     move-object v1, v2
 
-    .line 14515
     .end local v2    # "freq":Ljava/io/BufferedReader;
     .restart local v1    # "freq":Ljava/io/BufferedReader;
     goto :goto_0
 
-    .line 14502
     .end local v0    # "e":Ljava/io/IOException;
     :catch_1
     move-exception v0
 
-    .line 14503
     .restart local v0    # "e":Ljava/io/IOException;
     :goto_1
     :try_start_4
@@ -240,29 +220,23 @@
     :try_end_4
     .catchall {:try_start_4 .. :try_end_4} :catchall_0
 
-    .line 14506
     if-eqz v1, :cond_3
 
-    .line 14507
     :try_start_5
     invoke-virtual {v1}, Ljava/io/BufferedReader;->close()V
 
-    .line 14509
     :cond_3
     if-eqz v3, :cond_2
 
-    .line 14510
     invoke-virtual {v3}, Ljava/io/BufferedReader;->close()V
     :try_end_5
     .catch Ljava/io/IOException; {:try_start_5 .. :try_end_5} :catch_2
 
     goto :goto_0
 
-    .line 14512
     :catch_2
     move-exception v0
 
-    .line 14513
     const-string v5, "BootTimer"
 
     const-string v6, "close() failed"
@@ -271,38 +245,30 @@
 
     goto :goto_0
 
-    .line 14505
     .end local v0    # "e":Ljava/io/IOException;
     :catchall_0
     move-exception v5
 
-    .line 14506
     :goto_2
     if-eqz v1, :cond_4
 
-    .line 14507
     :try_start_6
     invoke-virtual {v1}, Ljava/io/BufferedReader;->close()V
 
-    .line 14509
     :cond_4
     if-eqz v3, :cond_5
 
-    .line 14510
     invoke-virtual {v3}, Ljava/io/BufferedReader;->close()V
     :try_end_6
     .catch Ljava/io/IOException; {:try_start_6 .. :try_end_6} :catch_3
 
-    .line 14514
     :cond_5
     :goto_3
     throw v5
 
-    .line 14512
     :catch_3
     move-exception v0
 
-    .line 14513
     .restart local v0    # "e":Ljava/io/IOException;
     const-string v6, "BootTimer"
 
@@ -312,7 +278,6 @@
 
     goto :goto_3
 
-    .line 14505
     .end local v0    # "e":Ljava/io/IOException;
     .end local v1    # "freq":Ljava/io/BufferedReader;
     .restart local v2    # "freq":Ljava/io/BufferedReader;
@@ -342,7 +307,6 @@
     .restart local v1    # "freq":Ljava/io/BufferedReader;
     goto :goto_2
 
-    .line 14502
     .end local v1    # "freq":Ljava/io/BufferedReader;
     .restart local v2    # "freq":Ljava/io/BufferedReader;
     :catch_4

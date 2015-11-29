@@ -23,7 +23,6 @@
     .locals 0
 
     .prologue
-    .line 337
     iput-object p1, p0, Lcom/android/server/connectivity/NetworkMonitor$ValidatedState;->this$0:Lcom/android/server/connectivity/NetworkMonitor;
 
     invoke-direct {p0}, Lcom/android/internal/util/State;-><init>()V
@@ -37,7 +36,6 @@
     .param p2, "x1"    # Lcom/android/server/connectivity/NetworkMonitor$1;
 
     .prologue
-    .line 337
     invoke-direct {p0, p1}, Lcom/android/server/connectivity/NetworkMonitor$ValidatedState;-><init>(Lcom/android/server/connectivity/NetworkMonitor;)V
 
     return-void
@@ -51,7 +49,6 @@
     .prologue
     const/4 v4, 0x0
 
-    .line 340
     iget-object v0, p0, Lcom/android/server/connectivity/NetworkMonitor$ValidatedState;->this$0:Lcom/android/server/connectivity/NetworkMonitor;
 
     const-string v1, "Validated"
@@ -59,7 +56,6 @@
     # invokes: Lcom/android/server/connectivity/NetworkMonitor;->log(Ljava/lang/String;)V
     invoke-static {v0, v1}, Lcom/android/server/connectivity/NetworkMonitor;->access$2300(Lcom/android/server/connectivity/NetworkMonitor;Ljava/lang/String;)V
 
-    .line 341
     iget-object v0, p0, Lcom/android/server/connectivity/NetworkMonitor$ValidatedState;->this$0:Lcom/android/server/connectivity/NetworkMonitor;
 
     # getter for: Lcom/android/server/connectivity/NetworkMonitor;->mConnectivityServiceHandler:Landroid/os/Handler;
@@ -84,7 +80,6 @@
 
     invoke-virtual {v0, v1}, Landroid/os/Handler;->sendMessage(Landroid/os/Message;)Z
 
-    .line 343
     return-void
 .end method
 
@@ -97,7 +92,6 @@
 
     const/4 v2, 0x0
 
-    .line 347
     iget-object v3, p0, Lcom/android/server/connectivity/NetworkMonitor$ValidatedState;->this$0:Lcom/android/server/connectivity/NetworkMonitor;
 
     new-instance v4, Ljava/lang/StringBuilder;
@@ -127,18 +121,15 @@
     # invokes: Lcom/android/server/connectivity/NetworkMonitor;->log(Ljava/lang/String;)V
     invoke-static {v3, v4}, Lcom/android/server/connectivity/NetworkMonitor;->access$2400(Lcom/android/server/connectivity/NetworkMonitor;Ljava/lang/String;)V
 
-    .line 348
     iget v3, p1, Landroid/os/Message;->what:I
 
     sparse-switch v3, :sswitch_data_0
 
     move v1, v2
 
-    .line 359
     :goto_0
     return v1
 
-    .line 350
     :sswitch_0
     iget-object v2, p0, Lcom/android/server/connectivity/NetworkMonitor$ValidatedState;->this$0:Lcom/android/server/connectivity/NetworkMonitor;
 
@@ -154,7 +145,6 @@
 
     goto :goto_0
 
-    .line 353
     :sswitch_1
     iget-object v3, p0, Lcom/android/server/connectivity/NetworkMonitor$ValidatedState;->this$0:Lcom/android/server/connectivity/NetworkMonitor;
 
@@ -177,7 +167,6 @@
 
     move-result-object v0
 
-    .line 355
     .local v0, "mMessage":Landroid/os/Message;
     iget-object v2, p0, Lcom/android/server/connectivity/NetworkMonitor$ValidatedState;->this$0:Lcom/android/server/connectivity/NetworkMonitor;
 
@@ -188,7 +177,6 @@
 
     invoke-virtual {v2, v0}, Landroid/os/Handler;->sendMessage(Landroid/os/Message;)Z
 
-    .line 356
     iget-object v2, p0, Lcom/android/server/connectivity/NetworkMonitor$ValidatedState;->this$0:Lcom/android/server/connectivity/NetworkMonitor;
 
     iget-object v3, p0, Lcom/android/server/connectivity/NetworkMonitor$ValidatedState;->this$0:Lcom/android/server/connectivity/NetworkMonitor;
@@ -203,7 +191,6 @@
 
     goto :goto_0
 
-    .line 348
     :sswitch_data_0
     .sparse-switch
         0x82001 -> :sswitch_0

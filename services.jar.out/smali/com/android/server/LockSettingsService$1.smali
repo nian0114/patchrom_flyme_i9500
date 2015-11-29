@@ -23,7 +23,6 @@
     .locals 0
 
     .prologue
-    .line 166
     iput-object p1, p0, Lcom/android/server/LockSettingsService$1;->this$0:Lcom/android/server/LockSettingsService;
 
     invoke-direct {p0}, Landroid/content/BroadcastReceiver;-><init>()V
@@ -41,7 +40,6 @@
     .prologue
     const/16 v8, 0x3e8
 
-    .line 169
     const-string v6, "android.intent.action.USER_ADDED"
 
     invoke-virtual {p2}, Landroid/content/Intent;->getAction()Ljava/lang/String;
@@ -54,7 +52,6 @@
 
     if-eqz v6, :cond_0
 
-    .line 170
     const-string v6, "android.intent.extra.user_handle"
 
     const/4 v7, 0x0
@@ -63,23 +60,19 @@
 
     move-result v4
 
-    .line 171
     .local v4, "userHandle":I
     invoke-static {v4, v8}, Landroid/os/UserHandle;->getUid(II)I
 
     move-result v5
 
-    .line 172
     .local v5, "userSysUid":I
     invoke-static {}, Landroid/security/KeyStore;->getInstance()Landroid/security/KeyStore;
 
     move-result-object v0
 
-    .line 175
     .local v0, "ks":Landroid/security/KeyStore;
     invoke-virtual {v0, v5}, Landroid/security/KeyStore;->resetUid(I)Z
 
-    .line 178
     iget-object v6, p0, Lcom/android/server/LockSettingsService$1;->this$0:Lcom/android/server/LockSettingsService;
 
     # getter for: Lcom/android/server/LockSettingsService;->mContext:Landroid/content/Context;
@@ -87,7 +80,7 @@
 
     move-result-object v6
 
-    const-string/jumbo v7, "user"
+    const-string v7, "user"
 
     invoke-virtual {v6, v7}, Landroid/content/Context;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
 
@@ -95,28 +88,23 @@
 
     check-cast v3, Landroid/os/UserManager;
 
-    .line 179
     .local v3, "um":Landroid/os/UserManager;
     invoke-virtual {v3, v4}, Landroid/os/UserManager;->getProfileParent(I)Landroid/content/pm/UserInfo;
 
     move-result-object v1
 
-    .line 180
     .local v1, "parentInfo":Landroid/content/pm/UserInfo;
     if-eqz v1, :cond_0
 
-    .line 181
     iget v6, v1, Landroid/content/pm/UserInfo;->id:I
 
     invoke-static {v6, v8}, Landroid/os/UserHandle;->getUid(II)I
 
     move-result v2
 
-    .line 182
     .local v2, "parentSysUid":I
     invoke-virtual {v0, v2, v5}, Landroid/security/KeyStore;->syncUid(II)Z
 
-    .line 185
     .end local v0    # "ks":Landroid/security/KeyStore;
     .end local v1    # "parentInfo":Landroid/content/pm/UserInfo;
     .end local v2    # "parentSysUid":I

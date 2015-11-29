@@ -60,23 +60,17 @@
     .end annotation
 
     .prologue
-    .line 2578
     .local p3, "callbackMap":Ljava/util/HashMap;, "Ljava/util/HashMap<Landroid/net/NetworkRequest;Landroid/net/ConnectivityManager$NetworkCallback;>;"
     iput-object p1, p0, Landroid/net/ConnectivityManager$CallbackHandler;->this$0:Landroid/net/ConnectivityManager;
 
-    .line 2579
     invoke-direct {p0, p2}, Landroid/os/Handler;-><init>(Landroid/os/Looper;)V
 
-    .line 2580
     iput-object p3, p0, Landroid/net/ConnectivityManager$CallbackHandler;->mCallbackMap:Ljava/util/HashMap;
 
-    .line 2581
     iput-object p4, p0, Landroid/net/ConnectivityManager$CallbackHandler;->mRefCount:Ljava/util/concurrent/atomic/AtomicInteger;
 
-    .line 2582
     iput-object p5, p0, Landroid/net/ConnectivityManager$CallbackHandler;->mCm:Landroid/net/ConnectivityManager;
 
-    .line 2583
     return-void
 .end method
 
@@ -85,12 +79,10 @@
     .param p1, "req"    # Landroid/net/NetworkRequest;
 
     .prologue
-    .line 2712
     iget-object v1, p0, Landroid/net/ConnectivityManager$CallbackHandler;->mCallbackMap:Ljava/util/HashMap;
 
     monitor-enter v1
 
-    .line 2713
     :try_start_0
     iget-object v0, p0, Landroid/net/ConnectivityManager$CallbackHandler;->mCallbackMap:Ljava/util/HashMap;
 
@@ -104,7 +96,6 @@
 
     return-object v0
 
-    .line 2714
     :catchall_0
     move-exception v0
 
@@ -121,7 +112,6 @@
     .param p2, "c"    # Ljava/lang/Class;
 
     .prologue
-    .line 2709
     invoke-virtual {p1}, Landroid/os/Message;->getData()Landroid/os/Bundle;
 
     move-result-object v0
@@ -144,7 +134,6 @@
     .param p1, "message"    # Landroid/os/Message;
 
     .prologue
-    .line 2587
     const-string v7, "ConnectivityManager.CallbackHandler"
 
     new-instance v8, Ljava/lang/StringBuilder;
@@ -169,16 +158,13 @@
 
     invoke-static {v7, v8}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 2588
     iget v7, p1, Landroid/os/Message;->what:I
 
     packed-switch v7, :pswitch_data_0
 
-    .line 2706
     :goto_0
     return-void
 
-    .line 2590
     :pswitch_0
     const-class v7, Landroid/net/NetworkRequest;
 
@@ -188,17 +174,14 @@
 
     check-cast v6, Landroid/net/NetworkRequest;
 
-    .line 2592
     .local v6, "request":Landroid/net/NetworkRequest;
     invoke-direct {p0, v6}, Landroid/net/ConnectivityManager$CallbackHandler;->getCallbacks(Landroid/net/NetworkRequest;)Landroid/net/ConnectivityManager$NetworkCallback;
 
     move-result-object v1
 
-    .line 2593
     .local v1, "callbacks":Landroid/net/ConnectivityManager$NetworkCallback;
     if-eqz v1, :cond_0
 
-    .line 2594
     const-class v7, Landroid/net/Network;
 
     invoke-direct {p0, p1, v7}, Landroid/net/ConnectivityManager$CallbackHandler;->getObject(Landroid/os/Message;Ljava/lang/Class;)Ljava/lang/Object;
@@ -211,7 +194,6 @@
 
     goto :goto_0
 
-    .line 2596
     :cond_0
     const-string v7, "ConnectivityManager.CallbackHandler"
 
@@ -221,7 +203,6 @@
 
     goto :goto_0
 
-    .line 2601
     .end local v1    # "callbacks":Landroid/net/ConnectivityManager$NetworkCallback;
     .end local v6    # "request":Landroid/net/NetworkRequest;
     :pswitch_1
@@ -233,17 +214,14 @@
 
     check-cast v6, Landroid/net/NetworkRequest;
 
-    .line 2603
     .restart local v6    # "request":Landroid/net/NetworkRequest;
     invoke-direct {p0, v6}, Landroid/net/ConnectivityManager$CallbackHandler;->getCallbacks(Landroid/net/NetworkRequest;)Landroid/net/ConnectivityManager$NetworkCallback;
 
     move-result-object v1
 
-    .line 2604
     .restart local v1    # "callbacks":Landroid/net/ConnectivityManager$NetworkCallback;
     if-eqz v1, :cond_1
 
-    .line 2605
     const-class v7, Landroid/net/Network;
 
     invoke-direct {p0, p1, v7}, Landroid/net/ConnectivityManager$CallbackHandler;->getObject(Landroid/os/Message;Ljava/lang/Class;)Ljava/lang/Object;
@@ -256,7 +234,6 @@
 
     goto :goto_0
 
-    .line 2607
     :cond_1
     const-string v7, "ConnectivityManager.CallbackHandler"
 
@@ -266,7 +243,6 @@
 
     goto :goto_0
 
-    .line 2612
     .end local v1    # "callbacks":Landroid/net/ConnectivityManager$NetworkCallback;
     .end local v6    # "request":Landroid/net/NetworkRequest;
     :pswitch_2
@@ -278,17 +254,14 @@
 
     check-cast v6, Landroid/net/NetworkRequest;
 
-    .line 2614
     .restart local v6    # "request":Landroid/net/NetworkRequest;
     invoke-direct {p0, v6}, Landroid/net/ConnectivityManager$CallbackHandler;->getCallbacks(Landroid/net/NetworkRequest;)Landroid/net/ConnectivityManager$NetworkCallback;
 
     move-result-object v1
 
-    .line 2615
     .restart local v1    # "callbacks":Landroid/net/ConnectivityManager$NetworkCallback;
     if-eqz v1, :cond_2
 
-    .line 2616
     const-class v7, Landroid/net/Network;
 
     invoke-direct {p0, p1, v7}, Landroid/net/ConnectivityManager$CallbackHandler;->getObject(Landroid/os/Message;Ljava/lang/Class;)Ljava/lang/Object;
@@ -303,7 +276,6 @@
 
     goto :goto_0
 
-    .line 2619
     :cond_2
     const-string v7, "ConnectivityManager.CallbackHandler"
 
@@ -313,7 +285,6 @@
 
     goto :goto_0
 
-    .line 2624
     .end local v1    # "callbacks":Landroid/net/ConnectivityManager$NetworkCallback;
     .end local v6    # "request":Landroid/net/NetworkRequest;
     :pswitch_3
@@ -325,17 +296,14 @@
 
     check-cast v6, Landroid/net/NetworkRequest;
 
-    .line 2627
     .restart local v6    # "request":Landroid/net/NetworkRequest;
     invoke-direct {p0, v6}, Landroid/net/ConnectivityManager$CallbackHandler;->getCallbacks(Landroid/net/NetworkRequest;)Landroid/net/ConnectivityManager$NetworkCallback;
 
     move-result-object v1
 
-    .line 2628
     .restart local v1    # "callbacks":Landroid/net/ConnectivityManager$NetworkCallback;
     if-eqz v1, :cond_3
 
-    .line 2629
     const-class v7, Landroid/net/Network;
 
     invoke-direct {p0, p1, v7}, Landroid/net/ConnectivityManager$CallbackHandler;->getObject(Landroid/os/Message;Ljava/lang/Class;)Ljava/lang/Object;
@@ -348,7 +316,6 @@
 
     goto/16 :goto_0
 
-    .line 2631
     :cond_3
     const-string v7, "ConnectivityManager.CallbackHandler"
 
@@ -358,7 +325,6 @@
 
     goto/16 :goto_0
 
-    .line 2636
     .end local v1    # "callbacks":Landroid/net/ConnectivityManager$NetworkCallback;
     .end local v6    # "request":Landroid/net/NetworkRequest;
     :pswitch_4
@@ -370,17 +336,14 @@
 
     check-cast v6, Landroid/net/NetworkRequest;
 
-    .line 2638
     .restart local v6    # "request":Landroid/net/NetworkRequest;
     const/4 v1, 0x0
 
-    .line 2639
     .restart local v1    # "callbacks":Landroid/net/ConnectivityManager$NetworkCallback;
     iget-object v8, p0, Landroid/net/ConnectivityManager$CallbackHandler;->mCallbackMap:Ljava/util/HashMap;
 
     monitor-enter v8
 
-    .line 2640
     :try_start_0
     iget-object v7, p0, Landroid/net/ConnectivityManager$CallbackHandler;->mCallbackMap:Ljava/util/HashMap;
 
@@ -394,20 +357,16 @@
 
     move-object v1, v0
 
-    .line 2641
     monitor-exit v8
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 2642
     if-eqz v1, :cond_4
 
-    .line 2643
     invoke-virtual {v1}, Landroid/net/ConnectivityManager$NetworkCallback;->onUnavailable()V
 
     goto/16 :goto_0
 
-    .line 2641
     :catchall_0
     move-exception v7
 
@@ -418,7 +377,6 @@
 
     throw v7
 
-    .line 2645
     :cond_4
     const-string v7, "ConnectivityManager.CallbackHandler"
 
@@ -428,7 +386,6 @@
 
     goto/16 :goto_0
 
-    .line 2650
     .end local v1    # "callbacks":Landroid/net/ConnectivityManager$NetworkCallback;
     .end local v6    # "request":Landroid/net/NetworkRequest;
     :pswitch_5
@@ -440,17 +397,14 @@
 
     check-cast v6, Landroid/net/NetworkRequest;
 
-    .line 2652
     .restart local v6    # "request":Landroid/net/NetworkRequest;
     invoke-direct {p0, v6}, Landroid/net/ConnectivityManager$CallbackHandler;->getCallbacks(Landroid/net/NetworkRequest;)Landroid/net/ConnectivityManager$NetworkCallback;
 
     move-result-object v1
 
-    .line 2653
     .restart local v1    # "callbacks":Landroid/net/ConnectivityManager$NetworkCallback;
     if-eqz v1, :cond_5
 
-    .line 2654
     const-class v7, Landroid/net/Network;
 
     invoke-direct {p0, p1, v7}, Landroid/net/ConnectivityManager$CallbackHandler;->getObject(Landroid/os/Message;Ljava/lang/Class;)Ljava/lang/Object;
@@ -459,7 +413,6 @@
 
     check-cast v4, Landroid/net/Network;
 
-    .line 2655
     .local v4, "network":Landroid/net/Network;
     const-class v7, Landroid/net/NetworkCapabilities;
 
@@ -469,13 +422,11 @@
 
     check-cast v2, Landroid/net/NetworkCapabilities;
 
-    .line 2658
     .local v2, "cap":Landroid/net/NetworkCapabilities;
     invoke-virtual {v1, v4, v2}, Landroid/net/ConnectivityManager$NetworkCallback;->onCapabilitiesChanged(Landroid/net/Network;Landroid/net/NetworkCapabilities;)V
 
     goto/16 :goto_0
 
-    .line 2660
     .end local v2    # "cap":Landroid/net/NetworkCapabilities;
     .end local v4    # "network":Landroid/net/Network;
     :cond_5
@@ -487,7 +438,6 @@
 
     goto/16 :goto_0
 
-    .line 2665
     .end local v1    # "callbacks":Landroid/net/ConnectivityManager$NetworkCallback;
     .end local v6    # "request":Landroid/net/NetworkRequest;
     :pswitch_6
@@ -499,17 +449,14 @@
 
     check-cast v6, Landroid/net/NetworkRequest;
 
-    .line 2667
     .restart local v6    # "request":Landroid/net/NetworkRequest;
     invoke-direct {p0, v6}, Landroid/net/ConnectivityManager$CallbackHandler;->getCallbacks(Landroid/net/NetworkRequest;)Landroid/net/ConnectivityManager$NetworkCallback;
 
     move-result-object v1
 
-    .line 2668
     .restart local v1    # "callbacks":Landroid/net/ConnectivityManager$NetworkCallback;
     if-eqz v1, :cond_6
 
-    .line 2669
     const-class v7, Landroid/net/Network;
 
     invoke-direct {p0, p1, v7}, Landroid/net/ConnectivityManager$CallbackHandler;->getObject(Landroid/os/Message;Ljava/lang/Class;)Ljava/lang/Object;
@@ -518,7 +465,6 @@
 
     check-cast v4, Landroid/net/Network;
 
-    .line 2670
     .restart local v4    # "network":Landroid/net/Network;
     const-class v7, Landroid/net/LinkProperties;
 
@@ -528,13 +474,11 @@
 
     check-cast v3, Landroid/net/LinkProperties;
 
-    .line 2673
     .local v3, "lp":Landroid/net/LinkProperties;
     invoke-virtual {v1, v4, v3}, Landroid/net/ConnectivityManager$NetworkCallback;->onLinkPropertiesChanged(Landroid/net/Network;Landroid/net/LinkProperties;)V
 
     goto/16 :goto_0
 
-    .line 2675
     .end local v3    # "lp":Landroid/net/LinkProperties;
     .end local v4    # "network":Landroid/net/Network;
     :cond_6
@@ -546,7 +490,6 @@
 
     goto/16 :goto_0
 
-    .line 2680
     .end local v1    # "callbacks":Landroid/net/ConnectivityManager$NetworkCallback;
     .end local v6    # "request":Landroid/net/NetworkRequest;
     :pswitch_7
@@ -558,17 +501,14 @@
 
     check-cast v5, Landroid/net/NetworkRequest;
 
-    .line 2681
     .local v5, "req":Landroid/net/NetworkRequest;
     const/4 v1, 0x0
 
-    .line 2682
     .restart local v1    # "callbacks":Landroid/net/ConnectivityManager$NetworkCallback;
     iget-object v8, p0, Landroid/net/ConnectivityManager$CallbackHandler;->mCallbackMap:Ljava/util/HashMap;
 
     monitor-enter v8
 
-    .line 2683
     :try_start_2
     iget-object v7, p0, Landroid/net/ConnectivityManager$CallbackHandler;->mCallbackMap:Ljava/util/HashMap;
 
@@ -582,20 +522,16 @@
 
     move-object v1, v0
 
-    .line 2684
     monitor-exit v8
     :try_end_2
     .catchall {:try_start_2 .. :try_end_2} :catchall_2
 
-    .line 2685
     if-eqz v1, :cond_8
 
-    .line 2686
     iget-object v8, p0, Landroid/net/ConnectivityManager$CallbackHandler;->mRefCount:Ljava/util/concurrent/atomic/AtomicInteger;
 
     monitor-enter v8
 
-    .line 2687
     :try_start_3
     iget-object v7, p0, Landroid/net/ConnectivityManager$CallbackHandler;->mRefCount:Ljava/util/concurrent/atomic/AtomicInteger;
 
@@ -605,14 +541,12 @@
 
     if-nez v7, :cond_7
 
-    .line 2688
     invoke-virtual {p0}, Landroid/net/ConnectivityManager$CallbackHandler;->getLooper()Landroid/os/Looper;
 
     move-result-object v7
 
     invoke-virtual {v7}, Landroid/os/Looper;->quit()V
 
-    .line 2690
     :cond_7
     monitor-exit v8
 
@@ -627,7 +561,6 @@
 
     throw v7
 
-    .line 2684
     :catchall_2
     move-exception v7
 
@@ -638,7 +571,6 @@
 
     throw v7
 
-    .line 2692
     :cond_8
     const-string v7, "ConnectivityManager.CallbackHandler"
 
@@ -648,7 +580,6 @@
 
     goto/16 :goto_0
 
-    .line 2697
     .end local v1    # "callbacks":Landroid/net/ConnectivityManager$NetworkCallback;
     .end local v5    # "req":Landroid/net/NetworkRequest;
     :pswitch_8
@@ -658,7 +589,6 @@
 
     invoke-static {v7, v8}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 2698
     invoke-virtual {p0}, Landroid/net/ConnectivityManager$CallbackHandler;->getLooper()Landroid/os/Looper;
 
     move-result-object v7
@@ -667,7 +597,6 @@
 
     goto/16 :goto_0
 
-    .line 2702
     :pswitch_9
     iget-object v8, p0, Landroid/net/ConnectivityManager$CallbackHandler;->this$0:Landroid/net/ConnectivityManager;
 
@@ -682,7 +611,6 @@
 
     goto/16 :goto_0
 
-    .line 2588
     :pswitch_data_0
     .packed-switch 0x80001
         :pswitch_0

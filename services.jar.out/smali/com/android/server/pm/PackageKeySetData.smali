@@ -34,22 +34,18 @@
     .locals 2
 
     .prologue
-    .line 39
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 37
     new-instance v0, Ljava/util/HashMap;
 
     invoke-direct {v0}, Ljava/util/HashMap;-><init>()V
 
     iput-object v0, p0, Lcom/android/server/pm/PackageKeySetData;->mKeySetAliases:Ljava/util/Map;
 
-    .line 40
     const-wide/16 v0, -0x1
 
     iput-wide v0, p0, Lcom/android/server/pm/PackageKeySetData;->mProperSigningKeySet:J
 
-    .line 41
     return-void
 .end method
 
@@ -58,22 +54,18 @@
     .param p1, "original"    # Lcom/android/server/pm/PackageKeySetData;
 
     .prologue
-    .line 43
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 37
     new-instance v0, Ljava/util/HashMap;
 
     invoke-direct {v0}, Ljava/util/HashMap;-><init>()V
 
     iput-object v0, p0, Lcom/android/server/pm/PackageKeySetData;->mKeySetAliases:Ljava/util/Map;
 
-    .line 44
     iget-wide v0, p1, Lcom/android/server/pm/PackageKeySetData;->mProperSigningKeySet:J
 
     iput-wide v0, p0, Lcom/android/server/pm/PackageKeySetData;->mProperSigningKeySet:J
 
-    .line 45
     iget-object v0, p1, Lcom/android/server/pm/PackageKeySetData;->mSigningKeySets:[J
 
     invoke-static {v0}, Lcom/android/internal/util/ArrayUtils;->cloneOrNull([J)[J
@@ -82,7 +74,6 @@
 
     iput-object v0, p0, Lcom/android/server/pm/PackageKeySetData;->mSigningKeySets:[J
 
-    .line 46
     iget-object v0, p1, Lcom/android/server/pm/PackageKeySetData;->mUpgradeKeySets:[J
 
     invoke-static {v0}, Lcom/android/internal/util/ArrayUtils;->cloneOrNull([J)[J
@@ -91,7 +82,6 @@
 
     iput-object v0, p0, Lcom/android/server/pm/PackageKeySetData;->mUpgradeKeySets:[J
 
-    .line 47
     iget-object v0, p1, Lcom/android/server/pm/PackageKeySetData;->mDefinedKeySets:[J
 
     invoke-static {v0}, Lcom/android/internal/util/ArrayUtils;->cloneOrNull([J)[J
@@ -100,14 +90,12 @@
 
     iput-object v0, p0, Lcom/android/server/pm/PackageKeySetData;->mDefinedKeySets:[J
 
-    .line 48
     iget-object v0, p0, Lcom/android/server/pm/PackageKeySetData;->mKeySetAliases:Ljava/util/Map;
 
     iget-object v1, p1, Lcom/android/server/pm/PackageKeySetData;->mKeySetAliases:Ljava/util/Map;
 
     invoke-interface {v0, v1}, Ljava/util/Map;->putAll(Ljava/util/Map;)V
 
-    .line 49
     return-void
 .end method
 
@@ -119,7 +107,6 @@
     .param p3, "alias"    # Ljava/lang/String;
 
     .prologue
-    .line 98
     iget-object v0, p0, Lcom/android/server/pm/PackageKeySetData;->mDefinedKeySets:[J
 
     invoke-static {v0, p1, p2}, Lcom/android/internal/util/ArrayUtils;->appendLong([JJ)[J
@@ -128,7 +115,6 @@
 
     iput-object v0, p0, Lcom/android/server/pm/PackageKeySetData;->mDefinedKeySets:[J
 
-    .line 99
     iget-object v0, p0, Lcom/android/server/pm/PackageKeySetData;->mKeySetAliases:Ljava/util/Map;
 
     invoke-static {p1, p2}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
@@ -137,7 +123,6 @@
 
     invoke-interface {v0, p3, v1}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 100
     return-void
 .end method
 
@@ -146,7 +131,6 @@
     .param p1, "ks"    # J
 
     .prologue
-    .line 70
     iget-object v0, p0, Lcom/android/server/pm/PackageKeySetData;->mSigningKeySets:[J
 
     invoke-static {v0, p1, p2}, Lcom/android/internal/util/ArrayUtils;->appendLong([JJ)[J
@@ -155,7 +139,6 @@
 
     iput-object v0, p0, Lcom/android/server/pm/PackageKeySetData;->mSigningKeySets:[J
 
-    .line 71
     return-void
 .end method
 
@@ -164,7 +147,6 @@
     .param p1, "alias"    # Ljava/lang/String;
 
     .prologue
-    .line 80
     iget-object v1, p0, Lcom/android/server/pm/PackageKeySetData;->mKeySetAliases:Ljava/util/Map;
 
     invoke-interface {v1, p1}, Ljava/util/Map;->get(Ljava/lang/Object;)Ljava/lang/Object;
@@ -173,11 +155,9 @@
 
     check-cast v0, Ljava/lang/Long;
 
-    .line 81
     .local v0, "ks":Ljava/lang/Long;
     if-eqz v0, :cond_0
 
-    .line 82
     iget-object v1, p0, Lcom/android/server/pm/PackageKeySetData;->mUpgradeKeySets:[J
 
     invoke-virtual {v0}, Ljava/lang/Long;->longValue()J
@@ -190,10 +170,8 @@
 
     iput-object v1, p0, Lcom/android/server/pm/PackageKeySetData;->mUpgradeKeySets:[J
 
-    .line 87
     return-void
 
-    .line 84
     :cond_0
     new-instance v1, Ljava/lang/IllegalArgumentException;
 
@@ -231,7 +209,6 @@
     .param p1, "ks"    # J
 
     .prologue
-    .line 94
     iget-object v0, p0, Lcom/android/server/pm/PackageKeySetData;->mSigningKeySets:[J
 
     invoke-static {v0, p1, p2}, Lcom/android/internal/util/ArrayUtils;->appendLong([JJ)[J
@@ -240,7 +217,6 @@
 
     iput-object v0, p0, Lcom/android/server/pm/PackageKeySetData;->mSigningKeySets:[J
 
-    .line 95
     return-void
 .end method
 
@@ -258,7 +234,6 @@
     .end annotation
 
     .prologue
-    .line 136
     iget-object v0, p0, Lcom/android/server/pm/PackageKeySetData;->mKeySetAliases:Ljava/util/Map;
 
     return-object v0
@@ -268,7 +243,6 @@
     .locals 1
 
     .prologue
-    .line 132
     iget-object v0, p0, Lcom/android/server/pm/PackageKeySetData;->mDefinedKeySets:[J
 
     return-object v0
@@ -278,7 +252,6 @@
     .locals 2
 
     .prologue
-    .line 66
     iget-wide v0, p0, Lcom/android/server/pm/PackageKeySetData;->mProperSigningKeySet:J
 
     return-wide v0
@@ -288,7 +261,6 @@
     .locals 1
 
     .prologue
-    .line 124
     iget-object v0, p0, Lcom/android/server/pm/PackageKeySetData;->mSigningKeySets:[J
 
     return-object v0
@@ -298,7 +270,6 @@
     .locals 1
 
     .prologue
-    .line 128
     iget-object v0, p0, Lcom/android/server/pm/PackageKeySetData;->mUpgradeKeySets:[J
 
     return-object v0
@@ -308,7 +279,6 @@
     .locals 1
 
     .prologue
-    .line 142
     iget-object v0, p0, Lcom/android/server/pm/PackageKeySetData;->mDefinedKeySets:[J
 
     if-eqz v0, :cond_0
@@ -334,7 +304,6 @@
     .locals 1
 
     .prologue
-    .line 148
     iget-object v0, p0, Lcom/android/server/pm/PackageKeySetData;->mUpgradeKeySets:[J
 
     if-eqz v0, :cond_0
@@ -361,7 +330,6 @@
     .param p1, "ks"    # J
 
     .prologue
-    .line 120
     iget-object v0, p0, Lcom/android/server/pm/PackageKeySetData;->mSigningKeySets:[J
 
     invoke-static {v0, p1, p2}, Lcom/android/internal/util/ArrayUtils;->contains([JJ)Z
@@ -375,17 +343,14 @@
     .locals 1
 
     .prologue
-    .line 114
     const/4 v0, 0x0
 
     iput-object v0, p0, Lcom/android/server/pm/PackageKeySetData;->mDefinedKeySets:[J
 
-    .line 115
     iget-object v0, p0, Lcom/android/server/pm/PackageKeySetData;->mKeySetAliases:Ljava/util/Map;
 
     invoke-interface {v0}, Ljava/util/Map;->clear()V
 
-    .line 116
     return-void
 .end method
 
@@ -393,17 +358,14 @@
     .locals 2
 
     .prologue
-    .line 103
     const-wide/16 v0, -0x1
 
     iput-wide v0, p0, Lcom/android/server/pm/PackageKeySetData;->mProperSigningKeySet:J
 
-    .line 104
     const/4 v0, 0x0
 
     iput-object v0, p0, Lcom/android/server/pm/PackageKeySetData;->mSigningKeySets:[J
 
-    .line 105
     return-void
 .end method
 
@@ -411,12 +373,10 @@
     .locals 1
 
     .prologue
-    .line 109
     const/4 v0, 0x0
 
     iput-object v0, p0, Lcom/android/server/pm/PackageKeySetData;->mUpgradeKeySets:[J
 
-    .line 110
     return-void
 .end method
 
@@ -425,7 +385,6 @@
     .param p1, "ks"    # J
 
     .prologue
-    .line 74
     iget-object v0, p0, Lcom/android/server/pm/PackageKeySetData;->mSigningKeySets:[J
 
     invoke-static {v0, p1, p2}, Lcom/android/internal/util/ArrayUtils;->removeLong([JJ)[J
@@ -434,7 +393,6 @@
 
     iput-object v0, p0, Lcom/android/server/pm/PackageKeySetData;->mSigningKeySets:[J
 
-    .line 75
     return-void
 .end method
 
@@ -443,25 +401,20 @@
     .param p1, "ks"    # J
 
     .prologue
-    .line 52
     iget-wide v0, p0, Lcom/android/server/pm/PackageKeySetData;->mProperSigningKeySet:J
 
     cmp-long v0, p1, v0
 
     if-nez v0, :cond_0
 
-    .line 62
     :goto_0
     return-void
 
-    .line 59
     :cond_0
     invoke-virtual {p0}, Lcom/android/server/pm/PackageKeySetData;->removeAllSigningKeySets()V
 
-    .line 60
     iput-wide p1, p0, Lcom/android/server/pm/PackageKeySetData;->mProperSigningKeySet:J
 
-    .line 61
     invoke-virtual {p0, p1, p2}, Lcom/android/server/pm/PackageKeySetData;->addSigningKeySet(J)V
 
     goto :goto_0

@@ -24,13 +24,10 @@
     .param p2, "looper"    # Landroid/os/Looper;
 
     .prologue
-    .line 242
     iput-object p1, p0, Landroid/media/SamsungAudioService$SamsungAudioServiceHandler;->this$0:Landroid/media/SamsungAudioService;
 
-    .line 243
     invoke-direct {p0, p2}, Landroid/os/Handler;-><init>(Landroid/os/Looper;)V
 
-    .line 244
     return-void
 .end method
 
@@ -43,17 +40,14 @@
     .prologue
     const/4 v2, 0x0
 
-    .line 247
     iget v0, p1, Landroid/os/Message;->what:I
 
     packed-switch v0, :pswitch_data_0
 
-    .line 280
     :cond_0
     :goto_0
     return-void
 
-    .line 250
     :pswitch_0
     # getter for: Landroid/media/SamsungAudioService;->TAG:Ljava/lang/String;
     invoke-static {}, Landroid/media/SamsungAudioService;->access$1000()Ljava/lang/String;
@@ -64,13 +58,11 @@
 
     invoke-static {v0, v1}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 251
     iget-object v0, p0, Landroid/media/SamsungAudioService$SamsungAudioServiceHandler;->this$0:Landroid/media/SamsungAudioService;
 
     # setter for: Landroid/media/SamsungAudioService;->mFakeState:Z
     invoke-static {v0, v2}, Landroid/media/SamsungAudioService;->access$1102(Landroid/media/SamsungAudioService;Z)Z
 
-    .line 252
     iget-object v0, p0, Landroid/media/SamsungAudioService$SamsungAudioServiceHandler;->this$0:Landroid/media/SamsungAudioService;
 
     invoke-virtual {v0}, Landroid/media/SamsungAudioService;->getCurOutDevice()I
@@ -81,7 +73,6 @@
 
     if-eqz v0, :cond_0
 
-    .line 253
     # getter for: Landroid/media/SamsungAudioService;->TAG:Ljava/lang/String;
     invoke-static {}, Landroid/media/SamsungAudioService;->access$1000()Ljava/lang/String;
 
@@ -91,7 +82,6 @@
 
     invoke-static {v0, v1}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 254
     const/4 v0, 0x4
 
     const-string v1, ""
@@ -100,7 +90,6 @@
 
     goto :goto_0
 
-    .line 260
     :pswitch_1
     iget-object v0, p0, Landroid/media/SamsungAudioService$SamsungAudioServiceHandler;->this$0:Landroid/media/SamsungAudioService;
 
@@ -108,7 +97,6 @@
 
     goto :goto_0
 
-    .line 265
     :pswitch_2
     # getter for: Landroid/media/SamsungAudioService;->TAG:Ljava/lang/String;
     invoke-static {}, Landroid/media/SamsungAudioService;->access$1000()Ljava/lang/String;
@@ -119,14 +107,12 @@
 
     invoke-static {v0, v1}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 266
     iget-object v0, p0, Landroid/media/SamsungAudioService$SamsungAudioServiceHandler;->this$0:Landroid/media/SamsungAudioService;
 
     invoke-virtual {v0}, Landroid/media/SamsungAudioService;->performSoftReset()V
 
     goto :goto_0
 
-    .line 270
     :pswitch_3
     iget-object v0, p0, Landroid/media/SamsungAudioService$SamsungAudioServiceHandler;->this$0:Landroid/media/SamsungAudioService;
 
@@ -135,7 +121,6 @@
 
     goto :goto_0
 
-    .line 273
     :pswitch_4
     iget-object v0, p0, Landroid/media/SamsungAudioService$SamsungAudioServiceHandler;->this$0:Landroid/media/SamsungAudioService;
 
@@ -143,7 +128,6 @@
 
     goto :goto_0
 
-    .line 276
     :pswitch_5
     # getter for: Landroid/media/SamsungAudioService;->TAG:Ljava/lang/String;
     invoke-static {}, Landroid/media/SamsungAudioService;->access$1000()Ljava/lang/String;
@@ -154,7 +138,6 @@
 
     invoke-static {v0, v1}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 277
     iget-object v0, p0, Landroid/media/SamsungAudioService$SamsungAudioServiceHandler;->this$0:Landroid/media/SamsungAudioService;
 
     # setter for: Landroid/media/SamsungAudioService;->mIsPlaySilentModeOff:Z
@@ -162,7 +145,6 @@
 
     goto :goto_0
 
-    .line 247
     nop
 
     :pswitch_data_0

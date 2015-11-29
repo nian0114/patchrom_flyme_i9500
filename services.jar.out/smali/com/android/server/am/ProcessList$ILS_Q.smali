@@ -39,11 +39,9 @@
     .prologue
     const/4 v2, 0x0
 
-    .line 916
     sput-boolean v2, Lcom/android/server/am/ProcessList$ILS_Q;->HARD_FLAG:Z
 
-    .line 917
-    const-string/jumbo v0, "ro.config.dha_ils_rate"
+    const-string v0, "ro.config.dha_ils_rate"
 
     const-string v1, "1.5"
 
@@ -57,8 +55,7 @@
 
     sput v0, Lcom/android/server/am/ProcessList$ILS_Q;->DHA_TH_HARD_RATE:F
 
-    .line 920
-    const-string/jumbo v0, "ro.config.dha_ils_size"
+    const-string v0, "ro.config.dha_ils_size"
 
     const-string v1, "16"
 
@@ -72,23 +69,18 @@
 
     sput v0, Lcom/android/server/am/ProcessList$ILS_Q;->MAX_Q_SIZE:I
 
-    .line 921
     sput v2, Lcom/android/server/am/ProcessList$ILS_Q;->Q_Front:I
 
-    .line 922
     sput v2, Lcom/android/server/am/ProcessList$ILS_Q;->Q_Rear:I
 
-    .line 923
     sput v2, Lcom/android/server/am/ProcessList$ILS_Q;->Q_Size:I
 
-    .line 924
     sget v0, Lcom/android/server/am/ProcessList$ILS_Q;->MAX_Q_SIZE:I
 
     new-array v0, v0, [Ljava/lang/String;
 
     sput-object v0, Lcom/android/server/am/ProcessList$ILS_Q;->Q_Node:[Ljava/lang/String;
 
-    .line 927
     sput-boolean v2, Lcom/android/server/am/ProcessList$ILS_Q;->ILS_DEBUG:Z
 
     return-void
@@ -98,7 +90,6 @@
     .locals 0
 
     .prologue
-    .line 914
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -108,7 +99,6 @@
     .locals 1
 
     .prologue
-    .line 914
     sget v0, Lcom/android/server/am/ProcessList$ILS_Q;->DHA_TH_HARD_RATE:F
 
     return v0
@@ -119,19 +109,16 @@
     .param p0, "pName"    # Ljava/lang/String;
 
     .prologue
-    .line 975
     invoke-static {p0}, Lcom/android/server/am/ProcessList$ILS_Q;->isInsert(Ljava/lang/String;)Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
-    .line 977
     sget-boolean v0, Lcom/android/server/am/ProcessList$ILS_Q;->ILS_DEBUG:Z
 
     if-eqz v0, :cond_0
 
-    .line 978
     const-string v0, "ActivityManager"
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -166,7 +153,6 @@
 
     invoke-static {v0, v1}, Landroid/util/Slog;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 981
     :cond_0
     sget-boolean v0, Lcom/android/server/am/ProcessList$ILS_Q;->HARD_FLAG:Z
 
@@ -182,7 +168,6 @@
 
     const/4 v3, 0x0
 
-    .line 933
     const-string v4, "launcher"
 
     invoke-virtual {p0, v4}, Ljava/lang/String;->contains(Ljava/lang/CharSequence;)Z
@@ -210,16 +195,13 @@
     :cond_0
     move v2, v3
 
-    .line 970
     :cond_1
     :goto_0
     return v2
 
-    .line 937
     :cond_2
     const/4 v1, 0x0
 
-    .line 939
     .local v1, "nullCount":I
     sget v4, Lcom/android/server/am/ProcessList$ILS_Q;->Q_Size:I
 
@@ -227,14 +209,12 @@
 
     if-ge v4, v5, :cond_3
 
-    .line 940
     sget v4, Lcom/android/server/am/ProcessList$ILS_Q;->Q_Size:I
 
     add-int/lit8 v4, v4, 0x1
 
     sput v4, Lcom/android/server/am/ProcessList$ILS_Q;->Q_Size:I
 
-    .line 942
     :cond_3
     sget-object v4, Lcom/android/server/am/ProcessList$ILS_Q;->Q_Node:[Ljava/lang/String;
 
@@ -242,7 +222,6 @@
 
     aput-object p0, v4, v5
 
-    .line 944
     sget v0, Lcom/android/server/am/ProcessList$ILS_Q;->Q_Rear:I
 
     .local v0, "i":I
@@ -252,7 +231,6 @@
 
     if-eq v0, v4, :cond_5
 
-    .line 945
     sget-object v4, Lcom/android/server/am/ProcessList$ILS_Q;->Q_Node:[Ljava/lang/String;
 
     sget v5, Lcom/android/server/am/ProcessList$ILS_Q;->Q_Front:I
@@ -269,17 +247,14 @@
 
     if-eqz v4, :cond_7
 
-    .line 946
     sget-object v4, Lcom/android/server/am/ProcessList$ILS_Q;->Q_Node:[Ljava/lang/String;
 
     const/4 v5, 0x0
 
     aput-object v5, v4, v0
 
-    .line 947
     sput-boolean v3, Lcom/android/server/am/ProcessList$ILS_Q;->HARD_FLAG:Z
 
-    .line 961
     :cond_5
     sget v4, Lcom/android/server/am/ProcessList$ILS_Q;->Q_Front:I
 
@@ -291,10 +266,8 @@
 
     if-ne v4, v5, :cond_6
 
-    .line 962
     sput v3, Lcom/android/server/am/ProcessList$ILS_Q;->Q_Front:I
 
-    .line 964
     :cond_6
     sget v4, Lcom/android/server/am/ProcessList$ILS_Q;->Q_Size:I
 
@@ -302,26 +275,22 @@
 
     if-ne v4, v5, :cond_1
 
-    .line 965
     sget v4, Lcom/android/server/am/ProcessList$ILS_Q;->Q_Rear:I
 
     add-int/lit8 v4, v4, 0x1
 
     sput v4, Lcom/android/server/am/ProcessList$ILS_Q;->Q_Rear:I
 
-    .line 966
     sget v4, Lcom/android/server/am/ProcessList$ILS_Q;->Q_Rear:I
 
     sget v5, Lcom/android/server/am/ProcessList$ILS_Q;->MAX_Q_SIZE:I
 
     if-ne v4, v5, :cond_1
 
-    .line 967
     sput v3, Lcom/android/server/am/ProcessList$ILS_Q;->Q_Rear:I
 
     goto :goto_0
 
-    .line 950
     :cond_7
     sget-object v4, Lcom/android/server/am/ProcessList$ILS_Q;->Q_Node:[Ljava/lang/String;
 
@@ -329,13 +298,10 @@
 
     if-nez v4, :cond_9
 
-    .line 951
     sput-boolean v3, Lcom/android/server/am/ProcessList$ILS_Q;->HARD_FLAG:Z
 
-    .line 952
     add-int/lit8 v1, v1, 0x1
 
-    .line 957
     :cond_8
     :goto_2
     add-int/lit8 v0, v0, 0x1
@@ -344,12 +310,10 @@
 
     if-ne v0, v4, :cond_4
 
-    .line 958
     const/4 v0, 0x0
 
     goto :goto_1
 
-    .line 954
     :cond_9
     sget v4, Lcom/android/server/am/ProcessList$ILS_Q;->Q_Size:I
 
@@ -359,7 +323,6 @@
 
     if-nez v1, :cond_8
 
-    .line 955
     sput-boolean v2, Lcom/android/server/am/ProcessList$ILS_Q;->HARD_FLAG:Z
 
     goto :goto_2

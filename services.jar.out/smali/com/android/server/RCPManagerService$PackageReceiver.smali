@@ -23,7 +23,6 @@
     .locals 0
 
     .prologue
-    .line 1130
     iput-object p1, p0, Lcom/android/server/RCPManagerService$PackageReceiver;->this$0:Lcom/android/server/RCPManagerService;
 
     invoke-direct {p0}, Landroid/content/BroadcastReceiver;-><init>()V
@@ -39,7 +38,6 @@
     .param p2, "intent"    # Landroid/content/Intent;
 
     .prologue
-    .line 1133
     # getter for: Lcom/android/server/RCPManagerService;->TAG:Ljava/lang/String;
     invoke-static {}, Lcom/android/server/RCPManagerService;->access$200()Ljava/lang/String;
 
@@ -49,7 +47,6 @@
 
     invoke-static {v9, v10}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1134
     invoke-virtual {p2}, Landroid/content/Intent;->getAction()Ljava/lang/String;
 
     move-result-object v9
@@ -62,7 +59,6 @@
 
     if-eqz v9, :cond_0
 
-    .line 1138
     invoke-virtual {p2}, Landroid/content/Intent;->getData()Landroid/net/Uri;
 
     move-result-object v9
@@ -71,7 +67,6 @@
 
     move-result-object v0
 
-    .line 1139
     .local v0, "addedPackage":Ljava/lang/String;
     # getter for: Lcom/android/server/RCPManagerService;->TAG:Ljava/lang/String;
     invoke-static {}, Lcom/android/server/RCPManagerService;->access$200()Ljava/lang/String;
@@ -98,37 +93,29 @@
 
     invoke-static {v9, v10}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1141
     if-nez v0, :cond_1
 
-    .line 1196
     .end local v0    # "addedPackage":Ljava/lang/String;
     :cond_0
     :goto_0
     return-void
 
-    .line 1146
     .restart local v0    # "addedPackage":Ljava/lang/String;
     :cond_1
     const/4 v1, 0x0
 
-    .line 1147
     .local v1, "appInfo":Landroid/content/pm/ApplicationInfo;
     const/4 v3, 0x0
 
-    .line 1148
     .local v3, "bundle":Landroid/os/Bundle;
     const/4 v6, 0x0
 
-    .line 1149
     .local v6, "proxyName":Ljava/lang/String;
     const/4 v7, 0x0
 
-    .line 1150
     .local v7, "proxyService":Ljava/lang/String;
     const/4 v2, -0x1
 
-    .line 1153
     .local v2, "appUid":I
     :try_start_0
     invoke-virtual {p1}, Landroid/content/Context;->getPackageManager()Landroid/content/pm/PackageManager;
@@ -141,30 +128,25 @@
 
     move-result-object v1
 
-    .line 1155
     iget-object v3, v1, Landroid/content/pm/ApplicationInfo;->metaData:Landroid/os/Bundle;
 
-    .line 1156
-    const-string/jumbo v9, "proxyName"
+    const-string v9, "proxyName"
 
     invoke-virtual {v3, v9}, Landroid/os/Bundle;->getString(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v6
 
-    .line 1157
-    const-string/jumbo v9, "proxyService"
+    const-string v9, "proxyService"
 
     invoke-virtual {v3, v9}, Landroid/os/Bundle;->getString(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v7
 
-    .line 1158
     iget v2, v1, Landroid/content/pm/ApplicationInfo;->uid:I
     :try_end_0
     .catch Landroid/content/pm/PackageManager$NameNotFoundException; {:try_start_0 .. :try_end_0} :catch_0
     .catch Ljava/lang/NullPointerException; {:try_start_0 .. :try_end_0} :catch_1
 
-    .line 1169
     :goto_1
     # getter for: Lcom/android/server/RCPManagerService;->TAG:Ljava/lang/String;
     invoke-static {}, Lcom/android/server/RCPManagerService;->access$200()Ljava/lang/String;
@@ -191,10 +173,8 @@
 
     invoke-static {v9, v10}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1170
     if-eqz v3, :cond_0
 
-    .line 1173
     # getter for: Lcom/android/server/RCPManagerService;->TAG:Ljava/lang/String;
     invoke-static {}, Lcom/android/server/RCPManagerService;->access$200()Ljava/lang/String;
 
@@ -230,7 +210,6 @@
 
     invoke-static {v9, v10}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1175
     if-eqz v6, :cond_0
 
     if-eqz v7, :cond_0
@@ -243,7 +222,6 @@
 
     if-eqz v9, :cond_0
 
-    .line 1179
     # getter for: Lcom/android/server/RCPManagerService;->TAG:Ljava/lang/String;
     invoke-static {}, Lcom/android/server/RCPManagerService;->access$200()Ljava/lang/String;
 
@@ -269,15 +247,12 @@
 
     invoke-static {v9, v10}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1180
     if-ltz v2, :cond_0
 
-    .line 1183
     invoke-static {v2}, Landroid/os/UserHandle;->getUserId(I)I
 
     move-result v8
 
-    .line 1184
     .local v8, "userId":I
     # getter for: Lcom/android/server/RCPManagerService;->TAG:Ljava/lang/String;
     invoke-static {}, Lcom/android/server/RCPManagerService;->access$200()Ljava/lang/String;
@@ -304,7 +279,6 @@
 
     invoke-static {v9, v10}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1187
     iget-object v9, p0, Lcom/android/server/RCPManagerService$PackageReceiver;->this$0:Lcom/android/server/RCPManagerService;
 
     iget-object v10, p0, Lcom/android/server/RCPManagerService$PackageReceiver;->this$0:Lcom/android/server/RCPManagerService;
@@ -338,7 +312,6 @@
     # setter for: Lcom/android/server/RCPManagerService;->mRCPProxyScanSP:Landroid/content/SharedPreferences;
     invoke-static {v9, v10}, Lcom/android/server/RCPManagerService;->access$1002(Lcom/android/server/RCPManagerService;Landroid/content/SharedPreferences;)Landroid/content/SharedPreferences;
 
-    .line 1189
     iget-object v9, p0, Lcom/android/server/RCPManagerService$PackageReceiver;->this$0:Lcom/android/server/RCPManagerService;
 
     # getter for: Lcom/android/server/RCPManagerService;->mRCPProxyScanSP:Landroid/content/SharedPreferences;
@@ -350,27 +323,22 @@
 
     move-result-object v5
 
-    .line 1190
     .local v5, "prefEditor":Landroid/content/SharedPreferences$Editor;
     invoke-interface {v5, v0, v7}, Landroid/content/SharedPreferences$Editor;->putString(Ljava/lang/String;Ljava/lang/String;)Landroid/content/SharedPreferences$Editor;
 
-    .line 1191
     invoke-interface {v5}, Landroid/content/SharedPreferences$Editor;->commit()Z
 
-    .line 1193
     iget-object v9, p0, Lcom/android/server/RCPManagerService$PackageReceiver;->this$0:Lcom/android/server/RCPManagerService;
 
     invoke-virtual {v9, v8, v0, v7}, Lcom/android/server/RCPManagerService;->bindToRCPProxy(ILjava/lang/String;Ljava/lang/String;)V
 
     goto/16 :goto_0
 
-    .line 1159
     .end local v5    # "prefEditor":Landroid/content/SharedPreferences$Editor;
     .end local v8    # "userId":I
     :catch_0
     move-exception v4
 
-    .line 1160
     .local v4, "e":Landroid/content/pm/PackageManager$NameNotFoundException;
     # getter for: Lcom/android/server/RCPManagerService;->TAG:Ljava/lang/String;
     invoke-static {}, Lcom/android/server/RCPManagerService;->access$200()Ljava/lang/String;
@@ -397,17 +365,14 @@
 
     invoke-static {v9, v10, v4}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
-    .line 1162
     invoke-virtual {v4}, Landroid/content/pm/PackageManager$NameNotFoundException;->printStackTrace()V
 
     goto/16 :goto_1
 
-    .line 1163
     .end local v4    # "e":Landroid/content/pm/PackageManager$NameNotFoundException;
     :catch_1
     move-exception v4
 
-    .line 1164
     .local v4, "e":Ljava/lang/NullPointerException;
     # getter for: Lcom/android/server/RCPManagerService;->TAG:Ljava/lang/String;
     invoke-static {}, Lcom/android/server/RCPManagerService;->access$200()Ljava/lang/String;

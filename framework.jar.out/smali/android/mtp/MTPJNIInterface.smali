@@ -122,38 +122,29 @@
     .prologue
     const/4 v6, 0x0
 
-    .line 95
     sput v6, Landroid/mtp/MTPJNIInterface;->scannerStatus:I
 
-    .line 105
     sput-boolean v6, Landroid/mtp/MTPJNIInterface;->RegisterBroadcast:Z
 
-    .line 106
     sput-boolean v6, Landroid/mtp/MTPJNIInterface;->RegisterBroadcast1:Z
 
-    .line 108
     sput v6, Landroid/mtp/MTPJNIInterface;->gadgetResetStatus:I
 
-    .line 113
     const-string v4, ""
 
     sput-object v4, Landroid/mtp/MTPJNIInterface;->MTP_DEBUG_LEVEL:Ljava/lang/String;
 
-    .line 114
     sput-boolean v6, Landroid/mtp/MTPJNIInterface;->isMtpLogOn:Z
 
-    .line 115
     sput-boolean v6, Landroid/mtp/MTPJNIInterface;->objectEventReceived:Z
 
-    .line 156
     new-instance v4, Landroid/mtp/MTPJNIInterface;
 
     invoke-direct {v4}, Landroid/mtp/MTPJNIInterface;-><init>()V
 
     sput-object v4, Landroid/mtp/MTPJNIInterface;->mtpJNIInterface:Landroid/mtp/MTPJNIInterface;
 
-    .line 183
-    const-string/jumbo v4, "ro.debug_level"
+    const-string v4, "ro.debug_level"
 
     const-string v5, "Unknown"
 
@@ -161,9 +152,8 @@
 
     move-result-object v1
 
-    .line 184
     .local v1, "debugLevel":Ljava/lang/String;
-    const-string/jumbo v4, "ro.build.type"
+    const-string v4, "ro.build.type"
 
     const-string v5, "Unknown"
 
@@ -171,9 +161,8 @@
 
     move-result-object v2
 
-    .line 185
     .local v2, "debugType":Ljava/lang/String;
-    const-string/jumbo v4, "ro.csc.country_code"
+    const-string v4, "ro.csc.country_code"
 
     const-string v5, "Unknown"
 
@@ -181,9 +170,8 @@
 
     move-result-object v0
 
-    .line 187
     .local v0, "countryCode":Ljava/lang/String;
-    const-string/jumbo v4, "user"
+    const-string v4, "user"
 
     invoke-virtual {v4, v2}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
@@ -199,12 +187,10 @@
 
     if-eqz v4, :cond_0
 
-    .line 188
     const-string v4, "0x494d"
 
     sput-object v4, Landroid/mtp/MTPJNIInterface;->MTP_DEBUG_LEVEL:Ljava/lang/String;
 
-    .line 194
     :goto_0
     sget-object v4, Landroid/mtp/MTPJNIInterface;->MTP_DEBUG_LEVEL:Ljava/lang/String;
 
@@ -214,25 +200,21 @@
 
     if-eqz v4, :cond_1
 
-    .line 195
     const/4 v4, 0x1
 
     sput-boolean v4, Landroid/mtp/MTPJNIInterface;->isMtpLogOn:Z
 
-    .line 201
     :goto_1
     :try_start_0
-    const-string/jumbo v4, "mtp_samsung_jni"
+    const-string v4, "mtp_samsung_jni"
 
     invoke-static {v4}, Ljava/lang/System;->loadLibrary(Ljava/lang/String;)V
     :try_end_0
     .catch Ljava/lang/UnsatisfiedLinkError; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 206
     :goto_2
     return-void
 
-    .line 191
     :cond_0
     const-string v4, "0x4948"
 
@@ -240,17 +222,14 @@
 
     goto :goto_0
 
-    .line 197
     :cond_1
     sput-boolean v6, Landroid/mtp/MTPJNIInterface;->isMtpLogOn:Z
 
     goto :goto_1
 
-    .line 203
     :catch_0
     move-exception v3
 
-    .line 204
     .local v3, "ule":Ljava/lang/UnsatisfiedLinkError;
     const-string v4, "MTPJNIInterface"
 
@@ -267,138 +246,110 @@
     .prologue
     const-wide/16 v2, 0x0
 
-    .line 158
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 70
     const-string v0, ""
 
     iput-object v0, p0, Landroid/mtp/MTPJNIInterface;->title:Ljava/lang/String;
 
-    .line 71
     const-string v0, ""
 
     iput-object v0, p0, Landroid/mtp/MTPJNIInterface;->path:Ljava/lang/String;
 
-    .line 72
     const-string v0, ""
 
     iput-object v0, p0, Landroid/mtp/MTPJNIInterface;->album:Ljava/lang/String;
 
-    .line 73
     const-string v0, ""
 
     iput-object v0, p0, Landroid/mtp/MTPJNIInterface;->filename:Ljava/lang/String;
 
-    .line 74
     const-string v0, ""
 
     iput-object v0, p0, Landroid/mtp/MTPJNIInterface;->displayname:Ljava/lang/String;
 
-    .line 75
     const-string v0, ""
 
     iput-object v0, p0, Landroid/mtp/MTPJNIInterface;->id:Ljava/lang/String;
 
-    .line 76
     iput-wide v2, p0, Landroid/mtp/MTPJNIInterface;->duration:J
 
-    .line 77
     const-string v0, ""
 
     iput-object v0, p0, Landroid/mtp/MTPJNIInterface;->size:Ljava/lang/String;
 
-    .line 78
     const-string v0, ""
 
     iput-object v0, p0, Landroid/mtp/MTPJNIInterface;->mimeType:Ljava/lang/String;
 
-    .line 79
     const-string v0, ""
 
     iput-object v0, p0, Landroid/mtp/MTPJNIInterface;->creationDate:Ljava/lang/String;
 
-    .line 80
     const-string v0, ""
 
     iput-object v0, p0, Landroid/mtp/MTPJNIInterface;->modificationDate:Ljava/lang/String;
 
-    .line 81
     const-string v0, ""
 
     iput-object v0, p0, Landroid/mtp/MTPJNIInterface;->artist:Ljava/lang/String;
 
-    .line 82
     const-string v0, ""
 
     iput-object v0, p0, Landroid/mtp/MTPJNIInterface;->composer:Ljava/lang/String;
 
-    .line 83
     const/4 v0, 0x0
 
     iput v0, p0, Landroid/mtp/MTPJNIInterface;->year:I
 
-    .line 84
     const-string v0, ""
 
     iput-object v0, p0, Landroid/mtp/MTPJNIInterface;->description:Ljava/lang/String;
 
-    .line 85
     const-string v0, ""
 
     iput-object v0, p0, Landroid/mtp/MTPJNIInterface;->language:Ljava/lang/String;
 
-    .line 86
     const-string v0, ""
 
     iput-object v0, p0, Landroid/mtp/MTPJNIInterface;->longitude:Ljava/lang/String;
 
-    .line 87
     const-string v0, ""
 
     iput-object v0, p0, Landroid/mtp/MTPJNIInterface;->latitude:Ljava/lang/String;
 
-    .line 88
     const-string v0, ""
 
     iput-object v0, p0, Landroid/mtp/MTPJNIInterface;->genreName:Ljava/lang/String;
 
-    .line 89
     iput-wide v2, p0, Landroid/mtp/MTPJNIInterface;->width:J
 
-    .line 90
     iput-wide v2, p0, Landroid/mtp/MTPJNIInterface;->height:J
 
-    .line 91
     const-string v0, ""
 
     iput-object v0, p0, Landroid/mtp/MTPJNIInterface;->resolution:Ljava/lang/String;
 
-    .line 92
     const-string v0, ""
 
     iput-object v0, p0, Landroid/mtp/MTPJNIInterface;->dateTaken:Ljava/lang/String;
 
-    .line 107
     const/4 v0, 0x0
 
     iput-object v0, p0, Landroid/mtp/MTPJNIInterface;->DeviceName:Ljava/lang/String;
 
-    .line 242
     new-instance v0, Landroid/mtp/MTPJNIInterface$1;
 
     invoke-direct {v0, p0}, Landroid/mtp/MTPJNIInterface$1;-><init>(Landroid/mtp/MTPJNIInterface;)V
 
     iput-object v0, p0, Landroid/mtp/MTPJNIInterface;->mMtpReceiver:Landroid/content/BroadcastReceiver;
 
-    .line 309
     new-instance v0, Landroid/mtp/MTPJNIInterface$2;
 
     invoke-direct {v0, p0}, Landroid/mtp/MTPJNIInterface$2;-><init>(Landroid/mtp/MTPJNIInterface;)V
 
     iput-object v0, p0, Landroid/mtp/MTPJNIInterface;->mMtpReceiver1:Landroid/content/BroadcastReceiver;
 
-    .line 159
     return-void
 .end method
 
@@ -411,7 +362,6 @@
 
     const/4 v5, -0x1
 
-    .line 1609
     const-string v6, "MTPJNIInterface"
 
     new-instance v7, Ljava/lang/StringBuilder;
@@ -434,10 +384,8 @@
 
     invoke-static {v6, v7}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1610
     const/4 v2, 0x0
 
-    .line 1611
     .local v2, "p":Ljava/lang/Process;
     const/4 v6, 0x3
 
@@ -457,7 +405,6 @@
 
     aput-object p1, v3, v6
 
-    .line 1615
     .local v3, "shell_command":[Ljava/lang/String;
     :try_start_0
     const-string v6, "MTPJNIInterface"
@@ -466,7 +413,6 @@
 
     invoke-static {v6, v7}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1616
     invoke-static {}, Ljava/lang/Runtime;->getRuntime()Ljava/lang/Runtime;
 
     move-result-object v6
@@ -475,10 +421,8 @@
 
     move-result-object v2
 
-    .line 1617
     invoke-virtual {v2}, Ljava/lang/Process;->waitFor()I
 
-    .line 1618
     const-string v6, "MTPJNIInterface"
 
     const-string v7, "exec done"
@@ -489,22 +433,18 @@
     .catch Ljava/lang/SecurityException; {:try_start_0 .. :try_end_0} :catch_1
     .catch Ljava/lang/InterruptedException; {:try_start_0 .. :try_end_0} :catch_2
 
-    .line 1629
     const-string v5, "MTPJNIInterface"
 
     const-string v6, "DoShellCmd done"
 
     invoke-static {v5, v6}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1630
     :goto_0
     return v4
 
-    .line 1619
     :catch_0
     move-exception v1
 
-    .line 1620
     .local v1, "exception":Ljava/io/IOException;
     const-string v4, "MTPJNIInterface"
 
@@ -514,15 +454,12 @@
 
     move v4, v5
 
-    .line 1621
     goto :goto_0
 
-    .line 1622
     .end local v1    # "exception":Ljava/io/IOException;
     :catch_1
     move-exception v1
 
-    .line 1623
     .local v1, "exception":Ljava/lang/SecurityException;
     const-string v4, "MTPJNIInterface"
 
@@ -532,21 +469,17 @@
 
     move v4, v5
 
-    .line 1624
     goto :goto_0
 
-    .line 1625
     .end local v1    # "exception":Ljava/lang/SecurityException;
     :catch_2
     move-exception v0
 
-    .line 1626
     .local v0, "e":Ljava/lang/InterruptedException;
     invoke-virtual {v0}, Ljava/lang/InterruptedException;->printStackTrace()V
 
     move v4, v5
 
-    .line 1627
     goto :goto_0
 .end method
 
@@ -556,15 +489,12 @@
     .param p1, "msg"    # Ljava/lang/String;
 
     .prologue
-    .line 1699
     sget-boolean v0, Landroid/mtp/MTPJNIInterface;->isMtpLogOn:Z
 
     if-eqz v0, :cond_0
 
-    .line 1700
     invoke-static {p0, p1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1702
     :cond_0
     return-void
 .end method
@@ -573,7 +503,6 @@
     .locals 1
 
     .prologue
-    .line 67
     sget-object v0, Landroid/mtp/MTPJNIInterface;->mHandler:Landroid/os/Handler;
 
     return-object v0
@@ -584,7 +513,6 @@
     .param p0, "x0"    # Landroid/mtp/MTPJNIInterface;
 
     .prologue
-    .line 67
     invoke-direct {p0}, Landroid/mtp/MTPJNIInterface;->getTimeToString()Ljava/lang/String;
 
     move-result-object v0
@@ -598,7 +526,6 @@
     .param p1, "x1"    # Ljava/lang/String;
 
     .prologue
-    .line 67
     invoke-direct {p0, p1}, Landroid/mtp/MTPJNIInterface;->DoShellCmd(Ljava/lang/String;)I
 
     move-result v0
@@ -617,67 +544,53 @@
     .prologue
     const/4 v5, 0x1
 
-    .line 974
     iget v4, p1, Landroid/graphics/BitmapFactory$Options;->outWidth:I
 
-    .line 975
     .local v4, "w":I
     iget v3, p1, Landroid/graphics/BitmapFactory$Options;->outHeight:I
 
-    .line 977
     .local v3, "h":I
     div-int v2, v4, p2
 
-    .line 978
     .local v2, "candidateW":I
     div-int v1, v3, p2
 
-    .line 980
     .local v1, "candidateH":I
     invoke-static {v2, v1}, Ljava/lang/Math;->max(II)I
 
     move-result v0
 
-    .line 982
     .local v0, "candidate":I
     if-nez v0, :cond_0
 
-    .line 994
     :goto_0
     return v5
 
-    .line 985
     :cond_0
     if-le v0, v5, :cond_1
 
-    .line 986
     if-le v4, p2, :cond_1
 
     div-int v6, v4, v0
 
     if-ge v6, p2, :cond_1
 
-    .line 987
     add-int/lit8 v0, v0, -0x1
 
-    .line 990
     :cond_1
     if-le v0, v5, :cond_2
 
-    .line 991
     if-le v3, p2, :cond_2
 
     div-int v5, v3, v0
 
     if-ge v5, p2, :cond_2
 
-    .line 992
     add-int/lit8 v0, v0, -0x1
 
     :cond_2
     move v5, v0
 
-    .line 994
     goto :goto_0
 .end method
 
@@ -691,14 +604,11 @@
     .prologue
     const/4 v5, -0x1
 
-    .line 943
     const/4 v0, 0x0
 
-    .line 944
     .local v0, "degree":I
     const/4 v1, 0x0
 
-    .line 946
     .local v1, "exif":Landroid/media/ExifInterface;
     :try_start_0
     new-instance v2, Landroid/media/ExifInterface;
@@ -711,63 +621,50 @@
     .local v2, "exif":Landroid/media/ExifInterface;
     move-object v1, v2
 
-    .line 950
     .end local v2    # "exif":Landroid/media/ExifInterface;
     .restart local v1    # "exif":Landroid/media/ExifInterface;
     :goto_0
     if-eqz v1, :cond_0
 
-    .line 951
     const-string v4, "Orientation"
 
     invoke-virtual {v1, v4, v5}, Landroid/media/ExifInterface;->getAttributeInt(Ljava/lang/String;I)I
 
     move-result v3
 
-    .line 952
     .local v3, "orientation":I
     if-eq v3, v5, :cond_0
 
-    .line 954
     packed-switch v3, :pswitch_data_0
 
-    .line 969
     .end local v3    # "orientation":I
     :cond_0
     :goto_1
     :pswitch_0
     return v0
 
-    .line 956
     .restart local v3    # "orientation":I
     :pswitch_1
     const/16 v0, 0x5a
 
-    .line 957
     goto :goto_1
 
-    .line 959
     :pswitch_2
     const/16 v0, 0xb4
 
-    .line 960
     goto :goto_1
 
-    .line 962
     :pswitch_3
     const/16 v0, 0x10e
 
-    .line 963
     goto :goto_1
 
-    .line 947
     .end local v3    # "orientation":I
     :catch_0
     move-exception v4
 
     goto :goto_0
 
-    .line 954
     :pswitch_data_0
     .packed-switch 0x3
         :pswitch_2
@@ -784,20 +681,16 @@
     .param p1, "path"    # Ljava/lang/String;
 
     .prologue
-    .line 1029
     new-instance v1, Landroid/graphics/Matrix;
 
     invoke-direct {v1}, Landroid/graphics/Matrix;-><init>()V
 
-    .line 1030
     .local v1, "m":Landroid/graphics/Matrix;
     const/4 v2, 0x0
 
-    .line 1031
     .local v2, "tempB":Landroid/graphics/Bitmap;
     const/4 v6, 0x0
 
-    .line 1034
     .local v6, "b":Landroid/graphics/Bitmap;
     const/16 v0, 0x400
 
@@ -806,7 +699,6 @@
 
     move-result-object v2
 
-    .line 1035
     const/16 v3, 0x100
 
     const/16 v4, 0x100
@@ -819,31 +711,24 @@
 
     move-result-object v6
 
-    .line 1036
     if-eqz v2, :cond_0
 
-    .line 1037
     invoke-virtual {v2}, Landroid/graphics/Bitmap;->recycle()V
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 1044
     :cond_0
     :goto_0
     return-object v6
 
-    .line 1038
     :catch_0
     move-exception v7
 
-    .line 1039
     .local v7, "e":Ljava/lang/Exception;
     if-eqz v2, :cond_1
 
-    .line 1040
     invoke-virtual {v2}, Landroid/graphics/Bitmap;->recycle()V
 
-    .line 1041
     :cond_1
     invoke-virtual {v7}, Ljava/lang/Exception;->printStackTrace()V
 
@@ -854,7 +739,6 @@
     .locals 2
 
     .prologue
-    .line 162
     const-class v0, Landroid/mtp/MTPJNIInterface;
 
     monitor-enter v0
@@ -882,64 +766,52 @@
     .param p2, "path"    # Ljava/lang/String;
 
     .prologue
-    .line 921
     new-instance v2, Landroid/graphics/BitmapFactory$Options;
 
     invoke-direct {v2}, Landroid/graphics/BitmapFactory$Options;-><init>()V
 
-    .line 924
     .local v2, "options":Landroid/graphics/BitmapFactory$Options;
     const/4 v3, 0x1
 
     iput-boolean v3, v2, Landroid/graphics/BitmapFactory$Options;->inJustDecodeBounds:Z
 
-    .line 925
     invoke-static {p2, v2}, Landroid/graphics/BitmapFactory;->decodeFile(Ljava/lang/String;Landroid/graphics/BitmapFactory$Options;)Landroid/graphics/Bitmap;
 
     move-result-object v0
 
-    .line 927
     .local v0, "bm":Landroid/graphics/Bitmap;
     const/4 v3, 0x0
 
     iput-boolean v3, v2, Landroid/graphics/BitmapFactory$Options;->inJustDecodeBounds:Z
 
-    .line 929
     const/4 v3, -0x1
 
     if-eq p1, v3, :cond_0
 
-    .line 930
     invoke-direct {p0, v2, p1}, Landroid/mtp/MTPJNIInterface;->computeSampleSize(Landroid/graphics/BitmapFactory$Options;I)I
 
     move-result v3
 
     iput v3, v2, Landroid/graphics/BitmapFactory$Options;->inSampleSize:I
 
-    .line 932
     :cond_0
     invoke-static {p2, v2}, Landroid/graphics/BitmapFactory;->decodeFile(Ljava/lang/String;Landroid/graphics/BitmapFactory$Options;)Landroid/graphics/Bitmap;
 
     move-result-object v0
 
-    .line 934
     const/4 v1, 0x0
 
-    .line 935
     .local v1, "degree":I
     invoke-direct {p0, p2}, Landroid/mtp/MTPJNIInterface;->getExifOrientation(Ljava/lang/String;)I
 
     move-result v1
 
-    .line 937
     if-eqz v1, :cond_1
 
-    .line 938
     invoke-direct {p0, v0, v1}, Landroid/mtp/MTPJNIInterface;->rotate(Landroid/graphics/Bitmap;I)Landroid/graphics/Bitmap;
 
     move-result-object v0
 
-    .line 940
     :cond_1
     return-object v0
 .end method
@@ -948,12 +820,10 @@
     .locals 10
 
     .prologue
-    .line 1597
     invoke-static {}, Ljava/util/Calendar;->getInstance()Ljava/util/Calendar;
 
     move-result-object v0
 
-    .line 1598
     .local v0, "cal":Ljava/util/Calendar;
     new-instance v7, Ljava/text/DecimalFormat;
 
@@ -973,7 +843,6 @@
 
     move-result-object v6
 
-    .line 1599
     .local v6, "year":Ljava/lang/String;
     new-instance v7, Ljava/text/DecimalFormat;
 
@@ -995,7 +864,6 @@
 
     move-result-object v4
 
-    .line 1600
     .local v4, "month":Ljava/lang/String;
     new-instance v7, Ljava/text/DecimalFormat;
 
@@ -1015,7 +883,6 @@
 
     move-result-object v1
 
-    .line 1601
     .local v1, "day":Ljava/lang/String;
     new-instance v7, Ljava/text/DecimalFormat;
 
@@ -1035,7 +902,6 @@
 
     move-result-object v2
 
-    .line 1602
     .local v2, "hour":Ljava/lang/String;
     new-instance v7, Ljava/text/DecimalFormat;
 
@@ -1055,7 +921,6 @@
 
     move-result-object v3
 
-    .line 1603
     .local v3, "min":Ljava/lang/String;
     new-instance v7, Ljava/lang/StringBuilder;
 
@@ -1085,7 +950,6 @@
 
     move-result-object v5
 
-    .line 1605
     .local v5, "timeFormat":Ljava/lang/String;
     return-object v5
 .end method
@@ -1097,21 +961,17 @@
     .prologue
     const/high16 v9, 0x43800000    # 256.0f
 
-    .line 1048
     new-instance v7, Landroid/media/MediaMetadataRetriever;
 
     invoke-direct {v7}, Landroid/media/MediaMetadataRetriever;-><init>()V
 
-    .line 1049
     .local v7, "retriever":Landroid/media/MediaMetadataRetriever;
     const/4 v2, 0x0
 
-    .line 1053
     .local v2, "bitmap":Landroid/graphics/Bitmap;
     :try_start_0
     invoke-virtual {v7, p1}, Landroid/media/MediaMetadataRetriever;->setDataSource(Ljava/lang/String;)V
 
-    .line 1056
     const/16 v0, 0x100
 
     const/16 v3, 0x100
@@ -1122,17 +982,14 @@
 
     invoke-virtual {v7, v0, v3, v4, v5}, Landroid/media/MediaMetadataRetriever;->setVideoSize(IIZZ)V
 
-    .line 1057
     const-wide/32 v4, 0xe4e1c0
 
     invoke-virtual {v7, v4, v5}, Landroid/media/MediaMetadataRetriever;->getFrameAtTime(J)Landroid/graphics/Bitmap;
 
     move-result-object v2
 
-    .line 1059
     const/4 v8, 0x0
 
-    .line 1060
     .local v8, "scale":F
     invoke-virtual {v2}, Landroid/graphics/Bitmap;->getWidth()I
 
@@ -1144,7 +1001,6 @@
 
     if-ge v0, v3, :cond_0
 
-    .line 1061
     invoke-virtual {v2}, Landroid/graphics/Bitmap;->getWidth()I
 
     move-result v0
@@ -1153,20 +1009,16 @@
 
     div-float v8, v9, v0
 
-    .line 1066
     :goto_0
     new-instance v1, Landroid/graphics/Matrix;
 
     invoke-direct {v1}, Landroid/graphics/Matrix;-><init>()V
 
-    .line 1067
     .local v1, "matrix":Landroid/graphics/Matrix;
     invoke-virtual {v1, v8, v8}, Landroid/graphics/Matrix;->setScale(FF)V
 
-    .line 1068
     invoke-virtual {v7}, Landroid/media/MediaMetadataRetriever;->release()V
 
-    .line 1069
     const/16 v3, 0x100
 
     const/16 v4, 0x100
@@ -1179,13 +1031,11 @@
 
     move-result-object v0
 
-    .line 1076
     .end local v1    # "matrix":Landroid/graphics/Matrix;
     .end local v8    # "scale":F
     :goto_1
     return-object v0
 
-    .line 1063
     .restart local v8    # "scale":F
     :cond_0
     invoke-virtual {v2}, Landroid/graphics/Bitmap;->getHeight()I
@@ -1200,21 +1050,17 @@
 
     goto :goto_0
 
-    .line 1070
     .end local v8    # "scale":F
     :catch_0
     move-exception v6
 
-    .line 1071
     .local v6, "e":Ljava/lang/RuntimeException;
     invoke-virtual {v6}, Ljava/lang/RuntimeException;->printStackTrace()V
 
-    .line 1074
     invoke-virtual {v7}, Landroid/media/MediaMetadataRetriever;->release()V
 
     move-object v0, v2
 
-    .line 1076
     goto :goto_1
 .end method
 
@@ -1237,47 +1083,39 @@
     .locals 3
 
     .prologue
-    .line 223
     const-string v1, "MTPJNIInterface"
 
     const-string v2, "< MTP > Registering BroadCast receiver :::::"
 
     invoke-static {v1, v2}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 224
     new-instance v0, Landroid/content/IntentFilter;
 
     invoke-direct {v0}, Landroid/content/IntentFilter;-><init>()V
 
-    .line 226
     .local v0, "lIntentFilter":Landroid/content/IntentFilter;
     const-string v1, "com.android.MTP.OBJECT_ADDED"
 
     invoke-virtual {v0, v1}, Landroid/content/IntentFilter;->addAction(Ljava/lang/String;)V
 
-    .line 227
     const-string v1, "com.android.MTP.OBJECT_PROP_CHANGED"
 
     invoke-virtual {v0, v1}, Landroid/content/IntentFilter;->addAction(Ljava/lang/String;)V
 
-    .line 228
     const-string v1, "com.android.MTP.OBJECT_REMOVED"
 
     invoke-virtual {v0, v1}, Landroid/content/IntentFilter;->addAction(Ljava/lang/String;)V
 
-    .line 230
     sget-object v1, Landroid/mtp/MTPJNIInterface;->mcontext:Landroid/content/Context;
 
     iget-object v2, p0, Landroid/mtp/MTPJNIInterface;->mMtpReceiver:Landroid/content/BroadcastReceiver;
 
     invoke-virtual {v1, v2, v0}, Landroid/content/Context;->registerReceiver(Landroid/content/BroadcastReceiver;Landroid/content/IntentFilter;)Landroid/content/Intent;
 
-    .line 231
     const/4 v1, 0x1
 
     sput-boolean v1, Landroid/mtp/MTPJNIInterface;->RegisterBroadcast:Z
 
-    .line 232
     return-void
 .end method
 
@@ -1285,42 +1123,35 @@
     .locals 3
 
     .prologue
-    .line 234
     const-string v1, "MTPJNIInterface"
 
     const-string v2, "< MTP > Registering BroadCast receiver :::::::"
 
     invoke-static {v1, v2}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 235
     new-instance v0, Landroid/content/IntentFilter;
 
     invoke-direct {v0}, Landroid/content/IntentFilter;-><init>()V
 
-    .line 236
     .local v0, "lIntentFilter":Landroid/content/IntentFilter;
     const-string v1, "android.intent.action.MEDIA_SCANNER_FINISHED"
 
     invoke-virtual {v0, v1}, Landroid/content/IntentFilter;->addAction(Ljava/lang/String;)V
 
-    .line 237
     const-string v1, "file"
 
     invoke-virtual {v0, v1}, Landroid/content/IntentFilter;->addDataScheme(Ljava/lang/String;)V
 
-    .line 238
     sget-object v1, Landroid/mtp/MTPJNIInterface;->mcontext:Landroid/content/Context;
 
     iget-object v2, p0, Landroid/mtp/MTPJNIInterface;->mMtpReceiver1:Landroid/content/BroadcastReceiver;
 
     invoke-virtual {v1, v2, v0}, Landroid/content/Context;->registerReceiver(Landroid/content/BroadcastReceiver;Landroid/content/IntentFilter;)Landroid/content/Intent;
 
-    .line 239
     const/4 v1, 0x1
 
     sput-boolean v1, Landroid/mtp/MTPJNIInterface;->RegisterBroadcast1:Z
 
-    .line 240
     return-void
 .end method
 
@@ -1332,17 +1163,14 @@
     .prologue
     const/high16 v3, 0x40000000    # 2.0f
 
-    .line 904
     if-eqz p2, :cond_0
 
     if-eqz p1, :cond_0
 
-    .line 905
     new-instance v5, Landroid/graphics/Matrix;
 
     invoke-direct {v5}, Landroid/graphics/Matrix;-><init>()V
 
-    .line 906
     .local v5, "m":Landroid/graphics/Matrix;
     int-to-float v0, p2
 
@@ -1364,7 +1192,6 @@
 
     invoke-virtual {v5, v0, v1, v2}, Landroid/graphics/Matrix;->setRotate(FFF)V
 
-    .line 908
     const/4 v1, 0x0
 
     const/4 v2, 0x0
@@ -1386,7 +1213,6 @@
 
     move-result-object v7
 
-    .line 909
     .local v7, "b2":Landroid/graphics/Bitmap;
     invoke-virtual {p1, v7}, Ljava/lang/Object;->equals(Ljava/lang/Object;)Z
 
@@ -1394,27 +1220,22 @@
 
     if-nez v0, :cond_0
 
-    .line 910
     invoke-virtual {p1}, Landroid/graphics/Bitmap;->recycle()V
     :try_end_0
     .catch Ljava/lang/OutOfMemoryError; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 911
     move-object p1, v7
 
-    .line 918
     .end local v5    # "m":Landroid/graphics/Matrix;
     .end local v7    # "b2":Landroid/graphics/Bitmap;
     :cond_0
     :goto_0
     return-object p1
 
-    .line 913
     .restart local v5    # "m":Landroid/graphics/Matrix;
     :catch_0
     move-exception v8
 
-    .line 915
     .local v8, "ex":Ljava/lang/OutOfMemoryError;
     invoke-virtual {v8}, Ljava/lang/OutOfMemoryError;->printStackTrace()V
 
@@ -1436,18 +1257,14 @@
     .param p5, "scaleUp"    # Z
 
     .prologue
-    .line 999
     if-nez p2, :cond_1
 
-    .line 1000
     const/4 v10, 0x0
 
-    .line 1026
     :cond_0
     :goto_0
     return-object v10
 
-    .line 1003
     :cond_1
     invoke-virtual/range {p2 .. p2}, Landroid/graphics/Bitmap;->getWidth()I
 
@@ -1459,7 +1276,6 @@
 
     if-ge v2, v3, :cond_2
 
-    .line 1004
     move/from16 v0, p3
 
     int-to-float v2, v0
@@ -1472,15 +1288,12 @@
 
     div-float v13, v2, v3
 
-    .line 1010
     .local v13, "scale":F
     :goto_1
     if-eqz p1, :cond_3
 
-    .line 1011
     invoke-virtual {p1, v13, v13}, Landroid/graphics/Matrix;->setScale(FF)V
 
-    .line 1013
     const/4 v3, 0x0
 
     const/4 v4, 0x0
@@ -1503,7 +1316,6 @@
 
     move-result-object v9
 
-    .line 1018
     .local v9, "b1":Landroid/graphics/Bitmap;
     :goto_2
     const/4 v2, 0x0
@@ -1518,7 +1330,6 @@
 
     move-result v11
 
-    .line 1019
     .local v11, "dx1":I
     const/4 v2, 0x0
 
@@ -1532,7 +1343,6 @@
 
     move-result v12
 
-    .line 1021
     .local v12, "dy1":I
     div-int/lit8 v2, v11, 0x2
 
@@ -1546,7 +1356,6 @@
 
     move-result-object v10
 
-    .line 1023
     .local v10, "b2":Landroid/graphics/Bitmap;
     move-object/from16 v0, p2
 
@@ -1556,12 +1365,10 @@
 
     if-eqz v2, :cond_0
 
-    .line 1024
     invoke-virtual {v9}, Landroid/graphics/Bitmap;->recycle()V
 
     goto :goto_0
 
-    .line 1006
     .end local v9    # "b1":Landroid/graphics/Bitmap;
     .end local v10    # "b2":Landroid/graphics/Bitmap;
     .end local v11    # "dx1":I
@@ -1583,7 +1390,6 @@
     .restart local v13    # "scale":F
     goto :goto_1
 
-    .line 1015
     :cond_3
     move-object/from16 v9, p2
 
@@ -1597,14 +1403,12 @@
     .locals 2
 
     .prologue
-    .line 430
     const-string v0, "MTPJNIInterface"
 
     const-string v1, "Getting battery Level from JAVA"
 
     invoke-static {v0, v1}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 431
     const/16 v0, 0xa
 
     return v0
@@ -1615,22 +1419,17 @@
     .param p1, "filename"    # Ljava/lang/String;
 
     .prologue
-    .line 1426
     sget-object v8, Landroid/provider/MediaStore$Audio$Media;->EXTERNAL_CONTENT_URI:Landroid/net/Uri;
 
-    .line 1427
     .local v8, "audioURI":Landroid/net/Uri;
     sget-object v13, Landroid/provider/MediaStore$Video$Media;->EXTERNAL_CONTENT_URI:Landroid/net/Uri;
 
-    .line 1428
     .local v13, "videoURI":Landroid/net/Uri;
     sget-object v1, Landroid/provider/MediaStore$Images$Media;->EXTERNAL_CONTENT_URI:Landroid/net/Uri;
 
-    .line 1429
     .local v1, "imageURI":Landroid/net/Uri;
     move-object v12, p1
 
-    .line 1432
     .local v12, "path":Ljava/lang/String;
     sget-object v0, Landroid/mtp/MTPJNIInterface;->mcontext:Landroid/content/Context;
 
@@ -1672,38 +1471,30 @@
 
     move-result-object v9
 
-    .line 1433
     .local v9, "cursor":Landroid/database/Cursor;
     if-nez v9, :cond_0
 
-    .line 1434
     const-string v0, "MTPJNIInterface"
 
     const-string v2, "cursor is null for image"
 
     invoke-static {v0, v2}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1435
     const/4 v10, 0x0
 
-    .line 1465
     :goto_0
     return-object v10
 
-    .line 1437
     :cond_0
     invoke-interface {v9}, Landroid/database/Cursor;->getCount()I
 
     move-result v11
 
-    .line 1438
     .local v11, "objectCount":I
     if-nez v11, :cond_3
 
-    .line 1439
     invoke-interface {v9}, Landroid/database/Cursor;->close()V
 
-    .line 1440
     sget-object v0, Landroid/mtp/MTPJNIInterface;->mcontext:Landroid/content/Context;
 
     invoke-virtual {v0}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
@@ -1746,34 +1537,27 @@
 
     move-result-object v9
 
-    .line 1441
     if-nez v9, :cond_1
 
-    .line 1442
     const-string v0, "MTPJNIInterface"
 
     const-string v2, "cursor is null for audio "
 
     invoke-static {v0, v2}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1443
     const/4 v10, 0x0
 
     goto :goto_0
 
-    .line 1445
     :cond_1
     invoke-interface {v9}, Landroid/database/Cursor;->getCount()I
 
     move-result v11
 
-    .line 1446
     if-nez v11, :cond_3
 
-    .line 1447
     invoke-interface {v9}, Landroid/database/Cursor;->close()V
 
-    .line 1448
     sget-object v0, Landroid/mtp/MTPJNIInterface;->mcontext:Landroid/content/Context;
 
     invoke-virtual {v0}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
@@ -1816,54 +1600,43 @@
 
     move-result-object v9
 
-    .line 1449
     if-nez v9, :cond_2
 
-    .line 1450
     const-string v0, "MTPJNIInterface"
 
     const-string v2, "cursor is null for video "
 
     invoke-static {v0, v2}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1451
     const/4 v10, 0x0
 
     goto :goto_0
 
-    .line 1453
     :cond_2
     invoke-interface {v9}, Landroid/database/Cursor;->getCount()I
 
     move-result v11
 
-    .line 1454
     if-nez v11, :cond_3
 
-    .line 1455
     invoke-interface {v9}, Landroid/database/Cursor;->close()V
 
-    .line 1456
     const-string v0, "MTPJNIInterface"
 
-    const-string/jumbo v2, "objectCount is zero "
+    const-string v2, "objectCount is zero "
 
     invoke-static {v0, v2}, Landroid/mtp/MTPJNIInterface;->MTP_LOG_PRINT(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 1457
     const/4 v10, 0x0
 
     goto/16 :goto_0
 
-    .line 1462
     :cond_3
     new-array v10, v11, [Landroid/mtp/MediaObject;
 
-    .line 1463
     .local v10, "objectArray":[Landroid/mtp/MediaObject;
     invoke-virtual {p0, v9, v10}, Landroid/mtp/MTPJNIInterface;->getColumnData(Landroid/database/Cursor;[Landroid/mtp/MediaObject;)V
 
-    .line 1464
     invoke-interface {v9}, Landroid/database/Cursor;->close()V
 
     goto/16 :goto_0
@@ -1874,17 +1647,14 @@
     .param p1, "key"    # Ljava/lang/String;
 
     .prologue
-    .line 426
     const-string v0, "MTPJNIInterface"
 
     const-string v1, "Getting CryptionKey from JAVA"
 
     invoke-static {v0, v1}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 427
     invoke-direct {p0, p1}, Landroid/mtp/MTPJNIInterface;->setCryptionKey(Ljava/lang/String;)V
 
-    .line 428
     return-void
 .end method
 
@@ -1893,7 +1663,6 @@
     .param p1, "filename"    # Ljava/lang/String;
 
     .prologue
-    .line 437
     const-string v2, "MTPJNIInterface"
 
     new-instance v3, Ljava/lang/StringBuilder;
@@ -1916,10 +1685,8 @@
 
     invoke-static {v2, v3}, Landroid/mtp/MTPJNIInterface;->MTP_LOG_PRINT(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 438
     move-object v0, p1
 
-    .line 440
     .local v0, "contentName":Ljava/lang/String;
     const-string v2, "MTPJNIInterface"
 
@@ -1943,12 +1710,10 @@
 
     invoke-static {v2, v3}, Landroid/mtp/MTPJNIInterface;->MTP_LOG_PRINT(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 442
     new-instance v1, Ljava/io/File;
 
     invoke-direct {v1, v0}, Ljava/io/File;-><init>(Ljava/lang/String;)V
 
-    .line 443
     .local v1, "file":Ljava/io/File;
     sget-object v2, Landroid/mtp/MTPJNIInterface;->mcontext:Landroid/content/Context;
 
@@ -1964,7 +1729,6 @@
 
     invoke-virtual {v2, v3}, Landroid/content/Context;->sendBroadcast(Landroid/content/Intent;)V
 
-    .line 445
     return-void
 .end method
 
@@ -1974,18 +1738,14 @@
     .param p2, "playlistPath"    # Ljava/lang/String;
 
     .prologue
-    .line 499
     const-string v11, "4"
 
-    .line 500
     .local v11, "MEDIA_TYPE_PLAYLIST":Ljava/lang/String;
     const-string v10, "47621"
 
-    .line 501
     .local v10, "FORMAT_ABSTRACT_AUDIO_PLAYLIST":Ljava/lang/String;
     const/4 v15, 0x0
 
-    .line 502
     .local v15, "noOfRowsUpdated":I
     const-string v2, "MTPJNIInterface"
 
@@ -2011,7 +1771,6 @@
 
     invoke-static {v2, v4}, Landroid/mtp/MTPJNIInterface;->MTP_LOG_PRINT(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 503
     const-string v2, "MTPJNIInterface"
 
     new-instance v4, Ljava/lang/StringBuilder;
@@ -2036,7 +1795,6 @@
 
     invoke-static {v2, v4}, Landroid/mtp/MTPJNIInterface;->MTP_LOG_PRINT(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 505
     new-instance v2, Ljava/lang/StringBuilder;
 
     invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
@@ -2077,11 +1835,9 @@
 
     move-result-object v17
 
-    .line 509
     .local v17, "playlistPathWithoutPla":Ljava/lang/String;
     sget-object v3, Landroid/mtp/MTPJNIInterface$MusicPlaylist;->EXTERNAL_CONTENT_URI:Landroid/net/Uri;
 
-    .line 511
     .local v3, "playlistUri":Landroid/net/Uri;
     const-string v2, "external"
 
@@ -2089,15 +1845,13 @@
 
     move-result-object v16
 
-    .line 513
     .local v16, "playlistFileUri":Landroid/net/Uri;
     new-instance v19, Landroid/content/ContentValues;
 
     invoke-direct/range {v19 .. v19}, Landroid/content/ContentValues;-><init>()V
 
-    .line 514
     .local v19, "values":Landroid/content/ContentValues;
-    const-string/jumbo v2, "name"
+    const-string v2, "name"
 
     move-object/from16 v0, v19
 
@@ -2105,7 +1859,6 @@
 
     invoke-virtual {v0, v2, v1}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 515
     const-string v2, "_data"
 
     move-object/from16 v0, v19
@@ -2114,12 +1867,10 @@
 
     invoke-virtual {v0, v2, v1}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 517
     new-instance v20, Landroid/content/ContentValues;
 
     invoke-direct/range {v20 .. v20}, Landroid/content/ContentValues;-><init>()V
 
-    .line 519
     .local v20, "valuesFile":Landroid/content/ContentValues;
     const-string v2, "_data"
 
@@ -2129,21 +1880,18 @@
 
     invoke-virtual {v0, v2, v1}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 520
-    const-string/jumbo v2, "media_type"
+    const-string v2, "media_type"
 
     move-object/from16 v0, v20
 
     invoke-virtual {v0, v2, v11}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 521
     const-string v2, "format"
 
     move-object/from16 v0, v20
 
     invoke-virtual {v0, v2, v10}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 523
     sget-object v2, Landroid/mtp/MTPJNIInterface;->mcontext:Landroid/content/Context;
 
     invoke-virtual {v2}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
@@ -2156,7 +1904,7 @@
 
     invoke-direct {v5}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v6, "name=\""
+    const-string v6, "name=\""
 
     invoke-virtual {v5, v6}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -2186,31 +1934,25 @@
 
     move-result-object v13
 
-    .line 524
     .local v13, "cur":Landroid/database/Cursor;
     if-nez v13, :cond_0
 
-    .line 525
     const-string v2, "MTPJNIInterface"
 
     const-string v4, "Cur is null"
 
     invoke-static {v2, v4}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 526
     const/16 v18, -0x1
 
-    .line 568
     :goto_0
     return v18
 
-    .line 528
     :cond_0
     invoke-interface {v13}, Landroid/database/Cursor;->getCount()I
 
     move-result v12
 
-    .line 529
     .local v12, "count":I
     const-string v2, "MTPJNIInterface"
 
@@ -2234,21 +1976,16 @@
 
     invoke-static {v2, v4}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 531
     const/16 v18, 0x0
 
-    .line 532
     .local v18, "rowID":I
     const/4 v14, 0x0
 
-    .line 533
     .local v14, "newUri":Landroid/net/Uri;
     if-nez v12, :cond_5
 
-    .line 534
     invoke-interface {v13}, Landroid/database/Cursor;->close()V
 
-    .line 535
     sget-object v2, Landroid/mtp/MTPJNIInterface;->mcontext:Landroid/content/Context;
 
     invoke-virtual {v2}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
@@ -2261,19 +1998,16 @@
 
     move-result-object v14
 
-    .line 536
     if-nez v14, :cond_1
 
-    .line 537
     const-string v2, "MTPJNIInterface"
 
-    const-string/jumbo v4, "playlist Insertion failure"
+    const-string v4, "playlist Insertion failure"
 
     invoke-static {v2, v4}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
     goto :goto_0
 
-    .line 540
     :cond_1
     const-string v2, "MTPJNIInterface"
 
@@ -2301,7 +2035,6 @@
 
     invoke-static {v2, v4}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 541
     invoke-virtual {v14}, Landroid/net/Uri;->getPathSegments()Ljava/util/List;
 
     move-result-object v2
@@ -2318,7 +2051,6 @@
 
     move-result v18
 
-    .line 542
     sget-object v2, Landroid/mtp/MTPJNIInterface;->mcontext:Landroid/content/Context;
 
     invoke-virtual {v2}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
@@ -2363,10 +2095,8 @@
 
     move-result-object v13
 
-    .line 543
     if-nez v13, :cond_2
 
-    .line 544
     const-string v2, "MTPJNIInterface"
 
     const-string v4, "Cur is null"
@@ -2375,13 +2105,11 @@
 
     goto/16 :goto_0
 
-    .line 547
     :cond_2
     invoke-interface {v13}, Landroid/database/Cursor;->getCount()I
 
     move-result v12
 
-    .line 548
     const-string v2, "MTPJNIInterface"
 
     new-instance v4, Ljava/lang/StringBuilder;
@@ -2404,10 +2132,8 @@
 
     invoke-static {v2, v4}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 549
     if-lez v12, :cond_4
 
-    .line 550
     sget-object v2, Landroid/mtp/MTPJNIInterface;->mcontext:Landroid/content/Context;
 
     invoke-virtual {v2}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
@@ -2450,14 +2176,13 @@
 
     move-result v15
 
-    .line 551
     const-string v2, "MTPJNIInterface"
 
     new-instance v4, Ljava/lang/StringBuilder;
 
     invoke-direct {v4}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v5, "noOfRowsUpdated = "
+    const-string v5, "noOfRowsUpdated = "
 
     invoke-virtual {v4, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -2473,18 +2198,15 @@
 
     invoke-static {v2, v4}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 559
     :cond_3
     :goto_1
     invoke-interface {v13}, Landroid/database/Cursor;->close()V
 
     goto/16 :goto_0
 
-    .line 553
     :cond_4
     if-nez v12, :cond_3
 
-    .line 554
     sget-object v2, Landroid/mtp/MTPJNIInterface;->mcontext:Landroid/content/Context;
 
     invoke-virtual {v2}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
@@ -2499,23 +2221,19 @@
 
     move-result-object v14
 
-    .line 555
     if-nez v14, :cond_3
 
-    .line 556
     const-string v2, "MTPJNIInterface"
 
-    const-string/jumbo v4, "playlistFile Insertion failure"
+    const-string v4, "playlistFile Insertion failure"
 
     invoke-static {v2, v4}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
     goto :goto_1
 
-    .line 563
     :cond_5
     invoke-interface {v13}, Landroid/database/Cursor;->moveToFirst()Z
 
-    .line 564
     const-string v2, "_id"
 
     invoke-interface {v13, v2}, Landroid/database/Cursor;->getColumnIndex(Ljava/lang/String;)I
@@ -2526,7 +2244,6 @@
 
     move-result v18
 
-    .line 565
     invoke-interface {v13}, Landroid/database/Cursor;->close()V
 
     goto/16 :goto_0
@@ -2539,7 +2256,6 @@
     .param p3, "order"    # I
 
     .prologue
-    .line 670
     const-string v2, "MTPJNIInterface"
 
     new-instance v4, Ljava/lang/StringBuilder;
@@ -2564,7 +2280,6 @@
 
     invoke-static {v2, v4}, Landroid/mtp/MTPJNIInterface;->MTP_LOG_PRINT(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 672
     const-string v2, "MTPJNIInterface"
 
     new-instance v4, Ljava/lang/StringBuilder;
@@ -2589,18 +2304,15 @@
 
     invoke-static {v2, v4}, Landroid/mtp/MTPJNIInterface;->MTP_LOG_PRINT(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 676
     sget-object v3, Landroid/mtp/MTPJNIInterface$MusicPlaylist;->EXTERNAL_CONTENT_URI:Landroid/net/Uri;
 
-    .line 679
     .local v3, "playlistUri":Landroid/net/Uri;
     new-instance v25, Landroid/content/ContentValues;
 
     invoke-direct/range {v25 .. v25}, Landroid/content/ContentValues;-><init>()V
 
-    .line 680
     .local v25, "values":Landroid/content/ContentValues;
-    const-string/jumbo v2, "name"
+    const-string v2, "name"
 
     move-object/from16 v0, v25
 
@@ -2608,7 +2320,6 @@
 
     invoke-virtual {v0, v2, v1}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 681
     sget-object v2, Landroid/mtp/MTPJNIInterface;->mcontext:Landroid/content/Context;
 
     invoke-virtual {v2}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
@@ -2621,7 +2332,7 @@
 
     invoke-direct {v6}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v8, "name=\""
+    const-string v8, "name=\""
 
     invoke-virtual {v6, v8}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -2651,31 +2362,25 @@
 
     move-result-object v19
 
-    .line 682
     .local v19, "cur":Landroid/database/Cursor;
     if-nez v19, :cond_0
 
-    .line 683
     const-string v2, "MTPJNIInterface"
 
     const-string v4, "Cur is null"
 
     invoke-static {v2, v4}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 684
     const/4 v2, -0x1
 
-    .line 837
     :goto_0
     return v2
 
-    .line 686
     :cond_0
     invoke-interface/range {v19 .. v19}, Landroid/database/Cursor;->getCount()I
 
     move-result v17
 
-    .line 687
     .local v17, "count":I
     const-string v2, "MTPJNIInterface"
 
@@ -2701,30 +2406,23 @@
 
     invoke-static {v2, v4}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 689
     const/16 v24, 0x0
 
-    .line 690
     .local v24, "rowID":I
     const/16 v22, 0x0
 
-    .line 691
     .local v22, "newUri":Landroid/net/Uri;
     if-nez v17, :cond_1
 
-    .line 692
     invoke-interface/range {v19 .. v19}, Landroid/database/Cursor;->close()V
 
-    .line 693
     const/4 v2, -0x1
 
     goto :goto_0
 
-    .line 695
     :cond_1
     invoke-interface/range {v19 .. v19}, Landroid/database/Cursor;->moveToFirst()Z
 
-    .line 696
     const-string v2, "_id"
 
     move-object/from16 v0, v19
@@ -2739,10 +2437,8 @@
 
     move-result v24
 
-    .line 697
     invoke-interface/range {v19 .. v19}, Landroid/database/Cursor;->close()V
 
-    .line 709
     const-string v2, "MTPJNIInterface"
 
     new-instance v4, Ljava/lang/StringBuilder;
@@ -2767,16 +2463,13 @@
 
     invoke-static {v2, v4}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 710
     new-instance v14, Landroid/content/ContentValues;
 
     invoke-direct {v14}, Landroid/content/ContentValues;-><init>()V
 
-    .line 711
     .local v14, "audioMAPValues":Landroid/content/ContentValues;
     sget-object v5, Landroid/provider/MediaStore$Audio$Media;->EXTERNAL_CONTENT_URI:Landroid/net/Uri;
 
-    .line 712
     .local v5, "audioUri":Landroid/net/Uri;
     const-string v2, "MTPJNIInterface"
 
@@ -2804,7 +2497,6 @@
 
     invoke-static {v2, v4}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 713
     sget-object v2, Landroid/mtp/MTPJNIInterface;->mcontext:Landroid/content/Context;
 
     invoke-virtual {v2}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
@@ -2847,32 +2539,26 @@
 
     move-result-object v16
 
-    .line 714
     .local v16, "c1":Landroid/database/Cursor;
     if-nez v16, :cond_2
 
-    .line 715
     const-string v2, "MTPJNIInterface"
 
     const-string v4, "c1 Cur is null"
 
     invoke-static {v2, v4}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 716
     invoke-interface/range {v19 .. v19}, Landroid/database/Cursor;->close()V
 
-    .line 717
     const/4 v2, -0x1
 
     goto/16 :goto_0
 
-    .line 719
     :cond_2
     invoke-interface/range {v16 .. v16}, Landroid/database/Cursor;->getCount()I
 
     move-result v17
 
-    .line 720
     const-string v2, "MTPJNIInterface"
 
     new-instance v4, Ljava/lang/StringBuilder;
@@ -2897,16 +2583,13 @@
 
     invoke-static {v2, v4}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 722
     if-nez v17, :cond_4
 
-    .line 726
     new-instance v25, Landroid/content/ContentValues;
 
     .end local v25    # "values":Landroid/content/ContentValues;
     invoke-direct/range {v25 .. v25}, Landroid/content/ContentValues;-><init>()V
 
-    .line 727
     .restart local v25    # "values":Landroid/content/ContentValues;
     const-string v2, "_data"
 
@@ -2916,7 +2599,6 @@
 
     invoke-virtual {v0, v2, v1}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 728
     const-string v2, "is_music"
 
     const/4 v4, 0x1
@@ -2929,7 +2611,6 @@
 
     invoke-virtual {v0, v2, v4}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/Integer;)V
 
-    .line 729
     const-string v2, "is_ringtone"
 
     const/4 v4, 0x0
@@ -2942,7 +2623,6 @@
 
     invoke-virtual {v0, v2, v4}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/Integer;)V
 
-    .line 730
     const-string v2, "is_alarm"
 
     const/4 v4, 0x0
@@ -2955,7 +2635,6 @@
 
     invoke-virtual {v0, v2, v4}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/Integer;)V
 
-    .line 731
     const-string v2, "is_notification"
 
     const/4 v4, 0x0
@@ -2968,10 +2647,8 @@
 
     invoke-virtual {v0, v2, v4}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/Integer;)V
 
-    .line 732
     sget-object v5, Landroid/provider/MediaStore$Audio$Media;->EXTERNAL_CONTENT_URI:Landroid/net/Uri;
 
-    .line 733
     const-string v2, "MTPJNIInterface"
 
     new-instance v4, Ljava/lang/StringBuilder;
@@ -2998,7 +2675,6 @@
 
     invoke-static {v2, v4}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 734
     sget-object v2, Landroid/mtp/MTPJNIInterface;->mcontext:Landroid/content/Context;
 
     invoke-virtual {v2}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
@@ -3011,10 +2687,8 @@
 
     move-result-object v22
 
-    .line 735
     invoke-virtual/range {v25 .. v25}, Landroid/content/ContentValues;->clear()V
 
-    .line 736
     const-string v2, "date_modified"
 
     const/4 v4, 0x0
@@ -3027,28 +2701,22 @@
 
     invoke-virtual {v0, v2, v4}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/Integer;)V
 
-    .line 737
     if-nez v22, :cond_3
 
-    .line 738
     const-string v2, "MTPJNIInterface"
 
     const-string v4, "Insertion failure"
 
     invoke-static {v2, v4}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 739
     invoke-interface/range {v19 .. v19}, Landroid/database/Cursor;->close()V
 
-    .line 740
     invoke-interface/range {v16 .. v16}, Landroid/database/Cursor;->close()V
 
-    .line 741
     const/4 v2, -0x1
 
     goto/16 :goto_0
 
-    .line 743
     :cond_3
     const-string v2, "MTPJNIInterface"
 
@@ -3076,7 +2744,6 @@
 
     invoke-static {v2, v4}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 744
     sget-object v2, Landroid/mtp/MTPJNIInterface;->mcontext:Landroid/content/Context;
 
     invoke-virtual {v2}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
@@ -3093,21 +2760,17 @@
 
     invoke-virtual {v2, v0, v1, v4, v6}, Landroid/content/ContentResolver;->update(Landroid/net/Uri;Landroid/content/ContentValues;Ljava/lang/String;[Ljava/lang/String;)I
 
-    .line 751
     :cond_4
     if-nez v17, :cond_6
 
-    .line 752
     new-instance v14, Landroid/content/ContentValues;
 
     .end local v14    # "audioMAPValues":Landroid/content/ContentValues;
     invoke-direct {v14}, Landroid/content/ContentValues;-><init>()V
 
-    .line 753
     .restart local v14    # "audioMAPValues":Landroid/content/ContentValues;
     sget-object v5, Landroid/provider/MediaStore$Audio$Media;->EXTERNAL_CONTENT_URI:Landroid/net/Uri;
 
-    .line 754
     const-string v2, "MTPJNIInterface"
 
     new-instance v4, Ljava/lang/StringBuilder;
@@ -3134,10 +2797,8 @@
 
     invoke-static {v2, v4}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 755
     invoke-interface/range {v16 .. v16}, Landroid/database/Cursor;->close()V
 
-    .line 756
     sget-object v2, Landroid/mtp/MTPJNIInterface;->mcontext:Landroid/content/Context;
 
     invoke-virtual {v2}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
@@ -3180,31 +2841,25 @@
 
     move-result-object v16
 
-    .line 757
     if-nez v16, :cond_5
 
-    .line 758
     const-string v2, "MTPJNIInterface"
 
     const-string v4, "Cur is null"
 
     invoke-static {v2, v4}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 759
     invoke-interface/range {v19 .. v19}, Landroid/database/Cursor;->close()V
 
-    .line 760
     const/4 v2, -0x1
 
     goto/16 :goto_0
 
-    .line 762
     :cond_5
     invoke-interface/range {v16 .. v16}, Landroid/database/Cursor;->getCount()I
 
     move-result v17
 
-    .line 763
     const-string v2, "MTPJNIInterface"
 
     new-instance v4, Ljava/lang/StringBuilder;
@@ -3229,22 +2884,17 @@
 
     invoke-static {v2, v4}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 765
     :cond_6
     const/4 v13, 0x0
 
-    .line 766
     .local v13, "audioID":I
     const/4 v12, 0x1
 
-    .line 767
     .local v12, "add_in_playlist":Z
     if-lez v17, :cond_9
 
-    .line 768
     invoke-interface/range {v16 .. v16}, Landroid/database/Cursor;->moveToFirst()Z
 
-    .line 769
     const-string v2, "_id"
 
     move-object/from16 v0, v16
@@ -3259,7 +2909,6 @@
 
     move-result v13
 
-    .line 770
     const-string v2, "external"
 
     move/from16 v0, v24
@@ -3270,7 +2919,6 @@
 
     move-result-object v7
 
-    .line 774
     .local v7, "playlistMemberUri":Landroid/net/Uri;
     sget-object v2, Landroid/mtp/MTPJNIInterface;->mcontext:Landroid/content/Context;
 
@@ -3312,60 +2960,47 @@
 
     move-result-object v20
 
-    .line 776
     .local v20, "cur2":Landroid/database/Cursor;
     const/16 v18, 0x0
 
-    .line 777
     .local v18, "count2":I
     if-nez v20, :cond_7
 
-    .line 778
     const-string v2, "MTPJNIInterface"
 
     const-string v4, "Cursor cur2 is null"
 
     invoke-static {v2, v4}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 779
     invoke-interface/range {v16 .. v16}, Landroid/database/Cursor;->close()V
 
-    .line 780
     const/4 v2, -0x1
 
     goto/16 :goto_0
 
-    .line 782
     :cond_7
     invoke-interface/range {v20 .. v20}, Landroid/database/Cursor;->getCount()I
 
     move-result v18
 
-    .line 784
     if-eqz v18, :cond_8
 
-    .line 785
     const/4 v12, 0x0
 
-    .line 786
     :cond_8
     invoke-interface/range {v20 .. v20}, Landroid/database/Cursor;->close()V
 
-    .line 790
     .end local v7    # "playlistMemberUri":Landroid/net/Uri;
     .end local v18    # "count2":I
     .end local v20    # "cur2":Landroid/database/Cursor;
     :cond_9
     const/4 v15, 0x0
 
-    .line 793
     .local v15, "audio_HashCode":I
     if-lez v17, :cond_b
 
-    .line 794
     invoke-interface/range {v16 .. v16}, Landroid/database/Cursor;->moveToFirst()Z
 
-    .line 795
     const-string v2, "_id"
 
     move-object/from16 v0, v16
@@ -3380,7 +3015,6 @@
 
     move-result v13
 
-    .line 797
     const-string v2, "MTPJNIInterface"
 
     new-instance v4, Ljava/lang/StringBuilder;
@@ -3405,10 +3039,8 @@
 
     invoke-static {v2, v4}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 798
     invoke-interface/range {v16 .. v16}, Landroid/database/Cursor;->close()V
 
-    .line 801
     const-string v2, "audio_id"
 
     invoke-static {v13}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
@@ -3417,8 +3049,7 @@
 
     invoke-virtual {v14, v2, v4}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/Integer;)V
 
-    .line 806
-    const-string/jumbo v2, "play_order"
+    const-string v2, "play_order"
 
     add-int/lit8 v4, p3, 0x1
 
@@ -3428,7 +3059,6 @@
 
     invoke-virtual {v14, v2, v4}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/Integer;)V
 
-    .line 807
     const-string v2, "MTPJNIInterface"
 
     new-instance v4, Ljava/lang/StringBuilder;
@@ -3453,8 +3083,7 @@
 
     invoke-static {v2, v4}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 808
-    const-string/jumbo v2, "playlist_id"
+    const-string v2, "playlist_id"
 
     invoke-static/range {v24 .. v24}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
@@ -3462,10 +3091,8 @@
 
     invoke-virtual {v14, v2, v4}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/Integer;)V
 
-    .line 815
     if-eqz v12, :cond_a
 
-    .line 819
     :try_start_0
     const-string v2, "external"
 
@@ -3477,7 +3104,6 @@
 
     move-result-object v23
 
-    .line 822
     .local v23, "playlist_map":Landroid/net/Uri;
     const-string v2, "MTPJNIInterface"
 
@@ -3505,7 +3131,6 @@
 
     invoke-static {v2, v4}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 823
     sget-object v2, Landroid/mtp/MTPJNIInterface;->mcontext:Landroid/content/Context;
 
     invoke-virtual {v2}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
@@ -3518,7 +3143,6 @@
 
     move-result-object v22
 
-    .line 824
     const-string v2, "MTPJNIInterface"
 
     new-instance v4, Ljava/lang/StringBuilder;
@@ -3547,7 +3171,6 @@
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 837
     .end local v23    # "playlist_map":Landroid/net/Uri;
     :cond_a
     :goto_1
@@ -3555,11 +3178,9 @@
 
     goto/16 :goto_0
 
-    .line 825
     :catch_0
     move-exception v21
 
-    .line 826
     .local v21, "e":Ljava/lang/Exception;
     const-string v2, "MTPJNIInterface"
 
@@ -3589,12 +3210,10 @@
 
     goto :goto_1
 
-    .line 834
     .end local v21    # "e":Ljava/lang/Exception;
     :cond_b
     invoke-interface/range {v16 .. v16}, Landroid/database/Cursor;->close()V
 
-    .line 835
     const/4 v2, -0x1
 
     goto/16 :goto_0
@@ -3607,14 +3226,13 @@
     .prologue
     const/4 v2, 0x0
 
-    .line 1367
     const-string v0, "MTPJNIInterface"
 
     new-instance v3, Ljava/lang/StringBuilder;
 
     invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v4, "playlistName :"
+    const-string v4, "playlistName :"
 
     invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -3630,14 +3248,11 @@
 
     invoke-static {v0, v3}, Landroid/mtp/MTPJNIInterface;->MTP_LOG_PRINT(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 1369
     sget-object v1, Landroid/mtp/MTPJNIInterface$MusicPlaylist;->EXTERNAL_CONTENT_URI:Landroid/net/Uri;
 
-    .line 1370
     .local v1, "playlistUri":Landroid/net/Uri;
     const/4 v8, 0x0
 
-    .line 1372
     .local v8, "noOfSongs":I
     sget-object v0, Landroid/mtp/MTPJNIInterface;->mcontext:Landroid/content/Context;
 
@@ -3649,7 +3264,7 @@
 
     invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v4, "name=\""
+    const-string v4, "name=\""
 
     invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -3677,28 +3292,23 @@
 
     move-result-object v7
 
-    .line 1373
     .local v7, "cur":Landroid/database/Cursor;
     if-nez v7, :cond_0
 
-    .line 1374
     const-string v0, "MTPJNIInterface"
 
     const-string v2, "Cur is null"
 
     invoke-static {v0, v2}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1396
     :goto_0
     return-void
 
-    .line 1377
     :cond_0
     invoke-interface {v7}, Landroid/database/Cursor;->getCount()I
 
     move-result v6
 
-    .line 1378
     .local v6, "count":I
     const-string v0, "MTPJNIInterface"
 
@@ -3722,31 +3332,26 @@
 
     invoke-static {v0, v3}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1380
     const/4 v10, 0x0
 
-    .line 1381
     .local v10, "rowID":I
     if-nez v6, :cond_1
 
-    .line 1382
     invoke-interface {v7}, Landroid/database/Cursor;->close()V
 
-    .line 1383
     const-string v0, "MTPJNIInterface"
 
-    const-string/jumbo v2, "playlist is not present"
+    const-string v2, "playlist is not present"
 
     invoke-static {v0, v2}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1384
     const-string v0, "MTPJNIInterface"
 
     new-instance v2, Ljava/lang/StringBuilder;
 
     invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v3, "playlist "
+    const-string v3, "playlist "
 
     invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -3770,11 +3375,9 @@
 
     goto :goto_0
 
-    .line 1387
     :cond_1
     invoke-interface {v7}, Landroid/database/Cursor;->moveToFirst()Z
 
-    .line 1388
     const-string v0, "_id"
 
     invoke-interface {v7, v0}, Landroid/database/Cursor;->getColumnIndex(Ljava/lang/String;)I
@@ -3785,10 +3388,8 @@
 
     move-result v10
 
-    .line 1389
     invoke-interface {v7}, Landroid/database/Cursor;->close()V
 
-    .line 1391
     const-string v0, "external"
 
     int-to-long v4, v10
@@ -3797,7 +3398,6 @@
 
     move-result-object v9
 
-    .line 1392
     .local v9, "playlist_map":Landroid/net/Uri;
     sget-object v0, Landroid/mtp/MTPJNIInterface;->mcontext:Landroid/content/Context;
 
@@ -3809,7 +3409,7 @@
 
     invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v4, "playlist_id=\""
+    const-string v4, "playlist_id=\""
 
     invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -3833,14 +3433,12 @@
 
     move-result v8
 
-    .line 1393
     const-string v0, "MTPJNIInterface"
 
     const-string v2, "No of songs of playlistName deleted"
 
     invoke-static {v0, v2}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1394
     const-string v0, "MTPJNIInterface"
 
     new-instance v2, Ljava/lang/StringBuilder;
@@ -3873,14 +3471,12 @@
     .prologue
     const/4 v2, 0x0
 
-    .line 463
     const-string v0, "MTPJNIInterface"
 
     const-string v3, "Playlist to be deleted"
 
     invoke-static {v0, v3}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 464
     const-string v0, "MTPJNIInterface"
 
     new-instance v3, Ljava/lang/StringBuilder;
@@ -3903,10 +3499,8 @@
 
     invoke-static {v0, v3}, Landroid/mtp/MTPJNIInterface;->MTP_LOG_PRINT(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 467
     sget-object v1, Landroid/provider/MediaStore$Audio$Playlists;->EXTERNAL_CONTENT_URI:Landroid/net/Uri;
 
-    .line 468
     .local v1, "playlistUri":Landroid/net/Uri;
     const-string v0, "external"
 
@@ -3914,7 +3508,6 @@
 
     move-result-object v8
 
-    .line 471
     .local v8, "playlistFileUri":Landroid/net/Uri;
     sget-object v0, Landroid/mtp/MTPJNIInterface;->mcontext:Landroid/content/Context;
 
@@ -3926,7 +3519,7 @@
 
     invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v4, "name=\""
+    const-string v4, "name=\""
 
     invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -3954,31 +3547,25 @@
 
     move-result-object v7
 
-    .line 472
     .local v7, "cur":Landroid/database/Cursor;
     if-nez v7, :cond_0
 
-    .line 473
     const-string v0, "MTPJNIInterface"
 
     const-string v2, "Cur is null"
 
     invoke-static {v0, v2}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 474
     const/4 v0, -0x1
 
-    .line 492
     :goto_0
     return v0
 
-    .line 476
     :cond_0
     invoke-interface {v7}, Landroid/database/Cursor;->getCount()I
 
     move-result v6
 
-    .line 477
     .local v6, "count":I
     const-string v0, "MTPJNIInterface"
 
@@ -4002,13 +3589,10 @@
 
     invoke-static {v0, v3}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 479
     if-lez v6, :cond_1
 
-    .line 480
     invoke-interface {v7}, Landroid/database/Cursor;->moveToFirst()Z
 
-    .line 481
     const-string v0, "_data"
 
     invoke-interface {v7, v0}, Landroid/database/Cursor;->getColumnIndex(Ljava/lang/String;)I
@@ -4019,7 +3603,6 @@
 
     move-result-object v9
 
-    .line 483
     .local v9, "playlistPath":Ljava/lang/String;
     sget-object v0, Landroid/mtp/MTPJNIInterface;->mcontext:Landroid/content/Context;
 
@@ -4055,7 +3638,6 @@
 
     move-result v10
 
-    .line 484
     .local v10, "ret":I
     const-string v0, "MTPJNIInterface"
 
@@ -4079,10 +3661,8 @@
 
     invoke-static {v0, v2}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 485
     if-nez v10, :cond_2
 
-    .line 486
     const-string v0, "MTPJNIInterface"
 
     new-instance v2, Ljava/lang/StringBuilder;
@@ -4105,19 +3685,16 @@
 
     invoke-static {v0, v2}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 491
     .end local v9    # "playlistPath":Ljava/lang/String;
     .end local v10    # "ret":I
     :cond_1
     :goto_1
     invoke-interface {v7}, Landroid/database/Cursor;->close()V
 
-    .line 492
     const/4 v0, 0x1
 
     goto/16 :goto_0
 
-    .line 488
     .restart local v9    # "playlistPath":Ljava/lang/String;
     .restart local v10    # "ret":I
     :cond_2
@@ -4153,10 +3730,8 @@
     .prologue
     const/4 v5, 0x0
 
-    .line 873
     sget-object v1, Landroid/provider/MediaStore$Audio$Media;->EXTERNAL_CONTENT_URI:Landroid/net/Uri;
 
-    .line 874
     .local v1, "uri":Landroid/net/Uri;
     sget-object v2, Landroid/mtp/MTPJNIInterface;->mcontext:Landroid/content/Context;
 
@@ -4192,7 +3767,6 @@
 
     move-result v0
 
-    .line 875
     .local v0, "ret":I
     const-string v2, "MTPJNIInterface"
 
@@ -4216,10 +3790,8 @@
 
     invoke-static {v2, v3}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 884
     sget-object v1, Landroid/provider/MediaStore$Video$Media;->EXTERNAL_CONTENT_URI:Landroid/net/Uri;
 
-    .line 885
     sget-object v2, Landroid/mtp/MTPJNIInterface;->mcontext:Landroid/content/Context;
 
     invoke-virtual {v2}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
@@ -4254,7 +3826,6 @@
 
     move-result v0
 
-    .line 886
     const-string v2, "MTPJNIInterface"
 
     new-instance v3, Ljava/lang/StringBuilder;
@@ -4277,10 +3848,8 @@
 
     invoke-static {v2, v3}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 888
     sget-object v1, Landroid/provider/MediaStore$Video$Media;->EXTERNAL_CONTENT_URI:Landroid/net/Uri;
 
-    .line 889
     sget-object v2, Landroid/mtp/MTPJNIInterface;->mcontext:Landroid/content/Context;
 
     invoke-virtual {v2}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
@@ -4315,7 +3884,6 @@
 
     move-result v0
 
-    .line 890
     const-string v2, "MTPJNIInterface"
 
     new-instance v3, Ljava/lang/StringBuilder;
@@ -4338,10 +3906,8 @@
 
     invoke-static {v2, v3}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 893
     sget-object v1, Landroid/provider/MediaStore$Images$Media;->EXTERNAL_CONTENT_URI:Landroid/net/Uri;
 
-    .line 894
     sget-object v2, Landroid/mtp/MTPJNIInterface;->mcontext:Landroid/content/Context;
 
     invoke-virtual {v2}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
@@ -4376,7 +3942,6 @@
 
     move-result v0
 
-    .line 895
     const-string v2, "MTPJNIInterface"
 
     new-instance v3, Ljava/lang/StringBuilder;
@@ -4399,10 +3964,8 @@
 
     invoke-static {v2, v3}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 897
     sget-object v1, Landroid/provider/MediaStore$Images$Media;->EXTERNAL_CONTENT_URI:Landroid/net/Uri;
 
-    .line 898
     sget-object v2, Landroid/mtp/MTPJNIInterface;->mcontext:Landroid/content/Context;
 
     invoke-virtual {v2}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
@@ -4437,7 +4000,6 @@
 
     move-result v0
 
-    .line 899
     const-string v2, "MTPJNIInterface"
 
     new-instance v3, Ljava/lang/StringBuilder;
@@ -4460,7 +4022,6 @@
 
     invoke-static {v2, v3}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 902
     return-void
 .end method
 
@@ -4470,14 +4031,11 @@
     .param p2, "objectArray"    # [Landroid/mtp/MediaObject;
 
     .prologue
-    .line 1475
     const/16 v44, 0x0
 
-    .line 1476
     .local v44, "index":I
     const/4 v15, 0x3
 
-    .line 1477
     .local v15, "mimeTypeEnum":I
     invoke-interface/range {p1 .. p1}, Landroid/database/Cursor;->moveToFirst()Z
 
@@ -4485,8 +4043,7 @@
 
     if-eqz v2, :cond_1
 
-    .line 1479
-    const-string/jumbo v2, "title"
+    const-string v2, "title"
 
     move-object/from16 v0, p1
 
@@ -4494,7 +4051,6 @@
 
     move-result v52
 
-    .line 1480
     .local v52, "titleColumn":I
     const-string v2, "_data"
 
@@ -4504,7 +4060,6 @@
 
     move-result v32
 
-    .line 1481
     .local v32, "dataColumn":I
     const-string v2, "_display_name"
 
@@ -4514,7 +4069,6 @@
 
     move-result v42
 
-    .line 1482
     .local v42, "filenameColumn":I
     const-string v2, "_size"
 
@@ -4524,9 +4078,8 @@
 
     move-result v51
 
-    .line 1483
     .local v51, "sizeColumn":I
-    const-string/jumbo v2, "mime_type"
+    const-string v2, "mime_type"
 
     move-object/from16 v0, p1
 
@@ -4534,7 +4087,6 @@
 
     move-result v48
 
-    .line 1484
     .local v48, "mimeColumn":I
     const-string v2, "date_added"
 
@@ -4544,7 +4096,6 @@
 
     move-result v33
 
-    .line 1485
     .local v33, "dateCreatedColumn":I
     const-string v2, "date_modified"
 
@@ -4554,7 +4105,6 @@
 
     move-result v34
 
-    .line 1486
     .local v34, "dateModifiedColumn":I
     const-string v2, "date_modified"
 
@@ -4564,7 +4114,6 @@
 
     move-result v43
 
-    .line 1487
     .local v43, "idColumn":I
     const-string v2, "_display_name"
 
@@ -4574,7 +4123,6 @@
 
     move-result v38
 
-    .line 1488
     .local v38, "displayColumn":I
     const-string v2, "duration"
 
@@ -4584,7 +4132,6 @@
 
     move-result v39
 
-    .line 1489
     .local v39, "durationColumn_audio":I
     const-string v2, "album"
 
@@ -4594,7 +4141,6 @@
 
     move-result v27
 
-    .line 1491
     .local v27, "albumColumn_audio":I
     const-string v2, "artist"
 
@@ -4604,7 +4150,6 @@
 
     move-result v29
 
-    .line 1492
     .local v29, "artistColumn_audio":I
     const-string v2, "composer"
 
@@ -4614,9 +4159,8 @@
 
     move-result v31
 
-    .line 1493
     .local v31, "composerColumn_audio":I
-    const-string/jumbo v2, "year"
+    const-string v2, "year"
 
     move-object/from16 v0, p1
 
@@ -4624,7 +4168,6 @@
 
     move-result v53
 
-    .line 1495
     .local v53, "yearColumn_audio":I
     const-string v2, "duration"
 
@@ -4634,7 +4177,6 @@
 
     move-result v40
 
-    .line 1496
     .local v40, "durationColumn_video":I
     const-string v2, "album"
 
@@ -4644,7 +4186,6 @@
 
     move-result v28
 
-    .line 1497
     .local v28, "albumColumn_video":I
     const-string v2, "description"
 
@@ -4654,9 +4195,8 @@
 
     move-result v37
 
-    .line 1498
     .local v37, "descriptionColumn_video":I
-    const-string/jumbo v2, "latitude"
+    const-string v2, "latitude"
 
     move-object/from16 v0, p1
 
@@ -4664,9 +4204,8 @@
 
     move-result v46
 
-    .line 1499
     .local v46, "latitudeColumn_video":I
-    const-string/jumbo v2, "longitude"
+    const-string v2, "longitude"
 
     move-object/from16 v0, p1
 
@@ -4674,9 +4213,8 @@
 
     move-result v47
 
-    .line 1500
     .local v47, "longitudeCoulmn_video":I
-    const-string/jumbo v2, "language"
+    const-string v2, "language"
 
     move-object/from16 v0, p1
 
@@ -4684,7 +4222,6 @@
 
     move-result v45
 
-    .line 1501
     .local v45, "languageColumn_video":I
     const-string v2, "artist"
 
@@ -4694,7 +4231,6 @@
 
     move-result v30
 
-    .line 1502
     .local v30, "artistColumn_video":I
     const-string v2, "datetaken"
 
@@ -4704,7 +4240,6 @@
 
     move-result v36
 
-    .line 1503
     .local v36, "dateTakenColumn_video":I
     const-string v2, "datetaken"
 
@@ -4714,9 +4249,8 @@
 
     move-result v35
 
-    .line 1504
     .local v35, "dateTakenColumn_image":I
-    const-string/jumbo v2, "resolution"
+    const-string v2, "resolution"
 
     move-object/from16 v0, p1
 
@@ -4724,7 +4258,6 @@
 
     move-result v49
 
-    .line 1509
     .local v49, "resolustion_video":I
     :try_start_0
     move-object/from16 v0, p1
@@ -4739,7 +4272,6 @@
 
     iput-object v2, v0, Landroid/mtp/MTPJNIInterface;->id:Ljava/lang/String;
 
-    .line 1511
     move-object/from16 v0, p1
 
     move/from16 v1, v42
@@ -4752,7 +4284,6 @@
 
     iput-object v2, v0, Landroid/mtp/MTPJNIInterface;->filename:Ljava/lang/String;
 
-    .line 1513
     move-object/from16 v0, p1
 
     move/from16 v1, v52
@@ -4765,7 +4296,6 @@
 
     iput-object v2, v0, Landroid/mtp/MTPJNIInterface;->title:Ljava/lang/String;
 
-    .line 1515
     move-object/from16 v0, p1
 
     move/from16 v1, v32
@@ -4778,7 +4308,6 @@
 
     iput-object v2, v0, Landroid/mtp/MTPJNIInterface;->path:Ljava/lang/String;
 
-    .line 1517
     move-object/from16 v0, p1
 
     move/from16 v1, v51
@@ -4791,7 +4320,6 @@
 
     iput-object v2, v0, Landroid/mtp/MTPJNIInterface;->size:Ljava/lang/String;
 
-    .line 1519
     move-object/from16 v0, p1
 
     move/from16 v1, v48
@@ -4804,7 +4332,6 @@
 
     iput-object v2, v0, Landroid/mtp/MTPJNIInterface;->mimeType:Ljava/lang/String;
 
-    .line 1521
     move-object/from16 v0, p1
 
     move/from16 v1, v33
@@ -4817,7 +4344,6 @@
 
     iput-object v2, v0, Landroid/mtp/MTPJNIInterface;->creationDate:Ljava/lang/String;
 
-    .line 1523
     move-object/from16 v0, p1
 
     move/from16 v1, v34
@@ -4830,7 +4356,6 @@
 
     iput-object v2, v0, Landroid/mtp/MTPJNIInterface;->modificationDate:Ljava/lang/String;
 
-    .line 1526
     move-object/from16 v0, p0
 
     iget-object v2, v0, Landroid/mtp/MTPJNIInterface;->mimeType:Ljava/lang/String;
@@ -4843,10 +4368,8 @@
 
     if-eqz v2, :cond_2
 
-    .line 1527
     const/4 v15, 0x2
 
-    .line 1528
     move-object/from16 v0, p1
 
     move/from16 v1, v35
@@ -4859,8 +4382,7 @@
 
     iput-object v2, v0, Landroid/mtp/MTPJNIInterface;->dateTaken:Ljava/lang/String;
 
-    .line 1530
-    const-string/jumbo v2, "width"
+    const-string v2, "width"
 
     move-object/from16 v0, p1
 
@@ -4878,7 +4400,6 @@
 
     iput-wide v2, v0, Landroid/mtp/MTPJNIInterface;->width:J
 
-    .line 1532
     const-string v2, "height"
 
     move-object/from16 v0, p1
@@ -4897,7 +4418,6 @@
 
     iput-wide v2, v0, Landroid/mtp/MTPJNIInterface;->height:J
 
-    .line 1585
     :cond_0
     :goto_0
     new-instance v2, Landroid/mtp/MediaObject;
@@ -5004,10 +4524,8 @@
 
     aput-object v2, p2, v44
 
-    .line 1586
     add-int/lit8 v44, v44, 0x1
 
-    .line 1594
     .end local v27    # "albumColumn_audio":I
     .end local v28    # "albumColumn_video":I
     .end local v29    # "artistColumn_audio":I
@@ -5036,7 +4554,6 @@
     :goto_1
     return-void
 
-    .line 1534
     .restart local v27    # "albumColumn_audio":I
     .restart local v28    # "albumColumn_video":I
     .restart local v29    # "artistColumn_audio":I
@@ -5074,10 +4591,8 @@
 
     if-eqz v2, :cond_3
 
-    .line 1535
     const/4 v15, 0x0
 
-    .line 1536
     move-object/from16 v0, p1
 
     move/from16 v1, v38
@@ -5090,7 +4605,6 @@
 
     iput-object v2, v0, Landroid/mtp/MTPJNIInterface;->displayname:Ljava/lang/String;
 
-    .line 1540
     move-object/from16 v0, p1
 
     move/from16 v1, v27
@@ -5103,7 +4617,6 @@
 
     iput-object v2, v0, Landroid/mtp/MTPJNIInterface;->album:Ljava/lang/String;
 
-    .line 1542
     move-object/from16 v0, p1
 
     move/from16 v1, v39
@@ -5116,7 +4629,6 @@
 
     iput-wide v2, v0, Landroid/mtp/MTPJNIInterface;->duration:J
 
-    .line 1544
     move-object/from16 v0, p1
 
     move/from16 v1, v29
@@ -5129,7 +4641,6 @@
 
     iput-object v2, v0, Landroid/mtp/MTPJNIInterface;->artist:Ljava/lang/String;
 
-    .line 1546
     move-object/from16 v0, p1
 
     move/from16 v1, v31
@@ -5142,7 +4653,6 @@
 
     iput-object v2, v0, Landroid/mtp/MTPJNIInterface;->composer:Ljava/lang/String;
 
-    .line 1548
     move-object/from16 v0, p1
 
     move/from16 v1, v53
@@ -5155,7 +4665,6 @@
 
     iput v2, v0, Landroid/mtp/MTPJNIInterface;->year:I
 
-    .line 1550
     const-string v2, "genre_name"
 
     move-object/from16 v0, p1
@@ -5178,11 +4687,9 @@
 
     goto/16 :goto_0
 
-    .line 1587
     :catch_0
     move-exception v41
 
-    .line 1588
     .local v41, "e":Ljava/lang/Exception;
     const-string v2, "MTPJNIInterface"
 
@@ -5194,7 +4701,6 @@
 
     goto :goto_1
 
-    .line 1553
     .end local v41    # "e":Ljava/lang/Exception;
     :cond_3
     :try_start_1
@@ -5202,7 +4708,7 @@
 
     iget-object v2, v0, Landroid/mtp/MTPJNIInterface;->mimeType:Ljava/lang/String;
 
-    const-string/jumbo v3, "video"
+    const-string v3, "video"
 
     invoke-virtual {v2, v3}, Ljava/lang/String;->contains(Ljava/lang/CharSequence;)Z
 
@@ -5210,10 +4716,8 @@
 
     if-eqz v2, :cond_0
 
-    .line 1554
     const/4 v15, 0x1
 
-    .line 1555
     move-object/from16 v0, p1
 
     move/from16 v1, v36
@@ -5226,7 +4730,6 @@
 
     iput-object v2, v0, Landroid/mtp/MTPJNIInterface;->dateTaken:Ljava/lang/String;
 
-    .line 1557
     move-object/from16 v0, p1
 
     move/from16 v1, v28
@@ -5239,7 +4742,6 @@
 
     iput-object v2, v0, Landroid/mtp/MTPJNIInterface;->album:Ljava/lang/String;
 
-    .line 1559
     move-object/from16 v0, p1
 
     move/from16 v1, v40
@@ -5252,7 +4754,6 @@
 
     iput-wide v2, v0, Landroid/mtp/MTPJNIInterface;->duration:J
 
-    .line 1561
     move-object/from16 v0, p1
 
     move/from16 v1, v30
@@ -5265,7 +4766,6 @@
 
     iput-object v2, v0, Landroid/mtp/MTPJNIInterface;->artist:Ljava/lang/String;
 
-    .line 1563
     move-object/from16 v0, p1
 
     move/from16 v1, v37
@@ -5278,7 +4778,6 @@
 
     iput-object v2, v0, Landroid/mtp/MTPJNIInterface;->description:Ljava/lang/String;
 
-    .line 1565
     move-object/from16 v0, p1
 
     move/from16 v1, v47
@@ -5291,7 +4790,6 @@
 
     iput-object v2, v0, Landroid/mtp/MTPJNIInterface;->longitude:Ljava/lang/String;
 
-    .line 1567
     move-object/from16 v0, p1
 
     move/from16 v1, v46
@@ -5304,7 +4802,6 @@
 
     iput-object v2, v0, Landroid/mtp/MTPJNIInterface;->latitude:Ljava/lang/String;
 
-    .line 1569
     move-object/from16 v0, p1
 
     move/from16 v1, v45
@@ -5317,8 +4814,7 @@
 
     iput-object v2, v0, Landroid/mtp/MTPJNIInterface;->language:Ljava/lang/String;
 
-    .line 1571
-    const-string/jumbo v2, "width"
+    const-string v2, "width"
 
     move-object/from16 v0, p1
 
@@ -5336,7 +4832,6 @@
 
     iput-wide v2, v0, Landroid/mtp/MTPJNIInterface;->width:J
 
-    .line 1573
     const-string v2, "height"
 
     move-object/from16 v0, p1
@@ -5355,7 +4850,6 @@
 
     iput-wide v2, v0, Landroid/mtp/MTPJNIInterface;->height:J
 
-    .line 1575
     move-object/from16 v0, p1
 
     move/from16 v1, v49
@@ -5368,7 +4862,6 @@
 
     iput-object v2, v0, Landroid/mtp/MTPJNIInterface;->resolution:Ljava/lang/String;
 
-    .line 1578
     move-object/from16 v0, p0
 
     iget-object v2, v0, Landroid/mtp/MTPJNIInterface;->resolution:Ljava/lang/String;
@@ -5395,19 +4888,17 @@
 
     if-nez v2, :cond_0
 
-    .line 1579
     :cond_4
     move-object/from16 v0, p0
 
     iget-object v2, v0, Landroid/mtp/MTPJNIInterface;->resolution:Ljava/lang/String;
 
-    const-string/jumbo v3, "x"
+    const-string v3, "x"
 
     invoke-virtual {v2, v3}, Ljava/lang/String;->split(Ljava/lang/String;)[Ljava/lang/String;
 
     move-result-object v50
 
-    .line 1580
     .local v50, "sRes":[Ljava/lang/String;
     const/4 v2, 0x0
 
@@ -5423,7 +4914,6 @@
 
     iput-wide v2, v0, Landroid/mtp/MTPJNIInterface;->width:J
 
-    .line 1581
     const/4 v2, 0x1
 
     aget-object v2, v50, v2
@@ -5450,14 +4940,12 @@
     .prologue
     const/4 v3, 0x0
 
-    .line 617
     const/4 v1, 0x0
 
-    .line 618
     .local v1, "status":Ljava/lang/String;
     sget-object v4, Landroid/mtp/MTPJNIInterface;->mcontext:Landroid/content/Context;
 
-    const-string/jumbo v5, "storage"
+    const-string v5, "storage"
 
     invoke-virtual {v4, v5}, Landroid/content/Context;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
 
@@ -5465,11 +4953,9 @@
 
     check-cast v2, Landroid/os/storage/StorageManager;
 
-    .line 620
     .local v2, "storageManager":Landroid/os/storage/StorageManager;
     if-eqz p1, :cond_0
 
-    .line 622
     :try_start_0
     invoke-virtual {v2, p1}, Landroid/os/storage/StorageManager;->getVolumeState(Ljava/lang/String;)Ljava/lang/String;
     :try_end_0
@@ -5477,11 +4963,9 @@
 
     move-result-object v1
 
-    .line 629
     :cond_0
     if-eqz v1, :cond_1
 
-    .line 630
     const-string v4, "MTPJNIInterface"
 
     new-instance v5, Ljava/lang/StringBuilder;
@@ -5504,8 +4988,7 @@
 
     invoke-static {v4, v5}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 631
-    const-string/jumbo v4, "mounted"
+    const-string v4, "mounted"
 
     invoke-virtual {v1, v4}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
@@ -5513,27 +4996,22 @@
 
     if-nez v4, :cond_2
 
-    .line 632
     const-string v4, "MTPJNIInterface"
 
     const-string v5, "SDcard is not available"
 
     invoke-static {v4, v5}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 639
     :cond_1
     :goto_0
     return v3
 
-    .line 623
     :catch_0
     move-exception v0
 
-    .line 624
     .local v0, "e":Ljava/lang/Exception;
     invoke-virtual {v0}, Ljava/lang/Exception;->printStackTrace()V
 
-    .line 625
     const-string v4, "MTPJNIInterface"
 
     const-string v5, "Exception is coming while getting the Mount status"
@@ -5542,7 +5020,6 @@
 
     goto :goto_0
 
-    .line 635
     .end local v0    # "e":Ljava/lang/Exception;
     :cond_2
     const-string v3, "MTPJNIInterface"
@@ -5551,7 +5028,6 @@
 
     invoke-static {v3, v4}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 636
     const/4 v3, 0x1
 
     goto :goto_0
@@ -5562,7 +5038,6 @@
     .param p1, "temp"    # I
 
     .prologue
-    .line 395
     const-string v0, "MTPJNIInterface"
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -5587,7 +5062,6 @@
 
     invoke-static {v0, v1}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 396
     sget v0, Landroid/mtp/MTPJNIInterface;->gadgetResetStatus:I
 
     return v0
@@ -5598,7 +5072,6 @@
     .param p1, "temp"    # I
 
     .prologue
-    .line 390
     const-string v0, "MTPJNIInterface"
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -5623,7 +5096,6 @@
 
     invoke-static {v0, v1}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 391
     sget v0, Landroid/mtp/MTPJNIInterface;->scannerStatus:I
 
     return v0
@@ -5635,17 +5107,14 @@
     .prologue
     const/4 v2, 0x1
 
-    .line 400
     const-string v0, "MTPJNIInterface"
 
     const-string v1, "MTP in GetEnumerateMtp"
 
     invoke-static {v0, v1}, Landroid/mtp/MTPJNIInterface;->MTP_LOG_PRINT(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 401
     invoke-direct {p0, v2, v2}, Landroid/mtp/MTPJNIInterface;->enumerateMtp(II)V
 
-    .line 402
     return-void
 .end method
 
@@ -5655,10 +5124,8 @@
     .param p2, "type"    # I
 
     .prologue
-    .line 1183
-    const-string/jumbo v8, "media"
+    const-string v8, "media"
 
-    .line 1184
     .local v8, "AUTHORITY":Ljava/lang/String;
     new-instance v2, Ljava/lang/StringBuilder;
 
@@ -5684,7 +5151,6 @@
 
     move-result-object v9
 
-    .line 1185
     .local v9, "CONTENT_AUTHORITY_SLASH":Ljava/lang/String;
     new-instance v2, Ljava/lang/StringBuilder;
 
@@ -5714,15 +5180,12 @@
 
     move-result-object v3
 
-    .line 1186
     .local v3, "FileUri":Landroid/net/Uri;
     const/4 v11, 0x0
 
-    .line 1187
     .local v11, "cur":Landroid/database/Cursor;
     const/4 v14, 0x0
 
-    .line 1188
     .local v14, "objectHandle":I
     const-string v2, "MTPJNIInterface"
 
@@ -5748,14 +5211,13 @@
 
     invoke-static {v2, v4}, Landroid/mtp/MTPJNIInterface;->MTP_LOG_PRINT(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 1189
     const-string v2, "MTPJNIInterface"
 
     new-instance v4, Ljava/lang/StringBuilder;
 
     invoke-direct {v4}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v5, "type is "
+    const-string v5, "type is "
 
     invoke-virtual {v4, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -5773,14 +5235,12 @@
 
     invoke-static {v2, v4}, Landroid/mtp/MTPJNIInterface;->MTP_LOG_PRINT(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 1190
     const/4 v2, 0x1
 
     move/from16 v0, p2
 
     if-ne v0, v2, :cond_3
 
-    .line 1192
     :try_start_0
     sget-object v2, Landroid/mtp/MTPJNIInterface;->mcontext:Landroid/content/Context;
 
@@ -5826,29 +5286,23 @@
 
     move-result-object v11
 
-    .line 1196
     :goto_0
     if-nez v11, :cond_0
 
-    .line 1197
     const-string v2, "MTPJNIInterface"
 
     const-string v4, "Cur is null"
 
     invoke-static {v2, v4}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1198
     const/4 v2, -0x1
 
-    .line 1230
     :goto_1
     return v2
 
-    .line 1193
     :catch_0
     move-exception v12
 
-    .line 1194
     .local v12, "e":Ljava/lang/Exception;
     const-string v2, "MTPJNIInterface"
 
@@ -5860,25 +5314,22 @@
 
     goto :goto_0
 
-    .line 1200
     .end local v12    # "e":Ljava/lang/Exception;
     :cond_0
     invoke-interface {v11}, Landroid/database/Cursor;->getCount()I
 
     move-result v10
 
-    .line 1202
     .local v10, "count":I
     if-nez v10, :cond_1
 
-    .line 1203
     const-string v2, "MTPJNIInterface"
 
     new-instance v4, Ljava/lang/StringBuilder;
 
     invoke-direct {v4}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v5, "objectHandle Count"
+    const-string v5, "objectHandle Count"
 
     invoke-virtual {v4, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -5894,19 +5345,15 @@
 
     invoke-static {v2, v4}, Landroid/mtp/MTPJNIInterface;->MTP_LOG_PRINT(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 1204
     invoke-interface {v11}, Landroid/database/Cursor;->close()V
 
-    .line 1205
     const/4 v2, -0x1
 
     goto :goto_1
 
-    .line 1207
     :cond_1
     invoke-interface {v11}, Landroid/database/Cursor;->moveToFirst()Z
 
-    .line 1208
     const-string v2, "_id"
 
     invoke-interface {v11, v2}, Landroid/database/Cursor;->getColumnIndex(Ljava/lang/String;)I
@@ -5917,17 +5364,15 @@
 
     move-result v14
 
-    .line 1210
     invoke-interface {v11}, Landroid/database/Cursor;->close()V
 
-    .line 1211
     const-string v2, "MTPJNIInterface"
 
     new-instance v4, Ljava/lang/StringBuilder;
 
     invoke-direct {v4}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v5, "objectHandle is "
+    const-string v5, "objectHandle is "
 
     invoke-virtual {v4, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -5948,10 +5393,8 @@
     :goto_2
     move v2, v14
 
-    .line 1230
     goto :goto_1
 
-    .line 1212
     :cond_3
     const/4 v2, 0x2
 
@@ -5959,16 +5402,13 @@
 
     if-ne v0, v2, :cond_2
 
-    .line 1213
     const/4 v13, 0x0
 
-    .line 1214
     .local v13, "newUri":Landroid/net/Uri;
     new-instance v15, Landroid/content/ContentValues;
 
     invoke-direct {v15}, Landroid/content/ContentValues;-><init>()V
 
-    .line 1215
     .local v15, "valuesFile":Landroid/content/ContentValues;
     const-string v2, "_data"
 
@@ -5976,7 +5416,6 @@
 
     invoke-virtual {v15, v2, v0}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 1217
     :try_start_1
     sget-object v2, Landroid/mtp/MTPJNIInterface;->mcontext:Landroid/content/Context;
 
@@ -5990,27 +5429,22 @@
 
     move-result-object v13
 
-    .line 1221
     :goto_3
     if-nez v13, :cond_4
 
-    .line 1222
     const-string v2, "MTPJNIInterface"
 
     const-string v4, "Insertion failure"
 
     invoke-static {v2, v4}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1223
     const/4 v2, -0x1
 
     goto/16 :goto_1
 
-    .line 1218
     :catch_1
     move-exception v12
 
-    .line 1219
     .restart local v12    # "e":Ljava/lang/Exception;
     const-string v2, "MTPJNIInterface"
 
@@ -6022,7 +5456,6 @@
 
     goto :goto_3
 
-    .line 1225
     .end local v12    # "e":Ljava/lang/Exception;
     :cond_4
     const-string v2, "MTPJNIInterface"
@@ -6051,21 +5484,19 @@
 
     invoke-static {v2, v4}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1227
     invoke-static {v13}, Landroid/content/ContentUris;->parseId(Landroid/net/Uri;)J
 
     move-result-wide v4
 
     long-to-int v14, v4
 
-    .line 1228
     const-string v2, "MTPJNIInterface"
 
     new-instance v4, Ljava/lang/StringBuilder;
 
     invoke-direct {v4}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v5, "objectHandle is "
+    const-string v5, "objectHandle is "
 
     invoke-virtual {v4, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -6091,18 +5522,14 @@
     .prologue
     const/4 v12, 0x0
 
-    .line 1399
-    const-string/jumbo v6, "media"
+    const-string v6, "media"
 
-    .line 1400
     .local v6, "AUTHORITY":Ljava/lang/String;
     const/4 v11, 0x0
 
-    .line 1401
     .local v11, "filePath":Ljava/lang/String;
     const/4 v9, 0x0
 
-    .line 1402
     .local v9, "cur":Landroid/database/Cursor;
     new-instance v0, Ljava/lang/StringBuilder;
 
@@ -6128,7 +5555,6 @@
 
     move-result-object v7
 
-    .line 1403
     .local v7, "CONTENT_AUTHORITY_SLASH":Ljava/lang/String;
     new-instance v0, Ljava/lang/StringBuilder;
 
@@ -6158,7 +5584,6 @@
 
     move-result-object v1
 
-    .line 1405
     .local v1, "FileUri":Landroid/net/Uri;
     :try_start_0
     sget-object v0, Landroid/mtp/MTPJNIInterface;->mcontext:Landroid/content/Context;
@@ -6203,11 +5628,9 @@
 
     move-result-object v9
 
-    .line 1409
     :goto_0
     if-nez v9, :cond_0
 
-    .line 1410
     const-string v0, "MTPJNIInterface"
 
     const-string v2, "Cur is null"
@@ -6216,15 +5639,12 @@
 
     move-object v0, v12
 
-    .line 1423
     :goto_1
     return-object v0
 
-    .line 1406
     :catch_0
     move-exception v10
 
-    .line 1407
     .local v10, "e":Ljava/lang/Exception;
     const-string v0, "MTPJNIInterface"
 
@@ -6236,25 +5656,22 @@
 
     goto :goto_0
 
-    .line 1413
     .end local v10    # "e":Ljava/lang/Exception;
     :cond_0
     invoke-interface {v9}, Landroid/database/Cursor;->getCount()I
 
     move-result v8
 
-    .line 1415
     .local v8, "count":I
     if-nez v8, :cond_1
 
-    .line 1416
     const-string v0, "MTPJNIInterface"
 
     new-instance v2, Ljava/lang/StringBuilder;
 
     invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v3, "objectHandle Count"
+    const-string v3, "objectHandle Count"
 
     invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -6270,20 +5687,16 @@
 
     invoke-static {v0, v2}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1422
     :goto_2
     invoke-interface {v9}, Landroid/database/Cursor;->close()V
 
     move-object v0, v11
 
-    .line 1423
     goto :goto_1
 
-    .line 1418
     :cond_1
     invoke-interface {v9}, Landroid/database/Cursor;->moveToFirst()Z
 
-    .line 1419
     const-string v0, "_data"
 
     invoke-interface {v9, v0}, Landroid/database/Cursor;->getColumnIndex(Ljava/lang/String;)I
@@ -6294,7 +5707,6 @@
 
     move-result-object v11
 
-    .line 1420
     const-string v0, "MTPJNIInterface"
 
     new-instance v2, Ljava/lang/StringBuilder;
@@ -6327,10 +5739,8 @@
     .prologue
     const/4 v2, 0x0
 
-    .line 847
     sget-object v1, Landroid/mtp/MTPJNIInterface$MusicPlaylist;->EXTERNAL_CONTENT_URI:Landroid/net/Uri;
 
-    .line 850
     .local v1, "playlistUri":Landroid/net/Uri;
     sget-object v0, Landroid/mtp/MTPJNIInterface;->mcontext:Landroid/content/Context;
 
@@ -6342,7 +5752,7 @@
 
     invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v4, "name=\""
+    const-string v4, "name=\""
 
     invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -6370,31 +5780,25 @@
 
     move-result-object v7
 
-    .line 851
     .local v7, "cur":Landroid/database/Cursor;
     if-nez v7, :cond_0
 
-    .line 852
     const-string v0, "MTPJNIInterface"
 
     const-string v2, "Cur is null"
 
     invoke-static {v0, v2}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 853
     const/4 v8, -0x1
 
-    .line 867
     :goto_0
     return v8
 
-    .line 855
     :cond_0
     invoke-interface {v7}, Landroid/database/Cursor;->getCount()I
 
     move-result v6
 
-    .line 856
     .local v6, "count":I
     const-string v0, "MTPJNIInterface"
 
@@ -6418,21 +5822,16 @@
 
     invoke-static {v0, v2}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 858
     const/4 v8, 0x0
 
-    .line 859
     .local v8, "rowID":I
     if-nez v6, :cond_1
 
-    .line 860
     const/4 v8, -0x1
 
-    .line 865
     :goto_1
     invoke-interface {v7}, Landroid/database/Cursor;->close()V
 
-    .line 866
     const-string v0, "MTPJNIInterface"
 
     new-instance v2, Ljava/lang/StringBuilder;
@@ -6457,11 +5856,9 @@
 
     goto :goto_0
 
-    .line 862
     :cond_1
     invoke-interface {v7}, Landroid/database/Cursor;->moveToFirst()Z
 
-    .line 863
     const-string v0, "_id"
 
     invoke-interface {v7, v0}, Landroid/database/Cursor;->getColumnIndex(Ljava/lang/String;)I
@@ -6481,10 +5878,8 @@
     .param p2, "type"    # I
 
     .prologue
-    .line 1083
     const/16 v16, 0x0
 
-    .line 1084
     .local v16, "thumbsize":I
     const/4 v2, 0x1
 
@@ -6492,7 +5887,6 @@
 
     if-ne v0, v2, :cond_5
 
-    .line 1085
     :try_start_0
     const-string v2, "MTPJNIInterface"
 
@@ -6518,21 +5912,17 @@
 
     invoke-static {v2, v4}, Landroid/mtp/MTPJNIInterface;->MTP_LOG_PRINT(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 1087
     invoke-direct/range {p0 .. p1}, Landroid/mtp/MTPJNIInterface;->getImageThumbBitmap(Ljava/lang/String;)Landroid/graphics/Bitmap;
 
     move-result-object v15
 
-    .line 1088
     .local v15, "thumb":Landroid/graphics/Bitmap;
     if-eqz v15, :cond_2
 
-    .line 1089
     new-instance v9, Ljava/io/ByteArrayOutputStream;
 
     invoke-direct {v9}, Ljava/io/ByteArrayOutputStream;-><init>()V
 
-    .line 1090
     .local v9, "bos":Ljava/io/ByteArrayOutputStream;
     sget-object v2, Landroid/graphics/Bitmap$CompressFormat;->JPEG:Landroid/graphics/Bitmap$CompressFormat;
 
@@ -6540,18 +5930,15 @@
 
     invoke-virtual {v15, v2, v4, v9}, Landroid/graphics/Bitmap;->compress(Landroid/graphics/Bitmap$CompressFormat;ILjava/io/OutputStream;)Z
 
-    .line 1091
     invoke-virtual {v9}, Ljava/io/ByteArrayOutputStream;->toByteArray()[B
 
     move-result-object v8
 
-    .line 1092
     .local v8, "bitmapdata":[B
     array-length v0, v8
 
     move/from16 v16, v0
 
-    .line 1096
     new-instance v13, Ljava/io/FileOutputStream;
 
     const-string v2, "/data/data/com.samsung.android.MtpApplication/test_thumb_img.jpg"
@@ -6561,23 +5948,19 @@
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_1
     .catch Ljava/lang/OutOfMemoryError; {:try_start_0 .. :try_end_0} :catch_2
 
-    .line 1098
     .local v13, "fos":Ljava/io/FileOutputStream;
     :try_start_1
     invoke-virtual {v13, v8}, Ljava/io/FileOutputStream;->write([B)V
 
-    .line 1099
     invoke-virtual {v13}, Ljava/io/FileOutputStream;->close()V
     :try_end_1
     .catch Ljava/lang/Exception; {:try_start_1 .. :try_end_1} :catch_0
     .catch Ljava/lang/OutOfMemoryError; {:try_start_1 .. :try_end_1} :catch_2
 
-    .line 1103
     :goto_0
     :try_start_2
     invoke-virtual {v15}, Landroid/graphics/Bitmap;->recycle()V
 
-    .line 1144
     .end local v8    # "bitmapdata":[B
     .end local v9    # "bos":Ljava/io/ByteArrayOutputStream;
     .end local v13    # "fos":Ljava/io/FileOutputStream;
@@ -6607,14 +5990,12 @@
 
     invoke-static {v2, v4}, Landroid/mtp/MTPJNIInterface;->MTP_LOG_PRINT(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 1178
     .end local v15    # "thumb":Landroid/graphics/Bitmap;
     .end local v16    # "thumbsize":I
     :cond_1
     :goto_2
     return v16
 
-    .line 1100
     .restart local v8    # "bitmapdata":[B
     .restart local v9    # "bos":Ljava/io/ByteArrayOutputStream;
     .restart local v13    # "fos":Ljava/io/FileOutputStream;
@@ -6623,7 +6004,6 @@
     :catch_0
     move-exception v12
 
-    .line 1101
     .local v12, "e":Ljava/lang/Exception;
     invoke-virtual {v13}, Ljava/io/FileOutputStream;->close()V
     :try_end_2
@@ -6632,7 +6012,6 @@
 
     goto :goto_0
 
-    .line 1174
     .end local v8    # "bitmapdata":[B
     .end local v9    # "bos":Ljava/io/ByteArrayOutputStream;
     .end local v12    # "e":Ljava/lang/Exception;
@@ -6641,16 +6020,13 @@
     :catch_1
     move-exception v12
 
-    .line 1175
     .restart local v12    # "e":Ljava/lang/Exception;
     invoke-virtual {v12}, Ljava/lang/Exception;->printStackTrace()V
 
-    .line 1176
     const/16 v16, 0x0
 
     goto :goto_2
 
-    .line 1105
     .end local v12    # "e":Ljava/lang/Exception;
     .restart local v15    # "thumb":Landroid/graphics/Bitmap;
     :cond_2
@@ -6679,10 +6055,8 @@
 
     invoke-static {v2, v4}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1106
     sget-object v3, Landroid/provider/MediaStore$Images$Media;->EXTERNAL_CONTENT_URI:Landroid/net/Uri;
 
-    .line 1107
     .local v3, "imageURI":Landroid/net/Uri;
     sget-object v2, Landroid/mtp/MTPJNIInterface;->mcontext:Landroid/content/Context;
 
@@ -6726,11 +6100,9 @@
 
     move-result-object v11
 
-    .line 1108
     .local v11, "cursor":Landroid/database/Cursor;
     if-nez v11, :cond_3
 
-    .line 1109
     const-string v2, "MTPJNIInterface"
 
     const-string v4, "Cur is null"
@@ -6739,20 +6111,17 @@
 
     goto :goto_2
 
-    .line 1177
     .end local v3    # "imageURI":Landroid/net/Uri;
     .end local v11    # "cursor":Landroid/database/Cursor;
     .end local v15    # "thumb":Landroid/graphics/Bitmap;
     :catch_2
     move-exception v12
 
-    .line 1178
     .local v12, "e":Ljava/lang/OutOfMemoryError;
     const/16 v16, 0x0
 
     goto :goto_2
 
-    .line 1112
     .end local v12    # "e":Ljava/lang/OutOfMemoryError;
     .restart local v3    # "imageURI":Landroid/net/Uri;
     .restart local v11    # "cursor":Landroid/database/Cursor;
@@ -6762,31 +6131,25 @@
 
     move-result v10
 
-    .line 1114
     .local v10, "count":I
     const/4 v14, 0x0
 
-    .line 1115
     .local v14, "imageID":I
     if-nez v10, :cond_4
 
-    .line 1116
     const-string v2, "MTPJNIInterface"
 
     const-string v4, "Count is zero"
 
     invoke-static {v2, v4}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1117
     invoke-interface {v11}, Landroid/database/Cursor;->close()V
 
     goto :goto_2
 
-    .line 1120
     :cond_4
     invoke-interface {v11}, Landroid/database/Cursor;->moveToFirst()Z
 
-    .line 1121
     const-string v2, "_id"
 
     invoke-interface {v11, v2}, Landroid/database/Cursor;->getColumnIndex(Ljava/lang/String;)I
@@ -6797,10 +6160,8 @@
 
     move-result v14
 
-    .line 1123
     invoke-interface {v11}, Landroid/database/Cursor;->close()V
 
-    .line 1124
     sget-object v2, Landroid/mtp/MTPJNIInterface;->mcontext:Landroid/content/Context;
 
     invoke-virtual {v2}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
@@ -6817,15 +6178,12 @@
 
     move-result-object v15
 
-    .line 1125
     if-eqz v15, :cond_0
 
-    .line 1126
     new-instance v9, Ljava/io/ByteArrayOutputStream;
 
     invoke-direct {v9}, Ljava/io/ByteArrayOutputStream;-><init>()V
 
-    .line 1127
     .restart local v9    # "bos":Ljava/io/ByteArrayOutputStream;
     sget-object v2, Landroid/graphics/Bitmap$CompressFormat;->JPEG:Landroid/graphics/Bitmap$CompressFormat;
 
@@ -6833,18 +6191,15 @@
 
     invoke-virtual {v15, v2, v4, v9}, Landroid/graphics/Bitmap;->compress(Landroid/graphics/Bitmap$CompressFormat;ILjava/io/OutputStream;)Z
 
-    .line 1128
     invoke-virtual {v9}, Ljava/io/ByteArrayOutputStream;->toByteArray()[B
 
     move-result-object v8
 
-    .line 1129
     .restart local v8    # "bitmapdata":[B
     array-length v0, v8
 
     move/from16 v16, v0
 
-    .line 1133
     new-instance v13, Ljava/io/FileOutputStream;
 
     const-string v2, "/data/data/com.samsung.android.MtpApplication/test_thumb_img.jpg"
@@ -6854,35 +6209,29 @@
     .catch Ljava/lang/Exception; {:try_start_3 .. :try_end_3} :catch_1
     .catch Ljava/lang/OutOfMemoryError; {:try_start_3 .. :try_end_3} :catch_2
 
-    .line 1135
     .restart local v13    # "fos":Ljava/io/FileOutputStream;
     :try_start_4
     invoke-virtual {v13, v8}, Ljava/io/FileOutputStream;->write([B)V
 
-    .line 1136
     invoke-virtual {v13}, Ljava/io/FileOutputStream;->close()V
     :try_end_4
     .catch Ljava/lang/Exception; {:try_start_4 .. :try_end_4} :catch_3
     .catch Ljava/lang/OutOfMemoryError; {:try_start_4 .. :try_end_4} :catch_2
 
-    .line 1140
     :goto_3
     :try_start_5
     invoke-virtual {v15}, Landroid/graphics/Bitmap;->recycle()V
 
     goto/16 :goto_1
 
-    .line 1137
     :catch_3
     move-exception v12
 
-    .line 1138
     .local v12, "e":Ljava/lang/Exception;
     invoke-virtual {v13}, Ljava/io/FileOutputStream;->close()V
 
     goto :goto_3
 
-    .line 1146
     .end local v3    # "imageURI":Landroid/net/Uri;
     .end local v8    # "bitmapdata":[B
     .end local v9    # "bos":Ljava/io/ByteArrayOutputStream;
@@ -6899,21 +6248,17 @@
 
     if-ne v0, v2, :cond_1
 
-    .line 1149
     invoke-direct/range {p0 .. p1}, Landroid/mtp/MTPJNIInterface;->getVideoThumbBitmap(Ljava/lang/String;)Landroid/graphics/Bitmap;
 
     move-result-object v15
 
-    .line 1150
     .restart local v15    # "thumb":Landroid/graphics/Bitmap;
     if-eqz v15, :cond_6
 
-    .line 1151
     new-instance v9, Ljava/io/ByteArrayOutputStream;
 
     invoke-direct {v9}, Ljava/io/ByteArrayOutputStream;-><init>()V
 
-    .line 1152
     .restart local v9    # "bos":Ljava/io/ByteArrayOutputStream;
     sget-object v2, Landroid/graphics/Bitmap$CompressFormat;->JPEG:Landroid/graphics/Bitmap$CompressFormat;
 
@@ -6921,18 +6266,15 @@
 
     invoke-virtual {v15, v2, v4, v9}, Landroid/graphics/Bitmap;->compress(Landroid/graphics/Bitmap$CompressFormat;ILjava/io/OutputStream;)Z
 
-    .line 1153
     invoke-virtual {v9}, Ljava/io/ByteArrayOutputStream;->toByteArray()[B
 
     move-result-object v8
 
-    .line 1156
     .restart local v8    # "bitmapdata":[B
     array-length v0, v8
 
     move/from16 v16, v0
 
-    .line 1157
     const-string v2, "MTPJNIInterface"
 
     new-instance v4, Ljava/lang/StringBuilder;
@@ -6957,7 +6299,6 @@
 
     invoke-static {v2, v4}, Landroid/mtp/MTPJNIInterface;->MTP_LOG_PRINT(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 1160
     new-instance v13, Ljava/io/FileOutputStream;
 
     const-string v2, "/data/data/com.samsung.android.MtpApplication/test_thumb_img.jpg"
@@ -6967,12 +6308,10 @@
     .catch Ljava/lang/Exception; {:try_start_5 .. :try_end_5} :catch_1
     .catch Ljava/lang/OutOfMemoryError; {:try_start_5 .. :try_end_5} :catch_2
 
-    .line 1162
     .restart local v13    # "fos":Ljava/io/FileOutputStream;
     :try_start_6
     invoke-virtual {v13, v8}, Ljava/io/FileOutputStream;->write([B)V
 
-    .line 1163
     invoke-virtual {v13}, Ljava/io/FileOutputStream;->close()V
     :try_end_6
     .catch Ljava/lang/Exception; {:try_start_6 .. :try_end_6} :catch_4
@@ -6980,18 +6319,15 @@
 
     goto/16 :goto_2
 
-    .line 1164
     :catch_4
     move-exception v12
 
-    .line 1165
     .restart local v12    # "e":Ljava/lang/Exception;
     :try_start_7
     invoke-virtual {v13}, Ljava/io/FileOutputStream;->close()V
 
     goto/16 :goto_2
 
-    .line 1169
     .end local v8    # "bitmapdata":[B
     .end local v9    # "bos":Ljava/io/ByteArrayOutputStream;
     .end local v12    # "e":Ljava/lang/Exception;
@@ -7014,7 +6350,6 @@
     .param p1, "temp"    # I
 
     .prologue
-    .line 351
     sget-object v0, Landroid/mtp/MTPJNIInterface;->mcontext:Landroid/content/Context;
 
     invoke-virtual {v0}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
@@ -7029,19 +6364,16 @@
 
     iput-object v0, p0, Landroid/mtp/MTPJNIInterface;->DeviceName:Ljava/lang/String;
 
-    .line 353
     iget-object v0, p0, Landroid/mtp/MTPJNIInterface;->DeviceName:Ljava/lang/String;
 
     if-nez v0, :cond_0
 
-    .line 354
     const-string v0, "MTPJNIInterface"
 
     const-string v1, "DeviceName is Null in System"
 
     invoke-static {v0, v1}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 355
     sget-object v0, Landroid/mtp/MTPJNIInterface;->mcontext:Landroid/content/Context;
 
     invoke-virtual {v0}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
@@ -7056,24 +6388,20 @@
 
     iput-object v0, p0, Landroid/mtp/MTPJNIInterface;->DeviceName:Ljava/lang/String;
 
-    .line 356
     iget-object v0, p0, Landroid/mtp/MTPJNIInterface;->DeviceName:Ljava/lang/String;
 
     if-nez v0, :cond_0
 
-    .line 357
     const-string v0, "MTPJNIInterface"
 
     const-string v1, "DeviceName is Null in Global"
 
     invoke-static {v0, v1}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 358
     const-string v0, "Default"
 
     iput-object v0, p0, Landroid/mtp/MTPJNIInterface;->DeviceName:Ljava/lang/String;
 
-    .line 361
     :cond_0
     const-string v0, "MTPJNIInterface"
 
@@ -7099,7 +6427,6 @@
 
     invoke-static {v0, v1}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 362
     iget-object v0, p0, Landroid/mtp/MTPJNIInterface;->DeviceName:Ljava/lang/String;
 
     return-object v0
@@ -7111,7 +6438,6 @@
     .param p2, "transactionId"    # I
 
     .prologue
-    .line 216
     const-string v0, "MTPJNIInterface"
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -7128,7 +6454,7 @@
 
     move-result-object v1
 
-    const-string/jumbo v2, "transactionId = "
+    const-string v2, "transactionId = "
 
     invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -7144,12 +6470,10 @@
 
     invoke-static {v0, v1}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 219
     const/4 v0, 0x2
 
     invoke-direct {p0, v0}, Landroid/mtp/MTPJNIInterface;->alertNotiHandler(I)V
 
-    .line 221
     return-void
 .end method
 
@@ -7160,10 +6484,8 @@
     .prologue
     const/4 v2, 0x0
 
-    .line 1234
     sget-object v1, Landroid/mtp/MTPJNIInterface$MusicPlaylist;->EXTERNAL_CONTENT_URI:Landroid/net/Uri;
 
-    .line 1235
     .local v1, "playlistUri":Landroid/net/Uri;
     sget-object v0, Landroid/mtp/MTPJNIInterface;->mcontext:Landroid/content/Context;
 
@@ -7175,7 +6497,7 @@
 
     invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v5, "name=\""
+    const-string v5, "name=\""
 
     invoke-virtual {v3, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -7203,54 +6525,43 @@
 
     move-result-object v11
 
-    .line 1236
     .local v11, "cur":Landroid/database/Cursor;
     if-nez v11, :cond_0
 
-    .line 1237
     const-string v0, "MTPJNIInterface"
 
     const-string v3, "Cur is null"
 
     invoke-static {v0, v3}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1263
     :goto_0
     return-object v2
 
-    .line 1240
     :cond_0
     invoke-interface {v11}, Landroid/database/Cursor;->getCount()I
 
     move-result v9
 
-    .line 1241
     .local v9, "count":I
     const/4 v12, 0x0
 
-    .line 1242
     .local v12, "noOfSongs":Ljava/lang/String;
     const/4 v10, 0x0
 
-    .line 1243
     .local v10, "count1":I
     const/4 v13, 0x0
 
-    .line 1244
     .local v13, "rowID":I
     if-nez v9, :cond_1
 
-    .line 1245
     invoke-interface {v11}, Landroid/database/Cursor;->close()V
 
-    .line 1246
     const-string v0, "MTPJNIInterface"
 
     const-string v3, "MTPJNIInterface , Playlist is not present in media DB"
 
     invoke-static {v0, v3}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1247
     const-string v0, "MTPJNIInterface"
 
     new-instance v3, Ljava/lang/StringBuilder;
@@ -7281,11 +6592,9 @@
 
     goto :goto_0
 
-    .line 1250
     :cond_1
     invoke-interface {v11}, Landroid/database/Cursor;->moveToFirst()Z
 
-    .line 1251
     const-string v0, "_id"
 
     invoke-interface {v11, v0}, Landroid/database/Cursor;->getColumnIndex(Ljava/lang/String;)I
@@ -7296,10 +6605,8 @@
 
     move-result v13
 
-    .line 1252
     invoke-interface {v11}, Landroid/database/Cursor;->close()V
 
-    .line 1254
     const-string v0, "external"
 
     int-to-long v6, v13
@@ -7308,7 +6615,6 @@
 
     move-result-object v4
 
-    .line 1255
     .local v4, "playlist_map":Landroid/net/Uri;
     sget-object v0, Landroid/mtp/MTPJNIInterface;->mcontext:Landroid/content/Context;
 
@@ -7320,7 +6626,7 @@
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v5, "playlist_id=\""
+    const-string v5, "playlist_id=\""
 
     invoke-virtual {v0, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -7350,18 +6656,14 @@
 
     move-result-object v11
 
-    .line 1256
     invoke-interface {v11}, Landroid/database/Cursor;->getCount()I
 
     move-result v10
 
-    .line 1257
     invoke-interface {v11}, Landroid/database/Cursor;->close()V
 
-    .line 1258
     if-eqz v10, :cond_2
 
-    .line 1259
     const-string v0, "MTPJNIInterface"
 
     new-instance v2, Ljava/lang/StringBuilder;
@@ -7384,7 +6686,6 @@
 
     invoke-static {v0, v2}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1260
     const-string v0, "MTPJNIInterface"
 
     new-instance v2, Ljava/lang/StringBuilder;
@@ -7417,7 +6718,6 @@
 
     invoke-static {v0, v2}, Landroid/mtp/MTPJNIInterface;->MTP_LOG_PRINT(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 1261
     invoke-static {v10}, Ljava/lang/Integer;->toString(I)Ljava/lang/String;
 
     move-result-object v12
@@ -7425,7 +6725,6 @@
     :cond_2
     move-object v2, v12
 
-    .line 1263
     goto/16 :goto_0
 .end method
 
@@ -7438,14 +6737,13 @@
 
     const/4 v3, 0x0
 
-    .line 332
     const-string v0, "MTPJNIInterface"
 
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v2, "noti = "
+    const-string v2, "noti = "
 
     invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -7461,52 +6759,42 @@
 
     invoke-static {v0, v1}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 333
     const/4 v0, 0x3
 
     if-ne v0, p1, :cond_1
 
-    .line 334
     sget-object v0, Landroid/mtp/MTPJNIInterface;->mcontext:Landroid/content/Context;
 
     if-eqz v0, :cond_1
 
-    .line 335
     sget-boolean v0, Landroid/mtp/MTPJNIInterface;->RegisterBroadcast:Z
 
     if-ne v0, v4, :cond_0
 
-    .line 336
     sget-object v0, Landroid/mtp/MTPJNIInterface;->mcontext:Landroid/content/Context;
 
     iget-object v1, p0, Landroid/mtp/MTPJNIInterface;->mMtpReceiver:Landroid/content/BroadcastReceiver;
 
     invoke-virtual {v0, v1}, Landroid/content/Context;->unregisterReceiver(Landroid/content/BroadcastReceiver;)V
 
-    .line 337
     sput-boolean v3, Landroid/mtp/MTPJNIInterface;->RegisterBroadcast:Z
 
-    .line 339
     :cond_0
     sget-boolean v0, Landroid/mtp/MTPJNIInterface;->RegisterBroadcast1:Z
 
     if-ne v0, v4, :cond_1
 
-    .line 340
     sget-object v0, Landroid/mtp/MTPJNIInterface;->mcontext:Landroid/content/Context;
 
     iget-object v1, p0, Landroid/mtp/MTPJNIInterface;->mMtpReceiver1:Landroid/content/BroadcastReceiver;
 
     invoke-virtual {v0, v1}, Landroid/content/Context;->unregisterReceiver(Landroid/content/BroadcastReceiver;)V
 
-    .line 341
     sput-boolean v3, Landroid/mtp/MTPJNIInterface;->RegisterBroadcast1:Z
 
-    .line 345
     :cond_1
     invoke-direct {p0, p1}, Landroid/mtp/MTPJNIInterface;->alertNotiHandler(I)V
 
-    .line 346
     return-void
 .end method
 
@@ -7517,18 +6805,14 @@
     .param p3, "playlistNewPath"    # Ljava/lang/String;
 
     .prologue
-    .line 1331
     const/4 v7, 0x0
 
-    .line 1332
     .local v7, "noOfRowsUpdated":I
     const-wide/16 v2, 0x0
 
-    .line 1333
     .local v2, "dateModified":J
     const/4 v5, 0x0
 
-    .line 1335
     .local v5, "file":Ljava/io/File;
     const-string v11, "MTPJNIInterface"
 
@@ -7536,7 +6820,7 @@
 
     invoke-direct {v12}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v13, "playlistOldName :"
+    const-string v13, "playlistOldName :"
 
     invoke-virtual {v12, v13}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -7554,14 +6838,13 @@
 
     invoke-static {v11, v12}, Landroid/mtp/MTPJNIInterface;->MTP_LOG_PRINT(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 1336
     const-string v11, "MTPJNIInterface"
 
     new-instance v12, Ljava/lang/StringBuilder;
 
     invoke-direct {v12}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v13, "playlistNewName: "
+    const-string v13, "playlistNewName: "
 
     invoke-virtual {v12, v13}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -7579,14 +6862,13 @@
 
     invoke-static {v11, v12}, Landroid/mtp/MTPJNIInterface;->MTP_LOG_PRINT(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 1337
     const-string v11, "MTPJNIInterface"
 
     new-instance v12, Ljava/lang/StringBuilder;
 
     invoke-direct {v12}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v13, "playlistNewPath: "
+    const-string v13, "playlistNewPath: "
 
     invoke-virtual {v12, v13}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -7604,7 +6886,6 @@
 
     invoke-static {v11, v12}, Landroid/mtp/MTPJNIInterface;->MTP_LOG_PRINT(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 1339
     new-instance v11, Ljava/lang/StringBuilder;
 
     invoke-direct {v11}, Ljava/lang/StringBuilder;-><init>()V
@@ -7645,7 +6926,6 @@
 
     move-result-object v8
 
-    .line 1342
     .local v8, "playlistPathWithoutPla":Ljava/lang/String;
     :try_start_0
     new-instance v6, Ljava/io/File;
@@ -7656,7 +6936,6 @@
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 1343
     .end local v5    # "file":Ljava/io/File;
     .local v6, "file":Ljava/io/File;
     :try_start_1
@@ -7672,7 +6951,6 @@
 
     move-object v5, v6
 
-    .line 1347
     .end local v6    # "file":Ljava/io/File;
     .restart local v5    # "file":Ljava/io/File;
     :goto_0
@@ -7698,29 +6976,24 @@
 
     invoke-static {v11, v12}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1349
     sget-object v9, Landroid/mtp/MTPJNIInterface$MusicPlaylist;->EXTERNAL_CONTENT_URI:Landroid/net/Uri;
 
-    .line 1351
     .local v9, "playlistUri":Landroid/net/Uri;
     new-instance v10, Landroid/content/ContentValues;
 
     invoke-direct {v10}, Landroid/content/ContentValues;-><init>()V
 
-    .line 1352
     .local v10, "values":Landroid/content/ContentValues;
-    const-string/jumbo v11, "name"
+    const-string v11, "name"
 
     move-object/from16 v0, p2
 
     invoke-virtual {v10, v11, v0}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 1353
     const-string v11, "_data"
 
     invoke-virtual {v10, v11, v8}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 1354
     const-string v11, "date_modified"
 
     invoke-static {v2, v3}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
@@ -7729,7 +7002,6 @@
 
     invoke-virtual {v10, v11, v12}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/Long;)V
 
-    .line 1355
     sget-object v11, Landroid/mtp/MTPJNIInterface;->mcontext:Landroid/content/Context;
 
     invoke-virtual {v11}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
@@ -7740,7 +7012,7 @@
 
     invoke-direct {v12}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v13, "name=\""
+    const-string v13, "name=\""
 
     invoke-virtual {v12, v13}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -7768,14 +7040,13 @@
 
     move-result v7
 
-    .line 1356
     const-string v11, "MTPJNIInterface"
 
     new-instance v12, Ljava/lang/StringBuilder;
 
     invoke-direct {v12}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v13, "noOfRowsUpdated = "
+    const-string v13, "noOfRowsUpdated = "
 
     invoke-virtual {v12, v13}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -7791,26 +7062,23 @@
 
     invoke-static {v11, v12}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1357
     const/4 v11, 0x1
 
     if-ne v7, v11, :cond_0
 
-    .line 1358
     const-string v11, "MTPJNIInterface"
 
     const-string v12, "Playlist Renamed"
 
     invoke-static {v11, v12}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1359
     const-string v11, "MTPJNIInterface"
 
     new-instance v12, Ljava/lang/StringBuilder;
 
     invoke-direct {v12}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v13, "playlist "
+    const-string v13, "playlist "
 
     invoke-virtual {v12, v13}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -7840,17 +7108,14 @@
 
     invoke-static {v11, v12}, Landroid/mtp/MTPJNIInterface;->MTP_LOG_PRINT(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 1364
     :goto_1
     return-void
 
-    .line 1344
     .end local v9    # "playlistUri":Landroid/net/Uri;
     .end local v10    # "values":Landroid/content/ContentValues;
     :catch_0
     move-exception v4
 
-    .line 1345
     .local v4, "e":Ljava/lang/Exception;
     :goto_2
     const-string v11, "MTPJNIInterface"
@@ -7861,7 +7126,6 @@
 
     goto/16 :goto_0
 
-    .line 1361
     .end local v4    # "e":Ljava/lang/Exception;
     .restart local v9    # "playlistUri":Landroid/net/Uri;
     .restart local v10    # "values":Landroid/content/ContentValues;
@@ -7874,7 +7138,6 @@
 
     goto :goto_1
 
-    .line 1344
     .end local v5    # "file":Ljava/io/File;
     .end local v9    # "playlistUri":Landroid/net/Uri;
     .end local v10    # "values":Landroid/content/ContentValues;
@@ -7894,7 +7157,6 @@
     .param p1, "path"    # Ljava/lang/String;
 
     .prologue
-    .line 372
     const-string v0, ".pla"
 
     invoke-virtual {p1, v0}, Ljava/lang/String;->endsWith(Ljava/lang/String;)Z
@@ -7903,10 +7165,8 @@
 
     if-nez v0, :cond_0
 
-    .line 373
     invoke-direct {p0, p1}, Landroid/mtp/MTPJNIInterface;->objectAdded(Ljava/lang/String;)V
 
-    .line 375
     :cond_0
     return-void
 .end method
@@ -7916,7 +7176,6 @@
     .param p1, "path"    # Ljava/lang/String;
 
     .prologue
-    .line 378
     const-string v0, ".pla"
 
     invoke-virtual {p1, v0}, Ljava/lang/String;->endsWith(Ljava/lang/String;)Z
@@ -7925,10 +7184,8 @@
 
     if-nez v0, :cond_0
 
-    .line 379
     invoke-direct {p0, p1}, Landroid/mtp/MTPJNIInterface;->objectPropChanged(Ljava/lang/String;)V
 
-    .line 381
     :cond_0
     return-void
 .end method
@@ -7938,7 +7195,6 @@
     .param p1, "path"    # Ljava/lang/String;
 
     .prologue
-    .line 384
     const-string v0, ".pla"
 
     invoke-virtual {p1, v0}, Ljava/lang/String;->endsWith(Ljava/lang/String;)Z
@@ -7947,10 +7203,8 @@
 
     if-nez v0, :cond_0
 
-    .line 385
     invoke-direct {p0, p1}, Landroid/mtp/MTPJNIInterface;->objectRemoved(Ljava/lang/String;)V
 
-    .line 387
     :cond_0
     return-void
 .end method
@@ -7960,14 +7214,12 @@
     .param p1, "playlist_path"    # Ljava/lang/String;
 
     .prologue
-    .line 405
     const-string v0, "MTPJNIInterface"
 
     const-string v1, "In sendPlaAdded playlist file path"
 
     invoke-static {v0, v1}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 406
     const-string v0, "MTPJNIInterface"
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -7990,10 +7242,8 @@
 
     invoke-static {v0, v1}, Landroid/mtp/MTPJNIInterface;->MTP_LOG_PRINT(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 407
     invoke-direct {p0, p1}, Landroid/mtp/MTPJNIInterface;->objectPlaAdded(Ljava/lang/String;)V
 
-    .line 408
     return-void
 .end method
 
@@ -8002,7 +7252,6 @@
     .param p1, "playlist_path"    # Ljava/lang/String;
 
     .prologue
-    .line 411
     const-string v1, ".pla"
 
     invoke-virtual {p1, v1}, Ljava/lang/String;->contains(Ljava/lang/CharSequence;)Z
@@ -8011,28 +7260,25 @@
 
     if-nez v1, :cond_0
 
-    .line 412
     const-string v1, ".pla"
 
     invoke-virtual {p1, v1}, Ljava/lang/String;->concat(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object p1
 
-    .line 413
     const-string v1, "MTPJNIInterface"
 
-    const-string/jumbo v2, "sendPlaRemoved is added .pla "
+    const-string v2, "sendPlaRemoved is added .pla "
 
     invoke-static {v1, v2}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 414
     const-string v1, "MTPJNIInterface"
 
     new-instance v2, Ljava/lang/StringBuilder;
 
     invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v3, "sendPlaRemoved is added .pla "
+    const-string v3, "sendPlaRemoved is added .pla "
 
     invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -8048,13 +7294,11 @@
 
     invoke-static {v1, v2}, Landroid/mtp/MTPJNIInterface;->MTP_LOG_PRINT(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 416
     :cond_0
     new-instance v0, Ljava/io/File;
 
     invoke-direct {v0, p1}, Ljava/io/File;-><init>(Ljava/lang/String;)V
 
-    .line 417
     .local v0, "f":Ljava/io/File;
     invoke-virtual {v0}, Ljava/io/File;->exists()Z
 
@@ -8062,25 +7306,21 @@
 
     if-eqz v1, :cond_1
 
-    .line 418
     const-string v1, "MTPJNIInterface"
 
     const-string v2, "calling objectPlaRemoved from sendPlaRemoved "
 
     invoke-static {v1, v2}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 419
     invoke-direct {p0, p1}, Landroid/mtp/MTPJNIInterface;->objectPlaRemoved(Ljava/lang/String;)V
 
-    .line 423
     :goto_0
     return-void
 
-    .line 421
     :cond_1
     const-string v1, "MTPJNIInterface"
 
-    const-string/jumbo v2, "playlist file does not exist"
+    const-string v2, "playlist file does not exist"
 
     invoke-static {v1, v2}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
@@ -8096,14 +7336,13 @@
     .prologue
     const/4 v11, 0x1
 
-    .line 1635
     const-string v8, "MTPJNIInterface"
 
     new-instance v9, Ljava/lang/StringBuilder;
 
     invoke-direct {v9}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v10, "sendkiesmessage: MsgId=>"
+    const-string v10, "sendkiesmessage: MsgId=>"
 
     invoke-virtual {v9, v10}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -8139,10 +7378,8 @@
 
     invoke-static {v8, v9}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1637
     packed-switch p1, :pswitch_data_0
 
-    .line 1686
     :pswitch_0
     new-instance v4, Landroid/content/Intent;
 
@@ -8150,41 +7387,33 @@
 
     invoke-direct {v4, v8}, Landroid/content/Intent;-><init>(Ljava/lang/String;)V
 
-    .line 1687
     .local v4, "intent":Landroid/content/Intent;
     const-string v8, "MsgId"
 
     invoke-virtual {v4, v8, p1}, Landroid/content/Intent;->putExtra(Ljava/lang/String;I)Landroid/content/Intent;
 
-    .line 1688
     const-string v8, "MsgVal"
 
     invoke-virtual {v4, v8, p2}, Landroid/content/Intent;->putExtra(Ljava/lang/String;I)Landroid/content/Intent;
 
-    .line 1689
     const-string v8, "MsgStr"
 
     invoke-virtual {v4, v8, p3}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;
 
-    .line 1690
     sget-object v8, Landroid/mtp/MTPJNIInterface;->mcontext:Landroid/content/Context;
 
     invoke-virtual {v8, v4}, Landroid/content/Context;->sendBroadcast(Landroid/content/Intent;)V
 
-    .line 1693
     .end local v4    # "intent":Landroid/content/Intent;
     :goto_0
     return v11
 
-    .line 1639
     :pswitch_1
     const-string v6, "/storage/emulated/0/DeviceLogFile"
 
-    .line 1640
     .local v6, "logPath":Ljava/lang/String;
     move v5, p2
 
-    .line 1641
     .local v5, "logLevel":I
     new-instance v7, Ljava/lang/Thread;
 
@@ -8194,62 +7423,51 @@
 
     invoke-direct {v7, v8}, Ljava/lang/Thread;-><init>(Ljava/lang/Runnable;)V
 
-    .line 1659
     .local v7, "thread":Ljava/lang/Thread;
     invoke-virtual {v7}, Ljava/lang/Thread;->start()V
 
     goto :goto_0
 
-    .line 1662
     .end local v5    # "logLevel":I
     .end local v6    # "logPath":Ljava/lang/String;
     .end local v7    # "thread":Ljava/lang/Thread;
     :pswitch_2
     const-string v8, "MTPJNIInterface"
 
-    const-string/jumbo v9, "send Broadcast MTP_MSGID_SIDESYNC_START"
+    const-string v9, "send Broadcast MTP_MSGID_SIDESYNC_START"
 
     invoke-static {v8, v9}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1664
     const-string v0, "http://apps.samsung.com/appquery/appDetail.as?appId="
 
-    .line 1665
     .local v0, "APP_STORE":Ljava/lang/String;
-    const-string/jumbo v1, "samsungapps://ProductDetail/"
+    const-string v1, "samsungapps://ProductDetail/"
 
-    .line 1666
     .local v1, "APP_STORE1":Ljava/lang/String;
     const-string v2, "com.sec.android.sidesync30"
 
-    .line 1668
     .local v2, "SIDESYNC_PACKAGENAME":Ljava/lang/String;
     if-nez p2, :cond_0
 
-    .line 1669
     const-string v8, "MTPJNIInterface"
 
     const-string v9, "Not Installed sidesync30, so start App Store."
 
     invoke-static {v8, v9}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1670
     new-instance v3, Landroid/content/Intent;
 
     invoke-direct {v3}, Landroid/content/Intent;-><init>()V
 
-    .line 1671
     .local v3, "activityIntent":Landroid/content/Intent;
     const/high16 v8, 0x10800000
 
     invoke-virtual {v3, v8}, Landroid/content/Intent;->setFlags(I)Landroid/content/Intent;
 
-    .line 1672
     const-string v8, "android.intent.action.VIEW"
 
     invoke-virtual {v3, v8}, Landroid/content/Intent;->setAction(Ljava/lang/String;)Landroid/content/Intent;
 
-    .line 1673
     const-string v8, "http://apps.samsung.com/appquery/appDetail.as?appId=com.sec.android.sidesync30"
 
     invoke-static {v8}, Landroid/net/Uri;->parse(Ljava/lang/String;)Landroid/net/Uri;
@@ -8258,26 +7476,22 @@
 
     invoke-virtual {v3, v8}, Landroid/content/Intent;->setData(Landroid/net/Uri;)Landroid/content/Intent;
 
-    .line 1674
     sget-object v8, Landroid/mtp/MTPJNIInterface;->mcontext:Landroid/content/Context;
 
     invoke-virtual {v8, v3}, Landroid/content/Context;->startActivity(Landroid/content/Intent;)V
 
     goto :goto_0
 
-    .line 1676
     .end local v3    # "activityIntent":Landroid/content/Intent;
     :cond_0
     if-ne p2, v11, :cond_1
 
-    .line 1677
     const-string v8, "MTPJNIInterface"
 
     const-string v9, "Installed sidesync30, so start sidesync."
 
     invoke-static {v8, v9}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1678
     sget-object v8, Landroid/mtp/MTPJNIInterface;->mcontext:Landroid/content/Context;
 
     new-instance v9, Landroid/content/Intent;
@@ -8290,7 +7504,6 @@
 
     goto :goto_0
 
-    .line 1681
     :cond_1
     const-string v8, "MTPJNIInterface"
 
@@ -8300,7 +7513,6 @@
 
     goto :goto_0
 
-    .line 1637
     :pswitch_data_0
     .packed-switch 0x5
         :pswitch_1
@@ -8314,10 +7526,8 @@
     .param p1, "context"    # Landroid/content/Context;
 
     .prologue
-    .line 166
     sput-object p1, Landroid/mtp/MTPJNIInterface;->mcontext:Landroid/content/Context;
 
-    .line 167
     sget-object v0, Landroid/mtp/MTPJNIInterface;->mcontext:Landroid/content/Context;
 
     invoke-virtual {v0}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
@@ -8326,24 +7536,19 @@
 
     sput-object v0, Landroid/mtp/MTPJNIInterface;->cr:Landroid/content/ContentResolver;
 
-    .line 168
     sget-boolean v0, Landroid/mtp/MTPJNIInterface;->RegisterBroadcast:Z
 
     if-nez v0, :cond_0
 
-    .line 169
     invoke-direct {p0}, Landroid/mtp/MTPJNIInterface;->registerBroadCastRec()V
 
-    .line 172
     :cond_0
     sget-boolean v0, Landroid/mtp/MTPJNIInterface;->RegisterBroadcast1:Z
 
     if-nez v0, :cond_1
 
-    .line 173
     invoke-direct {p0}, Landroid/mtp/MTPJNIInterface;->registerBroadCastRec1()V
 
-    .line 176
     :cond_1
     return-void
 .end method
@@ -8353,10 +7558,8 @@
     .param p1, "handler"    # Landroid/os/Handler;
 
     .prologue
-    .line 179
     sput-object p1, Landroid/mtp/MTPJNIInterface;->mHandler:Landroid/os/Handler;
 
-    .line 180
     return-void
 .end method
 
@@ -8365,14 +7568,13 @@
     .param p1, "status"    # I
 
     .prologue
-    .line 366
     const-string v0, "MTPJNIInterface"
 
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v2, "setting Media scanner status"
+    const-string v2, "setting Media scanner status"
 
     invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -8388,10 +7590,8 @@
 
     invoke-static {v0, v1}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 367
     sput p1, Landroid/mtp/MTPJNIInterface;->scannerStatus:I
 
-    .line 368
     const-string v0, "MTPJNIInterface"
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -8414,7 +7614,6 @@
 
     invoke-static {v0, v1}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 369
     return-void
 .end method
 
@@ -8425,10 +7624,8 @@
     .prologue
     const/4 v2, 0x0
 
-    .line 1268
     sget-object v1, Landroid/provider/MediaStore$Audio$Media;->EXTERNAL_CONTENT_URI:Landroid/net/Uri;
 
-    .line 1269
     .local v1, "audioUri":Landroid/net/Uri;
     sget-object v0, Landroid/mtp/MTPJNIInterface;->mcontext:Landroid/content/Context;
 
@@ -8468,43 +7665,34 @@
 
     move-result-object v7
 
-    .line 1270
     .local v7, "cur":Landroid/database/Cursor;
     if-nez v7, :cond_0
 
-    .line 1271
     const-string v0, "MTPJNIInterface"
 
     const-string v2, "Cur is null"
 
     invoke-static {v0, v2}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1272
     const/4 v0, -0x1
 
-    .line 1279
     :goto_0
     return v0
 
-    .line 1274
     :cond_0
     invoke-interface {v7}, Landroid/database/Cursor;->getCount()I
 
     move-result v6
 
-    .line 1275
     .local v6, "count":I
     invoke-interface {v7}, Landroid/database/Cursor;->close()V
 
-    .line 1276
     if-lez v6, :cond_1
 
-    .line 1277
     const/4 v0, 0x1
 
     goto :goto_0
 
-    .line 1279
     :cond_1
     const/4 v0, 0x0
 
@@ -8516,12 +7704,10 @@
     .param p1, "playlistname"    # Ljava/lang/String;
 
     .prologue
-    .line 1284
     invoke-virtual/range {p0 .. p1}, Landroid/mtp/MTPJNIInterface;->getPlaylistId(Ljava/lang/String;)I
 
     move-result v13
 
-    .line 1286
     .local v13, "rowID":I
     const-string v0, "external"
 
@@ -8531,7 +7717,6 @@
 
     move-result-object v1
 
-    .line 1287
     .local v1, "playlist_map":Landroid/net/Uri;
     sget-object v0, Landroid/mtp/MTPJNIInterface;->mcontext:Landroid/content/Context;
 
@@ -8553,7 +7738,7 @@
 
     invoke-direct {v4}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v5, "playlist_id=\""
+    const-string v5, "playlist_id=\""
 
     invoke-virtual {v4, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -8581,47 +7766,37 @@
 
     move-result-object v10
 
-    .line 1288
     .local v10, "cur":Landroid/database/Cursor;
     if-nez v10, :cond_0
 
-    .line 1289
     const-string v0, "MTPJNIInterface"
 
     const-string v2, "Cur is null"
 
     invoke-static {v0, v2}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1290
     const/4 v14, 0x0
 
-    .line 1327
     :goto_0
     return-object v14
 
-    .line 1292
     :cond_0
     const/4 v12, 0x0
 
-    .line 1293
     .local v12, "i":I
     invoke-interface {v10}, Landroid/database/Cursor;->getCount()I
 
     move-result v9
 
-    .line 1294
     .local v9, "count":I
     new-array v8, v9, [I
 
-    .line 1295
     .local v8, "audioId":[I
     invoke-interface {v10}, Landroid/database/Cursor;->moveToFirst()Z
 
-    .line 1296
     :goto_1
     if-ge v12, v9, :cond_1
 
-    .line 1298
     :try_start_0
     const-string v0, "audio_id"
 
@@ -8639,53 +7814,41 @@
 
     aput v0, v8, v12
 
-    .line 1299
     invoke-interface {v10}, Landroid/database/Cursor;->moveToNext()Z
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 1300
     add-int/lit8 v12, v12, 0x1
 
     goto :goto_1
 
-    .line 1302
     :catch_0
     move-exception v11
 
-    .line 1303
     .local v11, "e":Ljava/lang/Exception;
     invoke-virtual {v11}, Ljava/lang/Exception;->printStackTrace()V
 
-    .line 1304
     invoke-interface {v10}, Landroid/database/Cursor;->close()V
 
-    .line 1305
     const/4 v14, 0x0
 
     goto :goto_0
 
-    .line 1308
     .end local v11    # "e":Ljava/lang/Exception;
     :cond_1
     invoke-interface {v10}, Landroid/database/Cursor;->close()V
 
-    .line 1309
     sget-object v3, Landroid/provider/MediaStore$Audio$Media;->EXTERNAL_CONTENT_URI:Landroid/net/Uri;
 
-    .line 1310
     .local v3, "audioUri":Landroid/net/Uri;
     const/4 v12, 0x0
 
-    .line 1311
     const-string v14, ""
 
-    .line 1312
     .local v14, "songsPath":Ljava/lang/String;
     :goto_2
     if-ge v12, v9, :cond_3
 
-    .line 1313
     sget-object v0, Landroid/mtp/MTPJNIInterface;->mcontext:Landroid/content/Context;
 
     invoke-virtual {v0}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
@@ -8736,27 +7899,21 @@
 
     move-result-object v10
 
-    .line 1314
     if-nez v10, :cond_2
 
-    .line 1315
     const-string v0, "MTPJNIInterface"
 
     const-string v2, "Cur is null but continue since checking for audio index"
 
     invoke-static {v0, v2}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1316
     add-int/lit8 v12, v12, 0x1
 
-    .line 1317
     goto :goto_2
 
-    .line 1319
     :cond_2
     invoke-interface {v10}, Landroid/database/Cursor;->moveToFirst()Z
 
-    .line 1320
     const-string v0, "_data"
 
     invoke-interface {v10, v0}, Landroid/database/Cursor;->getColumnIndex(Ljava/lang/String;)I
@@ -8771,22 +7928,18 @@
 
     move-result-object v14
 
-    .line 1321
-    const-string/jumbo v0, "|"
+    const-string v0, "|"
 
     invoke-virtual {v14, v0}, Ljava/lang/String;->concat(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v14
 
-    .line 1322
     invoke-interface {v10}, Landroid/database/Cursor;->close()V
 
-    .line 1323
     add-int/lit8 v12, v12, 0x1
 
     goto :goto_2
 
-    .line 1325
     :cond_3
     const-string v0, "MTPJNIInterface"
 
@@ -8794,7 +7947,6 @@
 
     invoke-static {v0, v2}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1326
     const-string v0, "MTPJNIInterface"
 
     new-instance v2, Ljava/lang/StringBuilder;
@@ -8825,28 +7977,23 @@
     .param p1, "notificationType"    # I
 
     .prologue
-    .line 454
     sget-object v1, Landroid/mtp/MTPJNIInterface;->mHandler:Landroid/os/Handler;
 
     if-eqz v1, :cond_0
 
-    .line 455
     sget-object v1, Landroid/mtp/MTPJNIInterface;->mHandler:Landroid/os/Handler;
 
     invoke-virtual {v1}, Landroid/os/Handler;->obtainMessage()Landroid/os/Message;
 
     move-result-object v0
 
-    .line 456
     .local v0, "msg":Landroid/os/Message;
     iput p1, v0, Landroid/os/Message;->what:I
 
-    .line 457
     sget-object v1, Landroid/mtp/MTPJNIInterface;->mHandler:Landroid/os/Handler;
 
     invoke-virtual {v1, v0}, Landroid/os/Handler;->sendMessage(Landroid/os/Message;)Z
 
-    .line 459
     .end local v0    # "msg":Landroid/os/Message;
     :cond_0
     return-void

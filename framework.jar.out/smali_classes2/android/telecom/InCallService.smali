@@ -41,10 +41,8 @@
     .locals 2
 
     .prologue
-    .line 158
     invoke-direct {p0}, Landroid/app/Service;-><init>()V
 
-    .line 62
     new-instance v0, Landroid/telecom/InCallService$1;
 
     invoke-static {}, Landroid/os/Looper;->getMainLooper()Landroid/os/Looper;
@@ -55,7 +53,6 @@
 
     iput-object v0, p0, Landroid/telecom/InCallService;->mHandler:Landroid/os/Handler;
 
-    .line 159
     return-void
 .end method
 
@@ -64,7 +61,6 @@
     .param p0, "x0"    # Landroid/telecom/InCallService;
 
     .prologue
-    .line 43
     iget-object v0, p0, Landroid/telecom/InCallService;->mPhone:Landroid/telecom/Phone;
 
     return-object v0
@@ -76,7 +72,6 @@
     .param p1, "x1"    # Landroid/telecom/Phone;
 
     .prologue
-    .line 43
     iput-object p1, p0, Landroid/telecom/InCallService;->mPhone:Landroid/telecom/Phone;
 
     return-object p1
@@ -87,7 +82,6 @@
     .param p0, "x0"    # Landroid/telecom/InCallService;
 
     .prologue
-    .line 43
     iget-object v0, p0, Landroid/telecom/InCallService;->mHandler:Landroid/os/Handler;
 
     return-object v0
@@ -99,7 +93,6 @@
     .locals 1
 
     .prologue
-    .line 186
     iget-object v0, p0, Landroid/telecom/InCallService;->mPhone:Landroid/telecom/Phone;
 
     return-object v0
@@ -110,7 +103,6 @@
     .param p1, "intent"    # Landroid/content/Intent;
 
     .prologue
-    .line 163
     new-instance v0, Landroid/telecom/InCallService$InCallServiceBinder;
 
     const/4 v1, 0x0
@@ -125,7 +117,6 @@
     .param p1, "phone"    # Landroid/telecom/Phone;
 
     .prologue
-    .line 198
     return-void
 .end method
 
@@ -134,7 +125,6 @@
     .param p1, "phone"    # Landroid/telecom/Phone;
 
     .prologue
-    .line 209
     return-void
 .end method
 
@@ -143,27 +133,21 @@
     .param p1, "intent"    # Landroid/content/Intent;
 
     .prologue
-    .line 168
     iget-object v1, p0, Landroid/telecom/InCallService;->mPhone:Landroid/telecom/Phone;
 
     if-eqz v1, :cond_0
 
-    .line 169
     iget-object v0, p0, Landroid/telecom/InCallService;->mPhone:Landroid/telecom/Phone;
 
-    .line 170
     .local v0, "oldPhone":Landroid/telecom/Phone;
     const/4 v1, 0x0
 
     iput-object v1, p0, Landroid/telecom/InCallService;->mPhone:Landroid/telecom/Phone;
 
-    .line 172
     invoke-virtual {v0}, Landroid/telecom/Phone;->destroy()V
 
-    .line 173
     invoke-virtual {p0, v0}, Landroid/telecom/InCallService;->onPhoneDestroyed(Landroid/telecom/Phone;)V
 
-    .line 175
     .end local v0    # "oldPhone":Landroid/telecom/Phone;
     :cond_0
     const/4 v1, 0x0

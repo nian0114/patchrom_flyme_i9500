@@ -23,7 +23,6 @@
     .locals 0
 
     .prologue
-    .line 811
     iput-object p1, p0, Lcom/android/internal/telephony/uicc/UiccCard$UiccCardBroadcastReceiver;->this$0:Lcom/android/internal/telephony/uicc/UiccCard;
 
     invoke-direct {p0}, Landroid/content/BroadcastReceiver;-><init>()V
@@ -37,7 +36,6 @@
     .param p2, "x1"    # Lcom/android/internal/telephony/uicc/UiccCard$1;
 
     .prologue
-    .line 811
     invoke-direct {p0, p1}, Lcom/android/internal/telephony/uicc/UiccCard$UiccCardBroadcastReceiver;-><init>(Lcom/android/internal/telephony/uicc/UiccCard;)V
 
     return-void
@@ -55,12 +53,10 @@
 
     const/4 v4, 0x0
 
-    .line 814
     invoke-virtual {p2}, Landroid/content/Intent;->getAction()Ljava/lang/String;
 
     move-result-object v0
 
-    .line 815
     .local v0, "action":Ljava/lang/String;
     const-string v2, "com.samsung.intent.action.ICC_CARD_STATE_CHANGED"
 
@@ -70,14 +66,12 @@
 
     if-eqz v2, :cond_0
 
-    .line 816
     const-string v2, "status"
 
     invoke-virtual {p2, v2}, Landroid/content/Intent;->getStringExtra(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v1
 
-    .line 817
     .local v1, "iccStatus":Ljava/lang/String;
     const-string v2, "UiccCard"
 
@@ -85,7 +79,6 @@
 
     invoke-static {v2, v3}, Landroid/telephony/Rlog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 818
     const-string v2, "INSERTED"
 
     invoke-virtual {v2, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
@@ -103,38 +96,32 @@
 
     if-eqz v2, :cond_1
 
-    .line 819
     iget-object v2, p0, Lcom/android/internal/telephony/uicc/UiccCard$UiccCardBroadcastReceiver;->this$0:Lcom/android/internal/telephony/uicc/UiccCard;
 
     # setter for: Lcom/android/internal/telephony/uicc/UiccCard;->updateFlagInserted:Z
     invoke-static {v2, v4}, Lcom/android/internal/telephony/uicc/UiccCard;->access$802(Lcom/android/internal/telephony/uicc/UiccCard;Z)Z
 
-    .line 820
     iget-object v2, p0, Lcom/android/internal/telephony/uicc/UiccCard$UiccCardBroadcastReceiver;->this$0:Lcom/android/internal/telephony/uicc/UiccCard;
 
     # setter for: Lcom/android/internal/telephony/uicc/UiccCard;->updateFlagRemoved:Z
     invoke-static {v2, v5}, Lcom/android/internal/telephony/uicc/UiccCard;->access$902(Lcom/android/internal/telephony/uicc/UiccCard;Z)Z
 
-    .line 821
     const-string v2, "UiccCard"
 
     const-string v3, "Receive ICC_CARD_STATE_CHANGED INSERTED"
 
     invoke-static {v2, v3}, Landroid/telephony/Rlog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 822
     iget-object v2, p0, Lcom/android/internal/telephony/uicc/UiccCard$UiccCardBroadcastReceiver;->this$0:Lcom/android/internal/telephony/uicc/UiccCard;
 
     # invokes: Lcom/android/internal/telephony/uicc/UiccCard;->onIccSwap(Z)V
     invoke-static {v2, v5}, Lcom/android/internal/telephony/uicc/UiccCard;->access$600(Lcom/android/internal/telephony/uicc/UiccCard;Z)V
 
-    .line 830
     .end local v1    # "iccStatus":Ljava/lang/String;
     :cond_0
     :goto_0
     return-void
 
-    .line 823
     .restart local v1    # "iccStatus":Ljava/lang/String;
     :cond_1
     const-string v2, "REMOVED"
@@ -154,26 +141,22 @@
 
     if-eqz v2, :cond_0
 
-    .line 824
     iget-object v2, p0, Lcom/android/internal/telephony/uicc/UiccCard$UiccCardBroadcastReceiver;->this$0:Lcom/android/internal/telephony/uicc/UiccCard;
 
     # setter for: Lcom/android/internal/telephony/uicc/UiccCard;->updateFlagRemoved:Z
     invoke-static {v2, v4}, Lcom/android/internal/telephony/uicc/UiccCard;->access$902(Lcom/android/internal/telephony/uicc/UiccCard;Z)Z
 
-    .line 825
     iget-object v2, p0, Lcom/android/internal/telephony/uicc/UiccCard$UiccCardBroadcastReceiver;->this$0:Lcom/android/internal/telephony/uicc/UiccCard;
 
     # setter for: Lcom/android/internal/telephony/uicc/UiccCard;->updateFlagInserted:Z
     invoke-static {v2, v5}, Lcom/android/internal/telephony/uicc/UiccCard;->access$802(Lcom/android/internal/telephony/uicc/UiccCard;Z)Z
 
-    .line 826
     const-string v2, "UiccCard"
 
     const-string v3, "Receive ICC_CARD_STATE_CHANGED REMOVED"
 
     invoke-static {v2, v3}, Landroid/telephony/Rlog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 827
     iget-object v2, p0, Lcom/android/internal/telephony/uicc/UiccCard$UiccCardBroadcastReceiver;->this$0:Lcom/android/internal/telephony/uicc/UiccCard;
 
     # invokes: Lcom/android/internal/telephony/uicc/UiccCard;->onIccSwap(Z)V

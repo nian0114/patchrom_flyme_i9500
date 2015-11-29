@@ -23,7 +23,6 @@
     .locals 0
 
     .prologue
-    .line 467
     iput-object p1, p0, Landroid/media/MediaFocusControl$1;->this$0:Landroid/media/MediaFocusControl;
 
     invoke-direct {p0}, Landroid/telephony/PhoneStateListener;-><init>()V
@@ -41,10 +40,8 @@
     .prologue
     const/4 v0, 0x1
 
-    .line 470
     if-ne p1, v0, :cond_1
 
-    .line 472
     # getter for: Landroid/media/MediaFocusControl;->mRingingLock:Ljava/lang/Object;
     invoke-static {}, Landroid/media/MediaFocusControl;->access$2000()Ljava/lang/Object;
 
@@ -52,7 +49,6 @@
 
     monitor-enter v1
 
-    .line 473
     :try_start_0
     iget-object v0, p0, Landroid/media/MediaFocusControl$1;->this$0:Landroid/media/MediaFocusControl;
 
@@ -61,15 +57,12 @@
     # setter for: Landroid/media/MediaFocusControl;->mIsRinging:Z
     invoke-static {v0, v2}, Landroid/media/MediaFocusControl;->access$2102(Landroid/media/MediaFocusControl;Z)Z
 
-    .line 474
     monitor-exit v1
 
-    .line 481
     :cond_0
     :goto_0
     return-void
 
-    .line 474
     :catchall_0
     move-exception v0
 
@@ -79,7 +72,6 @@
 
     throw v0
 
-    .line 475
     :cond_1
     const/4 v0, 0x2
 
@@ -87,7 +79,6 @@
 
     if-nez p1, :cond_0
 
-    .line 477
     :cond_2
     # getter for: Landroid/media/MediaFocusControl;->mRingingLock:Ljava/lang/Object;
     invoke-static {}, Landroid/media/MediaFocusControl;->access$2000()Ljava/lang/Object;
@@ -96,7 +87,6 @@
 
     monitor-enter v1
 
-    .line 478
     :try_start_1
     iget-object v0, p0, Landroid/media/MediaFocusControl$1;->this$0:Landroid/media/MediaFocusControl;
 
@@ -105,7 +95,6 @@
     # setter for: Landroid/media/MediaFocusControl;->mIsRinging:Z
     invoke-static {v0, v2}, Landroid/media/MediaFocusControl;->access$2102(Landroid/media/MediaFocusControl;Z)Z
 
-    .line 479
     monitor-exit v1
 
     goto :goto_0
@@ -125,7 +114,6 @@
     .param p1, "serviceState"    # Landroid/telephony/ServiceState;
 
     .prologue
-    .line 485
     if-eqz p1, :cond_0
 
     invoke-virtual {p1}, Landroid/telephony/ServiceState;->getState()I
@@ -136,33 +124,28 @@
 
     if-ne v0, v1, :cond_0
 
-    .line 486
     const-string v0, "MediaFocusControl"
 
     const-string v1, "##################################################"
 
     invoke-static {v0, v1}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 487
     const-string v0, "MediaFocusControl"
 
     const-string v1, "### RIL State is changed"
 
     invoke-static {v0, v1}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 488
     const-string v0, "MediaFocusControl"
 
     const-string v1, "##################################################"
 
     invoke-static {v0, v1}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 489
-    const-string/jumbo v0, "ril_state_connected=1"
+    const-string v0, "ril_state_connected=1"
 
     invoke-static {v0}, Landroid/media/AudioSystem;->setParameters(Ljava/lang/String;)I
 
-    .line 491
     :cond_0
     return-void
 .end method

@@ -223,12 +223,10 @@
     .locals 1
 
     .prologue
-    .line 629
     const v0, 0x2208f
 
     sput v0, Landroid/hardware/display/DisplayManager;->POPUP_CAUSE_SCANNING_BYNFC:I
 
-    .line 636
     const v0, 0x22090
 
     sput v0, Landroid/hardware/display/DisplayManager;->POPUP_CAUSE_OXYGEN_NETWORK_ENABLED:I
@@ -241,48 +239,40 @@
     .param p1, "context"    # Landroid/content/Context;
 
     .prologue
-    .line 728
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 57
     new-instance v0, Ljava/lang/Object;
 
     invoke-direct {v0}, Ljava/lang/Object;-><init>()V
 
     iput-object v0, p0, Landroid/hardware/display/DisplayManager;->mLock:Ljava/lang/Object;
 
-    .line 58
     new-instance v0, Landroid/util/SparseArray;
 
     invoke-direct {v0}, Landroid/util/SparseArray;-><init>()V
 
     iput-object v0, p0, Landroid/hardware/display/DisplayManager;->mDisplays:Landroid/util/SparseArray;
 
-    .line 60
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
     iput-object v0, p0, Landroid/hardware/display/DisplayManager;->mTempDisplays:Ljava/util/ArrayList;
 
-    .line 729
     iput-object p1, p0, Landroid/hardware/display/DisplayManager;->mContext:Landroid/content/Context;
 
-    .line 730
     invoke-static {}, Landroid/hardware/display/DisplayManagerGlobal;->getInstance()Landroid/hardware/display/DisplayManagerGlobal;
 
     move-result-object v0
 
     iput-object v0, p0, Landroid/hardware/display/DisplayManager;->mGlobal:Landroid/hardware/display/DisplayManagerGlobal;
 
-    .line 733
     new-instance v0, Landroid/hardware/display/SecWifiDisplayUtil;
 
     invoke-direct {v0, p1}, Landroid/hardware/display/SecWifiDisplayUtil;-><init>(Landroid/content/Context;)V
 
     iput-object v0, p0, Landroid/hardware/display/DisplayManager;->mWifiDisplayUtil:Landroid/hardware/display/SecWifiDisplayUtil;
 
-    .line 735
     return-void
 .end method
 
@@ -300,7 +290,6 @@
     .end annotation
 
     .prologue
-    .line 797
     .local p1, "displays":Ljava/util/ArrayList;, "Ljava/util/ArrayList<Landroid/view/Display;>;"
     const/4 v1, 0x0
 
@@ -310,7 +299,6 @@
 
     if-ge v1, v2, :cond_1
 
-    .line 798
     aget v2, p2, v1
 
     const/4 v3, 0x1
@@ -319,20 +307,16 @@
 
     move-result-object v0
 
-    .line 799
     .local v0, "display":Landroid/view/Display;
     if-eqz v0, :cond_0
 
-    .line 800
     invoke-virtual {p1, v0}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 797
     :cond_0
     add-int/lit8 v1, v1, 0x1
 
     goto :goto_0
 
-    .line 803
     .end local v0    # "display":Landroid/view/Display;
     :cond_1
     return-void
@@ -353,7 +337,6 @@
     .end annotation
 
     .prologue
-    .line 807
     .local p1, "displays":Ljava/util/ArrayList;, "Ljava/util/ArrayList<Landroid/view/Display;>;"
     const/4 v1, 0x0
 
@@ -363,7 +346,6 @@
 
     if-ge v1, v2, :cond_1
 
-    .line 808
     aget v2, p2, v1
 
     const/4 v3, 0x1
@@ -372,7 +354,6 @@
 
     move-result-object v0
 
-    .line 809
     .local v0, "display":Landroid/view/Display;
     if-eqz v0, :cond_0
 
@@ -390,16 +371,13 @@
 
     if-ne v2, p3, :cond_0
 
-    .line 812
     invoke-virtual {p1, v0}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 807
     :cond_0
     add-int/lit8 v1, v1, 0x1
 
     goto :goto_0
 
-    .line 815
     .end local v0    # "display":Landroid/view/Display;
     :cond_1
     return-void
@@ -411,7 +389,6 @@
     .param p2, "assumeValid"    # Z
 
     .prologue
-    .line 818
     iget-object v1, p0, Landroid/hardware/display/DisplayManager;->mDisplays:Landroid/util/SparseArray;
 
     invoke-virtual {v1, p1}, Landroid/util/SparseArray;->get(I)Ljava/lang/Object;
@@ -420,11 +397,9 @@
 
     check-cast v0, Landroid/view/Display;
 
-    .line 819
     .local v0, "display":Landroid/view/Display;
     if-nez v0, :cond_1
 
-    .line 820
     iget-object v1, p0, Landroid/hardware/display/DisplayManager;->mGlobal:Landroid/hardware/display/DisplayManagerGlobal;
 
     iget-object v2, p0, Landroid/hardware/display/DisplayManager;->mContext:Landroid/content/Context;
@@ -437,20 +412,16 @@
 
     move-result-object v0
 
-    .line 822
     if-eqz v0, :cond_0
 
-    .line 823
     iget-object v1, p0, Landroid/hardware/display/DisplayManager;->mDisplays:Landroid/util/SparseArray;
 
     invoke-virtual {v1, p1, v0}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    .line 828
     :cond_0
     :goto_0
     return-object v0
 
-    .line 825
     :cond_1
     if-nez p2, :cond_0
 
@@ -460,7 +431,6 @@
 
     if-nez v1, :cond_0
 
-    .line 826
     const/4 v0, 0x0
 
     goto :goto_0
@@ -472,26 +442,22 @@
     .locals 2
 
     .prologue
-    .line 1407
     iget-object v0, p0, Landroid/hardware/display/DisplayManager;->mWifiDisplayUtil:Landroid/hardware/display/SecWifiDisplayUtil;
 
     if-eqz v0, :cond_0
 
-    .line 1408
     const-string v0, "DisplayManager"
 
     const-string v1, "checkExceptionalCase"
 
     invoke-static {v0, v1}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1409
     iget-object v0, p0, Landroid/hardware/display/DisplayManager;->mWifiDisplayUtil:Landroid/hardware/display/SecWifiDisplayUtil;
 
     invoke-virtual {v0}, Landroid/hardware/display/SecWifiDisplayUtil;->checkExceptionalCase()I
 
     move-result v0
 
-    .line 1411
     :goto_0
     return v0
 
@@ -506,12 +472,10 @@
     .param p1, "deviceAddress"    # Ljava/lang/String;
 
     .prologue
-    .line 937
     iget-object v0, p0, Landroid/hardware/display/DisplayManager;->mGlobal:Landroid/hardware/display/DisplayManagerGlobal;
 
     invoke-virtual {v0, p1}, Landroid/hardware/display/DisplayManagerGlobal;->connectWifiDisplay(Ljava/lang/String;)V
 
-    .line 938
     return-void
 .end method
 
@@ -521,12 +485,10 @@
     .param p2, "deviceAddress"    # Ljava/lang/String;
 
     .prologue
-    .line 1139
     iget-object v0, p0, Landroid/hardware/display/DisplayManager;->mGlobal:Landroid/hardware/display/DisplayManagerGlobal;
 
     invoke-virtual {v0, p1, p2}, Landroid/hardware/display/DisplayManagerGlobal;->connectWifiDisplayWithMode(ILjava/lang/String;)V
 
-    .line 1141
     return-void
 .end method
 
@@ -535,12 +497,10 @@
     .param p1, "deviceAddress"    # Ljava/lang/String;
 
     .prologue
-    .line 1124
     iget-object v0, p0, Landroid/hardware/display/DisplayManager;->mGlobal:Landroid/hardware/display/DisplayManagerGlobal;
 
     invoke-virtual {v0, p1}, Landroid/hardware/display/DisplayManagerGlobal;->connectWifiDisplayWithPin(Ljava/lang/String;)V
 
-    .line 1126
     return-void
 .end method
 
@@ -557,7 +517,6 @@
     .param p9, "handler"    # Landroid/os/Handler;
 
     .prologue
-    .line 1074
     iget-object v0, p0, Landroid/hardware/display/DisplayManager;->mGlobal:Landroid/hardware/display/DisplayManagerGlobal;
 
     iget-object v1, p0, Landroid/hardware/display/DisplayManager;->mContext:Landroid/content/Context;
@@ -599,7 +558,6 @@
     .prologue
     const/4 v7, 0x0
 
-    .line 1017
     move-object v0, p0
 
     move-object v1, p1
@@ -635,7 +593,6 @@
     .param p8, "handler"    # Landroid/os/Handler;
 
     .prologue
-    .line 1066
     const/4 v1, 0x0
 
     move-object v0, p0
@@ -667,7 +624,6 @@
     .locals 3
 
     .prologue
-    .line 1216
     const-string v0, "DisplayManager"
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -698,12 +654,10 @@
 
     invoke-static {v0, v1}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1217
     iget-object v0, p0, Landroid/hardware/display/DisplayManager;->mGlobal:Landroid/hardware/display/DisplayManagerGlobal;
 
     invoke-virtual {v0}, Landroid/hardware/display/DisplayManagerGlobal;->disableWifiDisplay()V
 
-    .line 1219
     return-void
 .end method
 
@@ -711,7 +665,6 @@
     .locals 2
 
     .prologue
-    .line 958
     const-string v0, "DisplayManager"
 
     new-instance v1, Ljava/lang/Throwable;
@@ -724,12 +677,10 @@
 
     invoke-static {v0, v1}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 960
     iget-object v0, p0, Landroid/hardware/display/DisplayManager;->mGlobal:Landroid/hardware/display/DisplayManagerGlobal;
 
     invoke-virtual {v0}, Landroid/hardware/display/DisplayManagerGlobal;->disconnectWifiDisplay()V
 
-    .line 961
     return-void
 .end method
 
@@ -739,12 +690,10 @@
     .param p2, "deviceType"    # I
 
     .prologue
-    .line 1180
     iget-object v0, p0, Landroid/hardware/display/DisplayManager;->mGlobal:Landroid/hardware/display/DisplayManagerGlobal;
 
     invoke-virtual {v0, p1, p2}, Landroid/hardware/display/DisplayManagerGlobal;->enableWifiDisplay(Landroid/net/wifi/p2p/WifiP2pDevice;I)V
 
-    .line 1182
     return-void
 .end method
 
@@ -756,12 +705,10 @@
     .param p4, "options"    # Ljava/lang/String;
 
     .prologue
-    .line 1199
     iget-object v0, p0, Landroid/hardware/display/DisplayManager;->mGlobal:Landroid/hardware/display/DisplayManagerGlobal;
 
     invoke-virtual {v0, p1, p2, p3, p4}, Landroid/hardware/display/DisplayManagerGlobal;->enableWfdServiceWifiDisplay(Ljava/lang/String;Ljava/lang/String;ILjava/lang/String;)V
 
-    .line 1201
     return-void
 .end method
 
@@ -770,12 +717,10 @@
     .param p1, "deviceAddress"    # Ljava/lang/String;
 
     .prologue
-    .line 994
     iget-object v0, p0, Landroid/hardware/display/DisplayManager;->mGlobal:Landroid/hardware/display/DisplayManagerGlobal;
 
     invoke-virtual {v0, p1}, Landroid/hardware/display/DisplayManagerGlobal;->forgetWifiDisplay(Ljava/lang/String;)V
 
-    .line 995
     return-void
 .end method
 
@@ -784,12 +729,10 @@
     .param p1, "displayId"    # I
 
     .prologue
-    .line 747
     iget-object v1, p0, Landroid/hardware/display/DisplayManager;->mLock:Ljava/lang/Object;
 
     monitor-enter v1
 
-    .line 748
     const/4 v0, 0x0
 
     :try_start_0
@@ -801,7 +744,6 @@
 
     return-object v0
 
-    .line 749
     :catchall_0
     move-exception v0
 
@@ -816,7 +758,6 @@
     .locals 1
 
     .prologue
-    .line 758
     const/4 v0, 0x0
 
     invoke-virtual {p0, v0}, Landroid/hardware/display/DisplayManager;->getDisplays(Ljava/lang/String;)[Landroid/view/Display;
@@ -831,29 +772,24 @@
     .param p1, "category"    # Ljava/lang/String;
 
     .prologue
-    .line 778
     iget-object v1, p0, Landroid/hardware/display/DisplayManager;->mGlobal:Landroid/hardware/display/DisplayManagerGlobal;
 
     invoke-virtual {v1}, Landroid/hardware/display/DisplayManagerGlobal;->getDisplayIds()[I
 
     move-result-object v0
 
-    .line 779
     .local v0, "displayIds":[I
     iget-object v2, p0, Landroid/hardware/display/DisplayManager;->mLock:Ljava/lang/Object;
 
     monitor-enter v2
 
-    .line 781
     if-nez p1, :cond_1
 
-    .line 782
     :try_start_0
     iget-object v1, p0, Landroid/hardware/display/DisplayManager;->mTempDisplays:Ljava/util/ArrayList;
 
     invoke-direct {p0, v1, v0}, Landroid/hardware/display/DisplayManager;->addAllDisplaysLocked(Ljava/util/ArrayList;[I)V
 
-    .line 789
     :cond_0
     :goto_0
     iget-object v1, p0, Landroid/hardware/display/DisplayManager;->mTempDisplays:Ljava/util/ArrayList;
@@ -874,7 +810,6 @@
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 791
     :try_start_1
     iget-object v3, p0, Landroid/hardware/display/DisplayManager;->mTempDisplays:Ljava/util/ArrayList;
 
@@ -886,7 +821,6 @@
 
     return-object v1
 
-    .line 783
     :cond_1
     :try_start_2
     const-string v1, "android.hardware.display.category.PRESENTATION"
@@ -897,28 +831,24 @@
 
     if-eqz v1, :cond_0
 
-    .line 784
     iget-object v1, p0, Landroid/hardware/display/DisplayManager;->mTempDisplays:Ljava/util/ArrayList;
 
     const/4 v3, 0x3
 
     invoke-direct {p0, v1, v0, v3}, Landroid/hardware/display/DisplayManager;->addPresentationDisplaysLocked(Ljava/util/ArrayList;[II)V
 
-    .line 785
     iget-object v1, p0, Landroid/hardware/display/DisplayManager;->mTempDisplays:Ljava/util/ArrayList;
 
     const/4 v3, 0x2
 
     invoke-direct {p0, v1, v0, v3}, Landroid/hardware/display/DisplayManager;->addPresentationDisplaysLocked(Ljava/util/ArrayList;[II)V
 
-    .line 786
     iget-object v1, p0, Landroid/hardware/display/DisplayManager;->mTempDisplays:Ljava/util/ArrayList;
 
     const/4 v3, 0x4
 
     invoke-direct {p0, v1, v0, v3}, Landroid/hardware/display/DisplayManager;->addPresentationDisplaysLocked(Ljava/util/ArrayList;[II)V
 
-    .line 787
     iget-object v1, p0, Landroid/hardware/display/DisplayManager;->mTempDisplays:Ljava/util/ArrayList;
 
     const/4 v3, 0x5
@@ -929,7 +859,6 @@
 
     goto :goto_0
 
-    .line 791
     :catchall_0
     move-exception v1
 
@@ -940,7 +869,6 @@
 
     throw v1
 
-    .line 793
     :catchall_1
     move-exception v1
 
@@ -956,7 +884,6 @@
     .param p1, "cancel"    # Z
 
     .prologue
-    .line 1437
     iget-object v0, p0, Landroid/hardware/display/DisplayManager;->mGlobal:Landroid/hardware/display/DisplayManagerGlobal;
 
     invoke-virtual {v0, p1}, Landroid/hardware/display/DisplayManagerGlobal;->getLastConnectedDisplay(Z)Landroid/hardware/display/WifiDisplay;
@@ -970,7 +897,6 @@
     .locals 1
 
     .prologue
-    .line 1266
     iget-object v0, p0, Landroid/hardware/display/DisplayManager;->mGlobal:Landroid/hardware/display/DisplayManagerGlobal;
 
     invoke-virtual {v0}, Landroid/hardware/display/DisplayManagerGlobal;->getWifiDisplayBridgeStatus()I
@@ -984,7 +910,6 @@
     .locals 1
 
     .prologue
-    .line 1007
     iget-object v0, p0, Landroid/hardware/display/DisplayManager;->mGlobal:Landroid/hardware/display/DisplayManagerGlobal;
 
     invoke-virtual {v0}, Landroid/hardware/display/DisplayManagerGlobal;->getWifiDisplayStatus()Landroid/hardware/display/WifiDisplayStatus;
@@ -999,7 +924,6 @@
     .param p1, "address"    # Ljava/lang/String;
 
     .prologue
-    .line 1349
     iget-object v0, p0, Landroid/hardware/display/DisplayManager;->mGlobal:Landroid/hardware/display/DisplayManagerGlobal;
 
     invoke-virtual {v0, p1}, Landroid/hardware/display/DisplayManagerGlobal;->isConnWithPinSupported(Ljava/lang/String;)Z
@@ -1013,7 +937,6 @@
     .locals 1
 
     .prologue
-    .line 1363
     iget-object v0, p0, Landroid/hardware/display/DisplayManager;->mGlobal:Landroid/hardware/display/DisplayManagerGlobal;
 
     invoke-virtual {v0}, Landroid/hardware/display/DisplayManagerGlobal;->isDongleRenameAvailable()Z
@@ -1027,7 +950,6 @@
     .locals 1
 
     .prologue
-    .line 1323
     iget-object v0, p0, Landroid/hardware/display/DisplayManager;->mGlobal:Landroid/hardware/display/DisplayManagerGlobal;
 
     invoke-virtual {v0}, Landroid/hardware/display/DisplayManagerGlobal;->isSinkAvailable()Z
@@ -1041,7 +963,6 @@
     .locals 1
 
     .prologue
-    .line 1338
     iget-object v0, p0, Landroid/hardware/display/DisplayManager;->mGlobal:Landroid/hardware/display/DisplayManagerGlobal;
 
     invoke-virtual {v0}, Landroid/hardware/display/DisplayManagerGlobal;->isSourceAvailable()Z
@@ -1055,7 +976,6 @@
     .locals 1
 
     .prologue
-    .line 1282
     iget-object v0, p0, Landroid/hardware/display/DisplayManager;->mGlobal:Landroid/hardware/display/DisplayManagerGlobal;
 
     invoke-virtual {v0}, Landroid/hardware/display/DisplayManagerGlobal;->isWfdEngineRunning()Z
@@ -1069,7 +989,6 @@
     .locals 1
 
     .prologue
-    .line 1251
     iget-object v0, p0, Landroid/hardware/display/DisplayManager;->mGlobal:Landroid/hardware/display/DisplayManagerGlobal;
 
     invoke-virtual {v0}, Landroid/hardware/display/DisplayManagerGlobal;->isWifiDisplayBridgeAvailable()Z
@@ -1083,12 +1002,10 @@
     .locals 1
 
     .prologue
-    .line 1296
     iget-object v0, p0, Landroid/hardware/display/DisplayManager;->mGlobal:Landroid/hardware/display/DisplayManagerGlobal;
 
     invoke-virtual {v0}, Landroid/hardware/display/DisplayManagerGlobal;->notifyEnterHomeSyncApp()V
 
-    .line 1298
     return-void
 .end method
 
@@ -1096,12 +1013,10 @@
     .locals 1
 
     .prologue
-    .line 1309
     iget-object v0, p0, Landroid/hardware/display/DisplayManager;->mGlobal:Landroid/hardware/display/DisplayManagerGlobal;
 
     invoke-virtual {v0}, Landroid/hardware/display/DisplayManagerGlobal;->notifyExitHomeSyncApp()V
 
-    .line 1311
     return-void
 .end method
 
@@ -1109,12 +1024,10 @@
     .locals 1
 
     .prologue
-    .line 942
     iget-object v0, p0, Landroid/hardware/display/DisplayManager;->mGlobal:Landroid/hardware/display/DisplayManagerGlobal;
 
     invoke-virtual {v0}, Landroid/hardware/display/DisplayManagerGlobal;->pauseWifiDisplay()V
 
-    .line 943
     return-void
 .end method
 
@@ -1124,12 +1037,10 @@
     .param p2, "handler"    # Landroid/os/Handler;
 
     .prologue
-    .line 863
     iget-object v0, p0, Landroid/hardware/display/DisplayManager;->mGlobal:Landroid/hardware/display/DisplayManagerGlobal;
 
     invoke-virtual {v0, p1, p2}, Landroid/hardware/display/DisplayManagerGlobal;->registerDisplayListener(Landroid/hardware/display/DisplayManager$DisplayListener;Landroid/os/Handler;)V
 
-    .line 864
     return-void
 .end method
 
@@ -1139,12 +1050,10 @@
     .param p2, "handler"    # Landroid/os/Handler;
 
     .prologue
-    .line 847
     iget-object v0, p0, Landroid/hardware/display/DisplayManager;->mGlobal:Landroid/hardware/display/DisplayManagerGlobal;
 
     invoke-virtual {v0, p1, p2}, Landroid/hardware/display/DisplayManagerGlobal;->registerDisplayListener(Landroid/hardware/display/ExtendedDisplayListener;Landroid/os/Handler;)V
 
-    .line 849
     return-void
 .end method
 
@@ -1153,12 +1062,10 @@
     .param p1, "deviceName"    # Ljava/lang/String;
 
     .prologue
-    .line 1379
     iget-object v0, p0, Landroid/hardware/display/DisplayManager;->mGlobal:Landroid/hardware/display/DisplayManagerGlobal;
 
     invoke-virtual {v0, p1}, Landroid/hardware/display/DisplayManagerGlobal;->renameDongle(Ljava/lang/String;)V
 
-    .line 1381
     return-void
 .end method
 
@@ -1168,12 +1075,10 @@
     .param p2, "alias"    # Ljava/lang/String;
 
     .prologue
-    .line 979
     iget-object v0, p0, Landroid/hardware/display/DisplayManager;->mGlobal:Landroid/hardware/display/DisplayManagerGlobal;
 
     invoke-virtual {v0, p1, p2}, Landroid/hardware/display/DisplayManagerGlobal;->renameWifiDisplay(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 980
     return-void
 .end method
 
@@ -1181,12 +1086,10 @@
     .locals 1
 
     .prologue
-    .line 1232
     iget-object v0, p0, Landroid/hardware/display/DisplayManager;->mGlobal:Landroid/hardware/display/DisplayManagerGlobal;
 
     invoke-virtual {v0}, Landroid/hardware/display/DisplayManagerGlobal;->restartWifiDisplay()V
 
-    .line 1234
     return-void
 .end method
 
@@ -1194,12 +1097,10 @@
     .locals 1
 
     .prologue
-    .line 947
     iget-object v0, p0, Landroid/hardware/display/DisplayManager;->mGlobal:Landroid/hardware/display/DisplayManagerGlobal;
 
     invoke-virtual {v0}, Landroid/hardware/display/DisplayManagerGlobal;->resumeWifiDisplay()V
 
-    .line 948
     return-void
 .end method
 
@@ -1207,12 +1108,10 @@
     .locals 1
 
     .prologue
-    .line 1151
     iget-object v0, p0, Landroid/hardware/display/DisplayManager;->mGlobal:Landroid/hardware/display/DisplayManagerGlobal;
 
     invoke-virtual {v0}, Landroid/hardware/display/DisplayManagerGlobal;->scanWifiDisplays()V
 
-    .line 1153
     return-void
 .end method
 
@@ -1221,7 +1120,6 @@
     .param p1, "state"    # Landroid/hardware/display/DisplayManager$WfdAppState;
 
     .prologue
-    .line 1452
     const-string v0, "DisplayManager"
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -1252,14 +1150,13 @@
 
     invoke-static {v0, v1}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1453
     const-string v0, "DisplayManager"
 
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v2, "setActivityState to "
+    const-string v2, "setActivityState to "
 
     invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -1279,17 +1176,14 @@
 
     invoke-static {v0, v1}, Landroid/util/Slog;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1454
     iget-object v0, p0, Landroid/hardware/display/DisplayManager;->mWifiDisplayUtil:Landroid/hardware/display/SecWifiDisplayUtil;
 
     if-eqz v0, :cond_0
 
-    .line 1455
     iget-object v0, p0, Landroid/hardware/display/DisplayManager;->mWifiDisplayUtil:Landroid/hardware/display/SecWifiDisplayUtil;
 
     invoke-virtual {v0, p1}, Landroid/hardware/display/SecWifiDisplayUtil;->setActivityState(Landroid/hardware/display/DisplayManager$WfdAppState;)V
 
-    .line 1458
     :cond_0
     return-void
 .end method
@@ -1301,7 +1195,6 @@
     .param p3, "param2"    # Ljava/lang/String;
 
     .prologue
-    .line 1422
     iget-object v0, p0, Landroid/hardware/display/DisplayManager;->mGlobal:Landroid/hardware/display/DisplayManagerGlobal;
 
     invoke-virtual {v0, p1, p2, p3}, Landroid/hardware/display/DisplayManagerGlobal;->setParameter(IILjava/lang/String;)I
@@ -1316,12 +1209,10 @@
     .param p1, "requestedChannel"    # I
 
     .prologue
-    .line 1392
     iget-object v0, p0, Landroid/hardware/display/DisplayManager;->mGlobal:Landroid/hardware/display/DisplayManagerGlobal;
 
     invoke-virtual {v0, p1}, Landroid/hardware/display/DisplayManagerGlobal;->setScanningChannel(I)V
 
-    .line 1394
     return-void
 .end method
 
@@ -1329,12 +1220,10 @@
     .locals 1
 
     .prologue
-    .line 908
     iget-object v0, p0, Landroid/hardware/display/DisplayManager;->mGlobal:Landroid/hardware/display/DisplayManagerGlobal;
 
     invoke-virtual {v0}, Landroid/hardware/display/DisplayManagerGlobal;->startWifiDisplayScan()V
 
-    .line 909
     return-void
 .end method
 
@@ -1342,12 +1231,10 @@
     .locals 1
 
     .prologue
-    .line 1163
     iget-object v0, p0, Landroid/hardware/display/DisplayManager;->mGlobal:Landroid/hardware/display/DisplayManagerGlobal;
 
     invoke-virtual {v0}, Landroid/hardware/display/DisplayManagerGlobal;->stopScanWifiDisplays()V
 
-    .line 1165
     return-void
 .end method
 
@@ -1355,12 +1242,10 @@
     .locals 1
 
     .prologue
-    .line 920
     iget-object v0, p0, Landroid/hardware/display/DisplayManager;->mGlobal:Landroid/hardware/display/DisplayManagerGlobal;
 
     invoke-virtual {v0}, Landroid/hardware/display/DisplayManagerGlobal;->stopWifiDisplayScan()V
 
-    .line 921
     return-void
 .end method
 
@@ -1369,12 +1254,10 @@
     .param p1, "listener"    # Landroid/hardware/display/DisplayManager$DisplayListener;
 
     .prologue
-    .line 892
     iget-object v0, p0, Landroid/hardware/display/DisplayManager;->mGlobal:Landroid/hardware/display/DisplayManagerGlobal;
 
     invoke-virtual {v0, p1}, Landroid/hardware/display/DisplayManagerGlobal;->unregisterDisplayListener(Landroid/hardware/display/DisplayManager$DisplayListener;)V
 
-    .line 893
     return-void
 .end method
 
@@ -1383,11 +1266,9 @@
     .param p1, "listener"    # Landroid/hardware/display/ExtendedDisplayListener;
 
     .prologue
-    .line 879
     iget-object v0, p0, Landroid/hardware/display/DisplayManager;->mGlobal:Landroid/hardware/display/DisplayManagerGlobal;
 
     invoke-virtual {v0, p1}, Landroid/hardware/display/DisplayManagerGlobal;->unregisterDisplayListener(Landroid/hardware/display/ExtendedDisplayListener;)V
 
-    .line 881
     return-void
 .end method

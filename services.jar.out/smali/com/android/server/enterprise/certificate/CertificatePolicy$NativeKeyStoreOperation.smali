@@ -77,26 +77,20 @@
     .end annotation
 
     .prologue
-    .line 843
     .local p4, "deleteAliases":Ljava/util/Set;, "Ljava/util/Set<Ljava/lang/String;>;"
     .local p5, "installCerts":Ljava/util/Map;, "Ljava/util/Map<Ljava/lang/String;Ljava/security/cert/X509Certificate;>;"
     iput-object p1, p0, Lcom/android/server/enterprise/certificate/CertificatePolicy$NativeKeyStoreOperation;->this$0:Lcom/android/server/enterprise/certificate/CertificatePolicy;
 
     invoke-direct {p0}, Landroid/os/AsyncTask;-><init>()V
 
-    .line 844
     iput p2, p0, Lcom/android/server/enterprise/certificate/CertificatePolicy$NativeKeyStoreOperation;->mOperation:I
 
-    .line 845
     iput p3, p0, Lcom/android/server/enterprise/certificate/CertificatePolicy$NativeKeyStoreOperation;->mKeystoreUid:I
 
-    .line 846
     iput-object p4, p0, Lcom/android/server/enterprise/certificate/CertificatePolicy$NativeKeyStoreOperation;->mAliases:Ljava/util/Set;
 
-    .line 847
     iput-object p5, p0, Lcom/android/server/enterprise/certificate/CertificatePolicy$NativeKeyStoreOperation;->mCerts:Ljava/util/Map;
 
-    .line 848
     return-void
 .end method
 
@@ -110,7 +104,6 @@
     .param p6, "x5"    # Lcom/android/server/enterprise/certificate/CertificatePolicy$1;
 
     .prologue
-    .line 836
     invoke-direct/range {p0 .. p5}, Lcom/android/server/enterprise/certificate/CertificatePolicy$NativeKeyStoreOperation;-><init>(Lcom/android/server/enterprise/certificate/CertificatePolicy;IILjava/util/Set;Ljava/util/Map;)V
 
     return-void
@@ -127,20 +120,17 @@
 
     const/4 v0, 0x0
 
-    .line 851
     aget-object v0, p1, v0
 
     invoke-virtual {v0}, Ljava/lang/Integer;->intValue()I
 
     move-result v5
 
-    .line 852
     .local v5, "userId":I
     iget v0, p0, Lcom/android/server/enterprise/certificate/CertificatePolicy$NativeKeyStoreOperation;->mOperation:I
 
     packed-switch v0, :pswitch_data_0
 
-    .line 882
     :goto_0
     invoke-static {v9}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
 
@@ -149,7 +139,6 @@
     :goto_1
     return-object v0
 
-    .line 854
     :pswitch_0
     iget-object v0, p0, Lcom/android/server/enterprise/certificate/CertificatePolicy$NativeKeyStoreOperation;->this$0:Lcom/android/server/enterprise/certificate/CertificatePolicy;
 
@@ -160,7 +149,6 @@
 
     monitor-enter v8
 
-    .line 855
     :try_start_0
     iget-object v0, p0, Lcom/android/server/enterprise/certificate/CertificatePolicy$NativeKeyStoreOperation;->this$0:Lcom/android/server/enterprise/certificate/CertificatePolicy;
 
@@ -171,7 +159,6 @@
 
     if-eqz v0, :cond_1
 
-    .line 856
     iget-object v0, p0, Lcom/android/server/enterprise/certificate/CertificatePolicy$NativeKeyStoreOperation;->mCerts:Ljava/util/Map;
 
     invoke-interface {v0}, Ljava/util/Map;->entrySet()Ljava/util/Set;
@@ -196,7 +183,6 @@
 
     check-cast v6, Ljava/util/Map$Entry;
 
-    .line 857
     .local v6, "cert":Ljava/util/Map$Entry;, "Ljava/util/Map$Entry<Ljava/lang/String;Ljava/security/cert/X509Certificate;>;"
     invoke-interface {v6}, Ljava/util/Map$Entry;->getValue()Ljava/lang/Object;
 
@@ -209,18 +195,15 @@
 
     move-result-object v2
 
-    .line 858
     .local v2, "certBytes":[B
     if-eqz v2, :cond_0
 
-    .line 859
     invoke-interface {v6}, Ljava/util/Map$Entry;->getKey()Ljava/lang/Object;
 
     move-result-object v1
 
     check-cast v1, Ljava/lang/String;
 
-    .line 860
     .local v1, "alias":Ljava/lang/String;
     iget-object v0, p0, Lcom/android/server/enterprise/certificate/CertificatePolicy$NativeKeyStoreOperation;->this$0:Lcom/android/server/enterprise/certificate/CertificatePolicy;
 
@@ -241,7 +224,6 @@
 
     goto :goto_2
 
-    .line 867
     .end local v1    # "alias":Ljava/lang/String;
     .end local v2    # "certBytes":[B
     .end local v6    # "cert":Ljava/util/Map$Entry;, "Ljava/util/Map$Entry<Ljava/lang/String;Ljava/security/cert/X509Certificate;>;"
@@ -255,7 +237,6 @@
 
     throw v0
 
-    .line 863
     .restart local v2    # "certBytes":[B
     .restart local v6    # "cert":Ljava/util/Map$Entry;, "Ljava/util/Map$Entry<Ljava/lang/String;Ljava/security/cert/X509Certificate;>;"
     .restart local v7    # "i$":Ljava/util/Iterator;
@@ -271,7 +252,6 @@
 
     goto :goto_1
 
-    .line 867
     .end local v2    # "certBytes":[B
     .end local v6    # "cert":Ljava/util/Map$Entry;, "Ljava/util/Map$Entry<Ljava/lang/String;Ljava/security/cert/X509Certificate;>;"
     .end local v7    # "i$":Ljava/util/Iterator;
@@ -282,7 +262,6 @@
 
     goto :goto_0
 
-    .line 870
     :pswitch_1
     iget-object v0, p0, Lcom/android/server/enterprise/certificate/CertificatePolicy$NativeKeyStoreOperation;->this$0:Lcom/android/server/enterprise/certificate/CertificatePolicy;
 
@@ -293,7 +272,6 @@
 
     monitor-enter v3
 
-    .line 871
     :try_start_2
     iget-object v0, p0, Lcom/android/server/enterprise/certificate/CertificatePolicy$NativeKeyStoreOperation;->this$0:Lcom/android/server/enterprise/certificate/CertificatePolicy;
 
@@ -304,7 +282,6 @@
 
     if-eqz v0, :cond_2
 
-    .line 872
     iget-object v0, p0, Lcom/android/server/enterprise/certificate/CertificatePolicy$NativeKeyStoreOperation;->mAliases:Ljava/util/Set;
 
     invoke-interface {v0}, Ljava/util/Set;->iterator()Ljava/util/Iterator;
@@ -325,7 +302,6 @@
 
     check-cast v1, Ljava/lang/String;
 
-    .line 873
     .restart local v1    # "alias":Ljava/lang/String;
     iget-object v0, p0, Lcom/android/server/enterprise/certificate/CertificatePolicy$NativeKeyStoreOperation;->this$0:Lcom/android/server/enterprise/certificate/CertificatePolicy;
 
@@ -344,7 +320,6 @@
 
     goto :goto_3
 
-    .line 877
     .end local v1    # "alias":Ljava/lang/String;
     .end local v7    # "i$":Ljava/util/Iterator;
     :catchall_1
@@ -364,7 +339,6 @@
 
     goto/16 :goto_0
 
-    .line 852
     nop
 
     :pswitch_data_0
@@ -379,7 +353,6 @@
     .param p1, "x0"    # [Ljava/lang/Object;
 
     .prologue
-    .line 836
     check-cast p1, [Ljava/lang/Integer;
 
     .end local p1    # "x0":[Ljava/lang/Object;

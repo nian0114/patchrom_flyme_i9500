@@ -23,7 +23,6 @@
     .locals 0
 
     .prologue
-    .line 2868
     iput-object p1, p0, Lcom/android/internal/policy/impl/MultiPhoneWindow$TabContainer$TabGestureListener;->this$1:Lcom/android/internal/policy/impl/MultiPhoneWindow$TabContainer;
 
     invoke-direct {p0}, Landroid/view/GestureDetector$SimpleOnGestureListener;-><init>()V
@@ -37,7 +36,6 @@
     .param p2, "x1"    # Lcom/android/internal/policy/impl/MultiPhoneWindow$1;
 
     .prologue
-    .line 2868
     invoke-direct {p0, p1}, Lcom/android/internal/policy/impl/MultiPhoneWindow$TabContainer$TabGestureListener;-><init>(Lcom/android/internal/policy/impl/MultiPhoneWindow$TabContainer;)V
 
     return-void
@@ -52,7 +50,6 @@
     .prologue
     const/4 v3, 0x1
 
-    .line 2871
     const-string v0, "MultiPhoneWindow"
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -124,7 +121,6 @@
 
     invoke-static {v0, v1}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 2873
     iget-object v0, p0, Lcom/android/internal/policy/impl/MultiPhoneWindow$TabContainer$TabGestureListener;->this$1:Lcom/android/internal/policy/impl/MultiPhoneWindow$TabContainer;
 
     iget-object v0, v0, Lcom/android/internal/policy/impl/MultiPhoneWindow$TabContainer;->this$0:Lcom/android/internal/policy/impl/MultiPhoneWindow;
@@ -138,12 +134,10 @@
 
     if-eqz v0, :cond_1
 
-    .line 2887
     :cond_0
     :goto_0
     return-void
 
-    .line 2876
     :cond_1
     iget-object v0, p0, Lcom/android/internal/policy/impl/MultiPhoneWindow$TabContainer$TabGestureListener;->this$1:Lcom/android/internal/policy/impl/MultiPhoneWindow$TabContainer;
 
@@ -156,7 +150,6 @@
 
     iput-boolean v3, v0, Lcom/android/internal/policy/impl/MultiPhoneWindow$CustomTabLayout;->longPressed:Z
 
-    .line 2877
     iget-object v0, p0, Lcom/android/internal/policy/impl/MultiPhoneWindow$TabContainer$TabGestureListener;->this$1:Lcom/android/internal/policy/impl/MultiPhoneWindow$TabContainer;
 
     iget-object v0, v0, Lcom/android/internal/policy/impl/MultiPhoneWindow$TabContainer;->this$0:Lcom/android/internal/policy/impl/MultiPhoneWindow;
@@ -168,7 +161,6 @@
 
     if-eqz v0, :cond_0
 
-    .line 2878
     iget-object v0, p0, Lcom/android/internal/policy/impl/MultiPhoneWindow$TabContainer$TabGestureListener;->this$1:Lcom/android/internal/policy/impl/MultiPhoneWindow$TabContainer;
 
     iget-object v0, v0, Lcom/android/internal/policy/impl/MultiPhoneWindow$TabContainer;->this$0:Lcom/android/internal/policy/impl/MultiPhoneWindow;
@@ -197,7 +189,6 @@
 
     invoke-virtual {v1, v0, v3}, Lcom/samsung/android/multiwindow/MultiWindowFacade;->setFocusedStack(IZ)V
 
-    .line 2879
     iget-object v0, p0, Lcom/android/internal/policy/impl/MultiPhoneWindow$TabContainer$TabGestureListener;->this$1:Lcom/android/internal/policy/impl/MultiPhoneWindow$TabContainer;
 
     iget-object v0, v0, Lcom/android/internal/policy/impl/MultiPhoneWindow$TabContainer;->this$0:Lcom/android/internal/policy/impl/MultiPhoneWindow;
@@ -226,7 +217,6 @@
 
     invoke-virtual {v1, v0}, Lcom/samsung/android/multiwindow/MultiWindowFacade;->removeTab(I)Z
 
-    .line 2880
     iget-object v0, p0, Lcom/android/internal/policy/impl/MultiPhoneWindow$TabContainer$TabGestureListener;->this$1:Lcom/android/internal/policy/impl/MultiPhoneWindow$TabContainer;
 
     iget-object v0, v0, Lcom/android/internal/policy/impl/MultiPhoneWindow$TabContainer;->this$0:Lcom/android/internal/policy/impl/MultiPhoneWindow;
@@ -238,7 +228,6 @@
 
     invoke-virtual {v0}, Lcom/android/internal/policy/impl/multiwindow/Docking;->init()V
 
-    .line 2881
     iget-object v0, p0, Lcom/android/internal/policy/impl/MultiPhoneWindow$TabContainer$TabGestureListener;->this$1:Lcom/android/internal/policy/impl/MultiPhoneWindow$TabContainer;
 
     iget-object v0, v0, Lcom/android/internal/policy/impl/MultiPhoneWindow$TabContainer;->this$0:Lcom/android/internal/policy/impl/MultiPhoneWindow;
@@ -246,7 +235,6 @@
     # invokes: Lcom/android/internal/policy/impl/MultiPhoneWindow;->initStackBound(Z)V
     invoke-static {v0, v3}, Lcom/android/internal/policy/impl/MultiPhoneWindow;->access$1800(Lcom/android/internal/policy/impl/MultiPhoneWindow;Z)V
 
-    .line 2882
     iget-object v0, p0, Lcom/android/internal/policy/impl/MultiPhoneWindow$TabContainer$TabGestureListener;->this$1:Lcom/android/internal/policy/impl/MultiPhoneWindow$TabContainer;
 
     iget-object v0, v0, Lcom/android/internal/policy/impl/MultiPhoneWindow$TabContainer;->this$0:Lcom/android/internal/policy/impl/MultiPhoneWindow;
@@ -258,7 +246,6 @@
 
     if-eqz v0, :cond_2
 
-    .line 2883
     iget-object v0, p0, Lcom/android/internal/policy/impl/MultiPhoneWindow$TabContainer$TabGestureListener;->this$1:Lcom/android/internal/policy/impl/MultiPhoneWindow$TabContainer;
 
     iget-object v0, v0, Lcom/android/internal/policy/impl/MultiPhoneWindow$TabContainer;->this$0:Lcom/android/internal/policy/impl/MultiPhoneWindow;
@@ -272,7 +259,6 @@
 
     invoke-virtual {v0, v1}, Lcom/samsung/android/multiwindow/ui/GuideView;->setGuideState(I)V
 
-    .line 2885
     :cond_2
     iget-object v0, p0, Lcom/android/internal/policy/impl/MultiPhoneWindow$TabContainer$TabGestureListener;->this$1:Lcom/android/internal/policy/impl/MultiPhoneWindow$TabContainer;
 

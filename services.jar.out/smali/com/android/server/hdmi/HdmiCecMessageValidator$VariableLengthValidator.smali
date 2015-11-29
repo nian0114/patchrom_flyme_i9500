@@ -30,16 +30,12 @@
     .param p2, "maxLength"    # I
 
     .prologue
-    .line 240
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 241
     iput p1, p0, Lcom/android/server/hdmi/HdmiCecMessageValidator$VariableLengthValidator;->mMinLength:I
 
-    .line 242
     iput p2, p0, Lcom/android/server/hdmi/HdmiCecMessageValidator$VariableLengthValidator;->mMaxLength:I
 
-    .line 243
     return-void
 .end method
 
@@ -50,7 +46,6 @@
     .param p1, "params"    # [B
 
     .prologue
-    .line 247
     array-length v0, p1
 
     iget v1, p0, Lcom/android/server/hdmi/HdmiCecMessageValidator$VariableLengthValidator;->mMinLength:I

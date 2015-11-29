@@ -81,46 +81,36 @@
     .param p4, "service"    # Lcom/android/server/wm/WindowManagerService;
 
     .prologue
-    .line 86
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 69
     const/4 v0, 0x0
 
     iput-boolean v0, p0, Lcom/android/server/wm/MultiWindowTransition;->mAnimRunning:Z
 
-    .line 71
     const/4 v0, 0x0
 
     iput-object v0, p0, Lcom/android/server/wm/MultiWindowTransition;->mFreezeSurface:Lcom/android/server/wm/MultiWindowTransition$ScreenFreezeSurface;
 
-    .line 72
     new-instance v0, Landroid/view/animation/Transformation;
 
     invoke-direct {v0}, Landroid/view/animation/Transformation;-><init>()V
 
     iput-object v0, p0, Lcom/android/server/wm/MultiWindowTransition;->mTransformation:Landroid/view/animation/Transformation;
 
-    .line 74
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
     iput-object v0, p0, Lcom/android/server/wm/MultiWindowTransition;->mMaximizingAppList:Ljava/util/ArrayList;
 
-    .line 87
     iput-object p1, p0, Lcom/android/server/wm/MultiWindowTransition;->mContext:Landroid/content/Context;
 
-    .line 88
     iput-object p3, p0, Lcom/android/server/wm/MultiWindowTransition;->mSession:Landroid/view/SurfaceSession;
 
-    .line 89
     iput-object p2, p0, Lcom/android/server/wm/MultiWindowTransition;->mDisplayContent:Lcom/android/server/wm/DisplayContent;
 
-    .line 90
     iput-object p4, p0, Lcom/android/server/wm/MultiWindowTransition;->mService:Lcom/android/server/wm/WindowManagerService;
 
-    .line 91
     return-void
 .end method
 
@@ -129,7 +119,6 @@
     .param p0, "x0"    # Lcom/android/server/wm/MultiWindowTransition;
 
     .prologue
-    .line 37
     iget-object v0, p0, Lcom/android/server/wm/MultiWindowTransition;->mService:Lcom/android/server/wm/WindowManagerService;
 
     return-object v0
@@ -140,14 +129,12 @@
     .param p1, "needBGSurface"    # Z
 
     .prologue
-    .line 159
     iget-object v0, p0, Lcom/android/server/wm/MultiWindowTransition;->mDisplayContent:Lcom/android/server/wm/DisplayContent;
 
     invoke-virtual {v0}, Lcom/android/server/wm/DisplayContent;->getDisplayInfo()Landroid/view/DisplayInfo;
 
     move-result-object v9
 
-    .line 161
     .local v9, "displayInfo":Landroid/view/DisplayInfo;
     iget v0, v9, Landroid/view/DisplayInfo;->rotation:I
 
@@ -161,15 +148,12 @@
 
     if-ne v0, v1, :cond_2
 
-    .line 163
     :cond_0
     iget v4, v9, Landroid/view/DisplayInfo;->logicalHeight:I
 
-    .line 164
     .local v4, "width":I
     iget v5, v9, Landroid/view/DisplayInfo;->logicalWidth:I
 
-    .line 171
     .local v5, "height":I
     :goto_0
     :try_start_0
@@ -193,18 +177,15 @@
     :try_end_0
     .catch Landroid/view/Surface$OutOfResourcesException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 177
     :goto_1
     iget-object v0, p0, Lcom/android/server/wm/MultiWindowTransition;->mFreezeSurface:Lcom/android/server/wm/MultiWindowTransition$ScreenFreezeSurface;
 
     if-eqz v0, :cond_1
 
-    .line 178
     iget-object v0, p0, Lcom/android/server/wm/MultiWindowTransition;->mFreezeSurface:Lcom/android/server/wm/MultiWindowTransition$ScreenFreezeSurface;
 
     invoke-virtual {v0}, Lcom/android/server/wm/MultiWindowTransition$ScreenFreezeSurface;->show()V
 
-    .line 182
     :cond_1
     iget-object v0, p0, Lcom/android/server/wm/MultiWindowTransition;->mService:Lcom/android/server/wm/WindowManagerService;
 
@@ -218,7 +199,6 @@
 
     move-result-object v11
 
-    .line 184
     .local v11, "m":Landroid/os/Message;
     iget-object v0, p0, Lcom/android/server/wm/MultiWindowTransition;->mService:Lcom/android/server/wm/WindowManagerService;
 
@@ -228,30 +208,25 @@
 
     invoke-virtual {v0, v11, v2, v3}, Lcom/android/server/wm/WindowManagerService$H;->sendMessageDelayed(Landroid/os/Message;J)Z
 
-    .line 185
     iget-object v0, p0, Lcom/android/server/wm/MultiWindowTransition;->mFreezeSurface:Lcom/android/server/wm/MultiWindowTransition$ScreenFreezeSurface;
 
     return-object v0
 
-    .line 166
     .end local v4    # "width":I
     .end local v5    # "height":I
     .end local v11    # "m":Landroid/os/Message;
     :cond_2
     iget v4, v9, Landroid/view/DisplayInfo;->logicalWidth:I
 
-    .line 167
     .restart local v4    # "width":I
     iget v5, v9, Landroid/view/DisplayInfo;->logicalHeight:I
 
     .restart local v5    # "height":I
     goto :goto_0
 
-    .line 174
     :catch_0
     move-exception v10
 
-    .line 175
     .local v10, "e":Landroid/view/Surface$OutOfResourcesException;
     const-string v0, "MultiWindowTransition"
 
@@ -273,7 +248,6 @@
 
     const/4 v1, 0x0
 
-    .line 314
     iget-boolean v2, p0, Lcom/android/server/wm/MultiWindowTransition;->mAnimRunning:Z
 
     if-nez v2, :cond_1
@@ -282,13 +256,10 @@
 
     if-eqz v2, :cond_1
 
-    .line 315
     iput-boolean v0, p0, Lcom/android/server/wm/MultiWindowTransition;->mAnimRunning:Z
 
-    .line 316
     iput-wide p1, p0, Lcom/android/server/wm/MultiWindowTransition;->mStartTime:J
 
-    .line 317
     iget-object v1, p0, Lcom/android/server/wm/MultiWindowTransition;->mContext:Landroid/content/Context;
 
     const v2, 0x10a0066
@@ -299,7 +270,6 @@
 
     iput-object v1, p0, Lcom/android/server/wm/MultiWindowTransition;->mAnimation:Landroid/view/animation/Animation;
 
-    .line 320
     iget-object v1, p0, Lcom/android/server/wm/MultiWindowTransition;->mAnimation:Landroid/view/animation/Animation;
 
     iget-object v2, p0, Lcom/android/server/wm/MultiWindowTransition;->mFreezeSurface:Lcom/android/server/wm/MultiWindowTransition$ScreenFreezeSurface;
@@ -336,27 +306,22 @@
 
     invoke-virtual {v1, v2, v3, v4, v5}, Landroid/view/animation/Animation;->initialize(IIII)V
 
-    .line 348
     :cond_0
     :goto_0
     return v0
 
-    .line 327
     :cond_1
     const/4 v0, 0x0
 
-    .line 328
     .local v0, "moreAnim":Z
     iget-object v2, p0, Lcom/android/server/wm/MultiWindowTransition;->mAnimation:Landroid/view/animation/Animation;
 
     if-eqz v2, :cond_2
 
-    .line 329
     iget-object v2, p0, Lcom/android/server/wm/MultiWindowTransition;->mTransformation:Landroid/view/animation/Transformation;
 
     invoke-virtual {v2}, Landroid/view/animation/Transformation;->clear()V
 
-    .line 330
     iget-object v2, p0, Lcom/android/server/wm/MultiWindowTransition;->mAnimation:Landroid/view/animation/Animation;
 
     iget-object v3, p0, Lcom/android/server/wm/MultiWindowTransition;->mTransformation:Landroid/view/animation/Transformation;
@@ -365,36 +330,28 @@
 
     move-result v0
 
-    .line 335
     iget-object v2, p0, Lcom/android/server/wm/MultiWindowTransition;->mFreezeSurface:Lcom/android/server/wm/MultiWindowTransition$ScreenFreezeSurface;
 
     if-eqz v2, :cond_3
 
-    .line 336
     iget-object v2, p0, Lcom/android/server/wm/MultiWindowTransition;->mFreezeSurface:Lcom/android/server/wm/MultiWindowTransition$ScreenFreezeSurface;
 
     iget-object v3, p0, Lcom/android/server/wm/MultiWindowTransition;->mTransformation:Landroid/view/animation/Transformation;
 
     invoke-virtual {v2, v3}, Lcom/android/server/wm/MultiWindowTransition$ScreenFreezeSurface;->setAnimationTransform(Landroid/view/animation/Transformation;)V
 
-    .line 339
     if-nez v0, :cond_0
 
-    .line 340
     iget-object v2, p0, Lcom/android/server/wm/MultiWindowTransition;->mFreezeSurface:Lcom/android/server/wm/MultiWindowTransition$ScreenFreezeSurface;
 
     invoke-virtual {v2}, Lcom/android/server/wm/MultiWindowTransition$ScreenFreezeSurface;->kill()V
 
-    .line 341
     iput-object v4, p0, Lcom/android/server/wm/MultiWindowTransition;->mFreezeSurface:Lcom/android/server/wm/MultiWindowTransition$ScreenFreezeSurface;
 
-    .line 342
     iput-boolean v1, p0, Lcom/android/server/wm/MultiWindowTransition;->mAnimRunning:Z
 
-    .line 343
     iput v1, p0, Lcom/android/server/wm/MultiWindowTransition;->mTransition:I
 
-    .line 344
     iput-object v4, p0, Lcom/android/server/wm/MultiWindowTransition;->mAnimation:Landroid/view/animation/Animation;
 
     goto :goto_0
@@ -402,13 +359,11 @@
     :cond_2
     move v0, v1
 
-    .line 332
     goto :goto_0
 
     :cond_3
     move v0, v1
 
-    .line 348
     goto :goto_0
 .end method
 
@@ -417,25 +372,20 @@
     .param p1, "wtoken"    # Lcom/android/server/wm/AppWindowToken;
 
     .prologue
-    .line 273
     const/4 v0, 0x0
 
-    .line 274
     .local v0, "a":Landroid/view/animation/Animation;
     if-eqz p1, :cond_1
 
-    .line 275
     iget-object v2, p1, Lcom/android/server/wm/AppWindowToken;->appMultiWindowStyle:Lcom/samsung/android/multiwindow/MultiWindowStyle;
 
     invoke-virtual {v2}, Lcom/samsung/android/multiwindow/MultiWindowStyle;->getBounds()Landroid/graphics/Rect;
 
     move-result-object v1
 
-    .line 276
     .local v1, "stackBounds":Landroid/graphics/Rect;
     if-eqz v1, :cond_0
 
-    .line 277
     iget-object v2, p0, Lcom/android/server/wm/MultiWindowTransition;->mContext:Landroid/content/Context;
 
     const v3, 0x10a0065
@@ -444,7 +394,6 @@
 
     move-result-object v0
 
-    .line 278
     iget-object v2, p1, Lcom/android/server/wm/AppWindowToken;->mAppAnimator:Lcom/android/server/wm/AppWindowAnimator;
 
     invoke-virtual {v1}, Landroid/graphics/Rect;->width()I
@@ -457,15 +406,12 @@
 
     invoke-virtual {v2, v0, v3, v4}, Lcom/android/server/wm/AppWindowAnimator;->setAnimation(Landroid/view/animation/Animation;II)V
 
-    .line 279
     const/4 v2, 0x1
 
-    .line 284
     .end local v1    # "stackBounds":Landroid/graphics/Rect;
     :goto_0
     return v2
 
-    .line 281
     .restart local v1    # "stackBounds":Landroid/graphics/Rect;
     :cond_0
     const-string v2, "MultiWindowTransition"
@@ -474,7 +420,6 @@
 
     invoke-static {v2, v3}, Landroid/util/Slog;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 284
     .end local v1    # "stackBounds":Landroid/graphics/Rect;
     :cond_1
     const/4 v2, 0x0
@@ -487,10 +432,8 @@
     .param p1, "wtoken"    # Lcom/android/server/wm/AppWindowToken;
 
     .prologue
-    .line 236
     const/4 v0, 0x0
 
-    .line 237
     .local v0, "a":Landroid/view/animation/Animation;
     if-eqz p1, :cond_1
 
@@ -500,7 +443,6 @@
 
     if-nez v6, :cond_1
 
-    .line 238
     iget-object v6, p0, Lcom/android/server/wm/MultiWindowTransition;->mContext:Landroid/content/Context;
 
     const v7, 0x10a0063
@@ -509,14 +451,12 @@
 
     move-result-object v0
 
-    .line 240
     new-instance v6, Lcom/android/server/wm/MultiWindowTransition$2;
 
     invoke-direct {v6, p0}, Lcom/android/server/wm/MultiWindowTransition$2;-><init>(Lcom/android/server/wm/MultiWindowTransition;)V
 
     invoke-virtual {v0, v6}, Landroid/view/animation/Animation;->setAnimationListener(Landroid/view/animation/Animation$AnimationListener;)V
 
-    .line 254
     iget-object v6, p0, Lcom/android/server/wm/MultiWindowTransition;->mService:Lcom/android/server/wm/WindowManagerService;
 
     iget-object v6, v6, Lcom/android/server/wm/WindowManagerService;->mTaskIdToTask:Landroid/util/SparseArray;
@@ -529,16 +469,13 @@
 
     check-cast v4, Lcom/android/server/wm/Task;
 
-    .line 255
     .local v4, "task":Lcom/android/server/wm/Task;
     if-eqz v4, :cond_0
 
-    .line 256
     iget-object v6, v4, Lcom/android/server/wm/Task;->mStack:Lcom/android/server/wm/TaskStack;
 
     invoke-virtual {v6}, Lcom/android/server/wm/TaskStack;->hideBackgoundLayer()V
 
-    .line 262
     :cond_0
     iget-object v6, p0, Lcom/android/server/wm/MultiWindowTransition;->mService:Lcom/android/server/wm/WindowManagerService;
 
@@ -548,7 +485,6 @@
 
     move-result v2
 
-    .line 263
     .local v2, "minimizedIconSize":I
     iget-object v6, p1, Lcom/android/server/wm/AppWindowToken;->appMultiWindowStyle:Lcom/samsung/android/multiwindow/MultiWindowStyle;
 
@@ -556,7 +492,6 @@
 
     move-result-object v3
 
-    .line 264
     .local v3, "stackBounds":Landroid/graphics/Rect;
     iget v6, v3, Landroid/graphics/Rect;->left:I
 
@@ -564,7 +499,6 @@
 
     add-int v5, v6, v7
 
-    .line 265
     .local v5, "width":I
     iget v6, v3, Landroid/graphics/Rect;->top:I
 
@@ -572,16 +506,13 @@
 
     add-int v1, v6, v7
 
-    .line 266
     .local v1, "height":I
     iget-object v6, p1, Lcom/android/server/wm/AppWindowToken;->mAppAnimator:Lcom/android/server/wm/AppWindowAnimator;
 
     invoke-virtual {v6, v0, v5, v1}, Lcom/android/server/wm/AppWindowAnimator;->setAnimation(Landroid/view/animation/Animation;II)V
 
-    .line 267
     const/4 v6, 0x1
 
-    .line 269
     .end local v1    # "height":I
     .end local v2    # "minimizedIconSize":I
     .end local v3    # "stackBounds":Landroid/graphics/Rect;
@@ -601,10 +532,8 @@
     .param p1, "wtoken"    # Lcom/android/server/wm/AppWindowToken;
 
     .prologue
-    .line 189
     if-eqz p1, :cond_0
 
-    .line 191
     iget-object v6, p0, Lcom/android/server/wm/MultiWindowTransition;->mService:Lcom/android/server/wm/WindowManagerService;
 
     iget-object v6, v6, Lcom/android/server/wm/WindowManagerService;->mH:Lcom/android/server/wm/WindowManagerService$H;
@@ -617,7 +546,6 @@
 
     move-result-object v2
 
-    .line 193
     .local v2, "m":Landroid/os/Message;
     iget-object v6, p0, Lcom/android/server/wm/MultiWindowTransition;->mService:Lcom/android/server/wm/WindowManagerService;
 
@@ -627,7 +555,6 @@
 
     invoke-virtual {v6, v2, v8, v9}, Lcom/android/server/wm/WindowManagerService$H;->sendMessageDelayed(Landroid/os/Message;J)Z
 
-    .line 196
     .end local v2    # "m":Landroid/os/Message;
     :cond_0
     if-eqz p1, :cond_1
@@ -638,7 +565,6 @@
 
     if-nez v6, :cond_1
 
-    .line 197
     iget-object v6, p0, Lcom/android/server/wm/MultiWindowTransition;->mContext:Landroid/content/Context;
 
     const v7, 0x10a005d
@@ -647,7 +573,6 @@
 
     move-result-object v0
 
-    .line 199
     .local v0, "a":Landroid/view/animation/Animation;
     new-instance v6, Lcom/android/server/wm/MultiWindowTransition$1;
 
@@ -655,7 +580,6 @@
 
     invoke-virtual {v0, v6}, Landroid/view/animation/Animation;->setAnimationListener(Landroid/view/animation/Animation$AnimationListener;)V
 
-    .line 225
     iget-object v6, p0, Lcom/android/server/wm/MultiWindowTransition;->mService:Lcom/android/server/wm/WindowManagerService;
 
     iget-object v6, v6, Lcom/android/server/wm/WindowManagerService;->mPolicy:Landroid/view/WindowManagerPolicy;
@@ -664,7 +588,6 @@
 
     move-result v3
 
-    .line 226
     .local v3, "minimizedIconSize":I
     iget-object v6, p1, Lcom/android/server/wm/AppWindowToken;->appMultiWindowStyle:Lcom/samsung/android/multiwindow/MultiWindowStyle;
 
@@ -672,7 +595,6 @@
 
     move-result-object v4
 
-    .line 227
     .local v4, "stackBounds":Landroid/graphics/Rect;
     iget v6, v4, Landroid/graphics/Rect;->left:I
 
@@ -680,7 +602,6 @@
 
     add-int v5, v6, v7
 
-    .line 228
     .local v5, "width":I
     iget v6, v4, Landroid/graphics/Rect;->top:I
 
@@ -688,16 +609,13 @@
 
     add-int v1, v6, v7
 
-    .line 229
     .local v1, "height":I
     iget-object v6, p1, Lcom/android/server/wm/AppWindowToken;->mAppAnimator:Lcom/android/server/wm/AppWindowAnimator;
 
     invoke-virtual {v6, v0, v5, v1}, Lcom/android/server/wm/AppWindowAnimator;->setAnimation(Landroid/view/animation/Animation;II)V
 
-    .line 230
     const/4 v6, 0x1
 
-    .line 232
     .end local v0    # "a":Landroid/view/animation/Animation;
     .end local v1    # "height":I
     .end local v3    # "minimizedIconSize":I
@@ -717,18 +635,15 @@
     .param p1, "now"    # J
 
     .prologue
-    .line 297
     iget v0, p0, Lcom/android/server/wm/MultiWindowTransition;->mTransition:I
 
     packed-switch v0, :pswitch_data_0
 
-    .line 309
     const/4 v0, 0x0
 
     :goto_0
     return v0
 
-    .line 305
     :pswitch_0
     invoke-direct {p0, p1, p2}, Lcom/android/server/wm/MultiWindowTransition;->doDefaultAnimation(J)Z
 
@@ -736,7 +651,6 @@
 
     goto :goto_0
 
-    .line 297
     :pswitch_data_0
     .packed-switch 0x1
         :pswitch_0
@@ -755,7 +669,6 @@
     .locals 1
 
     .prologue
-    .line 289
     iget-object v0, p0, Lcom/android/server/wm/MultiWindowTransition;->mFreezeSurface:Lcom/android/server/wm/MultiWindowTransition$ScreenFreezeSurface;
 
     if-eqz v0, :cond_0
@@ -779,22 +692,18 @@
     .locals 1
 
     .prologue
-    .line 352
     iget-object v0, p0, Lcom/android/server/wm/MultiWindowTransition;->mFreezeSurface:Lcom/android/server/wm/MultiWindowTransition$ScreenFreezeSurface;
 
     if-eqz v0, :cond_0
 
-    .line 353
     iget-object v0, p0, Lcom/android/server/wm/MultiWindowTransition;->mFreezeSurface:Lcom/android/server/wm/MultiWindowTransition$ScreenFreezeSurface;
 
     invoke-virtual {v0}, Lcom/android/server/wm/MultiWindowTransition$ScreenFreezeSurface;->kill()V
 
-    .line 354
     const/4 v0, 0x0
 
     iput-object v0, p0, Lcom/android/server/wm/MultiWindowTransition;->mFreezeSurface:Lcom/android/server/wm/MultiWindowTransition$ScreenFreezeSurface;
 
-    .line 356
     :cond_0
     return-void
 .end method
@@ -804,7 +713,6 @@
     .param p1, "wtoken"    # Lcom/android/server/wm/AppWindowToken;
 
     .prologue
-    .line 135
     iget-object v0, p0, Lcom/android/server/wm/MultiWindowTransition;->mMaximizingAppList:Ljava/util/ArrayList;
 
     invoke-virtual {v0, p1}, Ljava/util/ArrayList;->contains(Ljava/lang/Object;)Z
@@ -813,39 +721,31 @@
 
     if-eqz v0, :cond_1
 
-    .line 136
     iget-object v0, p0, Lcom/android/server/wm/MultiWindowTransition;->mMaximizingAppList:Ljava/util/ArrayList;
 
     invoke-virtual {v0}, Ljava/util/ArrayList;->clear()V
 
-    .line 137
     invoke-direct {p0, p1}, Lcom/android/server/wm/MultiWindowTransition;->setMaximizeAnimation(Lcom/android/server/wm/AppWindowToken;)Z
 
-    .line 138
     iget-object v0, p0, Lcom/android/server/wm/MultiWindowTransition;->mService:Lcom/android/server/wm/WindowManagerService;
 
     invoke-virtual {v0}, Lcom/android/server/wm/WindowManagerService;->requestTraversal()V
 
-    .line 144
     :cond_0
     :goto_0
     return-void
 
-    .line 139
     :cond_1
     iget-object v0, p0, Lcom/android/server/wm/MultiWindowTransition;->mTargetApp:Lcom/android/server/wm/AppWindowToken;
 
     if-ne v0, p1, :cond_0
 
-    .line 140
     const/4 v0, 0x0
 
     iput-object v0, p0, Lcom/android/server/wm/MultiWindowTransition;->mTargetApp:Lcom/android/server/wm/AppWindowToken;
 
-    .line 141
     invoke-direct {p0, p1}, Lcom/android/server/wm/MultiWindowTransition;->setDrawFinishedAnimation(Lcom/android/server/wm/AppWindowToken;)Z
 
-    .line 142
     iget-object v0, p0, Lcom/android/server/wm/MultiWindowTransition;->mService:Lcom/android/server/wm/WindowManagerService;
 
     invoke-virtual {v0}, Lcom/android/server/wm/WindowManagerService;->requestTraversal()V
@@ -859,76 +759,61 @@
     .param p2, "transit"    # I
 
     .prologue
-    .line 94
     packed-switch p2, :pswitch_data_0
 
-    .line 132
     :cond_0
     :goto_0
     :pswitch_0
     return-void
 
-    .line 99
     :pswitch_1
     iget-object v0, p0, Lcom/android/server/wm/MultiWindowTransition;->mFreezeSurface:Lcom/android/server/wm/MultiWindowTransition$ScreenFreezeSurface;
 
     if-nez v0, :cond_0
 
-    .line 100
     iput p2, p0, Lcom/android/server/wm/MultiWindowTransition;->mTransition:I
 
-    .line 101
     const/4 v0, 0x1
 
     invoke-direct {p0, v0}, Lcom/android/server/wm/MultiWindowTransition;->createFreezeSurface(Z)Lcom/android/server/wm/MultiWindowTransition$ScreenFreezeSurface;
 
     goto :goto_0
 
-    .line 111
     :pswitch_2
     iget-object v0, p0, Lcom/android/server/wm/MultiWindowTransition;->mFreezeSurface:Lcom/android/server/wm/MultiWindowTransition$ScreenFreezeSurface;
 
     if-nez v0, :cond_0
 
-    .line 112
     iput-object p1, p0, Lcom/android/server/wm/MultiWindowTransition;->mTargetApp:Lcom/android/server/wm/AppWindowToken;
 
-    .line 113
     iput p2, p0, Lcom/android/server/wm/MultiWindowTransition;->mTransition:I
 
-    .line 114
     const/4 v0, 0x0
 
     invoke-direct {p0, v0}, Lcom/android/server/wm/MultiWindowTransition;->createFreezeSurface(Z)Lcom/android/server/wm/MultiWindowTransition$ScreenFreezeSurface;
 
     goto :goto_0
 
-    .line 118
     :pswitch_3
     if-eqz p1, :cond_0
 
-    .line 119
     invoke-direct {p0, p1}, Lcom/android/server/wm/MultiWindowTransition;->setMinimizeAnimation(Lcom/android/server/wm/AppWindowToken;)Z
 
-    .line 120
     iget-object v0, p0, Lcom/android/server/wm/MultiWindowTransition;->mService:Lcom/android/server/wm/WindowManagerService;
 
     invoke-virtual {v0}, Lcom/android/server/wm/WindowManagerService;->requestTraversal()V
 
     goto :goto_0
 
-    .line 125
     :pswitch_4
     if-eqz p1, :cond_0
 
-    .line 126
     iget-object v0, p0, Lcom/android/server/wm/MultiWindowTransition;->mMaximizingAppList:Ljava/util/ArrayList;
 
     invoke-virtual {v0, p1}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
     goto :goto_0
 
-    .line 94
     nop
 
     :pswitch_data_0
@@ -954,7 +839,6 @@
     .param p1, "now"    # J
 
     .prologue
-    .line 293
     invoke-direct {p0, p1, p2}, Lcom/android/server/wm/MultiWindowTransition;->stepAnimation(J)Z
 
     move-result v0
@@ -968,29 +852,23 @@
     .prologue
     const/4 v1, 0x0
 
-    .line 147
     iget-object v0, p0, Lcom/android/server/wm/MultiWindowTransition;->mFreezeSurface:Lcom/android/server/wm/MultiWindowTransition$ScreenFreezeSurface;
 
     if-eqz v0, :cond_0
 
-    .line 148
     iget-object v0, p0, Lcom/android/server/wm/MultiWindowTransition;->mFreezeSurface:Lcom/android/server/wm/MultiWindowTransition$ScreenFreezeSurface;
 
     invoke-virtual {v0}, Lcom/android/server/wm/MultiWindowTransition$ScreenFreezeSurface;->kill()V
 
-    .line 149
     const/4 v0, 0x0
 
     iput-object v0, p0, Lcom/android/server/wm/MultiWindowTransition;->mFreezeSurface:Lcom/android/server/wm/MultiWindowTransition$ScreenFreezeSurface;
 
-    .line 151
     :cond_0
     iput-boolean v1, p0, Lcom/android/server/wm/MultiWindowTransition;->mAnimRunning:Z
 
-    .line 152
     iput v1, p0, Lcom/android/server/wm/MultiWindowTransition;->mTransition:I
 
-    .line 153
     return-void
 .end method
 
@@ -998,7 +876,6 @@
     .locals 1
 
     .prologue
-    .line 360
     const-string v0, "ScreenFreezeSurface"
 
     return-object v0

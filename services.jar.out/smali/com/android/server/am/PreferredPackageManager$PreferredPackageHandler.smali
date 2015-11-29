@@ -24,17 +24,14 @@
     .param p2, "looper"    # Landroid/os/Looper;
 
     .prologue
-    .line 236
     iput-object p1, p0, Lcom/android/server/am/PreferredPackageManager$PreferredPackageHandler;->this$0:Lcom/android/server/am/PreferredPackageManager;
 
-    .line 237
     const/4 v0, 0x0
 
     const/4 v1, 0x1
 
     invoke-direct {p0, p2, v0, v1}, Landroid/os/Handler;-><init>(Landroid/os/Looper;Landroid/os/Handler$Callback;Z)V
 
-    .line 238
     return-void
 .end method
 
@@ -45,12 +42,10 @@
     .param p1, "msg"    # Landroid/os/Message;
 
     .prologue
-    .line 242
     iget v2, p1, Landroid/os/Message;->what:I
 
     packed-switch v2, :pswitch_data_0
 
-    .line 266
     :pswitch_0
     sget-boolean v2, Lcom/android/server/am/PreferredPackageManager;->DEBUG:Z
 
@@ -58,16 +53,14 @@
 
     const-string v2, "PreferredPackage"
 
-    const-string/jumbo v3, "receiving unknown message !!"
+    const-string v3, "receiving unknown message !!"
 
     invoke-static {v2, v3}, Landroid/util/Slog;->secD(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 269
     :cond_0
     :goto_0
     return-void
 
-    .line 244
     :pswitch_1
     iget-object v2, p0, Lcom/android/server/am/PreferredPackageManager$PreferredPackageHandler;->this$0:Lcom/android/server/am/PreferredPackageManager;
 
@@ -85,7 +78,7 @@
 
     move-result-object v4
 
-    const-string/jumbo v5, "reason"
+    const-string v5, "reason"
 
     invoke-virtual {v4, v5}, Landroid/os/Bundle;->getString(Ljava/lang/String;)Ljava/lang/String;
 
@@ -96,7 +89,6 @@
 
     goto :goto_0
 
-    .line 248
     :pswitch_2
     iget-object v2, p0, Lcom/android/server/am/PreferredPackageManager$PreferredPackageHandler;->this$0:Lcom/android/server/am/PreferredPackageManager;
 
@@ -125,7 +117,6 @@
 
     goto :goto_0
 
-    .line 252
     :pswitch_3
     iget-object v2, p0, Lcom/android/server/am/PreferredPackageManager$PreferredPackageHandler;->this$0:Lcom/android/server/am/PreferredPackageManager;
 
@@ -144,13 +135,11 @@
 
     goto :goto_0
 
-    .line 255
     :pswitch_4
     invoke-virtual {p1}, Landroid/os/Message;->getData()Landroid/os/Bundle;
 
     move-result-object v0
 
-    .line 256
     .local v0, "bundle":Landroid/os/Bundle;
     iget-object v2, p0, Lcom/android/server/am/PreferredPackageManager$PreferredPackageHandler;->this$0:Lcom/android/server/am/PreferredPackageManager;
 
@@ -160,7 +149,7 @@
 
     move-result-object v3
 
-    const-string/jumbo v4, "pid"
+    const-string v4, "pid"
 
     invoke-virtual {v0, v4}, Landroid/os/Bundle;->getInt(Ljava/lang/String;)I
 
@@ -171,25 +160,21 @@
 
     goto :goto_0
 
-    .line 260
     .end local v0    # "bundle":Landroid/os/Bundle;
     :pswitch_5
     iget-object v2, p0, Lcom/android/server/am/PreferredPackageManager$PreferredPackageHandler;->this$0:Lcom/android/server/am/PreferredPackageManager;
 
     invoke-virtual {v2}, Lcom/android/server/am/PreferredPackageManager;->writePackagesInfoToGoogleXml()V
 
-    .line 261
     invoke-static {}, Landroid/os/Message;->obtain()Landroid/os/Message;
 
     move-result-object v1
 
-    .line 262
     .local v1, "pmsg":Landroid/os/Message;
     const/4 v2, 0x6
 
     iput v2, v1, Landroid/os/Message;->what:I
 
-    .line 263
     iget-object v2, p0, Lcom/android/server/am/PreferredPackageManager$PreferredPackageHandler;->this$0:Lcom/android/server/am/PreferredPackageManager;
 
     # getter for: Lcom/android/server/am/PreferredPackageManager;->mHandler:Lcom/android/server/am/PreferredPackageManager$PreferredPackageHandler;
@@ -203,7 +188,6 @@
 
     goto :goto_0
 
-    .line 242
     nop
 
     :pswitch_data_0

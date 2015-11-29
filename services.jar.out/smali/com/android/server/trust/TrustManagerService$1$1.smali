@@ -32,7 +32,6 @@
     .locals 0
 
     .prologue
-    .line 571
     iput-object p1, p0, Lcom/android/server/trust/TrustManagerService$1$1;->this$1:Lcom/android/server/trust/TrustManagerService$1;
 
     iput-object p2, p0, Lcom/android/server/trust/TrustManagerService$1$1;->val$fout:Ljava/io/PrintWriter;
@@ -52,14 +51,12 @@
     .locals 6
 
     .prologue
-    .line 574
     iget-object v2, p0, Lcom/android/server/trust/TrustManagerService$1$1;->val$fout:Ljava/io/PrintWriter;
 
     const-string v3, "Trust manager state:"
 
     invoke-virtual {v2, v3}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
-    .line 575
     iget-object v2, p0, Lcom/android/server/trust/TrustManagerService$1$1;->val$userInfos:Ljava/util/List;
 
     invoke-interface {v2}, Ljava/util/List;->iterator()Ljava/util/Iterator;
@@ -80,7 +77,6 @@
 
     check-cast v1, Landroid/content/pm/UserInfo;
 
-    .line 576
     .local v1, "user":Landroid/content/pm/UserInfo;
     iget-object v3, p0, Lcom/android/server/trust/TrustManagerService$1$1;->this$1:Lcom/android/server/trust/TrustManagerService$1;
 
@@ -107,7 +103,6 @@
 
     goto :goto_1
 
-    .line 578
     .end local v1    # "user":Landroid/content/pm/UserInfo;
     :cond_1
     return-void

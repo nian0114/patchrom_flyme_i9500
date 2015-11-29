@@ -32,13 +32,10 @@
     .param p2, "reversed"    # Z
 
     .prologue
-    .line 610
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 611
     invoke-virtual {p0, p1, p2}, Landroid/graphics/drawable/AnimatedStateListDrawable$FrameInterpolator;->updateFrames(Landroid/graphics/drawable/AnimationDrawable;Z)I
 
-    .line 612
     return-void
 .end method
 
@@ -49,7 +46,6 @@
     .param p1, "input"    # F
 
     .prologue
-    .line 640
     iget v6, p0, Landroid/graphics/drawable/AnimatedStateListDrawable$FrameInterpolator;->mTotalDuration:I
 
     int-to-float v6, v6
@@ -62,23 +58,18 @@
 
     float-to-int v1, v6
 
-    .line 641
     .local v1, "elapsed":I
     iget v0, p0, Landroid/graphics/drawable/AnimatedStateListDrawable$FrameInterpolator;->mFrames:I
 
-    .line 642
     .local v0, "N":I
     iget-object v3, p0, Landroid/graphics/drawable/AnimatedStateListDrawable$FrameInterpolator;->mFrameTimes:[I
 
-    .line 645
     .local v3, "frameTimes":[I
     move v5, v1
 
-    .line 646
     .local v5, "remaining":I
     const/4 v4, 0x0
 
-    .line 647
     .local v4, "i":I
     :goto_0
     if-ge v4, v0, :cond_0
@@ -87,21 +78,17 @@
 
     if-lt v5, v6, :cond_0
 
-    .line 648
     aget v6, v3, v4
 
     sub-int/2addr v5, v6
 
-    .line 649
     add-int/lit8 v4, v4, 0x1
 
     goto :goto_0
 
-    .line 654
     :cond_0
     if-ge v4, v0, :cond_1
 
-    .line 655
     int-to-float v6, v5
 
     iget v7, p0, Landroid/graphics/drawable/AnimatedStateListDrawable$FrameInterpolator;->mTotalDuration:I
@@ -110,7 +97,6 @@
 
     div-float v2, v6, v7
 
-    .line 660
     .local v2, "frameElapsed":F
     :goto_1
     int-to-float v6, v4
@@ -123,7 +109,6 @@
 
     return v6
 
-    .line 657
     .end local v2    # "frameElapsed":F
     :cond_1
     const/4 v2, 0x0
@@ -136,7 +121,6 @@
     .locals 1
 
     .prologue
-    .line 635
     iget v0, p0, Landroid/graphics/drawable/AnimatedStateListDrawable$FrameInterpolator;->mTotalDuration:I
 
     return v0
@@ -148,16 +132,13 @@
     .param p2, "reversed"    # Z
 
     .prologue
-    .line 615
     invoke-virtual {p1}, Landroid/graphics/drawable/AnimationDrawable;->getNumberOfFrames()I
 
     move-result v0
 
-    .line 616
     .local v0, "N":I
     iput v0, p0, Landroid/graphics/drawable/AnimatedStateListDrawable$FrameInterpolator;->mFrames:I
 
-    .line 618
     iget-object v5, p0, Landroid/graphics/drawable/AnimatedStateListDrawable$FrameInterpolator;->mFrameTimes:[I
 
     if-eqz v5, :cond_0
@@ -168,21 +149,17 @@
 
     if-ge v5, v0, :cond_1
 
-    .line 619
     :cond_0
     new-array v5, v0, [I
 
     iput-object v5, p0, Landroid/graphics/drawable/AnimatedStateListDrawable$FrameInterpolator;->mFrameTimes:[I
 
-    .line 622
     :cond_1
     iget-object v2, p0, Landroid/graphics/drawable/AnimatedStateListDrawable$FrameInterpolator;->mFrameTimes:[I
 
-    .line 623
     .local v2, "frameTimes":[I
     const/4 v4, 0x0
 
-    .line 624
     .local v4, "totalDuration":I
     const/4 v3, 0x0
 
@@ -190,7 +167,6 @@
     :goto_0
     if-ge v3, v0, :cond_3
 
-    .line 625
     if-eqz p2, :cond_2
 
     sub-int v5, v0, v3
@@ -202,14 +178,11 @@
 
     move-result v1
 
-    .line 626
     .local v1, "duration":I
     aput v1, v2, v3
 
-    .line 627
     add-int/2addr v4, v1
 
-    .line 624
     add-int/lit8 v3, v3, 0x1
 
     goto :goto_0
@@ -218,13 +191,10 @@
     :cond_2
     move v5, v3
 
-    .line 625
     goto :goto_1
 
-    .line 630
     :cond_3
     iput v4, p0, Landroid/graphics/drawable/AnimatedStateListDrawable$FrameInterpolator;->mTotalDuration:I
 
-    .line 631
     return v4
 .end method

@@ -28,7 +28,6 @@
     .param p4, "x2"    # I
 
     .prologue
-    .line 1499
     iput-object p1, p0, Lcom/android/internal/policy/impl/GlobalActions$14;->this$0:Lcom/android/internal/policy/impl/GlobalActions;
 
     iput-object p5, p0, Lcom/android/internal/policy/impl/GlobalActions$14;->val$intent:Landroid/content/Intent;
@@ -44,7 +43,6 @@
     .locals 1
 
     .prologue
-    .line 1526
     const/4 v0, 0x1
 
     return v0
@@ -54,13 +52,11 @@
     .locals 4
 
     .prologue
-    .line 1502
     :try_start_0
     iget v1, p0, Lcom/android/internal/policy/impl/GlobalActions$14;->customAction:I
 
     packed-switch v1, :pswitch_data_0
 
-    .line 1516
     :pswitch_0
     const-string v1, "GlobalActions"
 
@@ -68,7 +64,6 @@
 
     invoke-static {v1, v2}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1517
     new-instance v1, Ljava/security/InvalidParameterException;
 
     new-instance v2, Ljava/lang/StringBuilder;
@@ -97,20 +92,16 @@
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 1520
     :catch_0
     move-exception v0
 
-    .line 1521
     .local v0, "ex":Ljava/lang/Exception;
     invoke-virtual {v0}, Ljava/lang/Exception;->printStackTrace()V
 
-    .line 1523
     .end local v0    # "ex":Ljava/lang/Exception;
     :goto_0
     return-void
 
-    .line 1504
     :pswitch_1
     :try_start_1
     const-string v1, "GlobalActions"
@@ -119,7 +110,6 @@
 
     invoke-static {v1, v2}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1505
     iget-object v1, p0, Lcom/android/internal/policy/impl/GlobalActions$14;->this$0:Lcom/android/internal/policy/impl/GlobalActions;
 
     # getter for: Lcom/android/internal/policy/impl/GlobalActions;->mContext:Landroid/content/Context;
@@ -133,7 +123,6 @@
 
     goto :goto_0
 
-    .line 1508
     :pswitch_2
     iget-object v1, p0, Lcom/android/internal/policy/impl/GlobalActions$14;->this$0:Lcom/android/internal/policy/impl/GlobalActions;
 
@@ -146,7 +135,6 @@
 
     invoke-virtual {v1, v2}, Landroid/content/Context;->sendStickyBroadcast(Landroid/content/Intent;)V
 
-    .line 1509
     const-string v1, "GlobalActions"
 
     const-string v2, "addCustomDialogItems ACTION_SEND_STICKY_BROADCAST"
@@ -155,7 +143,6 @@
 
     goto :goto_0
 
-    .line 1512
     :pswitch_3
     iget-object v1, p0, Lcom/android/internal/policy/impl/GlobalActions$14;->this$0:Lcom/android/internal/policy/impl/GlobalActions;
 
@@ -170,7 +157,6 @@
 
     invoke-virtual {v1, v2, v3}, Landroid/content/Context;->startActivityAsUser(Landroid/content/Intent;Landroid/os/UserHandle;)V
 
-    .line 1513
     const-string v1, "GlobalActions"
 
     const-string v2, "addCustomDialogItems ACTION_START_ACTIVITY"
@@ -181,7 +167,6 @@
 
     goto :goto_0
 
-    .line 1502
     nop
 
     :pswitch_data_0
@@ -197,7 +182,6 @@
     .locals 1
 
     .prologue
-    .line 1534
     const/4 v0, 0x1
 
     return v0
@@ -207,7 +191,6 @@
     .locals 1
 
     .prologue
-    .line 1538
     const/4 v0, 0x1
 
     return v0
@@ -217,7 +200,6 @@
     .locals 1
 
     .prologue
-    .line 1530
     const/4 v0, 0x1
 
     return v0

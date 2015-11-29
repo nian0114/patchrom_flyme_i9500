@@ -145,15 +145,12 @@
     .prologue
     const/4 v9, 0x0
 
-    .line 141
     const-string v5, "WifiController"
 
     invoke-direct {p0, v5, p3}, Lcom/android/internal/util/StateMachine;-><init>(Ljava/lang/String;Landroid/os/Looper;)V
 
-    .line 62
     iput-boolean v9, p0, Lcom/android/server/wifi/WifiController;->mFirstUserSignOnSeen:Z
 
-    .line 88
     new-instance v5, Landroid/net/NetworkInfo;
 
     const/4 v6, 0x1
@@ -166,128 +163,108 @@
 
     iput-object v5, p0, Lcom/android/server/wifi/WifiController;->mNetworkInfo:Landroid/net/NetworkInfo;
 
-    .line 103
     new-instance v5, Landroid/os/WorkSource;
 
     invoke-direct {v5}, Landroid/os/WorkSource;-><init>()V
 
     iput-object v5, p0, Lcom/android/server/wifi/WifiController;->mTmpWorkSource:Landroid/os/WorkSource;
 
-    .line 126
     new-instance v5, Lcom/android/server/wifi/WifiController$DefaultState;
 
     invoke-direct {v5, p0}, Lcom/android/server/wifi/WifiController$DefaultState;-><init>(Lcom/android/server/wifi/WifiController;)V
 
     iput-object v5, p0, Lcom/android/server/wifi/WifiController;->mDefaultState:Lcom/android/server/wifi/WifiController$DefaultState;
 
-    .line 127
     new-instance v5, Lcom/android/server/wifi/WifiController$StaEnabledState;
 
     invoke-direct {v5, p0}, Lcom/android/server/wifi/WifiController$StaEnabledState;-><init>(Lcom/android/server/wifi/WifiController;)V
 
     iput-object v5, p0, Lcom/android/server/wifi/WifiController;->mStaEnabledState:Lcom/android/server/wifi/WifiController$StaEnabledState;
 
-    .line 128
     new-instance v5, Lcom/android/server/wifi/WifiController$ApStaDisabledState;
 
     invoke-direct {v5, p0}, Lcom/android/server/wifi/WifiController$ApStaDisabledState;-><init>(Lcom/android/server/wifi/WifiController;)V
 
     iput-object v5, p0, Lcom/android/server/wifi/WifiController;->mApStaDisabledState:Lcom/android/server/wifi/WifiController$ApStaDisabledState;
 
-    .line 129
     new-instance v5, Lcom/android/server/wifi/WifiController$StaDisabledWithScanState;
 
     invoke-direct {v5, p0}, Lcom/android/server/wifi/WifiController$StaDisabledWithScanState;-><init>(Lcom/android/server/wifi/WifiController;)V
 
     iput-object v5, p0, Lcom/android/server/wifi/WifiController;->mStaDisabledWithScanState:Lcom/android/server/wifi/WifiController$StaDisabledWithScanState;
 
-    .line 130
     new-instance v5, Lcom/android/server/wifi/WifiController$ApEnabledState;
 
     invoke-direct {v5, p0}, Lcom/android/server/wifi/WifiController$ApEnabledState;-><init>(Lcom/android/server/wifi/WifiController;)V
 
     iput-object v5, p0, Lcom/android/server/wifi/WifiController;->mApEnabledState:Lcom/android/server/wifi/WifiController$ApEnabledState;
 
-    .line 131
     new-instance v5, Lcom/android/server/wifi/WifiController$DeviceActiveState;
 
     invoke-direct {v5, p0}, Lcom/android/server/wifi/WifiController$DeviceActiveState;-><init>(Lcom/android/server/wifi/WifiController;)V
 
     iput-object v5, p0, Lcom/android/server/wifi/WifiController;->mDeviceActiveState:Lcom/android/server/wifi/WifiController$DeviceActiveState;
 
-    .line 132
     new-instance v5, Lcom/android/server/wifi/WifiController$DeviceInactiveState;
 
     invoke-direct {v5, p0}, Lcom/android/server/wifi/WifiController$DeviceInactiveState;-><init>(Lcom/android/server/wifi/WifiController;)V
 
     iput-object v5, p0, Lcom/android/server/wifi/WifiController;->mDeviceInactiveState:Lcom/android/server/wifi/WifiController$DeviceInactiveState;
 
-    .line 133
     new-instance v5, Lcom/android/server/wifi/WifiController$ScanOnlyLockHeldState;
 
     invoke-direct {v5, p0}, Lcom/android/server/wifi/WifiController$ScanOnlyLockHeldState;-><init>(Lcom/android/server/wifi/WifiController;)V
 
     iput-object v5, p0, Lcom/android/server/wifi/WifiController;->mScanOnlyLockHeldState:Lcom/android/server/wifi/WifiController$ScanOnlyLockHeldState;
 
-    .line 134
     new-instance v5, Lcom/android/server/wifi/WifiController$FullLockHeldState;
 
     invoke-direct {v5, p0}, Lcom/android/server/wifi/WifiController$FullLockHeldState;-><init>(Lcom/android/server/wifi/WifiController;)V
 
     iput-object v5, p0, Lcom/android/server/wifi/WifiController;->mFullLockHeldState:Lcom/android/server/wifi/WifiController$FullLockHeldState;
 
-    .line 135
     new-instance v5, Lcom/android/server/wifi/WifiController$FullHighPerfLockHeldState;
 
     invoke-direct {v5, p0}, Lcom/android/server/wifi/WifiController$FullHighPerfLockHeldState;-><init>(Lcom/android/server/wifi/WifiController;)V
 
     iput-object v5, p0, Lcom/android/server/wifi/WifiController;->mFullHighPerfLockHeldState:Lcom/android/server/wifi/WifiController$FullHighPerfLockHeldState;
 
-    .line 136
     new-instance v5, Lcom/android/server/wifi/WifiController$NoLockHeldState;
 
     invoke-direct {v5, p0}, Lcom/android/server/wifi/WifiController$NoLockHeldState;-><init>(Lcom/android/server/wifi/WifiController;)V
 
     iput-object v5, p0, Lcom/android/server/wifi/WifiController;->mNoLockHeldState:Lcom/android/server/wifi/WifiController$NoLockHeldState;
 
-    .line 137
     new-instance v5, Lcom/android/server/wifi/WifiController$EcmState;
 
     invoke-direct {v5, p0}, Lcom/android/server/wifi/WifiController$EcmState;-><init>(Lcom/android/server/wifi/WifiController;)V
 
     iput-object v5, p0, Lcom/android/server/wifi/WifiController;->mEcmState:Lcom/android/server/wifi/WifiController$EcmState;
 
-    .line 138
     new-instance v5, Lcom/android/server/wifi/WifiController$IbssEnabledState;
 
     invoke-direct {v5, p0}, Lcom/android/server/wifi/WifiController$IbssEnabledState;-><init>(Lcom/android/server/wifi/WifiController;)V
 
     iput-object v5, p0, Lcom/android/server/wifi/WifiController;->mIbssEnabledState:Lcom/android/server/wifi/WifiController$IbssEnabledState;
 
-    .line 142
     iput-object p1, p0, Lcom/android/server/wifi/WifiController;->mContext:Landroid/content/Context;
 
-    .line 143
     iget-object v5, p2, Lcom/android/server/wifi/WifiServiceImpl;->mWifiStateMachine:Lcom/android/server/wifi/WifiStateMachine;
 
     iput-object v5, p0, Lcom/android/server/wifi/WifiController;->mWifiStateMachine:Lcom/android/server/wifi/WifiStateMachine;
 
-    .line 144
     iget-object v5, p2, Lcom/android/server/wifi/WifiServiceImpl;->mSettingsStore:Lcom/android/server/wifi/WifiSettingsStore;
 
     iput-object v5, p0, Lcom/android/server/wifi/WifiController;->mSettingsStore:Lcom/android/server/wifi/WifiSettingsStore;
 
-    .line 145
     iget-object v5, p2, Lcom/android/server/wifi/WifiServiceImpl;->mLocks:Lcom/android/server/wifi/WifiServiceImpl$LockList;
 
     iput-object v5, p0, Lcom/android/server/wifi/WifiController;->mLocks:Lcom/android/server/wifi/WifiServiceImpl$LockList;
 
-    .line 146
     iget-object v5, p2, Lcom/android/server/wifi/WifiServiceImpl;->mTrafficPoller:Lcom/android/server/wifi/WifiTrafficPoller;
 
     iput-object v5, p0, Lcom/android/server/wifi/WifiController;->mWifiTrafficPoller:Lcom/android/server/wifi/WifiTrafficPoller;
 
-    .line 155
     iget-object v5, p0, Lcom/android/server/wifi/WifiController;->mContext:Landroid/content/Context;
 
     const-string v6, "alarm"
@@ -300,7 +277,6 @@
 
     iput-object v5, p0, Lcom/android/server/wifi/WifiController;->mAlarmManager:Landroid/app/AlarmManager;
 
-    .line 156
     new-instance v1, Landroid/content/Intent;
 
     const-string v5, "com.android.server.WifiManager.action.DEVICE_IDLE"
@@ -309,7 +285,6 @@
 
     invoke-direct {v1, v5, v6}, Landroid/content/Intent;-><init>(Ljava/lang/String;Landroid/net/Uri;)V
 
-    .line 157
     .local v1, "idleIntent":Landroid/content/Intent;
     iget-object v5, p0, Lcom/android/server/wifi/WifiController;->mContext:Landroid/content/Context;
 
@@ -319,103 +294,88 @@
 
     iput-object v5, p0, Lcom/android/server/wifi/WifiController;->mIdleIntent:Landroid/app/PendingIntent;
 
-    .line 159
     iget-object v5, p0, Lcom/android/server/wifi/WifiController;->mDefaultState:Lcom/android/server/wifi/WifiController$DefaultState;
 
     invoke-virtual {p0, v5}, Lcom/android/server/wifi/WifiController;->addState(Lcom/android/internal/util/State;)V
 
-    .line 160
     iget-object v5, p0, Lcom/android/server/wifi/WifiController;->mApStaDisabledState:Lcom/android/server/wifi/WifiController$ApStaDisabledState;
 
     iget-object v6, p0, Lcom/android/server/wifi/WifiController;->mDefaultState:Lcom/android/server/wifi/WifiController$DefaultState;
 
     invoke-virtual {p0, v5, v6}, Lcom/android/server/wifi/WifiController;->addState(Lcom/android/internal/util/State;Lcom/android/internal/util/State;)V
 
-    .line 161
     iget-object v5, p0, Lcom/android/server/wifi/WifiController;->mStaEnabledState:Lcom/android/server/wifi/WifiController$StaEnabledState;
 
     iget-object v6, p0, Lcom/android/server/wifi/WifiController;->mDefaultState:Lcom/android/server/wifi/WifiController$DefaultState;
 
     invoke-virtual {p0, v5, v6}, Lcom/android/server/wifi/WifiController;->addState(Lcom/android/internal/util/State;Lcom/android/internal/util/State;)V
 
-    .line 162
     iget-object v5, p0, Lcom/android/server/wifi/WifiController;->mDeviceActiveState:Lcom/android/server/wifi/WifiController$DeviceActiveState;
 
     iget-object v6, p0, Lcom/android/server/wifi/WifiController;->mStaEnabledState:Lcom/android/server/wifi/WifiController$StaEnabledState;
 
     invoke-virtual {p0, v5, v6}, Lcom/android/server/wifi/WifiController;->addState(Lcom/android/internal/util/State;Lcom/android/internal/util/State;)V
 
-    .line 163
     iget-object v5, p0, Lcom/android/server/wifi/WifiController;->mDeviceInactiveState:Lcom/android/server/wifi/WifiController$DeviceInactiveState;
 
     iget-object v6, p0, Lcom/android/server/wifi/WifiController;->mStaEnabledState:Lcom/android/server/wifi/WifiController$StaEnabledState;
 
     invoke-virtual {p0, v5, v6}, Lcom/android/server/wifi/WifiController;->addState(Lcom/android/internal/util/State;Lcom/android/internal/util/State;)V
 
-    .line 164
     iget-object v5, p0, Lcom/android/server/wifi/WifiController;->mScanOnlyLockHeldState:Lcom/android/server/wifi/WifiController$ScanOnlyLockHeldState;
 
     iget-object v6, p0, Lcom/android/server/wifi/WifiController;->mDeviceInactiveState:Lcom/android/server/wifi/WifiController$DeviceInactiveState;
 
     invoke-virtual {p0, v5, v6}, Lcom/android/server/wifi/WifiController;->addState(Lcom/android/internal/util/State;Lcom/android/internal/util/State;)V
 
-    .line 165
     iget-object v5, p0, Lcom/android/server/wifi/WifiController;->mFullLockHeldState:Lcom/android/server/wifi/WifiController$FullLockHeldState;
 
     iget-object v6, p0, Lcom/android/server/wifi/WifiController;->mDeviceInactiveState:Lcom/android/server/wifi/WifiController$DeviceInactiveState;
 
     invoke-virtual {p0, v5, v6}, Lcom/android/server/wifi/WifiController;->addState(Lcom/android/internal/util/State;Lcom/android/internal/util/State;)V
 
-    .line 166
     iget-object v5, p0, Lcom/android/server/wifi/WifiController;->mFullHighPerfLockHeldState:Lcom/android/server/wifi/WifiController$FullHighPerfLockHeldState;
 
     iget-object v6, p0, Lcom/android/server/wifi/WifiController;->mDeviceInactiveState:Lcom/android/server/wifi/WifiController$DeviceInactiveState;
 
     invoke-virtual {p0, v5, v6}, Lcom/android/server/wifi/WifiController;->addState(Lcom/android/internal/util/State;Lcom/android/internal/util/State;)V
 
-    .line 167
     iget-object v5, p0, Lcom/android/server/wifi/WifiController;->mNoLockHeldState:Lcom/android/server/wifi/WifiController$NoLockHeldState;
 
     iget-object v6, p0, Lcom/android/server/wifi/WifiController;->mDeviceInactiveState:Lcom/android/server/wifi/WifiController$DeviceInactiveState;
 
     invoke-virtual {p0, v5, v6}, Lcom/android/server/wifi/WifiController;->addState(Lcom/android/internal/util/State;Lcom/android/internal/util/State;)V
 
-    .line 168
     iget-object v5, p0, Lcom/android/server/wifi/WifiController;->mStaDisabledWithScanState:Lcom/android/server/wifi/WifiController$StaDisabledWithScanState;
 
     iget-object v6, p0, Lcom/android/server/wifi/WifiController;->mDefaultState:Lcom/android/server/wifi/WifiController$DefaultState;
 
     invoke-virtual {p0, v5, v6}, Lcom/android/server/wifi/WifiController;->addState(Lcom/android/internal/util/State;Lcom/android/internal/util/State;)V
 
-    .line 169
     iget-object v5, p0, Lcom/android/server/wifi/WifiController;->mApEnabledState:Lcom/android/server/wifi/WifiController$ApEnabledState;
 
     iget-object v6, p0, Lcom/android/server/wifi/WifiController;->mDefaultState:Lcom/android/server/wifi/WifiController$DefaultState;
 
     invoke-virtual {p0, v5, v6}, Lcom/android/server/wifi/WifiController;->addState(Lcom/android/internal/util/State;Lcom/android/internal/util/State;)V
 
-    .line 170
     iget-object v5, p0, Lcom/android/server/wifi/WifiController;->mIbssEnabledState:Lcom/android/server/wifi/WifiController$IbssEnabledState;
 
     iget-object v6, p0, Lcom/android/server/wifi/WifiController;->mDefaultState:Lcom/android/server/wifi/WifiController$DefaultState;
 
     invoke-virtual {p0, v5, v6}, Lcom/android/server/wifi/WifiController;->addState(Lcom/android/internal/util/State;Lcom/android/internal/util/State;)V
 
-    .line 171
     iget-object v5, p0, Lcom/android/server/wifi/WifiController;->mEcmState:Lcom/android/server/wifi/WifiController$EcmState;
 
     iget-object v6, p0, Lcom/android/server/wifi/WifiController;->mDefaultState:Lcom/android/server/wifi/WifiController$DefaultState;
 
     invoke-virtual {p0, v5, v6}, Lcom/android/server/wifi/WifiController;->addState(Lcom/android/internal/util/State;Lcom/android/internal/util/State;)V
 
-    .line 173
     iget-object v5, p0, Lcom/android/server/wifi/WifiController;->mSettingsStore:Lcom/android/server/wifi/WifiSettingsStore;
 
     invoke-virtual {v5}, Lcom/android/server/wifi/WifiSettingsStore;->isAirplaneModeOn()Z
 
     move-result v2
 
-    .line 174
     .local v2, "isAirplaneModeOn":Z
     iget-object v5, p0, Lcom/android/server/wifi/WifiController;->mSettingsStore:Lcom/android/server/wifi/WifiSettingsStore;
 
@@ -423,7 +383,6 @@
 
     move-result v4
 
-    .line 175
     .local v4, "isWifiEnabled":Z
     iget-object v5, p0, Lcom/android/server/wifi/WifiController;->mSettingsStore:Lcom/android/server/wifi/WifiSettingsStore;
 
@@ -431,7 +390,6 @@
 
     move-result v3
 
-    .line 177
     .local v3, "isScanningAlwaysAvailable":Z
     new-instance v5, Ljava/lang/StringBuilder;
 
@@ -473,45 +431,36 @@
 
     invoke-virtual {p0, v5}, Lcom/android/server/wifi/WifiController;->log(Ljava/lang/String;)V
 
-    .line 181
     if-eqz v3, :cond_0
 
-    .line 182
     iget-object v5, p0, Lcom/android/server/wifi/WifiController;->mStaDisabledWithScanState:Lcom/android/server/wifi/WifiController$StaDisabledWithScanState;
 
     invoke-virtual {p0, v5}, Lcom/android/server/wifi/WifiController;->setInitialState(Lcom/android/internal/util/State;)V
 
-    .line 187
     :goto_0
     const/16 v5, 0x64
 
     invoke-virtual {p0, v5}, Lcom/android/server/wifi/WifiController;->setLogRecSize(I)V
 
-    .line 188
     invoke-virtual {p0, v9}, Lcom/android/server/wifi/WifiController;->setLogOnlyTransitions(Z)V
 
-    .line 190
     new-instance v0, Landroid/content/IntentFilter;
 
     invoke-direct {v0}, Landroid/content/IntentFilter;-><init>()V
 
-    .line 191
     .local v0, "filter":Landroid/content/IntentFilter;
     const-string v5, "com.android.server.WifiManager.action.DEVICE_IDLE"
 
     invoke-virtual {v0, v5}, Landroid/content/IntentFilter;->addAction(Ljava/lang/String;)V
 
-    .line 192
     const-string v5, "android.net.wifi.STATE_CHANGE"
 
     invoke-virtual {v0, v5}, Landroid/content/IntentFilter;->addAction(Ljava/lang/String;)V
 
-    .line 193
     const-string v5, "android.net.wifi.ERROR"
 
     invoke-virtual {v0, v5}, Landroid/content/IntentFilter;->addAction(Ljava/lang/String;)V
 
-    .line 194
     iget-object v5, p0, Lcom/android/server/wifi/WifiController;->mContext:Landroid/content/Context;
 
     new-instance v6, Lcom/android/server/wifi/WifiController$1;
@@ -524,13 +473,10 @@
 
     invoke-virtual {v5, v6, v7}, Landroid/content/Context;->registerReceiver(Landroid/content/BroadcastReceiver;Landroid/content/IntentFilter;)Landroid/content/Intent;
 
-    .line 215
     invoke-direct {p0, p3}, Lcom/android/server/wifi/WifiController;->initializeAndRegisterForSettingsChange(Landroid/os/Looper;)V
 
-    .line 216
     return-void
 
-    .line 184
     .end local v0    # "filter":Landroid/content/IntentFilter;
     :cond_0
     iget-object v5, p0, Lcom/android/server/wifi/WifiController;->mApStaDisabledState:Lcom/android/server/wifi/WifiController$ApStaDisabledState;
@@ -545,7 +491,6 @@
     .param p0, "x0"    # Lcom/android/server/wifi/WifiController;
 
     .prologue
-    .line 52
     invoke-direct {p0}, Lcom/android/server/wifi/WifiController;->readStayAwakeConditions()V
 
     return-void
@@ -556,7 +501,6 @@
     .param p0, "x0"    # Lcom/android/server/wifi/WifiController;
 
     .prologue
-    .line 52
     invoke-direct {p0}, Lcom/android/server/wifi/WifiController;->readWifiIdleTime()V
 
     return-void
@@ -567,7 +511,6 @@
     .param p0, "x0"    # Lcom/android/server/wifi/WifiController;
 
     .prologue
-    .line 52
     iget-wide v0, p0, Lcom/android/server/wifi/WifiController;->mIdleMillis:J
 
     return-wide v0
@@ -579,7 +522,6 @@
     .param p1, "x1"    # Landroid/os/Message;
 
     .prologue
-    .line 52
     invoke-virtual {p0, p1}, Lcom/android/server/wifi/WifiController;->deferMessage(Landroid/os/Message;)V
 
     return-void
@@ -590,7 +532,6 @@
     .param p0, "x0"    # Lcom/android/server/wifi/WifiController;
 
     .prologue
-    .line 52
     iget-object v0, p0, Lcom/android/server/wifi/WifiController;->mApStaDisabledState:Lcom/android/server/wifi/WifiController$ApStaDisabledState;
 
     return-object v0
@@ -602,7 +543,6 @@
     .param p1, "x1"    # Lcom/android/internal/util/IState;
 
     .prologue
-    .line 52
     invoke-virtual {p0, p1}, Lcom/android/server/wifi/WifiController;->transitionTo(Lcom/android/internal/util/IState;)V
 
     return-void
@@ -613,7 +553,6 @@
     .param p0, "x0"    # Lcom/android/server/wifi/WifiController;
 
     .prologue
-    .line 52
     iget-boolean v0, p0, Lcom/android/server/wifi/WifiController;->mFirstUserSignOnSeen:Z
 
     return v0
@@ -625,7 +564,6 @@
     .param p1, "x1"    # Z
 
     .prologue
-    .line 52
     iput-boolean p1, p0, Lcom/android/server/wifi/WifiController;->mFirstUserSignOnSeen:Z
 
     return p1
@@ -637,7 +575,6 @@
     .param p1, "x1"    # Ljava/lang/String;
 
     .prologue
-    .line 52
     invoke-virtual {p0, p1}, Lcom/android/server/wifi/WifiController;->log(Ljava/lang/String;)V
 
     return-void
@@ -649,7 +586,6 @@
     .param p1, "x1"    # Ljava/lang/String;
 
     .prologue
-    .line 52
     invoke-virtual {p0, p1}, Lcom/android/server/wifi/WifiController;->loge(Ljava/lang/String;)V
 
     return-void
@@ -661,7 +597,6 @@
     .param p1, "x1"    # Lcom/android/internal/util/IState;
 
     .prologue
-    .line 52
     invoke-virtual {p0, p1}, Lcom/android/server/wifi/WifiController;->transitionTo(Lcom/android/internal/util/IState;)V
 
     return-void
@@ -673,7 +608,6 @@
     .param p1, "x1"    # Ljava/lang/String;
 
     .prologue
-    .line 52
     invoke-virtual {p0, p1}, Lcom/android/server/wifi/WifiController;->log(Ljava/lang/String;)V
 
     return-void
@@ -685,7 +619,6 @@
     .param p1, "x1"    # Ljava/lang/String;
 
     .prologue
-    .line 52
     invoke-virtual {p0, p1}, Lcom/android/server/wifi/WifiController;->log(Ljava/lang/String;)V
 
     return-void
@@ -696,7 +629,6 @@
     .param p0, "x0"    # Lcom/android/server/wifi/WifiController;
 
     .prologue
-    .line 52
     invoke-direct {p0}, Lcom/android/server/wifi/WifiController;->readWifiSleepPolicy()V
 
     return-void
@@ -707,7 +639,6 @@
     .param p0, "x0"    # Lcom/android/server/wifi/WifiController;
 
     .prologue
-    .line 52
     iget-object v0, p0, Lcom/android/server/wifi/WifiController;->mContext:Landroid/content/Context;
 
     return-object v0
@@ -718,7 +649,6 @@
     .param p0, "x0"    # Lcom/android/server/wifi/WifiController;
 
     .prologue
-    .line 52
     iget-object v0, p0, Lcom/android/server/wifi/WifiController;->mApEnabledState:Lcom/android/server/wifi/WifiController$ApEnabledState;
 
     return-object v0
@@ -730,7 +660,6 @@
     .param p1, "x1"    # Lcom/android/internal/util/IState;
 
     .prologue
-    .line 52
     invoke-virtual {p0, p1}, Lcom/android/server/wifi/WifiController;->transitionTo(Lcom/android/internal/util/IState;)V
 
     return-void
@@ -741,7 +670,6 @@
     .param p0, "x0"    # Lcom/android/server/wifi/WifiController;
 
     .prologue
-    .line 52
     iget-object v0, p0, Lcom/android/server/wifi/WifiController;->mDeviceActiveState:Lcom/android/server/wifi/WifiController$DeviceActiveState;
 
     return-object v0
@@ -753,7 +681,6 @@
     .param p1, "x1"    # Lcom/android/internal/util/IState;
 
     .prologue
-    .line 52
     invoke-virtual {p0, p1}, Lcom/android/server/wifi/WifiController;->transitionTo(Lcom/android/internal/util/IState;)V
 
     return-void
@@ -764,7 +691,6 @@
     .param p0, "x0"    # Lcom/android/server/wifi/WifiController;
 
     .prologue
-    .line 52
     invoke-direct {p0}, Lcom/android/server/wifi/WifiController;->checkLocksAndTransitionWhenDeviceIdle()V
 
     return-void
@@ -775,7 +701,6 @@
     .param p0, "x0"    # Lcom/android/server/wifi/WifiController;
 
     .prologue
-    .line 52
     iget-object v0, p0, Lcom/android/server/wifi/WifiController;->mStaDisabledWithScanState:Lcom/android/server/wifi/WifiController$StaDisabledWithScanState;
 
     return-object v0
@@ -787,7 +712,6 @@
     .param p1, "x1"    # Lcom/android/internal/util/IState;
 
     .prologue
-    .line 52
     invoke-virtual {p0, p1}, Lcom/android/server/wifi/WifiController;->transitionTo(Lcom/android/internal/util/IState;)V
 
     return-void
@@ -799,7 +723,6 @@
     .param p1, "x1"    # Ljava/lang/String;
 
     .prologue
-    .line 52
     invoke-virtual {p0, p1}, Lcom/android/server/wifi/WifiController;->loge(Ljava/lang/String;)V
 
     return-void
@@ -811,7 +734,6 @@
     .param p1, "x1"    # Lcom/android/internal/util/IState;
 
     .prologue
-    .line 52
     invoke-virtual {p0, p1}, Lcom/android/server/wifi/WifiController;->transitionTo(Lcom/android/internal/util/IState;)V
 
     return-void
@@ -822,7 +744,6 @@
     .param p0, "x0"    # Lcom/android/server/wifi/WifiController;
 
     .prologue
-    .line 52
     iget-object v0, p0, Lcom/android/server/wifi/WifiController;->mIdleIntent:Landroid/app/PendingIntent;
 
     return-object v0
@@ -833,7 +754,6 @@
     .param p0, "x0"    # Lcom/android/server/wifi/WifiController;
 
     .prologue
-    .line 52
     iget-object v0, p0, Lcom/android/server/wifi/WifiController;->mIbssEnabledState:Lcom/android/server/wifi/WifiController$IbssEnabledState;
 
     return-object v0
@@ -845,7 +765,6 @@
     .param p1, "x1"    # Lcom/android/internal/util/IState;
 
     .prologue
-    .line 52
     invoke-virtual {p0, p1}, Lcom/android/server/wifi/WifiController;->transitionTo(Lcom/android/internal/util/IState;)V
 
     return-void
@@ -857,7 +776,6 @@
     .param p1, "x1"    # Ljava/lang/String;
 
     .prologue
-    .line 52
     invoke-virtual {p0, p1}, Lcom/android/server/wifi/WifiController;->loge(Ljava/lang/String;)V
 
     return-void
@@ -869,7 +787,6 @@
     .param p1, "x1"    # Lcom/android/internal/util/IState;
 
     .prologue
-    .line 52
     invoke-virtual {p0, p1}, Lcom/android/server/wifi/WifiController;->transitionTo(Lcom/android/internal/util/IState;)V
 
     return-void
@@ -881,7 +798,6 @@
     .param p1, "x1"    # Lcom/android/internal/util/IState;
 
     .prologue
-    .line 52
     invoke-virtual {p0, p1}, Lcom/android/server/wifi/WifiController;->transitionTo(Lcom/android/internal/util/IState;)V
 
     return-void
@@ -893,7 +809,6 @@
     .param p1, "x1"    # Lcom/android/internal/util/IState;
 
     .prologue
-    .line 52
     invoke-virtual {p0, p1}, Lcom/android/server/wifi/WifiController;->transitionTo(Lcom/android/internal/util/IState;)V
 
     return-void
@@ -905,7 +820,6 @@
     .param p1, "x1"    # Ljava/lang/String;
 
     .prologue
-    .line 52
     invoke-virtual {p0, p1}, Lcom/android/server/wifi/WifiController;->log(Ljava/lang/String;)V
 
     return-void
@@ -917,7 +831,6 @@
     .param p1, "x1"    # Ljava/lang/String;
 
     .prologue
-    .line 52
     invoke-virtual {p0, p1}, Lcom/android/server/wifi/WifiController;->log(Ljava/lang/String;)V
 
     return-void
@@ -928,7 +841,6 @@
     .param p0, "x0"    # Lcom/android/server/wifi/WifiController;
 
     .prologue
-    .line 52
     iget-wide v0, p0, Lcom/android/server/wifi/WifiController;->mReEnableDelayMillis:J
 
     return-wide v0
@@ -940,7 +852,6 @@
     .param p1, "x1"    # Ljava/lang/String;
 
     .prologue
-    .line 52
     invoke-virtual {p0, p1}, Lcom/android/server/wifi/WifiController;->log(Ljava/lang/String;)V
 
     return-void
@@ -951,7 +862,6 @@
     .param p0, "x0"    # Lcom/android/server/wifi/WifiController;
 
     .prologue
-    .line 52
     iget-object v0, p0, Lcom/android/server/wifi/WifiController;->mAlarmManager:Landroid/app/AlarmManager;
 
     return-object v0
@@ -963,7 +873,6 @@
     .param p1, "x1"    # Lcom/android/internal/util/IState;
 
     .prologue
-    .line 52
     invoke-virtual {p0, p1}, Lcom/android/server/wifi/WifiController;->transitionTo(Lcom/android/internal/util/IState;)V
 
     return-void
@@ -975,7 +884,6 @@
     .param p1, "x1"    # Lcom/android/internal/util/IState;
 
     .prologue
-    .line 52
     invoke-virtual {p0, p1}, Lcom/android/server/wifi/WifiController;->transitionTo(Lcom/android/internal/util/IState;)V
 
     return-void
@@ -987,7 +895,6 @@
     .param p1, "x1"    # Ljava/lang/String;
 
     .prologue
-    .line 52
     invoke-virtual {p0, p1}, Lcom/android/server/wifi/WifiController;->loge(Ljava/lang/String;)V
 
     return-void
@@ -999,7 +906,6 @@
     .param p1, "x1"    # Lcom/android/internal/util/IState;
 
     .prologue
-    .line 52
     invoke-virtual {p0, p1}, Lcom/android/server/wifi/WifiController;->transitionTo(Lcom/android/internal/util/IState;)V
 
     return-void
@@ -1010,7 +916,6 @@
     .param p0, "x0"    # Lcom/android/server/wifi/WifiController;
 
     .prologue
-    .line 52
     iget-object v0, p0, Lcom/android/server/wifi/WifiController;->mEcmState:Lcom/android/server/wifi/WifiController$EcmState;
 
     return-object v0
@@ -1022,7 +927,6 @@
     .param p1, "x1"    # Lcom/android/internal/util/IState;
 
     .prologue
-    .line 52
     invoke-virtual {p0, p1}, Lcom/android/server/wifi/WifiController;->transitionTo(Lcom/android/internal/util/IState;)V
 
     return-void
@@ -1034,7 +938,6 @@
     .param p1, "x1"    # Lcom/android/internal/util/IState;
 
     .prologue
-    .line 52
     invoke-virtual {p0, p1}, Lcom/android/server/wifi/WifiController;->transitionTo(Lcom/android/internal/util/IState;)V
 
     return-void
@@ -1046,7 +949,6 @@
     .param p1, "x1"    # Ljava/lang/String;
 
     .prologue
-    .line 52
     invoke-virtual {p0, p1}, Lcom/android/server/wifi/WifiController;->loge(Ljava/lang/String;)V
 
     return-void
@@ -1058,7 +960,6 @@
     .param p1, "x1"    # Lcom/android/internal/util/IState;
 
     .prologue
-    .line 52
     invoke-virtual {p0, p1}, Lcom/android/server/wifi/WifiController;->transitionTo(Lcom/android/internal/util/IState;)V
 
     return-void
@@ -1070,7 +971,6 @@
     .param p1, "x1"    # Lcom/android/internal/util/IState;
 
     .prologue
-    .line 52
     invoke-virtual {p0, p1}, Lcom/android/server/wifi/WifiController;->transitionTo(Lcom/android/internal/util/IState;)V
 
     return-void
@@ -1081,7 +981,6 @@
     .param p0, "x0"    # Lcom/android/server/wifi/WifiController;
 
     .prologue
-    .line 52
     iget-boolean v0, p0, Lcom/android/server/wifi/WifiController;->mScreenOff:Z
 
     return v0
@@ -1093,7 +992,6 @@
     .param p1, "x1"    # Lcom/android/internal/util/IState;
 
     .prologue
-    .line 52
     invoke-virtual {p0, p1}, Lcom/android/server/wifi/WifiController;->transitionTo(Lcom/android/internal/util/IState;)V
 
     return-void
@@ -1105,7 +1003,6 @@
     .param p1, "x1"    # Z
 
     .prologue
-    .line 52
     iput-boolean p1, p0, Lcom/android/server/wifi/WifiController;->mScreenOff:Z
 
     return p1
@@ -1117,7 +1014,6 @@
     .param p1, "x1"    # Landroid/os/Message;
 
     .prologue
-    .line 52
     invoke-virtual {p0, p1}, Lcom/android/server/wifi/WifiController;->deferMessage(Landroid/os/Message;)V
 
     return-void
@@ -1129,7 +1025,6 @@
     .param p1, "x1"    # Lcom/android/internal/util/IState;
 
     .prologue
-    .line 52
     invoke-virtual {p0, p1}, Lcom/android/server/wifi/WifiController;->transitionTo(Lcom/android/internal/util/IState;)V
 
     return-void
@@ -1141,7 +1036,6 @@
     .param p1, "x1"    # Ljava/lang/String;
 
     .prologue
-    .line 52
     invoke-virtual {p0, p1}, Lcom/android/server/wifi/WifiController;->log(Ljava/lang/String;)V
 
     return-void
@@ -1153,7 +1047,6 @@
     .param p1, "x1"    # Ljava/lang/String;
 
     .prologue
-    .line 52
     invoke-virtual {p0, p1}, Lcom/android/server/wifi/WifiController;->logd(Ljava/lang/String;)V
 
     return-void
@@ -1165,7 +1058,6 @@
     .param p1, "x1"    # Ljava/lang/String;
 
     .prologue
-    .line 52
     invoke-virtual {p0, p1}, Lcom/android/server/wifi/WifiController;->log(Ljava/lang/String;)V
 
     return-void
@@ -1177,7 +1069,6 @@
     .param p1, "x1"    # Lcom/android/internal/util/IState;
 
     .prologue
-    .line 52
     invoke-virtual {p0, p1}, Lcom/android/server/wifi/WifiController;->transitionTo(Lcom/android/internal/util/IState;)V
 
     return-void
@@ -1189,7 +1080,6 @@
     .param p1, "x1"    # Lcom/android/internal/util/IState;
 
     .prologue
-    .line 52
     invoke-virtual {p0, p1}, Lcom/android/server/wifi/WifiController;->transitionTo(Lcom/android/internal/util/IState;)V
 
     return-void
@@ -1201,7 +1091,6 @@
     .param p1, "x1"    # Lcom/android/internal/util/IState;
 
     .prologue
-    .line 52
     invoke-virtual {p0, p1}, Lcom/android/server/wifi/WifiController;->transitionTo(Lcom/android/internal/util/IState;)V
 
     return-void
@@ -1213,7 +1102,6 @@
     .param p1, "x1"    # Lcom/android/internal/util/IState;
 
     .prologue
-    .line 52
     invoke-virtual {p0, p1}, Lcom/android/server/wifi/WifiController;->transitionTo(Lcom/android/internal/util/IState;)V
 
     return-void
@@ -1224,7 +1112,6 @@
     .param p0, "x0"    # Lcom/android/server/wifi/WifiController;
 
     .prologue
-    .line 52
     iget-boolean v0, p0, Lcom/android/server/wifi/WifiController;->mDeviceIdle:Z
 
     return v0
@@ -1236,7 +1123,6 @@
     .param p1, "x1"    # Lcom/android/internal/util/IState;
 
     .prologue
-    .line 52
     invoke-virtual {p0, p1}, Lcom/android/server/wifi/WifiController;->transitionTo(Lcom/android/internal/util/IState;)V
 
     return-void
@@ -1248,7 +1134,6 @@
     .param p1, "x1"    # Z
 
     .prologue
-    .line 52
     iput-boolean p1, p0, Lcom/android/server/wifi/WifiController;->mDeviceIdle:Z
 
     return p1
@@ -1260,7 +1145,6 @@
     .param p1, "x1"    # Ljava/lang/String;
 
     .prologue
-    .line 52
     invoke-virtual {p0, p1}, Lcom/android/server/wifi/WifiController;->loge(Ljava/lang/String;)V
 
     return-void
@@ -1272,7 +1156,6 @@
     .param p1, "x1"    # Lcom/android/internal/util/IState;
 
     .prologue
-    .line 52
     invoke-virtual {p0, p1}, Lcom/android/server/wifi/WifiController;->transitionTo(Lcom/android/internal/util/IState;)V
 
     return-void
@@ -1284,7 +1167,6 @@
     .param p1, "x1"    # Lcom/android/internal/util/IState;
 
     .prologue
-    .line 52
     invoke-virtual {p0, p1}, Lcom/android/server/wifi/WifiController;->transitionTo(Lcom/android/internal/util/IState;)V
 
     return-void
@@ -1296,7 +1178,6 @@
     .param p1, "x1"    # Lcom/android/internal/util/IState;
 
     .prologue
-    .line 52
     invoke-virtual {p0, p1}, Lcom/android/server/wifi/WifiController;->transitionTo(Lcom/android/internal/util/IState;)V
 
     return-void
@@ -1308,7 +1189,6 @@
     .param p1, "x1"    # Lcom/android/internal/util/IState;
 
     .prologue
-    .line 52
     invoke-virtual {p0, p1}, Lcom/android/server/wifi/WifiController;->transitionTo(Lcom/android/internal/util/IState;)V
 
     return-void
@@ -1320,7 +1200,6 @@
     .param p1, "x1"    # Lcom/android/internal/util/IState;
 
     .prologue
-    .line 52
     invoke-virtual {p0, p1}, Lcom/android/server/wifi/WifiController;->transitionTo(Lcom/android/internal/util/IState;)V
 
     return-void
@@ -1332,7 +1211,6 @@
     .param p1, "x1"    # Lcom/android/internal/util/IState;
 
     .prologue
-    .line 52
     invoke-virtual {p0, p1}, Lcom/android/server/wifi/WifiController;->transitionTo(Lcom/android/internal/util/IState;)V
 
     return-void
@@ -1343,7 +1221,6 @@
     .param p0, "x0"    # Lcom/android/server/wifi/WifiController;
 
     .prologue
-    .line 52
     invoke-direct {p0}, Lcom/android/server/wifi/WifiController;->updateBatteryWorkSource()V
 
     return-void
@@ -1354,7 +1231,6 @@
     .param p0, "x0"    # Lcom/android/server/wifi/WifiController;
 
     .prologue
-    .line 52
     iget v0, p0, Lcom/android/server/wifi/WifiController;->mPluggedType:I
 
     return v0
@@ -1366,7 +1242,6 @@
     .param p1, "x1"    # I
 
     .prologue
-    .line 52
     iput p1, p0, Lcom/android/server/wifi/WifiController;->mPluggedType:I
 
     return p1
@@ -1378,7 +1253,6 @@
     .param p1, "x1"    # I
 
     .prologue
-    .line 52
     invoke-direct {p0, p1}, Lcom/android/server/wifi/WifiController;->shouldWifiStayAwake(I)Z
 
     move-result v0
@@ -1390,7 +1264,6 @@
     .locals 2
 
     .prologue
-    .line 919
     iget-object v0, p0, Lcom/android/server/wifi/WifiController;->mLocks:Lcom/android/server/wifi/WifiServiceImpl$LockList;
 
     invoke-virtual {v0}, Lcom/android/server/wifi/WifiServiceImpl$LockList;->hasLocks()Z
@@ -1399,7 +1272,6 @@
 
     if-eqz v0, :cond_0
 
-    .line 920
     iget-object v0, p0, Lcom/android/server/wifi/WifiController;->mLocks:Lcom/android/server/wifi/WifiServiceImpl$LockList;
 
     invoke-virtual {v0}, Lcom/android/server/wifi/WifiServiceImpl$LockList;->getStrongestLockMode()I
@@ -1408,7 +1280,6 @@
 
     packed-switch v0, :pswitch_data_0
 
-    .line 931
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -1435,11 +1306,9 @@
 
     invoke-virtual {p0, v0}, Lcom/android/server/wifi/WifiController;->loge(Ljava/lang/String;)V
 
-    .line 940
     :goto_0
     return-void
 
-    .line 922
     :pswitch_0
     iget-object v0, p0, Lcom/android/server/wifi/WifiController;->mFullLockHeldState:Lcom/android/server/wifi/WifiController$FullLockHeldState;
 
@@ -1447,7 +1316,6 @@
 
     goto :goto_0
 
-    .line 925
     :pswitch_1
     iget-object v0, p0, Lcom/android/server/wifi/WifiController;->mFullHighPerfLockHeldState:Lcom/android/server/wifi/WifiController$FullHighPerfLockHeldState;
 
@@ -1455,7 +1323,6 @@
 
     goto :goto_0
 
-    .line 928
     :pswitch_2
     iget-object v0, p0, Lcom/android/server/wifi/WifiController;->mScanOnlyLockHeldState:Lcom/android/server/wifi/WifiController$ScanOnlyLockHeldState;
 
@@ -1463,7 +1330,6 @@
 
     goto :goto_0
 
-    .line 934
     :cond_0
     iget-object v0, p0, Lcom/android/server/wifi/WifiController;->mSettingsStore:Lcom/android/server/wifi/WifiSettingsStore;
 
@@ -1473,14 +1339,12 @@
 
     if-eqz v0, :cond_1
 
-    .line 935
     iget-object v0, p0, Lcom/android/server/wifi/WifiController;->mScanOnlyLockHeldState:Lcom/android/server/wifi/WifiController$ScanOnlyLockHeldState;
 
     invoke-virtual {p0, v0}, Lcom/android/server/wifi/WifiController;->transitionTo(Lcom/android/internal/util/IState;)V
 
     goto :goto_0
 
-    .line 937
     :cond_1
     iget-object v0, p0, Lcom/android/server/wifi/WifiController;->mNoLockHeldState:Lcom/android/server/wifi/WifiController$NoLockHeldState;
 
@@ -1488,7 +1352,6 @@
 
     goto :goto_0
 
-    .line 920
     :pswitch_data_0
     .packed-switch 0x1
         :pswitch_0
@@ -1502,34 +1365,25 @@
     .param p1, "looper"    # Landroid/os/Looper;
 
     .prologue
-    .line 219
     new-instance v0, Landroid/os/Handler;
 
     invoke-direct {v0, p1}, Landroid/os/Handler;-><init>(Landroid/os/Looper;)V
 
-    .line 220
     .local v0, "handler":Landroid/os/Handler;
     invoke-direct {p0}, Lcom/android/server/wifi/WifiController;->readStayAwakeConditions()V
 
-    .line 221
     invoke-direct {p0, v0}, Lcom/android/server/wifi/WifiController;->registerForStayAwakeModeChange(Landroid/os/Handler;)V
 
-    .line 222
     invoke-direct {p0}, Lcom/android/server/wifi/WifiController;->readWifiIdleTime()V
 
-    .line 223
     invoke-direct {p0, v0}, Lcom/android/server/wifi/WifiController;->registerForWifiIdleTimeChange(Landroid/os/Handler;)V
 
-    .line 224
     invoke-direct {p0}, Lcom/android/server/wifi/WifiController;->readWifiSleepPolicy()V
 
-    .line 225
     invoke-direct {p0, v0}, Lcom/android/server/wifi/WifiController;->registerForWifiSleepPolicyChange(Landroid/os/Handler;)V
 
-    .line 226
     invoke-direct {p0}, Lcom/android/server/wifi/WifiController;->readWifiReEnableDelay()V
 
-    .line 227
     return-void
 .end method
 
@@ -1537,7 +1391,6 @@
     .locals 3
 
     .prologue
-    .line 230
     iget-object v0, p0, Lcom/android/server/wifi/WifiController;->mContext:Landroid/content/Context;
 
     invoke-virtual {v0}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
@@ -1554,7 +1407,6 @@
 
     iput v0, p0, Lcom/android/server/wifi/WifiController;->mStayAwakeConditions:I
 
-    .line 232
     return-void
 .end method
 
@@ -1562,7 +1414,6 @@
     .locals 4
 
     .prologue
-    .line 235
     iget-object v0, p0, Lcom/android/server/wifi/WifiController;->mContext:Landroid/content/Context;
 
     invoke-virtual {v0}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
@@ -1579,7 +1430,6 @@
 
     iput-wide v0, p0, Lcom/android/server/wifi/WifiController;->mIdleMillis:J
 
-    .line 237
     return-void
 .end method
 
@@ -1587,7 +1437,6 @@
     .locals 4
 
     .prologue
-    .line 246
     iget-object v0, p0, Lcom/android/server/wifi/WifiController;->mContext:Landroid/content/Context;
 
     invoke-virtual {v0}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
@@ -1604,7 +1453,6 @@
 
     iput-wide v0, p0, Lcom/android/server/wifi/WifiController;->mReEnableDelayMillis:J
 
-    .line 248
     return-void
 .end method
 
@@ -1612,7 +1460,6 @@
     .locals 3
 
     .prologue
-    .line 240
     iget-object v0, p0, Lcom/android/server/wifi/WifiController;->mContext:Landroid/content/Context;
 
     invoke-virtual {v0}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
@@ -1629,7 +1476,6 @@
 
     iput v0, p0, Lcom/android/server/wifi/WifiController;->mSleepPolicy:I
 
-    .line 243
     return-void
 .end method
 
@@ -1638,12 +1484,10 @@
     .param p1, "handler"    # Landroid/os/Handler;
 
     .prologue
-    .line 254
     new-instance v0, Lcom/android/server/wifi/WifiController$2;
 
     invoke-direct {v0, p0, p1}, Lcom/android/server/wifi/WifiController$2;-><init>(Lcom/android/server/wifi/WifiController;Landroid/os/Handler;)V
 
-    .line 261
     .local v0, "contentObserver":Landroid/database/ContentObserver;
     iget-object v1, p0, Lcom/android/server/wifi/WifiController;->mContext:Landroid/content/Context;
 
@@ -1661,7 +1505,6 @@
 
     invoke-virtual {v1, v2, v3, v0}, Landroid/content/ContentResolver;->registerContentObserver(Landroid/net/Uri;ZLandroid/database/ContentObserver;)V
 
-    .line 264
     return-void
 .end method
 
@@ -1670,12 +1513,10 @@
     .param p1, "handler"    # Landroid/os/Handler;
 
     .prologue
-    .line 270
     new-instance v0, Lcom/android/server/wifi/WifiController$3;
 
     invoke-direct {v0, p0, p1}, Lcom/android/server/wifi/WifiController$3;-><init>(Lcom/android/server/wifi/WifiController;Landroid/os/Handler;)V
 
-    .line 277
     .local v0, "contentObserver":Landroid/database/ContentObserver;
     iget-object v1, p0, Lcom/android/server/wifi/WifiController;->mContext:Landroid/content/Context;
 
@@ -1693,7 +1534,6 @@
 
     invoke-virtual {v1, v2, v3, v0}, Landroid/content/ContentResolver;->registerContentObserver(Landroid/net/Uri;ZLandroid/database/ContentObserver;)V
 
-    .line 280
     return-void
 .end method
 
@@ -1702,12 +1542,10 @@
     .param p1, "handler"    # Landroid/os/Handler;
 
     .prologue
-    .line 286
     new-instance v0, Lcom/android/server/wifi/WifiController$4;
 
     invoke-direct {v0, p0, p1}, Lcom/android/server/wifi/WifiController$4;-><init>(Lcom/android/server/wifi/WifiController;Landroid/os/Handler;)V
 
-    .line 292
     .local v0, "contentObserver":Landroid/database/ContentObserver;
     iget-object v1, p0, Lcom/android/server/wifi/WifiController;->mContext:Landroid/content/Context;
 
@@ -1725,7 +1563,6 @@
 
     invoke-virtual {v1, v2, v3, v0}, Landroid/content/ContentResolver;->registerContentObserver(Landroid/net/Uri;ZLandroid/database/ContentObserver;)V
 
-    .line 295
     return-void
 .end method
 
@@ -1734,7 +1571,6 @@
     .param p1, "pluggedType"    # I
 
     .prologue
-    .line 329
     iget v0, p0, Lcom/android/server/wifi/WifiController;->mStayAwakeConditions:I
 
     and-int/2addr v0, p1
@@ -1759,19 +1595,16 @@
     .prologue
     const/4 v0, 0x1
 
-    .line 305
     iget v1, p0, Lcom/android/server/wifi/WifiController;->mSleepPolicy:I
 
     const/4 v2, 0x2
 
     if-ne v1, v2, :cond_1
 
-    .line 314
     :cond_0
     :goto_0
     return v0
 
-    .line 308
     :cond_1
     iget v1, p0, Lcom/android/server/wifi/WifiController;->mSleepPolicy:I
 
@@ -1779,7 +1612,6 @@
 
     if-nez p1, :cond_0
 
-    .line 314
     :cond_2
     invoke-direct {p0, p1}, Lcom/android/server/wifi/WifiController;->shouldDeviceStayAwake(I)Z
 
@@ -1792,24 +1624,20 @@
     .locals 2
 
     .prologue
-    .line 333
     iget-object v0, p0, Lcom/android/server/wifi/WifiController;->mTmpWorkSource:Landroid/os/WorkSource;
 
     invoke-virtual {v0}, Landroid/os/WorkSource;->clear()V
 
-    .line 334
     iget-boolean v0, p0, Lcom/android/server/wifi/WifiController;->mDeviceIdle:Z
 
     if-eqz v0, :cond_0
 
-    .line 335
     iget-object v0, p0, Lcom/android/server/wifi/WifiController;->mLocks:Lcom/android/server/wifi/WifiServiceImpl$LockList;
 
     iget-object v1, p0, Lcom/android/server/wifi/WifiController;->mTmpWorkSource:Landroid/os/WorkSource;
 
     invoke-virtual {v0, v1}, Lcom/android/server/wifi/WifiServiceImpl$LockList;->updateWorkSource(Landroid/os/WorkSource;)V
 
-    .line 337
     :cond_0
     iget-object v0, p0, Lcom/android/server/wifi/WifiController;->mWifiStateMachine:Lcom/android/server/wifi/WifiStateMachine;
 
@@ -1817,7 +1645,6 @@
 
     invoke-virtual {v0, v1}, Lcom/android/server/wifi/WifiStateMachine;->updateBatteryWorkSource(Landroid/os/WorkSource;)V
 
-    .line 338
     return-void
 .end method
 
@@ -1830,10 +1657,8 @@
     .param p3, "args"    # [Ljava/lang/String;
 
     .prologue
-    .line 944
     invoke-super {p0, p1, p2, p3}, Lcom/android/internal/util/StateMachine;->dump(Ljava/io/FileDescriptor;Ljava/io/PrintWriter;[Ljava/lang/String;)V
 
-    .line 946
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -1856,7 +1681,6 @@
 
     invoke-virtual {p2, v0}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
-    .line 947
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -1879,7 +1703,6 @@
 
     invoke-virtual {p2, v0}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
-    .line 948
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -1902,7 +1725,6 @@
 
     invoke-virtual {p2, v0}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
-    .line 949
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -1925,7 +1747,6 @@
 
     invoke-virtual {p2, v0}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
-    .line 950
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -1948,6 +1769,5 @@
 
     invoke-virtual {p2, v0}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
-    .line 951
     return-void
 .end method

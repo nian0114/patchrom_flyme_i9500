@@ -38,7 +38,6 @@
     .locals 1
 
     .prologue
-    .line 21
     const-class v0, Landroid/content/CustomCursor;
 
     invoke-virtual {v0}, Ljava/lang/Class;->getSimpleName()Ljava/lang/String;
@@ -47,7 +46,6 @@
 
     sput-object v0, Landroid/content/CustomCursor;->TAG:Ljava/lang/String;
 
-    .line 93
     new-instance v0, Landroid/content/CustomCursor$1;
 
     invoke-direct {v0}, Landroid/content/CustomCursor$1;-><init>()V
@@ -62,35 +60,28 @@
     .param p1, "window"    # Landroid/database/CursorWindow;
 
     .prologue
-    .line 47
     invoke-direct {p0}, Landroid/database/AbstractWindowedCursor;-><init>()V
 
-    .line 23
     const/4 v0, 0x0
 
     iput-boolean v0, p0, Landroid/content/CustomCursor;->isAutoClose:Z
 
-    .line 25
     new-instance v0, Landroid/os/Bundle;
 
     invoke-direct {v0}, Landroid/os/Bundle;-><init>()V
 
     iput-object v0, p0, Landroid/content/CustomCursor;->mBundle:Landroid/os/Bundle;
 
-    .line 26
     const/4 v0, 0x0
 
     iput-object v0, p0, Landroid/content/CustomCursor;->mColumnNames:[Ljava/lang/String;
 
-    .line 31
     const/4 v0, -0x1
 
     iput v0, p0, Landroid/content/CustomCursor;->mCursorOwnerId:I
 
-    .line 48
     invoke-super {p0, p1}, Landroid/database/AbstractWindowedCursor;->setWindow(Landroid/database/CursorWindow;)V
 
-    .line 49
     return-void
 .end method
 
@@ -99,35 +90,28 @@
     .param p1, "in"    # Landroid/os/Parcel;
 
     .prologue
-    .line 55
     invoke-direct {p0}, Landroid/database/AbstractWindowedCursor;-><init>()V
 
-    .line 23
     const/4 v0, 0x0
 
     iput-boolean v0, p0, Landroid/content/CustomCursor;->isAutoClose:Z
 
-    .line 25
     new-instance v0, Landroid/os/Bundle;
 
     invoke-direct {v0}, Landroid/os/Bundle;-><init>()V
 
     iput-object v0, p0, Landroid/content/CustomCursor;->mBundle:Landroid/os/Bundle;
 
-    .line 26
     const/4 v0, 0x0
 
     iput-object v0, p0, Landroid/content/CustomCursor;->mColumnNames:[Ljava/lang/String;
 
-    .line 31
     const/4 v0, -0x1
 
     iput v0, p0, Landroid/content/CustomCursor;->mCursorOwnerId:I
 
-    .line 56
     invoke-virtual {p0, p1}, Landroid/content/CustomCursor;->readFromParcel(Landroid/os/Parcel;)V
 
-    .line 57
     return-void
 .end method
 
@@ -137,7 +121,6 @@
     .locals 1
 
     .prologue
-    .line 61
     const/4 v0, 0x0
 
     return v0
@@ -147,7 +130,6 @@
     .locals 1
 
     .prologue
-    .line 119
     iget-object v0, p0, Landroid/content/CustomCursor;->mColumnNames:[Ljava/lang/String;
 
     return-object v0
@@ -157,7 +139,6 @@
     .locals 1
 
     .prologue
-    .line 125
     invoke-super {p0}, Landroid/database/AbstractWindowedCursor;->getWindow()Landroid/database/CursorWindow;
 
     move-result-object v0
@@ -173,7 +154,6 @@
     .locals 1
 
     .prologue
-    .line 130
     iget v0, p0, Landroid/content/CustomCursor;->mCursorOwnerId:I
 
     return v0
@@ -184,7 +164,6 @@
     .param p1, "in"    # Landroid/os/Parcel;
 
     .prologue
-    .line 83
     const-class v1, Landroid/database/CursorWindow;
 
     invoke-virtual {v1}, Ljava/lang/Class;->getClassLoader()Ljava/lang/ClassLoader;
@@ -197,23 +176,19 @@
 
     check-cast v0, Landroid/database/CursorWindow;
 
-    .line 84
     .local v0, "window":Landroid/database/CursorWindow;
     invoke-super {p0, v0}, Landroid/database/AbstractWindowedCursor;->setWindow(Landroid/database/CursorWindow;)V
 
-    .line 85
     invoke-virtual {p1}, Landroid/os/Parcel;->readBundle()Landroid/os/Bundle;
 
     move-result-object v1
 
     iput-object v1, p0, Landroid/content/CustomCursor;->mBundle:Landroid/os/Bundle;
 
-    .line 86
     iget-object v1, p0, Landroid/content/CustomCursor;->mBundle:Landroid/os/Bundle;
 
     if-eqz v1, :cond_0
 
-    .line 87
     iget-object v1, p0, Landroid/content/CustomCursor;->mBundle:Landroid/os/Bundle;
 
     const-string v2, "ColumnNames"
@@ -224,7 +199,6 @@
 
     iput-object v1, p0, Landroid/content/CustomCursor;->mColumnNames:[Ljava/lang/String;
 
-    .line 89
     :cond_0
     invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
 
@@ -232,7 +206,6 @@
 
     iput v1, p0, Landroid/content/CustomCursor;->mCursorOwnerId:I
 
-    .line 90
     return-void
 .end method
 
@@ -241,10 +214,8 @@
     .param p1, "value"    # Z
 
     .prologue
-    .line 145
     iput-boolean p1, p0, Landroid/content/CustomCursor;->isAutoClose:Z
 
-    .line 146
     return-void
 .end method
 
@@ -253,10 +224,8 @@
     .param p1, "columnNames"    # [Ljava/lang/String;
 
     .prologue
-    .line 113
     iput-object p1, p0, Landroid/content/CustomCursor;->mColumnNames:[Ljava/lang/String;
 
-    .line 114
     return-void
 .end method
 
@@ -265,10 +234,8 @@
     .param p1, "cursorOwnerId"    # I
 
     .prologue
-    .line 134
     iput p1, p0, Landroid/content/CustomCursor;->mCursorOwnerId:I
 
-    .line 135
     return-void
 .end method
 
@@ -278,7 +245,6 @@
     .param p2, "flags"    # I
 
     .prologue
-    .line 67
     invoke-super {p0}, Landroid/database/AbstractWindowedCursor;->getWindow()Landroid/database/CursorWindow;
 
     move-result-object v0
@@ -287,7 +253,6 @@
 
     invoke-virtual {p1, v0, v1}, Landroid/os/Parcel;->writeParcelable(Landroid/os/Parcelable;I)V
 
-    .line 69
     iget-object v0, p0, Landroid/content/CustomCursor;->mBundle:Landroid/os/Bundle;
 
     const-string v1, "ColumnNames"
@@ -296,17 +261,14 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/os/Bundle;->putStringArray(Ljava/lang/String;[Ljava/lang/String;)V
 
-    .line 70
     iget-object v0, p0, Landroid/content/CustomCursor;->mBundle:Landroid/os/Bundle;
 
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeBundle(Landroid/os/Bundle;)V
 
-    .line 71
     iget v0, p0, Landroid/content/CustomCursor;->mCursorOwnerId:I
 
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 73
     and-int/lit8 v0, p2, 0x1
 
     if-nez v0, :cond_0
@@ -315,11 +277,9 @@
 
     if-eqz v0, :cond_1
 
-    .line 74
     :cond_0
     invoke-virtual {p0}, Landroid/content/CustomCursor;->close()V
 
-    .line 76
     :cond_1
     return-void
 .end method

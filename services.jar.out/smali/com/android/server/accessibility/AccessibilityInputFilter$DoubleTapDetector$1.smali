@@ -23,7 +23,6 @@
     .locals 0
 
     .prologue
-    .line 680
     iput-object p1, p0, Lcom/android/server/accessibility/AccessibilityInputFilter$DoubleTapDetector$1;->this$1:Lcom/android/server/accessibility/AccessibilityInputFilter$DoubleTapDetector;
 
     invoke-direct {p0}, Landroid/os/Handler;-><init>()V
@@ -38,17 +37,14 @@
     .param p1, "msg"    # Landroid/os/Message;
 
     .prologue
-    .line 682
     iget v0, p1, Landroid/os/Message;->what:I
 
     packed-switch v0, :pswitch_data_0
 
-    .line 693
     :goto_0
     :pswitch_0
     return-void
 
-    .line 684
     :pswitch_1
     iget-object v0, p0, Lcom/android/server/accessibility/AccessibilityInputFilter$DoubleTapDetector$1;->this$1:Lcom/android/server/accessibility/AccessibilityInputFilter$DoubleTapDetector;
 
@@ -57,7 +53,6 @@
 
     goto :goto_0
 
-    .line 687
     :pswitch_2
     iget-object v0, p0, Lcom/android/server/accessibility/AccessibilityInputFilter$DoubleTapDetector$1;->this$1:Lcom/android/server/accessibility/AccessibilityInputFilter$DoubleTapDetector;
 
@@ -66,7 +61,6 @@
 
     goto :goto_0
 
-    .line 690
     :pswitch_3
     iget-object v0, p0, Lcom/android/server/accessibility/AccessibilityInputFilter$DoubleTapDetector$1;->this$1:Lcom/android/server/accessibility/AccessibilityInputFilter$DoubleTapDetector;
 
@@ -75,7 +69,6 @@
 
     goto :goto_0
 
-    .line 682
     :pswitch_data_0
     .packed-switch 0x1
         :pswitch_1

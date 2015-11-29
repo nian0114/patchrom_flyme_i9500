@@ -11,12 +11,10 @@
     .param p3, "listener"    # Landroid/hardware/scontext/provider/EventListener;
 
     .prologue
-    .line 36
     const/16 v0, 0x8
 
     invoke-direct {p0, p1, v0, p3}, Landroid/hardware/scontext/provider/caeprovider/CaeProvider;-><init>(Landroid/content/Context;ILandroid/hardware/scontext/provider/EventListener;)V
 
-    .line 38
     return-void
 .end method
 
@@ -27,14 +25,12 @@
     .param p1, "context"    # Landroid/os/Bundle;
 
     .prologue
-    .line 51
     const-string v2, "Temperature"
 
     invoke-virtual {p1, v2}, Landroid/os/Bundle;->getDoubleArray(Ljava/lang/String;)[D
 
     move-result-object v1
 
-    .line 52
     .local v1, "temp":[D
     const-string v2, "Humidity"
 
@@ -42,7 +38,6 @@
 
     move-result-object v0
 
-    .line 53
     .local v0, "humi":[D
     const-string v2, "EnvSensorType"
 
@@ -50,16 +45,13 @@
 
     invoke-virtual {p1, v2, v3}, Landroid/os/Bundle;->putInt(Ljava/lang/String;I)V
 
-    .line 54
     const-string v2, "Temperature"
 
     invoke-virtual {p1, v2, v1}, Landroid/os/Bundle;->putDoubleArray(Ljava/lang/String;[D)V
 
-    .line 55
     const-string v2, "Humidity"
 
     invoke-virtual {p1, v2, v0}, Landroid/os/Bundle;->putDoubleArray(Ljava/lang/String;[D)V
 
-    .line 56
     return-object p1
 .end method

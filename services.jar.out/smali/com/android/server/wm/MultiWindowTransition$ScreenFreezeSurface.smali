@@ -52,59 +52,48 @@
     .end annotation
 
     .prologue
-    .line 378
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 369
     new-instance v1, Landroid/graphics/Rect;
 
     invoke-direct {v1}, Landroid/graphics/Rect;-><init>()V
 
     iput-object v1, p0, Lcom/android/server/wm/MultiWindowTransition$ScreenFreezeSurface;->mRect:Landroid/graphics/Rect;
 
-    .line 370
     const/4 v1, 0x0
 
     iput-object v1, p0, Lcom/android/server/wm/MultiWindowTransition$ScreenFreezeSurface;->mSurface:Landroid/view/SurfaceControl;
 
-    .line 371
     const/4 v1, 0x0
 
     iput-object v1, p0, Lcom/android/server/wm/MultiWindowTransition$ScreenFreezeSurface;->mBGSurface:Landroid/view/SurfaceControl;
 
-    .line 373
     new-instance v1, Landroid/graphics/Matrix;
 
     invoke-direct {v1}, Landroid/graphics/Matrix;-><init>()V
 
     iput-object v1, p0, Lcom/android/server/wm/MultiWindowTransition$ScreenFreezeSurface;->mTmpMatrix:Landroid/graphics/Matrix;
 
-    .line 374
     const/16 v1, 0x9
 
     new-array v1, v1, [F
 
     iput-object v1, p0, Lcom/android/server/wm/MultiWindowTransition$ScreenFreezeSurface;->mTmpFloats:[F
 
-    .line 379
     sub-int v4, p4, p2
 
-    .line 380
     .local v4, "w":I
     sub-int v5, p5, p3
 
-    .line 382
     .local v5, "h":I
     iget-object v1, p0, Lcom/android/server/wm/MultiWindowTransition$ScreenFreezeSurface;->mRect:Landroid/graphics/Rect;
 
     invoke-virtual {v1, p2, p3, p4, p5}, Landroid/graphics/Rect;->set(IIII)V
 
-    .line 383
     move/from16 v0, p7
 
     iput v0, p0, Lcom/android/server/wm/MultiWindowTransition$ScreenFreezeSurface;->mRotation:I
 
-    .line 390
     new-instance v1, Landroid/view/SurfaceControl;
 
     const-string v3, "ScreenFreezeSurface"
@@ -119,10 +108,8 @@
 
     iput-object v1, p0, Lcom/android/server/wm/MultiWindowTransition$ScreenFreezeSurface;->mSurface:Landroid/view/SurfaceControl;
 
-    .line 394
     if-eqz p8, :cond_0
 
-    .line 400
     new-instance v1, Landroid/view/SurfaceControl;
 
     const-string v3, "ScreenFreezeBGSurface"
@@ -137,24 +124,20 @@
 
     iput-object v1, p0, Lcom/android/server/wm/MultiWindowTransition$ScreenFreezeSurface;->mBGSurface:Landroid/view/SurfaceControl;
 
-    .line 406
     :cond_0
     iget-object v1, p0, Lcom/android/server/wm/MultiWindowTransition$ScreenFreezeSurface;->mSurface:Landroid/view/SurfaceControl;
 
     if-eqz v1, :cond_1
 
-    .line 407
     new-instance v9, Landroid/view/Surface;
 
     invoke-direct {v9}, Landroid/view/Surface;-><init>()V
 
-    .line 408
     .local v9, "sur":Landroid/view/Surface;
     iget-object v1, p0, Lcom/android/server/wm/MultiWindowTransition$ScreenFreezeSurface;->mSurface:Landroid/view/SurfaceControl;
 
     invoke-virtual {v9, v1}, Landroid/view/Surface;->copyFrom(Landroid/view/SurfaceControl;)V
 
-    .line 411
     const/4 v1, 0x0
 
     invoke-static {v1}, Landroid/view/SurfaceControl;->getBuiltInDisplay(I)Landroid/os/IBinder;
@@ -163,29 +146,24 @@
 
     invoke-static {v1, v9}, Landroid/view/SurfaceControl;->screenshot(Landroid/os/IBinder;Landroid/view/Surface;)V
 
-    .line 412
     invoke-virtual {v9}, Landroid/view/Surface;->destroy()V
 
-    .line 414
     iget-object v1, p0, Lcom/android/server/wm/MultiWindowTransition$ScreenFreezeSurface;->mSurface:Landroid/view/SurfaceControl;
 
     move/from16 v0, p6
 
     invoke-virtual {v1, v0}, Landroid/view/SurfaceControl;->setLayerStack(I)V
 
-    .line 415
     iget-object v1, p0, Lcom/android/server/wm/MultiWindowTransition$ScreenFreezeSurface;->mSurface:Landroid/view/SurfaceControl;
 
     const v2, 0x1e8481
 
     invoke-virtual {v1, v2}, Landroid/view/SurfaceControl;->setLayer(I)V
 
-    .line 417
     iget v1, p0, Lcom/android/server/wm/MultiWindowTransition$ScreenFreezeSurface;->mRotation:I
 
     packed-switch v1, :pswitch_data_0
 
-    .line 437
     .end local v9    # "sur":Landroid/view/Surface;
     :cond_1
     :goto_0
@@ -193,18 +171,15 @@
 
     if-eqz v1, :cond_2
 
-    .line 438
     new-instance v8, Landroid/view/Surface;
 
     invoke-direct {v8}, Landroid/view/Surface;-><init>()V
 
-    .line 439
     .local v8, "bgSur":Landroid/view/Surface;
     iget-object v1, p0, Lcom/android/server/wm/MultiWindowTransition$ScreenFreezeSurface;->mBGSurface:Landroid/view/SurfaceControl;
 
     invoke-virtual {v8, v1}, Landroid/view/Surface;->copyFrom(Landroid/view/SurfaceControl;)V
 
-    .line 442
     const/4 v1, 0x0
 
     invoke-static {v1}, Landroid/view/SurfaceControl;->getBuiltInDisplay(I)Landroid/os/IBinder;
@@ -213,35 +188,29 @@
 
     invoke-static {v1, v8}, Landroid/view/SurfaceControl;->screenshot(Landroid/os/IBinder;Landroid/view/Surface;)V
 
-    .line 443
     invoke-virtual {v8}, Landroid/view/Surface;->destroy()V
 
-    .line 445
     iget-object v1, p0, Lcom/android/server/wm/MultiWindowTransition$ScreenFreezeSurface;->mBGSurface:Landroid/view/SurfaceControl;
 
     move/from16 v0, p6
 
     invoke-virtual {v1, v0}, Landroid/view/SurfaceControl;->setLayerStack(I)V
 
-    .line 446
     iget-object v1, p0, Lcom/android/server/wm/MultiWindowTransition$ScreenFreezeSurface;->mBGSurface:Landroid/view/SurfaceControl;
 
     const/16 v2, 0x2af7
 
     invoke-virtual {v1, v2}, Landroid/view/SurfaceControl;->setLayer(I)V
 
-    .line 448
     iget v1, p0, Lcom/android/server/wm/MultiWindowTransition$ScreenFreezeSurface;->mRotation:I
 
     packed-switch v1, :pswitch_data_1
 
-    .line 467
     .end local v8    # "bgSur":Landroid/view/Surface;
     :cond_2
     :goto_1
     return-void
 
-    .line 419
     .restart local v9    # "sur":Landroid/view/Surface;
     :pswitch_0
     iget-object v1, p0, Lcom/android/server/wm/MultiWindowTransition$ScreenFreezeSurface;->mSurface:Landroid/view/SurfaceControl;
@@ -252,7 +221,6 @@
 
     invoke-virtual {v1, v2, v3}, Landroid/view/SurfaceControl;->setPosition(FF)V
 
-    .line 420
     iget-object v1, p0, Lcom/android/server/wm/MultiWindowTransition$ScreenFreezeSurface;->mSurface:Landroid/view/SurfaceControl;
 
     const/high16 v2, 0x3f800000    # 1.0f
@@ -267,7 +235,6 @@
 
     goto :goto_0
 
-    .line 423
     :pswitch_1
     iget-object v1, p0, Lcom/android/server/wm/MultiWindowTransition$ScreenFreezeSurface;->mSurface:Landroid/view/SurfaceControl;
 
@@ -277,7 +244,6 @@
 
     invoke-virtual {v1, v2, v3}, Landroid/view/SurfaceControl;->setPosition(FF)V
 
-    .line 424
     iget-object v1, p0, Lcom/android/server/wm/MultiWindowTransition$ScreenFreezeSurface;->mSurface:Landroid/view/SurfaceControl;
 
     const/4 v2, 0x0
@@ -292,7 +258,6 @@
 
     goto :goto_0
 
-    .line 427
     :pswitch_2
     iget-object v1, p0, Lcom/android/server/wm/MultiWindowTransition$ScreenFreezeSurface;->mSurface:Landroid/view/SurfaceControl;
 
@@ -302,7 +267,6 @@
 
     invoke-virtual {v1, v2, v3}, Landroid/view/SurfaceControl;->setPosition(FF)V
 
-    .line 428
     iget-object v1, p0, Lcom/android/server/wm/MultiWindowTransition$ScreenFreezeSurface;->mSurface:Landroid/view/SurfaceControl;
 
     const/high16 v2, -0x40800000    # -1.0f
@@ -317,7 +281,6 @@
 
     goto :goto_0
 
-    .line 431
     :pswitch_3
     iget-object v1, p0, Lcom/android/server/wm/MultiWindowTransition$ScreenFreezeSurface;->mSurface:Landroid/view/SurfaceControl;
 
@@ -327,7 +290,6 @@
 
     invoke-virtual {v1, v2, v3}, Landroid/view/SurfaceControl;->setPosition(FF)V
 
-    .line 432
     iget-object v1, p0, Lcom/android/server/wm/MultiWindowTransition$ScreenFreezeSurface;->mSurface:Landroid/view/SurfaceControl;
 
     const/4 v2, 0x0
@@ -342,7 +304,6 @@
 
     goto :goto_0
 
-    .line 450
     .end local v9    # "sur":Landroid/view/Surface;
     .restart local v8    # "bgSur":Landroid/view/Surface;
     :pswitch_4
@@ -354,7 +315,6 @@
 
     invoke-virtual {v1, v2, v3}, Landroid/view/SurfaceControl;->setPosition(FF)V
 
-    .line 451
     iget-object v1, p0, Lcom/android/server/wm/MultiWindowTransition$ScreenFreezeSurface;->mBGSurface:Landroid/view/SurfaceControl;
 
     const/high16 v2, 0x3f800000    # 1.0f
@@ -369,7 +329,6 @@
 
     goto :goto_1
 
-    .line 454
     :pswitch_5
     iget-object v1, p0, Lcom/android/server/wm/MultiWindowTransition$ScreenFreezeSurface;->mBGSurface:Landroid/view/SurfaceControl;
 
@@ -379,7 +338,6 @@
 
     invoke-virtual {v1, v2, v3}, Landroid/view/SurfaceControl;->setPosition(FF)V
 
-    .line 455
     iget-object v1, p0, Lcom/android/server/wm/MultiWindowTransition$ScreenFreezeSurface;->mBGSurface:Landroid/view/SurfaceControl;
 
     const/4 v2, 0x0
@@ -394,7 +352,6 @@
 
     goto :goto_1
 
-    .line 458
     :pswitch_6
     iget-object v1, p0, Lcom/android/server/wm/MultiWindowTransition$ScreenFreezeSurface;->mBGSurface:Landroid/view/SurfaceControl;
 
@@ -404,7 +361,6 @@
 
     invoke-virtual {v1, v2, v3}, Landroid/view/SurfaceControl;->setPosition(FF)V
 
-    .line 459
     iget-object v1, p0, Lcom/android/server/wm/MultiWindowTransition$ScreenFreezeSurface;->mBGSurface:Landroid/view/SurfaceControl;
 
     const/high16 v2, -0x40800000    # -1.0f
@@ -419,7 +375,6 @@
 
     goto/16 :goto_1
 
-    .line 462
     :pswitch_7
     iget-object v1, p0, Lcom/android/server/wm/MultiWindowTransition$ScreenFreezeSurface;->mBGSurface:Landroid/view/SurfaceControl;
 
@@ -429,7 +384,6 @@
 
     invoke-virtual {v1, v2, v3}, Landroid/view/SurfaceControl;->setPosition(FF)V
 
-    .line 463
     iget-object v1, p0, Lcom/android/server/wm/MultiWindowTransition$ScreenFreezeSurface;->mBGSurface:Landroid/view/SurfaceControl;
 
     const/4 v2, 0x0
@@ -444,7 +398,6 @@
 
     goto/16 :goto_1
 
-    .line 417
     :pswitch_data_0
     .packed-switch 0x0
         :pswitch_0
@@ -453,7 +406,6 @@
         :pswitch_3
     .end packed-switch
 
-    .line 448
     :pswitch_data_1
     .packed-switch 0x0
         :pswitch_4
@@ -471,34 +423,27 @@
     .prologue
     const/4 v1, 0x0
 
-    .line 515
     iget-object v0, p0, Lcom/android/server/wm/MultiWindowTransition$ScreenFreezeSurface;->mSurface:Landroid/view/SurfaceControl;
 
     if-eqz v0, :cond_0
 
-    .line 516
     iget-object v0, p0, Lcom/android/server/wm/MultiWindowTransition$ScreenFreezeSurface;->mSurface:Landroid/view/SurfaceControl;
 
     invoke-virtual {v0}, Landroid/view/SurfaceControl;->destroy()V
 
-    .line 517
     iput-object v1, p0, Lcom/android/server/wm/MultiWindowTransition$ScreenFreezeSurface;->mSurface:Landroid/view/SurfaceControl;
 
-    .line 520
     :cond_0
     iget-object v0, p0, Lcom/android/server/wm/MultiWindowTransition$ScreenFreezeSurface;->mBGSurface:Landroid/view/SurfaceControl;
 
     if-eqz v0, :cond_1
 
-    .line 521
     iget-object v0, p0, Lcom/android/server/wm/MultiWindowTransition$ScreenFreezeSurface;->mBGSurface:Landroid/view/SurfaceControl;
 
     invoke-virtual {v0}, Landroid/view/SurfaceControl;->destroy()V
 
-    .line 522
     iput-object v1, p0, Lcom/android/server/wm/MultiWindowTransition$ScreenFreezeSurface;->mBGSurface:Landroid/view/SurfaceControl;
 
-    .line 524
     :cond_1
     return-void
 .end method
@@ -508,7 +453,6 @@
     .param p1, "transformation"    # Landroid/view/animation/Transformation;
 
     .prologue
-    .line 470
     iget-object v4, p0, Lcom/android/server/wm/MultiWindowTransition$ScreenFreezeSurface;->mTmpMatrix:Landroid/graphics/Matrix;
 
     invoke-virtual {p1}, Landroid/view/animation/Transformation;->getMatrix()Landroid/graphics/Matrix;
@@ -517,14 +461,12 @@
 
     invoke-virtual {v4, v5}, Landroid/graphics/Matrix;->set(Landroid/graphics/Matrix;)V
 
-    .line 471
     iget-object v4, p0, Lcom/android/server/wm/MultiWindowTransition$ScreenFreezeSurface;->mRect:Landroid/graphics/Rect;
 
     iget v4, v4, Landroid/graphics/Rect;->left:I
 
     int-to-float v1, v4
 
-    .line 472
     .local v1, "left":F
     iget-object v4, p0, Lcom/android/server/wm/MultiWindowTransition$ScreenFreezeSurface;->mRect:Landroid/graphics/Rect;
 
@@ -532,7 +474,6 @@
 
     int-to-float v2, v4
 
-    .line 473
     .local v2, "top":F
     iget-object v4, p0, Lcom/android/server/wm/MultiWindowTransition$ScreenFreezeSurface;->mRect:Landroid/graphics/Rect;
 
@@ -542,7 +483,6 @@
 
     int-to-float v3, v4
 
-    .line 474
     .local v3, "width":F
     iget-object v4, p0, Lcom/android/server/wm/MultiWindowTransition$ScreenFreezeSurface;->mRect:Landroid/graphics/Rect;
 
@@ -552,13 +492,11 @@
 
     int-to-float v0, v4
 
-    .line 477
     .local v0, "height":F
     iget v4, p0, Lcom/android/server/wm/MultiWindowTransition$ScreenFreezeSurface;->mRotation:I
 
     packed-switch v4, :pswitch_data_0
 
-    .line 495
     :goto_0
     iget-object v4, p0, Lcom/android/server/wm/MultiWindowTransition$ScreenFreezeSurface;->mTmpMatrix:Landroid/graphics/Matrix;
 
@@ -566,7 +504,6 @@
 
     invoke-virtual {v4, v5}, Landroid/graphics/Matrix;->getValues([F)V
 
-    .line 496
     iget-object v4, p0, Lcom/android/server/wm/MultiWindowTransition$ScreenFreezeSurface;->mSurface:Landroid/view/SurfaceControl;
 
     iget-object v5, p0, Lcom/android/server/wm/MultiWindowTransition$ScreenFreezeSurface;->mTmpFloats:[F
@@ -583,7 +520,6 @@
 
     invoke-virtual {v4, v5, v6}, Landroid/view/SurfaceControl;->setPosition(FF)V
 
-    .line 498
     iget-object v4, p0, Lcom/android/server/wm/MultiWindowTransition$ScreenFreezeSurface;->mSurface:Landroid/view/SurfaceControl;
 
     iget-object v5, p0, Lcom/android/server/wm/MultiWindowTransition$ScreenFreezeSurface;->mTmpFloats:[F
@@ -612,7 +548,6 @@
 
     invoke-virtual {v4, v5, v6, v7, v8}, Landroid/view/SurfaceControl;->setMatrix(FFFF)V
 
-    .line 501
     iget-object v4, p0, Lcom/android/server/wm/MultiWindowTransition$ScreenFreezeSurface;->mSurface:Landroid/view/SurfaceControl;
 
     invoke-virtual {p1}, Landroid/view/animation/Transformation;->getAlpha()F
@@ -621,10 +556,8 @@
 
     invoke-virtual {v4, v5}, Landroid/view/SurfaceControl;->setAlpha(F)V
 
-    .line 503
     return-void
 
-    .line 479
     :pswitch_0
     iget-object v4, p0, Lcom/android/server/wm/MultiWindowTransition$ScreenFreezeSurface;->mTmpMatrix:Landroid/graphics/Matrix;
 
@@ -632,7 +565,6 @@
 
     goto :goto_0
 
-    .line 482
     :pswitch_1
     iget-object v4, p0, Lcom/android/server/wm/MultiWindowTransition$ScreenFreezeSurface;->mTmpMatrix:Landroid/graphics/Matrix;
 
@@ -640,7 +572,6 @@
 
     invoke-virtual {v4, v5}, Landroid/graphics/Matrix;->postRotate(F)Z
 
-    .line 483
     iget-object v4, p0, Lcom/android/server/wm/MultiWindowTransition$ScreenFreezeSurface;->mTmpMatrix:Landroid/graphics/Matrix;
 
     sub-float v5, v3, v2
@@ -649,7 +580,6 @@
 
     goto :goto_0
 
-    .line 486
     :pswitch_2
     iget-object v4, p0, Lcom/android/server/wm/MultiWindowTransition$ScreenFreezeSurface;->mTmpMatrix:Landroid/graphics/Matrix;
 
@@ -657,7 +587,6 @@
 
     invoke-virtual {v4, v5}, Landroid/graphics/Matrix;->postRotate(F)Z
 
-    .line 487
     iget-object v4, p0, Lcom/android/server/wm/MultiWindowTransition$ScreenFreezeSurface;->mTmpMatrix:Landroid/graphics/Matrix;
 
     sub-float v5, v3, v1
@@ -668,7 +597,6 @@
 
     goto :goto_0
 
-    .line 490
     :pswitch_3
     iget-object v4, p0, Lcom/android/server/wm/MultiWindowTransition$ScreenFreezeSurface;->mTmpMatrix:Landroid/graphics/Matrix;
 
@@ -676,7 +604,6 @@
 
     invoke-virtual {v4, v5}, Landroid/graphics/Matrix;->postRotate(F)Z
 
-    .line 491
     iget-object v4, p0, Lcom/android/server/wm/MultiWindowTransition$ScreenFreezeSurface;->mTmpMatrix:Landroid/graphics/Matrix;
 
     sub-float v5, v0, v1
@@ -685,7 +612,6 @@
 
     goto :goto_0
 
-    .line 477
     :pswitch_data_0
     .packed-switch 0x0
         :pswitch_0
@@ -699,28 +625,23 @@
     .locals 1
 
     .prologue
-    .line 506
     iget-object v0, p0, Lcom/android/server/wm/MultiWindowTransition$ScreenFreezeSurface;->mSurface:Landroid/view/SurfaceControl;
 
     if-eqz v0, :cond_0
 
-    .line 507
     iget-object v0, p0, Lcom/android/server/wm/MultiWindowTransition$ScreenFreezeSurface;->mSurface:Landroid/view/SurfaceControl;
 
     invoke-virtual {v0}, Landroid/view/SurfaceControl;->show()V
 
-    .line 509
     :cond_0
     iget-object v0, p0, Lcom/android/server/wm/MultiWindowTransition$ScreenFreezeSurface;->mBGSurface:Landroid/view/SurfaceControl;
 
     if-eqz v0, :cond_1
 
-    .line 510
     iget-object v0, p0, Lcom/android/server/wm/MultiWindowTransition$ScreenFreezeSurface;->mBGSurface:Landroid/view/SurfaceControl;
 
     invoke-virtual {v0}, Landroid/view/SurfaceControl;->show()V
 
-    .line 512
     :cond_1
     return-void
 .end method
@@ -729,7 +650,6 @@
     .locals 1
 
     .prologue
-    .line 528
     iget-object v0, p0, Lcom/android/server/wm/MultiWindowTransition$ScreenFreezeSurface;->mSurface:Landroid/view/SurfaceControl;
 
     invoke-virtual {v0}, Landroid/view/SurfaceControl;->toString()Ljava/lang/String;

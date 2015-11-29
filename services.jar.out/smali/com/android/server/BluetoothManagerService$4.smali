@@ -26,7 +26,6 @@
     .locals 0
 
     .prologue
-    .line 2255
     iput-object p1, p0, Lcom/android/server/BluetoothManagerService$4;->this$0:Lcom/android/server/BluetoothManagerService;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -41,7 +40,6 @@
     .param p1, "dialog"    # Landroid/content/DialogInterface;
 
     .prologue
-    .line 2258
     iget-object v0, p0, Lcom/android/server/BluetoothManagerService$4;->this$0:Lcom/android/server/BluetoothManagerService;
 
     const/16 v1, 0xd
@@ -51,7 +49,6 @@
     # invokes: Lcom/android/server/BluetoothManagerService;->bluetoothStateChangeHandler(II)V
     invoke-static {v0, v1, v2}, Lcom/android/server/BluetoothManagerService;->access$3900(Lcom/android/server/BluetoothManagerService;II)V
 
-    .line 2259
     iget-object v0, p0, Lcom/android/server/BluetoothManagerService$4;->this$0:Lcom/android/server/BluetoothManagerService;
 
     # getter for: Lcom/android/server/BluetoothManagerService;->mContext:Landroid/content/Context;
@@ -67,13 +64,10 @@
 
     invoke-virtual {v0, v1}, Landroid/content/Context;->sendBroadcast(Landroid/content/Intent;)V
 
-    .line 2260
     if-eqz p1, :cond_0
 
-    .line 2261
     invoke-interface {p1}, Landroid/content/DialogInterface;->dismiss()V
 
-    .line 2262
     :cond_0
     return-void
 .end method

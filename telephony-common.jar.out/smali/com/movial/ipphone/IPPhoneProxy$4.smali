@@ -26,7 +26,6 @@
     .locals 0
 
     .prologue
-    .line 538
     iput-object p1, p0, Lcom/movial/ipphone/IPPhoneProxy$4;->this$0:Lcom/movial/ipphone/IPPhoneProxy;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -44,14 +43,12 @@
     .prologue
     const/4 v3, 0x1
 
-    .line 540
     const-string v1, "IPPhoneProxy"
 
     const-string v2, "IIPRegistry ServiceConnected"
 
     invoke-static {v1, v2}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 541
     iget-object v1, p0, Lcom/movial/ipphone/IPPhoneProxy$4;->this$0:Lcom/movial/ipphone/IPPhoneProxy;
 
     invoke-static {p2}, Lcom/movial/ipphone/IIPRegistry$Stub;->asInterface(Landroid/os/IBinder;)Lcom/movial/ipphone/IIPRegistry;
@@ -61,7 +58,6 @@
     # setter for: Lcom/movial/ipphone/IPPhoneProxy;->mIPRegistry:Lcom/movial/ipphone/IIPRegistry;
     invoke-static {v1, v2}, Lcom/movial/ipphone/IPPhoneProxy;->access$1002(Lcom/movial/ipphone/IPPhoneProxy;Lcom/movial/ipphone/IIPRegistry;)Lcom/movial/ipphone/IIPRegistry;
 
-    .line 542
     iget-object v1, p0, Lcom/movial/ipphone/IPPhoneProxy$4;->this$0:Lcom/movial/ipphone/IPPhoneProxy;
 
     # getter for: Lcom/movial/ipphone/IPPhoneProxy;->binded:Ljava/util/concurrent/atomic/AtomicBoolean;
@@ -71,7 +67,6 @@
 
     invoke-virtual {v1, v3}, Ljava/util/concurrent/atomic/AtomicBoolean;->set(Z)V
 
-    .line 544
     :try_start_0
     iget-object v1, p0, Lcom/movial/ipphone/IPPhoneProxy$4;->this$0:Lcom/movial/ipphone/IPPhoneProxy;
 
@@ -88,7 +83,6 @@
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 551
     :goto_0
     iget-object v1, p0, Lcom/movial/ipphone/IPPhoneProxy$4;->this$0:Lcom/movial/ipphone/IPPhoneProxy;
 
@@ -99,7 +93,6 @@
 
     invoke-virtual {v1}, Lcom/movial/ipphone/IPPhone;->bindService()V
 
-    .line 555
     :try_start_1
     iget-object v1, p0, Lcom/movial/ipphone/IPPhoneProxy$4;->this$0:Lcom/movial/ipphone/IPPhoneProxy;
 
@@ -123,15 +116,12 @@
     :try_end_1
     .catch Ljava/lang/Exception; {:try_start_1 .. :try_end_1} :catch_1
 
-    .line 559
     :goto_1
     return-void
 
-    .line 545
     :catch_0
     move-exception v0
 
-    .line 546
     .local v0, "e":Ljava/lang/Exception;
     const-string v1, "IPPhoneProxy"
 
@@ -159,17 +149,14 @@
 
     invoke-static {v1, v2}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 547
     invoke-virtual {v0}, Ljava/lang/Exception;->printStackTrace()V
 
     goto :goto_0
 
-    .line 556
     .end local v0    # "e":Ljava/lang/Exception;
     :catch_1
     move-exception v0
 
-    .line 557
     .restart local v0    # "e":Ljava/lang/Exception;
     const-string v1, "IPPhoneProxy"
 
@@ -207,14 +194,12 @@
     .prologue
     const/4 v4, 0x0
 
-    .line 561
     const-string v1, "IPPhoneProxy"
 
     const-string v2, "IPPolicy ServiceDisconnected"
 
     invoke-static {v1, v2}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 565
     :try_start_0
     iget-object v1, p0, Lcom/movial/ipphone/IPPhoneProxy$4;->this$0:Lcom/movial/ipphone/IPPhoneProxy;
 
@@ -238,14 +223,12 @@
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 570
     :goto_0
     iget-object v1, p0, Lcom/movial/ipphone/IPPhoneProxy$4;->this$0:Lcom/movial/ipphone/IPPhoneProxy;
 
     # invokes: Lcom/movial/ipphone/IPPhoneProxy;->unbindService(Z)V
     invoke-static {v1, v4}, Lcom/movial/ipphone/IPPhoneProxy;->access$000(Lcom/movial/ipphone/IPPhoneProxy;Z)V
 
-    .line 573
     iget-object v1, p0, Lcom/movial/ipphone/IPPhoneProxy$4;->this$0:Lcom/movial/ipphone/IPPhoneProxy;
 
     invoke-virtual {v1}, Lcom/movial/ipphone/IPPhoneProxy;->getContext()Landroid/content/Context;
@@ -266,21 +249,17 @@
 
     if-nez v1, :cond_0
 
-    .line 574
     iget-object v1, p0, Lcom/movial/ipphone/IPPhoneProxy$4;->this$0:Lcom/movial/ipphone/IPPhoneProxy;
 
     # invokes: Lcom/movial/ipphone/IPPhoneProxy;->bindService()V
     invoke-static {v1}, Lcom/movial/ipphone/IPPhoneProxy;->access$200(Lcom/movial/ipphone/IPPhoneProxy;)V
 
-    .line 575
     :cond_0
     return-void
 
-    .line 566
     :catch_0
     move-exception v0
 
-    .line 567
     .local v0, "e":Ljava/lang/Exception;
     const-string v1, "IPPhoneProxy"
 

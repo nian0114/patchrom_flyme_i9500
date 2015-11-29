@@ -30,17 +30,14 @@
     .param p2, "looper"    # Landroid/os/Looper;
 
     .prologue
-    .line 1302
     iput-object p1, p0, Lcom/android/server/wm/AccessibilityController$WindowsForAccessibilityObserver$MyHandler;->this$0:Lcom/android/server/wm/AccessibilityController$WindowsForAccessibilityObserver;
 
-    .line 1303
     const/4 v0, 0x0
 
     const/4 v1, 0x0
 
     invoke-direct {p0, p2, v0, v1}, Landroid/os/Handler;-><init>(Landroid/os/Looper;Landroid/os/Handler$Callback;Z)V
 
-    .line 1304
     return-void
 .end method
 
@@ -51,16 +48,13 @@
     .param p1, "message"    # Landroid/os/Message;
 
     .prologue
-    .line 1309
     iget v1, p1, Landroid/os/Message;->what:I
 
     packed-switch v1, :pswitch_data_0
 
-    .line 1320
     :goto_0
     return-void
 
-    .line 1311
     :pswitch_0
     iget-object v1, p0, Lcom/android/server/wm/AccessibilityController$WindowsForAccessibilityObserver$MyHandler;->this$0:Lcom/android/server/wm/AccessibilityController$WindowsForAccessibilityObserver;
 
@@ -68,13 +62,11 @@
 
     goto :goto_0
 
-    .line 1315
     :pswitch_1
     iget-object v0, p1, Landroid/os/Message;->obj:Ljava/lang/Object;
 
     check-cast v0, Ljava/util/List;
 
-    .line 1316
     .local v0, "windows":Ljava/util/List;, "Ljava/util/List<Landroid/view/WindowInfo;>;"
     iget-object v1, p0, Lcom/android/server/wm/AccessibilityController$WindowsForAccessibilityObserver$MyHandler;->this$0:Lcom/android/server/wm/AccessibilityController$WindowsForAccessibilityObserver;
 
@@ -85,7 +77,6 @@
 
     invoke-interface {v1, v0}, Landroid/view/WindowManagerInternal$WindowsForAccessibilityCallback;->onWindowsForAccessibilityChanged(Ljava/util/List;)V
 
-    .line 1317
     iget-object v1, p0, Lcom/android/server/wm/AccessibilityController$WindowsForAccessibilityObserver$MyHandler;->this$0:Lcom/android/server/wm/AccessibilityController$WindowsForAccessibilityObserver;
 
     # invokes: Lcom/android/server/wm/AccessibilityController$WindowsForAccessibilityObserver;->clearAndRecycleWindows(Ljava/util/List;)V
@@ -93,7 +84,6 @@
 
     goto :goto_0
 
-    .line 1309
     nop
 
     :pswitch_data_0

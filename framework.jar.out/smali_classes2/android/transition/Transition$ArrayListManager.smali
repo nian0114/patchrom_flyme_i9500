@@ -19,7 +19,6 @@
     .locals 0
 
     .prologue
-    .line 2358
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -40,18 +39,15 @@
     .end annotation
 
     .prologue
-    .line 2369
     .local p0, "list":Ljava/util/ArrayList;, "Ljava/util/ArrayList<TT;>;"
     .local p1, "item":Ljava/lang/Object;, "TT;"
     if-nez p0, :cond_0
 
-    .line 2370
     new-instance p0, Ljava/util/ArrayList;
 
     .end local p0    # "list":Ljava/util/ArrayList;, "Ljava/util/ArrayList<TT;>;"
     invoke-direct {p0}, Ljava/util/ArrayList;-><init>()V
 
-    .line 2372
     .restart local p0    # "list":Ljava/util/ArrayList;, "Ljava/util/ArrayList<TT;>;"
     :cond_0
     invoke-virtual {p0, p1}, Ljava/util/ArrayList;->contains(Ljava/lang/Object;)Z
@@ -60,10 +56,8 @@
 
     if-nez v0, :cond_1
 
-    .line 2373
     invoke-virtual {p0, p1}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 2375
     :cond_1
     return-object p0
 .end method
@@ -83,25 +77,20 @@
     .end annotation
 
     .prologue
-    .line 2384
     .local p0, "list":Ljava/util/ArrayList;, "Ljava/util/ArrayList<TT;>;"
     .local p1, "item":Ljava/lang/Object;, "TT;"
     if-eqz p0, :cond_0
 
-    .line 2385
     invoke-virtual {p0, p1}, Ljava/util/ArrayList;->remove(Ljava/lang/Object;)Z
 
-    .line 2386
     invoke-virtual {p0}, Ljava/util/ArrayList;->isEmpty()Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
-    .line 2387
     const/4 p0, 0x0
 
-    .line 2390
     :cond_0
     return-object p0
 .end method

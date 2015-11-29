@@ -25,7 +25,6 @@
     .param p3, "x1"    # I
 
     .prologue
-    .line 1171
     iput-object p1, p0, Lcom/android/internal/policy/impl/GlobalActions$8;->this$0:Lcom/android/internal/policy/impl/GlobalActions;
 
     invoke-direct {p0, p2, p3}, Lcom/android/internal/policy/impl/GlobalActions$SinglePressAction;-><init>(II)V
@@ -41,14 +40,12 @@
     .prologue
     const/4 v4, 0x0
 
-    .line 1174
     const-string v0, "GlobalActions"
 
     const-string v1, "in onPress of Restart"
 
     invoke-static {v0, v1}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1175
     const-string v0, "eng"
 
     sget-object v1, Landroid/os/Build;->TYPE:Ljava/lang/String;
@@ -59,14 +56,12 @@
 
     if-eqz v0, :cond_0
 
-    .line 1176
     const-string v0, "persist.sys.shutdown"
 
     const-string v1, "GARB"
 
     invoke-static {v0, v1}, Landroid/os/SystemProperties;->set(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 1179
     :cond_0
     iget-object v0, p0, Lcom/android/internal/policy/impl/GlobalActions$8;->this$0:Lcom/android/internal/policy/impl/GlobalActions;
 
@@ -84,7 +79,6 @@
 
     invoke-interface {v0, v1}, Landroid/view/WindowManagerPolicy$WindowManagerFuncs;->reboot(Z)V
 
-    .line 1180
     # getter for: Lcom/android/internal/policy/impl/GlobalActions;->sIsSecondConfirming:Z
     invoke-static {}, Lcom/android/internal/policy/impl/GlobalActions;->access$000()Z
 
@@ -92,7 +86,6 @@
 
     if-nez v0, :cond_1
 
-    .line 1181
     # getter for: Lcom/android/internal/policy/impl/GlobalActions;->sIsConfirmingGuard:Ljava/lang/Object;
     invoke-static {}, Lcom/android/internal/policy/impl/GlobalActions;->access$100()Ljava/lang/Object;
 
@@ -100,19 +93,16 @@
 
     monitor-enter v1
 
-    .line 1182
     const/4 v0, 0x0
 
     :try_start_0
     # setter for: Lcom/android/internal/policy/impl/GlobalActions;->sIsConfirming:Z
     invoke-static {v0}, Lcom/android/internal/policy/impl/GlobalActions;->access$202(Z)Z
 
-    .line 1183
     monitor-exit v1
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 1187
     :goto_0
     iget-object v0, p0, Lcom/android/internal/policy/impl/GlobalActions$8;->this$0:Lcom/android/internal/policy/impl/GlobalActions;
 
@@ -125,10 +115,8 @@
 
     invoke-virtual {v0, v4, v2, v3}, Landroid/os/Handler;->sendEmptyMessageDelayed(IJ)Z
 
-    .line 1188
     return-void
 
-    .line 1183
     :catchall_0
     move-exception v0
 
@@ -139,7 +127,6 @@
 
     throw v0
 
-    .line 1185
     :cond_1
     # setter for: Lcom/android/internal/policy/impl/GlobalActions;->sIsSecondConfirming:Z
     invoke-static {v4}, Lcom/android/internal/policy/impl/GlobalActions;->access$002(Z)Z
@@ -151,7 +138,6 @@
     .locals 1
 
     .prologue
-    .line 1193
     const/4 v0, 0x1
 
     return v0
@@ -161,7 +147,6 @@
     .locals 1
 
     .prologue
-    .line 1205
     const/4 v0, 0x1
 
     return v0
@@ -171,7 +156,6 @@
     .locals 1
 
     .prologue
-    .line 1190
     const/4 v0, 0x1
 
     return v0

@@ -26,7 +26,6 @@
     .locals 0
 
     .prologue
-    .line 364
     iput-object p1, p0, Lcom/android/internal/telephony/RIL$1;->this$0:Lcom/android/internal/telephony/RIL;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -41,7 +40,6 @@
     .param p1, "displayId"    # I
 
     .prologue
-    .line 366
     return-void
 .end method
 
@@ -50,16 +48,13 @@
     .param p1, "displayId"    # I
 
     .prologue
-    .line 373
     if-nez p1, :cond_0
 
-    .line 374
     iget-object v0, p0, Lcom/android/internal/telephony/RIL$1;->this$0:Lcom/android/internal/telephony/RIL;
 
     # invokes: Lcom/android/internal/telephony/RIL;->updateScreenState()V
     invoke-static {v0}, Lcom/android/internal/telephony/RIL;->access$000(Lcom/android/internal/telephony/RIL;)V
 
-    .line 376
     :cond_0
     return-void
 .end method
@@ -69,6 +64,5 @@
     .param p1, "displayId"    # I
 
     .prologue
-    .line 369
     return-void
 .end method

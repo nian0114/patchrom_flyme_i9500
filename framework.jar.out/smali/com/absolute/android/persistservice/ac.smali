@@ -22,7 +22,6 @@
     .locals 0
 
     .prologue
-    .line 629
     iput-object p1, p0, Lcom/absolute/android/persistservice/ac;->a:Lcom/absolute/android/persistservice/ab;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V

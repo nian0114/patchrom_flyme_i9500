@@ -25,12 +25,10 @@
     .locals 1
 
     .prologue
-    .line 105
     iput-object p1, p0, Landroid/net/wifi/AggregationRunnable$TestHttpGet;->this$0:Landroid/net/wifi/AggregationRunnable;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 106
     iget-object v0, p0, Landroid/net/wifi/AggregationRunnable$TestHttpGet;->this$0:Landroid/net/wifi/AggregationRunnable;
 
     iget-object v0, v0, Landroid/net/wifi/AggregationRunnable;->mContext:Landroid/content/Context;
@@ -49,7 +47,6 @@
     .param p1, "refreshUrl"    # Ljava/lang/String;
 
     .prologue
-    .line 175
     if-eqz p1, :cond_0
 
     const-string v0, "vzwwifi.com"
@@ -68,10 +65,8 @@
 
     if-eqz v0, :cond_0
 
-    .line 178
     const/4 v0, 0x1
 
-    .line 179
     :goto_0
     return v0
 
@@ -86,7 +81,6 @@
     .param p1, "loginURL"    # Ljava/net/URI;
 
     .prologue
-    .line 190
     invoke-virtual/range {p1 .. p1}, Ljava/net/URI;->toString()Ljava/lang/String;
 
     move-result-object v19
@@ -101,7 +95,6 @@
 
     if-eqz v19, :cond_4
 
-    .line 194
     :try_start_0
     new-instance v16, Ljava/net/URL;
 
@@ -115,7 +108,6 @@
 
     invoke-direct {v0, v1}, Ljava/net/URL;-><init>(Ljava/lang/String;)V
 
-    .line 195
     .local v16, "url":Ljava/net/URL;
     move-object/from16 v0, p0
 
@@ -152,14 +144,12 @@
 
     invoke-static/range {v19 .. v20}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 196
     invoke-virtual/range {v16 .. v16}, Ljava/net/URL;->openConnection()Ljava/net/URLConnection;
 
     move-result-object v17
 
     check-cast v17, Ljavax/net/ssl/HttpsURLConnection;
 
-    .line 199
     .local v17, "urlConnection":Ljavax/net/ssl/HttpsURLConnection;
     const-string v19, "POST"
 
@@ -169,7 +159,6 @@
 
     invoke-virtual {v0, v1}, Ljavax/net/ssl/HttpsURLConnection;->setRequestMethod(Ljava/lang/String;)V
 
-    .line 200
     const/16 v19, 0x1
 
     move-object/from16 v0, v17
@@ -178,7 +167,6 @@
 
     invoke-virtual {v0, v1}, Ljavax/net/ssl/HttpsURLConnection;->setDoInput(Z)V
 
-    .line 201
     const/16 v19, 0x1
 
     move-object/from16 v0, v17
@@ -187,7 +175,6 @@
 
     invoke-virtual {v0, v1}, Ljavax/net/ssl/HttpsURLConnection;->setDoOutput(Z)V
 
-    .line 202
     const/16 v19, 0x0
 
     move-object/from16 v0, v17
@@ -196,7 +183,6 @@
 
     invoke-virtual {v0, v1}, Ljavax/net/ssl/HttpsURLConnection;->setUseCaches(Z)V
 
-    .line 203
     const-string v19, "Content-Type"
 
     const-string v20, "application/x-www-form-urlencoded"
@@ -209,12 +195,10 @@
 
     invoke-virtual {v0, v1, v2}, Ljavax/net/ssl/HttpsURLConnection;->setRequestProperty(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 205
     new-instance v6, Ljava/lang/StringBuilder;
 
     invoke-direct {v6}, Ljava/lang/StringBuilder;-><init>()V
 
-    .line 207
     .local v6, "content":Ljava/lang/StringBuilder;
     new-instance v3, Landroid/net/wifi/VzwAuth;
 
@@ -234,37 +218,31 @@
 
     invoke-direct {v3, v0}, Landroid/net/wifi/VzwAuth;-><init>(Landroid/content/Context;)V
 
-    .line 208
     .local v3, "auth":Landroid/net/wifi/VzwAuth;
     invoke-virtual {v3}, Landroid/net/wifi/VzwAuth;->getVZWUserName()Ljava/lang/String;
 
     move-result-object v18
 
-    .line 209
     .local v18, "usrName":Ljava/lang/String;
     invoke-virtual {v3}, Landroid/net/wifi/VzwAuth;->getVZWPassword()Ljava/lang/String;
 
     move-result-object v14
 
-    .line 210
     .local v14, "pass":Ljava/lang/String;
     invoke-virtual {v3}, Landroid/net/wifi/VzwAuth;->getDeviceType()Ljava/lang/String;
 
     move-result-object v8
 
-    .line 211
     .local v8, "deviceType":Ljava/lang/String;
     invoke-virtual {v3}, Landroid/net/wifi/VzwAuth;->getModelName()Ljava/lang/String;
 
     move-result-object v11
 
-    .line 212
     .local v11, "model":Ljava/lang/String;
     invoke-virtual {v3}, Landroid/net/wifi/VzwAuth;->getMacAddress()Ljava/lang/String;
 
     move-result-object v4
 
-    .line 213
     .local v4, "callingId":Ljava/lang/String;
     const-string v19, "UserName="
 
@@ -286,7 +264,6 @@
 
     invoke-virtual/range {v19 .. v20}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 214
     const-string v19, "&Password="
 
     move-object/from16 v0, v19
@@ -305,7 +282,6 @@
 
     invoke-virtual/range {v19 .. v20}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 215
     const-string v19, "&device-type="
 
     move-object/from16 v0, v19
@@ -324,7 +300,6 @@
 
     invoke-virtual/range {v19 .. v20}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 216
     const-string v19, "&device-model-number="
 
     move-object/from16 v0, v19
@@ -343,7 +318,6 @@
 
     invoke-virtual/range {v19 .. v20}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 217
     const-string v19, "&calling-station-id="
 
     move-object/from16 v0, v19
@@ -362,7 +336,6 @@
 
     invoke-virtual/range {v19 .. v20}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 218
     move-object/from16 v0, p0
 
     iget-object v0, v0, Landroid/net/wifi/AggregationRunnable$TestHttpGet;->this$0:Landroid/net/wifi/AggregationRunnable;
@@ -398,12 +371,10 @@
 
     invoke-static/range {v19 .. v20}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 220
     invoke-virtual/range {v17 .. v17}, Ljavax/net/ssl/HttpsURLConnection;->getOutputStream()Ljava/io/OutputStream;
 
     move-result-object v13
 
-    .line 221
     .local v13, "outputStream":Ljava/io/OutputStream;
     invoke-virtual {v6}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
@@ -419,15 +390,12 @@
 
     invoke-virtual {v13, v0}, Ljava/io/OutputStream;->write([B)V
 
-    .line 222
     invoke-virtual {v13}, Ljava/io/OutputStream;->close()V
 
-    .line 223
     invoke-virtual/range {v17 .. v17}, Ljavax/net/ssl/HttpsURLConnection;->getResponseCode()I
 
     move-result v15
 
-    .line 224
     .local v15, "responseCode":I
     move-object/from16 v0, p0
 
@@ -462,19 +430,16 @@
 
     invoke-static/range {v19 .. v20}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 226
     const/16 v19, 0xc8
 
     move/from16 v0, v19
 
     if-ne v15, v0, :cond_3
 
-    .line 227
     invoke-virtual/range {v17 .. v17}, Ljavax/net/ssl/HttpsURLConnection;->getInputStream()Ljava/io/InputStream;
 
     move-result-object v10
 
-    .line 228
     .local v10, "is":Ljava/io/InputStream;
     move-object/from16 v0, p0
 
@@ -495,7 +460,6 @@
 
     invoke-interface/range {v19 .. v20}, Lorg/xml/sax/XMLReader;->parse(Lorg/xml/sax/InputSource;)V
 
-    .line 229
     move-object/from16 v0, p0
 
     iget-object v0, v0, Landroid/net/wifi/AggregationRunnable$TestHttpGet;->this$0:Landroid/net/wifi/AggregationRunnable;
@@ -511,7 +475,6 @@
 
     move-result-object v12
 
-    .line 230
     .local v12, "msg":Landroid/net/wifi/Message;
     move-object/from16 v0, p0
 
@@ -548,7 +511,6 @@
 
     invoke-static/range {v19 .. v20}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 231
     iget-boolean v0, v12, Landroid/net/wifi/Message;->hasWispr:Z
 
     move/from16 v19, v0
@@ -561,12 +523,10 @@
 
     if-ne v0, v1, :cond_0
 
-    .line 232
     invoke-virtual {v12}, Landroid/net/wifi/Message;->getComment()Ljava/lang/String;
 
     move-result-object v5
 
-    .line 233
     .local v5, "comment":Ljava/lang/String;
     move-object/from16 v0, p0
 
@@ -601,7 +561,6 @@
 
     invoke-static/range {v19 .. v20}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 234
     const/16 v19, 0x3c
 
     move/from16 v0, v19
@@ -616,7 +575,6 @@
 
     move-result-object v5
 
-    .line 235
     move-object/from16 v0, p0
 
     iget-object v0, v0, Landroid/net/wifi/AggregationRunnable$TestHttpGet;->this$0:Landroid/net/wifi/AggregationRunnable;
@@ -640,7 +598,6 @@
 
     invoke-interface/range {v19 .. v20}, Lorg/xml/sax/XMLReader;->parse(Lorg/xml/sax/InputSource;)V
 
-    .line 236
     move-object/from16 v0, p0
 
     iget-object v0, v0, Landroid/net/wifi/AggregationRunnable$TestHttpGet;->this$0:Landroid/net/wifi/AggregationRunnable;
@@ -656,7 +613,6 @@
 
     move-result-object v12
 
-    .line 239
     .end local v5    # "comment":Ljava/lang/String;
     :cond_0
     iget v0, v12, Landroid/net/wifi/Message;->messageType:I
@@ -671,14 +627,12 @@
 
     if-ne v0, v1, :cond_1
 
-    .line 240
     iget v0, v12, Landroid/net/wifi/Message;->responseCode:I
 
     move/from16 v19, v0
 
     sparse-switch v19, :sswitch_data_0
 
-    .line 261
     move-object/from16 v0, p0
 
     iget-object v0, v0, Landroid/net/wifi/AggregationRunnable$TestHttpGet;->this$0:Landroid/net/wifi/AggregationRunnable;
@@ -694,16 +648,13 @@
 
     invoke-static/range {v19 .. v20}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 269
     .end local v12    # "msg":Landroid/net/wifi/Message;
     :cond_1
     :goto_0
     invoke-virtual {v10}, Ljava/io/InputStream;->close()V
 
-    .line 270
     invoke-virtual/range {v17 .. v17}, Ljavax/net/ssl/HttpsURLConnection;->disconnect()V
 
-    .line 279
     .end local v3    # "auth":Landroid/net/wifi/VzwAuth;
     .end local v4    # "callingId":Ljava/lang/String;
     .end local v6    # "content":Ljava/lang/StringBuilder;
@@ -719,7 +670,6 @@
     :goto_1
     return-void
 
-    .line 242
     .restart local v3    # "auth":Landroid/net/wifi/VzwAuth;
     .restart local v4    # "callingId":Ljava/lang/String;
     .restart local v6    # "content":Ljava/lang/StringBuilder;
@@ -750,7 +700,6 @@
 
     move-result-object v7
 
-    .line 243
     .local v7, "cr":Landroid/content/ContentResolver;
     invoke-virtual {v12}, Landroid/net/wifi/Message;->getLogoffURL()Ljava/net/URI;
 
@@ -758,7 +707,6 @@
 
     if-eqz v19, :cond_2
 
-    .line 245
     const-string v19, "no_logoff_url"
 
     invoke-virtual {v12}, Landroid/net/wifi/Message;->getLogoffURL()Ljava/net/URI;
@@ -775,7 +723,6 @@
 
     invoke-static {v7, v0, v1}, Landroid/provider/Settings$System;->putString(Landroid/content/ContentResolver;Ljava/lang/String;Ljava/lang/String;)Z
 
-    .line 246
     move-object/from16 v0, p0
 
     iget-object v0, v0, Landroid/net/wifi/AggregationRunnable$TestHttpGet;->this$0:Landroid/net/wifi/AggregationRunnable;
@@ -815,7 +762,6 @@
 
     invoke-static/range {v19 .. v20}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 250
     :goto_2
     move-object/from16 v0, p0
 
@@ -841,7 +787,6 @@
 
     goto :goto_0
 
-    .line 271
     .end local v3    # "auth":Landroid/net/wifi/VzwAuth;
     .end local v4    # "callingId":Ljava/lang/String;
     .end local v6    # "content":Ljava/lang/StringBuilder;
@@ -859,7 +804,6 @@
     :catch_0
     move-exception v9
 
-    .line 272
     .local v9, "e":Ljava/lang/Exception;
     move-object/from16 v0, p0
 
@@ -881,12 +825,10 @@
 
     invoke-virtual/range {v19 .. v20}, Landroid/content/Context;->sendBroadcast(Landroid/content/Intent;)V
 
-    .line 273
     invoke-virtual {v9}, Ljava/lang/Exception;->printStackTrace()V
 
     goto/16 :goto_1
 
-    .line 248
     .end local v9    # "e":Ljava/lang/Exception;
     .restart local v3    # "auth":Landroid/net/wifi/VzwAuth;
     .restart local v4    # "callingId":Ljava/lang/String;
@@ -916,7 +858,6 @@
 
     goto :goto_2
 
-    .line 253
     .end local v7    # "cr":Landroid/content/ContentResolver;
     :sswitch_1
     move-object/from16 v0, p0
@@ -934,7 +875,6 @@
 
     invoke-static/range {v19 .. v20}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 254
     move-object/from16 v0, p0
 
     iget-object v0, v0, Landroid/net/wifi/AggregationRunnable$TestHttpGet;->this$0:Landroid/net/wifi/AggregationRunnable;
@@ -957,7 +897,6 @@
 
     goto/16 :goto_0
 
-    .line 257
     :sswitch_2
     move-object/from16 v0, p0
 
@@ -974,7 +913,6 @@
 
     invoke-static/range {v19 .. v20}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 258
     move-object/from16 v0, p0
 
     iget-object v0, v0, Landroid/net/wifi/AggregationRunnable$TestHttpGet;->this$0:Landroid/net/wifi/AggregationRunnable;
@@ -997,7 +935,6 @@
 
     goto/16 :goto_0
 
-    .line 266
     .end local v10    # "is":Ljava/io/InputStream;
     .end local v12    # "msg":Landroid/net/wifi/Message;
     :cond_3
@@ -1016,7 +953,6 @@
 
     invoke-static/range {v19 .. v20}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 267
     invoke-virtual/range {v17 .. v17}, Ljavax/net/ssl/HttpsURLConnection;->getErrorStream()Ljava/io/InputStream;
     :try_end_1
     .catch Ljava/lang/Exception; {:try_start_1 .. :try_end_1} :catch_0
@@ -1026,7 +962,6 @@
     .restart local v10    # "is":Ljava/io/InputStream;
     goto/16 :goto_0
 
-    .line 276
     .end local v3    # "auth":Landroid/net/wifi/VzwAuth;
     .end local v4    # "callingId":Ljava/lang/String;
     .end local v6    # "content":Ljava/lang/StringBuilder;
@@ -1055,7 +990,6 @@
 
     invoke-static/range {v19 .. v20}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 277
     move-object/from16 v0, p0
 
     iget-object v0, v0, Landroid/net/wifi/AggregationRunnable$TestHttpGet;->this$0:Landroid/net/wifi/AggregationRunnable;
@@ -1078,7 +1012,6 @@
 
     goto/16 :goto_1
 
-    .line 240
     nop
 
     :sswitch_data_0
@@ -1102,7 +1035,6 @@
     .prologue
     const/4 v11, 0x1
 
-    .line 109
     :try_start_0
     new-instance v6, Ljava/net/URL;
 
@@ -1110,7 +1042,6 @@
 
     invoke-direct {v6, v8}, Ljava/net/URL;-><init>(Ljava/lang/String;)V
 
-    .line 110
     .local v6, "url":Ljava/net/URL;
     invoke-virtual {v6}, Ljava/net/URL;->openConnection()Ljava/net/URLConnection;
 
@@ -1118,16 +1049,13 @@
 
     check-cast v7, Ljava/net/HttpURLConnection;
 
-    .line 111
     .local v7, "urlConnection":Ljava/net/HttpURLConnection;
     const-string v8, "GET"
 
     invoke-virtual {v7, v8}, Ljava/net/HttpURLConnection;->setRequestMethod(Ljava/lang/String;)V
 
-    .line 112
     invoke-virtual {v7}, Ljava/net/HttpURLConnection;->connect()V
 
-    .line 113
     iget-object v8, p0, Landroid/net/wifi/AggregationRunnable$TestHttpGet;->this$0:Landroid/net/wifi/AggregationRunnable;
 
     # getter for: Landroid/net/wifi/AggregationRunnable;->TAG:Ljava/lang/String;
@@ -1159,7 +1087,6 @@
 
     invoke-static {v8, v9}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 114
     invoke-virtual {v7}, Ljava/net/HttpURLConnection;->getResponseCode()I
 
     move-result v8
@@ -1168,12 +1095,10 @@
 
     if-ne v8, v9, :cond_0
 
-    .line 115
     invoke-virtual {v7}, Ljava/net/HttpURLConnection;->getHeaderFields()Ljava/util/Map;
 
     move-result-object v2
 
-    .line 116
     .local v2, "header":Ljava/util/Map;, "Ljava/util/Map<Ljava/lang/String;Ljava/util/List<Ljava/lang/String;>;>;"
     iget-object v8, p0, Landroid/net/wifi/AggregationRunnable$TestHttpGet;->this$0:Landroid/net/wifi/AggregationRunnable;
 
@@ -1188,14 +1113,12 @@
 
     invoke-static {v8, v9}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 117
     const-string v8, "Location"
 
     invoke-virtual {v7, v8}, Ljava/net/HttpURLConnection;->getHeaderField(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v5
 
-    .line 118
     .local v5, "refreshUrl":Ljava/lang/String;
     iget-object v8, p0, Landroid/net/wifi/AggregationRunnable$TestHttpGet;->this$0:Landroid/net/wifi/AggregationRunnable;
 
@@ -1206,13 +1129,11 @@
 
     invoke-static {v8, v5}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 119
     new-instance v6, Ljava/net/URL;
 
     .end local v6    # "url":Ljava/net/URL;
     invoke-direct {v6, v5}, Ljava/net/URL;-><init>(Ljava/lang/String;)V
 
-    .line 120
     .restart local v6    # "url":Ljava/net/URL;
     invoke-virtual {v6}, Ljava/net/URL;->openConnection()Ljava/net/URLConnection;
 
@@ -1221,16 +1142,13 @@
     .end local v7    # "urlConnection":Ljava/net/HttpURLConnection;
     check-cast v7, Ljava/net/HttpURLConnection;
 
-    .line 121
     .restart local v7    # "urlConnection":Ljava/net/HttpURLConnection;
     const-string v8, "GET"
 
     invoke-virtual {v7, v8}, Ljava/net/HttpURLConnection;->setRequestMethod(Ljava/lang/String;)V
 
-    .line 122
     invoke-virtual {v7}, Ljava/net/HttpURLConnection;->connect()V
 
-    .line 124
     .end local v2    # "header":Ljava/util/Map;, "Ljava/util/Map<Ljava/lang/String;Ljava/util/List<Ljava/lang/String;>;>;"
     .end local v5    # "refreshUrl":Ljava/lang/String;
     :cond_0
@@ -1245,12 +1163,10 @@
 
     invoke-static {v8, v9}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 125
     invoke-virtual {v7}, Ljava/net/HttpURLConnection;->getInputStream()Ljava/io/InputStream;
 
     move-result-object v3
 
-    .line 126
     .local v3, "is":Ljava/io/InputStream;
     iget-object v8, p0, Landroid/net/wifi/AggregationRunnable$TestHttpGet;->this$0:Landroid/net/wifi/AggregationRunnable;
 
@@ -1265,7 +1181,6 @@
 
     invoke-interface {v8, v9}, Lorg/xml/sax/XMLReader;->parse(Lorg/xml/sax/InputSource;)V
 
-    .line 127
     iget-object v8, p0, Landroid/net/wifi/AggregationRunnable$TestHttpGet;->this$0:Landroid/net/wifi/AggregationRunnable;
 
     # getter for: Landroid/net/wifi/AggregationRunnable;->handler:Landroid/net/wifi/AggregationHandler;
@@ -1277,7 +1192,6 @@
 
     move-result-object v4
 
-    .line 128
     .local v4, "msg":Landroid/net/wifi/Message;
     iget-object v8, p0, Landroid/net/wifi/AggregationRunnable$TestHttpGet;->this$0:Landroid/net/wifi/AggregationRunnable;
 
@@ -1308,17 +1222,14 @@
 
     invoke-static {v8, v9}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 129
     iget-boolean v8, v4, Landroid/net/wifi/Message;->hasWispr:Z
 
     if-ne v8, v11, :cond_1
 
-    .line 130
     invoke-virtual {v4}, Landroid/net/wifi/Message;->getComment()Ljava/lang/String;
 
     move-result-object v0
 
-    .line 131
     .local v0, "comment":Ljava/lang/String;
     iget-object v8, p0, Landroid/net/wifi/AggregationRunnable$TestHttpGet;->this$0:Landroid/net/wifi/AggregationRunnable;
 
@@ -1347,7 +1258,6 @@
 
     invoke-static {v8, v9}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 132
     const/16 v8, 0x3c
 
     invoke-virtual {v0, v8}, Ljava/lang/String;->indexOf(I)I
@@ -1358,7 +1268,6 @@
 
     move-result-object v0
 
-    .line 133
     iget-object v8, p0, Landroid/net/wifi/AggregationRunnable$TestHttpGet;->this$0:Landroid/net/wifi/AggregationRunnable;
 
     # getter for: Landroid/net/wifi/AggregationRunnable;->xmlreader:Lorg/xml/sax/XMLReader;
@@ -1376,7 +1285,6 @@
 
     invoke-interface {v8, v9}, Lorg/xml/sax/XMLReader;->parse(Lorg/xml/sax/InputSource;)V
 
-    .line 134
     iget-object v8, p0, Landroid/net/wifi/AggregationRunnable$TestHttpGet;->this$0:Landroid/net/wifi/AggregationRunnable;
 
     # getter for: Landroid/net/wifi/AggregationRunnable;->handler:Landroid/net/wifi/AggregationHandler;
@@ -1388,7 +1296,6 @@
 
     move-result-object v4
 
-    .line 137
     .end local v0    # "comment":Ljava/lang/String;
     :cond_1
     iget v8, v4, Landroid/net/wifi/Message;->messageType:I
@@ -1397,12 +1304,10 @@
 
     if-ne v8, v9, :cond_2
 
-    .line 138
     iget v8, v4, Landroid/net/wifi/Message;->responseCode:I
 
     sparse-switch v8, :sswitch_data_0
 
-    .line 152
     iget-object v8, p0, Landroid/net/wifi/AggregationRunnable$TestHttpGet;->this$0:Landroid/net/wifi/AggregationRunnable;
 
     # getter for: Landroid/net/wifi/AggregationRunnable;->TAG:Ljava/lang/String;
@@ -1414,14 +1319,11 @@
 
     invoke-static {v8, v9}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 158
     :goto_0
     invoke-virtual {v3}, Ljava/io/InputStream;->close()V
 
-    .line 159
     invoke-virtual {v7}, Ljava/net/HttpURLConnection;->disconnect()V
 
-    .line 160
     iget-object v8, p0, Landroid/net/wifi/AggregationRunnable$TestHttpGet;->this$0:Landroid/net/wifi/AggregationRunnable;
 
     # getter for: Landroid/net/wifi/AggregationRunnable;->cm:Landroid/net/ConnectivityManager;
@@ -1433,7 +1335,6 @@
 
     invoke-virtual {v8, v9}, Landroid/net/ConnectivityManager;->setNetworkPreference(I)V
 
-    .line 168
     .end local v3    # "is":Ljava/io/InputStream;
     .end local v4    # "msg":Landroid/net/wifi/Message;
     .end local v6    # "url":Ljava/net/URL;
@@ -1441,7 +1342,6 @@
     :goto_1
     return-void
 
-    .line 140
     .restart local v3    # "is":Ljava/io/InputStream;
     .restart local v4    # "msg":Landroid/net/wifi/Message;
     .restart local v6    # "url":Ljava/net/URL;
@@ -1478,7 +1378,6 @@
 
     invoke-static {v8, v9}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 141
     invoke-virtual {v4}, Landroid/net/wifi/Message;->getLoginURL()Ljava/net/URI;
 
     move-result-object v8
@@ -1490,7 +1389,6 @@
 
     goto :goto_0
 
-    .line 161
     .end local v3    # "is":Ljava/io/InputStream;
     .end local v4    # "msg":Landroid/net/wifi/Message;
     .end local v6    # "url":Ljava/net/URL;
@@ -1498,7 +1396,6 @@
     :catch_0
     move-exception v1
 
-    .line 162
     .local v1, "e":Ljava/io/IOException;
     iget-object v8, p0, Landroid/net/wifi/AggregationRunnable$TestHttpGet;->this$0:Landroid/net/wifi/AggregationRunnable;
 
@@ -1512,12 +1409,10 @@
 
     invoke-virtual {v8, v9}, Landroid/content/Context;->sendBroadcast(Landroid/content/Intent;)V
 
-    .line 163
     invoke-virtual {v1}, Ljava/io/IOException;->printStackTrace()V
 
     goto :goto_1
 
-    .line 144
     .end local v1    # "e":Ljava/io/IOException;
     .restart local v3    # "is":Ljava/io/InputStream;
     .restart local v4    # "msg":Landroid/net/wifi/Message;
@@ -1536,7 +1431,6 @@
 
     invoke-static {v8, v9}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 145
     iget-object v8, p0, Landroid/net/wifi/AggregationRunnable$TestHttpGet;->this$0:Landroid/net/wifi/AggregationRunnable;
 
     iget-object v8, v8, Landroid/net/wifi/AggregationRunnable;->mContext:Landroid/content/Context;
@@ -1554,7 +1448,6 @@
 
     goto :goto_0
 
-    .line 164
     .end local v3    # "is":Ljava/io/InputStream;
     .end local v4    # "msg":Landroid/net/wifi/Message;
     .end local v6    # "url":Ljava/net/URL;
@@ -1562,7 +1455,6 @@
     :catch_1
     move-exception v1
 
-    .line 165
     .local v1, "e":Lorg/xml/sax/SAXException;
     iget-object v8, p0, Landroid/net/wifi/AggregationRunnable$TestHttpGet;->this$0:Landroid/net/wifi/AggregationRunnable;
 
@@ -1576,12 +1468,10 @@
 
     invoke-virtual {v8, v9}, Landroid/content/Context;->sendBroadcast(Landroid/content/Intent;)V
 
-    .line 166
     invoke-virtual {v1}, Lorg/xml/sax/SAXException;->printStackTrace()V
 
     goto :goto_1
 
-    .line 148
     .end local v1    # "e":Lorg/xml/sax/SAXException;
     .restart local v3    # "is":Ljava/io/InputStream;
     .restart local v4    # "msg":Landroid/net/wifi/Message;
@@ -1600,7 +1490,6 @@
 
     invoke-static {v8, v9}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 149
     iget-object v8, p0, Landroid/net/wifi/AggregationRunnable$TestHttpGet;->this$0:Landroid/net/wifi/AggregationRunnable;
 
     iget-object v8, v8, Landroid/net/wifi/AggregationRunnable;->mContext:Landroid/content/Context;
@@ -1615,7 +1504,6 @@
 
     goto/16 :goto_0
 
-    .line 156
     :cond_2
     iget-object v8, p0, Landroid/net/wifi/AggregationRunnable$TestHttpGet;->this$0:Landroid/net/wifi/AggregationRunnable;
 
@@ -1634,7 +1522,6 @@
 
     goto/16 :goto_0
 
-    .line 138
     nop
 
     :sswitch_data_0

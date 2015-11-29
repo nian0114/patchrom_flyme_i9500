@@ -23,7 +23,6 @@
     .locals 0
 
     .prologue
-    .line 150
     iput-object p1, p0, Lcom/android/server/tv/TvInputManagerService$1;->this$0:Lcom/android/server/tv/TvInputManagerService;
 
     invoke-direct {p0}, Lcom/android/internal/content/PackageMonitor;-><init>()V
@@ -36,7 +35,6 @@
     .param p1, "packages"    # [Ljava/lang/String;
 
     .prologue
-    .line 152
     iget-object v0, p0, Lcom/android/server/tv/TvInputManagerService$1;->this$0:Lcom/android/server/tv/TvInputManagerService;
 
     # getter for: Lcom/android/server/tv/TvInputManagerService;->mLock:Ljava/lang/Object;
@@ -46,7 +44,6 @@
 
     monitor-enter v1
 
-    .line 153
     :try_start_0
     iget-object v0, p0, Lcom/android/server/tv/TvInputManagerService$1;->this$0:Lcom/android/server/tv/TvInputManagerService;
 
@@ -57,7 +54,6 @@
     # invokes: Lcom/android/server/tv/TvInputManagerService;->buildTvInputListLocked(I[Ljava/lang/String;)V
     invoke-static {v0, v2, p1}, Lcom/android/server/tv/TvInputManagerService;->access$400(Lcom/android/server/tv/TvInputManagerService;I[Ljava/lang/String;)V
 
-    .line 154
     iget-object v0, p0, Lcom/android/server/tv/TvInputManagerService$1;->this$0:Lcom/android/server/tv/TvInputManagerService;
 
     invoke-virtual {p0}, Lcom/android/server/tv/TvInputManagerService$1;->getChangingUserId()I
@@ -67,13 +63,10 @@
     # invokes: Lcom/android/server/tv/TvInputManagerService;->buildTvContentRatingSystemListLocked(I)V
     invoke-static {v0, v2}, Lcom/android/server/tv/TvInputManagerService;->access$500(Lcom/android/server/tv/TvInputManagerService;I)V
 
-    .line 155
     monitor-exit v1
 
-    .line 156
     return-void
 
-    .line 155
     :catchall_0
     move-exception v0
 
@@ -92,7 +85,6 @@
     .param p2, "uid"    # I
 
     .prologue
-    .line 207
     iget-object v6, p0, Lcom/android/server/tv/TvInputManagerService$1;->this$0:Lcom/android/server/tv/TvInputManagerService;
 
     # getter for: Lcom/android/server/tv/TvInputManagerService;->mLock:Ljava/lang/Object;
@@ -102,7 +94,6 @@
 
     monitor-enter v7
 
-    .line 208
     :try_start_0
     iget-object v6, p0, Lcom/android/server/tv/TvInputManagerService$1;->this$0:Lcom/android/server/tv/TvInputManagerService;
 
@@ -115,7 +106,6 @@
 
     move-result-object v5
 
-    .line 209
     .local v5, "userState":Lcom/android/server/tv/TvInputManagerService$UserState;
     # getter for: Lcom/android/server/tv/TvInputManagerService$UserState;->packageSet:Ljava/util/Set;
     invoke-static {v5}, Lcom/android/server/tv/TvInputManagerService$UserState;->access$700(Lcom/android/server/tv/TvInputManagerService$UserState;)Ljava/util/Set;
@@ -128,29 +118,23 @@
 
     if-nez v6, :cond_0
 
-    .line 211
     monitor-exit v7
 
-    .line 241
     :goto_0
     return-void
 
-    .line 213
     :cond_0
     monitor-exit v7
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 215
     new-instance v1, Ljava/util/ArrayList;
 
     invoke-direct {v1}, Ljava/util/ArrayList;-><init>()V
 
-    .line 218
     .local v1, "operations":Ljava/util/ArrayList;, "Ljava/util/ArrayList<Landroid/content/ContentProviderOperation;>;"
-    const-string/jumbo v3, "package_name=?"
+    const-string v3, "package_name=?"
 
-    .line 219
     .local v3, "selection":Ljava/lang/String;
     const/4 v6, 0x1
 
@@ -160,7 +144,6 @@
 
     aput-object p1, v4, v6
 
-    .line 221
     .local v4, "selectionArgs":[Ljava/lang/String;
     sget-object v6, Landroid/media/tv/TvContract$Channels;->CONTENT_URI:Landroid/net/Uri;
 
@@ -178,7 +161,6 @@
 
     invoke-virtual {v1, v6}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 223
     sget-object v6, Landroid/media/tv/TvContract$Programs;->CONTENT_URI:Landroid/net/Uri;
 
     invoke-static {v6}, Landroid/content/ContentProviderOperation;->newDelete(Landroid/net/Uri;)Landroid/content/ContentProviderOperation$Builder;
@@ -195,7 +177,6 @@
 
     invoke-virtual {v1, v6}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 225
     sget-object v6, Landroid/media/tv/TvContract$WatchedPrograms;->CONTENT_URI:Landroid/net/Uri;
 
     invoke-static {v6}, Landroid/content/ContentProviderOperation;->newDelete(Landroid/net/Uri;)Landroid/content/ContentProviderOperation$Builder;
@@ -212,10 +193,8 @@
 
     invoke-virtual {v1, v6}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 229
     const/4 v2, 0x0
 
-    .line 231
     .local v2, "results":[Landroid/content/ContentProviderResult;
     :try_start_1
     iget-object v6, p0, Lcom/android/server/tv/TvInputManagerService$1;->this$0:Lcom/android/server/tv/TvInputManagerService;
@@ -236,7 +215,6 @@
 
     goto :goto_0
 
-    .line 213
     .end local v1    # "operations":Ljava/util/ArrayList;, "Ljava/util/ArrayList<Landroid/content/ContentProviderOperation;>;"
     .end local v2    # "results":[Landroid/content/ContentProviderResult;
     .end local v3    # "selection":Ljava/lang/String;
@@ -252,7 +230,6 @@
 
     throw v6
 
-    .line 232
     .restart local v1    # "operations":Ljava/util/ArrayList;, "Ljava/util/ArrayList<Landroid/content/ContentProviderOperation;>;"
     .restart local v2    # "results":[Landroid/content/ContentProviderResult;
     .restart local v3    # "selection":Ljava/lang/String;
@@ -261,7 +238,6 @@
     :catch_0
     move-exception v0
 
-    .line 233
     .local v0, "e":Ljava/lang/Exception;
     :goto_1
     const-string v6, "TvInputManagerService"
@@ -272,7 +248,6 @@
 
     goto :goto_0
 
-    .line 232
     .end local v0    # "e":Ljava/lang/Exception;
     :catch_1
     move-exception v0
@@ -286,7 +261,6 @@
     .param p2, "uid"    # I
 
     .prologue
-    .line 163
     const/4 v0, 0x1
 
     new-array v0, v0, [Ljava/lang/String;
@@ -297,7 +271,6 @@
 
     invoke-direct {p0, v0}, Lcom/android/server/tv/TvInputManagerService$1;->buildTvInputList([Ljava/lang/String;)V
 
-    .line 164
     return-void
 .end method
 
@@ -306,17 +279,14 @@
     .param p1, "packages"    # [Ljava/lang/String;
 
     .prologue
-    .line 173
     invoke-virtual {p0}, Lcom/android/server/tv/TvInputManagerService$1;->isReplacing()Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
-    .line 174
     invoke-direct {p0, p1}, Lcom/android/server/tv/TvInputManagerService$1;->buildTvInputList([Ljava/lang/String;)V
 
-    .line 176
     :cond_0
     return-void
 .end method
@@ -326,17 +296,14 @@
     .param p1, "packages"    # [Ljava/lang/String;
 
     .prologue
-    .line 186
     invoke-virtual {p0}, Lcom/android/server/tv/TvInputManagerService$1;->isReplacing()Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
-    .line 187
     invoke-direct {p0, p1}, Lcom/android/server/tv/TvInputManagerService$1;->buildTvInputList([Ljava/lang/String;)V
 
-    .line 189
     :cond_0
     return-void
 .end method
@@ -345,18 +312,15 @@
     .locals 1
 
     .prologue
-    .line 196
     invoke-virtual {p0}, Lcom/android/server/tv/TvInputManagerService$1;->isReplacing()Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
-    .line 203
     :goto_0
     return-void
 
-    .line 202
     :cond_0
     const/4 v0, 0x0
 

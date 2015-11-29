@@ -26,18 +26,14 @@
     .param p2, "handler"    # Landroid/os/Handler;
 
     .prologue
-    .line 570
     iput-object p1, p0, Lcom/samsung/hapticfeedback/HapticEffect$SettingsContentObserver;->this$0:Lcom/samsung/hapticfeedback/HapticEffect;
 
-    .line 571
     invoke-direct {p0, p2}, Landroid/database/ContentObserver;-><init>(Landroid/os/Handler;)V
 
-    .line 564
     const/4 v0, 0x0
 
     iput-object v0, p0, Lcom/samsung/hapticfeedback/HapticEffect$SettingsContentObserver;->mContext:Landroid/content/Context;
 
-    .line 572
     return-void
 .end method
 
@@ -48,10 +44,8 @@
     .param p1, "selfChange"    # Z
 
     .prologue
-    .line 589
     invoke-super {p0, p1}, Landroid/database/ContentObserver;->onChange(Z)V
 
-    .line 590
     iget-object v0, p0, Lcom/samsung/hapticfeedback/HapticEffect$SettingsContentObserver;->this$0:Lcom/samsung/hapticfeedback/HapticEffect;
 
     iget-object v1, p0, Lcom/samsung/hapticfeedback/HapticEffect$SettingsContentObserver;->this$0:Lcom/samsung/hapticfeedback/HapticEffect;
@@ -66,7 +60,6 @@
     # setter for: Lcom/samsung/hapticfeedback/HapticEffect;->mEnableInSettingMenu:Z
     invoke-static {v0, v1}, Lcom/samsung/hapticfeedback/HapticEffect;->access$002(Lcom/samsung/hapticfeedback/HapticEffect;Z)Z
 
-    .line 591
     return-void
 .end method
 
@@ -75,9 +68,7 @@
     .param p1, "context"    # Landroid/content/Context;
 
     .prologue
-    .line 578
     iput-object p1, p0, Lcom/samsung/hapticfeedback/HapticEffect$SettingsContentObserver;->mContext:Landroid/content/Context;
 
-    .line 579
     return-void
 .end method

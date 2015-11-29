@@ -28,7 +28,6 @@
     .locals 0
 
     .prologue
-    .line 1469
     iput-object p1, p0, Lcom/android/server/epm/overlay/ThemeManagerService$2$1;->this$1:Lcom/android/server/epm/overlay/ThemeManagerService$2;
 
     iput p2, p0, Lcom/android/server/epm/overlay/ThemeManagerService$2$1;->val$resId:I
@@ -44,7 +43,6 @@
     .locals 3
 
     .prologue
-    .line 1476
     :try_start_0
     iget-object v1, p0, Lcom/android/server/epm/overlay/ThemeManagerService$2$1;->this$1:Lcom/android/server/epm/overlay/ThemeManagerService$2;
 
@@ -56,15 +54,12 @@
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 1480
     :goto_0
     return-void
 
-    .line 1477
     :catch_0
     move-exception v0
 
-    .line 1478
     .local v0, "e":Ljava/lang/Exception;
     invoke-virtual {v0}, Ljava/lang/Exception;->printStackTrace()V
 

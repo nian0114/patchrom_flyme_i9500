@@ -28,7 +28,6 @@
     .locals 0
 
     .prologue
-    .line 369
     iput-object p1, p0, Landroid/widget/MultiSelectPopupWindow$MultiSelectQuickPopupWindow$1;->this$1:Landroid/widget/MultiSelectPopupWindow$MultiSelectQuickPopupWindow;
 
     iput p2, p0, Landroid/widget/MultiSelectPopupWindow$MultiSelectQuickPopupWindow$1;->val$menuItemDiff:I
@@ -44,7 +43,6 @@
     .locals 4
 
     .prologue
-    .line 372
     # getter for: Landroid/widget/MultiSelectPopupWindow;->mTextView:Landroid/widget/TextView;
     invoke-static {}, Landroid/widget/MultiSelectPopupWindow;->access$000()Landroid/widget/TextView;
 
@@ -70,14 +68,12 @@
 
     float-to-int v0, v1
 
-    .line 374
     .local v0, "t":I
     const-wide/16 v2, 0xc8
 
     :try_start_0
     invoke-static {v2, v3}, Ljava/lang/Thread;->sleep(J)V
 
-    .line 376
     :goto_0
     # getter for: Landroid/widget/MultiSelectPopupWindow;->mTextView:Landroid/widget/TextView;
     invoke-static {}, Landroid/widget/MultiSelectPopupWindow;->access$000()Landroid/widget/TextView;
@@ -104,10 +100,8 @@
 
     sub-int/2addr v0, v1
 
-    .line 377
     if-gtz v0, :cond_0
 
-    .line 378
     iget-object v1, p0, Landroid/widget/MultiSelectPopupWindow$MultiSelectQuickPopupWindow$1;->this$1:Landroid/widget/MultiSelectPopupWindow$MultiSelectQuickPopupWindow;
 
     # getter for: Landroid/widget/MultiSelectPopupWindow$MultiSelectQuickPopupWindow;->mHorizontalScrollView:Landroid/widget/HorizontalScrollView;
@@ -121,11 +115,9 @@
 
     invoke-virtual {v1, v2, v3}, Landroid/widget/HorizontalScrollView;->smoothScrollTo(II)V
 
-    .line 387
     :goto_1
     return-void
 
-    .line 381
     :cond_0
     iget-object v1, p0, Landroid/widget/MultiSelectPopupWindow$MultiSelectQuickPopupWindow$1;->this$1:Landroid/widget/MultiSelectPopupWindow$MultiSelectQuickPopupWindow;
 
@@ -138,7 +130,6 @@
 
     invoke-virtual {v1, v0, v2}, Landroid/widget/HorizontalScrollView;->smoothScrollTo(II)V
 
-    .line 383
     const-wide/16 v2, 0x2
 
     invoke-static {v2, v3}, Ljava/lang/Thread;->sleep(J)V
@@ -147,7 +138,6 @@
 
     goto :goto_0
 
-    .line 385
     :catch_0
     move-exception v1
 

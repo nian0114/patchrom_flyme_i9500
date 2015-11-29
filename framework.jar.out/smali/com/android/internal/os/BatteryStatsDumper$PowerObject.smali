@@ -41,30 +41,22 @@
     .param p10, "usageTime"    # J
 
     .prologue
-    .line 835
     iput-object p1, p0, Lcom/android/internal/os/BatteryStatsDumper$PowerObject;->this$0:Lcom/android/internal/os/BatteryStatsDumper;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 837
     iput-wide p2, p0, Lcom/android/internal/os/BatteryStatsDumper$PowerObject;->powerUid:D
 
-    .line 839
     iput-object p4, p0, Lcom/android/internal/os/BatteryStatsDumper$PowerObject;->packageName:Ljava/lang/String;
 
-    .line 841
     iput-boolean p5, p0, Lcom/android/internal/os/BatteryStatsDumper$PowerObject;->isSystem:Z
 
-    .line 843
     iput-wide p6, p0, Lcom/android/internal/os/BatteryStatsDumper$PowerObject;->networkUsage:J
 
-    .line 845
     iput-wide p8, p0, Lcom/android/internal/os/BatteryStatsDumper$PowerObject;->screenUsage:D
 
-    .line 847
     iput-wide p10, p0, Lcom/android/internal/os/BatteryStatsDumper$PowerObject;->usageTime:J
 
-    .line 849
     return-void
 .end method
 
@@ -80,7 +72,6 @@
     .param p12, "x7"    # Lcom/android/internal/os/BatteryStatsDumper$1;
 
     .prologue
-    .line 820
     invoke-direct/range {p0 .. p11}, Lcom/android/internal/os/BatteryStatsDumper$PowerObject;-><init>(Lcom/android/internal/os/BatteryStatsDumper;DLjava/lang/String;ZJDJ)V
 
     return-void

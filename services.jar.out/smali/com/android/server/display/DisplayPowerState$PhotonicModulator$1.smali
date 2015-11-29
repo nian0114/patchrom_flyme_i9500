@@ -26,7 +26,6 @@
     .locals 0
 
     .prologue
-    .line 513
     iput-object p1, p0, Lcom/android/server/display/DisplayPowerState$PhotonicModulator$1;->this$1:Lcom/android/server/display/DisplayPowerState$PhotonicModulator;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -40,7 +39,6 @@
     .locals 6
 
     .prologue
-    .line 516
     iget-object v1, p0, Lcom/android/server/display/DisplayPowerState$PhotonicModulator$1;->this$1:Lcom/android/server/display/DisplayPowerState$PhotonicModulator;
 
     iget-object v1, v1, Lcom/android/server/display/DisplayPowerState$PhotonicModulator;->this$0:Lcom/android/server/display/DisplayPowerState;
@@ -52,7 +50,6 @@
 
     monitor-enter v2
 
-    .line 517
     :try_start_0
     iget-object v1, p0, Lcom/android/server/display/DisplayPowerState$PhotonicModulator$1;->this$1:Lcom/android/server/display/DisplayPowerState$PhotonicModulator;
 
@@ -67,7 +64,6 @@
 
     invoke-virtual {v1, v3, v4, v5}, Lcom/android/server/power/PowerManagerService$TimeMeasurement;->printTotalTime(Ljava/lang/String;J)V
 
-    .line 518
     iget-object v1, p0, Lcom/android/server/display/DisplayPowerState$PhotonicModulator$1;->this$1:Lcom/android/server/display/DisplayPowerState$PhotonicModulator;
 
     iget-object v1, v1, Lcom/android/server/display/DisplayPowerState$PhotonicModulator;->this$0:Lcom/android/server/display/DisplayPowerState;
@@ -77,12 +73,10 @@
     # setter for: Lcom/android/server/display/DisplayPowerState;->mPendingrequestDisplayState:Z
     invoke-static {v1, v3}, Lcom/android/server/display/DisplayPowerState;->access$1502(Lcom/android/server/display/DisplayPowerState;Z)Z
 
-    .line 519
     new-instance v0, Lcom/android/server/power/PowerManagerService$TimeMeasurement;
 
     invoke-direct {v0}, Lcom/android/server/power/PowerManagerService$TimeMeasurement;-><init>()V
 
-    .line 521
     .local v0, "blankUnblankTimeMeasurement":Lcom/android/server/power/PowerManagerService$TimeMeasurement;
     iget-object v1, p0, Lcom/android/server/display/DisplayPowerState$PhotonicModulator$1;->this$1:Lcom/android/server/display/DisplayPowerState$PhotonicModulator;
 
@@ -93,10 +87,8 @@
 
     if-eqz v1, :cond_0
 
-    .line 522
     invoke-virtual {v0}, Lcom/android/server/power/PowerManagerService$TimeMeasurement;->resetTime()V
 
-    .line 523
     iget-object v1, p0, Lcom/android/server/display/DisplayPowerState$PhotonicModulator$1;->this$1:Lcom/android/server/display/DisplayPowerState$PhotonicModulator;
 
     iget-object v3, p0, Lcom/android/server/display/DisplayPowerState$PhotonicModulator$1;->this$1:Lcom/android/server/display/DisplayPowerState$PhotonicModulator;
@@ -109,25 +101,20 @@
     # invokes: Lcom/android/server/display/DisplayPowerState$PhotonicModulator;->requestDisplayState(I)V
     invoke-static {v1, v3}, Lcom/android/server/display/DisplayPowerState$PhotonicModulator;->access$2000(Lcom/android/server/display/DisplayPowerState$PhotonicModulator;I)V
 
-    .line 524
     const-string v1, "mPhotonicModulator.requestDisplayState(mRequestingState)"
 
     const-wide/16 v4, 0x32
 
     invoke-virtual {v0, v1, v4, v5}, Lcom/android/server/power/PowerManagerService$TimeMeasurement;->printLapTime(Ljava/lang/String;J)V
 
-    .line 531
     :goto_0
     monitor-exit v2
 
-    .line 532
     return-void
 
-    .line 527
     :cond_0
     invoke-virtual {v0}, Lcom/android/server/power/PowerManagerService$TimeMeasurement;->resetTime()V
 
-    .line 528
     iget-object v1, p0, Lcom/android/server/display/DisplayPowerState$PhotonicModulator$1;->this$1:Lcom/android/server/display/DisplayPowerState$PhotonicModulator;
 
     iget-object v3, p0, Lcom/android/server/display/DisplayPowerState$PhotonicModulator$1;->this$1:Lcom/android/server/display/DisplayPowerState$PhotonicModulator;
@@ -140,7 +127,6 @@
     # invokes: Lcom/android/server/display/DisplayPowerState$PhotonicModulator;->requestDisplayState(I)V
     invoke-static {v1, v3}, Lcom/android/server/display/DisplayPowerState$PhotonicModulator;->access$2000(Lcom/android/server/display/DisplayPowerState$PhotonicModulator;I)V
 
-    .line 529
     const-string v1, "mPhotonicModulator.requestDisplayState(mRequestingState)"
 
     const-wide/16 v4, 0x32
@@ -149,7 +135,6 @@
 
     goto :goto_0
 
-    .line 531
     .end local v0    # "blankUnblankTimeMeasurement":Lcom/android/server/power/PowerManagerService$TimeMeasurement;
     :catchall_0
     move-exception v1

@@ -32,17 +32,14 @@
     .locals 1
 
     .prologue
-    .line 76
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 77
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
     iput-object v0, p0, Landroid/media/audiopolicy/AudioMixingRule$Builder;->mCriteria:Ljava/util/ArrayList;
 
-    .line 78
     return-void
 .end method
 
@@ -63,10 +60,8 @@
 
     const/4 v5, 0x1
 
-    .line 91
     if-nez p1, :cond_0
 
-    .line 92
     new-instance v2, Ljava/lang/IllegalArgumentException;
 
     const-string v3, "Illegal null AudioAttributes argument"
@@ -75,13 +70,11 @@
 
     throw v2
 
-    .line 94
     :cond_0
     if-eq p2, v5, :cond_1
 
     if-eq p2, v6, :cond_1
 
-    .line 95
     new-instance v2, Ljava/lang/IllegalArgumentException;
 
     new-instance v3, Ljava/lang/StringBuilder;
@@ -106,13 +99,11 @@
 
     throw v2
 
-    .line 97
     :cond_1
     iget-object v3, p0, Landroid/media/audiopolicy/AudioMixingRule$Builder;->mCriteria:Ljava/util/ArrayList;
 
     monitor-enter v3
 
-    .line 98
     :try_start_0
     iget-object v2, p0, Landroid/media/audiopolicy/AudioMixingRule$Builder;->mCriteria:Ljava/util/ArrayList;
 
@@ -120,7 +111,6 @@
 
     move-result-object v0
 
-    .line 99
     .local v0, "crIterator":Ljava/util/Iterator;, "Ljava/util/Iterator<Landroid/media/audiopolicy/AudioMixingRule$AttributeMatchCriterion;>;"
     :cond_2
     invoke-interface {v0}, Ljava/util/Iterator;->hasNext()Z
@@ -129,20 +119,17 @@
 
     if-eqz v2, :cond_5
 
-    .line 100
     invoke-interface {v0}, Ljava/util/Iterator;->next()Ljava/lang/Object;
 
     move-result-object v1
 
     check-cast v1, Landroid/media/audiopolicy/AudioMixingRule$AttributeMatchCriterion;
 
-    .line 101
     .local v1, "criterion":Landroid/media/audiopolicy/AudioMixingRule$AttributeMatchCriterion;
     if-eq p2, v5, :cond_3
 
     if-ne p2, v6, :cond_2
 
-    .line 104
     :cond_3
     iget-object v2, v1, Landroid/media/audiopolicy/AudioMixingRule$AttributeMatchCriterion;->mAttr:Landroid/media/AudioAttributes;
 
@@ -156,20 +143,16 @@
 
     if-ne v2, v4, :cond_2
 
-    .line 105
     iget v2, v1, Landroid/media/audiopolicy/AudioMixingRule$AttributeMatchCriterion;->mRule:I
 
     if-ne v2, p2, :cond_4
 
-    .line 107
     monitor-exit v3
 
-    .line 119
     .end local v1    # "criterion":Landroid/media/audiopolicy/AudioMixingRule$AttributeMatchCriterion;
     :goto_0
     return-object p0
 
-    .line 110
     .restart local v1    # "criterion":Landroid/media/audiopolicy/AudioMixingRule$AttributeMatchCriterion;
     :cond_4
     new-instance v2, Ljava/lang/IllegalArgumentException;
@@ -196,7 +179,6 @@
 
     throw v2
 
-    .line 118
     .end local v0    # "crIterator":Ljava/util/Iterator;, "Ljava/util/Iterator<Landroid/media/audiopolicy/AudioMixingRule$AttributeMatchCriterion;>;"
     .end local v1    # "criterion":Landroid/media/audiopolicy/AudioMixingRule$AttributeMatchCriterion;
     :catchall_0
@@ -208,7 +190,6 @@
 
     throw v2
 
-    .line 117
     .restart local v0    # "crIterator":Ljava/util/Iterator;, "Ljava/util/Iterator<Landroid/media/audiopolicy/AudioMixingRule$AttributeMatchCriterion;>;"
     :cond_5
     :try_start_1
@@ -220,7 +201,6 @@
 
     invoke-virtual {v2, v4}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 118
     monitor-exit v3
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
@@ -232,7 +212,6 @@
     .locals 3
 
     .prologue
-    .line 128
     new-instance v0, Landroid/media/audiopolicy/AudioMixingRule;
 
     iget-object v1, p0, Landroid/media/audiopolicy/AudioMixingRule$Builder;->mCriteria:Ljava/util/ArrayList;

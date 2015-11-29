@@ -23,7 +23,6 @@
     .locals 0
 
     .prologue
-    .line 1039
     iput-object p1, p0, Lcom/android/server/notification/NotificationManagerService$4;->this$0:Lcom/android/server/notification/NotificationManagerService;
 
     invoke-direct {p0}, Lcom/android/server/notification/ZenModeHelper$Callback;-><init>()V
@@ -37,12 +36,10 @@
     .locals 1
 
     .prologue
-    .line 1042
     iget-object v0, p0, Lcom/android/server/notification/NotificationManagerService$4;->this$0:Lcom/android/server/notification/NotificationManagerService;
 
     invoke-virtual {v0}, Lcom/android/server/notification/NotificationManagerService;->savePolicyFile()V
 
-    .line 1043
     return-void
 .end method
 
@@ -50,27 +47,22 @@
     .locals 2
 
     .prologue
-    .line 1047
     iget-object v0, p0, Lcom/android/server/notification/NotificationManagerService$4;->this$0:Lcom/android/server/notification/NotificationManagerService;
 
     iget-object v1, v0, Lcom/android/server/notification/NotificationManagerService;->mNotificationList:Ljava/util/ArrayList;
 
     monitor-enter v1
 
-    .line 1048
     :try_start_0
     iget-object v0, p0, Lcom/android/server/notification/NotificationManagerService$4;->this$0:Lcom/android/server/notification/NotificationManagerService;
 
     # invokes: Lcom/android/server/notification/NotificationManagerService;->updateInterruptionFilterLocked()V
     invoke-static {v0}, Lcom/android/server/notification/NotificationManagerService;->access$2200(Lcom/android/server/notification/NotificationManagerService;)V
 
-    .line 1049
     monitor-exit v1
 
-    .line 1050
     return-void
 
-    .line 1049
     :catchall_0
     move-exception v0
 

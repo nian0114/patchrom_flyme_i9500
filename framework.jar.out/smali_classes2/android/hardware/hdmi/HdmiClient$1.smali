@@ -23,7 +23,6 @@
     .locals 0
 
     .prologue
-    .line 92
     iput-object p1, p0, Landroid/hardware/hdmi/HdmiClient$1;->val$listener:Landroid/hardware/hdmi/HdmiControlManager$VendorCommandListener;
 
     invoke-direct {p0}, Landroid/hardware/hdmi/IHdmiVendorCommandListener$Stub;-><init>()V
@@ -40,11 +39,9 @@
     .param p3, "hasVendorId"    # Z
 
     .prologue
-    .line 95
     iget-object v0, p0, Landroid/hardware/hdmi/HdmiClient$1;->val$listener:Landroid/hardware/hdmi/HdmiControlManager$VendorCommandListener;
 
     invoke-interface {v0, p1, p2, p3}, Landroid/hardware/hdmi/HdmiControlManager$VendorCommandListener;->onReceived(I[BZ)V
 
-    .line 96
     return-void
 .end method

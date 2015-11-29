@@ -23,7 +23,6 @@
     .locals 0
 
     .prologue
-    .line 2759
     iput-object p1, p0, Lcom/android/internal/policy/impl/GlobalActions$23;->this$0:Lcom/android/internal/policy/impl/GlobalActions;
 
     invoke-direct {p0}, Landroid/telephony/PhoneStateListener;-><init>()V
@@ -44,7 +43,6 @@
 
     const/4 v3, 0x0
 
-    .line 2770
     iget-object v4, p0, Lcom/android/internal/policy/impl/GlobalActions$23;->this$0:Lcom/android/internal/policy/impl/GlobalActions;
 
     # getter for: Lcom/android/internal/policy/impl/GlobalActions;->mHasTelephony:Z
@@ -56,7 +54,6 @@
 
     if-nez p1, :cond_2
 
-    .line 2771
     :cond_0
     const-string v2, "GlobalActions"
 
@@ -97,12 +94,10 @@
 
     invoke-static {v2, v3}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 2796
     :cond_1
     :goto_0
     return-void
 
-    .line 2780
     :cond_2
     invoke-virtual {p1}, Landroid/telephony/ServiceState;->getState()I
 
@@ -112,7 +107,6 @@
 
     move v0, v2
 
-    .line 2784
     .local v0, "inAirplaneMode":Z
     :goto_1
     iget-object v4, p0, Lcom/android/internal/policy/impl/GlobalActions$23;->this$0:Lcom/android/internal/policy/impl/GlobalActions;
@@ -136,7 +130,6 @@
 
     move v1, v2
 
-    .line 2785
     .local v1, "inAirplaneModeOn":Z
     :goto_2
     const-string v2, "GlobalActions"
@@ -171,10 +164,8 @@
 
     invoke-static {v2, v3}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 2786
     if-ne v0, v1, :cond_1
 
-    .line 2791
     iget-object v3, p0, Lcom/android/internal/policy/impl/GlobalActions$23;->this$0:Lcom/android/internal/policy/impl/GlobalActions;
 
     if-eqz v0, :cond_5
@@ -185,7 +176,6 @@
     # setter for: Lcom/android/internal/policy/impl/GlobalActions;->mAirplaneState:Lcom/android/internal/policy/impl/GlobalActions$ToggleAction$State;
     invoke-static {v3, v2}, Lcom/android/internal/policy/impl/GlobalActions;->access$1702(Lcom/android/internal/policy/impl/GlobalActions;Lcom/android/internal/policy/impl/GlobalActions$ToggleAction$State;)Lcom/android/internal/policy/impl/GlobalActions$ToggleAction$State;
 
-    .line 2793
     const-string v2, "GlobalActions"
 
     new-instance v3, Ljava/lang/StringBuilder;
@@ -225,7 +215,6 @@
 
     invoke-static {v2, v3}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 2794
     iget-object v2, p0, Lcom/android/internal/policy/impl/GlobalActions$23;->this$0:Lcom/android/internal/policy/impl/GlobalActions;
 
     # getter for: Lcom/android/internal/policy/impl/GlobalActions;->mHandler:Landroid/os/Handler;
@@ -242,17 +231,14 @@
     :cond_3
     move v0, v3
 
-    .line 2780
     goto :goto_1
 
     .restart local v0    # "inAirplaneMode":Z
     :cond_4
     move v1, v3
 
-    .line 2784
     goto :goto_2
 
-    .line 2791
     .restart local v1    # "inAirplaneModeOn":Z
     :cond_5
     sget-object v2, Lcom/android/internal/policy/impl/GlobalActions$ToggleAction$State;->Off:Lcom/android/internal/policy/impl/GlobalActions$ToggleAction$State;

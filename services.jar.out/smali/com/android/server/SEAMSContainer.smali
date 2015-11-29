@@ -40,7 +40,6 @@
     .locals 1
 
     .prologue
-    .line 90
     invoke-static {}, Lcom/android/server/SKLogger;->getLogger()Lcom/android/server/SKLogger;
 
     move-result-object v0
@@ -54,7 +53,6 @@
     .locals 0
 
     .prologue
-    .line 79
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -71,22 +69,18 @@
     .param p6, "agent"    # Z
 
     .prologue
-    .line 213
     const-class v30, Lcom/android/server/SEAMSContainer;
 
     monitor-enter v30
 
     const/4 v12, 0x0
 
-    .line 214
     .local v12, "isAddedMac":Z
     const/4 v13, 0x0
 
-    .line 215
     .local v13, "macPermExists":Z
     const/4 v4, 0x0
 
-    .line 218
     .local v4, "conType":I
     :try_start_0
     invoke-static {}, Ljavax/xml/parsers/DocumentBuilderFactory;->newInstance()Ljavax/xml/parsers/DocumentBuilderFactory;
@@ -95,18 +89,15 @@
 
     move-result-object v7
 
-    .line 220
     .local v7, "docBuildFac":Ljavax/xml/parsers/DocumentBuilderFactory;
     const/4 v6, 0x0
 
-    .line 222
     .local v6, "doc":Lorg/w3c/dom/Document;
     :try_start_1
     invoke-virtual {v7}, Ljavax/xml/parsers/DocumentBuilderFactory;->newDocumentBuilder()Ljavax/xml/parsers/DocumentBuilder;
 
     move-result-object v5
 
-    .line 223
     .local v5, "dBuilder":Ljavax/xml/parsers/DocumentBuilder;
     invoke-virtual/range {p0 .. p0}, Ljava/io/File;->exists()Z
 
@@ -114,14 +105,12 @@
 
     if-eqz v29, :cond_8
 
-    .line 227
     invoke-virtual/range {p0 .. p0}, Ljava/io/File;->canWrite()Z
 
     move-result v29
 
     if-nez v29, :cond_0
 
-    .line 228
     const/16 v29, 0x1
 
     move-object/from16 v0, p0
@@ -130,7 +119,6 @@
 
     invoke-virtual {v0, v1}, Ljava/io/File;->setWritable(Z)Z
 
-    .line 229
     :cond_0
     move-object/from16 v0, p0
 
@@ -138,10 +126,8 @@
 
     move-result-object v6
 
-    .line 230
     const/4 v13, 0x1
 
-    .line 242
     :goto_0
     invoke-interface {v6}, Lorg/w3c/dom/Document;->getDocumentElement()Lorg/w3c/dom/Element;
 
@@ -149,8 +135,7 @@
 
     invoke-interface/range {v29 .. v29}, Lorg/w3c/dom/Element;->normalize()V
 
-    .line 243
-    const-string/jumbo v29, "policy"
+    const-string v29, "policy"
 
     move-object/from16 v0, v29
 
@@ -158,11 +143,9 @@
 
     move-result-object v17
 
-    .line 244
     .local v17, "policyNodeList":Lorg/w3c/dom/NodeList;
     const/16 v16, 0x0
 
-    .line 245
     .local v16, "policyElement":Lorg/w3c/dom/Element;
     const/16 v29, 0x0
 
@@ -177,9 +160,8 @@
     .end local v16    # "policyElement":Lorg/w3c/dom/Element;
     check-cast v16, Lorg/w3c/dom/Element;
 
-    .line 246
     .restart local v16    # "policyElement":Lorg/w3c/dom/Element;
-    const-string/jumbo v29, "signer"
+    const-string v29, "signer"
 
     move-object/from16 v0, v16
 
@@ -196,27 +178,21 @@
 
     move-result-object v22
 
-    .line 247
     .local v22, "signer":Lorg/w3c/dom/NodeList;
     const/16 v24, 0x0
 
-    .line 248
     .local v24, "signerElementCur":Lorg/w3c/dom/Element;
     const/16 v23, 0x0
 
-    .line 249
     .local v23, "signerElement":Lorg/w3c/dom/Element;
     const/4 v3, 0x0
 
-    .line 250
     .local v3, "allowallElement":Lorg/w3c/dom/Element;
     const/4 v14, 0x0
 
-    .line 251
     .local v14, "newElement":Lorg/w3c/dom/Element;
     const/16 v21, 0x0
 
-    .line 254
     .local v21, "seinfoElement":Lorg/w3c/dom/Element;
     :try_start_2
     invoke-static/range {p4 .. p4}, Ljava/lang/Integer;->parseInt(Ljava/lang/String;)I
@@ -235,10 +211,8 @@
 
     move-result v4
 
-    .line 259
     const/16 v26, 0x0
 
-    .line 260
     .local v26, "specialTag":Ljava/lang/String;
     const/16 v29, 0x1
 
@@ -252,7 +226,6 @@
 
     if-ne v4, v0, :cond_c
 
-    .line 261
     :cond_1
     const/16 v29, 0x2
 
@@ -270,19 +243,16 @@
 
     if-ne v0, v1, :cond_a
 
-    .line 262
     :cond_2
     :try_start_3
-    const-string/jumbo v26, "service"
+    const-string v26, "service"
 
-    .line 263
     move-object/from16 v0, v26
 
     invoke-interface {v6, v0}, Lorg/w3c/dom/Document;->createElement(Ljava/lang/String;)Lorg/w3c/dom/Element;
 
     move-result-object v14
 
-    .line 264
     const-string v29, "name"
 
     move-object/from16 v0, v29
@@ -291,8 +261,7 @@
 
     invoke-interface {v14, v0, v1}, Lorg/w3c/dom/Element;->setAttribute(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 265
-    const-string/jumbo v29, "seinfo"
+    const-string v29, "seinfo"
 
     move-object/from16 v0, v29
 
@@ -300,7 +269,6 @@
 
     invoke-interface {v14, v0, v1}, Lorg/w3c/dom/Element;->setAttribute(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 266
     const-string v29, "category"
 
     const-string v31, "1023"
@@ -311,7 +279,6 @@
 
     invoke-interface {v14, v0, v1}, Lorg/w3c/dom/Element;->setAttribute(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 267
     const-string v29, "allowcategory"
 
     const-string v31, "0,501-1023"
@@ -322,7 +289,6 @@
 
     invoke-interface {v14, v0, v1}, Lorg/w3c/dom/Element;->setAttribute(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 268
     const-string v29, "containerallowcategory"
 
     move-object/from16 v0, v29
@@ -331,16 +297,14 @@
 
     invoke-interface {v14, v0, v1}, Lorg/w3c/dom/Element;->setAttribute(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 287
     :cond_3
     :goto_1
     invoke-static/range {p1 .. p2}, Lcom/android/server/pm/SELinuxMMAC;->findMacPermEntry(Ljava/lang/String;Ljava/lang/String;)Landroid/content/pm/ApplicationInfo;
 
     move-result-object v20
 
-    .line 288
     .local v20, "seandroidInfo":Landroid/content/pm/ApplicationInfo;
-    const-string/jumbo v29, "signer"
+    const-string v29, "signer"
 
     move-object/from16 v0, v29
 
@@ -348,8 +312,7 @@
 
     move-result-object v23
 
-    .line 289
-    const-string/jumbo v29, "seinfo"
+    const-string v29, "seinfo"
 
     move-object/from16 v0, v29
 
@@ -357,7 +320,6 @@
 
     move-result-object v21
 
-    .line 290
     const-string v29, "allow-all"
 
     move-object/from16 v0, v29
@@ -366,7 +328,6 @@
 
     move-result-object v3
 
-    .line 291
     if-eqz v20, :cond_4
 
     move-object/from16 v0, v20
@@ -387,9 +348,8 @@
 
     if-eqz v29, :cond_d
 
-    .line 292
     :cond_4
-    const-string/jumbo v29, "signature"
+    const-string v29, "signature"
 
     move-object/from16 v0, v23
 
@@ -399,10 +359,9 @@
 
     invoke-interface {v0, v1, v2}, Lorg/w3c/dom/Element;->setAttribute(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 293
-    const-string/jumbo v29, "value"
+    const-string v29, "value"
 
-    const-string/jumbo v31, "untrusted"
+    const-string v31, "untrusted"
 
     move-object/from16 v0, v21
 
@@ -412,7 +371,6 @@
 
     invoke-interface {v0, v1, v2}, Lorg/w3c/dom/Element;->setAttribute(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 294
     const-string v29, "category"
 
     const-string v31, "1023"
@@ -425,7 +383,6 @@
 
     invoke-interface {v0, v1, v2}, Lorg/w3c/dom/Element;->setAttribute(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 295
     const-string v29, "allowcategory"
 
     const-string v31, "0,501-1023"
@@ -438,36 +395,30 @@
 
     invoke-interface {v0, v1, v2}, Lorg/w3c/dom/Element;->setAttribute(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 355
     :cond_5
     :goto_2
     if-nez v12, :cond_6
 
-    .line 356
     move-object/from16 v0, v23
 
     invoke-interface {v0, v3}, Lorg/w3c/dom/Element;->appendChild(Lorg/w3c/dom/Node;)Lorg/w3c/dom/Node;
 
-    .line 357
     move-object/from16 v0, v23
 
     move-object/from16 v1, v21
 
     invoke-interface {v0, v1}, Lorg/w3c/dom/Element;->appendChild(Lorg/w3c/dom/Node;)Lorg/w3c/dom/Node;
 
-    .line 358
     move-object/from16 v0, v23
 
     invoke-interface {v0, v14}, Lorg/w3c/dom/Element;->appendChild(Lorg/w3c/dom/Node;)Lorg/w3c/dom/Node;
 
-    .line 359
     move-object/from16 v0, v16
 
     move-object/from16 v1, v23
 
     invoke-interface {v0, v1}, Lorg/w3c/dom/Element;->appendChild(Lorg/w3c/dom/Node;)Lorg/w3c/dom/Node;
 
-    .line 361
     :cond_6
     invoke-interface {v6}, Lorg/w3c/dom/Document;->getDocumentElement()Lorg/w3c/dom/Element;
 
@@ -475,26 +426,21 @@
 
     invoke-interface/range {v29 .. v29}, Lorg/w3c/dom/Element;->normalize()V
 
-    .line 362
     invoke-static {}, Ljavax/xml/transform/TransformerFactory;->newInstance()Ljavax/xml/transform/TransformerFactory;
 
     move-result-object v28
 
-    .line 363
     .local v28, "transformerFactory":Ljavax/xml/transform/TransformerFactory;
     invoke-virtual/range {v28 .. v28}, Ljavax/xml/transform/TransformerFactory;->newTransformer()Ljavax/xml/transform/Transformer;
 
     move-result-object v27
 
-    .line 364
     .local v27, "transformer":Ljavax/xml/transform/Transformer;
     const/16 v25, 0x0
 
-    .line 365
     .local v25, "source":Ljavax/xml/transform/dom/DOMSource;
     if-eqz v13, :cond_17
 
-    .line 366
     new-instance v25, Ljavax/xml/transform/dom/DOMSource;
 
     .end local v25    # "source":Ljavax/xml/transform/dom/DOMSource;
@@ -502,7 +448,6 @@
 
     invoke-direct {v0, v6}, Ljavax/xml/transform/dom/DOMSource;-><init>(Lorg/w3c/dom/Node;)V
 
-    .line 370
     .restart local v25    # "source":Ljavax/xml/transform/dom/DOMSource;
     :goto_3
     new-instance v18, Ljavax/xml/transform/stream/StreamResult;
@@ -513,7 +458,6 @@
 
     invoke-direct {v0, v1}, Ljavax/xml/transform/stream/StreamResult;-><init>(Ljava/io/File;)V
 
-    .line 371
     .local v18, "result":Ljavax/xml/transform/stream/StreamResult;
     move-object/from16 v0, v27
 
@@ -523,14 +467,12 @@
 
     invoke-virtual {v0, v1, v2}, Ljavax/xml/transform/Transformer;->transform(Ljavax/xml/transform/Source;Ljavax/xml/transform/Result;)V
 
-    .line 372
     invoke-virtual/range {p0 .. p0}, Ljava/io/File;->canWrite()Z
 
     move-result v29
 
     if-eqz v29, :cond_7
 
-    .line 373
     const/16 v29, 0x0
 
     move-object/from16 v0, p0
@@ -546,11 +488,9 @@
     .catch Ljava/lang/Exception; {:try_start_3 .. :try_end_3} :catch_5
     .catchall {:try_start_3 .. :try_end_3} :catchall_0
 
-    .line 374
     :cond_7
     const/16 v29, 0x0
 
-    .line 386
     .end local v3    # "allowallElement":Lorg/w3c/dom/Element;
     .end local v5    # "dBuilder":Ljavax/xml/parsers/DocumentBuilder;
     .end local v14    # "newElement":Lorg/w3c/dom/Element;
@@ -571,20 +511,17 @@
 
     return v29
 
-    .line 235
     .restart local v5    # "dBuilder":Ljavax/xml/parsers/DocumentBuilder;
     :cond_8
     :try_start_4
     invoke-virtual/range {p0 .. p0}, Ljava/io/File;->createNewFile()Z
 
-    .line 236
     invoke-virtual/range {p0 .. p0}, Ljava/io/File;->canWrite()Z
 
     move-result v29
 
     if-nez v29, :cond_9
 
-    .line 237
     const/16 v29, 0x1
 
     move-object/from16 v0, p0
@@ -593,14 +530,12 @@
 
     invoke-virtual {v0, v1}, Ljava/io/File;->setWritable(Z)Z
 
-    .line 238
     :cond_9
     invoke-virtual {v5}, Ljavax/xml/parsers/DocumentBuilder;->newDocument()Lorg/w3c/dom/Document;
 
     move-result-object v6
 
-    .line 239
-    const-string/jumbo v29, "policy"
+    const-string v29, "policy"
 
     move-object/from16 v0, v29
 
@@ -608,7 +543,6 @@
 
     move-result-object v19
 
-    .line 240
     .local v19, "rootElement":Lorg/w3c/dom/Element;
     move-object/from16 v0, v19
 
@@ -623,27 +557,23 @@
 
     goto/16 :goto_0
 
-    .line 375
     .end local v5    # "dBuilder":Ljavax/xml/parsers/DocumentBuilder;
     .end local v19    # "rootElement":Lorg/w3c/dom/Element;
     :catch_0
     move-exception v9
 
-    .line 376
     .local v9, "e1":Lorg/xml/sax/SAXException;
     :try_start_5
     invoke-virtual {v9}, Lorg/xml/sax/SAXException;->printStackTrace()V
     :try_end_5
     .catchall {:try_start_5 .. :try_end_5} :catchall_0
 
-    .line 386
     .end local v9    # "e1":Lorg/xml/sax/SAXException;
     :goto_5
     const/16 v29, -0x1
 
     goto :goto_4
 
-    .line 255
     .restart local v3    # "allowallElement":Lorg/w3c/dom/Element;
     .restart local v5    # "dBuilder":Ljavax/xml/parsers/DocumentBuilder;
     .restart local v14    # "newElement":Lorg/w3c/dom/Element;
@@ -656,7 +586,6 @@
     :catch_1
     move-exception v8
 
-    .line 256
     .local v8, "e":Ljava/lang/NumberFormatException;
     :try_start_6
     sget-object v29, Lcom/android/server/SEAMSContainer;->mSKLog:Lcom/android/server/SKLogger;
@@ -699,12 +628,10 @@
 
     invoke-virtual {v0, v1, v2}, Lcom/android/server/SKLogger;->logAll(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 257
     const/16 v29, -0x1
 
     goto :goto_4
 
-    .line 269
     .end local v8    # "e":Ljava/lang/NumberFormatException;
     .restart local v26    # "specialTag":Ljava/lang/String;
     :cond_a
@@ -724,18 +651,15 @@
 
     if-ne v0, v1, :cond_3
 
-    .line 270
     :cond_b
-    const-string/jumbo v26, "service"
+    const-string v26, "service"
 
-    .line 271
     move-object/from16 v0, v26
 
     invoke-interface {v6, v0}, Lorg/w3c/dom/Document;->createElement(Ljava/lang/String;)Lorg/w3c/dom/Element;
 
     move-result-object v14
 
-    .line 272
     const-string v29, "name"
 
     move-object/from16 v0, v29
@@ -744,8 +668,7 @@
 
     invoke-interface {v14, v0, v1}, Lorg/w3c/dom/Element;->setAttribute(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 273
-    const-string/jumbo v29, "seinfo"
+    const-string v29, "seinfo"
 
     move-object/from16 v0, v29
 
@@ -753,7 +676,6 @@
 
     invoke-interface {v14, v0, v1}, Lorg/w3c/dom/Element;->setAttribute(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 274
     const-string v29, "category"
 
     move-object/from16 v0, v29
@@ -762,7 +684,6 @@
 
     invoke-interface {v14, v0, v1}, Lorg/w3c/dom/Element;->setAttribute(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 275
     const-string v29, "allowcategory"
 
     new-instance v31, Ljava/lang/StringBuilder;
@@ -793,10 +714,8 @@
 
     invoke-interface {v14, v0, v1}, Lorg/w3c/dom/Element;->setAttribute(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 276
     if-eqz p6, :cond_3
 
-    .line 277
     const-string v29, "agent"
 
     invoke-static/range {p6 .. p6}, Ljava/lang/String;->valueOf(Z)Ljava/lang/String;
@@ -818,7 +737,6 @@
 
     goto/16 :goto_1
 
-    .line 377
     .end local v3    # "allowallElement":Lorg/w3c/dom/Element;
     .end local v5    # "dBuilder":Ljavax/xml/parsers/DocumentBuilder;
     .end local v14    # "newElement":Lorg/w3c/dom/Element;
@@ -832,7 +750,6 @@
     :catch_2
     move-exception v9
 
-    .line 378
     .local v9, "e1":Ljavax/xml/parsers/ParserConfigurationException;
     :try_start_7
     invoke-virtual {v9}, Ljavax/xml/parsers/ParserConfigurationException;->printStackTrace()V
@@ -841,7 +758,6 @@
 
     goto/16 :goto_5
 
-    .line 213
     .end local v6    # "doc":Lorg/w3c/dom/Document;
     .end local v7    # "docBuildFac":Ljavax/xml/parsers/DocumentBuilderFactory;
     .end local v9    # "e1":Ljavax/xml/parsers/ParserConfigurationException;
@@ -852,7 +768,6 @@
 
     throw v29
 
-    .line 280
     .restart local v3    # "allowallElement":Lorg/w3c/dom/Element;
     .restart local v5    # "dBuilder":Ljavax/xml/parsers/DocumentBuilder;
     .restart local v6    # "doc":Lorg/w3c/dom/Document;
@@ -899,12 +814,10 @@
 
     invoke-virtual {v0, v1, v2}, Lcom/android/server/SKLogger;->logAll(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 281
     const/16 v29, -0x1
 
     goto/16 :goto_4
 
-    .line 300
     .restart local v20    # "seandroidInfo":Landroid/content/pm/ApplicationInfo;
     :cond_d
     const/16 v29, 0x1
@@ -919,9 +832,8 @@
 
     if-ne v4, v0, :cond_10
 
-    .line 301
     :cond_e
-    const-string/jumbo v29, "signature"
+    const-string v29, "signature"
 
     move-object/from16 v0, v23
 
@@ -931,8 +843,7 @@
 
     invoke-interface {v0, v1, v2}, Lorg/w3c/dom/Element;->setAttribute(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 302
-    const-string/jumbo v29, "value"
+    const-string v29, "value"
 
     move-object/from16 v0, v20
 
@@ -948,7 +859,6 @@
 
     invoke-interface {v0, v1, v2}, Lorg/w3c/dom/Element;->setAttribute(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 303
     const-string v29, "category"
 
     move-object/from16 v0, v20
@@ -969,7 +879,6 @@
 
     invoke-interface {v0, v1, v2}, Lorg/w3c/dom/Element;->setAttribute(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 304
     const-string v29, "allowcategory"
 
     move-object/from16 v0, v20
@@ -986,7 +895,6 @@
 
     invoke-interface {v0, v1, v2}, Lorg/w3c/dom/Element;->setAttribute(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 305
     const/16 v29, 0x2
 
     move/from16 v0, p5
@@ -995,7 +903,6 @@
 
     if-ne v0, v1, :cond_10
 
-    .line 306
     move-object/from16 v0, v20
 
     iget-object v0, v0, Landroid/content/pm/ApplicationInfo;->allowContainerCategory:Ljava/lang/String;
@@ -1020,12 +927,10 @@
 
     if-eqz v29, :cond_f
 
-    .line 310
     const/16 v29, -0x9
 
     goto/16 :goto_4
 
-    .line 312
     :cond_f
     const-string v29, "category"
 
@@ -1045,7 +950,6 @@
 
     invoke-interface {v14, v0, v1}, Lorg/w3c/dom/Element;->setAttribute(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 313
     const-string v29, "allowcategory"
 
     move-object/from16 v0, v20
@@ -1060,7 +964,6 @@
 
     invoke-interface {v14, v0, v1}, Lorg/w3c/dom/Element;->setAttribute(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 317
     :cond_10
     const/4 v11, 0x0
 
@@ -1074,7 +977,6 @@
 
     if-ge v11, v0, :cond_5
 
-    .line 318
     move-object/from16 v0, v22
 
     invoke-interface {v0, v11}, Lorg/w3c/dom/NodeList;->item(I)Lorg/w3c/dom/Node;
@@ -1084,9 +986,8 @@
     .end local v24    # "signerElementCur":Lorg/w3c/dom/Element;
     check-cast v24, Lorg/w3c/dom/Element;
 
-    .line 319
     .restart local v24    # "signerElementCur":Lorg/w3c/dom/Element;
-    const-string/jumbo v29, "signature"
+    const-string v29, "signature"
 
     move-object/from16 v0, v24
 
@@ -1106,7 +1007,6 @@
 
     if-eqz v29, :cond_16
 
-    .line 320
     move-object/from16 v0, v24
 
     move-object/from16 v1, p2
@@ -1115,7 +1015,6 @@
 
     move-result-object v10
 
-    .line 321
     .local v10, "existElem":Lorg/w3c/dom/Element;
     if-eqz v10, :cond_11
 
@@ -1125,12 +1024,10 @@
 
     if-ne v4, v0, :cond_11
 
-    .line 322
     const/16 v29, -0x9
 
     goto/16 :goto_4
 
-    .line 325
     :cond_11
     if-eqz v10, :cond_12
 
@@ -1148,12 +1045,10 @@
 
     if-ne v0, v1, :cond_12
 
-    .line 326
     const/16 v29, -0x9
 
     goto/16 :goto_4
 
-    .line 329
     :cond_12
     if-eqz v10, :cond_15
 
@@ -1171,7 +1066,6 @@
 
     if-ne v0, v1, :cond_15
 
-    .line 331
     const-string v29, "containerallowcategory"
 
     move-object/from16 v0, v29
@@ -1182,12 +1076,10 @@
 
     if-nez v29, :cond_13
 
-    .line 332
     const/16 v29, -0x9
 
     goto/16 :goto_4
 
-    .line 335
     :cond_13
     const-string v29, "containerallowcategory"
 
@@ -1207,12 +1099,10 @@
 
     if-eqz v29, :cond_14
 
-    .line 339
     const/16 v29, -0x9
 
     goto/16 :goto_4
 
-    .line 341
     :cond_14
     new-instance v29, Ljava/lang/StringBuilder;
 
@@ -1256,7 +1146,6 @@
 
     move-result-object v15
 
-    .line 342
     .local v15, "newValue":Ljava/lang/String;
     const-string v29, "containerallowcategory"
 
@@ -1264,13 +1153,10 @@
 
     invoke-interface {v10, v0, v15}, Lorg/w3c/dom/Element;->setAttribute(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 343
     const/4 v12, 0x1
 
-    .line 344
     goto/16 :goto_2
 
-    .line 346
     .end local v15    # "newValue":Ljava/lang/String;
     :cond_15
     move-object/from16 v0, v22
@@ -1283,20 +1169,16 @@
 
     invoke-interface {v0, v14}, Lorg/w3c/dom/Node;->appendChild(Lorg/w3c/dom/Node;)Lorg/w3c/dom/Node;
 
-    .line 350
     const/4 v12, 0x1
 
-    .line 351
     goto/16 :goto_2
 
-    .line 317
     .end local v10    # "existElem":Lorg/w3c/dom/Element;
     :cond_16
     add-int/lit8 v11, v11, 0x1
 
     goto/16 :goto_6
 
-    .line 368
     .end local v11    # "i":I
     .restart local v25    # "source":Ljavax/xml/transform/dom/DOMSource;
     .restart local v27    # "transformer":Ljavax/xml/transform/Transformer;
@@ -1321,7 +1203,6 @@
     .restart local v25    # "source":Ljavax/xml/transform/dom/DOMSource;
     goto/16 :goto_3
 
-    .line 379
     .end local v3    # "allowallElement":Lorg/w3c/dom/Element;
     .end local v5    # "dBuilder":Ljavax/xml/parsers/DocumentBuilder;
     .end local v14    # "newElement":Lorg/w3c/dom/Element;
@@ -1339,30 +1220,25 @@
     :catch_3
     move-exception v9
 
-    .line 380
     .local v9, "e1":Ljavax/xml/transform/TransformerException;
     :try_start_9
     invoke-virtual {v9}, Ljavax/xml/transform/TransformerException;->printStackTrace()V
 
     goto/16 :goto_5
 
-    .line 381
     .end local v9    # "e1":Ljavax/xml/transform/TransformerException;
     :catch_4
     move-exception v9
 
-    .line 382
     .local v9, "e1":Ljava/io/IOException;
     invoke-virtual {v9}, Ljava/io/IOException;->printStackTrace()V
 
     goto/16 :goto_5
 
-    .line 383
     .end local v9    # "e1":Ljava/io/IOException;
     :catch_5
     move-exception v8
 
-    .line 384
     .local v8, "e":Ljava/lang/Exception;
     invoke-virtual {v8}, Ljava/lang/Exception;->printStackTrace()V
     :try_end_9
@@ -1377,14 +1253,12 @@
     .param p1, "newCat"    # Ljava/lang/String;
 
     .prologue
-    .line 939
     const-string v5, ","
 
     invoke-virtual {p0, v5}, Ljava/lang/String;->split(Ljava/lang/String;)[Ljava/lang/String;
 
     move-result-object v0
 
-    .line 940
     .local v0, "allowCats":[Ljava/lang/String;
     move-object v1, v0
 
@@ -1400,7 +1274,6 @@
 
     aget-object v3, v1, v2
 
-    .line 941
     .local v3, "item":Ljava/lang/String;
     invoke-virtual {p1, v3}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
@@ -1408,22 +1281,18 @@
 
     if-eqz v5, :cond_0
 
-    .line 942
     const/4 v5, 0x1
 
-    .line 945
     .end local v3    # "item":Ljava/lang/String;
     :goto_1
     return v5
 
-    .line 940
     .restart local v3    # "item":Ljava/lang/String;
     :cond_0
     add-int/lit8 v2, v2, 0x1
 
     goto :goto_0
 
-    .line 945
     .end local v3    # "item":Ljava/lang/String;
     :cond_1
     const/4 v5, 0x0
@@ -1439,14 +1308,12 @@
     .param p3, "appType"    # I
 
     .prologue
-    .line 956
     const-string v6, ","
 
     invoke-virtual {p0, v6}, Ljava/lang/String;->split(Ljava/lang/String;)[Ljava/lang/String;
 
     move-result-object v0
 
-    .line 958
     .local v0, "allowCats":[Ljava/lang/String;
     move-object v1, v0
 
@@ -1463,7 +1330,6 @@
 
     aget-object v4, v1, v3
 
-    .line 959
     .local v4, "item":Ljava/lang/String;
     invoke-static {v4}, Ljava/lang/Integer;->parseInt(Ljava/lang/String;)I
 
@@ -1477,7 +1343,6 @@
 
     if-gt v6, p2, :cond_1
 
-    .line 960
     invoke-static {v4}, Ljava/lang/Integer;->parseInt(Ljava/lang/String;)I
 
     move-result v6
@@ -1494,7 +1359,6 @@
 
     if-ne p3, v6, :cond_2
 
-    .line 961
     :cond_0
     sget-object v6, Lcom/android/server/SEAMSContainer;->mSKLog:Lcom/android/server/SKLogger;
 
@@ -1540,13 +1404,11 @@
 
     invoke-virtual {v6, v7, v8}, Lcom/android/server/SKLogger;->logAll(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 958
     :cond_1
     add-int/lit8 v3, v3, 0x1
 
     goto :goto_0
 
-    .line 964
     :cond_2
     sget-object v6, Lcom/android/server/SEAMSContainer;->mSKLog:Lcom/android/server/SKLogger;
 
@@ -1584,27 +1446,22 @@
     :try_end_0
     .catch Ljava/lang/NumberFormatException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 965
     const/4 v6, 0x1
 
-    .line 971
     .end local v3    # "i$":I
     .end local v4    # "item":Ljava/lang/String;
     .end local v5    # "len$":I
     :goto_1
     return v6
 
-    .line 968
     :catch_0
     move-exception v2
 
-    .line 969
     .local v2, "e":Ljava/lang/NumberFormatException;
     const/4 v6, -0x1
 
     goto :goto_1
 
-    .line 971
     .end local v2    # "e":Ljava/lang/NumberFormatException;
     .restart local v3    # "i$":I
     .restart local v5    # "len$":I
@@ -1622,18 +1479,14 @@
     .param p3, "appType"    # I
 
     .prologue
-    .line 881
     if-nez p0, :cond_1
 
-    .line 885
     const/4 v1, 0x0
 
-    .line 914
     :cond_0
     :goto_0
     return-object v1
 
-    .line 887
     :cond_1
     invoke-interface {p0}, Lorg/w3c/dom/Element;->getFirstChild()Lorg/w3c/dom/Node;
 
@@ -1641,24 +1494,20 @@
 
     check-cast v0, Lorg/w3c/dom/Element;
 
-    .line 888
     .local v0, "currTrustedPackageElem":Lorg/w3c/dom/Element;
     const/4 v1, 0x0
 
-    .line 890
     .local v1, "returnElem":Lorg/w3c/dom/Element;
     if-nez p3, :cond_6
 
-    .line 891
     :goto_1
     if-eqz v0, :cond_0
 
-    .line 892
     invoke-interface {v0}, Lorg/w3c/dom/Element;->getTagName()Ljava/lang/String;
 
     move-result-object v2
 
-    const-string/jumbo v3, "seinfo"
+    const-string v3, "seinfo"
 
     invoke-virtual {v2, v3}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
@@ -1704,7 +1553,7 @@
 
     move-result-object v2
 
-    const-string/jumbo v3, "true"
+    const-string v3, "true"
 
     invoke-virtual {v2, v3}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
@@ -1713,7 +1562,7 @@
     if-nez v2, :cond_3
 
     :cond_2
-    const-string/jumbo v2, "seinfo"
+    const-string v2, "seinfo"
 
     invoke-interface {v0, v2}, Lorg/w3c/dom/Element;->getAttribute(Ljava/lang/String;)Ljava/lang/String;
 
@@ -1727,14 +1576,11 @@
 
     if-eqz v2, :cond_4
 
-    .line 896
     :cond_3
     move-object v1, v0
 
-    .line 897
     goto :goto_0
 
-    .line 899
     :cond_4
     invoke-interface {v0}, Lorg/w3c/dom/Element;->getNextSibling()Lorg/w3c/dom/Node;
 
@@ -1746,7 +1592,6 @@
     .restart local v0    # "currTrustedPackageElem":Lorg/w3c/dom/Element;
     goto :goto_1
 
-    .line 911
     :cond_5
     invoke-interface {v0}, Lorg/w3c/dom/Element;->getNextSibling()Lorg/w3c/dom/Node;
 
@@ -1755,17 +1600,15 @@
     .end local v0    # "currTrustedPackageElem":Lorg/w3c/dom/Element;
     check-cast v0, Lorg/w3c/dom/Element;
 
-    .line 903
     .restart local v0    # "currTrustedPackageElem":Lorg/w3c/dom/Element;
     :cond_6
     if-eqz v0, :cond_0
 
-    .line 904
     invoke-interface {v0}, Lorg/w3c/dom/Element;->getTagName()Ljava/lang/String;
 
     move-result-object v2
 
-    const-string/jumbo v3, "seinfo"
+    const-string v3, "seinfo"
 
     invoke-virtual {v2, v3}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
@@ -1805,7 +1648,7 @@
 
     if-nez v2, :cond_5
 
-    const-string/jumbo v2, "seinfo"
+    const-string v2, "seinfo"
 
     invoke-interface {v0, v2}, Lorg/w3c/dom/Element;->getAttribute(Ljava/lang/String;)Ljava/lang/String;
 
@@ -1819,10 +1662,8 @@
 
     if-nez v2, :cond_5
 
-    .line 908
     move-object v1, v0
 
-    .line 909
     goto/16 :goto_0
 .end method
 
@@ -1832,18 +1673,14 @@
     .param p1, "packageName"    # Ljava/lang/String;
 
     .prologue
-    .line 853
     if-nez p0, :cond_1
 
-    .line 857
     const/4 v1, 0x0
 
-    .line 873
     :cond_0
     :goto_0
     return-object v1
 
-    .line 860
     :cond_1
     invoke-interface {p0}, Lorg/w3c/dom/Element;->getFirstChild()Lorg/w3c/dom/Node;
 
@@ -1851,21 +1688,18 @@
 
     check-cast v0, Lorg/w3c/dom/Element;
 
-    .line 861
     .local v0, "currTrustedPackageElem":Lorg/w3c/dom/Element;
     const/4 v1, 0x0
 
-    .line 863
     .local v1, "returnElem":Lorg/w3c/dom/Element;
     :goto_1
     if-eqz v0, :cond_0
 
-    .line 864
     invoke-interface {v0}, Lorg/w3c/dom/Element;->getTagName()Ljava/lang/String;
 
     move-result-object v2
 
-    const-string/jumbo v3, "seinfo"
+    const-string v3, "seinfo"
 
     invoke-virtual {v2, v3}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
@@ -1893,7 +1727,7 @@
 
     if-nez v2, :cond_2
 
-    const-string/jumbo v2, "seinfo"
+    const-string v2, "seinfo"
 
     invoke-interface {v0, v2}, Lorg/w3c/dom/Element;->getAttribute(Ljava/lang/String;)Ljava/lang/String;
 
@@ -1907,13 +1741,10 @@
 
     if-nez v2, :cond_2
 
-    .line 868
     move-object v1, v0
 
-    .line 869
     goto :goto_0
 
-    .line 871
     :cond_2
     invoke-interface {v0}, Lorg/w3c/dom/Element;->getNextSibling()Lorg/w3c/dom/Node;
 
@@ -1933,21 +1764,17 @@
     .prologue
     const/16 v1, 0xc7
 
-    .line 840
     const/16 v0, 0x65
 
     if-le p0, v0, :cond_0
 
     if-gt p0, v1, :cond_0
 
-    .line 841
     const/4 v0, 0x1
 
-    .line 845
     :goto_0
     return v0
 
-    .line 842
     :cond_0
     if-le p0, v1, :cond_1
 
@@ -1955,12 +1782,10 @@
 
     if-gt p0, v0, :cond_1
 
-    .line 843
     const/4 v0, 0x2
 
     goto :goto_0
 
-    .line 845
     :cond_1
     const/4 v0, 0x0
 
@@ -1985,27 +1810,22 @@
     .prologue
     const/4 v6, 0x0
 
-    .line 494
     if-nez p0, :cond_1
 
     move-object v5, v6
 
-    .line 512
     :cond_0
     :goto_0
     return-object v5
 
-    .line 500
     :cond_1
     invoke-static {}, Landroid/app/AppGlobals;->getPackageManager()Landroid/content/pm/IPackageManager;
 
     move-result-object v3
 
-    .line 501
     .local v3, "pm":Landroid/content/pm/IPackageManager;
     const/4 v2, 0x0
 
-    .line 503
     .local v2, "pi":Landroid/content/pm/PackageInfo;
     const/16 v7, 0x40
 
@@ -2018,16 +1838,13 @@
 
     move-result-object v2
 
-    .line 504
     iget-object v4, v2, Landroid/content/pm/PackageInfo;->signatures:[Landroid/content/pm/Signature;
 
-    .line 505
     .local v4, "s":[Landroid/content/pm/Signature;
     new-instance v5, Ljava/util/ArrayList;
 
     invoke-direct {v5}, Ljava/util/ArrayList;-><init>()V
 
-    .line 506
     .local v5, "sigs":Ljava/util/ArrayList;, "Ljava/util/ArrayList<Ljava/lang/String;>;"
     const/4 v1, 0x0
 
@@ -2037,7 +1854,6 @@
 
     if-ge v1, v7, :cond_0
 
-    .line 507
     aget-object v7, v4, v1
 
     invoke-virtual {v7}, Landroid/content/pm/Signature;->toCharsString()Ljava/lang/String;
@@ -2048,25 +1864,21 @@
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 506
     add-int/lit8 v1, v1, 0x1
 
     goto :goto_1
 
-    .line 510
     .end local v1    # "i":I
     .end local v4    # "s":[Landroid/content/pm/Signature;
     .end local v5    # "sigs":Ljava/util/ArrayList;, "Ljava/util/ArrayList<Ljava/lang/String;>;"
     :catch_0
     move-exception v0
 
-    .line 511
     .local v0, "e1":Ljava/lang/Exception;
     invoke-virtual {v0}, Ljava/lang/Exception;->printStackTrace()V
 
     move-object v5, v6
 
-    .line 512
     goto :goto_0
 .end method
 
@@ -2077,15 +1889,12 @@
     .prologue
     const/4 v1, 0x0
 
-    .line 104
     if-nez p0, :cond_1
 
-    .line 108
     :cond_0
     :goto_0
     return-object v1
 
-    .line 104
     :cond_1
     :try_start_0
     invoke-virtual {p0}, Ljava/lang/String;->trim()Ljava/lang/String;
@@ -2104,11 +1913,9 @@
 
     goto :goto_0
 
-    .line 105
     :catch_0
     move-exception v0
 
-    .line 106
     .local v0, "e":Ljava/lang/Exception;
     invoke-virtual {v0}, Ljava/lang/Exception;->printStackTrace()V
 
@@ -2123,14 +1930,12 @@
     .param p3, "propertyValue"    # I
 
     .prologue
-    .line 764
     const-class v19, Lcom/android/server/SEAMSContainer;
 
     monitor-enter v19
 
     const/4 v14, 0x0
 
-    .line 765
     .local v14, "seinfoElem":Lorg/w3c/dom/Element;
     :try_start_0
     invoke-static {}, Ljavax/xml/parsers/DocumentBuilderFactory;->newInstance()Ljavax/xml/parsers/DocumentBuilderFactory;
@@ -2139,18 +1944,15 @@
 
     move-result-object v7
 
-    .line 767
     .local v7, "docBuildFac":Ljavax/xml/parsers/DocumentBuilderFactory;
     :try_start_1
     invoke-virtual {v7}, Ljavax/xml/parsers/DocumentBuilderFactory;->newDocumentBuilder()Ljavax/xml/parsers/DocumentBuilder;
 
     move-result-object v5
 
-    .line 768
     .local v5, "dBuilder":Ljavax/xml/parsers/DocumentBuilder;
     const/4 v6, 0x0
 
-    .line 769
     .local v6, "doc":Lorg/w3c/dom/Document;
     invoke-virtual/range {p0 .. p0}, Ljava/io/File;->exists()Z
 
@@ -2158,22 +1960,19 @@
 
     if-eqz v18, :cond_1
 
-    .line 773
     move-object/from16 v0, p0
 
     invoke-virtual {v5, v0}, Ljavax/xml/parsers/DocumentBuilder;->parse(Ljava/io/File;)Lorg/w3c/dom/Document;
 
     move-result-object v6
 
-    .line 780
     invoke-interface {v6}, Lorg/w3c/dom/Document;->getDocumentElement()Lorg/w3c/dom/Element;
 
     move-result-object v18
 
     invoke-interface/range {v18 .. v18}, Lorg/w3c/dom/Element;->normalize()V
 
-    .line 781
-    const-string/jumbo v18, "policy"
+    const-string v18, "policy"
 
     move-object/from16 v0, v18
 
@@ -2181,11 +1980,9 @@
 
     move-result-object v12
 
-    .line 782
     .local v12, "policyNodeList":Lorg/w3c/dom/NodeList;
     const/4 v11, 0x0
 
-    .line 783
     .local v11, "policyElement":Lorg/w3c/dom/Element;
     const/16 v18, 0x0
 
@@ -2198,9 +1995,8 @@
     .end local v11    # "policyElement":Lorg/w3c/dom/Element;
     check-cast v11, Lorg/w3c/dom/Element;
 
-    .line 784
     .restart local v11    # "policyElement":Lorg/w3c/dom/Element;
-    const-string/jumbo v18, "signer"
+    const-string v18, "signer"
 
     move-object/from16 v0, v18
 
@@ -2208,15 +2004,12 @@
 
     move-result-object v16
 
-    .line 785
     .local v16, "signer":Lorg/w3c/dom/NodeList;
     const/16 v17, 0x0
 
-    .line 786
     .local v17, "signerElementCur":Lorg/w3c/dom/Element;
     const/4 v13, 0x0
 
-    .line 793
     .local v13, "removeElem":Lorg/w3c/dom/Element;
     invoke-interface/range {v16 .. v16}, Lorg/w3c/dom/NodeList;->getLength()I
 
@@ -2230,7 +2023,6 @@
 
     if-ne v0, v1, :cond_7
 
-    .line 794
     const/16 v18, 0x0
 
     move-object/from16 v0, v16
@@ -2244,9 +2036,8 @@
     .end local v17    # "signerElementCur":Lorg/w3c/dom/Element;
     check-cast v17, Lorg/w3c/dom/Element;
 
-    .line 795
     .restart local v17    # "signerElementCur":Lorg/w3c/dom/Element;
-    const-string/jumbo v18, "signature"
+    const-string v18, "signature"
 
     invoke-interface/range {v17 .. v18}, Lorg/w3c/dom/Element;->getAttribute(Ljava/lang/String;)Ljava/lang/String;
 
@@ -2262,14 +2053,12 @@
 
     if-eqz v18, :cond_6
 
-    .line 796
-    const-string/jumbo v18, "service"
+    const-string v18, "service"
 
     invoke-interface/range {v17 .. v18}, Lorg/w3c/dom/Element;->getElementsByTagName(Ljava/lang/String;)Lorg/w3c/dom/NodeList;
 
     move-result-object v15
 
-    .line 799
     .local v15, "servicePackageList":Lorg/w3c/dom/NodeList;
     invoke-interface {v15}, Lorg/w3c/dom/NodeList;->getLength()I
 
@@ -2303,13 +2092,12 @@
 
     if-eq v0, v1, :cond_2
 
-    .line 800
     :cond_0
     sget-object v18, Lcom/android/server/SEAMSContainer;->mSKLog:Lcom/android/server/SKLogger;
 
     const-string v20, "SEAMSContainer"
 
-    const-string/jumbo v21, "service entry different than expected"
+    const-string v21, "service entry different than expected"
 
     move-object/from16 v0, v18
 
@@ -2325,10 +2113,8 @@
     .catch Ljava/lang/Exception; {:try_start_1 .. :try_end_1} :catch_3
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
-    .line 801
     const/16 v18, 0x0
 
-    .line 836
     .end local v5    # "dBuilder":Ljavax/xml/parsers/DocumentBuilder;
     .end local v6    # "doc":Lorg/w3c/dom/Document;
     .end local v11    # "policyElement":Lorg/w3c/dom/Element;
@@ -2342,7 +2128,6 @@
 
     return v18
 
-    .line 778
     .restart local v5    # "dBuilder":Ljavax/xml/parsers/DocumentBuilder;
     .restart local v6    # "doc":Lorg/w3c/dom/Document;
     :cond_1
@@ -2350,7 +2135,6 @@
 
     goto :goto_0
 
-    .line 803
     .restart local v11    # "policyElement":Lorg/w3c/dom/Element;
     .restart local v12    # "policyNodeList":Lorg/w3c/dom/NodeList;
     .restart local v13    # "removeElem":Lorg/w3c/dom/Element;
@@ -2360,11 +2144,9 @@
     :cond_2
     const/4 v4, 0x0
 
-    .line 804
     .local v4, "currElem":Lorg/w3c/dom/Element;
     const/4 v3, 0x0
 
-    .line 805
     .local v3, "cnt":I
     const/4 v10, 0x0
 
@@ -2379,7 +2161,6 @@
 
     if-ge v10, v0, :cond_4
 
-    .line 806
     invoke-interface {v15, v10}, Lorg/w3c/dom/NodeList;->item(I)Lorg/w3c/dom/Node;
 
     move-result-object v4
@@ -2387,7 +2168,6 @@
     .end local v4    # "currElem":Lorg/w3c/dom/Element;
     check-cast v4, Lorg/w3c/dom/Element;
 
-    .line 810
     .restart local v4    # "currElem":Lorg/w3c/dom/Element;
     const-string v18, "name"
 
@@ -2407,16 +2187,13 @@
 
     if-eqz v18, :cond_3
 
-    .line 814
     add-int/lit8 v3, v3, 0x1
 
-    .line 805
     :cond_3
     add-int/lit8 v10, v10, 0x1
 
     goto :goto_1
 
-    .line 817
     :cond_4
     const/16 v18, 0x2
 
@@ -2438,13 +2215,11 @@
 
     if-ne v0, v1, :cond_8
 
-    .line 818
     :cond_5
     const/16 v18, 0x1
 
     goto :goto_0
 
-    .line 820
     .end local v3    # "cnt":I
     .end local v4    # "currElem":Lorg/w3c/dom/Element;
     .end local v10    # "i":I
@@ -2464,12 +2239,10 @@
 
     invoke-virtual {v0, v1, v2}, Lcom/android/server/SKLogger;->logAll(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 821
     const/16 v18, -0x1
 
     goto :goto_0
 
-    .line 824
     :cond_7
     sget-object v18, Lcom/android/server/SEAMSContainer;->mSKLog:Lcom/android/server/SKLogger;
 
@@ -2491,12 +2264,10 @@
     .catch Ljava/lang/Exception; {:try_start_2 .. :try_end_2} :catch_3
     .catchall {:try_start_2 .. :try_end_2} :catchall_0
 
-    .line 825
     const/16 v18, 0x0
 
     goto :goto_0
 
-    .line 827
     .end local v5    # "dBuilder":Ljavax/xml/parsers/DocumentBuilder;
     .end local v6    # "doc":Lorg/w3c/dom/Document;
     .end local v11    # "policyElement":Lorg/w3c/dom/Element;
@@ -2507,12 +2278,10 @@
     :catch_0
     move-exception v9
 
-    .line 828
     .local v9, "e1":Lorg/xml/sax/SAXException;
     :try_start_3
     invoke-virtual {v9}, Lorg/xml/sax/SAXException;->printStackTrace()V
 
-    .line 836
     .end local v9    # "e1":Lorg/xml/sax/SAXException;
     :cond_8
     :goto_2
@@ -2520,11 +2289,9 @@
 
     goto :goto_0
 
-    .line 829
     :catch_1
     move-exception v9
 
-    .line 830
     .local v9, "e1":Ljavax/xml/parsers/ParserConfigurationException;
     invoke-virtual {v9}, Ljavax/xml/parsers/ParserConfigurationException;->printStackTrace()V
     :try_end_3
@@ -2532,7 +2299,6 @@
 
     goto :goto_2
 
-    .line 764
     .end local v7    # "docBuildFac":Ljavax/xml/parsers/DocumentBuilderFactory;
     .end local v9    # "e1":Ljavax/xml/parsers/ParserConfigurationException;
     :catchall_0
@@ -2542,24 +2308,20 @@
 
     throw v18
 
-    .line 831
     .restart local v7    # "docBuildFac":Ljavax/xml/parsers/DocumentBuilderFactory;
     :catch_2
     move-exception v9
 
-    .line 832
     .local v9, "e1":Ljava/io/IOException;
     :try_start_4
     invoke-virtual {v9}, Ljava/io/IOException;->printStackTrace()V
 
     goto :goto_2
 
-    .line 833
     .end local v9    # "e1":Ljava/io/IOException;
     :catch_3
     move-exception v8
 
-    .line 834
     .local v8, "e":Ljava/lang/Exception;
     invoke-virtual {v8}, Ljava/lang/Exception;->printStackTrace()V
     :try_end_4
@@ -2574,10 +2336,8 @@
     .param p1, "category"    # Ljava/lang/String;
 
     .prologue
-    .line 980
     const/4 v5, 0x0
 
-    .line 981
     .local v5, "returnCat":Ljava/lang/String;
     const-string v7, ","
 
@@ -2585,11 +2345,9 @@
 
     move-result-object v6
 
-    .line 982
     .local v6, "srcCategories":[Ljava/lang/String;
     const/4 v4, 0x0
 
-    .line 983
     .local v4, "matchFound":Z
     move-object v0, v6
 
@@ -2605,7 +2363,6 @@
 
     aget-object v2, v0, v1
 
-    .line 984
     .local v2, "item":Ljava/lang/String;
     invoke-virtual {v2, p1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
@@ -2613,25 +2370,20 @@
 
     if-eqz v7, :cond_0
 
-    .line 985
     const/4 v4, 0x1
 
-    .line 983
     :goto_1
     add-int/lit8 v1, v1, 0x1
 
     goto :goto_0
 
-    .line 987
     :cond_0
     if-nez v5, :cond_1
 
-    .line 988
     move-object v5, v2
 
     goto :goto_1
 
-    .line 990
     :cond_1
     new-instance v7, Ljava/lang/StringBuilder;
 
@@ -2657,12 +2409,10 @@
 
     goto :goto_1
 
-    .line 994
     .end local v2    # "item":Ljava/lang/String;
     :cond_2
     if-eqz v4, :cond_3
 
-    .line 1000
     .end local v5    # "returnCat":Ljava/lang/String;
     :goto_2
     return-object v5
@@ -2683,18 +2433,15 @@
     .param p4, "appType"    # I
 
     .prologue
-    .line 615
     const-class v25, Lcom/android/server/SEAMSContainer;
 
     monitor-enter v25
 
     const/4 v11, 0x0
 
-    .line 616
     .local v11, "isRemoveSuccess":Z
     const/16 v17, 0x0
 
-    .line 619
     .local v17, "seinfoElem":Lorg/w3c/dom/Element;
     :try_start_0
     invoke-static {}, Ljavax/xml/parsers/DocumentBuilderFactory;->newInstance()Ljavax/xml/parsers/DocumentBuilderFactory;
@@ -2703,7 +2450,6 @@
 
     move-result-object v7
 
-    .line 621
     .local v7, "docBuildFac":Ljavax/xml/parsers/DocumentBuilderFactory;
     :try_start_1
     invoke-virtual {v7}, Ljavax/xml/parsers/DocumentBuilderFactory;->newDocumentBuilder()Ljavax/xml/parsers/DocumentBuilder;
@@ -2717,15 +2463,12 @@
 
     move-result-object v5
 
-    .line 622
     .local v5, "dBuilder":Ljavax/xml/parsers/DocumentBuilder;
     const/4 v6, 0x0
 
-    .line 623
     .local v6, "doc":Lorg/w3c/dom/Document;
     const/4 v4, 0x0
 
-    .line 625
     .local v4, "conType":I
     :try_start_2
     invoke-static/range {p3 .. p3}, Ljava/lang/Integer;->parseInt(Ljava/lang/String;)I
@@ -2744,7 +2487,6 @@
 
     move-result v4
 
-    .line 630
     :try_start_3
     invoke-virtual/range {p0 .. p0}, Ljava/io/File;->exists()Z
 
@@ -2752,14 +2494,12 @@
 
     if-eqz v24, :cond_6
 
-    .line 634
     invoke-virtual/range {p0 .. p0}, Ljava/io/File;->canWrite()Z
 
     move-result v24
 
     if-nez v24, :cond_0
 
-    .line 635
     const/16 v24, 0x1
 
     move-object/from16 v0, p0
@@ -2768,7 +2508,6 @@
 
     invoke-virtual {v0, v1}, Ljava/io/File;->setWritable(Z)Z
 
-    .line 636
     :cond_0
     move-object/from16 v0, p0
 
@@ -2776,15 +2515,13 @@
 
     move-result-object v6
 
-    .line 643
     invoke-interface {v6}, Lorg/w3c/dom/Document;->getDocumentElement()Lorg/w3c/dom/Element;
 
     move-result-object v24
 
     invoke-interface/range {v24 .. v24}, Lorg/w3c/dom/Element;->normalize()V
 
-    .line 644
-    const-string/jumbo v24, "policy"
+    const-string v24, "policy"
 
     move-object/from16 v0, v24
 
@@ -2792,11 +2529,9 @@
 
     move-result-object v14
 
-    .line 645
     .local v14, "policyNodeList":Lorg/w3c/dom/NodeList;
     const/4 v13, 0x0
 
-    .line 646
     .local v13, "policyElement":Lorg/w3c/dom/Element;
     const/16 v24, 0x0
 
@@ -2809,9 +2544,8 @@
     .end local v13    # "policyElement":Lorg/w3c/dom/Element;
     check-cast v13, Lorg/w3c/dom/Element;
 
-    .line 647
     .restart local v13    # "policyElement":Lorg/w3c/dom/Element;
-    const-string/jumbo v24, "signer"
+    const-string v24, "signer"
 
     move-object/from16 v0, v24
 
@@ -2819,15 +2553,12 @@
 
     move-result-object v19
 
-    .line 648
     .local v19, "signer":Lorg/w3c/dom/NodeList;
     const/16 v20, 0x0
 
-    .line 649
     .local v20, "signerElementCur":Lorg/w3c/dom/Element;
     const/4 v15, 0x0
 
-    .line 656
     .local v15, "removeElem":Lorg/w3c/dom/Element;
     const/4 v10, 0x0
 
@@ -2841,7 +2572,6 @@
 
     if-ge v10, v0, :cond_3
 
-    .line 657
     move-object/from16 v0, v19
 
     invoke-interface {v0, v10}, Lorg/w3c/dom/NodeList;->item(I)Lorg/w3c/dom/Node;
@@ -2851,9 +2581,8 @@
     .end local v20    # "signerElementCur":Lorg/w3c/dom/Element;
     check-cast v20, Lorg/w3c/dom/Element;
 
-    .line 658
     .restart local v20    # "signerElementCur":Lorg/w3c/dom/Element;
-    const-string/jumbo v24, "signature"
+    const-string v24, "signature"
 
     move-object/from16 v0, v20
 
@@ -2873,7 +2602,6 @@
 
     if-eqz v24, :cond_f
 
-    .line 662
     const/16 v24, 0x2
 
     move/from16 v0, v24
@@ -2890,7 +2618,6 @@
 
     if-nez p4, :cond_7
 
-    .line 663
     :cond_1
     move-object/from16 v0, v20
 
@@ -2904,7 +2631,6 @@
 
     move-result-object v15
 
-    .line 670
     :goto_1
     if-eqz v15, :cond_a
 
@@ -2926,7 +2652,6 @@
 
     if-ne v0, v1, :cond_a
 
-    .line 671
     :cond_2
     const-string v24, "category"
 
@@ -2946,7 +2671,6 @@
 
     if-eqz v24, :cond_9
 
-    .line 675
     move-object/from16 v0, v19
 
     invoke-interface {v0, v10}, Lorg/w3c/dom/NodeList;->item(I)Lorg/w3c/dom/Node;
@@ -2957,16 +2681,13 @@
 
     invoke-interface {v0, v15}, Lorg/w3c/dom/Node;->removeChild(Lorg/w3c/dom/Node;)Lorg/w3c/dom/Node;
 
-    .line 676
     const/4 v11, 0x1
 
-    .line 722
     :cond_3
     :goto_2
     if-eqz v11, :cond_10
 
-    .line 723
-    const-string/jumbo v24, "service"
+    const-string v24, "service"
 
     move-object/from16 v0, v20
 
@@ -2976,7 +2697,6 @@
 
     move-result-object v18
 
-    .line 724
     .local v18, "servicePackageList":Lorg/w3c/dom/NodeList;
     invoke-interface/range {v18 .. v18}, Lorg/w3c/dom/NodeList;->getLength()I
 
@@ -2984,12 +2704,10 @@
 
     if-nez v24, :cond_4
 
-    .line 725
     move-object/from16 v0, v20
 
     invoke-interface {v13, v0}, Lorg/w3c/dom/Element;->removeChild(Lorg/w3c/dom/Node;)Lorg/w3c/dom/Node;
 
-    .line 730
     :cond_4
     invoke-interface {v6}, Lorg/w3c/dom/Document;->getDocumentElement()Lorg/w3c/dom/Element;
 
@@ -2997,18 +2715,15 @@
 
     invoke-interface/range {v24 .. v24}, Lorg/w3c/dom/Element;->normalize()V
 
-    .line 731
     invoke-static {}, Ljavax/xml/transform/TransformerFactory;->newInstance()Ljavax/xml/transform/TransformerFactory;
 
     move-result-object v23
 
-    .line 732
     .local v23, "transformerFactory":Ljavax/xml/transform/TransformerFactory;
     invoke-virtual/range {v23 .. v23}, Ljavax/xml/transform/TransformerFactory;->newTransformer()Ljavax/xml/transform/Transformer;
 
     move-result-object v22
 
-    .line 733
     .local v22, "transformer":Ljavax/xml/transform/Transformer;
     new-instance v21, Ljavax/xml/transform/dom/DOMSource;
 
@@ -3016,7 +2731,6 @@
 
     invoke-direct {v0, v6}, Ljavax/xml/transform/dom/DOMSource;-><init>(Lorg/w3c/dom/Node;)V
 
-    .line 734
     .local v21, "source":Ljavax/xml/transform/dom/DOMSource;
     new-instance v16, Ljavax/xml/transform/stream/StreamResult;
 
@@ -3026,7 +2740,6 @@
 
     invoke-direct {v0, v1}, Ljavax/xml/transform/stream/StreamResult;-><init>(Ljava/io/File;)V
 
-    .line 735
     .local v16, "result":Ljavax/xml/transform/stream/StreamResult;
     move-object/from16 v0, v22
 
@@ -3036,7 +2749,6 @@
 
     invoke-virtual {v0, v1, v2}, Ljavax/xml/transform/Transformer;->transform(Ljavax/xml/transform/Source;Ljavax/xml/transform/Result;)V
 
-    .line 742
     .end local v16    # "result":Ljavax/xml/transform/stream/StreamResult;
     .end local v18    # "servicePackageList":Lorg/w3c/dom/NodeList;
     .end local v21    # "source":Ljavax/xml/transform/dom/DOMSource;
@@ -3049,7 +2761,6 @@
 
     if-eqz v24, :cond_5
 
-    .line 743
     const/16 v24, 0x0
 
     move-object/from16 v0, p0
@@ -3078,20 +2789,17 @@
     :goto_4
     move/from16 v24, v11
 
-    .line 755
     :goto_5
     monitor-exit v25
 
     return v24
 
-    .line 626
     .restart local v4    # "conType":I
     .restart local v5    # "dBuilder":Ljavax/xml/parsers/DocumentBuilder;
     .restart local v6    # "doc":Lorg/w3c/dom/Document;
     :catch_0
     move-exception v8
 
-    .line 627
     .local v8, "e":Ljava/lang/NumberFormatException;
     :try_start_4
     sget-object v24, Lcom/android/server/SEAMSContainer;->mSKLog:Lcom/android/server/SKLogger;
@@ -3134,19 +2842,16 @@
 
     invoke-virtual {v0, v1, v2}, Lcom/android/server/SKLogger;->logAll(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 628
     const/16 v24, 0x0
 
     goto :goto_5
 
-    .line 641
     .end local v8    # "e":Ljava/lang/NumberFormatException;
     :cond_6
     const/16 v24, 0x0
 
     goto :goto_5
 
-    .line 665
     .restart local v10    # "i":I
     .restart local v13    # "policyElement":Lorg/w3c/dom/Element;
     .restart local v14    # "policyNodeList":Lorg/w3c/dom/NodeList;
@@ -3156,7 +2861,6 @@
     :cond_7
     if-nez p4, :cond_8
 
-    .line 666
     move-object/from16 v0, v20
 
     move-object/from16 v1, p2
@@ -3171,7 +2875,6 @@
 
     goto/16 :goto_1
 
-    .line 668
     :cond_8
     move-object/from16 v0, v20
 
@@ -3183,13 +2886,11 @@
 
     goto/16 :goto_1
 
-    .line 682
     :cond_9
     const/16 v24, 0x0
 
     goto :goto_5
 
-    .line 684
     :cond_a
     if-eqz v15, :cond_e
 
@@ -3209,7 +2910,6 @@
 
     if-ne v0, v1, :cond_e
 
-    .line 685
     :cond_b
     const/16 v24, 0x2
 
@@ -3225,7 +2925,6 @@
 
     if-ne v0, v1, :cond_d
 
-    .line 686
     const-string v24, "containerallowcategory"
 
     move-object/from16 v0, v24
@@ -3244,7 +2943,6 @@
 
     if-eqz v24, :cond_c
 
-    .line 690
     move-object/from16 v0, v19
 
     invoke-interface {v0, v10}, Lorg/w3c/dom/NodeList;->item(I)Lorg/w3c/dom/Node;
@@ -3255,13 +2953,10 @@
 
     invoke-interface {v0, v15}, Lorg/w3c/dom/Node;->removeChild(Lorg/w3c/dom/Node;)Lorg/w3c/dom/Node;
 
-    .line 691
     const/4 v11, 0x1
 
-    .line 692
     goto/16 :goto_2
 
-    .line 697
     :cond_c
     const-string v24, "containerallowcategory"
 
@@ -3279,24 +2974,19 @@
 
     move-result-object v12
 
-    .line 698
     .local v12, "newVal":Ljava/lang/String;
     if-eqz v12, :cond_f
 
-    .line 699
     const-string v24, "containerallowcategory"
 
     move-object/from16 v0, v24
 
     invoke-interface {v15, v0, v12}, Lorg/w3c/dom/Element;->setAttribute(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 700
     const/4 v11, 0x1
 
-    .line 701
     goto/16 :goto_2
 
-    .line 704
     .end local v12    # "newVal":Ljava/lang/String;
     :cond_d
     const/16 v24, 0x1
@@ -3305,7 +2995,6 @@
 
     if-ne v4, v0, :cond_f
 
-    .line 708
     move-object/from16 v0, v19
 
     invoke-interface {v0, v10}, Lorg/w3c/dom/NodeList;->item(I)Lorg/w3c/dom/Node;
@@ -3316,25 +3005,20 @@
 
     invoke-interface {v0, v15}, Lorg/w3c/dom/Node;->removeChild(Lorg/w3c/dom/Node;)Lorg/w3c/dom/Node;
 
-    .line 709
     const/4 v11, 0x1
 
-    .line 710
     goto/16 :goto_2
 
-    .line 716
     :cond_e
     const/16 v24, 0x0
 
     goto/16 :goto_5
 
-    .line 656
     :cond_f
     add-int/lit8 v10, v10, 0x1
 
     goto/16 :goto_0
 
-    .line 740
     :cond_10
     sget-object v24, Lcom/android/server/SEAMSContainer;->mSKLog:Lcom/android/server/SKLogger;
 
@@ -3385,7 +3069,6 @@
 
     goto/16 :goto_3
 
-    .line 744
     .end local v4    # "conType":I
     .end local v5    # "dBuilder":Ljavax/xml/parsers/DocumentBuilder;
     .end local v6    # "doc":Lorg/w3c/dom/Document;
@@ -3398,7 +3081,6 @@
     :catch_1
     move-exception v9
 
-    .line 745
     .local v9, "e1":Lorg/xml/sax/SAXException;
     :try_start_5
     invoke-virtual {v9}, Lorg/xml/sax/SAXException;->printStackTrace()V
@@ -3407,7 +3089,6 @@
 
     goto/16 :goto_4
 
-    .line 615
     .end local v7    # "docBuildFac":Ljavax/xml/parsers/DocumentBuilderFactory;
     .end local v9    # "e1":Lorg/xml/sax/SAXException;
     :catchall_0
@@ -3417,46 +3098,38 @@
 
     throw v24
 
-    .line 746
     .restart local v7    # "docBuildFac":Ljavax/xml/parsers/DocumentBuilderFactory;
     :catch_2
     move-exception v9
 
-    .line 747
     .local v9, "e1":Ljavax/xml/parsers/ParserConfigurationException;
     :try_start_6
     invoke-virtual {v9}, Ljavax/xml/parsers/ParserConfigurationException;->printStackTrace()V
 
     goto/16 :goto_4
 
-    .line 748
     .end local v9    # "e1":Ljavax/xml/parsers/ParserConfigurationException;
     :catch_3
     move-exception v9
 
-    .line 749
     .local v9, "e1":Ljavax/xml/transform/TransformerException;
     invoke-virtual {v9}, Ljavax/xml/transform/TransformerException;->printStackTrace()V
 
     goto/16 :goto_4
 
-    .line 750
     .end local v9    # "e1":Ljavax/xml/transform/TransformerException;
     :catch_4
     move-exception v9
 
-    .line 751
     .local v9, "e1":Ljava/io/IOException;
     invoke-virtual {v9}, Ljava/io/IOException;->printStackTrace()V
 
     goto/16 :goto_4
 
-    .line 752
     .end local v9    # "e1":Ljava/io/IOException;
     :catch_5
     move-exception v8
 
-    .line 753
     .local v8, "e":Ljava/lang/Exception;
     invoke-virtual {v8}, Ljava/lang/Exception;->printStackTrace()V
     :try_end_6
@@ -3472,7 +3145,6 @@
     .param p1, "uid"    # I
 
     .prologue
-    .line 115
     const/4 v0, -0x1
 
     return v0
@@ -3482,7 +3154,6 @@
     .locals 1
 
     .prologue
-    .line 140
     const/4 v0, -0x1
 
     return v0
@@ -3496,7 +3167,6 @@
     .param p4, "appType"    # I
 
     .prologue
-    .line 120
     const/4 v0, -0x1
 
     return v0
@@ -3513,16 +3183,13 @@
     .param p7, "category"    # I
 
     .prologue
-    .line 393
     monitor-enter p0
 
     const/4 v9, 0x0
 
-    .line 394
     .local v9, "br":Ljava/io/BufferedReader;
     const/4 v15, 0x0
 
-    .line 397
     .local v15, "pw":Ljava/io/PrintWriter;
     :try_start_0
     new-instance v13, Ljava/io/File;
@@ -3531,7 +3198,6 @@
 
     invoke-direct {v13, v0}, Ljava/io/File;-><init>(Ljava/lang/String;)V
 
-    .line 398
     .local v13, "inFile":Ljava/io/File;
     invoke-virtual {v13}, Ljava/io/File;->exists()Z
 
@@ -3539,7 +3205,6 @@
 
     if-nez v1, :cond_0
 
-    .line 399
     sget-object v1, Lcom/android/server/SEAMSContainer;->mSKLog:Lcom/android/server/SKLogger;
 
     const-string v2, "SEAMSContainer"
@@ -3572,22 +3237,18 @@
 
     invoke-virtual {v1, v2, v3}, Lcom/android/server/SKLogger;->logAll(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 401
     invoke-virtual {v13}, Ljava/io/File;->createNewFile()Z
 
-    .line 402
     invoke-virtual {v13}, Ljava/io/File;->canWrite()Z
 
     move-result v1
 
     if-nez v1, :cond_0
 
-    .line 403
     const/4 v1, 0x1
 
     invoke-virtual {v13, v1}, Ljava/io/File;->setWritable(Z)Z
 
-    .line 406
     :cond_0
     new-instance v17, Ljava/io/File;
 
@@ -3617,7 +3278,6 @@
 
     invoke-direct {v0, v1}, Ljava/io/File;-><init>(Ljava/lang/String;)V
 
-    .line 407
     .local v17, "tempFile":Ljava/io/File;
     new-instance v10, Ljava/io/BufferedReader;
 
@@ -3633,7 +3293,6 @@
     .catch Ljava/io/IOException; {:try_start_0 .. :try_end_0} :catch_1
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 408
     .end local v9    # "br":Ljava/io/BufferedReader;
     .local v10, "br":Ljava/io/BufferedReader;
     :try_start_1
@@ -3653,7 +3312,6 @@
     .catch Ljava/io/IOException; {:try_start_1 .. :try_end_1} :catch_5
     .catchall {:try_start_1 .. :try_end_1} :catchall_1
 
-    .line 410
     .end local v15    # "pw":Ljava/io/PrintWriter;
     .local v16, "pw":Ljava/io/PrintWriter;
     const/4 v14, 0x0
@@ -3673,13 +3331,11 @@
 
     move/from16 v7, p7
 
-    .line 411
     :try_start_2
     invoke-virtual/range {v1 .. v7}, Lcom/android/server/SEAMSContainer;->getSEAppContextLine(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;I)Ljava/lang/String;
 
     move-result-object v8
 
-    .line 416
     .local v8, "addedLine":Ljava/lang/String;
     :goto_0
     invoke-virtual {v10}, Ljava/io/BufferedReader;->readLine()Ljava/lang/String;
@@ -3688,19 +3344,16 @@
 
     if-eqz v14, :cond_3
 
-    .line 417
     invoke-virtual {v8, v14}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v1
 
     if-nez v1, :cond_1
 
-    .line 418
     move-object/from16 v0, v16
 
     invoke-virtual {v0, v14}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
-    .line 419
     invoke-virtual/range {v16 .. v16}, Ljava/io/PrintWriter;->flush()V
     :try_end_2
     .catch Ljava/io/FileNotFoundException; {:try_start_2 .. :try_end_2} :catch_0
@@ -3709,7 +3362,6 @@
 
     goto :goto_0
 
-    .line 445
     .end local v8    # "addedLine":Ljava/lang/String;
     :catch_0
     move-exception v12
@@ -3720,7 +3372,6 @@
     .restart local v15    # "pw":Ljava/io/PrintWriter;
     move-object v9, v10
 
-    .line 446
     .end local v10    # "br":Ljava/io/BufferedReader;
     .end local v13    # "inFile":Ljava/io/File;
     .end local v14    # "line":Ljava/lang/String;
@@ -3737,7 +3388,7 @@
 
     invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v4, "remove Seapp_context, Could not delete file "
+    const-string v4, "remove Seapp_context, Could not delete file "
 
     invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -3757,17 +3408,14 @@
     :try_end_3
     .catchall {:try_start_3 .. :try_end_3} :catchall_0
 
-    .line 447
     const/4 v1, -0x1
 
-    .line 478
     .end local v12    # "ex":Ljava/io/FileNotFoundException;
     :goto_2
     monitor-exit p0
 
     return v1
 
-    .line 421
     .end local v9    # "br":Ljava/io/BufferedReader;
     .end local v15    # "pw":Ljava/io/PrintWriter;
     .restart local v8    # "addedLine":Ljava/lang/String;
@@ -3780,17 +3428,14 @@
     :try_start_4
     invoke-virtual/range {v16 .. v16}, Ljava/io/PrintWriter;->close()V
 
-    .line 422
     invoke-virtual {v10}, Ljava/io/BufferedReader;->close()V
 
-    .line 423
     invoke-virtual/range {v17 .. v17}, Ljava/io/File;->delete()Z
 
     move-result v1
 
     if-nez v1, :cond_2
 
-    .line 424
     sget-object v1, Lcom/android/server/SEAMSContainer;->mSKLog:Lcom/android/server/SKLogger;
 
     const-string v2, "SEAMSContainer"
@@ -3819,7 +3464,6 @@
 
     invoke-virtual {v1, v2, v3}, Lcom/android/server/SKLogger;->logAll(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 426
     :cond_2
     const/4 v1, 0x0
 
@@ -3833,7 +3477,6 @@
     .restart local v9    # "br":Ljava/io/BufferedReader;
     goto :goto_2
 
-    .line 430
     .end local v9    # "br":Ljava/io/BufferedReader;
     .end local v15    # "pw":Ljava/io/PrintWriter;
     .restart local v10    # "br":Ljava/io/BufferedReader;
@@ -3843,23 +3486,18 @@
 
     invoke-virtual {v0, v8}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
-    .line 431
     invoke-virtual/range {v16 .. v16}, Ljava/io/PrintWriter;->flush()V
 
-    .line 433
     invoke-virtual/range {v16 .. v16}, Ljava/io/PrintWriter;->close()V
 
-    .line 434
     invoke-virtual {v10}, Ljava/io/BufferedReader;->close()V
 
-    .line 436
     invoke-virtual {v13}, Ljava/io/File;->delete()Z
 
     move-result v1
 
     if-nez v1, :cond_4
 
-    .line 437
     sget-object v1, Lcom/android/server/SEAMSContainer;->mSKLog:Lcom/android/server/SKLogger;
 
     const-string v2, "SEAMSContainer"
@@ -3868,7 +3506,7 @@
 
     invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v4, "remove Seapp_context, Could not delete file "
+    const-string v4, "remove Seapp_context, Could not delete file "
 
     invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -3886,7 +3524,6 @@
 
     invoke-virtual {v1, v2, v3}, Lcom/android/server/SKLogger;->logAll(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 438
     const/4 v1, -0x1
 
     move-object/from16 v15, v16
@@ -3899,7 +3536,6 @@
     .restart local v9    # "br":Ljava/io/BufferedReader;
     goto :goto_2
 
-    .line 440
     .end local v9    # "br":Ljava/io/BufferedReader;
     .end local v15    # "pw":Ljava/io/PrintWriter;
     .restart local v10    # "br":Ljava/io/BufferedReader;
@@ -3913,7 +3549,6 @@
 
     if-nez v1, :cond_7
 
-    .line 441
     sget-object v1, Lcom/android/server/SEAMSContainer;->mSKLog:Lcom/android/server/SKLogger;
 
     const-string v2, "SEAMSContainer"
@@ -3922,7 +3557,7 @@
 
     invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v4, "remove Seapp_context, Could not rename file "
+    const-string v4, "remove Seapp_context, Could not rename file "
 
     invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -3944,7 +3579,6 @@
     .catch Ljava/io/IOException; {:try_start_4 .. :try_end_4} :catch_6
     .catchall {:try_start_4 .. :try_end_4} :catchall_2
 
-    .line 442
     const/4 v1, -0x1
 
     move-object/from16 v15, v16
@@ -3957,7 +3591,6 @@
     .restart local v9    # "br":Ljava/io/BufferedReader;
     goto/16 :goto_2
 
-    .line 448
     .end local v8    # "addedLine":Ljava/lang/String;
     .end local v13    # "inFile":Ljava/io/File;
     .end local v14    # "line":Ljava/lang/String;
@@ -3965,7 +3598,6 @@
     :catch_1
     move-exception v12
 
-    .line 449
     .local v12, "ex":Ljava/io/IOException;
     :goto_3
     :try_start_5
@@ -3977,7 +3609,7 @@
 
     invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v4, "remove Seapp_context, file "
+    const-string v4, "remove Seapp_context, file "
 
     invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -4003,41 +3635,32 @@
     :try_end_5
     .catchall {:try_start_5 .. :try_end_5} :catchall_0
 
-    .line 452
     if-eqz v9, :cond_5
 
-    .line 453
     :try_start_6
     invoke-virtual {v9}, Ljava/io/BufferedReader;->close()V
 
-    .line 454
     const/4 v9, 0x0
 
-    .line 456
     :cond_5
     if-eqz v15, :cond_6
 
-    .line 457
     invoke-virtual {v15}, Ljava/io/PrintWriter;->close()V
     :try_end_6
     .catch Ljava/io/IOException; {:try_start_6 .. :try_end_6} :catch_2
     .catchall {:try_start_6 .. :try_end_6} :catchall_0
 
-    .line 458
     const/4 v15, 0x0
 
-    .line 463
     :cond_6
     :goto_4
     const/4 v1, -0x1
 
     goto/16 :goto_2
 
-    .line 460
     :catch_2
     move-exception v11
 
-    .line 461
     .local v11, "e":Ljava/io/IOException;
     :try_start_7
     sget-object v1, Lcom/android/server/SEAMSContainer;->mSKLog:Lcom/android/server/SKLogger;
@@ -4052,7 +3675,6 @@
 
     goto :goto_4
 
-    .line 393
     .end local v11    # "e":Ljava/io/IOException;
     .end local v12    # "ex":Ljava/io/IOException;
     :catchall_0
@@ -4063,7 +3685,6 @@
 
     throw v1
 
-    .line 467
     .end local v9    # "br":Ljava/io/BufferedReader;
     .end local v15    # "pw":Ljava/io/PrintWriter;
     .restart local v8    # "addedLine":Ljava/lang/String;
@@ -4075,33 +3696,27 @@
     :cond_7
     if-eqz v10, :cond_9
 
-    .line 468
     :try_start_8
     invoke-virtual {v10}, Ljava/io/BufferedReader;->close()V
     :try_end_8
     .catch Ljava/io/IOException; {:try_start_8 .. :try_end_8} :catch_3
     .catchall {:try_start_8 .. :try_end_8} :catchall_2
 
-    .line 469
     const/4 v9, 0x0
 
-    .line 471
     .end local v10    # "br":Ljava/io/BufferedReader;
     .restart local v9    # "br":Ljava/io/BufferedReader;
     :goto_6
     if-eqz v16, :cond_8
 
-    .line 472
     :try_start_9
     invoke-virtual/range {v16 .. v16}, Ljava/io/PrintWriter;->close()V
     :try_end_9
     .catch Ljava/io/IOException; {:try_start_9 .. :try_end_9} :catch_4
     .catchall {:try_start_9 .. :try_end_9} :catchall_3
 
-    .line 473
     const/4 v15, 0x0
 
-    .line 478
     .end local v16    # "pw":Ljava/io/PrintWriter;
     .restart local v15    # "pw":Ljava/io/PrintWriter;
     :goto_7
@@ -4109,7 +3724,6 @@
 
     goto/16 :goto_2
 
-    .line 475
     .end local v9    # "br":Ljava/io/BufferedReader;
     .end local v15    # "pw":Ljava/io/PrintWriter;
     .restart local v10    # "br":Ljava/io/BufferedReader;
@@ -4119,7 +3733,6 @@
 
     move-object v9, v10
 
-    .line 476
     .end local v10    # "br":Ljava/io/BufferedReader;
     .restart local v9    # "br":Ljava/io/BufferedReader;
     .restart local v11    # "e":Ljava/io/IOException;
@@ -4143,7 +3756,6 @@
     .restart local v15    # "pw":Ljava/io/PrintWriter;
     goto :goto_7
 
-    .line 475
     .end local v15    # "pw":Ljava/io/PrintWriter;
     .restart local v16    # "pw":Ljava/io/PrintWriter;
     :catch_4
@@ -4151,7 +3763,6 @@
 
     goto :goto_8
 
-    .line 448
     .end local v8    # "addedLine":Ljava/lang/String;
     .end local v9    # "br":Ljava/io/BufferedReader;
     .end local v14    # "line":Ljava/lang/String;
@@ -4185,7 +3796,6 @@
     .restart local v9    # "br":Ljava/io/BufferedReader;
     goto :goto_3
 
-    .line 445
     .end local v13    # "inFile":Ljava/io/File;
     .end local v14    # "line":Ljava/lang/String;
     .end local v17    # "tempFile":Ljava/io/File;
@@ -4207,7 +3817,6 @@
     .restart local v9    # "br":Ljava/io/BufferedReader;
     goto/16 :goto_1
 
-    .line 393
     .end local v9    # "br":Ljava/io/BufferedReader;
     .restart local v10    # "br":Ljava/io/BufferedReader;
     :catchall_1
@@ -4267,7 +3876,6 @@
     .param p2, "pid"    # I
 
     .prologue
-    .line 132
     const/4 v0, -0x1
 
     return v0
@@ -4278,7 +3886,6 @@
     .param p1, "uid"    # I
 
     .prologue
-    .line 124
     const/4 v0, -0x1
 
     return v0
@@ -4288,7 +3895,6 @@
     .locals 1
 
     .prologue
-    .line 128
     const/4 v0, -0x1
 
     return v0
@@ -4300,24 +3906,20 @@
     .prologue
     const/4 v4, 0x0
 
-    .line 1008
     invoke-static {}, Landroid/os/Binder;->getCallingUid()I
 
     move-result v3
 
-    .line 1009
     .local v3, "uid":I
     invoke-static {}, Landroid/os/Binder;->getCallingPid()I
 
     move-result v2
 
-    .line 1010
     .local v2, "pid":I
     new-instance v0, Lcom/android/server/pm/SELinuxMMAC$GenericMDMID;
 
     invoke-direct {v0}, Lcom/android/server/pm/SELinuxMMAC$GenericMDMID;-><init>()V
 
-    .line 1011
     .local v0, "genericMDMID":Lcom/android/server/pm/SELinuxMMAC$GenericMDMID;
     iget-object v5, p0, Lcom/android/server/SEAMSContainer;->mContext:Landroid/content/Context;
 
@@ -4327,19 +3929,16 @@
 
     iput-object v5, v0, Lcom/android/server/pm/SELinuxMMAC$GenericMDMID;->packageName:Ljava/lang/String;
 
-    .line 1012
     iget-object v5, v0, Lcom/android/server/pm/SELinuxMMAC$GenericMDMID;->packageName:Ljava/lang/String;
 
     if-nez v5, :cond_0
 
     move-object v0, v4
 
-    .line 1031
     .end local v0    # "genericMDMID":Lcom/android/server/pm/SELinuxMMAC$GenericMDMID;
     :goto_0
     return-object v0
 
-    .line 1018
     .restart local v0    # "genericMDMID":Lcom/android/server/pm/SELinuxMMAC$GenericMDMID;
     :cond_0
     iget-object v5, v0, Lcom/android/server/pm/SELinuxMMAC$GenericMDMID;->packageName:Ljava/lang/String;
@@ -4348,7 +3947,6 @@
 
     move-result-object v1
 
-    .line 1019
     .local v1, "mdmCerts":Ljava/util/ArrayList;, "Ljava/util/ArrayList<Ljava/lang/String;>;"
     if-eqz v1, :cond_1
 
@@ -4361,10 +3959,8 @@
     :cond_1
     move-object v0, v4
 
-    .line 1023
     goto :goto_0
 
-    .line 1025
     :cond_2
     const/4 v4, 0x0
 
@@ -4385,7 +3981,6 @@
     .param p2, "appType"    # I
 
     .prologue
-    .line 150
     const/4 v0, 0x0
 
     return-object v0
@@ -4401,7 +3996,6 @@
     .param p6, "category"    # I
 
     .prologue
-    .line 483
     const/4 v0, 0x0
 
     return-object v0
@@ -4420,7 +4014,6 @@
     .end annotation
 
     .prologue
-    .line 164
     const/4 v0, 0x0
 
     return-object v0
@@ -4432,7 +4025,6 @@
     .param p2, "appType"    # I
 
     .prologue
-    .line 160
     const/4 v0, 0x0
 
     return-object v0
@@ -4443,7 +4035,6 @@
     .param p1, "processName"    # Ljava/lang/String;
 
     .prologue
-    .line 921
     iget-object v3, p0, Lcom/android/server/SEAMSContainer;->mContext:Landroid/content/Context;
 
     const-string v4, "activity"
@@ -4454,13 +4045,11 @@
 
     check-cast v0, Landroid/app/ActivityManager;
 
-    .line 922
     .local v0, "activityManager":Landroid/app/ActivityManager;
     invoke-virtual {v0}, Landroid/app/ActivityManager;->getRunningAppProcesses()Ljava/util/List;
 
     move-result-object v2
 
-    .line 923
     .local v2, "procInfos":Ljava/util/List;, "Ljava/util/List<Landroid/app/ActivityManager$RunningAppProcessInfo;>;"
     const/4 v1, 0x0
 
@@ -4472,7 +4061,6 @@
 
     if-ge v1, v3, :cond_1
 
-    .line 924
     invoke-interface {v2, v1}, Ljava/util/List;->get(I)Ljava/lang/Object;
 
     move-result-object v3
@@ -4487,20 +4075,16 @@
 
     if-eqz v3, :cond_0
 
-    .line 925
     const/4 v3, 0x1
 
-    .line 928
     :goto_1
     return v3
 
-    .line 923
     :cond_0
     add-int/lit8 v1, v1, 0x1
 
     goto :goto_0
 
-    .line 928
     :cond_1
     const/4 v3, 0x0
 
@@ -4514,10 +4098,8 @@
     .param p3, "appNotInstalled"    # Z
 
     .prologue
-    .line 171
     const/4 v0, -0x1
 
-    .line 172
     .local v0, "ret":I
     if-eqz p1, :cond_0
 
@@ -4527,7 +4109,6 @@
 
     if-eqz v2, :cond_1
 
-    .line 173
     :cond_0
     sget-object v2, Lcom/android/server/SEAMSContainer;->mSKLog:Lcom/android/server/SKLogger;
 
@@ -4539,17 +4120,15 @@
 
     move v1, v0
 
-    .line 187
     .end local v0    # "ret":I
     .local v1, "ret":I
     :goto_0
     return v1
 
-    .line 179
     .end local v1    # "ret":I
     .restart local v0    # "ret":I
     :cond_1
-    const-string/jumbo v2, "package"
+    const-string v2, "package"
 
     invoke-static {v2}, Landroid/os/ServiceManager;->getService(Ljava/lang/String;)Landroid/os/IBinder;
 
@@ -4559,7 +4138,6 @@
 
     iput-object v2, p0, Lcom/android/server/SEAMSContainer;->mPms:Lcom/android/server/pm/PackageManagerService;
 
-    .line 181
     iget-object v2, p0, Lcom/android/server/SEAMSContainer;->mPms:Lcom/android/server/pm/PackageManagerService;
 
     invoke-virtual {v2, p1, p2, p3}, Lcom/android/server/pm/PackageManagerService;->updateAppInfoForPackage(Ljava/lang/String;IZ)Z
@@ -4568,13 +4146,11 @@
 
     if-eqz v2, :cond_2
 
-    .line 185
     const/4 v0, 0x0
 
     :cond_2
     move v1, v0
 
-    .line 187
     .end local v0    # "ret":I
     .restart local v1    # "ret":I
     goto :goto_0
@@ -4588,7 +4164,6 @@
     .param p4, "appType"    # I
 
     .prologue
-    .line 191
     const/4 v0, -0x1
 
     return v0
@@ -4605,20 +4180,16 @@
     .param p7, "category"    # I
 
     .prologue
-    .line 520
     monitor-enter p0
 
     const/4 v8, 0x0
 
-    .line 521
     .local v8, "br":Ljava/io/BufferedReader;
     const/4 v15, 0x0
 
-    .line 524
     .local v15, "pw":Ljava/io/PrintWriter;
     const/4 v10, 0x0
 
-    .line 525
     .local v10, "count":I
     :try_start_0
     new-instance v13, Ljava/io/File;
@@ -4627,7 +4198,6 @@
 
     invoke-direct {v13, v0}, Ljava/io/File;-><init>(Ljava/lang/String;)V
 
-    .line 527
     .local v13, "inFile":Ljava/io/File;
     invoke-virtual {v13}, Ljava/io/File;->isFile()Z
 
@@ -4635,7 +4205,6 @@
 
     if-nez v1, :cond_0
 
-    .line 528
     sget-object v1, Ljava/lang/System;->out:Ljava/io/PrintStream;
 
     const-string v2, "Parameter is not an existing file"
@@ -4646,17 +4215,14 @@
     .catch Ljava/io/IOException; {:try_start_0 .. :try_end_0} :catch_1
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 529
     const/4 v1, -0x1
 
-    .line 599
     .end local v13    # "inFile":Ljava/io/File;
     :goto_0
     monitor-exit p0
 
     return v1
 
-    .line 532
     .restart local v13    # "inFile":Ljava/io/File;
     :cond_0
     :try_start_1
@@ -4688,7 +4254,6 @@
 
     invoke-direct {v0, v1}, Ljava/io/File;-><init>(Ljava/lang/String;)V
 
-    .line 534
     .local v18, "tempFile":Ljava/io/File;
     new-instance v9, Ljava/io/BufferedReader;
 
@@ -4704,7 +4269,6 @@
     .catch Ljava/io/IOException; {:try_start_1 .. :try_end_1} :catch_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
-    .line 535
     .end local v8    # "br":Ljava/io/BufferedReader;
     .local v9, "br":Ljava/io/BufferedReader;
     :try_start_2
@@ -4724,7 +4288,6 @@
     .catch Ljava/io/IOException; {:try_start_2 .. :try_end_2} :catch_5
     .catchall {:try_start_2 .. :try_end_2} :catchall_1
 
-    .line 537
     .end local v15    # "pw":Ljava/io/PrintWriter;
     .local v16, "pw":Ljava/io/PrintWriter;
     const/4 v14, 0x0
@@ -4744,13 +4307,11 @@
 
     move/from16 v7, p7
 
-    .line 538
     :try_start_3
     invoke-virtual/range {v1 .. v7}, Lcom/android/server/SEAMSContainer;->getSEAppContextLine(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;I)Ljava/lang/String;
 
     move-result-object v17
 
-    .line 540
     .local v17, "removeLine":Ljava/lang/String;
     :goto_1
     invoke-virtual {v9}, Ljava/io/BufferedReader;->readLine()Ljava/lang/String;
@@ -4759,7 +4320,6 @@
 
     if-eqz v14, :cond_2
 
-    .line 541
     move-object/from16 v0, v17
 
     invoke-virtual {v0, v14}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
@@ -4768,12 +4328,10 @@
 
     if-nez v1, :cond_1
 
-    .line 542
     move-object/from16 v0, v16
 
     invoke-virtual {v0, v14}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
-    .line 543
     invoke-virtual/range {v16 .. v16}, Ljava/io/PrintWriter;->flush()V
     :try_end_3
     .catch Ljava/io/FileNotFoundException; {:try_start_3 .. :try_end_3} :catch_0
@@ -4782,7 +4340,6 @@
 
     goto :goto_1
 
-    .line 566
     .end local v17    # "removeLine":Ljava/lang/String;
     :catch_0
     move-exception v12
@@ -4793,7 +4350,6 @@
     .restart local v15    # "pw":Ljava/io/PrintWriter;
     move-object v8, v9
 
-    .line 567
     .end local v9    # "br":Ljava/io/BufferedReader;
     .end local v13    # "inFile":Ljava/io/File;
     .end local v14    # "line":Ljava/lang/String;
@@ -4810,7 +4366,7 @@
 
     invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v4, "removeSeapp_context, Could not delete file "
+    const-string v4, "removeSeapp_context, Could not delete file "
 
     invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -4830,12 +4386,10 @@
     :try_end_4
     .catchall {:try_start_4 .. :try_end_4} :catchall_0
 
-    .line 568
     const/4 v1, -0x1
 
     goto/16 :goto_0
 
-    .line 545
     .end local v8    # "br":Ljava/io/BufferedReader;
     .end local v12    # "ex":Ljava/io/FileNotFoundException;
     .end local v15    # "pw":Ljava/io/PrintWriter;
@@ -4850,25 +4404,20 @@
 
     goto :goto_1
 
-    .line 548
     :cond_2
     :try_start_5
     invoke-virtual/range {v16 .. v16}, Ljava/io/PrintWriter;->close()V
 
-    .line 549
     invoke-virtual {v9}, Ljava/io/BufferedReader;->close()V
 
-    .line 550
     if-nez v10, :cond_4
 
-    .line 551
     invoke-virtual/range {v18 .. v18}, Ljava/io/File;->delete()Z
 
     move-result v1
 
     if-nez v1, :cond_3
 
-    .line 552
     sget-object v1, Lcom/android/server/SEAMSContainer;->mSKLog:Lcom/android/server/SKLogger;
 
     const-string v2, "SEAMSContainer"
@@ -4877,7 +4426,7 @@
 
     invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v4, "removeSeapp_context, Could not delete file "
+    const-string v4, "removeSeapp_context, Could not delete file "
 
     invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -4897,44 +4446,36 @@
 
     invoke-virtual {v1, v2, v3}, Lcom/android/server/SKLogger;->logAll(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 554
     invoke-virtual/range {v18 .. v18}, Ljava/io/File;->delete()Z
     :try_end_5
     .catch Ljava/io/FileNotFoundException; {:try_start_5 .. :try_end_5} :catch_0
     .catch Ljava/io/IOException; {:try_start_5 .. :try_end_5} :catch_6
     .catchall {:try_start_5 .. :try_end_5} :catchall_2
 
-    .line 588
     :cond_3
     if-eqz v9, :cond_9
 
-    .line 589
     :try_start_6
     invoke-virtual {v9}, Ljava/io/BufferedReader;->close()V
     :try_end_6
     .catch Ljava/io/IOException; {:try_start_6 .. :try_end_6} :catch_3
     .catchall {:try_start_6 .. :try_end_6} :catchall_2
 
-    .line 590
     const/4 v8, 0x0
 
-    .line 592
     .end local v9    # "br":Ljava/io/BufferedReader;
     .restart local v8    # "br":Ljava/io/BufferedReader;
     :goto_3
     if-eqz v16, :cond_8
 
-    .line 593
     :try_start_7
     invoke-virtual/range {v16 .. v16}, Ljava/io/PrintWriter;->close()V
     :try_end_7
     .catch Ljava/io/IOException; {:try_start_7 .. :try_end_7} :catch_4
     .catchall {:try_start_7 .. :try_end_7} :catchall_3
 
-    .line 594
     const/4 v15, 0x0
 
-    .line 599
     .end local v16    # "pw":Ljava/io/PrintWriter;
     .restart local v15    # "pw":Ljava/io/PrintWriter;
     :goto_4
@@ -4942,7 +4483,6 @@
 
     goto/16 :goto_0
 
-    .line 557
     .end local v8    # "br":Ljava/io/BufferedReader;
     .end local v15    # "pw":Ljava/io/PrintWriter;
     .restart local v9    # "br":Ljava/io/BufferedReader;
@@ -4955,7 +4495,6 @@
 
     if-nez v1, :cond_5
 
-    .line 558
     sget-object v1, Lcom/android/server/SEAMSContainer;->mSKLog:Lcom/android/server/SKLogger;
 
     const-string v2, "SEAMSContainer"
@@ -4964,7 +4503,7 @@
 
     invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v4, "removeSeapp_context, Could not delete file "
+    const-string v4, "removeSeapp_context, Could not delete file "
 
     invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -4982,7 +4521,6 @@
 
     invoke-virtual {v1, v2, v3}, Lcom/android/server/SKLogger;->logAll(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 559
     const/4 v1, -0x1
 
     move-object/from16 v15, v16
@@ -4995,7 +4533,6 @@
     .restart local v8    # "br":Ljava/io/BufferedReader;
     goto/16 :goto_0
 
-    .line 561
     .end local v8    # "br":Ljava/io/BufferedReader;
     .end local v15    # "pw":Ljava/io/PrintWriter;
     .restart local v9    # "br":Ljava/io/BufferedReader;
@@ -5009,7 +4546,6 @@
 
     if-nez v1, :cond_3
 
-    .line 562
     sget-object v1, Lcom/android/server/SEAMSContainer;->mSKLog:Lcom/android/server/SKLogger;
 
     const-string v2, "SEAMSContainer"
@@ -5018,7 +4554,7 @@
 
     invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v4, "removeSeapp_context, Could not rename file "
+    const-string v4, "removeSeapp_context, Could not rename file "
 
     invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -5040,7 +4576,6 @@
     .catch Ljava/io/IOException; {:try_start_8 .. :try_end_8} :catch_6
     .catchall {:try_start_8 .. :try_end_8} :catchall_2
 
-    .line 563
     const/4 v1, -0x1
 
     move-object/from16 v15, v16
@@ -5053,7 +4588,6 @@
     .restart local v8    # "br":Ljava/io/BufferedReader;
     goto/16 :goto_0
 
-    .line 569
     .end local v13    # "inFile":Ljava/io/File;
     .end local v14    # "line":Ljava/lang/String;
     .end local v17    # "removeLine":Ljava/lang/String;
@@ -5061,7 +4595,6 @@
     :catch_1
     move-exception v12
 
-    .line 570
     .local v12, "ex":Ljava/io/IOException;
     :goto_5
     :try_start_9
@@ -5073,7 +4606,7 @@
 
     invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v4, "removeSeapp_context, file "
+    const-string v4, "removeSeapp_context, file "
 
     invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -5099,41 +4632,32 @@
     :try_end_9
     .catchall {:try_start_9 .. :try_end_9} :catchall_0
 
-    .line 573
     if-eqz v8, :cond_6
 
-    .line 574
     :try_start_a
     invoke-virtual {v8}, Ljava/io/BufferedReader;->close()V
 
-    .line 575
     const/4 v8, 0x0
 
-    .line 577
     :cond_6
     if-eqz v15, :cond_7
 
-    .line 578
     invoke-virtual {v15}, Ljava/io/PrintWriter;->close()V
     :try_end_a
     .catch Ljava/io/IOException; {:try_start_a .. :try_end_a} :catch_2
     .catchall {:try_start_a .. :try_end_a} :catchall_0
 
-    .line 579
     const/4 v15, 0x0
 
-    .line 584
     :cond_7
     :goto_6
     const/4 v1, -0x1
 
     goto/16 :goto_0
 
-    .line 581
     :catch_2
     move-exception v11
 
-    .line 582
     .local v11, "e":Ljava/io/IOException;
     :try_start_b
     sget-object v1, Lcom/android/server/SEAMSContainer;->mSKLog:Lcom/android/server/SKLogger;
@@ -5148,7 +4672,6 @@
 
     goto :goto_6
 
-    .line 520
     .end local v11    # "e":Ljava/io/IOException;
     .end local v12    # "ex":Ljava/io/IOException;
     :catchall_0
@@ -5159,7 +4682,6 @@
 
     throw v1
 
-    .line 596
     .end local v8    # "br":Ljava/io/BufferedReader;
     .end local v15    # "pw":Ljava/io/PrintWriter;
     .restart local v9    # "br":Ljava/io/BufferedReader;
@@ -5173,7 +4695,6 @@
 
     move-object v8, v9
 
-    .line 597
     .end local v9    # "br":Ljava/io/BufferedReader;
     .restart local v8    # "br":Ljava/io/BufferedReader;
     .restart local v11    # "e":Ljava/io/IOException;
@@ -5197,7 +4718,6 @@
     .restart local v15    # "pw":Ljava/io/PrintWriter;
     goto/16 :goto_4
 
-    .line 596
     .end local v15    # "pw":Ljava/io/PrintWriter;
     .restart local v16    # "pw":Ljava/io/PrintWriter;
     :catch_4
@@ -5205,7 +4725,6 @@
 
     goto :goto_8
 
-    .line 569
     .end local v8    # "br":Ljava/io/BufferedReader;
     .end local v14    # "line":Ljava/lang/String;
     .end local v16    # "pw":Ljava/io/PrintWriter;
@@ -5239,7 +4758,6 @@
     .restart local v8    # "br":Ljava/io/BufferedReader;
     goto :goto_5
 
-    .line 566
     .end local v13    # "inFile":Ljava/io/File;
     .end local v14    # "line":Ljava/lang/String;
     .end local v18    # "tempFile":Ljava/io/File;
@@ -5261,7 +4779,6 @@
     .restart local v8    # "br":Ljava/io/BufferedReader;
     goto/16 :goto_2
 
-    .line 520
     .end local v8    # "br":Ljava/io/BufferedReader;
     .restart local v9    # "br":Ljava/io/BufferedReader;
     :catchall_1
@@ -5322,7 +4839,6 @@
     .param p3, "containerID"    # I
 
     .prologue
-    .line 136
     const/4 v0, -0x1
 
     return v0
@@ -5333,7 +4849,6 @@
     .param p1, "packageName"    # Ljava/lang/String;
 
     .prologue
-    .line 196
     const/4 v0, -0x1
 
     return v0

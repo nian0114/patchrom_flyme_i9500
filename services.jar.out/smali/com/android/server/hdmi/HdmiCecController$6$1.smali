@@ -28,7 +28,6 @@
     .locals 0
 
     .prologue
-    .line 571
     iput-object p1, p0, Lcom/android/server/hdmi/HdmiCecController$6$1;->this$1:Lcom/android/server/hdmi/HdmiCecController$6;
 
     iput p2, p0, Lcom/android/server/hdmi/HdmiCecController$6$1;->val$finalError:I
@@ -44,7 +43,6 @@
     .locals 2
 
     .prologue
-    .line 574
     iget-object v0, p0, Lcom/android/server/hdmi/HdmiCecController$6$1;->this$1:Lcom/android/server/hdmi/HdmiCecController$6;
 
     iget-object v0, v0, Lcom/android/server/hdmi/HdmiCecController$6;->val$callback:Lcom/android/server/hdmi/HdmiControlService$SendMessageCallback;
@@ -53,6 +51,5 @@
 
     invoke-interface {v0, v1}, Lcom/android/server/hdmi/HdmiControlService$SendMessageCallback;->onSendCompleted(I)V
 
-    .line 575
     return-void
 .end method

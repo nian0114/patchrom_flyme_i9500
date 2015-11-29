@@ -23,7 +23,6 @@
     .locals 0
 
     .prologue
-    .line 503
     iput-object p1, p0, Lcom/android/server/SecExternalDisplayService$3;->this$0:Lcom/android/server/SecExternalDisplayService;
 
     invoke-direct {p0}, Landroid/telephony/PhoneStateListener;-><init>()V
@@ -41,14 +40,12 @@
     .prologue
     const/4 v2, 0x1
 
-    .line 505
     if-eq p1, v2, :cond_0
 
     const/4 v0, 0x2
 
     if-ne p1, v0, :cond_2
 
-    .line 506
     :cond_0
     iget-object v0, p0, Lcom/android/server/SecExternalDisplayService$3;->this$0:Lcom/android/server/SecExternalDisplayService;
 
@@ -64,12 +61,10 @@
 
     if-eqz v0, :cond_1
 
-    .line 508
     iget-object v0, p0, Lcom/android/server/SecExternalDisplayService$3;->this$0:Lcom/android/server/SecExternalDisplayService;
 
     iput-boolean v2, v0, Lcom/android/server/SecExternalDisplayService;->CALL_CONNECT:Z
 
-    .line 509
     iget-object v0, p0, Lcom/android/server/SecExternalDisplayService$3;->this$0:Lcom/android/server/SecExternalDisplayService;
 
     sget-object v1, Lcom/android/server/SecExternalDisplayService$EDSBlank;->EDS_POWER_MODE_ON:Lcom/android/server/SecExternalDisplayService$EDSBlank;
@@ -80,12 +75,10 @@
 
     invoke-virtual {v0, v1}, Lcom/android/server/SecExternalDisplayService;->SecExternalDisplayBlankDisplay(I)Z
 
-    .line 518
     :cond_1
     :goto_0
     return-void
 
-    .line 512
     :cond_2
     iget-object v0, p0, Lcom/android/server/SecExternalDisplayService$3;->this$0:Lcom/android/server/SecExternalDisplayService;
 
@@ -115,14 +108,12 @@
 
     if-ne v0, v2, :cond_1
 
-    .line 514
     iget-object v0, p0, Lcom/android/server/SecExternalDisplayService$3;->this$0:Lcom/android/server/SecExternalDisplayService;
 
     const/4 v1, 0x0
 
     iput-boolean v1, v0, Lcom/android/server/SecExternalDisplayService;->CALL_CONNECT:Z
 
-    .line 515
     iget-object v0, p0, Lcom/android/server/SecExternalDisplayService$3;->this$0:Lcom/android/server/SecExternalDisplayService;
 
     sget-object v1, Lcom/android/server/SecExternalDisplayService$EDSBlank;->EDS_POWER_MODE_OFF:Lcom/android/server/SecExternalDisplayService$EDSBlank;

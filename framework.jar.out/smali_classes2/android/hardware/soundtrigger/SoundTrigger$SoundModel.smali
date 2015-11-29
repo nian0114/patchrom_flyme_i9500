@@ -39,21 +39,15 @@
     .param p4, "data"    # [B
 
     .prologue
-    .line 208
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 209
     iput-object p1, p0, Landroid/hardware/soundtrigger/SoundTrigger$SoundModel;->uuid:Ljava/util/UUID;
 
-    .line 210
     iput-object p2, p0, Landroid/hardware/soundtrigger/SoundTrigger$SoundModel;->vendorUuid:Ljava/util/UUID;
 
-    .line 211
     iput p3, p0, Landroid/hardware/soundtrigger/SoundTrigger$SoundModel;->type:I
 
-    .line 212
     iput-object p4, p0, Landroid/hardware/soundtrigger/SoundTrigger$SoundModel;->data:[B
 
-    .line 213
     return-void
 .end method

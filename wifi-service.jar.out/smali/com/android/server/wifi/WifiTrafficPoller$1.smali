@@ -23,7 +23,6 @@
     .locals 0
 
     .prologue
-    .line 126
     iput-object p1, p0, Lcom/android/server/wifi/WifiTrafficPoller$1;->this$0:Lcom/android/server/wifi/WifiTrafficPoller;
 
     invoke-direct {p0}, Landroid/content/BroadcastReceiver;-><init>()V
@@ -43,7 +42,6 @@
 
     const/4 v2, 0x0
 
-    .line 129
     invoke-virtual {p2}, Landroid/content/Intent;->getAction()Ljava/lang/String;
 
     move-result-object v0
@@ -68,7 +66,6 @@
 
     if-eqz v0, :cond_2
 
-    .line 131
     :cond_0
     iget-object v1, p0, Lcom/android/server/wifi/WifiTrafficPoller$1;->this$0:Lcom/android/server/wifi/WifiTrafficPoller;
 
@@ -83,7 +80,6 @@
     # setter for: Lcom/android/server/wifi/WifiTrafficPoller;->mNetworkInfo:Landroid/net/NetworkInfo;
     invoke-static {v1, v0}, Lcom/android/server/wifi/WifiTrafficPoller;->access$102(Lcom/android/server/wifi/WifiTrafficPoller;Landroid/net/NetworkInfo;)Landroid/net/NetworkInfo;
 
-    .line 134
     sget-object v0, Lcom/android/server/wifi/WifiTrafficPoller$2;->$SwitchMap$android$net$NetworkInfo$DetailedState:[I
 
     iget-object v1, p0, Lcom/android/server/wifi/WifiTrafficPoller$1;->this$0:Lcom/android/server/wifi/WifiTrafficPoller;
@@ -105,12 +101,10 @@
 
     packed-switch v0, :pswitch_data_0
 
-    .line 168
     :cond_1
     :goto_0
     return-void
 
-    .line 141
     :pswitch_0
     iget-object v0, p0, Lcom/android/server/wifi/WifiTrafficPoller$1;->this$0:Lcom/android/server/wifi/WifiTrafficPoller;
 
@@ -118,7 +112,6 @@
 
     goto :goto_0
 
-    .line 144
     :cond_2
     invoke-virtual {p2}, Landroid/content/Intent;->getAction()Ljava/lang/String;
 
@@ -132,7 +125,6 @@
 
     if-eqz v0, :cond_3
 
-    .line 145
     iget-object v0, p0, Lcom/android/server/wifi/WifiTrafficPoller$1;->this$0:Lcom/android/server/wifi/WifiTrafficPoller;
 
     # getter for: Lcom/android/server/wifi/WifiTrafficPoller;->mScreenOn:Ljava/util/concurrent/atomic/AtomicBoolean;
@@ -142,14 +134,12 @@
 
     invoke-virtual {v0, v2}, Ljava/util/concurrent/atomic/AtomicBoolean;->set(Z)V
 
-    .line 147
     iget-object v0, p0, Lcom/android/server/wifi/WifiTrafficPoller$1;->this$0:Lcom/android/server/wifi/WifiTrafficPoller;
 
     invoke-virtual {v0}, Lcom/android/server/wifi/WifiTrafficPoller;->evaluateTrafficStatsPolling()V
 
     goto :goto_0
 
-    .line 149
     :cond_3
     invoke-virtual {p2}, Landroid/content/Intent;->getAction()Ljava/lang/String;
 
@@ -163,7 +153,6 @@
 
     if-eqz v0, :cond_4
 
-    .line 150
     iget-object v0, p0, Lcom/android/server/wifi/WifiTrafficPoller$1;->this$0:Lcom/android/server/wifi/WifiTrafficPoller;
 
     # getter for: Lcom/android/server/wifi/WifiTrafficPoller;->mScreenOn:Ljava/util/concurrent/atomic/AtomicBoolean;
@@ -173,14 +162,12 @@
 
     invoke-virtual {v0, v3}, Ljava/util/concurrent/atomic/AtomicBoolean;->set(Z)V
 
-    .line 152
     iget-object v0, p0, Lcom/android/server/wifi/WifiTrafficPoller$1;->this$0:Lcom/android/server/wifi/WifiTrafficPoller;
 
     invoke-virtual {v0}, Lcom/android/server/wifi/WifiTrafficPoller;->evaluateTrafficStatsPolling()V
 
     goto :goto_0
 
-    .line 154
     :cond_4
     invoke-virtual {p2}, Landroid/content/Intent;->getAction()Ljava/lang/String;
 
@@ -194,7 +181,6 @@
 
     if-eqz v0, :cond_1
 
-    .line 155
     iget-object v0, p0, Lcom/android/server/wifi/WifiTrafficPoller$1;->this$0:Lcom/android/server/wifi/WifiTrafficPoller;
 
     const-string v1, "NUM"
@@ -206,7 +192,6 @@
     # setter for: Lcom/android/server/wifi/WifiTrafficPoller;->mHotspotClientNum:I
     invoke-static {v0, v1}, Lcom/android/server/wifi/WifiTrafficPoller;->access$302(Lcom/android/server/wifi/WifiTrafficPoller;I)I
 
-    .line 156
     iget-object v0, p0, Lcom/android/server/wifi/WifiTrafficPoller$1;->this$0:Lcom/android/server/wifi/WifiTrafficPoller;
 
     # getter for: Lcom/android/server/wifi/WifiTrafficPoller;->mHotspotClientNum:I
@@ -216,26 +201,22 @@
 
     if-lez v0, :cond_5
 
-    .line 157
     iget-object v0, p0, Lcom/android/server/wifi/WifiTrafficPoller$1;->this$0:Lcom/android/server/wifi/WifiTrafficPoller;
 
     iget-boolean v0, v0, Lcom/android/server/wifi/WifiTrafficPoller;->mNeedBooster:Z
 
     if-nez v0, :cond_1
 
-    .line 158
     iget-object v0, p0, Lcom/android/server/wifi/WifiTrafficPoller$1;->this$0:Lcom/android/server/wifi/WifiTrafficPoller;
 
     iput-boolean v3, v0, Lcom/android/server/wifi/WifiTrafficPoller;->mNeedBooster:Z
 
-    .line 159
     iget-object v0, p0, Lcom/android/server/wifi/WifiTrafficPoller$1;->this$0:Lcom/android/server/wifi/WifiTrafficPoller;
 
     invoke-virtual {v0}, Lcom/android/server/wifi/WifiTrafficPoller;->evaluateTrafficStatsPolling()V
 
     goto :goto_0
 
-    .line 162
     :cond_5
     iget-object v0, p0, Lcom/android/server/wifi/WifiTrafficPoller$1;->this$0:Lcom/android/server/wifi/WifiTrafficPoller;
 
@@ -243,19 +224,16 @@
 
     if-eqz v0, :cond_1
 
-    .line 163
     iget-object v0, p0, Lcom/android/server/wifi/WifiTrafficPoller$1;->this$0:Lcom/android/server/wifi/WifiTrafficPoller;
 
     iput-boolean v2, v0, Lcom/android/server/wifi/WifiTrafficPoller;->mNeedBooster:Z
 
-    .line 164
     iget-object v0, p0, Lcom/android/server/wifi/WifiTrafficPoller$1;->this$0:Lcom/android/server/wifi/WifiTrafficPoller;
 
     invoke-virtual {v0}, Lcom/android/server/wifi/WifiTrafficPoller;->evaluateTrafficStatsPolling()V
 
     goto :goto_0
 
-    .line 134
     :pswitch_data_0
     .packed-switch 0x1
         :pswitch_0

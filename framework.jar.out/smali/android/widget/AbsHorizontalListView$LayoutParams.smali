@@ -55,15 +55,12 @@
     .param p2, "h"    # I
 
     .prologue
-    .line 7791
     invoke-direct {p0, p1, p2}, Landroid/view/ViewGroup$LayoutParams;-><init>(II)V
 
-    .line 7784
     const-wide/16 v0, -0x1
 
     iput-wide v0, p0, Landroid/widget/AbsHorizontalListView$LayoutParams;->itemId:J
 
-    .line 7792
     return-void
 .end method
 
@@ -74,18 +71,14 @@
     .param p3, "viewType"    # I
 
     .prologue
-    .line 7795
     invoke-direct {p0, p1, p2}, Landroid/view/ViewGroup$LayoutParams;-><init>(II)V
 
-    .line 7784
     const-wide/16 v0, -0x1
 
     iput-wide v0, p0, Landroid/widget/AbsHorizontalListView$LayoutParams;->itemId:J
 
-    .line 7796
     iput p3, p0, Landroid/widget/AbsHorizontalListView$LayoutParams;->viewType:I
 
-    .line 7797
     return-void
 .end method
 
@@ -95,15 +88,12 @@
     .param p2, "attrs"    # Landroid/util/AttributeSet;
 
     .prologue
-    .line 7787
     invoke-direct {p0, p1, p2}, Landroid/view/ViewGroup$LayoutParams;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;)V
 
-    .line 7784
     const-wide/16 v0, -0x1
 
     iput-wide v0, p0, Landroid/widget/AbsHorizontalListView$LayoutParams;->itemId:J
 
-    .line 7788
     return-void
 .end method
 
@@ -112,14 +102,11 @@
     .param p1, "source"    # Landroid/view/ViewGroup$LayoutParams;
 
     .prologue
-    .line 7800
     invoke-direct {p0, p1}, Landroid/view/ViewGroup$LayoutParams;-><init>(Landroid/view/ViewGroup$LayoutParams;)V
 
-    .line 7784
     const-wide/16 v0, -0x1
 
     iput-wide v0, p0, Landroid/widget/AbsHorizontalListView$LayoutParams;->itemId:J
 
-    .line 7801
     return-void
 .end method

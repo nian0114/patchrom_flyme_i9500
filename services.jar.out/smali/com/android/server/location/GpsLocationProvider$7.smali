@@ -23,7 +23,6 @@
     .locals 0
 
     .prologue
-    .line 956
     iput-object p1, p0, Lcom/android/server/location/GpsLocationProvider$7;->this$0:Lcom/android/server/location/GpsLocationProvider;
 
     invoke-direct {p0}, Ljava/lang/Thread;-><init>()V
@@ -37,7 +36,6 @@
     .locals 4
 
     .prologue
-    .line 961
     iget-object v1, p0, Lcom/android/server/location/GpsLocationProvider$7;->this$0:Lcom/android/server/location/GpsLocationProvider;
 
     # getter for: Lcom/android/server/location/GpsLocationProvider;->mNtpTime:Landroid/util/NtpTrustedTime;
@@ -51,10 +49,8 @@
 
     if-eqz v1, :cond_0
 
-    .line 962
     const/4 v0, 0x1
 
-    .line 966
     .local v0, "success":I
     :goto_0
     iget-object v1, p0, Lcom/android/server/location/GpsLocationProvider$7;->this$0:Lcom/android/server/location/GpsLocationProvider;
@@ -66,10 +62,8 @@
     # invokes: Lcom/android/server/location/GpsLocationProvider;->sendMessage(IILjava/lang/Object;)V
     invoke-static {v1, v2, v0, v3}, Lcom/android/server/location/GpsLocationProvider;->access$2300(Lcom/android/server/location/GpsLocationProvider;IILjava/lang/Object;)V
 
-    .line 967
     return-void
 
-    .line 964
     .end local v0    # "success":I
     :cond_0
     const/4 v0, 0x0

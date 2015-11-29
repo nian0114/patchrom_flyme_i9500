@@ -14,7 +14,6 @@
     .prologue
     const/4 v0, 0x1
 
-    .line 6
     invoke-static {}, Landroid/os/Debug;->isProductShip()I
 
     move-result v1
@@ -33,10 +32,8 @@
     .locals 0
 
     .prologue
-    .line 9
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 10
     return-void
 .end method
 
@@ -46,14 +43,12 @@
     .param p1, "msg"    # Ljava/lang/String;
 
     .prologue
-    .line 20
     sget-boolean v0, Landroid/bluetooth/Log;->DBG:Z
 
     if-eqz v0, :cond_0
 
     invoke-static {p0, p1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 21
     :cond_0
     new-instance v0, Ljava/lang/StringBuilder;
 
@@ -79,7 +74,6 @@
 
     invoke-static {v0}, Landroid/bluetooth/BluetoothDump;->BtLog(Ljava/lang/String;)V
 
-    .line 22
     return-void
 .end method
 
@@ -89,14 +83,12 @@
     .param p1, "msg"    # Ljava/lang/String;
 
     .prologue
-    .line 26
     sget-boolean v0, Landroid/bluetooth/Log;->DBG:Z
 
     if-eqz v0, :cond_0
 
     invoke-static {p0, p1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 27
     :cond_0
     new-instance v0, Ljava/lang/StringBuilder;
 
@@ -122,7 +114,6 @@
 
     invoke-static {v0}, Landroid/bluetooth/BluetoothDump;->BtLog(Ljava/lang/String;)V
 
-    .line 28
     return-void
 .end method
 
@@ -132,14 +123,12 @@
     .param p1, "msg"    # Ljava/lang/String;
 
     .prologue
-    .line 32
     sget-boolean v0, Landroid/bluetooth/Log;->DBG:Z
 
     if-eqz v0, :cond_0
 
     invoke-static {p0, p1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 33
     :cond_0
     new-instance v0, Ljava/lang/StringBuilder;
 
@@ -165,7 +154,6 @@
 
     invoke-static {v0}, Landroid/bluetooth/BluetoothDump;->BtLog(Ljava/lang/String;)V
 
-    .line 34
     return-void
 .end method
 
@@ -175,14 +163,12 @@
     .param p1, "msg"    # Ljava/lang/String;
 
     .prologue
-    .line 14
     sget-boolean v0, Landroid/bluetooth/Log;->DBG:Z
 
     if-eqz v0, :cond_0
 
     invoke-static {p0, p1}, Landroid/util/Log;->v(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 15
     :cond_0
     new-instance v0, Ljava/lang/StringBuilder;
 
@@ -208,7 +194,6 @@
 
     invoke-static {v0}, Landroid/bluetooth/BluetoothDump;->BtLog(Ljava/lang/String;)V
 
-    .line 16
     return-void
 .end method
 
@@ -218,14 +203,12 @@
     .param p1, "msg"    # Ljava/lang/String;
 
     .prologue
-    .line 38
     sget-boolean v0, Landroid/bluetooth/Log;->DBG:Z
 
     if-eqz v0, :cond_0
 
     invoke-static {p0, p1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 39
     :cond_0
     new-instance v0, Ljava/lang/StringBuilder;
 
@@ -251,6 +234,5 @@
 
     invoke-static {v0}, Landroid/bluetooth/BluetoothDump;->BtLog(Ljava/lang/String;)V
 
-    .line 40
     return-void
 .end method

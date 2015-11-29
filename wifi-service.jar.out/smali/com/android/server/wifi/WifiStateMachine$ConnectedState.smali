@@ -23,7 +23,6 @@
     .locals 0
 
     .prologue
-    .line 11261
     iput-object p1, p0, Lcom/android/server/wifi/WifiStateMachine$ConnectedState;->this$0:Lcom/android/server/wifi/WifiStateMachine;
 
     invoke-direct {p0}, Lcom/android/internal/util/State;-><init>()V
@@ -43,7 +42,6 @@
 
     const/4 v4, 0x0
 
-    .line 11273
     # getter for: Lcom/android/server/wifi/WifiStateMachine;->DBG:Z
     invoke-static {}, Lcom/android/server/wifi/WifiStateMachine;->access$100()Z
 
@@ -51,21 +49,18 @@
 
     if-eqz v0, :cond_0
 
-    .line 11274
     const-string v0, "WifiStateMachine"
 
     const-string v1, "Now, connected state."
 
     invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 11276
     :cond_0
     iget-object v0, p0, Lcom/android/server/wifi/WifiStateMachine$ConnectedState;->this$0:Lcom/android/server/wifi/WifiStateMachine;
 
     # invokes: Lcom/android/server/wifi/WifiStateMachine;->sendConnectedState()V
     invoke-static {v0}, Lcom/android/server/wifi/WifiStateMachine;->access$29200(Lcom/android/server/wifi/WifiStateMachine;)V
 
-    .line 11278
     iget-object v0, p0, Lcom/android/server/wifi/WifiStateMachine$ConnectedState;->this$0:Lcom/android/server/wifi/WifiStateMachine;
 
     const/16 v1, 0x3e8
@@ -73,7 +68,6 @@
     # invokes: Lcom/android/server/wifi/WifiStateMachine;->updateDefaultRouteMacAddress(I)Ljava/lang/String;
     invoke-static {v0, v1}, Lcom/android/server/wifi/WifiStateMachine;->access$29300(Lcom/android/server/wifi/WifiStateMachine;I)Ljava/lang/String;
 
-    .line 11279
     # getter for: Lcom/android/server/wifi/WifiStateMachine;->DBG:Z
     invoke-static {}, Lcom/android/server/wifi/WifiStateMachine;->access$100()Z
 
@@ -81,7 +75,6 @@
 
     if-eqz v0, :cond_1
 
-    .line 11280
     iget-object v0, p0, Lcom/android/server/wifi/WifiStateMachine$ConnectedState;->this$0:Lcom/android/server/wifi/WifiStateMachine;
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -134,7 +127,6 @@
 
     invoke-virtual {v0, v1}, Lcom/android/server/wifi/WifiStateMachine;->log(Ljava/lang/String;)V
 
-    .line 11285
     :cond_1
     iget-object v0, p0, Lcom/android/server/wifi/WifiStateMachine$ConnectedState;->this$0:Lcom/android/server/wifi/WifiStateMachine;
 
@@ -156,7 +148,6 @@
 
     if-eqz v0, :cond_5
 
-    .line 11287
     iget-object v0, p0, Lcom/android/server/wifi/WifiStateMachine$ConnectedState;->this$0:Lcom/android/server/wifi/WifiStateMachine;
 
     iget-object v1, p0, Lcom/android/server/wifi/WifiStateMachine$ConnectedState;->this$0:Lcom/android/server/wifi/WifiStateMachine;
@@ -173,37 +164,31 @@
     # setter for: Lcom/android/server/wifi/WifiStateMachine;->mCurrentScanAlarmMs:J
     invoke-static {v0, v2, v3}, Lcom/android/server/wifi/WifiStateMachine;->access$29402(Lcom/android/server/wifi/WifiStateMachine;J)J
 
-    .line 11293
     :goto_0
     iget-object v0, p0, Lcom/android/server/wifi/WifiStateMachine$ConnectedState;->this$0:Lcom/android/server/wifi/WifiStateMachine;
 
     invoke-virtual {v0}, Lcom/android/server/wifi/WifiStateMachine;->registerConnected()V
 
-    .line 11294
     iget-object v0, p0, Lcom/android/server/wifi/WifiStateMachine$ConnectedState;->this$0:Lcom/android/server/wifi/WifiStateMachine;
 
     # setter for: Lcom/android/server/wifi/WifiStateMachine;->lastConnectAttempt:J
     invoke-static {v0, v6, v7}, Lcom/android/server/wifi/WifiStateMachine;->access$19002(Lcom/android/server/wifi/WifiStateMachine;J)J
 
-    .line 11295
     iget-object v0, p0, Lcom/android/server/wifi/WifiStateMachine$ConnectedState;->this$0:Lcom/android/server/wifi/WifiStateMachine;
 
     # setter for: Lcom/android/server/wifi/WifiStateMachine;->targetWificonfiguration:Landroid/net/wifi/WifiConfiguration;
     invoke-static {v0, v5}, Lcom/android/server/wifi/WifiStateMachine;->access$19402(Lcom/android/server/wifi/WifiStateMachine;Landroid/net/wifi/WifiConfiguration;)Landroid/net/wifi/WifiConfiguration;
 
-    .line 11297
     iget-object v0, p0, Lcom/android/server/wifi/WifiStateMachine$ConnectedState;->this$0:Lcom/android/server/wifi/WifiStateMachine;
 
     # setter for: Lcom/android/server/wifi/WifiStateMachine;->linkDebouncing:Z
     invoke-static {v0, v4}, Lcom/android/server/wifi/WifiStateMachine;->access$18502(Lcom/android/server/wifi/WifiStateMachine;Z)Z
 
-    .line 11300
     iget-object v0, p0, Lcom/android/server/wifi/WifiStateMachine$ConnectedState;->this$0:Lcom/android/server/wifi/WifiStateMachine;
 
     # setter for: Lcom/android/server/wifi/WifiStateMachine;->mAutoRoaming:I
     invoke-static {v0, v4}, Lcom/android/server/wifi/WifiStateMachine;->access$19902(Lcom/android/server/wifi/WifiStateMachine;I)I
 
-    .line 11302
     iget-object v0, p0, Lcom/android/server/wifi/WifiStateMachine$ConnectedState;->this$0:Lcom/android/server/wifi/WifiStateMachine;
 
     # getter for: Lcom/android/server/wifi/WifiStateMachine;->testNetworkDisconnect:Z
@@ -213,13 +198,11 @@
 
     if-eqz v0, :cond_2
 
-    .line 11303
     iget-object v0, p0, Lcom/android/server/wifi/WifiStateMachine$ConnectedState;->this$0:Lcom/android/server/wifi/WifiStateMachine;
 
     # operator++ for: Lcom/android/server/wifi/WifiStateMachine;->testNetworkDisconnectCounter:I
     invoke-static {v0}, Lcom/android/server/wifi/WifiStateMachine;->access$29608(Lcom/android/server/wifi/WifiStateMachine;)I
 
-    .line 11304
     iget-object v0, p0, Lcom/android/server/wifi/WifiStateMachine$ConnectedState;->this$0:Lcom/android/server/wifi/WifiStateMachine;
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -249,7 +232,6 @@
 
     invoke-virtual {v0, v1}, Lcom/android/server/wifi/WifiStateMachine;->loge(Ljava/lang/String;)V
 
-    .line 11306
     iget-object v0, p0, Lcom/android/server/wifi/WifiStateMachine$ConnectedState;->this$0:Lcom/android/server/wifi/WifiStateMachine;
 
     iget-object v1, p0, Lcom/android/server/wifi/WifiStateMachine$ConnectedState;->this$0:Lcom/android/server/wifi/WifiStateMachine;
@@ -271,7 +253,6 @@
 
     invoke-virtual {v0, v1, v2, v3}, Lcom/android/server/wifi/WifiStateMachine;->sendMessageDelayed(Landroid/os/Message;J)V
 
-    .line 11311
     :cond_2
     iget-object v0, p0, Lcom/android/server/wifi/WifiStateMachine$ConnectedState;->this$0:Lcom/android/server/wifi/WifiStateMachine;
 
@@ -282,13 +263,11 @@
 
     invoke-virtual {v0}, Lcom/android/server/wifi/WifiConfigStore;->enableAllNetworks()V
 
-    .line 11313
     iget-object v0, p0, Lcom/android/server/wifi/WifiStateMachine$ConnectedState;->this$0:Lcom/android/server/wifi/WifiStateMachine;
 
     # setter for: Lcom/android/server/wifi/WifiStateMachine;->mLastDriverRoamAttempt:J
     invoke-static {v0, v6, v7}, Lcom/android/server/wifi/WifiStateMachine;->access$29702(Lcom/android/server/wifi/WifiStateMachine;J)J
 
-    .line 11315
     iget-object v0, p0, Lcom/android/server/wifi/WifiStateMachine$ConnectedState;->this$0:Lcom/android/server/wifi/WifiStateMachine;
 
     # getter for: Lcom/android/server/wifi/WifiStateMachine;->mDisabledCaptivePortalSSID:Ljava/lang/String;
@@ -298,13 +277,11 @@
 
     if-eqz v0, :cond_3
 
-    .line 11317
     iget-object v0, p0, Lcom/android/server/wifi/WifiStateMachine$ConnectedState;->this$0:Lcom/android/server/wifi/WifiStateMachine;
 
     # invokes: Lcom/android/server/wifi/WifiStateMachine;->notifyDisabledCaptivePortalStatus(ILjava/lang/String;Z)V
     invoke-static {v0, v4, v5, v4}, Lcom/android/server/wifi/WifiStateMachine;->access$12500(Lcom/android/server/wifi/WifiStateMachine;ILjava/lang/String;Z)V
 
-    .line 11320
     :cond_3
     iget-object v0, p0, Lcom/android/server/wifi/WifiStateMachine$ConnectedState;->this$0:Lcom/android/server/wifi/WifiStateMachine;
 
@@ -321,7 +298,6 @@
 
     if-ne v0, v1, :cond_4
 
-    .line 11321
     iget-object v0, p0, Lcom/android/server/wifi/WifiStateMachine$ConnectedState;->this$0:Lcom/android/server/wifi/WifiStateMachine;
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -351,13 +327,11 @@
 
     invoke-virtual {v0, v1}, Lcom/android/server/wifi/WifiStateMachine;->loge(Ljava/lang/String;)V
 
-    .line 11322
     iget-object v0, p0, Lcom/android/server/wifi/WifiStateMachine$ConnectedState;->this$0:Lcom/android/server/wifi/WifiStateMachine;
 
     # operator++ for: Lcom/android/server/wifi/WifiStateMachine;->mRssiPollToken:I
     invoke-static {v0}, Lcom/android/server/wifi/WifiStateMachine;->access$22308(Lcom/android/server/wifi/WifiStateMachine;)I
 
-    .line 11323
     iget-object v0, p0, Lcom/android/server/wifi/WifiStateMachine$ConnectedState;->this$0:Lcom/android/server/wifi/WifiStateMachine;
 
     # getter for: Lcom/android/server/wifi/WifiStateMachine;->mEnableRssiPolling:Z
@@ -367,7 +341,6 @@
 
     if-eqz v0, :cond_4
 
-    .line 11324
     iget-object v0, p0, Lcom/android/server/wifi/WifiStateMachine$ConnectedState;->this$0:Lcom/android/server/wifi/WifiStateMachine;
 
     iget-object v1, p0, Lcom/android/server/wifi/WifiStateMachine$ConnectedState;->this$0:Lcom/android/server/wifi/WifiStateMachine;
@@ -387,16 +360,13 @@
 
     invoke-virtual {v0, v1}, Lcom/android/server/wifi/WifiStateMachine;->sendMessage(Landroid/os/Message;)V
 
-    .line 11327
     :cond_4
     iget-object v0, p0, Lcom/android/server/wifi/WifiStateMachine$ConnectedState;->this$0:Lcom/android/server/wifi/WifiStateMachine;
 
     iput-boolean v4, v0, Lcom/android/server/wifi/WifiStateMachine;->mObtainIp:Z
 
-    .line 11328
     return-void
 
-    .line 11291
     :cond_5
     iget-object v0, p0, Lcom/android/server/wifi/WifiStateMachine$ConnectedState;->this$0:Lcom/android/server/wifi/WifiStateMachine;
 
@@ -410,14 +380,12 @@
     .locals 4
 
     .prologue
-    .line 11808
     iget-object v0, p0, Lcom/android/server/wifi/WifiStateMachine$ConnectedState;->this$0:Lcom/android/server/wifi/WifiStateMachine;
 
     const-string v1, "WifiStateMachine: Leaving Connected state"
 
     invoke-virtual {v0, v1}, Lcom/android/server/wifi/WifiStateMachine;->loge(Ljava/lang/String;)V
 
-    .line 11810
     iget-object v0, p0, Lcom/android/server/wifi/WifiStateMachine$ConnectedState;->this$0:Lcom/android/server/wifi/WifiStateMachine;
 
     # getter for: Lcom/android/server/wifi/WifiStateMachine;->mUpdateCountryCodeDb:Z
@@ -427,20 +395,17 @@
 
     if-eqz v0, :cond_0
 
-    .line 11811
     iget-object v0, p0, Lcom/android/server/wifi/WifiStateMachine$ConnectedState;->this$0:Lcom/android/server/wifi/WifiStateMachine;
 
     # invokes: Lcom/android/server/wifi/WifiStateMachine;->setCountryCode()V
     invoke-static {v0}, Lcom/android/server/wifi/WifiStateMachine;->access$14200(Lcom/android/server/wifi/WifiStateMachine;)V
 
-    .line 11815
     :cond_0
     iget-object v0, p0, Lcom/android/server/wifi/WifiStateMachine$ConnectedState;->this$0:Lcom/android/server/wifi/WifiStateMachine;
 
     # invokes: Lcom/android/server/wifi/WifiStateMachine;->checkAndSetConnectivityInstance()V
     invoke-static {v0}, Lcom/android/server/wifi/WifiStateMachine;->access$3600(Lcom/android/server/wifi/WifiStateMachine;)V
 
-    .line 11816
     iget-object v0, p0, Lcom/android/server/wifi/WifiStateMachine$ConnectedState;->this$0:Lcom/android/server/wifi/WifiStateMachine;
 
     const/4 v1, 0x0
@@ -448,7 +413,6 @@
     # invokes: Lcom/android/server/wifi/WifiStateMachine;->callResetTimer(Z)V
     invoke-static {v0, v1}, Lcom/android/server/wifi/WifiStateMachine;->access$9400(Lcom/android/server/wifi/WifiStateMachine;Z)V
 
-    .line 11817
     iget-object v0, p0, Lcom/android/server/wifi/WifiStateMachine$ConnectedState;->this$0:Lcom/android/server/wifi/WifiStateMachine;
 
     const-wide/16 v2, 0x0
@@ -456,7 +420,6 @@
     # setter for: Lcom/android/server/wifi/WifiStateMachine;->mLastDriverRoamAttempt:J
     invoke-static {v0, v2, v3}, Lcom/android/server/wifi/WifiStateMachine;->access$29702(Lcom/android/server/wifi/WifiStateMachine;J)J
 
-    .line 11818
     return-void
 .end method
 
@@ -465,10 +428,8 @@
     .param p1, "message"    # Landroid/os/Message;
 
     .prologue
-    .line 11331
     const/4 v11, 0x0
 
-    .line 11332
     .local v11, "config":Landroid/net/wifi/WifiConfiguration;
     move-object/from16 v0, p0
 
@@ -500,7 +461,6 @@
 
     move-result-object v33
 
-    .line 11333
     .local v33, "usableInternetConfig":Landroid/net/wifi/WifiConfiguration;
     move-object/from16 v0, p0
 
@@ -525,7 +485,6 @@
     # invokes: Lcom/android/server/wifi/WifiStateMachine;->logStateAndMessage(Landroid/os/Message;Ljava/lang/String;)V
     invoke-static {v0, v1, v2}, Lcom/android/server/wifi/WifiStateMachine;->access$2500(Lcom/android/server/wifi/WifiStateMachine;Landroid/os/Message;Ljava/lang/String;)V
 
-    .line 11335
     move-object/from16 v0, p1
 
     iget v0, v0, Landroid/os/Message;->what:I
@@ -534,14 +493,11 @@
 
     sparse-switch v34, :sswitch_data_0
 
-    .line 11801
     const/16 v34, 0x0
 
-    .line 11803
     :goto_0
     return v34
 
-    .line 11338
     :sswitch_0
     move-object/from16 v0, p1
 
@@ -557,7 +513,6 @@
 
     if-ne v0, v1, :cond_1
 
-    .line 11340
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/android/server/wifi/WifiStateMachine$ConnectedState;->this$0:Lcom/android/server/wifi/WifiStateMachine;
@@ -573,7 +528,6 @@
 
     invoke-virtual/range {v34 .. v35}, Lcom/android/server/wifi/WifiNative;->setHandoverScreen(Z)V
 
-    .line 11803
     :cond_0
     :goto_1
     :sswitch_1
@@ -581,7 +535,6 @@
 
     goto :goto_0
 
-    .line 11343
     :cond_1
     move-object/from16 v0, p0
 
@@ -600,7 +553,6 @@
 
     goto :goto_1
 
-    .line 11347
     :sswitch_2
     move-object/from16 v0, p0
 
@@ -632,11 +584,9 @@
 
     move-result-object v9
 
-    .line 11349
     .local v9, "captivePortalConfig":Landroid/net/wifi/WifiConfiguration;
     if-nez v9, :cond_2
 
-    .line 11350
     const-string v34, "WifiStateMachine"
 
     new-instance v35, Ljava/lang/StringBuilder;
@@ -674,7 +624,6 @@
 
     invoke-static/range {v34 .. v35}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 11352
     :cond_2
     move-object/from16 v0, p1
 
@@ -686,11 +635,9 @@
 
     goto :goto_1
 
-    .line 11355
     :pswitch_0
     const/16 v21, 0x1
 
-    .line 11356
     .local v21, "isFirstDetection":Z
     move-object/from16 v0, p0
 
@@ -707,10 +654,8 @@
 
     invoke-virtual/range {v34 .. v35}, Landroid/net/wifi/WifiInfo;->setCaptivePortal(Z)V
 
-    .line 11357
     if-eqz v9, :cond_3
 
-    .line 11358
     iget-boolean v0, v9, Landroid/net/wifi/WifiConfiguration;->isCaptivePortal:Z
 
     move/from16 v34, v0
@@ -719,7 +664,6 @@
 
     const/16 v21, 0x1
 
-    .line 11359
     :goto_2
     const/16 v34, 0x1
 
@@ -727,14 +671,12 @@
 
     iput-boolean v0, v9, Landroid/net/wifi/WifiConfiguration;->isCaptivePortal:Z
 
-    .line 11360
     const/16 v34, 0x0
 
     move/from16 v0, v34
 
     iput-boolean v0, v9, Landroid/net/wifi/WifiConfiguration;->isAuthenticated:Z
 
-    .line 11361
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/android/server/wifi/WifiStateMachine$ConnectedState;->this$0:Lcom/android/server/wifi/WifiStateMachine;
@@ -758,7 +700,6 @@
 
     invoke-virtual {v0, v9, v1}, Lcom/android/server/wifi/WifiConfigStore;->addOrUpdateNetwork(Landroid/net/wifi/WifiConfiguration;I)I
 
-    .line 11363
     :cond_3
     move-object/from16 v0, p0
 
@@ -794,7 +735,6 @@
 
     if-nez v21, :cond_5
 
-    .line 11364
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/android/server/wifi/WifiStateMachine$ConnectedState;->this$0:Lcom/android/server/wifi/WifiStateMachine;
@@ -825,7 +765,6 @@
 
     invoke-virtual/range {v34 .. v36}, Lcom/android/server/wifi/WifiConfigStore;->disableNetwork(II)Z
 
-    .line 11367
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/android/server/wifi/WifiStateMachine$ConnectedState;->this$0:Lcom/android/server/wifi/WifiStateMachine;
@@ -854,14 +793,12 @@
     # invokes: Lcom/android/server/wifi/WifiStateMachine;->notifyDisabledCaptivePortalStatus(ILjava/lang/String;Z)V
     invoke-static/range {v34 .. v37}, Lcom/android/server/wifi/WifiStateMachine;->access$12500(Lcom/android/server/wifi/WifiStateMachine;ILjava/lang/String;Z)V
 
-    .line 11368
     const-string v34, "WifiStateMachine"
 
     const-string v35, "disconnected due to no authentication"
 
     invoke-static/range {v34 .. v35}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 11369
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/android/server/wifi/WifiStateMachine$ConnectedState;->this$0:Lcom/android/server/wifi/WifiStateMachine;
@@ -884,13 +821,11 @@
 
     goto/16 :goto_1
 
-    .line 11358
     :cond_4
     const/16 v21, 0x0
 
     goto/16 :goto_2
 
-    .line 11372
     :cond_5
     move-object/from16 v0, p0
 
@@ -905,7 +840,6 @@
 
     if-eqz v34, :cond_7
 
-    .line 11373
     # getter for: Lcom/android/server/wifi/WifiStateMachine;->DBG:Z
     invoke-static {}, Lcom/android/server/wifi/WifiStateMachine;->access$100()Z
 
@@ -919,7 +853,6 @@
 
     invoke-static/range {v34 .. v35}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 11385
     :cond_6
     :goto_3
     move-object/from16 v0, p0
@@ -937,7 +870,6 @@
 
     goto/16 :goto_1
 
-    .line 11375
     :cond_7
     move-object/from16 v0, p0
 
@@ -950,7 +882,6 @@
     # invokes: Lcom/android/server/wifi/WifiStateMachine;->notifyCaptivePortal(Z)V
     invoke-static/range {v34 .. v35}, Lcom/android/server/wifi/WifiStateMachine;->access$12600(Lcom/android/server/wifi/WifiStateMachine;Z)V
 
-    .line 11377
     :try_start_0
     new-instance v20, Landroid/content/Intent;
 
@@ -970,7 +901,6 @@
 
     invoke-direct {v0, v1, v2}, Landroid/content/Intent;-><init>(Ljava/lang/String;Landroid/net/Uri;)V
 
-    .line 11378
     .local v20, "intent":Landroid/content/Intent;
     const/high16 v34, 0x10400000
 
@@ -980,7 +910,6 @@
 
     invoke-virtual {v0, v1}, Landroid/content/Intent;->setFlags(I)Landroid/content/Intent;
 
-    .line 11379
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/android/server/wifi/WifiStateMachine$ConnectedState;->this$0:Lcom/android/server/wifi/WifiStateMachine;
@@ -1006,12 +935,10 @@
 
     goto :goto_3
 
-    .line 11380
     .end local v20    # "intent":Landroid/content/Intent;
     :catch_0
     move-exception v15
 
-    .line 11381
     .local v15, "e":Landroid/content/ActivityNotFoundException;
     # getter for: Lcom/android/server/wifi/WifiStateMachine;->DBG:Z
     invoke-static {}, Lcom/android/server/wifi/WifiStateMachine;->access$100()Z
@@ -1028,7 +955,6 @@
 
     goto :goto_3
 
-    .line 11389
     .end local v15    # "e":Landroid/content/ActivityNotFoundException;
     .end local v21    # "isFirstDetection":Z
     :pswitch_1
@@ -1043,7 +969,6 @@
     # invokes: Lcom/android/server/wifi/WifiStateMachine;->notifyCaptivePortal(Z)V
     invoke-static/range {v34 .. v35}, Lcom/android/server/wifi/WifiStateMachine;->access$12600(Lcom/android/server/wifi/WifiStateMachine;Z)V
 
-    .line 11390
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/android/server/wifi/WifiStateMachine$ConnectedState;->this$0:Lcom/android/server/wifi/WifiStateMachine;
@@ -1074,7 +999,6 @@
 
     invoke-virtual/range {v34 .. v36}, Lcom/android/server/wifi/WifiConfigStore;->disableNetwork(II)Z
 
-    .line 11393
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/android/server/wifi/WifiStateMachine$ConnectedState;->this$0:Lcom/android/server/wifi/WifiStateMachine;
@@ -1103,14 +1027,12 @@
     # invokes: Lcom/android/server/wifi/WifiStateMachine;->notifyDisabledCaptivePortalStatus(ILjava/lang/String;Z)V
     invoke-static/range {v34 .. v37}, Lcom/android/server/wifi/WifiStateMachine;->access$12500(Lcom/android/server/wifi/WifiStateMachine;ILjava/lang/String;Z)V
 
-    .line 11394
     const-string v34, "WifiStateMachine"
 
     const-string v35, "disconnected by auth timeout"
 
     invoke-static/range {v34 .. v35}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 11395
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/android/server/wifi/WifiStateMachine$ConnectedState;->this$0:Lcom/android/server/wifi/WifiStateMachine;
@@ -1154,7 +1076,6 @@
     # setter for: Lcom/android/server/wifi/WifiStateMachine;->mManualConnectionId:I
     invoke-static/range {v34 .. v35}, Lcom/android/server/wifi/WifiStateMachine;->access$402(Lcom/android/server/wifi/WifiStateMachine;I)I
 
-    .line 11396
     :cond_8
     move-object/from16 v0, p0
 
@@ -1178,7 +1099,6 @@
 
     goto/16 :goto_1
 
-    .line 11400
     :pswitch_2
     move-object/from16 v0, p0
 
@@ -1191,7 +1111,6 @@
     # invokes: Lcom/android/server/wifi/WifiStateMachine;->notifyCaptivePortal(Z)V
     invoke-static/range {v34 .. v35}, Lcom/android/server/wifi/WifiStateMachine;->access$12600(Lcom/android/server/wifi/WifiStateMachine;Z)V
 
-    .line 11404
     if-eqz v9, :cond_9
 
     move-object/from16 v0, p0
@@ -1211,21 +1130,18 @@
 
     if-eqz v34, :cond_9
 
-    .line 11405
     const/16 v34, 0x1
 
     move/from16 v0, v34
 
     iput-boolean v0, v9, Landroid/net/wifi/WifiConfiguration;->isCaptivePortal:Z
 
-    .line 11406
     const/16 v34, 0x1
 
     move/from16 v0, v34
 
     iput-boolean v0, v9, Landroid/net/wifi/WifiConfiguration;->isAuthenticated:Z
 
-    .line 11407
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/android/server/wifi/WifiStateMachine$ConnectedState;->this$0:Lcom/android/server/wifi/WifiStateMachine;
@@ -1249,7 +1165,6 @@
 
     invoke-virtual {v0, v9, v1}, Lcom/android/server/wifi/WifiConfigStore;->addOrUpdateNetwork(Landroid/net/wifi/WifiConfiguration;I)I
 
-    .line 11408
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/android/server/wifi/WifiStateMachine$ConnectedState;->this$0:Lcom/android/server/wifi/WifiStateMachine;
@@ -1263,7 +1178,6 @@
 
     invoke-virtual/range {v34 .. v34}, Lcom/android/server/wifi/WifiConfigStore;->saveConfig()Z
 
-    .line 11410
     :cond_9
     move-object/from16 v0, p0
 
@@ -1308,7 +1222,6 @@
     # setter for: Lcom/android/server/wifi/WifiStateMachine;->mManualConnectionId:I
     invoke-static/range {v34 .. v35}, Lcom/android/server/wifi/WifiStateMachine;->access$402(Lcom/android/server/wifi/WifiStateMachine;I)I
 
-    .line 11411
     :cond_a
     const-string v34, "WifiStateMachine"
 
@@ -1318,7 +1231,6 @@
 
     goto/16 :goto_1
 
-    .line 11418
     .end local v9    # "captivePortalConfig":Landroid/net/wifi/WifiConfiguration;
     :sswitch_3
     move-object/from16 v0, p1
@@ -1327,11 +1239,9 @@
 
     move/from16 v17, v0
 
-    .line 11420
     .local v17, "goodReason":I
     if-nez v33, :cond_b
 
-    .line 11421
     const-string v34, "WifiStateMachine"
 
     new-instance v35, Ljava/lang/StringBuilder;
@@ -1371,7 +1281,6 @@
 
     goto/16 :goto_1
 
-    .line 11423
     :cond_b
     move-object/from16 v0, p0
 
@@ -1410,7 +1319,6 @@
 
     if-eq v0, v1, :cond_0
 
-    .line 11427
     const/16 v34, 0x1
 
     move/from16 v0, v34
@@ -1419,7 +1327,6 @@
 
     iput-boolean v0, v1, Landroid/net/wifi/WifiConfiguration;->isUsableInternet:Z
 
-    .line 11428
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/android/server/wifi/WifiStateMachine$ConnectedState;->this$0:Lcom/android/server/wifi/WifiStateMachine;
@@ -1448,7 +1355,6 @@
 
     invoke-virtual/range {v34 .. v37}, Lcom/android/server/wifi/WifiNative;->setNetworkVariable(ILjava/lang/String;Ljava/lang/String;)Z
 
-    .line 11432
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/android/server/wifi/WifiStateMachine$ConnectedState;->this$0:Lcom/android/server/wifi/WifiStateMachine;
@@ -1462,7 +1368,6 @@
 
     invoke-virtual/range {v34 .. v34}, Lcom/android/server/wifi/WifiNative;->saveConfig()Z
 
-    .line 11433
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/android/server/wifi/WifiStateMachine$ConnectedState;->this$0:Lcom/android/server/wifi/WifiStateMachine;
@@ -1486,7 +1391,6 @@
 
     goto/16 :goto_1
 
-    .line 11442
     .end local v17    # "goodReason":I
     :sswitch_4
     move-object/from16 v0, p0
@@ -1532,7 +1436,6 @@
     # setter for: Lcom/android/server/wifi/WifiStateMachine;->mManualConnectionId:I
     invoke-static/range {v34 .. v35}, Lcom/android/server/wifi/WifiStateMachine;->access$402(Lcom/android/server/wifi/WifiStateMachine;I)I
 
-    .line 11444
     :cond_c
     const-string v34, "KTCM"
 
@@ -1544,7 +1447,6 @@
 
     if-eqz v34, :cond_d
 
-    .line 11445
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/android/server/wifi/WifiStateMachine$ConnectedState;->this$0:Lcom/android/server/wifi/WifiStateMachine;
@@ -1569,7 +1471,6 @@
 
     if-eqz v34, :cond_d
 
-    .line 11446
     # getter for: Lcom/android/server/wifi/WifiStateMachine;->DBG:Z
     invoke-static {}, Lcom/android/server/wifi/WifiStateMachine;->access$100()Z
 
@@ -1589,7 +1490,6 @@
 
     goto/16 :goto_1
 
-    .line 11450
     :cond_d
     move-object/from16 v0, p0
 
@@ -1604,7 +1504,6 @@
 
     if-nez v34, :cond_e
 
-    .line 11451
     # getter for: Lcom/android/server/wifi/WifiStateMachine;->DBG:Z
     invoke-static {}, Lcom/android/server/wifi/WifiStateMachine;->access$100()Z
 
@@ -1624,7 +1523,6 @@
 
     goto/16 :goto_1
 
-    .line 11454
     :cond_e
     # getter for: Lcom/android/server/wifi/WifiStateMachine;->DBG:Z
     invoke-static {}, Lcom/android/server/wifi/WifiStateMachine;->access$100()Z
@@ -1643,7 +1541,6 @@
 
     invoke-virtual/range {v34 .. v35}, Lcom/android/server/wifi/WifiStateMachine;->log(Ljava/lang/String;)V
 
-    .line 11456
     :cond_f
     move-object/from16 v0, p1
 
@@ -1659,7 +1556,6 @@
 
     if-ne v0, v1, :cond_11
 
-    .line 11460
     if-eqz v33, :cond_10
 
     move-object/from16 v0, v33
@@ -1670,7 +1566,6 @@
 
     if-eqz v34, :cond_10
 
-    .line 11461
     const/16 v34, 0x0
 
     move/from16 v0, v34
@@ -1679,7 +1574,6 @@
 
     iput-boolean v0, v1, Landroid/net/wifi/WifiConfiguration;->isUsableInternet:Z
 
-    .line 11462
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/android/server/wifi/WifiStateMachine$ConnectedState;->this$0:Lcom/android/server/wifi/WifiStateMachine;
@@ -1708,7 +1602,6 @@
 
     invoke-virtual/range {v34 .. v37}, Lcom/android/server/wifi/WifiNative;->setNetworkVariable(ILjava/lang/String;Ljava/lang/String;)Z
 
-    .line 11466
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/android/server/wifi/WifiStateMachine$ConnectedState;->this$0:Lcom/android/server/wifi/WifiStateMachine;
@@ -1722,7 +1615,6 @@
 
     invoke-virtual/range {v34 .. v34}, Lcom/android/server/wifi/WifiNative;->saveConfig()Z
 
-    .line 11467
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/android/server/wifi/WifiStateMachine$ConnectedState;->this$0:Lcom/android/server/wifi/WifiStateMachine;
@@ -1744,7 +1636,6 @@
 
     invoke-virtual/range {v34 .. v36}, Lcom/android/server/wifi/WifiConfigStore;->updateUsableInternet(IZ)V
 
-    .line 11475
     :cond_10
     move-object/from16 v0, p0
 
@@ -1802,7 +1693,6 @@
 
     invoke-virtual/range {v34 .. v38}, Lcom/android/server/wifi/WifiConfigStore;->disablePoorNetwork(IILjava/lang/String;Z)Z
 
-    .line 11477
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/android/server/wifi/WifiStateMachine$ConnectedState;->this$0:Lcom/android/server/wifi/WifiStateMachine;
@@ -1825,11 +1715,9 @@
 
     goto/16 :goto_1
 
-    .line 11479
     :cond_11
     const/4 v6, 0x1
 
-    .line 11480
     .local v6, "bKeepL2":Z
     move-object/from16 v0, p0
 
@@ -1841,7 +1729,6 @@
 
     move-result-object v29
 
-    .line 11481
     .local v29, "scanResults":Ljava/util/List;, "Ljava/util/List<Landroid/net/wifi/ScanResult;>;"
     move-object/from16 v0, p0
 
@@ -1858,11 +1745,9 @@
 
     move-result-object v13
 
-    .line 11482
     .local v13, "configs":Ljava/util/List;, "Ljava/util/List<Landroid/net/wifi/WifiConfiguration;>;"
     const/4 v5, 0x0
 
-    .line 11484
     .local v5, "bHS20Enabled":Z
     move-object/from16 v0, p0
 
@@ -1897,14 +1782,11 @@
 
     const/4 v5, 0x1
 
-    .line 11490
     :goto_4
     if-eqz v29, :cond_20
 
-    .line 11491
     if-eqz v5, :cond_14
 
-    .line 11492
     invoke-interface/range {v29 .. v29}, Ljava/util/List;->iterator()Ljava/util/Iterator;
 
     move-result-object v18
@@ -1923,7 +1805,6 @@
 
     check-cast v26, Landroid/net/wifi/ScanResult;
 
-    .line 11493
     .local v26, "result":Landroid/net/wifi/ScanResult;
     move-object/from16 v0, v26
 
@@ -1939,7 +1820,6 @@
 
     if-eqz v34, :cond_12
 
-    .line 11494
     # getter for: Lcom/android/server/wifi/WifiStateMachine;->DBG:Z
     invoke-static {}, Lcom/android/server/wifi/WifiStateMachine;->access$100()Z
 
@@ -1953,11 +1833,9 @@
 
     invoke-static/range {v34 .. v35}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 11495
     :cond_13
     const/4 v6, 0x0
 
-    .line 11501
     .end local v18    # "i$":Ljava/util/Iterator;
     .end local v26    # "result":Landroid/net/wifi/ScanResult;
     :cond_14
@@ -1965,7 +1843,6 @@
 
     if-eqz v13, :cond_20
 
-    .line 11502
     invoke-interface {v13}, Ljava/util/List;->iterator()Ljava/util/Iterator;
 
     move-result-object v18
@@ -1984,7 +1861,6 @@
 
     check-cast v10, Landroid/net/wifi/WifiConfiguration;
 
-    .line 11503
     .local v10, "conf":Landroid/net/wifi/WifiConfiguration;
     iget-boolean v0, v10, Landroid/net/wifi/WifiConfiguration;->isUsableInternet:Z
 
@@ -1992,7 +1868,6 @@
 
     if-eqz v34, :cond_15
 
-    .line 11504
     const-string v34, "WifiStateMachine"
 
     new-instance v35, Ljava/lang/StringBuilder;
@@ -2019,7 +1894,6 @@
 
     invoke-static/range {v34 .. v35}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 11505
     invoke-interface/range {v29 .. v29}, Ljava/util/List;->iterator()Ljava/util/Iterator;
 
     move-result-object v19
@@ -2038,15 +1912,12 @@
 
     check-cast v28, Landroid/net/wifi/ScanResult;
 
-    .line 11506
     .local v28, "scanResult":Landroid/net/wifi/ScanResult;
     iget-object v12, v10, Landroid/net/wifi/WifiConfiguration;->SSID:Ljava/lang/String;
 
-    .line 11507
     .local v12, "configSsid":Ljava/lang/String;
     const/4 v14, -0x1
 
-    .line 11508
     .local v14, "configuredSecurity":I
     iget-object v0, v10, Landroid/net/wifi/WifiConfiguration;->allowedKeyManagement:Ljava/util/BitSet;
 
@@ -2060,14 +1931,11 @@
 
     if-eqz v34, :cond_1a
 
-    .line 11509
     const/4 v14, 0x2
 
-    .line 11519
     :goto_6
     const/16 v30, 0x0
 
-    .line 11520
     .local v30, "scanedSecurity":I
     move-object/from16 v0, v28
 
@@ -2083,10 +1951,8 @@
 
     if-eqz v34, :cond_1e
 
-    .line 11521
     const/16 v30, 0x2
 
-    .line 11528
     :cond_17
     :goto_7
     move-object/from16 v0, p0
@@ -2164,7 +2030,6 @@
 
     if-nez v34, :cond_16
 
-    .line 11533
     # getter for: Lcom/android/server/wifi/WifiStateMachine;->DBG:Z
     invoke-static {}, Lcom/android/server/wifi/WifiStateMachine;->access$100()Z
 
@@ -2178,14 +2043,11 @@
 
     invoke-static/range {v34 .. v35}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 11534
     :cond_18
     const/4 v6, 0x0
 
-    .line 11535
     goto/16 :goto_5
 
-    .line 11484
     .end local v10    # "conf":Landroid/net/wifi/WifiConfiguration;
     .end local v12    # "configSsid":Ljava/lang/String;
     .end local v14    # "configuredSecurity":I
@@ -2197,7 +2059,6 @@
 
     goto/16 :goto_4
 
-    .line 11510
     .restart local v10    # "conf":Landroid/net/wifi/WifiConfiguration;
     .restart local v12    # "configSsid":Ljava/lang/String;
     .restart local v14    # "configuredSecurity":I
@@ -2252,13 +2113,11 @@
 
     if-eqz v34, :cond_1c
 
-    .line 11514
     :cond_1b
     const/4 v14, 0x3
 
     goto/16 :goto_6
 
-    .line 11516
     :cond_1c
     iget-object v0, v10, Landroid/net/wifi/WifiConfiguration;->wepKeys:[Ljava/lang/String;
 
@@ -2280,7 +2139,6 @@
 
     goto :goto_8
 
-    .line 11522
     .restart local v30    # "scanedSecurity":I
     :cond_1e
     move-object/from16 v0, v28
@@ -2297,12 +2155,10 @@
 
     if-eqz v34, :cond_1f
 
-    .line 11523
     const/16 v30, 0x3
 
     goto/16 :goto_7
 
-    .line 11524
     :cond_1f
     move-object/from16 v0, v28
 
@@ -2318,12 +2174,10 @@
 
     if-eqz v34, :cond_17
 
-    .line 11525
     const/16 v30, 0x1
 
     goto/16 :goto_7
 
-    .line 11544
     .end local v10    # "conf":Landroid/net/wifi/WifiConfiguration;
     .end local v12    # "configSsid":Ljava/lang/String;
     .end local v14    # "configuredSecurity":I
@@ -2359,7 +2213,6 @@
     .catch Landroid/os/RemoteException; {:try_start_1 .. :try_end_1} :catch_1
     .catch Ljava/lang/IllegalStateException; {:try_start_1 .. :try_end_1} :catch_2
 
-    .line 11551
     :goto_9
     move-object/from16 v0, p0
 
@@ -2385,7 +2238,6 @@
     # setter for: Lcom/android/server/wifi/WifiStateMachine;->mL2LinkProperties:Landroid/net/LinkProperties;
     invoke-static/range {v34 .. v35}, Lcom/android/server/wifi/WifiStateMachine;->access$26402(Lcom/android/server/wifi/WifiStateMachine;Landroid/net/LinkProperties;)Landroid/net/LinkProperties;
 
-    .line 11552
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/android/server/wifi/WifiStateMachine$ConnectedState;->this$0:Lcom/android/server/wifi/WifiStateMachine;
@@ -2397,7 +2249,6 @@
     # invokes: Lcom/android/server/wifi/WifiStateMachine;->setNetworkDetailedState(Landroid/net/NetworkInfo$DetailedState;)Z
     invoke-static/range {v34 .. v35}, Lcom/android/server/wifi/WifiStateMachine;->access$14400(Lcom/android/server/wifi/WifiStateMachine;Landroid/net/NetworkInfo$DetailedState;)Z
 
-    .line 11553
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/android/server/wifi/WifiStateMachine$ConnectedState;->this$0:Lcom/android/server/wifi/WifiStateMachine;
@@ -2411,7 +2262,6 @@
 
     if-eqz v34, :cond_21
 
-    .line 11554
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/android/server/wifi/WifiStateMachine$ConnectedState;->this$0:Lcom/android/server/wifi/WifiStateMachine;
@@ -2436,7 +2286,6 @@
 
     invoke-virtual/range {v34 .. v35}, Lcom/android/server/wifi/WifiStateMachine$WifiNetworkAgent;->sendNetworkInfo(Landroid/net/NetworkInfo;)V
 
-    .line 11555
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/android/server/wifi/WifiStateMachine$ConnectedState;->this$0:Lcom/android/server/wifi/WifiStateMachine;
@@ -2448,7 +2297,6 @@
     # setter for: Lcom/android/server/wifi/WifiStateMachine;->mNetworkAgent:Lcom/android/server/wifi/WifiStateMachine$WifiNetworkAgent;
     invoke-static/range {v34 .. v35}, Lcom/android/server/wifi/WifiStateMachine;->access$10502(Lcom/android/server/wifi/WifiStateMachine;Lcom/android/server/wifi/WifiStateMachine$WifiNetworkAgent;)Lcom/android/server/wifi/WifiStateMachine$WifiNetworkAgent;
 
-    .line 11557
     :cond_21
     move-object/from16 v0, p0
 
@@ -2476,7 +2324,6 @@
 
     invoke-virtual/range {v34 .. v36}, Lcom/android/server/wifi/WifiConfigStore;->updateStatus(ILandroid/net/NetworkInfo$DetailedState;)V
 
-    .line 11558
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/android/server/wifi/WifiStateMachine$ConnectedState;->this$0:Lcom/android/server/wifi/WifiStateMachine;
@@ -2497,10 +2344,8 @@
     # invokes: Lcom/android/server/wifi/WifiStateMachine;->sendNetworkStateChangeBroadcast(Ljava/lang/String;)V
     invoke-static/range {v34 .. v35}, Lcom/android/server/wifi/WifiStateMachine;->access$22000(Lcom/android/server/wifi/WifiStateMachine;Ljava/lang/String;)V
 
-    .line 11566
     if-eqz v6, :cond_22
 
-    .line 11570
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/android/server/wifi/WifiStateMachine$ConnectedState;->this$0:Lcom/android/server/wifi/WifiStateMachine;
@@ -2519,7 +2364,6 @@
 
     invoke-virtual/range {v34 .. v38}, Lcom/android/server/wifi/WifiStateMachine;->startScan(IILandroid/net/wifi/ScanSettings;Landroid/os/WorkSource;)V
 
-    .line 11571
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/android/server/wifi/WifiStateMachine$ConnectedState;->this$0:Lcom/android/server/wifi/WifiStateMachine;
@@ -2542,11 +2386,9 @@
 
     goto/16 :goto_1
 
-    .line 11545
     :catch_1
     move-exception v25
 
-    .line 11546
     .local v25, "re":Landroid/os/RemoteException;
     move-object/from16 v0, p0
 
@@ -2580,12 +2422,10 @@
 
     goto/16 :goto_9
 
-    .line 11547
     .end local v25    # "re":Landroid/os/RemoteException;
     :catch_2
     move-exception v15
 
-    .line 11548
     .local v15, "e":Ljava/lang/IllegalStateException;
     move-object/from16 v0, p0
 
@@ -2617,7 +2457,6 @@
 
     goto/16 :goto_9
 
-    .line 11574
     .end local v15    # "e":Ljava/lang/IllegalStateException;
     :cond_22
     move-object/from16 v0, p0
@@ -2676,7 +2515,6 @@
 
     invoke-virtual/range {v34 .. v38}, Lcom/android/server/wifi/WifiConfigStore;->disablePoorNetwork(IILjava/lang/String;Z)Z
 
-    .line 11576
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/android/server/wifi/WifiStateMachine$ConnectedState;->this$0:Lcom/android/server/wifi/WifiStateMachine;
@@ -2699,7 +2537,6 @@
 
     goto/16 :goto_1
 
-    .line 11613
     .end local v5    # "bHS20Enabled":Z
     .end local v6    # "bKeepL2":Z
     .end local v13    # "configs":Ljava/util/List;, "Ljava/util/List<Landroid/net/wifi/WifiConfiguration;>;"
@@ -2713,7 +2550,6 @@
 
     if-nez v34, :cond_24
 
-    .line 11614
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/android/server/wifi/WifiStateMachine$ConnectedState;->this$0:Lcom/android/server/wifi/WifiStateMachine;
@@ -2749,7 +2585,6 @@
 
     invoke-virtual/range {v34 .. v36}, Lcom/android/server/wifi/WifiConfigStore;->handleBadNetworkDisconnectReport(ILandroid/net/wifi/WifiInfo;)V
 
-    .line 11615
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/android/server/wifi/WifiStateMachine$ConnectedState;->this$0:Lcom/android/server/wifi/WifiStateMachine;
@@ -2763,7 +2598,6 @@
 
     invoke-virtual/range {v34 .. v34}, Lcom/android/server/wifi/WifiNative;->disconnect()Z
 
-    .line 11616
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/android/server/wifi/WifiStateMachine$ConnectedState;->this$0:Lcom/android/server/wifi/WifiStateMachine;
@@ -2784,7 +2618,6 @@
     # invokes: Lcom/android/server/wifi/WifiStateMachine;->transitionTo(Lcom/android/internal/util/IState;)V
     invoke-static/range {v34 .. v35}, Lcom/android/server/wifi/WifiStateMachine;->access$30400(Lcom/android/server/wifi/WifiStateMachine;Lcom/android/internal/util/IState;)V
 
-    .line 11617
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/android/server/wifi/WifiStateMachine$ConnectedState;->this$0:Lcom/android/server/wifi/WifiStateMachine;
@@ -2798,14 +2631,12 @@
 
     invoke-virtual/range {v34 .. v34}, Lcom/android/server/wifi/WifiNative;->reconnect()Z
 
-    .line 11625
     :cond_23
     :goto_a
     const/16 v34, 0x1
 
     goto/16 :goto_0
 
-    .line 11618
     :cond_24
     move-object/from16 v0, p1
 
@@ -2821,7 +2652,6 @@
 
     if-ne v0, v1, :cond_23
 
-    .line 11619
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/android/server/wifi/WifiStateMachine$ConnectedState;->this$0:Lcom/android/server/wifi/WifiStateMachine;
@@ -2832,10 +2662,8 @@
 
     move-result-object v11
 
-    .line 11620
     if-eqz v11, :cond_23
 
-    .line 11622
     const/16 v34, 0x1
 
     move/from16 v0, v34
@@ -2844,7 +2672,6 @@
 
     goto :goto_a
 
-    .line 11628
     :sswitch_6
     move-object/from16 v0, p1
 
@@ -2869,7 +2696,6 @@
 
     if-ne v0, v1, :cond_0
 
-    .line 11629
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/android/server/wifi/WifiStateMachine$ConnectedState;->this$0:Lcom/android/server/wifi/WifiStateMachine;
@@ -2885,7 +2711,6 @@
 
     goto/16 :goto_1
 
-    .line 11635
     :sswitch_7
     move-object/from16 v0, p0
 
@@ -2904,7 +2729,6 @@
     # setter for: Lcom/android/server/wifi/WifiStateMachine;->mLastDriverRoamAttempt:J
     invoke-static {v0, v1, v2}, Lcom/android/server/wifi/WifiStateMachine;->access$29702(Lcom/android/server/wifi/WifiStateMachine;J)J
 
-    .line 11636
     move-object/from16 v0, p1
 
     iget-object v0, v0, Landroid/os/Message;->obj:Ljava/lang/Object;
@@ -2913,7 +2737,6 @@
 
     check-cast v32, Ljava/lang/String;
 
-    .line 11637
     .local v32, "toBSSID":Ljava/lang/String;
     if-eqz v32, :cond_25
 
@@ -2942,7 +2765,6 @@
 
     if-nez v34, :cond_25
 
-    .line 11638
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/android/server/wifi/WifiStateMachine$ConnectedState;->this$0:Lcom/android/server/wifi/WifiStateMachine;
@@ -2967,18 +2789,15 @@
 
     invoke-virtual/range {v34 .. v35}, Lcom/android/server/wifi/WifiConfigStore;->driverRoamedFrom(Landroid/net/wifi/WifiInfo;)V
 
-    .line 11640
     :cond_25
     const/16 v34, 0x0
 
     goto/16 :goto_0
 
-    .line 11642
     .end local v32    # "toBSSID":Ljava/lang/String;
     :sswitch_8
     const-wide/16 v22, 0x0
 
-    .line 11645
     .local v22, "lastRoam":J
     move-object/from16 v0, p0
 
@@ -2991,7 +2810,6 @@
     # invokes: Lcom/android/server/wifi/WifiStateMachine;->notifyCaptivePortal(Z)V
     invoke-static/range {v34 .. v35}, Lcom/android/server/wifi/WifiStateMachine;->access$12600(Lcom/android/server/wifi/WifiStateMachine;Z)V
 
-    .line 11646
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/android/server/wifi/WifiStateMachine$ConnectedState;->this$0:Lcom/android/server/wifi/WifiStateMachine;
@@ -3035,7 +2853,6 @@
     # setter for: Lcom/android/server/wifi/WifiStateMachine;->mManualConnectionId:I
     invoke-static/range {v34 .. v35}, Lcom/android/server/wifi/WifiStateMachine;->access$402(Lcom/android/server/wifi/WifiStateMachine;I)I
 
-    .line 11649
     :cond_26
     move-object/from16 v0, p0
 
@@ -3065,7 +2882,6 @@
 
     iput-boolean v0, v1, Lcom/android/server/wifi/WifiStateMachine;->mHandoverState:Z
 
-    .line 11652
     :cond_27
     move-object/from16 v0, p0
 
@@ -3084,7 +2900,6 @@
 
     if-eqz v34, :cond_28
 
-    .line 11654
     invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
 
     move-result-wide v34
@@ -3102,7 +2917,6 @@
 
     sub-long v22, v34, v36
 
-    .line 11655
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/android/server/wifi/WifiStateMachine$ConnectedState;->this$0:Lcom/android/server/wifi/WifiStateMachine;
@@ -3118,7 +2932,6 @@
     # setter for: Lcom/android/server/wifi/WifiStateMachine;->mLastDriverRoamAttempt:J
     invoke-static {v0, v1, v2}, Lcom/android/server/wifi/WifiStateMachine;->access$29702(Lcom/android/server/wifi/WifiStateMachine;J)J
 
-    .line 11657
     :cond_28
     move-object/from16 v0, p0
 
@@ -3130,7 +2943,6 @@
 
     move-result-object v11
 
-    .line 11658
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/android/server/wifi/WifiStateMachine$ConnectedState;->this$0:Lcom/android/server/wifi/WifiStateMachine;
@@ -3313,7 +3125,6 @@
 
     if-le v0, v1, :cond_2d
 
-    .line 11678
     :cond_2b
     move-object/from16 v0, p0
 
@@ -3335,7 +3146,6 @@
 
     invoke-virtual/range {v34 .. v36}, Lcom/android/server/wifi/WifiStateMachine;->startScanForConfiguration(Landroid/net/wifi/WifiConfiguration;Z)Z
 
-    .line 11679
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/android/server/wifi/WifiStateMachine$ConnectedState;->this$0:Lcom/android/server/wifi/WifiStateMachine;
@@ -3347,7 +3157,6 @@
     # setter for: Lcom/android/server/wifi/WifiStateMachine;->linkDebouncing:Z
     invoke-static/range {v34 .. v35}, Lcom/android/server/wifi/WifiStateMachine;->access$18502(Lcom/android/server/wifi/WifiStateMachine;Z)Z
 
-    .line 11681
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/android/server/wifi/WifiStateMachine$ConnectedState;->this$0:Lcom/android/server/wifi/WifiStateMachine;
@@ -3383,7 +3192,6 @@
 
     invoke-virtual/range {v34 .. v37}, Lcom/android/server/wifi/WifiStateMachine;->sendMessageDelayed(Landroid/os/Message;J)V
 
-    .line 11683
     # getter for: Lcom/android/server/wifi/WifiStateMachine;->DBG:Z
     invoke-static {}, Lcom/android/server/wifi/WifiStateMachine;->access$100()Z
 
@@ -3391,7 +3199,6 @@
 
     if-eqz v34, :cond_2c
 
-    .line 11684
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/android/server/wifi/WifiStateMachine$ConnectedState;->this$0:Lcom/android/server/wifi/WifiStateMachine;
@@ -3505,13 +3312,11 @@
 
     invoke-virtual/range {v34 .. v35}, Lcom/android/server/wifi/WifiStateMachine;->log(Ljava/lang/String;)V
 
-    .line 11691
     :cond_2c
     const/16 v34, 0x1
 
     goto/16 :goto_0
 
-    .line 11693
     :cond_2d
     # getter for: Lcom/android/server/wifi/WifiStateMachine;->DBG:Z
     invoke-static {}, Lcom/android/server/wifi/WifiStateMachine;->access$100()Z
@@ -3520,16 +3325,13 @@
 
     if-eqz v34, :cond_0
 
-    .line 11694
     const/4 v4, -0x1
 
-    .line 11695
     .local v4, "ajst":I
     if-eqz v11, :cond_2e
 
     iget v4, v11, Landroid/net/wifi/WifiConfiguration;->autoJoinStatus:I
 
-    .line 11696
     :cond_2e
     move-object/from16 v0, p0
 
@@ -3673,7 +3475,6 @@
 
     goto/16 :goto_1
 
-    .line 11708
     .end local v4    # "ajst":I
     .end local v22    # "lastRoam":J
     :sswitch_9
@@ -3692,18 +3493,15 @@
     # setter for: Lcom/android/server/wifi/WifiStateMachine;->mLastDriverRoamAttempt:J
     invoke-static {v0, v1, v2}, Lcom/android/server/wifi/WifiStateMachine;->access$29702(Lcom/android/server/wifi/WifiStateMachine;J)J
 
-    .line 11711
     move-object/from16 v0, p1
 
     iget-object v8, v0, Landroid/os/Message;->obj:Ljava/lang/Object;
 
     check-cast v8, Landroid/net/wifi/ScanResult;
 
-    .line 11712
     .local v8, "candidate":Landroid/net/wifi/ScanResult;
     const-string v7, "any"
 
-    .line 11713
     .local v7, "bssid":Ljava/lang/String;
     if-eqz v8, :cond_2f
 
@@ -3713,10 +3511,8 @@
 
     if-eqz v34, :cond_2f
 
-    .line 11715
     iget-object v7, v8, Landroid/net/wifi/ScanResult;->BSSID:Ljava/lang/String;
 
-    .line 11717
     :cond_2f
     move-object/from16 v0, p0
 
@@ -3729,7 +3525,6 @@
 
     move-result v24
 
-    .line 11718
     .local v24, "netId":I
     move-object/from16 v0, p0
 
@@ -3741,10 +3536,8 @@
 
     move-result-object v11
 
-    .line 11721
     if-nez v11, :cond_30
 
-    .line 11722
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/android/server/wifi/WifiStateMachine$ConnectedState;->this$0:Lcom/android/server/wifi/WifiStateMachine;
@@ -3757,7 +3550,6 @@
 
     goto/16 :goto_1
 
-    .line 11726
     :cond_30
     move-object/from16 v0, p0
 
@@ -3906,7 +3698,6 @@
 
     invoke-virtual/range {v34 .. v35}, Lcom/android/server/wifi/WifiStateMachine;->loge(Ljava/lang/String;)V
 
-    .line 11736
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/android/server/wifi/WifiStateMachine$ConnectedState;->this$0:Lcom/android/server/wifi/WifiStateMachine;
@@ -3934,7 +3725,6 @@
 
     if-nez v34, :cond_31
 
-    .line 11737
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/android/server/wifi/WifiStateMachine$ConnectedState;->this$0:Lcom/android/server/wifi/WifiStateMachine;
@@ -3945,7 +3735,6 @@
 
     invoke-virtual/range {v34 .. v35}, Lcom/android/server/wifi/WifiStateMachine;->loge(Ljava/lang/String;)V
 
-    .line 11739
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/android/server/wifi/WifiStateMachine$ConnectedState;->this$0:Lcom/android/server/wifi/WifiStateMachine;
@@ -3962,7 +3751,6 @@
 
     goto/16 :goto_1
 
-    .line 11744
     :cond_31
     move-object/from16 v0, p0
 
@@ -3985,10 +3773,8 @@
 
     invoke-virtual {v0, v1, v2}, Lcom/android/server/wifi/WifiConfigStore;->enableNetworkWithoutBroadcast(IZ)Z
 
-    .line 11746
     const/16 v27, 0x0
 
-    .line 11747
     .local v27, "ret":Z
     move-object/from16 v0, p0
 
@@ -4007,7 +3793,6 @@
 
     if-eq v0, v1, :cond_33
 
-    .line 11748
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/android/server/wifi/WifiStateMachine$ConnectedState;->this$0:Lcom/android/server/wifi/WifiStateMachine;
@@ -4046,15 +3831,12 @@
 
     if-eqz v34, :cond_32
 
-    .line 11750
     const/16 v27, 0x1
 
-    .line 11755
     :cond_32
     :goto_b
     if-eqz v27, :cond_34
 
-    .line 11756
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/android/server/wifi/WifiStateMachine$ConnectedState;->this$0:Lcom/android/server/wifi/WifiStateMachine;
@@ -4072,7 +3854,6 @@
     # setter for: Lcom/android/server/wifi/WifiStateMachine;->lastConnectAttempt:J
     invoke-static {v0, v1, v2}, Lcom/android/server/wifi/WifiStateMachine;->access$19002(Lcom/android/server/wifi/WifiStateMachine;J)J
 
-    .line 11757
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/android/server/wifi/WifiStateMachine$ConnectedState;->this$0:Lcom/android/server/wifi/WifiStateMachine;
@@ -4101,7 +3882,6 @@
     # setter for: Lcom/android/server/wifi/WifiStateMachine;->targetWificonfiguration:Landroid/net/wifi/WifiConfiguration;
     invoke-static/range {v34 .. v35}, Lcom/android/server/wifi/WifiStateMachine;->access$19402(Lcom/android/server/wifi/WifiStateMachine;Landroid/net/wifi/WifiConfiguration;)Landroid/net/wifi/WifiConfiguration;
 
-    .line 11760
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/android/server/wifi/WifiStateMachine$ConnectedState;->this$0:Lcom/android/server/wifi/WifiStateMachine;
@@ -4117,7 +3897,6 @@
     # setter for: Lcom/android/server/wifi/WifiStateMachine;->mAutoRoaming:I
     invoke-static/range {v34 .. v35}, Lcom/android/server/wifi/WifiStateMachine;->access$19902(Lcom/android/server/wifi/WifiStateMachine;I)I
 
-    .line 11761
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/android/server/wifi/WifiStateMachine$ConnectedState;->this$0:Lcom/android/server/wifi/WifiStateMachine;
@@ -4140,7 +3919,6 @@
 
     goto/16 :goto_1
 
-    .line 11753
     :cond_33
     move-object/from16 v0, p0
 
@@ -4159,7 +3937,6 @@
 
     goto :goto_b
 
-    .line 11764
     :cond_34
     move-object/from16 v0, p0
 
@@ -4203,7 +3980,6 @@
 
     invoke-virtual/range {v34 .. v35}, Lcom/android/server/wifi/WifiStateMachine;->loge(Ljava/lang/String;)V
 
-    .line 11765
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/android/server/wifi/WifiStateMachine$ConnectedState;->this$0:Lcom/android/server/wifi/WifiStateMachine;
@@ -4225,7 +4001,6 @@
     # invokes: Lcom/android/server/wifi/WifiStateMachine;->replyToMessage(Landroid/os/Message;II)V
     invoke-static {v0, v1, v2, v3}, Lcom/android/server/wifi/WifiStateMachine;->access$2900(Lcom/android/server/wifi/WifiStateMachine;Landroid/os/Message;II)V
 
-    .line 11767
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/android/server/wifi/WifiStateMachine$ConnectedState;->this$0:Lcom/android/server/wifi/WifiStateMachine;
@@ -4242,7 +4017,6 @@
 
     goto/16 :goto_1
 
-    .line 11774
     .end local v7    # "bssid":Ljava/lang/String;
     .end local v8    # "candidate":Landroid/net/wifi/ScanResult;
     .end local v24    # "netId":I
@@ -4261,7 +4035,6 @@
 
     if-eqz v34, :cond_35
 
-    .line 11775
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/android/server/wifi/WifiStateMachine$ConnectedState;->this$0:Lcom/android/server/wifi/WifiStateMachine;
@@ -4277,7 +4050,6 @@
 
     invoke-virtual/range {v34 .. v35}, Landroid/net/DhcpStateMachine;->sendMessage(I)V
 
-    .line 11777
     :cond_35
     move-object/from16 v0, p0
 
@@ -4294,7 +4066,6 @@
 
     if-eqz v34, :cond_36
 
-    .line 11778
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/android/server/wifi/WifiStateMachine$ConnectedState;->this$0:Lcom/android/server/wifi/WifiStateMachine;
@@ -4307,7 +4078,6 @@
 
     goto/16 :goto_1
 
-    .line 11780
     :cond_36
     move-object/from16 v0, p0
 
@@ -4321,7 +4091,6 @@
 
     goto/16 :goto_1
 
-    .line 11784
     :sswitch_b
     move-object/from16 v0, p0
 
@@ -4334,18 +4103,15 @@
     # setter for: Lcom/android/server/wifi/WifiStateMachine;->mUpdateCountryCodeDb:Z
     invoke-static/range {v34 .. v35}, Lcom/android/server/wifi/WifiStateMachine;->access$30802(Lcom/android/server/wifi/WifiStateMachine;Z)Z
 
-    .line 11785
     const/16 v34, 0x0
 
     goto/16 :goto_0
 
-    .line 11787
     :sswitch_c
     sget-boolean v34, Lcom/android/server/wifi/WifiMonitor;->WIFI_ERRORCODE:Z
 
     if-eqz v34, :cond_0
 
-    .line 11788
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/android/server/wifi/WifiStateMachine$ConnectedState;->this$0:Lcom/android/server/wifi/WifiStateMachine;
@@ -4371,7 +4137,6 @@
 
     invoke-virtual {v0, v1}, Lcom/android/server/wifi/WifiStateMachine$WifiMobility;->handleEAP(Ljava/lang/String;)V
 
-    .line 11789
     new-instance v16, Landroid/content/Intent;
 
     const-string v34, "android.net.wifi.SHOW_INFO_MESSAGE"
@@ -4382,7 +4147,6 @@
 
     invoke-direct {v0, v1}, Landroid/content/Intent;-><init>(Ljava/lang/String;)V
 
-    .line 11790
     .local v16, "eapIntent":Landroid/content/Intent;
     const-string v34, "info_type"
 
@@ -4396,7 +4160,6 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/content/Intent;->putExtra(Ljava/lang/String;I)Landroid/content/Intent;
 
-    .line 11791
     const-string v35, "message"
 
     move-object/from16 v0, p1
@@ -4415,7 +4178,6 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;
 
-    .line 11792
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/android/server/wifi/WifiStateMachine$ConnectedState;->this$0:Lcom/android/server/wifi/WifiStateMachine;
@@ -4431,7 +4193,6 @@
 
     goto/16 :goto_1
 
-    .line 11797
     .end local v16    # "eapIntent":Landroid/content/Intent;
     :sswitch_d
     move-object/from16 v0, p0
@@ -4461,7 +4222,6 @@
 
     move-result v31
 
-    .line 11798
     .local v31, "status":Z
     move-object/from16 v0, p0
 
@@ -4490,7 +4250,6 @@
 
     goto :goto_c
 
-    .line 11335
     :sswitch_data_0
     .sparse-switch
         0x20051 -> :sswitch_b
@@ -4509,7 +4268,6 @@
         0x24004 -> :sswitch_8
     .end sparse-switch
 
-    .line 11352
     :pswitch_data_0
     .packed-switch 0x2101a
         :pswitch_0

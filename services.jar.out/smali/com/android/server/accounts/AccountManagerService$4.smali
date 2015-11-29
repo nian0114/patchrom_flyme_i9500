@@ -32,7 +32,6 @@
     .param p6, "x4"    # Z
 
     .prologue
-    .line 839
     iput-object p1, p0, Lcom/android/server/accounts/AccountManagerService$4;->this$0:Lcom/android/server/accounts/AccountManagerService;
 
     iput-object p7, p0, Lcom/android/server/accounts/AccountManagerService$4;->val$account:Landroid/accounts/Account;
@@ -52,10 +51,8 @@
     .param p2, "errorMessage"    # Ljava/lang/String;
 
     .prologue
-    .line 878
     invoke-super {p0, p1, p2}, Lcom/android/server/accounts/AccountManagerService$Session;->onError(ILjava/lang/String;)V
 
-    .line 881
     return-void
 .end method
 
@@ -64,10 +61,8 @@
     .param p1, "result"    # Landroid/os/Bundle;
 
     .prologue
-    .line 863
     if-eqz p1, :cond_1
 
-    .line 864
     const-string v0, "booleanResult"
 
     const/4 v1, 0x0
@@ -78,12 +73,10 @@
 
     if-eqz v0, :cond_0
 
-    .line 874
     :cond_0
     :goto_0
     return-void
 
-    .line 872
     :cond_1
     invoke-super {p0, p1}, Lcom/android/server/accounts/AccountManagerService$Session;->onResult(Landroid/os/Bundle;)V
 
@@ -101,14 +94,12 @@
     .prologue
     const/4 v7, 0x0
 
-    .line 849
     iget-object v6, p0, Lcom/android/server/accounts/AccountManagerService$4;->this$0:Lcom/android/server/accounts/AccountManagerService;
 
     invoke-virtual {v6, v7}, Lcom/android/server/accounts/AccountManagerService;->getUserAccounts(I)Lcom/android/server/accounts/AccountManagerService$UserAccounts;
 
     move-result-object v4
 
-    .line 850
     .local v4, "owner":Lcom/android/server/accounts/AccountManagerService$UserAccounts;
     # getter for: Lcom/android/server/accounts/AccountManagerService$UserAccounts;->cacheLock:Ljava/lang/Object;
     invoke-static {v4}, Lcom/android/server/accounts/AccountManagerService$UserAccounts;->access$400(Lcom/android/server/accounts/AccountManagerService$UserAccounts;)Ljava/lang/Object;
@@ -117,7 +108,6 @@
 
     monitor-enter v7
 
-    .line 851
     :try_start_0
     iget-object v6, p0, Lcom/android/server/accounts/AccountManagerService$4;->this$0:Lcom/android/server/accounts/AccountManagerService;
 
@@ -127,7 +117,6 @@
 
     move-result-object v5
 
-    .line 852
     .local v5, "ownerAccounts":[Landroid/accounts/Account;
     move-object v1, v5
 
@@ -143,7 +132,6 @@
 
     aget-object v0, v1, v2
 
-    .line 853
     .local v0, "acc":Landroid/accounts/Account;
     iget-object v6, p0, Lcom/android/server/accounts/AccountManagerService$4;->val$account:Landroid/accounts/Account;
 
@@ -153,7 +141,6 @@
 
     if-eqz v6, :cond_1
 
-    .line 854
     iget-object v6, p0, Lcom/android/server/accounts/AccountManagerService$4;->mAuthenticator:Landroid/accounts/IAccountAuthenticator;
 
     iget-object v8, p0, Lcom/android/server/accounts/AccountManagerService$4;->val$account:Landroid/accounts/Account;
@@ -162,22 +149,18 @@
 
     invoke-interface {v6, p0, v8, v9}, Landroid/accounts/IAccountAuthenticator;->addAccountFromCredentials(Landroid/accounts/IAccountAuthenticatorResponse;Landroid/accounts/Account;Landroid/os/Bundle;)V
 
-    .line 858
     .end local v0    # "acc":Landroid/accounts/Account;
     :cond_0
     monitor-exit v7
 
-    .line 859
     return-void
 
-    .line 852
     .restart local v0    # "acc":Landroid/accounts/Account;
     :cond_1
     add-int/lit8 v2, v2, 0x1
 
     goto :goto_0
 
-    .line 858
     .end local v0    # "acc":Landroid/accounts/Account;
     .end local v1    # "arr$":[Landroid/accounts/Account;
     .end local v2    # "i$":I
@@ -198,7 +181,6 @@
     .param p1, "now"    # J
 
     .prologue
-    .line 842
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V

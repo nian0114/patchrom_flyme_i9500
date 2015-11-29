@@ -117,32 +117,26 @@
     .param p1, "packageMgr"    # Landroid/content/pm/PackageManager;
 
     .prologue
-    .line 115
     invoke-direct {p0}, Landroid/app/backup/BackupAgent;-><init>()V
 
-    .line 82
     new-instance v0, Ljava/util/HashMap;
 
     invoke-direct {v0}, Ljava/util/HashMap;-><init>()V
 
     iput-object v0, p0, Lcom/android/server/backup/PackageManagerBackupAgent;->mStateVersions:Ljava/util/HashMap;
 
-    .line 84
     new-instance v0, Ljava/util/HashSet;
 
     invoke-direct {v0}, Ljava/util/HashSet;-><init>()V
 
     iput-object v0, p0, Lcom/android/server/backup/PackageManagerBackupAgent;->mExisting:Ljava/util/HashSet;
 
-    .line 116
     const/4 v0, 0x0
 
     invoke-direct {p0, p1, v0}, Lcom/android/server/backup/PackageManagerBackupAgent;->init(Landroid/content/pm/PackageManager;Ljava/util/List;)V
 
-    .line 118
     invoke-virtual {p0}, Lcom/android/server/backup/PackageManagerBackupAgent;->evaluateStorablePackages()V
 
-    .line 119
     return-void
 .end method
 
@@ -161,28 +155,23 @@
     .end annotation
 
     .prologue
-    .line 111
     .local p2, "packages":Ljava/util/List;, "Ljava/util/List<Landroid/content/pm/PackageInfo;>;"
     invoke-direct {p0}, Landroid/app/backup/BackupAgent;-><init>()V
 
-    .line 82
     new-instance v0, Ljava/util/HashMap;
 
     invoke-direct {v0}, Ljava/util/HashMap;-><init>()V
 
     iput-object v0, p0, Lcom/android/server/backup/PackageManagerBackupAgent;->mStateVersions:Ljava/util/HashMap;
 
-    .line 84
     new-instance v0, Ljava/util/HashSet;
 
     invoke-direct {v0}, Ljava/util/HashSet;-><init>()V
 
     iput-object v0, p0, Lcom/android/server/backup/PackageManagerBackupAgent;->mExisting:Ljava/util/HashSet;
 
-    .line 112
     invoke-direct {p0, p1, p2}, Lcom/android/server/backup/PackageManagerBackupAgent;->init(Landroid/content/pm/PackageManager;Ljava/util/List;)V
 
-    .line 113
     return-void
 .end method
 
@@ -190,7 +179,6 @@
     .locals 2
 
     .prologue
-    .line 590
     iget-object v0, p0, Lcom/android/server/backup/PackageManagerBackupAgent;->mPackageManager:Landroid/content/pm/PackageManager;
 
     new-instance v1, Ljava/util/ArrayList;
@@ -220,20 +208,17 @@
     .end annotation
 
     .prologue
-    .line 139
     const/16 v4, 0x40
 
     invoke-virtual {p0, v4}, Landroid/content/pm/PackageManager;->getInstalledPackages(I)Ljava/util/List;
 
     move-result-object v3
 
-    .line 140
     .local v3, "pkgs":Ljava/util/List;, "Ljava/util/List<Landroid/content/pm/PackageInfo;>;"
     invoke-interface {v3}, Ljava/util/List;->size()I
 
     move-result v0
 
-    .line 141
     .local v0, "N":I
     add-int/lit8 v1, v0, -0x1
 
@@ -241,14 +226,12 @@
     :goto_0
     if-ltz v1, :cond_1
 
-    .line 142
     invoke-interface {v3, v1}, Ljava/util/List;->get(I)Ljava/lang/Object;
 
     move-result-object v2
 
     check-cast v2, Landroid/content/pm/PackageInfo;
 
-    .line 143
     .local v2, "pkg":Landroid/content/pm/PackageInfo;
     iget-object v4, v2, Landroid/content/pm/PackageInfo;->applicationInfo:Landroid/content/pm/ApplicationInfo;
 
@@ -258,16 +241,13 @@
 
     if-nez v4, :cond_0
 
-    .line 144
     invoke-interface {v3, v1}, Ljava/util/List;->remove(I)Ljava/lang/Object;
 
-    .line 141
     :cond_0
     add-int/lit8 v1, v1, -0x1
 
     goto :goto_0
 
-    .line 147
     .end local v2    # "pkg":Landroid/content/pm/PackageInfo;
     :cond_1
     return-object v3
@@ -287,17 +267,13 @@
     .end annotation
 
     .prologue
-    .line 432
     if-nez p0, :cond_1
 
-    .line 433
     const/4 v1, 0x0
 
-    .line 440
     :cond_0
     return-object v1
 
-    .line 436
     :cond_1
     new-instance v1, Ljava/util/ArrayList;
 
@@ -305,7 +281,6 @@
 
     invoke-direct {v1, v5}, Ljava/util/ArrayList;-><init>(I)V
 
-    .line 437
     .local v1, "hashes":Ljava/util/ArrayList;, "Ljava/util/ArrayList<[B>;"
     move-object v0, p0
 
@@ -321,7 +296,6 @@
 
     aget-object v4, v0, v2
 
-    .line 438
     .local v4, "s":Landroid/content/pm/Signature;
     invoke-static {v4}, Lcom/android/server/backup/BackupManagerService;->hashSignature(Landroid/content/pm/Signature;)[B
 
@@ -329,7 +303,6 @@
 
     invoke-virtual {v1, v5}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 437
     add-int/lit8 v2, v2, 0x1
 
     goto :goto_0
@@ -350,34 +323,27 @@
     .end annotation
 
     .prologue
-    .line 122
     .local p2, "packages":Ljava/util/List;, "Ljava/util/List<Landroid/content/pm/PackageInfo;>;"
     iput-object p1, p0, Lcom/android/server/backup/PackageManagerBackupAgent;->mPackageManager:Landroid/content/pm/PackageManager;
 
-    .line 123
     iput-object p2, p0, Lcom/android/server/backup/PackageManagerBackupAgent;->mAllPackages:Ljava/util/List;
 
-    .line 124
     const/4 v0, 0x0
 
     iput-object v0, p0, Lcom/android/server/backup/PackageManagerBackupAgent;->mRestoredSignatures:Ljava/util/HashMap;
 
-    .line 125
     const/4 v0, 0x0
 
     iput-boolean v0, p0, Lcom/android/server/backup/PackageManagerBackupAgent;->mHasMetadata:Z
 
-    .line 127
     sget v0, Landroid/os/Build$VERSION;->SDK_INT:I
 
     iput v0, p0, Lcom/android/server/backup/PackageManagerBackupAgent;->mStoredSdkVersion:I
 
-    .line 128
     sget-object v0, Landroid/os/Build$VERSION;->INCREMENTAL:Ljava/lang/String;
 
     iput-object v0, p0, Lcom/android/server/backup/PackageManagerBackupAgent;->mStoredIncrementalVersion:Ljava/lang/String;
 
-    .line 129
     return-void
 .end method
 
@@ -388,36 +354,28 @@
     .prologue
     const/4 v10, 0x0
 
-    .line 509
     iget-object v8, p0, Lcom/android/server/backup/PackageManagerBackupAgent;->mExisting:Ljava/util/HashSet;
 
     invoke-virtual {v8}, Ljava/util/HashSet;->clear()V
 
-    .line 510
     iget-object v8, p0, Lcom/android/server/backup/PackageManagerBackupAgent;->mStateVersions:Ljava/util/HashMap;
 
     invoke-virtual {v8}, Ljava/util/HashMap;->clear()V
 
-    .line 511
     const/4 v8, 0x0
 
     iput v8, p0, Lcom/android/server/backup/PackageManagerBackupAgent;->mStoredSdkVersion:I
 
-    .line 512
     iput-object v10, p0, Lcom/android/server/backup/PackageManagerBackupAgent;->mStoredIncrementalVersion:Ljava/lang/String;
 
-    .line 513
     iput-object v10, p0, Lcom/android/server/backup/PackageManagerBackupAgent;->mStoredHomeComponent:Landroid/content/ComponentName;
 
-    .line 514
     const-wide/16 v8, 0x0
 
     iput-wide v8, p0, Lcom/android/server/backup/PackageManagerBackupAgent;->mStoredHomeVersion:J
 
-    .line 515
     iput-object v10, p0, Lcom/android/server/backup/PackageManagerBackupAgent;->mStoredHomeSigHashes:Ljava/util/ArrayList;
 
-    .line 521
     new-instance v4, Ljava/io/FileInputStream;
 
     invoke-virtual {p1}, Landroid/os/ParcelFileDescriptor;->getFileDescriptor()Ljava/io/FileDescriptor;
@@ -426,30 +384,25 @@
 
     invoke-direct {v4, v8}, Ljava/io/FileInputStream;-><init>(Ljava/io/FileDescriptor;)V
 
-    .line 522
     .local v4, "instream":Ljava/io/FileInputStream;
     new-instance v3, Ljava/io/BufferedInputStream;
 
     invoke-direct {v3, v4}, Ljava/io/BufferedInputStream;-><init>(Ljava/io/InputStream;)V
 
-    .line 523
     .local v3, "inbuffer":Ljava/io/BufferedInputStream;
     new-instance v2, Ljava/io/DataInputStream;
 
     invoke-direct {v2, v3}, Ljava/io/DataInputStream;-><init>(Ljava/io/InputStream;)V
 
-    .line 526
     .local v2, "in":Ljava/io/DataInputStream;
     const/4 v1, 0x0
 
-    .line 527
     .local v1, "ignoreExisting":Z
     :try_start_0
     invoke-virtual {v2}, Ljava/io/DataInputStream;->readUTF()Ljava/lang/String;
 
     move-result-object v5
 
-    .line 530
     .local v5, "pkg":Ljava/lang/String;
     const-string v8, "=state="
 
@@ -459,18 +412,15 @@
 
     if-eqz v8, :cond_0
 
-    .line 531
     invoke-virtual {v2}, Ljava/io/DataInputStream;->readInt()I
 
     move-result v6
 
-    .line 532
     .local v6, "stateVersion":I
     const/4 v8, 0x2
 
     if-le v6, v8, :cond_1
 
-    .line 533
     const-string v8, "PMBA"
 
     new-instance v9, Ljava/lang/StringBuilder;
@@ -499,13 +449,11 @@
 
     invoke-static {v8, v9}, Landroid/util/Slog;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 587
     .end local v5    # "pkg":Ljava/lang/String;
     .end local v6    # "stateVersion":I
     :goto_0
     return-void
 
-    .line 543
     .restart local v5    # "pkg":Ljava/lang/String;
     :cond_0
     const-string v8, "PMBA"
@@ -514,10 +462,8 @@
 
     invoke-static {v8, v9}, Landroid/util/Slog;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 544
     const/4 v1, 0x1
 
-    .line 548
     :cond_1
     const-string v8, "@home@"
 
@@ -527,7 +473,6 @@
 
     if-eqz v8, :cond_2
 
-    .line 550
     invoke-virtual {v2}, Ljava/io/DataInputStream;->readUTF()Ljava/lang/String;
 
     move-result-object v8
@@ -538,26 +483,22 @@
 
     iput-object v8, p0, Lcom/android/server/backup/PackageManagerBackupAgent;->mStoredHomeComponent:Landroid/content/ComponentName;
 
-    .line 551
     invoke-virtual {v2}, Ljava/io/DataInputStream;->readLong()J
 
     move-result-wide v8
 
     iput-wide v8, p0, Lcom/android/server/backup/PackageManagerBackupAgent;->mStoredHomeVersion:J
 
-    .line 552
     invoke-static {v2}, Lcom/android/server/backup/PackageManagerBackupAgent;->readSignatureHashArray(Ljava/io/DataInputStream;)Ljava/util/ArrayList;
 
     move-result-object v8
 
     iput-object v8, p0, Lcom/android/server/backup/PackageManagerBackupAgent;->mStoredHomeSigHashes:Ljava/util/ArrayList;
 
-    .line 554
     invoke-virtual {v2}, Ljava/io/DataInputStream;->readUTF()Ljava/lang/String;
 
     move-result-object v5
 
-    .line 560
     :cond_2
     const-string v8, "@meta@"
 
@@ -567,52 +508,43 @@
 
     if-eqz v8, :cond_5
 
-    .line 561
     invoke-virtual {v2}, Ljava/io/DataInputStream;->readInt()I
 
     move-result v8
 
     iput v8, p0, Lcom/android/server/backup/PackageManagerBackupAgent;->mStoredSdkVersion:I
 
-    .line 562
     invoke-virtual {v2}, Ljava/io/DataInputStream;->readUTF()Ljava/lang/String;
 
     move-result-object v8
 
     iput-object v8, p0, Lcom/android/server/backup/PackageManagerBackupAgent;->mStoredIncrementalVersion:Ljava/lang/String;
 
-    .line 563
     if-nez v1, :cond_3
 
-    .line 564
     iget-object v8, p0, Lcom/android/server/backup/PackageManagerBackupAgent;->mExisting:Ljava/util/HashSet;
 
     const-string v9, "@meta@"
 
     invoke-virtual {v8, v9}, Ljava/util/HashSet;->add(Ljava/lang/Object;)Z
 
-    .line 573
     :cond_3
     :goto_1
     invoke-virtual {v2}, Ljava/io/DataInputStream;->readUTF()Ljava/lang/String;
 
     move-result-object v5
 
-    .line 574
     invoke-virtual {v2}, Ljava/io/DataInputStream;->readInt()I
 
     move-result v7
 
-    .line 576
     .local v7, "versionCode":I
     if-nez v1, :cond_4
 
-    .line 577
     iget-object v8, p0, Lcom/android/server/backup/PackageManagerBackupAgent;->mExisting:Ljava/util/HashSet;
 
     invoke-virtual {v8, v5}, Ljava/util/HashSet;->add(Ljava/lang/Object;)Z
 
-    .line 579
     :cond_4
     iget-object v8, p0, Lcom/android/server/backup/PackageManagerBackupAgent;->mStateVersions:Ljava/util/HashMap;
 
@@ -626,7 +558,6 @@
 
     goto :goto_1
 
-    .line 581
     .end local v5    # "pkg":Ljava/lang/String;
     .end local v7    # "versionCode":I
     :catch_0
@@ -634,7 +565,6 @@
 
     goto :goto_0
 
-    .line 567
     .restart local v5    # "pkg":Ljava/lang/String;
     :cond_5
     const-string v8, "PMBA"
@@ -648,12 +578,10 @@
 
     goto :goto_0
 
-    .line 583
     .end local v5    # "pkg":Ljava/lang/String;
     :catch_1
     move-exception v0
 
-    .line 585
     .local v0, "e":Ljava/io/IOException;
     const-string v8, "PMBA"
 
@@ -696,7 +624,6 @@
     .prologue
     const/4 v10, 0x0
 
-    .line 459
     :try_start_0
     invoke-virtual {p0}, Ljava/io/DataInputStream;->readInt()I
     :try_end_0
@@ -705,13 +632,11 @@
 
     move-result v5
 
-    .line 469
     .local v5, "num":I
     const/16 v9, 0x14
 
     if-le v5, v9, :cond_1
 
-    .line 470
     :try_start_1
     const-string v9, "PMBA"
 
@@ -719,7 +644,6 @@
 
     invoke-static {v9, v11}, Landroid/util/Slog;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 471
     new-instance v9, Ljava/lang/IllegalStateException;
 
     const-string v11, "Bad restore state"
@@ -730,12 +654,10 @@
     :try_end_1
     .catch Ljava/io/IOException; {:try_start_1 .. :try_end_1} :catch_0
 
-    .line 501
     .end local v5    # "num":I
     :catch_0
     move-exception v0
 
-    .line 502
     .local v0, "e":Ljava/io/IOException;
     const-string v9, "PMBA"
 
@@ -745,17 +667,14 @@
 
     move-object v8, v10
 
-    .line 503
     .end local v0    # "e":Ljava/io/IOException;
     :cond_0
     :goto_0
     return-object v8
 
-    .line 460
     :catch_1
     move-exception v0
 
-    .line 462
     .local v0, "e":Ljava/io/EOFException;
     :try_start_2
     const-string v9, "PMBA"
@@ -766,22 +685,18 @@
 
     move-object v8, v10
 
-    .line 463
     goto :goto_0
 
-    .line 478
     .end local v0    # "e":Ljava/io/EOFException;
     .restart local v5    # "num":I
     :cond_1
     const/4 v4, 0x0
 
-    .line 479
     .local v4, "nonHashFound":Z
     new-instance v8, Ljava/util/ArrayList;
 
     invoke-direct {v8, v5}, Ljava/util/ArrayList;-><init>(I)V
 
-    .line 480
     .local v8, "sigs":Ljava/util/ArrayList;, "Ljava/util/ArrayList<[B>;"
     const/4 v2, 0x0
 
@@ -789,43 +704,34 @@
     :goto_1
     if-ge v2, v5, :cond_3
 
-    .line 481
     invoke-virtual {p0}, Ljava/io/DataInputStream;->readInt()I
 
     move-result v3
 
-    .line 482
     .local v3, "len":I
     new-array v6, v3, [B
 
-    .line 483
     .local v6, "readHash":[B
     invoke-virtual {p0, v6}, Ljava/io/DataInputStream;->read([B)I
 
-    .line 484
     invoke-virtual {v8, v6}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 485
     const/16 v9, 0x20
 
     if-eq v3, v9, :cond_2
 
-    .line 486
     const/4 v4, 0x1
 
-    .line 480
     :cond_2
     add-int/lit8 v2, v2, 0x1
 
     goto :goto_1
 
-    .line 490
     .end local v3    # "len":I
     .end local v6    # "readHash":[B
     :cond_3
     if-eqz v4, :cond_0
 
-    .line 491
     new-instance v1, Ljava/util/ArrayList;
 
     invoke-virtual {v8}, Ljava/util/ArrayList;->size()I
@@ -834,7 +740,6 @@
 
     invoke-direct {v1, v9}, Ljava/util/ArrayList;-><init>(I)V
 
-    .line 493
     .local v1, "hashes":Ljava/util/ArrayList;, "Ljava/util/ArrayList<[B>;"
     const/4 v2, 0x0
 
@@ -845,7 +750,6 @@
 
     if-ge v2, v9, :cond_4
 
-    .line 494
     new-instance v7, Landroid/content/pm/Signature;
 
     invoke-virtual {v8, v2}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
@@ -856,7 +760,6 @@
 
     invoke-direct {v7, v9}, Landroid/content/pm/Signature;-><init>([B)V
 
-    .line 495
     .local v7, "s":Landroid/content/pm/Signature;
     invoke-static {v7}, Lcom/android/server/backup/BackupManagerService;->hashSignature(Landroid/content/pm/Signature;)[B
 
@@ -866,12 +769,10 @@
     :try_end_2
     .catch Ljava/io/IOException; {:try_start_2 .. :try_end_2} :catch_0
 
-    .line 493
     add-int/lit8 v2, v2, 0x1
 
     goto :goto_2
 
-    .line 497
     .end local v7    # "s":Landroid/content/pm/Signature;
     :cond_4
     move-object v8, v1
@@ -891,17 +792,14 @@
     .end annotation
 
     .prologue
-    .line 349
     array-length v0, p2
 
     invoke-virtual {p0, p1, v0}, Landroid/app/backup/BackupDataOutput;->writeEntityHeader(Ljava/lang/String;I)I
 
-    .line 350
     array-length v0, p2
 
     invoke-virtual {p0, p2, v0}, Landroid/app/backup/BackupDataOutput;->writeEntityData([BI)I
 
-    .line 351
     return-void
 .end method
 
@@ -924,7 +822,6 @@
     .end annotation
 
     .prologue
-    .line 446
     .local p1, "hashes":Ljava/util/ArrayList;, "Ljava/util/ArrayList<[B>;"
     invoke-virtual {p1}, Ljava/util/ArrayList;->size()I
 
@@ -932,7 +829,6 @@
 
     invoke-virtual {p0, v2}, Ljava/io/DataOutputStream;->writeInt(I)V
 
-    .line 449
     invoke-virtual {p1}, Ljava/util/ArrayList;->iterator()Ljava/util/Iterator;
 
     move-result-object v1
@@ -951,18 +847,15 @@
 
     check-cast v0, [B
 
-    .line 450
     .local v0, "buffer":[B
     array-length v2, v0
 
     invoke-virtual {p0, v2}, Ljava/io/DataOutputStream;->writeInt(I)V
 
-    .line 451
     invoke-virtual {p0, v0}, Ljava/io/DataOutputStream;->write([B)V
 
     goto :goto_0
 
-    .line 453
     .end local v0    # "buffer":[B
     :cond_0
     return-void
@@ -990,7 +883,6 @@
     .end annotation
 
     .prologue
-    .line 596
     .local p1, "pkgs":Ljava/util/List;, "Ljava/util/List<Landroid/content/pm/PackageInfo;>;"
     .local p5, "homeSigHashes":Ljava/util/ArrayList;, "Ljava/util/ArrayList<[B>;"
     new-instance v4, Ljava/io/FileOutputStream;
@@ -1001,68 +893,55 @@
 
     invoke-direct {v4, v6}, Ljava/io/FileOutputStream;-><init>(Ljava/io/FileDescriptor;)V
 
-    .line 597
     .local v4, "outstream":Ljava/io/FileOutputStream;
     new-instance v3, Ljava/io/BufferedOutputStream;
 
     invoke-direct {v3, v4}, Ljava/io/BufferedOutputStream;-><init>(Ljava/io/OutputStream;)V
 
-    .line 598
     .local v3, "outbuf":Ljava/io/BufferedOutputStream;
     new-instance v2, Ljava/io/DataOutputStream;
 
     invoke-direct {v2, v3}, Ljava/io/DataOutputStream;-><init>(Ljava/io/OutputStream;)V
 
-    .line 603
     .local v2, "out":Ljava/io/DataOutputStream;
     :try_start_0
     const-string v6, "=state="
 
     invoke-virtual {v2, v6}, Ljava/io/DataOutputStream;->writeUTF(Ljava/lang/String;)V
 
-    .line 604
     const/4 v6, 0x2
 
     invoke-virtual {v2, v6}, Ljava/io/DataOutputStream;->writeInt(I)V
 
-    .line 607
     if-eqz p2, :cond_0
 
-    .line 608
     const-string v6, "@home@"
 
     invoke-virtual {v2, v6}, Ljava/io/DataOutputStream;->writeUTF(Ljava/lang/String;)V
 
-    .line 609
     invoke-virtual {p2}, Landroid/content/ComponentName;->flattenToString()Ljava/lang/String;
 
     move-result-object v6
 
     invoke-virtual {v2, v6}, Ljava/io/DataOutputStream;->writeUTF(Ljava/lang/String;)V
 
-    .line 610
     invoke-virtual {v2, p3, p4}, Ljava/io/DataOutputStream;->writeLong(J)V
 
-    .line 611
     invoke-static {v2, p5}, Lcom/android/server/backup/PackageManagerBackupAgent;->writeSignatureHashArray(Ljava/io/DataOutputStream;Ljava/util/ArrayList;)V
 
-    .line 615
     :cond_0
     const-string v6, "@meta@"
 
     invoke-virtual {v2, v6}, Ljava/io/DataOutputStream;->writeUTF(Ljava/lang/String;)V
 
-    .line 616
     sget v6, Landroid/os/Build$VERSION;->SDK_INT:I
 
     invoke-virtual {v2, v6}, Ljava/io/DataOutputStream;->writeInt(I)V
 
-    .line 617
     sget-object v6, Landroid/os/Build$VERSION;->INCREMENTAL:Ljava/lang/String;
 
     invoke-virtual {v2, v6}, Ljava/io/DataOutputStream;->writeUTF(Ljava/lang/String;)V
 
-    .line 620
     invoke-interface {p1}, Ljava/util/List;->iterator()Ljava/util/Iterator;
 
     move-result-object v1
@@ -1081,13 +960,11 @@
 
     check-cast v5, Landroid/content/pm/PackageInfo;
 
-    .line 621
     .local v5, "pkg":Landroid/content/pm/PackageInfo;
     iget-object v6, v5, Landroid/content/pm/PackageInfo;->packageName:Ljava/lang/String;
 
     invoke-virtual {v2, v6}, Ljava/io/DataOutputStream;->writeUTF(Ljava/lang/String;)V
 
-    .line 622
     iget v6, v5, Landroid/content/pm/PackageInfo;->versionCode:I
 
     invoke-virtual {v2, v6}, Ljava/io/DataOutputStream;->writeInt(I)V
@@ -1096,13 +973,11 @@
 
     goto :goto_0
 
-    .line 626
     .end local v1    # "i$":Ljava/util/Iterator;
     .end local v5    # "pkg":Landroid/content/pm/PackageInfo;
     :catch_0
     move-exception v0
 
-    .line 627
     .local v0, "e":Ljava/io/IOException;
     const-string v6, "PMBA"
 
@@ -1110,12 +985,10 @@
 
     invoke-static {v6, v7}, Landroid/util/Slog;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 629
     .end local v0    # "e":Ljava/io/IOException;
     :goto_1
     return-void
 
-    .line 625
     .restart local v1    # "i$":Ljava/util/Iterator;
     :cond_1
     :try_start_1
@@ -1132,7 +1005,6 @@
     .locals 1
 
     .prologue
-    .line 134
     iget-object v0, p0, Lcom/android/server/backup/PackageManagerBackupAgent;->mPackageManager:Landroid/content/pm/PackageManager;
 
     invoke-static {v0}, Lcom/android/server/backup/PackageManagerBackupAgent;->getStorableApplications(Landroid/content/pm/PackageManager;)Ljava/util/List;
@@ -1141,7 +1013,6 @@
 
     iput-object v0, p0, Lcom/android/server/backup/PackageManagerBackupAgent;->mAllPackages:Ljava/util/List;
 
-    .line 135
     return-void
 .end method
 
@@ -1150,22 +1021,18 @@
     .param p1, "packageName"    # Ljava/lang/String;
 
     .prologue
-    .line 155
     iget-object v0, p0, Lcom/android/server/backup/PackageManagerBackupAgent;->mRestoredSignatures:Ljava/util/HashMap;
 
     if-nez v0, :cond_0
 
-    .line 156
     const-string v0, "PMBA"
 
     const-string v1, "getRestoredMetadata() before metadata read!"
 
     invoke-static {v0, v1}, Landroid/util/Slog;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 157
     const/4 v0, 0x0
 
-    .line 160
     :goto_0
     return-object v0
 
@@ -1194,22 +1061,18 @@
     .end annotation
 
     .prologue
-    .line 164
     iget-object v0, p0, Lcom/android/server/backup/PackageManagerBackupAgent;->mRestoredSignatures:Ljava/util/HashMap;
 
     if-nez v0, :cond_0
 
-    .line 165
     const-string v0, "PMBA"
 
     const-string v1, "getRestoredPackages() before metadata read!"
 
     invoke-static {v0, v1}, Landroid/util/Slog;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 166
     const/4 v0, 0x0
 
-    .line 174
     :goto_0
     return-object v0
 
@@ -1227,7 +1090,6 @@
     .locals 1
 
     .prologue
-    .line 151
     iget-boolean v0, p0, Lcom/android/server/backup/PackageManagerBackupAgent;->mHasMetadata:Z
 
     return v0
@@ -1240,12 +1102,10 @@
     .param p3, "newState"    # Landroid/os/ParcelFileDescriptor;
 
     .prologue
-    .line 183
     new-instance v16, Ljava/io/ByteArrayOutputStream;
 
     invoke-direct/range {v16 .. v16}, Ljava/io/ByteArrayOutputStream;-><init>()V
 
-    .line 184
     .local v16, "outputBuffer":Ljava/io/ByteArrayOutputStream;
     new-instance v17, Ljava/io/DataOutputStream;
 
@@ -1255,11 +1115,9 @@
 
     invoke-direct {v0, v1}, Ljava/io/DataOutputStream;-><init>(Ljava/io/OutputStream;)V
 
-    .line 185
     .local v17, "outputBufferStream":Ljava/io/DataOutputStream;
     invoke-direct/range {p0 .. p1}, Lcom/android/server/backup/PackageManagerBackupAgent;->parseStateFile(Landroid/os/ParcelFileDescriptor;)V
 
-    .line 190
     move-object/from16 v0, p0
 
     iget-object v3, v0, Lcom/android/server/backup/PackageManagerBackupAgent;->mStoredIncrementalVersion:Ljava/lang/String;
@@ -1278,7 +1136,6 @@
 
     if-nez v3, :cond_1
 
-    .line 192
     :cond_0
     const-string v3, "PMBA"
 
@@ -1324,40 +1181,32 @@
 
     invoke-static {v3, v4}, Landroid/util/Slog;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 194
     move-object/from16 v0, p0
 
     iget-object v3, v0, Lcom/android/server/backup/PackageManagerBackupAgent;->mExisting:Ljava/util/HashSet;
 
     invoke-virtual {v3}, Ljava/util/HashSet;->clear()V
 
-    .line 197
     :cond_1
     const-wide/16 v6, 0x0
 
-    .line 198
     .local v6, "homeVersion":J
     const/4 v8, 0x0
 
-    .line 199
     .local v8, "homeSigHashes":Ljava/util/ArrayList;, "Ljava/util/ArrayList<[B>;"
     const/4 v11, 0x0
 
-    .line 200
     .local v11, "homeInfo":Landroid/content/pm/PackageInfo;
     const/4 v12, 0x0
 
-    .line 201
     .local v12, "homeInstaller":Ljava/lang/String;
     invoke-direct/range {p0 .. p0}, Lcom/android/server/backup/PackageManagerBackupAgent;->getPreferredHomeComponent()Landroid/content/ComponentName;
 
     move-result-object v5
 
-    .line 202
     .local v5, "home":Landroid/content/ComponentName;
     if-eqz v5, :cond_2
 
-    .line 204
     :try_start_0
     move-object/from16 v0, p0
 
@@ -1373,7 +1222,6 @@
 
     move-result-object v11
 
-    .line 206
     move-object/from16 v0, p0
 
     iget-object v3, v0, Lcom/android/server/backup/PackageManagerBackupAgent;->mPackageManager:Landroid/content/pm/PackageManager;
@@ -1386,12 +1234,10 @@
 
     move-result-object v12
 
-    .line 207
     iget v3, v11, Landroid/content/pm/PackageInfo;->versionCode:I
 
     int-to-long v6, v3
 
-    .line 208
     iget-object v3, v11, Landroid/content/pm/PackageInfo;->signatures:[Landroid/content/pm/Signature;
 
     invoke-static {v3}, Lcom/android/server/backup/PackageManagerBackupAgent;->hashSignatureArray([Landroid/content/pm/Signature;)Ljava/util/ArrayList;
@@ -1400,7 +1246,6 @@
 
     move-result-object v8
 
-    .line 222
     :cond_2
     :goto_0
     :try_start_1
@@ -1439,15 +1284,12 @@
     :cond_3
     const/4 v15, 0x1
 
-    .line 226
     .local v15, "needHomeBackup":Z
     :goto_1
     if-eqz v15, :cond_4
 
-    .line 230
     if-eqz v5, :cond_a
 
-    .line 231
     invoke-virtual {v5}, Landroid/content/ComponentName;->flattenToString()Ljava/lang/String;
 
     move-result-object v3
@@ -1456,12 +1298,10 @@
 
     invoke-virtual {v0, v3}, Ljava/io/DataOutputStream;->writeUTF(Ljava/lang/String;)V
 
-    .line 232
     move-object/from16 v0, v17
 
     invoke-virtual {v0, v6, v7}, Ljava/io/DataOutputStream;->writeLong(J)V
 
-    .line 233
     if-eqz v12, :cond_9
 
     .end local v12    # "homeInstaller":Ljava/lang/String;
@@ -1470,12 +1310,10 @@
 
     invoke-virtual {v0, v12}, Ljava/io/DataOutputStream;->writeUTF(Ljava/lang/String;)V
 
-    .line 234
     move-object/from16 v0, v17
 
     invoke-static {v0, v8}, Lcom/android/server/backup/PackageManagerBackupAgent;->writeSignatureHashArray(Ljava/io/DataOutputStream;Ljava/util/ArrayList;)V
 
-    .line 235
     const-string v3, "@home@"
 
     invoke-virtual/range {v16 .. v16}, Ljava/io/ByteArrayOutputStream;->toByteArray()[B
@@ -1486,12 +1324,10 @@
 
     invoke-static {v0, v3, v4}, Lcom/android/server/backup/PackageManagerBackupAgent;->writeEntity(Landroid/app/backup/BackupDataOutput;Ljava/lang/String;[B)V
 
-    .line 250
     :cond_4
     :goto_3
     invoke-virtual/range {v16 .. v16}, Ljava/io/ByteArrayOutputStream;->reset()V
 
-    .line 251
     move-object/from16 v0, p0
 
     iget-object v3, v0, Lcom/android/server/backup/PackageManagerBackupAgent;->mExisting:Ljava/util/HashSet;
@@ -1504,21 +1340,18 @@
 
     if-nez v3, :cond_b
 
-    .line 253
     sget v3, Landroid/os/Build$VERSION;->SDK_INT:I
 
     move-object/from16 v0, v17
 
     invoke-virtual {v0, v3}, Ljava/io/DataOutputStream;->writeInt(I)V
 
-    .line 254
     sget-object v3, Landroid/os/Build$VERSION;->INCREMENTAL:Ljava/lang/String;
 
     move-object/from16 v0, v17
 
     invoke-virtual {v0, v3}, Ljava/io/DataOutputStream;->writeUTF(Ljava/lang/String;)V
 
-    .line 255
     const-string v3, "@meta@"
 
     invoke-virtual/range {v16 .. v16}, Ljava/io/ByteArrayOutputStream;->toByteArray()[B
@@ -1529,7 +1362,6 @@
 
     invoke-static {v0, v3, v4}, Lcom/android/server/backup/PackageManagerBackupAgent;->writeEntity(Landroid/app/backup/BackupDataOutput;Ljava/lang/String;[B)V
 
-    .line 264
     :goto_4
     move-object/from16 v0, p0
 
@@ -1554,7 +1386,6 @@
 
     check-cast v19, Landroid/content/pm/PackageInfo;
 
-    .line 265
     .local v19, "pkg":Landroid/content/pm/PackageInfo;
     move-object/from16 v0, v19
 
@@ -1562,7 +1393,6 @@
 
     move-object/from16 v18, v0
 
-    .line 266
     .local v18, "packName":Ljava/lang/String;
     const-string v3, "@meta@"
 
@@ -1576,10 +1406,8 @@
 
     if-nez v3, :cond_5
 
-    .line 270
     const/4 v14, 0x0
 
-    .line 272
     .local v14, "info":Landroid/content/pm/PackageInfo;
     :try_start_2
     move-object/from16 v0, p0
@@ -1597,7 +1425,6 @@
 
     move-result-object v14
 
-    .line 281
     :try_start_3
     move-object/from16 v0, p0
 
@@ -1611,7 +1438,6 @@
 
     if-eqz v3, :cond_6
 
-    .line 287
     move-object/from16 v0, p0
 
     iget-object v3, v0, Lcom/android/server/backup/PackageManagerBackupAgent;->mExisting:Ljava/util/HashSet;
@@ -1620,7 +1446,6 @@
 
     invoke-virtual {v3, v0}, Ljava/util/HashSet;->remove(Ljava/lang/Object;)Z
 
-    .line 288
     iget v4, v14, Landroid/content/pm/PackageInfo;->versionCode:I
 
     move-object/from16 v0, p0
@@ -1639,7 +1464,6 @@
 
     if-eq v4, v3, :cond_5
 
-    .line 293
     :cond_6
     iget-object v3, v14, Landroid/content/pm/PackageInfo;->signatures:[Landroid/content/pm/Signature;
 
@@ -1651,7 +1475,6 @@
 
     if-nez v3, :cond_c
 
-    .line 295
     :cond_7
     const-string v3, "PMBA"
 
@@ -1687,7 +1510,6 @@
 
     goto :goto_5
 
-    .line 337
     .end local v13    # "i$":Ljava/util/Iterator;
     .end local v14    # "info":Landroid/content/pm/PackageInfo;
     .end local v15    # "needHomeBackup":Z
@@ -1696,7 +1518,6 @@
     :catch_0
     move-exception v10
 
-    .line 339
     .local v10, "e":Ljava/io/IOException;
     const-string v3, "PMBA"
 
@@ -1704,17 +1525,14 @@
 
     invoke-static {v3, v4}, Landroid/util/Slog;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 345
     .end local v10    # "e":Ljava/io/IOException;
     :goto_6
     return-void
 
-    .line 209
     .restart local v12    # "homeInstaller":Ljava/lang/String;
     :catch_1
     move-exception v10
 
-    .line 210
     .local v10, "e":Landroid/content/pm/PackageManager$NameNotFoundException;
     const-string v3, "PMBA"
 
@@ -1722,19 +1540,16 @@
 
     invoke-static {v3, v4}, Landroid/util/Slog;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 212
     const/4 v5, 0x0
 
     goto/16 :goto_0
 
-    .line 222
     .end local v10    # "e":Landroid/content/pm/PackageManager$NameNotFoundException;
     :cond_8
     const/4 v15, 0x0
 
     goto/16 :goto_1
 
-    .line 233
     .restart local v15    # "needHomeBackup":Z
     :cond_9
     :try_start_4
@@ -1742,7 +1557,6 @@
 
     goto/16 :goto_2
 
-    .line 237
     :cond_a
     const-string v3, "@home@"
 
@@ -1754,7 +1568,6 @@
 
     goto/16 :goto_3
 
-    .line 259
     .end local v12    # "homeInstaller":Ljava/lang/String;
     :cond_b
     move-object/from16 v0, p0
@@ -1767,7 +1580,6 @@
 
     goto/16 :goto_4
 
-    .line 274
     .restart local v13    # "i$":Ljava/util/Iterator;
     .restart local v14    # "info":Landroid/content/pm/PackageInfo;
     .restart local v18    # "packName":Ljava/lang/String;
@@ -1775,7 +1587,6 @@
     :catch_2
     move-exception v10
 
-    .line 277
     .restart local v10    # "e":Landroid/content/pm/PackageManager$NameNotFoundException;
     move-object/from16 v0, p0
 
@@ -1787,19 +1598,16 @@
 
     goto/16 :goto_5
 
-    .line 309
     .end local v10    # "e":Landroid/content/pm/PackageManager$NameNotFoundException;
     :cond_c
     invoke-virtual/range {v16 .. v16}, Ljava/io/ByteArrayOutputStream;->reset()V
 
-    .line 310
     iget v3, v14, Landroid/content/pm/PackageInfo;->versionCode:I
 
     move-object/from16 v0, v17
 
     invoke-virtual {v0, v3}, Ljava/io/DataOutputStream;->writeInt(I)V
 
-    .line 311
     iget-object v3, v14, Landroid/content/pm/PackageInfo;->signatures:[Landroid/content/pm/Signature;
 
     invoke-static {v3}, Lcom/android/server/backup/PackageManagerBackupAgent;->hashSignatureArray([Landroid/content/pm/Signature;)Ljava/util/ArrayList;
@@ -1810,7 +1618,6 @@
 
     invoke-static {v0, v3}, Lcom/android/server/backup/PackageManagerBackupAgent;->writeSignatureHashArray(Ljava/io/DataOutputStream;Ljava/util/ArrayList;)V
 
-    .line 321
     invoke-virtual/range {v16 .. v16}, Ljava/io/ByteArrayOutputStream;->toByteArray()[B
 
     move-result-object v3
@@ -1823,7 +1630,6 @@
 
     goto/16 :goto_5
 
-    .line 328
     .end local v14    # "info":Landroid/content/pm/PackageInfo;
     .end local v18    # "packName":Ljava/lang/String;
     .end local v19    # "pkg":Landroid/content/pm/PackageInfo;
@@ -1851,7 +1657,6 @@
     :try_end_4
     .catch Ljava/io/IOException; {:try_start_4 .. :try_end_4} :catch_0
 
-    .line 331
     .local v2, "app":Ljava/lang/String;
     const/4 v3, -0x1
 
@@ -1864,11 +1669,9 @@
 
     goto :goto_7
 
-    .line 332
     :catch_3
     move-exception v10
 
-    .line 333
     .local v10, "e":Ljava/io/IOException;
     :try_start_6
     const-string v3, "PMBA"
@@ -1881,7 +1684,6 @@
 
     goto :goto_6
 
-    .line 344
     .end local v2    # "app":Ljava/lang/String;
     .end local v10    # "e":Ljava/io/IOException;
     :cond_e
@@ -1910,22 +1712,18 @@
     .end annotation
 
     .prologue
-    .line 358
     new-instance v11, Ljava/util/ArrayList;
 
     invoke-direct {v11}, Ljava/util/ArrayList;-><init>()V
 
-    .line 359
     .local v11, "restoredApps":Ljava/util/List;, "Ljava/util/List<Landroid/content/pm/ApplicationInfo;>;"
     new-instance v12, Ljava/util/HashMap;
 
     invoke-direct {v12}, Ljava/util/HashMap;-><init>()V
 
-    .line 361
     .local v12, "sigMap":Ljava/util/HashMap;, "Ljava/util/HashMap<Ljava/lang/String;Lcom/android/server/backup/PackageManagerBackupAgent$Metadata;>;"
     const/4 v15, -0x1
 
-    .line 363
     .local v15, "storedSystemVersion":I
     :goto_0
     invoke-virtual/range {p1 .. p1}, Landroid/app/backup/BackupDataInput;->readNextHeader()Z
@@ -1934,22 +1732,18 @@
 
     if-eqz v17, :cond_5
 
-    .line 364
     invoke-virtual/range {p1 .. p1}, Landroid/app/backup/BackupDataInput;->getKey()Ljava/lang/String;
 
     move-result-object v10
 
-    .line 365
     .local v10, "key":Ljava/lang/String;
     invoke-virtual/range {p1 .. p1}, Landroid/app/backup/BackupDataInput;->getDataSize()I
 
     move-result v6
 
-    .line 370
     .local v6, "dataSize":I
     new-array v9, v6, [B
 
-    .line 371
     .local v9, "inputBytes":[B
     const/16 v17, 0x0
 
@@ -1959,18 +1753,15 @@
 
     invoke-virtual {v0, v9, v1, v6}, Landroid/app/backup/BackupDataInput;->readEntityData([BII)I
 
-    .line 372
     new-instance v7, Ljava/io/ByteArrayInputStream;
 
     invoke-direct {v7, v9}, Ljava/io/ByteArrayInputStream;-><init>([B)V
 
-    .line 373
     .local v7, "inputBuffer":Ljava/io/ByteArrayInputStream;
     new-instance v8, Ljava/io/DataInputStream;
 
     invoke-direct {v8, v7}, Ljava/io/DataInputStream;-><init>(Ljava/io/InputStream;)V
 
-    .line 375
     .local v8, "inputBufferStream":Ljava/io/DataInputStream;
     const-string v17, "@meta@"
 
@@ -1982,12 +1773,10 @@
 
     if-eqz v17, :cond_1
 
-    .line 376
     invoke-virtual {v8}, Ljava/io/DataInputStream;->readInt()I
 
     move-result v14
 
-    .line 378
     .local v14, "storedSdkVersion":I
     sget v17, Landroid/os/Build$VERSION;->SDK_INT:I
 
@@ -1995,14 +1784,12 @@
 
     if-le v15, v0, :cond_0
 
-    .line 380
     const-string v17, "PMBA"
 
     const-string v18, "Restore set was from a later version of Android; not restoring"
 
     invoke-static/range {v17 .. v18}, Landroid/util/Slog;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 429
     .end local v6    # "dataSize":I
     .end local v7    # "inputBuffer":Ljava/io/ByteArrayInputStream;
     .end local v8    # "inputBufferStream":Ljava/io/DataInputStream;
@@ -2012,7 +1799,6 @@
     :goto_1
     return-void
 
-    .line 383
     .restart local v6    # "dataSize":I
     .restart local v7    # "inputBuffer":Ljava/io/ByteArrayInputStream;
     .restart local v8    # "inputBufferStream":Ljava/io/DataInputStream;
@@ -2024,7 +1810,6 @@
 
     iput v14, v0, Lcom/android/server/backup/PackageManagerBackupAgent;->mStoredSdkVersion:I
 
-    .line 384
     invoke-virtual {v8}, Ljava/io/DataInputStream;->readUTF()Ljava/lang/String;
 
     move-result-object v17
@@ -2035,7 +1820,6 @@
 
     iput-object v0, v1, Lcom/android/server/backup/PackageManagerBackupAgent;->mStoredIncrementalVersion:Ljava/lang/String;
 
-    .line 385
     const/16 v17, 0x1
 
     move/from16 v0, v17
@@ -2046,7 +1830,6 @@
 
     goto :goto_0
 
-    .line 392
     .end local v14    # "storedSdkVersion":I
     :cond_1
     const-string v17, "@home@"
@@ -2059,12 +1842,10 @@
 
     if-eqz v17, :cond_2
 
-    .line 393
     invoke-virtual {v8}, Ljava/io/DataInputStream;->readUTF()Ljava/lang/String;
 
     move-result-object v5
 
-    .line 394
     .local v5, "cn":Ljava/lang/String;
     invoke-static {v5}, Landroid/content/ComponentName;->unflattenFromString(Ljava/lang/String;)Landroid/content/ComponentName;
 
@@ -2076,7 +1857,6 @@
 
     iput-object v0, v1, Lcom/android/server/backup/PackageManagerBackupAgent;->mRestoredHome:Landroid/content/ComponentName;
 
-    .line 395
     invoke-virtual {v8}, Ljava/io/DataInputStream;->readLong()J
 
     move-result-wide v18
@@ -2087,7 +1867,6 @@
 
     iput-wide v0, v2, Lcom/android/server/backup/PackageManagerBackupAgent;->mRestoredHomeVersion:J
 
-    .line 396
     invoke-virtual {v8}, Ljava/io/DataInputStream;->readUTF()Ljava/lang/String;
 
     move-result-object v17
@@ -2098,7 +1877,6 @@
 
     iput-object v0, v1, Lcom/android/server/backup/PackageManagerBackupAgent;->mRestoredHomeInstaller:Ljava/lang/String;
 
-    .line 397
     invoke-static {v8}, Lcom/android/server/backup/PackageManagerBackupAgent;->readSignatureHashArray(Ljava/io/DataInputStream;)Ljava/util/ArrayList;
 
     move-result-object v17
@@ -2111,20 +1889,17 @@
 
     goto/16 :goto_0
 
-    .line 406
     .end local v5    # "cn":Ljava/lang/String;
     :cond_2
     invoke-virtual {v8}, Ljava/io/DataInputStream;->readInt()I
 
     move-result v16
 
-    .line 407
     .local v16, "versionCode":I
     invoke-static {v8}, Lcom/android/server/backup/PackageManagerBackupAgent;->readSignatureHashArray(Ljava/io/DataInputStream;)Ljava/util/ArrayList;
 
     move-result-object v13
 
-    .line 414
     .local v13, "sigs":Ljava/util/ArrayList;, "Ljava/util/ArrayList<[B>;"
     if-eqz v13, :cond_3
 
@@ -2134,7 +1909,6 @@
 
     if-nez v17, :cond_4
 
-    .line 415
     :cond_3
     const-string v17, "PMBA"
 
@@ -2168,20 +1942,16 @@
 
     goto/16 :goto_0
 
-    .line 420
     :cond_4
     new-instance v4, Landroid/content/pm/ApplicationInfo;
 
     invoke-direct {v4}, Landroid/content/pm/ApplicationInfo;-><init>()V
 
-    .line 421
     .local v4, "app":Landroid/content/pm/ApplicationInfo;
     iput-object v10, v4, Landroid/content/pm/ApplicationInfo;->packageName:Ljava/lang/String;
 
-    .line 422
     invoke-interface {v11, v4}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    .line 423
     new-instance v17, Lcom/android/server/backup/PackageManagerBackupAgent$Metadata;
 
     move-object/from16 v0, v17
@@ -2198,7 +1968,6 @@
 
     goto/16 :goto_0
 
-    .line 428
     .end local v4    # "app":Landroid/content/pm/ApplicationInfo;
     .end local v6    # "dataSize":I
     .end local v7    # "inputBuffer":Ljava/io/ByteArrayInputStream;

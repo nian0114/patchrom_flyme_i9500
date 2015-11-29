@@ -8,10 +8,8 @@
     .locals 0
 
     .prologue
-    .line 29
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 30
     return-void
 .end method
 
@@ -19,7 +17,6 @@
     .locals 1
 
     .prologue
-    .line 284
     invoke-static {}, Landroid/webkit/CookieManager;->getInstance()Landroid/webkit/CookieManager;
 
     move-result-object v0
@@ -35,7 +32,6 @@
     .locals 2
 
     .prologue
-    .line 46
     const-class v1, Landroid/webkit/CookieManager;
 
     monitor-enter v1
@@ -68,14 +64,12 @@
     .param p0, "accept"    # Z
 
     .prologue
-    .line 309
     invoke-static {}, Landroid/webkit/CookieManager;->getInstance()Landroid/webkit/CookieManager;
 
     move-result-object v0
 
     invoke-virtual {v0, p0}, Landroid/webkit/CookieManager;->setAcceptFileSchemeCookiesImpl(Z)V
 
-    .line 310
     return-void
 .end method
 
@@ -85,7 +79,6 @@
     .locals 1
 
     .prologue
-    .line 73
     monitor-enter p0
 
     :try_start_0
@@ -110,7 +103,6 @@
     .param p1, "webview"    # Landroid/webkit/WebView;
 
     .prologue
-    .line 101
     new-instance v0, Landroid/webkit/MustOverrideException;
 
     invoke-direct {v0}, Landroid/webkit/MustOverrideException;-><init>()V
@@ -122,7 +114,6 @@
     .locals 1
 
     .prologue
-    .line 293
     new-instance v0, Landroid/webkit/MustOverrideException;
 
     invoke-direct {v0}, Landroid/webkit/MustOverrideException;-><init>()V
@@ -139,7 +130,6 @@
     .end annotation
 
     .prologue
-    .line 34
     new-instance v0, Ljava/lang/CloneNotSupportedException;
 
     const-string v1, "doesn\'t implement Cloneable"
@@ -153,10 +143,8 @@
     .locals 0
 
     .prologue
-    .line 264
     invoke-virtual {p0}, Landroid/webkit/CookieManager;->flushCookieStore()V
 
-    .line 265
     return-void
 .end method
 
@@ -164,7 +152,6 @@
     .locals 0
 
     .prologue
-    .line 273
     return-void
 .end method
 
@@ -173,7 +160,6 @@
     .param p1, "uri"    # Landroid/net/WebAddress;
 
     .prologue
-    .line 174
     monitor-enter p0
 
     :try_start_0
@@ -198,7 +184,6 @@
     .param p1, "url"    # Ljava/lang/String;
 
     .prologue
-    .line 148
     new-instance v0, Landroid/webkit/MustOverrideException;
 
     invoke-direct {v0}, Landroid/webkit/MustOverrideException;-><init>()V
@@ -212,7 +197,6 @@
     .param p2, "privateBrowsing"    # Z
 
     .prologue
-    .line 161
     new-instance v0, Landroid/webkit/MustOverrideException;
 
     invoke-direct {v0}, Landroid/webkit/MustOverrideException;-><init>()V
@@ -224,7 +208,6 @@
     .locals 1
 
     .prologue
-    .line 236
     monitor-enter p0
 
     :try_start_0
@@ -249,7 +232,6 @@
     .param p1, "privateBrowsing"    # Z
 
     .prologue
-    .line 246
     monitor-enter p0
 
     :try_start_0
@@ -275,7 +257,6 @@
     .end annotation
 
     .prologue
-    .line 210
     new-instance v0, Landroid/webkit/MustOverrideException;
 
     invoke-direct {v0}, Landroid/webkit/MustOverrideException;-><init>()V
@@ -296,7 +277,6 @@
     .end annotation
 
     .prologue
-    .line 227
     .local p1, "callback":Landroid/webkit/ValueCallback;, "Landroid/webkit/ValueCallback<Ljava/lang/Boolean;>;"
     new-instance v0, Landroid/webkit/MustOverrideException;
 
@@ -311,7 +291,6 @@
     .end annotation
 
     .prologue
-    .line 255
     new-instance v0, Landroid/webkit/MustOverrideException;
 
     invoke-direct {v0}, Landroid/webkit/MustOverrideException;-><init>()V
@@ -323,7 +302,6 @@
     .locals 1
 
     .prologue
-    .line 183
     new-instance v0, Landroid/webkit/MustOverrideException;
 
     invoke-direct {v0}, Landroid/webkit/MustOverrideException;-><init>()V
@@ -344,7 +322,6 @@
     .end annotation
 
     .prologue
-    .line 201
     .local p1, "callback":Landroid/webkit/ValueCallback;, "Landroid/webkit/ValueCallback<Ljava/lang/Boolean;>;"
     new-instance v0, Landroid/webkit/MustOverrideException;
 
@@ -358,7 +335,6 @@
     .param p1, "accept"    # Z
 
     .prologue
-    .line 63
     monitor-enter p0
 
     :try_start_0
@@ -383,7 +359,6 @@
     .param p1, "accept"    # Z
 
     .prologue
-    .line 318
     new-instance v0, Landroid/webkit/MustOverrideException;
 
     invoke-direct {v0}, Landroid/webkit/MustOverrideException;-><init>()V
@@ -397,7 +372,6 @@
     .param p2, "accept"    # Z
 
     .prologue
-    .line 91
     new-instance v0, Landroid/webkit/MustOverrideException;
 
     invoke-direct {v0}, Landroid/webkit/MustOverrideException;-><init>()V
@@ -411,7 +385,6 @@
     .param p2, "value"    # Ljava/lang/String;
 
     .prologue
-    .line 114
     new-instance v0, Landroid/webkit/MustOverrideException;
 
     invoke-direct {v0}, Landroid/webkit/MustOverrideException;-><init>()V
@@ -436,7 +409,6 @@
     .end annotation
 
     .prologue
-    .line 137
     .local p3, "callback":Landroid/webkit/ValueCallback;, "Landroid/webkit/ValueCallback<Ljava/lang/Boolean;>;"
     new-instance v0, Landroid/webkit/MustOverrideException;
 

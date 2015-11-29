@@ -26,7 +26,6 @@
     .locals 0
 
     .prologue
-    .line 237
     iput-object p1, p0, Lcom/android/internal/policy/impl/sec/MultitapKeyManager$3;->this$0:Lcom/android/internal/policy/impl/sec/MultitapKeyManager;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -40,14 +39,12 @@
     .locals 2
 
     .prologue
-    .line 239
     const-string v0, "MultitapKeyManager"
 
     const-string v1, "mPowerDoubleTapTimeoutRunnable is running"
 
     invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 240
     iget-object v0, p0, Lcom/android/internal/policy/impl/sec/MultitapKeyManager$3;->this$0:Lcom/android/internal/policy/impl/sec/MultitapKeyManager;
 
     # getter for: Lcom/android/internal/policy/impl/sec/MultitapKeyManager;->mPowerDoubleTapPending:Z
@@ -57,7 +54,6 @@
 
     if-eqz v0, :cond_0
 
-    .line 241
     iget-object v0, p0, Lcom/android/internal/policy/impl/sec/MultitapKeyManager$3;->this$0:Lcom/android/internal/policy/impl/sec/MultitapKeyManager;
 
     const/4 v1, 0x0
@@ -65,14 +61,12 @@
     # setter for: Lcom/android/internal/policy/impl/sec/MultitapKeyManager;->mPowerDoubleTapPending:Z
     invoke-static {v0, v1}, Lcom/android/internal/policy/impl/sec/MultitapKeyManager;->access$202(Lcom/android/internal/policy/impl/sec/MultitapKeyManager;Z)Z
 
-    .line 242
     iget-object v0, p0, Lcom/android/internal/policy/impl/sec/MultitapKeyManager$3;->this$0:Lcom/android/internal/policy/impl/sec/MultitapKeyManager;
 
     iget-object v0, v0, Lcom/android/internal/policy/impl/sec/MultitapKeyManager;->mPWM:Lcom/android/internal/policy/impl/PhoneWindowManager;
 
     invoke-virtual {v0}, Lcom/android/internal/policy/impl/PhoneWindowManager;->powerKeyPress()V
 
-    .line 244
     :cond_0
     return-void
 .end method

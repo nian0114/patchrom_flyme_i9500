@@ -20,7 +20,6 @@
     .locals 1
 
     .prologue
-    .line 13
     const-class v0, Lcom/android/server/cocktailbar/utils/CocktailBarUtils;
 
     invoke-virtual {v0}, Ljava/lang/Class;->getSimpleName()Ljava/lang/String;
@@ -36,10 +35,8 @@
     .locals 0
 
     .prologue
-    .line 12
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 26
     return-void
 .end method
 
@@ -47,7 +44,6 @@
     .locals 1
 
     .prologue
-    .line 12
     sget-object v0, Lcom/android/server/cocktailbar/utils/CocktailBarUtils;->TAG:Ljava/lang/String;
 
     return-object v0
@@ -60,15 +56,13 @@
     .prologue
     const/4 v2, 0x1
 
-    .line 16
     invoke-static {p0}, Landroid/os/PersonaManager;->isKioskModeEnabled(Landroid/content/Context;)Z
 
     move-result v3
 
     if-eqz v3, :cond_0
 
-    .line 17
-    const-string/jumbo v3, "persona"
+    const-string v3, "persona"
 
     invoke-virtual {p0, v3}, Landroid/content/Context;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
 
@@ -76,13 +70,11 @@
 
     check-cast v1, Landroid/os/PersonaManager;
 
-    .line 18
     .local v1, "pm":Landroid/os/PersonaManager;
     invoke-virtual {v1, v2}, Landroid/os/PersonaManager;->getPersonas(Z)Ljava/util/List;
 
     move-result-object v0
 
-    .line 19
     .local v0, "info":Ljava/util/List;, "Ljava/util/List<Landroid/content/pm/PersonaInfo;>;"
     if-eqz v0, :cond_0
 
@@ -92,7 +84,6 @@
 
     if-lez v3, :cond_0
 
-    .line 23
     .end local v0    # "info":Ljava/util/List;, "Ljava/util/List<Landroid/content/pm/PersonaInfo;>;"
     .end local v1    # "pm":Landroid/os/PersonaManager;
     :goto_0

@@ -26,7 +26,6 @@
     .locals 0
 
     .prologue
-    .line 383
     iput-object p1, p0, Lcom/android/server/BatteryService$1$5;->this$1:Lcom/android/server/BatteryService$1;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -40,7 +39,6 @@
     .locals 3
 
     .prologue
-    .line 386
     iget-object v0, p0, Lcom/android/server/BatteryService$1$5;->this$1:Lcom/android/server/BatteryService$1;
 
     iget-object v0, v0, Lcom/android/server/BatteryService$1;->this$0:Lcom/android/server/BatteryService;
@@ -52,7 +50,6 @@
 
     monitor-enter v1
 
-    .line 387
     :try_start_0
     # getter for: Lcom/android/server/BatteryService;->TAG:Ljava/lang/String;
     invoke-static {}, Lcom/android/server/BatteryService;->access$700()Ljava/lang/String;
@@ -63,7 +60,6 @@
 
     invoke-static {v0, v2}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 388
     iget-object v0, p0, Lcom/android/server/BatteryService$1$5;->this$1:Lcom/android/server/BatteryService$1;
 
     iget-object v0, v0, Lcom/android/server/BatteryService$1;->this$0:Lcom/android/server/BatteryService;
@@ -75,13 +71,10 @@
 
     invoke-virtual {v0}, Lcom/android/server/BatteryService$Led;->updateLightsLocked()V
 
-    .line 389
     monitor-exit v1
 
-    .line 390
     return-void
 
-    .line 389
     :catchall_0
     move-exception v0
 

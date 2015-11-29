@@ -63,52 +63,36 @@
     .param p15, "extras"    # Landroid/os/Bundle;
 
     .prologue
-    .line 288
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 289
     iput-object p1, p0, Landroid/telecom/Call$Details;->mHandle:Landroid/net/Uri;
 
-    .line 290
     iput p2, p0, Landroid/telecom/Call$Details;->mHandlePresentation:I
 
-    .line 291
     iput-object p3, p0, Landroid/telecom/Call$Details;->mCallerDisplayName:Ljava/lang/String;
 
-    .line 292
     iput p4, p0, Landroid/telecom/Call$Details;->mCallerDisplayNamePresentation:I
 
-    .line 294
     iput-object p5, p0, Landroid/telecom/Call$Details;->mCallerDualPhoneNumber:Ljava/lang/String;
 
-    .line 296
     iput-object p6, p0, Landroid/telecom/Call$Details;->mAccountHandle:Landroid/telecom/PhoneAccountHandle;
 
-    .line 297
     iput p7, p0, Landroid/telecom/Call$Details;->mCallCapabilities:I
 
-    .line 298
     iput p8, p0, Landroid/telecom/Call$Details;->mCallProperties:I
 
-    .line 299
     iput-object p9, p0, Landroid/telecom/Call$Details;->mDisconnectCause:Landroid/telecom/DisconnectCause;
 
-    .line 300
     iput-wide p10, p0, Landroid/telecom/Call$Details;->mConnectTimeMillis:J
 
-    .line 301
     iput-object p12, p0, Landroid/telecom/Call$Details;->mGatewayInfo:Landroid/telecom/GatewayInfo;
 
-    .line 302
     iput p13, p0, Landroid/telecom/Call$Details;->mVideoState:I
 
-    .line 303
     iput-object p14, p0, Landroid/telecom/Call$Details;->mStatusHints:Landroid/telecom/StatusHints;
 
-    .line 304
     iput-object p15, p0, Landroid/telecom/Call$Details;->mExtras:Landroid/os/Bundle;
 
-    .line 305
     return-void
 .end method
 
@@ -121,17 +105,14 @@
     .prologue
     const/4 v1, 0x0
 
-    .line 226
     instance-of v2, p1, Landroid/telecom/Call$Details;
 
     if-eqz v2, :cond_0
 
     move-object v0, p1
 
-    .line 227
     check-cast v0, Landroid/telecom/Call$Details;
 
-    .line 228
     .local v0, "d":Landroid/telecom/Call$Details;
     iget-object v2, p0, Landroid/telecom/Call$Details;->mHandle:Landroid/net/Uri;
 
@@ -323,7 +304,6 @@
 
     const/4 v1, 0x1
 
-    .line 247
     .end local v0    # "d":Landroid/telecom/Call$Details;
     :cond_0
     return v1
@@ -333,7 +313,6 @@
     .locals 1
 
     .prologue
-    .line 159
     iget-object v0, p0, Landroid/telecom/Call$Details;->mAccountHandle:Landroid/telecom/PhoneAccountHandle;
 
     return-object v0
@@ -343,7 +322,6 @@
     .locals 1
 
     .prologue
-    .line 167
     iget v0, p0, Landroid/telecom/Call$Details;->mCallCapabilities:I
 
     return v0
@@ -353,7 +331,6 @@
     .locals 1
 
     .prologue
-    .line 175
     iget v0, p0, Landroid/telecom/Call$Details;->mCallProperties:I
 
     return v0
@@ -363,7 +340,6 @@
     .locals 1
 
     .prologue
-    .line 137
     iget-object v0, p0, Landroid/telecom/Call$Details;->mCallerDisplayName:Ljava/lang/String;
 
     return-object v0
@@ -373,7 +349,6 @@
     .locals 1
 
     .prologue
-    .line 145
     iget v0, p0, Landroid/telecom/Call$Details;->mCallerDisplayNamePresentation:I
 
     return v0
@@ -383,7 +358,6 @@
     .locals 1
 
     .prologue
-    .line 150
     iget-object v0, p0, Landroid/telecom/Call$Details;->mCallerDualPhoneNumber:Ljava/lang/String;
 
     return-object v0
@@ -393,7 +367,6 @@
     .locals 2
 
     .prologue
-    .line 192
     iget-wide v0, p0, Landroid/telecom/Call$Details;->mConnectTimeMillis:J
 
     return-wide v0
@@ -403,7 +376,6 @@
     .locals 1
 
     .prologue
-    .line 183
     iget-object v0, p0, Landroid/telecom/Call$Details;->mDisconnectCause:Landroid/telecom/DisconnectCause;
 
     return-object v0
@@ -413,7 +385,6 @@
     .locals 1
 
     .prologue
-    .line 221
     iget-object v0, p0, Landroid/telecom/Call$Details;->mExtras:Landroid/os/Bundle;
 
     return-object v0
@@ -423,7 +394,6 @@
     .locals 1
 
     .prologue
-    .line 199
     iget-object v0, p0, Landroid/telecom/Call$Details;->mGatewayInfo:Landroid/telecom/GatewayInfo;
 
     return-object v0
@@ -433,7 +403,6 @@
     .locals 1
 
     .prologue
-    .line 122
     iget-object v0, p0, Landroid/telecom/Call$Details;->mHandle:Landroid/net/Uri;
 
     return-object v0
@@ -443,7 +412,6 @@
     .locals 1
 
     .prologue
-    .line 130
     iget v0, p0, Landroid/telecom/Call$Details;->mHandlePresentation:I
 
     return v0
@@ -453,7 +421,6 @@
     .locals 1
 
     .prologue
-    .line 214
     iget-object v0, p0, Landroid/telecom/Call$Details;->mStatusHints:Landroid/telecom/StatusHints;
 
     return-object v0
@@ -463,7 +430,6 @@
     .locals 1
 
     .prologue
-    .line 206
     iget v0, p0, Landroid/telecom/Call$Details;->mVideoState:I
 
     return v0
@@ -473,7 +439,6 @@
     .locals 4
 
     .prologue
-    .line 252
     iget-object v0, p0, Landroid/telecom/Call$Details;->mHandle:Landroid/net/Uri;
 
     invoke-static {v0}, Ljava/util/Objects;->hashCode(Ljava/lang/Object;)I

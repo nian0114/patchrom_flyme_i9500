@@ -17,7 +17,6 @@
     .locals 0
 
     .prologue
-    .line 1048
     iput-object p1, p0, Lcom/absolute/android/persistservice/a;->b:Lcom/absolute/android/persistservice/ABTPersistenceService;
 
     iput p2, p0, Lcom/absolute/android/persistservice/a;->a:I
@@ -33,22 +32,17 @@
     .locals 4
 
     .prologue
-    .line 1050
     invoke-static {}, Landroid/os/Looper;->prepare()V
 
-    .line 1052
     const-wide/16 v0, 0x1388
 
     :try_start_0
     invoke-static {v0, v1}, Ljava/lang/Thread;->sleep(J)V
 
-    .line 1053
     const/4 v1, 0x0
 
-    .line 1054
     const/4 v0, 0x5
 
-    .line 1056
     iget-object v2, p0, Lcom/absolute/android/persistservice/a;->b:Lcom/absolute/android/persistservice/ABTPersistenceService;
 
     invoke-static {v2}, Lcom/absolute/android/persistservice/ABTPersistenceService;->a(Lcom/absolute/android/persistservice/ABTPersistenceService;)Lcom/absolute/android/persistservice/y;
@@ -59,7 +53,6 @@
 
     invoke-virtual {v2, v3}, Lcom/absolute/android/persistservice/y;->c(Ljava/lang/String;)V
 
-    .line 1058
     :goto_0
     iget v2, p0, Lcom/absolute/android/persistservice/a;->a:I
 
@@ -77,19 +70,16 @@
 
     if-nez v2, :cond_1
 
-    .line 1063
     new-instance v2, Landroid/content/Intent;
 
     const-string v3, "com.absolute.action.PS_READY"
 
     invoke-direct {v2, v3}, Landroid/content/Intent;-><init>(Ljava/lang/String;)V
 
-    .line 1064
     const/16 v3, 0x20
 
     invoke-virtual {v2, v3}, Landroid/content/Intent;->addFlags(I)Landroid/content/Intent;
 
-    .line 1065
     iget-object v3, p0, Lcom/absolute/android/persistservice/a;->b:Lcom/absolute/android/persistservice/ABTPersistenceService;
 
     invoke-static {v3}, Lcom/absolute/android/persistservice/ABTPersistenceService;->c(Lcom/absolute/android/persistservice/ABTPersistenceService;)Landroid/content/Context;
@@ -98,15 +88,12 @@
 
     invoke-virtual {v3, v2}, Landroid/content/Context;->sendBroadcast(Landroid/content/Intent;)V
 
-    .line 1067
     const/16 v2, 0x3c
 
     if-lt v1, v2, :cond_0
 
-    .line 1068
     const/16 v0, 0x14
 
-    .line 1070
     :cond_0
     mul-int/lit16 v2, v0, 0x3e8
 
@@ -114,13 +101,10 @@
 
     invoke-static {v2, v3}, Ljava/lang/Thread;->sleep(J)V
 
-    .line 1071
     add-int/2addr v1, v0
 
-    .line 1072
     goto :goto_0
 
-    .line 1074
     :cond_1
     iget-object v0, p0, Lcom/absolute/android/persistservice/a;->b:Lcom/absolute/android/persistservice/ABTPersistenceService;
 
@@ -134,7 +118,6 @@
     :try_end_0
     .catch Ljava/lang/InterruptedException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 1078
     :goto_1
     return-void
 

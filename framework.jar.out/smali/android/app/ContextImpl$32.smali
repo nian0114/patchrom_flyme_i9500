@@ -19,7 +19,6 @@
     .locals 0
 
     .prologue
-    .line 631
     invoke-direct {p0}, Landroid/app/ContextImpl$StaticServiceFetcher;-><init>()V
 
     return-void
@@ -31,18 +30,15 @@
     .locals 9
 
     .prologue
-    .line 633
-    const-string/jumbo v5, "sec_location"
+    const-string v5, "sec_location"
 
     invoke-static {v5}, Landroid/os/ServiceManager;->getService(Ljava/lang/String;)Landroid/os/IBinder;
 
     move-result-object v0
 
-    .line 634
     .local v0, "b":Landroid/os/IBinder;
     const/4 v4, 0x0
 
-    .line 636
     .local v4, "sLocationManager":Ljava/lang/Object;
     :try_start_0
     const-string v5, "com.samsung.location.SLocationLoader"
@@ -51,7 +47,6 @@
 
     move-result-object v3
 
-    .line 637
     .local v3, "sLocationLoader":Ljava/lang/Class;, "Ljava/lang/Class<*>;"
     const-string v5, "getSLocationManager"
 
@@ -69,7 +64,6 @@
 
     move-result-object v2
 
-    .line 639
     .local v2, "getSLocationManager":Ljava/lang/reflect/Method;
     const/4 v5, 0x0
 
@@ -87,19 +81,16 @@
 
     move-result-object v4
 
-    .line 643
     .end local v2    # "getSLocationManager":Ljava/lang/reflect/Method;
     .end local v3    # "sLocationLoader":Ljava/lang/Class;, "Ljava/lang/Class<*>;"
     .end local v4    # "sLocationManager":Ljava/lang/Object;
     :goto_0
     return-object v4
 
-    .line 640
     .restart local v4    # "sLocationManager":Ljava/lang/Object;
     :catch_0
     move-exception v1
 
-    .line 641
     .local v1, "e":Ljava/lang/Throwable;
     const-string v5, "ContextImpl"
 

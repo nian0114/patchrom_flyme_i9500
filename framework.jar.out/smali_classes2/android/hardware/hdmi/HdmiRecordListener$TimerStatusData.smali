@@ -37,7 +37,6 @@
     .locals 0
 
     .prologue
-    .line 108
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -48,7 +47,6 @@
     .param p0, "value"    # B
 
     .prologue
-    .line 105
     shr-int/lit8 v0, p0, 0x4
 
     and-int/lit8 v0, v0, 0xf
@@ -71,12 +69,10 @@
 
     const/4 v3, 0x0
 
-    .line 79
     new-instance v0, Landroid/hardware/hdmi/HdmiRecordListener$TimerStatusData;
 
     invoke-direct {v0}, Landroid/hardware/hdmi/HdmiRecordListener$TimerStatusData;-><init>()V
 
-    .line 81
     .local v0, "data":Landroid/hardware/hdmi/HdmiRecordListener$TimerStatusData;
     shr-int/lit8 v1, p0, 0x1f
 
@@ -89,14 +85,12 @@
     :goto_0
     iput-boolean v1, v0, Landroid/hardware/hdmi/HdmiRecordListener$TimerStatusData;->mOverlapped:Z
 
-    .line 83
     shr-int/lit8 v1, p0, 0x1d
 
     and-int/lit8 v1, v1, 0x3
 
     iput v1, v0, Landroid/hardware/hdmi/HdmiRecordListener$TimerStatusData;->mMediaInfo:I
 
-    .line 85
     shr-int/lit8 v1, p0, 0x1c
 
     and-int/lit8 v1, v1, 0x1
@@ -106,19 +100,16 @@
     :goto_1
     iput-boolean v2, v0, Landroid/hardware/hdmi/HdmiRecordListener$TimerStatusData;->mProgrammed:Z
 
-    .line 86
     iget-boolean v1, v0, Landroid/hardware/hdmi/HdmiRecordListener$TimerStatusData;->mProgrammed:Z
 
     if-eqz v1, :cond_2
 
-    .line 87
     shr-int/lit8 v1, p0, 0x18
 
     and-int/lit8 v1, v1, 0xf
 
     iput v1, v0, Landroid/hardware/hdmi/HdmiRecordListener$TimerStatusData;->mProgrammedInfo:I
 
-    .line 88
     shr-int/lit8 v1, p0, 0x10
 
     and-int/lit16 v1, v1, 0xff
@@ -131,7 +122,6 @@
 
     iput v1, v0, Landroid/hardware/hdmi/HdmiRecordListener$TimerStatusData;->mDurationHour:I
 
-    .line 89
     shr-int/lit8 v1, p0, 0x8
 
     and-int/lit16 v1, v1, 0xff
@@ -144,28 +134,23 @@
 
     iput v1, v0, Landroid/hardware/hdmi/HdmiRecordListener$TimerStatusData;->mDurationMinute:I
 
-    .line 98
     :goto_2
     and-int/lit16 v1, p0, 0xff
 
     iput v1, v0, Landroid/hardware/hdmi/HdmiRecordListener$TimerStatusData;->mExtraError:I
 
-    .line 99
     return-object v0
 
     :cond_0
     move v1, v3
 
-    .line 81
     goto :goto_0
 
     :cond_1
     move v2, v3
 
-    .line 85
     goto :goto_1
 
-    .line 92
     :cond_2
     shr-int/lit8 v1, p0, 0x18
 
@@ -173,7 +158,6 @@
 
     iput v1, v0, Landroid/hardware/hdmi/HdmiRecordListener$TimerStatusData;->mNotProgrammedError:I
 
-    .line 93
     shr-int/lit8 v1, p0, 0x10
 
     and-int/lit16 v1, v1, 0xff
@@ -186,7 +170,6 @@
 
     iput v1, v0, Landroid/hardware/hdmi/HdmiRecordListener$TimerStatusData;->mDurationHour:I
 
-    .line 94
     shr-int/lit8 v1, p0, 0x8
 
     and-int/lit16 v1, v1, 0xff
@@ -208,7 +191,6 @@
     .locals 1
 
     .prologue
-    .line 198
     iget v0, p0, Landroid/hardware/hdmi/HdmiRecordListener$TimerStatusData;->mDurationHour:I
 
     return v0
@@ -218,7 +200,6 @@
     .locals 1
 
     .prologue
-    .line 209
     iget v0, p0, Landroid/hardware/hdmi/HdmiRecordListener$TimerStatusData;->mDurationMinute:I
 
     return v0
@@ -228,7 +209,6 @@
     .locals 1
 
     .prologue
-    .line 226
     iget v0, p0, Landroid/hardware/hdmi/HdmiRecordListener$TimerStatusData;->mExtraError:I
 
     return v0
@@ -238,7 +218,6 @@
     .locals 1
 
     .prologue
-    .line 128
     iget v0, p0, Landroid/hardware/hdmi/HdmiRecordListener$TimerStatusData;->mMediaInfo:I
 
     return v0
@@ -248,14 +227,12 @@
     .locals 2
 
     .prologue
-    .line 183
     invoke-virtual {p0}, Landroid/hardware/hdmi/HdmiRecordListener$TimerStatusData;->isProgrammed()Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
-    .line 184
     new-instance v0, Ljava/lang/IllegalStateException;
 
     const-string v1, "Has no not-programmed error. Call getProgrammedInfo() instead."
@@ -264,7 +241,6 @@
 
     throw v0
 
-    .line 187
     :cond_0
     iget v0, p0, Landroid/hardware/hdmi/HdmiRecordListener$TimerStatusData;->mNotProgrammedError:I
 
@@ -275,14 +251,12 @@
     .locals 2
 
     .prologue
-    .line 155
     invoke-virtual {p0}, Landroid/hardware/hdmi/HdmiRecordListener$TimerStatusData;->isProgrammed()Z
 
     move-result v0
 
     if-nez v0, :cond_0
 
-    .line 156
     new-instance v0, Ljava/lang/IllegalStateException;
 
     const-string v1, "No programmed info. Call getNotProgammedError() instead."
@@ -291,7 +265,6 @@
 
     throw v0
 
-    .line 159
     :cond_0
     iget v0, p0, Landroid/hardware/hdmi/HdmiRecordListener$TimerStatusData;->mProgrammedInfo:I
 
@@ -302,7 +275,6 @@
     .locals 1
 
     .prologue
-    .line 115
     iget-boolean v0, p0, Landroid/hardware/hdmi/HdmiRecordListener$TimerStatusData;->mOverlapped:Z
 
     return v0
@@ -312,7 +284,6 @@
     .locals 1
 
     .prologue
-    .line 137
     iget-boolean v0, p0, Landroid/hardware/hdmi/HdmiRecordListener$TimerStatusData;->mProgrammed:Z
 
     return v0

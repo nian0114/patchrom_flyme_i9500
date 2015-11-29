@@ -26,7 +26,6 @@
     .locals 0
 
     .prologue
-    .line 402
     iput-object p1, p0, Lcom/android/internal/telephony/uicc/UiccCard$1;->this$0:Lcom/android/internal/telephony/uicc/UiccCard;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -42,7 +41,6 @@
     .param p2, "which"    # I
 
     .prologue
-    .line 405
     iget-object v1, p0, Lcom/android/internal/telephony/uicc/UiccCard$1;->this$0:Lcom/android/internal/telephony/uicc/UiccCard;
 
     # getter for: Lcom/android/internal/telephony/uicc/UiccCard;->mLock:Ljava/lang/Object;
@@ -52,12 +50,10 @@
 
     monitor-enter v2
 
-    .line 407
     const/4 v1, -0x1
 
     if-ne p2, v1, :cond_1
 
-    .line 408
     :try_start_0
     iget-object v1, p0, Lcom/android/internal/telephony/uicc/UiccCard$1;->this$0:Lcom/android/internal/telephony/uicc/UiccCard;
 
@@ -66,32 +62,27 @@
     # invokes: Lcom/android/internal/telephony/uicc/UiccCard;->log(Ljava/lang/String;)V
     invoke-static {v1, v3}, Lcom/android/internal/telephony/uicc/UiccCard;->access$200(Lcom/android/internal/telephony/uicc/UiccCard;Ljava/lang/String;)V
 
-    .line 409
     new-instance v0, Landroid/content/Intent;
 
     const-string v1, "android.intent.action.ACTION_REQUEST_SHUTDOWN"
 
     invoke-direct {v0, v1}, Landroid/content/Intent;-><init>(Ljava/lang/String;)V
 
-    .line 410
     .local v0, "startIntent":Landroid/content/Intent;
     const-string v1, "android.intent.action.REBOOT"
 
     invoke-virtual {v0, v1}, Landroid/content/Intent;->setAction(Ljava/lang/String;)Landroid/content/Intent;
 
-    .line 411
     const-string v1, "android.intent.extra.KEY_CONFIRM"
 
     const/4 v3, 0x0
 
     invoke-virtual {v0, v1, v3}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Z)Landroid/content/Intent;
 
-    .line 412
     const/high16 v1, 0x10000000
 
     invoke-virtual {v0, v1}, Landroid/content/Intent;->setFlags(I)Landroid/content/Intent;
 
-    .line 413
     iget-object v1, p0, Lcom/android/internal/telephony/uicc/UiccCard$1;->this$0:Lcom/android/internal/telephony/uicc/UiccCard;
 
     # getter for: Lcom/android/internal/telephony/uicc/UiccCard;->mContext:Landroid/content/Context;
@@ -103,22 +94,18 @@
 
     invoke-virtual {v1, v0, v3}, Landroid/content/Context;->startActivityAsUser(Landroid/content/Intent;Landroid/os/UserHandle;)V
 
-    .line 418
     .end local v0    # "startIntent":Landroid/content/Intent;
     :cond_0
     :goto_0
     monitor-exit v2
 
-    .line 419
     return-void
 
-    .line 414
     :cond_1
     const/4 v1, -0x2
 
     if-ne p2, v1, :cond_0
 
-    .line 415
     iget-object v1, p0, Lcom/android/internal/telephony/uicc/UiccCard$1;->this$0:Lcom/android/internal/telephony/uicc/UiccCard;
 
     const-string v3, "Do not reboot device"
@@ -128,7 +115,6 @@
 
     goto :goto_0
 
-    .line 418
     :catchall_0
     move-exception v1
 

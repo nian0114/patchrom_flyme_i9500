@@ -23,7 +23,6 @@
     .locals 0
 
     .prologue
-    .line 759
     iput-object p1, p0, Lcom/android/internal/policy/impl/PhoneWindowManager$PolicyHandler;->this$0:Lcom/android/internal/policy/impl/PhoneWindowManager;
 
     invoke-direct {p0}, Landroid/os/Handler;-><init>()V
@@ -37,7 +36,6 @@
     .param p2, "x1"    # Lcom/android/internal/policy/impl/PhoneWindowManager$1;
 
     .prologue
-    .line 759
     invoke-direct {p0, p1}, Lcom/android/internal/policy/impl/PhoneWindowManager$PolicyHandler;-><init>(Lcom/android/internal/policy/impl/PhoneWindowManager;)V
 
     return-void
@@ -54,17 +52,14 @@
 
     const/4 v0, 0x0
 
-    .line 762
     iget v2, p1, Landroid/os/Message;->what:I
 
     sparse-switch v2, :sswitch_data_0
 
-    .line 852
     :goto_0
     :sswitch_0
     return-void
 
-    .line 764
     :sswitch_1
     iget-object v0, p0, Lcom/android/internal/policy/impl/PhoneWindowManager$PolicyHandler;->this$0:Lcom/android/internal/policy/impl/PhoneWindowManager;
 
@@ -73,7 +68,6 @@
 
     goto :goto_0
 
-    .line 767
     :sswitch_2
     iget-object v0, p0, Lcom/android/internal/policy/impl/PhoneWindowManager$PolicyHandler;->this$0:Lcom/android/internal/policy/impl/PhoneWindowManager;
 
@@ -82,7 +76,6 @@
 
     goto :goto_0
 
-    .line 770
     :sswitch_3
     iget-object v1, p0, Lcom/android/internal/policy/impl/PhoneWindowManager$PolicyHandler;->this$0:Lcom/android/internal/policy/impl/PhoneWindowManager;
 
@@ -94,7 +87,6 @@
 
     goto :goto_0
 
-    .line 773
     :sswitch_4
     iget-object v1, p0, Lcom/android/internal/policy/impl/PhoneWindowManager$PolicyHandler;->this$0:Lcom/android/internal/policy/impl/PhoneWindowManager;
 
@@ -106,7 +98,6 @@
 
     goto :goto_0
 
-    .line 776
     :sswitch_5
     iget-object v1, p0, Lcom/android/internal/policy/impl/PhoneWindowManager$PolicyHandler;->this$0:Lcom/android/internal/policy/impl/PhoneWindowManager;
 
@@ -115,7 +106,6 @@
 
     goto :goto_0
 
-    .line 779
     :sswitch_6
     iget-object v0, p0, Lcom/android/internal/policy/impl/PhoneWindowManager$PolicyHandler;->this$0:Lcom/android/internal/policy/impl/PhoneWindowManager;
 
@@ -123,7 +113,6 @@
 
     goto :goto_0
 
-    .line 783
     :sswitch_7
     iget-object v0, p0, Lcom/android/internal/policy/impl/PhoneWindowManager$PolicyHandler;->this$0:Lcom/android/internal/policy/impl/PhoneWindowManager;
 
@@ -132,7 +121,6 @@
 
     goto :goto_0
 
-    .line 786
     :sswitch_8
     const-string v0, "WindowManager"
 
@@ -140,7 +128,6 @@
 
     invoke-static {v0, v1}, Landroid/util/Slog;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 787
     iget-object v0, p0, Lcom/android/internal/policy/impl/PhoneWindowManager$PolicyHandler;->this$0:Lcom/android/internal/policy/impl/PhoneWindowManager;
 
     # invokes: Lcom/android/internal/policy/impl/PhoneWindowManager;->finishKeyguardDrawn()V
@@ -148,7 +135,6 @@
 
     goto :goto_0
 
-    .line 791
     :sswitch_9
     iget-object v0, p0, Lcom/android/internal/policy/impl/PhoneWindowManager$PolicyHandler;->this$0:Lcom/android/internal/policy/impl/PhoneWindowManager;
 
@@ -157,7 +143,6 @@
 
     goto :goto_0
 
-    .line 794
     :sswitch_a
     iget-object v0, p0, Lcom/android/internal/policy/impl/PhoneWindowManager$PolicyHandler;->this$0:Lcom/android/internal/policy/impl/PhoneWindowManager;
 
@@ -166,7 +151,6 @@
 
     goto :goto_0
 
-    .line 797
     :sswitch_b
     iget-object v2, p0, Lcom/android/internal/policy/impl/PhoneWindowManager$PolicyHandler;->this$0:Lcom/android/internal/policy/impl/PhoneWindowManager;
 
@@ -181,7 +165,6 @@
 
     goto :goto_0
 
-    .line 806
     :sswitch_c
     iget-object v0, p0, Lcom/android/internal/policy/impl/PhoneWindowManager$PolicyHandler;->this$0:Lcom/android/internal/policy/impl/PhoneWindowManager;
 
@@ -194,7 +177,6 @@
 
     goto :goto_0
 
-    .line 811
     :sswitch_d
     iget-object v0, p0, Lcom/android/internal/policy/impl/PhoneWindowManager$PolicyHandler;->this$0:Lcom/android/internal/policy/impl/PhoneWindowManager;
 
@@ -203,7 +185,6 @@
 
     goto :goto_0
 
-    .line 814
     :sswitch_e
     iget-object v0, p0, Lcom/android/internal/policy/impl/PhoneWindowManager$PolicyHandler;->this$0:Lcom/android/internal/policy/impl/PhoneWindowManager;
 
@@ -212,7 +193,6 @@
 
     goto :goto_0
 
-    .line 819
     :sswitch_f
     iget-object v0, p0, Lcom/android/internal/policy/impl/PhoneWindowManager$PolicyHandler;->this$0:Lcom/android/internal/policy/impl/PhoneWindowManager;
 
@@ -225,7 +205,6 @@
 
     goto :goto_0
 
-    .line 823
     :sswitch_10
     iget-object v1, p0, Lcom/android/internal/policy/impl/PhoneWindowManager$PolicyHandler;->this$0:Lcom/android/internal/policy/impl/PhoneWindowManager;
 
@@ -238,7 +217,6 @@
 
     goto :goto_0
 
-    .line 827
     :sswitch_11
     iget-object v0, p0, Lcom/android/internal/policy/impl/PhoneWindowManager$PolicyHandler;->this$0:Lcom/android/internal/policy/impl/PhoneWindowManager;
 
@@ -251,7 +229,6 @@
 
     goto/16 :goto_0
 
-    .line 831
     :sswitch_12
     iget-object v2, p0, Lcom/android/internal/policy/impl/PhoneWindowManager$PolicyHandler;->this$0:Lcom/android/internal/policy/impl/PhoneWindowManager;
 
@@ -264,7 +241,6 @@
 
     goto/16 :goto_0
 
-    .line 835
     :sswitch_13
     iget-object v0, p0, Lcom/android/internal/policy/impl/PhoneWindowManager$PolicyHandler;->this$0:Lcom/android/internal/policy/impl/PhoneWindowManager;
 
@@ -277,7 +253,6 @@
 
     goto/16 :goto_0
 
-    .line 839
     :sswitch_14
     iget-object v1, p0, Lcom/android/internal/policy/impl/PhoneWindowManager$PolicyHandler;->this$0:Lcom/android/internal/policy/impl/PhoneWindowManager;
 
@@ -290,7 +265,6 @@
 
     goto/16 :goto_0
 
-    .line 844
     :sswitch_15
     iget-object v0, p0, Lcom/android/internal/policy/impl/PhoneWindowManager$PolicyHandler;->this$0:Lcom/android/internal/policy/impl/PhoneWindowManager;
 
@@ -311,7 +285,6 @@
 
     goto/16 :goto_0
 
-    .line 848
     :sswitch_16
     iget-object v1, p0, Lcom/android/internal/policy/impl/PhoneWindowManager$PolicyHandler;->this$0:Lcom/android/internal/policy/impl/PhoneWindowManager;
 
@@ -324,7 +297,6 @@
 
     goto/16 :goto_0
 
-    .line 762
     :sswitch_data_0
     .sparse-switch
         0x1 -> :sswitch_1

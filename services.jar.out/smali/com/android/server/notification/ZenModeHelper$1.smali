@@ -26,7 +26,6 @@
     .locals 0
 
     .prologue
-    .line 494
     iput-object p1, p0, Lcom/android/server/notification/ZenModeHelper$1;->this$0:Lcom/android/server/notification/ZenModeHelper;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -40,12 +39,10 @@
     .locals 1
 
     .prologue
-    .line 497
     iget-object v0, p0, Lcom/android/server/notification/ZenModeHelper$1;->this$0:Lcom/android/server/notification/ZenModeHelper;
 
     # invokes: Lcom/android/server/notification/ZenModeHelper;->handleRingerModeChanged()V
     invoke-static {v0}, Lcom/android/server/notification/ZenModeHelper;->access$000(Lcom/android/server/notification/ZenModeHelper;)V
 
-    .line 498
     return-void
 .end method

@@ -23,7 +23,6 @@
     .locals 0
 
     .prologue
-    .line 1592
     iput-object p1, p0, Lcom/android/server/wifi/WifiStateMachine$12;->this$0:Lcom/android/server/wifi/WifiStateMachine;
 
     invoke-direct {p0}, Landroid/content/BroadcastReceiver;-><init>()V
@@ -39,18 +38,15 @@
     .param p2, "intent"    # Landroid/content/Intent;
 
     .prologue
-    .line 1595
     iget-object v0, p0, Lcom/android/server/wifi/WifiStateMachine$12;->this$0:Lcom/android/server/wifi/WifiStateMachine;
 
     const v1, 0x20086
 
     invoke-virtual {v0, v1}, Lcom/android/server/wifi/WifiStateMachine;->sendMessage(I)V
 
-    .line 1597
     iget-object v0, p0, Lcom/android/server/wifi/WifiStateMachine$12;->this$0:Lcom/android/server/wifi/WifiStateMachine;
 
     invoke-virtual {v0}, Lcom/android/server/wifi/WifiStateMachine;->reloadTlsNetworksAndReconnect()V
 
-    .line 1598
     return-void
 .end method

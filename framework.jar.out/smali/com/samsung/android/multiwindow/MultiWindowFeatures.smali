@@ -50,97 +50,78 @@
     .locals 2
 
     .prologue
-    .line 21
     const/4 v0, 0x0
 
     sput-boolean v0, Lcom/samsung/android/multiwindow/MultiWindowFeatures;->sQueriedTypeMultiWindow:Z
 
-    .line 22
     const-wide/16 v0, 0x0
 
     sput-wide v0, Lcom/samsung/android/multiwindow/MultiWindowFeatures;->sEnabledFeaturesFlags:J
 
-    .line 24
     const-wide/16 v0, 0x1
 
     sput-wide v0, Lcom/samsung/android/multiwindow/MultiWindowFeatures;->SUPPORT_MULTIWINDOW:J
 
-    .line 25
     const-wide/16 v0, 0x2
 
     sput-wide v0, Lcom/samsung/android/multiwindow/MultiWindowFeatures;->SUPPORT_FREESTYLE:J
 
-    .line 26
     const-wide/16 v0, 0x4
 
     sput-wide v0, Lcom/samsung/android/multiwindow/MultiWindowFeatures;->SUPPORT_MINIMIZE:J
 
-    .line 27
     const-wide/16 v0, 0x8
 
     sput-wide v0, Lcom/samsung/android/multiwindow/MultiWindowFeatures;->SUPPORT_QUADVIEW:J
 
-    .line 28
     const-wide/16 v0, 0x10
 
     sput-wide v0, Lcom/samsung/android/multiwindow/MultiWindowFeatures;->SUPPORT_FIXED_SPLIT_VIEW:J
 
-    .line 29
     const-wide/16 v0, 0x20
 
     sput-wide v0, Lcom/samsung/android/multiwindow/MultiWindowFeatures;->SUPPORT_FREESTYLE_DOCKING:J
 
-    .line 30
     const-wide/16 v0, 0x40
 
     sput-wide v0, Lcom/samsung/android/multiwindow/MultiWindowFeatures;->SUPPORT_FREESTYLE_LAUNCH:J
 
-    .line 31
     const-wide/16 v0, 0x80
 
     sput-wide v0, Lcom/samsung/android/multiwindow/MultiWindowFeatures;->SUPPORT_SCALE_WINDOW:J
 
-    .line 32
     const-wide/16 v0, 0x100
 
     sput-wide v0, Lcom/samsung/android/multiwindow/MultiWindowFeatures;->SUPPORT_MULTIWINDOW_LAUNCH:J
 
-    .line 33
     const-wide/16 v0, 0x200
 
     sput-wide v0, Lcom/samsung/android/multiwindow/MultiWindowFeatures;->SUPPORT_SPLIT_FULLSCREEN:J
 
-    .line 34
     const-wide/16 v0, 0x400
 
     sput-wide v0, Lcom/samsung/android/multiwindow/MultiWindowFeatures;->SUPPORT_MULTI_INSTANCE:J
 
-    .line 35
     const-wide/16 v0, 0x800
 
     sput-wide v0, Lcom/samsung/android/multiwindow/MultiWindowFeatures;->SUPPORT_COMMON_UI:J
 
-    .line 36
     const-wide/16 v0, 0x1000
 
     sput-wide v0, Lcom/samsung/android/multiwindow/MultiWindowFeatures;->SUPPORT_STYLE_TRANSITION:J
 
-    .line 37
     const-wide/16 v0, 0x2000
 
     sput-wide v0, Lcom/samsung/android/multiwindow/MultiWindowFeatures;->SUPPORT_RECENT_UI:J
 
-    .line 38
     const-wide/16 v0, 0x4000
 
     sput-wide v0, Lcom/samsung/android/multiwindow/MultiWindowFeatures;->SUPPORT_MINIMIZE_ANIMATION:J
 
-    .line 39
     const-wide/32 v0, 0x8000
 
     sput-wide v0, Lcom/samsung/android/multiwindow/MultiWindowFeatures;->SUPPORT_TAB_PEN_WINDOW:J
 
-    .line 40
     const-wide/32 v0, 0x10000
 
     sput-wide v0, Lcom/samsung/android/multiwindow/MultiWindowFeatures;->SUPPORT_SIMPLIFICATION_UI:J
@@ -152,7 +133,6 @@
     .locals 0
 
     .prologue
-    .line 14
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -165,7 +145,6 @@
     .prologue
     const-wide/16 v6, 0x0
 
-    .line 55
     sget-boolean v3, Lcom/samsung/android/multiwindow/MultiWindowFeatures;->sQueriedTypeMultiWindow:Z
 
     if-eqz v3, :cond_0
@@ -176,25 +155,20 @@
 
     if-nez v3, :cond_1
 
-    .line 56
     :cond_0
     const/4 v3, 0x1
 
     sput-boolean v3, Lcom/samsung/android/multiwindow/MultiWindowFeatures;->sQueriedTypeMultiWindow:Z
 
-    .line 57
     const/4 v2, 0x0
 
-    .line 58
     .local v2, "pm":Landroid/content/pm/PackageManager;
     if-eqz p0, :cond_2
 
-    .line 59
     invoke-virtual {p0}, Landroid/content/Context;->getPackageManager()Landroid/content/pm/PackageManager;
 
     move-result-object v2
 
-    .line 61
     invoke-static {}, Landroid/os/Process;->myUid()I
 
     move-result v3
@@ -203,8 +177,7 @@
 
     if-eq v3, v4, :cond_2
 
-    .line 62
-    const-string/jumbo v3, "multiwindow_facade"
+    const-string v3, "multiwindow_facade"
 
     invoke-virtual {p0, v3}, Landroid/content/Context;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
 
@@ -212,7 +185,6 @@
 
     check-cast v1, Lcom/samsung/android/multiwindow/MultiWindowFacade;
 
-    .line 63
     .local v1, "multiWindowFacade":Lcom/samsung/android/multiwindow/MultiWindowFacade;
     invoke-virtual {v1}, Lcom/samsung/android/multiwindow/MultiWindowFacade;->getEnabledFeaturesFlags()J
 
@@ -220,26 +192,22 @@
 
     sput-wide v4, Lcom/samsung/android/multiwindow/MultiWindowFeatures;->sEnabledFeaturesFlags:J
 
-    .line 65
     sget-wide v4, Lcom/samsung/android/multiwindow/MultiWindowFeatures;->sEnabledFeaturesFlags:J
 
     cmp-long v3, v4, v6
 
     if-eqz v3, :cond_2
 
-    .line 182
     .end local v1    # "multiWindowFacade":Lcom/samsung/android/multiwindow/MultiWindowFacade;
     .end local v2    # "pm":Landroid/content/pm/PackageManager;
     :cond_1
     :goto_0
     return-void
 
-    .line 72
     .restart local v2    # "pm":Landroid/content/pm/PackageManager;
     :cond_2
     if-eqz v2, :cond_13
 
-    .line 73
     :try_start_0
     const-string v3, "com.sec.feature.multiwindow"
 
@@ -249,7 +217,6 @@
 
     if-eqz v3, :cond_3
 
-    .line 74
     sget-wide v4, Lcom/samsung/android/multiwindow/MultiWindowFeatures;->sEnabledFeaturesFlags:J
 
     sget-wide v6, Lcom/samsung/android/multiwindow/MultiWindowFeatures;->SUPPORT_MULTIWINDOW:J
@@ -258,7 +225,6 @@
 
     sput-wide v4, Lcom/samsung/android/multiwindow/MultiWindowFeatures;->sEnabledFeaturesFlags:J
 
-    .line 76
     :cond_3
     const-string v3, "com.sec.feature.multiwindow.freestyle"
 
@@ -268,7 +234,6 @@
 
     if-eqz v3, :cond_4
 
-    .line 77
     sget-wide v4, Lcom/samsung/android/multiwindow/MultiWindowFeatures;->sEnabledFeaturesFlags:J
 
     sget-wide v6, Lcom/samsung/android/multiwindow/MultiWindowFeatures;->SUPPORT_FREESTYLE:J
@@ -277,7 +242,6 @@
 
     sput-wide v4, Lcom/samsung/android/multiwindow/MultiWindowFeatures;->sEnabledFeaturesFlags:J
 
-    .line 79
     :cond_4
     const-string v3, "com.sec.feature.multiwindow.minimize"
 
@@ -287,7 +251,6 @@
 
     if-eqz v3, :cond_5
 
-    .line 80
     sget-wide v4, Lcom/samsung/android/multiwindow/MultiWindowFeatures;->sEnabledFeaturesFlags:J
 
     sget-wide v6, Lcom/samsung/android/multiwindow/MultiWindowFeatures;->SUPPORT_MINIMIZE:J
@@ -296,7 +259,6 @@
 
     sput-wide v4, Lcom/samsung/android/multiwindow/MultiWindowFeatures;->sEnabledFeaturesFlags:J
 
-    .line 82
     :cond_5
     const-string v3, "com.sec.feature.multiwindow.quadview"
 
@@ -306,7 +268,6 @@
 
     if-eqz v3, :cond_6
 
-    .line 83
     sget-wide v4, Lcom/samsung/android/multiwindow/MultiWindowFeatures;->sEnabledFeaturesFlags:J
 
     sget-wide v6, Lcom/samsung/android/multiwindow/MultiWindowFeatures;->SUPPORT_QUADVIEW:J
@@ -315,7 +276,6 @@
 
     sput-wide v4, Lcom/samsung/android/multiwindow/MultiWindowFeatures;->sEnabledFeaturesFlags:J
 
-    .line 85
     :cond_6
     const-string v3, "com.sec.feature.multiwindow.fixedsplitview"
 
@@ -325,7 +285,6 @@
 
     if-eqz v3, :cond_7
 
-    .line 86
     sget-wide v4, Lcom/samsung/android/multiwindow/MultiWindowFeatures;->sEnabledFeaturesFlags:J
 
     sget-wide v6, Lcom/samsung/android/multiwindow/MultiWindowFeatures;->SUPPORT_FIXED_SPLIT_VIEW:J
@@ -334,7 +293,6 @@
 
     sput-wide v4, Lcom/samsung/android/multiwindow/MultiWindowFeatures;->sEnabledFeaturesFlags:J
 
-    .line 88
     :cond_7
     const-string v3, "com.sec.feature.multiwindow.freestyledocking"
 
@@ -344,7 +302,6 @@
 
     if-eqz v3, :cond_8
 
-    .line 89
     sget-wide v4, Lcom/samsung/android/multiwindow/MultiWindowFeatures;->sEnabledFeaturesFlags:J
 
     sget-wide v6, Lcom/samsung/android/multiwindow/MultiWindowFeatures;->SUPPORT_FREESTYLE_DOCKING:J
@@ -353,7 +310,6 @@
 
     sput-wide v4, Lcom/samsung/android/multiwindow/MultiWindowFeatures;->sEnabledFeaturesFlags:J
 
-    .line 91
     :cond_8
     const-string v3, "com.sec.feature.multiwindow.freestylelaunch"
 
@@ -363,7 +319,6 @@
 
     if-eqz v3, :cond_9
 
-    .line 92
     sget-wide v4, Lcom/samsung/android/multiwindow/MultiWindowFeatures;->sEnabledFeaturesFlags:J
 
     sget-wide v6, Lcom/samsung/android/multiwindow/MultiWindowFeatures;->SUPPORT_FREESTYLE_LAUNCH:J
@@ -372,7 +327,6 @@
 
     sput-wide v4, Lcom/samsung/android/multiwindow/MultiWindowFeatures;->sEnabledFeaturesFlags:J
 
-    .line 94
     :cond_9
     const-string v3, "com.sec.feature.multiwindow.scalewindow"
 
@@ -382,7 +336,6 @@
 
     if-eqz v3, :cond_a
 
-    .line 95
     sget-wide v4, Lcom/samsung/android/multiwindow/MultiWindowFeatures;->sEnabledFeaturesFlags:J
 
     sget-wide v6, Lcom/samsung/android/multiwindow/MultiWindowFeatures;->SUPPORT_SCALE_WINDOW:J
@@ -391,7 +344,6 @@
 
     sput-wide v4, Lcom/samsung/android/multiwindow/MultiWindowFeatures;->sEnabledFeaturesFlags:J
 
-    .line 97
     :cond_a
     const-string v3, "com.sec.feature.multiwindow.multiwindowlaunch"
 
@@ -401,7 +353,6 @@
 
     if-eqz v3, :cond_b
 
-    .line 98
     sget-wide v4, Lcom/samsung/android/multiwindow/MultiWindowFeatures;->sEnabledFeaturesFlags:J
 
     sget-wide v6, Lcom/samsung/android/multiwindow/MultiWindowFeatures;->SUPPORT_MULTIWINDOW_LAUNCH:J
@@ -410,7 +361,6 @@
 
     sput-wide v4, Lcom/samsung/android/multiwindow/MultiWindowFeatures;->sEnabledFeaturesFlags:J
 
-    .line 100
     :cond_b
     const-string v3, "com.sec.feature.multiwindow.splitfullscreen"
 
@@ -420,7 +370,6 @@
 
     if-eqz v3, :cond_c
 
-    .line 101
     sget-wide v4, Lcom/samsung/android/multiwindow/MultiWindowFeatures;->sEnabledFeaturesFlags:J
 
     sget-wide v6, Lcom/samsung/android/multiwindow/MultiWindowFeatures;->SUPPORT_SPLIT_FULLSCREEN:J
@@ -429,7 +378,6 @@
 
     sput-wide v4, Lcom/samsung/android/multiwindow/MultiWindowFeatures;->sEnabledFeaturesFlags:J
 
-    .line 103
     :cond_c
     const-string v3, "com.sec.feature.multiwindow.multiinstance"
 
@@ -439,7 +387,6 @@
 
     if-eqz v3, :cond_d
 
-    .line 104
     sget-wide v4, Lcom/samsung/android/multiwindow/MultiWindowFeatures;->sEnabledFeaturesFlags:J
 
     sget-wide v6, Lcom/samsung/android/multiwindow/MultiWindowFeatures;->SUPPORT_MULTI_INSTANCE:J
@@ -448,7 +395,6 @@
 
     sput-wide v4, Lcom/samsung/android/multiwindow/MultiWindowFeatures;->sEnabledFeaturesFlags:J
 
-    .line 106
     :cond_d
     const-string v3, "com.sec.feature.multiwindow.commonui"
 
@@ -458,7 +404,6 @@
 
     if-eqz v3, :cond_e
 
-    .line 107
     sget-wide v4, Lcom/samsung/android/multiwindow/MultiWindowFeatures;->sEnabledFeaturesFlags:J
 
     sget-wide v6, Lcom/samsung/android/multiwindow/MultiWindowFeatures;->SUPPORT_COMMON_UI:J
@@ -467,7 +412,6 @@
 
     sput-wide v4, Lcom/samsung/android/multiwindow/MultiWindowFeatures;->sEnabledFeaturesFlags:J
 
-    .line 109
     :cond_e
     const-string v3, "com.sec.feature.multiwindow.styletransition"
 
@@ -477,7 +421,6 @@
 
     if-eqz v3, :cond_f
 
-    .line 110
     sget-wide v4, Lcom/samsung/android/multiwindow/MultiWindowFeatures;->sEnabledFeaturesFlags:J
 
     sget-wide v6, Lcom/samsung/android/multiwindow/MultiWindowFeatures;->SUPPORT_STYLE_TRANSITION:J
@@ -486,7 +429,6 @@
 
     sput-wide v4, Lcom/samsung/android/multiwindow/MultiWindowFeatures;->sEnabledFeaturesFlags:J
 
-    .line 112
     :cond_f
     const-string v3, "com.sec.feature.multiwindow.recentui"
 
@@ -496,7 +438,6 @@
 
     if-eqz v3, :cond_10
 
-    .line 113
     sget-wide v4, Lcom/samsung/android/multiwindow/MultiWindowFeatures;->sEnabledFeaturesFlags:J
 
     sget-wide v6, Lcom/samsung/android/multiwindow/MultiWindowFeatures;->SUPPORT_RECENT_UI:J
@@ -505,7 +446,6 @@
 
     sput-wide v4, Lcom/samsung/android/multiwindow/MultiWindowFeatures;->sEnabledFeaturesFlags:J
 
-    .line 115
     :cond_10
     const-string v3, "com.sec.feature.multiwindow.minimizeanimation"
 
@@ -515,7 +455,6 @@
 
     if-eqz v3, :cond_11
 
-    .line 116
     sget-wide v4, Lcom/samsung/android/multiwindow/MultiWindowFeatures;->sEnabledFeaturesFlags:J
 
     sget-wide v6, Lcom/samsung/android/multiwindow/MultiWindowFeatures;->SUPPORT_MINIMIZE_ANIMATION:J
@@ -524,7 +463,6 @@
 
     sput-wide v4, Lcom/samsung/android/multiwindow/MultiWindowFeatures;->sEnabledFeaturesFlags:J
 
-    .line 118
     :cond_11
     const-string v3, "com.sec.feature.multiwindow.tabpenwindow"
 
@@ -534,7 +472,6 @@
 
     if-eqz v3, :cond_12
 
-    .line 119
     sget-wide v4, Lcom/samsung/android/multiwindow/MultiWindowFeatures;->sEnabledFeaturesFlags:J
 
     sget-wide v6, Lcom/samsung/android/multiwindow/MultiWindowFeatures;->SUPPORT_TAB_PEN_WINDOW:J
@@ -543,7 +480,6 @@
 
     sput-wide v4, Lcom/samsung/android/multiwindow/MultiWindowFeatures;->sEnabledFeaturesFlags:J
 
-    .line 121
     :cond_12
     const-string v3, "com.sec.feature.multiwindow.simplificationui"
 
@@ -553,7 +489,6 @@
 
     if-eqz v3, :cond_1
 
-    .line 122
     sget-wide v4, Lcom/samsung/android/multiwindow/MultiWindowFeatures;->sEnabledFeaturesFlags:J
 
     sget-wide v6, Lcom/samsung/android/multiwindow/MultiWindowFeatures;->SUPPORT_SIMPLIFICATION_UI:J
@@ -566,11 +501,9 @@
 
     goto/16 :goto_0
 
-    .line 178
     :catch_0
     move-exception v0
 
-    .line 179
     .local v0, "e":Ljava/lang/Exception;
     const/4 v3, 0x0
 
@@ -578,7 +511,6 @@
 
     goto/16 :goto_0
 
-    .line 126
     .end local v0    # "e":Ljava/lang/Exception;
     :cond_13
     :try_start_1
@@ -594,7 +526,6 @@
 
     if-eqz v3, :cond_14
 
-    .line 127
     sget-wide v4, Lcom/samsung/android/multiwindow/MultiWindowFeatures;->sEnabledFeaturesFlags:J
 
     sget-wide v6, Lcom/samsung/android/multiwindow/MultiWindowFeatures;->SUPPORT_MULTIWINDOW:J
@@ -603,7 +534,6 @@
 
     sput-wide v4, Lcom/samsung/android/multiwindow/MultiWindowFeatures;->sEnabledFeaturesFlags:J
 
-    .line 129
     :cond_14
     new-instance v3, Ljava/io/File;
 
@@ -617,7 +547,6 @@
 
     if-eqz v3, :cond_15
 
-    .line 130
     sget-wide v4, Lcom/samsung/android/multiwindow/MultiWindowFeatures;->sEnabledFeaturesFlags:J
 
     sget-wide v6, Lcom/samsung/android/multiwindow/MultiWindowFeatures;->SUPPORT_FREESTYLE:J
@@ -626,7 +555,6 @@
 
     sput-wide v4, Lcom/samsung/android/multiwindow/MultiWindowFeatures;->sEnabledFeaturesFlags:J
 
-    .line 132
     :cond_15
     new-instance v3, Ljava/io/File;
 
@@ -640,7 +568,6 @@
 
     if-eqz v3, :cond_16
 
-    .line 133
     sget-wide v4, Lcom/samsung/android/multiwindow/MultiWindowFeatures;->sEnabledFeaturesFlags:J
 
     sget-wide v6, Lcom/samsung/android/multiwindow/MultiWindowFeatures;->SUPPORT_MINIMIZE:J
@@ -649,7 +576,6 @@
 
     sput-wide v4, Lcom/samsung/android/multiwindow/MultiWindowFeatures;->sEnabledFeaturesFlags:J
 
-    .line 135
     :cond_16
     new-instance v3, Ljava/io/File;
 
@@ -663,7 +589,6 @@
 
     if-eqz v3, :cond_17
 
-    .line 136
     sget-wide v4, Lcom/samsung/android/multiwindow/MultiWindowFeatures;->sEnabledFeaturesFlags:J
 
     sget-wide v6, Lcom/samsung/android/multiwindow/MultiWindowFeatures;->SUPPORT_QUADVIEW:J
@@ -672,7 +597,6 @@
 
     sput-wide v4, Lcom/samsung/android/multiwindow/MultiWindowFeatures;->sEnabledFeaturesFlags:J
 
-    .line 138
     :cond_17
     new-instance v3, Ljava/io/File;
 
@@ -686,7 +610,6 @@
 
     if-eqz v3, :cond_18
 
-    .line 139
     sget-wide v4, Lcom/samsung/android/multiwindow/MultiWindowFeatures;->sEnabledFeaturesFlags:J
 
     sget-wide v6, Lcom/samsung/android/multiwindow/MultiWindowFeatures;->SUPPORT_FIXED_SPLIT_VIEW:J
@@ -695,7 +618,6 @@
 
     sput-wide v4, Lcom/samsung/android/multiwindow/MultiWindowFeatures;->sEnabledFeaturesFlags:J
 
-    .line 141
     :cond_18
     new-instance v3, Ljava/io/File;
 
@@ -709,7 +631,6 @@
 
     if-eqz v3, :cond_19
 
-    .line 142
     sget-wide v4, Lcom/samsung/android/multiwindow/MultiWindowFeatures;->sEnabledFeaturesFlags:J
 
     sget-wide v6, Lcom/samsung/android/multiwindow/MultiWindowFeatures;->SUPPORT_FREESTYLE_DOCKING:J
@@ -718,7 +639,6 @@
 
     sput-wide v4, Lcom/samsung/android/multiwindow/MultiWindowFeatures;->sEnabledFeaturesFlags:J
 
-    .line 144
     :cond_19
     new-instance v3, Ljava/io/File;
 
@@ -732,7 +652,6 @@
 
     if-eqz v3, :cond_1a
 
-    .line 145
     sget-wide v4, Lcom/samsung/android/multiwindow/MultiWindowFeatures;->sEnabledFeaturesFlags:J
 
     sget-wide v6, Lcom/samsung/android/multiwindow/MultiWindowFeatures;->SUPPORT_FREESTYLE_LAUNCH:J
@@ -741,7 +660,6 @@
 
     sput-wide v4, Lcom/samsung/android/multiwindow/MultiWindowFeatures;->sEnabledFeaturesFlags:J
 
-    .line 147
     :cond_1a
     new-instance v3, Ljava/io/File;
 
@@ -755,7 +673,6 @@
 
     if-eqz v3, :cond_1b
 
-    .line 148
     sget-wide v4, Lcom/samsung/android/multiwindow/MultiWindowFeatures;->sEnabledFeaturesFlags:J
 
     sget-wide v6, Lcom/samsung/android/multiwindow/MultiWindowFeatures;->SUPPORT_SCALE_WINDOW:J
@@ -764,7 +681,6 @@
 
     sput-wide v4, Lcom/samsung/android/multiwindow/MultiWindowFeatures;->sEnabledFeaturesFlags:J
 
-    .line 150
     :cond_1b
     new-instance v3, Ljava/io/File;
 
@@ -778,7 +694,6 @@
 
     if-eqz v3, :cond_1c
 
-    .line 151
     sget-wide v4, Lcom/samsung/android/multiwindow/MultiWindowFeatures;->sEnabledFeaturesFlags:J
 
     sget-wide v6, Lcom/samsung/android/multiwindow/MultiWindowFeatures;->SUPPORT_MULTIWINDOW_LAUNCH:J
@@ -787,7 +702,6 @@
 
     sput-wide v4, Lcom/samsung/android/multiwindow/MultiWindowFeatures;->sEnabledFeaturesFlags:J
 
-    .line 153
     :cond_1c
     new-instance v3, Ljava/io/File;
 
@@ -801,7 +715,6 @@
 
     if-eqz v3, :cond_1d
 
-    .line 154
     sget-wide v4, Lcom/samsung/android/multiwindow/MultiWindowFeatures;->sEnabledFeaturesFlags:J
 
     sget-wide v6, Lcom/samsung/android/multiwindow/MultiWindowFeatures;->SUPPORT_SPLIT_FULLSCREEN:J
@@ -810,7 +723,6 @@
 
     sput-wide v4, Lcom/samsung/android/multiwindow/MultiWindowFeatures;->sEnabledFeaturesFlags:J
 
-    .line 156
     :cond_1d
     new-instance v3, Ljava/io/File;
 
@@ -824,7 +736,6 @@
 
     if-eqz v3, :cond_1e
 
-    .line 157
     sget-wide v4, Lcom/samsung/android/multiwindow/MultiWindowFeatures;->sEnabledFeaturesFlags:J
 
     sget-wide v6, Lcom/samsung/android/multiwindow/MultiWindowFeatures;->SUPPORT_MULTI_INSTANCE:J
@@ -833,7 +744,6 @@
 
     sput-wide v4, Lcom/samsung/android/multiwindow/MultiWindowFeatures;->sEnabledFeaturesFlags:J
 
-    .line 159
     :cond_1e
     new-instance v3, Ljava/io/File;
 
@@ -847,7 +757,6 @@
 
     if-eqz v3, :cond_1f
 
-    .line 160
     sget-wide v4, Lcom/samsung/android/multiwindow/MultiWindowFeatures;->sEnabledFeaturesFlags:J
 
     sget-wide v6, Lcom/samsung/android/multiwindow/MultiWindowFeatures;->SUPPORT_COMMON_UI:J
@@ -856,7 +765,6 @@
 
     sput-wide v4, Lcom/samsung/android/multiwindow/MultiWindowFeatures;->sEnabledFeaturesFlags:J
 
-    .line 162
     :cond_1f
     new-instance v3, Ljava/io/File;
 
@@ -870,7 +778,6 @@
 
     if-eqz v3, :cond_20
 
-    .line 163
     sget-wide v4, Lcom/samsung/android/multiwindow/MultiWindowFeatures;->sEnabledFeaturesFlags:J
 
     sget-wide v6, Lcom/samsung/android/multiwindow/MultiWindowFeatures;->SUPPORT_STYLE_TRANSITION:J
@@ -879,7 +786,6 @@
 
     sput-wide v4, Lcom/samsung/android/multiwindow/MultiWindowFeatures;->sEnabledFeaturesFlags:J
 
-    .line 165
     :cond_20
     new-instance v3, Ljava/io/File;
 
@@ -893,7 +799,6 @@
 
     if-eqz v3, :cond_21
 
-    .line 166
     sget-wide v4, Lcom/samsung/android/multiwindow/MultiWindowFeatures;->sEnabledFeaturesFlags:J
 
     sget-wide v6, Lcom/samsung/android/multiwindow/MultiWindowFeatures;->SUPPORT_RECENT_UI:J
@@ -902,7 +807,6 @@
 
     sput-wide v4, Lcom/samsung/android/multiwindow/MultiWindowFeatures;->sEnabledFeaturesFlags:J
 
-    .line 168
     :cond_21
     new-instance v3, Ljava/io/File;
 
@@ -916,7 +820,6 @@
 
     if-eqz v3, :cond_22
 
-    .line 169
     sget-wide v4, Lcom/samsung/android/multiwindow/MultiWindowFeatures;->sEnabledFeaturesFlags:J
 
     sget-wide v6, Lcom/samsung/android/multiwindow/MultiWindowFeatures;->SUPPORT_MINIMIZE_ANIMATION:J
@@ -925,7 +828,6 @@
 
     sput-wide v4, Lcom/samsung/android/multiwindow/MultiWindowFeatures;->sEnabledFeaturesFlags:J
 
-    .line 171
     :cond_22
     new-instance v3, Ljava/io/File;
 
@@ -939,7 +841,6 @@
 
     if-eqz v3, :cond_23
 
-    .line 172
     sget-wide v4, Lcom/samsung/android/multiwindow/MultiWindowFeatures;->sEnabledFeaturesFlags:J
 
     sget-wide v6, Lcom/samsung/android/multiwindow/MultiWindowFeatures;->SUPPORT_TAB_PEN_WINDOW:J
@@ -948,7 +849,6 @@
 
     sput-wide v4, Lcom/samsung/android/multiwindow/MultiWindowFeatures;->sEnabledFeaturesFlags:J
 
-    .line 174
     :cond_23
     new-instance v3, Ljava/io/File;
 
@@ -962,7 +862,6 @@
 
     if-eqz v3, :cond_1
 
-    .line 175
     sget-wide v4, Lcom/samsung/android/multiwindow/MultiWindowFeatures;->sEnabledFeaturesFlags:J
 
     sget-wide v6, Lcom/samsung/android/multiwindow/MultiWindowFeatures;->SUPPORT_SIMPLIFICATION_UI:J
@@ -981,10 +880,8 @@
     .param p0, "context"    # Landroid/content/Context;
 
     .prologue
-    .line 47
     invoke-static {p0}, Lcom/samsung/android/multiwindow/MultiWindowFeatures;->checkMultiWindowFeature(Landroid/content/Context;)V
 
-    .line 48
     sget-wide v0, Lcom/samsung/android/multiwindow/MultiWindowFeatures;->sEnabledFeaturesFlags:J
 
     return-wide v0
@@ -995,7 +892,6 @@
     .param p0, "feature"    # J
 
     .prologue
-    .line 43
     sget-wide v0, Lcom/samsung/android/multiwindow/MultiWindowFeatures;->sEnabledFeaturesFlags:J
 
     and-long/2addr v0, p0
@@ -1022,10 +918,8 @@
     .param p0, "context"    # Landroid/content/Context;
 
     .prologue
-    .line 289
     invoke-static {p0}, Lcom/samsung/android/multiwindow/MultiWindowFeatures;->checkMultiWindowFeature(Landroid/content/Context;)V
 
-    .line 290
     sget-wide v0, Lcom/samsung/android/multiwindow/MultiWindowFeatures;->SUPPORT_COMMON_UI:J
 
     invoke-static {v0, v1}, Lcom/samsung/android/multiwindow/MultiWindowFeatures;->isEnabled(J)Z
@@ -1040,10 +934,8 @@
     .param p0, "context"    # Landroid/content/Context;
 
     .prologue
-    .line 249
     invoke-static {p0}, Lcom/samsung/android/multiwindow/MultiWindowFeatures;->checkMultiWindowFeature(Landroid/content/Context;)V
 
-    .line 250
     sget-wide v0, Lcom/samsung/android/multiwindow/MultiWindowFeatures;->SUPPORT_FIXED_SPLIT_VIEW:J
 
     invoke-static {v0, v1}, Lcom/samsung/android/multiwindow/MultiWindowFeatures;->isEnabled(J)Z
@@ -1058,10 +950,8 @@
     .param p0, "context"    # Landroid/content/Context;
 
     .prologue
-    .line 201
     invoke-static {p0}, Lcom/samsung/android/multiwindow/MultiWindowFeatures;->checkMultiWindowFeature(Landroid/content/Context;)V
 
-    .line 202
     sget-wide v0, Lcom/samsung/android/multiwindow/MultiWindowFeatures;->SUPPORT_FREESTYLE:J
 
     invoke-static {v0, v1}, Lcom/samsung/android/multiwindow/MultiWindowFeatures;->isEnabled(J)Z
@@ -1076,10 +966,8 @@
     .param p0, "context"    # Landroid/content/Context;
 
     .prologue
-    .line 257
     invoke-static {p0}, Lcom/samsung/android/multiwindow/MultiWindowFeatures;->checkMultiWindowFeature(Landroid/content/Context;)V
 
-    .line 258
     sget-wide v0, Lcom/samsung/android/multiwindow/MultiWindowFeatures;->SUPPORT_FREESTYLE_DOCKING:J
 
     invoke-static {v0, v1}, Lcom/samsung/android/multiwindow/MultiWindowFeatures;->isEnabled(J)Z
@@ -1094,10 +982,8 @@
     .param p0, "context"    # Landroid/content/Context;
 
     .prologue
-    .line 265
     invoke-static {p0}, Lcom/samsung/android/multiwindow/MultiWindowFeatures;->checkMultiWindowFeature(Landroid/content/Context;)V
 
-    .line 266
     sget-wide v0, Lcom/samsung/android/multiwindow/MultiWindowFeatures;->SUPPORT_FREESTYLE_LAUNCH:J
 
     invoke-static {v0, v1}, Lcom/samsung/android/multiwindow/MultiWindowFeatures;->isEnabled(J)Z
@@ -1112,10 +998,8 @@
     .param p0, "context"    # Landroid/content/Context;
 
     .prologue
-    .line 231
     invoke-static {p0}, Lcom/samsung/android/multiwindow/MultiWindowFeatures;->checkMultiWindowFeature(Landroid/content/Context;)V
 
-    .line 232
     sget-wide v0, Lcom/samsung/android/multiwindow/MultiWindowFeatures;->SUPPORT_MINIMIZE:J
 
     invoke-static {v0, v1}, Lcom/samsung/android/multiwindow/MultiWindowFeatures;->isEnabled(J)Z
@@ -1130,10 +1014,8 @@
     .param p0, "context"    # Landroid/content/Context;
 
     .prologue
-    .line 313
     invoke-static {p0}, Lcom/samsung/android/multiwindow/MultiWindowFeatures;->checkMultiWindowFeature(Landroid/content/Context;)V
 
-    .line 314
     sget-wide v0, Lcom/samsung/android/multiwindow/MultiWindowFeatures;->SUPPORT_MINIMIZE_ANIMATION:J
 
     invoke-static {v0, v1}, Lcom/samsung/android/multiwindow/MultiWindowFeatures;->isEnabled(J)Z
@@ -1148,10 +1030,8 @@
     .param p0, "context"    # Landroid/content/Context;
 
     .prologue
-    .line 211
     invoke-static {p0}, Lcom/samsung/android/multiwindow/MultiWindowFeatures;->checkMultiWindowFeature(Landroid/content/Context;)V
 
-    .line 212
     sget-wide v0, Lcom/samsung/android/multiwindow/MultiWindowFeatures;->SUPPORT_MULTI_INSTANCE:J
 
     invoke-static {v0, v1}, Lcom/samsung/android/multiwindow/MultiWindowFeatures;->isEnabled(J)Z
@@ -1166,10 +1046,8 @@
     .param p0, "context"    # Landroid/content/Context;
 
     .prologue
-    .line 191
     invoke-static {p0}, Lcom/samsung/android/multiwindow/MultiWindowFeatures;->checkMultiWindowFeature(Landroid/content/Context;)V
 
-    .line 192
     sget-wide v0, Lcom/samsung/android/multiwindow/MultiWindowFeatures;->SUPPORT_MULTIWINDOW:J
 
     invoke-static {v0, v1}, Lcom/samsung/android/multiwindow/MultiWindowFeatures;->isEnabled(J)Z
@@ -1184,10 +1062,8 @@
     .param p0, "context"    # Landroid/content/Context;
 
     .prologue
-    .line 273
     invoke-static {p0}, Lcom/samsung/android/multiwindow/MultiWindowFeatures;->checkMultiWindowFeature(Landroid/content/Context;)V
 
-    .line 274
     sget-wide v0, Lcom/samsung/android/multiwindow/MultiWindowFeatures;->SUPPORT_MULTIWINDOW_LAUNCH:J
 
     invoke-static {v0, v1}, Lcom/samsung/android/multiwindow/MultiWindowFeatures;->isEnabled(J)Z
@@ -1202,10 +1078,8 @@
     .param p0, "context"    # Landroid/content/Context;
 
     .prologue
-    .line 221
     invoke-static {p0}, Lcom/samsung/android/multiwindow/MultiWindowFeatures;->checkMultiWindowFeature(Landroid/content/Context;)V
 
-    .line 222
     sget-wide v0, Lcom/samsung/android/multiwindow/MultiWindowFeatures;->SUPPORT_QUADVIEW:J
 
     invoke-static {v0, v1}, Lcom/samsung/android/multiwindow/MultiWindowFeatures;->isEnabled(J)Z
@@ -1220,10 +1094,8 @@
     .param p0, "context"    # Landroid/content/Context;
 
     .prologue
-    .line 305
     invoke-static {p0}, Lcom/samsung/android/multiwindow/MultiWindowFeatures;->checkMultiWindowFeature(Landroid/content/Context;)V
 
-    .line 306
     sget-wide v0, Lcom/samsung/android/multiwindow/MultiWindowFeatures;->SUPPORT_RECENT_UI:J
 
     invoke-static {v0, v1}, Lcom/samsung/android/multiwindow/MultiWindowFeatures;->isEnabled(J)Z
@@ -1238,10 +1110,8 @@
     .param p0, "context"    # Landroid/content/Context;
 
     .prologue
-    .line 241
     invoke-static {p0}, Lcom/samsung/android/multiwindow/MultiWindowFeatures;->checkMultiWindowFeature(Landroid/content/Context;)V
 
-    .line 242
     sget-wide v0, Lcom/samsung/android/multiwindow/MultiWindowFeatures;->SUPPORT_SCALE_WINDOW:J
 
     invoke-static {v0, v1}, Lcom/samsung/android/multiwindow/MultiWindowFeatures;->isEnabled(J)Z
@@ -1256,10 +1126,8 @@
     .param p0, "context"    # Landroid/content/Context;
 
     .prologue
-    .line 329
     invoke-static {p0}, Lcom/samsung/android/multiwindow/MultiWindowFeatures;->checkMultiWindowFeature(Landroid/content/Context;)V
 
-    .line 330
     sget-wide v0, Lcom/samsung/android/multiwindow/MultiWindowFeatures;->SUPPORT_SIMPLIFICATION_UI:J
 
     invoke-static {v0, v1}, Lcom/samsung/android/multiwindow/MultiWindowFeatures;->isEnabled(J)Z
@@ -1274,10 +1142,8 @@
     .param p0, "context"    # Landroid/content/Context;
 
     .prologue
-    .line 281
     invoke-static {p0}, Lcom/samsung/android/multiwindow/MultiWindowFeatures;->checkMultiWindowFeature(Landroid/content/Context;)V
 
-    .line 282
     sget-wide v0, Lcom/samsung/android/multiwindow/MultiWindowFeatures;->SUPPORT_SPLIT_FULLSCREEN:J
 
     invoke-static {v0, v1}, Lcom/samsung/android/multiwindow/MultiWindowFeatures;->isEnabled(J)Z
@@ -1292,10 +1158,8 @@
     .param p0, "context"    # Landroid/content/Context;
 
     .prologue
-    .line 297
     invoke-static {p0}, Lcom/samsung/android/multiwindow/MultiWindowFeatures;->checkMultiWindowFeature(Landroid/content/Context;)V
 
-    .line 298
     sget-wide v0, Lcom/samsung/android/multiwindow/MultiWindowFeatures;->SUPPORT_STYLE_TRANSITION:J
 
     invoke-static {v0, v1}, Lcom/samsung/android/multiwindow/MultiWindowFeatures;->isEnabled(J)Z
@@ -1310,10 +1174,8 @@
     .param p0, "context"    # Landroid/content/Context;
 
     .prologue
-    .line 321
     invoke-static {p0}, Lcom/samsung/android/multiwindow/MultiWindowFeatures;->checkMultiWindowFeature(Landroid/content/Context;)V
 
-    .line 322
     sget-wide v0, Lcom/samsung/android/multiwindow/MultiWindowFeatures;->SUPPORT_TAB_PEN_WINDOW:J
 
     invoke-static {v0, v1}, Lcom/samsung/android/multiwindow/MultiWindowFeatures;->isEnabled(J)Z

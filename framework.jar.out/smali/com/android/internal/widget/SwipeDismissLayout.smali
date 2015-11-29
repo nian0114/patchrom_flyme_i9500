@@ -60,13 +60,10 @@
     .param p1, "context"    # Landroid/content/Context;
 
     .prologue
-    .line 82
     invoke-direct {p0, p1}, Landroid/widget/FrameLayout;-><init>(Landroid/content/Context;)V
 
-    .line 83
     invoke-direct {p0, p1}, Lcom/android/internal/widget/SwipeDismissLayout;->init(Landroid/content/Context;)V
 
-    .line 84
     return-void
 .end method
 
@@ -76,13 +73,10 @@
     .param p2, "attrs"    # Landroid/util/AttributeSet;
 
     .prologue
-    .line 87
     invoke-direct {p0, p1, p2}, Landroid/widget/FrameLayout;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;)V
 
-    .line 88
     invoke-direct {p0, p1}, Lcom/android/internal/widget/SwipeDismissLayout;->init(Landroid/content/Context;)V
 
-    .line 89
     return-void
 .end method
 
@@ -93,13 +87,10 @@
     .param p3, "defStyle"    # I
 
     .prologue
-    .line 92
     invoke-direct {p0, p1, p2, p3}, Landroid/widget/FrameLayout;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;I)V
 
-    .line 93
     invoke-direct {p0, p1}, Lcom/android/internal/widget/SwipeDismissLayout;->init(Landroid/content/Context;)V
 
-    .line 94
     return-void
 .end method
 
@@ -107,17 +98,14 @@
     .locals 1
 
     .prologue
-    .line 215
     iget-object v0, p0, Lcom/android/internal/widget/SwipeDismissLayout;->mDismissedListener:Lcom/android/internal/widget/SwipeDismissLayout$OnDismissedListener;
 
     if-eqz v0, :cond_0
 
-    .line 216
     iget-object v0, p0, Lcom/android/internal/widget/SwipeDismissLayout;->mDismissedListener:Lcom/android/internal/widget/SwipeDismissLayout$OnDismissedListener;
 
     invoke-interface {v0, p0}, Lcom/android/internal/widget/SwipeDismissLayout$OnDismissedListener;->onDismissed(Lcom/android/internal/widget/SwipeDismissLayout;)V
 
-    .line 218
     :cond_0
     return-void
 .end method
@@ -129,7 +117,6 @@
     .prologue
     const/high16 v4, 0x3fc00000    # 1.5f
 
-    .line 97
     invoke-virtual {p0}, Lcom/android/internal/widget/SwipeDismissLayout;->getContext()Landroid/content/Context;
 
     move-result-object v1
@@ -138,7 +125,6 @@
 
     move-result-object v0
 
-    .line 98
     .local v0, "vc":Landroid/view/ViewConfiguration;
     invoke-virtual {v0}, Landroid/view/ViewConfiguration;->getScaledTouchSlop()I
 
@@ -146,21 +132,18 @@
 
     iput v1, p0, Lcom/android/internal/widget/SwipeDismissLayout;->mSlop:I
 
-    .line 99
     invoke-virtual {v0}, Landroid/view/ViewConfiguration;->getScaledMinimumFlingVelocity()I
 
     move-result v1
 
     iput v1, p0, Lcom/android/internal/widget/SwipeDismissLayout;->mMinFlingVelocity:I
 
-    .line 100
     invoke-virtual {v0}, Landroid/view/ViewConfiguration;->getScaledMaximumFlingVelocity()I
 
     move-result v1
 
     iput v1, p0, Lcom/android/internal/widget/SwipeDismissLayout;->mMaxFlingVelocity:I
 
-    .line 101
     invoke-virtual {p0}, Lcom/android/internal/widget/SwipeDismissLayout;->getContext()Landroid/content/Context;
 
     move-result-object v1
@@ -179,21 +162,18 @@
 
     iput-wide v2, p0, Lcom/android/internal/widget/SwipeDismissLayout;->mAnimationTime:J
 
-    .line 103
     new-instance v1, Landroid/view/animation/DecelerateInterpolator;
 
     invoke-direct {v1, v4}, Landroid/view/animation/DecelerateInterpolator;-><init>(F)V
 
     iput-object v1, p0, Lcom/android/internal/widget/SwipeDismissLayout;->mCancelInterpolator:Landroid/animation/TimeInterpolator;
 
-    .line 104
     new-instance v1, Landroid/view/animation/AccelerateInterpolator;
 
     invoke-direct {v1, v4}, Landroid/view/animation/AccelerateInterpolator;-><init>(F)V
 
     iput-object v1, p0, Lcom/android/internal/widget/SwipeDismissLayout;->mDismissInterpolator:Landroid/animation/TimeInterpolator;
 
-    .line 105
     return-void
 .end method
 
@@ -205,41 +185,31 @@
 
     const/4 v1, 0x0
 
-    .line 230
     iget-object v0, p0, Lcom/android/internal/widget/SwipeDismissLayout;->mVelocityTracker:Landroid/view/VelocityTracker;
 
     if-eqz v0, :cond_0
 
-    .line 231
     iget-object v0, p0, Lcom/android/internal/widget/SwipeDismissLayout;->mVelocityTracker:Landroid/view/VelocityTracker;
 
     invoke-virtual {v0}, Landroid/view/VelocityTracker;->recycle()V
 
-    .line 233
     :cond_0
     const/4 v0, 0x0
 
     iput-object v0, p0, Lcom/android/internal/widget/SwipeDismissLayout;->mVelocityTracker:Landroid/view/VelocityTracker;
 
-    .line 234
     iput v1, p0, Lcom/android/internal/widget/SwipeDismissLayout;->mTranslationX:F
 
-    .line 235
     iput v1, p0, Lcom/android/internal/widget/SwipeDismissLayout;->mDownX:F
 
-    .line 236
     iput v1, p0, Lcom/android/internal/widget/SwipeDismissLayout;->mDownY:F
 
-    .line 237
     iput-boolean v2, p0, Lcom/android/internal/widget/SwipeDismissLayout;->mSwiping:Z
 
-    .line 238
     iput-boolean v2, p0, Lcom/android/internal/widget/SwipeDismissLayout;->mDismissed:Z
 
-    .line 239
     iput-boolean v2, p0, Lcom/android/internal/widget/SwipeDismissLayout;->mDiscardIntercept:Z
 
-    .line 240
     return-void
 .end method
 
@@ -248,10 +218,8 @@
     .param p1, "deltaX"    # F
 
     .prologue
-    .line 208
     iput p1, p0, Lcom/android/internal/widget/SwipeDismissLayout;->mTranslationX:F
 
-    .line 209
     iget-object v0, p0, Lcom/android/internal/widget/SwipeDismissLayout;->mProgressListener:Lcom/android/internal/widget/SwipeDismissLayout$OnSwipeProgressChangedListener;
 
     if-eqz v0, :cond_0
@@ -262,7 +230,6 @@
 
     if-ltz v0, :cond_0
 
-    .line 210
     iget-object v0, p0, Lcom/android/internal/widget/SwipeDismissLayout;->mProgressListener:Lcom/android/internal/widget/SwipeDismissLayout$OnSwipeProgressChangedListener;
 
     invoke-virtual {p0}, Lcom/android/internal/widget/SwipeDismissLayout;->getWidth()I
@@ -275,7 +242,6 @@
 
     invoke-interface {v0, p0, v1, p1}, Lcom/android/internal/widget/SwipeDismissLayout$OnSwipeProgressChangedListener;->onSwipeProgressChanged(Lcom/android/internal/widget/SwipeDismissLayout;FF)V
 
-    .line 212
     :cond_0
     return-void
 .end method
@@ -287,7 +253,6 @@
     .prologue
     const v3, 0x3ea8f5c3    # 0.33f
 
-    .line 255
     invoke-virtual {p1}, Landroid/view/MotionEvent;->getRawX()F
 
     move-result v1
@@ -296,25 +261,21 @@
 
     sub-float v0, v1, v2
 
-    .line 256
     .local v0, "deltaX":F
     iget-boolean v1, p0, Lcom/android/internal/widget/SwipeDismissLayout;->mDismissed:Z
 
     if-nez v1, :cond_0
 
-    .line 257
     iget-object v1, p0, Lcom/android/internal/widget/SwipeDismissLayout;->mVelocityTracker:Landroid/view/VelocityTracker;
 
     invoke-virtual {v1, p1}, Landroid/view/VelocityTracker;->addMovement(Landroid/view/MotionEvent;)V
 
-    .line 258
     iget-object v1, p0, Lcom/android/internal/widget/SwipeDismissLayout;->mVelocityTracker:Landroid/view/VelocityTracker;
 
     const/16 v2, 0x3e8
 
     invoke-virtual {v1, v2}, Landroid/view/VelocityTracker;->computeCurrentVelocity(I)V
 
-    .line 260
     invoke-virtual {p0}, Lcom/android/internal/widget/SwipeDismissLayout;->getWidth()I
 
     move-result v1
@@ -337,12 +298,10 @@
 
     if-ltz v1, :cond_0
 
-    .line 262
     const/4 v1, 0x1
 
     iput-boolean v1, p0, Lcom/android/internal/widget/SwipeDismissLayout;->mDismissed:Z
 
-    .line 266
     :cond_0
     iget-boolean v1, p0, Lcom/android/internal/widget/SwipeDismissLayout;->mDismissed:Z
 
@@ -352,7 +311,6 @@
 
     if-eqz v1, :cond_1
 
-    .line 268
     invoke-virtual {p0}, Lcom/android/internal/widget/SwipeDismissLayout;->getWidth()I
 
     move-result v1
@@ -365,12 +323,10 @@
 
     if-gez v1, :cond_1
 
-    .line 269
     const/4 v1, 0x0
 
     iput-boolean v1, p0, Lcom/android/internal/widget/SwipeDismissLayout;->mDismissed:Z
 
-    .line 272
     :cond_1
     return-void
 .end method
@@ -382,12 +338,10 @@
     .prologue
     const/4 v2, 0x0
 
-    .line 243
     iget-boolean v3, p0, Lcom/android/internal/widget/SwipeDismissLayout;->mSwiping:Z
 
     if-nez v3, :cond_1
 
-    .line 244
     invoke-virtual {p1}, Landroid/view/MotionEvent;->getRawX()F
 
     move-result v3
@@ -396,7 +350,6 @@
 
     sub-float v0, v3, v4
 
-    .line 245
     .local v0, "deltaX":F
     invoke-virtual {p1}, Landroid/view/MotionEvent;->getRawY()F
 
@@ -406,7 +359,6 @@
 
     sub-float v1, v3, v4
 
-    .line 246
     .local v1, "deltaY":F
     mul-float v3, v0, v0
 
@@ -426,7 +378,6 @@
 
     if-lez v3, :cond_2
 
-    .line 247
     iget v3, p0, Lcom/android/internal/widget/SwipeDismissLayout;->mSlop:I
 
     mul-int/lit8 v3, v3, 0x2
@@ -456,14 +407,12 @@
     :cond_0
     iput-boolean v2, p0, Lcom/android/internal/widget/SwipeDismissLayout;->mSwiping:Z
 
-    .line 252
     .end local v0    # "deltaX":F
     .end local v1    # "deltaY":F
     :cond_1
     :goto_0
     return-void
 
-    .line 249
     .restart local v0    # "deltaX":F
     .restart local v1    # "deltaY":F
     :cond_2
@@ -483,35 +432,29 @@
     .param p5, "y"    # F
 
     .prologue
-    .line 286
     instance-of v0, p1, Landroid/view/ViewGroup;
 
     if-eqz v0, :cond_1
 
     move-object v7, p1
 
-    .line 287
     check-cast v7, Landroid/view/ViewGroup;
 
-    .line 288
     .local v7, "group":Landroid/view/ViewGroup;
     invoke-virtual {p1}, Landroid/view/View;->getScrollX()I
 
     move-result v9
 
-    .line 289
     .local v9, "scrollX":I
     invoke-virtual {p1}, Landroid/view/View;->getScrollY()I
 
     move-result v10
 
-    .line 290
     .local v10, "scrollY":I
     invoke-virtual {v7}, Landroid/view/ViewGroup;->getChildCount()I
 
     move-result v6
 
-    .line 291
     .local v6, "count":I
     add-int/lit8 v8, v6, -0x1
 
@@ -519,12 +462,10 @@
     :goto_0
     if-ltz v8, :cond_1
 
-    .line 292
     invoke-virtual {v7, v8}, Landroid/view/ViewGroup;->getChildAt(I)Landroid/view/View;
 
     move-result-object v1
 
-    .line 293
     .local v1, "child":Landroid/view/View;
     int-to-float v0, v9
 
@@ -618,10 +559,8 @@
 
     if-eqz v0, :cond_0
 
-    .line 297
     const/4 v0, 0x1
 
-    .line 302
     .end local v1    # "child":Landroid/view/View;
     .end local v6    # "count":I
     .end local v7    # "group":Landroid/view/ViewGroup;
@@ -631,7 +570,6 @@
     :goto_1
     return v0
 
-    .line 291
     .restart local v1    # "child":Landroid/view/View;
     .restart local v6    # "count":I
     .restart local v7    # "group":Landroid/view/ViewGroup;
@@ -643,7 +581,6 @@
 
     goto :goto_0
 
-    .line 302
     .end local v1    # "child":Landroid/view/View;
     .end local v6    # "count":I
     .end local v7    # "group":Landroid/view/ViewGroup;
@@ -677,17 +614,14 @@
     .locals 1
 
     .prologue
-    .line 221
     iget-object v0, p0, Lcom/android/internal/widget/SwipeDismissLayout;->mProgressListener:Lcom/android/internal/widget/SwipeDismissLayout$OnSwipeProgressChangedListener;
 
     if-eqz v0, :cond_0
 
-    .line 222
     iget-object v0, p0, Lcom/android/internal/widget/SwipeDismissLayout;->mProgressListener:Lcom/android/internal/widget/SwipeDismissLayout$OnSwipeProgressChangedListener;
 
     invoke-interface {v0, p0}, Lcom/android/internal/widget/SwipeDismissLayout$OnSwipeProgressChangedListener;->onSwipeCancelled(Lcom/android/internal/widget/SwipeDismissLayout;)V
 
-    .line 224
     :cond_0
     return-void
 .end method
@@ -703,19 +637,16 @@
 
     const/4 v2, 0x0
 
-    .line 118
     iget v0, p0, Lcom/android/internal/widget/SwipeDismissLayout;->mTranslationX:F
 
     invoke-virtual {p1, v0, v11}, Landroid/view/MotionEvent;->offsetLocation(FF)V
 
-    .line 120
     invoke-virtual {p1}, Landroid/view/MotionEvent;->getActionMasked()I
 
     move-result v0
 
     packed-switch v0, :pswitch_data_0
 
-    .line 171
     :cond_0
     :goto_0
     :pswitch_0
@@ -730,52 +661,44 @@
     :goto_1
     return v10
 
-    .line 122
     :pswitch_1
     invoke-direct {p0}, Lcom/android/internal/widget/SwipeDismissLayout;->resetMembers()V
 
-    .line 123
     invoke-virtual {p1}, Landroid/view/MotionEvent;->getRawX()F
 
     move-result v0
 
     iput v0, p0, Lcom/android/internal/widget/SwipeDismissLayout;->mDownX:F
 
-    .line 124
     invoke-virtual {p1}, Landroid/view/MotionEvent;->getRawY()F
 
     move-result v0
 
     iput v0, p0, Lcom/android/internal/widget/SwipeDismissLayout;->mDownY:F
 
-    .line 125
     invoke-virtual {p1, v2}, Landroid/view/MotionEvent;->getPointerId(I)I
 
     move-result v0
 
     iput v0, p0, Lcom/android/internal/widget/SwipeDismissLayout;->mActiveTouchId:I
 
-    .line 126
     invoke-static {}, Landroid/view/VelocityTracker;->obtain()Landroid/view/VelocityTracker;
 
     move-result-object v0
 
     iput-object v0, p0, Lcom/android/internal/widget/SwipeDismissLayout;->mVelocityTracker:Landroid/view/VelocityTracker;
 
-    .line 127
     iget-object v0, p0, Lcom/android/internal/widget/SwipeDismissLayout;->mVelocityTracker:Landroid/view/VelocityTracker;
 
     invoke-virtual {v0, p1}, Landroid/view/VelocityTracker;->addMovement(Landroid/view/MotionEvent;)V
 
     goto :goto_0
 
-    .line 131
     :pswitch_2
     invoke-virtual {p1}, Landroid/view/MotionEvent;->getActionIndex()I
 
     move-result v6
 
-    .line 132
     .local v6, "actionIndex":I
     invoke-virtual {p1, v6}, Landroid/view/MotionEvent;->getPointerId(I)I
 
@@ -785,31 +708,26 @@
 
     goto :goto_0
 
-    .line 135
     .end local v6    # "actionIndex":I
     :pswitch_3
     invoke-virtual {p1}, Landroid/view/MotionEvent;->getActionIndex()I
 
     move-result v6
 
-    .line 136
     .restart local v6    # "actionIndex":I
     invoke-virtual {p1, v6}, Landroid/view/MotionEvent;->getPointerId(I)I
 
     move-result v8
 
-    .line 137
     .local v8, "pointerId":I
     iget v0, p0, Lcom/android/internal/widget/SwipeDismissLayout;->mActiveTouchId:I
 
     if-ne v8, v0, :cond_0
 
-    .line 139
     if-nez v6, :cond_1
 
     move v7, v10
 
-    .line 140
     .local v7, "newActionIndex":I
     :goto_2
     invoke-virtual {p1, v7}, Landroid/view/MotionEvent;->getPointerId(I)I
@@ -824,10 +742,8 @@
     :cond_1
     move v7, v2
 
-    .line 139
     goto :goto_2
 
-    .line 146
     .end local v6    # "actionIndex":I
     .end local v8    # "pointerId":I
     :pswitch_4
@@ -835,7 +751,6 @@
 
     goto :goto_0
 
-    .line 150
     :pswitch_5
     iget-object v0, p0, Lcom/android/internal/widget/SwipeDismissLayout;->mVelocityTracker:Landroid/view/VelocityTracker;
 
@@ -845,32 +760,27 @@
 
     if-nez v0, :cond_0
 
-    .line 154
     iget v0, p0, Lcom/android/internal/widget/SwipeDismissLayout;->mActiveTouchId:I
 
     invoke-virtual {p1, v0}, Landroid/view/MotionEvent;->findPointerIndex(I)I
 
     move-result v9
 
-    .line 155
     .local v9, "pointerIndex":I
     const/4 v0, -0x1
 
     if-ne v9, v0, :cond_2
 
-    .line 156
     const-string v0, "SwipeDismissLayout"
 
     const-string v1, "Invalid pointer index: ignoring."
 
     invoke-static {v0, v1}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 157
     iput-boolean v10, p0, Lcom/android/internal/widget/SwipeDismissLayout;->mDiscardIntercept:Z
 
     goto :goto_0
 
-    .line 160
     :cond_2
     invoke-virtual {p1}, Landroid/view/MotionEvent;->getRawX()F
 
@@ -880,19 +790,16 @@
 
     sub-float v3, v0, v1
 
-    .line 161
     .local v3, "dx":F
     invoke-virtual {p1, v9}, Landroid/view/MotionEvent;->getX(I)F
 
     move-result v4
 
-    .line 162
     .local v4, "x":F
     invoke-virtual {p1, v9}, Landroid/view/MotionEvent;->getY(I)F
 
     move-result v5
 
-    .line 163
     .local v5, "y":F
     cmpl-float v0, v3, v11
 
@@ -908,12 +815,10 @@
 
     if-eqz v0, :cond_3
 
-    .line 164
     iput-boolean v10, p0, Lcom/android/internal/widget/SwipeDismissLayout;->mDiscardIntercept:Z
 
     goto/16 :goto_0
 
-    .line 167
     :cond_3
     invoke-direct {p0, p1}, Lcom/android/internal/widget/SwipeDismissLayout;->updateSwiping(Landroid/view/MotionEvent;)V
 
@@ -926,10 +831,8 @@
     :cond_4
     move v10, v2
 
-    .line 171
     goto/16 :goto_1
 
-    .line 120
     nop
 
     :pswitch_data_0
@@ -949,21 +852,17 @@
     .param p1, "ev"    # Landroid/view/MotionEvent;
 
     .prologue
-    .line 176
     iget-object v0, p0, Lcom/android/internal/widget/SwipeDismissLayout;->mVelocityTracker:Landroid/view/VelocityTracker;
 
     if-nez v0, :cond_0
 
-    .line 177
     invoke-super {p0, p1}, Landroid/widget/FrameLayout;->onTouchEvent(Landroid/view/MotionEvent;)Z
 
     move-result v0
 
-    .line 204
     :goto_0
     return v0
 
-    .line 179
     :cond_0
     invoke-virtual {p1}, Landroid/view/MotionEvent;->getActionMasked()I
 
@@ -971,74 +870,60 @@
 
     packed-switch v0, :pswitch_data_0
 
-    .line 204
     :cond_1
     :goto_1
     const/4 v0, 0x1
 
     goto :goto_0
 
-    .line 181
     :pswitch_0
     invoke-direct {p0, p1}, Lcom/android/internal/widget/SwipeDismissLayout;->updateDismiss(Landroid/view/MotionEvent;)V
 
-    .line 182
     iget-boolean v0, p0, Lcom/android/internal/widget/SwipeDismissLayout;->mDismissed:Z
 
     if-eqz v0, :cond_3
 
-    .line 183
     invoke-direct {p0}, Lcom/android/internal/widget/SwipeDismissLayout;->dismiss()V
 
-    .line 187
     :cond_2
     :goto_2
     invoke-direct {p0}, Lcom/android/internal/widget/SwipeDismissLayout;->resetMembers()V
 
     goto :goto_1
 
-    .line 184
     :cond_3
     iget-boolean v0, p0, Lcom/android/internal/widget/SwipeDismissLayout;->mSwiping:Z
 
     if-eqz v0, :cond_2
 
-    .line 185
     invoke-virtual {p0}, Lcom/android/internal/widget/SwipeDismissLayout;->cancel()V
 
     goto :goto_2
 
-    .line 191
     :pswitch_1
     invoke-virtual {p0}, Lcom/android/internal/widget/SwipeDismissLayout;->cancel()V
 
-    .line 192
     invoke-direct {p0}, Lcom/android/internal/widget/SwipeDismissLayout;->resetMembers()V
 
     goto :goto_1
 
-    .line 196
     :pswitch_2
     iget-object v0, p0, Lcom/android/internal/widget/SwipeDismissLayout;->mVelocityTracker:Landroid/view/VelocityTracker;
 
     invoke-virtual {v0, p1}, Landroid/view/VelocityTracker;->addMovement(Landroid/view/MotionEvent;)V
 
-    .line 197
     invoke-virtual {p1}, Landroid/view/MotionEvent;->getRawX()F
 
     move-result v0
 
     iput v0, p0, Lcom/android/internal/widget/SwipeDismissLayout;->mLastX:F
 
-    .line 198
     invoke-direct {p0, p1}, Lcom/android/internal/widget/SwipeDismissLayout;->updateSwiping(Landroid/view/MotionEvent;)V
 
-    .line 199
     iget-boolean v0, p0, Lcom/android/internal/widget/SwipeDismissLayout;->mSwiping:Z
 
     if-eqz v0, :cond_1
 
-    .line 200
     invoke-virtual {p1}, Landroid/view/MotionEvent;->getRawX()F
 
     move-result v0
@@ -1051,7 +936,6 @@
 
     goto :goto_1
 
-    .line 179
     :pswitch_data_0
     .packed-switch 0x1
         :pswitch_0
@@ -1065,10 +949,8 @@
     .param p1, "listener"    # Lcom/android/internal/widget/SwipeDismissLayout$OnDismissedListener;
 
     .prologue
-    .line 108
     iput-object p1, p0, Lcom/android/internal/widget/SwipeDismissLayout;->mDismissedListener:Lcom/android/internal/widget/SwipeDismissLayout$OnDismissedListener;
 
-    .line 109
     return-void
 .end method
 
@@ -1077,9 +959,7 @@
     .param p1, "listener"    # Lcom/android/internal/widget/SwipeDismissLayout$OnSwipeProgressChangedListener;
 
     .prologue
-    .line 112
     iput-object p1, p0, Lcom/android/internal/widget/SwipeDismissLayout;->mProgressListener:Lcom/android/internal/widget/SwipeDismissLayout$OnSwipeProgressChangedListener;
 
-    .line 113
     return-void
 .end method

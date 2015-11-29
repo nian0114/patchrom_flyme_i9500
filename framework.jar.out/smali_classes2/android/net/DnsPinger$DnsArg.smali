@@ -32,20 +32,15 @@
     .param p4, "u"    # Ljava/lang/String;
 
     .prologue
-    .line 136
     iput-object p1, p0, Landroid/net/DnsPinger$DnsArg;->this$0:Landroid/net/DnsPinger;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 137
     iput-object p2, p0, Landroid/net/DnsPinger$DnsArg;->dns:Ljava/net/InetAddress;
 
-    .line 138
     iput p3, p0, Landroid/net/DnsPinger$DnsArg;->seq:I
 
-    .line 139
     iput-object p4, p0, Landroid/net/DnsPinger$DnsArg;->targetUrl:Ljava/lang/String;
 
-    .line 140
     return-void
 .end method

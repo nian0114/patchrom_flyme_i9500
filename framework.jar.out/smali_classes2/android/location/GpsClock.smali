@@ -70,7 +70,6 @@
     .locals 1
 
     .prologue
-    .line 407
     new-instance v0, Landroid/location/GpsClock$1;
 
     invoke-direct {v0}, Landroid/location/GpsClock$1;-><init>()V
@@ -84,13 +83,10 @@
     .locals 0
 
     .prologue
-    .line 72
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 73
     invoke-direct {p0}, Landroid/location/GpsClock;->initialize()V
 
-    .line 74
     return-void
 .end method
 
@@ -100,7 +96,6 @@
     .param p1, "x1"    # S
 
     .prologue
-    .line 29
     iput-short p1, p0, Landroid/location/GpsClock;->mFlags:S
 
     return p1
@@ -112,7 +107,6 @@
     .param p1, "x1"    # S
 
     .prologue
-    .line 29
     iput-short p1, p0, Landroid/location/GpsClock;->mLeapSecond:S
 
     return p1
@@ -124,7 +118,6 @@
     .param p1, "x1"    # B
 
     .prologue
-    .line 29
     iput-byte p1, p0, Landroid/location/GpsClock;->mType:B
 
     return p1
@@ -136,7 +129,6 @@
     .param p1, "x1"    # J
 
     .prologue
-    .line 29
     iput-wide p1, p0, Landroid/location/GpsClock;->mTimeInNs:J
 
     return-wide p1
@@ -148,7 +140,6 @@
     .param p1, "x1"    # D
 
     .prologue
-    .line 29
     iput-wide p1, p0, Landroid/location/GpsClock;->mTimeUncertaintyInNs:D
 
     return-wide p1
@@ -160,7 +151,6 @@
     .param p1, "x1"    # J
 
     .prologue
-    .line 29
     iput-wide p1, p0, Landroid/location/GpsClock;->mFullBiasInNs:J
 
     return-wide p1
@@ -172,7 +162,6 @@
     .param p1, "x1"    # D
 
     .prologue
-    .line 29
     iput-wide p1, p0, Landroid/location/GpsClock;->mBiasInNs:D
 
     return-wide p1
@@ -184,7 +173,6 @@
     .param p1, "x1"    # D
 
     .prologue
-    .line 29
     iput-wide p1, p0, Landroid/location/GpsClock;->mBiasUncertaintyInNs:D
 
     return-wide p1
@@ -196,7 +184,6 @@
     .param p1, "x1"    # D
 
     .prologue
-    .line 29
     iput-wide p1, p0, Landroid/location/GpsClock;->mDriftInNsPerSec:D
 
     return-wide p1
@@ -208,7 +195,6 @@
     .param p1, "x1"    # D
 
     .prologue
-    .line 29
     iput-wide p1, p0, Landroid/location/GpsClock;->mDriftUncertaintyInNsPerSec:D
 
     return-wide p1
@@ -218,36 +204,30 @@
     .locals 1
 
     .prologue
-    .line 128
     iget-byte v0, p0, Landroid/location/GpsClock;->mType:B
 
     packed-switch v0, :pswitch_data_0
 
-    .line 136
     const-string v0, "<Invalid>"
 
     :goto_0
     return-object v0
 
-    .line 130
     :pswitch_0
     const-string v0, "Unknown"
 
     goto :goto_0
 
-    .line 132
     :pswitch_1
     const-string v0, "GpsTime"
 
     goto :goto_0
 
-    .line 134
     :pswitch_2
     const-string v0, "LocalHwClock"
 
     goto :goto_0
 
-    .line 128
     nop
 
     :pswitch_data_0
@@ -264,36 +244,26 @@
     .prologue
     const/4 v0, 0x0
 
-    .line 490
     iput-short v0, p0, Landroid/location/GpsClock;->mFlags:S
 
-    .line 491
     invoke-virtual {p0}, Landroid/location/GpsClock;->resetLeapSecond()V
 
-    .line 492
     invoke-virtual {p0, v0}, Landroid/location/GpsClock;->setType(B)V
 
-    .line 493
     const-wide/high16 v0, -0x8000000000000000L
 
     invoke-virtual {p0, v0, v1}, Landroid/location/GpsClock;->setTimeInNs(J)V
 
-    .line 494
     invoke-virtual {p0}, Landroid/location/GpsClock;->resetTimeUncertaintyInNs()V
 
-    .line 495
     invoke-virtual {p0}, Landroid/location/GpsClock;->resetBiasInNs()V
 
-    .line 496
     invoke-virtual {p0}, Landroid/location/GpsClock;->resetBiasUncertaintyInNs()V
 
-    .line 497
     invoke-virtual {p0}, Landroid/location/GpsClock;->resetDriftInNsPerSec()V
 
-    .line 498
     invoke-virtual {p0}, Landroid/location/GpsClock;->resetDriftUncertaintyInNsPerSec()V
 
-    .line 499
     return-void
 .end method
 
@@ -302,7 +272,6 @@
     .param p1, "flag"    # S
 
     .prologue
-    .line 510
     iget-short v0, p0, Landroid/location/GpsClock;->mFlags:S
 
     and-int/2addr v0, p1
@@ -325,7 +294,6 @@
     .param p1, "flag"    # S
 
     .prologue
-    .line 506
     iget-short v0, p0, Landroid/location/GpsClock;->mFlags:S
 
     xor-int/lit8 v1, p1, -0x1
@@ -336,7 +304,6 @@
 
     iput-short v0, p0, Landroid/location/GpsClock;->mFlags:S
 
-    .line 507
     return-void
 .end method
 
@@ -345,7 +312,6 @@
     .param p1, "flag"    # S
 
     .prologue
-    .line 502
     iget-short v0, p0, Landroid/location/GpsClock;->mFlags:S
 
     or-int/2addr v0, p1
@@ -354,7 +320,6 @@
 
     iput-short v0, p0, Landroid/location/GpsClock;->mFlags:S
 
-    .line 503
     return-void
 .end method
 
@@ -364,7 +329,6 @@
     .locals 1
 
     .prologue
-    .line 447
     const/4 v0, 0x0
 
     return v0
@@ -374,7 +338,6 @@
     .locals 2
 
     .prologue
-    .line 290
     iget-wide v0, p0, Landroid/location/GpsClock;->mBiasInNs:D
 
     return-wide v0
@@ -384,7 +347,6 @@
     .locals 2
 
     .prologue
-    .line 322
     iget-wide v0, p0, Landroid/location/GpsClock;->mBiasUncertaintyInNs:D
 
     return-wide v0
@@ -394,7 +356,6 @@
     .locals 2
 
     .prologue
-    .line 356
     iget-wide v0, p0, Landroid/location/GpsClock;->mDriftInNsPerSec:D
 
     return-wide v0
@@ -404,7 +365,6 @@
     .locals 2
 
     .prologue
-    .line 388
     iget-wide v0, p0, Landroid/location/GpsClock;->mDriftUncertaintyInNsPerSec:D
 
     return-wide v0
@@ -414,7 +374,6 @@
     .locals 2
 
     .prologue
-    .line 257
     iget-wide v0, p0, Landroid/location/GpsClock;->mFullBiasInNs:J
 
     return-wide v0
@@ -424,7 +383,6 @@
     .locals 1
 
     .prologue
-    .line 155
     iget-short v0, p0, Landroid/location/GpsClock;->mLeapSecond:S
 
     return v0
@@ -434,7 +392,6 @@
     .locals 2
 
     .prologue
-    .line 192
     iget-wide v0, p0, Landroid/location/GpsClock;->mTimeInNs:J
 
     return-wide v0
@@ -444,7 +401,6 @@
     .locals 2
 
     .prologue
-    .line 216
     iget-wide v0, p0, Landroid/location/GpsClock;->mTimeUncertaintyInNs:D
 
     return-wide v0
@@ -454,7 +410,6 @@
     .locals 1
 
     .prologue
-    .line 103
     iget-byte v0, p0, Landroid/location/GpsClock;->mType:B
 
     return v0
@@ -464,7 +419,6 @@
     .locals 1
 
     .prologue
-    .line 280
     const/16 v0, 0x8
 
     invoke-direct {p0, v0}, Landroid/location/GpsClock;->isFlagSet(S)Z
@@ -478,7 +432,6 @@
     .locals 1
 
     .prologue
-    .line 313
     const/16 v0, 0x10
 
     invoke-direct {p0, v0}, Landroid/location/GpsClock;->isFlagSet(S)Z
@@ -492,7 +445,6 @@
     .locals 1
 
     .prologue
-    .line 345
     const/16 v0, 0x20
 
     invoke-direct {p0, v0}, Landroid/location/GpsClock;->isFlagSet(S)Z
@@ -506,7 +458,6 @@
     .locals 1
 
     .prologue
-    .line 379
     const/16 v0, 0x40
 
     invoke-direct {p0, v0}, Landroid/location/GpsClock;->isFlagSet(S)Z
@@ -520,7 +471,6 @@
     .locals 1
 
     .prologue
-    .line 239
     const/4 v0, 0x4
 
     invoke-direct {p0, v0}, Landroid/location/GpsClock;->isFlagSet(S)Z
@@ -534,7 +484,6 @@
     .locals 1
 
     .prologue
-    .line 144
     const/4 v0, 0x1
 
     invoke-direct {p0, v0}, Landroid/location/GpsClock;->isFlagSet(S)Z
@@ -548,7 +497,6 @@
     .locals 1
 
     .prologue
-    .line 206
     const/4 v0, 0x2
 
     invoke-direct {p0, v0}, Landroid/location/GpsClock;->isFlagSet(S)Z
@@ -562,10 +510,8 @@
     .locals 0
 
     .prologue
-    .line 96
     invoke-direct {p0}, Landroid/location/GpsClock;->initialize()V
 
-    .line 97
     return-void
 .end method
 
@@ -573,17 +519,14 @@
     .locals 2
 
     .prologue
-    .line 305
     const/16 v0, 0x8
 
     invoke-direct {p0, v0}, Landroid/location/GpsClock;->resetFlag(S)V
 
-    .line 306
     const-wide/high16 v0, 0x7ff8000000000000L    # NaN
 
     iput-wide v0, p0, Landroid/location/GpsClock;->mBiasInNs:D
 
-    .line 307
     return-void
 .end method
 
@@ -591,17 +534,14 @@
     .locals 2
 
     .prologue
-    .line 337
     const/16 v0, 0x10
 
     invoke-direct {p0, v0}, Landroid/location/GpsClock;->resetFlag(S)V
 
-    .line 338
     const-wide/high16 v0, 0x7ff8000000000000L    # NaN
 
     iput-wide v0, p0, Landroid/location/GpsClock;->mBiasUncertaintyInNs:D
 
-    .line 339
     return-void
 .end method
 
@@ -609,17 +549,14 @@
     .locals 2
 
     .prologue
-    .line 371
     const/16 v0, 0x20
 
     invoke-direct {p0, v0}, Landroid/location/GpsClock;->resetFlag(S)V
 
-    .line 372
     const-wide/high16 v0, 0x7ff8000000000000L    # NaN
 
     iput-wide v0, p0, Landroid/location/GpsClock;->mDriftInNsPerSec:D
 
-    .line 373
     return-void
 .end method
 
@@ -627,17 +564,14 @@
     .locals 2
 
     .prologue
-    .line 403
     const/16 v0, 0x40
 
     invoke-direct {p0, v0}, Landroid/location/GpsClock;->resetFlag(S)V
 
-    .line 404
     const-wide/high16 v0, 0x7ff8000000000000L    # NaN
 
     iput-wide v0, p0, Landroid/location/GpsClock;->mDriftUncertaintyInNsPerSec:D
 
-    .line 405
     return-void
 .end method
 
@@ -645,17 +579,14 @@
     .locals 2
 
     .prologue
-    .line 272
     const/4 v0, 0x4
 
     invoke-direct {p0, v0}, Landroid/location/GpsClock;->resetFlag(S)V
 
-    .line 273
     const-wide/high16 v0, -0x8000000000000000L
 
     iput-wide v0, p0, Landroid/location/GpsClock;->mFullBiasInNs:J
 
-    .line 274
     return-void
 .end method
 
@@ -663,17 +594,14 @@
     .locals 1
 
     .prologue
-    .line 170
     const/4 v0, 0x1
 
     invoke-direct {p0, v0}, Landroid/location/GpsClock;->resetFlag(S)V
 
-    .line 171
     const/16 v0, -0x8000
 
     iput-short v0, p0, Landroid/location/GpsClock;->mLeapSecond:S
 
-    .line 172
     return-void
 .end method
 
@@ -681,17 +609,14 @@
     .locals 2
 
     .prologue
-    .line 231
     const/4 v0, 0x2
 
     invoke-direct {p0, v0}, Landroid/location/GpsClock;->resetFlag(S)V
 
-    .line 232
     const-wide/high16 v0, 0x7ff8000000000000L    # NaN
 
     iput-wide v0, p0, Landroid/location/GpsClock;->mTimeUncertaintyInNs:D
 
-    .line 233
     return-void
 .end method
 
@@ -700,57 +625,46 @@
     .param p1, "clock"    # Landroid/location/GpsClock;
 
     .prologue
-    .line 80
     iget-short v0, p1, Landroid/location/GpsClock;->mFlags:S
 
     iput-short v0, p0, Landroid/location/GpsClock;->mFlags:S
 
-    .line 81
     iget-short v0, p1, Landroid/location/GpsClock;->mLeapSecond:S
 
     iput-short v0, p0, Landroid/location/GpsClock;->mLeapSecond:S
 
-    .line 82
     iget-byte v0, p1, Landroid/location/GpsClock;->mType:B
 
     iput-byte v0, p0, Landroid/location/GpsClock;->mType:B
 
-    .line 83
     iget-wide v0, p1, Landroid/location/GpsClock;->mTimeInNs:J
 
     iput-wide v0, p0, Landroid/location/GpsClock;->mTimeInNs:J
 
-    .line 84
     iget-wide v0, p1, Landroid/location/GpsClock;->mTimeUncertaintyInNs:D
 
     iput-wide v0, p0, Landroid/location/GpsClock;->mTimeUncertaintyInNs:D
 
-    .line 85
     iget-wide v0, p1, Landroid/location/GpsClock;->mFullBiasInNs:J
 
     iput-wide v0, p0, Landroid/location/GpsClock;->mFullBiasInNs:J
 
-    .line 86
     iget-wide v0, p1, Landroid/location/GpsClock;->mBiasInNs:D
 
     iput-wide v0, p0, Landroid/location/GpsClock;->mBiasInNs:D
 
-    .line 87
     iget-wide v0, p1, Landroid/location/GpsClock;->mBiasUncertaintyInNs:D
 
     iput-wide v0, p0, Landroid/location/GpsClock;->mBiasUncertaintyInNs:D
 
-    .line 88
     iget-wide v0, p1, Landroid/location/GpsClock;->mDriftInNsPerSec:D
 
     iput-wide v0, p0, Landroid/location/GpsClock;->mDriftInNsPerSec:D
 
-    .line 89
     iget-wide v0, p1, Landroid/location/GpsClock;->mDriftUncertaintyInNsPerSec:D
 
     iput-wide v0, p0, Landroid/location/GpsClock;->mDriftUncertaintyInNsPerSec:D
 
-    .line 90
     return-void
 .end method
 
@@ -759,15 +673,12 @@
     .param p1, "biasInNs"    # D
 
     .prologue
-    .line 297
     const/16 v0, 0x8
 
     invoke-direct {p0, v0}, Landroid/location/GpsClock;->setFlag(S)V
 
-    .line 298
     iput-wide p1, p0, Landroid/location/GpsClock;->mBiasInNs:D
 
-    .line 299
     return-void
 .end method
 
@@ -776,15 +687,12 @@
     .param p1, "biasUncertaintyInNs"    # D
 
     .prologue
-    .line 329
     const/16 v0, 0x10
 
     invoke-direct {p0, v0}, Landroid/location/GpsClock;->setFlag(S)V
 
-    .line 330
     iput-wide p1, p0, Landroid/location/GpsClock;->mBiasUncertaintyInNs:D
 
-    .line 331
     return-void
 .end method
 
@@ -793,15 +701,12 @@
     .param p1, "driftInNsPerSec"    # D
 
     .prologue
-    .line 363
     const/16 v0, 0x20
 
     invoke-direct {p0, v0}, Landroid/location/GpsClock;->setFlag(S)V
 
-    .line 364
     iput-wide p1, p0, Landroid/location/GpsClock;->mDriftInNsPerSec:D
 
-    .line 365
     return-void
 .end method
 
@@ -810,15 +715,12 @@
     .param p1, "driftUncertaintyInNsPerSec"    # D
 
     .prologue
-    .line 395
     const/16 v0, 0x40
 
     invoke-direct {p0, v0}, Landroid/location/GpsClock;->setFlag(S)V
 
-    .line 396
     iput-wide p1, p0, Landroid/location/GpsClock;->mDriftUncertaintyInNsPerSec:D
 
-    .line 397
     return-void
 .end method
 
@@ -827,15 +729,12 @@
     .param p1, "value"    # J
 
     .prologue
-    .line 264
     const/4 v0, 0x4
 
     invoke-direct {p0, v0}, Landroid/location/GpsClock;->setFlag(S)V
 
-    .line 265
     iput-wide p1, p0, Landroid/location/GpsClock;->mFullBiasInNs:J
 
-    .line 266
     return-void
 .end method
 
@@ -844,15 +743,12 @@
     .param p1, "leapSecond"    # S
 
     .prologue
-    .line 162
     const/4 v0, 0x1
 
     invoke-direct {p0, v0}, Landroid/location/GpsClock;->setFlag(S)V
 
-    .line 163
     iput-short p1, p0, Landroid/location/GpsClock;->mLeapSecond:S
 
-    .line 164
     return-void
 .end method
 
@@ -861,10 +757,8 @@
     .param p1, "timeInNs"    # J
 
     .prologue
-    .line 199
     iput-wide p1, p0, Landroid/location/GpsClock;->mTimeInNs:J
 
-    .line 200
     return-void
 .end method
 
@@ -873,15 +767,12 @@
     .param p1, "timeUncertaintyInNs"    # D
 
     .prologue
-    .line 223
     const/4 v0, 0x2
 
     invoke-direct {p0, v0}, Landroid/location/GpsClock;->setFlag(S)V
 
-    .line 224
     iput-wide p1, p0, Landroid/location/GpsClock;->mTimeUncertaintyInNs:D
 
-    .line 225
     return-void
 .end method
 
@@ -890,10 +781,8 @@
     .param p1, "value"    # B
 
     .prologue
-    .line 110
     packed-switch p1, :pswitch_data_0
 
-    .line 117
     const-string v0, "GpsClock"
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -916,22 +805,18 @@
 
     invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 118
     const/4 v0, 0x0
 
     iput-byte v0, p0, Landroid/location/GpsClock;->mType:B
 
-    .line 121
     :goto_0
     return-void
 
-    .line 114
     :pswitch_0
     iput-byte p1, p0, Landroid/location/GpsClock;->mType:B
 
     goto :goto_0
 
-    .line 110
     :pswitch_data_0
     .packed-switch 0x0
         :pswitch_0
@@ -954,14 +839,11 @@
 
     const/4 v4, 0x0
 
-    .line 452
     const-string v1, "   %-15s = %s\n"
 
-    .line 453
     .local v1, "format":Ljava/lang/String;
     const-string v2, "   %-15s = %-25s   %-26s = %s\n"
 
-    .line 454
     .local v2, "formatWithUncertainty":Ljava/lang/String;
     new-instance v0, Ljava/lang/StringBuilder;
 
@@ -969,7 +851,6 @@
 
     invoke-direct {v0, v3}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    .line 456
     .local v0, "builder":Ljava/lang/StringBuilder;
     const-string v3, "   %-15s = %s\n"
 
@@ -991,7 +872,6 @@
 
     invoke-virtual {v0, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 458
     const-string v5, "   %-15s = %s\n"
 
     new-array v6, v11, [Ljava/lang/Object;
@@ -1021,7 +901,6 @@
 
     invoke-virtual {v0, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 460
     const-string v5, "   %-15s = %-25s   %-26s = %s\n"
 
     const/4 v3, 0x4
@@ -1065,7 +944,6 @@
 
     invoke-virtual {v0, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 467
     const-string v5, "   %-15s = %s\n"
 
     new-array v6, v11, [Ljava/lang/Object;
@@ -1095,7 +973,6 @@
 
     invoke-virtual {v0, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 472
     const-string v5, "   %-15s = %-25s   %-26s = %s\n"
 
     const/4 v3, 0x4
@@ -1146,7 +1023,6 @@
 
     invoke-virtual {v0, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 479
     const-string v5, "   %-15s = %-25s   %-26s = %s\n"
 
     const/4 v3, 0x4
@@ -1197,7 +1073,6 @@
 
     invoke-virtual {v0, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 486
     invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
     move-result-object v3
@@ -1207,25 +1082,21 @@
     :cond_1
     move-object v3, v4
 
-    .line 458
     goto/16 :goto_0
 
     :cond_2
     move-object v3, v4
 
-    .line 460
     goto/16 :goto_1
 
     :cond_3
     move-object v3, v4
 
-    .line 467
     goto :goto_2
 
     :cond_4
     move-object v3, v4
 
-    .line 472
     goto :goto_3
 
     :cond_5
@@ -1236,7 +1107,6 @@
     :cond_6
     move-object v3, v4
 
-    .line 479
     goto :goto_5
 .end method
 
@@ -1246,56 +1116,45 @@
     .param p2, "flags"    # I
 
     .prologue
-    .line 433
     iget-short v0, p0, Landroid/location/GpsClock;->mFlags:S
 
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 434
     iget-short v0, p0, Landroid/location/GpsClock;->mLeapSecond:S
 
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 435
     iget-byte v0, p0, Landroid/location/GpsClock;->mType:B
 
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeByte(B)V
 
-    .line 436
     iget-wide v0, p0, Landroid/location/GpsClock;->mTimeInNs:J
 
     invoke-virtual {p1, v0, v1}, Landroid/os/Parcel;->writeLong(J)V
 
-    .line 437
     iget-wide v0, p0, Landroid/location/GpsClock;->mTimeUncertaintyInNs:D
 
     invoke-virtual {p1, v0, v1}, Landroid/os/Parcel;->writeDouble(D)V
 
-    .line 438
     iget-wide v0, p0, Landroid/location/GpsClock;->mFullBiasInNs:J
 
     invoke-virtual {p1, v0, v1}, Landroid/os/Parcel;->writeLong(J)V
 
-    .line 439
     iget-wide v0, p0, Landroid/location/GpsClock;->mBiasInNs:D
 
     invoke-virtual {p1, v0, v1}, Landroid/os/Parcel;->writeDouble(D)V
 
-    .line 440
     iget-wide v0, p0, Landroid/location/GpsClock;->mBiasUncertaintyInNs:D
 
     invoke-virtual {p1, v0, v1}, Landroid/os/Parcel;->writeDouble(D)V
 
-    .line 441
     iget-wide v0, p0, Landroid/location/GpsClock;->mDriftInNsPerSec:D
 
     invoke-virtual {p1, v0, v1}, Landroid/os/Parcel;->writeDouble(D)V
 
-    .line 442
     iget-wide v0, p0, Landroid/location/GpsClock;->mDriftUncertaintyInNsPerSec:D
 
     invoke-virtual {p1, v0, v1}, Landroid/os/Parcel;->writeDouble(D)V
 
-    .line 443
     return-void
 .end method

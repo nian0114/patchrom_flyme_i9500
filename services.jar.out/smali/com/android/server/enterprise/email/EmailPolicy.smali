@@ -24,18 +24,14 @@
     .param p1, "ctx"    # Landroid/content/Context;
 
     .prologue
-    .line 77
     invoke-direct {p0}, Landroid/app/enterprise/IEmailPolicy$Stub;-><init>()V
 
-    .line 56
     const/4 v0, 0x0
 
     iput-object v0, p0, Lcom/android/server/enterprise/email/EmailPolicy;->mEDM:Landroid/app/enterprise/EnterpriseDeviceManager;
 
-    .line 78
     iput-object p1, p0, Lcom/android/server/enterprise/email/EmailPolicy;->mContext:Landroid/content/Context;
 
-    .line 79
     new-instance v0, Lcom/android/server/enterprise/storage/EdmStorageProvider;
 
     iget-object v1, p0, Lcom/android/server/enterprise/email/EmailPolicy;->mContext:Landroid/content/Context;
@@ -44,7 +40,6 @@
 
     iput-object v0, p0, Lcom/android/server/enterprise/email/EmailPolicy;->mEdmStorageProvider:Lcom/android/server/enterprise/storage/EdmStorageProvider;
 
-    .line 80
     return-void
 .end method
 
@@ -53,7 +48,6 @@
     .param p1, "cxtInfo"    # Landroid/app/enterprise/ContextInfo;
 
     .prologue
-    .line 73
     invoke-direct {p0}, Lcom/android/server/enterprise/email/EmailPolicy;->getEDM()Landroid/app/enterprise/EnterpriseDeviceManager;
 
     move-result-object v0
@@ -72,14 +66,11 @@
     .param p1, "policy"    # Ljava/lang/String;
 
     .prologue
-    .line 304
     const/4 v0, 0x0
 
-    .line 305
     .local v0, "ret":Z
     if-eqz p1, :cond_1
 
-    .line 306
     const-string v1, "EmailAllowForward"
 
     invoke-virtual {p1, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
@@ -88,10 +79,8 @@
 
     if-eqz v1, :cond_2
 
-    .line 307
     const/4 v0, 0x1
 
-    .line 315
     :cond_0
     :goto_0
     const-string v1, "EmailPolicyService"
@@ -126,11 +115,9 @@
 
     invoke-static {v1, v2}, Landroid/util/secutil/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 317
     :cond_1
     return v0
 
-    .line 308
     :cond_2
     const-string v1, "EmailAllowHTML"
 
@@ -140,12 +127,10 @@
 
     if-eqz v1, :cond_3
 
-    .line 309
     const/4 v0, 0x1
 
     goto :goto_0
 
-    .line 310
     :cond_3
     const-string v1, "EmailAllowNotificationChange"
 
@@ -155,12 +140,10 @@
 
     if-eqz v1, :cond_4
 
-    .line 311
     const/4 v0, 0x1
 
     goto :goto_0
 
-    .line 312
     :cond_4
     const-string v1, "EmailAllowSettingChange"
 
@@ -170,7 +153,6 @@
 
     if-eqz v1, :cond_0
 
-    .line 313
     const/4 v0, 0x1
 
     goto :goto_0
@@ -180,12 +162,10 @@
     .locals 2
 
     .prologue
-    .line 60
     iget-object v0, p0, Lcom/android/server/enterprise/email/EmailPolicy;->mEDM:Landroid/app/enterprise/EnterpriseDeviceManager;
 
     if-nez v0, :cond_0
 
-    .line 61
     iget-object v0, p0, Lcom/android/server/enterprise/email/EmailPolicy;->mContext:Landroid/content/Context;
 
     const-string v1, "enterprise_policy"
@@ -198,7 +178,6 @@
 
     iput-object v0, p0, Lcom/android/server/enterprise/email/EmailPolicy;->mEDM:Landroid/app/enterprise/EnterpriseDeviceManager;
 
-    .line 64
     :cond_0
     iget-object v0, p0, Lcom/android/server/enterprise/email/EmailPolicy;->mEDM:Landroid/app/enterprise/EnterpriseDeviceManager;
 
@@ -213,20 +192,17 @@
     .param p4, "userId"    # I
 
     .prologue
-    .line 255
     move-object/from16 v0, p3
 
     invoke-direct {p0, v0}, Lcom/android/server/enterprise/email/EmailPolicy;->getDefaultValueState(Ljava/lang/String;)Z
 
     move-result v9
 
-    .line 256
     .local v9, "ret":Z
     if-nez v9, :cond_2
 
     const/4 v7, 0x1
 
-    .line 258
     .local v7, "restricterState":Z
     :goto_0
     if-eqz p2, :cond_0
@@ -245,7 +221,6 @@
 
     if-eqz v10, :cond_3
 
-    .line 259
     :cond_0
     const-string v10, "EmailPolicyService"
 
@@ -253,13 +228,11 @@
 
     invoke-static {v10, v11}, Lcom/android/server/enterprise/log/Log;->i(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 300
     .end local v9    # "ret":Z
     :cond_1
     :goto_1
     return v9
 
-    .line 256
     .end local v7    # "restricterState":Z
     .restart local v9    # "ret":Z
     :cond_2
@@ -267,12 +240,10 @@
 
     goto :goto_0
 
-    .line 262
     .restart local v7    # "restricterState":Z
     :cond_3
     const-string v1, "^[_A-Za-z0-9-\\+]+(\\.[_A-Za-z0-9-]+)*@[A-Za-z0-9-]+(\\.[A-Za-z0-9]+)*(\\.[A-Za-z]{2,})$"
 
-    .line 264
     .local v1, "EMAIL_REGEX":Ljava/lang/String;
     invoke-virtual {p2, v1}, Ljava/lang/String;->matches(Ljava/lang/String;)Z
 
@@ -280,7 +251,6 @@
 
     if-nez v10, :cond_4
 
-    .line 265
     const-string v10, "EmailPolicyService"
 
     const-string v11, "getPolicyState() : Invalid entry by regex"
@@ -289,24 +259,20 @@
 
     goto :goto_1
 
-    .line 269
     :cond_4
     const/4 v10, 0x1
 
     new-array v2, v10, [Ljava/lang/String;
 
-    .line 270
     .local v2, "columns":[Ljava/lang/String;
     const/4 v10, 0x0
 
     aput-object p3, v2, v10
 
-    .line 272
     new-instance v4, Landroid/content/ContentValues;
 
     invoke-direct {v4}, Landroid/content/ContentValues;-><init>()V
 
-    .line 273
     .local v4, "cvWhere":Landroid/content/ContentValues;
     const-string v10, "containerID"
 
@@ -316,13 +282,11 @@
 
     invoke-virtual {v4, v10, v11}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/Integer;)V
 
-    .line 274
     const-string v10, "EmailAddress"
 
     invoke-virtual {v4, v10, p2}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 275
-    const-string/jumbo v10, "userID"
+    const-string v10, "userID"
 
     invoke-static/range {p4 .. p4}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
@@ -330,10 +294,8 @@
 
     invoke-virtual {v4, v10, v11}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/Integer;)V
 
-    .line 276
     const/4 v8, 0x0
 
-    .line 278
     .local v8, "results":Ljava/util/List;, "Ljava/util/List<Landroid/content/ContentValues;>;"
     :try_start_0
     iget-object v10, p0, Lcom/android/server/enterprise/email/EmailPolicy;->mEdmStorageProvider:Lcom/android/server/enterprise/storage/EdmStorageProvider;
@@ -346,7 +308,6 @@
 
     move-result-object v8
 
-    .line 285
     if-eqz v8, :cond_1
 
     invoke-interface {v8}, Ljava/util/List;->isEmpty()Z
@@ -355,19 +316,16 @@
 
     if-nez v10, :cond_1
 
-    .line 288
     const-string v10, "EmailPolicyService"
 
     const-string v11, "getPolicyState() : keep going check result. "
 
     invoke-static {v10, v11}, Landroid/util/secutil/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 291
     invoke-interface {v8}, Ljava/util/List;->iterator()Ljava/util/Iterator;
 
     move-result-object v6
 
-    .line 292
     .local v6, "it":Ljava/util/Iterator;, "Ljava/util/Iterator<Landroid/content/ContentValues;>;"
     :cond_5
     invoke-interface {v6}, Ljava/util/Iterator;->hasNext()Z
@@ -376,14 +334,12 @@
 
     if-eqz v10, :cond_7
 
-    .line 293
     invoke-interface {v6}, Ljava/util/Iterator;->next()Ljava/lang/Object;
 
     move-result-object v3
 
     check-cast v3, Landroid/content/ContentValues;
 
-    .line 294
     .local v3, "cv":Landroid/content/ContentValues;
     move-object/from16 v0, p3
 
@@ -402,7 +358,6 @@
 
     if-eqz v10, :cond_5
 
-    .line 295
     const-string v10, "EmailPolicyService"
 
     new-instance v11, Ljava/lang/StringBuilder;
@@ -471,16 +426,13 @@
 
     move v9, v7
 
-    .line 296
     goto/16 :goto_1
 
-    .line 280
     .end local v3    # "cv":Landroid/content/ContentValues;
     .end local v6    # "it":Ljava/util/Iterator;, "Ljava/util/Iterator<Landroid/content/ContentValues;>;"
     :catch_0
     move-exception v5
 
-    .line 281
     .local v5, "ex":Ljava/lang/Exception;
     const-string v10, "EmailPolicyService"
 
@@ -490,7 +442,6 @@
 
     goto/16 :goto_1
 
-    .line 294
     .end local v5    # "ex":Ljava/lang/Exception;
     .restart local v3    # "cv":Landroid/content/ContentValues;
     .restart local v6    # "it":Ljava/util/Iterator;, "Ljava/util/Iterator<Landroid/content/ContentValues;>;"
@@ -499,7 +450,6 @@
 
     goto :goto_2
 
-    .line 299
     .end local v3    # "cv":Landroid/content/ContentValues;
     :cond_7
     const-string v11, "EmailPolicyService"
@@ -529,7 +479,6 @@
 
     invoke-static {v11, v10}, Lcom/android/server/enterprise/log/Log;->i(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 300
     if-nez v7, :cond_9
 
     const/4 v10, 0x1
@@ -539,13 +488,11 @@
 
     goto/16 :goto_1
 
-    .line 299
     :cond_8
     const/4 v10, 0x0
 
     goto :goto_3
 
-    .line 300
     :cond_9
     const/4 v10, 0x0
 
@@ -561,10 +508,8 @@
     .param p5, "policy"    # Ljava/lang/String;
 
     .prologue
-    .line 223
     const/4 v3, 0x0
 
-    .line 224
     .local v3, "ret":Z
     if-eqz p3, :cond_0
 
@@ -574,29 +519,25 @@
 
     if-eqz v5, :cond_1
 
-    .line 225
     :cond_0
     const-string v5, "EmailPolicyService"
 
-    const-string/jumbo v6, "putPolicyState: Invalid entry"
+    const-string v6, "putPolicyState: Invalid entry"
 
     invoke-static {v5, v6}, Lcom/android/server/enterprise/log/Log;->e(Ljava/lang/String;Ljava/lang/String;)V
 
     move v4, v3
 
-    .line 250
     .end local v3    # "ret":Z
     .local v4, "ret":I
     :goto_0
     return v4
 
-    .line 229
     .end local v4    # "ret":I
     .restart local v3    # "ret":Z
     :cond_1
     const-string v0, "^[_A-Za-z0-9-\\+]+(\\.[_A-Za-z0-9-]+)*@[A-Za-z0-9-]+(\\.[A-Za-z0-9]+)*(\\.[A-Za-z]{2,})$"
 
-    .line 231
     .local v0, "EMAIL_REGEX":Ljava/lang/String;
     invoke-virtual {p3, v0}, Ljava/lang/String;->matches(Ljava/lang/String;)Z
 
@@ -604,27 +545,23 @@
 
     if-nez v5, :cond_2
 
-    .line 232
     const-string v5, "EmailPolicyService"
 
-    const-string/jumbo v6, "putPolicyState: Invalid entry"
+    const-string v6, "putPolicyState: Invalid entry"
 
     invoke-static {v5, v6}, Lcom/android/server/enterprise/log/Log;->e(Ljava/lang/String;Ljava/lang/String;)V
 
     move v4, v3
 
-    .line 233
     .restart local v4    # "ret":I
     goto :goto_0
 
-    .line 236
     .end local v4    # "ret":I
     :cond_2
     new-instance v1, Landroid/content/ContentValues;
 
     invoke-direct {v1}, Landroid/content/ContentValues;-><init>()V
 
-    .line 237
     .local v1, "cv":Landroid/content/ContentValues;
     const-string v5, "adminUid"
 
@@ -634,7 +571,6 @@
 
     invoke-virtual {v1, v5, v6}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/Integer;)V
 
-    .line 238
     const-string v5, "containerID"
 
     invoke-static {p2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
@@ -643,12 +579,10 @@
 
     invoke-virtual {v1, v5, v6}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/Integer;)V
 
-    .line 239
     const-string v5, "EmailAddress"
 
     invoke-virtual {v1, v5, p3}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 240
     if-eqz p4, :cond_3
 
     const-string v5, "1"
@@ -656,12 +590,10 @@
     :goto_1
     invoke-virtual {v1, p5, v5}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 242
     new-instance v2, Landroid/content/ContentValues;
 
     invoke-direct {v2}, Landroid/content/ContentValues;-><init>()V
 
-    .line 243
     .local v2, "cvWhere":Landroid/content/ContentValues;
     const-string v5, "adminUid"
 
@@ -671,7 +603,6 @@
 
     invoke-virtual {v2, v5, v6}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/Integer;)V
 
-    .line 244
     const-string v5, "containerID"
 
     invoke-static {p2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
@@ -680,12 +611,10 @@
 
     invoke-virtual {v2, v5, v6}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/Integer;)V
 
-    .line 245
     const-string v5, "EmailAddress"
 
     invoke-virtual {v2, v5, p3}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 247
     iget-object v5, p0, Lcom/android/server/enterprise/email/EmailPolicy;->mEdmStorageProvider:Lcom/android/server/enterprise/storage/EdmStorageProvider;
 
     const-string v6, "EmailSettingsTable"
@@ -694,14 +623,13 @@
 
     move-result v3
 
-    .line 248
     const-string v5, "EmailPolicyService"
 
     new-instance v6, Ljava/lang/StringBuilder;
 
     invoke-direct {v6}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v7, "putPolicyState() : ret = "
+    const-string v7, "putPolicyState() : ret = "
 
     invoke-virtual {v6, v7}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -717,14 +645,13 @@
 
     invoke-static {v5, v6}, Lcom/android/server/enterprise/log/Log;->i(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 249
     const-string v5, "EmailPolicyService"
 
     new-instance v6, Ljava/lang/StringBuilder;
 
     invoke-direct {v6}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v7, "putPolicyState() ret = "
+    const-string v7, "putPolicyState() ret = "
 
     invoke-virtual {v6, v7}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -792,11 +719,9 @@
 
     move v4, v3
 
-    .line 250
     .restart local v4    # "ret":I
     goto/16 :goto_0
 
-    .line 240
     .end local v2    # "cvWhere":Landroid/content/ContentValues;
     .end local v4    # "ret":I
     :cond_3
@@ -822,22 +747,18 @@
 
     const/4 v5, 0x0
 
-    .line 84
     invoke-direct {p0, p1}, Lcom/android/server/enterprise/email/EmailPolicy;->enforceEmailPermission(Landroid/app/enterprise/ContextInfo;)Landroid/app/enterprise/ContextInfo;
 
     move-result-object p1
 
-    .line 85
     const/4 v3, 0x0
 
-    .line 87
     .local v3, "result":Z
     const/4 v6, 0x1
 
     :try_start_0
     new-array v2, v6, [B
 
-    .line 88
     .local v2, "refObj":[B
     const/4 v6, 0x0
 
@@ -848,14 +769,12 @@
 
     aput-byte v4, v2, v6
 
-    .line 89
     new-instance v0, Landroid/content/ContentValues;
 
     invoke-direct {v0}, Landroid/content/ContentValues;-><init>()V
 
-    .line 90
     .local v0, "cvValues":Landroid/content/ContentValues;
-    const-string/jumbo v4, "policyName"
+    const-string v4, "policyName"
 
     iget v5, p1, Landroid/app/enterprise/ContextInfo;->mContainerId:I
 
@@ -865,12 +784,10 @@
 
     invoke-virtual {v0, v4, v5}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 91
     const-string v4, "accountObject"
 
     invoke-virtual {v0, v4, v2}, Landroid/content/ContentValues;->put(Ljava/lang/String;[B)V
 
-    .line 92
     iget-object v4, p0, Lcom/android/server/enterprise/email/EmailPolicy;->mEdmStorageProvider:Lcom/android/server/enterprise/storage/EdmStorageProvider;
 
     iget v5, p1, Landroid/app/enterprise/ContextInfo;->mCallerUid:I
@@ -883,7 +800,6 @@
 
     move-result v3
 
-    .line 93
     const-string v4, "EmailPolicyService"
 
     new-instance v5, Ljava/lang/StringBuilder;
@@ -908,7 +824,6 @@
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 98
     .end local v0    # "cvValues":Landroid/content/ContentValues;
     .end local v2    # "refObj":[B
     :goto_1
@@ -918,15 +833,12 @@
     :cond_0
     move v4, v5
 
-    .line 88
     goto :goto_0
 
-    .line 94
     .end local v2    # "refObj":[B
     :catch_0
     move-exception v1
 
-    .line 95
     .local v1, "ex":Ljava/lang/Exception;
     const-string v4, "EmailPolicyService"
 
@@ -946,19 +858,15 @@
     .prologue
     const/4 v0, 0x0
 
-    .line 398
     invoke-direct {p0, p1}, Lcom/android/server/enterprise/email/EmailPolicy;->enforceEmailPermission(Landroid/app/enterprise/ContextInfo;)Landroid/app/enterprise/ContextInfo;
 
     move-result-object p1
 
-    .line 399
     const/4 v9, 0x0
 
-    .line 400
     .local v9, "ret":Z
     iget v2, p1, Landroid/app/enterprise/ContextInfo;->mContainerId:I
 
-    .line 401
     .local v2, "containerId":I
     iget-object v3, p0, Lcom/android/server/enterprise/email/EmailPolicy;->mContext:Landroid/content/Context;
 
@@ -966,7 +874,6 @@
 
     move-result-object v6
 
-    .line 402
     .local v6, "acc":Lcom/android/server/enterprise/email/AccountMetaData;
     if-eqz v6, :cond_0
 
@@ -976,12 +883,10 @@
 
     if-eqz v3, :cond_0
 
-    .line 404
     iget-boolean v3, v6, Lcom/android/server/enterprise/email/AccountMetaData;->mIsEAS:Z
 
     if-eqz v3, :cond_2
 
-    .line 407
     :try_start_0
     const-string v3, "eas_account_policy"
 
@@ -993,7 +898,6 @@
 
     move-result-object v8
 
-    .line 408
     .local v8, "mService":Landroid/app/enterprise/IExchangeAccountPolicy;
     if-eqz v8, :cond_1
 
@@ -1003,7 +907,6 @@
 
     move-result v9
 
-    .line 420
     .end local v8    # "mService":Landroid/app/enterprise/IExchangeAccountPolicy;
     :cond_0
     :goto_0
@@ -1029,7 +932,6 @@
 
     invoke-static {v0, v3}, Lcom/android/server/enterprise/log/Log;->i(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 421
     const-string v0, "EmailPolicyService"
 
     new-instance v3, Ljava/lang/StringBuilder;
@@ -1072,22 +974,18 @@
 
     invoke-static {v0, v3}, Landroid/util/secutil/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 422
     return v9
 
     .restart local v8    # "mService":Landroid/app/enterprise/IExchangeAccountPolicy;
     :cond_1
     move v9, v0
 
-    .line 408
     goto :goto_0
 
-    .line 409
     .end local v8    # "mService":Landroid/app/enterprise/IExchangeAccountPolicy;
     :catch_0
     move-exception v7
 
-    .line 410
     .local v7, "e":Landroid/os/RemoteException;
     const-string v0, "EmailPolicyService"
 
@@ -1095,18 +993,14 @@
 
     invoke-static {v0, v3, v7}, Lcom/android/server/enterprise/log/Log;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
 
-    .line 411
     const/4 v9, 0x0
 
-    .line 412
     goto :goto_0
 
-    .line 416
     .end local v7    # "e":Landroid/os/RemoteException;
     :cond_2
     iget v1, p1, Landroid/app/enterprise/ContextInfo;->mCallerUid:I
 
-    .line 417
     .local v1, "adminUid":I
     iget-object v3, v6, Lcom/android/server/enterprise/email/AccountMetaData;->mEmailAddress:Ljava/lang/String;
 
@@ -1138,22 +1032,18 @@
 
     const/4 v5, 0x0
 
-    .line 137
     invoke-direct {p0, p1}, Lcom/android/server/enterprise/email/EmailPolicy;->enforceEmailPermission(Landroid/app/enterprise/ContextInfo;)Landroid/app/enterprise/ContextInfo;
 
     move-result-object p1
 
-    .line 138
     const/4 v3, 0x0
 
-    .line 140
     .local v3, "result":Z
     const/4 v6, 0x1
 
     :try_start_0
     new-array v2, v6, [B
 
-    .line 141
     .local v2, "refObj":[B
     const/4 v6, 0x0
 
@@ -1164,25 +1054,21 @@
 
     aput-byte v4, v2, v6
 
-    .line 142
     new-instance v0, Landroid/content/ContentValues;
 
     invoke-direct {v0}, Landroid/content/ContentValues;-><init>()V
 
-    .line 143
     .local v0, "cvValues":Landroid/content/ContentValues;
-    const-string/jumbo v4, "policyName"
+    const-string v4, "policyName"
 
     const-string v5, "allowPopImapEmail"
 
     invoke-virtual {v0, v4, v5}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 144
     const-string v4, "accountObject"
 
     invoke-virtual {v0, v4, v2}, Landroid/content/ContentValues;->put(Ljava/lang/String;[B)V
 
-    .line 145
     iget-object v4, p0, Lcom/android/server/enterprise/email/EmailPolicy;->mEdmStorageProvider:Lcom/android/server/enterprise/storage/EdmStorageProvider;
 
     iget v5, p1, Landroid/app/enterprise/ContextInfo;->mCallerUid:I
@@ -1197,7 +1083,6 @@
 
     move-result v3
 
-    .line 150
     .end local v0    # "cvValues":Landroid/content/ContentValues;
     .end local v2    # "refObj":[B
     :goto_1
@@ -1223,7 +1108,6 @@
 
     invoke-static {v4, v5}, Lcom/android/server/enterprise/log/Log;->i(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 151
     const-string v4, "EmailPolicyService"
 
     new-instance v5, Ljava/lang/StringBuilder;
@@ -1256,22 +1140,18 @@
 
     invoke-static {v4, v5}, Landroid/util/secutil/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 153
     return v3
 
     .restart local v2    # "refObj":[B
     :cond_0
     move v4, v5
 
-    .line 141
     goto :goto_0
 
-    .line 147
     .end local v2    # "refObj":[B
     :catch_0
     move-exception v1
 
-    .line 148
     .local v1, "ex":Ljava/lang/Exception;
     const-string v4, "EmailPolicyService"
 
@@ -1288,7 +1168,6 @@
     .param p2, "emailAddress"    # Ljava/lang/String;
 
     .prologue
-    .line 198
     iget v1, p1, Landroid/app/enterprise/ContextInfo;->mContainerId:I
 
     const-string v2, "EmailAllowForward"
@@ -1301,7 +1180,6 @@
 
     move-result v0
 
-    .line 199
     .local v0, "ret":Z
     const-string v1, "EmailPolicyService"
 
@@ -1325,7 +1203,6 @@
 
     invoke-static {v1, v2}, Lcom/android/server/enterprise/log/Log;->i(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 200
     const-string v1, "EmailPolicyService"
 
     new-instance v2, Ljava/lang/StringBuilder;
@@ -1358,7 +1235,6 @@
 
     invoke-static {v1, v2}, Landroid/util/secutil/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 201
     return v0
 .end method
 
@@ -1368,7 +1244,6 @@
     .param p2, "emailAddress"    # Ljava/lang/String;
 
     .prologue
-    .line 215
     iget v1, p1, Landroid/app/enterprise/ContextInfo;->mContainerId:I
 
     const-string v2, "EmailAllowHTML"
@@ -1381,7 +1256,6 @@
 
     move-result v0
 
-    .line 216
     .local v0, "ret":Z
     const-string v1, "EmailPolicyService"
 
@@ -1405,7 +1279,6 @@
 
     invoke-static {v1, v2}, Lcom/android/server/enterprise/log/Log;->i(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 217
     const-string v1, "EmailPolicyService"
 
     new-instance v2, Ljava/lang/StringBuilder;
@@ -1438,7 +1311,6 @@
 
     invoke-static {v1, v2}, Landroid/util/secutil/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 218
     return v0
 .end method
 
@@ -1447,27 +1319,22 @@
     .param p1, "cxtInfo"    # Landroid/app/enterprise/ContextInfo;
 
     .prologue
-    .line 103
     const/4 v5, 0x1
 
-    .line 104
     .local v5, "result":Z
     iget v1, p1, Landroid/app/enterprise/ContextInfo;->mContainerId:I
 
-    .line 105
     .local v1, "containerId":I
     invoke-static {p1}, Lcom/android/server/enterprise/EnterpriseDeviceManagerService;->getCallingOrCurrentUserId(Landroid/app/enterprise/ContextInfo;)I
 
     move-result v7
 
-    .line 108
     .local v7, "userID":I
     :try_start_0
     new-instance v2, Landroid/content/ContentValues;
 
     invoke-direct {v2}, Landroid/content/ContentValues;-><init>()V
 
-    .line 109
     .local v2, "cvValues":Landroid/content/ContentValues;
     invoke-static {v1, v7}, Lcom/android/server/enterprise/storage/EdmStorageProvider;->getAdminLUIDWhereIn(II)Ljava/lang/String;
 
@@ -1477,8 +1344,7 @@
 
     invoke-virtual {v2, v8, v9}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 111
-    const-string/jumbo v8, "policyName"
+    const-string v8, "policyName"
 
     invoke-static {v1}, Lcom/android/server/enterprise/email/SettingsUtils;->getEmailPackageName(I)Ljava/lang/String;
 
@@ -1486,7 +1352,6 @@
 
     invoke-virtual {v2, v8, v9}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 113
     iget-object v8, p0, Lcom/android/server/enterprise/email/EmailPolicy;->mEdmStorageProvider:Lcom/android/server/enterprise/storage/EdmStorageProvider;
 
     const-string v9, "ADMIN_REF"
@@ -1497,18 +1362,15 @@
 
     move-result-object v6
 
-    .line 114
     .local v6, "resultList":Ljava/util/List;, "Ljava/util/List<[B>;"
     if-eqz v6, :cond_0
 
-    .line 115
     const-string v8, "EmailPolicyService"
 
     const-string v9, "isAccountAdditionAllowed:  resultList not null"
 
     invoke-static {v8, v9}, Landroid/util/secutil/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 117
     :cond_0
     if-eqz v6, :cond_1
 
@@ -1518,7 +1380,6 @@
 
     if-lez v8, :cond_1
 
-    .line 118
     const/4 v4, 0x0
 
     .local v4, "i":I
@@ -1529,14 +1390,12 @@
 
     if-ge v4, v8, :cond_1
 
-    .line 119
     invoke-interface {v6, v4}, Ljava/util/List;->get(I)Ljava/lang/Object;
 
     move-result-object v0
 
     check-cast v0, [B
 
-    .line 120
     .local v0, "b":[B
     const/4 v8, 0x0
 
@@ -1546,10 +1405,8 @@
 
     if-nez v8, :cond_2
 
-    .line 121
     const/4 v5, 0x0
 
-    .line 130
     .end local v0    # "b":[B
     .end local v2    # "cvValues":Landroid/content/ContentValues;
     .end local v4    # "i":I
@@ -1578,7 +1435,6 @@
 
     invoke-static {v8, v9}, Lcom/android/server/enterprise/log/Log;->i(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 131
     const-string v8, "EmailPolicyService"
 
     new-instance v9, Ljava/lang/StringBuilder;
@@ -1611,10 +1467,8 @@
 
     invoke-static {v8, v9}, Landroid/util/secutil/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 132
     return v5
 
-    .line 118
     .restart local v0    # "b":[B
     .restart local v2    # "cvValues":Landroid/content/ContentValues;
     .restart local v4    # "i":I
@@ -1624,7 +1478,6 @@
 
     goto :goto_0
 
-    .line 127
     .end local v0    # "b":[B
     .end local v2    # "cvValues":Landroid/content/ContentValues;
     .end local v4    # "i":I
@@ -1632,7 +1485,6 @@
     :catch_0
     move-exception v3
 
-    .line 128
     .local v3, "ex":Ljava/lang/Exception;
     const-string v8, "EmailPolicyService"
 
@@ -1649,14 +1501,11 @@
     .param p2, "accId"    # J
 
     .prologue
-    .line 372
     const/4 v4, 0x1
 
-    .line 373
     .local v4, "ret":Z
     iget v1, p1, Landroid/app/enterprise/ContextInfo;->mContainerId:I
 
-    .line 374
     .local v1, "containerId":I
     iget-object v6, p0, Lcom/android/server/enterprise/email/EmailPolicy;->mContext:Landroid/content/Context;
 
@@ -1666,7 +1515,6 @@
 
     move-result-object v0
 
-    .line 375
     .local v0, "acc":Lcom/android/server/enterprise/email/AccountMetaData;
     if-eqz v0, :cond_0
 
@@ -1676,12 +1524,10 @@
 
     if-eqz v6, :cond_0
 
-    .line 377
     iget-boolean v6, v0, Lcom/android/server/enterprise/email/AccountMetaData;->mIsEAS:Z
 
     if-eqz v6, :cond_2
 
-    .line 380
     :try_start_0
     const-string v6, "eas_account_policy"
 
@@ -1693,7 +1539,6 @@
 
     move-result-object v3
 
-    .line 381
     .local v3, "mService":Landroid/app/enterprise/IExchangeAccountPolicy;
     if-eqz v3, :cond_1
 
@@ -1703,7 +1548,6 @@
 
     move-result v4
 
-    .line 392
     .end local v3    # "mService":Landroid/app/enterprise/IExchangeAccountPolicy;
     :cond_0
     :goto_0
@@ -1729,7 +1573,6 @@
 
     invoke-static {v6, v7}, Lcom/android/server/enterprise/log/Log;->i(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 393
     const-string v6, "EmailPolicyService"
 
     new-instance v7, Ljava/lang/StringBuilder;
@@ -1762,22 +1605,18 @@
 
     invoke-static {v6, v7}, Landroid/util/secutil/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 394
     return v4
 
-    .line 381
     .restart local v3    # "mService":Landroid/app/enterprise/IExchangeAccountPolicy;
     :cond_1
     const/4 v4, 0x1
 
     goto :goto_0
 
-    .line 382
     .end local v3    # "mService":Landroid/app/enterprise/IExchangeAccountPolicy;
     :catch_0
     move-exception v2
 
-    .line 383
     .local v2, "ex":Landroid/os/RemoteException;
     const-string v6, "EmailPolicyService"
 
@@ -1785,20 +1624,16 @@
 
     invoke-static {v6, v7, v2}, Lcom/android/server/enterprise/log/Log;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
 
-    .line 384
     const/4 v4, 0x1
 
-    .line 385
     goto :goto_0
 
-    .line 388
     .end local v2    # "ex":Landroid/os/RemoteException;
     :cond_2
     invoke-static {p1}, Lcom/android/server/enterprise/EnterpriseDeviceManagerService;->getCallingOrCurrentUserId(Landroid/app/enterprise/ContextInfo;)I
 
     move-result v5
 
-    .line 389
     .local v5, "userID":I
     iget-object v6, v0, Lcom/android/server/enterprise/email/AccountMetaData;->mEmailAddress:Ljava/lang/String;
 
@@ -1817,14 +1652,11 @@
     .param p2, "accId"    # J
 
     .prologue
-    .line 426
     const/4 v4, 0x1
 
-    .line 427
     .local v4, "ret":Z
     iget v1, p1, Landroid/app/enterprise/ContextInfo;->mContainerId:I
 
-    .line 428
     .local v1, "containerId":I
     iget-object v6, p0, Lcom/android/server/enterprise/email/EmailPolicy;->mContext:Landroid/content/Context;
 
@@ -1834,7 +1666,6 @@
 
     move-result-object v0
 
-    .line 429
     .local v0, "acc":Lcom/android/server/enterprise/email/AccountMetaData;
     if-eqz v0, :cond_0
 
@@ -1844,12 +1675,10 @@
 
     if-eqz v6, :cond_0
 
-    .line 431
     iget-boolean v6, v0, Lcom/android/server/enterprise/email/AccountMetaData;->mIsEAS:Z
 
     if-eqz v6, :cond_2
 
-    .line 434
     :try_start_0
     const-string v6, "eas_account_policy"
 
@@ -1861,7 +1690,6 @@
 
     move-result-object v3
 
-    .line 435
     .local v3, "mService":Landroid/app/enterprise/IExchangeAccountPolicy;
     if-eqz v3, :cond_1
 
@@ -1871,7 +1699,6 @@
 
     move-result v4
 
-    .line 447
     .end local v3    # "mService":Landroid/app/enterprise/IExchangeAccountPolicy;
     :cond_0
     :goto_0
@@ -1897,7 +1724,6 @@
 
     invoke-static {v6, v7}, Lcom/android/server/enterprise/log/Log;->i(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 448
     const-string v6, "EmailPolicyService"
 
     new-instance v7, Ljava/lang/StringBuilder;
@@ -1930,22 +1756,18 @@
 
     invoke-static {v6, v7}, Landroid/util/secutil/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 449
     return v4
 
-    .line 435
     .restart local v3    # "mService":Landroid/app/enterprise/IExchangeAccountPolicy;
     :cond_1
     const/4 v4, 0x1
 
     goto :goto_0
 
-    .line 436
     .end local v3    # "mService":Landroid/app/enterprise/IExchangeAccountPolicy;
     :catch_0
     move-exception v2
 
-    .line 437
     .local v2, "e":Landroid/os/RemoteException;
     const-string v6, "EmailPolicyService"
 
@@ -1953,20 +1775,16 @@
 
     invoke-static {v6, v7, v2}, Lcom/android/server/enterprise/log/Log;->w(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
 
-    .line 438
     const/4 v4, 0x1
 
-    .line 439
     goto :goto_0
 
-    .line 443
     .end local v2    # "e":Landroid/os/RemoteException;
     :cond_2
     invoke-static {p1}, Lcom/android/server/enterprise/EnterpriseDeviceManagerService;->getCallingOrCurrentUserId(Landroid/app/enterprise/ContextInfo;)I
 
     move-result v5
 
-    .line 444
     .local v5, "userID":I
     iget-object v6, v0, Lcom/android/server/enterprise/email/AccountMetaData;->mEmailAddress:Ljava/lang/String;
 
@@ -1989,27 +1807,22 @@
     .end annotation
 
     .prologue
-    .line 158
     const/4 v5, 0x1
 
-    .line 159
     .local v5, "result":Z
     iget v1, p1, Landroid/app/enterprise/ContextInfo;->mContainerId:I
 
-    .line 160
     .local v1, "containerId":I
     invoke-static {p1}, Lcom/android/server/enterprise/EnterpriseDeviceManagerService;->getCallingOrCurrentUserId(Landroid/app/enterprise/ContextInfo;)I
 
     move-result v7
 
-    .line 163
     .local v7, "userID":I
     :try_start_0
     new-instance v2, Landroid/content/ContentValues;
 
     invoke-direct {v2}, Landroid/content/ContentValues;-><init>()V
 
-    .line 164
     .local v2, "cvValues":Landroid/content/ContentValues;
     invoke-static {v1, v7}, Lcom/android/server/enterprise/storage/EdmStorageProvider;->getAdminLUIDWhereIn(II)Ljava/lang/String;
 
@@ -2019,14 +1832,12 @@
 
     invoke-virtual {v2, v8, v9}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 166
-    const-string/jumbo v8, "policyName"
+    const-string v8, "policyName"
 
     const-string v9, "allowPopImapEmail"
 
     invoke-virtual {v2, v8, v9}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 167
     iget-object v8, p0, Lcom/android/server/enterprise/email/EmailPolicy;->mEdmStorageProvider:Lcom/android/server/enterprise/storage/EdmStorageProvider;
 
     const-string v9, "ADMIN_REF"
@@ -2037,7 +1848,6 @@
 
     move-result-object v6
 
-    .line 169
     .local v6, "resultList":Ljava/util/List;, "Ljava/util/List<[B>;"
     if-eqz v6, :cond_0
 
@@ -2047,7 +1857,6 @@
 
     if-lez v8, :cond_0
 
-    .line 170
     const/4 v4, 0x0
 
     .local v4, "i":I
@@ -2058,14 +1867,12 @@
 
     if-ge v4, v8, :cond_0
 
-    .line 171
     invoke-interface {v6, v4}, Ljava/util/List;->get(I)Ljava/lang/Object;
 
     move-result-object v0
 
     check-cast v0, [B
 
-    .line 172
     .local v0, "b":[B
     const/4 v8, 0x0
 
@@ -2075,10 +1882,8 @@
 
     if-nez v8, :cond_1
 
-    .line 173
     const/4 v5, 0x0
 
-    .line 182
     .end local v0    # "b":[B
     .end local v2    # "cvValues":Landroid/content/ContentValues;
     .end local v4    # "i":I
@@ -2107,10 +1912,8 @@
 
     invoke-static {v8, v9}, Lcom/android/server/enterprise/log/Log;->i(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 184
     return v5
 
-    .line 170
     .restart local v0    # "b":[B
     .restart local v2    # "cvValues":Landroid/content/ContentValues;
     .restart local v4    # "i":I
@@ -2120,7 +1923,6 @@
 
     goto :goto_0
 
-    .line 178
     .end local v0    # "b":[B
     .end local v2    # "cvValues":Landroid/content/ContentValues;
     .end local v4    # "i":I
@@ -2128,7 +1930,6 @@
     :catch_0
     move-exception v3
 
-    .line 179
     .local v3, "ex":Ljava/lang/Exception;
     const-string v8, "EmailPolicyService"
 
@@ -2144,7 +1945,6 @@
     .param p1, "uid"    # I
 
     .prologue
-    .line 330
     return-void
 .end method
 
@@ -2153,7 +1953,6 @@
     .param p1, "uid"    # I
 
     .prologue
-    .line 342
     return-void
 .end method
 
@@ -2162,7 +1961,6 @@
     .param p1, "uid"    # I
 
     .prologue
-    .line 336
     return-void
 .end method
 
@@ -2173,15 +1971,12 @@
     .param p3, "allow"    # Z
 
     .prologue
-    .line 188
     invoke-direct {p0, p1}, Lcom/android/server/enterprise/email/EmailPolicy;->enforceEmailPermission(Landroid/app/enterprise/ContextInfo;)Landroid/app/enterprise/ContextInfo;
 
     move-result-object p1
 
-    .line 189
     const/4 v6, 0x0
 
-    .line 190
     .local v6, "ret":Z
     iget v1, p1, Landroid/app/enterprise/ContextInfo;->mCallerUid:I
 
@@ -2199,14 +1994,13 @@
 
     move-result v6
 
-    .line 192
     const-string v0, "EmailPolicyService"
 
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v2, "setAllowEmailForwarding() : "
+    const-string v2, "setAllowEmailForwarding() : "
 
     invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -2222,14 +2016,13 @@
 
     invoke-static {v0, v1}, Lcom/android/server/enterprise/log/Log;->i(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 193
     const-string v0, "EmailPolicyService"
 
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v2, "setAllowEmailForwarding() = "
+    const-string v2, "setAllowEmailForwarding() = "
 
     invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -2265,7 +2058,6 @@
 
     invoke-static {v0, v1}, Landroid/util/secutil/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 194
     return v6
 .end method
 
@@ -2276,15 +2068,12 @@
     .param p3, "allow"    # Z
 
     .prologue
-    .line 205
     invoke-direct {p0, p1}, Lcom/android/server/enterprise/email/EmailPolicy;->enforceEmailPermission(Landroid/app/enterprise/ContextInfo;)Landroid/app/enterprise/ContextInfo;
 
     move-result-object p1
 
-    .line 206
     const/4 v6, 0x0
 
-    .line 207
     .local v6, "ret":Z
     iget v1, p1, Landroid/app/enterprise/ContextInfo;->mCallerUid:I
 
@@ -2302,14 +2091,13 @@
 
     move-result v6
 
-    .line 209
     const-string v0, "EmailPolicyService"
 
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v2, "setAllowHTMLEmail() : "
+    const-string v2, "setAllowHTMLEmail() : "
 
     invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -2325,14 +2113,13 @@
 
     invoke-static {v0, v1}, Lcom/android/server/enterprise/log/Log;->i(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 210
     const-string v0, "EmailPolicyService"
 
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v2, "setAllowHTMLEmail() = "
+    const-string v2, "setAllowHTMLEmail() = "
 
     invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -2368,7 +2155,6 @@
 
     invoke-static {v0, v1}, Landroid/util/secutil/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 211
     return v6
 .end method
 
@@ -2381,19 +2167,15 @@
     .prologue
     const/4 v0, 0x0
 
-    .line 344
     invoke-direct {p0, p1}, Lcom/android/server/enterprise/email/EmailPolicy;->enforceEmailPermission(Landroid/app/enterprise/ContextInfo;)Landroid/app/enterprise/ContextInfo;
 
     move-result-object p1
 
-    .line 345
     const/4 v9, 0x0
 
-    .line 346
     .local v9, "ret":Z
     iget v2, p1, Landroid/app/enterprise/ContextInfo;->mContainerId:I
 
-    .line 347
     .local v2, "containerId":I
     iget-object v3, p0, Lcom/android/server/enterprise/email/EmailPolicy;->mContext:Landroid/content/Context;
 
@@ -2401,7 +2183,6 @@
 
     move-result-object v6
 
-    .line 348
     .local v6, "acc":Lcom/android/server/enterprise/email/AccountMetaData;
     if-eqz v6, :cond_0
 
@@ -2411,12 +2192,10 @@
 
     if-eqz v3, :cond_0
 
-    .line 350
     iget-boolean v3, v6, Lcom/android/server/enterprise/email/AccountMetaData;->mIsEAS:Z
 
     if-eqz v3, :cond_2
 
-    .line 353
     :try_start_0
     const-string v3, "eas_account_policy"
 
@@ -2428,7 +2207,6 @@
 
     move-result-object v8
 
-    .line 354
     .local v8, "mService":Landroid/app/enterprise/IExchangeAccountPolicy;
     if-eqz v8, :cond_1
 
@@ -2438,7 +2216,6 @@
 
     move-result v9
 
-    .line 366
     .end local v8    # "mService":Landroid/app/enterprise/IExchangeAccountPolicy;
     :cond_0
     :goto_0
@@ -2448,7 +2225,7 @@
 
     invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v4, "setEmailNotificationsState() : "
+    const-string v4, "setEmailNotificationsState() : "
 
     invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -2464,14 +2241,13 @@
 
     invoke-static {v0, v3}, Lcom/android/server/enterprise/log/Log;->i(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 367
     const-string v0, "EmailPolicyService"
 
     new-instance v3, Ljava/lang/StringBuilder;
 
     invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v4, "setEmailNotificationsState() = "
+    const-string v4, "setEmailNotificationsState() = "
 
     invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -2507,22 +2283,18 @@
 
     invoke-static {v0, v3}, Landroid/util/secutil/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 368
     return v9
 
     .restart local v8    # "mService":Landroid/app/enterprise/IExchangeAccountPolicy;
     :cond_1
     move v9, v0
 
-    .line 354
     goto :goto_0
 
-    .line 355
     .end local v8    # "mService":Landroid/app/enterprise/IExchangeAccountPolicy;
     :catch_0
     move-exception v7
 
-    .line 356
     .local v7, "ex":Landroid/os/RemoteException;
     const-string v0, "EmailPolicyService"
 
@@ -2530,18 +2302,14 @@
 
     invoke-static {v0, v3, v7}, Lcom/android/server/enterprise/log/Log;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
 
-    .line 357
     const/4 v9, 0x0
 
-    .line 358
     goto :goto_0
 
-    .line 362
     .end local v7    # "ex":Landroid/os/RemoteException;
     :cond_2
     iget v1, p1, Landroid/app/enterprise/ContextInfo;->mCallerUid:I
 
-    .line 363
     .local v1, "adminUid":I
     iget-object v3, v6, Lcom/android/server/enterprise/email/AccountMetaData;->mEmailAddress:Ljava/lang/String;
 
@@ -2562,6 +2330,5 @@
     .locals 0
 
     .prologue
-    .line 324
     return-void
 .end method

@@ -192,22 +192,17 @@
     .param p1, "service"    # Landroid/hardware/hdmi/IHdmiControlService;
 
     .prologue
-    .line 250
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 251
     iput-object p1, p0, Landroid/hardware/hdmi/HdmiControlManager;->mService:Landroid/hardware/hdmi/IHdmiControlService;
 
-    .line 252
     const/4 v0, 0x0
 
-    .line 253
     .local v0, "types":[I
     iget-object v1, p0, Landroid/hardware/hdmi/HdmiControlManager;->mService:Landroid/hardware/hdmi/IHdmiControlService;
 
     if-eqz v1, :cond_0
 
-    .line 255
     :try_start_0
     iget-object v1, p0, Landroid/hardware/hdmi/HdmiControlManager;->mService:Landroid/hardware/hdmi/IHdmiControlService;
 
@@ -217,7 +212,6 @@
 
     move-result-object v0
 
-    .line 260
     :cond_0
     :goto_0
     const/4 v1, 0x0
@@ -228,7 +222,6 @@
 
     iput-boolean v1, p0, Landroid/hardware/hdmi/HdmiControlManager;->mHasTvDevice:Z
 
-    .line 261
     const/4 v1, 0x4
 
     invoke-static {v0, v1}, Landroid/hardware/hdmi/HdmiControlManager;->hasDeviceType([II)Z
@@ -237,10 +230,8 @@
 
     iput-boolean v1, p0, Landroid/hardware/hdmi/HdmiControlManager;->mHasPlaybackDevice:Z
 
-    .line 262
     return-void
 
-    .line 256
     :catch_0
     move-exception v1
 
@@ -252,7 +243,6 @@
     .param p1, "listener"    # Landroid/hardware/hdmi/HdmiControlManager$HotplugEventListener;
 
     .prologue
-    .line 387
     new-instance v0, Landroid/hardware/hdmi/HdmiControlManager$1;
 
     invoke-direct {v0, p0, p1}, Landroid/hardware/hdmi/HdmiControlManager$1;-><init>(Landroid/hardware/hdmi/HdmiControlManager;Landroid/hardware/hdmi/HdmiControlManager$HotplugEventListener;)V
@@ -268,15 +258,12 @@
     .prologue
     const/4 v4, 0x0
 
-    .line 265
     if-nez p0, :cond_1
 
-    .line 273
     :cond_0
     :goto_0
     return v4
 
-    .line 268
     :cond_1
     move-object v0, p0
 
@@ -292,16 +279,13 @@
 
     aget v3, v0, v1
 
-    .line 269
     .local v3, "t":I
     if-ne v3, p1, :cond_2
 
-    .line 270
     const/4 v4, 0x1
 
     goto :goto_0
 
-    .line 268
     :cond_2
     add-int/lit8 v1, v1, 0x1
 
@@ -315,16 +299,13 @@
     .param p1, "listener"    # Landroid/hardware/hdmi/HdmiControlManager$HotplugEventListener;
 
     .prologue
-    .line 359
     iget-object v0, p0, Landroid/hardware/hdmi/HdmiControlManager;->mService:Landroid/hardware/hdmi/IHdmiControlService;
 
     if-nez v0, :cond_0
 
-    .line 367
     :goto_0
     return-void
 
-    .line 363
     :cond_0
     :try_start_0
     iget-object v0, p0, Landroid/hardware/hdmi/HdmiControlManager;->mService:Landroid/hardware/hdmi/IHdmiControlService;
@@ -339,7 +320,6 @@
 
     goto :goto_0
 
-    .line 364
     :catch_0
     move-exception v0
 
@@ -353,23 +333,19 @@
     .prologue
     const/4 v0, 0x0
 
-    .line 286
     iget-object v1, p0, Landroid/hardware/hdmi/HdmiControlManager;->mService:Landroid/hardware/hdmi/IHdmiControlService;
 
     if-nez v1, :cond_1
 
-    .line 295
     :cond_0
     :goto_0
     return-object v0
 
-    .line 289
     :cond_1
     sparse-switch p1, :sswitch_data_0
 
     goto :goto_0
 
-    .line 291
     :sswitch_0
     iget-boolean v1, p0, Landroid/hardware/hdmi/HdmiControlManager;->mHasTvDevice:Z
 
@@ -383,7 +359,6 @@
 
     goto :goto_0
 
-    .line 293
     :sswitch_1
     iget-boolean v1, p0, Landroid/hardware/hdmi/HdmiControlManager;->mHasPlaybackDevice:Z
 
@@ -397,7 +372,6 @@
 
     goto :goto_0
 
-    .line 289
     :sswitch_data_0
     .sparse-switch
         0x0 -> :sswitch_0
@@ -409,7 +383,6 @@
     .locals 1
 
     .prologue
-    .line 310
     const/4 v0, 0x4
 
     invoke-virtual {p0, v0}, Landroid/hardware/hdmi/HdmiControlManager;->getClient(I)Landroid/hardware/hdmi/HdmiClient;
@@ -425,7 +398,6 @@
     .locals 1
 
     .prologue
-    .line 324
     const/4 v0, 0x0
 
     invoke-virtual {p0, v0}, Landroid/hardware/hdmi/HdmiControlManager;->getClient(I)Landroid/hardware/hdmi/HdmiClient;
@@ -442,16 +414,13 @@
     .param p1, "listener"    # Landroid/hardware/hdmi/HdmiControlManager$HotplugEventListener;
 
     .prologue
-    .line 375
     iget-object v0, p0, Landroid/hardware/hdmi/HdmiControlManager;->mService:Landroid/hardware/hdmi/IHdmiControlService;
 
     if-nez v0, :cond_0
 
-    .line 383
     :goto_0
     return-void
 
-    .line 379
     :cond_0
     :try_start_0
     iget-object v0, p0, Landroid/hardware/hdmi/HdmiControlManager;->mService:Landroid/hardware/hdmi/IHdmiControlService;
@@ -466,7 +435,6 @@
 
     goto :goto_0
 
-    .line 380
     :catch_0
     move-exception v0
 

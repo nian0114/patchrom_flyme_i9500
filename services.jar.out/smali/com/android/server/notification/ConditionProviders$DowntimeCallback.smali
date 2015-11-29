@@ -26,7 +26,6 @@
     .locals 0
 
     .prologue
-    .line 544
     iput-object p1, p0, Lcom/android/server/notification/ConditionProviders$DowntimeCallback;->this$0:Lcom/android/server/notification/ConditionProviders;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -40,7 +39,6 @@
     .param p2, "x1"    # Lcom/android/server/notification/ConditionProviders$1;
 
     .prologue
-    .line 544
     invoke-direct {p0, p1}, Lcom/android/server/notification/ConditionProviders$DowntimeCallback;-><init>(Lcom/android/server/notification/ConditionProviders;)V
 
     return-void
@@ -57,7 +55,6 @@
 
     const/4 v6, 0x0
 
-    .line 550
     iget-object v8, p0, Lcom/android/server/notification/ConditionProviders$DowntimeCallback;->this$0:Lcom/android/server/notification/ConditionProviders;
 
     # getter for: Lcom/android/server/notification/ConditionProviders;->mZenModeHelper:Lcom/android/server/notification/ZenModeHelper;
@@ -69,7 +66,6 @@
 
     move-result v3
 
-    .line 551
     .local v3, "mode":I
     iget-object v8, p0, Lcom/android/server/notification/ConditionProviders$DowntimeCallback;->this$0:Lcom/android/server/notification/ConditionProviders;
 
@@ -82,7 +78,6 @@
 
     move-result-object v2
 
-    .line 554
     .local v2, "config":Landroid/service/notification/ZenModeConfig;
     iget-object v8, p0, Lcom/android/server/notification/ConditionProviders$DowntimeCallback;->this$0:Lcom/android/server/notification/ConditionProviders;
 
@@ -92,7 +87,7 @@
 
     invoke-direct {v9}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v10, "onDowntimeChanged : inDowntime = "
+    const-string v10, "onDowntimeChanged : inDowntime = "
 
     invoke-virtual {v9, v10}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -108,7 +103,6 @@
 
     invoke-static {v8, v9}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 556
     # getter for: Lcom/android/server/notification/ConditionProviders;->mIsTouchwizDnd:Z
     invoke-static {}, Lcom/android/server/notification/ConditionProviders;->access$500()Z
 
@@ -116,10 +110,8 @@
 
     if-eqz v8, :cond_4
 
-    .line 557
     if-nez v2, :cond_1
 
-    .line 558
     iget-object v7, p0, Lcom/android/server/notification/ConditionProviders$DowntimeCallback;->this$0:Lcom/android/server/notification/ConditionProviders;
 
     iget-object v7, v7, Lcom/android/server/notification/ConditionProviders;->TAG:Ljava/lang/String;
@@ -128,24 +120,19 @@
 
     invoke-static {v7, v8}, Landroid/util/Slog;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 607
     :cond_0
     :goto_0
     return v6
 
-    .line 567
     :cond_1
     const/4 v4, -0x1
 
-    .line 568
     .local v4, "newZenMode":I
     const/4 v5, 0x0
 
-    .line 570
     .local v5, "reason":Ljava/lang/String;
     if-eqz p1, :cond_3
 
-    .line 571
     iget-object v8, p0, Lcom/android/server/notification/ConditionProviders$DowntimeCallback;->this$0:Lcom/android/server/notification/ConditionProviders;
 
     iget-object v8, v8, Lcom/android/server/notification/ConditionProviders;->mContext:Landroid/content/Context;
@@ -160,22 +147,17 @@
 
     move-result v0
 
-    .line 572
     .local v0, "allowException":I
     if-ne v0, v7, :cond_2
 
-    .line 573
     const/4 v4, 0x1
 
-    .line 574
     const-string v5, "downtimeEnter-Priority"
 
-    .line 584
     .end local v0    # "allowException":I
     :goto_1
     if-eq v3, v4, :cond_0
 
-    .line 585
     iget-object v6, p0, Lcom/android/server/notification/ConditionProviders$DowntimeCallback;->this$0:Lcom/android/server/notification/ConditionProviders;
 
     # getter for: Lcom/android/server/notification/ConditionProviders;->mZenModeHelper:Lcom/android/server/notification/ZenModeHelper;
@@ -187,30 +169,24 @@
 
     move v6, v7
 
-    .line 586
     goto :goto_0
 
-    .line 576
     .restart local v0    # "allowException":I
     :cond_2
     const/4 v4, 0x2
 
-    .line 577
     const-string v5, "downtimeEnter-None"
 
     goto :goto_1
 
-    .line 580
     .end local v0    # "allowException":I
     :cond_3
     const/4 v4, 0x0
 
-    .line 581
     const-string v5, "downtimeExit"
 
     goto :goto_1
 
-    .line 594
     .end local v4    # "newZenMode":I
     .end local v5    # "reason":Ljava/lang/String;
     :cond_4
@@ -220,7 +196,6 @@
 
     if-eqz v2, :cond_5
 
-    .line 595
     iget-object v8, p0, Lcom/android/server/notification/ConditionProviders$DowntimeCallback;->this$0:Lcom/android/server/notification/ConditionProviders;
 
     # getter for: Lcom/android/server/notification/ConditionProviders;->mDowntime:Lcom/android/server/notification/DowntimeConditionProvider;
@@ -236,7 +211,6 @@
 
     move-result-object v1
 
-    .line 597
     .local v1, "condition":Landroid/service/notification/Condition;
     iget-object v8, p0, Lcom/android/server/notification/ConditionProviders$DowntimeCallback;->this$0:Lcom/android/server/notification/ConditionProviders;
 
@@ -249,14 +223,12 @@
 
     invoke-virtual {v8, v7, v9}, Lcom/android/server/notification/ZenModeHelper;->setZenMode(ILjava/lang/String;)V
 
-    .line 598
     iget-object v8, p0, Lcom/android/server/notification/ConditionProviders$DowntimeCallback;->this$0:Lcom/android/server/notification/ConditionProviders;
 
     const-string v9, "downtime"
 
     invoke-virtual {v8, v1, v9}, Lcom/android/server/notification/ConditionProviders;->setZenModeCondition(Landroid/service/notification/Condition;Ljava/lang/String;)V
 
-    .line 601
     .end local v1    # "condition":Landroid/service/notification/Condition;
     :cond_5
     if-nez p1, :cond_0
@@ -287,7 +259,6 @@
 
     if-ne v3, v7, :cond_0
 
-    .line 604
     :cond_6
     iget-object v7, p0, Lcom/android/server/notification/ConditionProviders$DowntimeCallback;->this$0:Lcom/android/server/notification/ConditionProviders;
 

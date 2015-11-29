@@ -42,7 +42,6 @@
     .locals 1
 
     .prologue
-    .line 129
     new-instance v0, Landroid/hardware/hdmi/HdmiPortInfo$1;
 
     invoke-direct {v0}, Landroid/hardware/hdmi/HdmiPortInfo$1;-><init>()V
@@ -62,28 +61,20 @@
     .param p6, "arc"    # Z
 
     .prologue
-    .line 53
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 54
     iput p1, p0, Landroid/hardware/hdmi/HdmiPortInfo;->mId:I
 
-    .line 55
     iput p2, p0, Landroid/hardware/hdmi/HdmiPortInfo;->mType:I
 
-    .line 56
     iput p3, p0, Landroid/hardware/hdmi/HdmiPortInfo;->mAddress:I
 
-    .line 57
     iput-boolean p4, p0, Landroid/hardware/hdmi/HdmiPortInfo;->mCecSupported:Z
 
-    .line 58
     iput-boolean p6, p0, Landroid/hardware/hdmi/HdmiPortInfo;->mArcSupported:Z
 
-    .line 59
     iput-boolean p5, p0, Landroid/hardware/hdmi/HdmiPortInfo;->mMhlSupported:Z
 
-    .line 60
     return-void
 .end method
 
@@ -93,7 +84,6 @@
     .locals 1
 
     .prologue
-    .line 122
     const/4 v0, 0x0
 
     return v0
@@ -103,7 +93,6 @@
     .locals 1
 
     .prologue
-    .line 86
     iget v0, p0, Landroid/hardware/hdmi/HdmiPortInfo;->mAddress:I
 
     return v0
@@ -113,7 +102,6 @@
     .locals 1
 
     .prologue
-    .line 68
     iget v0, p0, Landroid/hardware/hdmi/HdmiPortInfo;->mId:I
 
     return v0
@@ -123,7 +111,6 @@
     .locals 1
 
     .prologue
-    .line 77
     iget v0, p0, Landroid/hardware/hdmi/HdmiPortInfo;->mType:I
 
     return v0
@@ -133,7 +120,6 @@
     .locals 1
 
     .prologue
-    .line 113
     iget-boolean v0, p0, Landroid/hardware/hdmi/HdmiPortInfo;->mArcSupported:Z
 
     return v0
@@ -143,7 +129,6 @@
     .locals 1
 
     .prologue
-    .line 95
     iget-boolean v0, p0, Landroid/hardware/hdmi/HdmiPortInfo;->mCecSupported:Z
 
     return v0
@@ -153,7 +138,6 @@
     .locals 1
 
     .prologue
-    .line 104
     iget-boolean v0, p0, Landroid/hardware/hdmi/HdmiPortInfo;->mMhlSupported:Z
 
     return v0
@@ -163,12 +147,10 @@
     .locals 6
 
     .prologue
-    .line 167
     new-instance v0, Ljava/lang/StringBuffer;
 
     invoke-direct {v0}, Ljava/lang/StringBuffer;-><init>()V
 
-    .line 168
     .local v0, "s":Ljava/lang/StringBuffer;
     const-string v1, "port_id: "
 
@@ -186,7 +168,6 @@
 
     invoke-virtual {v1, v2}, Ljava/lang/StringBuffer;->append(Ljava/lang/String;)Ljava/lang/StringBuffer;
 
-    .line 169
     const-string v1, "address: "
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuffer;->append(Ljava/lang/String;)Ljava/lang/StringBuffer;
@@ -221,7 +202,6 @@
 
     invoke-virtual {v1, v2}, Ljava/lang/StringBuffer;->append(Ljava/lang/String;)Ljava/lang/StringBuffer;
 
-    .line 170
     const-string v1, "cec: "
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuffer;->append(Ljava/lang/String;)Ljava/lang/StringBuffer;
@@ -238,7 +218,6 @@
 
     invoke-virtual {v1, v2}, Ljava/lang/StringBuffer;->append(Ljava/lang/String;)Ljava/lang/StringBuffer;
 
-    .line 171
     const-string v1, "arc: "
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuffer;->append(Ljava/lang/String;)Ljava/lang/StringBuffer;
@@ -255,7 +234,6 @@
 
     invoke-virtual {v1, v2}, Ljava/lang/StringBuffer;->append(Ljava/lang/String;)Ljava/lang/StringBuffer;
 
-    .line 172
     const-string v1, "mhl: "
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuffer;->append(Ljava/lang/String;)Ljava/lang/StringBuffer;
@@ -266,7 +244,6 @@
 
     invoke-virtual {v1, v2}, Ljava/lang/StringBuffer;->append(Z)Ljava/lang/StringBuffer;
 
-    .line 173
     invoke-virtual {v0}, Ljava/lang/StringBuffer;->toString()Ljava/lang/String;
 
     move-result-object v1
@@ -284,22 +261,18 @@
 
     const/4 v2, 0x0
 
-    .line 157
     iget v0, p0, Landroid/hardware/hdmi/HdmiPortInfo;->mId:I
 
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 158
     iget v0, p0, Landroid/hardware/hdmi/HdmiPortInfo;->mType:I
 
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 159
     iget v0, p0, Landroid/hardware/hdmi/HdmiPortInfo;->mAddress:I
 
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 160
     iget-boolean v0, p0, Landroid/hardware/hdmi/HdmiPortInfo;->mCecSupported:Z
 
     if-eqz v0, :cond_0
@@ -309,7 +282,6 @@
     :goto_0
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 161
     iget-boolean v0, p0, Landroid/hardware/hdmi/HdmiPortInfo;->mArcSupported:Z
 
     if-eqz v0, :cond_1
@@ -319,7 +291,6 @@
     :goto_1
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 162
     iget-boolean v0, p0, Landroid/hardware/hdmi/HdmiPortInfo;->mMhlSupported:Z
 
     if-eqz v0, :cond_2
@@ -327,24 +298,20 @@
     :goto_2
     invoke-virtual {p1, v1}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 163
     return-void
 
     :cond_0
     move v0, v2
 
-    .line 160
     goto :goto_0
 
     :cond_1
     move v0, v2
 
-    .line 161
     goto :goto_1
 
     :cond_2
     move v1, v2
 
-    .line 162
     goto :goto_2
 .end method

@@ -26,7 +26,6 @@
     .locals 1
 
     .prologue
-    .line 13
     const-class v0, Lcom/android/server/cocktailbar/mode/PrivateKidsMode;
 
     invoke-virtual {v0}, Ljava/lang/Class;->getSimpleName()Ljava/lang/String;
@@ -46,17 +45,14 @@
     .param p4, "listener"    # Lcom/android/server/cocktailbar/mode/CocktailBarMode$OnCocktailBarModeListener;
 
     .prologue
-    .line 20
     invoke-direct {p0, p1, p2, p3, p4}, Lcom/android/server/cocktailbar/mode/AbsPrivateMode;-><init>(Landroid/content/Context;ILandroid/os/Handler;Lcom/android/server/cocktailbar/mode/CocktailBarMode$OnCocktailBarModeListener;)V
 
-    .line 21
     new-instance v0, Lcom/android/server/cocktailbar/mode/PrivateKidsMode$KidsModeObserver;
 
     invoke-direct {v0, p0, p3}, Lcom/android/server/cocktailbar/mode/PrivateKidsMode$KidsModeObserver;-><init>(Lcom/android/server/cocktailbar/mode/PrivateKidsMode;Landroid/os/Handler;)V
 
     iput-object v0, p0, Lcom/android/server/cocktailbar/mode/PrivateKidsMode;->mKidsModeObserver:Lcom/android/server/cocktailbar/mode/PrivateKidsMode$KidsModeObserver;
 
-    .line 22
     return-void
 .end method
 
@@ -64,7 +60,6 @@
     .locals 1
 
     .prologue
-    .line 12
     sget-object v0, Lcom/android/server/cocktailbar/mode/PrivateKidsMode;->TAG:Ljava/lang/String;
 
     return-object v0
@@ -76,7 +71,6 @@
     .locals 1
 
     .prologue
-    .line 76
     const/4 v0, 0x1
 
     return v0
@@ -86,7 +80,6 @@
     .locals 1
 
     .prologue
-    .line 60
     const/4 v0, 0x1
 
     return v0
@@ -96,7 +89,6 @@
     .locals 1
 
     .prologue
-    .line 65
     const-string v0, "kidsmode"
 
     return-object v0
@@ -108,7 +100,6 @@
     .prologue
     const/4 v0, 0x0
 
-    .line 70
     iget-object v1, p0, Lcom/android/server/cocktailbar/mode/PrivateKidsMode;->mContext:Landroid/content/Context;
 
     invoke-virtual {v1}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;

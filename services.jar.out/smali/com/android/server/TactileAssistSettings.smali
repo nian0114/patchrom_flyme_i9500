@@ -138,7 +138,6 @@
     .locals 1
 
     .prologue
-    .line 109
     const/4 v0, 0x4
 
     new-array v0, v0, [I
@@ -147,21 +146,18 @@
 
     sput-object v0, Lcom/android/server/TactileAssistSettings;->mActuators:[I
 
-    .line 113
     const/16 v0, 0xe
 
     new-array v0, v0, [I
 
     sput-object v0, Lcom/android/server/TactileAssistSettings;->mSelectedParams:[I
 
-    .line 118
     const/4 v0, 0x0
 
     sput-object v0, Lcom/android/server/TactileAssistSettings;->instance:Lcom/android/server/TactileAssistSettings;
 
     return-void
 
-    .line 109
     :array_0
     .array-data 4
         -0x1
@@ -178,13 +174,10 @@
     .prologue
     const/4 v7, 0x1
 
-    .line 131
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 133
     sput-object p1, Lcom/android/server/TactileAssistSettings;->mContext:Landroid/content/Context;
 
-    .line 134
     sget-object v4, Lcom/android/server/TactileAssistSettings;->mContext:Landroid/content/Context;
 
     invoke-virtual {v4}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
@@ -193,7 +186,6 @@
 
     sput-object v4, Lcom/android/server/TactileAssistSettings;->mContentResolver:Landroid/content/ContentResolver;
 
-    .line 135
     const-string v4, "com.android.settings_tactileassist"
 
     invoke-virtual {p1, v4, v7}, Landroid/content/Context;->getSharedPreferences(Ljava/lang/String;I)Landroid/content/SharedPreferences;
@@ -202,28 +194,22 @@
 
     sput-object v4, Lcom/android/server/TactileAssistSettings;->sharedPrefs:Landroid/content/SharedPreferences;
 
-    .line 138
     const/4 v1, 0x0
 
     .local v1, "i":I
     const/4 v2, 0x0
 
-    .line 141
     .local v2, "nbOfDevices":I
     const/4 v2, 0x1
 
-    .line 147
     :goto_0
     if-ge v1, v2, :cond_0
 
-    .line 148
     const/4 v0, -0x1
 
-    .line 153
     .local v0, "actuatorType":I
     const/4 v0, 0x2
 
-    .line 213
     :try_start_0
     sget-object v4, Lcom/android/server/TactileAssistSettings;->mActuators:[I
 
@@ -231,7 +217,6 @@
 
     aput v0, v4, v5
 
-    .line 214
     new-instance v4, Lcom/android/server/TactileAssistSettings$ActuatorObserver;
 
     const/4 v5, 0x2
@@ -240,14 +225,12 @@
 
     sput-object v4, Lcom/android/server/TactileAssistSettings;->mLRAObserver:Lcom/android/server/TactileAssistSettings$ActuatorObserver;
 
-    .line 215
     const-string v4, "def_tactileassist_sharpness_lra"
 
     invoke-static {v4}, Landroid/provider/Settings$Global;->getUriFor(Ljava/lang/String;)Landroid/net/Uri;
 
     move-result-object v3
 
-    .line 216
     .local v3, "uri":Landroid/net/Uri;
     sget-object v4, Lcom/android/server/TactileAssistSettings;->mContentResolver:Landroid/content/ContentResolver;
 
@@ -257,14 +240,12 @@
 
     invoke-virtual {v4, v3, v5, v6}, Landroid/content/ContentResolver;->registerContentObserver(Landroid/net/Uri;ZLandroid/database/ContentObserver;)V
 
-    .line 217
     const-string v4, "def_tactileassist_strength_lra"
 
     invoke-static {v4}, Landroid/provider/Settings$Global;->getUriFor(Ljava/lang/String;)Landroid/net/Uri;
 
     move-result-object v3
 
-    .line 218
     sget-object v4, Lcom/android/server/TactileAssistSettings;->mContentResolver:Landroid/content/ContentResolver;
 
     const/4 v5, 0x1
@@ -273,14 +254,12 @@
 
     invoke-virtual {v4, v3, v5, v6}, Landroid/content/ContentResolver;->registerContentObserver(Landroid/net/Uri;ZLandroid/database/ContentObserver;)V
 
-    .line 219
     const-string v4, "def_tactileassist_density_lra"
 
     invoke-static {v4}, Landroid/provider/Settings$Global;->getUriFor(Ljava/lang/String;)Landroid/net/Uri;
 
     move-result-object v3
 
-    .line 220
     sget-object v4, Lcom/android/server/TactileAssistSettings;->mContentResolver:Landroid/content/ContentResolver;
 
     const/4 v5, 0x1
@@ -292,24 +271,18 @@
     .catch Ljava/lang/RuntimeException; {:try_start_0 .. :try_end_0} :catch_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 239
     add-int/lit8 v1, v1, 0x1
 
-    .line 240
     goto :goto_0
 
-    .line 234
     .end local v3    # "uri":Landroid/net/Uri;
     :catch_0
     move-exception v4
 
-    .line 239
     add-int/lit8 v1, v1, 0x1
 
-    .line 240
     goto :goto_0
 
-    .line 239
     :catchall_0
     move-exception v4
 
@@ -317,7 +290,6 @@
 
     throw v4
 
-    .line 242
     .end local v0    # "actuatorType":I
     :cond_0
     sget-object v4, Lcom/android/server/TactileAssistSettings;->mContext:Landroid/content/Context;
@@ -328,21 +300,18 @@
 
     sput-object v4, Lcom/android/server/TactileAssistSettings;->mContentResolver:Landroid/content/ContentResolver;
 
-    .line 244
     new-instance v4, Lcom/android/server/TactileAssistSettings$TactileAssistObserver;
 
     invoke-direct {v4, p0}, Lcom/android/server/TactileAssistSettings$TactileAssistObserver;-><init>(Lcom/android/server/TactileAssistSettings;)V
 
     sput-object v4, Lcom/android/server/TactileAssistSettings;->mTactileAssistObserver:Lcom/android/server/TactileAssistSettings$TactileAssistObserver;
 
-    .line 245
     const-string v4, "def_tactileassist_enable"
 
     invoke-static {v4}, Landroid/provider/Settings$Global;->getUriFor(Ljava/lang/String;)Landroid/net/Uri;
 
     move-result-object v3
 
-    .line 246
     .restart local v3    # "uri":Landroid/net/Uri;
     sget-object v4, Lcom/android/server/TactileAssistSettings;->mContentResolver:Landroid/content/ContentResolver;
 
@@ -350,35 +319,30 @@
 
     invoke-virtual {v4, v3, v7, v5}, Landroid/content/ContentResolver;->registerContentObserver(Landroid/net/Uri;ZLandroid/database/ContentObserver;)V
 
-    .line 248
     const-string v4, "def_tactileassist_internal_enable"
 
     invoke-static {v4}, Landroid/provider/Settings$Global;->getUriFor(Ljava/lang/String;)Landroid/net/Uri;
 
     move-result-object v3
 
-    .line 249
     sget-object v4, Lcom/android/server/TactileAssistSettings;->mContentResolver:Landroid/content/ContentResolver;
 
     sget-object v5, Lcom/android/server/TactileAssistSettings;->mTactileAssistObserver:Lcom/android/server/TactileAssistSettings$TactileAssistObserver;
 
     invoke-virtual {v4, v3, v7, v5}, Landroid/content/ContentResolver;->registerContentObserver(Landroid/net/Uri;ZLandroid/database/ContentObserver;)V
 
-    .line 251
     const-string v4, "def_tactileassist_level"
 
     invoke-static {v4}, Landroid/provider/Settings$Global;->getUriFor(Ljava/lang/String;)Landroid/net/Uri;
 
     move-result-object v3
 
-    .line 252
     sget-object v4, Lcom/android/server/TactileAssistSettings;->mContentResolver:Landroid/content/ContentResolver;
 
     sget-object v5, Lcom/android/server/TactileAssistSettings;->mTactileAssistObserver:Lcom/android/server/TactileAssistSettings$TactileAssistObserver;
 
     invoke-virtual {v4, v3, v7, v5}, Landroid/content/ContentResolver;->registerContentObserver(Landroid/net/Uri;ZLandroid/database/ContentObserver;)V
 
-    .line 253
     return-void
 .end method
 
@@ -386,7 +350,6 @@
     .locals 1
 
     .prologue
-    .line 43
     sget-object v0, Lcom/android/server/TactileAssistSettings;->mContentResolver:Landroid/content/ContentResolver;
 
     return-object v0
@@ -397,7 +360,6 @@
     .param p0, "x0"    # I
 
     .prologue
-    .line 43
     invoke-static {p0}, Lcom/android/server/TactileAssistSettings;->getActuatorTypeString(I)Ljava/lang/String;
 
     move-result-object v0
@@ -414,7 +376,6 @@
     .param p4, "x4"    # I
 
     .prologue
-    .line 43
     invoke-direct {p0, p1, p2, p3, p4}, Lcom/android/server/TactileAssistSettings;->storeLevels(IIII)V
 
     return-void
@@ -425,54 +386,43 @@
     .param p0, "actuatorType"    # I
 
     .prologue
-    .line 256
     const-string v0, ""
 
-    .line 258
     .local v0, "retVal":Ljava/lang/String;
     if-nez p0, :cond_0
 
-    .line 259
     const-string v0, "erm"
 
-    .line 271
     :goto_0
     return-object v0
 
-    .line 260
     :cond_0
     const/16 v1, 0x8
 
     if-ne p0, v1, :cond_1
 
-    .line 261
-    const-string/jumbo v0, "slow_erm"
+    const-string v0, "slow_erm"
 
     goto :goto_0
 
-    .line 262
     :cond_1
     const/4 v1, 0x2
 
     if-ne p0, v1, :cond_2
 
-    .line 263
     const-string v0, "lra"
 
     goto :goto_0
 
-    .line 264
     :cond_2
     const/4 v1, 0x4
 
     if-ne p0, v1, :cond_3
 
-    .line 265
-    const-string/jumbo v0, "piezo"
+    const-string v0, "piezo"
 
     goto :goto_0
 
-    .line 267
     :cond_3
     const-string v1, "TactileAssist"
 
@@ -488,42 +438,35 @@
     .param p0, "context"    # Landroid/content/Context;
 
     .prologue
-    .line 121
     sget-object v0, Lcom/android/server/TactileAssistSettings;->instance:Lcom/android/server/TactileAssistSettings;
 
     if-nez v0, :cond_1
 
-    .line 122
     const-class v1, Lcom/android/server/TactileAssistSettings;
 
     monitor-enter v1
 
-    .line 123
     :try_start_0
     sget-object v0, Lcom/android/server/TactileAssistSettings;->instance:Lcom/android/server/TactileAssistSettings;
 
     if-nez v0, :cond_0
 
-    .line 124
     new-instance v0, Lcom/android/server/TactileAssistSettings;
 
     invoke-direct {v0, p0}, Lcom/android/server/TactileAssistSettings;-><init>(Landroid/content/Context;)V
 
     sput-object v0, Lcom/android/server/TactileAssistSettings;->instance:Lcom/android/server/TactileAssistSettings;
 
-    .line 126
     :cond_0
     monitor-exit v1
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 128
     :cond_1
     sget-object v0, Lcom/android/server/TactileAssistSettings;->instance:Lcom/android/server/TactileAssistSettings;
 
     return-object v0
 
-    .line 126
     :catchall_0
     move-exception v0
 
@@ -542,20 +485,17 @@
     .param p2, "riseTime"    # I
 
     .prologue
-    .line 487
     const/16 v2, 0x9
 
     new-array v11, v2, [I
 
     fill-array-data v11, :array_0
 
-    .line 500
     .local v11, "lookuptable":[I
     const/16 v2, 0xa
 
     new-array v12, v2, [I
 
-    .line 501
     .local v12, "riseTimeStrength":[I
     const/4 v10, 0x0
 
@@ -565,25 +505,21 @@
 
     if-ge v10, v2, :cond_0
 
-    .line 502
     aget v2, v11, v10
 
     aput v2, v12, v10
 
-    .line 503
     aget v2, v12, v10
 
     move/from16 v0, p1
 
     if-gt v0, v2, :cond_1
 
-    .line 507
     :cond_0
     const/4 v2, 0x1
 
     if-ge v10, v2, :cond_2
 
-    .line 508
     const-wide/16 v2, 0x0
 
     const-wide/16 v4, 0x0
@@ -600,7 +536,6 @@
 
     move-result-wide v14
 
-    .line 518
     .local v14, "time":D
     :goto_1
     move/from16 v0, p2
@@ -609,12 +544,10 @@
 
     mul-double/2addr v14, v2
 
-    .line 519
     const-wide/high16 v2, 0x4024000000000000L    # 10.0
 
     div-double/2addr v14, v2
 
-    .line 520
     const-wide/high16 v2, 0x3fe0000000000000L    # 0.5
 
     add-double/2addr v2, v14
@@ -623,20 +556,17 @@
 
     return v2
 
-    .line 501
     .end local v14    # "time":D
     :cond_1
     add-int/lit8 v10, v10, 0x1
 
     goto :goto_0
 
-    .line 509
     :cond_2
     const/16 v2, 0x8
 
     if-le v10, v2, :cond_3
 
-    .line 510
     const/16 v2, 0x8
 
     aget v2, v12, v2
@@ -658,7 +588,6 @@
     .restart local v14    # "time":D
     goto :goto_1
 
-    .line 512
     .end local v14    # "time":D
     :cond_3
     add-int/lit8 v2, v10, -0x1
@@ -684,7 +613,6 @@
     .restart local v14    # "time":D
     goto :goto_1
 
-    .line 487
     nop
 
     :array_0
@@ -714,7 +642,6 @@
 
     const-wide v2, 0x3f50624dd2f1a9fcL    # 0.001
 
-    .line 525
     int-to-double v0, p7
 
     sub-double/2addr v0, p0
@@ -748,17 +675,14 @@
 
     if-gez v0, :cond_3
 
-    .line 528
     :cond_1
     const-wide/high16 p2, -0x4010000000000000L    # -1.0
 
-    .line 532
     .end local p2    # "y1":D
     :cond_2
     :goto_0
     return-wide p2
 
-    .line 530
     .restart local p2    # "y1":D
     :cond_3
     int-to-double v0, p7
@@ -773,7 +697,6 @@
 
     if-lez v0, :cond_2
 
-    .line 531
     sub-int v0, p4, p7
 
     invoke-static {v0}, Ljava/lang/Math;->abs(I)I
@@ -790,7 +713,6 @@
 
     goto :goto_0
 
-    .line 532
     :cond_4
     sub-double v0, p5, p2
 
@@ -817,7 +739,6 @@
     .param p1, "pkgName"    # Ljava/lang/String;
 
     .prologue
-    .line 455
     const/16 v4, 0x8
 
     :try_start_0
@@ -825,13 +746,11 @@
 
     move-result-object v3
 
-    .line 456
     .local v3, "pi":Landroid/content/pm/PackageInfo;
     iget-object v4, v3, Landroid/content/pm/PackageInfo;->providers:[Landroid/content/pm/ProviderInfo;
 
     if-eqz v4, :cond_1
 
-    .line 457
     const/4 v2, 0x0
 
     .local v2, "i":I
@@ -842,14 +761,12 @@
 
     if-ge v2, v4, :cond_1
 
-    .line 458
     iget-object v4, v3, Landroid/content/pm/PackageInfo;->providers:[Landroid/content/pm/ProviderInfo;
 
     aget-object v4, v4, v2
 
     iget-object v0, v4, Landroid/content/pm/ProviderInfo;->authority:Ljava/lang/String;
 
-    .line 459
     .local v0, "authority":Ljava/lang/String;
     if-eqz v0, :cond_0
 
@@ -863,17 +780,14 @@
 
     if-eqz v4, :cond_0
 
-    .line 461
     const/4 v4, 0x1
 
-    .line 469
     .end local v0    # "authority":Ljava/lang/String;
     .end local v2    # "i":I
     .end local v3    # "pi":Landroid/content/pm/PackageInfo;
     :goto_1
     return v4
 
-    .line 457
     .restart local v0    # "authority":Ljava/lang/String;
     .restart local v2    # "i":I
     .restart local v3    # "pi":Landroid/content/pm/PackageInfo;
@@ -882,14 +796,12 @@
 
     goto :goto_0
 
-    .line 465
     .end local v0    # "authority":Ljava/lang/String;
     .end local v2    # "i":I
     .end local v3    # "pi":Landroid/content/pm/PackageInfo;
     :catch_0
     move-exception v1
 
-    .line 466
     .local v1, "ex":Landroid/content/pm/PackageManager$NameNotFoundException;
     const-string v4, "TactileAssist"
 
@@ -919,7 +831,6 @@
 
     invoke-static {v4, v5}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 469
     .end local v1    # "ex":Landroid/content/pm/PackageManager$NameNotFoundException;
     :cond_1
     const/4 v4, 0x0
@@ -936,36 +847,30 @@
 
     const/4 v1, 0x0
 
-    .line 473
     const/4 v0, 0x0
 
     .local v0, "i":I
     :goto_0
     if-ge v0, v3, :cond_2
 
-    .line 474
     aget v2, p0, v0
 
     if-eqz v2, :cond_1
 
-    .line 481
     :cond_0
     :goto_1
     return v1
 
-    .line 473
     :cond_1
     add-int/lit8 v0, v0, 0x1
 
     goto :goto_0
 
-    .line 478
     :cond_2
     aget v2, p0, v3
 
     if-eqz v2, :cond_0
 
-    .line 481
     const/4 v1, 0x1
 
     goto :goto_1
@@ -978,31 +883,26 @@
     .prologue
     const/4 v12, 0x4
 
-    .line 413
     sget-object v10, Lcom/android/server/TactileAssistSettings;->mContext:Landroid/content/Context;
 
     invoke-virtual {v10}, Landroid/content/Context;->getPackageManager()Landroid/content/pm/PackageManager;
 
     move-result-object v8
 
-    .line 414
     .local v8, "pm":Landroid/content/pm/PackageManager;
     if-eqz v8, :cond_3
 
     if-eqz p0, :cond_3
 
-    .line 416
     invoke-virtual {v8, v12}, Landroid/content/pm/PackageManager;->getInstalledPackages(I)Ljava/util/List;
 
     move-result-object v6
 
-    .line 417
     .local v6, "packageInfo":Ljava/util/List;, "Ljava/util/List<Landroid/content/pm/PackageInfo;>;"
     invoke-interface {v6}, Ljava/util/List;->iterator()Ljava/util/Iterator;
 
     move-result-object v4
 
-    .line 419
     .local v4, "it":Ljava/util/Iterator;, "Ljava/util/Iterator<Landroid/content/pm/PackageInfo;>;"
     const-string v10, "TactileAssist"
 
@@ -1012,14 +912,12 @@
 
     if-eqz v10, :cond_0
 
-    .line 420
     const-string v10, "TactileAssist"
 
     const-string v11, "List of disabled apps :"
 
     invoke-static {v10, v11}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 422
     :cond_0
     invoke-interface {v4}, Ljava/util/Iterator;->hasNext()Z
 
@@ -1027,14 +925,12 @@
 
     if-eqz v10, :cond_3
 
-    .line 423
     invoke-interface {v4}, Ljava/util/Iterator;->next()Ljava/lang/Object;
 
     move-result-object v0
 
     check-cast v0, Landroid/content/pm/PackageInfo;
 
-    .line 425
     .local v0, "ai":Landroid/content/pm/PackageInfo;
     iget-object v10, v0, Landroid/content/pm/PackageInfo;->applicationInfo:Landroid/content/pm/ApplicationInfo;
 
@@ -1044,10 +940,8 @@
 
     if-nez v10, :cond_0
 
-    .line 427
     iget-object v7, v0, Landroid/content/pm/PackageInfo;->packageName:Ljava/lang/String;
 
-    .line 429
     .local v7, "pkgname":Ljava/lang/String;
     invoke-static {v8, v7}, Lcom/android/server/TactileAssistSettings;->isHapticThemePackage(Landroid/content/pm/PackageManager;Ljava/lang/String;)Z
 
@@ -1055,7 +949,6 @@
 
     if-nez v10, :cond_0
 
-    .line 432
     const-string v10, "android.permission.VIBRATE"
 
     invoke-virtual {v8, v10, v7}, Landroid/content/pm/PackageManager;->checkPermission(Ljava/lang/String;Ljava/lang/String;)I
@@ -1066,12 +959,10 @@
 
     const/4 v2, 0x1
 
-    .line 435
     .local v2, "hasVibPerm":Z
     :goto_0
     if-eqz v2, :cond_0
 
-    .line 437
     const-string v10, "TactileAssist"
 
     invoke-static {v10, v12}, Landroid/util/Log;->isLoggable(Ljava/lang/String;I)Z
@@ -1080,23 +971,19 @@
 
     if-eqz v10, :cond_1
 
-    .line 438
     const-string v10, "TactileAssist"
 
     invoke-static {v10, v7}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 440
     :cond_1
     const-string v10, "disabled"
 
     invoke-interface {p0, v7, v10}, Landroid/content/SharedPreferences$Editor;->putString(Ljava/lang/String;Ljava/lang/String;)Landroid/content/SharedPreferences$Editor;
 
-    .line 442
     iget-object v10, v0, Landroid/content/pm/PackageInfo;->services:[Landroid/content/pm/ServiceInfo;
 
     if-eqz v10, :cond_0
 
-    .line 443
     iget-object v1, v0, Landroid/content/pm/PackageInfo;->services:[Landroid/content/pm/ServiceInfo;
 
     .local v1, "arr$":[Landroid/content/pm/ServiceInfo;
@@ -1111,7 +998,6 @@
 
     aget-object v9, v1, v3
 
-    .line 444
     .local v9, "si":Landroid/content/pm/ServiceInfo;
     iget-object v10, v9, Landroid/content/pm/ServiceInfo;->name:Ljava/lang/String;
 
@@ -1119,12 +1005,10 @@
 
     invoke-interface {p0, v10, v11}, Landroid/content/SharedPreferences$Editor;->putString(Ljava/lang/String;Ljava/lang/String;)Landroid/content/SharedPreferences$Editor;
 
-    .line 443
     add-int/lit8 v3, v3, 0x1
 
     goto :goto_1
 
-    .line 432
     .end local v1    # "arr$":[Landroid/content/pm/ServiceInfo;
     .end local v2    # "hasVibPerm":Z
     .end local v3    # "i$":I
@@ -1135,7 +1019,6 @@
 
     goto :goto_0
 
-    .line 450
     .end local v0    # "ai":Landroid/content/pm/PackageInfo;
     .end local v4    # "it":Ljava/util/Iterator;, "Ljava/util/Iterator<Landroid/content/pm/PackageInfo;>;"
     .end local v6    # "packageInfo":Ljava/util/List;, "Ljava/util/List<Landroid/content/pm/PackageInfo;>;"
@@ -1152,7 +1035,6 @@
     .param p4, "sharpness"    # I
 
     .prologue
-    .line 393
     monitor-enter p0
 
     :try_start_0
@@ -1166,7 +1048,6 @@
 
     if-eqz v1, :cond_0
 
-    .line 394
     const-string v1, "TactileAssist"
 
     new-instance v2, Ljava/lang/StringBuilder;
@@ -1189,14 +1070,13 @@
 
     invoke-static {v1, v2}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 395
     const-string v1, "TactileAssist"
 
     new-instance v2, Ljava/lang/StringBuilder;
 
     invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v3, "strength value "
+    const-string v3, "strength value "
 
     invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -1212,7 +1092,6 @@
 
     invoke-static {v1, v2}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 396
     const-string v1, "TactileAssist"
 
     new-instance v2, Ljava/lang/StringBuilder;
@@ -1235,14 +1114,13 @@
 
     invoke-static {v1, v2}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 397
     const-string v1, "TactileAssist"
 
     new-instance v2, Ljava/lang/StringBuilder;
 
     invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v3, "sharpness value "
+    const-string v3, "sharpness value "
 
     invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -1258,7 +1136,6 @@
 
     invoke-static {v1, v2}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 400
     :cond_0
     sget-object v1, Lcom/android/server/TactileAssistSettings;->sharedPrefs:Landroid/content/SharedPreferences;
 
@@ -1266,13 +1143,12 @@
 
     move-result-object v0
 
-    .line 402
     .local v0, "ed":Landroid/content/SharedPreferences$Editor;
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v2, "strength_"
+    const-string v2, "strength_"
 
     invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -1292,7 +1168,6 @@
 
     invoke-interface {v0, v1, p2}, Landroid/content/SharedPreferences$Editor;->putInt(Ljava/lang/String;I)Landroid/content/SharedPreferences$Editor;
 
-    .line 404
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
@@ -1317,12 +1192,11 @@
 
     invoke-interface {v0, v1, p3}, Landroid/content/SharedPreferences$Editor;->putInt(Ljava/lang/String;I)Landroid/content/SharedPreferences$Editor;
 
-    .line 406
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v2, "sharpness_"
+    const-string v2, "sharpness_"
 
     invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -1342,17 +1216,14 @@
 
     invoke-interface {v0, v1, p4}, Landroid/content/SharedPreferences$Editor;->putInt(Ljava/lang/String;I)Landroid/content/SharedPreferences$Editor;
 
-    .line 409
     invoke-interface {v0}, Landroid/content/SharedPreferences$Editor;->commit()Z
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 410
     monitor-exit p0
 
     return-void
 
-    .line 393
     .end local v0    # "ed":Landroid/content/SharedPreferences$Editor;
     :catchall_0
     move-exception v1
@@ -1368,7 +1239,6 @@
     .locals 1
 
     .prologue
-    .line 275
     sget-object v0, Lcom/android/server/TactileAssistSettings;->mActuators:[I
 
     return-object v0
@@ -1382,7 +1252,6 @@
     .param p4, "saveAppList"    # Z
 
     .prologue
-    .line 291
     monitor-enter p0
 
     :try_start_0
@@ -1396,7 +1265,6 @@
 
     if-eqz v5, :cond_0
 
-    .line 292
     const-string v5, "TactileAssist"
 
     new-instance v8, Ljava/lang/StringBuilder;
@@ -1419,7 +1287,6 @@
 
     invoke-static {v5, v8}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 293
     const-string v5, "TactileAssist"
 
     new-instance v8, Ljava/lang/StringBuilder;
@@ -1442,7 +1309,6 @@
 
     invoke-static {v5, v8}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 294
     const-string v5, "TactileAssist"
 
     new-instance v8, Ljava/lang/StringBuilder;
@@ -1465,14 +1331,13 @@
 
     invoke-static {v5, v8}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 295
     const-string v5, "TactileAssist"
 
     new-instance v8, Ljava/lang/StringBuilder;
 
     invoke-direct {v8}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v9, "saveAppList value "
+    const-string v9, "saveAppList value "
 
     invoke-virtual {v8, v9}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -1488,7 +1353,6 @@
 
     invoke-static {v5, v8}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 297
     :cond_0
     sget-object v5, Lcom/android/server/TactileAssistSettings;->sharedPrefs:Landroid/content/SharedPreferences;
 
@@ -1496,13 +1360,11 @@
 
     move-result-object v1
 
-    .line 299
     .local v1, "ed":Landroid/content/SharedPreferences$Editor;
     const/4 v5, -0x1
 
     if-eq p1, v5, :cond_1
 
-    .line 300
     const-string v8, "enable"
 
     if-nez p1, :cond_b
@@ -1512,13 +1374,11 @@
     :goto_0
     invoke-interface {v1, v8, v5}, Landroid/content/SharedPreferences$Editor;->putBoolean(Ljava/lang/String;Z)Landroid/content/SharedPreferences$Editor;
 
-    .line 303
     :cond_1
     const/4 v5, -0x1
 
     if-eq p2, v5, :cond_2
 
-    .line 304
     const-string v8, "internal_enable"
 
     if-nez p2, :cond_c
@@ -1530,11 +1390,9 @@
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 308
     :cond_2
     if-eqz p4, :cond_5
 
-    .line 313
     :try_start_1
     sget-object v5, Lcom/android/server/TactileAssistSettings;->sharedPrefs:Landroid/content/SharedPreferences;
 
@@ -1542,7 +1400,6 @@
 
     move-result-object v3
 
-    .line 315
     .local v3, "items":Ljava/util/Map;, "Ljava/util/Map<Ljava/lang/String;*>;"
     invoke-interface {v3}, Ljava/util/Map;->keySet()Ljava/util/Set;
 
@@ -1567,7 +1424,6 @@
 
     check-cast v4, Ljava/lang/String;
 
-    .line 316
     .local v4, "s":Ljava/lang/String;
     invoke-interface {v3, v4}, Ljava/util/Map;->get(Ljava/lang/Object;)Ljava/lang/Object;
 
@@ -1585,7 +1441,6 @@
 
     if-eqz v5, :cond_3
 
-    .line 317
     invoke-interface {v1, v4}, Landroid/content/SharedPreferences$Editor;->remove(Ljava/lang/String;)Landroid/content/SharedPreferences$Editor;
     :try_end_1
     .catch Ljava/lang/Exception; {:try_start_1 .. :try_end_1} :catch_0
@@ -1593,14 +1448,12 @@
 
     goto :goto_2
 
-    .line 320
     .end local v2    # "i$":Ljava/util/Iterator;
     .end local v3    # "items":Ljava/util/Map;, "Ljava/util/Map<Ljava/lang/String;*>;"
     .end local v4    # "s":Ljava/lang/String;
     :catch_0
     move-exception v0
 
-    .line 321
     .local v0, "e":Ljava/lang/Exception;
     :try_start_2
     const-string v5, "TactileAssist"
@@ -1613,19 +1466,16 @@
 
     if-eqz v5, :cond_4
 
-    .line 322
     const-string v5, "TactileAssist"
 
     const-string v8, "Unable to cleanup the list of disabled apk."
 
     invoke-static {v5, v8}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 325
     .end local v0    # "e":Ljava/lang/Exception;
     :cond_4
     invoke-static {v1}, Lcom/android/server/TactileAssistSettings;->storeAppList(Landroid/content/SharedPreferences$Editor;)V
 
-    .line 331
     :cond_5
     const-string v5, "android.process.acore"
 
@@ -1633,76 +1483,64 @@
 
     invoke-interface {v1, v5, v8}, Landroid/content/SharedPreferences$Editor;->putString(Ljava/lang/String;Ljava/lang/String;)Landroid/content/SharedPreferences$Editor;
 
-    .line 332
-    const-string/jumbo v5, "system_server"
+    const-string v5, "system_server"
 
     const-string v8, "disabled"
 
     invoke-interface {v1, v5, v8}, Landroid/content/SharedPreferences$Editor;->putString(Ljava/lang/String;Ljava/lang/String;)Landroid/content/SharedPreferences$Editor;
 
-    .line 333
     const-string v5, "com.android.contacts"
 
     const-string v8, "disabled"
 
     invoke-interface {v1, v5, v8}, Landroid/content/SharedPreferences$Editor;->putString(Ljava/lang/String;Ljava/lang/String;)Landroid/content/SharedPreferences$Editor;
 
-    .line 334
     const-string v5, "com.android.camera"
 
     const-string v8, "disabled"
 
     invoke-interface {v1, v5, v8}, Landroid/content/SharedPreferences$Editor;->putString(Ljava/lang/String;Ljava/lang/String;)Landroid/content/SharedPreferences$Editor;
 
-    .line 335
     const-string v5, "com.android.gallery3d"
 
     const-string v8, "disabled"
 
     invoke-interface {v1, v5, v8}, Landroid/content/SharedPreferences$Editor;->putString(Ljava/lang/String;Ljava/lang/String;)Landroid/content/SharedPreferences$Editor;
 
-    .line 336
     const-string v5, "com.android.launcher"
 
     const-string v8, "disabled"
 
     invoke-interface {v1, v5, v8}, Landroid/content/SharedPreferences$Editor;->putString(Ljava/lang/String;Ljava/lang/String;)Landroid/content/SharedPreferences$Editor;
 
-    .line 337
     const-string v5, "com.google.android.tts"
 
     const-string v8, "disabled"
 
     invoke-interface {v1, v5, v8}, Landroid/content/SharedPreferences$Editor;->putString(Ljava/lang/String;Ljava/lang/String;)Landroid/content/SharedPreferences$Editor;
 
-    .line 338
     const-string v5, "com.google.android.marvin.talkback"
 
     const-string v8, "disabled"
 
     invoke-interface {v1, v5, v8}, Landroid/content/SharedPreferences$Editor;->putString(Ljava/lang/String;Ljava/lang/String;)Landroid/content/SharedPreferences$Editor;
 
-    .line 339
     const-string v5, "com.svox.pico"
 
     const-string v8, "disabled"
 
     invoke-interface {v1, v5, v8}, Landroid/content/SharedPreferences$Editor;->putString(Ljava/lang/String;Ljava/lang/String;)Landroid/content/SharedPreferences$Editor;
 
-    .line 341
     invoke-interface {v1}, Landroid/content/SharedPreferences$Editor;->commit()Z
 
-    .line 344
     const/4 v5, -0x1
 
     if-eq p3, v5, :cond_a
 
-    .line 345
     invoke-static {}, Landroid/os/Binder;->clearCallingIdentity()J
 
     move-result-wide v6
 
-    .line 346
     .local v6, "token":J
     sget-object v5, Lcom/android/server/TactileAssistSettings;->mActuators:[I
 
@@ -1714,7 +1552,6 @@
 
     if-eq v5, v8, :cond_6
 
-    .line 347
     sget-object v5, Lcom/android/server/TactileAssistSettings;->mContentResolver:Landroid/content/ContentResolver;
 
     const-string v8, "def_tactileassist_density_erm"
@@ -1731,7 +1568,6 @@
 
     invoke-static {v5, v8, v9}, Landroid/provider/Settings$Global;->putInt(Landroid/content/ContentResolver;Ljava/lang/String;I)Z
 
-    .line 349
     sget-object v5, Lcom/android/server/TactileAssistSettings;->mContentResolver:Landroid/content/ContentResolver;
 
     const-string v8, "def_tactileassist_strength_erm"
@@ -1748,7 +1584,6 @@
 
     invoke-static {v5, v8, v9}, Landroid/provider/Settings$Global;->putInt(Landroid/content/ContentResolver;Ljava/lang/String;I)Z
 
-    .line 351
     sget-object v5, Lcom/android/server/TactileAssistSettings;->mContentResolver:Landroid/content/ContentResolver;
 
     const-string v8, "def_tactileassist_sharpness_erm"
@@ -1765,7 +1600,6 @@
 
     invoke-static {v5, v8, v9}, Landroid/provider/Settings$Global;->putInt(Landroid/content/ContentResolver;Ljava/lang/String;I)Z
 
-    .line 354
     :cond_6
     sget-object v5, Lcom/android/server/TactileAssistSettings;->mActuators:[I
 
@@ -1777,7 +1611,6 @@
 
     if-eq v5, v8, :cond_7
 
-    .line 355
     sget-object v5, Lcom/android/server/TactileAssistSettings;->mContentResolver:Landroid/content/ContentResolver;
 
     const-string v8, "def_tactileassist_density_serm"
@@ -1794,7 +1627,6 @@
 
     invoke-static {v5, v8, v9}, Landroid/provider/Settings$Global;->putInt(Landroid/content/ContentResolver;Ljava/lang/String;I)Z
 
-    .line 357
     sget-object v5, Lcom/android/server/TactileAssistSettings;->mContentResolver:Landroid/content/ContentResolver;
 
     const-string v8, "def_tactileassist_strength_serm"
@@ -1811,7 +1643,6 @@
 
     invoke-static {v5, v8, v9}, Landroid/provider/Settings$Global;->putInt(Landroid/content/ContentResolver;Ljava/lang/String;I)Z
 
-    .line 359
     sget-object v5, Lcom/android/server/TactileAssistSettings;->mContentResolver:Landroid/content/ContentResolver;
 
     const-string v8, "def_tactileassist_sharpness_serm"
@@ -1828,7 +1659,6 @@
 
     invoke-static {v5, v8, v9}, Landroid/provider/Settings$Global;->putInt(Landroid/content/ContentResolver;Ljava/lang/String;I)Z
 
-    .line 362
     :cond_7
     sget-object v5, Lcom/android/server/TactileAssistSettings;->mActuators:[I
 
@@ -1840,7 +1670,6 @@
 
     if-eq v5, v8, :cond_8
 
-    .line 363
     sget-object v5, Lcom/android/server/TactileAssistSettings;->mContentResolver:Landroid/content/ContentResolver;
 
     const-string v8, "def_tactileassist_density_lra"
@@ -1857,7 +1686,6 @@
 
     invoke-static {v5, v8, v9}, Landroid/provider/Settings$Global;->putInt(Landroid/content/ContentResolver;Ljava/lang/String;I)Z
 
-    .line 365
     sget-object v5, Lcom/android/server/TactileAssistSettings;->mContentResolver:Landroid/content/ContentResolver;
 
     const-string v8, "def_tactileassist_strength_lra"
@@ -1874,7 +1702,6 @@
 
     invoke-static {v5, v8, v9}, Landroid/provider/Settings$Global;->putInt(Landroid/content/ContentResolver;Ljava/lang/String;I)Z
 
-    .line 367
     sget-object v5, Lcom/android/server/TactileAssistSettings;->mContentResolver:Landroid/content/ContentResolver;
 
     const-string v8, "def_tactileassist_sharpness_lra"
@@ -1891,7 +1718,6 @@
 
     invoke-static {v5, v8, v9}, Landroid/provider/Settings$Global;->putInt(Landroid/content/ContentResolver;Ljava/lang/String;I)Z
 
-    .line 370
     :cond_8
     sget-object v5, Lcom/android/server/TactileAssistSettings;->mActuators:[I
 
@@ -1903,7 +1729,6 @@
 
     if-eq v5, v8, :cond_9
 
-    .line 371
     sget-object v5, Lcom/android/server/TactileAssistSettings;->mContentResolver:Landroid/content/ContentResolver;
 
     const-string v8, "def_tactileassist_density_pzo"
@@ -1920,7 +1745,6 @@
 
     invoke-static {v5, v8, v9}, Landroid/provider/Settings$Global;->putInt(Landroid/content/ContentResolver;Ljava/lang/String;I)Z
 
-    .line 373
     sget-object v5, Lcom/android/server/TactileAssistSettings;->mContentResolver:Landroid/content/ContentResolver;
 
     const-string v8, "def_tactileassist_strength_pzo"
@@ -1937,7 +1761,6 @@
 
     invoke-static {v5, v8, v9}, Landroid/provider/Settings$Global;->putInt(Landroid/content/ContentResolver;Ljava/lang/String;I)Z
 
-    .line 375
     sget-object v5, Lcom/android/server/TactileAssistSettings;->mContentResolver:Landroid/content/ContentResolver;
 
     const-string v8, "def_tactileassist_sharpness_pzo"
@@ -1954,32 +1777,27 @@
 
     invoke-static {v5, v8, v9}, Landroid/provider/Settings$Global;->putInt(Landroid/content/ContentResolver;Ljava/lang/String;I)Z
 
-    .line 378
     :cond_9
     invoke-static {v6, v7}, Landroid/os/Binder;->restoreCallingIdentity(J)V
     :try_end_2
     .catchall {:try_start_2 .. :try_end_2} :catchall_0
 
-    .line 381
     .end local v6    # "token":J
     :cond_a
     monitor-exit p0
 
     return-void
 
-    .line 300
     :cond_b
     const/4 v5, 0x1
 
     goto/16 :goto_0
 
-    .line 304
     :cond_c
     const/4 v5, 0x1
 
     goto/16 :goto_1
 
-    .line 291
     .end local v1    # "ed":Landroid/content/SharedPreferences$Editor;
     :catchall_0
     move-exception v5

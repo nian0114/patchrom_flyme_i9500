@@ -23,7 +23,6 @@
     .locals 0
 
     .prologue
-    .line 5039
     iput-object p1, p0, Lcom/android/server/ConnectivityService$6;->this$0:Lcom/android/server/ConnectivityService;
 
     invoke-direct {p0}, Landroid/content/BroadcastReceiver;-><init>()V
@@ -41,12 +40,10 @@
     .prologue
     const/16 v3, -0x2710
 
-    .line 5042
     invoke-virtual {p2}, Landroid/content/Intent;->getAction()Ljava/lang/String;
 
     move-result-object v0
 
-    .line 5043
     .local v0, "action":Ljava/lang/String;
     const-string v2, "android.intent.extra.user_handle"
 
@@ -54,16 +51,13 @@
 
     move-result v1
 
-    .line 5044
     .local v1, "userId":I
     if-ne v1, v3, :cond_1
 
-    .line 5058
     :cond_0
     :goto_0
     return-void
 
-    .line 5046
     :cond_1
     const-string v2, "android.intent.action.USER_STARTING"
 
@@ -73,7 +67,6 @@
 
     if-eqz v2, :cond_2
 
-    .line 5047
     const-string v2, "ConnectivityService"
 
     new-instance v3, Ljava/lang/StringBuilder;
@@ -96,7 +89,6 @@
 
     invoke-static {v2, v3}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 5048
     iget-object v2, p0, Lcom/android/server/ConnectivityService$6;->this$0:Lcom/android/server/ConnectivityService;
 
     # invokes: Lcom/android/server/ConnectivityService;->onUserStart(I)V
@@ -104,7 +96,6 @@
 
     goto :goto_0
 
-    .line 5049
     :cond_2
     const-string v2, "android.intent.action.USER_STOPPING"
 
@@ -114,7 +105,6 @@
 
     if-eqz v2, :cond_3
 
-    .line 5050
     iget-object v2, p0, Lcom/android/server/ConnectivityService$6;->this$0:Lcom/android/server/ConnectivityService;
 
     # invokes: Lcom/android/server/ConnectivityService;->onUserStop(I)V
@@ -122,7 +112,6 @@
 
     goto :goto_0
 
-    .line 5053
     :cond_3
     const-string v2, "android.intent.action.USER_STARTED"
 
@@ -132,7 +121,6 @@
 
     if-eqz v2, :cond_0
 
-    .line 5054
     const-string v2, "ConnectivityService"
 
     new-instance v3, Ljava/lang/StringBuilder;
@@ -155,7 +143,6 @@
 
     invoke-static {v2, v3}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 5055
     iget-object v2, p0, Lcom/android/server/ConnectivityService$6;->this$0:Lcom/android/server/ConnectivityService;
 
     # invokes: Lcom/android/server/ConnectivityService;->onUserStart(I)V

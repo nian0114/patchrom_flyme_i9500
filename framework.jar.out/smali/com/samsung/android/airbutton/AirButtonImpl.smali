@@ -66,10 +66,8 @@
     .param p2, "enabled"    # Z
 
     .prologue
-    .line 129
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 130
     return-void
 .end method
 
@@ -80,12 +78,10 @@
     .param p3, "UIType"    # I
 
     .prologue
-    .line 139
     const/4 v0, 0x1
 
     invoke-direct {p0, p1, p2, p3, v0}, Lcom/samsung/android/airbutton/AirButtonImpl;-><init>(Landroid/view/View;Lcom/samsung/android/sdk/look/airbutton/SlookAirButtonAdapter;IZ)V
 
-    .line 140
     return-void
 .end method
 
@@ -97,10 +93,8 @@
     .param p4, "enabled"    # Z
 
     .prologue
-    .line 149
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 150
     return-void
 .end method
 
@@ -110,7 +104,6 @@
     .locals 0
 
     .prologue
-    .line 242
     return-void
 .end method
 
@@ -118,7 +111,6 @@
     .locals 0
 
     .prologue
-    .line 234
     return-void
 .end method
 
@@ -126,7 +118,6 @@
     .locals 0
 
     .prologue
-    .line 238
     return-void
 .end method
 
@@ -134,7 +125,6 @@
     .locals 1
 
     .prologue
-    .line 433
     const/4 v0, 0x0
 
     return-object v0
@@ -144,7 +134,6 @@
     .locals 1
 
     .prologue
-    .line 329
     const/4 v0, -0x1
 
     return v0
@@ -154,7 +143,6 @@
     .locals 1
 
     .prologue
-    .line 317
     const/4 v0, -0x1
 
     return v0
@@ -164,7 +152,6 @@
     .locals 1
 
     .prologue
-    .line 438
     const/4 v0, 0x0
 
     return-object v0
@@ -174,7 +161,6 @@
     .locals 0
 
     .prologue
-    .line 228
     return-void
 .end method
 
@@ -182,7 +168,6 @@
     .locals 0
 
     .prologue
-    .line 253
     return-void
 .end method
 
@@ -190,7 +175,6 @@
     .locals 0
 
     .prologue
-    .line 277
     return-void
 .end method
 
@@ -198,7 +182,6 @@
     .locals 1
 
     .prologue
-    .line 257
     const/4 v0, 0x0
 
     return v0
@@ -208,7 +191,6 @@
     .locals 1
 
     .prologue
-    .line 382
     const/4 v0, 0x0
 
     return v0
@@ -218,7 +200,6 @@
     .locals 1
 
     .prologue
-    .line 267
     const/4 v0, 0x0
 
     return v0
@@ -228,7 +209,6 @@
     .locals 1
 
     .prologue
-    .line 290
     const/4 v0, 0x0
 
     return v0
@@ -238,7 +218,6 @@
     .locals 1
 
     .prologue
-    .line 413
     const/4 v0, 0x0
 
     return v0
@@ -248,7 +227,6 @@
     .locals 1
 
     .prologue
-    .line 398
     const/4 v0, 0x0
 
     return v0
@@ -258,7 +236,6 @@
     .locals 1
 
     .prologue
-    .line 352
     const/4 v0, 0x0
 
     return v0
@@ -268,7 +245,6 @@
     .locals 1
 
     .prologue
-    .line 272
     const/4 v0, 0x0
 
     return v0
@@ -278,7 +254,6 @@
     .locals 1
 
     .prologue
-    .line 367
     const/4 v0, 0x0
 
     return v0
@@ -288,7 +263,6 @@
     .locals 1
 
     .prologue
-    .line 390
     const/4 v0, 0x0
 
     return v0
@@ -298,7 +272,6 @@
     .locals 1
 
     .prologue
-    .line 262
     const/4 v0, 0x0
 
     return v0
@@ -308,7 +281,6 @@
     .locals 0
 
     .prologue
-    .line 445
     return-void
 .end method
 
@@ -318,7 +290,6 @@
     .param p2, "event"    # Landroid/view/MotionEvent;
 
     .prologue
-    .line 159
     const/4 v0, 0x0
 
     return v0
@@ -329,7 +300,6 @@
     .param p1, "event"    # Landroid/view/MotionEvent;
 
     .prologue
-    .line 195
     return-void
 .end method
 
@@ -338,7 +308,6 @@
     .param p1, "event"    # Landroid/view/MotionEvent;
 
     .prologue
-    .line 174
     return-void
 .end method
 
@@ -347,7 +316,6 @@
     .param p1, "event"    # Landroid/view/MotionEvent;
 
     .prologue
-    .line 188
     return-void
 .end method
 
@@ -356,7 +324,6 @@
     .param p1, "event"    # Landroid/view/MotionEvent;
 
     .prologue
-    .line 181
     return-void
 .end method
 
@@ -365,7 +332,6 @@
     .param p1, "buttonState"    # I
 
     .prologue
-    .line 164
     return-void
 .end method
 
@@ -374,7 +340,6 @@
     .param p1, "buttonState"    # I
 
     .prologue
-    .line 168
     return-void
 .end method
 
@@ -383,7 +348,6 @@
     .param p1, "adapter"    # Lcom/samsung/android/sdk/look/airbutton/SlookAirButtonAdapter;
 
     .prologue
-    .line 429
     return-void
 .end method
 
@@ -392,7 +356,6 @@
     .param p1, "enable"    # Z
 
     .prologue
-    .line 375
     return-void
 .end method
 
@@ -401,7 +364,6 @@
     .param p1, "direction"    # I
 
     .prologue
-    .line 325
     return-void
 .end method
 
@@ -410,7 +372,6 @@
     .param p1, "enable"    # Z
 
     .prologue
-    .line 283
     return-void
 .end method
 
@@ -419,7 +380,6 @@
     .param p1, "gravity"    # I
 
     .prologue
-    .line 313
     return-void
 .end method
 
@@ -428,7 +388,6 @@
     .param p1, "enable"    # Z
 
     .prologue
-    .line 406
     return-void
 .end method
 
@@ -437,7 +396,6 @@
     .param p1, "enable"    # Z
 
     .prologue
-    .line 345
     return-void
 .end method
 
@@ -446,7 +404,6 @@
     .param p1, "listener"    # Lcom/samsung/android/airbutton/AirButtonImpl$OnItemSelectedListener;
 
     .prologue
-    .line 306
     return-void
 .end method
 
@@ -455,7 +412,6 @@
     .param p1, "listener"    # Lcom/samsung/android/airbutton/AirButtonImpl$OnStateChangedListener;
 
     .prologue
-    .line 299
     return-void
 .end method
 
@@ -464,7 +420,6 @@
     .param p1, "view"    # Landroid/view/View;
 
     .prologue
-    .line 421
     return-void
 .end method
 
@@ -474,7 +429,6 @@
     .param p2, "y"    # I
 
     .prologue
-    .line 338
     return-void
 .end method
 
@@ -483,7 +437,6 @@
     .param p1, "enable"    # Z
 
     .prologue
-    .line 360
     return-void
 .end method
 
@@ -491,7 +444,6 @@
     .locals 0
 
     .prologue
-    .line 207
     return-void
 .end method
 
@@ -501,7 +453,6 @@
     .param p2, "hoverY"    # F
 
     .prologue
-    .line 222
     return-void
 .end method
 
@@ -510,7 +461,6 @@
     .param p1, "event"    # Landroid/view/MotionEvent;
 
     .prologue
-    .line 214
     return-void
 .end method
 
@@ -518,7 +468,6 @@
     .locals 0
 
     .prologue
-    .line 247
     return-void
 .end method
 
@@ -526,6 +475,5 @@
     .locals 0
 
     .prologue
-    .line 452
     return-void
 .end method

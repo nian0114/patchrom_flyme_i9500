@@ -27,17 +27,14 @@
     .locals 2
 
     .prologue
-    .line 545
     iput-object p1, p0, Lcom/android/server/smartclip/SmartClipView$SPenVibrator;->this$0:Lcom/android/server/smartclip/SmartClipView;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 539
     const/4 v0, 0x0
 
     iput-object v0, p0, Lcom/android/server/smartclip/SmartClipView$SPenVibrator;->mVibrator:Landroid/os/SystemVibrator;
 
-    .line 541
     const/16 v0, 0x12
 
     new-array v0, v0, [B
@@ -46,13 +43,12 @@
 
     iput-object v0, p0, Lcom/android/server/smartclip/SmartClipView$SPenVibrator;->mIvt:[B
 
-    .line 546
     # getter for: Lcom/android/server/smartclip/SmartClipView;->mContext:Landroid/content/Context;
     invoke-static {p1}, Lcom/android/server/smartclip/SmartClipView;->access$200(Lcom/android/server/smartclip/SmartClipView;)Landroid/content/Context;
 
     move-result-object v0
 
-    const-string/jumbo v1, "vibrator"
+    const-string v1, "vibrator"
 
     invoke-virtual {v0, v1}, Landroid/content/Context;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
 
@@ -62,10 +58,8 @@
 
     iput-object v0, p0, Lcom/android/server/smartclip/SmartClipView$SPenVibrator;->mVibrator:Landroid/os/SystemVibrator;
 
-    .line 547
     return-void
 
-    .line 541
     nop
 
     :array_0
@@ -97,12 +91,10 @@
     .locals 2
 
     .prologue
-    .line 550
     iget-object v0, p0, Lcom/android/server/smartclip/SmartClipView$SPenVibrator;->mVibrator:Landroid/os/SystemVibrator;
 
     if-nez v0, :cond_0
 
-    .line 551
     iget-object v0, p0, Lcom/android/server/smartclip/SmartClipView$SPenVibrator;->this$0:Lcom/android/server/smartclip/SmartClipView;
 
     # getter for: Lcom/android/server/smartclip/SmartClipView;->mContext:Landroid/content/Context;
@@ -110,7 +102,7 @@
 
     move-result-object v0
 
-    const-string/jumbo v1, "vibrator"
+    const-string v1, "vibrator"
 
     invoke-virtual {v0, v1}, Landroid/content/Context;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
 
@@ -120,7 +112,6 @@
 
     iput-object v0, p0, Lcom/android/server/smartclip/SmartClipView$SPenVibrator;->mVibrator:Landroid/os/SystemVibrator;
 
-    .line 554
     :cond_0
     iget-object v0, p0, Lcom/android/server/smartclip/SmartClipView$SPenVibrator;->this$0:Lcom/android/server/smartclip/SmartClipView;
 
@@ -131,14 +122,12 @@
 
     if-eqz v0, :cond_1
 
-    .line 555
     iget-object v0, p0, Lcom/android/server/smartclip/SmartClipView$SPenVibrator;->mVibrator:Landroid/os/SystemVibrator;
 
     iget-object v1, p0, Lcom/android/server/smartclip/SmartClipView$SPenVibrator;->mIvt:[B
 
     invoke-virtual {v0, v1}, Landroid/os/SystemVibrator;->vibrateImmVibe([B)V
 
-    .line 557
     :cond_1
     return-void
 .end method

@@ -34,12 +34,10 @@
     .locals 1
 
     .prologue
-    .line 917
     iput-object p1, p0, Landroid/media/WFDUibcManager$EventQueue;->this$0:Landroid/media/WFDUibcManager;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 919
     new-instance v0, Ljava/util/concurrent/LinkedBlockingQueue;
 
     invoke-direct {v0}, Ljava/util/concurrent/LinkedBlockingQueue;-><init>()V
@@ -55,7 +53,6 @@
     .param p2, "x1"    # Landroid/media/WFDUibcManager$1;
 
     .prologue
-    .line 917
     invoke-direct {p0, p1}, Landroid/media/WFDUibcManager$EventQueue;-><init>(Landroid/media/WFDUibcManager;)V
 
     return-void
@@ -68,7 +65,6 @@
     .param p1, "ev"    # Landroid/view/InputEvent;
 
     .prologue
-    .line 943
     :try_start_0
     iget-object v1, p0, Landroid/media/WFDUibcManager$EventQueue;->queuedEvents:Ljava/util/concurrent/BlockingQueue;
 
@@ -77,15 +73,12 @@
     .catch Ljava/lang/InterruptedException; {:try_start_0 .. :try_end_0} :catch_0
     .catch Ljava/lang/NullPointerException; {:try_start_0 .. :try_end_0} :catch_1
 
-    .line 949
     :goto_0
     return-void
 
-    .line 944
     :catch_0
     move-exception v0
 
-    .line 945
     .local v0, "e":Ljava/lang/InterruptedException;
     const-string v1, "WFDUibcManager"
 
@@ -95,12 +88,10 @@
 
     goto :goto_0
 
-    .line 946
     .end local v0    # "e":Ljava/lang/InterruptedException;
     :catch_1
     move-exception v0
 
-    .line 947
     .local v0, "e":Ljava/lang/NullPointerException;
     const-string v1, "WFDUibcManager"
 
@@ -117,7 +108,6 @@
     .prologue
     const/4 v2, 0x0
 
-    .line 925
     :try_start_0
     iget-object v3, p0, Landroid/media/WFDUibcManager$EventQueue;->queuedEvents:Ljava/util/concurrent/BlockingQueue;
 
@@ -133,11 +123,9 @@
     :try_end_0
     .catch Ljava/lang/InterruptedException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 926
     .local v1, "queuedEvent":Landroid/view/InputEvent;
     if-eqz v1, :cond_0
 
-    .line 935
     .end local v1    # "queuedEvent":Landroid/view/InputEvent;
     :goto_0
     return-object v1
@@ -146,15 +134,12 @@
     :cond_0
     move-object v1, v2
 
-    .line 931
     goto :goto_0
 
-    .line 933
     .end local v1    # "queuedEvent":Landroid/view/InputEvent;
     :catch_0
     move-exception v0
 
-    .line 934
     .local v0, "e":Ljava/lang/InterruptedException;
     const-string v3, "WFDUibcManager"
 
@@ -164,6 +149,5 @@
 
     move-object v1, v2
 
-    .line 935
     goto :goto_0
 .end method

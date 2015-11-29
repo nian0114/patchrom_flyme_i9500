@@ -32,7 +32,6 @@
     .locals 0
 
     .prologue
-    .line 44
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -45,7 +44,6 @@
     .param p1, "in"    # Landroid/os/Parcel;
 
     .prologue
-    .line 46
     new-instance v0, Landroid/bluetooth/BtUCallbackData;
 
     invoke-direct {v0, p1}, Landroid/bluetooth/BtUCallbackData;-><init>(Landroid/os/Parcel;)V
@@ -58,7 +56,6 @@
     .param p1, "x0"    # Landroid/os/Parcel;
 
     .prologue
-    .line 44
     invoke-virtual {p0, p1}, Landroid/bluetooth/BtUCallbackData$1;->createFromParcel(Landroid/os/Parcel;)Landroid/bluetooth/BtUCallbackData;
 
     move-result-object v0
@@ -71,7 +68,6 @@
     .param p1, "size"    # I
 
     .prologue
-    .line 49
     new-array v0, p1, [Landroid/bluetooth/BtUCallbackData;
 
     return-object v0
@@ -82,7 +78,6 @@
     .param p1, "x0"    # I
 
     .prologue
-    .line 44
     invoke-virtual {p0, p1}, Landroid/bluetooth/BtUCallbackData$1;->newArray(I)[Landroid/bluetooth/BtUCallbackData;
 
     move-result-object v0

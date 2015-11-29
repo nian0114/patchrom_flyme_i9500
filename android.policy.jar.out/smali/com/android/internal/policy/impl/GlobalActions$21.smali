@@ -26,7 +26,6 @@
     .locals 0
 
     .prologue
-    .line 1958
     iput-object p1, p0, Lcom/android/internal/policy/impl/GlobalActions$21;->this$0:Lcom/android/internal/policy/impl/GlobalActions;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -42,7 +41,6 @@
     .param p2, "which"    # I
 
     .prologue
-    .line 1960
     iget-object v0, p0, Lcom/android/internal/policy/impl/GlobalActions$21;->this$0:Lcom/android/internal/policy/impl/GlobalActions;
 
     # getter for: Lcom/android/internal/policy/impl/GlobalActions;->mDataModeToggle:Lcom/android/internal/policy/impl/GlobalActions$ToggleAction;
@@ -52,6 +50,5 @@
 
     invoke-virtual {v0}, Lcom/android/internal/policy/impl/GlobalActions$ToggleAction;->onPressAction()V
 
-    .line 1961
     return-void
 .end method

@@ -35,21 +35,16 @@
     .param p4, "iVRManagerService"    # Lcom/android/internal/app/IVRManagerService;
 
     .prologue
-    .line 174
     iput-object p1, p0, Lcom/android/server/VRManagerService$VRConnection;->this$0:Lcom/android/server/VRManagerService;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 175
     iput-object p2, p0, Lcom/android/server/VRManagerService$VRConnection;->context:Landroid/content/Context;
 
-    .line 176
     iput-object p3, p0, Lcom/android/server/VRManagerService$VRConnection;->vrServiceConnection:Lcom/android/server/VRManagerService$VRServiceConnection;
 
-    .line 177
     iput-object p4, p0, Lcom/android/server/VRManagerService$VRConnection;->iVRManagerService:Lcom/android/internal/app/IVRManagerService;
 
-    .line 178
     return-void
 .end method
 
@@ -62,7 +57,6 @@
     .param p5, "x4"    # Lcom/android/server/VRManagerService$1;
 
     .prologue
-    .line 169
     invoke-direct {p0, p1, p2, p3, p4}, Lcom/android/server/VRManagerService$VRConnection;-><init>(Lcom/android/server/VRManagerService;Landroid/content/Context;Lcom/android/server/VRManagerService$VRServiceConnection;Lcom/android/internal/app/IVRManagerService;)V
 
     return-void
@@ -74,14 +68,12 @@
     .locals 2
 
     .prologue
-    .line 182
     iget-object v0, p0, Lcom/android/server/VRManagerService$VRConnection;->context:Landroid/content/Context;
 
     iget-object v1, p0, Lcom/android/server/VRManagerService$VRConnection;->vrServiceConnection:Lcom/android/server/VRManagerService$VRServiceConnection;
 
     invoke-virtual {v0, v1}, Landroid/content/Context;->unbindService(Landroid/content/ServiceConnection;)V
 
-    .line 183
     return-void
 .end method
 
@@ -89,7 +81,6 @@
     .locals 1
 
     .prologue
-    .line 186
     iget-object v0, p0, Lcom/android/server/VRManagerService$VRConnection;->iVRManagerService:Lcom/android/internal/app/IVRManagerService;
 
     return-object v0
@@ -99,7 +90,6 @@
     .locals 1
 
     .prologue
-    .line 190
     iget-object v0, p0, Lcom/android/server/VRManagerService$VRConnection;->vrServiceConnection:Lcom/android/server/VRManagerService$VRServiceConnection;
 
     return-object v0

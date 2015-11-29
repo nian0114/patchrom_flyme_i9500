@@ -23,7 +23,6 @@
     .locals 0
 
     .prologue
-    .line 130
     iput-object p1, p0, Lcom/android/server/wifi/WifiApConfigStore$InactiveState;->this$0:Lcom/android/server/wifi/WifiApConfigStore;
 
     invoke-direct {p0}, Lcom/android/internal/util/State;-><init>()V
@@ -38,31 +37,25 @@
     .param p1, "message"    # Landroid/os/Message;
 
     .prologue
-    .line 132
     iget v1, p1, Landroid/os/Message;->what:I
 
     sparse-switch v1, :sswitch_data_0
 
-    .line 147
     const/4 v1, 0x0
 
-    .line 149
     :goto_0
     return v1
 
-    .line 134
     :sswitch_0
     iget-object v0, p1, Landroid/os/Message;->obj:Ljava/lang/Object;
 
     check-cast v0, Landroid/net/wifi/WifiConfiguration;
 
-    .line 135
     .local v0, "config":Landroid/net/wifi/WifiConfiguration;
     iget-object v1, v0, Landroid/net/wifi/WifiConfiguration;->SSID:Ljava/lang/String;
 
     if-eqz v1, :cond_0
 
-    .line 136
     iget-object v2, p0, Lcom/android/server/wifi/WifiApConfigStore$InactiveState;->this$0:Lcom/android/server/wifi/WifiApConfigStore;
 
     iget-object v1, p1, Landroid/os/Message;->obj:Ljava/lang/Object;
@@ -72,7 +65,6 @@
     # setter for: Lcom/android/server/wifi/WifiApConfigStore;->mWifiApConfig:Landroid/net/wifi/WifiConfiguration;
     invoke-static {v2, v1}, Lcom/android/server/wifi/WifiApConfigStore;->access$002(Lcom/android/server/wifi/WifiApConfigStore;Landroid/net/wifi/WifiConfiguration;)Landroid/net/wifi/WifiConfiguration;
 
-    .line 137
     iget-object v1, p0, Lcom/android/server/wifi/WifiApConfigStore$InactiveState;->this$0:Lcom/android/server/wifi/WifiApConfigStore;
 
     iget-object v2, p0, Lcom/android/server/wifi/WifiApConfigStore$InactiveState;->this$0:Lcom/android/server/wifi/WifiApConfigStore;
@@ -85,14 +77,12 @@
     # invokes: Lcom/android/server/wifi/WifiApConfigStore;->transitionTo(Lcom/android/internal/util/IState;)V
     invoke-static {v1, v2}, Lcom/android/server/wifi/WifiApConfigStore;->access$400(Lcom/android/server/wifi/WifiApConfigStore;Lcom/android/internal/util/IState;)V
 
-    .line 149
     .end local v0    # "config":Landroid/net/wifi/WifiConfiguration;
     :goto_1
     const/4 v1, 0x1
 
     goto :goto_0
 
-    .line 139
     .restart local v0    # "config":Landroid/net/wifi/WifiConfiguration;
     :cond_0
     const-string v1, "WifiApConfigStore"
@@ -119,7 +109,6 @@
 
     goto :goto_1
 
-    .line 143
     .end local v0    # "config":Landroid/net/wifi/WifiConfiguration;
     :sswitch_1
     iget-object v1, p0, Lcom/android/server/wifi/WifiApConfigStore$InactiveState;->this$0:Lcom/android/server/wifi/WifiApConfigStore;
@@ -135,7 +124,6 @@
 
     goto :goto_1
 
-    .line 132
     nop
 
     :sswitch_data_0

@@ -26,7 +26,6 @@
     .locals 0
 
     .prologue
-    .line 5020
     iput-object p1, p0, Lcom/android/internal/telephony/gsm/GsmServiceStateTracker$8;->this$0:Lcom/android/internal/telephony/gsm/GsmServiceStateTracker;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -42,17 +41,14 @@
     .param p2, "which"    # I
 
     .prologue
-    .line 5022
     invoke-interface {p1}, Landroid/content/DialogInterface;->dismiss()V
 
-    .line 5023
     iget-object v0, p0, Lcom/android/internal/telephony/gsm/GsmServiceStateTracker$8;->this$0:Lcom/android/internal/telephony/gsm/GsmServiceStateTracker;
 
     const-string v1, "sendMessage(EVENT_LU_REJECT_CAUSE)"
 
     invoke-virtual {v0, v1}, Lcom/android/internal/telephony/gsm/GsmServiceStateTracker;->log(Ljava/lang/String;)V
 
-    .line 5024
     iget-object v0, p0, Lcom/android/internal/telephony/gsm/GsmServiceStateTracker$8;->this$0:Lcom/android/internal/telephony/gsm/GsmServiceStateTracker;
 
     iget-object v1, p0, Lcom/android/internal/telephony/gsm/GsmServiceStateTracker$8;->this$0:Lcom/android/internal/telephony/gsm/GsmServiceStateTracker;
@@ -65,6 +61,5 @@
 
     invoke-virtual {v0, v1}, Lcom/android/internal/telephony/gsm/GsmServiceStateTracker;->sendMessage(Landroid/os/Message;)Z
 
-    .line 5025
     return-void
 .end method

@@ -19,7 +19,6 @@
     .locals 0
 
     .prologue
-    .line 1013
     invoke-direct {p0}, Landroid/app/ContextImpl$ServiceFetcher;-><init>()V
 
     return-void
@@ -32,20 +31,17 @@
     .param p1, "ctx"    # Landroid/app/ContextImpl;
 
     .prologue
-    .line 1015
-    const-string/jumbo v2, "quickconnect"
+    const-string v2, "quickconnect"
 
     invoke-static {v2}, Landroid/os/ServiceManager;->getService(Ljava/lang/String;)Landroid/os/IBinder;
 
     move-result-object v0
 
-    .line 1016
     .local v0, "b":Landroid/os/IBinder;
     invoke-static {v0}, Lcom/samsung/android/quickconnect/IQuickConnectManager$Stub;->asInterface(Landroid/os/IBinder;)Lcom/samsung/android/quickconnect/IQuickConnectManager;
 
     move-result-object v1
 
-    .line 1017
     .local v1, "service":Lcom/samsung/android/quickconnect/IQuickConnectManager;
     new-instance v2, Lcom/samsung/android/quickconnect/QuickConnectManager;
 

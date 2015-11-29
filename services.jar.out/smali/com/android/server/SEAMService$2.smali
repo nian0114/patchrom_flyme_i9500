@@ -23,7 +23,6 @@
     .locals 0
 
     .prologue
-    .line 363
     iput-object p1, p0, Lcom/android/server/SEAMService$2;->this$0:Lcom/android/server/SEAMService;
 
     invoke-direct {p0}, Landroid/content/BroadcastReceiver;-><init>()V
@@ -39,7 +38,6 @@
     .param p2, "intent"    # Landroid/content/Intent;
 
     .prologue
-    .line 366
     # getter for: Lcom/android/server/SEAMService;->mSKLog:Lcom/android/server/SKLogger;
     invoke-static {}, Lcom/android/server/SEAMService;->access$100()Lcom/android/server/SKLogger;
 
@@ -51,14 +49,12 @@
 
     invoke-virtual {v0, v1, v2}, Lcom/android/server/SKLogger;->logAll(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 367
-    const-string/jumbo v0, "selinux.reload_policy"
+    const-string v0, "selinux.reload_policy"
 
     const-string v1, "1"
 
     invoke-static {v0, v1}, Landroid/os/SystemProperties;->set(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 368
     # getter for: Lcom/android/server/SEAMService;->mSKLog:Lcom/android/server/SKLogger;
     invoke-static {}, Lcom/android/server/SEAMService;->access$100()Lcom/android/server/SKLogger;
 
@@ -70,10 +66,9 @@
 
     invoke-virtual {v0, v1, v2}, Lcom/android/server/SKLogger;->logAll(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 369
     iget-object v1, p0, Lcom/android/server/SEAMService$2;->this$0:Lcom/android/server/SEAMService;
 
-    const-string/jumbo v0, "package"
+    const-string v0, "package"
 
     invoke-static {v0}, Landroid/os/ServiceManager;->getService(Ljava/lang/String;)Landroid/os/IBinder;
 
@@ -84,7 +79,6 @@
     # setter for: Lcom/android/server/SEAMService;->mPMS:Lcom/android/server/pm/PackageManagerService;
     invoke-static {v1, v0}, Lcom/android/server/SEAMService;->access$202(Lcom/android/server/SEAMService;Lcom/android/server/pm/PackageManagerService;)Lcom/android/server/pm/PackageManagerService;
 
-    .line 370
     iget-object v0, p0, Lcom/android/server/SEAMService$2;->this$0:Lcom/android/server/SEAMService;
 
     # getter for: Lcom/android/server/SEAMService;->mPMS:Lcom/android/server/pm/PackageManagerService;
@@ -94,6 +88,5 @@
 
     invoke-virtual {v0}, Lcom/android/server/pm/PackageManagerService;->reloadSBAPolicy()V
 
-    .line 371
     return-void
 .end method

@@ -26,7 +26,6 @@
     .locals 0
 
     .prologue
-    .line 2165
     iput-object p1, p0, Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer$54;->this$0:Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -40,9 +39,8 @@
     .locals 5
 
     .prologue
-    .line 2168
     :try_start_0
-    const-string/jumbo v2, "quickconnect"
+    const-string v2, "quickconnect"
 
     invoke-static {v2}, Landroid/os/ServiceManager;->getService(Ljava/lang/String;)Landroid/os/IBinder;
 
@@ -52,24 +50,20 @@
 
     move-result-object v1
 
-    .line 2169
     .local v1, "qm":Lcom/samsung/android/quickconnect/IQuickConnectManager;
     invoke-interface {v1}, Lcom/samsung/android/quickconnect/IQuickConnectManager;->selectedItemCallback()V
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 2173
     .end local v1    # "qm":Lcom/samsung/android/quickconnect/IQuickConnectManager;
     :goto_0
     return-void
 
-    .line 2170
     :catch_0
     move-exception v0
 
-    .line 2171
     .local v0, "ex":Ljava/lang/Exception;
-    const-string/jumbo v2, "toolbox"
+    const-string v2, "toolbox"
 
     new-instance v3, Ljava/lang/StringBuilder;
 

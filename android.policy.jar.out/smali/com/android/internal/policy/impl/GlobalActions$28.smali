@@ -26,7 +26,6 @@
     .locals 0
 
     .prologue
-    .line 3024
     iput-object p1, p0, Lcom/android/internal/policy/impl/GlobalActions$28;->this$0:Lcom/android/internal/policy/impl/GlobalActions;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -41,7 +40,6 @@
     .param p1, "unused"    # Landroid/content/DialogInterface;
 
     .prologue
-    .line 3026
     # getter for: Lcom/android/internal/policy/impl/GlobalActions;->sIsConfirmingGuard:Ljava/lang/Object;
     invoke-static {}, Lcom/android/internal/policy/impl/GlobalActions;->access$100()Ljava/lang/Object;
 
@@ -49,14 +47,12 @@
 
     monitor-enter v1
 
-    .line 3027
     const/4 v0, 0x0
 
     :try_start_0
     # setter for: Lcom/android/internal/policy/impl/GlobalActions;->sIsConfirming:Z
     invoke-static {v0}, Lcom/android/internal/policy/impl/GlobalActions;->access$202(Z)Z
 
-    .line 3028
     iget-object v0, p0, Lcom/android/internal/policy/impl/GlobalActions$28;->this$0:Lcom/android/internal/policy/impl/GlobalActions;
 
     const/4 v2, 0x0
@@ -64,13 +60,10 @@
     # setter for: Lcom/android/internal/policy/impl/GlobalActions;->mConfirmDialog:Landroid/app/AlertDialog;
     invoke-static {v0, v2}, Lcom/android/internal/policy/impl/GlobalActions;->access$4402(Lcom/android/internal/policy/impl/GlobalActions;Landroid/app/AlertDialog;)Landroid/app/AlertDialog;
 
-    .line 3029
     monitor-exit v1
 
-    .line 3030
     return-void
 
-    .line 3029
     :catchall_0
     move-exception v0
 

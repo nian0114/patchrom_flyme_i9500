@@ -41,28 +41,20 @@
     .param p6, "onCompletedMsg"    # Landroid/os/Message;
 
     .prologue
-    .line 167
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 168
     iput-object p1, p0, Lcom/android/internal/telephony/dataconnection/DataConnection$ConnectionParams;->mApnContext:Lcom/android/internal/telephony/dataconnection/ApnContext;
 
-    .line 169
     iput p2, p0, Lcom/android/internal/telephony/dataconnection/DataConnection$ConnectionParams;->mInitialMaxRetry:I
 
-    .line 170
     iput p3, p0, Lcom/android/internal/telephony/dataconnection/DataConnection$ConnectionParams;->mProfileId:I
 
-    .line 171
     iput p4, p0, Lcom/android/internal/telephony/dataconnection/DataConnection$ConnectionParams;->mRilRat:I
 
-    .line 172
     iput-boolean p5, p0, Lcom/android/internal/telephony/dataconnection/DataConnection$ConnectionParams;->mRetryWhenSSChange:Z
 
-    .line 173
     iput-object p6, p0, Lcom/android/internal/telephony/dataconnection/DataConnection$ConnectionParams;->mOnCompletedMsg:Landroid/os/Message;
 
-    .line 174
     return-void
 .end method
 
@@ -72,7 +64,6 @@
     .locals 2
 
     .prologue
-    .line 185
     invoke-static {}, Lcom/sec/android/app/CscFeature;->getInstance()Lcom/sec/android/app/CscFeature;
 
     move-result-object v0
@@ -85,10 +76,8 @@
 
     if-eqz v0, :cond_0
 
-    .line 186
     iget-object v0, p0, Lcom/android/internal/telephony/dataconnection/DataConnection$ConnectionParams;->mApnContext:Lcom/android/internal/telephony/dataconnection/ApnContext;
 
-    .line 188
     :goto_0
     return-object v0
 
@@ -102,7 +91,6 @@
     .locals 2
 
     .prologue
-    .line 178
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V

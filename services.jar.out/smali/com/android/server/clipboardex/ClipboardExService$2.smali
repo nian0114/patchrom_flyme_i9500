@@ -23,7 +23,6 @@
     .locals 0
 
     .prologue
-    .line 740
     iput-object p1, p0, Lcom/android/server/clipboardex/ClipboardExService$2;->this$0:Lcom/android/server/clipboardex/ClipboardExService;
 
     invoke-direct {p0}, Landroid/content/pm/IKnoxModeChangeObserver$Stub;-><init>()V
@@ -38,7 +37,6 @@
     .param p1, "personaId"    # I
 
     .prologue
-    .line 746
     const-string v0, "ClipboardServiceEx"
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -61,12 +59,10 @@
 
     invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 748
     sget-boolean v0, Landroid/sec/clipboard/data/ClipboardDefine;->DEBUG:Z
 
     if-eqz v0, :cond_0
 
-    .line 749
     const-string v0, "ClipboardServiceEx"
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -89,7 +85,6 @@
 
     invoke-static {v0, v1}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 751
     :cond_0
     iget-object v0, p0, Lcom/android/server/clipboardex/ClipboardExService$2;->this$0:Lcom/android/server/clipboardex/ClipboardExService;
 
@@ -97,6 +92,5 @@
 
     invoke-virtual {v0, p1, v1}, Lcom/android/server/clipboardex/ClipboardExService;->multiUserMode(ILjava/lang/String;)V
 
-    .line 752
     return-void
 .end method

@@ -46,21 +46,16 @@
     .prologue
     const/4 v1, 0x0
 
-    .line 53
     iput-object p1, p0, Lcom/android/internal/telephony/uicc/SpnOverride$SpnOverrideInfo;->this$0:Lcom/android/internal/telephony/uicc/SpnOverride;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 54
     iput-object p2, p0, Lcom/android/internal/telephony/uicc/SpnOverride$SpnOverrideInfo;->numeric:Ljava/lang/String;
 
-    .line 55
     iput-object p3, p0, Lcom/android/internal/telephony/uicc/SpnOverride$SpnOverrideInfo;->spn:Ljava/lang/String;
 
-    .line 56
     iput-object p4, p0, Lcom/android/internal/telephony/uicc/SpnOverride$SpnOverrideInfo;->spn_display_rule:Ljava/lang/String;
 
-    .line 57
     if-eqz p5, :cond_1
 
     const-string v0, ","
@@ -72,7 +67,6 @@
     :goto_0
     iput-object v0, p0, Lcom/android/internal/telephony/uicc/SpnOverride$SpnOverrideInfo;->spn_override_only_on:[Ljava/lang/String;
 
-    .line 58
     if-eqz p6, :cond_2
 
     const-string v0, ","
@@ -84,14 +78,12 @@
     :goto_1
     iput-object v0, p0, Lcom/android/internal/telephony/uicc/SpnOverride$SpnOverrideInfo;->fake_home_on:[Ljava/lang/String;
 
-    .line 59
     if-eqz p7, :cond_3
 
     .end local p7    # "imsi_subset":Ljava/lang/String;
     :goto_2
     iput-object p7, p0, Lcom/android/internal/telephony/uicc/SpnOverride$SpnOverrideInfo;->imsi_subset:Ljava/lang/String;
 
-    .line 60
     if-eqz p8, :cond_0
 
     const-string v0, ","
@@ -103,23 +95,19 @@
     :cond_0
     iput-object v1, p0, Lcom/android/internal/telephony/uicc/SpnOverride$SpnOverrideInfo;->fake_roaming_on:[Ljava/lang/String;
 
-    .line 61
     return-void
 
     .restart local p7    # "imsi_subset":Ljava/lang/String;
     :cond_1
     move-object v0, v1
 
-    .line 57
     goto :goto_0
 
     :cond_2
     move-object v0, v1
 
-    .line 58
     goto :goto_1
 
-    .line 59
     :cond_3
     const-string p7, ""
 
@@ -131,7 +119,6 @@
     .param p0, "x0"    # Lcom/android/internal/telephony/uicc/SpnOverride$SpnOverrideInfo;
 
     .prologue
-    .line 44
     iget-object v0, p0, Lcom/android/internal/telephony/uicc/SpnOverride$SpnOverrideInfo;->numeric:Ljava/lang/String;
 
     return-object v0
@@ -143,7 +130,6 @@
     .locals 1
 
     .prologue
-    .line 80
     iget-object v0, p0, Lcom/android/internal/telephony/uicc/SpnOverride$SpnOverrideInfo;->fake_home_on:[Ljava/lang/String;
 
     return-object v0
@@ -153,7 +139,6 @@
     .locals 1
 
     .prologue
-    .line 88
     iget-object v0, p0, Lcom/android/internal/telephony/uicc/SpnOverride$SpnOverrideInfo;->fake_roaming_on:[Ljava/lang/String;
 
     return-object v0
@@ -163,7 +148,6 @@
     .locals 1
 
     .prologue
-    .line 84
     iget-object v0, p0, Lcom/android/internal/telephony/uicc/SpnOverride$SpnOverrideInfo;->imsi_subset:Ljava/lang/String;
 
     return-object v0
@@ -173,7 +157,6 @@
     .locals 1
 
     .prologue
-    .line 64
     iget-object v0, p0, Lcom/android/internal/telephony/uicc/SpnOverride$SpnOverrideInfo;->numeric:Ljava/lang/String;
 
     return-object v0
@@ -183,7 +166,6 @@
     .locals 1
 
     .prologue
-    .line 68
     iget-object v0, p0, Lcom/android/internal/telephony/uicc/SpnOverride$SpnOverrideInfo;->spn:Ljava/lang/String;
 
     return-object v0
@@ -193,7 +175,6 @@
     .locals 1
 
     .prologue
-    .line 72
     iget-object v0, p0, Lcom/android/internal/telephony/uicc/SpnOverride$SpnOverrideInfo;->spn_display_rule:Ljava/lang/String;
 
     return-object v0
@@ -203,7 +184,6 @@
     .locals 1
 
     .prologue
-    .line 76
     iget-object v0, p0, Lcom/android/internal/telephony/uicc/SpnOverride$SpnOverrideInfo;->spn_override_only_on:[Ljava/lang/String;
 
     return-object v0
@@ -213,7 +193,6 @@
     .locals 2
 
     .prologue
-    .line 92
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V

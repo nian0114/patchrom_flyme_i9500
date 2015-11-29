@@ -86,7 +86,6 @@
     .locals 1
 
     .prologue
-    .line 110
     new-instance v0, Landroid/hardware/hdmi/HdmiDeviceInfo$1;
 
     invoke-direct {v0}, Landroid/hardware/hdmi/HdmiDeviceInfo$1;-><init>()V
@@ -106,40 +105,30 @@
 
     const/4 v2, -0x1
 
-    .line 197
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 198
     iput v1, p0, Landroid/hardware/hdmi/HdmiDeviceInfo;->mHdmiDeviceType:I
 
-    .line 199
     iput p1, p0, Landroid/hardware/hdmi/HdmiDeviceInfo;->mPhysicalAddress:I
 
-    .line 200
     iput p2, p0, Landroid/hardware/hdmi/HdmiDeviceInfo;->mPortId:I
 
-    .line 202
     invoke-static {p2}, Landroid/hardware/hdmi/HdmiDeviceInfo;->idForHardware(I)I
 
     move-result v0
 
     iput v0, p0, Landroid/hardware/hdmi/HdmiDeviceInfo;->mId:I
 
-    .line 203
     iput v2, p0, Landroid/hardware/hdmi/HdmiDeviceInfo;->mLogicalAddress:I
 
-    .line 204
     iput v1, p0, Landroid/hardware/hdmi/HdmiDeviceInfo;->mDeviceType:I
 
-    .line 205
     const/4 v0, 0x0
 
     iput v0, p0, Landroid/hardware/hdmi/HdmiDeviceInfo;->mVendorId:I
 
-    .line 206
     iput v2, p0, Landroid/hardware/hdmi/HdmiDeviceInfo;->mDevicePowerStatus:I
 
-    .line 207
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -160,13 +149,10 @@
 
     iput-object v0, p0, Landroid/hardware/hdmi/HdmiDeviceInfo;->mDisplayName:Ljava/lang/String;
 
-    .line 209
     iput v2, p0, Landroid/hardware/hdmi/HdmiDeviceInfo;->mDeviceId:I
 
-    .line 210
     iput v2, p0, Landroid/hardware/hdmi/HdmiDeviceInfo;->mAdopterId:I
 
-    .line 212
     return-void
 .end method
 
@@ -180,55 +166,42 @@
     .prologue
     const/4 v1, -0x1
 
-    .line 223
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 224
     const/4 v0, 0x1
 
     iput v0, p0, Landroid/hardware/hdmi/HdmiDeviceInfo;->mHdmiDeviceType:I
 
-    .line 225
     iput p1, p0, Landroid/hardware/hdmi/HdmiDeviceInfo;->mPhysicalAddress:I
 
-    .line 226
     iput p2, p0, Landroid/hardware/hdmi/HdmiDeviceInfo;->mPortId:I
 
-    .line 228
     invoke-static {p2}, Landroid/hardware/hdmi/HdmiDeviceInfo;->idForMhlDevice(I)I
 
     move-result v0
 
     iput v0, p0, Landroid/hardware/hdmi/HdmiDeviceInfo;->mId:I
 
-    .line 229
     iput v1, p0, Landroid/hardware/hdmi/HdmiDeviceInfo;->mLogicalAddress:I
 
-    .line 230
     const/4 v0, 0x2
 
     iput v0, p0, Landroid/hardware/hdmi/HdmiDeviceInfo;->mDeviceType:I
 
-    .line 231
     const/4 v0, 0x0
 
     iput v0, p0, Landroid/hardware/hdmi/HdmiDeviceInfo;->mVendorId:I
 
-    .line 232
     iput v1, p0, Landroid/hardware/hdmi/HdmiDeviceInfo;->mDevicePowerStatus:I
 
-    .line 233
     const-string v0, "Mobile"
 
     iput-object v0, p0, Landroid/hardware/hdmi/HdmiDeviceInfo;->mDisplayName:Ljava/lang/String;
 
-    .line 235
     iput p3, p0, Landroid/hardware/hdmi/HdmiDeviceInfo;->mDeviceId:I
 
-    .line 236
     iput p4, p0, Landroid/hardware/hdmi/HdmiDeviceInfo;->mAdopterId:I
 
-    .line 237
     return-void
 .end method
 
@@ -242,7 +215,6 @@
     .param p6, "displayName"    # Ljava/lang/String;
 
     .prologue
-    .line 186
     const/4 v7, -0x1
 
     move-object v0, p0
@@ -261,7 +233,6 @@
 
     invoke-direct/range {v0 .. v7}, Landroid/hardware/hdmi/HdmiDeviceInfo;-><init>(IIIIILjava/lang/String;I)V
 
-    .line 188
     return-void
 .end method
 
@@ -278,49 +249,36 @@
     .prologue
     const/4 v1, -0x1
 
-    .line 157
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 158
     const/4 v0, 0x0
 
     iput v0, p0, Landroid/hardware/hdmi/HdmiDeviceInfo;->mHdmiDeviceType:I
 
-    .line 159
     iput p2, p0, Landroid/hardware/hdmi/HdmiDeviceInfo;->mPhysicalAddress:I
 
-    .line 160
     iput p3, p0, Landroid/hardware/hdmi/HdmiDeviceInfo;->mPortId:I
 
-    .line 162
     invoke-static {p1}, Landroid/hardware/hdmi/HdmiDeviceInfo;->idForCecDevice(I)I
 
     move-result v0
 
     iput v0, p0, Landroid/hardware/hdmi/HdmiDeviceInfo;->mId:I
 
-    .line 163
     iput p1, p0, Landroid/hardware/hdmi/HdmiDeviceInfo;->mLogicalAddress:I
 
-    .line 164
     iput p4, p0, Landroid/hardware/hdmi/HdmiDeviceInfo;->mDeviceType:I
 
-    .line 165
     iput p5, p0, Landroid/hardware/hdmi/HdmiDeviceInfo;->mVendorId:I
 
-    .line 166
     iput p7, p0, Landroid/hardware/hdmi/HdmiDeviceInfo;->mDevicePowerStatus:I
 
-    .line 167
     iput-object p6, p0, Landroid/hardware/hdmi/HdmiDeviceInfo;->mDisplayName:Ljava/lang/String;
 
-    .line 169
     iput v1, p0, Landroid/hardware/hdmi/HdmiDeviceInfo;->mDeviceId:I
 
-    .line 170
     iput v1, p0, Landroid/hardware/hdmi/HdmiDeviceInfo;->mAdopterId:I
 
-    .line 171
     return-void
 .end method
 
@@ -329,7 +287,6 @@
     .param p0, "address"    # I
 
     .prologue
-    .line 254
     add-int/lit8 v0, p0, 0x0
 
     return v0
@@ -340,7 +297,6 @@
     .param p0, "portId"    # I
 
     .prologue
-    .line 275
     add-int/lit16 v0, p0, 0xc0
 
     return v0
@@ -351,7 +307,6 @@
     .param p0, "portId"    # I
 
     .prologue
-    .line 265
     add-int/lit16 v0, p0, 0x80
 
     return v0
@@ -363,7 +318,6 @@
     .locals 1
 
     .prologue
-    .line 381
     const/4 v0, 0x0
 
     return v0
@@ -376,12 +330,10 @@
     .prologue
     const/4 v1, 0x0
 
-    .line 446
     instance-of v2, p1, Landroid/hardware/hdmi/HdmiDeviceInfo;
 
     if-nez v2, :cond_1
 
-    .line 451
     :cond_0
     :goto_0
     return v1
@@ -389,10 +341,8 @@
     :cond_1
     move-object v0, p1
 
-    .line 450
     check-cast v0, Landroid/hardware/hdmi/HdmiDeviceInfo;
 
-    .line 451
     .local v0, "other":Landroid/hardware/hdmi/HdmiDeviceInfo;
     iget v2, p0, Landroid/hardware/hdmi/HdmiDeviceInfo;->mHdmiDeviceType:I
 
@@ -467,7 +417,6 @@
     .locals 1
 
     .prologue
-    .line 332
     iget v0, p0, Landroid/hardware/hdmi/HdmiDeviceInfo;->mAdopterId:I
 
     return v0
@@ -477,7 +426,6 @@
     .locals 1
 
     .prologue
-    .line 325
     iget v0, p0, Landroid/hardware/hdmi/HdmiDeviceInfo;->mDeviceId:I
 
     return v0
@@ -487,7 +435,6 @@
     .locals 1
 
     .prologue
-    .line 318
     iget v0, p0, Landroid/hardware/hdmi/HdmiDeviceInfo;->mDevicePowerStatus:I
 
     return v0
@@ -497,7 +444,6 @@
     .locals 1
 
     .prologue
-    .line 304
     iget v0, p0, Landroid/hardware/hdmi/HdmiDeviceInfo;->mDeviceType:I
 
     return v0
@@ -507,7 +453,6 @@
     .locals 1
 
     .prologue
-    .line 364
     iget-object v0, p0, Landroid/hardware/hdmi/HdmiDeviceInfo;->mDisplayName:Ljava/lang/String;
 
     return-object v0
@@ -517,7 +462,6 @@
     .locals 1
 
     .prologue
-    .line 243
     iget v0, p0, Landroid/hardware/hdmi/HdmiDeviceInfo;->mId:I
 
     return v0
@@ -527,7 +471,6 @@
     .locals 1
 
     .prologue
-    .line 282
     iget v0, p0, Landroid/hardware/hdmi/HdmiDeviceInfo;->mLogicalAddress:I
 
     return v0
@@ -537,7 +480,6 @@
     .locals 1
 
     .prologue
-    .line 289
     iget v0, p0, Landroid/hardware/hdmi/HdmiDeviceInfo;->mPhysicalAddress:I
 
     return v0
@@ -547,7 +489,6 @@
     .locals 1
 
     .prologue
-    .line 296
     iget v0, p0, Landroid/hardware/hdmi/HdmiDeviceInfo;->mPortId:I
 
     return v0
@@ -557,7 +498,6 @@
     .locals 1
 
     .prologue
-    .line 372
     iget v0, p0, Landroid/hardware/hdmi/HdmiDeviceInfo;->mVendorId:I
 
     return v0
@@ -567,7 +507,6 @@
     .locals 1
 
     .prologue
-    .line 349
     iget v0, p0, Landroid/hardware/hdmi/HdmiDeviceInfo;->mHdmiDeviceType:I
 
     if-nez v0, :cond_0
@@ -589,7 +528,6 @@
     .prologue
     const/4 v0, 0x1
 
-    .line 357
     iget v1, p0, Landroid/hardware/hdmi/HdmiDeviceInfo;->mHdmiDeviceType:I
 
     if-ne v1, v0, :cond_0
@@ -609,7 +547,6 @@
     .prologue
     const/4 v0, 0x1
 
-    .line 339
     iget v1, p0, Landroid/hardware/hdmi/HdmiDeviceInfo;->mDeviceType:I
 
     const/4 v2, 0x4
@@ -644,31 +581,25 @@
 
     const/4 v5, 0x0
 
-    .line 415
     new-instance v0, Ljava/lang/StringBuffer;
 
     invoke-direct {v0}, Ljava/lang/StringBuffer;-><init>()V
 
-    .line 416
     .local v0, "s":Ljava/lang/StringBuffer;
     iget v1, p0, Landroid/hardware/hdmi/HdmiDeviceInfo;->mHdmiDeviceType:I
 
     packed-switch v1, :pswitch_data_0
 
-    .line 436
     const-string v1, ""
 
-    .line 441
     :goto_0
     return-object v1
 
-    .line 418
     :pswitch_0
     const-string v1, "CEC: "
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuffer;->append(Ljava/lang/String;)Ljava/lang/StringBuffer;
 
-    .line 419
     const-string v1, "logical_address: "
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuffer;->append(Ljava/lang/String;)Ljava/lang/StringBuffer;
@@ -693,12 +624,10 @@
 
     invoke-virtual {v1, v2}, Ljava/lang/StringBuffer;->append(Ljava/lang/String;)Ljava/lang/StringBuffer;
 
-    .line 420
     const-string v1, " "
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuffer;->append(Ljava/lang/String;)Ljava/lang/StringBuffer;
 
-    .line 421
     const-string v1, "device_type: "
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuffer;->append(Ljava/lang/String;)Ljava/lang/StringBuffer;
@@ -715,8 +644,7 @@
 
     invoke-virtual {v1, v2}, Ljava/lang/StringBuffer;->append(Ljava/lang/String;)Ljava/lang/StringBuffer;
 
-    .line 422
-    const-string/jumbo v1, "vendor_id: "
+    const-string v1, "vendor_id: "
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuffer;->append(Ljava/lang/String;)Ljava/lang/StringBuffer;
 
@@ -732,7 +660,6 @@
 
     invoke-virtual {v1, v2}, Ljava/lang/StringBuffer;->append(Ljava/lang/String;)Ljava/lang/StringBuffer;
 
-    .line 423
     const-string v1, "display_name: "
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuffer;->append(Ljava/lang/String;)Ljava/lang/StringBuffer;
@@ -749,7 +676,6 @@
 
     invoke-virtual {v1, v2}, Ljava/lang/StringBuffer;->append(Ljava/lang/String;)Ljava/lang/StringBuffer;
 
-    .line 424
     const-string v1, "power_status: "
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuffer;->append(Ljava/lang/String;)Ljava/lang/StringBuffer;
@@ -766,7 +692,6 @@
 
     invoke-virtual {v1, v2}, Ljava/lang/StringBuffer;->append(Ljava/lang/String;)Ljava/lang/StringBuffer;
 
-    .line 438
     :goto_1
     const-string v1, "physical_address: "
 
@@ -792,12 +717,10 @@
 
     invoke-virtual {v1, v2}, Ljava/lang/StringBuffer;->append(Ljava/lang/String;)Ljava/lang/StringBuffer;
 
-    .line 439
     const-string v1, " "
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuffer;->append(Ljava/lang/String;)Ljava/lang/StringBuffer;
 
-    .line 440
     const-string v1, "port_id: "
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuffer;->append(Ljava/lang/String;)Ljava/lang/StringBuffer;
@@ -808,20 +731,17 @@
 
     invoke-virtual {v1, v2}, Ljava/lang/StringBuffer;->append(I)Ljava/lang/StringBuffer;
 
-    .line 441
     invoke-virtual {v0}, Ljava/lang/StringBuffer;->toString()Ljava/lang/String;
 
     move-result-object v1
 
     goto/16 :goto_0
 
-    .line 427
     :pswitch_1
     const-string v1, "MHL: "
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuffer;->append(Ljava/lang/String;)Ljava/lang/StringBuffer;
 
-    .line 428
     const-string v1, "device_id: "
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuffer;->append(Ljava/lang/String;)Ljava/lang/StringBuffer;
@@ -852,7 +772,6 @@
 
     invoke-virtual {v1, v2}, Ljava/lang/StringBuffer;->append(Ljava/lang/String;)Ljava/lang/StringBuffer;
 
-    .line 429
     const-string v1, "adopter_id: "
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuffer;->append(Ljava/lang/String;)Ljava/lang/StringBuffer;
@@ -885,7 +804,6 @@
 
     goto :goto_1
 
-    .line 433
     :pswitch_2
     const-string v1, "Hardware: "
 
@@ -893,7 +811,6 @@
 
     goto :goto_1
 
-    .line 416
     :pswitch_data_0
     .packed-switch 0x0
         :pswitch_0
@@ -908,72 +825,59 @@
     .param p2, "flags"    # I
 
     .prologue
-    .line 393
     iget v0, p0, Landroid/hardware/hdmi/HdmiDeviceInfo;->mHdmiDeviceType:I
 
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 394
     iget v0, p0, Landroid/hardware/hdmi/HdmiDeviceInfo;->mPhysicalAddress:I
 
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 395
     iget v0, p0, Landroid/hardware/hdmi/HdmiDeviceInfo;->mPortId:I
 
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 396
     iget v0, p0, Landroid/hardware/hdmi/HdmiDeviceInfo;->mHdmiDeviceType:I
 
     packed-switch v0, :pswitch_data_0
 
-    .line 411
     :goto_0
     return-void
 
-    .line 398
     :pswitch_0
     iget v0, p0, Landroid/hardware/hdmi/HdmiDeviceInfo;->mLogicalAddress:I
 
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 399
     iget v0, p0, Landroid/hardware/hdmi/HdmiDeviceInfo;->mDeviceType:I
 
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 400
     iget v0, p0, Landroid/hardware/hdmi/HdmiDeviceInfo;->mVendorId:I
 
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 401
     iget v0, p0, Landroid/hardware/hdmi/HdmiDeviceInfo;->mDevicePowerStatus:I
 
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 402
     iget-object v0, p0, Landroid/hardware/hdmi/HdmiDeviceInfo;->mDisplayName:Ljava/lang/String;
 
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeString(Ljava/lang/String;)V
 
     goto :goto_0
 
-    .line 405
     :pswitch_1
     iget v0, p0, Landroid/hardware/hdmi/HdmiDeviceInfo;->mDeviceId:I
 
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 406
     iget v0, p0, Landroid/hardware/hdmi/HdmiDeviceInfo;->mAdopterId:I
 
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeInt(I)V
 
     goto :goto_0
 
-    .line 396
     :pswitch_data_0
     .packed-switch 0x0
         :pswitch_0

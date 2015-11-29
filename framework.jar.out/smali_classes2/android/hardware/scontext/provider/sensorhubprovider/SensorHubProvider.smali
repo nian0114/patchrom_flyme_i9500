@@ -24,26 +24,21 @@
     .param p4, "rate"    # I
 
     .prologue
-    .line 49
     invoke-direct {p0, p1}, Landroid/hardware/scontext/provider/Provider;-><init>(Landroid/content/Context;)V
 
-    .line 35
     const/4 v0, 0x0
 
     iput-object v0, p0, Landroid/hardware/scontext/provider/sensorhubprovider/SensorHubProvider;->mSensorHubManager:Lcom/samsung/android/sensorhub/SensorHubManager;
 
-    .line 154
     new-instance v0, Landroid/hardware/scontext/provider/sensorhubprovider/SensorHubProvider$1;
 
     invoke-direct {v0, p0}, Landroid/hardware/scontext/provider/sensorhubprovider/SensorHubProvider$1;-><init>(Landroid/hardware/scontext/provider/sensorhubprovider/SensorHubProvider;)V
 
     iput-object v0, p0, Landroid/hardware/scontext/provider/sensorhubprovider/SensorHubProvider;->mSensorHubEventListener:Lcom/samsung/android/sensorhub/SensorHubEventListener;
 
-    .line 51
     iput p4, p0, Landroid/hardware/scontext/provider/sensorhubprovider/SensorHubProvider;->mRate:I
 
-    .line 52
-    const-string/jumbo v0, "sensorhub"
+    const-string v0, "sensorhub"
 
     invoke-virtual {p1, v0}, Landroid/content/Context;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
 
@@ -53,10 +48,8 @@
 
     iput-object v0, p0, Landroid/hardware/scontext/provider/sensorhubprovider/SensorHubProvider;->mSensorHubManager:Lcom/samsung/android/sensorhub/SensorHubManager;
 
-    .line 53
     iput-object p2, p0, Landroid/hardware/scontext/provider/sensorhubprovider/SensorHubProvider;->mListener:Landroid/hardware/scontext/provider/EventListener;
 
-    .line 54
     iget-object v0, p0, Landroid/hardware/scontext/provider/sensorhubprovider/SensorHubProvider;->mSensorHubManager:Lcom/samsung/android/sensorhub/SensorHubManager;
 
     invoke-virtual {v0, p3}, Lcom/samsung/android/sensorhub/SensorHubManager;->getDefaultSensorHub(I)Lcom/samsung/android/sensorhub/SensorHub;
@@ -65,7 +58,6 @@
 
     iput-object v0, p0, Landroid/hardware/scontext/provider/sensorhubprovider/SensorHubProvider;->mSensorHub:Lcom/samsung/android/sensorhub/SensorHub;
 
-    .line 55
     return-void
 .end method
 
@@ -74,7 +66,6 @@
     .param p0, "x0"    # Landroid/hardware/scontext/provider/sensorhubprovider/SensorHubProvider;
 
     .prologue
-    .line 33
     iget-object v0, p0, Landroid/hardware/scontext/provider/sensorhubprovider/SensorHubProvider;->mListener:Landroid/hardware/scontext/provider/EventListener;
 
     return-object v0
@@ -86,7 +77,6 @@
     .locals 4
 
     .prologue
-    .line 65
     iget-object v0, p0, Landroid/hardware/scontext/provider/sensorhubprovider/SensorHubProvider;->mSensorHubManager:Lcom/samsung/android/sensorhub/SensorHubManager;
 
     iget-object v1, p0, Landroid/hardware/scontext/provider/sensorhubprovider/SensorHubProvider;->mSensorHubEventListener:Lcom/samsung/android/sensorhub/SensorHubEventListener;
@@ -97,7 +87,6 @@
 
     invoke-virtual {v0, v1, v2, v3}, Lcom/samsung/android/sensorhub/SensorHubManager;->registerListener(Lcom/samsung/android/sensorhub/SensorHubEventListener;Lcom/samsung/android/sensorhub/SensorHub;I)Z
 
-    .line 66
     return-void
 .end method
 
@@ -105,7 +94,6 @@
     .locals 1
 
     .prologue
-    .line 138
     iget-object v0, p0, Landroid/hardware/scontext/provider/sensorhubprovider/SensorHubProvider;->mSensorHubEventListener:Lcom/samsung/android/sensorhub/SensorHubEventListener;
 
     return-object v0
@@ -115,7 +103,6 @@
     .locals 1
 
     .prologue
-    .line 129
     iget-object v0, p0, Landroid/hardware/scontext/provider/sensorhubprovider/SensorHubProvider;->mSensorHubManager:Lcom/samsung/android/sensorhub/SensorHubManager;
 
     return-object v0
@@ -125,7 +112,6 @@
     .locals 0
 
     .prologue
-    .line 178
     return-void
 .end method
 
@@ -133,7 +119,6 @@
     .locals 0
 
     .prologue
-    .line 110
     return-void
 .end method
 
@@ -142,7 +127,6 @@
     .param p1, "context"    # Landroid/os/Bundle;
 
     .prologue
-    .line 99
     return-object p1
 .end method
 
@@ -150,7 +134,6 @@
     .locals 3
 
     .prologue
-    .line 76
     iget-object v0, p0, Landroid/hardware/scontext/provider/sensorhubprovider/SensorHubProvider;->mSensorHubManager:Lcom/samsung/android/sensorhub/SensorHubManager;
 
     iget-object v1, p0, Landroid/hardware/scontext/provider/sensorhubprovider/SensorHubProvider;->mSensorHubEventListener:Lcom/samsung/android/sensorhub/SensorHubEventListener;
@@ -159,7 +142,6 @@
 
     invoke-virtual {v0, v1, v2}, Lcom/samsung/android/sensorhub/SensorHubManager;->unregisterListener(Lcom/samsung/android/sensorhub/SensorHubEventListener;Lcom/samsung/android/sensorhub/SensorHub;)V
 
-    .line 77
     return-void
 .end method
 
@@ -167,7 +149,6 @@
     .locals 0
 
     .prologue
-    .line 121
     return-void
 .end method
 
@@ -177,7 +158,6 @@
     .param p2, "attribute"    # Landroid/hardware/scontext/SContextAttribute;
 
     .prologue
-    .line 89
     return-void
 .end method
 
@@ -187,7 +167,6 @@
     .param p2, "data"    # [B
 
     .prologue
-    .line 150
     const/4 v0, 0x0
 
     return v0

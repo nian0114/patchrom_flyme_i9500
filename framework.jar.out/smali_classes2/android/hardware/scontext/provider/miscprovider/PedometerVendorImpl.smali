@@ -10,10 +10,8 @@
     .param p2, "listener"    # Landroid/hardware/scontext/provider/EventListener;
 
     .prologue
-    .line 21
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 23
     return-void
 .end method
 
@@ -23,7 +21,6 @@
     .locals 1
 
     .prologue
-    .line 26
     const/4 v0, 0x0
 
     return v0
@@ -33,7 +30,6 @@
     .locals 0
 
     .prologue
-    .line 39
     return-void
 .end method
 
@@ -42,7 +38,6 @@
     .param p1, "isEnabled"    # Z
 
     .prologue
-    .line 43
     return-void
 .end method
 
@@ -53,7 +48,6 @@
     .param p4, "weight"    # D
 
     .prologue
-    .line 35
     return-void
 .end method
 
@@ -61,6 +55,5 @@
     .locals 0
 
     .prologue
-    .line 31
     return-void
 .end method

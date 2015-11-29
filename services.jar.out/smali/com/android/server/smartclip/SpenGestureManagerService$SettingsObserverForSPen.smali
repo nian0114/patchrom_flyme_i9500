@@ -24,13 +24,10 @@
     .param p2, "handler"    # Landroid/os/Handler;
 
     .prologue
-    .line 1241
     iput-object p1, p0, Lcom/android/server/smartclip/SpenGestureManagerService$SettingsObserverForSPen;->this$0:Lcom/android/server/smartclip/SpenGestureManagerService;
 
-    .line 1242
     invoke-direct {p0, p2}, Landroid/database/ContentObserver;-><init>(Landroid/os/Handler;)V
 
-    .line 1243
     return-void
 .end method
 
@@ -42,7 +39,6 @@
     .prologue
     const/4 v2, 0x0
 
-    .line 1246
     # getter for: Lcom/android/server/smartclip/SpenGestureManagerService;->mContext:Landroid/content/Context;
     invoke-static {}, Lcom/android/server/smartclip/SpenGestureManagerService;->access$500()Landroid/content/Context;
 
@@ -52,7 +48,6 @@
 
     move-result-object v0
 
-    .line 1247
     .local v0, "resolver":Landroid/content/ContentResolver;
     const-string v1, "lock_screen_quick_note"
 
@@ -62,7 +57,6 @@
 
     invoke-virtual {v0, v1, v2, p0}, Landroid/content/ContentResolver;->registerContentObserver(Landroid/net/Uri;ZLandroid/database/ContentObserver;)V
 
-    .line 1248
     const-string v1, "haptic_feedback_enabled"
 
     invoke-static {v1}, Landroid/provider/Settings$System;->getUriFor(Ljava/lang/String;)Landroid/net/Uri;
@@ -71,7 +65,6 @@
 
     invoke-virtual {v0, v1, v2, p0}, Landroid/content/ContentResolver;->registerContentObserver(Landroid/net/Uri;ZLandroid/database/ContentObserver;)V
 
-    .line 1249
     return-void
 .end method
 
@@ -86,7 +79,6 @@
 
     const/4 v3, 0x0
 
-    .line 1251
     # getter for: Lcom/android/server/smartclip/SpenGestureManagerService;->mContext:Landroid/content/Context;
     invoke-static {}, Lcom/android/server/smartclip/SpenGestureManagerService;->access$500()Landroid/content/Context;
 
@@ -106,7 +98,6 @@
 
     move v0, v2
 
-    .line 1252
     .local v0, "SNoteEnable":Z
     :goto_0
     iget-object v4, p0, Lcom/android/server/smartclip/SpenGestureManagerService$SettingsObserverForSPen;->this$0:Lcom/android/server/smartclip/SpenGestureManagerService;
@@ -118,7 +109,6 @@
 
     if-eqz v4, :cond_0
 
-    .line 1253
     iget-object v4, p0, Lcom/android/server/smartclip/SpenGestureManagerService$SettingsObserverForSPen;->this$0:Lcom/android/server/smartclip/SpenGestureManagerService;
 
     # getter for: Lcom/android/server/smartclip/SpenGestureManagerService;->mSmartClipView:Lcom/android/server/smartclip/SmartClipView;
@@ -128,7 +118,6 @@
 
     invoke-virtual {v4, v0}, Lcom/android/server/smartclip/SmartClipView;->setDoubleTapStateBySettingMenu(Z)V
 
-    .line 1255
     :cond_0
     # getter for: Lcom/android/server/smartclip/SpenGestureManagerService;->mContext:Landroid/content/Context;
     invoke-static {}, Lcom/android/server/smartclip/SpenGestureManagerService;->access$500()Landroid/content/Context;
@@ -149,7 +138,6 @@
 
     move v1, v2
 
-    .line 1256
     .local v1, "bHapticEnabled":Z
     :goto_1
     iget-object v2, p0, Lcom/android/server/smartclip/SpenGestureManagerService$SettingsObserverForSPen;->this$0:Lcom/android/server/smartclip/SpenGestureManagerService;
@@ -161,7 +149,6 @@
 
     if-eqz v2, :cond_1
 
-    .line 1257
     iget-object v2, p0, Lcom/android/server/smartclip/SpenGestureManagerService$SettingsObserverForSPen;->this$0:Lcom/android/server/smartclip/SpenGestureManagerService;
 
     # getter for: Lcom/android/server/smartclip/SpenGestureManagerService;->mSmartClipView:Lcom/android/server/smartclip/SmartClipView;
@@ -171,7 +158,6 @@
 
     invoke-virtual {v2, v1}, Lcom/android/server/smartclip/SmartClipView;->setHapticEnabled(Z)V
 
-    .line 1258
     :cond_1
     return-void
 
@@ -180,13 +166,11 @@
     :cond_2
     move v0, v3
 
-    .line 1251
     goto :goto_0
 
     .restart local v0    # "SNoteEnable":Z
     :cond_3
     move v1, v3
 
-    .line 1255
     goto :goto_1
 .end method

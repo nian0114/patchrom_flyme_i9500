@@ -23,7 +23,6 @@
     .locals 0
 
     .prologue
-    .line 102
     iput-object p1, p0, Lcom/samsung/android/contextaware/utilbundle/CaTelephonyManager$1;->this$0:Lcom/samsung/android/contextaware/utilbundle/CaTelephonyManager;
 
     invoke-direct {p0}, Landroid/telephony/PhoneStateListener;-><init>()V
@@ -39,15 +38,13 @@
     .param p2, "incomingNumber"    # Ljava/lang/String;
 
     .prologue
-    .line 104
     packed-switch p1, :pswitch_data_0
 
-    .line 115
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v1, "state is unknown (state : "
+    const-string v1, "state is unknown (state : "
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -73,17 +70,14 @@
 
     invoke-static {v0}, Lcom/samsung/android/contextaware/utilbundle/logger/CaLogger;->info(Ljava/lang/String;)V
 
-    .line 119
     :goto_0
     return-void
 
-    .line 106
     :pswitch_0
     const-string v0, "CALL_STATE_IDLE"
 
     invoke-static {v0}, Lcom/samsung/android/contextaware/utilbundle/logger/CaLogger;->info(Ljava/lang/String;)V
 
-    .line 107
     iget-object v0, p0, Lcom/samsung/android/contextaware/utilbundle/CaTelephonyManager$1;->this$0:Lcom/samsung/android/contextaware/utilbundle/CaTelephonyManager;
 
     const/16 v1, -0x28
@@ -93,13 +87,11 @@
 
     goto :goto_0
 
-    .line 111
     :pswitch_1
     const-string v0, "CALL_STATE_ACTIVE"
 
     invoke-static {v0}, Lcom/samsung/android/contextaware/utilbundle/logger/CaLogger;->info(Ljava/lang/String;)V
 
-    .line 112
     iget-object v0, p0, Lcom/samsung/android/contextaware/utilbundle/CaTelephonyManager$1;->this$0:Lcom/samsung/android/contextaware/utilbundle/CaTelephonyManager;
 
     const/16 v1, -0x27
@@ -109,7 +101,6 @@
 
     goto :goto_0
 
-    .line 104
     nop
 
     :pswitch_data_0

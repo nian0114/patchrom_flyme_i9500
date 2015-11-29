@@ -32,23 +32,18 @@
     .param p2, "context"    # Landroid/content/Context;
 
     .prologue
-    .line 602
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 603
     iput-object p1, p0, Landroid/widget/CalendarView$AbstractCalendarViewDelegate;->mDelegator:Landroid/widget/CalendarView;
 
-    .line 604
     iput-object p2, p0, Landroid/widget/CalendarView$AbstractCalendarViewDelegate;->mContext:Landroid/content/Context;
 
-    .line 607
     invoke-static {}, Ljava/util/Locale;->getDefault()Ljava/util/Locale;
 
     move-result-object v0
 
     invoke-virtual {p0, v0}, Landroid/widget/CalendarView$AbstractCalendarViewDelegate;->setCurrentLocale(Ljava/util/Locale;)V
 
-    .line 608
     return-void
 .end method
 
@@ -59,7 +54,6 @@
     .param p1, "locale"    # Ljava/util/Locale;
 
     .prologue
-    .line 611
     iget-object v0, p0, Landroid/widget/CalendarView$AbstractCalendarViewDelegate;->mCurrentLocale:Ljava/util/Locale;
 
     invoke-virtual {p1, v0}, Ljava/util/Locale;->equals(Ljava/lang/Object;)Z
@@ -68,11 +62,9 @@
 
     if-eqz v0, :cond_0
 
-    .line 615
     :goto_0
     return-void
 
-    .line 614
     :cond_0
     iput-object p1, p0, Landroid/widget/CalendarView$AbstractCalendarViewDelegate;->mCurrentLocale:Ljava/util/Locale;
 

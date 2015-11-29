@@ -92,18 +92,14 @@
     .param p2, "menu"    # Landroid/view/Menu;
 
     .prologue
-    .line 346
     iput-object p1, p0, Landroid/view/MenuInflater$MenuState;->this$0:Landroid/view/MenuInflater;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 347
     iput-object p2, p0, Landroid/view/MenuInflater$MenuState;->menu:Landroid/view/Menu;
 
-    .line 349
     invoke-virtual {p0}, Landroid/view/MenuInflater$MenuState;->resetGroup()V
 
-    .line 350
     return-void
 .end method
 
@@ -112,7 +108,6 @@
     .param p0, "x0"    # Landroid/view/MenuInflater$MenuState;
 
     .prologue
-    .line 287
     iget-object v0, p0, Landroid/view/MenuInflater$MenuState;->itemActionProvider:Landroid/view/ActionProvider;
 
     return-object v0
@@ -125,10 +120,8 @@
     .prologue
     const/4 v0, 0x0
 
-    .line 436
     if-nez p1, :cond_0
 
-    .line 439
     :goto_0
     return v0
 
@@ -159,7 +152,6 @@
     .end annotation
 
     .prologue
-    .line 516
     .local p2, "constructorSignature":[Ljava/lang/Class;, "[Ljava/lang/Class<*>;"
     :try_start_0
     iget-object v3, p0, Landroid/view/MenuInflater$MenuState;->this$0:Landroid/view/MenuInflater;
@@ -177,13 +169,11 @@
 
     move-result-object v0
 
-    .line 517
     .local v0, "clazz":Ljava/lang/Class;, "Ljava/lang/Class<*>;"
     invoke-virtual {v0, p2}, Ljava/lang/Class;->getConstructor([Ljava/lang/Class;)Ljava/lang/reflect/Constructor;
 
     move-result-object v1
 
-    .line 518
     .local v1, "constructor":Ljava/lang/reflect/Constructor;, "Ljava/lang/reflect/Constructor<*>;"
     invoke-virtual {v1, p3}, Ljava/lang/reflect/Constructor;->newInstance([Ljava/lang/Object;)Ljava/lang/Object;
     :try_end_0
@@ -191,17 +181,14 @@
 
     move-result-object v3
 
-    .line 522
     .end local v0    # "clazz":Ljava/lang/Class;, "Ljava/lang/Class<*>;"
     .end local v1    # "constructor":Ljava/lang/reflect/Constructor;, "Ljava/lang/reflect/Constructor<*>;"
     :goto_0
     return-object v3
 
-    .line 519
     :catch_0
     move-exception v2
 
-    .line 520
     .local v2, "e":Ljava/lang/Exception;
     const-string v3, "MenuInflater"
 
@@ -225,7 +212,6 @@
 
     invoke-static {v3, v4, v2}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
-    .line 522
     const/4 v3, 0x0
 
     goto :goto_0
@@ -238,7 +224,6 @@
     .prologue
     const/4 v4, 0x1
 
-    .line 444
     iget-boolean v3, p0, Landroid/view/MenuInflater$MenuState;->itemChecked:Z
 
     invoke-interface {p1, v3}, Landroid/view/MenuItem;->setChecked(Z)Landroid/view/MenuItem;
@@ -290,23 +275,19 @@
 
     invoke-interface {v3, v5}, Landroid/view/MenuItem;->setNumericShortcut(C)Landroid/view/MenuItem;
 
-    .line 453
     iget v3, p0, Landroid/view/MenuInflater$MenuState;->itemShowAsAction:I
 
     if-ltz v3, :cond_0
 
-    .line 454
     iget v3, p0, Landroid/view/MenuInflater$MenuState;->itemShowAsAction:I
 
     invoke-interface {p1, v3}, Landroid/view/MenuItem;->setShowAsAction(I)V
 
-    .line 457
     :cond_0
     iget-object v3, p0, Landroid/view/MenuInflater$MenuState;->itemListenerMethodName:Ljava/lang/String;
 
     if-eqz v3, :cond_3
 
-    .line 458
     iget-object v3, p0, Landroid/view/MenuInflater$MenuState;->this$0:Landroid/view/MenuInflater;
 
     # getter for: Landroid/view/MenuInflater;->mContext:Landroid/content/Context;
@@ -320,7 +301,6 @@
 
     if-eqz v3, :cond_2
 
-    .line 459
     new-instance v3, Ljava/lang/IllegalStateException;
 
     const-string v4, "The android:onClick attribute cannot be used within a restricted context"
@@ -329,13 +309,11 @@
 
     throw v3
 
-    .line 444
     :cond_1
     const/4 v3, 0x0
 
     goto :goto_0
 
-    .line 462
     :cond_2
     new-instance v3, Landroid/view/MenuInflater$InflatedOnMenuItemClickListener;
 
@@ -352,7 +330,6 @@
 
     invoke-interface {p1, v3}, Landroid/view/MenuItem;->setOnMenuItemClickListener(Landroid/view/MenuItem$OnMenuItemClickListener;)Landroid/view/MenuItem;
 
-    .line 466
     :cond_3
     instance-of v3, p1, Lcom/android/internal/view/menu/MenuItemImpl;
 
@@ -360,10 +337,8 @@
 
     move-object v2, p1
 
-    .line 467
     check-cast v2, Lcom/android/internal/view/menu/MenuItemImpl;
 
-    .line 468
     .local v2, "impl":Lcom/android/internal/view/menu/MenuItemImpl;
     iget v3, p0, Landroid/view/MenuInflater$MenuState;->itemCheckable:I
 
@@ -371,21 +346,17 @@
 
     if-lt v3, v5, :cond_4
 
-    .line 469
     invoke-virtual {v2, v4}, Lcom/android/internal/view/menu/MenuItemImpl;->setExclusiveCheckable(Z)V
 
-    .line 473
     .end local v2    # "impl":Lcom/android/internal/view/menu/MenuItemImpl;
     :cond_4
     const/4 v1, 0x0
 
-    .line 474
     .local v1, "actionViewSpecified":Z
     iget-object v3, p0, Landroid/view/MenuInflater$MenuState;->itemActionViewClassName:Ljava/lang/String;
 
     if-eqz v3, :cond_5
 
-    .line 475
     iget-object v3, p0, Landroid/view/MenuInflater$MenuState;->itemActionViewClassName:Ljava/lang/String;
 
     # getter for: Landroid/view/MenuInflater;->ACTION_VIEW_CONSTRUCTOR_SIGNATURE:[Ljava/lang/Class;
@@ -406,48 +377,38 @@
 
     check-cast v0, Landroid/view/View;
 
-    .line 477
     .local v0, "actionView":Landroid/view/View;
     invoke-interface {p1, v0}, Landroid/view/MenuItem;->setActionView(Landroid/view/View;)Landroid/view/MenuItem;
 
-    .line 478
     const/4 v1, 0x1
 
-    .line 480
     .end local v0    # "actionView":Landroid/view/View;
     :cond_5
     iget v3, p0, Landroid/view/MenuInflater$MenuState;->itemActionViewLayout:I
 
     if-lez v3, :cond_6
 
-    .line 481
     if-nez v1, :cond_8
 
-    .line 482
     iget v3, p0, Landroid/view/MenuInflater$MenuState;->itemActionViewLayout:I
 
     invoke-interface {p1, v3}, Landroid/view/MenuItem;->setActionView(I)Landroid/view/MenuItem;
 
-    .line 483
     const/4 v1, 0x1
 
-    .line 489
     :cond_6
     :goto_1
     iget-object v3, p0, Landroid/view/MenuInflater$MenuState;->itemActionProvider:Landroid/view/ActionProvider;
 
     if-eqz v3, :cond_7
 
-    .line 490
     iget-object v3, p0, Landroid/view/MenuInflater$MenuState;->itemActionProvider:Landroid/view/ActionProvider;
 
     invoke-interface {p1, v3}, Landroid/view/MenuItem;->setActionProvider(Landroid/view/ActionProvider;)Landroid/view/MenuItem;
 
-    .line 492
     :cond_7
     return-void
 
-    .line 485
     :cond_8
     const-string v3, "MenuInflater"
 
@@ -464,12 +425,10 @@
     .locals 6
 
     .prologue
-    .line 495
     const/4 v1, 0x1
 
     iput-boolean v1, p0, Landroid/view/MenuInflater$MenuState;->itemAdded:Z
 
-    .line 496
     iget-object v1, p0, Landroid/view/MenuInflater$MenuState;->menu:Landroid/view/Menu;
 
     iget v2, p0, Landroid/view/MenuInflater$MenuState;->groupId:I
@@ -484,11 +443,9 @@
 
     move-result-object v0
 
-    .line 497
     .local v0, "item":Landroid/view/MenuItem;
     invoke-direct {p0, v0}, Landroid/view/MenuInflater$MenuState;->setItem(Landroid/view/MenuItem;)V
 
-    .line 498
     return-object v0
 .end method
 
@@ -496,12 +453,10 @@
     .locals 6
 
     .prologue
-    .line 502
     const/4 v1, 0x1
 
     iput-boolean v1, p0, Landroid/view/MenuInflater$MenuState;->itemAdded:Z
 
-    .line 503
     iget-object v1, p0, Landroid/view/MenuInflater$MenuState;->menu:Landroid/view/Menu;
 
     iget v2, p0, Landroid/view/MenuInflater$MenuState;->groupId:I
@@ -516,7 +471,6 @@
 
     move-result-object v0
 
-    .line 504
     .local v0, "subMenu":Landroid/view/SubMenu;
     invoke-interface {v0}, Landroid/view/SubMenu;->getItem()Landroid/view/MenuItem;
 
@@ -524,7 +478,6 @@
 
     invoke-direct {p0, v1}, Landroid/view/MenuInflater$MenuState;->setItem(Landroid/view/MenuItem;)V
 
-    .line 505
     return-object v0
 .end method
 
@@ -532,7 +485,6 @@
     .locals 1
 
     .prologue
-    .line 509
     iget-boolean v0, p0, Landroid/view/MenuInflater$MenuState;->itemAdded:Z
 
     return v0
@@ -547,7 +499,6 @@
 
     const/4 v3, 0x0
 
-    .line 365
     iget-object v1, p0, Landroid/view/MenuInflater$MenuState;->this$0:Landroid/view/MenuInflater;
 
     # getter for: Landroid/view/MenuInflater;->mContext:Landroid/content/Context;
@@ -561,7 +512,6 @@
 
     move-result-object v0
 
-    .line 368
     .local v0, "a":Landroid/content/res/TypedArray;
     invoke-virtual {v0, v4, v3}, Landroid/content/res/TypedArray;->getResourceId(II)I
 
@@ -569,7 +519,6 @@
 
     iput v1, p0, Landroid/view/MenuInflater$MenuState;->groupId:I
 
-    .line 369
     const/4 v1, 0x3
 
     invoke-virtual {v0, v1, v3}, Landroid/content/res/TypedArray;->getInt(II)I
@@ -578,7 +527,6 @@
 
     iput v1, p0, Landroid/view/MenuInflater$MenuState;->groupCategory:I
 
-    .line 370
     const/4 v1, 0x4
 
     invoke-virtual {v0, v1, v3}, Landroid/content/res/TypedArray;->getInt(II)I
@@ -587,7 +535,6 @@
 
     iput v1, p0, Landroid/view/MenuInflater$MenuState;->groupOrder:I
 
-    .line 371
     const/4 v1, 0x5
 
     invoke-virtual {v0, v1, v3}, Landroid/content/res/TypedArray;->getInt(II)I
@@ -596,7 +543,6 @@
 
     iput v1, p0, Landroid/view/MenuInflater$MenuState;->groupCheckable:I
 
-    .line 372
     const/4 v1, 0x2
 
     invoke-virtual {v0, v1, v4}, Landroid/content/res/TypedArray;->getBoolean(IZ)Z
@@ -605,17 +551,14 @@
 
     iput-boolean v1, p0, Landroid/view/MenuInflater$MenuState;->groupVisible:Z
 
-    .line 373
     invoke-virtual {v0, v3, v4}, Landroid/content/res/TypedArray;->getBoolean(IZ)Z
 
     move-result v1
 
     iput-boolean v1, p0, Landroid/view/MenuInflater$MenuState;->groupEnabled:Z
 
-    .line 375
     invoke-virtual {v0}, Landroid/content/res/TypedArray;->recycle()V
 
-    .line 376
     return-void
 .end method
 
@@ -630,7 +573,6 @@
 
     const/4 v6, 0x0
 
-    .line 382
     iget-object v4, p0, Landroid/view/MenuInflater$MenuState;->this$0:Landroid/view/MenuInflater;
 
     # getter for: Landroid/view/MenuInflater;->mContext:Landroid/content/Context;
@@ -644,13 +586,11 @@
 
     move-result-object v0
 
-    .line 384
     .local v0, "a":Landroid/content/res/TypedArray;
     sget-boolean v4, Landroid/os/Build;->IS_SYSTEM_SECURE:Z
 
     if-eqz v4, :cond_0
 
-    .line 386
     iget-object v4, p0, Landroid/view/MenuInflater$MenuState;->this$0:Landroid/view/MenuInflater;
 
     # getter for: Landroid/view/MenuInflater;->mContext:Landroid/content/Context;
@@ -664,7 +604,6 @@
 
     invoke-virtual {v4, v0}, Landroid/content/res/Resources;->addMenuItemTitle(Landroid/content/res/TypedArray;)V
 
-    .line 389
     :cond_0
     const/4 v4, 0x2
 
@@ -674,7 +613,6 @@
 
     iput v4, p0, Landroid/view/MenuInflater$MenuState;->itemId:I
 
-    .line 390
     const/4 v4, 0x5
 
     iget v7, p0, Landroid/view/MenuInflater$MenuState;->groupCategory:I
@@ -683,7 +621,6 @@
 
     move-result v1
 
-    .line 391
     .local v1, "category":I
     const/4 v4, 0x6
 
@@ -693,7 +630,6 @@
 
     move-result v3
 
-    .line 392
     .local v3, "order":I
     const/high16 v4, -0x10000
 
@@ -707,7 +643,6 @@
 
     iput v4, p0, Landroid/view/MenuInflater$MenuState;->itemCategoryOrder:I
 
-    .line 393
     const/4 v4, 0x7
 
     invoke-virtual {v0, v4}, Landroid/content/res/TypedArray;->getText(I)Ljava/lang/CharSequence;
@@ -716,7 +651,6 @@
 
     iput-object v4, p0, Landroid/view/MenuInflater$MenuState;->itemTitle:Ljava/lang/CharSequence;
 
-    .line 394
     const/16 v4, 0x8
 
     invoke-virtual {v0, v4}, Landroid/content/res/TypedArray;->getText(I)Ljava/lang/CharSequence;
@@ -725,14 +659,12 @@
 
     iput-object v4, p0, Landroid/view/MenuInflater$MenuState;->itemTitleCondensed:Ljava/lang/CharSequence;
 
-    .line 395
     invoke-virtual {v0, v6, v6}, Landroid/content/res/TypedArray;->getResourceId(II)I
 
     move-result v4
 
     iput v4, p0, Landroid/view/MenuInflater$MenuState;->itemIconResId:I
 
-    .line 396
     const/16 v4, 0x9
 
     invoke-virtual {v0, v4}, Landroid/content/res/TypedArray;->getString(I)Ljava/lang/String;
@@ -745,7 +677,6 @@
 
     iput-char v4, p0, Landroid/view/MenuInflater$MenuState;->itemAlphabeticShortcut:C
 
-    .line 398
     const/16 v4, 0xa
 
     invoke-virtual {v0, v4}, Landroid/content/res/TypedArray;->getString(I)Ljava/lang/String;
@@ -758,14 +689,12 @@
 
     iput-char v4, p0, Landroid/view/MenuInflater$MenuState;->itemNumericShortcut:C
 
-    .line 400
     invoke-virtual {v0, v8}, Landroid/content/res/TypedArray;->hasValue(I)Z
 
     move-result v4
 
     if-eqz v4, :cond_2
 
-    .line 402
     invoke-virtual {v0, v8, v6}, Landroid/content/res/TypedArray;->getBoolean(IZ)Z
 
     move-result v4
@@ -777,7 +706,6 @@
     :goto_0
     iput v4, p0, Landroid/view/MenuInflater$MenuState;->itemCheckable:I
 
-    .line 408
     :goto_1
     const/4 v4, 0x3
 
@@ -787,7 +715,6 @@
 
     iput-boolean v4, p0, Landroid/view/MenuInflater$MenuState;->itemChecked:Z
 
-    .line 409
     const/4 v4, 0x4
 
     iget-boolean v7, p0, Landroid/view/MenuInflater$MenuState;->groupVisible:Z
@@ -798,7 +725,6 @@
 
     iput-boolean v4, p0, Landroid/view/MenuInflater$MenuState;->itemVisible:Z
 
-    .line 410
     iget-boolean v4, p0, Landroid/view/MenuInflater$MenuState;->groupEnabled:Z
 
     invoke-virtual {v0, v5, v4}, Landroid/content/res/TypedArray;->getBoolean(IZ)Z
@@ -807,7 +733,6 @@
 
     iput-boolean v4, p0, Landroid/view/MenuInflater$MenuState;->itemEnabled:Z
 
-    .line 411
     const/16 v4, 0xd
 
     const/4 v7, -0x1
@@ -818,7 +743,6 @@
 
     iput v4, p0, Landroid/view/MenuInflater$MenuState;->itemShowAsAction:I
 
-    .line 412
     const/16 v4, 0xc
 
     invoke-virtual {v0, v4}, Landroid/content/res/TypedArray;->getString(I)Ljava/lang/String;
@@ -827,7 +751,6 @@
 
     iput-object v4, p0, Landroid/view/MenuInflater$MenuState;->itemListenerMethodName:Ljava/lang/String;
 
-    .line 413
     const/16 v4, 0xe
 
     invoke-virtual {v0, v4, v6}, Landroid/content/res/TypedArray;->getResourceId(II)I
@@ -836,7 +759,6 @@
 
     iput v4, p0, Landroid/view/MenuInflater$MenuState;->itemActionViewLayout:I
 
-    .line 414
     const/16 v4, 0xf
 
     invoke-virtual {v0, v4}, Landroid/content/res/TypedArray;->getString(I)Ljava/lang/String;
@@ -845,7 +767,6 @@
 
     iput-object v4, p0, Landroid/view/MenuInflater$MenuState;->itemActionViewClassName:Ljava/lang/String;
 
-    .line 415
     const/16 v4, 0x10
 
     invoke-virtual {v0, v4}, Landroid/content/res/TypedArray;->getString(I)Ljava/lang/String;
@@ -854,14 +775,12 @@
 
     iput-object v4, p0, Landroid/view/MenuInflater$MenuState;->itemActionProviderClassName:Ljava/lang/String;
 
-    .line 417
     iget-object v4, p0, Landroid/view/MenuInflater$MenuState;->itemActionProviderClassName:Ljava/lang/String;
 
     if-eqz v4, :cond_3
 
     move v2, v5
 
-    .line 418
     .local v2, "hasActionProvider":Z
     :goto_2
     if-eqz v2, :cond_4
@@ -874,7 +793,6 @@
 
     if-nez v4, :cond_4
 
-    .line 419
     iget-object v4, p0, Landroid/view/MenuInflater$MenuState;->itemActionProviderClassName:Ljava/lang/String;
 
     # getter for: Landroid/view/MenuInflater;->ACTION_PROVIDER_CONSTRUCTOR_SIGNATURE:[Ljava/lang/Class;
@@ -897,24 +815,19 @@
 
     iput-object v4, p0, Landroid/view/MenuInflater$MenuState;->itemActionProvider:Landroid/view/ActionProvider;
 
-    .line 430
     :goto_3
     invoke-virtual {v0}, Landroid/content/res/TypedArray;->recycle()V
 
-    .line 432
     iput-boolean v6, p0, Landroid/view/MenuInflater$MenuState;->itemAdded:Z
 
-    .line 433
     return-void
 
     .end local v2    # "hasActionProvider":Z
     :cond_1
     move v4, v6
 
-    .line 402
     goto :goto_0
 
-    .line 406
     :cond_2
     iget v4, p0, Landroid/view/MenuInflater$MenuState;->groupCheckable:I
 
@@ -925,22 +838,18 @@
     :cond_3
     move v2, v6
 
-    .line 417
     goto :goto_2
 
-    .line 423
     .restart local v2    # "hasActionProvider":Z
     :cond_4
     if-eqz v2, :cond_5
 
-    .line 424
     const-string v4, "MenuInflater"
 
     const-string v5, "Ignoring attribute \'actionProviderClass\'. Action view already specified."
 
     invoke-static {v4, v5}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 427
     :cond_5
     const/4 v4, 0x0
 
@@ -957,24 +866,17 @@
 
     const/4 v0, 0x0
 
-    .line 353
     iput v0, p0, Landroid/view/MenuInflater$MenuState;->groupId:I
 
-    .line 354
     iput v0, p0, Landroid/view/MenuInflater$MenuState;->groupCategory:I
 
-    .line 355
     iput v0, p0, Landroid/view/MenuInflater$MenuState;->groupOrder:I
 
-    .line 356
     iput v0, p0, Landroid/view/MenuInflater$MenuState;->groupCheckable:I
 
-    .line 357
     iput-boolean v1, p0, Landroid/view/MenuInflater$MenuState;->groupVisible:Z
 
-    .line 358
     iput-boolean v1, p0, Landroid/view/MenuInflater$MenuState;->groupEnabled:Z
 
-    .line 359
     return-void
 .end method

@@ -52,88 +52,84 @@
 
     const/4 v2, 0x0
 
-    .line 79
     const/4 v0, 0x5
 
     new-array v0, v0, [Ljava/lang/String;
 
-    const-string/jumbo v1, "select_name_1"
+    const-string v1, "select_name_1"
 
     aput-object v1, v0, v2
 
-    const-string/jumbo v1, "select_name_2"
+    const-string v1, "select_name_2"
 
     aput-object v1, v0, v3
 
-    const-string/jumbo v1, "select_name_3"
+    const-string v1, "select_name_3"
 
     aput-object v1, v0, v4
 
-    const-string/jumbo v1, "select_name_4"
+    const-string v1, "select_name_4"
 
     aput-object v1, v0, v5
 
-    const-string/jumbo v1, "select_name_5"
+    const-string v1, "select_name_5"
 
     aput-object v1, v0, v6
 
     sput-object v0, Lcom/samsung/android/telephony/MultiSimManager;->mSimNameKey:[Ljava/lang/String;
 
-    .line 82
     const/4 v0, 0x5
 
     new-array v0, v0, [Ljava/lang/String;
 
-    const-string/jumbo v1, "select_icon_1"
+    const-string v1, "select_icon_1"
 
     aput-object v1, v0, v2
 
-    const-string/jumbo v1, "select_icon_2"
+    const-string v1, "select_icon_2"
 
     aput-object v1, v0, v3
 
-    const-string/jumbo v1, "select_icon_3"
+    const-string v1, "select_icon_3"
 
     aput-object v1, v0, v4
 
-    const-string/jumbo v1, "select_icon_4"
+    const-string v1, "select_icon_4"
 
     aput-object v1, v0, v5
 
-    const-string/jumbo v1, "select_icon_5"
+    const-string v1, "select_icon_5"
 
     aput-object v1, v0, v6
 
     sput-object v0, Lcom/samsung/android/telephony/MultiSimManager;->mSimIconKey:[Ljava/lang/String;
 
-    .line 85
     const/4 v0, 0x5
 
     new-array v0, v0, [Ljava/lang/String;
 
-    const-string/jumbo v1, "phone1_on"
+    const-string v1, "phone1_on"
 
     aput-object v1, v0, v2
 
-    const-string/jumbo v1, "phone2_on"
+    const-string v1, "phone2_on"
 
     aput-object v1, v0, v3
 
-    const-string/jumbo v1, "phone3_on"
+    const-string v1, "phone3_on"
 
     aput-object v1, v0, v4
 
-    const-string/jumbo v1, "phone4_on"
+    const-string v1, "phone4_on"
 
     aput-object v1, v0, v5
 
-    const-string/jumbo v1, "phone5_on"
+    const-string v1, "phone5_on"
 
     aput-object v1, v0, v6
 
     sput-object v0, Lcom/samsung/android/telephony/MultiSimManager;->mPhoneOnKey:[Ljava/lang/String;
 
-    .line 89
     invoke-static {}, Landroid/telephony/TelephonyManager;->getDefault()Landroid/telephony/TelephonyManager;
 
     move-result-object v0
@@ -151,7 +147,6 @@
     .locals 0
 
     .prologue
-    .line 41
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -162,10 +157,8 @@
     .param p0, "subId"    # J
 
     .prologue
-    .line 2382
     invoke-static {p0, p1}, Landroid/telephony/SubscriptionManager;->activateSubId(J)V
 
-    .line 2383
     return-void
 .end method
 
@@ -175,7 +168,6 @@
     .param p1, "slotId"    # I
 
     .prologue
-    .line 2026
     invoke-static {p0, p1}, Landroid/telephony/SubscriptionManager;->addSubInfoRecord(Ljava/lang/String;I)Landroid/net/Uri;
 
     move-result-object v0
@@ -187,7 +179,6 @@
     .locals 1
 
     .prologue
-    .line 2324
     invoke-static {}, Landroid/telephony/SubscriptionManager;->allDefaultsSelected()Z
 
     move-result v0
@@ -200,12 +191,10 @@
     .param p0, "slotId"    # I
 
     .prologue
-    .line 1568
     invoke-static {p0}, Landroid/telephony/SubscriptionManager;->getSubId(I)[J
 
     move-result-object v0
 
-    .line 1570
     .local v0, "subId":[J
     :try_start_0
     invoke-static {}, Landroid/telephony/TelephonyManager;->getDefault()Landroid/telephony/TelephonyManager;
@@ -220,11 +209,9 @@
     :try_end_0
     .catch Ljava/lang/NullPointerException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 1573
     :goto_0
     return-void
 
-    .line 1571
     :catch_0
     move-exception v1
 
@@ -236,14 +223,12 @@
     .param p0, "subId"    # J
 
     .prologue
-    .line 1586
     invoke-static {}, Landroid/telephony/TelephonyManager;->getDefault()Landroid/telephony/TelephonyManager;
 
     move-result-object v0
 
     invoke-virtual {v0, p0, p1}, Landroid/telephony/TelephonyManager;->answerRingingCall(J)V
 
-    .line 1587
     return-void
 .end method
 
@@ -253,12 +238,10 @@
     .param p1, "simSlot"    # I
 
     .prologue
-    .line 196
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1, p0}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    .line 198
     .local v1, "str":Ljava/lang/StringBuilder;
     if-ltz p1, :cond_1
 
@@ -266,14 +249,12 @@
 
     if-ge p1, v2, :cond_1
 
-    .line 199
     if-eqz p1, :cond_0
 
     add-int/lit8 v2, p1, 0x1
 
     invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
-    .line 210
     :cond_0
     :goto_0
     invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
@@ -282,7 +263,6 @@
 
     return-object v2
 
-    .line 201
     :cond_1
     const-string v2, "MultiSimManager"
 
@@ -322,7 +302,6 @@
 
     invoke-static {v2, v3}, Landroid/telephony/Rlog;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 203
     :try_start_0
     new-instance v2, Ljava/lang/Exception;
 
@@ -334,11 +313,9 @@
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 205
     :catch_0
     move-exception v0
 
-    .line 206
     .local v0, "e":Ljava/lang/Exception;
     invoke-virtual {v0}, Ljava/lang/Exception;->printStackTrace()V
 
@@ -352,12 +329,10 @@
     .param p2, "number"    # Ljava/lang/String;
 
     .prologue
-    .line 1541
     invoke-static {p0}, Landroid/telephony/SubscriptionManager;->getSubId(I)[J
 
     move-result-object v0
 
-    .line 1543
     .local v0, "subId":[J
     :try_start_0
     invoke-static {}, Landroid/telephony/TelephonyManager;->getDefault()Landroid/telephony/TelephonyManager;
@@ -372,11 +347,9 @@
     :try_end_0
     .catch Ljava/lang/NullPointerException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 1546
     :goto_0
     return-void
 
-    .line 1544
     :catch_0
     move-exception v1
 
@@ -390,14 +363,12 @@
     .param p3, "number"    # Ljava/lang/String;
 
     .prologue
-    .line 1555
     invoke-static {}, Landroid/telephony/TelephonyManager;->getDefault()Landroid/telephony/TelephonyManager;
 
     move-result-object v0
 
     invoke-virtual {v0, p0, p1, p2, p3}, Landroid/telephony/TelephonyManager;->call(JLjava/lang/String;Ljava/lang/String;)V
 
-    .line 1556
     return-void
 .end method
 
@@ -405,10 +376,8 @@
     .locals 0
 
     .prologue
-    .line 2332
     invoke-static {}, Landroid/telephony/SubscriptionManager;->clearDefaultsForInactiveSubIds()V
 
-    .line 2333
     return-void
 .end method
 
@@ -416,10 +385,8 @@
     .locals 0
 
     .prologue
-    .line 2317
     invoke-static {}, Landroid/telephony/SubscriptionManager;->clearSubInfo()V
 
-    .line 2318
     return-void
 .end method
 
@@ -428,10 +395,8 @@
     .param p0, "subId"    # J
 
     .prologue
-    .line 2391
     invoke-static {p0, p1}, Landroid/telephony/SubscriptionManager;->deactivateSubId(J)V
 
-    .line 2392
     return-void
 .end method
 
@@ -441,12 +406,10 @@
     .param p1, "number"    # Ljava/lang/String;
 
     .prologue
-    .line 1516
     invoke-static {p0}, Landroid/telephony/SubscriptionManager;->getSubId(I)[J
 
     move-result-object v0
 
-    .line 1518
     .local v0, "subId":[J
     :try_start_0
     invoke-static {}, Landroid/telephony/TelephonyManager;->getDefault()Landroid/telephony/TelephonyManager;
@@ -461,11 +424,9 @@
     :try_end_0
     .catch Ljava/lang/NullPointerException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 1521
     :goto_0
     return-void
 
-    .line 1519
     :catch_0
     move-exception v1
 
@@ -478,14 +439,12 @@
     .param p2, "number"    # Ljava/lang/String;
 
     .prologue
-    .line 1532
     invoke-static {}, Landroid/telephony/TelephonyManager;->getDefault()Landroid/telephony/TelephonyManager;
 
     move-result-object v0
 
     invoke-virtual {v0, p0, p1, p2}, Landroid/telephony/TelephonyManager;->dial(JLjava/lang/String;)V
 
-    .line 1533
     return-void
 .end method
 
@@ -495,12 +454,10 @@
     .param p1, "enable"    # Z
 
     .prologue
-    .line 1368
     invoke-static {p0}, Landroid/telephony/SubscriptionManager;->getSubId(I)[J
 
     move-result-object v0
 
-    .line 1370
     .local v0, "subId":[J
     :try_start_0
     invoke-static {}, Landroid/telephony/TelephonyManager;->getDefault()Landroid/telephony/TelephonyManager;
@@ -515,11 +472,9 @@
     :try_end_0
     .catch Ljava/lang/NullPointerException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 1373
     :goto_0
     return-void
 
-    .line 1371
     :catch_0
     move-exception v1
 
@@ -532,14 +487,12 @@
     .param p2, "enable"    # Z
 
     .prologue
-    .line 1388
     invoke-static {}, Landroid/telephony/TelephonyManager;->getDefault()Landroid/telephony/TelephonyManager;
 
     move-result-object v0
 
     invoke-virtual {v0, p0, p1, p2}, Landroid/telephony/TelephonyManager;->enableSimplifiedNetworkSettingsForSubscriber(JZ)V
 
-    .line 1389
     return-void
 .end method
 
@@ -550,12 +503,10 @@
     .prologue
     const/4 v2, 0x0
 
-    .line 1595
     invoke-static {p0}, Landroid/telephony/SubscriptionManager;->getSubId(I)[J
 
     move-result-object v1
 
-    .line 1597
     .local v1, "subId":[J
     :try_start_0
     invoke-static {}, Landroid/telephony/TelephonyManager;->getDefault()Landroid/telephony/TelephonyManager;
@@ -572,15 +523,12 @@
 
     move-result v2
 
-    .line 1599
     :goto_0
     return v2
 
-    .line 1598
     :catch_0
     move-exception v0
 
-    .line 1599
     .local v0, "ex":Ljava/lang/NullPointerException;
     goto :goto_0
 .end method
@@ -590,7 +538,6 @@
     .param p0, "subId"    # J
 
     .prologue
-    .line 1610
     invoke-static {}, Landroid/telephony/TelephonyManager;->getDefault()Landroid/telephony/TelephonyManager;
 
     move-result-object v0
@@ -606,7 +553,6 @@
     .locals 1
 
     .prologue
-    .line 2373
     invoke-static {}, Landroid/telephony/SubscriptionManager;->getActiveSubIdList()[J
 
     move-result-object v0
@@ -618,7 +564,6 @@
     .locals 1
 
     .prologue
-    .line 2015
     invoke-static {}, Landroid/telephony/SubscriptionManager;->getActiveSubInfoCount()I
 
     move-result v0
@@ -639,7 +584,6 @@
     .end annotation
 
     .prologue
-    .line 1999
     invoke-static {}, Landroid/telephony/SubscriptionManager;->getActiveSubInfoList()Ljava/util/List;
 
     move-result-object v0
@@ -651,7 +595,6 @@
     .locals 1
 
     .prologue
-    .line 2007
     invoke-static {}, Landroid/telephony/SubscriptionManager;->getAllSubInfoCount()I
 
     move-result v0
@@ -672,7 +615,6 @@
     .end annotation
 
     .prologue
-    .line 1991
     invoke-static {}, Landroid/telephony/SubscriptionManager;->getAllSubInfoList()Ljava/util/List;
 
     move-result-object v0
@@ -687,12 +629,10 @@
     .prologue
     const/4 v2, 0x0
 
-    .line 1123
     invoke-static {p0}, Landroid/telephony/SubscriptionManager;->getSubId(I)[J
 
     move-result-object v1
 
-    .line 1125
     .local v1, "subId":[J
     :try_start_0
     invoke-static {}, Landroid/telephony/TelephonyManager;->getDefault()Landroid/telephony/TelephonyManager;
@@ -709,15 +649,12 @@
 
     move-result v2
 
-    .line 1127
     :goto_0
     return v2
 
-    .line 1126
     :catch_0
     move-exception v0
 
-    .line 1127
     .local v0, "ex":Ljava/lang/NullPointerException;
     goto :goto_0
 .end method
@@ -727,7 +664,6 @@
     .param p0, "subId"    # J
 
     .prologue
-    .line 1140
     invoke-static {}, Landroid/telephony/TelephonyManager;->getDefault()Landroid/telephony/TelephonyManager;
 
     move-result-object v0
@@ -744,12 +680,10 @@
     .param p0, "slotId"    # I
 
     .prologue
-    .line 1181
     invoke-static {p0}, Landroid/telephony/SubscriptionManager;->getSubId(I)[J
 
     move-result-object v1
 
-    .line 1183
     .local v1, "subId":[J
     :try_start_0
     invoke-static {}, Landroid/telephony/TelephonyManager;->getDefault()Landroid/telephony/TelephonyManager;
@@ -766,15 +700,12 @@
 
     move-result v2
 
-    .line 1185
     :goto_0
     return v2
 
-    .line 1184
     :catch_0
     move-exception v0
 
-    .line 1185
     .local v0, "ex":Ljava/lang/NullPointerException;
     const/4 v2, -0x1
 
@@ -786,7 +717,6 @@
     .param p0, "subId"    # J
 
     .prologue
-    .line 1197
     invoke-static {}, Landroid/telephony/TelephonyManager;->getDefault()Landroid/telephony/TelephonyManager;
 
     move-result-object v0
@@ -803,12 +733,10 @@
     .param p0, "slotId"    # I
 
     .prologue
-    .line 1209
     invoke-static {p0}, Landroid/telephony/SubscriptionManager;->getSubId(I)[J
 
     move-result-object v1
 
-    .line 1211
     .local v1, "subId":[J
     :try_start_0
     invoke-static {}, Landroid/telephony/TelephonyManager;->getDefault()Landroid/telephony/TelephonyManager;
@@ -825,15 +753,12 @@
 
     move-result v2
 
-    .line 1213
     :goto_0
     return v2
 
-    .line 1212
     :catch_0
     move-exception v0
 
-    .line 1213
     .local v0, "ex":Ljava/lang/NullPointerException;
     const/4 v2, -0x1
 
@@ -845,7 +770,6 @@
     .param p0, "subId"    # J
 
     .prologue
-    .line 1225
     invoke-static {}, Landroid/telephony/TelephonyManager;->getDefault()Landroid/telephony/TelephonyManager;
 
     move-result-object v0
@@ -862,12 +786,10 @@
     .param p0, "slotId"    # I
 
     .prologue
-    .line 1237
     invoke-static {p0}, Landroid/telephony/SubscriptionManager;->getSubId(I)[J
 
     move-result-object v1
 
-    .line 1239
     .local v1, "subId":[J
     :try_start_0
     invoke-static {}, Landroid/telephony/TelephonyManager;->getDefault()Landroid/telephony/TelephonyManager;
@@ -884,15 +806,12 @@
 
     move-result-object v2
 
-    .line 1241
     :goto_0
     return-object v2
 
-    .line 1240
     :catch_0
     move-exception v0
 
-    .line 1241
     .local v0, "ex":Ljava/lang/NullPointerException;
     const/4 v2, 0x0
 
@@ -904,7 +823,6 @@
     .param p0, "subId"    # J
 
     .prologue
-    .line 1253
     invoke-static {}, Landroid/telephony/TelephonyManager;->getDefault()Landroid/telephony/TelephonyManager;
 
     move-result-object v0
@@ -921,12 +839,10 @@
     .param p0, "slotId"    # I
 
     .prologue
-    .line 427
     invoke-static {p0}, Landroid/telephony/SubscriptionManager;->getSubId(I)[J
 
     move-result-object v1
 
-    .line 429
     .local v1, "subId":[J
     :try_start_0
     invoke-static {}, Landroid/telephony/TelephonyManager;->getDefault()Landroid/telephony/TelephonyManager;
@@ -943,15 +859,12 @@
 
     move-result v2
 
-    .line 431
     :goto_0
     return v2
 
-    .line 430
     :catch_0
     move-exception v0
 
-    .line 431
     .local v0, "ex":Ljava/lang/NullPointerException;
     const/4 v2, 0x1
 
@@ -963,7 +876,6 @@
     .param p0, "subId"    # J
 
     .prologue
-    .line 443
     invoke-static {}, Landroid/telephony/TelephonyManager;->getDefault()Landroid/telephony/TelephonyManager;
 
     move-result-object v0
@@ -982,12 +894,10 @@
     .prologue
     const/4 v2, 0x0
 
-    .line 610
     invoke-static {p0}, Landroid/telephony/SubscriptionManager;->getSubId(I)[J
 
     move-result-object v1
 
-    .line 612
     .local v1, "subId":[J
     :try_start_0
     invoke-static {}, Landroid/telephony/TelephonyManager;->getDefault()Landroid/telephony/TelephonyManager;
@@ -1004,15 +914,12 @@
 
     move-result v2
 
-    .line 614
     :goto_0
     return v2
 
-    .line 613
     :catch_0
     move-exception v0
 
-    .line 614
     .local v0, "ex":Ljava/lang/NullPointerException;
     goto :goto_0
 .end method
@@ -1022,7 +929,6 @@
     .param p0, "subId"    # J
 
     .prologue
-    .line 627
     invoke-static {}, Landroid/telephony/TelephonyManager;->getDefault()Landroid/telephony/TelephonyManager;
 
     move-result-object v0
@@ -1041,12 +947,10 @@
     .prologue
     const/4 v2, 0x0
 
-    .line 1435
     invoke-static {p0}, Landroid/telephony/SubscriptionManager;->getSubId(I)[J
 
     move-result-object v1
 
-    .line 1437
     .local v1, "subId":[J
     :try_start_0
     invoke-static {}, Landroid/telephony/TelephonyManager;->getDefault()Landroid/telephony/TelephonyManager;
@@ -1063,15 +967,12 @@
 
     move-result v2
 
-    .line 1439
     :goto_0
     return v2
 
-    .line 1438
     :catch_0
     move-exception v0
 
-    .line 1439
     .local v0, "ex":Ljava/lang/NullPointerException;
     goto :goto_0
 .end method
@@ -1081,7 +982,6 @@
     .param p0, "subId"    # J
 
     .prologue
-    .line 1451
     invoke-static {}, Landroid/telephony/TelephonyManager;->getDefault()Landroid/telephony/TelephonyManager;
 
     move-result-object v0
@@ -1100,12 +1000,10 @@
     .prologue
     const/4 v2, 0x0
 
-    .line 1488
     invoke-static {p0}, Landroid/telephony/SubscriptionManager;->getSubId(I)[J
 
     move-result-object v1
 
-    .line 1490
     .local v1, "subId":[J
     :try_start_0
     invoke-static {}, Landroid/telephony/TelephonyManager;->getDefault()Landroid/telephony/TelephonyManager;
@@ -1122,15 +1020,12 @@
 
     move-result v2
 
-    .line 1492
     :goto_0
     return v2
 
-    .line 1491
     :catch_0
     move-exception v0
 
-    .line 1492
     .local v0, "ex":Ljava/lang/NullPointerException;
     goto :goto_0
 .end method
@@ -1140,7 +1035,6 @@
     .param p0, "subId"    # J
 
     .prologue
-    .line 1505
     invoke-static {}, Landroid/telephony/TelephonyManager;->getDefault()Landroid/telephony/TelephonyManager;
 
     move-result-object v0
@@ -1159,12 +1053,10 @@
     .prologue
     const/4 v2, 0x0
 
-    .line 1152
     invoke-static {p0}, Landroid/telephony/SubscriptionManager;->getSubId(I)[J
 
     move-result-object v1
 
-    .line 1154
     .local v1, "subId":[J
     :try_start_0
     invoke-static {}, Landroid/telephony/TelephonyManager;->getDefault()Landroid/telephony/TelephonyManager;
@@ -1181,15 +1073,12 @@
 
     move-result v2
 
-    .line 1156
     :goto_0
     return v2
 
-    .line 1155
     :catch_0
     move-exception v0
 
-    .line 1156
     .local v0, "ex":Ljava/lang/NullPointerException;
     goto :goto_0
 .end method
@@ -1199,7 +1088,6 @@
     .param p0, "subId"    # J
 
     .prologue
-    .line 1169
     invoke-static {}, Landroid/telephony/TelephonyManager;->getDefault()Landroid/telephony/TelephonyManager;
 
     move-result-object v0
@@ -1216,10 +1104,8 @@
     .param p0, "type"    # I
 
     .prologue
-    .line 2297
     packed-switch p0, :pswitch_data_0
 
-    .line 2307
     const-string v0, "MultiSimManager"
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -1242,13 +1128,11 @@
 
     invoke-static {v0, v1}, Landroid/telephony/Rlog;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 2308
     const/4 v0, 0x0
 
     :goto_0
     return v0
 
-    .line 2300
     :pswitch_0
     invoke-static {}, Landroid/telephony/SubscriptionManager;->getDefaultVoicePhoneId()I
 
@@ -1256,7 +1140,6 @@
 
     goto :goto_0
 
-    .line 2302
     :pswitch_1
     invoke-static {}, Landroid/telephony/SubscriptionManager;->getDefaultSmsPhoneId()I
 
@@ -1264,7 +1147,6 @@
 
     goto :goto_0
 
-    .line 2304
     :pswitch_2
     invoke-static {}, Landroid/telephony/SubscriptionManager;->getDefaultDataPhoneId()I
 
@@ -1272,7 +1154,6 @@
 
     goto :goto_0
 
-    .line 2297
     :pswitch_data_0
     .packed-switch 0x1
         :pswitch_0
@@ -1286,10 +1167,8 @@
     .param p0, "type"    # I
 
     .prologue
-    .line 2231
     packed-switch p0, :pswitch_data_0
 
-    .line 2241
     invoke-static {}, Landroid/telephony/SubscriptionManager;->getDefaultSubId()J
 
     move-result-wide v0
@@ -1297,7 +1176,6 @@
     :goto_0
     return-wide v0
 
-    .line 2234
     :pswitch_0
     invoke-static {}, Landroid/telephony/SubscriptionManager;->getDefaultVoiceSubId()J
 
@@ -1305,7 +1183,6 @@
 
     goto :goto_0
 
-    .line 2236
     :pswitch_1
     invoke-static {}, Landroid/telephony/SubscriptionManager;->getDefaultSmsSubId()J
 
@@ -1313,7 +1190,6 @@
 
     goto :goto_0
 
-    .line 2238
     :pswitch_2
     invoke-static {}, Landroid/telephony/SubscriptionManager;->getDefaultDataSubId()J
 
@@ -1321,7 +1197,6 @@
 
     goto :goto_0
 
-    .line 2231
     nop
 
     :pswitch_data_0
@@ -1337,10 +1212,8 @@
     .param p0, "type"    # I
 
     .prologue
-    .line 2275
     packed-switch p0, :pswitch_data_0
 
-    .line 2285
     const-string v0, "MultiSimManager"
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -1363,13 +1236,11 @@
 
     invoke-static {v0, v1}, Landroid/telephony/Rlog;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 2286
     const/4 v0, 0x0
 
     :goto_0
     return-object v0
 
-    .line 2278
     :pswitch_0
     invoke-static {}, Landroid/telephony/SubscriptionManager;->getDefaultVoiceSubInfo()Landroid/telephony/SubInfoRecord;
 
@@ -1377,7 +1248,6 @@
 
     goto :goto_0
 
-    .line 2280
     :pswitch_1
     invoke-static {}, Landroid/telephony/SubscriptionManager;->getDefaultSmsSubInfo()Landroid/telephony/SubInfoRecord;
 
@@ -1385,7 +1255,6 @@
 
     goto :goto_0
 
-    .line 2282
     :pswitch_2
     invoke-static {}, Landroid/telephony/SubscriptionManager;->getDefaultDataSubInfo()Landroid/telephony/SubInfoRecord;
 
@@ -1393,7 +1262,6 @@
 
     goto :goto_0
 
-    .line 2275
     :pswitch_data_0
     .packed-switch 0x1
         :pswitch_0
@@ -1407,7 +1275,6 @@
     .param p0, "slotId"    # I
 
     .prologue
-    .line 309
     invoke-static {}, Landroid/telephony/TelephonyManager;->getDefault()Landroid/telephony/TelephonyManager;
 
     move-result-object v0
@@ -1424,12 +1291,10 @@
     .param p0, "subId"    # J
 
     .prologue
-    .line 323
     invoke-static {p0, p1}, Landroid/telephony/SubscriptionManager;->getSlotId(J)I
 
     move-result v0
 
-    .line 324
     .local v0, "slotId":I
     invoke-static {}, Landroid/telephony/TelephonyManager;->getDefault()Landroid/telephony/TelephonyManager;
 
@@ -1447,20 +1312,16 @@
     .param p0, "context"    # Landroid/content/Context;
 
     .prologue
-    .line 219
     const/4 v1, 0x0
 
-    .line 221
     .local v1, "count":I
     invoke-static {}, Landroid/telephony/SubscriptionManager;->getActiveSubInfoList()Ljava/util/List;
 
     move-result-object v0
 
-    .line 223
     .local v0, "activeSubList":Ljava/util/List;, "Ljava/util/List<Landroid/telephony/SubInfoRecord;>;"
     if-eqz v0, :cond_1
 
-    .line 224
     invoke-interface {v0}, Ljava/util/List;->iterator()Ljava/util/Iterator;
 
     move-result-object v2
@@ -1480,11 +1341,10 @@
 
     check-cast v4, Landroid/telephony/SubInfoRecord;
 
-    .line 225
     .local v4, "subInfoRecord":Landroid/telephony/SubInfoRecord;
     invoke-static {}, Landroid/telephony/TelephonyManager;->getDefault()Landroid/telephony/TelephonyManager;
 
-    const-string/jumbo v5, "ril.ICC_TYPE"
+    const-string v5, "ril.ICC_TYPE"
 
     iget-wide v6, v4, Landroid/telephony/SubInfoRecord;->subId:J
 
@@ -1494,7 +1354,6 @@
 
     move-result-object v3
 
-    .line 226
     .local v3, "iccType":Ljava/lang/String;
     const-string v5, "0"
 
@@ -1512,12 +1371,10 @@
 
     if-eqz v5, :cond_0
 
-    .line 227
     add-int/lit8 v1, v1, 0x1
 
     goto :goto_0
 
-    .line 232
     .end local v2    # "i$":Ljava/util/Iterator;
     .end local v3    # "iccType":Ljava/lang/String;
     .end local v4    # "subInfoRecord":Landroid/telephony/SubInfoRecord;
@@ -1530,12 +1387,10 @@
     .param p0, "slotId"    # I
 
     .prologue
-    .line 833
     invoke-static {p0}, Landroid/telephony/SubscriptionManager;->getSubId(I)[J
 
     move-result-object v1
 
-    .line 835
     .local v1, "subId":[J
     :try_start_0
     invoke-static {}, Landroid/telephony/TelephonyManager;->getDefault()Landroid/telephony/TelephonyManager;
@@ -1552,15 +1407,12 @@
 
     move-result-object v2
 
-    .line 837
     :goto_0
     return-object v2
 
-    .line 836
     :catch_0
     move-exception v0
 
-    .line 837
     .local v0, "ex":Ljava/lang/NullPointerException;
     const/4 v2, 0x0
 
@@ -1572,7 +1424,6 @@
     .param p0, "subId"    # J
 
     .prologue
-    .line 853
     invoke-static {}, Landroid/telephony/TelephonyManager;->getDefault()Landroid/telephony/TelephonyManager;
 
     move-result-object v0
@@ -1591,12 +1442,10 @@
     .param p2, "data"    # Ljava/lang/String;
 
     .prologue
-    .line 1332
     invoke-static {p0}, Landroid/telephony/SubscriptionManager;->getSubId(I)[J
 
     move-result-object v1
 
-    .line 1334
     .local v1, "subId":[J
     :try_start_0
     invoke-static {}, Landroid/telephony/TelephonyManager;->getDefault()Landroid/telephony/TelephonyManager;
@@ -1613,15 +1462,12 @@
 
     move-result-object v2
 
-    .line 1336
     :goto_0
     return-object v2
 
-    .line 1335
     :catch_0
     move-exception v0
 
-    .line 1336
     .local v0, "ex":Ljava/lang/NullPointerException;
     const/4 v2, 0x0
 
@@ -1635,7 +1481,6 @@
     .param p3, "data"    # Ljava/lang/String;
 
     .prologue
-    .line 1351
     invoke-static {}, Landroid/telephony/TelephonyManager;->getDefault()Landroid/telephony/TelephonyManager;
 
     move-result-object v0
@@ -1652,7 +1497,6 @@
     .param p0, "slotId"    # I
 
     .prologue
-    .line 402
     invoke-static {}, Landroid/telephony/TelephonyManager;->getDefault()Landroid/telephony/TelephonyManager;
 
     move-result-object v0
@@ -1669,12 +1513,10 @@
     .param p0, "subId"    # J
 
     .prologue
-    .line 415
     invoke-static {p0, p1}, Landroid/telephony/SubscriptionManager;->getSlotId(J)I
 
     move-result v0
 
-    .line 416
     .local v0, "slotId":I
     invoke-static {}, Landroid/telephony/TelephonyManager;->getDefault()Landroid/telephony/TelephonyManager;
 
@@ -1691,7 +1533,6 @@
     .locals 1
 
     .prologue
-    .line 108
     invoke-static {}, Landroid/telephony/SubscriptionManager;->getActiveSubInfoCount()I
 
     move-result v0
@@ -1704,12 +1545,10 @@
     .param p0, "slotId"    # I
 
     .prologue
-    .line 913
     invoke-static {p0}, Landroid/telephony/SubscriptionManager;->getSubId(I)[J
 
     move-result-object v1
 
-    .line 915
     .local v1, "subId":[J
     :try_start_0
     invoke-static {}, Landroid/telephony/TelephonyManager;->getDefault()Landroid/telephony/TelephonyManager;
@@ -1726,15 +1565,12 @@
 
     move-result-object v2
 
-    .line 917
     :goto_0
     return-object v2
 
-    .line 916
     :catch_0
     move-exception v0
 
-    .line 917
     .local v0, "ex":Ljava/lang/NullPointerException;
     const/4 v2, 0x0
 
@@ -1746,7 +1582,6 @@
     .param p0, "subId"    # J
 
     .prologue
-    .line 935
     invoke-static {}, Landroid/telephony/TelephonyManager;->getDefault()Landroid/telephony/TelephonyManager;
 
     move-result-object v0
@@ -1763,12 +1598,10 @@
     .param p0, "slotId"    # I
 
     .prologue
-    .line 371
     invoke-static {p0}, Landroid/telephony/SubscriptionManager;->getSubId(I)[J
 
     move-result-object v1
 
-    .line 373
     .local v1, "subId":[J
     :try_start_0
     invoke-static {}, Landroid/telephony/TelephonyManager;->getDefault()Landroid/telephony/TelephonyManager;
@@ -1785,15 +1618,12 @@
 
     move-result-object v2
 
-    .line 375
     :goto_0
     return-object v2
 
-    .line 374
     :catch_0
     move-exception v0
 
-    .line 375
     .local v0, "ex":Ljava/lang/NullPointerException;
     const/4 v2, 0x0
 
@@ -1805,7 +1635,6 @@
     .param p0, "subId"    # J
 
     .prologue
-    .line 390
     invoke-static {}, Landroid/telephony/TelephonyManager;->getDefault()Landroid/telephony/TelephonyManager;
 
     move-result-object v0
@@ -1822,12 +1651,10 @@
     .param p0, "slotId"    # I
 
     .prologue
-    .line 800
     invoke-static {p0}, Landroid/telephony/SubscriptionManager;->getSubId(I)[J
 
     move-result-object v1
 
-    .line 802
     .local v1, "subId":[J
     :try_start_0
     invoke-static {}, Landroid/telephony/TelephonyManager;->getDefault()Landroid/telephony/TelephonyManager;
@@ -1844,15 +1671,12 @@
 
     move-result v2
 
-    .line 804
     :goto_0
     return v2
 
-    .line 803
     :catch_0
     move-exception v0
 
-    .line 804
     .local v0, "ex":Ljava/lang/NullPointerException;
     const/4 v2, -0x1
 
@@ -1864,7 +1688,6 @@
     .param p0, "subId"    # J
 
     .prologue
-    .line 818
     invoke-static {}, Landroid/telephony/TelephonyManager;->getDefault()Landroid/telephony/TelephonyManager;
 
     move-result-object v0
@@ -1881,12 +1704,10 @@
     .param p0, "slotId"    # I
 
     .prologue
-    .line 950
     invoke-static {p0}, Landroid/telephony/SubscriptionManager;->getSubId(I)[J
 
     move-result-object v1
 
-    .line 952
     .local v1, "subId":[J
     :try_start_0
     invoke-static {}, Landroid/telephony/TelephonyManager;->getDefault()Landroid/telephony/TelephonyManager;
@@ -1903,15 +1724,12 @@
 
     move-result-object v2
 
-    .line 954
     :goto_0
     return-object v2
 
-    .line 953
     :catch_0
     move-exception v0
 
-    .line 954
     .local v0, "ex":Ljava/lang/NullPointerException;
     const/4 v2, 0x0
 
@@ -1923,7 +1741,6 @@
     .param p0, "subId"    # J
 
     .prologue
-    .line 970
     invoke-static {}, Landroid/telephony/TelephonyManager;->getDefault()Landroid/telephony/TelephonyManager;
 
     move-result-object v0
@@ -1940,16 +1757,13 @@
     .param p0, "type"    # I
 
     .prologue
-    .line 1946
     packed-switch p0, :pswitch_data_0
 
-    .line 1952
     const/4 v0, 0x0
 
     :goto_0
     return v0
 
-    .line 1948
     :pswitch_0
     invoke-static {}, Landroid/telephony/TelephonyManager;->getDefault()Landroid/telephony/TelephonyManager;
 
@@ -1961,7 +1775,6 @@
 
     goto :goto_0
 
-    .line 1950
     :pswitch_1
     invoke-static {}, Landroid/telephony/TelephonyManager;->getDefault()Landroid/telephony/TelephonyManager;
 
@@ -1973,7 +1786,6 @@
 
     goto :goto_0
 
-    .line 1946
     nop
 
     :pswitch_data_0
@@ -1988,12 +1800,10 @@
     .param p0, "slotId"    # I
 
     .prologue
-    .line 549
     invoke-static {p0}, Landroid/telephony/SubscriptionManager;->getSubId(I)[J
 
     move-result-object v1
 
-    .line 551
     .local v1, "subId":[J
     :try_start_0
     invoke-static {}, Landroid/telephony/TelephonyManager;->getDefault()Landroid/telephony/TelephonyManager;
@@ -2010,15 +1820,12 @@
 
     move-result-object v2
 
-    .line 553
     :goto_0
     return-object v2
 
-    .line 552
     :catch_0
     move-exception v0
 
-    .line 553
     .local v0, "ex":Ljava/lang/NullPointerException;
     const/4 v2, 0x0
 
@@ -2030,7 +1837,6 @@
     .param p0, "subId"    # J
 
     .prologue
-    .line 569
     invoke-static {}, Landroid/telephony/TelephonyManager;->getDefault()Landroid/telephony/TelephonyManager;
 
     move-result-object v0
@@ -2047,12 +1853,10 @@
     .param p0, "slotId"    # I
 
     .prologue
-    .line 484
     invoke-static {p0}, Landroid/telephony/SubscriptionManager;->getSubId(I)[J
 
     move-result-object v1
 
-    .line 486
     .local v1, "subId":[J
     :try_start_0
     invoke-static {}, Landroid/telephony/TelephonyManager;->getDefault()Landroid/telephony/TelephonyManager;
@@ -2069,15 +1873,12 @@
 
     move-result-object v2
 
-    .line 488
     :goto_0
     return-object v2
 
-    .line 487
     :catch_0
     move-exception v0
 
-    .line 488
     .local v0, "ex":Ljava/lang/NullPointerException;
     const/4 v2, 0x0
 
@@ -2089,12 +1890,10 @@
     .param p0, "slotId"    # I
 
     .prologue
-    .line 455
     invoke-static {p0}, Landroid/telephony/SubscriptionManager;->getSubId(I)[J
 
     move-result-object v1
 
-    .line 457
     .local v1, "subId":[J
     :try_start_0
     invoke-static {}, Landroid/telephony/TelephonyManager;->getDefault()Landroid/telephony/TelephonyManager;
@@ -2111,15 +1910,12 @@
 
     move-result-object v2
 
-    .line 459
     :goto_0
     return-object v2
 
-    .line 458
     :catch_0
     move-exception v0
 
-    .line 459
     .local v0, "ex":Ljava/lang/NullPointerException;
     const/4 v2, 0x0
 
@@ -2131,7 +1927,6 @@
     .param p0, "subId"    # J
 
     .prologue
-    .line 472
     invoke-static {}, Landroid/telephony/TelephonyManager;->getDefault()Landroid/telephony/TelephonyManager;
 
     move-result-object v0
@@ -2148,7 +1943,6 @@
     .param p0, "subId"    # J
 
     .prologue
-    .line 502
     invoke-static {}, Landroid/telephony/TelephonyManager;->getDefault()Landroid/telephony/TelephonyManager;
 
     move-result-object v0
@@ -2167,12 +1961,10 @@
     .prologue
     const/4 v2, 0x0
 
-    .line 581
     invoke-static {p0}, Landroid/telephony/SubscriptionManager;->getSubId(I)[J
 
     move-result-object v1
 
-    .line 583
     .local v1, "subId":[J
     :try_start_0
     invoke-static {}, Landroid/telephony/TelephonyManager;->getDefault()Landroid/telephony/TelephonyManager;
@@ -2189,15 +1981,12 @@
 
     move-result v2
 
-    .line 585
     :goto_0
     return v2
 
-    .line 584
     :catch_0
     move-exception v0
 
-    .line 585
     .local v0, "ex":Ljava/lang/NullPointerException;
     goto :goto_0
 .end method
@@ -2207,7 +1996,6 @@
     .param p0, "subId"    # J
 
     .prologue
-    .line 598
     invoke-static {}, Landroid/telephony/TelephonyManager;->getDefault()Landroid/telephony/TelephonyManager;
 
     move-result-object v0
@@ -2224,7 +2012,6 @@
     .param p0, "subId"    # J
 
     .prologue
-    .line 2220
     invoke-static {p0, p1}, Landroid/telephony/SubscriptionManager;->getPhoneId(J)I
 
     move-result v0
@@ -2239,12 +2026,10 @@
     .prologue
     const/4 v2, 0x0
 
-    .line 1462
     invoke-static {p0}, Landroid/telephony/SubscriptionManager;->getSubId(I)[J
 
     move-result-object v1
 
-    .line 1464
     .local v1, "subId":[J
     :try_start_0
     invoke-static {}, Landroid/telephony/TelephonyManager;->getDefault()Landroid/telephony/TelephonyManager;
@@ -2261,15 +2046,12 @@
 
     move-result v2
 
-    .line 1466
     :goto_0
     return v2
 
-    .line 1465
     :catch_0
     move-exception v0
 
-    .line 1466
     .local v0, "ex":Ljava/lang/NullPointerException;
     goto :goto_0
 .end method
@@ -2279,7 +2061,6 @@
     .param p0, "subId"    # J
 
     .prologue
-    .line 1477
     invoke-static {}, Landroid/telephony/TelephonyManager;->getDefault()Landroid/telephony/TelephonyManager;
 
     move-result-object v0
@@ -2296,12 +2077,10 @@
     .param p0, "slotId"    # I
 
     .prologue
-    .line 771
     invoke-static {p0}, Landroid/telephony/SubscriptionManager;->getSubId(I)[J
 
     move-result-object v1
 
-    .line 773
     .local v1, "subId":[J
     :try_start_0
     invoke-static {}, Landroid/telephony/TelephonyManager;->getDefault()Landroid/telephony/TelephonyManager;
@@ -2318,15 +2097,12 @@
 
     move-result-object v2
 
-    .line 775
     :goto_0
     return-object v2
 
-    .line 774
     :catch_0
     move-exception v0
 
-    .line 775
     .local v0, "ex":Ljava/lang/NullPointerException;
     const/4 v2, 0x0
 
@@ -2338,7 +2114,6 @@
     .param p0, "subId"    # J
 
     .prologue
-    .line 787
     invoke-static {}, Landroid/telephony/TelephonyManager;->getDefault()Landroid/telephony/TelephonyManager;
 
     move-result-object v0
@@ -2356,7 +2131,6 @@
     .param p1, "simSlot"    # I
 
     .prologue
-    .line 154
     invoke-virtual {p0}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
 
     move-result-object v1
@@ -2371,7 +2145,6 @@
 
     move-result v0
 
-    .line 156
     .local v0, "simIcon":I
     const-string v1, "MultiSimManager"
 
@@ -2405,56 +2178,41 @@
 
     invoke-static {v1, v2}, Landroid/telephony/Rlog;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 157
     if-gez v0, :cond_0
 
-    .line 158
     packed-switch p1, :pswitch_data_0
 
-    .line 175
     const/4 v0, 0x0
 
-    .line 180
     :cond_0
     :goto_0
     return v0
 
-    .line 160
     :pswitch_0
     const/4 v0, 0x0
 
-    .line 161
     goto :goto_0
 
-    .line 163
     :pswitch_1
     const/4 v0, 0x1
 
-    .line 164
     goto :goto_0
 
-    .line 166
     :pswitch_2
     const/4 v0, 0x2
 
-    .line 167
     goto :goto_0
 
-    .line 169
     :pswitch_3
     const/4 v0, 0x3
 
-    .line 170
     goto :goto_0
 
-    .line 172
     :pswitch_4
     const/4 v0, 0x4
 
-    .line 173
     goto :goto_0
 
-    .line 158
     :pswitch_data_0
     .packed-switch 0x0
         :pswitch_0
@@ -2471,7 +2229,6 @@
     .param p1, "simSlot"    # I
 
     .prologue
-    .line 118
     invoke-virtual {p0}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
 
     move-result-object v1
@@ -2484,7 +2241,6 @@
 
     move-result-object v0
 
-    .line 120
     .local v0, "simName":Ljava/lang/String;
     const-string v1, "MultiSimManager"
 
@@ -2518,56 +2274,41 @@
 
     invoke-static {v1, v2}, Landroid/telephony/Rlog;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 121
     if-nez v0, :cond_0
 
-    .line 122
     packed-switch p1, :pswitch_data_0
 
-    .line 139
     const-string v0, "SIM 1"
 
-    .line 144
     :cond_0
     :goto_0
     return-object v0
 
-    .line 124
     :pswitch_0
     const-string v0, "SIM 1"
 
-    .line 125
     goto :goto_0
 
-    .line 127
     :pswitch_1
     const-string v0, "SIM 2"
 
-    .line 128
     goto :goto_0
 
-    .line 130
     :pswitch_2
     const-string v0, "SIM 3"
 
-    .line 131
     goto :goto_0
 
-    .line 133
     :pswitch_3
     const-string v0, "SIM 4"
 
-    .line 134
     goto :goto_0
 
-    .line 136
     :pswitch_4
     const-string v0, "SIM 5"
 
-    .line 137
     goto :goto_0
 
-    .line 122
     nop
 
     :pswitch_data_0
@@ -2585,12 +2326,10 @@
     .param p0, "slotId"    # I
 
     .prologue
-    .line 716
     invoke-static {p0}, Landroid/telephony/SubscriptionManager;->getSubId(I)[J
 
     move-result-object v1
 
-    .line 718
     .local v1, "subId":[J
     :try_start_0
     invoke-static {}, Landroid/telephony/TelephonyManager;->getDefault()Landroid/telephony/TelephonyManager;
@@ -2607,15 +2346,12 @@
 
     move-result-object v2
 
-    .line 720
     :goto_0
     return-object v2
 
-    .line 719
     :catch_0
     move-exception v0
 
-    .line 720
     .local v0, "ex":Ljava/lang/NullPointerException;
     const/4 v2, 0x0
 
@@ -2627,12 +2363,10 @@
     .param p0, "slotId"    # I
 
     .prologue
-    .line 744
     invoke-static {p0}, Landroid/telephony/SubscriptionManager;->getSubId(I)[J
 
     move-result-object v1
 
-    .line 746
     .local v1, "subId":[J
     :try_start_0
     invoke-static {}, Landroid/telephony/TelephonyManager;->getDefault()Landroid/telephony/TelephonyManager;
@@ -2649,15 +2383,12 @@
 
     move-result-object v2
 
-    .line 748
     :goto_0
     return-object v2
 
-    .line 747
     :catch_0
     move-exception v0
 
-    .line 748
     .local v0, "ex":Ljava/lang/NullPointerException;
     const/4 v2, 0x0
 
@@ -2669,7 +2400,6 @@
     .param p0, "subId"    # J
 
     .prologue
-    .line 760
     invoke-static {}, Landroid/telephony/TelephonyManager;->getDefault()Landroid/telephony/TelephonyManager;
 
     move-result-object v0
@@ -2686,7 +2416,6 @@
     .param p0, "subId"    # J
 
     .prologue
-    .line 733
     invoke-static {}, Landroid/telephony/TelephonyManager;->getDefault()Landroid/telephony/TelephonyManager;
 
     move-result-object v0
@@ -2703,12 +2432,10 @@
     .param p0, "slotId"    # I
 
     .prologue
-    .line 338
     invoke-static {p0}, Landroid/telephony/SubscriptionManager;->getSubId(I)[J
 
     move-result-object v1
 
-    .line 340
     .local v1, "subId":[J
     :try_start_0
     invoke-static {}, Landroid/telephony/TelephonyManager;->getDefault()Landroid/telephony/TelephonyManager;
@@ -2725,15 +2452,12 @@
 
     move-result-object v2
 
-    .line 342
     :goto_0
     return-object v2
 
-    .line 341
     :catch_0
     move-exception v0
 
-    .line 342
     .local v0, "ex":Ljava/lang/NullPointerException;
     const/4 v2, 0x0
 
@@ -2745,7 +2469,6 @@
     .param p0, "subId"    # J
 
     .prologue
-    .line 357
     invoke-static {}, Landroid/telephony/TelephonyManager;->getDefault()Landroid/telephony/TelephonyManager;
 
     move-result-object v0
@@ -2761,7 +2484,6 @@
     .locals 1
 
     .prologue
-    .line 100
     sget v0, Lcom/samsung/android/telephony/MultiSimManager;->SIMSLOT_COUNT:I
 
     return v0
@@ -2772,7 +2494,6 @@
     .param p0, "slotId"    # I
 
     .prologue
-    .line 691
     invoke-static {}, Landroid/telephony/TelephonyManager;->getDefault()Landroid/telephony/TelephonyManager;
 
     move-result-object v0
@@ -2789,12 +2510,10 @@
     .param p0, "subId"    # J
 
     .prologue
-    .line 703
     invoke-static {p0, p1}, Landroid/telephony/SubscriptionManager;->getSlotId(J)I
 
     move-result v0
 
-    .line 704
     .local v0, "slotId":I
     invoke-static {}, Landroid/telephony/TelephonyManager;->getDefault()Landroid/telephony/TelephonyManager;
 
@@ -2814,12 +2533,10 @@
     .prologue
     const/4 v2, 0x0
 
-    .line 1404
     invoke-static {p0}, Landroid/telephony/SubscriptionManager;->getSubId(I)[J
 
     move-result-object v1
 
-    .line 1406
     .local v1, "subId":[J
     :try_start_0
     invoke-static {}, Landroid/telephony/TelephonyManager;->getDefault()Landroid/telephony/TelephonyManager;
@@ -2836,15 +2553,12 @@
 
     move-result v2
 
-    .line 1408
     :goto_0
     return v2
 
-    .line 1407
     :catch_0
     move-exception v0
 
-    .line 1408
     .local v0, "ex":Ljava/lang/NullPointerException;
     goto :goto_0
 .end method
@@ -2854,7 +2568,6 @@
     .param p0, "subId"    # J
 
     .prologue
-    .line 1424
     invoke-static {}, Landroid/telephony/TelephonyManager;->getDefault()Landroid/telephony/TelephonyManager;
 
     move-result-object v0
@@ -2871,7 +2584,6 @@
     .param p0, "subId"    # J
 
     .prologue
-    .line 2202
     invoke-static {p0, p1}, Landroid/telephony/SubscriptionManager;->getSlotId(J)I
 
     move-result v0
@@ -2884,7 +2596,6 @@
     .param p0, "slotId"    # I
 
     .prologue
-    .line 2211
     invoke-static {p0}, Landroid/telephony/SubscriptionManager;->getSubId(I)[J
 
     move-result-object v0
@@ -2897,7 +2608,6 @@
     .param p0, "subId"    # J
 
     .prologue
-    .line 1964
     invoke-static {p0, p1}, Landroid/telephony/SubscriptionManager;->getSubInfoForSubscriber(J)Landroid/telephony/SubInfoRecord;
 
     move-result-object v0
@@ -2921,7 +2631,6 @@
     .end annotation
 
     .prologue
-    .line 1973
     invoke-static {p0}, Landroid/telephony/SubscriptionManager;->getSubInfoUsingIccId(Ljava/lang/String;)Ljava/util/List;
 
     move-result-object v0
@@ -2943,7 +2652,6 @@
     .end annotation
 
     .prologue
-    .line 1982
     invoke-static {p0}, Landroid/telephony/SubscriptionManager;->getSubInfoUsingSlotId(I)Ljava/util/List;
 
     move-result-object v0
@@ -2956,12 +2664,10 @@
     .param p0, "slotId"    # I
 
     .prologue
-    .line 278
     invoke-static {p0}, Landroid/telephony/SubscriptionManager;->getSubId(I)[J
 
     move-result-object v1
 
-    .line 280
     .local v1, "subId":[J
     :try_start_0
     invoke-static {}, Landroid/telephony/TelephonyManager;->getDefault()Landroid/telephony/TelephonyManager;
@@ -2978,15 +2684,12 @@
 
     move-result-object v2
 
-    .line 282
     :goto_0
     return-object v2
 
-    .line 281
     :catch_0
     move-exception v0
 
-    .line 282
     .local v0, "ex":Ljava/lang/NullPointerException;
     const/4 v2, 0x0
 
@@ -2998,7 +2701,6 @@
     .param p0, "subId"    # J
 
     .prologue
-    .line 296
     invoke-static {}, Landroid/telephony/TelephonyManager;->getDefault()Landroid/telephony/TelephonyManager;
 
     move-result-object v0
@@ -3017,16 +2719,13 @@
     .param p2, "defaultVal"    # Ljava/lang/String;
 
     .prologue
-    .line 1295
     const/4 v1, 0x0
 
-    .line 1296
     .local v1, "propVal":Ljava/lang/String;
     invoke-static {p0}, Landroid/os/SystemProperties;->get(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 
-    .line 1297
     .local v0, "prop":Ljava/lang/String;
     if-eqz v0, :cond_0
 
@@ -3036,14 +2735,12 @@
 
     if-lez v3, :cond_0
 
-    .line 1298
     const-string v3, ","
 
     invoke-virtual {v0, v3}, Ljava/lang/String;->split(Ljava/lang/String;)[Ljava/lang/String;
 
     move-result-object v2
 
-    .line 1299
     .local v2, "values":[Ljava/lang/String;
     if-ltz p1, :cond_0
 
@@ -3059,10 +2756,8 @@
 
     if-nez v3, :cond_0
 
-    .line 1301
     aget-object v1, v2, p1
 
-    .line 1304
     .end local v2    # "values":[Ljava/lang/String;
     :cond_0
     if-nez v1, :cond_1
@@ -3085,7 +2780,6 @@
     .param p3, "defaultVal"    # Ljava/lang/String;
 
     .prologue
-    .line 1317
     invoke-static {p0, p1, p2, p3}, Landroid/telephony/TelephonyManager;->getTelephonyProperty(Ljava/lang/String;JLjava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
@@ -3098,12 +2792,10 @@
     .param p0, "slotId"    # I
 
     .prologue
-    .line 1090
     invoke-static {p0}, Landroid/telephony/SubscriptionManager;->getSubId(I)[J
 
     move-result-object v1
 
-    .line 1092
     .local v1, "subId":[J
     :try_start_0
     invoke-static {}, Landroid/telephony/TelephonyManager;->getDefault()Landroid/telephony/TelephonyManager;
@@ -3120,15 +2812,12 @@
 
     move-result-object v2
 
-    .line 1094
     :goto_0
     return-object v2
 
-    .line 1093
     :catch_0
     move-exception v0
 
-    .line 1094
     .local v0, "ex":Ljava/lang/NullPointerException;
     const/4 v2, 0x0
 
@@ -3140,7 +2829,6 @@
     .param p0, "subId"    # J
 
     .prologue
-    .line 1111
     invoke-static {}, Landroid/telephony/TelephonyManager;->getDefault()Landroid/telephony/TelephonyManager;
 
     move-result-object v0
@@ -3157,12 +2845,10 @@
     .param p0, "slotId"    # I
 
     .prologue
-    .line 988
     invoke-static {p0}, Landroid/telephony/SubscriptionManager;->getSubId(I)[J
 
     move-result-object v1
 
-    .line 990
     .local v1, "subId":[J
     :try_start_0
     invoke-static {}, Landroid/telephony/TelephonyManager;->getDefault()Landroid/telephony/TelephonyManager;
@@ -3179,15 +2865,12 @@
 
     move-result-object v2
 
-    .line 992
     :goto_0
     return-object v2
 
-    .line 991
     :catch_0
     move-exception v0
 
-    .line 992
     .local v0, "ex":Ljava/lang/NullPointerException;
     const/4 v2, 0x0
 
@@ -3199,7 +2882,6 @@
     .param p0, "subId"    # J
 
     .prologue
-    .line 1008
     invoke-static {}, Landroid/telephony/TelephonyManager;->getDefault()Landroid/telephony/TelephonyManager;
 
     move-result-object v0
@@ -3218,12 +2900,10 @@
     .prologue
     const/4 v2, 0x0
 
-    .line 1055
     invoke-static {p0}, Landroid/telephony/SubscriptionManager;->getSubId(I)[J
 
     move-result-object v1
 
-    .line 1057
     .local v1, "subId":[J
     :try_start_0
     invoke-static {}, Landroid/telephony/TelephonyManager;->getDefault()Landroid/telephony/TelephonyManager;
@@ -3240,15 +2920,12 @@
 
     move-result v2
 
-    .line 1059
     :goto_0
     return v2
 
-    .line 1058
     :catch_0
     move-exception v0
 
-    .line 1059
     .local v0, "ex":Ljava/lang/NullPointerException;
     goto :goto_0
 .end method
@@ -3258,7 +2935,6 @@
     .param p0, "subId"    # J
 
     .prologue
-    .line 1074
     invoke-static {}, Landroid/telephony/TelephonyManager;->getDefault()Landroid/telephony/TelephonyManager;
 
     move-result-object v0
@@ -3277,12 +2953,10 @@
     .prologue
     const/4 v2, 0x0
 
-    .line 638
     invoke-static {p0}, Landroid/telephony/SubscriptionManager;->getSubId(I)[J
 
     move-result-object v1
 
-    .line 640
     .local v1, "subId":[J
     :try_start_0
     invoke-static {}, Landroid/telephony/TelephonyManager;->getDefault()Landroid/telephony/TelephonyManager;
@@ -3299,15 +2973,12 @@
 
     move-result v2
 
-    .line 642
     :goto_0
     return v2
 
-    .line 641
     :catch_0
     move-exception v0
 
-    .line 642
     .local v0, "ex":Ljava/lang/NullPointerException;
     goto :goto_0
 .end method
@@ -3317,7 +2988,6 @@
     .param p0, "subId"    # J
 
     .prologue
-    .line 654
     invoke-static {}, Landroid/telephony/TelephonyManager;->getDefault()Landroid/telephony/TelephonyManager;
 
     move-result-object v0
@@ -3337,12 +3007,10 @@
     .prologue
     const/4 v2, 0x0
 
-    .line 1848
     invoke-static {p0}, Landroid/telephony/SubscriptionManager;->getSubId(I)[J
 
     move-result-object v1
 
-    .line 1850
     .local v1, "subId":[J
     :try_start_0
     invoke-static {}, Landroid/telephony/TelephonyManager;->getDefault()Landroid/telephony/TelephonyManager;
@@ -3359,15 +3027,12 @@
 
     move-result v2
 
-    .line 1852
     :goto_0
     return v2
 
-    .line 1851
     :catch_0
     move-exception v0
 
-    .line 1852
     .local v0, "ex":Ljava/lang/NullPointerException;
     goto :goto_0
 .end method
@@ -3378,7 +3043,6 @@
     .param p2, "dialString"    # Ljava/lang/String;
 
     .prologue
-    .line 1866
     invoke-static {}, Landroid/telephony/TelephonyManager;->getDefault()Landroid/telephony/TelephonyManager;
 
     move-result-object v0
@@ -3395,7 +3059,6 @@
     .param p0, "slotId"    # I
 
     .prologue
-    .line 668
     invoke-static {}, Landroid/telephony/TelephonyManager;->getDefault()Landroid/telephony/TelephonyManager;
 
     move-result-object v0
@@ -3414,12 +3077,10 @@
     .param p0, "subId"    # J
 
     .prologue
-    .line 679
     invoke-static {p0, p1}, Landroid/telephony/SubscriptionManager;->getSlotId(J)I
 
     move-result v0
 
-    .line 680
     .local v0, "slotId":I
     invoke-static {}, Landroid/telephony/TelephonyManager;->getDefault()Landroid/telephony/TelephonyManager;
 
@@ -3442,12 +3103,10 @@
     .prologue
     const/4 v2, 0x0
 
-    .line 1931
     invoke-static {p0}, Landroid/telephony/SubscriptionManager;->getSubId(I)[J
 
     move-result-object v1
 
-    .line 1933
     .local v1, "subId":[J
     const/4 v3, 0x0
 
@@ -3460,15 +3119,12 @@
 
     move-result v2
 
-    .line 1935
     :goto_0
     return v2
 
-    .line 1934
     :catch_0
     move-exception v0
 
-    .line 1935
     .local v0, "ex":Ljava/lang/NullPointerException;
     goto :goto_0
 .end method
@@ -3481,7 +3137,6 @@
     .prologue
     const/4 v1, 0x1
 
-    .line 260
     invoke-virtual {p0}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
 
     move-result-object v2
@@ -3496,11 +3151,9 @@
 
     move-result v0
 
-    .line 261
     .local v0, "simActive":I
     if-ne v0, v1, :cond_0
 
-    .line 264
     :goto_0
     return v1
 
@@ -3515,12 +3168,10 @@
     .param p0, "slotId"    # I
 
     .prologue
-    .line 1674
     invoke-static {p0}, Landroid/telephony/SubscriptionManager;->getSubId(I)[J
 
     move-result-object v1
 
-    .line 1676
     .local v1, "subId":[J
     :try_start_0
     invoke-static {}, Landroid/telephony/TelephonyManager;->getDefault()Landroid/telephony/TelephonyManager;
@@ -3537,15 +3188,12 @@
 
     move-result v2
 
-    .line 1678
     :goto_0
     return v2
 
-    .line 1677
     :catch_0
     move-exception v0
 
-    .line 1678
     .local v0, "ex":Ljava/lang/NullPointerException;
     const/4 v2, 0x1
 
@@ -3557,7 +3205,6 @@
     .param p0, "subId"    # J
 
     .prologue
-    .line 1690
     invoke-static {}, Landroid/telephony/TelephonyManager;->getDefault()Landroid/telephony/TelephonyManager;
 
     move-result-object v0
@@ -3576,12 +3223,10 @@
     .prologue
     const/4 v2, 0x0
 
-    .line 517
     invoke-static {p0}, Landroid/telephony/SubscriptionManager;->getSubId(I)[J
 
     move-result-object v1
 
-    .line 519
     .local v1, "subId":[J
     :try_start_0
     invoke-static {}, Landroid/telephony/TelephonyManager;->getDefault()Landroid/telephony/TelephonyManager;
@@ -3598,15 +3243,12 @@
 
     move-result v2
 
-    .line 521
     :goto_0
     return v2
 
-    .line 520
     :catch_0
     move-exception v0
 
-    .line 521
     .local v0, "ex":Ljava/lang/NullPointerException;
     goto :goto_0
 .end method
@@ -3616,7 +3258,6 @@
     .param p0, "subId"    # J
 
     .prologue
-    .line 534
     invoke-static {}, Landroid/telephony/TelephonyManager;->getDefault()Landroid/telephony/TelephonyManager;
 
     move-result-object v0
@@ -3632,10 +3273,8 @@
     .locals 5
 
     .prologue
-    .line 240
     const/4 v0, 0x0
 
-    .line 241
     .local v0, "count":I
     const/4 v2, 0x0
 
@@ -3647,8 +3286,7 @@
 
     if-ge v2, v3, :cond_1
 
-    .line 242
-    const-string/jumbo v3, "ril.ICC_TYPE"
+    const-string v3, "ril.ICC_TYPE"
 
     const-string v4, "0"
 
@@ -3656,7 +3294,6 @@
 
     move-result-object v1
 
-    .line 243
     .local v1, "iccType":Ljava/lang/String;
     const-string v3, "0"
 
@@ -3666,16 +3303,13 @@
 
     if-eqz v3, :cond_0
 
-    .line 244
     add-int/lit8 v0, v0, 0x1
 
-    .line 241
     :cond_0
     add-int/lit8 v2, v2, 0x1
 
     goto :goto_0
 
-    .line 247
     .end local v1    # "iccType":Ljava/lang/String;
     :cond_1
     invoke-static {}, Lcom/samsung/android/telephony/MultiSimManager;->getSimSlotCount()I
@@ -3684,10 +3318,8 @@
 
     if-ne v0, v3, :cond_2
 
-    .line 248
     const/4 v3, 0x1
 
-    .line 250
     :goto_1
     return v3
 
@@ -3704,12 +3336,10 @@
     .prologue
     const/4 v2, 0x0
 
-    .line 1620
     invoke-static {p0}, Landroid/telephony/SubscriptionManager;->getSubId(I)[J
 
     move-result-object v1
 
-    .line 1622
     .local v1, "subId":[J
     :try_start_0
     invoke-static {}, Landroid/telephony/TelephonyManager;->getDefault()Landroid/telephony/TelephonyManager;
@@ -3726,15 +3356,12 @@
 
     move-result v2
 
-    .line 1624
     :goto_0
     return v2
 
-    .line 1623
     :catch_0
     move-exception v0
 
-    .line 1624
     .local v0, "ex":Ljava/lang/NullPointerException;
     goto :goto_0
 .end method
@@ -3744,7 +3371,6 @@
     .param p0, "subId"    # J
 
     .prologue
-    .line 1636
     invoke-static {}, Landroid/telephony/TelephonyManager;->getDefault()Landroid/telephony/TelephonyManager;
 
     move-result-object v0
@@ -3763,12 +3389,10 @@
     .prologue
     const/4 v2, 0x0
 
-    .line 1699
     invoke-static {p0}, Landroid/telephony/SubscriptionManager;->getSubId(I)[J
 
     move-result-object v1
 
-    .line 1701
     .local v1, "subId":[J
     :try_start_0
     invoke-static {}, Landroid/telephony/TelephonyManager;->getDefault()Landroid/telephony/TelephonyManager;
@@ -3785,15 +3409,12 @@
 
     move-result v2
 
-    .line 1703
     :goto_0
     return v2
 
-    .line 1702
     :catch_0
     move-exception v0
 
-    .line 1703
     .local v0, "ex":Ljava/lang/NullPointerException;
     goto :goto_0
 .end method
@@ -3803,7 +3424,6 @@
     .param p0, "subId"    # J
 
     .prologue
-    .line 1714
     invoke-static {}, Landroid/telephony/TelephonyManager;->getDefault()Landroid/telephony/TelephonyManager;
 
     move-result-object v0
@@ -3822,12 +3442,10 @@
     .prologue
     const/4 v2, 0x0
 
-    .line 1647
     invoke-static {p0}, Landroid/telephony/SubscriptionManager;->getSubId(I)[J
 
     move-result-object v1
 
-    .line 1649
     .local v1, "subId":[J
     :try_start_0
     invoke-static {}, Landroid/telephony/TelephonyManager;->getDefault()Landroid/telephony/TelephonyManager;
@@ -3844,15 +3462,12 @@
 
     move-result v2
 
-    .line 1651
     :goto_0
     return v2
 
-    .line 1650
     :catch_0
     move-exception v0
 
-    .line 1651
     .local v0, "ex":Ljava/lang/NullPointerException;
     goto :goto_0
 .end method
@@ -3862,7 +3477,6 @@
     .param p0, "subId"    # J
 
     .prologue
-    .line 1664
     invoke-static {}, Landroid/telephony/TelephonyManager;->getDefault()Landroid/telephony/TelephonyManager;
 
     move-result-object v0
@@ -3879,7 +3493,6 @@
     .param p0, "phoneId"    # I
 
     .prologue
-    .line 2346
     invoke-static {p0}, Landroid/telephony/SubscriptionManager;->isValidPhoneId(I)Z
 
     move-result v0
@@ -3892,7 +3505,6 @@
     .param p0, "subId"    # J
 
     .prologue
-    .line 2339
     invoke-static {p0, p1}, Landroid/telephony/SubscriptionManager;->isValidSubId(J)Z
 
     move-result v0
@@ -3906,10 +3518,8 @@
     .param p1, "phoneId"    # I
 
     .prologue
-    .line 2355
     invoke-static {p0, p1}, Landroid/telephony/SubscriptionManager;->putPhoneIdAndSubIdExtra(Landroid/content/Intent;I)V
 
-    .line 2356
     return-void
 .end method
 
@@ -3920,10 +3530,8 @@
     .param p2, "subId"    # J
 
     .prologue
-    .line 2365
     invoke-static {p0, p1, p2, p3}, Landroid/telephony/SubscriptionManager;->putPhoneIdAndSubIdExtra(Landroid/content/Intent;IJ)V
 
-    .line 2366
     return-void
 .end method
 
@@ -3933,12 +3541,10 @@
     .param p1, "slotId"    # I
 
     .prologue
-    .line 2048
     invoke-static {p1}, Landroid/telephony/SubscriptionManager;->getSubId(I)[J
 
     move-result-object v0
 
-    .line 2049
     .local v0, "subId":[J
     const/4 v1, 0x0
 
@@ -3957,7 +3563,6 @@
     .param p1, "subId"    # J
 
     .prologue
-    .line 2037
     invoke-static {p0, p1, p2}, Landroid/telephony/SubscriptionManager;->setColor(IJ)I
 
     move-result v0
@@ -3970,14 +3575,12 @@
     .param p0, "enable"    # Z
 
     .prologue
-    .line 1919
     invoke-static {}, Landroid/telephony/TelephonyManager;->getDefault()Landroid/telephony/TelephonyManager;
 
     move-result-object v0
 
     invoke-virtual {v0, p0}, Landroid/telephony/TelephonyManager;->setDataEnabled(Z)V
 
-    .line 1920
     return-void
 .end method
 
@@ -3987,12 +3590,10 @@
     .param p1, "slotId"    # I
 
     .prologue
-    .line 2187
     invoke-static {p1}, Landroid/telephony/SubscriptionManager;->getSubId(I)[J
 
     move-result-object v1
 
-    .line 2189
     .local v1, "subId":[J
     const/4 v2, 0x0
 
@@ -4005,15 +3606,12 @@
 
     move-result v2
 
-    .line 2191
     :goto_0
     return v2
 
-    .line 2190
     :catch_0
     move-exception v0
 
-    .line 2191
     .local v0, "ex":Ljava/lang/NullPointerException;
     const/4 v2, -0x1
 
@@ -4026,7 +3624,6 @@
     .param p1, "subId"    # J
 
     .prologue
-    .line 2175
     invoke-static {p0, p1, p2}, Landroid/telephony/SubscriptionManager;->setDataRoaming(IJ)I
 
     move-result v0
@@ -4040,10 +3637,8 @@
     .param p1, "subId"    # J
 
     .prologue
-    .line 2251
     packed-switch p0, :pswitch_data_0
 
-    .line 2264
     const-string v0, "MultiSimManager"
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -4066,29 +3661,24 @@
 
     invoke-static {v0, v1}, Landroid/telephony/Rlog;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 2267
     :goto_0
     return-void
 
-    .line 2254
     :pswitch_0
     invoke-static {p1, p2}, Landroid/telephony/SubscriptionManager;->setDefaultVoiceSubId(J)V
 
     goto :goto_0
 
-    .line 2257
     :pswitch_1
     invoke-static {p1, p2}, Landroid/telephony/SubscriptionManager;->setDefaultSmsSubId(J)V
 
     goto :goto_0
 
-    .line 2260
     :pswitch_2
     invoke-static {p1, p2}, Landroid/telephony/SubscriptionManager;->setDefaultDataSubId(J)V
 
     goto :goto_0
 
-    .line 2251
     :pswitch_data_0
     .packed-switch 0x1
         :pswitch_0
@@ -4103,12 +3693,10 @@
     .param p1, "slotId"    # I
 
     .prologue
-    .line 2071
     invoke-static {p1}, Landroid/telephony/SubscriptionManager;->getSubId(I)[J
 
     move-result-object v1
 
-    .line 2073
     .local v1, "subId":[J
     const/4 v2, 0x0
 
@@ -4121,15 +3709,12 @@
 
     move-result v2
 
-    .line 2075
     :goto_0
     return v2
 
-    .line 2074
     :catch_0
     move-exception v0
 
-    .line 2075
     .local v0, "ex":Ljava/lang/NullPointerException;
     const/4 v2, -0x1
 
@@ -4143,12 +3728,10 @@
     .param p2, "nameSource"    # J
 
     .prologue
-    .line 2103
     invoke-static {p1}, Landroid/telephony/SubscriptionManager;->getSubId(I)[J
 
     move-result-object v1
 
-    .line 2105
     .local v1, "subId":[J
     const/4 v2, 0x0
 
@@ -4161,15 +3744,12 @@
 
     move-result v2
 
-    .line 2107
     :goto_0
     return v2
 
-    .line 2106
     :catch_0
     move-exception v0
 
-    .line 2107
     .local v0, "ex":Ljava/lang/NullPointerException;
     const/4 v2, -0x1
 
@@ -4182,7 +3762,6 @@
     .param p1, "subId"    # J
 
     .prologue
-    .line 2060
     invoke-static {p0, p1, p2}, Landroid/telephony/SubscriptionManager;->setDisplayName(Ljava/lang/String;J)I
 
     move-result v0
@@ -4197,7 +3776,6 @@
     .param p3, "nameSource"    # J
 
     .prologue
-    .line 2089
     invoke-static {p0, p1, p2, p3, p4}, Landroid/telephony/SubscriptionManager;->setDisplayName(Ljava/lang/String;JJ)I
 
     move-result v0
@@ -4211,12 +3789,10 @@
     .param p1, "slotId"    # I
 
     .prologue
-    .line 2131
     invoke-static {p1}, Landroid/telephony/SubscriptionManager;->getSubId(I)[J
 
     move-result-object v1
 
-    .line 2133
     .local v1, "subId":[J
     const/4 v2, 0x0
 
@@ -4229,15 +3805,12 @@
 
     move-result v2
 
-    .line 2135
     :goto_0
     return v2
 
-    .line 2134
     :catch_0
     move-exception v0
 
-    .line 2135
     .local v0, "ex":Ljava/lang/NullPointerException;
     const/4 v2, -0x1
 
@@ -4250,12 +3823,10 @@
     .param p1, "slotId"    # I
 
     .prologue
-    .line 2159
     invoke-static {p1}, Landroid/telephony/SubscriptionManager;->getSubId(I)[J
 
     move-result-object v1
 
-    .line 2161
     .local v1, "subId":[J
     const/4 v2, 0x0
 
@@ -4268,15 +3839,12 @@
 
     move-result v2
 
-    .line 2163
     :goto_0
     return v2
 
-    .line 2162
     :catch_0
     move-exception v0
 
-    .line 2163
     .local v0, "ex":Ljava/lang/NullPointerException;
     const/4 v2, -0x1
 
@@ -4289,7 +3857,6 @@
     .param p1, "subId"    # J
 
     .prologue
-    .line 2147
     invoke-static {p0, p1, p2}, Landroid/telephony/SubscriptionManager;->setDisplayNumberFormat(IJ)I
 
     move-result v0
@@ -4303,7 +3870,6 @@
     .param p1, "subId"    # J
 
     .prologue
-    .line 2119
     invoke-static {p0, p1, p2}, Landroid/telephony/SubscriptionManager;->setDisplayNumber(Ljava/lang/String;J)I
 
     move-result v0
@@ -4318,12 +3884,10 @@
     .param p2, "number"    # Ljava/lang/String;
 
     .prologue
-    .line 873
     invoke-static {p0}, Landroid/telephony/SubscriptionManager;->getSubId(I)[J
 
     move-result-object v0
 
-    .line 875
     .local v0, "subId":[J
     :try_start_0
     invoke-static {}, Landroid/telephony/TelephonyManager;->getDefault()Landroid/telephony/TelephonyManager;
@@ -4338,11 +3902,9 @@
     :try_end_0
     .catch Ljava/lang/NullPointerException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 878
     :goto_0
     return-void
 
-    .line 876
     :catch_0
     move-exception v1
 
@@ -4356,14 +3918,12 @@
     .param p3, "number"    # Ljava/lang/String;
 
     .prologue
-    .line 896
     invoke-static {}, Landroid/telephony/TelephonyManager;->getDefault()Landroid/telephony/TelephonyManager;
 
     move-result-object v0
 
     invoke-virtual {v0, p0, p1, p2, p3}, Landroid/telephony/TelephonyManager;->setLine1NumberForDisplayForSubscriber(JLjava/lang/String;Ljava/lang/String;)V
 
-    .line 897
     return-void
 .end method
 
@@ -4375,12 +3935,10 @@
     .prologue
     const/4 v2, 0x0
 
-    .line 1897
     invoke-static {p0}, Landroid/telephony/SubscriptionManager;->getSubId(I)[J
 
     move-result-object v1
 
-    .line 1899
     .local v1, "subId":[J
     :try_start_0
     invoke-static {}, Landroid/telephony/TelephonyManager;->getDefault()Landroid/telephony/TelephonyManager;
@@ -4397,15 +3955,12 @@
 
     move-result v2
 
-    .line 1901
     :goto_0
     return v2
 
-    .line 1900
     :catch_0
     move-exception v0
 
-    .line 1901
     .local v0, "ex":Ljava/lang/NullPointerException;
     goto :goto_0
 .end method
@@ -4416,7 +3971,6 @@
     .param p2, "turnOn"    # Z
 
     .prologue
-    .line 1911
     invoke-static {}, Landroid/telephony/TelephonyManager;->getDefault()Landroid/telephony/TelephonyManager;
 
     move-result-object v0
@@ -4435,12 +3989,10 @@
     .param p2, "value"    # Ljava/lang/String;
 
     .prologue
-    .line 1266
     invoke-static {p1}, Landroid/telephony/SubscriptionManager;->getSubId(I)[J
 
     move-result-object v0
 
-    .line 1268
     .local v0, "subId":[J
     const/4 v1, 0x0
 
@@ -4451,11 +4003,9 @@
     :try_end_0
     .catch Ljava/lang/NullPointerException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 1271
     :goto_0
     return-void
 
-    .line 1269
     :catch_0
     move-exception v1
 
@@ -4469,10 +4019,8 @@
     .param p3, "value"    # Ljava/lang/String;
 
     .prologue
-    .line 1282
     invoke-static {p0, p1, p2, p3}, Landroid/telephony/TelephonyManager;->setTelephonyProperty(Ljava/lang/String;JLjava/lang/String;)V
 
-    .line 1283
     return-void
 .end method
 
@@ -4484,12 +4032,10 @@
     .prologue
     const/4 v2, 0x0
 
-    .line 1725
     invoke-static {p0}, Landroid/telephony/SubscriptionManager;->getSubId(I)[J
 
     move-result-object v1
 
-    .line 1727
     .local v1, "subId":[J
     :try_start_0
     invoke-static {}, Landroid/telephony/TelephonyManager;->getDefault()Landroid/telephony/TelephonyManager;
@@ -4506,15 +4052,12 @@
 
     move-result v2
 
-    .line 1729
     :goto_0
     return v2
 
-    .line 1728
     :catch_0
     move-exception v0
 
-    .line 1729
     .local v0, "ex":Ljava/lang/NullPointerException;
     goto :goto_0
 .end method
@@ -4527,12 +4070,10 @@
     .prologue
     const/4 v6, 0x0
 
-    .line 1784
     invoke-static {p0}, Landroid/telephony/SubscriptionManager;->getSubId(I)[J
 
     move-result-object v1
 
-    .line 1786
     .local v1, "subId":[J
     :try_start_0
     invoke-static {}, Landroid/telephony/TelephonyManager;->getDefault()Landroid/telephony/TelephonyManager;
@@ -4549,15 +4090,12 @@
 
     move-result-object v2
 
-    .line 1788
     :goto_0
     return-object v2
 
-    .line 1787
     :catch_0
     move-exception v0
 
-    .line 1788
     .local v0, "ex":Ljava/lang/NullPointerException;
     new-array v2, v6, [I
 
@@ -4570,7 +4108,6 @@
     .param p2, "pin"    # Ljava/lang/String;
 
     .prologue
-    .line 1802
     invoke-static {}, Landroid/telephony/TelephonyManager;->getDefault()Landroid/telephony/TelephonyManager;
 
     move-result-object v0
@@ -4588,7 +4125,6 @@
     .param p2, "pin"    # Ljava/lang/String;
 
     .prologue
-    .line 1742
     invoke-static {}, Landroid/telephony/TelephonyManager;->getDefault()Landroid/telephony/TelephonyManager;
 
     move-result-object v0
@@ -4609,12 +4145,10 @@
     .prologue
     const/4 v2, 0x0
 
-    .line 1754
     invoke-static {p0}, Landroid/telephony/SubscriptionManager;->getSubId(I)[J
 
     move-result-object v1
 
-    .line 1756
     .local v1, "subId":[J
     :try_start_0
     invoke-static {}, Landroid/telephony/TelephonyManager;->getDefault()Landroid/telephony/TelephonyManager;
@@ -4631,15 +4165,12 @@
 
     move-result v2
 
-    .line 1758
     :goto_0
     return v2
 
-    .line 1757
     :catch_0
     move-exception v0
 
-    .line 1758
     .local v0, "ex":Ljava/lang/NullPointerException;
     goto :goto_0
 .end method
@@ -4653,12 +4184,10 @@
     .prologue
     const/4 v6, 0x0
 
-    .line 1816
     invoke-static {p0}, Landroid/telephony/SubscriptionManager;->getSubId(I)[J
 
     move-result-object v1
 
-    .line 1818
     .local v1, "subId":[J
     :try_start_0
     invoke-static {}, Landroid/telephony/TelephonyManager;->getDefault()Landroid/telephony/TelephonyManager;
@@ -4675,15 +4204,12 @@
 
     move-result-object v2
 
-    .line 1820
     :goto_0
     return-object v2
 
-    .line 1819
     :catch_0
     move-exception v0
 
-    .line 1820
     .local v0, "ex":Ljava/lang/NullPointerException;
     new-array v2, v6, [I
 
@@ -4697,7 +4223,6 @@
     .param p3, "pin"    # Ljava/lang/String;
 
     .prologue
-    .line 1836
     invoke-static {}, Landroid/telephony/TelephonyManager;->getDefault()Landroid/telephony/TelephonyManager;
 
     move-result-object v0
@@ -4716,7 +4241,6 @@
     .param p3, "pin"    # Ljava/lang/String;
 
     .prologue
-    .line 1772
     invoke-static {}, Landroid/telephony/TelephonyManager;->getDefault()Landroid/telephony/TelephonyManager;
 
     move-result-object v0
@@ -4733,12 +4257,10 @@
     .param p0, "slotId"    # I
 
     .prologue
-    .line 1875
     invoke-static {p0}, Landroid/telephony/SubscriptionManager;->getSubId(I)[J
 
     move-result-object v0
 
-    .line 1877
     .local v0, "subId":[J
     :try_start_0
     invoke-static {}, Landroid/telephony/TelephonyManager;->getDefault()Landroid/telephony/TelephonyManager;
@@ -4753,11 +4275,9 @@
     :try_end_0
     .catch Ljava/lang/NullPointerException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 1880
     :goto_0
     return-void
 
-    .line 1878
     :catch_0
     move-exception v1
 
@@ -4769,14 +4289,12 @@
     .param p0, "subId"    # J
 
     .prologue
-    .line 1888
     invoke-static {}, Landroid/telephony/TelephonyManager;->getDefault()Landroid/telephony/TelephonyManager;
 
     move-result-object v0
 
     invoke-virtual {v0, p0, p1}, Landroid/telephony/TelephonyManager;->toggleRadioOnOff(J)V
 
-    .line 1889
     return-void
 .end method
 
@@ -4787,12 +4305,10 @@
     .param p1, "slotId"    # I
 
     .prologue
-    .line 1022
     invoke-static {p1}, Landroid/telephony/SubscriptionManager;->getSubId(I)[J
 
     move-result-object v1
 
-    .line 1024
     .local v1, "subId":[J
     :try_start_0
     invoke-static {}, Landroid/telephony/TelephonyManager;->getDefault()Landroid/telephony/TelephonyManager;
@@ -4809,15 +4325,12 @@
 
     move-result-object v2
 
-    .line 1026
     :goto_0
     return-object v2
 
-    .line 1025
     :catch_0
     move-exception v0
 
-    .line 1026
     .local v0, "ex":Ljava/lang/NullPointerException;
     const/4 v2, 0x0
 
@@ -4829,7 +4342,6 @@
     .param p1, "subId"    # J
 
     .prologue
-    .line 1041
     invoke-static {}, Landroid/telephony/TelephonyManager;->getDefault()Landroid/telephony/TelephonyManager;
 
     move-result-object v0

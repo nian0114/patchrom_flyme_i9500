@@ -72,7 +72,6 @@
     .locals 1
 
     .prologue
-    .line 614
     new-instance v0, Lcom/absolute/android/persistence/AppProfile$1;
 
     invoke-direct {v0}, Lcom/absolute/android/persistence/AppProfile$1;-><init>()V
@@ -90,90 +89,72 @@
 
     const/4 v1, 0x0
 
-    .line 578
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 24
     iput-object v2, p0, Lcom/absolute/android/persistence/AppProfile;->m_packageName:Ljava/lang/String;
 
-    .line 25
     invoke-static {v1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object v0
 
     iput-object v0, p0, Lcom/absolute/android/persistence/AppProfile;->m_versionCode:Ljava/lang/Integer;
 
-    .line 26
     iput-object v2, p0, Lcom/absolute/android/persistence/AppProfile;->m_updateUrl:Ljava/lang/String;
 
-    .line 27
     iput-object v2, p0, Lcom/absolute/android/persistence/AppProfile;->m_updateIpAddress:Ljava/lang/String;
 
-    .line 28
     iput-object v2, p0, Lcom/absolute/android/persistence/AppProfile;->m_accessKey:Ljava/lang/String;
 
-    .line 29
     invoke-static {v1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object v0
 
     iput-object v0, p0, Lcom/absolute/android/persistence/AppProfile;->m_maxUpdateAttempts:Ljava/lang/Integer;
 
-    .line 30
     invoke-static {v1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object v0
 
     iput-object v0, p0, Lcom/absolute/android/persistence/AppProfile;->m_updateRetryMinutes:Ljava/lang/Integer;
 
-    .line 31
     invoke-static {v1}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
 
     move-result-object v0
 
     iput-object v0, p0, Lcom/absolute/android/persistence/AppProfile;->m_persist:Ljava/lang/Boolean;
 
-    .line 32
     invoke-static {v1}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
 
     move-result-object v0
 
     iput-object v0, p0, Lcom/absolute/android/persistence/AppProfile;->m_startOnInstall:Ljava/lang/Boolean;
 
-    .line 33
     iput-object v2, p0, Lcom/absolute/android/persistence/AppProfile;->m_startOnInstallIntent:Ljava/lang/String;
 
-    .line 34
     iput-object v2, p0, Lcom/absolute/android/persistence/AppProfile;->m_restartIntent:Ljava/lang/String;
 
-    .line 35
     invoke-static {v1}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
 
     move-result-object v0
 
     iput-object v0, p0, Lcom/absolute/android/persistence/AppProfile;->m_monitor:Ljava/lang/Boolean;
 
-    .line 36
     iput-object v2, p0, Lcom/absolute/android/persistence/AppProfile;->m_monitorIntents:[Ljava/lang/String;
 
-    .line 37
     invoke-static {v1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object v0
 
     iput-object v0, p0, Lcom/absolute/android/persistence/AppProfile;->m_checkRunningSecs:Ljava/lang/Integer;
 
-    .line 38
     invoke-static {v1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object v0
 
     iput-object v0, p0, Lcom/absolute/android/persistence/AppProfile;->m_maxRestartAttempts:Ljava/lang/Integer;
 
-    .line 39
     iput-object v2, p0, Lcom/absolute/android/persistence/AppProfile;->m_extras:Ljava/util/HashMap;
 
-    .line 578
     return-void
 .end method
 
@@ -188,97 +169,78 @@
 
     const/4 v2, 0x0
 
-    .line 626
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 24
     iput-object v3, p0, Lcom/absolute/android/persistence/AppProfile;->m_packageName:Ljava/lang/String;
 
-    .line 25
     invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object v0
 
     iput-object v0, p0, Lcom/absolute/android/persistence/AppProfile;->m_versionCode:Ljava/lang/Integer;
 
-    .line 26
     iput-object v3, p0, Lcom/absolute/android/persistence/AppProfile;->m_updateUrl:Ljava/lang/String;
 
-    .line 27
     iput-object v3, p0, Lcom/absolute/android/persistence/AppProfile;->m_updateIpAddress:Ljava/lang/String;
 
-    .line 28
     iput-object v3, p0, Lcom/absolute/android/persistence/AppProfile;->m_accessKey:Ljava/lang/String;
 
-    .line 29
     invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object v0
 
     iput-object v0, p0, Lcom/absolute/android/persistence/AppProfile;->m_maxUpdateAttempts:Ljava/lang/Integer;
 
-    .line 30
     invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object v0
 
     iput-object v0, p0, Lcom/absolute/android/persistence/AppProfile;->m_updateRetryMinutes:Ljava/lang/Integer;
 
-    .line 31
     invoke-static {v2}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
 
     move-result-object v0
 
     iput-object v0, p0, Lcom/absolute/android/persistence/AppProfile;->m_persist:Ljava/lang/Boolean;
 
-    .line 32
     invoke-static {v2}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
 
     move-result-object v0
 
     iput-object v0, p0, Lcom/absolute/android/persistence/AppProfile;->m_startOnInstall:Ljava/lang/Boolean;
 
-    .line 33
     iput-object v3, p0, Lcom/absolute/android/persistence/AppProfile;->m_startOnInstallIntent:Ljava/lang/String;
 
-    .line 34
     iput-object v3, p0, Lcom/absolute/android/persistence/AppProfile;->m_restartIntent:Ljava/lang/String;
 
-    .line 35
     invoke-static {v2}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
 
     move-result-object v0
 
     iput-object v0, p0, Lcom/absolute/android/persistence/AppProfile;->m_monitor:Ljava/lang/Boolean;
 
-    .line 36
     iput-object v3, p0, Lcom/absolute/android/persistence/AppProfile;->m_monitorIntents:[Ljava/lang/String;
 
-    .line 37
     invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object v0
 
     iput-object v0, p0, Lcom/absolute/android/persistence/AppProfile;->m_checkRunningSecs:Ljava/lang/Integer;
 
-    .line 38
     invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object v0
 
     iput-object v0, p0, Lcom/absolute/android/persistence/AppProfile;->m_maxRestartAttempts:Ljava/lang/Integer;
 
-    .line 39
     iput-object v3, p0, Lcom/absolute/android/persistence/AppProfile;->m_extras:Ljava/util/HashMap;
 
-    .line 627
     invoke-virtual {p1}, Landroid/os/Parcel;->readString()Ljava/lang/String;
 
     move-result-object v0
 
     iput-object v0, p0, Lcom/absolute/android/persistence/AppProfile;->m_packageName:Ljava/lang/String;
 
-    .line 628
     invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
 
     move-result v0
@@ -289,28 +251,24 @@
 
     iput-object v0, p0, Lcom/absolute/android/persistence/AppProfile;->m_versionCode:Ljava/lang/Integer;
 
-    .line 629
     invoke-virtual {p1}, Landroid/os/Parcel;->readString()Ljava/lang/String;
 
     move-result-object v0
 
     iput-object v0, p0, Lcom/absolute/android/persistence/AppProfile;->m_updateUrl:Ljava/lang/String;
 
-    .line 630
     invoke-virtual {p1}, Landroid/os/Parcel;->readString()Ljava/lang/String;
 
     move-result-object v0
 
     iput-object v0, p0, Lcom/absolute/android/persistence/AppProfile;->m_updateIpAddress:Ljava/lang/String;
 
-    .line 631
     invoke-virtual {p1}, Landroid/os/Parcel;->readString()Ljava/lang/String;
 
     move-result-object v0
 
     iput-object v0, p0, Lcom/absolute/android/persistence/AppProfile;->m_accessKey:Ljava/lang/String;
 
-    .line 632
     invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
 
     move-result v0
@@ -321,7 +279,6 @@
 
     iput-object v0, p0, Lcom/absolute/android/persistence/AppProfile;->m_maxUpdateAttempts:Ljava/lang/Integer;
 
-    .line 633
     invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
 
     move-result v0
@@ -332,7 +289,6 @@
 
     iput-object v0, p0, Lcom/absolute/android/persistence/AppProfile;->m_updateRetryMinutes:Ljava/lang/Integer;
 
-    .line 634
     invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
 
     move-result v0
@@ -348,7 +304,6 @@
 
     iput-object v0, p0, Lcom/absolute/android/persistence/AppProfile;->m_persist:Ljava/lang/Boolean;
 
-    .line 635
     invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
 
     move-result v0
@@ -364,21 +319,18 @@
 
     iput-object v0, p0, Lcom/absolute/android/persistence/AppProfile;->m_startOnInstall:Ljava/lang/Boolean;
 
-    .line 636
     invoke-virtual {p1}, Landroid/os/Parcel;->readString()Ljava/lang/String;
 
     move-result-object v0
 
     iput-object v0, p0, Lcom/absolute/android/persistence/AppProfile;->m_startOnInstallIntent:Ljava/lang/String;
 
-    .line 637
     invoke-virtual {p1}, Landroid/os/Parcel;->readString()Ljava/lang/String;
 
     move-result-object v0
 
     iput-object v0, p0, Lcom/absolute/android/persistence/AppProfile;->m_restartIntent:Ljava/lang/String;
 
-    .line 638
     invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
 
     move-result v0
@@ -392,14 +344,12 @@
 
     iput-object v0, p0, Lcom/absolute/android/persistence/AppProfile;->m_monitor:Ljava/lang/Boolean;
 
-    .line 639
     invoke-virtual {p1}, Landroid/os/Parcel;->createStringArray()[Ljava/lang/String;
 
     move-result-object v0
 
     iput-object v0, p0, Lcom/absolute/android/persistence/AppProfile;->m_monitorIntents:[Ljava/lang/String;
 
-    .line 640
     invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
 
     move-result v0
@@ -410,7 +360,6 @@
 
     iput-object v0, p0, Lcom/absolute/android/persistence/AppProfile;->m_checkRunningSecs:Ljava/lang/Integer;
 
-    .line 641
     invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
 
     move-result v0
@@ -421,7 +370,6 @@
 
     iput-object v0, p0, Lcom/absolute/android/persistence/AppProfile;->m_maxRestartAttempts:Ljava/lang/Integer;
 
-    .line 642
     invoke-static {}, Ljava/lang/ClassLoader;->getSystemClassLoader()Ljava/lang/ClassLoader;
 
     move-result-object v0
@@ -432,25 +380,21 @@
 
     iput-object v0, p0, Lcom/absolute/android/persistence/AppProfile;->m_extras:Ljava/util/HashMap;
 
-    .line 643
     return-void
 
     :cond_0
     move v0, v2
 
-    .line 634
     goto :goto_0
 
     :cond_1
     move v0, v2
 
-    .line 635
     goto :goto_1
 
     :cond_2
     move v1, v2
 
-    .line 638
     goto :goto_2
 .end method
 
@@ -460,7 +404,6 @@
     .param p2, "x1"    # Lcom/absolute/android/persistence/AppProfile$1;
 
     .prologue
-    .line 22
     invoke-direct {p0, p1}, Lcom/absolute/android/persistence/AppProfile;-><init>(Landroid/os/Parcel;)V
 
     return-void
@@ -506,16 +449,13 @@
     .end annotation
 
     .prologue
-    .line 554
     .local p16, "extras":Ljava/util/HashMap;, "Ljava/util/HashMap<Ljava/lang/String;Ljava/lang/Object;>;"
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 24
     const/4 v1, 0x0
 
     iput-object v1, p0, Lcom/absolute/android/persistence/AppProfile;->m_packageName:Ljava/lang/String;
 
-    .line 25
     const/4 v1, 0x0
 
     invoke-static {v1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
@@ -524,22 +464,18 @@
 
     iput-object v1, p0, Lcom/absolute/android/persistence/AppProfile;->m_versionCode:Ljava/lang/Integer;
 
-    .line 26
     const/4 v1, 0x0
 
     iput-object v1, p0, Lcom/absolute/android/persistence/AppProfile;->m_updateUrl:Ljava/lang/String;
 
-    .line 27
     const/4 v1, 0x0
 
     iput-object v1, p0, Lcom/absolute/android/persistence/AppProfile;->m_updateIpAddress:Ljava/lang/String;
 
-    .line 28
     const/4 v1, 0x0
 
     iput-object v1, p0, Lcom/absolute/android/persistence/AppProfile;->m_accessKey:Ljava/lang/String;
 
-    .line 29
     const/4 v1, 0x0
 
     invoke-static {v1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
@@ -548,7 +484,6 @@
 
     iput-object v1, p0, Lcom/absolute/android/persistence/AppProfile;->m_maxUpdateAttempts:Ljava/lang/Integer;
 
-    .line 30
     const/4 v1, 0x0
 
     invoke-static {v1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
@@ -557,7 +492,6 @@
 
     iput-object v1, p0, Lcom/absolute/android/persistence/AppProfile;->m_updateRetryMinutes:Ljava/lang/Integer;
 
-    .line 31
     const/4 v1, 0x0
 
     invoke-static {v1}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
@@ -566,7 +500,6 @@
 
     iput-object v1, p0, Lcom/absolute/android/persistence/AppProfile;->m_persist:Ljava/lang/Boolean;
 
-    .line 32
     const/4 v1, 0x0
 
     invoke-static {v1}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
@@ -575,17 +508,14 @@
 
     iput-object v1, p0, Lcom/absolute/android/persistence/AppProfile;->m_startOnInstall:Ljava/lang/Boolean;
 
-    .line 33
     const/4 v1, 0x0
 
     iput-object v1, p0, Lcom/absolute/android/persistence/AppProfile;->m_startOnInstallIntent:Ljava/lang/String;
 
-    .line 34
     const/4 v1, 0x0
 
     iput-object v1, p0, Lcom/absolute/android/persistence/AppProfile;->m_restartIntent:Ljava/lang/String;
 
-    .line 35
     const/4 v1, 0x0
 
     invoke-static {v1}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
@@ -594,12 +524,10 @@
 
     iput-object v1, p0, Lcom/absolute/android/persistence/AppProfile;->m_monitor:Ljava/lang/Boolean;
 
-    .line 36
     const/4 v1, 0x0
 
     iput-object v1, p0, Lcom/absolute/android/persistence/AppProfile;->m_monitorIntents:[Ljava/lang/String;
 
-    .line 37
     const/4 v1, 0x0
 
     invoke-static {v1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
@@ -608,7 +536,6 @@
 
     iput-object v1, p0, Lcom/absolute/android/persistence/AppProfile;->m_checkRunningSecs:Ljava/lang/Integer;
 
-    .line 38
     const/4 v1, 0x0
 
     invoke-static {v1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
@@ -617,120 +544,100 @@
 
     iput-object v1, p0, Lcom/absolute/android/persistence/AppProfile;->m_maxRestartAttempts:Ljava/lang/Integer;
 
-    .line 39
     const/4 v1, 0x0
 
     iput-object v1, p0, Lcom/absolute/android/persistence/AppProfile;->m_extras:Ljava/util/HashMap;
 
-    .line 556
     if-nez p1, :cond_0
 
     new-instance v1, Ljava/lang/NullPointerException;
 
-    const-string/jumbo v2, "package name is null"
+    const-string v2, "package name is null"
 
     invoke-direct {v1, v2}, Ljava/lang/NullPointerException;-><init>(Ljava/lang/String;)V
 
     throw v1
 
-    .line 557
     :cond_0
     if-nez p2, :cond_1
 
     new-instance v1, Ljava/lang/IllegalArgumentException;
 
-    const-string/jumbo v2, "version is 0"
+    const-string v2, "version is 0"
 
     invoke-direct {v1, v2}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
 
     throw v1
 
-    .line 559
     :cond_1
     iput-object p1, p0, Lcom/absolute/android/persistence/AppProfile;->m_packageName:Ljava/lang/String;
 
-    .line 560
     invoke-static {p2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object v1
 
     iput-object v1, p0, Lcom/absolute/android/persistence/AppProfile;->m_versionCode:Ljava/lang/Integer;
 
-    .line 561
     iput-object p3, p0, Lcom/absolute/android/persistence/AppProfile;->m_updateUrl:Ljava/lang/String;
 
-    .line 562
     iput-object p4, p0, Lcom/absolute/android/persistence/AppProfile;->m_updateIpAddress:Ljava/lang/String;
 
-    .line 563
     iput-object p5, p0, Lcom/absolute/android/persistence/AppProfile;->m_accessKey:Ljava/lang/String;
 
-    .line 564
     invoke-static {p6}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object v1
 
     iput-object v1, p0, Lcom/absolute/android/persistence/AppProfile;->m_maxUpdateAttempts:Ljava/lang/Integer;
 
-    .line 565
     invoke-static {p7}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object v1
 
     iput-object v1, p0, Lcom/absolute/android/persistence/AppProfile;->m_updateRetryMinutes:Ljava/lang/Integer;
 
-    .line 566
     invoke-static {p8}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
 
     move-result-object v1
 
     iput-object v1, p0, Lcom/absolute/android/persistence/AppProfile;->m_persist:Ljava/lang/Boolean;
 
-    .line 567
     invoke-static {p9}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
 
     move-result-object v1
 
     iput-object v1, p0, Lcom/absolute/android/persistence/AppProfile;->m_startOnInstall:Ljava/lang/Boolean;
 
-    .line 568
     iput-object p10, p0, Lcom/absolute/android/persistence/AppProfile;->m_startOnInstallIntent:Ljava/lang/String;
 
-    .line 569
     iput-object p11, p0, Lcom/absolute/android/persistence/AppProfile;->m_restartIntent:Ljava/lang/String;
 
-    .line 570
     invoke-static {p12}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
 
     move-result-object v1
 
     iput-object v1, p0, Lcom/absolute/android/persistence/AppProfile;->m_monitor:Ljava/lang/Boolean;
 
-    .line 571
     move-object/from16 v0, p13
 
     iput-object v0, p0, Lcom/absolute/android/persistence/AppProfile;->m_monitorIntents:[Ljava/lang/String;
 
-    .line 572
     invoke-static/range {p14 .. p14}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object v1
 
     iput-object v1, p0, Lcom/absolute/android/persistence/AppProfile;->m_checkRunningSecs:Ljava/lang/Integer;
 
-    .line 573
     invoke-static/range {p15 .. p15}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object v1
 
     iput-object v1, p0, Lcom/absolute/android/persistence/AppProfile;->m_maxRestartAttempts:Ljava/lang/Integer;
 
-    .line 574
     move-object/from16 v0, p16
 
     iput-object v0, p0, Lcom/absolute/android/persistence/AppProfile;->m_extras:Ljava/util/HashMap;
 
-    .line 575
     return-void
 .end method
 
@@ -744,13 +651,10 @@
 
     const/4 v1, 0x0
 
-    .line 728
     if-nez p0, :cond_2
 
-    .line 729
     if-nez p1, :cond_1
 
-    .line 735
     :cond_0
     :goto_0
     return v0
@@ -758,21 +662,17 @@
     :cond_1
     move v0, v1
 
-    .line 729
     goto :goto_0
 
-    .line 731
     :cond_2
     if-nez p1, :cond_3
 
-    .line 732
     if-eqz p0, :cond_0
 
     move v0, v1
 
     goto :goto_0
 
-    .line 735
     :cond_3
     invoke-virtual {p0, p1}, Ljava/lang/Object;->equals(Ljava/lang/Object;)Z
 
@@ -794,12 +694,10 @@
     .prologue
     const/4 v3, 0x0
 
-    .line 656
     new-instance v0, Lcom/absolute/android/persistence/AppProfile;
 
     invoke-direct {v0}, Lcom/absolute/android/persistence/AppProfile;-><init>()V
 
-    .line 657
     .local v0, "clone":Lcom/absolute/android/persistence/AppProfile;
     iget-object v2, p0, Lcom/absolute/android/persistence/AppProfile;->m_packageName:Ljava/lang/String;
 
@@ -814,7 +712,6 @@
     :goto_0
     iput-object v2, v0, Lcom/absolute/android/persistence/AppProfile;->m_packageName:Ljava/lang/String;
 
-    .line 658
     iget-object v2, p0, Lcom/absolute/android/persistence/AppProfile;->m_versionCode:Ljava/lang/Integer;
 
     invoke-virtual {v2}, Ljava/lang/Integer;->intValue()I
@@ -827,7 +724,6 @@
 
     iput-object v2, v0, Lcom/absolute/android/persistence/AppProfile;->m_versionCode:Ljava/lang/Integer;
 
-    .line 659
     iget-object v2, p0, Lcom/absolute/android/persistence/AppProfile;->m_updateUrl:Ljava/lang/String;
 
     if-eqz v2, :cond_1
@@ -841,7 +737,6 @@
     :goto_1
     iput-object v2, v0, Lcom/absolute/android/persistence/AppProfile;->m_updateUrl:Ljava/lang/String;
 
-    .line 660
     iget-object v2, p0, Lcom/absolute/android/persistence/AppProfile;->m_updateIpAddress:Ljava/lang/String;
 
     if-eqz v2, :cond_2
@@ -855,7 +750,6 @@
     :goto_2
     iput-object v2, v0, Lcom/absolute/android/persistence/AppProfile;->m_updateIpAddress:Ljava/lang/String;
 
-    .line 661
     iget-object v2, p0, Lcom/absolute/android/persistence/AppProfile;->m_accessKey:Ljava/lang/String;
 
     if-eqz v2, :cond_3
@@ -869,7 +763,6 @@
     :goto_3
     iput-object v2, v0, Lcom/absolute/android/persistence/AppProfile;->m_accessKey:Ljava/lang/String;
 
-    .line 662
     iget-object v2, p0, Lcom/absolute/android/persistence/AppProfile;->m_maxUpdateAttempts:Ljava/lang/Integer;
 
     invoke-virtual {v2}, Ljava/lang/Integer;->intValue()I
@@ -882,7 +775,6 @@
 
     iput-object v2, v0, Lcom/absolute/android/persistence/AppProfile;->m_maxUpdateAttempts:Ljava/lang/Integer;
 
-    .line 663
     iget-object v2, p0, Lcom/absolute/android/persistence/AppProfile;->m_updateRetryMinutes:Ljava/lang/Integer;
 
     invoke-virtual {v2}, Ljava/lang/Integer;->intValue()I
@@ -895,7 +787,6 @@
 
     iput-object v2, v0, Lcom/absolute/android/persistence/AppProfile;->m_updateRetryMinutes:Ljava/lang/Integer;
 
-    .line 664
     iget-object v2, p0, Lcom/absolute/android/persistence/AppProfile;->m_persist:Ljava/lang/Boolean;
 
     invoke-virtual {v2}, Ljava/lang/Boolean;->booleanValue()Z
@@ -908,7 +799,6 @@
 
     iput-object v2, v0, Lcom/absolute/android/persistence/AppProfile;->m_persist:Ljava/lang/Boolean;
 
-    .line 665
     iget-object v2, p0, Lcom/absolute/android/persistence/AppProfile;->m_startOnInstall:Ljava/lang/Boolean;
 
     invoke-virtual {v2}, Ljava/lang/Boolean;->booleanValue()Z
@@ -921,7 +811,6 @@
 
     iput-object v2, v0, Lcom/absolute/android/persistence/AppProfile;->m_startOnInstall:Ljava/lang/Boolean;
 
-    .line 666
     iget-object v2, p0, Lcom/absolute/android/persistence/AppProfile;->m_startOnInstallIntent:Ljava/lang/String;
 
     if-eqz v2, :cond_4
@@ -935,7 +824,6 @@
     :goto_4
     iput-object v2, v0, Lcom/absolute/android/persistence/AppProfile;->m_startOnInstallIntent:Ljava/lang/String;
 
-    .line 667
     iget-object v2, p0, Lcom/absolute/android/persistence/AppProfile;->m_restartIntent:Ljava/lang/String;
 
     if-eqz v2, :cond_5
@@ -949,7 +837,6 @@
     :goto_5
     iput-object v2, v0, Lcom/absolute/android/persistence/AppProfile;->m_restartIntent:Ljava/lang/String;
 
-    .line 668
     iget-object v2, p0, Lcom/absolute/android/persistence/AppProfile;->m_monitor:Ljava/lang/Boolean;
 
     invoke-virtual {v2}, Ljava/lang/Boolean;->booleanValue()Z
@@ -962,12 +849,10 @@
 
     iput-object v2, v0, Lcom/absolute/android/persistence/AppProfile;->m_monitor:Ljava/lang/Boolean;
 
-    .line 669
     iget-object v2, p0, Lcom/absolute/android/persistence/AppProfile;->m_monitorIntents:[Ljava/lang/String;
 
     if-eqz v2, :cond_6
 
-    .line 670
     iget-object v2, p0, Lcom/absolute/android/persistence/AppProfile;->m_monitorIntents:[Ljava/lang/String;
 
     array-length v2, v2
@@ -976,7 +861,6 @@
 
     iput-object v2, v0, Lcom/absolute/android/persistence/AppProfile;->m_monitorIntents:[Ljava/lang/String;
 
-    .line 671
     const/4 v1, 0x0
 
     .local v1, "i":I
@@ -987,7 +871,6 @@
 
     if-ge v1, v2, :cond_6
 
-    .line 672
     iget-object v2, v0, Lcom/absolute/android/persistence/AppProfile;->m_monitorIntents:[Ljava/lang/String;
 
     iget-object v4, p0, Lcom/absolute/android/persistence/AppProfile;->m_monitorIntents:[Ljava/lang/String;
@@ -996,7 +879,6 @@
 
     aput-object v4, v2, v1
 
-    .line 671
     add-int/lit8 v1, v1, 0x1
 
     goto :goto_6
@@ -1005,40 +887,33 @@
     :cond_0
     move-object v2, v3
 
-    .line 657
     goto/16 :goto_0
 
     :cond_1
     move-object v2, v3
 
-    .line 659
     goto/16 :goto_1
 
     :cond_2
     move-object v2, v3
 
-    .line 660
     goto/16 :goto_2
 
     :cond_3
     move-object v2, v3
 
-    .line 661
     goto :goto_3
 
     :cond_4
     move-object v2, v3
 
-    .line 666
     goto :goto_4
 
     :cond_5
     move-object v2, v3
 
-    .line 667
     goto :goto_5
 
-    .line 675
     :cond_6
     iget-object v2, p0, Lcom/absolute/android/persistence/AppProfile;->m_checkRunningSecs:Ljava/lang/Integer;
 
@@ -1052,7 +927,6 @@
 
     iput-object v2, v0, Lcom/absolute/android/persistence/AppProfile;->m_checkRunningSecs:Ljava/lang/Integer;
 
-    .line 676
     iget-object v2, p0, Lcom/absolute/android/persistence/AppProfile;->m_maxRestartAttempts:Ljava/lang/Integer;
 
     invoke-virtual {v2}, Ljava/lang/Integer;->intValue()I
@@ -1065,7 +939,6 @@
 
     iput-object v2, v0, Lcom/absolute/android/persistence/AppProfile;->m_maxRestartAttempts:Ljava/lang/Integer;
 
-    .line 677
     iget-object v2, p0, Lcom/absolute/android/persistence/AppProfile;->m_extras:Ljava/util/HashMap;
 
     if-eqz v2, :cond_7
@@ -1081,13 +954,11 @@
     :goto_7
     iput-object v2, v0, Lcom/absolute/android/persistence/AppProfile;->m_extras:Ljava/util/HashMap;
 
-    .line 679
     return-object v0
 
     :cond_7
     move-object v2, v3
 
-    .line 677
     goto :goto_7
 .end method
 
@@ -1095,7 +966,6 @@
     .locals 1
 
     .prologue
-    .line 585
     const/4 v0, 0x0
 
     return v0
@@ -1110,24 +980,19 @@
 
     const/4 v2, 0x0
 
-    .line 691
     if-ne p0, p1, :cond_1
 
-    .line 708
     :cond_0
     :goto_0
     return v1
 
-    .line 696
     :cond_1
     if-nez p1, :cond_2
 
     move v1, v2
 
-    .line 697
     goto :goto_0
 
-    .line 701
     :cond_2
     instance-of v3, p1, Lcom/absolute/android/persistence/AppProfile;
 
@@ -1135,16 +1000,13 @@
 
     move v1, v2
 
-    .line 702
     goto :goto_0
 
     :cond_3
     move-object v0, p1
 
-    .line 706
     check-cast v0, Lcom/absolute/android/persistence/AppProfile;
 
-    .line 708
     .local v0, "apObj":Lcom/absolute/android/persistence/AppProfile;
     iget-object v3, p0, Lcom/absolute/android/persistence/AppProfile;->m_packageName:Ljava/lang/String;
 
@@ -1316,7 +1178,6 @@
     .locals 1
 
     .prologue
-    .line 130
     iget-object v0, p0, Lcom/absolute/android/persistence/AppProfile;->m_accessKey:Ljava/lang/String;
 
     return-object v0
@@ -1326,7 +1187,6 @@
     .locals 1
 
     .prologue
-    .line 359
     iget-object v0, p0, Lcom/absolute/android/persistence/AppProfile;->m_checkRunningSecs:Ljava/lang/Integer;
 
     invoke-virtual {v0}, Ljava/lang/Integer;->intValue()I
@@ -1350,7 +1210,6 @@
     .end annotation
 
     .prologue
-    .line 407
     iget-object v0, p0, Lcom/absolute/android/persistence/AppProfile;->m_extras:Ljava/util/HashMap;
 
     return-object v0
@@ -1360,7 +1219,6 @@
     .locals 1
 
     .prologue
-    .line 305
     iget-object v0, p0, Lcom/absolute/android/persistence/AppProfile;->m_monitor:Ljava/lang/Boolean;
 
     invoke-virtual {v0}, Ljava/lang/Boolean;->booleanValue()Z
@@ -1374,7 +1232,6 @@
     .locals 1
 
     .prologue
-    .line 196
     iget-object v0, p0, Lcom/absolute/android/persistence/AppProfile;->m_persist:Ljava/lang/Boolean;
 
     invoke-virtual {v0}, Ljava/lang/Boolean;->booleanValue()Z
@@ -1388,7 +1245,6 @@
     .locals 1
 
     .prologue
-    .line 383
     iget-object v0, p0, Lcom/absolute/android/persistence/AppProfile;->m_maxRestartAttempts:Ljava/lang/Integer;
 
     invoke-virtual {v0}, Ljava/lang/Integer;->intValue()I
@@ -1402,7 +1258,6 @@
     .locals 1
 
     .prologue
-    .line 149
     iget-object v0, p0, Lcom/absolute/android/persistence/AppProfile;->m_maxUpdateAttempts:Ljava/lang/Integer;
 
     invoke-virtual {v0}, Ljava/lang/Integer;->intValue()I
@@ -1416,7 +1271,6 @@
     .locals 1
 
     .prologue
-    .line 331
     iget-object v0, p0, Lcom/absolute/android/persistence/AppProfile;->m_monitorIntents:[Ljava/lang/String;
 
     return-object v0
@@ -1426,7 +1280,6 @@
     .locals 1
 
     .prologue
-    .line 50
     iget-object v0, p0, Lcom/absolute/android/persistence/AppProfile;->m_packageName:Ljava/lang/String;
 
     return-object v0
@@ -1436,7 +1289,6 @@
     .locals 1
 
     .prologue
-    .line 278
     iget-object v0, p0, Lcom/absolute/android/persistence/AppProfile;->m_restartIntent:Ljava/lang/String;
 
     return-object v0
@@ -1446,7 +1298,6 @@
     .locals 1
 
     .prologue
-    .line 216
     iget-object v0, p0, Lcom/absolute/android/persistence/AppProfile;->m_startOnInstall:Ljava/lang/Boolean;
 
     invoke-virtual {v0}, Ljava/lang/Boolean;->booleanValue()Z
@@ -1460,7 +1311,6 @@
     .locals 1
 
     .prologue
-    .line 238
     iget-object v0, p0, Lcom/absolute/android/persistence/AppProfile;->m_startOnInstallIntent:Ljava/lang/String;
 
     return-object v0
@@ -1470,7 +1320,6 @@
     .locals 1
 
     .prologue
-    .line 110
     iget-object v0, p0, Lcom/absolute/android/persistence/AppProfile;->m_updateIpAddress:Ljava/lang/String;
 
     return-object v0
@@ -1480,7 +1329,6 @@
     .locals 1
 
     .prologue
-    .line 173
     iget-object v0, p0, Lcom/absolute/android/persistence/AppProfile;->m_updateRetryMinutes:Ljava/lang/Integer;
 
     invoke-virtual {v0}, Ljava/lang/Integer;->intValue()I
@@ -1494,7 +1342,6 @@
     .locals 1
 
     .prologue
-    .line 90
     iget-object v0, p0, Lcom/absolute/android/persistence/AppProfile;->m_updateUrl:Ljava/lang/String;
 
     return-object v0
@@ -1504,7 +1351,6 @@
     .locals 1
 
     .prologue
-    .line 61
     iget-object v0, p0, Lcom/absolute/android/persistence/AppProfile;->m_versionCode:Ljava/lang/Integer;
 
     invoke-virtual {v0}, Ljava/lang/Integer;->intValue()I
@@ -1519,10 +1365,8 @@
     .param p1, "accessKey"    # Ljava/lang/String;
 
     .prologue
-    .line 139
     iput-object p1, p0, Lcom/absolute/android/persistence/AppProfile;->m_accessKey:Ljava/lang/String;
 
-    .line 140
     return-void
 .end method
 
@@ -1531,14 +1375,12 @@
     .param p1, "secs"    # I
 
     .prologue
-    .line 371
     invoke-static {p1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object v0
 
     iput-object v0, p0, Lcom/absolute/android/persistence/AppProfile;->m_checkRunningSecs:Ljava/lang/Integer;
 
-    .line 372
     return-void
 .end method
 
@@ -1556,11 +1398,9 @@
     .end annotation
 
     .prologue
-    .line 416
     .local p1, "extras":Ljava/util/HashMap;, "Ljava/util/HashMap<Ljava/lang/String;Ljava/lang/Object;>;"
     iput-object p1, p0, Lcom/absolute/android/persistence/AppProfile;->m_extras:Ljava/util/HashMap;
 
-    .line 417
     return-void
 .end method
 
@@ -1569,14 +1409,12 @@
     .param p1, "monitor"    # Z
 
     .prologue
-    .line 314
     invoke-static {p1}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
 
     move-result-object v0
 
     iput-object v0, p0, Lcom/absolute/android/persistence/AppProfile;->m_monitor:Ljava/lang/Boolean;
 
-    .line 315
     return-void
 .end method
 
@@ -1585,14 +1423,12 @@
     .param p1, "persist"    # Z
 
     .prologue
-    .line 205
     invoke-static {p1}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
 
     move-result-object v0
 
     iput-object v0, p0, Lcom/absolute/android/persistence/AppProfile;->m_persist:Ljava/lang/Boolean;
 
-    .line 206
     return-void
 .end method
 
@@ -1601,14 +1437,12 @@
     .param p1, "maxAttempts"    # I
 
     .prologue
-    .line 393
     invoke-static {p1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object v0
 
     iput-object v0, p0, Lcom/absolute/android/persistence/AppProfile;->m_maxRestartAttempts:Ljava/lang/Integer;
 
-    .line 394
     return-void
 .end method
 
@@ -1617,14 +1451,12 @@
     .param p1, "maxAttempts"    # I
 
     .prologue
-    .line 161
     invoke-static {p1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object v0
 
     iput-object v0, p0, Lcom/absolute/android/persistence/AppProfile;->m_maxUpdateAttempts:Ljava/lang/Integer;
 
-    .line 162
     return-void
 .end method
 
@@ -1633,10 +1465,8 @@
     .param p1, "monitorIntents"    # [Ljava/lang/String;
 
     .prologue
-    .line 346
     iput-object p1, p0, Lcom/absolute/android/persistence/AppProfile;->m_monitorIntents:[Ljava/lang/String;
 
-    .line 347
     return-void
 .end method
 
@@ -1645,10 +1475,8 @@
     .param p1, "startIntent"    # Ljava/lang/String;
 
     .prologue
-    .line 296
     iput-object p1, p0, Lcom/absolute/android/persistence/AppProfile;->m_restartIntent:Ljava/lang/String;
 
-    .line 297
     return-void
 .end method
 
@@ -1657,14 +1485,12 @@
     .param p1, "startOnInstall"    # Z
 
     .prologue
-    .line 227
     invoke-static {p1}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
 
     move-result-object v0
 
     iput-object v0, p0, Lcom/absolute/android/persistence/AppProfile;->m_startOnInstall:Ljava/lang/Boolean;
 
-    .line 228
     return-void
 .end method
 
@@ -1673,10 +1499,8 @@
     .param p1, "startIntent"    # Ljava/lang/String;
 
     .prologue
-    .line 267
     iput-object p1, p0, Lcom/absolute/android/persistence/AppProfile;->m_startOnInstallIntent:Ljava/lang/String;
 
-    .line 268
     return-void
 .end method
 
@@ -1685,10 +1509,8 @@
     .param p1, "updateIpAddress"    # Ljava/lang/String;
 
     .prologue
-    .line 119
     iput-object p1, p0, Lcom/absolute/android/persistence/AppProfile;->m_updateIpAddress:Ljava/lang/String;
 
-    .line 120
     return-void
 .end method
 
@@ -1697,14 +1519,12 @@
     .param p1, "mins"    # I
 
     .prologue
-    .line 185
     invoke-static {p1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object v0
 
     iput-object v0, p0, Lcom/absolute/android/persistence/AppProfile;->m_updateRetryMinutes:Ljava/lang/Integer;
 
-    .line 186
     return-void
 .end method
 
@@ -1713,10 +1533,8 @@
     .param p1, "updateUrl"    # Ljava/lang/String;
 
     .prologue
-    .line 99
     iput-object p1, p0, Lcom/absolute/android/persistence/AppProfile;->m_updateUrl:Ljava/lang/String;
 
-    .line 100
     return-void
 .end method
 
@@ -1725,19 +1543,16 @@
     .param p1, "versionCode"    # I
 
     .prologue
-    .line 72
     if-nez p1, :cond_0
 
-    .line 73
     new-instance v0, Ljava/lang/IllegalArgumentException;
 
-    const-string/jumbo v1, "version is 0"
+    const-string v1, "version is 0"
 
     invoke-direct {v0, v1}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
 
     throw v0
 
-    .line 76
     :cond_0
     invoke-static {p1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
@@ -1745,7 +1560,6 @@
 
     iput-object v0, p0, Lcom/absolute/android/persistence/AppProfile;->m_versionCode:Ljava/lang/Integer;
 
-    .line 77
     return-void
 .end method
 
@@ -1753,12 +1567,10 @@
     .locals 7
 
     .prologue
-    .line 429
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
 
-    .line 430
     .local v0, "appProfileText":Ljava/lang/StringBuilder;
     new-instance v5, Ljava/lang/StringBuilder;
 
@@ -1788,7 +1600,6 @@
 
     invoke-virtual {v0, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 431
     new-instance v5, Ljava/lang/StringBuilder;
 
     invoke-direct {v5}, Ljava/lang/StringBuilder;-><init>()V
@@ -1817,7 +1628,6 @@
 
     invoke-virtual {v0, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 432
     new-instance v5, Ljava/lang/StringBuilder;
 
     invoke-direct {v5}, Ljava/lang/StringBuilder;-><init>()V
@@ -1846,7 +1656,6 @@
 
     invoke-virtual {v0, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 433
     new-instance v5, Ljava/lang/StringBuilder;
 
     invoke-direct {v5}, Ljava/lang/StringBuilder;-><init>()V
@@ -1875,17 +1684,14 @@
 
     invoke-virtual {v0, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 434
     const-string v5, "MonitorIntents = "
 
     invoke-virtual {v0, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 435
     iget-object v5, p0, Lcom/absolute/android/persistence/AppProfile;->m_monitorIntents:[Ljava/lang/String;
 
     if-eqz v5, :cond_0
 
-    .line 436
     iget-object v1, p0, Lcom/absolute/android/persistence/AppProfile;->m_monitorIntents:[Ljava/lang/String;
 
     .local v1, "arr$":[Ljava/lang/String;
@@ -1900,7 +1706,6 @@
 
     aget-object v4, v1, v2
 
-    .line 437
     .local v4, "monitorIntent":Ljava/lang/String;
     new-instance v5, Ljava/lang/StringBuilder;
 
@@ -1922,12 +1727,10 @@
 
     invoke-virtual {v0, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 436
     add-int/lit8 v2, v2, 0x1
 
     goto :goto_0
 
-    .line 440
     .end local v1    # "arr$":[Ljava/lang/String;
     .end local v2    # "i$":I
     .end local v3    # "len$":I
@@ -1937,7 +1740,6 @@
 
     invoke-virtual {v0, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 441
     new-instance v5, Ljava/lang/StringBuilder;
 
     invoke-direct {v5}, Ljava/lang/StringBuilder;-><init>()V
@@ -1966,7 +1768,6 @@
 
     invoke-virtual {v0, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 442
     new-instance v5, Ljava/lang/StringBuilder;
 
     invoke-direct {v5}, Ljava/lang/StringBuilder;-><init>()V
@@ -1995,7 +1796,6 @@
 
     invoke-virtual {v0, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 443
     new-instance v5, Ljava/lang/StringBuilder;
 
     invoke-direct {v5}, Ljava/lang/StringBuilder;-><init>()V
@@ -2024,7 +1824,6 @@
 
     invoke-virtual {v0, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 444
     new-instance v5, Ljava/lang/StringBuilder;
 
     invoke-direct {v5}, Ljava/lang/StringBuilder;-><init>()V
@@ -2053,7 +1852,6 @@
 
     invoke-virtual {v0, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 445
     new-instance v5, Ljava/lang/StringBuilder;
 
     invoke-direct {v5}, Ljava/lang/StringBuilder;-><init>()V
@@ -2082,7 +1880,6 @@
 
     invoke-virtual {v0, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 446
     new-instance v5, Ljava/lang/StringBuilder;
 
     invoke-direct {v5}, Ljava/lang/StringBuilder;-><init>()V
@@ -2111,7 +1908,6 @@
 
     invoke-virtual {v0, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 447
     new-instance v5, Ljava/lang/StringBuilder;
 
     invoke-direct {v5}, Ljava/lang/StringBuilder;-><init>()V
@@ -2140,7 +1936,6 @@
 
     invoke-virtual {v0, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 448
     new-instance v5, Ljava/lang/StringBuilder;
 
     invoke-direct {v5}, Ljava/lang/StringBuilder;-><init>()V
@@ -2169,7 +1964,6 @@
 
     invoke-virtual {v0, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 449
     new-instance v5, Ljava/lang/StringBuilder;
 
     invoke-direct {v5}, Ljava/lang/StringBuilder;-><init>()V
@@ -2198,7 +1992,6 @@
 
     invoke-virtual {v0, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 450
     new-instance v5, Ljava/lang/StringBuilder;
 
     invoke-direct {v5}, Ljava/lang/StringBuilder;-><init>()V
@@ -2227,7 +2020,6 @@
 
     invoke-virtual {v0, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 451
     invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
     move-result-object v5
@@ -2245,12 +2037,10 @@
 
     const/4 v2, 0x0
 
-    .line 593
     iget-object v0, p0, Lcom/absolute/android/persistence/AppProfile;->m_packageName:Ljava/lang/String;
 
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeString(Ljava/lang/String;)V
 
-    .line 594
     iget-object v0, p0, Lcom/absolute/android/persistence/AppProfile;->m_versionCode:Ljava/lang/Integer;
 
     invoke-virtual {v0}, Ljava/lang/Integer;->intValue()I
@@ -2259,22 +2049,18 @@
 
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 595
     iget-object v0, p0, Lcom/absolute/android/persistence/AppProfile;->m_updateUrl:Ljava/lang/String;
 
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeString(Ljava/lang/String;)V
 
-    .line 596
     iget-object v0, p0, Lcom/absolute/android/persistence/AppProfile;->m_updateIpAddress:Ljava/lang/String;
 
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeString(Ljava/lang/String;)V
 
-    .line 597
     iget-object v0, p0, Lcom/absolute/android/persistence/AppProfile;->m_accessKey:Ljava/lang/String;
 
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeString(Ljava/lang/String;)V
 
-    .line 598
     iget-object v0, p0, Lcom/absolute/android/persistence/AppProfile;->m_maxUpdateAttempts:Ljava/lang/Integer;
 
     invoke-virtual {v0}, Ljava/lang/Integer;->intValue()I
@@ -2283,7 +2069,6 @@
 
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 599
     iget-object v0, p0, Lcom/absolute/android/persistence/AppProfile;->m_updateRetryMinutes:Ljava/lang/Integer;
 
     invoke-virtual {v0}, Ljava/lang/Integer;->intValue()I
@@ -2292,7 +2077,6 @@
 
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 600
     iget-object v0, p0, Lcom/absolute/android/persistence/AppProfile;->m_persist:Ljava/lang/Boolean;
 
     invoke-virtual {v0}, Ljava/lang/Boolean;->booleanValue()Z
@@ -2306,7 +2090,6 @@
     :goto_0
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 601
     iget-object v0, p0, Lcom/absolute/android/persistence/AppProfile;->m_startOnInstall:Ljava/lang/Boolean;
 
     invoke-virtual {v0}, Ljava/lang/Boolean;->booleanValue()Z
@@ -2320,17 +2103,14 @@
     :goto_1
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 602
     iget-object v0, p0, Lcom/absolute/android/persistence/AppProfile;->m_startOnInstallIntent:Ljava/lang/String;
 
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeString(Ljava/lang/String;)V
 
-    .line 603
     iget-object v0, p0, Lcom/absolute/android/persistence/AppProfile;->m_restartIntent:Ljava/lang/String;
 
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeString(Ljava/lang/String;)V
 
-    .line 604
     iget-object v0, p0, Lcom/absolute/android/persistence/AppProfile;->m_monitor:Ljava/lang/Boolean;
 
     invoke-virtual {v0}, Ljava/lang/Boolean;->booleanValue()Z
@@ -2342,12 +2122,10 @@
     :goto_2
     invoke-virtual {p1, v1}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 605
     iget-object v0, p0, Lcom/absolute/android/persistence/AppProfile;->m_monitorIntents:[Ljava/lang/String;
 
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeStringArray([Ljava/lang/String;)V
 
-    .line 606
     iget-object v0, p0, Lcom/absolute/android/persistence/AppProfile;->m_checkRunningSecs:Ljava/lang/Integer;
 
     invoke-virtual {v0}, Ljava/lang/Integer;->intValue()I
@@ -2356,7 +2134,6 @@
 
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 607
     iget-object v0, p0, Lcom/absolute/android/persistence/AppProfile;->m_maxRestartAttempts:Ljava/lang/Integer;
 
     invoke-virtual {v0}, Ljava/lang/Integer;->intValue()I
@@ -2365,29 +2142,24 @@
 
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 608
     iget-object v0, p0, Lcom/absolute/android/persistence/AppProfile;->m_extras:Ljava/util/HashMap;
 
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeMap(Ljava/util/Map;)V
 
-    .line 609
     return-void
 
     :cond_0
     move v0, v2
 
-    .line 600
     goto :goto_0
 
     :cond_1
     move v0, v2
 
-    .line 601
     goto :goto_1
 
     :cond_2
     move v1, v2
 
-    .line 604
     goto :goto_2
 .end method

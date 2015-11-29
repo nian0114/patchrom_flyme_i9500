@@ -24,20 +24,16 @@
     .param p2, "handler"    # Landroid/os/Handler;
 
     .prologue
-    .line 26
     iput-object p1, p0, Lcom/android/server/cocktailbar/mode/PrivateKidsMode$KidsModeObserver;->this$0:Lcom/android/server/cocktailbar/mode/PrivateKidsMode;
 
-    .line 27
     invoke-direct {p0, p2}, Landroid/database/ContentObserver;-><init>(Landroid/os/Handler;)V
 
-    .line 28
     iget-object v1, p1, Lcom/android/server/cocktailbar/mode/PrivateKidsMode;->mContext:Landroid/content/Context;
 
     invoke-virtual {v1}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
 
     move-result-object v0
 
-    .line 29
     .local v0, "resolver":Landroid/content/ContentResolver;
     const-string v1, "kids_home_mode"
 
@@ -49,7 +45,6 @@
 
     invoke-virtual {v0, v1, v2, p0}, Landroid/content/ContentResolver;->registerContentObserver(Landroid/net/Uri;ZLandroid/database/ContentObserver;)V
 
-    .line 31
     return-void
 .end method
 
@@ -60,7 +55,6 @@
     .param p1, "selfChange"    # Z
 
     .prologue
-    .line 35
     iget-object v2, p0, Lcom/android/server/cocktailbar/mode/PrivateKidsMode$KidsModeObserver;->this$0:Lcom/android/server/cocktailbar/mode/PrivateKidsMode;
 
     iget-object v2, v2, Lcom/android/server/cocktailbar/mode/PrivateKidsMode;->mListener:Lcom/android/server/cocktailbar/mode/CocktailBarMode$OnCocktailBarModeListener;
@@ -69,7 +63,6 @@
 
     move-result v0
 
-    .line 36
     .local v0, "currentMode":I
     iget-object v2, p0, Lcom/android/server/cocktailbar/mode/PrivateKidsMode$KidsModeObserver;->this$0:Lcom/android/server/cocktailbar/mode/PrivateKidsMode;
 
@@ -77,11 +70,9 @@
 
     move-result v1
 
-    .line 37
     .local v1, "newMode":I
     if-eq v0, v1, :cond_0
 
-    .line 39
     # getter for: Lcom/android/server/cocktailbar/mode/PrivateKidsMode;->TAG:Ljava/lang/String;
     invoke-static {}, Lcom/android/server/cocktailbar/mode/PrivateKidsMode;->access$000()Ljava/lang/String;
 
@@ -107,7 +98,6 @@
 
     invoke-static {v2, v3}, Landroid/util/Slog;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 41
     const/4 v2, 0x1
 
     if-ne v1, v2, :cond_1
@@ -120,7 +110,6 @@
 
     if-eq v0, v2, :cond_1
 
-    .line 44
     # getter for: Lcom/android/server/cocktailbar/mode/PrivateKidsMode;->TAG:Ljava/lang/String;
     invoke-static {}, Lcom/android/server/cocktailbar/mode/PrivateKidsMode;->access$000()Ljava/lang/String;
 
@@ -146,12 +135,10 @@
 
     invoke-static {v2, v3}, Landroid/util/Slog;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 55
     :cond_0
     :goto_0
     return-void
 
-    .line 49
     :cond_1
     iget-object v2, p0, Lcom/android/server/cocktailbar/mode/PrivateKidsMode$KidsModeObserver;->this$0:Lcom/android/server/cocktailbar/mode/PrivateKidsMode;
 
@@ -161,7 +148,6 @@
 
     if-ne v1, v2, :cond_2
 
-    .line 50
     iget-object v2, p0, Lcom/android/server/cocktailbar/mode/PrivateKidsMode$KidsModeObserver;->this$0:Lcom/android/server/cocktailbar/mode/PrivateKidsMode;
 
     iget-object v2, v2, Lcom/android/server/cocktailbar/mode/PrivateKidsMode;->mListener:Lcom/android/server/cocktailbar/mode/CocktailBarMode$OnCocktailBarModeListener;
@@ -176,7 +162,6 @@
 
     goto :goto_0
 
-    .line 52
     :cond_2
     iget-object v2, p0, Lcom/android/server/cocktailbar/mode/PrivateKidsMode$KidsModeObserver;->this$0:Lcom/android/server/cocktailbar/mode/PrivateKidsMode;
 

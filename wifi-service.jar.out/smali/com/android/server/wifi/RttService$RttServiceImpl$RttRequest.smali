@@ -29,7 +29,6 @@
     .locals 0
 
     .prologue
-    .line 145
     iput-object p1, p0, Lcom/android/server/wifi/RttService$RttServiceImpl$RttRequest;->this$1:Lcom/android/server/wifi/RttService$RttServiceImpl;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -43,7 +42,6 @@
     .param p2, "x1"    # Lcom/android/server/wifi/RttService$1;
 
     .prologue
-    .line 145
     invoke-direct {p0, p1}, Lcom/android/server/wifi/RttService$RttServiceImpl$RttRequest;-><init>(Lcom/android/server/wifi/RttService$RttServiceImpl;)V
 
     return-void

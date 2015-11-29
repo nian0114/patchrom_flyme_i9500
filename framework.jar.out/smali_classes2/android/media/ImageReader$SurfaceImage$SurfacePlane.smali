@@ -34,21 +34,16 @@
     .param p4, "pixelStride"    # I
 
     .prologue
-    .line 650
     iput-object p1, p0, Landroid/media/ImageReader$SurfaceImage$SurfacePlane;->this$1:Landroid/media/ImageReader$SurfaceImage;
 
     invoke-direct {p0}, Landroid/media/Image$Plane;-><init>()V
 
-    .line 651
     iput p2, p0, Landroid/media/ImageReader$SurfaceImage$SurfacePlane;->mIndex:I
 
-    .line 652
     iput p3, p0, Landroid/media/ImageReader$SurfaceImage$SurfacePlane;->mRowStride:I
 
-    .line 653
     iput p4, p0, Landroid/media/ImageReader$SurfaceImage$SurfacePlane;->mPixelStride:I
 
-    .line 654
     return-void
 .end method
 
@@ -57,7 +52,6 @@
     .param p0, "x0"    # Landroid/media/ImageReader$SurfaceImage$SurfacePlane;
 
     .prologue
-    .line 648
     invoke-direct {p0}, Landroid/media/ImageReader$SurfaceImage$SurfacePlane;->clearBuffer()V
 
     return-void
@@ -67,12 +61,10 @@
     .locals 1
 
     .prologue
-    .line 691
     const/4 v0, 0x0
 
     iput-object v0, p0, Landroid/media/ImageReader$SurfaceImage$SurfacePlane;->mBuffer:Ljava/nio/ByteBuffer;
 
-    .line 692
     return-void
 .end method
 
@@ -82,7 +74,6 @@
     .locals 3
 
     .prologue
-    .line 658
     iget-object v0, p0, Landroid/media/ImageReader$SurfaceImage$SurfacePlane;->this$1:Landroid/media/ImageReader$SurfaceImage;
 
     # invokes: Landroid/media/ImageReader$SurfaceImage;->isImageValid()Z
@@ -92,7 +83,6 @@
 
     if-nez v0, :cond_0
 
-    .line 659
     new-instance v0, Ljava/lang/IllegalStateException;
 
     const-string v1, "Image is already released"
@@ -101,20 +91,16 @@
 
     throw v0
 
-    .line 661
     :cond_0
     iget-object v0, p0, Landroid/media/ImageReader$SurfaceImage$SurfacePlane;->mBuffer:Ljava/nio/ByteBuffer;
 
     if-eqz v0, :cond_1
 
-    .line 662
     iget-object v0, p0, Landroid/media/ImageReader$SurfaceImage$SurfacePlane;->mBuffer:Ljava/nio/ByteBuffer;
 
-    .line 668
     :goto_0
     return-object v0
 
-    .line 664
     :cond_1
     iget-object v0, p0, Landroid/media/ImageReader$SurfaceImage$SurfacePlane;->this$1:Landroid/media/ImageReader$SurfaceImage;
 
@@ -136,7 +122,6 @@
 
     iput-object v0, p0, Landroid/media/ImageReader$SurfaceImage$SurfacePlane;->mBuffer:Ljava/nio/ByteBuffer;
 
-    .line 668
     iget-object v0, p0, Landroid/media/ImageReader$SurfaceImage$SurfacePlane;->mBuffer:Ljava/nio/ByteBuffer;
 
     invoke-static {}, Ljava/nio/ByteOrder;->nativeOrder()Ljava/nio/ByteOrder;
@@ -154,7 +139,6 @@
     .locals 2
 
     .prologue
-    .line 674
     iget-object v0, p0, Landroid/media/ImageReader$SurfaceImage$SurfacePlane;->this$1:Landroid/media/ImageReader$SurfaceImage;
 
     # invokes: Landroid/media/ImageReader$SurfaceImage;->isImageValid()Z
@@ -164,12 +148,10 @@
 
     if-eqz v0, :cond_0
 
-    .line 675
     iget v0, p0, Landroid/media/ImageReader$SurfaceImage$SurfacePlane;->mPixelStride:I
 
     return v0
 
-    .line 677
     :cond_0
     new-instance v0, Ljava/lang/IllegalStateException;
 
@@ -184,7 +166,6 @@
     .locals 2
 
     .prologue
-    .line 683
     iget-object v0, p0, Landroid/media/ImageReader$SurfaceImage$SurfacePlane;->this$1:Landroid/media/ImageReader$SurfaceImage;
 
     # invokes: Landroid/media/ImageReader$SurfaceImage;->isImageValid()Z
@@ -194,12 +175,10 @@
 
     if-eqz v0, :cond_0
 
-    .line 684
     iget v0, p0, Landroid/media/ImageReader$SurfaceImage$SurfacePlane;->mRowStride:I
 
     return v0
 
-    .line 686
     :cond_0
     new-instance v0, Ljava/lang/IllegalStateException;
 

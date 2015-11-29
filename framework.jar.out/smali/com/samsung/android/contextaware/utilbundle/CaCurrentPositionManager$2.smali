@@ -26,7 +26,6 @@
     .locals 0
 
     .prologue
-    .line 208
     iput-object p1, p0, Lcom/samsung/android/contextaware/utilbundle/CaCurrentPositionManager$2;->this$0:Lcom/samsung/android/contextaware/utilbundle/CaCurrentPositionManager;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -41,7 +40,6 @@
     .param p1, "location"    # Landroid/location/Location;
 
     .prologue
-    .line 217
     invoke-virtual/range {p1 .. p1}, Landroid/location/Location;->getAccuracy()F
 
     move-result v2
@@ -52,16 +50,13 @@
 
     if-gtz v2, :cond_0
 
-    .line 218
     const-string v2, "Accuracy is low"
 
     invoke-static {v2}, Lcom/samsung/android/contextaware/utilbundle/logger/CaLogger;->warning(Ljava/lang/String;)V
 
-    .line 238
     :goto_0
     return-void
 
-    .line 222
     :cond_0
     invoke-static {}, Lcom/samsung/android/contextaware/utilbundle/CaCurrentUtcTimeManager;->getInstance()Lcom/samsung/android/contextaware/utilbundle/CaCurrentUtcTimeManager;
 
@@ -71,25 +66,21 @@
 
     move-result-object v18
 
-    .line 224
     .local v18, "utcTime":[I
     invoke-virtual/range {p1 .. p1}, Landroid/location/Location;->getLatitude()D
 
     move-result-wide v6
 
-    .line 225
     .local v6, "latitude":D
     invoke-virtual/range {p1 .. p1}, Landroid/location/Location;->getLongitude()D
 
     move-result-wide v8
 
-    .line 226
     .local v8, "longitude":D
     invoke-virtual/range {p1 .. p1}, Landroid/location/Location;->getAltitude()D
 
     move-result-wide v10
 
-    .line 227
     .local v10, "altitude":D
     move-object/from16 v0, p0
 
@@ -121,11 +112,9 @@
 
     move-result-wide v12
 
-    .line 230
     .local v12, "distance":D
     const/16 v17, 0x2
 
-    .line 236
     .local v17, "type":I
     move-object/from16 v0, p0
 
@@ -156,7 +145,6 @@
     .param p1, "provider"    # Ljava/lang/String;
 
     .prologue
-    .line 242
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -177,7 +165,6 @@
 
     invoke-static {v0}, Lcom/samsung/android/contextaware/utilbundle/logger/CaLogger;->info(Ljava/lang/String;)V
 
-    .line 243
     return-void
 .end method
 
@@ -186,7 +173,6 @@
     .param p1, "provider"    # Ljava/lang/String;
 
     .prologue
-    .line 212
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -207,7 +193,6 @@
 
     invoke-static {v0}, Lcom/samsung/android/contextaware/utilbundle/logger/CaLogger;->info(Ljava/lang/String;)V
 
-    .line 213
     return-void
 .end method
 
@@ -218,6 +203,5 @@
     .param p3, "extras"    # Landroid/os/Bundle;
 
     .prologue
-    .line 261
     return-void
 .end method

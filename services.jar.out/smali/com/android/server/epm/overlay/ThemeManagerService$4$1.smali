@@ -26,7 +26,6 @@
     .locals 0
 
     .prologue
-    .line 1700
     iput-object p1, p0, Lcom/android/server/epm/overlay/ThemeManagerService$4$1;->this$1:Lcom/android/server/epm/overlay/ThemeManagerService$4;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -42,14 +41,11 @@
     .param p2, "which"    # I
 
     .prologue
-    .line 1705
     invoke-interface {p1}, Landroid/content/DialogInterface;->dismiss()V
 
-    .line 1706
     const/4 v0, 0x0
 
     sput-boolean v0, Lcom/android/server/epm/overlay/ThemeManagerService;->isVisible:Z
 
-    .line 1707
     return-void
 .end method

@@ -23,7 +23,6 @@
     .locals 0
 
     .prologue
-    .line 926
     iput-object p1, p0, Lcom/android/server/wifi/WifiServiceImpl$10;->this$0:Lcom/android/server/wifi/WifiServiceImpl;
 
     invoke-direct {p0}, Landroid/content/BroadcastReceiver;-><init>()V
@@ -39,10 +38,8 @@
     .param p2, "intent"    # Landroid/content/Intent;
 
     .prologue
-    .line 929
     const-string v1, "home_ap_mac"
 
-    .line 931
     .local v1, "HOME_AP_MAC":Ljava/lang/String;
     move-object/from16 v0, p0
 
@@ -52,7 +49,6 @@
 
     move-result v14
 
-    .line 932
     .local v14, "wifiApState":I
     const/16 v15, 0xc
 
@@ -62,12 +58,10 @@
 
     if-ne v14, v15, :cond_1
 
-    .line 973
     :cond_0
     :goto_0
     return-void
 
-    .line 937
     :cond_1
     move-object/from16 v0, p0
 
@@ -77,7 +71,6 @@
 
     move-result-object v13
 
-    .line 938
     .local v13, "wInfo":Landroid/net/wifi/WifiInfo;
     invoke-virtual {v13}, Landroid/net/wifi/WifiInfo;->getSupplicantState()Landroid/net/wifi/SupplicantState;
 
@@ -91,18 +84,15 @@
 
     if-eqz v15, :cond_0
 
-    .line 941
     new-instance v4, Ljava/lang/StringBuffer;
 
     invoke-direct {v4}, Ljava/lang/StringBuffer;-><init>()V
 
-    .line 942
     .local v4, "buf":Ljava/lang/StringBuffer;
     invoke-virtual {v13}, Landroid/net/wifi/WifiInfo;->getBSSID()Ljava/lang/String;
 
     move-result-object v5
 
-    .line 943
     .local v5, "curApMac":Ljava/lang/String;
     move-object/from16 v0, p0
 
@@ -123,26 +113,21 @@
 
     move-result-object v7
 
-    .line 945
     .local v7, "homeAps":Ljava/lang/String;
     if-eqz v7, :cond_6
 
-    .line 946
     const-string v15, " "
 
     invoke-virtual {v7, v15}, Ljava/lang/String;->split(Ljava/lang/String;)[Ljava/lang/String;
 
     move-result-object v6
 
-    .line 949
     .local v6, "homeApMacs":[Ljava/lang/String;
     const/4 v2, 0x2
 
-    .line 950
     .local v2, "NUM_OF_HOME_AP":I
     const/4 v12, 0x0
 
-    .line 952
     .local v12, "numOfRememberedHomeAp":I
     const/4 v8, 0x0
 
@@ -152,7 +137,6 @@
 
     if-ge v8, v15, :cond_3
 
-    .line 953
     aget-object v15, v6, v8
 
     invoke-virtual {v15, v5}, Ljava/lang/String;->compareTo(Ljava/lang/String;)I
@@ -161,37 +145,31 @@
 
     if-nez v15, :cond_2
 
-    .line 954
     const-string v15, ""
 
     aput-object v15, v6, v8
 
-    .line 952
     :goto_2
     add-int/lit8 v8, v8, 0x1
 
     goto :goto_1
 
-    .line 956
     :cond_2
     add-int/lit8 v12, v12, 0x1
 
     goto :goto_2
 
-    .line 958
     :cond_3
     const/4 v15, 0x2
 
     if-ne v12, v15, :cond_4
 
-    .line 959
     const/4 v15, 0x0
 
     const-string v16, ""
 
     aput-object v16, v6, v15
 
-    .line 961
     :cond_4
     move-object v3, v6
 
@@ -207,7 +185,6 @@
 
     aget-object v11, v3, v9
 
-    .line 962
     .local v11, "mac":Ljava/lang/String;
     invoke-virtual {v11}, Ljava/lang/String;->isEmpty()Z
 
@@ -215,7 +192,6 @@
 
     if-nez v15, :cond_5
 
-    .line 963
     invoke-virtual {v4, v11}, Ljava/lang/StringBuffer;->append(Ljava/lang/String;)Ljava/lang/StringBuffer;
 
     move-result-object v15
@@ -224,13 +200,11 @@
 
     invoke-virtual/range {v15 .. v16}, Ljava/lang/StringBuffer;->append(C)Ljava/lang/StringBuffer;
 
-    .line 961
     :cond_5
     add-int/lit8 v9, v9, 0x1
 
     goto :goto_3
 
-    .line 966
     .end local v2    # "NUM_OF_HOME_AP":I
     .end local v3    # "arr$":[Ljava/lang/String;
     .end local v6    # "homeApMacs":[Ljava/lang/String;
@@ -242,7 +216,6 @@
     :cond_6
     invoke-virtual {v4, v5}, Ljava/lang/StringBuffer;->append(Ljava/lang/String;)Ljava/lang/StringBuffer;
 
-    .line 971
     move-object/from16 v0, p0
 
     iget-object v15, v0, Lcom/android/server/wifi/WifiServiceImpl$10;->this$0:Lcom/android/server/wifi/WifiServiceImpl;

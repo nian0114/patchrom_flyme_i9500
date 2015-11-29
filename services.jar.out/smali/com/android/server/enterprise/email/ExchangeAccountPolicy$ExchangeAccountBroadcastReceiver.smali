@@ -25,12 +25,10 @@
     .locals 1
 
     .prologue
-    .line 1465
     iput-object p1, p0, Lcom/android/server/enterprise/email/ExchangeAccountPolicy$ExchangeAccountBroadcastReceiver;->this$0:Lcom/android/server/enterprise/email/ExchangeAccountPolicy;
 
     invoke-direct {p0}, Landroid/content/BroadcastReceiver;-><init>()V
 
-    .line 1466
     const/4 v0, 0x0
 
     iput-boolean v0, p0, Lcom/android/server/enterprise/email/ExchangeAccountPolicy$ExchangeAccountBroadcastReceiver;->mHaveResult:Z
@@ -44,7 +42,6 @@
     .param p2, "x1"    # Lcom/android/server/enterprise/email/ExchangeAccountPolicy$1;
 
     .prologue
-    .line 1465
     invoke-direct {p0, p1}, Lcom/android/server/enterprise/email/ExchangeAccountPolicy$ExchangeAccountBroadcastReceiver;-><init>(Lcom/android/server/enterprise/email/ExchangeAccountPolicy;)V
 
     return-void
@@ -58,29 +55,23 @@
     .param p2, "intent"    # Landroid/content/Intent;
 
     .prologue
-    .line 1470
     iget-object v1, p0, Lcom/android/server/enterprise/email/ExchangeAccountPolicy$ExchangeAccountBroadcastReceiver;->this$0:Lcom/android/server/enterprise/email/ExchangeAccountPolicy;
 
     monitor-enter v1
 
-    .line 1471
     const/4 v0, 0x1
 
     :try_start_0
     iput-boolean v0, p0, Lcom/android/server/enterprise/email/ExchangeAccountPolicy$ExchangeAccountBroadcastReceiver;->mHaveResult:Z
 
-    .line 1472
     iget-object v0, p0, Lcom/android/server/enterprise/email/ExchangeAccountPolicy$ExchangeAccountBroadcastReceiver;->this$0:Lcom/android/server/enterprise/email/ExchangeAccountPolicy;
 
     invoke-virtual {v0}, Ljava/lang/Object;->notifyAll()V
 
-    .line 1473
     monitor-exit v1
 
-    .line 1474
     return-void
 
-    .line 1473
     :catchall_0
     move-exception v0
 

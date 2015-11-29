@@ -23,7 +23,6 @@
     .locals 0
 
     .prologue
-    .line 675
     iput-object p1, p0, Lcom/android/server/InputMethodManagerService$PSSKeyboardReceiver;->this$0:Lcom/android/server/InputMethodManagerService;
 
     invoke-direct {p0}, Landroid/content/BroadcastReceiver;-><init>()V
@@ -45,12 +44,10 @@
 
     const/4 v5, 0x0
 
-    .line 678
     invoke-virtual {p2}, Landroid/content/Intent;->getAction()Ljava/lang/String;
 
     move-result-object v1
 
-    .line 679
     .local v1, "intentAction":Ljava/lang/String;
     const-string v2, "InputMethodManagerService"
 
@@ -74,7 +71,6 @@
 
     invoke-static {v2, v3}, Landroid/util/Slog;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 680
     const-string v2, "com.sec.android.sidesync.action.PSS_KEYBOARD"
 
     invoke-virtual {v2, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
@@ -83,7 +79,6 @@
 
     if-eqz v2, :cond_0
 
-    .line 681
     const-string v2, "device_state"
 
     const/4 v3, -0x1
@@ -92,7 +87,6 @@
 
     move-result v0
 
-    .line 682
     .local v0, "extra":I
     const-string v2, "InputMethodManagerService"
 
@@ -100,7 +94,7 @@
 
     invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v4, "onReceive() getIntExtra "
+    const-string v4, "onReceive() getIntExtra "
 
     invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -116,14 +110,11 @@
 
     invoke-static {v2, v3}, Landroid/util/Slog;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 683
     if-ne v0, v6, :cond_3
 
-    .line 684
     # |= operator for: Lcom/android/server/InputMethodManagerService;->keyboardState:I
     invoke-static {v7}, Lcom/android/server/InputMethodManagerService;->access$576(I)I
 
-    .line 686
     iget-object v2, p0, Lcom/android/server/InputMethodManagerService$PSSKeyboardReceiver;->this$0:Lcom/android/server/InputMethodManagerService;
 
     # invokes: Lcom/android/server/InputMethodManagerService;->isJapaneseRegion()Z
@@ -133,25 +124,21 @@
 
     if-eqz v2, :cond_1
 
-    .line 687
     iget-object v2, p0, Lcom/android/server/InputMethodManagerService$PSSKeyboardReceiver;->this$0:Lcom/android/server/InputMethodManagerService;
 
     invoke-virtual {v2}, Lcom/android/server/InputMethodManagerService;->setDefaultIMEforJapaneseKeyboard()V
 
-    .line 693
     :goto_0
     iget-object v2, p0, Lcom/android/server/InputMethodManagerService$PSSKeyboardReceiver;->this$0:Lcom/android/server/InputMethodManagerService;
 
     invoke-virtual {v2}, Lcom/android/server/InputMethodManagerService;->hideKeyboardDialog()V
 
-    .line 694
     iget-object v2, p0, Lcom/android/server/InputMethodManagerService$PSSKeyboardReceiver;->this$0:Lcom/android/server/InputMethodManagerService;
 
     const/4 v3, 0x0
 
     invoke-virtual {v2, v5, v3}, Lcom/android/server/InputMethodManagerService;->hideCurrentInputLocked(ILandroid/os/ResultReceiver;)Z
 
-    .line 695
     # getter for: Lcom/android/server/InputMethodManagerService;->mEnabledKCMFeatureForHWKeyboard:Z
     invoke-static {}, Lcom/android/server/InputMethodManagerService;->access$900()Z
 
@@ -159,7 +146,6 @@
 
     if-nez v2, :cond_0
 
-    .line 696
     # getter for: Lcom/android/server/InputMethodManagerService;->mDefaultSIP:Ljava/lang/String;
     invoke-static {}, Lcom/android/server/InputMethodManagerService;->access$1000()Ljava/lang/String;
 
@@ -167,7 +153,6 @@
 
     if-eqz v2, :cond_0
 
-    .line 697
     # getter for: Lcom/android/server/InputMethodManagerService;->mDefaultSIP:Ljava/lang/String;
     invoke-static {}, Lcom/android/server/InputMethodManagerService;->access$1000()Ljava/lang/String;
 
@@ -183,12 +168,10 @@
 
     if-nez v2, :cond_0
 
-    .line 699
     iget-object v2, p0, Lcom/android/server/InputMethodManagerService$PSSKeyboardReceiver;->this$0:Lcom/android/server/InputMethodManagerService;
 
     invoke-virtual {v2, v7}, Lcom/android/server/InputMethodManagerService;->showKeyboardNotiDailog(I)V
 
-    .line 721
     .end local v0    # "extra":I
     :cond_0
     :goto_1
@@ -219,10 +202,8 @@
 
     invoke-static {v2, v3}, Landroid/util/Slog;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 722
     return-void
 
-    .line 688
     .restart local v0    # "extra":I
     :cond_1
     iget-object v2, p0, Lcom/android/server/InputMethodManagerService$PSSKeyboardReceiver;->this$0:Lcom/android/server/InputMethodManagerService;
@@ -245,14 +226,12 @@
 
     if-eqz v2, :cond_2
 
-    .line 689
     iget-object v2, p0, Lcom/android/server/InputMethodManagerService$PSSKeyboardReceiver;->this$0:Lcom/android/server/InputMethodManagerService;
 
     invoke-virtual {v2}, Lcom/android/server/InputMethodManagerService;->setDefaultIMEforChineseKeyboard()V
 
     goto :goto_0
 
-    .line 691
     :cond_2
     iget-object v2, p0, Lcom/android/server/InputMethodManagerService$PSSKeyboardReceiver;->this$0:Lcom/android/server/InputMethodManagerService;
 
@@ -260,14 +239,12 @@
 
     goto :goto_0
 
-    .line 712
     :cond_3
     const/16 v2, -0x11
 
     # &= operator for: Lcom/android/server/InputMethodManagerService;->keyboardState:I
     invoke-static {v2}, Lcom/android/server/InputMethodManagerService;->access$572(I)I
 
-    .line 714
     # getter for: Lcom/android/server/InputMethodManagerService;->prevAutoMode:I
     invoke-static {}, Lcom/android/server/InputMethodManagerService;->access$1100()I
 
@@ -275,12 +252,11 @@
 
     if-ne v2, v6, :cond_4
 
-    .line 715
     iget-object v2, p0, Lcom/android/server/InputMethodManagerService$PSSKeyboardReceiver;->this$0:Lcom/android/server/InputMethodManagerService;
 
     iget-object v2, v2, Lcom/android/server/InputMethodManagerService;->mContentResolver:Landroid/content/ContentResolver;
 
-    const-string/jumbo v3, "screen_brightness_mode"
+    const-string v3, "screen_brightness_mode"
 
     # getter for: Lcom/android/server/InputMethodManagerService;->prevAutoMode:I
     invoke-static {}, Lcom/android/server/InputMethodManagerService;->access$1100()I
@@ -289,13 +265,11 @@
 
     invoke-static {v2, v3, v4}, Landroid/provider/Settings$System;->putInt(Landroid/content/ContentResolver;Ljava/lang/String;I)Z
 
-    .line 717
     :cond_4
     iget-object v2, p0, Lcom/android/server/InputMethodManagerService$PSSKeyboardReceiver;->this$0:Lcom/android/server/InputMethodManagerService;
 
     invoke-virtual {v2}, Lcom/android/server/InputMethodManagerService;->hideKeyboardDialog()V
 
-    .line 718
     # setter for: Lcom/android/server/InputMethodManagerService;->prevAutoMode:I
     invoke-static {v5}, Lcom/android/server/InputMethodManagerService;->access$1102(I)I
 

@@ -23,17 +23,14 @@
     .locals 1
 
     .prologue
-    .line 448
     iput-object p1, p0, Lcom/android/server/BatteryService$DormantSettingsObserver;->this$0:Lcom/android/server/BatteryService;
 
-    .line 449
     new-instance v0, Landroid/os/Handler;
 
     invoke-direct {v0}, Landroid/os/Handler;-><init>()V
 
     invoke-direct {p0, v0}, Landroid/database/ContentObserver;-><init>(Landroid/os/Handler;)V
 
-    .line 450
     return-void
 .end method
 
@@ -44,10 +41,8 @@
     .param p1, "selfChange"    # Z
 
     .prologue
-    .line 454
     invoke-super {p0, p1}, Landroid/database/ContentObserver;->onChange(Z)V
 
-    .line 456
     iget-object v7, p0, Lcom/android/server/BatteryService$DormantSettingsObserver;->this$0:Lcom/android/server/BatteryService;
 
     # getter for: Lcom/android/server/BatteryService;->mContext:Landroid/content/Context;
@@ -59,7 +54,6 @@
 
     move-result-object v0
 
-    .line 458
     .local v0, "contentResolver":Landroid/content/ContentResolver;
     iget-object v7, p0, Lcom/android/server/BatteryService$DormantSettingsObserver;->this$0:Lcom/android/server/BatteryService;
 
@@ -70,7 +64,6 @@
 
     monitor-enter v8
 
-    .line 459
     :try_start_0
     iget-object v9, p0, Lcom/android/server/BatteryService$DormantSettingsObserver;->this$0:Lcom/android/server/BatteryService;
 
@@ -94,7 +87,6 @@
     # setter for: Lcom/android/server/BatteryService;->mDormantOnOff:Z
     invoke-static {v9, v7}, Lcom/android/server/BatteryService;->access$802(Lcom/android/server/BatteryService;Z)Z
 
-    .line 460
     iget-object v9, p0, Lcom/android/server/BatteryService$DormantSettingsObserver;->this$0:Lcom/android/server/BatteryService;
 
     const-string v7, "dormant_disable_led_indicator"
@@ -117,7 +109,6 @@
     # setter for: Lcom/android/server/BatteryService;->mDormantDisableLED:Z
     invoke-static {v9, v7}, Lcom/android/server/BatteryService;->access$902(Lcom/android/server/BatteryService;Z)Z
 
-    .line 461
     iget-object v9, p0, Lcom/android/server/BatteryService$DormantSettingsObserver;->this$0:Lcom/android/server/BatteryService;
 
     const-string v7, "dormant_always"
@@ -140,12 +131,10 @@
     # setter for: Lcom/android/server/BatteryService;->mDormantAlways:Z
     invoke-static {v9, v7}, Lcom/android/server/BatteryService;->access$1002(Lcom/android/server/BatteryService;Z)Z
 
-    .line 462
     monitor-exit v8
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 464
     const-string v7, "dormant_start_hour"
 
     const/4 v8, 0x0
@@ -156,7 +145,6 @@
 
     move-result v4
 
-    .line 465
     .local v4, "dormantStartHour":I
     const-string v7, "dormant_start_min"
 
@@ -168,7 +156,6 @@
 
     move-result v5
 
-    .line 466
     .local v5, "dormantStartMinute":I
     const-string v7, "dormant_end_hour"
 
@@ -180,7 +167,6 @@
 
     move-result v1
 
-    .line 467
     .local v1, "dormantEndHour":I
     const-string v7, "dormant_end_min"
 
@@ -192,19 +178,16 @@
 
     move-result v2
 
-    .line 468
     .local v2, "dormantEndMinute":I
     mul-int/lit8 v7, v4, 0x3c
 
     add-int v6, v7, v5
 
-    .line 469
     .local v6, "dormantStartMinutes":I
     mul-int/lit8 v7, v1, 0x3c
 
     add-int v3, v7, v2
 
-    .line 470
     .local v3, "dormantEndMinutes":I
     # getter for: Lcom/android/server/BatteryService;->TAG:Ljava/lang/String;
     invoke-static {}, Lcom/android/server/BatteryService;->access$700()Ljava/lang/String;
@@ -238,7 +221,6 @@
 
     invoke-static {v7, v8}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 471
     # getter for: Lcom/android/server/BatteryService;->TAG:Ljava/lang/String;
     invoke-static {}, Lcom/android/server/BatteryService;->access$700()Ljava/lang/String;
 
@@ -271,7 +253,6 @@
 
     invoke-static {v7, v8}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 472
     # getter for: Lcom/android/server/BatteryService;->TAG:Ljava/lang/String;
     invoke-static {}, Lcom/android/server/BatteryService;->access$700()Ljava/lang/String;
 
@@ -304,7 +285,6 @@
 
     invoke-static {v7, v8}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 473
     # getter for: Lcom/android/server/BatteryService;->TAG:Ljava/lang/String;
     invoke-static {}, Lcom/android/server/BatteryService;->access$700()Ljava/lang/String;
 
@@ -360,13 +340,11 @@
 
     invoke-static {v7, v8}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 475
     iget-object v7, p0, Lcom/android/server/BatteryService$DormantSettingsObserver;->this$0:Lcom/android/server/BatteryService;
 
     # invokes: Lcom/android/server/BatteryService;->setDormantAlarm(II)V
     invoke-static {v7, v6, v3}, Lcom/android/server/BatteryService;->access$1200(Lcom/android/server/BatteryService;II)V
 
-    .line 477
     iget-object v7, p0, Lcom/android/server/BatteryService$DormantSettingsObserver;->this$0:Lcom/android/server/BatteryService;
 
     # getter for: Lcom/android/server/BatteryService;->mLock:Ljava/lang/Object;
@@ -376,7 +354,6 @@
 
     monitor-enter v8
 
-    .line 478
     :try_start_1
     iget-object v7, p0, Lcom/android/server/BatteryService$DormantSettingsObserver;->this$0:Lcom/android/server/BatteryService;
 
@@ -387,15 +364,12 @@
 
     invoke-virtual {v7}, Lcom/android/server/BatteryService$Led;->updateLightsLocked()V
 
-    .line 479
     monitor-exit v8
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_1
 
-    .line 480
     return-void
 
-    .line 459
     .end local v1    # "dormantEndHour":I
     .end local v2    # "dormantEndMinute":I
     .end local v3    # "dormantEndMinutes":I
@@ -407,19 +381,16 @@
 
     goto/16 :goto_0
 
-    .line 460
     :cond_1
     const/4 v7, 0x0
 
     goto/16 :goto_1
 
-    .line 461
     :cond_2
     const/4 v7, 0x0
 
     goto/16 :goto_2
 
-    .line 462
     :catchall_0
     move-exception v7
 
@@ -430,7 +401,6 @@
 
     throw v7
 
-    .line 479
     .restart local v1    # "dormantEndHour":I
     .restart local v2    # "dormantEndMinute":I
     .restart local v3    # "dormantEndMinutes":I

@@ -35,24 +35,18 @@
     .param p7, "networkUsage"    # J
 
     .prologue
-    .line 712
     iput-object p1, p0, Lcom/android/internal/os/BatteryStatsDBHelper$LastDatabaseInfo;->this$0:Lcom/android/internal/os/BatteryStatsDBHelper;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 713
     iput-object p2, p0, Lcom/android/internal/os/BatteryStatsDBHelper$LastDatabaseInfo;->time:Ljava/lang/String;
 
-    .line 714
     iput-wide p3, p0, Lcom/android/internal/os/BatteryStatsDBHelper$LastDatabaseInfo;->offPower:D
 
-    .line 715
     iput-wide p5, p0, Lcom/android/internal/os/BatteryStatsDBHelper$LastDatabaseInfo;->totalPower:D
 
-    .line 716
     iput-wide p7, p0, Lcom/android/internal/os/BatteryStatsDBHelper$LastDatabaseInfo;->networkUsage:J
 
-    .line 717
     return-void
 .end method
 
@@ -66,7 +60,6 @@
     .param p9, "x5"    # Lcom/android/internal/os/BatteryStatsDBHelper$1;
 
     .prologue
-    .line 703
     invoke-direct/range {p0 .. p8}, Lcom/android/internal/os/BatteryStatsDBHelper$LastDatabaseInfo;-><init>(Lcom/android/internal/os/BatteryStatsDBHelper;Ljava/lang/String;DDJ)V
 
     return-void
@@ -77,7 +70,6 @@
     .param p0, "x0"    # Lcom/android/internal/os/BatteryStatsDBHelper$LastDatabaseInfo;
 
     .prologue
-    .line 703
     iget-wide v0, p0, Lcom/android/internal/os/BatteryStatsDBHelper$LastDatabaseInfo;->totalPower:D
 
     return-wide v0
@@ -88,7 +80,6 @@
     .param p0, "x0"    # Lcom/android/internal/os/BatteryStatsDBHelper$LastDatabaseInfo;
 
     .prologue
-    .line 703
     iget-wide v0, p0, Lcom/android/internal/os/BatteryStatsDBHelper$LastDatabaseInfo;->offPower:D
 
     return-wide v0
@@ -99,7 +90,6 @@
     .param p0, "x0"    # Lcom/android/internal/os/BatteryStatsDBHelper$LastDatabaseInfo;
 
     .prologue
-    .line 703
     iget-wide v0, p0, Lcom/android/internal/os/BatteryStatsDBHelper$LastDatabaseInfo;->networkUsage:J
 
     return-wide v0

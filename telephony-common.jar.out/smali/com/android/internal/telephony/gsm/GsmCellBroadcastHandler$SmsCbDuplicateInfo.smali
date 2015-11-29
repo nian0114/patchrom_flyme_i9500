@@ -33,41 +33,34 @@
     .param p2, "phoneId"    # I
 
     .prologue
-    .line 359
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 360
     invoke-virtual {p1}, Lcom/android/internal/telephony/gsm/SmsCbHeader;->getServiceCategory()I
 
     move-result v0
 
     iput v0, p0, Lcom/android/internal/telephony/gsm/GsmCellBroadcastHandler$SmsCbDuplicateInfo;->mMessageIdentifier:I
 
-    .line 361
     invoke-virtual {p1}, Lcom/android/internal/telephony/gsm/SmsCbHeader;->getGeographicalScope()I
 
     move-result v0
 
     iput v0, p0, Lcom/android/internal/telephony/gsm/GsmCellBroadcastHandler$SmsCbDuplicateInfo;->mGeographicalScope:I
 
-    .line 362
     invoke-virtual {p1}, Lcom/android/internal/telephony/gsm/SmsCbHeader;->getSerialNumber()I
 
     move-result v0
 
     iput v0, p0, Lcom/android/internal/telephony/gsm/GsmCellBroadcastHandler$SmsCbDuplicateInfo;->mSerialNumber:I
 
-    .line 363
     invoke-virtual {p1}, Lcom/android/internal/telephony/gsm/SmsCbHeader;->getPageIndex()I
 
     move-result v0
 
     iput v0, p0, Lcom/android/internal/telephony/gsm/GsmCellBroadcastHandler$SmsCbDuplicateInfo;->mPageIndex:I
 
-    .line 364
     iput p2, p0, Lcom/android/internal/telephony/gsm/GsmCellBroadcastHandler$SmsCbDuplicateInfo;->mPhoneId:I
 
-    .line 365
     return-void
 .end method
 
@@ -78,17 +71,14 @@
     .param p1, "obj"    # Ljava/lang/Object;
 
     .prologue
-    .line 374
     instance-of v1, p1, Lcom/android/internal/telephony/gsm/GsmCellBroadcastHandler$SmsCbDuplicateInfo;
 
     if-eqz v1, :cond_0
 
     move-object v0, p1
 
-    .line 375
     check-cast v0, Lcom/android/internal/telephony/gsm/GsmCellBroadcastHandler$SmsCbDuplicateInfo;
 
-    .line 377
     .local v0, "other":Lcom/android/internal/telephony/gsm/GsmCellBroadcastHandler$SmsCbDuplicateInfo;
     iget v1, p0, Lcom/android/internal/telephony/gsm/GsmCellBroadcastHandler$SmsCbDuplicateInfo;->mMessageIdentifier:I
 
@@ -120,10 +110,8 @@
 
     if-ne v1, v2, :cond_0
 
-    .line 382
     const/4 v1, 0x1
 
-    .line 385
     .end local v0    # "other":Lcom/android/internal/telephony/gsm/GsmCellBroadcastHandler$SmsCbDuplicateInfo;
     :goto_0
     return v1
@@ -138,7 +126,6 @@
     .locals 2
 
     .prologue
-    .line 369
     iget v0, p0, Lcom/android/internal/telephony/gsm/GsmCellBroadcastHandler$SmsCbDuplicateInfo;->mMessageIdentifier:I
 
     mul-int/lit8 v0, v0, 0x1f
@@ -166,7 +153,6 @@
     .locals 2
 
     .prologue
-    .line 390
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V

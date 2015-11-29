@@ -29,20 +29,16 @@
     .param p2, "event"    # I
 
     .prologue
-    .line 1740
     iput-object p1, p0, Lcom/android/internal/policy/impl/sec/SamsungPhoneWindowManager$ServiceConnectionForCaptureEffect;->this$0:Lcom/android/internal/policy/impl/sec/SamsungPhoneWindowManager;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 1738
     const/4 v0, 0x1
 
     iput v0, p0, Lcom/android/internal/policy/impl/sec/SamsungPhoneWindowManager$ServiceConnectionForCaptureEffect;->mShotEvent:I
 
-    .line 1741
     iput p2, p0, Lcom/android/internal/policy/impl/sec/SamsungPhoneWindowManager$ServiceConnectionForCaptureEffect;->mShotEvent:I
 
-    .line 1742
     return-void
 .end method
 
@@ -54,14 +50,12 @@
     .param p2, "service"    # Landroid/os/IBinder;
 
     .prologue
-    .line 1746
     iget-object v5, p0, Lcom/android/internal/policy/impl/sec/SamsungPhoneWindowManager$ServiceConnectionForCaptureEffect;->this$0:Lcom/android/internal/policy/impl/sec/SamsungPhoneWindowManager;
 
     iget-object v6, v5, Lcom/android/internal/policy/impl/sec/SamsungPhoneWindowManager;->mScreenshotLock:Ljava/lang/Object;
 
     monitor-enter v6
 
-    .line 1747
     :try_start_0
     iget-object v5, p0, Lcom/android/internal/policy/impl/sec/SamsungPhoneWindowManager$ServiceConnectionForCaptureEffect;->this$0:Lcom/android/internal/policy/impl/sec/SamsungPhoneWindowManager;
 
@@ -73,20 +67,16 @@
 
     if-nez v5, :cond_0
 
-    .line 1748
     monitor-exit v6
 
-    .line 1783
     :goto_0
     return-void
 
-    .line 1750
     :cond_0
     new-instance v2, Landroid/os/Messenger;
 
     invoke-direct {v2, p2}, Landroid/os/Messenger;-><init>(Landroid/os/IBinder;)V
 
-    .line 1751
     .local v2, "messenger":Landroid/os/Messenger;
     const/4 v5, 0x0
 
@@ -96,11 +86,9 @@
 
     move-result-object v3
 
-    .line 1752
     .local v3, "msg":Landroid/os/Message;
     move-object v4, p0
 
-    .line 1753
     .local v4, "myConn":Landroid/content/ServiceConnection;
     new-instance v1, Lcom/android/internal/policy/impl/sec/SamsungPhoneWindowManager$ServiceConnectionForCaptureEffect$1;
 
@@ -114,7 +102,6 @@
 
     invoke-direct {v1, p0, v5, v4}, Lcom/android/internal/policy/impl/sec/SamsungPhoneWindowManager$ServiceConnectionForCaptureEffect$1;-><init>(Lcom/android/internal/policy/impl/sec/SamsungPhoneWindowManager$ServiceConnectionForCaptureEffect;Landroid/os/Looper;Landroid/content/ServiceConnection;)V
 
-    .line 1766
     .local v1, "h":Landroid/os/Handler;
     new-instance v5, Landroid/os/Messenger;
 
@@ -122,19 +109,16 @@
 
     iput-object v5, v3, Landroid/os/Message;->replyTo:Landroid/os/Messenger;
 
-    .line 1767
     const/4 v5, 0x0
 
     iput v5, v3, Landroid/os/Message;->arg2:I
 
     iput v5, v3, Landroid/os/Message;->arg1:I
 
-    .line 1769
     new-instance v0, Landroid/os/Bundle;
 
     invoke-direct {v0}, Landroid/os/Bundle;-><init>()V
 
-    .line 1770
     .local v0, "bundle":Landroid/os/Bundle;
     const-string v5, "sweepDirection"
 
@@ -144,17 +128,14 @@
 
     invoke-virtual {v0, v5, v7}, Landroid/os/Bundle;->putInt(Ljava/lang/String;I)V
 
-    .line 1771
     invoke-virtual {v3, v0}, Landroid/os/Message;->setData(Landroid/os/Bundle;)V
 
-    .line 1772
     iget-object v5, p0, Lcom/android/internal/policy/impl/sec/SamsungPhoneWindowManager$ServiceConnectionForCaptureEffect;->this$0:Lcom/android/internal/policy/impl/sec/SamsungPhoneWindowManager;
 
     const/4 v7, 0x0
 
     iput v7, v5, Lcom/android/internal/policy/impl/sec/SamsungPhoneWindowManager;->mSweepDirection:I
 
-    .line 1774
     iget-object v5, p0, Lcom/android/internal/policy/impl/sec/SamsungPhoneWindowManager$ServiceConnectionForCaptureEffect;->this$0:Lcom/android/internal/policy/impl/sec/SamsungPhoneWindowManager;
 
     iget-object v5, v5, Lcom/android/internal/policy/impl/sec/SamsungPhoneWindowManager;->mPWM:Lcom/android/internal/policy/impl/PhoneWindowManager;
@@ -165,12 +146,10 @@
 
     if-eqz v5, :cond_1
 
-    .line 1775
     const/4 v5, 0x1
 
     iput v5, v3, Landroid/os/Message;->arg1:I
 
-    .line 1776
     :cond_1
     iget-object v5, p0, Lcom/android/internal/policy/impl/sec/SamsungPhoneWindowManager$ServiceConnectionForCaptureEffect;->this$0:Lcom/android/internal/policy/impl/sec/SamsungPhoneWindowManager;
 
@@ -182,14 +161,12 @@
 
     if-eqz v5, :cond_2
 
-    .line 1777
     const/4 v5, 0x1
 
     iput v5, v3, Landroid/os/Message;->arg2:I
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 1779
     :cond_2
     :try_start_1
     invoke-virtual {v2, v3}, Landroid/os/Messenger;->send(Landroid/os/Message;)V
@@ -197,7 +174,6 @@
     .catch Landroid/os/RemoteException; {:try_start_1 .. :try_end_1} :catch_0
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
-    .line 1782
     :goto_1
     :try_start_2
     monitor-exit v6
@@ -218,7 +194,6 @@
 
     throw v5
 
-    .line 1780
     .restart local v0    # "bundle":Landroid/os/Bundle;
     .restart local v1    # "h":Landroid/os/Handler;
     .restart local v2    # "messenger":Landroid/os/Messenger;
@@ -235,6 +210,5 @@
     .param p1, "name"    # Landroid/content/ComponentName;
 
     .prologue
-    .line 1785
     return-void
 .end method

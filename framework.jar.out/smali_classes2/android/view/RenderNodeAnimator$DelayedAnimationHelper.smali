@@ -39,24 +39,20 @@
     .locals 1
 
     .prologue
-    .line 401
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 397
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
     iput-object v0, p0, Landroid/view/RenderNodeAnimator$DelayedAnimationHelper;->mDelayedAnims:Ljava/util/ArrayList;
 
-    .line 402
     invoke-static {}, Landroid/view/Choreographer;->getInstance()Landroid/view/Choreographer;
 
     move-result-object v0
 
     iput-object v0, p0, Landroid/view/RenderNodeAnimator$DelayedAnimationHelper;->mChoreographer:Landroid/view/Choreographer;
 
-    .line 403
     return-void
 .end method
 
@@ -66,22 +62,18 @@
     .prologue
     const/4 v2, 0x1
 
-    .line 415
     iget-boolean v0, p0, Landroid/view/RenderNodeAnimator$DelayedAnimationHelper;->mCallbackScheduled:Z
 
     if-nez v0, :cond_0
 
-    .line 416
     iput-boolean v2, p0, Landroid/view/RenderNodeAnimator$DelayedAnimationHelper;->mCallbackScheduled:Z
 
-    .line 417
     iget-object v0, p0, Landroid/view/RenderNodeAnimator$DelayedAnimationHelper;->mChoreographer:Landroid/view/Choreographer;
 
     const/4 v1, 0x0
 
     invoke-virtual {v0, v2, p0, v1}, Landroid/view/Choreographer;->postCallback(ILjava/lang/Runnable;Ljava/lang/Object;)V
 
-    .line 419
     :cond_0
     return-void
 .end method
@@ -93,15 +85,12 @@
     .param p1, "animator"    # Landroid/view/RenderNodeAnimator;
 
     .prologue
-    .line 406
     iget-object v0, p0, Landroid/view/RenderNodeAnimator$DelayedAnimationHelper;->mDelayedAnims:Ljava/util/ArrayList;
 
     invoke-virtual {v0, p1}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 407
     invoke-direct {p0}, Landroid/view/RenderNodeAnimator$DelayedAnimationHelper;->scheduleCallback()V
 
-    .line 408
     return-void
 .end method
 
@@ -110,12 +99,10 @@
     .param p1, "animator"    # Landroid/view/RenderNodeAnimator;
 
     .prologue
-    .line 411
     iget-object v0, p0, Landroid/view/RenderNodeAnimator$DelayedAnimationHelper;->mDelayedAnims:Ljava/util/ArrayList;
 
     invoke-virtual {v0, p1}, Ljava/util/ArrayList;->remove(Ljava/lang/Object;)Z
 
-    .line 412
     return-void
 .end method
 
@@ -123,23 +110,19 @@
     .locals 7
 
     .prologue
-    .line 423
     iget-object v5, p0, Landroid/view/RenderNodeAnimator$DelayedAnimationHelper;->mChoreographer:Landroid/view/Choreographer;
 
     invoke-virtual {v5}, Landroid/view/Choreographer;->getFrameTime()J
 
     move-result-wide v2
 
-    .line 424
     .local v2, "frameTimeMs":J
     const/4 v5, 0x0
 
     iput-boolean v5, p0, Landroid/view/RenderNodeAnimator$DelayedAnimationHelper;->mCallbackScheduled:Z
 
-    .line 426
     const/4 v1, 0x0
 
-    .line 427
     .local v1, "end":I
     const/4 v4, 0x0
 
@@ -153,7 +136,6 @@
 
     if-ge v4, v5, :cond_2
 
-    .line 428
     iget-object v5, p0, Landroid/view/RenderNodeAnimator$DelayedAnimationHelper;->mDelayedAnims:Ljava/util/ArrayList;
 
     invoke-virtual {v5, v4}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
@@ -162,7 +144,6 @@
 
     check-cast v0, Landroid/view/RenderNodeAnimator;
 
-    .line 429
     .local v0, "animator":Landroid/view/RenderNodeAnimator;
     # invokes: Landroid/view/RenderNodeAnimator;->processDelayed(J)Z
     invoke-static {v0, v2, v3}, Landroid/view/RenderNodeAnimator;->access$000(Landroid/view/RenderNodeAnimator;J)Z
@@ -171,25 +152,20 @@
 
     if-nez v5, :cond_1
 
-    .line 430
     if-eq v1, v4, :cond_0
 
-    .line 431
     iget-object v5, p0, Landroid/view/RenderNodeAnimator$DelayedAnimationHelper;->mDelayedAnims:Ljava/util/ArrayList;
 
     invoke-virtual {v5, v1, v0}, Ljava/util/ArrayList;->set(ILjava/lang/Object;)Ljava/lang/Object;
 
-    .line 433
     :cond_0
     add-int/lit8 v1, v1, 0x1
 
-    .line 427
     :cond_1
     add-int/lit8 v4, v4, 0x1
 
     goto :goto_0
 
-    .line 436
     .end local v0    # "animator":Landroid/view/RenderNodeAnimator;
     :cond_2
     :goto_1
@@ -201,7 +177,6 @@
 
     if-le v5, v1, :cond_3
 
-    .line 437
     iget-object v5, p0, Landroid/view/RenderNodeAnimator$DelayedAnimationHelper;->mDelayedAnims:Ljava/util/ArrayList;
 
     iget-object v6, p0, Landroid/view/RenderNodeAnimator$DelayedAnimationHelper;->mDelayedAnims:Ljava/util/ArrayList;
@@ -216,7 +191,6 @@
 
     goto :goto_1
 
-    .line 440
     :cond_3
     iget-object v5, p0, Landroid/view/RenderNodeAnimator$DelayedAnimationHelper;->mDelayedAnims:Ljava/util/ArrayList;
 
@@ -226,10 +200,8 @@
 
     if-lez v5, :cond_4
 
-    .line 441
     invoke-direct {p0}, Landroid/view/RenderNodeAnimator$DelayedAnimationHelper;->scheduleCallback()V
 
-    .line 443
     :cond_4
     return-void
 .end method

@@ -32,34 +32,27 @@
     .param p2, "context"    # Landroid/content/Context;
 
     .prologue
-    .line 1850
     iput-object p1, p0, Landroid/widget/PopupWindow$PopupViewContainer;->this$0:Landroid/widget/PopupWindow;
 
-    .line 1851
     invoke-direct {p0, p2}, Landroid/widget/FrameLayout;-><init>(Landroid/content/Context;)V
 
-    .line 1846
     const/4 v1, -0x1
 
     iput v1, p0, Landroid/widget/PopupWindow$PopupViewContainer;->mSpenUspLevel:I
 
-    .line 1847
     const/4 v1, 0x0
 
     iput-boolean v1, p0, Landroid/widget/PopupWindow$PopupViewContainer;->mIsPenSelectionMode:Z
 
-    .line 1854
     iget-object v1, p0, Landroid/widget/PopupWindow$PopupViewContainer;->mContext:Landroid/content/Context;
 
     invoke-virtual {v1}, Landroid/content/Context;->getPackageManager()Landroid/content/pm/PackageManager;
 
     move-result-object v0
 
-    .line 1855
     .local v0, "pm":Landroid/content/pm/PackageManager;
     if-eqz v0, :cond_0
 
-    .line 1856
     const-string v1, "com.sec.feature.spen_usp"
 
     invoke-virtual {v0, v1}, Landroid/content/pm/PackageManager;->getSystemFeatureLevel(Ljava/lang/String;)I
@@ -68,7 +61,6 @@
 
     iput v1, p0, Landroid/widget/PopupWindow$PopupViewContainer;->mSpenUspLevel:I
 
-    .line 1859
     :cond_0
     return-void
 .end method
@@ -82,7 +74,6 @@
     .prologue
     const/4 v1, 0x1
 
-    .line 1875
     invoke-virtual {p1}, Landroid/view/KeyEvent;->getKeyCode()I
 
     move-result v2
@@ -91,24 +82,20 @@
 
     if-ne v2, v3, :cond_4
 
-    .line 1876
     invoke-virtual {p0}, Landroid/widget/PopupWindow$PopupViewContainer;->getKeyDispatcherState()Landroid/view/KeyEvent$DispatcherState;
 
     move-result-object v2
 
     if-nez v2, :cond_1
 
-    .line 1877
     invoke-super {p0, p1}, Landroid/widget/FrameLayout;->dispatchKeyEvent(Landroid/view/KeyEvent;)Z
 
     move-result v1
 
-    .line 1896
     :cond_0
     :goto_0
     return v1
 
-    .line 1880
     :cond_1
     invoke-virtual {p1}, Landroid/view/KeyEvent;->getAction()I
 
@@ -122,21 +109,17 @@
 
     if-nez v2, :cond_2
 
-    .line 1882
     invoke-virtual {p0}, Landroid/widget/PopupWindow$PopupViewContainer;->getKeyDispatcherState()Landroid/view/KeyEvent$DispatcherState;
 
     move-result-object v0
 
-    .line 1883
     .local v0, "state":Landroid/view/KeyEvent$DispatcherState;
     if-eqz v0, :cond_0
 
-    .line 1884
     invoke-virtual {v0, p1, p0}, Landroid/view/KeyEvent$DispatcherState;->startTracking(Landroid/view/KeyEvent;Ljava/lang/Object;)V
 
     goto :goto_0
 
-    .line 1887
     .end local v0    # "state":Landroid/view/KeyEvent$DispatcherState;
     :cond_2
     invoke-virtual {p1}, Landroid/view/KeyEvent;->getAction()I
@@ -145,12 +128,10 @@
 
     if-ne v2, v1, :cond_3
 
-    .line 1888
     invoke-virtual {p0}, Landroid/widget/PopupWindow$PopupViewContainer;->getKeyDispatcherState()Landroid/view/KeyEvent$DispatcherState;
 
     move-result-object v0
 
-    .line 1889
     .restart local v0    # "state":Landroid/view/KeyEvent$DispatcherState;
     if-eqz v0, :cond_3
 
@@ -166,14 +147,12 @@
 
     if-nez v2, :cond_3
 
-    .line 1890
     iget-object v2, p0, Landroid/widget/PopupWindow$PopupViewContainer;->this$0:Landroid/widget/PopupWindow;
 
     invoke-virtual {v2}, Landroid/widget/PopupWindow;->dismiss()V
 
     goto :goto_0
 
-    .line 1894
     .end local v0    # "state":Landroid/view/KeyEvent$DispatcherState;
     :cond_3
     invoke-super {p0, p1}, Landroid/widget/FrameLayout;->dispatchKeyEvent(Landroid/view/KeyEvent;)Z
@@ -182,7 +161,6 @@
 
     goto :goto_0
 
-    .line 1896
     :cond_4
     invoke-super {p0, p1}, Landroid/widget/FrameLayout;->dispatchKeyEvent(Landroid/view/KeyEvent;)Z
 
@@ -200,19 +178,16 @@
 
     const/4 v4, 0x0
 
-    .line 1903
     iget v2, p0, Landroid/widget/PopupWindow$PopupViewContainer;->mSpenUspLevel:I
 
     const/4 v3, 0x3
 
     if-ne v2, v3, :cond_0
 
-    .line 1904
     invoke-virtual {p1}, Landroid/view/MotionEvent;->getAction()I
 
     move-result v0
 
-    .line 1905
     .local v0, "action":I
     invoke-virtual {p1, v4}, Landroid/view/MotionEvent;->getToolType(I)I
 
@@ -222,10 +197,8 @@
 
     if-ne v2, v3, :cond_0
 
-    .line 1906
     packed-switch v0, :pswitch_data_0
 
-    .line 1930
     .end local v0    # "action":I
     :cond_0
     :goto_0
@@ -251,11 +224,9 @@
 
     if-eqz v2, :cond_3
 
-    .line 1933
     :goto_1
     return v1
 
-    .line 1908
     .restart local v0    # "action":I
     :pswitch_0
     invoke-virtual {p1}, Landroid/view/MotionEvent;->getButtonState()I
@@ -266,53 +237,44 @@
 
     if-eqz v2, :cond_1
 
-    .line 1909
     iput-boolean v1, p0, Landroid/widget/PopupWindow$PopupViewContainer;->mIsPenSelectionMode:Z
 
-    .line 1910
     const/16 v2, 0xd3
 
     invoke-virtual {p1, v2}, Landroid/view/MotionEvent;->setAction(I)V
 
     goto :goto_0
 
-    .line 1912
     :cond_1
     iput-boolean v4, p0, Landroid/widget/PopupWindow$PopupViewContainer;->mIsPenSelectionMode:Z
 
     goto :goto_0
 
-    .line 1916
     :pswitch_1
     iget-boolean v2, p0, Landroid/widget/PopupWindow$PopupViewContainer;->mIsPenSelectionMode:Z
 
     if-eqz v2, :cond_0
 
-    .line 1917
     const/16 v2, 0xd5
 
     invoke-virtual {p1, v2}, Landroid/view/MotionEvent;->setAction(I)V
 
     goto :goto_0
 
-    .line 1920
     :pswitch_2
     iget-boolean v2, p0, Landroid/widget/PopupWindow$PopupViewContainer;->mIsPenSelectionMode:Z
 
     if-eqz v2, :cond_2
 
-    .line 1921
     const/16 v2, 0xd4
 
     invoke-virtual {p1, v2}, Landroid/view/MotionEvent;->setAction(I)V
 
-    .line 1922
     :cond_2
     iput-boolean v4, p0, Landroid/widget/PopupWindow$PopupViewContainer;->mIsPenSelectionMode:Z
 
     goto :goto_0
 
-    .line 1933
     .end local v0    # "action":I
     :cond_3
     invoke-super {p0, p1}, Landroid/widget/FrameLayout;->dispatchTouchEvent(Landroid/view/MotionEvent;)Z
@@ -321,7 +283,6 @@
 
     goto :goto_1
 
-    .line 1906
     :pswitch_data_0
     .packed-switch 0x0
         :pswitch_0
@@ -335,7 +296,6 @@
     .param p1, "extraSpace"    # I
 
     .prologue
-    .line 1863
     iget-object v1, p0, Landroid/widget/PopupWindow$PopupViewContainer;->this$0:Landroid/widget/PopupWindow;
 
     # getter for: Landroid/widget/PopupWindow;->mAboveAnchor:Z
@@ -345,14 +305,12 @@
 
     if-eqz v1, :cond_0
 
-    .line 1865
     add-int/lit8 v1, p1, 0x1
 
     invoke-super {p0, v1}, Landroid/widget/FrameLayout;->onCreateDrawableState(I)[I
 
     move-result-object v0
 
-    .line 1866
     .local v0, "drawableState":[I
     # getter for: Landroid/widget/PopupWindow;->ABOVE_ANCHOR_STATE_SET:[I
     invoke-static {}, Landroid/widget/PopupWindow;->access$800()[I
@@ -361,7 +319,6 @@
 
     invoke-static {v0, v1}, Landroid/view/View;->mergeDrawableStates([I[I)[I
 
-    .line 1869
     .end local v0    # "drawableState":[I
     :goto_0
     return-object v0
@@ -381,14 +338,12 @@
     .prologue
     const/4 v2, 0x1
 
-    .line 1938
     invoke-virtual {p1}, Landroid/view/MotionEvent;->getX()F
 
     move-result v3
 
     float-to-int v0, v3
 
-    .line 1939
     .local v0, "x":I
     invoke-virtual {p1}, Landroid/view/MotionEvent;->getY()F
 
@@ -396,7 +351,6 @@
 
     float-to-int v1, v3
 
-    .line 1941
     .local v1, "y":I
     invoke-virtual {p1}, Landroid/view/MotionEvent;->getAction()I
 
@@ -420,17 +374,14 @@
 
     if-lt v1, v3, :cond_1
 
-    .line 1943
     :cond_0
     iget-object v3, p0, Landroid/widget/PopupWindow$PopupViewContainer;->this$0:Landroid/widget/PopupWindow;
 
     invoke-virtual {v3}, Landroid/widget/PopupWindow;->dismiss()V
 
-    .line 1949
     :goto_0
     return v2
 
-    .line 1945
     :cond_1
     invoke-virtual {p1}, Landroid/view/MotionEvent;->getAction()I
 
@@ -440,14 +391,12 @@
 
     if-ne v3, v4, :cond_2
 
-    .line 1946
     iget-object v3, p0, Landroid/widget/PopupWindow$PopupViewContainer;->this$0:Landroid/widget/PopupWindow;
 
     invoke-virtual {v3}, Landroid/widget/PopupWindow;->dismiss()V
 
     goto :goto_0
 
-    .line 1949
     :cond_2
     invoke-super {p0, p1}, Landroid/widget/FrameLayout;->onTouchEvent(Landroid/view/MotionEvent;)Z
 
@@ -461,7 +410,6 @@
     .param p1, "eventType"    # I
 
     .prologue
-    .line 1956
     iget-object v0, p0, Landroid/widget/PopupWindow$PopupViewContainer;->this$0:Landroid/widget/PopupWindow;
 
     # getter for: Landroid/widget/PopupWindow;->mContentView:Landroid/view/View;
@@ -471,7 +419,6 @@
 
     if-eqz v0, :cond_0
 
-    .line 1957
     iget-object v0, p0, Landroid/widget/PopupWindow$PopupViewContainer;->this$0:Landroid/widget/PopupWindow;
 
     # getter for: Landroid/widget/PopupWindow;->mContentView:Landroid/view/View;
@@ -481,11 +428,9 @@
 
     invoke-virtual {v0, p1}, Landroid/view/View;->sendAccessibilityEvent(I)V
 
-    .line 1961
     :goto_0
     return-void
 
-    .line 1959
     :cond_0
     invoke-super {p0, p1}, Landroid/widget/FrameLayout;->sendAccessibilityEvent(I)V
 

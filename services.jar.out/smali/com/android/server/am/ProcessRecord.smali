@@ -331,7 +331,6 @@
     .locals 1
 
     .prologue
-    .line 154
     const/4 v0, 0x0
 
     sput-boolean v0, Lcom/android/server/am/ProcessRecord;->SMART_DHA_DEBUG:Z
@@ -355,30 +354,23 @@
 
     const/4 v1, 0x0
 
-    .line 492
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 67
     new-instance v0, Landroid/util/ArrayMap;
 
     invoke-direct {v0}, Landroid/util/ArrayMap;-><init>()V
 
     iput-object v0, p0, Lcom/android/server/am/ProcessRecord;->pkgList:Landroid/util/ArrayMap;
 
-    .line 92
     iput v3, p0, Lcom/android/server/am/ProcessRecord;->curProcState:I
 
-    .line 93
     iput v3, p0, Lcom/android/server/am/ProcessRecord;->repProcState:I
 
-    .line 94
     iput v3, p0, Lcom/android/server/am/ProcessRecord;->setProcState:I
 
-    .line 95
     iput v3, p0, Lcom/android/server/am/ProcessRecord;->pssProcState:I
 
-    .line 147
-    const-string/jumbo v0, "sys.config.samp_debug_trace"
+    const-string v0, "sys.config.samp_debug_trace"
 
     const-string v2, "false"
 
@@ -392,82 +384,66 @@
 
     iput-boolean v0, p0, Lcom/android/server/am/ProcessRecord;->SAMP_DEBUG_TRACE:Z
 
-    .line 152
     iput v6, p0, Lcom/android/server/am/ProcessRecord;->lowestClientAdj:I
 
-    .line 153
     const/4 v0, 0x0
 
     iput-object v0, p0, Lcom/android/server/am/ProcessRecord;->lowestClientName:Ljava/lang/String;
 
-    .line 160
     iput v3, p0, Lcom/android/server/am/ProcessRecord;->lastProcState:I
 
-    .line 163
     iput v1, p0, Lcom/android/server/am/ProcessRecord;->hotnessAdj:I
 
-    .line 164
     iput-boolean v1, p0, Lcom/android/server/am/ProcessRecord;->xmlFlag:Z
 
-    .line 166
     iput-boolean v1, p0, Lcom/android/server/am/ProcessRecord;->latestTab:Z
 
-    .line 171
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
     iput-object v0, p0, Lcom/android/server/am/ProcessRecord;->activities:Ljava/util/ArrayList;
 
-    .line 173
     new-instance v0, Landroid/util/ArraySet;
 
     invoke-direct {v0}, Landroid/util/ArraySet;-><init>()V
 
     iput-object v0, p0, Lcom/android/server/am/ProcessRecord;->services:Landroid/util/ArraySet;
 
-    .line 175
     new-instance v0, Landroid/util/ArraySet;
 
     invoke-direct {v0}, Landroid/util/ArraySet;-><init>()V
 
     iput-object v0, p0, Lcom/android/server/am/ProcessRecord;->executingServices:Landroid/util/ArraySet;
 
-    .line 178
     new-instance v0, Landroid/util/ArraySet;
 
     invoke-direct {v0}, Landroid/util/ArraySet;-><init>()V
 
     iput-object v0, p0, Lcom/android/server/am/ProcessRecord;->connections:Landroid/util/ArraySet;
 
-    .line 181
     new-instance v0, Landroid/util/ArraySet;
 
     invoke-direct {v0}, Landroid/util/ArraySet;-><init>()V
 
     iput-object v0, p0, Lcom/android/server/am/ProcessRecord;->receivers:Landroid/util/ArraySet;
 
-    .line 183
     new-instance v0, Landroid/util/ArrayMap;
 
     invoke-direct {v0}, Landroid/util/ArrayMap;-><init>()V
 
     iput-object v0, p0, Lcom/android/server/am/ProcessRecord;->pubProviders:Landroid/util/ArrayMap;
 
-    .line 186
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
     iput-object v0, p0, Lcom/android/server/am/ProcessRecord;->conProviders:Ljava/util/ArrayList;
 
-    .line 493
     iput-object p1, p0, Lcom/android/server/am/ProcessRecord;->mBatteryStats:Lcom/android/internal/os/BatteryStatsImpl;
 
-    .line 494
     iput-object p2, p0, Lcom/android/server/am/ProcessRecord;->info:Landroid/content/pm/ApplicationInfo;
 
-    .line 495
     iget v0, p2, Landroid/content/pm/ApplicationInfo;->uid:I
 
     if-eq v0, p4, :cond_0
@@ -477,20 +453,16 @@
     :goto_0
     iput-boolean v0, p0, Lcom/android/server/am/ProcessRecord;->isolated:Z
 
-    .line 496
     iput p4, p0, Lcom/android/server/am/ProcessRecord;->uid:I
 
-    .line 497
     invoke-static {p4}, Landroid/os/UserHandle;->getUserId(I)I
 
     move-result v0
 
     iput v0, p0, Lcom/android/server/am/ProcessRecord;->userId:I
 
-    .line 498
     iput-object p3, p0, Lcom/android/server/am/ProcessRecord;->processName:Ljava/lang/String;
 
-    .line 499
     iget-object v0, p0, Lcom/android/server/am/ProcessRecord;->pkgList:Landroid/util/ArrayMap;
 
     iget-object v2, p2, Landroid/content/pm/ApplicationInfo;->packageName:Ljava/lang/String;
@@ -503,26 +475,20 @@
 
     invoke-virtual {v0, v2, v3}, Landroid/util/ArrayMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 500
     iput v6, p0, Lcom/android/server/am/ProcessRecord;->maxAdj:I
 
-    .line 501
     iput v5, p0, Lcom/android/server/am/ProcessRecord;->setRawAdj:I
 
     iput v5, p0, Lcom/android/server/am/ProcessRecord;->curRawAdj:I
 
-    .line 502
     iput v5, p0, Lcom/android/server/am/ProcessRecord;->setAdj:I
 
     iput v5, p0, Lcom/android/server/am/ProcessRecord;->curAdj:I
 
-    .line 503
     iput-boolean v1, p0, Lcom/android/server/am/ProcessRecord;->persistent:Z
 
-    .line 504
     iput-boolean v1, p0, Lcom/android/server/am/ProcessRecord;->removed:Z
 
-    .line 505
     invoke-static {}, Landroid/os/SystemClock;->uptimeMillis()J
 
     move-result-wide v0
@@ -533,13 +499,11 @@
 
     iput-wide v0, p0, Lcom/android/server/am/ProcessRecord;->lastStateTime:J
 
-    .line 506
     return-void
 
     :cond_0
     move v0, v1
 
-    .line 495
     goto :goto_0
 .end method
 
@@ -548,10 +512,8 @@
     .param p0, "debugMode"    # Z
 
     .prologue
-    .line 288
     sput-boolean p0, Lcom/android/server/am/ProcessRecord;->SMART_DHA_DEBUG:Z
 
-    .line 289
     return-void
 .end method
 
@@ -564,7 +526,6 @@
     .param p3, "tracker"    # Lcom/android/server/am/ProcessStatsService;
 
     .prologue
-    .line 735
     iget-object v1, p0, Lcom/android/server/am/ProcessRecord;->pkgList:Landroid/util/ArrayMap;
 
     invoke-virtual {v1, p1}, Landroid/util/ArrayMap;->containsKey(Ljava/lang/Object;)Z
@@ -573,18 +534,15 @@
 
     if-nez v1, :cond_2
 
-    .line 736
     new-instance v0, Lcom/android/internal/app/ProcessStats$ProcessStateHolder;
 
     invoke-direct {v0, p2}, Lcom/android/internal/app/ProcessStats$ProcessStateHolder;-><init>(I)V
 
-    .line 738
     .local v0, "holder":Lcom/android/internal/app/ProcessStats$ProcessStateHolder;
     iget-object v1, p0, Lcom/android/server/am/ProcessRecord;->baseProcessTracker:Lcom/android/internal/app/ProcessStats$ProcessState;
 
     if-eqz v1, :cond_1
 
-    .line 739
     iget-object v1, p0, Lcom/android/server/am/ProcessRecord;->info:Landroid/content/pm/ApplicationInfo;
 
     iget v1, v1, Landroid/content/pm/ApplicationInfo;->uid:I
@@ -597,34 +555,28 @@
 
     iput-object v1, v0, Lcom/android/internal/app/ProcessStats$ProcessStateHolder;->state:Lcom/android/internal/app/ProcessStats$ProcessState;
 
-    .line 741
     iget-object v1, p0, Lcom/android/server/am/ProcessRecord;->pkgList:Landroid/util/ArrayMap;
 
     invoke-virtual {v1, p1, v0}, Landroid/util/ArrayMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 742
     iget-object v1, v0, Lcom/android/internal/app/ProcessStats$ProcessStateHolder;->state:Lcom/android/internal/app/ProcessStats$ProcessState;
 
     iget-object v2, p0, Lcom/android/server/am/ProcessRecord;->baseProcessTracker:Lcom/android/internal/app/ProcessStats$ProcessState;
 
     if-eq v1, v2, :cond_0
 
-    .line 743
     iget-object v1, v0, Lcom/android/internal/app/ProcessStats$ProcessStateHolder;->state:Lcom/android/internal/app/ProcessStats$ProcessState;
 
     invoke-virtual {v1}, Lcom/android/internal/app/ProcessStats$ProcessState;->makeActive()V
 
-    .line 748
     :cond_0
     :goto_0
     const/4 v1, 0x1
 
-    .line 750
     .end local v0    # "holder":Lcom/android/internal/app/ProcessStats$ProcessStateHolder;
     :goto_1
     return v1
 
-    .line 746
     .restart local v0    # "holder":Lcom/android/internal/app/ProcessStats$ProcessStateHolder;
     :cond_1
     iget-object v1, p0, Lcom/android/server/am/ProcessRecord;->pkgList:Landroid/util/ArrayMap;
@@ -633,7 +585,6 @@
 
     goto :goto_0
 
-    .line 750
     .end local v0    # "holder":Lcom/android/internal/app/ProcessStats$ProcessStateHolder;
     :cond_2
     const/4 v1, 0x0
@@ -647,16 +598,14 @@
     .param p2, "prefix"    # Ljava/lang/String;
 
     .prologue
-    .line 293
     invoke-static {}, Landroid/os/SystemClock;->uptimeMillis()J
 
     move-result-wide v2
 
-    .line 295
     .local v2, "now":J
     invoke-virtual {p1, p2}, Ljava/io/PrintWriter;->print(Ljava/lang/String;)V
 
-    const-string/jumbo v1, "user #"
+    const-string v1, "user #"
 
     invoke-virtual {p1, v1}, Ljava/io/PrintWriter;->print(Ljava/lang/String;)V
 
@@ -664,7 +613,6 @@
 
     invoke-virtual {p1, v1}, Ljava/io/PrintWriter;->print(I)V
 
-    .line 296
     const-string v1, " uid="
 
     invoke-virtual {p1, v1}, Ljava/io/PrintWriter;->print(Ljava/lang/String;)V
@@ -675,7 +623,6 @@
 
     invoke-virtual {p1, v1}, Ljava/io/PrintWriter;->print(I)V
 
-    .line 297
     iget v1, p0, Lcom/android/server/am/ProcessRecord;->uid:I
 
     iget-object v6, p0, Lcom/android/server/am/ProcessRecord;->info:Landroid/content/pm/ApplicationInfo;
@@ -684,7 +631,6 @@
 
     if-eq v1, v6, :cond_0
 
-    .line 298
     const-string v1, " ISOLATED uid="
 
     invoke-virtual {p1, v1}, Ljava/io/PrintWriter;->print(Ljava/lang/String;)V
@@ -693,18 +639,15 @@
 
     invoke-virtual {p1, v1}, Ljava/io/PrintWriter;->print(I)V
 
-    .line 300
     :cond_0
     invoke-virtual {p1}, Ljava/io/PrintWriter;->println()V
 
-    .line 301
     iget-object v1, p0, Lcom/android/server/am/ProcessRecord;->info:Landroid/content/pm/ApplicationInfo;
 
     iget-object v1, v1, Landroid/content/pm/ApplicationInfo;->className:Ljava/lang/String;
 
     if-eqz v1, :cond_1
 
-    .line 302
     invoke-virtual {p1, p2}, Ljava/io/PrintWriter;->print(Ljava/lang/String;)V
 
     const-string v1, "class="
@@ -717,7 +660,6 @@
 
     invoke-virtual {p1, v1}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
-    .line 304
     :cond_1
     iget-object v1, p0, Lcom/android/server/am/ProcessRecord;->info:Landroid/content/pm/ApplicationInfo;
 
@@ -725,21 +667,18 @@
 
     if-eqz v1, :cond_2
 
-    .line 305
     invoke-virtual {p1, p2}, Ljava/io/PrintWriter;->print(Ljava/lang/String;)V
 
     const-string v1, "manageSpaceActivityName="
 
     invoke-virtual {p1, v1}, Ljava/io/PrintWriter;->print(Ljava/lang/String;)V
 
-    .line 306
     iget-object v1, p0, Lcom/android/server/am/ProcessRecord;->info:Landroid/content/pm/ApplicationInfo;
 
     iget-object v1, v1, Landroid/content/pm/ApplicationInfo;->manageSpaceActivityName:Ljava/lang/String;
 
     invoke-virtual {p1, v1}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
-    .line 308
     :cond_2
     invoke-virtual {p1, p2}, Ljava/io/PrintWriter;->print(Ljava/lang/String;)V
 
@@ -753,7 +692,6 @@
 
     invoke-virtual {p1, v1}, Ljava/io/PrintWriter;->print(Ljava/lang/String;)V
 
-    .line 309
     const-string v1, " publicDir="
 
     invoke-virtual {p1, v1}, Ljava/io/PrintWriter;->print(Ljava/lang/String;)V
@@ -764,7 +702,6 @@
 
     invoke-virtual {p1, v1}, Ljava/io/PrintWriter;->print(Ljava/lang/String;)V
 
-    .line 310
     const-string v1, " data="
 
     invoke-virtual {p1, v1}, Ljava/io/PrintWriter;->print(Ljava/lang/String;)V
@@ -775,14 +712,12 @@
 
     invoke-virtual {p1, v1}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
-    .line 311
     invoke-virtual {p1, p2}, Ljava/io/PrintWriter;->print(Ljava/lang/String;)V
 
-    const-string/jumbo v1, "packageList={"
+    const-string v1, "packageList={"
 
     invoke-virtual {p1, v1}, Ljava/io/PrintWriter;->print(Ljava/lang/String;)V
 
-    .line 312
     const/4 v0, 0x0
 
     .local v0, "i":I
@@ -795,14 +730,12 @@
 
     if-ge v0, v1, :cond_4
 
-    .line 313
     if-lez v0, :cond_3
 
     const-string v1, ", "
 
     invoke-virtual {p1, v1}, Ljava/io/PrintWriter;->print(Ljava/lang/String;)V
 
-    .line 314
     :cond_3
     iget-object v1, p0, Lcom/android/server/am/ProcessRecord;->pkgList:Landroid/util/ArrayMap;
 
@@ -814,30 +747,25 @@
 
     invoke-virtual {p1, v1}, Ljava/io/PrintWriter;->print(Ljava/lang/String;)V
 
-    .line 312
     add-int/lit8 v0, v0, 0x1
 
     goto :goto_0
 
-    .line 316
     :cond_4
-    const-string/jumbo v1, "}"
+    const-string v1, "}"
 
     invoke-virtual {p1, v1}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
-    .line 317
     iget-object v1, p0, Lcom/android/server/am/ProcessRecord;->pkgDeps:Landroid/util/ArraySet;
 
     if-eqz v1, :cond_7
 
-    .line 318
     invoke-virtual {p1, p2}, Ljava/io/PrintWriter;->print(Ljava/lang/String;)V
 
-    const-string/jumbo v1, "packageDependencies={"
+    const-string v1, "packageDependencies={"
 
     invoke-virtual {p1, v1}, Ljava/io/PrintWriter;->print(Ljava/lang/String;)V
 
-    .line 319
     const/4 v0, 0x0
 
     :goto_1
@@ -849,14 +777,12 @@
 
     if-ge v0, v1, :cond_6
 
-    .line 320
     if-lez v0, :cond_5
 
     const-string v1, ", "
 
     invoke-virtual {p1, v1}, Ljava/io/PrintWriter;->print(Ljava/lang/String;)V
 
-    .line 321
     :cond_5
     iget-object v1, p0, Lcom/android/server/am/ProcessRecord;->pkgDeps:Landroid/util/ArraySet;
 
@@ -868,18 +794,15 @@
 
     invoke-virtual {p1, v1}, Ljava/io/PrintWriter;->print(Ljava/lang/String;)V
 
-    .line 319
     add-int/lit8 v0, v0, 0x1
 
     goto :goto_1
 
-    .line 323
     :cond_6
-    const-string/jumbo v1, "}"
+    const-string v1, "}"
 
     invoke-virtual {p1, v1}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
-    .line 325
     :cond_7
     invoke-virtual {p1, p2}, Ljava/io/PrintWriter;->print(Ljava/lang/String;)V
 
@@ -891,7 +814,6 @@
 
     invoke-virtual {p1, v1}, Ljava/io/PrintWriter;->println(Ljava/lang/Object;)V
 
-    .line 326
     iget-object v1, p0, Lcom/android/server/am/ProcessRecord;->instrumentationClass:Landroid/content/ComponentName;
 
     if-nez v1, :cond_8
@@ -904,7 +826,6 @@
 
     if-eqz v1, :cond_9
 
-    .line 328
     :cond_8
     invoke-virtual {p1, p2}, Ljava/io/PrintWriter;->print(Ljava/lang/String;)V
 
@@ -912,51 +833,42 @@
 
     invoke-virtual {p1, v1}, Ljava/io/PrintWriter;->print(Ljava/lang/String;)V
 
-    .line 329
     iget-object v1, p0, Lcom/android/server/am/ProcessRecord;->instrumentationClass:Landroid/content/ComponentName;
 
     invoke-virtual {p1, v1}, Ljava/io/PrintWriter;->print(Ljava/lang/Object;)V
 
-    .line 330
     const-string v1, " instrumentationProfileFile="
 
     invoke-virtual {p1, v1}, Ljava/io/PrintWriter;->print(Ljava/lang/String;)V
 
-    .line 331
     iget-object v1, p0, Lcom/android/server/am/ProcessRecord;->instrumentationProfileFile:Ljava/lang/String;
 
     invoke-virtual {p1, v1}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
-    .line 332
     invoke-virtual {p1, p2}, Ljava/io/PrintWriter;->print(Ljava/lang/String;)V
 
     const-string v1, "instrumentationArguments="
 
     invoke-virtual {p1, v1}, Ljava/io/PrintWriter;->print(Ljava/lang/String;)V
 
-    .line 333
     iget-object v1, p0, Lcom/android/server/am/ProcessRecord;->instrumentationArguments:Landroid/os/Bundle;
 
     invoke-virtual {p1, v1}, Ljava/io/PrintWriter;->println(Ljava/lang/Object;)V
 
-    .line 334
     invoke-virtual {p1, p2}, Ljava/io/PrintWriter;->print(Ljava/lang/String;)V
 
     const-string v1, "instrumentationInfo="
 
     invoke-virtual {p1, v1}, Ljava/io/PrintWriter;->print(Ljava/lang/String;)V
 
-    .line 335
     iget-object v1, p0, Lcom/android/server/am/ProcessRecord;->instrumentationInfo:Landroid/content/pm/ApplicationInfo;
 
     invoke-virtual {p1, v1}, Ljava/io/PrintWriter;->println(Ljava/lang/Object;)V
 
-    .line 336
     iget-object v1, p0, Lcom/android/server/am/ProcessRecord;->instrumentationInfo:Landroid/content/pm/ApplicationInfo;
 
     if-eqz v1, :cond_9
 
-    .line 337
     iget-object v1, p0, Lcom/android/server/am/ProcessRecord;->instrumentationInfo:Landroid/content/pm/ApplicationInfo;
 
     new-instance v6, Landroid/util/PrintWriterPrinter;
@@ -983,11 +895,10 @@
 
     invoke-virtual {v1, v6, v7}, Landroid/content/pm/ApplicationInfo;->dump(Landroid/util/Printer;Ljava/lang/String;)V
 
-    .line 340
     :cond_9
     invoke-virtual {p1, p2}, Ljava/io/PrintWriter;->print(Ljava/lang/String;)V
 
-    const-string/jumbo v1, "thread="
+    const-string v1, "thread="
 
     invoke-virtual {p1, v1}, Ljava/io/PrintWriter;->print(Ljava/lang/String;)V
 
@@ -995,10 +906,9 @@
 
     invoke-virtual {p1, v1}, Ljava/io/PrintWriter;->println(Ljava/lang/Object;)V
 
-    .line 341
     invoke-virtual {p1, p2}, Ljava/io/PrintWriter;->print(Ljava/lang/String;)V
 
-    const-string/jumbo v1, "pid="
+    const-string v1, "pid="
 
     invoke-virtual {p1, v1}, Ljava/io/PrintWriter;->print(Ljava/lang/String;)V
 
@@ -1010,47 +920,38 @@
 
     invoke-virtual {p1, v1}, Ljava/io/PrintWriter;->print(Ljava/lang/String;)V
 
-    .line 342
     iget-boolean v1, p0, Lcom/android/server/am/ProcessRecord;->starting:Z
 
     invoke-virtual {p1, v1}, Ljava/io/PrintWriter;->println(Z)V
 
-    .line 343
     invoke-virtual {p1, p2}, Ljava/io/PrintWriter;->print(Ljava/lang/String;)V
 
     const-string v1, "lastActivityTime="
 
     invoke-virtual {p1, v1}, Ljava/io/PrintWriter;->print(Ljava/lang/String;)V
 
-    .line 344
     iget-wide v6, p0, Lcom/android/server/am/ProcessRecord;->lastActivityTime:J
 
     invoke-static {v6, v7, v2, v3, p1}, Landroid/util/TimeUtils;->formatDuration(JJLjava/io/PrintWriter;)V
 
-    .line 345
     const-string v1, " lastPssTime="
 
     invoke-virtual {p1, v1}, Ljava/io/PrintWriter;->print(Ljava/lang/String;)V
 
-    .line 346
     iget-wide v6, p0, Lcom/android/server/am/ProcessRecord;->lastPssTime:J
 
     invoke-static {v6, v7, v2, v3, p1}, Landroid/util/TimeUtils;->formatDuration(JJLjava/io/PrintWriter;)V
 
-    .line 347
     const-string v1, " nextPssTime="
 
     invoke-virtual {p1, v1}, Ljava/io/PrintWriter;->print(Ljava/lang/String;)V
 
-    .line 348
     iget-wide v6, p0, Lcom/android/server/am/ProcessRecord;->nextPssTime:J
 
     invoke-static {v6, v7, v2, v3, p1}, Landroid/util/TimeUtils;->formatDuration(JJLjava/io/PrintWriter;)V
 
-    .line 349
     invoke-virtual {p1}, Ljava/io/PrintWriter;->println()V
 
-    .line 350
     invoke-virtual {p1, p2}, Ljava/io/PrintWriter;->print(Ljava/lang/String;)V
 
     const-string v1, "adjSeq="
@@ -1061,7 +962,6 @@
 
     invoke-virtual {p1, v1}, Ljava/io/PrintWriter;->print(I)V
 
-    .line 351
     const-string v1, " lruSeq="
 
     invoke-virtual {p1, v1}, Ljava/io/PrintWriter;->print(Ljava/lang/String;)V
@@ -1070,7 +970,6 @@
 
     invoke-virtual {p1, v1}, Ljava/io/PrintWriter;->print(I)V
 
-    .line 352
     const-string v1, " lastPss="
 
     invoke-virtual {p1, v1}, Ljava/io/PrintWriter;->print(Ljava/lang/String;)V
@@ -1079,7 +978,6 @@
 
     invoke-virtual {p1, v6, v7}, Ljava/io/PrintWriter;->print(J)V
 
-    .line 353
     const-string v1, " lastCachedPss="
 
     invoke-virtual {p1, v1}, Ljava/io/PrintWriter;->print(Ljava/lang/String;)V
@@ -1088,7 +986,6 @@
 
     invoke-virtual {p1, v6, v7}, Ljava/io/PrintWriter;->println(J)V
 
-    .line 354
     invoke-virtual {p1, p2}, Ljava/io/PrintWriter;->print(Ljava/lang/String;)V
 
     const-string v1, "cached="
@@ -1099,7 +996,6 @@
 
     invoke-virtual {p1, v1}, Ljava/io/PrintWriter;->print(Z)V
 
-    .line 355
     const-string v1, " empty="
 
     invoke-virtual {p1, v1}, Ljava/io/PrintWriter;->print(Ljava/lang/String;)V
@@ -1108,15 +1004,13 @@
 
     invoke-virtual {p1, v1}, Ljava/io/PrintWriter;->println(Z)V
 
-    .line 356
     iget-boolean v1, p0, Lcom/android/server/am/ProcessRecord;->serviceb:Z
 
     if-eqz v1, :cond_a
 
-    .line 357
     invoke-virtual {p1, p2}, Ljava/io/PrintWriter;->print(Ljava/lang/String;)V
 
-    const-string/jumbo v1, "serviceb="
+    const-string v1, "serviceb="
 
     invoke-virtual {p1, v1}, Ljava/io/PrintWriter;->print(Ljava/lang/String;)V
 
@@ -1124,7 +1018,6 @@
 
     invoke-virtual {p1, v1}, Ljava/io/PrintWriter;->print(Z)V
 
-    .line 358
     const-string v1, " serviceHighRam="
 
     invoke-virtual {p1, v1}, Ljava/io/PrintWriter;->print(Ljava/lang/String;)V
@@ -1133,13 +1026,11 @@
 
     invoke-virtual {p1, v1}, Ljava/io/PrintWriter;->println(Z)V
 
-    .line 360
     :cond_a
     iget-boolean v1, p0, Lcom/android/server/am/ProcessRecord;->notCachedSinceIdle:Z
 
     if-eqz v1, :cond_b
 
-    .line 361
     invoke-virtual {p1, p2}, Ljava/io/PrintWriter;->print(Ljava/lang/String;)V
 
     const-string v1, "notCachedSinceIdle="
@@ -1150,7 +1041,6 @@
 
     invoke-virtual {p1, v1}, Ljava/io/PrintWriter;->print(Z)V
 
-    .line 362
     const-string v1, " initialIdlePss="
 
     invoke-virtual {p1, v1}, Ljava/io/PrintWriter;->print(Ljava/lang/String;)V
@@ -1159,11 +1049,10 @@
 
     invoke-virtual {p1, v6, v7}, Ljava/io/PrintWriter;->println(J)V
 
-    .line 364
     :cond_b
     invoke-virtual {p1, p2}, Ljava/io/PrintWriter;->print(Ljava/lang/String;)V
 
-    const-string/jumbo v1, "oom: max="
+    const-string v1, "oom: max="
 
     invoke-virtual {p1, v1}, Ljava/io/PrintWriter;->print(Ljava/lang/String;)V
 
@@ -1171,7 +1060,6 @@
 
     invoke-virtual {p1, v1}, Ljava/io/PrintWriter;->print(I)V
 
-    .line 365
     const-string v1, " curRaw="
 
     invoke-virtual {p1, v1}, Ljava/io/PrintWriter;->print(Ljava/lang/String;)V
@@ -1180,7 +1068,6 @@
 
     invoke-virtual {p1, v1}, Ljava/io/PrintWriter;->print(I)V
 
-    .line 366
     const-string v1, " setRaw="
 
     invoke-virtual {p1, v1}, Ljava/io/PrintWriter;->print(Ljava/lang/String;)V
@@ -1189,7 +1076,6 @@
 
     invoke-virtual {p1, v1}, Ljava/io/PrintWriter;->print(I)V
 
-    .line 367
     const-string v1, " cur="
 
     invoke-virtual {p1, v1}, Ljava/io/PrintWriter;->print(Ljava/lang/String;)V
@@ -1198,7 +1084,6 @@
 
     invoke-virtual {p1, v1}, Ljava/io/PrintWriter;->print(I)V
 
-    .line 368
     const-string v1, " set="
 
     invoke-virtual {p1, v1}, Ljava/io/PrintWriter;->print(Ljava/lang/String;)V
@@ -1207,7 +1092,6 @@
 
     invoke-virtual {p1, v1}, Ljava/io/PrintWriter;->println(I)V
 
-    .line 369
     invoke-virtual {p1, p2}, Ljava/io/PrintWriter;->print(Ljava/lang/String;)V
 
     const-string v1, "curSchedGroup="
@@ -1218,7 +1102,6 @@
 
     invoke-virtual {p1, v1}, Ljava/io/PrintWriter;->print(I)V
 
-    .line 370
     const-string v1, " setSchedGroup="
 
     invoke-virtual {p1, v1}, Ljava/io/PrintWriter;->print(Ljava/lang/String;)V
@@ -1227,7 +1110,6 @@
 
     invoke-virtual {p1, v1}, Ljava/io/PrintWriter;->print(I)V
 
-    .line 371
     const-string v1, " systemNoUi="
 
     invoke-virtual {p1, v1}, Ljava/io/PrintWriter;->print(Ljava/lang/String;)V
@@ -1236,7 +1118,6 @@
 
     invoke-virtual {p1, v1}, Ljava/io/PrintWriter;->print(Z)V
 
-    .line 372
     const-string v1, " trimMemoryLevel="
 
     invoke-virtual {p1, v1}, Ljava/io/PrintWriter;->print(Ljava/lang/String;)V
@@ -1245,7 +1126,6 @@
 
     invoke-virtual {p1, v1}, Ljava/io/PrintWriter;->println(I)V
 
-    .line 373
     invoke-virtual {p1, p2}, Ljava/io/PrintWriter;->print(Ljava/lang/String;)V
 
     const-string v1, "curProcState="
@@ -1256,7 +1136,6 @@
 
     invoke-virtual {p1, v1}, Ljava/io/PrintWriter;->print(I)V
 
-    .line 374
     const-string v1, " repProcState="
 
     invoke-virtual {p1, v1}, Ljava/io/PrintWriter;->print(Ljava/lang/String;)V
@@ -1265,7 +1144,6 @@
 
     invoke-virtual {p1, v1}, Ljava/io/PrintWriter;->print(I)V
 
-    .line 375
     const-string v1, " pssProcState="
 
     invoke-virtual {p1, v1}, Ljava/io/PrintWriter;->print(Ljava/lang/String;)V
@@ -1274,7 +1152,6 @@
 
     invoke-virtual {p1, v1}, Ljava/io/PrintWriter;->print(I)V
 
-    .line 376
     const-string v1, " setProcState="
 
     invoke-virtual {p1, v1}, Ljava/io/PrintWriter;->print(Ljava/lang/String;)V
@@ -1283,20 +1160,16 @@
 
     invoke-virtual {p1, v1}, Ljava/io/PrintWriter;->print(I)V
 
-    .line 377
     const-string v1, " lastStateTime="
 
     invoke-virtual {p1, v1}, Ljava/io/PrintWriter;->print(Ljava/lang/String;)V
 
-    .line 378
     iget-wide v6, p0, Lcom/android/server/am/ProcessRecord;->lastStateTime:J
 
     invoke-static {v6, v7, v2, v3, p1}, Landroid/util/TimeUtils;->formatDuration(JJLjava/io/PrintWriter;)V
 
-    .line 379
     invoke-virtual {p1}, Ljava/io/PrintWriter;->println()V
 
-    .line 380
     iget-boolean v1, p0, Lcom/android/server/am/ProcessRecord;->hasShownUi:Z
 
     if-nez v1, :cond_c
@@ -1313,7 +1186,6 @@
 
     if-eqz v1, :cond_d
 
-    .line 381
     :cond_c
     invoke-virtual {p1, p2}, Ljava/io/PrintWriter;->print(Ljava/lang/String;)V
 
@@ -1325,7 +1197,6 @@
 
     invoke-virtual {p1, v1}, Ljava/io/PrintWriter;->print(Z)V
 
-    .line 382
     const-string v1, " pendingUiClean="
 
     invoke-virtual {p1, v1}, Ljava/io/PrintWriter;->print(Ljava/lang/String;)V
@@ -1334,7 +1205,6 @@
 
     invoke-virtual {p1, v1}, Ljava/io/PrintWriter;->print(Z)V
 
-    .line 383
     const-string v1, " hasAboveClient="
 
     invoke-virtual {p1, v1}, Ljava/io/PrintWriter;->print(Ljava/lang/String;)V
@@ -1343,7 +1213,6 @@
 
     invoke-virtual {p1, v1}, Ljava/io/PrintWriter;->print(Z)V
 
-    .line 384
     const-string v1, " treatLikeActivity="
 
     invoke-virtual {p1, v1}, Ljava/io/PrintWriter;->print(Ljava/lang/String;)V
@@ -1352,7 +1221,6 @@
 
     invoke-virtual {p1, v1}, Ljava/io/PrintWriter;->println(Z)V
 
-    .line 386
     :cond_d
     iget-boolean v1, p0, Lcom/android/server/am/ProcessRecord;->setIsForeground:Z
 
@@ -1366,11 +1234,10 @@
 
     if-eqz v1, :cond_f
 
-    .line 387
     :cond_e
     invoke-virtual {p1, p2}, Ljava/io/PrintWriter;->print(Ljava/lang/String;)V
 
-    const-string/jumbo v1, "setIsForeground="
+    const-string v1, "setIsForeground="
 
     invoke-virtual {p1, v1}, Ljava/io/PrintWriter;->print(Ljava/lang/String;)V
 
@@ -1378,7 +1245,6 @@
 
     invoke-virtual {p1, v1}, Ljava/io/PrintWriter;->print(Z)V
 
-    .line 388
     const-string v1, " foregroundServices="
 
     invoke-virtual {p1, v1}, Ljava/io/PrintWriter;->print(Ljava/lang/String;)V
@@ -1387,7 +1253,6 @@
 
     invoke-virtual {p1, v1}, Ljava/io/PrintWriter;->print(Z)V
 
-    .line 389
     const-string v1, " forcingToForeground="
 
     invoke-virtual {p1, v1}, Ljava/io/PrintWriter;->print(Ljava/lang/String;)V
@@ -1396,7 +1261,6 @@
 
     invoke-virtual {p1, v1}, Ljava/io/PrintWriter;->println(Ljava/lang/Object;)V
 
-    .line 391
     :cond_f
     iget-boolean v1, p0, Lcom/android/server/am/ProcessRecord;->persistent:Z
 
@@ -1406,11 +1270,10 @@
 
     if-eqz v1, :cond_11
 
-    .line 392
     :cond_10
     invoke-virtual {p1, p2}, Ljava/io/PrintWriter;->print(Ljava/lang/String;)V
 
-    const-string/jumbo v1, "persistent="
+    const-string v1, "persistent="
 
     invoke-virtual {p1, v1}, Ljava/io/PrintWriter;->print(Ljava/lang/String;)V
 
@@ -1418,7 +1281,6 @@
 
     invoke-virtual {p1, v1}, Ljava/io/PrintWriter;->print(Z)V
 
-    .line 393
     const-string v1, " removed="
 
     invoke-virtual {p1, v1}, Ljava/io/PrintWriter;->print(Ljava/lang/String;)V
@@ -1427,7 +1289,6 @@
 
     invoke-virtual {p1, v1}, Ljava/io/PrintWriter;->println(Z)V
 
-    .line 395
     :cond_11
     iget-boolean v1, p0, Lcom/android/server/am/ProcessRecord;->hasClientActivities:Z
 
@@ -1441,7 +1302,6 @@
 
     if-eqz v1, :cond_13
 
-    .line 396
     :cond_12
     invoke-virtual {p1, p2}, Ljava/io/PrintWriter;->print(Ljava/lang/String;)V
 
@@ -1453,7 +1313,6 @@
 
     invoke-virtual {p1, v1}, Ljava/io/PrintWriter;->print(Z)V
 
-    .line 397
     const-string v1, " foregroundActivities="
 
     invoke-virtual {p1, v1}, Ljava/io/PrintWriter;->print(Ljava/lang/String;)V
@@ -1462,7 +1321,6 @@
 
     invoke-virtual {p1, v1}, Ljava/io/PrintWriter;->print(Z)V
 
-    .line 398
     const-string v1, " (rep="
 
     invoke-virtual {p1, v1}, Ljava/io/PrintWriter;->print(Ljava/lang/String;)V
@@ -1475,13 +1333,11 @@
 
     invoke-virtual {p1, v1}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
-    .line 400
     :cond_13
     iget-boolean v1, p0, Lcom/android/server/am/ProcessRecord;->hasStartedServices:Z
 
     if-eqz v1, :cond_14
 
-    .line 401
     invoke-virtual {p1, p2}, Ljava/io/PrintWriter;->print(Ljava/lang/String;)V
 
     const-string v1, "hasStartedServices="
@@ -1492,7 +1348,6 @@
 
     invoke-virtual {p1, v1}, Ljava/io/PrintWriter;->println(Z)V
 
-    .line 403
     :cond_14
     iget v1, p0, Lcom/android/server/am/ProcessRecord;->setProcState:I
 
@@ -1500,12 +1355,10 @@
 
     if-lt v1, v6, :cond_15
 
-    .line 405
     iget-object v6, p0, Lcom/android/server/am/ProcessRecord;->mBatteryStats:Lcom/android/internal/os/BatteryStatsImpl;
 
     monitor-enter v6
 
-    .line 406
     :try_start_0
     iget-object v1, p0, Lcom/android/server/am/ProcessRecord;->mBatteryStats:Lcom/android/internal/os/BatteryStatsImpl;
 
@@ -1523,13 +1376,11 @@
 
     move-result-wide v4
 
-    .line 408
     .local v4, "wtime":J
     monitor-exit v6
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 409
     invoke-virtual {p1, p2}, Ljava/io/PrintWriter;->print(Ljava/lang/String;)V
 
     const-string v1, "lastWakeTime="
@@ -1540,12 +1391,10 @@
 
     invoke-virtual {p1, v6, v7}, Ljava/io/PrintWriter;->print(J)V
 
-    .line 410
     const-string v1, " timeUsed="
 
     invoke-virtual {p1, v1}, Ljava/io/PrintWriter;->print(Ljava/lang/String;)V
 
-    .line 411
     iget-wide v6, p0, Lcom/android/server/am/ProcessRecord;->lastWakeTime:J
 
     sub-long v6, v4, v6
@@ -1556,7 +1405,6 @@
 
     invoke-virtual {p1, v1}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
-    .line 412
     invoke-virtual {p1, p2}, Ljava/io/PrintWriter;->print(Ljava/lang/String;)V
 
     const-string v1, "lastCpuTime="
@@ -1567,12 +1415,10 @@
 
     invoke-virtual {p1, v6, v7}, Ljava/io/PrintWriter;->print(J)V
 
-    .line 413
     const-string v1, " timeUsed="
 
     invoke-virtual {p1, v1}, Ljava/io/PrintWriter;->print(Ljava/lang/String;)V
 
-    .line 414
     iget-wide v6, p0, Lcom/android/server/am/ProcessRecord;->curCpuTime:J
 
     iget-wide v8, p0, Lcom/android/server/am/ProcessRecord;->lastCpuTime:J
@@ -1585,7 +1431,6 @@
 
     invoke-virtual {p1, v1}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
-    .line 416
     .end local v4    # "wtime":J
     :cond_15
     invoke-virtual {p1, p2}, Ljava/io/PrintWriter;->print(Ljava/lang/String;)V
@@ -1594,22 +1439,18 @@
 
     invoke-virtual {p1, v1}, Ljava/io/PrintWriter;->print(Ljava/lang/String;)V
 
-    .line 417
     iget-wide v6, p0, Lcom/android/server/am/ProcessRecord;->lastRequestedGc:J
 
     invoke-static {v6, v7, v2, v3, p1}, Landroid/util/TimeUtils;->formatDuration(JJLjava/io/PrintWriter;)V
 
-    .line 418
     const-string v1, " lastLowMemory="
 
     invoke-virtual {p1, v1}, Ljava/io/PrintWriter;->print(Ljava/lang/String;)V
 
-    .line 419
     iget-wide v6, p0, Lcom/android/server/am/ProcessRecord;->lastLowMemory:J
 
     invoke-static {v6, v7, v2, v3, p1}, Landroid/util/TimeUtils;->formatDuration(JJLjava/io/PrintWriter;)V
 
-    .line 420
     const-string v1, " reportLowMemory="
 
     invoke-virtual {p1, v1}, Ljava/io/PrintWriter;->print(Ljava/lang/String;)V
@@ -1618,7 +1459,6 @@
 
     invoke-virtual {p1, v1}, Ljava/io/PrintWriter;->println(Z)V
 
-    .line 421
     iget-boolean v1, p0, Lcom/android/server/am/ProcessRecord;->killed:Z
 
     if-nez v1, :cond_16
@@ -1631,7 +1471,6 @@
 
     if-eqz v1, :cond_17
 
-    .line 422
     :cond_16
     invoke-virtual {p1, p2}, Ljava/io/PrintWriter;->print(Ljava/lang/String;)V
 
@@ -1643,7 +1482,6 @@
 
     invoke-virtual {p1, v1}, Ljava/io/PrintWriter;->print(Z)V
 
-    .line 423
     const-string v1, " killedByAm="
 
     invoke-virtual {p1, v1}, Ljava/io/PrintWriter;->print(Ljava/lang/String;)V
@@ -1652,7 +1490,6 @@
 
     invoke-virtual {p1, v1}, Ljava/io/PrintWriter;->print(Z)V
 
-    .line 424
     const-string v1, " waitingToKill="
 
     invoke-virtual {p1, v1}, Ljava/io/PrintWriter;->print(Ljava/lang/String;)V
@@ -1661,7 +1498,6 @@
 
     invoke-virtual {p1, v1}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
-    .line 426
     :cond_17
     iget-boolean v1, p0, Lcom/android/server/am/ProcessRecord;->debugging:Z
 
@@ -1687,7 +1523,6 @@
 
     if-eqz v1, :cond_1a
 
-    .line 428
     :cond_18
     invoke-virtual {p1, p2}, Ljava/io/PrintWriter;->print(Ljava/lang/String;)V
 
@@ -1699,7 +1534,6 @@
 
     invoke-virtual {p1, v1}, Ljava/io/PrintWriter;->print(Z)V
 
-    .line 429
     const-string v1, " crashing="
 
     invoke-virtual {p1, v1}, Ljava/io/PrintWriter;->print(Ljava/lang/String;)V
@@ -1708,7 +1542,6 @@
 
     invoke-virtual {p1, v1}, Ljava/io/PrintWriter;->print(Z)V
 
-    .line 430
     const-string v1, " "
 
     invoke-virtual {p1, v1}, Ljava/io/PrintWriter;->print(Ljava/lang/String;)V
@@ -1717,7 +1550,6 @@
 
     invoke-virtual {p1, v1}, Ljava/io/PrintWriter;->print(Ljava/lang/Object;)V
 
-    .line 431
     const-string v1, " notResponding="
 
     invoke-virtual {p1, v1}, Ljava/io/PrintWriter;->print(Ljava/lang/String;)V
@@ -1726,7 +1558,6 @@
 
     invoke-virtual {p1, v1}, Ljava/io/PrintWriter;->print(Z)V
 
-    .line 432
     const-string v1, " "
 
     invoke-virtual {p1, v1}, Ljava/io/PrintWriter;->print(Ljava/lang/String;)V
@@ -1735,7 +1566,6 @@
 
     invoke-virtual {p1, v1}, Ljava/io/PrintWriter;->print(Ljava/lang/Object;)V
 
-    .line 433
     const-string v1, " bad="
 
     invoke-virtual {p1, v1}, Ljava/io/PrintWriter;->print(Ljava/lang/String;)V
@@ -1744,17 +1574,14 @@
 
     invoke-virtual {p1, v1}, Ljava/io/PrintWriter;->print(Z)V
 
-    .line 436
     iget-object v1, p0, Lcom/android/server/am/ProcessRecord;->errorReportReceiver:Landroid/content/ComponentName;
 
     if-eqz v1, :cond_19
 
-    .line 437
     const-string v1, " errorReportReceiver="
 
     invoke-virtual {p1, v1}, Ljava/io/PrintWriter;->print(Ljava/lang/String;)V
 
-    .line 438
     iget-object v1, p0, Lcom/android/server/am/ProcessRecord;->errorReportReceiver:Landroid/content/ComponentName;
 
     invoke-virtual {v1}, Landroid/content/ComponentName;->flattenToShortString()Ljava/lang/String;
@@ -1763,11 +1590,9 @@
 
     invoke-virtual {p1, v1}, Ljava/io/PrintWriter;->print(Ljava/lang/String;)V
 
-    .line 440
     :cond_19
     invoke-virtual {p1}, Ljava/io/PrintWriter;->println()V
 
-    .line 442
     :cond_1a
     iget-object v1, p0, Lcom/android/server/am/ProcessRecord;->activities:Ljava/util/ArrayList;
 
@@ -1777,14 +1602,12 @@
 
     if-lez v1, :cond_1b
 
-    .line 443
     invoke-virtual {p1, p2}, Ljava/io/PrintWriter;->print(Ljava/lang/String;)V
 
     const-string v1, "Activities:"
 
     invoke-virtual {p1, v1}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
-    .line 444
     const/4 v0, 0x0
 
     :goto_2
@@ -1796,7 +1619,6 @@
 
     if-ge v0, v1, :cond_1b
 
-    .line 445
     invoke-virtual {p1, p2}, Ljava/io/PrintWriter;->print(Ljava/lang/String;)V
 
     const-string v1, "  - "
@@ -1811,12 +1633,10 @@
 
     invoke-virtual {p1, v1}, Ljava/io/PrintWriter;->println(Ljava/lang/Object;)V
 
-    .line 444
     add-int/lit8 v0, v0, 0x1
 
     goto :goto_2
 
-    .line 408
     :catchall_0
     move-exception v1
 
@@ -1827,7 +1647,6 @@
 
     throw v1
 
-    .line 448
     :cond_1b
     iget-object v1, p0, Lcom/android/server/am/ProcessRecord;->services:Landroid/util/ArraySet;
 
@@ -1837,14 +1656,12 @@
 
     if-lez v1, :cond_1c
 
-    .line 449
     invoke-virtual {p1, p2}, Ljava/io/PrintWriter;->print(Ljava/lang/String;)V
 
     const-string v1, "Services:"
 
     invoke-virtual {p1, v1}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
-    .line 450
     const/4 v0, 0x0
 
     :goto_3
@@ -1856,7 +1673,6 @@
 
     if-ge v0, v1, :cond_1c
 
-    .line 451
     invoke-virtual {p1, p2}, Ljava/io/PrintWriter;->print(Ljava/lang/String;)V
 
     const-string v1, "  - "
@@ -1871,12 +1687,10 @@
 
     invoke-virtual {p1, v1}, Ljava/io/PrintWriter;->println(Ljava/lang/Object;)V
 
-    .line 450
     add-int/lit8 v0, v0, 0x1
 
     goto :goto_3
 
-    .line 454
     :cond_1c
     iget-object v1, p0, Lcom/android/server/am/ProcessRecord;->executingServices:Landroid/util/ArraySet;
 
@@ -1886,14 +1700,12 @@
 
     if-lez v1, :cond_1d
 
-    .line 455
     invoke-virtual {p1, p2}, Ljava/io/PrintWriter;->print(Ljava/lang/String;)V
 
     const-string v1, "Executing Services (fg="
 
     invoke-virtual {p1, v1}, Ljava/io/PrintWriter;->print(Ljava/lang/String;)V
 
-    .line 456
     iget-boolean v1, p0, Lcom/android/server/am/ProcessRecord;->execServicesFg:Z
 
     invoke-virtual {p1, v1}, Ljava/io/PrintWriter;->print(Z)V
@@ -1902,7 +1714,6 @@
 
     invoke-virtual {p1, v1}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
-    .line 457
     const/4 v0, 0x0
 
     :goto_4
@@ -1914,7 +1725,6 @@
 
     if-ge v0, v1, :cond_1d
 
-    .line 458
     invoke-virtual {p1, p2}, Ljava/io/PrintWriter;->print(Ljava/lang/String;)V
 
     const-string v1, "  - "
@@ -1929,12 +1739,10 @@
 
     invoke-virtual {p1, v1}, Ljava/io/PrintWriter;->println(Ljava/lang/Object;)V
 
-    .line 457
     add-int/lit8 v0, v0, 0x1
 
     goto :goto_4
 
-    .line 461
     :cond_1d
     iget-object v1, p0, Lcom/android/server/am/ProcessRecord;->connections:Landroid/util/ArraySet;
 
@@ -1944,14 +1752,12 @@
 
     if-lez v1, :cond_1e
 
-    .line 462
     invoke-virtual {p1, p2}, Ljava/io/PrintWriter;->print(Ljava/lang/String;)V
 
     const-string v1, "Connections:"
 
     invoke-virtual {p1, v1}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
-    .line 463
     const/4 v0, 0x0
 
     :goto_5
@@ -1963,7 +1769,6 @@
 
     if-ge v0, v1, :cond_1e
 
-    .line 464
     invoke-virtual {p1, p2}, Ljava/io/PrintWriter;->print(Ljava/lang/String;)V
 
     const-string v1, "  - "
@@ -1978,12 +1783,10 @@
 
     invoke-virtual {p1, v1}, Ljava/io/PrintWriter;->println(Ljava/lang/Object;)V
 
-    .line 463
     add-int/lit8 v0, v0, 0x1
 
     goto :goto_5
 
-    .line 467
     :cond_1e
     iget-object v1, p0, Lcom/android/server/am/ProcessRecord;->pubProviders:Landroid/util/ArrayMap;
 
@@ -1993,14 +1796,12 @@
 
     if-lez v1, :cond_1f
 
-    .line 468
     invoke-virtual {p1, p2}, Ljava/io/PrintWriter;->print(Ljava/lang/String;)V
 
     const-string v1, "Published Providers:"
 
     invoke-virtual {p1, v1}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
-    .line 469
     const/4 v0, 0x0
 
     :goto_6
@@ -2012,7 +1813,6 @@
 
     if-ge v0, v1, :cond_1f
 
-    .line 470
     invoke-virtual {p1, p2}, Ljava/io/PrintWriter;->print(Ljava/lang/String;)V
 
     const-string v1, "  - "
@@ -2029,7 +1829,6 @@
 
     invoke-virtual {p1, v1}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
-    .line 471
     invoke-virtual {p1, p2}, Ljava/io/PrintWriter;->print(Ljava/lang/String;)V
 
     const-string v1, "    -> "
@@ -2044,12 +1843,10 @@
 
     invoke-virtual {p1, v1}, Ljava/io/PrintWriter;->println(Ljava/lang/Object;)V
 
-    .line 469
     add-int/lit8 v0, v0, 0x1
 
     goto :goto_6
 
-    .line 474
     :cond_1f
     iget-object v1, p0, Lcom/android/server/am/ProcessRecord;->conProviders:Ljava/util/ArrayList;
 
@@ -2059,14 +1856,12 @@
 
     if-lez v1, :cond_20
 
-    .line 475
     invoke-virtual {p1, p2}, Ljava/io/PrintWriter;->print(Ljava/lang/String;)V
 
     const-string v1, "Connected Providers:"
 
     invoke-virtual {p1, v1}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
-    .line 476
     const/4 v0, 0x0
 
     :goto_7
@@ -2078,7 +1873,6 @@
 
     if-ge v0, v1, :cond_20
 
-    .line 477
     invoke-virtual {p1, p2}, Ljava/io/PrintWriter;->print(Ljava/lang/String;)V
 
     const-string v1, "  - "
@@ -2099,18 +1893,15 @@
 
     invoke-virtual {p1, v1}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
-    .line 476
     add-int/lit8 v0, v0, 0x1
 
     goto :goto_7
 
-    .line 480
     :cond_20
     iget-object v1, p0, Lcom/android/server/am/ProcessRecord;->curReceiver:Lcom/android/server/am/BroadcastRecord;
 
     if-eqz v1, :cond_21
 
-    .line 481
     invoke-virtual {p1, p2}, Ljava/io/PrintWriter;->print(Ljava/lang/String;)V
 
     const-string v1, "curReceiver="
@@ -2121,7 +1912,6 @@
 
     invoke-virtual {p1, v1}, Ljava/io/PrintWriter;->println(Ljava/lang/Object;)V
 
-    .line 483
     :cond_21
     iget-object v1, p0, Lcom/android/server/am/ProcessRecord;->receivers:Landroid/util/ArraySet;
 
@@ -2131,14 +1921,12 @@
 
     if-lez v1, :cond_22
 
-    .line 484
     invoke-virtual {p1, p2}, Ljava/io/PrintWriter;->print(Ljava/lang/String;)V
 
     const-string v1, "Receivers:"
 
     invoke-virtual {p1, v1}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
-    .line 485
     const/4 v0, 0x0
 
     :goto_8
@@ -2150,7 +1938,6 @@
 
     if-ge v0, v1, :cond_22
 
-    .line 486
     invoke-virtual {p1, p2}, Ljava/io/PrintWriter;->print(Ljava/lang/String;)V
 
     const-string v1, "  - "
@@ -2165,12 +1952,10 @@
 
     invoke-virtual {p1, v1}, Ljava/io/PrintWriter;->println(Ljava/lang/Object;)V
 
-    .line 485
     add-int/lit8 v0, v0, 0x1
 
     goto :goto_8
 
-    .line 489
     :cond_22
     return-void
 .end method
@@ -2180,17 +1965,14 @@
     .param p1, "newState"    # I
 
     .prologue
-    .line 763
     iget v0, p0, Lcom/android/server/am/ProcessRecord;->repProcState:I
 
     if-le v0, p1, :cond_0
 
-    .line 764
     iput p1, p0, Lcom/android/server/am/ProcessRecord;->repProcState:I
 
     iput p1, p0, Lcom/android/server/am/ProcessRecord;->curProcState:I
 
-    .line 766
     :cond_0
     return-void
 .end method
@@ -2201,29 +1983,23 @@
     .param p2, "avgCase"    # I
 
     .prologue
-    .line 216
     const-wide/16 v0, 0x0
 
-    .line 217
     .local v0, "beforeMemCheck":J
     const-wide/16 v8, 0x0
 
-    .line 218
     .local v8, "timetaken":J
     const-wide/16 v6, 0x0
 
-    .line 220
     .local v6, "ret":J
     sget-boolean v5, Lcom/android/server/am/ProcessRecord;->SMART_DHA_DEBUG:Z
 
     if-eqz v5, :cond_0
 
-    .line 221
     invoke-static {}, Landroid/os/SystemClock;->currentTimeMicro()J
 
     move-result-wide v0
 
-    .line 222
     :cond_0
     iget-object v5, p0, Lcom/android/server/am/ProcessRecord;->info:Landroid/content/pm/ApplicationInfo;
 
@@ -2243,11 +2019,9 @@
 
     move-result-object v4
 
-    .line 226
     .local v4, "processStat":Lcom/android/internal/app/ProcessStats$ProcessState;
     packed-switch p2, :pswitch_data_0
 
-    .line 259
     new-instance v3, Lcom/android/internal/app/ProcessStats$ProcessDataCollection;
 
     sget-object v5, Lcom/android/internal/app/ProcessStats;->ALL_SCREEN_ADJ:[I
@@ -2258,7 +2032,6 @@
 
     invoke-direct {v3, v5, v10, v11}, Lcom/android/internal/app/ProcessStats$ProcessDataCollection;-><init>([I[I[I)V
 
-    .line 265
     .local v3, "pdc":Lcom/android/internal/app/ProcessStats$ProcessDataCollection;
     :goto_0
     invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
@@ -2267,33 +2040,29 @@
 
     invoke-static {v4, v3, v10, v11}, Lcom/android/internal/app/ProcessStats;->computeProcessData(Lcom/android/internal/app/ProcessStats$ProcessState;Lcom/android/internal/app/ProcessStats$ProcessDataCollection;J)V
 
-    .line 266
     iget-wide v10, v3, Lcom/android/internal/app/ProcessStats$ProcessDataCollection;->avgUss:J
 
     const-wide/16 v12, 0x400
 
     mul-long v6, v10, v12
 
-    .line 268
     sget-boolean v5, Lcom/android/server/am/ProcessRecord;->SMART_DHA_DEBUG:Z
 
     if-eqz v5, :cond_1
 
-    .line 269
     invoke-static {}, Landroid/os/SystemClock;->currentTimeMicro()J
 
     move-result-wide v10
 
     sub-long v8, v10, v0
 
-    .line 270
     const-string v5, "ActivityManager_SDHA"
 
     new-instance v10, Ljava/lang/StringBuilder;
 
     invoke-direct {v10}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v11, "procstat t :"
+    const-string v11, "procstat t :"
 
     invoke-virtual {v10, v11}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -2303,7 +2072,7 @@
 
     move-result-object v10
 
-    const-string/jumbo v11, "us, sz : "
+    const-string v11, "us, sz : "
 
     invoke-virtual {v10, v11}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -2335,7 +2104,6 @@
 
     invoke-static {v5, v10}, Landroid/util/Slog;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 273
     :cond_1
     const-wide/16 v10, 0x0
 
@@ -2343,23 +2111,19 @@
 
     if-nez v5, :cond_3
 
-    .line 274
     sget-boolean v5, Lcom/android/server/am/ProcessRecord;->SMART_DHA_DEBUG:Z
 
     if-eqz v5, :cond_2
 
-    .line 275
     invoke-static {}, Landroid/os/SystemClock;->currentTimeMicro()J
 
     move-result-wide v0
 
-    .line 277
     :cond_2
     new-instance v2, Lcom/android/internal/util/MemInfoReader;
 
     invoke-direct {v2}, Lcom/android/internal/util/MemInfoReader;-><init>()V
 
-    .line 278
     .local v2, "mi":Lcom/android/internal/util/MemInfoReader;
     iget v5, p0, Lcom/android/server/am/ProcessRecord;->pid:I
 
@@ -2367,26 +2131,23 @@
 
     move-result-wide v6
 
-    .line 279
     sget-boolean v5, Lcom/android/server/am/ProcessRecord;->SMART_DHA_DEBUG:Z
 
     if-eqz v5, :cond_3
 
-    .line 280
     invoke-static {}, Landroid/os/SystemClock;->currentTimeMicro()J
 
     move-result-wide v10
 
     sub-long v8, v10, v0
 
-    .line 281
     const-string v5, "ActivityManager_SDHA"
 
     new-instance v10, Ljava/lang/StringBuilder;
 
     invoke-direct {v10}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v11, "statm    t :"
+    const-string v11, "statm    t :"
 
     invoke-virtual {v10, v11}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -2396,7 +2157,7 @@
 
     move-result-object v10
 
-    const-string/jumbo v11, "us, sz : "
+    const-string v11, "us, sz : "
 
     invoke-virtual {v10, v11}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -2428,12 +2189,10 @@
 
     invoke-static {v5, v10}, Landroid/util/Slog;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 284
     .end local v2    # "mi":Lcom/android/internal/util/MemInfoReader;
     :cond_3
     return-wide v6
 
-    .line 228
     .end local v3    # "pdc":Lcom/android/internal/app/ProcessStats$ProcessDataCollection;
     :pswitch_0
     new-instance v3, Lcom/android/internal/app/ProcessStats$ProcessDataCollection;
@@ -2454,11 +2213,9 @@
 
     invoke-direct {v3, v5, v10, v11}, Lcom/android/internal/app/ProcessStats$ProcessDataCollection;-><init>([I[I[I)V
 
-    .line 232
     .restart local v3    # "pdc":Lcom/android/internal/app/ProcessStats$ProcessDataCollection;
     goto/16 :goto_0
 
-    .line 234
     .end local v3    # "pdc":Lcom/android/internal/app/ProcessStats$ProcessDataCollection;
     :pswitch_1
     new-instance v3, Lcom/android/internal/app/ProcessStats$ProcessDataCollection;
@@ -2475,11 +2232,9 @@
 
     invoke-direct {v3, v5, v10, v11}, Lcom/android/internal/app/ProcessStats$ProcessDataCollection;-><init>([I[I[I)V
 
-    .line 242
     .restart local v3    # "pdc":Lcom/android/internal/app/ProcessStats$ProcessDataCollection;
     goto/16 :goto_0
 
-    .line 245
     .end local v3    # "pdc":Lcom/android/internal/app/ProcessStats$ProcessDataCollection;
     :pswitch_2
     new-instance v3, Lcom/android/internal/app/ProcessStats$ProcessDataCollection;
@@ -2500,11 +2255,9 @@
 
     invoke-direct {v3, v5, v10, v11}, Lcom/android/internal/app/ProcessStats$ProcessDataCollection;-><init>([I[I[I)V
 
-    .line 249
     .restart local v3    # "pdc":Lcom/android/internal/app/ProcessStats$ProcessDataCollection;
     goto/16 :goto_0
 
-    .line 251
     .end local v3    # "pdc":Lcom/android/internal/app/ProcessStats$ProcessDataCollection;
     :pswitch_3
     new-instance v3, Lcom/android/internal/app/ProcessStats$ProcessDataCollection;
@@ -2521,11 +2274,9 @@
 
     invoke-direct {v3, v5, v10, v11}, Lcom/android/internal/app/ProcessStats$ProcessDataCollection;-><init>([I[I[I)V
 
-    .line 256
     .restart local v3    # "pdc":Lcom/android/internal/app/ProcessStats$ProcessDataCollection;
     goto/16 :goto_0
 
-    .line 226
     nop
 
     :pswitch_data_0
@@ -2536,7 +2287,6 @@
         :pswitch_3
     .end packed-switch
 
-    .line 234
     :array_0
     .array-data 4
         0x0
@@ -2554,7 +2304,6 @@
         0xd
     .end array-data
 
-    .line 251
     :array_1
     .array-data 4
         0xa
@@ -2567,29 +2316,23 @@
     .locals 4
 
     .prologue
-    .line 803
     iget-object v3, p0, Lcom/android/server/am/ProcessRecord;->pkgList:Landroid/util/ArrayMap;
 
     invoke-virtual {v3}, Landroid/util/ArrayMap;->size()I
 
     move-result v2
 
-    .line 804
     .local v2, "size":I
     if-nez v2, :cond_1
 
-    .line 805
     const/4 v1, 0x0
 
-    .line 811
     :cond_0
     return-object v1
 
-    .line 807
     :cond_1
     new-array v1, v2, [Ljava/lang/String;
 
-    .line 808
     .local v1, "list":[Ljava/lang/String;
     const/4 v0, 0x0
 
@@ -2603,7 +2346,6 @@
 
     if-ge v0, v3, :cond_0
 
-    .line 809
     iget-object v3, p0, Lcom/android/server/am/ProcessRecord;->pkgList:Landroid/util/ArrayMap;
 
     invoke-virtual {v3, v0}, Landroid/util/ArrayMap;->keyAt(I)Ljava/lang/Object;
@@ -2614,7 +2356,6 @@
 
     aput-object v3, v1, v0
 
-    .line 808
     add-int/lit8 v0, v0, 0x1
 
     goto :goto_0
@@ -2624,22 +2365,18 @@
     .locals 2
 
     .prologue
-    .line 754
     iget v0, p0, Lcom/android/server/am/ProcessRecord;->setAdj:I
 
     const/16 v1, 0x9
 
     if-lt v0, v1, :cond_0
 
-    .line 755
     iget-boolean v0, p0, Lcom/android/server/am/ProcessRecord;->hasStartedServices:Z
 
     if-eqz v0, :cond_0
 
-    .line 756
     const/16 v0, 0x8
 
-    .line 759
     :goto_0
     return v0
 
@@ -2653,14 +2390,12 @@
     .locals 4
 
     .prologue
-    .line 565
     iget-object v3, p0, Lcom/android/server/am/ProcessRecord;->activities:Ljava/util/ArrayList;
 
     invoke-virtual {v3}, Ljava/util/ArrayList;->size()I
 
     move-result v2
 
-    .line 566
     .local v2, "size":I
     const/4 v0, 0x0
 
@@ -2668,7 +2403,6 @@
     :goto_0
     if-ge v0, v2, :cond_1
 
-    .line 567
     iget-object v3, p0, Lcom/android/server/am/ProcessRecord;->activities:Ljava/util/ArrayList;
 
     invoke-virtual {v3, v0}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
@@ -2677,7 +2411,6 @@
 
     check-cast v1, Lcom/android/server/am/ActivityRecord;
 
-    .line 568
     .local v1, "r":Lcom/android/server/am/ActivityRecord;
     invoke-virtual {v1}, Lcom/android/server/am/ActivityRecord;->isInterestingToUserLocked()Z
 
@@ -2685,22 +2418,18 @@
 
     if-eqz v3, :cond_0
 
-    .line 569
     const/4 v3, 0x1
 
-    .line 572
     .end local v1    # "r":Lcom/android/server/am/ActivityRecord;
     :goto_1
     return v3
 
-    .line 566
     .restart local v1    # "r":Lcom/android/server/am/ActivityRecord;
     :cond_0
     add-int/lit8 v0, v0, 0x1
 
     goto :goto_0
 
-    .line 572
     .end local v1    # "r":Lcom/android/server/am/ActivityRecord;
     :cond_1
     const/4 v3, 0x0
@@ -2716,15 +2445,12 @@
     .prologue
     const/4 v4, 0x1
 
-    .line 624
     iget-boolean v0, p0, Lcom/android/server/am/ProcessRecord;->killedByAm:Z
 
     if-nez v0, :cond_1
 
-    .line 625
     if-eqz p2, :cond_0
 
-    .line 626
     const-string v0, "ActivityManager"
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -2773,7 +2499,6 @@
 
     invoke-static {v0, v1}, Landroid/util/Slog;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 629
     :cond_0
     const/16 v0, 0x7547
 
@@ -2821,12 +2546,10 @@
 
     invoke-static {v0, v1}, Landroid/util/EventLog;->writeEvent(I[Ljava/lang/Object;)I
 
-    .line 630
     iget v0, p0, Lcom/android/server/am/ProcessRecord;->pid:I
 
     invoke-static {v0}, Landroid/os/Process;->killProcessQuiet(I)V
 
-    .line 631
     iget-object v0, p0, Lcom/android/server/am/ProcessRecord;->info:Landroid/content/pm/ApplicationInfo;
 
     iget v0, v0, Landroid/content/pm/ApplicationInfo;->uid:I
@@ -2835,18 +2558,14 @@
 
     invoke-static {v0, v1}, Landroid/os/Process;->killProcessGroup(II)I
 
-    .line 632
     iget-boolean v0, p0, Lcom/android/server/am/ProcessRecord;->persistent:Z
 
     if-nez v0, :cond_1
 
-    .line 633
     iput-boolean v4, p0, Lcom/android/server/am/ProcessRecord;->killed:Z
 
-    .line 634
     iput-boolean v4, p0, Lcom/android/server/am/ProcessRecord;->killedByAm:Z
 
-    .line 637
     :cond_1
     return-void
 .end method
@@ -2857,19 +2576,15 @@
     .param p2, "tracker"    # Lcom/android/server/am/ProcessStatsService;
 
     .prologue
-    .line 515
     iget-object v2, p0, Lcom/android/server/am/ProcessRecord;->thread:Landroid/app/IApplicationThread;
 
     if-nez v2, :cond_3
 
-    .line 516
     iget-object v1, p0, Lcom/android/server/am/ProcessRecord;->baseProcessTracker:Lcom/android/internal/app/ProcessStats$ProcessState;
 
-    .line 517
     .local v1, "origBase":Lcom/android/internal/app/ProcessStats$ProcessState;
     if-eqz v1, :cond_0
 
-    .line 518
     const/4 v2, -0x1
 
     invoke-virtual {p2}, Lcom/android/server/am/ProcessStatsService;->getMemFactorLocked()I
@@ -2884,10 +2599,8 @@
 
     invoke-virtual/range {v1 .. v6}, Lcom/android/internal/app/ProcessStats$ProcessState;->setState(IIJLandroid/util/ArrayMap;)V
 
-    .line 520
     invoke-virtual {v1}, Lcom/android/internal/app/ProcessStats$ProcessState;->makeInactive()V
 
-    .line 522
     :cond_0
     iget-object v2, p0, Lcom/android/server/am/ProcessRecord;->info:Landroid/content/pm/ApplicationInfo;
 
@@ -2909,12 +2622,10 @@
 
     iput-object v2, p0, Lcom/android/server/am/ProcessRecord;->baseProcessTracker:Lcom/android/internal/app/ProcessStats$ProcessState;
 
-    .line 524
     iget-object v2, p0, Lcom/android/server/am/ProcessRecord;->baseProcessTracker:Lcom/android/internal/app/ProcessStats$ProcessState;
 
     invoke-virtual {v2}, Lcom/android/internal/app/ProcessStats$ProcessState;->makeActive()V
 
-    .line 525
     const/4 v7, 0x0
 
     .local v7, "i":I
@@ -2927,7 +2638,6 @@
 
     if-ge v7, v2, :cond_3
 
-    .line 526
     iget-object v2, p0, Lcom/android/server/am/ProcessRecord;->pkgList:Landroid/util/ArrayMap;
 
     invoke-virtual {v2, v7}, Landroid/util/ArrayMap;->valueAt(I)Ljava/lang/Object;
@@ -2936,7 +2646,6 @@
 
     check-cast v0, Lcom/android/internal/app/ProcessStats$ProcessStateHolder;
 
-    .line 527
     .local v0, "holder":Lcom/android/internal/app/ProcessStats$ProcessStateHolder;
     iget-object v2, v0, Lcom/android/internal/app/ProcessStats$ProcessStateHolder;->state:Lcom/android/internal/app/ProcessStats$ProcessState;
 
@@ -2946,12 +2655,10 @@
 
     if-eq v2, v1, :cond_1
 
-    .line 528
     iget-object v2, v0, Lcom/android/internal/app/ProcessStats$ProcessStateHolder;->state:Lcom/android/internal/app/ProcessStats$ProcessState;
 
     invoke-virtual {v2}, Lcom/android/internal/app/ProcessStats$ProcessState;->makeInactive()V
 
-    .line 530
     :cond_1
     iget-object v2, p0, Lcom/android/server/am/ProcessRecord;->pkgList:Landroid/util/ArrayMap;
 
@@ -2977,32 +2684,27 @@
 
     iput-object v2, v0, Lcom/android/internal/app/ProcessStats$ProcessStateHolder;->state:Lcom/android/internal/app/ProcessStats$ProcessState;
 
-    .line 532
     iget-object v2, v0, Lcom/android/internal/app/ProcessStats$ProcessStateHolder;->state:Lcom/android/internal/app/ProcessStats$ProcessState;
 
     iget-object v3, p0, Lcom/android/server/am/ProcessRecord;->baseProcessTracker:Lcom/android/internal/app/ProcessStats$ProcessState;
 
     if-eq v2, v3, :cond_2
 
-    .line 533
     iget-object v2, v0, Lcom/android/internal/app/ProcessStats$ProcessStateHolder;->state:Lcom/android/internal/app/ProcessStats$ProcessState;
 
     invoke-virtual {v2}, Lcom/android/internal/app/ProcessStats$ProcessState;->makeActive()V
 
-    .line 525
     :cond_2
     add-int/lit8 v7, v7, 0x1
 
     goto :goto_0
 
-    .line 537
     .end local v0    # "holder":Lcom/android/internal/app/ProcessStats$ProcessStateHolder;
     .end local v1    # "origBase":Lcom/android/internal/app/ProcessStats$ProcessState;
     .end local v7    # "i":I
     :cond_3
     iput-object p1, p0, Lcom/android/server/am/ProcessRecord;->thread:Landroid/app/IApplicationThread;
 
-    .line 538
     return-void
 .end method
 
@@ -3010,7 +2712,6 @@
     .locals 2
 
     .prologue
-    .line 706
     iget-object v1, p0, Lcom/android/server/am/ProcessRecord;->adjSource:Ljava/lang/Object;
 
     if-nez v1, :cond_0
@@ -3019,7 +2720,6 @@
 
     if-eqz v1, :cond_5
 
-    .line 707
     :cond_0
     new-instance v0, Ljava/lang/StringBuilder;
 
@@ -3027,20 +2727,17 @@
 
     invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(I)V
 
-    .line 708
     .local v0, "sb":Ljava/lang/StringBuilder;
     const/16 v1, 0x20
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
 
-    .line 709
     iget-object v1, p0, Lcom/android/server/am/ProcessRecord;->adjTarget:Ljava/lang/Object;
 
     instance-of v1, v1, Landroid/content/ComponentName;
 
     if-eqz v1, :cond_1
 
-    .line 710
     iget-object v1, p0, Lcom/android/server/am/ProcessRecord;->adjTarget:Ljava/lang/Object;
 
     check-cast v1, Landroid/content/ComponentName;
@@ -3051,25 +2748,21 @@
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 716
     :goto_0
     const-string v1, "<="
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 717
     iget-object v1, p0, Lcom/android/server/am/ProcessRecord;->adjSource:Ljava/lang/Object;
 
     instance-of v1, v1, Lcom/android/server/am/ProcessRecord;
 
     if-eqz v1, :cond_3
 
-    .line 718
     const-string v1, "Proc{"
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 719
     iget-object v1, p0, Lcom/android/server/am/ProcessRecord;->adjSource:Ljava/lang/Object;
 
     check-cast v1, Lcom/android/server/am/ProcessRecord;
@@ -3080,30 +2773,25 @@
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 720
-    const-string/jumbo v1, "}"
+    const-string v1, "}"
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 726
     :goto_1
     invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
     move-result-object v1
 
-    .line 728
     .end local v0    # "sb":Ljava/lang/StringBuilder;
     :goto_2
     return-object v1
 
-    .line 711
     .restart local v0    # "sb":Ljava/lang/StringBuilder;
     :cond_1
     iget-object v1, p0, Lcom/android/server/am/ProcessRecord;->adjTarget:Ljava/lang/Object;
 
     if-eqz v1, :cond_2
 
-    .line 712
     iget-object v1, p0, Lcom/android/server/am/ProcessRecord;->adjTarget:Ljava/lang/Object;
 
     invoke-virtual {v1}, Ljava/lang/Object;->toString()Ljava/lang/String;
@@ -3114,21 +2802,18 @@
 
     goto :goto_0
 
-    .line 714
     :cond_2
-    const-string/jumbo v1, "{null}"
+    const-string v1, "{null}"
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     goto :goto_0
 
-    .line 721
     :cond_3
     iget-object v1, p0, Lcom/android/server/am/ProcessRecord;->adjSource:Ljava/lang/Object;
 
     if-eqz v1, :cond_4
 
-    .line 722
     iget-object v1, p0, Lcom/android/server/am/ProcessRecord;->adjSource:Ljava/lang/Object;
 
     invoke-virtual {v1}, Ljava/lang/Object;->toString()Ljava/lang/String;
@@ -3139,15 +2824,13 @@
 
     goto :goto_1
 
-    .line 724
     :cond_4
-    const-string/jumbo v1, "{null}"
+    const-string v1, "{null}"
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     goto :goto_1
 
-    .line 728
     .end local v0    # "sb":Ljava/lang/StringBuilder;
     :cond_5
     const/4 v1, 0x0
@@ -3162,20 +2845,15 @@
     .prologue
     const/4 v8, 0x0
 
-    .line 541
     iput-object v8, p0, Lcom/android/server/am/ProcessRecord;->thread:Landroid/app/IApplicationThread;
 
-    .line 542
     iget-object v1, p0, Lcom/android/server/am/ProcessRecord;->baseProcessTracker:Lcom/android/internal/app/ProcessStats$ProcessState;
 
-    .line 543
     .local v1, "origBase":Lcom/android/internal/app/ProcessStats$ProcessState;
     if-eqz v1, :cond_2
 
-    .line 544
     if-eqz v1, :cond_0
 
-    .line 545
     const/4 v2, -0x1
 
     invoke-virtual {p1}, Lcom/android/server/am/ProcessStatsService;->getMemFactorLocked()I
@@ -3190,14 +2868,11 @@
 
     invoke-virtual/range {v1 .. v6}, Lcom/android/internal/app/ProcessStats$ProcessState;->setState(IIJLandroid/util/ArrayMap;)V
 
-    .line 547
     invoke-virtual {v1}, Lcom/android/internal/app/ProcessStats$ProcessState;->makeInactive()V
 
-    .line 549
     :cond_0
     iput-object v8, p0, Lcom/android/server/am/ProcessRecord;->baseProcessTracker:Lcom/android/internal/app/ProcessStats$ProcessState;
 
-    .line 550
     const/4 v7, 0x0
 
     .local v7, "i":I
@@ -3210,7 +2885,6 @@
 
     if-ge v7, v2, :cond_2
 
-    .line 551
     iget-object v2, p0, Lcom/android/server/am/ProcessRecord;->pkgList:Landroid/util/ArrayMap;
 
     invoke-virtual {v2, v7}, Landroid/util/ArrayMap;->valueAt(I)Ljava/lang/Object;
@@ -3219,7 +2893,6 @@
 
     check-cast v0, Lcom/android/internal/app/ProcessStats$ProcessStateHolder;
 
-    .line 552
     .local v0, "holder":Lcom/android/internal/app/ProcessStats$ProcessStateHolder;
     iget-object v2, v0, Lcom/android/internal/app/ProcessStats$ProcessStateHolder;->state:Lcom/android/internal/app/ProcessStats$ProcessState;
 
@@ -3229,21 +2902,17 @@
 
     if-eq v2, v1, :cond_1
 
-    .line 553
     iget-object v2, v0, Lcom/android/internal/app/ProcessStats$ProcessStateHolder;->state:Lcom/android/internal/app/ProcessStats$ProcessState;
 
     invoke-virtual {v2}, Lcom/android/internal/app/ProcessStats$ProcessState;->makeInactive()V
 
-    .line 555
     :cond_1
     iput-object v8, v0, Lcom/android/internal/app/ProcessStats$ProcessStateHolder;->state:Lcom/android/internal/app/ProcessStats$ProcessState;
 
-    .line 550
     add-int/lit8 v7, v7, 0x1
 
     goto :goto_0
 
-    .line 558
     .end local v0    # "holder":Lcom/android/internal/app/ProcessStats$ProcessStateHolder;
     .end local v7    # "i":I
     :cond_2
@@ -3255,59 +2924,48 @@
     .param p1, "adj"    # I
 
     .prologue
-    .line 602
     iget-boolean v0, p0, Lcom/android/server/am/ProcessRecord;->hasAboveClient:Z
 
     if-eqz v0, :cond_0
 
-    .line 608
     if-gez p1, :cond_1
 
-    .line 620
     :cond_0
     :goto_0
     return p1
 
-    .line 610
     :cond_1
     const/4 v0, 0x1
 
     if-ge p1, v0, :cond_2
 
-    .line 611
     const/4 p1, 0x1
 
     goto :goto_0
 
-    .line 612
     :cond_2
     const/4 v0, 0x2
 
     if-ge p1, v0, :cond_3
 
-    .line 613
     const/4 p1, 0x2
 
     goto :goto_0
 
-    .line 614
     :cond_3
     const/16 v0, 0x9
 
     if-ge p1, v0, :cond_4
 
-    .line 615
     const/16 p1, 0x9
 
     goto :goto_0
 
-    .line 616
     :cond_4
     const/16 v0, 0xf
 
     if-ge p1, v0, :cond_0
 
-    .line 617
     add-int/lit8 p1, p1, 0x1
 
     goto :goto_0
@@ -3320,25 +2978,21 @@
     .prologue
     const/4 v10, 0x1
 
-    .line 772
     iget-object v1, p0, Lcom/android/server/am/ProcessRecord;->pkgList:Landroid/util/ArrayMap;
 
     invoke-virtual {v1}, Landroid/util/ArrayMap;->size()I
 
     move-result v0
 
-    .line 773
     .local v0, "N":I
     iget-object v1, p0, Lcom/android/server/am/ProcessRecord;->baseProcessTracker:Lcom/android/internal/app/ProcessStats$ProcessState;
 
     if-eqz v1, :cond_3
 
-    .line 774
     invoke-static {}, Landroid/os/SystemClock;->uptimeMillis()J
 
     move-result-wide v4
 
-    .line 775
     .local v4, "now":J
     iget-object v1, p0, Lcom/android/server/am/ProcessRecord;->baseProcessTracker:Lcom/android/internal/app/ProcessStats$ProcessState;
 
@@ -3352,17 +3006,14 @@
 
     invoke-virtual/range {v1 .. v6}, Lcom/android/internal/app/ProcessStats$ProcessState;->setState(IIJLandroid/util/ArrayMap;)V
 
-    .line 777
     if-eq v0, v10, :cond_2
 
-    .line 778
     const/4 v8, 0x0
 
     .local v8, "i":I
     :goto_0
     if-ge v8, v0, :cond_1
 
-    .line 779
     iget-object v1, p0, Lcom/android/server/am/ProcessRecord;->pkgList:Landroid/util/ArrayMap;
 
     invoke-virtual {v1, v8}, Landroid/util/ArrayMap;->valueAt(I)Ljava/lang/Object;
@@ -3371,7 +3022,6 @@
 
     check-cast v7, Lcom/android/internal/app/ProcessStats$ProcessStateHolder;
 
-    .line 780
     .local v7, "holder":Lcom/android/internal/app/ProcessStats$ProcessStateHolder;
     iget-object v1, v7, Lcom/android/internal/app/ProcessStats$ProcessStateHolder;->state:Lcom/android/internal/app/ProcessStats$ProcessState;
 
@@ -3383,25 +3033,21 @@
 
     if-eq v1, v2, :cond_0
 
-    .line 781
     iget-object v1, v7, Lcom/android/internal/app/ProcessStats$ProcessStateHolder;->state:Lcom/android/internal/app/ProcessStats$ProcessState;
 
     invoke-virtual {v1}, Lcom/android/internal/app/ProcessStats$ProcessState;->makeInactive()V
 
-    .line 778
     :cond_0
     add-int/lit8 v8, v8, 0x1
 
     goto :goto_0
 
-    .line 785
     .end local v7    # "holder":Lcom/android/internal/app/ProcessStats$ProcessStateHolder;
     :cond_1
     iget-object v1, p0, Lcom/android/server/am/ProcessRecord;->pkgList:Landroid/util/ArrayMap;
 
     invoke-virtual {v1}, Landroid/util/ArrayMap;->clear()V
 
-    .line 786
     iget-object v1, p0, Lcom/android/server/am/ProcessRecord;->info:Landroid/content/pm/ApplicationInfo;
 
     iget-object v1, v1, Landroid/content/pm/ApplicationInfo;->packageName:Ljava/lang/String;
@@ -3420,7 +3066,6 @@
 
     move-result-object v9
 
-    .line 788
     .local v9, "ps":Lcom/android/internal/app/ProcessStats$ProcessState;
     new-instance v7, Lcom/android/internal/app/ProcessStats$ProcessStateHolder;
 
@@ -3430,11 +3075,9 @@
 
     invoke-direct {v7, v1}, Lcom/android/internal/app/ProcessStats$ProcessStateHolder;-><init>(I)V
 
-    .line 790
     .restart local v7    # "holder":Lcom/android/internal/app/ProcessStats$ProcessStateHolder;
     iput-object v9, v7, Lcom/android/internal/app/ProcessStats$ProcessStateHolder;->state:Lcom/android/internal/app/ProcessStats$ProcessState;
 
-    .line 791
     iget-object v1, p0, Lcom/android/server/am/ProcessRecord;->pkgList:Landroid/util/ArrayMap;
 
     iget-object v2, p0, Lcom/android/server/am/ProcessRecord;->info:Landroid/content/pm/ApplicationInfo;
@@ -3443,15 +3086,12 @@
 
     invoke-virtual {v1, v2, v7}, Landroid/util/ArrayMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 792
     iget-object v1, p0, Lcom/android/server/am/ProcessRecord;->baseProcessTracker:Lcom/android/internal/app/ProcessStats$ProcessState;
 
     if-eq v9, v1, :cond_2
 
-    .line 793
     invoke-virtual {v9}, Lcom/android/internal/app/ProcessStats$ProcessState;->makeActive()V
 
-    .line 800
     .end local v4    # "now":J
     .end local v7    # "holder":Lcom/android/internal/app/ProcessStats$ProcessStateHolder;
     .end local v8    # "i":I
@@ -3460,16 +3100,13 @@
     :goto_1
     return-void
 
-    .line 796
     :cond_3
     if-eq v0, v10, :cond_2
 
-    .line 797
     iget-object v1, p0, Lcom/android/server/am/ProcessRecord;->pkgList:Landroid/util/ArrayMap;
 
     invoke-virtual {v1}, Landroid/util/ArrayMap;->clear()V
 
-    .line 798
     iget-object v1, p0, Lcom/android/server/am/ProcessRecord;->pkgList:Landroid/util/ArrayMap;
 
     iget-object v2, p0, Lcom/android/server/am/ProcessRecord;->info:Landroid/content/pm/ApplicationInfo;
@@ -3496,16 +3133,12 @@
     .prologue
     const/4 v0, 0x0
 
-    .line 509
     iput p1, p0, Lcom/android/server/am/ProcessRecord;->pid:I
 
-    .line 510
     iput-object v0, p0, Lcom/android/server/am/ProcessRecord;->shortStringName:Ljava/lang/String;
 
-    .line 511
     iput-object v0, p0, Lcom/android/server/am/ProcessRecord;->stringName:Ljava/lang/String;
 
-    .line 512
     return-void
 .end method
 
@@ -3521,15 +3154,12 @@
 
     const/4 v4, 0x0
 
-    .line 641
     iget-boolean v0, p0, Lcom/android/server/am/ProcessRecord;->killedByAm:Z
 
     if-nez v0, :cond_3
 
-    .line 642
     if-eqz p2, :cond_0
 
-    .line 643
     const-string v0, "ActivityManager"
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -3578,7 +3208,6 @@
 
     invoke-static {v0, v1}, Landroid/util/Slog;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 646
     :cond_0
     const/16 v0, 0x7547
 
@@ -3624,43 +3253,36 @@
 
     invoke-static {v0, v1}, Landroid/util/EventLog;->writeEvent(I[Ljava/lang/Object;)I
 
-    .line 647
     iget-boolean v0, p0, Lcom/android/server/am/ProcessRecord;->SAMP_DEBUG_TRACE:Z
 
     if-eqz v0, :cond_1
 
-    const-string/jumbo v0, "sdha_killProcessQuiet"
+    const-string v0, "sdha_killProcessQuiet"
 
     invoke-static {v6, v7, v0, v4}, Landroid/os/Trace;->asyncTraceBegin(JLjava/lang/String;I)V
 
-    .line 648
     :cond_1
     iget v0, p0, Lcom/android/server/am/ProcessRecord;->pid:I
 
     invoke-static {v0}, Landroid/os/Process;->killProcessQuiet(I)V
 
-    .line 649
     iget-boolean v0, p0, Lcom/android/server/am/ProcessRecord;->SAMP_DEBUG_TRACE:Z
 
     if-eqz v0, :cond_2
 
-    const-string/jumbo v0, "sdha_killProcessQuiet"
+    const-string v0, "sdha_killProcessQuiet"
 
     invoke-static {v6, v7, v0, v4}, Landroid/os/Trace;->asyncTraceEnd(JLjava/lang/String;I)V
 
-    .line 650
     :cond_2
     iget-boolean v0, p0, Lcom/android/server/am/ProcessRecord;->persistent:Z
 
     if-nez v0, :cond_3
 
-    .line 651
     iput-boolean v5, p0, Lcom/android/server/am/ProcessRecord;->killed:Z
 
-    .line 652
     iput-boolean v5, p0, Lcom/android/server/am/ProcessRecord;->killedByAm:Z
 
-    .line 655
     :cond_3
     return-void
 .end method
@@ -3669,22 +3291,18 @@
     .locals 3
 
     .prologue
-    .line 576
     iget-object v1, p0, Lcom/android/server/am/ProcessRecord;->activities:Ljava/util/ArrayList;
 
     invoke-virtual {v1}, Ljava/util/ArrayList;->size()I
 
     move-result v0
 
-    .line 577
     .local v0, "i":I
     :goto_0
     if-lez v0, :cond_0
 
-    .line 578
     add-int/lit8 v0, v0, -0x1
 
-    .line 579
     iget-object v1, p0, Lcom/android/server/am/ProcessRecord;->activities:Ljava/util/ArrayList;
 
     invoke-virtual {v1, v0}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
@@ -3699,7 +3317,6 @@
 
     goto :goto_0
 
-    .line 581
     :cond_0
     return-void
 .end method
@@ -3708,19 +3325,15 @@
     .locals 2
 
     .prologue
-    .line 659
     iget-object v1, p0, Lcom/android/server/am/ProcessRecord;->shortStringName:Ljava/lang/String;
 
     if-eqz v1, :cond_0
 
-    .line 660
     iget-object v1, p0, Lcom/android/server/am/ProcessRecord;->shortStringName:Ljava/lang/String;
 
-    .line 664
     :goto_0
     return-object v1
 
-    .line 662
     :cond_0
     new-instance v0, Ljava/lang/StringBuilder;
 
@@ -3728,11 +3341,9 @@
 
     invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(I)V
 
-    .line 663
     .local v0, "sb":Ljava/lang/StringBuilder;
     invoke-virtual {p0, v0}, Lcom/android/server/am/ProcessRecord;->toShortString(Ljava/lang/StringBuilder;)V
 
-    .line 664
     invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
     move-result-object v1
@@ -3749,55 +3360,45 @@
     .prologue
     const/16 v2, 0x2710
 
-    .line 668
     iget v1, p0, Lcom/android/server/am/ProcessRecord;->pid:I
 
     invoke-virtual {p1, v1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
-    .line 669
     const/16 v1, 0x3a
 
     invoke-virtual {p1, v1}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
 
-    .line 670
     iget-object v1, p0, Lcom/android/server/am/ProcessRecord;->processName:Ljava/lang/String;
 
     invoke-virtual {p1, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 671
     const/16 v1, 0x2f
 
     invoke-virtual {p1, v1}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
 
-    .line 672
     iget-object v1, p0, Lcom/android/server/am/ProcessRecord;->info:Landroid/content/pm/ApplicationInfo;
 
     iget v1, v1, Landroid/content/pm/ApplicationInfo;->uid:I
 
     if-ge v1, v2, :cond_1
 
-    .line 673
     iget v1, p0, Lcom/android/server/am/ProcessRecord;->uid:I
 
     invoke-virtual {p1, v1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
-    .line 690
     :cond_0
     :goto_0
     return-void
 
-    .line 675
     :cond_1
     const/16 v1, 0x75
 
     invoke-virtual {p1, v1}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
 
-    .line 676
     iget v1, p0, Lcom/android/server/am/ProcessRecord;->userId:I
 
     invoke-virtual {p1, v1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
-    .line 677
     iget-object v1, p0, Lcom/android/server/am/ProcessRecord;->info:Landroid/content/pm/ApplicationInfo;
 
     iget v1, v1, Landroid/content/pm/ApplicationInfo;->uid:I
@@ -3806,21 +3407,17 @@
 
     move-result v0
 
-    .line 678
     .local v0, "appId":I
     if-lt v0, v2, :cond_2
 
-    .line 679
     const/16 v1, 0x61
 
     invoke-virtual {p1, v1}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
 
-    .line 680
     add-int/lit16 v1, v0, -0x2710
 
     invoke-virtual {p1, v1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
-    .line 685
     :goto_1
     iget v1, p0, Lcom/android/server/am/ProcessRecord;->uid:I
 
@@ -3830,12 +3427,10 @@
 
     if-eq v1, v2, :cond_0
 
-    .line 686
     const/16 v1, 0x69
 
     invoke-virtual {p1, v1}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
 
-    .line 687
     iget v1, p0, Lcom/android/server/am/ProcessRecord;->uid:I
 
     invoke-static {v1}, Landroid/os/UserHandle;->getAppId(I)I
@@ -3850,13 +3445,11 @@
 
     goto :goto_0
 
-    .line 682
     :cond_2
     const/16 v1, 0x73
 
     invoke-virtual {p1, v1}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
 
-    .line 683
     invoke-virtual {p1, v0}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
     goto :goto_1
@@ -3866,19 +3459,15 @@
     .locals 2
 
     .prologue
-    .line 693
     iget-object v1, p0, Lcom/android/server/am/ProcessRecord;->stringName:Ljava/lang/String;
 
     if-eqz v1, :cond_0
 
-    .line 694
     iget-object v1, p0, Lcom/android/server/am/ProcessRecord;->stringName:Ljava/lang/String;
 
-    .line 702
     :goto_0
     return-object v1
 
-    .line 696
     :cond_0
     new-instance v0, Ljava/lang/StringBuilder;
 
@@ -3886,13 +3475,11 @@
 
     invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(I)V
 
-    .line 697
     .local v0, "sb":Ljava/lang/StringBuilder;
     const-string v1, "ProcessRecord{"
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 698
     invoke-static {p0}, Ljava/lang/System;->identityHashCode(Ljava/lang/Object;)I
 
     move-result v1
@@ -3903,20 +3490,16 @@
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 699
     const/16 v1, 0x20
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
 
-    .line 700
     invoke-virtual {p0, v0}, Lcom/android/server/am/ProcessRecord;->toShortString(Ljava/lang/StringBuilder;)V
 
-    .line 701
     const/16 v1, 0x7d
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
 
-    .line 702
     invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
     move-result-object v1
@@ -3930,7 +3513,6 @@
     .locals 3
 
     .prologue
-    .line 584
     iget-object v0, p0, Lcom/android/server/am/ProcessRecord;->deathRecipient:Landroid/os/IBinder$DeathRecipient;
 
     if-eqz v0, :cond_0
@@ -3939,7 +3521,6 @@
 
     if-eqz v0, :cond_0
 
-    .line 585
     iget-object v0, p0, Lcom/android/server/am/ProcessRecord;->thread:Landroid/app/IApplicationThread;
 
     invoke-interface {v0}, Landroid/app/IApplicationThread;->asBinder()Landroid/os/IBinder;
@@ -3952,13 +3533,11 @@
 
     invoke-interface {v0, v1, v2}, Landroid/os/IBinder;->unlinkToDeath(Landroid/os/IBinder$DeathRecipient;I)Z
 
-    .line 587
     :cond_0
     const/4 v0, 0x0
 
     iput-object v0, p0, Lcom/android/server/am/ProcessRecord;->deathRecipient:Landroid/os/IBinder$DeathRecipient;
 
-    .line 588
     return-void
 .end method
 
@@ -3966,12 +3545,10 @@
     .locals 3
 
     .prologue
-    .line 591
     const/4 v2, 0x0
 
     iput-boolean v2, p0, Lcom/android/server/am/ProcessRecord;->hasAboveClient:Z
 
-    .line 592
     iget-object v2, p0, Lcom/android/server/am/ProcessRecord;->connections:Landroid/util/ArraySet;
 
     invoke-virtual {v2}, Landroid/util/ArraySet;->size()I
@@ -3984,7 +3561,6 @@
     :goto_0
     if-ltz v1, :cond_0
 
-    .line 593
     iget-object v2, p0, Lcom/android/server/am/ProcessRecord;->connections:Landroid/util/ArraySet;
 
     invoke-virtual {v2, v1}, Landroid/util/ArraySet;->valueAt(I)Ljava/lang/Object;
@@ -3993,7 +3569,6 @@
 
     check-cast v0, Lcom/android/server/am/ConnectionRecord;
 
-    .line 594
     .local v0, "cr":Lcom/android/server/am/ConnectionRecord;
     iget v2, v0, Lcom/android/server/am/ConnectionRecord;->flags:I
 
@@ -4001,17 +3576,14 @@
 
     if-eqz v2, :cond_1
 
-    .line 595
     const/4 v2, 0x1
 
     iput-boolean v2, p0, Lcom/android/server/am/ProcessRecord;->hasAboveClient:Z
 
-    .line 599
     .end local v0    # "cr":Lcom/android/server/am/ConnectionRecord;
     :cond_0
     return-void
 
-    .line 592
     .restart local v0    # "cr":Lcom/android/server/am/ConnectionRecord;
     :cond_1
     add-int/lit8 v1, v1, -0x1

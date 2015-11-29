@@ -36,27 +36,20 @@
     .param p4, "ci"    # [Lcom/android/internal/telephony/CommandsInterface;
 
     .prologue
-    .line 89
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 90
     const-string v0, "Constructor - Enter"
 
     invoke-direct {p0, v0}, Lcom/android/internal/telephony/ProxyController;->logd(Ljava/lang/String;)V
 
-    .line 92
     iput-object p1, p0, Lcom/android/internal/telephony/ProxyController;->mContext:Landroid/content/Context;
 
-    .line 93
     iput-object p2, p0, Lcom/android/internal/telephony/ProxyController;->mProxyPhones:[Lcom/android/internal/telephony/Phone;
 
-    .line 94
     iput-object p3, p0, Lcom/android/internal/telephony/ProxyController;->mUiccController:Lcom/android/internal/telephony/uicc/UiccController;
 
-    .line 95
     iput-object p4, p0, Lcom/android/internal/telephony/ProxyController;->mCi:[Lcom/android/internal/telephony/CommandsInterface;
 
-    .line 97
     check-cast p2, [Lcom/android/internal/telephony/PhoneProxy;
 
     .end local p2    # "phoneProxy":[Lcom/android/internal/telephony/Phone;
@@ -68,7 +61,6 @@
 
     sput-object v0, Lcom/android/internal/telephony/ProxyController;->mDctController:Lcom/android/internal/telephony/dataconnection/DctController;
 
-    .line 98
     new-instance v0, Lcom/android/internal/telephony/UiccPhoneBookController;
 
     iget-object v1, p0, Lcom/android/internal/telephony/ProxyController;->mProxyPhones:[Lcom/android/internal/telephony/Phone;
@@ -77,7 +69,6 @@
 
     iput-object v0, p0, Lcom/android/internal/telephony/ProxyController;->mUiccPhoneBookController:Lcom/android/internal/telephony/UiccPhoneBookController;
 
-    .line 99
     new-instance v0, Lcom/android/internal/telephony/PhoneSubInfoController;
 
     iget-object v1, p0, Lcom/android/internal/telephony/ProxyController;->mProxyPhones:[Lcom/android/internal/telephony/Phone;
@@ -86,7 +77,6 @@
 
     iput-object v0, p0, Lcom/android/internal/telephony/ProxyController;->mPhoneSubInfoController:Lcom/android/internal/telephony/PhoneSubInfoController;
 
-    .line 100
     new-instance v0, Lcom/android/internal/telephony/UiccSmsController;
 
     iget-object v1, p0, Lcom/android/internal/telephony/ProxyController;->mProxyPhones:[Lcom/android/internal/telephony/Phone;
@@ -95,12 +85,10 @@
 
     iput-object v0, p0, Lcom/android/internal/telephony/ProxyController;->mUiccSmsController:Lcom/android/internal/telephony/UiccSmsController;
 
-    .line 103
     const-string v0, "Constructor - Exit"
 
     invoke-direct {p0, v0}, Lcom/android/internal/telephony/ProxyController;->logd(Ljava/lang/String;)V
 
-    .line 104
     return-void
 .end method
 
@@ -108,7 +96,6 @@
     .locals 1
 
     .prologue
-    .line 85
     sget-object v0, Lcom/android/internal/telephony/ProxyController;->sProxyController:Lcom/android/internal/telephony/ProxyController;
 
     return-object v0
@@ -122,19 +109,16 @@
     .param p3, "ci"    # [Lcom/android/internal/telephony/CommandsInterface;
 
     .prologue
-    .line 78
     sget-object v0, Lcom/android/internal/telephony/ProxyController;->sProxyController:Lcom/android/internal/telephony/ProxyController;
 
     if-nez v0, :cond_0
 
-    .line 79
     new-instance v0, Lcom/android/internal/telephony/ProxyController;
 
     invoke-direct {v0, p0, p1, p2, p3}, Lcom/android/internal/telephony/ProxyController;-><init>(Landroid/content/Context;[Lcom/android/internal/telephony/Phone;Lcom/android/internal/telephony/uicc/UiccController;[Lcom/android/internal/telephony/CommandsInterface;)V
 
     sput-object v0, Lcom/android/internal/telephony/ProxyController;->sProxyController:Lcom/android/internal/telephony/ProxyController;
 
-    .line 81
     :cond_0
     sget-object v0, Lcom/android/internal/telephony/ProxyController;->sProxyController:Lcom/android/internal/telephony/ProxyController;
 
@@ -146,12 +130,10 @@
     .param p1, "string"    # Ljava/lang/String;
 
     .prologue
-    .line 151
     const-string v0, "ProxyController"
 
     invoke-static {v0, p1}, Landroid/telephony/Rlog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 152
     return-void
 .end method
 
@@ -163,7 +145,6 @@
     .param p2, "dataCleanedUpMsg"    # Landroid/os/Message;
 
     .prologue
-    .line 116
     iget-object v0, p0, Lcom/android/internal/telephony/ProxyController;->mProxyPhones:[Lcom/android/internal/telephony/Phone;
 
     aget-object v0, v0, p1
@@ -174,7 +155,6 @@
 
     invoke-virtual {v0, v1, p2}, Lcom/android/internal/telephony/PhoneProxy;->setInternalDataEnabled(ZLandroid/os/Message;)V
 
-    .line 117
     return-void
 .end method
 
@@ -183,7 +163,6 @@
     .param p1, "sub"    # I
 
     .prologue
-    .line 111
     iget-object v0, p0, Lcom/android/internal/telephony/ProxyController;->mProxyPhones:[Lcom/android/internal/telephony/Phone;
 
     aget-object v0, v0, p1
@@ -194,7 +173,6 @@
 
     invoke-virtual {v0, v1}, Lcom/android/internal/telephony/PhoneProxy;->setInternalDataEnabled(Z)V
 
-    .line 112
     return-void
 .end method
 
@@ -203,7 +181,6 @@
     .param p1, "subId"    # J
 
     .prologue
-    .line 140
     invoke-static {}, Lcom/android/internal/telephony/SubscriptionController;->getInstance()Lcom/android/internal/telephony/SubscriptionController;
 
     move-result-object v2
@@ -212,7 +189,6 @@
 
     move-result v1
 
-    .line 142
     .local v1, "phoneId":I
     if-ltz v1, :cond_0
 
@@ -226,7 +202,6 @@
 
     if-ge v1, v2, :cond_0
 
-    .line 143
     iget-object v2, p0, Lcom/android/internal/telephony/ProxyController;->mProxyPhones:[Lcom/android/internal/telephony/Phone;
 
     aget-object v2, v2, v1
@@ -237,7 +212,6 @@
 
     move-result-object v0
 
-    .line 144
     .local v0, "activePhone":Lcom/android/internal/telephony/Phone;
     check-cast v0, Lcom/android/internal/telephony/PhoneBase;
 
@@ -248,7 +222,6 @@
 
     move-result v2
 
-    .line 146
     :goto_0
     return v2
 
@@ -266,7 +239,6 @@
     .param p5, "obj"    # Ljava/lang/Object;
 
     .prologue
-    .line 124
     invoke-static {}, Lcom/android/internal/telephony/SubscriptionController;->getInstance()Lcom/android/internal/telephony/SubscriptionController;
 
     move-result-object v1
@@ -275,7 +247,6 @@
 
     move-result v0
 
-    .line 126
     .local v0, "phoneId":I
     if-ltz v0, :cond_0
 
@@ -289,7 +260,6 @@
 
     if-ge v0, v1, :cond_0
 
-    .line 127
     iget-object v1, p0, Lcom/android/internal/telephony/ProxyController;->mProxyPhones:[Lcom/android/internal/telephony/Phone;
 
     aget-object v1, v1, v0
@@ -298,7 +268,6 @@
 
     invoke-virtual {v1, p3, p4, p5}, Lcom/android/internal/telephony/PhoneProxy;->registerForAllDataDisconnected(Landroid/os/Handler;ILjava/lang/Object;)V
 
-    .line 129
     :cond_0
     return-void
 .end method
@@ -309,7 +278,6 @@
     .param p3, "h"    # Landroid/os/Handler;
 
     .prologue
-    .line 132
     invoke-static {}, Lcom/android/internal/telephony/SubscriptionController;->getInstance()Lcom/android/internal/telephony/SubscriptionController;
 
     move-result-object v1
@@ -318,7 +286,6 @@
 
     move-result v0
 
-    .line 134
     .local v0, "phoneId":I
     if-ltz v0, :cond_0
 
@@ -332,7 +299,6 @@
 
     if-ge v0, v1, :cond_0
 
-    .line 135
     iget-object v1, p0, Lcom/android/internal/telephony/ProxyController;->mProxyPhones:[Lcom/android/internal/telephony/Phone;
 
     aget-object v1, v1, v0
@@ -341,7 +307,6 @@
 
     invoke-virtual {v1, p3}, Lcom/android/internal/telephony/PhoneProxy;->unregisterForAllDataDisconnected(Landroid/os/Handler;)V
 
-    .line 137
     :cond_0
     return-void
 .end method
@@ -351,7 +316,6 @@
     .param p1, "sub"    # I
 
     .prologue
-    .line 120
     iget-object v0, p0, Lcom/android/internal/telephony/ProxyController;->mProxyPhones:[Lcom/android/internal/telephony/Phone;
 
     aget-object v0, v0, p1
@@ -360,7 +324,6 @@
 
     invoke-virtual {v0}, Lcom/android/internal/telephony/PhoneProxy;->updateCurrentCarrierInProvider()Z
 
-    .line 121
     return-void
 .end method
 
@@ -369,7 +332,6 @@
     .param p1, "sub"    # I
 
     .prologue
-    .line 107
     iget-object v0, p0, Lcom/android/internal/telephony/ProxyController;->mProxyPhones:[Lcom/android/internal/telephony/Phone;
 
     aget-object v0, v0, p1
@@ -378,6 +340,5 @@
 
     invoke-virtual {v0}, Lcom/android/internal/telephony/PhoneProxy;->updateDataConnectionTracker()V
 
-    .line 108
     return-void
 .end method

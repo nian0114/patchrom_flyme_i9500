@@ -19,7 +19,6 @@
     .locals 0
 
     .prologue
-    .line 821
     invoke-direct {p0}, Landroid/bluetooth/IBluetoothManagerCallback$Stub;-><init>()V
 
     return-void
@@ -36,25 +35,20 @@
     .end annotation
 
     .prologue
-    .line 832
     const-class v1, Landroid/bluetooth/BluetoothDevice;
 
     monitor-enter v1
 
-    .line 833
     const/4 v0, 0x0
 
     :try_start_0
     # setter for: Landroid/bluetooth/BluetoothDevice;->sService:Landroid/bluetooth/IBluetooth;
     invoke-static {v0}, Landroid/bluetooth/BluetoothDevice;->access$002(Landroid/bluetooth/IBluetooth;)Landroid/bluetooth/IBluetooth;
 
-    .line 834
     monitor-exit v1
 
-    .line 835
     return-void
 
-    .line 834
     :catchall_0
     move-exception v0
 
@@ -75,23 +69,18 @@
     .end annotation
 
     .prologue
-    .line 825
     const-class v1, Landroid/bluetooth/BluetoothDevice;
 
     monitor-enter v1
 
-    .line 826
     :try_start_0
     # setter for: Landroid/bluetooth/BluetoothDevice;->sService:Landroid/bluetooth/IBluetooth;
     invoke-static {p1}, Landroid/bluetooth/BluetoothDevice;->access$002(Landroid/bluetooth/IBluetooth;)Landroid/bluetooth/IBluetooth;
 
-    .line 827
     monitor-exit v1
 
-    .line 828
     return-void
 
-    .line 827
     :catchall_0
     move-exception v0
 

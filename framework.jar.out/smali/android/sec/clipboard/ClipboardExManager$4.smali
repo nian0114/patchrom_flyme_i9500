@@ -30,7 +30,6 @@
     .locals 0
 
     .prologue
-    .line 690
     iput-object p1, p0, Landroid/sec/clipboard/ClipboardExManager$4;->this$0:Landroid/sec/clipboard/ClipboardExManager;
 
     iput-boolean p2, p0, Landroid/sec/clipboard/ClipboardExManager$4;->val$setPrimaryData:Z
@@ -52,17 +51,14 @@
 
     const/4 v4, 0x0
 
-    .line 700
     const/4 v0, 0x0
 
-    .line 702
     .local v0, "Result":Z
     :try_start_0
     iget-boolean v5, p0, Landroid/sec/clipboard/ClipboardExManager$4;->val$setPrimaryData:Z
 
     if-eqz v5, :cond_2
 
-    .line 703
     iget-object v5, p0, Landroid/sec/clipboard/ClipboardExManager$4;->val$clipData:Landroid/sec/clipboard/data/ClipboardData;
 
     if-eqz v5, :cond_1
@@ -108,13 +104,11 @@
 
     move v0, v3
 
-    .line 708
     :goto_0
     iget-boolean v3, p0, Landroid/sec/clipboard/ClipboardExManager$4;->val$setPrimaryData:Z
 
     if-eqz v3, :cond_0
 
-    .line 709
     iget-object v3, p0, Landroid/sec/clipboard/ClipboardExManager$4;->this$0:Landroid/sec/clipboard/ClipboardExManager;
 
     # getter for: Landroid/sec/clipboard/ClipboardExManager;->mSetDataHandler:Landroid/os/Handler;
@@ -126,16 +120,13 @@
 
     move-result-object v2
 
-    .line 711
     .local v2, "msg":Landroid/os/Message;
     if-eqz v0, :cond_4
 
-    .line 712
     const/4 v3, 0x0
 
     iput v3, v2, Landroid/os/Message;->what:I
 
-    .line 716
     :goto_1
     iget-object v3, p0, Landroid/sec/clipboard/ClipboardExManager$4;->this$0:Landroid/sec/clipboard/ClipboardExManager;
 
@@ -146,7 +137,6 @@
 
     invoke-virtual {v3, v2}, Landroid/os/Handler;->sendMessage(Landroid/os/Message;)Z
 
-    .line 722
     .end local v2    # "msg":Landroid/os/Message;
     :cond_0
     :goto_2
@@ -155,10 +145,8 @@
     :cond_1
     move v0, v4
 
-    .line 703
     goto :goto_0
 
-    .line 705
     :cond_2
     iget-object v5, p0, Landroid/sec/clipboard/ClipboardExManager$4;->val$clipData:Landroid/sec/clipboard/data/ClipboardData;
 
@@ -202,7 +190,6 @@
 
     goto :goto_3
 
-    .line 714
     .restart local v2    # "msg":Landroid/os/Message;
     :cond_4
     const/4 v3, 0x1
@@ -213,12 +200,10 @@
 
     goto :goto_1
 
-    .line 718
     .end local v2    # "msg":Landroid/os/Message;
     :catch_0
     move-exception v1
 
-    .line 719
     .local v1, "e":Ljava/lang/Exception;
     sget-boolean v3, Landroid/sec/clipboard/data/ClipboardDefine;->DEBUG:Z
 
@@ -226,11 +211,10 @@
 
     const-string v3, "ClipboardServiceEx"
 
-    const-string/jumbo v4, "setData(ClipboardData)(RemoteException): "
+    const-string v4, "setData(ClipboardData)(RemoteException): "
 
     invoke-static {v3, v4}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 720
     :cond_5
     invoke-virtual {v1}, Ljava/lang/Exception;->printStackTrace()V
 

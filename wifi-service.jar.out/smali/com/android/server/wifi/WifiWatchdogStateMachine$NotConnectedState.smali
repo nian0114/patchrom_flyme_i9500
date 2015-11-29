@@ -23,7 +23,6 @@
     .locals 0
 
     .prologue
-    .line 1302
     iput-object p1, p0, Lcom/android/server/wifi/WifiWatchdogStateMachine$NotConnectedState;->this$0:Lcom/android/server/wifi/WifiWatchdogStateMachine;
 
     invoke-direct {p0}, Lcom/android/internal/util/State;-><init>()V
@@ -39,7 +38,6 @@
     .prologue
     const/4 v3, 0x0
 
-    .line 1305
     # getter for: Lcom/android/server/wifi/WifiWatchdogStateMachine;->DBG:Z
     invoke-static {}, Lcom/android/server/wifi/WifiWatchdogStateMachine;->access$2100()Z
 
@@ -56,14 +54,12 @@
     # invokes: Lcom/android/server/wifi/WifiWatchdogStateMachine;->logd(Ljava/lang/String;)V
     invoke-static {v0, v1}, Lcom/android/server/wifi/WifiWatchdogStateMachine;->access$6900(Lcom/android/server/wifi/WifiWatchdogStateMachine;Ljava/lang/String;)V
 
-    .line 1307
     :cond_0
     iget-object v0, p0, Lcom/android/server/wifi/WifiWatchdogStateMachine$NotConnectedState;->this$0:Lcom/android/server/wifi/WifiWatchdogStateMachine;
 
     # setter for: Lcom/android/server/wifi/WifiWatchdogStateMachine;->mMaxAvoidCount:I
     invoke-static {v0, v3}, Lcom/android/server/wifi/WifiWatchdogStateMachine;->access$7002(Lcom/android/server/wifi/WifiWatchdogStateMachine;I)I
 
-    .line 1308
     iget-object v0, p0, Lcom/android/server/wifi/WifiWatchdogStateMachine$NotConnectedState;->this$0:Lcom/android/server/wifi/WifiWatchdogStateMachine;
 
     const/4 v1, 0x1
@@ -71,12 +67,10 @@
     # invokes: Lcom/android/server/wifi/WifiWatchdogStateMachine;->setL2State(I)V
     invoke-static {v0, v1}, Lcom/android/server/wifi/WifiWatchdogStateMachine;->access$5400(Lcom/android/server/wifi/WifiWatchdogStateMachine;I)V
 
-    .line 1309
     iget-object v0, p0, Lcom/android/server/wifi/WifiWatchdogStateMachine$NotConnectedState;->this$0:Lcom/android/server/wifi/WifiWatchdogStateMachine;
 
     invoke-virtual {v0}, Lcom/android/server/wifi/WifiWatchdogStateMachine;->fastDisconnectClear()V
 
-    .line 1313
     iget-object v0, p0, Lcom/android/server/wifi/WifiWatchdogStateMachine$NotConnectedState;->this$0:Lcom/android/server/wifi/WifiWatchdogStateMachine;
 
     # getter for: Lcom/android/server/wifi/WifiWatchdogStateMachine;->mCaptivePortalHandler:Lcom/android/server/wifi/WifiWatchdogStateMachine$CaptivePortalHandler;
@@ -87,7 +81,6 @@
     # invokes: Lcom/android/server/wifi/WifiWatchdogStateMachine$CaptivePortalHandler;->notifyDisconnect()V
     invoke-static {v0}, Lcom/android/server/wifi/WifiWatchdogStateMachine$CaptivePortalHandler;->access$7100(Lcom/android/server/wifi/WifiWatchdogStateMachine$CaptivePortalHandler;)V
 
-    .line 1316
     iget-object v0, p0, Lcom/android/server/wifi/WifiWatchdogStateMachine$NotConnectedState;->this$0:Lcom/android/server/wifi/WifiWatchdogStateMachine;
 
     # getter for: Lcom/android/server/wifi/WifiWatchdogStateMachine;->mQualityResultHandler:Lcom/android/server/wifi/WifiWatchdogStateMachine$QualityResultHandler;
@@ -98,7 +91,6 @@
     # invokes: Lcom/android/server/wifi/WifiWatchdogStateMachine$QualityResultHandler;->notifyDisconnect()V
     invoke-static {v0}, Lcom/android/server/wifi/WifiWatchdogStateMachine$QualityResultHandler;->access$7200(Lcom/android/server/wifi/WifiWatchdogStateMachine$QualityResultHandler;)V
 
-    .line 1317
     iget-object v0, p0, Lcom/android/server/wifi/WifiWatchdogStateMachine$NotConnectedState;->this$0:Lcom/android/server/wifi/WifiWatchdogStateMachine;
 
     const/4 v1, -0x1
@@ -106,7 +98,6 @@
     # setter for: Lcom/android/server/wifi/WifiWatchdogStateMachine;->mReportedLinkStatusType:I
     invoke-static {v0, v1}, Lcom/android/server/wifi/WifiWatchdogStateMachine;->access$7302(Lcom/android/server/wifi/WifiWatchdogStateMachine;I)I
 
-    .line 1318
     iget-object v0, p0, Lcom/android/server/wifi/WifiWatchdogStateMachine$NotConnectedState;->this$0:Lcom/android/server/wifi/WifiWatchdogStateMachine;
 
     # getter for: Lcom/android/server/wifi/WifiWatchdogStateMachine;->mIsWaitingSwitchToHipri:Z
@@ -125,14 +116,12 @@
 
     if-eqz v0, :cond_1
 
-    .line 1319
     const-string v0, "WifiWatchdogStateMachine"
 
     const-string v1, "[NotConnectedState] skip stopUsing HIPRI. Wait ev."
 
     invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1323
     :cond_1
     iget-object v0, p0, Lcom/android/server/wifi/WifiWatchdogStateMachine$NotConnectedState;->this$0:Lcom/android/server/wifi/WifiWatchdogStateMachine;
 
@@ -143,13 +132,11 @@
 
     if-nez v0, :cond_3
 
-    .line 1325
     iget-object v0, p0, Lcom/android/server/wifi/WifiWatchdogStateMachine$NotConnectedState;->this$0:Lcom/android/server/wifi/WifiWatchdogStateMachine;
 
     # invokes: Lcom/android/server/wifi/WifiWatchdogStateMachine;->updateSettings()V
     invoke-static {v0}, Lcom/android/server/wifi/WifiWatchdogStateMachine;->access$2700(Lcom/android/server/wifi/WifiWatchdogStateMachine;)V
 
-    .line 1326
     # getter for: Lcom/android/server/wifi/WifiWatchdogStateMachine;->DBG:Z
     invoke-static {}, Lcom/android/server/wifi/WifiWatchdogStateMachine;->access$2100()Z
 
@@ -186,7 +173,6 @@
 
     invoke-static {v0, v1}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1327
     :cond_2
     # getter for: Lcom/android/server/wifi/WifiWatchdogStateMachine;->DBG:Z
     invoke-static {}, Lcom/android/server/wifi/WifiWatchdogStateMachine;->access$2100()Z
@@ -224,12 +210,10 @@
 
     invoke-static {v0, v1}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1330
     :cond_3
     # setter for: Lcom/android/server/wifi/WifiWatchdogStateMachine;->mEnableSnsDuringConnected:Z
     invoke-static {v3}, Lcom/android/server/wifi/WifiWatchdogStateMachine;->access$7702(Z)Z
 
-    .line 1331
     iget-object v0, p0, Lcom/android/server/wifi/WifiWatchdogStateMachine$NotConnectedState;->this$0:Lcom/android/server/wifi/WifiWatchdogStateMachine;
 
     # getter for: Lcom/android/server/wifi/WifiWatchdogStateMachine;->mWsmChannel:Lcom/android/internal/util/AsyncChannel;
@@ -241,12 +225,10 @@
 
     invoke-virtual {v0, v1}, Lcom/android/internal/util/AsyncChannel;->sendMessage(I)V
 
-    .line 1332
     iget-object v0, p0, Lcom/android/server/wifi/WifiWatchdogStateMachine$NotConnectedState;->this$0:Lcom/android/server/wifi/WifiWatchdogStateMachine;
 
     invoke-virtual {v0, v3}, Lcom/android/server/wifi/WifiWatchdogStateMachine;->requestWakeLock(Z)V
 
-    .line 1333
     return-void
 .end method
 
@@ -257,16 +239,13 @@
     .prologue
     const/4 v0, 0x0
 
-    .line 1337
     iget v1, p1, Landroid/os/Message;->what:I
 
     packed-switch v1, :pswitch_data_0
 
-    .line 1351
     :goto_0
     return v0
 
-    .line 1339
     :pswitch_0
     iget-object v1, p0, Lcom/android/server/wifi/WifiWatchdogStateMachine$NotConnectedState;->this$0:Lcom/android/server/wifi/WifiWatchdogStateMachine;
 
@@ -277,7 +256,6 @@
 
     if-eqz v1, :cond_0
 
-    .line 1340
     iget-object v1, p0, Lcom/android/server/wifi/WifiWatchdogStateMachine$NotConnectedState;->this$0:Lcom/android/server/wifi/WifiWatchdogStateMachine;
 
     # getter for: Lcom/android/server/wifi/WifiWatchdogStateMachine;->mConnectivityManager:Landroid/net/ConnectivityManager;
@@ -289,26 +267,22 @@
 
     invoke-virtual {v1, v0, v2}, Landroid/net/ConnectivityManager;->stopUsingNetworkFeature(ILjava/lang/String;)I
 
-    .line 1343
     const-string v1, "WifiWatchdogStateMachine"
 
     const-string v2, "[NotConnectedState] stop FEATURE_ENABLE_HIPRI"
 
     invoke-static {v1, v2}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1344
     iget-object v1, p0, Lcom/android/server/wifi/WifiWatchdogStateMachine$NotConnectedState;->this$0:Lcom/android/server/wifi/WifiWatchdogStateMachine;
 
     # setter for: Lcom/android/server/wifi/WifiWatchdogStateMachine;->mIsWaitingSwitchToHipri:Z
     invoke-static {v1, v0}, Lcom/android/server/wifi/WifiWatchdogStateMachine;->access$7402(Lcom/android/server/wifi/WifiWatchdogStateMachine;Z)Z
 
-    .line 1351
     :cond_0
     const/4 v0, 0x1
 
     goto :goto_0
 
-    .line 1337
     :pswitch_data_0
     .packed-switch 0x2103f
         :pswitch_0

@@ -26,7 +26,6 @@
     .locals 0
 
     .prologue
-    .line 289
     iput-object p1, p0, Lcom/movial/ipphone/IPPhone$2;->this$0:Lcom/movial/ipphone/IPPhone;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -42,14 +41,12 @@
     .param p2, "service"    # Landroid/os/IBinder;
 
     .prologue
-    .line 291
     const-string v1, "IPPhone"
 
     const-string v2, "IIPService ServiceConnected"
 
     invoke-static {v1, v2}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 292
     iget-object v1, p0, Lcom/movial/ipphone/IPPhone$2;->this$0:Lcom/movial/ipphone/IPPhone;
 
     invoke-static {p2}, Lcom/movial/ipphone/IIPService$Stub;->asInterface(Landroid/os/IBinder;)Lcom/movial/ipphone/IIPService;
@@ -59,7 +56,6 @@
     # setter for: Lcom/movial/ipphone/IPPhone;->mIPService:Lcom/movial/ipphone/IIPService;
     invoke-static {v1, v2}, Lcom/movial/ipphone/IPPhone;->access$802(Lcom/movial/ipphone/IPPhone;Lcom/movial/ipphone/IIPService;)Lcom/movial/ipphone/IIPService;
 
-    .line 293
     iget-object v1, p0, Lcom/movial/ipphone/IPPhone$2;->this$0:Lcom/movial/ipphone/IPPhone;
 
     # getter for: Lcom/movial/ipphone/IPPhone;->binded:Ljava/util/concurrent/atomic/AtomicBoolean;
@@ -71,7 +67,6 @@
 
     invoke-virtual {v1, v2}, Ljava/util/concurrent/atomic/AtomicBoolean;->set(Z)V
 
-    .line 295
     const-wide/16 v2, 0x0
 
     # getter for: Lcom/movial/ipphone/IPPhone;->mTime:J
@@ -83,7 +78,6 @@
 
     if-eqz v1, :cond_0
 
-    .line 297
     :try_start_0
     iget-object v1, p0, Lcom/movial/ipphone/IPPhone$2;->this$0:Lcom/movial/ipphone/IPPhone;
 
@@ -121,14 +115,12 @@
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 303
     :cond_0
     :goto_0
     iget-object v1, p0, Lcom/movial/ipphone/IPPhone$2;->this$0:Lcom/movial/ipphone/IPPhone;
 
     invoke-virtual {v1}, Lcom/movial/ipphone/IPPhone;->registerHandler()V
 
-    .line 305
     :try_start_1
     iget-object v1, p0, Lcom/movial/ipphone/IPPhone$2;->this$0:Lcom/movial/ipphone/IPPhone;
 
@@ -145,15 +137,12 @@
     :try_end_1
     .catch Ljava/lang/Exception; {:try_start_1 .. :try_end_1} :catch_1
 
-    .line 310
     :goto_1
     return-void
 
-    .line 298
     :catch_0
     move-exception v0
 
-    .line 299
     .local v0, "e":Ljava/lang/Exception;
     const-string v1, "IPPhone"
 
@@ -183,12 +172,10 @@
 
     goto :goto_0
 
-    .line 306
     .end local v0    # "e":Ljava/lang/Exception;
     :catch_1
     move-exception v0
 
-    .line 307
     .restart local v0    # "e":Ljava/lang/Exception;
     const-string v1, "IPPhone"
 
@@ -216,7 +203,6 @@
 
     invoke-static {v1, v2}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 308
     invoke-virtual {v0}, Ljava/lang/Exception;->printStackTrace()V
 
     goto :goto_1
@@ -227,7 +213,6 @@
     .param p1, "name"    # Landroid/content/ComponentName;
 
     .prologue
-    .line 312
     iget-object v0, p0, Lcom/movial/ipphone/IPPhone$2;->this$0:Lcom/movial/ipphone/IPPhone;
 
     const/4 v1, 0x0
@@ -235,7 +220,6 @@
     # setter for: Lcom/movial/ipphone/IPPhone;->mIPService:Lcom/movial/ipphone/IIPService;
     invoke-static {v0, v1}, Lcom/movial/ipphone/IPPhone;->access$802(Lcom/movial/ipphone/IPPhone;Lcom/movial/ipphone/IIPService;)Lcom/movial/ipphone/IIPService;
 
-    .line 313
     iget-object v0, p0, Lcom/movial/ipphone/IPPhone$2;->this$0:Lcom/movial/ipphone/IPPhone;
 
     # getter for: Lcom/movial/ipphone/IPPhone;->binded:Ljava/util/concurrent/atomic/AtomicBoolean;
@@ -247,6 +231,5 @@
 
     invoke-virtual {v0, v1}, Ljava/util/concurrent/atomic/AtomicBoolean;->set(Z)V
 
-    .line 314
     return-void
 .end method

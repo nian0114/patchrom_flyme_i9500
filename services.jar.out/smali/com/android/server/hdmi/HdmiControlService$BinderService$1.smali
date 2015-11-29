@@ -30,7 +30,6 @@
     .locals 0
 
     .prologue
-    .line 1050
     iput-object p1, p0, Lcom/android/server/hdmi/HdmiControlService$BinderService$1;->this$1:Lcom/android/server/hdmi/HdmiControlService$BinderService;
 
     iput-object p2, p0, Lcom/android/server/hdmi/HdmiControlService$BinderService$1;->val$callback:Landroid/hardware/hdmi/IHdmiControlCallback;
@@ -48,23 +47,19 @@
     .locals 5
 
     .prologue
-    .line 1053
     iget-object v2, p0, Lcom/android/server/hdmi/HdmiControlService$BinderService$1;->val$callback:Landroid/hardware/hdmi/IHdmiControlCallback;
 
     if-nez v2, :cond_0
 
-    .line 1054
     const-string v2, "HdmiControlService"
 
     const-string v3, "Callback cannot be null"
 
     invoke-static {v2, v3}, Landroid/util/Slog;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1077
     :goto_0
     return-void
 
-    .line 1057
     :cond_0
     iget-object v2, p0, Lcom/android/server/hdmi/HdmiControlService$BinderService$1;->this$1:Lcom/android/server/hdmi/HdmiControlService$BinderService;
 
@@ -75,18 +70,15 @@
 
     move-result-object v1
 
-    .line 1058
     .local v1, "tv":Lcom/android/server/hdmi/HdmiCecLocalDeviceTv;
     if-nez v1, :cond_1
 
-    .line 1059
     const-string v2, "HdmiControlService"
 
     const-string v3, "Local tv device not available"
 
     invoke-static {v2, v3}, Landroid/util/Slog;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1060
     iget-object v2, p0, Lcom/android/server/hdmi/HdmiControlService$BinderService$1;->this$1:Lcom/android/server/hdmi/HdmiControlService$BinderService;
 
     iget-object v2, v2, Lcom/android/server/hdmi/HdmiControlService$BinderService;->this$0:Lcom/android/server/hdmi/HdmiControlService;
@@ -100,7 +92,6 @@
 
     goto :goto_0
 
-    .line 1063
     :cond_1
     iget-object v2, p0, Lcom/android/server/hdmi/HdmiControlService$BinderService$1;->this$1:Lcom/android/server/hdmi/HdmiControlService$BinderService;
 
@@ -117,11 +108,9 @@
 
     move-result-object v0
 
-    .line 1064
     .local v0, "device":Lcom/android/server/hdmi/HdmiMhlLocalDeviceStub;
     if-eqz v0, :cond_3
 
-    .line 1065
     invoke-virtual {v0}, Lcom/android/server/hdmi/HdmiMhlLocalDeviceStub;->getPortId()I
 
     move-result v2
@@ -132,7 +121,6 @@
 
     if-ne v2, v3, :cond_2
 
-    .line 1066
     iget-object v2, p0, Lcom/android/server/hdmi/HdmiControlService$BinderService$1;->this$1:Lcom/android/server/hdmi/HdmiControlService$BinderService;
 
     iget-object v2, v2, Lcom/android/server/hdmi/HdmiControlService$BinderService;->this$0:Lcom/android/server/hdmi/HdmiControlService;
@@ -146,13 +134,11 @@
 
     goto :goto_0
 
-    .line 1072
     :cond_2
     iget-object v2, p0, Lcom/android/server/hdmi/HdmiControlService$BinderService$1;->val$callback:Landroid/hardware/hdmi/IHdmiControlCallback;
 
     invoke-virtual {v0, v2}, Lcom/android/server/hdmi/HdmiMhlLocalDeviceStub;->turnOn(Landroid/hardware/hdmi/IHdmiControlCallback;)V
 
-    .line 1073
     invoke-virtual {v0}, Lcom/android/server/hdmi/HdmiMhlLocalDeviceStub;->getPortId()I
 
     move-result v2
@@ -163,7 +149,6 @@
 
     goto :goto_0
 
-    .line 1076
     :cond_3
     iget v2, p0, Lcom/android/server/hdmi/HdmiControlService$BinderService$1;->val$deviceId:I
 

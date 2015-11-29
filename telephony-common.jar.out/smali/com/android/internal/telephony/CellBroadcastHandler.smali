@@ -10,12 +10,10 @@
     .param p2, "phone"    # Lcom/android/internal/telephony/PhoneBase;
 
     .prologue
-    .line 39
     const-string v0, "CellBroadcastHandler"
 
     invoke-direct {p0, v0, p1, p2}, Lcom/android/internal/telephony/CellBroadcastHandler;-><init>(Ljava/lang/String;Landroid/content/Context;Lcom/android/internal/telephony/PhoneBase;)V
 
-    .line 40
     return-void
 .end method
 
@@ -26,10 +24,8 @@
     .param p3, "phone"    # Lcom/android/internal/telephony/PhoneBase;
 
     .prologue
-    .line 43
     invoke-direct {p0, p1, p2, p3}, Lcom/android/internal/telephony/WakeLockStateMachine;-><init>(Ljava/lang/String;Landroid/content/Context;Lcom/android/internal/telephony/PhoneBase;)V
 
-    .line 44
     return-void
 .end method
 
@@ -39,16 +35,13 @@
     .param p1, "phone"    # Lcom/android/internal/telephony/PhoneBase;
 
     .prologue
-    .line 52
     new-instance v0, Lcom/android/internal/telephony/CellBroadcastHandler;
 
     invoke-direct {v0, p0, p1}, Lcom/android/internal/telephony/CellBroadcastHandler;-><init>(Landroid/content/Context;Lcom/android/internal/telephony/PhoneBase;)V
 
-    .line 53
     .local v0, "handler":Lcom/android/internal/telephony/CellBroadcastHandler;
     invoke-virtual {v0}, Lcom/android/internal/telephony/CellBroadcastHandler;->start()V
 
-    .line 54
     return-object v0
 .end method
 
@@ -61,41 +54,34 @@
     .prologue
     const/4 v7, 0x0
 
-    .line 94
     invoke-virtual {p1}, Landroid/telephony/SmsCbMessage;->isEmergencyMessage()Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
-    .line 95
     const-string v0, "Dispatching emergency SMS CB"
 
     invoke-virtual {p0, v0}, Lcom/android/internal/telephony/CellBroadcastHandler;->log(Ljava/lang/String;)V
 
-    .line 96
     new-instance v1, Landroid/content/Intent;
 
     const-string v0, "android.provider.Telephony.SMS_EMERGENCY_CB_RECEIVED"
 
     invoke-direct {v1, v0}, Landroid/content/Intent;-><init>(Ljava/lang/String;)V
 
-    .line 97
     .local v1, "intent":Landroid/content/Intent;
     const-string v2, "android.permission.RECEIVE_EMERGENCY_BROADCAST"
 
-    .line 98
     .local v2, "receiverPermission":Ljava/lang/String;
     const/16 v3, 0x11
 
-    .line 105
     .local v3, "appOp":I
     :goto_0
     const-string v0, "message"
 
     invoke-virtual {v1, v0, p1}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Landroid/os/Parcelable;)Landroid/content/Intent;
 
-    .line 106
     iget-object v0, p0, Lcom/android/internal/telephony/CellBroadcastHandler;->mPhone:Lcom/android/internal/telephony/PhoneBase;
 
     invoke-virtual {v0}, Lcom/android/internal/telephony/PhoneBase;->getPhoneId()I
@@ -104,7 +90,6 @@
 
     invoke-static {v1, v0}, Landroid/telephony/SubscriptionManager;->putPhoneIdAndSubIdExtra(Landroid/content/Intent;I)V
 
-    .line 107
     iget-object v0, p0, Lcom/android/internal/telephony/CellBroadcastHandler;->mContext:Landroid/content/Context;
 
     iget-object v4, p0, Lcom/android/internal/telephony/CellBroadcastHandler;->mReceiver:Landroid/content/BroadcastReceiver;
@@ -119,10 +104,8 @@
 
     invoke-virtual/range {v0 .. v8}, Landroid/content/Context;->sendOrderedBroadcast(Landroid/content/Intent;Ljava/lang/String;ILandroid/content/BroadcastReceiver;Landroid/os/Handler;ILjava/lang/String;Landroid/os/Bundle;)V
 
-    .line 109
     return-void
 
-    .line 100
     .end local v1    # "intent":Landroid/content/Intent;
     .end local v2    # "receiverPermission":Ljava/lang/String;
     .end local v3    # "appOp":I
@@ -131,18 +114,15 @@
 
     invoke-virtual {p0, v0}, Lcom/android/internal/telephony/CellBroadcastHandler;->log(Ljava/lang/String;)V
 
-    .line 101
     new-instance v1, Landroid/content/Intent;
 
     const-string v0, "android.provider.Telephony.SMS_CB_RECEIVED"
 
     invoke-direct {v1, v0}, Landroid/content/Intent;-><init>(Ljava/lang/String;)V
 
-    .line 102
     .restart local v1    # "intent":Landroid/content/Intent;
     const-string v2, "android.permission.RECEIVE_SMS"
 
-    .line 103
     .restart local v2    # "receiverPermission":Ljava/lang/String;
     const/16 v3, 0x10
 
@@ -155,12 +135,10 @@
     .param p1, "ar"    # Landroid/os/AsyncResult;
 
     .prologue
-    .line 77
     const-string v0, "handleLocationInfo in CellBroadcastHandler. It will be used in GsmCellBroadcastHandler."
 
     invoke-virtual {p0, v0}, Lcom/android/internal/telephony/CellBroadcastHandler;->log(Ljava/lang/String;)V
 
-    .line 78
     return-void
 .end method
 
@@ -169,12 +147,10 @@
     .param p1, "ar"    # Landroid/os/AsyncResult;
 
     .prologue
-    .line 82
     const-string v0, "handleOperatorInfo in CellBroadcastHandler. It will be used in GsmCellBroadcastHandler."
 
     invoke-virtual {p0, v0}, Lcom/android/internal/telephony/CellBroadcastHandler;->log(Ljava/lang/String;)V
 
-    .line 83
     return-void
 .end method
 
@@ -183,28 +159,23 @@
     .param p1, "message"    # Landroid/os/Message;
 
     .prologue
-    .line 66
     iget-object v0, p1, Landroid/os/Message;->obj:Ljava/lang/Object;
 
     instance-of v0, v0, Landroid/telephony/SmsCbMessage;
 
     if-eqz v0, :cond_0
 
-    .line 67
     iget-object v0, p1, Landroid/os/Message;->obj:Ljava/lang/Object;
 
     check-cast v0, Landroid/telephony/SmsCbMessage;
 
     invoke-virtual {p0, v0}, Lcom/android/internal/telephony/CellBroadcastHandler;->handleBroadcastSms(Landroid/telephony/SmsCbMessage;)V
 
-    .line 68
     const/4 v0, 0x1
 
-    .line 71
     :goto_0
     return v0
 
-    .line 70
     :cond_0
     new-instance v0, Ljava/lang/StringBuilder;
 
@@ -236,7 +207,6 @@
 
     invoke-virtual {p0, v0}, Lcom/android/internal/telephony/CellBroadcastHandler;->loge(Ljava/lang/String;)V
 
-    .line 71
     const/4 v0, 0x0
 
     goto :goto_0

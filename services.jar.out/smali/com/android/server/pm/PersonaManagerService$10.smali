@@ -23,7 +23,6 @@
     .locals 3
 
     .prologue
-    .line 7969
     invoke-static {}, Landroid/content/pm/PersonaState;->values()[Landroid/content/pm/PersonaState;
 
     move-result-object v0

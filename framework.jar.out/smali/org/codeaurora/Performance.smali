@@ -60,15 +60,12 @@
     .locals 1
 
     .prologue
-    .line 38
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 79
     const/4 v0, 0x0
 
     iput v0, p0, Lorg/codeaurora/Performance;->handle:I
 
-    .line 40
     return-void
 .end method
 
@@ -90,10 +87,8 @@
     .locals 0
 
     .prologue
-    .line 98
     invoke-direct {p0}, Lorg/codeaurora/Performance;->native_deinit()V
 
-    .line 99
     return-void
 .end method
 
@@ -103,10 +98,8 @@
     .param p2, "list"    # [I
 
     .prologue
-    .line 84
     const/4 v0, 0x0
 
-    .line 85
     .local v0, "rc":I
     iget v1, p0, Lorg/codeaurora/Performance;->handle:I
 
@@ -116,15 +109,12 @@
 
     iput v1, p0, Lorg/codeaurora/Performance;->handle:I
 
-    .line 86
     iget v1, p0, Lorg/codeaurora/Performance;->handle:I
 
     if-nez v1, :cond_0
 
-    .line 87
     const/4 v0, -0x1
 
-    .line 88
     :cond_0
     return v0
 .end method
@@ -133,7 +123,6 @@
     .locals 1
 
     .prologue
-    .line 93
     iget v0, p0, Lorg/codeaurora/Performance;->handle:I
 
     invoke-direct {p0, v0}, Lorg/codeaurora/Performance;->native_perf_lock_rel(I)I

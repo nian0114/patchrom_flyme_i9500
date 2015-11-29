@@ -39,17 +39,14 @@
     .locals 1
 
     .prologue
-    .line 224
     iput-object p1, p0, Landroid/media/session/MediaSessionLegacyHelper$VolumeKeyLongPressControlThread;->this$0:Landroid/media/session/MediaSessionLegacyHelper;
 
     invoke-direct {p0}, Ljava/lang/Thread;-><init>()V
 
-    .line 230
     const/16 v0, 0x1f4
 
     iput v0, p0, Landroid/media/session/MediaSessionLegacyHelper$VolumeKeyLongPressControlThread;->DURATION_LONG_PRESS:I
 
-    .line 231
     const/16 v0, 0x32
 
     iput v0, p0, Landroid/media/session/MediaSessionLegacyHelper$VolumeKeyLongPressControlThread;->DURATION_REPEAT:I
@@ -63,7 +60,6 @@
     .param p2, "x1"    # Landroid/media/session/MediaSessionLegacyHelper$1;
 
     .prologue
-    .line 224
     invoke-direct {p0, p1}, Landroid/media/session/MediaSessionLegacyHelper$VolumeKeyLongPressControlThread;-><init>(Landroid/media/session/MediaSessionLegacyHelper;)V
 
     return-void
@@ -75,7 +71,6 @@
     .locals 4
 
     .prologue
-    .line 247
     :goto_0
     :try_start_0
     iget v0, p0, Landroid/media/session/MediaSessionLegacyHelper$VolumeKeyLongPressControlThread;->mSleepDuration:I
@@ -86,11 +81,9 @@
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 251
     :goto_1
     monitor-enter p0
 
-    .line 252
     :try_start_1
     # getter for: Landroid/media/session/MediaSessionLegacyHelper;->DEBUG:Z
     invoke-static {}, Landroid/media/session/MediaSessionLegacyHelper;->access$000()Z
@@ -132,7 +125,6 @@
 
     invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 255
     :cond_0
     iget-boolean v0, p0, Landroid/media/session/MediaSessionLegacyHelper$VolumeKeyLongPressControlThread;->mNeedToRun:Z
 
@@ -151,14 +143,11 @@
 
     if-eqz v0, :cond_2
 
-    .line 256
     :cond_1
     monitor-exit p0
 
-    .line 264
     return-void
 
-    .line 258
     :cond_2
     iget v0, p0, Landroid/media/session/MediaSessionLegacyHelper$VolumeKeyLongPressControlThread;->mSleepDuration:I
 
@@ -166,12 +155,10 @@
 
     if-ne v0, v1, :cond_3
 
-    .line 259
     const/16 v0, 0x32
 
     iput v0, p0, Landroid/media/session/MediaSessionLegacyHelper$VolumeKeyLongPressControlThread;->mSleepDuration:I
 
-    .line 261
     :cond_3
     iget-object v0, p0, Landroid/media/session/MediaSessionLegacyHelper$VolumeKeyLongPressControlThread;->this$0:Landroid/media/session/MediaSessionLegacyHelper;
 
@@ -188,7 +175,6 @@
 
     invoke-virtual {v0, v1, v2, v3}, Landroid/media/session/MediaSessionManager;->dispatchAdjustVolume(III)V
 
-    .line 262
     monitor-exit p0
 
     goto :goto_0
@@ -202,7 +188,6 @@
 
     throw v0
 
-    .line 248
     :catch_0
     move-exception v0
 
@@ -216,31 +201,23 @@
     .param p3, "down"    # Z
 
     .prologue
-    .line 235
     monitor-enter p0
 
-    .line 236
     :try_start_0
     iput p1, p0, Landroid/media/session/MediaSessionLegacyHelper$VolumeKeyLongPressControlThread;->mDirection:I
 
-    .line 237
     const/16 v0, 0x1f4
 
     iput v0, p0, Landroid/media/session/MediaSessionLegacyHelper$VolumeKeyLongPressControlThread;->mSleepDuration:I
 
-    .line 238
     iput-boolean p3, p0, Landroid/media/session/MediaSessionLegacyHelper$VolumeKeyLongPressControlThread;->mNeedToRun:Z
 
-    .line 239
     iput p2, p0, Landroid/media/session/MediaSessionLegacyHelper$VolumeKeyLongPressControlThread;->mFlags:I
 
-    .line 240
     monitor-exit p0
 
-    .line 241
     return-void
 
-    .line 240
     :catchall_0
     move-exception v0
 

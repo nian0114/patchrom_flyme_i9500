@@ -64,14 +64,13 @@
 
     const/4 v3, 0x0
 
-    .line 93
     new-array v0, v2, [Ljava/lang/String;
 
     const-string v1, "keyboard"
 
     aput-object v1, v0, v3
 
-    const-string/jumbo v1, "untrusted"
+    const-string v1, "untrusted"
 
     aput-object v1, v0, v4
 
@@ -85,14 +84,12 @@
 
     sput-object v0, Lcom/android/server/GoodContainer;->ALLOWED_SEINFO:[Ljava/lang/String;
 
-    .line 98
     invoke-static {}, Lcom/android/server/SKLogger;->getLogger()Lcom/android/server/SKLogger;
 
     move-result-object v0
 
     sput-object v0, Lcom/android/server/GoodContainer;->mSKLog:Lcom/android/server/SKLogger;
 
-    .line 100
     new-array v0, v2, [Ljava/io/File;
 
     new-instance v1, Ljava/io/File;
@@ -133,14 +130,11 @@
     .param p1, "context"    # Landroid/content/Context;
 
     .prologue
-    .line 110
     invoke-direct {p0}, Lcom/android/server/SEAMSContainer;-><init>()V
 
-    .line 111
     iput-object p1, p0, Lcom/android/server/GoodContainer;->mContext:Landroid/content/Context;
 
-    .line 112
-    const-string/jumbo v0, "package"
+    const-string v0, "package"
 
     invoke-static {v0}, Landroid/os/ServiceManager;->getService(Ljava/lang/String;)Landroid/os/IBinder;
 
@@ -150,14 +144,12 @@
 
     iput-object v0, p0, Lcom/android/server/GoodContainer;->mPms:Lcom/android/server/pm/PackageManagerService;
 
-    .line 113
     invoke-static {}, Landroid/app/AppGlobals;->getPackageManager()Landroid/content/pm/IPackageManager;
 
     move-result-object v0
 
     iput-object v0, p0, Lcom/android/server/GoodContainer;->mPM:Landroid/content/pm/IPackageManager;
 
-    .line 114
     return-void
 .end method
 
@@ -168,7 +160,6 @@
     .param p1, "uid"    # I
 
     .prologue
-    .line 126
     invoke-virtual/range {p0 .. p0}, Lcom/android/server/GoodContainer;->getActivationStatus()I
 
     move-result v2
@@ -177,14 +168,11 @@
 
     if-ne v2, v4, :cond_0
 
-    .line 128
     const/4 v2, -0x1
 
-    .line 341
     :goto_0
     return v2
 
-    .line 132
     :cond_0
     :try_start_0
     new-instance v15, Ljava/io/File;
@@ -193,7 +181,6 @@
 
     invoke-direct {v15, v2}, Ljava/io/File;-><init>(Ljava/lang/String;)V
 
-    .line 133
     .local v15, "goodDir":Ljava/io/File;
     invoke-virtual {v15}, Ljava/io/File;->exists()Z
 
@@ -201,17 +188,14 @@
 
     if-nez v2, :cond_1
 
-    .line 135
     invoke-virtual {v15}, Ljava/io/File;->mkdir()Z
 
-    .line 136
     const/4 v2, 0x1
 
     const/4 v4, 0x1
 
     invoke-virtual {v15, v2, v4}, Ljava/io/File;->setReadable(ZZ)Z
 
-    .line 137
     const/4 v2, 0x1
 
     const/4 v4, 0x1
@@ -220,23 +204,18 @@
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 145
     :cond_1
     const/16 v17, 0x0
 
-    .line 146
     .local v17, "macPermFile":Ljava/io/File;
     const/16 v20, 0x0
 
-    .line 147
     .local v20, "seappConfig":Ljava/io/File;
     const/16 v19, 0x0
 
-    .line 148
     .local v19, "pkgInfo":Landroid/content/pm/PackageInfo;
     const/4 v3, 0x0
 
-    .line 151
     .local v3, "packageName":Ljava/lang/String;
     :try_start_1
     new-instance v1, Ljava/io/File;
@@ -247,7 +226,6 @@
     :try_end_1
     .catch Ljava/lang/Exception; {:try_start_1 .. :try_end_1} :catch_1
 
-    .line 152
     .end local v17    # "macPermFile":Ljava/io/File;
     .local v1, "macPermFile":Ljava/io/File;
     :try_start_2
@@ -261,7 +239,6 @@
 
     move-result-object v18
 
-    .line 153
     .local v18, "packagesList":[Ljava/lang/String;
     move-object/from16 v0, v18
 
@@ -271,12 +248,10 @@
 
     if-nez v2, :cond_2
 
-    .line 155
     const/4 v2, -0x1
 
     goto :goto_0
 
-    .line 139
     .end local v1    # "macPermFile":Ljava/io/File;
     .end local v3    # "packageName":Ljava/lang/String;
     .end local v15    # "goodDir":Ljava/io/File;
@@ -286,7 +261,6 @@
     :catch_0
     move-exception v14
 
-    .line 140
     .local v14, "e":Ljava/lang/Exception;
     sget-object v2, Lcom/android/server/GoodContainer;->mSKLog:Lcom/android/server/SKLogger;
 
@@ -296,15 +270,12 @@
 
     invoke-virtual {v2, v4, v5, v14}, Lcom/android/server/SKLogger;->logAll(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
 
-    .line 141
     invoke-virtual {v14}, Ljava/lang/Exception;->printStackTrace()V
 
-    .line 142
     const/4 v2, -0x1
 
     goto :goto_0
 
-    .line 157
     .end local v14    # "e":Ljava/lang/Exception;
     .restart local v1    # "macPermFile":Ljava/io/File;
     .restart local v3    # "packageName":Ljava/lang/String;
@@ -318,7 +289,6 @@
     :try_start_3
     aget-object v3, v18, v2
 
-    .line 158
     move-object/from16 v0, p0
 
     iget-object v2, v0, Lcom/android/server/GoodContainer;->mPM:Landroid/content/pm/IPackageManager;
@@ -333,15 +303,12 @@
 
     move-result-object v19
 
-    .line 160
     if-nez v19, :cond_3
 
-    .line 162
     const/4 v2, -0x1
 
     goto :goto_0
 
-    .line 164
     :cond_3
     move-object/from16 v0, v19
 
@@ -349,7 +316,6 @@
 
     move-object/from16 v22, v0
 
-    .line 165
     .local v22, "signatures":[Landroid/content/pm/Signature;
     move-object/from16 v0, v22
 
@@ -357,7 +323,6 @@
 
     new-array v13, v2, [Ljava/lang/String;
 
-    .line 166
     .local v13, "certSignatures":[Ljava/lang/String;
     const/16 v16, 0x0
 
@@ -371,7 +336,6 @@
 
     if-ge v0, v2, :cond_4
 
-    .line 167
     aget-object v2, v22, v16
 
     invoke-virtual {v2}, Landroid/content/pm/Signature;->toCharsString()Ljava/lang/String;
@@ -380,18 +344,15 @@
 
     aput-object v2, v13, v16
 
-    .line 166
     add-int/lit8 v16, v16, 0x1
 
     goto :goto_1
 
-    .line 170
     :cond_4
     invoke-static {v3, v13}, Lcom/android/server/pm/SELinuxMMAC;->getApplicationInfo(Ljava/lang/String;[Ljava/lang/String;)Landroid/content/pm/ApplicationInfo;
 
     move-result-object v12
 
-    .line 174
     .local v12, "appInfo":Landroid/content/pm/ApplicationInfo;
     if-eqz v12, :cond_5
 
@@ -415,7 +376,6 @@
 
     if-ge v2, v4, :cond_5
 
-    .line 175
     sget-object v2, Lcom/android/server/GoodContainer;->mSKLog:Lcom/android/server/SKLogger;
 
     const-string v4, "GoodContainer"
@@ -442,12 +402,10 @@
 
     invoke-virtual {v2, v4, v5}, Lcom/android/server/SKLogger;->logAll(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 176
     const/4 v2, -0x1
 
     goto/16 :goto_0
 
-    .line 179
     :cond_5
     if-eqz v12, :cond_6
 
@@ -471,12 +429,10 @@
 
     if-ne v2, v4, :cond_6
 
-    .line 183
     const/16 v2, -0x9
 
     goto/16 :goto_0
 
-    .line 186
     :cond_6
     move-object/from16 v0, v19
 
@@ -508,12 +464,10 @@
 
     if-eqz v2, :cond_7
 
-    .line 189
     const/4 v2, -0x1
 
     goto/16 :goto_0
 
-    .line 192
     :cond_7
     move-object/from16 v0, v19
 
@@ -545,7 +499,6 @@
 
     if-eqz v2, :cond_8
 
-    .line 196
     move-object/from16 v0, v19
 
     iget-object v2, v0, Landroid/content/pm/PackageInfo;->signatures:[Landroid/content/pm/Signature;
@@ -568,12 +521,10 @@
 
     invoke-static {v1, v2, v3, v4, v5}, Lcom/android/server/GoodContainer;->removeEntryFromMac(Ljava/io/File;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;I)Z
 
-    .line 198
     const/4 v2, -0x1
 
     goto/16 :goto_0
 
-    .line 203
     :cond_8
     const/4 v2, 0x0
 
@@ -587,7 +538,6 @@
 
     if-eqz v2, :cond_9
 
-    .line 205
     move-object/from16 v0, v19
 
     iget-object v2, v0, Landroid/content/pm/PackageInfo;->signatures:[Landroid/content/pm/Signature;
@@ -610,12 +560,10 @@
 
     invoke-static {v1, v2, v3, v4, v5}, Lcom/android/server/GoodContainer;->removeEntryFromMac(Ljava/io/File;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;I)Z
 
-    .line 208
     const/4 v2, -0x1
 
     goto/16 :goto_0
 
-    .line 213
     :cond_9
     new-instance v21, Ljava/io/File;
 
@@ -627,7 +575,6 @@
     :try_end_3
     .catch Ljava/lang/Exception; {:try_start_3 .. :try_end_3} :catch_2
 
-    .line 215
     .end local v20    # "seappConfig":Ljava/io/File;
     .local v21, "seappConfig":Ljava/io/File;
     :try_start_4
@@ -655,7 +602,6 @@
 
     if-eqz v2, :cond_a
 
-    .line 217
     move-object/from16 v0, v19
 
     iget-object v2, v0, Landroid/content/pm/PackageInfo;->signatures:[Landroid/content/pm/Signature;
@@ -678,7 +624,6 @@
 
     invoke-static {v1, v2, v3, v4, v5}, Lcom/android/server/GoodContainer;->removeEntryFromMac(Ljava/io/File;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;I)Z
 
-    .line 220
     const/4 v2, 0x0
 
     const/4 v4, 0x0
@@ -687,12 +632,10 @@
 
     invoke-virtual {v0, v3, v2, v4}, Lcom/android/server/GoodContainer;->loadContainerSetting(Ljava/lang/String;IZ)I
 
-    .line 222
     const/4 v2, -0x1
 
     goto/16 :goto_0
 
-    .line 226
     :cond_a
     invoke-virtual/range {v21 .. v21}, Ljava/io/File;->getAbsolutePath()Ljava/lang/String;
 
@@ -718,7 +661,6 @@
 
     if-eqz v2, :cond_b
 
-    .line 228
     move-object/from16 v0, v19
 
     iget-object v2, v0, Landroid/content/pm/PackageInfo;->signatures:[Landroid/content/pm/Signature;
@@ -741,7 +683,6 @@
 
     invoke-static {v1, v2, v3, v4, v5}, Lcom/android/server/GoodContainer;->removeEntryFromMac(Ljava/io/File;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;I)Z
 
-    .line 231
     const/4 v2, 0x0
 
     const/4 v4, 0x0
@@ -750,7 +691,6 @@
 
     invoke-virtual {v0, v3, v2, v4}, Lcom/android/server/GoodContainer;->loadContainerSetting(Ljava/lang/String;IZ)I
 
-    .line 232
     invoke-virtual/range {v21 .. v21}, Ljava/io/File;->getAbsolutePath()Ljava/lang/String;
 
     move-result-object v5
@@ -771,12 +711,10 @@
 
     invoke-virtual/range {v4 .. v11}, Lcom/android/server/GoodContainer;->removeSEAppContext(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;I)I
 
-    .line 235
     const/4 v2, -0x1
 
     goto/16 :goto_0
 
-    .line 238
     :cond_b
     invoke-virtual/range {v21 .. v21}, Ljava/io/File;->getAbsolutePath()Ljava/lang/String;
 
@@ -802,7 +740,6 @@
 
     if-eqz v2, :cond_c
 
-    .line 240
     move-object/from16 v0, v19
 
     iget-object v2, v0, Landroid/content/pm/PackageInfo;->signatures:[Landroid/content/pm/Signature;
@@ -825,7 +762,6 @@
 
     invoke-static {v1, v2, v3, v4, v5}, Lcom/android/server/GoodContainer;->removeEntryFromMac(Ljava/io/File;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;I)Z
 
-    .line 243
     const/4 v2, 0x0
 
     const/4 v4, 0x0
@@ -834,7 +770,6 @@
 
     invoke-virtual {v0, v3, v2, v4}, Lcom/android/server/GoodContainer;->loadContainerSetting(Ljava/lang/String;IZ)I
 
-    .line 244
     invoke-virtual/range {v21 .. v21}, Ljava/io/File;->getAbsolutePath()Ljava/lang/String;
 
     move-result-object v5
@@ -855,7 +790,6 @@
 
     invoke-virtual/range {v4 .. v11}, Lcom/android/server/GoodContainer;->removeSEAppContext(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;I)I
 
-    .line 246
     invoke-virtual/range {v21 .. v21}, Ljava/io/File;->getAbsolutePath()Ljava/lang/String;
 
     move-result-object v5
@@ -876,12 +810,10 @@
 
     invoke-virtual/range {v4 .. v11}, Lcom/android/server/GoodContainer;->removeSEAppContext(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;I)I
 
-    .line 249
     const/4 v2, -0x1
 
     goto/16 :goto_0
 
-    .line 252
     :cond_c
     invoke-virtual/range {v21 .. v21}, Ljava/io/File;->getAbsolutePath()Ljava/lang/String;
 
@@ -907,7 +839,6 @@
 
     if-eqz v2, :cond_d
 
-    .line 254
     move-object/from16 v0, v19
 
     iget-object v2, v0, Landroid/content/pm/PackageInfo;->signatures:[Landroid/content/pm/Signature;
@@ -930,7 +861,6 @@
 
     invoke-static {v1, v2, v3, v4, v5}, Lcom/android/server/GoodContainer;->removeEntryFromMac(Ljava/io/File;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;I)Z
 
-    .line 257
     const/4 v2, 0x0
 
     const/4 v4, 0x0
@@ -939,7 +869,6 @@
 
     invoke-virtual {v0, v3, v2, v4}, Lcom/android/server/GoodContainer;->loadContainerSetting(Ljava/lang/String;IZ)I
 
-    .line 258
     invoke-virtual/range {v21 .. v21}, Ljava/io/File;->getAbsolutePath()Ljava/lang/String;
 
     move-result-object v5
@@ -960,7 +889,6 @@
 
     invoke-virtual/range {v4 .. v11}, Lcom/android/server/GoodContainer;->removeSEAppContext(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;I)I
 
-    .line 260
     invoke-virtual/range {v21 .. v21}, Ljava/io/File;->getAbsolutePath()Ljava/lang/String;
 
     move-result-object v5
@@ -981,7 +909,6 @@
 
     invoke-virtual/range {v4 .. v11}, Lcom/android/server/GoodContainer;->removeSEAppContext(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;I)I
 
-    .line 262
     invoke-virtual/range {v21 .. v21}, Ljava/io/File;->getAbsolutePath()Ljava/lang/String;
 
     move-result-object v5
@@ -1002,20 +929,17 @@
 
     invoke-virtual/range {v4 .. v11}, Lcom/android/server/GoodContainer;->removeSEAppContext(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;I)I
 
-    .line 265
     const/4 v2, -0x1
 
     goto/16 :goto_0
 
-    .line 270
     :cond_d
-    const-string/jumbo v2, "selinux.reload_policy"
+    const-string v2, "selinux.reload_policy"
 
     const-string v4, "1"
 
     invoke-static {v2, v4}, Landroid/os/SystemProperties;->set(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 274
     move-object/from16 v0, p0
 
     iget-object v2, v0, Lcom/android/server/GoodContainer;->mContext:Landroid/content/Context;
@@ -1032,7 +956,6 @@
 
     if-eq v2, v4, :cond_e
 
-    .line 276
     move-object/from16 v0, v19
 
     iget-object v2, v0, Landroid/content/pm/PackageInfo;->signatures:[Landroid/content/pm/Signature;
@@ -1055,7 +978,6 @@
 
     invoke-static {v1, v2, v3, v4, v5}, Lcom/android/server/GoodContainer;->removeEntryFromMac(Ljava/io/File;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;I)Z
 
-    .line 279
     const/4 v2, 0x0
 
     const/4 v4, 0x0
@@ -1064,7 +986,6 @@
 
     invoke-virtual {v0, v3, v2, v4}, Lcom/android/server/GoodContainer;->loadContainerSetting(Ljava/lang/String;IZ)I
 
-    .line 280
     invoke-virtual/range {v21 .. v21}, Ljava/io/File;->getAbsolutePath()Ljava/lang/String;
 
     move-result-object v5
@@ -1085,7 +1006,6 @@
 
     invoke-virtual/range {v4 .. v11}, Lcom/android/server/GoodContainer;->removeSEAppContext(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;I)I
 
-    .line 282
     invoke-virtual/range {v21 .. v21}, Ljava/io/File;->getAbsolutePath()Ljava/lang/String;
 
     move-result-object v5
@@ -1106,7 +1026,6 @@
 
     invoke-virtual/range {v4 .. v11}, Lcom/android/server/GoodContainer;->removeSEAppContext(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;I)I
 
-    .line 284
     invoke-virtual/range {v21 .. v21}, Ljava/io/File;->getAbsolutePath()Ljava/lang/String;
 
     move-result-object v5
@@ -1127,7 +1046,6 @@
 
     invoke-virtual/range {v4 .. v11}, Lcom/android/server/GoodContainer;->removeSEAppContext(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;I)I
 
-    .line 286
     invoke-virtual/range {v21 .. v21}, Ljava/io/File;->getAbsolutePath()Ljava/lang/String;
 
     move-result-object v5
@@ -1148,19 +1066,16 @@
 
     invoke-virtual/range {v4 .. v11}, Lcom/android/server/GoodContainer;->removeSEAppContext(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;I)I
 
-    .line 288
-    const-string/jumbo v2, "selinux.reload_policy"
+    const-string v2, "selinux.reload_policy"
 
     const-string v4, "1"
 
     invoke-static {v2, v4}, Landroid/os/SystemProperties;->set(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 290
     const/4 v2, -0x1
 
     goto/16 :goto_0
 
-    .line 295
     :cond_e
     invoke-virtual/range {p0 .. p0}, Lcom/android/server/GoodContainer;->getActivationStatus()I
 
@@ -1168,7 +1083,6 @@
 
     if-nez v2, :cond_11
 
-    .line 298
     move-object/from16 v0, v19
 
     iget-object v2, v0, Landroid/content/pm/PackageInfo;->signatures:[Landroid/content/pm/Signature;
@@ -1191,7 +1105,6 @@
 
     invoke-static {v1, v2, v3, v4, v5}, Lcom/android/server/GoodContainer;->removeEntryFromMac(Ljava/io/File;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;I)Z
 
-    .line 301
     const/4 v2, 0x0
 
     const/4 v4, 0x0
@@ -1200,7 +1113,6 @@
 
     invoke-virtual {v0, v3, v2, v4}, Lcom/android/server/GoodContainer;->loadContainerSetting(Ljava/lang/String;IZ)I
 
-    .line 302
     invoke-virtual/range {v21 .. v21}, Ljava/io/File;->getAbsolutePath()Ljava/lang/String;
 
     move-result-object v5
@@ -1221,7 +1133,6 @@
 
     invoke-virtual/range {v4 .. v11}, Lcom/android/server/GoodContainer;->removeSEAppContext(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;I)I
 
-    .line 304
     invoke-virtual/range {v21 .. v21}, Ljava/io/File;->getAbsolutePath()Ljava/lang/String;
 
     move-result-object v5
@@ -1242,7 +1153,6 @@
 
     invoke-virtual/range {v4 .. v11}, Lcom/android/server/GoodContainer;->removeSEAppContext(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;I)I
 
-    .line 306
     invoke-virtual/range {v21 .. v21}, Ljava/io/File;->getAbsolutePath()Ljava/lang/String;
 
     move-result-object v5
@@ -1263,7 +1173,6 @@
 
     invoke-virtual/range {v4 .. v11}, Lcom/android/server/GoodContainer;->removeSEAppContext(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;I)I
 
-    .line 308
     invoke-virtual/range {v21 .. v21}, Ljava/io/File;->getAbsolutePath()Ljava/lang/String;
 
     move-result-object v5
@@ -1284,14 +1193,12 @@
 
     invoke-virtual/range {v4 .. v11}, Lcom/android/server/GoodContainer;->removeSEAppContext(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;I)I
 
-    .line 310
-    const-string/jumbo v2, "selinux.reload_policy"
+    const-string v2, "selinux.reload_policy"
 
     const-string v4, "1"
 
     invoke-static {v2, v4}, Landroid/os/SystemProperties;->set(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 311
     move-object/from16 v0, p0
 
     iget-object v2, v0, Lcom/android/server/GoodContainer;->mContext:Landroid/content/Context;
@@ -1304,12 +1211,10 @@
     :try_end_4
     .catch Ljava/lang/Exception; {:try_start_4 .. :try_end_4} :catch_3
 
-    .line 312
     const/4 v2, -0x1
 
     goto/16 :goto_0
 
-    .line 315
     .end local v1    # "macPermFile":Ljava/io/File;
     .end local v12    # "appInfo":Landroid/content/pm/ApplicationInfo;
     .end local v13    # "certSignatures":[Ljava/lang/String;
@@ -1324,7 +1229,6 @@
 
     move-object/from16 v1, v17
 
-    .line 316
     .end local v17    # "macPermFile":Ljava/io/File;
     .restart local v1    # "macPermFile":Ljava/io/File;
     .restart local v14    # "e":Ljava/lang/Exception;
@@ -1337,13 +1241,10 @@
 
     invoke-virtual {v2, v4, v5, v14}, Lcom/android/server/SKLogger;->logAll(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
 
-    .line 317
     invoke-virtual {v14}, Ljava/lang/Exception;->printStackTrace()V
 
-    .line 318
     if-eqz v19, :cond_f
 
-    .line 319
     move-object/from16 v0, v19
 
     iget-object v2, v0, Landroid/content/pm/PackageInfo;->signatures:[Landroid/content/pm/Signature;
@@ -1366,7 +1267,6 @@
 
     invoke-static {v1, v2, v3, v4, v5}, Lcom/android/server/GoodContainer;->removeEntryFromMac(Ljava/io/File;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;I)Z
 
-    .line 323
     :cond_f
     const/4 v2, 0x0
 
@@ -1376,10 +1276,8 @@
 
     invoke-virtual {v0, v3, v2, v4}, Lcom/android/server/GoodContainer;->loadContainerSetting(Ljava/lang/String;IZ)I
 
-    .line 324
     if-eqz v20, :cond_10
 
-    .line 325
     invoke-virtual/range {v20 .. v20}, Ljava/io/File;->getAbsolutePath()Ljava/lang/String;
 
     move-result-object v5
@@ -1400,7 +1298,6 @@
 
     invoke-virtual/range {v4 .. v11}, Lcom/android/server/GoodContainer;->removeSEAppContext(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;I)I
 
-    .line 327
     invoke-virtual/range {v20 .. v20}, Ljava/io/File;->getAbsolutePath()Ljava/lang/String;
 
     move-result-object v5
@@ -1421,7 +1318,6 @@
 
     invoke-virtual/range {v4 .. v11}, Lcom/android/server/GoodContainer;->removeSEAppContext(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;I)I
 
-    .line 329
     invoke-virtual/range {v20 .. v20}, Ljava/io/File;->getAbsolutePath()Ljava/lang/String;
 
     move-result-object v5
@@ -1442,7 +1338,6 @@
 
     invoke-virtual/range {v4 .. v11}, Lcom/android/server/GoodContainer;->removeSEAppContext(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;I)I
 
-    .line 331
     invoke-virtual/range {v20 .. v20}, Ljava/io/File;->getAbsolutePath()Ljava/lang/String;
 
     move-result-object v5
@@ -1463,15 +1358,13 @@
 
     invoke-virtual/range {v4 .. v11}, Lcom/android/server/GoodContainer;->removeSEAppContext(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;I)I
 
-    .line 334
     :cond_10
-    const-string/jumbo v2, "selinux.reload_policy"
+    const-string v2, "selinux.reload_policy"
 
     const-string v4, "1"
 
     invoke-static {v2, v4}, Landroid/os/SystemProperties;->set(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 335
     move-object/from16 v0, p0
 
     iget-object v2, v0, Lcom/android/server/GoodContainer;->mContext:Landroid/content/Context;
@@ -1482,12 +1375,10 @@
 
     invoke-virtual {v2, v3}, Lcom/sec/enterprise/knox/seams/SEAMS;->relabelAppDir(Ljava/lang/String;)I
 
-    .line 338
     const/4 v2, -0x1
 
     goto/16 :goto_0
 
-    .line 341
     .end local v14    # "e":Ljava/lang/Exception;
     .end local v20    # "seappConfig":Ljava/io/File;
     .restart local v12    # "appInfo":Landroid/content/pm/ApplicationInfo;
@@ -1501,7 +1392,6 @@
 
     goto/16 :goto_0
 
-    .line 315
     .end local v12    # "appInfo":Landroid/content/pm/ApplicationInfo;
     .end local v13    # "certSignatures":[Ljava/lang/String;
     .end local v16    # "i":I
@@ -1535,7 +1425,6 @@
     .locals 27
 
     .prologue
-    .line 699
     new-instance v9, Ljava/io/File;
 
     const-string v24, "/data/security/good/mac_permissions.xml"
@@ -1544,39 +1433,31 @@
 
     invoke-direct {v9, v0}, Ljava/io/File;-><init>(Ljava/lang/String;)V
 
-    .line 700
     .local v9, "macPermFile":Ljava/io/File;
     if-nez v9, :cond_0
 
-    .line 702
     const/16 v24, -0x1
 
-    .line 791
     :goto_0
     return v24
 
-    .line 705
     :cond_0
     const/4 v11, 0x0
 
-    .line 707
     .local v11, "packageName":Ljava/lang/String;
     invoke-static {}, Ljavax/xml/parsers/DocumentBuilderFactory;->newInstance()Ljavax/xml/parsers/DocumentBuilderFactory;
 
     move-result-object v5
 
-    .line 708
     .local v5, "docBuildFac":Ljavax/xml/parsers/DocumentBuilderFactory;
     const/4 v4, 0x0
 
-    .line 710
     .local v4, "doc":Lorg/w3c/dom/Document;
     :try_start_0
     invoke-virtual {v5}, Ljavax/xml/parsers/DocumentBuilderFactory;->newDocumentBuilder()Ljavax/xml/parsers/DocumentBuilder;
 
     move-result-object v3
 
-    .line 711
     .local v3, "dBuilder":Ljavax/xml/parsers/DocumentBuilder;
     invoke-virtual {v9}, Ljava/io/File;->exists()Z
 
@@ -1584,35 +1465,30 @@
 
     if-eqz v24, :cond_2
 
-    .line 715
     invoke-virtual {v9}, Ljava/io/File;->canWrite()Z
 
     move-result v24
 
     if-nez v24, :cond_1
 
-    .line 716
     const/16 v24, 0x1
 
     move/from16 v0, v24
 
     invoke-virtual {v9, v0}, Ljava/io/File;->setWritable(Z)Z
 
-    .line 717
     :cond_1
     invoke-virtual {v3, v9}, Ljavax/xml/parsers/DocumentBuilder;->parse(Ljava/io/File;)Lorg/w3c/dom/Document;
 
     move-result-object v4
 
-    .line 724
     invoke-interface {v4}, Lorg/w3c/dom/Document;->getDocumentElement()Lorg/w3c/dom/Element;
 
     move-result-object v24
 
     invoke-interface/range {v24 .. v24}, Lorg/w3c/dom/Element;->normalize()V
 
-    .line 727
-    const-string/jumbo v24, "policy"
+    const-string v24, "policy"
 
     move-object/from16 v0, v24
 
@@ -1620,27 +1496,21 @@
 
     move-result-object v13
 
-    .line 728
     .local v13, "policyNodeList":Lorg/w3c/dom/NodeList;
     const/4 v12, 0x0
 
-    .line 729
     .local v12, "policyElement":Lorg/w3c/dom/Element;
     const/16 v20, 0x0
 
-    .line 730
     .local v20, "signerElementCur":Lorg/w3c/dom/Element;
     const/4 v15, 0x0
 
-    .line 731
     .local v15, "seinfoElementCur":Lorg/w3c/dom/Element;
     const/16 v17, 0x0
 
-    .line 732
     .local v17, "serviceElementCur":Lorg/w3c/dom/Element;
     const/4 v10, 0x0
 
-    .line 734
     .local v10, "newElement":Lorg/w3c/dom/Element;
     const/16 v24, 0x0
 
@@ -1653,9 +1523,8 @@
     .end local v12    # "policyElement":Lorg/w3c/dom/Element;
     check-cast v12, Lorg/w3c/dom/Element;
 
-    .line 737
     .restart local v12    # "policyElement":Lorg/w3c/dom/Element;
-    const-string/jumbo v24, "signer"
+    const-string v24, "signer"
 
     move-object/from16 v0, v24
 
@@ -1663,15 +1532,12 @@
 
     move-result-object v19
 
-    .line 738
     .local v19, "signer":Lorg/w3c/dom/NodeList;
     const/16 v16, 0x0
 
-    .line 739
     .local v16, "seinfoNodeList":Lorg/w3c/dom/NodeList;
     const/16 v18, 0x0
 
-    .line 741
     .local v18, "serviceNodeList":Lorg/w3c/dom/NodeList;
     const/4 v8, 0x0
 
@@ -1685,7 +1551,6 @@
 
     if-ge v8, v0, :cond_4
 
-    .line 742
     move-object/from16 v0, v19
 
     invoke-interface {v0, v8}, Lorg/w3c/dom/NodeList;->item(I)Lorg/w3c/dom/Node;
@@ -1695,9 +1560,8 @@
     .end local v20    # "signerElementCur":Lorg/w3c/dom/Element;
     check-cast v20, Lorg/w3c/dom/Element;
 
-    .line 743
     .restart local v20    # "signerElementCur":Lorg/w3c/dom/Element;
-    const-string/jumbo v24, "seinfo"
+    const-string v24, "seinfo"
 
     move-object/from16 v0, v20
 
@@ -1707,7 +1571,6 @@
 
     move-result-object v16
 
-    .line 744
     const/16 v24, 0x0
 
     move-object/from16 v0, v16
@@ -1721,9 +1584,8 @@
     .end local v15    # "seinfoElementCur":Lorg/w3c/dom/Element;
     check-cast v15, Lorg/w3c/dom/Element;
 
-    .line 746
     .restart local v15    # "seinfoElementCur":Lorg/w3c/dom/Element;
-    const-string/jumbo v24, "value"
+    const-string v24, "value"
 
     move-object/from16 v0, v24
 
@@ -1739,8 +1601,7 @@
 
     if-eqz v24, :cond_6
 
-    .line 747
-    const-string/jumbo v24, "service"
+    const-string v24, "service"
 
     move-object/from16 v0, v20
 
@@ -1750,7 +1611,6 @@
 
     move-result-object v18
 
-    .line 748
     invoke-interface/range {v18 .. v18}, Lorg/w3c/dom/NodeList;->getLength()I
 
     move-result v24
@@ -1763,7 +1623,6 @@
 
     if-eq v0, v1, :cond_3
 
-    .line 749
     sget-object v24, Lcom/android/server/GoodContainer;->mSKLog:Lcom/android/server/SKLogger;
 
     const-string v25, "GoodContainer"
@@ -1772,12 +1631,10 @@
 
     invoke-virtual/range {v24 .. v26}, Lcom/android/server/SKLogger;->logAll(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 750
     const/16 v24, 0x0
 
     goto/16 :goto_0
 
-    .line 722
     .end local v8    # "i":I
     .end local v10    # "newElement":Lorg/w3c/dom/Element;
     .end local v12    # "policyElement":Lorg/w3c/dom/Element;
@@ -1793,7 +1650,6 @@
 
     goto/16 :goto_0
 
-    .line 752
     .restart local v8    # "i":I
     .restart local v10    # "newElement":Lorg/w3c/dom/Element;
     .restart local v12    # "policyElement":Lorg/w3c/dom/Element;
@@ -1818,9 +1674,8 @@
     .end local v17    # "serviceElementCur":Lorg/w3c/dom/Element;
     check-cast v17, Lorg/w3c/dom/Element;
 
-    .line 754
     .restart local v17    # "serviceElementCur":Lorg/w3c/dom/Element;
-    const-string/jumbo v24, "service"
+    const-string v24, "service"
 
     move-object/from16 v0, v24
 
@@ -1828,7 +1683,6 @@
 
     move-result-object v10
 
-    .line 755
     const-string v24, "name"
 
     move-object/from16 v0, v17
@@ -1839,7 +1693,6 @@
 
     move-result-object v11
 
-    .line 756
     const-string v24, "name"
 
     const-string v25, "name"
@@ -1858,10 +1711,9 @@
 
     invoke-interface {v10, v0, v1}, Lorg/w3c/dom/Element;->setAttribute(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 757
-    const-string/jumbo v24, "seinfo"
+    const-string v24, "seinfo"
 
-    const-string/jumbo v25, "seinfo"
+    const-string v25, "seinfo"
 
     move-object/from16 v0, v17
 
@@ -1877,7 +1729,6 @@
 
     invoke-interface {v10, v0, v1}, Lorg/w3c/dom/Element;->setAttribute(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 758
     const-string v24, "category"
 
     const-string v25, "category"
@@ -1896,7 +1747,6 @@
 
     invoke-interface {v10, v0, v1}, Lorg/w3c/dom/Element;->setAttribute(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 759
     const-string v24, "allowcategory"
 
     const-string v25, "allowcategory"
@@ -1915,10 +1765,9 @@
 
     invoke-interface {v10, v0, v1}, Lorg/w3c/dom/Element;->setAttribute(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 760
     const-string v24, "agent"
 
-    const-string/jumbo v25, "true"
+    const-string v25, "true"
 
     move-object/from16 v0, v24
 
@@ -1926,7 +1775,6 @@
 
     invoke-interface {v10, v0, v1}, Lorg/w3c/dom/Element;->setAttribute(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 761
     move-object/from16 v0, v19
 
     invoke-interface {v0, v8}, Lorg/w3c/dom/NodeList;->item(I)Lorg/w3c/dom/Node;
@@ -1937,7 +1785,6 @@
 
     invoke-interface {v0, v10}, Lorg/w3c/dom/Node;->appendChild(Lorg/w3c/dom/Node;)Lorg/w3c/dom/Node;
 
-    .line 765
     :cond_4
     invoke-interface {v4}, Lorg/w3c/dom/Document;->getDocumentElement()Lorg/w3c/dom/Element;
 
@@ -1945,22 +1792,18 @@
 
     invoke-interface/range {v24 .. v24}, Lorg/w3c/dom/Element;->normalize()V
 
-    .line 767
     invoke-static {}, Ljavax/xml/transform/TransformerFactory;->newInstance()Ljavax/xml/transform/TransformerFactory;
 
     move-result-object v23
 
-    .line 768
     .local v23, "transformerFactory":Ljavax/xml/transform/TransformerFactory;
     invoke-virtual/range {v23 .. v23}, Ljavax/xml/transform/TransformerFactory;->newTransformer()Ljavax/xml/transform/Transformer;
 
     move-result-object v22
 
-    .line 769
     .local v22, "transformer":Ljavax/xml/transform/Transformer;
     const/16 v21, 0x0
 
-    .line 770
     .local v21, "source":Ljavax/xml/transform/dom/DOMSource;
     new-instance v21, Ljavax/xml/transform/dom/DOMSource;
 
@@ -1969,13 +1812,11 @@
 
     invoke-direct {v0, v4}, Ljavax/xml/transform/dom/DOMSource;-><init>(Lorg/w3c/dom/Node;)V
 
-    .line 771
     .restart local v21    # "source":Ljavax/xml/transform/dom/DOMSource;
     new-instance v14, Ljavax/xml/transform/stream/StreamResult;
 
     invoke-direct {v14, v9}, Ljavax/xml/transform/stream/StreamResult;-><init>(Ljava/io/File;)V
 
-    .line 772
     .local v14, "result":Ljavax/xml/transform/stream/StreamResult;
     move-object/from16 v0, v22
 
@@ -1983,21 +1824,18 @@
 
     invoke-virtual {v0, v1, v14}, Ljavax/xml/transform/Transformer;->transform(Ljavax/xml/transform/Source;Ljavax/xml/transform/Result;)V
 
-    .line 773
     invoke-virtual {v9}, Ljava/io/File;->canWrite()Z
 
     move-result v24
 
     if-eqz v24, :cond_5
 
-    .line 774
     const/16 v24, 0x0
 
     move/from16 v0, v24
 
     invoke-virtual {v9, v0}, Ljava/io/File;->setWritable(Z)Z
 
-    .line 775
     :cond_5
     const/16 v24, 0x0
 
@@ -2021,12 +1859,10 @@
 
     if-eqz v24, :cond_7
 
-    .line 777
     const/16 v24, -0x1
 
     goto/16 :goto_0
 
-    .line 741
     .end local v14    # "result":Ljavax/xml/transform/stream/StreamResult;
     .end local v21    # "source":Ljavax/xml/transform/dom/DOMSource;
     .end local v22    # "transformer":Ljavax/xml/transform/Transformer;
@@ -2036,7 +1872,6 @@
 
     goto/16 :goto_1
 
-    .line 779
     .restart local v14    # "result":Ljavax/xml/transform/stream/StreamResult;
     .restart local v21    # "source":Ljavax/xml/transform/dom/DOMSource;
     .restart local v22    # "transformer":Ljavax/xml/transform/Transformer;
@@ -2046,7 +1881,6 @@
 
     goto/16 :goto_0
 
-    .line 780
     .end local v3    # "dBuilder":Ljavax/xml/parsers/DocumentBuilder;
     .end local v8    # "i":I
     .end local v10    # "newElement":Lorg/w3c/dom/Element;
@@ -2065,55 +1899,45 @@
     :catch_0
     move-exception v7
 
-    .line 781
     .local v7, "e1":Lorg/xml/sax/SAXException;
     invoke-virtual {v7}, Lorg/xml/sax/SAXException;->printStackTrace()V
 
-    .line 791
     .end local v7    # "e1":Lorg/xml/sax/SAXException;
     :goto_2
     const/16 v24, -0x1
 
     goto/16 :goto_0
 
-    .line 782
     :catch_1
     move-exception v7
 
-    .line 783
     .local v7, "e1":Ljavax/xml/parsers/ParserConfigurationException;
     invoke-virtual {v7}, Ljavax/xml/parsers/ParserConfigurationException;->printStackTrace()V
 
     goto :goto_2
 
-    .line 784
     .end local v7    # "e1":Ljavax/xml/parsers/ParserConfigurationException;
     :catch_2
     move-exception v7
 
-    .line 785
     .local v7, "e1":Ljavax/xml/transform/TransformerException;
     invoke-virtual {v7}, Ljavax/xml/transform/TransformerException;->printStackTrace()V
 
     goto :goto_2
 
-    .line 786
     .end local v7    # "e1":Ljavax/xml/transform/TransformerException;
     :catch_3
     move-exception v7
 
-    .line 787
     .local v7, "e1":Ljava/io/IOException;
     invoke-virtual {v7}, Ljava/io/IOException;->printStackTrace()V
 
     goto :goto_2
 
-    .line 788
     .end local v7    # "e1":Ljava/io/IOException;
     :catch_4
     move-exception v6
 
-    .line 789
     .local v6, "e":Ljava/lang/Exception;
     invoke-virtual {v6}, Ljava/lang/Exception;->printStackTrace()V
 
@@ -2128,18 +1952,14 @@
     .param p4, "appType"    # I
 
     .prologue
-    .line 348
     const/4 v12, 0x0
 
-    .line 349
     .local v12, "certMatch":Z
     const/4 v11, 0x0
 
-    .line 350
     .local v11, "appNotInstalled":Z
     const/4 v8, -0x1
 
-    .line 352
     .local v8, "addSuccess":I
     invoke-virtual {p0}, Lcom/android/server/GoodContainer;->getActivationStatus()I
 
@@ -2147,14 +1967,11 @@
 
     if-nez v3, :cond_0
 
-    .line 355
     const/4 v3, -0x1
 
-    .line 478
     :goto_0
     return v3
 
-    .line 357
     :cond_0
     const/16 v3, 0x66
 
@@ -2162,7 +1979,6 @@
 
     if-eq v0, v3, :cond_1
 
-    .line 358
     sget-object v3, Lcom/android/server/GoodContainer;->mSKLog:Lcom/android/server/SKLogger;
 
     const-string v4, "GoodContainer"
@@ -2189,48 +2005,38 @@
 
     invoke-virtual {v3, v4, v5}, Lcom/android/server/SKLogger;->logAll(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 359
     const/16 v3, -0xc
 
     goto :goto_0
 
-    .line 362
     :cond_1
     const/4 v2, 0x0
 
-    .line 363
     .local v2, "signature":Ljava/lang/String;
     new-instance v14, Ljava/util/ArrayList;
 
     invoke-direct {v14}, Ljava/util/ArrayList;-><init>()V
 
-    .line 364
     .local v14, "sigs":Ljava/util/ArrayList;, "Ljava/util/ArrayList<Ljava/lang/String;>;"
     invoke-static/range {p1 .. p1}, Lcom/android/server/GoodContainer;->getSignatureFromPackage(Ljava/lang/String;)Ljava/util/ArrayList;
 
     move-result-object v14
 
-    .line 365
     if-nez p2, :cond_2
 
-    .line 367
     const/16 v3, -0xe
 
     goto :goto_0
 
-    .line 368
     :cond_2
     if-nez v14, :cond_4
 
-    .line 370
     const/4 v3, 0x0
 
     aget-object v2, p2, v3
 
-    .line 371
     const/4 v11, 0x1
 
-    .line 392
     :cond_3
     new-instance v1, Ljava/io/File;
 
@@ -2238,16 +2044,13 @@
 
     invoke-direct {v1, v3}, Ljava/io/File;-><init>(Ljava/lang/String;)V
 
-    .line 393
     .local v1, "macPermFile":Ljava/io/File;
     if-nez v1, :cond_6
 
-    .line 395
     const/4 v3, -0x1
 
     goto :goto_0
 
-    .line 374
     .end local v1    # "macPermFile":Ljava/io/File;
     :cond_4
     const/4 v3, 0x0
@@ -2259,7 +2062,6 @@
     .end local v2    # "signature":Ljava/lang/String;
     check-cast v2, Ljava/lang/String;
 
-    .line 378
     .restart local v2    # "signature":Ljava/lang/String;
     const/4 v3, 0x0
 
@@ -2271,19 +2073,15 @@
 
     if-eqz v3, :cond_5
 
-    .line 380
     const/4 v12, 0x1
 
-    .line 385
     :cond_5
     if-nez v12, :cond_3
 
-    .line 387
     const/16 v3, -0xd
 
     goto :goto_0
 
-    .line 401
     .restart local v1    # "macPermFile":Ljava/io/File;
     :cond_6
     invoke-virtual/range {p0 .. p1}, Lcom/android/server/GoodContainer;->isProcessRunning(Ljava/lang/String;)Z
@@ -2292,18 +2090,15 @@
 
     if-eqz v3, :cond_7
 
-    .line 403
     const/4 v3, -0x8
 
     goto :goto_0
 
-    .line 405
     :cond_7
     invoke-static/range {p1 .. p2}, Lcom/android/server/pm/SELinuxMMAC;->getApplicationInfo(Ljava/lang/String;[Ljava/lang/String;)Landroid/content/pm/ApplicationInfo;
 
     move-result-object v10
 
-    .line 409
     .local v10, "appInfo":Landroid/content/pm/ApplicationInfo;
     if-eqz v10, :cond_b
 
@@ -2311,7 +2106,6 @@
 
     if-eqz v3, :cond_b
 
-    .line 410
     iget v3, v10, Landroid/content/pm/ApplicationInfo;->category:I
 
     if-lez v3, :cond_8
@@ -2322,7 +2116,6 @@
 
     if-ge v3, v4, :cond_8
 
-    .line 411
     sget-object v3, Lcom/android/server/GoodContainer;->mSKLog:Lcom/android/server/SKLogger;
 
     const-string v4, "GoodContainer"
@@ -2349,16 +2142,13 @@
 
     invoke-virtual {v3, v4, v5}, Lcom/android/server/SKLogger;->logAll(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 412
     const/16 v3, -0x9
 
     goto/16 :goto_0
 
-    .line 414
     :cond_8
     const/4 v9, 0x0
 
-    .line 415
     .local v9, "allowed":Z
     const/4 v13, 0x0
 
@@ -2370,7 +2160,6 @@
 
     if-ge v13, v3, :cond_9
 
-    .line 416
     iget-object v3, v10, Landroid/content/pm/ApplicationInfo;->seinfo:Ljava/lang/String;
 
     sget-object v4, Lcom/android/server/GoodContainer;->ALLOWED_SEINFO:[Ljava/lang/String;
@@ -2383,14 +2172,11 @@
 
     if-eqz v3, :cond_a
 
-    .line 417
     const/4 v9, 0x1
 
-    .line 422
     :cond_9
     if-nez v9, :cond_b
 
-    .line 423
     sget-object v3, Lcom/android/server/GoodContainer;->mSKLog:Lcom/android/server/SKLogger;
 
     const-string v4, "GoodContainer"
@@ -2417,18 +2203,15 @@
 
     invoke-virtual {v3, v4, v5}, Lcom/android/server/SKLogger;->logAll(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 424
     const/4 v3, -0x3
 
     goto/16 :goto_0
 
-    .line 415
     :cond_a
     add-int/lit8 v13, v13, 0x1
 
     goto :goto_1
 
-    .line 428
     .end local v9    # "allowed":Z
     .end local v13    # "cnt":I
     :cond_b
@@ -2438,7 +2221,6 @@
 
     if-ne v0, v3, :cond_c
 
-    .line 429
     if-eqz v10, :cond_d
 
     iget-object v3, v10, Landroid/content/pm/ApplicationInfo;->allowContainerCategory:Ljava/lang/String;
@@ -2461,12 +2243,10 @@
 
     if-ne v3, v4, :cond_d
 
-    .line 434
     const/16 v3, -0x9
 
     goto/16 :goto_0
 
-    .line 436
     :cond_c
     const/4 v3, 0x1
 
@@ -2474,7 +2254,6 @@
 
     if-ne v0, v3, :cond_d
 
-    .line 437
     if-eqz v10, :cond_d
 
     iget-object v3, v10, Landroid/content/pm/ApplicationInfo;->allowContainerCategory:Ljava/lang/String;
@@ -2497,12 +2276,10 @@
 
     if-ne v3, v4, :cond_d
 
-    .line 442
     const/16 v3, -0x9
 
     goto/16 :goto_0
 
-    .line 446
     :cond_d
     const/4 v3, 0x1
 
@@ -2510,7 +2287,6 @@
 
     if-ne v0, v3, :cond_e
 
-    .line 447
     const-string v4, "gsd"
 
     const/16 v3, 0x66
@@ -2529,11 +2305,9 @@
 
     move-result v8
 
-    .line 455
     :goto_2
     if-eqz v8, :cond_10
 
-    .line 456
     sget-object v3, Lcom/android/server/GoodContainer;->mSKLog:Lcom/android/server/SKLogger;
 
     const-string v4, "GoodContainer"
@@ -2544,10 +2318,8 @@
 
     move v3, v8
 
-    .line 457
     goto/16 :goto_0
 
-    .line 448
     :cond_e
     const/4 v3, 0x2
 
@@ -2555,7 +2327,6 @@
 
     if-ne v0, v3, :cond_f
 
-    .line 449
     const-string v4, "gtd"
 
     const/16 v3, 0x66
@@ -2576,7 +2347,6 @@
 
     goto :goto_2
 
-    .line 451
     :cond_f
     sget-object v3, Lcom/android/server/GoodContainer;->mSKLog:Lcom/android/server/SKLogger;
 
@@ -2604,12 +2374,10 @@
 
     invoke-virtual {v3, v4, v5}, Lcom/android/server/SKLogger;->logAll(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 452
     const/4 v3, -0x3
 
     goto/16 :goto_0
 
-    .line 463
     :cond_10
     const/4 v3, 0x0
 
@@ -2621,16 +2389,13 @@
 
     if-eqz v3, :cond_11
 
-    .line 466
     const/4 v3, -0x1
 
     goto/16 :goto_0
 
-    .line 470
     :cond_11
     if-nez v11, :cond_12
 
-    .line 471
     iget-object v3, p0, Lcom/android/server/GoodContainer;->mContext:Landroid/content/Context;
 
     invoke-static {v3}, Lcom/sec/enterprise/knox/seams/SEAMS;->getInstance(Landroid/content/Context;)Lcom/sec/enterprise/knox/seams/SEAMS;
@@ -2647,12 +2412,10 @@
 
     if-eq v3, v4, :cond_12
 
-    .line 474
     const/4 v3, -0x1
 
     goto/16 :goto_0
 
-    .line 478
     :cond_12
     const/4 v3, 0x0
 
@@ -2664,37 +2427,29 @@
     .param p1, "uid"    # I
 
     .prologue
-    .line 488
     invoke-virtual/range {p0 .. p0}, Lcom/android/server/GoodContainer;->getActivationStatus()I
 
     move-result v2
 
     if-nez v2, :cond_0
 
-    .line 490
     const/4 v2, -0x1
 
-    .line 695
     :goto_0
     return v2
 
-    .line 493
     :cond_0
     const/4 v13, 0x0
 
-    .line 494
     .local v13, "macPermFile":Ljava/io/File;
     const/16 v17, 0x0
 
-    .line 495
     .local v17, "seappConfig":Ljava/io/File;
     const/4 v3, 0x0
 
-    .line 496
     .local v3, "packageName":Ljava/lang/String;
     const/4 v15, 0x0
 
-    .line 499
     .local v15, "pkgInfo":Landroid/content/pm/PackageInfo;
     :try_start_0
     new-instance v1, Ljava/io/File;
@@ -2705,7 +2460,6 @@
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 500
     .end local v13    # "macPermFile":Ljava/io/File;
     .local v1, "macPermFile":Ljava/io/File;
     :try_start_1
@@ -2719,13 +2473,11 @@
 
     move-result-object v14
 
-    .line 501
     .local v14, "packagesList":[Ljava/lang/String;
     array-length v2, v14
 
     if-nez v2, :cond_1
 
-    .line 502
     sget-object v2, Lcom/android/server/GoodContainer;->mSKLog:Lcom/android/server/SKLogger;
 
     const-string v4, "GoodContainer"
@@ -2734,7 +2486,7 @@
 
     invoke-direct {v5}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v6, "the uid "
+    const-string v6, "the uid "
 
     invoke-virtual {v5, v6}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -2758,18 +2510,15 @@
 
     invoke-virtual {v2, v4, v5}, Lcom/android/server/SKLogger;->logAll(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 503
     const/4 v2, -0x1
 
     goto :goto_0
 
-    .line 505
     :cond_1
     const/4 v2, 0x0
 
     aget-object v3, v14, v2
 
-    .line 506
     move-object/from16 v0, p0
 
     iget-object v2, v0, Lcom/android/server/GoodContainer;->mPM:Landroid/content/pm/IPackageManager;
@@ -2784,10 +2533,8 @@
 
     move-result-object v15
 
-    .line 508
     if-nez v15, :cond_2
 
-    .line 509
     sget-object v2, Lcom/android/server/GoodContainer;->mSKLog:Lcom/android/server/SKLogger;
 
     const-string v4, "GoodContainer"
@@ -2796,18 +2543,15 @@
 
     invoke-virtual {v2, v4, v5}, Lcom/android/server/SKLogger;->logAll(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 510
     const/4 v2, -0x1
 
     goto :goto_0
 
-    .line 514
     :cond_2
     const/16 v16, 0x0
 
-    .line 515
     .local v16, "propertyValue":I
-    const-string/jumbo v2, "persist.security.good.enable"
+    const-string v2, "persist.security.good.enable"
 
     const-string v4, "0"
 
@@ -2823,10 +2567,8 @@
 
     if-eqz v2, :cond_3
 
-    .line 517
     const/16 v16, 0x1
 
-    .line 519
     :cond_3
     iget-object v2, v15, Landroid/content/pm/PackageInfo;->signatures:[Landroid/content/pm/Signature;
 
@@ -2848,7 +2590,6 @@
 
     if-eq v2, v4, :cond_4
 
-    .line 520
     sget-object v2, Lcom/android/server/GoodContainer;->mSKLog:Lcom/android/server/SKLogger;
 
     const-string v4, "GoodContainer"
@@ -2857,16 +2598,13 @@
 
     invoke-virtual {v2, v4, v5}, Lcom/android/server/SKLogger;->logAll(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 521
     const/16 v2, -0xb
 
     goto/16 :goto_0
 
-    .line 523
     :cond_4
     if-nez v16, :cond_5
 
-    .line 525
     iget-object v2, v15, Landroid/content/pm/PackageInfo;->signatures:[Landroid/content/pm/Signature;
 
     const/4 v4, 0x0
@@ -2891,29 +2629,25 @@
 
     if-nez v2, :cond_6
 
-    .line 526
     sget-object v2, Lcom/android/server/GoodContainer;->mSKLog:Lcom/android/server/SKLogger;
 
     const-string v4, "GoodContainer"
 
-    const-string/jumbo v5, "removeEntryFromMac - failed to remove generic_mdm tag"
+    const-string v5, "removeEntryFromMac - failed to remove generic_mdm tag"
 
     invoke-virtual {v2, v4, v5}, Lcom/android/server/SKLogger;->logAll(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 527
     const/4 v2, -0x1
 
     goto/16 :goto_0
 
-    .line 532
     :cond_5
-    const-string/jumbo v2, "persist.security.good.enable"
+    const-string v2, "persist.security.good.enable"
 
     const-string v4, "0"
 
     invoke-static {v2, v4}, Landroid/os/SystemProperties;->set(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 534
     :cond_6
     iget-object v2, v15, Landroid/content/pm/PackageInfo;->signatures:[Landroid/content/pm/Signature;
 
@@ -2939,16 +2673,14 @@
 
     if-nez v2, :cond_7
 
-    .line 537
     sget-object v2, Lcom/android/server/GoodContainer;->mSKLog:Lcom/android/server/SKLogger;
 
     const-string v4, "GoodContainer"
 
-    const-string/jumbo v5, "removeEntryFromMac - fail to remove entry from mac_permissions.xml"
+    const-string v5, "removeEntryFromMac - fail to remove entry from mac_permissions.xml"
 
     invoke-virtual {v2, v4, v5}, Lcom/android/server/SKLogger;->logAll(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 538
     iget-object v2, v15, Landroid/content/pm/PackageInfo;->signatures:[Landroid/content/pm/Signature;
 
     const/4 v4, 0x0
@@ -2973,12 +2705,10 @@
 
     invoke-static/range {v1 .. v7}, Lcom/android/server/GoodContainer;->addEntryToMac(Ljava/io/File;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;IZ)I
 
-    .line 539
     const/4 v2, -0x1
 
     goto/16 :goto_0
 
-    .line 543
     :cond_7
     const/4 v2, 0x0
 
@@ -2992,7 +2722,6 @@
 
     if-eqz v2, :cond_8
 
-    .line 544
     sget-object v2, Lcom/android/server/GoodContainer;->mSKLog:Lcom/android/server/SKLogger;
 
     const-string v4, "GoodContainer"
@@ -3001,7 +2730,6 @@
 
     invoke-virtual {v2, v4, v5}, Lcom/android/server/SKLogger;->logAll(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 545
     iget-object v2, v15, Landroid/content/pm/PackageInfo;->signatures:[Landroid/content/pm/Signature;
 
     const/4 v4, 0x0
@@ -3026,7 +2754,6 @@
 
     invoke-static/range {v1 .. v7}, Lcom/android/server/GoodContainer;->addEntryToMac(Ljava/io/File;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;IZ)I
 
-    .line 546
     iget-object v2, v15, Landroid/content/pm/PackageInfo;->signatures:[Landroid/content/pm/Signature;
 
     const/4 v4, 0x0
@@ -3051,12 +2778,10 @@
 
     invoke-static/range {v1 .. v7}, Lcom/android/server/GoodContainer;->addEntryToMac(Ljava/io/File;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;IZ)I
 
-    .line 550
     const/4 v2, -0x1
 
     goto/16 :goto_0
 
-    .line 554
     :cond_8
     new-instance v18, Ljava/io/File;
 
@@ -3068,7 +2793,6 @@
     :try_end_1
     .catch Ljava/lang/Exception; {:try_start_1 .. :try_end_1} :catch_1
 
-    .line 556
     .end local v17    # "seappConfig":Ljava/io/File;
     .local v18, "seappConfig":Ljava/io/File;
     :try_start_2
@@ -3096,7 +2820,6 @@
 
     if-eqz v2, :cond_9
 
-    .line 558
     sget-object v2, Lcom/android/server/GoodContainer;->mSKLog:Lcom/android/server/SKLogger;
 
     const-string v4, "GoodContainer"
@@ -3105,7 +2828,6 @@
 
     invoke-virtual {v2, v4, v5}, Lcom/android/server/SKLogger;->logAll(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 560
     iget-object v2, v15, Landroid/content/pm/PackageInfo;->signatures:[Landroid/content/pm/Signature;
 
     const/4 v4, 0x0
@@ -3130,7 +2852,6 @@
 
     invoke-static/range {v1 .. v7}, Lcom/android/server/GoodContainer;->addEntryToMac(Ljava/io/File;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;IZ)I
 
-    .line 561
     iget-object v2, v15, Landroid/content/pm/PackageInfo;->signatures:[Landroid/content/pm/Signature;
 
     const/4 v4, 0x0
@@ -3155,7 +2876,6 @@
 
     invoke-static/range {v1 .. v7}, Lcom/android/server/GoodContainer;->addEntryToMac(Ljava/io/File;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;IZ)I
 
-    .line 565
     const/4 v2, 0x0
 
     const/4 v4, 0x0
@@ -3164,12 +2884,10 @@
 
     invoke-virtual {v0, v3, v2, v4}, Lcom/android/server/GoodContainer;->loadContainerSetting(Ljava/lang/String;IZ)I
 
-    .line 566
     const/4 v2, -0x1
 
     goto/16 :goto_0
 
-    .line 569
     :cond_9
     invoke-virtual/range {v18 .. v18}, Ljava/io/File;->getAbsolutePath()Ljava/lang/String;
 
@@ -3195,7 +2913,6 @@
 
     if-eqz v2, :cond_a
 
-    .line 571
     sget-object v2, Lcom/android/server/GoodContainer;->mSKLog:Lcom/android/server/SKLogger;
 
     const-string v4, "GoodContainer"
@@ -3204,7 +2921,6 @@
 
     invoke-virtual {v2, v4, v5}, Lcom/android/server/SKLogger;->logAll(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 573
     iget-object v2, v15, Landroid/content/pm/PackageInfo;->signatures:[Landroid/content/pm/Signature;
 
     const/4 v4, 0x0
@@ -3229,7 +2945,6 @@
 
     invoke-static/range {v1 .. v7}, Lcom/android/server/GoodContainer;->addEntryToMac(Ljava/io/File;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;IZ)I
 
-    .line 574
     iget-object v2, v15, Landroid/content/pm/PackageInfo;->signatures:[Landroid/content/pm/Signature;
 
     const/4 v4, 0x0
@@ -3254,7 +2969,6 @@
 
     invoke-static/range {v1 .. v7}, Lcom/android/server/GoodContainer;->addEntryToMac(Ljava/io/File;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;IZ)I
 
-    .line 578
     const/4 v2, 0x0
 
     const/4 v4, 0x0
@@ -3263,7 +2977,6 @@
 
     invoke-virtual {v0, v3, v2, v4}, Lcom/android/server/GoodContainer;->loadContainerSetting(Ljava/lang/String;IZ)I
 
-    .line 579
     invoke-virtual/range {v18 .. v18}, Ljava/io/File;->getAbsolutePath()Ljava/lang/String;
 
     move-result-object v5
@@ -3284,12 +2997,10 @@
 
     invoke-virtual/range {v4 .. v11}, Lcom/android/server/GoodContainer;->addSEAppContext(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;I)I
 
-    .line 581
     const/4 v2, -0x1
 
     goto/16 :goto_0
 
-    .line 584
     :cond_a
     invoke-virtual/range {v18 .. v18}, Ljava/io/File;->getAbsolutePath()Ljava/lang/String;
 
@@ -3315,7 +3026,6 @@
 
     if-eqz v2, :cond_b
 
-    .line 586
     sget-object v2, Lcom/android/server/GoodContainer;->mSKLog:Lcom/android/server/SKLogger;
 
     const-string v4, "GoodContainer"
@@ -3324,7 +3034,6 @@
 
     invoke-virtual {v2, v4, v5}, Lcom/android/server/SKLogger;->logAll(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 588
     iget-object v2, v15, Landroid/content/pm/PackageInfo;->signatures:[Landroid/content/pm/Signature;
 
     const/4 v4, 0x0
@@ -3349,7 +3058,6 @@
 
     invoke-static/range {v1 .. v7}, Lcom/android/server/GoodContainer;->addEntryToMac(Ljava/io/File;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;IZ)I
 
-    .line 589
     iget-object v2, v15, Landroid/content/pm/PackageInfo;->signatures:[Landroid/content/pm/Signature;
 
     const/4 v4, 0x0
@@ -3374,7 +3082,6 @@
 
     invoke-static/range {v1 .. v7}, Lcom/android/server/GoodContainer;->addEntryToMac(Ljava/io/File;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;IZ)I
 
-    .line 593
     const/4 v2, 0x0
 
     const/4 v4, 0x0
@@ -3383,7 +3090,6 @@
 
     invoke-virtual {v0, v3, v2, v4}, Lcom/android/server/GoodContainer;->loadContainerSetting(Ljava/lang/String;IZ)I
 
-    .line 594
     invoke-virtual/range {v18 .. v18}, Ljava/io/File;->getAbsolutePath()Ljava/lang/String;
 
     move-result-object v5
@@ -3404,7 +3110,6 @@
 
     invoke-virtual/range {v4 .. v11}, Lcom/android/server/GoodContainer;->addSEAppContext(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;I)I
 
-    .line 596
     invoke-virtual/range {v18 .. v18}, Ljava/io/File;->getAbsolutePath()Ljava/lang/String;
 
     move-result-object v5
@@ -3425,12 +3130,10 @@
 
     invoke-virtual/range {v4 .. v11}, Lcom/android/server/GoodContainer;->addSEAppContext(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;I)I
 
-    .line 598
     const/4 v2, -0x1
 
     goto/16 :goto_0
 
-    .line 601
     :cond_b
     invoke-virtual/range {v18 .. v18}, Ljava/io/File;->getAbsolutePath()Ljava/lang/String;
 
@@ -3456,7 +3159,6 @@
 
     if-eqz v2, :cond_c
 
-    .line 603
     sget-object v2, Lcom/android/server/GoodContainer;->mSKLog:Lcom/android/server/SKLogger;
 
     const-string v4, "GoodContainer"
@@ -3465,7 +3167,6 @@
 
     invoke-virtual {v2, v4, v5}, Lcom/android/server/SKLogger;->logAll(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 605
     iget-object v2, v15, Landroid/content/pm/PackageInfo;->signatures:[Landroid/content/pm/Signature;
 
     const/4 v4, 0x0
@@ -3490,7 +3191,6 @@
 
     invoke-static/range {v1 .. v7}, Lcom/android/server/GoodContainer;->addEntryToMac(Ljava/io/File;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;IZ)I
 
-    .line 606
     iget-object v2, v15, Landroid/content/pm/PackageInfo;->signatures:[Landroid/content/pm/Signature;
 
     const/4 v4, 0x0
@@ -3515,7 +3215,6 @@
 
     invoke-static/range {v1 .. v7}, Lcom/android/server/GoodContainer;->addEntryToMac(Ljava/io/File;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;IZ)I
 
-    .line 610
     const/4 v2, 0x0
 
     const/4 v4, 0x0
@@ -3524,7 +3223,6 @@
 
     invoke-virtual {v0, v3, v2, v4}, Lcom/android/server/GoodContainer;->loadContainerSetting(Ljava/lang/String;IZ)I
 
-    .line 611
     invoke-virtual/range {v18 .. v18}, Ljava/io/File;->getAbsolutePath()Ljava/lang/String;
 
     move-result-object v5
@@ -3545,7 +3243,6 @@
 
     invoke-virtual/range {v4 .. v11}, Lcom/android/server/GoodContainer;->addSEAppContext(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;I)I
 
-    .line 613
     invoke-virtual/range {v18 .. v18}, Ljava/io/File;->getAbsolutePath()Ljava/lang/String;
 
     move-result-object v5
@@ -3566,7 +3263,6 @@
 
     invoke-virtual/range {v4 .. v11}, Lcom/android/server/GoodContainer;->addSEAppContext(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;I)I
 
-    .line 615
     invoke-virtual/range {v18 .. v18}, Ljava/io/File;->getAbsolutePath()Ljava/lang/String;
 
     move-result-object v5
@@ -3587,20 +3283,17 @@
 
     invoke-virtual/range {v4 .. v11}, Lcom/android/server/GoodContainer;->addSEAppContext(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;I)I
 
-    .line 617
     const/4 v2, -0x1
 
     goto/16 :goto_0
 
-    .line 621
     :cond_c
-    const-string/jumbo v2, "selinux.reload_policy"
+    const-string v2, "selinux.reload_policy"
 
     const-string v4, "1"
 
     invoke-static {v2, v4}, Landroid/os/SystemProperties;->set(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 624
     move-object/from16 v0, p0
 
     iget-object v2, v0, Lcom/android/server/GoodContainer;->mContext:Landroid/content/Context;
@@ -3617,7 +3310,6 @@
 
     if-eq v2, v4, :cond_d
 
-    .line 626
     iget-object v2, v15, Landroid/content/pm/PackageInfo;->signatures:[Landroid/content/pm/Signature;
 
     const/4 v4, 0x0
@@ -3642,7 +3334,6 @@
 
     invoke-static/range {v1 .. v7}, Lcom/android/server/GoodContainer;->addEntryToMac(Ljava/io/File;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;IZ)I
 
-    .line 627
     iget-object v2, v15, Landroid/content/pm/PackageInfo;->signatures:[Landroid/content/pm/Signature;
 
     const/4 v4, 0x0
@@ -3667,7 +3358,6 @@
 
     invoke-static/range {v1 .. v7}, Lcom/android/server/GoodContainer;->addEntryToMac(Ljava/io/File;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;IZ)I
 
-    .line 631
     const/4 v2, 0x0
 
     const/4 v4, 0x0
@@ -3676,7 +3366,6 @@
 
     invoke-virtual {v0, v3, v2, v4}, Lcom/android/server/GoodContainer;->loadContainerSetting(Ljava/lang/String;IZ)I
 
-    .line 632
     invoke-virtual/range {v18 .. v18}, Ljava/io/File;->getAbsolutePath()Ljava/lang/String;
 
     move-result-object v5
@@ -3697,7 +3386,6 @@
 
     invoke-virtual/range {v4 .. v11}, Lcom/android/server/GoodContainer;->addSEAppContext(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;I)I
 
-    .line 634
     invoke-virtual/range {v18 .. v18}, Ljava/io/File;->getAbsolutePath()Ljava/lang/String;
 
     move-result-object v5
@@ -3718,7 +3406,6 @@
 
     invoke-virtual/range {v4 .. v11}, Lcom/android/server/GoodContainer;->addSEAppContext(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;I)I
 
-    .line 636
     invoke-virtual/range {v18 .. v18}, Ljava/io/File;->getAbsolutePath()Ljava/lang/String;
 
     move-result-object v5
@@ -3739,7 +3426,6 @@
 
     invoke-virtual/range {v4 .. v11}, Lcom/android/server/GoodContainer;->addSEAppContext(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;I)I
 
-    .line 638
     invoke-virtual/range {v18 .. v18}, Ljava/io/File;->getAbsolutePath()Ljava/lang/String;
 
     move-result-object v5
@@ -3760,19 +3446,16 @@
 
     invoke-virtual/range {v4 .. v11}, Lcom/android/server/GoodContainer;->addSEAppContext(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;I)I
 
-    .line 640
-    const-string/jumbo v2, "selinux.reload_policy"
+    const-string v2, "selinux.reload_policy"
 
     const-string v4, "1"
 
     invoke-static {v2, v4}, Landroid/os/SystemProperties;->set(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 642
     const/4 v2, -0x1
 
     goto/16 :goto_0
 
-    .line 646
     :cond_d
     invoke-virtual/range {p0 .. p0}, Lcom/android/server/GoodContainer;->getActivationStatus()I
 
@@ -3782,7 +3465,6 @@
 
     if-ne v2, v4, :cond_10
 
-    .line 647
     sget-object v2, Lcom/android/server/GoodContainer;->mSKLog:Lcom/android/server/SKLogger;
 
     const-string v4, "GoodContainer"
@@ -3791,7 +3473,6 @@
 
     invoke-virtual {v2, v4, v5}, Lcom/android/server/SKLogger;->logAll(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 649
     iget-object v2, v15, Landroid/content/pm/PackageInfo;->signatures:[Landroid/content/pm/Signature;
 
     const/4 v4, 0x0
@@ -3816,7 +3497,6 @@
 
     invoke-static/range {v1 .. v7}, Lcom/android/server/GoodContainer;->addEntryToMac(Ljava/io/File;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;IZ)I
 
-    .line 650
     iget-object v2, v15, Landroid/content/pm/PackageInfo;->signatures:[Landroid/content/pm/Signature;
 
     const/4 v4, 0x0
@@ -3841,7 +3521,6 @@
 
     invoke-static/range {v1 .. v7}, Lcom/android/server/GoodContainer;->addEntryToMac(Ljava/io/File;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;IZ)I
 
-    .line 654
     const/4 v2, 0x0
 
     const/4 v4, 0x0
@@ -3850,7 +3529,6 @@
 
     invoke-virtual {v0, v3, v2, v4}, Lcom/android/server/GoodContainer;->loadContainerSetting(Ljava/lang/String;IZ)I
 
-    .line 655
     invoke-virtual/range {v18 .. v18}, Ljava/io/File;->getAbsolutePath()Ljava/lang/String;
 
     move-result-object v5
@@ -3871,7 +3549,6 @@
 
     invoke-virtual/range {v4 .. v11}, Lcom/android/server/GoodContainer;->addSEAppContext(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;I)I
 
-    .line 657
     invoke-virtual/range {v18 .. v18}, Ljava/io/File;->getAbsolutePath()Ljava/lang/String;
 
     move-result-object v5
@@ -3892,7 +3569,6 @@
 
     invoke-virtual/range {v4 .. v11}, Lcom/android/server/GoodContainer;->addSEAppContext(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;I)I
 
-    .line 659
     invoke-virtual/range {v18 .. v18}, Ljava/io/File;->getAbsolutePath()Ljava/lang/String;
 
     move-result-object v5
@@ -3913,7 +3589,6 @@
 
     invoke-virtual/range {v4 .. v11}, Lcom/android/server/GoodContainer;->addSEAppContext(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;I)I
 
-    .line 661
     invoke-virtual/range {v18 .. v18}, Ljava/io/File;->getAbsolutePath()Ljava/lang/String;
 
     move-result-object v5
@@ -3934,14 +3609,12 @@
 
     invoke-virtual/range {v4 .. v11}, Lcom/android/server/GoodContainer;->addSEAppContext(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;I)I
 
-    .line 663
-    const-string/jumbo v2, "selinux.reload_policy"
+    const-string v2, "selinux.reload_policy"
 
     const-string v4, "1"
 
     invoke-static {v2, v4}, Landroid/os/SystemProperties;->set(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 664
     move-object/from16 v0, p0
 
     iget-object v2, v0, Lcom/android/server/GoodContainer;->mContext:Landroid/content/Context;
@@ -3954,12 +3627,10 @@
     :try_end_2
     .catch Ljava/lang/Exception; {:try_start_2 .. :try_end_2} :catch_2
 
-    .line 665
     const/4 v2, -0x1
 
     goto/16 :goto_0
 
-    .line 668
     .end local v1    # "macPermFile":Ljava/io/File;
     .end local v14    # "packagesList":[Ljava/lang/String;
     .end local v16    # "propertyValue":I
@@ -3971,7 +3642,6 @@
 
     move-object v1, v13
 
-    .line 669
     .end local v13    # "macPermFile":Ljava/io/File;
     .restart local v1    # "macPermFile":Ljava/io/File;
     .local v12, "e":Ljava/lang/Exception;
@@ -3984,10 +3654,8 @@
 
     invoke-virtual {v2, v4, v5, v12}, Lcom/android/server/SKLogger;->logAll(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
 
-    .line 670
     if-eqz v15, :cond_e
 
-    .line 671
     iget-object v2, v15, Landroid/content/pm/PackageInfo;->signatures:[Landroid/content/pm/Signature;
 
     const/4 v4, 0x0
@@ -4012,7 +3680,6 @@
 
     invoke-static/range {v1 .. v7}, Lcom/android/server/GoodContainer;->addEntryToMac(Ljava/io/File;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;IZ)I
 
-    .line 672
     iget-object v2, v15, Landroid/content/pm/PackageInfo;->signatures:[Landroid/content/pm/Signature;
 
     const/4 v4, 0x0
@@ -4037,7 +3704,6 @@
 
     invoke-static/range {v1 .. v7}, Lcom/android/server/GoodContainer;->addEntryToMac(Ljava/io/File;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;IZ)I
 
-    .line 677
     :cond_e
     const/4 v2, 0x0
 
@@ -4047,10 +3713,8 @@
 
     invoke-virtual {v0, v3, v2, v4}, Lcom/android/server/GoodContainer;->loadContainerSetting(Ljava/lang/String;IZ)I
 
-    .line 678
     if-eqz v17, :cond_f
 
-    .line 679
     invoke-virtual/range {v17 .. v17}, Ljava/io/File;->getAbsolutePath()Ljava/lang/String;
 
     move-result-object v5
@@ -4071,7 +3735,6 @@
 
     invoke-virtual/range {v4 .. v11}, Lcom/android/server/GoodContainer;->addSEAppContext(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;I)I
 
-    .line 681
     invoke-virtual/range {v17 .. v17}, Ljava/io/File;->getAbsolutePath()Ljava/lang/String;
 
     move-result-object v5
@@ -4092,7 +3755,6 @@
 
     invoke-virtual/range {v4 .. v11}, Lcom/android/server/GoodContainer;->addSEAppContext(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;I)I
 
-    .line 683
     invoke-virtual/range {v17 .. v17}, Ljava/io/File;->getAbsolutePath()Ljava/lang/String;
 
     move-result-object v5
@@ -4113,7 +3775,6 @@
 
     invoke-virtual/range {v4 .. v11}, Lcom/android/server/GoodContainer;->addSEAppContext(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;I)I
 
-    .line 685
     invoke-virtual/range {v17 .. v17}, Ljava/io/File;->getAbsolutePath()Ljava/lang/String;
 
     move-result-object v5
@@ -4134,15 +3795,13 @@
 
     invoke-virtual/range {v4 .. v11}, Lcom/android/server/GoodContainer;->addSEAppContext(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;I)I
 
-    .line 689
     :cond_f
-    const-string/jumbo v2, "selinux.reload_policy"
+    const-string v2, "selinux.reload_policy"
 
     const-string v4, "1"
 
     invoke-static {v2, v4}, Landroid/os/SystemProperties;->set(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 690
     move-object/from16 v0, p0
 
     iget-object v2, v0, Lcom/android/server/GoodContainer;->mContext:Landroid/content/Context;
@@ -4153,12 +3812,10 @@
 
     invoke-virtual {v2, v3}, Lcom/sec/enterprise/knox/seams/SEAMS;->relabelAppDir(Ljava/lang/String;)I
 
-    .line 693
     const/4 v2, -0x1
 
     goto/16 :goto_0
 
-    .line 695
     .end local v12    # "e":Ljava/lang/Exception;
     .end local v17    # "seappConfig":Ljava/io/File;
     .restart local v14    # "packagesList":[Ljava/lang/String;
@@ -4169,7 +3826,6 @@
 
     goto/16 :goto_0
 
-    .line 668
     .end local v14    # "packagesList":[Ljava/lang/String;
     .end local v16    # "propertyValue":I
     .end local v18    # "seappConfig":Ljava/io/File;
@@ -4199,25 +3855,20 @@
     .prologue
     const/4 v5, 0x0
 
-    .line 800
     const/4 v1, 0x0
 
-    .line 801
     .local v1, "categorys":Ljava/util/HashSet;, "Ljava/util/HashSet<Ljava/lang/Integer;>;"
     invoke-virtual {p0}, Lcom/android/server/GoodContainer;->getGenericMDMID()Lcom/android/server/pm/SELinuxMMAC$GenericMDMID;
 
     move-result-object v3
 
-    .line 802
     .local v3, "mdmID":Lcom/android/server/pm/SELinuxMMAC$GenericMDMID;
     if-nez v3, :cond_1
 
-    .line 822
     :cond_0
     :goto_0
     return v5
 
-    .line 808
     :cond_1
     iget-object v6, p0, Lcom/android/server/GoodContainer;->mPms:Lcom/android/server/pm/PackageManagerService;
 
@@ -4227,17 +3878,14 @@
 
     move-result v2
 
-    .line 812
     .local v2, "isGoodContainerActivated":Z
     const/4 v0, 0x0
 
-    .line 813
     .local v0, "activation_status":Z
     const/4 v4, 0x0
 
-    .line 814
     .local v4, "val":Ljava/lang/String;
-    const-string/jumbo v6, "persist.security.good.enable"
+    const-string v6, "persist.security.good.enable"
 
     const-string v7, "0"
 
@@ -4245,7 +3893,6 @@
 
     move-result-object v4
 
-    .line 815
     if-eqz v4, :cond_2
 
     const-string v6, "1"
@@ -4256,13 +3903,10 @@
 
     if-eqz v6, :cond_2
 
-    .line 816
     const/4 v0, 0x1
 
-    .line 818
     or-int/2addr v2, v0
 
-    .line 822
     :cond_2
     if-eqz v2, :cond_0
 
@@ -4279,27 +3923,22 @@
     .prologue
     const/4 v1, 0x1
 
-    .line 963
     if-ne p2, v1, :cond_0
 
-    .line 964
     iget-object v0, p0, Lcom/android/server/GoodContainer;->mPms:Lcom/android/server/pm/PackageManagerService;
 
     invoke-virtual {v0, p1, v1, p2}, Lcom/android/server/pm/PackageManagerService;->getPackageNamesFromSEContainerID(III)[Ljava/lang/String;
 
     move-result-object v0
 
-    .line 974
     :goto_0
     return-object v0
 
-    .line 965
     :cond_0
     const/4 v0, 0x2
 
     if-ne p2, v0, :cond_1
 
-    .line 969
     iget-object v0, p0, Lcom/android/server/GoodContainer;->mPms:Lcom/android/server/pm/PackageManagerService;
 
     invoke-virtual {v0, p1, v1, p2}, Lcom/android/server/pm/PackageManagerService;->getContainerAllowPackageNamesFromSEContainer(III)[Ljava/lang/String;
@@ -4308,7 +3947,6 @@
 
     goto :goto_0
 
-    .line 974
     :cond_1
     const/4 v0, 0x0
 
@@ -4325,19 +3963,16 @@
     .param p6, "category"    # I
 
     .prologue
-    .line 929
     if-nez p1, :cond_0
 
-    .line 930
     const-string p1, "_app"
 
-    .line 932
     :cond_0
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v1, "user="
+    const-string v1, "user="
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -4392,23 +4027,18 @@
     .prologue
     const/4 v4, 0x1
 
-    .line 940
     const-string v1, "dummy"
 
-    .line 941
     .local v1, "param1":Ljava/lang/String;
     const-string v2, "dummy"
 
-    .line 942
     .local v2, "param2":Ljava/lang/String;
     invoke-static {p1}, Lcom/android/server/GoodContainer;->getValidStr(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object p1
 
-    .line 943
     if-ne p2, v4, :cond_0
 
-    .line 947
     iget-object v0, p0, Lcom/android/server/GoodContainer;->mPms:Lcom/android/server/pm/PackageManagerService;
 
     move-object v3, p1
@@ -4419,7 +4049,6 @@
 
     move-result v7
 
-    .line 948
     .local v7, "retContainerID":I
     new-array v6, v4, [I
 
@@ -4427,18 +4056,15 @@
 
     aput v7, v6, v0
 
-    .line 956
     .end local v7    # "retContainerID":I
     :goto_0
     return-object v6
 
-    .line 950
     :cond_0
     const/4 v0, 0x2
 
     if-ne p2, v0, :cond_1
 
-    .line 954
     iget-object v0, p0, Lcom/android/server/GoodContainer;->mPms:Lcom/android/server/pm/PackageManagerService;
 
     move-object v3, p1
@@ -4451,7 +4077,6 @@
 
     goto :goto_0
 
-    .line 956
     :cond_1
     const/4 v6, 0x0
 
@@ -4466,18 +4091,14 @@
     .param p4, "appType"    # I
 
     .prologue
-    .line 827
     const/4 v0, 0x0
 
-    .line 829
     .local v0, "appNotInstalled":Z
     const/4 v2, 0x0
 
-    .line 830
     .local v2, "certMatch":Z
     const/4 v1, 0x0
 
-    .line 831
     .local v1, "appTypeFound":Z
     const/4 v8, -0x1
 
@@ -4487,14 +4108,12 @@
 
     if-ne p4, v8, :cond_0
 
-    .line 832
     const/4 v8, 0x1
 
     invoke-virtual {p0, p1, v8}, Lcom/android/server/GoodContainer;->getSEContainerIDsFromPackageName(Ljava/lang/String;I)[I
 
     move-result-object v3
 
-    .line 833
     .local v3, "containerIds":[I
     const/4 v8, 0x0
 
@@ -4504,13 +4123,10 @@
 
     if-ne v8, v9, :cond_1
 
-    .line 834
     const/4 p4, 0x1
 
-    .line 835
     const/16 p3, 0x66
 
-    .line 854
     .end local v3    # "containerIds":[I
     :cond_0
     invoke-virtual {p0}, Lcom/android/server/GoodContainer;->getActivationStatus()I
@@ -4519,14 +4135,11 @@
 
     if-nez v8, :cond_4
 
-    .line 856
     const/4 v8, -0x1
 
-    .line 925
     :goto_0
     return v8
 
-    .line 837
     .restart local v3    # "containerIds":[I
     :cond_1
     const/4 v8, 0x2
@@ -4535,10 +4148,8 @@
 
     move-result-object v3
 
-    .line 838
     if-eqz v3, :cond_2
 
-    .line 839
     const/4 v4, 0x0
 
     .local v4, "i":I
@@ -4547,78 +4158,62 @@
 
     if-ge v4, v8, :cond_2
 
-    .line 840
     aget v8, v3, v4
 
     const/16 v9, 0x66
 
     if-ne v8, v9, :cond_3
 
-    .line 841
     const/4 p4, 0x2
 
-    .line 842
     const/16 p3, 0x66
 
-    .line 843
     const/4 v1, 0x1
 
-    .line 848
     .end local v4    # "i":I
     :cond_2
     if-nez v1, :cond_0
 
-    .line 849
     const/4 v8, -0x1
 
     goto :goto_0
 
-    .line 839
     .restart local v4    # "i":I
     :cond_3
     add-int/lit8 v4, v4, 0x1
 
     goto :goto_1
 
-    .line 859
     .end local v3    # "containerIds":[I
     .end local v4    # "i":I
     :cond_4
     const/4 v6, 0x0
 
-    .line 860
     .local v6, "signature":Ljava/lang/String;
     new-instance v7, Ljava/util/ArrayList;
 
     invoke-direct {v7}, Ljava/util/ArrayList;-><init>()V
 
-    .line 861
     .local v7, "sigs":Ljava/util/ArrayList;, "Ljava/util/ArrayList<Ljava/lang/String;>;"
     invoke-static {p1}, Lcom/android/server/GoodContainer;->getSignatureFromPackage(Ljava/lang/String;)Ljava/util/ArrayList;
 
     move-result-object v7
 
-    .line 863
     if-nez p2, :cond_5
 
-    .line 865
     const/4 v8, -0x1
 
     goto :goto_0
 
-    .line 866
     :cond_5
     if-nez v7, :cond_7
 
-    .line 869
     const/4 v8, 0x0
 
     aget-object v6, p2, v8
 
-    .line 870
     const/4 v0, 0x1
 
-    .line 891
     :cond_6
     new-instance v5, Ljava/io/File;
 
@@ -4626,16 +4221,13 @@
 
     invoke-direct {v5, v8}, Ljava/io/File;-><init>(Ljava/lang/String;)V
 
-    .line 892
     .local v5, "macPermFile":Ljava/io/File;
     if-nez v5, :cond_9
 
-    .line 895
     const/4 v8, -0x1
 
     goto :goto_0
 
-    .line 873
     .end local v5    # "macPermFile":Ljava/io/File;
     :cond_7
     const/4 v8, 0x0
@@ -4647,7 +4239,6 @@
     .end local v6    # "signature":Ljava/lang/String;
     check-cast v6, Ljava/lang/String;
 
-    .line 877
     .restart local v6    # "signature":Ljava/lang/String;
     const/4 v8, 0x0
 
@@ -4659,19 +4250,15 @@
 
     if-eqz v8, :cond_8
 
-    .line 879
     const/4 v2, 0x1
 
-    .line 883
     :cond_8
     if-nez v2, :cond_6
 
-    .line 886
     const/16 v8, -0xd
 
     goto :goto_0
 
-    .line 897
     .restart local v5    # "macPermFile":Ljava/io/File;
     :cond_9
     invoke-virtual {p0, p1}, Lcom/android/server/GoodContainer;->isProcessRunning(Ljava/lang/String;)Z
@@ -4680,12 +4267,10 @@
 
     if-eqz v8, :cond_a
 
-    .line 899
     const/4 v8, -0x8
 
     goto :goto_0
 
-    .line 905
     :cond_a
     const/16 v8, 0x66
 
@@ -4699,12 +4284,10 @@
 
     if-nez v8, :cond_b
 
-    .line 908
     const/4 v8, -0x1
 
     goto :goto_0
 
-    .line 911
     :cond_b
     const/4 v8, 0x0
 
@@ -4714,16 +4297,13 @@
 
     if-eqz v8, :cond_c
 
-    .line 914
     const/4 v8, -0x1
 
     goto :goto_0
 
-    .line 917
     :cond_c
     if-nez v0, :cond_d
 
-    .line 918
     iget-object v8, p0, Lcom/android/server/GoodContainer;->mContext:Landroid/content/Context;
 
     invoke-static {v8}, Lcom/sec/enterprise/knox/seams/SEAMS;->getInstance(Landroid/content/Context;)Lcom/sec/enterprise/knox/seams/SEAMS;
@@ -4738,12 +4318,10 @@
 
     if-eq v8, v9, :cond_d
 
-    .line 921
     const/4 v8, -0x1
 
     goto/16 :goto_0
 
-    .line 925
     :cond_d
     const/4 v8, 0x0
 

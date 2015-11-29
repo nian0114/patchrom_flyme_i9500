@@ -25,12 +25,10 @@
     .locals 1
 
     .prologue
-    .line 623
     iput-object p1, p0, Lcom/android/server/InputMethodManagerService$ImmsBroadcastReceiver;->this$0:Lcom/android/server/InputMethodManagerService;
 
     invoke-direct {p0}, Landroid/content/BroadcastReceiver;-><init>()V
 
-    .line 624
     const/4 v0, 0x1
 
     iput v0, p0, Lcom/android/server/InputMethodManagerService$ImmsBroadcastReceiver;->LID_OPEN:I
@@ -42,7 +40,6 @@
     .locals 6
 
     .prologue
-    .line 628
     iget-object v0, p0, Lcom/android/server/InputMethodManagerService$ImmsBroadcastReceiver;->this$0:Lcom/android/server/InputMethodManagerService;
 
     iget-object v0, v0, Lcom/android/server/InputMethodManagerService;->mCurClient:Lcom/android/server/InputMethodManagerService$ClientState;
@@ -57,7 +54,6 @@
 
     if-eqz v0, :cond_0
 
-    .line 629
     iget-object v1, p0, Lcom/android/server/InputMethodManagerService$ImmsBroadcastReceiver;->this$0:Lcom/android/server/InputMethodManagerService;
 
     iget-object v0, p0, Lcom/android/server/InputMethodManagerService$ImmsBroadcastReceiver;->this$0:Lcom/android/server/InputMethodManagerService;
@@ -91,11 +87,9 @@
 
     invoke-virtual {v1, v2, v0}, Lcom/android/server/InputMethodManagerService;->executeOrSendMessage(Landroid/os/IInterface;Landroid/os/Message;)V
 
-    .line 632
     :cond_0
     return-void
 
-    .line 629
     :cond_1
     const/4 v0, 0x0
 
@@ -112,12 +106,10 @@
     .prologue
     const/4 v4, 0x1
 
-    .line 636
     invoke-virtual {p2}, Landroid/content/Intent;->getAction()Ljava/lang/String;
 
     move-result-object v0
 
-    .line 637
     .local v0, "action":Ljava/lang/String;
     new-instance v1, Lcom/android/internal/widget/LockPatternUtils;
 
@@ -127,7 +119,6 @@
 
     invoke-direct {v1, v2}, Lcom/android/internal/widget/LockPatternUtils;-><init>(Landroid/content/Context;)V
 
-    .line 638
     .local v1, "lockPatternUtils":Lcom/android/internal/widget/LockPatternUtils;
     const-string v2, "android.intent.action.SCREEN_ON"
 
@@ -137,12 +128,10 @@
 
     if-eqz v2, :cond_1
 
-    .line 639
     iget-object v2, p0, Lcom/android/server/InputMethodManagerService$ImmsBroadcastReceiver;->this$0:Lcom/android/server/InputMethodManagerService;
 
     iput-boolean v4, v2, Lcom/android/server/InputMethodManagerService;->mScreenOn:Z
 
-    .line 640
     iget-object v2, p0, Lcom/android/server/InputMethodManagerService$ImmsBroadcastReceiver;->this$0:Lcom/android/server/InputMethodManagerService;
 
     iget-object v3, p0, Lcom/android/server/InputMethodManagerService$ImmsBroadcastReceiver;->this$0:Lcom/android/server/InputMethodManagerService;
@@ -155,21 +144,17 @@
     # setter for: Lcom/android/server/InputMethodManagerService;->mCurClientInKeyguard:Z
     invoke-static {v2, v3}, Lcom/android/server/InputMethodManagerService;->access$002(Lcom/android/server/InputMethodManagerService;Z)Z
 
-    .line 641
     iget-object v2, p0, Lcom/android/server/InputMethodManagerService$ImmsBroadcastReceiver;->this$0:Lcom/android/server/InputMethodManagerService;
 
     # invokes: Lcom/android/server/InputMethodManagerService;->refreshImeWindowVisibilityLocked()V
     invoke-static {v2}, Lcom/android/server/InputMethodManagerService;->access$200(Lcom/android/server/InputMethodManagerService;)V
 
-    .line 642
     invoke-direct {p0}, Lcom/android/server/InputMethodManagerService$ImmsBroadcastReceiver;->updateActive()V
 
-    .line 670
     :cond_0
     :goto_0
     return-void
 
-    .line 644
     :cond_1
     const-string v2, "android.intent.action.SCREEN_OFF"
 
@@ -179,14 +164,12 @@
 
     if-eqz v2, :cond_3
 
-    .line 645
     iget-object v2, p0, Lcom/android/server/InputMethodManagerService$ImmsBroadcastReceiver;->this$0:Lcom/android/server/InputMethodManagerService;
 
     const/4 v3, 0x0
 
     iput-boolean v3, v2, Lcom/android/server/InputMethodManagerService;->mScreenOn:Z
 
-    .line 646
     iget-object v2, p0, Lcom/android/server/InputMethodManagerService$ImmsBroadcastReceiver;->this$0:Lcom/android/server/InputMethodManagerService;
 
     iget-object v3, p0, Lcom/android/server/InputMethodManagerService$ImmsBroadcastReceiver;->this$0:Lcom/android/server/InputMethodManagerService;
@@ -199,13 +182,11 @@
     # setter for: Lcom/android/server/InputMethodManagerService;->mCurClientInKeyguard:Z
     invoke-static {v2, v3}, Lcom/android/server/InputMethodManagerService;->access$002(Lcom/android/server/InputMethodManagerService;Z)Z
 
-    .line 647
     iget-object v2, p0, Lcom/android/server/InputMethodManagerService$ImmsBroadcastReceiver;->this$0:Lcom/android/server/InputMethodManagerService;
 
     # invokes: Lcom/android/server/InputMethodManagerService;->setImeWindowVisibilityStatusHiddenLocked()V
     invoke-static {v2}, Lcom/android/server/InputMethodManagerService;->access$300(Lcom/android/server/InputMethodManagerService;)V
 
-    .line 652
     iget-object v2, p0, Lcom/android/server/InputMethodManagerService$ImmsBroadcastReceiver;->this$0:Lcom/android/server/InputMethodManagerService;
 
     iget-boolean v2, v2, Lcom/android/server/InputMethodManagerService;->mIsFolderModel:Z
@@ -231,13 +212,11 @@
 
     if-eq v2, v4, :cond_0
 
-    .line 655
     :cond_2
     invoke-direct {p0}, Lcom/android/server/InputMethodManagerService$ImmsBroadcastReceiver;->updateActive()V
 
     goto :goto_0
 
-    .line 658
     :cond_3
     const-string v2, "android.intent.action.CLOSE_SYSTEM_DIALOGS"
 
@@ -247,14 +226,12 @@
 
     if-eqz v2, :cond_4
 
-    .line 659
     iget-object v2, p0, Lcom/android/server/InputMethodManagerService$ImmsBroadcastReceiver;->this$0:Lcom/android/server/InputMethodManagerService;
 
     invoke-virtual {v2}, Lcom/android/server/InputMethodManagerService;->hideInputMethodMenu()V
 
     goto :goto_0
 
-    .line 663
     :cond_4
     const-string v2, "android.intent.action.USER_ADDED"
 
@@ -272,7 +249,6 @@
 
     if-eqz v2, :cond_6
 
-    .line 665
     :cond_5
     iget-object v2, p0, Lcom/android/server/InputMethodManagerService$ImmsBroadcastReceiver;->this$0:Lcom/android/server/InputMethodManagerService;
 
@@ -280,7 +256,6 @@
 
     goto :goto_0
 
-    .line 668
     :cond_6
     const-string v2, "InputMethodManagerService"
 

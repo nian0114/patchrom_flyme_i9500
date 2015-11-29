@@ -25,12 +25,10 @@
     .locals 1
 
     .prologue
-    .line 1559
     iput-object p1, p0, Lcom/android/internal/telephony/Am$IntentReceiver;->this$0:Lcom/android/internal/telephony/Am;
 
     invoke-direct {p0}, Landroid/content/IIntentReceiver$Stub;-><init>()V
 
-    .line 1560
     const/4 v0, 0x0
 
     iput-boolean v0, p0, Lcom/android/internal/telephony/Am$IntentReceiver;->mFinished:Z
@@ -44,7 +42,6 @@
     .param p2, "x1"    # Lcom/android/internal/telephony/Am$1;
 
     .prologue
-    .line 1559
     invoke-direct {p0, p1}, Lcom/android/internal/telephony/Am$IntentReceiver;-><init>(Lcom/android/internal/telephony/Am;)V
 
     return-void
@@ -68,7 +65,6 @@
     .end annotation
 
     .prologue
-    .line 1565
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
@@ -87,7 +83,6 @@
 
     move-result-object v0
 
-    .line 1566
     .local v0, "line":Ljava/lang/String;
     if-eqz p3, :cond_0
 
@@ -119,7 +114,6 @@
 
     move-result-object v0
 
-    .line 1567
     :cond_0
     if-eqz p4, :cond_1
 
@@ -145,31 +139,24 @@
 
     move-result-object v0
 
-    .line 1568
     :cond_1
     sget-object v1, Ljava/lang/System;->out:Ljava/io/PrintStream;
 
     invoke-virtual {v1, v0}, Ljava/io/PrintStream;->println(Ljava/lang/String;)V
 
-    .line 1569
     monitor-enter p0
 
-    .line 1570
     const/4 v1, 0x1
 
     :try_start_0
     iput-boolean v1, p0, Lcom/android/internal/telephony/Am$IntentReceiver;->mFinished:Z
 
-    .line 1571
     invoke-virtual {p0}, Ljava/lang/Object;->notifyAll()V
 
-    .line 1572
     monitor-exit p0
 
-    .line 1573
     return-void
 
-    .line 1572
     :catchall_0
     move-exception v1
 
@@ -184,7 +171,6 @@
     .locals 2
 
     .prologue
-    .line 1577
     monitor-enter p0
 
     :goto_0
@@ -200,11 +186,9 @@
 
     goto :goto_0
 
-    .line 1578
     :catch_0
     move-exception v0
 
-    .line 1579
     .local v0, "e":Ljava/lang/InterruptedException;
     :try_start_1
     new-instance v1, Ljava/lang/IllegalStateException;
@@ -215,7 +199,6 @@
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
-    .line 1577
     .end local v0    # "e":Ljava/lang/InterruptedException;
     :catchall_0
     move-exception v1
@@ -224,7 +207,6 @@
 
     throw v1
 
-    .line 1581
     :cond_0
     monitor-exit p0
 

@@ -34,24 +34,18 @@
     .prologue
     const-wide/16 v0, 0x0
 
-    .line 5380
     iput-object p1, p0, Lcom/android/server/wifi/WifiWatchdogStateMachine$VolumeWeightedEMA;->this$0:Lcom/android/server/wifi/WifiWatchdogStateMachine;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 5381
     iput-wide v0, p0, Lcom/android/server/wifi/WifiWatchdogStateMachine$VolumeWeightedEMA;->mValue:D
 
-    .line 5382
     iput-wide v0, p0, Lcom/android/server/wifi/WifiWatchdogStateMachine$VolumeWeightedEMA;->mVolume:D
 
-    .line 5383
     iput-wide v0, p0, Lcom/android/server/wifi/WifiWatchdogStateMachine$VolumeWeightedEMA;->mProduct:D
 
-    .line 5384
     iput-wide p2, p0, Lcom/android/server/wifi/WifiWatchdogStateMachine$VolumeWeightedEMA;->mAlpha:D
 
-    .line 5385
     return-void
 .end method
 
@@ -60,7 +54,6 @@
     .param p0, "x0"    # Lcom/android/server/wifi/WifiWatchdogStateMachine$VolumeWeightedEMA;
 
     .prologue
-    .line 5374
     iget-wide v0, p0, Lcom/android/server/wifi/WifiWatchdogStateMachine$VolumeWeightedEMA;->mValue:D
 
     return-wide v0
@@ -71,7 +64,6 @@
     .param p0, "x0"    # Lcom/android/server/wifi/WifiWatchdogStateMachine$VolumeWeightedEMA;
 
     .prologue
-    .line 5374
     iget-wide v0, p0, Lcom/android/server/wifi/WifiWatchdogStateMachine$VolumeWeightedEMA;->mVolume:D
 
     return-wide v0
@@ -87,20 +79,16 @@
     .prologue
     const-wide/high16 v8, 0x3ff0000000000000L    # 1.0
 
-    .line 5388
     if-gtz p3, :cond_0
 
-    .line 5394
     :goto_0
     return-void
 
-    .line 5390
     :cond_0
     int-to-double v2, p3
 
     mul-double v0, p1, v2
 
-    .line 5391
     .local v0, "newProduct":D
     iget-wide v2, p0, Lcom/android/server/wifi/WifiWatchdogStateMachine$VolumeWeightedEMA;->mAlpha:D
 
@@ -118,7 +106,6 @@
 
     iput-wide v2, p0, Lcom/android/server/wifi/WifiWatchdogStateMachine$VolumeWeightedEMA;->mProduct:D
 
-    .line 5392
     iget-wide v2, p0, Lcom/android/server/wifi/WifiWatchdogStateMachine$VolumeWeightedEMA;->mAlpha:D
 
     int-to-double v4, p3
@@ -137,7 +124,6 @@
 
     iput-wide v2, p0, Lcom/android/server/wifi/WifiWatchdogStateMachine$VolumeWeightedEMA;->mVolume:D
 
-    .line 5393
     iget-wide v2, p0, Lcom/android/server/wifi/WifiWatchdogStateMachine$VolumeWeightedEMA;->mProduct:D
 
     iget-wide v4, p0, Lcom/android/server/wifi/WifiWatchdogStateMachine$VolumeWeightedEMA;->mVolume:D

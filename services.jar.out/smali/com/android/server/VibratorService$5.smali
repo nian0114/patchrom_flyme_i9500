@@ -23,7 +23,6 @@
     .locals 3
 
     .prologue
-    .line 1188
     invoke-static {}, Landroid/os/SystemVibrator$MagnitudeType;->values()[Landroid/os/SystemVibrator$MagnitudeType;
 
     move-result-object v0

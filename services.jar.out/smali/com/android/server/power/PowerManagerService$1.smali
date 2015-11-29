@@ -26,7 +26,6 @@
     .locals 0
 
     .prologue
-    .line 1138
     iput-object p1, p0, Lcom/android/server/power/PowerManagerService$1;->this$0:Lcom/android/server/power/PowerManagerService;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -40,7 +39,6 @@
     .locals 4
 
     .prologue
-    .line 1159
     new-instance v1, Landroid/content/Intent;
 
     const-string v2, "com.android.server.PowerManagerService.action.SEC_POWER_SAVE_MODE_ENABLED"
@@ -60,7 +58,6 @@
 
     move-result-object v0
 
-    .line 1162
     .local v0, "intent":Landroid/content/Intent;
     iget-object v1, p0, Lcom/android/server/power/PowerManagerService$1;->this$0:Lcom/android/server/power/PowerManagerService;
 
@@ -71,7 +68,6 @@
 
     invoke-virtual {v1, v0}, Landroid/content/Context;->sendBroadcast(Landroid/content/Intent;)V
 
-    .line 1163
     const-string v1, "PowerManagerService"
 
     new-instance v2, Ljava/lang/StringBuilder;
@@ -101,6 +97,5 @@
 
     invoke-static {v1, v2}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1165
     return-void
 .end method

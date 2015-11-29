@@ -44,7 +44,6 @@
 
     const/4 v2, 0x0
 
-    .line 88
     new-instance v0, Lcom/android/server/wifi/WifiTrafficPoller$BoosterMode;
 
     const-string v1, "FullMode"
@@ -53,7 +52,6 @@
 
     sput-object v0, Lcom/android/server/wifi/WifiTrafficPoller$BoosterMode;->FullMode:Lcom/android/server/wifi/WifiTrafficPoller$BoosterMode;
 
-    .line 89
     new-instance v0, Lcom/android/server/wifi/WifiTrafficPoller$BoosterMode;
 
     const-string v1, "Hotspot3GMode"
@@ -62,7 +60,6 @@
 
     sput-object v0, Lcom/android/server/wifi/WifiTrafficPoller$BoosterMode;->Hotspot3GMode:Lcom/android/server/wifi/WifiTrafficPoller$BoosterMode;
 
-    .line 90
     new-instance v0, Lcom/android/server/wifi/WifiTrafficPoller$BoosterMode;
 
     const-string v1, "BTCoexMode"
@@ -71,7 +68,6 @@
 
     sput-object v0, Lcom/android/server/wifi/WifiTrafficPoller$BoosterMode;->BTCoexMode:Lcom/android/server/wifi/WifiTrafficPoller$BoosterMode;
 
-    .line 87
     const/4 v0, 0x3
 
     new-array v0, v0, [Lcom/android/server/wifi/WifiTrafficPoller$BoosterMode;
@@ -102,7 +98,6 @@
     .end annotation
 
     .prologue
-    .line 87
     invoke-direct {p0, p1, p2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
     return-void
@@ -113,7 +108,6 @@
     .param p0, "name"    # Ljava/lang/String;
 
     .prologue
-    .line 87
     const-class v0, Lcom/android/server/wifi/WifiTrafficPoller$BoosterMode;
 
     invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
@@ -129,7 +123,6 @@
     .locals 1
 
     .prologue
-    .line 87
     sget-object v0, Lcom/android/server/wifi/WifiTrafficPoller$BoosterMode;->$VALUES:[Lcom/android/server/wifi/WifiTrafficPoller$BoosterMode;
 
     invoke-virtual {v0}, [Lcom/android/server/wifi/WifiTrafficPoller$BoosterMode;->clone()Ljava/lang/Object;

@@ -32,17 +32,14 @@
     .locals 1
 
     .prologue
-    .line 37
     const/4 v0, 0x1
 
     sput v0, Landroid/hardware/scontext/provider/miscprovider/ExerciseImpl;->REQUIRED_DATA_GPS:I
 
-    .line 39
     const/4 v0, 0x2
 
     sput v0, Landroid/hardware/scontext/provider/miscprovider/ExerciseImpl;->REQUIRED_DATA_BAROMETER:I
 
-    .line 41
     const/4 v0, 0x4
 
     sput v0, Landroid/hardware/scontext/provider/miscprovider/ExerciseImpl;->REQUIRED_DATA_PEDOMETER:I
@@ -56,29 +53,23 @@
     .param p2, "listener"    # Landroid/hardware/scontext/provider/EventListener;
 
     .prologue
-    .line 54
     invoke-direct {p0, p1}, Landroid/hardware/scontext/provider/miscprovider/MiscProvider;-><init>(Landroid/content/Context;)V
 
-    .line 51
     const/4 v0, 0x0
 
     iput v0, p0, Landroid/hardware/scontext/provider/miscprovider/ExerciseImpl;->mRequiredData:I
 
-    .line 136
     new-instance v0, Landroid/hardware/scontext/provider/miscprovider/ExerciseImpl$1;
 
     invoke-direct {v0, p0}, Landroid/hardware/scontext/provider/miscprovider/ExerciseImpl$1;-><init>(Landroid/hardware/scontext/provider/miscprovider/ExerciseImpl;)V
 
     iput-object v0, p0, Landroid/hardware/scontext/provider/miscprovider/ExerciseImpl;->mLocationListener:Landroid/location/ExerciseLocationListener;
 
-    .line 56
     iput-object p1, p0, Landroid/hardware/scontext/provider/miscprovider/ExerciseImpl;->mContext:Landroid/content/Context;
 
-    .line 57
     iput-object p2, p0, Landroid/hardware/scontext/provider/miscprovider/ExerciseImpl;->mListener:Landroid/hardware/scontext/provider/EventListener;
 
-    .line 58
-    const-string/jumbo v0, "window"
+    const-string v0, "window"
 
     invoke-virtual {p1, v0}, Landroid/content/Context;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
 
@@ -92,7 +83,6 @@
 
     iput-object v0, p0, Landroid/hardware/scontext/provider/miscprovider/ExerciseImpl;->mDisplay:Landroid/view/Display;
 
-    .line 60
     return-void
 .end method
 
@@ -101,7 +91,6 @@
     .param p0, "x0"    # Landroid/hardware/scontext/provider/miscprovider/ExerciseImpl;
 
     .prologue
-    .line 33
     iget-object v0, p0, Landroid/hardware/scontext/provider/miscprovider/ExerciseImpl;->mListener:Landroid/hardware/scontext/provider/EventListener;
 
     return-object v0
@@ -112,12 +101,10 @@
     .param p1, "context"    # Landroid/os/Bundle;
 
     .prologue
-    .line 161
     new-instance v11, Ljava/lang/StringBuffer;
 
     invoke-direct {v11}, Ljava/lang/StringBuffer;-><init>()V
 
-    .line 162
     .local v11, "sb":Ljava/lang/StringBuffer;
     const-string v16, "TimeStampArray"
 
@@ -129,7 +116,6 @@
 
     move-result-object v15
 
-    .line 163
     .local v15, "timestamp":[J
     const-string v16, "LatitudeArray"
 
@@ -141,7 +127,6 @@
 
     move-result-object v6
 
-    .line 164
     .local v6, "latitudeArray":[D
     const-string v16, "LongitudeArray"
 
@@ -153,7 +138,6 @@
 
     move-result-object v7
 
-    .line 165
     .local v7, "longitudeArray":[D
     const-string v16, "AltitudeArray"
 
@@ -165,7 +149,6 @@
 
     move-result-object v2
 
-    .line 166
     .local v2, "altitudeArray":[F
     const-string v16, "PressureArray"
 
@@ -177,7 +160,6 @@
 
     move-result-object v10
 
-    .line 167
     .local v10, "pressureArray":[F
     const-string v16, "SpeedArray"
 
@@ -189,7 +171,6 @@
 
     move-result-object v12
 
-    .line 168
     .local v12, "speedArray":[F
     const-string v16, "PedoDistanceDiffArray"
 
@@ -201,7 +182,6 @@
 
     move-result-object v8
 
-    .line 169
     .local v8, "pedoDistanceArray":[D
     const-string v16, "PedoSpeedArray"
 
@@ -213,7 +193,6 @@
 
     move-result-object v9
 
-    .line 170
     .local v9, "pedoSpeedArray":[D
     const-string v16, "StepCountDiffArray"
 
@@ -225,7 +204,6 @@
 
     move-result-object v13
 
-    .line 171
     .local v13, "stepCountDiffArray":[J
     const-string v16, "DataCount"
 
@@ -237,7 +215,6 @@
 
     move-result v3
 
-    .line 173
     .local v3, "dataCount":I
     const/16 v16, 0x9
 
@@ -277,7 +254,7 @@
 
     const/16 v16, 0x5
 
-    const-string/jumbo v17, "speedArray"
+    const-string v17, "speedArray"
 
     aput-object v17, v14, v16
 
@@ -295,11 +272,10 @@
 
     const/16 v16, 0x8
 
-    const-string/jumbo v17, "scArray"
+    const-string v17, "scArray"
 
     aput-object v17, v14, v16
 
-    .line 178
     .local v14, "str_array":[Ljava/lang/String;
     const/4 v4, 0x0
 
@@ -313,7 +289,6 @@
 
     if-ge v4, v0, :cond_3
 
-    .line 179
     new-instance v16, Ljava/lang/StringBuilder;
 
     invoke-direct/range {v16 .. v16}, Ljava/lang/StringBuilder;-><init>()V
@@ -338,17 +313,14 @@
 
     invoke-virtual {v11, v0}, Ljava/lang/StringBuffer;->append(Ljava/lang/String;)Ljava/lang/StringBuffer;
 
-    .line 180
     const/4 v5, 0x0
 
     .local v5, "j":I
     :goto_1
     if-ge v5, v3, :cond_1
 
-    .line 181
     packed-switch v4, :pswitch_data_0
 
-    .line 212
     :goto_2
     add-int/lit8 v16, v3, -0x1
 
@@ -356,20 +328,17 @@
 
     if-ge v5, v0, :cond_0
 
-    .line 213
     const-string v16, ","
 
     move-object/from16 v0, v16
 
     invoke-virtual {v11, v0}, Ljava/lang/StringBuffer;->append(Ljava/lang/String;)Ljava/lang/StringBuffer;
 
-    .line 180
     :cond_0
     add-int/lit8 v5, v5, 0x1
 
     goto :goto_1
 
-    .line 183
     :pswitch_0
     aget-wide v16, v15, v5
 
@@ -379,7 +348,6 @@
 
     goto :goto_2
 
-    .line 186
     :pswitch_1
     aget-wide v16, v6, v5
 
@@ -389,7 +357,6 @@
 
     goto :goto_2
 
-    .line 189
     :pswitch_2
     aget-wide v16, v7, v5
 
@@ -399,7 +366,6 @@
 
     goto :goto_2
 
-    .line 192
     :pswitch_3
     aget v16, v2, v5
 
@@ -409,7 +375,6 @@
 
     goto :goto_2
 
-    .line 195
     :pswitch_4
     aget v16, v10, v5
 
@@ -419,7 +384,6 @@
 
     goto :goto_2
 
-    .line 198
     :pswitch_5
     aget v16, v12, v5
 
@@ -429,7 +393,6 @@
 
     goto :goto_2
 
-    .line 201
     :pswitch_6
     aget-wide v16, v8, v5
 
@@ -439,7 +402,6 @@
 
     goto :goto_2
 
-    .line 204
     :pswitch_7
     aget-wide v16, v9, v5
 
@@ -449,7 +411,6 @@
 
     goto :goto_2
 
-    .line 207
     :pswitch_8
     aget-wide v16, v13, v5
 
@@ -459,7 +420,6 @@
 
     goto :goto_2
 
-    .line 215
     :cond_1
     const-string v16, "]"
 
@@ -467,7 +427,6 @@
 
     invoke-virtual {v11, v0}, Ljava/lang/StringBuffer;->append(Ljava/lang/String;)Ljava/lang/StringBuffer;
 
-    .line 216
     array-length v0, v14
 
     move/from16 v16, v0
@@ -478,20 +437,17 @@
 
     if-ge v4, v0, :cond_2
 
-    .line 217
     const-string v16, ", "
 
     move-object/from16 v0, v16
 
     invoke-virtual {v11, v0}, Ljava/lang/StringBuffer;->append(Ljava/lang/String;)Ljava/lang/StringBuffer;
 
-    .line 178
     :cond_2
     add-int/lit8 v4, v4, 0x1
 
     goto/16 :goto_0
 
-    .line 221
     .end local v5    # "j":I
     :cond_3
     const-string v16, "SContext.MiscProvider.ExerciseImpl"
@@ -502,10 +458,8 @@
 
     invoke-static/range {v16 .. v17}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 222
     return-void
 
-    .line 181
     :pswitch_data_0
     .packed-switch 0x0
         :pswitch_0
@@ -529,7 +483,6 @@
     .end annotation
 
     .prologue
-    .line 129
     iget-object v0, p0, Landroid/hardware/scontext/provider/miscprovider/ExerciseImpl;->mDisplay:Landroid/view/Display;
 
     invoke-virtual {v0}, Landroid/view/Display;->getState()I
@@ -540,10 +493,8 @@
 
     if-ne v0, v1, :cond_0
 
-    .line 130
     const/4 v0, 0x1
 
-    .line 132
     :goto_0
     return v0
 
@@ -559,12 +510,10 @@
     .locals 4
 
     .prologue
-    .line 69
     iget-object v0, p0, Landroid/hardware/scontext/provider/miscprovider/ExerciseImpl;->mLocationManager:Landroid/location/LocationManager;
 
     if-nez v0, :cond_0
 
-    .line 70
     iget-object v0, p0, Landroid/hardware/scontext/provider/miscprovider/ExerciseImpl;->mContext:Landroid/content/Context;
 
     const-string v1, "location"
@@ -577,7 +526,6 @@
 
     iput-object v0, p0, Landroid/hardware/scontext/provider/miscprovider/ExerciseImpl;->mLocationManager:Landroid/location/LocationManager;
 
-    .line 72
     :cond_0
     iget-object v0, p0, Landroid/hardware/scontext/provider/miscprovider/ExerciseImpl;->mLocationManager:Landroid/location/LocationManager;
 
@@ -589,14 +537,12 @@
 
     invoke-virtual {v0, v1, v2, v3}, Landroid/location/LocationManager;->requestExerciseLocationUpdates(IILandroid/location/ExerciseLocationListener;)V
 
-    .line 73
     const-string v0, "SContext.MiscProvider.ExerciseImpl"
 
     const-string v1, "add()"
 
     invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 74
     return-void
 .end method
 
@@ -605,13 +551,10 @@
     .param p1, "context"    # Landroid/os/Bundle;
 
     .prologue
-    .line 107
     if-eqz p1, :cond_0
 
-    .line 108
     invoke-direct {p0, p1}, Landroid/hardware/scontext/provider/miscprovider/ExerciseImpl;->display(Landroid/os/Bundle;)V
 
-    .line 110
     :cond_0
     return-object p1
 .end method
@@ -620,21 +563,18 @@
     .locals 2
 
     .prologue
-    .line 84
     iget-object v0, p0, Landroid/hardware/scontext/provider/miscprovider/ExerciseImpl;->mLocationManager:Landroid/location/LocationManager;
 
     iget-object v1, p0, Landroid/hardware/scontext/provider/miscprovider/ExerciseImpl;->mLocationListener:Landroid/location/ExerciseLocationListener;
 
     invoke-virtual {v0, v1}, Landroid/location/LocationManager;->removeExcersiceLocationUpdates(Landroid/location/ExerciseLocationListener;)V
 
-    .line 85
     const-string v0, "SContext.MiscProvider.ExerciseImpl"
 
     const-string v1, "remove()"
 
     invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 86
     return-void
 .end method
 
@@ -642,21 +582,18 @@
     .locals 2
 
     .prologue
-    .line 98
     const-string v0, "SContext.MiscProvider.ExerciseImpl"
 
-    const-string/jumbo v1, "requestToUpdate()"
+    const-string v1, "requestToUpdate()"
 
     invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 99
     invoke-direct {p0}, Landroid/hardware/scontext/provider/miscprovider/ExerciseImpl;->isScreenOn()Z
 
     move-result v0
 
     if-nez v0, :cond_0
 
-    .line 102
     :cond_0
     return-void
 .end method
@@ -667,16 +604,14 @@
     .param p2, "attribute"    # Landroid/hardware/scontext/SContextAttribute;
 
     .prologue
-    .line 122
     const/16 v1, 0x26
 
     invoke-virtual {p2, v1}, Landroid/hardware/scontext/SContextAttribute;->getAttribute(I)Landroid/os/Bundle;
 
     move-result-object v0
 
-    .line 123
     .local v0, "bundle":Landroid/os/Bundle;
-    const-string/jumbo v1, "required_data_type"
+    const-string v1, "required_data_type"
 
     invoke-virtual {v0, v1}, Landroid/os/Bundle;->getInt(Ljava/lang/String;)I
 
@@ -684,14 +619,13 @@
 
     iput v1, p0, Landroid/hardware/scontext/provider/miscprovider/ExerciseImpl;->mRequiredData:I
 
-    .line 124
     const-string v1, "SContext.MiscProvider.ExerciseImpl"
 
     new-instance v2, Ljava/lang/StringBuilder;
 
     invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v3, "setAttribute() : requiredData = "
+    const-string v3, "setAttribute() : requiredData = "
 
     invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -709,6 +643,5 @@
 
     invoke-static {v1, v2}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 125
     return-void
 .end method

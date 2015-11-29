@@ -58,116 +58,92 @@
     .prologue
     const-wide/16 v2, 0x0
 
-    .line 1731
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 1708
     const-string v0, ""
 
     iput-object v0, p0, Landroid/mtp/MediaObject;->title:Ljava/lang/String;
 
-    .line 1709
     const-string v0, ""
 
     iput-object v0, p0, Landroid/mtp/MediaObject;->album:Ljava/lang/String;
 
-    .line 1710
     const-string v0, ""
 
     iput-object v0, p0, Landroid/mtp/MediaObject;->filename:Ljava/lang/String;
 
-    .line 1711
     const-string v0, ""
 
     iput-object v0, p0, Landroid/mtp/MediaObject;->id:Ljava/lang/String;
 
-    .line 1712
     iput-wide v2, p0, Landroid/mtp/MediaObject;->duration:J
 
-    .line 1713
     const-string v0, ""
 
     iput-object v0, p0, Landroid/mtp/MediaObject;->size:Ljava/lang/String;
 
-    .line 1714
     const/4 v0, 0x3
 
     iput v0, p0, Landroid/mtp/MediaObject;->mimeTypeEnum:I
 
-    .line 1715
     const-string v0, ""
 
     iput-object v0, p0, Landroid/mtp/MediaObject;->artist:Ljava/lang/String;
 
-    .line 1716
     const-string v0, ""
 
     iput-object v0, p0, Landroid/mtp/MediaObject;->composer:Ljava/lang/String;
 
-    .line 1717
     const/4 v0, 0x0
 
     iput v0, p0, Landroid/mtp/MediaObject;->year:I
 
-    .line 1718
     const-string v0, ""
 
     iput-object v0, p0, Landroid/mtp/MediaObject;->description:Ljava/lang/String;
 
-    .line 1719
     const-string v0, ""
 
     iput-object v0, p0, Landroid/mtp/MediaObject;->language:Ljava/lang/String;
 
-    .line 1720
     const-string v0, ""
 
     iput-object v0, p0, Landroid/mtp/MediaObject;->longitude:Ljava/lang/String;
 
-    .line 1721
     const-string v0, ""
 
     iput-object v0, p0, Landroid/mtp/MediaObject;->latitude:Ljava/lang/String;
 
-    .line 1722
     const-string v0, ""
 
     iput-object v0, p0, Landroid/mtp/MediaObject;->creationDate:Ljava/lang/String;
 
-    .line 1723
     const-string v0, ""
 
     iput-object v0, p0, Landroid/mtp/MediaObject;->path:Ljava/lang/String;
 
-    .line 1724
     const-string v0, ""
 
     iput-object v0, p0, Landroid/mtp/MediaObject;->modificationDate:Ljava/lang/String;
 
-    .line 1725
     const-string v0, ""
 
     iput-object v0, p0, Landroid/mtp/MediaObject;->genreName:Ljava/lang/String;
 
-    .line 1726
     iput-wide v2, p0, Landroid/mtp/MediaObject;->width:J
 
-    .line 1727
     iput-wide v2, p0, Landroid/mtp/MediaObject;->height:J
 
-    .line 1728
     const-string v0, ""
 
     iput-object v0, p0, Landroid/mtp/MediaObject;->dateTaken:Ljava/lang/String;
 
-    .line 1732
     const-string v0, "MTPJNIInterface"
 
     const-string v1, "Inside MediaObject Constructor"
 
     invoke-static {v0, v1}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1733
     return-void
 .end method
 
@@ -196,199 +172,155 @@
     .param p24, "dateTaken"    # Ljava/lang/String;
 
     .prologue
-    .line 1737
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 1708
     const-string v2, ""
 
     iput-object v2, p0, Landroid/mtp/MediaObject;->title:Ljava/lang/String;
 
-    .line 1709
     const-string v2, ""
 
     iput-object v2, p0, Landroid/mtp/MediaObject;->album:Ljava/lang/String;
 
-    .line 1710
     const-string v2, ""
 
     iput-object v2, p0, Landroid/mtp/MediaObject;->filename:Ljava/lang/String;
 
-    .line 1711
     const-string v2, ""
 
     iput-object v2, p0, Landroid/mtp/MediaObject;->id:Ljava/lang/String;
 
-    .line 1712
     const-wide/16 v2, 0x0
 
     iput-wide v2, p0, Landroid/mtp/MediaObject;->duration:J
 
-    .line 1713
     const-string v2, ""
 
     iput-object v2, p0, Landroid/mtp/MediaObject;->size:Ljava/lang/String;
 
-    .line 1714
     const/4 v2, 0x3
 
     iput v2, p0, Landroid/mtp/MediaObject;->mimeTypeEnum:I
 
-    .line 1715
     const-string v2, ""
 
     iput-object v2, p0, Landroid/mtp/MediaObject;->artist:Ljava/lang/String;
 
-    .line 1716
     const-string v2, ""
 
     iput-object v2, p0, Landroid/mtp/MediaObject;->composer:Ljava/lang/String;
 
-    .line 1717
     const/4 v2, 0x0
 
     iput v2, p0, Landroid/mtp/MediaObject;->year:I
 
-    .line 1718
     const-string v2, ""
 
     iput-object v2, p0, Landroid/mtp/MediaObject;->description:Ljava/lang/String;
 
-    .line 1719
     const-string v2, ""
 
     iput-object v2, p0, Landroid/mtp/MediaObject;->language:Ljava/lang/String;
 
-    .line 1720
     const-string v2, ""
 
     iput-object v2, p0, Landroid/mtp/MediaObject;->longitude:Ljava/lang/String;
 
-    .line 1721
     const-string v2, ""
 
     iput-object v2, p0, Landroid/mtp/MediaObject;->latitude:Ljava/lang/String;
 
-    .line 1722
     const-string v2, ""
 
     iput-object v2, p0, Landroid/mtp/MediaObject;->creationDate:Ljava/lang/String;
 
-    .line 1723
     const-string v2, ""
 
     iput-object v2, p0, Landroid/mtp/MediaObject;->path:Ljava/lang/String;
 
-    .line 1724
     const-string v2, ""
 
     iput-object v2, p0, Landroid/mtp/MediaObject;->modificationDate:Ljava/lang/String;
 
-    .line 1725
     const-string v2, ""
 
     iput-object v2, p0, Landroid/mtp/MediaObject;->genreName:Ljava/lang/String;
 
-    .line 1726
     const-wide/16 v2, 0x0
 
     iput-wide v2, p0, Landroid/mtp/MediaObject;->width:J
 
-    .line 1727
     const-wide/16 v2, 0x0
 
     iput-wide v2, p0, Landroid/mtp/MediaObject;->height:J
 
-    .line 1728
     const-string v2, ""
 
     iput-object v2, p0, Landroid/mtp/MediaObject;->dateTaken:Ljava/lang/String;
 
-    .line 1738
     iput-object p1, p0, Landroid/mtp/MediaObject;->filename:Ljava/lang/String;
 
-    .line 1739
     iput-object p2, p0, Landroid/mtp/MediaObject;->album:Ljava/lang/String;
 
-    .line 1740
     iput-object p3, p0, Landroid/mtp/MediaObject;->artist:Ljava/lang/String;
 
-    .line 1741
     iput-object p4, p0, Landroid/mtp/MediaObject;->composer:Ljava/lang/String;
 
-    .line 1742
     iput-object p5, p0, Landroid/mtp/MediaObject;->creationDate:Ljava/lang/String;
 
-    .line 1743
     iput-object p6, p0, Landroid/mtp/MediaObject;->description:Ljava/lang/String;
 
-    .line 1744
     iput-wide p7, p0, Landroid/mtp/MediaObject;->duration:J
 
-    .line 1746
     iput-object p9, p0, Landroid/mtp/MediaObject;->id:Ljava/lang/String;
 
-    .line 1748
     iput-object p10, p0, Landroid/mtp/MediaObject;->language:Ljava/lang/String;
 
-    .line 1750
     iput-object p11, p0, Landroid/mtp/MediaObject;->latitude:Ljava/lang/String;
 
-    .line 1752
     move-object/from16 v0, p12
 
     iput-object v0, p0, Landroid/mtp/MediaObject;->longitude:Ljava/lang/String;
 
-    .line 1754
     move/from16 v0, p13
 
     iput v0, p0, Landroid/mtp/MediaObject;->mimeTypeEnum:I
 
-    .line 1756
     move-object/from16 v0, p14
 
     iput-object v0, p0, Landroid/mtp/MediaObject;->modificationDate:Ljava/lang/String;
 
-    .line 1758
     move-object/from16 v0, p15
 
     iput-object v0, p0, Landroid/mtp/MediaObject;->path:Ljava/lang/String;
 
-    .line 1760
     move-object/from16 v0, p16
 
     iput-object v0, p0, Landroid/mtp/MediaObject;->size:Ljava/lang/String;
 
-    .line 1762
     move-object/from16 v0, p17
 
     iput-object v0, p0, Landroid/mtp/MediaObject;->title:Ljava/lang/String;
 
-    .line 1764
     move/from16 v0, p18
 
     iput v0, p0, Landroid/mtp/MediaObject;->year:I
 
-    .line 1766
     move-object/from16 v0, p19
 
     iput-object v0, p0, Landroid/mtp/MediaObject;->genreName:Ljava/lang/String;
 
-    .line 1768
     move-wide/from16 v0, p20
 
     iput-wide v0, p0, Landroid/mtp/MediaObject;->width:J
 
-    .line 1770
     move-wide/from16 v0, p22
 
     iput-wide v0, p0, Landroid/mtp/MediaObject;->height:J
 
-    .line 1772
     move-object/from16 v0, p24
 
     iput-object v0, p0, Landroid/mtp/MediaObject;->dateTaken:Ljava/lang/String;
 
-    .line 1775
     return-void
 .end method

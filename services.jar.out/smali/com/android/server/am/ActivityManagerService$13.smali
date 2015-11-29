@@ -38,7 +38,6 @@
     .locals 0
 
     .prologue
-    .line 13376
     iput-object p1, p0, Lcom/android/server/am/ActivityManagerService$13;->this$0:Lcom/android/server/am/ActivityManagerService;
 
     iput p2, p0, Lcom/android/server/am/ActivityManagerService$13;->val$origPid:I
@@ -64,7 +63,6 @@
     .locals 6
 
     .prologue
-    .line 13379
     iget v0, p0, Lcom/android/server/am/ActivityManagerService$13;->val$origPid:I
 
     const/4 v1, -0x1
@@ -79,7 +77,6 @@
 
     if-eq v0, v1, :cond_0
 
-    .line 13382
     const-string v0, "ActivityManager"
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -128,11 +125,9 @@
 
     invoke-static {v0, v1}, Landroid/util/Slog;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 13386
     :goto_0
     return-void
 
-    .line 13385
     :cond_0
     iget-object v0, p0, Lcom/android/server/am/ActivityManagerService$13;->this$0:Lcom/android/server/am/ActivityManagerService;
 

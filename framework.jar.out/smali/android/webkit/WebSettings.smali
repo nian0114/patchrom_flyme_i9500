@@ -41,10 +41,8 @@
     .locals 0
 
     .prologue
-    .line 212
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 213
     return-void
 .end method
 
@@ -53,7 +51,6 @@
     .param p0, "context"    # Landroid/content/Context;
 
     .prologue
-    .line 1405
     invoke-static {}, Landroid/webkit/WebViewFactory;->getProvider()Landroid/webkit/WebViewFactoryProvider;
 
     move-result-object v0
@@ -77,7 +74,6 @@
     .end annotation
 
     .prologue
-    .line 417
     new-instance v0, Landroid/webkit/MustOverrideException;
 
     invoke-direct {v0}, Landroid/webkit/MustOverrideException;-><init>()V
@@ -89,7 +85,6 @@
     .locals 1
 
     .prologue
-    .line 518
     new-instance v0, Landroid/webkit/MustOverrideException;
 
     invoke-direct {v0}, Landroid/webkit/MustOverrideException;-><init>()V
@@ -101,7 +96,6 @@
     .locals 1
 
     .prologue
-    .line 369
     new-instance v0, Landroid/webkit/MustOverrideException;
 
     invoke-direct {v0}, Landroid/webkit/MustOverrideException;-><init>()V
@@ -113,7 +107,6 @@
     .locals 1
 
     .prologue
-    .line 351
     new-instance v0, Landroid/webkit/MustOverrideException;
 
     invoke-direct {v0}, Landroid/webkit/MustOverrideException;-><init>()V
@@ -131,7 +124,6 @@
     .locals 1
 
     .prologue
-    .line 985
     monitor-enter p0
 
     :try_start_0
@@ -155,7 +147,6 @@
     .locals 1
 
     .prologue
-    .line 1017
     monitor-enter p0
 
     :try_start_0
@@ -179,7 +170,6 @@
     .locals 1
 
     .prologue
-    .line 309
     new-instance v0, Landroid/webkit/MustOverrideException;
 
     invoke-direct {v0}, Landroid/webkit/MustOverrideException;-><init>()V
@@ -191,7 +181,6 @@
     .locals 1
 
     .prologue
-    .line 1456
     new-instance v0, Landroid/webkit/MustOverrideException;
 
     invoke-direct {v0}, Landroid/webkit/MustOverrideException;-><init>()V
@@ -203,7 +192,6 @@
     .locals 1
 
     .prologue
-    .line 831
     monitor-enter p0
 
     :try_start_0
@@ -227,7 +215,6 @@
     .locals 1
 
     .prologue
-    .line 1240
     monitor-enter p0
 
     :try_start_0
@@ -253,7 +240,6 @@
     .end annotation
 
     .prologue
-    .line 1230
     monitor-enter p0
 
     :try_start_0
@@ -277,7 +263,6 @@
     .locals 1
 
     .prologue
-    .line 930
     monitor-enter p0
 
     :try_start_0
@@ -301,7 +286,6 @@
     .locals 1
 
     .prologue
-    .line 910
     monitor-enter p0
 
     :try_start_0
@@ -325,7 +309,6 @@
     .locals 1
 
     .prologue
-    .line 1376
     monitor-enter p0
 
     :try_start_0
@@ -349,7 +332,6 @@
     .locals 1
 
     .prologue
-    .line 587
     new-instance v0, Landroid/webkit/MustOverrideException;
 
     invoke-direct {v0}, Landroid/webkit/MustOverrideException;-><init>()V
@@ -361,7 +343,6 @@
     .locals 1
 
     .prologue
-    .line 332
     new-instance v0, Landroid/webkit/MustOverrideException;
 
     invoke-direct {v0}, Landroid/webkit/MustOverrideException;-><init>()V
@@ -373,7 +354,6 @@
     .locals 1
 
     .prologue
-    .line 1219
     monitor-enter p0
 
     :try_start_0
@@ -397,7 +377,6 @@
     .locals 1
 
     .prologue
-    .line 850
     monitor-enter p0
 
     :try_start_0
@@ -421,7 +400,6 @@
     .locals 1
 
     .prologue
-    .line 774
     monitor-enter p0
 
     :try_start_0
@@ -445,7 +423,6 @@
     .locals 1
 
     .prologue
-    .line 1356
     monitor-enter p0
 
     :try_start_0
@@ -469,7 +446,6 @@
     .locals 1
 
     .prologue
-    .line 1274
     monitor-enter p0
 
     :try_start_0
@@ -493,7 +469,6 @@
     .locals 1
 
     .prologue
-    .line 736
     monitor-enter p0
 
     :try_start_0
@@ -519,7 +494,6 @@
     .end annotation
 
     .prologue
-    .line 607
     new-instance v0, Landroid/webkit/MustOverrideException;
 
     invoke-direct {v0}, Landroid/webkit/MustOverrideException;-><init>()V
@@ -531,7 +505,6 @@
     .locals 1
 
     .prologue
-    .line 390
     new-instance v0, Landroid/webkit/MustOverrideException;
 
     invoke-direct {v0}, Landroid/webkit/MustOverrideException;-><init>()V
@@ -543,7 +516,6 @@
     .locals 1
 
     .prologue
-    .line 956
     monitor-enter p0
 
     :try_start_0
@@ -567,7 +539,6 @@
     .locals 1
 
     .prologue
-    .line 280
     new-instance v0, Landroid/webkit/MustOverrideException;
 
     invoke-direct {v0}, Landroid/webkit/MustOverrideException;-><init>()V
@@ -579,7 +550,6 @@
     .locals 1
 
     .prologue
-    .line 870
     monitor-enter p0
 
     :try_start_0
@@ -603,7 +573,6 @@
     .locals 1
 
     .prologue
-    .line 890
     monitor-enter p0
 
     :try_start_0
@@ -632,7 +601,6 @@
     .end annotation
 
     .prologue
-    .line 237
     new-instance v0, Landroid/webkit/MustOverrideException;
 
     invoke-direct {v0}, Landroid/webkit/MustOverrideException;-><init>()V
@@ -646,7 +614,6 @@
     .end annotation
 
     .prologue
-    .line 1320
     monitor-enter p0
 
     :try_start_0
@@ -672,7 +639,6 @@
     .end annotation
 
     .prologue
-    .line 1308
     monitor-enter p0
 
     :try_start_0
@@ -698,7 +664,6 @@
     .end annotation
 
     .prologue
-    .line 1335
     monitor-enter p0
 
     :try_start_0
@@ -722,7 +687,6 @@
     .locals 1
 
     .prologue
-    .line 793
     monitor-enter p0
 
     :try_start_0
@@ -746,7 +710,6 @@
     .locals 1
 
     .prologue
-    .line 460
     new-instance v0, Landroid/webkit/MustOverrideException;
 
     invoke-direct {v0}, Landroid/webkit/MustOverrideException;-><init>()V
@@ -760,7 +723,6 @@
     .end annotation
 
     .prologue
-    .line 481
     new-instance v0, Landroid/webkit/MustOverrideException;
 
     invoke-direct {v0}, Landroid/webkit/MustOverrideException;-><init>()V
@@ -772,7 +734,6 @@
     .locals 1
 
     .prologue
-    .line 812
     monitor-enter p0
 
     :try_start_0
@@ -796,7 +757,6 @@
     .locals 1
 
     .prologue
-    .line 755
     monitor-enter p0
 
     :try_start_0
@@ -820,23 +780,19 @@
     .locals 9
 
     .prologue
-    .line 541
     monitor-enter p0
 
     const/4 v1, 0x0
 
-    .line 542
     .local v1, "closestSize":Landroid/webkit/WebSettings$TextSize;
     const v6, 0x7fffffff
 
-    .line 543
     .local v6, "smallestDelta":I
     :try_start_0
     invoke-virtual {p0}, Landroid/webkit/WebSettings;->getTextZoom()I
 
     move-result v7
 
-    .line 544
     .local v7, "textSize":I
     invoke-static {}, Landroid/webkit/WebSettings$TextSize;->values()[Landroid/webkit/WebSettings$TextSize;
 
@@ -854,7 +810,6 @@
 
     aget-object v5, v0, v3
 
-    .line 545
     .local v5, "size":Landroid/webkit/WebSettings$TextSize;
     iget v8, v5, Landroid/webkit/WebSettings$TextSize;->value:I
 
@@ -866,11 +821,9 @@
 
     move-result v2
 
-    .line 546
     .local v2, "delta":I
     if-nez v2, :cond_0
 
-    .line 554
     .end local v1    # "closestSize":Landroid/webkit/WebSettings$TextSize;
     .end local v2    # "delta":I
     .end local v5    # "size":Landroid/webkit/WebSettings$TextSize;
@@ -879,26 +832,21 @@
 
     return-object v5
 
-    .line 549
     .restart local v1    # "closestSize":Landroid/webkit/WebSettings$TextSize;
     .restart local v2    # "delta":I
     .restart local v5    # "size":Landroid/webkit/WebSettings$TextSize;
     :cond_0
     if-ge v2, v6, :cond_1
 
-    .line 550
     move v6, v2
 
-    .line 551
     move-object v1, v5
 
-    .line 544
     :cond_1
     add-int/lit8 v3, v3, 0x1
 
     goto :goto_0
 
-    .line 554
     .end local v2    # "delta":I
     .end local v5    # "size":Landroid/webkit/WebSettings$TextSize;
     :cond_2
@@ -919,7 +867,6 @@
 
     goto :goto_2
 
-    .line 541
     .end local v0    # "arr$":[Landroid/webkit/WebSettings$TextSize;
     .end local v3    # "i$":I
     .end local v4    # "len$":I
@@ -936,7 +883,6 @@
     .locals 1
 
     .prologue
-    .line 500
     monitor-enter p0
 
     :try_start_0
@@ -962,7 +908,6 @@
     .end annotation
 
     .prologue
-    .line 632
     monitor-enter p0
 
     const/4 v0, 0x0
@@ -978,7 +923,6 @@
     .end annotation
 
     .prologue
-    .line 443
     new-instance v0, Landroid/webkit/MustOverrideException;
 
     invoke-direct {v0}, Landroid/webkit/MustOverrideException;-><init>()V
@@ -990,7 +934,6 @@
     .locals 1
 
     .prologue
-    .line 695
     monitor-enter p0
 
     :try_start_0
@@ -1016,7 +959,6 @@
     .end annotation
 
     .prologue
-    .line 669
     monitor-enter p0
 
     :try_start_0
@@ -1040,7 +982,6 @@
     .locals 1
 
     .prologue
-    .line 1394
     monitor-enter p0
 
     :try_start_0
@@ -1068,7 +1009,6 @@
     .param p1, "accept"    # Z
 
     .prologue
-    .line 509
     new-instance v0, Landroid/webkit/MustOverrideException;
 
     invoke-direct {v0}, Landroid/webkit/MustOverrideException;-><init>()V
@@ -1081,7 +1021,6 @@
     .param p1, "allow"    # Z
 
     .prologue
-    .line 360
     new-instance v0, Landroid/webkit/MustOverrideException;
 
     invoke-direct {v0}, Landroid/webkit/MustOverrideException;-><init>()V
@@ -1094,7 +1033,6 @@
     .param p1, "allow"    # Z
 
     .prologue
-    .line 342
     new-instance v0, Landroid/webkit/MustOverrideException;
 
     invoke-direct {v0}, Landroid/webkit/MustOverrideException;-><init>()V
@@ -1113,7 +1051,6 @@
     .param p1, "flag"    # Z
 
     .prologue
-    .line 1154
     monitor-enter p0
 
     :try_start_0
@@ -1140,7 +1077,6 @@
     .end annotation
 
     .prologue
-    .line 1184
     monitor-enter p0
 
     :try_start_0
@@ -1165,7 +1101,6 @@
     .param p1, "appCachePath"    # Ljava/lang/String;
 
     .prologue
-    .line 1168
     monitor-enter p0
 
     :try_start_0
@@ -1190,7 +1125,6 @@
     .param p1, "flag"    # Z
 
     .prologue
-    .line 975
     monitor-enter p0
 
     :try_start_0
@@ -1215,7 +1149,6 @@
     .param p1, "flag"    # Z
 
     .prologue
-    .line 1007
     monitor-enter p0
 
     :try_start_0
@@ -1240,7 +1173,6 @@
     .param p1, "enabled"    # Z
 
     .prologue
-    .line 299
     new-instance v0, Landroid/webkit/MustOverrideException;
 
     invoke-direct {v0}, Landroid/webkit/MustOverrideException;-><init>()V
@@ -1253,7 +1185,6 @@
     .param p1, "mode"    # I
 
     .prologue
-    .line 1446
     new-instance v0, Landroid/webkit/MustOverrideException;
 
     invoke-direct {v0}, Landroid/webkit/MustOverrideException;-><init>()V
@@ -1266,7 +1197,6 @@
     .param p1, "font"    # Ljava/lang/String;
 
     .prologue
-    .line 821
     monitor-enter p0
 
     :try_start_0
@@ -1291,7 +1221,6 @@
     .param p1, "flag"    # Z
 
     .prologue
-    .line 1200
     monitor-enter p0
 
     :try_start_0
@@ -1318,7 +1247,6 @@
     .end annotation
 
     .prologue
-    .line 1129
     monitor-enter p0
 
     :try_start_0
@@ -1343,7 +1271,6 @@
     .param p1, "size"    # I
 
     .prologue
-    .line 920
     monitor-enter p0
 
     :try_start_0
@@ -1368,7 +1295,6 @@
     .param p1, "size"    # I
 
     .prologue
-    .line 900
     monitor-enter p0
 
     :try_start_0
@@ -1393,7 +1319,6 @@
     .param p1, "encoding"    # Ljava/lang/String;
 
     .prologue
-    .line 1366
     monitor-enter p0
 
     :try_start_0
@@ -1420,7 +1345,6 @@
     .end annotation
 
     .prologue
-    .line 573
     new-instance v0, Landroid/webkit/MustOverrideException;
 
     invoke-direct {v0}, Landroid/webkit/MustOverrideException;-><init>()V
@@ -1433,7 +1357,6 @@
     .param p1, "enabled"    # Z
 
     .prologue
-    .line 320
     new-instance v0, Landroid/webkit/MustOverrideException;
 
     invoke-direct {v0}, Landroid/webkit/MustOverrideException;-><init>()V
@@ -1446,7 +1369,6 @@
     .param p1, "flag"    # Z
 
     .prologue
-    .line 1209
     monitor-enter p0
 
     :try_start_0
@@ -1473,7 +1395,6 @@
     .end annotation
 
     .prologue
-    .line 404
     new-instance v0, Landroid/webkit/MustOverrideException;
 
     invoke-direct {v0}, Landroid/webkit/MustOverrideException;-><init>()V
@@ -1486,7 +1407,6 @@
     .param p1, "font"    # Ljava/lang/String;
 
     .prologue
-    .line 840
     monitor-enter p0
 
     :try_start_0
@@ -1511,7 +1431,6 @@
     .param p1, "font"    # Ljava/lang/String;
 
     .prologue
-    .line 764
     monitor-enter p0
 
     :try_start_0
@@ -1536,7 +1455,6 @@
     .param p1, "databasePath"    # Ljava/lang/String;
 
     .prologue
-    .line 1142
     monitor-enter p0
 
     :try_start_0
@@ -1561,7 +1479,6 @@
     .param p1, "flag"    # Z
 
     .prologue
-    .line 1264
     monitor-enter p0
 
     :try_start_0
@@ -1586,7 +1503,6 @@
     .param p1, "flag"    # Z
 
     .prologue
-    .line 1345
     monitor-enter p0
 
     :try_start_0
@@ -1611,7 +1527,6 @@
     .param p1, "flag"    # Z
 
     .prologue
-    .line 1027
     monitor-enter p0
 
     :try_start_0
@@ -1636,7 +1551,6 @@
     .param p1, "l"    # Landroid/webkit/WebSettings$LayoutAlgorithm;
 
     .prologue
-    .line 726
     monitor-enter p0
 
     :try_start_0
@@ -1663,7 +1577,6 @@
     .end annotation
 
     .prologue
-    .line 597
     new-instance v0, Landroid/webkit/MustOverrideException;
 
     invoke-direct {v0}, Landroid/webkit/MustOverrideException;-><init>()V
@@ -1676,7 +1589,6 @@
     .param p1, "overview"    # Z
 
     .prologue
-    .line 380
     new-instance v0, Landroid/webkit/MustOverrideException;
 
     invoke-direct {v0}, Landroid/webkit/MustOverrideException;-><init>()V
@@ -1689,7 +1601,6 @@
     .param p1, "flag"    # Z
 
     .prologue
-    .line 945
     monitor-enter p0
 
     :try_start_0
@@ -1714,7 +1625,6 @@
     .param p1, "require"    # Z
 
     .prologue
-    .line 270
     new-instance v0, Landroid/webkit/MustOverrideException;
 
     invoke-direct {v0}, Landroid/webkit/MustOverrideException;-><init>()V
@@ -1727,7 +1637,6 @@
     .param p1, "size"    # I
 
     .prologue
-    .line 860
     monitor-enter p0
 
     :try_start_0
@@ -1752,7 +1661,6 @@
     .param p1, "size"    # I
 
     .prologue
-    .line 880
     monitor-enter p0
 
     :try_start_0
@@ -1782,7 +1690,6 @@
     .end annotation
 
     .prologue
-    .line 224
     new-instance v0, Landroid/webkit/MustOverrideException;
 
     invoke-direct {v0}, Landroid/webkit/MustOverrideException;-><init>()V
@@ -1795,7 +1702,6 @@
     .param p1, "flag"    # Z
 
     .prologue
-    .line 1416
     new-instance v0, Landroid/webkit/MustOverrideException;
 
     invoke-direct {v0}, Landroid/webkit/MustOverrideException;-><init>()V
@@ -1810,7 +1716,6 @@
     .end annotation
 
     .prologue
-    .line 1096
     monitor-enter p0
 
     :try_start_0
@@ -1837,7 +1742,6 @@
     .end annotation
 
     .prologue
-    .line 1081
     monitor-enter p0
 
     :try_start_0
@@ -1864,7 +1768,6 @@
     .end annotation
 
     .prologue
-    .line 1111
     monitor-enter p0
 
     monitor-exit p0
@@ -1879,7 +1782,6 @@
     .end annotation
 
     .prologue
-    .line 1430
     monitor-enter p0
 
     :try_start_0
@@ -1904,7 +1806,6 @@
     .param p1, "font"    # Ljava/lang/String;
 
     .prologue
-    .line 783
     monitor-enter p0
 
     :try_start_0
@@ -1929,7 +1830,6 @@
     .param p1, "save"    # Z
 
     .prologue
-    .line 450
     new-instance v0, Landroid/webkit/MustOverrideException;
 
     invoke-direct {v0}, Landroid/webkit/MustOverrideException;-><init>()V
@@ -1944,7 +1844,6 @@
     .end annotation
 
     .prologue
-    .line 469
     new-instance v0, Landroid/webkit/MustOverrideException;
 
     invoke-direct {v0}, Landroid/webkit/MustOverrideException;-><init>()V
@@ -1957,7 +1856,6 @@
     .param p1, "font"    # Ljava/lang/String;
 
     .prologue
-    .line 802
     monitor-enter p0
 
     :try_start_0
@@ -1982,7 +1880,6 @@
     .param p1, "font"    # Ljava/lang/String;
 
     .prologue
-    .line 745
     monitor-enter p0
 
     :try_start_0
@@ -2007,7 +1904,6 @@
     .param p1, "support"    # Z
 
     .prologue
-    .line 706
     monitor-enter p0
 
     :try_start_0
@@ -2032,7 +1928,6 @@
     .param p1, "support"    # Z
 
     .prologue
-    .line 250
     new-instance v0, Landroid/webkit/MustOverrideException;
 
     invoke-direct {v0}, Landroid/webkit/MustOverrideException;-><init>()V
@@ -2045,7 +1940,6 @@
     .param p1, "t"    # Landroid/webkit/WebSettings$TextSize;
 
     .prologue
-    .line 528
     monitor-enter p0
 
     :try_start_0
@@ -2055,12 +1949,10 @@
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 529
     monitor-exit p0
 
     return-void
 
-    .line 528
     :catchall_0
     move-exception v0
 
@@ -2074,7 +1966,6 @@
     .param p1, "textZoom"    # I
 
     .prologue
-    .line 490
     monitor-enter p0
 
     :try_start_0
@@ -2101,7 +1992,6 @@
     .end annotation
 
     .prologue
-    .line 620
     monitor-enter p0
 
     monitor-exit p0
@@ -2116,7 +2006,6 @@
     .end annotation
 
     .prologue
-    .line 430
     new-instance v0, Landroid/webkit/MustOverrideException;
 
     invoke-direct {v0}, Landroid/webkit/MustOverrideException;-><init>()V
@@ -2129,7 +2018,6 @@
     .param p1, "use"    # Z
 
     .prologue
-    .line 684
     monitor-enter p0
 
     :try_start_0
@@ -2156,7 +2044,6 @@
     .end annotation
 
     .prologue
-    .line 650
     monitor-enter p0
 
     :try_start_0
@@ -2181,7 +2068,6 @@
     .param p1, "ua"    # Ljava/lang/String;
 
     .prologue
-    .line 1384
     monitor-enter p0
 
     :try_start_0
@@ -2208,7 +2094,6 @@
     .locals 1
 
     .prologue
-    .line 716
     monitor-enter p0
 
     :try_start_0
@@ -2232,7 +2117,6 @@
     .locals 1
 
     .prologue
-    .line 260
     new-instance v0, Landroid/webkit/MustOverrideException;
 
     invoke-direct {v0}, Landroid/webkit/MustOverrideException;-><init>()V

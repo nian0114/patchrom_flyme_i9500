@@ -35,42 +35,34 @@
     .param p2, "ril"    # Lcom/android/internal/telephony/RIL;
 
     .prologue
-    .line 61
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 26
     const-string v0, "IOPC"
 
     iput-object v0, p0, Lcom/itsoninc/android/ItsOnPhoneClient;->LOG_TAG:Ljava/lang/String;
 
-    .line 34
     const/4 v0, 0x0
 
     iput-object v0, p0, Lcom/itsoninc/android/ItsOnPhoneClient;->mApi:Lcom/itsoninc/android/ItsOnOemApi;
 
-    .line 62
     invoke-static {}, Lcom/itsoninc/android/ItsOnOemApi;->getInstance()Lcom/itsoninc/android/ItsOnOemApi;
 
     move-result-object v0
 
     iput-object v0, p0, Lcom/itsoninc/android/ItsOnPhoneClient;->mApi:Lcom/itsoninc/android/ItsOnOemApi;
 
-    .line 63
     iget-object v0, p0, Lcom/itsoninc/android/ItsOnPhoneClient;->mApi:Lcom/itsoninc/android/ItsOnOemApi;
 
     invoke-virtual {v0, p1}, Lcom/itsoninc/android/ItsOnOemApi;->initTelephony(Landroid/content/Context;)V
 
-    .line 65
     iput-object p2, p0, Lcom/itsoninc/android/ItsOnPhoneClient;->mRil:Lcom/android/internal/telephony/RIL;
 
-    .line 66
     new-instance v0, Lcom/itsoninc/android/ItsOnPhoneClient$1;
 
     invoke-direct {v0, p0}, Lcom/itsoninc/android/ItsOnPhoneClient$1;-><init>(Lcom/itsoninc/android/ItsOnPhoneClient;)V
 
     iput-object v0, p0, Lcom/itsoninc/android/ItsOnPhoneClient;->mHandler:Landroid/os/Handler;
 
-    .line 69
     iget-object v0, p0, Lcom/itsoninc/android/ItsOnPhoneClient;->mApi:Lcom/itsoninc/android/ItsOnOemApi;
 
     new-instance v1, Lcom/itsoninc/android/ItsOnPhoneClient$AndroidFramework;
@@ -83,7 +75,6 @@
 
     invoke-virtual {v0, v1}, Lcom/itsoninc/android/ItsOnOemApi;->setFrameworkInterface(Lcom/itsoninc/android/ItsOnFrameworkInterface;)V
 
-    .line 70
     return-void
 .end method
 
@@ -104,13 +95,11 @@
     .end annotation
 
     .prologue
-    .line 115
     .local p1, "callList":Ljava/util/List;, "Ljava/util/List<Lcom/android/internal/telephony/DriverCall;>;"
     new-instance v2, Ljava/util/ArrayList;
 
     invoke-direct {v2}, Ljava/util/ArrayList;-><init>()V
 
-    .line 117
     .local v2, "deviceCalls":Ljava/util/List;, "Ljava/util/List<Lcom/itsoninc/android/DeviceCall;>;"
     invoke-interface {p1}, Ljava/util/List;->iterator()Ljava/util/Iterator;
 
@@ -130,11 +119,9 @@
 
     check-cast v0, Lcom/android/internal/telephony/DriverCall;
 
-    .line 118
     .local v0, "call":Lcom/android/internal/telephony/DriverCall;
     const/4 v4, 0x0
 
-    .line 119
     .local v4, "state":Lcom/itsoninc/android/DeviceCall$CallState;
     sget-object v5, Lcom/itsoninc/android/ItsOnPhoneClient$2;->$SwitchMap$com$android$internal$telephony$DriverCall$State:[I
 
@@ -148,7 +135,6 @@
 
     packed-switch v5, :pswitch_data_0
 
-    .line 140
     :goto_1
     new-instance v1, Lcom/itsoninc/android/DeviceCall;
 
@@ -158,61 +144,47 @@
 
     invoke-direct {v1, v5, v4, v6}, Lcom/itsoninc/android/DeviceCall;-><init>(ZLcom/itsoninc/android/DeviceCall$CallState;Ljava/lang/String;)V
 
-    .line 141
     .local v1, "d":Lcom/itsoninc/android/DeviceCall;
     invoke-interface {v2, v1}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
     goto :goto_0
 
-    .line 121
     .end local v1    # "d":Lcom/itsoninc/android/DeviceCall;
     :pswitch_0
     sget-object v4, Lcom/itsoninc/android/DeviceCall$CallState;->ACTIVE:Lcom/itsoninc/android/DeviceCall$CallState;
 
-    .line 122
     goto :goto_1
 
-    .line 124
     :pswitch_1
     sget-object v4, Lcom/itsoninc/android/DeviceCall$CallState;->ALERTING:Lcom/itsoninc/android/DeviceCall$CallState;
 
-    .line 125
     goto :goto_1
 
-    .line 127
     :pswitch_2
     sget-object v4, Lcom/itsoninc/android/DeviceCall$CallState;->DIALING:Lcom/itsoninc/android/DeviceCall$CallState;
 
-    .line 128
     goto :goto_1
 
-    .line 130
     :pswitch_3
     sget-object v4, Lcom/itsoninc/android/DeviceCall$CallState;->HOLDING:Lcom/itsoninc/android/DeviceCall$CallState;
 
-    .line 131
     goto :goto_1
 
-    .line 133
     :pswitch_4
     sget-object v4, Lcom/itsoninc/android/DeviceCall$CallState;->INCOMING:Lcom/itsoninc/android/DeviceCall$CallState;
 
-    .line 134
     goto :goto_1
 
-    .line 136
     :pswitch_5
     sget-object v4, Lcom/itsoninc/android/DeviceCall$CallState;->WAITING:Lcom/itsoninc/android/DeviceCall$CallState;
 
     goto :goto_1
 
-    .line 143
     .end local v0    # "call":Lcom/android/internal/telephony/DriverCall;
     .end local v4    # "state":Lcom/itsoninc/android/DeviceCall$CallState;
     :cond_0
     return-object v2
 
-    .line 119
     nop
 
     :pswitch_data_0
@@ -232,12 +204,10 @@
     .locals 1
 
     .prologue
-    .line 160
     iget-object v0, p0, Lcom/itsoninc/android/ItsOnPhoneClient;->mApi:Lcom/itsoninc/android/ItsOnOemApi;
 
     invoke-virtual {v0}, Lcom/itsoninc/android/ItsOnOemApi;->acceptCall()V
 
-    .line 161
     return-void
 .end method
 
@@ -246,7 +216,6 @@
     .param p1, "sms"    # Landroid/telephony/SmsMessage;
 
     .prologue
-    .line 77
     iget-object v0, p0, Lcom/itsoninc/android/ItsOnPhoneClient;->mApi:Lcom/itsoninc/android/ItsOnOemApi;
 
     invoke-virtual {p1}, Landroid/telephony/SmsMessage;->getPdu()[B
@@ -265,7 +234,6 @@
     .param p1, "address"    # Ljava/lang/String;
 
     .prologue
-    .line 101
     iget-object v0, p0, Lcom/itsoninc/android/ItsOnPhoneClient;->mApi:Lcom/itsoninc/android/ItsOnOemApi;
 
     invoke-virtual {v0, p1}, Lcom/itsoninc/android/ItsOnOemApi;->authorizeIncomingVoice(Ljava/lang/String;)Z
@@ -281,7 +249,6 @@
     .param p2, "serial"    # I
 
     .prologue
-    .line 85
     iget-object v0, p0, Lcom/itsoninc/android/ItsOnPhoneClient;->mApi:Lcom/itsoninc/android/ItsOnOemApi;
 
     invoke-virtual {v0, p1, p2}, Lcom/itsoninc/android/ItsOnOemApi;->authorizeOutgoingSms(Ljava/lang/String;I)Z
@@ -297,7 +264,6 @@
     .param p2, "serial"    # I
 
     .prologue
-    .line 81
     iget-object v0, p0, Lcom/itsoninc/android/ItsOnPhoneClient;->mApi:Lcom/itsoninc/android/ItsOnOemApi;
 
     invoke-virtual {v0, p1, p2}, Lcom/itsoninc/android/ItsOnOemApi;->authorizeOutgoingSms([BI)Z
@@ -312,7 +278,6 @@
     .param p1, "address"    # Ljava/lang/String;
 
     .prologue
-    .line 105
     iget-object v0, p0, Lcom/itsoninc/android/ItsOnPhoneClient;->mApi:Lcom/itsoninc/android/ItsOnOemApi;
 
     invoke-virtual {v0, p1}, Lcom/itsoninc/android/ItsOnOemApi;->authorizeOutgoingVoice(Ljava/lang/String;)Z
@@ -327,7 +292,6 @@
     .param p1, "number"    # Ljava/lang/String;
 
     .prologue
-    .line 164
     iget-object v0, p0, Lcom/itsoninc/android/ItsOnPhoneClient;->mApi:Lcom/itsoninc/android/ItsOnOemApi;
 
     invoke-virtual {v0, p1}, Lcom/itsoninc/android/ItsOnOemApi;->callWaiting(Ljava/lang/String;)Z
@@ -342,7 +306,6 @@
     .param p1, "address"    # Ljava/lang/String;
 
     .prologue
-    .line 152
     iget-object v0, p0, Lcom/itsoninc/android/ItsOnPhoneClient;->mApi:Lcom/itsoninc/android/ItsOnOemApi;
 
     invoke-virtual {v0, p1}, Lcom/itsoninc/android/ItsOnOemApi;->dial(Ljava/lang/String;)Z
@@ -357,7 +320,6 @@
     .param p1, "featureCode"    # Ljava/lang/String;
 
     .prologue
-    .line 156
     iget-object v0, p0, Lcom/itsoninc/android/ItsOnPhoneClient;->mApi:Lcom/itsoninc/android/ItsOnOemApi;
 
     invoke-virtual {v0, p1}, Lcom/itsoninc/android/ItsOnOemApi;->flash(Ljava/lang/String;)Z
@@ -371,12 +333,10 @@
     .locals 1
 
     .prologue
-    .line 97
     iget-object v0, p0, Lcom/itsoninc/android/ItsOnPhoneClient;->mApi:Lcom/itsoninc/android/ItsOnOemApi;
 
     invoke-virtual {v0}, Lcom/itsoninc/android/ItsOnOemApi;->rejectCall()V
 
-    .line 98
     return-void
 .end method
 
@@ -386,12 +346,10 @@
     .param p2, "nitzReceiveTime"    # J
 
     .prologue
-    .line 147
     iget-object v0, p0, Lcom/itsoninc/android/ItsOnPhoneClient;->mApi:Lcom/itsoninc/android/ItsOnOemApi;
 
     invoke-virtual {v0, p1, p2, p3}, Lcom/itsoninc/android/ItsOnOemApi;->nitzTimeReceived(Ljava/lang/String;J)V
 
-    .line 148
     return-void
 .end method
 
@@ -402,12 +360,10 @@
     .param p3, "apnType"    # Ljava/lang/String;
 
     .prologue
-    .line 73
     iget-object v0, p0, Lcom/itsoninc/android/ItsOnPhoneClient;->mApi:Lcom/itsoninc/android/ItsOnOemApi;
 
     invoke-virtual {v0, p1, p2, p3}, Lcom/itsoninc/android/ItsOnOemApi;->onNewDataSession(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 74
     return-void
 .end method
 
@@ -416,12 +372,10 @@
     .param p1, "serial"    # I
 
     .prologue
-    .line 89
     iget-object v0, p0, Lcom/itsoninc/android/ItsOnPhoneClient;->mApi:Lcom/itsoninc/android/ItsOnOemApi;
 
     invoke-virtual {v0, p1}, Lcom/itsoninc/android/ItsOnOemApi;->smsDone(I)V
 
-    .line 90
     return-void
 .end method
 
@@ -430,12 +384,10 @@
     .param p1, "serial"    # I
 
     .prologue
-    .line 93
     iget-object v0, p0, Lcom/itsoninc/android/ItsOnPhoneClient;->mApi:Lcom/itsoninc/android/ItsOnOemApi;
 
     invoke-virtual {v0, p1}, Lcom/itsoninc/android/ItsOnOemApi;->smsError(I)V
 
-    .line 94
     return-void
 .end method
 
@@ -444,12 +396,10 @@
     .param p1, "inEmergencyMode"    # Z
 
     .prologue
-    .line 174
     iget-object v0, p0, Lcom/itsoninc/android/ItsOnPhoneClient;->mApi:Lcom/itsoninc/android/ItsOnOemApi;
 
     invoke-virtual {v0, p1}, Lcom/itsoninc/android/ItsOnOemApi;->setEmergencyMode(Z)V
 
-    .line 175
     return-void
 .end method
 
@@ -466,19 +416,16 @@
     .end annotation
 
     .prologue
-    .line 110
     .local p1, "callList":Ljava/util/List;, "Ljava/util/List<Lcom/android/internal/telephony/DriverCall;>;"
     invoke-direct {p0, p1}, Lcom/itsoninc/android/ItsOnPhoneClient;->adaptCallList(Ljava/util/List;)Ljava/util/List;
 
     move-result-object v0
 
-    .line 111
     .local v0, "deviceCalls":Ljava/util/List;, "Ljava/util/List<Lcom/itsoninc/android/DeviceCall;>;"
     iget-object v1, p0, Lcom/itsoninc/android/ItsOnPhoneClient;->mApi:Lcom/itsoninc/android/ItsOnOemApi;
 
     invoke-virtual {v1, v0}, Lcom/itsoninc/android/ItsOnOemApi;->processCallList(Ljava/util/List;)V
 
-    .line 112
     return-void
 .end method
 
@@ -495,18 +442,15 @@
     .end annotation
 
     .prologue
-    .line 169
     .local p1, "callList":Ljava/util/List;, "Ljava/util/List<Lcom/android/internal/telephony/DriverCall;>;"
     invoke-direct {p0, p1}, Lcom/itsoninc/android/ItsOnPhoneClient;->adaptCallList(Ljava/util/List;)Ljava/util/List;
 
     move-result-object v0
 
-    .line 170
     .local v0, "deviceCalls":Ljava/util/List;, "Ljava/util/List<Lcom/itsoninc/android/DeviceCall;>;"
     iget-object v1, p0, Lcom/itsoninc/android/ItsOnPhoneClient;->mApi:Lcom/itsoninc/android/ItsOnOemApi;
 
     invoke-virtual {v1, v0}, Lcom/itsoninc/android/ItsOnOemApi;->processCDMACallList(Ljava/util/List;)V
 
-    .line 171
     return-void
 .end method

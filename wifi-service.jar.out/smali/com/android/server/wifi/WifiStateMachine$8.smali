@@ -23,7 +23,6 @@
     .locals 0
 
     .prologue
-    .line 1539
     iput-object p1, p0, Lcom/android/server/wifi/WifiStateMachine$8;->this$0:Lcom/android/server/wifi/WifiStateMachine;
 
     invoke-direct {p0}, Landroid/content/BroadcastReceiver;-><init>()V
@@ -45,12 +44,10 @@
 
     const/4 v2, 0x0
 
-    .line 1542
     invoke-virtual {p2}, Landroid/content/Intent;->getAction()Ljava/lang/String;
 
     move-result-object v0
 
-    .line 1544
     .local v0, "action":Ljava/lang/String;
     const-string v1, "android.intent.action.SCREEN_ON"
 
@@ -60,23 +57,19 @@
 
     if-eqz v1, :cond_1
 
-    .line 1545
     iget-object v1, p0, Lcom/android/server/wifi/WifiStateMachine$8;->this$0:Lcom/android/server/wifi/WifiStateMachine;
 
     # setter for: Lcom/android/server/wifi/WifiStateMachine;->mScreenOff:Z
     invoke-static {v1, v2}, Lcom/android/server/wifi/WifiStateMachine;->access$1902(Lcom/android/server/wifi/WifiStateMachine;Z)Z
 
-    .line 1546
     iget-object v1, p0, Lcom/android/server/wifi/WifiStateMachine$8;->this$0:Lcom/android/server/wifi/WifiStateMachine;
 
     invoke-virtual {v1, v4, v3}, Lcom/android/server/wifi/WifiStateMachine;->sendMessage(II)V
 
-    .line 1556
     :cond_0
     :goto_0
     return-void
 
-    .line 1547
     :cond_1
     const-string v1, "android.intent.action.SCREEN_OFF"
 
@@ -86,20 +79,17 @@
 
     if-eqz v1, :cond_2
 
-    .line 1548
     iget-object v1, p0, Lcom/android/server/wifi/WifiStateMachine$8;->this$0:Lcom/android/server/wifi/WifiStateMachine;
 
     # setter for: Lcom/android/server/wifi/WifiStateMachine;->mScreenOff:Z
     invoke-static {v1, v3}, Lcom/android/server/wifi/WifiStateMachine;->access$1902(Lcom/android/server/wifi/WifiStateMachine;Z)Z
 
-    .line 1549
     iget-object v1, p0, Lcom/android/server/wifi/WifiStateMachine$8;->this$0:Lcom/android/server/wifi/WifiStateMachine;
 
     invoke-virtual {v1, v4, v2}, Lcom/android/server/wifi/WifiStateMachine;->sendMessage(II)V
 
     goto :goto_0
 
-    .line 1550
     :cond_2
     const-string v1, "com.android.server.WifiManager.action.REFRESH_BATCHED_SCAN"
 
@@ -109,7 +99,6 @@
 
     if-eqz v1, :cond_0
 
-    .line 1551
     iget-object v1, p0, Lcom/android/server/wifi/WifiStateMachine$8;->this$0:Lcom/android/server/wifi/WifiStateMachine;
 
     # invokes: Lcom/android/server/wifi/WifiStateMachine;->startNextBatchedScanAsync()V

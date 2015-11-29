@@ -16,13 +16,10 @@
     .param p1, "listener"    # Lcom/android/server/cocktailbar/policy/cocktail/CocktailPolicy$OnCocktailPolicyListener;
 
     .prologue
-    .line 9
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 10
     iput-object p1, p0, Lcom/android/server/cocktailbar/policy/cocktail/AbsCocktailPolicy;->mListener:Lcom/android/server/cocktailbar/policy/cocktail/CocktailPolicy$OnCocktailPolicyListener;
 
-    .line 11
     return-void
 .end method
 
@@ -35,7 +32,6 @@
     .param p3, "isUpdated"    # Z
 
     .prologue
-    .line 20
     const/4 v0, 0x0
 
     return v0
@@ -48,7 +44,6 @@
     .param p3, "isUpdated"    # Z
 
     .prologue
-    .line 15
     const/4 v0, 0x0
 
     return v0

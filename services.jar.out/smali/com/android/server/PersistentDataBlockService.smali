@@ -36,7 +36,6 @@
     .locals 1
 
     .prologue
-    .line 61
     const-class v0, Lcom/android/server/PersistentDataBlockService;
 
     invoke-virtual {v0}, Ljava/lang/Class;->getSimpleName()Ljava/lang/String;
@@ -53,40 +52,33 @@
     .param p1, "context"    # Landroid/content/Context;
 
     .prologue
-    .line 85
     invoke-direct {p0, p1}, Lcom/android/server/SystemService;-><init>(Landroid/content/Context;)V
 
-    .line 73
     new-instance v0, Ljava/lang/Object;
 
     invoke-direct {v0}, Ljava/lang/Object;-><init>()V
 
     iput-object v0, p0, Lcom/android/server/PersistentDataBlockService;->mLock:Ljava/lang/Object;
 
-    .line 75
     const/4 v0, -0x1
 
     iput v0, p0, Lcom/android/server/PersistentDataBlockService;->mAllowedAppId:I
 
-    .line 80
     new-instance v0, Ljava/lang/Object;
 
     invoke-direct {v0}, Ljava/lang/Object;-><init>()V
 
     iput-object v0, p0, Lcom/android/server/PersistentDataBlockService;->mOemLock:Ljava/lang/Object;
 
-    .line 148
     new-instance v0, Lcom/android/server/PersistentDataBlockService$1;
 
     invoke-direct {v0, p0}, Lcom/android/server/PersistentDataBlockService$1;-><init>(Lcom/android/server/PersistentDataBlockService;)V
 
     iput-object v0, p0, Lcom/android/server/PersistentDataBlockService;->mService:Landroid/os/IBinder;
 
-    .line 86
     iput-object p1, p0, Lcom/android/server/PersistentDataBlockService;->mContext:Landroid/content/Context;
 
-    .line 87
-    const-string/jumbo v0, "ro.frp.pst"
+    const-string v0, "ro.frp.pst"
 
     invoke-static {v0}, Landroid/os/SystemProperties;->get(Ljava/lang/String;)Ljava/lang/String;
 
@@ -94,12 +86,10 @@
 
     iput-object v0, p0, Lcom/android/server/PersistentDataBlockService;->mDataBlockFile:Ljava/lang/String;
 
-    .line 88
     const-wide/16 v0, -0x1
 
     iput-wide v0, p0, Lcom/android/server/PersistentDataBlockService;->mBlockDeviceSize:J
 
-    .line 89
     const/4 v0, 0x0
 
     invoke-direct {p0, v0}, Lcom/android/server/PersistentDataBlockService;->getAllowedAppId(I)I
@@ -108,7 +98,6 @@
 
     iput v0, p0, Lcom/android/server/PersistentDataBlockService;->mAllowedAppId:I
 
-    .line 90
     return-void
 .end method
 
@@ -118,7 +107,6 @@
     .param p1, "x1"    # I
 
     .prologue
-    .line 60
     invoke-direct {p0, p1}, Lcom/android/server/PersistentDataBlockService;->enforceUid(I)V
 
     return-void
@@ -129,7 +117,6 @@
     .param p0, "x0"    # Lcom/android/server/PersistentDataBlockService;
 
     .prologue
-    .line 60
     invoke-direct {p0}, Lcom/android/server/PersistentDataBlockService;->getBlockDeviceSize()J
 
     move-result-wide v0
@@ -142,7 +129,6 @@
     .param p0, "x0"    # Lcom/android/server/PersistentDataBlockService;
 
     .prologue
-    .line 60
     iget-object v0, p0, Lcom/android/server/PersistentDataBlockService;->mDataBlockFile:Ljava/lang/String;
 
     return-object v0
@@ -152,7 +138,6 @@
     .locals 1
 
     .prologue
-    .line 60
     sget-object v0, Lcom/android/server/PersistentDataBlockService;->TAG:Ljava/lang/String;
 
     return-object v0
@@ -163,7 +148,6 @@
     .param p0, "x0"    # Lcom/android/server/PersistentDataBlockService;
 
     .prologue
-    .line 60
     iget-object v0, p0, Lcom/android/server/PersistentDataBlockService;->mLock:Ljava/lang/Object;
 
     return-object v0
@@ -180,7 +164,6 @@
     .end annotation
 
     .prologue
-    .line 60
     invoke-direct {p0, p1}, Lcom/android/server/PersistentDataBlockService;->getTotalDataSizeLocked(Ljava/io/DataInputStream;)I
 
     move-result v0
@@ -193,7 +176,6 @@
     .param p0, "x0"    # Lcom/android/server/PersistentDataBlockService;
 
     .prologue
-    .line 60
     invoke-direct {p0}, Lcom/android/server/PersistentDataBlockService;->enforceOemUnlockPermission()V
 
     return-void
@@ -205,7 +187,6 @@
     .param p1, "x1"    # Ljava/lang/String;
 
     .prologue
-    .line 60
     invoke-direct {p0, p1}, Lcom/android/server/PersistentDataBlockService;->nativeWipe(Ljava/lang/String;)I
 
     move-result v0
@@ -218,7 +199,6 @@
     .param p0, "x0"    # Lcom/android/server/PersistentDataBlockService;
 
     .prologue
-    .line 60
     iget-object v0, p0, Lcom/android/server/PersistentDataBlockService;->mOemLock:Ljava/lang/Object;
 
     return-object v0
@@ -228,7 +208,6 @@
     .locals 3
 
     .prologue
-    .line 113
     iget-object v0, p0, Lcom/android/server/PersistentDataBlockService;->mContext:Landroid/content/Context;
 
     const-string v1, "android.permission.OEM_UNLOCK_STATE"
@@ -237,7 +216,6 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/content/Context;->enforceCallingOrSelfPermission(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 116
     return-void
 .end method
 
@@ -246,7 +224,6 @@
     .param p1, "callingUid"    # I
 
     .prologue
-    .line 119
     invoke-static {p1}, Landroid/os/UserHandle;->getAppId(I)I
 
     move-result v0
@@ -255,14 +232,13 @@
 
     if-eq v0, v1, :cond_0
 
-    .line 120
     new-instance v0, Ljava/lang/SecurityException;
 
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v2, "uid "
+    const-string v2, "uid "
 
     invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -286,7 +262,6 @@
 
     throw v0
 
-    .line 122
     :cond_0
     return-void
 .end method
@@ -296,7 +271,6 @@
     .param p1, "userHandle"    # I
 
     .prologue
-    .line 94
     iget-object v4, p0, Lcom/android/server/PersistentDataBlockService;->mContext:Landroid/content/Context;
 
     invoke-virtual {v4}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
@@ -309,7 +283,6 @@
 
     move-result-object v0
 
-    .line 96
     .local v0, "allowedPackage":Ljava/lang/String;
     iget-object v4, p0, Lcom/android/server/PersistentDataBlockService;->mContext:Landroid/content/Context;
 
@@ -317,11 +290,9 @@
 
     move-result-object v3
 
-    .line 97
     .local v3, "pm":Landroid/content/pm/PackageManager;
     const/4 v1, -0x1
 
-    .line 99
     .local v1, "allowedUid":I
     :try_start_0
     invoke-virtual {v3, v0, p1}, Landroid/content/pm/PackageManager;->getPackageUid(Ljava/lang/String;I)I
@@ -330,7 +301,6 @@
 
     move-result v1
 
-    .line 104
     :goto_0
     invoke-static {v1}, Landroid/os/UserHandle;->getAppId(I)I
 
@@ -338,11 +308,9 @@
 
     return v4
 
-    .line 100
     :catch_0
     move-exception v2
 
-    .line 102
     .local v2, "e":Landroid/content/pm/PackageManager$NameNotFoundException;
     sget-object v4, Lcom/android/server/PersistentDataBlockService;->TAG:Ljava/lang/String;
 
@@ -373,12 +341,10 @@
     .locals 6
 
     .prologue
-    .line 136
     iget-object v1, p0, Lcom/android/server/PersistentDataBlockService;->mLock:Ljava/lang/Object;
 
     monitor-enter v1
 
-    .line 137
     :try_start_0
     iget-wide v2, p0, Lcom/android/server/PersistentDataBlockService;->mBlockDeviceSize:J
 
@@ -388,7 +354,6 @@
 
     if-nez v0, :cond_0
 
-    .line 138
     iget-object v0, p0, Lcom/android/server/PersistentDataBlockService;->mDataBlockFile:Ljava/lang/String;
 
     invoke-direct {p0, v0}, Lcom/android/server/PersistentDataBlockService;->nativeGetBlockDeviceSize(Ljava/lang/String;)J
@@ -397,18 +362,15 @@
 
     iput-wide v2, p0, Lcom/android/server/PersistentDataBlockService;->mBlockDeviceSize:J
 
-    .line 140
     :cond_0
     monitor-exit v1
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 142
     iget-wide v0, p0, Lcom/android/server/PersistentDataBlockService;->mBlockDeviceSize:J
 
     return-wide v0
 
-    .line 140
     :catchall_0
     move-exception v0
 
@@ -430,28 +392,23 @@
     .end annotation
 
     .prologue
-    .line 126
     invoke-virtual {p1}, Ljava/io/DataInputStream;->readInt()I
 
     move-result v0
 
-    .line 127
     .local v0, "blockId":I
     const/16 v2, 0x1990
 
     if-ne v0, v2, :cond_0
 
-    .line 128
     invoke-virtual {p1}, Ljava/io/DataInputStream;->readInt()I
 
     move-result v1
 
-    .line 132
     .local v1, "totalDataSize":I
     :goto_0
     return v1
 
-    .line 130
     .end local v1    # "totalDataSize":I
     :cond_0
     const/4 v1, 0x0
@@ -472,13 +429,11 @@
     .locals 2
 
     .prologue
-    .line 109
-    const-string/jumbo v0, "persistent_data_block"
+    const-string v0, "persistent_data_block"
 
     iget-object v1, p0, Lcom/android/server/PersistentDataBlockService;->mService:Landroid/os/IBinder;
 
     invoke-virtual {p0, v0, v1}, Lcom/android/server/PersistentDataBlockService;->publishBinderService(Ljava/lang/String;Landroid/os/IBinder;)V
 
-    .line 110
     return-void
 .end method

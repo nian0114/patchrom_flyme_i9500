@@ -26,7 +26,6 @@
     .locals 0
 
     .prologue
-    .line 2234
     iput-object p1, p0, Lcom/android/server/tv/TvInputManagerService$HardwareListener;->this$0:Lcom/android/server/tv/TvInputManagerService;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -40,7 +39,6 @@
     .param p2, "x1"    # Lcom/android/server/tv/TvInputManagerService$1;
 
     .prologue
-    .line 2234
     invoke-direct {p0, p1}, Lcom/android/server/tv/TvInputManagerService$HardwareListener;-><init>(Lcom/android/server/tv/TvInputManagerService;)V
 
     return-void
@@ -53,7 +51,6 @@
     .param p1, "info"    # Landroid/media/tv/TvInputHardwareInfo;
 
     .prologue
-    .line 2244
     iget-object v4, p0, Lcom/android/server/tv/TvInputManagerService$HardwareListener;->this$0:Lcom/android/server/tv/TvInputManagerService;
 
     # getter for: Lcom/android/server/tv/TvInputManagerService;->mLock:Ljava/lang/Object;
@@ -63,7 +60,6 @@
 
     monitor-enter v5
 
-    .line 2245
     :try_start_0
     iget-object v4, p0, Lcom/android/server/tv/TvInputManagerService$HardwareListener;->this$0:Lcom/android/server/tv/TvInputManagerService;
 
@@ -79,7 +75,6 @@
 
     move-result-object v3
 
-    .line 2247
     .local v3, "userState":Lcom/android/server/tv/TvInputManagerService$UserState;
     # getter for: Lcom/android/server/tv/TvInputManagerService$UserState;->serviceStateMap:Ljava/util/Map;
     invoke-static {v3}, Lcom/android/server/tv/TvInputManagerService$UserState;->access$1100(Lcom/android/server/tv/TvInputManagerService$UserState;)Ljava/util/Map;
@@ -109,7 +104,6 @@
 
     check-cast v2, Lcom/android/server/tv/TvInputManagerService$ServiceState;
 
-    .line 2248
     .local v2, "serviceState":Lcom/android/server/tv/TvInputManagerService$ServiceState;
     # getter for: Lcom/android/server/tv/TvInputManagerService$ServiceState;->isHardware:Z
     invoke-static {v2}, Lcom/android/server/tv/TvInputManagerService$ServiceState;->access$2900(Lcom/android/server/tv/TvInputManagerService$ServiceState;)Z
@@ -127,7 +121,6 @@
 
     if-eqz v4, :cond_0
 
-    .line 2250
     :try_start_1
     # getter for: Lcom/android/server/tv/TvInputManagerService$ServiceState;->service:Landroid/media/tv/ITvInputService;
     invoke-static {v2}, Lcom/android/server/tv/TvInputManagerService$ServiceState;->access$2100(Lcom/android/server/tv/TvInputManagerService$ServiceState;)Landroid/media/tv/ITvInputService;
@@ -141,11 +134,9 @@
 
     goto :goto_0
 
-    .line 2251
     :catch_0
     move-exception v0
 
-    .line 2252
     .local v0, "e":Landroid/os/RemoteException;
     :try_start_2
     const-string v4, "TvInputManagerService"
@@ -156,7 +147,6 @@
 
     goto :goto_0
 
-    .line 2255
     .end local v0    # "e":Landroid/os/RemoteException;
     .end local v1    # "i$":Ljava/util/Iterator;
     .end local v2    # "serviceState":Lcom/android/server/tv/TvInputManagerService$ServiceState;
@@ -178,7 +168,6 @@
     :try_end_3
     .catchall {:try_start_3 .. :try_end_3} :catchall_0
 
-    .line 2256
     return-void
 .end method
 
@@ -187,7 +176,6 @@
     .param p1, "info"    # Landroid/media/tv/TvInputHardwareInfo;
 
     .prologue
-    .line 2260
     iget-object v4, p0, Lcom/android/server/tv/TvInputManagerService$HardwareListener;->this$0:Lcom/android/server/tv/TvInputManagerService;
 
     # getter for: Lcom/android/server/tv/TvInputManagerService;->mLock:Ljava/lang/Object;
@@ -197,7 +185,6 @@
 
     monitor-enter v5
 
-    .line 2261
     :try_start_0
     iget-object v4, p0, Lcom/android/server/tv/TvInputManagerService$HardwareListener;->this$0:Lcom/android/server/tv/TvInputManagerService;
 
@@ -213,7 +200,6 @@
 
     move-result-object v3
 
-    .line 2263
     .local v3, "userState":Lcom/android/server/tv/TvInputManagerService$UserState;
     # getter for: Lcom/android/server/tv/TvInputManagerService$UserState;->serviceStateMap:Ljava/util/Map;
     invoke-static {v3}, Lcom/android/server/tv/TvInputManagerService$UserState;->access$1100(Lcom/android/server/tv/TvInputManagerService$UserState;)Ljava/util/Map;
@@ -243,7 +229,6 @@
 
     check-cast v2, Lcom/android/server/tv/TvInputManagerService$ServiceState;
 
-    .line 2264
     .local v2, "serviceState":Lcom/android/server/tv/TvInputManagerService$ServiceState;
     # getter for: Lcom/android/server/tv/TvInputManagerService$ServiceState;->isHardware:Z
     invoke-static {v2}, Lcom/android/server/tv/TvInputManagerService$ServiceState;->access$2900(Lcom/android/server/tv/TvInputManagerService$ServiceState;)Z
@@ -261,7 +246,6 @@
 
     if-eqz v4, :cond_0
 
-    .line 2266
     :try_start_1
     # getter for: Lcom/android/server/tv/TvInputManagerService$ServiceState;->service:Landroid/media/tv/ITvInputService;
     invoke-static {v2}, Lcom/android/server/tv/TvInputManagerService$ServiceState;->access$2100(Lcom/android/server/tv/TvInputManagerService$ServiceState;)Landroid/media/tv/ITvInputService;
@@ -275,11 +259,9 @@
 
     goto :goto_0
 
-    .line 2267
     :catch_0
     move-exception v0
 
-    .line 2268
     .local v0, "e":Landroid/os/RemoteException;
     :try_start_2
     const-string v4, "TvInputManagerService"
@@ -290,7 +272,6 @@
 
     goto :goto_0
 
-    .line 2271
     .end local v0    # "e":Landroid/os/RemoteException;
     .end local v1    # "i$":Ljava/util/Iterator;
     .end local v2    # "serviceState":Lcom/android/server/tv/TvInputManagerService$ServiceState;
@@ -312,7 +293,6 @@
     :try_end_3
     .catchall {:try_start_3 .. :try_end_3} :catchall_0
 
-    .line 2272
     return-void
 .end method
 
@@ -321,7 +301,6 @@
     .param p1, "deviceInfo"    # Landroid/hardware/hdmi/HdmiDeviceInfo;
 
     .prologue
-    .line 2276
     iget-object v4, p0, Lcom/android/server/tv/TvInputManagerService$HardwareListener;->this$0:Lcom/android/server/tv/TvInputManagerService;
 
     # getter for: Lcom/android/server/tv/TvInputManagerService;->mLock:Ljava/lang/Object;
@@ -331,7 +310,6 @@
 
     monitor-enter v5
 
-    .line 2277
     :try_start_0
     iget-object v4, p0, Lcom/android/server/tv/TvInputManagerService$HardwareListener;->this$0:Lcom/android/server/tv/TvInputManagerService;
 
@@ -347,7 +325,6 @@
 
     move-result-object v3
 
-    .line 2279
     .local v3, "userState":Lcom/android/server/tv/TvInputManagerService$UserState;
     # getter for: Lcom/android/server/tv/TvInputManagerService$UserState;->serviceStateMap:Ljava/util/Map;
     invoke-static {v3}, Lcom/android/server/tv/TvInputManagerService$UserState;->access$1100(Lcom/android/server/tv/TvInputManagerService$UserState;)Ljava/util/Map;
@@ -377,7 +354,6 @@
 
     check-cast v2, Lcom/android/server/tv/TvInputManagerService$ServiceState;
 
-    .line 2280
     .local v2, "serviceState":Lcom/android/server/tv/TvInputManagerService$ServiceState;
     # getter for: Lcom/android/server/tv/TvInputManagerService$ServiceState;->isHardware:Z
     invoke-static {v2}, Lcom/android/server/tv/TvInputManagerService$ServiceState;->access$2900(Lcom/android/server/tv/TvInputManagerService$ServiceState;)Z
@@ -395,7 +371,6 @@
 
     if-eqz v4, :cond_0
 
-    .line 2282
     :try_start_1
     # getter for: Lcom/android/server/tv/TvInputManagerService$ServiceState;->service:Landroid/media/tv/ITvInputService;
     invoke-static {v2}, Lcom/android/server/tv/TvInputManagerService$ServiceState;->access$2100(Lcom/android/server/tv/TvInputManagerService$ServiceState;)Landroid/media/tv/ITvInputService;
@@ -409,11 +384,9 @@
 
     goto :goto_0
 
-    .line 2283
     :catch_0
     move-exception v0
 
-    .line 2284
     .local v0, "e":Landroid/os/RemoteException;
     :try_start_2
     const-string v4, "TvInputManagerService"
@@ -424,7 +397,6 @@
 
     goto :goto_0
 
-    .line 2287
     .end local v0    # "e":Landroid/os/RemoteException;
     .end local v1    # "i$":Ljava/util/Iterator;
     .end local v2    # "serviceState":Lcom/android/server/tv/TvInputManagerService$ServiceState;
@@ -446,7 +418,6 @@
     :try_end_3
     .catchall {:try_start_3 .. :try_end_3} :catchall_0
 
-    .line 2288
     return-void
 .end method
 
@@ -455,7 +426,6 @@
     .param p1, "deviceInfo"    # Landroid/hardware/hdmi/HdmiDeviceInfo;
 
     .prologue
-    .line 2292
     iget-object v4, p0, Lcom/android/server/tv/TvInputManagerService$HardwareListener;->this$0:Lcom/android/server/tv/TvInputManagerService;
 
     # getter for: Lcom/android/server/tv/TvInputManagerService;->mLock:Ljava/lang/Object;
@@ -465,7 +435,6 @@
 
     monitor-enter v5
 
-    .line 2293
     :try_start_0
     iget-object v4, p0, Lcom/android/server/tv/TvInputManagerService$HardwareListener;->this$0:Lcom/android/server/tv/TvInputManagerService;
 
@@ -481,7 +450,6 @@
 
     move-result-object v3
 
-    .line 2295
     .local v3, "userState":Lcom/android/server/tv/TvInputManagerService$UserState;
     # getter for: Lcom/android/server/tv/TvInputManagerService$UserState;->serviceStateMap:Ljava/util/Map;
     invoke-static {v3}, Lcom/android/server/tv/TvInputManagerService$UserState;->access$1100(Lcom/android/server/tv/TvInputManagerService$UserState;)Ljava/util/Map;
@@ -511,7 +479,6 @@
 
     check-cast v2, Lcom/android/server/tv/TvInputManagerService$ServiceState;
 
-    .line 2296
     .local v2, "serviceState":Lcom/android/server/tv/TvInputManagerService$ServiceState;
     # getter for: Lcom/android/server/tv/TvInputManagerService$ServiceState;->isHardware:Z
     invoke-static {v2}, Lcom/android/server/tv/TvInputManagerService$ServiceState;->access$2900(Lcom/android/server/tv/TvInputManagerService$ServiceState;)Z
@@ -529,7 +496,6 @@
 
     if-eqz v4, :cond_0
 
-    .line 2298
     :try_start_1
     # getter for: Lcom/android/server/tv/TvInputManagerService$ServiceState;->service:Landroid/media/tv/ITvInputService;
     invoke-static {v2}, Lcom/android/server/tv/TvInputManagerService$ServiceState;->access$2100(Lcom/android/server/tv/TvInputManagerService$ServiceState;)Landroid/media/tv/ITvInputService;
@@ -543,11 +509,9 @@
 
     goto :goto_0
 
-    .line 2299
     :catch_0
     move-exception v0
 
-    .line 2300
     .local v0, "e":Landroid/os/RemoteException;
     :try_start_2
     const-string v4, "TvInputManagerService"
@@ -558,7 +522,6 @@
 
     goto :goto_0
 
-    .line 2303
     .end local v0    # "e":Landroid/os/RemoteException;
     .end local v1    # "i$":Ljava/util/Iterator;
     .end local v2    # "serviceState":Lcom/android/server/tv/TvInputManagerService$ServiceState;
@@ -580,7 +543,6 @@
     :try_end_3
     .catchall {:try_start_3 .. :try_end_3} :catchall_0
 
-    .line 2304
     return-void
 .end method
 
@@ -590,7 +552,6 @@
     .param p2, "deviceInfo"    # Landroid/hardware/hdmi/HdmiDeviceInfo;
 
     .prologue
-    .line 2308
     iget-object v1, p0, Lcom/android/server/tv/TvInputManagerService$HardwareListener;->this$0:Lcom/android/server/tv/TvInputManagerService;
 
     # getter for: Lcom/android/server/tv/TvInputManagerService;->mLock:Ljava/lang/Object;
@@ -600,10 +561,8 @@
 
     monitor-enter v2
 
-    .line 2309
     const/4 v0, 0x0
 
-    .line 2310
     .local v0, "state":Ljava/lang/Integer;
     :try_start_0
     invoke-virtual {p2}, Landroid/hardware/hdmi/HdmiDeviceInfo;->getDevicePowerStatus()I
@@ -612,14 +571,11 @@
 
     packed-switch v1, :pswitch_data_0
 
-    .line 2321
     const/4 v0, 0x0
 
-    .line 2324
     :goto_0
     if-eqz v0, :cond_0
 
-    .line 2325
     iget-object v1, p0, Lcom/android/server/tv/TvInputManagerService$HardwareListener;->this$0:Lcom/android/server/tv/TvInputManagerService;
 
     invoke-virtual {v0}, Ljava/lang/Integer;->intValue()I
@@ -636,14 +592,11 @@
     # invokes: Lcom/android/server/tv/TvInputManagerService;->setStateLocked(Ljava/lang/String;II)V
     invoke-static {v1, p1, v3, v4}, Lcom/android/server/tv/TvInputManagerService;->access$6500(Lcom/android/server/tv/TvInputManagerService;Ljava/lang/String;II)V
 
-    .line 2327
     :cond_0
     monitor-exit v2
 
-    .line 2328
     return-void
 
-    .line 2312
     :pswitch_0
     const/4 v1, 0x0
 
@@ -651,10 +604,8 @@
 
     move-result-object v0
 
-    .line 2313
     goto :goto_0
 
-    .line 2317
     :pswitch_1
     const/4 v1, 0x1
 
@@ -662,10 +613,8 @@
 
     move-result-object v0
 
-    .line 2318
     goto :goto_0
 
-    .line 2327
     :catchall_0
     move-exception v1
 
@@ -675,7 +624,6 @@
 
     throw v1
 
-    .line 2310
     :pswitch_data_0
     .packed-switch 0x0
         :pswitch_0
@@ -691,7 +639,6 @@
     .param p2, "state"    # I
 
     .prologue
-    .line 2237
     iget-object v0, p0, Lcom/android/server/tv/TvInputManagerService$HardwareListener;->this$0:Lcom/android/server/tv/TvInputManagerService;
 
     # getter for: Lcom/android/server/tv/TvInputManagerService;->mLock:Ljava/lang/Object;
@@ -701,7 +648,6 @@
 
     monitor-enter v1
 
-    .line 2238
     :try_start_0
     iget-object v0, p0, Lcom/android/server/tv/TvInputManagerService$HardwareListener;->this$0:Lcom/android/server/tv/TvInputManagerService;
 
@@ -715,13 +661,10 @@
     # invokes: Lcom/android/server/tv/TvInputManagerService;->setStateLocked(Ljava/lang/String;II)V
     invoke-static {v0, p1, p2, v2}, Lcom/android/server/tv/TvInputManagerService;->access$6500(Lcom/android/server/tv/TvInputManagerService;Ljava/lang/String;II)V
 
-    .line 2239
     monitor-exit v1
 
-    .line 2240
     return-void
 
-    .line 2239
     :catchall_0
     move-exception v0
 

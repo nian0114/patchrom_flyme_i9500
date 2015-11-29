@@ -23,7 +23,6 @@
     .locals 0
 
     .prologue
-    .line 634
     iput-object p1, p0, Lcom/android/server/clipboardex/ClipboardExService$1;->this$0:Lcom/android/server/clipboardex/ClipboardExService;
 
     invoke-direct {p0}, Landroid/content/BroadcastReceiver;-><init>()V
@@ -39,12 +38,10 @@
     .param p2, "intent"    # Landroid/content/Intent;
 
     .prologue
-    .line 637
     invoke-virtual {p2}, Landroid/content/Intent;->getAction()Ljava/lang/String;
 
     move-result-object v0
 
-    .line 638
     .local v0, "action":Ljava/lang/String;
     const-string v2, "android.intent.extra.user_handle"
 
@@ -54,7 +51,6 @@
 
     move-result v1
 
-    .line 639
     .local v1, "id":I
     const-string v2, "android.intent.action.USER_ADDED"
 
@@ -64,12 +60,10 @@
 
     if-eqz v2, :cond_2
 
-    .line 640
     sget-boolean v2, Landroid/sec/clipboard/data/ClipboardDefine;->DEBUG:Z
 
     if-eqz v2, :cond_0
 
-    .line 641
     const-string v2, "ClipboardServiceEx"
 
     new-instance v3, Ljava/lang/StringBuilder;
@@ -92,7 +86,6 @@
 
     invoke-static {v2, v3}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 643
     :cond_0
     iget-object v2, p0, Lcom/android/server/clipboardex/ClipboardExService$1;->this$0:Lcom/android/server/clipboardex/ClipboardExService;
 
@@ -100,12 +93,10 @@
 
     invoke-virtual {v2, v1, v3}, Lcom/android/server/clipboardex/ClipboardExService;->multiUserMode(ILjava/lang/String;)V
 
-    .line 650
     :cond_1
     :goto_0
     return-void
 
-    .line 644
     :cond_2
     const-string v2, "android.intent.action.USER_REMOVED"
 
@@ -115,12 +106,10 @@
 
     if-eqz v2, :cond_1
 
-    .line 645
     sget-boolean v2, Landroid/sec/clipboard/data/ClipboardDefine;->DEBUG:Z
 
     if-eqz v2, :cond_3
 
-    .line 646
     const-string v2, "ClipboardServiceEx"
 
     new-instance v3, Ljava/lang/StringBuilder;
@@ -143,7 +132,6 @@
 
     invoke-static {v2, v3}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 648
     :cond_3
     iget-object v2, p0, Lcom/android/server/clipboardex/ClipboardExService$1;->this$0:Lcom/android/server/clipboardex/ClipboardExService;
 

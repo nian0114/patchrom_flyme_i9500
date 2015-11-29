@@ -23,7 +23,6 @@
     .locals 0
 
     .prologue
-    .line 982
     iput-object p1, p0, Lcom/android/server/FMRadioService$16;->this$0:Lcom/android/server/FMRadioService;
 
     invoke-direct {p0}, Landroid/content/BroadcastReceiver;-><init>()V
@@ -43,20 +42,18 @@
 
     const/4 v3, 0x0
 
-    .line 984
-    const-string/jumbo v1, "mute"
+    const-string v1, "mute"
 
     invoke-virtual {p2, v1, v3}, Landroid/content/Intent;->getIntExtra(Ljava/lang/String;I)I
 
     move-result v0
 
-    .line 985
     .local v0, "AllSoundOff":I
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v2, "mAllSoundOffReceiver :: "
+    const-string v2, "mAllSoundOffReceiver :: "
 
     invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -72,30 +69,24 @@
 
     invoke-static {v1}, Lcom/android/server/FMRadioService;->log(Ljava/lang/String;)V
 
-    .line 987
     if-ne v0, v4, :cond_0
 
-    .line 988
     const-string v1, "FM chip mute"
 
     invoke-static {v1}, Lcom/android/server/FMRadioService;->log(Ljava/lang/String;)V
 
-    .line 989
     iget-object v1, p0, Lcom/android/server/FMRadioService$16;->this$0:Lcom/android/server/FMRadioService;
 
     invoke-virtual {v1, v4}, Lcom/android/server/FMRadioService;->mute(Z)V
 
-    .line 994
     :goto_0
     return-void
 
-    .line 991
     :cond_0
     const-string v1, "FM chip unmute"
 
     invoke-static {v1}, Lcom/android/server/FMRadioService;->log(Ljava/lang/String;)V
 
-    .line 992
     iget-object v1, p0, Lcom/android/server/FMRadioService$16;->this$0:Lcom/android/server/FMRadioService;
 
     invoke-virtual {v1, v3}, Lcom/android/server/FMRadioService;->mute(Z)V

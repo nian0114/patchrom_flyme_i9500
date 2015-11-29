@@ -24,13 +24,10 @@
     .param p1, "legacy"    # Landroid/content/pm/IPackageDeleteObserver;
 
     .prologue
-    .line 4487
     invoke-direct {p0}, Landroid/app/PackageDeleteObserver;-><init>()V
 
-    .line 4488
     iput-object p1, p0, Landroid/content/pm/PackageManager$LegacyPackageDeleteObserver;->mLegacy:Landroid/content/pm/IPackageDeleteObserver;
 
-    .line 4489
     return-void
 .end method
 
@@ -43,16 +40,13 @@
     .param p3, "msg"    # Ljava/lang/String;
 
     .prologue
-    .line 4493
     iget-object v0, p0, Landroid/content/pm/PackageManager$LegacyPackageDeleteObserver;->mLegacy:Landroid/content/pm/IPackageDeleteObserver;
 
     if-nez v0, :cond_0
 
-    .line 4498
     :goto_0
     return-void
 
-    .line 4495
     :cond_0
     :try_start_0
     iget-object v0, p0, Landroid/content/pm/PackageManager$LegacyPackageDeleteObserver;->mLegacy:Landroid/content/pm/IPackageDeleteObserver;
@@ -63,7 +57,6 @@
 
     goto :goto_0
 
-    .line 4496
     :catch_0
     move-exception v0
 

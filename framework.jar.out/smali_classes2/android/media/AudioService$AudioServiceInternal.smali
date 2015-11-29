@@ -23,7 +23,6 @@
     .locals 0
 
     .prologue
-    .line 6406
     iput-object p1, p0, Landroid/media/AudioService$AudioServiceInternal;->this$0:Landroid/media/AudioService;
 
     invoke-direct {p0}, Landroid/media/AudioManagerInternal;-><init>()V
@@ -42,7 +41,6 @@
     .param p5, "uid"    # I
 
     .prologue
-    .line 6417
     iget-object v0, p0, Landroid/media/AudioService$AudioServiceInternal;->this$0:Landroid/media/AudioService;
 
     move v1, p1
@@ -58,7 +56,6 @@
     # invokes: Landroid/media/AudioService;->adjustStreamVolume(IIILjava/lang/String;I)V
     invoke-static/range {v0 .. v5}, Landroid/media/AudioService;->access$10500(Landroid/media/AudioService;IIILjava/lang/String;I)V
 
-    .line 6418
     return-void
 .end method
 
@@ -71,7 +68,6 @@
     .param p5, "uid"    # I
 
     .prologue
-    .line 6412
     iget-object v0, p0, Landroid/media/AudioService$AudioServiceInternal;->this$0:Landroid/media/AudioService;
 
     move v1, p2
@@ -87,7 +83,6 @@
     # invokes: Landroid/media/AudioService;->adjustSuggestedStreamVolume(IIILjava/lang/String;I)V
     invoke-static/range {v0 .. v5}, Landroid/media/AudioService;->access$10400(Landroid/media/AudioService;IIILjava/lang/String;I)V
 
-    .line 6413
     return-void
 .end method
 
@@ -100,7 +95,6 @@
     .param p5, "uid"    # I
 
     .prologue
-    .line 6422
     iget-object v0, p0, Landroid/media/AudioService$AudioServiceInternal;->this$0:Landroid/media/AudioService;
 
     move v1, p1
@@ -116,6 +110,5 @@
     # invokes: Landroid/media/AudioService;->setStreamVolume(IIILjava/lang/String;I)V
     invoke-static/range {v0 .. v5}, Landroid/media/AudioService;->access$10600(Landroid/media/AudioService;IIILjava/lang/String;I)V
 
-    .line 6423
     return-void
 .end method

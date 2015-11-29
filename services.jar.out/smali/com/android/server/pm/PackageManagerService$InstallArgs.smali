@@ -47,39 +47,28 @@
     .param p8, "abiOverride"    # Ljava/lang/String;
 
     .prologue
-    .line 12236
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 12237
     iput-object p1, p0, Lcom/android/server/pm/PackageManagerService$InstallArgs;->origin:Lcom/android/server/pm/PackageManagerService$OriginInfo;
 
-    .line 12238
     iput p3, p0, Lcom/android/server/pm/PackageManagerService$InstallArgs;->installFlags:I
 
-    .line 12239
     iput-object p2, p0, Lcom/android/server/pm/PackageManagerService$InstallArgs;->observer:Landroid/content/pm/IPackageInstallObserver2;
 
-    .line 12240
     iput-object p4, p0, Lcom/android/server/pm/PackageManagerService$InstallArgs;->installerPackageName:Ljava/lang/String;
 
-    .line 12241
     const/4 v0, 0x0
 
     iput-object v0, p0, Lcom/android/server/pm/PackageManagerService$InstallArgs;->installerSourcePackageName:Ljava/lang/String;
 
-    .line 12242
     iput-object p5, p0, Lcom/android/server/pm/PackageManagerService$InstallArgs;->manifestDigest:Landroid/content/pm/ManifestDigest;
 
-    .line 12243
     iput-object p6, p0, Lcom/android/server/pm/PackageManagerService$InstallArgs;->user:Landroid/os/UserHandle;
 
-    .line 12244
     iput-object p7, p0, Lcom/android/server/pm/PackageManagerService$InstallArgs;->instructionSets:[Ljava/lang/String;
 
-    .line 12245
     iput-object p8, p0, Lcom/android/server/pm/PackageManagerService$InstallArgs;->abiOverride:Ljava/lang/String;
 
-    .line 12246
     return-void
 .end method
 
@@ -96,37 +85,26 @@
     .param p9, "abiOverride"    # Ljava/lang/String;
 
     .prologue
-    .line 12253
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 12254
     iput-object p1, p0, Lcom/android/server/pm/PackageManagerService$InstallArgs;->origin:Lcom/android/server/pm/PackageManagerService$OriginInfo;
 
-    .line 12255
     iput p3, p0, Lcom/android/server/pm/PackageManagerService$InstallArgs;->installFlags:I
 
-    .line 12256
     iput-object p2, p0, Lcom/android/server/pm/PackageManagerService$InstallArgs;->observer:Landroid/content/pm/IPackageInstallObserver2;
 
-    .line 12257
     iput-object p4, p0, Lcom/android/server/pm/PackageManagerService$InstallArgs;->installerPackageName:Ljava/lang/String;
 
-    .line 12258
     iput-object p5, p0, Lcom/android/server/pm/PackageManagerService$InstallArgs;->installerSourcePackageName:Ljava/lang/String;
 
-    .line 12259
     iput-object p6, p0, Lcom/android/server/pm/PackageManagerService$InstallArgs;->manifestDigest:Landroid/content/pm/ManifestDigest;
 
-    .line 12260
     iput-object p7, p0, Lcom/android/server/pm/PackageManagerService$InstallArgs;->user:Landroid/os/UserHandle;
 
-    .line 12261
     iput-object p8, p0, Lcom/android/server/pm/PackageManagerService$InstallArgs;->instructionSets:[Ljava/lang/String;
 
-    .line 12262
     iput-object p9, p0, Lcom/android/server/pm/PackageManagerService$InstallArgs;->abiOverride:Ljava/lang/String;
 
-    .line 12263
     return-void
 .end method
 
@@ -156,7 +134,6 @@
     .param p1, "uid"    # I
 
     .prologue
-    .line 12304
     const/4 v0, 0x1
 
     return v0
@@ -172,7 +149,6 @@
     .locals 1
 
     .prologue
-    .line 12293
     const/4 v0, 0x1
 
     return v0
@@ -197,7 +173,6 @@
     .locals 1
 
     .prologue
-    .line 12316
     iget-object v0, p0, Lcom/android/server/pm/PackageManagerService$InstallArgs;->user:Landroid/os/UserHandle;
 
     return-object v0
@@ -207,7 +182,6 @@
     .locals 1
 
     .prologue
-    .line 12312
     iget v0, p0, Lcom/android/server/pm/PackageManagerService$InstallArgs;->installFlags:I
 
     and-int/lit8 v0, v0, 0x8
@@ -229,7 +203,6 @@
     .locals 1
 
     .prologue
-    .line 12308
     iget v0, p0, Lcom/android/server/pm/PackageManagerService$InstallArgs;->installFlags:I
 
     and-int/lit8 v0, v0, 0x1

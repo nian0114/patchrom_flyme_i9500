@@ -44,7 +44,6 @@
     .param p4, "cid"    # I
 
     .prologue
-    .line 3679
     const/4 v4, -0x1
 
     const/4 v6, 0x0
@@ -63,7 +62,6 @@
 
     invoke-direct/range {v0 .. v7}, Lcom/android/server/enterprise/vpn/knoxvpn/EnterprisePremiumVpnPolicyServiceV2$VpnState;-><init>(Lcom/android/server/enterprise/vpn/knoxvpn/EnterprisePremiumVpnPolicyServiceV2;Ljava/lang/String;Ljava/lang/String;IILjava/lang/String;I)V
 
-    .line 3680
     return-void
 .end method
 
@@ -75,7 +73,6 @@
     .param p5, "cid"    # I
 
     .prologue
-    .line 3676
     const/4 v6, 0x0
 
     const/4 v7, 0x0
@@ -94,7 +91,6 @@
 
     invoke-direct/range {v0 .. v7}, Lcom/android/server/enterprise/vpn/knoxvpn/EnterprisePremiumVpnPolicyServiceV2$VpnState;-><init>(Lcom/android/server/enterprise/vpn/knoxvpn/EnterprisePremiumVpnPolicyServiceV2;Ljava/lang/String;Ljava/lang/String;IILjava/lang/String;I)V
 
-    .line 3677
     return-void
 .end method
 
@@ -108,30 +104,22 @@
     .param p7, "state"    # I
 
     .prologue
-    .line 3681
     iput-object p1, p0, Lcom/android/server/enterprise/vpn/knoxvpn/EnterprisePremiumVpnPolicyServiceV2$VpnState;->this$0:Lcom/android/server/enterprise/vpn/knoxvpn/EnterprisePremiumVpnPolicyServiceV2;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 3682
     iput-object p2, p0, Lcom/android/server/enterprise/vpn/knoxvpn/EnterprisePremiumVpnPolicyServiceV2$VpnState;->mProfileName:Ljava/lang/String;
 
-    .line 3683
     iput-object p3, p0, Lcom/android/server/enterprise/vpn/knoxvpn/EnterprisePremiumVpnPolicyServiceV2$VpnState;->mPackageName:Ljava/lang/String;
 
-    .line 3684
     iput-object p6, p0, Lcom/android/server/enterprise/vpn/knoxvpn/EnterprisePremiumVpnPolicyServiceV2$VpnState;->mInterface:Ljava/lang/String;
 
-    .line 3685
     iput p4, p0, Lcom/android/server/enterprise/vpn/knoxvpn/EnterprisePremiumVpnPolicyServiceV2$VpnState;->mUid:I
 
-    .line 3686
     iput p5, p0, Lcom/android/server/enterprise/vpn/knoxvpn/EnterprisePremiumVpnPolicyServiceV2$VpnState;->mCid:I
 
-    .line 3687
     iput p7, p0, Lcom/android/server/enterprise/vpn/knoxvpn/EnterprisePremiumVpnPolicyServiceV2$VpnState;->mState:I
 
-    .line 3688
     return-void
 .end method
 
@@ -141,7 +129,6 @@
     .locals 1
 
     .prologue
-    .line 3714
     iget v0, p0, Lcom/android/server/enterprise/vpn/knoxvpn/EnterprisePremiumVpnPolicyServiceV2$VpnState;->mCid:I
 
     return v0
@@ -151,7 +138,6 @@
     .locals 1
 
     .prologue
-    .line 3702
     iget-object v0, p0, Lcom/android/server/enterprise/vpn/knoxvpn/EnterprisePremiumVpnPolicyServiceV2$VpnState;->mInterface:Ljava/lang/String;
 
     return-object v0
@@ -161,7 +147,6 @@
     .locals 1
 
     .prologue
-    .line 3696
     iget-object v0, p0, Lcom/android/server/enterprise/vpn/knoxvpn/EnterprisePremiumVpnPolicyServiceV2$VpnState;->mPackageName:Ljava/lang/String;
 
     return-object v0
@@ -171,7 +156,6 @@
     .locals 1
 
     .prologue
-    .line 3690
     iget-object v0, p0, Lcom/android/server/enterprise/vpn/knoxvpn/EnterprisePremiumVpnPolicyServiceV2$VpnState;->mProfileName:Ljava/lang/String;
 
     return-object v0
@@ -181,7 +165,6 @@
     .locals 1
 
     .prologue
-    .line 3720
     iget v0, p0, Lcom/android/server/enterprise/vpn/knoxvpn/EnterprisePremiumVpnPolicyServiceV2$VpnState;->mState:I
 
     return v0
@@ -191,7 +174,6 @@
     .locals 1
 
     .prologue
-    .line 3708
     iget v0, p0, Lcom/android/server/enterprise/vpn/knoxvpn/EnterprisePremiumVpnPolicyServiceV2$VpnState;->mUid:I
 
     return v0
@@ -202,10 +184,8 @@
     .param p1, "cid"    # I
 
     .prologue
-    .line 3717
     iput p1, p0, Lcom/android/server/enterprise/vpn/knoxvpn/EnterprisePremiumVpnPolicyServiceV2$VpnState;->mCid:I
 
-    .line 3718
     return-void
 .end method
 
@@ -214,10 +194,8 @@
     .param p1, "interfaceName"    # Ljava/lang/String;
 
     .prologue
-    .line 3705
     iput-object p1, p0, Lcom/android/server/enterprise/vpn/knoxvpn/EnterprisePremiumVpnPolicyServiceV2$VpnState;->mInterface:Ljava/lang/String;
 
-    .line 3706
     return-void
 .end method
 
@@ -226,10 +204,8 @@
     .param p1, "packageName"    # Ljava/lang/String;
 
     .prologue
-    .line 3699
     iput-object p1, p0, Lcom/android/server/enterprise/vpn/knoxvpn/EnterprisePremiumVpnPolicyServiceV2$VpnState;->mPackageName:Ljava/lang/String;
 
-    .line 3700
     return-void
 .end method
 
@@ -238,10 +214,8 @@
     .param p1, "profileName"    # Ljava/lang/String;
 
     .prologue
-    .line 3693
     iput-object p1, p0, Lcom/android/server/enterprise/vpn/knoxvpn/EnterprisePremiumVpnPolicyServiceV2$VpnState;->mProfileName:Ljava/lang/String;
 
-    .line 3694
     return-void
 .end method
 
@@ -250,10 +224,8 @@
     .param p1, "state"    # I
 
     .prologue
-    .line 3723
     iput p1, p0, Lcom/android/server/enterprise/vpn/knoxvpn/EnterprisePremiumVpnPolicyServiceV2$VpnState;->mState:I
 
-    .line 3724
     return-void
 .end method
 
@@ -262,9 +234,7 @@
     .param p1, "uid"    # I
 
     .prologue
-    .line 3711
     iput p1, p0, Lcom/android/server/enterprise/vpn/knoxvpn/EnterprisePremiumVpnPolicyServiceV2$VpnState;->mUid:I
 
-    .line 3712
     return-void
 .end method

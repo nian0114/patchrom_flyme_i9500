@@ -27,15 +27,11 @@
     .param p2, "cnt"    # I
 
     .prologue
-    .line 276
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 277
     iput-object p1, p0, Lcom/android/server/am/PreferredPackageManager$PreferredPackageCounter;->packageName:Ljava/lang/String;
 
-    .line 278
     iput p2, p0, Lcom/android/server/am/PreferredPackageManager$PreferredPackageCounter;->hitCount:I
 
-    .line 279
     return-void
 .end method

@@ -23,7 +23,6 @@
     .locals 0
 
     .prologue
-    .line 143
     iput-object p1, p0, Lcom/android/internal/telephony/dataconnection/DctController$DataStateReceiver;->this$0:Lcom/android/internal/telephony/dataconnection/DctController;
 
     invoke-direct {p0}, Landroid/content/BroadcastReceiver;-><init>()V
@@ -37,7 +36,6 @@
     .param p2, "x1"    # Lcom/android/internal/telephony/dataconnection/DctController$1;
 
     .prologue
-    .line 143
     invoke-direct {p0, p1}, Lcom/android/internal/telephony/dataconnection/DctController$DataStateReceiver;-><init>(Lcom/android/internal/telephony/dataconnection/DctController;)V
 
     return-void
@@ -53,10 +51,8 @@
     .prologue
     const-wide/16 v10, 0x0
 
-    .line 145
     monitor-enter p0
 
-    .line 146
     :try_start_0
     invoke-virtual {p2}, Landroid/content/Intent;->getAction()Ljava/lang/String;
 
@@ -70,7 +66,6 @@
 
     if-eqz v6, :cond_6
 
-    .line 147
     invoke-virtual {p2}, Landroid/content/Intent;->getExtras()Landroid/os/Bundle;
 
     move-result-object v6
@@ -79,7 +74,6 @@
 
     move-result-object v2
 
-    .line 149
     .local v2, "ss":Landroid/telephony/ServiceState;
     const-string v6, "subscription"
 
@@ -89,7 +83,6 @@
 
     move-result-wide v4
 
-    .line 150
     .local v4, "subId":J
     invoke-static {}, Lcom/android/internal/telephony/SubscriptionController;->getInstance()Lcom/android/internal/telephony/SubscriptionController;
 
@@ -99,7 +92,6 @@
 
     move-result v0
 
-    .line 151
     .local v0, "phoneId":I
     new-instance v6, Ljava/lang/StringBuilder;
 
@@ -122,7 +114,6 @@
     # invokes: Lcom/android/internal/telephony/dataconnection/DctController;->logd(Ljava/lang/String;)V
     invoke-static {v6}, Lcom/android/internal/telephony/dataconnection/DctController;->access$100(Ljava/lang/String;)V
 
-    .line 154
     invoke-static {v4, v5}, Landroid/telephony/SubscriptionManager;->isValidSubId(J)Z
 
     move-result v6
@@ -133,7 +124,6 @@
 
     if-gez v6, :cond_1
 
-    .line 156
     :cond_0
     new-instance v6, Ljava/lang/StringBuilder;
 
@@ -156,17 +146,14 @@
     # invokes: Lcom/android/internal/telephony/dataconnection/DctController;->logd(Ljava/lang/String;)V
     invoke-static {v6}, Lcom/android/internal/telephony/dataconnection/DctController;->access$100(Ljava/lang/String;)V
 
-    .line 157
     monitor-exit p0
 
-    .line 209
     .end local v0    # "phoneId":I
     .end local v2    # "ss":Landroid/telephony/ServiceState;
     .end local v4    # "subId":J
     :goto_0
     return-void
 
-    .line 159
     .restart local v0    # "phoneId":I
     .restart local v2    # "ss":Landroid/telephony/ServiceState;
     .restart local v4    # "subId":J
@@ -177,7 +164,6 @@
 
     if-nez v6, :cond_2
 
-    .line 160
     new-instance v6, Ljava/lang/StringBuilder;
 
     invoke-direct {v6}, Ljava/lang/StringBuilder;-><init>()V
@@ -199,12 +185,10 @@
     # invokes: Lcom/android/internal/telephony/dataconnection/DctController;->logd(Ljava/lang/String;)V
     invoke-static {v6}, Lcom/android/internal/telephony/dataconnection/DctController;->access$100(Ljava/lang/String;)V
 
-    .line 161
     monitor-exit p0
 
     goto :goto_0
 
-    .line 208
     .end local v0    # "phoneId":I
     .end local v2    # "ss":Landroid/telephony/ServiceState;
     .end local v4    # "subId":J
@@ -217,7 +201,6 @@
 
     throw v6
 
-    .line 163
     .restart local v0    # "phoneId":I
     .restart local v2    # "ss":Landroid/telephony/ServiceState;
     .restart local v4    # "subId":J
@@ -253,13 +236,11 @@
 
     if-eqz v6, :cond_4
 
-    .line 166
     :cond_3
     monitor-exit p0
 
     goto :goto_0
 
-    .line 169
     :cond_4
     iget-object v6, p0, Lcom/android/internal/telephony/dataconnection/DctController$DataStateReceiver;->this$0:Lcom/android/internal/telephony/dataconnection/DctController;
 
@@ -270,26 +251,21 @@
 
     aget-boolean v1, v6, v0
 
-    .line 170
     .local v1, "prevPowerOff":Z
     if-eqz v2, :cond_6
 
-    .line 171
     invoke-virtual {v2}, Landroid/telephony/ServiceState;->getState()I
 
     move-result v3
 
-    .line 172
     .local v3, "state":I
     packed-switch v3, :pswitch_data_0
 
-    .line 195
     const-string v6, "DataStateReceiver: SERVICE_STATE_CHANGED invalid state"
 
     # invokes: Lcom/android/internal/telephony/dataconnection/DctController;->logd(Ljava/lang/String;)V
     invoke-static {v6}, Lcom/android/internal/telephony/dataconnection/DctController;->access$100(Ljava/lang/String;)V
 
-    .line 199
     :cond_5
     :goto_1
     if-eqz v1, :cond_6
@@ -325,7 +301,6 @@
 
     if-ne v0, v6, :cond_6
 
-    .line 202
     new-instance v6, Ljava/lang/StringBuilder;
 
     invoke-direct {v6}, Ljava/lang/StringBuilder;-><init>()V
@@ -353,14 +328,12 @@
     # invokes: Lcom/android/internal/telephony/dataconnection/DctController;->logd(Ljava/lang/String;)V
     invoke-static {v6}, Lcom/android/internal/telephony/dataconnection/DctController;->access$100(Ljava/lang/String;)V
 
-    .line 204
     iget-object v6, p0, Lcom/android/internal/telephony/dataconnection/DctController$DataStateReceiver;->this$0:Lcom/android/internal/telephony/dataconnection/DctController;
 
     const-string v7, "default"
 
     invoke-virtual {v6, v4, v5, v7}, Lcom/android/internal/telephony/dataconnection/DctController;->enableApnType(JLjava/lang/String;)I
 
-    .line 208
     .end local v0    # "phoneId":I
     .end local v1    # "prevPowerOff":Z
     .end local v2    # "ss":Landroid/telephony/ServiceState;
@@ -371,7 +344,6 @@
 
     goto/16 :goto_0
 
-    .line 174
     .restart local v0    # "phoneId":I
     .restart local v1    # "prevPowerOff":Z
     .restart local v2    # "ss":Landroid/telephony/ServiceState;
@@ -389,7 +361,6 @@
 
     aput-boolean v7, v6, v0
 
-    .line 175
     new-instance v6, Ljava/lang/StringBuilder;
 
     invoke-direct {v6}, Ljava/lang/StringBuilder;-><init>()V
@@ -413,7 +384,6 @@
 
     goto :goto_1
 
-    .line 179
     :pswitch_1
     iget-object v6, p0, Lcom/android/internal/telephony/dataconnection/DctController$DataStateReceiver;->this$0:Lcom/android/internal/telephony/dataconnection/DctController;
 
@@ -426,7 +396,6 @@
 
     aput-boolean v7, v6, v0
 
-    .line 180
     new-instance v6, Ljava/lang/StringBuilder;
 
     invoke-direct {v6}, Ljava/lang/StringBuilder;-><init>()V
@@ -450,7 +419,6 @@
 
     goto/16 :goto_1
 
-    .line 184
     :pswitch_2
     new-instance v6, Ljava/lang/StringBuilder;
 
@@ -473,7 +441,6 @@
     # invokes: Lcom/android/internal/telephony/dataconnection/DctController;->logd(Ljava/lang/String;)V
     invoke-static {v6}, Lcom/android/internal/telephony/dataconnection/DctController;->access$100(Ljava/lang/String;)V
 
-    .line 186
     iget-object v6, p0, Lcom/android/internal/telephony/dataconnection/DctController$DataStateReceiver;->this$0:Lcom/android/internal/telephony/dataconnection/DctController;
 
     # getter for: Lcom/android/internal/telephony/dataconnection/DctController;->mServicePowerOffFlag:[Z
@@ -485,7 +452,6 @@
 
     if-eqz v6, :cond_5
 
-    .line 187
     iget-object v6, p0, Lcom/android/internal/telephony/dataconnection/DctController$DataStateReceiver;->this$0:Lcom/android/internal/telephony/dataconnection/DctController;
 
     # getter for: Lcom/android/internal/telephony/dataconnection/DctController;->mServicePowerOffFlag:[Z
@@ -499,7 +465,6 @@
 
     goto/16 :goto_1
 
-    .line 191
     :pswitch_3
     new-instance v6, Ljava/lang/StringBuilder;
 
@@ -526,7 +491,6 @@
 
     goto/16 :goto_1
 
-    .line 172
     nop
 
     :pswitch_data_0

@@ -26,7 +26,6 @@
     .locals 0
 
     .prologue
-    .line 796
     iput-object p1, p0, Landroid/hardware/scontext/SContextService$1;->this$0:Landroid/hardware/scontext/SContextService;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -42,15 +41,12 @@
     .param p2, "context"    # Landroid/os/Bundle;
 
     .prologue
-    .line 801
     if-nez p2, :cond_1
 
-    .line 810
     :cond_0
     :goto_0
     return-void
 
-    .line 804
     :cond_1
     # getter for: Landroid/hardware/scontext/SContextService;->mProviderMap:Ljava/util/concurrent/ConcurrentHashMap;
     invoke-static {}, Landroid/hardware/scontext/SContextService;->access$500()Ljava/util/concurrent/ConcurrentHashMap;
@@ -67,7 +63,6 @@
 
     if-eqz v0, :cond_0
 
-    .line 805
     # getter for: Landroid/hardware/scontext/SContextService;->mProviderMap:Ljava/util/concurrent/ConcurrentHashMap;
     invoke-static {}, Landroid/hardware/scontext/SContextService;->access$500()Ljava/util/concurrent/ConcurrentHashMap;
 
@@ -87,10 +82,8 @@
 
     move-result-object p2
 
-    .line 806
     if-eqz p2, :cond_0
 
-    .line 807
     iget-object v0, p0, Landroid/hardware/scontext/SContextService$1;->this$0:Landroid/hardware/scontext/SContextService;
 
     # invokes: Landroid/hardware/scontext/SContextService;->updateSContext(ILandroid/os/Bundle;)V

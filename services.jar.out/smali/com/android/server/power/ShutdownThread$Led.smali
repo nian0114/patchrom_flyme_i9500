@@ -19,7 +19,6 @@
     .locals 0
 
     .prologue
-    .line 1582
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -29,12 +28,10 @@
     .locals 1
 
     .prologue
-    .line 1588
     const/4 v0, 0x6
 
     invoke-static {v0}, Lcom/android/server/power/ShutdownThread$Led;->fileWriteInt(I)V
 
-    .line 1589
     return-void
 .end method
 
@@ -42,12 +39,10 @@
     .locals 1
 
     .prologue
-    .line 1584
     const/4 v0, 0x6
 
     invoke-static {v0}, Lcom/android/server/power/ShutdownThread$Led;->fileWriteInt(I)V
 
-    .line 1585
     return-void
 .end method
 
@@ -55,7 +50,6 @@
     .locals 0
 
     .prologue
-    .line 1582
     invoke-static {}, Lcom/android/server/power/ShutdownThread$Led;->On()V
 
     return-void
@@ -66,14 +60,12 @@
     .param p0, "value"    # I
 
     .prologue
-    .line 1592
     new-instance v1, Ljava/io/File;
 
     const-string v4, "/sys/class/sec/led/led_pattern"
 
     invoke-direct {v1, v4}, Ljava/io/File;-><init>(Ljava/lang/String;)V
 
-    .line 1593
     .local v1, "file":Ljava/io/File;
     if-eqz v1, :cond_0
 
@@ -83,7 +75,6 @@
 
     if-nez v4, :cond_2
 
-    .line 1594
     :cond_0
     const-string v4, "LED"
 
@@ -91,16 +82,13 @@
 
     invoke-static {v4, v5}, Lcom/android/server/power/ShutdownThread$Slog;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1615
     :cond_1
     :goto_0
     return-void
 
-    .line 1598
     :cond_2
     const/4 v2, 0x0
 
-    .line 1600
     .local v2, "out":Ljava/io/FileOutputStream;
     :try_start_0
     new-instance v3, Ljava/io/FileOutputStream;
@@ -110,7 +98,6 @@
     .catch Ljava/io/IOException; {:try_start_0 .. :try_end_0} :catch_1
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 1601
     .end local v2    # "out":Ljava/io/FileOutputStream;
     .local v3, "out":Ljava/io/FileOutputStream;
     :try_start_1
@@ -127,10 +114,8 @@
     .catch Ljava/io/IOException; {:try_start_1 .. :try_end_1} :catch_4
     .catchall {:try_start_1 .. :try_end_1} :catchall_1
 
-    .line 1608
     if-eqz v3, :cond_3
 
-    .line 1609
     :try_start_2
     invoke-virtual {v3}, Ljava/io/FileOutputStream;->close()V
     :try_end_2
@@ -139,18 +124,15 @@
     :cond_3
     move-object v2, v3
 
-    .line 1613
     .end local v3    # "out":Ljava/io/FileOutputStream;
     .restart local v2    # "out":Ljava/io/FileOutputStream;
     goto :goto_0
 
-    .line 1611
     .end local v2    # "out":Ljava/io/FileOutputStream;
     .restart local v3    # "out":Ljava/io/FileOutputStream;
     :catch_0
     move-exception v0
 
-    .line 1612
     .local v0, "e":Ljava/io/IOException;
     const-string v4, "ShutdownThread"
 
@@ -160,17 +142,14 @@
 
     move-object v2, v3
 
-    .line 1614
     .end local v3    # "out":Ljava/io/FileOutputStream;
     .restart local v2    # "out":Ljava/io/FileOutputStream;
     goto :goto_0
 
-    .line 1603
     .end local v0    # "e":Ljava/io/IOException;
     :catch_1
     move-exception v0
 
-    .line 1604
     .restart local v0    # "e":Ljava/io/IOException;
     :goto_1
     :try_start_3
@@ -182,10 +161,8 @@
     :try_end_3
     .catchall {:try_start_3 .. :try_end_3} :catchall_0
 
-    .line 1608
     if-eqz v2, :cond_1
 
-    .line 1609
     :try_start_4
     invoke-virtual {v2}, Ljava/io/FileOutputStream;->close()V
     :try_end_4
@@ -193,11 +170,9 @@
 
     goto :goto_0
 
-    .line 1611
     :catch_2
     move-exception v0
 
-    .line 1612
     const-string v4, "ShutdownThread"
 
     const-string v5, "led file close error"
@@ -206,31 +181,25 @@
 
     goto :goto_0
 
-    .line 1607
     .end local v0    # "e":Ljava/io/IOException;
     :catchall_0
     move-exception v4
 
-    .line 1608
     :goto_2
     if-eqz v2, :cond_4
 
-    .line 1609
     :try_start_5
     invoke-virtual {v2}, Ljava/io/FileOutputStream;->close()V
     :try_end_5
     .catch Ljava/io/IOException; {:try_start_5 .. :try_end_5} :catch_3
 
-    .line 1613
     :cond_4
     :goto_3
     throw v4
 
-    .line 1611
     :catch_3
     move-exception v0
 
-    .line 1612
     .restart local v0    # "e":Ljava/io/IOException;
     const-string v5, "ShutdownThread"
 
@@ -240,7 +209,6 @@
 
     goto :goto_3
 
-    .line 1607
     .end local v0    # "e":Ljava/io/IOException;
     .end local v2    # "out":Ljava/io/FileOutputStream;
     .restart local v3    # "out":Ljava/io/FileOutputStream;
@@ -253,7 +221,6 @@
     .restart local v2    # "out":Ljava/io/FileOutputStream;
     goto :goto_2
 
-    .line 1603
     .end local v2    # "out":Ljava/io/FileOutputStream;
     .restart local v3    # "out":Ljava/io/FileOutputStream;
     :catch_4

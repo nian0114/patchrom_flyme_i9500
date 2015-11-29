@@ -32,7 +32,6 @@
     .locals 0
 
     .prologue
-    .line 120
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -45,89 +44,74 @@
     .param p1, "source"    # Landroid/os/Parcel;
 
     .prologue
-    .line 123
     invoke-virtual/range {p1 .. p1}, Landroid/os/Parcel;->readLong()J
 
     move-result-wide v4
 
-    .line 124
     .local v4, "subId":J
     invoke-virtual/range {p1 .. p1}, Landroid/os/Parcel;->readString()Ljava/lang/String;
 
     move-result-object v6
 
-    .line 125
     .local v6, "iccId":Ljava/lang/String;
     invoke-virtual/range {p1 .. p1}, Landroid/os/Parcel;->readInt()I
 
     move-result v7
 
-    .line 126
     .local v7, "slotId":I
     invoke-virtual/range {p1 .. p1}, Landroid/os/Parcel;->readString()Ljava/lang/String;
 
     move-result-object v8
 
-    .line 127
     .local v8, "displayName":Ljava/lang/String;
     invoke-virtual/range {p1 .. p1}, Landroid/os/Parcel;->readInt()I
 
     move-result v9
 
-    .line 128
     .local v9, "nameSource":I
     invoke-virtual/range {p1 .. p1}, Landroid/os/Parcel;->readInt()I
 
     move-result v10
 
-    .line 129
     .local v10, "color":I
     invoke-virtual/range {p1 .. p1}, Landroid/os/Parcel;->readString()Ljava/lang/String;
 
     move-result-object v11
 
-    .line 130
     .local v11, "number":Ljava/lang/String;
     invoke-virtual/range {p1 .. p1}, Landroid/os/Parcel;->readInt()I
 
     move-result v12
 
-    .line 131
     .local v12, "displayNumberFormat":I
     invoke-virtual/range {p1 .. p1}, Landroid/os/Parcel;->readInt()I
 
     move-result v13
 
-    .line 132
     .local v13, "dataRoaming":I
     const/4 v2, 0x2
 
     new-array v14, v2, [I
 
-    .line 133
     .local v14, "iconRes":[I
     move-object/from16 v0, p1
 
     invoke-virtual {v0, v14}, Landroid/os/Parcel;->readIntArray([I)V
 
-    .line 134
     invoke-virtual/range {p1 .. p1}, Landroid/os/Parcel;->readInt()I
 
     move-result v15
 
-    .line 135
     .local v15, "mcc":I
     invoke-virtual/range {p1 .. p1}, Landroid/os/Parcel;->readInt()I
 
     move-result v16
 
-    .line 136
     .local v16, "mnc":I
     invoke-virtual/range {p1 .. p1}, Landroid/os/Parcel;->readInt()I
 
     move-result v17
 
-    .line 139
     .local v17, "status":I
     new-instance v3, Landroid/telephony/SubInfoRecord;
 
@@ -141,7 +125,6 @@
     .param p1, "x0"    # Landroid/os/Parcel;
 
     .prologue
-    .line 120
     invoke-virtual {p0, p1}, Landroid/telephony/SubInfoRecord$1;->createFromParcel(Landroid/os/Parcel;)Landroid/telephony/SubInfoRecord;
 
     move-result-object v0
@@ -154,7 +137,6 @@
     .param p1, "size"    # I
 
     .prologue
-    .line 145
     new-array v0, p1, [Landroid/telephony/SubInfoRecord;
 
     return-object v0
@@ -165,7 +147,6 @@
     .param p1, "x0"    # I
 
     .prologue
-    .line 120
     invoke-virtual {p0, p1}, Landroid/telephony/SubInfoRecord$1;->newArray(I)[Landroid/telephony/SubInfoRecord;
 
     move-result-object v0

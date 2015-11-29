@@ -28,7 +28,6 @@
     .locals 0
 
     .prologue
-    .line 1357
     iput-object p1, p0, Lcom/android/server/LockSettingsService$LockSettingsObserver;->this$0:Lcom/android/server/LockSettingsService;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -42,7 +41,6 @@
     .param p2, "x1"    # Lcom/android/server/LockSettingsService$1;
 
     .prologue
-    .line 1357
     invoke-direct {p0, p1}, Lcom/android/server/LockSettingsService$LockSettingsObserver;-><init>(Lcom/android/server/LockSettingsService;)V
 
     return-void
@@ -54,7 +52,6 @@
     .locals 1
 
     .prologue
-    .line 1362
     iget-object v0, p0, Lcom/android/server/LockSettingsService$LockSettingsObserver;->this$0:Lcom/android/server/LockSettingsService;
 
     # getter for: Lcom/android/server/LockSettingsService;->mObservers:Ljava/util/ArrayList;
@@ -64,6 +61,5 @@
 
     invoke-virtual {v0, p0}, Ljava/util/ArrayList;->remove(Ljava/lang/Object;)Z
 
-    .line 1363
     return-void
 .end method

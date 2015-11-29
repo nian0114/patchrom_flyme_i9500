@@ -32,7 +32,6 @@
     .locals 0
 
     .prologue
-    .line 210
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -45,12 +44,10 @@
     .param p1, "in"    # Landroid/os/Parcel;
 
     .prologue
-    .line 213
     new-instance v0, Landroid/app/usage/UsageStats;
 
     invoke-direct {v0}, Landroid/app/usage/UsageStats;-><init>()V
 
-    .line 214
     .local v0, "stats":Landroid/app/usage/UsageStats;
     invoke-virtual {p1}, Landroid/os/Parcel;->readString()Ljava/lang/String;
 
@@ -58,49 +55,42 @@
 
     iput-object v1, v0, Landroid/app/usage/UsageStats;->mPackageName:Ljava/lang/String;
 
-    .line 215
     invoke-virtual {p1}, Landroid/os/Parcel;->readLong()J
 
     move-result-wide v2
 
     iput-wide v2, v0, Landroid/app/usage/UsageStats;->mBeginTimeStamp:J
 
-    .line 216
     invoke-virtual {p1}, Landroid/os/Parcel;->readLong()J
 
     move-result-wide v2
 
     iput-wide v2, v0, Landroid/app/usage/UsageStats;->mEndTimeStamp:J
 
-    .line 217
     invoke-virtual {p1}, Landroid/os/Parcel;->readLong()J
 
     move-result-wide v2
 
     iput-wide v2, v0, Landroid/app/usage/UsageStats;->mLastTimeUsed:J
 
-    .line 218
     invoke-virtual {p1}, Landroid/os/Parcel;->readLong()J
 
     move-result-wide v2
 
     iput-wide v2, v0, Landroid/app/usage/UsageStats;->mTotalTimeInForeground:J
 
-    .line 219
     invoke-virtual {p1}, Landroid/os/Parcel;->readLong()J
 
     move-result-wide v2
 
     iput-wide v2, v0, Landroid/app/usage/UsageStats;->mLaunchCount:J
 
-    .line 220
     invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
 
     move-result v1
 
     iput v1, v0, Landroid/app/usage/UsageStats;->mLastEvent:I
 
-    .line 221
     return-object v0
 .end method
 
@@ -109,7 +99,6 @@
     .param p1, "x0"    # Landroid/os/Parcel;
 
     .prologue
-    .line 210
     invoke-virtual {p0, p1}, Landroid/app/usage/UsageStats$1;->createFromParcel(Landroid/os/Parcel;)Landroid/app/usage/UsageStats;
 
     move-result-object v0
@@ -122,7 +111,6 @@
     .param p1, "size"    # I
 
     .prologue
-    .line 226
     new-array v0, p1, [Landroid/app/usage/UsageStats;
 
     return-object v0
@@ -133,7 +121,6 @@
     .param p1, "x0"    # I
 
     .prologue
-    .line 210
     invoke-virtual {p0, p1}, Landroid/app/usage/UsageStats$1;->newArray(I)[Landroid/app/usage/UsageStats;
 
     move-result-object v0

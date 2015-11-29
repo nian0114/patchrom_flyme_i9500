@@ -38,7 +38,6 @@
     .locals 1
 
     .prologue
-    .line 17
     const-class v0, Lcom/samsung/android/coreapps/sdk/easysignup/EasySignUpManager;
 
     invoke-virtual {v0}, Ljava/lang/Class;->getSimpleName()Ljava/lang/String;
@@ -47,7 +46,6 @@
 
     sput-object v0, Lcom/samsung/android/coreapps/sdk/easysignup/EasySignUpManager;->TAG:Ljava/lang/String;
 
-    .line 20
     const-string v0, "content://com.samsung.android.coreapps.easysignup"
 
     invoke-static {v0}, Landroid/net/Uri;->parse(Ljava/lang/String;)Landroid/net/Uri;
@@ -56,7 +54,6 @@
 
     sput-object v0, Lcom/samsung/android/coreapps/sdk/easysignup/EasySignUpManager;->BASE_CONTENT_URI:Landroid/net/Uri;
 
-    .line 23
     const-string v0, "content://com.samsung.android.coreapps.easysignup.public"
 
     invoke-static {v0}, Landroid/net/Uri;->parse(Ljava/lang/String;)Landroid/net/Uri;
@@ -72,7 +69,6 @@
     .locals 0
 
     .prologue
-    .line 15
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -85,17 +81,14 @@
     .prologue
     const/4 v3, 0x0
 
-    .line 271
     sget-object v0, Lcom/samsung/android/coreapps/sdk/easysignup/EasySignUpManager;->TAG:Ljava/lang/String;
 
     const-string v2, "getMsisdn"
 
     invoke-static {v0, v2}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 273
     const/4 v7, 0x0
 
-    .line 275
     .local v7, "msisdn":Ljava/lang/String;
     sget-object v0, Lcom/samsung/android/coreapps/sdk/easysignup/EasySignUpManager;->BASE_CONTENT_URI:Landroid/net/Uri;
 
@@ -113,7 +106,6 @@
 
     move-result-object v1
 
-    .line 277
     .local v1, "uri":Landroid/net/Uri;
     invoke-virtual {p0}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
 
@@ -125,7 +117,7 @@
 
     const/4 v4, 0x0
 
-    const-string/jumbo v5, "msisdn"
+    const-string v5, "msisdn"
 
     aput-object v5, v2, v4
 
@@ -137,7 +129,6 @@
 
     move-result-object v6
 
-    .line 279
     .local v6, "cursor":Landroid/database/Cursor;
     if-eqz v6, :cond_0
 
@@ -154,8 +145,7 @@
 
     if-eqz v0, :cond_0
 
-    .line 280
-    const-string/jumbo v0, "msisdn"
+    const-string v0, "msisdn"
 
     invoke-interface {v6, v0}, Landroid/database/Cursor;->getColumnIndex(Ljava/lang/String;)I
 
@@ -167,24 +157,19 @@
 
     move-result-object v7
 
-    .line 282
     :cond_0
     if-eqz v6, :cond_1
 
-    .line 283
     invoke-interface {v6}, Landroid/database/Cursor;->close()V
 
-    .line 287
     :cond_1
     return-object v7
 
-    .line 282
     :catchall_0
     move-exception v0
 
     if-eqz v6, :cond_2
 
-    .line 283
     invoke-interface {v6}, Landroid/database/Cursor;->close()V
 
     :cond_2
@@ -199,17 +184,14 @@
     .prologue
     const/4 v3, 0x0
 
-    .line 298
     sget-object v0, Lcom/samsung/android/coreapps/sdk/easysignup/EasySignUpManager;->TAG:Ljava/lang/String;
 
     const-string v2, "getMsisdn with imsi"
 
     invoke-static {v0, v2}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 300
     const/4 v7, 0x0
 
-    .line 302
     .local v7, "msisdn":Ljava/lang/String;
     sget-object v0, Lcom/samsung/android/coreapps/sdk/easysignup/EasySignUpManager;->BASE_CONTENT_URI:Landroid/net/Uri;
 
@@ -233,7 +215,6 @@
 
     move-result-object v1
 
-    .line 304
     .local v1, "uri":Landroid/net/Uri;
     invoke-virtual {p0}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
 
@@ -245,7 +226,7 @@
 
     const/4 v4, 0x0
 
-    const-string/jumbo v5, "msisdn"
+    const-string v5, "msisdn"
 
     aput-object v5, v2, v4
 
@@ -257,7 +238,6 @@
 
     move-result-object v6
 
-    .line 306
     .local v6, "cursor":Landroid/database/Cursor;
     if-eqz v6, :cond_0
 
@@ -274,8 +254,7 @@
 
     if-eqz v0, :cond_0
 
-    .line 307
-    const-string/jumbo v0, "msisdn"
+    const-string v0, "msisdn"
 
     invoke-interface {v6, v0}, Landroid/database/Cursor;->getColumnIndex(Ljava/lang/String;)I
 
@@ -287,24 +266,19 @@
 
     move-result-object v7
 
-    .line 309
     :cond_0
     if-eqz v6, :cond_1
 
-    .line 310
     invoke-interface {v6}, Landroid/database/Cursor;->close()V
 
-    .line 314
     :cond_1
     return-object v7
 
-    .line 309
     :catchall_0
     move-exception v0
 
     if-eqz v6, :cond_2
 
-    .line 310
     invoke-interface {v6}, Landroid/database/Cursor;->close()V
 
     :cond_2
@@ -317,18 +291,15 @@
     .param p1, "serviceId"    # I
 
     .prologue
-    .line 106
     const-class v13, Lcom/samsung/android/coreapps/sdk/easysignup/EasySignUpManager;
 
     monitor-enter v13
 
     const/4 v12, 0x0
 
-    .line 108
     .local v12, "status":I
     const/4 v6, 0x0
 
-    .line 110
     .local v6, "cursor":Landroid/database/Cursor;
     :try_start_0
     sget-object v0, Lcom/samsung/android/coreapps/sdk/easysignup/EasySignUpManager;->BASE_CONTENT_URI:Landroid/net/Uri;
@@ -349,7 +320,6 @@
 
     move-result-object v1
 
-    .line 113
     .local v1, "uri":Landroid/net/Uri;
     :try_start_1
     invoke-virtual {p0}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
@@ -362,7 +332,7 @@
 
     const/4 v3, 0x0
 
-    const-string/jumbo v4, "sids"
+    const-string v4, "sids"
 
     aput-object v4, v2, v3
 
@@ -376,7 +346,6 @@
 
     move-result-object v6
 
-    .line 115
     if-eqz v6, :cond_2
 
     invoke-interface {v6}, Landroid/database/Cursor;->getCount()I
@@ -391,8 +360,7 @@
 
     if-eqz v0, :cond_2
 
-    .line 116
-    const-string/jumbo v0, "sids"
+    const-string v0, "sids"
 
     invoke-interface {v6, v0}, Landroid/database/Cursor;->getColumnIndex(Ljava/lang/String;)I
 
@@ -402,7 +370,6 @@
 
     move-result-object v11
 
-    .line 118
     .local v11, "sids":Ljava/lang/String;
     invoke-static {v11}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
 
@@ -410,7 +377,6 @@
 
     if-nez v0, :cond_2
 
-    .line 119
     const-string v0, "\\["
 
     const-string v2, ""
@@ -433,13 +399,11 @@
 
     move-result-object v8
 
-    .line 121
     .local v8, "items":[Ljava/lang/String;
     array-length v0, v8
 
     new-array v10, v0, [I
 
-    .line 123
     .local v10, "results":[I
     const/4 v7, 0x0
 
@@ -451,7 +415,6 @@
 
     if-ge v7, v0, :cond_0
 
-    .line 125
     :try_start_2
     aget-object v0, v8, v7
 
@@ -464,13 +427,11 @@
     .catch Ljava/lang/NumberFormatException; {:try_start_2 .. :try_end_2} :catch_0
     .catchall {:try_start_2 .. :try_end_2} :catchall_0
 
-    .line 123
     :goto_1
     add-int/lit8 v7, v7, 0x1
 
     goto :goto_0
 
-    .line 129
     :cond_0
     const/4 v9, 0x0
 
@@ -481,23 +442,19 @@
 
     if-ge v9, v0, :cond_2
 
-    .line 130
     aget v0, v10, v9
     :try_end_3
     .catchall {:try_start_3 .. :try_end_3} :catchall_0
 
     if-ne p1, v0, :cond_1
 
-    .line 131
     const/4 v12, 0x1
 
-    .line 129
     :cond_1
     add-int/lit8 v9, v9, 0x1
 
     goto :goto_2
 
-    .line 137
     .end local v7    # "i":I
     .end local v8    # "items":[Ljava/lang/String;
     .end local v9    # "j":I
@@ -506,17 +463,14 @@
     :cond_2
     if-eqz v6, :cond_3
 
-    .line 138
     :try_start_4
     invoke-interface {v6}, Landroid/database/Cursor;->close()V
 
-    .line 142
     :cond_3
     const/4 v0, 0x1
 
     if-ne v12, v0, :cond_5
 
-    .line 143
     sget-object v0, Lcom/samsung/android/coreapps/sdk/easysignup/EasySignUpManager;->TAG:Ljava/lang/String;
 
     new-instance v2, Ljava/lang/StringBuilder;
@@ -547,19 +501,16 @@
     :try_end_4
     .catchall {:try_start_4 .. :try_end_4} :catchall_1
 
-    .line 148
     :goto_3
     monitor-exit v13
 
     return v12
 
-    .line 137
     :catchall_0
     move-exception v0
 
     if-eqz v6, :cond_4
 
-    .line 138
     :try_start_5
     invoke-interface {v6}, Landroid/database/Cursor;->close()V
 
@@ -568,7 +519,6 @@
     :try_end_5
     .catchall {:try_start_5 .. :try_end_5} :catchall_1
 
-    .line 106
     .end local v1    # "uri":Landroid/net/Uri;
     :catchall_1
     move-exception v0
@@ -577,7 +527,6 @@
 
     throw v0
 
-    .line 145
     .restart local v1    # "uri":Landroid/net/Uri;
     :cond_5
     :try_start_6
@@ -613,7 +562,6 @@
 
     goto :goto_3
 
-    .line 126
     .restart local v7    # "i":I
     .restart local v8    # "items":[Ljava/lang/String;
     .restart local v10    # "results":[I
@@ -631,18 +579,15 @@
     .param p2, "serviceId"    # I
 
     .prologue
-    .line 160
     const-class v14, Lcom/samsung/android/coreapps/sdk/easysignup/EasySignUpManager;
 
     monitor-enter v14
 
     const/4 v13, 0x0
 
-    .line 161
     .local v13, "status":I
     const/4 v7, 0x0
 
-    .line 163
     .local v7, "cursor":Landroid/database/Cursor;
     :try_start_0
     sget-object v1, Lcom/samsung/android/coreapps/sdk/easysignup/EasySignUpManager;->BASE_CONTENT_URI:Landroid/net/Uri;
@@ -671,7 +616,6 @@
 
     move-result-object v2
 
-    .line 166
     .local v2, "uri":Landroid/net/Uri;
     :try_start_1
     invoke-virtual {p0}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
@@ -684,7 +628,7 @@
 
     const/4 v4, 0x0
 
-    const-string/jumbo v5, "sids"
+    const-string v5, "sids"
 
     aput-object v5, v3, v4
 
@@ -698,7 +642,6 @@
 
     move-result-object v7
 
-    .line 168
     if-eqz v7, :cond_2
 
     invoke-interface {v7}, Landroid/database/Cursor;->getCount()I
@@ -713,8 +656,7 @@
 
     if-eqz v1, :cond_2
 
-    .line 169
-    const-string/jumbo v1, "sids"
+    const-string v1, "sids"
 
     invoke-interface {v7, v1}, Landroid/database/Cursor;->getColumnIndex(Ljava/lang/String;)I
 
@@ -724,7 +666,6 @@
 
     move-result-object v12
 
-    .line 171
     .local v12, "sids":Ljava/lang/String;
     invoke-static {v12}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
 
@@ -732,7 +673,6 @@
 
     if-nez v1, :cond_2
 
-    .line 172
     const-string v1, "\\["
 
     const-string v3, ""
@@ -755,13 +695,11 @@
 
     move-result-object v9
 
-    .line 174
     .local v9, "items":[Ljava/lang/String;
     array-length v1, v9
 
     new-array v11, v1, [I
 
-    .line 176
     .local v11, "results":[I
     const/4 v8, 0x0
 
@@ -773,7 +711,6 @@
 
     if-ge v8, v1, :cond_0
 
-    .line 178
     :try_start_2
     aget-object v1, v9, v8
 
@@ -786,13 +723,11 @@
     .catch Ljava/lang/NumberFormatException; {:try_start_2 .. :try_end_2} :catch_0
     .catchall {:try_start_2 .. :try_end_2} :catchall_0
 
-    .line 176
     :goto_1
     add-int/lit8 v8, v8, 0x1
 
     goto :goto_0
 
-    .line 182
     :cond_0
     const/4 v10, 0x0
 
@@ -803,7 +738,6 @@
 
     if-ge v10, v1, :cond_2
 
-    .line 183
     aget v1, v11, v10
     :try_end_3
     .catchall {:try_start_3 .. :try_end_3} :catchall_0
@@ -812,16 +746,13 @@
 
     if-ne v0, v1, :cond_1
 
-    .line 184
     const/4 v13, 0x1
 
-    .line 182
     :cond_1
     add-int/lit8 v10, v10, 0x1
 
     goto :goto_2
 
-    .line 190
     .end local v8    # "i":I
     .end local v9    # "items":[Ljava/lang/String;
     .end local v10    # "j":I
@@ -830,17 +761,14 @@
     :cond_2
     if-eqz v7, :cond_3
 
-    .line 191
     :try_start_4
     invoke-interface {v7}, Landroid/database/Cursor;->close()V
 
-    .line 195
     :cond_3
     const/4 v1, 0x1
 
     if-ne v13, v1, :cond_5
 
-    .line 196
     sget-object v1, Lcom/samsung/android/coreapps/sdk/easysignup/EasySignUpManager;->TAG:Ljava/lang/String;
 
     new-instance v3, Ljava/lang/StringBuilder;
@@ -873,19 +801,16 @@
     :try_end_4
     .catchall {:try_start_4 .. :try_end_4} :catchall_1
 
-    .line 201
     :goto_3
     monitor-exit v14
 
     return v13
 
-    .line 190
     :catchall_0
     move-exception v1
 
     if-eqz v7, :cond_4
 
-    .line 191
     :try_start_5
     invoke-interface {v7}, Landroid/database/Cursor;->close()V
 
@@ -894,7 +819,6 @@
     :try_end_5
     .catchall {:try_start_5 .. :try_end_5} :catchall_1
 
-    .line 160
     .end local v2    # "uri":Landroid/net/Uri;
     :catchall_1
     move-exception v1
@@ -903,7 +827,6 @@
 
     throw v1
 
-    .line 198
     .restart local v2    # "uri":Landroid/net/Uri;
     :cond_5
     :try_start_6
@@ -941,7 +864,6 @@
 
     goto :goto_3
 
-    .line 179
     .restart local v8    # "i":I
     .restart local v9    # "items":[Ljava/lang/String;
     .restart local v11    # "results":[I
@@ -960,10 +882,8 @@
     .prologue
     const/4 v3, 0x0
 
-    .line 211
     const/4 v8, -0x1
 
-    .line 213
     .local v8, "features":I
     sget-object v0, Lcom/samsung/android/coreapps/sdk/easysignup/EasySignUpManager;->BASE_CONTENT_URI_PUBLIC:Landroid/net/Uri;
 
@@ -973,7 +893,6 @@
 
     move-result-object v6
 
-    .line 214
     .local v6, "baseUri":Landroid/net/Uri;
     invoke-static {p1}, Ljava/lang/String;->valueOf(I)Ljava/lang/String;
 
@@ -983,7 +902,6 @@
 
     move-result-object v1
 
-    .line 216
     .local v1, "uri":Landroid/net/Uri;
     invoke-virtual {p0}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
 
@@ -1007,7 +925,6 @@
 
     move-result-object v7
 
-    .line 219
     .local v7, "cursor":Landroid/database/Cursor;
     if-eqz v7, :cond_0
 
@@ -1024,7 +941,6 @@
 
     if-eqz v0, :cond_0
 
-    .line 221
     const-string v0, "features"
 
     invoke-interface {v7, v0}, Landroid/database/Cursor;->getColumnIndex(Ljava/lang/String;)I
@@ -1037,14 +953,11 @@
 
     move-result v8
 
-    .line 224
     :cond_0
     if-eqz v7, :cond_1
 
-    .line 225
     invoke-interface {v7}, Landroid/database/Cursor;->close()V
 
-    .line 229
     :cond_1
     sget-object v0, Lcom/samsung/android/coreapps/sdk/easysignup/EasySignUpManager;->TAG:Ljava/lang/String;
 
@@ -1052,7 +965,7 @@
 
     invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v3, "serviceId : "
+    const-string v3, "serviceId : "
 
     invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -1078,16 +991,13 @@
 
     invoke-static {v0, v2}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 231
     return v8
 
-    .line 224
     :catchall_0
     move-exception v0
 
     if-eqz v7, :cond_2
 
-    .line 225
     invoke-interface {v7}, Landroid/database/Cursor;->close()V
 
     :cond_2
@@ -1101,10 +1011,8 @@
     .prologue
     const/4 v2, 0x0
 
-    .line 46
     const/4 v6, 0x0
 
-    .line 48
     .local v6, "bIsAuth":Z
     sget-object v0, Lcom/samsung/android/coreapps/sdk/easysignup/EasySignUpManager;->BASE_CONTENT_URI_PUBLIC:Landroid/net/Uri;
 
@@ -1122,7 +1030,6 @@
 
     move-result-object v1
 
-    .line 50
     .local v1, "uri":Landroid/net/Uri;
     invoke-virtual {p0}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
 
@@ -1138,7 +1045,6 @@
 
     move-result-object v7
 
-    .line 52
     .local v7, "cursor":Landroid/database/Cursor;
     if-eqz v7, :cond_0
 
@@ -1151,44 +1057,35 @@
 
     if-lez v0, :cond_0
 
-    .line 53
     const/4 v6, 0x1
 
-    .line 55
     :cond_0
     if-eqz v7, :cond_1
 
-    .line 56
     invoke-interface {v7}, Landroid/database/Cursor;->close()V
 
-    .line 60
     :cond_1
     if-eqz v6, :cond_3
 
-    .line 61
     sget-object v0, Lcom/samsung/android/coreapps/sdk/easysignup/EasySignUpManager;->TAG:Ljava/lang/String;
 
     const-string v2, "isAuth is true"
 
     invoke-static {v0, v2}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 66
     :goto_0
     return v6
 
-    .line 55
     :catchall_0
     move-exception v0
 
     if-eqz v7, :cond_2
 
-    .line 56
     invoke-interface {v7}, Landroid/database/Cursor;->close()V
 
     :cond_2
     throw v0
 
-    .line 63
     :cond_3
     sget-object v0, Lcom/samsung/android/coreapps/sdk/easysignup/EasySignUpManager;->TAG:Ljava/lang/String;
 
@@ -1207,10 +1104,8 @@
     .prologue
     const/4 v2, 0x0
 
-    .line 76
     const/4 v6, 0x0
 
-    .line 78
     .local v6, "bIsAuth":Z
     sget-object v0, Lcom/samsung/android/coreapps/sdk/easysignup/EasySignUpManager;->BASE_CONTENT_URI_PUBLIC:Landroid/net/Uri;
 
@@ -1234,7 +1129,6 @@
 
     move-result-object v1
 
-    .line 80
     .local v1, "uri":Landroid/net/Uri;
     invoke-virtual {p0}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
 
@@ -1250,7 +1144,6 @@
 
     move-result-object v7
 
-    .line 82
     .local v7, "cursor":Landroid/database/Cursor;
     if-eqz v7, :cond_0
 
@@ -1263,44 +1156,35 @@
 
     if-lez v0, :cond_0
 
-    .line 83
     const/4 v6, 0x1
 
-    .line 85
     :cond_0
     if-eqz v7, :cond_1
 
-    .line 86
     invoke-interface {v7}, Landroid/database/Cursor;->close()V
 
-    .line 90
     :cond_1
     if-eqz v6, :cond_3
 
-    .line 91
     sget-object v0, Lcom/samsung/android/coreapps/sdk/easysignup/EasySignUpManager;->TAG:Ljava/lang/String;
 
     const-string v2, "isAuth regarding imsi is true"
 
     invoke-static {v0, v2}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 96
     :goto_0
     return v6
 
-    .line 85
     :catchall_0
     move-exception v0
 
     if-eqz v7, :cond_2
 
-    .line 86
     invoke-interface {v7}, Landroid/database/Cursor;->close()V
 
     :cond_2
     throw v0
 
-    .line 93
     :cond_3
     sget-object v0, Lcom/samsung/android/coreapps/sdk/easysignup/EasySignUpManager;->TAG:Ljava/lang/String;
 
@@ -1317,14 +1201,13 @@
     .param p1, "serviceId"    # I
 
     .prologue
-    .line 255
     sget-object v1, Lcom/samsung/android/coreapps/sdk/easysignup/EasySignUpManager;->TAG:Ljava/lang/String;
 
     new-instance v2, Ljava/lang/StringBuilder;
 
     invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v3, "serviceOff - serviceId : "
+    const-string v3, "serviceOff - serviceId : "
 
     invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -1340,33 +1223,27 @@
 
     invoke-static {v1, v2}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 257
     new-instance v0, Landroid/content/Intent;
 
     const-string v1, "com.samsung.android.coreapps.easysignup.ACTION_SERVICE_OFF"
 
     invoke-direct {v0, v1}, Landroid/content/Intent;-><init>(Ljava/lang/String;)V
 
-    .line 258
     .local v0, "intent":Landroid/content/Intent;
     const-string v1, "com.samsung.android.coreapps"
 
     invoke-virtual {v0, v1}, Landroid/content/Intent;->setPackage(Ljava/lang/String;)Landroid/content/Intent;
 
-    .line 259
     const/16 v1, 0x20
 
     invoke-virtual {v0, v1}, Landroid/content/Intent;->setFlags(I)Landroid/content/Intent;
 
-    .line 260
-    const-string/jumbo v1, "service_id"
+    const-string v1, "service_id"
 
     invoke-virtual {v0, v1, p1}, Landroid/content/Intent;->putExtra(Ljava/lang/String;I)Landroid/content/Intent;
 
-    .line 261
     invoke-virtual {p0, v0}, Landroid/content/Context;->sendBroadcast(Landroid/content/Intent;)V
 
-    .line 262
     return-void
 .end method
 
@@ -1376,14 +1253,13 @@
     .param p1, "serviceId"    # I
 
     .prologue
-    .line 240
     sget-object v1, Lcom/samsung/android/coreapps/sdk/easysignup/EasySignUpManager;->TAG:Ljava/lang/String;
 
     new-instance v2, Ljava/lang/StringBuilder;
 
     invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v3, "serviceOn - serviceId : "
+    const-string v3, "serviceOn - serviceId : "
 
     invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -1399,32 +1275,26 @@
 
     invoke-static {v1, v2}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 242
     new-instance v0, Landroid/content/Intent;
 
     const-string v1, "com.samsung.android.coreapps.easysignup.ACTION_SERVICE_ON"
 
     invoke-direct {v0, v1}, Landroid/content/Intent;-><init>(Ljava/lang/String;)V
 
-    .line 243
     .local v0, "intent":Landroid/content/Intent;
     const-string v1, "com.samsung.android.coreapps"
 
     invoke-virtual {v0, v1}, Landroid/content/Intent;->setPackage(Ljava/lang/String;)Landroid/content/Intent;
 
-    .line 244
     const/16 v1, 0x20
 
     invoke-virtual {v0, v1}, Landroid/content/Intent;->setFlags(I)Landroid/content/Intent;
 
-    .line 245
-    const-string/jumbo v1, "service_id"
+    const-string v1, "service_id"
 
     invoke-virtual {v0, v1, p1}, Landroid/content/Intent;->putExtra(Ljava/lang/String;I)Landroid/content/Intent;
 
-    .line 246
     invoke-virtual {p0, v0}, Landroid/content/Context;->sendBroadcast(Landroid/content/Intent;)V
 
-    .line 247
     return-void
 .end method

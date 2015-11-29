@@ -36,10 +36,8 @@
     .end annotation
 
     .prologue
-    .line 31
     invoke-direct {p0}, Lorg/xml/sax/helpers/DefaultHandler;-><init>()V
 
-    .line 23
     const/4 v5, 0x0
 
     invoke-static {v5}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
@@ -48,45 +46,37 @@
 
     iput-object v5, p0, Landroid/app/wallpaperbackup/WallpaperXmlParser;->mCurrentElement:Ljava/lang/Boolean;
 
-    .line 24
     const-string v5, ""
 
     iput-object v5, p0, Landroid/app/wallpaperbackup/WallpaperXmlParser;->mCurrentValue:Ljava/lang/String;
 
-    .line 25
     const/4 v5, 0x0
 
     iput-object v5, p0, Landroid/app/wallpaperbackup/WallpaperXmlParser;->mItem:Landroid/app/wallpaperbackup/WallpaperUserPOJO;
 
-    .line 26
     new-instance v5, Ljava/util/ArrayList;
 
     invoke-direct {v5}, Ljava/util/ArrayList;-><init>()V
 
     iput-object v5, p0, Landroid/app/wallpaperbackup/WallpaperXmlParser;->itemsList:Ljava/util/ArrayList;
 
-    .line 33
     invoke-static {}, Ljavax/xml/parsers/SAXParserFactory;->newInstance()Ljavax/xml/parsers/SAXParserFactory;
 
     move-result-object v3
 
-    .line 34
     .local v3, "saxParserFactory":Ljavax/xml/parsers/SAXParserFactory;
     invoke-virtual {v3}, Ljavax/xml/parsers/SAXParserFactory;->newSAXParser()Ljavax/xml/parsers/SAXParser;
 
     move-result-object v2
 
-    .line 35
     .local v2, "saxParser":Ljavax/xml/parsers/SAXParser;
     invoke-virtual {v2}, Ljavax/xml/parsers/SAXParser;->getXMLReader()Lorg/xml/sax/XMLReader;
 
     move-result-object v4
 
-    .line 36
     .local v4, "xmlReader":Lorg/xml/sax/XMLReader;
     invoke-interface {v4, p0}, Lorg/xml/sax/XMLReader;->setContentHandler(Lorg/xml/sax/ContentHandler;)V
 
-    .line 37
     new-instance v0, Ljava/io/FileInputStream;
 
     new-instance v5, Ljava/io/File;
@@ -95,7 +85,6 @@
 
     invoke-direct {v0, v5}, Ljava/io/FileInputStream;-><init>(Ljava/io/File;)V
 
-    .line 39
     .local v0, "fis":Ljava/io/FileInputStream;
     :try_start_0
     new-instance v1, Lorg/xml/sax/InputSource;
@@ -106,19 +95,15 @@
 
     invoke-direct {v1, v5}, Lorg/xml/sax/InputSource;-><init>(Ljava/io/Reader;)V
 
-    .line 40
     .local v1, "objSource":Lorg/xml/sax/InputSource;
     invoke-interface {v4, v1}, Lorg/xml/sax/XMLReader;->parse(Lorg/xml/sax/InputSource;)V
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 42
     invoke-virtual {v0}, Ljava/io/FileInputStream;->close()V
 
-    .line 46
     return-void
 
-    .line 42
     .end local v1    # "objSource":Lorg/xml/sax/InputSource;
     :catchall_0
     move-exception v5
@@ -142,7 +127,6 @@
     .end annotation
 
     .prologue
-    .line 100
     iget-object v0, p0, Landroid/app/wallpaperbackup/WallpaperXmlParser;->mCurrentElement:Ljava/lang/Boolean;
 
     invoke-virtual {v0}, Ljava/lang/Boolean;->booleanValue()Z
@@ -151,7 +135,6 @@
 
     if-eqz v0, :cond_0
 
-    .line 101
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -176,7 +159,6 @@
 
     iput-object v0, p0, Landroid/app/wallpaperbackup/WallpaperXmlParser;->mCurrentValue:Ljava/lang/String;
 
-    .line 104
     :cond_0
     return-void
 .end method
@@ -193,7 +175,6 @@
     .end annotation
 
     .prologue
-    .line 81
     const/4 v0, 0x0
 
     invoke-static {v0}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
@@ -202,8 +183,7 @@
 
     iput-object v0, p0, Landroid/app/wallpaperbackup/WallpaperXmlParser;->mCurrentElement:Ljava/lang/Boolean;
 
-    .line 83
-    const-string/jumbo v0, "width"
+    const-string v0, "width"
 
     invoke-virtual {p2, v0}, Ljava/lang/String;->equalsIgnoreCase(Ljava/lang/String;)Z
 
@@ -211,7 +191,6 @@
 
     if-eqz v0, :cond_1
 
-    .line 84
     iget-object v0, p0, Landroid/app/wallpaperbackup/WallpaperXmlParser;->mItem:Landroid/app/wallpaperbackup/WallpaperUserPOJO;
 
     iget-object v1, p0, Landroid/app/wallpaperbackup/WallpaperXmlParser;->mCurrentValue:Ljava/lang/String;
@@ -222,12 +201,10 @@
 
     invoke-virtual {v0, v1}, Landroid/app/wallpaperbackup/WallpaperUserPOJO;->setWidth(I)V
 
-    .line 95
     :cond_0
     :goto_0
     return-void
 
-    .line 86
     :cond_1
     const-string v0, "height"
 
@@ -237,7 +214,6 @@
 
     if-eqz v0, :cond_2
 
-    .line 87
     iget-object v0, p0, Landroid/app/wallpaperbackup/WallpaperXmlParser;->mItem:Landroid/app/wallpaperbackup/WallpaperUserPOJO;
 
     iget-object v1, p0, Landroid/app/wallpaperbackup/WallpaperXmlParser;->mCurrentValue:Ljava/lang/String;
@@ -250,9 +226,8 @@
 
     goto :goto_0
 
-    .line 89
     :cond_2
-    const-string/jumbo v0, "name"
+    const-string v0, "name"
 
     invoke-virtual {p2, v0}, Ljava/lang/String;->equalsIgnoreCase(Ljava/lang/String;)Z
 
@@ -260,7 +235,6 @@
 
     if-eqz v0, :cond_3
 
-    .line 90
     iget-object v0, p0, Landroid/app/wallpaperbackup/WallpaperXmlParser;->mItem:Landroid/app/wallpaperbackup/WallpaperUserPOJO;
 
     iget-object v1, p0, Landroid/app/wallpaperbackup/WallpaperXmlParser;->mCurrentValue:Ljava/lang/String;
@@ -269,7 +243,6 @@
 
     goto :goto_0
 
-    .line 92
     :cond_3
     const-string v0, "component"
 
@@ -279,7 +252,6 @@
 
     if-eqz v0, :cond_0
 
-    .line 93
     iget-object v0, p0, Landroid/app/wallpaperbackup/WallpaperXmlParser;->mItem:Landroid/app/wallpaperbackup/WallpaperUserPOJO;
 
     iget-object v1, p0, Landroid/app/wallpaperbackup/WallpaperXmlParser;->mCurrentValue:Ljava/lang/String;
@@ -302,7 +274,6 @@
     .end annotation
 
     .prologue
-    .line 52
     iget-object v0, p0, Landroid/app/wallpaperbackup/WallpaperXmlParser;->itemsList:Ljava/util/ArrayList;
 
     return-object v0
@@ -312,7 +283,6 @@
     .locals 1
 
     .prologue
-    .line 75
     iget-object v0, p0, Landroid/app/wallpaperbackup/WallpaperXmlParser;->mItem:Landroid/app/wallpaperbackup/WallpaperUserPOJO;
 
     return-object v0
@@ -331,7 +301,6 @@
     .end annotation
 
     .prologue
-    .line 58
     const/4 v1, 0x1
 
     invoke-static {v1}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
@@ -340,15 +309,12 @@
 
     iput-object v1, p0, Landroid/app/wallpaperbackup/WallpaperXmlParser;->mCurrentElement:Ljava/lang/Boolean;
 
-    .line 59
     const-string v1, ""
 
     iput-object v1, p0, Landroid/app/wallpaperbackup/WallpaperXmlParser;->mCurrentValue:Ljava/lang/String;
 
-    .line 61
     const-string v0, "User"
 
-    .line 63
     .local v0, "objListTag":Ljava/lang/String;
     invoke-virtual {p2, v0}, Ljava/lang/String;->equalsIgnoreCase(Ljava/lang/String;)Z
 
@@ -356,21 +322,18 @@
 
     if-eqz v1, :cond_0
 
-    .line 64
     new-instance v1, Landroid/app/wallpaperbackup/WallpaperUserPOJO;
 
     invoke-direct {v1}, Landroid/app/wallpaperbackup/WallpaperUserPOJO;-><init>()V
 
     iput-object v1, p0, Landroid/app/wallpaperbackup/WallpaperXmlParser;->mItem:Landroid/app/wallpaperbackup/WallpaperUserPOJO;
 
-    .line 65
     iget-object v1, p0, Landroid/app/wallpaperbackup/WallpaperXmlParser;->itemsList:Ljava/util/ArrayList;
 
     iget-object v2, p0, Landroid/app/wallpaperbackup/WallpaperXmlParser;->mItem:Landroid/app/wallpaperbackup/WallpaperUserPOJO;
 
     invoke-virtual {v1, v2}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 69
     :cond_0
     return-void
 .end method

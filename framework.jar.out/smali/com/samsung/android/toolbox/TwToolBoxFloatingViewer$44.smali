@@ -26,7 +26,6 @@
     .locals 0
 
     .prologue
-    .line 1939
     iput-object p1, p0, Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer$44;->this$0:Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -41,7 +40,6 @@
     .param p1, "animation"    # Landroid/animation/ValueAnimator;
 
     .prologue
-    .line 1942
     :try_start_0
     invoke-virtual {p1}, Landroid/animation/ValueAnimator;->getAnimatedValue()Ljava/lang/Object;
 
@@ -49,7 +47,6 @@
 
     check-cast v0, Ljava/lang/Integer;
 
-    .line 1943
     .local v0, "value":Ljava/lang/Integer;
     iget-object v1, p0, Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer$44;->this$0:Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer;
 
@@ -60,7 +57,6 @@
     # setter for: Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer;->mLongPressPanelPosition:I
     invoke-static {v1, v2}, Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer;->access$402(Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer;I)I
 
-    .line 1944
     iget-object v1, p0, Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer$44;->this$0:Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer;
 
     # getter for: Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer;->mTwToolBoxLongPressPanel:Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer$TwToolBoxLongPressPanel;
@@ -72,12 +68,10 @@
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 1947
     .end local v0    # "value":Ljava/lang/Integer;
     :goto_0
     return-void
 
-    .line 1945
     :catch_0
     move-exception v1
 

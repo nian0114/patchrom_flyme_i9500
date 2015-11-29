@@ -78,7 +78,6 @@
     .locals 0
 
     .prologue
-    .line 29
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -89,19 +88,16 @@
     .param p1, "id"    # I
 
     .prologue
-    .line 176
     iget-object v3, p0, Landroid/os/BatteryManager;->mBatteryPropertiesRegistrar:Landroid/os/IBatteryPropertiesRegistrar;
 
     if-nez v3, :cond_0
 
-    .line 177
     const-string v3, "batteryproperties"
 
     invoke-static {v3}, Landroid/os/ServiceManager;->getService(Ljava/lang/String;)Landroid/os/IBinder;
 
     move-result-object v0
 
-    .line 178
     .local v0, "b":Landroid/os/IBinder;
     invoke-static {v0}, Landroid/os/IBatteryPropertiesRegistrar$Stub;->asInterface(Landroid/os/IBinder;)Landroid/os/IBatteryPropertiesRegistrar;
 
@@ -109,27 +105,22 @@
 
     iput-object v3, p0, Landroid/os/BatteryManager;->mBatteryPropertiesRegistrar:Landroid/os/IBatteryPropertiesRegistrar;
 
-    .line 181
     iget-object v3, p0, Landroid/os/BatteryManager;->mBatteryPropertiesRegistrar:Landroid/os/IBatteryPropertiesRegistrar;
 
     if-nez v3, :cond_0
 
-    .line 182
     const-wide/high16 v4, -0x8000000000000000L
 
-    .line 196
     .end local v0    # "b":Landroid/os/IBinder;
     :goto_0
     return-wide v4
 
-    .line 186
     :cond_0
     :try_start_0
     new-instance v2, Landroid/os/BatteryProperty;
 
     invoke-direct {v2}, Landroid/os/BatteryProperty;-><init>()V
 
-    .line 188
     .local v2, "prop":Landroid/os/BatteryProperty;
     iget-object v3, p0, Landroid/os/BatteryManager;->mBatteryPropertiesRegistrar:Landroid/os/IBatteryPropertiesRegistrar;
 
@@ -139,7 +130,6 @@
 
     if-nez v3, :cond_1
 
-    .line 189
     invoke-virtual {v2}, Landroid/os/BatteryProperty;->getLong()J
     :try_end_0
     .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
@@ -149,7 +139,6 @@
     .local v4, "ret":J
     goto :goto_0
 
-    .line 191
     .end local v4    # "ret":J
     :cond_1
     const-wide/high16 v4, -0x8000000000000000L
@@ -157,13 +146,11 @@
     .restart local v4    # "ret":J
     goto :goto_0
 
-    .line 192
     .end local v2    # "prop":Landroid/os/BatteryProperty;
     .end local v4    # "ret":J
     :catch_0
     move-exception v1
 
-    .line 193
     .local v1, "e":Landroid/os/RemoteException;
     const-wide/high16 v4, -0x8000000000000000L
 
@@ -178,7 +165,6 @@
     .param p1, "id"    # I
 
     .prologue
-    .line 209
     invoke-direct {p0, p1}, Landroid/os/BatteryManager;->queryProperty(I)J
 
     move-result-wide v0
@@ -193,7 +179,6 @@
     .param p1, "id"    # I
 
     .prologue
-    .line 222
     invoke-direct {p0, p1}, Landroid/os/BatteryManager;->queryProperty(I)J
 
     move-result-wide v0

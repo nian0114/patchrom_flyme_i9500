@@ -26,7 +26,6 @@
     .locals 0
 
     .prologue
-    .line 1023
     iput-object p1, p0, Lcom/android/internal/policy/impl/GlobalActions$5;->this$0:Lcom/android/internal/policy/impl/GlobalActions;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -44,7 +43,6 @@
     .prologue
     const/4 v7, 0x1
 
-    .line 1025
     # getter for: Lcom/android/internal/policy/impl/GlobalActions;->mPasscodeEditText:Landroid/widget/EditText;
     invoke-static {}, Lcom/android/internal/policy/impl/GlobalActions;->access$1900()Landroid/widget/EditText;
 
@@ -58,7 +56,6 @@
 
     move-result-object v3
 
-    .line 1027
     .local v3, "passCode":Ljava/lang/String;
     iget-object v5, p0, Lcom/android/internal/policy/impl/GlobalActions$5;->this$0:Lcom/android/internal/policy/impl/GlobalActions;
 
@@ -80,7 +77,6 @@
 
     check-cast v2, Landroid/view/inputmethod/InputMethodManager;
 
-    .line 1028
     .local v2, "im":Landroid/view/inputmethod/InputMethodManager;
     # getter for: Lcom/android/internal/policy/impl/GlobalActions;->mPasscodeEditText:Landroid/widget/EditText;
     invoke-static {}, Lcom/android/internal/policy/impl/GlobalActions;->access$1900()Landroid/widget/EditText;
@@ -93,7 +89,6 @@
 
     invoke-virtual {v2, v5, v7}, Landroid/view/inputmethod/InputMethodManager;->hideSoftInputFromWindow(Landroid/os/IBinder;I)Z
 
-    .line 1030
     const/4 v5, 0x2
 
     new-array v4, v5, [Ljava/lang/String;
@@ -108,7 +103,6 @@
 
     aput-object v5, v4, v7
 
-    .line 1031
     .local v4, "selectionArgs":[Ljava/lang/String;
     iget-object v5, p0, Lcom/android/internal/policy/impl/GlobalActions$5;->this$0:Lcom/android/internal/policy/impl/GlobalActions;
 
@@ -121,11 +115,9 @@
 
     move-result-object v0
 
-    .line 1035
     .local v0, "cr":Landroid/database/Cursor;
     if-eqz v0, :cond_0
 
-    .line 1037
     :try_start_0
     new-instance v1, Landroid/content/Intent;
 
@@ -133,18 +125,15 @@
 
     invoke-direct {v1, v5}, Landroid/content/Intent;-><init>(Ljava/lang/String;)V
 
-    .line 1038
     .local v1, "i":Landroid/content/Intent;
     const-string v5, "android.intent.category.HOME"
 
     invoke-virtual {v1, v5}, Landroid/content/Intent;->addCategory(Ljava/lang/String;)Landroid/content/Intent;
 
-    .line 1039
     const/high16 v5, 0x10000000
 
     invoke-virtual {v1, v5}, Landroid/content/Intent;->setFlags(I)Landroid/content/Intent;
 
-    .line 1040
     iget-object v5, p0, Lcom/android/internal/policy/impl/GlobalActions$5;->this$0:Lcom/android/internal/policy/impl/GlobalActions;
 
     # getter for: Lcom/android/internal/policy/impl/GlobalActions;->mContext:Landroid/content/Context;
@@ -158,15 +147,12 @@
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 1042
     invoke-interface {v0}, Landroid/database/Cursor;->close()V
 
-    .line 1045
     .end local v1    # "i":Landroid/content/Intent;
     :cond_0
     return-void
 
-    .line 1042
     :catchall_0
     move-exception v5
 

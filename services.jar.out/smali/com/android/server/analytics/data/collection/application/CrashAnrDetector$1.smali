@@ -23,7 +23,6 @@
     .locals 0
 
     .prologue
-    .line 96
     iput-object p1, p0, Lcom/android/server/analytics/data/collection/application/CrashAnrDetector$1;->this$0:Lcom/android/server/analytics/data/collection/application/CrashAnrDetector;
 
     invoke-direct {p0}, Landroid/content/BroadcastReceiver;-><init>()V
@@ -39,14 +38,12 @@
     .param p2, "intent"    # Landroid/content/Intent;
 
     .prologue
-    .line 100
-    const-string/jumbo v1, "tag"
+    const-string v1, "tag"
 
     invoke-virtual {p2, v1}, Landroid/content/Intent;->getStringExtra(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 
-    .line 101
     .local v0, "tag":Ljava/lang/String;
     # getter for: Lcom/android/server/analytics/data/collection/application/CrashAnrDetector;->mTags:Ljava/util/Set;
     invoke-static {}, Lcom/android/server/analytics/data/collection/application/CrashAnrDetector;->access$000()Ljava/util/Set;
@@ -59,10 +56,9 @@
 
     if-eqz v1, :cond_0
 
-    .line 102
     iget-object v1, p0, Lcom/android/server/analytics/data/collection/application/CrashAnrDetector$1;->this$0:Lcom/android/server/analytics/data/collection/application/CrashAnrDetector;
 
-    const-string/jumbo v2, "time"
+    const-string v2, "time"
 
     const-wide/16 v4, -0x1
 
@@ -73,7 +69,6 @@
     # invokes: Lcom/android/server/analytics/data/collection/application/CrashAnrDetector;->processDropBoxEntry(Ljava/lang/String;J)V
     invoke-static {v1, v0, v2, v3}, Lcom/android/server/analytics/data/collection/application/CrashAnrDetector;->access$100(Lcom/android/server/analytics/data/collection/application/CrashAnrDetector;Ljava/lang/String;J)V
 
-    .line 104
     :cond_0
     return-void
 .end method

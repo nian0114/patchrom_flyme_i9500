@@ -26,7 +26,6 @@
     .locals 0
 
     .prologue
-    .line 189
     iput-object p1, p0, Lcom/android/server/pm/PackagePrefetcher$PrefetchRunnable;->this$0:Lcom/android/server/pm/PackagePrefetcher;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -40,7 +39,6 @@
     .param p2, "x1"    # Lcom/android/server/pm/PackagePrefetcher$1;
 
     .prologue
-    .line 189
     invoke-direct {p0, p1}, Lcom/android/server/pm/PackagePrefetcher$PrefetchRunnable;-><init>(Lcom/android/server/pm/PackagePrefetcher;)V
 
     return-void
@@ -54,7 +52,6 @@
     .param p2, "parseFlags"    # I
 
     .prologue
-    .line 203
     :try_start_0
     new-instance v9, Ljava/io/File;
 
@@ -62,13 +59,11 @@
 
     invoke-direct {v9, v0}, Ljava/io/File;-><init>(Ljava/lang/String;)V
 
-    .line 204
     .local v9, "file":Ljava/io/File;
     new-instance v19, Landroid/content/pm/PackageParser;
 
     invoke-direct/range {v19 .. v19}, Landroid/content/pm/PackageParser;-><init>()V
 
-    .line 206
     .local v19, "pp":Landroid/content/pm/PackageParser;
     move-object/from16 v0, p0
 
@@ -87,7 +82,6 @@
 
     invoke-virtual {v0, v1}, Landroid/content/pm/PackageParser;->setSeparateProcesses([Ljava/lang/String;)V
 
-    .line 207
     move-object/from16 v0, v19
 
     move/from16 v1, p2
@@ -96,7 +90,6 @@
 
     move-result-object v18
 
-    .line 209
     .local v18, "pkg":Landroid/content/pm/PackageParser$Package;
     move-object/from16 v0, p0
 
@@ -117,7 +110,6 @@
 
     move-result-object v15
 
-    .line 211
     .local v15, "pPkg":Lcom/android/server/pm/PackagePrefetcher$PrefetchedPackage;
     move-object/from16 v0, p0
 
@@ -134,7 +126,6 @@
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 212
     :try_start_1
     const-string v21, "PackagePrefetcher"
 
@@ -142,7 +133,7 @@
 
     invoke-direct/range {v23 .. v23}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v24, "put: "
+    const-string v24, "put: "
 
     invoke-virtual/range {v23 .. v24}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -166,13 +157,11 @@
 
     invoke-static {v0, v1}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 213
     if-nez v15, :cond_0
 
-    .line 214
     const-string v21, "PackagePrefetcher"
 
-    const-string/jumbo v23, "pPkg is null"
+    const-string v23, "pPkg is null"
 
     move-object/from16 v0, v21
 
@@ -180,7 +169,6 @@
 
     invoke-static {v0, v1}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 217
     :cond_0
     move-object/from16 v0, p0
 
@@ -199,15 +187,12 @@
 
     invoke-virtual {v0, v1, v15}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 218
     monitor-exit v22
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
-    .line 220
     if-eqz v15, :cond_7
 
-    .line 222
     :try_start_2
     move-object/from16 v0, v18
 
@@ -219,19 +204,16 @@
 
     move-result-object v12
 
-    .line 223
     .local v12, "instructionSets":[Ljava/lang/String;
     invoke-static {v12}, Lcom/android/server/pm/PackageManagerService;->getDexCodeInstructionSets([Ljava/lang/String;)[Ljava/lang/String;
 
     move-result-object v7
 
-    .line 224
     .local v7, "dexCodeInstructionSets":[Ljava/lang/String;
     invoke-virtual/range {v18 .. v18}, Landroid/content/pm/PackageParser$Package;->getAllCodePathsExcludingResourceOnly()Ljava/util/List;
 
     move-result-object v17
 
-    .line 225
     .local v17, "paths":Ljava/util/List;, "Ljava/util/List<Ljava/lang/String;>;"
     move-object v4, v7
 
@@ -251,11 +233,9 @@
 
     aget-object v6, v4, v11
 
-    .line 226
     .local v6, "dexCodeInstructionSet":Ljava/lang/String;
     const/4 v14, 0x1
 
-    .line 227
     .local v14, "noNeed":Z
     invoke-interface/range {v17 .. v17}, Ljava/util/List;->iterator()Ljava/util/Iterator;
 
@@ -279,7 +259,6 @@
     :try_end_2
     .catch Ljava/lang/Exception; {:try_start_2 .. :try_end_2} :catch_0
 
-    .line 229
     .local v16, "path":Ljava/lang/String;
     :try_start_3
     move-object/from16 v0, v18
@@ -300,7 +279,6 @@
 
     move-result v5
 
-    .line 232
     .local v5, "b":B
     move-object/from16 v0, v18
 
@@ -310,7 +288,6 @@
 
     check-cast v20, Lcom/android/server/pm/PackageSetting;
 
-    .line 234
     .local v20, "ps":Lcom/android/server/pm/PackageSetting;
     const/16 v21, 0x3
 
@@ -318,7 +295,6 @@
 
     if-ne v5, v0, :cond_2
 
-    .line 235
     const/16 v21, 0x1
 
     move/from16 v0, v21
@@ -327,10 +303,8 @@
 
     iput-boolean v0, v1, Landroid/content/pm/PackageParser$Package;->interpret_only:Z
 
-    .line 237
     if-eqz v20, :cond_2
 
-    .line 238
     invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
 
     move-result-wide v22
@@ -341,7 +315,6 @@
 
     iput-wide v0, v2, Lcom/android/server/pm/PackageSetting;->dexTimeStamp:J
 
-    .line 239
     const/16 v21, 0x1
 
     move/from16 v0, v21
@@ -350,14 +323,11 @@
 
     iput v0, v1, Lcom/android/server/pm/PackageSetting;->dexMode:I
 
-    .line 244
     :cond_2
     if-nez v5, :cond_3
 
-    .line 246
     if-eqz v20, :cond_3
 
-    .line 247
     invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
 
     move-result-wide v22
@@ -368,7 +338,6 @@
 
     iput-wide v0, v2, Lcom/android/server/pm/PackageSetting;->dexTimeStamp:J
 
-    .line 248
     const/16 v21, 0x2
 
     move/from16 v0, v21
@@ -381,7 +350,6 @@
     .catch Ljava/io/IOException; {:try_start_3 .. :try_end_3} :catch_2
     .catch Ljava/lang/Exception; {:try_start_3 .. :try_end_3} :catch_3
 
-    .line 252
     :cond_3
     const/16 v21, 0x2
 
@@ -395,11 +363,9 @@
 
     if-ne v5, v0, :cond_8
 
-    .line 253
     :cond_4
     const/4 v14, 0x0
 
-    .line 272
     .end local v5    # "b":B
     .end local v16    # "path":Ljava/lang/String;
     .end local v20    # "ps":Lcom/android/server/pm/PackageSetting;
@@ -407,7 +373,6 @@
     :goto_2
     if-eqz v14, :cond_6
 
-    .line 273
     :try_start_4
     move-object/from16 v0, v18
 
@@ -421,7 +386,6 @@
     :try_end_4
     .catch Ljava/lang/Exception; {:try_start_4 .. :try_end_4} :catch_0
 
-    .line 225
     :cond_6
     add-int/lit8 v10, v11, 0x1
 
@@ -432,7 +396,6 @@
     .restart local v11    # "i$":I
     goto/16 :goto_0
 
-    .line 218
     .end local v4    # "arr$":[Ljava/lang/String;
     .end local v6    # "dexCodeInstructionSet":Ljava/lang/String;
     .end local v7    # "dexCodeInstructionSets":[Ljava/lang/String;
@@ -454,7 +417,6 @@
     :try_end_6
     .catch Ljava/lang/Exception; {:try_start_6 .. :try_end_6} :catch_0
 
-    .line 278
     .end local v9    # "file":Ljava/io/File;
     .end local v15    # "pPkg":Lcom/android/server/pm/PackagePrefetcher$PrefetchedPackage;
     .end local v18    # "pkg":Landroid/content/pm/PackageParser$Package;
@@ -462,13 +424,11 @@
     :catch_0
     move-exception v8
 
-    .line 279
     .local v8, "e":Ljava/lang/Exception;
     sget-boolean v21, Lcom/android/server/pm/PackagePrefetcher;->DEBUG_DEV:Z
 
     if-eqz v21, :cond_7
 
-    .line 280
     const-string v21, "PackagePrefetcher"
 
     const-string v22, "PREFETCH"
@@ -501,7 +461,6 @@
 
     invoke-static/range {v21 .. v22}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 283
     const-string v21, "PackagePrefetcher"
 
     const-string v22, "PREFETCH"
@@ -532,12 +491,10 @@
 
     invoke-static/range {v21 .. v22}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 288
     .end local v8    # "e":Ljava/lang/Exception;
     :cond_7
     return-void
 
-    .line 256
     .restart local v4    # "arr$":[Ljava/lang/String;
     .restart local v5    # "b":B
     .restart local v6    # "dexCodeInstructionSet":Ljava/lang/String;
@@ -560,18 +517,15 @@
 
     if-ne v5, v0, :cond_1
 
-    .line 258
     const/4 v14, 0x0
 
     goto :goto_2
 
-    .line 261
     .end local v5    # "b":B
     .end local v20    # "ps":Lcom/android/server/pm/PackageSetting;
     :catch_1
     move-exception v8
 
-    .line 262
     .local v8, "e":Ljava/io/FileNotFoundException;
     :try_start_7
     const-string v21, "PackagePrefetcher"
@@ -600,18 +554,14 @@
 
     invoke-static/range {v21 .. v22}, Landroid/util/Slog;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 263
     const/4 v14, 0x0
 
-    .line 270
     goto/16 :goto_1
 
-    .line 264
     .end local v8    # "e":Ljava/io/FileNotFoundException;
     :catch_2
     move-exception v8
 
-    .line 265
     .local v8, "e":Ljava/io/IOException;
     const-string v21, "PackagePrefetcher"
 
@@ -643,18 +593,14 @@
 
     invoke-static {v0, v1, v8}, Landroid/util/Slog;->w(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
-    .line 266
     const/4 v14, 0x0
 
-    .line 270
     goto/16 :goto_1
 
-    .line 267
     .end local v8    # "e":Ljava/io/IOException;
     :catch_3
     move-exception v8
 
-    .line 268
     .local v8, "e":Ljava/lang/Exception;
     const-string v21, "PackagePrefetcher"
 
@@ -668,7 +614,6 @@
     :try_end_7
     .catch Ljava/lang/Exception; {:try_start_7 .. :try_end_7} :catch_0
 
-    .line 269
     const/4 v14, 0x0
 
     goto/16 :goto_1
@@ -678,7 +623,6 @@
     .locals 3
 
     .prologue
-    .line 191
     :goto_0
     iget-object v1, p0, Lcom/android/server/pm/PackagePrefetcher$PrefetchRunnable;->this$0:Lcom/android/server/pm/PackagePrefetcher;
 
@@ -693,7 +637,6 @@
 
     if-nez v1, :cond_1
 
-    .line 192
     iget-object v1, p0, Lcom/android/server/pm/PackagePrefetcher$PrefetchRunnable;->this$0:Lcom/android/server/pm/PackagePrefetcher;
 
     # getter for: Lcom/android/server/pm/PackagePrefetcher;->prefetchQueue:Ljava/util/concurrent/ConcurrentLinkedQueue;
@@ -707,11 +650,9 @@
 
     check-cast v0, Ljava/util/AbstractMap$SimpleEntry;
 
-    .line 193
     .local v0, "entry":Ljava/util/AbstractMap$SimpleEntry;, "Ljava/util/AbstractMap$SimpleEntry<Ljava/lang/String;Ljava/lang/Integer;>;"
     if-eqz v0, :cond_0
 
-    .line 194
     invoke-virtual {v0}, Ljava/util/AbstractMap$SimpleEntry;->getKey()Ljava/lang/Object;
 
     move-result-object v1
@@ -732,7 +673,6 @@
 
     goto :goto_0
 
-    .line 196
     :cond_0
     const-string v1, "PackagePrefetcher"
 
@@ -742,7 +682,6 @@
 
     goto :goto_0
 
-    .line 199
     .end local v0    # "entry":Ljava/util/AbstractMap$SimpleEntry;, "Ljava/util/AbstractMap$SimpleEntry<Ljava/lang/String;Ljava/lang/Integer;>;"
     :cond_1
     return-void

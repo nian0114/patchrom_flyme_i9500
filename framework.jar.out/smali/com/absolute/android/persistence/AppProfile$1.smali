@@ -32,7 +32,6 @@
     .locals 0
 
     .prologue
-    .line 615
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -45,7 +44,6 @@
     .param p1, "in"    # Landroid/os/Parcel;
 
     .prologue
-    .line 617
     new-instance v0, Lcom/absolute/android/persistence/AppProfile;
 
     const/4 v1, 0x0
@@ -60,7 +58,6 @@
     .param p1, "x0"    # Landroid/os/Parcel;
 
     .prologue
-    .line 615
     invoke-virtual {p0, p1}, Lcom/absolute/android/persistence/AppProfile$1;->createFromParcel(Landroid/os/Parcel;)Lcom/absolute/android/persistence/AppProfile;
 
     move-result-object v0
@@ -73,7 +70,6 @@
     .param p1, "size"    # I
 
     .prologue
-    .line 621
     new-array v0, p1, [Lcom/absolute/android/persistence/AppProfile;
 
     return-object v0
@@ -84,7 +80,6 @@
     .param p1, "x0"    # I
 
     .prologue
-    .line 615
     invoke-virtual {p0, p1}, Lcom/absolute/android/persistence/AppProfile$1;->newArray(I)[Lcom/absolute/android/persistence/AppProfile;
 
     move-result-object v0

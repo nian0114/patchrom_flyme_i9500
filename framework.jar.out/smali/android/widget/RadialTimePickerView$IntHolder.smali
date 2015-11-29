@@ -24,13 +24,10 @@
     .param p1, "value"    # I
 
     .prologue
-    .line 1478
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 1479
     iput p1, p0, Landroid/widget/RadialTimePickerView$IntHolder;->mValue:I
 
-    .line 1480
     return-void
 .end method
 
@@ -40,7 +37,6 @@
     .locals 1
 
     .prologue
-    .line 1487
     iget v0, p0, Landroid/widget/RadialTimePickerView$IntHolder;->mValue:I
 
     return v0
@@ -51,9 +47,7 @@
     .param p1, "value"    # I
 
     .prologue
-    .line 1483
     iput p1, p0, Landroid/widget/RadialTimePickerView$IntHolder;->mValue:I
 
-    .line 1484
     return-void
 .end method

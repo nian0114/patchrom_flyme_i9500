@@ -32,18 +32,14 @@
     .param p3, "deviceType"    # I
 
     .prologue
-    .line 982
     iput-object p1, p0, Lcom/android/server/hdmi/HdmiControlService$VendorCommandListenerRecord;->this$0:Lcom/android/server/hdmi/HdmiControlService;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 983
     iput-object p2, p0, Lcom/android/server/hdmi/HdmiControlService$VendorCommandListenerRecord;->mListener:Landroid/hardware/hdmi/IHdmiVendorCommandListener;
 
-    .line 984
     iput p3, p0, Lcom/android/server/hdmi/HdmiControlService$VendorCommandListenerRecord;->mDeviceType:I
 
-    .line 985
     return-void
 .end method
 
@@ -52,7 +48,6 @@
     .param p0, "x0"    # Lcom/android/server/hdmi/HdmiControlService$VendorCommandListenerRecord;
 
     .prologue
-    .line 978
     iget v0, p0, Lcom/android/server/hdmi/HdmiControlService$VendorCommandListenerRecord;->mDeviceType:I
 
     return v0
@@ -63,7 +58,6 @@
     .param p0, "x0"    # Lcom/android/server/hdmi/HdmiControlService$VendorCommandListenerRecord;
 
     .prologue
-    .line 978
     iget-object v0, p0, Lcom/android/server/hdmi/HdmiControlService$VendorCommandListenerRecord;->mListener:Landroid/hardware/hdmi/IHdmiVendorCommandListener;
 
     return-object v0
@@ -75,7 +69,6 @@
     .locals 2
 
     .prologue
-    .line 989
     iget-object v0, p0, Lcom/android/server/hdmi/HdmiControlService$VendorCommandListenerRecord;->this$0:Lcom/android/server/hdmi/HdmiControlService;
 
     # getter for: Lcom/android/server/hdmi/HdmiControlService;->mLock:Ljava/lang/Object;
@@ -85,7 +78,6 @@
 
     monitor-enter v1
 
-    .line 990
     :try_start_0
     iget-object v0, p0, Lcom/android/server/hdmi/HdmiControlService$VendorCommandListenerRecord;->this$0:Lcom/android/server/hdmi/HdmiControlService;
 
@@ -96,13 +88,10 @@
 
     invoke-virtual {v0, p0}, Ljava/util/ArrayList;->remove(Ljava/lang/Object;)Z
 
-    .line 991
     monitor-exit v1
 
-    .line 992
     return-void
 
-    .line 991
     :catchall_0
     move-exception v0
 

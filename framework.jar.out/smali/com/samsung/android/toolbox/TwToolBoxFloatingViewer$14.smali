@@ -24,7 +24,6 @@
     .param p2, "x0"    # Landroid/os/Handler;
 
     .prologue
-    .line 860
     iput-object p1, p0, Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer$14;->this$0:Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer;
 
     invoke-direct {p0, p2}, Landroid/database/ContentObserver;-><init>(Landroid/os/Handler;)V
@@ -41,7 +40,6 @@
     .prologue
     const/4 v0, 0x0
 
-    .line 863
     iget-object v1, p0, Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer$14;->this$0:Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer;
 
     iget-object v2, p0, Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer$14;->this$0:Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer;
@@ -67,8 +65,7 @@
     # setter for: Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer;->mCarMode:Z
     invoke-static {v1, v0}, Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer;->access$4202(Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer;Z)Z
 
-    .line 864
-    const-string/jumbo v0, "toolbox"
+    const-string v0, "toolbox"
 
     new-instance v1, Ljava/lang/StringBuilder;
 
@@ -97,12 +94,10 @@
 
     invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 865
     iget-object v0, p0, Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer$14;->this$0:Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer;
 
     # invokes: Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer;->updateVisibility()Z
     invoke-static {v0}, Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer;->access$2200(Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer;)Z
 
-    .line 866
     return-void
 .end method

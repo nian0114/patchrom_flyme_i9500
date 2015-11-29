@@ -33,21 +33,15 @@
     .param p4, "time"    # J
 
     .prologue
-    .line 2318
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 2319
     iput-object p1, p0, Landroid/os/BatteryStats$TimerEntry;->mName:Ljava/lang/String;
 
-    .line 2320
     iput p2, p0, Landroid/os/BatteryStats$TimerEntry;->mId:I
 
-    .line 2321
     iput-object p3, p0, Landroid/os/BatteryStats$TimerEntry;->mTimer:Landroid/os/BatteryStats$Timer;
 
-    .line 2322
     iput-wide p4, p0, Landroid/os/BatteryStats$TimerEntry;->mTime:J
 
-    .line 2323
     return-void
 .end method

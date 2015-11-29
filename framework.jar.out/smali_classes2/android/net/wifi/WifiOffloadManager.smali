@@ -17,13 +17,10 @@
     .param p1, "service"    # Landroid/net/wifi/IWifiOffloadManager;
 
     .prologue
-    .line 40
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 41
     iput-object p1, p0, Landroid/net/wifi/WifiOffloadManager;->mService:Landroid/net/wifi/IWifiOffloadManager;
 
-    .line 42
     return-void
 .end method
 
@@ -34,7 +31,6 @@
     .param p1, "pkgName"    # Ljava/lang/String;
 
     .prologue
-    .line 80
     :try_start_0
     iget-object v1, p0, Landroid/net/wifi/WifiOffloadManager;->mService:Landroid/net/wifi/IWifiOffloadManager;
 
@@ -42,15 +38,12 @@
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 84
     :goto_0
     return-void
 
-    .line 81
     :catch_0
     move-exception v0
 
-    .line 82
     .local v0, "e":Ljava/lang/Exception;
     const-string v1, "WifiOffloadManager"
 
@@ -82,7 +75,6 @@
     .param p1, "taskID"    # I
 
     .prologue
-    .line 54
     :try_start_0
     iget-object v1, p0, Landroid/net/wifi/WifiOffloadManager;->mService:Landroid/net/wifi/IWifiOffloadManager;
 
@@ -90,15 +82,12 @@
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 58
     :goto_0
     return-void
 
-    .line 55
     :catch_0
     move-exception v0
 
-    .line 56
     .local v0, "e":Ljava/lang/Exception;
     const-string v1, "WifiOffloadManager"
 
@@ -129,7 +118,6 @@
     .locals 4
 
     .prologue
-    .line 62
     :try_start_0
     iget-object v1, p0, Landroid/net/wifi/WifiOffloadManager;->mService:Landroid/net/wifi/IWifiOffloadManager;
 
@@ -139,15 +127,12 @@
 
     move-result-object v1
 
-    .line 65
     :goto_0
     return-object v1
 
-    .line 63
     :catch_0
     move-exception v0
 
-    .line 64
     .local v0, "e":Ljava/lang/Exception;
     const-string v1, "WifiOffloadManager"
 
@@ -171,7 +156,6 @@
 
     invoke-static {v1, v2}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 65
     const/4 v1, 0x0
 
     goto :goto_0
@@ -181,7 +165,6 @@
     .locals 4
 
     .prologue
-    .line 71
     :try_start_0
     iget-object v1, p0, Landroid/net/wifi/WifiOffloadManager;->mService:Landroid/net/wifi/IWifiOffloadManager;
 
@@ -191,15 +174,12 @@
 
     move-result-wide v2
 
-    .line 74
     :goto_0
     return-wide v2
 
-    .line 72
     :catch_0
     move-exception v0
 
-    .line 73
     .local v0, "e":Ljava/lang/Exception;
     const-string v1, "WifiOffloadManager"
 
@@ -223,7 +203,6 @@
 
     invoke-static {v1, v2}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 74
     const-wide/16 v2, 0x0
 
     goto :goto_0
@@ -233,7 +212,6 @@
     .locals 4
 
     .prologue
-    .line 46
     :try_start_0
     iget-object v1, p0, Landroid/net/wifi/WifiOffloadManager;->mService:Landroid/net/wifi/IWifiOffloadManager;
 
@@ -241,15 +219,12 @@
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 50
     :goto_0
     return-void
 
-    .line 47
     :catch_0
     move-exception v0
 
-    .line 48
     .local v0, "e":Ljava/lang/Exception;
     const-string v1, "WifiOffloadManager"
 

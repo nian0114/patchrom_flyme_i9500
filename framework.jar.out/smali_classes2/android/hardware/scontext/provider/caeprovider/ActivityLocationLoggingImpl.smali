@@ -42,54 +42,44 @@
     .param p2, "listener"    # Landroid/hardware/scontext/provider/EventListener;
 
     .prologue
-    .line 64
     const/16 v0, 0x18
 
     invoke-direct {p0, p1, v0, p2}, Landroid/hardware/scontext/provider/caeprovider/CaeProvider;-><init>(Landroid/content/Context;ILandroid/hardware/scontext/provider/EventListener;)V
 
-    .line 42
     const v0, 0xea60
 
     iput v0, p0, Landroid/hardware/scontext/provider/caeprovider/ActivityLocationLoggingImpl;->MAXIMUM_WAITING_TIME:I
 
-    .line 44
     sget-object v0, Landroid/hardware/scontext/provider/caeprovider/ActivityLocationLoggingImpl$ExceptionMode;->NORMAL:Landroid/hardware/scontext/provider/caeprovider/ActivityLocationLoggingImpl$ExceptionMode;
 
     iput-object v0, p0, Landroid/hardware/scontext/provider/caeprovider/ActivityLocationLoggingImpl;->mExceptionMode:Landroid/hardware/scontext/provider/caeprovider/ActivityLocationLoggingImpl$ExceptionMode;
 
-    .line 48
     const/16 v0, 0x3c
 
     iput v0, p0, Landroid/hardware/scontext/provider/caeprovider/ActivityLocationLoggingImpl;->mStopPeriod:I
 
-    .line 50
     const/16 v0, 0x78
 
     iput v0, p0, Landroid/hardware/scontext/provider/caeprovider/ActivityLocationLoggingImpl;->mWaitPeriod:I
 
-    .line 52
     const/16 v0, 0x32
 
     iput v0, p0, Landroid/hardware/scontext/provider/caeprovider/ActivityLocationLoggingImpl;->mStayingRadius:I
 
-    .line 54
     const/16 v0, 0x96
 
     iput v0, p0, Landroid/hardware/scontext/provider/caeprovider/ActivityLocationLoggingImpl;->mAreaRadius:I
 
-    .line 56
     const/4 v0, 0x1
 
     iput v0, p0, Landroid/hardware/scontext/provider/caeprovider/ActivityLocationLoggingImpl;->mLppResolution:I
 
-    .line 66
     invoke-super {p0}, Landroid/hardware/scontext/provider/caeprovider/CaeProvider;->getManager()Lcom/samsung/android/contextaware/ContextAwareManager;
 
     move-result-object v0
 
     iput-object v0, p0, Landroid/hardware/scontext/provider/caeprovider/ActivityLocationLoggingImpl;->mContextAwareManager:Lcom/samsung/android/contextaware/ContextAwareManager;
 
-    .line 67
     return-void
 .end method
 
@@ -98,7 +88,6 @@
     .param p0, "x0"    # Landroid/hardware/scontext/provider/caeprovider/ActivityLocationLoggingImpl;
 
     .prologue
-    .line 34
     iget-object v0, p0, Landroid/hardware/scontext/provider/caeprovider/ActivityLocationLoggingImpl;->mExceptionMode:Landroid/hardware/scontext/provider/caeprovider/ActivityLocationLoggingImpl$ExceptionMode;
 
     return-object v0
@@ -110,7 +99,6 @@
     .param p1, "x1"    # Landroid/hardware/scontext/provider/caeprovider/ActivityLocationLoggingImpl$ExceptionMode;
 
     .prologue
-    .line 34
     iput-object p1, p0, Landroid/hardware/scontext/provider/caeprovider/ActivityLocationLoggingImpl;->mExceptionMode:Landroid/hardware/scontext/provider/caeprovider/ActivityLocationLoggingImpl$ExceptionMode;
 
     return-object p1
@@ -122,23 +110,19 @@
     .locals 2
 
     .prologue
-    .line 78
     iget-object v0, p0, Landroid/hardware/scontext/provider/caeprovider/ActivityLocationLoggingImpl;->mExceptionMode:Landroid/hardware/scontext/provider/caeprovider/ActivityLocationLoggingImpl$ExceptionMode;
 
     sget-object v1, Landroid/hardware/scontext/provider/caeprovider/ActivityLocationLoggingImpl$ExceptionMode;->KILL:Landroid/hardware/scontext/provider/caeprovider/ActivityLocationLoggingImpl$ExceptionMode;
 
     if-ne v0, v1, :cond_0
 
-    .line 79
     sget-object v0, Landroid/hardware/scontext/provider/caeprovider/ActivityLocationLoggingImpl$ExceptionMode;->NORMAL:Landroid/hardware/scontext/provider/caeprovider/ActivityLocationLoggingImpl$ExceptionMode;
 
     iput-object v0, p0, Landroid/hardware/scontext/provider/caeprovider/ActivityLocationLoggingImpl;->mExceptionMode:Landroid/hardware/scontext/provider/caeprovider/ActivityLocationLoggingImpl$ExceptionMode;
 
-    .line 83
     :goto_0
     return-void
 
-    .line 81
     :cond_0
     invoke-super {p0}, Landroid/hardware/scontext/provider/caeprovider/CaeProvider;->add()V
 
@@ -149,7 +133,6 @@
     .locals 4
 
     .prologue
-    .line 151
     const-string v1, "SContext.CaeProvider.ActivityLocationLoggingImpl"
 
     new-instance v2, Ljava/lang/StringBuilder;
@@ -174,19 +157,16 @@
 
     invoke-static {v1, v2}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 152
     iget-object v1, p0, Landroid/hardware/scontext/provider/caeprovider/ActivityLocationLoggingImpl;->mExceptionMode:Landroid/hardware/scontext/provider/caeprovider/ActivityLocationLoggingImpl$ExceptionMode;
 
     sget-object v2, Landroid/hardware/scontext/provider/caeprovider/ActivityLocationLoggingImpl$ExceptionMode;->KILL:Landroid/hardware/scontext/provider/caeprovider/ActivityLocationLoggingImpl$ExceptionMode;
 
     if-ne v1, v2, :cond_0
 
-    .line 153
     new-instance v0, Ljava/util/Timer;
 
     invoke-direct {v0}, Ljava/util/Timer;-><init>()V
 
-    .line 154
     .local v0, "timer":Ljava/util/Timer;
     new-instance v1, Landroid/hardware/scontext/provider/caeprovider/ActivityLocationLoggingImpl$CustomTimer;
 
@@ -198,7 +178,6 @@
 
     invoke-virtual {v0, v1, v2, v3}, Ljava/util/Timer;->schedule(Ljava/util/TimerTask;J)V
 
-    .line 156
     .end local v0    # "timer":Ljava/util/Timer;
     :cond_0
     return-void
@@ -208,12 +187,10 @@
     .locals 3
 
     .prologue
-    .line 137
     sget-object v0, Landroid/hardware/scontext/provider/caeprovider/ActivityLocationLoggingImpl$ExceptionMode;->KILL:Landroid/hardware/scontext/provider/caeprovider/ActivityLocationLoggingImpl$ExceptionMode;
 
     iput-object v0, p0, Landroid/hardware/scontext/provider/caeprovider/ActivityLocationLoggingImpl;->mExceptionMode:Landroid/hardware/scontext/provider/caeprovider/ActivityLocationLoggingImpl$ExceptionMode;
 
-    .line 138
     const-string v0, "SContext.CaeProvider.ActivityLocationLoggingImpl"
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -238,7 +215,6 @@
 
     invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 139
     return-void
 .end method
 
@@ -246,10 +222,8 @@
     .locals 0
 
     .prologue
-    .line 93
     invoke-super {p0}, Landroid/hardware/scontext/provider/caeprovider/CaeProvider;->remove()V
 
-    .line 94
     return-void
 .end method
 
@@ -259,31 +233,26 @@
     .param p2, "attribute"    # Landroid/hardware/scontext/SContextAttribute;
 
     .prologue
-    .line 106
     const/16 v1, 0x18
 
     invoke-virtual {p2, v1}, Landroid/hardware/scontext/SContextAttribute;->getAttribute(I)Landroid/os/Bundle;
 
     move-result-object v0
 
-    .line 107
     .local v0, "bundle":Landroid/os/Bundle;
     if-nez v0, :cond_0
 
-    .line 108
     const-string v1, "SContext.CaeProvider.ActivityLocationLoggingImpl"
 
-    const-string/jumbo v2, "setProperty() : attribute is null!"
+    const-string v2, "setProperty() : attribute is null!"
 
     invoke-static {v1, v2}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 127
     :goto_0
     return-void
 
-    .line 111
     :cond_0
-    const-string/jumbo v1, "stop_period"
+    const-string v1, "stop_period"
 
     invoke-virtual {v0, v1}, Landroid/os/Bundle;->getInt(Ljava/lang/String;)I
 
@@ -291,8 +260,7 @@
 
     iput v1, p0, Landroid/hardware/scontext/provider/caeprovider/ActivityLocationLoggingImpl;->mStopPeriod:I
 
-    .line 112
-    const-string/jumbo v1, "wait_period"
+    const-string v1, "wait_period"
 
     invoke-virtual {v0, v1}, Landroid/os/Bundle;->getInt(Ljava/lang/String;)I
 
@@ -300,8 +268,7 @@
 
     iput v1, p0, Landroid/hardware/scontext/provider/caeprovider/ActivityLocationLoggingImpl;->mWaitPeriod:I
 
-    .line 113
-    const-string/jumbo v1, "staying_radius"
+    const-string v1, "staying_radius"
 
     invoke-virtual {v0, v1}, Landroid/os/Bundle;->getInt(Ljava/lang/String;)I
 
@@ -309,7 +276,6 @@
 
     iput v1, p0, Landroid/hardware/scontext/provider/caeprovider/ActivityLocationLoggingImpl;->mStayingRadius:I
 
-    .line 114
     const-string v1, "area_radius"
 
     invoke-virtual {v0, v1}, Landroid/os/Bundle;->getInt(Ljava/lang/String;)I
@@ -318,7 +284,6 @@
 
     iput v1, p0, Landroid/hardware/scontext/provider/caeprovider/ActivityLocationLoggingImpl;->mAreaRadius:I
 
-    .line 115
     const-string v1, "lpp_resolution"
 
     invoke-virtual {v0, v1}, Landroid/os/Bundle;->getInt(Ljava/lang/String;)I
@@ -327,7 +292,6 @@
 
     iput v1, p0, Landroid/hardware/scontext/provider/caeprovider/ActivityLocationLoggingImpl;->mLppResolution:I
 
-    .line 117
     iget-object v1, p0, Landroid/hardware/scontext/provider/caeprovider/ActivityLocationLoggingImpl;->mContextAwareManager:Lcom/samsung/android/contextaware/ContextAwareManager;
 
     sget v2, Lcom/samsung/android/contextaware/ContextAwareManager;->LIFE_LOG_SERVICE:I
@@ -338,7 +302,6 @@
 
     invoke-virtual {v1, v2, v3, v4}, Lcom/samsung/android/contextaware/ContextAwareManager;->setCAProperty(III)Z
 
-    .line 119
     iget-object v1, p0, Landroid/hardware/scontext/provider/caeprovider/ActivityLocationLoggingImpl;->mContextAwareManager:Lcom/samsung/android/contextaware/ContextAwareManager;
 
     sget v2, Lcom/samsung/android/contextaware/ContextAwareManager;->LIFE_LOG_SERVICE:I
@@ -349,7 +312,6 @@
 
     invoke-virtual {v1, v2, v3, v4}, Lcom/samsung/android/contextaware/ContextAwareManager;->setCAProperty(III)Z
 
-    .line 121
     iget-object v1, p0, Landroid/hardware/scontext/provider/caeprovider/ActivityLocationLoggingImpl;->mContextAwareManager:Lcom/samsung/android/contextaware/ContextAwareManager;
 
     sget v2, Lcom/samsung/android/contextaware/ContextAwareManager;->LIFE_LOG_SERVICE:I
@@ -360,7 +322,6 @@
 
     invoke-virtual {v1, v2, v3, v4}, Lcom/samsung/android/contextaware/ContextAwareManager;->setCAProperty(III)Z
 
-    .line 123
     iget-object v1, p0, Landroid/hardware/scontext/provider/caeprovider/ActivityLocationLoggingImpl;->mContextAwareManager:Lcom/samsung/android/contextaware/ContextAwareManager;
 
     sget v2, Lcom/samsung/android/contextaware/ContextAwareManager;->LIFE_LOG_SERVICE:I
@@ -371,7 +332,6 @@
 
     invoke-virtual {v1, v2, v3, v4}, Lcom/samsung/android/contextaware/ContextAwareManager;->setCAProperty(III)Z
 
-    .line 125
     iget-object v1, p0, Landroid/hardware/scontext/provider/caeprovider/ActivityLocationLoggingImpl;->mContextAwareManager:Lcom/samsung/android/contextaware/ContextAwareManager;
 
     sget v2, Lcom/samsung/android/contextaware/ContextAwareManager;->LIFE_LOG_SERVICE:I

@@ -23,7 +23,6 @@
     .locals 0
 
     .prologue
-    .line 468
     iput-object p1, p0, Lcom/android/server/media/projection/MediaProjectionManagerService$MediaRouterCallback;->this$0:Lcom/android/server/media/projection/MediaProjectionManagerService;
 
     invoke-direct {p0}, Landroid/media/MediaRouter$SimpleCallback;-><init>()V
@@ -37,7 +36,6 @@
     .param p2, "x1"    # Lcom/android/server/media/projection/MediaProjectionManagerService$1;
 
     .prologue
-    .line 468
     invoke-direct {p0, p1}, Lcom/android/server/media/projection/MediaProjectionManagerService$MediaRouterCallback;-><init>(Lcom/android/server/media/projection/MediaProjectionManagerService;)V
 
     return-void
@@ -52,7 +50,6 @@
     .param p3, "info"    # Landroid/media/MediaRouter$RouteInfo;
 
     .prologue
-    .line 471
     iget-object v0, p0, Lcom/android/server/media/projection/MediaProjectionManagerService$MediaRouterCallback;->this$0:Lcom/android/server/media/projection/MediaProjectionManagerService;
 
     # getter for: Lcom/android/server/media/projection/MediaProjectionManagerService;->mLock:Ljava/lang/Object;
@@ -62,19 +59,16 @@
 
     monitor-enter v1
 
-    .line 472
     and-int/lit8 v0, p2, 0x4
 
     if-eqz v0, :cond_0
 
-    .line 473
     :try_start_0
     iget-object v0, p0, Lcom/android/server/media/projection/MediaProjectionManagerService$MediaRouterCallback;->this$0:Lcom/android/server/media/projection/MediaProjectionManagerService;
 
     # setter for: Lcom/android/server/media/projection/MediaProjectionManagerService;->mMediaRouteInfo:Landroid/media/MediaRouter$RouteInfo;
     invoke-static {v0, p3}, Lcom/android/server/media/projection/MediaProjectionManagerService;->access$1502(Lcom/android/server/media/projection/MediaProjectionManagerService;Landroid/media/MediaRouter$RouteInfo;)Landroid/media/MediaRouter$RouteInfo;
 
-    .line 474
     iget-object v0, p0, Lcom/android/server/media/projection/MediaProjectionManagerService$MediaRouterCallback;->this$0:Lcom/android/server/media/projection/MediaProjectionManagerService;
 
     # getter for: Lcom/android/server/media/projection/MediaProjectionManagerService;->mProjectionGrant:Lcom/android/server/media/projection/MediaProjectionManagerService$MediaProjection;
@@ -84,7 +78,6 @@
 
     if-eqz v0, :cond_0
 
-    .line 475
     iget-object v0, p0, Lcom/android/server/media/projection/MediaProjectionManagerService$MediaRouterCallback;->this$0:Lcom/android/server/media/projection/MediaProjectionManagerService;
 
     # getter for: Lcom/android/server/media/projection/MediaProjectionManagerService;->mProjectionGrant:Lcom/android/server/media/projection/MediaProjectionManagerService$MediaProjection;
@@ -94,14 +87,11 @@
 
     invoke-virtual {v0}, Lcom/android/server/media/projection/MediaProjectionManagerService$MediaProjection;->stop()V
 
-    .line 478
     :cond_0
     monitor-exit v1
 
-    .line 479
     return-void
 
-    .line 478
     :catchall_0
     move-exception v0
 
@@ -119,7 +109,6 @@
     .param p3, "info"    # Landroid/media/MediaRouter$RouteInfo;
 
     .prologue
-    .line 483
     iget-object v0, p0, Lcom/android/server/media/projection/MediaProjectionManagerService$MediaRouterCallback;->this$0:Lcom/android/server/media/projection/MediaProjectionManagerService;
 
     # getter for: Lcom/android/server/media/projection/MediaProjectionManagerService;->mMediaRouteInfo:Landroid/media/MediaRouter$RouteInfo;
@@ -129,7 +118,6 @@
 
     if-ne v0, p3, :cond_0
 
-    .line 484
     iget-object v0, p0, Lcom/android/server/media/projection/MediaProjectionManagerService$MediaRouterCallback;->this$0:Lcom/android/server/media/projection/MediaProjectionManagerService;
 
     const/4 v1, 0x0
@@ -137,7 +125,6 @@
     # setter for: Lcom/android/server/media/projection/MediaProjectionManagerService;->mMediaRouteInfo:Landroid/media/MediaRouter$RouteInfo;
     invoke-static {v0, v1}, Lcom/android/server/media/projection/MediaProjectionManagerService;->access$1502(Lcom/android/server/media/projection/MediaProjectionManagerService;Landroid/media/MediaRouter$RouteInfo;)Landroid/media/MediaRouter$RouteInfo;
 
-    .line 486
     :cond_0
     return-void
 .end method

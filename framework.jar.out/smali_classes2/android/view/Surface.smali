@@ -61,7 +61,6 @@
     .locals 1
 
     .prologue
-    .line 57
     new-instance v0, Landroid/view/Surface$1;
 
     invoke-direct {v0}, Landroid/view/Surface$1;-><init>()V
@@ -75,24 +74,20 @@
     .locals 2
 
     .prologue
-    .line 120
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 77
     invoke-static {}, Ldalvik/system/CloseGuard;->get()Ldalvik/system/CloseGuard;
 
     move-result-object v0
 
     iput-object v0, p0, Landroid/view/Surface;->mCloseGuard:Ldalvik/system/CloseGuard;
 
-    .line 80
     new-instance v0, Ljava/lang/Object;
 
     invoke-direct {v0}, Ljava/lang/Object;-><init>()V
 
     iput-object v0, p0, Landroid/view/Surface;->mLock:Ljava/lang/Object;
 
-    .line 85
     new-instance v0, Landroid/view/Surface$CompatibleCanvas;
 
     const/4 v1, 0x0
@@ -101,7 +96,6 @@
 
     iput-object v0, p0, Landroid/view/Surface;->mCanvas:Landroid/graphics/Canvas;
 
-    .line 121
     return-void
 .end method
 
@@ -110,24 +104,20 @@
     .param p1, "nativeObject"    # J
 
     .prologue
-    .line 146
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 77
     invoke-static {}, Ldalvik/system/CloseGuard;->get()Ldalvik/system/CloseGuard;
 
     move-result-object v0
 
     iput-object v0, p0, Landroid/view/Surface;->mCloseGuard:Ldalvik/system/CloseGuard;
 
-    .line 80
     new-instance v0, Ljava/lang/Object;
 
     invoke-direct {v0}, Ljava/lang/Object;-><init>()V
 
     iput-object v0, p0, Landroid/view/Surface;->mLock:Ljava/lang/Object;
 
-    .line 85
     new-instance v0, Landroid/view/Surface$CompatibleCanvas;
 
     const/4 v1, 0x0
@@ -136,22 +126,17 @@
 
     iput-object v0, p0, Landroid/view/Surface;->mCanvas:Landroid/graphics/Canvas;
 
-    .line 147
     iget-object v1, p0, Landroid/view/Surface;->mLock:Ljava/lang/Object;
 
     monitor-enter v1
 
-    .line 148
     :try_start_0
     invoke-direct {p0, p1, p2}, Landroid/view/Surface;->setNativeObjectLocked(J)V
 
-    .line 149
     monitor-exit v1
 
-    .line 150
     return-void
 
-    .line 149
     :catchall_0
     move-exception v0
 
@@ -167,24 +152,20 @@
     .param p1, "surfaceTexture"    # Landroid/graphics/SurfaceTexture;
 
     .prologue
-    .line 134
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 77
     invoke-static {}, Ldalvik/system/CloseGuard;->get()Ldalvik/system/CloseGuard;
 
     move-result-object v0
 
     iput-object v0, p0, Landroid/view/Surface;->mCloseGuard:Ldalvik/system/CloseGuard;
 
-    .line 80
     new-instance v0, Ljava/lang/Object;
 
     invoke-direct {v0}, Ljava/lang/Object;-><init>()V
 
     iput-object v0, p0, Landroid/view/Surface;->mLock:Ljava/lang/Object;
 
-    .line 85
     new-instance v0, Landroid/view/Surface$CompatibleCanvas;
 
     const/4 v1, 0x0
@@ -193,25 +174,21 @@
 
     iput-object v0, p0, Landroid/view/Surface;->mCanvas:Landroid/graphics/Canvas;
 
-    .line 135
     if-nez p1, :cond_0
 
-    .line 136
     new-instance v0, Ljava/lang/IllegalArgumentException;
 
-    const-string/jumbo v1, "surfaceTexture must not be null"
+    const-string v1, "surfaceTexture must not be null"
 
     invoke-direct {v0, v1}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
 
     throw v0
 
-    .line 139
     :cond_0
     iget-object v1, p0, Landroid/view/Surface;->mLock:Ljava/lang/Object;
 
     monitor-enter v1
 
-    .line 140
     :try_start_0
     invoke-virtual {p1}, Ljava/lang/Object;->toString()Ljava/lang/String;
 
@@ -219,20 +196,16 @@
 
     iput-object v0, p0, Landroid/view/Surface;->mName:Ljava/lang/String;
 
-    .line 141
     invoke-static {p1}, Landroid/view/Surface;->nativeCreateFromSurfaceTexture(Landroid/graphics/SurfaceTexture;)J
 
     move-result-wide v2
 
     invoke-direct {p0, v2, v3}, Landroid/view/Surface;->setNativeObjectLocked(J)V
 
-    .line 142
     monitor-exit v1
 
-    .line 143
     return-void
 
-    .line 142
     :catchall_0
     move-exception v0
 
@@ -248,7 +221,6 @@
     .param p0, "x0"    # Landroid/view/Surface;
 
     .prologue
-    .line 37
     iget-object v0, p0, Landroid/view/Surface;->mCompatibleMatrix:Landroid/graphics/Matrix;
 
     return-object v0
@@ -258,7 +230,6 @@
     .locals 4
 
     .prologue
-    .line 433
     iget-wide v0, p0, Landroid/view/Surface;->mNativeObject:J
 
     const-wide/16 v2, 0x0
@@ -267,7 +238,6 @@
 
     if-nez v0, :cond_0
 
-    .line 434
     new-instance v0, Ljava/lang/IllegalStateException;
 
     const-string v1, "Surface has already been released."
@@ -276,7 +246,6 @@
 
     throw v0
 
-    .line 436
     :cond_0
     return-void
 .end method
@@ -329,10 +298,8 @@
     .param p0, "rotation"    # I
 
     .prologue
-    .line 471
     packed-switch p0, :pswitch_data_0
 
-    .line 485
     new-instance v0, Ljava/lang/IllegalArgumentException;
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -357,33 +324,27 @@
 
     throw v0
 
-    .line 473
     :pswitch_0
     const-string v0, "ROTATION_0"
 
-    .line 482
     :goto_0
     return-object v0
 
-    .line 476
     :pswitch_1
     const-string v0, "ROATATION_90"
 
     goto :goto_0
 
-    .line 479
     :pswitch_2
     const-string v0, "ROATATION_180"
 
     goto :goto_0
 
-    .line 482
     :pswitch_3
     const-string v0, "ROATATION_270"
 
     goto :goto_0
 
-    .line 471
     :pswitch_data_0
     .packed-switch 0x0
         :pswitch_0
@@ -400,14 +361,12 @@
     .prologue
     const-wide/16 v2, 0x0
 
-    .line 421
     iget-wide v0, p0, Landroid/view/Surface;->mNativeObject:J
 
     cmp-long v0, v0, p1
 
     if-eqz v0, :cond_1
 
-    .line 422
     iget-wide v0, p0, Landroid/view/Surface;->mNativeObject:J
 
     cmp-long v0, v0, v2
@@ -418,30 +377,25 @@
 
     if-eqz v0, :cond_2
 
-    .line 423
     iget-object v0, p0, Landroid/view/Surface;->mCloseGuard:Ldalvik/system/CloseGuard;
 
     const-string v1, "release"
 
     invoke-virtual {v0, v1}, Ldalvik/system/CloseGuard;->open(Ljava/lang/String;)V
 
-    .line 427
     :cond_0
     :goto_0
     iput-wide p1, p0, Landroid/view/Surface;->mNativeObject:J
 
-    .line 428
     iget v0, p0, Landroid/view/Surface;->mGenerationId:I
 
     add-int/lit8 v0, v0, 0x1
 
     iput v0, p0, Landroid/view/Surface;->mGenerationId:I
 
-    .line 430
     :cond_1
     return-void
 
-    .line 424
     :cond_2
     iget-wide v0, p0, Landroid/view/Surface;->mNativeObject:J
 
@@ -453,7 +407,6 @@
 
     if-nez v0, :cond_0
 
-    .line 425
     iget-object v0, p0, Landroid/view/Surface;->mCloseGuard:Ldalvik/system/CloseGuard;
 
     invoke-virtual {v0}, Ldalvik/system/CloseGuard;->close()V
@@ -467,27 +420,21 @@
     .locals 4
 
     .prologue
-    .line 443
     iget-object v1, p0, Landroid/view/Surface;->mLock:Ljava/lang/Object;
 
     monitor-enter v1
 
-    .line 444
     :try_start_0
     invoke-direct {p0}, Landroid/view/Surface;->checkNotReleasedLocked()V
 
-    .line 445
     iget-wide v2, p0, Landroid/view/Surface;->mNativeObject:J
 
     invoke-static {v2, v3}, Landroid/view/Surface;->nativeAllocateBuffers(J)V
 
-    .line 446
     monitor-exit v1
 
-    .line 447
     return-void
 
-    .line 446
     :catchall_0
     move-exception v0
 
@@ -505,10 +452,8 @@
     .prologue
     const-wide/16 v8, 0x0
 
-    .line 332
     if-nez p1, :cond_0
 
-    .line 333
     new-instance v4, Ljava/lang/IllegalArgumentException;
 
     const-string v5, "other must not be null"
@@ -517,17 +462,14 @@
 
     throw v4
 
-    .line 336
     :cond_0
     iget-wide v2, p1, Landroid/view/SurfaceControl;->mNativeObject:J
 
-    .line 337
     .local v2, "surfaceControlPtr":J
     cmp-long v4, v2, v8
 
     if-nez v4, :cond_1
 
-    .line 338
     new-instance v4, Ljava/lang/NullPointerException;
 
     const-string v5, "SurfaceControl native object is null. Are you using a released SurfaceControl?"
@@ -536,19 +478,16 @@
 
     throw v4
 
-    .line 341
     :cond_1
     invoke-static {v2, v3}, Landroid/view/Surface;->nativeCreateFromSurfaceControl(J)J
 
     move-result-wide v0
 
-    .line 343
     .local v0, "newNativeObject":J
     iget-object v5, p0, Landroid/view/Surface;->mLock:Ljava/lang/Object;
 
     monitor-enter v5
 
-    .line 344
     :try_start_0
     iget-wide v6, p0, Landroid/view/Surface;->mNativeObject:J
 
@@ -556,22 +495,17 @@
 
     if-eqz v4, :cond_2
 
-    .line 345
     iget-wide v6, p0, Landroid/view/Surface;->mNativeObject:J
 
     invoke-static {v6, v7}, Landroid/view/Surface;->nativeRelease(J)V
 
-    .line 347
     :cond_2
     invoke-direct {p0, v0, v1}, Landroid/view/Surface;->setNativeObjectLocked(J)V
 
-    .line 348
     monitor-exit v5
 
-    .line 349
     return-void
 
-    .line 348
     :catchall_0
     move-exception v4
 
@@ -586,7 +520,6 @@
     .locals 1
 
     .prologue
-    .line 380
     const/4 v0, 0x0
 
     return v0
@@ -596,10 +529,8 @@
     .locals 0
 
     .prologue
-    .line 195
     invoke-virtual {p0}, Landroid/view/Surface;->release()V
 
-    .line 196
     return-void
 .end method
 
@@ -612,30 +543,24 @@
     .end annotation
 
     .prologue
-    .line 155
     :try_start_0
     iget-object v0, p0, Landroid/view/Surface;->mCloseGuard:Ldalvik/system/CloseGuard;
 
     if-eqz v0, :cond_0
 
-    .line 156
     iget-object v0, p0, Landroid/view/Surface;->mCloseGuard:Ldalvik/system/CloseGuard;
 
     invoke-virtual {v0}, Ldalvik/system/CloseGuard;->warnIfOpen()V
 
-    .line 158
     :cond_0
     invoke-virtual {p0}, Landroid/view/Surface;->release()V
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 160
     invoke-super {p0}, Ljava/lang/Object;->finalize()V
 
-    .line 162
     return-void
 
-    .line 160
     :catchall_0
     move-exception v0
 
@@ -648,12 +573,10 @@
     .locals 2
 
     .prologue
-    .line 219
     iget-object v1, p0, Landroid/view/Surface;->mLock:Ljava/lang/Object;
 
     monitor-enter v1
 
-    .line 220
     :try_start_0
     iget v0, p0, Landroid/view/Surface;->mGenerationId:I
 
@@ -661,7 +584,6 @@
 
     return v0
 
-    .line 221
     :catchall_0
     move-exception v0
 
@@ -676,16 +598,13 @@
     .locals 4
 
     .prologue
-    .line 231
     iget-object v1, p0, Landroid/view/Surface;->mLock:Ljava/lang/Object;
 
     monitor-enter v1
 
-    .line 232
     :try_start_0
     invoke-direct {p0}, Landroid/view/Surface;->checkNotReleasedLocked()V
 
-    .line 233
     iget-wide v2, p0, Landroid/view/Surface;->mNativeObject:J
 
     invoke-static {v2, v3}, Landroid/view/Surface;->nativeIsConsumerRunningBehind(J)Z
@@ -696,7 +615,6 @@
 
     return v0
 
-    .line 234
     :catchall_0
     move-exception v0
 
@@ -711,12 +629,10 @@
     .locals 6
 
     .prologue
-    .line 205
     iget-object v1, p0, Landroid/view/Surface;->mLock:Ljava/lang/Object;
 
     monitor-enter v1
 
-    .line 206
     :try_start_0
     iget-wide v2, p0, Landroid/view/Surface;->mNativeObject:J
 
@@ -730,7 +646,6 @@
 
     monitor-exit v1
 
-    .line 207
     :goto_0
     return v0
 
@@ -745,7 +660,6 @@
 
     goto :goto_0
 
-    .line 208
     :catchall_0
     move-exception v0
 
@@ -767,16 +681,13 @@
     .end annotation
 
     .prologue
-    .line 257
     iget-object v1, p0, Landroid/view/Surface;->mLock:Ljava/lang/Object;
 
     monitor-enter v1
 
-    .line 258
     :try_start_0
     invoke-direct {p0}, Landroid/view/Surface;->checkNotReleasedLocked()V
 
-    .line 259
     iget-wide v2, p0, Landroid/view/Surface;->mLockedObject:J
 
     const-wide/16 v4, 0x0
@@ -785,7 +696,6 @@
 
     if-eqz v0, :cond_0
 
-    .line 264
     new-instance v0, Ljava/lang/IllegalArgumentException;
 
     const-string v2, "Surface was already locked"
@@ -794,7 +704,6 @@
 
     throw v0
 
-    .line 268
     :catchall_0
     move-exception v0
 
@@ -804,7 +713,6 @@
 
     throw v0
 
-    .line 266
     :cond_0
     :try_start_1
     iget-wide v2, p0, Landroid/view/Surface;->mNativeObject:J
@@ -817,7 +725,6 @@
 
     iput-wide v2, p0, Landroid/view/Surface;->mLockedObject:J
 
-    .line 267
     iget-object v0, p0, Landroid/view/Surface;->mCanvas:Landroid/graphics/Canvas;
 
     monitor-exit v1
@@ -832,25 +739,21 @@
     .param p1, "source"    # Landroid/os/Parcel;
 
     .prologue
-    .line 384
     if-nez p1, :cond_0
 
-    .line 385
     new-instance v0, Ljava/lang/IllegalArgumentException;
 
-    const-string/jumbo v1, "source must not be null"
+    const-string v1, "source must not be null"
 
     invoke-direct {v0, v1}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
 
     throw v0
 
-    .line 388
     :cond_0
     iget-object v1, p0, Landroid/view/Surface;->mLock:Ljava/lang/Object;
 
     monitor-enter v1
 
-    .line 393
     :try_start_0
     invoke-virtual {p1}, Landroid/os/Parcel;->readString()Ljava/lang/String;
 
@@ -858,7 +761,6 @@
 
     iput-object v0, p0, Landroid/view/Surface;->mName:Ljava/lang/String;
 
-    .line 394
     iget-wide v2, p0, Landroid/view/Surface;->mNativeObject:J
 
     invoke-static {v2, v3, p1}, Landroid/view/Surface;->nativeReadFromParcel(JLandroid/os/Parcel;)J
@@ -867,13 +769,10 @@
 
     invoke-direct {p0, v2, v3}, Landroid/view/Surface;->setNativeObjectLocked(J)V
 
-    .line 395
     monitor-exit v1
 
-    .line 396
     return-void
 
-    .line 395
     :catchall_0
     move-exception v0
 
@@ -890,12 +789,10 @@
     .prologue
     const-wide/16 v4, 0x0
 
-    .line 180
     iget-object v1, p0, Landroid/view/Surface;->mLock:Ljava/lang/Object;
 
     monitor-enter v1
 
-    .line 181
     :try_start_0
     iget-wide v2, p0, Landroid/view/Surface;->mNativeObject:J
 
@@ -903,24 +800,19 @@
 
     if-eqz v0, :cond_0
 
-    .line 182
     iget-wide v2, p0, Landroid/view/Surface;->mNativeObject:J
 
     invoke-static {v2, v3}, Landroid/view/Surface;->nativeRelease(J)V
 
-    .line 183
     const-wide/16 v2, 0x0
 
     invoke-direct {p0, v2, v3}, Landroid/view/Surface;->setNativeObjectLocked(J)V
 
-    .line 185
     :cond_0
     monitor-exit v1
 
-    .line 186
     return-void
 
-    .line 185
     :catchall_0
     move-exception v0
 
@@ -936,13 +828,10 @@
     .param p1, "translator"    # Landroid/content/res/CompatibilityInfo$Translator;
 
     .prologue
-    .line 315
     if-eqz p1, :cond_0
 
-    .line 316
     iget v0, p1, Landroid/content/res/CompatibilityInfo$Translator;->applicationScale:F
 
-    .line 317
     .local v0, "appScale":F
     new-instance v1, Landroid/graphics/Matrix;
 
@@ -950,12 +839,10 @@
 
     iput-object v1, p0, Landroid/view/Surface;->mCompatibleMatrix:Landroid/graphics/Matrix;
 
-    .line 318
     iget-object v1, p0, Landroid/view/Surface;->mCompatibleMatrix:Landroid/graphics/Matrix;
 
     invoke-virtual {v1, v0, v0}, Landroid/graphics/Matrix;->setScale(FF)V
 
-    .line 320
     .end local v0    # "appScale":F
     :cond_0
     return-void
@@ -966,7 +853,6 @@
     .param p1, "dirty"    # Landroid/graphics/Rect;
 
     .prologue
-    .line 169
     iget-wide v0, p0, Landroid/view/Surface;->mNativeObject:J
 
     const-wide/16 v2, 0x0
@@ -975,12 +861,10 @@
 
     if-eqz v0, :cond_0
 
-    .line 170
     iget-wide v0, p0, Landroid/view/Surface;->mNativeObject:J
 
     invoke-static {v0, v1, p1}, Landroid/view/Surface;->nativeSetDirtyRect(JLandroid/graphics/Rect;)V
 
-    .line 172
     :cond_0
     return-void
 .end method
@@ -989,12 +873,10 @@
     .locals 3
 
     .prologue
-    .line 414
     iget-object v1, p0, Landroid/view/Surface;->mLock:Ljava/lang/Object;
 
     monitor-enter v1
 
-    .line 415
     :try_start_0
     new-instance v0, Ljava/lang/StringBuilder;
 
@@ -1038,7 +920,6 @@
 
     return-object v0
 
-    .line 417
     :catchall_0
     move-exception v0
 
@@ -1058,10 +939,8 @@
     .prologue
     const-wide/16 v6, 0x0
 
-    .line 359
     if-nez p1, :cond_0
 
-    .line 360
     new-instance v2, Ljava/lang/IllegalArgumentException;
 
     const-string v3, "other must not be null"
@@ -1070,36 +949,29 @@
 
     throw v2
 
-    .line 362
     :cond_0
     if-eq p1, p0, :cond_2
 
-    .line 364
     iget-object v3, p1, Landroid/view/Surface;->mLock:Ljava/lang/Object;
 
     monitor-enter v3
 
-    .line 365
     :try_start_0
     iget-wide v0, p1, Landroid/view/Surface;->mNativeObject:J
 
-    .line 366
     .local v0, "newPtr":J
     const-wide/16 v4, 0x0
 
     invoke-direct {p1, v4, v5}, Landroid/view/Surface;->setNativeObjectLocked(J)V
 
-    .line 367
     monitor-exit v3
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 369
     iget-object v3, p0, Landroid/view/Surface;->mLock:Ljava/lang/Object;
 
     monitor-enter v3
 
-    .line 370
     :try_start_1
     iget-wide v4, p0, Landroid/view/Surface;->mNativeObject:J
 
@@ -1107,26 +979,21 @@
 
     if-eqz v2, :cond_1
 
-    .line 371
     iget-wide v4, p0, Landroid/view/Surface;->mNativeObject:J
 
     invoke-static {v4, v5}, Landroid/view/Surface;->nativeRelease(J)V
 
-    .line 373
     :cond_1
     invoke-direct {p0, v0, v1}, Landroid/view/Surface;->setNativeObjectLocked(J)V
 
-    .line 374
     monitor-exit v3
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_1
 
-    .line 376
     .end local v0    # "newPtr":J
     :cond_2
     return-void
 
-    .line 367
     :catchall_0
     move-exception v2
 
@@ -1137,7 +1004,6 @@
 
     throw v2
 
-    .line 374
     .restart local v0    # "newPtr":J
     :catchall_1
     move-exception v2
@@ -1157,7 +1023,6 @@
     .end annotation
 
     .prologue
-    .line 307
     new-instance v0, Ljava/lang/UnsupportedOperationException;
 
     invoke-direct {v0}, Ljava/lang/UnsupportedOperationException;-><init>()V
@@ -1172,12 +1037,10 @@
     .prologue
     const-wide/16 v6, 0x0
 
-    .line 278
     iget-object v0, p0, Landroid/view/Surface;->mCanvas:Landroid/graphics/Canvas;
 
     if-eq p1, v0, :cond_0
 
-    .line 279
     new-instance v0, Ljava/lang/IllegalArgumentException;
 
     const-string v1, "canvas object must be the same instance that was previously returned by lockCanvas"
@@ -1186,17 +1049,14 @@
 
     throw v0
 
-    .line 283
     :cond_0
     iget-object v1, p0, Landroid/view/Surface;->mLock:Ljava/lang/Object;
 
     monitor-enter v1
 
-    .line 284
     :try_start_0
     invoke-direct {p0}, Landroid/view/Surface;->checkNotReleasedLocked()V
 
-    .line 285
     iget-wide v2, p0, Landroid/view/Surface;->mNativeObject:J
 
     iget-wide v4, p0, Landroid/view/Surface;->mLockedObject:J
@@ -1205,7 +1065,6 @@
 
     if-eqz v0, :cond_1
 
-    .line 286
     const-string v0, "Surface"
 
     new-instance v2, Ljava/lang/StringBuilder;
@@ -1256,7 +1115,6 @@
 
     invoke-static {v0, v2}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 290
     :cond_1
     iget-wide v2, p0, Landroid/view/Surface;->mLockedObject:J
 
@@ -1264,7 +1122,6 @@
 
     if-nez v0, :cond_2
 
-    .line 291
     new-instance v0, Ljava/lang/IllegalStateException;
 
     const-string v2, "Surface was not locked"
@@ -1273,7 +1130,6 @@
 
     throw v0
 
-    .line 299
     :catchall_0
     move-exception v0
 
@@ -1283,7 +1139,6 @@
 
     throw v0
 
-    .line 294
     :cond_2
     :try_start_1
     iget-wide v2, p0, Landroid/view/Surface;->mLockedObject:J
@@ -1292,24 +1147,19 @@
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_1
 
-    .line 296
     :try_start_2
     iget-wide v2, p0, Landroid/view/Surface;->mLockedObject:J
 
     invoke-static {v2, v3}, Landroid/view/Surface;->nativeRelease(J)V
 
-    .line 297
     const-wide/16 v2, 0x0
 
     iput-wide v2, p0, Landroid/view/Surface;->mLockedObject:J
 
-    .line 299
     monitor-exit v1
 
-    .line 300
     return-void
 
-    .line 296
     :catchall_1
     move-exception v0
 
@@ -1317,7 +1167,6 @@
 
     invoke-static {v2, v3}, Landroid/view/Surface;->nativeRelease(J)V
 
-    .line 297
     const-wide/16 v2, 0x0
 
     iput-wide v2, p0, Landroid/view/Surface;->mLockedObject:J
@@ -1333,10 +1182,8 @@
     .param p2, "flags"    # I
 
     .prologue
-    .line 400
     if-nez p1, :cond_0
 
-    .line 401
     new-instance v0, Ljava/lang/IllegalArgumentException;
 
     const-string v1, "dest must not be null"
@@ -1345,41 +1192,33 @@
 
     throw v0
 
-    .line 403
     :cond_0
     iget-object v1, p0, Landroid/view/Surface;->mLock:Ljava/lang/Object;
 
     monitor-enter v1
 
-    .line 404
     :try_start_0
     iget-object v0, p0, Landroid/view/Surface;->mName:Ljava/lang/String;
 
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeString(Ljava/lang/String;)V
 
-    .line 405
     iget-wide v2, p0, Landroid/view/Surface;->mNativeObject:J
 
     invoke-static {v2, v3, p1}, Landroid/view/Surface;->nativeWriteToParcel(JLandroid/os/Parcel;)V
 
-    .line 406
     monitor-exit v1
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 407
     and-int/lit8 v0, p2, 0x1
 
     if-eqz v0, :cond_1
 
-    .line 408
     invoke-virtual {p0}, Landroid/view/Surface;->release()V
 
-    .line 410
     :cond_1
     return-void
 
-    .line 406
     :catchall_0
     move-exception v0
 

@@ -26,7 +26,6 @@
     .locals 0
 
     .prologue
-    .line 411
     iput-object p1, p0, Lcom/android/server/BatteryService$1$7;->this$1:Lcom/android/server/BatteryService$1;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -40,7 +39,6 @@
     .locals 1
 
     .prologue
-    .line 414
     # getter for: Lcom/android/server/BatteryService;->SUPPORT_LOG_BATTERY_USAGE:Z
     invoke-static {}, Lcom/android/server/BatteryService;->access$1300()Z
 
@@ -48,14 +46,12 @@
 
     if-eqz v0, :cond_0
 
-    .line 415
     iget-object v0, p0, Lcom/android/server/BatteryService$1$7;->this$1:Lcom/android/server/BatteryService$1;
 
     iget-object v0, v0, Lcom/android/server/BatteryService$1;->this$0:Lcom/android/server/BatteryService;
 
     invoke-virtual {v0}, Lcom/android/server/BatteryService;->logDischargeLevel()V
 
-    .line 417
     :cond_0
     return-void
 .end method

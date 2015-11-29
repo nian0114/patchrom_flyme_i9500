@@ -26,7 +26,6 @@
     .locals 0
 
     .prologue
-    .line 541
     iput-object p1, p0, Lcom/android/internal/policy/impl/multiwindow/MinimizeAnimator$4;->this$0:Lcom/android/internal/policy/impl/multiwindow/MinimizeAnimator;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -41,13 +40,11 @@
     .param p1, "arg0"    # Landroid/view/animation/Animation;
 
     .prologue
-    .line 545
     iget-object v0, p0, Lcom/android/internal/policy/impl/multiwindow/MinimizeAnimator$4;->this$0:Lcom/android/internal/policy/impl/multiwindow/MinimizeAnimator;
 
     # invokes: Lcom/android/internal/policy/impl/multiwindow/MinimizeAnimator;->shakeTrashCoverAnimation()V
     invoke-static {v0}, Lcom/android/internal/policy/impl/multiwindow/MinimizeAnimator;->access$500(Lcom/android/internal/policy/impl/multiwindow/MinimizeAnimator;)V
 
-    .line 546
     return-void
 .end method
 
@@ -56,7 +53,6 @@
     .param p1, "arg0"    # Landroid/view/animation/Animation;
 
     .prologue
-    .line 543
     return-void
 .end method
 
@@ -65,6 +61,5 @@
     .param p1, "arg0"    # Landroid/view/animation/Animation;
 
     .prologue
-    .line 548
     return-void
 .end method

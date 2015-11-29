@@ -57,7 +57,6 @@
     .locals 0
 
     .prologue
-    .line 3233
     iput-object p1, p0, Lcom/android/server/enterprise/vpn/knoxvpn/EnterprisePremiumVpnPolicyServiceV2$EnterpriseVpnHandler;->this$0:Lcom/android/server/enterprise/vpn/knoxvpn/EnterprisePremiumVpnPolicyServiceV2;
 
     invoke-direct {p0}, Landroid/os/Handler;-><init>()V
@@ -72,17 +71,15 @@
     .param p1, "msg"    # Landroid/os/Message;
 
     .prologue
-    .line 3253
     # getter for: Lcom/android/server/enterprise/vpn/knoxvpn/EnterprisePremiumVpnPolicyServiceV2;->TAG:Ljava/lang/String;
     invoke-static {}, Lcom/android/server/enterprise/vpn/knoxvpn/EnterprisePremiumVpnPolicyServiceV2;->access$100()Ljava/lang/String;
 
     move-result-object v39
 
-    const-string/jumbo v40, "vpn handle : Message received"
+    const-string v40, "vpn handle : Message received"
 
     invoke-static/range {v39 .. v40}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 3254
     move-object/from16 v0, p1
 
     iget-object v0, v0, Landroid/os/Message;->obj:Ljava/lang/Object;
@@ -91,15 +88,12 @@
 
     check-cast v22, Landroid/os/Bundle;
 
-    .line 3255
     .local v22, "map":Landroid/os/Bundle;
     const/16 v34, -0x1
 
-    .line 3256
     .local v34, "uid":I
     const/16 v38, 0x0
 
-    .line 3257
     .local v38, "vpnObj":Lcom/android/server/enterprise/vpn/knoxvpn/EnterprisePremiumVpnPolicyServiceV2$VpnState;
     const/16 v24, 0x0
 
@@ -109,15 +103,12 @@
     .local v27, "profileName":Ljava/lang/String;
     const/4 v11, 0x0
 
-    .line 3258
     .local v11, "errorString":Ljava/lang/String;
     const/16 v32, -0x1
 
-    .line 3259
     .local v32, "status":I
     const/4 v5, 0x0
 
-    .line 3260
     .local v5, "check_install_type":Z
     move-object/from16 v0, p1
 
@@ -127,15 +118,13 @@
 
     packed-switch v39, :pswitch_data_0
 
-    .line 3663
     :cond_0
     :goto_0
     :pswitch_0
     return-void
 
-    .line 3262
     :pswitch_1
-    const-string/jumbo v39, "status"
+    const-string v39, "status"
 
     move-object/from16 v0, v22
 
@@ -145,8 +134,7 @@
 
     move-result v32
 
-    .line 3263
-    const-string/jumbo v39, "profileName"
+    const-string v39, "profileName"
 
     move-object/from16 v0, v22
 
@@ -156,7 +144,6 @@
 
     move-result-object v27
 
-    .line 3264
     const-string v39, "errorString"
 
     move-object/from16 v0, v22
@@ -167,15 +154,12 @@
 
     move-result-object v11
 
-    .line 3265
     if-nez v11, :cond_1
 
-    .line 3266
     const-string v11, "Empty"
 
-    .line 3268
     :cond_1
-    const-string/jumbo v39, "state"
+    const-string v39, "state"
 
     move-object/from16 v0, v22
 
@@ -185,7 +169,6 @@
 
     move-result v31
 
-    .line 3269
     .local v31, "state":I
     # getter for: Lcom/android/server/enterprise/vpn/knoxvpn/EnterprisePremiumVpnPolicyServiceV2;->TAG:Ljava/lang/String;
     invoke-static {}, Lcom/android/server/enterprise/vpn/knoxvpn/EnterprisePremiumVpnPolicyServiceV2;->access$100()Ljava/lang/String;
@@ -196,7 +179,7 @@
 
     invoke-direct/range {v40 .. v40}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v41, "vpn handle : callback to status : profile : "
+    const-string v41, "vpn handle : callback to status : profile : "
 
     invoke-virtual/range {v40 .. v41}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -244,7 +227,6 @@
 
     invoke-static/range {v39 .. v40}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 3270
     # getter for: Lcom/android/server/enterprise/vpn/knoxvpn/EnterprisePremiumVpnPolicyServiceV2;->TAG:Ljava/lang/String;
     invoke-static {}, Lcom/android/server/enterprise/vpn/knoxvpn/EnterprisePremiumVpnPolicyServiceV2;->access$100()Ljava/lang/String;
 
@@ -254,7 +236,7 @@
 
     invoke-direct/range {v40 .. v40}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v41, "vpn handle : callback to status : Error "
+    const-string v41, "vpn handle : callback to status : Error "
 
     invoke-virtual/range {v40 .. v41}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -272,10 +254,8 @@
 
     invoke-static/range {v39 .. v40}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 3271
     const/4 v12, 0x0
 
-    .line 3272
     .local v12, "i":I
     move-object/from16 v0, p0
 
@@ -298,41 +278,33 @@
 
     check-cast v37, Lcom/android/server/enterprise/vpn/knoxvpn/EnterprisePremiumVpnPolicyServiceV2$ProfileNameVpnEntry;
 
-    .line 3273
     .local v37, "vpnEntry":Lcom/android/server/enterprise/vpn/knoxvpn/EnterprisePremiumVpnPolicyServiceV2$ProfileNameVpnEntry;
     if-eqz v37, :cond_19
 
-    .line 3274
     invoke-virtual/range {v37 .. v37}, Lcom/android/server/enterprise/vpn/knoxvpn/EnterprisePremiumVpnPolicyServiceV2$ProfileNameVpnEntry;->getVpnStateList()Ljava/util/ArrayList;
 
     move-result-object v18
 
-    .line 3275
     .local v18, "list":Ljava/util/ArrayList;
     if-eqz v18, :cond_0
 
-    .line 3276
     invoke-virtual/range {v18 .. v18}, Ljava/util/ArrayList;->toArray()[Ljava/lang/Object;
 
     move-result-object v4
 
-    .line 3277
     .local v4, "array":[Ljava/lang/Object;
     array-length v0, v4
 
     move/from16 v17, v0
 
-    .line 3278
     .local v17, "length":I
     if-nez v31, :cond_13
 
-    .line 3279
     packed-switch v32, :pswitch_data_1
 
     :pswitch_2
     goto/16 :goto_0
 
-    .line 3339
     :pswitch_3
     const/4 v12, 0x0
 
@@ -341,13 +313,11 @@
 
     if-ge v12, v0, :cond_c
 
-    .line 3340
     aget-object v38, v4, v12
 
     .end local v38    # "vpnObj":Lcom/android/server/enterprise/vpn/knoxvpn/EnterprisePremiumVpnPolicyServiceV2$VpnState;
     check-cast v38, Lcom/android/server/enterprise/vpn/knoxvpn/EnterprisePremiumVpnPolicyServiceV2$VpnState;
 
-    .line 3341
     .restart local v38    # "vpnObj":Lcom/android/server/enterprise/vpn/knoxvpn/EnterprisePremiumVpnPolicyServiceV2$VpnState;
     invoke-virtual/range {v38 .. v38}, Lcom/android/server/enterprise/vpn/knoxvpn/EnterprisePremiumVpnPolicyServiceV2$VpnState;->getState()I
 
@@ -361,17 +331,14 @@
 
     if-ne v0, v1, :cond_b
 
-    .line 3342
     const/16 v39, 0x0
 
     invoke-virtual/range {v38 .. v39}, Lcom/android/server/enterprise/vpn/knoxvpn/EnterprisePremiumVpnPolicyServiceV2$VpnState;->setState(I)V
 
-    .line 3343
     invoke-virtual/range {v38 .. v38}, Lcom/android/server/enterprise/vpn/knoxvpn/EnterprisePremiumVpnPolicyServiceV2$VpnState;->getUid()I
 
     move-result v34
 
-    .line 3344
     invoke-virtual/range {v38 .. v38}, Lcom/android/server/enterprise/vpn/knoxvpn/EnterprisePremiumVpnPolicyServiceV2$VpnState;->getPackageName()Ljava/lang/String;
 
     move-result-object v39
@@ -403,7 +370,6 @@
 
     if-eqz v39, :cond_a
 
-    .line 3345
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/android/server/enterprise/vpn/knoxvpn/EnterprisePremiumVpnPolicyServiceV2$EnterpriseVpnHandler;->this$0:Lcom/android/server/enterprise/vpn/knoxvpn/EnterprisePremiumVpnPolicyServiceV2;
@@ -425,7 +391,6 @@
 
     invoke-virtual/range {v39 .. v42}, Lcom/android/server/enterprise/vpn/knoxvpn/KnoxVpnFirewallHelper;->addMangleNatRulesRange(ILjava/lang/String;I)V
 
-    .line 3346
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/android/server/enterprise/vpn/knoxvpn/EnterprisePremiumVpnPolicyServiceV2$EnterpriseVpnHandler;->this$0:Lcom/android/server/enterprise/vpn/knoxvpn/EnterprisePremiumVpnPolicyServiceV2;
@@ -445,7 +410,6 @@
 
     invoke-virtual/range {v39 .. v41}, Lcom/android/server/enterprise/vpn/knoxvpn/KnoxVpnFirewallHelper;->removeIpRouteAndPolicyRules(Ljava/lang/String;I)V
 
-    .line 3347
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/android/server/enterprise/vpn/knoxvpn/EnterprisePremiumVpnPolicyServiceV2$EnterpriseVpnHandler;->this$0:Lcom/android/server/enterprise/vpn/knoxvpn/EnterprisePremiumVpnPolicyServiceV2;
@@ -493,18 +457,15 @@
     # invokes: Lcom/android/server/enterprise/vpn/knoxvpn/EnterprisePremiumVpnPolicyServiceV2;->unsetDnsSystemProperty(Ljava/lang/String;II)V
     invoke-static {v0, v1, v2, v3}, Lcom/android/server/enterprise/vpn/knoxvpn/EnterprisePremiumVpnPolicyServiceV2;->access$2700(Lcom/android/server/enterprise/vpn/knoxvpn/EnterprisePremiumVpnPolicyServiceV2;Ljava/lang/String;II)V
 
-    .line 3348
     const/16 v39, 0x0
 
     invoke-virtual/range {v38 .. v39}, Lcom/android/server/enterprise/vpn/knoxvpn/EnterprisePremiumVpnPolicyServiceV2$VpnState;->setInterface(Ljava/lang/String;)V
 
-    .line 3339
     :goto_2
     add-int/lit8 v12, v12, 0x1
 
     goto/16 :goto_1
 
-    .line 3281
     :pswitch_4
     const/4 v12, 0x0
 
@@ -513,13 +474,11 @@
 
     if-ge v12, v0, :cond_4
 
-    .line 3282
     aget-object v38, v4, v12
 
     .end local v38    # "vpnObj":Lcom/android/server/enterprise/vpn/knoxvpn/EnterprisePremiumVpnPolicyServiceV2$VpnState;
     check-cast v38, Lcom/android/server/enterprise/vpn/knoxvpn/EnterprisePremiumVpnPolicyServiceV2$VpnState;
 
-    .line 3284
     .restart local v38    # "vpnObj":Lcom/android/server/enterprise/vpn/knoxvpn/EnterprisePremiumVpnPolicyServiceV2$VpnState;
     invoke-virtual/range {v38 .. v38}, Lcom/android/server/enterprise/vpn/knoxvpn/EnterprisePremiumVpnPolicyServiceV2$VpnState;->getCid()I
 
@@ -533,7 +492,6 @@
 
     if-le v0, v1, :cond_2
 
-    .line 3286
     invoke-virtual/range {v38 .. v38}, Lcom/android/server/enterprise/vpn/knoxvpn/EnterprisePremiumVpnPolicyServiceV2$VpnState;->getState()I
 
     move-result v39
@@ -546,22 +504,18 @@
 
     if-eq v0, v1, :cond_2
 
-    .line 3287
     const/16 v39, 0x1
 
     invoke-virtual/range {v38 .. v39}, Lcom/android/server/enterprise/vpn/knoxvpn/EnterprisePremiumVpnPolicyServiceV2$VpnState;->setState(I)V
 
-    .line 3288
     move-object/from16 v0, v38
 
     invoke-virtual {v0, v11}, Lcom/android/server/enterprise/vpn/knoxvpn/EnterprisePremiumVpnPolicyServiceV2$VpnState;->setInterface(Ljava/lang/String;)V
 
-    .line 3289
     invoke-virtual/range {v38 .. v38}, Lcom/android/server/enterprise/vpn/knoxvpn/EnterprisePremiumVpnPolicyServiceV2$VpnState;->getUid()I
 
     move-result v34
 
-    .line 3290
     invoke-virtual/range {v38 .. v38}, Lcom/android/server/enterprise/vpn/knoxvpn/EnterprisePremiumVpnPolicyServiceV2$VpnState;->getPackageName()Ljava/lang/String;
 
     move-result-object v39
@@ -593,7 +547,6 @@
 
     if-eqz v39, :cond_3
 
-    .line 3292
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/android/server/enterprise/vpn/knoxvpn/EnterprisePremiumVpnPolicyServiceV2$EnterpriseVpnHandler;->this$0:Lcom/android/server/enterprise/vpn/knoxvpn/EnterprisePremiumVpnPolicyServiceV2;
@@ -619,7 +572,6 @@
 
     invoke-virtual {v0, v1, v11, v2}, Lcom/android/server/enterprise/vpn/knoxvpn/KnoxVpnFirewallHelper;->addMangleNatRulesRange(ILjava/lang/String;I)V
 
-    .line 3293
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/android/server/enterprise/vpn/knoxvpn/EnterprisePremiumVpnPolicyServiceV2$EnterpriseVpnHandler;->this$0:Lcom/android/server/enterprise/vpn/knoxvpn/EnterprisePremiumVpnPolicyServiceV2;
@@ -667,14 +619,12 @@
     # invokes: Lcom/android/server/enterprise/vpn/knoxvpn/EnterprisePremiumVpnPolicyServiceV2;->setDnsSystemProperty(Ljava/lang/String;IILjava/lang/String;)V
     invoke-static {v0, v1, v2, v3, v11}, Lcom/android/server/enterprise/vpn/knoxvpn/EnterprisePremiumVpnPolicyServiceV2;->access$2300(Lcom/android/server/enterprise/vpn/knoxvpn/EnterprisePremiumVpnPolicyServiceV2;Ljava/lang/String;IILjava/lang/String;)V
 
-    .line 3281
     :cond_2
     :goto_4
     add-int/lit8 v12, v12, 0x1
 
     goto/16 :goto_3
 
-    .line 3296
     :cond_3
     move-object/from16 v0, p0
 
@@ -697,7 +647,6 @@
 
     invoke-virtual {v0, v1, v11, v2}, Lcom/android/server/enterprise/vpn/knoxvpn/KnoxVpnFirewallHelper;->addMangleNatRules(ILjava/lang/String;I)V
 
-    .line 3297
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/android/server/enterprise/vpn/knoxvpn/EnterprisePremiumVpnPolicyServiceV2$EnterpriseVpnHandler;->this$0:Lcom/android/server/enterprise/vpn/knoxvpn/EnterprisePremiumVpnPolicyServiceV2;
@@ -717,7 +666,6 @@
 
     goto :goto_4
 
-    .line 3301
     :cond_4
     move-object/from16 v0, p0
 
@@ -738,12 +686,10 @@
 
     invoke-virtual {v0, v11, v1}, Lcom/android/server/enterprise/vpn/knoxvpn/KnoxVpnFirewallHelper;->addIpRouteAndPolicyRules(Ljava/lang/String;I)V
 
-    .line 3302
     move-object/from16 v0, v37
 
     invoke-virtual {v0, v11}, Lcom/android/server/enterprise/vpn/knoxvpn/EnterprisePremiumVpnPolicyServiceV2$ProfileNameVpnEntry;->setInterfaceName(Ljava/lang/String;)V
 
-    .line 3303
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/android/server/enterprise/vpn/knoxvpn/EnterprisePremiumVpnPolicyServiceV2$EnterpriseVpnHandler;->this$0:Lcom/android/server/enterprise/vpn/knoxvpn/EnterprisePremiumVpnPolicyServiceV2;
@@ -763,11 +709,9 @@
 
     move-result v26
 
-    .line 3305
     .local v26, "profileErrorMessageSuccess":Z
     if-eqz v26, :cond_0
 
-    .line 3306
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/android/server/enterprise/vpn/knoxvpn/EnterprisePremiumVpnPolicyServiceV2$EnterpriseVpnHandler;->this$0:Lcom/android/server/enterprise/vpn/knoxvpn/EnterprisePremiumVpnPolicyServiceV2;
@@ -785,7 +729,6 @@
 
     invoke-virtual {v0, v1}, Ljava/util/concurrent/ConcurrentHashMap;->remove(Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 3307
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/android/server/enterprise/vpn/knoxvpn/EnterprisePremiumVpnPolicyServiceV2$EnterpriseVpnHandler;->this$0:Lcom/android/server/enterprise/vpn/knoxvpn/EnterprisePremiumVpnPolicyServiceV2;
@@ -803,7 +746,6 @@
 
     if-lez v39, :cond_5
 
-    .line 3308
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/android/server/enterprise/vpn/knoxvpn/EnterprisePremiumVpnPolicyServiceV2$EnterpriseVpnHandler;->this$0:Lcom/android/server/enterprise/vpn/knoxvpn/EnterprisePremiumVpnPolicyServiceV2;
@@ -815,7 +757,6 @@
 
     goto/16 :goto_0
 
-    .line 3310
     :cond_5
     move-object/from16 v0, p0
 
@@ -828,7 +769,6 @@
 
     goto/16 :goto_0
 
-    .line 3315
     .end local v26    # "profileErrorMessageSuccess":Z
     :pswitch_5
     const/4 v12, 0x0
@@ -838,13 +778,11 @@
 
     if-ge v12, v0, :cond_8
 
-    .line 3316
     aget-object v38, v4, v12
 
     .end local v38    # "vpnObj":Lcom/android/server/enterprise/vpn/knoxvpn/EnterprisePremiumVpnPolicyServiceV2$VpnState;
     check-cast v38, Lcom/android/server/enterprise/vpn/knoxvpn/EnterprisePremiumVpnPolicyServiceV2$VpnState;
 
-    .line 3317
     .restart local v38    # "vpnObj":Lcom/android/server/enterprise/vpn/knoxvpn/EnterprisePremiumVpnPolicyServiceV2$VpnState;
     invoke-virtual/range {v38 .. v38}, Lcom/android/server/enterprise/vpn/knoxvpn/EnterprisePremiumVpnPolicyServiceV2$VpnState;->getState()I
 
@@ -858,12 +796,10 @@
 
     if-ne v0, v1, :cond_7
 
-    .line 3318
     const/16 v39, 0x0
 
     invoke-virtual/range {v38 .. v39}, Lcom/android/server/enterprise/vpn/knoxvpn/EnterprisePremiumVpnPolicyServiceV2$VpnState;->setState(I)V
 
-    .line 3319
     invoke-virtual/range {v38 .. v38}, Lcom/android/server/enterprise/vpn/knoxvpn/EnterprisePremiumVpnPolicyServiceV2$VpnState;->getPackageName()Ljava/lang/String;
 
     move-result-object v39
@@ -895,7 +831,6 @@
 
     if-eqz v39, :cond_6
 
-    .line 3320
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/android/server/enterprise/vpn/knoxvpn/EnterprisePremiumVpnPolicyServiceV2$EnterpriseVpnHandler;->this$0:Lcom/android/server/enterprise/vpn/knoxvpn/EnterprisePremiumVpnPolicyServiceV2;
@@ -917,7 +852,6 @@
 
     invoke-virtual/range {v39 .. v42}, Lcom/android/server/enterprise/vpn/knoxvpn/KnoxVpnFirewallHelper;->addMangleNatRulesRange(ILjava/lang/String;I)V
 
-    .line 3321
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/android/server/enterprise/vpn/knoxvpn/EnterprisePremiumVpnPolicyServiceV2$EnterpriseVpnHandler;->this$0:Lcom/android/server/enterprise/vpn/knoxvpn/EnterprisePremiumVpnPolicyServiceV2;
@@ -937,7 +871,6 @@
 
     invoke-virtual/range {v39 .. v41}, Lcom/android/server/enterprise/vpn/knoxvpn/KnoxVpnFirewallHelper;->removeIpRouteAndPolicyRules(Ljava/lang/String;I)V
 
-    .line 3322
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/android/server/enterprise/vpn/knoxvpn/EnterprisePremiumVpnPolicyServiceV2$EnterpriseVpnHandler;->this$0:Lcom/android/server/enterprise/vpn/knoxvpn/EnterprisePremiumVpnPolicyServiceV2;
@@ -985,18 +918,15 @@
     # invokes: Lcom/android/server/enterprise/vpn/knoxvpn/EnterprisePremiumVpnPolicyServiceV2;->unsetDnsSystemProperty(Ljava/lang/String;II)V
     invoke-static {v0, v1, v2, v3}, Lcom/android/server/enterprise/vpn/knoxvpn/EnterprisePremiumVpnPolicyServiceV2;->access$2700(Lcom/android/server/enterprise/vpn/knoxvpn/EnterprisePremiumVpnPolicyServiceV2;Ljava/lang/String;II)V
 
-    .line 3323
     const/16 v39, 0x0
 
     invoke-virtual/range {v38 .. v39}, Lcom/android/server/enterprise/vpn/knoxvpn/EnterprisePremiumVpnPolicyServiceV2$VpnState;->setInterface(Ljava/lang/String;)V
 
-    .line 3315
     :goto_6
     add-int/lit8 v12, v12, 0x1
 
     goto/16 :goto_5
 
-    .line 3326
     :cond_6
     move-object/from16 v0, p0
 
@@ -1019,7 +949,6 @@
 
     invoke-virtual/range {v39 .. v42}, Lcom/android/server/enterprise/vpn/knoxvpn/KnoxVpnFirewallHelper;->addMangleNatRules(ILjava/lang/String;I)V
 
-    .line 3327
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/android/server/enterprise/vpn/knoxvpn/EnterprisePremiumVpnPolicyServiceV2$EnterpriseVpnHandler;->this$0:Lcom/android/server/enterprise/vpn/knoxvpn/EnterprisePremiumVpnPolicyServiceV2;
@@ -1039,7 +968,6 @@
 
     invoke-virtual/range {v39 .. v41}, Lcom/android/server/enterprise/vpn/knoxvpn/KnoxVpnFirewallHelper;->removeIpRouteAndPolicyRules(Ljava/lang/String;I)V
 
-    .line 3328
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/android/server/enterprise/vpn/knoxvpn/EnterprisePremiumVpnPolicyServiceV2$EnterpriseVpnHandler;->this$0:Lcom/android/server/enterprise/vpn/knoxvpn/EnterprisePremiumVpnPolicyServiceV2;
@@ -1065,7 +993,6 @@
     # invokes: Lcom/android/server/enterprise/vpn/knoxvpn/EnterprisePremiumVpnPolicyServiceV2;->unsetDnsSystemProperty(Ljava/lang/String;II)V
     invoke-static {v0, v1, v2, v3}, Lcom/android/server/enterprise/vpn/knoxvpn/EnterprisePremiumVpnPolicyServiceV2;->access$2700(Lcom/android/server/enterprise/vpn/knoxvpn/EnterprisePremiumVpnPolicyServiceV2;Ljava/lang/String;II)V
 
-    .line 3331
     :cond_7
     const/16 v39, 0x0
 
@@ -1073,7 +1000,6 @@
 
     goto :goto_6
 
-    .line 3333
     :cond_8
     const/16 v39, 0x0
 
@@ -1083,7 +1009,6 @@
 
     invoke-virtual {v0, v1}, Lcom/android/server/enterprise/vpn/knoxvpn/EnterprisePremiumVpnPolicyServiceV2$ProfileNameVpnEntry;->setInterfaceName(Ljava/lang/String;)V
 
-    .line 3334
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/android/server/enterprise/vpn/knoxvpn/EnterprisePremiumVpnPolicyServiceV2$EnterpriseVpnHandler;->this$0:Lcom/android/server/enterprise/vpn/knoxvpn/EnterprisePremiumVpnPolicyServiceV2;
@@ -1097,7 +1022,6 @@
     # invokes: Lcom/android/server/enterprise/vpn/knoxvpn/EnterprisePremiumVpnPolicyServiceV2;->createNotification(Ljava/lang/String;Ljava/lang/String;)V
     invoke-static {v0, v1, v11}, Lcom/android/server/enterprise/vpn/knoxvpn/EnterprisePremiumVpnPolicyServiceV2;->access$2800(Lcom/android/server/enterprise/vpn/knoxvpn/EnterprisePremiumVpnPolicyServiceV2;Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 3335
     # getter for: Lcom/android/server/enterprise/vpn/knoxvpn/EnterprisePremiumVpnPolicyServiceV2;->DBG:Z
     invoke-static {}, Lcom/android/server/enterprise/vpn/knoxvpn/EnterprisePremiumVpnPolicyServiceV2;->access$700()Z
 
@@ -1114,7 +1038,6 @@
     # invokes: Lcom/android/server/enterprise/vpn/knoxvpn/EnterprisePremiumVpnPolicyServiceV2;->printPackageVpnMap()V
     invoke-static/range {v39 .. v39}, Lcom/android/server/enterprise/vpn/knoxvpn/EnterprisePremiumVpnPolicyServiceV2;->access$2900(Lcom/android/server/enterprise/vpn/knoxvpn/EnterprisePremiumVpnPolicyServiceV2;)V
 
-    .line 3336
     :cond_9
     # getter for: Lcom/android/server/enterprise/vpn/knoxvpn/EnterprisePremiumVpnPolicyServiceV2;->DBG:Z
     invoke-static {}, Lcom/android/server/enterprise/vpn/knoxvpn/EnterprisePremiumVpnPolicyServiceV2;->access$700()Z
@@ -1134,7 +1057,6 @@
 
     goto/16 :goto_0
 
-    .line 3351
     :cond_a
     move-object/from16 v0, p0
 
@@ -1161,7 +1083,6 @@
 
     invoke-virtual {v0, v1, v2, v3}, Lcom/android/server/enterprise/vpn/knoxvpn/KnoxVpnFirewallHelper;->addMangleNatRules(ILjava/lang/String;I)V
 
-    .line 3352
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/android/server/enterprise/vpn/knoxvpn/EnterprisePremiumVpnPolicyServiceV2$EnterpriseVpnHandler;->this$0:Lcom/android/server/enterprise/vpn/knoxvpn/EnterprisePremiumVpnPolicyServiceV2;
@@ -1181,7 +1102,6 @@
 
     invoke-virtual/range {v39 .. v41}, Lcom/android/server/enterprise/vpn/knoxvpn/KnoxVpnFirewallHelper;->removeIpRouteAndPolicyRules(Ljava/lang/String;I)V
 
-    .line 3353
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/android/server/enterprise/vpn/knoxvpn/EnterprisePremiumVpnPolicyServiceV2$EnterpriseVpnHandler;->this$0:Lcom/android/server/enterprise/vpn/knoxvpn/EnterprisePremiumVpnPolicyServiceV2;
@@ -1199,7 +1119,6 @@
     # invokes: Lcom/android/server/enterprise/vpn/knoxvpn/EnterprisePremiumVpnPolicyServiceV2;->unsetDnsSystemProperty(Ljava/lang/String;II)V
     invoke-static {v0, v1, v2, v3}, Lcom/android/server/enterprise/vpn/knoxvpn/EnterprisePremiumVpnPolicyServiceV2;->access$2700(Lcom/android/server/enterprise/vpn/knoxvpn/EnterprisePremiumVpnPolicyServiceV2;Ljava/lang/String;II)V
 
-    .line 3355
     :cond_b
     const/16 v39, 0x0
 
@@ -1207,7 +1126,6 @@
 
     goto/16 :goto_2
 
-    .line 3357
     :cond_c
     move-object/from16 v0, p0
 
@@ -1222,7 +1140,6 @@
     # invokes: Lcom/android/server/enterprise/vpn/knoxvpn/EnterprisePremiumVpnPolicyServiceV2;->createNotification(Ljava/lang/String;Ljava/lang/String;)V
     invoke-static {v0, v1, v11}, Lcom/android/server/enterprise/vpn/knoxvpn/EnterprisePremiumVpnPolicyServiceV2;->access$2800(Lcom/android/server/enterprise/vpn/knoxvpn/EnterprisePremiumVpnPolicyServiceV2;Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 3358
     const/16 v39, 0x0
 
     move-object/from16 v0, v37
@@ -1231,7 +1148,6 @@
 
     invoke-virtual {v0, v1}, Lcom/android/server/enterprise/vpn/knoxvpn/EnterprisePremiumVpnPolicyServiceV2$ProfileNameVpnEntry;->setInterfaceName(Ljava/lang/String;)V
 
-    .line 3359
     # getter for: Lcom/android/server/enterprise/vpn/knoxvpn/EnterprisePremiumVpnPolicyServiceV2;->DBG:Z
     invoke-static {}, Lcom/android/server/enterprise/vpn/knoxvpn/EnterprisePremiumVpnPolicyServiceV2;->access$700()Z
 
@@ -1248,7 +1164,6 @@
     # invokes: Lcom/android/server/enterprise/vpn/knoxvpn/EnterprisePremiumVpnPolicyServiceV2;->printPackageVpnMap()V
     invoke-static/range {v39 .. v39}, Lcom/android/server/enterprise/vpn/knoxvpn/EnterprisePremiumVpnPolicyServiceV2;->access$2900(Lcom/android/server/enterprise/vpn/knoxvpn/EnterprisePremiumVpnPolicyServiceV2;)V
 
-    .line 3360
     :cond_d
     # getter for: Lcom/android/server/enterprise/vpn/knoxvpn/EnterprisePremiumVpnPolicyServiceV2;->DBG:Z
     invoke-static {}, Lcom/android/server/enterprise/vpn/knoxvpn/EnterprisePremiumVpnPolicyServiceV2;->access$700()Z
@@ -1268,22 +1183,19 @@
 
     goto/16 :goto_0
 
-    .line 3363
     :pswitch_6
     const/16 v28, 0x0
 
-    .line 3367
     .local v28, "profileRunning":Z
     # getter for: Lcom/android/server/enterprise/vpn/knoxvpn/EnterprisePremiumVpnPolicyServiceV2;->TAG:Ljava/lang/String;
     invoke-static {}, Lcom/android/server/enterprise/vpn/knoxvpn/EnterprisePremiumVpnPolicyServiceV2;->access$100()Ljava/lang/String;
 
     move-result-object v39
 
-    const-string/jumbo v40, "vpn handle : Handling VPN CONNECTING state on Network Change"
+    const-string v40, "vpn handle : Handling VPN CONNECTING state on Network Change"
 
     invoke-static/range {v39 .. v40}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 3368
     const/4 v12, 0x0
 
     :goto_7
@@ -1291,13 +1203,11 @@
 
     if-ge v12, v0, :cond_10
 
-    .line 3369
     aget-object v38, v4, v12
 
     .end local v38    # "vpnObj":Lcom/android/server/enterprise/vpn/knoxvpn/EnterprisePremiumVpnPolicyServiceV2$VpnState;
     check-cast v38, Lcom/android/server/enterprise/vpn/knoxvpn/EnterprisePremiumVpnPolicyServiceV2$VpnState;
 
-    .line 3370
     .restart local v38    # "vpnObj":Lcom/android/server/enterprise/vpn/knoxvpn/EnterprisePremiumVpnPolicyServiceV2$VpnState;
     invoke-virtual/range {v38 .. v38}, Lcom/android/server/enterprise/vpn/knoxvpn/EnterprisePremiumVpnPolicyServiceV2$VpnState;->getState()I
 
@@ -1311,15 +1221,12 @@
 
     if-ne v0, v1, :cond_f
 
-    .line 3371
     const/16 v28, 0x1
 
-    .line 3372
     const/16 v39, 0x0
 
     invoke-virtual/range {v38 .. v39}, Lcom/android/server/enterprise/vpn/knoxvpn/EnterprisePremiumVpnPolicyServiceV2$VpnState;->setState(I)V
 
-    .line 3373
     invoke-virtual/range {v38 .. v38}, Lcom/android/server/enterprise/vpn/knoxvpn/EnterprisePremiumVpnPolicyServiceV2$VpnState;->getPackageName()Ljava/lang/String;
 
     move-result-object v39
@@ -1351,7 +1258,6 @@
 
     if-eqz v39, :cond_e
 
-    .line 3374
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/android/server/enterprise/vpn/knoxvpn/EnterprisePremiumVpnPolicyServiceV2$EnterpriseVpnHandler;->this$0:Lcom/android/server/enterprise/vpn/knoxvpn/EnterprisePremiumVpnPolicyServiceV2;
@@ -1373,7 +1279,6 @@
 
     invoke-virtual/range {v39 .. v42}, Lcom/android/server/enterprise/vpn/knoxvpn/KnoxVpnFirewallHelper;->addMangleNatRulesRange(ILjava/lang/String;I)V
 
-    .line 3375
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/android/server/enterprise/vpn/knoxvpn/EnterprisePremiumVpnPolicyServiceV2$EnterpriseVpnHandler;->this$0:Lcom/android/server/enterprise/vpn/knoxvpn/EnterprisePremiumVpnPolicyServiceV2;
@@ -1393,7 +1298,6 @@
 
     invoke-virtual/range {v39 .. v41}, Lcom/android/server/enterprise/vpn/knoxvpn/KnoxVpnFirewallHelper;->removeIpRouteAndPolicyRules(Ljava/lang/String;I)V
 
-    .line 3376
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/android/server/enterprise/vpn/knoxvpn/EnterprisePremiumVpnPolicyServiceV2$EnterpriseVpnHandler;->this$0:Lcom/android/server/enterprise/vpn/knoxvpn/EnterprisePremiumVpnPolicyServiceV2;
@@ -1441,18 +1345,15 @@
     # invokes: Lcom/android/server/enterprise/vpn/knoxvpn/EnterprisePremiumVpnPolicyServiceV2;->unsetDnsSystemProperty(Ljava/lang/String;II)V
     invoke-static {v0, v1, v2, v3}, Lcom/android/server/enterprise/vpn/knoxvpn/EnterprisePremiumVpnPolicyServiceV2;->access$2700(Lcom/android/server/enterprise/vpn/knoxvpn/EnterprisePremiumVpnPolicyServiceV2;Ljava/lang/String;II)V
 
-    .line 3377
     const/16 v39, 0x0
 
     invoke-virtual/range {v38 .. v39}, Lcom/android/server/enterprise/vpn/knoxvpn/EnterprisePremiumVpnPolicyServiceV2$VpnState;->setInterface(Ljava/lang/String;)V
 
-    .line 3368
     :goto_8
     add-int/lit8 v12, v12, 0x1
 
     goto/16 :goto_7
 
-    .line 3380
     :cond_e
     move-object/from16 v0, p0
 
@@ -1475,7 +1376,6 @@
 
     invoke-virtual/range {v39 .. v42}, Lcom/android/server/enterprise/vpn/knoxvpn/KnoxVpnFirewallHelper;->addMangleNatRules(ILjava/lang/String;I)V
 
-    .line 3381
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/android/server/enterprise/vpn/knoxvpn/EnterprisePremiumVpnPolicyServiceV2$EnterpriseVpnHandler;->this$0:Lcom/android/server/enterprise/vpn/knoxvpn/EnterprisePremiumVpnPolicyServiceV2;
@@ -1495,7 +1395,6 @@
 
     invoke-virtual/range {v39 .. v41}, Lcom/android/server/enterprise/vpn/knoxvpn/KnoxVpnFirewallHelper;->removeIpRouteAndPolicyRules(Ljava/lang/String;I)V
 
-    .line 3382
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/android/server/enterprise/vpn/knoxvpn/EnterprisePremiumVpnPolicyServiceV2$EnterpriseVpnHandler;->this$0:Lcom/android/server/enterprise/vpn/knoxvpn/EnterprisePremiumVpnPolicyServiceV2;
@@ -1521,7 +1420,6 @@
     # invokes: Lcom/android/server/enterprise/vpn/knoxvpn/EnterprisePremiumVpnPolicyServiceV2;->unsetDnsSystemProperty(Ljava/lang/String;II)V
     invoke-static {v0, v1, v2, v3}, Lcom/android/server/enterprise/vpn/knoxvpn/EnterprisePremiumVpnPolicyServiceV2;->access$2700(Lcom/android/server/enterprise/vpn/knoxvpn/EnterprisePremiumVpnPolicyServiceV2;Ljava/lang/String;II)V
 
-    .line 3385
     :cond_f
     const/16 v39, 0x0
 
@@ -1529,11 +1427,9 @@
 
     goto :goto_8
 
-    .line 3387
     :cond_10
     if-eqz v28, :cond_11
 
-    .line 3388
     const/16 v39, 0x0
 
     move-object/from16 v0, v37
@@ -1542,7 +1438,6 @@
 
     invoke-virtual {v0, v1}, Lcom/android/server/enterprise/vpn/knoxvpn/EnterprisePremiumVpnPolicyServiceV2$ProfileNameVpnEntry;->setInterfaceName(Ljava/lang/String;)V
 
-    .line 3389
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/android/server/enterprise/vpn/knoxvpn/EnterprisePremiumVpnPolicyServiceV2$EnterpriseVpnHandler;->this$0:Lcom/android/server/enterprise/vpn/knoxvpn/EnterprisePremiumVpnPolicyServiceV2;
@@ -1556,7 +1451,6 @@
     # invokes: Lcom/android/server/enterprise/vpn/knoxvpn/EnterprisePremiumVpnPolicyServiceV2;->createNotification(Ljava/lang/String;Ljava/lang/String;)V
     invoke-static {v0, v1, v11}, Lcom/android/server/enterprise/vpn/knoxvpn/EnterprisePremiumVpnPolicyServiceV2;->access$2800(Lcom/android/server/enterprise/vpn/knoxvpn/EnterprisePremiumVpnPolicyServiceV2;Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 3391
     :cond_11
     # getter for: Lcom/android/server/enterprise/vpn/knoxvpn/EnterprisePremiumVpnPolicyServiceV2;->DBG:Z
     invoke-static {}, Lcom/android/server/enterprise/vpn/knoxvpn/EnterprisePremiumVpnPolicyServiceV2;->access$700()Z
@@ -1574,7 +1468,6 @@
     # invokes: Lcom/android/server/enterprise/vpn/knoxvpn/EnterprisePremiumVpnPolicyServiceV2;->printPackageVpnMap()V
     invoke-static/range {v39 .. v39}, Lcom/android/server/enterprise/vpn/knoxvpn/EnterprisePremiumVpnPolicyServiceV2;->access$2900(Lcom/android/server/enterprise/vpn/knoxvpn/EnterprisePremiumVpnPolicyServiceV2;)V
 
-    .line 3392
     :cond_12
     # getter for: Lcom/android/server/enterprise/vpn/knoxvpn/EnterprisePremiumVpnPolicyServiceV2;->DBG:Z
     invoke-static {}, Lcom/android/server/enterprise/vpn/knoxvpn/EnterprisePremiumVpnPolicyServiceV2;->access$700()Z
@@ -1594,7 +1487,6 @@
 
     goto/16 :goto_0
 
-    .line 3395
     .end local v28    # "profileRunning":Z
     :pswitch_7
     # getter for: Lcom/android/server/enterprise/vpn/knoxvpn/EnterprisePremiumVpnPolicyServiceV2;->TAG:Ljava/lang/String;
@@ -1606,7 +1498,7 @@
 
     invoke-direct/range {v40 .. v40}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v41, "vpn handle : The Start Connection callback for remove vpn connection method is recieved and its state is  "
+    const-string v41, "vpn handle : The Start Connection callback for remove vpn connection method is recieved and its state is  "
 
     invoke-virtual/range {v40 .. v41}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -1642,13 +1534,11 @@
 
     goto/16 :goto_0
 
-    .line 3399
     :cond_13
     sparse-switch v32, :sswitch_data_0
 
     goto/16 :goto_0
 
-    .line 3404
     :goto_9
     :sswitch_0
     # getter for: Lcom/android/server/enterprise/vpn/knoxvpn/EnterprisePremiumVpnPolicyServiceV2;->TAG:Ljava/lang/String;
@@ -1656,11 +1546,10 @@
 
     move-result-object v39
 
-    const-string/jumbo v40, "vpn handle : ready status : VPN disconnect successfully"
+    const-string v40, "vpn handle : ready status : VPN disconnect successfully"
 
     invoke-static/range {v39 .. v40}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 3405
     const/4 v12, 0x0
 
     :goto_a
@@ -1668,13 +1557,11 @@
 
     if-ge v12, v0, :cond_16
 
-    .line 3406
     aget-object v38, v4, v12
 
     .end local v38    # "vpnObj":Lcom/android/server/enterprise/vpn/knoxvpn/EnterprisePremiumVpnPolicyServiceV2$VpnState;
     check-cast v38, Lcom/android/server/enterprise/vpn/knoxvpn/EnterprisePremiumVpnPolicyServiceV2$VpnState;
 
-    .line 3407
     .restart local v38    # "vpnObj":Lcom/android/server/enterprise/vpn/knoxvpn/EnterprisePremiumVpnPolicyServiceV2$VpnState;
     invoke-virtual/range {v38 .. v38}, Lcom/android/server/enterprise/vpn/knoxvpn/EnterprisePremiumVpnPolicyServiceV2$VpnState;->getState()I
 
@@ -1688,17 +1575,14 @@
 
     if-ne v0, v1, :cond_15
 
-    .line 3408
     const/16 v39, 0x0
 
     invoke-virtual/range {v38 .. v39}, Lcom/android/server/enterprise/vpn/knoxvpn/EnterprisePremiumVpnPolicyServiceV2$VpnState;->setState(I)V
 
-    .line 3409
     invoke-virtual/range {v38 .. v38}, Lcom/android/server/enterprise/vpn/knoxvpn/EnterprisePremiumVpnPolicyServiceV2$VpnState;->getUid()I
 
     move-result v34
 
-    .line 3410
     invoke-virtual/range {v38 .. v38}, Lcom/android/server/enterprise/vpn/knoxvpn/EnterprisePremiumVpnPolicyServiceV2$VpnState;->getPackageName()Ljava/lang/String;
 
     move-result-object v39
@@ -1730,7 +1614,6 @@
 
     if-eqz v39, :cond_14
 
-    .line 3411
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/android/server/enterprise/vpn/knoxvpn/EnterprisePremiumVpnPolicyServiceV2$EnterpriseVpnHandler;->this$0:Lcom/android/server/enterprise/vpn/knoxvpn/EnterprisePremiumVpnPolicyServiceV2;
@@ -1754,7 +1637,6 @@
 
     invoke-virtual/range {v39 .. v42}, Lcom/android/server/enterprise/vpn/knoxvpn/KnoxVpnFirewallHelper;->removeMangleNatRulesRange(ILjava/lang/String;I)V
 
-    .line 3412
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/android/server/enterprise/vpn/knoxvpn/EnterprisePremiumVpnPolicyServiceV2$EnterpriseVpnHandler;->this$0:Lcom/android/server/enterprise/vpn/knoxvpn/EnterprisePremiumVpnPolicyServiceV2;
@@ -1802,18 +1684,15 @@
     # invokes: Lcom/android/server/enterprise/vpn/knoxvpn/EnterprisePremiumVpnPolicyServiceV2;->unsetDnsSystemProperty(Ljava/lang/String;II)V
     invoke-static {v0, v1, v2, v3}, Lcom/android/server/enterprise/vpn/knoxvpn/EnterprisePremiumVpnPolicyServiceV2;->access$2700(Lcom/android/server/enterprise/vpn/knoxvpn/EnterprisePremiumVpnPolicyServiceV2;Ljava/lang/String;II)V
 
-    .line 3413
     const/16 v39, 0x0
 
     invoke-virtual/range {v38 .. v39}, Lcom/android/server/enterprise/vpn/knoxvpn/EnterprisePremiumVpnPolicyServiceV2$VpnState;->setInterface(Ljava/lang/String;)V
 
-    .line 3405
     :goto_b
     add-int/lit8 v12, v12, 0x1
 
     goto/16 :goto_a
 
-    .line 3401
     :sswitch_1
     # getter for: Lcom/android/server/enterprise/vpn/knoxvpn/EnterprisePremiumVpnPolicyServiceV2;->TAG:Ljava/lang/String;
     invoke-static {}, Lcom/android/server/enterprise/vpn/knoxvpn/EnterprisePremiumVpnPolicyServiceV2;->access$100()Ljava/lang/String;
@@ -1824,7 +1703,7 @@
 
     invoke-direct/range {v40 .. v40}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v41, "vpn handle : fail status : VPN disconnect failure"
+    const-string v41, "vpn handle : fail status : VPN disconnect failure"
 
     invoke-virtual/range {v40 .. v41}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -1844,7 +1723,6 @@
 
     goto/16 :goto_9
 
-    .line 3416
     :cond_14
     move-object/from16 v0, p0
 
@@ -1869,7 +1747,6 @@
 
     invoke-virtual/range {v39 .. v42}, Lcom/android/server/enterprise/vpn/knoxvpn/KnoxVpnFirewallHelper;->removeMangleNatRules(ILjava/lang/String;I)V
 
-    .line 3417
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/android/server/enterprise/vpn/knoxvpn/EnterprisePremiumVpnPolicyServiceV2$EnterpriseVpnHandler;->this$0:Lcom/android/server/enterprise/vpn/knoxvpn/EnterprisePremiumVpnPolicyServiceV2;
@@ -1887,7 +1764,6 @@
     # invokes: Lcom/android/server/enterprise/vpn/knoxvpn/EnterprisePremiumVpnPolicyServiceV2;->unsetDnsSystemProperty(Ljava/lang/String;II)V
     invoke-static {v0, v1, v2, v3}, Lcom/android/server/enterprise/vpn/knoxvpn/EnterprisePremiumVpnPolicyServiceV2;->access$2700(Lcom/android/server/enterprise/vpn/knoxvpn/EnterprisePremiumVpnPolicyServiceV2;Ljava/lang/String;II)V
 
-    .line 3419
     :cond_15
     const/16 v39, 0x0
 
@@ -1895,7 +1771,6 @@
 
     goto :goto_b
 
-    .line 3421
     :cond_16
     move-object/from16 v0, p0
 
@@ -1916,7 +1791,6 @@
 
     invoke-virtual/range {v39 .. v41}, Lcom/android/server/enterprise/vpn/knoxvpn/KnoxVpnFirewallHelper;->removeIpRouteAndPolicyRules(Ljava/lang/String;I)V
 
-    .line 3422
     const/16 v39, 0x0
 
     move-object/from16 v0, v37
@@ -1925,7 +1799,6 @@
 
     invoke-virtual {v0, v1}, Lcom/android/server/enterprise/vpn/knoxvpn/EnterprisePremiumVpnPolicyServiceV2$ProfileNameVpnEntry;->setInterfaceName(Ljava/lang/String;)V
 
-    .line 3423
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/android/server/enterprise/vpn/knoxvpn/EnterprisePremiumVpnPolicyServiceV2$EnterpriseVpnHandler;->this$0:Lcom/android/server/enterprise/vpn/knoxvpn/EnterprisePremiumVpnPolicyServiceV2;
@@ -1945,11 +1818,9 @@
 
     move-result v26
 
-    .line 3424
     .restart local v26    # "profileErrorMessageSuccess":Z
     if-eqz v26, :cond_17
 
-    .line 3425
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/android/server/enterprise/vpn/knoxvpn/EnterprisePremiumVpnPolicyServiceV2$EnterpriseVpnHandler;->this$0:Lcom/android/server/enterprise/vpn/knoxvpn/EnterprisePremiumVpnPolicyServiceV2;
@@ -1967,7 +1838,6 @@
 
     invoke-virtual {v0, v1}, Ljava/util/concurrent/ConcurrentHashMap;->remove(Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 3426
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/android/server/enterprise/vpn/knoxvpn/EnterprisePremiumVpnPolicyServiceV2$EnterpriseVpnHandler;->this$0:Lcom/android/server/enterprise/vpn/knoxvpn/EnterprisePremiumVpnPolicyServiceV2;
@@ -1985,7 +1855,6 @@
 
     if-lez v39, :cond_18
 
-    .line 3427
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/android/server/enterprise/vpn/knoxvpn/EnterprisePremiumVpnPolicyServiceV2$EnterpriseVpnHandler;->this$0:Lcom/android/server/enterprise/vpn/knoxvpn/EnterprisePremiumVpnPolicyServiceV2;
@@ -1995,7 +1864,6 @@
     # invokes: Lcom/android/server/enterprise/vpn/knoxvpn/EnterprisePremiumVpnPolicyServiceV2;->createNotification()V
     invoke-static/range {v39 .. v39}, Lcom/android/server/enterprise/vpn/knoxvpn/EnterprisePremiumVpnPolicyServiceV2;->access$2500(Lcom/android/server/enterprise/vpn/knoxvpn/EnterprisePremiumVpnPolicyServiceV2;)V
 
-    .line 3432
     :cond_17
     :goto_c
     move-object/from16 v0, p0
@@ -2009,7 +1877,6 @@
 
     goto/16 :goto_0
 
-    .line 3429
     :cond_18
     move-object/from16 v0, p0
 
@@ -2022,7 +1889,6 @@
 
     goto :goto_c
 
-    .line 3437
     .end local v4    # "array":[Ljava/lang/Object;
     .end local v17    # "length":I
     .end local v18    # "list":Ljava/util/ArrayList;
@@ -2033,13 +1899,12 @@
 
     move-result-object v39
 
-    const-string/jumbo v40, "vpn handle : ProfileNameVpnEntry returned null in handleMessage"
+    const-string v40, "vpn handle : ProfileNameVpnEntry returned null in handleMessage"
 
     invoke-static/range {v39 .. v40}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
     goto/16 :goto_0
 
-    .line 3441
     .end local v12    # "i":I
     .end local v31    # "state":I
     .end local v37    # "vpnEntry":Lcom/android/server/enterprise/vpn/knoxvpn/EnterprisePremiumVpnPolicyServiceV2$ProfileNameVpnEntry;
@@ -2049,12 +1914,11 @@
 
     move-result-object v39
 
-    const-string/jumbo v40, "vpn handle : Handle MSG package add"
+    const-string v40, "vpn handle : Handle MSG package add"
 
     invoke-static/range {v39 .. v40}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 3442
-    const-string/jumbo v39, "uid"
+    const-string v39, "uid"
 
     move-object/from16 v0, v22
 
@@ -2064,8 +1928,7 @@
 
     move-result v34
 
-    .line 3443
-    const-string/jumbo v39, "package"
+    const-string v39, "package"
 
     move-object/from16 v0, v22
 
@@ -2075,7 +1938,6 @@
 
     move-result-object v24
 
-    .line 3444
     const-string v39, "new_install_or_update"
 
     move-object/from16 v0, v22
@@ -2086,7 +1948,6 @@
 
     move-result v5
 
-    .line 3445
     # getter for: Lcom/android/server/enterprise/vpn/knoxvpn/EnterprisePremiumVpnPolicyServiceV2;->DBG:Z
     invoke-static {}, Lcom/android/server/enterprise/vpn/knoxvpn/EnterprisePremiumVpnPolicyServiceV2;->access$700()Z
 
@@ -2103,7 +1964,7 @@
 
     invoke-direct/range {v40 .. v40}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v41, "vpn handle : The install type value during package added is "
+    const-string v41, "vpn handle : The install type value during package added is "
 
     invoke-virtual/range {v40 .. v41}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -2121,11 +1982,9 @@
 
     invoke-static/range {v39 .. v40}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 3446
     :cond_1a
     if-eqz v24, :cond_0
 
-    .line 3447
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/android/server/enterprise/vpn/knoxvpn/EnterprisePremiumVpnPolicyServiceV2$EnterpriseVpnHandler;->this$0:Lcom/android/server/enterprise/vpn/knoxvpn/EnterprisePremiumVpnPolicyServiceV2;
@@ -2151,7 +2010,6 @@
 
     move-result-object v33
 
-    .line 3448
     .local v33, "transformedPackageName":Ljava/lang/String;
     # getter for: Lcom/android/server/enterprise/vpn/knoxvpn/EnterprisePremiumVpnPolicyServiceV2;->DBG:Z
     invoke-static {}, Lcom/android/server/enterprise/vpn/knoxvpn/EnterprisePremiumVpnPolicyServiceV2;->access$700()Z
@@ -2189,7 +2047,6 @@
 
     invoke-static/range {v39 .. v40}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 3449
     :cond_1b
     # getter for: Lcom/android/server/enterprise/vpn/knoxvpn/EnterprisePremiumVpnPolicyServiceV2;->DBG:Z
     invoke-static {}, Lcom/android/server/enterprise/vpn/knoxvpn/EnterprisePremiumVpnPolicyServiceV2;->access$700()Z
@@ -2207,7 +2064,7 @@
 
     invoke-direct/range {v40 .. v40}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v41, "vpn handle : vpn handle : package add : PackageName and UID : "
+    const-string v41, "vpn handle : vpn handle : package add : PackageName and UID : "
 
     invoke-virtual/range {v40 .. v41}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -2241,7 +2098,6 @@
 
     invoke-static/range {v39 .. v40}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 3450
     :cond_1c
     const-string v39, "com.mocana.vpn.android"
 
@@ -2261,7 +2117,6 @@
 
     if-nez v39, :cond_1f
 
-    .line 3451
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/android/server/enterprise/vpn/knoxvpn/EnterprisePremiumVpnPolicyServiceV2$EnterpriseVpnHandler;->this$0:Lcom/android/server/enterprise/vpn/knoxvpn/EnterprisePremiumVpnPolicyServiceV2;
@@ -2275,7 +2130,6 @@
 
     if-eqz v39, :cond_0
 
-    .line 3452
     # getter for: Lcom/android/server/enterprise/vpn/knoxvpn/EnterprisePremiumVpnPolicyServiceV2;->DBG:Z
     invoke-static {}, Lcom/android/server/enterprise/vpn/knoxvpn/EnterprisePremiumVpnPolicyServiceV2;->access$700()Z
 
@@ -2288,15 +2142,13 @@
 
     move-result-object v39
 
-    const-string/jumbo v40, "some vpn profile belonging to VPN 1.0 present, so the mocana binding is going to happen, when package is installed"
+    const-string v40, "some vpn profile belonging to VPN 1.0 present, so the mocana binding is going to happen, when package is installed"
 
     invoke-static/range {v39 .. v40}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 3453
     :cond_1d
     if-nez v5, :cond_1e
 
-    .line 3454
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/android/server/enterprise/vpn/knoxvpn/EnterprisePremiumVpnPolicyServiceV2$EnterpriseVpnHandler;->this$0:Lcom/android/server/enterprise/vpn/knoxvpn/EnterprisePremiumVpnPolicyServiceV2;
@@ -2308,7 +2160,6 @@
     # setter for: Lcom/android/server/enterprise/vpn/knoxvpn/EnterprisePremiumVpnPolicyServiceV2;->kvpn_install_type:Z
     invoke-static/range {v39 .. v40}, Lcom/android/server/enterprise/vpn/knoxvpn/EnterprisePremiumVpnPolicyServiceV2;->access$302(Lcom/android/server/enterprise/vpn/knoxvpn/EnterprisePremiumVpnPolicyServiceV2;Z)Z
 
-    .line 3456
     :cond_1e
     move-object/from16 v0, p0
 
@@ -2320,7 +2171,6 @@
 
     goto/16 :goto_0
 
-    .line 3458
     :cond_1f
     move-object/from16 v0, p0
 
@@ -2341,17 +2191,15 @@
 
     if-eqz v39, :cond_0
 
-    .line 3459
     # getter for: Lcom/android/server/enterprise/vpn/knoxvpn/EnterprisePremiumVpnPolicyServiceV2;->TAG:Ljava/lang/String;
     invoke-static {}, Lcom/android/server/enterprise/vpn/knoxvpn/EnterprisePremiumVpnPolicyServiceV2;->access$100()Ljava/lang/String;
 
     move-result-object v39
 
-    const-string/jumbo v40, "vpn handle : package add : Package found in DB with rule proceed with logic"
+    const-string v40, "vpn handle : package add : Package found in DB with rule proceed with logic"
 
     invoke-static/range {v39 .. v40}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 3460
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/android/server/enterprise/vpn/knoxvpn/EnterprisePremiumVpnPolicyServiceV2$EnterpriseVpnHandler;->this$0:Lcom/android/server/enterprise/vpn/knoxvpn/EnterprisePremiumVpnPolicyServiceV2;
@@ -2377,7 +2225,6 @@
 
     invoke-virtual {v0, v1, v2, v3}, Lcom/android/server/enterprise/vpn/knoxvpn/KnoxVpnFirewallHelper;->addMangleNatRules(ILjava/lang/String;I)V
 
-    .line 3461
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/android/server/enterprise/vpn/knoxvpn/EnterprisePremiumVpnPolicyServiceV2$EnterpriseVpnHandler;->this$0:Lcom/android/server/enterprise/vpn/knoxvpn/EnterprisePremiumVpnPolicyServiceV2;
@@ -2395,7 +2242,6 @@
 
     move-result-object v36
 
-    .line 3464
     .local v36, "vpn":Lcom/android/server/enterprise/vpn/knoxvpn/EnterprisePremiumVpnPolicyServiceV2$VpnState;
     move-object/from16 v0, p0
 
@@ -2412,16 +2258,13 @@
 
     move-result-object v21
 
-    .line 3465
     .local v21, "mEntProvider":Lcom/android/server/enterprise/billing/EnterpriseBillingEngine;
     if-eqz v21, :cond_20
 
-    .line 3466
     new-instance v25, Ljava/util/HashMap;
 
     invoke-direct/range {v25 .. v25}, Ljava/util/HashMap;-><init>()V
 
-    .line 3467
     .local v25, "packageUidMappings":Ljava/util/Map;, "Ljava/util/Map<Ljava/lang/Integer;Ljava/lang/String;>;"
     invoke-static/range {v34 .. v34}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
@@ -2435,7 +2278,6 @@
 
     invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 3468
     # getter for: Lcom/android/server/enterprise/vpn/knoxvpn/EnterprisePremiumVpnPolicyServiceV2;->TAG:Ljava/lang/String;
     invoke-static {}, Lcom/android/server/enterprise/vpn/knoxvpn/EnterprisePremiumVpnPolicyServiceV2;->access$100()Ljava/lang/String;
 
@@ -2449,22 +2291,18 @@
 
     invoke-virtual {v0, v1, v2}, Lcom/android/server/enterprise/billing/EnterpriseBillingEngine;->addUIDListToExceptionList(Ljava/lang/String;Ljava/util/Map;)I
 
-    .line 3471
     .end local v25    # "packageUidMappings":Ljava/util/Map;, "Ljava/util/Map<Ljava/lang/Integer;Ljava/lang/String;>;"
     :cond_20
     if-eqz v36, :cond_0
 
-    .line 3472
     invoke-virtual/range {v36 .. v36}, Lcom/android/server/enterprise/vpn/knoxvpn/EnterprisePremiumVpnPolicyServiceV2$VpnState;->getProfileName()Ljava/lang/String;
 
     move-result-object v27
 
-    .line 3473
     invoke-virtual/range {v36 .. v36}, Lcom/android/server/enterprise/vpn/knoxvpn/EnterprisePremiumVpnPolicyServiceV2$VpnState;->getCid()I
 
     move-result v6
 
-    .line 3474
     .local v6, "containerId":I
     move-object/from16 v0, p0
 
@@ -2479,7 +2317,6 @@
     # invokes: Lcom/android/server/enterprise/vpn/knoxvpn/EnterprisePremiumVpnPolicyServiceV2;->addToHashMap(Lcom/android/server/enterprise/vpn/knoxvpn/EnterprisePremiumVpnPolicyServiceV2$VpnState;)V
     invoke-static {v0, v1}, Lcom/android/server/enterprise/vpn/knoxvpn/EnterprisePremiumVpnPolicyServiceV2;->access$3500(Lcom/android/server/enterprise/vpn/knoxvpn/EnterprisePremiumVpnPolicyServiceV2;Lcom/android/server/enterprise/vpn/knoxvpn/EnterprisePremiumVpnPolicyServiceV2$VpnState;)V
 
-    .line 3475
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/android/server/enterprise/vpn/knoxvpn/EnterprisePremiumVpnPolicyServiceV2$EnterpriseVpnHandler;->this$0:Lcom/android/server/enterprise/vpn/knoxvpn/EnterprisePremiumVpnPolicyServiceV2;
@@ -2493,7 +2330,6 @@
     # invokes: Lcom/android/server/enterprise/vpn/knoxvpn/EnterprisePremiumVpnPolicyServiceV2;->refreshDomainInHashMap(Ljava/lang/String;)V
     invoke-static {v0, v1}, Lcom/android/server/enterprise/vpn/knoxvpn/EnterprisePremiumVpnPolicyServiceV2;->access$3600(Lcom/android/server/enterprise/vpn/knoxvpn/EnterprisePremiumVpnPolicyServiceV2;Ljava/lang/String;)V
 
-    .line 3477
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/android/server/enterprise/vpn/knoxvpn/EnterprisePremiumVpnPolicyServiceV2$EnterpriseVpnHandler;->this$0:Lcom/android/server/enterprise/vpn/knoxvpn/EnterprisePremiumVpnPolicyServiceV2;
@@ -2513,17 +2349,15 @@
 
     if-le v6, v0, :cond_26
 
-    .line 3478
     # getter for: Lcom/android/server/enterprise/vpn/knoxvpn/EnterprisePremiumVpnPolicyServiceV2;->TAG:Ljava/lang/String;
     invoke-static {}, Lcom/android/server/enterprise/vpn/knoxvpn/EnterprisePremiumVpnPolicyServiceV2;->access$100()Ljava/lang/String;
 
     move-result-object v39
 
-    const-string/jumbo v40, "vpn handle : pakcage add : Network is connected"
+    const-string v40, "vpn handle : pakcage add : Network is connected"
 
     invoke-static/range {v39 .. v40}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 3480
     :try_start_0
     move-object/from16 v0, p0
 
@@ -2544,7 +2378,6 @@
 
     if-eqz v39, :cond_0
 
-    .line 3481
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/android/server/enterprise/vpn/knoxvpn/EnterprisePremiumVpnPolicyServiceV2$EnterpriseVpnHandler;->this$0:Lcom/android/server/enterprise/vpn/knoxvpn/EnterprisePremiumVpnPolicyServiceV2;
@@ -2563,11 +2396,9 @@
 
     move-result-object v30
 
-    .line 3482
     .local v30, "responseData":Landroid/app/enterprise/EnterpriseResponseData;
     const/16 v35, 0x0
 
-    .line 3483
     .local v35, "value":Ljava/lang/String;
     invoke-virtual/range {v30 .. v30}, Landroid/app/enterprise/EnterpriseResponseData;->getFailureState()I
 
@@ -2575,7 +2406,6 @@
 
     if-nez v39, :cond_21
 
-    .line 3484
     invoke-virtual/range {v30 .. v30}, Landroid/app/enterprise/EnterpriseResponseData;->getData()Ljava/lang/Object;
 
     move-result-object v35
@@ -2583,12 +2413,10 @@
     .end local v35    # "value":Ljava/lang/String;
     check-cast v35, Ljava/lang/String;
 
-    .line 3487
     .restart local v35    # "value":Ljava/lang/String;
     :cond_21
     if-eqz v35, :cond_0
 
-    .line 3488
     # getter for: Lcom/android/server/enterprise/vpn/knoxvpn/EnterprisePremiumVpnPolicyServiceV2;->DBG:Z
     invoke-static {}, Lcom/android/server/enterprise/vpn/knoxvpn/EnterprisePremiumVpnPolicyServiceV2;->access$700()Z
 
@@ -2605,7 +2433,7 @@
 
     invoke-direct/range {v40 .. v40}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v41, "vpn handle : package add : Callback state: "
+    const-string v41, "vpn handle : package add : Callback state: "
 
     invoke-virtual/range {v40 .. v41}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -2625,7 +2453,6 @@
 
     invoke-static/range {v39 .. v40}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 3489
     :cond_22
     const-string v39, "CONNECTED"
 
@@ -2639,7 +2466,6 @@
 
     if-eqz v39, :cond_24
 
-    .line 3490
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/android/server/enterprise/vpn/knoxvpn/EnterprisePremiumVpnPolicyServiceV2$EnterpriseVpnHandler;->this$0:Lcom/android/server/enterprise/vpn/knoxvpn/EnterprisePremiumVpnPolicyServiceV2;
@@ -2661,20 +2487,16 @@
 
     check-cast v37, Lcom/android/server/enterprise/vpn/knoxvpn/EnterprisePremiumVpnPolicyServiceV2$ProfileNameVpnEntry;
 
-    .line 3491
     .restart local v37    # "vpnEntry":Lcom/android/server/enterprise/vpn/knoxvpn/EnterprisePremiumVpnPolicyServiceV2$ProfileNameVpnEntry;
     if-eqz v37, :cond_23
 
-    .line 3492
     invoke-virtual/range {v37 .. v37}, Lcom/android/server/enterprise/vpn/knoxvpn/EnterprisePremiumVpnPolicyServiceV2$ProfileNameVpnEntry;->getInterfaceName()Ljava/lang/String;
 
     move-result-object v15
 
-    .line 3493
     .local v15, "interfaceName":Ljava/lang/String;
     if-eqz v15, :cond_0
 
-    .line 3494
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/android/server/enterprise/vpn/knoxvpn/EnterprisePremiumVpnPolicyServiceV2$EnterpriseVpnHandler;->this$0:Lcom/android/server/enterprise/vpn/knoxvpn/EnterprisePremiumVpnPolicyServiceV2;
@@ -2696,12 +2518,10 @@
 
     invoke-virtual {v0, v1, v15, v2}, Lcom/android/server/enterprise/vpn/knoxvpn/KnoxVpnFirewallHelper;->addMangleNatRules(ILjava/lang/String;I)V
 
-    .line 3495
     move-object/from16 v0, v36
 
     invoke-virtual {v0, v15}, Lcom/android/server/enterprise/vpn/knoxvpn/EnterprisePremiumVpnPolicyServiceV2$VpnState;->setInterface(Ljava/lang/String;)V
 
-    .line 3496
     const/16 v39, 0x1
 
     move-object/from16 v0, v36
@@ -2710,7 +2530,6 @@
 
     invoke-virtual {v0, v1}, Lcom/android/server/enterprise/vpn/knoxvpn/EnterprisePremiumVpnPolicyServiceV2$VpnState;->setState(I)V
 
-    .line 3497
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/android/server/enterprise/vpn/knoxvpn/EnterprisePremiumVpnPolicyServiceV2$EnterpriseVpnHandler;->this$0:Lcom/android/server/enterprise/vpn/knoxvpn/EnterprisePremiumVpnPolicyServiceV2;
@@ -2736,7 +2555,6 @@
 
     goto/16 :goto_0
 
-    .line 3518
     .end local v15    # "interfaceName":Ljava/lang/String;
     .end local v30    # "responseData":Landroid/app/enterprise/EnterpriseResponseData;
     .end local v35    # "value":Ljava/lang/String;
@@ -2744,7 +2562,6 @@
     :catch_0
     move-exception v9
 
-    .line 3519
     .local v9, "e":Landroid/os/RemoteException;
     # getter for: Lcom/android/server/enterprise/vpn/knoxvpn/EnterprisePremiumVpnPolicyServiceV2;->TAG:Ljava/lang/String;
     invoke-static {}, Lcom/android/server/enterprise/vpn/knoxvpn/EnterprisePremiumVpnPolicyServiceV2;->access$100()Ljava/lang/String;
@@ -2755,7 +2572,7 @@
 
     invoke-direct/range {v40 .. v40}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v41, "vpn handle : pakcage add : Exception at mocana:"
+    const-string v41, "vpn handle : pakcage add : Exception at mocana:"
 
     invoke-virtual/range {v40 .. v41}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -2777,7 +2594,6 @@
 
     goto/16 :goto_0
 
-    .line 3500
     .end local v9    # "e":Landroid/os/RemoteException;
     .restart local v30    # "responseData":Landroid/app/enterprise/EnterpriseResponseData;
     .restart local v35    # "value":Ljava/lang/String;
@@ -2789,13 +2605,12 @@
 
     move-result-object v39
 
-    const-string/jumbo v40, "vpn handle : Profilename not found in the map"
+    const-string v40, "vpn handle : Profilename not found in the map"
 
     invoke-static/range {v39 .. v40}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
     goto/16 :goto_0
 
-    .line 3502
     .end local v37    # "vpnEntry":Lcom/android/server/enterprise/vpn/knoxvpn/EnterprisePremiumVpnPolicyServiceV2$ProfileNameVpnEntry;
     :cond_24
     const-string v39, "CONNECTING"
@@ -2810,7 +2625,6 @@
 
     if-nez v39, :cond_0
 
-    .line 3503
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/android/server/enterprise/vpn/knoxvpn/EnterprisePremiumVpnPolicyServiceV2$EnterpriseVpnHandler;->this$0:Lcom/android/server/enterprise/vpn/knoxvpn/EnterprisePremiumVpnPolicyServiceV2;
@@ -2867,7 +2681,6 @@
 
     if-nez v39, :cond_0
 
-    .line 3505
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/android/server/enterprise/vpn/knoxvpn/EnterprisePremiumVpnPolicyServiceV2$EnterpriseVpnHandler;->this$0:Lcom/android/server/enterprise/vpn/knoxvpn/EnterprisePremiumVpnPolicyServiceV2;
@@ -2886,17 +2699,14 @@
 
     move-result-object v30
 
-    .line 3506
     const/16 v35, 0x0
 
-    .line 3507
     invoke-virtual/range {v30 .. v30}, Landroid/app/enterprise/EnterpriseResponseData;->getFailureState()I
 
     move-result v39
 
     if-nez v39, :cond_25
 
-    .line 3508
     invoke-virtual/range {v30 .. v30}, Landroid/app/enterprise/EnterpriseResponseData;->getData()Ljava/lang/Object;
 
     move-result-object v35
@@ -2904,11 +2714,9 @@
     .end local v35    # "value":Ljava/lang/String;
     check-cast v35, Ljava/lang/String;
 
-    .line 3509
     .restart local v35    # "value":Ljava/lang/String;
     if-eqz v35, :cond_25
 
-    .line 3510
     # getter for: Lcom/android/server/enterprise/vpn/knoxvpn/EnterprisePremiumVpnPolicyServiceV2;->TAG:Ljava/lang/String;
     invoke-static {}, Lcom/android/server/enterprise/vpn/knoxvpn/EnterprisePremiumVpnPolicyServiceV2;->access$100()Ljava/lang/String;
 
@@ -2918,7 +2726,7 @@
 
     invoke-direct/range {v40 .. v40}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v41, "vpn handle : package add : Cannot start vpn, mocana returned error:"
+    const-string v41, "vpn handle : package add : Cannot start vpn, mocana returned error:"
 
     invoke-virtual/range {v40 .. v41}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -2938,7 +2746,6 @@
 
     invoke-static/range {v39 .. v40}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 3512
     :cond_25
     move-object/from16 v0, p0
 
@@ -2955,13 +2762,12 @@
     # invokes: Lcom/android/server/enterprise/vpn/knoxvpn/EnterprisePremiumVpnPolicyServiceV2;->createNotification(Ljava/lang/String;Ljava/lang/String;)V
     invoke-static {v0, v1, v2}, Lcom/android/server/enterprise/vpn/knoxvpn/EnterprisePremiumVpnPolicyServiceV2;->access$2800(Lcom/android/server/enterprise/vpn/knoxvpn/EnterprisePremiumVpnPolicyServiceV2;Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 3513
     # getter for: Lcom/android/server/enterprise/vpn/knoxvpn/EnterprisePremiumVpnPolicyServiceV2;->TAG:Ljava/lang/String;
     invoke-static {}, Lcom/android/server/enterprise/vpn/knoxvpn/EnterprisePremiumVpnPolicyServiceV2;->access$100()Ljava/lang/String;
 
     move-result-object v39
 
-    const-string/jumbo v40, "vpn handle : package add : Cannot start vpn, mocana returned error"
+    const-string v40, "vpn handle : package add : Cannot start vpn, mocana returned error"
 
     invoke-static/range {v39 .. v40}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
     :try_end_1
@@ -2969,7 +2775,6 @@
 
     goto/16 :goto_0
 
-    .line 3522
     .end local v30    # "responseData":Landroid/app/enterprise/EnterpriseResponseData;
     .end local v35    # "value":Ljava/lang/String;
     :cond_26
@@ -2978,13 +2783,12 @@
 
     move-result-object v39
 
-    const-string/jumbo v40, "vpn handle : package add : Network is not connected"
+    const-string v40, "vpn handle : package add : Network is not connected"
 
     invoke-static/range {v39 .. v40}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
     goto/16 :goto_0
 
-    .line 3529
     .end local v6    # "containerId":I
     .end local v21    # "mEntProvider":Lcom/android/server/enterprise/billing/EnterpriseBillingEngine;
     .end local v33    # "transformedPackageName":Ljava/lang/String;
@@ -2999,8 +2803,7 @@
 
     invoke-static/range {v39 .. v40}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 3530
-    const-string/jumbo v39, "package"
+    const-string v39, "package"
 
     move-object/from16 v0, v22
 
@@ -3010,8 +2813,7 @@
 
     move-result-object v24
 
-    .line 3531
-    const-string/jumbo v39, "uid"
+    const-string v39, "uid"
 
     move-object/from16 v0, v22
 
@@ -3021,7 +2823,6 @@
 
     move-result v34
 
-    .line 3532
     # getter for: Lcom/android/server/enterprise/vpn/knoxvpn/EnterprisePremiumVpnPolicyServiceV2;->DBG:Z
     invoke-static {}, Lcom/android/server/enterprise/vpn/knoxvpn/EnterprisePremiumVpnPolicyServiceV2;->access$700()Z
 
@@ -3121,7 +2922,6 @@
 
     invoke-static/range {v39 .. v40}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 3534
     :cond_27
     const-string v39, "com.mocana.vpn.android"
 
@@ -3135,14 +2935,12 @@
 
     if-eqz v39, :cond_28
 
-    .line 3535
     invoke-static/range {v34 .. v34}, Landroid/os/UserHandle;->getUserId(I)I
 
     move-result v39
 
     if-nez v39, :cond_28
 
-    .line 3536
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/android/server/enterprise/vpn/knoxvpn/EnterprisePremiumVpnPolicyServiceV2$EnterpriseVpnHandler;->this$0:Lcom/android/server/enterprise/vpn/knoxvpn/EnterprisePremiumVpnPolicyServiceV2;
@@ -3152,7 +2950,6 @@
     # invokes: Lcom/android/server/enterprise/vpn/knoxvpn/EnterprisePremiumVpnPolicyServiceV2;->cancelNotification()V
     invoke-static/range {v39 .. v39}, Lcom/android/server/enterprise/vpn/knoxvpn/EnterprisePremiumVpnPolicyServiceV2;->access$2600(Lcom/android/server/enterprise/vpn/knoxvpn/EnterprisePremiumVpnPolicyServiceV2;)V
 
-    .line 3537
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/android/server/enterprise/vpn/knoxvpn/EnterprisePremiumVpnPolicyServiceV2$EnterpriseVpnHandler;->this$0:Lcom/android/server/enterprise/vpn/knoxvpn/EnterprisePremiumVpnPolicyServiceV2;
@@ -3166,7 +2963,6 @@
 
     invoke-virtual/range {v39 .. v39}, Ljava/util/concurrent/ConcurrentHashMap;->clear()V
 
-    .line 3543
     :cond_28
     move-object/from16 v0, p0
 
@@ -3211,16 +3007,13 @@
     .end local v38    # "vpnObj":Lcom/android/server/enterprise/vpn/knoxvpn/EnterprisePremiumVpnPolicyServiceV2$VpnState;
     check-cast v38, Lcom/android/server/enterprise/vpn/knoxvpn/EnterprisePremiumVpnPolicyServiceV2$VpnState;
 
-    .line 3544
     .restart local v38    # "vpnObj":Lcom/android/server/enterprise/vpn/knoxvpn/EnterprisePremiumVpnPolicyServiceV2$VpnState;
     if-eqz v38, :cond_0
 
-    .line 3545
     invoke-virtual/range {v38 .. v38}, Lcom/android/server/enterprise/vpn/knoxvpn/EnterprisePremiumVpnPolicyServiceV2$VpnState;->getProfileName()Ljava/lang/String;
 
     move-result-object v27
 
-    .line 3546
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/android/server/enterprise/vpn/knoxvpn/EnterprisePremiumVpnPolicyServiceV2$EnterpriseVpnHandler;->this$0:Lcom/android/server/enterprise/vpn/knoxvpn/EnterprisePremiumVpnPolicyServiceV2;
@@ -3238,17 +3031,15 @@
 
     if-eqz v39, :cond_0
 
-    .line 3547
     # getter for: Lcom/android/server/enterprise/vpn/knoxvpn/EnterprisePremiumVpnPolicyServiceV2;->TAG:Ljava/lang/String;
     invoke-static {}, Lcom/android/server/enterprise/vpn/knoxvpn/EnterprisePremiumVpnPolicyServiceV2;->access$100()Ljava/lang/String;
 
     move-result-object v39
 
-    const-string/jumbo v40, "vpn handle : package remove>> Remove from iptable/hashmap"
+    const-string v40, "vpn handle : package remove>> Remove from iptable/hashmap"
 
     invoke-static/range {v39 .. v40}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 3548
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/android/server/enterprise/vpn/knoxvpn/EnterprisePremiumVpnPolicyServiceV2$EnterpriseVpnHandler;->this$0:Lcom/android/server/enterprise/vpn/knoxvpn/EnterprisePremiumVpnPolicyServiceV2;
@@ -3285,19 +3076,17 @@
 
     goto/16 :goto_0
 
-    .line 3553
     :pswitch_a
     # getter for: Lcom/android/server/enterprise/vpn/knoxvpn/EnterprisePremiumVpnPolicyServiceV2;->TAG:Ljava/lang/String;
     invoke-static {}, Lcom/android/server/enterprise/vpn/knoxvpn/EnterprisePremiumVpnPolicyServiceV2;->access$100()Ljava/lang/String;
 
     move-result-object v39
 
-    const-string/jumbo v40, "vpn handle : connectivity action : Handle MSG CONNECTIVITY_ACTION"
+    const-string v40, "vpn handle : connectivity action : Handle MSG CONNECTIVITY_ACTION"
 
     invoke-static/range {v39 .. v40}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 3554
-    const-string/jumbo v39, "status"
+    const-string v39, "status"
 
     move-object/from16 v0, v22
 
@@ -3307,7 +3096,6 @@
 
     move-result v23
 
-    .line 3555
     .local v23, "networkState":Z
     const/16 v39, 0x1
 
@@ -3317,7 +3105,6 @@
 
     if-ne v0, v1, :cond_29
 
-    .line 3556
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/android/server/enterprise/vpn/knoxvpn/EnterprisePremiumVpnPolicyServiceV2$EnterpriseVpnHandler;->this$0:Lcom/android/server/enterprise/vpn/knoxvpn/EnterprisePremiumVpnPolicyServiceV2;
@@ -3327,7 +3114,6 @@
     # invokes: Lcom/android/server/enterprise/vpn/knoxvpn/EnterprisePremiumVpnPolicyServiceV2;->cancelNotification()V
     invoke-static/range {v39 .. v39}, Lcom/android/server/enterprise/vpn/knoxvpn/EnterprisePremiumVpnPolicyServiceV2;->access$2600(Lcom/android/server/enterprise/vpn/knoxvpn/EnterprisePremiumVpnPolicyServiceV2;)V
 
-    .line 3557
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/android/server/enterprise/vpn/knoxvpn/EnterprisePremiumVpnPolicyServiceV2$EnterpriseVpnHandler;->this$0:Lcom/android/server/enterprise/vpn/knoxvpn/EnterprisePremiumVpnPolicyServiceV2;
@@ -3341,7 +3127,6 @@
 
     invoke-virtual/range {v39 .. v39}, Ljava/util/concurrent/ConcurrentHashMap;->clear()V
 
-    .line 3558
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/android/server/enterprise/vpn/knoxvpn/EnterprisePremiumVpnPolicyServiceV2$EnterpriseVpnHandler;->this$0:Lcom/android/server/enterprise/vpn/knoxvpn/EnterprisePremiumVpnPolicyServiceV2;
@@ -3353,7 +3138,6 @@
 
     goto/16 :goto_0
 
-    .line 3560
     :cond_29
     move-object/from16 v0, p0
 
@@ -3364,7 +3148,6 @@
     # invokes: Lcom/android/server/enterprise/vpn/knoxvpn/EnterprisePremiumVpnPolicyServiceV2;->cancelNotification()V
     invoke-static/range {v39 .. v39}, Lcom/android/server/enterprise/vpn/knoxvpn/EnterprisePremiumVpnPolicyServiceV2;->access$2600(Lcom/android/server/enterprise/vpn/knoxvpn/EnterprisePremiumVpnPolicyServiceV2;)V
 
-    .line 3561
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/android/server/enterprise/vpn/knoxvpn/EnterprisePremiumVpnPolicyServiceV2$EnterpriseVpnHandler;->this$0:Lcom/android/server/enterprise/vpn/knoxvpn/EnterprisePremiumVpnPolicyServiceV2;
@@ -3380,7 +3163,6 @@
 
     goto/16 :goto_0
 
-    .line 3565
     .end local v23    # "networkState":Z
     :pswitch_b
     # getter for: Lcom/android/server/enterprise/vpn/knoxvpn/EnterprisePremiumVpnPolicyServiceV2;->TAG:Ljava/lang/String;
@@ -3388,11 +3170,10 @@
 
     move-result-object v39
 
-    const-string/jumbo v40, "vpn handle : retry vpn"
+    const-string v40, "vpn handle : retry vpn"
 
     invoke-static/range {v39 .. v40}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 3566
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/android/server/enterprise/vpn/knoxvpn/EnterprisePremiumVpnPolicyServiceV2$EnterpriseVpnHandler;->this$0:Lcom/android/server/enterprise/vpn/knoxvpn/EnterprisePremiumVpnPolicyServiceV2;
@@ -3402,7 +3183,6 @@
     # invokes: Lcom/android/server/enterprise/vpn/knoxvpn/EnterprisePremiumVpnPolicyServiceV2;->cancelNotification()V
     invoke-static/range {v39 .. v39}, Lcom/android/server/enterprise/vpn/knoxvpn/EnterprisePremiumVpnPolicyServiceV2;->access$2600(Lcom/android/server/enterprise/vpn/knoxvpn/EnterprisePremiumVpnPolicyServiceV2;)V
 
-    .line 3567
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/android/server/enterprise/vpn/knoxvpn/EnterprisePremiumVpnPolicyServiceV2$EnterpriseVpnHandler;->this$0:Lcom/android/server/enterprise/vpn/knoxvpn/EnterprisePremiumVpnPolicyServiceV2;
@@ -3416,17 +3196,15 @@
 
     if-eqz v39, :cond_34
 
-    .line 3568
     # getter for: Lcom/android/server/enterprise/vpn/knoxvpn/EnterprisePremiumVpnPolicyServiceV2;->TAG:Ljava/lang/String;
     invoke-static {}, Lcom/android/server/enterprise/vpn/knoxvpn/EnterprisePremiumVpnPolicyServiceV2;->access$100()Ljava/lang/String;
 
     move-result-object v39
 
-    const-string/jumbo v40, "vpn handle : retry vpn : Network is connected"
+    const-string v40, "vpn handle : retry vpn : Network is connected"
 
     invoke-static/range {v39 .. v40}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 3570
     :try_start_2
     move-object/from16 v0, p0
 
@@ -3447,7 +3225,6 @@
 
     if-eqz v39, :cond_0
 
-    .line 3571
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/android/server/enterprise/vpn/knoxvpn/EnterprisePremiumVpnPolicyServiceV2$EnterpriseVpnHandler;->this$0:Lcom/android/server/enterprise/vpn/knoxvpn/EnterprisePremiumVpnPolicyServiceV2;
@@ -3481,7 +3258,6 @@
 
     check-cast v16, Ljava/lang/String;
 
-    .line 3572
     .local v16, "key":Ljava/lang/String;
     move-object/from16 v0, p0
 
@@ -3504,17 +3280,14 @@
 
     check-cast v10, Lcom/android/server/enterprise/vpn/knoxvpn/EnterprisePremiumVpnPolicyServiceV2$ProfileNameVpnEntry;
 
-    .line 3573
     .local v10, "entry":Lcom/android/server/enterprise/vpn/knoxvpn/EnterprisePremiumVpnPolicyServiceV2$ProfileNameVpnEntry;
     invoke-virtual {v10}, Lcom/android/server/enterprise/vpn/knoxvpn/EnterprisePremiumVpnPolicyServiceV2$ProfileNameVpnEntry;->getVpnStateList()Ljava/util/ArrayList;
 
     move-result-object v19
 
-    .line 3574
     .local v19, "list":Ljava/util/ArrayList;, "Ljava/util/ArrayList<Lcom/android/server/enterprise/vpn/knoxvpn/EnterprisePremiumVpnPolicyServiceV2$VpnState;>;"
     const/16 v29, 0x1
 
-    .line 3577
     .local v29, "removeProfileError":Z
     invoke-virtual/range {v19 .. v19}, Ljava/util/ArrayList;->iterator()Ljava/util/Iterator;
 
@@ -3535,7 +3308,6 @@
 
     check-cast v20, Lcom/android/server/enterprise/vpn/knoxvpn/EnterprisePremiumVpnPolicyServiceV2$VpnState;
 
-    .line 3578
     .local v20, "localState":Lcom/android/server/enterprise/vpn/knoxvpn/EnterprisePremiumVpnPolicyServiceV2$VpnState;
     invoke-virtual/range {v20 .. v20}, Lcom/android/server/enterprise/vpn/knoxvpn/EnterprisePremiumVpnPolicyServiceV2$VpnState;->getCid()I
 
@@ -3549,17 +3321,14 @@
 
     if-le v0, v1, :cond_2b
 
-    .line 3579
     const/16 v29, 0x0
 
     goto :goto_e
 
-    .line 3582
     .end local v20    # "localState":Lcom/android/server/enterprise/vpn/knoxvpn/EnterprisePremiumVpnPolicyServiceV2$VpnState;
     :cond_2c
     if-eqz v29, :cond_2d
 
-    .line 3583
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/android/server/enterprise/vpn/knoxvpn/EnterprisePremiumVpnPolicyServiceV2$EnterpriseVpnHandler;->this$0:Lcom/android/server/enterprise/vpn/knoxvpn/EnterprisePremiumVpnPolicyServiceV2;
@@ -3581,7 +3350,6 @@
 
     goto :goto_d
 
-    .line 3620
     .end local v10    # "entry":Lcom/android/server/enterprise/vpn/knoxvpn/EnterprisePremiumVpnPolicyServiceV2$ProfileNameVpnEntry;
     .end local v14    # "i$":Ljava/util/Iterator;
     .end local v16    # "key":Ljava/lang/String;
@@ -3590,7 +3358,6 @@
     :catch_1
     move-exception v9
 
-    .line 3621
     .restart local v9    # "e":Landroid/os/RemoteException;
     # getter for: Lcom/android/server/enterprise/vpn/knoxvpn/EnterprisePremiumVpnPolicyServiceV2;->TAG:Ljava/lang/String;
     invoke-static {}, Lcom/android/server/enterprise/vpn/knoxvpn/EnterprisePremiumVpnPolicyServiceV2;->access$100()Ljava/lang/String;
@@ -3601,7 +3368,7 @@
 
     invoke-direct/range {v40 .. v40}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v41, "vpn handle : retry vpn : Exception at mocana:"
+    const-string v41, "vpn handle : retry vpn : Exception at mocana:"
 
     invoke-virtual/range {v40 .. v41}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -3623,7 +3390,6 @@
 
     goto/16 :goto_0
 
-    .line 3585
     .end local v9    # "e":Landroid/os/RemoteException;
     .restart local v10    # "entry":Lcom/android/server/enterprise/vpn/knoxvpn/EnterprisePremiumVpnPolicyServiceV2$ProfileNameVpnEntry;
     .restart local v14    # "i$":Ljava/util/Iterator;
@@ -3650,11 +3416,9 @@
 
     move-result-object v30
 
-    .line 3586
     .restart local v30    # "responseData":Landroid/app/enterprise/EnterpriseResponseData;
     const/16 v35, 0x0
 
-    .line 3587
     .restart local v35    # "value":Ljava/lang/String;
     invoke-virtual/range {v30 .. v30}, Landroid/app/enterprise/EnterpriseResponseData;->getFailureState()I
 
@@ -3662,7 +3426,6 @@
 
     if-nez v39, :cond_2e
 
-    .line 3588
     invoke-virtual/range {v30 .. v30}, Landroid/app/enterprise/EnterpriseResponseData;->getData()Ljava/lang/Object;
 
     move-result-object v35
@@ -3670,12 +3433,10 @@
     .end local v35    # "value":Ljava/lang/String;
     check-cast v35, Ljava/lang/String;
 
-    .line 3591
     .restart local v35    # "value":Ljava/lang/String;
     :cond_2e
     if-eqz v35, :cond_2a
 
-    .line 3592
     # getter for: Lcom/android/server/enterprise/vpn/knoxvpn/EnterprisePremiumVpnPolicyServiceV2;->TAG:Ljava/lang/String;
     invoke-static {}, Lcom/android/server/enterprise/vpn/knoxvpn/EnterprisePremiumVpnPolicyServiceV2;->access$100()Ljava/lang/String;
 
@@ -3685,7 +3446,7 @@
 
     invoke-direct/range {v40 .. v40}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v41, "vpn handle : retry vpn : Callback state: "
+    const-string v41, "vpn handle : retry vpn : Callback state: "
 
     invoke-virtual/range {v40 .. v41}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -3705,7 +3466,6 @@
 
     invoke-static/range {v39 .. v40}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 3593
     const-string v39, "IDLE"
 
     move-object/from16 v0, v35
@@ -3730,7 +3490,6 @@
 
     if-eqz v39, :cond_2a
 
-    .line 3594
     :cond_2f
     move-object/from16 v0, p0
 
@@ -3743,7 +3502,6 @@
     # setter for: Lcom/android/server/enterprise/vpn/knoxvpn/EnterprisePremiumVpnPolicyServiceV2;->addAllorPerAppFlag:I
     invoke-static/range {v39 .. v40}, Lcom/android/server/enterprise/vpn/knoxvpn/EnterprisePremiumVpnPolicyServiceV2;->access$4102(Lcom/android/server/enterprise/vpn/knoxvpn/EnterprisePremiumVpnPolicyServiceV2;I)I
 
-    .line 3595
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/android/server/enterprise/vpn/knoxvpn/EnterprisePremiumVpnPolicyServiceV2$EnterpriseVpnHandler;->this$0:Lcom/android/server/enterprise/vpn/knoxvpn/EnterprisePremiumVpnPolicyServiceV2;
@@ -3761,7 +3519,6 @@
 
     if-eqz v39, :cond_31
 
-    .line 3596
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/android/server/enterprise/vpn/knoxvpn/EnterprisePremiumVpnPolicyServiceV2$EnterpriseVpnHandler;->this$0:Lcom/android/server/enterprise/vpn/knoxvpn/EnterprisePremiumVpnPolicyServiceV2;
@@ -3773,7 +3530,6 @@
     # setter for: Lcom/android/server/enterprise/vpn/knoxvpn/EnterprisePremiumVpnPolicyServiceV2;->addAllorPerAppFlag:I
     invoke-static/range {v39 .. v40}, Lcom/android/server/enterprise/vpn/knoxvpn/EnterprisePremiumVpnPolicyServiceV2;->access$4102(Lcom/android/server/enterprise/vpn/knoxvpn/EnterprisePremiumVpnPolicyServiceV2;I)I
 
-    .line 3600
     :goto_f
     move-object/from16 v0, p0
 
@@ -3840,7 +3596,6 @@
 
     if-nez v39, :cond_32
 
-    .line 3602
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/android/server/enterprise/vpn/knoxvpn/EnterprisePremiumVpnPolicyServiceV2$EnterpriseVpnHandler;->this$0:Lcom/android/server/enterprise/vpn/knoxvpn/EnterprisePremiumVpnPolicyServiceV2;
@@ -3858,7 +3613,6 @@
 
     invoke-virtual {v0, v1}, Ljava/util/concurrent/ConcurrentHashMap;->remove(Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 3603
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/android/server/enterprise/vpn/knoxvpn/EnterprisePremiumVpnPolicyServiceV2$EnterpriseVpnHandler;->this$0:Lcom/android/server/enterprise/vpn/knoxvpn/EnterprisePremiumVpnPolicyServiceV2;
@@ -3877,17 +3631,14 @@
 
     move-result-object v30
 
-    .line 3604
     const/16 v35, 0x0
 
-    .line 3605
     invoke-virtual/range {v30 .. v30}, Landroid/app/enterprise/EnterpriseResponseData;->getFailureState()I
 
     move-result v39
 
     if-nez v39, :cond_30
 
-    .line 3606
     invoke-virtual/range {v30 .. v30}, Landroid/app/enterprise/EnterpriseResponseData;->getData()Ljava/lang/Object;
 
     move-result-object v35
@@ -3895,11 +3646,9 @@
     .end local v35    # "value":Ljava/lang/String;
     check-cast v35, Ljava/lang/String;
 
-    .line 3607
     .restart local v35    # "value":Ljava/lang/String;
     if-eqz v35, :cond_30
 
-    .line 3608
     # getter for: Lcom/android/server/enterprise/vpn/knoxvpn/EnterprisePremiumVpnPolicyServiceV2;->TAG:Ljava/lang/String;
     invoke-static {}, Lcom/android/server/enterprise/vpn/knoxvpn/EnterprisePremiumVpnPolicyServiceV2;->access$100()Ljava/lang/String;
 
@@ -3909,7 +3658,7 @@
 
     invoke-direct/range {v40 .. v40}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v41, "vpn handle : retry vpn : Cannot start vpn, mocana returned error:"
+    const-string v41, "vpn handle : retry vpn : Cannot start vpn, mocana returned error:"
 
     invoke-virtual/range {v40 .. v41}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -3929,20 +3678,18 @@
 
     invoke-static/range {v39 .. v40}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 3610
     :cond_30
     # getter for: Lcom/android/server/enterprise/vpn/knoxvpn/EnterprisePremiumVpnPolicyServiceV2;->TAG:Ljava/lang/String;
     invoke-static {}, Lcom/android/server/enterprise/vpn/knoxvpn/EnterprisePremiumVpnPolicyServiceV2;->access$100()Ljava/lang/String;
 
     move-result-object v39
 
-    const-string/jumbo v40, "vpn handle : retry vpn : Cannot start vpn, mocana returned error"
+    const-string v40, "vpn handle : retry vpn : Cannot start vpn, mocana returned error"
 
     invoke-static/range {v39 .. v40}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
     goto/16 :goto_d
 
-    .line 3598
     :cond_31
     move-object/from16 v0, p0
 
@@ -3957,7 +3704,6 @@
 
     goto/16 :goto_f
 
-    .line 3612
     :cond_32
     move-object/from16 v0, p0
 
@@ -3978,7 +3724,6 @@
 
     goto/16 :goto_d
 
-    .line 3618
     .end local v10    # "entry":Lcom/android/server/enterprise/vpn/knoxvpn/EnterprisePremiumVpnPolicyServiceV2$ProfileNameVpnEntry;
     .end local v14    # "i$":Ljava/util/Iterator;
     .end local v16    # "key":Ljava/lang/String;
@@ -4000,31 +3745,28 @@
 
     goto/16 :goto_0
 
-    .line 3624
     :cond_34
     # getter for: Lcom/android/server/enterprise/vpn/knoxvpn/EnterprisePremiumVpnPolicyServiceV2;->TAG:Ljava/lang/String;
     invoke-static {}, Lcom/android/server/enterprise/vpn/knoxvpn/EnterprisePremiumVpnPolicyServiceV2;->access$100()Ljava/lang/String;
 
     move-result-object v39
 
-    const-string/jumbo v40, "vpn handle : retry vpn : Network is not connected"
+    const-string v40, "vpn handle : retry vpn : Network is not connected"
 
     invoke-static/range {v39 .. v40}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
     goto/16 :goto_0
 
-    .line 3628
     :pswitch_c
     # getter for: Lcom/android/server/enterprise/vpn/knoxvpn/EnterprisePremiumVpnPolicyServiceV2;->TAG:Ljava/lang/String;
     invoke-static {}, Lcom/android/server/enterprise/vpn/knoxvpn/EnterprisePremiumVpnPolicyServiceV2;->access$100()Ljava/lang/String;
 
     move-result-object v39
 
-    const-string/jumbo v40, "vpn handle : vpn init bind"
+    const-string v40, "vpn handle : vpn init bind"
 
     invoke-static/range {v39 .. v40}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 3629
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/android/server/enterprise/vpn/knoxvpn/EnterprisePremiumVpnPolicyServiceV2$EnterpriseVpnHandler;->this$0:Lcom/android/server/enterprise/vpn/knoxvpn/EnterprisePremiumVpnPolicyServiceV2;
@@ -4038,7 +3780,6 @@
 
     if-eqz v39, :cond_0
 
-    .line 3630
     # getter for: Lcom/android/server/enterprise/vpn/knoxvpn/EnterprisePremiumVpnPolicyServiceV2;->DBG:Z
     invoke-static {}, Lcom/android/server/enterprise/vpn/knoxvpn/EnterprisePremiumVpnPolicyServiceV2;->access$700()Z
 
@@ -4051,11 +3792,10 @@
 
     move-result-object v39
 
-    const-string/jumbo v40, "some vpn profile belonging to VPN 1.0 present, so the mocana 1.0 binding is going to happen after reboot"
+    const-string v40, "some vpn profile belonging to VPN 1.0 present, so the mocana 1.0 binding is going to happen after reboot"
 
     invoke-static/range {v39 .. v40}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 3631
     :cond_35
     move-object/from16 v0, p0
 
@@ -4067,31 +3807,28 @@
 
     goto/16 :goto_0
 
-    .line 3635
     :pswitch_d
     # getter for: Lcom/android/server/enterprise/vpn/knoxvpn/EnterprisePremiumVpnPolicyServiceV2;->TAG:Ljava/lang/String;
     invoke-static {}, Lcom/android/server/enterprise/vpn/knoxvpn/EnterprisePremiumVpnPolicyServiceV2;->access$100()Ljava/lang/String;
 
     move-result-object v39
 
-    const-string/jumbo v40, "vpn handle : user switch is reached"
+    const-string v40, "vpn handle : user switch is reached"
 
     invoke-static/range {v39 .. v40}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
     goto/16 :goto_0
 
-    .line 3639
     :pswitch_e
     # getter for: Lcom/android/server/enterprise/vpn/knoxvpn/EnterprisePremiumVpnPolicyServiceV2;->TAG:Ljava/lang/String;
     invoke-static {}, Lcom/android/server/enterprise/vpn/knoxvpn/EnterprisePremiumVpnPolicyServiceV2;->access$100()Ljava/lang/String;
 
     move-result-object v39
 
-    const-string/jumbo v40, "vpn handle : The Container is getting removed"
+    const-string v40, "vpn handle : The Container is getting removed"
 
     invoke-static/range {v39 .. v40}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 3640
     const-string v39, "container_removed"
 
     move-object/from16 v0, v22
@@ -4102,7 +3839,6 @@
 
     move-result v8
 
-    .line 3641
     .local v8, "container_id_removed":I
     const/16 v39, -0x1
 
@@ -4110,7 +3846,6 @@
 
     if-eq v8, v0, :cond_0
 
-    .line 3642
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/android/server/enterprise/vpn/knoxvpn/EnterprisePremiumVpnPolicyServiceV2$EnterpriseVpnHandler;->this$0:Lcom/android/server/enterprise/vpn/knoxvpn/EnterprisePremiumVpnPolicyServiceV2;
@@ -4124,7 +3859,6 @@
 
     goto/16 :goto_0
 
-    .line 3646
     .end local v8    # "container_id_removed":I
     :pswitch_f
     # getter for: Lcom/android/server/enterprise/vpn/knoxvpn/EnterprisePremiumVpnPolicyServiceV2;->TAG:Ljava/lang/String;
@@ -4132,11 +3866,10 @@
 
     move-result-object v39
 
-    const-string/jumbo v40, "vpn handle : initialize vpn after migration done"
+    const-string v40, "vpn handle : initialize vpn after migration done"
 
     invoke-static/range {v39 .. v40}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 3647
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/android/server/enterprise/vpn/knoxvpn/EnterprisePremiumVpnPolicyServiceV2$EnterpriseVpnHandler;->this$0:Lcom/android/server/enterprise/vpn/knoxvpn/EnterprisePremiumVpnPolicyServiceV2;
@@ -4146,7 +3879,6 @@
     # invokes: Lcom/android/server/enterprise/vpn/knoxvpn/EnterprisePremiumVpnPolicyServiceV2;->setupIntentFilter()V
     invoke-static/range {v39 .. v39}, Lcom/android/server/enterprise/vpn/knoxvpn/EnterprisePremiumVpnPolicyServiceV2;->access$4400(Lcom/android/server/enterprise/vpn/knoxvpn/EnterprisePremiumVpnPolicyServiceV2;)V
 
-    .line 3648
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/android/server/enterprise/vpn/knoxvpn/EnterprisePremiumVpnPolicyServiceV2$EnterpriseVpnHandler;->this$0:Lcom/android/server/enterprise/vpn/knoxvpn/EnterprisePremiumVpnPolicyServiceV2;
@@ -4156,7 +3888,6 @@
     # invokes: Lcom/android/server/enterprise/vpn/knoxvpn/EnterprisePremiumVpnPolicyServiceV2;->initializeHashtable()V
     invoke-static/range {v39 .. v39}, Lcom/android/server/enterprise/vpn/knoxvpn/EnterprisePremiumVpnPolicyServiceV2;->access$4500(Lcom/android/server/enterprise/vpn/knoxvpn/EnterprisePremiumVpnPolicyServiceV2;)V
 
-    .line 3649
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/android/server/enterprise/vpn/knoxvpn/EnterprisePremiumVpnPolicyServiceV2$EnterpriseVpnHandler;->this$0:Lcom/android/server/enterprise/vpn/knoxvpn/EnterprisePremiumVpnPolicyServiceV2;
@@ -4170,7 +3901,6 @@
 
     if-eqz v39, :cond_36
 
-    .line 3650
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/android/server/enterprise/vpn/knoxvpn/EnterprisePremiumVpnPolicyServiceV2$EnterpriseVpnHandler;->this$0:Lcom/android/server/enterprise/vpn/knoxvpn/EnterprisePremiumVpnPolicyServiceV2;
@@ -4179,7 +3909,6 @@
 
     invoke-virtual/range {v39 .. v39}, Lcom/android/server/enterprise/vpn/knoxvpn/EnterprisePremiumVpnPolicyServiceV2;->bindMocanaVpnInterface()V
 
-    .line 3652
     :cond_36
     move-object/from16 v0, p0
 
@@ -4192,18 +3921,16 @@
 
     goto/16 :goto_0
 
-    .line 3655
     :pswitch_10
     # getter for: Lcom/android/server/enterprise/vpn/knoxvpn/EnterprisePremiumVpnPolicyServiceV2;->TAG:Ljava/lang/String;
     invoke-static {}, Lcom/android/server/enterprise/vpn/knoxvpn/EnterprisePremiumVpnPolicyServiceV2;->access$100()Ljava/lang/String;
 
     move-result-object v39
 
-    const-string/jumbo v40, "vpn handle : Container admin changed"
+    const-string v40, "vpn handle : Container admin changed"
 
     invoke-static/range {v39 .. v40}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 3656
     const-string v39, "containerid"
 
     move-object/from16 v0, v22
@@ -4214,7 +3941,6 @@
 
     move-result v7
 
-    .line 3657
     .local v7, "container_id":I
     const/16 v39, -0x1
 
@@ -4222,7 +3948,6 @@
 
     if-eq v7, v0, :cond_0
 
-    .line 3658
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/android/server/enterprise/vpn/knoxvpn/EnterprisePremiumVpnPolicyServiceV2$EnterpriseVpnHandler;->this$0:Lcom/android/server/enterprise/vpn/knoxvpn/EnterprisePremiumVpnPolicyServiceV2;
@@ -4234,7 +3959,6 @@
     # invokes: Lcom/android/server/enterprise/vpn/knoxvpn/EnterprisePremiumVpnPolicyServiceV2;->clearDatabaseAfterContainerRemoval(I)V
     invoke-static {v0, v7}, Lcom/android/server/enterprise/vpn/knoxvpn/EnterprisePremiumVpnPolicyServiceV2;->access$4300(Lcom/android/server/enterprise/vpn/knoxvpn/EnterprisePremiumVpnPolicyServiceV2;I)V
 
-    .line 3659
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/android/server/enterprise/vpn/knoxvpn/EnterprisePremiumVpnPolicyServiceV2$EnterpriseVpnHandler;->this$0:Lcom/android/server/enterprise/vpn/knoxvpn/EnterprisePremiumVpnPolicyServiceV2;
@@ -4246,7 +3970,6 @@
 
     goto/16 :goto_0
 
-    .line 3260
     nop
 
     :pswitch_data_0
@@ -4265,7 +3988,6 @@
         :pswitch_10
     .end packed-switch
 
-    .line 3279
     :pswitch_data_1
     .packed-switch 0x1
         :pswitch_3
@@ -4276,7 +3998,6 @@
         :pswitch_7
     .end packed-switch
 
-    .line 3399
     :sswitch_data_0
     .sparse-switch
         0x1 -> :sswitch_0

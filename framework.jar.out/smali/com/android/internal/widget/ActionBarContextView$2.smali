@@ -26,7 +26,6 @@
     .locals 0
 
     .prologue
-    .line 244
     iput-object p1, p0, Lcom/android/internal/widget/ActionBarContextView$2;->this$0:Lcom/android/internal/widget/ActionBarContextView;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -41,46 +40,38 @@
     .param p1, "v"    # Landroid/view/View;
 
     .prologue
-    .line 246
     const/4 v13, 0x2
 
     new-array v9, v13, [I
 
-    .line 247
     .local v9, "screenPos":[I
     new-instance v4, Landroid/graphics/Rect;
 
     invoke-direct {v4}, Landroid/graphics/Rect;-><init>()V
 
-    .line 248
     .local v4, "displayFrame":Landroid/graphics/Rect;
     move-object/from16 v0, p1
 
     invoke-virtual {v0, v9}, Landroid/view/View;->getLocationOnScreen([I)V
 
-    .line 249
     move-object/from16 v0, p1
 
     invoke-virtual {v0, v4}, Landroid/view/View;->getWindowVisibleDisplayFrame(Landroid/graphics/Rect;)V
 
-    .line 250
     invoke-virtual/range {p1 .. p1}, Landroid/view/View;->getContext()Landroid/content/Context;
 
     move-result-object v3
 
-    .line 251
     .local v3, "context":Landroid/content/Context;
     invoke-virtual/range {p1 .. p1}, Landroid/view/View;->getWidth()I
 
     move-result v11
 
-    .line 252
     .local v11, "width":I
     invoke-virtual/range {p1 .. p1}, Landroid/view/View;->getHeight()I
 
     move-result v5
 
-    .line 253
     .local v5, "height":I
     const/4 v13, 0x1
 
@@ -90,13 +81,11 @@
 
     add-int v7, v13, v14
 
-    .line 254
     .local v7, "midy":I
     const/4 v10, 0x0
 
-    .line 255
     .local v10, "statusBarHeight":I
-    const-string/jumbo v13, "window"
+    const-string v13, "window"
 
     invoke-static {v13}, Landroid/os/ServiceManager;->getService(Ljava/lang/String;)Landroid/os/IBinder;
 
@@ -106,7 +95,6 @@
 
     move-result-object v12
 
-    .line 257
     .local v12, "wm":Landroid/view/IWindowManager;
     :try_start_0
     invoke-interface {v12}, Landroid/view/IWindowManager;->isStatusBarVisible()Z
@@ -115,7 +103,6 @@
 
     if-nez v13, :cond_0
 
-    .line 258
     invoke-virtual {v3}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
 
     move-result-object v13
@@ -128,7 +115,6 @@
 
     move-result v10
 
-    .line 262
     :cond_0
     :goto_0
     invoke-virtual/range {p1 .. p1}, Landroid/view/View;->getContentDescription()Ljava/lang/CharSequence;
@@ -141,7 +127,6 @@
 
     move-result-object v1
 
-    .line 263
     .local v1, "cheatSheet":Landroid/widget/Toast;
     const/16 v13, 0x33
 
@@ -153,12 +138,10 @@
 
     invoke-virtual {v1, v13, v14, v15}, Landroid/widget/Toast;->setGravity(III)V
 
-    .line 264
     instance-of v13, v3, Landroid/app/Activity;
 
     if-eqz v13, :cond_1
 
-    .line 265
     check-cast v3, Landroid/app/Activity;
 
     .end local v3    # "context":Landroid/content/Context;
@@ -170,17 +153,14 @@
 
     move-result v6
 
-    .line 266
     .local v6, "isSplit":Z
     iget v8, v4, Landroid/graphics/Rect;->top:I
 
-    .line 267
     .local v8, "offsetY":I
     new-instance v2, Landroid/graphics/Rect;
 
     invoke-direct {v2}, Landroid/graphics/Rect;-><init>()V
 
-    .line 268
     .local v2, "contentFrame":Landroid/graphics/Rect;
     move-object/from16 v0, p0
 
@@ -188,7 +168,6 @@
 
     invoke-virtual {v13, v2}, Lcom/android/internal/widget/ActionBarContextView;->getWindowVisibleContentFrame(Landroid/graphics/Rect;)V
 
-    .line 269
     if-eqz v6, :cond_1
 
     sub-int v13, v7, v8
@@ -199,7 +178,6 @@
 
     if-ge v13, v14, :cond_1
 
-    .line 270
     const/16 v13, 0x33
 
     const/4 v14, 0x0
@@ -212,19 +190,16 @@
 
     invoke-virtual {v1, v13, v14, v15}, Landroid/widget/Toast;->setGravity(III)V
 
-    .line 273
     .end local v2    # "contentFrame":Landroid/graphics/Rect;
     .end local v6    # "isSplit":Z
     .end local v8    # "offsetY":I
     :cond_1
     invoke-virtual {v1}, Landroid/widget/Toast;->show()V
 
-    .line 274
     const/4 v13, 0x1
 
     return v13
 
-    .line 260
     .end local v1    # "cheatSheet":Landroid/widget/Toast;
     .restart local v3    # "context":Landroid/content/Context;
     :catch_0

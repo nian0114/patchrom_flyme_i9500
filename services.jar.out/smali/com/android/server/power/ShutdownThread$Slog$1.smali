@@ -22,7 +22,6 @@
     .locals 0
 
     .prologue
-    .line 1440
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -34,13 +33,11 @@
     .locals 2
 
     .prologue
-    .line 1443
     const/4 v0, 0x0
 
     # setter for: Lcom/android/server/power/ShutdownThread$Slog;->delayDumpRaunnable:Ljava/lang/Runnable;
     invoke-static {v0}, Lcom/android/server/power/ShutdownThread$Slog;->access$902(Ljava/lang/Runnable;)Ljava/lang/Runnable;
 
-    .line 1444
     # getter for: Lcom/android/server/power/ShutdownThread;->BIN_TYPE_PRODUCTSHIP:Z
     invoke-static {}, Lcom/android/server/power/ShutdownThread;->access$1000()Z
 
@@ -48,14 +45,12 @@
 
     if-eqz v0, :cond_0
 
-    .line 1445
     const-string v0, "ShutdownDelay"
 
     const-string v1, "!@ShutdownThread.run() : Checking timeout, done. Try force shutdown again."
 
     invoke-static {v0, v1}, Landroid/util/Slog;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1446
     # getter for: Lcom/android/server/power/ShutdownThread;->mReboot:Z
     invoke-static {}, Lcom/android/server/power/ShutdownThread;->access$1100()Z
 
@@ -68,11 +63,9 @@
 
     invoke-static {v0, v1}, Lcom/android/server/power/ShutdownThread;->rebootOrShutdown(ZLjava/lang/String;)V
 
-    .line 1457
     :goto_0
     return-void
 
-    .line 1449
     :cond_0
     :try_start_0
     # getter for: Lcom/android/server/power/ShutdownThread;->delayDumpLock:Ljava/util/concurrent/locks/ReentrantLock;
@@ -82,19 +75,16 @@
 
     invoke-virtual {v0}, Ljava/util/concurrent/locks/ReentrantLock;->lock()V
 
-    .line 1450
     const-string v0, "ShutdownDelay"
 
     const-string v1, "!@ShutdownThread.run() : checking timeout, done."
 
     invoke-static {v0, v1}, Landroid/util/Slog;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1451
     const-string v0, "-k -z -d -o /data/log/dumpstate_shutdownthread"
 
     invoke-static {v0}, Landroid/os/Debug;->saveDumpstate(Ljava/lang/String;)V
 
-    .line 1452
     const-string v0, "ShutdownDelay"
 
     const-string v1, "delayDumpLock released"
@@ -103,7 +93,6 @@
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 1454
     # getter for: Lcom/android/server/power/ShutdownThread;->delayDumpLock:Ljava/util/concurrent/locks/ReentrantLock;
     invoke-static {}, Lcom/android/server/power/ShutdownThread;->access$1300()Ljava/util/concurrent/locks/ReentrantLock;
 

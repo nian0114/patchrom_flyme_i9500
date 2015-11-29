@@ -27,22 +27,18 @@
     .locals 1
 
     .prologue
-    .line 55
     const/4 v0, 0x5
 
     invoke-direct {p0, v0}, Landroid/sec/clipboard/data/ClipboardData;-><init>(I)V
 
-    .line 47
     const-string v0, ""
 
     iput-object v0, p0, Landroid/sec/clipboard/data/list/ClipboardDataUri;->mPreviewImgPath:Ljava/lang/String;
 
-    .line 48
     const-string v0, ""
 
     iput-object v0, p0, Landroid/sec/clipboard/data/list/ClipboardDataUri;->mValue:Ljava/lang/String;
 
-    .line 56
     return-void
 .end method
 
@@ -52,7 +48,6 @@
     .locals 1
 
     .prologue
-    .line 143
     iget-object v0, p0, Landroid/sec/clipboard/data/list/ClipboardDataUri;->mValue:Ljava/lang/String;
 
     invoke-static {v0}, Landroid/net/Uri;->parse(Ljava/lang/String;)Landroid/net/Uri;
@@ -68,12 +63,10 @@
     .param p2, "altData"    # Landroid/sec/clipboard/data/ClipboardData;
 
     .prologue
-    .line 70
     invoke-super {p0, p1, p2}, Landroid/sec/clipboard/data/ClipboardData;->SetAlternateFormat(ILandroid/sec/clipboard/data/ClipboardData;)Z
 
     move-result v0
 
-    .line 71
     .local v0, "Result":Z
     if-eqz v0, :cond_0
 
@@ -90,14 +83,12 @@
     :cond_0
     move v1, v0
 
-    .line 109
     .end local v0    # "Result":Z
     .end local p2    # "altData":Landroid/sec/clipboard/data/ClipboardData;
     .local v1, "Result":Z
     :goto_0
     return v1
 
-    .line 73
     .end local v1    # "Result":Z
     .restart local v0    # "Result":Z
     .restart local p2    # "altData":Landroid/sec/clipboard/data/ClipboardData;
@@ -109,39 +100,31 @@
     :goto_1
     move v1, v0
 
-    .line 109
     .end local v0    # "Result":Z
     .restart local v1    # "Result":Z
     goto :goto_0
 
-    .line 76
     .end local v1    # "Result":Z
     .restart local v0    # "Result":Z
     .restart local p2    # "altData":Landroid/sec/clipboard/data/ClipboardData;
     :pswitch_0
     const/4 v0, 0x0
 
-    .line 77
     goto :goto_1
 
-    .line 79
     :pswitch_1
     const/4 v0, 0x0
 
-    .line 80
     goto :goto_1
 
-    .line 82
     :pswitch_2
     const/4 v0, 0x0
 
-    .line 83
     goto :goto_1
 
     :pswitch_3
     move-object v2, p2
 
-    .line 85
     check-cast v2, Landroid/sec/clipboard/data/list/ClipboardDataUri;
 
     iget-object v3, p0, Landroid/sec/clipboard/data/list/ClipboardDataUri;->mValue:Ljava/lang/String;
@@ -154,7 +137,6 @@
 
     move-result v0
 
-    .line 86
     const-string v2, ""
 
     iget-object v3, p0, Landroid/sec/clipboard/data/list/ClipboardDataUri;->mPreviewImgPath:Ljava/lang/String;
@@ -165,7 +147,6 @@
 
     if-nez v2, :cond_2
 
-    .line 87
     check-cast p2, Landroid/sec/clipboard/data/list/ClipboardDataUri;
 
     .end local p2    # "altData":Landroid/sec/clipboard/data/ClipboardData;
@@ -179,42 +160,32 @@
 
     goto :goto_1
 
-    .line 91
     .restart local p2    # "altData":Landroid/sec/clipboard/data/ClipboardData;
     :pswitch_4
     const/4 v0, 0x0
 
-    .line 92
     goto :goto_1
 
-    .line 94
     :pswitch_5
     const/4 v0, 0x0
 
-    .line 95
     goto :goto_1
 
-    .line 98
     :pswitch_6
     const/4 v0, 0x0
 
-    .line 99
     goto :goto_1
 
-    .line 102
     :pswitch_7
     const/4 v0, 0x0
 
-    .line 103
     goto :goto_1
 
-    .line 105
     :pswitch_8
     const/4 v0, 0x0
 
     goto :goto_1
 
-    .line 73
     nop
 
     :pswitch_data_0
@@ -236,7 +207,6 @@
     .param p1, "uri"    # Landroid/net/Uri;
 
     .prologue
-    .line 130
     if-eqz p1, :cond_0
 
     invoke-virtual {p1}, Landroid/net/Uri;->toString()Ljava/lang/String;
@@ -249,15 +219,12 @@
 
     if-nez v0, :cond_1
 
-    .line 131
     :cond_0
     const/4 v0, 0x0
 
-    .line 134
     :goto_0
     return v0
 
-    .line 133
     :cond_1
     invoke-virtual {p1}, Landroid/net/Uri;->toString()Ljava/lang/String;
 
@@ -265,7 +232,6 @@
 
     iput-object v0, p0, Landroid/sec/clipboard/data/list/ClipboardDataUri;->mValue:Ljava/lang/String;
 
-    .line 134
     const/4 v0, 0x1
 
     goto :goto_0
@@ -275,12 +241,10 @@
     .locals 1
 
     .prologue
-    .line 119
     const-string v0, ""
 
     iput-object v0, p0, Landroid/sec/clipboard/data/list/ClipboardDataUri;->mValue:Ljava/lang/String;
 
-    .line 120
     return-void
 .end method
 
@@ -289,22 +253,19 @@
     .param p1, "o"    # Ljava/lang/Object;
 
     .prologue
-    .line 158
     sget-boolean v3, Landroid/sec/clipboard/data/ClipboardDefine;->DEBUG:Z
 
     if-eqz v3, :cond_0
 
     const-string v3, "ClipboardServiceEx"
 
-    const-string/jumbo v4, "uri equals"
+    const-string v4, "uri equals"
 
     invoke-static {v3, v4}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 159
     :cond_0
     const/4 v0, 0x0
 
-    .line 160
     .local v0, "Result":Z
     invoke-super {p0, p1}, Landroid/sec/clipboard/data/ClipboardData;->equals(Ljava/lang/Object;)Z
 
@@ -314,13 +275,11 @@
 
     move v1, v0
 
-    .line 171
     .end local v0    # "Result":Z
     .local v1, "Result":I
     :goto_0
     return v1
 
-    .line 163
     .end local v1    # "Result":I
     .restart local v0    # "Result":Z
     :cond_1
@@ -330,7 +289,6 @@
 
     move v1, v0
 
-    .line 164
     .restart local v1    # "Result":I
     goto :goto_0
 
@@ -338,10 +296,8 @@
     :cond_2
     move-object v2, p1
 
-    .line 166
     check-cast v2, Landroid/sec/clipboard/data/list/ClipboardDataUri;
 
-    .line 168
     .local v2, "trgData":Landroid/sec/clipboard/data/list/ClipboardDataUri;
     iget-object v3, p0, Landroid/sec/clipboard/data/list/ClipboardDataUri;->mValue:Ljava/lang/String;
 
@@ -368,11 +324,9 @@
     :goto_1
     move v1, v0
 
-    .line 171
     .restart local v1    # "Result":I
     goto :goto_0
 
-    .line 168
     .end local v1    # "Result":I
     :cond_3
     const/4 v0, 0x0
@@ -384,7 +338,6 @@
     .locals 1
 
     .prologue
-    .line 247
     iget-object v0, p0, Landroid/sec/clipboard/data/list/ClipboardDataUri;->mPreviewImgPath:Ljava/lang/String;
 
     return-object v0
@@ -394,12 +347,10 @@
     .locals 4
 
     .prologue
-    .line 255
     invoke-virtual {p0}, Landroid/sec/clipboard/data/list/ClipboardDataUri;->GetUri()Landroid/net/Uri;
 
     move-result-object v1
 
-    .line 256
     .local v1, "uri":Landroid/net/Uri;
     if-eqz v1, :cond_0
 
@@ -415,7 +366,6 @@
 
     if-eqz v2, :cond_0
 
-    .line 257
     new-instance v0, Ljava/io/File;
 
     invoke-virtual {v1}, Landroid/net/Uri;->getPath()Ljava/lang/String;
@@ -424,7 +374,6 @@
 
     invoke-direct {v0, v2}, Ljava/io/File;-><init>(Ljava/lang/String;)V
 
-    .line 258
     .local v0, "file":Ljava/io/File;
     new-instance v2, Landroid/sec/clipboard/data/list/ClipboardDataUri$ImageFileFilter;
 
@@ -436,7 +385,6 @@
 
     move-result v2
 
-    .line 260
     .end local v0    # "file":Ljava/io/File;
     :goto_0
     return v2
@@ -452,7 +400,6 @@
     .param p1, "source"    # Landroid/os/Parcel;
 
     .prologue
-    .line 205
     const-class v0, Ljava/lang/String;
 
     invoke-virtual {v0}, Ljava/lang/Class;->getClassLoader()Ljava/lang/ClassLoader;
@@ -467,7 +414,6 @@
 
     iput-object v0, p0, Landroid/sec/clipboard/data/list/ClipboardDataUri;->mValue:Ljava/lang/String;
 
-    .line 206
     const-class v0, Ljava/lang/String;
 
     invoke-virtual {v0}, Ljava/lang/Class;->getClassLoader()Ljava/lang/ClassLoader;
@@ -482,7 +428,6 @@
 
     iput-object v0, p0, Landroid/sec/clipboard/data/list/ClipboardDataUri;->mPreviewImgPath:Ljava/lang/String;
 
-    .line 207
     const-class v0, Landroid/content/ClipData;
 
     invoke-virtual {v0}, Ljava/lang/Class;->getClassLoader()Ljava/lang/ClassLoader;
@@ -497,7 +442,6 @@
 
     iput-object v0, p0, Landroid/sec/clipboard/data/ClipboardData;->mClipdata:Landroid/content/ClipData;
 
-    .line 208
     const-class v0, Ljava/lang/Boolean;
 
     invoke-virtual {v0}, Ljava/lang/Class;->getClassLoader()Ljava/lang/ClassLoader;
@@ -516,7 +460,6 @@
 
     iput-boolean v0, p0, Landroid/sec/clipboard/data/ClipboardData;->mIsProtected:Z
 
-    .line 209
     return-void
 .end method
 
@@ -525,7 +468,6 @@
     .param p1, "FilePath"    # Ljava/lang/String;
 
     .prologue
-    .line 226
     sget-boolean v3, Landroid/sec/clipboard/data/ClipboardDefine;->INFO_DEBUG:Z
 
     if-eqz v3, :cond_0
@@ -536,7 +478,7 @@
 
     invoke-direct {v4}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v5, "setPreviewImgPath :"
+    const-string v5, "setPreviewImgPath :"
 
     invoke-virtual {v4, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -552,11 +494,9 @@
 
     invoke-static {v3, v4}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 227
     :cond_0
     const/4 v0, 0x0
 
-    .line 228
     .local v0, "Result":Z
     if-eqz p1, :cond_1
 
@@ -571,13 +511,11 @@
     :cond_1
     move v1, v0
 
-    .line 239
     .end local v0    # "Result":Z
     .local v1, "Result":I
     :goto_0
     return v1
 
-    .line 231
     .end local v1    # "Result":I
     .restart local v0    # "Result":Z
     :cond_2
@@ -585,7 +523,6 @@
 
     invoke-direct {v2, p1}, Ljava/io/File;-><init>(Ljava/lang/String;)V
 
-    .line 232
     .local v2, "tempFile":Ljava/io/File;
     invoke-virtual {v2}, Ljava/io/File;->isFile()Z
 
@@ -599,28 +536,23 @@
 
     if-eqz v3, :cond_4
 
-    .line 233
     iput-object p1, p0, Landroid/sec/clipboard/data/list/ClipboardDataUri;->mPreviewImgPath:Ljava/lang/String;
 
-    .line 234
     const/4 v0, 0x1
 
     :cond_3
     :goto_1
     move v1, v0
 
-    .line 239
     .restart local v1    # "Result":I
     goto :goto_0
 
-    .line 236
     .end local v1    # "Result":I
     :cond_4
     const-string v3, ""
 
     iput-object v3, p0, Landroid/sec/clipboard/data/list/ClipboardDataUri;->mPreviewImgPath:Ljava/lang/String;
 
-    .line 237
     sget-boolean v3, Landroid/sec/clipboard/data/ClipboardDefine;->DEBUG:Z
 
     if-eqz v3, :cond_3
@@ -640,12 +572,11 @@
     .prologue
     const/16 v3, 0x14
 
-    .line 217
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v1, "this Uri class. Value is "
+    const-string v1, "this Uri class. Value is "
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -690,7 +621,6 @@
     .param p2, "flags"    # I
 
     .prologue
-    .line 183
     sget-boolean v2, Landroid/sec/clipboard/data/ClipboardDefine;->DEBUG:Z
 
     if-eqz v2, :cond_0
@@ -701,27 +631,23 @@
 
     invoke-static {v2, v3}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 184
     :cond_0
     invoke-super {p0, p1, p2}, Landroid/sec/clipboard/data/ClipboardData;->writeToParcel(Landroid/os/Parcel;I)V
 
-    .line 186
     iget-object v2, p0, Landroid/sec/clipboard/data/ClipboardData;->mClipdata:Landroid/content/ClipData;
 
     if-nez v2, :cond_1
 
-    .line 187
     const/4 v2, 0x1
 
     new-array v1, v2, [Ljava/lang/String;
 
     const/4 v2, 0x0
 
-    const-string/jumbo v3, "text/uri-list"
+    const-string v3, "text/uri-list"
 
     aput-object v3, v1, v2
 
-    .line 188
     .local v1, "mimeType":[Ljava/lang/String;
     new-instance v0, Landroid/content/ClipData$Item;
 
@@ -733,7 +659,6 @@
 
     invoke-direct {v0, v2}, Landroid/content/ClipData$Item;-><init>(Landroid/net/Uri;)V
 
-    .line 189
     .local v0, "item":Landroid/content/ClipData$Item;
     new-instance v2, Landroid/content/ClipData;
 
@@ -743,7 +668,6 @@
 
     iput-object v2, p0, Landroid/sec/clipboard/data/ClipboardData;->mClipdata:Landroid/content/ClipData;
 
-    .line 191
     .end local v0    # "item":Landroid/content/ClipData$Item;
     .end local v1    # "mimeType":[Ljava/lang/String;
     :cond_1
@@ -751,17 +675,14 @@
 
     invoke-virtual {p1, v2}, Landroid/os/Parcel;->writeValue(Ljava/lang/Object;)V
 
-    .line 192
     iget-object v2, p0, Landroid/sec/clipboard/data/list/ClipboardDataUri;->mPreviewImgPath:Ljava/lang/String;
 
     invoke-virtual {p1, v2}, Landroid/os/Parcel;->writeValue(Ljava/lang/Object;)V
 
-    .line 193
     iget-object v2, p0, Landroid/sec/clipboard/data/ClipboardData;->mClipdata:Landroid/content/ClipData;
 
     invoke-virtual {p1, v2}, Landroid/os/Parcel;->writeValue(Ljava/lang/Object;)V
 
-    .line 194
     iget-boolean v2, p0, Landroid/sec/clipboard/data/ClipboardData;->mIsProtected:Z
 
     invoke-static {v2}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
@@ -770,6 +691,5 @@
 
     invoke-virtual {p1, v2}, Landroid/os/Parcel;->writeValue(Ljava/lang/Object;)V
 
-    .line 195
     return-void
 .end method

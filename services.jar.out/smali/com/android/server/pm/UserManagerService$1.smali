@@ -25,7 +25,6 @@
     .locals 0
 
     .prologue
-    .line 1568
     iput-object p1, p0, Lcom/android/server/pm/UserManagerService$1;->this$0:Lcom/android/server/pm/UserManagerService;
 
     iput p2, p0, Lcom/android/server/pm/UserManagerService$1;->val$userHandle:I
@@ -41,7 +40,6 @@
     .locals 4
 
     .prologue
-    .line 1570
     iget-object v0, p0, Lcom/android/server/pm/UserManagerService$1;->this$0:Lcom/android/server/pm/UserManagerService;
 
     # getter for: Lcom/android/server/pm/UserManagerService;->mInstallLock:Ljava/lang/Object;
@@ -51,7 +49,6 @@
 
     monitor-enter v1
 
-    .line 1571
     :try_start_0
     iget-object v0, p0, Lcom/android/server/pm/UserManagerService$1;->this$0:Lcom/android/server/pm/UserManagerService;
 
@@ -64,7 +61,6 @@
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_1
 
-    .line 1572
     :try_start_1
     iget-object v0, p0, Lcom/android/server/pm/UserManagerService$1;->this$0:Lcom/android/server/pm/UserManagerService;
 
@@ -73,21 +69,17 @@
     # invokes: Lcom/android/server/pm/UserManagerService;->removeUserStateLocked(I)V
     invoke-static {v0, v3}, Lcom/android/server/pm/UserManagerService;->access$200(Lcom/android/server/pm/UserManagerService;I)V
 
-    .line 1573
     monitor-exit v2
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
-    .line 1574
     :try_start_2
     monitor-exit v1
     :try_end_2
     .catchall {:try_start_2 .. :try_end_2} :catchall_1
 
-    .line 1575
     return-void
 
-    .line 1573
     :catchall_0
     move-exception v0
 
@@ -99,7 +91,6 @@
     :try_start_4
     throw v0
 
-    .line 1574
     :catchall_1
     move-exception v0
 

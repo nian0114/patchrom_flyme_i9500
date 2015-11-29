@@ -26,7 +26,6 @@
     .locals 0
 
     .prologue
-    .line 658
     iput-object p1, p0, Lcom/samsung/android/motion/MotionRecognitionManager$1;->this$0:Lcom/samsung/android/motion/MotionRecognitionManager;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -41,20 +40,16 @@
     .param p1, "event"    # Landroid/hardware/scontext/SContextEvent;
 
     .prologue
-    .line 661
     iget-object v6, p1, Landroid/hardware/scontext/SContextEvent;->scontext:Landroid/hardware/scontext/SContext;
 
-    .line 662
     .local v6, "scontext":Landroid/hardware/scontext/SContext;
     new-instance v5, Lcom/samsung/android/motion/MREvent;
 
     invoke-direct {v5}, Lcom/samsung/android/motion/MREvent;-><init>()V
 
-    .line 663
     .local v5, "mrevent":Lcom/samsung/android/motion/MREvent;
     const/4 v3, 0x0
 
-    .line 665
     .local v3, "isEnabledPickUp":Z
     invoke-virtual {v6}, Landroid/hardware/scontext/SContext;->getType()I
 
@@ -62,18 +57,15 @@
 
     packed-switch v8, :pswitch_data_0
 
-    .line 693
     :cond_0
     :goto_0
     return-void
 
-    .line 667
     :pswitch_0
     invoke-virtual {p1}, Landroid/hardware/scontext/SContextEvent;->getMovementContext()Landroid/hardware/scontext/SContextMovement;
 
     move-result-object v0
 
-    .line 668
     .local v0, "SContextMove":Landroid/hardware/scontext/SContextMovement;
     invoke-virtual {v0}, Landroid/hardware/scontext/SContextMovement;->getAction()I
 
@@ -83,7 +75,6 @@
 
     if-ne v8, v9, :cond_0
 
-    .line 670
     :try_start_0
     iget-object v8, p0, Lcom/samsung/android/motion/MotionRecognitionManager$1;->this$0:Lcom/samsung/android/motion/MotionRecognitionManager;
 
@@ -96,7 +87,6 @@
 
     move-result v3
 
-    .line 671
     const-string v8, "MotionRecognitionManager"
 
     new-instance v9, Ljava/lang/StringBuilder;
@@ -121,23 +111,19 @@
     :try_end_0
     .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 676
     :goto_1
     if-eqz v3, :cond_0
 
-    .line 677
     const/16 v8, 0x43
 
     invoke-virtual {v5, v8}, Lcom/samsung/android/motion/MREvent;->setMotion(I)V
 
-    .line 678
     const-string v8, "MotionRecognitionManager"
 
-    const-string/jumbo v9, "mySContextMotionListener : Send Smart alert event"
+    const-string v9, "mySContextMotionListener : Send Smart alert event"
 
     invoke-static {v8, v9}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 680
     iget-object v8, p0, Lcom/samsung/android/motion/MotionRecognitionManager$1;->this$0:Lcom/samsung/android/motion/MotionRecognitionManager;
 
     # getter for: Lcom/samsung/android/motion/MotionRecognitionManager;->sListenerDelegates:Ljava/util/ArrayList;
@@ -147,7 +133,6 @@
 
     monitor-enter v9
 
-    .line 681
     :try_start_1
     iget-object v8, p0, Lcom/samsung/android/motion/MotionRecognitionManager$1;->this$0:Lcom/samsung/android/motion/MotionRecognitionManager;
 
@@ -160,7 +145,6 @@
 
     move-result v7
 
-    .line 682
     .local v7, "size":I
     const/4 v2, 0x0
 
@@ -168,7 +152,6 @@
     :goto_2
     if-ge v2, v7, :cond_1
 
-    .line 683
     iget-object v8, p0, Lcom/samsung/android/motion/MotionRecognitionManager$1;->this$0:Lcom/samsung/android/motion/MotionRecognitionManager;
 
     # getter for: Lcom/samsung/android/motion/MotionRecognitionManager;->sListenerDelegates:Ljava/util/ArrayList;
@@ -182,25 +165,21 @@
 
     check-cast v4, Lcom/samsung/android/motion/MotionRecognitionManager$MRListenerDelegate;
 
-    .line 684
     .local v4, "l":Lcom/samsung/android/motion/MotionRecognitionManager$MRListenerDelegate;
     invoke-virtual {v4, v5}, Lcom/samsung/android/motion/MotionRecognitionManager$MRListenerDelegate;->motionCallback(Lcom/samsung/android/motion/MREvent;)V
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
-    .line 682
     add-int/lit8 v2, v2, 0x1
 
     goto :goto_2
 
-    .line 672
     .end local v2    # "i":I
     .end local v4    # "l":Lcom/samsung/android/motion/MotionRecognitionManager$MRListenerDelegate;
     .end local v7    # "size":I
     :catch_0
     move-exception v1
 
-    .line 673
     .local v1, "e":Landroid/os/RemoteException;
     const-string v8, "MotionRecognitionManager"
 
@@ -210,7 +189,6 @@
 
     goto :goto_1
 
-    .line 686
     .end local v1    # "e":Landroid/os/RemoteException;
     .restart local v2    # "i":I
     .restart local v7    # "size":I
@@ -231,7 +209,6 @@
 
     throw v8
 
-    .line 665
     :pswitch_data_0
     .packed-switch 0x5
         :pswitch_0

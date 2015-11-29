@@ -309,7 +309,6 @@
     .locals 3
 
     .prologue
-    .line 197
     const/4 v0, 0x2
 
     new-array v0, v0, [Ljava/lang/String;
@@ -328,40 +327,34 @@
 
     sput-object v0, Lcom/android/server/enterprise/restriction/RestrictionPolicy;->excludedAdminList:[Ljava/lang/String;
 
-    .line 281
     new-instance v0, Lcom/android/server/enterprise/restriction/RestrictionPolicy$1;
 
     invoke-direct {v0}, Lcom/android/server/enterprise/restriction/RestrictionPolicy$1;-><init>()V
 
     sput-object v0, Lcom/android/server/enterprise/restriction/RestrictionPolicy;->MASK_AND_COLUMN_NAME:Ljava/util/Map;
 
-    .line 390
     const-string v0, "android_servers"
 
     invoke-static {v0}, Ljava/lang/System;->loadLibrary(Ljava/lang/String;)V
 
-    .line 407
     new-instance v0, Lcom/android/server/enterprise/restriction/RestrictionPolicy$2;
 
     invoke-direct {v0}, Lcom/android/server/enterprise/restriction/RestrictionPolicy$2;-><init>()V
 
     sput-object v0, Lcom/android/server/enterprise/restriction/RestrictionPolicy;->DEVELOPER_GLOBAL_SETTINGS_DEFAULT:Ljava/util/Map;
 
-    .line 425
     new-instance v0, Lcom/android/server/enterprise/restriction/RestrictionPolicy$3;
 
     invoke-direct {v0}, Lcom/android/server/enterprise/restriction/RestrictionPolicy$3;-><init>()V
 
     sput-object v0, Lcom/android/server/enterprise/restriction/RestrictionPolicy;->DEVELOPER_SECURE_SETTINGS_DEFAULT:Ljava/util/Map;
 
-    .line 434
     new-instance v0, Lcom/android/server/enterprise/restriction/RestrictionPolicy$4;
 
     invoke-direct {v0}, Lcom/android/server/enterprise/restriction/RestrictionPolicy$4;-><init>()V
 
     sput-object v0, Lcom/android/server/enterprise/restriction/RestrictionPolicy;->DEVELOPER_SYSTEM_SETTINGS_DEFAULT:Ljava/util/Map;
 
-    .line 441
     new-instance v0, Lcom/android/server/enterprise/restriction/RestrictionPolicy$5;
 
     invoke-direct {v0}, Lcom/android/server/enterprise/restriction/RestrictionPolicy$5;-><init>()V
@@ -382,73 +375,58 @@
 
     const/4 v3, 0x0
 
-    .line 466
     invoke-direct {p0}, Landroid/app/enterprise/IRestrictionPolicy$Stub;-><init>()V
 
-    .line 199
     iput-object v3, p0, Lcom/android/server/enterprise/restriction/RestrictionPolicy;->mAppPolicy:Lcom/android/server/enterprise/application/ApplicationPolicy;
 
-    .line 200
     iput-object v3, p0, Lcom/android/server/enterprise/restriction/RestrictionPolicy;->mVpnPolicy:Lcom/android/server/enterprise/vpn/VpnInfoPolicy;
 
-    .line 203
     iput-object v3, p0, Lcom/android/server/enterprise/restriction/RestrictionPolicy;->mStorageManager:Landroid/os/storage/StorageManager;
 
-    .line 213
     iput-boolean v1, p0, Lcom/android/server/enterprise/restriction/RestrictionPolicy;->preAdminRemoval_SDCardWrite:Z
 
-    .line 214
     iput-boolean v1, p0, Lcom/android/server/enterprise/restriction/RestrictionPolicy;->mIsUsbMassStorageAvailable:Z
 
-    .line 366
     new-instance v1, Ljava/util/HashMap;
 
     invoke-direct {v1}, Ljava/util/HashMap;-><init>()V
 
     iput-object v1, p0, Lcom/android/server/enterprise/restriction/RestrictionPolicy;->mRestrictionCache:Ljava/util/HashMap;
 
-    .line 367
     new-instance v1, Ljava/util/concurrent/locks/ReentrantReadWriteLock;
 
     invoke-direct {v1}, Ljava/util/concurrent/locks/ReentrantReadWriteLock;-><init>()V
 
     iput-object v1, p0, Lcom/android/server/enterprise/restriction/RestrictionPolicy;->mRestrictionCacheLock:Ljava/util/concurrent/locks/ReentrantReadWriteLock;
 
-    .line 501
     new-instance v1, Lcom/android/server/enterprise/restriction/RestrictionPolicy$6;
 
     invoke-direct {v1, p0}, Lcom/android/server/enterprise/restriction/RestrictionPolicy$6;-><init>(Lcom/android/server/enterprise/restriction/RestrictionPolicy;)V
 
     iput-object v1, p0, Lcom/android/server/enterprise/restriction/RestrictionPolicy;->mProfileServiceListener:Landroid/bluetooth/BluetoothProfile$ServiceListener;
 
-    .line 543
     new-instance v1, Lcom/android/server/enterprise/restriction/RestrictionPolicy$7;
 
     invoke-direct {v1, p0}, Lcom/android/server/enterprise/restriction/RestrictionPolicy$7;-><init>(Lcom/android/server/enterprise/restriction/RestrictionPolicy;)V
 
     iput-object v1, p0, Lcom/android/server/enterprise/restriction/RestrictionPolicy;->mBootReceiver:Landroid/content/BroadcastReceiver;
 
-    .line 635
     iput-object v3, p0, Lcom/android/server/enterprise/restriction/RestrictionPolicy;->mEDM:Landroid/app/enterprise/EnterpriseDeviceManager;
 
-    .line 863
     new-instance v1, Lcom/android/server/enterprise/restriction/RestrictionPolicy$8;
 
     invoke-direct {v1, p0}, Lcom/android/server/enterprise/restriction/RestrictionPolicy$8;-><init>(Lcom/android/server/enterprise/restriction/RestrictionPolicy;)V
 
     iput-object v1, p0, Lcom/android/server/enterprise/restriction/RestrictionPolicy;->mHandler:Landroid/os/Handler;
 
-    .line 2427
     new-instance v1, Lcom/android/server/enterprise/restriction/RestrictionPolicy$9;
 
     invoke-direct {v1, p0}, Lcom/android/server/enterprise/restriction/RestrictionPolicy$9;-><init>(Lcom/android/server/enterprise/restriction/RestrictionPolicy;)V
 
     iput-object v1, p0, Lcom/android/server/enterprise/restriction/RestrictionPolicy;->mStorageListener:Landroid/os/storage/StorageEventListener;
 
-    .line 467
     iput-object p1, p0, Lcom/android/server/enterprise/restriction/RestrictionPolicy;->mContext:Landroid/content/Context;
 
-    .line 468
     new-instance v1, Lcom/android/server/enterprise/storage/EdmStorageProvider;
 
     iget-object v2, p0, Lcom/android/server/enterprise/restriction/RestrictionPolicy;->mContext:Landroid/content/Context;
@@ -457,59 +435,48 @@
 
     iput-object v1, p0, Lcom/android/server/enterprise/restriction/RestrictionPolicy;->mEdmStorageProvider:Lcom/android/server/enterprise/storage/EdmStorageProvider;
 
-    .line 469
     iput-object p2, p0, Lcom/android/server/enterprise/restriction/RestrictionPolicy;->mAppPolicy:Lcom/android/server/enterprise/application/ApplicationPolicy;
 
-    .line 470
     iput-object p3, p0, Lcom/android/server/enterprise/restriction/RestrictionPolicy;->mVpnPolicy:Lcom/android/server/enterprise/vpn/VpnInfoPolicy;
 
-    .line 471
     new-instance v0, Landroid/content/IntentFilter;
 
     invoke-direct {v0}, Landroid/content/IntentFilter;-><init>()V
 
-    .line 472
     .local v0, "filterBoot":Landroid/content/IntentFilter;
     const-string v1, "android.intent.action.BOOT_COMPLETED"
 
     invoke-virtual {v0, v1}, Landroid/content/IntentFilter;->addAction(Ljava/lang/String;)V
 
-    .line 473
     const-string v1, "android.intent.action.ACTION_POWER_DISCONNECTED"
 
     invoke-virtual {v0, v1}, Landroid/content/IntentFilter;->addAction(Ljava/lang/String;)V
 
-    .line 474
     const-string v1, "android.intent.action.sec.DEFAULT_NETWORK_POLICY_APPLIED"
 
     invoke-virtual {v0, v1}, Landroid/content/IntentFilter;->addAction(Ljava/lang/String;)V
 
-    .line 475
     const-string v1, "android.intent.action.USER_SWITCHED"
 
     invoke-virtual {v0, v1}, Landroid/content/IntentFilter;->addAction(Ljava/lang/String;)V
 
-    .line 476
     const-string v1, "android.intent.action.USER_ADDED"
 
     invoke-virtual {v0, v1}, Landroid/content/IntentFilter;->addAction(Ljava/lang/String;)V
 
-    .line 477
     const-string v1, "android.intent.action.USER_REMOVED"
 
     invoke-virtual {v0, v1}, Landroid/content/IntentFilter;->addAction(Ljava/lang/String;)V
 
-    .line 478
     iget-object v1, p0, Lcom/android/server/enterprise/restriction/RestrictionPolicy;->mContext:Landroid/content/Context;
 
     iget-object v2, p0, Lcom/android/server/enterprise/restriction/RestrictionPolicy;->mBootReceiver:Landroid/content/BroadcastReceiver;
 
     invoke-virtual {v1, v2, v0}, Landroid/content/Context;->registerReceiver(Landroid/content/BroadcastReceiver;Landroid/content/IntentFilter;)Landroid/content/Intent;
 
-    .line 480
     iget-object v1, p0, Lcom/android/server/enterprise/restriction/RestrictionPolicy;->mContext:Landroid/content/Context;
 
-    const-string/jumbo v2, "persona"
+    const-string v2, "persona"
 
     invoke-virtual {v1, v2}, Landroid/content/Context;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
 
@@ -519,7 +486,6 @@
 
     iput-object v1, p0, Lcom/android/server/enterprise/restriction/RestrictionPolicy;->mPersonaMgr:Landroid/os/PersonaManager;
 
-    .line 482
     iget-object v1, p0, Lcom/android/server/enterprise/restriction/RestrictionPolicy;->mPersonaMgr:Landroid/os/PersonaManager;
 
     new-instance v2, Lcom/android/server/enterprise/restriction/RestrictionPolicy$SystemPersonaObserver;
@@ -528,10 +494,9 @@
 
     invoke-virtual {v1, v2}, Landroid/os/PersonaManager;->registerSystemPersonaObserver(Landroid/content/pm/ISystemPersonaObserver;)Z
 
-    .line 484
     iget-object v1, p0, Lcom/android/server/enterprise/restriction/RestrictionPolicy;->mContext:Landroid/content/Context;
 
-    const-string/jumbo v2, "statusbar"
+    const-string v2, "statusbar"
 
     invoke-virtual {v1, v2}, Landroid/content/Context;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
 
@@ -541,10 +506,9 @@
 
     iput-object v1, p0, Lcom/android/server/enterprise/restriction/RestrictionPolicy;->mStatusBar:Landroid/app/StatusBarManager;
 
-    .line 485
     iget-object v1, p0, Lcom/android/server/enterprise/restriction/RestrictionPolicy;->mContext:Landroid/content/Context;
 
-    const-string/jumbo v2, "user"
+    const-string v2, "user"
 
     invoke-virtual {v1, v2}, Landroid/content/Context;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
 
@@ -554,8 +518,7 @@
 
     iput-object v1, p0, Lcom/android/server/enterprise/restriction/RestrictionPolicy;->mUserManager:Landroid/os/UserManager;
 
-    .line 488
-    const-string/jumbo v1, "window"
+    const-string v1, "window"
 
     invoke-static {v1}, Landroid/os/ServiceManager;->getService(Ljava/lang/String;)Landroid/os/IBinder;
 
@@ -567,7 +530,6 @@
 
     iput-object v1, p0, Lcom/android/server/enterprise/restriction/RestrictionPolicy;->mWindowManager:Landroid/view/IWindowManager;
 
-    .line 489
     iget-object v1, p0, Lcom/android/server/enterprise/restriction/RestrictionPolicy;->mContext:Landroid/content/Context;
 
     const-string v2, "audio"
@@ -580,7 +542,6 @@
 
     iput-object v1, p0, Lcom/android/server/enterprise/restriction/RestrictionPolicy;->mAudioManager:Landroid/media/AudioManager;
 
-    .line 491
     return-void
 .end method
 
@@ -589,7 +550,6 @@
     .param p0, "x0"    # Lcom/android/server/enterprise/restriction/RestrictionPolicy;
 
     .prologue
-    .line 188
     invoke-direct {p0}, Lcom/android/server/enterprise/restriction/RestrictionPolicy;->mountSdCard()Z
 
     move-result v0
@@ -603,7 +563,6 @@
     .param p1, "x1"    # Landroid/bluetooth/BluetoothPan;
 
     .prologue
-    .line 188
     iput-object p1, p0, Lcom/android/server/enterprise/restriction/RestrictionPolicy;->mBluetoothPan:Landroid/bluetooth/BluetoothPan;
 
     return-object p1
@@ -614,7 +573,6 @@
     .param p0, "x0"    # Lcom/android/server/enterprise/restriction/RestrictionPolicy;
 
     .prologue
-    .line 188
     iget-object v0, p0, Lcom/android/server/enterprise/restriction/RestrictionPolicy;->mStorageListener:Landroid/os/storage/StorageEventListener;
 
     return-object v0
@@ -625,7 +583,6 @@
     .param p0, "x0"    # Lcom/android/server/enterprise/restriction/RestrictionPolicy;
 
     .prologue
-    .line 188
     iget-object v0, p0, Lcom/android/server/enterprise/restriction/RestrictionPolicy;->mPersonaMgr:Landroid/os/PersonaManager;
 
     return-object v0
@@ -636,7 +593,6 @@
     .param p0, "x0"    # Lcom/android/server/enterprise/restriction/RestrictionPolicy;
 
     .prologue
-    .line 188
     invoke-direct {p0}, Lcom/android/server/enterprise/restriction/RestrictionPolicy;->enforceStatusBarExpansion()V
 
     return-void
@@ -647,7 +603,6 @@
     .param p0, "x0"    # Lcom/android/server/enterprise/restriction/RestrictionPolicy;
 
     .prologue
-    .line 188
     invoke-direct {p0}, Lcom/android/server/enterprise/restriction/RestrictionPolicy;->updateUSBMode()V
 
     return-void
@@ -658,7 +613,6 @@
     .param p0, "x0"    # Lcom/android/server/enterprise/restriction/RestrictionPolicy;
 
     .prologue
-    .line 188
     iget-object v0, p0, Lcom/android/server/enterprise/restriction/RestrictionPolicy;->mContext:Landroid/content/Context;
 
     return-object v0
@@ -669,7 +623,6 @@
     .param p0, "x0"    # Lcom/android/server/enterprise/restriction/RestrictionPolicy;
 
     .prologue
-    .line 188
     iget-object v0, p0, Lcom/android/server/enterprise/restriction/RestrictionPolicy;->mProfileServiceListener:Landroid/bluetooth/BluetoothProfile$ServiceListener;
 
     return-object v0
@@ -682,7 +635,6 @@
     .param p2, "x2"    # Z
 
     .prologue
-    .line 188
     invoke-direct {p0, p1, p2}, Lcom/android/server/enterprise/restriction/RestrictionPolicy;->isScreenCaptureEnabled(IZ)Z
 
     move-result v0
@@ -696,7 +648,6 @@
     .param p1, "x1"    # I
 
     .prologue
-    .line 188
     invoke-direct {p0, p1}, Lcom/android/server/enterprise/restriction/RestrictionPolicy;->onUserAdded(I)V
 
     return-void
@@ -708,7 +659,6 @@
     .param p1, "x1"    # I
 
     .prologue
-    .line 188
     invoke-direct {p0, p1}, Lcom/android/server/enterprise/restriction/RestrictionPolicy;->onUserRemoved(I)V
 
     return-void
@@ -720,8 +670,7 @@
     .prologue
     const/4 v3, 0x0
 
-    .line 2405
-    const-string/jumbo v1, "sdCardWriteAccessBlocked"
+    const-string v1, "sdCardWriteAccessBlocked"
 
     invoke-virtual {p0, v3}, Lcom/android/server/enterprise/restriction/RestrictionPolicy;->isSDCardWriteAllowed(Landroid/app/enterprise/ContextInfo;)Z
 
@@ -736,7 +685,6 @@
 
     invoke-static {v1, v0, v2}, Lcom/android/server/enterprise/utils/Utils;->writePropertyValue(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Z
 
-    .line 2406
     invoke-direct {p0}, Lcom/android/server/enterprise/restriction/RestrictionPolicy;->isExternalSdCardPresent()Z
 
     move-result v0
@@ -749,7 +697,6 @@
 
     if-eqz v0, :cond_0
 
-    .line 2407
     invoke-virtual {p0}, Lcom/android/server/enterprise/restriction/RestrictionPolicy;->getStorageManager()Landroid/os/storage/StorageManager;
 
     move-result-object v0
@@ -758,16 +705,13 @@
 
     invoke-virtual {v0, v1}, Landroid/os/storage/StorageManager;->registerListener(Landroid/os/storage/StorageEventListener;)V
 
-    .line 2408
     const/4 v0, 0x1
 
     invoke-direct {p0, v0}, Lcom/android/server/enterprise/restriction/RestrictionPolicy;->unmountSdCard(Z)Z
 
-    .line 2410
     :cond_0
     return-void
 
-    .line 2405
     :cond_1
     const-string v0, "1"
 
@@ -779,7 +723,6 @@
     .param p1, "userId"    # I
 
     .prologue
-    .line 2548
     iget-object v0, p0, Lcom/android/server/enterprise/restriction/RestrictionPolicy;->mRestrictionCacheLock:Ljava/util/concurrent/locks/ReentrantReadWriteLock;
 
     invoke-virtual {v0}, Ljava/util/concurrent/locks/ReentrantReadWriteLock;->writeLock()Ljava/util/concurrent/locks/ReentrantReadWriteLock$WriteLock;
@@ -788,7 +731,6 @@
 
     invoke-virtual {v0}, Ljava/util/concurrent/locks/ReentrantReadWriteLock$WriteLock;->lock()V
 
-    .line 2550
     :try_start_0
     iget-object v0, p0, Lcom/android/server/enterprise/restriction/RestrictionPolicy;->mRestrictionCache:Ljava/util/HashMap;
 
@@ -800,7 +742,6 @@
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 2552
     iget-object v0, p0, Lcom/android/server/enterprise/restriction/RestrictionPolicy;->mRestrictionCacheLock:Ljava/util/concurrent/locks/ReentrantReadWriteLock;
 
     invoke-virtual {v0}, Ljava/util/concurrent/locks/ReentrantReadWriteLock;->writeLock()Ljava/util/concurrent/locks/ReentrantReadWriteLock$WriteLock;
@@ -809,10 +750,8 @@
 
     invoke-virtual {v0}, Ljava/util/concurrent/locks/ReentrantReadWriteLock$WriteLock;->unlock()V
 
-    .line 2554
     return-void
 
-    .line 2552
     :catchall_0
     move-exception v0
 
@@ -834,10 +773,8 @@
     .prologue
     const/4 v4, 0x1
 
-    .line 5047
     const/4 v1, 0x0
 
-    .line 5048
     .local v1, "ret":Z
     const-string v5, "RestrictionPolicy"
 
@@ -845,24 +782,19 @@
 
     invoke-static {v5, v6}, Lcom/android/server/enterprise/log/Log;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 5050
     if-nez p1, :cond_0
 
-    .line 5051
     const-string v4, "RestrictionPolicy"
 
     const-string v5, "createEFSFile : efsFile fail"
 
     invoke-static {v4, v5}, Lcom/android/server/enterprise/log/Log;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 5052
     const/4 v4, 0x0
 
-    .line 5068
     :goto_0
     return v4
 
-    .line 5054
     :cond_0
     invoke-virtual {p1}, Ljava/io/File;->exists()Z
 
@@ -870,7 +802,6 @@
 
     if-eqz v5, :cond_1
 
-    .line 5055
     const-string v5, "RestrictionPolicy"
 
     const-string v6, "createEFSFile : efsFile exist"
@@ -879,14 +810,12 @@
 
     goto :goto_0
 
-    .line 5060
     :cond_1
     :try_start_0
     invoke-virtual {p1}, Ljava/io/File;->createNewFile()Z
 
     move-result v1
 
-    .line 5061
     const/4 v4, 0x1
 
     const/4 v5, 0x1
@@ -895,7 +824,6 @@
 
     move-result v2
 
-    .line 5062
     .local v2, "retread":Z
     const/4 v4, 0x1
 
@@ -905,7 +833,6 @@
 
     move-result v3
 
-    .line 5063
     .local v3, "retwrite":Z
     const-string v4, "RestrictionPolicy"
 
@@ -941,7 +868,6 @@
     :try_end_0
     .catch Ljava/io/IOException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 5067
     .end local v2    # "retread":Z
     .end local v3    # "retwrite":Z
     :goto_1
@@ -969,14 +895,11 @@
 
     move v4, v1
 
-    .line 5068
     goto :goto_0
 
-    .line 5064
     :catch_0
     move-exception v0
 
-    .line 5065
     .local v0, "ie":Ljava/io/IOException;
     const-string v4, "RestrictionPolicy"
 
@@ -992,10 +915,8 @@
     .param p1, "efsFile"    # Ljava/io/File;
 
     .prologue
-    .line 5072
     const/4 v0, 0x0
 
-    .line 5073
     .local v0, "ret":Z
     const-string v1, "RestrictionPolicy"
 
@@ -1003,24 +924,19 @@
 
     invoke-static {v1, v2}, Lcom/android/server/enterprise/log/Log;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 5075
     if-nez p1, :cond_0
 
-    .line 5076
     const-string v1, "RestrictionPolicy"
 
     const-string v2, "deleteEFSFile : efsFile fail"
 
     invoke-static {v1, v2}, Lcom/android/server/enterprise/log/Log;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 5077
     const/4 v1, 0x0
 
-    .line 5085
     :goto_0
     return v1
 
-    .line 5079
     :cond_0
     invoke-virtual {p1}, Ljava/io/File;->exists()Z
 
@@ -1028,25 +944,21 @@
 
     if-nez v1, :cond_1
 
-    .line 5080
     const-string v1, "RestrictionPolicy"
 
     const-string v2, "deleteEFSFile : efsFile exist"
 
     invoke-static {v1, v2}, Lcom/android/server/enterprise/log/Log;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 5081
     const/4 v1, 0x1
 
     goto :goto_0
 
-    .line 5083
     :cond_1
     invoke-virtual {p1}, Ljava/io/File;->delete()Z
 
     move-result v0
 
-    .line 5084
     const-string v1, "RestrictionPolicy"
 
     new-instance v2, Ljava/lang/StringBuilder;
@@ -1071,7 +983,6 @@
 
     move v1, v0
 
-    .line 5085
     goto :goto_0
 .end method
 
@@ -1079,12 +990,10 @@
     .locals 5
 
     .prologue
-    .line 1510
     invoke-static {}, Landroid/os/Binder;->clearCallingIdentity()J
 
     move-result-wide v2
 
-    .line 1512
     .local v2, "token":J
     :try_start_0
     iget-object v4, p0, Lcom/android/server/enterprise/restriction/RestrictionPolicy;->mContext:Landroid/content/Context;
@@ -1093,25 +1002,20 @@
 
     move-result-object v1
 
-    .line 1514
     .local v1, "nfcAdapter":Landroid/nfc/NfcAdapter;
     invoke-virtual {v1}, Landroid/nfc/NfcAdapter;->disable()Z
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 1522
     .end local v1    # "nfcAdapter":Landroid/nfc/NfcAdapter;
     :goto_0
     invoke-static {v2, v3}, Landroid/os/Binder;->restoreCallingIdentity(J)V
 
-    .line 1523
     return-void
 
-    .line 1519
     :catch_0
     move-exception v0
 
-    .line 1520
     .local v0, "e":Ljava/lang/Exception;
     invoke-virtual {v0}, Ljava/lang/Exception;->printStackTrace()V
 
@@ -1123,7 +1027,6 @@
     .param p1, "cxtInfo"    # Landroid/app/enterprise/ContextInfo;
 
     .prologue
-    .line 708
     invoke-direct {p0}, Lcom/android/server/enterprise/restriction/RestrictionPolicy;->getEDM()Landroid/app/enterprise/EnterpriseDeviceManager;
 
     move-result-object v0
@@ -1142,7 +1045,6 @@
     .param p1, "cxtInfo"    # Landroid/app/enterprise/ContextInfo;
 
     .prologue
-    .line 713
     invoke-direct {p0}, Lcom/android/server/enterprise/restriction/RestrictionPolicy;->getEDM()Landroid/app/enterprise/EnterpriseDeviceManager;
 
     move-result-object v0
@@ -1161,7 +1063,6 @@
     .param p1, "cxtInfo"    # Landroid/app/enterprise/ContextInfo;
 
     .prologue
-    .line 651
     invoke-direct {p0}, Lcom/android/server/enterprise/restriction/RestrictionPolicy;->getEDM()Landroid/app/enterprise/EnterpriseDeviceManager;
 
     move-result-object v0
@@ -1180,7 +1081,6 @@
     .param p1, "cxtInfo"    # Landroid/app/enterprise/ContextInfo;
 
     .prologue
-    .line 679
     invoke-direct {p0}, Lcom/android/server/enterprise/restriction/RestrictionPolicy;->getEDM()Landroid/app/enterprise/EnterpriseDeviceManager;
 
     move-result-object v0
@@ -1198,22 +1098,18 @@
     .locals 8
 
     .prologue
-    .line 604
     invoke-static {}, Landroid/os/Binder;->getCallingUid()I
 
     move-result v4
 
-    .line 605
     .local v4, "uid":I
     invoke-static {}, Landroid/os/Binder;->getCallingPid()I
 
     move-result v3
 
-    .line 606
     .local v3, "pid":I
     const-string v2, ""
 
-    .line 608
     .local v2, "packageName":Ljava/lang/String;
     :try_start_0
     invoke-static {}, Landroid/app/ActivityManagerNative;->getDefault()Landroid/app/IActivityManager;
@@ -1226,7 +1122,6 @@
 
     move-result-object v2
 
-    .line 612
     :goto_0
     const-string v5, "RestrictionPolicy"
 
@@ -1250,7 +1145,6 @@
 
     invoke-static {v5, v6}, Lcom/android/server/enterprise/log/Log;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 615
     iget-object v5, p0, Lcom/android/server/enterprise/restriction/RestrictionPolicy;->mContext:Landroid/content/Context;
 
     invoke-virtual {v5}, Landroid/content/Context;->getPackageManager()Landroid/content/pm/PackageManager;
@@ -1261,7 +1155,6 @@
 
     move-result-object v0
 
-    .line 617
     .local v0, "caller":Ljava/lang/String;
     const/16 v5, 0x3e8
 
@@ -1277,7 +1170,6 @@
 
     if-nez v5, :cond_1
 
-    .line 618
     :cond_0
     new-instance v5, Ljava/lang/SecurityException;
 
@@ -1313,12 +1205,10 @@
 
     throw v5
 
-    .line 609
     .end local v0    # "caller":Ljava/lang/String;
     :catch_0
     move-exception v1
 
-    .line 610
     .local v1, "e":Ljava/lang/Exception;
     const-string v5, "RestrictionPolicy"
 
@@ -1344,7 +1234,6 @@
 
     goto :goto_0
 
-    .line 620
     .end local v1    # "e":Ljava/lang/Exception;
     .restart local v0    # "caller":Ljava/lang/String;
     :cond_1
@@ -1356,7 +1245,6 @@
     .param p1, "cxtInfo"    # Landroid/app/enterprise/ContextInfo;
 
     .prologue
-    .line 703
     invoke-direct {p0}, Lcom/android/server/enterprise/restriction/RestrictionPolicy;->getEDM()Landroid/app/enterprise/EnterpriseDeviceManager;
 
     move-result-object v0
@@ -1375,7 +1263,6 @@
     .param p1, "cxtInfo"    # Landroid/app/enterprise/ContextInfo;
 
     .prologue
-    .line 656
     invoke-direct {p0}, Lcom/android/server/enterprise/restriction/RestrictionPolicy;->getEDM()Landroid/app/enterprise/EnterpriseDeviceManager;
 
     move-result-object v0
@@ -1394,7 +1281,6 @@
     .param p1, "cxtInfo"    # Landroid/app/enterprise/ContextInfo;
 
     .prologue
-    .line 684
     invoke-direct {p0}, Lcom/android/server/enterprise/restriction/RestrictionPolicy;->getEDM()Landroid/app/enterprise/EnterpriseDeviceManager;
 
     move-result-object v0
@@ -1413,7 +1299,6 @@
     .param p1, "cxtInfo"    # Landroid/app/enterprise/ContextInfo;
 
     .prologue
-    .line 698
     invoke-direct {p0}, Lcom/android/server/enterprise/restriction/RestrictionPolicy;->getEDM()Landroid/app/enterprise/EnterpriseDeviceManager;
 
     move-result-object v0
@@ -1432,7 +1317,6 @@
     .param p1, "cxtInfo"    # Landroid/app/enterprise/ContextInfo;
 
     .prologue
-    .line 670
     invoke-direct {p0}, Lcom/android/server/enterprise/restriction/RestrictionPolicy;->getEDM()Landroid/app/enterprise/EnterpriseDeviceManager;
 
     move-result-object v0
@@ -1451,7 +1335,6 @@
     .param p1, "cxtInfo"    # Landroid/app/enterprise/ContextInfo;
 
     .prologue
-    .line 693
     invoke-direct {p0}, Lcom/android/server/enterprise/restriction/RestrictionPolicy;->getEDM()Landroid/app/enterprise/EnterpriseDeviceManager;
 
     move-result-object v0
@@ -1471,7 +1354,6 @@
     .prologue
     const/4 v1, 0x0
 
-    .line 2773
     const/4 v0, 0x0
 
     invoke-virtual {p0, v0, v1}, Lcom/android/server/enterprise/restriction/RestrictionPolicy;->isStatusBarExpansionAllowed(Landroid/app/enterprise/ContextInfo;Z)Z
@@ -1480,18 +1362,15 @@
 
     if-nez v0, :cond_0
 
-    .line 2774
     iget-object v0, p0, Lcom/android/server/enterprise/restriction/RestrictionPolicy;->mStatusBar:Landroid/app/StatusBarManager;
 
     const/high16 v1, 0x10000
 
     invoke-virtual {v0, v1}, Landroid/app/StatusBarManager;->disable(I)V
 
-    .line 2778
     :goto_0
     return-void
 
-    .line 2776
     :cond_0
     iget-object v0, p0, Lcom/android/server/enterprise/restriction/RestrictionPolicy;->mStatusBar:Landroid/app/StatusBarManager;
 
@@ -1505,7 +1384,6 @@
     .param p1, "cxtInfo"    # Landroid/app/enterprise/ContextInfo;
 
     .prologue
-    .line 665
     invoke-direct {p0}, Lcom/android/server/enterprise/restriction/RestrictionPolicy;->getEDM()Landroid/app/enterprise/EnterpriseDeviceManager;
 
     move-result-object v0
@@ -1514,7 +1392,6 @@
 
     invoke-virtual {v0, v1}, Landroid/app/enterprise/EnterpriseDeviceManager;->enforceActiveAdminPermission(Ljava/lang/String;)V
 
-    .line 666
     return-object p1
 .end method
 
@@ -1525,10 +1402,8 @@
     .param p4, "userId"    # I
 
     .prologue
-    .line 922
     move v1, p3
 
-    .line 924
     .local v1, "result":Z
     iget-object v2, p0, Lcom/android/server/enterprise/restriction/RestrictionPolicy;->mRestrictionCacheLock:Ljava/util/concurrent/locks/ReentrantReadWriteLock;
 
@@ -1538,7 +1413,6 @@
 
     invoke-virtual {v2}, Ljava/util/concurrent/locks/ReentrantReadWriteLock$ReadLock;->lock()V
 
-    .line 926
     :try_start_0
     iget-object v2, p0, Lcom/android/server/enterprise/restriction/RestrictionPolicy;->mRestrictionCache:Ljava/util/HashMap;
 
@@ -1552,11 +1426,9 @@
 
     check-cast v0, Ljava/lang/Long;
 
-    .line 928
     .local v0, "restrictionPolicies":Ljava/lang/Long;
     if-eqz v0, :cond_0
 
-    .line 929
     invoke-virtual {v0}, Ljava/lang/Long;->longValue()J
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
@@ -1571,7 +1443,6 @@
 
     const/4 v1, 0x1
 
-    .line 932
     :cond_0
     :goto_0
     iget-object v2, p0, Lcom/android/server/enterprise/restriction/RestrictionPolicy;->mRestrictionCacheLock:Ljava/util/concurrent/locks/ReentrantReadWriteLock;
@@ -1582,16 +1453,13 @@
 
     invoke-virtual {v2}, Ljava/util/concurrent/locks/ReentrantReadWriteLock$ReadLock;->unlock()V
 
-    .line 935
     return v1
 
-    .line 929
     :cond_1
     const/4 v1, 0x0
 
     goto :goto_0
 
-    .line 932
     .end local v0    # "restrictionPolicies":Ljava/lang/Long;
     :catchall_0
     move-exception v2
@@ -1613,14 +1481,12 @@
     .param p2, "packageName"    # Ljava/lang/String;
 
     .prologue
-    .line 1208
     iget-object v2, p0, Lcom/android/server/enterprise/restriction/RestrictionPolicy;->mContext:Landroid/content/Context;
 
     invoke-virtual {v2}, Landroid/content/Context;->getPackageManager()Landroid/content/pm/PackageManager;
 
     move-result-object v1
 
-    .line 1210
     .local v1, "packageManager":Landroid/content/pm/PackageManager;
     :try_start_0
     invoke-virtual {v1, p2, p1}, Landroid/content/pm/PackageManager;->getPackageUid(Ljava/lang/String;I)I
@@ -1629,15 +1495,12 @@
 
     move-result v2
 
-    .line 1213
     :goto_0
     return v2
 
-    .line 1211
     :catch_0
     move-exception v0
 
-    .line 1212
     .local v0, "e":Landroid/content/pm/PackageManager$NameNotFoundException;
     const-string v2, "RestrictionPolicy"
 
@@ -1665,7 +1528,6 @@
 
     invoke-static {v2, v3}, Landroid/util/Slog;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1213
     const/4 v2, -0x1
 
     goto :goto_0
@@ -1675,12 +1537,10 @@
     .locals 2
 
     .prologue
-    .line 639
     iget-object v0, p0, Lcom/android/server/enterprise/restriction/RestrictionPolicy;->mEDM:Landroid/app/enterprise/EnterpriseDeviceManager;
 
     if-nez v0, :cond_0
 
-    .line 640
     iget-object v0, p0, Lcom/android/server/enterprise/restriction/RestrictionPolicy;->mContext:Landroid/content/Context;
 
     const-string v1, "enterprise_policy"
@@ -1693,7 +1553,6 @@
 
     iput-object v0, p0, Lcom/android/server/enterprise/restriction/RestrictionPolicy;->mEDM:Landroid/app/enterprise/EnterpriseDeviceManager;
 
-    .line 643
     :cond_0
     iget-object v0, p0, Lcom/android/server/enterprise/restriction/RestrictionPolicy;->mEDM:Landroid/app/enterprise/EnterpriseDeviceManager;
 
@@ -1704,7 +1563,6 @@
     .locals 7
 
     .prologue
-    .line 2480
     invoke-virtual {p0}, Lcom/android/server/enterprise/restriction/RestrictionPolicy;->getStorageManagerAdapter()Lcom/android/server/enterprise/adapterlayer/StorageManagerAdapter;
 
     move-result-object v5
@@ -1713,7 +1571,6 @@
 
     move-result-object v3
 
-    .line 2481
     .local v3, "storageVolumes":[Landroid/os/storage/StorageVolume;
     move-object v0, v3
 
@@ -1729,7 +1586,6 @@
 
     aget-object v4, v0, v1
 
-    .line 2482
     .local v4, "volume":Landroid/os/storage/StorageVolume;
     invoke-virtual {v4}, Landroid/os/storage/StorageVolume;->getPath()Ljava/lang/String;
 
@@ -1743,24 +1599,20 @@
 
     if-eqz v5, :cond_0
 
-    .line 2483
     invoke-virtual {v4}, Landroid/os/storage/StorageVolume;->getPath()Ljava/lang/String;
 
     move-result-object v5
 
-    .line 2486
     .end local v4    # "volume":Landroid/os/storage/StorageVolume;
     :goto_1
     return-object v5
 
-    .line 2481
     .restart local v4    # "volume":Landroid/os/storage/StorageVolume;
     :cond_0
     add-int/lit8 v1, v1, 0x1
 
     goto :goto_0
 
-    .line 2486
     .end local v4    # "volume":Landroid/os/storage/StorageVolume;
     :cond_1
     const/4 v5, 0x0
@@ -1772,12 +1624,10 @@
     .locals 5
 
     .prologue
-    .line 2413
     monitor-enter p0
 
     const/4 v1, 0x0
 
-    .line 2415
     .local v1, "mountService":Landroid/os/storage/IMountService;
     :try_start_0
     const-string v3, "mount"
@@ -1786,11 +1636,9 @@
 
     move-result-object v2
 
-    .line 2416
     .local v2, "service":Landroid/os/IBinder;
     if-eqz v2, :cond_0
 
-    .line 2417
     invoke-static {v2}, Landroid/os/storage/IMountService$Stub;->asInterface(Landroid/os/IBinder;)Landroid/os/storage/IMountService;
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
@@ -1798,14 +1646,12 @@
 
     move-result-object v1
 
-    .line 2424
     .end local v2    # "service":Landroid/os/IBinder;
     :goto_0
     monitor-exit p0
 
     return-object v1
 
-    .line 2419
     .restart local v2    # "service":Landroid/os/IBinder;
     :cond_0
     :try_start_1
@@ -1820,12 +1666,10 @@
 
     goto :goto_0
 
-    .line 2421
     .end local v2    # "service":Landroid/os/IBinder;
     :catch_0
     move-exception v0
 
-    .line 2422
     .local v0, "e":Ljava/lang/Exception;
     :try_start_2
     invoke-virtual {v0}, Ljava/lang/Exception;->printStackTrace()V
@@ -1834,7 +1678,6 @@
 
     goto :goto_0
 
-    .line 2413
     .end local v0    # "e":Ljava/lang/Exception;
     :catchall_0
     move-exception v3
@@ -1849,7 +1692,6 @@
     .param p1, "uid"    # I
 
     .prologue
-    .line 4961
     iget-object v2, p0, Lcom/android/server/enterprise/restriction/RestrictionPolicy;->mEdmStorageProvider:Lcom/android/server/enterprise/storage/EdmStorageProvider;
 
     const-string v3, "ADMIN_INFO"
@@ -1860,24 +1702,19 @@
 
     move-result-object v1
 
-    .line 4963
     .local v1, "pkgName":Ljava/lang/String;
     if-nez v1, :cond_0
 
-    .line 4964
     const/4 v2, 0x0
 
-    .line 4968
     :goto_0
     return-object v2
 
-    .line 4967
     :cond_0
     invoke-static {v1}, Landroid/content/ComponentName;->unflattenFromString(Ljava/lang/String;)Landroid/content/ComponentName;
 
     move-result-object v0
 
-    .line 4968
     .local v0, "compName":Landroid/content/ComponentName;
     invoke-virtual {v0}, Landroid/content/ComponentName;->getPackageName()Ljava/lang/String;
 
@@ -1890,12 +1727,10 @@
     .locals 1
 
     .prologue
-    .line 494
     iget-object v0, p0, Lcom/android/server/enterprise/restriction/RestrictionPolicy;->mEdmService:Landroid/app/enterprise/IEnterpriseDeviceManager;
 
     if-nez v0, :cond_0
 
-    .line 495
     const-string v0, "enterprise_policy"
 
     invoke-static {v0}, Landroid/os/ServiceManager;->getService(Ljava/lang/String;)Landroid/os/IBinder;
@@ -1908,7 +1743,6 @@
 
     iput-object v0, p0, Lcom/android/server/enterprise/restriction/RestrictionPolicy;->mEdmService:Landroid/app/enterprise/IEnterpriseDeviceManager;
 
-    .line 498
     :cond_0
     iget-object v0, p0, Lcom/android/server/enterprise/restriction/RestrictionPolicy;->mEdmService:Landroid/app/enterprise/IEnterpriseDeviceManager;
 
@@ -1919,16 +1753,13 @@
     .locals 7
 
     .prologue
-    .line 2221
     invoke-static {}, Landroid/os/Binder;->clearCallingIdentity()J
 
     move-result-wide v2
 
-    .line 2222
     .local v2, "token":J
     const/4 v1, 0x0
 
-    .line 2225
     .local v1, "userId":I
     :try_start_0
     invoke-static {}, Landroid/app/ActivityManagerNative;->getDefault()Landroid/app/IActivityManager;
@@ -1956,18 +1787,14 @@
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 2229
     invoke-static {v2, v3}, Landroid/os/Binder;->restoreCallingIdentity(J)V
 
-    .line 2232
     :goto_0
     return v1
 
-    .line 2226
     :catch_0
     move-exception v0
 
-    .line 2227
     .local v0, "e":Ljava/lang/Exception;
     :try_start_1
     const-string v4, "RestrictionPolicy"
@@ -1978,7 +1805,6 @@
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
-    .line 2229
     invoke-static {v2, v3}, Landroid/os/Binder;->restoreCallingIdentity(J)V
 
     goto :goto_0
@@ -1999,7 +1825,6 @@
     .prologue
     const/4 v5, -0x1
 
-    .line 4821
     iget-object v6, p0, Lcom/android/server/enterprise/restriction/RestrictionPolicy;->mEdmStorageProvider:Lcom/android/server/enterprise/storage/EdmStorageProvider;
 
     const-string v7, "RESTRICTION"
@@ -2010,7 +1835,6 @@
 
     move-result-object v4
 
-    .line 4823
     .local v4, "uidList":Ljava/util/ArrayList;, "Ljava/util/ArrayList<Ljava/lang/Integer;>;"
     invoke-virtual {v4}, Ljava/util/ArrayList;->iterator()Ljava/util/Iterator;
 
@@ -2030,7 +1854,6 @@
 
     check-cast v3, Ljava/lang/Integer;
 
-    .line 4825
     .local v3, "uid":Ljava/lang/Integer;
     :try_start_0
     iget-object v6, p0, Lcom/android/server/enterprise/restriction/RestrictionPolicy;->mEdmStorageProvider:Lcom/android/server/enterprise/storage/EdmStorageProvider;
@@ -2041,36 +1864,31 @@
 
     const-string v8, "RESTRICTION"
 
-    const-string/jumbo v9, "preventAdminActivation"
+    const-string v9, "preventAdminActivation"
 
     invoke-virtual {v6, v7, v8, v9}, Lcom/android/server/enterprise/storage/EdmStorageProvider;->getBoolean(ILjava/lang/String;Ljava/lang/String;)Z
 
     move-result v2
 
-    .line 4827
     .local v2, "ret":Z
     if-eqz v2, :cond_0
 
-    .line 4828
     invoke-virtual {v3}, Ljava/lang/Integer;->intValue()I
     :try_end_0
     .catch Lcom/android/server/enterprise/storage/SettingNotFoundException; {:try_start_0 .. :try_end_0} :catch_0
 
     move-result v5
 
-    .line 4835
     .end local v2    # "ret":Z
     .end local v3    # "uid":Ljava/lang/Integer;
     :cond_1
     :goto_0
     return v5
 
-    .line 4829
     .restart local v3    # "uid":Ljava/lang/Integer;
     :catch_0
     move-exception v0
 
-    .line 4830
     .local v0, "e":Lcom/android/server/enterprise/storage/SettingNotFoundException;
     const-string v6, "RestrictionPolicy"
 
@@ -2088,7 +1906,6 @@
     .prologue
     const/4 v5, -0x1
 
-    .line 4841
     iget-object v6, p0, Lcom/android/server/enterprise/restriction/RestrictionPolicy;->mEdmStorageProvider:Lcom/android/server/enterprise/storage/EdmStorageProvider;
 
     const-string v7, "RESTRICTION"
@@ -2099,7 +1916,6 @@
 
     move-result-object v4
 
-    .line 4843
     .local v4, "uidList":Ljava/util/ArrayList;, "Ljava/util/ArrayList<Ljava/lang/Integer;>;"
     invoke-virtual {v4}, Ljava/util/ArrayList;->iterator()Ljava/util/Iterator;
 
@@ -2119,7 +1935,6 @@
 
     check-cast v3, Ljava/lang/Integer;
 
-    .line 4845
     .local v3, "uid":Ljava/lang/Integer;
     :try_start_0
     iget-object v6, p0, Lcom/android/server/enterprise/restriction/RestrictionPolicy;->mEdmStorageProvider:Lcom/android/server/enterprise/storage/EdmStorageProvider;
@@ -2130,36 +1945,31 @@
 
     const-string v8, "RESTRICTION"
 
-    const-string/jumbo v9, "preventAdminInstallation"
+    const-string v9, "preventAdminInstallation"
 
     invoke-virtual {v6, v7, v8, v9}, Lcom/android/server/enterprise/storage/EdmStorageProvider;->getBoolean(ILjava/lang/String;Ljava/lang/String;)Z
 
     move-result v2
 
-    .line 4847
     .local v2, "ret":Z
     if-eqz v2, :cond_0
 
-    .line 4848
     invoke-virtual {v3}, Ljava/lang/Integer;->intValue()I
     :try_end_0
     .catch Lcom/android/server/enterprise/storage/SettingNotFoundException; {:try_start_0 .. :try_end_0} :catch_0
 
     move-result v5
 
-    .line 4855
     .end local v2    # "ret":Z
     .end local v3    # "uid":Ljava/lang/Integer;
     :cond_1
     :goto_0
     return v5
 
-    .line 4849
     .restart local v3    # "uid":Ljava/lang/Integer;
     :catch_0
     move-exception v0
 
-    .line 4850
     .local v0, "e":Lcom/android/server/enterprise/storage/SettingNotFoundException;
     const-string v6, "RestrictionPolicy"
 
@@ -2175,10 +1985,8 @@
     .param p1, "cxtInfo"    # Landroid/app/enterprise/ContextInfo;
 
     .prologue
-    .line 3724
     if-nez p1, :cond_0
 
-    .line 3725
     new-instance p1, Landroid/app/enterprise/ContextInfo;
 
     .end local p1    # "cxtInfo":Landroid/app/enterprise/ContextInfo;
@@ -2188,7 +1996,6 @@
 
     invoke-direct {p1, v5}, Landroid/app/enterprise/ContextInfo;-><init>(I)V
 
-    .line 3728
     .restart local p1    # "cxtInfo":Landroid/app/enterprise/ContextInfo;
     :cond_0
     iget-object v5, p0, Lcom/android/server/enterprise/restriction/RestrictionPolicy;->mContext:Landroid/content/Context;
@@ -2203,31 +2010,26 @@
 
     move-result-object v0
 
-    .line 3729
     .local v0, "caller":Ljava/lang/String;
     if-eqz v0, :cond_2
 
-    .line 3730
     const-string v5, ":"
 
     invoke-virtual {v0, v5}, Ljava/lang/String;->lastIndexOf(Ljava/lang/String;)I
 
     move-result v1
 
-    .line 3731
     .local v1, "index":I
     const/4 v5, -0x1
 
     if-eq v1, v5, :cond_1
 
-    .line 3732
     const/4 v5, 0x0
 
     invoke-virtual {v0, v5, v1}, Ljava/lang/String;->substring(II)Ljava/lang/String;
 
     move-result-object v0
 
-    .line 3734
     :cond_1
     const-string v5, "android.uid.systemui"
 
@@ -2237,22 +2039,18 @@
 
     if-eqz v5, :cond_2
 
-    .line 3735
     invoke-static {}, Landroid/os/Binder;->clearCallingIdentity()J
 
     move-result-wide v2
 
-    .line 3736
     .local v2, "token":J
     invoke-static {}, Landroid/app/ActivityManager;->getCurrentUser()I
 
     move-result v4
 
-    .line 3737
     .local v4, "userId":I
     invoke-static {v2, v3}, Landroid/os/Binder;->restoreCallingIdentity(J)V
 
-    .line 3741
     .end local v1    # "index":I
     .end local v2    # "token":J
     .end local v4    # "userId":I
@@ -2272,7 +2070,6 @@
     .param p1, "userId"    # I
 
     .prologue
-    .line 2539
     iget-object v0, p0, Lcom/android/server/enterprise/restriction/RestrictionPolicy;->mRestrictionCacheLock:Ljava/util/concurrent/locks/ReentrantReadWriteLock;
 
     invoke-virtual {v0}, Ljava/util/concurrent/locks/ReentrantReadWriteLock;->writeLock()Ljava/util/concurrent/locks/ReentrantReadWriteLock$WriteLock;
@@ -2281,7 +2078,6 @@
 
     invoke-virtual {v0}, Ljava/util/concurrent/locks/ReentrantReadWriteLock$WriteLock;->lock()V
 
-    .line 2541
     :try_start_0
     iget-object v0, p0, Lcom/android/server/enterprise/restriction/RestrictionPolicy;->mRestrictionCache:Ljava/util/HashMap;
 
@@ -2299,7 +2095,6 @@
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 2543
     iget-object v0, p0, Lcom/android/server/enterprise/restriction/RestrictionPolicy;->mRestrictionCacheLock:Ljava/util/concurrent/locks/ReentrantReadWriteLock;
 
     invoke-virtual {v0}, Ljava/util/concurrent/locks/ReentrantReadWriteLock;->writeLock()Ljava/util/concurrent/locks/ReentrantReadWriteLock$WriteLock;
@@ -2308,10 +2103,8 @@
 
     invoke-virtual {v0}, Ljava/util/concurrent/locks/ReentrantReadWriteLock$WriteLock;->unlock()V
 
-    .line 2545
     return-void
 
-    .line 2543
     :catchall_0
     move-exception v0
 
@@ -2331,7 +2124,6 @@
     .param p1, "userId"    # I
 
     .prologue
-    .line 806
     const-wide v0, 0x1000000000L
 
     const/4 v2, 0x1
@@ -2351,25 +2143,21 @@
     .prologue
     const/4 v1, 0x0
 
-    .line 778
     invoke-direct {p0, v1}, Lcom/android/server/enterprise/restriction/RestrictionPolicy;->isCameraEnabledAsUser(I)Z
 
     move-result v2
 
     if-nez v2, :cond_0
 
-    .line 779
     const-string v2, "RestrictionPolicy"
 
     const-string v3, "isCameraEnabledEx isCameraEnabledEx with OWNER return false"
 
     invoke-static {v2, v3}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 795
     :goto_0
     return v1
 
-    .line 783
     :cond_0
     invoke-direct {p0}, Lcom/android/server/enterprise/restriction/RestrictionPolicy;->getEDM()Landroid/app/enterprise/EnterpriseDeviceManager;
 
@@ -2383,7 +2171,6 @@
 
     if-eqz v2, :cond_1
 
-    .line 784
     const-string v2, "RestrictionPolicy"
 
     const-string v3, "isCameraEnabledEx isRestrictedByConstrainedState return true"
@@ -2392,7 +2179,6 @@
 
     goto :goto_0
 
-    .line 788
     :cond_1
     iget-object v2, p0, Lcom/android/server/enterprise/restriction/RestrictionPolicy;->mContext:Landroid/content/Context;
 
@@ -2404,7 +2190,6 @@
 
     check-cast v0, Landroid/app/admin/DevicePolicyManager;
 
-    .line 790
     .local v0, "dpm":Landroid/app/admin/DevicePolicyManager;
     if-eqz v0, :cond_2
 
@@ -2418,7 +2203,6 @@
 
     if-eqz v2, :cond_2
 
-    .line 791
     const-string v2, "RestrictionPolicy"
 
     const-string v3, "isCameraEnabledEx dpm.getCameraDisabledWithUID return true"
@@ -2427,7 +2211,6 @@
 
     goto :goto_0
 
-    .line 795
     :cond_2
     invoke-direct {p0, p1}, Lcom/android/server/enterprise/restriction/RestrictionPolicy;->isCameraEnabledAsUser(I)Z
 
@@ -2440,16 +2223,13 @@
     .locals 7
 
     .prologue
-    .line 5090
     const/4 v1, 0x0
 
-    .line 5091
     .local v1, "ret":Z
     invoke-static {}, Landroid/os/Binder;->clearCallingIdentity()J
 
     move-result-wide v2
 
-    .line 5092
     .local v2, "token":J
     new-instance v0, Ljava/io/File;
 
@@ -2457,34 +2237,27 @@
 
     invoke-direct {v0, v4}, Ljava/io/File;-><init>(Ljava/lang/String;)V
 
-    .line 5094
     .local v0, "efsFile":Ljava/io/File;
     if-nez v0, :cond_0
 
-    .line 5095
     const-string v4, "RestrictionPolicy"
 
     const-string v5, "isExistEFSFile : efsFile fail"
 
     invoke-static {v4, v5}, Lcom/android/server/enterprise/log/Log;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 5096
     const/4 v4, 0x0
 
-    .line 5103
     :goto_0
     return v4
 
-    .line 5099
     :cond_0
     invoke-virtual {v0}, Ljava/io/File;->exists()Z
 
     move-result v1
 
-    .line 5100
     invoke-static {v2, v3}, Landroid/os/Binder;->restoreCallingIdentity(J)V
 
-    .line 5102
     const-string v4, "RestrictionPolicy"
 
     new-instance v5, Ljava/lang/StringBuilder;
@@ -2509,7 +2282,6 @@
 
     move v4, v1
 
-    .line 5103
     goto :goto_0
 .end method
 
@@ -2517,7 +2289,6 @@
     .locals 3
 
     .prologue
-    .line 2472
     invoke-virtual {p0}, Lcom/android/server/enterprise/restriction/RestrictionPolicy;->getStorageManagerAdapter()Lcom/android/server/enterprise/adapterlayer/StorageManagerAdapter;
 
     move-result-object v1
@@ -2526,7 +2297,6 @@
 
     move-result-object v0
 
-    .line 2473
     .local v0, "storageVolumes":[Landroid/os/storage/StorageVolume;
     array-length v1, v0
 
@@ -2534,10 +2304,8 @@
 
     if-lt v1, v2, :cond_0
 
-    .line 2474
     const/4 v1, 0x1
 
-    .line 2476
     :goto_0
     return v1
 
@@ -2552,7 +2320,6 @@
     .param p1, "cxtInfo"    # Landroid/app/enterprise/ContextInfo;
 
     .prologue
-    .line 2164
     const-wide/high16 v0, 0x8000000000000L
 
     const/4 v2, 0x1
@@ -2571,7 +2338,6 @@
     .param p1, "cxtInfo"    # Landroid/app/enterprise/ContextInfo;
 
     .prologue
-    .line 3859
     const-wide/32 v2, 0x1000000
 
     const/4 v1, 0x1
@@ -2582,7 +2348,6 @@
 
     move-result v0
 
-    .line 3863
     .local v0, "ret":Z
     return v0
 .end method
@@ -2592,7 +2357,6 @@
     .param p1, "userId"    # I
 
     .prologue
-    .line 4896
     const/4 v0, 0x0
 
     invoke-direct {p0, p1, v0}, Lcom/android/server/enterprise/restriction/RestrictionPolicy;->isNewAdminActivationEnabledInternal(IZ)Z
@@ -2612,25 +2376,21 @@
 
     const/4 v3, 0x0
 
-    .line 4884
     const-wide v4, 0x200000000L
 
     invoke-direct {p0, v4, v5, v3, p1}, Lcom/android/server/enterprise/restriction/RestrictionPolicy;->extractFromRestrictionCache(JZI)Z
 
     move-result v0
 
-    .line 4888
     .local v0, "ret":Z
     if-eqz p2, :cond_0
 
     if-eqz v0, :cond_0
 
-    .line 4889
     const v1, 0x1040b76
 
     invoke-static {v1}, Lcom/android/server/enterprise/RestrictionToastManager;->show(I)V
 
-    .line 4891
     :cond_0
     const-string v4, "RestrictionPolicy"
 
@@ -2659,7 +2419,6 @@
 
     invoke-static {v4, v1}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 4892
     if-nez v0, :cond_2
 
     :goto_1
@@ -2668,13 +2427,11 @@
     :cond_1
     move v1, v3
 
-    .line 4891
     goto :goto_0
 
     :cond_2
     move v2, v3
 
-    .line 4892
     goto :goto_1
 .end method
 
@@ -2686,14 +2443,12 @@
     .prologue
     const/4 v1, 0x0
 
-    .line 4768
     const-wide v2, 0x100000000L
 
     invoke-direct {p0, v2, v3, v1, p1}, Lcom/android/server/enterprise/restriction/RestrictionPolicy;->extractFromRestrictionCache(JZI)Z
 
     move-result v0
 
-    .line 4772
     .local v0, "ret":Z
     const-string v2, "RestrictionPolicy"
 
@@ -2717,17 +2472,14 @@
 
     invoke-static {v2, v3}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 4773
     if-eqz p2, :cond_0
 
     if-eqz v0, :cond_0
 
-    .line 4774
     const v2, 0x1040b77
 
     invoke-static {v2}, Lcom/android/server/enterprise/RestrictionToastManager;->show(I)V
 
-    .line 4776
     :cond_0
     if-nez v0, :cond_1
 
@@ -2743,7 +2495,6 @@
     .param p2, "showMsg"    # Z
 
     .prologue
-    .line 1245
     const-wide v2, 0x10000000000L
 
     const/4 v1, 0x1
@@ -2752,7 +2503,6 @@
 
     move-result v0
 
-    .line 1249
     .local v0, "ret":Z
     if-eqz v0, :cond_0
 
@@ -2768,21 +2518,17 @@
 
     if-eqz v1, :cond_0
 
-    .line 1250
     const/4 v0, 0x0
 
-    .line 1253
     :cond_0
     if-eqz p2, :cond_1
 
     if-nez v0, :cond_1
 
-    .line 1254
     const v1, 0x1040b61
 
     invoke-static {v1}, Lcom/android/server/enterprise/RestrictionToastManager;->show(I)V
 
-    .line 1256
     :cond_1
     const-string v1, "RestrictionPolicy"
 
@@ -2816,7 +2562,6 @@
 
     invoke-static {v1, v2}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1257
     return v0
 .end method
 
@@ -2826,10 +2571,8 @@
     .prologue
     const/4 v9, 0x0
 
-    .line 4144
     const/4 v8, 0x0
 
-    .line 4146
     .local v8, "showUpdates":I
     :try_start_0
     const-string v10, "SurfaceFlinger"
@@ -2838,72 +2581,59 @@
 
     move-result-object v4
 
-    .line 4147
     .local v4, "flinger":Landroid/os/IBinder;
     if-eqz v4, :cond_0
 
-    .line 4148
     invoke-static {}, Landroid/os/Parcel;->obtain()Landroid/os/Parcel;
 
     move-result-object v0
 
-    .line 4149
     .local v0, "data":Landroid/os/Parcel;
     invoke-static {}, Landroid/os/Parcel;->obtain()Landroid/os/Parcel;
 
     move-result-object v5
 
-    .line 4150
     .local v5, "reply":Landroid/os/Parcel;
     const-string v10, "android.ui.ISurfaceComposer"
 
     invoke-virtual {v0, v10}, Landroid/os/Parcel;->writeInterfaceToken(Ljava/lang/String;)V
 
-    .line 4151
     const/16 v10, 0x3f2
 
     const/4 v11, 0x0
 
     invoke-interface {v4, v10, v0, v5, v11}, Landroid/os/IBinder;->transact(ILandroid/os/Parcel;Landroid/os/Parcel;I)Z
 
-    .line 4153
     invoke-virtual {v5}, Landroid/os/Parcel;->readInt()I
 
     move-result v7
 
-    .line 4155
     .local v7, "showCpu":I
     invoke-virtual {v5}, Landroid/os/Parcel;->readInt()I
 
     move-result v2
 
-    .line 4156
     .local v2, "enableGL":I
     invoke-virtual {v5}, Landroid/os/Parcel;->readInt()I
 
     move-result v8
 
-    .line 4158
     invoke-virtual {v5}, Landroid/os/Parcel;->readInt()I
 
     move-result v6
 
-    .line 4159
     .local v6, "showBackground":I
     invoke-virtual {v5}, Landroid/os/Parcel;->readInt()I
 
     move-result v1
 
-    .line 4160
     .local v1, "disableOverlays":I
     invoke-virtual {v5}, Landroid/os/Parcel;->recycle()V
 
-    .line 4161
     invoke-virtual {v0}, Landroid/os/Parcel;->recycle()V
     :try_end_0
     .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 4167
     .end local v0    # "data":Landroid/os/Parcel;
     .end local v1    # "disableOverlays":I
     .end local v2    # "enableGL":I
@@ -2920,11 +2650,9 @@
     :cond_1
     return v9
 
-    .line 4163
     :catch_0
     move-exception v3
 
-    .line 4164
     .local v3, "ex":Landroid/os/RemoteException;
     const-string v10, "RestrictionPolicy"
 
@@ -2932,7 +2660,7 @@
 
     invoke-direct {v11}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v12, "updateFlingerOptions: RemoteException ex -> "
+    const-string v12, "updateFlingerOptions: RemoteException ex -> "
 
     invoke-virtual {v11, v12}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -2961,7 +2689,6 @@
     .param p2, "userId"    # I
 
     .prologue
-    .line 5133
     const-wide/high16 v2, 0x100000000000000L
 
     const/4 v1, 0x1
@@ -2970,18 +2697,15 @@
 
     move-result v0
 
-    .line 5137
     .local v0, "ret":Z
     if-eqz p1, :cond_0
 
     if-nez v0, :cond_0
 
-    .line 5138
     const v1, 0x1040b79
 
     invoke-static {v1}, Lcom/android/server/enterprise/RestrictionToastManager;->show(I)V
 
-    .line 5141
     :cond_0
     const-string v1, "RestrictionPolicy"
 
@@ -3005,7 +2729,6 @@
 
     invoke-static {v1, v2}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 5143
     return v0
 .end method
 
@@ -3014,18 +2737,15 @@
     .param p1, "userId"    # I
 
     .prologue
-    .line 2557
     const-wide v24, 0x1fffffc3b9fffefL
 
     invoke-static/range {v24 .. v25}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
 
     move-result-object v14
 
-    .line 2559
     .local v14, "restrictionPolicies":Ljava/lang/Long;
     const/16 v16, 0x0
 
-    .line 2560
     .local v16, "selectionValues":Landroid/content/ContentValues;
     const/16 v23, -0x1
 
@@ -3035,13 +2755,11 @@
 
     if-eq v0, v1, :cond_2
 
-    .line 2561
     new-instance v16, Landroid/content/ContentValues;
 
     .end local v16    # "selectionValues":Landroid/content/ContentValues;
     invoke-direct/range {v16 .. v16}, Landroid/content/ContentValues;-><init>()V
 
-    .line 2562
     .restart local v16    # "selectionValues":Landroid/content/ContentValues;
     const/16 v23, 0x0
 
@@ -3063,7 +2781,6 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 2565
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/android/server/enterprise/restriction/RestrictionPolicy;->mRestrictionCacheLock:Ljava/util/concurrent/locks/ReentrantReadWriteLock;
@@ -3076,7 +2793,6 @@
 
     invoke-virtual/range {v23 .. v23}, Ljava/util/concurrent/locks/ReentrantReadWriteLock$WriteLock;->lock()V
 
-    .line 2567
     :try_start_0
     move-object/from16 v0, p0
 
@@ -3096,7 +2812,6 @@
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 2569
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/android/server/enterprise/restriction/RestrictionPolicy;->mRestrictionCacheLock:Ljava/util/concurrent/locks/ReentrantReadWriteLock;
@@ -3109,7 +2824,6 @@
 
     invoke-virtual/range {v23 .. v23}, Ljava/util/concurrent/locks/ReentrantReadWriteLock$WriteLock;->unlock()V
 
-    .line 2585
     :goto_0
     sget-object v23, Lcom/android/server/enterprise/restriction/RestrictionPolicy;->MASK_AND_COLUMN_NAME:Ljava/util/Map;
 
@@ -3117,7 +2831,6 @@
 
     move-result-object v10
 
-    .line 2587
     .local v10, "hashValues":Ljava/util/Collection;, "Ljava/util/Collection<Ljava/lang/String;>;"
     invoke-interface {v10}, Ljava/util/Collection;->size()I
 
@@ -3139,7 +2852,6 @@
 
     check-cast v5, [Ljava/lang/String;
 
-    .line 2589
     .local v5, "columns":[Ljava/lang/String;
     array-length v0, v5
 
@@ -3151,7 +2863,6 @@
 
     aput-object v24, v5, v23
 
-    .line 2591
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/android/server/enterprise/restriction/RestrictionPolicy;->mEdmStorageProvider:Lcom/android/server/enterprise/storage/EdmStorageProvider;
@@ -3174,11 +2885,9 @@
 
     move-result-object v8
 
-    .line 2596
     .local v8, "cursor":Landroid/database/Cursor;
     if-eqz v8, :cond_8
 
-    .line 2597
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/android/server/enterprise/restriction/RestrictionPolicy;->mRestrictionCacheLock:Ljava/util/concurrent/locks/ReentrantReadWriteLock;
@@ -3191,11 +2900,9 @@
 
     invoke-virtual/range {v23 .. v23}, Ljava/util/concurrent/locks/ReentrantReadWriteLock$WriteLock;->lock()V
 
-    .line 2599
     :try_start_1
     invoke-interface {v8}, Landroid/database/Cursor;->moveToFirst()Z
 
-    .line 2600
     :goto_1
     invoke-interface {v8}, Landroid/database/Cursor;->isAfterLast()Z
 
@@ -3203,14 +2910,12 @@
 
     if-nez v23, :cond_7
 
-    .line 2601
     const-wide v24, 0x1fffffc3b9fffefL
 
     invoke-static/range {v24 .. v25}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
 
     move-result-object v14
 
-    .line 2603
     const-string v23, "adminUid"
 
     move-object/from16 v0, v23
@@ -3225,7 +2930,6 @@
 
     move-result-wide v6
 
-    .line 2609
     .local v6, "adminUid":J
     long-to-int v0, v6
 
@@ -3241,7 +2945,6 @@
 
     if-nez v23, :cond_6
 
-    .line 2610
     long-to-int v0, v6
 
     move/from16 v23, v0
@@ -3250,7 +2953,6 @@
 
     move-result v19
 
-    .line 2614
     .local v19, "userIdInternal":I
     move-object/from16 v0, p0
 
@@ -3268,7 +2970,6 @@
 
     if-eqz v23, :cond_0
 
-    .line 2615
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/android/server/enterprise/restriction/RestrictionPolicy;->mRestrictionCache:Ljava/util/HashMap;
@@ -3289,7 +2990,6 @@
 
     move-object v14, v0
 
-    .line 2618
     :cond_0
     sget-object v23, Lcom/android/server/enterprise/restriction/RestrictionPolicy;->MASK_AND_COLUMN_NAME:Ljava/util/Map;
 
@@ -3316,7 +3016,6 @@
 
     check-cast v9, Ljava/util/Map$Entry;
 
-    .line 2619
     .local v9, "entry":Ljava/util/Map$Entry;, "Ljava/util/Map$Entry<Ljava/lang/Long;Ljava/lang/String;>;"
     invoke-interface {v9}, Ljava/util/Map$Entry;->getValue()Ljava/lang/Object;
 
@@ -3336,7 +3035,6 @@
 
     move-result v15
 
-    .line 2620
     .local v15, "ret":I
     invoke-interface {v9}, Ljava/util/Map$Entry;->getKey()Ljava/lang/Object;
 
@@ -3344,7 +3042,6 @@
 
     check-cast v13, Ljava/lang/Long;
 
-    .line 2622
     .local v13, "restrictionMask":Ljava/lang/Long;
     const/16 v23, 0x1
 
@@ -3368,7 +3065,6 @@
 
     if-eqz v23, :cond_4
 
-    .line 2623
     invoke-virtual {v14}, Ljava/lang/Long;->longValue()J
 
     move-result-wide v24
@@ -3387,7 +3083,6 @@
 
     goto :goto_2
 
-    .line 2569
     .end local v5    # "columns":[Ljava/lang/String;
     .end local v6    # "adminUid":J
     .end local v8    # "cursor":Landroid/database/Cursor;
@@ -3414,7 +3109,6 @@
 
     throw v23
 
-    .line 2572
     :cond_2
     move-object/from16 v0, p0
 
@@ -3422,7 +3116,7 @@
 
     move-object/from16 v23, v0
 
-    const-string/jumbo v24, "user"
+    const-string v24, "user"
 
     invoke-virtual/range {v23 .. v24}, Landroid/content/Context;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
 
@@ -3430,13 +3124,11 @@
 
     check-cast v20, Landroid/os/UserManager;
 
-    .line 2573
     .local v20, "userManager":Landroid/os/UserManager;
     invoke-virtual/range {v20 .. v20}, Landroid/os/UserManager;->getUsers()Ljava/util/List;
 
     move-result-object v21
 
-    .line 2574
     .local v21, "userlist":Ljava/util/List;, "Ljava/util/List<Landroid/content/pm/UserInfo;>;"
     move-object/from16 v0, p0
 
@@ -3450,7 +3142,6 @@
 
     invoke-virtual/range {v23 .. v23}, Ljava/util/concurrent/locks/ReentrantReadWriteLock$WriteLock;->lock()V
 
-    .line 2576
     :try_start_2
     invoke-interface/range {v21 .. v21}, Ljava/util/List;->iterator()Ljava/util/Iterator;
 
@@ -3470,7 +3161,6 @@
 
     check-cast v17, Landroid/content/pm/UserInfo;
 
-    .line 2577
     .local v17, "user":Landroid/content/pm/UserInfo;
     move-object/from16 v0, p0
 
@@ -3500,7 +3190,6 @@
 
     goto :goto_3
 
-    .line 2580
     .end local v12    # "i$":Ljava/util/Iterator;
     .end local v17    # "user":Landroid/content/pm/UserInfo;
     :catchall_1
@@ -3536,7 +3225,6 @@
 
     goto/16 :goto_0
 
-    .line 2624
     .end local v20    # "userManager":Landroid/os/UserManager;
     .end local v21    # "userlist":Ljava/util/List;, "Ljava/util/List<Landroid/content/pm/UserInfo;>;"
     .restart local v5    # "columns":[Ljava/lang/String;
@@ -3567,7 +3255,6 @@
 
     if-nez v23, :cond_1
 
-    .line 2625
     invoke-virtual {v14}, Ljava/lang/Long;->longValue()J
 
     move-result-wide v24
@@ -3588,7 +3275,6 @@
 
     goto/16 :goto_2
 
-    .line 2629
     .end local v9    # "entry":Ljava/util/Map$Entry;, "Ljava/util/Map$Entry<Ljava/lang/Long;Ljava/lang/String;>;"
     .end local v13    # "restrictionMask":Ljava/lang/Long;
     .end local v15    # "ret":I
@@ -3609,7 +3295,6 @@
 
     invoke-virtual {v0, v1, v14}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 2631
     .end local v12    # "i$":Ljava/util/Iterator;
     .end local v19    # "userIdInternal":I
     :cond_6
@@ -3619,7 +3304,6 @@
 
     goto/16 :goto_1
 
-    .line 2634
     .end local v6    # "adminUid":J
     :catchall_2
     move-exception v23
@@ -3636,12 +3320,10 @@
 
     invoke-virtual/range {v24 .. v24}, Ljava/util/concurrent/locks/ReentrantReadWriteLock$WriteLock;->unlock()V
 
-    .line 2635
     invoke-interface {v8}, Landroid/database/Cursor;->close()V
 
     throw v23
 
-    .line 2634
     :cond_7
     move-object/from16 v0, p0
 
@@ -3655,10 +3337,8 @@
 
     invoke-virtual/range {v23 .. v23}, Ljava/util/concurrent/locks/ReentrantReadWriteLock$WriteLock;->unlock()V
 
-    .line 2635
     invoke-interface {v8}, Landroid/database/Cursor;->close()V
 
-    .line 2640
     :cond_8
     const/16 v23, -0x1
 
@@ -3668,7 +3348,6 @@
 
     if-eq v0, v1, :cond_b
 
-    .line 2641
     const/16 v23, 0x0
 
     move-object/from16 v0, p0
@@ -3694,17 +3373,14 @@
 
     invoke-direct {v0, v1, v2}, Lcom/android/server/enterprise/restriction/RestrictionPolicy;->updateScreenCaptureDisabledInWindowManager(IZ)V
 
-    .line 2653
     :cond_9
     return-void
 
-    .line 2641
     :cond_a
     const/16 v23, 0x0
 
     goto :goto_4
 
-    .line 2644
     :cond_b
     move-object/from16 v0, p0
 
@@ -3718,13 +3394,11 @@
 
     move-result-object v22
 
-    .line 2645
     .local v22, "users":Ljava/util/List;, "Ljava/util/List<Landroid/content/pm/UserInfo;>;"
     invoke-interface/range {v22 .. v22}, Ljava/util/List;->size()I
 
     move-result v4
 
-    .line 2646
     .local v4, "N":I
     const/4 v11, 0x0
 
@@ -3732,7 +3406,6 @@
     :goto_5
     if-ge v11, v4, :cond_9
 
-    .line 2647
     move-object/from16 v0, v22
 
     invoke-interface {v0, v11}, Ljava/util/List;->get(I)Ljava/lang/Object;
@@ -3747,7 +3420,6 @@
 
     move/from16 v18, v0
 
-    .line 2649
     .local v18, "userHandle":I
     const/16 v23, 0x0
 
@@ -3774,12 +3446,10 @@
 
     invoke-direct {v0, v1, v2}, Lcom/android/server/enterprise/restriction/RestrictionPolicy;->updateScreenCaptureDisabledInWindowManager(IZ)V
 
-    .line 2646
     add-int/lit8 v11, v11, 0x1
 
     goto :goto_5
 
-    .line 2649
     :cond_c
     const/16 v23, 0x0
 
@@ -3795,17 +3465,14 @@
 
     const/4 v5, 0x0
 
-    .line 5010
     const-string v8, "RestrictionPolicy"
 
     const-string v9, "manageEFSFile"
 
     invoke-static {v8, v9}, Lcom/android/server/enterprise/log/Log;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 5012
     const/4 v2, 0x0
 
-    .line 5013
     .local v2, "ret":Z
     new-instance v0, Ljava/io/File;
 
@@ -3813,28 +3480,23 @@
 
     invoke-direct {v0, v8}, Ljava/io/File;-><init>(Ljava/lang/String;)V
 
-    .line 5015
     .local v0, "efsDir":Ljava/io/File;
     if-nez v0, :cond_0
 
-    .line 5016
     const-string v8, "RestrictionPolicy"
 
     const-string v9, "manageEFSFile : efsDir fail"
 
     invoke-static {v8, v9}, Lcom/android/server/enterprise/log/Log;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 5043
     :goto_0
     return v5
 
-    .line 5020
     :cond_0
     invoke-static {}, Landroid/os/Binder;->clearCallingIdentity()J
 
     move-result-wide v6
 
-    .line 5021
     .local v6, "token":J
     invoke-virtual {v0}, Ljava/io/File;->isDirectory()Z
 
@@ -3842,25 +3504,21 @@
 
     if-nez v8, :cond_2
 
-    .line 5022
     invoke-virtual {v0}, Ljava/io/File;->mkdirs()Z
 
     move-result v8
 
     if-eqz v8, :cond_1
 
-    .line 5023
     invoke-virtual {v0, v10, v5}, Ljava/io/File;->setReadable(ZZ)Z
 
     move-result v3
 
-    .line 5024
     .local v3, "retread":Z
     invoke-virtual {v0, v10, v10}, Ljava/io/File;->setWritable(ZZ)Z
 
     move-result v4
 
-    .line 5025
     .local v4, "retwrite":Z
     const-string v5, "RestrictionPolicy"
 
@@ -3894,7 +3552,6 @@
 
     invoke-static {v5, v8}, Lcom/android/server/enterprise/log/Log;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 5036
     .end local v3    # "retread":Z
     .end local v4    # "retwrite":Z
     :goto_1
@@ -3904,25 +3561,20 @@
 
     invoke-direct {v1, v5}, Ljava/io/File;-><init>(Ljava/lang/String;)V
 
-    .line 5037
     .local v1, "efsFile":Ljava/io/File;
     if-eqz p1, :cond_3
 
-    .line 5038
     invoke-direct {p0, v1}, Lcom/android/server/enterprise/restriction/RestrictionPolicy;->deleteEFSFile(Ljava/io/File;)Z
 
     move-result v2
 
-    .line 5042
     :goto_2
     invoke-static {v6, v7}, Landroid/os/Binder;->restoreCallingIdentity(J)V
 
     move v5, v2
 
-    .line 5043
     goto :goto_0
 
-    .line 5027
     .end local v1    # "efsFile":Ljava/io/File;
     :cond_1
     const-string v8, "RestrictionPolicy"
@@ -3931,21 +3583,17 @@
 
     invoke-static {v8, v9}, Lcom/android/server/enterprise/log/Log;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 5028
     invoke-static {v6, v7}, Landroid/os/Binder;->restoreCallingIdentity(J)V
 
     goto :goto_0
 
-    .line 5032
     :cond_2
     invoke-virtual {v0, v5, v5}, Ljava/io/File;->setWritable(ZZ)Z
 
-    .line 5033
     invoke-virtual {v0, v10, v10}, Ljava/io/File;->setWritable(ZZ)Z
 
     goto :goto_1
 
-    .line 5040
     .restart local v1    # "efsFile":Ljava/io/File;
     :cond_3
     invoke-direct {p0, v1}, Lcom/android/server/enterprise/restriction/RestrictionPolicy;->createEFSFile(Ljava/io/File;)Z
@@ -3961,7 +3609,6 @@
     .param p2, "iface"    # Ljava/lang/String;
 
     .prologue
-    .line 982
     move-object v0, p1
 
     .local v0, "arr$":[Ljava/lang/String;
@@ -3976,7 +3623,6 @@
 
     aget-object v3, v0, v1
 
-    .line 983
     .local v3, "regex":Ljava/lang/String;
     invoke-virtual {p2, v3}, Ljava/lang/String;->matches(Ljava/lang/String;)Z
 
@@ -3984,22 +3630,18 @@
 
     if-eqz v4, :cond_0
 
-    .line 984
     const/4 v4, 0x1
 
-    .line 986
     .end local v3    # "regex":Ljava/lang/String;
     :goto_1
     return v4
 
-    .line 982
     .restart local v3    # "regex":Ljava/lang/String;
     :cond_0
     add-int/lit8 v1, v1, 0x1
 
     goto :goto_0
 
-    .line 986
     .end local v3    # "regex":Ljava/lang/String;
     :cond_1
     const/4 v4, 0x0
@@ -4011,20 +3653,16 @@
     .locals 7
 
     .prologue
-    .line 2490
     const/4 v3, 0x0
 
-    .line 2491
     .local v3, "success":Z
     invoke-direct {p0}, Lcom/android/server/enterprise/restriction/RestrictionPolicy;->getMountService()Landroid/os/storage/IMountService;
 
     move-result-object v1
 
-    .line 2492
     .local v1, "mountService":Landroid/os/storage/IMountService;
     if-eqz v1, :cond_0
 
-    .line 2494
     :try_start_0
     invoke-direct {p0}, Lcom/android/server/enterprise/restriction/RestrictionPolicy;->getExternalSdCardPath()Ljava/lang/String;
 
@@ -4034,20 +3672,16 @@
 
     move-result v2
 
-    .line 2495
     .local v2, "result":I
     if-nez v2, :cond_1
 
-    .line 2496
     const/4 v3, 0x1
 
-    .line 2505
     .end local v2    # "result":I
     :cond_0
     :goto_0
     return v3
 
-    .line 2498
     .restart local v2    # "result":I
     :cond_1
     const-string v4, "RestrictionPolicy"
@@ -4076,12 +3710,10 @@
 
     goto :goto_0
 
-    .line 2501
     .end local v2    # "result":I
     :catch_0
     move-exception v0
 
-    .line 2502
     .local v0, "ex":Landroid/os/RemoteException;
     invoke-virtual {v0}, Landroid/os/RemoteException;->printStackTrace()V
 
@@ -4093,10 +3725,8 @@
     .param p1, "userId"    # I
 
     .prologue
-    .line 596
     invoke-direct {p0, p1}, Lcom/android/server/enterprise/restriction/RestrictionPolicy;->loadRestrictionCache(I)V
 
-    .line 597
     return-void
 .end method
 
@@ -4105,10 +3735,8 @@
     .param p1, "userId"    # I
 
     .prologue
-    .line 632
     invoke-direct {p0, p1}, Lcom/android/server/enterprise/restriction/RestrictionPolicy;->clearCacheAsUser(I)V
 
-    .line 633
     return-void
 .end method
 
@@ -4117,44 +3745,36 @@
     .param p1, "index"    # I
 
     .prologue
-    .line 3867
     const/4 v0, 0x1
 
-    .line 3868
     .local v0, "ret":Z
     invoke-static {}, Landroid/os/Binder;->clearCallingIdentity()J
 
     move-result-wide v2
 
-    .line 3871
     .local v2, "token":J
     invoke-direct {p0}, Lcom/android/server/enterprise/restriction/RestrictionPolicy;->readParamData()[B
 
     move-result-object v4
 
-    .line 3872
     .local v4, "value":[B
     invoke-static {v2, v3}, Landroid/os/Binder;->restoreCallingIdentity(J)V
 
-    .line 3874
     if-nez v4, :cond_0
 
-    .line 3875
     const-string v5, "RestrictionPolicy"
 
-    const-string/jumbo v6, "readParamData : fail to read"
+    const-string v6, "readParamData : fail to read"
 
     invoke-static {v5, v6}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
     move v1, v0
 
-    .line 3889
     .end local v0    # "ret":Z
     .local v1, "ret":I
     :goto_0
     return v1
 
-    .line 3878
     .end local v1    # "ret":I
     .restart local v0    # "ret":Z
     :cond_0
@@ -4164,7 +3784,7 @@
 
     invoke-direct {v6}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v7, "readParamData : "
+    const-string v7, "readParamData : "
 
     invoke-virtual {v6, v7}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -4180,7 +3800,6 @@
 
     invoke-static {v5, v6}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 3883
     const/16 v5, 0x1e
 
     aget-byte v5, v4, v5
@@ -4203,10 +3822,8 @@
 
     if-ne v5, v6, :cond_1
 
-    .line 3885
     const/4 v0, 0x0
 
-    .line 3888
     :cond_1
     const-string v5, "RestrictionPolicy"
 
@@ -4214,7 +3831,7 @@
 
     invoke-direct {v6}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v7, "readParamData : index - "
+    const-string v7, "readParamData : index - "
 
     invoke-virtual {v6, v7}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -4242,7 +3859,6 @@
 
     move v1, v0
 
-    .line 3889
     .restart local v1    # "ret":I
     goto :goto_0
 .end method
@@ -4254,7 +3870,6 @@
     .locals 4
 
     .prologue
-    .line 4098
     :try_start_0
     iget-object v1, p0, Lcom/android/server/enterprise/restriction/RestrictionPolicy;->mWindowManager:Landroid/view/IWindowManager;
 
@@ -4264,7 +3879,6 @@
 
     invoke-interface {v1, v2, v3}, Landroid/view/IWindowManager;->setAnimationScale(IF)V
 
-    .line 4100
     iget-object v1, p0, Lcom/android/server/enterprise/restriction/RestrictionPolicy;->mWindowManager:Landroid/view/IWindowManager;
 
     const/4 v2, 0x1
@@ -4273,7 +3887,6 @@
 
     invoke-interface {v1, v2, v3}, Landroid/view/IWindowManager;->setAnimationScale(IF)V
 
-    .line 4102
     iget-object v1, p0, Lcom/android/server/enterprise/restriction/RestrictionPolicy;->mWindowManager:Landroid/view/IWindowManager;
 
     const/4 v2, 0x2
@@ -4284,15 +3897,12 @@
     :try_end_0
     .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 4106
     :goto_0
     return-void
 
-    .line 4103
     :catch_0
     move-exception v0
 
-    .line 4104
     .local v0, "ex":Landroid/os/RemoteException;
     const-string v1, "RestrictionPolicy"
 
@@ -4300,7 +3910,7 @@
 
     invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v3, "resetAnimationScaleOption: RemoteException ex -> "
+    const-string v3, "resetAnimationScaleOption: RemoteException ex -> "
 
     invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -4327,7 +3937,6 @@
     .locals 4
 
     .prologue
-    .line 4110
     :try_start_0
     invoke-static {}, Landroid/app/ActivityManagerNative;->getDefault()Landroid/app/IActivityManager;
 
@@ -4339,15 +3948,12 @@
     :try_end_0
     .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 4114
     :goto_0
     return-void
 
-    .line 4111
     :catch_0
     move-exception v0
 
-    .line 4112
     .local v0, "ex":Landroid/os/RemoteException;
     const-string v1, "RestrictionPolicy"
 
@@ -4355,7 +3961,7 @@
 
     invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v3, "resetAppProcessLimitOptions: RemoteException ex -> "
+    const-string v3, "resetAppProcessLimitOptions: RemoteException ex -> "
 
     invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -4382,14 +3988,13 @@
     .locals 5
 
     .prologue
-    .line 4117
     iget-object v2, p0, Lcom/android/server/enterprise/restriction/RestrictionPolicy;->mContext:Landroid/content/Context;
 
     invoke-virtual {v2}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
 
     move-result-object v2
 
-    const-string/jumbo v3, "show_processes"
+    const-string v3, "show_processes"
 
     const/4 v4, 0x0
 
@@ -4397,7 +4002,6 @@
 
     move-result v0
 
-    .line 4119
     .local v0, "ret":Z
     new-instance v2, Landroid/content/Intent;
 
@@ -4411,13 +4015,11 @@
 
     move-result-object v1
 
-    .line 4121
     .local v1, "service":Landroid/content/Intent;
     iget-object v2, p0, Lcom/android/server/enterprise/restriction/RestrictionPolicy;->mContext:Landroid/content/Context;
 
     invoke-virtual {v2, v1}, Landroid/content/Context;->stopService(Landroid/content/Intent;)Z
 
-    .line 4123
     return v0
 .end method
 
@@ -4425,7 +4027,6 @@
     .locals 5
 
     .prologue
-    .line 4197
     :try_start_0
     invoke-static {}, Landroid/app/ActivityManagerNative;->getDefault()Landroid/app/IActivityManager;
 
@@ -4441,14 +4042,11 @@
     :try_end_0
     .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 4202
     return-void
 
-    .line 4199
     :catch_0
     move-exception v0
 
-    .line 4200
     .local v0, "ex":Landroid/os/RemoteException;
     new-instance v1, Ljava/lang/RuntimeException;
 
@@ -4463,7 +4061,6 @@
     .locals 6
 
     .prologue
-    .line 4029
     :try_start_0
     const-string v3, "SurfaceFlinger"
 
@@ -4471,27 +4068,22 @@
 
     move-result-object v2
 
-    .line 4030
     .local v2, "flinger":Landroid/os/IBinder;
     if-eqz v2, :cond_0
 
-    .line 4031
     invoke-static {}, Landroid/os/Parcel;->obtain()Landroid/os/Parcel;
 
     move-result-object v0
 
-    .line 4032
     .local v0, "data":Landroid/os/Parcel;
     const-string v3, "android.ui.ISurfaceComposer"
 
     invoke-virtual {v0, v3}, Landroid/os/Parcel;->writeInterfaceToken(Ljava/lang/String;)V
 
-    .line 4033
     const/4 v3, 0x0
 
     invoke-virtual {v0, v3}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 4034
     const/16 v3, 0x3f0
 
     const/4 v4, 0x0
@@ -4500,26 +4092,21 @@
 
     invoke-interface {v2, v3, v0, v4, v5}, Landroid/os/IBinder;->transact(ILandroid/os/Parcel;Landroid/os/Parcel;I)Z
 
-    .line 4035
     invoke-virtual {v0}, Landroid/os/Parcel;->recycle()V
 
-    .line 4037
     invoke-direct {p0}, Lcom/android/server/enterprise/restriction/RestrictionPolicy;->updateFlingerOptions()V
     :try_end_0
     .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 4043
     .end local v0    # "data":Landroid/os/Parcel;
     .end local v2    # "flinger":Landroid/os/IBinder;
     :cond_0
     :goto_0
     return-void
 
-    .line 4039
     :catch_0
     move-exception v1
 
-    .line 4040
     .local v1, "ex":Landroid/os/RemoteException;
     const-string v3, "RestrictionPolicy"
 
@@ -4527,7 +4114,7 @@
 
     invoke-direct {v4}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v5, "resetDisableOverlaysOption: RemoteException ex -> "
+    const-string v5, "resetDisableOverlaysOption: RemoteException ex -> "
 
     invoke-virtual {v4, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -4554,10 +4141,8 @@
     .locals 6
 
     .prologue
-    .line 3984
     const/4 v2, 0x1
 
-    .line 3985
     .local v2, "ret":Z
     sget-object v3, Lcom/android/server/enterprise/restriction/RestrictionPolicy;->DEVELOPER_GLOBAL_SETTINGS_DEFAULT:Ljava/util/Map;
 
@@ -4569,7 +4154,6 @@
 
     move-result-object v0
 
-    .line 3986
     .local v0, "it":Ljava/util/Iterator;, "Ljava/util/Iterator<Ljava/util/Map$Entry<Ljava/lang/String;Ljava/lang/String;>;>;"
     :goto_0
     invoke-interface {v0}, Ljava/util/Iterator;->hasNext()Z
@@ -4578,14 +4162,12 @@
 
     if-eqz v3, :cond_0
 
-    .line 3987
     invoke-interface {v0}, Ljava/util/Iterator;->next()Ljava/lang/Object;
 
     move-result-object v1
 
     check-cast v1, Ljava/util/Map$Entry;
 
-    .line 3988
     .local v1, "map":Ljava/util/Map$Entry;, "Ljava/util/Map$Entry<Ljava/lang/String;Ljava/lang/String;>;"
     iget-object v3, p0, Lcom/android/server/enterprise/restriction/RestrictionPolicy;->mContext:Landroid/content/Context;
 
@@ -4611,10 +4193,8 @@
 
     and-int/2addr v2, v3
 
-    .line 3990
     goto :goto_0
 
-    .line 3992
     .end local v1    # "map":Ljava/util/Map$Entry;, "Ljava/util/Map$Entry<Ljava/lang/String;Ljava/lang/String;>;"
     :cond_0
     return v2
@@ -4624,7 +4204,6 @@
     .locals 4
 
     .prologue
-    .line 4047
     :try_start_0
     invoke-static {}, Landroid/app/ActivityManagerNative;->getDefault()Landroid/app/IActivityManager;
 
@@ -4636,15 +4215,12 @@
     :try_end_0
     .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 4052
     :goto_0
     return-void
 
-    .line 4048
     :catch_0
     move-exception v0
 
-    .line 4049
     .local v0, "ex":Landroid/os/RemoteException;
     const-string v1, "RestrictionPolicy"
 
@@ -4652,7 +4228,7 @@
 
     invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v3, "resetImmediatelyDestroyActivitiesOptions: RemoteException ex -> "
+    const-string v3, "resetImmediatelyDestroyActivitiesOptions: RemoteException ex -> "
 
     invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -4680,26 +4256,20 @@
     .param p0, "permission"    # Ljava/lang/String;
 
     .prologue
-    .line 4205
     const/4 v0, 0x0
 
-    .line 4206
     .local v0, "is3LMAllowed":Z
     if-eqz v0, :cond_0
 
-    .line 4207
     const/4 v1, 0x0
 
-    .line 4217
     .local v1, "readExternalStorageBlocked":Z
     invoke-static {p0, v1}, Lcom/android/server/enterprise/restriction/RestrictionPolicy;->setPermissionEnforced(Ljava/lang/String;Z)V
 
-    .line 4221
     .end local v1    # "readExternalStorageBlocked":Z
     :goto_0
     return-void
 
-    .line 4219
     :cond_0
     const/4 v2, 0x0
 
@@ -4712,10 +4282,8 @@
     .locals 6
 
     .prologue
-    .line 3996
     const/4 v2, 0x1
 
-    .line 3997
     .local v2, "ret":Z
     sget-object v3, Lcom/android/server/enterprise/restriction/RestrictionPolicy;->DEVELOPER_SECURE_SETTINGS_DEFAULT:Ljava/util/Map;
 
@@ -4727,7 +4295,6 @@
 
     move-result-object v0
 
-    .line 3998
     .local v0, "it":Ljava/util/Iterator;, "Ljava/util/Iterator<Ljava/util/Map$Entry<Ljava/lang/String;Ljava/lang/String;>;>;"
     :goto_0
     invoke-interface {v0}, Ljava/util/Iterator;->hasNext()Z
@@ -4736,14 +4303,12 @@
 
     if-eqz v3, :cond_0
 
-    .line 3999
     invoke-interface {v0}, Ljava/util/Iterator;->next()Ljava/lang/Object;
 
     move-result-object v1
 
     check-cast v1, Ljava/util/Map$Entry;
 
-    .line 4000
     .local v1, "map":Ljava/util/Map$Entry;, "Ljava/util/Map$Entry<Ljava/lang/String;Ljava/lang/String;>;"
     iget-object v3, p0, Lcom/android/server/enterprise/restriction/RestrictionPolicy;->mContext:Landroid/content/Context;
 
@@ -4769,10 +4334,8 @@
 
     and-int/2addr v2, v3
 
-    .line 4002
     goto :goto_0
 
-    .line 4004
     .end local v1    # "map":Ljava/util/Map$Entry;, "Ljava/util/Map$Entry<Ljava/lang/String;Ljava/lang/String;>;"
     :cond_0
     return v2
@@ -4782,7 +4345,6 @@
     .locals 6
 
     .prologue
-    .line 4128
     :try_start_0
     const-string v3, "SurfaceFlinger"
 
@@ -4790,7 +4352,6 @@
 
     move-result-object v2
 
-    .line 4129
     .local v2, "flinger":Landroid/os/IBinder;
     if-eqz v2, :cond_0
 
@@ -4800,23 +4361,19 @@
 
     if-eqz v3, :cond_0
 
-    .line 4130
     invoke-static {}, Landroid/os/Parcel;->obtain()Landroid/os/Parcel;
 
     move-result-object v0
 
-    .line 4131
     .local v0, "data":Landroid/os/Parcel;
     const-string v3, "android.ui.ISurfaceComposer"
 
     invoke-virtual {v0, v3}, Landroid/os/Parcel;->writeInterfaceToken(Ljava/lang/String;)V
 
-    .line 4132
     const/4 v3, 0x0
 
     invoke-virtual {v0, v3}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 4133
     const/16 v3, 0x3ea
 
     const/4 v4, 0x0
@@ -4825,26 +4382,21 @@
 
     invoke-interface {v2, v3, v0, v4, v5}, Landroid/os/IBinder;->transact(ILandroid/os/Parcel;Landroid/os/Parcel;I)Z
 
-    .line 4134
     invoke-virtual {v0}, Landroid/os/Parcel;->recycle()V
 
-    .line 4136
     invoke-direct {p0}, Lcom/android/server/enterprise/restriction/RestrictionPolicy;->updateFlingerOptions()V
     :try_end_0
     .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 4141
     .end local v0    # "data":Landroid/os/Parcel;
     .end local v2    # "flinger":Landroid/os/IBinder;
     :cond_0
     :goto_0
     return-void
 
-    .line 4138
     :catch_0
     move-exception v1
 
-    .line 4139
     .local v1, "ex":Landroid/os/RemoteException;
     const-string v3, "RestrictionPolicy"
 
@@ -4852,7 +4404,7 @@
 
     invoke-direct {v4}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v5, "resetShowUpdatesOption: RemoteException ex -> "
+    const-string v5, "resetShowUpdatesOption: RemoteException ex -> "
 
     invoke-virtual {v4, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -4879,7 +4431,6 @@
     .locals 4
 
     .prologue
-    .line 4241
     :try_start_0
     iget-object v1, p0, Lcom/android/server/enterprise/restriction/RestrictionPolicy;->mWindowManager:Landroid/view/IWindowManager;
 
@@ -4889,14 +4440,11 @@
     :try_end_0
     .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 4246
     return-void
 
-    .line 4242
     :catch_0
     move-exception v0
 
-    .line 4243
     .local v0, "e":Landroid/os/RemoteException;
     const-string v1, "RestrictionPolicy"
 
@@ -4904,7 +4452,7 @@
 
     invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v3, "resetStrictModeVisualOptions: RemoteException ex -> "
+    const-string v3, "resetStrictModeVisualOptions: RemoteException ex -> "
 
     invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -4924,7 +4472,6 @@
 
     invoke-static {v1, v2}, Lcom/android/server/enterprise/log/Log;->w(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 4244
     new-instance v1, Ljava/lang/RuntimeException;
 
     const-string v2, "Problem talking with WindowManager"
@@ -4938,10 +4485,8 @@
     .locals 6
 
     .prologue
-    .line 4008
     const/4 v2, 0x1
 
-    .line 4009
     .local v2, "ret":Z
     sget-object v3, Lcom/android/server/enterprise/restriction/RestrictionPolicy;->DEVELOPER_SYSTEM_SETTINGS_DEFAULT:Ljava/util/Map;
 
@@ -4953,7 +4498,6 @@
 
     move-result-object v0
 
-    .line 4010
     .local v0, "it":Ljava/util/Iterator;, "Ljava/util/Iterator<Ljava/util/Map$Entry<Ljava/lang/String;Ljava/lang/String;>;>;"
     :goto_0
     invoke-interface {v0}, Ljava/util/Iterator;->hasNext()Z
@@ -4962,14 +4506,12 @@
 
     if-eqz v3, :cond_0
 
-    .line 4011
     invoke-interface {v0}, Ljava/util/Iterator;->next()Ljava/lang/Object;
 
     move-result-object v1
 
     check-cast v1, Ljava/util/Map$Entry;
 
-    .line 4012
     .local v1, "map":Ljava/util/Map$Entry;, "Ljava/util/Map$Entry<Ljava/lang/String;Ljava/lang/String;>;"
     iget-object v3, p0, Lcom/android/server/enterprise/restriction/RestrictionPolicy;->mContext:Landroid/content/Context;
 
@@ -4995,10 +4537,8 @@
 
     and-int/2addr v2, v3
 
-    .line 4014
     goto :goto_0
 
-    .line 4016
     .end local v1    # "map":Ljava/util/Map$Entry;, "Ljava/util/Map$Entry<Ljava/lang/String;Ljava/lang/String;>;"
     :cond_0
     return v2
@@ -5008,7 +4548,6 @@
     .locals 4
 
     .prologue
-    .line 4020
     sget-object v2, Lcom/android/server/enterprise/restriction/RestrictionPolicy;->DEVELOPER_SYSTEM_PROPERTIES_DEFAULT:Ljava/util/Map;
 
     invoke-interface {v2}, Ljava/util/Map;->entrySet()Ljava/util/Set;
@@ -5019,7 +4558,6 @@
 
     move-result-object v0
 
-    .line 4021
     .local v0, "it":Ljava/util/Iterator;, "Ljava/util/Iterator<Ljava/util/Map$Entry<Ljava/lang/String;Ljava/lang/String;>;>;"
     :goto_0
     invoke-interface {v0}, Ljava/util/Iterator;->hasNext()Z
@@ -5028,14 +4566,12 @@
 
     if-eqz v2, :cond_0
 
-    .line 4022
     invoke-interface {v0}, Ljava/util/Iterator;->next()Ljava/lang/Object;
 
     move-result-object v1
 
     check-cast v1, Ljava/util/Map$Entry;
 
-    .line 4023
     .local v1, "map":Ljava/util/Map$Entry;, "Ljava/util/Map$Entry<Ljava/lang/String;Ljava/lang/String;>;"
     invoke-interface {v1}, Ljava/util/Map$Entry;->getKey()Ljava/lang/Object;
 
@@ -5053,7 +4589,6 @@
 
     goto :goto_0
 
-    .line 4025
     .end local v1    # "map":Ljava/util/Map$Entry;, "Ljava/util/Map$Entry<Ljava/lang/String;Ljava/lang/String;>;"
     :cond_0
     return-void
@@ -5064,36 +4599,30 @@
     .param p1, "userId"    # I
 
     .prologue
-    .line 3151
     const/4 v4, 0x0
 
     invoke-virtual {p0, v4, p1}, Lcom/android/server/enterprise/restriction/RestrictionPolicy;->isSVoiceAllowedAsUser(ZI)Z
 
     move-result v1
 
-    .line 3153
     .local v1, "state":Z
     if-eqz v1, :cond_0
 
-    .line 3155
     iget-object v4, p0, Lcom/android/server/enterprise/restriction/RestrictionPolicy;->mEdmStorageProvider:Lcom/android/server/enterprise/storage/EdmStorageProvider;
 
-    const-string/jumbo v5, "voiceControl"
+    const-string v5, "voiceControl"
 
     invoke-virtual {v4, v5, p1}, Lcom/android/server/enterprise/storage/EdmStorageProvider;->getGenericValueAsUser(Ljava/lang/String;I)Ljava/lang/String;
 
     move-result-object v0
 
-    .line 3158
     .local v0, "oldState":Ljava/lang/String;
     if-eqz v0, :cond_0
 
-    .line 3159
     invoke-static {}, Landroid/os/Binder;->clearCallingIdentity()J
 
     move-result-wide v2
 
-    .line 3161
     .local v2, "token":J
     iget-object v4, p0, Lcom/android/server/enterprise/restriction/RestrictionPolicy;->mContext:Landroid/content/Context;
 
@@ -5101,7 +4630,7 @@
 
     move-result-object v4
 
-    const-string/jumbo v5, "voice_input_control"
+    const-string v5, "voice_input_control"
 
     invoke-static {v0}, Ljava/lang/Integer;->parseInt(Ljava/lang/String;)I
 
@@ -5109,10 +4638,8 @@
 
     invoke-static {v4, v5, v6, p1}, Landroid/provider/Settings$System;->putIntForUser(Landroid/content/ContentResolver;Ljava/lang/String;II)Z
 
-    .line 3163
     invoke-static {v2, v3}, Landroid/os/Binder;->restoreCallingIdentity(J)V
 
-    .line 3166
     .end local v0    # "oldState":Ljava/lang/String;
     .end local v2    # "token":J
     :cond_0
@@ -5125,7 +4652,6 @@
     .param p1, "enforced"    # Z
 
     .prologue
-    .line 4225
     :try_start_0
     invoke-static {}, Landroid/app/ActivityThread;->getPackageManager()Landroid/content/pm/IPackageManager;
 
@@ -5135,13 +4661,11 @@
 
     move-result v1
 
-    .line 4228
     .local v1, "isPermissionEnforced":Z
     if-nez v1, :cond_0
 
     if-eqz p1, :cond_1
 
-    .line 4230
     :cond_0
     invoke-static {}, Landroid/app/ActivityThread;->getPackageManager()Landroid/content/pm/IPackageManager;
 
@@ -5151,16 +4675,13 @@
     :try_end_0
     .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 4237
     :cond_1
     return-void
 
-    .line 4233
     .end local v1    # "isPermissionEnforced":Z
     :catch_0
     move-exception v0
 
-    .line 4234
     .local v0, "e":Landroid/os/RemoteException;
     const-string v2, "RestrictionPolicy"
 
@@ -5168,7 +4689,7 @@
 
     invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v4, "setPermissionEnforced: RemoteException ex -> "
+    const-string v4, "setPermissionEnforced: RemoteException ex -> "
 
     invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -5188,7 +4709,6 @@
 
     invoke-static {v2, v3}, Lcom/android/server/enterprise/log/Log;->w(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 4235
     new-instance v2, Ljava/lang/RuntimeException;
 
     const-string v3, "Problem talking with PackageManager"
@@ -5203,25 +4723,20 @@
     .param p1, "force"    # Z
 
     .prologue
-    .line 2454
     const/4 v3, 0x0
 
-    .line 2455
     .local v3, "success":Z
     invoke-direct {p0}, Lcom/android/server/enterprise/restriction/RestrictionPolicy;->getMountService()Landroid/os/storage/IMountService;
 
     move-result-object v2
 
-    .line 2456
     .local v2, "mountService":Landroid/os/storage/IMountService;
     if-eqz v2, :cond_0
 
-    .line 2457
     invoke-direct {p0}, Lcom/android/server/enterprise/restriction/RestrictionPolicy;->getExternalSdCardPath()Ljava/lang/String;
 
     move-result-object v1
 
-    .line 2459
     .local v1, "extStoragePath":Ljava/lang/String;
     const/4 v4, 0x0
 
@@ -5230,25 +4745,20 @@
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 2461
     const/4 v3, 0x1
 
-    .line 2468
     .end local v1    # "extStoragePath":Ljava/lang/String;
     :cond_0
     :goto_0
     return v3
 
-    .line 2462
     .restart local v1    # "extStoragePath":Ljava/lang/String;
     :catch_0
     move-exception v0
 
-    .line 2464
     .local v0, "e":Ljava/lang/Exception;
     const/4 v3, 0x0
 
-    .line 2465
     invoke-virtual {v0}, Ljava/lang/Exception;->printStackTrace()V
 
     goto :goto_0
@@ -5258,7 +4768,6 @@
     .locals 12
 
     .prologue
-    .line 4173
     :try_start_0
     const-string v9, "SurfaceFlinger"
 
@@ -5266,73 +4775,60 @@
 
     move-result-object v4
 
-    .line 4174
     .local v4, "flinger":Landroid/os/IBinder;
     if-eqz v4, :cond_0
 
-    .line 4175
     invoke-static {}, Landroid/os/Parcel;->obtain()Landroid/os/Parcel;
 
     move-result-object v0
 
-    .line 4176
     .local v0, "data":Landroid/os/Parcel;
     invoke-static {}, Landroid/os/Parcel;->obtain()Landroid/os/Parcel;
 
     move-result-object v5
 
-    .line 4177
     .local v5, "reply":Landroid/os/Parcel;
     const-string v9, "android.ui.ISurfaceComposer"
 
     invoke-virtual {v0, v9}, Landroid/os/Parcel;->writeInterfaceToken(Ljava/lang/String;)V
 
-    .line 4178
     const/16 v9, 0x3f2
 
     const/4 v10, 0x0
 
     invoke-interface {v4, v9, v0, v5, v10}, Landroid/os/IBinder;->transact(ILandroid/os/Parcel;Landroid/os/Parcel;I)Z
 
-    .line 4180
     invoke-virtual {v5}, Landroid/os/Parcel;->readInt()I
 
     move-result v7
 
-    .line 4182
     .local v7, "showCpu":I
     invoke-virtual {v5}, Landroid/os/Parcel;->readInt()I
 
     move-result v2
 
-    .line 4183
     .local v2, "enableGL":I
     invoke-virtual {v5}, Landroid/os/Parcel;->readInt()I
 
     move-result v8
 
-    .line 4185
     .local v8, "showUpdates":I
     invoke-virtual {v5}, Landroid/os/Parcel;->readInt()I
 
     move-result v6
 
-    .line 4186
     .local v6, "showBackground":I
     invoke-virtual {v5}, Landroid/os/Parcel;->readInt()I
 
     move-result v1
 
-    .line 4187
     .local v1, "disableOverlays":I
     invoke-virtual {v5}, Landroid/os/Parcel;->recycle()V
 
-    .line 4188
     invoke-virtual {v0}, Landroid/os/Parcel;->recycle()V
     :try_end_0
     .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 4193
     .end local v0    # "data":Landroid/os/Parcel;
     .end local v1    # "disableOverlays":I
     .end local v2    # "enableGL":I
@@ -5345,11 +4841,9 @@
     :goto_0
     return-void
 
-    .line 4190
     :catch_0
     move-exception v3
 
-    .line 4191
     .local v3, "ex":Landroid/os/RemoteException;
     const-string v9, "RestrictionPolicy"
 
@@ -5357,7 +4851,7 @@
 
     invoke-direct {v10}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v11, "updateFlingerOptions: RemoteException ex -> "
+    const-string v11, "updateFlingerOptions: RemoteException ex -> "
 
     invoke-virtual {v10, v11}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -5388,10 +4882,8 @@
     .param p5, "userId"    # I
 
     .prologue
-    .line 940
     move v2, p4
 
-    .line 941
     .local v2, "result":Z
     iget-object v5, p0, Lcom/android/server/enterprise/restriction/RestrictionPolicy;->mEdmStorageProvider:Lcom/android/server/enterprise/storage/EdmStorageProvider;
 
@@ -5403,7 +4895,6 @@
 
     move-result-object v4
 
-    .line 944
     .local v4, "values":Ljava/util/ArrayList;, "Ljava/util/ArrayList<Ljava/lang/Boolean;>;"
     invoke-virtual {v4}, Ljava/util/ArrayList;->iterator()Ljava/util/Iterator;
 
@@ -5427,14 +4918,11 @@
 
     move-result v3
 
-    .line 945
     .local v3, "value":Z
     if-eq v3, p4, :cond_0
 
-    .line 946
     move v2, v3
 
-    .line 951
     .end local v3    # "value":Z
     :cond_1
     iget-object v5, p0, Lcom/android/server/enterprise/restriction/RestrictionPolicy;->mRestrictionCacheLock:Ljava/util/concurrent/locks/ReentrantReadWriteLock;
@@ -5445,7 +4933,6 @@
 
     invoke-virtual {v5}, Ljava/util/concurrent/locks/ReentrantReadWriteLock$WriteLock;->lock()V
 
-    .line 953
     :try_start_0
     iget-object v5, p0, Lcom/android/server/enterprise/restriction/RestrictionPolicy;->mRestrictionCache:Ljava/util/HashMap;
 
@@ -5459,11 +4946,9 @@
 
     check-cast v1, Ljava/lang/Long;
 
-    .line 955
     .local v1, "restrictionPolicies":Ljava/lang/Long;
     if-nez v1, :cond_2
 
-    .line 960
     iget-object v5, p0, Lcom/android/server/enterprise/restriction/RestrictionPolicy;->mUserManager:Landroid/os/UserManager;
 
     invoke-virtual {v5, p5}, Landroid/os/UserManager;->getUserInfo(I)Landroid/content/pm/UserInfo;
@@ -5472,10 +4957,8 @@
 
     if-eqz v5, :cond_2
 
-    .line 961
     invoke-direct {p0, p5}, Lcom/android/server/enterprise/restriction/RestrictionPolicy;->initializeCacheAsUser(I)V
 
-    .line 962
     iget-object v5, p0, Lcom/android/server/enterprise/restriction/RestrictionPolicy;->mRestrictionCache:Ljava/util/HashMap;
 
     invoke-static {p5}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
@@ -5489,15 +4972,12 @@
     .end local v1    # "restrictionPolicies":Ljava/lang/Long;
     check-cast v1, Ljava/lang/Long;
 
-    .line 966
     .restart local v1    # "restrictionPolicies":Ljava/lang/Long;
     :cond_2
     if-eqz v1, :cond_3
 
-    .line 967
     if-eqz v2, :cond_4
 
-    .line 968
     invoke-virtual {v1}, Ljava/lang/Long;->longValue()J
 
     move-result-wide v6
@@ -5508,7 +4988,6 @@
 
     move-result-object v1
 
-    .line 972
     :goto_0
     iget-object v5, p0, Lcom/android/server/enterprise/restriction/RestrictionPolicy;->mRestrictionCache:Ljava/util/HashMap;
 
@@ -5520,7 +4999,6 @@
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 975
     :cond_3
     iget-object v5, p0, Lcom/android/server/enterprise/restriction/RestrictionPolicy;->mRestrictionCacheLock:Ljava/util/concurrent/locks/ReentrantReadWriteLock;
 
@@ -5530,10 +5008,8 @@
 
     invoke-virtual {v5}, Ljava/util/concurrent/locks/ReentrantReadWriteLock$WriteLock;->unlock()V
 
-    .line 977
     return-void
 
-    .line 970
     :cond_4
     :try_start_1
     invoke-virtual {v1}, Ljava/lang/Long;->longValue()J
@@ -5554,7 +5030,6 @@
 
     goto :goto_0
 
-    .line 975
     .end local v1    # "restrictionPolicies":Ljava/lang/Long;
     :catchall_0
     move-exception v5
@@ -5576,12 +5051,10 @@
     .param p2, "disabled"    # Z
 
     .prologue
-    .line 1218
     invoke-static {}, Landroid/os/Binder;->clearCallingIdentity()J
 
     move-result-wide v2
 
-    .line 1220
     .local v2, "ident":J
     :try_start_0
     iget-object v1, p0, Lcom/android/server/enterprise/restriction/RestrictionPolicy;->mWindowManager:Landroid/view/IWindowManager;
@@ -5591,18 +5064,14 @@
     .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 1224
     invoke-static {v2, v3}, Landroid/os/Binder;->restoreCallingIdentity(J)V
 
-    .line 1226
     :goto_0
     return-void
 
-    .line 1221
     :catch_0
     move-exception v0
 
-    .line 1222
     .local v0, "e":Landroid/os/RemoteException;
     :try_start_1
     const-string v1, "RestrictionPolicy"
@@ -5613,7 +5082,6 @@
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
-    .line 1224
     invoke-static {v2, v3}, Landroid/os/Binder;->restoreCallingIdentity(J)V
 
     goto :goto_0
@@ -5633,7 +5101,6 @@
     .prologue
     const/4 v2, 0x0
 
-    .line 1954
     const/4 v0, 0x0
 
     invoke-virtual {p0, v0}, Lcom/android/server/enterprise/restriction/RestrictionPolicy;->isUsbDebuggingEnabled(Landroid/app/enterprise/ContextInfo;)Z
@@ -5658,7 +5125,6 @@
 
     if-ne v0, v1, :cond_0
 
-    .line 1957
     iget-object v0, p0, Lcom/android/server/enterprise/restriction/RestrictionPolicy;->mContext:Landroid/content/Context;
 
     invoke-virtual {v0}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
@@ -5669,7 +5135,6 @@
 
     invoke-static {v0, v1, v2}, Landroid/provider/Settings$Secure;->putInt(Landroid/content/ContentResolver;Ljava/lang/String;I)Z
 
-    .line 1960
     :cond_0
     return-void
 .end method
@@ -5684,50 +5149,40 @@
 
     const/16 v6, 0x1e
 
-    .line 3893
     const/4 v1, 0x0
 
-    .line 3894
     .local v1, "ret":Z
     const/16 v5, 0x20
 
     new-array v4, v5, [B
 
-    .line 3895
     .local v4, "value":[B
     new-instance v0, Ljava/security/SecureRandom;
 
     invoke-direct {v0}, Ljava/security/SecureRandom;-><init>()V
 
-    .line 3896
     .local v0, "random":Ljava/security/SecureRandom;
     invoke-static {}, Landroid/os/Binder;->clearCallingIdentity()J
 
     move-result-wide v2
 
-    .line 3898
     .local v2, "token":J
     invoke-virtual {v0, v4}, Ljava/security/SecureRandom;->nextBytes([B)V
 
-    .line 3903
     if-nez p2, :cond_0
 
-    .line 3904
     const/16 v5, 0x8
 
     aput-byte v5, v4, p1
 
-    .line 3905
     const/4 v5, 0x2
 
     aput-byte v5, v4, v6
 
-    .line 3906
     const/4 v5, 0x6
 
     aput-byte v5, v4, v7
 
-    .line 3913
     :goto_0
     const-string v5, "RestrictionPolicy"
 
@@ -5735,7 +5190,7 @@
 
     invoke-direct {v6}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v7, "writeData : index - "
+    const-string v7, "writeData : index - "
 
     invoke-virtual {v6, v7}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -5761,29 +5216,23 @@
 
     invoke-static {v5, v6}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 3915
     invoke-direct {p0, v4}, Lcom/android/server/enterprise/restriction/RestrictionPolicy;->writeParamData([B)Z
 
     move-result v1
 
-    .line 3916
     invoke-static {v2, v3}, Landroid/os/Binder;->restoreCallingIdentity(J)V
 
-    .line 3917
     return v1
 
-    .line 3908
     :cond_0
     const/4 v5, 0x7
 
     aput-byte v5, v4, p1
 
-    .line 3909
     const/4 v5, 0x1
 
     aput-byte v5, v4, v6
 
-    .line 3910
     const/4 v5, 0x5
 
     aput-byte v5, v4, v7
@@ -5811,28 +5260,23 @@
     .end annotation
 
     .prologue
-    .line 4900
     .local p2, "packageNames":Ljava/util/List;, "Ljava/util/List<Ljava/lang/String;>;"
     invoke-direct {p0, p1}, Lcom/android/server/enterprise/restriction/RestrictionPolicy;->enforceAdvancedRestrictionPermission(Landroid/app/enterprise/ContextInfo;)Landroid/app/enterprise/ContextInfo;
 
     move-result-object p1
 
-    .line 4901
     invoke-static {p1}, Lcom/android/server/enterprise/EnterpriseDeviceManagerService;->getCallingOrCurrentUserId(Landroid/app/enterprise/ContextInfo;)I
 
     move-result v3
 
-    .line 4903
     .local v3, "userId":I
     new-instance v2, Ljava/lang/StringBuilder;
 
     invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
 
-    .line 4904
     .local v2, "sb":Ljava/lang/StringBuilder;
     if-eqz p2, :cond_1
 
-    .line 4905
     invoke-interface {p2}, Ljava/util/List;->iterator()Ljava/util/Iterator;
 
     move-result-object v0
@@ -5852,7 +5296,6 @@
 
     check-cast v1, Ljava/lang/String;
 
-    .line 4906
     .local v1, "s":Ljava/lang/String;
     if-eqz v1, :cond_0
 
@@ -5862,7 +5305,6 @@
 
     if-lez v4, :cond_0
 
-    .line 4907
     new-instance v4, Ljava/lang/StringBuilder;
 
     invoke-direct {v4}, Ljava/lang/StringBuilder;-><init>()V
@@ -5885,7 +5327,6 @@
 
     goto :goto_0
 
-    .line 4911
     .end local v0    # "i$":Ljava/util/Iterator;
     .end local v1    # "s":Ljava/lang/String;
     :cond_1
@@ -5895,7 +5336,7 @@
 
     const-string v6, "RESTRICTION"
 
-    const-string/jumbo v7, "preventAdminActivationWhiteList"
+    const-string v7, "preventAdminActivationWhiteList"
 
     invoke-virtual {v2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
@@ -5914,12 +5355,10 @@
     .param p2, "enable"    # Z
 
     .prologue
-    .line 4417
     invoke-direct {p0, p1}, Lcom/android/server/enterprise/restriction/RestrictionPolicy;->enforceOwnerOnlyAndRestrictionPermission(Landroid/app/enterprise/ContextInfo;)Landroid/app/enterprise/ContextInfo;
 
     move-result-object p1
 
-    .line 4419
     iget-object v0, p0, Lcom/android/server/enterprise/restriction/RestrictionPolicy;->mEdmStorageProvider:Lcom/android/server/enterprise/storage/EdmStorageProvider;
 
     iget v1, p1, Landroid/app/enterprise/ContextInfo;->mCallerUid:I
@@ -5932,7 +5371,6 @@
 
     move-result v6
 
-    .line 4423
     .local v6, "ret":Z
     const-string v1, "allowActivationLock"
 
@@ -5946,7 +5384,6 @@
 
     invoke-direct/range {v0 .. v5}, Lcom/android/server/enterprise/restriction/RestrictionPolicy;->updateRestrictionCache(Ljava/lang/String;JZI)V
 
-    .line 4429
     return v6
 .end method
 
@@ -5960,24 +5397,19 @@
 
     const/4 v5, 0x0
 
-    .line 4261
     invoke-direct {p0, p1}, Lcom/android/server/enterprise/restriction/RestrictionPolicy;->enforceOwnerOnlyAndRestrictionPermission(Landroid/app/enterprise/ContextInfo;)Landroid/app/enterprise/ContextInfo;
 
     move-result-object p1
 
-    .line 4262
     const/4 v8, 0x1
 
-    .line 4265
     .local v8, "ret":Z
     if-nez p2, :cond_1
 
-    .line 4266
     invoke-static {}, Landroid/os/Binder;->clearCallingIdentity()J
 
     move-result-wide v10
 
-    .line 4269
     .local v10, "token":J
     iget-object v0, p0, Lcom/android/server/enterprise/restriction/RestrictionPolicy;->mContext:Landroid/content/Context;
 
@@ -5991,7 +5423,6 @@
 
     move-result v7
 
-    .line 4273
     .local v7, "put":Z
     iget-object v0, p0, Lcom/android/server/enterprise/restriction/RestrictionPolicy;->mEdmStorageProvider:Lcom/android/server/enterprise/storage/EdmStorageProvider;
 
@@ -6007,35 +5438,29 @@
 
     and-int/2addr v8, v0
 
-    .line 4277
     if-eqz v7, :cond_0
 
-    .line 4278
     new-instance v6, Landroid/content/Intent;
 
     const-string v0, "android.intent.action.AIRPLANE_MODE"
 
     invoke-direct {v6, v0}, Landroid/content/Intent;-><init>(Ljava/lang/String;)V
 
-    .line 4279
     .local v6, "intent":Landroid/content/Intent;
-    const-string/jumbo v0, "state"
+    const-string v0, "state"
 
     invoke-virtual {v6, v0, v5}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Z)Landroid/content/Intent;
 
-    .line 4280
     iget-object v0, p0, Lcom/android/server/enterprise/restriction/RestrictionPolicy;->mContext:Landroid/content/Context;
 
     sget-object v1, Landroid/os/UserHandle;->ALL:Landroid/os/UserHandle;
 
     invoke-virtual {v0, v6, v1}, Landroid/content/Context;->sendBroadcastAsUser(Landroid/content/Intent;Landroid/os/UserHandle;)V
 
-    .line 4283
     .end local v6    # "intent":Landroid/content/Intent;
     :cond_0
     invoke-static {v10, v11}, Landroid/os/Binder;->restoreCallingIdentity(J)V
 
-    .line 4290
     .end local v7    # "put":Z
     .end local v10    # "token":J
     :goto_0
@@ -6047,7 +5472,6 @@
 
     invoke-direct/range {v0 .. v5}, Lcom/android/server/enterprise/restriction/RestrictionPolicy;->updateRestrictionCache(Ljava/lang/String;JZI)V
 
-    .line 4296
     const-string v0, "RestrictionPolicy"
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -6070,10 +5494,8 @@
 
     invoke-static {v0, v1}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 4297
     return v8
 
-    .line 4285
     :cond_1
     iget-object v0, p0, Lcom/android/server/enterprise/restriction/RestrictionPolicy;->mEdmStorageProvider:Lcom/android/server/enterprise/storage/EdmStorageProvider;
 
@@ -6102,15 +5524,12 @@
 
     const/4 v5, 0x0
 
-    .line 3334
     invoke-direct {p0, p1}, Lcom/android/server/enterprise/restriction/RestrictionPolicy;->enforceOwnerOnlyAndRestrictionPermission(Landroid/app/enterprise/ContextInfo;)Landroid/app/enterprise/ContextInfo;
 
     move-result-object p1
 
-    .line 3335
     const/4 v8, 0x1
 
-    .line 3336
     .local v8, "ret":Z
     iget-object v0, p0, Lcom/android/server/enterprise/restriction/RestrictionPolicy;->mEdmStorageProvider:Lcom/android/server/enterprise/storage/EdmStorageProvider;
 
@@ -6126,7 +5545,6 @@
 
     and-int/2addr v8, v0
 
-    .line 3340
     const-string v1, "allowAndroidBeam"
 
     const-wide/32 v2, 0x40000
@@ -6135,17 +5553,14 @@
 
     invoke-direct/range {v0 .. v5}, Lcom/android/server/enterprise/restriction/RestrictionPolicy;->updateRestrictionCache(Ljava/lang/String;JZI)V
 
-    .line 3346
     if-eqz v8, :cond_0
 
     if-nez p2, :cond_0
 
-    .line 3347
     invoke-static {}, Landroid/os/Binder;->clearCallingIdentity()J
 
     move-result-wide v10
 
-    .line 3349
     .local v10, "token":J
     :try_start_0
     const-string v0, "nfc"
@@ -6158,11 +5573,9 @@
 
     move-result-object v7
 
-    .line 3351
     .local v7, "nfcAdapter":Landroid/nfc/INfcAdapter;
     if-nez v7, :cond_1
 
-    .line 3353
     const-string v0, "RestrictionPolicy"
 
     const-string v1, "RestrictionPolicy.allowAndroidBeam(): can\'t bind service"
@@ -6171,15 +5584,12 @@
     :try_end_0
     .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 3354
     const/4 v8, 0x0
 
-    .line 3363
     .end local v7    # "nfcAdapter":Landroid/nfc/INfcAdapter;
     :goto_0
     invoke-static {v10, v11}, Landroid/os/Binder;->restoreCallingIdentity(J)V
 
-    .line 3365
     .end local v10    # "token":J
     :cond_0
     const-string v0, "RestrictionPolicy"
@@ -6204,17 +5614,14 @@
 
     invoke-static {v0, v1}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 3366
     return v8
 
-    .line 3356
     .restart local v7    # "nfcAdapter":Landroid/nfc/INfcAdapter;
     .restart local v10    # "token":J
     :cond_1
     :try_start_1
     invoke-interface {v7}, Landroid/nfc/INfcAdapter;->disableNdefPush()Z
 
-    .line 3357
     invoke-interface {v7}, Landroid/nfc/INfcAdapter;->isNdefPushEnabled()Z
     :try_end_1
     .catch Landroid/os/RemoteException; {:try_start_1 .. :try_end_1} :catch_0
@@ -6233,16 +5640,13 @@
 
     goto :goto_1
 
-    .line 3359
     .end local v7    # "nfcAdapter":Landroid/nfc/INfcAdapter;
     :catch_0
     move-exception v6
 
-    .line 3360
     .local v6, "e":Landroid/os/RemoteException;
     const/4 v8, 0x0
 
-    .line 3361
     const-string v0, "RestrictionPolicy"
 
     const-string v1, "RestrictionPolicy.allowAndroidBeam() exception : "
@@ -6258,12 +5662,10 @@
     .param p2, "enabled"    # Z
 
     .prologue
-    .line 2828
     invoke-direct {p0, p1}, Lcom/android/server/enterprise/restriction/RestrictionPolicy;->enforceHwPermission(Landroid/app/enterprise/ContextInfo;)Landroid/app/enterprise/ContextInfo;
 
     move-result-object p1
 
-    .line 2830
     iget-object v0, p0, Lcom/android/server/enterprise/restriction/RestrictionPolicy;->mEdmStorageProvider:Lcom/android/server/enterprise/storage/EdmStorageProvider;
 
     iget v1, p1, Landroid/app/enterprise/ContextInfo;->mCallerUid:I
@@ -6276,7 +5678,6 @@
 
     move-result v6
 
-    .line 2833
     .local v6, "result":Z
     const-string v0, "RestrictionPolicy"
 
@@ -6300,7 +5701,6 @@
 
     invoke-static {v0, v1}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 2835
     const-string v1, "allowAudioRecording"
 
     const-wide/16 v2, 0x1
@@ -6317,7 +5717,6 @@
 
     invoke-direct/range {v0 .. v5}, Lcom/android/server/enterprise/restriction/RestrictionPolicy;->updateRestrictionCache(Ljava/lang/String;JZI)V
 
-    .line 2841
     return v6
 .end method
 
@@ -6327,25 +5726,20 @@
     .param p2, "allow"    # Z
 
     .prologue
-    .line 2959
     invoke-direct {p0, p1}, Lcom/android/server/enterprise/restriction/RestrictionPolicy;->enforceOwnerOnlyAndRestrictionPermission(Landroid/app/enterprise/ContextInfo;)Landroid/app/enterprise/ContextInfo;
 
     move-result-object p1
 
-    .line 2960
     const/4 v7, 0x1
 
-    .line 2961
     .local v7, "ret":Z
     if-nez p2, :cond_0
 
-    .line 2963
     :try_start_0
     invoke-static {}, Landroid/os/Binder;->clearCallingIdentity()J
 
     move-result-wide v8
 
-    .line 2965
     .local v8, "token":J
     invoke-static {}, Landroid/app/ActivityManagerNative;->getDefault()Landroid/app/IActivityManager;
 
@@ -6355,18 +5749,15 @@
 
     invoke-interface {v0, v1}, Landroid/app/IActivityManager;->setProcessLimit(I)V
 
-    .line 2966
     invoke-static {v8, v9}, Landroid/os/Binder;->restoreCallingIdentity(J)V
     :try_end_0
     .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 2972
     .end local v8    # "token":J
     :cond_0
     :goto_0
     if-eqz v7, :cond_1
 
-    .line 2973
     iget-object v0, p0, Lcom/android/server/enterprise/restriction/RestrictionPolicy;->mEdmStorageProvider:Lcom/android/server/enterprise/storage/EdmStorageProvider;
 
     iget v1, p1, Landroid/app/enterprise/ContextInfo;->mCallerUid:I
@@ -6381,7 +5772,6 @@
 
     and-int/2addr v7, v0
 
-    .line 2976
     const-string v1, "limitOfBackgroundProcess"
 
     const-wide/16 v2, 0x4000
@@ -6394,7 +5784,6 @@
 
     invoke-direct/range {v0 .. v5}, Lcom/android/server/enterprise/restriction/RestrictionPolicy;->updateRestrictionCache(Ljava/lang/String;JZI)V
 
-    .line 2982
     :cond_1
     const-string v0, "RestrictionPolicy"
 
@@ -6418,14 +5807,11 @@
 
     invoke-static {v0, v1}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 2983
     return v7
 
-    .line 2967
     :catch_0
     move-exception v6
 
-    .line 2968
     .local v6, "e":Landroid/os/RemoteException;
     const-string v0, "RestrictionPolicy"
 
@@ -6453,7 +5839,6 @@
 
     invoke-static {v0, v1}, Lcom/android/server/enterprise/log/Log;->e(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 2969
     const/4 v7, 0x0
 
     goto :goto_0
@@ -6465,17 +5850,14 @@
     .param p2, "allow"    # Z
 
     .prologue
-    .line 3113
     invoke-direct {p0, p1}, Lcom/android/server/enterprise/restriction/RestrictionPolicy;->enforceRestrictionPermission(Landroid/app/enterprise/ContextInfo;)Landroid/app/enterprise/ContextInfo;
 
     move-result-object p1
 
-    .line 3114
     invoke-static {p1}, Lcom/android/server/enterprise/EnterpriseDeviceManagerService;->getCallingOrCurrentUserId(Landroid/app/enterprise/ContextInfo;)I
 
     move-result v5
 
-    .line 3115
     .local v5, "userId":I
     iget-object v0, p0, Lcom/android/server/enterprise/restriction/RestrictionPolicy;->mEdmStorageProvider:Lcom/android/server/enterprise/storage/EdmStorageProvider;
 
@@ -6489,7 +5871,6 @@
 
     move-result v6
 
-    .line 3118
     .local v6, "ret":Z
     const-string v1, "allowClipboardShare"
 
@@ -6501,7 +5882,6 @@
 
     invoke-direct/range {v0 .. v5}, Lcom/android/server/enterprise/restriction/RestrictionPolicy;->updateRestrictionCache(Ljava/lang/String;JZI)V
 
-    .line 3124
     const-string v0, "RestrictionPolicy"
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -6524,7 +5904,6 @@
 
     invoke-static {v0, v1}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 3126
     return v6
 .end method
 
@@ -6538,15 +5917,12 @@
 
     const/4 v5, 0x0
 
-    .line 3925
     invoke-direct {p0, p1}, Lcom/android/server/enterprise/restriction/RestrictionPolicy;->enforceOwnerOnlyAndRestrictionPermission(Landroid/app/enterprise/ContextInfo;)Landroid/app/enterprise/ContextInfo;
 
     move-result-object p1
 
-    .line 3926
     const/4 v6, 0x1
 
-    .line 3927
     .local v6, "ret":Z
     iget-object v0, p0, Lcom/android/server/enterprise/restriction/RestrictionPolicy;->mEdmStorageProvider:Lcom/android/server/enterprise/storage/EdmStorageProvider;
 
@@ -6562,7 +5938,6 @@
 
     and-int/2addr v6, v0
 
-    .line 3931
     const-string v1, "allowDeveloperMode"
 
     const-wide/16 v2, 0x40
@@ -6571,88 +5946,68 @@
 
     invoke-direct/range {v0 .. v5}, Lcom/android/server/enterprise/restriction/RestrictionPolicy;->updateRestrictionCache(Ljava/lang/String;JZI)V
 
-    .line 3937
     invoke-static {}, Landroid/os/Binder;->clearCallingIdentity()J
 
     move-result-wide v8
 
-    .line 3938
     .local v8, "token":J
     if-eqz v6, :cond_0
 
     if-nez p2, :cond_0
 
-    .line 3939
     iput-boolean v4, p0, Lcom/android/server/enterprise/restriction/RestrictionPolicy;->mDontPokeProperties:Z
 
-    .line 3942
     invoke-direct {p0}, Lcom/android/server/enterprise/restriction/RestrictionPolicy;->resetShowUpdatesOption()V
 
-    .line 3945
     invoke-direct {p0}, Lcom/android/server/enterprise/restriction/RestrictionPolicy;->resetDisableOverlaysOption()V
 
-    .line 3947
     invoke-direct {p0}, Lcom/android/server/enterprise/restriction/RestrictionPolicy;->resetGlobalDeveloperSettings()Z
 
     move-result v0
 
     and-int/2addr v6, v0
 
-    .line 3948
     invoke-direct {p0}, Lcom/android/server/enterprise/restriction/RestrictionPolicy;->resetSecureDeveloperSettings()Z
 
     move-result v0
 
     and-int/2addr v6, v0
 
-    .line 3949
     invoke-direct {p0}, Lcom/android/server/enterprise/restriction/RestrictionPolicy;->resetSystemDeveloperSettings()Z
 
     move-result v0
 
     and-int/2addr v6, v0
 
-    .line 3950
     invoke-direct {p0}, Lcom/android/server/enterprise/restriction/RestrictionPolicy;->resetSystemPropertiesDeveloperSettings()V
 
-    .line 3953
     invoke-static {}, Lcom/android/server/enterprise/restriction/RestrictionPolicy;->resetDebuggerOptions()V
 
-    .line 3956
     const-string v0, "android.permission.READ_EXTERNAL_STORAGE"
 
     invoke-static {v0}, Lcom/android/server/enterprise/restriction/RestrictionPolicy;->resetPermissionEnforced(Ljava/lang/String;)V
 
-    .line 3959
     invoke-direct {p0}, Lcom/android/server/enterprise/restriction/RestrictionPolicy;->resetAnimationScaleOption()V
 
-    .line 3962
     invoke-direct {p0}, Lcom/android/server/enterprise/restriction/RestrictionPolicy;->resetImmediatelyDestroyActivitiesOptions()V
 
-    .line 3965
     invoke-direct {p0}, Lcom/android/server/enterprise/restriction/RestrictionPolicy;->resetAppProcessLimitOptions()V
 
-    .line 3968
     invoke-direct {p0}, Lcom/android/server/enterprise/restriction/RestrictionPolicy;->resetCpuUsageOptions()Z
 
     move-result v0
 
     and-int/2addr v6, v0
 
-    .line 3971
     invoke-direct {p0}, Lcom/android/server/enterprise/restriction/RestrictionPolicy;->resetStrictModeVisualOptions()V
 
-    .line 3973
     iput-boolean v5, p0, Lcom/android/server/enterprise/restriction/RestrictionPolicy;->mDontPokeProperties:Z
 
-    .line 3974
     invoke-virtual {p0}, Lcom/android/server/enterprise/restriction/RestrictionPolicy;->pokeSystemProperties()V
 
-    .line 3976
     :cond_0
     invoke-static {v8, v9}, Landroid/os/Binder;->restoreCallingIdentity(J)V
 
-    .line 3978
     const-string v0, "RestrictionPolicy"
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -6675,7 +6030,6 @@
 
     invoke-static {v0, v1}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 3980
     return v6
 .end method
 
@@ -6687,25 +6041,20 @@
     .prologue
     const/4 v4, 0x1
 
-    .line 2095
     invoke-direct {p0, p1}, Lcom/android/server/enterprise/restriction/RestrictionPolicy;->enforceOwnerOnlyAndRestrictionPermission(Landroid/app/enterprise/ContextInfo;)Landroid/app/enterprise/ContextInfo;
 
     move-result-object p1
 
-    .line 2096
     const/4 v8, 0x0
 
-    .line 2097
     .local v8, "ret":Z
     invoke-direct {p0, p1}, Lcom/android/server/enterprise/restriction/RestrictionPolicy;->isFactoryResetAllowedFromDB(Landroid/app/enterprise/ContextInfo;)Z
 
     move-result v7
 
-    .line 2098
     .local v7, "oldState":Z
     const/4 v6, 0x1
 
-    .line 2100
     .local v6, "newState":Z
     const-string v0, "RestrictionPolicy"
 
@@ -6739,7 +6088,6 @@
 
     invoke-static {v0, v1}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 2102
     iget-object v0, p0, Lcom/android/server/enterprise/restriction/RestrictionPolicy;->mEdmStorageProvider:Lcom/android/server/enterprise/storage/EdmStorageProvider;
 
     iget v1, p1, Landroid/app/enterprise/ContextInfo;->mCallerUid:I
@@ -6752,7 +6100,6 @@
 
     move-result v8
 
-    .line 2105
     const-string v1, "factoryresetallowed"
 
     const-wide/high16 v2, 0x8000000000000L
@@ -6763,33 +6110,26 @@
 
     invoke-direct/range {v0 .. v5}, Lcom/android/server/enterprise/restriction/RestrictionPolicy;->updateRestrictionCache(Ljava/lang/String;JZI)V
 
-    .line 2111
     if-eqz v8, :cond_1
 
-    .line 2112
     invoke-direct {p0, p1}, Lcom/android/server/enterprise/restriction/RestrictionPolicy;->isFactoryResetAllowedFromDB(Landroid/app/enterprise/ContextInfo;)Z
 
     move-result v6
 
-    .line 2114
     if-ne v7, v6, :cond_0
 
-    .line 2115
     const-string v0, "RestrictionPolicy"
 
     const-string v1, "allowFactoryReset : do not need to update"
 
     invoke-static {v0, v1}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 2131
     :goto_0
     return v4
 
-    .line 2127
     :cond_0
     invoke-direct {p0, p2}, Lcom/android/server/enterprise/restriction/RestrictionPolicy;->manageEFSFile(Z)Z
 
-    .line 2130
     :cond_1
     const-string v0, "RestrictionPolicy"
 
@@ -6815,7 +6155,6 @@
 
     move v4, v8
 
-    .line 2131
     goto :goto_0
 .end method
 
@@ -6827,12 +6166,10 @@
     .prologue
     const/4 v4, 0x0
 
-    .line 4548
     invoke-direct {p0, p1}, Lcom/android/server/enterprise/restriction/RestrictionPolicy;->enforceOwnerOnlyAndRestrictionPermission(Landroid/app/enterprise/ContextInfo;)Landroid/app/enterprise/ContextInfo;
 
     move-result-object p1
 
-    .line 4550
     iget-object v0, p0, Lcom/android/server/enterprise/restriction/RestrictionPolicy;->mEdmStorageProvider:Lcom/android/server/enterprise/storage/EdmStorageProvider;
 
     iget v1, p1, Landroid/app/enterprise/ContextInfo;->mCallerUid:I
@@ -6845,7 +6182,6 @@
 
     move-result v8
 
-    .line 4553
     .local v8, "ret":Z
     const-string v0, "RestrictionPolicy"
 
@@ -6869,7 +6205,6 @@
 
     invoke-static {v0, v1}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 4555
     const-string v1, "allowFastEncryption"
 
     const-wide/16 v2, 0x10
@@ -6880,15 +6215,12 @@
 
     invoke-direct/range {v0 .. v5}, Lcom/android/server/enterprise/restriction/RestrictionPolicy;->updateRestrictionCache(Ljava/lang/String;JZI)V
 
-    .line 4561
     if-eqz v8, :cond_0
 
-    .line 4562
     invoke-static {}, Landroid/os/Binder;->clearCallingIdentity()J
 
     move-result-wide v10
 
-    .line 4564
     .local v10, "token":J
     :try_start_0
     invoke-static {}, Landroid/app/ActivityManagerNative;->getDefault()Landroid/app/IActivityManager;
@@ -6905,21 +6237,17 @@
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_1
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 4573
     invoke-static {v10, v11}, Landroid/os/Binder;->restoreCallingIdentity(J)V
 
-    .line 4576
     .end local v10    # "token":J
     :cond_0
     :goto_0
     return v8
 
-    .line 4566
     .restart local v10    # "token":J
     :catch_0
     move-exception v7
 
-    .line 4567
     .local v7, "re":Landroid/os/RemoteException;
     :try_start_1
     const-string v0, "RestrictionPolicy"
@@ -6950,20 +6278,16 @@
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
-    .line 4568
     const/4 v8, 0x0
 
-    .line 4573
     invoke-static {v10, v11}, Landroid/os/Binder;->restoreCallingIdentity(J)V
 
     goto :goto_0
 
-    .line 4569
     .end local v7    # "re":Landroid/os/RemoteException;
     :catch_1
     move-exception v6
 
-    .line 4570
     .local v6, "e":Ljava/lang/Exception;
     :try_start_2
     const-string v0, "RestrictionPolicy"
@@ -6974,10 +6298,8 @@
     :try_end_2
     .catchall {:try_start_2 .. :try_end_2} :catchall_0
 
-    .line 4571
     const/4 v8, 0x0
 
-    .line 4573
     invoke-static {v10, v11}, Landroid/os/Binder;->restoreCallingIdentity(J)V
 
     goto :goto_0
@@ -6999,12 +6321,10 @@
     .prologue
     const/4 v4, 0x0
 
-    .line 4380
     invoke-direct {p0, p1}, Lcom/android/server/enterprise/restriction/RestrictionPolicy;->enforceOwnerOnlyAndAdvancedRestrictionPermission(Landroid/app/enterprise/ContextInfo;)Landroid/app/enterprise/ContextInfo;
 
     move-result-object p1
 
-    .line 4381
     const-string v0, "RestrictionPolicy"
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -7027,7 +6347,6 @@
 
     invoke-static {v0, v1}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 4383
     iget-object v0, p0, Lcom/android/server/enterprise/restriction/RestrictionPolicy;->mEdmStorageProvider:Lcom/android/server/enterprise/storage/EdmStorageProvider;
 
     iget v1, p1, Landroid/app/enterprise/ContextInfo;->mCallerUid:I
@@ -7040,7 +6359,6 @@
 
     move-result v6
 
-    .line 4386
     .local v6, "ret":Z
     const-string v1, "allowFirmwareAutoUpdate"
 
@@ -7052,7 +6370,6 @@
 
     invoke-direct/range {v0 .. v5}, Lcom/android/server/enterprise/restriction/RestrictionPolicy;->updateRestrictionCache(Ljava/lang/String;JZI)V
 
-    .line 4392
     return v6
 .end method
 
@@ -7064,25 +6381,20 @@
     .prologue
     const/4 v4, 0x1
 
-    .line 3801
     invoke-direct {p0, p1}, Lcom/android/server/enterprise/restriction/RestrictionPolicy;->enforceOwnerOnlyAndRestrictionPermission(Landroid/app/enterprise/ContextInfo;)Landroid/app/enterprise/ContextInfo;
 
     move-result-object p1
 
-    .line 3802
     const/4 v9, 0x0
 
-    .line 3803
     .local v9, "ret":Z
     invoke-direct {p0, p1}, Lcom/android/server/enterprise/restriction/RestrictionPolicy;->isFirmwareRecoveryAllowedFromDB(Landroid/app/enterprise/ContextInfo;)Z
 
     move-result v7
 
-    .line 3804
     .local v7, "oldState":Z
     const/4 v6, 0x1
 
-    .line 3806
     .local v6, "newState":Z
     const-string v0, "RestrictionPolicy"
 
@@ -7116,7 +6428,6 @@
 
     invoke-static {v0, v1}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 3808
     iget-object v0, p0, Lcom/android/server/enterprise/restriction/RestrictionPolicy;->mEdmStorageProvider:Lcom/android/server/enterprise/storage/EdmStorageProvider;
 
     iget v1, p1, Landroid/app/enterprise/ContextInfo;->mCallerUid:I
@@ -7129,7 +6440,6 @@
 
     move-result v9
 
-    .line 3811
     const-string v1, "firmwarerecoveryallowed"
 
     const-wide/32 v2, 0x1000000
@@ -7140,33 +6450,26 @@
 
     invoke-direct/range {v0 .. v5}, Lcom/android/server/enterprise/restriction/RestrictionPolicy;->updateRestrictionCache(Ljava/lang/String;JZI)V
 
-    .line 3817
     if-eqz v9, :cond_1
 
-    .line 3818
     invoke-direct {p0, p1}, Lcom/android/server/enterprise/restriction/RestrictionPolicy;->isFirmwareRecoveryAllowedFromDB(Landroid/app/enterprise/ContextInfo;)Z
 
     move-result v6
 
-    .line 3820
     if-ne v7, v6, :cond_0
 
-    .line 3821
     const-string v0, "RestrictionPolicy"
 
     const-string v1, "allowFirmwareRecovery : do not need to update"
 
     invoke-static {v0, v1}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 3833
     :goto_0
     return v4
 
-    .line 3824
     :cond_0
     const/4 v8, 0x0
 
-    .line 3825
     .local v8, "param":Z
     const/4 v0, 0x7
 
@@ -7174,17 +6477,14 @@
 
     move-result v8
 
-    .line 3826
     if-nez v8, :cond_1
 
-    .line 3827
     const-string v0, "RestrictionPolicy"
 
     const-string v1, "allowFirmwareRecovery : write fail"
 
     invoke-static {v0, v1}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 3832
     .end local v8    # "param":Z
     :cond_1
     const-string v0, "RestrictionPolicy"
@@ -7211,7 +6511,6 @@
 
     move v4, v9
 
-    .line 3833
     goto :goto_0
 .end method
 
@@ -7221,12 +6520,10 @@
     .param p2, "allow"    # Z
 
     .prologue
-    .line 4314
     invoke-direct/range {p0 .. p1}, Lcom/android/server/enterprise/restriction/RestrictionPolicy;->enforceRestrictionPermission(Landroid/app/enterprise/ContextInfo;)Landroid/app/enterprise/ContextInfo;
 
     move-result-object p1
 
-    .line 4315
     move-object/from16 v0, p1
 
     iget v2, v0, Landroid/app/enterprise/ContextInfo;->mCallerUid:I
@@ -7235,7 +6532,6 @@
 
     move-result v7
 
-    .line 4317
     .local v7, "userId":I
     if-nez p2, :cond_3
 
@@ -7245,12 +6541,10 @@
 
     if-eqz v2, :cond_3
 
-    .line 4319
     invoke-static {}, Landroid/os/Binder;->clearCallingIdentity()J
 
     move-result-wide v22
 
-    .line 4321
     .local v22, "token":J
     move-object/from16 v0, p0
 
@@ -7260,7 +6554,6 @@
 
     move-result-object v9
 
-    .line 4322
     .local v9, "accountMngr":Landroid/accounts/AccountManager;
     const-string v2, "com.google"
 
@@ -7272,25 +6565,21 @@
 
     move-result-object v14
 
-    .line 4326
     .local v14, "googleAccounts":[Landroid/accounts/Account;
     array-length v2, v14
 
     if-eqz v2, :cond_2
 
-    .line 4327
     invoke-static {}, Landroid/content/ContentResolver;->getContentService()Landroid/content/IContentService;
 
     move-result-object v12
 
-    .line 4329
     .local v12, "contentService":Landroid/content/IContentService;
     :try_start_0
     invoke-interface {v12, v7}, Landroid/content/IContentService;->getSyncAdapterTypesAsUser(I)[Landroid/content/SyncAdapterType;
 
     move-result-object v21
 
-    .line 4331
     .local v21, "syncAdapters":[Landroid/content/SyncAdapterType;
     move-object v10, v14
 
@@ -7318,7 +6607,6 @@
 
     aget-object v8, v10, v16
 
-    .line 4332
     .local v8, "account":Landroid/accounts/Account;
     move-object/from16 v11, v21
 
@@ -7339,7 +6627,6 @@
 
     aget-object v20, v11, v15
 
-    .line 4333
     .local v20, "sa":Landroid/content/SyncAdapterType;
     const-string v2, "com.google"
 
@@ -7363,7 +6650,6 @@
 
     if-eqz v2, :cond_0
 
-    .line 4336
     move-object/from16 v0, v20
 
     iget-object v2, v0, Landroid/content/SyncAdapterType;->authority:Ljava/lang/String;
@@ -7374,13 +6660,11 @@
     :try_end_0
     .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 4332
     :cond_0
     add-int/lit8 v15, v15, 0x1
 
     goto :goto_1
 
-    .line 4331
     .end local v20    # "sa":Landroid/content/SyncAdapterType;
     :cond_1
     add-int/lit8 v15, v16, 0x1
@@ -7391,7 +6675,6 @@
     .restart local v16    # "i$":I
     goto :goto_0
 
-    .line 4343
     .end local v8    # "account":Landroid/accounts/Account;
     .end local v11    # "arr$":[Landroid/content/SyncAdapterType;
     .end local v16    # "i$":I
@@ -7400,7 +6683,6 @@
     :catch_0
     move-exception v13
 
-    .line 4344
     .local v13, "ex":Landroid/os/RemoteException;
     const-string v2, "RestrictionPolicy"
 
@@ -7428,13 +6710,11 @@
 
     invoke-static {v2, v3}, Lcom/android/server/enterprise/log/Log;->w(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 4347
     .end local v12    # "contentService":Landroid/content/IContentService;
     .end local v13    # "ex":Landroid/os/RemoteException;
     :cond_2
     invoke-static/range {v22 .. v23}, Landroid/os/Binder;->restoreCallingIdentity(J)V
 
-    .line 4350
     .end local v9    # "accountMngr":Landroid/accounts/AccountManager;
     .end local v14    # "googleAccounts":[Landroid/accounts/Account;
     .end local v22    # "token":J
@@ -7457,7 +6737,6 @@
 
     move-result v19
 
-    .line 4353
     .local v19, "ret":Z
     const-string v3, "allowGoogleAccountsAutoSync"
 
@@ -7469,7 +6748,6 @@
 
     invoke-direct/range {v2 .. v7}, Lcom/android/server/enterprise/restriction/RestrictionPolicy;->updateRestrictionCache(Ljava/lang/String;JZI)V
 
-    .line 4359
     return v19
 .end method
 
@@ -7479,12 +6757,10 @@
     .param p2, "allow"    # Z
 
     .prologue
-    .line 2320
     invoke-direct {p0, p1}, Lcom/android/server/enterprise/restriction/RestrictionPolicy;->enforceRestrictionPermission(Landroid/app/enterprise/ContextInfo;)Landroid/app/enterprise/ContextInfo;
 
     move-result-object p1
 
-    .line 2322
     iget-object v0, p0, Lcom/android/server/enterprise/restriction/RestrictionPolicy;->mEdmStorageProvider:Lcom/android/server/enterprise/storage/EdmStorageProvider;
 
     iget v1, p1, Landroid/app/enterprise/ContextInfo;->mCallerUid:I
@@ -7497,7 +6773,6 @@
 
     move-result v6
 
-    .line 2326
     .local v6, "result":Z
     const-string v1, "googleCrashReportEnabled"
 
@@ -7515,7 +6790,6 @@
 
     invoke-direct/range {v0 .. v5}, Lcom/android/server/enterprise/restriction/RestrictionPolicy;->updateRestrictionCache(Ljava/lang/String;JZI)V
 
-    .line 2332
     const-string v0, "RestrictionPolicy"
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -7550,7 +6824,6 @@
 
     invoke-static {v0, v1}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 2334
     return v6
 .end method
 
@@ -7564,25 +6837,20 @@
 
     const/4 v5, 0x0
 
-    .line 3002
     invoke-direct {p0, p1}, Lcom/android/server/enterprise/restriction/RestrictionPolicy;->enforceOwnerOnlyAndRestrictionPermission(Landroid/app/enterprise/ContextInfo;)Landroid/app/enterprise/ContextInfo;
 
     move-result-object p1
 
-    .line 3003
     const/4 v7, 0x1
 
-    .line 3004
     .local v7, "ret":Z
     if-nez p2, :cond_0
 
-    .line 3006
     :try_start_0
     invoke-static {}, Landroid/os/Binder;->clearCallingIdentity()J
 
     move-result-wide v8
 
-    .line 3007
     .local v8, "token":J
     invoke-static {}, Landroid/app/ActivityManagerNative;->getDefault()Landroid/app/IActivityManager;
 
@@ -7590,7 +6858,6 @@
 
     invoke-interface {v0, p2}, Landroid/app/IActivityManager;->setAlwaysFinish(Z)V
 
-    .line 3008
     iget-object v0, p0, Lcom/android/server/enterprise/restriction/RestrictionPolicy;->mContext:Landroid/content/Context;
 
     invoke-virtual {v0}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
@@ -7612,18 +6879,15 @@
     :goto_0
     and-int/2addr v7, v0
 
-    .line 3010
     invoke-static {v8, v9}, Landroid/os/Binder;->restoreCallingIdentity(J)V
     :try_end_0
     .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 3016
     .end local v8    # "token":J
     :cond_0
     :goto_1
     if-eqz v7, :cond_1
 
-    .line 3017
     iget-object v0, p0, Lcom/android/server/enterprise/restriction/RestrictionPolicy;->mEdmStorageProvider:Lcom/android/server/enterprise/storage/EdmStorageProvider;
 
     iget v1, p1, Landroid/app/enterprise/ContextInfo;->mCallerUid:I
@@ -7638,7 +6902,6 @@
 
     and-int/2addr v7, v0
 
-    .line 3020
     const-string v1, "allowKeepActivities"
 
     const-wide/32 v2, 0x8000
@@ -7647,7 +6910,6 @@
 
     invoke-direct/range {v0 .. v5}, Lcom/android/server/enterprise/restriction/RestrictionPolicy;->updateRestrictionCache(Ljava/lang/String;JZI)V
 
-    .line 3026
     :cond_1
     return v7
 
@@ -7655,15 +6917,12 @@
     :cond_2
     move v0, v5
 
-    .line 3008
     goto :goto_0
 
-    .line 3011
     .end local v8    # "token":J
     :catch_0
     move-exception v6
 
-    .line 3012
     .local v6, "e":Landroid/os/RemoteException;
     const-string v0, "RestrictionPolicy"
 
@@ -7691,7 +6950,6 @@
 
     invoke-static {v0, v1}, Landroid/util/Slog;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 3013
     const/4 v7, 0x0
 
     goto :goto_1
@@ -7708,27 +6966,22 @@
 
     const/4 v9, 0x1
 
-    .line 3620
     invoke-direct {p0, p1}, Lcom/android/server/enterprise/restriction/RestrictionPolicy;->enforceOwnerOnlyAndRestrictionPermission(Landroid/app/enterprise/ContextInfo;)Landroid/app/enterprise/ContextInfo;
 
     move-result-object p1
 
-    .line 3622
     const/4 v2, 0x0
 
-    .line 3623
     .local v2, "ret":Z
     invoke-static {}, Landroid/os/Binder;->clearCallingIdentity()J
 
     move-result-wide v4
 
-    .line 3626
     .local v4, "token":J
     if-eq p2, v9, :cond_0
 
     if-eq p2, v6, :cond_0
 
-    .line 3627
     :try_start_0
     new-instance v3, Ljava/security/InvalidParameterException;
 
@@ -7740,11 +6993,9 @@
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_1
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 3655
     :catch_0
     move-exception v0
 
-    .line 3656
     .local v0, "e":Ljava/security/InvalidParameterException;
     :try_start_1
     const-string v3, "RestrictionPolicy"
@@ -7755,21 +7006,17 @@
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
-    .line 3660
     invoke-static {v4, v5}, Landroid/os/Binder;->restoreCallingIdentity(J)V
 
-    .line 3663
     .end local v0    # "e":Ljava/security/InvalidParameterException;
     :goto_0
     return v2
 
-    .line 3630
     :cond_0
     and-int/lit8 v3, p2, 0x1
 
     if-ne v3, v9, :cond_3
 
-    .line 3631
     :try_start_2
     invoke-virtual {p0, p1, p2}, Lcom/android/server/enterprise/restriction/RestrictionPolicy;->isLockScreenViewAllowed(Landroid/app/enterprise/ContextInfo;I)Z
 
@@ -7779,7 +7026,6 @@
 
     if-nez p3, :cond_1
 
-    .line 3632
     iget-object v3, p0, Lcom/android/server/enterprise/restriction/RestrictionPolicy;->mContext:Landroid/content/Context;
 
     invoke-virtual {v3}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
@@ -7792,7 +7038,6 @@
 
     invoke-static {v3, v6, v7}, Landroid/provider/Settings$System;->putInt(Landroid/content/ContentResolver;Ljava/lang/String;I)Z
 
-    .line 3635
     :cond_1
     iget-object v3, p0, Lcom/android/server/enterprise/restriction/RestrictionPolicy;->mContext:Landroid/content/Context;
 
@@ -7810,12 +7055,10 @@
     .catch Ljava/lang/Exception; {:try_start_2 .. :try_end_2} :catch_1
     .catchall {:try_start_2 .. :try_end_2} :catchall_0
 
-    .line 3643
     :cond_2
     :goto_1
     const v1, 0xffff
 
-    .line 3645
     .local v1, "lValue":I
     :try_start_3
     iget-object v3, p0, Lcom/android/server/enterprise/restriction/RestrictionPolicy;->mEdmStorageProvider:Lcom/android/server/enterprise/storage/EdmStorageProvider;
@@ -7835,13 +7078,11 @@
 
     move-result v1
 
-    .line 3651
     :goto_2
     if-ne v9, p3, :cond_4
 
     or-int/2addr v1, p2
 
-    .line 3652
     :goto_3
     :try_start_4
     iget-object v3, p0, Lcom/android/server/enterprise/restriction/RestrictionPolicy;->mEdmStorageProvider:Lcom/android/server/enterprise/storage/EdmStorageProvider;
@@ -7860,19 +7101,16 @@
 
     move-result v2
 
-    .line 3660
     invoke-static {v4, v5}, Landroid/os/Binder;->restoreCallingIdentity(J)V
 
     goto :goto_0
 
-    .line 3637
     .end local v1    # "lValue":I
     :cond_3
     and-int/lit8 v3, p2, 0x2
 
     if-ne v3, v6, :cond_2
 
-    .line 3638
     :try_start_5
     invoke-virtual {p0, p1, p2}, Lcom/android/server/enterprise/restriction/RestrictionPolicy;->isLockScreenViewAllowed(Landroid/app/enterprise/ContextInfo;I)Z
 
@@ -7882,7 +7120,6 @@
 
     if-nez p3, :cond_2
 
-    .line 3639
     iget-object v3, p0, Lcom/android/server/enterprise/restriction/RestrictionPolicy;->mContext:Landroid/content/Context;
 
     invoke-virtual {v3}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
@@ -7901,11 +7138,9 @@
 
     goto :goto_1
 
-    .line 3657
     :catch_1
     move-exception v0
 
-    .line 3658
     .local v0, "e":Ljava/lang/Exception;
     :try_start_6
     const-string v3, "RestrictionPolicy"
@@ -7916,12 +7151,10 @@
     :try_end_6
     .catchall {:try_start_6 .. :try_end_6} :catchall_0
 
-    .line 3660
     invoke-static {v4, v5}, Landroid/os/Binder;->restoreCallingIdentity(J)V
 
     goto :goto_0
 
-    .line 3651
     .end local v0    # "e":Ljava/lang/Exception;
     .restart local v1    # "lValue":I
     :cond_4
@@ -7931,7 +7164,6 @@
 
     goto :goto_3
 
-    .line 3660
     .end local v1    # "lValue":I
     :catchall_0
     move-exception v3
@@ -7940,7 +7172,6 @@
 
     throw v3
 
-    .line 3647
     .restart local v1    # "lValue":I
     :catch_2
     move-exception v3
@@ -7958,12 +7189,10 @@
 
     const/4 v4, 0x1
 
-    .line 2277
     invoke-direct {p0, p1}, Lcom/android/server/enterprise/restriction/RestrictionPolicy;->enforceOwnerOnlyAndRestrictionPermission(Landroid/app/enterprise/ContextInfo;)Landroid/app/enterprise/ContextInfo;
 
     move-result-object p1
 
-    .line 2279
     const-string v0, "RestrictionPolicy"
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -7986,12 +7215,10 @@
 
     invoke-static {v0, v1}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 2281
     invoke-virtual {p0, v8}, Lcom/android/server/enterprise/restriction/RestrictionPolicy;->isOTAUpgradeAllowed(Landroid/app/enterprise/ContextInfo;)Z
 
     move-result v7
 
-    .line 2282
     .local v7, "oldState":Z
     iget-object v0, p0, Lcom/android/server/enterprise/restriction/RestrictionPolicy;->mEdmStorageProvider:Lcom/android/server/enterprise/storage/EdmStorageProvider;
 
@@ -8003,7 +7230,6 @@
 
     invoke-virtual {v0, v1, v2, v3, p2}, Lcom/android/server/enterprise/storage/EdmStorageProvider;->putBoolean(ILjava/lang/String;Ljava/lang/String;Z)Z
 
-    .line 2286
     const-string v1, "OTAUpgradeEnabled"
 
     const-wide/high16 v2, 0x40000000000000L
@@ -8014,37 +7240,31 @@
 
     invoke-direct/range {v0 .. v5}, Lcom/android/server/enterprise/restriction/RestrictionPolicy;->updateRestrictionCache(Ljava/lang/String;JZI)V
 
-    .line 2292
     invoke-virtual {p0, v8}, Lcom/android/server/enterprise/restriction/RestrictionPolicy;->isOTAUpgradeAllowed(Landroid/app/enterprise/ContextInfo;)Z
 
     move-result v6
 
-    .line 2293
     .local v6, "newState":Z
     if-eq v6, v7, :cond_0
 
-    .line 2294
     iget-object v0, p0, Lcom/android/server/enterprise/restriction/RestrictionPolicy;->mAppPolicy:Lcom/android/server/enterprise/application/ApplicationPolicy;
 
     const-string v1, "com.sec.android.fotaclient"
 
     invoke-virtual {v0, p1, v1, v6}, Lcom/android/server/enterprise/application/ApplicationPolicy;->setApplicationState(Landroid/app/enterprise/ContextInfo;Ljava/lang/String;Z)Z
 
-    .line 2295
     iget-object v0, p0, Lcom/android/server/enterprise/restriction/RestrictionPolicy;->mAppPolicy:Lcom/android/server/enterprise/application/ApplicationPolicy;
 
     const-string v1, "com.wssyncmldm"
 
     invoke-virtual {v0, p1, v1, v6}, Lcom/android/server/enterprise/application/ApplicationPolicy;->setApplicationState(Landroid/app/enterprise/ContextInfo;Ljava/lang/String;Z)Z
 
-    .line 2296
     iget-object v0, p0, Lcom/android/server/enterprise/restriction/RestrictionPolicy;->mAppPolicy:Lcom/android/server/enterprise/application/ApplicationPolicy;
 
     const-string v1, "com.ws.dm"
 
     invoke-virtual {v0, p1, v1, v6}, Lcom/android/server/enterprise/application/ApplicationPolicy;->setApplicationState(Landroid/app/enterprise/ContextInfo;Ljava/lang/String;Z)Z
 
-    .line 2298
     :cond_0
     return v4
 .end method
@@ -8055,39 +7275,32 @@
     .param p2, "enabled"    # Z
 
     .prologue
-    .line 2781
     invoke-direct {p0, p1}, Lcom/android/server/enterprise/restriction/RestrictionPolicy;->enforceHwPermission(Landroid/app/enterprise/ContextInfo;)Landroid/app/enterprise/ContextInfo;
 
     move-result-object p1
 
-    .line 2785
     invoke-static {p1}, Lcom/android/server/enterprise/EnterpriseDeviceManagerService;->isKioskOrOwnerUserId(Landroid/app/enterprise/ContextInfo;)Z
 
     move-result v0
 
     if-nez v0, :cond_0
 
-    .line 2786
     const-string v0, "RestrictionPolicy"
 
     const-string v1, "Failed. Caller is not COM container or owner"
 
     invoke-static {v0, v1}, Lcom/android/server/enterprise/log/Log;->w(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 2787
     const/4 v6, 0x0
 
-    .line 2803
     :goto_0
     return v6
 
-    .line 2790
     :cond_0
     invoke-static {p1}, Lcom/android/server/enterprise/EnterpriseDeviceManagerService;->getCallingOrCurrentUserId(Landroid/app/enterprise/ContextInfo;)I
 
     move-result v5
 
-    .line 2792
     .local v5, "userId":I
     const-string v0, "RestrictionPolicy"
 
@@ -8111,22 +7324,20 @@
 
     invoke-static {v0, v1}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 2794
     iget-object v0, p0, Lcom/android/server/enterprise/restriction/RestrictionPolicy;->mEdmStorageProvider:Lcom/android/server/enterprise/storage/EdmStorageProvider;
 
     iget v1, p1, Landroid/app/enterprise/ContextInfo;->mCallerUid:I
 
     const-string v2, "RESTRICTION"
 
-    const-string/jumbo v3, "powerOffAllowed"
+    const-string v3, "powerOffAllowed"
 
     invoke-virtual {v0, v1, v2, v3, p2}, Lcom/android/server/enterprise/storage/EdmStorageProvider;->putBoolean(ILjava/lang/String;Ljava/lang/String;Z)Z
 
     move-result v6
 
-    .line 2797
     .local v6, "ret":Z
-    const-string/jumbo v1, "powerOffAllowed"
+    const-string v1, "powerOffAllowed"
 
     const-wide/16 v2, 0x800
 
@@ -8147,15 +7358,12 @@
     .prologue
     const/4 v5, 0x0
 
-    .line 3286
     invoke-direct {p0, p1}, Lcom/android/server/enterprise/restriction/RestrictionPolicy;->enforceOwnerOnlyAndRestrictionPermission(Landroid/app/enterprise/ContextInfo;)Landroid/app/enterprise/ContextInfo;
 
     move-result-object p1
 
-    .line 3287
     const/4 v7, 0x1
 
-    .line 3288
     .local v7, "ret":Z
     iget-object v0, p0, Lcom/android/server/enterprise/restriction/RestrictionPolicy;->mEdmStorageProvider:Lcom/android/server/enterprise/storage/EdmStorageProvider;
 
@@ -8171,7 +7379,6 @@
 
     and-int/2addr v7, v0
 
-    .line 3292
     const-string v1, "allowSBeam"
 
     const-wide/16 v2, 0x400
@@ -8182,17 +7389,14 @@
 
     invoke-direct/range {v0 .. v5}, Lcom/android/server/enterprise/restriction/RestrictionPolicy;->updateRestrictionCache(Ljava/lang/String;JZI)V
 
-    .line 3298
     if-eqz v7, :cond_0
 
     if-nez p2, :cond_0
 
-    .line 3299
     invoke-static {}, Landroid/os/Binder;->clearCallingIdentity()J
 
     move-result-wide v8
 
-    .line 3302
     .local v8, "token":J
     new-instance v6, Landroid/content/Intent;
 
@@ -8200,21 +7404,17 @@
 
     invoke-direct {v6, v0}, Landroid/content/Intent;-><init>(Ljava/lang/String;)V
 
-    .line 3303
     .local v6, "intent":Landroid/content/Intent;
-    const-string/jumbo v0, "turn_on"
+    const-string v0, "turn_on"
 
     invoke-virtual {v6, v0, v5}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Z)Landroid/content/Intent;
 
-    .line 3304
     iget-object v0, p0, Lcom/android/server/enterprise/restriction/RestrictionPolicy;->mContext:Landroid/content/Context;
 
     invoke-virtual {v0, v6}, Landroid/content/Context;->sendBroadcast(Landroid/content/Intent;)V
 
-    .line 3305
     invoke-static {v8, v9}, Landroid/os/Binder;->restoreCallingIdentity(J)V
 
-    .line 3307
     .end local v6    # "intent":Landroid/content/Intent;
     .end local v8    # "token":J
     :cond_0
@@ -8240,7 +7440,6 @@
 
     invoke-static {v0, v1}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 3309
     return v7
 .end method
 
@@ -8250,17 +7449,14 @@
     .param p2, "enable"    # Z
 
     .prologue
-    .line 4510
     invoke-direct {p0, p1}, Lcom/android/server/enterprise/restriction/RestrictionPolicy;->enforceRestrictionPermission(Landroid/app/enterprise/ContextInfo;)Landroid/app/enterprise/ContextInfo;
 
     move-result-object p1
 
-    .line 4511
     invoke-static {p1}, Lcom/android/server/enterprise/EnterpriseDeviceManagerService;->getCallingOrCurrentUserId(Landroid/app/enterprise/ContextInfo;)I
 
     move-result v5
 
-    .line 4513
     .local v5, "userId":I
     const-string v0, "RestrictionPolicy"
 
@@ -8284,7 +7480,6 @@
 
     invoke-static {v0, v1}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 4514
     iget-object v0, p0, Lcom/android/server/enterprise/restriction/RestrictionPolicy;->mEdmStorageProvider:Lcom/android/server/enterprise/storage/EdmStorageProvider;
 
     iget v1, p1, Landroid/app/enterprise/ContextInfo;->mCallerUid:I
@@ -8297,7 +7492,6 @@
 
     move-result v6
 
-    .line 4517
     .local v6, "ret":Z
     const-string v1, "allowSDCardMove"
 
@@ -8309,7 +7503,6 @@
 
     invoke-direct/range {v0 .. v5}, Lcom/android/server/enterprise/restriction/RestrictionPolicy;->updateRestrictionCache(Ljava/lang/String;JZI)V
 
-    .line 4523
     return v6
 .end method
 
@@ -8321,17 +7514,14 @@
     .prologue
     const/4 v9, 0x0
 
-    .line 2372
     invoke-direct {p0, p1}, Lcom/android/server/enterprise/restriction/RestrictionPolicy;->enforceOwnerOnlyAndRestrictionPermission(Landroid/app/enterprise/ContextInfo;)Landroid/app/enterprise/ContextInfo;
 
     move-result-object p1
 
-    .line 2373
     invoke-virtual {p0, v9}, Lcom/android/server/enterprise/restriction/RestrictionPolicy;->isSDCardWriteAllowed(Landroid/app/enterprise/ContextInfo;)Z
 
     move-result v7
 
-    .line 2374
     .local v7, "oldState":Z
     const-string v0, "RestrictionPolicy"
 
@@ -8355,22 +7545,20 @@
 
     invoke-static {v0, v1}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 2375
     iget-object v0, p0, Lcom/android/server/enterprise/restriction/RestrictionPolicy;->mEdmStorageProvider:Lcom/android/server/enterprise/storage/EdmStorageProvider;
 
     iget v1, p1, Landroid/app/enterprise/ContextInfo;->mCallerUid:I
 
     const-string v2, "RESTRICTION"
 
-    const-string/jumbo v3, "sdCardWriteEnabled"
+    const-string v3, "sdCardWriteEnabled"
 
     invoke-virtual {v0, v1, v2, v3, p2}, Lcom/android/server/enterprise/storage/EdmStorageProvider;->putBoolean(ILjava/lang/String;Ljava/lang/String;Z)Z
 
     move-result v8
 
-    .line 2379
     .local v8, "ret":Z
-    const-string/jumbo v1, "sdCardWriteEnabled"
+    const-string v1, "sdCardWriteEnabled"
 
     const-wide v2, 0x800000000L
 
@@ -8382,32 +7570,25 @@
 
     invoke-direct/range {v0 .. v5}, Lcom/android/server/enterprise/restriction/RestrictionPolicy;->updateRestrictionCache(Ljava/lang/String;JZI)V
 
-    .line 2385
     if-eqz v8, :cond_1
 
-    .line 2386
     invoke-static {}, Landroid/os/Binder;->clearCallingIdentity()J
 
     move-result-wide v10
 
-    .line 2387
     .local v10, "token":J
     invoke-virtual {p0, v9}, Lcom/android/server/enterprise/restriction/RestrictionPolicy;->isSDCardWriteAllowed(Landroid/app/enterprise/ContextInfo;)Z
 
     move-result v6
 
-    .line 2388
     .local v6, "newState":Z
     if-eq v6, v7, :cond_0
 
-    .line 2389
     invoke-direct {p0}, Lcom/android/server/enterprise/restriction/RestrictionPolicy;->applySdCardWriteAccessPolicy()V
 
-    .line 2391
     :cond_0
     invoke-static {v10, v11}, Landroid/os/Binder;->restoreCallingIdentity(J)V
 
-    .line 2393
     .end local v6    # "newState":Z
     .end local v10    # "token":J
     :cond_1
@@ -8420,21 +7601,17 @@
     .param p2, "allow"    # Z
 
     .prologue
-    .line 3174
     invoke-direct/range {p0 .. p1}, Lcom/android/server/enterprise/restriction/RestrictionPolicy;->enforceRestrictionPermission(Landroid/app/enterprise/ContextInfo;)Landroid/app/enterprise/ContextInfo;
 
     move-result-object p1
 
-    .line 3175
     const/16 v16, 0x1
 
-    .line 3177
     .local v16, "ret":Z
     invoke-static/range {p1 .. p1}, Lcom/android/server/enterprise/EnterpriseDeviceManagerService;->getCallingOrCurrentUserId(Landroid/app/enterprise/ContextInfo;)I
 
     move-result v7
 
-    .line 3179
     .local v7, "userId":I
     const/4 v2, 0x0
 
@@ -8446,18 +7623,15 @@
 
     move-result v17
 
-    .line 3181
     .local v17, "state":Z
     if-nez p2, :cond_0
 
     if-eqz v17, :cond_0
 
-    .line 3182
     invoke-static {}, Landroid/os/Binder;->clearCallingIdentity()J
 
     move-result-wide v20
 
-    .line 3184
     .local v20, "token":J
     move-object/from16 v0, p0
 
@@ -8467,13 +7641,12 @@
 
     move-result-object v2
 
-    const-string/jumbo v3, "wake_up_lock_screen"
+    const-string v3, "wake_up_lock_screen"
 
     const/4 v4, 0x0
 
     invoke-static {v2, v3, v4, v7}, Landroid/provider/Settings$System;->putIntForUser(Landroid/content/ContentResolver;Ljava/lang/String;II)Z
 
-    .line 3188
     move-object/from16 v0, p0
 
     iget-object v2, v0, Lcom/android/server/enterprise/restriction/RestrictionPolicy;->mContext:Landroid/content/Context;
@@ -8482,7 +7655,7 @@
 
     move-result-object v2
 
-    const-string/jumbo v3, "voice_input_control"
+    const-string v3, "voice_input_control"
 
     const/4 v4, 0x0
 
@@ -8490,13 +7663,12 @@
 
     move-result v10
 
-    .line 3192
     .local v10, "currentState":I
     move-object/from16 v0, p0
 
     iget-object v2, v0, Lcom/android/server/enterprise/restriction/RestrictionPolicy;->mEdmStorageProvider:Lcom/android/server/enterprise/storage/EdmStorageProvider;
 
-    const-string/jumbo v3, "voiceControl"
+    const-string v3, "voiceControl"
 
     invoke-static {v10}, Ljava/lang/Integer;->toString(I)Ljava/lang/String;
 
@@ -8504,7 +7676,6 @@
 
     invoke-virtual {v2, v3, v4, v7}, Lcom/android/server/enterprise/storage/EdmStorageProvider;->putGenericValueAsUser(Ljava/lang/String;Ljava/lang/String;I)Z
 
-    .line 3197
     move-object/from16 v0, p0
 
     iget-object v2, v0, Lcom/android/server/enterprise/restriction/RestrictionPolicy;->mContext:Landroid/content/Context;
@@ -8513,16 +7684,14 @@
 
     move-result-object v2
 
-    const-string/jumbo v3, "voice_input_control"
+    const-string v3, "voice_input_control"
 
     const/4 v4, 0x0
 
     invoke-static {v2, v3, v4, v7}, Landroid/provider/Settings$System;->putIntForUser(Landroid/content/ContentResolver;Ljava/lang/String;II)Z
 
-    .line 3199
     invoke-static/range {v20 .. v21}, Landroid/os/Binder;->restoreCallingIdentity(J)V
 
-    .line 3202
     .end local v10    # "currentState":I
     .end local v20    # "token":J
     :cond_0
@@ -8546,7 +7715,6 @@
 
     and-int v16, v16, v2
 
-    .line 3206
     const-string v3, "allowSVoice"
 
     const-wide/16 v4, 0x20
@@ -8557,15 +7725,12 @@
 
     invoke-direct/range {v2 .. v7}, Lcom/android/server/enterprise/restriction/RestrictionPolicy;->updateRestrictionCache(Ljava/lang/String;JZI)V
 
-    .line 3212
     if-eqz p2, :cond_1
 
-    .line 3214
     move-object/from16 v0, p0
 
     invoke-direct {v0, v7}, Lcom/android/server/enterprise/restriction/RestrictionPolicy;->rollBackSVoice(I)V
 
-    .line 3217
     :cond_1
     if-eqz v16, :cond_4
 
@@ -8573,12 +7738,10 @@
 
     if-nez p2, :cond_4
 
-    .line 3218
     invoke-static {}, Landroid/os/Binder;->clearCallingIdentity()J
 
     move-result-wide v20
 
-    .line 3219
     .restart local v20    # "token":J
     move-object/from16 v0, p0
 
@@ -8592,7 +7755,6 @@
 
     check-cast v8, Landroid/app/ActivityManager;
 
-    .line 3222
     .local v8, "am":Landroid/app/ActivityManager;
     const/16 v2, 0xc
 
@@ -8602,7 +7764,6 @@
 
     move-result-object v15
 
-    .line 3223
     .local v15, "recentTasks":Ljava/util/List;, "Ljava/util/List<Landroid/app/ActivityManager$RecentTaskInfo;>;"
     invoke-interface {v15}, Ljava/util/List;->isEmpty()Z
 
@@ -8610,7 +7771,6 @@
 
     if-nez v2, :cond_3
 
-    .line 3225
     invoke-interface {v15}, Ljava/util/List;->iterator()Ljava/util/Iterator;
 
     move-result-object v12
@@ -8629,28 +7789,23 @@
 
     check-cast v18, Landroid/app/ActivityManager$RecentTaskInfo;
 
-    .line 3226
     .local v18, "task":Landroid/app/ActivityManager$RecentTaskInfo;
     move-object/from16 v0, v18
 
     iget-object v13, v0, Landroid/app/ActivityManager$RecentTaskInfo;->baseIntent:Landroid/content/Intent;
 
-    .line 3227
     .local v13, "origInt":Landroid/content/Intent;
     invoke-virtual {v13}, Landroid/content/Intent;->getComponent()Landroid/content/ComponentName;
 
     move-result-object v9
 
-    .line 3228
     .local v9, "cmp":Landroid/content/ComponentName;
     if-eqz v9, :cond_2
 
-    .line 3229
     invoke-virtual {v9}, Landroid/content/ComponentName;->getPackageName()Ljava/lang/String;
 
     move-result-object v14
 
-    .line 3230
     .local v14, "packageName":Ljava/lang/String;
     const-string v2, "RestrictionPolicy"
 
@@ -8658,7 +7813,7 @@
 
     invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v4, "packageName "
+    const-string v4, "packageName "
 
     invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -8674,7 +7829,6 @@
 
     invoke-static {v2, v3}, Lcom/android/server/enterprise/log/Log;->w(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 3232
     if-eqz v14, :cond_2
 
     const-string v2, "com.vlingo.midas"
@@ -8685,7 +7839,6 @@
 
     if-eqz v2, :cond_2
 
-    .line 3233
     move-object/from16 v0, v18
 
     iget v2, v0, Landroid/app/ActivityManager$RecentTaskInfo;->persistentId:I
@@ -8694,7 +7847,6 @@
 
     invoke-virtual {v8, v2, v3}, Landroid/app/ActivityManager;->removeTask(II)Z
 
-    .line 3238
     :try_start_0
     invoke-static {}, Landroid/app/ActivityManagerNative;->getDefault()Landroid/app/IActivityManager;
 
@@ -8706,7 +7858,6 @@
     :try_end_0
     .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 3248
     .end local v9    # "cmp":Landroid/content/ComponentName;
     .end local v12    # "i$":Ljava/util/Iterator;
     .end local v13    # "origInt":Landroid/content/Intent;
@@ -8716,7 +7867,6 @@
     :goto_0
     invoke-static/range {v20 .. v21}, Landroid/os/Binder;->restoreCallingIdentity(J)V
 
-    .line 3250
     .end local v8    # "am":Landroid/app/ActivityManager;
     .end local v15    # "recentTasks":Ljava/util/List;, "Ljava/util/List<Landroid/app/ActivityManager$RecentTaskInfo;>;"
     .end local v20    # "token":J
@@ -8745,10 +7895,8 @@
 
     invoke-static {v2, v3}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 3251
     return v16
 
-    .line 3239
     .restart local v8    # "am":Landroid/app/ActivityManager;
     .restart local v9    # "cmp":Landroid/content/ComponentName;
     .restart local v12    # "i$":Ljava/util/Iterator;
@@ -8760,7 +7908,6 @@
     :catch_0
     move-exception v11
 
-    .line 3240
     .local v11, "e":Landroid/os/RemoteException;
     const-string v2, "RestrictionPolicy"
 
@@ -8788,10 +7935,8 @@
 
     invoke-static {v2, v3}, Lcom/android/server/enterprise/log/Log;->e(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 3241
     const/16 v16, 0x0
 
-    .line 3243
     goto :goto_0
 .end method
 
@@ -8801,12 +7946,10 @@
     .param p2, "allow"    # Z
 
     .prologue
-    .line 3581
     invoke-direct {p0, p1}, Lcom/android/server/enterprise/restriction/RestrictionPolicy;->enforceOwnerOnlyAndRestrictionPermission(Landroid/app/enterprise/ContextInfo;)Landroid/app/enterprise/ContextInfo;
 
     move-result-object p1
 
-    .line 3583
     const-string v2, "RestrictionPolicy"
 
     new-instance v3, Ljava/lang/StringBuilder;
@@ -8829,10 +7972,8 @@
 
     invoke-static {v2, v3}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 3585
     const/4 v1, 0x0
 
-    .line 3587
     .local v1, "ret":Z
     :try_start_0
     iget-object v2, p0, Lcom/android/server/enterprise/restriction/RestrictionPolicy;->mEdmStorageProvider:Lcom/android/server/enterprise/storage/EdmStorageProvider;
@@ -8849,15 +7990,12 @@
 
     move-result v1
 
-    .line 3593
     :goto_0
     return v1
 
-    .line 3589
     :catch_0
     move-exception v0
 
-    .line 3590
     .local v0, "e":Ljava/lang/Exception;
     const-string v2, "RestrictionPolicy"
 
@@ -8874,31 +8012,25 @@
     .param p2, "allow"    # Z
 
     .prologue
-    .line 1614
     invoke-direct/range {p0 .. p1}, Lcom/android/server/enterprise/restriction/RestrictionPolicy;->enforceRestrictionPermission(Landroid/app/enterprise/ContextInfo;)Landroid/app/enterprise/ContextInfo;
 
     move-result-object p1
 
-    .line 1615
     invoke-static/range {p1 .. p1}, Lcom/android/server/enterprise/EnterpriseDeviceManagerService;->getCallingOrCurrentUserId(Landroid/app/enterprise/ContextInfo;)I
 
     move-result v7
 
-    .line 1619
     .local v7, "userId":I
     const/16 v2, 0x64
 
     if-lt v7, v2, :cond_1
 
-    .line 1620
     const/4 v15, 0x0
 
-    .line 1667
     :cond_0
     :goto_0
     return v15
 
-    .line 1623
     :cond_1
     move-object/from16 v0, p0
 
@@ -8918,7 +8050,6 @@
 
     move-result v15
 
-    .line 1626
     .local v15, "ret":Z
     const-string v3, "allowSettingsChanges"
 
@@ -8930,7 +8061,6 @@
 
     invoke-direct/range {v2 .. v7}, Lcom/android/server/enterprise/restriction/RestrictionPolicy;->updateRestrictionCache(Ljava/lang/String;JZI)V
 
-    .line 1632
     const-string v2, "RestrictionPolicy"
 
     new-instance v3, Ljava/lang/StringBuilder;
@@ -8955,15 +8085,12 @@
 
     invoke-static {v2, v3}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1634
     if-eqz v15, :cond_0
 
-    .line 1635
     invoke-static {}, Landroid/os/Binder;->clearCallingIdentity()J
 
     move-result-wide v18
 
-    .line 1636
     .local v18, "token":J
     move-object/from16 v0, p0
 
@@ -8977,7 +8104,6 @@
 
     check-cast v8, Landroid/app/ActivityManager;
 
-    .line 1638
     .local v8, "am":Landroid/app/ActivityManager;
     const/16 v2, 0xc
 
@@ -8987,11 +8113,9 @@
 
     move-result-object v14
 
-    .line 1639
     .local v14, "recentTasks":Ljava/util/List;, "Ljava/util/List<Landroid/app/ActivityManager$RecentTaskInfo;>;"
     const-string v16, "com.android.settings"
 
-    .line 1640
     .local v16, "settingsPkg":Ljava/lang/String;
     if-nez p2, :cond_3
 
@@ -9001,7 +8125,6 @@
 
     if-nez v2, :cond_3
 
-    .line 1641
     invoke-interface {v14}, Ljava/util/List;->iterator()Ljava/util/Iterator;
 
     move-result-object v11
@@ -9021,28 +8144,23 @@
 
     check-cast v17, Landroid/app/ActivityManager$RecentTaskInfo;
 
-    .line 1642
     .local v17, "task":Landroid/app/ActivityManager$RecentTaskInfo;
     move-object/from16 v0, v17
 
     iget-object v12, v0, Landroid/app/ActivityManager$RecentTaskInfo;->baseIntent:Landroid/content/Intent;
 
-    .line 1643
     .local v12, "origInt":Landroid/content/Intent;
     invoke-virtual {v12}, Landroid/content/Intent;->getComponent()Landroid/content/ComponentName;
 
     move-result-object v9
 
-    .line 1644
     .local v9, "cmp":Landroid/content/ComponentName;
     if-eqz v9, :cond_2
 
-    .line 1645
     invoke-virtual {v9}, Landroid/content/ComponentName;->getPackageName()Ljava/lang/String;
 
     move-result-object v13
 
-    .line 1646
     .local v13, "packageName":Ljava/lang/String;
     const-string v2, "RestrictionPolicy"
 
@@ -9050,7 +8168,7 @@
 
     invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v4, "packageName "
+    const-string v4, "packageName "
 
     invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -9066,7 +8184,6 @@
 
     invoke-static {v2, v3}, Lcom/android/server/enterprise/log/Log;->w(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 1648
     if-eqz v13, :cond_2
 
     const-string v2, "com.android.settings"
@@ -9077,7 +8194,6 @@
 
     if-eqz v2, :cond_2
 
-    .line 1649
     invoke-direct/range {p0 .. p0}, Lcom/android/server/enterprise/restriction/RestrictionPolicy;->getEDM()Landroid/app/enterprise/EnterpriseDeviceManager;
 
     move-result-object v2
@@ -9092,7 +8208,6 @@
 
     if-nez v2, :cond_2
 
-    .line 1650
     move-object/from16 v0, v17
 
     iget v2, v0, Landroid/app/ActivityManager$RecentTaskInfo;->persistentId:I
@@ -9101,7 +8216,6 @@
 
     invoke-virtual {v8, v2, v3}, Landroid/app/ActivityManager;->removeTask(II)Z
 
-    .line 1653
     :try_start_0
     invoke-static {}, Landroid/app/ActivityManagerNative;->getDefault()Landroid/app/IActivityManager;
 
@@ -9115,11 +8229,9 @@
 
     goto :goto_1
 
-    .line 1654
     :catch_0
     move-exception v10
 
-    .line 1655
     .local v10, "e":Landroid/os/RemoteException;
     const-string v2, "RestrictionPolicy"
 
@@ -9147,12 +8259,10 @@
 
     invoke-static {v2, v3}, Lcom/android/server/enterprise/log/Log;->e(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 1656
     const/4 v15, 0x0
 
     goto :goto_1
 
-    .line 1663
     .end local v9    # "cmp":Landroid/content/ComponentName;
     .end local v10    # "e":Landroid/os/RemoteException;
     .end local v11    # "i$":Ljava/util/Iterator;
@@ -9176,7 +8286,6 @@
 
     invoke-virtual {v2, v3, v4}, Landroid/content/Context;->sendBroadcastAsUser(Landroid/content/Intent;Landroid/os/UserHandle;)V
 
-    .line 1665
     invoke-static/range {v18 .. v19}, Landroid/os/Binder;->restoreCallingIdentity(J)V
 
     goto/16 :goto_0
@@ -9188,17 +8297,14 @@
     .param p2, "allow"    # Z
 
     .prologue
-    .line 3456
     invoke-direct {p0, p1}, Lcom/android/server/enterprise/restriction/RestrictionPolicy;->enforceRestrictionPermission(Landroid/app/enterprise/ContextInfo;)Landroid/app/enterprise/ContextInfo;
 
     move-result-object p1
 
-    .line 3457
     invoke-static {p1}, Lcom/android/server/enterprise/EnterpriseDeviceManagerService;->getCallingOrCurrentUserId(Landroid/app/enterprise/ContextInfo;)I
 
     move-result v5
 
-    .line 3458
     .local v5, "userId":I
     iget-object v0, p0, Lcom/android/server/enterprise/restriction/RestrictionPolicy;->mEdmStorageProvider:Lcom/android/server/enterprise/storage/EdmStorageProvider;
 
@@ -9212,7 +8318,6 @@
 
     move-result v6
 
-    .line 3461
     .local v6, "ret":Z
     const-string v1, "allowShareList"
 
@@ -9224,7 +8329,6 @@
 
     invoke-direct/range {v0 .. v5}, Lcom/android/server/enterprise/restriction/RestrictionPolicy;->updateRestrictionCache(Ljava/lang/String;JZI)V
 
-    .line 3467
     const-string v0, "RestrictionPolicy"
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -9271,7 +8375,6 @@
 
     invoke-static {v0, v1}, Landroid/util/Slog;->secD(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 3469
     return v6
 .end method
 
@@ -9281,27 +8384,24 @@
     .param p2, "allow"    # Z
 
     .prologue
-    .line 5154
     invoke-direct {p0, p1}, Lcom/android/server/enterprise/restriction/RestrictionPolicy;->enforceRestrictionPermission(Landroid/app/enterprise/ContextInfo;)Landroid/app/enterprise/ContextInfo;
 
     move-result-object p1
 
-    .line 5156
     iget-object v0, p0, Lcom/android/server/enterprise/restriction/RestrictionPolicy;->mEdmStorageProvider:Lcom/android/server/enterprise/storage/EdmStorageProvider;
 
     iget v1, p1, Landroid/app/enterprise/ContextInfo;->mCallerUid:I
 
     const-string v2, "RESTRICTION"
 
-    const-string/jumbo v3, "smartClipAllowed"
+    const-string v3, "smartClipAllowed"
 
     invoke-virtual {v0, v1, v2, v3, p2}, Lcom/android/server/enterprise/storage/EdmStorageProvider;->putBoolean(ILjava/lang/String;Ljava/lang/String;Z)Z
 
     move-result v6
 
-    .line 5160
     .local v6, "result":Z
-    const-string/jumbo v1, "smartClipAllowed"
+    const-string v1, "smartClipAllowed"
 
     const-wide/high16 v2, 0x100000000000000L
 
@@ -9317,7 +8417,6 @@
 
     invoke-direct/range {v0 .. v5}, Lcom/android/server/enterprise/restriction/RestrictionPolicy;->updateRestrictionCache(Ljava/lang/String;JZI)V
 
-    .line 5166
     return v6
 .end method
 
@@ -9327,33 +8426,27 @@
     .param p2, "allow"    # Z
 
     .prologue
-    .line 2716
     invoke-direct {p0, p1}, Lcom/android/server/enterprise/restriction/RestrictionPolicy;->enforceRestrictionPermission(Landroid/app/enterprise/ContextInfo;)Landroid/app/enterprise/ContextInfo;
 
     move-result-object p1
 
-    .line 2720
     invoke-static {p1}, Lcom/android/server/enterprise/EnterpriseDeviceManagerService;->isKioskOrOwnerUserId(Landroid/app/enterprise/ContextInfo;)Z
 
     move-result v0
 
     if-nez v0, :cond_0
 
-    .line 2721
     const-string v0, "RestrictionPolicy"
 
     const-string v1, "Failed. Caller is not COM container or owner"
 
     invoke-static {v0, v1}, Lcom/android/server/enterprise/log/Log;->w(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 2722
     const/4 v6, 0x0
 
-    .line 2743
     :goto_0
     return v6
 
-    .line 2725
     :cond_0
     iget v0, p1, Landroid/app/enterprise/ContextInfo;->mCallerUid:I
 
@@ -9361,7 +8454,6 @@
 
     move-result v5
 
-    .line 2726
     .local v5, "userId":I
     iget-object v0, p0, Lcom/android/server/enterprise/restriction/RestrictionPolicy;->mEdmStorageProvider:Lcom/android/server/enterprise/storage/EdmStorageProvider;
 
@@ -9369,15 +8461,14 @@
 
     const-string v2, "RESTRICTION"
 
-    const-string/jumbo v3, "statusBarExpansionEnabled"
+    const-string v3, "statusBarExpansionEnabled"
 
     invoke-virtual {v0, v1, v2, v3, p2}, Lcom/android/server/enterprise/storage/EdmStorageProvider;->putBoolean(ILjava/lang/String;Ljava/lang/String;Z)Z
 
     move-result v6
 
-    .line 2729
     .local v6, "ret":Z
-    const-string/jumbo v1, "statusBarExpansionEnabled"
+    const-string v1, "statusBarExpansionEnabled"
 
     const-wide/16 v2, 0x100
 
@@ -9387,7 +8478,6 @@
 
     invoke-direct/range {v0 .. v5}, Lcom/android/server/enterprise/restriction/RestrictionPolicy;->updateRestrictionCache(Ljava/lang/String;JZI)V
 
-    .line 2735
     const-string v0, "RestrictionPolicy"
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -9420,19 +8510,16 @@
 
     invoke-static {v0, v1}, Lcom/android/server/enterprise/log/Log;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 2737
     invoke-static {}, Landroid/os/Binder;->clearCallingIdentity()J
 
     move-result-wide v8
 
-    .line 2739
     .local v8, "token":J
     :try_start_0
     invoke-direct {p0}, Lcom/android/server/enterprise/restriction/RestrictionPolicy;->enforceStatusBarExpansion()V
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 2741
     invoke-static {v8, v9}, Landroid/os/Binder;->restoreCallingIdentity(J)V
 
     goto :goto_0
@@ -9451,21 +8538,17 @@
     .param p2, "allow"    # Z
 
     .prologue
-    .line 2895
     const/4 v6, 0x1
 
-    .line 2896
     .local v6, "ret":Z
     invoke-direct {p0, p1}, Lcom/android/server/enterprise/restriction/RestrictionPolicy;->enforceRestrictionPermission(Landroid/app/enterprise/ContextInfo;)Landroid/app/enterprise/ContextInfo;
 
     move-result-object p1
 
-    .line 2897
     invoke-static {p1}, Lcom/android/server/enterprise/EnterpriseDeviceManagerService;->getCallingOrCurrentUserId(Landroid/app/enterprise/ContextInfo;)I
 
     move-result v5
 
-    .line 2899
     .local v5, "userId":I
     iget-object v0, p0, Lcom/android/server/enterprise/restriction/RestrictionPolicy;->mEdmStorageProvider:Lcom/android/server/enterprise/storage/EdmStorageProvider;
 
@@ -9479,7 +8562,6 @@
 
     move-result v6
 
-    .line 2902
     const-string v1, "allowStopSystemApp"
 
     const-wide/16 v2, 0x1000
@@ -9490,7 +8572,6 @@
 
     invoke-direct/range {v0 .. v5}, Lcom/android/server/enterprise/restriction/RestrictionPolicy;->updateRestrictionCache(Ljava/lang/String;JZI)V
 
-    .line 2908
     const-string v0, "RestrictionPolicy"
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -9513,7 +8594,6 @@
 
     invoke-static {v0, v1}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 2910
     return v6
 .end method
 
@@ -9523,21 +8603,17 @@
     .param p2, "allow"    # Z
 
     .prologue
-    .line 3391
     invoke-direct/range {p0 .. p1}, Lcom/android/server/enterprise/restriction/RestrictionPolicy;->enforceOwnerOnlyAndRestrictionPermission(Landroid/app/enterprise/ContextInfo;)Landroid/app/enterprise/ContextInfo;
 
     move-result-object p1
 
-    .line 3392
     invoke-static {}, Landroid/os/Binder;->clearCallingIdentity()J
 
     move-result-wide v20
 
-    .line 3393
     .local v20, "token":J
     const/4 v12, 0x1
 
-    .line 3394
     .local v12, "ret":Z
     move-object/from16 v0, p0
 
@@ -9559,7 +8635,6 @@
 
     and-int/2addr v12, v2
 
-    .line 3397
     const-string v2, "RestrictionPolicy"
 
     new-instance v3, Ljava/lang/StringBuilder;
@@ -9584,7 +8659,6 @@
 
     invoke-static {v2, v3}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 3399
     const-string v3, "allowUsbHostStorage"
 
     const-wide/32 v4, 0x80000
@@ -9597,18 +8671,16 @@
 
     invoke-direct/range {v2 .. v7}, Lcom/android/server/enterprise/restriction/RestrictionPolicy;->updateRestrictionCache(Ljava/lang/String;JZI)V
 
-    .line 3406
     if-eqz v12, :cond_2
 
     if-nez p2, :cond_2
 
-    .line 3407
     :try_start_0
     move-object/from16 v0, p0
 
     iget-object v2, v0, Lcom/android/server/enterprise/restriction/RestrictionPolicy;->mContext:Landroid/content/Context;
 
-    const-string/jumbo v3, "storage"
+    const-string v3, "storage"
 
     invoke-virtual {v2, v3}, Landroid/content/Context;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
 
@@ -9616,43 +8688,35 @@
 
     check-cast v14, Landroid/os/storage/StorageManager;
 
-    .line 3409
     .local v14, "storageManager":Landroid/os/storage/StorageManager;
     if-nez v14, :cond_0
 
-    .line 3410
     const-string v2, "RestrictionPolicy"
 
     const-string v3, "Failed to get StorageManager"
 
     invoke-static {v2, v3}, Lcom/android/server/enterprise/log/Log;->w(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 3411
     const/4 v2, 0x0
 
-    .line 3437
     .end local v14    # "storageManager":Landroid/os/storage/StorageManager;
     :goto_0
     return v2
 
-    .line 3413
     .restart local v14    # "storageManager":Landroid/os/storage/StorageManager;
     :cond_0
     invoke-virtual {v14}, Landroid/os/storage/StorageManager;->getVolumeList()[Landroid/os/storage/StorageVolume;
 
     move-result-object v17
 
-    .line 3414
     .local v17, "storageVolumes":[Landroid/os/storage/StorageVolume;
     move-object/from16 v0, v17
 
     array-length v10, v0
 
-    .line 3415
     .local v10, "length":I
     const-string v15, ""
 
-    .line 3416
     .local v15, "storagePath":Ljava/lang/String;
     const-string v2, "mount"
 
@@ -9664,7 +8728,6 @@
 
     move-result-object v11
 
-    .line 3418
     .local v11, "mountService":Landroid/os/storage/IMountService;
     const/4 v9, 0x0
 
@@ -9672,20 +8735,17 @@
     :goto_1
     if-ge v9, v10, :cond_2
 
-    .line 3419
     aget-object v16, v17, v9
 
-    .line 3420
     .local v16, "storageVolume":Landroid/os/storage/StorageVolume;
     invoke-virtual/range {v16 .. v16}, Landroid/os/storage/StorageVolume;->getSubSystem()Ljava/lang/String;
 
     move-result-object v18
 
-    .line 3421
     .local v18, "subsystem":Ljava/lang/String;
     if-eqz v18, :cond_1
 
-    const-string/jumbo v2, "usb"
+    const-string v2, "usb"
 
     move-object/from16 v0, v18
 
@@ -9695,17 +8755,14 @@
 
     if-eqz v2, :cond_1
 
-    .line 3422
     invoke-virtual/range {v16 .. v16}, Landroid/os/storage/StorageVolume;->getPath()Ljava/lang/String;
 
     move-result-object v15
 
-    .line 3423
     invoke-virtual {v14, v15}, Landroid/os/storage/StorageManager;->getVolumeState(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v13
 
-    .line 3425
     .local v13, "state":Ljava/lang/String;
     const-string v2, "mounted"
 
@@ -9715,7 +8772,6 @@
 
     if-eqz v2, :cond_1
 
-    .line 3426
     const/4 v2, 0x1
 
     const/4 v3, 0x0
@@ -9724,14 +8780,12 @@
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 3418
     .end local v13    # "state":Ljava/lang/String;
     :cond_1
     add-int/lit8 v9, v9, 0x1
 
     goto :goto_1
 
-    .line 3432
     .end local v9    # "i":I
     .end local v10    # "length":I
     .end local v11    # "mountService":Landroid/os/storage/IMountService;
@@ -9743,21 +8797,17 @@
     :catch_0
     move-exception v8
 
-    .line 3433
     .local v8, "e":Ljava/lang/Exception;
     invoke-virtual {v8}, Ljava/lang/Exception;->printStackTrace()V
 
-    .line 3434
     const/4 v12, 0x0
 
-    .line 3436
     .end local v8    # "e":Ljava/lang/Exception;
     :cond_2
     invoke-static/range {v20 .. v21}, Landroid/os/Binder;->restoreCallingIdentity(J)V
 
     move v2, v12
 
-    .line 3437
     goto :goto_0
 .end method
 
@@ -9767,19 +8817,15 @@
     .param p2, "allow"    # Z
 
     .prologue
-    .line 3046
     invoke-direct/range {p0 .. p1}, Lcom/android/server/enterprise/restriction/RestrictionPolicy;->enforceOwnerOnlyAndRestrictionPermission(Landroid/app/enterprise/ContextInfo;)Landroid/app/enterprise/ContextInfo;
 
     move-result-object p1
 
-    .line 3047
     const/16 v16, 0x1
 
-    .line 3048
     .local v16, "ret":Z
     const-wide/16 v18, 0x0
 
-    .line 3050
     .local v18, "token":J
     move-object/from16 v0, p0
 
@@ -9801,7 +8847,6 @@
 
     and-int v16, v16, v2
 
-    .line 3054
     const-string v3, "allowMobileDataLimit"
 
     const-wide/32 v4, 0x10000
@@ -9814,18 +8859,15 @@
 
     invoke-direct/range {v2 .. v7}, Lcom/android/server/enterprise/restriction/RestrictionPolicy;->updateRestrictionCache(Ljava/lang/String;JZI)V
 
-    .line 3060
     if-nez p2, :cond_2
 
     if-eqz v16, :cond_2
 
-    .line 3063
     :try_start_0
     invoke-static {}, Landroid/os/Binder;->clearCallingIdentity()J
 
     move-result-wide v18
 
-    .line 3064
     const-string v2, "netpolicy"
 
     invoke-static {v2}, Landroid/os/ServiceManager;->getService(Ljava/lang/String;)Landroid/os/IBinder;
@@ -9836,19 +8878,16 @@
 
     move-result-object v13
 
-    .line 3068
     .local v13, "networkPolicyService":Landroid/net/INetworkPolicyManager;
     new-instance v12, Ljava/util/ArrayList;
 
     invoke-direct {v12}, Ljava/util/ArrayList;-><init>()V
 
-    .line 3070
     .local v12, "networkPolicies":Ljava/util/ArrayList;, "Ljava/util/ArrayList<Landroid/net/NetworkPolicy;>;"
     invoke-interface {v13}, Landroid/net/INetworkPolicyManager;->getNetworkPolicies()[Landroid/net/NetworkPolicy;
 
     move-result-object v14
 
-    .line 3073
     .local v14, "policies":[Landroid/net/NetworkPolicy;
     if-eqz v14, :cond_0
 
@@ -9856,7 +8895,6 @@
 
     if-lez v2, :cond_0
 
-    .line 3074
     move-object v8, v14
 
     .local v8, "arr$":[Landroid/net/NetworkPolicy;
@@ -9871,21 +8909,17 @@
 
     aget-object v15, v8, v10
 
-    .line 3075
     .local v15, "policy":Landroid/net/NetworkPolicy;
     const-wide/16 v2, -0x1
 
     iput-wide v2, v15, Landroid/net/NetworkPolicy;->limitBytes:J
 
-    .line 3076
     invoke-virtual {v12, v15}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 3074
     add-int/lit8 v10, v10, 0x1
 
     goto :goto_0
 
-    .line 3080
     .end local v8    # "arr$":[Landroid/net/NetworkPolicy;
     .end local v10    # "i$":I
     .end local v11    # "len$":I
@@ -9897,7 +8931,6 @@
 
     if-lez v2, :cond_1
 
-    .line 3081
     invoke-virtual {v12}, Ljava/util/ArrayList;->size()I
 
     move-result v2
@@ -9912,13 +8945,11 @@
 
     invoke-interface {v13, v2}, Landroid/net/INetworkPolicyManager;->setNetworkPolicies([Landroid/net/NetworkPolicy;)V
 
-    .line 3086
     :cond_1
     invoke-static/range {v18 .. v19}, Landroid/os/Binder;->restoreCallingIdentity(J)V
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 3093
     .end local v12    # "networkPolicies":Ljava/util/ArrayList;, "Ljava/util/ArrayList<Landroid/net/NetworkPolicy;>;"
     .end local v13    # "networkPolicyService":Landroid/net/INetworkPolicyManager;
     .end local v14    # "policies":[Landroid/net/NetworkPolicy;
@@ -9926,15 +8957,12 @@
     :goto_1
     return v16
 
-    .line 3087
     :catch_0
     move-exception v9
 
-    .line 3088
     .local v9, "e":Ljava/lang/Exception;
     invoke-virtual {v9}, Ljava/lang/Exception;->printStackTrace()V
 
-    .line 3089
     const-string v2, "RestrictionPolicy"
 
     new-instance v3, Ljava/lang/StringBuilder;
@@ -9961,7 +8989,6 @@
 
     invoke-static {v2, v3}, Landroid/util/Slog;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 3090
     const/16 v16, 0x0
 
     goto :goto_1
@@ -9973,12 +9000,10 @@
     .param p2, "enabled"    # Z
 
     .prologue
-    .line 2863
     invoke-direct {p0, p1}, Lcom/android/server/enterprise/restriction/RestrictionPolicy;->enforceHwPermission(Landroid/app/enterprise/ContextInfo;)Landroid/app/enterprise/ContextInfo;
 
     move-result-object p1
 
-    .line 2864
     iget-object v0, p0, Lcom/android/server/enterprise/restriction/RestrictionPolicy;->mEdmStorageProvider:Lcom/android/server/enterprise/storage/EdmStorageProvider;
 
     iget v1, p1, Landroid/app/enterprise/ContextInfo;->mCallerUid:I
@@ -9991,7 +9016,6 @@
 
     move-result v6
 
-    .line 2867
     .local v6, "result":Z
     const-string v0, "RestrictionPolicy"
 
@@ -10015,7 +9039,6 @@
 
     invoke-static {v0, v1}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 2868
     const-string v1, "allowVideoRecording"
 
     const-wide/16 v2, 0x2
@@ -10032,7 +9055,6 @@
 
     invoke-direct/range {v0 .. v5}, Lcom/android/server/enterprise/restriction/RestrictionPolicy;->updateRestrictionCache(Ljava/lang/String;JZI)V
 
-    .line 2874
     return v6
 .end method
 
@@ -10042,15 +9064,12 @@
     .param p2, "allow"    # Z
 
     .prologue
-    .line 2240
     invoke-direct {p0, p1}, Lcom/android/server/enterprise/restriction/RestrictionPolicy;->enforceOwnerOnlyAndRestrictionPermission(Landroid/app/enterprise/ContextInfo;)Landroid/app/enterprise/ContextInfo;
 
     move-result-object p1
 
-    .line 2241
     const/4 v6, 0x0
 
-    .line 2243
     .local v6, "ret":Z
     iget-object v0, p0, Lcom/android/server/enterprise/restriction/RestrictionPolicy;->mEdmStorageProvider:Lcom/android/server/enterprise/storage/EdmStorageProvider;
 
@@ -10064,7 +9083,6 @@
 
     move-result v6
 
-    .line 2246
     const-string v1, "nativeVpnAllowed"
 
     const-wide/high16 v2, 0x20000000000000L
@@ -10077,17 +9095,14 @@
 
     invoke-direct/range {v0 .. v5}, Lcom/android/server/enterprise/restriction/RestrictionPolicy;->updateRestrictionCache(Ljava/lang/String;JZI)V
 
-    .line 2252
     if-eqz v6, :cond_0
 
     if-nez p2, :cond_0
 
-    .line 2253
     iget-object v0, p0, Lcom/android/server/enterprise/restriction/RestrictionPolicy;->mVpnPolicy:Lcom/android/server/enterprise/vpn/VpnInfoPolicy;
 
     invoke-virtual {v0}, Lcom/android/server/enterprise/vpn/VpnInfoPolicy;->disconnectActiveVpnConnections()V
 
-    .line 2255
     :cond_0
     const-string v0, "RestrictionPolicy"
 
@@ -10105,7 +9120,7 @@
 
     move-result-object v1
 
-    const-string/jumbo v2, "ret:"
+    const-string v2, "ret:"
 
     invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -10121,7 +9136,6 @@
 
     invoke-static {v0, v1}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 2256
     return v6
 .end method
 
@@ -10131,30 +9145,26 @@
     .param p2, "allow"    # Z
 
     .prologue
-    .line 2685
     const/4 v6, 0x1
 
-    .line 2686
     .local v6, "ret":Z
     invoke-direct {p0, p1}, Lcom/android/server/enterprise/restriction/RestrictionPolicy;->enforceRestrictionPermission(Landroid/app/enterprise/ContextInfo;)Landroid/app/enterprise/ContextInfo;
 
     move-result-object p1
 
-    .line 2687
     iget-object v0, p0, Lcom/android/server/enterprise/restriction/RestrictionPolicy;->mEdmStorageProvider:Lcom/android/server/enterprise/storage/EdmStorageProvider;
 
     iget v1, p1, Landroid/app/enterprise/ContextInfo;->mCallerUid:I
 
     const-string v2, "RESTRICTION"
 
-    const-string/jumbo v3, "wallpaperEnabled"
+    const-string v3, "wallpaperEnabled"
 
     invoke-virtual {v0, v1, v2, v3, p2}, Lcom/android/server/enterprise/storage/EdmStorageProvider;->putBoolean(ILjava/lang/String;Ljava/lang/String;Z)Z
 
     move-result v6
 
-    .line 2690
-    const-string/jumbo v1, "wallpaperEnabled"
+    const-string v1, "wallpaperEnabled"
 
     const-wide v2, 0x400000000L
 
@@ -10170,7 +9180,6 @@
 
     invoke-direct/range {v0 .. v5}, Lcom/android/server/enterprise/restriction/RestrictionPolicy;->updateRestrictionCache(Ljava/lang/String;JZI)V
 
-    .line 2696
     const-string v0, "RestrictionPolicy"
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -10193,7 +9202,6 @@
 
     invoke-static {v0, v1}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 2697
     return v6
 .end method
 
@@ -10203,15 +9211,12 @@
     .param p2, "allow"    # Z
 
     .prologue
-    .line 2927
     invoke-direct {p0, p1}, Lcom/android/server/enterprise/restriction/RestrictionPolicy;->enforceOwnerOnlyAndRestrictionPermission(Landroid/app/enterprise/ContextInfo;)Landroid/app/enterprise/ContextInfo;
 
     move-result-object p1
 
-    .line 2928
     const/4 v7, 0x1
 
-    .line 2929
     .local v7, "ret":Z
     iget-object v0, p0, Lcom/android/server/enterprise/restriction/RestrictionPolicy;->mEdmStorageProvider:Lcom/android/server/enterprise/storage/EdmStorageProvider;
 
@@ -10227,7 +9232,6 @@
 
     and-int/2addr v7, v0
 
-    .line 2932
     const-string v1, "allowWifiDirect"
 
     const-wide/16 v2, 0x2000
@@ -10240,25 +9244,21 @@
 
     invoke-direct/range {v0 .. v5}, Lcom/android/server/enterprise/restriction/RestrictionPolicy;->updateRestrictionCache(Ljava/lang/String;JZI)V
 
-    .line 2938
     if-eqz v7, :cond_0
 
     if-nez p2, :cond_0
 
-    .line 2939
     new-instance v6, Landroid/content/Intent;
 
     const-string v0, "com.android.server.enterprise.WFD_DISABLE"
 
     invoke-direct {v6, v0}, Landroid/content/Intent;-><init>(Ljava/lang/String;)V
 
-    .line 2940
     .local v6, "intent":Landroid/content/Intent;
     iget-object v0, p0, Lcom/android/server/enterprise/restriction/RestrictionPolicy;->mContext:Landroid/content/Context;
 
     invoke-virtual {v0, v6}, Landroid/content/Context;->sendBroadcast(Landroid/content/Intent;)V
 
-    .line 2942
     .end local v6    # "intent":Landroid/content/Intent;
     :cond_0
     const-string v0, "RestrictionPolicy"
@@ -10283,7 +9283,6 @@
 
     invoke-static {v0, v1}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 2943
     return v7
 .end method
 
@@ -10291,7 +9290,6 @@
     .locals 24
 
     .prologue
-    .line 2008
     :try_start_0
     const-string v20, "RestrictionPolicy"
 
@@ -10299,7 +9297,6 @@
 
     invoke-static/range {v20 .. v21}, Lcom/android/server/enterprise/log/Log;->w(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 2011
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/android/server/enterprise/restriction/RestrictionPolicy;->mContext:Landroid/content/Context;
@@ -10316,7 +9313,6 @@
 
     invoke-static/range {v20 .. v22}, Landroid/provider/Settings$Secure;->putInt(Landroid/content/ContentResolver;Ljava/lang/String;I)Z
 
-    .line 2015
     const-string v20, "netpolicy"
 
     invoke-static/range {v20 .. v20}, Landroid/os/ServiceManager;->getService(Ljava/lang/String;)Landroid/os/IBinder;
@@ -10327,7 +9323,6 @@
 
     move-result-object v16
 
-    .line 2018
     .local v16, "networkPolicyService":Landroid/net/INetworkPolicyManager;
     const/16 v20, 0x1
 
@@ -10337,34 +9332,27 @@
 
     invoke-interface {v0, v1}, Landroid/net/INetworkPolicyManager;->setRestrictBackground(Z)V
 
-    .line 2021
     const-wide/16 v6, 0x400
 
-    .line 2022
     .local v6, "KB_IN_BYTES":J
     const-wide/32 v10, 0x100000
 
-    .line 2023
     .local v10, "MB_IN_BYTES":J
     const-wide/32 v4, 0x40000000
 
-    .line 2024
     .local v4, "GB_IN_BYTES":J
     const-wide/16 v8, 0x64
 
-    .line 2026
     .local v8, "MAXIMUM_SETABLE_GB_VALUE":J
     new-instance v19, Ljava/util/ArrayList;
 
     invoke-direct/range {v19 .. v19}, Ljava/util/ArrayList;-><init>()V
 
-    .line 2028
     .local v19, "setPolicies":Ljava/util/ArrayList;, "Ljava/util/ArrayList<Landroid/net/NetworkPolicy;>;"
     invoke-interface/range {v16 .. v16}, Landroid/net/INetworkPolicyManager;->getNetworkPolicies()[Landroid/net/NetworkPolicy;
 
     move-result-object v17
 
-    .line 2030
     .local v17, "policies":[Landroid/net/NetworkPolicy;
     if-eqz v17, :cond_3
 
@@ -10376,7 +9364,6 @@
 
     if-lez v20, :cond_3
 
-    .line 2031
     move-object/from16 v12, v17
 
     .local v12, "arr$":[Landroid/net/NetworkPolicy;
@@ -10391,7 +9378,6 @@
 
     aget-object v18, v12, v14
 
-    .line 2032
     .local v18, "policy":Landroid/net/NetworkPolicy;
     move-object/from16 v0, v18
 
@@ -10405,20 +9391,17 @@
 
     packed-switch v20, :pswitch_data_0
 
-    .line 2056
     move-object/from16 v0, v19
 
     move-object/from16 v1, v18
 
     invoke-virtual {v0, v1}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 2031
     :goto_1
     add-int/lit8 v14, v14, 0x1
 
     goto :goto_0
 
-    .line 2034
     :pswitch_0
     move-object/from16 v0, v18
 
@@ -10432,7 +9415,6 @@
 
     if-nez v20, :cond_0
 
-    .line 2035
     const-wide v20, 0x1900000000L
 
     move-wide/from16 v0, v20
@@ -10441,7 +9423,6 @@
 
     iput-wide v0, v2, Landroid/net/NetworkPolicy;->limitBytes:J
 
-    .line 2037
     :cond_0
     move-object/from16 v0, v19
 
@@ -10453,7 +9434,6 @@
 
     goto :goto_1
 
-    .line 2067
     .end local v4    # "GB_IN_BYTES":J
     .end local v6    # "KB_IN_BYTES":J
     .end local v8    # "MAXIMUM_SETABLE_GB_VALUE":J
@@ -10468,7 +9448,6 @@
     :catch_0
     move-exception v13
 
-    .line 2068
     .local v13, "e":Ljava/lang/Exception;
     const-string v20, "RestrictionPolicy"
 
@@ -10476,7 +9455,7 @@
 
     invoke-direct/range {v21 .. v21}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v22, "setBackgroundData EX: "
+    const-string v22, "setBackgroundData EX: "
 
     invoke-virtual/range {v21 .. v22}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -10494,12 +9473,10 @@
 
     invoke-static/range {v20 .. v21}, Landroid/util/Slog;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 2071
     .end local v13    # "e":Ljava/lang/Exception;
     :goto_2
     return-void
 
-    .line 2041
     .restart local v4    # "GB_IN_BYTES":J
     .restart local v6    # "KB_IN_BYTES":J
     .restart local v8    # "MAXIMUM_SETABLE_GB_VALUE":J
@@ -10525,7 +9502,6 @@
 
     if-nez v20, :cond_1
 
-    .line 2042
     const-wide v20, 0x1900000000L
 
     move-wide/from16 v0, v20
@@ -10534,7 +9510,6 @@
 
     iput-wide v0, v2, Landroid/net/NetworkPolicy;->limitBytes:J
 
-    .line 2044
     :cond_1
     move-object/from16 v0, v19
 
@@ -10544,7 +9519,6 @@
 
     goto :goto_1
 
-    .line 2048
     :pswitch_2
     move-object/from16 v0, v18
 
@@ -10558,7 +9532,6 @@
 
     if-nez v20, :cond_2
 
-    .line 2049
     const-wide v20, 0x1900000000L
 
     move-wide/from16 v0, v20
@@ -10567,7 +9540,6 @@
 
     iput-wide v0, v2, Landroid/net/NetworkPolicy;->limitBytes:J
 
-    .line 2051
     :cond_2
     move-object/from16 v0, v19
 
@@ -10577,7 +9549,6 @@
 
     goto :goto_1
 
-    .line 2062
     .end local v12    # "arr$":[Landroid/net/NetworkPolicy;
     .end local v14    # "i$":I
     .end local v15    # "len$":I
@@ -10589,7 +9560,6 @@
 
     if-lez v20, :cond_4
 
-    .line 2063
     invoke-virtual/range {v19 .. v19}, Ljava/util/ArrayList;->size()I
 
     move-result v20
@@ -10612,7 +9582,6 @@
 
     invoke-interface {v0, v1}, Landroid/net/INetworkPolicyManager;->setNetworkPolicies([Landroid/net/NetworkPolicy;)V
 
-    .line 2066
     :cond_4
     const-string v20, "RestrictionPolicy"
 
@@ -10624,7 +9593,6 @@
 
     goto :goto_2
 
-    .line 2032
     nop
 
     :pswitch_data_0
@@ -10641,29 +9609,24 @@
     .param p2, "packageName"    # Ljava/lang/String;
 
     .prologue
-    .line 4973
     invoke-direct {p0, p1}, Lcom/android/server/enterprise/restriction/RestrictionPolicy;->isNewAdminActivationEnabledInternal(I)Z
 
     move-result v0
 
     if-nez v0, :cond_0
 
-    .line 4974
     invoke-virtual {p0, p1, p2}, Lcom/android/server/enterprise/restriction/RestrictionPolicy;->checkPackageWhiteList(ILjava/lang/String;)Z
 
     move-result v0
 
     if-nez v0, :cond_0
 
-    .line 4975
     const v0, 0x1040b76
 
     invoke-static {v0}, Lcom/android/server/enterprise/RestrictionToastManager;->show(I)V
 
-    .line 4976
     const/4 v0, 0x0
 
-    .line 4979
     :goto_0
     return v0
 
@@ -10679,21 +9642,17 @@
     .param p2, "installerPackageName"    # Ljava/lang/String;
 
     .prologue
-    .line 4997
     if-eqz p2, :cond_0
 
-    .line 4998
     invoke-direct {p0, p1}, Lcom/android/server/enterprise/restriction/RestrictionPolicy;->getUidForAdminInstallation(I)I
 
     move-result v1
 
-    .line 4999
     .local v1, "uid":I
     invoke-direct {p0, v1}, Lcom/android/server/enterprise/restriction/RestrictionPolicy;->getPackageNameForUid(I)Ljava/lang/String;
 
     move-result-object v0
 
-    .line 5000
     .local v0, "packageName":Ljava/lang/String;
     if-eqz v0, :cond_0
 
@@ -10703,22 +9662,18 @@
 
     if-eqz v2, :cond_0
 
-    .line 5001
     const/4 v2, 0x1
 
-    .line 5005
     .end local v0    # "packageName":Ljava/lang/String;
     .end local v1    # "uid":I
     :goto_0
     return v2
 
-    .line 5004
     :cond_0
     const v2, 0x1040b77
 
     invoke-static {v2}, Lcom/android/server/enterprise/RestrictionToastManager;->show(I)V
 
-    .line 5005
     const/4 v2, 0x0
 
     goto :goto_0
@@ -10730,24 +9685,21 @@
     .param p2, "packageName"    # Ljava/lang/String;
 
     .prologue
-    .line 4984
     invoke-direct {p0, p1}, Lcom/android/server/enterprise/restriction/RestrictionPolicy;->getUidForAdminActivation(I)I
 
     move-result v0
 
-    .line 4986
     .local v0, "uid":I
     iget-object v2, p0, Lcom/android/server/enterprise/restriction/RestrictionPolicy;->mEdmStorageProvider:Lcom/android/server/enterprise/storage/EdmStorageProvider;
 
     const-string v3, "RESTRICTION"
 
-    const-string/jumbo v4, "preventAdminActivationWhiteList"
+    const-string v4, "preventAdminActivationWhiteList"
 
     invoke-virtual {v2, v0, v3, v4}, Lcom/android/server/enterprise/storage/EdmStorageProvider;->getString(ILjava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v1
 
-    .line 4989
     .local v1, "whiteList":Ljava/lang/String;
     if-eqz v1, :cond_0
 
@@ -10757,10 +9709,8 @@
 
     if-eqz v2, :cond_0
 
-    .line 4990
     const/4 v2, 0x1
 
-    .line 4992
     :goto_0
     return v2
 
@@ -10775,7 +9725,6 @@
     .param p1, "cxtInfo"    # Landroid/app/enterprise/ContextInfo;
 
     .prologue
-    .line 4944
     const/4 v0, 0x0
 
     invoke-virtual {p0, p1, v0}, Lcom/android/server/enterprise/restriction/RestrictionPolicy;->addNewAdminActivationAppWhiteList(Landroid/app/enterprise/ContextInfo;Ljava/util/List;)Z
@@ -10793,12 +9742,10 @@
     .prologue
     const/4 v4, 0x0
 
-    .line 4672
     invoke-direct {p0, p1}, Lcom/android/server/enterprise/restriction/RestrictionPolicy;->enforceOwnerOnlyAndAdvancedRestrictionPermission(Landroid/app/enterprise/ContextInfo;)Landroid/app/enterprise/ContextInfo;
 
     move-result-object p1
 
-    .line 4673
     const-string v0, "RestrictionPolicy"
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -10821,10 +9768,8 @@
 
     invoke-static {v0, v1}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 4675
     const/4 v7, 0x0
 
-    .line 4676
     .local v7, "ret":Z
     iget-object v0, p0, Lcom/android/server/enterprise/restriction/RestrictionPolicy;->mContext:Landroid/content/Context;
 
@@ -10836,7 +9781,6 @@
 
     check-cast v6, Landroid/app/admin/DevicePolicyManager;
 
-    .line 4677
     .local v6, "dpm":Landroid/app/admin/DevicePolicyManager;
     const/4 v0, 0x0
 
@@ -10846,7 +9790,6 @@
 
     if-nez v0, :cond_0
 
-    .line 4678
     const-string v0, "RestrictionPolicy"
 
     const-string v1, "This device doesn\'t support TrustZone for ODE!"
@@ -10855,13 +9798,11 @@
 
     move v8, v7
 
-    .line 4691
     .end local v7    # "ret":Z
     .local v8, "ret":I
     :goto_0
     return v8
 
-    .line 4682
     .end local v8    # "ret":I
     .restart local v7    # "ret":Z
     :cond_0
@@ -10877,7 +9818,6 @@
 
     move-result v7
 
-    .line 4685
     const-string v1, "ODETrustedBootVerification"
 
     const-wide v2, 0x80000000L
@@ -10890,7 +9830,6 @@
 
     move v8, v7
 
-    .line 4691
     .restart local v8    # "ret":I
     goto :goto_0
 .end method
@@ -10902,10 +9841,8 @@
     .prologue
     const/4 v4, 0x0
 
-    .line 5171
     const/4 v0, -0x1
 
-    .line 5172
     .local v0, "ret":I
     const-wide/32 v2, 0x40000000
 
@@ -10913,7 +9850,6 @@
 
     move-result v1
 
-    .line 5175
     .local v1, "ret1":Z
     invoke-virtual {p0, p1, v4}, Lcom/android/server/enterprise/restriction/RestrictionPolicy;->isCCModeSupported(Landroid/app/enterprise/ContextInfo;Z)Z
 
@@ -10921,12 +9857,10 @@
 
     if-eqz v2, :cond_0
 
-    .line 5176
     invoke-static {}, Lcom/samsung/android/security/CCManager;->updateMdfStatus()I
 
     move-result v0
 
-    .line 5178
     :cond_0
     const-string v2, "RestrictionPolicy"
 
@@ -10960,7 +9894,6 @@
 
     invoke-static {v2, v3}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 5179
     return v0
 .end method
 
@@ -10980,17 +9913,14 @@
     .end annotation
 
     .prologue
-    .line 4947
     invoke-direct {p0, p1}, Lcom/android/server/enterprise/restriction/RestrictionPolicy;->enforceAdvancedRestrictionPermission(Landroid/app/enterprise/ContextInfo;)Landroid/app/enterprise/ContextInfo;
 
     move-result-object p1
 
-    .line 4949
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
-    .line 4950
     .local v0, "whiteList":Ljava/util/ArrayList;, "Ljava/util/ArrayList<Ljava/lang/String;>;"
     iget-object v2, p0, Lcom/android/server/enterprise/restriction/RestrictionPolicy;->mEdmStorageProvider:Lcom/android/server/enterprise/storage/EdmStorageProvider;
 
@@ -10998,13 +9928,12 @@
 
     const-string v4, "RESTRICTION"
 
-    const-string/jumbo v5, "preventAdminActivationWhiteList"
+    const-string v5, "preventAdminActivationWhiteList"
 
     invoke-virtual {v2, v3, v4, v5}, Lcom/android/server/enterprise/storage/EdmStorageProvider;->getString(ILjava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v1
 
-    .line 4952
     .local v1, "whiteListApps":Ljava/lang/String;
     invoke-static {v1}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
 
@@ -11012,16 +9941,13 @@
 
     if-eqz v2, :cond_0
 
-    .line 4953
     const-string v2, ""
 
     invoke-virtual {v0, v2}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 4957
     :goto_0
     return-object v0
 
-    .line 4955
     :cond_0
     const-string v2, ","
 
@@ -11042,7 +9968,6 @@
     .locals 1
 
     .prologue
-    .line 1747
     invoke-static {}, Landroid/os/Environment;->getExternalStorageState()Ljava/lang/String;
 
     move-result-object v0
@@ -11054,15 +9979,13 @@
     .locals 2
 
     .prologue
-    .line 2362
     iget-object v0, p0, Lcom/android/server/enterprise/restriction/RestrictionPolicy;->mStorageManager:Landroid/os/storage/StorageManager;
 
     if-nez v0, :cond_0
 
-    .line 2363
     iget-object v0, p0, Lcom/android/server/enterprise/restriction/RestrictionPolicy;->mContext:Landroid/content/Context;
 
-    const-string/jumbo v1, "storage"
+    const-string v1, "storage"
 
     invoke-virtual {v0, v1}, Landroid/content/Context;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
 
@@ -11072,7 +9995,6 @@
 
     iput-object v0, p0, Lcom/android/server/enterprise/restriction/RestrictionPolicy;->mStorageManager:Landroid/os/storage/StorageManager;
 
-    .line 2364
     :cond_0
     iget-object v0, p0, Lcom/android/server/enterprise/restriction/RestrictionPolicy;->mStorageManager:Landroid/os/storage/StorageManager;
 
@@ -11083,7 +10005,6 @@
     .locals 1
 
     .prologue
-    .line 2368
     iget-object v0, p0, Lcom/android/server/enterprise/restriction/RestrictionPolicy;->mContext:Landroid/content/Context;
 
     invoke-static {v0}, Lcom/android/server/enterprise/adapterlayer/StorageManagerAdapter;->getInstance(Landroid/content/Context;)Lcom/android/server/enterprise/adapterlayer/StorageManagerAdapter;
@@ -11099,7 +10020,6 @@
     .param p2, "showMsg"    # Z
 
     .prologue
-    .line 4437
     const-wide/32 v2, 0x8000000
 
     const/4 v1, 0x1
@@ -11110,18 +10030,15 @@
 
     move-result v0
 
-    .line 4441
     .local v0, "ret":Z
     if-eqz p2, :cond_0
 
     if-nez v0, :cond_0
 
-    .line 4442
     const v1, 0x1040b6e
 
     invoke-static {v1}, Lcom/android/server/enterprise/RestrictionToastManager;->show(I)V
 
-    .line 4445
     :cond_0
     const-string v1, "RestrictionPolicy"
 
@@ -11145,7 +10062,6 @@
 
     invoke-static {v1, v2}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 4446
     return v0
 .end method
 
@@ -11155,22 +10071,18 @@
     .param p2, "userId"    # I
 
     .prologue
-    .line 4916
     const/4 v0, 0x0
 
-    .line 4917
     .local v0, "adminsList":Ljava/util/List;, "Ljava/util/List<Landroid/app/enterprise/EnterpriseDeviceAdminInfo;>;"
     invoke-static {}, Landroid/os/Binder;->clearCallingIdentity()J
 
     move-result-wide v6
 
-    .line 4918
     .local v6, "token":J
     invoke-direct {p0, p1}, Lcom/android/server/enterprise/restriction/RestrictionPolicy;->getPackageNameForUid(I)Ljava/lang/String;
 
     move-result-object v4
 
-    .line 4920
     .local v4, "pkgName":Ljava/lang/String;
     :try_start_0
     invoke-direct {p0}, Lcom/android/server/enterprise/restriction/RestrictionPolicy;->getService()Landroid/app/enterprise/IEnterpriseDeviceManager;
@@ -11179,14 +10091,12 @@
 
     if-eqz v5, :cond_1
 
-    .line 4921
     iget-object v5, p0, Lcom/android/server/enterprise/restriction/RestrictionPolicy;->mEdmService:Landroid/app/enterprise/IEnterpriseDeviceManager;
 
     invoke-interface {v5, p2}, Landroid/app/enterprise/IEnterpriseDeviceManager;->getActiveAdminsInfo(I)Ljava/util/List;
 
     move-result-object v0
 
-    .line 4923
     invoke-interface {v0}, Ljava/util/List;->iterator()Ljava/util/Iterator;
 
     move-result-object v2
@@ -11205,7 +10115,6 @@
 
     check-cast v3, Landroid/app/enterprise/EnterpriseDeviceAdminInfo;
 
-    .line 4924
     .local v3, "info":Landroid/app/enterprise/EnterpriseDeviceAdminInfo;
     const-string v5, "RestrictionPolicy"
 
@@ -11233,7 +10142,6 @@
 
     invoke-static {v5, v8}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 4926
     invoke-virtual {v3}, Landroid/app/enterprise/EnterpriseDeviceAdminInfo;->getPackageName()Ljava/lang/String;
 
     move-result-object v5
@@ -11263,33 +10171,26 @@
 
     if-nez v5, :cond_0
 
-    .line 4929
     const/4 v5, 0x0
 
-    .line 4937
     invoke-static {v6, v7}, Landroid/os/Binder;->restoreCallingIdentity(J)V
 
-    .line 4940
     .end local v2    # "i$":Ljava/util/Iterator;
     .end local v3    # "info":Landroid/app/enterprise/EnterpriseDeviceAdminInfo;
     :goto_0
     return v5
 
-    .line 4937
     :cond_1
     invoke-static {v6, v7}, Landroid/os/Binder;->restoreCallingIdentity(J)V
 
-    .line 4940
     :goto_1
     const/4 v5, 0x1
 
     goto :goto_0
 
-    .line 4934
     :catch_0
     move-exception v1
 
-    .line 4935
     .local v1, "e":Ljava/lang/Exception;
     :try_start_1
     const-string v5, "RestrictionPolicy"
@@ -11300,7 +10201,6 @@
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
-    .line 4937
     invoke-static {v6, v7}, Landroid/os/Binder;->restoreCallingIdentity(J)V
 
     goto :goto_1
@@ -11319,7 +10219,6 @@
     .param p1, "showMsg"    # Z
 
     .prologue
-    .line 4301
     const-wide/16 v2, 0x80
 
     const/4 v1, 0x1
@@ -11330,18 +10229,15 @@
 
     move-result v0
 
-    .line 4305
     .local v0, "ret":Z
     if-eqz p1, :cond_0
 
     if-nez v0, :cond_0
 
-    .line 4306
     const v1, 0x1040b2f
 
     invoke-static {v1}, Lcom/android/server/enterprise/RestrictionToastManager;->show(I)V
 
-    .line 4309
     :cond_0
     const-string v1, "RestrictionPolicy"
 
@@ -11365,7 +10261,6 @@
 
     invoke-static {v1, v2}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 4310
     return v0
 .end method
 
@@ -11375,7 +10270,6 @@
     .param p2, "showMsg"    # Z
 
     .prologue
-    .line 3374
     const-wide/32 v2, 0x40000
 
     const/4 v1, 0x1
@@ -11386,18 +10280,15 @@
 
     move-result v0
 
-    .line 3378
     .local v0, "ret":Z
     if-eqz p2, :cond_0
 
     if-nez v0, :cond_0
 
-    .line 3379
     const v1, 0x1040b19
 
     invoke-static {v1}, Lcom/android/server/enterprise/RestrictionToastManager;->show(I)V
 
-    .line 3382
     :cond_0
     const-string v1, "RestrictionPolicy"
 
@@ -11421,7 +10312,6 @@
 
     invoke-static {v1, v2}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 3383
     return v0
 .end method
 
@@ -11431,12 +10321,10 @@
     .param p2, "showMsg"    # Z
 
     .prologue
-    .line 2845
     invoke-static {p1}, Lcom/android/server/enterprise/EnterpriseDeviceManagerService;->getCallingOrCurrentUserId(Landroid/app/enterprise/ContextInfo;)I
 
     move-result v1
 
-    .line 2846
     .local v1, "userId":I
     const-wide/16 v2, 0x1
 
@@ -11446,7 +10334,6 @@
 
     move-result v0
 
-    .line 2851
     .local v0, "ret":Z
     const-string v2, "RestrictionPolicy"
 
@@ -11454,7 +10341,7 @@
 
     invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v4, "userId: "
+    const-string v4, "userId: "
 
     invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -11480,17 +10367,14 @@
 
     invoke-static {v2, v3}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 2854
     if-eqz p2, :cond_0
 
     if-nez v0, :cond_0
 
-    .line 2855
     const v2, 0x1040b14
 
     invoke-static {v2}, Lcom/android/server/enterprise/RestrictionToastManager;->show(I)V
 
-    .line 2859
     :cond_0
     return v0
 .end method
@@ -11500,7 +10384,6 @@
     .param p1, "cxtInfo"    # Landroid/app/enterprise/ContextInfo;
 
     .prologue
-    .line 2080
     const-wide/high16 v2, 0x4000000000000L
 
     const/4 v1, 0x1
@@ -11511,7 +10394,6 @@
 
     move-result v0
 
-    .line 2083
     .local v0, "ret":Z
     const-string v1, "RestrictionPolicy"
 
@@ -11535,7 +10417,6 @@
 
     invoke-static {v1, v2}, Landroid/util/Slog;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 2084
     return v0
 .end method
 
@@ -11544,7 +10425,6 @@
     .param p1, "cxtInfo"    # Landroid/app/enterprise/ContextInfo;
 
     .prologue
-    .line 2987
     const-wide/16 v2, 0x4000
 
     const/4 v1, 0x1
@@ -11555,7 +10435,6 @@
 
     move-result v0
 
-    .line 2991
     .local v0, "ret":Z
     const-string v1, "RestrictionPolicy"
 
@@ -11579,7 +10458,6 @@
 
     invoke-static {v1, v2}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 2993
     return v0
 .end method
 
@@ -11589,7 +10467,6 @@
     .param p2, "showMsg"    # Z
 
     .prologue
-    .line 1470
     const-wide v2, 0x100000000000L
 
     const/4 v1, 0x1
@@ -11600,18 +10477,15 @@
 
     move-result v0
 
-    .line 1473
     .local v0, "ret":Z
     if-eqz p2, :cond_0
 
     if-nez v0, :cond_0
 
-    .line 1474
     const v1, 0x1040b63
 
     invoke-static {v1}, Lcom/android/server/enterprise/RestrictionToastManager;->show(I)V
 
-    .line 1476
     :cond_0
     const-string v1, "RestrictionPolicy"
 
@@ -11635,7 +10509,6 @@
 
     invoke-static {v1, v2}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1477
     return v0
 .end method
 
@@ -11644,7 +10517,6 @@
     .param p1, "cxtInfo"    # Landroid/app/enterprise/ContextInfo;
 
     .prologue
-    .line 1158
     const-wide v2, 0x8000000000L
 
     const/4 v1, 0x1
@@ -11655,7 +10527,6 @@
 
     move-result v0
 
-    .line 1162
     .local v0, "ret":Z
     if-eqz v0, :cond_0
 
@@ -11671,10 +10542,8 @@
 
     if-eqz v1, :cond_0
 
-    .line 1163
     const/4 v0, 0x0
 
-    .line 1166
     :cond_0
     const-string v1, "RestrictionPolicy"
 
@@ -11698,7 +10567,6 @@
 
     invoke-static {v1, v2}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1167
     return v0
 .end method
 
@@ -11710,18 +10578,15 @@
     .prologue
     const/4 v4, 0x0
 
-    .line 4635
     const-wide/32 v2, 0x40000000
 
     invoke-direct {p0, v2, v3, v4, v4}, Lcom/android/server/enterprise/restriction/RestrictionPolicy;->extractFromRestrictionCache(JZI)Z
 
     move-result v1
 
-    .line 4639
     .local v1, "ret1":Z
     const/4 v0, 0x0
 
-    .line 4641
     .local v0, "ret":Z
     invoke-static {}, Lcom/samsung/android/security/CCManager;->isMdfEnforced()Z
 
@@ -11729,10 +10594,8 @@
 
     if-eqz v2, :cond_0
 
-    .line 4642
     const/4 v0, 0x1
 
-    .line 4647
     :goto_0
     const-string v2, "RestrictionPolicy"
 
@@ -11746,7 +10609,7 @@
 
     move-result-object v3
 
-    const-string/jumbo v4, "security.mdpp"
+    const-string v4, "security.mdpp"
 
     invoke-static {v4}, Landroid/os/SystemProperties;->get(Ljava/lang/String;)Ljava/lang/String;
 
@@ -11782,10 +10645,8 @@
 
     invoke-static {v2, v3}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 4648
     return v0
 
-    .line 4644
     :cond_0
     const/4 v0, 0x0
 
@@ -11798,18 +10659,15 @@
     .param p2, "showMsg"    # Z
 
     .prologue
-    .line 4656
     const/4 v1, 0x0
 
-    .line 4657
     .local v1, "ret":Z
-    const-string/jumbo v2, "ro.security.mdpp.ux"
+    const-string v2, "ro.security.mdpp.ux"
 
     invoke-static {v2}, Landroid/os/SystemProperties;->get(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 
-    .line 4658
     .local v0, "proMDPP":Ljava/lang/String;
     if-eqz v0, :cond_0
 
@@ -11821,10 +10679,8 @@
 
     if-eqz v2, :cond_0
 
-    .line 4659
     const/4 v1, 0x1
 
-    .line 4661
     :cond_0
     const-string v2, "RestrictionPolicy"
 
@@ -11848,17 +10704,14 @@
 
     invoke-static {v2, v3}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 4662
     if-eqz p2, :cond_1
 
     if-nez v1, :cond_1
 
-    .line 4663
     const v2, 0x1040b78
 
     invoke-static {v2}, Lcom/android/server/enterprise/RestrictionToastManager;->show(I)V
 
-    .line 4665
     :cond_1
     return v1
 .end method
@@ -11869,29 +10722,24 @@
     .param p2, "showMsg"    # Z
 
     .prologue
-    .line 764
     invoke-static {p1}, Lcom/android/server/enterprise/EnterpriseDeviceManagerService;->getCallingOrCurrentUserId(Landroid/app/enterprise/ContextInfo;)I
 
     move-result v1
 
-    .line 765
     .local v1, "userId":I
     invoke-direct {p0, v1, p1}, Lcom/android/server/enterprise/restriction/RestrictionPolicy;->isCameraEnabledEx(ILandroid/app/enterprise/ContextInfo;)Z
 
     move-result v0
 
-    .line 767
     .local v0, "ret":Z
     if-eqz p2, :cond_0
 
     if-nez v0, :cond_0
 
-    .line 768
     const v2, 0x1040b5f
 
     invoke-static {v2}, Lcom/android/server/enterprise/RestrictionToastManager;->show(I)V
 
-    .line 771
     :cond_0
     const-string v2, "RestrictionPolicy"
 
@@ -11955,7 +10803,6 @@
 
     invoke-static {v2, v3}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 773
     return v0
 .end method
 
@@ -11964,7 +10811,6 @@
     .param p1, "cxtInfo"    # Landroid/app/enterprise/ContextInfo;
 
     .prologue
-    .line 1600
     const-wide v2, 0x400000000000L
 
     const/4 v1, 0x1
@@ -11975,7 +10821,6 @@
 
     move-result v0
 
-    .line 1603
     .local v0, "ret":Z
     const-string v1, "RestrictionPolicy"
 
@@ -11999,7 +10844,6 @@
 
     invoke-static {v1, v2}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1604
     return v0
 .end method
 
@@ -12009,12 +10853,10 @@
     .param p2, "showMsg"    # Z
 
     .prologue
-    .line 1795
     invoke-static {p1}, Lcom/android/server/enterprise/EnterpriseDeviceManagerService;->getCallingOrCurrentUserId(Landroid/app/enterprise/ContextInfo;)I
 
     move-result v0
 
-    .line 1796
     .local v0, "userId":I
     invoke-virtual {p0, p2, v0}, Lcom/android/server/enterprise/restriction/RestrictionPolicy;->isClipboardAllowedAsUser(ZI)Z
 
@@ -12031,29 +10873,24 @@
     .prologue
     const/4 v10, 0x1
 
-    .line 1800
     const-wide/16 v8, 0x200
 
     invoke-direct {p0, v8, v9, v10, p2}, Lcom/android/server/enterprise/restriction/RestrictionPolicy;->extractFromRestrictionCache(JZI)Z
 
     move-result v6
 
-    .line 1805
     .local v6, "ret":Z
     if-eqz v6, :cond_0
 
-    .line 1806
     invoke-static {}, Landroid/os/Binder;->getCallingUid()I
 
     move-result v2
 
-    .line 1808
     .local v2, "callerUid":I
     const/16 v7, 0x3e8
 
     if-eq v2, v7, :cond_2
 
-    .line 1809
     iget-object v7, p0, Lcom/android/server/enterprise/restriction/RestrictionPolicy;->mContext:Landroid/content/Context;
 
     invoke-virtual {v7}, Landroid/content/Context;->getPackageManager()Landroid/content/pm/PackageManager;
@@ -12064,7 +10901,6 @@
 
     move-result-object v1
 
-    .line 1818
     .local v1, "callerPackageName":Ljava/lang/String;
     :goto_0
     iget-object v7, p0, Lcom/android/server/enterprise/restriction/RestrictionPolicy;->mAppPolicy:Lcom/android/server/enterprise/application/ApplicationPolicy;
@@ -12073,7 +10909,6 @@
 
     move-result v6
 
-    .line 1821
     .end local v1    # "callerPackageName":Ljava/lang/String;
     .end local v2    # "callerUid":I
     :cond_0
@@ -12081,12 +10916,10 @@
 
     if-nez v6, :cond_1
 
-    .line 1822
     const v7, 0x1040b64
 
     invoke-static {v7}, Lcom/android/server/enterprise/RestrictionToastManager;->show(I)V
 
-    .line 1824
     :cond_1
     const-string v7, "RestrictionPolicy"
 
@@ -12110,17 +10943,14 @@
 
     invoke-static {v7, v8}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1825
     return v6
 
-    .line 1811
     .restart local v2    # "callerUid":I
     :cond_2
     invoke-static {}, Landroid/os/Binder;->clearCallingIdentity()J
 
     move-result-wide v4
 
-    .line 1813
     .local v4, "identity":J
     iget-object v7, p0, Lcom/android/server/enterprise/restriction/RestrictionPolicy;->mContext:Landroid/content/Context;
 
@@ -12132,7 +10962,6 @@
 
     check-cast v0, Landroid/app/ActivityManager;
 
-    .line 1814
     .local v0, "activityManager":Landroid/app/ActivityManager;
     invoke-virtual {v0, v10}, Landroid/app/ActivityManager;->getRunningTasks(I)Ljava/util/List;
 
@@ -12146,7 +10975,6 @@
 
     check-cast v3, Landroid/app/ActivityManager$RunningTaskInfo;
 
-    .line 1815
     .local v3, "foregroundTaskInfo":Landroid/app/ActivityManager$RunningTaskInfo;
     iget-object v7, v3, Landroid/app/ActivityManager$RunningTaskInfo;->topActivity:Landroid/content/ComponentName;
 
@@ -12154,7 +10982,6 @@
 
     move-result-object v1
 
-    .line 1816
     .restart local v1    # "callerPackageName":Ljava/lang/String;
     invoke-static {v4, v5}, Landroid/os/Binder;->restoreCallingIdentity(J)V
 
@@ -12166,12 +10993,10 @@
     .param p1, "cxtInfo"    # Landroid/app/enterprise/ContextInfo;
 
     .prologue
-    .line 3133
     invoke-static {p1}, Lcom/android/server/enterprise/EnterpriseDeviceManagerService;->getCallingOrCurrentUserId(Landroid/app/enterprise/ContextInfo;)I
 
     move-result v0
 
-    .line 3134
     .local v0, "userId":I
     invoke-virtual {p0, v0}, Lcom/android/server/enterprise/restriction/RestrictionPolicy;->isClipboardShareAllowedAsUser(I)Z
 
@@ -12185,10 +11010,8 @@
     .param p1, "userId"    # I
 
     .prologue
-    .line 3138
     const/4 v0, 0x1
 
-    .line 3140
     .local v0, "ret":Z
     const-wide/32 v2, 0x20000
 
@@ -12198,7 +11021,6 @@
 
     move-result v0
 
-    .line 3143
     const-string v1, "RestrictionPolicy"
 
     new-instance v2, Ljava/lang/StringBuilder;
@@ -12221,7 +11043,6 @@
 
     invoke-static {v1, v2}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 3144
     return v0
 .end method
 
@@ -12231,7 +11052,6 @@
     .param p2, "showMsg"    # Z
 
     .prologue
-    .line 4249
     const-wide/16 v2, 0x40
 
     const/4 v1, 0x1
@@ -12242,18 +11062,15 @@
 
     move-result v0
 
-    .line 4253
     .local v0, "ret":Z
     if-eqz p2, :cond_0
 
     if-nez v0, :cond_0
 
-    .line 4254
     const v1, 0x1040b6c
 
     invoke-static {v1}, Lcom/android/server/enterprise/RestrictionToastManager;->show(I)V
 
-    .line 4256
     :cond_0
     const-string v1, "RestrictionPolicy"
 
@@ -12277,7 +11094,6 @@
 
     invoke-static {v1, v2}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 4257
     return v0
 .end method
 
@@ -12286,18 +11102,15 @@
     .param p1, "cxtInfo"    # Landroid/app/enterprise/ContextInfo;
 
     .prologue
-    .line 2140
     invoke-direct {p0, p1}, Lcom/android/server/enterprise/restriction/RestrictionPolicy;->isFactoryResetAllowedFromDB(Landroid/app/enterprise/ContextInfo;)Z
 
     move-result v0
 
-    .line 2148
     .local v0, "ret":Z
     invoke-direct {p0}, Lcom/android/server/enterprise/restriction/RestrictionPolicy;->isExistEFSFile()Z
 
     move-result v1
 
-    .line 2149
     .local v1, "temp":Z
     const-string v2, "RestrictionPolicy"
 
@@ -12331,10 +11144,8 @@
 
     invoke-static {v2, v3}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 2150
     if-ne v1, v0, :cond_0
 
-    .line 2151
     const-string v2, "RestrictionPolicy"
 
     new-instance v3, Ljava/lang/StringBuilder;
@@ -12363,10 +11174,8 @@
 
     invoke-static {v2, v3}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 2152
     invoke-direct {p0, v0}, Lcom/android/server/enterprise/restriction/RestrictionPolicy;->manageEFSFile(Z)Z
 
-    .line 2155
     :cond_0
     return v0
 .end method
@@ -12379,14 +11188,12 @@
     .prologue
     const/4 v1, 0x0
 
-    .line 4584
     const-wide/16 v2, 0x10
 
     invoke-direct {p0, v2, v3, v1, v1}, Lcom/android/server/enterprise/restriction/RestrictionPolicy;->extractFromRestrictionCache(JZI)Z
 
     move-result v0
 
-    .line 4588
     .local v0, "ret":Z
     const-string v1, "RestrictionPolicy"
 
@@ -12410,17 +11217,14 @@
 
     invoke-static {v1, v2}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 4590
     if-eqz p2, :cond_0
 
     if-nez v0, :cond_0
 
-    .line 4591
     const v1, 0x1040b71
 
     invoke-static {v1}, Lcom/android/server/enterprise/RestrictionToastManager;->show(I)V
 
-    .line 4594
     :cond_0
     return v0
 .end method
@@ -12433,25 +11237,21 @@
     .prologue
     const/4 v1, 0x0
 
-    .line 4400
     const-wide/32 v2, 0x4000000
 
     invoke-direct {p0, v2, v3, v1, v1}, Lcom/android/server/enterprise/restriction/RestrictionPolicy;->extractFromRestrictionCache(JZI)Z
 
     move-result v0
 
-    .line 4404
     .local v0, "ret":Z
     if-eqz p2, :cond_0
 
     if-nez v0, :cond_0
 
-    .line 4405
     const v1, 0x1040b6d
 
     invoke-static {v1}, Lcom/android/server/enterprise/RestrictionToastManager;->show(I)V
 
-    .line 4408
     :cond_0
     const-string v1, "RestrictionPolicy"
 
@@ -12475,7 +11275,6 @@
 
     invoke-static {v1, v2}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 4409
     return v0
 .end method
 
@@ -12487,18 +11286,15 @@
     .prologue
     const/4 v5, 0x7
 
-    .line 3842
     invoke-direct {p0, v5}, Lcom/android/server/enterprise/restriction/RestrictionPolicy;->readData(I)Z
 
     move-result v0
 
-    .line 3843
     .local v0, "param":Z
     invoke-direct {p0, p1}, Lcom/android/server/enterprise/restriction/RestrictionPolicy;->isFirmwareRecoveryAllowedFromDB(Landroid/app/enterprise/ContextInfo;)Z
 
     move-result v1
 
-    .line 3845
     .local v1, "ret":Z
     const-string v2, "RestrictionPolicy"
 
@@ -12532,10 +11328,8 @@
 
     invoke-static {v2, v3}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 3846
     if-eq v0, v1, :cond_0
 
-    .line 3847
     const-string v2, "RestrictionPolicy"
 
     new-instance v3, Ljava/lang/StringBuilder;
@@ -12564,10 +11358,8 @@
 
     invoke-static {v2, v3}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 3848
     invoke-direct {p0, v5, v1}, Lcom/android/server/enterprise/restriction/RestrictionPolicy;->writeData(IZ)Z
 
-    .line 3851
     :cond_0
     return v1
 .end method
@@ -12577,12 +11369,10 @@
     .param p1, "cxtInfo"    # Landroid/app/enterprise/ContextInfo;
 
     .prologue
-    .line 4363
     invoke-static {p1}, Lcom/android/server/enterprise/EnterpriseDeviceManagerService;->getCallingOrCurrentUserId(Landroid/app/enterprise/ContextInfo;)I
 
     move-result v0
 
-    .line 4364
     .local v0, "userId":I
     invoke-virtual {p0, v0}, Lcom/android/server/enterprise/restriction/RestrictionPolicy;->isGoogleAccountsAutoSyncAllowedAsUser(I)Z
 
@@ -12596,7 +11386,6 @@
     .param p1, "userId"    # I
 
     .prologue
-    .line 4368
     const-wide/32 v2, 0x2000000
 
     const/4 v1, 0x1
@@ -12605,7 +11394,6 @@
 
     move-result v0
 
-    .line 4372
     .local v0, "ret":Z
     return v0
 .end method
@@ -12615,7 +11403,6 @@
     .param p1, "cxtInfo"    # Landroid/app/enterprise/ContextInfo;
 
     .prologue
-    .line 2343
     invoke-static {p1}, Lcom/android/server/enterprise/EnterpriseDeviceManagerService;->getCallingOrCurrentUserId(Landroid/app/enterprise/ContextInfo;)I
 
     move-result v0
@@ -12632,10 +11419,8 @@
     .param p1, "userId"    # I
 
     .prologue
-    .line 2348
     const/4 v0, 0x1
 
-    .line 2350
     .local v0, "ret":Z
     const-wide/high16 v2, 0x80000000000000L
 
@@ -12645,7 +11430,6 @@
 
     move-result v0
 
-    .line 2355
     const-string v1, "RestrictionPolicy"
 
     new-instance v2, Ljava/lang/StringBuilder;
@@ -12678,7 +11462,6 @@
 
     invoke-static {v1, v2}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 2357
     return v0
 .end method
 
@@ -12688,7 +11471,6 @@
     .param p2, "showMsg"    # Z
 
     .prologue
-    .line 4494
     const-wide/32 v2, 0x10000000
 
     const/4 v1, 0x1
@@ -12699,18 +11481,15 @@
 
     move-result v0
 
-    .line 4498
     .local v0, "ret":Z
     if-eqz p2, :cond_0
 
     if-nez v0, :cond_0
 
-    .line 4499
     const v1, 0x1040b6f
 
     invoke-static {v1}, Lcom/android/server/enterprise/RestrictionToastManager;->show(I)V
 
-    .line 4502
     :cond_0
     const-string v1, "RestrictionPolicy"
 
@@ -12734,7 +11513,6 @@
 
     invoke-static {v1, v2}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 4503
     return v0
 .end method
 
@@ -12744,12 +11522,10 @@
     .param p2, "showMsg"    # Z
 
     .prologue
-    .line 2206
     invoke-static {}, Lcom/android/server/enterprise/EnterpriseDeviceManagerService;->getKioskOrOwnerUserId()I
 
     move-result v1
 
-    .line 2208
     .local v1, "userId":I
     const-wide/high16 v2, 0x10000000000000L
 
@@ -12759,18 +11535,15 @@
 
     move-result v0
 
-    .line 2212
     .local v0, "ret":Z
     if-eqz p2, :cond_0
 
     if-nez v0, :cond_0
 
-    .line 2213
     const v2, 0x1040b28
 
     invoke-static {v2}, Lcom/android/server/enterprise/RestrictionToastManager;->show(I)V
 
-    .line 2215
     :cond_0
     const-string v2, "RestrictionPolicy"
 
@@ -12794,7 +11567,6 @@
 
     invoke-static {v2, v3}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 2216
     return v0
 .end method
 
@@ -12803,7 +11575,6 @@
     .param p1, "cxtInfo"    # Landroid/app/enterprise/ContextInfo;
 
     .prologue
-    .line 3034
     const-wide/32 v2, 0x8000
 
     const/4 v1, 0x1
@@ -12814,7 +11585,6 @@
 
     move-result v0
 
-    .line 3037
     .local v0, "ret":Z
     return v0
 .end method
@@ -12825,12 +11595,10 @@
     .param p2, "showMsg"    # Z
 
     .prologue
-    .line 3779
     invoke-static {p1}, Lcom/android/server/enterprise/EnterpriseDeviceManagerService;->getCallingOrCurrentUserId(Landroid/app/enterprise/ContextInfo;)I
 
     move-result v1
 
-    .line 3786
     .local v1, "userId":I
     const-wide/32 v2, 0x800000
 
@@ -12840,7 +11608,6 @@
 
     move-result v0
 
-    .line 3790
     .local v0, "ret":Z
     const-string v2, "RestrictionPolicy"
 
@@ -12864,7 +11631,6 @@
 
     invoke-static {v2, v3}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 3791
     return v0
 .end method
 
@@ -12874,10 +11640,8 @@
     .param p2, "view"    # I
 
     .prologue
-    .line 3667
     const/4 v2, 0x1
 
-    .line 3671
     .local v2, "ret":Z
     const/4 v5, 0x1
 
@@ -12887,10 +11651,8 @@
 
     if-eq p2, v5, :cond_1
 
-    .line 3672
     const/4 v2, 0x0
 
-    .line 3673
     :try_start_0
     new-instance v5, Ljava/security/InvalidParameterException;
 
@@ -12901,11 +11663,9 @@
     .catch Ljava/security/InvalidParameterException; {:try_start_0 .. :try_end_0} :catch_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_1
 
-    .line 3687
     :catch_0
     move-exception v0
 
-    .line 3688
     .local v0, "e":Ljava/security/InvalidParameterException;
     const-string v5, "RestrictionPolicy"
 
@@ -12913,7 +11673,6 @@
 
     invoke-static {v5, v6}, Landroid/util/Slog;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 3693
     .end local v0    # "e":Ljava/security/InvalidParameterException;
     :cond_0
     :goto_0
@@ -12939,10 +11698,8 @@
 
     invoke-static {v5, v6}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 3695
     return v2
 
-    .line 3676
     :cond_1
     :try_start_1
     iget-object v5, p0, Lcom/android/server/enterprise/restriction/RestrictionPolicy;->mEdmStorageProvider:Lcom/android/server/enterprise/storage/EdmStorageProvider;
@@ -12955,7 +11712,6 @@
 
     move-result-object v4
 
-    .line 3679
     .local v4, "values":Ljava/util/ArrayList;, "Ljava/util/ArrayList<Ljava/lang/Integer;>;"
     invoke-virtual {v4}, Ljava/util/ArrayList;->iterator()Ljava/util/Iterator;
 
@@ -12975,7 +11731,6 @@
 
     check-cast v3, Ljava/lang/Integer;
 
-    .line 3680
     .local v3, "value":Ljava/lang/Integer;
     invoke-virtual {v3}, Ljava/lang/Integer;->intValue()I
 
@@ -12983,7 +11738,6 @@
 
     if-ltz v5, :cond_2
 
-    .line 3681
     invoke-virtual {v3}, Ljava/lang/Integer;->intValue()I
     :try_end_1
     .catch Ljava/security/InvalidParameterException; {:try_start_1 .. :try_end_1} :catch_0
@@ -12995,20 +11749,16 @@
 
     if-eq p2, v5, :cond_2
 
-    .line 3682
     const/4 v2, 0x0
 
-    .line 3683
     goto :goto_0
 
-    .line 3689
     .end local v1    # "i$":Ljava/util/Iterator;
     .end local v3    # "value":Ljava/lang/Integer;
     .end local v4    # "values":Ljava/util/ArrayList;, "Ljava/util/ArrayList<Ljava/lang/Integer;>;"
     :catch_1
     move-exception v0
 
-    .line 3690
     .local v0, "e":Ljava/lang/Exception;
     const-string v5, "RestrictionPolicy"
 
@@ -13025,12 +11775,10 @@
     .param p2, "showMsg"    # Z
 
     .prologue
-    .line 886
     invoke-static {p1}, Lcom/android/server/enterprise/EnterpriseDeviceManagerService;->getCallingOrCurrentUserId(Landroid/app/enterprise/ContextInfo;)I
 
     move-result v0
 
-    .line 888
     .local v0, "userId":I
     invoke-virtual {p0, p2, v0}, Lcom/android/server/enterprise/restriction/RestrictionPolicy;->isMicrophoneEnabledAsUser(ZI)Z
 
@@ -13049,21 +11797,17 @@
 
     const/4 v4, 0x1
 
-    .line 892
     const/4 v0, 0x1
 
-    .line 896
     .local v0, "ret":Z
     if-eqz p2, :cond_0
 
-    .line 897
     const/4 v1, 0x0
 
     invoke-direct {p0, v6, v7, v4, v1}, Lcom/android/server/enterprise/restriction/RestrictionPolicy;->extractFromRestrictionCache(JZI)Z
 
     move-result v0
 
-    .line 901
     const-string v1, "RestrictionPolicy"
 
     new-instance v2, Ljava/lang/StringBuilder;
@@ -13086,23 +11830,20 @@
 
     invoke-static {v1, v2}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 904
     :cond_0
     if-ne v0, v4, :cond_1
 
-    .line 905
     invoke-direct {p0, v6, v7, v4, p2}, Lcom/android/server/enterprise/restriction/RestrictionPolicy;->extractFromRestrictionCache(JZI)Z
 
     move-result v0
 
-    .line 909
     const-string v1, "RestrictionPolicy"
 
     new-instance v2, Ljava/lang/StringBuilder;
 
     invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v3, "userId: "
+    const-string v3, "userId: "
 
     invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -13128,18 +11869,15 @@
 
     invoke-static {v1, v2}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 912
     :cond_1
     if-eqz p1, :cond_2
 
     if-nez v0, :cond_2
 
-    .line 913
     const v1, 0x1040b60
 
     invoke-static {v1}, Lcom/android/server/enterprise/RestrictionToastManager;->show(I)V
 
-    .line 915
     iget-object v1, p0, Lcom/android/server/enterprise/restriction/RestrictionPolicy;->mHandler:Landroid/os/Handler;
 
     iget-object v2, p0, Lcom/android/server/enterprise/restriction/RestrictionPolicy;->mHandler:Landroid/os/Handler;
@@ -13152,7 +11890,6 @@
 
     invoke-virtual {v1, v2, v4, v5}, Landroid/os/Handler;->sendMessageDelayed(Landroid/os/Message;J)Z
 
-    .line 918
     :cond_2
     return v0
 .end method
@@ -13162,12 +11899,10 @@
     .param p1, "cxtInfo"    # Landroid/app/enterprise/ContextInfo;
 
     .prologue
-    .line 1410
     invoke-static {p1}, Lcom/android/server/enterprise/EnterpriseDeviceManagerService;->getCallingOrCurrentUserId(Landroid/app/enterprise/ContextInfo;)I
 
     move-result v1
 
-    .line 1411
     .local v1, "userId":I
     const-wide v2, 0x80000000000L
 
@@ -13177,7 +11912,6 @@
 
     move-result v0
 
-    .line 1415
     .local v0, "ret":Z
     const-string v2, "RestrictionPolicy"
 
@@ -13201,7 +11935,6 @@
 
     invoke-static {v2, v3}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1416
     return v0
 .end method
 
@@ -13209,7 +11942,6 @@
     .locals 1
 
     .prologue
-    .line 1531
     const/4 v0, 0x0
 
     invoke-virtual {p0, v0}, Lcom/android/server/enterprise/restriction/RestrictionPolicy;->isNFCEnabledWithMsg(Z)Z
@@ -13224,7 +11956,6 @@
     .param p1, "showMsg"    # Z
 
     .prologue
-    .line 1542
     const-wide v2, 0x200000000000L
 
     const/4 v1, 0x1
@@ -13235,18 +11966,15 @@
 
     move-result v0
 
-    .line 1545
     .local v0, "ret":Z
     if-eqz p1, :cond_0
 
     if-nez v0, :cond_0
 
-    .line 1546
     const v1, 0x1040b33
 
     invoke-static {v1}, Lcom/android/server/enterprise/RestrictionToastManager;->show(I)V
 
-    .line 1548
     :cond_0
     const-string v1, "RestrictionPolicy"
 
@@ -13270,7 +11998,6 @@
 
     invoke-static {v1, v2}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1549
     return v0
 .end method
 
@@ -13280,19 +12007,16 @@
     .param p2, "showMsg"    # Z
 
     .prologue
-    .line 4865
     const/4 v1, 0x1
 
-    .line 4866
     .local v1, "ret":Z
     const/4 v6, -0x1
 
     if-ne p1, v6, :cond_2
 
-    .line 4867
     iget-object v6, p0, Lcom/android/server/enterprise/restriction/RestrictionPolicy;->mContext:Landroid/content/Context;
 
-    const-string/jumbo v7, "user"
+    const-string v7, "user"
 
     invoke-virtual {v6, v7}, Landroid/content/Context;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
 
@@ -13300,13 +12024,11 @@
 
     check-cast v4, Landroid/os/UserManager;
 
-    .line 4868
     .local v4, "userManager":Landroid/os/UserManager;
     invoke-virtual {v4}, Landroid/os/UserManager;->getUsers()Ljava/util/List;
 
     move-result-object v5
 
-    .line 4870
     .local v5, "userlist":Ljava/util/List;, "Ljava/util/List<Landroid/content/pm/UserInfo;>;"
     invoke-interface {v5}, Ljava/util/List;->iterator()Ljava/util/Iterator;
 
@@ -13326,7 +12048,6 @@
 
     check-cast v3, Landroid/content/pm/UserInfo;
 
-    .line 4871
     .local v3, "uf":Landroid/content/pm/UserInfo;
     iget v6, v3, Landroid/content/pm/UserInfo;->id:I
 
@@ -13334,12 +12055,10 @@
 
     move-result v1
 
-    .line 4872
     if-nez v1, :cond_0
 
     move v2, v1
 
-    .line 4879
     .end local v0    # "i$":Ljava/util/Iterator;
     .end local v1    # "ret":Z
     .end local v3    # "uf":Landroid/content/pm/UserInfo;
@@ -13357,12 +12076,10 @@
     :cond_1
     move v2, v1
 
-    .line 4876
     .end local v1    # "ret":Z
     .restart local v2    # "ret":Z
     goto :goto_0
 
-    .line 4878
     .end local v0    # "i$":Ljava/util/Iterator;
     .end local v2    # "ret":Z
     .end local v4    # "userManager":Landroid/os/UserManager;
@@ -13375,7 +12092,6 @@
 
     move v2, v1
 
-    .line 4879
     .end local v1    # "ret":Z
     .restart local v2    # "ret":Z
     goto :goto_0
@@ -13387,12 +12103,10 @@
     .param p2, "showMsg"    # Z
 
     .prologue
-    .line 4859
     invoke-static {p1}, Lcom/android/server/enterprise/EnterpriseDeviceManagerService;->getCallingOrCurrentUserId(Landroid/app/enterprise/ContextInfo;)I
 
     move-result v0
 
-    .line 4860
     .local v0, "userId":I
     invoke-virtual {p0, v0, p2}, Lcom/android/server/enterprise/restriction/RestrictionPolicy;->isNewAdminActivationEnabled(IZ)Z
 
@@ -13407,19 +12121,16 @@
     .param p2, "showMsg"    # Z
 
     .prologue
-    .line 4751
     const/4 v1, 0x1
 
-    .line 4752
     .local v1, "ret":Z
     const/4 v6, -0x1
 
     if-ne p1, v6, :cond_2
 
-    .line 4753
     iget-object v6, p0, Lcom/android/server/enterprise/restriction/RestrictionPolicy;->mContext:Landroid/content/Context;
 
-    const-string/jumbo v7, "user"
+    const-string v7, "user"
 
     invoke-virtual {v6, v7}, Landroid/content/Context;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
 
@@ -13427,13 +12138,11 @@
 
     check-cast v4, Landroid/os/UserManager;
 
-    .line 4754
     .local v4, "userManager":Landroid/os/UserManager;
     invoke-virtual {v4}, Landroid/os/UserManager;->getUsers()Ljava/util/List;
 
     move-result-object v5
 
-    .line 4756
     .local v5, "userlist":Ljava/util/List;, "Ljava/util/List<Landroid/content/pm/UserInfo;>;"
     invoke-interface {v5}, Ljava/util/List;->iterator()Ljava/util/Iterator;
 
@@ -13453,7 +12162,6 @@
 
     check-cast v3, Landroid/content/pm/UserInfo;
 
-    .line 4757
     .local v3, "uf":Landroid/content/pm/UserInfo;
     iget v6, v3, Landroid/content/pm/UserInfo;->id:I
 
@@ -13461,12 +12169,10 @@
 
     move-result v1
 
-    .line 4758
     if-nez v1, :cond_0
 
     move v2, v1
 
-    .line 4764
     .end local v0    # "i$":Ljava/util/Iterator;
     .end local v1    # "ret":Z
     .end local v3    # "uf":Landroid/content/pm/UserInfo;
@@ -13484,12 +12190,10 @@
     :cond_1
     move v2, v1
 
-    .line 4761
     .end local v1    # "ret":Z
     .restart local v2    # "ret":Z
     goto :goto_0
 
-    .line 4763
     .end local v0    # "i$":Ljava/util/Iterator;
     .end local v2    # "ret":Z
     .end local v4    # "userManager":Landroid/os/UserManager;
@@ -13502,7 +12206,6 @@
 
     move v2, v1
 
-    .line 4764
     .end local v1    # "ret":Z
     .restart local v2    # "ret":Z
     goto :goto_0
@@ -13514,12 +12217,10 @@
     .param p2, "showMsg"    # Z
 
     .prologue
-    .line 4744
     invoke-static {p1}, Lcom/android/server/enterprise/EnterpriseDeviceManagerService;->getCallingOrCurrentUserId(Landroid/app/enterprise/ContextInfo;)I
 
     move-result v0
 
-    .line 4745
     .local v0, "userId":I
     invoke-virtual {p0, v0, p2}, Lcom/android/server/enterprise/restriction/RestrictionPolicy;->isNewAdminInstallationEnabled(IZ)Z
 
@@ -13533,7 +12234,6 @@
     .param p1, "cxtInfo"    # Landroid/app/enterprise/ContextInfo;
 
     .prologue
-    .line 1967
     const-wide/high16 v2, 0x1000000000000L
 
     const/4 v1, 0x1
@@ -13544,7 +12244,6 @@
 
     move-result v0
 
-    .line 1971
     .local v0, "ret":Z
     const-string v1, "RestrictionPolicy"
 
@@ -13568,7 +12267,6 @@
 
     invoke-static {v1, v2}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1972
     return v0
 .end method
 
@@ -13577,12 +12275,10 @@
     .param p1, "cxtInfo"    # Landroid/app/enterprise/ContextInfo;
 
     .prologue
-    .line 3560
     invoke-static {p1}, Lcom/android/server/enterprise/EnterpriseDeviceManagerService;->getCallingOrCurrentUserId(Landroid/app/enterprise/ContextInfo;)I
 
     move-result v0
 
-    .line 3561
     .local v0, "userId":I
     invoke-virtual {p0, v0}, Lcom/android/server/enterprise/restriction/RestrictionPolicy;->isNonTrustedAppInstallBlockedAsUser(I)Z
 
@@ -13596,7 +12292,6 @@
     .param p1, "userId"    # I
 
     .prologue
-    .line 3568
     const-wide/32 v2, 0x400000
 
     const/4 v1, 0x0
@@ -13605,7 +12300,6 @@
 
     move-result v0
 
-    .line 3572
     .local v0, "ret":Z
     return v0
 .end method
@@ -13617,14 +12311,12 @@
     .prologue
     const/4 v1, 0x0
 
-    .line 4699
     const-wide v2, 0x80000000L
 
     invoke-direct {p0, v2, v3, v1, v1}, Lcom/android/server/enterprise/restriction/RestrictionPolicy;->extractFromRestrictionCache(JZI)Z
 
     move-result v0
 
-    .line 4703
     .local v0, "ret":Z
     const-string v1, "RestrictionPolicy"
 
@@ -13648,7 +12340,6 @@
 
     invoke-static {v1, v2}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 4704
     return v0
 .end method
 
@@ -13657,7 +12348,6 @@
     .param p1, "cxtInfo"    # Landroid/app/enterprise/ContextInfo;
 
     .prologue
-    .line 2306
     const-wide/high16 v2, 0x40000000000000L
 
     const/4 v1, 0x1
@@ -13668,7 +12358,6 @@
 
     move-result v0
 
-    .line 2309
     .local v0, "ret":Z
     const-string v1, "RestrictionPolicy"
 
@@ -13692,7 +12381,6 @@
 
     invoke-static {v1, v2}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 2310
     return v0
 .end method
 
@@ -13702,12 +12390,10 @@
     .param p2, "showMsg"    # Z
 
     .prologue
-    .line 2808
     invoke-static {}, Lcom/android/server/enterprise/EnterpriseDeviceManagerService;->getKioskOrOwnerUserId()I
 
     move-result v1
 
-    .line 2810
     .local v1, "userId":I
     const-wide/16 v2, 0x800
 
@@ -13717,18 +12403,15 @@
 
     move-result v0
 
-    .line 2814
     .local v0, "allowed":Z
     if-eqz p2, :cond_0
 
     if-nez v0, :cond_0
 
-    .line 2815
     const v2, 0x1040a8d
 
     invoke-static {v2}, Lcom/android/server/enterprise/RestrictionToastManager;->show(I)V
 
-    .line 2818
     :cond_0
     const-string v2, "RestrictionPolicy"
 
@@ -13752,7 +12435,6 @@
 
     invoke-static {v2, v3}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 2820
     return v0
 .end method
 
@@ -13762,7 +12444,6 @@
     .param p2, "showMsg"    # Z
 
     .prologue
-    .line 3317
     const-wide/16 v2, 0x400
 
     const/4 v1, 0x1
@@ -13773,18 +12454,15 @@
 
     move-result v0
 
-    .line 3320
     .local v0, "ret":Z
     if-eqz p2, :cond_0
 
     if-nez v0, :cond_0
 
-    .line 3321
     const v1, 0x1040b18
 
     invoke-static {v1}, Lcom/android/server/enterprise/RestrictionToastManager;->show(I)V
 
-    .line 3324
     :cond_0
     const-string v1, "RestrictionPolicy"
 
@@ -13808,7 +12486,6 @@
 
     invoke-static {v1, v2}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 3325
     return v0
 .end method
 
@@ -13818,12 +12495,10 @@
     .param p2, "showMsg"    # Z
 
     .prologue
-    .line 4531
     invoke-static {p1}, Lcom/android/server/enterprise/EnterpriseDeviceManagerService;->getCallingOrCurrentUserId(Landroid/app/enterprise/ContextInfo;)I
 
     move-result v1
 
-    .line 4532
     .local v1, "userId":I
     const-wide/32 v2, 0x20000000
 
@@ -13833,18 +12508,15 @@
 
     move-result v0
 
-    .line 4536
     .local v0, "ret":Z
     if-eqz p2, :cond_0
 
     if-nez v0, :cond_0
 
-    .line 4537
     const v2, 0x1040b70
 
     invoke-static {v2}, Lcom/android/server/enterprise/RestrictionToastManager;->show(I)V
 
-    .line 4540
     :cond_0
     const-string v2, "RestrictionPolicy"
 
@@ -13868,7 +12540,6 @@
 
     invoke-static {v2, v3}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 4541
     return v0
 .end method
 
@@ -13877,7 +12548,6 @@
     .param p1, "cxtInfo"    # Landroid/app/enterprise/ContextInfo;
 
     .prologue
-    .line 2397
     const-wide v2, 0x800000000L
 
     const/4 v1, 0x1
@@ -13888,7 +12558,6 @@
 
     move-result v0
 
-    .line 2400
     .local v0, "ret":Z
     const-string v1, "RestrictionPolicy"
 
@@ -13912,7 +12581,6 @@
 
     invoke-static {v1, v2}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 2401
     return v0
 .end method
 
@@ -13922,12 +12590,10 @@
     .param p2, "showMsg"    # Z
 
     .prologue
-    .line 3275
     invoke-static {p1}, Lcom/android/server/enterprise/EnterpriseDeviceManagerService;->getCallingOrCurrentUserId(Landroid/app/enterprise/ContextInfo;)I
 
     move-result v0
 
-    .line 3277
     .local v0, "userId":I
     invoke-virtual {p0, p2, v0}, Lcom/android/server/enterprise/restriction/RestrictionPolicy;->isSVoiceAllowedAsUser(ZI)Z
 
@@ -13942,12 +12608,10 @@
     .param p2, "userId"    # I
 
     .prologue
-    .line 3256
     invoke-static {}, Landroid/os/Binder;->clearCallingIdentity()J
 
     move-result-wide v2
 
-    .line 3257
     .local v2, "token":J
     iget-object v1, p0, Lcom/android/server/enterprise/restriction/RestrictionPolicy;->mPersonaMgr:Landroid/os/PersonaManager;
 
@@ -13957,7 +12621,6 @@
 
     if-eqz v1, :cond_0
 
-    .line 3258
     iget-object v1, p0, Lcom/android/server/enterprise/restriction/RestrictionPolicy;->mPersonaMgr:Landroid/os/PersonaManager;
 
     invoke-virtual {v1}, Landroid/os/PersonaManager;->getPersonas()Ljava/util/List;
@@ -13974,11 +12637,9 @@
 
     iget p2, v1, Landroid/content/pm/PersonaInfo;->id:I
 
-    .line 3260
     :cond_0
     invoke-static {v2, v3}, Landroid/os/Binder;->restoreCallingIdentity(J)V
 
-    .line 3262
     const-wide/16 v4, 0x20
 
     const/4 v1, 0x1
@@ -13987,18 +12648,15 @@
 
     move-result v0
 
-    .line 3265
     .local v0, "ret":Z
     if-eqz p1, :cond_1
 
     if-nez v0, :cond_1
 
-    .line 3266
     const v1, 0x1040b17
 
     invoke-static {v1}, Lcom/android/server/enterprise/RestrictionToastManager;->show(I)V
 
-    .line 3269
     :cond_1
     const-string v1, "RestrictionPolicy"
 
@@ -14032,7 +12690,6 @@
 
     invoke-static {v1, v4}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 3271
     return v0
 .end method
 
@@ -14041,10 +12698,8 @@
     .param p1, "cxtInfo"    # Landroid/app/enterprise/ContextInfo;
 
     .prologue
-    .line 3602
     const/4 v2, 0x1
 
-    .line 3604
     .local v2, "ret":Z
     :try_start_0
     iget-object v5, p0, Lcom/android/server/enterprise/restriction/RestrictionPolicy;->mEdmStorageProvider:Lcom/android/server/enterprise/storage/EdmStorageProvider;
@@ -14057,7 +12712,6 @@
 
     move-result-object v4
 
-    .line 3606
     .local v4, "values":Ljava/util/ArrayList;, "Ljava/util/ArrayList<Ljava/lang/Boolean;>;"
     invoke-virtual {v4}, Ljava/util/ArrayList;->iterator()Ljava/util/Iterator;
 
@@ -14083,14 +12737,11 @@
 
     move-result v3
 
-    .line 3607
     .local v3, "value":Z
     if-nez v3, :cond_0
 
-    .line 3608
     move v2, v3
 
-    .line 3615
     .end local v1    # "i$":Ljava/util/Iterator;
     .end local v3    # "value":Z
     .end local v4    # "values":Ljava/util/ArrayList;, "Ljava/util/ArrayList<Ljava/lang/Boolean;>;"
@@ -14118,14 +12769,11 @@
 
     invoke-static {v5, v6}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 3616
     return v2
 
-    .line 3612
     :catch_0
     move-exception v0
 
-    .line 3613
     .local v0, "e":Ljava/lang/Exception;
     const-string v5, "RestrictionPolicy"
 
@@ -14142,12 +12790,10 @@
     .param p2, "showMsg"    # Z
 
     .prologue
-    .line 1235
     invoke-static {p1}, Lcom/android/server/enterprise/EnterpriseDeviceManagerService;->getCallingOrCurrentUserId(Landroid/app/enterprise/ContextInfo;)I
 
     move-result v0
 
-    .line 1236
     .local v0, "userId":I
     invoke-direct {p0, v0, p2}, Lcom/android/server/enterprise/restriction/RestrictionPolicy;->isScreenCaptureEnabled(IZ)Z
 
@@ -14161,12 +12807,10 @@
     .param p1, "showMsg"    # Z
 
     .prologue
-    .line 1240
     invoke-direct {p0}, Lcom/android/server/enterprise/restriction/RestrictionPolicy;->getTopActivityUserId()I
 
     move-result v0
 
-    .line 1241
     .local v0, "userId":I
     invoke-direct {p0, v0, p1}, Lcom/android/server/enterprise/restriction/RestrictionPolicy;->isScreenCaptureEnabled(IZ)Z
 
@@ -14182,19 +12826,16 @@
     .prologue
     const/4 v0, 0x0
 
-    .line 1754
     invoke-virtual {p0}, Lcom/android/server/enterprise/restriction/RestrictionPolicy;->getSDCardState()Ljava/lang/String;
 
     move-result-object v1
 
     if-nez v1, :cond_1
 
-    .line 1765
     :cond_0
     :goto_0
     return v0
 
-    .line 1758
     :cond_1
     invoke-direct {p0}, Lcom/android/server/enterprise/restriction/RestrictionPolicy;->getEDM()Landroid/app/enterprise/EnterpriseDeviceManager;
 
@@ -14208,7 +12849,6 @@
 
     if-nez v1, :cond_0
 
-    .line 1761
     const-wide v2, 0x800000000000L
 
     const/4 v1, 0x1
@@ -14217,7 +12857,6 @@
 
     move-result v0
 
-    .line 1764
     .local v0, "ret":Z
     const-string v1, "RestrictionPolicy"
 
@@ -14250,12 +12889,10 @@
     .param p2, "showMsg"    # Z
 
     .prologue
-    .line 1677
     invoke-direct {p0, p1}, Lcom/android/server/enterprise/restriction/RestrictionPolicy;->getUserIdByPackageNameOrUid(Landroid/app/enterprise/ContextInfo;)I
 
     move-result v0
 
-    .line 1679
     .local v0, "userId":I
     invoke-virtual {p0, p2, v0}, Lcom/android/server/enterprise/restriction/RestrictionPolicy;->isSettingsChangesAllowedAsUser(ZI)Z
 
@@ -14270,7 +12907,6 @@
     .param p2, "userId"    # I
 
     .prologue
-    .line 1690
     const-wide/16 v2, 0x8
 
     const/4 v1, 0x1
@@ -14279,18 +12915,15 @@
 
     move-result v0
 
-    .line 1694
     .local v0, "ret":Z
     if-eqz p1, :cond_0
 
     if-nez v0, :cond_0
 
-    .line 1695
     const v1, 0x1040b33
 
     invoke-static {v1}, Lcom/android/server/enterprise/RestrictionToastManager;->show(I)V
 
-    .line 1697
     :cond_0
     const-string v1, "RestrictionPolicy"
 
@@ -14324,7 +12957,6 @@
 
     invoke-static {v1, v2}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1698
     return v0
 .end method
 
@@ -14334,12 +12966,10 @@
     .param p2, "showMsg"    # Z
 
     .prologue
-    .line 3473
     invoke-static {p1}, Lcom/android/server/enterprise/EnterpriseDeviceManagerService;->getCallingOrCurrentUserId(Landroid/app/enterprise/ContextInfo;)I
 
     move-result v0
 
-    .line 3474
     .local v0, "userId":I
     invoke-virtual {p0, v0, p2}, Lcom/android/server/enterprise/restriction/RestrictionPolicy;->isShareListAllowedAsUser(IZ)Z
 
@@ -14354,7 +12984,6 @@
     .param p2, "showMsg"    # Z
 
     .prologue
-    .line 3478
     const-wide/32 v2, 0x100000
 
     const/4 v1, 0x1
@@ -14363,18 +12992,15 @@
 
     move-result v0
 
-    .line 3482
     .local v0, "ret":Z
     if-eqz p2, :cond_0
 
     if-nez v0, :cond_0
 
-    .line 3483
     const v1, 0x1040b2c
 
     invoke-static {v1}, Lcom/android/server/enterprise/RestrictionToastManager;->show(I)V
 
-    .line 3486
     :cond_0
     const-string v1, "RestrictionPolicy"
 
@@ -14404,7 +13030,6 @@
 
     invoke-static {v1, v2}, Landroid/util/Slog;->secD(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 3488
     return v0
 .end method
 
@@ -14413,12 +13038,10 @@
     .param p1, "cxtInfo"    # Landroid/app/enterprise/ContextInfo;
 
     .prologue
-    .line 5115
     invoke-static {p1}, Lcom/android/server/enterprise/EnterpriseDeviceManagerService;->getCallingOrCurrentUserId(Landroid/app/enterprise/ContextInfo;)I
 
     move-result v0
 
-    .line 5117
     .local v0, "userId":I
     const/4 v1, 0x0
 
@@ -14434,12 +13057,10 @@
     .param p1, "showMsg"    # Z
 
     .prologue
-    .line 5127
     invoke-direct {p0}, Lcom/android/server/enterprise/restriction/RestrictionPolicy;->getTopActivityUserId()I
 
     move-result v0
 
-    .line 5129
     .local v0, "userId":I
     invoke-direct {p0, p1, v0}, Lcom/android/server/enterprise/restriction/RestrictionPolicy;->isSmartClipModeAllowedAsUser(ZI)Z
 
@@ -14454,14 +13075,12 @@
     .param p2, "showMsg"    # Z
 
     .prologue
-    .line 2747
     const/4 v1, 0x0
 
     invoke-virtual {p0, p2, v1}, Lcom/android/server/enterprise/restriction/RestrictionPolicy;->isStatusBarExpansionAllowedAsUser(ZI)Z
 
     move-result v0
 
-    .line 2749
     .local v0, "allowed":Z
     const-string v1, "RestrictionPolicy"
 
@@ -14485,7 +13104,6 @@
 
     invoke-static {v1, v2}, Lcom/android/server/enterprise/log/Log;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 2751
     return v0
 .end method
 
@@ -14495,12 +13113,10 @@
     .param p2, "userId"    # I
 
     .prologue
-    .line 2757
     invoke-static {}, Lcom/android/server/enterprise/EnterpriseDeviceManagerService;->getKioskOrOwnerUserId()I
 
     move-result p2
 
-    .line 2759
     const-wide/16 v2, 0x100
 
     const/4 v1, 0x1
@@ -14509,7 +13125,6 @@
 
     move-result v0
 
-    .line 2767
     .local v0, "allowed":Z
     const-string v1, "RestrictionPolicy"
 
@@ -14543,7 +13158,6 @@
 
     invoke-static {v1, v2}, Lcom/android/server/enterprise/log/Log;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 2769
     return v0
 .end method
 
@@ -14552,12 +13166,10 @@
     .param p1, "cxtInfo"    # Landroid/app/enterprise/ContextInfo;
 
     .prologue
-    .line 2914
     invoke-static {p1}, Lcom/android/server/enterprise/EnterpriseDeviceManagerService;->getCallingOrCurrentUserId(Landroid/app/enterprise/ContextInfo;)I
 
     move-result v1
 
-    .line 2915
     .local v1, "userId":I
     const-wide/16 v2, 0x1000
 
@@ -14567,7 +13179,6 @@
 
     move-result v0
 
-    .line 2919
     .local v0, "ret":Z
     const-string v2, "RestrictionPolicy"
 
@@ -14591,7 +13202,6 @@
 
     invoke-static {v2, v3}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 2921
     return v0
 .end method
 
@@ -14602,24 +13212,20 @@
     .prologue
     const/4 v3, 0x0
 
-    .line 1008
     invoke-virtual {p0, v3}, Lcom/android/server/enterprise/restriction/RestrictionPolicy;->isUsbTetheringEnabled(Landroid/app/enterprise/ContextInfo;)Z
 
     move-result v0
 
-    .line 1009
     .local v0, "ret1":Z
     invoke-virtual {p0, v3}, Lcom/android/server/enterprise/restriction/RestrictionPolicy;->isWifiTetheringEnabled(Landroid/app/enterprise/ContextInfo;)Z
 
     move-result v1
 
-    .line 1010
     .local v1, "ret2":Z
     invoke-virtual {p0, v3}, Lcom/android/server/enterprise/restriction/RestrictionPolicy;->isBluetoothTetheringEnabled(Landroid/app/enterprise/ContextInfo;)Z
 
     move-result v2
 
-    .line 1011
     .local v2, "ret3":Z
     const-string v3, "RestrictionPolicy"
 
@@ -14663,7 +13269,6 @@
 
     invoke-static {v3, v4}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1012
     if-nez v0, :cond_0
 
     if-nez v1, :cond_0
@@ -14687,7 +13292,6 @@
     .param p1, "cxtInfo"    # Landroid/app/enterprise/ContextInfo;
 
     .prologue
-    .line 1299
     const-wide v2, 0x20000000000L
 
     const/4 v1, 0x1
@@ -14698,7 +13302,6 @@
 
     move-result v0
 
-    .line 1303
     .local v0, "ret":Z
     if-eqz v0, :cond_0
 
@@ -14714,10 +13317,8 @@
 
     if-eqz v1, :cond_0
 
-    .line 1304
     const/4 v0, 0x0
 
-    .line 1307
     :cond_0
     const-string v1, "RestrictionPolicy"
 
@@ -14741,7 +13342,6 @@
 
     invoke-static {v1, v2}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1308
     return v0
 .end method
 
@@ -14751,7 +13351,6 @@
     .param p2, "showMsg"    # Z
 
     .prologue
-    .line 3445
     const-wide/32 v2, 0x80000
 
     const/4 v1, 0x1
@@ -14762,18 +13361,15 @@
 
     move-result v0
 
-    .line 3448
     .local v0, "ret":Z
     if-eqz p2, :cond_0
 
     if-nez v0, :cond_0
 
-    .line 3449
     const v1, 0x1040b2b
 
     invoke-static {v1}, Lcom/android/server/enterprise/RestrictionToastManager;->show(I)V
 
-    .line 3451
     :cond_0
     const-string v1, "RestrictionPolicy"
 
@@ -14797,7 +13393,6 @@
 
     invoke-static {v1, v2}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 3452
     return v0
 .end method
 
@@ -14807,7 +13402,6 @@
     .param p2, "showMsg"    # Z
 
     .prologue
-    .line 1867
     const/4 v0, 0x0
 
     return v0
@@ -14819,7 +13413,6 @@
     .param p2, "showMsg"    # Z
 
     .prologue
-    .line 1359
     const-wide v2, 0x40000000000L
 
     const/4 v1, 0x1
@@ -14830,18 +13423,15 @@
 
     move-result v0
 
-    .line 1362
     .local v0, "ret":Z
     if-eqz p2, :cond_0
 
     if-nez v0, :cond_0
 
-    .line 1363
     const v1, 0x1040b5e
 
     invoke-static {v1}, Lcom/android/server/enterprise/RestrictionToastManager;->show(I)V
 
-    .line 1365
     :cond_0
     const-string v1, "RestrictionPolicy"
 
@@ -14865,7 +13455,6 @@
 
     invoke-static {v1, v2}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1366
     return v0
 .end method
 
@@ -14875,10 +13464,8 @@
     .param p2, "showMsg"    # Z
 
     .prologue
-    .line 1916
     const/4 v0, 0x1
 
-    .line 1917
     .local v0, "ret":Z
     invoke-direct {p0}, Lcom/android/server/enterprise/restriction/RestrictionPolicy;->getEDM()Landroid/app/enterprise/EnterpriseDeviceManager;
 
@@ -14892,21 +13479,17 @@
 
     if-eqz v1, :cond_1
 
-    .line 1918
     const/4 v0, 0x0
 
-    .line 1924
     :goto_0
     if-eqz p2, :cond_0
 
     if-nez v0, :cond_0
 
-    .line 1925
     const v1, 0x1040b66
 
     invoke-static {v1}, Lcom/android/server/enterprise/RestrictionToastManager;->show(I)V
 
-    .line 1927
     :cond_0
     const-string v1, "RestrictionPolicy"
 
@@ -14930,10 +13513,8 @@
 
     invoke-static {v1, v2}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1928
     return v0
 
-    .line 1920
     :cond_1
     const-wide/high16 v2, 0x2000000000000L
 
@@ -14953,7 +13534,6 @@
     .param p1, "cxtInfo"    # Landroid/app/enterprise/ContextInfo;
 
     .prologue
-    .line 1055
     const-wide v2, 0x2000000000L
 
     const/4 v1, 0x1
@@ -14964,7 +13544,6 @@
 
     move-result v0
 
-    .line 1059
     .local v0, "ret":Z
     if-eqz v0, :cond_0
 
@@ -14980,10 +13559,8 @@
 
     if-eqz v1, :cond_0
 
-    .line 1060
     const/4 v0, 0x0
 
-    .line 1063
     :cond_0
     const-string v1, "RestrictionPolicy"
 
@@ -15007,7 +13584,6 @@
 
     invoke-static {v1, v2}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1064
     return v0
 .end method
 
@@ -15016,25 +13592,20 @@
     .param p1, "cxtInfo"    # Landroid/app/enterprise/ContextInfo;
 
     .prologue
-    .line 3521
     const/4 v0, 0x0
 
-    .line 3522
     .local v0, "ret":Z
     invoke-static {p1}, Lcom/android/server/enterprise/EnterpriseDeviceManagerService;->getCallingOrCurrentUserId(Landroid/app/enterprise/ContextInfo;)I
 
     move-result v1
 
-    .line 3524
     .local v1, "userId":I
     iget v2, p1, Landroid/app/enterprise/ContextInfo;->mContainerId:I
 
     if-lez v2, :cond_0
 
-    .line 3525
     const/4 v0, 0x0
 
-    .line 3528
     :cond_0
     const-wide/32 v2, 0x200000
 
@@ -15044,7 +13615,6 @@
 
     move-result v0
 
-    .line 3531
     const-string v2, "RestrictionPolicy"
 
     new-instance v3, Ljava/lang/StringBuilder;
@@ -15089,7 +13659,6 @@
 
     invoke-static {v2, v3}, Landroid/util/Slog;->secD(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 3532
     return v0
 .end method
 
@@ -15098,7 +13667,6 @@
     .param p1, "cxtInfo"    # Landroid/app/enterprise/ContextInfo;
 
     .prologue
-    .line 3101
     const-wide/32 v2, 0x10000
 
     const/4 v1, 0x1
@@ -15109,7 +13677,6 @@
 
     move-result v0
 
-    .line 3105
     .local v0, "ret":Z
     return v0
 .end method
@@ -15120,12 +13687,10 @@
     .param p2, "showMsg"    # Z
 
     .prologue
-    .line 2878
     invoke-static {p1}, Lcom/android/server/enterprise/EnterpriseDeviceManagerService;->getCallingOrCurrentUserId(Landroid/app/enterprise/ContextInfo;)I
 
     move-result v1
 
-    .line 2879
     .local v1, "userId":I
     const-wide/16 v2, 0x2
 
@@ -15135,7 +13700,6 @@
 
     move-result v0
 
-    .line 2884
     .local v0, "ret":Z
     const-string v2, "RestrictionPolicy"
 
@@ -15143,7 +13707,7 @@
 
     invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v4, "userId: "
+    const-string v4, "userId: "
 
     invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -15169,17 +13733,14 @@
 
     invoke-static {v2, v3}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 2886
     if-eqz p2, :cond_0
 
     if-nez v0, :cond_0
 
-    .line 2887
     const v2, 0x1040b15
 
     invoke-static {v2}, Lcom/android/server/enterprise/RestrictionToastManager;->show(I)V
 
-    .line 2890
     :cond_0
     return v0
 .end method
@@ -15189,7 +13750,6 @@
     .param p1, "cxtInfo"    # Landroid/app/enterprise/ContextInfo;
 
     .prologue
-    .line 2263
     const-wide/high16 v2, 0x20000000000000L
 
     const/4 v1, 0x1
@@ -15200,7 +13760,6 @@
 
     move-result v0
 
-    .line 2266
     .local v0, "ret":Z
     const-string v1, "RestrictionPolicy"
 
@@ -15224,7 +13783,6 @@
 
     invoke-static {v1, v2}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 2267
     return v0
 .end method
 
@@ -15234,12 +13792,10 @@
     .param p2, "showMsg"    # Z
 
     .prologue
-    .line 2701
     invoke-static {p1}, Lcom/android/server/enterprise/EnterpriseDeviceManagerService;->getCallingOrCurrentUserId(Landroid/app/enterprise/ContextInfo;)I
 
     move-result v1
 
-    .line 2702
     .local v1, "userId":I
     const-wide v2, 0x400000000L
 
@@ -15249,18 +13805,15 @@
 
     move-result v0
 
-    .line 2706
     .local v0, "allowed":Z
     if-eqz p2, :cond_0
 
     if-nez v0, :cond_0
 
-    .line 2707
     const v2, 0x1040b1c
 
     invoke-static {v2}, Lcom/android/server/enterprise/RestrictionToastManager;->show(I)V
 
-    .line 2709
     :cond_0
     const-string v2, "RestrictionPolicy"
 
@@ -15284,7 +13837,6 @@
 
     invoke-static {v2, v3}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 2710
     return v0
 .end method
 
@@ -15294,7 +13846,6 @@
     .param p2, "showMsg"    # Z
 
     .prologue
-    .line 2947
     const-wide/16 v2, 0x2000
 
     const/4 v1, 0x1
@@ -15305,18 +13856,15 @@
 
     move-result v0
 
-    .line 2951
     .local v0, "allowed":Z
     if-eqz p2, :cond_0
 
     if-nez v0, :cond_0
 
-    .line 2952
     const v1, 0x1040b16
 
     invoke-static {v1}, Lcom/android/server/enterprise/RestrictionToastManager;->show(I)V
 
-    .line 2954
     :cond_0
     const-string v1, "RestrictionPolicy"
 
@@ -15340,7 +13888,6 @@
 
     invoke-static {v1, v2}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 2955
     return v0
 .end method
 
@@ -15349,7 +13896,6 @@
     .param p1, "cxtInfo"    # Landroid/app/enterprise/ContextInfo;
 
     .prologue
-    .line 1109
     const-wide v2, 0x4000000000L
 
     const/4 v1, 0x1
@@ -15360,7 +13906,6 @@
 
     move-result v0
 
-    .line 1113
     .local v0, "ret":Z
     if-eqz v0, :cond_0
 
@@ -15376,10 +13921,8 @@
 
     if-eqz v1, :cond_0
 
-    .line 1114
     const/4 v0, 0x0
 
-    .line 1117
     :cond_0
     const-string v1, "RestrictionPolicy"
 
@@ -15403,7 +13946,6 @@
 
     invoke-static {v1, v2}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1118
     return v0
 .end method
 
@@ -15412,7 +13954,6 @@
     .param p1, "uid"    # I
 
     .prologue
-    .line 2511
     return-void
 .end method
 
@@ -15425,7 +13966,6 @@
 
     const/4 v2, 0x0
 
-    .line 2515
     const-string v3, "microphoneEnabled"
 
     new-instance v0, Ljava/lang/StringBuilder;
@@ -15463,8 +14003,7 @@
 
     invoke-static {v3, v0, v4}, Lcom/android/server/enterprise/utils/Utils;->writePropertyValue(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Z
 
-    .line 2518
-    const-string/jumbo v0, "screenCaptureEnabled"
+    const-string v0, "screenCaptureEnabled"
 
     new-instance v3, Ljava/lang/StringBuilder;
 
@@ -15499,7 +14038,6 @@
 
     invoke-static {v0, v1, v3}, Lcom/android/server/enterprise/utils/Utils;->writePropertyValue(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Z
 
-    .line 2520
     const/4 v0, 0x0
 
     invoke-virtual {p0, v0}, Lcom/android/server/enterprise/restriction/RestrictionPolicy;->isSDCardWriteAllowed(Landroid/app/enterprise/ContextInfo;)Z
@@ -15510,43 +14048,35 @@
 
     if-eq v0, v1, :cond_0
 
-    .line 2521
     invoke-direct {p0}, Lcom/android/server/enterprise/restriction/RestrictionPolicy;->applySdCardWriteAccessPolicy()V
 
-    .line 2522
     iput-boolean v2, p0, Lcom/android/server/enterprise/restriction/RestrictionPolicy;->preAdminRemoval_SDCardWrite:Z
 
-    .line 2526
     :cond_0
     invoke-direct {p0}, Lcom/android/server/enterprise/restriction/RestrictionPolicy;->enforceStatusBarExpansion()V
 
-    .line 2530
     invoke-static {p1}, Landroid/os/UserHandle;->getUserId(I)I
 
     move-result v0
 
     invoke-direct {p0, v0}, Lcom/android/server/enterprise/restriction/RestrictionPolicy;->loadRestrictionCache(I)V
 
-    .line 2534
     invoke-static {p1}, Landroid/os/UserHandle;->getUserId(I)I
 
     move-result v0
 
     invoke-direct {p0, v0}, Lcom/android/server/enterprise/restriction/RestrictionPolicy;->rollBackSVoice(I)V
 
-    .line 2536
     return-void
 
     :cond_1
     move v0, v2
 
-    .line 2515
     goto :goto_0
 
     :cond_2
     move v1, v2
 
-    .line 2518
     goto :goto_1
 .end method
 
@@ -15556,7 +14086,6 @@
     .param p2, "ownerUid"    # I
 
     .prologue
-    .line 3701
     const-string v0, "RestrictionPolicy"
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -15595,13 +14124,12 @@
 
     invoke-static {v0, v1}, Lcom/android/server/enterprise/log/Log;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 3703
     :try_start_0
     iget-object v0, p0, Lcom/android/server/enterprise/restriction/RestrictionPolicy;->mEdmStorageProvider:Lcom/android/server/enterprise/storage/EdmStorageProvider;
 
     const-string v3, "RESTRICTION"
 
-    const-string/jumbo v4, "useSecureKeypad"
+    const-string v4, "useSecureKeypad"
 
     const/4 v5, 0x0
 
@@ -15613,11 +14141,9 @@
 
     move-result v7
 
-    .line 3705
     .local v7, "result":Z
     if-nez v7, :cond_0
 
-    .line 3706
     const-string v0, "RestrictionPolicy"
 
     const-string v1, "Failed to initialize container"
@@ -15626,21 +14152,18 @@
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 3711
     .end local v7    # "result":Z
     :cond_0
     :goto_0
     return-void
 
-    .line 3708
     :catch_0
     move-exception v6
 
-    .line 3709
     .local v6, "e":Ljava/lang/Exception;
     const-string v0, "RestrictionPolicy"
 
-    const-string/jumbo v1, "onContainerCreation initialize exception : "
+    const-string v1, "onContainerCreation initialize exception : "
 
     invoke-static {v0, v1}, Lcom/android/server/enterprise/log/Log;->w(Ljava/lang/String;Ljava/lang/String;)V
 
@@ -15653,7 +14176,6 @@
     .param p2, "ownerUid"    # I
 
     .prologue
-    .line 3720
     const-string v0, "RestrictionPolicy"
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -15692,7 +14214,6 @@
 
     invoke-static {v0, v1}, Lcom/android/server/enterprise/log/Log;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 3721
     return-void
 .end method
 
@@ -15701,7 +14222,6 @@
     .param p1, "uid"    # I
 
     .prologue
-    .line 2680
     const/4 v0, 0x0
 
     invoke-virtual {p0, v0}, Lcom/android/server/enterprise/restriction/RestrictionPolicy;->isSDCardWriteAllowed(Landroid/app/enterprise/ContextInfo;)Z
@@ -15710,7 +14230,6 @@
 
     iput-boolean v0, p0, Lcom/android/server/enterprise/restriction/RestrictionPolicy;->preAdminRemoval_SDCardWrite:Z
 
-    .line 2681
     return-void
 .end method
 
@@ -15720,7 +14239,6 @@
     .param p2, "ownerUid"    # I
 
     .prologue
-    .line 3715
     const-string v0, "RestrictionPolicy"
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -15759,7 +14277,6 @@
 
     invoke-static {v0, v1}, Lcom/android/server/enterprise/log/Log;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 3716
     return-void
 .end method
 
@@ -15768,13 +14285,10 @@
     .param p1, "userId"    # I
 
     .prologue
-    .line 627
     invoke-direct {p0}, Lcom/android/server/enterprise/restriction/RestrictionPolicy;->enforceMigrationAgentSecurityCheck()V
 
-    .line 628
     invoke-direct {p0, p1}, Lcom/android/server/enterprise/restriction/RestrictionPolicy;->loadRestrictionCache(I)V
 
-    .line 629
     return-void
 .end method
 
@@ -15782,12 +14296,10 @@
     .locals 2
 
     .prologue
-    .line 4055
     iget-boolean v0, p0, Lcom/android/server/enterprise/restriction/RestrictionPolicy;->mDontPokeProperties:Z
 
     if-nez v0, :cond_0
 
-    .line 4057
     new-instance v0, Lcom/android/server/enterprise/restriction/RestrictionPolicy$SystemPropPoker;
 
     invoke-direct {v0}, Lcom/android/server/enterprise/restriction/RestrictionPolicy$SystemPropPoker;-><init>()V
@@ -15798,7 +14310,6 @@
 
     invoke-virtual {v0, v1}, Lcom/android/server/enterprise/restriction/RestrictionPolicy$SystemPropPoker;->execute([Ljava/lang/Object;)Landroid/os/AsyncTask;
 
-    .line 4059
     :cond_0
     return-void
 .end method
@@ -15811,31 +14322,25 @@
     .prologue
     const/4 v4, 0x0
 
-    .line 4781
     invoke-direct {p0, p1}, Lcom/android/server/enterprise/restriction/RestrictionPolicy;->enforceAdvancedRestrictionPermission(Landroid/app/enterprise/ContextInfo;)Landroid/app/enterprise/ContextInfo;
 
     move-result-object p1
 
-    .line 4783
     invoke-virtual {p0, p1, v4}, Lcom/android/server/enterprise/restriction/RestrictionPolicy;->isNewAdminActivationEnabled(Landroid/app/enterprise/ContextInfo;Z)Z
 
     move-result v8
 
-    .line 4784
     .local v8, "state":Z
     invoke-static {p1}, Lcom/android/server/enterprise/EnterpriseDeviceManagerService;->getCallingOrCurrentUserId(Landroid/app/enterprise/ContextInfo;)I
 
     move-result v5
 
-    .line 4786
     .local v5, "userId":I
     const/4 v7, 0x0
 
-    .line 4787
     .local v7, "ret":Z
     if-eqz v8, :cond_2
 
-    .line 4788
     const-string v0, "RestrictionPolicy"
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -15858,7 +14363,6 @@
 
     invoke-static {v0, v1}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 4791
     :try_start_0
     iget v0, p1, Landroid/app/enterprise/ContextInfo;->mCallerUid:I
 
@@ -15868,11 +14372,9 @@
 
     if-nez v0, :cond_0
 
-    .line 4816
     :goto_0
     return v4
 
-    .line 4795
     :cond_0
     iget-object v0, p0, Lcom/android/server/enterprise/restriction/RestrictionPolicy;->mEdmStorageProvider:Lcom/android/server/enterprise/storage/EdmStorageProvider;
 
@@ -15880,7 +14382,7 @@
 
     const-string v2, "RESTRICTION"
 
-    const-string/jumbo v3, "preventAdminActivation"
+    const-string v3, "preventAdminActivation"
 
     invoke-virtual {v0, v1, v2, v3, p2}, Lcom/android/server/enterprise/storage/EdmStorageProvider;->putBoolean(ILjava/lang/String;Ljava/lang/String;Z)Z
     :try_end_0
@@ -15888,10 +14390,9 @@
 
     move-result v7
 
-    .line 4810
     :cond_1
     :goto_1
-    const-string/jumbo v1, "preventAdminActivation"
+    const-string v1, "preventAdminActivation"
 
     const-wide v2, 0x200000000L
 
@@ -15901,14 +14402,11 @@
 
     move v4, v7
 
-    .line 4816
     goto :goto_0
 
-    .line 4797
     :catch_0
     move-exception v6
 
-    .line 4798
     .local v6, "e":Ljava/lang/Exception;
     const-string v0, "RestrictionPolicy"
 
@@ -15918,27 +14416,24 @@
 
     goto :goto_1
 
-    .line 4803
     .end local v6    # "e":Ljava/lang/Exception;
     :cond_2
     invoke-direct {p0, v5}, Lcom/android/server/enterprise/restriction/RestrictionPolicy;->getUidForAdminActivation(I)I
 
     move-result v9
 
-    .line 4804
     .local v9, "uid":I
     iget v0, p1, Landroid/app/enterprise/ContextInfo;->mCallerUid:I
 
     if-ne v0, v9, :cond_1
 
-    .line 4805
     iget-object v0, p0, Lcom/android/server/enterprise/restriction/RestrictionPolicy;->mEdmStorageProvider:Lcom/android/server/enterprise/storage/EdmStorageProvider;
 
     iget v1, p1, Landroid/app/enterprise/ContextInfo;->mCallerUid:I
 
     const-string v2, "RESTRICTION"
 
-    const-string/jumbo v3, "preventAdminActivation"
+    const-string v3, "preventAdminActivation"
 
     invoke-virtual {v0, v1, v2, v3, p2}, Lcom/android/server/enterprise/storage/EdmStorageProvider;->putBoolean(ILjava/lang/String;Ljava/lang/String;Z)Z
 
@@ -15955,31 +14450,25 @@
     .prologue
     const/4 v4, 0x0
 
-    .line 4709
     invoke-direct {p0, p1}, Lcom/android/server/enterprise/restriction/RestrictionPolicy;->enforceAdvancedRestrictionPermission(Landroid/app/enterprise/ContextInfo;)Landroid/app/enterprise/ContextInfo;
 
     move-result-object p1
 
-    .line 4711
     invoke-virtual {p0, p1, v4}, Lcom/android/server/enterprise/restriction/RestrictionPolicy;->isNewAdminInstallationEnabled(Landroid/app/enterprise/ContextInfo;Z)Z
 
     move-result v7
 
-    .line 4712
     .local v7, "state":Z
     invoke-static {p1}, Lcom/android/server/enterprise/EnterpriseDeviceManagerService;->getCallingOrCurrentUserId(Landroid/app/enterprise/ContextInfo;)I
 
     move-result v5
 
-    .line 4714
     .local v5, "userId":I
     const/4 v6, 0x0
 
-    .line 4715
     .local v6, "ret":Z
     if-eqz v7, :cond_2
 
-    .line 4717
     const-string v0, "RestrictionPolicy"
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -16002,7 +14491,6 @@
 
     invoke-static {v0, v1}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 4718
     iget v0, p1, Landroid/app/enterprise/ContextInfo;->mCallerUid:I
 
     invoke-virtual {p0, v0, v5}, Lcom/android/server/enterprise/restriction/RestrictionPolicy;->isAdminEnforcementAllowed(II)Z
@@ -16011,11 +14499,9 @@
 
     if-nez v0, :cond_0
 
-    .line 4740
     :goto_0
     return v4
 
-    .line 4722
     :cond_0
     iget-object v0, p0, Lcom/android/server/enterprise/restriction/RestrictionPolicy;->mEdmStorageProvider:Lcom/android/server/enterprise/storage/EdmStorageProvider;
 
@@ -16023,16 +14509,15 @@
 
     const-string v2, "RESTRICTION"
 
-    const-string/jumbo v3, "preventAdminInstallation"
+    const-string v3, "preventAdminInstallation"
 
     invoke-virtual {v0, v1, v2, v3, p2}, Lcom/android/server/enterprise/storage/EdmStorageProvider;->putBoolean(ILjava/lang/String;Ljava/lang/String;Z)Z
 
     move-result v6
 
-    .line 4734
     :cond_1
     :goto_1
-    const-string/jumbo v1, "preventAdminInstallation"
+    const-string v1, "preventAdminInstallation"
 
     const-wide v2, 0x100000000L
 
@@ -16042,29 +14527,25 @@
 
     move v4, v6
 
-    .line 4740
     goto :goto_0
 
-    .line 4726
     :cond_2
     invoke-direct {p0, v5}, Lcom/android/server/enterprise/restriction/RestrictionPolicy;->getUidForAdminInstallation(I)I
 
     move-result v8
 
-    .line 4728
     .local v8, "uid":I
     iget v0, p1, Landroid/app/enterprise/ContextInfo;->mCallerUid:I
 
     if-ne v0, v8, :cond_1
 
-    .line 4729
     iget-object v0, p0, Lcom/android/server/enterprise/restriction/RestrictionPolicy;->mEdmStorageProvider:Lcom/android/server/enterprise/storage/EdmStorageProvider;
 
     iget v1, p1, Landroid/app/enterprise/ContextInfo;->mCallerUid:I
 
     const-string v2, "RESTRICTION"
 
-    const-string/jumbo v3, "preventAdminInstallation"
+    const-string v3, "preventAdminInstallation"
 
     invoke-virtual {v0, v1, v2, v3, p2}, Lcom/android/server/enterprise/storage/EdmStorageProvider;->putBoolean(ILjava/lang/String;Ljava/lang/String;Z)Z
 
@@ -16081,26 +14562,23 @@
     .prologue
     const/4 v5, 0x0
 
-    .line 1833
     const-string v0, "RestrictionPolicy"
 
     const-string v1, "MiscPolicy.setAllowNonMarketApps"
 
     invoke-static {v0, v1}, Lcom/android/server/enterprise/log/Log;->w(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 1834
     invoke-direct {p0, p1}, Lcom/android/server/enterprise/restriction/RestrictionPolicy;->enforceOwnerOnlyAndRestrictionPermission(Landroid/app/enterprise/ContextInfo;)Landroid/app/enterprise/ContextInfo;
 
     move-result-object p1
 
-    .line 1836
     const-string v0, "RestrictionPolicy"
 
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v2, "setAllowNonMarketApps : "
+    const-string v2, "setAllowNonMarketApps : "
 
     invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -16116,19 +14594,15 @@
 
     invoke-static {v0, v1}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1837
     const/4 v6, 0x1
 
-    .line 1838
     .local v6, "ret":Z
     if-nez p2, :cond_0
 
-    .line 1839
     invoke-static {}, Landroid/os/Binder;->clearCallingIdentity()J
 
     move-result-wide v8
 
-    .line 1840
     .local v8, "token":J
     iget-object v0, p0, Lcom/android/server/enterprise/restriction/RestrictionPolicy;->mContext:Landroid/content/Context;
 
@@ -16142,15 +14616,12 @@
 
     move-result v6
 
-    .line 1842
     invoke-static {v8, v9}, Landroid/os/Binder;->restoreCallingIdentity(J)V
 
-    .line 1844
     .end local v8    # "token":J
     :cond_0
     if-eqz v6, :cond_1
 
-    .line 1845
     iget-object v0, p0, Lcom/android/server/enterprise/restriction/RestrictionPolicy;->mEdmStorageProvider:Lcom/android/server/enterprise/storage/EdmStorageProvider;
 
     iget v1, p1, Landroid/app/enterprise/ContextInfo;->mCallerUid:I
@@ -16165,7 +14636,6 @@
 
     and-int/2addr v6, v0
 
-    .line 1848
     const-string v1, "allowNonMarketApp"
 
     const-wide/high16 v2, 0x1000000000000L
@@ -16176,7 +14646,6 @@
 
     invoke-direct/range {v0 .. v5}, Lcom/android/server/enterprise/restriction/RestrictionPolicy;->updateRestrictionCache(Ljava/lang/String;JZI)V
 
-    .line 1854
     :cond_1
     return v6
 .end method
@@ -16187,17 +14656,14 @@
     .param p2, "enable"    # Z
 
     .prologue
-    .line 1982
     invoke-direct {p0, p1}, Lcom/android/server/enterprise/restriction/RestrictionPolicy;->enforceOwnerOnlyAndRestrictionPermission(Landroid/app/enterprise/ContextInfo;)Landroid/app/enterprise/ContextInfo;
 
     move-result-object p1
 
-    .line 1983
     invoke-static {}, Landroid/os/Binder;->clearCallingIdentity()J
 
     move-result-wide v8
 
-    .line 1985
     .local v8, "token":J
     iget-object v0, p0, Lcom/android/server/enterprise/restriction/RestrictionPolicy;->mEdmStorageProvider:Lcom/android/server/enterprise/storage/EdmStorageProvider;
 
@@ -16211,7 +14677,6 @@
 
     move-result v6
 
-    .line 1988
     .local v6, "ret":Z
     const-string v1, "backgroundDataEnabled"
 
@@ -16225,15 +14690,12 @@
 
     invoke-direct/range {v0 .. v5}, Lcom/android/server/enterprise/restriction/RestrictionPolicy;->updateRestrictionCache(Ljava/lang/String;JZI)V
 
-    .line 1994
     if-eqz v6, :cond_0
 
     if-nez p2, :cond_0
 
-    .line 1995
     invoke-virtual {p0}, Lcom/android/server/enterprise/restriction/RestrictionPolicy;->applyBackgroundDataRestriction()V
 
-    .line 1998
     :cond_0
     const-string v0, "RestrictionPolicy"
 
@@ -16241,7 +14703,7 @@
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v2, "setBackgroundData : "
+    const-string v2, "setBackgroundData : "
 
     invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -16257,10 +14719,8 @@
 
     invoke-static {v0, v1}, Landroid/util/Slog;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1999
     invoke-static {v8, v9}, Landroid/os/Binder;->restoreCallingIdentity(J)V
 
-    .line 2000
     return v6
 .end method
 
@@ -16272,25 +14732,20 @@
     .prologue
     const/4 v5, 0x0
 
-    .line 1427
     invoke-direct {p0, p1}, Lcom/android/server/enterprise/restriction/RestrictionPolicy;->enforceOwnerOnlyAndRestrictionPermission(Landroid/app/enterprise/ContextInfo;)Landroid/app/enterprise/ContextInfo;
 
     move-result-object p1
 
-    .line 1428
     const/4 v8, 0x1
 
-    .line 1429
     .local v8, "success":Z
     invoke-static {}, Landroid/os/Binder;->clearCallingIdentity()J
 
     move-result-wide v10
 
-    .line 1432
     .local v10, "token":J
     if-nez p2, :cond_1
 
-    .line 1433
     :try_start_0
     const-string v0, "backup"
 
@@ -16302,23 +14757,19 @@
 
     move-result-object v6
 
-    .line 1435
     .local v6, "backupManager":Landroid/app/backup/IBackupManager;
     if-nez v6, :cond_0
 
-    .line 1436
     const-string v0, "RestrictionPolicy"
 
     const-string v1, "Failed to get BackupManager"
 
     invoke-static {v0, v1}, Lcom/android/server/enterprise/log/Log;->w(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 1461
     .end local v6    # "backupManager":Landroid/app/backup/IBackupManager;
     :goto_0
     return v5
 
-    .line 1439
     .restart local v6    # "backupManager":Landroid/app/backup/IBackupManager;
     :cond_0
     invoke-interface {v6}, Landroid/app/backup/IBackupManager;->isBackupEnabled()Z
@@ -16327,23 +14778,19 @@
 
     if-eqz v0, :cond_1
 
-    .line 1440
     const/4 v0, 0x0
 
     invoke-interface {v6, v0}, Landroid/app/backup/IBackupManager;->setBackupEnabled(Z)V
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 1442
     .end local v6    # "backupManager":Landroid/app/backup/IBackupManager;
     :cond_1
     const/4 v8, 0x1
 
-    .line 1448
     :goto_1
     if-eqz v8, :cond_2
 
-    .line 1449
     iget-object v0, p0, Lcom/android/server/enterprise/restriction/RestrictionPolicy;->mEdmStorageProvider:Lcom/android/server/enterprise/storage/EdmStorageProvider;
 
     iget v1, p1, Landroid/app/enterprise/ContextInfo;->mCallerUid:I
@@ -16358,7 +14805,6 @@
 
     and-int/2addr v8, v0
 
-    .line 1452
     const-string v1, "backupEnabled"
 
     const-wide v2, 0x100000000000L
@@ -16369,7 +14815,6 @@
 
     invoke-direct/range {v0 .. v5}, Lcom/android/server/enterprise/restriction/RestrictionPolicy;->updateRestrictionCache(Ljava/lang/String;JZI)V
 
-    .line 1459
     :cond_2
     const-string v0, "RestrictionPolicy"
 
@@ -16377,7 +14822,7 @@
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v2, "setBackup : "
+    const-string v2, "setBackup : "
 
     invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -16393,23 +14838,18 @@
 
     invoke-static {v0, v1}, Landroid/util/Slog;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1460
     invoke-static {v10, v11}, Landroid/os/Binder;->restoreCallingIdentity(J)V
 
     move v5, v8
 
-    .line 1461
     goto :goto_0
 
-    .line 1443
     :catch_0
     move-exception v7
 
-    .line 1444
     .local v7, "e":Ljava/lang/Exception;
     const/4 v8, 0x0
 
-    .line 1445
     invoke-virtual {v7}, Ljava/lang/Exception;->printStackTrace()V
 
     goto :goto_1
@@ -16421,21 +14861,17 @@
     .param p2, "enable"    # Z
 
     .prologue
-    .line 1127
     invoke-direct {p0, p1}, Lcom/android/server/enterprise/restriction/RestrictionPolicy;->enforceOwnerOnlyAndTetheringPermission(Landroid/app/enterprise/ContextInfo;)Landroid/app/enterprise/ContextInfo;
 
     move-result-object p1
 
-    .line 1128
     const/4 v7, 0x0
 
-    .line 1129
     .local v7, "ret":Z
     invoke-static {}, Landroid/os/Binder;->clearCallingIdentity()J
 
     move-result-wide v8
 
-    .line 1131
     .local v8, "token":J
     :try_start_0
     iget-object v0, p0, Lcom/android/server/enterprise/restriction/RestrictionPolicy;->mEdmStorageProvider:Lcom/android/server/enterprise/storage/EdmStorageProvider;
@@ -16450,7 +14886,6 @@
 
     move-result v7
 
-    .line 1134
     const-string v1, "bluetoothTetheringEnabled"
 
     const-wide v2, 0x8000000000L
@@ -16463,14 +14898,13 @@
 
     invoke-direct/range {v0 .. v5}, Lcom/android/server/enterprise/restriction/RestrictionPolicy;->updateRestrictionCache(Ljava/lang/String;JZI)V
 
-    .line 1140
     const-string v0, "RestrictionPolicy"
 
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v2, "setBluetoothTethering : "
+    const-string v2, "setBluetoothTethering : "
 
     invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -16486,7 +14920,6 @@
 
     invoke-static {v0, v1}, Landroid/util/Slog;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1141
     if-eqz v7, :cond_0
 
     if-nez p2, :cond_0
@@ -16499,7 +14932,6 @@
 
     if-eqz v0, :cond_0
 
-    .line 1142
     iget-object v0, p0, Lcom/android/server/enterprise/restriction/RestrictionPolicy;->mBluetoothPan:Landroid/bluetooth/BluetoothPan;
 
     const/4 v1, 0x0
@@ -16508,19 +14940,17 @@
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 1147
     :cond_0
     :goto_0
     invoke-static {v8, v9}, Landroid/os/Binder;->restoreCallingIdentity(J)V
 
-    .line 1148
     const-string v0, "RestrictionPolicy"
 
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v2, "setBluetoothTethering : "
+    const-string v2, "setBluetoothTethering : "
 
     invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -16536,14 +14966,11 @@
 
     invoke-static {v0, v1}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1149
     return v7
 
-    .line 1144
     :catch_0
     move-exception v6
 
-    .line 1145
     .local v6, "e":Ljava/lang/Exception;
     const-string v0, "RestrictionPolicy"
 
@@ -16551,7 +14978,7 @@
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v2, "setBluetoothTethering Ex:"
+    const-string v2, "setBluetoothTethering Ex:"
 
     invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -16582,21 +15009,17 @@
     .prologue
     const/4 v4, 0x0
 
-    .line 4601
     const/4 v7, 0x0
 
-    .line 4602
     .local v7, "ret":Z
     invoke-direct {p0, p1}, Lcom/android/server/enterprise/restriction/RestrictionPolicy;->enforceOwnerOnlyAndAdvancedRestrictionPermission(Landroid/app/enterprise/ContextInfo;)Landroid/app/enterprise/ContextInfo;
 
     move-result-object p1
 
-    .line 4603
     invoke-virtual {p0, p1, v4}, Lcom/android/server/enterprise/restriction/RestrictionPolicy;->isCCModeEnabled(Landroid/app/enterprise/ContextInfo;Z)Z
 
     move-result v8
 
-    .line 4604
     .local v8, "state":Z
     const-string v0, "RestrictionPolicy"
 
@@ -16630,47 +15053,40 @@
 
     invoke-static {v0, v1}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 4605
     invoke-static {}, Landroid/os/Binder;->clearCallingIdentity()J
 
     move-result-wide v10
 
-    .line 4606
     .local v10, "token":J
     if-eqz p2, :cond_0
 
-    .line 4607
     new-instance v6, Landroid/content/Intent;
 
     const-string v0, "android.intent.action.sms.ENABLE_MDFPP_MODE"
 
     invoke-direct {v6, v0}, Landroid/content/Intent;-><init>(Ljava/lang/String;)V
 
-    .line 4608
     .local v6, "intent":Landroid/content/Intent;
     iget-object v0, p0, Lcom/android/server/enterprise/restriction/RestrictionPolicy;->mContext:Landroid/content/Context;
 
     invoke-virtual {v0, v6}, Landroid/content/Context;->sendBroadcast(Landroid/content/Intent;)V
 
-    .line 4614
     :goto_0
     invoke-static {v10, v11}, Landroid/os/Binder;->restoreCallingIdentity(J)V
 
-    .line 4617
     iget-object v0, p0, Lcom/android/server/enterprise/restriction/RestrictionPolicy;->mEdmStorageProvider:Lcom/android/server/enterprise/storage/EdmStorageProvider;
 
     iget v1, p1, Landroid/app/enterprise/ContextInfo;->mCallerUid:I
 
     const-string v2, "RESTRICTION"
 
-    const-string/jumbo v3, "setCCMode"
+    const-string v3, "setCCMode"
 
     invoke-virtual {v0, v1, v2, v3, p2}, Lcom/android/server/enterprise/storage/EdmStorageProvider;->putBoolean(ILjava/lang/String;Ljava/lang/String;Z)Z
 
     move-result v7
 
-    .line 4621
-    const-string/jumbo v1, "setCCMode"
+    const-string v1, "setCCMode"
 
     const-wide/32 v2, 0x40000000
 
@@ -16680,14 +15096,13 @@
 
     invoke-direct/range {v0 .. v5}, Lcom/android/server/enterprise/restriction/RestrictionPolicy;->updateRestrictionCache(Ljava/lang/String;JZI)V
 
-    .line 4626
     const-string v0, "RestrictionPolicy"
 
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v2, "setCCMode ret : "
+    const-string v2, "setCCMode ret : "
 
     invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -16703,10 +15118,8 @@
 
     invoke-static {v0, v1}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 4627
     return v7
 
-    .line 4610
     .end local v6    # "intent":Landroid/content/Intent;
     :cond_0
     new-instance v6, Landroid/content/Intent;
@@ -16715,7 +15128,6 @@
 
     invoke-direct {v6, v0}, Landroid/content/Intent;-><init>(Ljava/lang/String;)V
 
-    .line 4611
     .restart local v6    # "intent":Landroid/content/Intent;
     iget-object v0, p0, Lcom/android/server/enterprise/restriction/RestrictionPolicy;->mContext:Landroid/content/Context;
 
@@ -16730,17 +15142,14 @@
     .param p2, "enable"    # Z
 
     .prologue
-    .line 723
     invoke-direct/range {p0 .. p1}, Lcom/android/server/enterprise/restriction/RestrictionPolicy;->enforceHwPermission(Landroid/app/enterprise/ContextInfo;)Landroid/app/enterprise/ContextInfo;
 
     move-result-object p1
 
-    .line 724
     invoke-static/range {p1 .. p1}, Lcom/android/server/enterprise/EnterpriseDeviceManagerService;->getCallingOrCurrentUserId(Landroid/app/enterprise/ContextInfo;)I
 
     move-result v7
 
-    .line 726
     .local v7, "userId":I
     :try_start_0
     move-object/from16 v0, p0
@@ -16761,7 +15170,6 @@
 
     move-result v13
 
-    .line 729
     .local v13, "ret":Z
     const-string v2, "RestrictionPolicy"
 
@@ -16769,7 +15177,7 @@
 
     invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v4, "setCamera : "
+    const-string v4, "setCamera : "
 
     invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -16787,7 +15195,6 @@
 
     invoke-static {v2, v3}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 731
     const-string v3, "cameraEnabled"
 
     const-wide v4, 0x1000000000L
@@ -16798,17 +15205,14 @@
 
     invoke-direct/range {v2 .. v7}, Lcom/android/server/enterprise/restriction/RestrictionPolicy;->updateRestrictionCache(Ljava/lang/String;JZI)V
 
-    .line 737
     if-eqz v13, :cond_0
 
     if-nez p2, :cond_0
 
-    .line 738
     invoke-static {}, Landroid/os/Binder;->clearCallingIdentity()J
 
     move-result-wide v14
 
-    .line 739
     .local v14, "token":J
     invoke-static {}, Landroid/app/ActivityManagerNative;->getDefault()Landroid/app/IActivityManager;
 
@@ -16818,16 +15222,13 @@
 
     invoke-interface {v2, v3, v7}, Landroid/app/IActivityManager;->forceStopPackage(Ljava/lang/String;I)V
 
-    .line 740
     invoke-static/range {p1 .. p1}, Lcom/sec/enterprise/knox/container/KnoxContainerManager;->getContainers(Landroid/app/enterprise/ContextInfo;)Ljava/util/List;
 
     move-result-object v9
 
-    .line 741
     .local v9, "containerList":Ljava/util/List;, "Ljava/util/List<Ljava/lang/Integer;>;"
     if-eqz v9, :cond_1
 
-    .line 742
     invoke-interface {v9}, Ljava/util/List;->iterator()Ljava/util/Iterator;
 
     move-result-object v11
@@ -16850,7 +15251,6 @@
 
     move-result v8
 
-    .line 743
     .local v8, "conId":I
     invoke-static {}, Landroid/app/ActivityManagerNative;->getDefault()Landroid/app/IActivityManager;
 
@@ -16865,7 +15265,6 @@
 
     goto :goto_0
 
-    .line 749
     .end local v8    # "conId":I
     .end local v9    # "containerList":Ljava/util/List;, "Ljava/util/List<Ljava/lang/Integer;>;"
     .end local v11    # "i$":Ljava/util/Iterator;
@@ -16874,7 +15273,6 @@
     :catch_0
     move-exception v12
 
-    .line 750
     .local v12, "re":Landroid/os/RemoteException;
     const-string v2, "RestrictionPolicy"
 
@@ -16902,7 +15300,6 @@
 
     invoke-static {v2, v3}, Lcom/android/server/enterprise/log/Log;->e(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 754
     .end local v12    # "re":Landroid/os/RemoteException;
     :goto_1
     const/4 v13, 0x0
@@ -16911,7 +15308,6 @@
     :goto_2
     return v13
 
-    .line 746
     .restart local v9    # "containerList":Ljava/util/List;, "Ljava/util/List<Ljava/lang/Integer;>;"
     .restart local v13    # "ret":Z
     .restart local v14    # "token":J
@@ -16924,14 +15320,12 @@
 
     goto :goto_2
 
-    .line 751
     .end local v9    # "containerList":Ljava/util/List;, "Ljava/util/List<Ljava/lang/Integer;>;"
     .end local v13    # "ret":Z
     .end local v14    # "token":J
     :catch_1
     move-exception v10
 
-    .line 752
     .local v10, "e":Ljava/lang/Exception;
     const-string v2, "RestrictionPolicy"
 
@@ -16950,29 +15344,24 @@
     .prologue
     const/4 v5, 0x0
 
-    .line 1559
     invoke-direct {p0, p1}, Lcom/android/server/enterprise/restriction/RestrictionPolicy;->enforceOwnerOnlyAndRestrictionPermission(Landroid/app/enterprise/ContextInfo;)Landroid/app/enterprise/ContextInfo;
 
     move-result-object p1
 
-    .line 1560
     const/4 v7, 0x1
 
-    .line 1561
     .local v7, "success":Z
     invoke-static {}, Landroid/os/Binder;->clearCallingIdentity()J
 
     move-result-wide v10
 
-    .line 1564
     .local v10, "token":J
     if-nez p2, :cond_1
 
-    .line 1565
     :try_start_0
     iget-object v0, p0, Lcom/android/server/enterprise/restriction/RestrictionPolicy;->mContext:Landroid/content/Context;
 
-    const-string/jumbo v1, "phone"
+    const-string v1, "phone"
 
     invoke-virtual {v0, v1}, Landroid/content/Context;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
 
@@ -16980,23 +15369,19 @@
 
     check-cast v8, Landroid/telephony/TelephonyManager;
 
-    .line 1567
     .local v8, "telephonyManager":Landroid/telephony/TelephonyManager;
     if-nez v8, :cond_0
 
-    .line 1568
     const-string v0, "RestrictionPolicy"
 
     const-string v1, "Failed to get Telephony Manager"
 
     invoke-static {v0, v1}, Lcom/android/server/enterprise/log/Log;->w(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 1591
     .end local v8    # "telephonyManager":Landroid/telephony/TelephonyManager;
     :goto_0
     return v5
 
-    .line 1571
     .restart local v8    # "telephonyManager":Landroid/telephony/TelephonyManager;
     :cond_0
     invoke-virtual {v8}, Landroid/telephony/TelephonyManager;->getDataEnabled()Z
@@ -17005,23 +15390,19 @@
 
     if-eqz v0, :cond_1
 
-    .line 1572
     const/4 v0, 0x0
 
     invoke-virtual {v8, v0}, Landroid/telephony/TelephonyManager;->setDataEnabled(Z)V
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 1574
     .end local v8    # "telephonyManager":Landroid/telephony/TelephonyManager;
     :cond_1
     const/4 v7, 0x1
 
-    .line 1579
     :goto_1
     if-eqz v7, :cond_2
 
-    .line 1580
     iget-object v0, p0, Lcom/android/server/enterprise/restriction/RestrictionPolicy;->mEdmStorageProvider:Lcom/android/server/enterprise/storage/EdmStorageProvider;
 
     iget v1, p1, Landroid/app/enterprise/ContextInfo;->mCallerUid:I
@@ -17036,7 +15417,6 @@
 
     and-int/2addr v7, v0
 
-    .line 1583
     const-string v1, "cellularDataEnabled"
 
     const-wide v2, 0x400000000000L
@@ -17047,7 +15427,6 @@
 
     invoke-direct/range {v0 .. v5}, Lcom/android/server/enterprise/restriction/RestrictionPolicy;->updateRestrictionCache(Ljava/lang/String;JZI)V
 
-    .line 1589
     :cond_2
     const-string v0, "RestrictionPolicy"
 
@@ -17055,7 +15434,7 @@
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v2, "setCellularData: "
+    const-string v2, "setCellularData: "
 
     invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -17071,23 +15450,18 @@
 
     invoke-static {v0, v1}, Landroid/util/Slog;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1590
     invoke-static {v10, v11}, Landroid/os/Binder;->restoreCallingIdentity(J)V
 
     move v5, v7
 
-    .line 1591
     goto :goto_0
 
-    .line 1575
     :catch_0
     move-exception v6
 
-    .line 1576
     .local v6, "e":Ljava/lang/Exception;
     const/4 v7, 0x0
 
-    .line 1577
     invoke-virtual {v6}, Ljava/lang/Exception;->printStackTrace()V
 
     goto :goto_1
@@ -17099,19 +15473,17 @@
     .param p2, "enable"    # Z
 
     .prologue
-    .line 1775
     invoke-direct {p0, p1}, Lcom/android/server/enterprise/restriction/RestrictionPolicy;->enforceRestrictionPermission(Landroid/app/enterprise/ContextInfo;)Landroid/app/enterprise/ContextInfo;
 
     move-result-object p1
 
-    .line 1776
     const-string v0, "RestrictionPolicy"
 
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v2, "setClipboardEnabled : "
+    const-string v2, "setClipboardEnabled : "
 
     invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -17127,7 +15499,6 @@
 
     invoke-static {v0, v1}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1777
     iget-object v0, p0, Lcom/android/server/enterprise/restriction/RestrictionPolicy;->mEdmStorageProvider:Lcom/android/server/enterprise/storage/EdmStorageProvider;
 
     iget v1, p1, Landroid/app/enterprise/ContextInfo;->mCallerUid:I
@@ -17140,7 +15511,6 @@
 
     move-result v6
 
-    .line 1780
     .local v6, "ret":Z
     const-string v1, "clipboardEnabled"
 
@@ -17158,7 +15528,6 @@
 
     invoke-direct/range {v0 .. v5}, Lcom/android/server/enterprise/restriction/RestrictionPolicy;->updateRestrictionCache(Ljava/lang/String;JZI)V
 
-    .line 1786
     return v6
 .end method
 
@@ -17168,18 +15537,14 @@
     .param p2, "enable"    # Z
 
     .prologue
-    .line 1487
     invoke-direct {p0, p1}, Lcom/android/server/enterprise/restriction/RestrictionPolicy;->enforceOwnerOnlyAndHwPermission(Landroid/app/enterprise/ContextInfo;)Landroid/app/enterprise/ContextInfo;
 
     move-result-object p1
 
-    .line 1489
     if-nez p2, :cond_0
 
-    .line 1490
     invoke-direct {p0}, Lcom/android/server/enterprise/restriction/RestrictionPolicy;->disableNFC()V
 
-    .line 1492
     :cond_0
     const-string v0, "RestrictionPolicy"
 
@@ -17187,7 +15552,7 @@
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v2, "setEnableNFC : "
+    const-string v2, "setEnableNFC : "
 
     invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -17203,7 +15568,6 @@
 
     invoke-static {v0, v1}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1494
     iget-object v0, p0, Lcom/android/server/enterprise/restriction/RestrictionPolicy;->mEdmStorageProvider:Lcom/android/server/enterprise/storage/EdmStorageProvider;
 
     iget v1, p1, Landroid/app/enterprise/ContextInfo;->mCallerUid:I
@@ -17216,7 +15580,6 @@
 
     move-result v6
 
-    .line 1497
     .local v6, "ret":Z
     const-string v1, "nfcEnabled"
 
@@ -17230,14 +15593,12 @@
 
     invoke-direct/range {v0 .. v5}, Lcom/android/server/enterprise/restriction/RestrictionPolicy;->updateRestrictionCache(Ljava/lang/String;JZI)V
 
-    .line 1503
     const-string v0, "content://com.sec.knox.provider/RestrictionPolicy2/isNFCEnabled"
 
     invoke-static {v0}, Landroid/net/Uri;->parse(Ljava/lang/String;)Landroid/net/Uri;
 
     move-result-object v7
 
-    .line 1504
     .local v7, "uri":Landroid/net/Uri;
     iget-object v0, p0, Lcom/android/server/enterprise/restriction/RestrictionPolicy;->mContext:Landroid/content/Context;
 
@@ -17249,7 +15610,6 @@
 
     invoke-virtual {v0, v7, v1}, Landroid/content/ContentResolver;->notifyChange(Landroid/net/Uri;Landroid/database/ContentObserver;)V
 
-    .line 1506
     return v6
 .end method
 
@@ -17261,33 +15621,26 @@
     .prologue
     const/4 v0, 0x0
 
-    .line 4455
     invoke-direct {p0, p1}, Lcom/android/server/enterprise/restriction/RestrictionPolicy;->enforceOwnerOnlyAndRestrictionPermission(Landroid/app/enterprise/ContextInfo;)Landroid/app/enterprise/ContextInfo;
 
     move-result-object p1
 
-    .line 4457
     const/4 v8, 0x0
 
-    .line 4458
     .local v8, "headsetstatus":I
     invoke-virtual {p0, p1, v0}, Lcom/android/server/enterprise/restriction/RestrictionPolicy;->isHeadphoneEnabled(Landroid/app/enterprise/ContextInfo;Z)Z
 
     move-result v10
 
-    .line 4459
     .local v10, "state":Z
     const-string v7, "h2w"
 
-    .line 4460
     .local v7, "headsetName":Ljava/lang/String;
     const/4 v9, 0x0
 
-    .line 4462
     .local v9, "ret":Z
     if-eqz p2, :cond_0
 
-    .line 4463
     :try_start_0
     const-string v0, "RestrictionPolicy"
 
@@ -17311,7 +15664,6 @@
 
     invoke-static {v0, v1}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 4464
     if-nez v10, :cond_1
 
     iget-object v0, p0, Lcom/android/server/enterprise/restriction/RestrictionPolicy;->mAudioManager:Landroid/media/AudioManager;
@@ -17322,17 +15674,14 @@
 
     if-nez v0, :cond_1
 
-    .line 4465
     const/4 v8, 0x0
 
-    .line 4466
     const-string v0, "RestrictionPolicy"
 
     const-string v1, "isWiredHeadsetOn true"
 
     invoke-static {v0, v1}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 4472
     :cond_0
     :goto_0
     iget-object v0, p0, Lcom/android/server/enterprise/restriction/RestrictionPolicy;->mAudioManager:Landroid/media/AudioManager;
@@ -17341,28 +15690,25 @@
 
     invoke-virtual {v0, v1, v8, v7}, Landroid/media/AudioManager;->setWiredDeviceConnectionState(IILjava/lang/String;)V
 
-    .line 4473
     iget-object v0, p0, Lcom/android/server/enterprise/restriction/RestrictionPolicy;->mAudioManager:Landroid/media/AudioManager;
 
     const/16 v1, 0x8
 
     invoke-virtual {v0, v1, v8, v7}, Landroid/media/AudioManager;->setWiredDeviceConnectionState(IILjava/lang/String;)V
 
-    .line 4475
     iget-object v0, p0, Lcom/android/server/enterprise/restriction/RestrictionPolicy;->mEdmStorageProvider:Lcom/android/server/enterprise/storage/EdmStorageProvider;
 
     iget v1, p1, Landroid/app/enterprise/ContextInfo;->mCallerUid:I
 
     const-string v2, "RESTRICTION"
 
-    const-string/jumbo v3, "setHeadphoneState"
+    const-string v3, "setHeadphoneState"
 
     invoke-virtual {v0, v1, v2, v3, p2}, Lcom/android/server/enterprise/storage/EdmStorageProvider;->putBoolean(ILjava/lang/String;Ljava/lang/String;Z)Z
 
     move-result v9
 
-    .line 4478
-    const-string/jumbo v1, "setHeadphoneState"
+    const-string v1, "setHeadphoneState"
 
     const-wide/32 v2, 0x10000000
 
@@ -17376,21 +15722,17 @@
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 4486
     :goto_1
     return v9
 
-    .line 4468
     :cond_1
     const/4 v8, 0x1
 
     goto :goto_0
 
-    .line 4483
     :catch_0
     move-exception v6
 
-    .line 4484
     .local v6, "e":Ljava/lang/Exception;
     const-string v0, "RestrictionPolicy"
 
@@ -17407,37 +15749,30 @@
     .param p2, "enable"    # Z
 
     .prologue
-    .line 2180
     const/4 v6, 0x1
 
-    .line 2181
     .local v6, "ret":Z
     invoke-direct {p0, p1}, Lcom/android/server/enterprise/restriction/RestrictionPolicy;->enforceRestrictionPermission(Landroid/app/enterprise/ContextInfo;)Landroid/app/enterprise/ContextInfo;
 
     move-result-object p1
 
-    .line 2183
     invoke-static {p1}, Lcom/android/server/enterprise/EnterpriseDeviceManagerService;->isKioskOrOwnerUserId(Landroid/app/enterprise/ContextInfo;)Z
 
     move-result v0
 
     if-nez v0, :cond_0
 
-    .line 2184
     const-string v0, "RestrictionPolicy"
 
     const-string v1, "Failed. Caller is not COM container or owner"
 
     invoke-static {v0, v1}, Lcom/android/server/enterprise/log/Log;->w(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 2185
     const/4 v0, 0x0
 
-    .line 2197
     :goto_0
     return v0
 
-    .line 2188
     :cond_0
     iget-object v0, p0, Lcom/android/server/enterprise/restriction/RestrictionPolicy;->mEdmStorageProvider:Lcom/android/server/enterprise/storage/EdmStorageProvider;
 
@@ -17451,7 +15786,6 @@
 
     move-result v6
 
-    .line 2191
     const-string v1, "homeKeyEnabled"
 
     const-wide/high16 v2, 0x10000000000000L
@@ -17470,7 +15804,6 @@
 
     move v0, v6
 
-    .line 2197
     goto :goto_0
 .end method
 
@@ -17480,32 +15813,26 @@
     .param p2, "enable"    # Z
 
     .prologue
-    .line 3752
     invoke-direct {p0, p1}, Lcom/android/server/enterprise/restriction/RestrictionPolicy;->enforceRestrictionPermission(Landroid/app/enterprise/ContextInfo;)Landroid/app/enterprise/ContextInfo;
 
     move-result-object p1
 
-    .line 3753
     iget v0, p1, Landroid/app/enterprise/ContextInfo;->mCallerUid:I
 
     invoke-static {v0}, Landroid/os/UserHandle;->getUserId(I)I
 
     move-result v5
 
-    .line 3756
     .local v5, "userId":I
     const/16 v0, 0x64
 
     if-lt v5, v0, :cond_0
 
-    .line 3757
     const/4 v6, 0x0
 
-    .line 3771
     :goto_0
     return v6
 
-    .line 3760
     :cond_0
     const-string v0, "RestrictionPolicy"
 
@@ -17529,7 +15856,6 @@
 
     invoke-static {v0, v1}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 3762
     iget-object v0, p0, Lcom/android/server/enterprise/restriction/RestrictionPolicy;->mEdmStorageProvider:Lcom/android/server/enterprise/storage/EdmStorageProvider;
 
     iget v1, p1, Landroid/app/enterprise/ContextInfo;->mCallerUid:I
@@ -17542,7 +15868,6 @@
 
     move-result v6
 
-    .line 3765
     .local v6, "ret":Z
     const-string v1, "lockScreenEnabled"
 
@@ -17567,17 +15892,14 @@
 
     const/4 v0, 0x0
 
-    .line 818
     invoke-direct {p0, p1}, Lcom/android/server/enterprise/restriction/RestrictionPolicy;->enforceHwPermission(Landroid/app/enterprise/ContextInfo;)Landroid/app/enterprise/ContextInfo;
 
     move-result-object p1
 
-    .line 819
     invoke-static {p1}, Lcom/android/server/enterprise/EnterpriseDeviceManagerService;->getCallingOrCurrentUserId(Landroid/app/enterprise/ContextInfo;)I
 
     move-result v5
 
-    .line 821
     .local v5, "userId":I
     invoke-virtual {p0, p1, v0}, Lcom/android/server/enterprise/restriction/RestrictionPolicy;->isMicrophoneEnabled(Landroid/app/enterprise/ContextInfo;Z)Z
 
@@ -17587,12 +15909,10 @@
 
     if-nez p2, :cond_0
 
-    .line 823
     invoke-static {}, Landroid/os/Binder;->clearCallingIdentity()J
 
     move-result-wide v8
 
-    .line 826
     .local v8, "token":J
     iget-object v1, p0, Lcom/android/server/enterprise/restriction/RestrictionPolicy;->mContext:Landroid/content/Context;
 
@@ -17600,28 +15920,25 @@
 
     move-result-object v1
 
-    const-string/jumbo v2, "wake_up_lock_screen"
+    const-string v2, "wake_up_lock_screen"
 
     invoke-static {v1, v2, v0, v5}, Landroid/provider/Settings$System;->putIntForUser(Landroid/content/ContentResolver;Ljava/lang/String;II)Z
 
-    .line 830
     iget-object v1, p0, Lcom/android/server/enterprise/restriction/RestrictionPolicy;->mContext:Landroid/content/Context;
 
     invoke-virtual {v1}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
 
     move-result-object v1
 
-    const-string/jumbo v2, "voice_input_control"
+    const-string v2, "voice_input_control"
 
     invoke-static {v1, v2, v0, v5}, Landroid/provider/Settings$System;->getIntForUser(Landroid/content/ContentResolver;Ljava/lang/String;II)I
 
     move-result v6
 
-    .line 833
     .local v6, "currentState":I
     invoke-static {v8, v9}, Landroid/os/Binder;->restoreCallingIdentity(J)V
 
-    .line 836
     .end local v6    # "currentState":I
     .end local v8    # "token":J
     :cond_0
@@ -17637,11 +15954,9 @@
 
     move-result v7
 
-    .line 839
     .local v7, "ret":Z
     if-eqz v7, :cond_2
 
-    .line 840
     const-string v1, "microphoneEnabled"
 
     new-instance v2, Ljava/lang/StringBuilder;
@@ -17675,7 +15990,6 @@
 
     invoke-static {v1, v0, v2}, Lcom/android/server/enterprise/utils/Utils;->writePropertyValue(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Z
 
-    .line 846
     :cond_2
     const-string v1, "microphoneEnabled"
 
@@ -17685,14 +15999,13 @@
 
     invoke-direct/range {v0 .. v5}, Lcom/android/server/enterprise/restriction/RestrictionPolicy;->updateRestrictionCache(Ljava/lang/String;JZI)V
 
-    .line 852
     const-string v0, "RestrictionPolicy"
 
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v2, "setMicrophoneState : "
+    const-string v2, "setMicrophoneState : "
 
     invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -17708,7 +16021,6 @@
 
     invoke-static {v0, v1}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 853
     return v7
 .end method
 
@@ -17718,15 +16030,12 @@
     .param p2, "enable"    # Z
 
     .prologue
-    .line 1376
     invoke-direct {p0, p1}, Lcom/android/server/enterprise/restriction/RestrictionPolicy;->enforceOwnerOnlyAndLocationPermission(Landroid/app/enterprise/ContextInfo;)Landroid/app/enterprise/ContextInfo;
 
     move-result-object p1
 
-    .line 1377
     const/4 v7, 0x1
 
-    .line 1378
     .local v7, "ret":Z
     iget v0, p1, Landroid/app/enterprise/ContextInfo;->mCallerUid:I
 
@@ -17734,17 +16043,14 @@
 
     move-result v5
 
-    .line 1379
     .local v5, "userId":I
     invoke-static {}, Landroid/os/Binder;->clearCallingIdentity()J
 
     move-result-wide v8
 
-    .line 1381
     .local v8, "token":J
     if-nez p2, :cond_0
 
-    .line 1382
     :try_start_0
     iget-object v0, p0, Lcom/android/server/enterprise/restriction/RestrictionPolicy;->mContext:Landroid/content/Context;
 
@@ -17760,15 +16066,12 @@
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 1384
     :cond_0
     const/4 v7, 0x1
 
-    .line 1389
     :goto_0
     if-eqz v7, :cond_1
 
-    .line 1390
     iget-object v0, p0, Lcom/android/server/enterprise/restriction/RestrictionPolicy;->mEdmStorageProvider:Lcom/android/server/enterprise/storage/EdmStorageProvider;
 
     iget v1, p1, Landroid/app/enterprise/ContextInfo;->mCallerUid:I
@@ -17783,7 +16086,6 @@
 
     and-int/2addr v7, v0
 
-    .line 1393
     const-string v1, "mockLocationEnabled"
 
     const-wide v2, 0x80000000000L
@@ -17794,7 +16096,6 @@
 
     invoke-direct/range {v0 .. v5}, Lcom/android/server/enterprise/restriction/RestrictionPolicy;->updateRestrictionCache(Ljava/lang/String;JZI)V
 
-    .line 1399
     :cond_1
     const-string v0, "RestrictionPolicy"
 
@@ -17802,7 +16103,7 @@
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v2, "setMockLocationState : "
+    const-string v2, "setMockLocationState : "
 
     invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -17818,21 +16119,16 @@
 
     invoke-static {v0, v1}, Landroid/util/Slog;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1400
     invoke-static {v8, v9}, Landroid/os/Binder;->restoreCallingIdentity(J)V
 
-    .line 1401
     return v7
 
-    .line 1385
     :catch_0
     move-exception v6
 
-    .line 1386
     .local v6, "e":Ljava/lang/Exception;
     const/4 v7, 0x0
 
-    .line 1387
     invoke-virtual {v6}, Ljava/lang/Exception;->printStackTrace()V
 
     goto :goto_0
@@ -17844,17 +16140,14 @@
     .param p2, "enable"    # Z
 
     .prologue
-    .line 3541
     invoke-direct {p0, p1}, Lcom/android/server/enterprise/restriction/RestrictionPolicy;->enforceCertificatePermission(Landroid/app/enterprise/ContextInfo;)Landroid/app/enterprise/ContextInfo;
 
     move-result-object p1
 
-    .line 3542
     invoke-static {p1}, Lcom/android/server/enterprise/EnterpriseDeviceManagerService;->getCallingOrCurrentUserId(Landroid/app/enterprise/ContextInfo;)I
 
     move-result v5
 
-    .line 3544
     .local v5, "userId":I
     iget-object v0, p0, Lcom/android/server/enterprise/restriction/RestrictionPolicy;->mEdmStorageProvider:Lcom/android/server/enterprise/storage/EdmStorageProvider;
 
@@ -17868,7 +16161,6 @@
 
     move-result v6
 
-    .line 3547
     .local v6, "ret":Z
     const-string v1, "blockNonTrustedApp"
 
@@ -17880,7 +16172,6 @@
 
     invoke-direct/range {v0 .. v5}, Lcom/android/server/enterprise/restriction/RestrictionPolicy;->updateRestrictionCache(Ljava/lang/String;JZI)V
 
-    .line 3553
     return v6
 .end method
 
@@ -17894,29 +16185,24 @@
 
     const/4 v12, 0x0
 
-    .line 1176
     invoke-direct {p0, p1}, Lcom/android/server/enterprise/restriction/RestrictionPolicy;->enforceRestrictionPermission(Landroid/app/enterprise/ContextInfo;)Landroid/app/enterprise/ContextInfo;
 
     move-result-object p1
 
-    .line 1177
     iget v0, p1, Landroid/app/enterprise/ContextInfo;->mCallerUid:I
 
     invoke-static {v0}, Landroid/os/UserHandle;->getUserId(I)I
 
     move-result v10
 
-    .line 1178
     .local v10, "userId":I
     const/4 v7, 0x0
 
-    .line 1179
     .local v7, "ret":Z
     invoke-static {}, Landroid/os/Binder;->clearCallingIdentity()J
 
     move-result-wide v8
 
-    .line 1181
     .local v8, "token":J
     :try_start_0
     iget-object v0, p0, Lcom/android/server/enterprise/restriction/RestrictionPolicy;->mEdmStorageProvider:Lcom/android/server/enterprise/storage/EdmStorageProvider;
@@ -17925,20 +16211,19 @@
 
     const-string v2, "RESTRICTION"
 
-    const-string/jumbo v3, "screenCaptureEnabled"
+    const-string v3, "screenCaptureEnabled"
 
     invoke-virtual {v0, v1, v2, v3, p2}, Lcom/android/server/enterprise/storage/EdmStorageProvider;->putBoolean(ILjava/lang/String;Ljava/lang/String;Z)Z
 
     move-result v7
 
-    .line 1183
     const-string v0, "RestrictionPolicy"
 
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v2, "setScreenCapture : enable="
+    const-string v2, "setScreenCapture : enable="
 
     invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -17966,8 +16251,7 @@
 
     invoke-static {v0, v1}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1185
-    const-string/jumbo v1, "screenCaptureEnabled"
+    const-string v1, "screenCaptureEnabled"
 
     const-wide v2, 0x10000000000L
 
@@ -17983,15 +16267,13 @@
 
     invoke-direct/range {v0 .. v5}, Lcom/android/server/enterprise/restriction/RestrictionPolicy;->updateRestrictionCache(Ljava/lang/String;JZI)V
 
-    .line 1191
     if-eqz v7, :cond_0
 
     iget v0, p1, Landroid/app/enterprise/ContextInfo;->mContainerId:I
 
     if-nez v0, :cond_0
 
-    .line 1192
-    const-string/jumbo v1, "screenCaptureEnabled"
+    const-string v1, "screenCaptureEnabled"
 
     new-instance v0, Ljava/lang/StringBuilder;
 
@@ -18026,11 +16308,9 @@
 
     invoke-static {v1, v0, v2}, Lcom/android/server/enterprise/utils/Utils;->writePropertyValue(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Z
 
-    .line 1196
     :cond_0
     if-eqz v7, :cond_1
 
-    .line 1197
     const/4 v0, 0x0
 
     invoke-direct {p0, v10, v0}, Lcom/android/server/enterprise/restriction/RestrictionPolicy;->isScreenCaptureEnabled(IZ)Z
@@ -18046,35 +16326,29 @@
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 1203
     :cond_1
     :goto_2
     invoke-static {v8, v9}, Landroid/os/Binder;->restoreCallingIdentity(J)V
 
-    .line 1204
     return v7
 
     :cond_2
     move v0, v12
 
-    .line 1192
     goto :goto_0
 
     :cond_3
     move v0, v12
 
-    .line 1197
     goto :goto_1
 
-    .line 1200
     :catch_0
     move-exception v6
 
-    .line 1201
     .local v6, "e":Ljava/lang/Exception;
     const-string v0, "RestrictionPolicy"
 
-    const-string/jumbo v1, "setScreenCapture error"
+    const-string v1, "setScreenCapture error"
 
     invoke-static {v0, v1}, Landroid/util/Slog;->e(Ljava/lang/String;Ljava/lang/String;)I
 
@@ -18089,23 +16363,19 @@
     .prologue
     const/4 v8, 0x0
 
-    .line 1706
     invoke-direct {p0, p1}, Lcom/android/server/enterprise/restriction/RestrictionPolicy;->enforceOwnerOnlyAndHwPermission(Landroid/app/enterprise/ContextInfo;)Landroid/app/enterprise/ContextInfo;
 
     move-result-object p1
 
-    .line 1707
     invoke-virtual {p0}, Lcom/android/server/enterprise/restriction/RestrictionPolicy;->getSDCardState()Ljava/lang/String;
 
     move-result-object v0
 
     if-nez v0, :cond_0
 
-    .line 1739
     :goto_0
     return v8
 
-    .line 1710
     :cond_0
     const-string v0, "RestrictionPolicy"
 
@@ -18113,7 +16383,7 @@
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v2, "setSdCardState : "
+    const-string v2, "setSdCardState : "
 
     invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -18129,16 +16399,13 @@
 
     invoke-static {v0, v1}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1712
     invoke-static {}, Landroid/os/Binder;->clearCallingIdentity()J
 
     move-result-wide v10
 
-    .line 1713
     .local v10, "token":J
     const/4 v8, 0x1
 
-    .line 1714
     .local v8, "ret":Z
     const-string v0, "mount"
 
@@ -18150,7 +16417,6 @@
 
     move-result-object v7
 
-    .line 1717
     .local v7, "mountService":Landroid/os/storage/IMountService;
     :try_start_0
     iget-object v0, p0, Lcom/android/server/enterprise/restriction/RestrictionPolicy;->mEdmStorageProvider:Lcom/android/server/enterprise/storage/EdmStorageProvider;
@@ -18159,7 +16425,7 @@
 
     const-string v2, "RESTRICTION"
 
-    const-string/jumbo v3, "sdCardEnabled"
+    const-string v3, "sdCardEnabled"
 
     invoke-virtual {v0, v1, v2, v3, p2}, Lcom/android/server/enterprise/storage/EdmStorageProvider;->putBoolean(ILjava/lang/String;Ljava/lang/String;Z)Z
 
@@ -18167,8 +16433,7 @@
 
     and-int/2addr v8, v0
 
-    .line 1720
-    const-string/jumbo v1, "sdCardEnabled"
+    const-string v1, "sdCardEnabled"
 
     const-wide v2, 0x800000000000L
 
@@ -18180,10 +16445,8 @@
 
     invoke-direct/range {v0 .. v5}, Lcom/android/server/enterprise/restriction/RestrictionPolicy;->updateRestrictionCache(Ljava/lang/String;JZI)V
 
-    .line 1726
     if-nez p2, :cond_1
 
-    .line 1727
     const-string v0, "/storage/extSdCard"
 
     const/4 v1, 0x0
@@ -18194,13 +16457,11 @@
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 1738
     :goto_1
     invoke-static {v10, v11}, Landroid/os/Binder;->restoreCallingIdentity(J)V
 
     goto :goto_0
 
-    .line 1731
     :cond_1
     :try_start_1
     const-string v0, "/storage/extSdCard"
@@ -18211,11 +16472,9 @@
 
     goto :goto_1
 
-    .line 1735
     :catch_0
     move-exception v6
 
-    .line 1736
     .local v6, "e":Ljava/lang/Exception;
     const/4 v8, 0x0
 
@@ -18228,24 +16487,20 @@
     .param p2, "enable"    # Z
 
     .prologue
-    .line 995
     invoke-virtual {p0, p1, p2}, Lcom/android/server/enterprise/restriction/RestrictionPolicy;->setUsbTethering(Landroid/app/enterprise/ContextInfo;Z)Z
 
     move-result v0
 
-    .line 996
     .local v0, "ret1":Z
     invoke-virtual {p0, p1, p2}, Lcom/android/server/enterprise/restriction/RestrictionPolicy;->setWifiTethering(Landroid/app/enterprise/ContextInfo;Z)Z
 
     move-result v1
 
-    .line 997
     .local v1, "ret2":Z
     invoke-virtual {p0, p1, p2}, Lcom/android/server/enterprise/restriction/RestrictionPolicy;->setBluetoothTethering(Landroid/app/enterprise/ContextInfo;Z)Z
 
     move-result v2
 
-    .line 998
     .local v2, "ret3":Z
     const-string v3, "RestrictionPolicy"
 
@@ -18253,7 +16508,7 @@
 
     invoke-direct {v4}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v5, "setTethering : "
+    const-string v5, "setTethering : "
 
     invoke-virtual {v4, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -18269,7 +16524,6 @@
 
     invoke-static {v3, v4}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 999
     if-eqz v0, :cond_0
 
     if-eqz v1, :cond_0
@@ -18295,25 +16549,20 @@
     .prologue
     const/4 v5, 0x0
 
-    .line 1267
     invoke-direct {p0, p1}, Lcom/android/server/enterprise/restriction/RestrictionPolicy;->enforceOwnerOnlyAndRestrictionPermission(Landroid/app/enterprise/ContextInfo;)Landroid/app/enterprise/ContextInfo;
 
     move-result-object p1
 
-    .line 1268
     const/4 v7, 0x1
 
-    .line 1269
     .local v7, "ret":Z
     invoke-static {}, Landroid/os/Binder;->clearCallingIdentity()J
 
     move-result-wide v8
 
-    .line 1271
     .local v8, "token":J
     if-nez p2, :cond_0
 
-    .line 1272
     :try_start_0
     iget-object v0, p0, Lcom/android/server/enterprise/restriction/RestrictionPolicy;->mContext:Landroid/content/Context;
 
@@ -18329,22 +16578,19 @@
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 1274
     :cond_0
     const/4 v7, 0x1
 
-    .line 1278
     :goto_0
     if-eqz v7, :cond_1
 
-    .line 1279
     iget-object v0, p0, Lcom/android/server/enterprise/restriction/RestrictionPolicy;->mEdmStorageProvider:Lcom/android/server/enterprise/storage/EdmStorageProvider;
 
     iget v1, p1, Landroid/app/enterprise/ContextInfo;->mCallerUid:I
 
     const-string v2, "RESTRICTION"
 
-    const-string/jumbo v3, "usbDebuggingEnabled"
+    const-string v3, "usbDebuggingEnabled"
 
     invoke-virtual {v0, v1, v2, v3, p2}, Lcom/android/server/enterprise/storage/EdmStorageProvider;->putBoolean(ILjava/lang/String;Ljava/lang/String;Z)Z
 
@@ -18352,8 +16598,7 @@
 
     and-int/2addr v7, v0
 
-    .line 1282
-    const-string/jumbo v1, "usbDebuggingEnabled"
+    const-string v1, "usbDebuggingEnabled"
 
     const-wide v2, 0x20000000000L
 
@@ -18363,7 +16608,6 @@
 
     invoke-direct/range {v0 .. v5}, Lcom/android/server/enterprise/restriction/RestrictionPolicy;->updateRestrictionCache(Ljava/lang/String;JZI)V
 
-    .line 1288
     :cond_1
     const-string v0, "RestrictionPolicy"
 
@@ -18371,7 +16615,7 @@
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v2, "setUSBDebugging : "
+    const-string v2, "setUSBDebugging : "
 
     invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -18387,17 +16631,13 @@
 
     invoke-static {v0, v1}, Landroid/util/Slog;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1289
     invoke-static {v8, v9}, Landroid/os/Binder;->restoreCallingIdentity(J)V
 
-    .line 1290
     return v7
 
-    .line 1275
     :catch_0
     move-exception v6
 
-    .line 1276
     .local v6, "e":Ljava/lang/Exception;
     const/4 v7, 0x0
 
@@ -18410,10 +16650,8 @@
     .param p2, "allow"    # Z
 
     .prologue
-    .line 1859
     invoke-direct {p0, p1}, Lcom/android/server/enterprise/restriction/RestrictionPolicy;->enforceOwnerOnlyAndRestrictionPermission(Landroid/app/enterprise/ContextInfo;)Landroid/app/enterprise/ContextInfo;
 
-    .line 1861
     const/4 v0, 0x0
 
     return v0
@@ -18427,15 +16665,12 @@
     .prologue
     const/4 v5, 0x0
 
-    .line 1318
     invoke-direct {p0, p1}, Lcom/android/server/enterprise/restriction/RestrictionPolicy;->enforceOwnerOnlyAndRestrictionPermission(Landroid/app/enterprise/ContextInfo;)Landroid/app/enterprise/ContextInfo;
 
     move-result-object p1
 
-    .line 1319
     const/4 v7, 0x1
 
-    .line 1321
     .local v7, "ret":Z
     const-string v0, "RestrictionPolicy"
 
@@ -18443,7 +16678,7 @@
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v2, "setUsbMassStorage : "
+    const-string v2, "setUsbMassStorage : "
 
     invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -18459,12 +16694,10 @@
 
     invoke-static {v0, v1}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1322
     invoke-static {}, Landroid/os/Binder;->clearCallingIdentity()J
 
     move-result-wide v10
 
-    .line 1323
     .local v10, "token":J
     iget-object v0, p0, Lcom/android/server/enterprise/restriction/RestrictionPolicy;->mEdmStorageProvider:Lcom/android/server/enterprise/storage/EdmStorageProvider;
 
@@ -18480,7 +16713,6 @@
 
     and-int/2addr v7, v0
 
-    .line 1326
     const-string v1, "massStorageEnabled"
 
     const-wide v2, 0x40000000000L
@@ -18491,14 +16723,12 @@
 
     invoke-direct/range {v0 .. v5}, Lcom/android/server/enterprise/restriction/RestrictionPolicy;->updateRestrictionCache(Ljava/lang/String;JZI)V
 
-    .line 1332
     if-nez p2, :cond_2
 
-    .line 1333
     :try_start_0
     iget-object v0, p0, Lcom/android/server/enterprise/restriction/RestrictionPolicy;->mContext:Landroid/content/Context;
 
-    const-string/jumbo v1, "storage"
+    const-string v1, "storage"
 
     invoke-virtual {v0, v1}, Landroid/content/Context;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
 
@@ -18506,23 +16736,19 @@
 
     check-cast v8, Landroid/os/storage/StorageManager;
 
-    .line 1335
     .local v8, "storageManager":Landroid/os/storage/StorageManager;
     if-nez v8, :cond_0
 
-    .line 1336
     const-string v0, "RestrictionPolicy"
 
     const-string v1, "Failed to get StorageManager"
 
     invoke-static {v0, v1}, Lcom/android/server/enterprise/log/Log;->w(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 1350
     .end local v8    # "storageManager":Landroid/os/storage/StorageManager;
     :goto_0
     return v5
 
-    .line 1340
     .restart local v8    # "storageManager":Landroid/os/storage/StorageManager;
     :cond_0
     invoke-virtual {v8}, Landroid/os/storage/StorageManager;->isUsbMassStorageEnabled()Z
@@ -18531,38 +16757,30 @@
 
     if-eqz v0, :cond_1
 
-    .line 1341
     invoke-virtual {v8}, Landroid/os/storage/StorageManager;->disableUsbMassStorage()V
 
-    .line 1342
     :cond_1
     invoke-direct {p0}, Lcom/android/server/enterprise/restriction/RestrictionPolicy;->updateUSBMode()V
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 1344
     .end local v8    # "storageManager":Landroid/os/storage/StorageManager;
     :cond_2
     const/4 v7, 0x1
 
-    .line 1349
     :goto_1
     invoke-static {v10, v11}, Landroid/os/Binder;->restoreCallingIdentity(J)V
 
     move v5, v7
 
-    .line 1350
     goto :goto_0
 
-    .line 1345
     :catch_0
     move-exception v6
 
-    .line 1346
     .local v6, "e":Ljava/lang/Exception;
     const/4 v7, 0x0
 
-    .line 1347
     invoke-virtual {v6}, Ljava/lang/Exception;->printStackTrace()V
 
     goto :goto_1
@@ -18576,21 +16794,17 @@
     .prologue
     const/4 v5, 0x0
 
-    .line 1876
     invoke-direct {p0, p1}, Lcom/android/server/enterprise/restriction/RestrictionPolicy;->enforceOwnerOnlyAndRestrictionPermission(Landroid/app/enterprise/ContextInfo;)Landroid/app/enterprise/ContextInfo;
 
     move-result-object p1
 
-    .line 1877
     const/4 v9, 0x1
 
-    .line 1878
     .local v9, "success":Z
     invoke-static {}, Landroid/os/Binder;->clearCallingIdentity()J
 
     move-result-wide v10
 
-    .line 1879
     .local v10, "token":J
     iget-object v0, p0, Lcom/android/server/enterprise/restriction/RestrictionPolicy;->mEdmStorageProvider:Lcom/android/server/enterprise/storage/EdmStorageProvider;
 
@@ -18598,7 +16812,7 @@
 
     const-string v2, "RESTRICTION"
 
-    const-string/jumbo v3, "usbMediaPlayerEnabled"
+    const-string v3, "usbMediaPlayerEnabled"
 
     invoke-virtual {v0, v1, v2, v3, p2}, Lcom/android/server/enterprise/storage/EdmStorageProvider;->putBoolean(ILjava/lang/String;Ljava/lang/String;Z)Z
 
@@ -18606,8 +16820,7 @@
 
     and-int/2addr v9, v0
 
-    .line 1882
-    const-string/jumbo v1, "usbMediaPlayerEnabled"
+    const-string v1, "usbMediaPlayerEnabled"
 
     const-wide/high16 v2, 0x2000000000000L
 
@@ -18617,13 +16830,10 @@
 
     invoke-direct/range {v0 .. v5}, Lcom/android/server/enterprise/restriction/RestrictionPolicy;->updateRestrictionCache(Ljava/lang/String;JZI)V
 
-    .line 1888
     if-eqz v9, :cond_0
 
-    .line 1890
     if-nez p2, :cond_0
 
-    .line 1892
     :try_start_0
     new-instance v7, Landroid/content/Intent;
 
@@ -18631,47 +16841,40 @@
 
     invoke-direct {v7, v0}, Landroid/content/Intent;-><init>(Ljava/lang/String;)V
 
-    .line 1893
     .local v7, "intent1":Landroid/content/Intent;
     const/high16 v0, 0x20000000
 
     invoke-virtual {v7, v0}, Landroid/content/Intent;->addFlags(I)Landroid/content/Intent;
 
-    .line 1894
     iget-object v0, p0, Lcom/android/server/enterprise/restriction/RestrictionPolicy;->mContext:Landroid/content/Context;
 
     const-string v1, "com.sec.restriction.permission.MTP_DISABLED"
 
     invoke-virtual {v0, v7, v1}, Landroid/content/Context;->sendBroadcast(Landroid/content/Intent;Ljava/lang/String;)V
 
-    .line 1896
     new-instance v8, Landroid/content/Intent;
 
     const-string v0, "android.hardware.usb.action.USB_STATE"
 
     invoke-direct {v8, v0}, Landroid/content/Intent;-><init>(Ljava/lang/String;)V
 
-    .line 1897
     .local v8, "intent2":Landroid/content/Intent;
     const/high16 v0, 0x20000000
 
     invoke-virtual {v8, v0}, Landroid/content/Intent;->addFlags(I)Landroid/content/Intent;
 
-    .line 1898
     const-string v0, "mtp"
 
     const/4 v1, 0x0
 
     invoke-virtual {v8, v0, v1}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Z)Landroid/content/Intent;
 
-    .line 1899
-    const-string/jumbo v0, "ptp"
+    const-string v0, "ptp"
 
     const/4 v1, 0x0
 
     invoke-virtual {v8, v0, v1}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Z)Landroid/content/Intent;
 
-    .line 1900
     iget-object v0, p0, Lcom/android/server/enterprise/restriction/RestrictionPolicy;->mContext:Landroid/content/Context;
 
     sget-object v1, Landroid/os/UserHandle;->ALL:Landroid/os/UserHandle;
@@ -18680,7 +16883,6 @@
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 1906
     .end local v7    # "intent1":Landroid/content/Intent;
     .end local v8    # "intent2":Landroid/content/Intent;
     :cond_0
@@ -18691,7 +16893,7 @@
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v2, "setUSBMediaPlayerAvailability: "
+    const-string v2, "setUSBMediaPlayerAvailability: "
 
     invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -18707,17 +16909,13 @@
 
     invoke-static {v0, v1}, Landroid/util/Slog;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1907
     invoke-static {v10, v11}, Landroid/os/Binder;->restoreCallingIdentity(J)V
 
-    .line 1908
     return v9
 
-    .line 1902
     :catch_0
     move-exception v6
 
-    .line 1903
     .local v6, "e":Ljava/lang/Exception;
     const-string v0, "RestrictionPolicy"
 
@@ -18734,28 +16932,23 @@
     .param p2, "enable"    # Z
 
     .prologue
-    .line 1021
     invoke-direct/range {p0 .. p1}, Lcom/android/server/enterprise/restriction/RestrictionPolicy;->enforceOwnerOnlyAndTetheringPermission(Landroid/app/enterprise/ContextInfo;)Landroid/app/enterprise/ContextInfo;
 
     move-result-object p1
 
-    .line 1022
     const/4 v13, 0x1
 
     .local v13, "ret1":Z
     const/4 v14, 0x1
 
-    .line 1023
     .local v14, "ret2":Z
     invoke-static {}, Landroid/os/Binder;->clearCallingIdentity()J
 
     move-result-wide v16
 
-    .line 1024
     .local v16, "token":J
     if-nez p2, :cond_1
 
-    .line 1026
     move-object/from16 v0, p0
 
     iget-object v2, v0, Lcom/android/server/enterprise/restriction/RestrictionPolicy;->mContext:Landroid/content/Context;
@@ -18768,7 +16961,6 @@
 
     check-cast v12, Landroid/net/ConnectivityManager;
 
-    .line 1028
     .local v12, "mConnManager":Landroid/net/ConnectivityManager;
     invoke-virtual {v12}, Landroid/net/ConnectivityManager;->getTetheredIfaces()[Ljava/lang/String;
 
@@ -18786,7 +16978,6 @@
 
     aget-object v10, v8, v9
 
-    .line 1029
     .local v10, "iface":Ljava/lang/String;
     invoke-virtual {v12}, Landroid/net/ConnectivityManager;->getTetherableUsbRegexs()[Ljava/lang/String;
 
@@ -18800,23 +16991,19 @@
 
     if-eqz v2, :cond_0
 
-    .line 1030
     invoke-virtual {v12, v10}, Landroid/net/ConnectivityManager;->untether(Ljava/lang/String;)I
 
     move-result v2
 
     if-eqz v2, :cond_0
 
-    .line 1031
     const/4 v13, 0x0
 
-    .line 1028
     :cond_0
     add-int/lit8 v9, v9, 0x1
 
     goto :goto_0
 
-    .line 1035
     .end local v8    # "arr$":[Ljava/lang/String;
     .end local v9    # "i$":I
     .end local v10    # "iface":Ljava/lang/String;
@@ -18833,7 +17020,7 @@
 
     const-string v4, "RESTRICTION"
 
-    const-string/jumbo v5, "usbTetheringEnabled"
+    const-string v5, "usbTetheringEnabled"
 
     move/from16 v0, p2
 
@@ -18841,8 +17028,7 @@
 
     move-result v14
 
-    .line 1038
-    const-string/jumbo v3, "usbTetheringEnabled"
+    const-string v3, "usbTetheringEnabled"
 
     const-wide v4, 0x2000000000L
 
@@ -18854,17 +17040,15 @@
 
     invoke-direct/range {v2 .. v7}, Lcom/android/server/enterprise/restriction/RestrictionPolicy;->updateRestrictionCache(Ljava/lang/String;JZI)V
 
-    .line 1044
     invoke-static/range {v16 .. v17}, Landroid/os/Binder;->restoreCallingIdentity(J)V
 
-    .line 1045
     const-string v2, "RestrictionPolicy"
 
     new-instance v3, Ljava/lang/StringBuilder;
 
     invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v4, "setUsbTethering : "
+    const-string v4, "setUsbTethering : "
 
     invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -18882,7 +17066,6 @@
 
     invoke-static {v2, v3}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1046
     if-eqz v13, :cond_2
 
     if-eqz v14, :cond_2
@@ -18904,19 +17087,17 @@
     .param p2, "enable"    # Z
 
     .prologue
-    .line 3497
     invoke-direct {p0, p1}, Lcom/android/server/enterprise/restriction/RestrictionPolicy;->enforceRestrictionPermission(Landroid/app/enterprise/ContextInfo;)Landroid/app/enterprise/ContextInfo;
 
     move-result-object p1
 
-    .line 3499
     const-string v0, "RestrictionPolicy"
 
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v2, "setUseSecureKeypad : "
+    const-string v2, "setUseSecureKeypad : "
 
     invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -18932,14 +17113,13 @@
 
     invoke-static {v0, v1}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 3500
     const-string v0, "RestrictionPolicy"
 
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v2, "setUseSecureKeypad containerID : "
+    const-string v2, "setUseSecureKeypad containerID : "
 
     invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -18957,28 +17137,25 @@
 
     invoke-static {v0, v1}, Landroid/util/Slog;->secD(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 3502
     iget-object v0, p0, Lcom/android/server/enterprise/restriction/RestrictionPolicy;->mEdmStorageProvider:Lcom/android/server/enterprise/storage/EdmStorageProvider;
 
     iget v1, p1, Landroid/app/enterprise/ContextInfo;->mCallerUid:I
 
     const-string v2, "RESTRICTION"
 
-    const-string/jumbo v3, "useSecureKeypad"
+    const-string v3, "useSecureKeypad"
 
     invoke-virtual {v0, v1, v2, v3, p2}, Lcom/android/server/enterprise/storage/EdmStorageProvider;->putBoolean(ILjava/lang/String;Ljava/lang/String;Z)Z
 
     move-result v6
 
-    .line 3506
     .local v6, "ret":Z
     invoke-static {p1}, Lcom/android/server/enterprise/EnterpriseDeviceManagerService;->getCallingOrCurrentUserId(Landroid/app/enterprise/ContextInfo;)I
 
     move-result v5
 
-    .line 3507
     .local v5, "userId":I
-    const-string/jumbo v1, "useSecureKeypad"
+    const-string v1, "useSecureKeypad"
 
     const-wide/32 v2, 0x200000
 
@@ -18988,7 +17165,6 @@
 
     invoke-direct/range {v0 .. v5}, Lcom/android/server/enterprise/restriction/RestrictionPolicy;->updateRestrictionCache(Ljava/lang/String;JZI)V
 
-    .line 3513
     return v6
 .end method
 
@@ -18998,28 +17174,23 @@
     .param p2, "enable"    # Z
 
     .prologue
-    .line 1073
     invoke-direct/range {p0 .. p1}, Lcom/android/server/enterprise/restriction/RestrictionPolicy;->enforceOwnerOnlyAndTetheringPermission(Landroid/app/enterprise/ContextInfo;)Landroid/app/enterprise/ContextInfo;
 
     move-result-object p1
 
-    .line 1074
     const/4 v14, 0x1
 
     .local v14, "ret1":Z
     const/4 v15, 0x1
 
-    .line 1075
     .local v15, "ret2":Z
     invoke-static {}, Landroid/os/Binder;->clearCallingIdentity()J
 
     move-result-wide v16
 
-    .line 1076
     .local v16, "token":J
     if-nez p2, :cond_2
 
-    .line 1077
     move-object/from16 v0, p0
 
     iget-object v2, v0, Lcom/android/server/enterprise/restriction/RestrictionPolicy;->mContext:Landroid/content/Context;
@@ -19032,7 +17203,6 @@
 
     check-cast v12, Landroid/net/ConnectivityManager;
 
-    .line 1079
     .local v12, "mConnManager":Landroid/net/ConnectivityManager;
     invoke-virtual {v12}, Landroid/net/ConnectivityManager;->getTetheredIfaces()[Ljava/lang/String;
 
@@ -19050,7 +17220,6 @@
 
     aget-object v10, v8, v9
 
-    .line 1080
     .local v10, "iface":Ljava/lang/String;
     invoke-virtual {v12}, Landroid/net/ConnectivityManager;->getTetherableWifiRegexs()[Ljava/lang/String;
 
@@ -19064,30 +17233,26 @@
 
     if-eqz v2, :cond_0
 
-    .line 1081
     invoke-virtual {v12, v10}, Landroid/net/ConnectivityManager;->untether(Ljava/lang/String;)I
 
     move-result v2
 
     if-eqz v2, :cond_0
 
-    .line 1082
     const/4 v14, 0x0
 
-    .line 1079
     :cond_0
     add-int/lit8 v9, v9, 0x1
 
     goto :goto_0
 
-    .line 1085
     .end local v10    # "iface":Ljava/lang/String;
     :cond_1
     move-object/from16 v0, p0
 
     iget-object v2, v0, Lcom/android/server/enterprise/restriction/RestrictionPolicy;->mContext:Landroid/content/Context;
 
-    const-string/jumbo v3, "wifi"
+    const-string v3, "wifi"
 
     invoke-virtual {v2, v3}, Landroid/content/Context;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
 
@@ -19095,7 +17260,6 @@
 
     check-cast v13, Landroid/net/wifi/WifiManager;
 
-    .line 1087
     .local v13, "mWifiManager":Landroid/net/wifi/WifiManager;
     const/4 v2, 0x0
 
@@ -19105,7 +17269,6 @@
 
     move-result v15
 
-    .line 1089
     .end local v8    # "arr$":[Ljava/lang/String;
     .end local v9    # "i$":I
     .end local v11    # "len$":I
@@ -19122,7 +17285,7 @@
 
     const-string v4, "RESTRICTION"
 
-    const-string/jumbo v5, "wifiTetheringEnabled"
+    const-string v5, "wifiTetheringEnabled"
 
     move/from16 v0, p2
 
@@ -19130,8 +17293,7 @@
 
     move-result v15
 
-    .line 1092
-    const-string/jumbo v3, "wifiTetheringEnabled"
+    const-string v3, "wifiTetheringEnabled"
 
     const-wide v4, 0x4000000000L
 
@@ -19143,17 +17305,15 @@
 
     invoke-direct/range {v2 .. v7}, Lcom/android/server/enterprise/restriction/RestrictionPolicy;->updateRestrictionCache(Ljava/lang/String;JZI)V
 
-    .line 1098
     invoke-static/range {v16 .. v17}, Landroid/os/Binder;->restoreCallingIdentity(J)V
 
-    .line 1099
     const-string v2, "RestrictionPolicy"
 
     new-instance v3, Ljava/lang/StringBuilder;
 
     invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v4, "setWifiTethering : "
+    const-string v4, "setWifiTethering : "
 
     invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -19171,7 +17331,6 @@
 
     invoke-static {v2, v3}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1100
     if-eqz v14, :cond_3
 
     if-eqz v15, :cond_3
@@ -19191,15 +17350,13 @@
     .locals 9
 
     .prologue
-    .line 2658
     const/4 v7, -0x1
 
     invoke-direct {p0, v7}, Lcom/android/server/enterprise/restriction/RestrictionPolicy;->loadRestrictionCache(I)V
 
-    .line 2661
     iget-object v7, p0, Lcom/android/server/enterprise/restriction/RestrictionPolicy;->mContext:Landroid/content/Context;
 
-    const-string/jumbo v8, "storage"
+    const-string v8, "storage"
 
     invoke-virtual {v7, v8}, Landroid/content/Context;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
 
@@ -19207,20 +17364,16 @@
 
     check-cast v6, Landroid/os/storage/StorageManager;
 
-    .line 2662
     .local v6, "storageManager":Landroid/os/storage/StorageManager;
     if-eqz v6, :cond_0
 
-    .line 2663
     invoke-virtual {v6}, Landroid/os/storage/StorageManager;->getVolumePaths()[Ljava/lang/String;
 
     move-result-object v4
 
-    .line 2664
     .local v4, "paths":[Ljava/lang/String;
     if-eqz v4, :cond_0
 
-    .line 2665
     move-object v0, v4
 
     .local v0, "arr$":[Ljava/lang/String;
@@ -19235,13 +17388,11 @@
 
     aget-object v3, v0, v1
 
-    .line 2666
     .local v3, "path":Ljava/lang/String;
     invoke-virtual {v6, v3}, Landroid/os/storage/StorageManager;->getVolume(Ljava/lang/String;)Landroid/os/storage/StorageVolume;
 
     move-result-object v5
 
-    .line 2667
     .local v5, "storage":Landroid/os/storage/StorageVolume;
     if-eqz v5, :cond_1
 
@@ -19251,12 +17402,10 @@
 
     if-eqz v7, :cond_1
 
-    .line 2668
     const/4 v7, 0x1
 
     iput-boolean v7, p0, Lcom/android/server/enterprise/restriction/RestrictionPolicy;->mIsUsbMassStorageAvailable:Z
 
-    .line 2675
     .end local v0    # "arr$":[Ljava/lang/String;
     .end local v1    # "i$":I
     .end local v2    # "len$":I
@@ -19266,14 +17415,12 @@
     :cond_0
     const-string v7, "RestrictionPolicy"
 
-    const-string/jumbo v8, "systemReady"
+    const-string v8, "systemReady"
 
     invoke-static {v7, v8}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 2676
     return-void
 
-    .line 2665
     .restart local v0    # "arr$":[Ljava/lang/String;
     .restart local v1    # "i$":I
     .restart local v2    # "len$":I

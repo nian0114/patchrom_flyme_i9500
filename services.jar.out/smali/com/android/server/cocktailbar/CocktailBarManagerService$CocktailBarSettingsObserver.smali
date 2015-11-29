@@ -28,18 +28,14 @@
     .prologue
     const/4 v2, 0x0
 
-    .line 608
     iput-object p1, p0, Lcom/android/server/cocktailbar/CocktailBarManagerService$CocktailBarSettingsObserver;->this$0:Lcom/android/server/cocktailbar/CocktailBarManagerService;
 
-    .line 609
     invoke-direct {p0, p2}, Landroid/database/ContentObserver;-><init>(Landroid/os/Handler;)V
 
-    .line 606
     const-string v1, ""
 
     iput-object v1, p0, Lcom/android/server/cocktailbar/CocktailBarManagerService$CocktailBarSettingsObserver;->mLastEnabled:Ljava/lang/String;
 
-    .line 610
     # getter for: Lcom/android/server/cocktailbar/CocktailBarManagerService;->mContext:Landroid/content/Context;
     invoke-static {p1}, Lcom/android/server/cocktailbar/CocktailBarManagerService;->access$500(Lcom/android/server/cocktailbar/CocktailBarManagerService;)Landroid/content/Context;
 
@@ -49,7 +45,6 @@
 
     move-result-object v0
 
-    .line 611
     .local v0, "resolver":Landroid/content/ContentResolver;
     const-string v1, "cocktail_bar_enabled_cocktails"
 
@@ -59,7 +54,6 @@
 
     invoke-virtual {v0, v1, v2, p0, v2}, Landroid/content/ContentResolver;->registerContentObserver(Landroid/net/Uri;ZLandroid/database/ContentObserver;I)V
 
-    .line 614
     return-void
 .end method
 
@@ -70,7 +64,6 @@
     .param p1, "selfChange"    # Z
 
     .prologue
-    .line 618
     iget-object v0, p0, Lcom/android/server/cocktailbar/CocktailBarManagerService$CocktailBarSettingsObserver;->this$0:Lcom/android/server/cocktailbar/CocktailBarManagerService;
 
     const/4 v1, 0x0
@@ -88,6 +81,5 @@
 
     iput-object v0, p0, Lcom/android/server/cocktailbar/CocktailBarManagerService$CocktailBarSettingsObserver;->mLastEnabled:Ljava/lang/String;
 
-    .line 620
     return-void
 .end method

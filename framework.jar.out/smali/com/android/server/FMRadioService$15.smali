@@ -23,7 +23,6 @@
     .locals 0
 
     .prologue
-    .line 956
     iput-object p1, p0, Lcom/android/server/FMRadioService$15;->this$0:Lcom/android/server/FMRadioService;
 
     invoke-direct {p0}, Landroid/content/BroadcastReceiver;-><init>()V
@@ -41,12 +40,10 @@
     .prologue
     const/4 v3, 0x0
 
-    .line 958
     invoke-virtual {p2}, Landroid/content/Intent;->getAction()Ljava/lang/String;
 
     move-result-object v0
 
-    .line 959
     .local v0, "action":Ljava/lang/String;
     const-string v1, "com.samsung.android.motion.PALM_DOWN"
 
@@ -56,7 +53,6 @@
 
     if-eqz v1, :cond_0
 
-    .line 960
     iget-object v1, p0, Lcom/android/server/FMRadioService$15;->this$0:Lcom/android/server/FMRadioService;
 
     # getter for: Lcom/android/server/FMRadioService;->mIsOn:Z
@@ -75,12 +71,10 @@
 
     if-nez v1, :cond_0
 
-    .line 961
     const-string v1, "ACTION_PALM_DOWN : mute"
 
     invoke-static {v1}, Lcom/android/server/FMRadioService;->log(Ljava/lang/String;)V
 
-    .line 962
     iget-object v1, p0, Lcom/android/server/FMRadioService$15;->this$0:Lcom/android/server/FMRadioService;
 
     # getter for: Lcom/android/server/FMRadioService;->mAudioManager:Landroid/media/AudioManager;
@@ -92,7 +86,6 @@
 
     invoke-virtual {v1, v2, v3, v3}, Landroid/media/AudioManager;->setStreamVolume(III)V
 
-    .line 965
     :cond_0
     return-void
 .end method

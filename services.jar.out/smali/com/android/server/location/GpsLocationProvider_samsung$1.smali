@@ -26,7 +26,6 @@
     .locals 0
 
     .prologue
-    .line 1165
     iput-object p1, p0, Lcom/android/server/location/GpsLocationProvider_samsung$1;->this$0:Lcom/android/server/location/GpsLocationProvider_samsung;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -41,10 +40,8 @@
     .param p1, "event"    # Landroid/hardware/scontext/SContextEvent;
 
     .prologue
-    .line 1167
     iget-object v1, p1, Landroid/hardware/scontext/SContextEvent;->scontext:Landroid/hardware/scontext/SContext;
 
-    .line 1168
     .local v1, "scontext":Landroid/hardware/scontext/SContext;
     invoke-virtual {v1}, Landroid/hardware/scontext/SContext;->getType()I
 
@@ -54,12 +51,10 @@
 
     if-ne v2, v3, :cond_0
 
-    .line 1169
     invoke-virtual {p1}, Landroid/hardware/scontext/SContextEvent;->getGyroTemperatureContext()Landroid/hardware/scontext/SContextGyroTemperature;
 
     move-result-object v0
 
-    .line 1170
     .local v0, "gyroTemperatureContext":Landroid/hardware/scontext/SContextGyroTemperature;
     iget-object v2, p0, Lcom/android/server/location/GpsLocationProvider_samsung$1;->this$0:Lcom/android/server/location/GpsLocationProvider_samsung;
 
@@ -67,7 +62,6 @@
 
     if-eqz v2, :cond_0
 
-    .line 1171
     iget-object v2, p0, Lcom/android/server/location/GpsLocationProvider_samsung$1;->this$0:Lcom/android/server/location/GpsLocationProvider_samsung;
 
     invoke-virtual {v0}, Landroid/hardware/scontext/SContextGyroTemperature;->getGyroTemperature()D
@@ -84,7 +78,6 @@
     # invokes: Lcom/android/server/location/GpsLocationProvider_samsung;->native_inject_sensor_data(DD)V
     invoke-static {v2, v4, v5, v6, v7}, Lcom/android/server/location/GpsLocationProvider_samsung;->access$100(Lcom/android/server/location/GpsLocationProvider_samsung;DD)V
 
-    .line 1174
     .end local v0    # "gyroTemperatureContext":Landroid/hardware/scontext/SContextGyroTemperature;
     :cond_0
     return-void

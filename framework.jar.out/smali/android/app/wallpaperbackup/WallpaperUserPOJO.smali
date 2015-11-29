@@ -20,10 +20,8 @@
     .locals 0
 
     .prologue
-    .line 49
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 50
     return-void
 .end method
 
@@ -36,25 +34,18 @@
     .param p5, "userId"    # I
 
     .prologue
-    .line 56
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 57
     iput p1, p0, Landroid/app/wallpaperbackup/WallpaperUserPOJO;->width:I
 
-    .line 58
     iput p2, p0, Landroid/app/wallpaperbackup/WallpaperUserPOJO;->height:I
 
-    .line 59
     iput-object p3, p0, Landroid/app/wallpaperbackup/WallpaperUserPOJO;->name:Ljava/lang/String;
 
-    .line 60
     iput-object p4, p0, Landroid/app/wallpaperbackup/WallpaperUserPOJO;->component:Ljava/lang/String;
 
-    .line 61
     iput p5, p0, Landroid/app/wallpaperbackup/WallpaperUserPOJO;->userId:I
 
-    .line 62
     return-void
 .end method
 
@@ -64,7 +55,6 @@
     .locals 1
 
     .prologue
-    .line 89
     iget-object v0, p0, Landroid/app/wallpaperbackup/WallpaperUserPOJO;->component:Ljava/lang/String;
 
     return-object v0
@@ -74,7 +64,6 @@
     .locals 1
 
     .prologue
-    .line 75
     iget v0, p0, Landroid/app/wallpaperbackup/WallpaperUserPOJO;->height:I
 
     return v0
@@ -84,7 +73,6 @@
     .locals 1
 
     .prologue
-    .line 82
     iget-object v0, p0, Landroid/app/wallpaperbackup/WallpaperUserPOJO;->name:Ljava/lang/String;
 
     return-object v0
@@ -94,7 +82,6 @@
     .locals 1
 
     .prologue
-    .line 96
     iget v0, p0, Landroid/app/wallpaperbackup/WallpaperUserPOJO;->userId:I
 
     return v0
@@ -104,7 +91,6 @@
     .locals 1
 
     .prologue
-    .line 68
     iget v0, p0, Landroid/app/wallpaperbackup/WallpaperUserPOJO;->width:I
 
     return v0
@@ -115,10 +101,8 @@
     .param p1, "component"    # Ljava/lang/String;
 
     .prologue
-    .line 30
     iput-object p1, p0, Landroid/app/wallpaperbackup/WallpaperUserPOJO;->component:Ljava/lang/String;
 
-    .line 31
     return-void
 .end method
 
@@ -127,10 +111,8 @@
     .param p1, "height"    # I
 
     .prologue
-    .line 16
     iput p1, p0, Landroid/app/wallpaperbackup/WallpaperUserPOJO;->height:I
 
-    .line 17
     return-void
 .end method
 
@@ -139,10 +121,8 @@
     .param p1, "name"    # Ljava/lang/String;
 
     .prologue
-    .line 23
     iput-object p1, p0, Landroid/app/wallpaperbackup/WallpaperUserPOJO;->name:Ljava/lang/String;
 
-    .line 24
     return-void
 .end method
 
@@ -151,10 +131,8 @@
     .param p1, "userId"    # I
 
     .prologue
-    .line 37
     iput p1, p0, Landroid/app/wallpaperbackup/WallpaperUserPOJO;->userId:I
 
-    .line 38
     return-void
 .end method
 
@@ -163,9 +141,7 @@
     .param p1, "width"    # I
 
     .prologue
-    .line 9
     iput p1, p0, Landroid/app/wallpaperbackup/WallpaperUserPOJO;->width:I
 
-    .line 10
     return-void
 .end method

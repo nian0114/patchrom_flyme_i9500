@@ -26,7 +26,6 @@
     .locals 0
 
     .prologue
-    .line 124
     iput-object p1, p0, Lcom/android/server/wm/WindowAnimator$1;->this$0:Lcom/android/server/wm/WindowAnimator;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -40,7 +39,6 @@
     .locals 3
 
     .prologue
-    .line 127
     iget-object v0, p0, Lcom/android/server/wm/WindowAnimator$1;->this$0:Lcom/android/server/wm/WindowAnimator;
 
     iget-object v0, v0, Lcom/android/server/wm/WindowAnimator;->mService:Lcom/android/server/wm/WindowManagerService;
@@ -49,7 +47,6 @@
 
     monitor-enter v1
 
-    .line 128
     :try_start_0
     iget-object v0, p0, Lcom/android/server/wm/WindowAnimator$1;->this$0:Lcom/android/server/wm/WindowAnimator;
 
@@ -59,19 +56,15 @@
 
     iput-boolean v2, v0, Lcom/android/server/wm/WindowManagerService;->mAnimationScheduled:Z
 
-    .line 129
     iget-object v0, p0, Lcom/android/server/wm/WindowAnimator$1;->this$0:Lcom/android/server/wm/WindowAnimator;
 
     # invokes: Lcom/android/server/wm/WindowAnimator;->animateLocked()V
     invoke-static {v0}, Lcom/android/server/wm/WindowAnimator;->access$000(Lcom/android/server/wm/WindowAnimator;)V
 
-    .line 130
     monitor-exit v1
 
-    .line 131
     return-void
 
-    .line 130
     :catchall_0
     move-exception v0
 

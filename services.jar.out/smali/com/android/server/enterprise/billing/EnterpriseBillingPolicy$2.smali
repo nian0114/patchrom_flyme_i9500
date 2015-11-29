@@ -23,7 +23,6 @@
     .locals 0
 
     .prologue
-    .line 1168
     iput-object p1, p0, Lcom/android/server/enterprise/billing/EnterpriseBillingPolicy$2;->this$0:Lcom/android/server/enterprise/billing/EnterpriseBillingPolicy;
 
     invoke-direct {p0}, Landroid/content/BroadcastReceiver;-><init>()V
@@ -39,7 +38,6 @@
     .param p2, "intent"    # Landroid/content/Intent;
 
     .prologue
-    .line 1173
     const-string v4, "EnterpriseBillingPolicy"
 
     new-instance v5, Ljava/lang/StringBuilder;
@@ -66,7 +64,6 @@
 
     invoke-static {v4, v5}, Landroid/util/Log;->v(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1174
     const-string v4, "android.intent.extra.user_handle"
 
     const/16 v5, -0x2710
@@ -75,13 +72,11 @@
 
     move-result v0
 
-    .line 1175
     .local v0, "mContainerId":I
     const/16 v4, 0x64
 
     if-lt v0, v4, :cond_1
 
-    .line 1176
     const-string v4, "EnterpriseBillingPolicy"
 
     new-instance v5, Ljava/lang/StringBuilder;
@@ -104,7 +99,6 @@
 
     invoke-static {v4, v5}, Landroid/util/Log;->v(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1177
     iget-object v4, p0, Lcom/android/server/enterprise/billing/EnterpriseBillingPolicy$2;->this$0:Lcom/android/server/enterprise/billing/EnterpriseBillingPolicy;
 
     # getter for: Lcom/android/server/enterprise/billing/EnterpriseBillingPolicy;->ebpHelper:Lcom/android/server/enterprise/billing/EnterpriseBillingPolicyStorageHelper;
@@ -116,7 +110,6 @@
 
     move-result-object v1
 
-    .line 1178
     .local v1, "profile":Lcom/sec/enterprise/knox/billing/EnterpriseBillingProfile;
     if-eqz v1, :cond_1
 
@@ -137,7 +130,6 @@
 
     if-eqz v4, :cond_1
 
-    .line 1179
     const-string v4, "EnterpriseBillingPolicy"
 
     new-instance v5, Ljava/lang/StringBuilder;
@@ -160,7 +152,6 @@
 
     invoke-static {v4, v5}, Landroid/util/Log;->v(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1180
     iget-object v4, p0, Lcom/android/server/enterprise/billing/EnterpriseBillingPolicy$2;->this$0:Lcom/android/server/enterprise/billing/EnterpriseBillingPolicy;
 
     # getter for: Lcom/android/server/enterprise/billing/EnterpriseBillingPolicy;->ebpHelper:Lcom/android/server/enterprise/billing/EnterpriseBillingPolicyStorageHelper;
@@ -172,7 +163,6 @@
 
     move-result v3
 
-    .line 1181
     .local v3, "value":I
     const-string v4, "EnterpriseBillingPolicy"
 
@@ -196,10 +186,8 @@
 
     invoke-static {v4, v5}, Landroid/util/Log;->v(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1182
     if-lez v3, :cond_0
 
-    .line 1183
     iget-object v4, p0, Lcom/android/server/enterprise/billing/EnterpriseBillingPolicy$2;->this$0:Lcom/android/server/enterprise/billing/EnterpriseBillingPolicy;
 
     # getter for: Lcom/android/server/enterprise/billing/EnterpriseBillingPolicy;->ebEngine:Lcom/android/server/enterprise/billing/EnterpriseBillingEngine;
@@ -215,7 +203,6 @@
 
     move-result v2
 
-    .line 1184
     .local v2, "returnValue":Z
     const-string v4, "EnterpriseBillingPolicy"
 
@@ -239,7 +226,6 @@
 
     invoke-static {v4, v5}, Landroid/util/Log;->v(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1185
     if-eqz v2, :cond_0
 
     iget-object v4, p0, Lcom/android/server/enterprise/billing/EnterpriseBillingPolicy$2;->this$0:Lcom/android/server/enterprise/billing/EnterpriseBillingPolicy;
@@ -255,7 +241,6 @@
 
     if-nez v4, :cond_0
 
-    .line 1186
     iget-object v4, p0, Lcom/android/server/enterprise/billing/EnterpriseBillingPolicy$2;->this$0:Lcom/android/server/enterprise/billing/EnterpriseBillingPolicy;
 
     invoke-virtual {v1}, Lcom/sec/enterprise/knox/billing/EnterpriseBillingProfile;->getProfileName()Ljava/lang/String;
@@ -265,7 +250,6 @@
     # invokes: Lcom/android/server/enterprise/billing/EnterpriseBillingPolicy;->deactivateSplitBillingIfLastTime(Ljava/lang/String;)V
     invoke-static {v4, v5}, Lcom/android/server/enterprise/billing/EnterpriseBillingPolicy;->access$400(Lcom/android/server/enterprise/billing/EnterpriseBillingPolicy;Ljava/lang/String;)V
 
-    .line 1189
     .end local v2    # "returnValue":Z
     :cond_0
     const-string v4, "EnterpriseBillingPolicy"
@@ -274,7 +258,6 @@
 
     invoke-static {v4, v5}, Landroid/util/Log;->v(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1192
     .end local v1    # "profile":Lcom/sec/enterprise/knox/billing/EnterpriseBillingProfile;
     .end local v3    # "value":I
     :cond_1

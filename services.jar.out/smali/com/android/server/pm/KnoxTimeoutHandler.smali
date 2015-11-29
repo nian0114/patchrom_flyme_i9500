@@ -59,19 +59,14 @@
     .prologue
     const/4 v0, 0x0
 
-    .line 114
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 53
     iput v0, p0, Lcom/android/server/pm/KnoxTimeoutHandler;->mCurrentId:I
 
-    .line 55
     iput v0, p0, Lcom/android/server/pm/KnoxTimeoutHandler;->mCurrentPersonaId:I
 
-    .line 57
     iput-boolean v0, p0, Lcom/android/server/pm/KnoxTimeoutHandler;->isKnox:Z
 
-    .line 59
     new-instance v0, Lcom/android/server/pm/KnoxTimeoutHandler$TimeoutHandler;
 
     const/4 v1, 0x0
@@ -80,27 +75,22 @@
 
     iput-object v0, p0, Lcom/android/server/pm/KnoxTimeoutHandler;->mHandler:Landroid/os/Handler;
 
-    .line 68
     new-instance v0, Landroid/util/SparseBooleanArray;
 
     invoke-direct {v0}, Landroid/util/SparseBooleanArray;-><init>()V
 
     iput-object v0, p0, Lcom/android/server/pm/KnoxTimeoutHandler;->mWakeLockHeldArr:Landroid/util/SparseBooleanArray;
 
-    .line 220
     new-instance v0, Lcom/android/server/pm/KnoxTimeoutHandler$1;
 
     invoke-direct {v0, p0}, Lcom/android/server/pm/KnoxTimeoutHandler$1;-><init>(Lcom/android/server/pm/KnoxTimeoutHandler;)V
 
     iput-object v0, p0, Lcom/android/server/pm/KnoxTimeoutHandler;->mContainerTimeoutReceiver:Landroid/content/BroadcastReceiver;
 
-    .line 115
     iput-object p1, p0, Lcom/android/server/pm/KnoxTimeoutHandler;->mContext:Landroid/content/Context;
 
-    .line 116
     iput-object p2, p0, Lcom/android/server/pm/KnoxTimeoutHandler;->mService:Lcom/android/server/pm/PersonaManagerService;
 
-    .line 117
     iget-object v0, p0, Lcom/android/server/pm/KnoxTimeoutHandler;->mContext:Landroid/content/Context;
 
     const-string v1, "alarm"
@@ -113,16 +103,12 @@
 
     iput-object v0, p0, Lcom/android/server/pm/KnoxTimeoutHandler;->mAlarmManager:Landroid/app/AlarmManager;
 
-    .line 119
     invoke-direct {p0}, Lcom/android/server/pm/KnoxTimeoutHandler;->registerTapInputEventListener()V
 
-    .line 120
     invoke-direct {p0}, Lcom/android/server/pm/KnoxTimeoutHandler;->registerTimeoutReceiver()V
 
-    .line 121
     invoke-direct {p0}, Lcom/android/server/pm/KnoxTimeoutHandler;->registerSystemPersonaObserver()V
 
-    .line 122
     return-void
 .end method
 
@@ -132,7 +118,6 @@
     .param p1, "x1"    # I
 
     .prologue
-    .line 33
     invoke-direct {p0, p1}, Lcom/android/server/pm/KnoxTimeoutHandler;->resetLockTimer(I)V
 
     return-void
@@ -144,7 +129,6 @@
     .param p1, "x1"    # I
 
     .prologue
-    .line 33
     iput p1, p0, Lcom/android/server/pm/KnoxTimeoutHandler;->mCurrentPersonaId:I
 
     return p1
@@ -156,7 +140,6 @@
     .param p1, "x1"    # I
 
     .prologue
-    .line 33
     invoke-direct {p0, p1}, Lcom/android/server/pm/KnoxTimeoutHandler;->handleActiveUserChange(I)V
 
     return-void
@@ -168,7 +151,6 @@
     .param p1, "x1"    # I
 
     .prologue
-    .line 33
     invoke-direct {p0, p1}, Lcom/android/server/pm/KnoxTimeoutHandler;->cancelLockTimer(I)V
 
     return-void
@@ -180,7 +162,6 @@
     .param p1, "x1"    # I
 
     .prologue
-    .line 33
     invoke-direct {p0, p1}, Lcom/android/server/pm/KnoxTimeoutHandler;->handleHomeShow(I)V
 
     return-void
@@ -191,7 +172,6 @@
     .param p0, "x0"    # Lcom/android/server/pm/KnoxTimeoutHandler;
 
     .prologue
-    .line 33
     iget-boolean v0, p0, Lcom/android/server/pm/KnoxTimeoutHandler;->isKnox:Z
 
     return v0
@@ -202,7 +182,6 @@
     .param p0, "x0"    # Lcom/android/server/pm/KnoxTimeoutHandler;
 
     .prologue
-    .line 33
     iget v0, p0, Lcom/android/server/pm/KnoxTimeoutHandler;->mCurrentId:I
 
     return v0
@@ -213,7 +192,6 @@
     .param p0, "x0"    # Lcom/android/server/pm/KnoxTimeoutHandler;
 
     .prologue
-    .line 33
     iget-object v0, p0, Lcom/android/server/pm/KnoxTimeoutHandler;->mService:Lcom/android/server/pm/PersonaManagerService;
 
     return-object v0
@@ -224,7 +202,6 @@
     .param p0, "x0"    # Lcom/android/server/pm/KnoxTimeoutHandler;
 
     .prologue
-    .line 33
     invoke-direct {p0}, Lcom/android/server/pm/KnoxTimeoutHandler;->getWindowManagerLocked()Lcom/android/server/wm/WindowManagerService;
 
     move-result-object v0
@@ -237,7 +214,6 @@
     .param p1, "userId"    # I
 
     .prologue
-    .line 333
     monitor-enter p0
 
     :try_start_0
@@ -263,12 +239,10 @@
 
     invoke-static {v4, v5}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 335
     invoke-static {}, Landroid/os/Binder;->clearCallingIdentity()J
 
     move-result-wide v2
 
-    .line 336
     .local v2, "token":J
     new-instance v0, Landroid/content/Intent;
 
@@ -276,13 +250,11 @@
 
     invoke-direct {v0, v4}, Landroid/content/Intent;-><init>(Ljava/lang/String;)V
 
-    .line 338
     .local v0, "intent":Landroid/content/Intent;
-    const-string/jumbo v4, "personaId"
+    const-string v4, "personaId"
 
     invoke-virtual {v0, v4, p1}, Landroid/content/Intent;->putExtra(Ljava/lang/String;I)Landroid/content/Intent;
 
-    .line 339
     iget-object v4, p0, Lcom/android/server/pm/KnoxTimeoutHandler;->mContext:Landroid/content/Context;
 
     const/high16 v5, 0x48000000    # 131072.0f
@@ -291,23 +263,19 @@
 
     move-result-object v1
 
-    .line 341
     .local v1, "pi":Landroid/app/PendingIntent;
     iget-object v4, p0, Lcom/android/server/pm/KnoxTimeoutHandler;->mAlarmManager:Landroid/app/AlarmManager;
 
     invoke-virtual {v4, v1}, Landroid/app/AlarmManager;->cancel(Landroid/app/PendingIntent;)V
 
-    .line 343
     invoke-static {v2, v3}, Landroid/os/Binder;->restoreCallingIdentity(J)V
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 344
     monitor-exit p0
 
     return-void
 
-    .line 333
     .end local v0    # "intent":Landroid/content/Intent;
     .end local v1    # "pi":Landroid/app/PendingIntent;
     .end local v2    # "token":J
@@ -323,19 +291,16 @@
     .locals 2
 
     .prologue
-    .line 72
     iget-object v1, p0, Lcom/android/server/pm/KnoxTimeoutHandler;->mWindowManagerService:Lcom/android/server/wm/WindowManagerService;
 
     if-nez v1, :cond_0
 
-    .line 73
-    const-string/jumbo v1, "window"
+    const-string v1, "window"
 
     invoke-static {v1}, Landroid/os/ServiceManager;->getService(Ljava/lang/String;)Landroid/os/IBinder;
 
     move-result-object v0
 
-    .line 74
     .local v0, "b":Landroid/os/IBinder;
     invoke-static {v0}, Landroid/view/IWindowManager$Stub;->asInterface(Landroid/os/IBinder;)Landroid/view/IWindowManager;
 
@@ -345,7 +310,6 @@
 
     iput-object v1, p0, Lcom/android/server/pm/KnoxTimeoutHandler;->mWindowManagerService:Lcom/android/server/wm/WindowManagerService;
 
-    .line 76
     .end local v0    # "b":Landroid/os/IBinder;
     :cond_0
     iget-object v1, p0, Lcom/android/server/pm/KnoxTimeoutHandler;->mWindowManagerService:Lcom/android/server/wm/WindowManagerService;
@@ -358,7 +322,6 @@
     .param p1, "userId"    # I
 
     .prologue
-    .line 169
     monitor-enter p0
 
     :try_start_0
@@ -384,10 +347,8 @@
 
     invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 170
     iput p1, p0, Lcom/android/server/pm/KnoxTimeoutHandler;->mCurrentId:I
 
-    .line 172
     iget-object v0, p0, Lcom/android/server/pm/KnoxTimeoutHandler;->mService:Lcom/android/server/pm/PersonaManagerService;
 
     invoke-virtual {v0, p1}, Lcom/android/server/pm/PersonaManagerService;->exists(I)Z
@@ -396,12 +357,10 @@
 
     if-eqz v0, :cond_2
 
-    .line 173
     const/4 v0, 0x1
 
     iput-boolean v0, p0, Lcom/android/server/pm/KnoxTimeoutHandler;->isKnox:Z
 
-    .line 174
     const-string v0, "KnoxTimeoutHandler"
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -424,7 +383,6 @@
 
     invoke-static {v0, v1}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 176
     iget-object v0, p0, Lcom/android/server/pm/KnoxTimeoutHandler;->mService:Lcom/android/server/pm/PersonaManagerService;
 
     sget-object v1, Landroid/content/pm/PersonaState;->ACTIVE:Landroid/content/pm/PersonaState;
@@ -435,25 +393,21 @@
 
     if-eqz v0, :cond_0
 
-    .line 177
     const-string v0, "KnoxTimeoutHandler"
 
     const-string v1, " reset timeout from active user change"
 
     invoke-static {v0, v1}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 178
     invoke-direct {p0, p1}, Lcom/android/server/pm/KnoxTimeoutHandler;->resetLockTimer(I)V
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 192
     :goto_0
     monitor-exit p0
 
     return-void
 
-    .line 180
     :cond_0
     :try_start_1
     iget-object v0, p0, Lcom/android/server/pm/KnoxTimeoutHandler;->mService:Lcom/android/server/pm/PersonaManagerService;
@@ -466,7 +420,6 @@
 
     if-eqz v0, :cond_1
 
-    .line 181
     const-string v0, "KnoxTimeoutHandler"
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -499,7 +452,6 @@
 
     goto :goto_0
 
-    .line 169
     :catchall_0
     move-exception v0
 
@@ -507,7 +459,6 @@
 
     throw v0
 
-    .line 185
     :cond_1
     :try_start_2
     const-string v0, "KnoxTimeoutHandler"
@@ -532,7 +483,6 @@
 
     invoke-static {v0, v1}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 186
     invoke-direct {p0}, Lcom/android/server/pm/KnoxTimeoutHandler;->getWindowManagerLocked()Lcom/android/server/wm/WindowManagerService;
 
     move-result-object v0
@@ -543,13 +493,11 @@
 
     goto :goto_0
 
-    .line 189
     :cond_2
     const/4 v0, 0x0
 
     iput-boolean v0, p0, Lcom/android/server/pm/KnoxTimeoutHandler;->isKnox:Z
 
-    .line 190
     iget-object v0, p0, Lcom/android/server/pm/KnoxTimeoutHandler;->mService:Lcom/android/server/pm/PersonaManagerService;
 
     invoke-virtual {v0}, Lcom/android/server/pm/PersonaManagerService;->hideKeyguardIfNeeded()V
@@ -564,7 +512,6 @@
     .param p1, "userId"    # I
 
     .prologue
-    .line 154
     const-string v1, "KnoxTimeoutHandler"
 
     new-instance v2, Ljava/lang/StringBuilder;
@@ -599,12 +546,10 @@
 
     invoke-static {v1, v2}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 155
     iget v1, p0, Lcom/android/server/pm/KnoxTimeoutHandler;->mCurrentPersonaId:I
 
     if-eq v1, p1, :cond_0
 
-    .line 156
     const-string v1, "KnoxTimeoutHandler"
 
     new-instance v2, Ljava/lang/StringBuilder;
@@ -627,30 +572,25 @@
 
     invoke-static {v1, v2}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 157
     new-instance v0, Landroid/content/Intent;
 
     const-string v1, "android.intent.action.MAIN"
 
     invoke-direct {v0, v1}, Landroid/content/Intent;-><init>(Ljava/lang/String;)V
 
-    .line 158
     .local v0, "homeIntent":Landroid/content/Intent;
     const-string v1, "android.intent.category.HOME"
 
     invoke-virtual {v0, v1}, Landroid/content/Intent;->addCategory(Ljava/lang/String;)Landroid/content/Intent;
 
-    .line 159
     const/high16 v1, 0x10000000
 
     invoke-virtual {v0, v1}, Landroid/content/Intent;->addFlags(I)Landroid/content/Intent;
 
-    .line 160
     iget-object v1, p0, Lcom/android/server/pm/KnoxTimeoutHandler;->mContext:Landroid/content/Context;
 
     invoke-virtual {v1, v0}, Landroid/content/Context;->startActivity(Landroid/content/Intent;)V
 
-    .line 162
     .end local v0    # "homeIntent":Landroid/content/Intent;
     :cond_0
     return-void
@@ -660,7 +600,6 @@
     .locals 2
 
     .prologue
-    .line 271
     iget-object v0, p0, Lcom/android/server/pm/KnoxTimeoutHandler;->mService:Lcom/android/server/pm/PersonaManagerService;
 
     new-instance v1, Lcom/android/server/pm/KnoxTimeoutHandler$2;
@@ -669,7 +608,6 @@
 
     invoke-virtual {v0, v1}, Lcom/android/server/pm/PersonaManagerService;->registerSystemPersonaObserver(Landroid/content/pm/ISystemPersonaObserver;)Z
 
-    .line 294
     return-void
 .end method
 
@@ -677,14 +615,12 @@
     .locals 3
 
     .prologue
-    .line 252
     const-string v0, "KnoxTimeoutHandler"
 
     const-string v1, " register tap input event listener "
 
     invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 253
     invoke-direct {p0}, Lcom/android/server/pm/KnoxTimeoutHandler;->getWindowManagerLocked()Lcom/android/server/wm/WindowManagerService;
 
     move-result-object v0
@@ -697,7 +633,6 @@
 
     invoke-virtual {v0, v1}, Lcom/android/server/wm/WindowManagerService;->registerPointerEventListener(Landroid/view/WindowManagerPolicy$PointerEventListener;)V
 
-    .line 254
     return-void
 .end method
 
@@ -705,32 +640,27 @@
     .locals 3
 
     .prologue
-    .line 260
     const-string v1, "KnoxTimeoutHandler"
 
     const-string v2, " register time out receiver"
 
     invoke-static {v1, v2}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 262
     new-instance v0, Landroid/content/IntentFilter;
 
     invoke-direct {v0}, Landroid/content/IntentFilter;-><init>()V
 
-    .line 263
     .local v0, "filter":Landroid/content/IntentFilter;
     const-string v1, "com.sec.knox.container.INTENT_ACTION_LOCK_TIMEOUT"
 
     invoke-virtual {v0, v1}, Landroid/content/IntentFilter;->addAction(Ljava/lang/String;)V
 
-    .line 264
     iget-object v1, p0, Lcom/android/server/pm/KnoxTimeoutHandler;->mContext:Landroid/content/Context;
 
     iget-object v2, p0, Lcom/android/server/pm/KnoxTimeoutHandler;->mContainerTimeoutReceiver:Landroid/content/BroadcastReceiver;
 
     invoke-virtual {v1, v2, v0}, Landroid/content/Context;->registerReceiver(Landroid/content/BroadcastReceiver;Landroid/content/IntentFilter;)Landroid/content/Intent;
 
-    .line 265
     return-void
 .end method
 
@@ -739,7 +669,6 @@
     .param p1, "userId"    # I
 
     .prologue
-    .line 301
     monitor-enter p0
 
     :try_start_0
@@ -765,7 +694,6 @@
 
     invoke-static {v8, v9}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 303
     iget-object v8, p0, Lcom/android/server/pm/KnoxTimeoutHandler;->mWakeLockHeldArr:Landroid/util/SparseBooleanArray;
 
     const/4 v9, 0x0
@@ -776,7 +704,6 @@
 
     if-eqz v8, :cond_0
 
-    .line 304
     const-string v8, "KnoxTimeoutHandler"
 
     new-instance v9, Ljava/lang/StringBuilder;
@@ -801,20 +728,17 @@
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 326
     :goto_0
     monitor-exit p0
 
     return-void
 
-    .line 308
     :cond_0
     :try_start_1
     invoke-static {}, Landroid/os/Binder;->clearCallingIdentity()J
 
     move-result-wide v6
 
-    .line 309
     .local v6, "token":J
     new-instance v0, Landroid/content/Intent;
 
@@ -822,13 +746,11 @@
 
     invoke-direct {v0, v8}, Landroid/content/Intent;-><init>(Ljava/lang/String;)V
 
-    .line 311
     .local v0, "intent":Landroid/content/Intent;
-    const-string/jumbo v8, "personaId"
+    const-string v8, "personaId"
 
     invoke-virtual {v0, v8, p1}, Landroid/content/Intent;->putExtra(Ljava/lang/String;I)Landroid/content/Intent;
 
-    .line 312
     iget-object v8, p0, Lcom/android/server/pm/KnoxTimeoutHandler;->mContext:Landroid/content/Context;
 
     const/high16 v9, 0x48000000    # 131072.0f
@@ -837,20 +759,17 @@
 
     move-result-object v1
 
-    .line 314
     .local v1, "pi":Landroid/app/PendingIntent;
     iget-object v8, p0, Lcom/android/server/pm/KnoxTimeoutHandler;->mAlarmManager:Landroid/app/AlarmManager;
 
     invoke-virtual {v8, v1}, Landroid/app/AlarmManager;->cancel(Landroid/app/PendingIntent;)V
 
-    .line 316
     iget-object v8, p0, Lcom/android/server/pm/KnoxTimeoutHandler;->mService:Lcom/android/server/pm/PersonaManagerService;
 
     invoke-virtual {v8, p1}, Lcom/android/server/pm/PersonaManagerService;->getScreenOffTime(I)J
 
     move-result-wide v4
 
-    .line 318
     .local v4, "timeout":J
     const-string v8, "KnoxTimeoutHandler"
 
@@ -874,19 +793,16 @@
 
     invoke-static {v8, v9}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 320
     const-wide/16 v8, 0x0
 
     cmp-long v8, v4, v8
 
     if-lez v8, :cond_1
 
-    .line 321
     invoke-static {}, Landroid/os/SystemClock;->elapsedRealtime()J
 
     move-result-wide v2
 
-    .line 322
     .local v2, "now":J
     iget-object v8, p0, Lcom/android/server/pm/KnoxTimeoutHandler;->mAlarmManager:Landroid/app/AlarmManager;
 
@@ -896,7 +812,6 @@
 
     invoke-virtual {v8, v9, v10, v11, v1}, Landroid/app/AlarmManager;->setExact(IJLandroid/app/PendingIntent;)V
 
-    .line 325
     .end local v2    # "now":J
     :cond_1
     invoke-static {v6, v7}, Landroid/os/Binder;->restoreCallingIdentity(J)V
@@ -905,7 +820,6 @@
 
     goto :goto_0
 
-    .line 301
     .end local v0    # "intent":Landroid/content/Intent;
     .end local v1    # "pi":Landroid/app/PendingIntent;
     .end local v4    # "timeout":J
@@ -924,7 +838,6 @@
     .locals 1
 
     .prologue
-    .line 146
     monitor-enter p0
 
     :try_start_0
@@ -949,14 +862,13 @@
     .param p1, "userId"    # I
 
     .prologue
-    .line 138
     const-string v0, "KnoxTimeoutHandler"
 
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v2, "post home show event for user "
+    const-string v2, "post home show event for user "
 
     invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -972,7 +884,6 @@
 
     invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 139
     iget-object v0, p0, Lcom/android/server/pm/KnoxTimeoutHandler;->mHandler:Landroid/os/Handler;
 
     iget-object v1, p0, Lcom/android/server/pm/KnoxTimeoutHandler;->mHandler:Landroid/os/Handler;
@@ -987,7 +898,6 @@
 
     invoke-virtual {v0, v1}, Landroid/os/Handler;->sendMessage(Landroid/os/Message;)Z
 
-    .line 140
     return-void
 .end method
 
@@ -996,14 +906,13 @@
     .param p1, "userId"    # I
 
     .prologue
-    .line 129
     const-string v0, "KnoxTimeoutHandler"
 
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v2, "postActiveUserChange for user "
+    const-string v2, "postActiveUserChange for user "
 
     invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -1019,7 +928,6 @@
 
     invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 130
     iget-object v0, p0, Lcom/android/server/pm/KnoxTimeoutHandler;->mHandler:Landroid/os/Handler;
 
     iget-object v1, p0, Lcom/android/server/pm/KnoxTimeoutHandler;->mHandler:Landroid/os/Handler;
@@ -1034,7 +942,6 @@
 
     invoke-virtual {v0, v1}, Landroid/os/Handler;->sendMessage(Landroid/os/Message;)Z
 
-    .line 131
     return-void
 .end method
 
@@ -1043,7 +950,6 @@
     .param p1, "userId"    # I
 
     .prologue
-    .line 359
     iget-object v0, p0, Lcom/android/server/pm/KnoxTimeoutHandler;->mHandler:Landroid/os/Handler;
 
     iget-object v1, p0, Lcom/android/server/pm/KnoxTimeoutHandler;->mHandler:Landroid/os/Handler;
@@ -1058,7 +964,6 @@
 
     invoke-virtual {v0, v1}, Landroid/os/Handler;->sendMessage(Landroid/os/Message;)Z
 
-    .line 360
     return-void
 .end method
 
@@ -1067,7 +972,6 @@
     .param p1, "userId"    # I
 
     .prologue
-    .line 351
     iget-object v0, p0, Lcom/android/server/pm/KnoxTimeoutHandler;->mHandler:Landroid/os/Handler;
 
     iget-object v1, p0, Lcom/android/server/pm/KnoxTimeoutHandler;->mHandler:Landroid/os/Handler;
@@ -1082,7 +986,6 @@
 
     invoke-virtual {v0, v1}, Landroid/os/Handler;->sendMessage(Landroid/os/Message;)Z
 
-    .line 352
     return-void
 .end method
 
@@ -1092,11 +995,9 @@
     .param p2, "isAcquired"    # Z
 
     .prologue
-    .line 368
     iget-object v0, p0, Lcom/android/server/pm/KnoxTimeoutHandler;->mWakeLockHeldArr:Landroid/util/SparseBooleanArray;
 
     invoke-virtual {v0, p1, p2}, Landroid/util/SparseBooleanArray;->put(IZ)V
 
-    .line 369
     return-void
 .end method

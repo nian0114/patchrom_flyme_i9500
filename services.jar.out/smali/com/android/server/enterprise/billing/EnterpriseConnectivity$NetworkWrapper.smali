@@ -35,36 +35,30 @@
     .param p5, "netId"    # I
 
     .prologue
-    .line 522
     iput-object p1, p0, Lcom/android/server/enterprise/billing/EnterpriseConnectivity$NetworkWrapper;->this$0:Lcom/android/server/enterprise/billing/EnterpriseConnectivity;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 523
     new-instance v0, Landroid/net/NetworkInfo;
 
     invoke-direct {v0, p2}, Landroid/net/NetworkInfo;-><init>(Landroid/net/NetworkInfo;)V
 
     iput-object v0, p0, Lcom/android/server/enterprise/billing/EnterpriseConnectivity$NetworkWrapper;->mNetworkInfo:Landroid/net/NetworkInfo;
 
-    .line 524
     new-instance v0, Landroid/net/NetworkCapabilities;
 
     invoke-direct {v0, p3}, Landroid/net/NetworkCapabilities;-><init>(Landroid/net/NetworkCapabilities;)V
 
     iput-object v0, p0, Lcom/android/server/enterprise/billing/EnterpriseConnectivity$NetworkWrapper;->mNetworkCapabilities:Landroid/net/NetworkCapabilities;
 
-    .line 525
     new-instance v0, Landroid/net/LinkProperties;
 
     invoke-direct {v0, p4}, Landroid/net/LinkProperties;-><init>(Landroid/net/LinkProperties;)V
 
     iput-object v0, p0, Lcom/android/server/enterprise/billing/EnterpriseConnectivity$NetworkWrapper;->mLink:Landroid/net/LinkProperties;
 
-    .line 526
     iput p5, p0, Lcom/android/server/enterprise/billing/EnterpriseConnectivity$NetworkWrapper;->mNetId:I
 
-    .line 527
     return-void
 .end method
 
@@ -78,7 +72,6 @@
     .param p6, "x5"    # Lcom/android/server/enterprise/billing/EnterpriseConnectivity$1;
 
     .prologue
-    .line 516
     invoke-direct/range {p0 .. p5}, Lcom/android/server/enterprise/billing/EnterpriseConnectivity$NetworkWrapper;-><init>(Lcom/android/server/enterprise/billing/EnterpriseConnectivity;Landroid/net/NetworkInfo;Landroid/net/NetworkCapabilities;Landroid/net/LinkProperties;I)V
 
     return-void
@@ -90,7 +83,6 @@
     .locals 1
 
     .prologue
-    .line 554
     iget-object v0, p0, Lcom/android/server/enterprise/billing/EnterpriseConnectivity$NetworkWrapper;->mLink:Landroid/net/LinkProperties;
 
     return-object v0
@@ -100,7 +92,6 @@
     .locals 1
 
     .prologue
-    .line 550
     iget v0, p0, Lcom/android/server/enterprise/billing/EnterpriseConnectivity$NetworkWrapper;->mNetId:I
 
     return v0
@@ -110,7 +101,6 @@
     .locals 1
 
     .prologue
-    .line 546
     iget-object v0, p0, Lcom/android/server/enterprise/billing/EnterpriseConnectivity$NetworkWrapper;->mNetworkInfo:Landroid/net/NetworkInfo;
 
     invoke-virtual {v0}, Landroid/net/NetworkInfo;->getState()Landroid/net/NetworkInfo$State;
@@ -124,7 +114,6 @@
     .locals 2
 
     .prologue
-    .line 542
     iget-object v0, p0, Lcom/android/server/enterprise/billing/EnterpriseConnectivity$NetworkWrapper;->mNetworkCapabilities:Landroid/net/NetworkCapabilities;
 
     const/4 v1, 0x0
@@ -140,7 +129,6 @@
     .locals 2
 
     .prologue
-    .line 534
     iget-object v0, p0, Lcom/android/server/enterprise/billing/EnterpriseConnectivity$NetworkWrapper;->mNetworkCapabilities:Landroid/net/NetworkCapabilities;
 
     const/16 v1, 0x11
@@ -156,7 +144,6 @@
     .locals 2
 
     .prologue
-    .line 530
     iget-object v0, p0, Lcom/android/server/enterprise/billing/EnterpriseConnectivity$NetworkWrapper;->mNetworkCapabilities:Landroid/net/NetworkCapabilities;
 
     const/16 v1, 0xc
@@ -172,7 +159,6 @@
     .locals 2
 
     .prologue
-    .line 538
     iget-object v0, p0, Lcom/android/server/enterprise/billing/EnterpriseConnectivity$NetworkWrapper;->mNetworkCapabilities:Landroid/net/NetworkCapabilities;
 
     const/4 v1, 0x1
@@ -188,7 +174,6 @@
     .locals 2
 
     .prologue
-    .line 559
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V

@@ -20,15 +20,12 @@
     .param p4, "observable"    # Lcom/samsung/android/contextaware/dataprovider/sensorhubprovider/ISensorHubResetObservable;
 
     .prologue
-    .line 58
     invoke-direct {p0, p1, p2, p3, p4}, Lcom/samsung/android/contextaware/dataprovider/sensorhubprovider/handler/builtin/ActivityTrackerProvider;-><init>(ILandroid/content/Context;Landroid/os/Looper;Lcom/samsung/android/contextaware/dataprovider/sensorhubprovider/ISensorHubResetObservable;)V
 
-    .line 42
     const/4 v0, 0x0
 
     iput v0, p0, Lcom/samsung/android/contextaware/dataprovider/sensorhubprovider/builtin/ActivityTrackerInterruptRunner;->mActivityType:I
 
-    .line 59
     return-void
 .end method
 
@@ -38,13 +35,10 @@
     .locals 0
 
     .prologue
-    .line 155
     invoke-static {}, Lcom/samsung/android/contextaware/utilbundle/logger/CaLogger;->trace()V
 
-    .line 156
     invoke-super {p0}, Lcom/samsung/android/contextaware/dataprovider/sensorhubprovider/handler/builtin/ActivityTrackerProvider;->clear()V
 
-    .line 157
     return-void
 .end method
 
@@ -52,13 +46,10 @@
     .locals 0
 
     .prologue
-    .line 143
     invoke-static {}, Lcom/samsung/android/contextaware/utilbundle/logger/CaLogger;->trace()V
 
-    .line 144
     invoke-super {p0}, Lcom/samsung/android/contextaware/dataprovider/sensorhubprovider/handler/builtin/ActivityTrackerProvider;->disable()V
 
-    .line 145
     return-void
 .end method
 
@@ -66,13 +57,10 @@
     .locals 0
 
     .prologue
-    .line 131
     invoke-static {}, Lcom/samsung/android/contextaware/utilbundle/logger/CaLogger;->trace()V
 
-    .line 132
     invoke-super {p0}, Lcom/samsung/android/contextaware/dataprovider/sensorhubprovider/handler/builtin/ActivityTrackerProvider;->enable()V
 
-    .line 133
     return-void
 .end method
 
@@ -80,15 +68,12 @@
     .locals 1
 
     .prologue
-    .line 70
     iget v0, p0, Lcom/samsung/android/contextaware/dataprovider/sensorhubprovider/builtin/ActivityTrackerInterruptRunner;->mActivityType:I
 
     if-nez v0, :cond_0
 
-    .line 71
     const/4 v0, -0x1
 
-    .line 73
     :goto_0
     return v0
 
@@ -102,7 +87,6 @@
     .locals 1
 
     .prologue
-    .line 84
     sget-object v0, Lcom/samsung/android/contextaware/ContextList$ContextType;->SENSORHUB_RUNNER_ACTIVITY_TRACKER_INTERRUPT:Lcom/samsung/android/contextaware/ContextList$ContextType;
 
     invoke-virtual {v0}, Lcom/samsung/android/contextaware/ContextList$ContextType;->getCode()Ljava/lang/String;
@@ -116,12 +100,10 @@
     .locals 1
 
     .prologue
-    .line 190
     const/4 v0, 0x0
 
     iput v0, p0, Lcom/samsung/android/contextaware/dataprovider/sensorhubprovider/builtin/ActivityTrackerInterruptRunner;->mActivityType:I
 
-    .line 191
     invoke-virtual {p0}, Lcom/samsung/android/contextaware/dataprovider/sensorhubprovider/builtin/ActivityTrackerInterruptRunner;->checkFaultDetectionResult()Z
 
     move-result v0
@@ -132,7 +114,6 @@
 
     invoke-static {v0}, Lcom/samsung/android/contextaware/utilbundle/logger/CaLogger;->debug(Ljava/lang/String;)V
 
-    .line 192
     invoke-super {p0}, Lcom/samsung/android/contextaware/dataprovider/sensorhubprovider/handler/builtin/ActivityTrackerProvider;->getFaultDetectionResult()Landroid/os/Bundle;
 
     move-result-object v0
@@ -144,7 +125,6 @@
     .locals 1
 
     .prologue
-    .line 97
     const/4 v0, 0x1
 
     return v0
@@ -154,7 +134,6 @@
     .locals 0
 
     .prologue
-    .line 167
     return-object p0
 .end method
 
@@ -162,7 +141,6 @@
     .locals 0
 
     .prologue
-    .line 179
     return-object p0
 .end method
 
@@ -178,17 +156,14 @@
     .end annotation
 
     .prologue
-    .line 109
     .local p2, "value":Ljava/lang/Object;, "TE;"
     const/4 v1, 0x1
 
-    .line 111
     .local v1, "result":Z
     const/16 v2, 0x25
 
     if-ne p1, v2, :cond_0
 
-    .line 112
     check-cast p2, Lcom/samsung/android/contextaware/manager/ContextAwarePropertyBundle;
 
     .end local p2    # "value":Ljava/lang/Object;, "TE;"
@@ -202,7 +177,6 @@
 
     move-result v0
 
-    .line 114
     .local v0, "activityType":I
     new-instance v2, Ljava/lang/StringBuilder;
 
@@ -228,7 +202,6 @@
 
     invoke-static {v2}, Lcom/samsung/android/contextaware/utilbundle/logger/CaLogger;->info(Ljava/lang/String;)V
 
-    .line 115
     iget v2, p0, Lcom/samsung/android/contextaware/dataprovider/sensorhubprovider/builtin/ActivityTrackerInterruptRunner;->mActivityType:I
 
     const/4 v3, 0x1
@@ -239,12 +212,10 @@
 
     iput v2, p0, Lcom/samsung/android/contextaware/dataprovider/sensorhubprovider/builtin/ActivityTrackerInterruptRunner;->mActivityType:I
 
-    .line 120
     .end local v0    # "activityType":I
     :goto_0
     return v1
 
-    .line 117
     .restart local p2    # "value":Ljava/lang/Object;, "TE;"
     :cond_0
     const/4 v1, 0x0

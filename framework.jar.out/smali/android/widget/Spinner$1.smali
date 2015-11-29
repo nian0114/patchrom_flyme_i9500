@@ -26,7 +26,6 @@
     .param p2, "x0"    # Landroid/view/View;
 
     .prologue
-    .line 232
     iput-object p1, p0, Landroid/widget/Spinner$1;->this$0:Landroid/widget/Spinner;
 
     iput-object p3, p0, Landroid/widget/Spinner$1;->val$popup:Landroid/widget/Spinner$DropdownPopup;
@@ -42,7 +41,6 @@
     .locals 1
 
     .prologue
-    .line 235
     iget-object v0, p0, Landroid/widget/Spinner$1;->val$popup:Landroid/widget/Spinner$DropdownPopup;
 
     return-object v0
@@ -52,7 +50,6 @@
     .locals 3
 
     .prologue
-    .line 240
     iget-object v0, p0, Landroid/widget/Spinner$1;->this$0:Landroid/widget/Spinner;
 
     # getter for: Landroid/widget/Spinner;->mPopup:Landroid/widget/Spinner$SpinnerPopup;
@@ -74,7 +71,6 @@
 
     if-eqz v0, :cond_0
 
-    .line 241
     iget-object v0, p0, Landroid/widget/Spinner$1;->this$0:Landroid/widget/Spinner;
 
     # getter for: Landroid/widget/Spinner;->mPopup:Landroid/widget/Spinner$SpinnerPopup;
@@ -96,7 +92,6 @@
 
     invoke-interface {v0, v1, v2}, Landroid/widget/Spinner$SpinnerPopup;->show(II)V
 
-    .line 243
     :cond_0
     const/4 v0, 0x1
 

@@ -60,31 +60,26 @@
     .param p8, "cropRect"    # Landroid/graphics/Rect;
 
     .prologue
-    .line 1775
     invoke-direct/range {p0 .. p0}, Landroid/media/Image;-><init>()V
 
-    .line 1776
     const/16 v13, 0x23
 
     move-object/from16 v0, p0
 
     iput v13, v0, Landroid/media/MediaCodec$MediaImage;->mFormat:I
 
-    .line 1777
     move-wide/from16 v0, p4
 
     move-object/from16 v2, p0
 
     iput-wide v0, v2, Landroid/media/MediaCodec$MediaImage;->mTimestamp:J
 
-    .line 1778
     const/4 v13, 0x1
 
     move-object/from16 v0, p0
 
     iput-boolean v13, v0, Landroid/media/MediaCodec$MediaImage;->mIsValid:Z
 
-    .line 1779
     invoke-virtual/range {p1 .. p1}, Ljava/nio/ByteBuffer;->isReadOnly()Z
 
     move-result v13
@@ -93,7 +88,6 @@
 
     iput-boolean v13, v0, Landroid/media/MediaCodec$MediaImage;->mIsReadOnly:Z
 
-    .line 1780
     invoke-virtual/range {p1 .. p1}, Ljava/nio/ByteBuffer;->duplicate()Ljava/nio/ByteBuffer;
 
     move-result-object v13
@@ -102,10 +96,8 @@
 
     iput-object v13, v0, Landroid/media/MediaCodec$MediaImage;->mBuffer:Ljava/nio/ByteBuffer;
 
-    .line 1781
     if-eqz p8, :cond_0
 
-    .line 1782
     move/from16 v0, p6
 
     neg-int v13, v0
@@ -118,7 +110,6 @@
 
     invoke-virtual {v0, v13, v14}, Landroid/graphics/Rect;->offset(II)V
 
-    .line 1784
     :cond_0
     move-object/from16 v0, p0
 
@@ -126,28 +117,24 @@
 
     invoke-super {v0, v1}, Landroid/media/Image;->setCropRect(Landroid/graphics/Rect;)V
 
-    .line 1787
     move/from16 v0, p6
 
     move-object/from16 v1, p0
 
     iput v0, v1, Landroid/media/MediaCodec$MediaImage;->mXOffset:I
 
-    .line 1788
     move/from16 v0, p7
 
     move-object/from16 v1, p0
 
     iput v0, v1, Landroid/media/MediaCodec$MediaImage;->mYOffset:I
 
-    .line 1789
     move-object/from16 v0, p2
 
     move-object/from16 v1, p0
 
     iput-object v0, v1, Landroid/media/MediaCodec$MediaImage;->mInfo:Ljava/nio/ByteBuffer;
 
-    .line 1793
     invoke-virtual/range {p2 .. p2}, Ljava/nio/ByteBuffer;->remaining()I
 
     move-result v13
@@ -164,7 +151,6 @@
 
     if-ne v13, v14, :cond_b
 
-    .line 1794
     :cond_1
     invoke-virtual/range {p2 .. p2}, Ljava/nio/ByteBuffer;->remaining()I
 
@@ -176,27 +162,24 @@
 
     const/4 v10, 0x1
 
-    .line 1795
     .local v10, "sizeIsLong":Z
     :goto_0
     invoke-virtual/range {p2 .. p2}, Ljava/nio/ByteBuffer;->getInt()I
 
     move-result v11
 
-    .line 1796
     .local v11, "type":I
     const/4 v13, 0x1
 
     if-eq v11, v13, :cond_3
 
-    .line 1797
     new-instance v13, Ljava/lang/UnsupportedOperationException;
 
     new-instance v14, Ljava/lang/StringBuilder;
 
     invoke-direct {v14}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v15, "unsupported type: "
+    const-string v15, "unsupported type: "
 
     invoke-virtual {v14, v15}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -214,7 +197,6 @@
 
     throw v13
 
-    .line 1794
     .end local v10    # "sizeIsLong":Z
     .end local v11    # "type":I
     :cond_2
@@ -222,7 +204,6 @@
 
     goto :goto_0
 
-    .line 1799
     .restart local v10    # "sizeIsLong":Z
     .restart local v11    # "type":I
     :cond_3
@@ -234,20 +215,18 @@
 
     move-result v7
 
-    .line 1800
     .local v7, "numPlanes":I
     const/4 v13, 0x3
 
     if-eq v7, v13, :cond_4
 
-    .line 1801
     new-instance v13, Ljava/lang/RuntimeException;
 
     new-instance v14, Ljava/lang/StringBuilder;
 
     invoke-direct {v14}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v15, "unexpected number of planes: "
+    const-string v15, "unexpected number of planes: "
 
     invoke-virtual {v14, v15}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -265,7 +244,6 @@
 
     throw v13
 
-    .line 1803
     :cond_4
     move-object/from16 v0, p0
 
@@ -279,7 +257,6 @@
 
     iput v13, v0, Landroid/media/MediaCodec$MediaImage;->mWidth:I
 
-    .line 1804
     move-object/from16 v0, p0
 
     move-object/from16 v1, p2
@@ -292,7 +269,6 @@
 
     iput v13, v0, Landroid/media/MediaCodec$MediaImage;->mHeight:I
 
-    .line 1805
     move-object/from16 v0, p0
 
     iget v13, v0, Landroid/media/MediaCodec$MediaImage;->mWidth:I
@@ -309,7 +285,6 @@
 
     if-ge v13, v14, :cond_6
 
-    .line 1806
     :cond_5
     new-instance v13, Ljava/lang/UnsupportedOperationException;
 
@@ -317,7 +292,7 @@
 
     invoke-direct {v14}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v15, "unsupported size: "
+    const-string v15, "unsupported size: "
 
     invoke-virtual {v14, v15}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -331,7 +306,7 @@
 
     move-result-object v14
 
-    const-string/jumbo v15, "x"
+    const-string v15, "x"
 
     invoke-virtual {v14, v15}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -353,7 +328,6 @@
 
     throw v13
 
-    .line 1809
     :cond_6
     move-object/from16 v0, p0
 
@@ -363,20 +337,18 @@
 
     move-result v3
 
-    .line 1810
     .local v3, "bitDepth":I
     const/16 v13, 0x8
 
     if-eq v3, v13, :cond_7
 
-    .line 1811
     new-instance v13, Ljava/lang/UnsupportedOperationException;
 
     new-instance v14, Ljava/lang/StringBuilder;
 
     invoke-direct {v14}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v15, "unsupported bit depth: "
+    const-string v15, "unsupported bit depth: "
 
     invoke-virtual {v14, v15}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -394,7 +366,6 @@
 
     throw v13
 
-    .line 1813
     :cond_7
     new-array v13, v7, [Landroid/media/MediaCodec$MediaImage$MediaPlane;
 
@@ -402,14 +373,12 @@
 
     iput-object v13, v0, Landroid/media/MediaCodec$MediaImage;->mPlanes:[Landroid/media/Image$Plane;
 
-    .line 1814
     const/4 v6, 0x0
 
     .local v6, "ix":I
     :goto_1
     if-ge v6, v7, :cond_c
 
-    .line 1815
     move-object/from16 v0, p0
 
     move-object/from16 v1, p2
@@ -418,7 +387,6 @@
 
     move-result v8
 
-    .line 1816
     .local v8, "planeOffset":I
     move-object/from16 v0, p0
 
@@ -428,7 +396,6 @@
 
     move-result v4
 
-    .line 1817
     .local v4, "colInc":I
     move-object/from16 v0, p0
 
@@ -438,7 +405,6 @@
 
     move-result v9
 
-    .line 1818
     .local v9, "rowInc":I
     move-object/from16 v0, p0
 
@@ -448,7 +414,6 @@
 
     move-result v5
 
-    .line 1819
     .local v5, "horiz":I
     move-object/from16 v0, p0
 
@@ -458,7 +423,6 @@
 
     move-result v12
 
-    .line 1820
     .local v12, "vert":I
     if-ne v5, v12, :cond_8
 
@@ -469,7 +433,6 @@
     :goto_2
     if-eq v5, v13, :cond_a
 
-    .line 1821
     :cond_8
     new-instance v13, Ljava/lang/UnsupportedOperationException;
 
@@ -477,7 +440,7 @@
 
     invoke-direct {v14}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v15, "unexpected subsampling: "
+    const-string v15, "unexpected subsampling: "
 
     invoke-virtual {v14, v15}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -487,7 +450,7 @@
 
     move-result-object v14
 
-    const-string/jumbo v15, "x"
+    const-string v15, "x"
 
     invoke-virtual {v14, v15}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -515,17 +478,14 @@
 
     throw v13
 
-    .line 1820
     :cond_9
     const/4 v13, 0x2
 
     goto :goto_2
 
-    .line 1825
     :cond_a
     invoke-virtual/range {p1 .. p1}, Ljava/nio/ByteBuffer;->clear()Ljava/nio/Buffer;
 
-    .line 1826
     move-object/from16 v0, p0
 
     iget-object v13, v0, Landroid/media/MediaCodec$MediaImage;->mBuffer:Ljava/nio/ByteBuffer;
@@ -552,7 +512,6 @@
 
     invoke-virtual {v0, v13}, Ljava/nio/ByteBuffer;->position(I)Ljava/nio/Buffer;
 
-    .line 1828
     invoke-virtual/range {p1 .. p1}, Ljava/nio/ByteBuffer;->position()I
 
     move-result v13
@@ -593,7 +552,6 @@
 
     invoke-virtual {v0, v13}, Ljava/nio/ByteBuffer;->limit(I)Ljava/nio/Buffer;
 
-    .line 1830
     move-object/from16 v0, p0
 
     iget-object v13, v0, Landroid/media/MediaCodec$MediaImage;->mPlanes:[Landroid/media/Image$Plane;
@@ -610,12 +568,10 @@
 
     aput-object v14, v13, v6
 
-    .line 1814
     add-int/lit8 v6, v6, 0x1
 
     goto/16 :goto_1
 
-    .line 1833
     .end local v3    # "bitDepth":I
     .end local v4    # "colInc":I
     .end local v5    # "horiz":I
@@ -633,7 +589,7 @@
 
     invoke-direct {v14}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v15, "unsupported info length: "
+    const-string v15, "unsupported info length: "
 
     invoke-virtual {v14, v15}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -655,7 +611,6 @@
 
     throw v13
 
-    .line 1836
     .restart local v3    # "bitDepth":I
     .restart local v6    # "ix":I
     .restart local v7    # "numPlanes":I
@@ -670,7 +625,6 @@
     .param p0, "x0"    # Landroid/media/MediaCodec$MediaImage;
 
     .prologue
-    .line 1699
     invoke-direct {p0}, Landroid/media/MediaCodec$MediaImage;->checkValid()V
 
     return-void
@@ -680,12 +634,10 @@
     .locals 2
 
     .prologue
-    .line 1760
     iget-boolean v0, p0, Landroid/media/MediaCodec$MediaImage;->mIsValid:Z
 
     if-nez v0, :cond_0
 
-    .line 1761
     new-instance v0, Ljava/lang/IllegalStateException;
 
     const-string v1, "Image is already released"
@@ -694,7 +646,6 @@
 
     throw v0
 
-    .line 1763
     :cond_0
     return-void
 .end method
@@ -705,17 +656,14 @@
     .param p2, "asLong"    # Z
 
     .prologue
-    .line 1766
     if-eqz p2, :cond_0
 
-    .line 1767
     invoke-virtual {p1}, Ljava/nio/ByteBuffer;->getLong()J
 
     move-result-wide v0
 
     long-to-int v0, v0
 
-    .line 1769
     :goto_0
     return v0
 
@@ -733,22 +681,18 @@
     .locals 1
 
     .prologue
-    .line 1740
     iget-boolean v0, p0, Landroid/media/MediaCodec$MediaImage;->mIsValid:Z
 
     if-eqz v0, :cond_0
 
-    .line 1741
     iget-object v0, p0, Landroid/media/MediaCodec$MediaImage;->mBuffer:Ljava/nio/ByteBuffer;
 
     invoke-static {v0}, Ljava/nio/NioUtils;->freeDirectBuffer(Ljava/nio/ByteBuffer;)V
 
-    .line 1742
     const/4 v0, 0x0
 
     iput-boolean v0, p0, Landroid/media/MediaCodec$MediaImage;->mIsValid:Z
 
-    .line 1744
     :cond_0
     return-void
 .end method
@@ -757,10 +701,8 @@
     .locals 1
 
     .prologue
-    .line 1715
     invoke-direct {p0}, Landroid/media/MediaCodec$MediaImage;->checkValid()V
 
-    .line 1716
     iget v0, p0, Landroid/media/MediaCodec$MediaImage;->mFormat:I
 
     return v0
@@ -770,10 +712,8 @@
     .locals 1
 
     .prologue
-    .line 1720
     invoke-direct {p0}, Landroid/media/MediaCodec$MediaImage;->checkValid()V
 
-    .line 1721
     iget v0, p0, Landroid/media/MediaCodec$MediaImage;->mHeight:I
 
     return v0
@@ -783,10 +723,8 @@
     .locals 2
 
     .prologue
-    .line 1735
     invoke-direct {p0}, Landroid/media/MediaCodec$MediaImage;->checkValid()V
 
-    .line 1736
     iget-object v0, p0, Landroid/media/MediaCodec$MediaImage;->mPlanes:[Landroid/media/Image$Plane;
 
     iget-object v1, p0, Landroid/media/MediaCodec$MediaImage;->mPlanes:[Landroid/media/Image$Plane;
@@ -806,10 +744,8 @@
     .locals 2
 
     .prologue
-    .line 1730
     invoke-direct {p0}, Landroid/media/MediaCodec$MediaImage;->checkValid()V
 
-    .line 1731
     iget-wide v0, p0, Landroid/media/MediaCodec$MediaImage;->mTimestamp:J
 
     return-wide v0
@@ -819,10 +755,8 @@
     .locals 1
 
     .prologue
-    .line 1725
     invoke-direct {p0}, Landroid/media/MediaCodec$MediaImage;->checkValid()V
 
-    .line 1726
     iget v0, p0, Landroid/media/MediaCodec$MediaImage;->mWidth:I
 
     return v0
@@ -833,22 +767,18 @@
     .param p1, "cropRect"    # Landroid/graphics/Rect;
 
     .prologue
-    .line 1753
     iget-boolean v0, p0, Landroid/media/MediaCodec$MediaImage;->mIsReadOnly:Z
 
     if-eqz v0, :cond_0
 
-    .line 1754
     new-instance v0, Ljava/nio/ReadOnlyBufferException;
 
     invoke-direct {v0}, Ljava/nio/ReadOnlyBufferException;-><init>()V
 
     throw v0
 
-    .line 1756
     :cond_0
     invoke-super {p0, p1}, Landroid/media/Image;->setCropRect(Landroid/graphics/Rect;)V
 
-    .line 1757
     return-void
 .end method

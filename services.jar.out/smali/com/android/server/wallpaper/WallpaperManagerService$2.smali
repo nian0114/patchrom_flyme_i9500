@@ -25,7 +25,6 @@
     .locals 0
 
     .prologue
-    .line 607
     iput-object p1, p0, Lcom/android/server/wallpaper/WallpaperManagerService$2;->this$0:Lcom/android/server/wallpaper/WallpaperManagerService;
 
     iput-object p2, p0, Lcom/android/server/wallpaper/WallpaperManagerService$2;->val$mPersona:Landroid/os/PersonaManager;
@@ -42,14 +41,13 @@
     .param p1, "personaId"    # I
 
     .prologue
-    .line 619
     const-string v1, "WallpaperManagerService"
 
     new-instance v2, Ljava/lang/StringBuilder;
 
     invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v3, "onKnoxContainerLaunch personaId:"
+    const-string v3, "onKnoxContainerLaunch personaId:"
 
     invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -65,7 +63,6 @@
 
     invoke-static {v1, v2}, Landroid/util/Slog;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 621
     iget-object v1, p0, Lcom/android/server/wallpaper/WallpaperManagerService$2;->val$mPersona:Landroid/os/PersonaManager;
 
     if-eqz v1, :cond_0
@@ -78,14 +75,12 @@
 
     if-eqz v1, :cond_0
 
-    .line 622
     iget-object v1, p0, Lcom/android/server/wallpaper/WallpaperManagerService$2;->val$mPersona:Landroid/os/PersonaManager;
 
     invoke-virtual {v1, p1}, Landroid/os/PersonaManager;->getPersonaInfo(I)Landroid/content/pm/PersonaInfo;
 
     move-result-object v0
 
-    .line 623
     .local v0, "personaInfo":Landroid/content/pm/PersonaInfo;
     if-eqz v0, :cond_0
 
@@ -93,13 +88,11 @@
 
     if-eqz v1, :cond_0
 
-    .line 624
     iget-object v1, p0, Lcom/android/server/wallpaper/WallpaperManagerService$2;->this$0:Lcom/android/server/wallpaper/WallpaperManagerService;
 
     # invokes: Lcom/android/server/wallpaper/WallpaperManagerService;->setKnoxWallpaper(I)V
     invoke-static {v1, p1}, Lcom/android/server/wallpaper/WallpaperManagerService;->access$300(Lcom/android/server/wallpaper/WallpaperManagerService;I)V
 
-    .line 627
     .end local v0    # "personaInfo":Landroid/content/pm/PersonaInfo;
     :cond_0
     return-void
@@ -110,14 +103,13 @@
     .param p1, "personaId"    # I
 
     .prologue
-    .line 610
     const-string v0, "WallpaperManagerService"
 
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v2, "onPersonaActive personaId:"
+    const-string v2, "onPersonaActive personaId:"
 
     invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -133,18 +125,15 @@
 
     invoke-static {v0, v1}, Landroid/util/Slog;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 611
     const/16 v0, 0x64
 
     if-lt p1, v0, :cond_0
 
-    .line 612
     iget-object v0, p0, Lcom/android/server/wallpaper/WallpaperManagerService$2;->this$0:Lcom/android/server/wallpaper/WallpaperManagerService;
 
     # invokes: Lcom/android/server/wallpaper/WallpaperManagerService;->setKnoxWallpaper(I)V
     invoke-static {v0, p1}, Lcom/android/server/wallpaper/WallpaperManagerService;->access$300(Lcom/android/server/wallpaper/WallpaperManagerService;I)V
 
-    .line 614
     :cond_0
     return-void
 .end method
@@ -154,7 +143,6 @@
     .param p1, "personaId"    # I
 
     .prologue
-    .line 632
     return-void
 .end method
 
@@ -163,7 +151,6 @@
     .param p1, "personaId"    # I
 
     .prologue
-    .line 637
     return-void
 .end method
 
@@ -174,6 +161,5 @@
     .param p3, "newState"    # Landroid/content/pm/PersonaState;
 
     .prologue
-    .line 642
     return-void
 .end method

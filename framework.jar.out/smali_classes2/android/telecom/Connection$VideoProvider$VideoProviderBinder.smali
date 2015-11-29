@@ -23,7 +23,6 @@
     .locals 0
 
     .prologue
-    .line 220
     iput-object p1, p0, Landroid/telecom/Connection$VideoProvider$VideoProviderBinder;->this$0:Landroid/telecom/Connection$VideoProvider;
 
     invoke-direct {p0}, Lcom/android/internal/telecom/IVideoProvider$Stub;-><init>()V
@@ -37,7 +36,6 @@
     .param p2, "x1"    # Landroid/telecom/Connection$1;
 
     .prologue
-    .line 220
     invoke-direct {p0, p1}, Landroid/telecom/Connection$VideoProvider$VideoProviderBinder;-><init>(Landroid/telecom/Connection$VideoProvider;)V
 
     return-void
@@ -49,7 +47,6 @@
     .locals 2
 
     .prologue
-    .line 265
     iget-object v0, p0, Landroid/telecom/Connection$VideoProvider$VideoProviderBinder;->this$0:Landroid/telecom/Connection$VideoProvider;
 
     # getter for: Landroid/telecom/Connection$VideoProvider;->mMessageHandler:Landroid/telecom/Connection$VideoProvider$VideoProviderHandler;
@@ -65,7 +62,6 @@
 
     invoke-virtual {v0}, Landroid/os/Message;->sendToTarget()V
 
-    .line 266
     return-void
 .end method
 
@@ -73,7 +69,6 @@
     .locals 2
 
     .prologue
-    .line 261
     iget-object v0, p0, Landroid/telecom/Connection$VideoProvider$VideoProviderBinder;->this$0:Landroid/telecom/Connection$VideoProvider;
 
     # getter for: Landroid/telecom/Connection$VideoProvider;->mMessageHandler:Landroid/telecom/Connection$VideoProvider$VideoProviderHandler;
@@ -89,7 +84,6 @@
 
     invoke-virtual {v0}, Landroid/os/Message;->sendToTarget()V
 
-    .line 262
     return-void
 .end method
 
@@ -98,7 +92,6 @@
     .param p1, "requestProfile"    # Landroid/telecom/VideoProfile;
 
     .prologue
-    .line 251
     iget-object v0, p0, Landroid/telecom/Connection$VideoProvider$VideoProviderBinder;->this$0:Landroid/telecom/Connection$VideoProvider;
 
     # getter for: Landroid/telecom/Connection$VideoProvider;->mMessageHandler:Landroid/telecom/Connection$VideoProvider$VideoProviderHandler;
@@ -114,7 +107,6 @@
 
     invoke-virtual {v0}, Landroid/os/Message;->sendToTarget()V
 
-    .line 253
     return-void
 .end method
 
@@ -123,7 +115,6 @@
     .param p1, "responseProfile"    # Landroid/telecom/VideoProfile;
 
     .prologue
-    .line 256
     iget-object v0, p0, Landroid/telecom/Connection$VideoProvider$VideoProviderBinder;->this$0:Landroid/telecom/Connection$VideoProvider;
 
     # getter for: Landroid/telecom/Connection$VideoProvider;->mMessageHandler:Landroid/telecom/Connection$VideoProvider$VideoProviderHandler;
@@ -139,7 +130,6 @@
 
     invoke-virtual {v0}, Landroid/os/Message;->sendToTarget()V
 
-    .line 258
     return-void
 .end method
 
@@ -148,7 +138,6 @@
     .param p1, "cameraId"    # Ljava/lang/String;
 
     .prologue
-    .line 227
     iget-object v0, p0, Landroid/telecom/Connection$VideoProvider$VideoProviderBinder;->this$0:Landroid/telecom/Connection$VideoProvider;
 
     # getter for: Landroid/telecom/Connection$VideoProvider;->mMessageHandler:Landroid/telecom/Connection$VideoProvider$VideoProviderHandler;
@@ -164,7 +153,6 @@
 
     invoke-virtual {v0}, Landroid/os/Message;->sendToTarget()V
 
-    .line 228
     return-void
 .end method
 
@@ -173,7 +161,6 @@
     .param p1, "rotation"    # I
 
     .prologue
-    .line 241
     iget-object v0, p0, Landroid/telecom/Connection$VideoProvider$VideoProviderBinder;->this$0:Landroid/telecom/Connection$VideoProvider;
 
     # getter for: Landroid/telecom/Connection$VideoProvider;->mMessageHandler:Landroid/telecom/Connection$VideoProvider$VideoProviderHandler;
@@ -191,7 +178,6 @@
 
     invoke-virtual {v0}, Landroid/os/Message;->sendToTarget()V
 
-    .line 244
     return-void
 .end method
 
@@ -200,7 +186,6 @@
     .param p1, "surface"    # Landroid/view/Surface;
 
     .prologue
-    .line 235
     iget-object v0, p0, Landroid/telecom/Connection$VideoProvider$VideoProviderBinder;->this$0:Landroid/telecom/Connection$VideoProvider;
 
     # getter for: Landroid/telecom/Connection$VideoProvider;->mMessageHandler:Landroid/telecom/Connection$VideoProvider$VideoProviderHandler;
@@ -216,7 +201,6 @@
 
     invoke-virtual {v0}, Landroid/os/Message;->sendToTarget()V
 
-    .line 236
     return-void
 .end method
 
@@ -225,7 +209,6 @@
     .param p1, "uri"    # Ljava/lang/String;
 
     .prologue
-    .line 269
     iget-object v0, p0, Landroid/telecom/Connection$VideoProvider$VideoProviderBinder;->this$0:Landroid/telecom/Connection$VideoProvider;
 
     # getter for: Landroid/telecom/Connection$VideoProvider;->mMessageHandler:Landroid/telecom/Connection$VideoProvider$VideoProviderHandler;
@@ -241,7 +224,6 @@
 
     invoke-virtual {v0}, Landroid/os/Message;->sendToTarget()V
 
-    .line 270
     return-void
 .end method
 
@@ -250,7 +232,6 @@
     .param p1, "surface"    # Landroid/view/Surface;
 
     .prologue
-    .line 231
     iget-object v0, p0, Landroid/telecom/Connection$VideoProvider$VideoProviderBinder;->this$0:Landroid/telecom/Connection$VideoProvider;
 
     # getter for: Landroid/telecom/Connection$VideoProvider;->mMessageHandler:Landroid/telecom/Connection$VideoProvider$VideoProviderHandler;
@@ -266,7 +247,6 @@
 
     invoke-virtual {v0}, Landroid/os/Message;->sendToTarget()V
 
-    .line 232
     return-void
 .end method
 
@@ -275,7 +255,6 @@
     .param p1, "videoCallbackBinder"    # Landroid/os/IBinder;
 
     .prologue
-    .line 222
     iget-object v0, p0, Landroid/telecom/Connection$VideoProvider$VideoProviderBinder;->this$0:Landroid/telecom/Connection$VideoProvider;
 
     # getter for: Landroid/telecom/Connection$VideoProvider;->mMessageHandler:Landroid/telecom/Connection$VideoProvider$VideoProviderHandler;
@@ -291,7 +270,6 @@
 
     invoke-virtual {v0}, Landroid/os/Message;->sendToTarget()V
 
-    .line 224
     return-void
 .end method
 
@@ -300,7 +278,6 @@
     .param p1, "value"    # F
 
     .prologue
-    .line 247
     iget-object v0, p0, Landroid/telecom/Connection$VideoProvider$VideoProviderBinder;->this$0:Landroid/telecom/Connection$VideoProvider;
 
     # getter for: Landroid/telecom/Connection$VideoProvider;->mMessageHandler:Landroid/telecom/Connection$VideoProvider$VideoProviderHandler;
@@ -320,6 +297,5 @@
 
     invoke-virtual {v0}, Landroid/os/Message;->sendToTarget()V
 
-    .line 248
     return-void
 .end method

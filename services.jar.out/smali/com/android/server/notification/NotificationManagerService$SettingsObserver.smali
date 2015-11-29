@@ -28,13 +28,10 @@
     .param p2, "handler"    # Landroid/os/Handler;
 
     .prologue
-    .line 939
     iput-object p1, p0, Lcom/android/server/notification/NotificationManagerService$SettingsObserver;->this$0:Lcom/android/server/notification/NotificationManagerService;
 
-    .line 940
     invoke-direct {p0, p2}, Landroid/database/ContentObserver;-><init>(Landroid/os/Handler;)V
 
-    .line 929
     const-string v0, "notification_light_pulse"
 
     invoke-static {v0}, Landroid/provider/Settings$System;->getUriFor(Ljava/lang/String;)Landroid/net/Uri;
@@ -43,7 +40,6 @@
 
     iput-object v0, p0, Lcom/android/server/notification/NotificationManagerService$SettingsObserver;->NOTIFICATION_LIGHT_PULSE_URI:Landroid/net/Uri;
 
-    .line 935
     const-string v0, "led_indicator_missed_event"
 
     invoke-static {v0}, Landroid/provider/Settings$System;->getUriFor(Ljava/lang/String;)Landroid/net/Uri;
@@ -52,7 +48,6 @@
 
     iput-object v0, p0, Lcom/android/server/notification/NotificationManagerService$SettingsObserver;->LED_INDICATOR_MISSED_EVENT_URI:Landroid/net/Uri;
 
-    .line 941
     return-void
 .end method
 
@@ -66,7 +61,6 @@
 
     const/4 v2, -0x1
 
-    .line 944
     iget-object v1, p0, Lcom/android/server/notification/NotificationManagerService$SettingsObserver;->this$0:Lcom/android/server/notification/NotificationManagerService;
 
     invoke-virtual {v1}, Lcom/android/server/notification/NotificationManagerService;->getContext()Landroid/content/Context;
@@ -77,23 +71,19 @@
 
     move-result-object v0
 
-    .line 945
     .local v0, "resolver":Landroid/content/ContentResolver;
     iget-object v1, p0, Lcom/android/server/notification/NotificationManagerService$SettingsObserver;->NOTIFICATION_LIGHT_PULSE_URI:Landroid/net/Uri;
 
     invoke-virtual {v0, v1, v3, p0, v2}, Landroid/content/ContentResolver;->registerContentObserver(Landroid/net/Uri;ZLandroid/database/ContentObserver;I)V
 
-    .line 948
     iget-object v1, p0, Lcom/android/server/notification/NotificationManagerService$SettingsObserver;->LED_INDICATOR_MISSED_EVENT_URI:Landroid/net/Uri;
 
     invoke-virtual {v0, v1, v3, p0, v2}, Landroid/content/ContentResolver;->registerContentObserver(Landroid/net/Uri;ZLandroid/database/ContentObserver;I)V
 
-    .line 951
     const/4 v1, 0x0
 
     invoke-virtual {p0, v1}, Lcom/android/server/notification/NotificationManagerService$SettingsObserver;->update(Landroid/net/Uri;)V
 
-    .line 952
     return-void
 .end method
 
@@ -103,10 +93,8 @@
     .param p2, "uri"    # Landroid/net/Uri;
 
     .prologue
-    .line 955
     invoke-virtual {p0, p2}, Lcom/android/server/notification/NotificationManagerService$SettingsObserver;->update(Landroid/net/Uri;)V
 
-    .line 956
     return-void
 .end method
 
@@ -119,7 +107,6 @@
 
     const/4 v4, 0x0
 
-    .line 959
     iget-object v5, p0, Lcom/android/server/notification/NotificationManagerService$SettingsObserver;->this$0:Lcom/android/server/notification/NotificationManagerService;
 
     invoke-virtual {v5}, Lcom/android/server/notification/NotificationManagerService;->getContext()Landroid/content/Context;
@@ -130,7 +117,6 @@
 
     move-result-object v2
 
-    .line 960
     .local v2, "resolver":Landroid/content/ContentResolver;
     if-eqz p1, :cond_0
 
@@ -142,7 +128,6 @@
 
     if-eqz v5, :cond_1
 
-    .line 961
     :cond_0
     const-string v5, "notification_light_pulse"
 
@@ -154,7 +139,6 @@
 
     move v1, v3
 
-    .line 963
     .local v1, "pulseEnabled":Z
     :goto_0
     iget-object v5, p0, Lcom/android/server/notification/NotificationManagerService$SettingsObserver;->this$0:Lcom/android/server/notification/NotificationManagerService;
@@ -166,19 +150,16 @@
 
     if-eq v5, v1, :cond_1
 
-    .line 964
     iget-object v5, p0, Lcom/android/server/notification/NotificationManagerService$SettingsObserver;->this$0:Lcom/android/server/notification/NotificationManagerService;
 
     # setter for: Lcom/android/server/notification/NotificationManagerService;->mNotificationPulseEnabled:Z
     invoke-static {v5, v1}, Lcom/android/server/notification/NotificationManagerService;->access$1902(Lcom/android/server/notification/NotificationManagerService;Z)Z
 
-    .line 965
     iget-object v5, p0, Lcom/android/server/notification/NotificationManagerService$SettingsObserver;->this$0:Lcom/android/server/notification/NotificationManagerService;
 
     # invokes: Lcom/android/server/notification/NotificationManagerService;->updateNotificationPulse()V
     invoke-static {v5}, Lcom/android/server/notification/NotificationManagerService;->access$1200(Lcom/android/server/notification/NotificationManagerService;)V
 
-    .line 969
     .end local v1    # "pulseEnabled":Z
     :cond_1
     if-eqz p1, :cond_2
@@ -191,7 +172,6 @@
 
     if-eqz v5, :cond_3
 
-    .line 970
     :cond_2
     const-string v5, "led_indicator_missed_event"
 
@@ -203,7 +183,6 @@
 
     move v0, v3
 
-    .line 972
     .local v0, "missedLightEnabled":Z
     :goto_1
     iget-object v3, p0, Lcom/android/server/notification/NotificationManagerService$SettingsObserver;->this$0:Lcom/android/server/notification/NotificationManagerService;
@@ -215,19 +194,16 @@
 
     if-eq v3, v0, :cond_3
 
-    .line 973
     iget-object v3, p0, Lcom/android/server/notification/NotificationManagerService$SettingsObserver;->this$0:Lcom/android/server/notification/NotificationManagerService;
 
     # setter for: Lcom/android/server/notification/NotificationManagerService;->mMissedNotificationLightEnabled:Z
     invoke-static {v3, v0}, Lcom/android/server/notification/NotificationManagerService;->access$2002(Lcom/android/server/notification/NotificationManagerService;Z)Z
 
-    .line 974
     iget-object v3, p0, Lcom/android/server/notification/NotificationManagerService$SettingsObserver;->this$0:Lcom/android/server/notification/NotificationManagerService;
 
     # invokes: Lcom/android/server/notification/NotificationManagerService;->updateNotificationPulse()V
     invoke-static {v3}, Lcom/android/server/notification/NotificationManagerService;->access$1200(Lcom/android/server/notification/NotificationManagerService;)V
 
-    .line 978
     .end local v0    # "missedLightEnabled":Z
     :cond_3
     return-void
@@ -235,12 +211,10 @@
     :cond_4
     move v1, v4
 
-    .line 961
     goto :goto_0
 
     :cond_5
     move v0, v4
 
-    .line 970
     goto :goto_1
 .end method

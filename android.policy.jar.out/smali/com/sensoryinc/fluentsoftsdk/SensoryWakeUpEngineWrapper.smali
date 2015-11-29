@@ -12,7 +12,6 @@
     .locals 0
 
     .prologue
-    .line 15
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -22,7 +21,6 @@
     .locals 3
 
     .prologue
-    .line 21
     const-class v1, Lcom/sensoryinc/fluentsoftsdk/SensoryWakeUpEngineWrapper;
 
     monitor-enter v1
@@ -32,24 +30,20 @@
 
     if-nez v0, :cond_0
 
-    .line 25
     const-string v0, "SensoryWakeUpEngineWrapper"
 
     const-string v2, "getInstance() : make new SensoryWakeUpEngine"
 
     invoke-static {v0, v2}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 29
     invoke-static {}, Lcom/sensoryinc/fluentsoftsdk/SensoryWakeUpEngine;->init()V
 
-    .line 31
     new-instance v0, Lcom/sensoryinc/fluentsoftsdk/SensoryWakeUpEngine;
 
     invoke-direct {v0}, Lcom/sensoryinc/fluentsoftsdk/SensoryWakeUpEngine;-><init>()V
 
     sput-object v0, Lcom/sensoryinc/fluentsoftsdk/SensoryWakeUpEngineWrapper;->uniqueInstance:Lcom/sensoryinc/fluentsoftsdk/SensoryWakeUpEngine;
 
-    .line 45
     :goto_0
     sget-object v0, Lcom/sensoryinc/fluentsoftsdk/SensoryWakeUpEngineWrapper;->uniqueInstance:Lcom/sensoryinc/fluentsoftsdk/SensoryWakeUpEngine;
     :try_end_0
@@ -59,7 +53,6 @@
 
     return-object v0
 
-    .line 39
     :cond_0
     :try_start_1
     const-string v0, "SensoryWakeUpEngineWrapper"
@@ -72,7 +65,6 @@
 
     goto :goto_0
 
-    .line 21
     :catchall_0
     move-exception v0
 

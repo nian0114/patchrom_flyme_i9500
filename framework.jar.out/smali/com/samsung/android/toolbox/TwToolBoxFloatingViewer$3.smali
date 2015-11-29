@@ -23,7 +23,6 @@
     .locals 0
 
     .prologue
-    .line 459
     iput-object p1, p0, Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer$3;->this$0:Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer;
 
     invoke-direct {p0}, Landroid/content/BroadcastReceiver;-><init>()V
@@ -39,7 +38,6 @@
     .param p2, "intent"    # Landroid/content/Intent;
 
     .prologue
-    .line 462
     iget-object v4, p0, Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer$3;->this$0:Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer;
 
     const-string v5, "AxT9IME.isVisibleWindow"
@@ -53,7 +51,6 @@
     # setter for: Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer;->mSipVisible:Z
     invoke-static {v4, v5}, Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer;->access$202(Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer;Z)Z
 
-    .line 463
     iget-object v4, p0, Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer$3;->this$0:Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer;
 
     # getter for: Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer;->mVisibleFloatingStyle:Z
@@ -63,7 +60,6 @@
 
     if-eqz v4, :cond_2
 
-    .line 464
     iget-object v4, p0, Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer$3;->this$0:Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer;
 
     # getter for: Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer;->mLongPressPanelPosition:I
@@ -91,7 +87,6 @@
 
     if-eqz v4, :cond_1
 
-    .line 465
     :cond_0
     iget-object v4, p0, Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer$3;->this$0:Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer;
 
@@ -102,7 +97,6 @@
 
     invoke-virtual {v4}, Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer$TwToolBoxLongPressPanel;->hide()V
 
-    .line 468
     :cond_1
     iget-object v4, p0, Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer$3;->this$0:Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer;
 
@@ -123,7 +117,6 @@
 
     aget-object v1, v0, v2
 
-    .line 469
     .local v1, "blockPkg":Ljava/lang/String;
     iget-object v4, p0, Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer$3;->this$0:Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer;
 
@@ -138,7 +131,6 @@
 
     if-eqz v4, :cond_3
 
-    .line 483
     .end local v0    # "arr$":[Ljava/lang/String;
     .end local v1    # "blockPkg":Ljava/lang/String;
     .end local v2    # "i$":I
@@ -147,7 +139,6 @@
     :goto_1
     return-void
 
-    .line 468
     .restart local v0    # "arr$":[Ljava/lang/String;
     .restart local v1    # "blockPkg":Ljava/lang/String;
     .restart local v2    # "i$":I
@@ -157,7 +148,6 @@
 
     goto :goto_0
 
-    .line 474
     .end local v1    # "blockPkg":Ljava/lang/String;
     :cond_4
     iget-object v4, p0, Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer$3;->this$0:Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer;
@@ -169,7 +159,6 @@
 
     if-eqz v4, :cond_5
 
-    .line 475
     iget-object v4, p0, Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer$3;->this$0:Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer;
 
     iget-object v5, p0, Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer$3;->this$0:Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer;
@@ -181,7 +170,6 @@
 
     invoke-virtual {v4, v5}, Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer;->post(Ljava/lang/Runnable;)Z
 
-    .line 476
     iget-object v4, p0, Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer$3;->this$0:Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer;
 
     # getter for: Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer;->mTracking:Z
@@ -191,7 +179,6 @@
 
     if-eqz v4, :cond_2
 
-    .line 477
     iget-object v4, p0, Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer$3;->this$0:Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer;
 
     const/4 v5, 0x3
@@ -215,7 +202,6 @@
 
     goto :goto_1
 
-    .line 480
     :cond_5
     iget-object v4, p0, Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer$3;->this$0:Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer;
 

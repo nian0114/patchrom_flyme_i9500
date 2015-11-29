@@ -12,7 +12,6 @@
     .locals 0
 
     .prologue
-    .line 9
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -22,7 +21,6 @@
     .locals 2
 
     .prologue
-    .line 12
     const-class v1, Lcom/sec/android/app/IWSpeechRecognizer/IWSpeechRecognizerWrapper;
 
     monitor-enter v1
@@ -32,17 +30,14 @@
 
     if-nez v0, :cond_0
 
-    .line 14
     invoke-static {}, Lcom/sec/android/app/IWSpeechRecognizer/MMUIRecognizer;->init()V
 
-    .line 15
     new-instance v0, Lcom/sec/android/app/IWSpeechRecognizer/MMUIRecognizer;
 
     invoke-direct {v0}, Lcom/sec/android/app/IWSpeechRecognizer/MMUIRecognizer;-><init>()V
 
     sput-object v0, Lcom/sec/android/app/IWSpeechRecognizer/IWSpeechRecognizerWrapper;->uniqueInstance:Lcom/sec/android/app/IWSpeechRecognizer/MMUIRecognizer;
 
-    .line 17
     :cond_0
     sget-object v0, Lcom/sec/android/app/IWSpeechRecognizer/IWSpeechRecognizerWrapper;->uniqueInstance:Lcom/sec/android/app/IWSpeechRecognizer/MMUIRecognizer;
     :try_end_0
@@ -52,7 +47,6 @@
 
     return-object v0
 
-    .line 12
     :catchall_0
     move-exception v0
 

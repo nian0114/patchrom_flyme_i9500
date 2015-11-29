@@ -19,20 +19,16 @@
     .param p5, "vibrate"    # Z
 
     .prologue
-    .line 127
     invoke-direct {p0, p1}, Lcom/android/internal/telephony/cat/CommandParams;-><init>(Lcom/android/internal/telephony/cat/CommandDetails;)V
 
-    .line 128
     iput-object p2, p0, Lcom/android/internal/telephony/cat/PlayToneParams;->mTextMsg:Lcom/android/internal/telephony/cat/TextMessage;
 
-    .line 129
     new-instance v0, Lcom/android/internal/telephony/cat/ToneSettings;
 
     invoke-direct {v0, p4, p3, p5}, Lcom/android/internal/telephony/cat/ToneSettings;-><init>(Lcom/android/internal/telephony/cat/Duration;Lcom/android/internal/telephony/cat/Tone;Z)V
 
     iput-object v0, p0, Lcom/android/internal/telephony/cat/PlayToneParams;->mSettings:Lcom/android/internal/telephony/cat/ToneSettings;
 
-    .line 130
     return-void
 .end method
 
@@ -46,13 +42,10 @@
     .param p6, "hasIcon"    # Z
 
     .prologue
-    .line 135
     invoke-direct/range {p0 .. p5}, Lcom/android/internal/telephony/cat/PlayToneParams;-><init>(Lcom/android/internal/telephony/cat/CommandDetails;Lcom/android/internal/telephony/cat/TextMessage;Lcom/android/internal/telephony/cat/Tone;Lcom/android/internal/telephony/cat/Duration;Z)V
 
-    .line 136
     invoke-virtual {p0, p6}, Lcom/android/internal/telephony/cat/PlayToneParams;->setHasIconTag(Z)V
 
-    .line 137
     return-void
 .end method
 
@@ -63,22 +56,18 @@
     .param p1, "icon"    # Landroid/graphics/Bitmap;
 
     .prologue
-    .line 142
     if-eqz p1, :cond_0
 
     iget-object v0, p0, Lcom/android/internal/telephony/cat/PlayToneParams;->mTextMsg:Lcom/android/internal/telephony/cat/TextMessage;
 
     if-eqz v0, :cond_0
 
-    .line 143
     iget-object v0, p0, Lcom/android/internal/telephony/cat/PlayToneParams;->mTextMsg:Lcom/android/internal/telephony/cat/TextMessage;
 
     iput-object p1, v0, Lcom/android/internal/telephony/cat/TextMessage;->icon:Landroid/graphics/Bitmap;
 
-    .line 144
     const/4 v0, 0x1
 
-    .line 146
     :goto_0
     return v0
 

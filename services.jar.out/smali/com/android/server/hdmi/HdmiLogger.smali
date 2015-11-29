@@ -59,7 +59,6 @@
     .locals 1
 
     .prologue
-    .line 46
     new-instance v0, Ljava/lang/ThreadLocal;
 
     invoke-direct {v0}, Ljava/lang/ThreadLocal;-><init>()V
@@ -73,24 +72,20 @@
     .locals 1
 
     .prologue
-    .line 55
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 51
     new-instance v0, Ljava/util/HashMap;
 
     invoke-direct {v0}, Ljava/util/HashMap;-><init>()V
 
     iput-object v0, p0, Lcom/android/server/hdmi/HdmiLogger;->mWarningTimingCache:Ljava/util/HashMap;
 
-    .line 53
     new-instance v0, Ljava/util/HashMap;
 
     invoke-direct {v0}, Ljava/util/HashMap;-><init>()V
 
     iput-object v0, p0, Lcom/android/server/hdmi/HdmiLogger;->mErrorTimingCache:Ljava/util/HashMap;
 
-    .line 56
     return-void
 .end method
 
@@ -111,7 +106,6 @@
     .end annotation
 
     .prologue
-    .line 122
     .local p1, "timing":Landroid/util/Pair;, "Landroid/util/Pair<Ljava/lang/Long;Ljava/lang/Integer;>;"
     new-instance v0, Ljava/lang/StringBuilder;
 
@@ -166,7 +160,6 @@
     .param p1, "objs"    # [Ljava/lang/Object;
 
     .prologue
-    .line 81
     invoke-static {}, Lcom/android/server/hdmi/HdmiLogger;->getLogger()Lcom/android/server/hdmi/HdmiLogger;
 
     move-result-object v0
@@ -177,7 +170,6 @@
 
     invoke-direct {v0, v1}, Lcom/android/server/hdmi/HdmiLogger;->debugInternal(Ljava/lang/String;)V
 
-    .line 82
     return-void
 .end method
 
@@ -186,7 +178,6 @@
     .param p1, "logMessage"    # Ljava/lang/String;
 
     .prologue
-    .line 86
     return-void
 .end method
 
@@ -196,7 +187,6 @@
     .param p1, "objs"    # [Ljava/lang/Object;
 
     .prologue
-    .line 70
     invoke-static {}, Lcom/android/server/hdmi/HdmiLogger;->getLogger()Lcom/android/server/hdmi/HdmiLogger;
 
     move-result-object v0
@@ -207,7 +197,6 @@
 
     invoke-direct {v0, v1}, Lcom/android/server/hdmi/HdmiLogger;->errorInternal(Ljava/lang/String;)V
 
-    .line 71
     return-void
 .end method
 
@@ -216,14 +205,12 @@
     .param p1, "logMessage"    # Ljava/lang/String;
 
     .prologue
-    .line 74
     iget-object v1, p0, Lcom/android/server/hdmi/HdmiLogger;->mErrorTimingCache:Ljava/util/HashMap;
 
     invoke-static {v1, p1}, Lcom/android/server/hdmi/HdmiLogger;->updateLog(Ljava/util/HashMap;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 
-    .line 75
     .local v0, "log":Ljava/lang/String;
     invoke-virtual {v0}, Ljava/lang/String;->isEmpty()Z
 
@@ -231,12 +218,10 @@
 
     if-nez v1, :cond_0
 
-    .line 76
     const-string v1, "HDMI"
 
     invoke-static {v1, v0}, Landroid/util/Slog;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 78
     :cond_0
     return-void
 .end method
@@ -245,7 +230,6 @@
     .locals 2
 
     .prologue
-    .line 100
     sget-object v1, Lcom/android/server/hdmi/HdmiLogger;->sLogger:Ljava/lang/ThreadLocal;
 
     invoke-virtual {v1}, Ljava/lang/ThreadLocal;->get()Ljava/lang/Object;
@@ -254,23 +238,19 @@
 
     check-cast v0, Lcom/android/server/hdmi/HdmiLogger;
 
-    .line 101
     .local v0, "logger":Lcom/android/server/hdmi/HdmiLogger;
     if-nez v0, :cond_0
 
-    .line 102
     new-instance v0, Lcom/android/server/hdmi/HdmiLogger;
 
     .end local v0    # "logger":Lcom/android/server/hdmi/HdmiLogger;
     invoke-direct {v0}, Lcom/android/server/hdmi/HdmiLogger;-><init>()V
 
-    .line 103
     .restart local v0    # "logger":Lcom/android/server/hdmi/HdmiLogger;
     sget-object v1, Lcom/android/server/hdmi/HdmiLogger;->sLogger:Ljava/lang/ThreadLocal;
 
     invoke-virtual {v1, v0}, Ljava/lang/ThreadLocal;->set(Ljava/lang/Object;)V
 
-    .line 105
     :cond_0
     return-object v0
 .end method
@@ -295,7 +275,6 @@
     .end annotation
 
     .prologue
-    .line 129
     .local p0, "cache":Ljava/util/HashMap;, "Ljava/util/HashMap<Ljava/lang/String;Landroid/util/Pair<Ljava/lang/Long;Ljava/lang/Integer;>;>;"
     invoke-virtual {p0, p1}, Ljava/util/HashMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
 
@@ -303,11 +282,9 @@
 
     check-cast v0, Landroid/util/Pair;
 
-    .line 130
     .local v0, "timing":Landroid/util/Pair;, "Landroid/util/Pair<Ljava/lang/Long;Ljava/lang/Integer;>;"
     if-eqz v0, :cond_0
 
-    .line 131
     new-instance v2, Landroid/util/Pair;
 
     iget-object v3, v0, Landroid/util/Pair;->first:Ljava/lang/Object;
@@ -330,7 +307,6 @@
 
     invoke-virtual {p0, p1, v2}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 133
     :cond_0
     return-void
 .end method
@@ -350,7 +326,6 @@
     .end annotation
 
     .prologue
-    .line 136
     .local p0, "timing":Landroid/util/Pair;, "Landroid/util/Pair<Ljava/lang/Long;Ljava/lang/Integer;>;"
     if-eqz p0, :cond_0
 
@@ -388,17 +363,14 @@
     .param p1, "objs"    # [Ljava/lang/Object;
 
     .prologue
-    .line 92
     array-length v0, p1
 
     if-lez v0, :cond_0
 
-    .line 93
     invoke-static {p0, p1}, Ljava/lang/String;->format(Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/String;
 
     move-result-object p0
 
-    .line 95
     .end local p0    # "logMessage":Ljava/lang/String;
     :cond_0
     return-object p0
@@ -425,13 +397,11 @@
     .end annotation
 
     .prologue
-    .line 109
     .local p0, "cache":Ljava/util/HashMap;, "Ljava/util/HashMap<Ljava/lang/String;Landroid/util/Pair<Ljava/lang/Long;Ljava/lang/Integer;>;>;"
     invoke-static {}, Landroid/os/SystemClock;->uptimeMillis()J
 
     move-result-wide v0
 
-    .line 110
     .local v0, "curTime":J
     invoke-virtual {p0, p1}, Ljava/util/HashMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
 
@@ -439,7 +409,6 @@
 
     check-cast v3, Landroid/util/Pair;
 
-    .line 111
     .local v3, "timing":Landroid/util/Pair;, "Landroid/util/Pair<Ljava/lang/Long;Ljava/lang/Integer;>;"
     invoke-static {v3, v0, v1}, Lcom/android/server/hdmi/HdmiLogger;->shouldLogNow(Landroid/util/Pair;J)Z
 
@@ -447,12 +416,10 @@
 
     if-eqz v4, :cond_0
 
-    .line 112
     invoke-static {p1, v3}, Lcom/android/server/hdmi/HdmiLogger;->buildMessage(Ljava/lang/String;Landroid/util/Pair;)Ljava/lang/String;
 
     move-result-object v2
 
-    .line 113
     .local v2, "log":Ljava/lang/String;
     new-instance v4, Landroid/util/Pair;
 
@@ -470,16 +437,13 @@
 
     invoke-virtual {p0, p1, v4}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 118
     .end local v2    # "log":Ljava/lang/String;
     :goto_0
     return-object v2
 
-    .line 116
     :cond_0
     invoke-static {p0, p1}, Lcom/android/server/hdmi/HdmiLogger;->increaseLogCount(Ljava/util/HashMap;Ljava/lang/String;)V
 
-    .line 118
     const-string v2, ""
 
     goto :goto_0
@@ -491,7 +455,6 @@
     .param p1, "objs"    # [Ljava/lang/Object;
 
     .prologue
-    .line 59
     invoke-static {}, Lcom/android/server/hdmi/HdmiLogger;->getLogger()Lcom/android/server/hdmi/HdmiLogger;
 
     move-result-object v0
@@ -502,7 +465,6 @@
 
     invoke-direct {v0, v1}, Lcom/android/server/hdmi/HdmiLogger;->warningInternal(Ljava/lang/String;)V
 
-    .line 60
     return-void
 .end method
 
@@ -511,14 +473,12 @@
     .param p1, "logMessage"    # Ljava/lang/String;
 
     .prologue
-    .line 63
     iget-object v1, p0, Lcom/android/server/hdmi/HdmiLogger;->mWarningTimingCache:Ljava/util/HashMap;
 
     invoke-static {v1, p1}, Lcom/android/server/hdmi/HdmiLogger;->updateLog(Ljava/util/HashMap;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 
-    .line 64
     .local v0, "log":Ljava/lang/String;
     invoke-virtual {v0}, Ljava/lang/String;->isEmpty()Z
 
@@ -526,12 +486,10 @@
 
     if-nez v1, :cond_0
 
-    .line 65
     const-string v1, "HDMI"
 
     invoke-static {v1, v0}, Landroid/util/Slog;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 67
     :cond_0
     return-void
 .end method

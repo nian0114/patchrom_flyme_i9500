@@ -26,7 +26,6 @@
     .param p2, "x0"    # Ljava/lang/String;
 
     .prologue
-    .line 1533
     iput-object p1, p0, Lcom/android/server/MountService$5;->this$0:Lcom/android/server/MountService;
 
     iput-object p3, p0, Lcom/android/server/MountService$5;->val$path:Ljava/lang/String;
@@ -42,7 +41,6 @@
     .locals 7
 
     .prologue
-    .line 1538
     :try_start_0
     const-string v2, "MountService"
 
@@ -50,19 +48,17 @@
 
     invoke-static {v2, v3}, Landroid/util/Slog;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1539
     iget-object v2, p0, Lcom/android/server/MountService$5;->this$0:Lcom/android/server/MountService;
 
     iget-object v3, p0, Lcom/android/server/MountService$5;->val$path:Ljava/lang/String;
 
-    const-string/jumbo v4, "ums"
+    const-string v4, "ums"
 
     const/4 v5, 0x0
 
     # invokes: Lcom/android/server/MountService;->doShareUnshareVolume(Ljava/lang/String;Ljava/lang/String;Z)V
     invoke-static {v2, v3, v4, v5}, Lcom/android/server/MountService;->access$200(Lcom/android/server/MountService;Ljava/lang/String;Ljava/lang/String;Z)V
 
-    .line 1540
     iget-object v2, p0, Lcom/android/server/MountService$5;->this$0:Lcom/android/server/MountService;
 
     iget-object v3, p0, Lcom/android/server/MountService$5;->val$path:Ljava/lang/String;
@@ -75,7 +71,6 @@
     .local v1, "rc":I
     if-eqz v1, :cond_0
 
-    .line 1541
     const-string v2, "MountService"
 
     const-string v3, "Failed to remount {%s} on UMS enabled-disconnect (%d)"
@@ -106,17 +101,14 @@
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 1548
     .end local v1    # "rc":I
     :cond_0
     :goto_0
     return-void
 
-    .line 1545
     :catch_0
     move-exception v0
 
-    .line 1546
     .local v0, "ex":Ljava/lang/Exception;
     const-string v2, "MountService"
 

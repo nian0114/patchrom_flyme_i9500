@@ -28,7 +28,6 @@
     .param p6, "x4"    # I
 
     .prologue
-    .line 689
     iput-object p1, p0, Lcom/android/internal/policy/impl/GlobalActions$2;->this$0:Lcom/android/internal/policy/impl/GlobalActions;
 
     move-object v0, p0
@@ -54,7 +53,6 @@
     .locals 1
 
     .prologue
-    .line 809
     invoke-super {p0}, Lcom/android/internal/policy/impl/GlobalActions$ToggleAction;->isEnabled()Z
 
     move-result v0
@@ -70,12 +68,10 @@
 
     const/4 v5, 0x0
 
-    .line 692
     sget-boolean v1, Lcom/android/internal/policy/impl/GlobalActions;->SAFE_DEBUG:Z
 
     if-eqz v1, :cond_0
 
-    .line 693
     const-string v1, "GlobalActions"
 
     new-instance v2, Ljava/lang/StringBuilder;
@@ -124,7 +120,6 @@
 
     invoke-static {v1, v2}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 698
     :cond_0
     iget-object v1, p0, Lcom/android/internal/policy/impl/GlobalActions$2;->this$0:Lcom/android/internal/policy/impl/GlobalActions;
 
@@ -141,7 +136,6 @@
 
     check-cast v0, Landroid/app/enterprise/EnterpriseDeviceManager;
 
-    .line 700
     .local v0, "edm":Landroid/app/enterprise/EnterpriseDeviceManager;
     if-eqz v0, :cond_2
 
@@ -157,24 +151,20 @@
 
     if-nez v1, :cond_2
 
-    .line 701
     sget-boolean v1, Lcom/android/internal/policy/impl/GlobalActions;->SAFE_DEBUG:Z
 
     if-eqz v1, :cond_1
 
-    .line 702
     const-string v1, "GlobalActions"
 
     const-string v2, "restricted by MDM "
 
     invoke-static {v1, v2}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 717
     :cond_1
     :goto_0
     return-void
 
-    .line 708
     :cond_2
     iget-object v1, p0, Lcom/android/internal/policy/impl/GlobalActions$2;->this$0:Lcom/android/internal/policy/impl/GlobalActions;
 
@@ -193,7 +183,6 @@
 
     if-eqz v1, :cond_1
 
-    .line 709
     :cond_3
     invoke-static {}, Lcom/sec/android/app/CscFeature;->getInstance()Lcom/sec/android/app/CscFeature;
 
@@ -207,7 +196,6 @@
 
     if-eqz v1, :cond_4
 
-    .line 710
     iget-object v1, p0, Lcom/android/internal/policy/impl/GlobalActions$2;->this$0:Lcom/android/internal/policy/impl/GlobalActions;
 
     const v2, 0x10408b0
@@ -219,7 +207,6 @@
 
     goto :goto_0
 
-    .line 713
     :cond_4
     iget-object v1, p0, Lcom/android/internal/policy/impl/GlobalActions$2;->this$0:Lcom/android/internal/policy/impl/GlobalActions;
 
@@ -238,7 +225,6 @@
     .param p1, "on"    # Z
 
     .prologue
-    .line 720
     iget-object v2, p0, Lcom/android/internal/policy/impl/GlobalActions$2;->this$0:Lcom/android/internal/policy/impl/GlobalActions;
 
     # getter for: Lcom/android/internal/policy/impl/GlobalActions;->mContext:Landroid/content/Context;
@@ -254,11 +240,9 @@
 
     check-cast v0, Landroid/app/enterprise/EnterpriseDeviceManager;
 
-    .line 722
     .local v0, "edm":Landroid/app/enterprise/EnterpriseDeviceManager;
     if-eqz v0, :cond_2
 
-    .line 723
     invoke-virtual {v0}, Landroid/app/enterprise/EnterpriseDeviceManager;->getPhoneRestrictionPolicy()Landroid/app/enterprise/PhoneRestrictionPolicy;
 
     move-result-object v2
@@ -281,31 +265,26 @@
 
     if-nez v2, :cond_2
 
-    .line 725
     :cond_0
     sget-boolean v2, Lcom/android/internal/policy/impl/GlobalActions;->SAFE_DEBUG:Z
 
     if-eqz v2, :cond_1
 
-    .line 726
     const-string v2, "GlobalActions"
 
     const-string v3, "Mobile data is restricted by MDM "
 
     invoke-static {v2, v3}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 745
     :cond_1
     :goto_0
     return-void
 
-    .line 731
     :cond_2
     sget-boolean v2, Lcom/android/internal/policy/impl/GlobalActions;->SAFE_DEBUG:Z
 
     if-eqz v2, :cond_3
 
-    .line 732
     const-string v2, "GlobalActions"
 
     new-instance v3, Ljava/lang/StringBuilder;
@@ -328,7 +307,6 @@
 
     invoke-static {v2, v3}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 740
     :cond_3
     iget-object v2, p0, Lcom/android/internal/policy/impl/GlobalActions$2;->this$0:Lcom/android/internal/policy/impl/GlobalActions;
 
@@ -339,20 +317,17 @@
 
     invoke-virtual {v2, p1}, Landroid/net/ConnectivityManager;->setMobileDataEnabled(Z)V
 
-    .line 742
     new-instance v1, Landroid/content/Intent;
 
     const-string v2, "android.intent.action.NETWORK_MODE_CHANGED"
 
     invoke-direct {v1, v2}, Landroid/content/Intent;-><init>(Ljava/lang/String;)V
 
-    .line 743
     .local v1, "intent":Landroid/content/Intent;
     const-string v2, "state"
 
     invoke-virtual {v1, v2, p1}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Z)Landroid/content/Intent;
 
-    .line 744
     iget-object v2, p0, Lcom/android/internal/policy/impl/GlobalActions$2;->this$0:Lcom/android/internal/policy/impl/GlobalActions;
 
     # getter for: Lcom/android/internal/policy/impl/GlobalActions;->mContext:Landroid/content/Context;
@@ -369,7 +344,6 @@
     .locals 1
 
     .prologue
-    .line 750
     const/4 v0, 0x0
 
     return v0
@@ -379,7 +353,6 @@
     .locals 1
 
     .prologue
-    .line 753
     iget-object v0, p0, Lcom/android/internal/policy/impl/GlobalActions$2;->this$0:Lcom/android/internal/policy/impl/GlobalActions;
 
     # getter for: Lcom/android/internal/policy/impl/GlobalActions;->isPHSalesCode:Z
@@ -389,10 +362,8 @@
 
     if-eqz v0, :cond_0
 
-    .line 755
     const/4 v0, 0x1
 
-    .line 788
     :goto_0
     return v0
 
@@ -406,7 +377,6 @@
     .locals 1
 
     .prologue
-    .line 747
     const/4 v0, 0x1
 
     return v0

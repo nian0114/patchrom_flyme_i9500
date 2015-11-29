@@ -23,7 +23,6 @@
     .locals 0
 
     .prologue
-    .line 197
     iput-object p1, p0, Lcom/android/server/smartclip/SpenGestureManagerService$1;->this$0:Lcom/android/server/smartclip/SpenGestureManagerService;
 
     invoke-direct {p0}, Landroid/content/BroadcastReceiver;-><init>()V
@@ -39,12 +38,10 @@
     .param p2, "intent"    # Landroid/content/Intent;
 
     .prologue
-    .line 200
     invoke-virtual {p2}, Landroid/content/Intent;->getAction()Ljava/lang/String;
 
     move-result-object v0
 
-    .line 201
     .local v0, "action":Ljava/lang/String;
     # getter for: Lcom/android/server/smartclip/SpenGestureManagerService;->TAG:Ljava/lang/String;
     invoke-static {}, Lcom/android/server/smartclip/SpenGestureManagerService;->access$000()Ljava/lang/String;
@@ -71,7 +68,6 @@
 
     invoke-static {v9, v10}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 202
     const-string v9, "com.samsung.pen.INSERT"
 
     invoke-virtual {v9, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
@@ -80,8 +76,7 @@
 
     if-eqz v9, :cond_4
 
-    .line 203
-    const-string/jumbo v9, "penInsert"
+    const-string v9, "penInsert"
 
     const/4 v10, 0x1
 
@@ -89,7 +84,6 @@
 
     move-result v7
 
-    .line 204
     .local v7, "penInsert":Z
     const-string v9, "isBoot"
 
@@ -99,7 +93,6 @@
 
     move-result v2
 
-    .line 205
     .local v2, "isBoot":Z
     # getter for: Lcom/android/server/smartclip/SpenGestureManagerService;->TAG:Ljava/lang/String;
     invoke-static {}, Lcom/android/server/smartclip/SpenGestureManagerService;->access$000()Ljava/lang/String;
@@ -136,10 +129,8 @@
 
     invoke-static {v9, v10}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 207
     if-nez v7, :cond_0
 
-    .line 208
     iget-object v9, p0, Lcom/android/server/smartclip/SpenGestureManagerService$1;->this$0:Lcom/android/server/smartclip/SpenGestureManagerService;
 
     # invokes: Lcom/android/server/smartclip/SpenGestureManagerService;->getTopMostPackage()Ljava/lang/String;
@@ -147,7 +138,6 @@
 
     move-result-object v8
 
-    .line 209
     .local v8, "topMostPackageName":Ljava/lang/String;
     # getter for: Lcom/android/server/smartclip/SpenGestureManagerService;->TAG:Ljava/lang/String;
     invoke-static {}, Lcom/android/server/smartclip/SpenGestureManagerService;->access$000()Ljava/lang/String;
@@ -158,7 +148,7 @@
 
     invoke-direct {v10}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v11, "sendLogSpenDetached, penInsert : "
+    const-string v11, "sendLogSpenDetached, penInsert : "
 
     invoke-virtual {v10, v11}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -168,7 +158,7 @@
 
     move-result-object v10
 
-    const-string/jumbo v11, "topMostPackageName : "
+    const-string v11, "topMostPackageName : "
 
     invoke-virtual {v10, v11}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -184,13 +174,11 @@
 
     invoke-static {v9, v10}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 210
     iget-object v9, p0, Lcom/android/server/smartclip/SpenGestureManagerService$1;->this$0:Lcom/android/server/smartclip/SpenGestureManagerService;
 
     # invokes: Lcom/android/server/smartclip/SpenGestureManagerService;->sendLogSpenDetached(Ljava/lang/String;)V
     invoke-static {v9, v8}, Lcom/android/server/smartclip/SpenGestureManagerService;->access$200(Lcom/android/server/smartclip/SpenGestureManagerService;Ljava/lang/String;)V
 
-    .line 213
     .end local v8    # "topMostPackageName":Ljava/lang/String;
     :cond_0
     iget-object v9, p0, Lcom/android/server/smartclip/SpenGestureManagerService$1;->this$0:Lcom/android/server/smartclip/SpenGestureManagerService;
@@ -210,7 +198,6 @@
 
     if-nez v2, :cond_3
 
-    .line 215
     iget-object v9, p0, Lcom/android/server/smartclip/SpenGestureManagerService$1;->this$0:Lcom/android/server/smartclip/SpenGestureManagerService;
 
     # getter for: Lcom/android/server/smartclip/SpenGestureManagerService;->mGlobalAirButton:Lcom/samsung/android/airbutton/AirButtonImpl;
@@ -220,7 +207,6 @@
 
     if-nez v9, :cond_1
 
-    .line 216
     iget-object v9, p0, Lcom/android/server/smartclip/SpenGestureManagerService$1;->this$0:Lcom/android/server/smartclip/SpenGestureManagerService;
 
     iget-object v10, p0, Lcom/android/server/smartclip/SpenGestureManagerService$1;->this$0:Lcom/android/server/smartclip/SpenGestureManagerService;
@@ -232,7 +218,6 @@
     # setter for: Lcom/android/server/smartclip/SpenGestureManagerService;->mGlobalAirButton:Lcom/samsung/android/airbutton/AirButtonImpl;
     invoke-static {v9, v10}, Lcom/android/server/smartclip/SpenGestureManagerService;->access$402(Lcom/android/server/smartclip/SpenGestureManagerService;Lcom/samsung/android/airbutton/AirButtonImpl;)Lcom/samsung/android/airbutton/AirButtonImpl;
 
-    .line 217
     :cond_1
     # getter for: Lcom/android/server/smartclip/SpenGestureManagerService;->mContext:Landroid/content/Context;
     invoke-static {}, Lcom/android/server/smartclip/SpenGestureManagerService;->access$500()Landroid/content/Context;
@@ -243,7 +228,7 @@
 
     move-result-object v9
 
-    const-string/jumbo v10, "pen_detachment_option"
+    const-string v10, "pen_detachment_option"
 
     const/4 v11, 0x0
 
@@ -253,7 +238,6 @@
 
     move-result v6
 
-    .line 218
     .local v6, "penDetachOption":I
     # getter for: Lcom/android/server/smartclip/SpenGestureManagerService;->TAG:Ljava/lang/String;
     invoke-static {}, Lcom/android/server/smartclip/SpenGestureManagerService;->access$000()Ljava/lang/String;
@@ -280,7 +264,6 @@
 
     invoke-static {v9, v10}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 219
     const/4 v9, 0x2
 
     if-ne v6, v9, :cond_2
@@ -293,7 +276,6 @@
 
     if-nez v9, :cond_2
 
-    .line 220
     iget-object v10, p0, Lcom/android/server/smartclip/SpenGestureManagerService$1;->this$0:Lcom/android/server/smartclip/SpenGestureManagerService;
 
     # getter for: Lcom/android/server/smartclip/SpenGestureManagerService;->mContext:Landroid/content/Context;
@@ -301,7 +283,7 @@
 
     move-result-object v9
 
-    const-string/jumbo v11, "window"
+    const-string v11, "window"
 
     invoke-virtual {v9, v11}, Landroid/content/Context;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
 
@@ -312,7 +294,6 @@
     # setter for: Lcom/android/server/smartclip/SpenGestureManagerService;->mWindowManager:Landroid/view/WindowManager;
     invoke-static {v10, v9}, Lcom/android/server/smartclip/SpenGestureManagerService;->access$602(Lcom/android/server/smartclip/SpenGestureManagerService;Landroid/view/WindowManager;)Landroid/view/WindowManager;
 
-    .line 221
     iget-object v9, p0, Lcom/android/server/smartclip/SpenGestureManagerService$1;->this$0:Lcom/android/server/smartclip/SpenGestureManagerService;
 
     # getter for: Lcom/android/server/smartclip/SpenGestureManagerService;->mWindowManager:Landroid/view/WindowManager;
@@ -324,17 +305,14 @@
 
     move-result-object v1
 
-    .line 222
     .local v1, "display":Landroid/view/Display;
     new-instance v5, Landroid/graphics/Point;
 
     invoke-direct {v5}, Landroid/graphics/Point;-><init>()V
 
-    .line 223
     .local v5, "outSize":Landroid/graphics/Point;
     invoke-virtual {v1, v5}, Landroid/view/Display;->getSize(Landroid/graphics/Point;)V
 
-    .line 224
     iget-object v9, p0, Lcom/android/server/smartclip/SpenGestureManagerService$1;->this$0:Lcom/android/server/smartclip/SpenGestureManagerService;
 
     invoke-virtual {v9}, Lcom/android/server/smartclip/SpenGestureManagerService;->isShowGlobalAirButton()Z
@@ -343,7 +321,6 @@
 
     if-eqz v9, :cond_2
 
-    .line 225
     iget-object v9, p0, Lcom/android/server/smartclip/SpenGestureManagerService$1;->this$0:Lcom/android/server/smartclip/SpenGestureManagerService;
 
     # getter for: Lcom/android/server/smartclip/SpenGestureManagerService;->mGlobalAirButton:Lcom/samsung/android/airbutton/AirButtonImpl;
@@ -357,7 +334,6 @@
 
     invoke-virtual {v9, v10, v11}, Lcom/samsung/android/airbutton/AirButtonImpl;->show(FF)V
 
-    .line 227
     # getter for: Lcom/android/server/smartclip/SpenGestureManagerService;->TAG:Ljava/lang/String;
     invoke-static {}, Lcom/android/server/smartclip/SpenGestureManagerService;->access$000()Ljava/lang/String;
 
@@ -367,7 +343,6 @@
 
     invoke-static {v9, v10}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 251
     .end local v1    # "display":Landroid/view/Display;
     .end local v2    # "isBoot":Z
     .end local v5    # "outSize":Landroid/graphics/Point;
@@ -377,7 +352,6 @@
     :goto_0
     return-void
 
-    .line 231
     .restart local v2    # "isBoot":Z
     .restart local v7    # "penInsert":Z
     :cond_3
@@ -390,7 +364,6 @@
 
     if-eqz v9, :cond_2
 
-    .line 232
     const/4 v9, 0x1
 
     iget-object v10, p0, Lcom/android/server/smartclip/SpenGestureManagerService$1;->this$0:Lcom/android/server/smartclip/SpenGestureManagerService;
@@ -406,7 +379,6 @@
 
     if-ne v9, v10, :cond_2
 
-    .line 233
     iget-object v9, p0, Lcom/android/server/smartclip/SpenGestureManagerService$1;->this$0:Lcom/android/server/smartclip/SpenGestureManagerService;
 
     # getter for: Lcom/android/server/smartclip/SpenGestureManagerService;->mGlobalAirButton:Lcom/samsung/android/airbutton/AirButtonImpl;
@@ -418,7 +390,6 @@
 
     goto :goto_0
 
-    .line 237
     .end local v2    # "isBoot":Z
     .end local v7    # "penInsert":Z
     :cond_4
@@ -430,7 +401,6 @@
 
     if-eqz v9, :cond_6
 
-    .line 238
     const-string v9, "coverOpen"
 
     const/4 v10, 0x0
@@ -439,7 +409,6 @@
 
     move-result v3
 
-    .line 239
     .local v3, "isCoverOpen":Z
     # getter for: Lcom/android/server/smartclip/SpenGestureManagerService;->TAG:Ljava/lang/String;
     invoke-static {}, Lcom/android/server/smartclip/SpenGestureManagerService;->access$000()Ljava/lang/String;
@@ -466,10 +435,8 @@
 
     invoke-static {v9, v10}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 240
     if-nez v3, :cond_5
 
-    .line 241
     iget-object v9, p0, Lcom/android/server/smartclip/SpenGestureManagerService$1;->this$0:Lcom/android/server/smartclip/SpenGestureManagerService;
 
     const/4 v10, 0x0
@@ -479,7 +446,6 @@
 
     goto :goto_0
 
-    .line 243
     :cond_5
     iget-object v9, p0, Lcom/android/server/smartclip/SpenGestureManagerService$1;->this$0:Lcom/android/server/smartclip/SpenGestureManagerService;
 
@@ -490,7 +456,6 @@
 
     goto :goto_0
 
-    .line 245
     .end local v3    # "isCoverOpen":Z
     :cond_6
     const-string v9, "android.intent.action.USER_SWITCHED"
@@ -501,7 +466,6 @@
 
     if-eqz v9, :cond_2
 
-    .line 246
     # getter for: Lcom/android/server/smartclip/SpenGestureManagerService;->TAG:Ljava/lang/String;
     invoke-static {}, Lcom/android/server/smartclip/SpenGestureManagerService;->access$000()Ljava/lang/String;
 
@@ -511,7 +475,6 @@
 
     invoke-static {v9, v10}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 247
     # getter for: Lcom/android/server/smartclip/SpenGestureManagerService;->mContext:Landroid/content/Context;
     invoke-static {}, Lcom/android/server/smartclip/SpenGestureManagerService;->access$500()Landroid/content/Context;
 
@@ -535,7 +498,6 @@
 
     const/4 v4, 0x1
 
-    .line 248
     .local v4, "isEnableLockScreenQuickNote":Z
     :goto_1
     iget-object v9, p0, Lcom/android/server/smartclip/SpenGestureManagerService$1;->this$0:Lcom/android/server/smartclip/SpenGestureManagerService;
@@ -547,7 +509,6 @@
 
     if-eqz v9, :cond_2
 
-    .line 249
     iget-object v9, p0, Lcom/android/server/smartclip/SpenGestureManagerService$1;->this$0:Lcom/android/server/smartclip/SpenGestureManagerService;
 
     # getter for: Lcom/android/server/smartclip/SpenGestureManagerService;->mSmartClipView:Lcom/android/server/smartclip/SmartClipView;
@@ -559,7 +520,6 @@
 
     goto/16 :goto_0
 
-    .line 247
     .end local v4    # "isEnableLockScreenQuickNote":Z
     :cond_7
     const/4 v4, 0x0

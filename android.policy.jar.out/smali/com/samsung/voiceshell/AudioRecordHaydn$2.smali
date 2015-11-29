@@ -23,7 +23,6 @@
     .locals 0
 
     .prologue
-    .line 224
     iput-object p1, p0, Lcom/samsung/voiceshell/AudioRecordHaydn$2;->this$0:Lcom/samsung/voiceshell/AudioRecordHaydn;
 
     invoke-direct {p0}, Landroid/os/Handler;-><init>()V
@@ -38,7 +37,6 @@
     .param p1, "msg"    # Landroid/os/Message;
 
     .prologue
-    .line 227
     iget-object v1, p0, Lcom/samsung/voiceshell/AudioRecordHaydn$2;->this$0:Lcom/samsung/voiceshell/AudioRecordHaydn;
 
     # getter for: Lcom/samsung/voiceshell/AudioRecordHaydn;->mResultListener:Lcom/samsung/voiceshell/VoiceEngineResultListener;
@@ -48,12 +46,10 @@
 
     if-eqz v1, :cond_0
 
-    .line 229
     invoke-virtual {p1}, Landroid/os/Message;->getData()Landroid/os/Bundle;
 
     move-result-object v0
 
-    .line 231
     .local v0, "b":Landroid/os/Bundle;
     const-string v1, "spectrum_value"
 
@@ -63,7 +59,6 @@
 
     if-eqz v1, :cond_1
 
-    .line 232
     iget-object v1, p0, Lcom/samsung/voiceshell/AudioRecordHaydn$2;->this$0:Lcom/samsung/voiceshell/AudioRecordHaydn;
 
     # getter for: Lcom/samsung/voiceshell/AudioRecordHaydn;->mResultListener:Lcom/samsung/voiceshell/VoiceEngineResultListener;
@@ -79,13 +74,11 @@
 
     invoke-interface {v1, v2}, Lcom/samsung/voiceshell/VoiceEngineResultListener;->OnSpectrumData([I)V
 
-    .line 237
     .end local v0    # "b":Landroid/os/Bundle;
     :cond_0
     :goto_0
     return-void
 
-    .line 233
     .restart local v0    # "b":Landroid/os/Bundle;
     :cond_1
     const-string v1, "rms_value"
@@ -96,7 +89,6 @@
 
     if-eqz v1, :cond_0
 
-    .line 234
     iget-object v1, p0, Lcom/samsung/voiceshell/AudioRecordHaydn$2;->this$0:Lcom/samsung/voiceshell/AudioRecordHaydn;
 
     # getter for: Lcom/samsung/voiceshell/AudioRecordHaydn;->mResultListener:Lcom/samsung/voiceshell/VoiceEngineResultListener;

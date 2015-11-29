@@ -68,24 +68,20 @@
     .param p3, "tag"    # Ljava/lang/String;
 
     .prologue
-    .line 1373
     iput-object p1, p0, Lcom/android/server/wifi/WifiWatchdogStateMachine$DnsCheck;->this$0:Lcom/android/server/wifi/WifiWatchdogStateMachine;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 1364
     const/4 v0, 0x0
 
     iput-object v0, p0, Lcom/android/server/wifi/WifiWatchdogStateMachine$DnsCheck;->mDnsCheckTAG:Ljava/lang/String;
 
-    .line 1367
     new-instance v0, Ljava/util/HashMap;
 
     invoke-direct {v0}, Ljava/util/HashMap;-><init>()V
 
     iput-object v0, p0, Lcom/android/server/wifi/WifiWatchdogStateMachine$DnsCheck;->mIdDnsMap:Ljava/util/HashMap;
 
-    .line 1374
     new-instance v0, Landroid/net/DnsPinger;
 
     # getter for: Lcom/android/server/wifi/WifiWatchdogStateMachine;->mContext:Landroid/content/Context;
@@ -107,10 +103,8 @@
 
     iput-object v0, p0, Lcom/android/server/wifi/WifiWatchdogStateMachine$DnsCheck;->mDnsPinger:Landroid/net/DnsPinger;
 
-    .line 1377
     iput-object p3, p0, Lcom/android/server/wifi/WifiWatchdogStateMachine$DnsCheck;->mDnsCheckTAG:Ljava/lang/String;
 
-    .line 1378
     iget-object v0, p0, Lcom/android/server/wifi/WifiWatchdogStateMachine$DnsCheck;->mDnsPinger:Landroid/net/DnsPinger;
 
     # getter for: Lcom/android/server/wifi/WifiWatchdogStateMachine;->mLinkProperties:Landroid/net/LinkProperties;
@@ -120,7 +114,6 @@
 
     invoke-virtual {v0, v1}, Landroid/net/DnsPinger;->setCurrentLinkProperties(Landroid/net/LinkProperties;)V
 
-    .line 1379
     return-void
 .end method
 
@@ -129,7 +122,6 @@
     .param p0, "x0"    # Lcom/android/server/wifi/WifiWatchdogStateMachine$DnsCheck;
 
     .prologue
-    .line 1357
     iget-object v0, p0, Lcom/android/server/wifi/WifiWatchdogStateMachine$DnsCheck;->mDnsPinger:Landroid/net/DnsPinger;
 
     return-object v0
@@ -140,7 +132,6 @@
     .param p0, "x0"    # Lcom/android/server/wifi/WifiWatchdogStateMachine$DnsCheck;
 
     .prologue
-    .line 1357
     invoke-direct {p0}, Lcom/android/server/wifi/WifiWatchdogStateMachine$DnsCheck;->clear()V
 
     return-void
@@ -150,7 +141,6 @@
     .locals 3
 
     .prologue
-    .line 1545
     # getter for: Lcom/android/server/wifi/WifiWatchdogStateMachine;->SMARTCM_DBG:Z
     invoke-static {}, Lcom/android/server/wifi/WifiWatchdogStateMachine;->access$1100()Z
 
@@ -182,13 +172,11 @@
 
     invoke-static {v0, v1}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1546
     :cond_0
     iget-object v0, p0, Lcom/android/server/wifi/WifiWatchdogStateMachine$DnsCheck;->mDnsPinger:Landroid/net/DnsPinger;
 
     invoke-virtual {v0}, Landroid/net/DnsPinger;->clear()V
 
-    .line 1547
     return-void
 .end method
 
@@ -196,16 +184,13 @@
     .locals 7
 
     .prologue
-    .line 1550
     const-string v3, ""
 
-    .line 1551
     .local v3, "logStr":Ljava/lang/String;
     iget-object v5, p0, Lcom/android/server/wifi/WifiWatchdogStateMachine$DnsCheck;->mDnsResponseStrs:[Ljava/lang/String;
 
     if-eqz v5, :cond_0
 
-    .line 1552
     iget-object v0, p0, Lcom/android/server/wifi/WifiWatchdogStateMachine$DnsCheck;->mDnsResponseStrs:[Ljava/lang/String;
 
     .local v0, "arr$":[Ljava/lang/String;
@@ -220,7 +205,6 @@
 
     aget-object v4, v0, v1
 
-    .line 1553
     .local v4, "respStr":Ljava/lang/String;
     new-instance v5, Ljava/lang/StringBuilder;
 
@@ -250,12 +234,10 @@
 
     move-result-object v3
 
-    .line 1552
     add-int/lit8 v1, v1, 0x1
 
     goto :goto_0
 
-    .line 1555
     .end local v0    # "arr$":[Ljava/lang/String;
     .end local v1    # "i$":I
     .end local v2    # "len$":I
@@ -273,7 +255,6 @@
     .param p3, "minDnsResponse"    # I
 
     .prologue
-    .line 1447
     iget-object v5, p0, Lcom/android/server/wifi/WifiWatchdogStateMachine$DnsCheck;->mIdDnsMap:Ljava/util/HashMap;
 
     invoke-static {p1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
@@ -286,7 +267,6 @@
 
     check-cast v0, Ljava/lang/Integer;
 
-    .line 1448
     .local v0, "dnsServerId":Ljava/lang/Integer;
     iget-object v5, p0, Lcom/android/server/wifi/WifiWatchdogStateMachine$DnsCheck;->this$0:Lcom/android/server/wifi/WifiWatchdogStateMachine;
 
@@ -296,7 +276,6 @@
 
     iput v6, v5, Lcom/android/server/wifi/WifiWatchdogStateMachine$QcFailHistory;->qcStep:I
 
-    .line 1450
     # getter for: Lcom/android/server/wifi/WifiWatchdogStateMachine;->SMARTCM_DBG:Z
     invoke-static {}, Lcom/android/server/wifi/WifiWatchdogStateMachine;->access$1100()Z
 
@@ -340,11 +319,9 @@
 
     invoke-static {v5, v6}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1452
     :cond_0
     if-nez v0, :cond_2
 
-    .line 1453
     # getter for: Lcom/android/server/wifi/WifiWatchdogStateMachine;->DBG:Z
     invoke-static {}, Lcom/android/server/wifi/WifiWatchdogStateMachine;->access$2100()Z
 
@@ -375,15 +352,12 @@
     # invokes: Lcom/android/server/wifi/WifiWatchdogStateMachine;->logd(Ljava/lang/String;)V
     invoke-static {v5, v6}, Lcom/android/server/wifi/WifiWatchdogStateMachine;->access$8000(Lcom/android/server/wifi/WifiWatchdogStateMachine;Ljava/lang/String;)V
 
-    .line 1454
     :cond_1
     const/4 v5, 0x2
 
-    .line 1535
     :goto_0
     return v5
 
-    .line 1457
     :cond_2
     iget-object v5, p0, Lcom/android/server/wifi/WifiWatchdogStateMachine$DnsCheck;->mDnsCheckSuccesses:[I
 
@@ -399,7 +373,6 @@
 
     if-gt v5, v6, :cond_4
 
-    .line 1458
     :cond_3
     iget-object v5, p0, Lcom/android/server/wifi/WifiWatchdogStateMachine$DnsCheck;->this$0:Lcom/android/server/wifi/WifiWatchdogStateMachine;
 
@@ -408,7 +381,6 @@
     # invokes: Lcom/android/server/wifi/WifiWatchdogStateMachine;->loge(Ljava/lang/String;)V
     invoke-static {v5, v6}, Lcom/android/server/wifi/WifiWatchdogStateMachine;->access$8100(Lcom/android/server/wifi/WifiWatchdogStateMachine;Ljava/lang/String;)V
 
-    .line 1459
     iget-object v5, p0, Lcom/android/server/wifi/WifiWatchdogStateMachine$DnsCheck;->this$0:Lcom/android/server/wifi/WifiWatchdogStateMachine;
 
     iget-object v5, v5, Lcom/android/server/wifi/WifiWatchdogStateMachine;->mCurrentQcFail:Lcom/android/server/wifi/WifiWatchdogStateMachine$QcFailHistory;
@@ -417,7 +389,6 @@
 
     iput v6, v5, Lcom/android/server/wifi/WifiWatchdogStateMachine$QcFailHistory;->error:I
 
-    .line 1460
     iget-object v5, p0, Lcom/android/server/wifi/WifiWatchdogStateMachine$DnsCheck;->this$0:Lcom/android/server/wifi/WifiWatchdogStateMachine;
 
     iget-object v5, v5, Lcom/android/server/wifi/WifiWatchdogStateMachine;->mCurrentQcFail:Lcom/android/server/wifi/WifiWatchdogStateMachine$QcFailHistory;
@@ -440,12 +411,10 @@
 
     iput v6, v5, Lcom/android/server/wifi/WifiWatchdogStateMachine$QcFailHistory;->line:I
 
-    .line 1461
     const/4 v5, 0x0
 
     goto :goto_0
 
-    .line 1464
     :cond_4
     iget-object v5, p0, Lcom/android/server/wifi/WifiWatchdogStateMachine$DnsCheck;->mIdDnsMap:Ljava/util/HashMap;
 
@@ -455,10 +424,8 @@
 
     invoke-virtual {v5, v6}, Ljava/util/HashMap;->remove(Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 1465
     if-ltz p2, :cond_5
 
-    .line 1466
     iget-object v5, p0, Lcom/android/server/wifi/WifiWatchdogStateMachine$DnsCheck;->mDnsCheckSuccesses:[I
 
     invoke-virtual {v0}, Ljava/lang/Integer;->intValue()I
@@ -471,7 +438,6 @@
 
     aput v7, v5, v6
 
-    .line 1467
     # getter for: Lcom/android/server/wifi/WifiWatchdogStateMachine;->SMARTCM_DBG:Z
     invoke-static {}, Lcom/android/server/wifi/WifiWatchdogStateMachine;->access$1100()Z
 
@@ -520,7 +486,6 @@
     # invokes: Lcom/android/server/wifi/WifiWatchdogStateMachine;->loge(Ljava/lang/String;)V
     invoke-static {v5, v6}, Lcom/android/server/wifi/WifiWatchdogStateMachine;->access$8200(Lcom/android/server/wifi/WifiWatchdogStateMachine;Ljava/lang/String;)V
 
-    .line 1470
     :cond_5
     # getter for: Lcom/android/server/wifi/WifiWatchdogStateMachine;->DBG:Z
     invoke-static {}, Lcom/android/server/wifi/WifiWatchdogStateMachine;->access$2100()Z
@@ -529,15 +494,12 @@
 
     if-eqz v5, :cond_6
 
-    .line 1471
     iget-object v5, p0, Lcom/android/server/wifi/WifiWatchdogStateMachine$DnsCheck;->mDnsResponseStrs:[Ljava/lang/String;
 
     if-eqz v5, :cond_9
 
-    .line 1472
     if-ltz p2, :cond_8
 
-    .line 1473
     new-instance v5, Ljava/lang/StringBuilder;
 
     invoke-direct {v5}, Ljava/lang/StringBuilder;-><init>()V
@@ -570,7 +532,6 @@
 
     aput-object v5, v6, v7
 
-    .line 1490
     :cond_6
     :goto_1
     iget-object v5, p0, Lcom/android/server/wifi/WifiWatchdogStateMachine$DnsCheck;->mDnsCheckSuccesses:[I
@@ -583,7 +544,6 @@
 
     if-lt v5, p3, :cond_b
 
-    .line 1491
     # getter for: Lcom/android/server/wifi/WifiWatchdogStateMachine;->DBG:Z
     invoke-static {}, Lcom/android/server/wifi/WifiWatchdogStateMachine;->access$2100()Z
 
@@ -618,16 +578,13 @@
     # invokes: Lcom/android/server/wifi/WifiWatchdogStateMachine;->logd(Ljava/lang/String;)V
     invoke-static {v5, v6}, Lcom/android/server/wifi/WifiWatchdogStateMachine;->access$8400(Lcom/android/server/wifi/WifiWatchdogStateMachine;Ljava/lang/String;)V
 
-    .line 1492
     :cond_7
     invoke-virtual {p0}, Lcom/android/server/wifi/WifiWatchdogStateMachine$DnsCheck;->quit()V
 
-    .line 1493
     const/4 v5, 0x2
 
     if-ne p2, v5, :cond_a
 
-    .line 1494
     iget-object v5, p0, Lcom/android/server/wifi/WifiWatchdogStateMachine$DnsCheck;->this$0:Lcom/android/server/wifi/WifiWatchdogStateMachine;
 
     iget-object v5, v5, Lcom/android/server/wifi/WifiWatchdogStateMachine;->mCurrentQcFail:Lcom/android/server/wifi/WifiWatchdogStateMachine$QcFailHistory;
@@ -636,7 +593,6 @@
 
     iput v6, v5, Lcom/android/server/wifi/WifiWatchdogStateMachine$QcFailHistory;->error:I
 
-    .line 1495
     iget-object v5, p0, Lcom/android/server/wifi/WifiWatchdogStateMachine$DnsCheck;->this$0:Lcom/android/server/wifi/WifiWatchdogStateMachine;
 
     iget-object v5, v5, Lcom/android/server/wifi/WifiWatchdogStateMachine;->mCurrentQcFail:Lcom/android/server/wifi/WifiWatchdogStateMachine$QcFailHistory;
@@ -659,12 +615,10 @@
 
     iput v6, v5, Lcom/android/server/wifi/WifiWatchdogStateMachine$QcFailHistory;->line:I
 
-    .line 1496
     const/4 v5, 0x4
 
     goto/16 :goto_0
 
-    .line 1475
     :cond_8
     new-instance v5, Ljava/lang/StringBuilder;
 
@@ -696,7 +650,6 @@
 
     goto :goto_1
 
-    .line 1478
     :cond_9
     iget-object v5, p0, Lcom/android/server/wifi/WifiWatchdogStateMachine$DnsCheck;->this$0:Lcom/android/server/wifi/WifiWatchdogStateMachine;
 
@@ -707,24 +660,20 @@
 
     goto :goto_1
 
-    .line 1498
     :cond_a
     const/4 v5, 0x1
 
     goto/16 :goto_0
 
-    .line 1501
     :cond_b
     const/4 v5, -0x3
 
     if-ne p2, v5, :cond_14
 
-    .line 1502
     new-instance v4, Ljava/util/ArrayList;
 
     invoke-direct {v4}, Ljava/util/ArrayList;-><init>()V
 
-    .line 1503
     .local v4, "removePingIdList":Ljava/util/List;, "Ljava/util/List<Ljava/lang/Integer;>;"
     iget-object v5, p0, Lcom/android/server/wifi/WifiWatchdogStateMachine$DnsCheck;->mIdDnsMap:Ljava/util/HashMap;
 
@@ -751,7 +700,6 @@
 
     check-cast v1, Ljava/util/Map$Entry;
 
-    .line 1504
     .local v1, "ent":Ljava/util/Map$Entry;, "Ljava/util/Map$Entry<Ljava/lang/Integer;Ljava/lang/Integer;>;"
     invoke-interface {v1}, Ljava/util/Map$Entry;->getValue()Ljava/lang/Object;
 
@@ -759,7 +707,6 @@
 
     if-ne v5, v0, :cond_e
 
-    .line 1505
     # getter for: Lcom/android/server/wifi/WifiWatchdogStateMachine;->SMARTCM_DBG:Z
     invoke-static {}, Lcom/android/server/wifi/WifiWatchdogStateMachine;->access$1100()Z
 
@@ -814,7 +761,6 @@
     # invokes: Lcom/android/server/wifi/WifiWatchdogStateMachine;->logd(Ljava/lang/String;)V
     invoke-static {v5, v6}, Lcom/android/server/wifi/WifiWatchdogStateMachine;->access$8500(Lcom/android/server/wifi/WifiWatchdogStateMachine;Ljava/lang/String;)V
 
-    .line 1506
     :cond_d
     invoke-interface {v1}, Ljava/util/Map$Entry;->getKey()Ljava/lang/Object;
 
@@ -824,7 +770,6 @@
 
     goto :goto_2
 
-    .line 1508
     :cond_e
     # getter for: Lcom/android/server/wifi/WifiWatchdogStateMachine;->SMARTCM_DBG:Z
     invoke-static {}, Lcom/android/server/wifi/WifiWatchdogStateMachine;->access$1100()Z
@@ -876,7 +821,6 @@
 
     goto :goto_2
 
-    .line 1511
     .end local v1    # "ent":Ljava/util/Map$Entry;, "Ljava/util/Map$Entry<Ljava/lang/Integer;Ljava/lang/Integer;>;"
     :cond_f
     invoke-interface {v4}, Ljava/util/List;->iterator()Ljava/util/Iterator;
@@ -896,7 +840,6 @@
 
     check-cast v3, Ljava/lang/Integer;
 
-    .line 1512
     .local v3, "removeId":Ljava/lang/Integer;
     iget-object v5, p0, Lcom/android/server/wifi/WifiWatchdogStateMachine$DnsCheck;->mIdDnsMap:Ljava/util/HashMap;
 
@@ -904,7 +847,6 @@
 
     goto :goto_3
 
-    .line 1514
     .end local v3    # "removeId":Ljava/lang/Integer;
     :cond_10
     iget-object v5, p0, Lcom/android/server/wifi/WifiWatchdogStateMachine$DnsCheck;->mIdDnsMap:Ljava/util/HashMap;
@@ -915,7 +857,6 @@
 
     if-eqz v5, :cond_13
 
-    .line 1515
     # getter for: Lcom/android/server/wifi/WifiWatchdogStateMachine;->DBG:Z
     invoke-static {}, Lcom/android/server/wifi/WifiWatchdogStateMachine;->access$2100()Z
 
@@ -930,7 +871,6 @@
     # invokes: Lcom/android/server/wifi/WifiWatchdogStateMachine;->loge(Ljava/lang/String;)V
     invoke-static {v5, v6}, Lcom/android/server/wifi/WifiWatchdogStateMachine;->access$8700(Lcom/android/server/wifi/WifiWatchdogStateMachine;Ljava/lang/String;)V
 
-    .line 1516
     :cond_11
     # getter for: Lcom/android/server/wifi/WifiWatchdogStateMachine;->DBG:Z
     invoke-static {}, Lcom/android/server/wifi/WifiWatchdogStateMachine;->access$2100()Z
@@ -966,11 +906,9 @@
     # invokes: Lcom/android/server/wifi/WifiWatchdogStateMachine;->logd(Ljava/lang/String;)V
     invoke-static {v5, v6}, Lcom/android/server/wifi/WifiWatchdogStateMachine;->access$8800(Lcom/android/server/wifi/WifiWatchdogStateMachine;Ljava/lang/String;)V
 
-    .line 1517
     :cond_12
     invoke-virtual {p0}, Lcom/android/server/wifi/WifiWatchdogStateMachine$DnsCheck;->quit()V
 
-    .line 1518
     iget-object v5, p0, Lcom/android/server/wifi/WifiWatchdogStateMachine$DnsCheck;->this$0:Lcom/android/server/wifi/WifiWatchdogStateMachine;
 
     iget-object v5, v5, Lcom/android/server/wifi/WifiWatchdogStateMachine;->mCurrentQcFail:Lcom/android/server/wifi/WifiWatchdogStateMachine$QcFailHistory;
@@ -979,7 +917,6 @@
 
     iput v6, v5, Lcom/android/server/wifi/WifiWatchdogStateMachine$QcFailHistory;->error:I
 
-    .line 1519
     iget-object v5, p0, Lcom/android/server/wifi/WifiWatchdogStateMachine$DnsCheck;->this$0:Lcom/android/server/wifi/WifiWatchdogStateMachine;
 
     iget-object v5, v5, Lcom/android/server/wifi/WifiWatchdogStateMachine;->mCurrentQcFail:Lcom/android/server/wifi/WifiWatchdogStateMachine$QcFailHistory;
@@ -1002,18 +939,15 @@
 
     iput v6, v5, Lcom/android/server/wifi/WifiWatchdogStateMachine$QcFailHistory;->line:I
 
-    .line 1520
     const/4 v5, 0x3
 
     goto/16 :goto_0
 
-    .line 1522
     :cond_13
     const/4 v5, 0x2
 
     goto/16 :goto_0
 
-    .line 1525
     .end local v2    # "i$":Ljava/util/Iterator;
     .end local v4    # "removePingIdList":Ljava/util/List;, "Ljava/util/List<Ljava/lang/Integer;>;"
     :cond_14
@@ -1025,7 +959,6 @@
 
     if-eqz v5, :cond_17
 
-    .line 1526
     # getter for: Lcom/android/server/wifi/WifiWatchdogStateMachine;->DBG:Z
     invoke-static {}, Lcom/android/server/wifi/WifiWatchdogStateMachine;->access$2100()Z
 
@@ -1040,7 +973,6 @@
     # invokes: Lcom/android/server/wifi/WifiWatchdogStateMachine;->loge(Ljava/lang/String;)V
     invoke-static {v5, v6}, Lcom/android/server/wifi/WifiWatchdogStateMachine;->access$8900(Lcom/android/server/wifi/WifiWatchdogStateMachine;Ljava/lang/String;)V
 
-    .line 1527
     :cond_15
     # getter for: Lcom/android/server/wifi/WifiWatchdogStateMachine;->DBG:Z
     invoke-static {}, Lcom/android/server/wifi/WifiWatchdogStateMachine;->access$2100()Z
@@ -1076,11 +1008,9 @@
     # invokes: Lcom/android/server/wifi/WifiWatchdogStateMachine;->logd(Ljava/lang/String;)V
     invoke-static {v5, v6}, Lcom/android/server/wifi/WifiWatchdogStateMachine;->access$9000(Lcom/android/server/wifi/WifiWatchdogStateMachine;Ljava/lang/String;)V
 
-    .line 1528
     :cond_16
     invoke-virtual {p0}, Lcom/android/server/wifi/WifiWatchdogStateMachine$DnsCheck;->quit()V
 
-    .line 1529
     iget-object v5, p0, Lcom/android/server/wifi/WifiWatchdogStateMachine$DnsCheck;->this$0:Lcom/android/server/wifi/WifiWatchdogStateMachine;
 
     iget-object v5, v5, Lcom/android/server/wifi/WifiWatchdogStateMachine;->mCurrentQcFail:Lcom/android/server/wifi/WifiWatchdogStateMachine$QcFailHistory;
@@ -1089,7 +1019,6 @@
 
     iput v6, v5, Lcom/android/server/wifi/WifiWatchdogStateMachine$QcFailHistory;->error:I
 
-    .line 1530
     iget-object v5, p0, Lcom/android/server/wifi/WifiWatchdogStateMachine$DnsCheck;->this$0:Lcom/android/server/wifi/WifiWatchdogStateMachine;
 
     iget-object v5, v5, Lcom/android/server/wifi/WifiWatchdogStateMachine;->mCurrentQcFail:Lcom/android/server/wifi/WifiWatchdogStateMachine$QcFailHistory;
@@ -1112,7 +1041,6 @@
 
     iput v6, v5, Lcom/android/server/wifi/WifiWatchdogStateMachine$QcFailHistory;->line:I
 
-    .line 1531
     iget-object v5, p0, Lcom/android/server/wifi/WifiWatchdogStateMachine$DnsCheck;->this$0:Lcom/android/server/wifi/WifiWatchdogStateMachine;
 
     iget-object v5, v5, Lcom/android/server/wifi/WifiWatchdogStateMachine;->mCurrentQcFail:Lcom/android/server/wifi/WifiWatchdogStateMachine$QcFailHistory;
@@ -1126,12 +1054,10 @@
 
     iput-object v6, v5, Lcom/android/server/wifi/WifiWatchdogStateMachine$QcFailHistory;->currentDnsList:Ljava/util/List;
 
-    .line 1532
     const/4 v5, 0x0
 
     goto/16 :goto_0
 
-    .line 1535
     :cond_17
     const/4 v5, 0x2
 
@@ -1142,7 +1068,6 @@
     .locals 3
 
     .prologue
-    .line 1539
     # getter for: Lcom/android/server/wifi/WifiWatchdogStateMachine;->SMARTCM_DBG:Z
     invoke-static {}, Lcom/android/server/wifi/WifiWatchdogStateMachine;->access$1100()Z
 
@@ -1174,18 +1099,15 @@
 
     invoke-static {v0, v1}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1540
     :cond_0
     iget-object v0, p0, Lcom/android/server/wifi/WifiWatchdogStateMachine$DnsCheck;->mIdDnsMap:Ljava/util/HashMap;
 
     invoke-virtual {v0}, Ljava/util/HashMap;->clear()V
 
-    .line 1541
     iget-object v0, p0, Lcom/android/server/wifi/WifiWatchdogStateMachine$DnsCheck;->mDnsPinger:Landroid/net/DnsPinger;
 
     invoke-virtual {v0}, Landroid/net/DnsPinger;->cancelPings()V
 
-    .line 1542
     return-void
 .end method
 
@@ -1197,14 +1119,11 @@
     .param p4, "url"    # Ljava/lang/String;
 
     .prologue
-    .line 1382
     const/4 v5, 0x0
 
-    .line 1383
     .local v5, "requested":Z
     if-eqz p3, :cond_1
 
-    .line 1384
     new-instance v6, Ljava/util/ArrayList;
 
     const/4 v7, 0x1
@@ -1213,7 +1132,6 @@
 
     iput-object v6, p0, Lcom/android/server/wifi/WifiWatchdogStateMachine$DnsCheck;->mDnsList:Ljava/util/List;
 
-    .line 1396
     iget-object v6, p0, Lcom/android/server/wifi/WifiWatchdogStateMachine$DnsCheck;->mDnsList:Ljava/util/List;
 
     const-string v7, "8.8.8.8"
@@ -1224,7 +1142,6 @@
 
     invoke-interface {v6, v7}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    .line 1397
     iget-object v6, p0, Lcom/android/server/wifi/WifiWatchdogStateMachine$DnsCheck;->mDnsList:Ljava/util/List;
 
     const-string v7, "8.8.4.4"
@@ -1235,7 +1152,6 @@
 
     invoke-interface {v6, v7}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    .line 1410
     :cond_0
     :goto_0
     iget-object v6, p0, Lcom/android/server/wifi/WifiWatchdogStateMachine$DnsCheck;->mDnsList:Ljava/util/List;
@@ -1244,37 +1160,31 @@
 
     move-result v4
 
-    .line 1412
     .local v4, "numDnses":I
     new-array v6, v4, [I
 
     iput-object v6, p0, Lcom/android/server/wifi/WifiWatchdogStateMachine$DnsCheck;->mDnsCheckSuccesses:[I
 
-    .line 1413
     new-array v6, v4, [Ljava/lang/String;
 
     iput-object v6, p0, Lcom/android/server/wifi/WifiWatchdogStateMachine$DnsCheck;->mDnsResponseStrs:[Ljava/lang/String;
 
-    .line 1414
     const/4 v2, 0x0
 
     .local v2, "i":I
     :goto_1
     if-ge v2, v4, :cond_3
 
-    .line 1415
     iget-object v6, p0, Lcom/android/server/wifi/WifiWatchdogStateMachine$DnsCheck;->mDnsResponseStrs:[Ljava/lang/String;
 
     const-string v7, ""
 
     aput-object v7, v6, v2
 
-    .line 1414
     add-int/lit8 v2, v2, 0x1
 
     goto :goto_1
 
-    .line 1399
     .end local v2    # "i":I
     .end local v4    # "numDnses":I
     :cond_1
@@ -1284,7 +1194,6 @@
 
     iput-object v6, p0, Lcom/android/server/wifi/WifiWatchdogStateMachine$DnsCheck;->mDnsList:Ljava/util/List;
 
-    .line 1400
     iget-object v6, p0, Lcom/android/server/wifi/WifiWatchdogStateMachine$DnsCheck;->this$0:Lcom/android/server/wifi/WifiWatchdogStateMachine;
 
     # getter for: Lcom/android/server/wifi/WifiWatchdogStateMachine;->mLinkProperties:Landroid/net/LinkProperties;
@@ -1294,7 +1203,6 @@
 
     if-eqz v6, :cond_2
 
-    .line 1401
     iget-object v6, p0, Lcom/android/server/wifi/WifiWatchdogStateMachine$DnsCheck;->this$0:Lcom/android/server/wifi/WifiWatchdogStateMachine;
 
     # getter for: Lcom/android/server/wifi/WifiWatchdogStateMachine;->mLinkProperties:Landroid/net/LinkProperties;
@@ -1306,7 +1214,6 @@
 
     move-result-object v0
 
-    .line 1402
     .local v0, "dnses":Ljava/util/List;, "Ljava/util/List<Ljava/net/InetAddress;>;"
     if-eqz v0, :cond_2
 
@@ -1316,7 +1223,6 @@
 
     if-eqz v6, :cond_2
 
-    .line 1403
     iget-object v6, p0, Lcom/android/server/wifi/WifiWatchdogStateMachine$DnsCheck;->this$0:Lcom/android/server/wifi/WifiWatchdogStateMachine;
 
     new-instance v7, Ljava/util/ArrayList;
@@ -1326,7 +1232,6 @@
     # setter for: Lcom/android/server/wifi/WifiWatchdogStateMachine;->mDnsServerList:Ljava/util/List;
     invoke-static {v6, v7}, Lcom/android/server/wifi/WifiWatchdogStateMachine;->access$402(Lcom/android/server/wifi/WifiWatchdogStateMachine;Ljava/util/List;)Ljava/util/List;
 
-    .line 1406
     .end local v0    # "dnses":Ljava/util/List;, "Ljava/util/List<Ljava/net/InetAddress;>;"
     :cond_2
     iget-object v6, p0, Lcom/android/server/wifi/WifiWatchdogStateMachine$DnsCheck;->this$0:Lcom/android/server/wifi/WifiWatchdogStateMachine;
@@ -1338,7 +1243,6 @@
 
     if-eqz v6, :cond_0
 
-    .line 1407
     iget-object v6, p0, Lcom/android/server/wifi/WifiWatchdogStateMachine$DnsCheck;->mDnsList:Ljava/util/List;
 
     iget-object v7, p0, Lcom/android/server/wifi/WifiWatchdogStateMachine$DnsCheck;->this$0:Lcom/android/server/wifi/WifiWatchdogStateMachine;
@@ -1352,7 +1256,6 @@
 
     goto :goto_0
 
-    .line 1417
     .restart local v2    # "i":I
     .restart local v4    # "numDnses":I
     :cond_3
@@ -1409,26 +1312,22 @@
     # invokes: Lcom/android/server/wifi/WifiWatchdogStateMachine;->logd(Ljava/lang/String;)V
     invoke-static {v7, v6}, Lcom/android/server/wifi/WifiWatchdogStateMachine;->access$7800(Lcom/android/server/wifi/WifiWatchdogStateMachine;Ljava/lang/String;)V
 
-    .line 1419
     :cond_4
     iget-object v6, p0, Lcom/android/server/wifi/WifiWatchdogStateMachine$DnsCheck;->mIdDnsMap:Ljava/util/HashMap;
 
     invoke-virtual {v6}, Ljava/util/HashMap;->clear()V
 
-    .line 1420
     const/4 v2, 0x0
 
     :goto_3
     if-ge v2, p1, :cond_9
 
-    .line 1421
     const/4 v3, 0x0
 
     .local v3, "j":I
     :goto_4
     if-ge v3, v4, :cond_7
 
-    .line 1423
     :try_start_0
     iget-object v6, p0, Lcom/android/server/wifi/WifiWatchdogStateMachine$DnsCheck;->mDnsList:Ljava/util/List;
 
@@ -1444,10 +1343,8 @@
 
     if-nez v6, :cond_8
 
-    .line 1424
     if-nez p4, :cond_6
 
-    .line 1425
     iget-object v7, p0, Lcom/android/server/wifi/WifiWatchdogStateMachine$DnsCheck;->mIdDnsMap:Ljava/util/HashMap;
 
     iget-object v8, p0, Lcom/android/server/wifi/WifiWatchdogStateMachine$DnsCheck;->mDnsPinger:Landroid/net/DnsPinger;
@@ -1478,24 +1375,20 @@
 
     invoke-virtual {v7, v6, v8}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 1431
     :goto_5
     const/4 v5, 0x1
 
-    .line 1421
     :goto_6
     add-int/lit8 v3, v3, 0x1
 
     goto :goto_4
 
-    .line 1417
     .end local v3    # "j":I
     :cond_5
     const/4 v6, 0x0
 
     goto :goto_2
 
-    .line 1428
     .restart local v3    # "j":I
     :cond_6
     iget-object v7, p0, Lcom/android/server/wifi/WifiWatchdogStateMachine$DnsCheck;->mIdDnsMap:Ljava/util/HashMap;
@@ -1532,11 +1425,9 @@
 
     goto :goto_5
 
-    .line 1435
     :catch_0
     move-exception v1
 
-    .line 1436
     .local v1, "e":Ljava/lang/IndexOutOfBoundsException;
     # getter for: Lcom/android/server/wifi/WifiWatchdogStateMachine;->DBG:Z
     invoke-static {}, Lcom/android/server/wifi/WifiWatchdogStateMachine;->access$2100()Z
@@ -1551,14 +1442,12 @@
 
     invoke-static {v6, v7}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1420
     .end local v1    # "e":Ljava/lang/IndexOutOfBoundsException;
     :cond_7
     add-int/lit8 v2, v2, 0x1
 
     goto :goto_3
 
-    .line 1433
     :cond_8
     :try_start_1
     iget-object v6, p0, Lcom/android/server/wifi/WifiWatchdogStateMachine$DnsCheck;->this$0:Lcom/android/server/wifi/WifiWatchdogStateMachine;
@@ -1588,7 +1477,6 @@
 
     goto :goto_6
 
-    .line 1442
     .end local v3    # "j":I
     :cond_9
     # getter for: Lcom/android/server/wifi/WifiWatchdogStateMachine;->SMARTCM_DBG:Z
@@ -1634,7 +1522,6 @@
 
     invoke-static {v6, v7}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1443
     :cond_a
     return v5
 .end method

@@ -31,7 +31,6 @@
     .locals 0
 
     .prologue
-    .line 96
     iput-object p1, p0, Landroid/media/WFDUibcManager$Keyevnt_arrC;->this$0:Landroid/media/WFDUibcManager;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -44,7 +43,6 @@
     .param p0, "x0"    # Landroid/media/WFDUibcManager$Keyevnt_arrC;
 
     .prologue
-    .line 96
     iget v0, p0, Landroid/media/WFDUibcManager$Keyevnt_arrC;->mRepCnt:I
 
     return v0
@@ -56,7 +54,6 @@
     .param p1, "x1"    # I
 
     .prologue
-    .line 96
     iput p1, p0, Landroid/media/WFDUibcManager$Keyevnt_arrC;->mRepCnt:I
 
     return p1
@@ -67,7 +64,6 @@
     .param p0, "x0"    # Landroid/media/WFDUibcManager$Keyevnt_arrC;
 
     .prologue
-    .line 96
     iget v0, p0, Landroid/media/WFDUibcManager$Keyevnt_arrC;->mRepCnt:I
 
     add-int/lit8 v1, v0, 0x1
@@ -82,7 +78,6 @@
     .param p0, "x0"    # Landroid/media/WFDUibcManager$Keyevnt_arrC;
 
     .prologue
-    .line 96
     iget v0, p0, Landroid/media/WFDUibcManager$Keyevnt_arrC;->mKyCod:I
 
     return v0
@@ -94,7 +89,6 @@
     .param p1, "x1"    # I
 
     .prologue
-    .line 96
     iput p1, p0, Landroid/media/WFDUibcManager$Keyevnt_arrC;->mKyCod:I
 
     return p1
@@ -105,7 +99,6 @@
     .param p0, "x0"    # Landroid/media/WFDUibcManager$Keyevnt_arrC;
 
     .prologue
-    .line 96
     iget-wide v0, p0, Landroid/media/WFDUibcManager$Keyevnt_arrC;->mKyDwnTime:J
 
     return-wide v0
@@ -117,7 +110,6 @@
     .param p1, "x1"    # J
 
     .prologue
-    .line 96
     iput-wide p1, p0, Landroid/media/WFDUibcManager$Keyevnt_arrC;->mKyDwnTime:J
 
     return-wide p1
@@ -128,7 +120,6 @@
     .param p0, "x0"    # Landroid/media/WFDUibcManager$Keyevnt_arrC;
 
     .prologue
-    .line 96
     iget v0, p0, Landroid/media/WFDUibcManager$Keyevnt_arrC;->mKyFlag:I
 
     return v0
@@ -140,7 +131,6 @@
     .param p1, "x1"    # I
 
     .prologue
-    .line 96
     iput p1, p0, Landroid/media/WFDUibcManager$Keyevnt_arrC;->mKyFlag:I
 
     return p1
@@ -152,7 +142,6 @@
     .param p1, "x1"    # I
 
     .prologue
-    .line 96
     iget v0, p0, Landroid/media/WFDUibcManager$Keyevnt_arrC;->mKyFlag:I
 
     or-int/2addr v0, p1

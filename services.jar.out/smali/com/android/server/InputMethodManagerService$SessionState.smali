@@ -33,22 +33,16 @@
     .param p4, "_channel"    # Landroid/view/InputChannel;
 
     .prologue
-    .line 404
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 405
     iput-object p1, p0, Lcom/android/server/InputMethodManagerService$SessionState;->client:Lcom/android/server/InputMethodManagerService$ClientState;
 
-    .line 406
     iput-object p2, p0, Lcom/android/server/InputMethodManagerService$SessionState;->method:Lcom/android/internal/view/IInputMethod;
 
-    .line 407
     iput-object p3, p0, Lcom/android/server/InputMethodManagerService$SessionState;->session:Lcom/android/internal/view/IInputMethodSession;
 
-    .line 408
     iput-object p4, p0, Lcom/android/server/InputMethodManagerService$SessionState;->channel:Landroid/view/InputChannel;
 
-    .line 409
     return-void
 .end method
 
@@ -58,7 +52,6 @@
     .locals 2
 
     .prologue
-    .line 394
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -143,7 +136,7 @@
 
     move-result-object v0
 
-    const-string/jumbo v1, "}"
+    const-string v1, "}"
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 

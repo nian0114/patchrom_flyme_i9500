@@ -26,7 +26,6 @@
     .locals 0
 
     .prologue
-    .line 890
     iput-object p1, p0, Landroid/preference/PreferenceActivity$5;->this$0:Landroid/preference/PreferenceActivity;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -49,7 +48,6 @@
     .param p9, "oldBottom"    # I
 
     .prologue
-    .line 894
     iget-object v1, p0, Landroid/preference/PreferenceActivity$5;->this$0:Landroid/preference/PreferenceActivity;
 
     # getter for: Landroid/preference/PreferenceActivity;->mEnableSplitBar:Z
@@ -59,12 +57,10 @@
 
     if-nez v1, :cond_1
 
-    .line 908
     :cond_0
     :goto_0
     return-void
 
-    .line 899
     :cond_1
     iget-object v1, p0, Landroid/preference/PreferenceActivity$5;->this$0:Landroid/preference/PreferenceActivity;
 
@@ -84,7 +80,6 @@
 
     if-eqz v1, :cond_0
 
-    .line 900
     iget-object v1, p0, Landroid/preference/PreferenceActivity$5;->this$0:Landroid/preference/PreferenceActivity;
 
     # getter for: Landroid/preference/PreferenceActivity;->mPrefsContainer:Landroid/view/ViewGroup;
@@ -113,7 +108,6 @@
 
     sub-float v0, v1, v2
 
-    .line 901
     .local v0, "x":F
     const/4 v1, 0x0
 
@@ -121,10 +115,8 @@
 
     if-gez v1, :cond_2
 
-    .line 902
     const/4 v0, 0x0
 
-    .line 904
     :cond_2
     iget-object v1, p0, Landroid/preference/PreferenceActivity$5;->this$0:Landroid/preference/PreferenceActivity;
 
@@ -141,7 +133,6 @@
 
     if-eqz v1, :cond_0
 
-    .line 905
     iget-object v1, p0, Landroid/preference/PreferenceActivity$5;->this$0:Landroid/preference/PreferenceActivity;
 
     # getter for: Landroid/preference/PreferenceActivity;->mSplitBarView:Landroid/view/View;

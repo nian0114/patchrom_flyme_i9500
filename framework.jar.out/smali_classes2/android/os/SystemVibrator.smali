@@ -30,8 +30,7 @@
     .locals 2
 
     .prologue
-    .line 37
-    const-string/jumbo v0, "ro.build.scafe"
+    const-string v0, "ro.build.scafe"
 
     invoke-static {v0}, Landroid/os/SystemProperties;->get(Ljava/lang/String;)Ljava/lang/String;
 
@@ -52,18 +51,15 @@
     .locals 1
 
     .prologue
-    .line 54
     invoke-direct {p0}, Landroid/os/Vibrator;-><init>()V
 
-    .line 52
     new-instance v0, Landroid/os/Binder;
 
     invoke-direct {v0}, Landroid/os/Binder;-><init>()V
 
     iput-object v0, p0, Landroid/os/SystemVibrator;->mToken:Landroid/os/Binder;
 
-    .line 55
-    const-string/jumbo v0, "vibrator"
+    const-string v0, "vibrator"
 
     invoke-static {v0}, Landroid/os/ServiceManager;->getService(Ljava/lang/String;)Landroid/os/IBinder;
 
@@ -75,7 +71,6 @@
 
     iput-object v0, p0, Landroid/os/SystemVibrator;->mService:Landroid/os/IVibratorService;
 
-    .line 57
     return-void
 .end method
 
@@ -84,18 +79,15 @@
     .param p1, "context"    # Landroid/content/Context;
 
     .prologue
-    .line 60
     invoke-direct {p0, p1}, Landroid/os/Vibrator;-><init>(Landroid/content/Context;)V
 
-    .line 52
     new-instance v0, Landroid/os/Binder;
 
     invoke-direct {v0}, Landroid/os/Binder;-><init>()V
 
     iput-object v0, p0, Landroid/os/SystemVibrator;->mToken:Landroid/os/Binder;
 
-    .line 61
-    const-string/jumbo v0, "vibrator"
+    const-string v0, "vibrator"
 
     invoke-static {v0}, Landroid/os/ServiceManager;->getService(Ljava/lang/String;)Landroid/os/IBinder;
 
@@ -107,7 +99,6 @@
 
     iput-object v0, p0, Landroid/os/SystemVibrator;->mService:Landroid/os/IVibratorService;
 
-    .line 63
     return-void
 .end method
 
@@ -116,7 +107,6 @@
     .param p0, "attributes"    # Landroid/media/AudioAttributes;
 
     .prologue
-    .line 193
     if-eqz p0, :cond_0
 
     invoke-virtual {p0}, Landroid/media/AudioAttributes;->getUsage()I
@@ -138,16 +128,13 @@
     .locals 4
 
     .prologue
-    .line 198
     iget-object v1, p0, Landroid/os/SystemVibrator;->mService:Landroid/os/IVibratorService;
 
     if-nez v1, :cond_0
 
-    .line 207
     :goto_0
     return-void
 
-    .line 202
     :cond_0
     :try_start_0
     const-string v1, "Vibrator"
@@ -188,7 +175,6 @@
 
     invoke-static {v1, v2}, Landroid/util/Log;->v(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 203
     iget-object v1, p0, Landroid/os/SystemVibrator;->mService:Landroid/os/IVibratorService;
 
     iget-object v2, p0, Landroid/os/SystemVibrator;->mToken:Landroid/os/Binder;
@@ -199,11 +185,9 @@
 
     goto :goto_0
 
-    .line 204
     :catch_0
     move-exception v0
 
-    .line 205
     .local v0, "e":Landroid/os/RemoteException;
     const-string v1, "Vibrator"
 
@@ -220,23 +204,19 @@
     .prologue
     const/4 v1, 0x0
 
-    .line 214
     iget-object v2, p0, Landroid/os/SystemVibrator;->mService:Landroid/os/IVibratorService;
 
     if-nez v2, :cond_0
 
-    .line 215
     const-string v2, "Vibrator"
 
     const-string v3, "Failed to vibrate; no vibrator service."
 
     invoke-static {v2, v3}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 223
     :goto_0
     return v1
 
-    .line 219
     :cond_0
     :try_start_0
     iget-object v2, p0, Landroid/os/SystemVibrator;->mService:Landroid/os/IVibratorService;
@@ -249,11 +229,9 @@
 
     goto :goto_0
 
-    .line 220
     :catch_0
     move-exception v0
 
-    .line 221
     .local v0, "e":Landroid/os/RemoteException;
     const-string v2, "Vibrator"
 
@@ -270,23 +248,19 @@
     .prologue
     const/4 v0, 0x0
 
-    .line 67
     iget-object v1, p0, Landroid/os/SystemVibrator;->mService:Landroid/os/IVibratorService;
 
     if-nez v1, :cond_0
 
-    .line 68
     const-string v1, "Vibrator"
 
     const-string v2, "Failed to vibrate; no vibrator service."
 
     invoke-static {v1, v2}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 75
     :goto_0
     return v0
 
-    .line 72
     :cond_0
     :try_start_0
     iget-object v1, p0, Landroid/os/SystemVibrator;->mService:Landroid/os/IVibratorService;
@@ -299,7 +273,6 @@
 
     goto :goto_0
 
-    .line 73
     :catch_0
     move-exception v1
 
@@ -310,23 +283,19 @@
     .locals 3
 
     .prologue
-    .line 247
     iget-object v1, p0, Landroid/os/SystemVibrator;->mService:Landroid/os/IVibratorService;
 
     if-nez v1, :cond_0
 
-    .line 248
     const-string v1, "Vibrator"
 
     const-string v2, "Failed to vibrate; no vibrator service."
 
     invoke-static {v1, v2}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 256
     :goto_0
     return-void
 
-    .line 252
     :cond_0
     :try_start_0
     iget-object v1, p0, Landroid/os/SystemVibrator;->mService:Landroid/os/IVibratorService;
@@ -337,11 +306,9 @@
 
     goto :goto_0
 
-    .line 253
     :catch_0
     move-exception v0
 
-    .line 254
     .local v0, "e":Landroid/os/RemoteException;
     const-string v1, "Vibrator"
 
@@ -357,23 +324,19 @@
     .param p1, "magnitude"    # I
 
     .prologue
-    .line 231
     iget-object v1, p0, Landroid/os/SystemVibrator;->mService:Landroid/os/IVibratorService;
 
     if-nez v1, :cond_0
 
-    .line 232
     const-string v1, "Vibrator"
 
     const-string v2, "Failed to vibrate; no vibrator service."
 
     invoke-static {v1, v2}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 240
     :goto_0
     return-void
 
-    .line 236
     :cond_0
     :try_start_0
     iget-object v1, p0, Landroid/os/SystemVibrator;->mService:Landroid/os/IVibratorService;
@@ -384,11 +347,9 @@
 
     goto :goto_0
 
-    .line 237
     :catch_0
     move-exception v0
 
-    .line 238
     .local v0, "e":Landroid/os/RemoteException;
     const-string v1, "Vibrator"
 
@@ -407,7 +368,6 @@
     .param p5, "attributes"    # Landroid/media/AudioAttributes;
 
     .prologue
-    .line 83
     const-string v0, "Vibrator"
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -440,7 +400,6 @@
 
     invoke-static {v0, v1}, Landroid/util/Log;->v(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 84
     const/4 v7, -0x1
 
     move-object v1, p0
@@ -455,7 +414,6 @@
 
     invoke-virtual/range {v1 .. v7}, Landroid/os/SystemVibrator;->vibrate(ILjava/lang/String;JLandroid/media/AudioAttributes;I)V
 
-    .line 85
     return-void
 .end method
 
@@ -468,23 +426,19 @@
     .param p6, "magnitude"    # I
 
     .prologue
-    .line 112
     iget-object v1, p0, Landroid/os/SystemVibrator;->mService:Landroid/os/IVibratorService;
 
     if-nez v1, :cond_0
 
-    .line 113
     const-string v1, "Vibrator"
 
     const-string v2, "Failed to vibrate; no vibrator service."
 
     invoke-static {v1, v2}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 123
     :goto_0
     return-void
 
-    .line 117
     :cond_0
     :try_start_0
     const-string v1, "Vibrator"
@@ -493,7 +447,7 @@
 
     invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v3, "vibrate - PUID: "
+    const-string v3, "vibrate - PUID: "
 
     invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -549,7 +503,6 @@
 
     invoke-static {v1, v2}, Landroid/util/Log;->v(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 119
     iget-object v1, p0, Landroid/os/SystemVibrator;->mService:Landroid/os/IVibratorService;
 
     invoke-static {p5}, Landroid/os/SystemVibrator;->usageForAttributes(Landroid/media/AudioAttributes;)I
@@ -572,11 +525,9 @@
 
     goto :goto_0
 
-    .line 120
     :catch_0
     move-exception v0
 
-    .line 121
     .local v0, "e":Landroid/os/RemoteException;
     const-string v1, "Vibrator"
 
@@ -596,7 +547,6 @@
     .param p5, "attributes"    # Landroid/media/AudioAttributes;
 
     .prologue
-    .line 131
     const-string v0, "Vibrator"
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -635,7 +585,6 @@
 
     invoke-static {v0, v1}, Landroid/util/Log;->v(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 132
     const/4 v6, -0x1
 
     move-object v0, p0
@@ -652,7 +601,6 @@
 
     invoke-virtual/range {v0 .. v6}, Landroid/os/SystemVibrator;->vibrate(ILjava/lang/String;[JILandroid/media/AudioAttributes;I)V
 
-    .line 133
     return-void
 .end method
 
@@ -666,29 +614,24 @@
     .param p6, "magnitude"    # I
 
     .prologue
-    .line 171
     iget-object v0, p0, Landroid/os/SystemVibrator;->mService:Landroid/os/IVibratorService;
 
     if-nez v0, :cond_0
 
-    .line 172
     const-string v0, "Vibrator"
 
     const-string v1, "Failed to vibrate; no vibrator service."
 
     invoke-static {v0, v1}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 190
     :goto_0
     return-void
 
-    .line 178
     :cond_0
     array-length v0, p3
 
     if-ge p4, v0, :cond_1
 
-    .line 180
     :try_start_0
     const-string v0, "Vibrator"
 
@@ -696,7 +639,7 @@
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v2, "vibrate - PUID: "
+    const-string v2, "vibrate - PUID: "
 
     invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -758,7 +701,6 @@
 
     invoke-static {v0, v1}, Landroid/util/Log;->v(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 182
     iget-object v0, p0, Landroid/os/SystemVibrator;->mService:Landroid/os/IVibratorService;
 
     invoke-static {p5}, Landroid/os/SystemVibrator;->usageForAttributes(Landroid/media/AudioAttributes;)I
@@ -783,11 +725,9 @@
 
     goto :goto_0
 
-    .line 184
     :catch_0
     move-exception v8
 
-    .line 185
     .local v8, "e":Landroid/os/RemoteException;
     const-string v0, "Vibrator"
 
@@ -797,7 +737,6 @@
 
     goto :goto_0
 
-    .line 188
     .end local v8    # "e":Landroid/os/RemoteException;
     :cond_1
     new-instance v0, Ljava/lang/ArrayIndexOutOfBoundsException;
@@ -813,7 +752,6 @@
     .param p3, "magnitudeType"    # Landroid/os/SystemVibrator$MagnitudeType;
 
     .prologue
-    .line 93
     :try_start_0
     const-string v1, "Vibrator"
 
@@ -853,7 +791,6 @@
 
     invoke-static {v1, v2}, Landroid/util/Log;->v(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 94
     invoke-static {}, Landroid/os/Process;->myUid()I
 
     move-result v2
@@ -880,15 +817,12 @@
     :try_end_0
     .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 98
     :goto_0
     return-void
 
-    .line 95
     :catch_0
     move-exception v0
 
-    .line 96
     .local v0, "e":Landroid/os/RemoteException;
     const-string v1, "Vibrator"
 
@@ -906,7 +840,6 @@
     .param p3, "magnitude"    # I
 
     .prologue
-    .line 140
     const-string v0, "Vibrator"
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -955,7 +888,6 @@
 
     invoke-static {v0, v1}, Landroid/util/Log;->v(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 141
     invoke-static {}, Landroid/os/Process;->myUid()I
 
     move-result v1
@@ -974,7 +906,6 @@
 
     invoke-virtual/range {v0 .. v6}, Landroid/os/SystemVibrator;->vibrate(ILjava/lang/String;[JILandroid/media/AudioAttributes;I)V
 
-    .line 142
     return-void
 .end method
 
@@ -985,7 +916,6 @@
     .param p3, "magnitudeType"    # Landroid/os/SystemVibrator$MagnitudeType;
 
     .prologue
-    .line 150
     :try_start_0
     const-string v0, "Vibrator"
 
@@ -1039,7 +969,6 @@
 
     invoke-static {v0, v1}, Landroid/util/Log;->v(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 152
     invoke-static {}, Landroid/os/Process;->myUid()I
 
     move-result v1
@@ -1068,15 +997,12 @@
     :try_end_0
     .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 156
     :goto_0
     return-void
 
-    .line 153
     :catch_0
     move-exception v7
 
-    .line 154
     .local v7, "e":Landroid/os/RemoteException;
     const-string v0, "Vibrator"
 
@@ -1092,23 +1018,19 @@
     .param p1, "type"    # I
 
     .prologue
-    .line 358
     sget-boolean v0, Landroid/os/SystemVibrator;->mIsAmericano:Z
 
     if-nez v0, :cond_0
 
-    .line 359
     const-string v0, "Vibrator"
 
     const-string v1, "You can only use this API in maintain release project."
 
     invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 364
     :goto_0
     return-void
 
-    .line 362
     :cond_0
     const-string v0, "Vibrator"
 
@@ -1158,7 +1080,6 @@
 
     invoke-static {v0, v1}, Landroid/util/Log;->v(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 363
     sget-object v0, Landroid/os/SystemVibrator$MagnitudeType;->CallMagnitude:Landroid/os/SystemVibrator$MagnitudeType;
 
     invoke-virtual {p0, p1, v0}, Landroid/os/SystemVibrator;->vibrateImmVibe(ILandroid/os/SystemVibrator$MagnitudeType;)V
@@ -1171,23 +1092,19 @@
     .param p1, "type"    # I
 
     .prologue
-    .line 263
     sget-boolean v0, Landroid/os/SystemVibrator;->mIsAmericano:Z
 
     if-nez v0, :cond_0
 
-    .line 264
     const-string v0, "Vibrator"
 
     const-string v1, "You can only use this API in maintain release project."
 
     invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 269
     :goto_0
     return-void
 
-    .line 267
     :cond_0
     const-string v0, "Vibrator"
 
@@ -1227,7 +1144,6 @@
 
     invoke-static {v0, v1}, Landroid/util/Log;->v(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 268
     sget-object v0, Landroid/os/SystemVibrator$MagnitudeType;->TouchMagnitude:Landroid/os/SystemVibrator$MagnitudeType;
 
     invoke-virtual {p0, p1, v0}, Landroid/os/SystemVibrator;->vibrateImmVibe(ILandroid/os/SystemVibrator$MagnitudeType;)V
@@ -1241,7 +1157,6 @@
     .param p2, "magnitude"    # I
 
     .prologue
-    .line 298
     :try_start_0
     const-string v1, "Vibrator"
 
@@ -1249,7 +1164,7 @@
 
     invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v3, "vibrateImmVibe - PUID: "
+    const-string v3, "vibrateImmVibe - PUID: "
 
     invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -1301,7 +1216,6 @@
 
     invoke-static {v1, v2}, Landroid/util/Log;->v(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 300
     iget-object v1, p0, Landroid/os/SystemVibrator;->mService:Landroid/os/IVibratorService;
 
     invoke-static {}, Landroid/os/Process;->myUid()I
@@ -1314,15 +1228,12 @@
     :try_end_0
     .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 304
     :goto_0
     return-void
 
-    .line 301
     :catch_0
     move-exception v0
 
-    .line 302
     .local v0, "e":Landroid/os/RemoteException;
     const-string v1, "Vibrator"
 
@@ -1339,7 +1250,6 @@
     .param p2, "magnitudeType"    # Landroid/os/SystemVibrator$MagnitudeType;
 
     .prologue
-    .line 277
     :try_start_0
     const-string v1, "Vibrator"
 
@@ -1379,7 +1289,6 @@
 
     invoke-static {v1, v2}, Landroid/util/Log;->v(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 278
     iget-object v1, p0, Landroid/os/SystemVibrator;->mService:Landroid/os/IVibratorService;
 
     invoke-virtual {p2}, Landroid/os/SystemVibrator$MagnitudeType;->toString()Ljava/lang/String;
@@ -1394,15 +1303,12 @@
     :try_end_0
     .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 282
     :goto_0
     return-void
 
-    .line 279
     :catch_0
     move-exception v0
 
-    .line 280
     .local v0, "e":Landroid/os/RemoteException;
     const-string v1, "Vibrator"
 
@@ -1418,23 +1324,19 @@
     .param p1, "pattern"    # [B
 
     .prologue
-    .line 311
     sget-boolean v0, Landroid/os/SystemVibrator;->mIsAmericano:Z
 
     if-nez v0, :cond_0
 
-    .line 312
     const-string v0, "Vibrator"
 
     const-string v1, "You can only use this API in maintain release project."
 
     invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 317
     :goto_0
     return-void
 
-    .line 315
     :cond_0
     const-string v0, "Vibrator"
 
@@ -1474,7 +1376,6 @@
 
     invoke-static {v0, v1}, Landroid/util/Log;->v(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 316
     sget-object v0, Landroid/os/SystemVibrator$MagnitudeType;->TouchMagnitude:Landroid/os/SystemVibrator$MagnitudeType;
 
     invoke-virtual {p0, p1, v0}, Landroid/os/SystemVibrator;->vibrateImmVibe([BLandroid/os/SystemVibrator$MagnitudeType;)V
@@ -1488,7 +1389,6 @@
     .param p2, "magnitude"    # I
 
     .prologue
-    .line 346
     :try_start_0
     const-string v1, "Vibrator"
 
@@ -1496,7 +1396,7 @@
 
     invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v3, "vibrateImmVibe - PUID: "
+    const-string v3, "vibrateImmVibe - PUID: "
 
     invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -1538,7 +1438,6 @@
 
     invoke-static {v1, v2}, Landroid/util/Log;->v(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 347
     iget-object v1, p0, Landroid/os/SystemVibrator;->mService:Landroid/os/IVibratorService;
 
     invoke-static {}, Landroid/os/Process;->myUid()I
@@ -1551,15 +1450,12 @@
     :try_end_0
     .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 351
     :goto_0
     return-void
 
-    .line 348
     :catch_0
     move-exception v0
 
-    .line 349
     .local v0, "e":Landroid/os/RemoteException;
     const-string v1, "Vibrator"
 
@@ -1576,7 +1472,6 @@
     .param p2, "magnitudeType"    # Landroid/os/SystemVibrator$MagnitudeType;
 
     .prologue
-    .line 325
     :try_start_0
     const-string v1, "Vibrator"
 
@@ -1616,7 +1511,6 @@
 
     invoke-static {v1, v2}, Landroid/util/Log;->v(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 326
     iget-object v1, p0, Landroid/os/SystemVibrator;->mService:Landroid/os/IVibratorService;
 
     invoke-virtual {p2}, Landroid/os/SystemVibrator$MagnitudeType;->toString()Ljava/lang/String;
@@ -1631,15 +1525,12 @@
     :try_end_0
     .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 330
     :goto_0
     return-void
 
-    .line 327
     :catch_0
     move-exception v0
 
-    .line 328
     .local v0, "e":Landroid/os/RemoteException;
     const-string v1, "Vibrator"
 
@@ -1655,23 +1546,19 @@
     .param p1, "type"    # I
 
     .prologue
-    .line 371
     sget-boolean v0, Landroid/os/SystemVibrator;->mIsAmericano:Z
 
     if-nez v0, :cond_0
 
-    .line 372
     const-string v0, "Vibrator"
 
     const-string v1, "You can only use this API in maintain release project."
 
     invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 377
     :goto_0
     return-void
 
-    .line 375
     :cond_0
     const-string v0, "Vibrator"
 
@@ -1721,7 +1608,6 @@
 
     invoke-static {v0, v1}, Landroid/util/Log;->v(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 376
     sget-object v0, Landroid/os/SystemVibrator$MagnitudeType;->NotificationMagnitude:Landroid/os/SystemVibrator$MagnitudeType;
 
     invoke-virtual {p0, p1, v0}, Landroid/os/SystemVibrator;->vibrateImmVibe(ILandroid/os/SystemVibrator$MagnitudeType;)V

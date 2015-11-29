@@ -149,7 +149,6 @@
     .prologue
     const/16 v3, 0x27
 
-    .line 275
     new-array v0, v3, [Ljava/lang/String;
 
     const/4 v1, 0x0
@@ -388,14 +387,12 @@
 
     sput-object v0, Landroid/hardware/scontext/SContext;->sServiceList:[Ljava/lang/String;
 
-    .line 290
     new-array v0, v3, [I
 
     fill-array-data v0, :array_0
 
     sput-object v0, Landroid/hardware/scontext/SContext;->sServiceReportingModes:[I
 
-    .line 410
     new-instance v0, Landroid/hardware/scontext/SContext$1;
 
     invoke-direct {v0}, Landroid/hardware/scontext/SContext$1;-><init>()V
@@ -404,7 +401,6 @@
 
     return-void
 
-    .line 290
     nop
 
     :array_0
@@ -455,15 +451,12 @@
     .locals 1
 
     .prologue
-    .line 311
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 312
     const/4 v0, 0x0
 
     iput v0, p0, Landroid/hardware/scontext/SContext;->mType:I
 
-    .line 313
     return-void
 .end method
 
@@ -472,13 +465,10 @@
     .param p1, "src"    # Landroid/os/Parcel;
 
     .prologue
-    .line 318
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 319
     invoke-direct {p0, p1}, Landroid/hardware/scontext/SContext;->readFromParcel(Landroid/os/Parcel;)V
 
-    .line 320
     return-void
 .end method
 
@@ -487,21 +477,18 @@
     .param p0, "service"    # I
 
     .prologue
-    .line 343
     sget-object v0, Landroid/hardware/scontext/SContext;->sServiceReportingModes:[I
 
     array-length v0, v0
 
     if-gt p0, v0, :cond_0
 
-    .line 344
     sget-object v0, Landroid/hardware/scontext/SContext;->sServiceReportingModes:[I
 
     add-int/lit8 v1, p0, -0x1
 
     aget v0, v0, v1
 
-    .line 346
     :goto_0
     return v0
 
@@ -516,21 +503,18 @@
     .param p0, "service"    # I
 
     .prologue
-    .line 329
     sget-object v0, Landroid/hardware/scontext/SContext;->sServiceList:[Ljava/lang/String;
 
     array-length v0, v0
 
     if-gt p0, v0, :cond_0
 
-    .line 330
     sget-object v0, Landroid/hardware/scontext/SContext;->sServiceList:[Ljava/lang/String;
 
     add-int/lit8 v1, p0, -0x1
 
     aget-object v0, v0, v1
 
-    .line 332
     :goto_0
     return-object v0
 
@@ -545,14 +529,12 @@
     .param p1, "src"    # Landroid/os/Parcel;
 
     .prologue
-    .line 402
     invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
 
     move-result v0
 
     iput v0, p0, Landroid/hardware/scontext/SContext;->mType:I
 
-    .line 403
     return-void
 .end method
 
@@ -562,7 +544,6 @@
     .locals 1
 
     .prologue
-    .line 378
     const/4 v0, 0x0
 
     return v0
@@ -572,7 +553,6 @@
     .locals 1
 
     .prologue
-    .line 356
     iget v0, p0, Landroid/hardware/scontext/SContext;->mType:I
 
     return v0
@@ -583,10 +563,8 @@
     .param p1, "type"    # I
 
     .prologue
-    .line 365
     iput p1, p0, Landroid/hardware/scontext/SContext;->mType:I
 
-    .line 366
     return-void
 .end method
 
@@ -596,11 +574,9 @@
     .param p2, "flags"    # I
 
     .prologue
-    .line 392
     iget v0, p0, Landroid/hardware/scontext/SContext;->mType:I
 
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 393
     return-void
 .end method

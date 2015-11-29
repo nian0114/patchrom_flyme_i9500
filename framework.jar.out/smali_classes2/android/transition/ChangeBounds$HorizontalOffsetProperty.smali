@@ -19,12 +19,10 @@
     .locals 1
 
     .prologue
-    .line 384
     const-string v0, "offsetLeftAndRight"
 
     invoke-direct {p0, v0}, Landroid/transition/ChangeBounds$OffsetProperty;-><init>(Ljava/lang/String;)V
 
-    .line 385
     return-void
 .end method
 
@@ -36,9 +34,7 @@
     .param p2, "by"    # I
 
     .prologue
-    .line 389
     invoke-virtual {p1, p2}, Landroid/view/View;->offsetLeftAndRight(I)V
 
-    .line 390
     return-void
 .end method

@@ -23,7 +23,6 @@
     .locals 0
 
     .prologue
-    .line 6107
     iput-object p1, p0, Landroid/widget/Editor$2;->this$0:Landroid/widget/Editor;
 
     invoke-direct {p0}, Landroid/content/BroadcastReceiver;-><init>()V
@@ -39,18 +38,15 @@
     .param p2, "intent"    # Landroid/content/Intent;
 
     .prologue
-    .line 6109
     const-string v6, "caller"
 
     invoke-virtual {p2, v6}, Landroid/content/Intent;->getStringExtra(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 
-    .line 6110
     .local v0, "caller":Ljava/lang/String;
     const/4 v5, 0x0
 
-    .line 6112
     .local v5, "target_text":Ljava/lang/String;
     if-eqz v0, :cond_3
 
@@ -64,8 +60,7 @@
 
     if-eqz v6, :cond_3
 
-    .line 6113
-    const-string/jumbo v6, "result_code"
+    const-string v6, "result_code"
 
     const/4 v7, 0x0
 
@@ -73,20 +68,17 @@
 
     move-result v2
 
-    .line 6115
     .local v2, "resultCode":I
     const/4 v6, 0x1
 
     if-ne v2, v6, :cond_2
 
-    .line 6116
-    const-string/jumbo v6, "target_text"
+    const-string v6, "target_text"
 
     invoke-virtual {p2, v6}, Landroid/content/Intent;->getStringExtra(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v5
 
-    .line 6117
     iget-object v6, p0, Landroid/widget/Editor$2;->this$0:Landroid/widget/Editor;
 
     # getter for: Landroid/widget/Editor;->mTextView:Landroid/widget/TextView;
@@ -98,7 +90,6 @@
 
     move-result v4
 
-    .line 6118
     .local v4, "selStart":I
     iget-object v6, p0, Landroid/widget/Editor$2;->this$0:Landroid/widget/Editor;
 
@@ -111,7 +102,6 @@
 
     move-result v3
 
-    .line 6119
     .local v3, "selEnd":I
     iget-object v6, p0, Landroid/widget/Editor$2;->this$0:Landroid/widget/Editor;
 
@@ -122,13 +112,11 @@
 
     if-le v6, v4, :cond_0
 
-    .line 6120
     iget-object v6, p0, Landroid/widget/Editor$2;->this$0:Landroid/widget/Editor;
 
     # setter for: Landroid/widget/Editor;->selection_start:I
     invoke-static {v6, v4}, Landroid/widget/Editor;->access$4102(Landroid/widget/Editor;I)I
 
-    .line 6122
     :cond_0
     iget-object v6, p0, Landroid/widget/Editor$2;->this$0:Landroid/widget/Editor;
 
@@ -139,13 +127,11 @@
 
     if-le v6, v3, :cond_1
 
-    .line 6123
     iget-object v6, p0, Landroid/widget/Editor$2;->this$0:Landroid/widget/Editor;
 
     # setter for: Landroid/widget/Editor;->selection_end:I
     invoke-static {v6, v3}, Landroid/widget/Editor;->access$4202(Landroid/widget/Editor;I)I
 
-    .line 6125
     :cond_1
     iget-object v6, p0, Landroid/widget/Editor$2;->this$0:Landroid/widget/Editor;
 
@@ -170,7 +156,6 @@
 
     invoke-virtual {v6, v7, v8, v5}, Landroid/widget/TextView;->replaceText_internal(IILjava/lang/CharSequence;)V
 
-    .line 6128
     .end local v3    # "selEnd":I
     .end local v4    # "selStart":I
     :cond_2
@@ -180,7 +165,7 @@
 
     invoke-direct {v7}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v8, "target text = "
+    const-string v8, "target text = "
 
     invoke-virtual {v7, v8}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -196,7 +181,6 @@
 
     invoke-static {v6, v7}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 6132
     :try_start_0
     iget-object v6, p0, Landroid/widget/Editor$2;->this$0:Landroid/widget/Editor;
 
@@ -220,18 +204,15 @@
     :try_end_0
     .catch Ljava/lang/IllegalArgumentException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 6138
     .end local v2    # "resultCode":I
     :cond_3
     :goto_0
     return-void
 
-    .line 6133
     .restart local v2    # "resultCode":I
     :catch_0
     move-exception v1
 
-    .line 6134
     .local v1, "e":Ljava/lang/IllegalArgumentException;
     invoke-virtual {v1}, Ljava/lang/IllegalArgumentException;->printStackTrace()V
 

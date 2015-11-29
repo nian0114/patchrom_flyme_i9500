@@ -35,19 +35,16 @@
     .locals 4
 
     .prologue
-    .line 924
     iput-object p1, p0, Lcom/android/server/pm/PackageManagerService$PackageUsage;->this$0:Lcom/android/server/pm/PackageManagerService;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 928
     new-instance v0, Ljava/lang/Object;
 
     invoke-direct {v0}, Ljava/lang/Object;-><init>()V
 
     iput-object v0, p0, Lcom/android/server/pm/PackageManagerService$PackageUsage;->mFileLock:Ljava/lang/Object;
 
-    .line 929
     new-instance v0, Ljava/util/concurrent/atomic/AtomicLong;
 
     const-wide/16 v2, 0x0
@@ -56,7 +53,6 @@
 
     iput-object v0, p0, Lcom/android/server/pm/PackageManagerService$PackageUsage;->mLastWritten:Ljava/util/concurrent/atomic/AtomicLong;
 
-    .line 930
     new-instance v0, Ljava/util/concurrent/atomic/AtomicBoolean;
 
     const/4 v1, 0x0
@@ -65,7 +61,6 @@
 
     iput-object v0, p0, Lcom/android/server/pm/PackageManagerService$PackageUsage;->mBackgroundWriteRunning:Ljava/util/concurrent/atomic/AtomicBoolean;
 
-    .line 932
     const/4 v0, 0x1
 
     iput-boolean v0, p0, Lcom/android/server/pm/PackageManagerService$PackageUsage;->mIsHistoricalPackageUsageAvailable:Z
@@ -79,7 +74,6 @@
     .param p2, "x1"    # Lcom/android/server/pm/PackageManagerService$1;
 
     .prologue
-    .line 924
     invoke-direct {p0, p1}, Lcom/android/server/pm/PackageManagerService$PackageUsage;-><init>(Lcom/android/server/pm/PackageManagerService;)V
 
     return-void
@@ -90,7 +84,6 @@
     .param p0, "x0"    # Lcom/android/server/pm/PackageManagerService$PackageUsage;
 
     .prologue
-    .line 924
     invoke-direct {p0}, Lcom/android/server/pm/PackageManagerService$PackageUsage;->writeInternal()V
 
     return-void
@@ -101,7 +94,6 @@
     .param p0, "x0"    # Lcom/android/server/pm/PackageManagerService$PackageUsage;
 
     .prologue
-    .line 924
     iget-object v0, p0, Lcom/android/server/pm/PackageManagerService$PackageUsage;->mBackgroundWriteRunning:Ljava/util/concurrent/atomic/AtomicBoolean;
 
     return-object v0
@@ -111,28 +103,24 @@
     .locals 4
 
     .prologue
-    .line 1159
     invoke-static {}, Landroid/os/Environment;->getDataDirectory()Ljava/io/File;
 
     move-result-object v0
 
-    .line 1160
     .local v0, "dataDir":Ljava/io/File;
     new-instance v2, Ljava/io/File;
 
-    const-string/jumbo v3, "system"
+    const-string v3, "system"
 
     invoke-direct {v2, v0, v3}, Ljava/io/File;-><init>(Ljava/io/File;Ljava/lang/String;)V
 
-    .line 1161
     .local v2, "systemDir":Ljava/io/File;
     new-instance v1, Ljava/io/File;
 
-    const-string/jumbo v3, "package-usage.list"
+    const-string v3, "package-usage.list"
 
     invoke-direct {v1, v2, v3}, Ljava/io/File;-><init>(Ljava/io/File;Ljava/lang/String;)V
 
-    .line 1162
     .local v1, "fname":Ljava/io/File;
     new-instance v3, Landroid/util/AtomicFile;
 
@@ -153,38 +141,31 @@
     .end annotation
 
     .prologue
-    .line 1142
     const/4 v1, 0x0
 
     invoke-virtual {p2, v1}, Ljava/lang/StringBuffer;->setLength(I)V
 
-    .line 1144
     :goto_0
     invoke-virtual {p1}, Ljava/io/InputStream;->read()I
 
     move-result v0
 
-    .line 1145
     .local v0, "ch":I
     const/4 v1, -0x1
 
     if-ne v0, v1, :cond_1
 
-    .line 1146
     invoke-virtual {p2}, Ljava/lang/StringBuffer;->length()I
 
     move-result v1
 
     if-nez v1, :cond_0
 
-    .line 1147
     const/4 v1, 0x0
 
-    .line 1152
     :goto_1
     return-object v1
 
-    .line 1149
     :cond_0
     new-instance v1, Ljava/io/IOException;
 
@@ -194,18 +175,15 @@
 
     throw v1
 
-    .line 1151
     :cond_1
     if-ne v0, p3, :cond_2
 
-    .line 1152
     invoke-virtual {p2}, Ljava/lang/StringBuffer;->toString()Ljava/lang/String;
 
     move-result-object v1
 
     goto :goto_1
 
-    .line 1154
     :cond_2
     int-to-char v1, v0
 
@@ -218,12 +196,10 @@
     .locals 14
 
     .prologue
-    .line 962
     sget-object v8, Lcom/android/server/pm/PackageManagerService;->mPackages:Ljava/util/HashMap;
 
     monitor-enter v8
 
-    .line 963
     :try_start_0
     iget-object v9, p0, Lcom/android/server/pm/PackageManagerService$PackageUsage;->mFileLock:Ljava/lang/Object;
 
@@ -231,7 +207,6 @@
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_1
 
-    .line 964
     :try_start_1
     invoke-direct {p0}, Lcom/android/server/pm/PackageManagerService$PackageUsage;->getFile()Landroid/util/AtomicFile;
     :try_end_1
@@ -239,23 +214,19 @@
 
     move-result-object v2
 
-    .line 965
     .local v2, "file":Landroid/util/AtomicFile;
     const/4 v1, 0x0
 
-    .line 967
     .local v1, "f":Ljava/io/FileOutputStream;
     :try_start_2
     invoke-virtual {v2}, Landroid/util/AtomicFile;->startWrite()Ljava/io/FileOutputStream;
 
     move-result-object v1
 
-    .line 968
     new-instance v4, Ljava/io/BufferedOutputStream;
 
     invoke-direct {v4, v1}, Ljava/io/BufferedOutputStream;-><init>(Ljava/io/OutputStream;)V
 
-    .line 969
     .local v4, "out":Ljava/io/BufferedOutputStream;
     invoke-virtual {v2}, Landroid/util/AtomicFile;->getBaseFile()Ljava/io/File;
 
@@ -273,12 +244,10 @@
 
     invoke-static {v7, v10, v11, v12}, Landroid/os/FileUtils;->setPermissions(Ljava/lang/String;III)I
 
-    .line 970
     new-instance v6, Ljava/lang/StringBuilder;
 
     invoke-direct {v6}, Ljava/lang/StringBuilder;-><init>()V
 
-    .line 971
     .local v6, "sb":Ljava/lang/StringBuilder;
     sget-object v7, Lcom/android/server/pm/PackageManagerService;->mPackages:Ljava/util/HashMap;
 
@@ -305,7 +274,6 @@
 
     check-cast v5, Landroid/content/pm/PackageParser$Package;
 
-    .line 972
     .local v5, "pkg":Landroid/content/pm/PackageParser$Package;
     iget-wide v10, v5, Landroid/content/pm/PackageParser$Package;->mLastPackageUsageTimeInMills:J
 
@@ -315,32 +283,26 @@
 
     if-eqz v7, :cond_0
 
-    .line 975
     const/4 v7, 0x0
 
     invoke-virtual {v6, v7}, Ljava/lang/StringBuilder;->setLength(I)V
 
-    .line 976
     iget-object v7, v5, Landroid/content/pm/PackageParser$Package;->packageName:Ljava/lang/String;
 
     invoke-virtual {v6, v7}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 977
     const/16 v7, 0x20
 
     invoke-virtual {v6, v7}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
 
-    .line 978
     iget-wide v10, v5, Landroid/content/pm/PackageParser$Package;->mLastPackageUsageTimeInMills:J
 
     invoke-virtual {v6, v10, v11}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
 
-    .line 979
     const/16 v7, 0xa
 
     invoke-virtual {v6, v7}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
 
-    .line 980
     invoke-virtual {v6}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
     move-result-object v7
@@ -358,7 +320,6 @@
 
     goto :goto_0
 
-    .line 984
     .end local v3    # "i$":Ljava/util/Iterator;
     .end local v4    # "out":Ljava/io/BufferedOutputStream;
     .end local v5    # "pkg":Landroid/content/pm/PackageParser$Package;
@@ -366,15 +327,12 @@
     :catch_0
     move-exception v0
 
-    .line 985
     .local v0, "e":Ljava/io/IOException;
     if-eqz v1, :cond_1
 
-    .line 986
     :try_start_3
     invoke-virtual {v2, v1}, Landroid/util/AtomicFile;->failWrite(Ljava/io/FileOutputStream;)V
 
-    .line 988
     :cond_1
     const-string v7, "PackageManager"
 
@@ -382,20 +340,17 @@
 
     invoke-static {v7, v10, v0}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
-    .line 990
     .end local v0    # "e":Ljava/io/IOException;
     :goto_1
     monitor-exit v9
     :try_end_3
     .catchall {:try_start_3 .. :try_end_3} :catchall_0
 
-    .line 991
     :try_start_4
     monitor-exit v8
     :try_end_4
     .catchall {:try_start_4 .. :try_end_4} :catchall_1
 
-    .line 992
     iget-object v7, p0, Lcom/android/server/pm/PackageManagerService$PackageUsage;->mLastWritten:Ljava/util/concurrent/atomic/AtomicLong;
 
     invoke-static {}, Landroid/os/SystemClock;->elapsedRealtime()J
@@ -404,10 +359,8 @@
 
     invoke-virtual {v7, v8, v9}, Ljava/util/concurrent/atomic/AtomicLong;->set(J)V
 
-    .line 993
     return-void
 
-    .line 982
     .restart local v3    # "i$":Ljava/util/Iterator;
     .restart local v4    # "out":Ljava/io/BufferedOutputStream;
     .restart local v6    # "sb":Ljava/lang/StringBuilder;
@@ -415,7 +368,6 @@
     :try_start_5
     invoke-virtual {v4}, Ljava/io/BufferedOutputStream;->flush()V
 
-    .line 983
     invoke-virtual {v2, v1}, Landroid/util/AtomicFile;->finishWrite(Ljava/io/FileOutputStream;)V
     :try_end_5
     .catch Ljava/io/IOException; {:try_start_5 .. :try_end_5} :catch_0
@@ -423,7 +375,6 @@
 
     goto :goto_1
 
-    .line 990
     .end local v1    # "f":Ljava/io/FileOutputStream;
     .end local v2    # "file":Landroid/util/AtomicFile;
     .end local v3    # "i$":Ljava/util/Iterator;
@@ -440,7 +391,6 @@
     :try_start_7
     throw v7
 
-    .line 991
     :catchall_1
     move-exception v7
 
@@ -457,10 +407,8 @@
     .locals 31
 
     .prologue
-    .line 997
     const/4 v10, 0x0
 
-    .line 998
     .local v10, "fis":Ljava/io/FileInputStream;
     new-instance v11, Landroid/util/AtomicFile;
 
@@ -474,25 +422,21 @@
 
     invoke-direct {v11, v0}, Landroid/util/AtomicFile;-><init>(Ljava/io/File;)V
 
-    .line 1000
     .local v11, "historyFile":Landroid/util/AtomicFile;
     new-instance v16, Ljava/util/HashMap;
 
     invoke-direct/range {v16 .. v16}, Ljava/util/HashMap;-><init>()V
 
-    .line 1004
     .local v16, "list":Ljava/util/HashMap;, "Ljava/util/HashMap<Ljava/lang/String;Ljava/lang/Long;>;"
     :try_start_0
     invoke-virtual {v11}, Landroid/util/AtomicFile;->openRead()Ljava/io/FileInputStream;
 
     move-result-object v10
 
-    .line 1005
     invoke-static {}, Landroid/util/Xml;->newPullParser()Lorg/xmlpull/v1/XmlPullParser;
 
     move-result-object v20
 
-    .line 1006
     .local v20, "parser":Lorg/xmlpull/v1/XmlPullParser;
     const/16 v25, 0x0
 
@@ -502,12 +446,10 @@
 
     invoke-interface {v0, v10, v1}, Lorg/xmlpull/v1/XmlPullParser;->setInput(Ljava/io/InputStream;Ljava/lang/String;)V
 
-    .line 1007
     invoke-interface/range {v20 .. v20}, Lorg/xmlpull/v1/XmlPullParser;->getEventType()I
 
     move-result v7
 
-    .line 1009
     .local v7, "eventType":I
     :goto_0
     const/16 v25, 0x2
@@ -522,22 +464,19 @@
 
     if-eq v7, v0, :cond_0
 
-    .line 1010
     invoke-interface/range {v20 .. v20}, Lorg/xmlpull/v1/XmlPullParser;->next()I
 
     move-result v7
 
     goto :goto_0
 
-    .line 1012
     :cond_0
     invoke-interface/range {v20 .. v20}, Lorg/xmlpull/v1/XmlPullParser;->getName()Ljava/lang/String;
 
     move-result-object v24
 
-    .line 1013
     .local v24, "tagName":Ljava/lang/String;
-    const-string/jumbo v25, "usage-history"
+    const-string v25, "usage-history"
 
     move-object/from16 v0, v25
 
@@ -549,36 +488,30 @@
 
     if-eqz v25, :cond_5
 
-    .line 1014
     const/16 v21, 0x0
 
-    .line 1016
     .local v21, "pkg":Ljava/lang/String;
     :cond_1
     invoke-interface/range {v20 .. v20}, Lorg/xmlpull/v1/XmlPullParser;->next()I
 
     move-result v7
 
-    .line 1017
     const/16 v25, 0x2
 
     move/from16 v0, v25
 
     if-ne v7, v0, :cond_9
 
-    .line 1018
     invoke-interface/range {v20 .. v20}, Lorg/xmlpull/v1/XmlPullParser;->getName()Ljava/lang/String;
 
     move-result-object v24
 
-    .line 1019
     invoke-interface/range {v20 .. v20}, Lorg/xmlpull/v1/XmlPullParser;->getDepth()I
 
     move-result v5
 
-    .line 1020
     .local v5, "depth":I
-    const-string/jumbo v25, "pkg"
+    const-string v25, "pkg"
 
     move-object/from16 v0, v25
 
@@ -596,7 +529,6 @@
 
     if-ne v5, v0, :cond_7
 
-    .line 1021
     const/16 v25, 0x0
 
     const-string v26, "name"
@@ -611,7 +543,6 @@
 
     move-result-object v21
 
-    .line 1044
     .end local v5    # "depth":I
     :cond_2
     :goto_1
@@ -621,7 +552,6 @@
 
     if-ne v7, v0, :cond_1
 
-    .line 1047
     sget-object v26, Lcom/android/server/pm/PackageManagerService;->mPackages:Ljava/util/HashMap;
 
     monitor-enter v26
@@ -630,7 +560,6 @@
     .catch Ljava/io/IOException; {:try_start_0 .. :try_end_0} :catch_4
     .catchall {:try_start_0 .. :try_end_0} :catchall_2
 
-    .line 1048
     :try_start_1
     move-object/from16 v0, p0
 
@@ -642,7 +571,6 @@
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_1
 
-    .line 1049
     :try_start_2
     invoke-direct/range {p0 .. p0}, Lcom/android/server/pm/PackageManagerService$PackageUsage;->getFile()Landroid/util/AtomicFile;
     :try_end_2
@@ -650,25 +578,21 @@
 
     move-result-object v9
 
-    .line 1050
     .local v9, "file":Landroid/util/AtomicFile;
     const/4 v8, 0x0
 
-    .line 1052
     .local v8, "f":Ljava/io/FileOutputStream;
     :try_start_3
     invoke-virtual {v9}, Landroid/util/AtomicFile;->startWrite()Ljava/io/FileOutputStream;
 
     move-result-object v8
 
-    .line 1053
     new-instance v17, Ljava/io/BufferedOutputStream;
 
     move-object/from16 v0, v17
 
     invoke-direct {v0, v8}, Ljava/io/BufferedOutputStream;-><init>(Ljava/io/OutputStream;)V
 
-    .line 1054
     .local v17, "out":Ljava/io/BufferedOutputStream;
     invoke-virtual {v9}, Landroid/util/AtomicFile;->getBaseFile()Ljava/io/File;
 
@@ -694,12 +618,10 @@
 
     invoke-static {v0, v1, v2, v3}, Landroid/os/FileUtils;->setPermissions(Ljava/lang/String;III)I
 
-    .line 1055
     new-instance v23, Ljava/lang/StringBuilder;
 
     invoke-direct/range {v23 .. v23}, Ljava/lang/StringBuilder;-><init>()V
 
-    .line 1056
     .local v23, "sb":Ljava/lang/StringBuilder;
     invoke-virtual/range {v16 .. v16}, Ljava/util/HashMap;->keySet()Ljava/util/Set;
 
@@ -724,7 +646,6 @@
 
     check-cast v22, Ljava/lang/String;
 
-    .line 1057
     .local v22, "pkgName":Ljava/lang/String;
     move-object/from16 v0, v16
 
@@ -740,7 +661,6 @@
 
     move-result-wide v18
 
-    .line 1058
     .local v18, "lrt":J
     const-wide/16 v28, 0x0
 
@@ -748,7 +668,6 @@
 
     if-eqz v25, :cond_3
 
-    .line 1061
     const/16 v25, 0x0
 
     move-object/from16 v0, v23
@@ -757,14 +676,12 @@
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->setLength(I)V
 
-    .line 1062
     move-object/from16 v0, v23
 
     move-object/from16 v1, v22
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 1063
     const/16 v25, 0x20
 
     move-object/from16 v0, v23
@@ -773,14 +690,12 @@
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
 
-    .line 1064
     move-object/from16 v0, v23
 
     move-wide/from16 v1, v18
 
     invoke-virtual {v0, v1, v2}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
 
-    .line 1065
     const/16 v25, 0xa
 
     move-object/from16 v0, v23
@@ -789,7 +704,6 @@
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
 
-    .line 1066
     invoke-virtual/range {v23 .. v23}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
     move-result-object v25
@@ -815,7 +729,6 @@
 
     goto :goto_2
 
-    .line 1070
     .end local v12    # "i$":Ljava/util/Iterator;
     .end local v17    # "out":Ljava/io/BufferedOutputStream;
     .end local v18    # "lrt":J
@@ -824,15 +737,12 @@
     :catch_0
     move-exception v6
 
-    .line 1071
     .local v6, "e":Ljava/io/IOException;
     if-eqz v8, :cond_4
 
-    .line 1072
     :try_start_4
     invoke-virtual {v9, v8}, Landroid/util/AtomicFile;->failWrite(Ljava/io/FileOutputStream;)V
 
-    .line 1074
     :cond_4
     const-string v25, "PackageManager"
 
@@ -844,20 +754,17 @@
 
     invoke-static {v0, v1, v6}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
-    .line 1076
     .end local v6    # "e":Ljava/io/IOException;
     :goto_3
     monitor-exit v27
     :try_end_4
     .catchall {:try_start_4 .. :try_end_4} :catchall_0
 
-    .line 1077
     :try_start_5
     monitor-exit v26
     :try_end_5
     .catchall {:try_start_5 .. :try_end_5} :catchall_1
 
-    .line 1078
     :try_start_6
     move-object/from16 v0, p0
 
@@ -871,7 +778,6 @@
 
     invoke-virtual/range {v25 .. v27}, Ljava/util/concurrent/atomic/AtomicLong;->set(J)V
 
-    .line 1079
     invoke-virtual {v11}, Landroid/util/AtomicFile;->getBaseFile()Ljava/io/File;
 
     move-result-object v25
@@ -888,20 +794,17 @@
     .catch Ljava/io/IOException; {:try_start_6 .. :try_end_6} :catch_4
     .catchall {:try_start_6 .. :try_end_6} :catchall_2
 
-    .line 1086
     .end local v8    # "f":Ljava/io/FileOutputStream;
     .end local v9    # "file":Landroid/util/AtomicFile;
     .end local v21    # "pkg":Ljava/lang/String;
     :cond_5
     if-eqz v10, :cond_6
 
-    .line 1088
     :try_start_7
     invoke-virtual {v10}, Ljava/io/FileInputStream;->close()V
     :try_end_7
     .catch Ljava/io/IOException; {:try_start_7 .. :try_end_7} :catch_6
 
-    .line 1093
     .end local v7    # "eventType":I
     .end local v20    # "parser":Lorg/xmlpull/v1/XmlPullParser;
     .end local v24    # "tagName":Ljava/lang/String;
@@ -909,7 +812,6 @@
     :goto_4
     return-void
 
-    .line 1022
     .restart local v5    # "depth":I
     .restart local v7    # "eventType":I
     .restart local v20    # "parser":Lorg/xmlpull/v1/XmlPullParser;
@@ -937,7 +839,6 @@
 
     if-eqz v21, :cond_2
 
-    .line 1023
     const/16 v25, 0x0
 
     const-string v26, "name"
@@ -952,7 +853,6 @@
 
     move-result-object v4
 
-    .line 1024
     .local v4, "comp":Ljava/lang/String;
     const/16 v25, 0x0
 
@@ -972,19 +872,16 @@
 
     move-result-object v13
 
-    .line 1025
     .local v13, "lastResumeTimeStr":Ljava/lang/String;
     if-eqz v4, :cond_2
 
     if-eqz v13, :cond_2
 
-    .line 1027
     :try_start_9
     invoke-static {v13}, Ljava/lang/Long;->parseLong(Ljava/lang/String;)J
 
     move-result-wide v14
 
-    .line 1028
     .local v14, "lastResumeTime":J
     move-object/from16 v0, v16
 
@@ -996,7 +893,6 @@
 
     if-eqz v25, :cond_8
 
-    .line 1029
     move-object/from16 v0, v16
 
     move-object/from16 v1, v21
@@ -1015,7 +911,6 @@
 
     if-gez v25, :cond_2
 
-    .line 1030
     new-instance v25, Ljava/lang/Long;
 
     move-object/from16 v0, v25
@@ -1032,14 +927,12 @@
 
     goto/16 :goto_1
 
-    .line 1035
     .end local v14    # "lastResumeTime":J
     :catch_1
     move-exception v25
 
     goto/16 :goto_1
 
-    .line 1033
     .restart local v14    # "lastResumeTime":J
     :cond_8
     new-instance v25, Ljava/lang/Long;
@@ -1063,7 +956,6 @@
 
     goto/16 :goto_1
 
-    .line 1081
     .end local v4    # "comp":Ljava/lang/String;
     .end local v5    # "depth":I
     .end local v7    # "eventType":I
@@ -1075,7 +967,6 @@
     :catch_2
     move-exception v6
 
-    .line 1082
     .local v6, "e":Lorg/xmlpull/v1/XmlPullParserException;
     :try_start_a
     const-string v25, "PackageManager"
@@ -1104,10 +995,8 @@
     :try_end_a
     .catchall {:try_start_a .. :try_end_a} :catchall_2
 
-    .line 1086
     if-eqz v10, :cond_6
 
-    .line 1088
     :try_start_b
     invoke-virtual {v10}, Ljava/io/FileInputStream;->close()V
     :try_end_b
@@ -1115,13 +1004,11 @@
 
     goto/16 :goto_4
 
-    .line 1089
     :catch_3
     move-exception v25
 
     goto/16 :goto_4
 
-    .line 1039
     .end local v6    # "e":Lorg/xmlpull/v1/XmlPullParserException;
     .restart local v7    # "eventType":I
     .restart local v20    # "parser":Lorg/xmlpull/v1/XmlPullParser;
@@ -1134,9 +1021,8 @@
 
     if-ne v7, v0, :cond_2
 
-    .line 1040
     :try_start_c
-    const-string/jumbo v25, "pkg"
+    const-string v25, "pkg"
 
     invoke-interface/range {v20 .. v20}, Lorg/xmlpull/v1/XmlPullParser;->getName()Ljava/lang/String;
 
@@ -1152,12 +1038,10 @@
 
     if-eqz v25, :cond_2
 
-    .line 1041
     const/16 v21, 0x0
 
     goto/16 :goto_1
 
-    .line 1068
     .restart local v8    # "f":Ljava/io/FileOutputStream;
     .restart local v9    # "file":Landroid/util/AtomicFile;
     .restart local v12    # "i$":Ljava/util/Iterator;
@@ -1167,7 +1051,6 @@
     :try_start_d
     invoke-virtual/range {v17 .. v17}, Ljava/io/BufferedOutputStream;->flush()V
 
-    .line 1069
     invoke-virtual {v9, v8}, Landroid/util/AtomicFile;->finishWrite(Ljava/io/FileOutputStream;)V
     :try_end_d
     .catch Ljava/io/IOException; {:try_start_d .. :try_end_d} :catch_0
@@ -1175,7 +1058,6 @@
 
     goto/16 :goto_3
 
-    .line 1076
     .end local v8    # "f":Ljava/io/FileOutputStream;
     .end local v9    # "file":Landroid/util/AtomicFile;
     .end local v12    # "i$":Ljava/util/Iterator;
@@ -1192,7 +1074,6 @@
     :try_start_f
     throw v25
 
-    .line 1077
     :catchall_1
     move-exception v25
 
@@ -1207,7 +1088,6 @@
     .catch Ljava/io/IOException; {:try_start_10 .. :try_end_10} :catch_4
     .catchall {:try_start_10 .. :try_end_10} :catchall_2
 
-    .line 1083
     .end local v7    # "eventType":I
     .end local v20    # "parser":Lorg/xmlpull/v1/XmlPullParser;
     .end local v21    # "pkg":Ljava/lang/String;
@@ -1215,7 +1095,6 @@
     :catch_4
     move-exception v6
 
-    .line 1084
     .local v6, "e":Ljava/io/IOException;
     :try_start_11
     const-string v25, "PackageManager"
@@ -1244,10 +1123,8 @@
     :try_end_11
     .catchall {:try_start_11 .. :try_end_11} :catchall_2
 
-    .line 1086
     if-eqz v10, :cond_6
 
-    .line 1088
     :try_start_12
     invoke-virtual {v10}, Ljava/io/FileInputStream;->close()V
     :try_end_12
@@ -1255,31 +1132,26 @@
 
     goto/16 :goto_4
 
-    .line 1089
     :catch_5
     move-exception v25
 
     goto/16 :goto_4
 
-    .line 1086
     .end local v6    # "e":Ljava/io/IOException;
     :catchall_2
     move-exception v25
 
     if-eqz v10, :cond_b
 
-    .line 1088
     :try_start_13
     invoke-virtual {v10}, Ljava/io/FileInputStream;->close()V
     :try_end_13
     .catch Ljava/io/IOException; {:try_start_13 .. :try_end_13} :catch_7
 
-    .line 1090
     :cond_b
     :goto_5
     throw v25
 
-    .line 1089
     .restart local v7    # "eventType":I
     .restart local v20    # "parser":Lorg/xmlpull/v1/XmlPullParser;
     .restart local v24    # "tagName":Ljava/lang/String;
@@ -1301,7 +1173,6 @@
     .locals 1
 
     .prologue
-    .line 935
     iget-boolean v0, p0, Lcom/android/server/pm/PackageManagerService$PackageUsage;->mIsHistoricalPackageUsageAvailable:Z
 
     return v0
@@ -1311,27 +1182,22 @@
     .locals 15
 
     .prologue
-    .line 1097
     iget-object v12, p0, Lcom/android/server/pm/PackageManagerService$PackageUsage;->mFileLock:Ljava/lang/Object;
 
     monitor-enter v12
 
-    .line 1099
     :try_start_0
     invoke-virtual {p0}, Lcom/android/server/pm/PackageManagerService$PackageUsage;->convertUsageHistory()V
 
-    .line 1101
     invoke-direct {p0}, Lcom/android/server/pm/PackageManagerService$PackageUsage;->getFile()Landroid/util/AtomicFile;
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
     move-result-object v2
 
-    .line 1102
     .local v2, "file":Landroid/util/AtomicFile;
     const/4 v3, 0x0
 
-    .line 1104
     .local v3, "in":Ljava/io/BufferedInputStream;
     :try_start_1
     new-instance v4, Ljava/io/BufferedInputStream;
@@ -1346,7 +1212,6 @@
     .catch Ljava/io/IOException; {:try_start_1 .. :try_end_1} :catch_3
     .catchall {:try_start_1 .. :try_end_1} :catchall_2
 
-    .line 1105
     .end local v3    # "in":Ljava/io/BufferedInputStream;
     .local v4, "in":Ljava/io/BufferedInputStream;
     :try_start_2
@@ -1354,7 +1219,6 @@
 
     invoke-direct {v7}, Ljava/lang/StringBuffer;-><init>()V
 
-    .line 1107
     .local v7, "sb":Ljava/lang/StringBuffer;
     :cond_0
     :goto_0
@@ -1368,17 +1232,14 @@
 
     move-result-object v5
 
-    .line 1108
     .local v5, "packageName":Ljava/lang/String;
     if-nez v5, :cond_1
 
-    .line 1134
     :try_start_3
     invoke-static {v4}, Llibcore/io/IoUtils;->closeQuietly(Ljava/lang/AutoCloseable;)V
 
     move-object v3, v4
 
-    .line 1136
     .end local v4    # "in":Ljava/io/BufferedInputStream;
     .end local v5    # "packageName":Ljava/lang/String;
     .end local v7    # "sb":Ljava/lang/StringBuffer;
@@ -1388,7 +1249,6 @@
     :try_end_3
     .catchall {:try_start_3 .. :try_end_3} :catchall_0
 
-    .line 1137
     iget-object v11, p0, Lcom/android/server/pm/PackageManagerService$PackageUsage;->mLastWritten:Ljava/util/concurrent/atomic/AtomicLong;
 
     invoke-static {}, Landroid/os/SystemClock;->elapsedRealtime()J
@@ -1397,10 +1257,8 @@
 
     invoke-virtual {v11, v12, v13}, Ljava/util/concurrent/atomic/AtomicLong;->set(J)V
 
-    .line 1138
     return-void
 
-    .line 1111
     .end local v3    # "in":Ljava/io/BufferedInputStream;
     .restart local v4    # "in":Ljava/io/BufferedInputStream;
     .restart local v5    # "packageName":Ljava/lang/String;
@@ -1413,11 +1271,9 @@
 
     move-result-object v10
 
-    .line 1112
     .local v10, "timeInMillisString":Ljava/lang/String;
     if-nez v10, :cond_2
 
-    .line 1113
     new-instance v11, Ljava/io/IOException;
 
     new-instance v13, Ljava/lang/StringBuilder;
@@ -1446,7 +1302,6 @@
     .catch Ljava/io/IOException; {:try_start_4 .. :try_end_4} :catch_1
     .catchall {:try_start_4 .. :try_end_4} :catchall_1
 
-    .line 1129
     .end local v5    # "packageName":Ljava/lang/String;
     .end local v7    # "sb":Ljava/lang/StringBuffer;
     .end local v10    # "timeInMillisString":Ljava/lang/String;
@@ -1455,7 +1310,6 @@
 
     move-object v3, v4
 
-    .line 1130
     .end local v4    # "in":Ljava/io/BufferedInputStream;
     .local v1, "expected":Ljava/io/FileNotFoundException;
     .restart local v3    # "in":Ljava/io/BufferedInputStream;
@@ -1467,13 +1321,11 @@
     :try_end_5
     .catchall {:try_start_5 .. :try_end_5} :catchall_2
 
-    .line 1134
     :try_start_6
     invoke-static {v3}, Llibcore/io/IoUtils;->closeQuietly(Ljava/lang/AutoCloseable;)V
 
     goto :goto_1
 
-    .line 1136
     .end local v1    # "expected":Ljava/io/FileNotFoundException;
     .end local v2    # "file":Landroid/util/AtomicFile;
     .end local v3    # "in":Ljava/io/BufferedInputStream;
@@ -1486,7 +1338,6 @@
 
     throw v11
 
-    .line 1116
     .restart local v2    # "file":Landroid/util/AtomicFile;
     .restart local v4    # "in":Ljava/io/BufferedInputStream;
     .restart local v5    # "packageName":Ljava/lang/String;
@@ -1506,11 +1357,9 @@
     .catch Ljava/io/IOException; {:try_start_7 .. :try_end_7} :catch_1
     .catchall {:try_start_7 .. :try_end_7} :catchall_1
 
-    .line 1117
     .local v6, "pkg":Landroid/content/pm/PackageParser$Package;
     if-eqz v6, :cond_0
 
-    .line 1122
     :try_start_8
     invoke-virtual {v10}, Ljava/lang/String;->toString()Ljava/lang/String;
 
@@ -1525,7 +1374,6 @@
 
     move-result-wide v8
 
-    .line 1127
     .local v8, "timeInMillis":J
     :try_start_9
     iput-wide v8, v6, Landroid/content/pm/PackageParser$Package;->mLastPackageUsageTimeInMills:J
@@ -1536,7 +1384,6 @@
 
     goto :goto_0
 
-    .line 1131
     .end local v5    # "packageName":Ljava/lang/String;
     .end local v6    # "pkg":Landroid/content/pm/PackageParser$Package;
     .end local v7    # "sb":Ljava/lang/StringBuffer;
@@ -1547,7 +1394,6 @@
 
     move-object v3, v4
 
-    .line 1132
     .end local v4    # "in":Ljava/io/BufferedInputStream;
     .local v0, "e":Ljava/io/IOException;
     .restart local v3    # "in":Ljava/io/BufferedInputStream;
@@ -1561,7 +1407,6 @@
     :try_end_a
     .catchall {:try_start_a .. :try_end_a} :catchall_2
 
-    .line 1134
     :try_start_b
     invoke-static {v3}, Llibcore/io/IoUtils;->closeQuietly(Ljava/lang/AutoCloseable;)V
     :try_end_b
@@ -1569,7 +1414,6 @@
 
     goto :goto_1
 
-    .line 1123
     .end local v0    # "e":Ljava/io/IOException;
     .end local v3    # "in":Ljava/io/BufferedInputStream;
     .restart local v4    # "in":Ljava/io/BufferedInputStream;
@@ -1580,7 +1424,6 @@
     :catch_2
     move-exception v0
 
-    .line 1124
     .local v0, "e":Ljava/lang/NumberFormatException;
     :try_start_c
     new-instance v11, Ljava/io/IOException;
@@ -1617,7 +1460,6 @@
     .catch Ljava/io/IOException; {:try_start_c .. :try_end_c} :catch_1
     .catchall {:try_start_c .. :try_end_c} :catchall_1
 
-    .line 1134
     .end local v0    # "e":Ljava/lang/NumberFormatException;
     .end local v5    # "packageName":Ljava/lang/String;
     .end local v6    # "pkg":Landroid/content/pm/PackageParser$Package;
@@ -1643,13 +1485,11 @@
 
     goto :goto_4
 
-    .line 1131
     :catch_3
     move-exception v0
 
     goto :goto_3
 
-    .line 1129
     :catch_4
     move-exception v1
 
@@ -1661,18 +1501,14 @@
     .param p1, "force"    # Z
 
     .prologue
-    .line 939
     if-eqz p1, :cond_1
 
-    .line 940
     invoke-direct {p0}, Lcom/android/server/pm/PackageManagerService$PackageUsage;->writeInternal()V
 
-    .line 959
     :cond_0
     :goto_0
     return-void
 
-    .line 943
     :cond_1
     invoke-static {}, Landroid/os/SystemClock;->elapsedRealtime()J
 
@@ -1692,7 +1528,6 @@
 
     if-ltz v0, :cond_0
 
-    .line 947
     iget-object v0, p0, Lcom/android/server/pm/PackageManagerService$PackageUsage;->mBackgroundWriteRunning:Ljava/util/concurrent/atomic/AtomicBoolean;
 
     const/4 v1, 0x0
@@ -1705,7 +1540,6 @@
 
     if-eqz v0, :cond_0
 
-    .line 948
     new-instance v0, Lcom/android/server/pm/PackageManagerService$PackageUsage$1;
 
     const-string v1, "PackageUsage_DiskWriter"

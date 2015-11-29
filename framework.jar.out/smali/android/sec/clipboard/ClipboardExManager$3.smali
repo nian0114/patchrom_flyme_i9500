@@ -28,7 +28,6 @@
     .locals 0
 
     .prologue
-    .line 617
     iput-object p1, p0, Landroid/sec/clipboard/ClipboardExManager$3;->this$0:Landroid/sec/clipboard/ClipboardExManager;
 
     iput-object p2, p0, Landroid/sec/clipboard/ClipboardExManager$3;->val$clipData:Landroid/sec/clipboard/data/ClipboardData;
@@ -44,7 +43,6 @@
     .locals 5
 
     .prologue
-    .line 627
     :try_start_0
     sget-boolean v1, Landroid/sec/clipboard/data/ClipboardDefine;->DEBUG:Z
 
@@ -56,7 +54,6 @@
 
     invoke-static {v1, v2}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 629
     :cond_0
     iget-object v1, p0, Landroid/sec/clipboard/ClipboardExManager$3;->val$clipData:Landroid/sec/clipboard/data/ClipboardData;
 
@@ -103,16 +100,13 @@
 
     if-eqz v1, :cond_1
 
-    .line 635
     :cond_1
     :goto_0
     return-void
 
-    .line 631
     :catch_0
     move-exception v0
 
-    .line 632
     .local v0, "e":Ljava/lang/Exception;
     sget-boolean v1, Landroid/sec/clipboard/data/ClipboardDefine;->DEBUG:Z
 
@@ -120,11 +114,10 @@
 
     const-string v1, "ClipboardServiceEx"
 
-    const-string/jumbo v2, "setData(ClipboardData)(RemoteException): "
+    const-string v2, "setData(ClipboardData)(RemoteException): "
 
     invoke-static {v1, v2}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 633
     :cond_2
     invoke-virtual {v0}, Ljava/lang/Exception;->printStackTrace()V
 

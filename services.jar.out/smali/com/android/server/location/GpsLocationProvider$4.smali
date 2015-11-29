@@ -23,7 +23,6 @@
     .locals 0
 
     .prologue
-    .line 455
     iput-object p1, p0, Lcom/android/server/location/GpsLocationProvider$4;->this$0:Lcom/android/server/location/GpsLocationProvider;
 
     invoke-direct {p0}, Lcom/android/server/location/GpsNavigationMessageProvider;-><init>()V
@@ -37,7 +36,6 @@
     .locals 1
 
     .prologue
-    .line 458
     # invokes: Lcom/android/server/location/GpsLocationProvider;->native_is_navigation_message_supported()Z
     invoke-static {}, Lcom/android/server/location/GpsLocationProvider;->access$400()Z
 
@@ -50,7 +48,6 @@
     .locals 1
 
     .prologue
-    .line 463
     iget-object v0, p0, Lcom/android/server/location/GpsLocationProvider$4;->this$0:Lcom/android/server/location/GpsLocationProvider;
 
     # invokes: Lcom/android/server/location/GpsLocationProvider;->native_start_navigation_message_collection()Z
@@ -65,12 +62,10 @@
     .locals 1
 
     .prologue
-    .line 468
     iget-object v0, p0, Lcom/android/server/location/GpsLocationProvider$4;->this$0:Lcom/android/server/location/GpsLocationProvider;
 
     # invokes: Lcom/android/server/location/GpsLocationProvider;->native_stop_navigation_message_collection()Z
     invoke-static {v0}, Lcom/android/server/location/GpsLocationProvider;->access$600(Lcom/android/server/location/GpsLocationProvider;)Z
 
-    .line 469
     return-void
 .end method

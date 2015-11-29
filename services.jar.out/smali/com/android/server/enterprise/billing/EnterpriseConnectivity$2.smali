@@ -23,7 +23,6 @@
     .locals 0
 
     .prologue
-    .line 339
     iput-object p1, p0, Lcom/android/server/enterprise/billing/EnterpriseConnectivity$2;->this$0:Lcom/android/server/enterprise/billing/EnterpriseConnectivity;
 
     invoke-direct {p0}, Landroid/content/BroadcastReceiver;-><init>()V
@@ -39,7 +38,6 @@
     .param p2, "intent"    # Landroid/content/Intent;
 
     .prologue
-    .line 342
     const-string v2, "com.android.server.enterprise.billing.notification_dismissed"
 
     invoke-virtual {p2}, Landroid/content/Intent;->getAction()Ljava/lang/String;
@@ -52,7 +50,6 @@
 
     if-eqz v2, :cond_0
 
-    .line 343
     iget-object v2, p0, Lcom/android/server/enterprise/billing/EnterpriseConnectivity$2;->this$0:Lcom/android/server/enterprise/billing/EnterpriseConnectivity;
 
     # getter for: Lcom/android/server/enterprise/billing/EnterpriseConnectivity;->mConnections:Ljava/util/ArrayList;
@@ -78,7 +75,6 @@
 
     check-cast v0, Lcom/android/server/enterprise/billing/EnterpriseConnectivity$Connection;
 
-    .line 344
     .local v0, "c":Lcom/android/server/enterprise/billing/EnterpriseConnectivity$Connection;
     const/16 v2, 0x3f7
 
@@ -86,7 +82,6 @@
 
     goto :goto_0
 
-    .line 347
     .end local v0    # "c":Lcom/android/server/enterprise/billing/EnterpriseConnectivity$Connection;
     .end local v1    # "i$":Ljava/util/Iterator;
     :cond_0

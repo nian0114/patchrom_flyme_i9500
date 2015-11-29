@@ -23,7 +23,6 @@
     .locals 0
 
     .prologue
-    .line 3909
     iput-object p1, p0, Lcom/android/server/MountService$DirEncryptListner;->this$0:Lcom/android/server/MountService;
 
     invoke-direct {p0}, Landroid/os/storage/IDirEncryptServiceListener$Stub;-><init>()V
@@ -40,14 +39,13 @@
     .param p3, "status"    # Ljava/lang/String;
 
     .prologue
-    .line 3915
     const-string v1, "MountService"
 
     new-instance v2, Ljava/lang/StringBuilder;
 
     invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v3, "onEncryptionStatusChanged: path = "
+    const-string v3, "onEncryptionStatusChanged: path = "
 
     invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -83,7 +81,6 @@
 
     invoke-static {v1, v2}, Landroid/util/Slog;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 3916
     iget-object v1, p0, Lcom/android/server/MountService$DirEncryptListner;->this$0:Lcom/android/server/MountService;
 
     iget-object v1, v1, Lcom/android/server/MountService;->mDem:Landroid/dirEncryption/DirEncryptionManager;
@@ -106,7 +103,6 @@
 
     if-eqz v1, :cond_0
 
-    .line 3918
     :try_start_0
     iget-object v1, p0, Lcom/android/server/MountService$DirEncryptListner;->this$0:Lcom/android/server/MountService;
 
@@ -115,7 +111,7 @@
 
     move-result-object v1
 
-    const-string/jumbo v2, "volume"
+    const-string v2, "volume"
 
     const/4 v3, 0x3
 
@@ -141,7 +137,6 @@
     :try_end_0
     .catch Lcom/android/server/NativeDaemonConnectorException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 3924
     :cond_0
     :goto_0
     iget-object v1, p0, Lcom/android/server/MountService$DirEncryptListner;->this$0:Lcom/android/server/MountService;
@@ -166,20 +161,16 @@
 
     if-eqz v1, :cond_1
 
-    .line 3925
     iget-object v1, p0, Lcom/android/server/MountService$DirEncryptListner;->this$0:Lcom/android/server/MountService;
 
     invoke-virtual {v1, p1}, Lcom/android/server/MountService;->dirCryptoMntFinished(Ljava/lang/String;)V
 
-    .line 3927
     :cond_1
     return-void
 
-    .line 3919
     :catch_0
     move-exception v0
 
-    .line 3920
     .local v0, "e":Lcom/android/server/NativeDaemonConnectorException;
     const-string v1, "MountService"
 

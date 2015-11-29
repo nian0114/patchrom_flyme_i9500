@@ -32,15 +32,12 @@
     .param p2, "socket"    # Ljava/net/Socket;
 
     .prologue
-    .line 13611
     iput-object p1, p0, Lcom/android/server/wifi/WifiStateMachine$ShareProfileFileReceiver;->this$0:Lcom/android/server/wifi/WifiStateMachine;
 
     invoke-direct {p0}, Ljava/lang/Thread;-><init>()V
 
-    .line 13612
     iput-object p2, p0, Lcom/android/server/wifi/WifiStateMachine$ShareProfileFileReceiver;->socket:Ljava/net/Socket;
 
-    .line 13613
     return-void
 .end method
 
@@ -50,7 +47,6 @@
     .locals 11
 
     .prologue
-    .line 13617
     # getter for: Lcom/android/server/wifi/WifiStateMachine;->DBG:Z
     invoke-static {}, Lcom/android/server/wifi/WifiStateMachine;->access$100()Z
 
@@ -64,7 +60,6 @@
 
     invoke-static {v8, v9}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 13619
     :cond_0
     :try_start_0
     new-instance v8, Ljava/io/DataInputStream;
@@ -79,18 +74,15 @@
 
     iput-object v8, p0, Lcom/android/server/wifi/WifiStateMachine$ShareProfileFileReceiver;->dis:Ljava/io/DataInputStream;
 
-    .line 13622
     iget-object v8, p0, Lcom/android/server/wifi/WifiStateMachine$ShareProfileFileReceiver;->dis:Ljava/io/DataInputStream;
 
     invoke-virtual {v8}, Ljava/io/DataInputStream;->readUTF()Ljava/lang/String;
 
     move-result-object v5
 
-    .line 13623
     .local v5, "senderID":Ljava/lang/String;
     const-string v3, "ReceivedEncrypted.conf"
 
-    .line 13624
     .local v3, "fName":Ljava/lang/String;
     # getter for: Lcom/android/server/wifi/WifiStateMachine;->DBG:Z
     invoke-static {}, Lcom/android/server/wifi/WifiStateMachine;->access$100()Z
@@ -121,7 +113,6 @@
 
     invoke-static {v8, v9}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 13627
     :cond_1
     new-instance v2, Ljava/io/File;
 
@@ -145,7 +136,6 @@
 
     invoke-direct {v2, v8}, Ljava/io/File;-><init>(Ljava/lang/String;)V
 
-    .line 13628
     .local v2, "f":Ljava/io/File;
     new-instance v8, Ljava/io/FileOutputStream;
 
@@ -153,7 +143,6 @@
 
     iput-object v8, p0, Lcom/android/server/wifi/WifiStateMachine$ShareProfileFileReceiver;->fos:Ljava/io/FileOutputStream;
 
-    .line 13629
     new-instance v8, Ljava/io/BufferedOutputStream;
 
     iget-object v9, p0, Lcom/android/server/wifi/WifiStateMachine$ShareProfileFileReceiver;->fos:Ljava/io/FileOutputStream;
@@ -162,7 +151,6 @@
 
     iput-object v8, p0, Lcom/android/server/wifi/WifiStateMachine$ShareProfileFileReceiver;->bos:Ljava/io/BufferedOutputStream;
 
-    .line 13630
     # getter for: Lcom/android/server/wifi/WifiStateMachine;->DBG:Z
     invoke-static {}, Lcom/android/server/wifi/WifiStateMachine;->access$100()Z
 
@@ -176,15 +164,12 @@
 
     invoke-static {v8, v9}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 13634
     :cond_2
     const/16 v6, 0x1000
 
-    .line 13635
     .local v6, "size":I
     new-array v0, v6, [B
 
-    .line 13636
     .local v0, "data":[B
     :goto_0
     iget-object v8, p0, Lcom/android/server/wifi/WifiStateMachine$ShareProfileFileReceiver;->dis:Ljava/io/DataInputStream;
@@ -198,7 +183,6 @@
 
     if-eq v4, v8, :cond_3
 
-    .line 13637
     iget-object v8, p0, Lcom/android/server/wifi/WifiStateMachine$ShareProfileFileReceiver;->bos:Ljava/io/BufferedOutputStream;
 
     const/4 v9, 0x0
@@ -209,7 +193,6 @@
 
     goto :goto_0
 
-    .line 13649
     .end local v0    # "data":[B
     .end local v2    # "f":Ljava/io/File;
     .end local v3    # "fName":Ljava/lang/String;
@@ -219,7 +202,6 @@
     :catch_0
     move-exception v1
 
-    .line 13650
     .local v1, "e":Ljava/io/IOException;
     const-string v8, "WifiStateMachine"
 
@@ -243,7 +225,6 @@
 
     invoke-static {v8, v9}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 13652
     .end local v1    # "e":Ljava/io/IOException;
     :goto_1
     iget-object v8, p0, Lcom/android/server/wifi/WifiStateMachine$ShareProfileFileReceiver;->this$0:Lcom/android/server/wifi/WifiStateMachine;
@@ -252,10 +233,8 @@
 
     invoke-virtual {v8, v9}, Lcom/android/server/wifi/WifiStateMachine;->sendMessage(I)V
 
-    .line 13653
     return-void
 
-    .line 13640
     .restart local v0    # "data":[B
     .restart local v2    # "f":Ljava/io/File;
     .restart local v3    # "fName":Ljava/lang/String;
@@ -268,25 +247,20 @@
 
     invoke-virtual {v8}, Ljava/io/BufferedOutputStream;->flush()V
 
-    .line 13641
     iget-object v8, p0, Lcom/android/server/wifi/WifiStateMachine$ShareProfileFileReceiver;->bos:Ljava/io/BufferedOutputStream;
 
     invoke-virtual {v8}, Ljava/io/BufferedOutputStream;->close()V
 
-    .line 13642
     iget-object v8, p0, Lcom/android/server/wifi/WifiStateMachine$ShareProfileFileReceiver;->fos:Ljava/io/FileOutputStream;
 
     invoke-virtual {v8}, Ljava/io/FileOutputStream;->close()V
 
-    .line 13643
     iget-object v8, p0, Lcom/android/server/wifi/WifiStateMachine$ShareProfileFileReceiver;->dis:Ljava/io/DataInputStream;
 
     invoke-virtual {v8}, Ljava/io/DataInputStream;->close()V
 
-    .line 13645
     const/4 v7, 0x0
 
-    .line 13646
     .local v7, "sourceDevice":Ljava/lang/String;
     const-string v8, "Sender:"
 
@@ -306,7 +280,6 @@
 
     move-result-object v7
 
-    .line 13647
     :cond_4
     iget-object v8, p0, Lcom/android/server/wifi/WifiStateMachine$ShareProfileFileReceiver;->this$0:Lcom/android/server/wifi/WifiStateMachine;
 

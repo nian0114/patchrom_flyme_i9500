@@ -34,20 +34,15 @@
     .param p4, "time"    # J
 
     .prologue
-    .line 906
     iput-object p1, p0, Lcom/android/server/pm/PackageManagerService$VerifierPackage;->this$0:Lcom/android/server/pm/PackageManagerService;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 907
     iput-object p2, p0, Lcom/android/server/pm/PackageManagerService$VerifierPackage;->packageName:Ljava/lang/String;
 
-    .line 908
     iput p3, p0, Lcom/android/server/pm/PackageManagerService$VerifierPackage;->uId:I
 
-    .line 909
     iput-wide p4, p0, Lcom/android/server/pm/PackageManagerService$VerifierPackage;->firstInstallTime:J
 
-    .line 910
     return-void
 .end method

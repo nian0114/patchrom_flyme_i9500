@@ -36,7 +36,6 @@
     .locals 2
 
     .prologue
-    .line 61
     const-wide/32 v0, 0x80000
 
     sput-wide v0, Lcom/android/server/enterprise/auditlog/PartialFileNode;->FILESIZE:J
@@ -50,24 +49,18 @@
     .param p2, "packageName"    # Ljava/lang/String;
 
     .prologue
-    .line 83
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 59
     const/4 v0, 0x0
 
     iput-boolean v0, p0, Lcom/android/server/enterprise/auditlog/PartialFileNode;->isCompressed:Z
 
-    .line 84
     iput-object p2, p0, Lcom/android/server/enterprise/auditlog/PartialFileNode;->mPackageName:Ljava/lang/String;
 
-    .line 85
     iput-object p1, p0, Lcom/android/server/enterprise/auditlog/PartialFileNode;->mFile:Ljava/io/File;
 
-    .line 86
     invoke-virtual {p0}, Lcom/android/server/enterprise/auditlog/PartialFileNode;->setTimestamp()V
 
-    .line 87
     return-void
 .end method
 
@@ -81,21 +74,16 @@
 
     const/4 v3, 0x0
 
-    .line 63
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 59
     iput-boolean v3, p0, Lcom/android/server/enterprise/auditlog/PartialFileNode;->isCompressed:Z
 
-    .line 64
     iput-object p2, p0, Lcom/android/server/enterprise/auditlog/PartialFileNode;->mPackageName:Ljava/lang/String;
 
-    .line 65
     new-instance v6, Ljava/util/Date;
 
     invoke-direct {v6}, Ljava/util/Date;-><init>()V
 
-    .line 66
     .local v6, "date":Ljava/util/Date;
     invoke-virtual {v6}, Ljava/util/Date;->getTime()J
 
@@ -105,7 +93,6 @@
 
     move-result-object v8
 
-    .line 67
     .local v8, "suffix":Ljava/lang/String;
     new-instance v0, Ljava/io/File;
 
@@ -135,35 +122,29 @@
 
     iput-object v0, p0, Lcom/android/server/enterprise/auditlog/PartialFileNode;->mFile:Ljava/io/File;
 
-    .line 68
     iput v3, p0, Lcom/android/server/enterprise/auditlog/PartialFileNode;->mLastLineLength:I
 
-    .line 69
     iput-wide v4, p0, Lcom/android/server/enterprise/auditlog/PartialFileNode;->mTimestamp:J
 
-    .line 70
     iput-boolean v3, p0, Lcom/android/server/enterprise/auditlog/PartialFileNode;->mMarkAsDeprecated:Z
 
-    .line 72
     :try_start_0
     new-instance v0, Ljava/io/RandomAccessFile;
 
     iget-object v1, p0, Lcom/android/server/enterprise/auditlog/PartialFileNode;->mFile:Ljava/io/File;
 
-    const-string/jumbo v2, "rwd"
+    const-string v2, "rwd"
 
     invoke-direct {v0, v1, v2}, Ljava/io/RandomAccessFile;-><init>(Ljava/io/File;Ljava/lang/String;)V
 
     iput-object v0, p0, Lcom/android/server/enterprise/auditlog/PartialFileNode;->mRandomAccessFile:Ljava/io/RandomAccessFile;
 
-    .line 73
     iget-object v0, p0, Lcom/android/server/enterprise/auditlog/PartialFileNode;->mRandomAccessFile:Ljava/io/RandomAccessFile;
 
     sget-wide v2, Lcom/android/server/enterprise/auditlog/PartialFileNode;->FILESIZE:J
 
     invoke-virtual {v0, v2, v3}, Ljava/io/RandomAccessFile;->setLength(J)V
 
-    .line 74
     iget-object v0, p0, Lcom/android/server/enterprise/auditlog/PartialFileNode;->mRandomAccessFile:Ljava/io/RandomAccessFile;
 
     invoke-virtual {v0}, Ljava/io/RandomAccessFile;->getChannel()Ljava/nio/channels/FileChannel;
@@ -172,7 +153,6 @@
 
     iput-object v0, p0, Lcom/android/server/enterprise/auditlog/PartialFileNode;->mChannel:Ljava/nio/channels/FileChannel;
 
-    .line 75
     iget-object v0, p0, Lcom/android/server/enterprise/auditlog/PartialFileNode;->mChannel:Ljava/nio/channels/FileChannel;
 
     sget-object v1, Ljava/nio/channels/FileChannel$MapMode;->READ_WRITE:Ljava/nio/channels/FileChannel$MapMode;
@@ -195,22 +175,18 @@
 
     iput-object v0, p0, Lcom/android/server/enterprise/auditlog/PartialFileNode;->mWriteBuffer:Ljava/nio/MappedByteBuffer;
 
-    .line 76
     iget-object v0, p0, Lcom/android/server/enterprise/auditlog/PartialFileNode;->mWriteBuffer:Ljava/nio/MappedByteBuffer;
 
     invoke-virtual {v0}, Ljava/nio/MappedByteBuffer;->mark()Ljava/nio/Buffer;
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 81
     :goto_0
     return-void
 
-    .line 77
     :catch_0
     move-exception v7
 
-    .line 78
     .local v7, "e":Ljava/lang/Exception;
     const-string v0, "PartialFileNode"
 
@@ -238,7 +214,6 @@
 
     invoke-static {v0, v1}, Lcom/android/server/enterprise/log/Log;->e(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 79
     invoke-static {}, Lcom/android/server/enterprise/auditlog/InformFailure;->getInstance()Lcom/android/server/enterprise/auditlog/InformFailure;
 
     move-result-object v0
@@ -256,7 +231,6 @@
     .locals 6
 
     .prologue
-    .line 116
     :try_start_0
     iget-object v1, p0, Lcom/android/server/enterprise/auditlog/PartialFileNode;->mFile:Ljava/io/File;
 
@@ -270,14 +244,12 @@
 
     if-eqz v1, :cond_0
 
-    .line 117
     iget-object v2, p0, Lcom/android/server/enterprise/auditlog/PartialFileNode;->mFile:Ljava/io/File;
 
     monitor-enter v2
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 118
     :try_start_1
     iget-object v1, p0, Lcom/android/server/enterprise/auditlog/PartialFileNode;->mRandomAccessFile:Ljava/io/RandomAccessFile;
 
@@ -285,30 +257,24 @@
 
     invoke-virtual {v1, v4, v5}, Ljava/io/RandomAccessFile;->setLength(J)V
 
-    .line 119
     iget-object v1, p0, Lcom/android/server/enterprise/auditlog/PartialFileNode;->mWriteBuffer:Ljava/nio/MappedByteBuffer;
 
     invoke-virtual {v1}, Ljava/nio/MappedByteBuffer;->force()Ljava/nio/MappedByteBuffer;
 
-    .line 120
     iget-object v1, p0, Lcom/android/server/enterprise/auditlog/PartialFileNode;->mRandomAccessFile:Ljava/io/RandomAccessFile;
 
     invoke-virtual {v1}, Ljava/io/RandomAccessFile;->close()V
 
-    .line 121
     iget-object v1, p0, Lcom/android/server/enterprise/auditlog/PartialFileNode;->mChannel:Ljava/nio/channels/FileChannel;
 
     invoke-virtual {v1}, Ljava/nio/channels/FileChannel;->close()V
 
-    .line 122
     monitor-exit v2
 
-    .line 128
     :cond_0
     :goto_0
     return-void
 
-    .line 122
     :catchall_0
     move-exception v1
 
@@ -321,11 +287,9 @@
     :try_end_2
     .catch Ljava/lang/Exception; {:try_start_2 .. :try_end_2} :catch_0
 
-    .line 124
     :catch_0
     move-exception v0
 
-    .line 125
     .local v0, "e":Ljava/lang/Exception;
     const-string v1, "PartialFileNode"
 
@@ -353,7 +317,6 @@
 
     invoke-static {v1, v2}, Lcom/android/server/enterprise/log/Log;->e(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 126
     invoke-static {}, Lcom/android/server/enterprise/auditlog/InformFailure;->getInstance()Lcom/android/server/enterprise/auditlog/InformFailure;
 
     move-result-object v1
@@ -369,26 +332,20 @@
     .locals 15
 
     .prologue
-    .line 170
     const/4 v10, 0x0
 
-    .line 171
     .local v10, "success":Z
     const/4 v11, 0x0
 
-    .line 172
     .local v11, "tempFile":Ljava/io/File;
     const/4 v6, 0x0
 
-    .line 173
     .local v6, "inputStream":Ljava/io/InputStream;
     const/4 v8, 0x0
 
-    .line 174
     .local v8, "outputStream":Ljava/io/OutputStream;
     const/4 v3, 0x0
 
-    .line 176
     .local v3, "compressedOutputStream":Ljava/util/zip/GZIPOutputStream;
     :try_start_0
     new-instance v12, Ljava/io/File;
@@ -422,7 +379,6 @@
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_1
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 177
     .end local v11    # "tempFile":Ljava/io/File;
     .local v12, "tempFile":Ljava/io/File;
     :try_start_1
@@ -435,7 +391,6 @@
     .catch Ljava/lang/Exception; {:try_start_1 .. :try_end_1} :catch_a
     .catchall {:try_start_1 .. :try_end_1} :catchall_1
 
-    .line 178
     .end local v6    # "inputStream":Ljava/io/InputStream;
     .local v7, "inputStream":Ljava/io/InputStream;
     :try_start_2
@@ -446,7 +401,6 @@
     .catch Ljava/lang/Exception; {:try_start_2 .. :try_end_2} :catch_b
     .catchall {:try_start_2 .. :try_end_2} :catchall_2
 
-    .line 179
     .end local v8    # "outputStream":Ljava/io/OutputStream;
     .local v9, "outputStream":Ljava/io/OutputStream;
     :try_start_3
@@ -457,7 +411,6 @@
     .catch Ljava/lang/Exception; {:try_start_3 .. :try_end_3} :catch_c
     .catchall {:try_start_3 .. :try_end_3} :catchall_3
 
-    .line 180
     .end local v3    # "compressedOutputStream":Ljava/util/zip/GZIPOutputStream;
     .local v4, "compressedOutputStream":Ljava/util/zip/GZIPOutputStream;
     const/high16 v13, 0x10000
@@ -465,51 +418,41 @@
     :try_start_4
     new-array v0, v13, [B
 
-    .line 181
     .local v0, "buffer":[B
     invoke-virtual {v7, v0}, Ljava/io/InputStream;->read([B)I
 
     move-result v1
 
-    .line 183
     .local v1, "bytesRead":I
     const/4 v2, 0x0
 
-    .line 185
     .local v2, "bytesWritten":I
     :goto_0
     if-lez v1, :cond_0
 
-    .line 186
     const/4 v13, 0x0
 
     invoke-virtual {v4, v0, v13, v1}, Ljava/util/zip/GZIPOutputStream;->write([BII)V
 
-    .line 187
     add-int/2addr v2, v1
 
-    .line 188
     invoke-virtual {v7, v0}, Ljava/io/InputStream;->read([B)I
 
     move-result v1
 
     goto :goto_0
 
-    .line 190
     :cond_0
     invoke-virtual {v4}, Ljava/util/zip/GZIPOutputStream;->finish()V
 
-    .line 192
     iget-object v13, p0, Lcom/android/server/enterprise/auditlog/PartialFileNode;->mFile:Ljava/io/File;
 
     invoke-virtual {v13}, Ljava/io/File;->delete()Z
 
     move-result v10
 
-    .line 194
     if-eqz v10, :cond_1
 
-    .line 195
     iget-object v13, p0, Lcom/android/server/enterprise/auditlog/PartialFileNode;->mFile:Ljava/io/File;
 
     invoke-virtual {v12, v13}, Ljava/io/File;->renameTo(Ljava/io/File;)Z
@@ -517,33 +460,27 @@
     .catch Ljava/lang/Exception; {:try_start_4 .. :try_end_4} :catch_d
     .catchall {:try_start_4 .. :try_end_4} :catchall_4
 
-    .line 202
     :cond_1
     if-eqz v4, :cond_2
 
-    .line 204
     :try_start_5
     invoke-virtual {v4}, Ljava/util/zip/GZIPOutputStream;->close()V
     :try_end_5
     .catch Ljava/lang/Exception; {:try_start_5 .. :try_end_5} :catch_3
 
-    .line 207
     :cond_2
     :goto_1
     if-eqz v7, :cond_3
 
-    .line 209
     :try_start_6
     invoke-virtual {v7}, Ljava/io/InputStream;->close()V
     :try_end_6
     .catch Ljava/lang/Exception; {:try_start_6 .. :try_end_6} :catch_4
 
-    .line 213
     :cond_3
     :goto_2
     if-eqz v9, :cond_a
 
-    .line 215
     :try_start_7
     invoke-virtual {v9}, Ljava/io/OutputStream;->close()V
     :try_end_7
@@ -563,7 +500,6 @@
     .restart local v6    # "inputStream":Ljava/io/InputStream;
     move-object v11, v12
 
-    .line 219
     .end local v0    # "buffer":[B
     .end local v1    # "bytesRead":I
     .end local v2    # "bytesWritten":I
@@ -573,7 +509,6 @@
     :goto_3
     return v10
 
-    .line 216
     .end local v3    # "compressedOutputStream":Ljava/util/zip/GZIPOutputStream;
     .end local v6    # "inputStream":Ljava/io/InputStream;
     .end local v8    # "outputStream":Ljava/io/OutputStream;
@@ -606,44 +541,36 @@
     .restart local v11    # "tempFile":Ljava/io/File;
     goto :goto_3
 
-    .line 199
     .end local v0    # "buffer":[B
     .end local v1    # "bytesRead":I
     .end local v2    # "bytesWritten":I
     :catch_1
     move-exception v5
 
-    .line 200
     .local v5, "e":Ljava/lang/Exception;
     :goto_4
     const/4 v10, 0x0
 
-    .line 202
     if-eqz v3, :cond_5
 
-    .line 204
     :try_start_8
     invoke-virtual {v3}, Ljava/util/zip/GZIPOutputStream;->close()V
     :try_end_8
     .catch Ljava/lang/Exception; {:try_start_8 .. :try_end_8} :catch_5
 
-    .line 207
     :cond_5
     :goto_5
     if-eqz v6, :cond_6
 
-    .line 209
     :try_start_9
     invoke-virtual {v6}, Ljava/io/InputStream;->close()V
     :try_end_9
     .catch Ljava/lang/Exception; {:try_start_9 .. :try_end_9} :catch_6
 
-    .line 213
     :cond_6
     :goto_6
     if-eqz v8, :cond_4
 
-    .line 215
     :try_start_a
     invoke-virtual {v8}, Ljava/io/OutputStream;->close()V
     :try_end_a
@@ -651,13 +578,11 @@
 
     goto :goto_3
 
-    .line 216
     :catch_2
     move-exception v13
 
     goto :goto_3
 
-    .line 202
     .end local v5    # "e":Ljava/lang/Exception;
     :catchall_0
     move-exception v13
@@ -665,40 +590,33 @@
     :goto_7
     if-eqz v3, :cond_7
 
-    .line 204
     :try_start_b
     invoke-virtual {v3}, Ljava/util/zip/GZIPOutputStream;->close()V
     :try_end_b
     .catch Ljava/lang/Exception; {:try_start_b .. :try_end_b} :catch_7
 
-    .line 207
     :cond_7
     :goto_8
     if-eqz v6, :cond_8
 
-    .line 209
     :try_start_c
     invoke-virtual {v6}, Ljava/io/InputStream;->close()V
     :try_end_c
     .catch Ljava/lang/Exception; {:try_start_c .. :try_end_c} :catch_8
 
-    .line 213
     :cond_8
     :goto_9
     if-eqz v8, :cond_9
 
-    .line 215
     :try_start_d
     invoke-virtual {v8}, Ljava/io/OutputStream;->close()V
     :try_end_d
     .catch Ljava/lang/Exception; {:try_start_d .. :try_end_d} :catch_9
 
-    .line 216
     :cond_9
     :goto_a
     throw v13
 
-    .line 205
     .end local v3    # "compressedOutputStream":Ljava/util/zip/GZIPOutputStream;
     .end local v6    # "inputStream":Ljava/io/InputStream;
     .end local v8    # "outputStream":Ljava/io/OutputStream;
@@ -715,13 +633,11 @@
 
     goto :goto_1
 
-    .line 210
     :catch_4
     move-exception v13
 
     goto :goto_2
 
-    .line 205
     .end local v0    # "buffer":[B
     .end local v1    # "bytesRead":I
     .end local v2    # "bytesWritten":I
@@ -739,32 +655,27 @@
 
     goto :goto_5
 
-    .line 210
     :catch_6
     move-exception v13
 
     goto :goto_6
 
-    .line 205
     .end local v5    # "e":Ljava/lang/Exception;
     :catch_7
     move-exception v14
 
     goto :goto_8
 
-    .line 210
     :catch_8
     move-exception v14
 
     goto :goto_9
 
-    .line 216
     :catch_9
     move-exception v14
 
     goto :goto_a
 
-    .line 202
     .end local v11    # "tempFile":Ljava/io/File;
     .restart local v12    # "tempFile":Ljava/io/File;
     :catchall_1
@@ -845,7 +756,6 @@
     .restart local v11    # "tempFile":Ljava/io/File;
     goto :goto_7
 
-    .line 199
     .end local v11    # "tempFile":Ljava/io/File;
     .restart local v12    # "tempFile":Ljava/io/File;
     :catch_a
@@ -961,35 +871,28 @@
     .locals 2
 
     .prologue
-    .line 131
     iget-object v0, p0, Lcom/android/server/enterprise/auditlog/PartialFileNode;->mFile:Ljava/io/File;
 
     if-eqz v0, :cond_0
 
-    .line 132
     iget-object v1, p0, Lcom/android/server/enterprise/auditlog/PartialFileNode;->mFile:Ljava/io/File;
 
     monitor-enter v1
 
-    .line 133
     :try_start_0
     iget-object v0, p0, Lcom/android/server/enterprise/auditlog/PartialFileNode;->mFile:Ljava/io/File;
 
     invoke-virtual {v0}, Ljava/io/File;->delete()Z
 
-    .line 134
     const/4 v0, 0x0
 
     iput-object v0, p0, Lcom/android/server/enterprise/auditlog/PartialFileNode;->mFile:Ljava/io/File;
 
-    .line 135
     monitor-exit v1
 
-    .line 137
     :cond_0
     return-void
 
-    .line 135
     :catchall_0
     move-exception v0
 
@@ -1004,7 +907,6 @@
     .locals 1
 
     .prologue
-    .line 152
     iget-object v0, p0, Lcom/android/server/enterprise/auditlog/PartialFileNode;->mFile:Ljava/io/File;
 
     return-object v0
@@ -1014,19 +916,16 @@
     .locals 2
 
     .prologue
-    .line 145
     iget-object v0, p0, Lcom/android/server/enterprise/auditlog/PartialFileNode;->mFile:Ljava/io/File;
 
     if-eqz v0, :cond_0
 
-    .line 146
     iget-object v0, p0, Lcom/android/server/enterprise/auditlog/PartialFileNode;->mFile:Ljava/io/File;
 
     invoke-virtual {v0}, Ljava/io/File;->length()J
 
     move-result-wide v0
 
-    .line 148
     :goto_0
     return-wide v0
 
@@ -1040,7 +939,6 @@
     .locals 2
 
     .prologue
-    .line 90
     iget-wide v0, p0, Lcom/android/server/enterprise/auditlog/PartialFileNode;->mTimestamp:J
 
     return-wide v0
@@ -1050,7 +948,6 @@
     .locals 1
 
     .prologue
-    .line 165
     iget-boolean v0, p0, Lcom/android/server/enterprise/auditlog/PartialFileNode;->mMarkAsDeprecated:Z
 
     return v0
@@ -1061,7 +958,6 @@
     .param p1, "dep"    # Z
 
     .prologue
-    .line 156
     monitor-enter p0
 
     :try_start_0
@@ -1071,28 +967,23 @@
 
     if-eqz v0, :cond_0
 
-    .line 157
     const/4 v0, 0x0
 
-    .line 161
     :goto_0
     monitor-exit p0
 
     return v0
 
-    .line 160
     :cond_0
     :try_start_1
     iput-boolean p1, p0, Lcom/android/server/enterprise/auditlog/PartialFileNode;->mMarkAsDeprecated:Z
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
-    .line 161
     const/4 v0, 0x1
 
     goto :goto_0
 
-    .line 156
     :catchall_0
     move-exception v0
 
@@ -1105,12 +996,10 @@
     .locals 2
 
     .prologue
-    .line 140
     iget-object v0, p0, Lcom/android/server/enterprise/auditlog/PartialFileNode;->mFile:Ljava/io/File;
 
     if-eqz v0, :cond_0
 
-    .line 141
     iget-object v0, p0, Lcom/android/server/enterprise/auditlog/PartialFileNode;->mFile:Ljava/io/File;
 
     invoke-virtual {v0}, Ljava/io/File;->lastModified()J
@@ -1119,7 +1008,6 @@
 
     iput-wide v0, p0, Lcom/android/server/enterprise/auditlog/PartialFileNode;->mTimestamp:J
 
-    .line 142
     :cond_0
     return-void
 .end method
@@ -1129,7 +1017,6 @@
     .param p1, "data"    # Ljava/lang/String;
 
     .prologue
-    .line 95
     :try_start_0
     invoke-virtual {p1}, Ljava/lang/String;->getBytes()[B
 
@@ -1145,27 +1032,22 @@
 
     if-le v1, v2, :cond_0
 
-    .line 96
     const/4 v1, 0x0
 
-    .line 110
     :goto_0
     return v1
 
-    .line 98
     :cond_0
     iget-object v1, p0, Lcom/android/server/enterprise/auditlog/PartialFileNode;->mFile:Ljava/io/File;
 
     if-eqz v1, :cond_1
 
-    .line 99
     iget-object v2, p0, Lcom/android/server/enterprise/auditlog/PartialFileNode;->mFile:Ljava/io/File;
 
     monitor-enter v2
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 100
     :try_start_1
     invoke-virtual {p1}, Ljava/lang/String;->getBytes()[B
 
@@ -1175,7 +1057,6 @@
 
     iput v1, p0, Lcom/android/server/enterprise/auditlog/PartialFileNode;->mLastLineLength:I
 
-    .line 101
     iget-wide v4, p0, Lcom/android/server/enterprise/auditlog/PartialFileNode;->mTruncateFileAt:J
 
     invoke-virtual {p1}, Ljava/lang/String;->getBytes()[B
@@ -1190,14 +1071,12 @@
 
     iput-wide v4, p0, Lcom/android/server/enterprise/auditlog/PartialFileNode;->mTruncateFileAt:J
 
-    .line 102
     iget-object v1, p0, Lcom/android/server/enterprise/auditlog/PartialFileNode;->mRandomAccessFile:Ljava/io/RandomAccessFile;
 
     iget-wide v4, p0, Lcom/android/server/enterprise/auditlog/PartialFileNode;->mTruncateFileAt:J
 
     invoke-virtual {v1, v4, v5}, Ljava/io/RandomAccessFile;->setLength(J)V
 
-    .line 103
     iget-object v1, p0, Lcom/android/server/enterprise/auditlog/PartialFileNode;->mWriteBuffer:Ljava/nio/MappedByteBuffer;
 
     invoke-virtual {p1}, Ljava/lang/String;->getBytes()[B
@@ -1206,17 +1085,14 @@
 
     invoke-virtual {v1, v3}, Ljava/nio/MappedByteBuffer;->put([B)Ljava/nio/ByteBuffer;
 
-    .line 104
     monitor-exit v2
 
-    .line 110
     :cond_1
     :goto_1
     const/4 v1, 0x1
 
     goto :goto_0
 
-    .line 104
     :catchall_0
     move-exception v1
 
@@ -1229,11 +1105,9 @@
     :try_end_2
     .catch Ljava/lang/Exception; {:try_start_2 .. :try_end_2} :catch_0
 
-    .line 106
     :catch_0
     move-exception v0
 
-    .line 107
     .local v0, "e":Ljava/lang/Exception;
     const-string v1, "PartialFileNode"
 
@@ -1241,7 +1115,7 @@
 
     invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v3, "write.Exception: "
+    const-string v3, "write.Exception: "
 
     invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -1261,7 +1135,6 @@
 
     invoke-static {v1, v2}, Lcom/android/server/enterprise/log/Log;->e(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 108
     invoke-static {}, Lcom/android/server/enterprise/auditlog/InformFailure;->getInstance()Lcom/android/server/enterprise/auditlog/InformFailure;
 
     move-result-object v1

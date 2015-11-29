@@ -14,12 +14,9 @@
     .param p2, "channelId"    # I
 
     .prologue
-    .line 458
     invoke-direct {p0, p1}, Lcom/android/internal/telephony/cat/CommandParams;-><init>(Lcom/android/internal/telephony/cat/CommandDetails;)V
 
-    .line 459
     iput p2, p0, Lcom/android/internal/telephony/cat/GetChannelDataParams;->mChannelId:I
 
-    .line 460
     return-void
 .end method

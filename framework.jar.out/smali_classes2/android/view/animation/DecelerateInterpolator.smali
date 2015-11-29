@@ -21,15 +21,12 @@
     .locals 1
 
     .prologue
-    .line 37
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 79
     const/high16 v0, 0x3f800000    # 1.0f
 
     iput v0, p0, Landroid/view/animation/DecelerateInterpolator;->mFactor:F
 
-    .line 38
     return-void
 .end method
 
@@ -38,18 +35,14 @@
     .param p1, "factor"    # F
 
     .prologue
-    .line 47
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 79
     const/high16 v0, 0x3f800000    # 1.0f
 
     iput v0, p0, Landroid/view/animation/DecelerateInterpolator;->mFactor:F
 
-    .line 48
     iput p1, p0, Landroid/view/animation/DecelerateInterpolator;->mFactor:F
 
-    .line 49
     return-void
 .end method
 
@@ -59,7 +52,6 @@
     .param p2, "attrs"    # Landroid/util/AttributeSet;
 
     .prologue
-    .line 52
     invoke-virtual {p1}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
 
     move-result-object v0
@@ -70,7 +62,6 @@
 
     invoke-direct {p0, v0, v1, p2}, Landroid/view/animation/DecelerateInterpolator;-><init>(Landroid/content/res/Resources;Landroid/content/res/Resources$Theme;Landroid/util/AttributeSet;)V
 
-    .line 53
     return-void
 .end method
 
@@ -85,23 +76,18 @@
 
     const/4 v2, 0x0
 
-    .line 56
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 79
     iput v3, p0, Landroid/view/animation/DecelerateInterpolator;->mFactor:F
 
-    .line 58
     if-eqz p2, :cond_0
 
-    .line 59
     sget-object v1, Lcom/android/internal/R$styleable;->DecelerateInterpolator:[I
 
     invoke-virtual {p2, p3, v1, v2, v2}, Landroid/content/res/Resources$Theme;->obtainStyledAttributes(Landroid/util/AttributeSet;[III)Landroid/content/res/TypedArray;
 
     move-result-object v0
 
-    .line 64
     .local v0, "a":Landroid/content/res/TypedArray;
     :goto_0
     invoke-virtual {v0, v2, v3}, Landroid/content/res/TypedArray;->getFloat(IF)F
@@ -110,13 +96,10 @@
 
     iput v1, p0, Landroid/view/animation/DecelerateInterpolator;->mFactor:F
 
-    .line 66
     invoke-virtual {v0}, Landroid/content/res/TypedArray;->recycle()V
 
-    .line 67
     return-void
 
-    .line 61
     .end local v0    # "a":Landroid/content/res/TypedArray;
     :cond_0
     sget-object v1, Lcom/android/internal/R$styleable;->DecelerateInterpolator:[I
@@ -135,7 +118,6 @@
     .locals 2
 
     .prologue
-    .line 84
     iget v0, p0, Landroid/view/animation/DecelerateInterpolator;->mFactor:F
 
     invoke-static {v0}, Lcom/android/internal/view/animation/NativeInterpolatorFactoryHelper;->createDecelerateInterpolator(F)J
@@ -152,14 +134,12 @@
     .prologue
     const/high16 v4, 0x3f800000    # 1.0f
 
-    .line 71
     iget v1, p0, Landroid/view/animation/DecelerateInterpolator;->mFactor:F
 
     cmpl-float v1, v1, v4
 
     if-nez v1, :cond_0
 
-    .line 72
     sub-float v1, v4, p1
 
     sub-float v2, v4, p1
@@ -168,12 +148,10 @@
 
     sub-float v0, v4, v1
 
-    .line 76
     .local v0, "result":F
     :goto_0
     return v0
 
-    .line 74
     .end local v0    # "result":F
     :cond_0
     const-wide/high16 v2, 0x3ff0000000000000L    # 1.0

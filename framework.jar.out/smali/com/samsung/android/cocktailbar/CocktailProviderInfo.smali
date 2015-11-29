@@ -106,7 +106,6 @@
     .locals 1
 
     .prologue
-    .line 241
     new-instance v0, Lcom/samsung/android/cocktailbar/CocktailProviderInfo$1;
 
     invoke-direct {v0}, Lcom/samsung/android/cocktailbar/CocktailProviderInfo$1;-><init>()V
@@ -120,15 +119,12 @@
     .locals 1
 
     .prologue
-    .line 147
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 139
     const/4 v0, 0x0
 
     iput-boolean v0, p0, Lcom/samsung/android/cocktailbar/CocktailProviderInfo;->permitVisibilityChanged:Z
 
-    .line 148
     return-void
 .end method
 
@@ -148,18 +144,14 @@
     .end annotation
 
     .prologue
-    .line 168
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 139
     const/4 v4, 0x0
 
     iput-boolean v4, p0, Lcom/samsung/android/cocktailbar/CocktailProviderInfo;->permitVisibilityChanged:Z
 
-    .line 169
     iput-object p4, p0, Lcom/samsung/android/cocktailbar/CocktailProviderInfo;->provider:Landroid/content/ComponentName;
 
-    .line 170
     const/4 v4, 0x0
 
     const-string v5, "icon"
@@ -172,10 +164,9 @@
 
     iput v4, p0, Lcom/samsung/android/cocktailbar/CocktailProviderInfo;->icon:I
 
-    .line 171
     const/4 v4, 0x0
 
-    const-string/jumbo v5, "label"
+    const-string v5, "label"
 
     const/4 v6, 0x0
 
@@ -185,7 +176,6 @@
 
     iput v4, p0, Lcom/samsung/android/cocktailbar/CocktailProviderInfo;->label:I
 
-    .line 172
     const/4 v4, 0x0
 
     const-string v5, "description"
@@ -198,16 +188,14 @@
 
     iput v4, p0, Lcom/samsung/android/cocktailbar/CocktailProviderInfo;->description:I
 
-    .line 173
     const-string v4, "category"
 
-    const-string/jumbo v5, "normal"
+    const-string v5, "normal"
 
     invoke-direct {p0, p5, p3, v4, v5}, Lcom/samsung/android/cocktailbar/CocktailProviderInfo;->loadXmlString(Landroid/content/res/XmlResourceParser;Landroid/content/res/Resources;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v1
 
-    .line 174
     .local v1, "category":Ljava/lang/String;
     invoke-static {v1}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
 
@@ -215,15 +203,13 @@
 
     if-eqz v4, :cond_2
 
-    .line 175
     const/4 v4, 0x1
 
     iput v4, p0, Lcom/samsung/android/cocktailbar/CocktailProviderInfo;->category:I
 
-    .line 210
     :cond_0
     :goto_0
-    const-string/jumbo v4, "privateMode"
+    const-string v4, "privateMode"
 
     const/4 v5, 0x0
 
@@ -233,10 +219,9 @@
 
     iput-object v4, p0, Lcom/samsung/android/cocktailbar/CocktailProviderInfo;->privateMode:Ljava/lang/String;
 
-    .line 211
     const/4 v4, 0x0
 
-    const-string/jumbo v5, "previewImage"
+    const-string v5, "previewImage"
 
     const/4 v6, 0x0
 
@@ -246,8 +231,7 @@
 
     iput v4, p0, Lcom/samsung/android/cocktailbar/CocktailProviderInfo;->previewImage:I
 
-    .line 212
-    const-string/jumbo v4, "updatePeriodMillis"
+    const-string v4, "updatePeriodMillis"
 
     const/4 v5, 0x0
 
@@ -257,8 +241,7 @@
 
     iput v4, p0, Lcom/samsung/android/cocktailbar/CocktailProviderInfo;->updatePeriodMillis:I
 
-    .line 213
-    const-string/jumbo v4, "permitVisibilityChanged"
+    const-string v4, "permitVisibilityChanged"
 
     const/4 v5, 0x0
 
@@ -268,7 +251,6 @@
 
     iput-boolean v4, p0, Lcom/samsung/android/cocktailbar/CocktailProviderInfo;->permitVisibilityChanged:Z
 
-    .line 214
     const-string v4, "configure"
 
     const/4 v5, 0x0
@@ -277,11 +259,9 @@
 
     move-result-object v3
 
-    .line 215
     .local v3, "className":Ljava/lang/String;
     if-eqz v3, :cond_1
 
-    .line 216
     new-instance v4, Landroid/content/ComponentName;
 
     invoke-virtual {p4}, Landroid/content/ComponentName;->getPackageName()Ljava/lang/String;
@@ -292,7 +272,6 @@
 
     iput-object v4, p0, Lcom/samsung/android/cocktailbar/CocktailProviderInfo;->configure:Landroid/content/ComponentName;
 
-    .line 218
     :cond_1
     const-string v4, "cscPreviewImage"
 
@@ -304,10 +283,8 @@
 
     iput-boolean v4, p0, Lcom/samsung/android/cocktailbar/CocktailProviderInfo;->cscPreviewImage:Z
 
-    .line 219
     return-void
 
-    .line 177
     .end local v3    # "className":Ljava/lang/String;
     :cond_2
     new-instance v2, Landroid/text/TextUtils$SimpleStringSplitter;
@@ -316,11 +293,9 @@
 
     invoke-direct {v2, v4}, Landroid/text/TextUtils$SimpleStringSplitter;-><init>(C)V
 
-    .line 178
     .local v2, "categorySplitter":Landroid/text/TextUtils$SimpleStringSplitter;
     invoke-virtual {v2, v1}, Landroid/text/TextUtils$SimpleStringSplitter;->setString(Ljava/lang/String;)V
 
-    .line 179
     :goto_1
     invoke-virtual {v2}, Landroid/text/TextUtils$SimpleStringSplitter;->hasNext()Z
 
@@ -328,7 +303,6 @@
 
     if-eqz v4, :cond_0
 
-    .line 180
     invoke-virtual {v2}, Landroid/text/TextUtils$SimpleStringSplitter;->next()Ljava/lang/String;
 
     move-result-object v4
@@ -337,9 +311,8 @@
 
     move-result-object v0
 
-    .line 181
     .local v0, "c":Ljava/lang/String;
-    const-string/jumbo v4, "normal"
+    const-string v4, "normal"
 
     invoke-virtual {v4, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
@@ -347,7 +320,6 @@
 
     if-eqz v4, :cond_3
 
-    .line 182
     iget v4, p0, Lcom/samsung/android/cocktailbar/CocktailProviderInfo;->category:I
 
     or-int/lit8 v4, v4, 0x1
@@ -356,7 +328,6 @@
 
     goto :goto_1
 
-    .line 183
     :cond_3
     const-string v4, "contextual"
 
@@ -366,7 +337,6 @@
 
     if-eqz v4, :cond_4
 
-    .line 184
     iget v4, p0, Lcom/samsung/android/cocktailbar/CocktailProviderInfo;->category:I
 
     or-int/lit8 v4, v4, 0x2
@@ -375,7 +345,6 @@
 
     goto :goto_1
 
-    .line 185
     :cond_4
     const-string v4, "homescreen"
 
@@ -385,7 +354,6 @@
 
     if-eqz v4, :cond_5
 
-    .line 186
     iget v4, p0, Lcom/samsung/android/cocktailbar/CocktailProviderInfo;->category:I
 
     or-int/lit8 v4, v4, 0x9
@@ -394,9 +362,8 @@
 
     goto :goto_1
 
-    .line 187
     :cond_5
-    const-string/jumbo v4, "lockscreen"
+    const-string v4, "lockscreen"
 
     invoke-virtual {v4, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
@@ -404,7 +371,6 @@
 
     if-eqz v4, :cond_6
 
-    .line 188
     iget v4, p0, Lcom/samsung/android/cocktailbar/CocktailProviderInfo;->category:I
 
     or-int/lit8 v4, v4, 0x11
@@ -413,7 +379,6 @@
 
     goto :goto_1
 
-    .line 189
     :cond_6
     const-string v4, "feeds"
 
@@ -423,7 +388,6 @@
 
     if-eqz v4, :cond_7
 
-    .line 190
     iget v4, p0, Lcom/samsung/android/cocktailbar/CocktailProviderInfo;->category:I
 
     or-int/lit16 v4, v4, 0x101
@@ -432,9 +396,8 @@
 
     goto :goto_1
 
-    .line 191
     :cond_7
-    const-string/jumbo v4, "quicktool"
+    const-string v4, "quicktool"
 
     invoke-virtual {v4, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
@@ -442,16 +405,14 @@
 
     if-eqz v4, :cond_8
 
-    .line 192
     const/4 v4, 0x4
 
     iput v4, p0, Lcom/samsung/android/cocktailbar/CocktailProviderInfo;->category:I
 
     goto/16 :goto_0
 
-    .line 194
     :cond_8
-    const-string/jumbo v4, "tablemode"
+    const-string v4, "tablemode"
 
     invoke-virtual {v4, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
@@ -459,16 +420,14 @@
 
     if-eqz v4, :cond_9
 
-    .line 195
     const/16 v4, 0x20
 
     iput v4, p0, Lcom/samsung/android/cocktailbar/CocktailProviderInfo;->category:I
 
     goto/16 :goto_0
 
-    .line 197
     :cond_9
-    const-string/jumbo v4, "nightmode"
+    const-string v4, "nightmode"
 
     invoke-virtual {v4, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
@@ -476,14 +435,12 @@
 
     if-eqz v4, :cond_a
 
-    .line 198
     const/16 v4, 0x80
 
     iput v4, p0, Lcom/samsung/android/cocktailbar/CocktailProviderInfo;->category:I
 
     goto/16 :goto_0
 
-    .line 200
     :cond_a
     const-string v4, "expressme"
 
@@ -493,14 +450,12 @@
 
     if-eqz v4, :cond_b
 
-    .line 201
     const/16 v4, 0x40
 
     iput v4, p0, Lcom/samsung/android/cocktailbar/CocktailProviderInfo;->category:I
 
     goto/16 :goto_0
 
-    .line 204
     :cond_b
     const-string v4, "CocktailProviderInfo"
 
@@ -534,7 +489,6 @@
 
     invoke-static {v4, v5}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 205
     const/4 v4, 0x1
 
     iput v4, p0, Lcom/samsung/android/cocktailbar/CocktailProviderInfo;->category:I
@@ -551,27 +505,22 @@
 
     const/4 v1, 0x1
 
-    .line 221
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 139
     iput-boolean v2, p0, Lcom/samsung/android/cocktailbar/CocktailProviderInfo;->permitVisibilityChanged:Z
 
-    .line 222
     invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
 
     move-result v0
 
     if-eqz v0, :cond_0
 
-    .line 223
     new-instance v0, Landroid/content/ComponentName;
 
     invoke-direct {v0, p1}, Landroid/content/ComponentName;-><init>(Landroid/os/Parcel;)V
 
     iput-object v0, p0, Lcom/samsung/android/cocktailbar/CocktailProviderInfo;->provider:Landroid/content/ComponentName;
 
-    .line 225
     :cond_0
     invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
 
@@ -579,56 +528,48 @@
 
     iput v0, p0, Lcom/samsung/android/cocktailbar/CocktailProviderInfo;->updatePeriodMillis:I
 
-    .line 226
     invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
 
     move-result v0
 
     iput v0, p0, Lcom/samsung/android/cocktailbar/CocktailProviderInfo;->label:I
 
-    .line 227
     invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
 
     move-result v0
 
     iput v0, p0, Lcom/samsung/android/cocktailbar/CocktailProviderInfo;->description:I
 
-    .line 228
     invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
 
     move-result v0
 
     iput v0, p0, Lcom/samsung/android/cocktailbar/CocktailProviderInfo;->icon:I
 
-    .line 229
     invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
 
     move-result v0
 
     iput v0, p0, Lcom/samsung/android/cocktailbar/CocktailProviderInfo;->previewImage:I
 
-    .line 230
     invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
 
     move-result v0
 
     iput v0, p0, Lcom/samsung/android/cocktailbar/CocktailProviderInfo;->category:I
 
-    .line 231
     invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
 
     move-result v0
 
     if-eqz v0, :cond_1
 
-    .line 232
     invoke-virtual {p1}, Landroid/os/Parcel;->readString()Ljava/lang/String;
 
     move-result-object v0
 
     iput-object v0, p0, Lcom/samsung/android/cocktailbar/CocktailProviderInfo;->privateMode:Ljava/lang/String;
 
-    .line 234
     :cond_1
     invoke-virtual {p1}, Landroid/os/Parcel;->readByte()B
 
@@ -641,21 +582,18 @@
     :goto_0
     iput-boolean v0, p0, Lcom/samsung/android/cocktailbar/CocktailProviderInfo;->permitVisibilityChanged:Z
 
-    .line 235
     invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
 
     move-result v0
 
     if-eqz v0, :cond_2
 
-    .line 236
     new-instance v0, Landroid/content/ComponentName;
 
     invoke-direct {v0, p1}, Landroid/content/ComponentName;-><init>(Landroid/os/Parcel;)V
 
     iput-object v0, p0, Lcom/samsung/android/cocktailbar/CocktailProviderInfo;->configure:Landroid/content/ComponentName;
 
-    .line 238
     :cond_2
     invoke-virtual {p1}, Landroid/os/Parcel;->readByte()B
 
@@ -666,19 +604,16 @@
     :goto_1
     iput-boolean v1, p0, Lcom/samsung/android/cocktailbar/CocktailProviderInfo;->cscPreviewImage:Z
 
-    .line 239
     return-void
 
     :cond_3
     move v0, v2
 
-    .line 234
     goto :goto_0
 
     :cond_4
     move v1, v2
 
-    .line 238
     goto :goto_1
 .end method
 
@@ -688,7 +623,6 @@
     .param p2, "x1"    # Lcom/samsung/android/cocktailbar/CocktailProviderInfo$1;
 
     .prologue
-    .line 36
     invoke-direct {p0, p1}, Lcom/samsung/android/cocktailbar/CocktailProviderInfo;-><init>(Landroid/os/Parcel;)V
 
     return-void
@@ -702,13 +636,11 @@
     .param p3, "xml"    # Landroid/content/res/XmlResourceParser;
 
     .prologue
-    .line 153
     :try_start_0
     invoke-virtual {p0}, Landroid/content/Context;->getPackageManager()Landroid/content/pm/PackageManager;
 
     move-result-object v2
 
-    .line 154
     .local v2, "pkgMgr":Landroid/content/pm/PackageManager;
     invoke-virtual {p2}, Landroid/content/ComponentName;->getPackageName()Ljava/lang/String;
 
@@ -718,7 +650,6 @@
 
     move-result-object v3
 
-    .line 155
     .local v3, "pkgRes":Landroid/content/res/Resources;
     new-instance v0, Lcom/samsung/android/cocktailbar/CocktailProviderInfo;
 
@@ -736,17 +667,14 @@
     .catch Landroid/content/res/Resources$NotFoundException; {:try_start_0 .. :try_end_0} :catch_1
     .catch Ljava/lang/IllegalArgumentException; {:try_start_0 .. :try_end_0} :catch_2
 
-    .line 163
     .end local v2    # "pkgMgr":Landroid/content/pm/PackageManager;
     .end local v3    # "pkgRes":Landroid/content/res/Resources;
     :goto_0
     return-object v0
 
-    .line 156
     :catch_0
     move-exception v7
 
-    .line 157
     .local v7, "e":Landroid/content/pm/PackageManager$NameNotFoundException;
     const-string v0, "CocktailProviderInfo"
 
@@ -754,18 +682,15 @@
 
     invoke-static {v0, v1, v7}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
-    .line 163
     .end local v7    # "e":Landroid/content/pm/PackageManager$NameNotFoundException;
     :goto_1
     const/4 v0, 0x0
 
     goto :goto_0
 
-    .line 158
     :catch_1
     move-exception v7
 
-    .line 159
     .local v7, "e":Landroid/content/res/Resources$NotFoundException;
     const-string v0, "CocktailProviderInfo"
 
@@ -775,12 +700,10 @@
 
     goto :goto_1
 
-    .line 160
     .end local v7    # "e":Landroid/content/res/Resources$NotFoundException;
     :catch_2
     move-exception v7
 
-    .line 161
     .local v7, "e":Ljava/lang/IllegalArgumentException;
     const-string v0, "CocktailProviderInfo"
 
@@ -801,18 +724,15 @@
     .prologue
     const/4 v4, 0x0
 
-    .line 329
     const/4 v3, 0x0
 
     invoke-interface {p1, v4, p3, v3}, Landroid/content/res/XmlResourceParser;->getAttributeResourceValue(Ljava/lang/String;Ljava/lang/String;I)I
 
     move-result v1
 
-    .line 330
     .local v1, "refId":I
     if-eqz v1, :cond_0
 
-    .line 332
     :try_start_0
     invoke-virtual {p2, v1}, Landroid/content/res/Resources;->getBoolean(I)Z
     :try_end_0
@@ -820,25 +740,20 @@
 
     move-result v2
 
-    .line 339
     .local v2, "value":Z
     :goto_0
     return v2
 
-    .line 333
     .end local v2    # "value":Z
     :catch_0
     move-exception v0
 
-    .line 334
     .local v0, "e":Landroid/content/res/Resources$NotFoundException;
     move v2, p4
 
-    .line 335
     .restart local v2    # "value":Z
     goto :goto_0
 
-    .line 337
     .end local v0    # "e":Landroid/content/res/Resources$NotFoundException;
     .end local v2    # "value":Z
     :cond_0
@@ -860,18 +775,15 @@
     .prologue
     const/4 v4, 0x0
 
-    .line 294
     const/4 v3, 0x0
 
     invoke-interface {p1, v4, p3, v3}, Landroid/content/res/XmlResourceParser;->getAttributeResourceValue(Ljava/lang/String;Ljava/lang/String;I)I
 
     move-result v1
 
-    .line 295
     .local v1, "refId":I
     if-eqz v1, :cond_0
 
-    .line 297
     :try_start_0
     invoke-virtual {p2, v1}, Landroid/content/res/Resources;->getInteger(I)I
     :try_end_0
@@ -879,25 +791,20 @@
 
     move-result v2
 
-    .line 304
     .local v2, "value":I
     :goto_0
     return v2
 
-    .line 298
     .end local v2    # "value":I
     :catch_0
     move-exception v0
 
-    .line 299
     .local v0, "e":Landroid/content/res/Resources$NotFoundException;
     move v2, p4
 
-    .line 300
     .restart local v2    # "value":I
     goto :goto_0
 
-    .line 302
     .end local v0    # "e":Landroid/content/res/Resources$NotFoundException;
     .end local v2    # "value":I
     :cond_0
@@ -919,18 +826,15 @@
     .prologue
     const/4 v4, 0x0
 
-    .line 310
     const/4 v3, 0x0
 
     invoke-interface {p1, v4, p3, v3}, Landroid/content/res/XmlResourceParser;->getAttributeResourceValue(Ljava/lang/String;Ljava/lang/String;I)I
 
     move-result v1
 
-    .line 311
     .local v1, "refId":I
     if-eqz v1, :cond_1
 
-    .line 313
     :try_start_0
     invoke-virtual {p2, v1}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
     :try_end_0
@@ -938,26 +842,21 @@
 
     move-result-object v2
 
-    .line 323
     .local v2, "value":Ljava/lang/String;
     :cond_0
     :goto_0
     return-object v2
 
-    .line 314
     .end local v2    # "value":Ljava/lang/String;
     :catch_0
     move-exception v0
 
-    .line 315
     .local v0, "e":Landroid/content/res/Resources$NotFoundException;
     move-object v2, p4
 
-    .line 316
     .restart local v2    # "value":Ljava/lang/String;
     goto :goto_0
 
-    .line 318
     .end local v0    # "e":Landroid/content/res/Resources$NotFoundException;
     .end local v2    # "value":Ljava/lang/String;
     :cond_1
@@ -965,11 +864,9 @@
 
     move-result-object v2
 
-    .line 319
     .restart local v2    # "value":Ljava/lang/String;
     if-nez v2, :cond_0
 
-    .line 320
     move-object v2, p4
 
     goto :goto_0
@@ -981,7 +878,6 @@
     .locals 1
 
     .prologue
-    .line 345
     const/4 v0, 0x0
 
     return v0
@@ -997,124 +893,99 @@
 
     const/4 v1, 0x0
 
-    .line 255
     iget-object v0, p0, Lcom/samsung/android/cocktailbar/CocktailProviderInfo;->provider:Landroid/content/ComponentName;
 
     if-eqz v0, :cond_0
 
-    .line 256
     invoke-virtual {p1, v2}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 257
     iget-object v0, p0, Lcom/samsung/android/cocktailbar/CocktailProviderInfo;->provider:Landroid/content/ComponentName;
 
     invoke-virtual {v0, p1, p2}, Landroid/content/ComponentName;->writeToParcel(Landroid/os/Parcel;I)V
 
-    .line 261
     :goto_0
     iget v0, p0, Lcom/samsung/android/cocktailbar/CocktailProviderInfo;->updatePeriodMillis:I
 
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 262
     iget v0, p0, Lcom/samsung/android/cocktailbar/CocktailProviderInfo;->label:I
 
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 263
     iget v0, p0, Lcom/samsung/android/cocktailbar/CocktailProviderInfo;->description:I
 
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 264
     iget v0, p0, Lcom/samsung/android/cocktailbar/CocktailProviderInfo;->icon:I
 
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 265
     iget v0, p0, Lcom/samsung/android/cocktailbar/CocktailProviderInfo;->previewImage:I
 
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 266
     iget v0, p0, Lcom/samsung/android/cocktailbar/CocktailProviderInfo;->category:I
 
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 267
     iget-object v0, p0, Lcom/samsung/android/cocktailbar/CocktailProviderInfo;->privateMode:Ljava/lang/String;
 
     if-eqz v0, :cond_1
 
-    .line 268
     invoke-virtual {p1, v2}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 269
     iget-object v0, p0, Lcom/samsung/android/cocktailbar/CocktailProviderInfo;->privateMode:Ljava/lang/String;
 
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeString(Ljava/lang/String;)V
 
-    .line 273
     :goto_1
     iget-boolean v0, p0, Lcom/samsung/android/cocktailbar/CocktailProviderInfo;->permitVisibilityChanged:Z
 
     if-eqz v0, :cond_2
 
-    .line 274
     invoke-virtual {p1, v2}, Landroid/os/Parcel;->writeByte(B)V
 
-    .line 278
     :goto_2
     iget-object v0, p0, Lcom/samsung/android/cocktailbar/CocktailProviderInfo;->configure:Landroid/content/ComponentName;
 
     if-eqz v0, :cond_3
 
-    .line 279
     invoke-virtual {p1, v2}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 280
     iget-object v0, p0, Lcom/samsung/android/cocktailbar/CocktailProviderInfo;->configure:Landroid/content/ComponentName;
 
     invoke-virtual {v0, p1, p2}, Landroid/content/ComponentName;->writeToParcel(Landroid/os/Parcel;I)V
 
-    .line 284
     :goto_3
     iget-boolean v0, p0, Lcom/samsung/android/cocktailbar/CocktailProviderInfo;->cscPreviewImage:Z
 
     if-eqz v0, :cond_4
 
-    .line 285
     invoke-virtual {p1, v2}, Landroid/os/Parcel;->writeByte(B)V
 
-    .line 289
     :goto_4
     return-void
 
-    .line 259
     :cond_0
     invoke-virtual {p1, v1}, Landroid/os/Parcel;->writeInt(I)V
 
     goto :goto_0
 
-    .line 271
     :cond_1
     invoke-virtual {p1, v1}, Landroid/os/Parcel;->writeInt(I)V
 
     goto :goto_1
 
-    .line 276
     :cond_2
     invoke-virtual {p1, v1}, Landroid/os/Parcel;->writeByte(B)V
 
     goto :goto_2
 
-    .line 282
     :cond_3
     invoke-virtual {p1, v1}, Landroid/os/Parcel;->writeInt(I)V
 
     goto :goto_3
 
-    .line 287
     :cond_4
     invoke-virtual {p1, v1}, Landroid/os/Parcel;->writeByte(B)V
 

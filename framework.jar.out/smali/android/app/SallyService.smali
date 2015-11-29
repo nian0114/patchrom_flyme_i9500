@@ -28,7 +28,6 @@
     .locals 0
 
     .prologue
-    .line 75
     invoke-direct {p0}, Landroid/app/Service;-><init>()V
 
     return-void
@@ -42,19 +41,16 @@
     .param p2, "params"    # Landroid/view/ViewGroup$LayoutParams;
 
     .prologue
-    .line 304
     const-string v0, "Sally Service"
 
     const-string v1, "addContentView() view, params"
 
     invoke-static {v0, v1}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 305
     iget-object v0, p0, Landroid/app/SallyService;->mWindow:Landroid/view/Window;
 
     invoke-virtual {v0, p1, p2}, Landroid/view/Window;->addContentView(Landroid/view/View;Landroid/view/ViewGroup$LayoutParams;)V
 
-    .line 306
     return-void
 .end method
 
@@ -66,7 +62,6 @@
     .param p4, "windowType"    # I
 
     .prologue
-    .line 393
     const/4 v5, 0x0
 
     move-object v0, p0
@@ -97,27 +92,22 @@
     .prologue
     const/4 v6, 0x0
 
-    .line 400
     const-string v7, "Sally Service"
 
     const-string v8, "addWindow view"
 
     invoke-static {v7, v8}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 401
     const/4 v5, 0x0
 
-    .line 402
     .local v5, "toGo":Z
     const/4 v1, 0x0
 
-    .line 407
     .local v1, "exception":Ljava/lang/IllegalArgumentException;
     invoke-virtual {p0}, Landroid/app/SallyService;->createLayoutParams()Landroid/view/WindowManager$LayoutParams;
 
     move-result-object v4
 
-    .line 409
     .local v4, "newWindowAttributes":Landroid/view/WindowManager$LayoutParams;
     iget-object v7, p0, Landroid/app/SallyService;->mContext:Landroid/content/Context;
 
@@ -125,12 +115,10 @@
 
     move-object v3, v6
 
-    .line 456
     :cond_0
     :goto_0
     return-object v3
 
-    .line 412
     :cond_1
     iget-object v7, p0, Landroid/app/SallyService;->mContext:Landroid/content/Context;
 
@@ -138,57 +126,44 @@
 
     move-result-object v3
 
-    .line 414
     .local v3, "newWindow":Landroid/view/Window;
     const/4 v7, 0x1
 
     invoke-virtual {v3, v7}, Landroid/view/Window;->requestFeature(I)Z
 
-    .line 417
     if-eqz v3, :cond_5
 
-    .line 418
     iget-object v7, p0, Landroid/app/SallyService;->mWindowManager:Landroid/view/WindowManager;
 
     invoke-virtual {v3, v7, v6, v6}, Landroid/view/Window;->setWindowManager(Landroid/view/WindowManager;Landroid/os/IBinder;Ljava/lang/String;)V
 
-    .line 419
     iput p2, v4, Landroid/view/WindowManager$LayoutParams;->width:I
 
-    .line 420
     iput p3, v4, Landroid/view/WindowManager$LayoutParams;->height:I
 
-    .line 421
     iput p4, v4, Landroid/view/WindowManager$LayoutParams;->type:I
 
-    .line 422
     iget v6, v4, Landroid/view/WindowManager$LayoutParams;->flags:I
 
     or-int/2addr v6, p5
 
     iput v6, v4, Landroid/view/WindowManager$LayoutParams;->flags:I
 
-    .line 423
     invoke-virtual {v3, v4}, Landroid/view/Window;->setAttributes(Landroid/view/WindowManager$LayoutParams;)V
 
-    .line 425
     invoke-virtual {v3, p1}, Landroid/view/Window;->setContentView(Landroid/view/View;)V
 
-    .line 426
     invoke-virtual {v3}, Landroid/view/Window;->getDecorView()Landroid/view/View;
 
     move-result-object v2
 
-    .line 428
     .local v2, "newDecor":Landroid/view/View;
     if-eqz v2, :cond_3
 
-    .line 429
     const/4 v6, 0x0
 
     invoke-virtual {v2, v6}, Landroid/view/View;->setVisibility(I)V
 
-    .line 432
     :cond_2
     :try_start_0
     iget-object v6, p0, Landroid/app/SallyService;->mWindowManager:Landroid/view/WindowManager;
@@ -197,36 +172,27 @@
     :try_end_0
     .catch Ljava/lang/IllegalArgumentException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 447
     :goto_1
     if-nez v5, :cond_2
 
-    .line 449
     :cond_3
     :goto_2
     if-eqz v1, :cond_0
 
-    .line 450
     throw v1
 
-    .line 434
     :catch_0
     move-exception v0
 
-    .line 435
     .local v0, "e":Ljava/lang/IllegalArgumentException;
     if-eqz v5, :cond_4
 
-    .line 436
     const/4 v5, 0x0
 
-    .line 437
     move-object v1, v0
 
-    .line 438
     goto :goto_2
 
-    .line 441
     :cond_4
     const-string v6, "Sally Service"
 
@@ -248,7 +214,7 @@
 
     move-result-object v7
 
-    const-string/jumbo v8, "w: "
+    const-string v8, "w: "
 
     invoke-virtual {v7, v8}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -268,7 +234,7 @@
 
     move-result-object v7
 
-    const-string/jumbo v8, "t: "
+    const-string v8, "t: "
 
     invoke-virtual {v7, v8}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -284,10 +250,8 @@
 
     invoke-static {v6, v7}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 442
     const/4 v5, 0x1
 
-    .line 444
     const-wide/16 v6, 0x3e8
 
     :try_start_1
@@ -297,13 +261,11 @@
 
     goto :goto_1
 
-    .line 445
     :catch_1
     move-exception v6
 
     goto :goto_1
 
-    .line 453
     .end local v0    # "e":Ljava/lang/IllegalArgumentException;
     .end local v2    # "newDecor":Landroid/view/View;
     :cond_5
@@ -315,7 +277,6 @@
 
     move-object v3, v6
 
-    .line 456
     goto/16 :goto_0
 .end method
 
@@ -323,17 +284,14 @@
     .locals 4
 
     .prologue
-    .line 358
     const-string v2, "Sally Service"
 
     const-string v3, "createLayoutParams"
 
     invoke-static {v2, v3}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 360
     const/16 v1, 0x7d2
 
-    .line 363
     .local v1, "windowType":I
     new-instance v0, Landroid/view/WindowManager$LayoutParams;
 
@@ -343,7 +301,6 @@
 
     invoke-direct {v0, v1, v2, v3}, Landroid/view/WindowManager$LayoutParams;-><init>(III)V
 
-    .line 370
     .local v0, "lp":Landroid/view/WindowManager$LayoutParams;
     iget v2, v0, Landroid/view/WindowManager$LayoutParams;->privateFlags:I
 
@@ -351,12 +308,10 @@
 
     iput v2, v0, Landroid/view/WindowManager$LayoutParams;->privateFlags:I
 
-    .line 371
     const/16 v2, 0x20
 
     iput v2, v0, Landroid/view/WindowManager$LayoutParams;->softInputMode:I
 
-    .line 372
     invoke-virtual {p0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
     move-result-object v2
@@ -367,7 +322,6 @@
 
     invoke-virtual {v0, v2}, Landroid/view/WindowManager$LayoutParams;->setTitle(Ljava/lang/CharSequence;)V
 
-    .line 374
     return-object v0
 .end method
 
@@ -376,7 +330,6 @@
     .param p1, "event"    # Landroid/view/MotionEvent;
 
     .prologue
-    .line 590
     iget-object v0, p0, Landroid/app/SallyService;->mWindow:Landroid/view/Window;
 
     invoke-virtual {v0, p1}, Landroid/view/Window;->superDispatchGenericMotionEvent(Landroid/view/MotionEvent;)Z
@@ -385,10 +338,8 @@
 
     if-eqz v0, :cond_0
 
-    .line 591
     const/4 v0, 0x1
 
-    .line 593
     :goto_0
     return v0
 
@@ -403,7 +354,6 @@
     .param p1, "event"    # Landroid/view/KeyEvent;
 
     .prologue
-    .line 546
     iget-object v0, p0, Landroid/app/SallyService;->mWindow:Landroid/view/Window;
 
     invoke-virtual {v0, p1}, Landroid/view/Window;->superDispatchKeyEvent(Landroid/view/KeyEvent;)Z
@@ -412,10 +362,8 @@
 
     if-eqz v0, :cond_0
 
-    .line 547
     const/4 v0, 0x1
 
-    .line 549
     :goto_0
     return v0
 
@@ -448,7 +396,6 @@
     .param p1, "event"    # Landroid/view/KeyEvent;
 
     .prologue
-    .line 557
     iget-object v0, p0, Landroid/app/SallyService;->mWindow:Landroid/view/Window;
 
     invoke-virtual {v0, p1}, Landroid/view/Window;->superDispatchKeyShortcutEvent(Landroid/view/KeyEvent;)Z
@@ -457,10 +404,8 @@
 
     if-eqz v0, :cond_0
 
-    .line 558
     const/4 v0, 0x1
 
-    .line 560
     :goto_0
     return v0
 
@@ -475,7 +420,6 @@
     .param p1, "event"    # Landroid/view/accessibility/AccessibilityEvent;
 
     .prologue
-    .line 601
     const/4 v0, 0x0
 
     return v0
@@ -486,7 +430,6 @@
     .param p1, "event"    # Landroid/view/MotionEvent;
 
     .prologue
-    .line 568
     iget-object v0, p0, Landroid/app/SallyService;->mWindow:Landroid/view/Window;
 
     invoke-virtual {v0, p1}, Landroid/view/Window;->superDispatchTouchEvent(Landroid/view/MotionEvent;)Z
@@ -495,10 +438,8 @@
 
     if-eqz v0, :cond_0
 
-    .line 569
     const/4 v0, 0x1
 
-    .line 571
     :goto_0
     return v0
 
@@ -513,7 +454,6 @@
     .param p1, "event"    # Landroid/view/MotionEvent;
 
     .prologue
-    .line 579
     iget-object v0, p0, Landroid/app/SallyService;->mWindow:Landroid/view/Window;
 
     invoke-virtual {v0, p1}, Landroid/view/Window;->superDispatchTrackballEvent(Landroid/view/MotionEvent;)Z
@@ -522,10 +462,8 @@
 
     if-eqz v0, :cond_0
 
-    .line 580
     const/4 v0, 0x1
 
-    .line 582
     :goto_0
     return v0
 
@@ -540,14 +478,12 @@
     .param p1, "id"    # I
 
     .prologue
-    .line 315
     const-string v0, "Sally Service"
 
     const-string v1, "findViewById()"
 
     invoke-static {v0, v1}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 316
     iget-object v0, p0, Landroid/app/SallyService;->mWindow:Landroid/view/Window;
 
     invoke-virtual {v0, p1}, Landroid/view/Window;->findViewById(I)Landroid/view/View;
@@ -561,14 +497,12 @@
     .locals 2
 
     .prologue
-    .line 327
     const-string v0, "Sally Service"
 
     const-string v1, "getAttributes()"
 
     invoke-static {v0, v1}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 328
     iget-object v0, p0, Landroid/app/SallyService;->mWindowAttributes:Landroid/view/WindowManager$LayoutParams;
 
     return-object v0
@@ -578,7 +512,6 @@
     .locals 1
 
     .prologue
-    .line 239
     iget-object v0, p0, Landroid/app/SallyService;->mContext:Landroid/content/Context;
 
     return-object v0
@@ -588,14 +521,12 @@
     .locals 2
 
     .prologue
-    .line 385
     const-string v0, "Sally Service"
 
     const-string v1, "getWindow"
 
     invoke-static {v0, v1}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 386
     iget-object v0, p0, Landroid/app/SallyService;->mWindow:Landroid/view/Window;
 
     return-object v0
@@ -606,7 +537,6 @@
     .param p1, "mode"    # Landroid/view/ActionMode;
 
     .prologue
-    .line 714
     return-void
 .end method
 
@@ -615,7 +545,6 @@
     .param p1, "mode"    # Landroid/view/ActionMode;
 
     .prologue
-    .line 707
     return-void
 .end method
 
@@ -623,7 +552,6 @@
     .locals 0
 
     .prologue
-    .line 670
     return-void
 .end method
 
@@ -632,14 +560,13 @@
     .param p1, "intent"    # Landroid/content/Intent;
 
     .prologue
-    .line 213
     const-string v0, "Sally Service"
 
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v2, "onBind() : "
+    const-string v2, "onBind() : "
 
     invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -655,7 +582,6 @@
 
     invoke-static {v0, v1}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 214
     const/4 v0, 0x0
 
     return-object v0
@@ -665,7 +591,6 @@
     .locals 0
 
     .prologue
-    .line 656
     return-void
 .end method
 
@@ -675,17 +600,15 @@
     .prologue
     const/4 v6, 0x0
 
-    .line 102
     invoke-super {p0}, Landroid/app/Service;->onCreate()V
 
-    .line 103
     const-string v3, "Sally Service"
 
     new-instance v4, Ljava/lang/StringBuilder;
 
     invoke-direct {v4}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v5, "onCreate() : "
+    const-string v5, "onCreate() : "
 
     invoke-virtual {v4, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -701,8 +624,7 @@
 
     invoke-static {v3, v4}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 105
-    const-string/jumbo v3, "window"
+    const-string v3, "window"
 
     invoke-virtual {p0, v3}, Landroid/app/SallyService;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
 
@@ -712,20 +634,16 @@
 
     iput-object v3, p0, Landroid/app/SallyService;->mWindowManager:Landroid/view/WindowManager;
 
-    .line 106
     iput-object p0, p0, Landroid/app/SallyService;->mContext:Landroid/content/Context;
 
-    .line 109
     :try_start_0
     invoke-virtual {p0}, Landroid/app/SallyService;->getPackageManager()Landroid/content/pm/PackageManager;
 
     move-result-object v2
 
-    .line 110
     .local v2, "packageManager":Landroid/content/pm/PackageManager;
     if-eqz v2, :cond_0
 
-    .line 111
     invoke-virtual {p0}, Landroid/app/SallyService;->getPackageName()Ljava/lang/String;
 
     move-result-object v3
@@ -736,11 +654,9 @@
 
     move-result-object v0
 
-    .line 112
     .local v0, "appInfo":Landroid/content/pm/ApplicationInfo;
     if-eqz v0, :cond_0
 
-    .line 113
     new-instance v3, Landroid/view/ContextThemeWrapper;
 
     iget v4, v0, Landroid/content/pm/ApplicationInfo;->theme:I
@@ -749,14 +665,13 @@
 
     iput-object v3, p0, Landroid/app/SallyService;->mContext:Landroid/content/Context;
 
-    .line 114
     const-string v3, "Sally Service"
 
     new-instance v4, Ljava/lang/StringBuilder;
 
     invoke-direct {v4}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v5, "loaded theme = "
+    const-string v5, "loaded theme = "
 
     invoke-virtual {v4, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -776,7 +691,6 @@
     :try_end_0
     .catch Landroid/content/pm/PackageManager$NameNotFoundException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 121
     .end local v0    # "appInfo":Landroid/content/pm/ApplicationInfo;
     .end local v2    # "packageManager":Landroid/content/pm/PackageManager;
     :cond_0
@@ -787,7 +701,6 @@
 
     iput-object v3, p0, Landroid/app/SallyService;->mWindowAttributes:Landroid/view/WindowManager$LayoutParams;
 
-    .line 122
     iget-object v3, p0, Landroid/app/SallyService;->mContext:Landroid/content/Context;
 
     invoke-static {v3}, Lcom/android/internal/policy/PolicyManager;->makeNewWindow(Landroid/content/Context;)Landroid/view/Window;
@@ -796,39 +709,32 @@
 
     iput-object v3, p0, Landroid/app/SallyService;->mWindow:Landroid/view/Window;
 
-    .line 124
     iget-object v3, p0, Landroid/app/SallyService;->mWindow:Landroid/view/Window;
 
     if-eqz v3, :cond_1
 
-    .line 125
     iget-object v3, p0, Landroid/app/SallyService;->mWindow:Landroid/view/Window;
 
     iget-object v4, p0, Landroid/app/SallyService;->mWindowManager:Landroid/view/WindowManager;
 
     invoke-virtual {v3, v4, v6, v6}, Landroid/view/Window;->setWindowManager(Landroid/view/WindowManager;Landroid/os/IBinder;Ljava/lang/String;)V
 
-    .line 126
     iget-object v3, p0, Landroid/app/SallyService;->mWindow:Landroid/view/Window;
 
     const/4 v4, 0x1
 
     invoke-virtual {v3, v4}, Landroid/view/Window;->requestFeature(I)Z
 
-    .line 127
     iget-object v3, p0, Landroid/app/SallyService;->mWindow:Landroid/view/Window;
 
     invoke-virtual {v3, p0}, Landroid/view/Window;->setCallback(Landroid/view/Window$Callback;)V
 
-    .line 129
     :cond_1
     return-void
 
-    .line 117
     :catch_0
     move-exception v1
 
-    .line 118
     .local v1, "e":Landroid/content/pm/PackageManager$NameNotFoundException;
     invoke-virtual {v1}, Landroid/content/pm/PackageManager$NameNotFoundException;->printStackTrace()V
 
@@ -841,7 +747,6 @@
     .param p2, "menu"    # Landroid/view/Menu;
 
     .prologue
-    .line 617
     const/4 v0, 0x0
 
     return v0
@@ -852,7 +757,6 @@
     .param p1, "featureId"    # I
 
     .prologue
-    .line 609
     const/4 v0, 0x0
 
     return-object v0
@@ -864,17 +768,15 @@
     .prologue
     const/4 v3, 0x0
 
-    .line 201
     invoke-super {p0}, Landroid/app/Service;->onDestroy()V
 
-    .line 202
     const-string v0, "Sally Service"
 
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v2, "onDestroy() : "
+    const-string v2, "onDestroy() : "
 
     invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -890,13 +792,10 @@
 
     invoke-static {v0, v1}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 203
     iput-object v3, p0, Landroid/app/SallyService;->mContext:Landroid/content/Context;
 
-    .line 204
     iput-object v3, p0, Landroid/app/SallyService;->mDecor:Landroid/view/View;
 
-    .line 205
     return-void
 .end method
 
@@ -904,7 +803,6 @@
     .locals 0
 
     .prologue
-    .line 677
     return-void
 .end method
 
@@ -914,7 +812,6 @@
     .param p2, "event"    # Landroid/view/KeyEvent;
 
     .prologue
-    .line 501
     const/4 v0, 0x0
 
     return v0
@@ -926,7 +823,6 @@
     .param p2, "event"    # Landroid/view/KeyEvent;
 
     .prologue
-    .line 531
     const/4 v0, 0x0
 
     return v0
@@ -939,7 +835,6 @@
     .param p3, "event"    # Landroid/view/KeyEvent;
 
     .prologue
-    .line 538
     const/4 v0, 0x0
 
     return v0
@@ -951,18 +846,14 @@
     .param p2, "event"    # Landroid/view/KeyEvent;
 
     .prologue
-    .line 519
     const/4 v0, 0x4
 
     if-ne p1, v0, :cond_0
 
-    .line 520
     invoke-virtual {p0}, Landroid/app/SallyService;->stopService()V
 
-    .line 521
     const/4 v0, 0x1
 
-    .line 524
     :goto_0
     return v0
 
@@ -978,7 +869,6 @@
     .param p2, "item"    # Landroid/view/MenuItem;
 
     .prologue
-    .line 641
     const/4 v0, 0x0
 
     return v0
@@ -990,7 +880,6 @@
     .param p2, "menu"    # Landroid/view/Menu;
 
     .prologue
-    .line 633
     const/4 v0, 0x0
 
     return v0
@@ -1002,7 +891,6 @@
     .param p2, "menu"    # Landroid/view/Menu;
 
     .prologue
-    .line 684
     return-void
 .end method
 
@@ -1013,7 +901,6 @@
     .param p3, "menu"    # Landroid/view/Menu;
 
     .prologue
-    .line 625
     const/4 v0, 0x0
 
     return v0
@@ -1023,7 +910,6 @@
     .locals 1
 
     .prologue
-    .line 691
     const/4 v0, 0x0
 
     return v0
@@ -1036,29 +922,24 @@
     .param p3, "startId"    # I
 
     .prologue
-    .line 164
     invoke-super {p0, p1, p2, p3}, Landroid/app/Service;->onStartCommand(Landroid/content/Intent;II)I
 
-    .line 165
     const-string v3, "Sally Service"
 
-    const-string/jumbo v4, "onStartCommand()"
+    const-string v4, "onStartCommand()"
 
     invoke-static {v3, v4}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 167
     iget-object v3, p0, Landroid/app/SallyService;->mWindow:Landroid/view/Window;
 
     if-eqz v3, :cond_0
 
-    .line 168
     iget-object v3, p0, Landroid/app/SallyService;->mWindow:Landroid/view/Window;
 
     iget-object v4, p0, Landroid/app/SallyService;->mWindowAttributes:Landroid/view/WindowManager$LayoutParams;
 
     invoke-virtual {v3, v4}, Landroid/view/Window;->setAttributes(Landroid/view/WindowManager$LayoutParams;)V
 
-    .line 171
     :cond_0
     iget-object v3, p0, Landroid/app/SallyService;->mWindow:Landroid/view/Window;
 
@@ -1068,26 +949,22 @@
 
     iput-object v3, p0, Landroid/app/SallyService;->mDecor:Landroid/view/View;
 
-    .line 172
     iget-object v3, p0, Landroid/app/SallyService;->mDecor:Landroid/view/View;
 
     if-eqz v3, :cond_2
 
-    .line 173
     iget-object v3, p0, Landroid/app/SallyService;->mDecor:Landroid/view/View;
 
     const/4 v4, 0x0
 
     invoke-virtual {v3, v4}, Landroid/view/View;->setVisibility(I)V
 
-    .line 174
     iget-object v3, p0, Landroid/app/SallyService;->mWindow:Landroid/view/Window;
 
     invoke-virtual {v3}, Landroid/view/Window;->getAttributes()Landroid/view/WindowManager$LayoutParams;
 
     move-result-object v1
 
-    .line 175
     .local v1, "l":Landroid/view/WindowManager$LayoutParams;
     iget v3, v1, Landroid/view/WindowManager$LayoutParams;->softInputMode:I
 
@@ -1095,26 +972,21 @@
 
     if-nez v3, :cond_1
 
-    .line 176
     new-instance v2, Landroid/view/WindowManager$LayoutParams;
 
     invoke-direct {v2}, Landroid/view/WindowManager$LayoutParams;-><init>()V
 
-    .line 177
     .local v2, "nl":Landroid/view/WindowManager$LayoutParams;
     invoke-virtual {v2, v1}, Landroid/view/WindowManager$LayoutParams;->copyFrom(Landroid/view/WindowManager$LayoutParams;)I
 
-    .line 178
     iget v3, v2, Landroid/view/WindowManager$LayoutParams;->softInputMode:I
 
     or-int/lit16 v3, v3, 0x100
 
     iput v3, v2, Landroid/view/WindowManager$LayoutParams;->softInputMode:I
 
-    .line 179
     move-object v1, v2
 
-    .line 183
     .end local v2    # "nl":Landroid/view/WindowManager$LayoutParams;
     :cond_1
     :try_start_0
@@ -1126,7 +998,6 @@
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 189
     .end local v1    # "l":Landroid/view/WindowManager$LayoutParams;
     :cond_2
     :goto_0
@@ -1134,16 +1005,13 @@
 
     return v3
 
-    .line 184
     .restart local v1    # "l":Landroid/view/WindowManager$LayoutParams;
     :catch_0
     move-exception v0
 
-    .line 185
     .local v0, "e":Ljava/lang/Exception;
     invoke-virtual {v0}, Ljava/lang/Exception;->printStackTrace()V
 
-    .line 186
     invoke-virtual {p0}, Landroid/app/SallyService;->stopSelf()V
 
     goto :goto_0
@@ -1154,7 +1022,6 @@
     .param p1, "attrs"    # Landroid/view/WindowManager$LayoutParams;
 
     .prologue
-    .line 649
     return-void
 .end method
 
@@ -1163,7 +1030,6 @@
     .param p1, "hasFocus"    # Z
 
     .prologue
-    .line 663
     return-void
 .end method
 
@@ -1172,7 +1038,6 @@
     .param p1, "callback"    # Landroid/view/ActionMode$Callback;
 
     .prologue
-    .line 699
     const/4 v0, 0x0
 
     return-object v0
@@ -1183,17 +1048,14 @@
     .param p1, "window"    # Landroid/view/Window;
 
     .prologue
-    .line 464
     const-string v0, "Sally Service"
 
-    const-string/jumbo v1, "removeWindow window"
+    const-string v1, "removeWindow window"
 
     invoke-static {v0, v1}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 466
     if-eqz p1, :cond_0
 
-    .line 467
     iget-object v0, p0, Landroid/app/SallyService;->mWindowManager:Landroid/view/WindowManager;
 
     invoke-virtual {p1}, Landroid/view/Window;->getDecorView()Landroid/view/View;
@@ -1202,10 +1064,8 @@
 
     invoke-interface {v0, v1}, Landroid/view/WindowManager;->removeView(Landroid/view/View;)V
 
-    .line 468
     const/4 v0, 0x1
 
-    .line 471
     :goto_0
     return v0
 
@@ -1220,19 +1080,16 @@
     .param p1, "a"    # Landroid/view/WindowManager$LayoutParams;
 
     .prologue
-    .line 343
     const-string v0, "Sally Service"
 
-    const-string/jumbo v1, "setAttributes()"
+    const-string v1, "setAttributes()"
 
     invoke-static {v0, v1}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 344
     iget-object v0, p0, Landroid/app/SallyService;->mWindow:Landroid/view/Window;
 
     invoke-virtual {v0, p1}, Landroid/view/Window;->setAttributes(Landroid/view/WindowManager$LayoutParams;)V
 
-    .line 345
     return-void
 .end method
 
@@ -1241,19 +1098,16 @@
     .param p1, "layoutResID"    # I
 
     .prologue
-    .line 253
     const-string v0, "Sally Service"
 
-    const-string/jumbo v1, "setContentView() layoutResID"
+    const-string v1, "setContentView() layoutResID"
 
     invoke-static {v0, v1}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 254
     iget-object v0, p0, Landroid/app/SallyService;->mWindow:Landroid/view/Window;
 
     invoke-virtual {v0, p1}, Landroid/view/Window;->setContentView(I)V
 
-    .line 255
     return-void
 .end method
 
@@ -1262,19 +1116,16 @@
     .param p1, "view"    # Landroid/view/View;
 
     .prologue
-    .line 274
     const-string v0, "Sally Service"
 
-    const-string/jumbo v1, "setContentView() view"
+    const-string v1, "setContentView() view"
 
     invoke-static {v0, v1}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 275
     iget-object v0, p0, Landroid/app/SallyService;->mWindow:Landroid/view/Window;
 
     invoke-virtual {v0, p1}, Landroid/view/Window;->setContentView(Landroid/view/View;)V
 
-    .line 276
     return-void
 .end method
 
@@ -1284,19 +1135,16 @@
     .param p2, "params"    # Landroid/view/ViewGroup$LayoutParams;
 
     .prologue
-    .line 291
     const-string v0, "Sally Service"
 
-    const-string/jumbo v1, "setContentView() view, params"
+    const-string v1, "setContentView() view, params"
 
     invoke-static {v0, v1}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 292
     iget-object v0, p0, Landroid/app/SallyService;->mWindow:Landroid/view/Window;
 
     invoke-virtual {v0, p1, p2}, Landroid/view/Window;->setContentView(Landroid/view/View;Landroid/view/ViewGroup$LayoutParams;)V
 
-    .line 293
     return-void
 .end method
 
@@ -1304,32 +1152,26 @@
     .locals 2
 
     .prologue
-    .line 223
     iget-object v0, p0, Landroid/app/SallyService;->mDecor:Landroid/view/View;
 
     if-eqz v0, :cond_0
 
-    .line 224
     iget-object v0, p0, Landroid/app/SallyService;->mWindowManager:Landroid/view/WindowManager;
 
     iget-object v1, p0, Landroid/app/SallyService;->mDecor:Landroid/view/View;
 
     invoke-interface {v0, v1}, Landroid/view/WindowManager;->removeView(Landroid/view/View;)V
 
-    .line 225
     const/4 v0, 0x0
 
     iput-object v0, p0, Landroid/app/SallyService;->mDecor:Landroid/view/View;
 
-    .line 228
     :cond_0
     const/4 v0, 0x1
 
     invoke-virtual {p0, v0}, Landroid/app/SallyService;->stopForeground(Z)V
 
-    .line 229
     invoke-virtual {p0}, Landroid/app/SallyService;->stopSelf()V
 
-    .line 230
     return-void
 .end method

@@ -25,15 +25,12 @@
     .prologue
     const/4 v1, 0x0
 
-    .line 1497
     iput-object p1, p0, Lcom/android/server/wifi/WifiScanningServiceImpl$WifiChangeStateMachine$ClientInfoLocal;->this$1:Lcom/android/server/wifi/WifiScanningServiceImpl$WifiChangeStateMachine;
 
-    .line 1498
     iget-object v0, p1, Lcom/android/server/wifi/WifiScanningServiceImpl$WifiChangeStateMachine;->this$0:Lcom/android/server/wifi/WifiScanningServiceImpl;
 
     invoke-direct {p0, v0, v1, v1}, Lcom/android/server/wifi/WifiScanningServiceImpl$ClientInfo;-><init>(Lcom/android/server/wifi/WifiScanningServiceImpl;Lcom/android/internal/util/AsyncChannel;Landroid/os/Messenger;)V
 
-    .line 1499
     return-void
 .end method
 
@@ -47,19 +44,16 @@
     .prologue
     const/4 v2, 0x0
 
-    .line 1502
     const-string v0, "WifiChangeStateMachine"
 
     const-string v1, "Delivering messages directly"
 
     invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1503
     iget-object v0, p0, Lcom/android/server/wifi/WifiScanningServiceImpl$WifiChangeStateMachine$ClientInfoLocal;->this$1:Lcom/android/server/wifi/WifiScanningServiceImpl$WifiChangeStateMachine;
 
     invoke-virtual {v0, v2, v2, v2, p2}, Lcom/android/server/wifi/WifiScanningServiceImpl$WifiChangeStateMachine;->sendMessage(IIILjava/lang/Object;)V
 
-    .line 1504
     return-void
 .end method
 
@@ -70,6 +64,5 @@
     .param p3, "newPeriodInMs"    # I
 
     .prologue
-    .line 1508
     return-void
 .end method

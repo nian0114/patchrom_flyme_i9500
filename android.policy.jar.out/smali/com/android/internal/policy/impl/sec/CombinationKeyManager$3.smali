@@ -26,7 +26,6 @@
     .locals 0
 
     .prologue
-    .line 634
     iput-object p1, p0, Lcom/android/internal/policy/impl/sec/CombinationKeyManager$3;->this$0:Lcom/android/internal/policy/impl/sec/CombinationKeyManager;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -44,21 +43,18 @@
 
     const/4 v7, 0x0
 
-    .line 637
     invoke-static {}, Lcom/android/internal/policy/impl/sec/SamsungPolicyProperties;->isSupportSafetyCare()Z
 
     move-result v3
 
     if-nez v3, :cond_0
 
-    .line 638
     new-instance v2, Landroid/content/Intent;
 
     const-string v3, "android.intent.action.SAFETY_MESSAGE_TRIGGER"
 
     invoke-direct {v2, v3}, Landroid/content/Intent;-><init>(Ljava/lang/String;)V
 
-    .line 639
     .local v2, "safetyMessage":Landroid/content/Intent;
     iget-object v3, p0, Lcom/android/internal/policy/impl/sec/CombinationKeyManager$3;->this$0:Lcom/android/internal/policy/impl/sec/CombinationKeyManager;
 
@@ -68,7 +64,6 @@
 
     invoke-virtual {v3, v2, v4}, Landroid/content/Context;->sendBroadcastAsUser(Landroid/content/Intent;Landroid/os/UserHandle;)V
 
-    .line 640
     iget-object v3, p0, Lcom/android/internal/policy/impl/sec/CombinationKeyManager$3;->this$0:Lcom/android/internal/policy/impl/sec/CombinationKeyManager;
 
     iget-object v3, v3, Lcom/android/internal/policy/impl/sec/CombinationKeyManager;->mSPWM:Lcom/android/internal/policy/impl/sec/SamsungPhoneWindowManager;
@@ -77,14 +72,12 @@
 
     invoke-virtual {v3, v7, v4, v8}, Lcom/android/internal/policy/impl/sec/SamsungPhoneWindowManager;->performHapticFeedbackLw(Landroid/view/WindowManagerPolicy$WindowState;IZ)Z
 
-    .line 641
     const-string v3, "CombinationKeyManager"
 
     const-string v4, "Safety mesage broadcasted"
 
     invoke-static {v3, v4}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 645
     .end local v2    # "safetyMessage":Landroid/content/Intent;
     :cond_0
     iget-object v3, p0, Lcom/android/internal/policy/impl/sec/CombinationKeyManager$3;->this$0:Lcom/android/internal/policy/impl/sec/CombinationKeyManager;
@@ -97,7 +90,6 @@
 
     if-eqz v3, :cond_1
 
-    .line 646
     iget-object v3, p0, Lcom/android/internal/policy/impl/sec/CombinationKeyManager$3;->this$0:Lcom/android/internal/policy/impl/sec/CombinationKeyManager;
 
     iget-object v3, v3, Lcom/android/internal/policy/impl/sec/CombinationKeyManager;->mSPWM:Lcom/android/internal/policy/impl/sec/SamsungPhoneWindowManager;
@@ -108,10 +100,8 @@
 
     if-eqz v3, :cond_4
 
-    .line 648
     const/4 v0, 0x0
 
-    .line 649
     .local v0, "intent":Landroid/content/Intent;
     :try_start_0
     # getter for: Lcom/android/internal/policy/impl/sec/CombinationKeyManager;->SAFE_DEBUG:Z
@@ -121,7 +111,6 @@
 
     if-eqz v3, :cond_3
 
-    .line 650
     new-instance v1, Landroid/content/Intent;
 
     const-string v3, "android.intent.action.CALL_PRIVILEGED"
@@ -142,7 +131,6 @@
     .local v1, "intent":Landroid/content/Intent;
     move-object v0, v1
 
-    .line 654
     .end local v1    # "intent":Landroid/content/Intent;
     .restart local v0    # "intent":Landroid/content/Intent;
     :goto_0
@@ -152,19 +140,16 @@
 
     invoke-virtual {v0, v3, v4}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;
 
-    .line 655
     const/high16 v3, 0x10000000
 
     invoke-virtual {v0, v3}, Landroid/content/Intent;->setFlags(I)Landroid/content/Intent;
 
-    .line 656
     const-string v3, "CombinationKeyManager"
 
     const-string v4, "OneTouchReport started"
 
     invoke-static {v3, v4}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 657
     iget-object v3, p0, Lcom/android/internal/policy/impl/sec/CombinationKeyManager$3;->this$0:Lcom/android/internal/policy/impl/sec/CombinationKeyManager;
 
     iget-object v3, v3, Lcom/android/internal/policy/impl/sec/CombinationKeyManager;->mContext:Landroid/content/Context;
@@ -173,7 +158,6 @@
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 661
     :goto_1
     iget-object v3, p0, Lcom/android/internal/policy/impl/sec/CombinationKeyManager$3;->this$0:Lcom/android/internal/policy/impl/sec/CombinationKeyManager;
 
@@ -183,7 +167,6 @@
 
     invoke-virtual {v3, v7, v4, v8}, Lcom/android/internal/policy/impl/sec/SamsungPhoneWindowManager;->performHapticFeedbackLw(Landroid/view/WindowManagerPolicy$WindowState;IZ)Z
 
-    .line 668
     .end local v0    # "intent":Landroid/content/Intent;
     :cond_1
     :goto_2
@@ -195,7 +178,6 @@
 
     invoke-virtual {v3, v4, v5}, Landroid/os/PowerManager$WakeLock;->acquire(J)V
 
-    .line 669
     iget-object v3, p0, Lcom/android/internal/policy/impl/sec/CombinationKeyManager$3;->this$0:Lcom/android/internal/policy/impl/sec/CombinationKeyManager;
 
     iget-object v3, v3, Lcom/android/internal/policy/impl/sec/CombinationKeyManager;->mSafetyAssuranceWakeLock:Landroid/os/PowerManager$WakeLock;
@@ -212,11 +194,9 @@
 
     invoke-virtual {v3}, Landroid/os/PowerManager$WakeLock;->release()V
 
-    .line 670
     :cond_2
     return-void
 
-    .line 652
     .restart local v0    # "intent":Landroid/content/Intent;
     :cond_3
     :try_start_1
@@ -246,7 +226,6 @@
     .restart local v0    # "intent":Landroid/content/Intent;
     goto :goto_0
 
-    .line 663
     .end local v0    # "intent":Landroid/content/Intent;
     :cond_4
     const-string v3, "CombinationKeyManager"
@@ -257,7 +236,6 @@
 
     goto :goto_2
 
-    .line 658
     .restart local v0    # "intent":Landroid/content/Intent;
     :catch_0
     move-exception v3

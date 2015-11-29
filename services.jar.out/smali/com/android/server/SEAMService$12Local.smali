@@ -23,7 +23,6 @@
     .locals 0
 
     .prologue
-    .line 1672
     iput-object p1, p0, Lcom/android/server/SEAMService$12Local;->this$0:Lcom/android/server/SEAMService;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V

@@ -18,12 +18,10 @@
     .locals 1
 
     .prologue
-    .line 40
-    const-string/jumbo v0, "srec_jni"
+    const-string v0, "srec_jni"
 
     invoke-static {v0}, Ljava/lang/System;->loadLibrary(Ljava/lang/String;)V
 
-    .line 41
     return-void
 .end method
 
@@ -40,30 +38,24 @@
     .prologue
     const-wide/16 v4, 0x0
 
-    .line 53
     invoke-direct {p0}, Ljava/io/InputStream;-><init>()V
 
-    .line 44
     iput-wide v4, p0, Landroid/speech/srec/MicrophoneInputStream;->mAudioRecord:J
 
-    .line 45
     const/4 v1, 0x1
 
     new-array v1, v1, [B
 
     iput-object v1, p0, Landroid/speech/srec/MicrophoneInputStream;->mOneByte:[B
 
-    .line 55
     invoke-static {}, Landroid/speech/srec/MicrophoneInputStream;->checkMicrophoneEnabled()Z
 
-    .line 57
     invoke-static {p1, p2}, Landroid/speech/srec/MicrophoneInputStream;->AudioRecordNew(II)J
 
     move-result-wide v2
 
     iput-wide v2, p0, Landroid/speech/srec/MicrophoneInputStream;->mAudioRecord:J
 
-    .line 58
     iget-wide v2, p0, Landroid/speech/srec/MicrophoneInputStream;->mAudioRecord:J
 
     cmp-long v1, v2, v4
@@ -78,7 +70,6 @@
 
     throw v1
 
-    .line 59
     :cond_0
     iget-wide v2, p0, Landroid/speech/srec/MicrophoneInputStream;->mAudioRecord:J
 
@@ -86,14 +77,11 @@
 
     move-result v0
 
-    .line 60
     .local v0, "status":I
     if-eqz v0, :cond_1
 
-    .line 61
     invoke-virtual {p0}, Landroid/speech/srec/MicrophoneInputStream;->close()V
 
-    .line 62
     new-instance v1, Ljava/io/IOException;
 
     new-instance v2, Ljava/lang/StringBuilder;
@@ -118,7 +106,6 @@
 
     throw v1
 
-    .line 64
     :cond_1
     return-void
 .end method
@@ -157,10 +144,8 @@
     .locals 5
 
     .prologue
-    .line 117
     const/4 v1, 0x1
 
-    .line 119
     .local v1, "enabled":Z
     :try_start_0
     invoke-static {}, Landroid/sec/enterprise/EnterpriseDeviceManager;->getInstance()Landroid/sec/enterprise/EnterpriseDeviceManager;
@@ -171,7 +156,6 @@
 
     move-result-object v2
 
-    .line 121
     .local v2, "rp":Landroid/sec/enterprise/RestrictionPolicy;
     const/4 v3, 0x1
 
@@ -181,19 +165,16 @@
 
     move-result v1
 
-    .line 127
     .end local v2    # "rp":Landroid/sec/enterprise/RestrictionPolicy;
     :goto_0
     if-nez v1, :cond_0
 
-    .line 129
     const-string v3, "MicrophoneInputStream"
 
     const-string v4, "MICROPHONE IS DISABLED"
 
     invoke-static {v3, v4}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 130
     invoke-static {}, Landroid/os/Process;->myUid()I
 
     move-result v3
@@ -210,27 +191,22 @@
 
     if-gt v3, v4, :cond_0
 
-    .line 133
     invoke-static {}, Landroid/os/Process;->myPid()I
 
     move-result v3
 
     invoke-static {v3}, Landroid/os/Process;->killProcess(I)V
 
-    .line 134
     const/16 v3, 0xa
 
     invoke-static {v3}, Ljava/lang/System;->exit(I)V
 
-    .line 138
     :cond_0
     return v1
 
-    .line 123
     :catch_0
     move-exception v0
 
-    .line 124
     .local v0, "e":Ljava/lang/Exception;
     const/4 v1, 0x1
 
@@ -250,14 +226,12 @@
     .prologue
     const-wide/16 v4, 0x0
 
-    .line 91
     iget-wide v0, p0, Landroid/speech/srec/MicrophoneInputStream;->mAudioRecord:J
 
     cmp-long v0, v0, v4
 
     if-eqz v0, :cond_0
 
-    .line 93
     :try_start_0
     iget-wide v0, p0, Landroid/speech/srec/MicrophoneInputStream;->mAudioRecord:J
 
@@ -265,7 +239,6 @@
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_1
 
-    .line 96
     :try_start_1
     iget-wide v0, p0, Landroid/speech/srec/MicrophoneInputStream;->mAudioRecord:J
 
@@ -273,14 +246,11 @@
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
-    .line 98
     iput-wide v4, p0, Landroid/speech/srec/MicrophoneInputStream;->mAudioRecord:J
 
-    .line 102
     :cond_0
     return-void
 
-    .line 98
     :catchall_0
     move-exception v0
 
@@ -288,11 +258,9 @@
 
     throw v0
 
-    .line 95
     :catchall_1
     move-exception v0
 
-    .line 96
     :try_start_2
     iget-wide v2, p0, Landroid/speech/srec/MicrophoneInputStream;->mAudioRecord:J
 
@@ -300,7 +268,6 @@
     :try_end_2
     .catchall {:try_start_2 .. :try_end_2} :catchall_2
 
-    .line 98
     iput-wide v4, p0, Landroid/speech/srec/MicrophoneInputStream;->mAudioRecord:J
 
     throw v0
@@ -322,7 +289,6 @@
     .end annotation
 
     .prologue
-    .line 106
     iget-wide v0, p0, Landroid/speech/srec/MicrophoneInputStream;->mAudioRecord:J
 
     const-wide/16 v2, 0x0
@@ -331,19 +297,16 @@
 
     if-eqz v0, :cond_0
 
-    .line 107
     invoke-virtual {p0}, Landroid/speech/srec/MicrophoneInputStream;->close()V
 
-    .line 108
     new-instance v0, Ljava/io/IOException;
 
-    const-string/jumbo v1, "someone forgot to close MicrophoneInputStream"
+    const-string v1, "someone forgot to close MicrophoneInputStream"
 
     invoke-direct {v0, v1}, Ljava/io/IOException;-><init>(Ljava/lang/String;)V
 
     throw v0
 
-    .line 110
     :cond_0
     return-void
 .end method
@@ -361,7 +324,6 @@
 
     const/4 v6, 0x0
 
-    .line 68
     iget-wide v2, p0, Landroid/speech/srec/MicrophoneInputStream;->mAudioRecord:J
 
     const-wide/16 v4, 0x0
@@ -378,7 +340,6 @@
 
     throw v1
 
-    .line 69
     :cond_0
     iget-wide v2, p0, Landroid/speech/srec/MicrophoneInputStream;->mAudioRecord:J
 
@@ -388,7 +349,6 @@
 
     move-result v0
 
-    .line 70
     .local v0, "rtn":I
     if-ne v0, v7, :cond_1
 
@@ -417,7 +377,6 @@
     .end annotation
 
     .prologue
-    .line 75
     iget-wide v0, p0, Landroid/speech/srec/MicrophoneInputStream;->mAudioRecord:J
 
     const-wide/16 v2, 0x0
@@ -434,7 +393,6 @@
 
     throw v0
 
-    .line 76
     :cond_0
     iget-wide v0, p0, Landroid/speech/srec/MicrophoneInputStream;->mAudioRecord:J
 
@@ -461,7 +419,6 @@
     .end annotation
 
     .prologue
-    .line 81
     iget-wide v0, p0, Landroid/speech/srec/MicrophoneInputStream;->mAudioRecord:J
 
     const-wide/16 v2, 0x0
@@ -478,7 +435,6 @@
 
     throw v0
 
-    .line 83
     :cond_0
     iget-wide v0, p0, Landroid/speech/srec/MicrophoneInputStream;->mAudioRecord:J
 

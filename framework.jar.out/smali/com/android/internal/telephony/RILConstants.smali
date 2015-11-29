@@ -726,8 +726,7 @@
     .locals 2
 
     .prologue
-    .line 36
-    const-string/jumbo v0, "ro.csc.sales_code"
+    const-string v0, "ro.csc.sales_code"
 
     invoke-static {v0}, Landroid/os/SystemProperties;->get(Ljava/lang/String;)Ljava/lang/String;
 
@@ -735,7 +734,6 @@
 
     sput-object v0, Lcom/android/internal/telephony/RILConstants;->salesCode:Ljava/lang/String;
 
-    .line 108
     const-string v0, "CTC"
 
     sget-object v1, Lcom/android/internal/telephony/RILConstants;->salesCode:Ljava/lang/String;

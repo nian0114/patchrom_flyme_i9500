@@ -29,22 +29,18 @@
     .locals 2
 
     .prologue
-    .line 9401
     iput-object p1, p0, Landroid/widget/AbsListView$PenSelectVibrator;->this$0:Landroid/widget/AbsListView;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 9390
     const/4 v0, 0x0
 
     iput-object v0, p0, Landroid/widget/AbsListView$PenSelectVibrator;->mVibrator:Landroid/os/SystemVibrator;
 
-    .line 9391
     const/4 v0, 0x0
 
     iput-boolean v0, p0, Landroid/widget/AbsListView$PenSelectVibrator;->isHapticFeedbackEnabled:Z
 
-    .line 9393
     const/16 v0, 0x1e
 
     new-array v0, v0, [B
@@ -53,18 +49,16 @@
 
     iput-object v0, p0, Landroid/widget/AbsListView$PenSelectVibrator;->mIvt:[B
 
-    .line 9402
     iget-object v0, p0, Landroid/widget/AbsListView$PenSelectVibrator;->mVibrator:Landroid/os/SystemVibrator;
 
     if-nez v0, :cond_0
 
-    .line 9403
     # getter for: Landroid/widget/AbsListView;->mContext:Landroid/content/Context;
     invoke-static {p1}, Landroid/widget/AbsListView;->access$5200(Landroid/widget/AbsListView;)Landroid/content/Context;
 
     move-result-object v0
 
-    const-string/jumbo v1, "vibrator"
+    const-string v1, "vibrator"
 
     invoke-virtual {v0, v1}, Landroid/content/Context;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
 
@@ -74,11 +68,9 @@
 
     iput-object v0, p0, Landroid/widget/AbsListView$PenSelectVibrator;->mVibrator:Landroid/os/SystemVibrator;
 
-    .line 9405
     :cond_0
     return-void
 
-    .line 9393
     :array_0
     .array-data 1
         0x1t
@@ -124,12 +116,10 @@
 
     const/4 v1, 0x1
 
-    .line 9408
     iget-object v0, p0, Landroid/widget/AbsListView$PenSelectVibrator;->mVibrator:Landroid/os/SystemVibrator;
 
     if-nez v0, :cond_0
 
-    .line 9409
     iget-object v0, p0, Landroid/widget/AbsListView$PenSelectVibrator;->this$0:Landroid/widget/AbsListView;
 
     # getter for: Landroid/widget/AbsListView;->mContext:Landroid/content/Context;
@@ -137,7 +127,7 @@
 
     move-result-object v0
 
-    const-string/jumbo v3, "vibrator"
+    const-string v3, "vibrator"
 
     invoke-virtual {v0, v3}, Landroid/content/Context;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
 
@@ -147,7 +137,6 @@
 
     iput-object v0, p0, Landroid/widget/AbsListView$PenSelectVibrator;->mVibrator:Landroid/os/SystemVibrator;
 
-    .line 9412
     :cond_0
     iget-object v0, p0, Landroid/widget/AbsListView$PenSelectVibrator;->this$0:Landroid/widget/AbsListView;
 
@@ -160,7 +149,7 @@
 
     move-result-object v0
 
-    const-string/jumbo v3, "spen_feedback_haptic_pen_gesture"
+    const-string v3, "spen_feedback_haptic_pen_gesture"
 
     invoke-static {v0, v3, v2}, Landroid/provider/Settings$System;->getInt(Landroid/content/ContentResolver;Ljava/lang/String;I)I
 
@@ -173,7 +162,6 @@
     :goto_0
     iput-boolean v0, p0, Landroid/widget/AbsListView$PenSelectVibrator;->isHapticFeedbackEnabled:Z
 
-    .line 9414
     iget-boolean v0, p0, Landroid/widget/AbsListView$PenSelectVibrator;->isHapticFeedbackEnabled:Z
 
     if-ne v0, v1, :cond_1
@@ -193,20 +181,17 @@
 
     if-nez v0, :cond_1
 
-    .line 9415
     iget-object v0, p0, Landroid/widget/AbsListView$PenSelectVibrator;->mVibrator:Landroid/os/SystemVibrator;
 
     iget-object v1, p0, Landroid/widget/AbsListView$PenSelectVibrator;->mIvt:[B
 
     invoke-virtual {v0, v1}, Landroid/os/SystemVibrator;->vibrateImmVibe([B)V
 
-    .line 9417
     :cond_1
     return-void
 
     :cond_2
     move v0, v2
 
-    .line 9412
     goto :goto_0
 .end method

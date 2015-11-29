@@ -22,7 +22,6 @@
     .locals 0
 
     .prologue
-    .line 59
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -35,7 +34,6 @@
     .param p1, "audioQuality"    # I
 
     .prologue
-    .line 70
     return-void
 .end method
 
@@ -44,7 +42,6 @@
     .param p1, "capable"    # Z
 
     .prologue
-    .line 63
     return-void
 .end method
 
@@ -53,7 +50,6 @@
     .param p1, "capable"    # Z
 
     .prologue
-    .line 65
     return-void
 .end method
 
@@ -62,7 +58,6 @@
     .param p1, "videoProvider"    # Landroid/telecom/Connection$VideoProvider;
 
     .prologue
-    .line 68
     return-void
 .end method
 
@@ -71,6 +66,5 @@
     .param p1, "videoState"    # I
 
     .prologue
-    .line 61
     return-void
 .end method

@@ -44,30 +44,25 @@
     .param p5, "launchedFromUid"    # I
 
     .prologue
-    .line 2093
     iput-object p1, p0, Lcom/android/internal/app/ResolverActivity$RemoteShareListAdapter;->this$0:Lcom/android/internal/app/ResolverActivity;
 
     invoke-direct {p0}, Landroid/widget/BaseAdapter;-><init>()V
 
-    .line 2094
     new-instance v0, Landroid/content/Intent;
 
     invoke-direct {v0, p3}, Landroid/content/Intent;-><init>(Landroid/content/Intent;)V
 
     iput-object v0, p0, Lcom/android/internal/app/ResolverActivity$RemoteShareListAdapter;->mIntent:Landroid/content/Intent;
 
-    .line 2095
     iget-object v0, p0, Lcom/android/internal/app/ResolverActivity$RemoteShareListAdapter;->mIntent:Landroid/content/Intent;
 
     const/4 v1, 0x0
 
     invoke-virtual {v0, v1}, Landroid/content/Intent;->setComponent(Landroid/content/ComponentName;)Landroid/content/Intent;
 
-    .line 2096
     iput-object p4, p0, Lcom/android/internal/app/ResolverActivity$RemoteShareListAdapter;->mInitialIntents:[Landroid/content/Intent;
 
-    .line 2097
-    const-string/jumbo v0, "layout_inflater"
+    const-string v0, "layout_inflater"
 
     invoke-virtual {p2, v0}, Landroid/content/Context;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
 
@@ -77,14 +72,12 @@
 
     iput-object v0, p0, Lcom/android/internal/app/ResolverActivity$RemoteShareListAdapter;->mInflater:Landroid/view/LayoutInflater;
 
-    .line 2098
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
     iput-object v0, p0, Lcom/android/internal/app/ResolverActivity$RemoteShareListAdapter;->mRemoteShareList:Ljava/util/List;
 
-    .line 2100
     iget-object v0, p0, Lcom/android/internal/app/ResolverActivity$RemoteShareListAdapter;->mRemoteShareList:Ljava/util/List;
 
     new-instance v1, Lcom/android/internal/app/ResolverActivity$RemoteShareListInfo;
@@ -103,7 +96,6 @@
 
     invoke-interface {v0, v1}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    .line 2101
     return-void
 .end method
 
@@ -115,7 +107,6 @@
     .prologue
     const v3, 0x1020490
 
-    .line 2131
     const v2, 0x1020014
 
     invoke-virtual {p1, v2}, Landroid/view/View;->findViewById(I)Landroid/view/View;
@@ -124,35 +115,29 @@
 
     check-cast v1, Landroid/widget/TextView;
 
-    .line 2133
     .local v1, "text":Landroid/widget/TextView;
     iget-object v2, p2, Lcom/android/internal/app/ResolverActivity$RemoteShareListInfo;->displayLabel:Ljava/lang/CharSequence;
 
     invoke-virtual {v1, v2}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
 
-    .line 2135
     iget-object v2, p2, Lcom/android/internal/app/ResolverActivity$RemoteShareListInfo;->displayIcon:Landroid/graphics/drawable/Drawable;
 
     if-eqz v2, :cond_0
 
-    .line 2136
     invoke-virtual {p1, v3}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
     move-result-object v0
 
     check-cast v0, Landroid/widget/ImageView;
 
-    .line 2137
     .local v0, "icon":Landroid/widget/ImageView;
     iget-object v2, p2, Lcom/android/internal/app/ResolverActivity$RemoteShareListInfo;->displayIcon:Landroid/graphics/drawable/Drawable;
 
     invoke-virtual {v0, v2}, Landroid/widget/ImageView;->setImageDrawable(Landroid/graphics/drawable/Drawable;)V
 
-    .line 2143
     :goto_0
     return-void
 
-    .line 2139
     .end local v0    # "icon":Landroid/widget/ImageView;
     :cond_0
     invoke-virtual {p1, v3}, Landroid/view/View;->findViewById(I)Landroid/view/View;
@@ -161,7 +146,6 @@
 
     check-cast v0, Landroid/widget/ImageView;
 
-    .line 2140
     .restart local v0    # "icon":Landroid/widget/ImageView;
     const v2, 0x1080b22
 
@@ -176,7 +160,6 @@
     .locals 1
 
     .prologue
-    .line 2104
     iget-object v0, p0, Lcom/android/internal/app/ResolverActivity$RemoteShareListAdapter;->mRemoteShareList:Ljava/util/List;
 
     invoke-interface {v0}, Ljava/util/List;->size()I
@@ -190,7 +173,6 @@
     .locals 1
 
     .prologue
-    .line 2146
     iget-object v0, p0, Lcom/android/internal/app/ResolverActivity$RemoteShareListAdapter;->mIntent:Landroid/content/Intent;
 
     return-object v0
@@ -201,7 +183,6 @@
     .param p1, "position"    # I
 
     .prologue
-    .line 2109
     iget-object v0, p0, Lcom/android/internal/app/ResolverActivity$RemoteShareListAdapter;->mRemoteShareList:Ljava/util/List;
 
     invoke-interface {v0, p1}, Ljava/util/List;->get(I)Ljava/lang/Object;
@@ -216,7 +197,6 @@
     .param p1, "position"    # I
 
     .prologue
-    .line 2114
     int-to-long v0, p1
 
     return-wide v0
@@ -229,10 +209,8 @@
     .param p3, "parent"    # Landroid/view/ViewGroup;
 
     .prologue
-    .line 2120
     if-nez p2, :cond_0
 
-    .line 2121
     iget-object v1, p0, Lcom/android/internal/app/ResolverActivity$RemoteShareListAdapter;->mInflater:Landroid/view/LayoutInflater;
 
     const v2, 0x1090133
@@ -243,7 +221,6 @@
 
     move-result-object v0
 
-    .line 2126
     .local v0, "view":Landroid/view/View;
     :goto_0
     iget-object v1, p0, Lcom/android/internal/app/ResolverActivity$RemoteShareListAdapter;->mRemoteShareList:Ljava/util/List;
@@ -256,10 +233,8 @@
 
     invoke-direct {p0, v0, v1}, Lcom/android/internal/app/ResolverActivity$RemoteShareListAdapter;->bindView(Landroid/view/View;Lcom/android/internal/app/ResolverActivity$RemoteShareListInfo;)V
 
-    .line 2128
     return-object v0
 
-    .line 2123
     .end local v0    # "view":Landroid/view/View;
     :cond_0
     move-object v0, p2

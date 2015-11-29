@@ -23,7 +23,6 @@
     .locals 0
 
     .prologue
-    .line 90
     iput-object p1, p0, Lcom/android/server/VRManagerService$2;->this$0:Lcom/android/server/VRManagerService;
 
     invoke-direct {p0}, Landroid/content/BroadcastReceiver;-><init>()V
@@ -41,12 +40,10 @@
     .prologue
     const/4 v6, 0x0
 
-    .line 93
     invoke-virtual {p2}, Landroid/content/Intent;->getAction()Ljava/lang/String;
 
     move-result-object v0
 
-    .line 94
     .local v0, "action":Ljava/lang/String;
     const-string v2, "android.intent.action.DOCK_EVENT"
 
@@ -56,14 +53,12 @@
 
     if-eqz v2, :cond_1
 
-    .line 95
     const-string v2, "android.intent.extra.DOCK_STATE"
 
     invoke-virtual {p2, v2, v6}, Landroid/content/Intent;->getIntExtra(Ljava/lang/String;I)I
 
     move-result v1
 
-    .line 97
     .local v1, "dockState":I
     const-string v2, "VRManagerService"
 
@@ -97,12 +92,10 @@
 
     invoke-static {v2, v3}, Landroid/util/Slog;->v(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 99
     const/16 v2, 0xb
 
     if-ne v1, v2, :cond_0
 
-    .line 100
     iget-object v2, p0, Lcom/android/server/VRManagerService$2;->this$0:Lcom/android/server/VRManagerService;
 
     # getter for: Lcom/android/server/VRManagerService;->mHandler:Landroid/os/Handler;
@@ -112,11 +105,9 @@
 
     invoke-virtual {v2, v6}, Landroid/os/Handler;->removeMessages(I)V
 
-    .line 103
     :cond_0
     if-nez v1, :cond_1
 
-    .line 104
     iget-object v2, p0, Lcom/android/server/VRManagerService$2;->this$0:Lcom/android/server/VRManagerService;
 
     # getter for: Lcom/android/server/VRManagerService;->mHandler:Landroid/os/Handler;
@@ -126,7 +117,6 @@
 
     invoke-virtual {v2, v6}, Landroid/os/Handler;->removeMessages(I)V
 
-    .line 105
     iget-object v2, p0, Lcom/android/server/VRManagerService$2;->this$0:Lcom/android/server/VRManagerService;
 
     # getter for: Lcom/android/server/VRManagerService;->mHandler:Landroid/os/Handler;
@@ -138,7 +128,6 @@
 
     invoke-virtual {v2, v6, v4, v5}, Landroid/os/Handler;->sendEmptyMessageDelayed(IJ)Z
 
-    .line 108
     .end local v1    # "dockState":I
     :cond_1
     return-void

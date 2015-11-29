@@ -26,7 +26,6 @@
     .param p2, "x0"    # Ljava/lang/String;
 
     .prologue
-    .line 1085
     iput-object p1, p0, Lcom/android/server/MountService$4;->this$0:Lcom/android/server/MountService;
 
     iput-object p3, p0, Lcom/android/server/MountService$4;->val$path:Ljava/lang/String;
@@ -42,7 +41,6 @@
     .locals 11
 
     .prologue
-    .line 1094
     const/4 v3, 0x0
 
     .local v3, "i":I
@@ -51,7 +49,6 @@
 
     if-ge v3, v6, :cond_2
 
-    .line 1095
     const/4 v6, 0x0
 
     :try_start_0
@@ -59,7 +56,6 @@
 
     move-result-object v4
 
-    .line 1096
     .local v4, "isPending":Ljava/lang/Boolean;
     iget-object v6, p0, Lcom/android/server/MountService$4;->this$0:Lcom/android/server/MountService;
 
@@ -72,7 +68,6 @@
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 1097
     :try_start_1
     iget-object v6, p0, Lcom/android/server/MountService$4;->this$0:Lcom/android/server/MountService;
 
@@ -93,12 +88,10 @@
 
     move-object v4, v0
 
-    .line 1098
     monitor-exit v7
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
-    .line 1099
     :try_start_2
     invoke-virtual {v4}, Ljava/lang/Boolean;->booleanValue()Z
 
@@ -106,7 +99,6 @@
 
     if-eqz v6, :cond_0
 
-    .line 1100
     const-string v6, "MountService"
 
     const-string v7, "\'%s\' waiting over pending state "
@@ -127,20 +119,17 @@
 
     invoke-static {v6, v7}, Landroid/util/Slog;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1101
     const-wide/16 v6, 0x1f4
 
     invoke-static {v6, v7}, Landroid/os/SystemClock;->sleep(J)V
     :try_end_2
     .catch Ljava/lang/Exception; {:try_start_2 .. :try_end_2} :catch_0
 
-    .line 1094
     :cond_0
     add-int/lit8 v3, v3, 0x1
 
     goto :goto_0
 
-    .line 1098
     :catchall_0
     move-exception v6
 
@@ -154,12 +143,10 @@
     :try_end_4
     .catch Ljava/lang/Exception; {:try_start_4 .. :try_end_4} :catch_0
 
-    .line 1109
     .end local v4    # "isPending":Ljava/lang/Boolean;
     :catch_0
     move-exception v2
 
-    .line 1110
     .local v2, "ex":Ljava/lang/Exception;
     const-string v6, "MountService"
 
@@ -167,13 +154,11 @@
 
     invoke-static {v6, v7, v2}, Landroid/util/Slog;->w(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
-    .line 1112
     .end local v2    # "ex":Ljava/lang/Exception;
     :cond_1
     :goto_1
     return-void
 
-    .line 1106
     :cond_2
     :try_start_5
     iget-object v6, p0, Lcom/android/server/MountService$4;->this$0:Lcom/android/server/MountService;
@@ -188,7 +173,6 @@
     .local v5, "rc":I
     if-eqz v5, :cond_1
 
-    .line 1107
     const-string v6, "MountService"
 
     const-string v7, "Insertion mount failed (%d)"

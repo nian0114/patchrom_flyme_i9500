@@ -37,31 +37,24 @@
     .prologue
     const/4 v1, 0x0
 
-    .line 20
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 22
     const-string v0, "DATA_LOGGING"
 
     iput-object v0, p0, Lcom/samsung/android/contextaware/aggregator/lpp/log/DataLogging;->TAG:Ljava/lang/String;
 
-    .line 24
     iput-object v1, p0, Lcom/samsung/android/contextaware/aggregator/lpp/log/DataLogging;->saveFileLoc:Ljava/lang/String;
 
-    .line 25
     iput-object v1, p0, Lcom/samsung/android/contextaware/aggregator/lpp/log/DataLogging;->saveFilePath:Ljava/lang/String;
 
-    .line 26
     iput-object v1, p0, Lcom/samsung/android/contextaware/aggregator/lpp/log/DataLogging;->fileName:Ljava/lang/String;
 
-    .line 28
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
     iput-object v0, p0, Lcom/samsung/android/contextaware/aggregator/lpp/log/DataLogging;->m_LoggingData:Ljava/util/List;
 
-    .line 31
     iput-object v1, p0, Lcom/samsung/android/contextaware/aggregator/lpp/log/DataLogging;->strLogFileName:Ljava/lang/String;
 
     return-void
@@ -75,17 +68,14 @@
     .prologue
     const/4 v6, -0x1
 
-    .line 37
     iget-object v4, p0, Lcom/samsung/android/contextaware/aggregator/lpp/log/DataLogging;->m_LoggingData:Ljava/util/List;
 
     invoke-interface {v4}, Ljava/util/List;->clear()V
 
-    .line 39
     invoke-static {}, Landroid/os/Environment;->getExternalStorageState()Ljava/lang/String;
 
     move-result-object v2
 
-    .line 50
     .local v2, "ext":Ljava/lang/String;
     invoke-static {}, Landroid/os/Environment;->getDataDirectory()Ljava/io/File;
 
@@ -97,7 +87,6 @@
 
     iput-object v4, p0, Lcom/samsung/android/contextaware/aggregator/lpp/log/DataLogging;->saveFileLoc:Ljava/lang/String;
 
-    .line 51
     new-instance v4, Ljava/lang/StringBuilder;
 
     invoke-direct {v4}, Ljava/lang/StringBuilder;-><init>()V
@@ -132,7 +121,6 @@
 
     iput-object v4, p0, Lcom/samsung/android/contextaware/aggregator/lpp/log/DataLogging;->saveFilePath:Ljava/lang/String;
 
-    .line 55
     invoke-static {}, Landroid/os/Environment;->getExternalStorageDirectory()Ljava/io/File;
 
     move-result-object v4
@@ -145,7 +133,6 @@
 
     invoke-static {v4, v5, v6, v6}, Landroid/os/FileUtils;->setPermissions(Ljava/lang/String;III)I
 
-    .line 59
     :try_start_0
     new-instance v0, Ljava/io/File;
 
@@ -153,7 +140,6 @@
 
     invoke-direct {v0, v4}, Ljava/io/File;-><init>(Ljava/lang/String;)V
 
-    .line 60
     .local v0, "dir":Ljava/io/File;
     invoke-virtual {v0}, Ljava/io/File;->exists()Z
 
@@ -161,16 +147,13 @@
 
     if-nez v4, :cond_0
 
-    .line 61
     invoke-virtual {v0}, Ljava/io/File;->mkdir()Z
 
     move-result v3
 
-    .line 63
     .local v3, "rst":Z
     if-nez v3, :cond_0
 
-    .line 64
     iget-object v4, p0, Lcom/samsung/android/contextaware/aggregator/lpp/log/DataLogging;->TAG:Ljava/lang/String;
 
     new-instance v5, Ljava/lang/StringBuilder;
@@ -197,18 +180,15 @@
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 75
     .end local v0    # "dir":Ljava/io/File;
     .end local v3    # "rst":Z
     :cond_0
     :goto_0
     return-void
 
-    .line 67
     :catch_0
     move-exception v1
 
-    .line 68
     .local v1, "e":Ljava/lang/Exception;
     iget-object v4, p0, Lcom/samsung/android/contextaware/aggregator/lpp/log/DataLogging;->TAG:Ljava/lang/String;
 
@@ -243,13 +223,11 @@
     .locals 21
 
     .prologue
-    .line 96
     :try_start_0
     invoke-static {}, Ljava/util/Calendar;->getInstance()Ljava/util/Calendar;
 
     move-result-object v2
 
-    .line 97
     .local v2, "curTime":Ljava/util/Calendar;
     const/16 v17, 0x1
 
@@ -263,7 +241,6 @@
 
     int-to-long v14, v0
 
-    .line 98
     .local v14, "curTimeYear":J
     const/16 v17, 0x2
 
@@ -277,7 +254,6 @@
 
     int-to-long v10, v0
 
-    .line 99
     .local v10, "curTimeMonth":J
     const/16 v17, 0x5
 
@@ -291,7 +267,6 @@
 
     int-to-long v4, v0
 
-    .line 100
     .local v4, "curTimeDay":J
     const/16 v17, 0xb
 
@@ -305,7 +280,6 @@
 
     int-to-long v6, v0
 
-    .line 101
     .local v6, "curTimeHour":J
     const/16 v17, 0xc
 
@@ -319,7 +293,6 @@
 
     int-to-long v8, v0
 
-    .line 102
     .local v8, "curTimeMinute":J
     const/16 v17, 0xd
 
@@ -333,7 +306,6 @@
 
     int-to-long v12, v0
 
-    .line 104
     .local v12, "curTimeSecond":J
     move-object/from16 v0, p0
 
@@ -343,7 +315,6 @@
 
     if-nez v17, :cond_0
 
-    .line 111
     :cond_0
     new-instance v17, Ljava/lang/StringBuilder;
 
@@ -435,7 +406,6 @@
 
     iput-object v0, v1, Lcom/samsung/android/contextaware/aggregator/lpp/log/DataLogging;->fileName:Ljava/lang/String;
 
-    .line 114
     new-instance v16, Ljava/io/File;
 
     new-instance v17, Ljava/lang/StringBuilder;
@@ -474,7 +444,6 @@
 
     invoke-direct/range {v16 .. v17}, Ljava/io/File;-><init>(Ljava/lang/String;)V
 
-    .line 115
     .local v16, "m_fileOut":Ljava/io/File;
     new-instance v17, Ljava/io/FileOutputStream;
 
@@ -490,7 +459,6 @@
 
     iput-object v0, v1, Lcom/samsung/android/contextaware/aggregator/lpp/log/DataLogging;->m_fileOutStream:Ljava/io/FileOutputStream;
 
-    .line 116
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/samsung/android/contextaware/aggregator/lpp/log/DataLogging;->m_fileOutStream:Ljava/io/FileOutputStream;
@@ -499,20 +467,18 @@
 
     if-nez v17, :cond_1
 
-    .line 117
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/samsung/android/contextaware/aggregator/lpp/log/DataLogging;->TAG:Ljava/lang/String;
 
     move-object/from16 v17, v0
 
-    const-string/jumbo v18, "m_fileOutStream is null"
+    const-string v18, "m_fileOutStream is null"
 
     invoke-static/range {v17 .. v18}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
     :try_end_0
     .catch Ljava/io/IOException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 123
     .end local v2    # "curTime":Ljava/util/Calendar;
     .end local v4    # "curTimeDay":J
     .end local v6    # "curTimeHour":J
@@ -525,11 +491,9 @@
     :goto_0
     return-void
 
-    .line 119
     :catch_0
     move-exception v3
 
-    .line 120
     .local v3, "e":Ljava/io/IOException;
     move-object/from16 v0, p0
 
@@ -550,10 +514,8 @@
     .locals 4
 
     .prologue
-    .line 78
     invoke-virtual {p0}, Lcom/samsung/android/contextaware/aggregator/lpp/log/DataLogging;->createFileToLog()V
 
-    .line 82
     const/4 v1, 0x0
 
     .local v1, "i":I
@@ -567,7 +529,6 @@
 
     if-ge v1, v2, :cond_0
 
-    .line 83
     iget-object v3, p0, Lcom/samsung/android/contextaware/aggregator/lpp/log/DataLogging;->m_fileOutStream:Ljava/io/FileOutputStream;
 
     iget-object v2, p0, Lcom/samsung/android/contextaware/aggregator/lpp/log/DataLogging;->m_LoggingData:Ljava/util/List;
@@ -584,12 +545,10 @@
 
     invoke-virtual {v3, v2}, Ljava/io/FileOutputStream;->write([B)V
 
-    .line 82
     add-int/lit8 v1, v1, 0x1
 
     goto :goto_0
 
-    .line 86
     :cond_0
     iget-object v2, p0, Lcom/samsung/android/contextaware/aggregator/lpp/log/DataLogging;->m_fileOutStream:Ljava/io/FileOutputStream;
 
@@ -597,15 +556,12 @@
     :try_end_0
     .catch Ljava/io/IOException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 92
     :goto_1
     return-void
 
-    .line 87
     :catch_0
     move-exception v0
 
-    .line 88
     .local v0, "e":Ljava/io/IOException;
     iget-object v2, p0, Lcom/samsung/android/contextaware/aggregator/lpp/log/DataLogging;->TAG:Ljava/lang/String;
 

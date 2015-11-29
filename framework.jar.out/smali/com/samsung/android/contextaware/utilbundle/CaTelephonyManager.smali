@@ -25,10 +25,8 @@
     .locals 1
 
     .prologue
-    .line 29
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 102
     new-instance v0, Lcom/samsung/android/contextaware/utilbundle/CaTelephonyManager$1;
 
     invoke-direct {v0, p0}, Lcom/samsung/android/contextaware/utilbundle/CaTelephonyManager$1;-><init>(Lcom/samsung/android/contextaware/utilbundle/CaTelephonyManager;)V
@@ -44,7 +42,6 @@
     .param p1, "x1"    # I
 
     .prologue
-    .line 29
     invoke-direct {p0, p1}, Lcom/samsung/android/contextaware/utilbundle/CaTelephonyManager;->sendCallStatusToSensorHub(I)V
 
     return-void
@@ -54,42 +51,35 @@
     .locals 2
 
     .prologue
-    .line 49
     sget-object v0, Lcom/samsung/android/contextaware/utilbundle/CaTelephonyManager;->instance:Lcom/samsung/android/contextaware/utilbundle/CaTelephonyManager;
 
     if-nez v0, :cond_1
 
-    .line 50
     const-class v1, Lcom/samsung/android/contextaware/utilbundle/CaTelephonyManager;
 
     monitor-enter v1
 
-    .line 51
     :try_start_0
     sget-object v0, Lcom/samsung/android/contextaware/utilbundle/CaTelephonyManager;->instance:Lcom/samsung/android/contextaware/utilbundle/CaTelephonyManager;
 
     if-nez v0, :cond_0
 
-    .line 52
     new-instance v0, Lcom/samsung/android/contextaware/utilbundle/CaTelephonyManager;
 
     invoke-direct {v0}, Lcom/samsung/android/contextaware/utilbundle/CaTelephonyManager;-><init>()V
 
     sput-object v0, Lcom/samsung/android/contextaware/utilbundle/CaTelephonyManager;->instance:Lcom/samsung/android/contextaware/utilbundle/CaTelephonyManager;
 
-    .line 54
     :cond_0
     monitor-exit v1
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 56
     :cond_1
     sget-object v0, Lcom/samsung/android/contextaware/utilbundle/CaTelephonyManager;->instance:Lcom/samsung/android/contextaware/utilbundle/CaTelephonyManager;
 
     return-object v0
 
-    .line 54
     :catchall_0
     move-exception v0
 
@@ -110,21 +100,17 @@
 
     const/4 v3, 0x0
 
-    .line 129
     new-array v0, v4, [B
 
-    .line 130
     .local v0, "dataPacket":[B
     int-to-byte v2, p1
 
     aput-byte v2, v0, v3
 
-    .line 131
     const/4 v2, 0x1
 
     aput-byte v3, v0, v2
 
-    .line 133
     invoke-static {}, Lcom/samsung/android/contextaware/utilbundle/SensorHubCommManager;->getInstance()Lcom/samsung/android/contextaware/utilbundle/SensorHubCommManager;
 
     move-result-object v2
@@ -137,7 +123,6 @@
 
     move-result v1
 
-    .line 137
     .local v1, "result":I
     sget-object v2, Lcom/samsung/android/contextaware/dataprovider/sensorhubprovider/SensorHubErrors;->SUCCESS:Lcom/samsung/android/contextaware/dataprovider/sensorhubprovider/SensorHubErrors;
 
@@ -147,18 +132,15 @@
 
     if-eq v1, v2, :cond_0
 
-    .line 138
     invoke-static {v1}, Lcom/samsung/android/contextaware/dataprovider/sensorhubprovider/SensorHubErrors;->getMessage(I)Ljava/lang/String;
 
     move-result-object v2
 
     invoke-static {v2}, Lcom/samsung/android/contextaware/utilbundle/logger/CaLogger;->error(Ljava/lang/String;)V
 
-    .line 140
     :cond_0
     return-void
 
-    .line 133
     nop
 
     :array_0
@@ -175,21 +157,17 @@
     .param p1, "context"    # Landroid/content/Context;
 
     .prologue
-    .line 68
     if-nez p1, :cond_0
 
-    .line 69
     const-string v0, "Context is null"
 
     invoke-static {v0}, Lcom/samsung/android/contextaware/utilbundle/logger/CaLogger;->error(Ljava/lang/String;)V
 
-    .line 85
     :goto_0
     return-void
 
-    .line 73
     :cond_0
-    const-string/jumbo v0, "phone"
+    const-string v0, "phone"
 
     invoke-virtual {p1, v0}, Landroid/content/Context;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
 
@@ -199,19 +177,16 @@
 
     iput-object v0, p0, Lcom/samsung/android/contextaware/utilbundle/CaTelephonyManager;->mTelephonyManager:Landroid/telephony/TelephonyManager;
 
-    .line 76
     iget-object v0, p0, Lcom/samsung/android/contextaware/utilbundle/CaTelephonyManager;->mTelephonyManager:Landroid/telephony/TelephonyManager;
 
     if-nez v0, :cond_1
 
-    .line 77
-    const-string/jumbo v0, "mTelephonyManager is null"
+    const-string v0, "mTelephonyManager is null"
 
     invoke-static {v0}, Lcom/samsung/android/contextaware/utilbundle/logger/CaLogger;->error(Ljava/lang/String;)V
 
     goto :goto_0
 
-    .line 81
     :cond_1
     iget-object v0, p0, Lcom/samsung/android/contextaware/utilbundle/CaTelephonyManager;->mTelephonyManager:Landroid/telephony/TelephonyManager;
 
@@ -228,12 +203,10 @@
     .locals 3
 
     .prologue
-    .line 95
     iget-object v0, p0, Lcom/samsung/android/contextaware/utilbundle/CaTelephonyManager;->mTelephonyManager:Landroid/telephony/TelephonyManager;
 
     if-eqz v0, :cond_0
 
-    .line 96
     iget-object v0, p0, Lcom/samsung/android/contextaware/utilbundle/CaTelephonyManager;->mTelephonyManager:Landroid/telephony/TelephonyManager;
 
     iget-object v1, p0, Lcom/samsung/android/contextaware/utilbundle/CaTelephonyManager;->mPhoneStateListener:Landroid/telephony/PhoneStateListener;
@@ -242,7 +215,6 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/telephony/TelephonyManager;->listen(Landroid/telephony/PhoneStateListener;I)V
 
-    .line 99
     :cond_0
     return-void
 .end method

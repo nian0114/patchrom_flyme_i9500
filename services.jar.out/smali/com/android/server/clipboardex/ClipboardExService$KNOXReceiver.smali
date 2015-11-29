@@ -23,7 +23,6 @@
     .locals 0
 
     .prologue
-    .line 530
     iput-object p1, p0, Lcom/android/server/clipboardex/ClipboardExService$KNOXReceiver;->this$0:Lcom/android/server/clipboardex/ClipboardExService;
 
     invoke-direct {p0}, Landroid/content/BroadcastReceiver;-><init>()V
@@ -39,12 +38,10 @@
     .param p2, "intent"    # Landroid/content/Intent;
 
     .prologue
-    .line 533
     invoke-virtual {p2}, Landroid/content/Intent;->getAction()Ljava/lang/String;
 
     move-result-object v0
 
-    .line 534
     .local v0, "intentAction":Ljava/lang/String;
     const-string v4, "enterprise.container.remove.progress"
 
@@ -62,7 +59,6 @@
 
     if-eqz v4, :cond_3
 
-    .line 535
     :cond_0
     sget-boolean v4, Landroid/sec/clipboard/data/ClipboardDefine;->DEBUG:Z
 
@@ -90,7 +86,6 @@
 
     invoke-static {v4, v5}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 536
     :cond_1
     iget-object v4, p0, Lcom/android/server/clipboardex/ClipboardExService$KNOXReceiver;->this$0:Lcom/android/server/clipboardex/ClipboardExService;
 
@@ -101,7 +96,6 @@
 
     if-eqz v4, :cond_2
 
-    .line 537
     iget-object v4, p0, Lcom/android/server/clipboardex/ClipboardExService$KNOXReceiver;->this$0:Lcom/android/server/clipboardex/ClipboardExService;
 
     # getter for: Lcom/android/server/clipboardex/ClipboardExService;->mDataList:Landroid/sec/clipboard/data/ClipboardDataMgr;
@@ -111,12 +105,10 @@
 
     invoke-virtual {v4}, Landroid/sec/clipboard/data/ClipboardDataMgr;->removeKNOXData()V
 
-    .line 579
     :cond_2
     :goto_0
     return-void
 
-    .line 540
     :cond_3
     const-string v4, "com.samsung.knox.clipboard.sync"
 
@@ -126,7 +118,6 @@
 
     if-eqz v4, :cond_2
 
-    .line 541
     iget-object v4, p0, Lcom/android/server/clipboardex/ClipboardExService$KNOXReceiver;->this$0:Lcom/android/server/clipboardex/ClipboardExService;
 
     invoke-virtual {v4}, Lcom/android/server/clipboardex/ClipboardExService;->isKnoxTwoEnabled()Z
@@ -135,12 +126,10 @@
 
     if-eqz v4, :cond_6
 
-    .line 542
     sget-boolean v4, Landroid/sec/clipboard/data/ClipboardDefine;->DEBUG:Z
 
     if-eqz v4, :cond_4
 
-    .line 543
     const-string v4, "ClipboardServiceEx"
 
     new-instance v5, Ljava/lang/StringBuilder;
@@ -163,7 +152,6 @@
 
     invoke-static {v4, v5}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 544
     :cond_4
     iget-object v4, p0, Lcom/android/server/clipboardex/ClipboardExService$KNOXReceiver;->this$0:Lcom/android/server/clipboardex/ClipboardExService;
 
@@ -174,7 +162,6 @@
 
     if-eqz v4, :cond_5
 
-    .line 545
     iget-object v4, p0, Lcom/android/server/clipboardex/ClipboardExService$KNOXReceiver;->this$0:Lcom/android/server/clipboardex/ClipboardExService;
 
     # getter for: Lcom/android/server/clipboardex/ClipboardExService;->mSharedclipMgr:Landroid/sec/clipboard/data/ClipboardDataMgr;
@@ -184,7 +171,6 @@
 
     invoke-virtual {v4}, Landroid/sec/clipboard/data/ClipboardDataMgr;->refresh()V
 
-    .line 547
     :cond_5
     iget-object v4, p0, Lcom/android/server/clipboardex/ClipboardExService$KNOXReceiver;->this$0:Lcom/android/server/clipboardex/ClipboardExService;
 
@@ -195,7 +181,6 @@
 
     if-eqz v4, :cond_6
 
-    .line 548
     const-string v4, "ClipboardServiceEx"
 
     new-instance v5, Ljava/lang/StringBuilder;
@@ -229,7 +214,6 @@
 
     invoke-static {v4, v5}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 549
     iget-object v4, p0, Lcom/android/server/clipboardex/ClipboardExService$KNOXReceiver;->this$0:Lcom/android/server/clipboardex/ClipboardExService;
 
     # getter for: Lcom/android/server/clipboardex/ClipboardExService;->mDataList:Landroid/sec/clipboard/data/ClipboardDataMgr;
@@ -239,7 +223,6 @@
 
     invoke-virtual {v4}, Landroid/sec/clipboard/data/ClipboardDataMgr;->refresh()V
 
-    .line 553
     :cond_6
     iget-object v4, p0, Lcom/android/server/clipboardex/ClipboardExService$KNOXReceiver;->this$0:Lcom/android/server/clipboardex/ClipboardExService;
 
@@ -250,10 +233,8 @@
 
     if-eqz v4, :cond_2
 
-    .line 554
     const/4 v2, 0x0
 
-    .line 555
     .local v2, "pi":Landroid/content/pm/PersonaInfo;
     iget-object v4, p0, Lcom/android/server/clipboardex/ClipboardExService$KNOXReceiver;->this$0:Lcom/android/server/clipboardex/ClipboardExService;
 
@@ -262,7 +243,7 @@
 
     move-result-object v4
 
-    const-string/jumbo v5, "persona"
+    const-string v5, "persona"
 
     invoke-virtual {v4, v5}, Landroid/content/Context;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
 
@@ -270,7 +251,6 @@
 
     check-cast v3, Landroid/os/PersonaManager;
 
-    .line 556
     .local v3, "pm":Landroid/os/PersonaManager;
     const/4 v4, 0x1
 
@@ -278,7 +258,6 @@
 
     move-result-object v1
 
-    .line 557
     .local v1, "personas":Ljava/util/List;, "Ljava/util/List<Landroid/content/pm/PersonaInfo;>;"
     if-eqz v1, :cond_7
 
@@ -288,7 +267,6 @@
 
     if-lez v4, :cond_7
 
-    .line 558
     const/4 v4, 0x0
 
     invoke-interface {v1, v4}, Ljava/util/List;->get(I)Ljava/lang/Object;
@@ -298,14 +276,12 @@
     .end local v2    # "pi":Landroid/content/pm/PersonaInfo;
     check-cast v2, Landroid/content/pm/PersonaInfo;
 
-    .line 560
     .restart local v2    # "pi":Landroid/content/pm/PersonaInfo;
     :cond_7
     sget-boolean v4, Landroid/sec/clipboard/data/ClipboardDefine;->DEBUG:Z
 
     if-eqz v4, :cond_8
 
-    .line 561
     const-string v4, "ClipboardServiceEx"
 
     new-instance v5, Ljava/lang/StringBuilder;
@@ -340,11 +316,9 @@
 
     invoke-static {v4, v5}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 564
     :cond_8
     if-eqz v2, :cond_9
 
-    .line 565
     iget-object v4, p0, Lcom/android/server/clipboardex/ClipboardExService$KNOXReceiver;->this$0:Lcom/android/server/clipboardex/ClipboardExService;
 
     iget v5, v2, Landroid/content/pm/PersonaInfo;->id:I
@@ -353,7 +327,6 @@
 
     invoke-virtual {v4, v5, v6}, Lcom/android/server/clipboardex/ClipboardExService;->multiUserMode(ILjava/lang/String;)V
 
-    .line 568
     :cond_9
     iget-object v4, p0, Lcom/android/server/clipboardex/ClipboardExService$KNOXReceiver;->this$0:Lcom/android/server/clipboardex/ClipboardExService;
 
@@ -364,7 +337,6 @@
 
     if-eqz v4, :cond_a
 
-    .line 569
     iget-object v4, p0, Lcom/android/server/clipboardex/ClipboardExService$KNOXReceiver;->this$0:Lcom/android/server/clipboardex/ClipboardExService;
 
     # getter for: Lcom/android/server/clipboardex/ClipboardExService;->mSharedclipMgr:Landroid/sec/clipboard/data/ClipboardDataMgr;
@@ -374,7 +346,6 @@
 
     invoke-virtual {v4}, Landroid/sec/clipboard/data/ClipboardDataMgr;->refresh()V
 
-    .line 571
     :cond_a
     iget-object v4, p0, Lcom/android/server/clipboardex/ClipboardExService$KNOXReceiver;->this$0:Lcom/android/server/clipboardex/ClipboardExService;
 
@@ -385,7 +356,6 @@
 
     if-eqz v4, :cond_2
 
-    .line 572
     const-string v4, "ClipboardServiceEx"
 
     new-instance v5, Ljava/lang/StringBuilder;
@@ -419,7 +389,6 @@
 
     invoke-static {v4, v5}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 573
     iget-object v4, p0, Lcom/android/server/clipboardex/ClipboardExService$KNOXReceiver;->this$0:Lcom/android/server/clipboardex/ClipboardExService;
 
     # getter for: Lcom/android/server/clipboardex/ClipboardExService;->mDataList:Landroid/sec/clipboard/data/ClipboardDataMgr;

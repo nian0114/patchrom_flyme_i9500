@@ -51,43 +51,36 @@
     .prologue
     const/4 v2, 0x0
 
-    .line 67
     invoke-direct {p0}, Landroid/net/BaseNetworkStateTracker;-><init>()V
 
-    .line 50
     new-instance v0, Ljava/util/concurrent/atomic/AtomicBoolean;
 
     invoke-direct {v0, v2}, Ljava/util/concurrent/atomic/AtomicBoolean;-><init>(Z)V
 
     iput-object v0, p0, Landroid/net/wifi/WifiP2pStateTracker;->mTeardownRequested:Ljava/util/concurrent/atomic/AtomicBoolean;
 
-    .line 51
     new-instance v0, Ljava/util/concurrent/atomic/AtomicBoolean;
 
     invoke-direct {v0, v2}, Ljava/util/concurrent/atomic/AtomicBoolean;-><init>(Z)V
 
     iput-object v0, p0, Landroid/net/wifi/WifiP2pStateTracker;->mPrivateDnsRouteSet:Ljava/util/concurrent/atomic/AtomicBoolean;
 
-    .line 52
     new-instance v0, Ljava/util/concurrent/atomic/AtomicBoolean;
 
     invoke-direct {v0, v2}, Ljava/util/concurrent/atomic/AtomicBoolean;-><init>(Z)V
 
     iput-object v0, p0, Landroid/net/wifi/WifiP2pStateTracker;->mDefaultRouteSet:Ljava/util/concurrent/atomic/AtomicBoolean;
 
-    .line 57
     sget-object v0, Landroid/net/NetworkInfo$State;->UNKNOWN:Landroid/net/NetworkInfo$State;
 
     iput-object v0, p0, Landroid/net/wifi/WifiP2pStateTracker;->mLastState:Landroid/net/NetworkInfo$State;
 
-    .line 59
     new-instance v0, Landroid/net/SamplingDataTracker;
 
     invoke-direct {v0}, Landroid/net/SamplingDataTracker;-><init>()V
 
     iput-object v0, p0, Landroid/net/wifi/WifiP2pStateTracker;->mSamplingDataTracker:Landroid/net/SamplingDataTracker;
 
-    .line 68
     new-instance v0, Landroid/net/NetworkInfo;
 
     const-string v1, ""
@@ -96,22 +89,18 @@
 
     iput-object v0, p0, Landroid/net/wifi/WifiP2pStateTracker;->mNetworkInfo:Landroid/net/NetworkInfo;
 
-    .line 69
     new-instance v0, Landroid/net/LinkProperties;
 
     invoke-direct {v0}, Landroid/net/LinkProperties;-><init>()V
 
     iput-object v0, p0, Landroid/net/wifi/WifiP2pStateTracker;->mLinkProperties:Landroid/net/LinkProperties;
 
-    .line 72
     iget-object v0, p0, Landroid/net/wifi/WifiP2pStateTracker;->mNetworkInfo:Landroid/net/NetworkInfo;
 
     invoke-virtual {v0, v2}, Landroid/net/NetworkInfo;->setIsAvailable(Z)V
 
-    .line 73
     invoke-virtual {p0, v2}, Landroid/net/wifi/WifiP2pStateTracker;->setTeardownRequested(Z)V
 
-    .line 74
     return-void
 .end method
 
@@ -120,7 +109,6 @@
     .param p0, "x0"    # Landroid/net/wifi/WifiP2pStateTracker;
 
     .prologue
-    .line 43
     iget-object v0, p0, Landroid/net/wifi/WifiP2pStateTracker;->mNetworkInfo:Landroid/net/NetworkInfo;
 
     return-object v0
@@ -132,7 +120,6 @@
     .param p1, "x1"    # Landroid/net/NetworkInfo;
 
     .prologue
-    .line 43
     iput-object p1, p0, Landroid/net/wifi/WifiP2pStateTracker;->mNetworkInfo:Landroid/net/NetworkInfo;
 
     return-object p1
@@ -143,7 +130,6 @@
     .param p0, "x0"    # Landroid/net/wifi/WifiP2pStateTracker;
 
     .prologue
-    .line 43
     iget-object v0, p0, Landroid/net/wifi/WifiP2pStateTracker;->mLinkProperties:Landroid/net/LinkProperties;
 
     return-object v0
@@ -155,7 +141,6 @@
     .param p1, "x1"    # Landroid/net/LinkProperties;
 
     .prologue
-    .line 43
     iput-object p1, p0, Landroid/net/wifi/WifiP2pStateTracker;->mLinkProperties:Landroid/net/LinkProperties;
 
     return-object p1
@@ -166,7 +151,6 @@
     .param p0, "x0"    # Landroid/net/wifi/WifiP2pStateTracker;
 
     .prologue
-    .line 43
     iget-object v0, p0, Landroid/net/wifi/WifiP2pStateTracker;->mCsHandler:Landroid/os/Handler;
 
     return-object v0
@@ -179,12 +163,10 @@
     .param p1, "link"    # Landroid/net/LinkProperties;
 
     .prologue
-    .line 293
     iget-object v0, p0, Landroid/net/wifi/WifiP2pStateTracker;->mLinkProperties:Landroid/net/LinkProperties;
 
     invoke-virtual {v0, p1}, Landroid/net/LinkProperties;->addStackedLink(Landroid/net/LinkProperties;)Z
 
-    .line 294
     return-void
 .end method
 
@@ -193,12 +175,10 @@
     .param p1, "enabled"    # Z
 
     .prologue
-    .line 246
     iget-object v0, p0, Landroid/net/wifi/WifiP2pStateTracker;->mDefaultRouteSet:Ljava/util/concurrent/atomic/AtomicBoolean;
 
     invoke-virtual {v0, p1}, Ljava/util/concurrent/atomic/AtomicBoolean;->set(Z)V
 
-    .line 247
     return-void
 .end method
 
@@ -206,7 +186,6 @@
     .locals 2
 
     .prologue
-    .line 222
     new-instance v0, Landroid/net/LinkProperties;
 
     iget-object v1, p0, Landroid/net/wifi/WifiP2pStateTracker;->mLinkProperties:Landroid/net/LinkProperties;
@@ -220,7 +199,6 @@
     .locals 2
 
     .prologue
-    .line 215
     new-instance v0, Landroid/net/NetworkInfo;
 
     iget-object v1, p0, Landroid/net/wifi/WifiP2pStateTracker;->mNetworkInfo:Landroid/net/NetworkInfo;
@@ -234,7 +212,6 @@
     .locals 1
 
     .prologue
-    .line 254
     const-string v0, "net.tcp.buffersize.wifi"
 
     return-object v0
@@ -244,7 +221,6 @@
     .locals 1
 
     .prologue
-    .line 168
     iget-object v0, p0, Landroid/net/wifi/WifiP2pStateTracker;->mNetworkInfo:Landroid/net/NetworkInfo;
 
     invoke-virtual {v0}, Landroid/net/NetworkInfo;->isAvailable()Z
@@ -258,7 +234,6 @@
     .locals 1
 
     .prologue
-    .line 239
     iget-object v0, p0, Landroid/net/wifi/WifiP2pStateTracker;->mDefaultRouteSet:Ljava/util/concurrent/atomic/AtomicBoolean;
 
     invoke-virtual {v0}, Ljava/util/concurrent/atomic/AtomicBoolean;->get()Z
@@ -272,7 +247,6 @@
     .locals 1
 
     .prologue
-    .line 201
     iget-object v0, p0, Landroid/net/wifi/WifiP2pStateTracker;->mPrivateDnsRouteSet:Ljava/util/concurrent/atomic/AtomicBoolean;
 
     invoke-virtual {v0}, Ljava/util/concurrent/atomic/AtomicBoolean;->get()Z
@@ -286,7 +260,6 @@
     .locals 1
 
     .prologue
-    .line 82
     iget-object v0, p0, Landroid/net/wifi/WifiP2pStateTracker;->mTeardownRequested:Ljava/util/concurrent/atomic/AtomicBoolean;
 
     invoke-virtual {v0}, Ljava/util/concurrent/atomic/AtomicBoolean;->get()Z
@@ -301,12 +274,10 @@
     .param p1, "enabled"    # Z
 
     .prologue
-    .line 208
     iget-object v0, p0, Landroid/net/wifi/WifiP2pStateTracker;->mPrivateDnsRouteSet:Ljava/util/concurrent/atomic/AtomicBoolean;
 
     invoke-virtual {v0, p1}, Ljava/util/concurrent/atomic/AtomicBoolean;->set(Z)V
 
-    .line 209
     return-void
 .end method
 
@@ -314,14 +285,12 @@
     .locals 2
 
     .prologue
-    .line 127
     iget-object v0, p0, Landroid/net/wifi/WifiP2pStateTracker;->mTeardownRequested:Ljava/util/concurrent/atomic/AtomicBoolean;
 
     const/4 v1, 0x0
 
     invoke-virtual {v0, v1}, Ljava/util/concurrent/atomic/AtomicBoolean;->set(Z)V
 
-    .line 129
     const/4 v0, 0x1
 
     return v0
@@ -332,7 +301,6 @@
     .param p1, "usingNetworkType"    # I
 
     .prologue
-    .line 138
     const/4 v0, 0x0
 
     return v0
@@ -343,12 +311,10 @@
     .param p1, "link"    # Landroid/net/LinkProperties;
 
     .prologue
-    .line 298
     iget-object v0, p0, Landroid/net/wifi/WifiP2pStateTracker;->mLinkProperties:Landroid/net/LinkProperties;
 
     invoke-virtual {v0, p1}, Landroid/net/LinkProperties;->removeStackedLink(Landroid/net/LinkProperties;)Z
 
-    .line 299
     return-void
 .end method
 
@@ -357,7 +323,6 @@
     .param p1, "met"    # Z
 
     .prologue
-    .line 289
     return-void
 .end method
 
@@ -366,7 +331,6 @@
     .param p1, "enabled"    # Z
 
     .prologue
-    .line 184
     const-string v0, "WifiP2pStateTracker"
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -395,7 +359,6 @@
 
     invoke-static {v0, v1}, Landroid/util/Slog;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 185
     return-void
 .end method
 
@@ -404,7 +367,6 @@
     .param p1, "enabled"    # Z
 
     .prologue
-    .line 194
     return-void
 .end method
 
@@ -413,7 +375,6 @@
     .param p1, "turnOn"    # Z
 
     .prologue
-    .line 155
     const/4 v0, 0x1
 
     return v0
@@ -424,12 +385,10 @@
     .param p1, "isRequested"    # Z
 
     .prologue
-    .line 78
     iget-object v0, p0, Landroid/net/wifi/WifiP2pStateTracker;->mTeardownRequested:Ljava/util/concurrent/atomic/AtomicBoolean;
 
     invoke-virtual {v0, p1}, Ljava/util/concurrent/atomic/AtomicBoolean;->set(Z)V
 
-    .line 79
     return-void
 .end method
 
@@ -438,7 +397,6 @@
     .param p1, "enabled"    # Z
 
     .prologue
-    .line 173
     const-string v0, "WifiP2pStateTracker"
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -467,7 +425,6 @@
 
     invoke-static {v0, v1}, Landroid/util/Slog;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 174
     return-void
 .end method
 
@@ -477,7 +434,6 @@
     .param p2, "simSlot"    # I
 
     .prologue
-    .line 179
     return-void
 .end method
 
@@ -486,7 +442,6 @@
     .param p1, "enabled"    # Z
 
     .prologue
-    .line 190
     return-void
 .end method
 
@@ -496,29 +451,23 @@
     .param p2, "target"    # Landroid/os/Handler;
 
     .prologue
-    .line 89
     iput-object p2, p0, Landroid/net/wifi/WifiP2pStateTracker;->mCsHandler:Landroid/os/Handler;
 
-    .line 90
     iput-object p1, p0, Landroid/net/wifi/WifiP2pStateTracker;->mContext:Landroid/content/Context;
 
-    .line 93
     new-instance v0, Landroid/content/IntentFilter;
 
     invoke-direct {v0}, Landroid/content/IntentFilter;-><init>()V
 
-    .line 95
     .local v0, "filter":Landroid/content/IntentFilter;
     const-string v1, "android.net.wifi.LINK_CONFIGURATION_CHANGED"
 
     invoke-virtual {v0, v1}, Landroid/content/IntentFilter;->addAction(Ljava/lang/String;)V
 
-    .line 96
     const-string v1, "android.net.wifi.p2p.CONNECTION_STATE_CHANGE"
 
     invoke-virtual {v0, v1}, Landroid/content/IntentFilter;->addAction(Ljava/lang/String;)V
 
-    .line 98
     new-instance v1, Landroid/net/wifi/WifiP2pStateTracker$WifiP2pStateReceiver;
 
     const/4 v2, 0x0
@@ -527,14 +476,12 @@
 
     iput-object v1, p0, Landroid/net/wifi/WifiP2pStateTracker;->mWifiP2pStateReceiver:Landroid/content/BroadcastReceiver;
 
-    .line 99
     iget-object v1, p0, Landroid/net/wifi/WifiP2pStateTracker;->mContext:Landroid/content/Context;
 
     iget-object v2, p0, Landroid/net/wifi/WifiP2pStateTracker;->mWifiP2pStateReceiver:Landroid/content/BroadcastReceiver;
 
     invoke-virtual {v1, v2, v0}, Landroid/content/Context;->registerReceiver(Landroid/content/BroadcastReceiver;Landroid/content/IntentFilter;)Landroid/content/Intent;
 
-    .line 100
     return-void
 .end method
 
@@ -543,12 +490,10 @@
     .param p1, "s"    # Landroid/net/SamplingDataTracker$SamplingSnapshot;
 
     .prologue
-    .line 313
     iget-object v0, p0, Landroid/net/wifi/WifiP2pStateTracker;->mSamplingDataTracker:Landroid/net/SamplingDataTracker;
 
     invoke-virtual {v0, p1}, Landroid/net/SamplingDataTracker;->startSampling(Landroid/net/SamplingDataTracker$SamplingSnapshot;)V
 
-    .line 314
     return-void
 .end method
 
@@ -557,12 +502,10 @@
     .param p1, "s"    # Landroid/net/SamplingDataTracker$SamplingSnapshot;
 
     .prologue
-    .line 318
     iget-object v0, p0, Landroid/net/wifi/WifiP2pStateTracker;->mSamplingDataTracker:Landroid/net/SamplingDataTracker;
 
     invoke-virtual {v0, p1}, Landroid/net/SamplingDataTracker;->stopSampling(Landroid/net/SamplingDataTracker$SamplingSnapshot;)V
 
-    .line 319
     return-void
 .end method
 
@@ -571,7 +514,6 @@
     .param p1, "messenger"    # Landroid/os/Messenger;
 
     .prologue
-    .line 304
     return-void
 .end method
 
@@ -581,7 +523,6 @@
     .param p2, "phoneIndex"    # I
 
     .prologue
-    .line 309
     return-void
 .end method
 
@@ -591,12 +532,10 @@
     .prologue
     const/4 v1, 0x1
 
-    .line 107
     iget-object v0, p0, Landroid/net/wifi/WifiP2pStateTracker;->mTeardownRequested:Ljava/util/concurrent/atomic/AtomicBoolean;
 
     invoke-virtual {v0, v1}, Ljava/util/concurrent/atomic/AtomicBoolean;->set(Z)V
 
-    .line 109
     return v1
 .end method
 
@@ -605,7 +544,6 @@
     .param p1, "usingNetworkType"    # I
 
     .prologue
-    .line 119
     const/4 v0, 0x0
 
     return v0

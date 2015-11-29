@@ -98,8 +98,7 @@
 
     const/4 v1, 0x0
 
-    .line 79
-    const-string/jumbo v2, "ro.debuggable"
+    const-string v2, "ro.debuggable"
 
     invoke-static {v2, v1}, Landroid/os/SystemProperties;->getInt(Ljava/lang/String;I)I
 
@@ -126,64 +125,52 @@
     .param p4, "looper"    # Landroid/os/Looper;
 
     .prologue
-    .line 116
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 325
     new-instance v0, Lcom/android/server/enterprise/billing/EnterpriseConnectivity$1;
 
     invoke-direct {v0, p0}, Lcom/android/server/enterprise/billing/EnterpriseConnectivity$1;-><init>(Lcom/android/server/enterprise/billing/EnterpriseConnectivity;)V
 
     iput-object v0, p0, Lcom/android/server/enterprise/billing/EnterpriseConnectivity;->mPhoneStateListener:Landroid/telephony/PhoneStateListener;
 
-    .line 339
     new-instance v0, Lcom/android/server/enterprise/billing/EnterpriseConnectivity$2;
 
     invoke-direct {v0, p0}, Lcom/android/server/enterprise/billing/EnterpriseConnectivity$2;-><init>(Lcom/android/server/enterprise/billing/EnterpriseConnectivity;)V
 
     iput-object v0, p0, Lcom/android/server/enterprise/billing/EnterpriseConnectivity;->mNotiDismissedReceiver:Landroid/content/BroadcastReceiver;
 
-    .line 350
     new-instance v0, Lcom/android/server/enterprise/billing/EnterpriseConnectivity$3;
 
     invoke-direct {v0, p0}, Lcom/android/server/enterprise/billing/EnterpriseConnectivity$3;-><init>(Lcom/android/server/enterprise/billing/EnterpriseConnectivity;)V
 
     iput-object v0, p0, Lcom/android/server/enterprise/billing/EnterpriseConnectivity;->mLocaleChangedReceiver:Landroid/content/BroadcastReceiver;
 
-    .line 364
     new-instance v0, Lcom/android/server/enterprise/billing/EnterpriseConnectivity$4;
 
     invoke-direct {v0, p0}, Lcom/android/server/enterprise/billing/EnterpriseConnectivity$4;-><init>(Lcom/android/server/enterprise/billing/EnterpriseConnectivity;)V
 
     iput-object v0, p0, Lcom/android/server/enterprise/billing/EnterpriseConnectivity;->mDataStateReceiver:Landroid/content/BroadcastReceiver;
 
-    .line 384
     new-instance v0, Lcom/android/server/enterprise/billing/EnterpriseConnectivity$5;
 
     invoke-direct {v0, p0}, Lcom/android/server/enterprise/billing/EnterpriseConnectivity$5;-><init>(Lcom/android/server/enterprise/billing/EnterpriseConnectivity;)V
 
     iput-object v0, p0, Lcom/android/server/enterprise/billing/EnterpriseConnectivity;->mDatabaseChangedReceiver:Landroid/content/BroadcastReceiver;
 
-    .line 429
     new-instance v0, Lcom/android/server/enterprise/billing/EnterpriseConnectivity$6;
 
     invoke-direct {v0, p0}, Lcom/android/server/enterprise/billing/EnterpriseConnectivity$6;-><init>(Lcom/android/server/enterprise/billing/EnterpriseConnectivity;)V
 
     iput-object v0, p0, Lcom/android/server/enterprise/billing/EnterpriseConnectivity;->mUserChangedReceiver:Landroid/content/BroadcastReceiver;
 
-    .line 117
     iput-object p1, p0, Lcom/android/server/enterprise/billing/EnterpriseConnectivity;->mContext:Landroid/content/Context;
 
-    .line 118
     iput-object p2, p0, Lcom/android/server/enterprise/billing/EnterpriseConnectivity;->mNMSvc:Landroid/os/INetworkManagementService;
 
-    .line 119
     iput-object p3, p0, Lcom/android/server/enterprise/billing/EnterpriseConnectivity;->mConnSvc:Landroid/net/IConnectivityManager;
 
-    .line 120
     iput-object p4, p0, Lcom/android/server/enterprise/billing/EnterpriseConnectivity;->mLooper:Landroid/os/Looper;
 
-    .line 122
     invoke-static {}, Lcom/android/server/IoThread;->get()Lcom/android/server/IoThread;
 
     move-result-object v0
@@ -194,7 +181,6 @@
 
     iput-object v0, p0, Lcom/android/server/enterprise/billing/EnterpriseConnectivity;->mLooper:Landroid/os/Looper;
 
-    .line 124
     iget-object v0, p0, Lcom/android/server/enterprise/billing/EnterpriseConnectivity;->mContext:Landroid/content/Context;
 
     invoke-static {v0}, Lcom/android/server/enterprise/billing/EnterpriseBillingEngine;->getInstance(Landroid/content/Context;)Lcom/android/server/enterprise/billing/EnterpriseBillingEngine;
@@ -203,17 +189,15 @@
 
     iput-object v0, p0, Lcom/android/server/enterprise/billing/EnterpriseConnectivity;->mEntProvider:Lcom/android/server/enterprise/billing/EnterpriseBillingEngine;
 
-    .line 125
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
     iput-object v0, p0, Lcom/android/server/enterprise/billing/EnterpriseConnectivity;->mConnections:Ljava/util/ArrayList;
 
-    .line 126
     iget-object v0, p0, Lcom/android/server/enterprise/billing/EnterpriseConnectivity;->mContext:Landroid/content/Context;
 
-    const-string/jumbo v1, "phone"
+    const-string v1, "phone"
 
     invoke-virtual {v0, v1}, Landroid/content/Context;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
 
@@ -223,7 +207,6 @@
 
     iput-object v0, p0, Lcom/android/server/enterprise/billing/EnterpriseConnectivity;->mTelephonyManager:Landroid/telephony/TelephonyManager;
 
-    .line 128
     iget-object v0, p0, Lcom/android/server/enterprise/billing/EnterpriseConnectivity;->mTelephonyManager:Landroid/telephony/TelephonyManager;
 
     iget-object v1, p0, Lcom/android/server/enterprise/billing/EnterpriseConnectivity;->mPhoneStateListener:Landroid/telephony/PhoneStateListener;
@@ -232,7 +215,6 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/telephony/TelephonyManager;->listen(Landroid/telephony/PhoneStateListener;I)V
 
-    .line 130
     iget-object v0, p0, Lcom/android/server/enterprise/billing/EnterpriseConnectivity;->mContext:Landroid/content/Context;
 
     iget-object v1, p0, Lcom/android/server/enterprise/billing/EnterpriseConnectivity;->mDatabaseChangedReceiver:Landroid/content/BroadcastReceiver;
@@ -245,7 +227,6 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/content/Context;->registerReceiver(Landroid/content/BroadcastReceiver;Landroid/content/IntentFilter;)Landroid/content/Intent;
 
-    .line 131
     iget-object v0, p0, Lcom/android/server/enterprise/billing/EnterpriseConnectivity;->mContext:Landroid/content/Context;
 
     iget-object v1, p0, Lcom/android/server/enterprise/billing/EnterpriseConnectivity;->mDatabaseChangedReceiver:Landroid/content/BroadcastReceiver;
@@ -258,7 +239,6 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/content/Context;->registerReceiver(Landroid/content/BroadcastReceiver;Landroid/content/IntentFilter;)Landroid/content/Intent;
 
-    .line 133
     iget-object v0, p0, Lcom/android/server/enterprise/billing/EnterpriseConnectivity;->mContext:Landroid/content/Context;
 
     iget-object v1, p0, Lcom/android/server/enterprise/billing/EnterpriseConnectivity;->mDatabaseChangedReceiver:Landroid/content/BroadcastReceiver;
@@ -271,7 +251,6 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/content/Context;->registerReceiver(Landroid/content/BroadcastReceiver;Landroid/content/IntentFilter;)Landroid/content/Intent;
 
-    .line 135
     iget-object v0, p0, Lcom/android/server/enterprise/billing/EnterpriseConnectivity;->mContext:Landroid/content/Context;
 
     iget-object v1, p0, Lcom/android/server/enterprise/billing/EnterpriseConnectivity;->mDatabaseChangedReceiver:Landroid/content/BroadcastReceiver;
@@ -284,20 +263,18 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/content/Context;->registerReceiver(Landroid/content/BroadcastReceiver;Landroid/content/IntentFilter;)Landroid/content/Intent;
 
-    .line 136
     iget-object v0, p0, Lcom/android/server/enterprise/billing/EnterpriseConnectivity;->mContext:Landroid/content/Context;
 
     iget-object v1, p0, Lcom/android/server/enterprise/billing/EnterpriseConnectivity;->mDatabaseChangedReceiver:Landroid/content/BroadcastReceiver;
 
     new-instance v2, Landroid/content/IntentFilter;
 
-    const-string/jumbo v3, "settings_data_fallback_enabled"
+    const-string v3, "settings_data_fallback_enabled"
 
     invoke-direct {v2, v3}, Landroid/content/IntentFilter;-><init>(Ljava/lang/String;)V
 
     invoke-virtual {v0, v1, v2}, Landroid/content/Context;->registerReceiver(Landroid/content/BroadcastReceiver;Landroid/content/IntentFilter;)Landroid/content/Intent;
 
-    .line 137
     iget-object v0, p0, Lcom/android/server/enterprise/billing/EnterpriseConnectivity;->mContext:Landroid/content/Context;
 
     iget-object v1, p0, Lcom/android/server/enterprise/billing/EnterpriseConnectivity;->mDatabaseChangedReceiver:Landroid/content/BroadcastReceiver;
@@ -310,7 +287,6 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/content/Context;->registerReceiver(Landroid/content/BroadcastReceiver;Landroid/content/IntentFilter;)Landroid/content/Intent;
 
-    .line 140
     iget-object v0, p0, Lcom/android/server/enterprise/billing/EnterpriseConnectivity;->mContext:Landroid/content/Context;
 
     iget-object v1, p0, Lcom/android/server/enterprise/billing/EnterpriseConnectivity;->mDataStateReceiver:Landroid/content/BroadcastReceiver;
@@ -323,7 +299,6 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/content/Context;->registerReceiver(Landroid/content/BroadcastReceiver;Landroid/content/IntentFilter;)Landroid/content/Intent;
 
-    .line 141
     iget-object v0, p0, Lcom/android/server/enterprise/billing/EnterpriseConnectivity;->mContext:Landroid/content/Context;
 
     iget-object v1, p0, Lcom/android/server/enterprise/billing/EnterpriseConnectivity;->mUserChangedReceiver:Landroid/content/BroadcastReceiver;
@@ -336,7 +311,6 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/content/Context;->registerReceiver(Landroid/content/BroadcastReceiver;Landroid/content/IntentFilter;)Landroid/content/Intent;
 
-    .line 142
     iget-object v0, p0, Lcom/android/server/enterprise/billing/EnterpriseConnectivity;->mContext:Landroid/content/Context;
 
     iget-object v1, p0, Lcom/android/server/enterprise/billing/EnterpriseConnectivity;->mLocaleChangedReceiver:Landroid/content/BroadcastReceiver;
@@ -349,7 +323,6 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/content/Context;->registerReceiver(Landroid/content/BroadcastReceiver;Landroid/content/IntentFilter;)Landroid/content/Intent;
 
-    .line 143
     iget-object v0, p0, Lcom/android/server/enterprise/billing/EnterpriseConnectivity;->mContext:Landroid/content/Context;
 
     iget-object v1, p0, Lcom/android/server/enterprise/billing/EnterpriseConnectivity;->mNotiDismissedReceiver:Landroid/content/BroadcastReceiver;
@@ -362,7 +335,6 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/content/Context;->registerReceiver(Landroid/content/BroadcastReceiver;Landroid/content/IntentFilter;)Landroid/content/Intent;
 
-    .line 144
     return-void
 .end method
 
@@ -371,7 +343,6 @@
     .param p0, "x0"    # Ljava/lang/String;
 
     .prologue
-    .line 75
     invoke-static {p0}, Lcom/android/server/enterprise/billing/EnterpriseConnectivity;->slogv(Ljava/lang/String;)V
 
     return-void
@@ -382,7 +353,6 @@
     .param p0, "x0"    # Lcom/android/server/enterprise/billing/EnterpriseConnectivity;
 
     .prologue
-    .line 75
     iget-object v0, p0, Lcom/android/server/enterprise/billing/EnterpriseConnectivity;->mLooper:Landroid/os/Looper;
 
     return-object v0
@@ -394,7 +364,6 @@
     .param p1, "x1"    # Landroid/os/Looper;
 
     .prologue
-    .line 75
     iput-object p1, p0, Lcom/android/server/enterprise/billing/EnterpriseConnectivity;->mLooper:Landroid/os/Looper;
 
     return-object p1
@@ -406,7 +375,6 @@
     .param p1, "x1"    # Ljava/lang/String;
 
     .prologue
-    .line 75
     invoke-direct {p0, p1}, Lcom/android/server/enterprise/billing/EnterpriseConnectivity;->connectivityType(Ljava/lang/String;)I
 
     move-result v0
@@ -418,7 +386,6 @@
     .locals 1
 
     .prologue
-    .line 75
     sget-boolean v0, Lcom/android/server/enterprise/billing/EnterpriseConnectivity;->VDBG:Z
 
     return v0
@@ -429,7 +396,6 @@
     .param p0, "x0"    # Lcom/android/server/enterprise/billing/EnterpriseConnectivity;
 
     .prologue
-    .line 75
     iget-object v0, p0, Lcom/android/server/enterprise/billing/EnterpriseConnectivity;->mContext:Landroid/content/Context;
 
     return-object v0
@@ -440,7 +406,6 @@
     .param p0, "x0"    # Lcom/android/server/enterprise/billing/EnterpriseConnectivity;
 
     .prologue
-    .line 75
     iget-object v0, p0, Lcom/android/server/enterprise/billing/EnterpriseConnectivity;->mNMSvc:Landroid/os/INetworkManagementService;
 
     return-object v0
@@ -451,7 +416,6 @@
     .param p0, "x0"    # Lcom/android/server/enterprise/billing/EnterpriseConnectivity;
 
     .prologue
-    .line 75
     iget-object v0, p0, Lcom/android/server/enterprise/billing/EnterpriseConnectivity;->mBufferedWriter:Ljava/io/BufferedWriter;
 
     return-object v0
@@ -463,7 +427,6 @@
     .param p1, "x1"    # Ljava/io/BufferedWriter;
 
     .prologue
-    .line 75
     iput-object p1, p0, Lcom/android/server/enterprise/billing/EnterpriseConnectivity;->mBufferedWriter:Ljava/io/BufferedWriter;
 
     return-object p1
@@ -474,7 +437,6 @@
     .param p0, "x0"    # Lcom/android/server/enterprise/billing/EnterpriseConnectivity;
 
     .prologue
-    .line 75
     iget-object v0, p0, Lcom/android/server/enterprise/billing/EnterpriseConnectivity;->mFile:Ljava/io/File;
 
     return-object v0
@@ -486,7 +448,6 @@
     .param p1, "x1"    # Ljava/io/File;
 
     .prologue
-    .line 75
     iput-object p1, p0, Lcom/android/server/enterprise/billing/EnterpriseConnectivity;->mFile:Ljava/io/File;
 
     return-object p1
@@ -497,7 +458,6 @@
     .param p0, "x0"    # Lcom/android/server/enterprise/billing/EnterpriseConnectivity;
 
     .prologue
-    .line 75
     iget-object v0, p0, Lcom/android/server/enterprise/billing/EnterpriseConnectivity;->mEntProvider:Lcom/android/server/enterprise/billing/EnterpriseBillingEngine;
 
     return-object v0
@@ -508,7 +468,6 @@
     .param p0, "x0"    # Lcom/android/server/enterprise/billing/EnterpriseConnectivity;
 
     .prologue
-    .line 75
     iget-object v0, p0, Lcom/android/server/enterprise/billing/EnterpriseConnectivity;->mConnections:Ljava/util/ArrayList;
 
     return-object v0
@@ -519,7 +478,6 @@
     .param p0, "x0"    # Ljava/lang/String;
 
     .prologue
-    .line 75
     invoke-static {p0}, Lcom/android/server/enterprise/billing/EnterpriseConnectivity;->slogd(Ljava/lang/String;)V
 
     return-void
@@ -530,7 +488,6 @@
     .param p0, "x0"    # Lcom/android/server/enterprise/billing/EnterpriseConnectivity;
 
     .prologue
-    .line 75
     iget-object v0, p0, Lcom/android/server/enterprise/billing/EnterpriseConnectivity;->mConnSvc:Landroid/net/IConnectivityManager;
 
     return-object v0
@@ -541,7 +498,6 @@
     .param p0, "x0"    # Ljava/lang/String;
 
     .prologue
-    .line 75
     invoke-static {p0}, Lcom/android/server/enterprise/billing/EnterpriseConnectivity;->sloge(Ljava/lang/String;)V
 
     return-void
@@ -552,10 +508,8 @@
     .param p1, "apn"    # Ljava/lang/String;
 
     .prologue
-    .line 489
     if-eqz p1, :cond_1
 
-    .line 490
     const-string v0, "ent1"
 
     invoke-virtual {p1, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
@@ -564,14 +518,11 @@
 
     if-eqz v0, :cond_0
 
-    .line 491
     const/16 v0, 0x1c
 
-    .line 497
     :goto_0
     return v0
 
-    .line 493
     :cond_0
     const-string v0, "ent2"
 
@@ -581,12 +532,10 @@
 
     if-eqz v0, :cond_1
 
-    .line 494
     const/16 v0, 0x1d
 
     goto :goto_0
 
-    .line 497
     :cond_1
     const/4 v0, -0x1
 
@@ -598,10 +547,8 @@
     .param p1, "apn"    # Ljava/lang/String;
 
     .prologue
-    .line 477
     if-eqz p1, :cond_1
 
-    .line 478
     const-string v0, "ent1"
 
     invoke-virtual {p1, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
@@ -610,14 +557,11 @@
 
     if-eqz v0, :cond_0
 
-    .line 479
     const-string v0, "enableENT1"
 
-    .line 485
     :goto_0
     return-object v0
 
-    .line 481
     :cond_0
     const-string v0, "ent2"
 
@@ -627,12 +571,10 @@
 
     if-eqz v0, :cond_1
 
-    .line 482
     const-string v0, "enableENT2"
 
     goto :goto_0
 
-    .line 485
     :cond_1
     const/4 v0, 0x0
 
@@ -649,15 +591,12 @@
 
     const/4 v2, 0x1
 
-    .line 178
     packed-switch p1, :pswitch_data_0
 
-    .line 196
     :goto_0
     :pswitch_0
     return v2
 
-    .line 186
     :pswitch_1
     if-eqz p2, :cond_1
 
@@ -694,14 +633,11 @@
     :pswitch_2
     move v2, v1
 
-    .line 191
     goto :goto_0
 
-    .line 193
     :catch_0
     move-exception v0
 
-    .line 194
     .local v0, "e":Ljava/lang/Exception;
     new-instance v1, Ljava/lang/StringBuilder;
 
@@ -725,7 +661,6 @@
 
     goto :goto_0
 
-    .line 178
     nop
 
     :pswitch_data_0
@@ -745,7 +680,6 @@
     .locals 3
 
     .prologue
-    .line 467
     iget-object v2, p0, Lcom/android/server/enterprise/billing/EnterpriseConnectivity;->mConnections:Ljava/util/ArrayList;
 
     invoke-virtual {v2}, Ljava/util/ArrayList;->iterator()Ljava/util/Iterator;
@@ -766,7 +700,6 @@
 
     check-cast v0, Lcom/android/server/enterprise/billing/EnterpriseConnectivity$Connection;
 
-    .line 468
     .local v0, "c":Lcom/android/server/enterprise/billing/EnterpriseConnectivity$Connection;
     invoke-virtual {v0}, Lcom/android/server/enterprise/billing/EnterpriseConnectivity$Connection;->isConnected()Z
 
@@ -774,10 +707,8 @@
 
     if-eqz v2, :cond_0
 
-    .line 470
     const/4 v2, 0x1
 
-    .line 473
     .end local v0    # "c":Lcom/android/server/enterprise/billing/EnterpriseConnectivity$Connection;
     :goto_0
     return v2
@@ -795,12 +726,10 @@
     .prologue
     const/4 v0, 0x1
 
-    .line 455
     if-eq p1, v0, :cond_0
 
     if-nez p1, :cond_1
 
-    .line 459
     :cond_0
     :goto_0
     return v0
@@ -816,12 +745,10 @@
     .param p0, "str"    # Ljava/lang/String;
 
     .prologue
-    .line 502
     const-string v0, "EntConnectivity"
 
     invoke-static {v0, p0}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 504
     return-void
 .end method
 
@@ -830,12 +757,10 @@
     .param p0, "str"    # Ljava/lang/String;
 
     .prologue
-    .line 513
     const-string v0, "EntConnectivity"
 
     invoke-static {v0, p0}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 514
     return-void
 .end method
 
@@ -844,17 +769,14 @@
     .param p0, "str"    # Ljava/lang/String;
 
     .prologue
-    .line 507
     sget-boolean v0, Lcom/android/server/enterprise/billing/EnterpriseConnectivity;->VDBG:Z
 
     if-eqz v0, :cond_0
 
-    .line 508
     const-string v0, "EntConnectivity"
 
     invoke-static {v0, p0}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 510
     :cond_0
     return-void
 .end method
@@ -866,10 +788,8 @@
     .param p1, "apn"    # Ljava/lang/String;
 
     .prologue
-    .line 294
     const/4 v0, -0x1
 
-    .line 296
     .local v0, "activeType":I
     :try_start_0
     iget-object v5, p0, Lcom/android/server/enterprise/billing/EnterpriseConnectivity;->mConnSvc:Landroid/net/IConnectivityManager;
@@ -878,18 +798,15 @@
 
     move-result-object v4
 
-    .line 297
     .local v4, "info":Landroid/net/NetworkInfo;
     if-eqz v4, :cond_0
 
-    .line 298
     invoke-virtual {v4}, Landroid/net/NetworkInfo;->getType()I
     :try_end_0
     .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
 
     move-result v0
 
-    .line 303
     .end local v4    # "info":Landroid/net/NetworkInfo;
     :cond_0
     :goto_0
@@ -913,7 +830,6 @@
 
     check-cast v1, Lcom/android/server/enterprise/billing/EnterpriseConnectivity$Connection;
 
-    .line 304
     .local v1, "c":Lcom/android/server/enterprise/billing/EnterpriseConnectivity$Connection;
     invoke-virtual {v1}, Lcom/android/server/enterprise/billing/EnterpriseConnectivity$Connection;->getApn()Ljava/lang/String;
 
@@ -925,7 +841,6 @@
 
     if-eqz v5, :cond_1
 
-    .line 305
     # invokes: Lcom/android/server/enterprise/billing/EnterpriseConnectivity$Connection;->isAllowed()Z
     invoke-static {v1}, Lcom/android/server/enterprise/billing/EnterpriseConnectivity$Connection;->access$400(Lcom/android/server/enterprise/billing/EnterpriseConnectivity$Connection;)Z
 
@@ -937,19 +852,16 @@
 
     move-result v0
 
-    .line 308
     .end local v0    # "activeType":I
     .end local v1    # "c":Lcom/android/server/enterprise/billing/EnterpriseConnectivity$Connection;
     :cond_2
     return v0
 
-    .line 300
     .end local v3    # "i$":Ljava/util/Iterator;
     .restart local v0    # "activeType":I
     :catch_0
     move-exception v2
 
-    .line 301
     .local v2, "e":Landroid/os/RemoteException;
     new-instance v5, Ljava/lang/StringBuilder;
 
@@ -980,7 +892,6 @@
     .param p2, "def"    # I
 
     .prologue
-    .line 163
     iget-object v2, p0, Lcom/android/server/enterprise/billing/EnterpriseConnectivity;->mConnections:Ljava/util/ArrayList;
 
     invoke-virtual {v2}, Ljava/util/ArrayList;->iterator()Ljava/util/Iterator;
@@ -1001,7 +912,6 @@
 
     check-cast v0, Lcom/android/server/enterprise/billing/EnterpriseConnectivity$Connection;
 
-    .line 164
     .local v0, "c":Lcom/android/server/enterprise/billing/EnterpriseConnectivity$Connection;
     # invokes: Lcom/android/server/enterprise/billing/EnterpriseConnectivity$Connection;->contains(I)Z
     invoke-static {v0, p1}, Lcom/android/server/enterprise/billing/EnterpriseConnectivity$Connection;->access$000(Lcom/android/server/enterprise/billing/EnterpriseConnectivity$Connection;I)Z
@@ -1010,7 +920,6 @@
 
     if-eqz v2, :cond_0
 
-    .line 165
     invoke-virtual {v0}, Lcom/android/server/enterprise/billing/EnterpriseConnectivity$Connection;->isDisconnected()Z
 
     move-result v2
@@ -1044,14 +953,12 @@
 
     if-eqz v2, :cond_3
 
-    .line 173
     .end local v0    # "c":Lcom/android/server/enterprise/billing/EnterpriseConnectivity$Connection;
     .end local p2    # "def":I
     :cond_2
     :goto_0
     return p2
 
-    .line 169
     .restart local v0    # "c":Lcom/android/server/enterprise/billing/EnterpriseConnectivity$Connection;
     .restart local p2    # "def":I
     :cond_3
@@ -1069,14 +976,11 @@
     .prologue
     const/4 v4, 0x0
 
-    .line 226
     if-nez p1, :cond_1
 
-    .line 241
     :cond_0
     return-object v4
 
-    .line 229
     :cond_1
     iget-object v6, p0, Lcom/android/server/enterprise/billing/EnterpriseConnectivity;->mConnections:Ljava/util/ArrayList;
 
@@ -1098,7 +1002,6 @@
 
     check-cast v0, Lcom/android/server/enterprise/billing/EnterpriseConnectivity$Connection;
 
-    .line 230
     .local v0, "c":Lcom/android/server/enterprise/billing/EnterpriseConnectivity$Connection;
     invoke-virtual {v0}, Lcom/android/server/enterprise/billing/EnterpriseConnectivity$Connection;->getApn()Ljava/lang/String;
 
@@ -1110,14 +1013,12 @@
 
     if-eqz v6, :cond_2
 
-    .line 231
     const/4 v6, 0x0
 
     invoke-virtual {v0, v6}, Lcom/android/server/enterprise/billing/EnterpriseConnectivity$Connection;->getUidsFromDb(Z)Ljava/util/Collection;
 
     move-result-object v5
 
-    .line 232
     .local v5, "uids":Ljava/util/Collection;, "Ljava/util/Collection<Ljava/lang/Integer;>;"
     invoke-interface {v5}, Ljava/util/Collection;->size()I
 
@@ -1125,11 +1026,9 @@
 
     new-array v4, v6, [I
 
-    .line 233
     .local v4, "uidArr":[I
     const/4 v2, 0x0
 
-    .line 234
     .local v2, "index":I
     invoke-interface {v5}, Ljava/util/Collection;->iterator()Ljava/util/Iterator;
 
@@ -1152,14 +1051,11 @@
 
     move-result v3
 
-    .line 235
     .local v3, "uid":I
     aput v3, v4, v2
 
-    .line 236
     add-int/lit8 v2, v2, 0x1
 
-    .line 237
     goto :goto_0
 .end method
 
@@ -1179,15 +1075,12 @@
     .prologue
     const/4 v2, 0x0
 
-    .line 245
     if-gez p1, :cond_1
 
-    .line 253
     :cond_0
     :goto_0
     return-object v2
 
-    .line 248
     :cond_1
     iget-object v3, p0, Lcom/android/server/enterprise/billing/EnterpriseConnectivity;->mConnections:Ljava/util/ArrayList;
 
@@ -1209,7 +1102,6 @@
 
     check-cast v0, Lcom/android/server/enterprise/billing/EnterpriseConnectivity$Connection;
 
-    .line 249
     .local v0, "c":Lcom/android/server/enterprise/billing/EnterpriseConnectivity$Connection;
     invoke-virtual {v0}, Lcom/android/server/enterprise/billing/EnterpriseConnectivity$Connection;->getConnectivityType()I
 
@@ -1217,7 +1109,6 @@
 
     if-ne p1, v3, :cond_2
 
-    .line 250
     invoke-virtual {v0}, Lcom/android/server/enterprise/billing/EnterpriseConnectivity$Connection;->getUserHandle()Ljava/util/List;
 
     move-result-object v2
@@ -1230,7 +1121,6 @@
     .param p1, "networkType"    # I
 
     .prologue
-    .line 312
     iget-object v5, p0, Lcom/android/server/enterprise/billing/EnterpriseConnectivity;->mConnections:Ljava/util/ArrayList;
 
     invoke-virtual {v5}, Ljava/util/ArrayList;->iterator()Ljava/util/Iterator;
@@ -1251,7 +1141,6 @@
 
     check-cast v0, Lcom/android/server/enterprise/billing/EnterpriseConnectivity$Connection;
 
-    .line 313
     .local v0, "c":Lcom/android/server/enterprise/billing/EnterpriseConnectivity$Connection;
     invoke-virtual {v0}, Lcom/android/server/enterprise/billing/EnterpriseConnectivity$Connection;->getConnectivityType()I
 
@@ -1259,12 +1148,10 @@
 
     if-ne v5, p1, :cond_0
 
-    .line 314
     invoke-virtual {v0}, Lcom/android/server/enterprise/billing/EnterpriseConnectivity$Connection;->getUserHandle()Ljava/util/List;
 
     move-result-object v4
 
-    .line 315
     .local v4, "users":Ljava/util/List;, "Ljava/util/List<Ljava/lang/Integer;>;"
     invoke-interface {v4}, Ljava/util/List;->size()I
 
@@ -1272,7 +1159,6 @@
 
     new-array v3, v5, [I
 
-    .line 316
     .local v3, "ret":[I
     const/4 v1, 0x0
 
@@ -1282,7 +1168,6 @@
 
     if-ge v1, v5, :cond_2
 
-    .line 317
     invoke-interface {v4, v1}, Ljava/util/List;->get(I)Ljava/lang/Object;
 
     move-result-object v5
@@ -1295,12 +1180,10 @@
 
     aput v5, v3, v1
 
-    .line 316
     add-int/lit8 v1, v1, 0x1
 
     goto :goto_0
 
-    .line 322
     .end local v0    # "c":Lcom/android/server/enterprise/billing/EnterpriseConnectivity$Connection;
     .end local v1    # "i":I
     .end local v3    # "ret":[I
@@ -1316,7 +1199,6 @@
     .locals 3
 
     .prologue
-    .line 261
     iget-object v2, p0, Lcom/android/server/enterprise/billing/EnterpriseConnectivity;->mConnections:Ljava/util/ArrayList;
 
     invoke-virtual {v2}, Ljava/util/ArrayList;->iterator()Ljava/util/Iterator;
@@ -1337,7 +1219,6 @@
 
     check-cast v0, Lcom/android/server/enterprise/billing/EnterpriseConnectivity$Connection;
 
-    .line 262
     .local v0, "c":Lcom/android/server/enterprise/billing/EnterpriseConnectivity$Connection;
     # invokes: Lcom/android/server/enterprise/billing/EnterpriseConnectivity$Connection;->isAllowed()Z
     invoke-static {v0}, Lcom/android/server/enterprise/billing/EnterpriseConnectivity$Connection;->access$400(Lcom/android/server/enterprise/billing/EnterpriseConnectivity$Connection;)Z
@@ -1346,10 +1227,8 @@
 
     if-eqz v2, :cond_0
 
-    .line 264
     const/4 v2, 0x1
 
-    .line 267
     .end local v0    # "c":Lcom/android/server/enterprise/billing/EnterpriseConnectivity$Connection;
     :goto_0
     return v2
@@ -1364,7 +1243,6 @@
     .locals 3
 
     .prologue
-    .line 275
     iget-object v2, p0, Lcom/android/server/enterprise/billing/EnterpriseConnectivity;->mConnections:Ljava/util/ArrayList;
 
     invoke-virtual {v2}, Ljava/util/ArrayList;->iterator()Ljava/util/Iterator;
@@ -1385,7 +1263,6 @@
 
     check-cast v0, Lcom/android/server/enterprise/billing/EnterpriseConnectivity$Connection;
 
-    .line 276
     .local v0, "c":Lcom/android/server/enterprise/billing/EnterpriseConnectivity$Connection;
     invoke-virtual {v0}, Lcom/android/server/enterprise/billing/EnterpriseConnectivity$Connection;->isEnabled()Z
 
@@ -1393,10 +1270,8 @@
 
     if-eqz v2, :cond_0
 
-    .line 278
     const/4 v2, 0x1
 
-    .line 281
     .end local v0    # "c":Lcom/android/server/enterprise/billing/EnterpriseConnectivity$Connection;
     :goto_0
     return v2
@@ -1414,7 +1289,6 @@
     .prologue
     const/4 v2, 0x0
 
-    .line 285
     iget-object v3, p0, Lcom/android/server/enterprise/billing/EnterpriseConnectivity;->mConnections:Ljava/util/ArrayList;
 
     invoke-virtual {v3}, Ljava/util/ArrayList;->iterator()Ljava/util/Iterator;
@@ -1435,7 +1309,6 @@
 
     check-cast v0, Lcom/android/server/enterprise/billing/EnterpriseConnectivity$Connection;
 
-    .line 286
     .local v0, "c":Lcom/android/server/enterprise/billing/EnterpriseConnectivity$Connection;
     invoke-virtual {v0}, Lcom/android/server/enterprise/billing/EnterpriseConnectivity$Connection;->getConnectivityType()I
 
@@ -1443,7 +1316,6 @@
 
     if-ne v3, p1, :cond_0
 
-    .line 287
     # invokes: Lcom/android/server/enterprise/billing/EnterpriseConnectivity$Connection;->isAllowed()Z
     invoke-static {v0}, Lcom/android/server/enterprise/billing/EnterpriseConnectivity$Connection;->access$400(Lcom/android/server/enterprise/billing/EnterpriseConnectivity$Connection;)Z
 
@@ -1460,7 +1332,6 @@
 
     const/4 v2, 0x1
 
-    .line 290
     .end local v0    # "c":Lcom/android/server/enterprise/billing/EnterpriseConnectivity$Connection;
     :cond_1
     return v2
@@ -1471,7 +1342,6 @@
     .param p1, "activeNetwork"    # I
 
     .prologue
-    .line 200
     iget-object v2, p0, Lcom/android/server/enterprise/billing/EnterpriseConnectivity;->mConnections:Ljava/util/ArrayList;
 
     invoke-virtual {v2}, Ljava/util/ArrayList;->iterator()Ljava/util/Iterator;
@@ -1492,13 +1362,11 @@
 
     check-cast v0, Lcom/android/server/enterprise/billing/EnterpriseConnectivity$Connection;
 
-    .line 201
     .local v0, "c":Lcom/android/server/enterprise/billing/EnterpriseConnectivity$Connection;
     invoke-virtual {v0, p1}, Lcom/android/server/enterprise/billing/EnterpriseConnectivity$Connection;->onActiveNetworkChanged(I)V
 
     goto :goto_0
 
-    .line 203
     .end local v0    # "c":Lcom/android/server/enterprise/billing/EnterpriseConnectivity$Connection;
     :cond_0
     return-void
@@ -1513,7 +1381,6 @@
     .param p5, "notification"    # I
 
     .prologue
-    .line 208
     if-eqz p1, :cond_0
 
     if-eqz p2, :cond_0
@@ -1525,12 +1392,10 @@
 
     if-eqz v1, :cond_1
 
-    .line 218
     :cond_0
     :goto_0
     return-void
 
-    .line 211
     :cond_1
     new-instance v0, Lcom/android/server/enterprise/billing/EnterpriseConnectivity$NetworkWrapper;
 
@@ -1548,7 +1413,6 @@
 
     invoke-direct/range {v0 .. v6}, Lcom/android/server/enterprise/billing/EnterpriseConnectivity$NetworkWrapper;-><init>(Lcom/android/server/enterprise/billing/EnterpriseConnectivity;Landroid/net/NetworkInfo;Landroid/net/NetworkCapabilities;Landroid/net/LinkProperties;ILcom/android/server/enterprise/billing/EnterpriseConnectivity$1;)V
 
-    .line 212
     .local v0, "networkWrapper":Lcom/android/server/enterprise/billing/EnterpriseConnectivity$NetworkWrapper;
     iget-object v1, p0, Lcom/android/server/enterprise/billing/EnterpriseConnectivity;->mConnections:Ljava/util/ArrayList;
 
@@ -1570,7 +1434,6 @@
 
     check-cast v7, Lcom/android/server/enterprise/billing/EnterpriseConnectivity$Connection;
 
-    .line 213
     .local v7, "c":Lcom/android/server/enterprise/billing/EnterpriseConnectivity$Connection;
     invoke-virtual {v7, v0}, Lcom/android/server/enterprise/billing/EnterpriseConnectivity$Connection;->onNetworkChanged(Lcom/android/server/enterprise/billing/EnterpriseConnectivity$NetworkWrapper;)V
     :try_end_0
@@ -1578,14 +1441,12 @@
 
     goto :goto_1
 
-    .line 215
     .end local v0    # "networkWrapper":Lcom/android/server/enterprise/billing/EnterpriseConnectivity$NetworkWrapper;
     .end local v7    # "c":Lcom/android/server/enterprise/billing/EnterpriseConnectivity$Connection;
     .end local v9    # "i$":Ljava/util/Iterator;
     :catch_0
     move-exception v8
 
-    .line 216
     .local v8, "e":Ljava/lang/Exception;
     new-instance v1, Ljava/lang/StringBuilder;
 
@@ -1614,7 +1475,6 @@
     .locals 6
 
     .prologue
-    .line 148
     iget-object v2, p0, Lcom/android/server/enterprise/billing/EnterpriseConnectivity;->mConnections:Ljava/util/ArrayList;
 
     new-instance v3, Lcom/android/server/enterprise/billing/EnterpriseConnectivity$Connection;
@@ -1627,7 +1487,6 @@
 
     invoke-virtual {v2, v3}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 150
     iget-object v2, p0, Lcom/android/server/enterprise/billing/EnterpriseConnectivity;->mConnections:Ljava/util/ArrayList;
 
     invoke-virtual {v2}, Ljava/util/ArrayList;->iterator()Ljava/util/Iterator;
@@ -1648,11 +1507,9 @@
 
     check-cast v0, Lcom/android/server/enterprise/billing/EnterpriseConnectivity$Connection;
 
-    .line 151
     .local v0, "c":Lcom/android/server/enterprise/billing/EnterpriseConnectivity$Connection;
     invoke-virtual {v0}, Lcom/android/server/enterprise/billing/EnterpriseConnectivity$Connection;->start()V
 
-    .line 152
     new-instance v2, Ljava/lang/StringBuilder;
 
     invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
@@ -1675,7 +1532,6 @@
 
     goto :goto_0
 
-    .line 154
     .end local v0    # "c":Lcom/android/server/enterprise/billing/EnterpriseConnectivity$Connection;
     :cond_0
     return-void

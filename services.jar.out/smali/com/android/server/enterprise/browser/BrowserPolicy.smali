@@ -48,25 +48,20 @@
     .param p1, "ctx"    # Landroid/content/Context;
 
     .prologue
-    .line 138
     invoke-direct {p0}, Landroid/app/enterprise/IBrowserPolicy$Stub;-><init>()V
 
-    .line 76
     new-instance v0, Ljava/util/HashMap;
 
     invoke-direct {v0}, Ljava/util/HashMap;-><init>()V
 
     iput-object v0, p0, Lcom/android/server/enterprise/browser/BrowserPolicy;->mCache:Ljava/util/HashMap;
 
-    .line 171
     const/4 v0, 0x0
 
     iput-object v0, p0, Lcom/android/server/enterprise/browser/BrowserPolicy;->mEDM:Landroid/app/enterprise/EnterpriseDeviceManager;
 
-    .line 139
     iput-object p1, p0, Lcom/android/server/enterprise/browser/BrowserPolicy;->mContext:Landroid/content/Context;
 
-    .line 140
     new-instance v0, Lcom/android/server/enterprise/storage/EdmStorageProvider;
 
     iget-object v1, p0, Lcom/android/server/enterprise/browser/BrowserPolicy;->mContext:Landroid/content/Context;
@@ -75,10 +70,8 @@
 
     iput-object v0, p0, Lcom/android/server/enterprise/browser/BrowserPolicy;->mEdmStorageProvider:Lcom/android/server/enterprise/storage/EdmStorageProvider;
 
-    .line 142
     invoke-virtual {p0}, Lcom/android/server/enterprise/browser/BrowserPolicy;->loadProxySettings()V
 
-    .line 143
     return-void
 .end method
 
@@ -87,7 +80,6 @@
     .param p0, "x0"    # Lcom/android/server/enterprise/browser/BrowserPolicy;
 
     .prologue
-    .line 70
     iget-object v0, p0, Lcom/android/server/enterprise/browser/BrowserPolicy;->mContext:Landroid/content/Context;
 
     return-object v0
@@ -98,7 +90,6 @@
     .param p1, "cxtInfo"    # Landroid/app/enterprise/ContextInfo;
 
     .prologue
-    .line 187
     invoke-direct {p0}, Lcom/android/server/enterprise/browser/BrowserPolicy;->getEDM()Landroid/app/enterprise/EnterpriseDeviceManager;
 
     move-result-object v0
@@ -109,12 +100,10 @@
 
     move-result-object p1
 
-    .line 189
     iget v0, p1, Landroid/app/enterprise/ContextInfo;->mContainerId:I
 
     invoke-static {v0}, Lcom/sec/enterprise/knox/EnterpriseContainerManager;->enforceContainerPermission(I)I
 
-    .line 190
     return-object p1
 .end method
 
@@ -123,7 +112,6 @@
     .param p1, "cxtInfo"    # Landroid/app/enterprise/ContextInfo;
 
     .prologue
-    .line 199
     invoke-direct {p0}, Lcom/android/server/enterprise/browser/BrowserPolicy;->getEDM()Landroid/app/enterprise/EnterpriseDeviceManager;
 
     move-result-object v0
@@ -134,12 +122,10 @@
 
     move-result-object p1
 
-    .line 201
     iget v0, p1, Landroid/app/enterprise/ContextInfo;->mContainerId:I
 
     invoke-static {v0}, Lcom/sec/enterprise/knox/EnterpriseContainerManager;->enforceContainerPermission(I)I
 
-    .line 202
     return-object p1
 .end method
 
@@ -147,12 +133,10 @@
     .locals 2
 
     .prologue
-    .line 174
     iget-object v0, p0, Lcom/android/server/enterprise/browser/BrowserPolicy;->mEDM:Landroid/app/enterprise/EnterpriseDeviceManager;
 
     if-nez v0, :cond_0
 
-    .line 175
     iget-object v0, p0, Lcom/android/server/enterprise/browser/BrowserPolicy;->mContext:Landroid/content/Context;
 
     const-string v1, "enterprise_policy"
@@ -165,7 +149,6 @@
 
     iput-object v0, p0, Lcom/android/server/enterprise/browser/BrowserPolicy;->mEDM:Landroid/app/enterprise/EnterpriseDeviceManager;
 
-    .line 178
     :cond_0
     iget-object v0, p0, Lcom/android/server/enterprise/browser/BrowserPolicy;->mEDM:Landroid/app/enterprise/EnterpriseDeviceManager;
 
@@ -180,7 +163,6 @@
     .prologue
     const/4 v6, 0x0
 
-    .line 506
     invoke-static {p0}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
 
     move-result v7
@@ -193,16 +175,13 @@
 
     if-eqz v7, :cond_1
 
-    .line 532
     :cond_0
     :goto_0
     return v6
 
-    .line 509
     :cond_1
     const/4 v5, -0x1
 
-    .line 511
     .local v5, "portVal":I
     :try_start_0
     invoke-static {p1}, Ljava/lang/Integer;->parseInt(Ljava/lang/String;)I
@@ -211,17 +190,14 @@
 
     move-result v5
 
-    .line 515
     if-lez v5, :cond_0
 
     const v7, 0xffff
 
     if-gt v5, v7, :cond_0
 
-    .line 519
     const-string v0, "a-zA-Z0-9\\_"
 
-    .line 521
     .local v0, "HC":Ljava/lang/String;
     new-instance v7, Ljava/lang/StringBuilder;
 
@@ -277,19 +253,16 @@
 
     move-result-object v2
 
-    .line 525
     .local v2, "HOSTNAME_REGEXP":Ljava/lang/String;
     invoke-static {v2}, Ljava/util/regex/Pattern;->compile(Ljava/lang/String;)Ljava/util/regex/Pattern;
 
     move-result-object v1
 
-    .line 527
     .local v1, "HOSTNAME_PATTERN":Ljava/util/regex/Pattern;
     invoke-virtual {v1, p0}, Ljava/util/regex/Pattern;->matcher(Ljava/lang/CharSequence;)Ljava/util/regex/Matcher;
 
     move-result-object v4
 
-    .line 529
     .local v4, "match":Ljava/util/regex/Matcher;
     invoke-virtual {v4}, Ljava/util/regex/Matcher;->matches()Z
 
@@ -297,12 +270,10 @@
 
     if-eqz v7, :cond_0
 
-    .line 532
     const/4 v6, 0x1
 
     goto :goto_0
 
-    .line 512
     .end local v0    # "HC":Ljava/lang/String;
     .end local v1    # "HOSTNAME_PATTERN":Ljava/util/regex/Pattern;
     .end local v2    # "HOSTNAME_REGEXP":Ljava/lang/String;
@@ -310,7 +281,6 @@
     :catch_0
     move-exception v3
 
-    .line 513
     .local v3, "ex":Ljava/lang/NumberFormatException;
     goto :goto_0
 .end method
@@ -322,29 +292,23 @@
     .param p1, "cxtInfo"    # Landroid/app/enterprise/ContextInfo;
 
     .prologue
-    .line 406
     invoke-direct {p0, p1}, Lcom/android/server/enterprise/browser/BrowserPolicy;->enforceBrowserProxyPermission(Landroid/app/enterprise/ContextInfo;)Landroid/app/enterprise/ContextInfo;
 
     move-result-object p1
 
-    .line 407
     iget v0, p1, Landroid/app/enterprise/ContextInfo;->mCallerUid:I
 
-    .line 408
     .local v0, "adminUid":I
     iget v1, p1, Landroid/app/enterprise/ContextInfo;->mContainerId:I
 
-    .line 409
     .local v1, "containerId":I
     invoke-static {v0}, Landroid/os/UserHandle;->getUserId(I)I
 
     move-result v3
 
-    .line 410
     .local v3, "userId":I
     const/4 v2, 0x0
 
-    .line 412
     .local v2, "result":Z
     iget-object v4, p0, Lcom/android/server/enterprise/browser/BrowserPolicy;->mCache:Ljava/util/HashMap;
 
@@ -408,7 +372,6 @@
 
     if-eqz v4, :cond_1
 
-    .line 414
     iget-object v4, p0, Lcom/android/server/enterprise/browser/BrowserPolicy;->mEdmStorageProvider:Lcom/android/server/enterprise/storage/EdmStorageProvider;
 
     const-string v5, "BROWSER_PROXY"
@@ -417,10 +380,8 @@
 
     move-result v2
 
-    .line 416
     if-eqz v2, :cond_1
 
-    .line 417
     iget-object v4, p0, Lcom/android/server/enterprise/browser/BrowserPolicy;->mCache:Ljava/util/HashMap;
 
     invoke-static {v3}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
@@ -445,7 +406,6 @@
 
     invoke-virtual {v4}, Lcom/android/server/enterprise/browser/BrowserPolicy$BrowserProxyCache;->clear()V
 
-    .line 419
     iget-object v4, p0, Lcom/android/server/enterprise/browser/BrowserPolicy;->mCache:Ljava/util/HashMap;
 
     invoke-static {v3}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
@@ -464,7 +424,6 @@
 
     invoke-virtual {v4, v5}, Ljava/util/HashMap;->remove(Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 421
     iget-object v4, p0, Lcom/android/server/enterprise/browser/BrowserPolicy;->mCache:Ljava/util/HashMap;
 
     invoke-static {v3}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
@@ -483,7 +442,6 @@
 
     if-eqz v4, :cond_0
 
-    .line 422
     iget-object v4, p0, Lcom/android/server/enterprise/browser/BrowserPolicy;->mCache:Ljava/util/HashMap;
 
     invoke-static {v3}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
@@ -492,7 +450,6 @@
 
     invoke-virtual {v4, v5}, Ljava/util/HashMap;->remove(Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 424
     :cond_0
     iget-object v4, p0, Lcom/android/server/enterprise/browser/BrowserPolicy;->mContext:Landroid/content/Context;
 
@@ -500,14 +457,12 @@
 
     invoke-static {v4, v5, v3}, Lcom/android/server/enterprise/content/SecContentProvider;->notifyPolicyChangesAsUser(Landroid/content/Context;Ljava/lang/String;I)V
 
-    .line 426
     const-string v4, "BrowserPolicy"
 
     const-string v5, "clearHttpProxy() : SecContentProvider updated."
 
     invoke-static {v4, v5}, Landroid/util/secutil/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 429
     :cond_1
     const-string v4, "BrowserPolicy"
 
@@ -531,7 +486,6 @@
 
     invoke-static {v4, v5}, Lcom/android/server/enterprise/log/Log;->i(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 430
     return v2
 .end method
 
@@ -543,23 +497,18 @@
     .prologue
     const/16 v9, 0x8
 
-    .line 289
     const/4 v2, 0x1
 
-    .line 290
     .local v2, "lEnabled":Z
     invoke-static {p1}, Lcom/android/server/enterprise/EnterpriseDeviceManagerService;->getCallingOrCurrentUserId(Landroid/app/enterprise/ContextInfo;)I
 
     move-result v3
 
-    .line 292
     .local v3, "userId":I
     if-ne p2, v9, :cond_0
 
-    .line 293
     const/4 v2, 0x0
 
-    .line 298
     :cond_0
     :try_start_0
     iget-object v6, p0, Lcom/android/server/enterprise/browser/BrowserPolicy;->mEdmStorageProvider:Lcom/android/server/enterprise/storage/EdmStorageProvider;
@@ -572,7 +521,6 @@
 
     move-result-object v5
 
-    .line 301
     .local v5, "values":Ljava/util/List;, "Ljava/util/List<Ljava/lang/Integer;>;"
     invoke-interface {v5}, Ljava/util/List;->isEmpty()Z
 
@@ -580,7 +528,6 @@
 
     if-nez v6, :cond_4
 
-    .line 302
     invoke-interface {v5}, Ljava/util/List;->iterator()Ljava/util/Iterator;
 
     move-result-object v1
@@ -605,22 +552,17 @@
 
     move-result v4
 
-    .line 303
     .local v4, "value":I
     if-ltz v4, :cond_1
 
-    .line 305
     if-ne p2, v9, :cond_3
 
-    .line 306
     and-int v6, v4, p2
 
     if-ne p2, v6, :cond_1
 
-    .line 307
     const/4 v2, 0x1
 
-    .line 328
     .end local v1    # "i$":Ljava/util/Iterator;
     .end local v4    # "value":I
     .end local v5    # "values":Ljava/util/List;, "Ljava/util/List<Ljava/lang/Integer;>;"
@@ -658,10 +600,8 @@
 
     invoke-static {v6, v7}, Lcom/android/server/enterprise/log/Log;->i(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 329
     return v2
 
-    .line 315
     .restart local v1    # "i$":Ljava/util/Iterator;
     .restart local v4    # "value":I
     .restart local v5    # "values":Ljava/util/List;, "Ljava/util/List<Ljava/lang/Integer;>;"
@@ -670,13 +610,10 @@
 
     if-eq p2, v6, :cond_1
 
-    .line 316
     const/4 v2, 0x0
 
-    .line 317
     goto :goto_0
 
-    .line 323
     .end local v1    # "i$":Ljava/util/Iterator;
     .end local v4    # "value":I
     :cond_4
@@ -691,12 +628,10 @@
 
     goto :goto_0
 
-    .line 325
     .end local v5    # "values":Ljava/util/List;, "Ljava/util/List<Ljava/lang/Integer;>;"
     :catch_0
     move-exception v0
 
-    .line 326
     .local v0, "ex":Ljava/lang/Exception;
     const-string v6, "BrowserPolicy"
 
@@ -712,20 +647,16 @@
     .param p1, "cxtInfo"    # Landroid/app/enterprise/ContextInfo;
 
     .prologue
-    .line 439
     invoke-static {p1}, Lcom/android/server/enterprise/EnterpriseDeviceManagerService;->getCallingOrCurrentUserId(Landroid/app/enterprise/ContextInfo;)I
 
     move-result v2
 
-    .line 440
     .local v2, "userId":I
     iget v0, p1, Landroid/app/enterprise/ContextInfo;->mContainerId:I
 
-    .line 441
     .local v0, "containerId":I
     const/4 v1, 0x0
 
-    .line 442
     .local v1, "ret":Ljava/lang/String;
     iget-object v3, p0, Lcom/android/server/enterprise/browser/BrowserPolicy;->mCache:Ljava/util/HashMap;
 
@@ -761,7 +692,6 @@
 
     if-eqz v3, :cond_0
 
-    .line 443
     iget-object v3, p0, Lcom/android/server/enterprise/browser/BrowserPolicy;->mCache:Ljava/util/HashMap;
 
     invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
@@ -789,7 +719,6 @@
 
     move-result-object v1
 
-    .line 445
     :cond_0
     const-string v3, "BrowserPolicy"
 
@@ -813,7 +742,6 @@
 
     invoke-static {v3, v4}, Landroid/util/secutil/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 446
     return-object v1
 .end method
 
@@ -823,7 +751,6 @@
     .prologue
     const/4 v12, 0x0
 
-    .line 146
     const/4 v11, 0x2
 
     new-array v3, v11, [Ljava/lang/String;
@@ -834,11 +761,10 @@
 
     const/4 v11, 0x1
 
-    const-string/jumbo v12, "proxyServer"
+    const-string v12, "proxyServer"
 
     aput-object v12, v3, v11
 
-    .line 148
     .local v3, "columns":[Ljava/lang/String;
     :try_start_0
     iget-object v11, p0, Lcom/android/server/enterprise/browser/BrowserPolicy;->mEdmStorageProvider:Lcom/android/server/enterprise/storage/EdmStorageProvider;
@@ -853,7 +779,6 @@
 
     move-result-object v9
 
-    .line 150
     .local v9, "results":Ljava/util/List;, "Ljava/util/List<Landroid/content/ContentValues;>;"
     invoke-interface {v9}, Ljava/util/List;->iterator()Ljava/util/Iterator;
 
@@ -873,15 +798,13 @@
 
     check-cast v5, Landroid/content/ContentValues;
 
-    .line 151
     .local v5, "cv":Landroid/content/ContentValues;
-    const-string/jumbo v11, "proxyServer"
+    const-string v11, "proxyServer"
 
     invoke-virtual {v5, v11}, Landroid/content/ContentValues;->getAsString(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v8
 
-    .line 152
     .local v8, "proxySetting":Ljava/lang/String;
     const-string v11, "adminUid"
 
@@ -893,25 +816,21 @@
 
     move-result-wide v0
 
-    .line 154
     .local v0, "adminLUID":J
     invoke-static {v0, v1}, Lcom/android/server/enterprise/storage/EdmStorageProvider;->getContainerIdFromLUID(J)I
 
     move-result v4
 
-    .line 155
     .local v4, "containerId":I
     invoke-static {v0, v1}, Lcom/android/server/enterprise/storage/EdmStorageProvider;->getAdminUidFromLUID(J)I
 
     move-result v2
 
-    .line 156
     .local v2, "admindUid":I
     invoke-static {v2}, Landroid/os/UserHandle;->getUserId(I)I
 
     move-result v10
 
-    .line 158
     .local v10, "userId":I
     iget-object v11, p0, Lcom/android/server/enterprise/browser/BrowserPolicy;->mCache:Ljava/util/HashMap;
 
@@ -925,7 +844,6 @@
 
     if-nez v11, :cond_0
 
-    .line 159
     iget-object v11, p0, Lcom/android/server/enterprise/browser/BrowserPolicy;->mCache:Ljava/util/HashMap;
 
     invoke-static {v10}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
@@ -938,7 +856,6 @@
 
     invoke-virtual {v11, v12, v13}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 161
     :cond_0
     iget-object v11, p0, Lcom/android/server/enterprise/browser/BrowserPolicy;->mCache:Ljava/util/HashMap;
 
@@ -962,7 +879,6 @@
 
     if-nez v11, :cond_1
 
-    .line 162
     iget-object v11, p0, Lcom/android/server/enterprise/browser/BrowserPolicy;->mCache:Ljava/util/HashMap;
 
     invoke-static {v10}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
@@ -985,7 +901,6 @@
 
     invoke-virtual {v11, v12, v13}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 164
     :cond_1
     iget-object v11, p0, Lcom/android/server/enterprise/browser/BrowserPolicy;->mCache:Ljava/util/HashMap;
 
@@ -1017,7 +932,6 @@
 
     goto/16 :goto_0
 
-    .line 166
     .end local v0    # "adminLUID":J
     .end local v2    # "admindUid":I
     .end local v4    # "containerId":I
@@ -1029,7 +943,6 @@
     :catch_0
     move-exception v6
 
-    .line 167
     .local v6, "ex":Ljava/lang/Exception;
     const-string v11, "BrowserPolicy"
 
@@ -1037,7 +950,6 @@
 
     invoke-static {v11, v12, v6}, Lcom/android/server/enterprise/log/Log;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
 
-    .line 169
     .end local v6    # "ex":Ljava/lang/Exception;
     :cond_2
     return-void
@@ -1048,7 +960,6 @@
     .param p1, "uid"    # I
 
     .prologue
-    .line 451
     return-void
 .end method
 
@@ -1059,12 +970,10 @@
     .prologue
     const/4 v3, 0x0
 
-    .line 455
     invoke-static {p1}, Landroid/os/UserHandle;->getUserId(I)I
 
     move-result v0
 
-    .line 456
     .local v0, "userId":I
     iget-object v1, p0, Lcom/android/server/enterprise/browser/BrowserPolicy;->mCache:Ljava/util/HashMap;
 
@@ -1128,7 +1037,6 @@
 
     if-eqz v1, :cond_0
 
-    .line 458
     iget-object v1, p0, Lcom/android/server/enterprise/browser/BrowserPolicy;->mCache:Ljava/util/HashMap;
 
     invoke-static {v0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
@@ -1153,7 +1061,6 @@
 
     invoke-virtual {v1}, Lcom/android/server/enterprise/browser/BrowserPolicy$BrowserProxyCache;->clear()V
 
-    .line 460
     iget-object v1, p0, Lcom/android/server/enterprise/browser/BrowserPolicy;->mCache:Ljava/util/HashMap;
 
     invoke-static {v0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
@@ -1172,7 +1079,6 @@
 
     invoke-virtual {v1, v2}, Ljava/util/HashMap;->remove(Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 462
     iget-object v1, p0, Lcom/android/server/enterprise/browser/BrowserPolicy;->mCache:Ljava/util/HashMap;
 
     invoke-static {v0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
@@ -1191,7 +1097,6 @@
 
     if-eqz v1, :cond_0
 
-    .line 463
     iget-object v1, p0, Lcom/android/server/enterprise/browser/BrowserPolicy;->mCache:Ljava/util/HashMap;
 
     invoke-static {v0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
@@ -1200,7 +1105,6 @@
 
     invoke-virtual {v1, v2}, Ljava/util/HashMap;->remove(Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 466
     :cond_0
     return-void
 .end method
@@ -1211,7 +1115,6 @@
     .param p2, "ownerUid"    # I
 
     .prologue
-    .line 478
     return-void
 .end method
 
@@ -1221,12 +1124,10 @@
     .param p2, "ownerUid"    # I
 
     .prologue
-    .line 486
     invoke-static {p2}, Landroid/os/UserHandle;->getUserId(I)I
 
     move-result v0
 
-    .line 487
     .local v0, "userId":I
     iget-object v1, p0, Lcom/android/server/enterprise/browser/BrowserPolicy;->mCache:Ljava/util/HashMap;
 
@@ -1290,7 +1191,6 @@
 
     if-eqz v1, :cond_0
 
-    .line 489
     iget-object v1, p0, Lcom/android/server/enterprise/browser/BrowserPolicy;->mCache:Ljava/util/HashMap;
 
     invoke-static {v0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
@@ -1315,7 +1215,6 @@
 
     invoke-virtual {v1}, Lcom/android/server/enterprise/browser/BrowserPolicy$BrowserProxyCache;->clear()V
 
-    .line 491
     iget-object v1, p0, Lcom/android/server/enterprise/browser/BrowserPolicy;->mCache:Ljava/util/HashMap;
 
     invoke-static {v0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
@@ -1334,7 +1233,6 @@
 
     invoke-virtual {v1, v2}, Ljava/util/HashMap;->remove(Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 493
     iget-object v1, p0, Lcom/android/server/enterprise/browser/BrowserPolicy;->mCache:Ljava/util/HashMap;
 
     invoke-static {v0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
@@ -1353,7 +1251,6 @@
 
     if-eqz v1, :cond_0
 
-    .line 494
     iget-object v1, p0, Lcom/android/server/enterprise/browser/BrowserPolicy;->mCache:Ljava/util/HashMap;
 
     invoke-static {v0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
@@ -1362,7 +1259,6 @@
 
     invoke-virtual {v1, v2}, Ljava/util/HashMap;->remove(Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 497
     :cond_0
     return-void
 .end method
@@ -1372,7 +1268,6 @@
     .param p1, "uid"    # I
 
     .prologue
-    .line 474
     return-void
 .end method
 
@@ -1382,7 +1277,6 @@
     .param p2, "ownerUid"    # I
 
     .prologue
-    .line 482
     return-void
 .end method
 
@@ -1393,31 +1287,25 @@
     .param p3, "setting"    # I
 
     .prologue
-    .line 215
     invoke-direct {p0, p1}, Lcom/android/server/enterprise/browser/BrowserPolicy;->enforceBrowserPermission(Landroid/app/enterprise/ContextInfo;)Landroid/app/enterprise/ContextInfo;
 
     move-result-object p1
 
-    .line 216
     iget v1, p1, Landroid/app/enterprise/ContextInfo;->mCallerUid:I
 
-    .line 217
     .local v1, "callingUid":I
     invoke-static {v1}, Landroid/os/UserHandle;->getUserId(I)I
 
     move-result v8
 
-    .line 218
     .local v8, "userId":I
     const/4 v5, 0x0
 
-    .line 219
     .local v5, "success":Z
     invoke-static {}, Landroid/os/Binder;->clearCallingIdentity()J
 
     move-result-wide v6
 
-    .line 224
     .local v6, "token":J
     :try_start_0
     iget-object v9, p0, Lcom/android/server/enterprise/browser/BrowserPolicy;->mEdmStorageProvider:Lcom/android/server/enterprise/storage/EdmStorageProvider;
@@ -1433,7 +1321,6 @@
 
     move-result v4
 
-    .line 231
     .local v4, "lValue":I
     :goto_0
     const/4 v9, 0x1
@@ -1442,7 +1329,6 @@
 
     or-int/2addr v4, p3
 
-    .line 232
     :goto_1
     :try_start_1
     iget-object v9, p0, Lcom/android/server/enterprise/browser/BrowserPolicy;->mEdmStorageProvider:Lcom/android/server/enterprise/storage/EdmStorageProvider;
@@ -1455,18 +1341,15 @@
 
     move-result v5
 
-    .line 238
     invoke-static {}, Landroid/app/ActivityManagerNative;->getDefault()Landroid/app/IActivityManager;
 
     move-result-object v0
 
-    .line 239
     .local v0, "am":Landroid/app/IActivityManager;
     const-string v9, "com.android.browser"
 
     invoke-interface {v0, v9, v8}, Landroid/app/IActivityManager;->forceStopPackage(Ljava/lang/String;I)V
 
-    .line 240
     const-string v9, "com.sec.android.app.sbrowser"
 
     invoke-interface {v0, v9, v8}, Landroid/app/IActivityManager;->forceStopPackage(Ljava/lang/String;I)V
@@ -1474,10 +1357,8 @@
     .catch Ljava/lang/Exception; {:try_start_1 .. :try_end_1} :catch_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
-    .line 244
     invoke-static {v6, v7}, Landroid/os/Binder;->restoreCallingIdentity(J)V
 
-    .line 247
     .end local v0    # "am":Landroid/app/IActivityManager;
     .end local v4    # "lValue":I
     :goto_2
@@ -1487,7 +1368,7 @@
 
     invoke-direct {v10}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v11, "setBrowserSettingStatus() : = "
+    const-string v11, "setBrowserSettingStatus() : = "
 
     invoke-virtual {v10, v11}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -1523,29 +1404,23 @@
 
     invoke-static {v9, v10}, Landroid/util/secutil/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 249
     if-eqz v5, :cond_0
 
-    .line 250
     sparse-switch p3, :sswitch_data_0
 
-    .line 275
     :goto_3
     const-string v9, "BrowserPolicy"
 
-    const-string/jumbo v10, "setBrowserSettingStatus() : SecContentProvider updated."
+    const-string v10, "setBrowserSettingStatus() : SecContentProvider updated."
 
     invoke-static {v9, v10}, Landroid/util/secutil/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 277
     :cond_0
     return v5
 
-    .line 226
     :catch_0
     move-exception v2
 
-    .line 227
     .local v2, "e":Ljava/lang/Exception;
     :try_start_2
     const-string v9, "BrowserPolicy"
@@ -1554,7 +1429,7 @@
 
     invoke-direct {v10}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v11, "setBrowserSettingStatus("
+    const-string v11, "setBrowserSettingStatus("
 
     invoke-virtual {v10, v11}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -1579,13 +1454,11 @@
     .catch Ljava/lang/Exception; {:try_start_2 .. :try_end_2} :catch_1
     .catchall {:try_start_2 .. :try_end_2} :catchall_0
 
-    .line 228
     const/16 v4, 0x17
 
     .restart local v4    # "lValue":I
     goto :goto_0
 
-    .line 231
     .end local v2    # "e":Ljava/lang/Exception;
     :cond_1
     xor-int/lit8 v9, p3, -0x1
@@ -1594,12 +1467,10 @@
 
     goto :goto_1
 
-    .line 241
     .end local v4    # "lValue":I
     :catch_1
     move-exception v3
 
-    .line 242
     .local v3, "ex":Ljava/lang/Exception;
     :try_start_3
     const-string v9, "BrowserPolicy"
@@ -1608,7 +1479,7 @@
 
     invoke-direct {v10}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v11, "setBrowserSettingStatus("
+    const-string v11, "setBrowserSettingStatus("
 
     invoke-virtual {v10, v11}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -1632,7 +1503,6 @@
     :try_end_3
     .catchall {:try_start_3 .. :try_end_3} :catchall_0
 
-    .line 244
     invoke-static {v6, v7}, Landroid/os/Binder;->restoreCallingIdentity(J)V
 
     goto/16 :goto_2
@@ -1645,7 +1515,6 @@
 
     throw v9
 
-    .line 252
     :sswitch_0
     iget-object v9, p0, Lcom/android/server/enterprise/browser/BrowserPolicy;->mContext:Landroid/content/Context;
 
@@ -1655,7 +1524,6 @@
 
     goto :goto_3
 
-    .line 257
     :sswitch_1
     iget-object v9, p0, Lcom/android/server/enterprise/browser/BrowserPolicy;->mContext:Landroid/content/Context;
 
@@ -1665,7 +1533,6 @@
 
     goto :goto_3
 
-    .line 263
     :sswitch_2
     iget-object v9, p0, Lcom/android/server/enterprise/browser/BrowserPolicy;->mContext:Landroid/content/Context;
 
@@ -1675,7 +1542,6 @@
 
     goto :goto_3
 
-    .line 269
     :sswitch_3
     iget-object v9, p0, Lcom/android/server/enterprise/browser/BrowserPolicy;->mContext:Landroid/content/Context;
 
@@ -1685,7 +1551,6 @@
 
     goto :goto_3
 
-    .line 250
     :sswitch_data_0
     .sparse-switch
         0x1 -> :sswitch_0
@@ -1701,44 +1566,35 @@
     .param p2, "proxySetting"    # Ljava/lang/String;
 
     .prologue
-    .line 338
     invoke-direct/range {p0 .. p1}, Lcom/android/server/enterprise/browser/BrowserPolicy;->enforceBrowserProxyPermission(Landroid/app/enterprise/ContextInfo;)Landroid/app/enterprise/ContextInfo;
 
     move-result-object p1
 
-    .line 339
     move-object/from16 v0, p1
 
     iget v1, v0, Landroid/app/enterprise/ContextInfo;->mCallerUid:I
 
-    .line 340
     .local v1, "adminUid":I
     move-object/from16 v0, p1
 
     iget v3, v0, Landroid/app/enterprise/ContextInfo;->mContainerId:I
 
-    .line 341
     .local v3, "containerId":I
     invoke-static {v1}, Landroid/os/UserHandle;->getUserId(I)I
 
     move-result v11
 
-    .line 342
     .local v11, "userId":I
     if-nez p2, :cond_0
 
-    .line 343
     const/4 v10, 0x0
 
-    .line 397
     :goto_0
     return v10
 
-    .line 345
     :cond_0
     const/4 v10, 0x0
 
-    .line 348
     .local v10, "result":Z
     const-string v12, ":"
 
@@ -1750,7 +1606,6 @@
 
     if-eqz v12, :cond_1
 
-    .line 349
     const-string v12, ":"
 
     move-object/from16 v0, p2
@@ -1759,19 +1614,16 @@
 
     move-result-object v8
 
-    .line 350
     .local v8, "params":[Ljava/lang/String;
     const/4 v12, 0x0
 
     aget-object v6, v8, v12
 
-    .line 351
     .local v6, "hostname":Ljava/lang/String;
     const/4 v12, 0x1
 
     aget-object v9, v8, v12
 
-    .line 356
     .end local v8    # "params":[Ljava/lang/String;
     .local v9, "port":Ljava/lang/String;
     :goto_1
@@ -1781,31 +1633,26 @@
 
     if-nez v12, :cond_2
 
-    .line 357
     const/4 v10, 0x0
 
     goto :goto_0
 
-    .line 353
     .end local v6    # "hostname":Ljava/lang/String;
     .end local v9    # "port":Ljava/lang/String;
     :cond_1
     move-object/from16 v6, p2
 
-    .line 354
     .restart local v6    # "hostname":Ljava/lang/String;
     const-string v9, "80"
 
     .restart local v9    # "port":Ljava/lang/String;
     goto :goto_1
 
-    .line 360
     :cond_2
     invoke-virtual/range {p2 .. p2}, Ljava/lang/String;->trim()Ljava/lang/String;
 
     move-result-object v7
 
-    .line 361
     .local v7, "myProxySetting":Ljava/lang/String;
     invoke-virtual {v7}, Ljava/lang/String;->isEmpty()Z
 
@@ -1813,12 +1660,10 @@
 
     if-eqz v12, :cond_3
 
-    .line 362
     const/4 v10, 0x0
 
     goto :goto_0
 
-    .line 364
     :cond_3
     iget-object v12, p0, Lcom/android/server/enterprise/browser/BrowserPolicy;->mCache:Ljava/util/HashMap;
 
@@ -1832,7 +1677,6 @@
 
     if-nez v12, :cond_4
 
-    .line 365
     iget-object v12, p0, Lcom/android/server/enterprise/browser/BrowserPolicy;->mCache:Ljava/util/HashMap;
 
     invoke-static {v11}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
@@ -1845,7 +1689,6 @@
 
     invoke-virtual {v12, v13, v14}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 367
     :cond_4
     iget-object v12, p0, Lcom/android/server/enterprise/browser/BrowserPolicy;->mCache:Ljava/util/HashMap;
 
@@ -1869,7 +1712,6 @@
 
     if-nez v12, :cond_5
 
-    .line 368
     iget-object v12, p0, Lcom/android/server/enterprise/browser/BrowserPolicy;->mCache:Ljava/util/HashMap;
 
     invoke-static {v11}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
@@ -1892,7 +1734,6 @@
 
     invoke-virtual {v12, v13, v14}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 371
     :cond_5
     :try_start_0
     iget-object v12, p0, Lcom/android/server/enterprise/browser/BrowserPolicy;->mCache:Ljava/util/HashMap;
@@ -1917,7 +1758,6 @@
 
     check-cast v2, Lcom/android/server/enterprise/browser/BrowserPolicy$BrowserProxyCache;
 
-    .line 372
     .local v2, "auxCache":Lcom/android/server/enterprise/browser/BrowserPolicy$BrowserProxyCache;
     invoke-virtual {v2}, Lcom/android/server/enterprise/browser/BrowserPolicy$BrowserProxyCache;->isAlreadySet()Z
 
@@ -1931,19 +1771,16 @@
 
     if-eqz v12, :cond_9
 
-    .line 373
     :cond_6
     new-instance v4, Landroid/content/ContentValues;
 
     invoke-direct {v4}, Landroid/content/ContentValues;-><init>()V
 
-    .line 374
     .local v4, "cv":Landroid/content/ContentValues;
-    const-string/jumbo v12, "proxyServer"
+    const-string v12, "proxyServer"
 
     invoke-virtual {v4, v12, v7}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 375
     iget-object v12, p0, Lcom/android/server/enterprise/browser/BrowserPolicy;->mEdmStorageProvider:Lcom/android/server/enterprise/storage/EdmStorageProvider;
 
     const-string v13, "BROWSER_PROXY"
@@ -1952,37 +1789,31 @@
 
     move-result v10
 
-    .line 377
     if-eqz v10, :cond_7
 
-    .line 378
     const/4 v12, 0x0
 
     invoke-virtual {v2, v1, v7, v12}, Lcom/android/server/enterprise/browser/BrowserPolicy$BrowserProxyCache;->setProxy(ILjava/lang/String;Z)V
 
-    .line 384
     .end local v4    # "cv":Landroid/content/ContentValues;
     :cond_7
     :goto_2
     if-eqz v10, :cond_8
 
-    .line 385
     iget-object v12, p0, Lcom/android/server/enterprise/browser/BrowserPolicy;->mContext:Landroid/content/Context;
 
     const-string v13, "BrowserPolicy/getHttpProxy"
 
     invoke-static {v12, v13, v11}, Lcom/android/server/enterprise/content/SecContentProvider;->notifyPolicyChangesAsUser(Landroid/content/Context;Ljava/lang/String;I)V
 
-    .line 388
     const-string v12, "BrowserPolicy"
 
-    const-string/jumbo v13, "setHttpProxy() : SecContentProvider updated."
+    const-string v13, "setHttpProxy() : SecContentProvider updated."
 
     invoke-static {v12, v13}, Landroid/util/secutil/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 395
     .end local v2    # "auxCache":Lcom/android/server/enterprise/browser/BrowserPolicy$BrowserProxyCache;
     :cond_8
     :goto_3
@@ -1992,7 +1823,7 @@
 
     invoke-direct {v13}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v14, "setHttpProxy("
+    const-string v14, "setHttpProxy("
 
     invoke-virtual {v13, v14}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -2022,27 +1853,23 @@
 
     goto/16 :goto_0
 
-    .line 381
     .restart local v2    # "auxCache":Lcom/android/server/enterprise/browser/BrowserPolicy$BrowserProxyCache;
     :cond_9
     const/4 v10, 0x0
 
     goto :goto_2
 
-    .line 391
     .end local v2    # "auxCache":Lcom/android/server/enterprise/browser/BrowserPolicy$BrowserProxyCache;
     :catch_0
     move-exception v5
 
-    .line 392
     .local v5, "ex":Ljava/lang/Exception;
     const-string v12, "BrowserPolicy"
 
-    const-string/jumbo v13, "setHttpProxy() : failed."
+    const-string v13, "setHttpProxy() : failed."
 
     invoke-static {v12, v13, v5}, Lcom/android/server/enterprise/log/Log;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
 
-    .line 393
     const/4 v10, 0x0
 
     goto :goto_3
@@ -2052,6 +1879,5 @@
     .locals 0
 
     .prologue
-    .line 470
     return-void
 .end method

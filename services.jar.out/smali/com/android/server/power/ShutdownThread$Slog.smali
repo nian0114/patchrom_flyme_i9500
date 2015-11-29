@@ -41,20 +41,16 @@
     .prologue
     const/4 v1, 0x0
 
-    .line 1341
     sput-object v1, Lcom/android/server/power/ShutdownThread$Slog;->handler:Lcom/android/server/power/ShutdownThread$Slog;
 
-    .line 1342
     new-instance v0, Ljava/lang/Object;
 
     invoke-direct {v0}, Ljava/lang/Object;-><init>()V
 
     sput-object v0, Lcom/android/server/power/ShutdownThread$Slog;->handlerLock:Ljava/lang/Object;
 
-    .line 1344
     sput-object v1, Lcom/android/server/power/ShutdownThread$Slog;->queueState:[Ljava/lang/String;
 
-    .line 1345
     sput-object v1, Lcom/android/server/power/ShutdownThread$Slog;->lastLog:Ljava/lang/String;
 
     return-void
@@ -65,10 +61,8 @@
     .param p1, "l"    # Landroid/os/Looper;
 
     .prologue
-    .line 1352
     invoke-direct {p0, p1}, Landroid/os/Handler;-><init>(Landroid/os/Looper;)V
 
-    .line 1353
     return-void
 .end method
 
@@ -77,7 +71,6 @@
     .param p0, "x0"    # Ljava/lang/Runnable;
 
     .prologue
-    .line 1339
     sput-object p0, Lcom/android/server/power/ShutdownThread$Slog;->delayDumpRaunnable:Ljava/lang/Runnable;
 
     return-object p0
@@ -89,16 +82,12 @@
     .prologue
     const/4 v0, 0x0
 
-    .line 1421
     invoke-static {}, Lcom/android/server/power/ShutdownThread$Slog;->stopState()V
 
-    .line 1422
     sput-object v0, Lcom/android/server/power/ShutdownThread$Slog;->handler:Lcom/android/server/power/ShutdownThread$Slog;
 
-    .line 1423
     sput-object v0, Lcom/android/server/power/ShutdownThread$Slog;->queueState:[Ljava/lang/String;
 
-    .line 1424
     return-void
 .end method
 
@@ -106,7 +95,6 @@
     .locals 3
 
     .prologue
-    .line 1474
     # getter for: Lcom/android/server/power/ShutdownThread;->BIN_TYPE_PRODUCTSHIP:Z
     invoke-static {}, Lcom/android/server/power/ShutdownThread;->access$1000()Z
 
@@ -114,18 +102,15 @@
 
     if-eqz v0, :cond_1
 
-    .line 1483
     :cond_0
     :goto_0
     return-void
 
-    .line 1477
     :cond_1
     sget-object v0, Lcom/android/server/power/ShutdownThread$Slog;->logFileWriter:Lcom/android/server/power/ShutdownThread$LogFileWriter;
 
     if-eqz v0, :cond_0
 
-    .line 1478
     const-string v0, "ShutdownDelay"
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -150,19 +135,16 @@
 
     invoke-static {v0, v1}, Landroid/util/Slog;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1479
     const-string v0, "ShutdownDelay"
 
     const-string v1, "logFileWriter saveAndClose"
 
     invoke-static {v0, v1}, Landroid/util/Slog;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1480
     sget-object v0, Lcom/android/server/power/ShutdownThread$Slog;->logFileWriter:Lcom/android/server/power/ShutdownThread$LogFileWriter;
 
     invoke-virtual {v0}, Lcom/android/server/power/ShutdownThread$LogFileWriter;->saveAndClose()V
 
-    .line 1481
     const/4 v0, 0x0
 
     sput-object v0, Lcom/android/server/power/ShutdownThread$Slog;->logFileWriter:Lcom/android/server/power/ShutdownThread$LogFileWriter;
@@ -176,30 +158,24 @@
     .param p1, "msg"    # Ljava/lang/String;
 
     .prologue
-    .line 1571
     const/4 v1, -0x1
 
-    .line 1573
     .local v1, "rtn":I
     :try_start_0
     invoke-static {p0, p1}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
     move-result v1
 
-    .line 1574
     invoke-static {p1}, Lcom/android/server/power/ShutdownThread$Slog;->setMessage(Ljava/lang/String;)V
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 1578
     :goto_0
     return v1
 
-    .line 1575
     :catch_0
     move-exception v0
 
-    .line 1576
     .local v0, "e":Ljava/lang/Exception;
     invoke-virtual {v0}, Ljava/lang/Exception;->printStackTrace()V
 
@@ -212,30 +188,24 @@
     .param p1, "msg"    # Ljava/lang/String;
 
     .prologue
-    .line 1516
     const/4 v1, -0x1
 
-    .line 1518
     .local v1, "rtn":I
     :try_start_0
     invoke-static {p0, p1}, Landroid/util/Slog;->e(Ljava/lang/String;Ljava/lang/String;)I
 
     move-result v1
 
-    .line 1519
     invoke-static {p1}, Lcom/android/server/power/ShutdownThread$Slog;->setMessage(Ljava/lang/String;)V
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 1523
     :goto_0
     return v1
 
-    .line 1520
     :catch_0
     move-exception v0
 
-    .line 1521
     .local v0, "ex":Ljava/lang/Exception;
     invoke-virtual {v0}, Ljava/lang/Exception;->printStackTrace()V
 
@@ -249,30 +219,24 @@
     .param p2, "e"    # Ljava/lang/Exception;
 
     .prologue
-    .line 1527
     const/4 v1, -0x1
 
-    .line 1529
     .local v1, "rtn":I
     :try_start_0
     invoke-static {p0, p1, p2}, Landroid/util/Slog;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
     move-result v1
 
-    .line 1530
     invoke-static {p1}, Lcom/android/server/power/ShutdownThread$Slog;->setMessage(Ljava/lang/String;)V
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 1534
     :goto_0
     return v1
 
-    .line 1531
     :catch_0
     move-exception v0
 
-    .line 1532
     .local v0, "ex":Ljava/lang/Exception;
     invoke-virtual {v0}, Ljava/lang/Exception;->printStackTrace()V
 
@@ -285,30 +249,24 @@
     .param p1, "msg"    # Ljava/lang/String;
 
     .prologue
-    .line 1538
     const/4 v1, -0x1
 
-    .line 1540
     .local v1, "rtn":I
     :try_start_0
     invoke-static {p0, p1}, Landroid/util/Slog;->i(Ljava/lang/String;Ljava/lang/String;)I
 
     move-result v1
 
-    .line 1541
     invoke-static {p1}, Lcom/android/server/power/ShutdownThread$Slog;->setMessage(Ljava/lang/String;)V
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 1545
     :goto_0
     return v1
 
-    .line 1542
     :catch_0
     move-exception v0
 
-    .line 1543
     .local v0, "e":Ljava/lang/Exception;
     invoke-virtual {v0}, Ljava/lang/Exception;->printStackTrace()V
 
@@ -325,12 +283,10 @@
 
     const/4 v7, 0x2
 
-    .line 1486
     invoke-static {p0, p1}, Lcom/android/server/power/ShutdownThread$Slog;->i(Ljava/lang/String;Ljava/lang/String;)I
 
     move-result v1
 
-    .line 1487
     .local v1, "returnValue":I
     # getter for: Lcom/android/server/power/ShutdownThread;->dlgAnim:Lcom/android/server/power/ShutdownDialog;
     invoke-static {}, Lcom/android/server/power/ShutdownThread;->access$1400()Lcom/android/server/power/ShutdownDialog;
@@ -346,24 +302,20 @@
 
     if-eqz v3, :cond_1
 
-    .line 1501
     :cond_0
     :goto_0
     return v1
 
-    .line 1490
     :cond_1
     new-instance v2, Ljava/lang/StringBuilder;
 
     invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
 
-    .line 1491
     .local v2, "sb":Ljava/lang/StringBuilder;
     invoke-static {}, Ljava/util/Calendar;->getInstance()Ljava/util/Calendar;
 
     move-result-object v0
 
-    .line 1492
     .local v0, "oCalendar":Ljava/util/Calendar;
     const-string v3, "%02d-%02d %02d:%02d:%02d.%03d %s: %s\n"
 
@@ -463,7 +415,6 @@
 
     invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 1500
     # getter for: Lcom/android/server/power/ShutdownThread;->dlgAnim:Lcom/android/server/power/ShutdownDialog;
     invoke-static {}, Lcom/android/server/power/ShutdownThread;->access$1400()Lcom/android/server/power/ShutdownDialog;
 
@@ -482,14 +433,12 @@
     .locals 4
 
     .prologue
-    .line 1463
-    const-string/jumbo v1, "sys.shutdownprofiler"
+    const-string v1, "sys.shutdownprofiler"
 
     invoke-static {v1}, Landroid/os/SystemProperties;->get(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 
-    .line 1464
     .local v0, "enabled":Ljava/lang/String;
     # getter for: Lcom/android/server/power/ShutdownThread;->BIN_TYPE_PRODUCTSHIP:Z
     invoke-static {}, Lcom/android/server/power/ShutdownThread;->access$1000()Z
@@ -506,12 +455,10 @@
 
     if-nez v1, :cond_1
 
-    .line 1471
     :cond_0
     :goto_0
     return-void
 
-    .line 1467
     :cond_1
     const-string v1, "ShutdownDelay"
 
@@ -519,17 +466,15 @@
 
     invoke-static {v1, v2}, Landroid/util/Slog;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1468
     sget-object v1, Lcom/android/server/power/ShutdownThread$Slog;->logFileWriter:Lcom/android/server/power/ShutdownThread$LogFileWriter;
 
     if-nez v1, :cond_0
 
-    .line 1469
     new-instance v1, Lcom/android/server/power/ShutdownThread$LogFileWriter;
 
     const-string v2, "/data/log/"
 
-    const-string/jumbo v3, "shutdown_profile"
+    const-string v3, "shutdown_profile"
 
     invoke-direct {v1, v2, v3}, Lcom/android/server/power/ShutdownThread$LogFileWriter;-><init>(Ljava/lang/String;Ljava/lang/String;)V
 
@@ -551,12 +496,10 @@
 
     const/4 v8, 0x2
 
-    .line 1370
     sget-object v3, Lcom/android/server/power/ShutdownThread$Slog;->handlerLock:Ljava/lang/Object;
 
     monitor-enter v3
 
-    .line 1371
     :try_start_0
     sget-object v2, Lcom/android/server/power/ShutdownThread$Slog;->handler:Lcom/android/server/power/ShutdownThread$Slog;
 
@@ -568,15 +511,12 @@
 
     if-ge v2, v8, :cond_1
 
-    .line 1372
     :cond_0
     monitor-exit v3
 
-    .line 1407
     :goto_0
     return-void
 
-    .line 1374
     :cond_1
     sget-object v2, Lcom/android/server/power/ShutdownThread$Slog;->handler:Lcom/android/server/power/ShutdownThread$Slog;
 
@@ -584,7 +524,6 @@
 
     invoke-virtual {v2, v4}, Lcom/android/server/power/ShutdownThread$Slog;->removeMessages(I)V
 
-    .line 1375
     sget-object v2, Lcom/android/server/power/ShutdownThread$Slog;->handler:Lcom/android/server/power/ShutdownThread$Slog;
 
     const/4 v4, 0x1
@@ -593,12 +532,10 @@
 
     invoke-virtual {v2, v4, v6, v7}, Lcom/android/server/power/ShutdownThread$Slog;->sendEmptyMessageDelayed(IJ)Z
 
-    .line 1376
     monitor-exit v3
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 1377
     sget-object v2, Lcom/android/server/power/ShutdownThread$Slog;->lastLog:Ljava/lang/String;
 
     invoke-virtual {p0, v2}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
@@ -607,7 +544,6 @@
 
     if-eqz v2, :cond_2
 
-    .line 1378
     const-string v2, "ShutdownDelay"
 
     const-string v3, "duplicate log string."
@@ -616,7 +552,6 @@
 
     goto :goto_0
 
-    .line 1376
     :catchall_0
     move-exception v2
 
@@ -627,24 +562,20 @@
 
     throw v2
 
-    .line 1382
     :cond_2
     sput-object p0, Lcom/android/server/power/ShutdownThread$Slog;->lastLog:Ljava/lang/String;
 
-    .line 1384
     new-instance v1, Ljava/lang/StringBuilder;
 
     const-string v2, "!@delay, "
 
     invoke-direct {v1, v2}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    .line 1387
     .local v1, "sb":Ljava/lang/StringBuilder;
     invoke-static {}, Ljava/util/Calendar;->getInstance()Ljava/util/Calendar;
 
     move-result-object v0
 
-    .line 1388
     .local v0, "oCalendar":Ljava/util/Calendar;
     const-string v2, "%02d-%02d %02d:%02d:%02d : "
 
@@ -718,19 +649,16 @@
 
     invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 1395
     sget-object v2, Lcom/android/server/power/ShutdownThread$Slog;->logFileWriter:Lcom/android/server/power/ShutdownThread$LogFileWriter;
 
     if-eqz v2, :cond_3
 
-    .line 1396
     sget-object v2, Lcom/android/server/power/ShutdownThread$Slog;->logFileWriter:Lcom/android/server/power/ShutdownThread$LogFileWriter;
 
     const-string v3, "ShutdownThread"
 
     invoke-virtual {v2, v3, p0}, Lcom/android/server/power/ShutdownThread$LogFileWriter;->write(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 1399
     :cond_3
     invoke-virtual {p0}, Ljava/lang/String;->length()I
 
@@ -754,14 +682,12 @@
 
     if-ne v2, v3, :cond_4
 
-    .line 1400
     invoke-virtual {p0, v8}, Ljava/lang/String;->substring(I)Ljava/lang/String;
 
     move-result-object v2
 
     invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 1405
     :goto_1
     sget-object v2, Lcom/android/server/power/ShutdownThread$Slog;->queueState:[Ljava/lang/String;
 
@@ -773,7 +699,6 @@
 
     aput-object v4, v2, v3
 
-    .line 1406
     sget v2, Lcom/android/server/power/ShutdownThread$Slog;->queuePoint:I
 
     add-int/lit8 v2, v2, 0x1
@@ -788,7 +713,6 @@
 
     goto/16 :goto_0
 
-    .line 1402
     :cond_4
     invoke-virtual {v1, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -799,12 +723,10 @@
     .locals 4
 
     .prologue
-    .line 1427
     sget-object v0, Lcom/android/server/power/ShutdownThread$Slog;->delayLogLooper:Landroid/os/HandlerThread;
 
     if-nez v0, :cond_0
 
-    .line 1428
     new-instance v0, Landroid/os/HandlerThread;
 
     const-string v1, "ShutdownDelay"
@@ -813,25 +735,21 @@
 
     sput-object v0, Lcom/android/server/power/ShutdownThread$Slog;->delayLogLooper:Landroid/os/HandlerThread;
 
-    .line 1429
     sget-object v0, Lcom/android/server/power/ShutdownThread$Slog;->delayLogLooper:Landroid/os/HandlerThread;
 
     invoke-virtual {v0}, Landroid/os/HandlerThread;->start()V
 
-    .line 1431
     :cond_0
     sget-object v0, Lcom/android/server/power/ShutdownThread$Slog;->handler:Lcom/android/server/power/ShutdownThread$Slog;
 
     if-nez v0, :cond_1
 
-    .line 1432
     const-string v0, "ShutdownDelay"
 
     const-string v1, "Start"
 
     invoke-static {v0, v1}, Landroid/util/Slog;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1433
     new-instance v0, Lcom/android/server/power/ShutdownThread$Slog;
 
     sget-object v1, Lcom/android/server/power/ShutdownThread$Slog;->delayLogLooper:Landroid/os/HandlerThread;
@@ -844,19 +762,16 @@
 
     sput-object v0, Lcom/android/server/power/ShutdownThread$Slog;->handler:Lcom/android/server/power/ShutdownThread$Slog;
 
-    .line 1434
     const/4 v0, 0x5
 
     new-array v0, v0, [Ljava/lang/String;
 
     sput-object v0, Lcom/android/server/power/ShutdownThread$Slog;->queueState:[Ljava/lang/String;
 
-    .line 1435
     const/4 v0, 0x0
 
     sput v0, Lcom/android/server/power/ShutdownThread$Slog;->queuePoint:I
 
-    .line 1439
     :goto_0
     sget-object v0, Lcom/android/server/power/ShutdownThread$Slog;->handler:Lcom/android/server/power/ShutdownThread$Slog;
 
@@ -864,14 +779,12 @@
 
     invoke-virtual {v0, v1}, Lcom/android/server/power/ShutdownThread$Slog;->sendEmptyMessage(I)Z
 
-    .line 1440
     new-instance v0, Lcom/android/server/power/ShutdownThread$Slog$1;
 
     invoke-direct {v0}, Lcom/android/server/power/ShutdownThread$Slog$1;-><init>()V
 
     sput-object v0, Lcom/android/server/power/ShutdownThread$Slog;->delayDumpRaunnable:Ljava/lang/Runnable;
 
-    .line 1459
     sget-object v0, Lcom/android/server/power/ShutdownThread$Slog;->handler:Lcom/android/server/power/ShutdownThread$Slog;
 
     sget-object v1, Lcom/android/server/power/ShutdownThread$Slog;->delayDumpRaunnable:Ljava/lang/Runnable;
@@ -880,14 +793,12 @@
 
     invoke-virtual {v0, v1, v2, v3}, Lcom/android/server/power/ShutdownThread$Slog;->postDelayed(Ljava/lang/Runnable;J)Z
 
-    .line 1460
     return-void
 
-    .line 1437
     :cond_1
     const-string v0, "ShutdownDelay"
 
-    const-string/jumbo v1, "startstate again"
+    const-string v1, "startstate again"
 
     invoke-static {v0, v1}, Landroid/util/Slog;->e(Ljava/lang/String;Ljava/lang/String;)I
 
@@ -898,7 +809,6 @@
     .locals 3
 
     .prologue
-    .line 1410
     sget-object v0, Lcom/android/server/power/ShutdownThread$Slog;->handler:Lcom/android/server/power/ShutdownThread$Slog;
 
     if-eqz v0, :cond_0
@@ -907,12 +817,10 @@
 
     if-nez v0, :cond_1
 
-    .line 1418
     :cond_0
     :goto_0
     return-void
 
-    .line 1413
     :cond_1
     const-string v0, "ShutdownDelay"
 
@@ -920,12 +828,10 @@
 
     invoke-static {v0, v1}, Landroid/util/Slog;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1414
     sget-object v1, Lcom/android/server/power/ShutdownThread$Slog;->handlerLock:Ljava/lang/Object;
 
     monitor-enter v1
 
-    .line 1415
     :try_start_0
     sget-object v0, Lcom/android/server/power/ShutdownThread$Slog;->handler:Lcom/android/server/power/ShutdownThread$Slog;
 
@@ -933,14 +839,12 @@
 
     invoke-virtual {v0, v2}, Lcom/android/server/power/ShutdownThread$Slog;->removeMessages(I)V
 
-    .line 1416
     sget-object v0, Lcom/android/server/power/ShutdownThread$Slog;->handler:Lcom/android/server/power/ShutdownThread$Slog;
 
     const/4 v2, 0x1
 
     invoke-virtual {v0, v2}, Lcom/android/server/power/ShutdownThread$Slog;->removeMessages(I)V
 
-    .line 1417
     monitor-exit v1
 
     goto :goto_0
@@ -961,30 +865,24 @@
     .param p1, "msg"    # Ljava/lang/String;
 
     .prologue
-    .line 1505
     const/4 v1, -0x1
 
-    .line 1507
     .local v1, "rtn":I
     :try_start_0
     invoke-static {p0, p1}, Landroid/util/Slog;->v(Ljava/lang/String;Ljava/lang/String;)I
 
     move-result v1
 
-    .line 1508
     invoke-static {p1}, Lcom/android/server/power/ShutdownThread$Slog;->setMessage(Ljava/lang/String;)V
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 1512
     :goto_0
     return v1
 
-    .line 1509
     :catch_0
     move-exception v0
 
-    .line 1510
     .local v0, "e":Ljava/lang/Exception;
     invoke-virtual {v0}, Ljava/lang/Exception;->printStackTrace()V
 
@@ -997,30 +895,24 @@
     .param p1, "msg"    # Ljava/lang/String;
 
     .prologue
-    .line 1549
     const/4 v1, -0x1
 
-    .line 1551
     .local v1, "rtn":I
     :try_start_0
     invoke-static {p0, p1}, Landroid/util/Slog;->w(Ljava/lang/String;Ljava/lang/String;)I
 
     move-result v1
 
-    .line 1552
     invoke-static {p1}, Lcom/android/server/power/ShutdownThread$Slog;->setMessage(Ljava/lang/String;)V
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 1556
     :goto_0
     return v1
 
-    .line 1553
     :catch_0
     move-exception v0
 
-    .line 1554
     .local v0, "e":Ljava/lang/Exception;
     invoke-virtual {v0}, Ljava/lang/Exception;->printStackTrace()V
 
@@ -1034,30 +926,24 @@
     .param p2, "e"    # Ljava/lang/Exception;
 
     .prologue
-    .line 1560
     const/4 v1, -0x1
 
-    .line 1562
     .local v1, "rtn":I
     :try_start_0
     invoke-static {p0, p1, p2}, Landroid/util/Slog;->w(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
     move-result v1
 
-    .line 1563
     invoke-static {p1}, Lcom/android/server/power/ShutdownThread$Slog;->setMessage(Ljava/lang/String;)V
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 1567
     :goto_0
     return v1
 
-    .line 1564
     :catch_0
     move-exception v0
 
-    .line 1565
     .local v0, "ex":Ljava/lang/Exception;
     invoke-virtual {v0}, Ljava/lang/Exception;->printStackTrace()V
 
@@ -1071,7 +957,6 @@
     .param p1, "msg"    # Landroid/os/Message;
 
     .prologue
-    .line 1357
     sget-object v1, Lcom/android/server/power/ShutdownThread$Slog;->queueState:[Ljava/lang/String;
 
     if-eqz v1, :cond_0
@@ -1080,12 +965,10 @@
 
     if-nez v1, :cond_1
 
-    .line 1366
     :cond_0
     :goto_0
     return-void
 
-    .line 1360
     :cond_1
     const/4 v0, 0x0
 
@@ -1097,7 +980,6 @@
 
     if-ge v0, v1, :cond_3
 
-    .line 1361
     sget-object v1, Lcom/android/server/power/ShutdownThread$Slog;->queueState:[Ljava/lang/String;
 
     sget v2, Lcom/android/server/power/ShutdownThread$Slog;->queuePoint:I
@@ -1106,7 +988,6 @@
 
     if-eqz v1, :cond_2
 
-    .line 1362
     const-string v1, "ShutdownDelay"
 
     sget-object v2, Lcom/android/server/power/ShutdownThread$Slog;->queueState:[Ljava/lang/String;
@@ -1117,7 +998,6 @@
 
     invoke-static {v1, v2}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1363
     :cond_2
     sget v1, Lcom/android/server/power/ShutdownThread$Slog;->queuePoint:I
 
@@ -1131,12 +1011,10 @@
 
     sput v1, Lcom/android/server/power/ShutdownThread$Slog;->queuePoint:I
 
-    .line 1360
     add-int/lit8 v0, v0, 0x1
 
     goto :goto_1
 
-    .line 1365
     :cond_3
     const/4 v1, 0x1
 

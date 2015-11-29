@@ -41,7 +41,6 @@
     .param p5, "uiHandler"    # Landroid/os/Handler;
 
     .prologue
-    .line 59
     const-string v5, "MagnifierDisplayAdapter"
 
     move-object v0, p0
@@ -56,34 +55,28 @@
 
     invoke-direct/range {v0 .. v5}, Lcom/android/server/display/DisplayAdapter;-><init>(Lcom/android/server/display/DisplayManagerService$SyncRoot;Landroid/content/Context;Landroid/os/Handler;Lcom/android/server/display/DisplayAdapter$Listener;Ljava/lang/String;)V
 
-    .line 51
     const/4 v0, 0x0
 
     iput-boolean v0, p0, Lcom/android/server/display/MagnifierDisplayAdapter;->mEnabled:Z
 
-    .line 52
     invoke-static {}, Landroid/view/MagnificationSpec;->obtain()Landroid/view/MagnificationSpec;
 
     move-result-object v0
 
     iput-object v0, p0, Lcom/android/server/display/MagnifierDisplayAdapter;->mTempSpec:Landroid/view/MagnificationSpec;
 
-    .line 55
     const/high16 v0, 0x3f800000    # 1.0f
 
     iput v0, p0, Lcom/android/server/display/MagnifierDisplayAdapter;->mScale:F
 
-    .line 60
     new-instance v0, Lcom/android/server/display/MagnifierDisplayPolicy;
 
     invoke-direct {v0, p2}, Lcom/android/server/display/MagnifierDisplayPolicy;-><init>(Landroid/content/Context;)V
 
     iput-object v0, p0, Lcom/android/server/display/MagnifierDisplayAdapter;->mPolicy:Lcom/android/server/display/MagnifierDisplayPolicy;
 
-    .line 61
     iput-object p5, p0, Lcom/android/server/display/MagnifierDisplayAdapter;->mUiHandler:Landroid/os/Handler;
 
-    .line 62
     return-void
 .end method
 
@@ -94,7 +87,6 @@
     .param p1, "pw"    # Ljava/io/PrintWriter;
 
     .prologue
-    .line 120
     return-void
 .end method
 
@@ -103,10 +95,8 @@
     .param p1, "pw"    # Ljava/io/PrintWriter;
 
     .prologue
-    .line 66
     invoke-super {p0, p1}, Lcom/android/server/display/DisplayAdapter;->dumpLocked(Ljava/io/PrintWriter;)V
 
-    .line 67
     return-void
 .end method
 
@@ -117,12 +107,10 @@
     .prologue
     const/4 v3, 0x0
 
-    .line 75
     iget-boolean v0, p0, Lcom/android/server/display/MagnifierDisplayAdapter;->mEnabled:Z
 
     if-ne v0, p1, :cond_0
 
-    .line 76
     const-string v0, "MagnifierDisplayAdapter"
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -151,11 +139,9 @@
 
     invoke-static {v0, v1}, Landroid/util/Slog;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 93
     :goto_0
     return-void
 
-    .line 80
     :cond_0
     const-string v0, "MagnifierDisplayAdapter"
 
@@ -179,13 +165,10 @@
 
     invoke-static {v0, v1}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 82
     iput-boolean p1, p0, Lcom/android/server/display/MagnifierDisplayAdapter;->mEnabled:Z
 
-    .line 83
     if-eqz p1, :cond_1
 
-    .line 84
     new-instance v0, Lcom/android/server/display/MagnifierSurfaceControl;
 
     invoke-virtual {p0}, Lcom/android/server/display/MagnifierDisplayAdapter;->getContext()Landroid/content/Context;
@@ -202,20 +185,17 @@
 
     iput-object v0, p0, Lcom/android/server/display/MagnifierDisplayAdapter;->mSurfaceCtl:Lcom/android/server/display/MagnifierSurfaceControl;
 
-    .line 85
     iget-object v0, p0, Lcom/android/server/display/MagnifierDisplayAdapter;->mSurfaceCtl:Lcom/android/server/display/MagnifierSurfaceControl;
 
     invoke-virtual {v0}, Lcom/android/server/display/MagnifierSurfaceControl;->create()V
 
     goto :goto_0
 
-    .line 87
     :cond_1
     iget-object v0, p0, Lcom/android/server/display/MagnifierDisplayAdapter;->mSurfaceCtl:Lcom/android/server/display/MagnifierSurfaceControl;
 
     invoke-virtual {v0}, Lcom/android/server/display/MagnifierSurfaceControl;->dismiss()V
 
-    .line 88
     iget-object v0, p0, Lcom/android/server/display/MagnifierDisplayAdapter;->mDevice:Lcom/android/server/display/MagnifierDevice;
 
     invoke-virtual {v0}, Lcom/android/server/display/MagnifierDevice;->getDisplayTokenLocked()Landroid/os/IBinder;
@@ -224,17 +204,14 @@
 
     invoke-static {v0}, Landroid/view/SurfaceControl;->destroyDisplay(Landroid/os/IBinder;)V
 
-    .line 89
     iget-object v0, p0, Lcom/android/server/display/MagnifierDisplayAdapter;->mDevice:Lcom/android/server/display/MagnifierDevice;
 
     const/4 v1, 0x3
 
     invoke-virtual {p0, v0, v1}, Lcom/android/server/display/MagnifierDisplayAdapter;->sendDisplayDeviceEventLocked(Lcom/android/server/display/DisplayDevice;I)V
 
-    .line 90
     iput-object v3, p0, Lcom/android/server/display/MagnifierDisplayAdapter;->mSurfaceCtl:Lcom/android/server/display/MagnifierSurfaceControl;
 
-    .line 91
     iput-object v3, p0, Lcom/android/server/display/MagnifierDisplayAdapter;->mDevice:Lcom/android/server/display/MagnifierDevice;
 
     goto :goto_0
@@ -245,14 +222,13 @@
     .param p1, "surface"    # Landroid/view/Surface;
 
     .prologue
-    .line 138
     const-string v0, "MagnifierDisplayAdapter"
 
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v2, "onChangeSurface:"
+    const-string v2, "onChangeSurface:"
 
     invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -268,25 +244,21 @@
 
     invoke-static {v0, v1}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 140
     iget-object v0, p0, Lcom/android/server/display/MagnifierDisplayAdapter;->mDevice:Lcom/android/server/display/MagnifierDevice;
 
     if-eqz v0, :cond_0
 
-    .line 141
     iget-object v0, p0, Lcom/android/server/display/MagnifierDisplayAdapter;->mDevice:Lcom/android/server/display/MagnifierDevice;
 
     invoke-virtual {v0, p1}, Lcom/android/server/display/MagnifierDevice;->setSurface(Landroid/view/Surface;)V
 
-    .line 145
     :goto_0
     return-void
 
-    .line 143
     :cond_0
     const-string v0, "MagnifierDisplayAdapter"
 
-    const-string/jumbo v1, "onChangeSurface: device is null"
+    const-string v1, "onChangeSurface: device is null"
 
     invoke-static {v0, v1}, Landroid/util/Slog;->e(Ljava/lang/String;Ljava/lang/String;)I
 
@@ -299,14 +271,12 @@
     .param p2, "refreshRate"    # F
 
     .prologue
-    .line 124
     invoke-virtual {p0}, Lcom/android/server/display/MagnifierDisplayAdapter;->getSyncRoot()Lcom/android/server/display/DisplayManagerService$SyncRoot;
 
     move-result-object v6
 
     monitor-enter v6
 
-    .line 126
     :try_start_0
     const-string v0, "MagnifierDisplayAdapter"
 
@@ -314,7 +284,7 @@
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v3, "onCreateSurface:"
+    const-string v3, "onCreateSurface:"
 
     invoke-virtual {v1, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -330,7 +300,6 @@
 
     invoke-static {v0, v1}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 128
     const-string v0, "OverlayMagnifier"
 
     const/4 v1, 0x1
@@ -339,7 +308,6 @@
 
     move-result-object v2
 
-    .line 129
     .local v2, "displayToken":Landroid/os/IBinder;
     new-instance v0, Lcom/android/server/display/MagnifierDevice;
 
@@ -355,20 +323,16 @@
 
     iput-object v0, p0, Lcom/android/server/display/MagnifierDisplayAdapter;->mDevice:Lcom/android/server/display/MagnifierDevice;
 
-    .line 130
     iget-object v0, p0, Lcom/android/server/display/MagnifierDisplayAdapter;->mDevice:Lcom/android/server/display/MagnifierDevice;
 
     const/4 v1, 0x1
 
     invoke-virtual {p0, v0, v1}, Lcom/android/server/display/MagnifierDisplayAdapter;->sendDisplayDeviceEventLocked(Lcom/android/server/display/DisplayDevice;I)V
 
-    .line 131
     monitor-exit v6
 
-    .line 133
     return-void
 
-    .line 131
     .end local v2    # "displayToken":Landroid/os/IBinder;
     :catchall_0
     move-exception v0
@@ -384,10 +348,8 @@
     .locals 0
 
     .prologue
-    .line 71
     invoke-super {p0}, Lcom/android/server/display/DisplayAdapter;->registerLocked()V
 
-    .line 72
     return-void
 .end method
 
@@ -398,15 +360,12 @@
     .param p3, "scale"    # F
 
     .prologue
-    .line 96
     iget-object v0, p0, Lcom/android/server/display/MagnifierDisplayAdapter;->mPolicy:Lcom/android/server/display/MagnifierDisplayPolicy;
 
     invoke-virtual {v0, p1, p2, p3}, Lcom/android/server/display/MagnifierDisplayPolicy;->updateSettings(IIF)V
 
-    .line 97
     iput p3, p0, Lcom/android/server/display/MagnifierDisplayAdapter;->mScale:F
 
-    .line 98
     return-void
 .end method
 
@@ -415,57 +374,47 @@
     .param p1, "spec"    # Landroid/view/MagnificationSpec;
 
     .prologue
-    .line 101
     iget-object v1, p0, Lcom/android/server/display/MagnifierDisplayAdapter;->mTempSpec:Landroid/view/MagnificationSpec;
 
     monitor-enter v1
 
-    .line 102
     :try_start_0
     iget-object v0, p0, Lcom/android/server/display/MagnifierDisplayAdapter;->mSurfaceCtl:Lcom/android/server/display/MagnifierSurfaceControl;
 
     if-nez v0, :cond_0
 
-    .line 103
     monitor-exit v1
 
-    .line 114
     :goto_0
     return-void
 
-    .line 105
     :cond_0
     if-eqz p1, :cond_1
 
-    .line 106
     iget-object v0, p0, Lcom/android/server/display/MagnifierDisplayAdapter;->mTempSpec:Landroid/view/MagnificationSpec;
 
     iget v2, p1, Landroid/view/MagnificationSpec;->offsetX:F
 
     iput v2, v0, Landroid/view/MagnificationSpec;->offsetX:F
 
-    .line 107
     iget-object v0, p0, Lcom/android/server/display/MagnifierDisplayAdapter;->mTempSpec:Landroid/view/MagnificationSpec;
 
     iget v2, p1, Landroid/view/MagnificationSpec;->offsetY:F
 
     iput v2, v0, Landroid/view/MagnificationSpec;->offsetY:F
 
-    .line 108
     iget-object v0, p0, Lcom/android/server/display/MagnifierDisplayAdapter;->mTempSpec:Landroid/view/MagnificationSpec;
 
     iget v2, p0, Lcom/android/server/display/MagnifierDisplayAdapter;->mScale:F
 
     iput v2, v0, Landroid/view/MagnificationSpec;->scale:F
 
-    .line 109
     iget-object v0, p0, Lcom/android/server/display/MagnifierDisplayAdapter;->mSurfaceCtl:Lcom/android/server/display/MagnifierSurfaceControl;
 
     iget-object v2, p0, Lcom/android/server/display/MagnifierDisplayAdapter;->mTempSpec:Landroid/view/MagnificationSpec;
 
     invoke-virtual {v0, v2}, Lcom/android/server/display/MagnifierSurfaceControl;->updateMagnificationSpec(Landroid/view/MagnificationSpec;)V
 
-    .line 113
     :goto_1
     monitor-exit v1
 
@@ -480,7 +429,6 @@
 
     throw v0
 
-    .line 111
     :cond_1
     :try_start_1
     iget-object v0, p0, Lcom/android/server/display/MagnifierDisplayAdapter;->mSurfaceCtl:Lcom/android/server/display/MagnifierSurfaceControl;

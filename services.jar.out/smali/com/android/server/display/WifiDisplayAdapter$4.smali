@@ -26,7 +26,6 @@
     .locals 0
 
     .prologue
-    .line 230
     iput-object p1, p0, Lcom/android/server/display/WifiDisplayAdapter$4;->this$0:Lcom/android/server/display/WifiDisplayAdapter;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -40,7 +39,6 @@
     .locals 2
 
     .prologue
-    .line 233
     iget-object v0, p0, Lcom/android/server/display/WifiDisplayAdapter$4;->this$0:Lcom/android/server/display/WifiDisplayAdapter;
 
     # getter for: Lcom/android/server/display/WifiDisplayAdapter;->mDisplayController:Lcom/android/server/display/WifiDisplayController;
@@ -50,7 +48,6 @@
 
     if-eqz v0, :cond_0
 
-    .line 235
     iget-object v0, p0, Lcom/android/server/display/WifiDisplayAdapter$4;->this$0:Lcom/android/server/display/WifiDisplayAdapter;
 
     invoke-virtual {v0}, Lcom/android/server/display/WifiDisplayAdapter;->isWfdEngineRunning()Z
@@ -59,7 +56,6 @@
 
     if-nez v0, :cond_1
 
-    .line 236
     iget-object v0, p0, Lcom/android/server/display/WifiDisplayAdapter$4;->this$0:Lcom/android/server/display/WifiDisplayAdapter;
 
     # getter for: Lcom/android/server/display/WifiDisplayAdapter;->mDisplayController:Lcom/android/server/display/WifiDisplayController;
@@ -69,16 +65,14 @@
 
     invoke-virtual {v0}, Lcom/android/server/display/WifiDisplayController;->requestStartScan()V
 
-    .line 243
     :cond_0
     :goto_0
     return-void
 
-    .line 238
     :cond_1
     const-string v0, "WifiDisplayAdapter"
 
-    const-string/jumbo v1, "we blocked requestStartScan because WfdEngine running."
+    const-string v1, "we blocked requestStartScan because WfdEngine running."
 
     invoke-static {v0, v1}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 

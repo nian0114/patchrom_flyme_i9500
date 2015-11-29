@@ -23,7 +23,6 @@
     .locals 0
 
     .prologue
-    .line 477
     iput-object p1, p0, Lcom/movial/ipphone/IPPhone$4;->this$0:Lcom/movial/ipphone/IPPhone;
 
     invoke-direct {p0}, Landroid/os/Handler;-><init>()V
@@ -40,12 +39,10 @@
     .prologue
     const/4 v3, 0x1
 
-    .line 480
     iget v1, p1, Landroid/os/Message;->what:I
 
     packed-switch v1, :pswitch_data_0
 
-    .line 492
     iget-object v1, p0, Lcom/movial/ipphone/IPPhone$4;->this$0:Lcom/movial/ipphone/IPPhone;
 
     new-instance v2, Ljava/lang/StringBuilder;
@@ -69,11 +66,9 @@
     # invokes: Lcom/movial/ipphone/IPPhone;->log(Ljava/lang/String;)V
     invoke-static {v1, v2}, Lcom/movial/ipphone/IPPhone;->access$2000(Lcom/movial/ipphone/IPPhone;Ljava/lang/String;)V
 
-    .line 495
     :goto_0
     return-void
 
-    .line 482
     :pswitch_0
     iget-object v1, p0, Lcom/movial/ipphone/IPPhone$4;->this$0:Lcom/movial/ipphone/IPPhone;
 
@@ -82,7 +77,6 @@
     # invokes: Lcom/movial/ipphone/IPPhone;->log(Ljava/lang/String;)V
     invoke-static {v1, v2}, Lcom/movial/ipphone/IPPhone;->access$2000(Lcom/movial/ipphone/IPPhone;Ljava/lang/String;)V
 
-    .line 483
     iget-object v1, p0, Lcom/movial/ipphone/IPPhone$4;->this$0:Lcom/movial/ipphone/IPPhone;
 
     # getter for: Lcom/movial/ipphone/IPPhone;->mContext:Landroid/content/Context;
@@ -98,14 +92,12 @@
 
     invoke-static {v1, v2, v3}, Lcom/movial/ipphone/IPPhoneSettings;->putBoolean(Landroid/content/ContentResolver;Ljava/lang/String;Z)Z
 
-    .line 484
     new-instance v0, Landroid/content/Intent;
 
     const-string v1, "android.intent.action.VIEW"
 
     invoke-direct {v0, v1}, Landroid/content/Intent;-><init>(Ljava/lang/String;)V
 
-    .line 485
     .local v0, "newintent":Landroid/content/Intent;
     const-string v1, "com.movial.ipservice"
 
@@ -113,17 +105,14 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/content/Intent;->setClassName(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;
 
-    .line 486
     const-string v1, "dialog_type"
 
     invoke-virtual {v0, v1, v3}, Landroid/content/Intent;->putExtra(Ljava/lang/String;I)Landroid/content/Intent;
 
-    .line 487
     const/high16 v1, 0x10000000
 
     invoke-virtual {v0, v1}, Landroid/content/Intent;->addFlags(I)Landroid/content/Intent;
 
-    .line 488
     iget-object v1, p0, Lcom/movial/ipphone/IPPhone$4;->this$0:Lcom/movial/ipphone/IPPhone;
 
     # getter for: Lcom/movial/ipphone/IPPhone;->mContext:Landroid/content/Context;
@@ -133,7 +122,6 @@
 
     invoke-virtual {v1, v0}, Landroid/content/Context;->startActivity(Landroid/content/Intent;)V
 
-    .line 489
     iget-object v1, p0, Lcom/movial/ipphone/IPPhone$4;->this$0:Lcom/movial/ipphone/IPPhone;
 
     const-string v2, "processWifiChanged(): showed dialog for first wifi enabled"
@@ -143,7 +131,6 @@
 
     goto :goto_0
 
-    .line 480
     :pswitch_data_0
     .packed-switch 0x1
         :pswitch_0

@@ -52,7 +52,6 @@
     .locals 3
 
     .prologue
-    .line 107
     const-string v0, "true"
 
     const-string v1, "ro.product_ship"
@@ -78,28 +77,22 @@
     .prologue
     const/4 v0, 0x0
 
-    .line 115
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 116
     iput-boolean v0, p0, Lcom/android/internal/telephony/CallDetails;->call_isMpty:Z
 
-    .line 117
     iput v0, p0, Lcom/android/internal/telephony/CallDetails;->call_type:I
 
-    .line 118
     const/4 v0, 0x4
 
     iput v0, p0, Lcom/android/internal/telephony/CallDetails;->call_domain:I
 
-    .line 119
     new-instance v0, Ljava/util/HashMap;
 
     invoke-direct {v0}, Ljava/util/HashMap;-><init>()V
 
     iput-object v0, p0, Lcom/android/internal/telephony/CallDetails;->mExtras:Ljava/util/Map;
 
-    .line 120
     return-void
 .end method
 
@@ -110,28 +103,22 @@
     .param p3, "extraparams"    # [Ljava/lang/String;
 
     .prologue
-    .line 122
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 123
     const/4 v0, 0x0
 
     iput-boolean v0, p0, Lcom/android/internal/telephony/CallDetails;->call_isMpty:Z
 
-    .line 124
     iput p1, p0, Lcom/android/internal/telephony/CallDetails;->call_type:I
 
-    .line 125
     iput p2, p0, Lcom/android/internal/telephony/CallDetails;->call_domain:I
 
-    .line 126
     invoke-static {p3}, Lcom/android/internal/telephony/CallDetails;->getMapFromExtras([Ljava/lang/String;)Ljava/util/Map;
 
     move-result-object v0
 
     iput-object v0, p0, Lcom/android/internal/telephony/CallDetails;->mExtras:Ljava/util/Map;
 
-    .line 127
     return-void
 .end method
 
@@ -148,75 +135,58 @@
 
     const/4 v1, 0x2
 
-    .line 129
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 130
     iput-boolean v3, p0, Lcom/android/internal/telephony/CallDetails;->call_isMpty:Z
 
-    .line 131
     new-instance v0, Ljava/util/HashMap;
 
     invoke-direct {v0}, Ljava/util/HashMap;-><init>()V
 
     iput-object v0, p0, Lcom/android/internal/telephony/CallDetails;->mExtras:Ljava/util/Map;
 
-    .line 133
     sget-object v0, Lcom/android/internal/telephony/Call$CallType;->CS_CALL_VOICE:Lcom/android/internal/telephony/Call$CallType;
 
     if-ne p1, v0, :cond_0
 
-    .line 134
     iput v4, p0, Lcom/android/internal/telephony/CallDetails;->call_domain:I
 
-    .line 135
     iput v3, p0, Lcom/android/internal/telephony/CallDetails;->call_type:I
 
-    .line 176
     :goto_0
     return-void
 
-    .line 136
     :cond_0
     sget-object v0, Lcom/android/internal/telephony/Call$CallType;->CS_CALL_VIDEO:Lcom/android/internal/telephony/Call$CallType;
 
     if-ne p1, v0, :cond_1
 
-    .line 137
     iput v4, p0, Lcom/android/internal/telephony/CallDetails;->call_domain:I
 
-    .line 138
     iput v2, p0, Lcom/android/internal/telephony/CallDetails;->call_type:I
 
     goto :goto_0
 
-    .line 139
     :cond_1
     sget-object v0, Lcom/android/internal/telephony/Call$CallType;->IMS_CALL_VOICE:Lcom/android/internal/telephony/Call$CallType;
 
     if-ne p1, v0, :cond_2
 
-    .line 140
     iput v1, p0, Lcom/android/internal/telephony/CallDetails;->call_domain:I
 
-    .line 141
     iput v3, p0, Lcom/android/internal/telephony/CallDetails;->call_type:I
 
     goto :goto_0
 
-    .line 142
     :cond_2
     sget-object v0, Lcom/android/internal/telephony/Call$CallType;->IMS_CALL_HDVIDEO:Lcom/android/internal/telephony/Call$CallType;
 
     if-ne p1, v0, :cond_3
 
-    .line 143
     iput v1, p0, Lcom/android/internal/telephony/CallDetails;->call_domain:I
 
-    .line 144
     iput v2, p0, Lcom/android/internal/telephony/CallDetails;->call_type:I
 
-    .line 145
     iget-object v0, p0, Lcom/android/internal/telephony/CallDetails;->mExtras:Ljava/util/Map;
 
     const-string v1, "resolution"
@@ -227,19 +197,15 @@
 
     goto :goto_0
 
-    .line 146
     :cond_3
     sget-object v0, Lcom/android/internal/telephony/Call$CallType;->IMS_CALL_QCIFVIDEO:Lcom/android/internal/telephony/Call$CallType;
 
     if-ne p1, v0, :cond_4
 
-    .line 147
     iput v1, p0, Lcom/android/internal/telephony/CallDetails;->call_domain:I
 
-    .line 148
     iput v2, p0, Lcom/android/internal/telephony/CallDetails;->call_type:I
 
-    .line 149
     iget-object v0, p0, Lcom/android/internal/telephony/CallDetails;->mExtras:Ljava/util/Map;
 
     const-string v1, "resolution"
@@ -250,19 +216,15 @@
 
     goto :goto_0
 
-    .line 150
     :cond_4
     sget-object v0, Lcom/android/internal/telephony/Call$CallType;->IMS_CALL_QVGAVIDEO:Lcom/android/internal/telephony/Call$CallType;
 
     if-ne p1, v0, :cond_5
 
-    .line 151
     iput v1, p0, Lcom/android/internal/telephony/CallDetails;->call_domain:I
 
-    .line 152
     iput v2, p0, Lcom/android/internal/telephony/CallDetails;->call_type:I
 
-    .line 153
     iget-object v0, p0, Lcom/android/internal/telephony/CallDetails;->mExtras:Ljava/util/Map;
 
     const-string v1, "resolution"
@@ -273,47 +235,37 @@
 
     goto :goto_0
 
-    .line 154
     :cond_5
     sget-object v0, Lcom/android/internal/telephony/Call$CallType;->IMS_CALL_VIDEO_SHARE_TX:Lcom/android/internal/telephony/Call$CallType;
 
     if-ne p1, v0, :cond_6
 
-    .line 155
     iput v1, p0, Lcom/android/internal/telephony/CallDetails;->call_domain:I
 
-    .line 156
     iput v4, p0, Lcom/android/internal/telephony/CallDetails;->call_type:I
 
     goto :goto_0
 
-    .line 157
     :cond_6
     sget-object v0, Lcom/android/internal/telephony/Call$CallType;->IMS_CALL_VIDEO_SHARE_RX:Lcom/android/internal/telephony/Call$CallType;
 
     if-ne p1, v0, :cond_7
 
-    .line 158
     iput v1, p0, Lcom/android/internal/telephony/CallDetails;->call_domain:I
 
-    .line 159
     iput v1, p0, Lcom/android/internal/telephony/CallDetails;->call_type:I
 
     goto :goto_0
 
-    .line 160
     :cond_7
     sget-object v0, Lcom/android/internal/telephony/Call$CallType;->IMS_CALL_HDVIDEO_LAND:Lcom/android/internal/telephony/Call$CallType;
 
     if-ne p1, v0, :cond_8
 
-    .line 161
     iput v1, p0, Lcom/android/internal/telephony/CallDetails;->call_domain:I
 
-    .line 162
     iput v2, p0, Lcom/android/internal/telephony/CallDetails;->call_type:I
 
-    .line 163
     iget-object v0, p0, Lcom/android/internal/telephony/CallDetails;->mExtras:Ljava/util/Map;
 
     const-string v1, "resolution"
@@ -324,19 +276,15 @@
 
     goto :goto_0
 
-    .line 164
     :cond_8
     sget-object v0, Lcom/android/internal/telephony/Call$CallType;->IMS_CALL_HD720VIDEO:Lcom/android/internal/telephony/Call$CallType;
 
     if-ne p1, v0, :cond_9
 
-    .line 165
     iput v1, p0, Lcom/android/internal/telephony/CallDetails;->call_domain:I
 
-    .line 166
     iput v2, p0, Lcom/android/internal/telephony/CallDetails;->call_type:I
 
-    .line 167
     iget-object v0, p0, Lcom/android/internal/telephony/CallDetails;->mExtras:Ljava/util/Map;
 
     const-string v1, "resolution"
@@ -347,19 +295,15 @@
 
     goto :goto_0
 
-    .line 168
     :cond_9
     sget-object v0, Lcom/android/internal/telephony/Call$CallType;->IMS_CALL_CIFVIDEO:Lcom/android/internal/telephony/Call$CallType;
 
     if-ne p1, v0, :cond_a
 
-    .line 169
     iput v1, p0, Lcom/android/internal/telephony/CallDetails;->call_domain:I
 
-    .line 170
     iput v2, p0, Lcom/android/internal/telephony/CallDetails;->call_type:I
 
-    .line 171
     iget-object v0, p0, Lcom/android/internal/telephony/CallDetails;->mExtras:Ljava/util/Map;
 
     const-string v1, "resolution"
@@ -370,13 +314,11 @@
 
     goto/16 :goto_0
 
-    .line 173
     :cond_a
     const/4 v0, 0x4
 
     iput v0, p0, Lcom/android/internal/telephony/CallDetails;->call_domain:I
 
-    .line 174
     iput v3, p0, Lcom/android/internal/telephony/CallDetails;->call_type:I
 
     goto/16 :goto_0
@@ -389,49 +331,38 @@
     .prologue
     const/4 v0, 0x0
 
-    .line 178
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 179
     if-eqz p1, :cond_0
 
-    .line 180
     iget-boolean v0, p1, Lcom/android/internal/telephony/CallDetails;->call_isMpty:Z
 
     iput-boolean v0, p0, Lcom/android/internal/telephony/CallDetails;->call_isMpty:Z
 
-    .line 181
     iget v0, p1, Lcom/android/internal/telephony/CallDetails;->call_type:I
 
     iput v0, p0, Lcom/android/internal/telephony/CallDetails;->call_type:I
 
-    .line 182
     iget v0, p1, Lcom/android/internal/telephony/CallDetails;->call_domain:I
 
     iput v0, p0, Lcom/android/internal/telephony/CallDetails;->call_domain:I
 
-    .line 183
     iget-object v0, p1, Lcom/android/internal/telephony/CallDetails;->mExtras:Ljava/util/Map;
 
     iput-object v0, p0, Lcom/android/internal/telephony/CallDetails;->mExtras:Ljava/util/Map;
 
-    .line 190
     :goto_0
     return-void
 
-    .line 185
     :cond_0
     iput-boolean v0, p0, Lcom/android/internal/telephony/CallDetails;->call_isMpty:Z
 
-    .line 186
     iput v0, p0, Lcom/android/internal/telephony/CallDetails;->call_type:I
 
-    .line 187
     const/4 v0, 0x4
 
     iput v0, p0, Lcom/android/internal/telephony/CallDetails;->call_domain:I
 
-    .line 188
     new-instance v0, Ljava/util/HashMap;
 
     invoke-direct {v0}, Ljava/util/HashMap;-><init>()V
@@ -456,22 +387,17 @@
     .end annotation
 
     .prologue
-    .line 209
     .local p0, "newExtras":Ljava/util/Map;, "Ljava/util/Map<Ljava/lang/String;Ljava/lang/String;>;"
     const/4 v1, 0x0
 
-    .line 211
     .local v1, "extras":[Ljava/lang/String;
     if-nez p0, :cond_0
 
-    .line 212
     const/4 v4, 0x0
 
-    .line 224
     :goto_0
     return-object v4
 
-    .line 216
     :cond_0
     invoke-interface {p0}, Ljava/util/Map;->size()I
 
@@ -479,13 +405,10 @@
 
     new-array v1, v4, [Ljava/lang/String;
 
-    .line 218
     if-eqz v1, :cond_1
 
-    .line 219
     const/4 v2, 0x0
 
-    .line 220
     .local v2, "i":I
     invoke-interface {p0}, Ljava/util/Map;->entrySet()Ljava/util/Set;
 
@@ -509,7 +432,6 @@
 
     check-cast v0, Ljava/util/Map$Entry;
 
-    .line 221
     .local v0, "entry":Ljava/util/Map$Entry;, "Ljava/util/Map$Entry<Ljava/lang/String;Ljava/lang/String;>;"
     new-instance v4, Ljava/lang/StringBuilder;
 
@@ -561,7 +483,6 @@
     :cond_1
     move-object v4, v1
 
-    .line 224
     goto :goto_0
 .end method
 
@@ -582,7 +503,6 @@
     .end annotation
 
     .prologue
-    .line 228
     const/4 v0, 0x0
 
     invoke-static {p0, v0}, Lcom/android/internal/telephony/CallDetails;->getMapFromExtras([Ljava/lang/String;Z)Ljava/util/Map;
@@ -610,20 +530,16 @@
     .end annotation
 
     .prologue
-    .line 232
     new-instance v4, Ljava/util/HashMap;
 
     invoke-direct {v4}, Ljava/util/HashMap;-><init>()V
 
-    .line 234
     .local v4, "map":Ljava/util/HashMap;, "Ljava/util/HashMap<Ljava/lang/String;Ljava/lang/String;>;"
     if-nez p0, :cond_1
 
-    .line 250
     :cond_0
     return-object v4
 
-    .line 238
     :cond_1
     move-object v0, p0
 
@@ -639,7 +555,6 @@
 
     aget-object v5, v0, v1
 
-    .line 239
     .local v5, "s":Ljava/lang/String;
     const/16 v8, 0x3d
 
@@ -647,17 +562,14 @@
 
     move-result v6
 
-    .line 240
     .local v6, "sep_index":I
     if-gez v6, :cond_2
 
-    .line 238
     :goto_1
     add-int/lit8 v1, v1, 0x1
 
     goto :goto_0
 
-    .line 244
     :cond_2
     const/4 v8, 0x0
 
@@ -665,7 +577,6 @@
 
     move-result-object v2
 
-    .line 245
     .local v2, "key":Ljava/lang/String;
     add-int/lit8 v8, v6, 0x1
 
@@ -681,7 +592,6 @@
 
     move-result-object v7
 
-    .line 247
     .local v7, "value":Ljava/lang/String;
     :goto_2
     if-eqz p1, :cond_3
@@ -696,7 +606,6 @@
 
     goto :goto_1
 
-    .line 245
     :cond_4
     const-string v7, ""
 
@@ -709,12 +618,10 @@
     .locals 5
 
     .prologue
-    .line 261
     new-instance v2, Ljava/lang/StringBuilder;
 
     invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
 
-    .line 263
     .local v2, "sb":Ljava/lang/StringBuilder;
     iget-object v3, p0, Lcom/android/internal/telephony/CallDetails;->mExtras:Ljava/util/Map;
 
@@ -724,14 +631,11 @@
 
     if-eqz v3, :cond_0
 
-    .line 264
     const-string v3, ""
 
-    .line 271
     :goto_0
     return-object v3
 
-    .line 267
     :cond_0
     iget-object v3, p0, Lcom/android/internal/telephony/CallDetails;->mExtras:Ljava/util/Map;
 
@@ -757,7 +661,6 @@
 
     check-cast v0, Ljava/util/Map$Entry;
 
-    .line 268
     .local v0, "entry":Ljava/util/Map$Entry;, "Ljava/util/Map$Entry<Ljava/lang/String;Ljava/lang/String;>;"
     new-instance v4, Ljava/lang/StringBuilder;
 
@@ -807,7 +710,6 @@
 
     goto :goto_1
 
-    .line 271
     .end local v0    # "entry":Ljava/util/Map$Entry;, "Ljava/util/Map$Entry<Ljava/lang/String;Ljava/lang/String;>;"
     :cond_1
     const/4 v3, 0x0
@@ -829,7 +731,6 @@
     .locals 1
 
     .prologue
-    .line 205
     iget-object v0, p0, Lcom/android/internal/telephony/CallDetails;->mExtras:Ljava/util/Map;
 
     invoke-static {v0}, Lcom/android/internal/telephony/CallDetails;->getExtrasFromMap(Ljava/util/Map;)[Ljava/lang/String;
@@ -844,7 +745,6 @@
     .param p1, "key"    # Ljava/lang/String;
 
     .prologue
-    .line 201
     iget-object v0, p0, Lcom/android/internal/telephony/CallDetails;->mExtras:Ljava/util/Map;
 
     invoke-interface {v0, p1}, Ljava/util/Map;->get(Ljava/lang/Object;)Ljava/lang/Object;
@@ -861,24 +761,19 @@
     .param p1, "details"    # Lcom/android/internal/telephony/CallDetails;
 
     .prologue
-    .line 347
     const/4 v0, 0x0
 
-    .line 349
     .local v0, "changed":Z
     if-eqz p1, :cond_0
 
     if-ne p1, p0, :cond_1
 
-    .line 350
     :cond_0
     const/4 v1, 0x0
 
-    .line 361
     :goto_0
     return v1
 
-    .line 353
     :cond_1
     iget v1, p0, Lcom/android/internal/telephony/CallDetails;->call_type:I
 
@@ -892,13 +787,11 @@
 
     if-eq v1, v2, :cond_3
 
-    .line 354
     :cond_2
     const/4 v1, 0x1
 
     goto :goto_0
 
-    .line 357
     :cond_3
     iget-object v1, p0, Lcom/android/internal/telephony/CallDetails;->mExtras:Ljava/util/Map;
 
@@ -910,13 +803,11 @@
 
     if-nez v1, :cond_4
 
-    .line 358
     const/4 v0, 0x1
 
     :cond_4
     move v1, v0
 
-    .line 361
     goto :goto_0
 .end method
 
@@ -926,12 +817,10 @@
     .param p2, "value"    # Ljava/lang/String;
 
     .prologue
-    .line 197
     iget-object v0, p0, Lcom/android/internal/telephony/CallDetails;->mExtras:Ljava/util/Map;
 
     invoke-interface {v0, p1, p2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 198
     return-void
 .end method
 
@@ -940,14 +829,12 @@
     .param p1, "extraparams"    # [Ljava/lang/String;
 
     .prologue
-    .line 193
     invoke-static {p1}, Lcom/android/internal/telephony/CallDetails;->getMapFromExtras([Ljava/lang/String;)Ljava/util/Map;
 
     move-result-object v0
 
     iput-object v0, p0, Lcom/android/internal/telephony/CallDetails;->mExtras:Ljava/util/Map;
 
-    .line 194
     return-void
 .end method
 
@@ -956,7 +843,6 @@
     .param p1, "newExtras"    # Ljava/lang/String;
 
     .prologue
-    .line 275
     const-string v0, "\\|"
 
     invoke-virtual {p1, v0}, Ljava/lang/String;->split(Ljava/lang/String;)[Ljava/lang/String;
@@ -971,7 +857,6 @@
 
     iput-object v0, p0, Lcom/android/internal/telephony/CallDetails;->mExtras:Ljava/util/Map;
 
-    .line 276
     return-void
 .end method
 
@@ -989,15 +874,12 @@
     .end annotation
 
     .prologue
-    .line 254
     .local p1, "newExtras":Ljava/util/Map;, "Ljava/util/Map<Ljava/lang/String;Ljava/lang/String;>;"
     if-nez p1, :cond_0
 
-    .line 258
     :goto_0
     return-void
 
-    .line 257
     :cond_0
     iput-object p1, p0, Lcom/android/internal/telephony/CallDetails;->mExtras:Ljava/util/Map;
 
@@ -1009,10 +891,8 @@
     .param p1, "isMpty"    # Z
 
     .prologue
-    .line 279
     iput-boolean p1, p0, Lcom/android/internal/telephony/CallDetails;->call_isMpty:Z
 
-    .line 280
     return-void
 .end method
 
@@ -1026,7 +906,6 @@
 
     const/4 v4, 0x1
 
-    .line 283
     iget-object v2, p0, Lcom/android/internal/telephony/CallDetails;->mExtras:Ljava/util/Map;
 
     const-string v3, "participants"
@@ -1035,7 +914,6 @@
 
     move-result v0
 
-    .line 284
     .local v0, "isConferenceCall":Z
     iget-object v2, p0, Lcom/android/internal/telephony/CallDetails;->mExtras:Ljava/util/Map;
 
@@ -1047,48 +925,38 @@
 
     check-cast v1, Ljava/lang/String;
 
-    .line 286
     .local v1, "resolution":Ljava/lang/String;
     iget v2, p0, Lcom/android/internal/telephony/CallDetails;->call_domain:I
 
     if-ne v2, v5, :cond_b
 
-    .line 287
     iget v2, p0, Lcom/android/internal/telephony/CallDetails;->call_type:I
 
     if-nez v2, :cond_1
 
-    .line 288
     if-eqz v0, :cond_0
 
-    .line 289
     sget-object v2, Lcom/android/internal/telephony/Call$CallType;->IMS_CALL_CONFERENCE:Lcom/android/internal/telephony/Call$CallType;
 
-    .line 325
     :goto_0
     return-object v2
 
-    .line 291
     :cond_0
     sget-object v2, Lcom/android/internal/telephony/Call$CallType;->IMS_CALL_VOICE:Lcom/android/internal/telephony/Call$CallType;
 
     goto :goto_0
 
-    .line 293
     :cond_1
     iget v2, p0, Lcom/android/internal/telephony/CallDetails;->call_type:I
 
     if-ne v2, v6, :cond_8
 
-    .line 294
     if-eqz v0, :cond_2
 
-    .line 295
     sget-object v2, Lcom/android/internal/telephony/Call$CallType;->IMS_CALL_CONFERENCE:Lcom/android/internal/telephony/Call$CallType;
 
     goto :goto_0
 
-    .line 296
     :cond_2
     const-string v2, "qcif"
 
@@ -1098,12 +966,10 @@
 
     if-eqz v2, :cond_3
 
-    .line 297
     sget-object v2, Lcom/android/internal/telephony/Call$CallType;->IMS_CALL_QCIFVIDEO:Lcom/android/internal/telephony/Call$CallType;
 
     goto :goto_0
 
-    .line 298
     :cond_3
     const-string v2, "qvga"
 
@@ -1113,12 +979,10 @@
 
     if-eqz v2, :cond_4
 
-    .line 299
     sget-object v2, Lcom/android/internal/telephony/Call$CallType;->IMS_CALL_QVGAVIDEO:Lcom/android/internal/telephony/Call$CallType;
 
     goto :goto_0
 
-    .line 300
     :cond_4
     const-string v2, "hd_land"
 
@@ -1128,12 +992,10 @@
 
     if-eqz v2, :cond_5
 
-    .line 301
     sget-object v2, Lcom/android/internal/telephony/Call$CallType;->IMS_CALL_HDVIDEO_LAND:Lcom/android/internal/telephony/Call$CallType;
 
     goto :goto_0
 
-    .line 302
     :cond_5
     const-string v2, "hd720"
 
@@ -1143,12 +1005,10 @@
 
     if-eqz v2, :cond_6
 
-    .line 303
     sget-object v2, Lcom/android/internal/telephony/Call$CallType;->IMS_CALL_HD720VIDEO:Lcom/android/internal/telephony/Call$CallType;
 
     goto :goto_0
 
-    .line 304
     :cond_6
     const-string v2, "cif"
 
@@ -1158,79 +1018,65 @@
 
     if-eqz v2, :cond_7
 
-    .line 305
     sget-object v2, Lcom/android/internal/telephony/Call$CallType;->IMS_CALL_CIFVIDEO:Lcom/android/internal/telephony/Call$CallType;
 
     goto :goto_0
 
-    .line 307
     :cond_7
     sget-object v2, Lcom/android/internal/telephony/Call$CallType;->IMS_CALL_HDVIDEO:Lcom/android/internal/telephony/Call$CallType;
 
     goto :goto_0
 
-    .line 309
     :cond_8
     iget v2, p0, Lcom/android/internal/telephony/CallDetails;->call_type:I
 
     if-ne v2, v4, :cond_9
 
-    .line 310
     sget-object v2, Lcom/android/internal/telephony/Call$CallType;->IMS_CALL_VIDEO_SHARE_TX:Lcom/android/internal/telephony/Call$CallType;
 
     goto :goto_0
 
-    .line 311
     :cond_9
     iget v2, p0, Lcom/android/internal/telephony/CallDetails;->call_type:I
 
     if-ne v2, v5, :cond_a
 
-    .line 312
     sget-object v2, Lcom/android/internal/telephony/Call$CallType;->IMS_CALL_VIDEO_SHARE_RX:Lcom/android/internal/telephony/Call$CallType;
 
     goto :goto_0
 
-    .line 314
     :cond_a
     sget-object v2, Lcom/android/internal/telephony/Call$CallType;->NO_CALL:Lcom/android/internal/telephony/Call$CallType;
 
     goto :goto_0
 
-    .line 316
     :cond_b
     iget v2, p0, Lcom/android/internal/telephony/CallDetails;->call_domain:I
 
     if-ne v2, v4, :cond_e
 
-    .line 317
     iget v2, p0, Lcom/android/internal/telephony/CallDetails;->call_type:I
 
     if-nez v2, :cond_c
 
-    .line 318
     sget-object v2, Lcom/android/internal/telephony/Call$CallType;->CS_CALL_VOICE:Lcom/android/internal/telephony/Call$CallType;
 
     goto :goto_0
 
-    .line 319
     :cond_c
     iget v2, p0, Lcom/android/internal/telephony/CallDetails;->call_type:I
 
     if-ne v2, v6, :cond_d
 
-    .line 320
     sget-object v2, Lcom/android/internal/telephony/Call$CallType;->CS_CALL_VIDEO:Lcom/android/internal/telephony/Call$CallType;
 
     goto :goto_0
 
-    .line 322
     :cond_d
     sget-object v2, Lcom/android/internal/telephony/Call$CallType;->NO_CALL:Lcom/android/internal/telephony/Call$CallType;
 
     goto :goto_0
 
-    .line 325
     :cond_e
     sget-object v2, Lcom/android/internal/telephony/Call$CallType;->NO_CALL:Lcom/android/internal/telephony/Call$CallType;
 
@@ -1241,12 +1087,10 @@
     .locals 2
 
     .prologue
-    .line 333
     sget-boolean v0, Lcom/android/internal/telephony/CallDetails;->SHIP_BUILD:Z
 
     if-nez v0, :cond_0
 
-    .line 334
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -1305,7 +1149,6 @@
 
     move-result-object v0
 
-    .line 339
     :goto_0
     return-object v0
 

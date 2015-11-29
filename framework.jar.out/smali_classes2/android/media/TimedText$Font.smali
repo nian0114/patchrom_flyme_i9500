@@ -27,15 +27,11 @@
     .param p2, "name"    # Ljava/lang/String;
 
     .prologue
-    .line 280
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 281
     iput p1, p0, Landroid/media/TimedText$Font;->ID:I
 
-    .line 282
     iput-object p2, p0, Landroid/media/TimedText$Font;->name:Ljava/lang/String;
 
-    .line 283
     return-void
 .end method

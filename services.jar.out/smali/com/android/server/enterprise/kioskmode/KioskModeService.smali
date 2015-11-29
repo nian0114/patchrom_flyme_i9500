@@ -110,13 +110,10 @@
     .prologue
     const/4 v0, 0x0
 
-    .line 176
     sput-object v0, Lcom/android/server/enterprise/kioskmode/KioskModeService;->packageRemoveIntentReceiver:Ljava/util/Map;
 
-    .line 178
     sput-object v0, Lcom/android/server/enterprise/kioskmode/KioskModeService;->terminateIntentReceiver:Ljava/util/Map;
 
-    .line 189
     const/4 v0, 0x0
 
     sput-boolean v0, Lcom/android/server/enterprise/kioskmode/KioskModeService;->mProcessing:Z
@@ -134,39 +131,30 @@
 
     const/4 v1, 0x0
 
-    .line 202
     invoke-direct {p0}, Landroid/app/enterprise/kioskmode/IKioskMode$Stub;-><init>()V
 
-    .line 145
     iput-object v1, p0, Lcom/android/server/enterprise/kioskmode/KioskModeService;->mEDM:Landroid/app/enterprise/EnterpriseDeviceManager;
 
-    .line 146
     iput-object v1, p0, Lcom/android/server/enterprise/kioskmode/KioskModeService;->mAppPolicy:Lcom/android/server/enterprise/application/ApplicationPolicy;
 
-    .line 158
     iput-boolean v0, p0, Lcom/android/server/enterprise/kioskmode/KioskModeService;->preAdminRemoval_StatusBar:Z
 
-    .line 159
     iput-boolean v0, p0, Lcom/android/server/enterprise/kioskmode/KioskModeService;->preAdminRemoval_NavigationBar:Z
 
-    .line 186
     new-instance v0, Lcom/android/server/enterprise/kioskmode/KioskModeService$KioskModeCache;
 
     invoke-direct {v0, p0, v1}, Lcom/android/server/enterprise/kioskmode/KioskModeService$KioskModeCache;-><init>(Lcom/android/server/enterprise/kioskmode/KioskModeService;Lcom/android/server/enterprise/kioskmode/KioskModeService$1;)V
 
     iput-object v0, p0, Lcom/android/server/enterprise/kioskmode/KioskModeService;->mCache:Lcom/android/server/enterprise/kioskmode/KioskModeService$KioskModeCache;
 
-    .line 187
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
     iput-object v0, p0, Lcom/android/server/enterprise/kioskmode/KioskModeService;->mAvailableKeyCodesList:Ljava/util/List;
 
-    .line 203
     iput-object p1, p0, Lcom/android/server/enterprise/kioskmode/KioskModeService;->mContext:Landroid/content/Context;
 
-    .line 204
     new-instance v0, Lcom/android/server/enterprise/storage/EdmStorageProvider;
 
     iget-object v1, p0, Lcom/android/server/enterprise/kioskmode/KioskModeService;->mContext:Landroid/content/Context;
@@ -175,7 +163,6 @@
 
     iput-object v0, p0, Lcom/android/server/enterprise/kioskmode/KioskModeService;->mEdmStorageProvider:Lcom/android/server/enterprise/storage/EdmStorageProvider;
 
-    .line 205
     iget-object v0, p0, Lcom/android/server/enterprise/kioskmode/KioskModeService;->mContext:Landroid/content/Context;
 
     invoke-virtual {v0}, Landroid/content/Context;->getPackageManager()Landroid/content/pm/PackageManager;
@@ -184,7 +171,6 @@
 
     iput-object v0, p0, Lcom/android/server/enterprise/kioskmode/KioskModeService;->mPm:Landroid/content/pm/PackageManager;
 
-    .line 206
     new-instance v0, Landroid/os/HandlerThread;
 
     const-string v1, "KioskModeService"
@@ -193,12 +179,10 @@
 
     iput-object v0, p0, Lcom/android/server/enterprise/kioskmode/KioskModeService;->mHandlerThread:Landroid/os/HandlerThread;
 
-    .line 207
     iget-object v0, p0, Lcom/android/server/enterprise/kioskmode/KioskModeService;->mHandlerThread:Landroid/os/HandlerThread;
 
     invoke-virtual {v0}, Landroid/os/HandlerThread;->start()V
 
-    .line 208
     new-instance v0, Lcom/android/server/enterprise/kioskmode/KioskModeService$KioskHandler;
 
     iget-object v1, p0, Lcom/android/server/enterprise/kioskmode/KioskModeService;->mHandlerThread:Landroid/os/HandlerThread;
@@ -211,26 +195,22 @@
 
     iput-object v0, p0, Lcom/android/server/enterprise/kioskmode/KioskModeService;->mHandler:Lcom/android/server/enterprise/kioskmode/KioskModeService$KioskHandler;
 
-    .line 209
     iput-object p2, p0, Lcom/android/server/enterprise/kioskmode/KioskModeService;->mAppPolicy:Lcom/android/server/enterprise/application/ApplicationPolicy;
 
-    .line 211
     sget-object v0, Lcom/android/server/enterprise/kioskmode/KioskModeService;->mLock:Ljava/lang/Object;
 
     if-nez v0, :cond_0
 
-    .line 212
     new-instance v0, Ljava/lang/Object;
 
     invoke-direct {v0}, Ljava/lang/Object;-><init>()V
 
     sput-object v0, Lcom/android/server/enterprise/kioskmode/KioskModeService;->mLock:Ljava/lang/Object;
 
-    .line 215
     :cond_0
     iget-object v0, p0, Lcom/android/server/enterprise/kioskmode/KioskModeService;->mContext:Landroid/content/Context;
 
-    const-string/jumbo v1, "user"
+    const-string v1, "user"
 
     invoke-virtual {v0, v1}, Landroid/content/Context;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
 
@@ -240,21 +220,18 @@
 
     iput-object v0, p0, Lcom/android/server/enterprise/kioskmode/KioskModeService;->mUserManager:Landroid/os/UserManager;
 
-    .line 216
     new-instance v0, Ljava/util/HashMap;
 
     invoke-direct {v0}, Ljava/util/HashMap;-><init>()V
 
     sput-object v0, Lcom/android/server/enterprise/kioskmode/KioskModeService;->packageRemoveIntentReceiver:Ljava/util/Map;
 
-    .line 217
     new-instance v0, Ljava/util/HashMap;
 
     invoke-direct {v0}, Ljava/util/HashMap;-><init>()V
 
     sput-object v0, Lcom/android/server/enterprise/kioskmode/KioskModeService;->terminateIntentReceiver:Ljava/util/Map;
 
-    .line 218
     return-void
 .end method
 
@@ -264,27 +241,22 @@
     .param p2, "operation"    # I
 
     .prologue
-    .line 633
     sget-object v16, Lcom/android/server/enterprise/kioskmode/KioskModeService;->mLock:Ljava/lang/Object;
 
     monitor-enter v16
 
-    .line 634
     const/4 v3, 0x1
 
     :try_start_0
     sput-boolean v3, Lcom/android/server/enterprise/kioskmode/KioskModeService;->mProcessing:Z
 
-    .line 635
     const/4 v13, 0x0
 
-    .line 636
     .local v13, "isSystem":Z
     invoke-static {}, Landroid/os/Binder;->getCallingUid()I
 
     move-result v15
 
-    .line 637
     .local v15, "uid":I
     invoke-static {v15}, Landroid/os/UserHandle;->getAppId(I)I
 
@@ -294,32 +266,26 @@
 
     if-ne v3, v4, :cond_0
 
-    .line 638
     const/4 v13, 0x1
 
-    .line 641
     :cond_0
     move-object/from16 v5, p1
 
-    .line 642
     .local v5, "info":Landroid/app/enterprise/ContextInfo;
     invoke-static/range {p1 .. p1}, Lcom/android/server/enterprise/EnterpriseDeviceManagerService;->getCallingOrCurrentUserId(Landroid/app/enterprise/ContextInfo;)I
 
     move-result v7
 
-    .line 643
     .local v7, "userId":I
     move-object/from16 v0, p1
 
     iget v8, v0, Landroid/app/enterprise/ContextInfo;->mCallerUid:I
 
-    .line 645
     .local v8, "adminUid":I
     invoke-static {}, Landroid/os/Binder;->clearCallingIdentity()J
 
     move-result-wide v10
 
-    .line 648
     .local v10, "token":J
     move-object/from16 v0, p0
 
@@ -329,14 +295,12 @@
 
     if-nez v3, :cond_1
 
-    .line 649
     const-string v3, "KioskModeService"
 
     const-string v4, "Kiosk Mode already disabled"
 
     invoke-static {v3, v4}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 650
     const/4 v3, 0x0
 
     move-object/from16 v0, p0
@@ -345,23 +309,18 @@
 
     invoke-direct {v0, v8, v1, v3}, Lcom/android/server/enterprise/kioskmode/KioskModeService;->broadcastKioskResult(III)V
 
-    .line 724
     :goto_0
     invoke-static {v10, v11}, Landroid/os/Binder;->restoreCallingIdentity(J)V
 
-    .line 725
     const/4 v3, 0x0
 
     sput-boolean v3, Lcom/android/server/enterprise/kioskmode/KioskModeService;->mProcessing:Z
 
-    .line 726
     monitor-exit v16
 
-    .line 727
     :goto_1
     return-void
 
-    .line 651
     :cond_1
     move-object/from16 v0, p0
 
@@ -371,14 +330,12 @@
 
     if-eq v3, v8, :cond_2
 
-    .line 653
     const-string v3, "KioskModeService"
 
     const-string v4, "Kiosk Mode enabled by different admin"
 
     invoke-static {v3, v4}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 654
     const/4 v3, -0x2
 
     move-object/from16 v0, p0
@@ -389,7 +346,6 @@
 
     goto :goto_0
 
-    .line 726
     .end local v5    # "info":Landroid/app/enterprise/ContextInfo;
     .end local v7    # "userId":I
     .end local v8    # "adminUid":I
@@ -405,7 +361,6 @@
 
     throw v3
 
-    .line 657
     .restart local v5    # "info":Landroid/app/enterprise/ContextInfo;
     .restart local v7    # "userId":I
     .restart local v8    # "adminUid":I
@@ -418,12 +373,10 @@
 
     invoke-direct {v0, v7}, Lcom/android/server/enterprise/kioskmode/KioskModeService;->unregisterTerminationReceiver(I)V
 
-    .line 658
     move-object/from16 v0, p0
 
     invoke-direct {v0, v7}, Lcom/android/server/enterprise/kioskmode/KioskModeService;->unregisterPackageRemoveReceiver(I)V
 
-    .line 660
     move-object/from16 v0, p0
 
     iget-object v3, v0, Lcom/android/server/enterprise/kioskmode/KioskModeService;->mEdmStorageProvider:Lcom/android/server/enterprise/storage/EdmStorageProvider;
@@ -436,7 +389,6 @@
 
     move-result-object v6
 
-    .line 662
     .local v6, "kioskPackage":Ljava/lang/String;
     move-object/from16 v0, p0
 
@@ -450,7 +402,6 @@
 
     move-result-object v14
 
-    .line 666
     .local v14, "newHomePackage":Ljava/lang/String;
     const/4 v3, 0x0
 
@@ -462,19 +413,16 @@
 
     invoke-direct {v0, v8, v3, v4, v9}, Lcom/android/server/enterprise/kioskmode/KioskModeService;->updateDB(IZLjava/lang/String;Ljava/lang/String;)V
 
-    .line 668
     move-object/from16 v0, p0
 
     invoke-direct {v0, v7, v6, v14}, Lcom/android/server/enterprise/kioskmode/KioskModeService;->setDefaultHomeScreen(ILjava/lang/String;Ljava/lang/String;)Z
 
-    .line 670
     move-object/from16 v0, p0
 
     iget-object v3, v0, Lcom/android/server/enterprise/kioskmode/KioskModeService;->mAppPolicy:Lcom/android/server/enterprise/application/ApplicationPolicy;
 
     if-eqz v3, :cond_3
 
-    .line 672
     move-object/from16 v0, p0
 
     iget-object v3, v0, Lcom/android/server/enterprise/kioskmode/KioskModeService;->mAppPolicy:Lcom/android/server/enterprise/application/ApplicationPolicy;
@@ -483,7 +431,6 @@
 
     invoke-virtual {v3, v8, v6, v4}, Lcom/android/server/enterprise/application/ApplicationPolicy;->setApplicationUninstallationDisabledBySystem(ILjava/lang/String;Z)V
 
-    .line 674
     move-object/from16 v0, p0
 
     iget-object v3, v0, Lcom/android/server/enterprise/kioskmode/KioskModeService;->mAppPolicy:Lcom/android/server/enterprise/application/ApplicationPolicy;
@@ -492,7 +439,6 @@
 
     invoke-virtual {v3, v8, v6, v4}, Lcom/android/server/enterprise/application/ApplicationPolicy;->setApplicationInstallationDisabledBySystem(ILjava/lang/String;Z)V
 
-    .line 677
     :cond_3
     move-object/from16 v0, p0
 
@@ -518,7 +464,6 @@
 
     if-eqz v3, :cond_4
 
-    .line 679
     :try_start_2
     move-object/from16 v0, p0
 
@@ -532,14 +477,12 @@
 
     invoke-virtual {v3, v0, v4, v9}, Lcom/android/server/enterprise/application/ApplicationPolicy;->setApplicationState(Landroid/app/enterprise/ContextInfo;Ljava/lang/String;Z)Z
 
-    .line 681
     new-instance v12, Landroid/content/Intent;
 
     const-string v3, "android.intent.action.MAIN"
 
     invoke-direct {v12, v3}, Landroid/content/Intent;-><init>(Ljava/lang/String;)V
 
-    .line 682
     .local v12, "intent":Landroid/content/Intent;
     const-string v3, "com.samsung.android.app.cocktailbarservice"
 
@@ -547,7 +490,6 @@
 
     invoke-virtual {v12, v3, v4}, Landroid/content/Intent;->setClassName(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;
 
-    .line 683
     move-object/from16 v0, p0
 
     iget-object v3, v0, Lcom/android/server/enterprise/kioskmode/KioskModeService;->mContext:Landroid/content/Context;
@@ -557,13 +499,11 @@
     .catch Ljava/lang/Exception; {:try_start_2 .. :try_end_2} :catch_0
     .catchall {:try_start_2 .. :try_end_2} :catchall_0
 
-    .line 689
     .end local v12    # "intent":Landroid/content/Intent;
     :cond_4
     :goto_2
     if-eqz v13, :cond_5
 
-    .line 690
     :try_start_3
     new-instance v17, Ljava/lang/Thread;
 
@@ -581,16 +521,13 @@
 
     invoke-virtual/range {v17 .. v17}, Ljava/lang/Thread;->start()V
 
-    .line 708
     monitor-exit v16
 
     goto/16 :goto_1
 
-    .line 684
     :catch_0
     move-exception v2
 
-    .line 685
     .local v2, "e":Ljava/lang/Exception;
     const-string v3, "KioskModeService"
 
@@ -600,7 +537,6 @@
 
     goto :goto_2
 
-    .line 712
     .end local v2    # "e":Ljava/lang/Exception;
     :cond_5
     move-object/from16 v0, p0
@@ -609,17 +545,14 @@
 
     invoke-direct {v0, v1, v6}, Lcom/android/server/enterprise/kioskmode/KioskModeService;->cleanUpKioskMode(Landroid/app/enterprise/ContextInfo;Ljava/lang/String;)V
 
-    .line 715
     move-object/from16 v0, p0
 
     invoke-direct {v0, v7}, Lcom/android/server/enterprise/kioskmode/KioskModeService;->wipeRecentTasks(I)Z
 
-    .line 718
     move-object/from16 v0, p0
 
     invoke-direct {v0, v7}, Lcom/android/server/enterprise/kioskmode/KioskModeService;->launchHomeActivity(I)V
 
-    .line 721
     const/4 v3, 0x0
 
     move-object/from16 v0, p0
@@ -639,35 +572,29 @@
     .param p2, "kioskPackage"    # Ljava/lang/String;
 
     .prologue
-    .line 527
     sget-object v18, Lcom/android/server/enterprise/kioskmode/KioskModeService;->mLock:Ljava/lang/Object;
 
     monitor-enter v18
 
-    .line 528
     const/16 v17, 0x1
 
     :try_start_0
     sput-boolean v17, Lcom/android/server/enterprise/kioskmode/KioskModeService;->mProcessing:Z
 
-    .line 531
     invoke-static/range {p1 .. p1}, Lcom/android/server/enterprise/EnterpriseDeviceManagerService;->getCallingOrCurrentUserId(Landroid/app/enterprise/ContextInfo;)I
 
     move-result v16
 
-    .line 533
     .local v16, "userId":I
     invoke-static {}, Landroid/os/Binder;->clearCallingIdentity()J
 
     move-result-wide v14
 
-    .line 535
     .local v14, "token":J
     move-object/from16 v0, p1
 
     iget v4, v0, Landroid/app/enterprise/ContextInfo;->mCallerUid:I
 
-    .line 538
     .local v4, "adminUid":I
     invoke-virtual/range {p0 .. p1}, Lcom/android/server/enterprise/kioskmode/KioskModeService;->isKioskModeEnabled(Landroid/app/enterprise/ContextInfo;)Z
 
@@ -675,7 +602,6 @@
 
     if-eqz v17, :cond_0
 
-    .line 539
     const-string v17, "KioskModeService"
 
     const-string v19, "Kiosk Mode already enabled"
@@ -686,7 +612,6 @@
 
     invoke-static {v0, v1}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 540
     const/16 v17, 0x1
 
     const/16 v19, -0x1
@@ -699,22 +624,17 @@
 
     invoke-direct {v0, v4, v1, v2}, Lcom/android/server/enterprise/kioskmode/KioskModeService;->broadcastKioskResult(III)V
 
-    .line 620
     :goto_0
     invoke-static {v14, v15}, Landroid/os/Binder;->restoreCallingIdentity(J)V
 
-    .line 621
     const/16 v17, 0x0
 
     sput-boolean v17, Lcom/android/server/enterprise/kioskmode/KioskModeService;->mProcessing:Z
 
-    .line 622
     monitor-exit v18
 
-    .line 623
     return-void
 
-    .line 545
     :cond_0
     move-object/from16 v0, p0
 
@@ -724,17 +644,14 @@
 
     move-result-object v5
 
-    .line 548
     .local v5, "currentHomePackage":Ljava/lang/String;
     invoke-direct/range {p0 .. p2}, Lcom/android/server/enterprise/kioskmode/KioskModeService;->initKioskMode(Landroid/app/enterprise/ContextInfo;Ljava/lang/String;)I
 
     move-result v11
 
-    .line 549
     .local v11, "result":I
     if-eqz v11, :cond_1
 
-    .line 550
     const-string v17, "KioskModeService"
 
     const-string v19, "Kiosk Mode App not validated"
@@ -745,7 +662,6 @@
 
     invoke-static {v0, v1}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 551
     const/16 v17, 0x1
 
     move-object/from16 v0, p0
@@ -756,7 +672,6 @@
 
     goto :goto_0
 
-    .line 622
     .end local v4    # "adminUid":I
     .end local v5    # "currentHomePackage":Ljava/lang/String;
     .end local v11    # "result":I
@@ -771,7 +686,6 @@
 
     throw v17
 
-    .line 552
     .restart local v4    # "adminUid":I
     .restart local v5    # "currentHomePackage":Ljava/lang/String;
     .restart local v11    # "result":I
@@ -791,7 +705,6 @@
 
     if-nez v17, :cond_3
 
-    .line 553
     const-string v17, "KioskModeService"
 
     const-string v19, "Cannot find HOME activity"
@@ -802,7 +715,6 @@
 
     invoke-static {v0, v1}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 555
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/android/server/enterprise/kioskmode/KioskModeService;->mAppPolicy:Lcom/android/server/enterprise/application/ApplicationPolicy;
@@ -811,7 +723,6 @@
 
     if-eqz v17, :cond_2
 
-    .line 557
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/android/server/enterprise/kioskmode/KioskModeService;->mAppPolicy:Lcom/android/server/enterprise/application/ApplicationPolicy;
@@ -828,7 +739,6 @@
 
     invoke-virtual {v0, v4, v1, v2}, Lcom/android/server/enterprise/application/ApplicationPolicy;->setApplicationUninstallationDisabledBySystem(ILjava/lang/String;Z)V
 
-    .line 559
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/android/server/enterprise/kioskmode/KioskModeService;->mAppPolicy:Lcom/android/server/enterprise/application/ApplicationPolicy;
@@ -845,11 +755,9 @@
 
     invoke-virtual {v0, v4, v1, v2}, Lcom/android/server/enterprise/application/ApplicationPolicy;->setApplicationInstallationDisabledBySystem(ILjava/lang/String;Z)V
 
-    .line 562
     :cond_2
     invoke-direct/range {p0 .. p2}, Lcom/android/server/enterprise/kioskmode/KioskModeService;->cleanUpKioskMode(Landroid/app/enterprise/ContextInfo;Ljava/lang/String;)V
 
-    .line 563
     const/16 v17, 0x1
 
     const/16 v19, -0x7d0
@@ -864,7 +772,6 @@
 
     goto :goto_0
 
-    .line 567
     :cond_3
     move-object/from16 v0, p0
 
@@ -876,7 +783,7 @@
 
     move-result-object v17
 
-    const-string/jumbo v19, "toolbox_onoff"
+    const-string v19, "toolbox_onoff"
 
     const/16 v20, 0x0
 
@@ -888,7 +795,6 @@
 
     invoke-static {v0, v1, v2}, Landroid/provider/Settings$System;->putInt(Landroid/content/ContentResolver;Ljava/lang/String;I)Z
 
-    .line 570
     const/16 v17, 0x1
 
     move-object/from16 v0, p0
@@ -899,21 +805,18 @@
 
     invoke-direct {v0, v4, v1, v2, v5}, Lcom/android/server/enterprise/kioskmode/KioskModeService;->updateDB(IZLjava/lang/String;Ljava/lang/String;)V
 
-    .line 573
     move-object/from16 v0, p0
 
     move/from16 v1, v16
 
     invoke-direct {v0, v1}, Lcom/android/server/enterprise/kioskmode/KioskModeService;->launchHomeActivity(I)V
 
-    .line 577
     move-object/from16 v0, p0
 
     move/from16 v1, v16
 
     invoke-direct {v0, v1}, Lcom/android/server/enterprise/kioskmode/KioskModeService;->registerPackageRemoveReceiver(I)V
 
-    .line 578
     move-object/from16 v0, p0
 
     move/from16 v1, v16
@@ -922,17 +825,14 @@
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
-    .line 583
     const/4 v7, 0x0
 
-    .line 584
     .local v7, "flag":Z
     const/16 v12, 0x64
 
     .local v12, "timeoutCount":I
     move v13, v12
 
-    .line 585
     .end local v12    # "timeoutCount":I
     .local v13, "timeoutCount":I
     :goto_1
@@ -944,10 +844,8 @@
     .restart local v12    # "timeoutCount":I
     if-lez v13, :cond_7
 
-    .line 586
     const/4 v10, 0x0
 
-    .line 588
     .local v10, "recentTasks":Ljava/util/List;, "Ljava/util/List<Landroid/app/ActivityManager$RecentTaskInfo;>;"
     :try_start_2
     invoke-static {}, Landroid/app/ActivityManagerNative;->getDefault()Landroid/app/IActivityManager;
@@ -973,11 +871,9 @@
 
     move-result-object v10
 
-    .line 592
     :goto_2
     if-eqz v10, :cond_4
 
-    .line 593
     const/4 v8, 0x0
 
     .local v8, "i":I
@@ -991,7 +887,6 @@
 
     if-ge v8, v0, :cond_4
 
-    .line 594
     invoke-interface {v10, v8}, Ljava/util/List;->get(I)Ljava/lang/Object;
 
     move-result-object v17
@@ -1012,7 +907,6 @@
 
     move-result-object v9
 
-    .line 595
     .local v9, "packageName":Ljava/lang/String;
     move-object/from16 v0, p2
 
@@ -1022,7 +916,6 @@
 
     if-eqz v17, :cond_5
 
-    .line 597
     const/4 v7, 0x1
 
     .end local v8    # "i":I
@@ -1030,24 +923,20 @@
     :cond_4
     move v13, v12
 
-    .line 602
     .end local v12    # "timeoutCount":I
     .restart local v13    # "timeoutCount":I
     goto :goto_1
 
-    .line 589
     .end local v13    # "timeoutCount":I
     .restart local v12    # "timeoutCount":I
     :catch_0
     move-exception v6
 
-    .line 590
     .local v6, "e":Ljava/lang/Exception;
     invoke-virtual {v6}, Ljava/lang/Exception;->printStackTrace()V
 
     goto :goto_2
 
-    .line 593
     .end local v6    # "e":Ljava/lang/Exception;
     .restart local v8    # "i":I
     .restart local v9    # "packageName":Ljava/lang/String;
@@ -1064,7 +953,6 @@
     :cond_6
     move v12, v13
 
-    .line 605
     .end local v13    # "timeoutCount":I
     .restart local v12    # "timeoutCount":I
     :cond_7
@@ -1074,7 +962,6 @@
 
     invoke-direct {v0, v1}, Lcom/android/server/enterprise/kioskmode/KioskModeService;->wipeRecentTasks(I)Z
 
-    .line 608
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/android/server/enterprise/kioskmode/KioskModeService;->mContext:Landroid/content/Context;
@@ -1107,7 +994,6 @@
 
     if-eqz v17, :cond_8
 
-    .line 610
     :try_start_4
     move-object/from16 v0, p0
 
@@ -1132,7 +1018,6 @@
     .catch Ljava/lang/Exception; {:try_start_4 .. :try_end_4} :catch_1
     .catchall {:try_start_4 .. :try_end_4} :catchall_0
 
-    .line 617
     :cond_8
     :goto_4
     const/16 v17, 0x1
@@ -1150,11 +1035,9 @@
 
     goto/16 :goto_0
 
-    .line 611
     :catch_1
     move-exception v6
 
-    .line 612
     .restart local v6    # "e":Ljava/lang/Exception;
     const-string v17, "KioskModeService"
 
@@ -1177,7 +1060,6 @@
     .param p1, "x1"    # I
 
     .prologue
-    .line 125
     invoke-direct {p0, p1}, Lcom/android/server/enterprise/kioskmode/KioskModeService;->getDefaultHomeScreen(I)Ljava/lang/String;
 
     move-result-object v0
@@ -1190,7 +1072,6 @@
     .param p0, "x0"    # Z
 
     .prologue
-    .line 125
     sput-boolean p0, Lcom/android/server/enterprise/kioskmode/KioskModeService;->mProcessing:Z
 
     return p0
@@ -1201,7 +1082,6 @@
     .param p0, "x0"    # Lcom/android/server/enterprise/kioskmode/KioskModeService;
 
     .prologue
-    .line 125
     invoke-direct {p0}, Lcom/android/server/enterprise/kioskmode/KioskModeService;->applyHideSystemBarPolicy()V
 
     return-void
@@ -1213,7 +1093,6 @@
     .param p1, "x1"    # I
 
     .prologue
-    .line 125
     invoke-direct {p0, p1}, Lcom/android/server/enterprise/kioskmode/KioskModeService;->evaluateAirModeConfigurationsAsUser(I)V
 
     return-void
@@ -1224,7 +1103,6 @@
     .param p0, "x0"    # Lcom/android/server/enterprise/kioskmode/KioskModeService;
 
     .prologue
-    .line 125
     invoke-direct {p0}, Lcom/android/server/enterprise/kioskmode/KioskModeService;->getAllBlockedList()Ljava/util/Map;
 
     move-result-object v0
@@ -1237,7 +1115,6 @@
     .param p0, "x0"    # Lcom/android/server/enterprise/kioskmode/KioskModeService;
 
     .prologue
-    .line 125
     iget-object v0, p0, Lcom/android/server/enterprise/kioskmode/KioskModeService;->mContext:Landroid/content/Context;
 
     return-object v0
@@ -1250,7 +1127,6 @@
     .param p2, "x2"    # Ljava/lang/String;
 
     .prologue
-    .line 125
     invoke-direct {p0, p1, p2}, Lcom/android/server/enterprise/kioskmode/KioskModeService;->_enableKioskMode(Landroid/app/enterprise/ContextInfo;Ljava/lang/String;)V
 
     return-void
@@ -1263,7 +1139,6 @@
     .param p2, "x2"    # I
 
     .prologue
-    .line 125
     invoke-direct {p0, p1, p2}, Lcom/android/server/enterprise/kioskmode/KioskModeService;->_disableKioskMode(Landroid/app/enterprise/ContextInfo;I)V
 
     return-void
@@ -1276,7 +1151,6 @@
     .param p2, "x2"    # Ljava/lang/String;
 
     .prologue
-    .line 125
     invoke-direct {p0, p1, p2}, Lcom/android/server/enterprise/kioskmode/KioskModeService;->cleanUpKioskMode(Landroid/app/enterprise/ContextInfo;Ljava/lang/String;)V
 
     return-void
@@ -1288,7 +1162,6 @@
     .param p1, "x1"    # I
 
     .prologue
-    .line 125
     invoke-direct {p0, p1}, Lcom/android/server/enterprise/kioskmode/KioskModeService;->wipeRecentTasks(I)Z
 
     move-result v0
@@ -1302,7 +1175,6 @@
     .param p1, "x1"    # I
 
     .prologue
-    .line 125
     invoke-direct {p0, p1}, Lcom/android/server/enterprise/kioskmode/KioskModeService;->launchHomeActivity(I)V
 
     return-void
@@ -1316,7 +1188,6 @@
     .param p3, "x3"    # I
 
     .prologue
-    .line 125
     invoke-direct {p0, p1, p2, p3}, Lcom/android/server/enterprise/kioskmode/KioskModeService;->broadcastKioskResult(III)V
 
     return-void
@@ -1328,7 +1199,6 @@
     .param p1, "x1"    # I
 
     .prologue
-    .line 125
     invoke-direct {p0, p1}, Lcom/android/server/enterprise/kioskmode/KioskModeService;->forceTerminateKiosk(I)V
 
     return-void
@@ -1339,7 +1209,6 @@
     .param p0, "x0"    # Lcom/android/server/enterprise/kioskmode/KioskModeService;
 
     .prologue
-    .line 125
     iget-object v0, p0, Lcom/android/server/enterprise/kioskmode/KioskModeService;->mAppPolicy:Lcom/android/server/enterprise/application/ApplicationPolicy;
 
     return-object v0
@@ -1351,16 +1220,13 @@
     .param p2, "hwKey"    # Ljava/lang/String;
 
     .prologue
-    .line 1456
     const/4 v1, 0x1
 
-    .line 1457
     .local v1, "ret":Z
     invoke-direct {p0, p1}, Lcom/android/server/enterprise/kioskmode/KioskModeService;->getBlockedList(I)Ljava/util/Set;
 
     move-result-object v0
 
-    .line 1459
     .local v0, "list":Ljava/util/Set;, "Ljava/util/Set<Ljava/lang/String;>;"
     invoke-interface {v0, p2}, Ljava/util/Set;->contains(Ljava/lang/Object;)Z
 
@@ -1368,15 +1234,12 @@
 
     if-nez v2, :cond_0
 
-    .line 1460
     invoke-interface {v0, p2}, Ljava/util/Set;->add(Ljava/lang/Object;)Z
 
-    .line 1461
     invoke-direct {p0, p1, v0}, Lcom/android/server/enterprise/kioskmode/KioskModeService;->saveBlockedList(ILjava/util/Set;)Z
 
     move-result v1
 
-    .line 1463
     :cond_0
     return v1
 .end method
@@ -1385,15 +1248,13 @@
     .locals 6
 
     .prologue
-    .line 1376
     invoke-static {}, Landroid/os/Binder;->clearCallingIdentity()J
 
     move-result-wide v2
 
-    .line 1378
     .local v2, "token":J
     :try_start_0
-    const-string/jumbo v4, "statusbar"
+    const-string v4, "statusbar"
 
     invoke-static {v4}, Landroid/os/ServiceManager;->getService(Ljava/lang/String;)Landroid/os/IBinder;
 
@@ -1403,25 +1264,20 @@
 
     move-result-object v1
 
-    .line 1380
     .local v1, "statusBarService":Lcom/android/internal/statusbar/IStatusBarService;
     invoke-interface {v1}, Lcom/android/internal/statusbar/IStatusBarService;->applyEDMPolicy()V
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 1384
     .end local v1    # "statusBarService":Lcom/android/internal/statusbar/IStatusBarService;
     :goto_0
     invoke-static {v2, v3}, Landroid/os/Binder;->restoreCallingIdentity(J)V
 
-    .line 1385
     return-void
 
-    .line 1381
     :catch_0
     move-exception v0
 
-    .line 1382
     .local v0, "e":Ljava/lang/Exception;
     const-string v4, "KioskModeService"
 
@@ -1439,26 +1295,21 @@
     .param p3, "result"    # I
 
     .prologue
-    .line 924
     invoke-direct {p0, p1}, Lcom/android/server/enterprise/kioskmode/KioskModeService;->getPackageNameForUid(I)Ljava/lang/String;
 
     move-result-object v0
 
-    .line 926
     .local v0, "adminPackage":Ljava/lang/String;
     if-nez v0, :cond_0
 
-    .line 960
     :goto_0
     return-void
 
-    .line 930
     :cond_0
     packed-switch p2, :pswitch_data_0
 
     goto :goto_0
 
-    .line 932
     :pswitch_0
     new-instance v1, Landroid/content/Intent;
 
@@ -1466,21 +1317,17 @@
 
     invoke-direct {v1, v5}, Landroid/content/Intent;-><init>(Ljava/lang/String;)V
 
-    .line 933
     .local v1, "intent":Landroid/content/Intent;
     const-string v5, "edm.intent.extra.kiosk.mode.result"
 
     invoke-virtual {v1, v5, p3}, Landroid/content/Intent;->putExtra(Ljava/lang/String;I)Landroid/content/Intent;
 
-    .line 934
     const-string v5, "admin_uid"
 
     invoke-virtual {v1, v5, p1}, Landroid/content/Intent;->putExtra(Ljava/lang/String;I)Landroid/content/Intent;
 
-    .line 935
     invoke-virtual {v1, v0}, Landroid/content/Intent;->setPackage(Ljava/lang/String;)Landroid/content/Intent;
 
-    .line 955
     :goto_1
     new-instance v5, Landroid/app/enterprise/ContextInfo;
 
@@ -1490,13 +1337,11 @@
 
     move-result v4
 
-    .line 957
     .local v4, "userId":I
     invoke-static {}, Landroid/os/Binder;->clearCallingIdentity()J
 
     move-result-wide v2
 
-    .line 958
     .local v2, "token":J
     iget-object v5, p0, Lcom/android/server/enterprise/kioskmode/KioskModeService;->mContext:Landroid/content/Context;
 
@@ -1506,12 +1351,10 @@
 
     invoke-virtual {v5, v1, v6, v7}, Landroid/content/Context;->sendBroadcastAsUser(Landroid/content/Intent;Landroid/os/UserHandle;Ljava/lang/String;)V
 
-    .line 959
     invoke-static {v2, v3}, Landroid/os/Binder;->restoreCallingIdentity(J)V
 
     goto :goto_0
 
-    .line 939
     .end local v1    # "intent":Landroid/content/Intent;
     .end local v2    # "token":J
     .end local v4    # "userId":I
@@ -1522,23 +1365,19 @@
 
     invoke-direct {v1, v5}, Landroid/content/Intent;-><init>(Ljava/lang/String;)V
 
-    .line 940
     .restart local v1    # "intent":Landroid/content/Intent;
     const-string v5, "edm.intent.extra.kiosk.mode.result"
 
     invoke-virtual {v1, v5, p3}, Landroid/content/Intent;->putExtra(Ljava/lang/String;I)Landroid/content/Intent;
 
-    .line 941
     const-string v5, "admin_uid"
 
     invoke-virtual {v1, v5, p1}, Landroid/content/Intent;->putExtra(Ljava/lang/String;I)Landroid/content/Intent;
 
-    .line 942
     invoke-virtual {v1, v0}, Landroid/content/Intent;->setPackage(Ljava/lang/String;)Landroid/content/Intent;
 
     goto :goto_1
 
-    .line 946
     .end local v1    # "intent":Landroid/content/Intent;
     :pswitch_2
     new-instance v1, Landroid/content/Intent;
@@ -1547,18 +1386,15 @@
 
     invoke-direct {v1, v5}, Landroid/content/Intent;-><init>(Ljava/lang/String;)V
 
-    .line 947
     .restart local v1    # "intent":Landroid/content/Intent;
     const-string v5, "admin_uid"
 
     invoke-virtual {v1, v5, p1}, Landroid/content/Intent;->putExtra(Ljava/lang/String;I)Landroid/content/Intent;
 
-    .line 948
     invoke-virtual {v1, v0}, Landroid/content/Intent;->setPackage(Ljava/lang/String;)Landroid/content/Intent;
 
     goto :goto_1
 
-    .line 930
     :pswitch_data_0
     .packed-switch 0x1
         :pswitch_0
@@ -1573,12 +1409,10 @@
     .param p2, "kioskPackage"    # Ljava/lang/String;
 
     .prologue
-    .line 1071
     invoke-static {}, Landroid/os/Binder;->clearCallingIdentity()J
 
     move-result-wide v0
 
-    .line 1073
     .local v0, "token":J
     iget-object v2, p0, Lcom/android/server/enterprise/kioskmode/KioskModeService;->mAppPolicy:Lcom/android/server/enterprise/application/ApplicationPolicy;
 
@@ -1592,7 +1426,6 @@
 
     if-eqz v2, :cond_0
 
-    .line 1074
     iget-object v2, p0, Lcom/android/server/enterprise/kioskmode/KioskModeService;->mAppPolicy:Lcom/android/server/enterprise/application/ApplicationPolicy;
 
     iget v3, p1, Landroid/app/enterprise/ContextInfo;->mCallerUid:I
@@ -1603,11 +1436,9 @@
 
     invoke-virtual {v2, v3, v4, v5}, Lcom/android/server/enterprise/application/ApplicationPolicy;->uninstallApplicationInternalBySystem(ILjava/lang/String;Z)Z
 
-    .line 1077
     :cond_0
     invoke-static {v0, v1}, Landroid/os/Binder;->restoreCallingIdentity(J)V
 
-    .line 1078
     return-void
 .end method
 
@@ -1620,14 +1451,11 @@
 
     const/4 v10, -0x1
 
-    .line 1084
     const/4 v3, 0x0
 
-    .line 1085
     .local v3, "in":Ljava/io/InputStream;
     const/4 v5, 0x0
 
-    .line 1087
     .local v5, "out":Ljava/io/OutputStream;
     :try_start_0
     iget-object v9, p0, Lcom/android/server/enterprise/kioskmode/KioskModeService;->mContext:Landroid/content/Context;
@@ -1636,7 +1464,6 @@
 
     move-result-object v0
 
-    .line 1088
     .local v0, "assetManager":Landroid/content/res/AssetManager;
     const-string v9, "/system/preloadedkiosk/kioskdefault/kioskdefault.apk"
 
@@ -1644,14 +1471,12 @@
 
     move-result-object v3
 
-    .line 1089
     new-instance v6, Ljava/io/FileOutputStream;
 
     invoke-direct {v6, p1}, Ljava/io/FileOutputStream;-><init>(Ljava/io/File;)V
     :try_end_0
     .catch Ljava/io/IOException; {:try_start_0 .. :try_end_0} :catch_3
 
-    .line 1090
     .end local v5    # "out":Ljava/io/OutputStream;
     .local v6, "out":Ljava/io/OutputStream;
     const/16 v9, 0x400
@@ -1659,7 +1484,6 @@
     :try_start_1
     new-array v1, v9, [B
 
-    .line 1092
     .local v1, "buffer":[B
     :goto_0
     invoke-virtual {v3, v1}, Ljava/io/InputStream;->read([B)I
@@ -1669,7 +1493,6 @@
     .local v7, "read":I
     if-eq v7, v10, :cond_2
 
-    .line 1093
     const/4 v9, 0x0
 
     invoke-virtual {v6, v1, v9, v7}, Ljava/io/OutputStream;->write([BII)V
@@ -1678,7 +1501,6 @@
 
     goto :goto_0
 
-    .line 1098
     .end local v1    # "buffer":[B
     .end local v7    # "read":I
     :catch_0
@@ -1686,7 +1508,6 @@
 
     move-object v5, v6
 
-    .line 1099
     .end local v0    # "assetManager":Landroid/content/res/AssetManager;
     .end local v6    # "out":Ljava/io/OutputStream;
     .local v2, "e":Ljava/io/IOException;
@@ -1714,33 +1535,27 @@
 
     invoke-static {v9, v10}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1101
     if-eqz v3, :cond_0
 
-    .line 1102
     :try_start_2
     invoke-virtual {v3}, Ljava/io/InputStream;->close()V
     :try_end_2
     .catch Ljava/io/IOException; {:try_start_2 .. :try_end_2} :catch_1
 
-    .line 1107
     :cond_0
     :goto_2
     if-eqz v5, :cond_1
 
-    .line 1108
     :try_start_3
     invoke-virtual {v5}, Ljava/io/OutputStream;->close()V
     :try_end_3
     .catch Ljava/io/IOException; {:try_start_3 .. :try_end_3} :catch_2
 
-    .line 1116
     .end local v2    # "e":Ljava/io/IOException;
     :cond_1
     :goto_3
     return v8
 
-    .line 1095
     .end local v5    # "out":Ljava/io/OutputStream;
     .restart local v0    # "assetManager":Landroid/content/res/AssetManager;
     .restart local v1    # "buffer":[B
@@ -1750,15 +1565,12 @@
     :try_start_4
     invoke-virtual {v3}, Ljava/io/InputStream;->close()V
 
-    .line 1096
     invoke-virtual {v6}, Ljava/io/OutputStream;->flush()V
 
-    .line 1097
     invoke-virtual {v6}, Ljava/io/OutputStream;->close()V
     :try_end_4
     .catch Ljava/io/IOException; {:try_start_4 .. :try_end_4} :catch_0
 
-    .line 1115
     invoke-virtual {p1}, Ljava/io/File;->getPath()Ljava/lang/String;
 
     move-result-object v8
@@ -1767,7 +1579,6 @@
 
     invoke-static {v8, v9, v10, v10}, Landroid/os/FileUtils;->setPermissions(Ljava/lang/String;III)I
 
-    .line 1116
     const/4 v8, 0x1
 
     move-object v5, v6
@@ -1776,7 +1587,6 @@
     .restart local v5    # "out":Ljava/io/OutputStream;
     goto :goto_3
 
-    .line 1103
     .end local v0    # "assetManager":Landroid/content/res/AssetManager;
     .end local v1    # "buffer":[B
     .end local v7    # "read":I
@@ -1784,7 +1594,6 @@
     :catch_1
     move-exception v4
 
-    .line 1104
     .local v4, "ioe":Ljava/io/IOException;
     const-string v9, "KioskModeService"
 
@@ -1794,12 +1603,10 @@
 
     goto :goto_2
 
-    .line 1109
     .end local v4    # "ioe":Ljava/io/IOException;
     :catch_2
     move-exception v4
 
-    .line 1110
     .restart local v4    # "ioe":Ljava/io/IOException;
     const-string v9, "KioskModeService"
 
@@ -1809,7 +1616,6 @@
 
     goto :goto_3
 
-    .line 1098
     .end local v2    # "e":Ljava/io/IOException;
     .end local v4    # "ioe":Ljava/io/IOException;
     :catch_3
@@ -1823,7 +1629,6 @@
     .param p1, "cxtInfo"    # Landroid/app/enterprise/ContextInfo;
 
     .prologue
-    .line 339
     invoke-direct {p0}, Lcom/android/server/enterprise/kioskmode/KioskModeService;->getEDM()Landroid/app/enterprise/EnterpriseDeviceManager;
 
     move-result-object v0
@@ -1842,7 +1647,6 @@
     .param p1, "cxtInfo"    # Landroid/app/enterprise/ContextInfo;
 
     .prologue
-    .line 347
     invoke-direct {p0}, Lcom/android/server/enterprise/kioskmode/KioskModeService;->getEDM()Landroid/app/enterprise/EnterpriseDeviceManager;
 
     move-result-object v0
@@ -1863,24 +1667,20 @@
     .prologue
     const/4 v1, 0x0
 
-    .line 1960
     if-lez p1, :cond_1
 
     const/16 v0, 0x64
 
     if-ge p1, v0, :cond_1
 
-    .line 1964
     invoke-virtual {p0, v1}, Lcom/android/server/enterprise/kioskmode/KioskModeService;->isAirCommandModeAllowed(Landroid/app/enterprise/ContextInfo;)Z
 
     move-result v0
 
     if-nez v0, :cond_0
 
-    .line 1965
     invoke-direct {p0, p1}, Lcom/android/server/enterprise/kioskmode/KioskModeService;->resetAirCommandConfigurationAsUser(I)V
 
-    .line 1967
     :cond_0
     invoke-virtual {p0, v1}, Lcom/android/server/enterprise/kioskmode/KioskModeService;->isAirViewModeAllowed(Landroid/app/enterprise/ContextInfo;)Z
 
@@ -1888,10 +1688,8 @@
 
     if-nez v0, :cond_1
 
-    .line 1968
     invoke-direct {p0, p1}, Lcom/android/server/enterprise/kioskmode/KioskModeService;->resetAirViewConfigurationAsUser(I)V
 
-    .line 1971
     :cond_1
     return-void
 .end method
@@ -1901,12 +1699,10 @@
     .param p1, "userId"    # I
 
     .prologue
-    .line 734
     invoke-direct {p0, p1}, Lcom/android/server/enterprise/kioskmode/KioskModeService;->getActiveKioskAdmin(I)I
 
     move-result v0
 
-    .line 736
     .local v0, "kioskAdminUid":I
     const-string v1, "KioskModeService"
 
@@ -1940,7 +1736,6 @@
 
     invoke-static {v1, v2}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 740
     new-instance v1, Landroid/app/enterprise/ContextInfo;
 
     invoke-direct {v1, v0}, Landroid/app/enterprise/ContextInfo;-><init>(I)V
@@ -1949,7 +1744,6 @@
 
     invoke-direct {p0, v1, v2}, Lcom/android/server/enterprise/kioskmode/KioskModeService;->_disableKioskMode(Landroid/app/enterprise/ContextInfo;I)V
 
-    .line 741
     return-void
 .end method
 
@@ -1960,7 +1754,6 @@
     .prologue
     const/4 v8, 0x1
 
-    .line 983
     const/4 v6, 0x2
 
     :try_start_0
@@ -1978,7 +1771,6 @@
 
     aput-object v7, v0, v6
 
-    .line 988
     .local v0, "columns":[Ljava/lang/String;
     iget-object v6, p0, Lcom/android/server/enterprise/kioskmode/KioskModeService;->mEdmStorageProvider:Lcom/android/server/enterprise/storage/EdmStorageProvider;
 
@@ -1988,7 +1780,6 @@
 
     move-result-object v4
 
-    .line 991
     .local v4, "results":Ljava/util/List;, "Ljava/util/List<Landroid/content/ContentValues;>;"
     if-eqz v4, :cond_1
 
@@ -1998,16 +1789,13 @@
 
     if-nez v6, :cond_1
 
-    .line 992
     const/4 v1, 0x0
 
-    .line 993
     .local v1, "cv":Landroid/content/ContentValues;
     invoke-interface {v4}, Ljava/util/List;->iterator()Ljava/util/Iterator;
 
     move-result-object v3
 
-    .line 995
     .local v3, "it":Ljava/util/Iterator;
     :cond_0
     invoke-interface {v3}, Ljava/util/Iterator;->hasNext()Z
@@ -2016,7 +1804,6 @@
 
     if-eqz v6, :cond_1
 
-    .line 996
     invoke-interface {v3}, Ljava/util/Iterator;->next()Ljava/lang/Object;
 
     move-result-object v1
@@ -2024,7 +1811,6 @@
     .end local v1    # "cv":Landroid/content/ContentValues;
     check-cast v1, Landroid/content/ContentValues;
 
-    .line 997
     .restart local v1    # "cv":Landroid/content/ContentValues;
     const-string v6, "kioskModeEnabled"
 
@@ -2038,7 +1824,6 @@
 
     if-ne v6, v8, :cond_0
 
-    .line 998
     const-string v6, "adminUid"
 
     invoke-virtual {v1, v6}, Landroid/content/ContentValues;->getAsInteger(Ljava/lang/String;)Ljava/lang/Integer;
@@ -2051,7 +1836,6 @@
 
     move-result v5
 
-    .line 1009
     .end local v0    # "columns":[Ljava/lang/String;
     .end local v1    # "cv":Landroid/content/ContentValues;
     .end local v3    # "it":Ljava/util/Iterator;
@@ -2059,15 +1843,12 @@
     :goto_0
     return v5
 
-    .line 1004
     :catch_0
     move-exception v2
 
-    .line 1005
     .local v2, "e":Ljava/lang/Exception;
     invoke-virtual {v2}, Ljava/lang/Exception;->printStackTrace()V
 
-    .line 1008
     .end local v2    # "e":Ljava/lang/Exception;
     :cond_1
     const-string v6, "KioskModeService"
@@ -2092,7 +1873,6 @@
 
     invoke-static {v6, v7}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1009
     const/4 v5, -0x1
 
     goto :goto_0
@@ -2114,12 +1894,10 @@
     .end annotation
 
     .prologue
-    .line 1496
     invoke-static {}, Landroid/os/Binder;->clearCallingIdentity()J
 
     move-result-wide v8
 
-    .line 1497
     .local v8, "token":J
     iget-object v12, p0, Lcom/android/server/enterprise/kioskmode/KioskModeService;->mUserManager:Landroid/os/UserManager;
 
@@ -2127,20 +1905,16 @@
 
     move-result-object v10
 
-    .line 1498
     .local v10, "usersList":Ljava/util/List;, "Ljava/util/List<Landroid/content/pm/UserInfo;>;"
     invoke-static {v8, v9}, Landroid/os/Binder;->restoreCallingIdentity(J)V
 
-    .line 1499
     const/4 v7, 0x0
 
-    .line 1501
     .local v7, "userId":I
     new-instance v0, Ljava/util/HashMap;
 
     invoke-direct {v0}, Ljava/util/HashMap;-><init>()V
 
-    .line 1502
     .local v0, "adminMap":Ljava/util/Map;, "Ljava/util/Map<Ljava/lang/Integer;Ljava/util/Set<Ljava/lang/String;>;>;"
     invoke-interface {v10}, Ljava/util/List;->iterator()Ljava/util/Iterator;
 
@@ -2159,7 +1933,6 @@
 
     check-cast v2, Landroid/content/pm/UserInfo;
 
-    .line 1503
     .local v2, "i":Landroid/content/pm/UserInfo;
     invoke-virtual {v2}, Landroid/content/pm/UserInfo;->getUserHandle()Landroid/os/UserHandle;
 
@@ -2169,7 +1942,6 @@
 
     move-result v7
 
-    .line 1505
     iget-object v12, p0, Lcom/android/server/enterprise/kioskmode/KioskModeService;->mEdmStorageProvider:Lcom/android/server/enterprise/storage/EdmStorageProvider;
 
     const-string v13, "KIOSKMODE"
@@ -2180,13 +1952,11 @@
 
     move-result-object v11
 
-    .line 1508
     .local v11, "var":Ljava/util/List;, "Ljava/util/List<Ljava/lang/String;>;"
     new-instance v6, Ljava/util/HashSet;
 
     invoke-direct {v6}, Ljava/util/HashSet;-><init>()V
 
-    .line 1510
     .local v6, "ret":Ljava/util/Set;, "Ljava/util/Set<Ljava/lang/String;>;"
     invoke-interface {v11}, Ljava/util/List;->iterator()Ljava/util/Iterator;
 
@@ -2206,7 +1976,6 @@
 
     check-cast v5, Ljava/lang/String;
 
-    .line 1511
     .local v5, "list":Ljava/lang/String;
     const-string v12, ","
 
@@ -2214,7 +1983,6 @@
 
     move-result-object v1
 
-    .line 1512
     .local v1, "array":[Ljava/lang/String;
     invoke-static {v1}, Ljava/util/Arrays;->asList([Ljava/lang/Object;)Ljava/util/List;
 
@@ -2224,7 +1992,6 @@
 
     goto :goto_1
 
-    .line 1514
     .end local v1    # "array":[Ljava/lang/String;
     .end local v5    # "list":Ljava/lang/String;
     :cond_0
@@ -2236,7 +2003,6 @@
 
     goto :goto_0
 
-    .line 1516
     .end local v2    # "i":Landroid/content/pm/UserInfo;
     .end local v4    # "i$":Ljava/util/Iterator;
     .end local v6    # "ret":Ljava/util/Set;, "Ljava/util/Set<Ljava/lang/String;>;"
@@ -2259,7 +2025,6 @@
     .end annotation
 
     .prologue
-    .line 1524
     iget-object v7, p0, Lcom/android/server/enterprise/kioskmode/KioskModeService;->mEdmStorageProvider:Lcom/android/server/enterprise/storage/EdmStorageProvider;
 
     const-string v8, "KIOSKMODE"
@@ -2270,24 +2035,20 @@
 
     move-result-object v6
 
-    .line 1526
     .local v6, "var":Ljava/lang/String;
     new-instance v3, Ljava/util/HashSet;
 
     invoke-direct {v3}, Ljava/util/HashSet;-><init>()V
 
-    .line 1527
     .local v3, "l":Ljava/util/Set;, "Ljava/util/Set<Ljava/lang/String;>;"
     if-eqz v6, :cond_0
 
-    .line 1528
     const-string v7, ","
 
     invoke-virtual {v6, v7}, Ljava/lang/String;->split(Ljava/lang/String;)[Ljava/lang/String;
 
     move-result-object v1
 
-    .line 1529
     .local v1, "array":[Ljava/lang/String;
     move-object v0, v1
 
@@ -2303,16 +2064,13 @@
 
     aget-object v5, v0, v2
 
-    .line 1530
     .local v5, "s":Ljava/lang/String;
     invoke-interface {v3, v5}, Ljava/util/Set;->add(Ljava/lang/Object;)Z
 
-    .line 1529
     add-int/lit8 v2, v2, 0x1
 
     goto :goto_0
 
-    .line 1533
     .end local v0    # "arr$":[Ljava/lang/String;
     .end local v1    # "array":[Ljava/lang/String;
     .end local v2    # "i$":I
@@ -2329,28 +2087,23 @@
     .prologue
     const/4 v3, 0x0
 
-    .line 1125
     new-instance v2, Landroid/content/Intent;
 
     const-string v4, "android.intent.action.MAIN"
 
     invoke-direct {v2, v4}, Landroid/content/Intent;-><init>(Ljava/lang/String;)V
 
-    .line 1126
     .local v2, "intent":Landroid/content/Intent;
     const-string v4, "android.intent.category.HOME"
 
     invoke-virtual {v2, v4}, Landroid/content/Intent;->addCategory(Ljava/lang/String;)Landroid/content/Intent;
 
-    .line 1127
     const-string v4, "android.intent.category.DEFAULT"
 
     invoke-virtual {v2, v4}, Landroid/content/Intent;->addCategory(Ljava/lang/String;)Landroid/content/Intent;
 
-    .line 1129
     const/4 v0, 0x0
 
-    .line 1130
     .local v0, "cName":Landroid/content/ComponentName;
     iget-object v4, p0, Lcom/android/server/enterprise/kioskmode/KioskModeService;->mPm:Landroid/content/pm/PackageManager;
 
@@ -2360,11 +2113,9 @@
 
     move-result-object v1
 
-    .line 1132
     .local v1, "info":Landroid/content/pm/ResolveInfo;
     if-eqz v1, :cond_0
 
-    .line 1133
     new-instance v0, Landroid/content/ComponentName;
 
     .end local v0    # "cName":Landroid/content/ComponentName;
@@ -2380,24 +2131,20 @@
 
     invoke-direct {v0, v4, v5}, Landroid/content/ComponentName;-><init>(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 1138
     .restart local v0    # "cName":Landroid/content/ComponentName;
     :cond_0
     if-nez v0, :cond_2
 
-    .line 1139
     const-string v4, "KioskModeService"
 
     const-string v5, "getDefaultHomeScreen() fail"
 
     invoke-static {v4, v5}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1154
     :cond_1
     :goto_0
     return-object v3
 
-    .line 1143
     :cond_2
     invoke-virtual {v0}, Landroid/content/ComponentName;->getPackageName()Ljava/lang/String;
 
@@ -2411,12 +2158,10 @@
 
     if-nez v4, :cond_1
 
-    .line 1151
     invoke-virtual {v0}, Landroid/content/ComponentName;->getPackageName()Ljava/lang/String;
 
     move-result-object v3
 
-    .line 1154
     .local v3, "pkgName":Ljava/lang/String;
     goto :goto_0
 .end method
@@ -2425,12 +2170,10 @@
     .locals 2
 
     .prologue
-    .line 256
     iget-object v0, p0, Lcom/android/server/enterprise/kioskmode/KioskModeService;->mEDM:Landroid/app/enterprise/EnterpriseDeviceManager;
 
     if-nez v0, :cond_0
 
-    .line 257
     iget-object v0, p0, Lcom/android/server/enterprise/kioskmode/KioskModeService;->mContext:Landroid/content/Context;
 
     const-string v1, "enterprise_policy"
@@ -2443,7 +2186,6 @@
 
     iput-object v0, p0, Lcom/android/server/enterprise/kioskmode/KioskModeService;->mEDM:Landroid/app/enterprise/EnterpriseDeviceManager;
 
-    .line 260
     :cond_0
     iget-object v0, p0, Lcom/android/server/enterprise/kioskmode/KioskModeService;->mEDM:Landroid/app/enterprise/EnterpriseDeviceManager;
 
@@ -2456,30 +2198,25 @@
     .param p2, "homePackage"    # Ljava/lang/String;
 
     .prologue
-    .line 1261
     new-instance v1, Landroid/content/Intent;
 
     const-string v6, "android.intent.action.MAIN"
 
     invoke-direct {v1, v6}, Landroid/content/Intent;-><init>(Ljava/lang/String;)V
 
-    .line 1262
     .local v1, "intent":Landroid/content/Intent;
     const-string v6, "android.intent.category.HOME"
 
     invoke-virtual {v1, v6}, Landroid/content/Intent;->addCategory(Ljava/lang/String;)Landroid/content/Intent;
 
-    .line 1263
     const-string v6, "android.intent.category.DEFAULT"
 
     invoke-virtual {v1, v6}, Landroid/content/Intent;->addCategory(Ljava/lang/String;)Landroid/content/Intent;
 
-    .line 1265
     invoke-static {}, Landroid/os/Binder;->clearCallingIdentity()J
 
     move-result-wide v4
 
-    .line 1266
     .local v4, "token":J
     iget-object v6, p0, Lcom/android/server/enterprise/kioskmode/KioskModeService;->mPm:Landroid/content/pm/PackageManager;
 
@@ -2489,11 +2226,9 @@
 
     move-result-object v2
 
-    .line 1268
     .local v2, "list":Ljava/util/List;, "Ljava/util/List<Landroid/content/pm/ResolveInfo;>;"
     invoke-static {v4, v5}, Landroid/os/Binder;->restoreCallingIdentity(J)V
 
-    .line 1270
     const/4 v0, 0x0
 
     .local v0, "i":I
@@ -2504,7 +2239,6 @@
 
     if-ge v0, v6, :cond_1
 
-    .line 1271
     invoke-interface {v2, v0}, Ljava/util/List;->get(I)Ljava/lang/Object;
 
     move-result-object v6
@@ -2515,7 +2249,6 @@
 
     iget-object v3, v6, Landroid/content/pm/ActivityInfo;->packageName:Ljava/lang/String;
 
-    .line 1272
     .local v3, "pkgName":Ljava/lang/String;
     invoke-virtual {p2, v3}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
@@ -2523,7 +2256,6 @@
 
     if-eqz v6, :cond_0
 
-    .line 1273
     invoke-interface {v2, v0}, Ljava/util/List;->get(I)Ljava/lang/Object;
 
     move-result-object v6
@@ -2534,19 +2266,16 @@
 
     iget-object v6, v6, Landroid/content/pm/ActivityInfo;->name:Ljava/lang/String;
 
-    .line 1278
     .end local v3    # "pkgName":Ljava/lang/String;
     :goto_1
     return-object v6
 
-    .line 1270
     .restart local v3    # "pkgName":Ljava/lang/String;
     :cond_0
     add-int/lit8 v0, v0, 0x1
 
     goto :goto_0
 
-    .line 1277
     .end local v3    # "pkgName":Ljava/lang/String;
     :cond_1
     const-string v6, "KioskModeService"
@@ -2555,7 +2284,6 @@
 
     invoke-static {v6, v7}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1278
     const/4 v6, 0x0
 
     goto :goto_1
@@ -2566,12 +2294,10 @@
     .param p1, "callingUid"    # I
 
     .prologue
-    .line 968
     invoke-static {p1}, Landroid/os/UserHandle;->getAppId(I)I
 
     move-result v1
 
-    .line 969
     .local v1, "uid":I
     const/16 v2, 0x3e8
 
@@ -2585,15 +2311,12 @@
 
     if-le v1, v2, :cond_1
 
-    .line 971
     :cond_0
     const-string v0, "com.sec.enterprise.knox.cloudmdm.smdms"
 
-    .line 974
     :goto_0
     return-object v0
 
-    .line 973
     :cond_1
     iget-object v2, p0, Lcom/android/server/enterprise/kioskmode/KioskModeService;->mEdmStorageProvider:Lcom/android/server/enterprise/storage/EdmStorageProvider;
 
@@ -2601,7 +2324,6 @@
 
     move-result-object v0
 
-    .line 974
     .local v0, "pkgName":Ljava/lang/String;
     goto :goto_0
 .end method
@@ -2611,14 +2333,13 @@
     .param p1, "userId"    # I
 
     .prologue
-    .line 2093
     iget-object v1, p0, Lcom/android/server/enterprise/kioskmode/KioskModeService;->mContext:Landroid/content/Context;
 
     invoke-virtual {v1}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
 
     move-result-object v1
 
-    const-string/jumbo v2, "pen_detachment_option"
+    const-string v2, "pen_detachment_option"
 
     const/4 v3, 0x0
 
@@ -2626,7 +2347,6 @@
 
     move-result v0
 
-    .line 2098
     .local v0, "index":I
     invoke-static {}, Lcom/android/server/enterprise/kioskmode/KioskModeService$PenDetachmentOption;->values()[Lcom/android/server/enterprise/kioskmode/KioskModeService$PenDetachmentOption;
 
@@ -2641,13 +2361,11 @@
     .locals 1
 
     .prologue
-    .line 197
     iget-object v0, p0, Lcom/android/server/enterprise/kioskmode/KioskModeService;->mPersona:Lcom/android/server/pm/PersonaManagerService;
 
     if-nez v0, :cond_0
 
-    .line 198
-    const-string/jumbo v0, "persona"
+    const-string v0, "persona"
 
     invoke-static {v0}, Landroid/os/ServiceManager;->getService(Ljava/lang/String;)Landroid/os/IBinder;
 
@@ -2657,7 +2375,6 @@
 
     iput-object v0, p0, Lcom/android/server/enterprise/kioskmode/KioskModeService;->mPersona:Lcom/android/server/pm/PersonaManagerService;
 
-    .line 200
     :cond_0
     iget-object v0, p0, Lcom/android/server/enterprise/kioskmode/KioskModeService;->mPersona:Lcom/android/server/pm/PersonaManagerService;
 
@@ -2669,10 +2386,8 @@
     .param p1, "cxtInfo"    # Landroid/app/enterprise/ContextInfo;
 
     .prologue
-    .line 1851
     if-nez p1, :cond_0
 
-    .line 1852
     new-instance p1, Landroid/app/enterprise/ContextInfo;
 
     .end local p1    # "cxtInfo":Landroid/app/enterprise/ContextInfo;
@@ -2682,7 +2397,6 @@
 
     invoke-direct {p1, v5}, Landroid/app/enterprise/ContextInfo;-><init>(I)V
 
-    .line 1855
     .restart local p1    # "cxtInfo":Landroid/app/enterprise/ContextInfo;
     :cond_0
     iget-object v5, p0, Lcom/android/server/enterprise/kioskmode/KioskModeService;->mContext:Landroid/content/Context;
@@ -2697,31 +2411,26 @@
 
     move-result-object v0
 
-    .line 1856
     .local v0, "caller":Ljava/lang/String;
     if-eqz v0, :cond_2
 
-    .line 1857
     const-string v5, ":"
 
     invoke-virtual {v0, v5}, Ljava/lang/String;->lastIndexOf(Ljava/lang/String;)I
 
     move-result v1
 
-    .line 1858
     .local v1, "index":I
     const/4 v5, -0x1
 
     if-eq v1, v5, :cond_1
 
-    .line 1859
     const/4 v5, 0x0
 
     invoke-virtual {v0, v5, v1}, Ljava/lang/String;->substring(II)Ljava/lang/String;
 
     move-result-object v0
 
-    .line 1861
     :cond_1
     const-string v5, "android.uid.systemui"
 
@@ -2731,18 +2440,15 @@
 
     if-eqz v5, :cond_2
 
-    .line 1862
     invoke-static {}, Landroid/os/Binder;->clearCallingIdentity()J
 
     move-result-wide v2
 
-    .line 1863
     .local v2, "token":J
     invoke-static {}, Landroid/app/ActivityManager;->getCurrentUser()I
 
     move-result v4
 
-    .line 1864
     .local v4, "userId":I
     const-string v5, "KioskModeService"
 
@@ -2778,10 +2484,8 @@
 
     invoke-static {v5, v6}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1865
     invoke-static {v2, v3}, Landroid/os/Binder;->restoreCallingIdentity(J)V
 
-    .line 1869
     .end local v1    # "index":I
     .end local v2    # "token":J
     .end local v4    # "userId":I
@@ -2810,16 +2514,13 @@
 
     const/4 v9, 0x0
 
-    .line 1024
     const/4 v3, 0x0
 
-    .line 1027
     .local v3, "removeOwner":Z
     invoke-static {p1}, Lcom/android/server/enterprise/EnterpriseDeviceManagerService;->getCallingOrCurrentUserId(Landroid/app/enterprise/ContextInfo;)I
 
     move-result v6
 
-    .line 1028
     .local v6, "userId":I
     const-string v10, "com.sec.android.kiosk"
 
@@ -2829,7 +2530,6 @@
 
     if-eqz v10, :cond_1
 
-    .line 1029
     iget-object v8, p0, Lcom/android/server/enterprise/kioskmode/KioskModeService;->mAppPolicy:Lcom/android/server/enterprise/application/ApplicationPolicy;
 
     const-string v10, "/system/preloadedkiosk/kioskdefault/kioskdefault.apk"
@@ -2838,17 +2538,14 @@
 
     move-result v2
 
-    .line 1030
     .local v2, "isAppInstalled":Z
     if-nez v2, :cond_4
 
-    .line 1062
     .end local v2    # "isAppInstalled":Z
     :cond_0
     :goto_0
     return v7
 
-    .line 1036
     :cond_1
     :try_start_0
     invoke-static {}, Landroid/app/AppGlobals;->getPackageManager()Landroid/content/pm/IPackageManager;
@@ -2863,21 +2560,17 @@
 
     move-result-object v0
 
-    .line 1037
     .local v0, "ai":Landroid/content/pm/ApplicationInfo;
     if-nez v0, :cond_2
 
     move v7, v8
 
-    .line 1038
     goto :goto_0
 
-    .line 1039
     .end local v0    # "ai":Landroid/content/pm/ApplicationInfo;
     :catch_0
     move-exception v10
 
-    .line 1043
     :cond_2
     iget-object v10, p0, Lcom/android/server/enterprise/kioskmode/KioskModeService;->mAppPolicy:Lcom/android/server/enterprise/application/ApplicationPolicy;
 
@@ -2889,27 +2582,22 @@
 
     move v7, v8
 
-    .line 1044
     goto :goto_0
 
-    .line 1047
     :cond_3
     invoke-direct {p0, v6, p2}, Lcom/android/server/enterprise/kioskmode/KioskModeService;->getHomeActivity(ILjava/lang/String;)Ljava/lang/String;
 
     move-result-object v1
 
-    .line 1048
     .local v1, "homeActivity":Ljava/lang/String;
     if-eqz v1, :cond_0
 
-    .line 1053
     .end local v1    # "homeActivity":Ljava/lang/String;
     :cond_4
     invoke-static {}, Landroid/os/Binder;->clearCallingIdentity()J
 
     move-result-wide v4
 
-    .line 1056
     .local v4, "token":J
     iget-object v7, p0, Lcom/android/server/enterprise/kioskmode/KioskModeService;->mAppPolicy:Lcom/android/server/enterprise/application/ApplicationPolicy;
 
@@ -2917,19 +2605,16 @@
 
     invoke-virtual {v7, v8, p2, v12}, Lcom/android/server/enterprise/application/ApplicationPolicy;->setApplicationUninstallationDisabledBySystem(ILjava/lang/String;Z)V
 
-    .line 1058
     iget-object v7, p0, Lcom/android/server/enterprise/kioskmode/KioskModeService;->mAppPolicy:Lcom/android/server/enterprise/application/ApplicationPolicy;
 
     iget v8, p1, Landroid/app/enterprise/ContextInfo;->mCallerUid:I
 
     invoke-virtual {v7, v8, p2, v12}, Lcom/android/server/enterprise/application/ApplicationPolicy;->setApplicationInstallationDisabledBySystem(ILjava/lang/String;Z)V
 
-    .line 1060
     invoke-static {v4, v5}, Landroid/os/Binder;->restoreCallingIdentity(J)V
 
     move v7, v9
 
-    .line 1062
     goto :goto_0
 .end method
 
@@ -2937,18 +2622,15 @@
     .locals 7
 
     .prologue
-    .line 1583
     invoke-static {}, Landroid/view/KeyEvent;->getMaxKeyCode()I
 
     move-result v2
 
-    .line 1585
     .local v2, "maxKeycode":I
     add-int/lit8 v4, v2, -0x1
 
     new-array v1, v4, [I
 
-    .line 1586
     .local v1, "keyCodes":[I
     const/4 v0, 0x0
 
@@ -2958,32 +2640,26 @@
 
     if-ge v0, v4, :cond_0
 
-    .line 1587
     add-int/lit8 v4, v0, 0x1
 
     aput v4, v1, v0
 
-    .line 1586
     add-int/lit8 v0, v0, 0x1
 
     goto :goto_0
 
-    .line 1589
     :cond_0
     invoke-static {v1}, Landroid/view/KeyCharacterMap;->deviceHasKeys([I)[Z
 
     move-result-object v3
 
-    .line 1590
     .local v3, "ret":[Z
     if-eqz v3, :cond_3
 
-    .line 1591
     iget-object v5, p0, Lcom/android/server/enterprise/kioskmode/KioskModeService;->mAvailableKeyCodesList:Ljava/util/List;
 
     monitor-enter v5
 
-    .line 1592
     const/4 v0, 0x0
 
     :goto_1
@@ -2992,12 +2668,10 @@
 
     if-ge v0, v4, :cond_2
 
-    .line 1593
     aget-boolean v4, v3, v0
 
     if-eqz v4, :cond_1
 
-    .line 1594
     iget-object v4, p0, Lcom/android/server/enterprise/kioskmode/KioskModeService;->mAvailableKeyCodesList:Ljava/util/List;
 
     add-int/lit8 v6, v0, 0x1
@@ -3008,21 +2682,17 @@
 
     invoke-interface {v4, v6}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    .line 1592
     :cond_1
     add-int/lit8 v0, v0, 0x1
 
     goto :goto_1
 
-    .line 1597
     :cond_2
     monitor-exit v5
 
-    .line 1599
     :cond_3
     return-void
 
-    .line 1597
     :catchall_0
     move-exception v4
 
@@ -3038,7 +2708,6 @@
     .param p1, "hwKeyId"    # I
 
     .prologue
-    .line 1537
     iget-object v0, p0, Lcom/android/server/enterprise/kioskmode/KioskModeService;->mAvailableKeyCodesList:Ljava/util/List;
 
     invoke-static {p1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
@@ -3057,27 +2726,23 @@
     .param p1, "userId"    # I
 
     .prologue
-    .line 1783
     const/4 v1, 0x0
 
-    .line 1785
     .local v1, "ret":Z
     invoke-static {}, Lcom/android/server/enterprise/EnterpriseDeviceManagerService;->getKioskOrOwnerUserId()I
 
     move-result p1
 
-    .line 1786
     iget-object v4, p0, Lcom/android/server/enterprise/kioskmode/KioskModeService;->mEdmStorageProvider:Lcom/android/server/enterprise/storage/EdmStorageProvider;
 
     const-string v5, "KIOSKMODE"
 
-    const-string/jumbo v6, "systemBarEnabled"
+    const-string v6, "systemBarEnabled"
 
     invoke-virtual {v4, v5, v6, p1}, Lcom/android/server/enterprise/storage/EdmStorageProvider;->getIntListAsUser(Ljava/lang/String;Ljava/lang/String;I)Ljava/util/ArrayList;
 
     move-result-object v3
 
-    .line 1789
     .local v3, "values":Ljava/util/ArrayList;, "Ljava/util/ArrayList<Ljava/lang/Integer;>;"
     invoke-virtual {v3}, Ljava/util/ArrayList;->iterator()Ljava/util/Iterator;
 
@@ -3101,16 +2766,13 @@
 
     move-result v2
 
-    .line 1790
     .local v2, "value":I
     and-int/lit8 v4, v2, 0x2
 
     if-eqz v4, :cond_0
 
-    .line 1791
     const/4 v1, 0x1
 
-    .line 1798
     .end local v2    # "value":I
     :cond_1
     return v1
@@ -3121,27 +2783,23 @@
     .param p1, "userId"    # I
 
     .prologue
-    .line 1721
     const/4 v1, 0x0
 
-    .line 1723
     .local v1, "ret":Z
     invoke-static {}, Lcom/android/server/enterprise/EnterpriseDeviceManagerService;->getKioskOrOwnerUserId()I
 
     move-result p1
 
-    .line 1724
     iget-object v4, p0, Lcom/android/server/enterprise/kioskmode/KioskModeService;->mEdmStorageProvider:Lcom/android/server/enterprise/storage/EdmStorageProvider;
 
     const-string v5, "KIOSKMODE"
 
-    const-string/jumbo v6, "systemBarEnabled"
+    const-string v6, "systemBarEnabled"
 
     invoke-virtual {v4, v5, v6, p1}, Lcom/android/server/enterprise/storage/EdmStorageProvider;->getIntListAsUser(Ljava/lang/String;Ljava/lang/String;I)Ljava/util/ArrayList;
 
     move-result-object v3
 
-    .line 1727
     .local v3, "values":Ljava/util/ArrayList;, "Ljava/util/ArrayList<Ljava/lang/Integer;>;"
     invoke-virtual {v3}, Ljava/util/ArrayList;->iterator()Ljava/util/Iterator;
 
@@ -3165,16 +2823,13 @@
 
     move-result v2
 
-    .line 1728
     .local v2, "value":I
     and-int/lit8 v4, v2, 0x1
 
     if-eqz v4, :cond_0
 
-    .line 1729
     const/4 v1, 0x1
 
-    .line 1736
     .end local v2    # "value":I
     :cond_1
     return v1
@@ -3185,27 +2840,23 @@
     .param p1, "userId"    # I
 
     .prologue
-    .line 1357
     const/4 v1, 0x0
 
-    .line 1359
     .local v1, "ret":Z
     invoke-static {}, Lcom/android/server/enterprise/EnterpriseDeviceManagerService;->getKioskOrOwnerUserId()I
 
     move-result p1
 
-    .line 1360
     iget-object v4, p0, Lcom/android/server/enterprise/kioskmode/KioskModeService;->mEdmStorageProvider:Lcom/android/server/enterprise/storage/EdmStorageProvider;
 
     const-string v5, "KIOSKMODE"
 
-    const-string/jumbo v6, "systemBarEnabled"
+    const-string v6, "systemBarEnabled"
 
     invoke-virtual {v4, v5, v6, p1}, Lcom/android/server/enterprise/storage/EdmStorageProvider;->getIntListAsUser(Ljava/lang/String;Ljava/lang/String;I)Ljava/util/ArrayList;
 
     move-result-object v3
 
-    .line 1363
     .local v3, "values":Ljava/util/ArrayList;, "Ljava/util/ArrayList<Ljava/lang/Integer;>;"
     invoke-virtual {v3}, Ljava/util/ArrayList;->iterator()Ljava/util/Iterator;
 
@@ -3229,7 +2880,6 @@
 
     move-result v2
 
-    .line 1364
     .local v2, "value":I
     and-int/lit8 v4, v2, 0x1
 
@@ -3239,10 +2889,8 @@
 
     if-eqz v4, :cond_0
 
-    .line 1366
     const/4 v1, 0x1
 
-    .line 1372
     .end local v2    # "value":I
     :cond_1
     return v1
@@ -3253,25 +2901,21 @@
     .param p1, "userId"    # I
 
     .prologue
-    .line 1300
     new-instance v1, Landroid/content/Intent;
 
     const-string v2, "android.intent.action.MAIN"
 
     invoke-direct {v1, v2}, Landroid/content/Intent;-><init>(Ljava/lang/String;)V
 
-    .line 1301
     .local v1, "homeIntent":Landroid/content/Intent;
     const-string v2, "android.intent.category.HOME"
 
     invoke-virtual {v1, v2}, Landroid/content/Intent;->addCategory(Ljava/lang/String;)Landroid/content/Intent;
 
-    .line 1302
     const/high16 v2, 0x10000000
 
     invoke-virtual {v1, v2}, Landroid/content/Intent;->setFlags(I)Landroid/content/Intent;
 
-    .line 1304
     :try_start_0
     iget-object v2, p0, Lcom/android/server/enterprise/kioskmode/KioskModeService;->mContext:Landroid/content/Context;
 
@@ -3283,15 +2927,12 @@
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 1308
     :goto_0
     return-void
 
-    .line 1305
     :catch_0
     move-exception v0
 
-    .line 1306
     .local v0, "e":Ljava/lang/Exception;
     invoke-virtual {v0}, Ljava/lang/Exception;->printStackTrace()V
 
@@ -3303,7 +2944,6 @@
     .param p1, "userId"    # I
 
     .prologue
-    .line 750
     :try_start_0
     sget-object v0, Lcom/android/server/enterprise/kioskmode/KioskModeService;->packageRemoveIntentReceiver:Ljava/util/Map;
 
@@ -3317,34 +2957,28 @@
 
     if-nez v0, :cond_0
 
-    .line 751
     new-instance v3, Landroid/content/IntentFilter;
 
     const-string v0, "android.intent.action.PACKAGE_REMOVED"
 
     invoke-direct {v3, v0}, Landroid/content/IntentFilter;-><init>(Ljava/lang/String;)V
 
-    .line 752
     .local v3, "intentFilter":Landroid/content/IntentFilter;
     const-string v0, "android.intent.action.PACKAGE_CHANGED"
 
     invoke-virtual {v3, v0}, Landroid/content/IntentFilter;->addAction(Ljava/lang/String;)V
 
-    .line 753
-    const-string/jumbo v0, "package"
+    const-string v0, "package"
 
     invoke-virtual {v3, v0}, Landroid/content/IntentFilter;->addDataScheme(Ljava/lang/String;)V
 
-    .line 755
     new-instance v1, Lcom/android/server/enterprise/kioskmode/KioskModeService$2;
 
     invoke-direct {v1, p0}, Lcom/android/server/enterprise/kioskmode/KioskModeService$2;-><init>(Lcom/android/server/enterprise/kioskmode/KioskModeService;)V
 
-    .line 796
     .local v1, "mReceiver":Landroid/content/BroadcastReceiver;
     if-eqz v1, :cond_0
 
-    .line 797
     iget-object v0, p0, Lcom/android/server/enterprise/kioskmode/KioskModeService;->mContext:Landroid/content/Context;
 
     new-instance v2, Landroid/os/UserHandle;
@@ -3357,7 +2991,6 @@
 
     invoke-virtual/range {v0 .. v5}, Landroid/content/Context;->registerReceiverAsUser(Landroid/content/BroadcastReceiver;Landroid/os/UserHandle;Landroid/content/IntentFilter;Ljava/lang/String;Landroid/os/Handler;)Landroid/content/Intent;
 
-    .line 799
     sget-object v0, Lcom/android/server/enterprise/kioskmode/KioskModeService;->packageRemoveIntentReceiver:Ljava/util/Map;
 
     invoke-static {p1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
@@ -3368,18 +3001,15 @@
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 805
     .end local v1    # "mReceiver":Landroid/content/BroadcastReceiver;
     .end local v3    # "intentFilter":Landroid/content/IntentFilter;
     :cond_0
     :goto_0
     return-void
 
-    .line 802
     :catch_0
     move-exception v6
 
-    .line 803
     .local v6, "e":Ljava/lang/Exception;
     const-string v0, "KioskModeService"
 
@@ -3394,24 +3024,20 @@
     .locals 6
 
     .prologue
-    .line 896
     :try_start_0
     new-instance v1, Landroid/content/IntentFilter;
 
     invoke-direct {v1}, Landroid/content/IntentFilter;-><init>()V
 
-    .line 897
     .local v1, "intentFilter":Landroid/content/IntentFilter;
     const-string v3, "android.intent.action.USER_SWITCHED"
 
     invoke-virtual {v1, v3}, Landroid/content/IntentFilter;->addAction(Ljava/lang/String;)V
 
-    .line 899
     new-instance v2, Lcom/android/server/enterprise/kioskmode/KioskModeService$4;
 
     invoke-direct {v2, p0}, Lcom/android/server/enterprise/kioskmode/KioskModeService$4;-><init>(Lcom/android/server/enterprise/kioskmode/KioskModeService;)V
 
-    .line 908
     .local v2, "switchingUserIntentReceiver":Landroid/content/BroadcastReceiver;
     iget-object v3, p0, Lcom/android/server/enterprise/kioskmode/KioskModeService;->mContext:Landroid/content/Context;
 
@@ -3423,17 +3049,14 @@
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 912
     .end local v1    # "intentFilter":Landroid/content/IntentFilter;
     .end local v2    # "switchingUserIntentReceiver":Landroid/content/BroadcastReceiver;
     :goto_0
     return-void
 
-    .line 909
     :catch_0
     move-exception v0
 
-    .line 910
     .local v0, "e":Ljava/lang/Exception;
     const-string v3, "KioskModeService"
 
@@ -3449,7 +3072,6 @@
     .param p1, "userId"    # I
 
     .prologue
-    .line 827
     :try_start_0
     sget-object v0, Lcom/android/server/enterprise/kioskmode/KioskModeService;->terminateIntentReceiver:Ljava/util/Map;
 
@@ -3463,24 +3085,20 @@
 
     if-nez v0, :cond_0
 
-    .line 828
     new-instance v3, Landroid/content/IntentFilter;
 
     const-string v0, "android.intent.action.enterprise.TERMINATE_KIOSK"
 
     invoke-direct {v3, v0}, Landroid/content/IntentFilter;-><init>(Ljava/lang/String;)V
 
-    .line 831
     .local v3, "intentFilter":Landroid/content/IntentFilter;
     new-instance v1, Lcom/android/server/enterprise/kioskmode/KioskModeService$3;
 
     invoke-direct {v1, p0}, Lcom/android/server/enterprise/kioskmode/KioskModeService$3;-><init>(Lcom/android/server/enterprise/kioskmode/KioskModeService;)V
 
-    .line 870
     .local v1, "mReceiver":Landroid/content/BroadcastReceiver;
     if-eqz v1, :cond_0
 
-    .line 871
     sget-object v0, Lcom/android/server/enterprise/kioskmode/KioskModeService;->terminateIntentReceiver:Ljava/util/Map;
 
     invoke-static {p1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
@@ -3489,7 +3107,6 @@
 
     invoke-interface {v0, v2, v1}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 872
     iget-object v0, p0, Lcom/android/server/enterprise/kioskmode/KioskModeService;->mContext:Landroid/content/Context;
 
     new-instance v2, Landroid/os/UserHandle;
@@ -3504,18 +3121,15 @@
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 879
     .end local v1    # "mReceiver":Landroid/content/BroadcastReceiver;
     .end local v3    # "intentFilter":Landroid/content/IntentFilter;
     :cond_0
     :goto_0
     return-void
 
-    .line 876
     :catch_0
     move-exception v6
 
-    .line 877
     .local v6, "e":Ljava/lang/Exception;
     const-string v0, "KioskModeService"
 
@@ -3532,16 +3146,13 @@
     .param p2, "hwKey"    # Ljava/lang/String;
 
     .prologue
-    .line 1467
     const/4 v1, 0x1
 
-    .line 1468
     .local v1, "ret":Z
     invoke-direct {p0, p1}, Lcom/android/server/enterprise/kioskmode/KioskModeService;->getBlockedList(I)Ljava/util/Set;
 
     move-result-object v0
 
-    .line 1469
     .local v0, "list":Ljava/util/Set;, "Ljava/util/Set<Ljava/lang/String;>;"
     invoke-interface {v0, p2}, Ljava/util/Set;->contains(Ljava/lang/Object;)Z
 
@@ -3549,15 +3160,12 @@
 
     if-eqz v2, :cond_0
 
-    .line 1470
     invoke-interface {v0, p2}, Ljava/util/Set;->remove(Ljava/lang/Object;)Z
 
-    .line 1471
     invoke-direct {p0, p1, v0}, Lcom/android/server/enterprise/kioskmode/KioskModeService;->saveBlockedList(ILjava/util/Set;)Z
 
     move-result v1
 
-    .line 1473
     :cond_0
     return v1
 .end method
@@ -3567,12 +3175,10 @@
     .param p1, "userId"    # I
 
     .prologue
-    .line 1942
     const/4 v0, 0x0
 
     invoke-direct {p0, p1, v0}, Lcom/android/server/enterprise/kioskmode/KioskModeService;->setAirCommandOn(IZ)V
 
-    .line 1944
     invoke-direct {p0, p1}, Lcom/android/server/enterprise/kioskmode/KioskModeService;->getPenDetachmentOption(I)Lcom/android/server/enterprise/kioskmode/KioskModeService$PenDetachmentOption;
 
     move-result-object v0
@@ -3585,12 +3191,10 @@
 
     if-eqz v0, :cond_0
 
-    .line 1945
     sget-object v0, Lcom/android/server/enterprise/kioskmode/KioskModeService$PenDetachmentOption;->NONE:Lcom/android/server/enterprise/kioskmode/KioskModeService$PenDetachmentOption;
 
     invoke-direct {p0, p1, v0}, Lcom/android/server/enterprise/kioskmode/KioskModeService;->setPenDetachmentOption(ILcom/android/server/enterprise/kioskmode/KioskModeService$PenDetachmentOption;)V
 
-    .line 1947
     :cond_0
     return-void
 .end method
@@ -3602,19 +3206,14 @@
     .prologue
     const/4 v0, 0x0
 
-    .line 2020
     invoke-direct {p0, p1, v0}, Lcom/android/server/enterprise/kioskmode/KioskModeService;->setAirViewOn(IZ)V
 
-    .line 2021
     invoke-direct {p0, p1, v0}, Lcom/android/server/enterprise/kioskmode/KioskModeService;->setFingerAirViewOn(IZ)V
 
-    .line 2022
     invoke-direct {p0, p1, v0}, Lcom/android/server/enterprise/kioskmode/KioskModeService;->setFingerAirViewInformationPreviewOn(IZ)V
 
-    .line 2023
     invoke-direct {p0, p1, v0}, Lcom/android/server/enterprise/kioskmode/KioskModeService;->setPenHoveringOn(IZ)V
 
-    .line 2024
     return-void
 .end method
 
@@ -3632,11 +3231,9 @@
     .end annotation
 
     .prologue
-    .line 1477
     .local p2, "list":Ljava/util/Set;, "Ljava/util/Set<Ljava/lang/String;>;"
     const/4 v1, 0x1
 
-    .line 1479
     .local v1, "ret":Z
     invoke-interface {p2}, Ljava/util/Set;->isEmpty()Z
 
@@ -3644,7 +3241,6 @@
 
     if-eqz v4, :cond_0
 
-    .line 1480
     iget-object v4, p0, Lcom/android/server/enterprise/kioskmode/KioskModeService;->mEdmStorageProvider:Lcom/android/server/enterprise/storage/EdmStorageProvider;
 
     const-string v5, "KIOSKMODE"
@@ -3657,17 +3253,14 @@
 
     move-result v1
 
-    .line 1490
     :goto_0
     return v1
 
-    .line 1483
     :cond_0
     new-instance v3, Ljava/lang/StringBuilder;
 
     invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
 
-    .line 1484
     .local v3, "sb":Ljava/lang/StringBuilder;
     invoke-interface {p2}, Ljava/util/Set;->iterator()Ljava/util/Iterator;
 
@@ -3687,7 +3280,6 @@
 
     check-cast v2, Ljava/lang/String;
 
-    .line 1485
     .local v2, "s":Ljava/lang/String;
     new-instance v4, Ljava/lang/StringBuilder;
 
@@ -3711,7 +3303,6 @@
 
     goto :goto_1
 
-    .line 1487
     .end local v2    # "s":Ljava/lang/String;
     :cond_1
     iget-object v4, p0, Lcom/android/server/enterprise/kioskmode/KioskModeService;->mEdmStorageProvider:Lcom/android/server/enterprise/storage/EdmStorageProvider;
@@ -3737,12 +3328,10 @@
     .param p2, "on"    # Z
 
     .prologue
-    .line 2033
     invoke-static {}, Landroid/os/Binder;->clearCallingIdentity()J
 
     move-result-wide v0
 
-    .line 2034
     .local v0, "token":J
     iget-object v2, p0, Lcom/android/server/enterprise/kioskmode/KioskModeService;->mContext:Landroid/content/Context;
 
@@ -3759,13 +3348,10 @@
     :goto_0
     invoke-static {v3, v4, v2, p1}, Landroid/provider/Settings$System;->putIntForUser(Landroid/content/ContentResolver;Ljava/lang/String;II)Z
 
-    .line 2038
     invoke-static {v0, v1}, Landroid/os/Binder;->restoreCallingIdentity(J)V
 
-    .line 2039
     return-void
 
-    .line 2034
     :cond_0
     const/4 v2, 0x0
 
@@ -3778,12 +3364,10 @@
     .param p2, "on"    # Z
 
     .prologue
-    .line 2048
     invoke-static {}, Landroid/os/Binder;->clearCallingIdentity()J
 
     move-result-wide v0
 
-    .line 2049
     .local v0, "token":J
     iget-object v2, p0, Lcom/android/server/enterprise/kioskmode/KioskModeService;->mContext:Landroid/content/Context;
 
@@ -3800,13 +3384,10 @@
     :goto_0
     invoke-static {v3, v4, v2, p1}, Landroid/provider/Settings$System;->putIntForUser(Landroid/content/ContentResolver;Ljava/lang/String;II)Z
 
-    .line 2053
     invoke-static {v0, v1}, Landroid/os/Binder;->restoreCallingIdentity(J)V
 
-    .line 2054
     return-void
 
-    .line 2049
     :cond_0
     const/4 v2, 0x0
 
@@ -3820,35 +3401,28 @@
     .param p3, "newHomePackage"    # Ljava/lang/String;
 
     .prologue
-    .line 1169
     new-instance v15, Landroid/content/Intent;
 
     const-string v4, "android.intent.action.MAIN"
 
     invoke-direct {v15, v4}, Landroid/content/Intent;-><init>(Ljava/lang/String;)V
 
-    .line 1170
     .local v15, "intent":Landroid/content/Intent;
     const-string v4, "android.intent.category.HOME"
 
     invoke-virtual {v15, v4}, Landroid/content/Intent;->addCategory(Ljava/lang/String;)Landroid/content/Intent;
 
-    .line 1171
     const-string v4, "android.intent.category.DEFAULT"
 
     invoke-virtual {v15, v4}, Landroid/content/Intent;->addCategory(Ljava/lang/String;)Landroid/content/Intent;
 
-    .line 1173
     const/4 v12, 0x0
 
-    .line 1178
     .local v12, "flag":Z
     if-eqz p2, :cond_2
 
-    .line 1179
     const/16 v16, 0x0
 
-    .line 1183
     .local v16, "isAppInstalled":Z
     :try_start_0
     invoke-static {}, Landroid/app/AppGlobals;->getPackageManager()Landroid/content/pm/IPackageManager;
@@ -3867,14 +3441,11 @@
 
     move-result-object v11
 
-    .line 1184
     .local v11, "ai":Landroid/content/pm/ApplicationInfo;
     if-eqz v11, :cond_0
 
-    .line 1185
     const/16 v16, 0x1
 
-    .line 1191
     .end local v11    # "ai":Landroid/content/pm/ApplicationInfo;
     :cond_0
     :goto_0
@@ -3890,19 +3461,16 @@
 
     if-eqz v16, :cond_1
 
-    .line 1192
     const/4 v12, 0x1
 
-    .line 1195
     :cond_1
     invoke-static {}, Landroid/os/Binder;->clearCallingIdentity()J
 
     move-result-wide v22
 
-    .line 1197
     .local v22, "token":J
     :try_start_1
-    const-string/jumbo v4, "package"
+    const-string v4, "package"
 
     invoke-static {v4}, Landroid/os/ServiceManager;->getService(Ljava/lang/String;)Landroid/os/IBinder;
 
@@ -3912,7 +3480,6 @@
 
     move-result-object v18
 
-    .line 1198
     .local v18, "mIPackageManager":Landroid/content/pm/IPackageManager;
     move-object/from16 v0, v18
 
@@ -3925,10 +3492,8 @@
     .catch Ljava/lang/Exception; {:try_start_1 .. :try_end_1} :catch_0
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
-    .line 1202
     invoke-static/range {v22 .. v23}, Landroid/os/Binder;->restoreCallingIdentity(J)V
 
-    .line 1210
     .end local v16    # "isAppInstalled":Z
     .end local v18    # "mIPackageManager":Landroid/content/pm/IPackageManager;
     .end local v22    # "token":J
@@ -3936,12 +3501,10 @@
     :goto_1
     if-eqz p3, :cond_7
 
-    .line 1211
     invoke-static {}, Landroid/os/Binder;->clearCallingIdentity()J
 
     move-result-wide v22
 
-    .line 1212
     .restart local v22    # "token":J
     move-object/from16 v0, p0
 
@@ -3955,28 +3518,23 @@
 
     move-result-object v17
 
-    .line 1214
     .local v17, "list":Ljava/util/List;, "Ljava/util/List<Landroid/content/pm/ResolveInfo;>;"
     invoke-static/range {v22 .. v23}, Landroid/os/Binder;->restoreCallingIdentity(J)V
 
-    .line 1217
     if-eqz v12, :cond_3
 
-    .line 1220
     invoke-interface/range {v17 .. v17}, Ljava/util/List;->size()I
 
     move-result v4
 
     add-int/lit8 v20, v4, -0x1
 
-    .line 1224
     .local v20, "size":I
     :goto_2
     move/from16 v0, v20
 
     new-array v7, v0, [Landroid/content/ComponentName;
 
-    .line 1225
     .local v7, "components":[Landroid/content/ComponentName;
     const/4 v14, 0x0
 
@@ -3986,7 +3544,6 @@
 
     if-ge v14, v0, :cond_5
 
-    .line 1226
     move-object/from16 v0, v17
 
     invoke-interface {v0, v14}, Ljava/util/List;->get(I)Ljava/lang/Object;
@@ -4001,7 +3558,6 @@
 
     move-object/from16 v19, v0
 
-    .line 1227
     .local v19, "pkgName":Ljava/lang/String;
     move-object/from16 v0, v17
 
@@ -4015,7 +3571,6 @@
 
     iget-object v10, v4, Landroid/content/pm/ActivityInfo;->name:Ljava/lang/String;
 
-    .line 1228
     .local v10, "activity":Ljava/lang/String;
     if-eqz v12, :cond_4
 
@@ -4029,13 +3584,11 @@
 
     if-eqz v4, :cond_4
 
-    .line 1225
     :goto_4
     add-int/lit8 v14, v14, 0x1
 
     goto :goto_3
 
-    .line 1199
     .end local v7    # "components":[Landroid/content/ComponentName;
     .end local v10    # "activity":Ljava/lang/String;
     .end local v14    # "i":I
@@ -4046,7 +3599,6 @@
     :catch_0
     move-exception v4
 
-    .line 1202
     invoke-static/range {v22 .. v23}, Landroid/os/Binder;->restoreCallingIdentity(J)V
 
     goto :goto_1
@@ -4058,7 +3610,6 @@
 
     throw v4
 
-    .line 1222
     .end local v16    # "isAppInstalled":Z
     .restart local v17    # "list":Ljava/util/List;, "Ljava/util/List<Landroid/content/pm/ResolveInfo;>;"
     :cond_3
@@ -4069,7 +3620,6 @@
     .restart local v20    # "size":I
     goto :goto_2
 
-    .line 1231
     .restart local v7    # "components":[Landroid/content/ComponentName;
     .restart local v10    # "activity":Ljava/lang/String;
     .restart local v14    # "i":I
@@ -4085,7 +3635,6 @@
 
     goto :goto_4
 
-    .line 1234
     .end local v10    # "activity":Ljava/lang/String;
     .end local v19    # "pkgName":Ljava/lang/String;
     :cond_5
@@ -4099,14 +3648,11 @@
 
     move-result-object v13
 
-    .line 1235
     .local v13, "homeActivity":Ljava/lang/String;
     if-nez v13, :cond_6
 
-    .line 1236
     const/4 v4, 0x0
 
-    .line 1252
     .end local v7    # "components":[Landroid/content/ComponentName;
     .end local v13    # "homeActivity":Ljava/lang/String;
     .end local v14    # "i":I
@@ -4116,7 +3662,6 @@
     :goto_5
     return v4
 
-    .line 1240
     .restart local v7    # "components":[Landroid/content/ComponentName;
     .restart local v13    # "homeActivity":Ljava/lang/String;
     .restart local v14    # "i":I
@@ -4130,7 +3675,6 @@
 
     invoke-direct {v8, v0, v13}, Landroid/content/ComponentName;-><init>(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 1242
     .local v8, "component":Landroid/content/ComponentName;
     new-instance v5, Landroid/content/IntentFilter;
 
@@ -4138,23 +3682,19 @@
 
     invoke-direct {v5, v4}, Landroid/content/IntentFilter;-><init>(Ljava/lang/String;)V
 
-    .line 1243
     .local v5, "filter":Landroid/content/IntentFilter;
     const-string v4, "android.intent.category.HOME"
 
     invoke-virtual {v5, v4}, Landroid/content/IntentFilter;->addCategory(Ljava/lang/String;)V
 
-    .line 1244
     const-string v4, "android.intent.category.DEFAULT"
 
     invoke-virtual {v5, v4}, Landroid/content/IntentFilter;->addCategory(Ljava/lang/String;)V
 
-    .line 1246
     invoke-static {}, Landroid/os/Binder;->clearCallingIdentity()J
 
     move-result-wide v22
 
-    .line 1247
     move-object/from16 v0, p0
 
     iget-object v4, v0, Lcom/android/server/enterprise/kioskmode/KioskModeService;->mPm:Landroid/content/pm/PackageManager;
@@ -4165,10 +3705,8 @@
 
     invoke-virtual/range {v4 .. v9}, Landroid/content/pm/PackageManager;->addPreferredActivity(Landroid/content/IntentFilter;I[Landroid/content/ComponentName;Landroid/content/ComponentName;I)V
 
-    .line 1249
     invoke-static/range {v22 .. v23}, Landroid/os/Binder;->restoreCallingIdentity(J)V
 
-    .line 1252
     .end local v5    # "filter":Landroid/content/IntentFilter;
     .end local v7    # "components":[Landroid/content/ComponentName;
     .end local v8    # "component":Landroid/content/ComponentName;
@@ -4182,7 +3720,6 @@
 
     goto :goto_5
 
-    .line 1187
     .restart local v16    # "isAppInstalled":Z
     :catch_1
     move-exception v4
@@ -4196,12 +3733,10 @@
     .param p2, "on"    # Z
 
     .prologue
-    .line 2078
     invoke-static {}, Landroid/os/Binder;->clearCallingIdentity()J
 
     move-result-wide v0
 
-    .line 2079
     .local v0, "token":J
     iget-object v2, p0, Lcom/android/server/enterprise/kioskmode/KioskModeService;->mContext:Landroid/content/Context;
 
@@ -4218,13 +3753,10 @@
     :goto_0
     invoke-static {v3, v4, v2, p1}, Landroid/provider/Settings$System;->putIntForUser(Landroid/content/ContentResolver;Ljava/lang/String;II)Z
 
-    .line 2083
     invoke-static {v0, v1}, Landroid/os/Binder;->restoreCallingIdentity(J)V
 
-    .line 2084
     return-void
 
-    .line 2079
     :cond_0
     const/4 v2, 0x0
 
@@ -4237,12 +3769,10 @@
     .param p2, "on"    # Z
 
     .prologue
-    .line 2063
     invoke-static {}, Landroid/os/Binder;->clearCallingIdentity()J
 
     move-result-wide v0
 
-    .line 2064
     .local v0, "token":J
     iget-object v2, p0, Lcom/android/server/enterprise/kioskmode/KioskModeService;->mContext:Landroid/content/Context;
 
@@ -4259,13 +3789,10 @@
     :goto_0
     invoke-static {v3, v4, v2, p1}, Landroid/provider/Settings$System;->putIntForUser(Landroid/content/ContentResolver;Ljava/lang/String;II)Z
 
-    .line 2068
     invoke-static {v0, v1}, Landroid/os/Binder;->restoreCallingIdentity(J)V
 
-    .line 2069
     return-void
 
-    .line 2064
     :cond_0
     const/4 v2, 0x0
 
@@ -4278,12 +3805,10 @@
     .param p2, "option"    # Lcom/android/server/enterprise/kioskmode/KioskModeService$PenDetachmentOption;
 
     .prologue
-    .line 2108
     invoke-static {}, Landroid/os/Binder;->clearCallingIdentity()J
 
     move-result-wide v0
 
-    .line 2109
     .local v0, "token":J
     iget-object v2, p0, Lcom/android/server/enterprise/kioskmode/KioskModeService;->mContext:Landroid/content/Context;
 
@@ -4291,7 +3816,7 @@
 
     move-result-object v2
 
-    const-string/jumbo v3, "pen_detachment_option"
+    const-string v3, "pen_detachment_option"
 
     invoke-virtual {p2}, Lcom/android/server/enterprise/kioskmode/KioskModeService$PenDetachmentOption;->ordinal()I
 
@@ -4299,10 +3824,8 @@
 
     invoke-static {v2, v3, v4, p1}, Landroid/provider/Settings$System;->putIntForUser(Landroid/content/ContentResolver;Ljava/lang/String;II)Z
 
-    .line 2113
     invoke-static {v0, v1}, Landroid/os/Binder;->restoreCallingIdentity(J)V
 
-    .line 2114
     return-void
 .end method
 
@@ -4312,12 +3835,10 @@
     .param p2, "on"    # Z
 
     .prologue
-    .line 2123
     invoke-static {}, Landroid/os/Binder;->clearCallingIdentity()J
 
     move-result-wide v0
 
-    .line 2124
     .local v0, "token":J
     iget-object v2, p0, Lcom/android/server/enterprise/kioskmode/KioskModeService;->mContext:Landroid/content/Context;
 
@@ -4325,7 +3846,7 @@
 
     move-result-object v3
 
-    const-string/jumbo v4, "pen_hovering"
+    const-string v4, "pen_hovering"
 
     if-eqz p2, :cond_0
 
@@ -4334,13 +3855,10 @@
     :goto_0
     invoke-static {v3, v4, v2, p1}, Landroid/provider/Settings$System;->putIntForUser(Landroid/content/ContentResolver;Ljava/lang/String;II)Z
 
-    .line 2128
     invoke-static {v0, v1}, Landroid/os/Binder;->restoreCallingIdentity(J)V
 
-    .line 2129
     return-void
 
-    .line 2124
     :cond_0
     const/4 v2, 0x0
 
@@ -4352,7 +3870,6 @@
     .param p1, "userId"    # I
 
     .prologue
-    .line 812
     sget-object v0, Lcom/android/server/enterprise/kioskmode/KioskModeService;->packageRemoveIntentReceiver:Ljava/util/Map;
 
     invoke-static {p1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
@@ -4367,7 +3884,6 @@
 
     if-ne v0, v1, :cond_0
 
-    .line 813
     iget-object v1, p0, Lcom/android/server/enterprise/kioskmode/KioskModeService;->mContext:Landroid/content/Context;
 
     sget-object v0, Lcom/android/server/enterprise/kioskmode/KioskModeService;->packageRemoveIntentReceiver:Ljava/util/Map;
@@ -4384,7 +3900,6 @@
 
     invoke-virtual {v1, v0}, Landroid/content/Context;->unregisterReceiver(Landroid/content/BroadcastReceiver;)V
 
-    .line 814
     sget-object v0, Lcom/android/server/enterprise/kioskmode/KioskModeService;->packageRemoveIntentReceiver:Ljava/util/Map;
 
     invoke-static {p1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
@@ -4393,11 +3908,9 @@
 
     invoke-interface {v0, v1}, Ljava/util/Map;->remove(Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 818
     :goto_0
     return-void
 
-    .line 816
     :cond_0
     const-string v0, "KioskModeService"
 
@@ -4413,7 +3926,6 @@
     .param p1, "userId"    # I
 
     .prologue
-    .line 886
     sget-object v0, Lcom/android/server/enterprise/kioskmode/KioskModeService;->terminateIntentReceiver:Ljava/util/Map;
 
     invoke-static {p1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
@@ -4428,7 +3940,6 @@
 
     if-ne v0, v1, :cond_0
 
-    .line 887
     iget-object v1, p0, Lcom/android/server/enterprise/kioskmode/KioskModeService;->mContext:Landroid/content/Context;
 
     sget-object v0, Lcom/android/server/enterprise/kioskmode/KioskModeService;->terminateIntentReceiver:Ljava/util/Map;
@@ -4445,7 +3956,6 @@
 
     invoke-virtual {v1, v0}, Landroid/content/Context;->unregisterReceiver(Landroid/content/BroadcastReceiver;)V
 
-    .line 888
     sget-object v0, Lcom/android/server/enterprise/kioskmode/KioskModeService;->terminateIntentReceiver:Ljava/util/Map;
 
     invoke-static {p1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
@@ -4454,11 +3964,9 @@
 
     invoke-interface {v0, v1}, Ljava/util/Map;->remove(Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 892
     :goto_0
     return-void
 
-    .line 890
     :cond_0
     const-string v0, "KioskModeService"
 
@@ -4477,7 +3985,6 @@
     .param p4, "defaultPackage"    # Ljava/lang/String;
 
     .prologue
-    .line 1287
     iget-object v0, p0, Lcom/android/server/enterprise/kioskmode/KioskModeService;->mEdmStorageProvider:Lcom/android/server/enterprise/storage/EdmStorageProvider;
 
     const-string v1, "KIOSKMODE"
@@ -4486,7 +3993,6 @@
 
     invoke-virtual {v0, p1, v1, v2, p2}, Lcom/android/server/enterprise/storage/EdmStorageProvider;->putBoolean(ILjava/lang/String;Ljava/lang/String;Z)Z
 
-    .line 1289
     iget-object v0, p0, Lcom/android/server/enterprise/kioskmode/KioskModeService;->mEdmStorageProvider:Lcom/android/server/enterprise/storage/EdmStorageProvider;
 
     const-string v1, "KIOSKMODE"
@@ -4495,7 +4001,6 @@
 
     invoke-virtual {v0, p1, v1, v2, p4}, Lcom/android/server/enterprise/storage/EdmStorageProvider;->putString(ILjava/lang/String;Ljava/lang/String;Ljava/lang/String;)Z
 
-    .line 1291
     iget-object v0, p0, Lcom/android/server/enterprise/kioskmode/KioskModeService;->mEdmStorageProvider:Lcom/android/server/enterprise/storage/EdmStorageProvider;
 
     const-string v1, "KIOSKMODE"
@@ -4504,7 +4009,6 @@
 
     invoke-virtual {v0, p1, v1, v2, p3}, Lcom/android/server/enterprise/storage/EdmStorageProvider;->putString(ILjava/lang/String;Ljava/lang/String;Ljava/lang/String;)Z
 
-    .line 1293
     return-void
 .end method
 
@@ -4513,22 +4017,18 @@
     .param p1, "userId"    # I
 
     .prologue
-    .line 1394
     const/4 v2, 0x0
 
-    .line 1395
     .local v2, "result":Z
     invoke-static {}, Landroid/os/Binder;->clearCallingIdentity()J
 
     move-result-wide v4
 
-    .line 1397
     .local v4, "token":J
     invoke-static {}, Landroid/app/ActivityManagerNative;->getDefault()Landroid/app/IActivityManager;
 
     move-result-object v0
 
-    .line 1399
     .local v0, "am":Landroid/app/IActivityManager;
     :try_start_0
     invoke-interface {v0, p1}, Landroid/app/IActivityManager;->clearRecentTasks(I)Z
@@ -4538,18 +4038,14 @@
 
     move-result v2
 
-    .line 1403
     invoke-static {v4, v5}, Landroid/os/Binder;->restoreCallingIdentity(J)V
 
-    .line 1406
     :goto_0
     return v2
 
-    .line 1400
     :catch_0
     move-exception v1
 
-    .line 1401
     .local v1, "e":Landroid/os/RemoteException;
     :try_start_1
     const-string v3, "KioskModeService"
@@ -4560,7 +4056,6 @@
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
-    .line 1403
     invoke-static {v4, v5}, Landroid/os/Binder;->restoreCallingIdentity(J)V
 
     goto :goto_0
@@ -4582,17 +4077,14 @@
     .param p2, "allow"    # Z
 
     .prologue
-    .line 1922
     invoke-direct {p0, p1}, Lcom/android/server/enterprise/kioskmode/KioskModeService;->enforceOwnerOnlyAndKioskModePermission(Landroid/app/enterprise/ContextInfo;)Landroid/app/enterprise/ContextInfo;
 
     move-result-object p1
 
-    .line 1923
     invoke-static {p1}, Lcom/android/server/enterprise/EnterpriseDeviceManagerService;->getCallingOrCurrentUserId(Landroid/app/enterprise/ContextInfo;)I
 
     move-result v0
 
-    .line 1925
     .local v0, "userId":I
     if-nez p2, :cond_0
 
@@ -4602,10 +4094,8 @@
 
     if-eqz v1, :cond_0
 
-    .line 1926
     invoke-direct {p0, v0}, Lcom/android/server/enterprise/kioskmode/KioskModeService;->resetAirCommandConfigurationAsUser(I)V
 
-    .line 1929
     :cond_0
     iget-object v1, p0, Lcom/android/server/enterprise/kioskmode/KioskModeService;->mEdmStorageProvider:Lcom/android/server/enterprise/storage/EdmStorageProvider;
 
@@ -4628,17 +4118,14 @@
     .param p2, "allow"    # Z
 
     .prologue
-    .line 2000
     invoke-direct {p0, p1}, Lcom/android/server/enterprise/kioskmode/KioskModeService;->enforceOwnerOnlyAndKioskModePermission(Landroid/app/enterprise/ContextInfo;)Landroid/app/enterprise/ContextInfo;
 
     move-result-object p1
 
-    .line 2001
     invoke-static {p1}, Lcom/android/server/enterprise/EnterpriseDeviceManagerService;->getCallingOrCurrentUserId(Landroid/app/enterprise/ContextInfo;)I
 
     move-result v0
 
-    .line 2003
     .local v0, "userId":I
     if-nez p2, :cond_0
 
@@ -4648,10 +4135,8 @@
 
     if-eqz v1, :cond_0
 
-    .line 2004
     invoke-direct {p0, v0}, Lcom/android/server/enterprise/kioskmode/KioskModeService;->resetAirViewConfigurationAsUser(I)V
 
-    .line 2007
     :cond_0
     iget-object v1, p0, Lcom/android/server/enterprise/kioskmode/KioskModeService;->mEdmStorageProvider:Lcom/android/server/enterprise/storage/EdmStorageProvider;
 
@@ -4677,46 +4162,38 @@
     .prologue
     const/4 v6, 0x0
 
-    .line 1417
     invoke-direct {p0, p1}, Lcom/android/server/enterprise/kioskmode/KioskModeService;->enforceKioskModePermission(Landroid/app/enterprise/ContextInfo;)Landroid/app/enterprise/ContextInfo;
 
     move-result-object p1
 
-    .line 1421
     invoke-static {p1}, Lcom/android/server/enterprise/EnterpriseDeviceManagerService;->isKioskOrOwnerUserId(Landroid/app/enterprise/ContextInfo;)Z
 
     move-result v8
 
     if-nez v8, :cond_1
 
-    .line 1422
     const-string v8, "KioskModeService"
 
     const-string v9, "Failed. Caller is not COM container or owner"
 
     invoke-static {v8, v9}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1452
     :cond_0
     return-object v6
 
-    .line 1426
     :cond_1
     iget v0, p1, Landroid/app/enterprise/ContextInfo;->mCallerUid:I
 
-    .line 1427
     .local v0, "callingUid":I
     new-instance v7, Ljava/util/ArrayList;
 
     invoke-direct {v7}, Ljava/util/ArrayList;-><init>()V
 
-    .line 1428
     .local v7, "successList":Ljava/util/List;, "Ljava/util/List<Ljava/lang/Integer;>;"
     new-instance v1, Ljava/util/ArrayList;
 
     invoke-direct {v1}, Ljava/util/ArrayList;-><init>()V
 
-    .line 1430
     .local v1, "hwKeyIdsList":Ljava/util/List;, "Ljava/util/List<Ljava/lang/Integer;>;"
     if-eqz p2, :cond_0
 
@@ -4724,7 +4201,6 @@
 
     if-eqz v8, :cond_0
 
-    .line 1434
     const/4 v3, 0x0
 
     .local v3, "index":I
@@ -4733,7 +4209,6 @@
 
     if-ge v3, v8, :cond_2
 
-    .line 1435
     aget v8, p2, v3
 
     invoke-static {v8}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
@@ -4742,18 +4217,15 @@
 
     invoke-interface {v1, v8}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    .line 1434
     add-int/lit8 v3, v3, 0x1
 
     goto :goto_0
 
-    .line 1437
     :cond_2
     invoke-interface {v1}, Ljava/util/List;->iterator()Ljava/util/Iterator;
 
     move-result-object v4
 
-    .line 1438
     .local v4, "it":Ljava/util/Iterator;, "Ljava/util/Iterator<Ljava/lang/Integer;>;"
     :cond_3
     :goto_1
@@ -4763,7 +4235,6 @@
 
     if-eqz v8, :cond_5
 
-    .line 1439
     invoke-interface {v4}, Ljava/util/Iterator;->next()Ljava/lang/Object;
 
     move-result-object v8
@@ -4774,11 +4245,9 @@
 
     move-result v5
 
-    .line 1440
     .local v5, "keycode":I
     if-nez p3, :cond_4
 
-    .line 1441
     invoke-static {v5}, Ljava/lang/String;->valueOf(I)Ljava/lang/String;
 
     move-result-object v8
@@ -4789,7 +4258,6 @@
 
     if-eqz v8, :cond_3
 
-    .line 1442
     invoke-static {v5}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object v8
@@ -4798,7 +4266,6 @@
 
     goto :goto_1
 
-    .line 1444
     :cond_4
     invoke-static {v5}, Ljava/lang/String;->valueOf(I)Ljava/lang/String;
 
@@ -4810,7 +4277,6 @@
 
     if-eqz v8, :cond_3
 
-    .line 1445
     invoke-static {v5}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object v8
@@ -4819,21 +4285,18 @@
 
     goto :goto_1
 
-    .line 1448
     .end local v5    # "keycode":I
     :cond_5
     iget-object v8, p0, Lcom/android/server/enterprise/kioskmode/KioskModeService;->mCache:Lcom/android/server/enterprise/kioskmode/KioskModeService$KioskModeCache;
 
     invoke-virtual {v8}, Lcom/android/server/enterprise/kioskmode/KioskModeService$KioskModeCache;->updateCache()Z
 
-    .line 1449
     invoke-interface {v7}, Ljava/util/List;->size()I
 
     move-result v8
 
     new-array v6, v8, [I
 
-    .line 1450
     .local v6, "ret":[I
     const/4 v2, 0x0
 
@@ -4843,7 +4306,6 @@
 
     if-ge v2, v8, :cond_0
 
-    .line 1451
     invoke-interface {v7, v2}, Ljava/util/List;->get(I)Ljava/lang/Object;
 
     move-result-object v8
@@ -4856,7 +4318,6 @@
 
     aput v8, v6, v2
 
-    .line 1450
     add-int/lit8 v2, v2, 0x1
 
     goto :goto_2
@@ -4870,29 +4331,24 @@
     .prologue
     const/4 v3, 0x0
 
-    .line 1802
     invoke-direct {p0, p1}, Lcom/android/server/enterprise/kioskmode/KioskModeService;->enforceKioskModePermission(Landroid/app/enterprise/ContextInfo;)Landroid/app/enterprise/ContextInfo;
 
     move-result-object p1
 
-    .line 1803
     iget v4, p1, Landroid/app/enterprise/ContextInfo;->mCallerUid:I
 
     invoke-static {v4}, Landroid/os/UserHandle;->getUserId(I)I
 
     move-result v2
 
-    .line 1806
     .local v2, "userId":I
     const/16 v4, 0x64
 
     if-lt v2, v4, :cond_0
 
-    .line 1817
     :goto_0
     return v3
 
-    .line 1810
     :cond_0
     invoke-virtual {p0, p1, v3}, Lcom/android/server/enterprise/kioskmode/KioskModeService;->isMultiWindowModeAllowed(Landroid/app/enterprise/ContextInfo;Z)Z
 
@@ -4902,12 +4358,10 @@
 
     if-nez p2, :cond_1
 
-    .line 1811
     invoke-static {}, Landroid/os/Binder;->clearCallingIdentity()J
 
     move-result-wide v0
 
-    .line 1812
     .local v0, "token":J
     iget-object v4, p0, Lcom/android/server/enterprise/kioskmode/KioskModeService;->mContext:Landroid/content/Context;
 
@@ -4919,10 +4373,8 @@
 
     invoke-static {v4, v5, v3, v2}, Landroid/provider/Settings$System;->putIntForUser(Landroid/content/ContentResolver;Ljava/lang/String;II)Z
 
-    .line 1814
     invoke-static {v0, v1}, Landroid/os/Binder;->restoreCallingIdentity(J)V
 
-    .line 1817
     .end local v0    # "token":J
     :cond_1
     iget-object v3, p0, Lcom/android/server/enterprise/kioskmode/KioskModeService;->mEdmStorageProvider:Lcom/android/server/enterprise/storage/EdmStorageProvider;
@@ -4946,53 +4398,43 @@
     .param p2, "allow"    # Z
 
     .prologue
-    .line 1602
     const/4 v1, 0x1
 
-    .line 1603
     .local v1, "ret":Z
     invoke-direct {p0, p1}, Lcom/android/server/enterprise/kioskmode/KioskModeService;->enforceKioskModePermission(Landroid/app/enterprise/ContextInfo;)Landroid/app/enterprise/ContextInfo;
 
     move-result-object p1
 
-    .line 1607
     invoke-static {p1}, Lcom/android/server/enterprise/EnterpriseDeviceManagerService;->isKioskOrOwnerUserId(Landroid/app/enterprise/ContextInfo;)Z
 
     move-result v5
 
     if-nez v5, :cond_0
 
-    .line 1608
     const-string v5, "KioskModeService"
 
     const-string v6, "Failed. Caller is not COM container or owner"
 
     invoke-static {v5, v6}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1609
     const/4 v5, 0x0
 
-    .line 1627
     :goto_0
     return v5
 
-    .line 1612
     :cond_0
     invoke-static {p1}, Lcom/android/server/enterprise/EnterpriseDeviceManagerService;->getCallingOrCurrentUserId(Landroid/app/enterprise/ContextInfo;)I
 
     move-result v4
 
-    .line 1613
     .local v4, "userId":I
     invoke-static {}, Landroid/os/Binder;->clearCallingIdentity()J
 
     move-result-wide v2
 
-    .line 1614
     .local v2, "token":J
     if-nez p2, :cond_1
 
-    .line 1616
     :try_start_0
     invoke-static {}, Landroid/app/ActivityManagerNative;->getDefault()Landroid/app/IActivityManager;
 
@@ -5002,7 +4444,6 @@
 
     invoke-interface {v5, v6, v4}, Landroid/app/IActivityManager;->forceStopPackage(Ljava/lang/String;I)V
 
-    .line 1617
     invoke-static {}, Landroid/app/ActivityManagerNative;->getDefault()Landroid/app/IActivityManager;
 
     move-result-object v5
@@ -5011,7 +4452,6 @@
 
     invoke-interface {v5, v6, v4}, Landroid/app/IActivityManager;->forceStopPackage(Ljava/lang/String;I)V
 
-    .line 1618
     invoke-static {}, Landroid/app/ActivityManagerNative;->getDefault()Landroid/app/IActivityManager;
 
     move-result-object v5
@@ -5022,19 +4462,17 @@
     :try_end_0
     .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 1624
     :cond_1
     :goto_1
     invoke-static {v2, v3}, Landroid/os/Binder;->restoreCallingIdentity(J)V
 
-    .line 1625
     iget-object v5, p0, Lcom/android/server/enterprise/kioskmode/KioskModeService;->mEdmStorageProvider:Lcom/android/server/enterprise/storage/EdmStorageProvider;
 
     iget v6, p1, Landroid/app/enterprise/ContextInfo;->mCallerUid:I
 
     const-string v7, "KIOSKMODE"
 
-    const-string/jumbo v8, "taskManagerEnabled"
+    const-string v8, "taskManagerEnabled"
 
     invoke-virtual {v5, v6, v7, v8, p2}, Lcom/android/server/enterprise/storage/EdmStorageProvider;->putBoolean(ILjava/lang/String;Ljava/lang/String;Z)Z
 
@@ -5042,14 +4480,11 @@
 
     move v5, v1
 
-    .line 1627
     goto :goto_0
 
-    .line 1619
     :catch_0
     move-exception v0
 
-    .line 1620
     .local v0, "e":Landroid/os/RemoteException;
     const-string v5, "KioskModeService"
 
@@ -5065,29 +4500,24 @@
     .param p1, "cxtInfo"    # Landroid/app/enterprise/ContextInfo;
 
     .prologue
-    .line 1874
     invoke-direct {p0, p1}, Lcom/android/server/enterprise/kioskmode/KioskModeService;->enforceKioskModePermission(Landroid/app/enterprise/ContextInfo;)Landroid/app/enterprise/ContextInfo;
 
     move-result-object p1
 
-    .line 1875
     invoke-static {p1}, Lcom/android/server/enterprise/EnterpriseDeviceManagerService;->getCallingOrUserUid(Landroid/app/enterprise/ContextInfo;)I
 
     move-result v0
 
-    .line 1876
     .local v0, "callingUid":I
     invoke-static {v0}, Landroid/os/UserHandle;->getUserId(I)I
 
     move-result v3
 
-    .line 1877
     .local v3, "userId":I
     invoke-static {}, Landroid/os/Binder;->clearCallingIdentity()J
 
     move-result-wide v4
 
-    .line 1878
     .local v4, "token":J
     const-string v6, "notification"
 
@@ -5099,7 +4529,6 @@
 
     move-result-object v2
 
-    .line 1881
     .local v2, "sService":Landroid/app/INotificationManager;
     :try_start_0
     invoke-interface {v2, v3}, Landroid/app/INotificationManager;->clearAllNotificationsAsUser(I)V
@@ -5107,20 +4536,16 @@
     .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 1887
     invoke-static {v4, v5}, Landroid/os/Binder;->restoreCallingIdentity(J)V
 
-    .line 1889
     const/4 v6, 0x1
 
     :goto_0
     return v6
 
-    .line 1883
     :catch_0
     move-exception v1
 
-    .line 1884
     .local v1, "e":Landroid/os/RemoteException;
     :try_start_1
     const-string v6, "KioskModeService"
@@ -5131,10 +4556,8 @@
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
-    .line 1885
     const/4 v6, 0x0
 
-    .line 1887
     invoke-static {v4, v5}, Landroid/os/Binder;->restoreCallingIdentity(J)V
 
     goto :goto_0
@@ -5155,37 +4578,31 @@
     .prologue
     const/4 v4, 0x2
 
-    .line 379
     const-string v2, "KioskModeService"
 
     const-string v3, "disableKioskMode"
 
     invoke-static {v2, v3}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 381
     invoke-direct {p0, p1}, Lcom/android/server/enterprise/kioskmode/KioskModeService;->enforceOwnerOnlyAndKioskModePermission(Landroid/app/enterprise/ContextInfo;)Landroid/app/enterprise/ContextInfo;
 
     move-result-object p1
 
-    .line 383
     sget-boolean v2, Lcom/android/server/enterprise/kioskmode/KioskModeService;->mProcessing:Z
 
     const/4 v3, 0x1
 
     if-ne v2, v3, :cond_0
 
-    .line 384
     iget v2, p1, Landroid/app/enterprise/ContextInfo;->mCallerUid:I
 
     const/4 v3, -0x4
 
     invoke-direct {p0, v2, v4, v3}, Lcom/android/server/enterprise/kioskmode/KioskModeService;->broadcastKioskResult(III)V
 
-    .line 392
     :goto_0
     return-void
 
-    .line 387
     :cond_0
     iget-object v2, p0, Lcom/android/server/enterprise/kioskmode/KioskModeService;->mHandler:Lcom/android/server/enterprise/kioskmode/KioskModeService$KioskHandler;
 
@@ -5193,13 +4610,11 @@
 
     move-result-object v1
 
-    .line 388
     .local v1, "msg":Landroid/os/Message;
     new-instance v0, Landroid/os/Bundle;
 
     invoke-direct {v0}, Landroid/os/Bundle;-><init>()V
 
-    .line 389
     .local v0, "bundle":Landroid/os/Bundle;
     const-string v2, "adminuid"
 
@@ -5207,10 +4622,8 @@
 
     invoke-virtual {v0, v2, v3}, Landroid/os/Bundle;->putInt(Ljava/lang/String;I)V
 
-    .line 390
     invoke-virtual {v1, v0}, Landroid/os/Message;->setData(Landroid/os/Bundle;)V
 
-    .line 391
     iget-object v2, p0, Lcom/android/server/enterprise/kioskmode/KioskModeService;->mHandler:Lcom/android/server/enterprise/kioskmode/KioskModeService$KioskHandler;
 
     invoke-virtual {v2, v1}, Lcom/android/server/enterprise/kioskmode/KioskModeService$KioskHandler;->sendMessage(Landroid/os/Message;)Z
@@ -5226,35 +4639,29 @@
     .prologue
     const/4 v4, 0x1
 
-    .line 359
     const-string v2, "KioskModeService"
 
     const-string v3, "enableKioskMode"
 
     invoke-static {v2, v3}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 361
     invoke-direct {p0, p1}, Lcom/android/server/enterprise/kioskmode/KioskModeService;->enforceOwnerOnlyAndKioskModePermission(Landroid/app/enterprise/ContextInfo;)Landroid/app/enterprise/ContextInfo;
 
     move-result-object p1
 
-    .line 363
     sget-boolean v2, Lcom/android/server/enterprise/kioskmode/KioskModeService;->mProcessing:Z
 
     if-ne v2, v4, :cond_0
 
-    .line 364
     iget v2, p1, Landroid/app/enterprise/ContextInfo;->mCallerUid:I
 
     const/4 v3, -0x4
 
     invoke-direct {p0, v2, v4, v3}, Lcom/android/server/enterprise/kioskmode/KioskModeService;->broadcastKioskResult(III)V
 
-    .line 373
     :goto_0
     return-void
 
-    .line 367
     :cond_0
     iget-object v2, p0, Lcom/android/server/enterprise/kioskmode/KioskModeService;->mHandler:Lcom/android/server/enterprise/kioskmode/KioskModeService$KioskHandler;
 
@@ -5262,29 +4669,24 @@
 
     move-result-object v1
 
-    .line 368
     .local v1, "msg":Landroid/os/Message;
     new-instance v0, Landroid/os/Bundle;
 
     invoke-direct {v0}, Landroid/os/Bundle;-><init>()V
 
-    .line 369
     .local v0, "bundle":Landroid/os/Bundle;
-    const-string/jumbo v2, "package"
+    const-string v2, "package"
 
     invoke-virtual {v0, v2, p2}, Landroid/os/Bundle;->putString(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 370
     const-string v2, "adminuid"
 
     iget v3, p1, Landroid/app/enterprise/ContextInfo;->mCallerUid:I
 
     invoke-virtual {v0, v2, v3}, Landroid/os/Bundle;->putInt(Ljava/lang/String;I)V
 
-    .line 371
     invoke-virtual {v1, v0}, Landroid/os/Message;->setData(Landroid/os/Bundle;)V
 
-    .line 372
     iget-object v2, p0, Lcom/android/server/enterprise/kioskmode/KioskModeService;->mHandler:Lcom/android/server/enterprise/kioskmode/KioskModeService$KioskHandler;
 
     invoke-virtual {v2, v1}, Lcom/android/server/enterprise/kioskmode/KioskModeService$KioskHandler;->sendMessage(Landroid/os/Message;)Z
@@ -5308,20 +4710,16 @@
     .end annotation
 
     .prologue
-    .line 1543
     invoke-static {}, Lcom/android/server/enterprise/EnterpriseDeviceManagerService;->getKioskOrOwnerUserId()I
 
     move-result v5
 
-    .line 1545
     .local v5, "userId":I
     const/4 v2, 0x0
 
-    .line 1546
     .local v2, "blockedSet":Ljava/util/Set;, "Ljava/util/Set<Ljava/lang/String;>;"
     const/4 v0, 0x0
 
-    .line 1548
     .local v0, "blockedList":Ljava/util/List;, "Ljava/util/List<Ljava/lang/String;>;"
     invoke-direct {p0}, Lcom/android/server/enterprise/kioskmode/KioskModeService;->getAllBlockedList()Ljava/util/Map;
 
@@ -5338,29 +4736,24 @@
     .end local v2    # "blockedSet":Ljava/util/Set;, "Ljava/util/Set<Ljava/lang/String;>;"
     check-cast v2, Ljava/util/Set;
 
-    .line 1550
     .restart local v2    # "blockedSet":Ljava/util/Set;, "Ljava/util/Set<Ljava/lang/String;>;"
     new-instance v1, Ljava/util/ArrayList;
 
     invoke-direct {v1}, Ljava/util/ArrayList;-><init>()V
 
-    .line 1552
     .local v1, "blockedListInt":Ljava/util/List;, "Ljava/util/List<Ljava/lang/Integer;>;"
     if-eqz v2, :cond_1
 
-    .line 1553
     new-instance v0, Ljava/util/ArrayList;
 
     .end local v0    # "blockedList":Ljava/util/List;, "Ljava/util/List<Ljava/lang/String;>;"
     invoke-direct {v0, v2}, Ljava/util/ArrayList;-><init>(Ljava/util/Collection;)V
 
-    .line 1554
     .restart local v0    # "blockedList":Ljava/util/List;, "Ljava/util/List<Ljava/lang/String;>;"
     invoke-interface {v0}, Ljava/util/List;->iterator()Ljava/util/Iterator;
 
     move-result-object v3
 
-    .line 1555
     .local v3, "it":Ljava/util/Iterator;, "Ljava/util/Iterator<Ljava/lang/String;>;"
     :cond_0
     :goto_0
@@ -5370,14 +4763,12 @@
 
     if-eqz v6, :cond_1
 
-    .line 1556
     invoke-interface {v3}, Ljava/util/Iterator;->next()Ljava/lang/Object;
 
     move-result-object v4
 
     check-cast v4, Ljava/lang/String;
 
-    .line 1557
     .local v4, "next":Ljava/lang/String;
     invoke-virtual {v4}, Ljava/lang/String;->isEmpty()Z
 
@@ -5385,7 +4776,6 @@
 
     if-nez v6, :cond_0
 
-    .line 1558
     invoke-static {v4}, Ljava/lang/Integer;->parseInt(Ljava/lang/String;)I
 
     move-result v6
@@ -5398,7 +4788,6 @@
 
     goto :goto_0
 
-    .line 1561
     .end local v3    # "it":Ljava/util/Iterator;, "Ljava/util/Iterator<Ljava/lang/String;>;"
     .end local v4    # "next":Ljava/lang/String;
     :cond_1
@@ -5421,7 +4810,6 @@
     .end annotation
 
     .prologue
-    .line 1520
     iget-object v0, p0, Lcom/android/server/enterprise/kioskmode/KioskModeService;->mCache:Lcom/android/server/enterprise/kioskmode/KioskModeService$KioskModeCache;
 
     # getter for: Lcom/android/server/enterprise/kioskmode/KioskModeService$KioskModeCache;->mBlockedHwKeys:Ljava/util/Map;
@@ -5448,15 +4836,12 @@
     .end annotation
 
     .prologue
-    .line 1410
     invoke-direct {p0, p1}, Lcom/android/server/enterprise/kioskmode/KioskModeService;->enforceKioskModePermission(Landroid/app/enterprise/ContextInfo;)Landroid/app/enterprise/ContextInfo;
 
-    .line 1411
     iget-object v1, p0, Lcom/android/server/enterprise/kioskmode/KioskModeService;->mAvailableKeyCodesList:Ljava/util/List;
 
     monitor-enter v1
 
-    .line 1412
     :try_start_0
     iget-object v0, p0, Lcom/android/server/enterprise/kioskmode/KioskModeService;->mAvailableKeyCodesList:Ljava/util/List;
 
@@ -5464,7 +4849,6 @@
 
     return-object v0
 
-    .line 1413
     :catchall_0
     move-exception v0
 
@@ -5480,12 +4864,10 @@
     .param p1, "cxtInfo"    # Landroid/app/enterprise/ContextInfo;
 
     .prologue
-    .line 478
     invoke-direct {p0, p1}, Lcom/android/server/enterprise/kioskmode/KioskModeService;->getUserIdByPackageNameOrUid(Landroid/app/enterprise/ContextInfo;)I
 
     move-result v0
 
-    .line 480
     .local v0, "userId":I
     invoke-virtual {p0, v0}, Lcom/android/server/enterprise/kioskmode/KioskModeService;->isKioskModeEnabledAsUser(I)Z
 
@@ -5493,12 +4875,10 @@
 
     if-eqz v1, :cond_0
 
-    .line 481
     invoke-virtual {p0, v0}, Lcom/android/server/enterprise/kioskmode/KioskModeService;->getKioskHomePackageAsUser(I)Ljava/lang/String;
 
     move-result-object v1
 
-    .line 483
     :goto_0
     return-object v1
 
@@ -5515,7 +4895,6 @@
     .prologue
     const/4 v8, 0x1
 
-    .line 489
     const/4 v6, 0x2
 
     :try_start_0
@@ -5533,7 +4912,6 @@
 
     aput-object v7, v0, v6
 
-    .line 494
     .local v0, "columns":[Ljava/lang/String;
     iget-object v6, p0, Lcom/android/server/enterprise/kioskmode/KioskModeService;->mEdmStorageProvider:Lcom/android/server/enterprise/storage/EdmStorageProvider;
 
@@ -5543,7 +4921,6 @@
 
     move-result-object v5
 
-    .line 497
     .local v5, "results":Ljava/util/List;, "Ljava/util/List<Landroid/content/ContentValues;>;"
     if-eqz v5, :cond_1
 
@@ -5553,16 +4930,13 @@
 
     if-nez v6, :cond_1
 
-    .line 498
     const/4 v1, 0x0
 
-    .line 500
     .local v1, "cv":Landroid/content/ContentValues;
     invoke-interface {v5}, Ljava/util/List;->iterator()Ljava/util/Iterator;
 
     move-result-object v3
 
-    .line 502
     .local v3, "it":Ljava/util/Iterator;
     :cond_0
     invoke-interface {v3}, Ljava/util/Iterator;->hasNext()Z
@@ -5571,7 +4945,6 @@
 
     if-eqz v6, :cond_1
 
-    .line 503
     invoke-interface {v3}, Ljava/util/Iterator;->next()Ljava/lang/Object;
 
     move-result-object v1
@@ -5579,7 +4952,6 @@
     .end local v1    # "cv":Landroid/content/ContentValues;
     check-cast v1, Landroid/content/ContentValues;
 
-    .line 504
     .restart local v1    # "cv":Landroid/content/ContentValues;
     const-string v6, "kioskModeEnabled"
 
@@ -5593,7 +4965,6 @@
 
     if-ne v6, v8, :cond_0
 
-    .line 505
     const-string v6, "kioskModeKioskPackage"
 
     invoke-virtual {v1, v6}, Landroid/content/ContentValues;->getAsString(Ljava/lang/String;)Ljava/lang/String;
@@ -5602,7 +4973,6 @@
 
     move-result-object v4
 
-    .line 516
     .end local v0    # "columns":[Ljava/lang/String;
     .end local v1    # "cv":Landroid/content/ContentValues;
     .end local v3    # "it":Ljava/util/Iterator;
@@ -5610,11 +4980,9 @@
     :goto_0
     return-object v4
 
-    .line 512
     :catch_0
     move-exception v2
 
-    .line 513
     .local v2, "e":Ljava/lang/Exception;
     const-string v6, "KioskModeService"
 
@@ -5638,7 +5006,6 @@
 
     invoke-static {v6, v7}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 516
     .end local v2    # "e":Ljava/lang/Exception;
     :cond_1
     const/4 v4, 0x0
@@ -5652,54 +5019,45 @@
     .param p2, "hide"    # Z
 
     .prologue
-    .line 1745
     const/4 v3, 0x1
 
-    .line 1746
     .local v3, "result":Z
     invoke-direct {p0, p1}, Lcom/android/server/enterprise/kioskmode/KioskModeService;->enforceKioskModePermission(Landroid/app/enterprise/ContextInfo;)Landroid/app/enterprise/ContextInfo;
 
     move-result-object p1
 
-    .line 1748
     invoke-static {p1}, Lcom/android/server/enterprise/EnterpriseDeviceManagerService;->isKioskOrOwnerUserId(Landroid/app/enterprise/ContextInfo;)Z
 
     move-result v4
 
     if-nez v4, :cond_0
 
-    .line 1749
     const-string v4, "KioskModeService"
 
     const-string v5, "Failed. Caller is not COM container or owner"
 
     invoke-static {v4, v5}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1750
     const/4 v3, 0x0
 
-    .line 1770
     .end local v3    # "result":Z
     :goto_0
     return v3
 
-    .line 1753
     .restart local v3    # "result":Z
     :cond_0
     iget v0, p1, Landroid/app/enterprise/ContextInfo;->mCallerUid:I
 
-    .line 1754
     .local v0, "callingUid":I
     const/4 v2, 0x0
 
-    .line 1757
     .local v2, "oldVal":I
     :try_start_0
     iget-object v4, p0, Lcom/android/server/enterprise/kioskmode/KioskModeService;->mEdmStorageProvider:Lcom/android/server/enterprise/storage/EdmStorageProvider;
 
     const-string v5, "KIOSKMODE"
 
-    const-string/jumbo v6, "systemBarEnabled"
+    const-string v6, "systemBarEnabled"
 
     invoke-virtual {v4, v0, v5, v6}, Lcom/android/server/enterprise/storage/EdmStorageProvider;->getInt(ILjava/lang/String;Ljava/lang/String;)I
     :try_end_0
@@ -5707,7 +5065,6 @@
 
     move-result v2
 
-    .line 1763
     :goto_1
     const/4 v4, 0x1
 
@@ -5717,7 +5074,6 @@
 
     move v1, v2
 
-    .line 1766
     .end local v2    # "oldVal":I
     .local v1, "newVal":I
     .local v1, "oldVal":I
@@ -5726,16 +5082,14 @@
 
     const-string v5, "KIOSKMODE"
 
-    const-string/jumbo v6, "systemBarEnabled"
+    const-string v6, "systemBarEnabled"
 
     invoke-virtual {v4, v0, v5, v6, v1}, Lcom/android/server/enterprise/storage/EdmStorageProvider;->putInt(ILjava/lang/String;Ljava/lang/String;I)Z
 
-    .line 1769
     invoke-direct {p0}, Lcom/android/server/enterprise/kioskmode/KioskModeService;->applyHideSystemBarPolicy()V
 
     goto :goto_0
 
-    .line 1763
     .end local v1    # "oldVal":I
     .restart local v2    # "oldVal":I
     :cond_1
@@ -5747,7 +5101,6 @@
     .local v1, "oldVal":I
     goto :goto_2
 
-    .line 1759
     .end local v1    # "oldVal":I
     .restart local v2    # "oldVal":I
     :catch_0
@@ -5762,54 +5115,45 @@
     .param p2, "hide"    # Z
 
     .prologue
-    .line 1683
     const/4 v3, 0x1
 
-    .line 1684
     .local v3, "result":Z
     invoke-direct {p0, p1}, Lcom/android/server/enterprise/kioskmode/KioskModeService;->enforceKioskModePermission(Landroid/app/enterprise/ContextInfo;)Landroid/app/enterprise/ContextInfo;
 
     move-result-object p1
 
-    .line 1686
     invoke-static {p1}, Lcom/android/server/enterprise/EnterpriseDeviceManagerService;->isKioskOrOwnerUserId(Landroid/app/enterprise/ContextInfo;)Z
 
     move-result v4
 
     if-nez v4, :cond_0
 
-    .line 1687
     const-string v4, "KioskModeService"
 
     const-string v5, "Failed. Caller is not COM container or owner"
 
     invoke-static {v4, v5}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1688
     const/4 v3, 0x0
 
-    .line 1708
     .end local v3    # "result":Z
     :goto_0
     return v3
 
-    .line 1691
     .restart local v3    # "result":Z
     :cond_0
     iget v0, p1, Landroid/app/enterprise/ContextInfo;->mCallerUid:I
 
-    .line 1692
     .local v0, "callingUid":I
     const/4 v2, 0x0
 
-    .line 1695
     .local v2, "oldVal":I
     :try_start_0
     iget-object v4, p0, Lcom/android/server/enterprise/kioskmode/KioskModeService;->mEdmStorageProvider:Lcom/android/server/enterprise/storage/EdmStorageProvider;
 
     const-string v5, "KIOSKMODE"
 
-    const-string/jumbo v6, "systemBarEnabled"
+    const-string v6, "systemBarEnabled"
 
     invoke-virtual {v4, v0, v5, v6}, Lcom/android/server/enterprise/storage/EdmStorageProvider;->getInt(ILjava/lang/String;Ljava/lang/String;)I
     :try_end_0
@@ -5817,7 +5161,6 @@
 
     move-result v2
 
-    .line 1701
     :goto_1
     const/4 v4, 0x1
 
@@ -5827,7 +5170,6 @@
 
     move v1, v2
 
-    .line 1704
     .end local v2    # "oldVal":I
     .local v1, "newVal":I
     .local v1, "oldVal":I
@@ -5836,16 +5178,14 @@
 
     const-string v5, "KIOSKMODE"
 
-    const-string/jumbo v6, "systemBarEnabled"
+    const-string v6, "systemBarEnabled"
 
     invoke-virtual {v4, v0, v5, v6, v1}, Lcom/android/server/enterprise/storage/EdmStorageProvider;->putInt(ILjava/lang/String;Ljava/lang/String;I)Z
 
-    .line 1707
     invoke-direct {p0}, Lcom/android/server/enterprise/kioskmode/KioskModeService;->applyHideSystemBarPolicy()V
 
     goto :goto_0
 
-    .line 1701
     .end local v1    # "oldVal":I
     .restart local v2    # "oldVal":I
     :cond_1
@@ -5857,7 +5197,6 @@
     .local v1, "oldVal":I
     goto :goto_2
 
-    .line 1697
     .end local v1    # "oldVal":I
     .restart local v2    # "oldVal":I
     :catch_0
@@ -5872,54 +5211,45 @@
     .param p2, "hide"    # Z
 
     .prologue
-    .line 1317
     const/4 v3, 0x1
 
-    .line 1318
     .local v3, "result":Z
     invoke-direct {p0, p1}, Lcom/android/server/enterprise/kioskmode/KioskModeService;->enforceKioskModePermission(Landroid/app/enterprise/ContextInfo;)Landroid/app/enterprise/ContextInfo;
 
     move-result-object p1
 
-    .line 1320
     invoke-static {p1}, Lcom/android/server/enterprise/EnterpriseDeviceManagerService;->isKioskOrOwnerUserId(Landroid/app/enterprise/ContextInfo;)Z
 
     move-result v4
 
     if-nez v4, :cond_0
 
-    .line 1321
     const-string v4, "KioskModeService"
 
     const-string v5, "Failed. Caller is not COM container or owner"
 
     invoke-static {v4, v5}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1322
     const/4 v3, 0x0
 
-    .line 1343
     .end local v3    # "result":Z
     :goto_0
     return v3
 
-    .line 1325
     .restart local v3    # "result":Z
     :cond_0
     iget v0, p1, Landroid/app/enterprise/ContextInfo;->mCallerUid:I
 
-    .line 1326
     .local v0, "callingUid":I
     const/4 v2, 0x0
 
-    .line 1329
     .local v2, "oldVal":I
     :try_start_0
     iget-object v4, p0, Lcom/android/server/enterprise/kioskmode/KioskModeService;->mEdmStorageProvider:Lcom/android/server/enterprise/storage/EdmStorageProvider;
 
     const-string v5, "KIOSKMODE"
 
-    const-string/jumbo v6, "systemBarEnabled"
+    const-string v6, "systemBarEnabled"
 
     invoke-virtual {v4, v0, v5, v6}, Lcom/android/server/enterprise/storage/EdmStorageProvider;->getInt(ILjava/lang/String;Ljava/lang/String;)I
     :try_end_0
@@ -5927,7 +5257,6 @@
 
     move-result v2
 
-    .line 1335
     :goto_1
     const/4 v4, 0x1
 
@@ -5937,7 +5266,6 @@
 
     move v1, v2
 
-    .line 1338
     .end local v2    # "oldVal":I
     .local v1, "newVal":I
     .local v1, "oldVal":I
@@ -5946,16 +5274,14 @@
 
     const-string v5, "KIOSKMODE"
 
-    const-string/jumbo v6, "systemBarEnabled"
+    const-string v6, "systemBarEnabled"
 
     invoke-virtual {v4, v0, v5, v6, v1}, Lcom/android/server/enterprise/storage/EdmStorageProvider;->putInt(ILjava/lang/String;Ljava/lang/String;I)Z
 
-    .line 1341
     invoke-direct {p0}, Lcom/android/server/enterprise/kioskmode/KioskModeService;->applyHideSystemBarPolicy()V
 
     goto :goto_0
 
-    .line 1335
     .end local v1    # "oldVal":I
     .restart local v2    # "oldVal":I
     :cond_1
@@ -5967,7 +5293,6 @@
     .local v1, "oldVal":I
     goto :goto_2
 
-    .line 1331
     .end local v1    # "oldVal":I
     .restart local v2    # "oldVal":I
     :catch_0
@@ -5981,7 +5306,6 @@
     .param p1, "cxtInfo"    # Landroid/app/enterprise/ContextInfo;
 
     .prologue
-    .line 1901
     iget-object v3, p0, Lcom/android/server/enterprise/kioskmode/KioskModeService;->mEdmStorageProvider:Lcom/android/server/enterprise/storage/EdmStorageProvider;
 
     const-string v4, "KIOSKMODE"
@@ -5992,7 +5316,6 @@
 
     move-result-object v1
 
-    .line 1905
     .local v1, "kioskPermissions":Ljava/util/List;, "Ljava/util/List<Ljava/lang/Boolean;>;"
     invoke-interface {v1}, Ljava/util/List;->iterator()Ljava/util/Iterator;
 
@@ -6016,11 +5339,9 @@
 
     move-result v2
 
-    .line 1906
     .local v2, "permission":Z
     if-nez v2, :cond_0
 
-    .line 1911
     .end local v2    # "permission":Z
     :goto_0
     return v2
@@ -6036,7 +5357,6 @@
     .param p1, "cxtInfo"    # Landroid/app/enterprise/ContextInfo;
 
     .prologue
-    .line 1980
     iget-object v3, p0, Lcom/android/server/enterprise/kioskmode/KioskModeService;->mEdmStorageProvider:Lcom/android/server/enterprise/storage/EdmStorageProvider;
 
     const-string v4, "KIOSKMODE"
@@ -6047,7 +5367,6 @@
 
     move-result-object v1
 
-    .line 1984
     .local v1, "kioskPermissions":Ljava/util/List;, "Ljava/util/List<Ljava/lang/Boolean;>;"
     invoke-interface {v1}, Ljava/util/List;->iterator()Ljava/util/Iterator;
 
@@ -6071,11 +5390,9 @@
 
     move-result v2
 
-    .line 1985
     .local v2, "permission":Z
     if-nez v2, :cond_0
 
-    .line 1990
     .end local v2    # "permission":Z
     :goto_0
     return v2
@@ -6093,16 +5410,13 @@
     .param p3, "showMsg"    # Z
 
     .prologue
-    .line 1565
     const/4 v0, 0x1
 
-    .line 1567
     .local v0, "allowed":Z
     invoke-static {}, Lcom/android/server/enterprise/EnterpriseDeviceManagerService;->getKioskOrOwnerUserId()I
 
     move-result v1
 
-    .line 1569
     .local v1, "userId":I
     iget-object v2, p0, Lcom/android/server/enterprise/kioskmode/KioskModeService;->mCache:Lcom/android/server/enterprise/kioskmode/KioskModeService$KioskModeCache;
 
@@ -6130,7 +5444,6 @@
 
     if-eqz v2, :cond_0
 
-    .line 1570
     iget-object v2, p0, Lcom/android/server/enterprise/kioskmode/KioskModeService;->mCache:Lcom/android/server/enterprise/kioskmode/KioskModeService$KioskModeCache;
 
     # getter for: Lcom/android/server/enterprise/kioskmode/KioskModeService$KioskModeCache;->mBlockedHwKeys:Ljava/util/Map;
@@ -6158,21 +5471,17 @@
 
     if-eqz v2, :cond_0
 
-    .line 1571
     const/4 v0, 0x0
 
-    .line 1575
     :cond_0
     if-eqz p3, :cond_1
 
     if-nez v0, :cond_1
 
-    .line 1576
     const v2, 0x1040b1b
 
     invoke-static {v2}, Lcom/android/server/enterprise/RestrictionToastManager;->show(I)V
 
-    .line 1579
     :cond_1
     return v0
 .end method
@@ -6186,10 +5495,8 @@
 
     const/4 v8, 0x1
 
-    .line 400
     const/4 v5, 0x0
 
-    .line 402
     .local v5, "ret":Z
     const/4 v10, 0x1
 
@@ -6202,7 +5509,6 @@
 
     aput-object v11, v0, v10
 
-    .line 406
     .local v0, "columns":[Ljava/lang/String;
     iget-object v10, p0, Lcom/android/server/enterprise/kioskmode/KioskModeService;->mEdmStorageProvider:Lcom/android/server/enterprise/storage/EdmStorageProvider;
 
@@ -6212,7 +5518,6 @@
 
     move-result-object v4
 
-    .line 409
     .local v4, "results":Ljava/util/List;, "Ljava/util/List<Landroid/content/ContentValues;>;"
     if-eqz v4, :cond_4
 
@@ -6222,16 +5527,13 @@
 
     if-nez v10, :cond_4
 
-    .line 410
     const/4 v1, 0x0
 
-    .line 411
     .local v1, "cv":Landroid/content/ContentValues;
     invoke-interface {v4}, Ljava/util/List;->iterator()Ljava/util/Iterator;
 
     move-result-object v3
 
-    .line 413
     .local v3, "it":Ljava/util/Iterator;
     :cond_0
     invoke-interface {v3}, Ljava/util/Iterator;->hasNext()Z
@@ -6240,7 +5542,6 @@
 
     if-eqz v10, :cond_1
 
-    .line 414
     invoke-interface {v3}, Ljava/util/Iterator;->next()Ljava/lang/Object;
 
     move-result-object v1
@@ -6248,7 +5549,6 @@
     .end local v1    # "cv":Landroid/content/ContentValues;
     check-cast v1, Landroid/content/ContentValues;
 
-    .line 415
     .restart local v1    # "cv":Landroid/content/ContentValues;
     const-string v10, "kioskModeEnabled"
 
@@ -6266,11 +5566,9 @@
 
     move v5, v8
 
-    .line 416
     :goto_0
     if-ne v5, v8, :cond_0
 
-    .line 427
     .end local v0    # "columns":[Ljava/lang/String;
     .end local v1    # "cv":Landroid/content/ContentValues;
     .end local v3    # "it":Ljava/util/Iterator;
@@ -6279,12 +5577,10 @@
     :goto_1
     if-nez v5, :cond_2
 
-    .line 428
     invoke-static {}, Landroid/os/Binder;->clearCallingIdentity()J
 
     move-result-wide v6
 
-    .line 430
     .local v6, "token":J
     :try_start_1
     invoke-direct {p0}, Lcom/android/server/enterprise/kioskmode/KioskModeService;->getPersonaManagerService()Lcom/android/server/pm/PersonaManagerService;
@@ -6298,10 +5594,8 @@
 
     move-result v5
 
-    .line 434
     invoke-static {v6, v7}, Landroid/os/Binder;->restoreCallingIdentity(J)V
 
-    .line 437
     .end local v6    # "token":J
     :cond_2
     :goto_2
@@ -6314,10 +5608,8 @@
     :cond_3
     move v5, v9
 
-    .line 415
     goto :goto_0
 
-    .line 421
     .end local v1    # "cv":Landroid/content/ContentValues;
     .end local v3    # "it":Ljava/util/Iterator;
     :cond_4
@@ -6332,13 +5624,11 @@
 
     goto :goto_1
 
-    .line 423
     .end local v0    # "columns":[Ljava/lang/String;
     .end local v4    # "results":Ljava/util/List;, "Ljava/util/List<Landroid/content/ContentValues;>;"
     :catch_0
     move-exception v2
 
-    .line 424
     .local v2, "e":Ljava/lang/Exception;
     const-string v8, "KioskModeService"
 
@@ -6348,13 +5638,11 @@
 
     goto :goto_1
 
-    .line 431
     .end local v2    # "e":Ljava/lang/Exception;
     .restart local v6    # "token":J
     :catch_1
     move-exception v2
 
-    .line 432
     .restart local v2    # "e":Ljava/lang/Exception;
     :try_start_3
     const-string v8, "KioskModeService"
@@ -6381,7 +5669,6 @@
     :try_end_3
     .catchall {:try_start_3 .. :try_end_3} :catchall_0
 
-    .line 434
     invoke-static {v6, v7}, Landroid/os/Binder;->restoreCallingIdentity(J)V
 
     goto :goto_2
@@ -6404,10 +5691,8 @@
 
     const/4 v6, 0x1
 
-    .line 441
     const/4 v5, 0x0
 
-    .line 443
     .local v5, "ret":Z
     const/4 v8, 0x1
 
@@ -6420,7 +5705,6 @@
 
     aput-object v9, v0, v8
 
-    .line 447
     .local v0, "columns":[Ljava/lang/String;
     iget-object v8, p0, Lcom/android/server/enterprise/kioskmode/KioskModeService;->mEdmStorageProvider:Lcom/android/server/enterprise/storage/EdmStorageProvider;
 
@@ -6430,7 +5714,6 @@
 
     move-result-object v4
 
-    .line 450
     .local v4, "results":Ljava/util/List;, "Ljava/util/List<Landroid/content/ContentValues;>;"
     if-eqz v4, :cond_3
 
@@ -6440,16 +5723,13 @@
 
     if-nez v8, :cond_3
 
-    .line 451
     const/4 v1, 0x0
 
-    .line 452
     .local v1, "cv":Landroid/content/ContentValues;
     invoke-interface {v4}, Ljava/util/List;->iterator()Ljava/util/Iterator;
 
     move-result-object v3
 
-    .line 454
     .local v3, "it":Ljava/util/Iterator;
     :cond_0
     invoke-interface {v3}, Ljava/util/Iterator;->hasNext()Z
@@ -6458,7 +5738,6 @@
 
     if-eqz v8, :cond_1
 
-    .line 455
     invoke-interface {v3}, Ljava/util/Iterator;->next()Ljava/lang/Object;
 
     move-result-object v1
@@ -6466,7 +5745,6 @@
     .end local v1    # "cv":Landroid/content/ContentValues;
     check-cast v1, Landroid/content/ContentValues;
 
-    .line 456
     .restart local v1    # "cv":Landroid/content/ContentValues;
     const-string v8, "kioskModeEnabled"
 
@@ -6482,11 +5760,9 @@
 
     move v5, v6
 
-    .line 457
     :goto_0
     if-ne v5, v6, :cond_0
 
-    .line 467
     .end local v0    # "columns":[Ljava/lang/String;
     .end local v1    # "cv":Landroid/content/ContentValues;
     .end local v3    # "it":Ljava/util/Iterator;
@@ -6502,10 +5778,8 @@
     :cond_2
     move v5, v7
 
-    .line 456
     goto :goto_0
 
-    .line 462
     .end local v1    # "cv":Landroid/content/ContentValues;
     .end local v3    # "it":Ljava/util/Iterator;
     :cond_3
@@ -6519,13 +5793,11 @@
 
     goto :goto_1
 
-    .line 464
     .end local v0    # "columns":[Ljava/lang/String;
     .end local v4    # "results":Ljava/util/List;, "Ljava/util/List<Landroid/content/ContentValues;>;"
     :catch_0
     move-exception v2
 
-    .line 465
     .local v2, "e":Ljava/lang/Exception;
     const-string v6, "KioskModeService"
 
@@ -6542,29 +5814,24 @@
     .param p2, "showMsg"    # Z
 
     .prologue
-    .line 1823
     invoke-direct {p0, p1}, Lcom/android/server/enterprise/kioskmode/KioskModeService;->getUserIdByPackageNameOrUid(Landroid/app/enterprise/ContextInfo;)I
 
     move-result v1
 
-    .line 1825
     .local v1, "userId":I
     invoke-virtual {p0, v1}, Lcom/android/server/enterprise/kioskmode/KioskModeService;->isMultiWindowModeAllowedAsUser(I)Z
 
     move-result v0
 
-    .line 1827
     .local v0, "allowed":Z
     if-eqz p2, :cond_0
 
     if-nez v0, :cond_0
 
-    .line 1828
     const v2, 0x1040b2d
 
     invoke-static {v2}, Lcom/android/server/enterprise/RestrictionToastManager;->show(I)V
 
-    .line 1832
     :cond_0
     return v0
 .end method
@@ -6574,10 +5841,8 @@
     .param p1, "userId"    # I
 
     .prologue
-    .line 1836
     const/4 v1, 0x1
 
-    .line 1838
     .local v1, "allowed":Z
     iget-object v4, p0, Lcom/android/server/enterprise/kioskmode/KioskModeService;->mEdmStorageProvider:Lcom/android/server/enterprise/storage/EdmStorageProvider;
 
@@ -6589,7 +5854,6 @@
 
     move-result-object v3
 
-    .line 1840
     .local v3, "list":Ljava/util/List;, "Ljava/util/List<Ljava/lang/Boolean;>;"
     invoke-interface {v3}, Ljava/util/List;->iterator()Ljava/util/Iterator;
 
@@ -6610,7 +5874,6 @@
 
     check-cast v0, Ljava/lang/Boolean;
 
-    .line 1841
     .local v0, "adminValue":Ljava/lang/Boolean;
     invoke-virtual {v0}, Ljava/lang/Boolean;->booleanValue()Z
 
@@ -6618,12 +5881,10 @@
 
     if-nez v4, :cond_0
 
-    .line 1842
     const/4 v1, 0x0
 
     goto :goto_0
 
-    .line 1846
     .end local v0    # "adminValue":Ljava/lang/Boolean;
     :cond_1
     return v1
@@ -6634,7 +5895,6 @@
     .param p1, "cxtInfo"    # Landroid/app/enterprise/ContextInfo;
 
     .prologue
-    .line 1779
     const/4 v0, 0x0
 
     invoke-direct {p0, v0}, Lcom/android/server/enterprise/kioskmode/KioskModeService;->isNavigationBarHiddenAsUser(I)Z
@@ -6649,7 +5909,6 @@
     .param p1, "cxtInfo"    # Landroid/app/enterprise/ContextInfo;
 
     .prologue
-    .line 1717
     const/4 v0, 0x0
 
     invoke-direct {p0, v0}, Lcom/android/server/enterprise/kioskmode/KioskModeService;->isStatusBarHiddenAsUser(I)Z
@@ -6664,7 +5923,6 @@
     .param p1, "cxtInfo"    # Landroid/app/enterprise/ContextInfo;
 
     .prologue
-    .line 1353
     const/4 v0, 0x0
 
     invoke-direct {p0, v0}, Lcom/android/server/enterprise/kioskmode/KioskModeService;->isSystemBarHiddenAsUser(I)Z
@@ -6680,7 +5938,6 @@
     .param p2, "showMsg"    # Z
 
     .prologue
-    .line 1631
     const/4 v0, 0x0
 
     invoke-virtual {p0, p2, v0}, Lcom/android/server/enterprise/kioskmode/KioskModeService;->isTaskManagerAllowedAsUser(ZI)Z
@@ -6696,27 +5953,23 @@
     .param p2, "userId"    # I
 
     .prologue
-    .line 1637
     invoke-static {}, Lcom/android/server/enterprise/EnterpriseDeviceManagerService;->getKioskOrOwnerUserId()I
 
     move-result p2
 
-    .line 1638
     const/4 v1, 0x1
 
-    .line 1639
     .local v1, "allowed":Z
     iget-object v4, p0, Lcom/android/server/enterprise/kioskmode/KioskModeService;->mEdmStorageProvider:Lcom/android/server/enterprise/storage/EdmStorageProvider;
 
     const-string v5, "KIOSKMODE"
 
-    const-string/jumbo v6, "taskManagerEnabled"
+    const-string v6, "taskManagerEnabled"
 
     invoke-virtual {v4, v5, v6, p2}, Lcom/android/server/enterprise/storage/EdmStorageProvider;->getBooleanListAsUser(Ljava/lang/String;Ljava/lang/String;I)Ljava/util/ArrayList;
 
     move-result-object v3
 
-    .line 1641
     .local v3, "list":Ljava/util/List;, "Ljava/util/List<Ljava/lang/Boolean;>;"
     invoke-interface {v3}, Ljava/util/List;->iterator()Ljava/util/Iterator;
 
@@ -6737,7 +5990,6 @@
 
     check-cast v0, Ljava/lang/Boolean;
 
-    .line 1642
     .local v0, "adminValue":Ljava/lang/Boolean;
     invoke-virtual {v0}, Ljava/lang/Boolean;->booleanValue()Z
 
@@ -6745,24 +5997,20 @@
 
     if-nez v4, :cond_0
 
-    .line 1643
     const/4 v1, 0x0
 
     goto :goto_0
 
-    .line 1646
     .end local v0    # "adminValue":Ljava/lang/Boolean;
     :cond_1
     if-eqz p1, :cond_2
 
     if-nez v1, :cond_2
 
-    .line 1647
     const v4, 0x1040b1d
 
     invoke-static {v4}, Lcom/android/server/enterprise/RestrictionToastManager;->show(I)V
 
-    .line 1651
     :cond_2
     return v1
 .end method
@@ -6772,7 +6020,6 @@
     .param p1, "uid"    # I
 
     .prologue
-    .line 301
     return-void
 .end method
 
@@ -6781,7 +6028,6 @@
     .param p1, "uid"    # I
 
     .prologue
-    .line 325
     new-instance v1, Landroid/app/enterprise/ContextInfo;
 
     const/4 v2, 0x0
@@ -6792,7 +6038,6 @@
 
     move-result v0
 
-    .line 327
     .local v0, "userId":I
     invoke-static {}, Landroid/app/ActivityManager;->getCurrentUser()I
 
@@ -6800,16 +6045,13 @@
 
     if-ne v0, v1, :cond_0
 
-    .line 328
     invoke-direct {p0}, Lcom/android/server/enterprise/kioskmode/KioskModeService;->applyHideSystemBarPolicy()V
 
-    .line 331
     :cond_0
     iget-object v1, p0, Lcom/android/server/enterprise/kioskmode/KioskModeService;->mCache:Lcom/android/server/enterprise/kioskmode/KioskModeService$KioskModeCache;
 
     invoke-virtual {v1}, Lcom/android/server/enterprise/kioskmode/KioskModeService$KioskModeCache;->updateCache()Z
 
-    .line 332
     return-void
 .end method
 
@@ -6818,7 +6060,6 @@
     .param p1, "uid"    # I
 
     .prologue
-    .line 309
     new-instance v1, Landroid/app/enterprise/ContextInfo;
 
     const/4 v2, 0x0
@@ -6829,7 +6070,6 @@
 
     move-result v0
 
-    .line 314
     .local v0, "userId":I
     invoke-virtual {p0, v0}, Lcom/android/server/enterprise/kioskmode/KioskModeService;->isKioskModeEnabledAsUser(I)Z
 
@@ -6843,10 +6083,8 @@
 
     if-ne p1, v1, :cond_0
 
-    .line 315
     invoke-direct {p0, v0}, Lcom/android/server/enterprise/kioskmode/KioskModeService;->forceTerminateKiosk(I)V
 
-    .line 317
     :cond_0
     return-void
 .end method
@@ -6855,18 +6093,15 @@
     .locals 7
 
     .prologue
-    .line 269
     iget-object v6, p0, Lcom/android/server/enterprise/kioskmode/KioskModeService;->mUserManager:Landroid/os/UserManager;
 
     invoke-virtual {v6}, Landroid/os/UserManager;->getUsers()Ljava/util/List;
 
     move-result-object v5
 
-    .line 270
     .local v5, "usersList":Ljava/util/List;, "Ljava/util/List<Landroid/content/pm/UserInfo;>;"
     const/4 v4, 0x0
 
-    .line 274
     .local v4, "userId":I
     invoke-interface {v5}, Ljava/util/List;->iterator()Ljava/util/Iterator;
 
@@ -6887,7 +6122,6 @@
 
     check-cast v1, Landroid/content/pm/UserInfo;
 
-    .line 275
     .local v1, "i":Landroid/content/pm/UserInfo;
     invoke-virtual {v1}, Landroid/content/pm/UserInfo;->getUserHandle()Landroid/os/UserHandle;
 
@@ -6897,25 +6131,21 @@
 
     move-result v4
 
-    .line 276
     invoke-virtual {p0, v4}, Lcom/android/server/enterprise/kioskmode/KioskModeService;->isKioskModeEnabledAsUser(I)Z
 
     move-result v6
 
     if-eqz v6, :cond_0
 
-    .line 277
     invoke-virtual {p0, v4}, Lcom/android/server/enterprise/kioskmode/KioskModeService;->getKioskHomePackageAsUser(I)Ljava/lang/String;
 
     move-result-object v3
 
-    .line 278
     .local v3, "kioskPackage":Ljava/lang/String;
     invoke-direct {p0, v4}, Lcom/android/server/enterprise/kioskmode/KioskModeService;->getDefaultHomeScreen(I)Ljava/lang/String;
 
     move-result-object v0
 
-    .line 280
     .local v0, "currentHomePackage":Ljava/lang/String;
     if-eqz v3, :cond_1
 
@@ -6927,34 +6157,27 @@
 
     if-nez v6, :cond_1
 
-    .line 282
     invoke-direct {p0, v4, v0, v3}, Lcom/android/server/enterprise/kioskmode/KioskModeService;->setDefaultHomeScreen(ILjava/lang/String;Ljava/lang/String;)Z
 
-    .line 287
     :cond_1
     invoke-direct {p0, v4}, Lcom/android/server/enterprise/kioskmode/KioskModeService;->registerPackageRemoveReceiver(I)V
 
-    .line 288
     invoke-direct {p0, v4}, Lcom/android/server/enterprise/kioskmode/KioskModeService;->registerTerminationReceiver(I)V
 
     goto :goto_0
 
-    .line 292
     .end local v0    # "currentHomePackage":Ljava/lang/String;
     .end local v1    # "i":Landroid/content/pm/UserInfo;
     .end local v3    # "kioskPackage":Ljava/lang/String;
     :cond_2
     invoke-direct {p0}, Lcom/android/server/enterprise/kioskmode/KioskModeService;->registerSwitchingUserReceiver()V
 
-    .line 294
     invoke-direct {p0}, Lcom/android/server/enterprise/kioskmode/KioskModeService;->initializeKeyCodeLists()V
 
-    .line 295
     iget-object v6, p0, Lcom/android/server/enterprise/kioskmode/KioskModeService;->mCache:Lcom/android/server/enterprise/kioskmode/KioskModeService$KioskModeCache;
 
     invoke-virtual {v6}, Lcom/android/server/enterprise/kioskmode/KioskModeService$KioskModeCache;->updateCache()Z
 
-    .line 296
     return-void
 .end method
 
@@ -6963,12 +6186,10 @@
     .param p1, "cxtInfo"    # Landroid/app/enterprise/ContextInfo;
 
     .prologue
-    .line 1388
     invoke-direct {p0, p1}, Lcom/android/server/enterprise/kioskmode/KioskModeService;->enforceKioskModePermission(Landroid/app/enterprise/ContextInfo;)Landroid/app/enterprise/ContextInfo;
 
     move-result-object p1
 
-    .line 1390
     invoke-static {p1}, Lcom/android/server/enterprise/EnterpriseDeviceManagerService;->getCallingOrCurrentUserId(Landroid/app/enterprise/ContextInfo;)I
 
     move-result v0

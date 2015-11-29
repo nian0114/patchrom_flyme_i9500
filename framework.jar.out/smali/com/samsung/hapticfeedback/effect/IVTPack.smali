@@ -32,14 +32,12 @@
     .prologue
     const/16 v1, 0x5a
 
-    .line 6
     new-array v0, v1, [B
 
     fill-array-data v0, :array_0
 
     sput-object v0, Lcom/samsung/hapticfeedback/effect/IVTPack;->brush:[B
 
-    .line 23
     const/16 v0, 0x1a
 
     new-array v0, v0, [B
@@ -48,21 +46,18 @@
 
     sput-object v0, Lcom/samsung/hapticfeedback/effect/IVTPack;->chinese:[B
 
-    .line 32
     new-array v0, v1, [B
 
     fill-array-data v0, :array_2
 
     sput-object v0, Lcom/samsung/hapticfeedback/effect/IVTPack;->copynpaste:[B
 
-    .line 49
     new-array v0, v1, [B
 
     fill-array-data v0, :array_3
 
     sput-object v0, Lcom/samsung/hapticfeedback/effect/IVTPack;->eraser:[B
 
-    .line 66
     const/16 v0, 0x24
 
     new-array v0, v0, [B
@@ -71,7 +66,6 @@
 
     sput-object v0, Lcom/samsung/hapticfeedback/effect/IVTPack;->marker:[B
 
-    .line 76
     const/16 v0, 0x1c
 
     new-array v0, v0, [B
@@ -80,7 +74,6 @@
 
     sput-object v0, Lcom/samsung/hapticfeedback/effect/IVTPack;->pen:[B
 
-    .line 85
     const/16 v0, 0x30
 
     new-array v0, v0, [B
@@ -89,7 +82,6 @@
 
     sput-object v0, Lcom/samsung/hapticfeedback/effect/IVTPack;->scissors:[B
 
-    .line 96
     const/16 v0, 0x6e
 
     new-array v0, v0, [B
@@ -98,7 +90,6 @@
 
     sput-object v0, Lcom/samsung/hapticfeedback/effect/IVTPack;->pecil_cement:[B
 
-    .line 115
     const/16 v0, 0xa2
 
     new-array v0, v0, [B
@@ -107,7 +98,6 @@
 
     sput-object v0, Lcom/samsung/hapticfeedback/effect/IVTPack;->pecil_fabric:[B
 
-    .line 141
     const/16 v0, 0xb0
 
     new-array v0, v0, [B
@@ -118,7 +108,6 @@
 
     return-void
 
-    .line 6
     nop
 
     :array_0
@@ -215,7 +204,6 @@
         -0x7ft
     .end array-data
 
-    .line 23
     nop
 
     :array_1
@@ -248,7 +236,6 @@
         0x41t
     .end array-data
 
-    .line 32
     nop
 
     :array_2
@@ -345,7 +332,6 @@
         -0x7ft
     .end array-data
 
-    .line 49
     nop
 
     :array_3
@@ -442,7 +428,6 @@
         -0x7ft
     .end array-data
 
-    .line 66
     nop
 
     :array_4
@@ -485,7 +470,6 @@
         0x2t
     .end array-data
 
-    .line 76
     :array_5
     .array-data 1
         0x1t
@@ -518,7 +502,6 @@
         0x0t
     .end array-data
 
-    .line 85
     :array_6
     .array-data 1
         0x1t
@@ -571,7 +554,6 @@
         0x0t
     .end array-data
 
-    .line 96
     :array_7
     .array-data 1
         0x1t
@@ -686,7 +668,6 @@
         0x0t
     .end array-data
 
-    .line 115
     nop
 
     :array_8
@@ -855,7 +836,6 @@
         0x0t
     .end array-data
 
-    .line 141
     nop
 
     :array_9
@@ -1043,9 +1023,7 @@
     .locals 0
 
     .prologue
-    .line 169
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 171
     return-void
 .end method

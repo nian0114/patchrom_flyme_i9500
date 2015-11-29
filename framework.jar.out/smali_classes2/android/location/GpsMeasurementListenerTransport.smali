@@ -36,12 +36,10 @@
     .param p2, "locationManager"    # Landroid/location/ILocationManager;
 
     .prologue
-    .line 35
     const-string v0, "GpsMeasurementListenerTransport"
 
     invoke-direct {p0, v0}, Landroid/location/LocalListenerHelper;-><init>(Ljava/lang/String;)V
 
-    .line 32
     new-instance v0, Landroid/location/GpsMeasurementListenerTransport$ListenerTransport;
 
     const/4 v1, 0x0
@@ -50,13 +48,10 @@
 
     iput-object v0, p0, Landroid/location/GpsMeasurementListenerTransport;->mListenerTransport:Landroid/location/IGpsMeasurementsListener;
 
-    .line 36
     iput-object p1, p0, Landroid/location/GpsMeasurementListenerTransport;->mContext:Landroid/content/Context;
 
-    .line 37
     iput-object p2, p0, Landroid/location/GpsMeasurementListenerTransport;->mLocationManager:Landroid/location/ILocationManager;
 
-    .line 38
     return-void
 .end method
 
@@ -71,7 +66,6 @@
     .end annotation
 
     .prologue
-    .line 42
     iget-object v0, p0, Landroid/location/GpsMeasurementListenerTransport;->mLocationManager:Landroid/location/ILocationManager;
 
     iget-object v1, p0, Landroid/location/GpsMeasurementListenerTransport;->mListenerTransport:Landroid/location/IGpsMeasurementsListener;
@@ -98,13 +92,11 @@
     .end annotation
 
     .prologue
-    .line 49
     iget-object v0, p0, Landroid/location/GpsMeasurementListenerTransport;->mLocationManager:Landroid/location/ILocationManager;
 
     iget-object v1, p0, Landroid/location/GpsMeasurementListenerTransport;->mListenerTransport:Landroid/location/IGpsMeasurementsListener;
 
     invoke-interface {v0, v1}, Landroid/location/ILocationManager;->removeGpsMeasurementsListener(Landroid/location/IGpsMeasurementsListener;)Z
 
-    .line 50
     return-void
 .end method

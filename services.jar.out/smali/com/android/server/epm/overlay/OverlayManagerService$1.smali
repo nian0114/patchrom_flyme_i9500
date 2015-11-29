@@ -29,7 +29,6 @@
     .locals 1
 
     .prologue
-    .line 259
     iput-object p1, p0, Lcom/android/server/epm/overlay/OverlayManagerService$1;->this$0:Lcom/android/server/epm/overlay/OverlayManagerService;
 
     iput-object p2, p0, Lcom/android/server/epm/overlay/OverlayManagerService$1;->val$pkgName:Ljava/lang/String;
@@ -38,7 +37,6 @@
 
     invoke-direct {p0}, Ljava/util/TimerTask;-><init>()V
 
-    .line 260
     const/4 v0, 0x0
 
     iput v0, p0, Lcom/android/server/epm/overlay/OverlayManagerService$1;->val:I
@@ -52,7 +50,6 @@
     .locals 6
 
     .prologue
-    .line 264
     :try_start_0
     const-string v2, "USER_TRIAL"
 
@@ -95,7 +92,6 @@
 
     invoke-static {v2, v3}, Landroid/util/Slog;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 265
     iget-object v2, p0, Lcom/android/server/epm/overlay/OverlayManagerService$1;->this$0:Lcom/android/server/epm/overlay/OverlayManagerService;
 
     # getter for: Lcom/android/server/epm/overlay/OverlayManagerService;->mContext:Landroid/content/Context;
@@ -111,7 +107,6 @@
 
     move-result-object v1
 
-    .line 266
     .local v1, "masterContext":Landroid/content/Context;
     iget-object v2, p0, Lcom/android/server/epm/overlay/OverlayManagerService$1;->this$0:Lcom/android/server/epm/overlay/OverlayManagerService;
 
@@ -128,7 +123,6 @@
 
     iput v2, p0, Lcom/android/server/epm/overlay/OverlayManagerService$1;->val:I
 
-    .line 267
     const-string v2, "USER_TRIAL"
 
     new-instance v3, Ljava/lang/StringBuilder;
@@ -153,7 +147,6 @@
 
     invoke-static {v2, v3}, Landroid/util/Slog;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 270
     iget v2, p0, Lcom/android/server/epm/overlay/OverlayManagerService$1;->val:I
 
     iget-object v3, p0, Lcom/android/server/epm/overlay/OverlayManagerService$1;->this$0:Lcom/android/server/epm/overlay/OverlayManagerService;
@@ -165,24 +158,20 @@
 
     if-lt v2, v3, :cond_0
 
-    .line 271
     iget-object v2, p0, Lcom/android/server/epm/overlay/OverlayManagerService$1;->val$mTimer:Ljava/util/Timer;
 
     invoke-virtual {v2}, Ljava/util/Timer;->cancel()V
 
-    .line 272
     const/4 v2, 0x0
 
     iput v2, p0, Lcom/android/server/epm/overlay/OverlayManagerService$1;->val:I
 
-    .line 273
     iget-object v2, p0, Lcom/android/server/epm/overlay/OverlayManagerService$1;->this$0:Lcom/android/server/epm/overlay/OverlayManagerService;
 
     iget v3, p0, Lcom/android/server/epm/overlay/OverlayManagerService$1;->val:I
 
     invoke-virtual {v2, v1, v3}, Lcom/android/server/epm/overlay/OverlayManagerService;->storeData(Landroid/content/Context;I)V
 
-    .line 274
     iget-object v2, p0, Lcom/android/server/epm/overlay/OverlayManagerService$1;->this$0:Lcom/android/server/epm/overlay/OverlayManagerService;
 
     # getter for: Lcom/android/server/epm/overlay/OverlayManagerService;->mPackageManager:Landroid/content/pm/PackageManager;
@@ -198,12 +187,10 @@
 
     invoke-virtual {v2, v3, v4, v5}, Landroid/content/pm/PackageManager;->deletePackage(Ljava/lang/String;Landroid/content/pm/IPackageDeleteObserver;I)V
 
-    .line 282
     .end local v1    # "masterContext":Landroid/content/Context;
     :goto_0
     return-void
 
-    .line 276
     .restart local v1    # "masterContext":Landroid/content/Context;
     :cond_0
     iget v2, p0, Lcom/android/server/epm/overlay/OverlayManagerService$1;->val:I
@@ -212,7 +199,6 @@
 
     iput v2, p0, Lcom/android/server/epm/overlay/OverlayManagerService$1;->val:I
 
-    .line 277
     iget-object v2, p0, Lcom/android/server/epm/overlay/OverlayManagerService$1;->this$0:Lcom/android/server/epm/overlay/OverlayManagerService;
 
     iget v3, p0, Lcom/android/server/epm/overlay/OverlayManagerService$1;->val:I
@@ -223,12 +209,10 @@
 
     goto :goto_0
 
-    .line 279
     .end local v1    # "masterContext":Landroid/content/Context;
     :catch_0
     move-exception v0
 
-    .line 280
     .local v0, "e":Landroid/content/pm/PackageManager$NameNotFoundException;
     invoke-virtual {v0}, Landroid/content/pm/PackageManager$NameNotFoundException;->printStackTrace()V
 

@@ -24,7 +24,6 @@
     .param p2, "x0"    # Landroid/os/Handler;
 
     .prologue
-    .line 1785
     iput-object p1, p0, Lcom/android/internal/telephony/SubscriptionController$2;->this$0:Lcom/android/internal/telephony/SubscriptionController;
 
     invoke-direct {p0, p2}, Landroid/database/ContentObserver;-><init>(Landroid/os/Handler;)V
@@ -39,14 +38,12 @@
     .param p1, "selfChange"    # Z
 
     .prologue
-    .line 1788
     iget-object v1, p0, Lcom/android/internal/telephony/SubscriptionController$2;->this$0:Lcom/android/internal/telephony/SubscriptionController;
 
     invoke-virtual {v1}, Lcom/android/internal/telephony/SubscriptionController;->getDefaultVoiceSubId()J
 
     move-result-wide v2
 
-    .line 1789
     .local v2, "subId":J
     iget-object v1, p0, Lcom/android/internal/telephony/SubscriptionController$2;->this$0:Lcom/android/internal/telephony/SubscriptionController;
 
@@ -54,13 +51,11 @@
 
     move-result v0
 
-    .line 1792
     .local v0, "slotId":I
     iget-object v1, p0, Lcom/android/internal/telephony/SubscriptionController$2;->this$0:Lcom/android/internal/telephony/SubscriptionController;
 
     # invokes: Lcom/android/internal/telephony/SubscriptionController;->setDefaultVoiceSlotId(I)V
     invoke-static {v1, v0}, Lcom/android/internal/telephony/SubscriptionController;->access$400(Lcom/android/internal/telephony/SubscriptionController;I)V
 
-    .line 1793
     return-void
 .end method

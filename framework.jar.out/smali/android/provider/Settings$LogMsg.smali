@@ -33,7 +33,6 @@
     .locals 2
 
     .prologue
-    .line 1056
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -62,8 +61,7 @@
 
     sput-object v0, Landroid/provider/Settings$LogMsg;->SETTINGS_DB_CALLSTACK_LOG_FILE_PATH:Ljava/lang/String;
 
-    .line 1058
-    const-string/jumbo v0, "unsetted"
+    const-string v0, "unsetted"
 
     sput-object v0, Landroid/provider/Settings$LogMsg;->SETTINGS_DB_KEY_LIST:Ljava/lang/String;
 
@@ -74,7 +72,6 @@
     .locals 0
 
     .prologue
-    .line 1052
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -86,7 +83,6 @@
     .param p1, "key"    # Ljava/lang/String;
 
     .prologue
-    .line 1114
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -113,14 +109,12 @@
 
     sput-object v0, Landroid/provider/Settings$LogMsg;->SETTINGS_DB_KEY_LIST:Ljava/lang/String;
 
-    .line 1115
-    const-string/jumbo v0, "settings_db_callstack_key_list"
+    const-string v0, "settings_db_callstack_key_list"
 
     sget-object v1, Landroid/provider/Settings$LogMsg;->SETTINGS_DB_KEY_LIST:Ljava/lang/String;
 
     invoke-static {p0, v0, v1}, Landroid/provider/Settings$Secure;->putString(Landroid/content/ContentResolver;Ljava/lang/String;Ljava/lang/String;)Z
 
-    .line 1116
     return-void
 .end method
 
@@ -130,9 +124,8 @@
     .param p1, "name"    # Ljava/lang/String;
 
     .prologue
-    .line 1063
     :try_start_0
-    const-string/jumbo v2, "unsetted"
+    const-string v2, "unsetted"
 
     sget-object v3, Landroid/provider/Settings$LogMsg;->SETTINGS_DB_KEY_LIST:Ljava/lang/String;
 
@@ -142,8 +135,7 @@
 
     if-eqz v2, :cond_0
 
-    .line 1064
-    const-string/jumbo v2, "settings_db_callstack_key_list"
+    const-string v2, "settings_db_callstack_key_list"
 
     invoke-static {p0, v2}, Landroid/provider/Settings$Secure;->getString(Landroid/content/ContentResolver;Ljava/lang/String;)Ljava/lang/String;
 
@@ -151,17 +143,14 @@
 
     sput-object v2, Landroid/provider/Settings$LogMsg;->SETTINGS_DB_KEY_LIST:Ljava/lang/String;
 
-    .line 1065
     sget-object v2, Landroid/provider/Settings$LogMsg;->SETTINGS_DB_KEY_LIST:Ljava/lang/String;
 
     if-nez v2, :cond_0
 
-    .line 1066
     const-string v2, ";"
 
     sput-object v2, Landroid/provider/Settings$LogMsg;->SETTINGS_DB_KEY_LIST:Ljava/lang/String;
 
-    .line 1070
     :cond_0
     new-instance v2, Ljava/lang/StringBuilder;
 
@@ -187,7 +176,6 @@
 
     move-result-object v1
 
-    .line 1071
     .local v1, "key":Ljava/lang/String;
     sget-object v2, Landroid/provider/Settings$LogMsg;->SETTINGS_DB_KEY_LIST:Ljava/lang/String;
 
@@ -197,16 +185,13 @@
 
     move-result v2
 
-    .line 1073
     .end local v1    # "key":Ljava/lang/String;
     :goto_0
     return v2
 
-    .line 1072
     :catch_0
     move-exception v0
 
-    .line 1073
     .local v0, "e":Ljava/lang/Exception;
     const/4 v2, 0x0
 
@@ -217,7 +202,6 @@
     .locals 1
 
     .prologue
-    .line 1120
     sget-object v0, Landroid/provider/Settings$LogMsg;->SETTINGS_DB_KEY_LIST:Ljava/lang/String;
 
     return-object v0
@@ -229,7 +213,6 @@
     .param p1, "key"    # Ljava/lang/String;
 
     .prologue
-    .line 1108
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -256,14 +239,12 @@
 
     sput-object v0, Landroid/provider/Settings$LogMsg;->SETTINGS_DB_KEY_LIST:Ljava/lang/String;
 
-    .line 1109
-    const-string/jumbo v0, "settings_db_callstack_key_list"
+    const-string v0, "settings_db_callstack_key_list"
 
     sget-object v1, Landroid/provider/Settings$LogMsg;->SETTINGS_DB_KEY_LIST:Ljava/lang/String;
 
     invoke-static {p0, v0, v1}, Landroid/provider/Settings$Secure;->putString(Landroid/content/ContentResolver;Ljava/lang/String;Ljava/lang/String;)Z
 
-    .line 1110
     return-void
 .end method
 
@@ -273,24 +254,20 @@
     .param p1, "value"    # Ljava/lang/String;
 
     .prologue
-    .line 1078
     invoke-static {}, Ljava/util/Calendar;->getInstance()Ljava/util/Calendar;
 
     move-result-object v4
 
-    .line 1079
     .local v4, "now":Ljava/util/Calendar;
     new-instance v0, Ljava/io/ByteArrayOutputStream;
 
     invoke-direct {v0}, Ljava/io/ByteArrayOutputStream;-><init>()V
 
-    .line 1080
     .local v0, "arrayOutputStream":Ljava/io/ByteArrayOutputStream;
     new-instance v8, Ljava/io/PrintStream;
 
     invoke-direct {v8, v0}, Ljava/io/PrintStream;-><init>(Ljava/io/OutputStream;)V
 
-    .line 1081
     .local v8, "pinrtStream":Ljava/io/PrintStream;
     new-instance v9, Ljava/lang/RuntimeException;
 
@@ -298,12 +275,10 @@
 
     invoke-virtual {v9, v8}, Ljava/lang/RuntimeException;->printStackTrace(Ljava/io/PrintStream;)V
 
-    .line 1082
     invoke-virtual {v0}, Ljava/io/ByteArrayOutputStream;->toString()Ljava/lang/String;
 
     move-result-object v3
 
-    .line 1083
     .local v3, "msg":Ljava/lang/String;
     new-instance v9, Ljava/lang/StringBuilder;
 
@@ -355,15 +330,12 @@
 
     move-result-object v7
 
-    .line 1084
     .local v7, "output_str":Ljava/lang/String;
     const/4 v1, 0x0
 
-    .line 1085
     .local v1, "file":Ljava/io/File;
     const/4 v5, 0x0
 
-    .line 1088
     .local v5, "osw":Ljava/io/OutputStreamWriter;
     :try_start_0
     new-instance v2, Ljava/io/File;
@@ -375,7 +347,6 @@
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_1
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 1089
     .end local v1    # "file":Ljava/io/File;
     .local v2, "file":Ljava/io/File;
     :try_start_1
@@ -385,7 +356,6 @@
 
     invoke-virtual {v9}, Ljava/io/File;->mkdir()Z
 
-    .line 1090
     invoke-virtual {v2}, Ljava/io/File;->length()J
 
     move-result-wide v10
@@ -396,10 +366,8 @@
 
     if-lez v9, :cond_3
 
-    .line 1091
     invoke-virtual {v2}, Ljava/io/File;->delete()Z
 
-    .line 1092
     new-instance v1, Ljava/io/File;
 
     sget-object v9, Landroid/provider/Settings$LogMsg;->SETTINGS_DB_CALLSTACK_LOG_FILE_PATH:Ljava/lang/String;
@@ -409,7 +377,6 @@
     .catch Ljava/lang/Exception; {:try_start_1 .. :try_end_1} :catch_4
     .catchall {:try_start_1 .. :try_end_1} :catchall_1
 
-    .line 1094
     .end local v2    # "file":Ljava/io/File;
     .restart local v1    # "file":Ljava/io/File;
     :goto_0
@@ -429,22 +396,18 @@
     .catch Ljava/lang/Exception; {:try_start_2 .. :try_end_2} :catch_1
     .catchall {:try_start_2 .. :try_end_2} :catchall_0
 
-    .line 1095
     .end local v5    # "osw":Ljava/io/OutputStreamWriter;
     .local v6, "osw":Ljava/io/OutputStreamWriter;
     :try_start_3
     invoke-virtual {v6, v7}, Ljava/io/OutputStreamWriter;->append(Ljava/lang/CharSequence;)Ljava/io/Writer;
 
-    .line 1096
     invoke-virtual {v6}, Ljava/io/OutputStreamWriter;->close()V
     :try_end_3
     .catch Ljava/lang/Exception; {:try_start_3 .. :try_end_3} :catch_5
     .catchall {:try_start_3 .. :try_end_3} :catchall_2
 
-    .line 1100
     if-eqz v6, :cond_0
 
-    .line 1101
     :try_start_4
     invoke-virtual {v6}, Ljava/io/OutputStreamWriter;->close()V
     :try_end_4
@@ -453,14 +416,12 @@
     :cond_0
     move-object v5, v6
 
-    .line 1105
     .end local v6    # "osw":Ljava/io/OutputStreamWriter;
     .restart local v5    # "osw":Ljava/io/OutputStreamWriter;
     :cond_1
     :goto_1
     return-void
 
-    .line 1103
     .end local v5    # "osw":Ljava/io/OutputStreamWriter;
     .restart local v6    # "osw":Ljava/io/OutputStreamWriter;
     :catch_0
@@ -468,20 +429,16 @@
 
     move-object v5, v6
 
-    .line 1104
     .end local v6    # "osw":Ljava/io/OutputStreamWriter;
     .restart local v5    # "osw":Ljava/io/OutputStreamWriter;
     goto :goto_1
 
-    .line 1097
     :catch_1
     move-exception v9
 
-    .line 1100
     :goto_2
     if-eqz v5, :cond_1
 
-    .line 1101
     :try_start_5
     invoke-virtual {v5}, Ljava/io/OutputStreamWriter;->close()V
     :try_end_5
@@ -489,27 +446,22 @@
 
     goto :goto_1
 
-    .line 1103
     :catch_2
     move-exception v9
 
     goto :goto_1
 
-    .line 1099
     :catchall_0
     move-exception v9
 
-    .line 1100
     :goto_3
     if-eqz v5, :cond_2
 
-    .line 1101
     :try_start_6
     invoke-virtual {v5}, Ljava/io/OutputStreamWriter;->close()V
     :try_end_6
     .catch Ljava/lang/Exception; {:try_start_6 .. :try_end_6} :catch_3
 
-    .line 1103
     :cond_2
     :goto_4
     throw v9
@@ -519,7 +471,6 @@
 
     goto :goto_4
 
-    .line 1099
     .end local v1    # "file":Ljava/io/File;
     .restart local v2    # "file":Ljava/io/File;
     :catchall_1
@@ -542,7 +493,6 @@
     .restart local v5    # "osw":Ljava/io/OutputStreamWriter;
     goto :goto_3
 
-    .line 1097
     .end local v1    # "file":Ljava/io/File;
     .restart local v2    # "file":Ljava/io/File;
     :catch_4

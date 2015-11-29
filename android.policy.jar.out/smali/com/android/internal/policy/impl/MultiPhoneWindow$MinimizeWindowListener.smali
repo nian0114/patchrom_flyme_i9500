@@ -41,18 +41,14 @@
     .prologue
     const/4 v0, 0x0
 
-    .line 1244
     iput-object p1, p0, Lcom/android/internal/policy/impl/MultiPhoneWindow$MinimizeWindowListener;->this$0:Lcom/android/internal/policy/impl/MultiPhoneWindow;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 1241
     iput v0, p0, Lcom/android/internal/policy/impl/MultiPhoneWindow$MinimizeWindowListener;->mMoveInterval:I
 
-    .line 1242
     iput-boolean v0, p0, Lcom/android/internal/policy/impl/MultiPhoneWindow$MinimizeWindowListener;->mIsMoving:Z
 
-    .line 1245
     # getter for: Lcom/android/internal/policy/impl/MultiPhoneWindow;->mContext:Landroid/content/Context;
     invoke-static {p1}, Lcom/android/internal/policy/impl/MultiPhoneWindow;->access$900(Lcom/android/internal/policy/impl/MultiPhoneWindow;)Landroid/content/Context;
 
@@ -70,7 +66,6 @@
 
     iput v0, p0, Lcom/android/internal/policy/impl/MultiPhoneWindow$MinimizeWindowListener;->mMoveInterval:I
 
-    .line 1247
     return-void
 .end method
 
@@ -83,7 +78,6 @@
     .prologue
     const/4 v0, 0x0
 
-    .line 1251
     const-string v1, "MultiPhoneWindow"
 
     new-instance v2, Ljava/lang/StringBuilder;
@@ -106,7 +100,6 @@
 
     invoke-static {v1, v2}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1252
     iget-object v1, p0, Lcom/android/internal/policy/impl/MultiPhoneWindow$MinimizeWindowListener;->this$0:Lcom/android/internal/policy/impl/MultiPhoneWindow;
 
     # getter for: Lcom/android/internal/policy/impl/MultiPhoneWindow;->mContext:Landroid/content/Context;
@@ -120,18 +113,15 @@
 
     if-nez v1, :cond_1
 
-    .line 1284
     :cond_0
     :goto_0
     return v0
 
-    .line 1255
     :cond_1
     iget-boolean v1, p0, Lcom/android/internal/policy/impl/MultiPhoneWindow$MinimizeWindowListener;->mIsMoving:Z
 
     if-eqz v1, :cond_2
 
-    .line 1256
     const-string v1, "MultiPhoneWindow"
 
     const-string v2, "onLongClick : moving so return false"
@@ -140,7 +130,6 @@
 
     goto :goto_0
 
-    .line 1259
     :cond_2
     iget-object v1, p0, Lcom/android/internal/policy/impl/MultiPhoneWindow$MinimizeWindowListener;->this$0:Lcom/android/internal/policy/impl/MultiPhoneWindow;
 
@@ -157,7 +146,6 @@
 
     if-nez v1, :cond_0
 
-    .line 1263
     iget-object v0, p0, Lcom/android/internal/policy/impl/MultiPhoneWindow$MinimizeWindowListener;->this$0:Lcom/android/internal/policy/impl/MultiPhoneWindow;
 
     # getter for: Lcom/android/internal/policy/impl/MultiPhoneWindow;->mIsSupportMinimizeAnimation:Z
@@ -189,7 +177,6 @@
 
     if-nez v0, :cond_3
 
-    .line 1265
     iget-object v0, p0, Lcom/android/internal/policy/impl/MultiPhoneWindow$MinimizeWindowListener;->this$0:Lcom/android/internal/policy/impl/MultiPhoneWindow;
 
     # getter for: Lcom/android/internal/policy/impl/MultiPhoneWindow;->mMinimizeAnimator:Lcom/android/internal/policy/impl/multiwindow/MinimizeAnimator;
@@ -199,7 +186,6 @@
 
     invoke-virtual {v0}, Lcom/android/internal/policy/impl/multiwindow/MinimizeAnimator;->showTrash()V
 
-    .line 1284
     :cond_3
     const/4 v0, 0x1
 
@@ -212,14 +198,12 @@
     .param p2, "event"    # Landroid/view/MotionEvent;
 
     .prologue
-    .line 1291
     invoke-virtual {p2}, Landroid/view/MotionEvent;->getAction()I
 
     move-result v7
 
     packed-switch v7, :pswitch_data_0
 
-    .line 1398
     :cond_0
     :goto_0
     iget-object v7, p0, Lcom/android/internal/policy/impl/MultiPhoneWindow$MinimizeWindowListener;->this$0:Lcom/android/internal/policy/impl/MultiPhoneWindow;
@@ -235,14 +219,11 @@
 
     if-eqz v7, :cond_10
 
-    .line 1399
     const/4 v7, 0x0
 
-    .line 1401
     :goto_1
     return v7
 
-    .line 1293
     :pswitch_0
     iget-object v7, p0, Lcom/android/internal/policy/impl/MultiPhoneWindow$MinimizeWindowListener;->this$0:Lcom/android/internal/policy/impl/MultiPhoneWindow;
 
@@ -302,12 +283,10 @@
 
     const/4 v5, 0x1
 
-    .line 1296
     .local v5, "mShouldUseMinimizeView":Z
     :goto_2
     if-eqz v5, :cond_1
 
-    .line 1297
     iget-object v7, p0, Lcom/android/internal/policy/impl/MultiPhoneWindow$MinimizeWindowListener;->this$0:Lcom/android/internal/policy/impl/MultiPhoneWindow;
 
     invoke-virtual {v7}, Lcom/android/internal/policy/impl/MultiPhoneWindow;->getDecorView()Landroid/view/View;
@@ -318,7 +297,6 @@
 
     invoke-virtual {v7, v8}, Landroid/view/View;->setVisibility(I)V
 
-    .line 1299
     :cond_1
     iget-object v7, p0, Lcom/android/internal/policy/impl/MultiPhoneWindow$MinimizeWindowListener;->this$0:Lcom/android/internal/policy/impl/MultiPhoneWindow;
 
@@ -329,7 +307,6 @@
 
     invoke-virtual {v7}, Lcom/android/internal/policy/impl/multiwindow/Docking;->init()V
 
-    .line 1300
     iget-object v7, p0, Lcom/android/internal/policy/impl/MultiPhoneWindow$MinimizeWindowListener;->this$0:Lcom/android/internal/policy/impl/MultiPhoneWindow;
 
     const/4 v8, 0x1
@@ -337,12 +314,10 @@
     # invokes: Lcom/android/internal/policy/impl/MultiPhoneWindow;->minimizeIconPressed(Z)V
     invoke-static {v7, v8}, Lcom/android/internal/policy/impl/MultiPhoneWindow;->access$5000(Lcom/android/internal/policy/impl/MultiPhoneWindow;Z)V
 
-    .line 1301
     const/4 v7, 0x0
 
     iput-boolean v7, p0, Lcom/android/internal/policy/impl/MultiPhoneWindow$MinimizeWindowListener;->mIsMoving:Z
 
-    .line 1302
     invoke-virtual {p2}, Landroid/view/MotionEvent;->getRawXForScaledWindow()F
 
     move-result v7
@@ -353,7 +328,6 @@
 
     iput v7, p0, Lcom/android/internal/policy/impl/MultiPhoneWindow$MinimizeWindowListener;->mFirstDownX:I
 
-    .line 1303
     invoke-virtual {p2}, Landroid/view/MotionEvent;->getRawYForScaledWindow()F
 
     move-result v7
@@ -364,15 +338,12 @@
 
     iput v7, p0, Lcom/android/internal/policy/impl/MultiPhoneWindow$MinimizeWindowListener;->mFirstDownY:I
 
-    .line 1304
     if-eqz v5, :cond_0
 
-    .line 1305
     const/4 v7, 0x2
 
     new-array v4, v7, [I
 
-    .line 1306
     .local v4, "mScreenLocation":[I
     invoke-virtual {p1}, Landroid/view/View;->getRootView()Landroid/view/View;
 
@@ -380,7 +351,6 @@
 
     invoke-virtual {v7, v4}, Landroid/view/View;->getLocationOnScreen([I)V
 
-    .line 1307
     iget-object v7, p0, Lcom/android/internal/policy/impl/MultiPhoneWindow$MinimizeWindowListener;->this$0:Lcom/android/internal/policy/impl/MultiPhoneWindow;
 
     # getter for: Lcom/android/internal/policy/impl/MultiPhoneWindow;->mMinimizeAnimator:Lcom/android/internal/policy/impl/multiwindow/MinimizeAnimator;
@@ -403,7 +373,6 @@
 
     invoke-virtual {v7, v8}, Lcom/android/internal/policy/impl/multiwindow/MinimizeAnimator;->makeMinimizeIcons(Z)V
 
-    .line 1308
     iget-object v7, p0, Lcom/android/internal/policy/impl/MultiPhoneWindow$MinimizeWindowListener;->this$0:Lcom/android/internal/policy/impl/MultiPhoneWindow;
 
     # getter for: Lcom/android/internal/policy/impl/MultiPhoneWindow;->mMinimizeAnimator:Lcom/android/internal/policy/impl/multiwindow/MinimizeAnimator;
@@ -433,7 +402,6 @@
 
     invoke-virtual {v7, v8, v9}, Lcom/android/internal/policy/impl/multiwindow/MinimizeAnimator;->initialize(II)V
 
-    .line 1309
     iget-object v7, p0, Lcom/android/internal/policy/impl/MultiPhoneWindow$MinimizeWindowListener;->this$0:Lcom/android/internal/policy/impl/MultiPhoneWindow;
 
     # getter for: Lcom/android/internal/policy/impl/MultiPhoneWindow;->mMinimizeAnimator:Lcom/android/internal/policy/impl/multiwindow/MinimizeAnimator;
@@ -445,7 +413,6 @@
 
     goto/16 :goto_0
 
-    .line 1293
     .end local v4    # "mScreenLocation":[I
     .end local v5    # "mShouldUseMinimizeView":Z
     :cond_2
@@ -453,7 +420,6 @@
 
     goto :goto_2
 
-    .line 1315
     :pswitch_1
     iget-object v7, p0, Lcom/android/internal/policy/impl/MultiPhoneWindow$MinimizeWindowListener;->this$0:Lcom/android/internal/policy/impl/MultiPhoneWindow;
 
@@ -466,7 +432,6 @@
 
     if-ne v7, v8, :cond_0
 
-    .line 1316
     iget-object v7, p0, Lcom/android/internal/policy/impl/MultiPhoneWindow$MinimizeWindowListener;->this$0:Lcom/android/internal/policy/impl/MultiPhoneWindow;
 
     # getter for: Lcom/android/internal/policy/impl/MultiPhoneWindow;->mIsSupportMinimizeAnimation:Z
@@ -476,7 +441,6 @@
 
     if-eqz v7, :cond_3
 
-    .line 1317
     iget-object v7, p0, Lcom/android/internal/policy/impl/MultiPhoneWindow$MinimizeWindowListener;->this$0:Lcom/android/internal/policy/impl/MultiPhoneWindow;
 
     # getter for: Lcom/android/internal/policy/impl/MultiPhoneWindow;->mMinimizeAnimator:Lcom/android/internal/policy/impl/multiwindow/MinimizeAnimator;
@@ -486,7 +450,6 @@
 
     invoke-virtual {v7, p2}, Lcom/android/internal/policy/impl/multiwindow/MinimizeAnimator;->onTouchEvent(Landroid/view/MotionEvent;)V
 
-    .line 1319
     :cond_3
     iget-object v7, p0, Lcom/android/internal/policy/impl/MultiPhoneWindow$MinimizeWindowListener;->this$0:Lcom/android/internal/policy/impl/MultiPhoneWindow;
 
@@ -503,17 +466,14 @@
 
     if-eqz v7, :cond_4
 
-    .line 1320
     const/4 v7, 0x1
 
     iput-boolean v7, p0, Lcom/android/internal/policy/impl/MultiPhoneWindow$MinimizeWindowListener;->mIsMoving:Z
 
-    .line 1321
     const/4 v7, 0x1
 
     goto/16 :goto_1
 
-    .line 1324
     :cond_4
     iget-boolean v7, p0, Lcom/android/internal/policy/impl/MultiPhoneWindow$MinimizeWindowListener;->mIsMoving:Z
 
@@ -555,13 +515,11 @@
 
     if-lt v7, v8, :cond_0
 
-    .line 1328
     :cond_5
     const/4 v7, 0x1
 
     iput-boolean v7, p0, Lcom/android/internal/policy/impl/MultiPhoneWindow$MinimizeWindowListener;->mIsMoving:Z
 
-    .line 1330
     iget-object v7, p0, Lcom/android/internal/policy/impl/MultiPhoneWindow$MinimizeWindowListener;->this$0:Lcom/android/internal/policy/impl/MultiPhoneWindow;
 
     # getter for: Lcom/android/internal/policy/impl/MultiPhoneWindow;->mIsSupportMinimizeAnimation:Z
@@ -610,7 +568,6 @@
 
     if-eqz v7, :cond_7
 
-    .line 1333
     :try_start_0
     iget-object v7, p0, Lcom/android/internal/policy/impl/MultiPhoneWindow$MinimizeWindowListener;->this$0:Lcom/android/internal/policy/impl/MultiPhoneWindow;
 
@@ -641,7 +598,6 @@
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 1339
     :cond_7
     :goto_3
     iget-object v7, p0, Lcom/android/internal/policy/impl/MultiPhoneWindow$MinimizeWindowListener;->this$0:Lcom/android/internal/policy/impl/MultiPhoneWindow;
@@ -655,7 +611,6 @@
 
     move-result-object v0
 
-    .line 1340
     .local v0, "dockingBound":Landroid/graphics/Rect;
     if-eqz v0, :cond_8
 
@@ -672,7 +627,6 @@
 
     if-nez v7, :cond_8
 
-    .line 1341
     iget-object v7, p0, Lcom/android/internal/policy/impl/MultiPhoneWindow$MinimizeWindowListener;->this$0:Lcom/android/internal/policy/impl/MultiPhoneWindow;
 
     const/4 v8, 0x2
@@ -680,7 +634,6 @@
     # invokes: Lcom/android/internal/policy/impl/MultiPhoneWindow;->showGuide(Landroid/graphics/Rect;I)V
     invoke-static {v7, v0, v8}, Lcom/android/internal/policy/impl/MultiPhoneWindow;->access$500(Lcom/android/internal/policy/impl/MultiPhoneWindow;Landroid/graphics/Rect;I)V
 
-    .line 1343
     :cond_8
     iget-object v7, p0, Lcom/android/internal/policy/impl/MultiPhoneWindow$MinimizeWindowListener;->this$0:Lcom/android/internal/policy/impl/MultiPhoneWindow;
 
@@ -695,13 +648,11 @@
 
     if-nez v7, :cond_9
 
-    .line 1344
     iget-object v7, p0, Lcom/android/internal/policy/impl/MultiPhoneWindow$MinimizeWindowListener;->this$0:Lcom/android/internal/policy/impl/MultiPhoneWindow;
 
     # invokes: Lcom/android/internal/policy/impl/MultiPhoneWindow;->dismissGuide()V
     invoke-static {v7}, Lcom/android/internal/policy/impl/MultiPhoneWindow;->access$300(Lcom/android/internal/policy/impl/MultiPhoneWindow;)V
 
-    .line 1347
     :cond_9
     iget-object v7, p0, Lcom/android/internal/policy/impl/MultiPhoneWindow$MinimizeWindowListener;->this$0:Lcom/android/internal/policy/impl/MultiPhoneWindow;
 
@@ -723,7 +674,6 @@
 
     if-ne v7, v8, :cond_0
 
-    .line 1348
     invoke-virtual {p2}, Landroid/view/MotionEvent;->getRawXForScaledWindow()F
 
     move-result v7
@@ -734,7 +684,6 @@
 
     sub-int v1, v7, v8
 
-    .line 1349
     .local v1, "dx":I
     invoke-virtual {p2}, Landroid/view/MotionEvent;->getRawYForScaledWindow()F
 
@@ -746,7 +695,6 @@
 
     sub-int v2, v7, v8
 
-    .line 1350
     .local v2, "dy":I
     iget-object v7, p0, Lcom/android/internal/policy/impl/MultiPhoneWindow$MinimizeWindowListener;->this$0:Lcom/android/internal/policy/impl/MultiPhoneWindow;
 
@@ -755,7 +703,6 @@
     # invokes: Lcom/android/internal/policy/impl/MultiPhoneWindow;->moveStackBound(IIZ)V
     invoke-static {v7, v1, v2, v8}, Lcom/android/internal/policy/impl/MultiPhoneWindow;->access$5100(Lcom/android/internal/policy/impl/MultiPhoneWindow;IIZ)V
 
-    .line 1351
     invoke-virtual {p2}, Landroid/view/MotionEvent;->getRawXForScaledWindow()F
 
     move-result v7
@@ -764,7 +711,6 @@
 
     iput v7, p0, Lcom/android/internal/policy/impl/MultiPhoneWindow$MinimizeWindowListener;->mLastMoveX:I
 
-    .line 1352
     invoke-virtual {p2}, Landroid/view/MotionEvent;->getRawYForScaledWindow()F
 
     move-result v7
@@ -775,20 +721,17 @@
 
     goto/16 :goto_0
 
-    .line 1334
     .end local v0    # "dockingBound":Landroid/graphics/Rect;
     .end local v1    # "dx":I
     .end local v2    # "dy":I
     :catch_0
     move-exception v3
 
-    .line 1335
     .local v3, "e":Ljava/lang/Exception;
     invoke-virtual {v3}, Ljava/lang/Exception;->printStackTrace()V
 
     goto :goto_3
 
-    .line 1360
     .end local v3    # "e":Ljava/lang/Exception;
     :pswitch_2
     iget-object v7, p0, Lcom/android/internal/policy/impl/MultiPhoneWindow$MinimizeWindowListener;->this$0:Lcom/android/internal/policy/impl/MultiPhoneWindow;
@@ -800,7 +743,6 @@
 
     if-eqz v7, :cond_a
 
-    .line 1361
     iget-object v7, p0, Lcom/android/internal/policy/impl/MultiPhoneWindow$MinimizeWindowListener;->this$0:Lcom/android/internal/policy/impl/MultiPhoneWindow;
 
     invoke-virtual {v7}, Lcom/android/internal/policy/impl/MultiPhoneWindow;->getDecorView()Landroid/view/View;
@@ -811,7 +753,6 @@
 
     invoke-virtual {v7, v8}, Landroid/view/View;->setVisibility(I)V
 
-    .line 1362
     iget-object v7, p0, Lcom/android/internal/policy/impl/MultiPhoneWindow$MinimizeWindowListener;->this$0:Lcom/android/internal/policy/impl/MultiPhoneWindow;
 
     # getter for: Lcom/android/internal/policy/impl/MultiPhoneWindow;->mMinimizeAnimator:Lcom/android/internal/policy/impl/multiwindow/MinimizeAnimator;
@@ -821,13 +762,11 @@
 
     invoke-virtual {v7, p2}, Lcom/android/internal/policy/impl/multiwindow/MinimizeAnimator;->onTouchEvent(Landroid/view/MotionEvent;)V
 
-    .line 1364
     :cond_a
     iget-boolean v7, p0, Lcom/android/internal/policy/impl/MultiPhoneWindow$MinimizeWindowListener;->mIsMoving:Z
 
     if-eqz v7, :cond_e
 
-    .line 1365
     invoke-virtual {p2}, Landroid/view/MotionEvent;->getRawXForScaledWindow()F
 
     move-result v7
@@ -838,7 +777,6 @@
 
     sub-int v1, v7, v8
 
-    .line 1366
     .restart local v1    # "dx":I
     invoke-virtual {p2}, Landroid/view/MotionEvent;->getRawYForScaledWindow()F
 
@@ -850,7 +788,6 @@
 
     sub-int v2, v7, v8
 
-    .line 1367
     .restart local v2    # "dy":I
     iget-object v7, p0, Lcom/android/internal/policy/impl/MultiPhoneWindow$MinimizeWindowListener;->this$0:Lcom/android/internal/policy/impl/MultiPhoneWindow;
 
@@ -878,7 +815,6 @@
 
     if-nez v7, :cond_c
 
-    .line 1368
     iget-object v7, p0, Lcom/android/internal/policy/impl/MultiPhoneWindow$MinimizeWindowListener;->this$0:Lcom/android/internal/policy/impl/MultiPhoneWindow;
 
     # getter for: Lcom/android/internal/policy/impl/MultiPhoneWindow;->mDocking:Lcom/android/internal/policy/impl/multiwindow/Docking;
@@ -888,7 +824,6 @@
 
     invoke-virtual {v7}, Lcom/android/internal/policy/impl/multiwindow/Docking;->checkCenterBarPoint()V
 
-    .line 1369
     iget-object v7, p0, Lcom/android/internal/policy/impl/MultiPhoneWindow$MinimizeWindowListener;->this$0:Lcom/android/internal/policy/impl/MultiPhoneWindow;
 
     # getter for: Lcom/android/internal/policy/impl/MultiPhoneWindow;->mMultiWindowFacade:Lcom/samsung/android/multiwindow/MultiWindowFacade;
@@ -927,7 +862,6 @@
 
     invoke-virtual {v7, v8, v9}, Lcom/samsung/android/multiwindow/MultiWindowFacade;->setMultiWindowStyle(Landroid/os/IBinder;Lcom/samsung/android/multiwindow/MultiWindowStyle;)V
 
-    .line 1371
     iget-object v7, p0, Lcom/android/internal/policy/impl/MultiPhoneWindow$MinimizeWindowListener;->this$0:Lcom/android/internal/policy/impl/MultiPhoneWindow;
 
     # getter for: Lcom/android/internal/policy/impl/MultiPhoneWindow;->mContext:Landroid/content/Context;
@@ -941,7 +875,6 @@
 
     invoke-static {v7, v8, v9}, Lcom/samsung/android/multiwindow/MultiWindowLoggingHelper;->insertLog(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 1392
     .end local v1    # "dx":I
     .end local v2    # "dy":I
     :cond_b
@@ -953,7 +886,6 @@
     # invokes: Lcom/android/internal/policy/impl/MultiPhoneWindow;->minimizeIconPressed(Z)V
     invoke-static {v7, v8}, Lcom/android/internal/policy/impl/MultiPhoneWindow;->access$5000(Lcom/android/internal/policy/impl/MultiPhoneWindow;Z)V
 
-    .line 1393
     iget-object v7, p0, Lcom/android/internal/policy/impl/MultiPhoneWindow$MinimizeWindowListener;->this$0:Lcom/android/internal/policy/impl/MultiPhoneWindow;
 
     # getter for: Lcom/android/internal/policy/impl/MultiPhoneWindow;->mDocking:Lcom/android/internal/policy/impl/multiwindow/Docking;
@@ -963,7 +895,6 @@
 
     invoke-virtual {v7}, Lcom/android/internal/policy/impl/multiwindow/Docking;->clear()V
 
-    .line 1394
     iget-object v7, p0, Lcom/android/internal/policy/impl/MultiPhoneWindow$MinimizeWindowListener;->this$0:Lcom/android/internal/policy/impl/MultiPhoneWindow;
 
     # invokes: Lcom/android/internal/policy/impl/MultiPhoneWindow;->dismissGuide()V
@@ -971,7 +902,6 @@
 
     goto/16 :goto_0
 
-    .line 1374
     .restart local v1    # "dx":I
     .restart local v2    # "dy":I
     :cond_c
@@ -986,7 +916,6 @@
 
     if-ne v7, v8, :cond_b
 
-    .line 1375
     iget-object v7, p0, Lcom/android/internal/policy/impl/MultiPhoneWindow$MinimizeWindowListener;->this$0:Lcom/android/internal/policy/impl/MultiPhoneWindow;
 
     # getter for: Lcom/android/internal/policy/impl/MultiPhoneWindow;->mIsSupportMinimizeAnimation:Z
@@ -996,7 +925,6 @@
 
     if-eqz v7, :cond_d
 
-    .line 1376
     iget-object v7, p0, Lcom/android/internal/policy/impl/MultiPhoneWindow$MinimizeWindowListener;->this$0:Lcom/android/internal/policy/impl/MultiPhoneWindow;
 
     const/4 v8, 0x0
@@ -1006,7 +934,6 @@
 
     goto :goto_4
 
-    .line 1378
     :cond_d
     iget-object v7, p0, Lcom/android/internal/policy/impl/MultiPhoneWindow$MinimizeWindowListener;->this$0:Lcom/android/internal/policy/impl/MultiPhoneWindow;
 
@@ -1037,7 +964,6 @@
 
     goto :goto_4
 
-    .line 1381
     .end local v1    # "dx":I
     .end local v2    # "dy":I
     :cond_e
@@ -1052,14 +978,12 @@
 
     if-ne v7, v8, :cond_b
 
-    .line 1383
     const-string v7, "MultiPhoneWindow"
 
     const-string v8, "Minimized->Floating"
 
     invoke-static {v7, v8}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1384
     iget-object v7, p0, Lcom/android/internal/policy/impl/MultiPhoneWindow$MinimizeWindowListener;->this$0:Lcom/android/internal/policy/impl/MultiPhoneWindow;
 
     # invokes: Lcom/android/internal/policy/impl/MultiPhoneWindow;->getMultiWindowStyle()Lcom/samsung/android/multiwindow/MultiWindowStyle;
@@ -1067,7 +991,6 @@
 
     move-result-object v6
 
-    .line 1385
     .local v6, "multiWindowStyle":Lcom/samsung/android/multiwindow/MultiWindowStyle;
     const/4 v7, 0x4
 
@@ -1075,14 +998,12 @@
 
     invoke-virtual {v6, v7, v8}, Lcom/samsung/android/multiwindow/MultiWindowStyle;->setOption(IZ)V
 
-    .line 1386
     const/high16 v7, 0x800000
 
     const/4 v8, 0x0
 
     invoke-virtual {v6, v7, v8}, Lcom/samsung/android/multiwindow/MultiWindowStyle;->setOption(IZ)V
 
-    .line 1387
     iget-object v8, p0, Lcom/android/internal/policy/impl/MultiPhoneWindow$MinimizeWindowListener;->this$0:Lcom/android/internal/policy/impl/MultiPhoneWindow;
 
     const/4 v9, 0x0
@@ -1134,7 +1055,6 @@
     # invokes: Lcom/android/internal/policy/impl/MultiPhoneWindow;->setStackBoundInScreen(IIZ)V
     invoke-static {v8, v9, v7, v10}, Lcom/android/internal/policy/impl/MultiPhoneWindow;->access$5200(Lcom/android/internal/policy/impl/MultiPhoneWindow;IIZ)V
 
-    .line 1390
     iget-object v7, p0, Lcom/android/internal/policy/impl/MultiPhoneWindow$MinimizeWindowListener;->this$0:Lcom/android/internal/policy/impl/MultiPhoneWindow;
 
     iget-object v8, p0, Lcom/android/internal/policy/impl/MultiPhoneWindow$MinimizeWindowListener;->this$0:Lcom/android/internal/policy/impl/MultiPhoneWindow;
@@ -1149,20 +1069,17 @@
 
     goto/16 :goto_4
 
-    .line 1387
     :cond_f
     const/4 v7, 0x0
 
     goto :goto_5
 
-    .line 1401
     .end local v6    # "multiWindowStyle":Lcom/samsung/android/multiwindow/MultiWindowStyle;
     :cond_10
     const/4 v7, 0x1
 
     goto/16 :goto_1
 
-    .line 1291
     :pswitch_data_0
     .packed-switch 0x0
         :pswitch_0

@@ -30,18 +30,13 @@
     .param p3, "max"    # I
 
     .prologue
-    .line 747
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 748
     iput p1, p0, Lcom/android/server/wifi/WifiScanningServiceImpl$SettingsComputer$TimeBucket;->periodInSecond:I
 
-    .line 749
     iput p2, p0, Lcom/android/server/wifi/WifiScanningServiceImpl$SettingsComputer$TimeBucket;->periodMinInSecond:I
 
-    .line 750
     iput p3, p0, Lcom/android/server/wifi/WifiScanningServiceImpl$SettingsComputer$TimeBucket;->periodMaxInSecond:I
 
-    .line 751
     return-void
 .end method

@@ -29,7 +29,6 @@
     .locals 1
 
     .prologue
-    .line 75
     const/16 v0, 0x9
 
     new-array v0, v0, [F
@@ -44,13 +43,10 @@
     .param p1, "service"    # Lcom/android/server/wm/WindowManagerService;
 
     .prologue
-    .line 77
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 78
     iput-object p1, p0, Lcom/android/server/wm/AccessibilityController;->mWindowManagerService:Lcom/android/server/wm/WindowManagerService;
 
-    .line 79
     return-void
 .end method
 
@@ -60,7 +56,6 @@
     .param p1, "x1"    # Landroid/graphics/Matrix;
 
     .prologue
-    .line 71
     invoke-static {p0, p1}, Lcom/android/server/wm/AccessibilityController;->populateTransformationMatrixLocked(Lcom/android/server/wm/WindowState;Landroid/graphics/Matrix;)V
 
     return-void
@@ -74,7 +69,6 @@
     .prologue
     const/4 v3, 0x0
 
-    .line 221
     sget-object v0, Lcom/android/server/wm/AccessibilityController;->sTempFloats:[F
 
     const/4 v1, 0x0
@@ -85,7 +79,6 @@
 
     aput v2, v0, v1
 
-    .line 222
     sget-object v0, Lcom/android/server/wm/AccessibilityController;->sTempFloats:[F
 
     const/4 v1, 0x3
@@ -96,7 +89,6 @@
 
     aput v2, v0, v1
 
-    .line 223
     sget-object v0, Lcom/android/server/wm/AccessibilityController;->sTempFloats:[F
 
     const/4 v1, 0x1
@@ -107,7 +99,6 @@
 
     aput v2, v0, v1
 
-    .line 224
     sget-object v0, Lcom/android/server/wm/AccessibilityController;->sTempFloats:[F
 
     const/4 v1, 0x4
@@ -118,7 +109,6 @@
 
     aput v2, v0, v1
 
-    .line 225
     sget-object v0, Lcom/android/server/wm/AccessibilityController;->sTempFloats:[F
 
     const/4 v1, 0x2
@@ -129,7 +119,6 @@
 
     aput v2, v0, v1
 
-    .line 226
     sget-object v0, Lcom/android/server/wm/AccessibilityController;->sTempFloats:[F
 
     const/4 v1, 0x5
@@ -140,21 +129,18 @@
 
     aput v2, v0, v1
 
-    .line 227
     sget-object v0, Lcom/android/server/wm/AccessibilityController;->sTempFloats:[F
 
     const/4 v1, 0x6
 
     aput v3, v0, v1
 
-    .line 228
     sget-object v0, Lcom/android/server/wm/AccessibilityController;->sTempFloats:[F
 
     const/4 v1, 0x7
 
     aput v3, v0, v1
 
-    .line 229
     sget-object v0, Lcom/android/server/wm/AccessibilityController;->sTempFloats:[F
 
     const/16 v1, 0x8
@@ -163,12 +149,10 @@
 
     aput v2, v0, v1
 
-    .line 230
     sget-object v0, Lcom/android/server/wm/AccessibilityController;->sTempFloats:[F
 
     invoke-virtual {p1, v0}, Landroid/graphics/Matrix;->setValues([F)V
 
-    .line 231
     return-void
 .end method
 
@@ -178,17 +162,14 @@
     .locals 1
 
     .prologue
-    .line 201
     iget-object v0, p0, Lcom/android/server/wm/AccessibilityController;->mDisplayMagnifier:Lcom/android/server/wm/AccessibilityController$DisplayMagnifier;
 
     if-eqz v0, :cond_0
 
-    .line 202
     iget-object v0, p0, Lcom/android/server/wm/AccessibilityController;->mDisplayMagnifier:Lcom/android/server/wm/AccessibilityController$DisplayMagnifier;
 
     invoke-virtual {v0}, Lcom/android/server/wm/AccessibilityController$DisplayMagnifier;->drawMagnifiedRegionBorderIfNeededLocked()V
 
-    .line 205
     :cond_0
     return-void
 .end method
@@ -198,19 +179,16 @@
     .param p1, "windowState"    # Lcom/android/server/wm/WindowState;
 
     .prologue
-    .line 208
     iget-object v0, p0, Lcom/android/server/wm/AccessibilityController;->mDisplayMagnifier:Lcom/android/server/wm/AccessibilityController$DisplayMagnifier;
 
     if-eqz v0, :cond_0
 
-    .line 209
     iget-object v0, p0, Lcom/android/server/wm/AccessibilityController;->mDisplayMagnifier:Lcom/android/server/wm/AccessibilityController$DisplayMagnifier;
 
     invoke-virtual {v0, p1}, Lcom/android/server/wm/AccessibilityController$DisplayMagnifier;->getMagnificationSpecForWindowLocked(Lcom/android/server/wm/WindowState;)Landroid/view/MagnificationSpec;
 
     move-result-object v0
 
-    .line 211
     :goto_0
     return-object v0
 
@@ -224,7 +202,6 @@
     .locals 1
 
     .prologue
-    .line 215
     iget-object v0, p0, Lcom/android/server/wm/AccessibilityController;->mDisplayMagnifier:Lcom/android/server/wm/AccessibilityController$DisplayMagnifier;
 
     if-nez v0, :cond_0
@@ -249,19 +226,16 @@
     .locals 1
 
     .prologue
-    .line 87
     iget-object v0, p0, Lcom/android/server/wm/AccessibilityController;->mDisplayMagnifier:Lcom/android/server/wm/AccessibilityController$DisplayMagnifier;
 
     if-eqz v0, :cond_0
 
-    .line 88
     iget-object v0, p0, Lcom/android/server/wm/AccessibilityController;->mDisplayMagnifier:Lcom/android/server/wm/AccessibilityController$DisplayMagnifier;
 
     invoke-virtual {v0}, Lcom/android/server/wm/AccessibilityController$DisplayMagnifier;->isMagnifyingLocked()Z
 
     move-result v0
 
-    .line 90
     :goto_0
     return v0
 
@@ -277,17 +251,14 @@
     .param p2, "transition"    # I
 
     .prologue
-    .line 167
     iget-object v0, p0, Lcom/android/server/wm/AccessibilityController;->mDisplayMagnifier:Lcom/android/server/wm/AccessibilityController$DisplayMagnifier;
 
     if-eqz v0, :cond_0
 
-    .line 168
     iget-object v0, p0, Lcom/android/server/wm/AccessibilityController;->mDisplayMagnifier:Lcom/android/server/wm/AccessibilityController$DisplayMagnifier;
 
     invoke-virtual {v0, p1, p2}, Lcom/android/server/wm/AccessibilityController$DisplayMagnifier;->onAppWindowTransitionLocked(Lcom/android/server/wm/WindowState;I)V
 
-    .line 171
     :cond_0
     return-void
 .end method
@@ -297,17 +268,14 @@
     .param p1, "rectangle"    # Landroid/graphics/Rect;
 
     .prologue
-    .line 136
     iget-object v0, p0, Lcom/android/server/wm/AccessibilityController;->mDisplayMagnifier:Lcom/android/server/wm/AccessibilityController$DisplayMagnifier;
 
     if-eqz v0, :cond_0
 
-    .line 137
     iget-object v0, p0, Lcom/android/server/wm/AccessibilityController;->mDisplayMagnifier:Lcom/android/server/wm/AccessibilityController$DisplayMagnifier;
 
     invoke-virtual {v0, p1}, Lcom/android/server/wm/AccessibilityController$DisplayMagnifier;->onRectangleOnScreenRequestedLocked(Landroid/graphics/Rect;)V
 
-    .line 140
     :cond_0
     return-void
 .end method
@@ -318,12 +286,10 @@
     .param p2, "rotation"    # I
 
     .prologue
-    .line 152
     const/4 v0, 0x1
 
     invoke-virtual {p0, p1, p2, v0}, Lcom/android/server/wm/AccessibilityController;->onRotationChangedLocked(Lcom/android/server/wm/DisplayContent;IZ)V
 
-    .line 153
     return-void
 .end method
 
@@ -334,31 +300,25 @@
     .param p3, "notify"    # Z
 
     .prologue
-    .line 156
     iget-object v0, p0, Lcom/android/server/wm/AccessibilityController;->mDisplayMagnifier:Lcom/android/server/wm/AccessibilityController$DisplayMagnifier;
 
     if-eqz v0, :cond_0
 
-    .line 157
     iget-object v0, p0, Lcom/android/server/wm/AccessibilityController;->mDisplayMagnifier:Lcom/android/server/wm/AccessibilityController$DisplayMagnifier;
 
     invoke-virtual {v0, p1, p2}, Lcom/android/server/wm/AccessibilityController$DisplayMagnifier;->onRotationChangedLocked(Lcom/android/server/wm/DisplayContent;I)V
 
-    .line 159
     :cond_0
     if-eqz p3, :cond_1
 
-    .line 160
     iget-object v0, p0, Lcom/android/server/wm/AccessibilityController;->mWindowsForAccessibilityObserver:Lcom/android/server/wm/AccessibilityController$WindowsForAccessibilityObserver;
 
     if-eqz v0, :cond_1
 
-    .line 161
     iget-object v0, p0, Lcom/android/server/wm/AccessibilityController;->mWindowsForAccessibilityObserver:Lcom/android/server/wm/AccessibilityController$WindowsForAccessibilityObserver;
 
     invoke-virtual {v0}, Lcom/android/server/wm/AccessibilityController$WindowsForAccessibilityObserver;->scheduleComputeChangedWindowsLocked()V
 
-    .line 164
     :cond_1
     return-void
 .end method
@@ -367,17 +327,14 @@
     .locals 1
 
     .prologue
-    .line 194
     iget-object v0, p0, Lcom/android/server/wm/AccessibilityController;->mWindowsForAccessibilityObserver:Lcom/android/server/wm/AccessibilityController$WindowsForAccessibilityObserver;
 
     if-eqz v0, :cond_0
 
-    .line 195
     iget-object v0, p0, Lcom/android/server/wm/AccessibilityController;->mWindowsForAccessibilityObserver:Lcom/android/server/wm/AccessibilityController$WindowsForAccessibilityObserver;
 
     invoke-virtual {v0}, Lcom/android/server/wm/AccessibilityController$WindowsForAccessibilityObserver;->scheduleComputeChangedWindowsLocked()V
 
-    .line 197
     :cond_0
     return-void
 .end method
@@ -386,17 +343,14 @@
     .locals 1
 
     .prologue
-    .line 185
     iget-object v0, p0, Lcom/android/server/wm/AccessibilityController;->mWindowsForAccessibilityObserver:Lcom/android/server/wm/AccessibilityController$WindowsForAccessibilityObserver;
 
     if-eqz v0, :cond_0
 
-    .line 186
     iget-object v0, p0, Lcom/android/server/wm/AccessibilityController;->mWindowsForAccessibilityObserver:Lcom/android/server/wm/AccessibilityController$WindowsForAccessibilityObserver;
 
     invoke-virtual {v0}, Lcom/android/server/wm/AccessibilityController$WindowsForAccessibilityObserver;->scheduleComputeChangedWindowsLocked()V
 
-    .line 188
     :cond_0
     return-void
 .end method
@@ -405,28 +359,23 @@
     .locals 1
 
     .prologue
-    .line 143
     iget-object v0, p0, Lcom/android/server/wm/AccessibilityController;->mDisplayMagnifier:Lcom/android/server/wm/AccessibilityController$DisplayMagnifier;
 
     if-eqz v0, :cond_0
 
-    .line 144
     iget-object v0, p0, Lcom/android/server/wm/AccessibilityController;->mDisplayMagnifier:Lcom/android/server/wm/AccessibilityController$DisplayMagnifier;
 
     invoke-virtual {v0}, Lcom/android/server/wm/AccessibilityController$DisplayMagnifier;->onWindowLayersChangedLocked()V
 
-    .line 146
     :cond_0
     iget-object v0, p0, Lcom/android/server/wm/AccessibilityController;->mWindowsForAccessibilityObserver:Lcom/android/server/wm/AccessibilityController$WindowsForAccessibilityObserver;
 
     if-eqz v0, :cond_1
 
-    .line 147
     iget-object v0, p0, Lcom/android/server/wm/AccessibilityController;->mWindowsForAccessibilityObserver:Lcom/android/server/wm/AccessibilityController$WindowsForAccessibilityObserver;
 
     invoke-virtual {v0}, Lcom/android/server/wm/AccessibilityController$WindowsForAccessibilityObserver;->scheduleComputeChangedWindowsLocked()V
 
-    .line 149
     :cond_1
     return-void
 .end method
@@ -437,28 +386,23 @@
     .param p2, "transition"    # I
 
     .prologue
-    .line 174
     iget-object v0, p0, Lcom/android/server/wm/AccessibilityController;->mDisplayMagnifier:Lcom/android/server/wm/AccessibilityController$DisplayMagnifier;
 
     if-eqz v0, :cond_0
 
-    .line 175
     iget-object v0, p0, Lcom/android/server/wm/AccessibilityController;->mDisplayMagnifier:Lcom/android/server/wm/AccessibilityController$DisplayMagnifier;
 
     invoke-virtual {v0, p1, p2}, Lcom/android/server/wm/AccessibilityController$DisplayMagnifier;->onWindowTransitionLocked(Lcom/android/server/wm/WindowState;I)V
 
-    .line 177
     :cond_0
     iget-object v0, p0, Lcom/android/server/wm/AccessibilityController;->mWindowsForAccessibilityObserver:Lcom/android/server/wm/AccessibilityController$WindowsForAccessibilityObserver;
 
     if-eqz v0, :cond_1
 
-    .line 178
     iget-object v0, p0, Lcom/android/server/wm/AccessibilityController;->mWindowsForAccessibilityObserver:Lcom/android/server/wm/AccessibilityController$WindowsForAccessibilityObserver;
 
     invoke-virtual {v0}, Lcom/android/server/wm/AccessibilityController$WindowsForAccessibilityObserver;->scheduleComputeChangedWindowsLocked()V
 
-    .line 180
     :cond_1
     return-void
 .end method
@@ -468,15 +412,12 @@
     .param p1, "callbacks"    # Landroid/view/WindowManagerInternal$MagnificationCallbacks;
 
     .prologue
-    .line 95
     if-eqz p1, :cond_1
 
-    .line 96
     iget-object v0, p0, Lcom/android/server/wm/AccessibilityController;->mDisplayMagnifier:Lcom/android/server/wm/AccessibilityController$DisplayMagnifier;
 
     if-eqz v0, :cond_0
 
-    .line 97
     new-instance v0, Ljava/lang/IllegalStateException;
 
     const-string v1, "Magnification callbacks already set!"
@@ -485,7 +426,6 @@
 
     throw v0
 
-    .line 99
     :cond_0
     new-instance v0, Lcom/android/server/wm/AccessibilityController$DisplayMagnifier;
 
@@ -495,17 +435,14 @@
 
     iput-object v0, p0, Lcom/android/server/wm/AccessibilityController;->mDisplayMagnifier:Lcom/android/server/wm/AccessibilityController$DisplayMagnifier;
 
-    .line 107
     :goto_0
     return-void
 
-    .line 101
     :cond_1
     iget-object v0, p0, Lcom/android/server/wm/AccessibilityController;->mDisplayMagnifier:Lcom/android/server/wm/AccessibilityController$DisplayMagnifier;
 
     if-nez v0, :cond_2
 
-    .line 102
     new-instance v0, Ljava/lang/IllegalStateException;
 
     const-string v1, "Magnification callbacks already cleared!"
@@ -514,13 +451,11 @@
 
     throw v0
 
-    .line 104
     :cond_2
     iget-object v0, p0, Lcom/android/server/wm/AccessibilityController;->mDisplayMagnifier:Lcom/android/server/wm/AccessibilityController$DisplayMagnifier;
 
     invoke-virtual {v0}, Lcom/android/server/wm/AccessibilityController$DisplayMagnifier;->destroyLocked()V
 
-    .line 105
     const/4 v0, 0x0
 
     iput-object v0, p0, Lcom/android/server/wm/AccessibilityController;->mDisplayMagnifier:Lcom/android/server/wm/AccessibilityController$DisplayMagnifier;
@@ -533,28 +468,23 @@
     .param p1, "spec"    # Landroid/view/MagnificationSpec;
 
     .prologue
-    .line 127
     iget-object v0, p0, Lcom/android/server/wm/AccessibilityController;->mDisplayMagnifier:Lcom/android/server/wm/AccessibilityController$DisplayMagnifier;
 
     if-eqz v0, :cond_0
 
-    .line 128
     iget-object v0, p0, Lcom/android/server/wm/AccessibilityController;->mDisplayMagnifier:Lcom/android/server/wm/AccessibilityController$DisplayMagnifier;
 
     invoke-virtual {v0, p1}, Lcom/android/server/wm/AccessibilityController$DisplayMagnifier;->setMagnificationSpecLocked(Landroid/view/MagnificationSpec;)V
 
-    .line 130
     :cond_0
     iget-object v0, p0, Lcom/android/server/wm/AccessibilityController;->mWindowsForAccessibilityObserver:Lcom/android/server/wm/AccessibilityController$WindowsForAccessibilityObserver;
 
     if-eqz v0, :cond_1
 
-    .line 131
     iget-object v0, p0, Lcom/android/server/wm/AccessibilityController;->mWindowsForAccessibilityObserver:Lcom/android/server/wm/AccessibilityController$WindowsForAccessibilityObserver;
 
     invoke-virtual {v0}, Lcom/android/server/wm/AccessibilityController$WindowsForAccessibilityObserver;->scheduleComputeChangedWindowsLocked()V
 
-    .line 133
     :cond_1
     return-void
 .end method
@@ -564,15 +494,12 @@
     .param p1, "callback"    # Landroid/view/WindowManagerInternal$WindowsForAccessibilityCallback;
 
     .prologue
-    .line 110
     if-eqz p1, :cond_1
 
-    .line 111
     iget-object v0, p0, Lcom/android/server/wm/AccessibilityController;->mWindowsForAccessibilityObserver:Lcom/android/server/wm/AccessibilityController$WindowsForAccessibilityObserver;
 
     if-eqz v0, :cond_0
 
-    .line 112
     new-instance v0, Ljava/lang/IllegalStateException;
 
     const-string v1, "Windows for accessibility callback already set!"
@@ -581,7 +508,6 @@
 
     throw v0
 
-    .line 115
     :cond_0
     new-instance v0, Lcom/android/server/wm/AccessibilityController$WindowsForAccessibilityObserver;
 
@@ -591,17 +517,14 @@
 
     iput-object v0, p0, Lcom/android/server/wm/AccessibilityController;->mWindowsForAccessibilityObserver:Lcom/android/server/wm/AccessibilityController$WindowsForAccessibilityObserver;
 
-    .line 124
     :goto_0
     return-void
 
-    .line 118
     :cond_1
     iget-object v0, p0, Lcom/android/server/wm/AccessibilityController;->mWindowsForAccessibilityObserver:Lcom/android/server/wm/AccessibilityController$WindowsForAccessibilityObserver;
 
     if-nez v0, :cond_2
 
-    .line 119
     new-instance v0, Ljava/lang/IllegalStateException;
 
     const-string v1, "Windows for accessibility callback already cleared!"
@@ -610,7 +533,6 @@
 
     throw v0
 
-    .line 122
     :cond_2
     const/4 v0, 0x0
 

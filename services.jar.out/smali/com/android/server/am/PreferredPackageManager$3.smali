@@ -36,7 +36,6 @@
     .locals 0
 
     .prologue
-    .line 1066
     iput-object p1, p0, Lcom/android/server/am/PreferredPackageManager$3;->this$0:Lcom/android/server/am/PreferredPackageManager;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -52,7 +51,6 @@
     .param p2, "o2"    # Landroid/app/usage/UsageStats;
 
     .prologue
-    .line 1069
     invoke-virtual {p1}, Landroid/app/usage/UsageStats;->getLaunchCount()J
 
     move-result-wide v0
@@ -65,10 +63,8 @@
 
     if-ltz v0, :cond_0
 
-    .line 1070
     const/4 v0, -0x1
 
-    .line 1072
     :goto_0
     return v0
 
@@ -84,7 +80,6 @@
     .param p2, "x1"    # Ljava/lang/Object;
 
     .prologue
-    .line 1066
     check-cast p1, Landroid/app/usage/UsageStats;
 
     .end local p1    # "x0":Ljava/lang/Object;

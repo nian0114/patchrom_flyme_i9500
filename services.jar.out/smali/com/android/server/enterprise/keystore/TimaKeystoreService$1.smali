@@ -23,7 +23,6 @@
     .locals 0
 
     .prologue
-    .line 362
     iput-object p1, p0, Lcom/android/server/enterprise/keystore/TimaKeystoreService$1;->this$0:Lcom/android/server/enterprise/keystore/TimaKeystoreService;
 
     invoke-direct {p0}, Landroid/content/BroadcastReceiver;-><init>()V
@@ -43,12 +42,10 @@
 
     const/4 v6, -0x1
 
-    .line 365
     invoke-virtual {p2}, Landroid/content/Intent;->getAction()Ljava/lang/String;
 
     move-result-object v0
 
-    .line 366
     .local v0, "action":Ljava/lang/String;
     const-string v3, "android.intent.extra.user_handle"
 
@@ -56,7 +53,6 @@
 
     move-result v2
 
-    .line 367
     .local v2, "userId":I
     # getter for: Lcom/android/server/enterprise/keystore/TimaKeystoreService;->DBG:Z
     invoke-static {}, Lcom/android/server/enterprise/keystore/TimaKeystoreService;->access$100()Z
@@ -65,7 +61,6 @@
 
     if-eqz v3, :cond_0
 
-    .line 368
     # getter for: Lcom/android/server/enterprise/keystore/TimaKeystoreService;->TAG:Ljava/lang/String;
     invoke-static {}, Lcom/android/server/enterprise/keystore/TimaKeystoreService;->access$200()Ljava/lang/String;
 
@@ -101,16 +96,13 @@
 
     invoke-static {v3, v4}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 369
     :cond_0
     if-ne v2, v6, :cond_2
 
-    .line 406
     :cond_1
     :goto_0
     return-void
 
-    .line 371
     :cond_2
     const-string v3, "android.intent.action.USER_REMOVED"
 
@@ -120,7 +112,6 @@
 
     if-eqz v3, :cond_4
 
-    .line 372
     iget-object v3, p0, Lcom/android/server/enterprise/keystore/TimaKeystoreService$1;->this$0:Lcom/android/server/enterprise/keystore/TimaKeystoreService;
 
     new-instance v4, Ljava/io/File;
@@ -152,7 +143,6 @@
 
     if-nez v3, :cond_3
 
-    .line 374
     # getter for: Lcom/android/server/enterprise/keystore/TimaKeystoreService;->DBG:Z
     invoke-static {}, Lcom/android/server/enterprise/keystore/TimaKeystoreService;->access$100()Z
 
@@ -160,7 +150,6 @@
 
     if-eqz v3, :cond_3
 
-    .line 375
     # getter for: Lcom/android/server/enterprise/keystore/TimaKeystoreService;->TAG:Ljava/lang/String;
     invoke-static {}, Lcom/android/server/enterprise/keystore/TimaKeystoreService;->access$200()Ljava/lang/String;
 
@@ -170,7 +159,6 @@
 
     invoke-static {v3, v4}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 379
     :cond_3
     iget-object v3, p0, Lcom/android/server/enterprise/keystore/TimaKeystoreService$1;->this$0:Lcom/android/server/enterprise/keystore/TimaKeystoreService;
 
@@ -203,7 +191,6 @@
 
     if-nez v3, :cond_1
 
-    .line 381
     # getter for: Lcom/android/server/enterprise/keystore/TimaKeystoreService;->DBG:Z
     invoke-static {}, Lcom/android/server/enterprise/keystore/TimaKeystoreService;->access$100()Z
 
@@ -211,7 +198,6 @@
 
     if-eqz v3, :cond_1
 
-    .line 382
     # getter for: Lcom/android/server/enterprise/keystore/TimaKeystoreService;->TAG:Ljava/lang/String;
     invoke-static {}, Lcom/android/server/enterprise/keystore/TimaKeystoreService;->access$200()Ljava/lang/String;
 
@@ -223,7 +209,6 @@
 
     goto :goto_0
 
-    .line 386
     :cond_4
     const-string v3, "android.intent.action.USER_ADDED"
 
@@ -233,7 +218,6 @@
 
     if-eqz v3, :cond_5
 
-    .line 387
     # getter for: Lcom/android/server/enterprise/keystore/TimaKeystoreService;->TAG:Ljava/lang/String;
     invoke-static {}, Lcom/android/server/enterprise/keystore/TimaKeystoreService;->access$200()Ljava/lang/String;
 
@@ -243,13 +227,11 @@
 
     invoke-static {v3, v4}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 390
     iget-object v3, p0, Lcom/android/server/enterprise/keystore/TimaKeystoreService$1;->this$0:Lcom/android/server/enterprise/keystore/TimaKeystoreService;
 
     # invokes: Lcom/android/server/enterprise/keystore/TimaKeystoreService;->enforcePermission()V
     invoke-static {v3}, Lcom/android/server/enterprise/keystore/TimaKeystoreService;->access$400(Lcom/android/server/enterprise/keystore/TimaKeystoreService;)V
 
-    .line 391
     iget-object v3, p0, Lcom/android/server/enterprise/keystore/TimaKeystoreService$1;->this$0:Lcom/android/server/enterprise/keystore/TimaKeystoreService;
 
     const-string v4, "defaultpackage"
@@ -261,7 +243,6 @@
 
     if-nez v3, :cond_1
 
-    .line 392
     # getter for: Lcom/android/server/enterprise/keystore/TimaKeystoreService;->TAG:Ljava/lang/String;
     invoke-static {}, Lcom/android/server/enterprise/keystore/TimaKeystoreService;->access$200()Ljava/lang/String;
 
@@ -273,7 +254,6 @@
 
     goto/16 :goto_0
 
-    .line 395
     :cond_5
     const-string v3, "android.intent.action.BOOT_COMPLETED"
 
@@ -283,7 +263,6 @@
 
     if-eqz v3, :cond_1
 
-    .line 396
     # getter for: Lcom/android/server/enterprise/keystore/TimaKeystoreService;->TAG:Ljava/lang/String;
     invoke-static {}, Lcom/android/server/enterprise/keystore/TimaKeystoreService;->access$200()Ljava/lang/String;
 
@@ -293,8 +272,7 @@
 
     invoke-static {v3, v4}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 398
-    const-string/jumbo v3, "ro.boot.security_mode"
+    const-string v3, "ro.boot.security_mode"
 
     const-string v4, "NONE"
 
@@ -302,7 +280,6 @@
 
     move-result-object v1
 
-    .line 399
     .local v1, "kapSupported":Ljava/lang/String;
     const-string v3, "NONE"
 
@@ -312,7 +289,6 @@
 
     if-nez v3, :cond_1
 
-    .line 400
     iget-object v3, p0, Lcom/android/server/enterprise/keystore/TimaKeystoreService$1;->this$0:Lcom/android/server/enterprise/keystore/TimaKeystoreService;
 
     const/4 v4, 0x0

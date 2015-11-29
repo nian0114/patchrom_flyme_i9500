@@ -23,7 +23,6 @@
     .locals 0
 
     .prologue
-    .line 984
     iput-object p1, p0, Lcom/android/server/RCPManagerService$ClipboardReceiver;->this$0:Lcom/android/server/RCPManagerService;
 
     invoke-direct {p0}, Landroid/content/BroadcastReceiver;-><init>()V
@@ -39,7 +38,6 @@
     .param p2, "intent"    # Landroid/content/Intent;
 
     .prologue
-    .line 988
     invoke-virtual/range {p2 .. p2}, Landroid/content/Intent;->getAction()Ljava/lang/String;
 
     move-result-object v15
@@ -52,7 +50,6 @@
 
     if-eqz v15, :cond_7
 
-    .line 989
     const-string v15, "ReADD"
 
     const/16 v16, 0x0
@@ -67,7 +64,6 @@
 
     if-nez v15, :cond_4
 
-    .line 990
     # getter for: Lcom/android/server/RCPManagerService;->TAG:Ljava/lang/String;
     invoke-static {}, Lcom/android/server/RCPManagerService;->access$200()Ljava/lang/String;
 
@@ -116,7 +112,6 @@
 
     invoke-static {v0, v15}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 994
     const-string v15, "RemovedClipFilePath"
 
     move-object/from16 v0, p2
@@ -125,7 +120,6 @@
 
     move-result-object v13
 
-    .line 998
     .local v13, "removedClipPath":Ljava/lang/String;
     const-string v15, "currentUserId"
 
@@ -139,7 +133,6 @@
 
     move-result v14
 
-    .line 999
     .local v14, "userId":I
     # getter for: Lcom/android/server/RCPManagerService;->TAG:Ljava/lang/String;
     invoke-static {}, Lcom/android/server/RCPManagerService;->access$200()Ljava/lang/String;
@@ -168,15 +161,12 @@
 
     invoke-static/range {v15 .. v16}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1002
     if-eqz v13, :cond_3
 
-    .line 1003
     new-instance v6, Ljava/io/File;
 
     invoke-direct {v6, v13}, Ljava/io/File;-><init>(Ljava/lang/String;)V
 
-    .line 1004
     .local v6, "f":Ljava/io/File;
     invoke-virtual {v6}, Ljava/io/File;->getParentFile()Ljava/io/File;
 
@@ -186,7 +176,6 @@
 
     move-result-object v12
 
-    .line 1005
     .local v12, "removedClipId":Ljava/lang/String;
     move-object/from16 v0, p0
 
@@ -207,11 +196,9 @@
 
     check-cast v2, Landroid/content/ISyncCallBack;
 
-    .line 1006
     .local v2, "callback":Landroid/content/ISyncCallBack;
     if-eqz v2, :cond_2
 
-    .line 1007
     # getter for: Lcom/android/server/RCPManagerService;->TAG:Ljava/lang/String;
     invoke-static {}, Lcom/android/server/RCPManagerService;->access$200()Ljava/lang/String;
 
@@ -245,7 +232,6 @@
 
     invoke-static/range {v15 .. v16}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1011
     const/4 v15, 0x0
 
     :try_start_0
@@ -253,7 +239,6 @@
     :try_end_0
     .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 1095
     .end local v2    # "callback":Landroid/content/ISyncCallBack;
     .end local v6    # "f":Ljava/io/File;
     .end local v12    # "removedClipId":Ljava/lang/String;
@@ -263,13 +248,11 @@
     :goto_1
     return-void
 
-    .line 990
     :cond_1
     const/4 v15, 0x0
 
     goto/16 :goto_0
 
-    .line 1012
     .restart local v2    # "callback":Landroid/content/ISyncCallBack;
     .restart local v6    # "f":Ljava/io/File;
     .restart local v12    # "removedClipId":Ljava/lang/String;
@@ -278,7 +261,6 @@
     :catch_0
     move-exception v5
 
-    .line 1013
     .local v5, "e":Landroid/os/RemoteException;
     # getter for: Lcom/android/server/RCPManagerService;->TAG:Ljava/lang/String;
     invoke-static {}, Lcom/android/server/RCPManagerService;->access$200()Ljava/lang/String;
@@ -309,7 +291,6 @@
 
     goto :goto_1
 
-    .line 1018
     .end local v5    # "e":Landroid/os/RemoteException;
     :cond_2
     # getter for: Lcom/android/server/RCPManagerService;->TAG:Ljava/lang/String;
@@ -341,7 +322,6 @@
 
     goto :goto_1
 
-    .line 1023
     .end local v2    # "callback":Landroid/content/ISyncCallBack;
     .end local v6    # "f":Ljava/io/File;
     .end local v12    # "removedClipId":Ljava/lang/String;
@@ -357,7 +337,6 @@
 
     goto :goto_1
 
-    .line 1027
     .end local v13    # "removedClipPath":Ljava/lang/String;
     .end local v14    # "userId":I
     :cond_4
@@ -409,7 +388,6 @@
 
     invoke-static {v0, v15}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1030
     const-string v15, "FileName"
 
     move-object/from16 v0, p2
@@ -418,13 +396,11 @@
 
     move-result-object v7
 
-    .line 1031
     .local v7, "fileName":Ljava/lang/String;
     invoke-static {}, Landroid/os/UserHandle;->getCallingUserId()I
 
     move-result v3
 
-    .line 1032
     .local v3, "callingUserId":I
     move-object/from16 v0, p0
 
@@ -435,7 +411,6 @@
 
     move-result-object v10
 
-    .line 1033
     .local v10, "ids":[I
     # getter for: Lcom/android/server/RCPManagerService;->TAG:Ljava/lang/String;
     invoke-static {}, Lcom/android/server/RCPManagerService;->access$200()Ljava/lang/String;
@@ -464,13 +439,10 @@
 
     invoke-static/range {v15 .. v16}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1035
     if-eqz v10, :cond_0
 
-    .line 1039
     array-length v11, v10
 
-    .line 1040
     .local v11, "idsLength":I
     const/4 v8, 0x0
 
@@ -478,10 +450,8 @@
     :goto_3
     if-ge v8, v11, :cond_0
 
-    .line 1041
     aget v9, v10, v8
 
-    .line 1042
     .local v9, "id":I
     move-object/from16 v0, p0
 
@@ -502,11 +472,9 @@
 
     check-cast v2, Landroid/content/ISyncCallBack;
 
-    .line 1043
     .restart local v2    # "callback":Landroid/content/ISyncCallBack;
     if-eqz v2, :cond_6
 
-    .line 1044
     # getter for: Lcom/android/server/RCPManagerService;->TAG:Ljava/lang/String;
     invoke-static {}, Lcom/android/server/RCPManagerService;->access$200()Ljava/lang/String;
 
@@ -540,7 +508,6 @@
 
     invoke-static/range {v15 .. v16}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1048
     const/4 v15, 0x1
 
     :try_start_1
@@ -548,13 +515,11 @@
     :try_end_1
     .catch Landroid/os/RemoteException; {:try_start_1 .. :try_end_1} :catch_1
 
-    .line 1040
     :goto_4
     add-int/lit8 v8, v8, 0x1
 
     goto :goto_3
 
-    .line 1027
     .end local v2    # "callback":Landroid/content/ISyncCallBack;
     .end local v3    # "callingUserId":I
     .end local v7    # "fileName":Ljava/lang/String;
@@ -567,7 +532,6 @@
 
     goto/16 :goto_2
 
-    .line 1049
     .restart local v2    # "callback":Landroid/content/ISyncCallBack;
     .restart local v3    # "callingUserId":I
     .restart local v7    # "fileName":Ljava/lang/String;
@@ -578,7 +542,6 @@
     :catch_1
     move-exception v5
 
-    .line 1050
     .restart local v5    # "e":Landroid/os/RemoteException;
     # getter for: Lcom/android/server/RCPManagerService;->TAG:Ljava/lang/String;
     invoke-static {}, Lcom/android/server/RCPManagerService;->access$200()Ljava/lang/String;
@@ -609,7 +572,6 @@
 
     goto :goto_4
 
-    .line 1055
     .end local v5    # "e":Landroid/os/RemoteException;
     :cond_6
     # getter for: Lcom/android/server/RCPManagerService;->TAG:Ljava/lang/String;
@@ -641,7 +603,6 @@
 
     goto :goto_4
 
-    .line 1062
     .end local v2    # "callback":Landroid/content/ISyncCallBack;
     .end local v3    # "callingUserId":I
     .end local v7    # "fileName":Ljava/lang/String;
@@ -662,7 +623,6 @@
 
     if-eqz v15, :cond_0
 
-    .line 1064
     const-string v15, "ClearedClipsArray"
 
     move-object/from16 v0, p2
@@ -671,7 +631,6 @@
 
     move-result-object v4
 
-    .line 1068
     .local v4, "clearedClipsArray":Ljava/util/ArrayList;, "Ljava/util/ArrayList<Ljava/lang/String;>;"
     const-string v15, "currentUserId"
 
@@ -685,7 +644,6 @@
 
     move-result v14
 
-    .line 1069
     .restart local v14    # "userId":I
     # getter for: Lcom/android/server/RCPManagerService;->TAG:Ljava/lang/String;
     invoke-static {}, Lcom/android/server/RCPManagerService;->access$200()Ljava/lang/String;
@@ -714,14 +672,12 @@
 
     invoke-static/range {v15 .. v16}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1072
     invoke-virtual {v4}, Ljava/util/ArrayList;->isEmpty()Z
 
     move-result v15
 
     if-nez v15, :cond_9
 
-    .line 1073
     move-object/from16 v0, p0
 
     iget-object v15, v0, Lcom/android/server/RCPManagerService$ClipboardReceiver;->this$0:Lcom/android/server/RCPManagerService;
@@ -741,11 +697,9 @@
 
     check-cast v2, Landroid/content/ISyncCallBack;
 
-    .line 1074
     .restart local v2    # "callback":Landroid/content/ISyncCallBack;
     if-eqz v2, :cond_8
 
-    .line 1075
     # getter for: Lcom/android/server/RCPManagerService;->TAG:Ljava/lang/String;
     invoke-static {}, Lcom/android/server/RCPManagerService;->access$200()Ljava/lang/String;
 
@@ -779,7 +733,6 @@
 
     invoke-static/range {v15 .. v16}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1079
     :try_start_2
     invoke-interface {v2, v4}, Landroid/content/ISyncCallBack;->allClipsCleared(Ljava/util/List;)V
     :try_end_2
@@ -787,11 +740,9 @@
 
     goto/16 :goto_1
 
-    .line 1080
     :catch_2
     move-exception v5
 
-    .line 1081
     .restart local v5    # "e":Landroid/os/RemoteException;
     # getter for: Lcom/android/server/RCPManagerService;->TAG:Ljava/lang/String;
     invoke-static {}, Lcom/android/server/RCPManagerService;->access$200()Ljava/lang/String;
@@ -822,7 +773,6 @@
 
     goto/16 :goto_1
 
-    .line 1086
     .end local v5    # "e":Landroid/os/RemoteException;
     :cond_8
     # getter for: Lcom/android/server/RCPManagerService;->TAG:Ljava/lang/String;
@@ -854,7 +804,6 @@
 
     goto/16 :goto_1
 
-    .line 1091
     .end local v2    # "callback":Landroid/content/ISyncCallBack;
     :cond_9
     # getter for: Lcom/android/server/RCPManagerService;->TAG:Ljava/lang/String;

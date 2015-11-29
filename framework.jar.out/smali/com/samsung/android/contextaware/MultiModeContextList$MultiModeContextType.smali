@@ -48,7 +48,6 @@
 
     const/4 v3, 0x0
 
-    .line 45
     new-instance v0, Lcom/samsung/android/contextaware/MultiModeContextList$MultiModeContextType$1;
 
     const-string v1, "SENSORHUB_RUNNER_ACTIVITY_TRACKER"
@@ -63,7 +62,6 @@
 
     sput-object v0, Lcom/samsung/android/contextaware/MultiModeContextList$MultiModeContextType;->SENSORHUB_RUNNER_ACTIVITY_TRACKER:Lcom/samsung/android/contextaware/MultiModeContextList$MultiModeContextType;
 
-    .line 53
     new-instance v0, Lcom/samsung/android/contextaware/MultiModeContextList$MultiModeContextType$2;
 
     const-string v1, "SENSORHUB_RUNNER_STEP_LEVEL_MONITOR"
@@ -78,7 +76,6 @@
 
     sput-object v0, Lcom/samsung/android/contextaware/MultiModeContextList$MultiModeContextType;->SENSORHUB_RUNNER_STEP_LEVEL_MONITOR:Lcom/samsung/android/contextaware/MultiModeContextList$MultiModeContextType;
 
-    .line 39
     const/4 v0, 0x2
 
     new-array v0, v0, [Lcom/samsung/android/contextaware/MultiModeContextList$MultiModeContextType;
@@ -108,13 +105,10 @@
     .end annotation
 
     .prologue
-    .line 71
     invoke-direct {p0, p1, p2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
-    .line 72
     iput-object p3, p0, Lcom/samsung/android/contextaware/MultiModeContextList$MultiModeContextType;->code:Ljava/lang/String;
 
-    .line 73
     return-void
 .end method
 
@@ -126,7 +120,6 @@
     .param p4, "x3"    # Lcom/samsung/android/contextaware/MultiModeContextList$1;
 
     .prologue
-    .line 39
     invoke-direct {p0, p1, p2, p3}, Lcom/samsung/android/contextaware/MultiModeContextList$MultiModeContextType;-><init>(Ljava/lang/String;ILjava/lang/String;)V
 
     return-void
@@ -137,7 +130,6 @@
     .param p0, "x0"    # Lcom/samsung/android/contextaware/MultiModeContextList$MultiModeContextType;
 
     .prologue
-    .line 39
     iget-object v0, p0, Lcom/samsung/android/contextaware/MultiModeContextList$MultiModeContextType;->code:Ljava/lang/String;
 
     return-object v0
@@ -148,7 +140,6 @@
     .param p0, "name"    # Ljava/lang/String;
 
     .prologue
-    .line 39
     const-class v0, Lcom/samsung/android/contextaware/MultiModeContextList$MultiModeContextType;
 
     invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
@@ -164,7 +155,6 @@
     .locals 1
 
     .prologue
-    .line 39
     sget-object v0, Lcom/samsung/android/contextaware/MultiModeContextList$MultiModeContextType;->$VALUES:[Lcom/samsung/android/contextaware/MultiModeContextList$MultiModeContextType;
 
     invoke-virtual {v0}, [Lcom/samsung/android/contextaware/MultiModeContextList$MultiModeContextType;->clone()Ljava/lang/Object;
@@ -182,7 +172,6 @@
     .locals 1
 
     .prologue
-    .line 81
     iget-object v0, p0, Lcom/samsung/android/contextaware/MultiModeContextList$MultiModeContextType;->code:Ljava/lang/String;
 
     return-object v0
@@ -192,7 +181,6 @@
     .locals 1
 
     .prologue
-    .line 91
     const/4 v0, 0x0
 
     return-object v0

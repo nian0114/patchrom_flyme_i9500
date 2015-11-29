@@ -34,7 +34,6 @@
     .locals 0
 
     .prologue
-    .line 14387
     iput-object p1, p0, Lcom/android/server/pm/PackageManagerService$13;->this$0:Lcom/android/server/pm/PackageManagerService;
 
     iput p2, p0, Lcom/android/server/pm/PackageManagerService$13;->val$userId:I
@@ -60,14 +59,12 @@
 
     const/4 v2, 0x1
 
-    .line 14389
     iget-object v1, p0, Lcom/android/server/pm/PackageManagerService$13;->this$0:Lcom/android/server/pm/PackageManagerService;
 
     iget-object v1, v1, Lcom/android/server/pm/PackageManagerService;->mHandler:Lcom/android/server/pm/PackageManagerService$PackageHandler;
 
     invoke-virtual {v1, p0}, Lcom/android/server/pm/PackageManagerService$PackageHandler;->removeCallbacks(Ljava/lang/Runnable;)V
 
-    .line 14390
     const-string v1, "PackageManager"
 
     const-string v3, "MSG"
@@ -80,10 +77,8 @@
 
     invoke-static {v1, v3}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 14392
     const/4 v12, 0x1
 
-    .line 14393
     .local v12, "returnCode":I
     const-string v1, "application_policy"
 
@@ -93,11 +88,9 @@
 
     check-cast v9, Lcom/android/server/enterprise/application/ApplicationPolicy;
 
-    .line 14394
     .local v9, "appService":Lcom/android/server/enterprise/application/ApplicationPolicy;
     iget v11, p0, Lcom/android/server/pm/PackageManagerService$13;->val$userId:I
 
-    .line 14395
     .local v11, "edmUserid":I
     iget v1, p0, Lcom/android/server/pm/PackageManagerService$13;->val$flags:I
 
@@ -105,10 +98,8 @@
 
     if-eqz v1, :cond_0
 
-    .line 14396
     const/4 v11, -0x1
 
-    .line 14398
     :cond_0
     if-eqz v9, :cond_3
 
@@ -120,22 +111,18 @@
 
     if-nez v1, :cond_3
 
-    .line 14399
     const-string v1, "PackageManager"
 
     const-string v3, "This app uninstallation is not allowed"
 
     invoke-static {v1, v3}, Landroid/util/Slog;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 14400
     const/4 v12, -0x1
 
-    .line 14409
     :cond_1
     :goto_0
     if-ltz v12, :cond_4
 
-    .line 14410
     invoke-static {}, Landroid/os/Process;->myPid()I
 
     move-result v3
@@ -172,13 +159,11 @@
 
     invoke-static/range {v0 .. v5}, Landroid/sec/enterprise/auditlog/AuditLog;->log(IIZILjava/lang/String;Ljava/lang/String;)V
 
-    .line 14418
     :goto_1
     iget-object v0, p0, Lcom/android/server/pm/PackageManagerService$13;->val$observer:Landroid/content/pm/IPackageDeleteObserver;
 
     if-eqz v0, :cond_2
 
-    .line 14420
     :try_start_0
     const-string v0, "PackageManager"
 
@@ -186,7 +171,7 @@
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v3, "return delete result to caller: "
+    const-string v3, "return delete result to caller: "
 
     invoke-virtual {v1, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -208,14 +193,13 @@
 
     invoke-static {v0, v1}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 14421
     const-string v0, "PackageManager"
 
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v3, "returnCode: "
+    const-string v3, "returnCode: "
 
     invoke-virtual {v1, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -231,7 +215,6 @@
 
     invoke-static {v0, v1}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 14422
     iget-object v0, p0, Lcom/android/server/pm/PackageManagerService$13;->val$observer:Landroid/content/pm/IPackageDeleteObserver;
 
     iget-object v1, p0, Lcom/android/server/pm/PackageManagerService$13;->val$packageName:Ljava/lang/String;
@@ -240,7 +223,6 @@
     :try_end_0
     .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 14427
     :cond_2
     :goto_2
     iget-object v0, p0, Lcom/android/server/pm/PackageManagerService$13;->this$0:Lcom/android/server/pm/PackageManagerService;
@@ -249,10 +231,8 @@
 
     invoke-static {v0, v2}, Lcom/android/internal/telephony/SmsApplication;->getDefaultSmsApplication(Landroid/content/Context;Z)Landroid/content/ComponentName;
 
-    .line 14428
     return-void
 
-    .line 14403
     :cond_3
     iget-object v1, p0, Lcom/android/server/pm/PackageManagerService$13;->this$0:Lcom/android/server/pm/PackageManagerService;
 
@@ -267,7 +247,6 @@
 
     move-result v12
 
-    .line 14404
     iget-object v1, p0, Lcom/android/server/pm/PackageManagerService$13;->val$packageName:Ljava/lang/String;
 
     const-string v3, "jp.co.mmbi.app"
@@ -278,7 +257,6 @@
 
     if-eqz v1, :cond_1
 
-    .line 14405
     iget-object v1, p0, Lcom/android/server/pm/PackageManagerService$13;->this$0:Lcom/android/server/pm/PackageManagerService;
 
     iget-object v1, v1, Lcom/android/server/pm/PackageManagerService;->mSettings:Lcom/android/server/pm/Settings;
@@ -291,7 +269,6 @@
 
     goto/16 :goto_0
 
-    .line 14413
     :cond_4
     const/4 v3, 0x3
 
@@ -335,11 +312,9 @@
 
     goto/16 :goto_1
 
-    .line 14423
     :catch_0
     move-exception v10
 
-    .line 14424
     .local v10, "e":Landroid/os/RemoteException;
     const-string v0, "PackageManager"
 

@@ -52,7 +52,6 @@
     .locals 0
 
     .prologue
-    .line 203
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -63,160 +62,131 @@
     .param p0, "capabilities"    # I
 
     .prologue
-    .line 141
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
 
-    .line 142
     .local v0, "builder":Ljava/lang/StringBuilder;
     const-string v1, "[Capabilities:"
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 143
     and-int/lit8 v1, p0, 0x1
 
     if-eqz v1, :cond_0
 
-    .line 144
     const-string v1, " HOLD"
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 146
     :cond_0
     and-int/lit8 v1, p0, 0x2
 
     if-eqz v1, :cond_1
 
-    .line 147
     const-string v1, " SUPPORT_HOLD"
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 149
     :cond_1
     and-int/lit8 v1, p0, 0x4
 
     if-eqz v1, :cond_2
 
-    .line 150
     const-string v1, " MERGE_CONFERENCE"
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 152
     :cond_2
     and-int/lit8 v1, p0, 0x8
 
     if-eqz v1, :cond_3
 
-    .line 153
     const-string v1, " SWAP_CONFERENCE"
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 155
     :cond_3
     and-int/lit8 v1, p0, 0x10
 
     if-eqz v1, :cond_4
 
-    .line 156
     const-string v1, " ADD_CALL"
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 158
     :cond_4
     and-int/lit8 v1, p0, 0x20
 
     if-eqz v1, :cond_5
 
-    .line 159
     const-string v1, " RESPOND_VIA_TEXT"
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 161
     :cond_5
     and-int/lit8 v1, p0, 0x40
 
     if-eqz v1, :cond_6
 
-    .line 162
     const-string v1, " MUTE"
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 164
     :cond_6
     and-int/lit16 v1, p0, 0x80
 
     if-eqz v1, :cond_7
 
-    .line 165
     const-string v1, " MANAGE_CONFERENCE"
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 167
     :cond_7
     and-int/lit16 v1, p0, 0x100
 
     if-eqz v1, :cond_8
 
-    .line 168
     const-string v1, " SUPPORTS_VT_LOCAL"
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 170
     :cond_8
     and-int/lit16 v1, p0, 0x200
 
     if-eqz v1, :cond_9
 
-    .line 171
     const-string v1, " SUPPORTS_VT_REMOTE"
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 173
     :cond_9
     and-int/lit16 v1, p0, 0x400
 
     if-eqz v1, :cond_a
 
-    .line 174
     const-string v1, " VoLTE"
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 176
     :cond_a
     and-int/lit16 v1, p0, 0x800
 
     if-eqz v1, :cond_b
 
-    .line 177
     const-string v1, " VoWIFI"
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 180
     :cond_b
     and-int/lit16 v1, p0, 0x4000
 
     if-eqz v1, :cond_c
 
-    .line 181
     const-string v1, " ROAMING_AREA"
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 183
     :cond_c
     const v1, 0x8000
 
@@ -224,12 +194,10 @@
 
     if-eqz v1, :cond_d
 
-    .line 184
     const-string v1, " GROUP_CALL"
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 186
     :cond_d
     const/high16 v1, 0x10000
 
@@ -237,12 +205,10 @@
 
     if-eqz v1, :cond_e
 
-    .line 187
     const-string v1, " SESSION_MODIFY"
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 189
     :cond_e
     const/high16 v1, 0x20000
 
@@ -250,12 +216,10 @@
 
     if-eqz v1, :cond_f
 
-    .line 190
     const-string v1, " CONTROL_WAITINGCALL"
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 192
     :cond_f
     const/high16 v1, 0x40000
 
@@ -263,12 +227,10 @@
 
     if-eqz v1, :cond_10
 
-    .line 193
     const-string v1, " CALL_TRANSFER"
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 195
     :cond_10
     const/high16 v1, 0x80000
 
@@ -276,18 +238,15 @@
 
     if-eqz v1, :cond_11
 
-    .line 196
     const-string v1, " VOICE_PRIVACY"
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 199
     :cond_11
     const-string v1, "]"
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 200
     invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
     move-result-object v1

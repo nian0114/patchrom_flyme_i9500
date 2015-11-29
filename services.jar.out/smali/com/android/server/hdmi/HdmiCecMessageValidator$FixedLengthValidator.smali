@@ -27,13 +27,10 @@
     .param p1, "length"    # I
 
     .prologue
-    .line 226
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 227
     iput p1, p0, Lcom/android/server/hdmi/HdmiCecMessageValidator$FixedLengthValidator;->mLength:I
 
-    .line 228
     return-void
 .end method
 
@@ -44,7 +41,6 @@
     .param p1, "params"    # [B
 
     .prologue
-    .line 232
     array-length v0, p1
 
     iget v1, p0, Lcom/android/server/hdmi/HdmiCecMessageValidator$FixedLengthValidator;->mLength:I

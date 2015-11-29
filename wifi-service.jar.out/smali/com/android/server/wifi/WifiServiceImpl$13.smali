@@ -23,7 +23,6 @@
     .locals 0
 
     .prologue
-    .line 4549
     iput-object p1, p0, Lcom/android/server/wifi/WifiServiceImpl$13;->this$0:Lcom/android/server/wifi/WifiServiceImpl;
 
     invoke-direct {p0}, Landroid/telephony/PhoneStateListener;-><init>()V
@@ -41,7 +40,6 @@
     .prologue
     const/16 v6, 0xd
 
-    .line 4551
     const-string v3, "WifiService"
 
     new-instance v4, Ljava/lang/StringBuilder;
@@ -82,7 +80,6 @@
 
     invoke-static {v3, v4}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 4553
     const-string v3, "VZW"
 
     const-string v4, "ALL"
@@ -103,7 +100,6 @@
 
     if-eqz v3, :cond_3
 
-    .line 4555
     :cond_0
     iget-object v3, p0, Lcom/android/server/wifi/WifiServiceImpl$13;->this$0:Lcom/android/server/wifi/WifiServiceImpl;
 
@@ -111,7 +107,6 @@
 
     move-result v2
 
-    .line 4556
     .local v2, "wifiApState":I
     const/16 v3, 0xc
 
@@ -119,18 +114,14 @@
 
     if-ne v2, v6, :cond_3
 
-    .line 4559
     :cond_1
     const/4 v1, 0x5
 
-    .line 4561
     .local v1, "maxClientNum":I
     if-ne p2, v6, :cond_2
 
-    .line 4562
     const/16 v1, 0xa
 
-    .line 4566
     :cond_2
     :try_start_0
     iget-object v3, p0, Lcom/android/server/wifi/WifiServiceImpl$13;->this$0:Lcom/android/server/wifi/WifiServiceImpl;
@@ -144,20 +135,17 @@
     :try_end_0
     .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 4579
     .end local v1    # "maxClientNum":I
     .end local v2    # "wifiApState":I
     :cond_3
     :goto_0
     return-void
 
-    .line 4567
     .restart local v1    # "maxClientNum":I
     .restart local v2    # "wifiApState":I
     :catch_0
     move-exception v0
 
-    .line 4568
     .local v0, "e":Landroid/os/RemoteException;
     invoke-virtual {v0}, Landroid/os/RemoteException;->printStackTrace()V
 

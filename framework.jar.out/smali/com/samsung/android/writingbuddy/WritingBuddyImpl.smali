@@ -265,7 +265,6 @@
     .locals 2
 
     .prologue
-    .line 135
     const-string v0, "eng"
 
     sget-object v1, Landroid/os/Build;->TYPE:Ljava/lang/String;
@@ -290,106 +289,76 @@
 
     const/4 v1, 0x0
 
-    .line 575
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 406
     iput-object v2, p0, Lcom/samsung/android/writingbuddy/WritingBuddyImpl;->mAnchorView:Landroid/view/View;
 
-    .line 426
     iput-object v2, p0, Lcom/samsung/android/writingbuddy/WritingBuddyImpl;->mWBRect:Landroid/graphics/Rect;
 
-    .line 442
     iput v1, p0, Lcom/samsung/android/writingbuddy/WritingBuddyImpl;->mEditCount:I
 
-    .line 444
     iput-boolean v1, p0, Lcom/samsung/android/writingbuddy/WritingBuddyImpl;->mIsMultiLineEditor:Z
 
-    .line 446
     iput-boolean v1, p0, Lcom/samsung/android/writingbuddy/WritingBuddyImpl;->mIsCursorBlinkDisabled:Z
 
-    .line 448
     iput-boolean v1, p0, Lcom/samsung/android/writingbuddy/WritingBuddyImpl;->mCanStartWritingBuddy:Z
 
-    .line 450
     iput-boolean v3, p0, Lcom/samsung/android/writingbuddy/WritingBuddyImpl;->mCanShowAutoCompletePopup:Z
 
-    .line 452
     iput v1, p0, Lcom/samsung/android/writingbuddy/WritingBuddyImpl;->mViewID:I
 
-    .line 454
     iput v1, p0, Lcom/samsung/android/writingbuddy/WritingBuddyImpl;->mShowCnt:I
 
-    .line 456
     iput v1, p0, Lcom/samsung/android/writingbuddy/WritingBuddyImpl;->mWindowMode:I
 
-    .line 460
     iput-boolean v1, p0, Lcom/samsung/android/writingbuddy/WritingBuddyImpl;->mIsImageModePenDrawing:Z
 
-    .line 462
     iput-boolean v1, p0, Lcom/samsung/android/writingbuddy/WritingBuddyImpl;->mIsPopupCueShowMSGCalled:Z
 
-    .line 464
     iput-boolean v1, p0, Lcom/samsung/android/writingbuddy/WritingBuddyImpl;->mIsPerformingAction:Z
 
-    .line 466
     iput-boolean v1, p0, Lcom/samsung/android/writingbuddy/WritingBuddyImpl;->mIgnoreSizeChange:Z
 
-    .line 468
     iput-object v2, p0, Lcom/samsung/android/writingbuddy/WritingBuddyImpl;->mInitRect:Landroid/graphics/Rect;
 
-    .line 474
     iput-boolean v1, p0, Lcom/samsung/android/writingbuddy/WritingBuddyImpl;->mIsWaitingHideSoftInput:Z
 
-    .line 2232
     new-instance v0, Lcom/samsung/android/writingbuddy/WritingBuddyImpl$5;
 
     invoke-direct {v0, p0}, Lcom/samsung/android/writingbuddy/WritingBuddyImpl$5;-><init>(Lcom/samsung/android/writingbuddy/WritingBuddyImpl;)V
 
     iput-object v0, p0, Lcom/samsung/android/writingbuddy/WritingBuddyImpl;->mOnScrollChangedListener:Landroid/view/ViewTreeObserver$OnScrollChangedListener;
 
-    .line 2241
     iput v1, p0, Lcom/samsung/android/writingbuddy/WritingBuddyImpl;->mState:I
 
-    .line 2255
     iput v1, p0, Lcom/samsung/android/writingbuddy/WritingBuddyImpl;->mStateResetCnt:I
 
-    .line 2259
     iput-object v2, p0, Lcom/samsung/android/writingbuddy/WritingBuddyImpl;->motionEvent:Landroid/view/MotionEvent;
 
-    .line 2853
     new-instance v0, Lcom/samsung/android/writingbuddy/WritingBuddyImpl$7;
 
     invoke-direct {v0, p0}, Lcom/samsung/android/writingbuddy/WritingBuddyImpl$7;-><init>(Lcom/samsung/android/writingbuddy/WritingBuddyImpl;)V
 
     iput-object v0, p0, Lcom/samsung/android/writingbuddy/WritingBuddyImpl;->mServiceCallback:Lcom/samsung/android/writingbuddy/IWritingBuddyClient;
 
-    .line 576
     invoke-direct {p0}, Lcom/samsung/android/writingbuddy/WritingBuddyImpl;->initVariable()V
 
-    .line 577
     invoke-virtual {p0, p1}, Lcom/samsung/android/writingbuddy/WritingBuddyImpl;->setParentView(Landroid/view/View;)V
 
-    .line 578
     if-eqz p1, :cond_0
 
-    .line 579
     invoke-virtual {p1, p0}, Landroid/view/View;->setWritingBuddy(Lcom/samsung/android/writingbuddy/WritingBuddyImpl;)V
 
-    .line 582
     :cond_0
     instance-of v0, p1, Landroid/widget/EditText;
 
     if-eqz v0, :cond_1
 
-    .line 583
     invoke-virtual {p0, v3}, Lcom/samsung/android/writingbuddy/WritingBuddyImpl;->setBoardType(I)V
 
-    .line 587
     :goto_0
     return-void
 
-    .line 585
     :cond_1
     const/4 v0, 0x2
 
@@ -403,7 +372,6 @@
     .param p0, "x0"    # Lcom/samsung/android/writingbuddy/WritingBuddyImpl;
 
     .prologue
-    .line 131
     iget-object v0, p0, Lcom/samsung/android/writingbuddy/WritingBuddyImpl;->mPopupCue:Lcom/samsung/android/writingbuddy/PopupCue;
 
     return-object v0
@@ -414,7 +382,6 @@
     .param p0, "x0"    # Lcom/samsung/android/writingbuddy/WritingBuddyImpl;
 
     .prologue
-    .line 131
     invoke-direct {p0}, Lcom/samsung/android/writingbuddy/WritingBuddyImpl;->getHandler()Landroid/os/Handler;
 
     move-result-object v0
@@ -428,7 +395,6 @@
     .param p1, "x1"    # Landroid/os/Message;
 
     .prologue
-    .line 131
     invoke-direct {p0, p1}, Lcom/samsung/android/writingbuddy/WritingBuddyImpl;->handleMessage(Landroid/os/Message;)V
 
     return-void
@@ -439,7 +405,6 @@
     .param p0, "x0"    # Lcom/samsung/android/writingbuddy/WritingBuddyImpl;
 
     .prologue
-    .line 131
     iget-object v0, p0, Lcom/samsung/android/writingbuddy/WritingBuddyImpl;->mParentView:Landroid/view/View;
 
     return-object v0
@@ -450,7 +415,6 @@
     .param p0, "x0"    # Lcom/samsung/android/writingbuddy/WritingBuddyImpl;
 
     .prologue
-    .line 131
     iget-object v0, p0, Lcom/samsung/android/writingbuddy/WritingBuddyImpl;->mHandler:Landroid/os/Handler;
 
     return-object v0
@@ -462,7 +426,6 @@
     .param p1, "x1"    # Z
 
     .prologue
-    .line 131
     invoke-direct {p0, p1}, Lcom/samsung/android/writingbuddy/WritingBuddyImpl;->dismissPopupCue(Z)Z
 
     move-result v0
@@ -476,7 +439,6 @@
     .param p1, "x1"    # Z
 
     .prologue
-    .line 131
     iput-boolean p1, p0, Lcom/samsung/android/writingbuddy/WritingBuddyImpl;->mIsWaitingHideSoftInput:Z
 
     return p1
@@ -487,7 +449,6 @@
     .param p0, "x0"    # Lcom/samsung/android/writingbuddy/WritingBuddyImpl;
 
     .prologue
-    .line 131
     invoke-direct {p0}, Lcom/samsung/android/writingbuddy/WritingBuddyImpl;->showWritingBuddy()Z
 
     move-result v0
@@ -500,7 +461,6 @@
     .param p0, "x0"    # Lcom/samsung/android/writingbuddy/WritingBuddyImpl;
 
     .prologue
-    .line 131
     iget v0, p0, Lcom/samsung/android/writingbuddy/WritingBuddyImpl;->mBoardType:I
 
     return v0
@@ -511,7 +471,6 @@
     .param p0, "x0"    # Lcom/samsung/android/writingbuddy/WritingBuddyImpl;
 
     .prologue
-    .line 131
     iget v0, p0, Lcom/samsung/android/writingbuddy/WritingBuddyImpl;->mState:I
 
     return v0
@@ -525,7 +484,6 @@
     .param p3, "x3"    # F
 
     .prologue
-    .line 131
     invoke-direct {p0, p1, p2, p3}, Lcom/samsung/android/writingbuddy/WritingBuddyImpl;->pointInView(Landroid/view/View;FF)Z
 
     move-result v0
@@ -538,7 +496,6 @@
     .param p0, "x0"    # Lcom/samsung/android/writingbuddy/WritingBuddyImpl;
 
     .prologue
-    .line 131
     iget-boolean v0, p0, Lcom/samsung/android/writingbuddy/WritingBuddyImpl;->mIsPopupCueShowMSGCalled:Z
 
     return v0
@@ -550,7 +507,6 @@
     .param p1, "x1"    # Z
 
     .prologue
-    .line 131
     iput-boolean p1, p0, Lcom/samsung/android/writingbuddy/WritingBuddyImpl;->mIsPopupCueShowMSGCalled:Z
 
     return p1
@@ -562,7 +518,6 @@
     .param p1, "x1"    # Ljava/lang/CharSequence;
 
     .prologue
-    .line 131
     invoke-direct {p0, p1}, Lcom/samsung/android/writingbuddy/WritingBuddyImpl;->sendHelpModeResult(Ljava/lang/CharSequence;)V
 
     return-void
@@ -579,22 +534,18 @@
 
     const/4 v7, 0x1
 
-    .line 1949
     iget-boolean v2, p0, Lcom/samsung/android/writingbuddy/WritingBuddyImpl;->mCanStartWritingBuddy:Z
 
-    .line 1951
     .local v2, "result":Z
     if-nez p1, :cond_0
 
     move v3, v2
 
-    .line 2016
     .end local v2    # "result":Z
     .local v3, "result":I
     :goto_0
     return v3
 
-    .line 1956
     .end local v3    # "result":I
     .restart local v2    # "result":Z
     :cond_0
@@ -612,11 +563,9 @@
 
     move v2, v7
 
-    .line 1959
     :goto_1
     if-eqz v2, :cond_1
 
-    .line 1960
     iget-object v6, p0, Lcom/samsung/android/writingbuddy/WritingBuddyImpl;->mParentView:Landroid/view/View;
 
     invoke-virtual {v6}, Landroid/view/View;->getContext()Landroid/content/Context;
@@ -627,7 +576,7 @@
 
     move-result-object v6
 
-    const-string/jumbo v10, "pen_writing_buddy"
+    const-string v10, "pen_writing_buddy"
 
     invoke-static {v6, v10, v8}, Landroid/provider/Settings$System;->getInt(Landroid/content/ContentResolver;Ljava/lang/String;I)I
 
@@ -637,7 +586,6 @@
 
     move v2, v7
 
-    .line 1965
     :cond_1
     :goto_2
     iget-object v6, p0, Lcom/samsung/android/writingbuddy/WritingBuddyImpl;->mParentView:Landroid/view/View;
@@ -650,7 +598,6 @@
 
     move-result-object v0
 
-    .line 1967
     .local v0, "context":Landroid/content/Context;
     :goto_3
     invoke-direct {p0}, Lcom/samsung/android/writingbuddy/WritingBuddyImpl;->getWindowMode()I
@@ -659,22 +606,18 @@
 
     iput v6, p0, Lcom/samsung/android/writingbuddy/WritingBuddyImpl;->mWindowMode:I
 
-    .line 1968
     if-eqz v0, :cond_2
 
-    .line 1969
     invoke-virtual {v0}, Landroid/content/Context;->getAppMultiWindowStyle()Lcom/samsung/android/multiwindow/MultiWindowStyle;
 
     move-result-object v6
 
     iput-object v6, p0, Lcom/samsung/android/writingbuddy/WritingBuddyImpl;->mMultiWindowStyle:Lcom/samsung/android/multiwindow/MultiWindowStyle;
 
-    .line 1970
     instance-of v6, v0, Landroid/app/Activity;
 
     if-eqz v6, :cond_9
 
-    .line 1971
     if-eqz v2, :cond_2
 
     iget v6, p0, Lcom/samsung/android/writingbuddy/WritingBuddyImpl;->mWindowMode:I
@@ -697,22 +640,18 @@
 
     if-eqz v6, :cond_2
 
-    .line 1974
     const/4 v2, 0x0
 
-    .line 1985
     :cond_2
     :goto_4
     if-eqz v2, :cond_3
 
-    .line 1986
     iget-object v6, p0, Lcom/samsung/android/writingbuddy/WritingBuddyImpl;->mParentView:Landroid/view/View;
 
     invoke-virtual {v6}, Landroid/view/View;->getParent()Landroid/view/ViewParent;
 
     move-result-object v1
 
-    .line 1987
     .local v1, "p":Landroid/view/ViewParent;
     :goto_5
     if-eqz v1, :cond_3
@@ -723,7 +662,6 @@
 
     move-object v6, v1
 
-    .line 1988
     check-cast v6, Landroid/view/ViewGroup;
 
     invoke-virtual {v6}, Landroid/view/ViewGroup;->isWritingBuddyEnabled()Z
@@ -732,15 +670,12 @@
 
     if-eqz v6, :cond_a
 
-    .line 1989
     const/4 v2, 0x0
 
-    .line 1996
     .end local v1    # "p":Landroid/view/ViewParent;
     :cond_3
     if-eqz v2, :cond_5
 
-    .line 1997
     iget-object v6, p0, Lcom/samsung/android/writingbuddy/WritingBuddyImpl;->mAnchorView:Landroid/view/View;
 
     if-eqz v6, :cond_b
@@ -752,7 +687,6 @@
 
     move-result-object v5
 
-    .line 1998
     .local v5, "visibleRect":Landroid/graphics/Rect;
     iget-object v6, p0, Lcom/samsung/android/writingbuddy/WritingBuddyImpl;->mAnchorView:Landroid/view/View;
 
@@ -765,7 +699,6 @@
 
     move-result-object v4
 
-    .line 2001
     .local v4, "viewRect":Landroid/graphics/Rect;
     iget v6, v5, Landroid/graphics/Rect;->top:I
 
@@ -773,10 +706,8 @@
 
     if-eq v6, v7, :cond_5
 
-    .line 2002
     const/4 v2, 0x0
 
-    .line 2004
     sget-boolean v6, Lcom/samsung/android/writingbuddy/WritingBuddyImpl;->DEBUG:Z
 
     if-eqz v6, :cond_4
@@ -821,7 +752,6 @@
 
     invoke-static {v6, v7}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 2006
     :cond_4
     iget-object v6, p0, Lcom/samsung/android/writingbuddy/WritingBuddyImpl;->mPopupCue:Lcom/samsung/android/writingbuddy/PopupCue;
 
@@ -835,21 +765,17 @@
 
     if-eqz v6, :cond_5
 
-    .line 2007
     iget-object v6, p0, Lcom/samsung/android/writingbuddy/WritingBuddyImpl;->mPopupCue:Lcom/samsung/android/writingbuddy/PopupCue;
 
     invoke-virtual {v6, v8}, Lcom/samsung/android/writingbuddy/PopupCue;->dismiss(Z)V
 
-    .line 2008
     iput-object v9, p0, Lcom/samsung/android/writingbuddy/WritingBuddyImpl;->mPopupCue:Lcom/samsung/android/writingbuddy/PopupCue;
 
-    .line 2013
     .end local v4    # "viewRect":Landroid/graphics/Rect;
     .end local v5    # "visibleRect":Landroid/graphics/Rect;
     :cond_5
     iput-boolean v2, p0, Lcom/samsung/android/writingbuddy/WritingBuddyImpl;->mCanStartWritingBuddy:Z
 
-    .line 2015
     const-string v6, "WritingBuddyImpl"
 
     new-instance v7, Ljava/lang/StringBuilder;
@@ -874,7 +800,6 @@
 
     move v3, v2
 
-    .line 2016
     .restart local v3    # "result":I
     goto/16 :goto_0
 
@@ -883,29 +808,24 @@
     :cond_6
     move v2, v8
 
-    .line 1956
     goto/16 :goto_1
 
     :cond_7
     move v2, v8
 
-    .line 1960
     goto/16 :goto_2
 
     :cond_8
     move-object v0, v9
 
-    .line 1965
     goto/16 :goto_3
 
-    .line 1976
     .restart local v0    # "context":Landroid/content/Context;
     :cond_9
     instance-of v6, v0, Landroid/content/ContextWrapper;
 
     if-eqz v6, :cond_2
 
-    .line 1977
     iget-object v6, p0, Lcom/samsung/android/writingbuddy/WritingBuddyImpl;->mMultiWindowStyle:Lcom/samsung/android/multiwindow/MultiWindowStyle;
 
     if-eqz v6, :cond_2
@@ -930,12 +850,10 @@
 
     if-ne v6, v7, :cond_2
 
-    .line 1979
     const/4 v2, 0x0
 
     goto/16 :goto_4
 
-    .line 1992
     .restart local v1    # "p":Landroid/view/ViewParent;
     :cond_a
     invoke-interface {v1}, Landroid/view/ViewParent;->getParent()Landroid/view/ViewParent;
@@ -944,14 +862,12 @@
 
     goto/16 :goto_5
 
-    .line 1997
     .end local v1    # "p":Landroid/view/ViewParent;
     :cond_b
     iget-object v6, p0, Lcom/samsung/android/writingbuddy/WritingBuddyImpl;->mParentView:Landroid/view/View;
 
     goto/16 :goto_6
 
-    .line 1998
     .restart local v5    # "visibleRect":Landroid/graphics/Rect;
     :cond_c
     iget-object v6, p0, Lcom/samsung/android/writingbuddy/WritingBuddyImpl;->mParentView:Landroid/view/View;
@@ -964,22 +880,18 @@
     .param p1, "refresh"    # Z
 
     .prologue
-    .line 1846
     iget-boolean v5, p0, Lcom/samsung/android/writingbuddy/WritingBuddyImpl;->mCanStartWritingBuddy:Z
 
-    .line 1848
     .local v5, "result":Z
     if-nez p1, :cond_0
 
     move v6, v5
 
-    .line 1944
     .end local v5    # "result":Z
     .local v6, "result":I
     :goto_0
     return v6
 
-    .line 1853
     .end local v6    # "result":I
     .restart local v5    # "result":Z
     :cond_0
@@ -997,11 +909,9 @@
 
     const/4 v5, 0x1
 
-    .line 1856
     :goto_1
     if-eqz v5, :cond_1
 
-    .line 1857
     iget-object v11, p0, Lcom/samsung/android/writingbuddy/WritingBuddyImpl;->mParentView:Landroid/view/View;
 
     invoke-virtual {v11}, Landroid/view/View;->getContext()Landroid/content/Context;
@@ -1012,7 +922,7 @@
 
     move-result-object v11
 
-    const-string/jumbo v12, "pen_writing_buddy"
+    const-string v12, "pen_writing_buddy"
 
     const/4 v13, 0x0
 
@@ -1026,7 +936,6 @@
 
     const/4 v5, 0x1
 
-    .line 1862
     :cond_1
     :goto_2
     if-eqz v5, :cond_3
@@ -1053,11 +962,9 @@
 
     if-nez v11, :cond_3
 
-    .line 1863
     :cond_2
     const/4 v5, 0x0
 
-    .line 1867
     :cond_3
     iget-object v11, p0, Lcom/samsung/android/writingbuddy/WritingBuddyImpl;->mParentView:Landroid/view/View;
 
@@ -1069,7 +976,6 @@
 
     move-result-object v0
 
-    .line 1869
     .local v0, "context":Landroid/content/Context;
     :goto_3
     invoke-direct {p0}, Lcom/samsung/android/writingbuddy/WritingBuddyImpl;->getWindowMode()I
@@ -1078,22 +984,18 @@
 
     iput v11, p0, Lcom/samsung/android/writingbuddy/WritingBuddyImpl;->mWindowMode:I
 
-    .line 1870
     if-eqz v0, :cond_4
 
-    .line 1871
     invoke-virtual {v0}, Landroid/content/Context;->getAppMultiWindowStyle()Lcom/samsung/android/multiwindow/MultiWindowStyle;
 
     move-result-object v11
 
     iput-object v11, p0, Lcom/samsung/android/writingbuddy/WritingBuddyImpl;->mMultiWindowStyle:Lcom/samsung/android/multiwindow/MultiWindowStyle;
 
-    .line 1872
     instance-of v11, v0, Landroid/app/Activity;
 
     if-eqz v11, :cond_d
 
-    .line 1873
     if-eqz v5, :cond_4
 
     iget v11, p0, Lcom/samsung/android/writingbuddy/WritingBuddyImpl;->mWindowMode:I
@@ -1116,22 +1018,18 @@
 
     if-eqz v11, :cond_4
 
-    .line 1876
     const/4 v5, 0x0
 
-    .line 1887
     :cond_4
     :goto_4
     if-eqz v5, :cond_5
 
-    .line 1888
     iget-object v11, p0, Lcom/samsung/android/writingbuddy/WritingBuddyImpl;->mParentView:Landroid/view/View;
 
     invoke-virtual {v11}, Landroid/view/View;->getParent()Landroid/view/ViewParent;
 
     move-result-object v3
 
-    .line 1889
     .local v3, "p":Landroid/view/ViewParent;
     :goto_5
     if-eqz v3, :cond_5
@@ -1142,7 +1040,6 @@
 
     move-object v11, v3
 
-    .line 1890
     check-cast v11, Landroid/view/ViewGroup;
 
     invoke-virtual {v11}, Landroid/view/ViewGroup;->isWritingBuddyEnabled()Z
@@ -1151,10 +1048,8 @@
 
     if-eqz v11, :cond_e
 
-    .line 1891
     const/4 v5, 0x0
 
-    .line 1899
     .end local v3    # "p":Landroid/view/ViewParent;
     :cond_5
     if-eqz v5, :cond_9
@@ -1165,33 +1060,27 @@
 
     if-eqz v11, :cond_9
 
-    .line 1900
     new-instance v2, Landroid/view/inputmethod/EditorInfo;
 
     invoke-direct {v2}, Landroid/view/inputmethod/EditorInfo;-><init>()V
 
-    .line 1901
     .local v2, "ei":Landroid/view/inputmethod/EditorInfo;
     iget-object v4, p0, Lcom/samsung/android/writingbuddy/WritingBuddyImpl;->mParentView:Landroid/view/View;
 
     check-cast v4, Landroid/widget/EditText;
 
-    .line 1902
     .local v4, "parent":Landroid/widget/EditText;
     invoke-virtual {v4, v2}, Landroid/widget/EditText;->extractEditorInfo(Landroid/view/inputmethod/EditorInfo;)V
 
-    .line 1905
     iget v11, v2, Landroid/view/inputmethod/EditorInfo;->inputType:I
 
     and-int/lit8 v1, v11, 0xf
 
-    .line 1906
     .local v1, "editorClass":I
     iget v11, v2, Landroid/view/inputmethod/EditorInfo;->inputType:I
 
     and-int/lit16 v7, v11, 0xff0
 
-    .line 1908
     .local v7, "variation":I
     const/16 v11, 0x80
 
@@ -1213,11 +1102,9 @@
 
     if-ne v7, v11, :cond_7
 
-    .line 1912
     :cond_6
     const/4 v5, 0x0
 
-    .line 1916
     :cond_7
     if-eqz v5, :cond_8
 
@@ -1237,10 +1124,8 @@
 
     if-eqz v11, :cond_8
 
-    .line 1918
     const/4 v5, 0x0
 
-    .line 1922
     :cond_8
     iget v11, v2, Landroid/view/inputmethod/EditorInfo;->inputType:I
 
@@ -1265,7 +1150,6 @@
     :goto_6
     iput-boolean v11, p0, Lcom/samsung/android/writingbuddy/WritingBuddyImpl;->mIsMultiLineEditor:Z
 
-    .line 1926
     if-eqz v5, :cond_9
 
     iget-boolean v11, p0, Lcom/samsung/android/writingbuddy/WritingBuddyImpl;->mIsMultiLineEditor:Z
@@ -1280,7 +1164,6 @@
 
     if-nez v11, :cond_9
 
-    .line 1927
     iget-object v11, p0, Lcom/samsung/android/writingbuddy/WritingBuddyImpl;->mAnchorView:Landroid/view/View;
 
     if-eqz v11, :cond_10
@@ -1294,7 +1177,6 @@
 
     move-result-object v10
 
-    .line 1928
     .local v10, "visibleRect":Landroid/graphics/Rect;
     iget-object v11, p0, Lcom/samsung/android/writingbuddy/WritingBuddyImpl;->mAnchorView:Landroid/view/View;
 
@@ -1307,7 +1189,6 @@
 
     move-result-object v8
 
-    .line 1931
     .local v8, "viewRect":Landroid/graphics/Rect;
     invoke-virtual {v10}, Landroid/graphics/Rect;->height()I
 
@@ -1323,7 +1204,6 @@
 
     div-float v9, v11, v12
 
-    .line 1933
     .local v9, "visibleRatio":F
     const v11, 0x3e4ccccd    # 0.2f
 
@@ -1331,10 +1211,8 @@
 
     if-gez v11, :cond_9
 
-    .line 1934
     const/4 v5, 0x0
 
-    .line 1936
     const-string v11, "WritingBuddyImpl"
 
     new-instance v12, Ljava/lang/StringBuilder;
@@ -1357,7 +1235,6 @@
 
     invoke-static {v11, v12}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1941
     .end local v1    # "editorClass":I
     .end local v2    # "ei":Landroid/view/inputmethod/EditorInfo;
     .end local v4    # "parent":Landroid/widget/EditText;
@@ -1368,7 +1245,6 @@
     :cond_9
     iput-boolean v5, p0, Lcom/samsung/android/writingbuddy/WritingBuddyImpl;->mCanStartWritingBuddy:Z
 
-    .line 1943
     const-string v11, "WritingBuddyImpl"
 
     new-instance v12, Ljava/lang/StringBuilder;
@@ -1393,11 +1269,9 @@
 
     move v6, v5
 
-    .line 1944
     .restart local v6    # "result":I
     goto/16 :goto_0
 
-    .line 1853
     .end local v0    # "context":Landroid/content/Context;
     .end local v6    # "result":I
     :cond_a
@@ -1405,26 +1279,22 @@
 
     goto/16 :goto_1
 
-    .line 1857
     :cond_b
     const/4 v5, 0x0
 
     goto/16 :goto_2
 
-    .line 1867
     :cond_c
     const/4 v0, 0x0
 
     goto/16 :goto_3
 
-    .line 1878
     .restart local v0    # "context":Landroid/content/Context;
     :cond_d
     instance-of v11, v0, Landroid/content/ContextWrapper;
 
     if-eqz v11, :cond_4
 
-    .line 1879
     iget-object v11, p0, Lcom/samsung/android/writingbuddy/WritingBuddyImpl;->mMultiWindowStyle:Lcom/samsung/android/multiwindow/MultiWindowStyle;
 
     if-eqz v11, :cond_4
@@ -1451,12 +1321,10 @@
 
     if-ne v11, v12, :cond_4
 
-    .line 1881
     const/4 v5, 0x0
 
     goto/16 :goto_4
 
-    .line 1894
     .restart local v3    # "p":Landroid/view/ViewParent;
     :cond_e
     invoke-interface {v3}, Landroid/view/ViewParent;->getParent()Landroid/view/ViewParent;
@@ -1465,7 +1333,6 @@
 
     goto/16 :goto_5
 
-    .line 1922
     .end local v3    # "p":Landroid/view/ViewParent;
     .restart local v1    # "editorClass":I
     .restart local v2    # "ei":Landroid/view/inputmethod/EditorInfo;
@@ -1476,13 +1343,11 @@
 
     goto/16 :goto_6
 
-    .line 1927
     :cond_10
     iget-object v11, p0, Lcom/samsung/android/writingbuddy/WritingBuddyImpl;->mParentView:Landroid/view/View;
 
     goto/16 :goto_7
 
-    .line 1928
     .restart local v10    # "visibleRect":Landroid/graphics/Rect;
     :cond_11
     iget-object v11, p0, Lcom/samsung/android/writingbuddy/WritingBuddyImpl;->mParentView:Landroid/view/View;
@@ -1495,13 +1360,11 @@
     .param p1, "immediate"    # Z
 
     .prologue
-    .line 1834
     :try_start_0
     iget-object v1, p0, Lcom/samsung/android/writingbuddy/WritingBuddyImpl;->mWBManager:Lcom/samsung/android/writingbuddy/IWritingBuddyManager;
 
     if-eqz v1, :cond_0
 
-    .line 1835
     iget-object v1, p0, Lcom/samsung/android/writingbuddy/WritingBuddyImpl;->mWBManager:Lcom/samsung/android/writingbuddy/IWritingBuddyManager;
 
     iget v2, p0, Lcom/samsung/android/writingbuddy/WritingBuddyImpl;->mViewID:I
@@ -1510,18 +1373,15 @@
     :try_end_0
     .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 1841
     :cond_0
     :goto_0
     const/4 v1, 0x0
 
     return v1
 
-    .line 1837
     :catch_0
     move-exception v0
 
-    .line 1838
     .local v0, "e":Landroid/os/RemoteException;
     const-string v1, "WritingBuddyImpl"
 
@@ -1538,14 +1398,11 @@
     .param p2, "displayMetrics"    # Landroid/util/DisplayMetrics;
 
     .prologue
-    .line 2585
     move-object v0, p2
 
-    .line 2586
     .local v0, "dm":Landroid/util/DisplayMetrics;
     if-nez v0, :cond_0
 
-    .line 2587
     iget-object v1, p0, Lcom/samsung/android/writingbuddy/WritingBuddyImpl;->mParentView:Landroid/view/View;
 
     invoke-virtual {v1}, Landroid/view/View;->getContext()Landroid/content/Context;
@@ -1560,7 +1417,6 @@
 
     move-result-object v0
 
-    .line 2589
     :cond_0
     const/4 v1, 0x1
 
@@ -1581,16 +1437,13 @@
     .locals 2
 
     .prologue
-    .line 1463
     iget-object v0, p0, Lcom/samsung/android/writingbuddy/WritingBuddyImpl;->mPopupCue:Lcom/samsung/android/writingbuddy/PopupCue;
 
     if-eqz v0, :cond_0
 
-    .line 1548
     :goto_0
     return-void
 
-    .line 1468
     :cond_0
     new-instance v0, Lcom/samsung/android/writingbuddy/PopupCue;
 
@@ -1600,7 +1453,6 @@
 
     iput-object v0, p0, Lcom/samsung/android/writingbuddy/WritingBuddyImpl;->mPopupCue:Lcom/samsung/android/writingbuddy/PopupCue;
 
-    .line 1471
     iget-object v0, p0, Lcom/samsung/android/writingbuddy/WritingBuddyImpl;->mPopupCue:Lcom/samsung/android/writingbuddy/PopupCue;
 
     new-instance v1, Lcom/samsung/android/writingbuddy/WritingBuddyImpl$3;
@@ -1609,7 +1461,6 @@
 
     invoke-virtual {v0, v1}, Lcom/samsung/android/writingbuddy/PopupCue;->setOnTouchListener(Landroid/view/View$OnTouchListener;)V
 
-    .line 1514
     iget-object v0, p0, Lcom/samsung/android/writingbuddy/WritingBuddyImpl;->mPopupCue:Lcom/samsung/android/writingbuddy/PopupCue;
 
     new-instance v1, Lcom/samsung/android/writingbuddy/WritingBuddyImpl$4;
@@ -1626,41 +1477,34 @@
     .param p1, "animation"    # Z
 
     .prologue
-    .line 2034
     const-string v1, "WritingBuddyImpl"
 
     const-string v2, "dismissPopupCue()"
 
     invoke-static {v1, v2}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 2037
     const/4 v0, 0x0
 
-    .line 2040
     .local v0, "ret":Z
     iget-object v1, p0, Lcom/samsung/android/writingbuddy/WritingBuddyImpl;->mHandler:Landroid/os/Handler;
 
     if-eqz v1, :cond_0
 
-    .line 2041
     iget-object v1, p0, Lcom/samsung/android/writingbuddy/WritingBuddyImpl;->mHandler:Landroid/os/Handler;
 
     const/4 v2, 0x6
 
     invoke-virtual {v1, v2}, Landroid/os/Handler;->removeMessages(I)V
 
-    .line 2042
     const/4 v1, 0x0
 
     iput-boolean v1, p0, Lcom/samsung/android/writingbuddy/WritingBuddyImpl;->mIsPopupCueShowMSGCalled:Z
 
-    .line 2046
     :cond_0
     iget-object v1, p0, Lcom/samsung/android/writingbuddy/WritingBuddyImpl;->mPopupCue:Lcom/samsung/android/writingbuddy/PopupCue;
 
     if-eqz v1, :cond_2
 
-    .line 2047
     iget-object v1, p0, Lcom/samsung/android/writingbuddy/WritingBuddyImpl;->mPopupCue:Lcom/samsung/android/writingbuddy/PopupCue;
 
     invoke-virtual {v1}, Lcom/samsung/android/writingbuddy/PopupCue;->isShowing()Z
@@ -1669,16 +1513,13 @@
 
     if-eqz v1, :cond_1
 
-    .line 2048
     const/4 v0, 0x1
 
-    .line 2051
     :cond_1
     iget-object v1, p0, Lcom/samsung/android/writingbuddy/WritingBuddyImpl;->mPopupCue:Lcom/samsung/android/writingbuddy/PopupCue;
 
     invoke-virtual {v1, p1}, Lcom/samsung/android/writingbuddy/PopupCue;->dismiss(Z)V
 
-    .line 2054
     :cond_2
     return v0
 .end method
@@ -1687,12 +1528,10 @@
     .locals 2
 
     .prologue
-    .line 2570
     iget-object v0, p0, Lcom/samsung/android/writingbuddy/WritingBuddyImpl;->mHandler:Landroid/os/Handler;
 
     if-nez v0, :cond_0
 
-    .line 2571
     invoke-static {}, Landroid/os/Looper;->myLooper()Landroid/os/Looper;
 
     move-result-object v0
@@ -1703,21 +1542,18 @@
 
     if-ne v0, v1, :cond_1
 
-    .line 2572
     new-instance v0, Lcom/samsung/android/writingbuddy/WritingBuddyImpl$WBHandler;
 
     invoke-direct {v0, p0}, Lcom/samsung/android/writingbuddy/WritingBuddyImpl$WBHandler;-><init>(Lcom/samsung/android/writingbuddy/WritingBuddyImpl;)V
 
     iput-object v0, p0, Lcom/samsung/android/writingbuddy/WritingBuddyImpl;->mHandler:Landroid/os/Handler;
 
-    .line 2579
     :cond_0
     :goto_0
     iget-object v0, p0, Lcom/samsung/android/writingbuddy/WritingBuddyImpl;->mHandler:Landroid/os/Handler;
 
     return-object v0
 
-    .line 2574
     :cond_1
     const-string v0, "WritingBuddyImpl"
 
@@ -1725,7 +1561,6 @@
 
     invoke-static {v0, v1}, Landroid/util/Slog;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 2575
     new-instance v0, Lcom/samsung/android/writingbuddy/WritingBuddyImpl$WBHandler;
 
     invoke-direct {v0, p0}, Lcom/samsung/android/writingbuddy/WritingBuddyImpl$WBHandler;-><init>(Lcom/samsung/android/writingbuddy/WritingBuddyImpl;)V
@@ -1741,37 +1576,29 @@
     .prologue
     const/4 v6, 0x0
 
-    .line 730
     const/4 v1, 0x0
 
-    .line 732
     .local v1, "flag":I
     iget-boolean v4, p0, Lcom/samsung/android/writingbuddy/WritingBuddyImpl;->mIsImageWritingEnabled:Z
 
     if-eqz v4, :cond_0
 
-    .line 733
     or-int/lit8 v1, v1, 0x1
 
-    .line 736
     :cond_0
     iget-boolean v4, p0, Lcom/samsung/android/writingbuddy/WritingBuddyImpl;->mIsMathWritingEnabled:Z
 
     if-eqz v4, :cond_1
 
-    .line 737
     or-int/lit8 v1, v1, 0x2
 
-    .line 740
     :cond_1
     iget-boolean v4, p0, Lcom/samsung/android/writingbuddy/WritingBuddyImpl;->mIsHelpModeEnabled:Z
 
     if-eqz v4, :cond_2
 
-    .line 741
     or-int/lit8 v1, v1, 0x4
 
-    .line 744
     :cond_2
     iget-object v4, p0, Lcom/samsung/android/writingbuddy/WritingBuddyImpl;->mParentView:Landroid/view/View;
 
@@ -1779,12 +1606,10 @@
 
     if-eqz v4, :cond_4
 
-    .line 745
     new-instance v0, Landroid/os/Bundle;
 
     invoke-direct {v0}, Landroid/os/Bundle;-><init>()V
 
-    .line 746
     .local v0, "b":Landroid/os/Bundle;
     iget-object v4, p0, Lcom/samsung/android/writingbuddy/WritingBuddyImpl;->mParentView:Landroid/view/View;
 
@@ -1796,21 +1621,17 @@
 
     move-result-object v0
 
-    .line 747
     const-string v4, "isMmsMode"
 
     invoke-virtual {v0, v4, v6}, Landroid/os/Bundle;->getBoolean(Ljava/lang/String;Z)Z
 
     move-result v2
 
-    .line 748
     .local v2, "isMmsMode":Z
     if-eqz v2, :cond_5
 
-    .line 749
     or-int/lit8 v1, v1, 0x8
 
-    .line 756
     :cond_3
     :goto_0
     const-string v4, "isStartDrawingMode"
@@ -1819,19 +1640,15 @@
 
     move-result v3
 
-    .line 757
     .local v3, "isStartDrawingMode":Z
     if-eqz v3, :cond_6
 
-    .line 758
     or-int/lit8 v1, v1, 0x10
 
-    .line 759
     const-string v4, "isStartDrawingMode"
 
     invoke-virtual {v0, v4, v6}, Landroid/os/Bundle;->putBoolean(Ljava/lang/String;Z)V
 
-    .line 767
     .end local v0    # "b":Landroid/os/Bundle;
     .end local v2    # "isMmsMode":Z
     .end local v3    # "isStartDrawingMode":Z
@@ -1839,7 +1656,6 @@
     :goto_1
     return v1
 
-    .line 751
     .restart local v0    # "b":Landroid/os/Bundle;
     .restart local v2    # "isMmsMode":Z
     :cond_5
@@ -1849,12 +1665,10 @@
 
     if-ne v4, v5, :cond_3
 
-    .line 752
     xor-int/lit8 v1, v1, 0x8
 
     goto :goto_0
 
-    .line 761
     .restart local v3    # "isStartDrawingMode":Z
     :cond_6
     and-int/lit8 v4, v1, 0x10
@@ -1863,7 +1677,6 @@
 
     if-ne v4, v5, :cond_4
 
-    .line 762
     xor-int/lit8 v1, v1, 0x10
 
     goto :goto_1
@@ -1878,27 +1691,22 @@
 
     const/4 v4, 0x0
 
-    .line 2613
     new-instance v1, Landroid/graphics/Rect;
 
     invoke-direct {v1, v4, v4, v4, v4}, Landroid/graphics/Rect;-><init>(IIII)V
 
-    .line 2615
     .local v1, "r":Landroid/graphics/Rect;
     if-eqz p1, :cond_0
 
-    .line 2616
     const/4 v2, 0x2
 
     new-array v0, v2, [I
 
     fill-array-data v0, :array_0
 
-    .line 2617
     .local v0, "locInWindow":[I
     invoke-virtual {p1, v0}, Landroid/view/View;->getLocationInWindow([I)V
 
-    .line 2618
     aget v2, v0, v4
 
     aget v3, v0, v6
@@ -1921,12 +1729,10 @@
 
     invoke-virtual {v1, v2, v3, v4, v5}, Landroid/graphics/Rect;->set(IIII)V
 
-    .line 2620
     .end local v0    # "locInWindow":[I
     :cond_0
     return-object v1
 
-    .line 2616
     :array_0
     .array-data 4
         0x0
@@ -1943,27 +1749,22 @@
 
     const/4 v4, 0x0
 
-    .line 2602
     new-instance v1, Landroid/graphics/Rect;
 
     invoke-direct {v1, v4, v4, v4, v4}, Landroid/graphics/Rect;-><init>(IIII)V
 
-    .line 2604
     .local v1, "r":Landroid/graphics/Rect;
     if-eqz p1, :cond_0
 
-    .line 2605
     const/4 v2, 0x2
 
     new-array v0, v2, [I
 
     fill-array-data v0, :array_0
 
-    .line 2606
     .local v0, "locOnScr":[I
     invoke-virtual {p1, v0}, Landroid/view/View;->getLocationOnScreen([I)V
 
-    .line 2607
     aget v2, v0, v4
 
     aget v3, v0, v6
@@ -1986,12 +1787,10 @@
 
     invoke-virtual {v1, v2, v3, v4, v5}, Landroid/graphics/Rect;->set(IIII)V
 
-    .line 2609
     .end local v0    # "locOnScr":[I
     :cond_0
     return-object v1
 
-    .line 2605
     :array_0
     .array-data 4
         0x0
@@ -2005,7 +1804,6 @@
     .param p2, "type"    # I
 
     .prologue
-    .line 1014
     iget-object v0, p0, Lcom/samsung/android/writingbuddy/WritingBuddyImpl;->mWBRect:Landroid/graphics/Rect;
 
     return-object v0
@@ -2017,7 +1815,6 @@
     .param p2, "chechkWidth"    # Z
 
     .prologue
-    .line 2625
     move-object/from16 v0, p0
 
     iget-object v15, v0, Lcom/samsung/android/writingbuddy/WritingBuddyImpl;->mParentView:Landroid/view/View;
@@ -2036,39 +1833,31 @@
 
     iget v12, v15, Landroid/util/DisplayMetrics;->widthPixels:I
 
-    .line 2627
     .local v12, "widthNormalizer":I
     invoke-direct/range {p0 .. p1}, Lcom/samsung/android/writingbuddy/WritingBuddyImpl;->getRectInWindow(Landroid/view/View;)Landroid/graphics/Rect;
 
     move-result-object v6
 
-    .line 2629
     .local v6, "r":Landroid/graphics/Rect;
     move-object/from16 v10, p1
 
-    .line 2630
     .local v10, "v":Landroid/view/View;
     invoke-virtual/range {p1 .. p1}, Landroid/view/View;->getParent()Landroid/view/ViewParent;
 
     move-result-object v11
 
-    .line 2632
     .local v11, "vp":Landroid/view/ViewParent;
     const/4 v9, 0x0
 
-    .line 2633
     .local v9, "top":I
     const/4 v1, 0x0
 
-    .line 2634
     .local v1, "bottomDiff":I
     const/4 v3, 0x0
 
-    .line 2635
     .local v3, "left":I
     const/4 v7, 0x0
 
-    .line 2637
     .local v7, "rightDiff":I
     :goto_0
     instance-of v15, v11, Landroid/view/View;
@@ -2077,10 +1866,8 @@
 
     move-object v4, v11
 
-    .line 2638
     check-cast v4, Landroid/view/View;
 
-    .line 2641
     .local v4, "parent":Landroid/view/View;
     invoke-virtual {v10}, Landroid/view/View;->getY()F
 
@@ -2088,17 +1875,13 @@
 
     float-to-int v14, v15
 
-    .line 2642
     .local v14, "y":I
     add-int/2addr v9, v14
 
-    .line 2644
     if-gez v14, :cond_0
 
-    .line 2645
     if-gez v9, :cond_0
 
-    .line 2646
     iget v15, v6, Landroid/graphics/Rect;->top:I
 
     invoke-static {v9}, Ljava/lang/Math;->abs(I)I
@@ -2109,10 +1892,8 @@
 
     iput v15, v6, Landroid/graphics/Rect;->top:I
 
-    .line 2647
     const/4 v9, 0x0
 
-    .line 2651
     :cond_0
     invoke-virtual {v4}, Landroid/view/View;->getScrollY()I
 
@@ -2120,14 +1901,12 @@
 
     if-lez v15, :cond_1
 
-    .line 2652
     invoke-virtual {v4}, Landroid/view/View;->getScrollY()I
 
     move-result v15
 
     if-le v15, v9, :cond_5
 
-    .line 2653
     iget v15, v6, Landroid/graphics/Rect;->top:I
 
     invoke-virtual {v4}, Landroid/view/View;->getScrollY()I
@@ -2140,10 +1919,8 @@
 
     iput v15, v6, Landroid/graphics/Rect;->top:I
 
-    .line 2654
     const/4 v9, 0x0
 
-    .line 2667
     :cond_1
     :goto_1
     invoke-virtual {v10}, Landroid/view/View;->getY()F
@@ -2164,7 +1941,6 @@
 
     sub-int v2, v15, v16
 
-    .line 2668
     .local v2, "bottomPosY":I
     add-int v15, v2, v1
 
@@ -2176,7 +1952,6 @@
 
     if-ge v15, v0, :cond_6
 
-    .line 2669
     invoke-virtual {v4}, Landroid/view/View;->getHeight()I
 
     move-result v15
@@ -2187,31 +1962,24 @@
 
     neg-int v1, v15
 
-    .line 2675
     :goto_2
     if-eqz p2, :cond_4
 
-    .line 2677
     invoke-virtual {v10}, Landroid/view/View;->getX()F
 
     move-result v15
 
     float-to-int v13, v15
 
-    .line 2678
     .local v13, "x":I
     rem-int/2addr v13, v12
 
-    .line 2679
     add-int/2addr v3, v13
 
-    .line 2681
     if-gez v13, :cond_2
 
-    .line 2682
     if-gez v3, :cond_2
 
-    .line 2683
     iget v15, v6, Landroid/graphics/Rect;->left:I
 
     invoke-static {v3}, Ljava/lang/Math;->abs(I)I
@@ -2222,26 +1990,20 @@
 
     iput v15, v6, Landroid/graphics/Rect;->left:I
 
-    .line 2684
     const/4 v3, 0x0
 
-    .line 2688
     :cond_2
     invoke-virtual {v4}, Landroid/view/View;->getScrollX()I
 
     move-result v5
 
-    .line 2689
     .local v5, "parentScrollX":I
     rem-int/2addr v5, v12
 
-    .line 2690
     if-lez v5, :cond_3
 
-    .line 2691
     if-le v5, v3, :cond_7
 
-    .line 2692
     iget v15, v6, Landroid/graphics/Rect;->left:I
 
     sub-int v16, v5, v3
@@ -2250,10 +2012,8 @@
 
     iput v15, v6, Landroid/graphics/Rect;->left:I
 
-    .line 2693
     const/4 v3, 0x0
 
-    .line 2700
     :cond_3
     :goto_3
     invoke-virtual {v10}, Landroid/view/View;->getWidth()I
@@ -2264,7 +2024,6 @@
 
     sub-int v8, v15, v5
 
-    .line 2701
     .local v8, "rightPosX":I
     add-int v15, v8, v7
 
@@ -2276,7 +2035,6 @@
 
     if-ge v15, v0, :cond_8
 
-    .line 2702
     invoke-virtual {v4}, Landroid/view/View;->getWidth()I
 
     move-result v15
@@ -2287,7 +2045,6 @@
 
     neg-int v7, v15
 
-    .line 2709
     .end local v5    # "parentScrollX":I
     .end local v8    # "rightPosX":I
     .end local v13    # "x":I
@@ -2295,15 +2052,12 @@
     :goto_4
     move-object v10, v4
 
-    .line 2710
     invoke-virtual {v4}, Landroid/view/View;->getParent()Landroid/view/ViewParent;
 
     move-result-object v11
 
-    .line 2711
     goto/16 :goto_0
 
-    .line 2656
     .end local v2    # "bottomPosY":I
     :cond_5
     invoke-virtual {v4}, Landroid/view/View;->getScrollY()I
@@ -2314,7 +2068,6 @@
 
     goto :goto_1
 
-    .line 2671
     .restart local v2    # "bottomPosY":I
     :cond_6
     iget v15, v6, Landroid/graphics/Rect;->bottom:I
@@ -2331,12 +2084,10 @@
 
     iput v15, v6, Landroid/graphics/Rect;->bottom:I
 
-    .line 2672
     const/4 v1, 0x0
 
     goto :goto_2
 
-    .line 2695
     .restart local v5    # "parentScrollX":I
     .restart local v13    # "x":I
     :cond_7
@@ -2344,7 +2095,6 @@
 
     goto :goto_3
 
-    .line 2704
     .restart local v8    # "rightPosX":I
     :cond_8
     iget v15, v6, Landroid/graphics/Rect;->right:I
@@ -2361,12 +2111,10 @@
 
     iput v15, v6, Landroid/graphics/Rect;->right:I
 
-    .line 2705
     const/4 v7, 0x0
 
     goto :goto_4
 
-    .line 2713
     .end local v2    # "bottomPosY":I
     .end local v4    # "parent":Landroid/view/View;
     .end local v5    # "parentScrollX":I
@@ -2404,7 +2152,6 @@
 
     invoke-static/range {v15 .. v16}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 2714
     :cond_a
     return-object v6
 .end method
@@ -2415,7 +2162,6 @@
     .param p2, "chechkWidth"    # Z
 
     .prologue
-    .line 2719
     move-object/from16 v0, p0
 
     iget-object v15, v0, Lcom/samsung/android/writingbuddy/WritingBuddyImpl;->mParentView:Landroid/view/View;
@@ -2434,39 +2180,31 @@
 
     iget v12, v15, Landroid/util/DisplayMetrics;->widthPixels:I
 
-    .line 2721
     .local v12, "widthNormalizer":I
     invoke-direct/range {p0 .. p1}, Lcom/samsung/android/writingbuddy/WritingBuddyImpl;->getRectOnScreen(Landroid/view/View;)Landroid/graphics/Rect;
 
     move-result-object v6
 
-    .line 2723
     .local v6, "r":Landroid/graphics/Rect;
     move-object/from16 v10, p1
 
-    .line 2724
     .local v10, "v":Landroid/view/View;
     invoke-virtual/range {p1 .. p1}, Landroid/view/View;->getParent()Landroid/view/ViewParent;
 
     move-result-object v11
 
-    .line 2726
     .local v11, "vp":Landroid/view/ViewParent;
     const/4 v9, 0x0
 
-    .line 2727
     .local v9, "top":I
     const/4 v1, 0x0
 
-    .line 2728
     .local v1, "bottomDiff":I
     const/4 v3, 0x0
 
-    .line 2729
     .local v3, "left":I
     const/4 v7, 0x0
 
-    .line 2731
     .local v7, "rightDiff":I
     :goto_0
     instance-of v15, v11, Landroid/view/View;
@@ -2475,10 +2213,8 @@
 
     move-object v4, v11
 
-    .line 2732
     check-cast v4, Landroid/view/View;
 
-    .line 2735
     .local v4, "parent":Landroid/view/View;
     invoke-virtual {v10}, Landroid/view/View;->getY()F
 
@@ -2486,17 +2222,13 @@
 
     float-to-int v14, v15
 
-    .line 2736
     .local v14, "y":I
     add-int/2addr v9, v14
 
-    .line 2738
     if-gez v14, :cond_0
 
-    .line 2739
     if-gez v9, :cond_0
 
-    .line 2740
     iget v15, v6, Landroid/graphics/Rect;->top:I
 
     invoke-static {v9}, Ljava/lang/Math;->abs(I)I
@@ -2507,10 +2239,8 @@
 
     iput v15, v6, Landroid/graphics/Rect;->top:I
 
-    .line 2741
     const/4 v9, 0x0
 
-    .line 2745
     :cond_0
     invoke-virtual {v4}, Landroid/view/View;->getScrollY()I
 
@@ -2518,14 +2248,12 @@
 
     if-lez v15, :cond_1
 
-    .line 2746
     invoke-virtual {v4}, Landroid/view/View;->getScrollY()I
 
     move-result v15
 
     if-le v15, v9, :cond_5
 
-    .line 2747
     iget v15, v6, Landroid/graphics/Rect;->top:I
 
     invoke-virtual {v4}, Landroid/view/View;->getScrollY()I
@@ -2538,10 +2266,8 @@
 
     iput v15, v6, Landroid/graphics/Rect;->top:I
 
-    .line 2748
     const/4 v9, 0x0
 
-    .line 2761
     :cond_1
     :goto_1
     invoke-virtual {v10}, Landroid/view/View;->getY()F
@@ -2562,7 +2288,6 @@
 
     sub-int v2, v15, v16
 
-    .line 2762
     .local v2, "bottomPosY":I
     add-int v15, v2, v1
 
@@ -2574,7 +2299,6 @@
 
     if-ge v15, v0, :cond_6
 
-    .line 2763
     invoke-virtual {v4}, Landroid/view/View;->getHeight()I
 
     move-result v15
@@ -2585,31 +2309,24 @@
 
     neg-int v1, v15
 
-    .line 2769
     :goto_2
     if-eqz p2, :cond_4
 
-    .line 2771
     invoke-virtual {v10}, Landroid/view/View;->getX()F
 
     move-result v15
 
     float-to-int v13, v15
 
-    .line 2772
     .local v13, "x":I
     rem-int/2addr v13, v12
 
-    .line 2773
     add-int/2addr v3, v13
 
-    .line 2775
     if-gez v13, :cond_2
 
-    .line 2776
     if-gez v3, :cond_2
 
-    .line 2777
     iget v15, v6, Landroid/graphics/Rect;->left:I
 
     invoke-static {v3}, Ljava/lang/Math;->abs(I)I
@@ -2620,26 +2337,20 @@
 
     iput v15, v6, Landroid/graphics/Rect;->left:I
 
-    .line 2778
     const/4 v3, 0x0
 
-    .line 2782
     :cond_2
     invoke-virtual {v4}, Landroid/view/View;->getScrollX()I
 
     move-result v5
 
-    .line 2783
     .local v5, "parentScrollX":I
     rem-int/2addr v5, v12
 
-    .line 2784
     if-lez v5, :cond_3
 
-    .line 2785
     if-le v5, v3, :cond_7
 
-    .line 2786
     iget v15, v6, Landroid/graphics/Rect;->left:I
 
     sub-int v16, v5, v3
@@ -2648,10 +2359,8 @@
 
     iput v15, v6, Landroid/graphics/Rect;->left:I
 
-    .line 2787
     const/4 v3, 0x0
 
-    .line 2794
     :cond_3
     :goto_3
     invoke-virtual {v10}, Landroid/view/View;->getWidth()I
@@ -2662,7 +2371,6 @@
 
     sub-int v8, v15, v5
 
-    .line 2795
     .local v8, "rightPosX":I
     add-int v15, v8, v7
 
@@ -2674,7 +2382,6 @@
 
     if-ge v15, v0, :cond_8
 
-    .line 2796
     invoke-virtual {v4}, Landroid/view/View;->getWidth()I
 
     move-result v15
@@ -2685,7 +2392,6 @@
 
     neg-int v7, v15
 
-    .line 2803
     .end local v5    # "parentScrollX":I
     .end local v8    # "rightPosX":I
     .end local v13    # "x":I
@@ -2693,15 +2399,12 @@
     :goto_4
     move-object v10, v4
 
-    .line 2804
     invoke-virtual {v4}, Landroid/view/View;->getParent()Landroid/view/ViewParent;
 
     move-result-object v11
 
-    .line 2805
     goto/16 :goto_0
 
-    .line 2750
     .end local v2    # "bottomPosY":I
     :cond_5
     invoke-virtual {v4}, Landroid/view/View;->getScrollY()I
@@ -2712,7 +2415,6 @@
 
     goto :goto_1
 
-    .line 2765
     .restart local v2    # "bottomPosY":I
     :cond_6
     iget v15, v6, Landroid/graphics/Rect;->bottom:I
@@ -2729,12 +2431,10 @@
 
     iput v15, v6, Landroid/graphics/Rect;->bottom:I
 
-    .line 2766
     const/4 v1, 0x0
 
     goto :goto_2
 
-    .line 2789
     .restart local v5    # "parentScrollX":I
     .restart local v13    # "x":I
     :cond_7
@@ -2742,7 +2442,6 @@
 
     goto :goto_3
 
-    .line 2798
     .restart local v8    # "rightPosX":I
     :cond_8
     iget v15, v6, Landroid/graphics/Rect;->right:I
@@ -2759,12 +2458,10 @@
 
     iput v15, v6, Landroid/graphics/Rect;->right:I
 
-    .line 2799
     const/4 v7, 0x0
 
     goto :goto_4
 
-    .line 2807
     .end local v2    # "bottomPosY":I
     .end local v4    # "parent":Landroid/view/View;
     .end local v5    # "parentScrollX":I
@@ -2802,7 +2499,6 @@
 
     invoke-static/range {v15 .. v16}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 2808
     :cond_a
     return-object v6
 .end method
@@ -2811,7 +2507,6 @@
     .locals 2
 
     .prologue
-    .line 2553
     iget-object v1, p0, Lcom/samsung/android/writingbuddy/WritingBuddyImpl;->mParentView:Landroid/view/View;
 
     if-eqz v1, :cond_0
@@ -2822,17 +2517,14 @@
 
     move-result-object v0
 
-    .line 2555
     .local v0, "context":Landroid/content/Context;
     :goto_0
     if-eqz v0, :cond_1
 
-    .line 2556
     instance-of v1, v0, Landroid/app/Activity;
 
     if-eqz v1, :cond_1
 
-    .line 2557
     check-cast v0, Landroid/app/Activity;
 
     .end local v0    # "context":Landroid/content/Context;
@@ -2840,17 +2532,14 @@
 
     move-result v1
 
-    .line 2565
     :goto_1
     return v1
 
-    .line 2553
     :cond_0
     const/4 v0, 0x0
 
     goto :goto_0
 
-    .line 2565
     .restart local v0    # "context":Landroid/content/Context;
     :cond_1
     const/high16 v1, 0x1000000
@@ -2865,17 +2554,14 @@
     .prologue
     const/4 v7, 0x0
 
-    .line 2149
     iget v6, p1, Landroid/os/Message;->what:I
 
     packed-switch v6, :pswitch_data_0
 
-    .line 2196
     :goto_0
     :pswitch_0
     return-void
 
-    .line 2151
     :pswitch_1
     iget-object v6, p1, Landroid/os/Message;->obj:Ljava/lang/Object;
 
@@ -2885,44 +2571,36 @@
 
     goto :goto_0
 
-    .line 2155
     :pswitch_2
     iget-object v4, p1, Landroid/os/Message;->obj:Ljava/lang/Object;
 
     check-cast v4, Ljava/lang/CharSequence;
 
-    .line 2156
     .local v4, "text":Ljava/lang/CharSequence;
     iget v5, p1, Landroid/os/Message;->arg1:I
 
-    .line 2157
     .local v5, "where":I
     iget v1, p1, Landroid/os/Message;->arg2:I
 
-    .line 2158
     .local v1, "nextCursor":I
     invoke-virtual {p0, v5, v4, v1}, Lcom/samsung/android/writingbuddy/WritingBuddyImpl;->onTextInserted(ILjava/lang/CharSequence;I)V
 
     goto :goto_0
 
-    .line 2162
     .end local v1    # "nextCursor":I
     .end local v4    # "text":Ljava/lang/CharSequence;
     .end local v5    # "where":I
     :pswitch_3
     iget v3, p1, Landroid/os/Message;->arg1:I
 
-    .line 2163
     .local v3, "start":I
     iget v0, p1, Landroid/os/Message;->arg2:I
 
-    .line 2164
     .local v0, "end":I
     invoke-virtual {p0, v3, v0}, Lcom/samsung/android/writingbuddy/WritingBuddyImpl;->onTextDeleted(II)V
 
     goto :goto_0
 
-    .line 2168
     .end local v0    # "end":I
     .end local v3    # "start":I
     :pswitch_4
@@ -2930,7 +2608,6 @@
 
     check-cast v2, Landroid/os/Bundle;
 
-    .line 2169
     .local v2, "result":Landroid/os/Bundle;
     iget v6, p1, Landroid/os/Message;->arg1:I
 
@@ -2938,45 +2615,38 @@
 
     goto :goto_0
 
-    .line 2173
     .end local v2    # "result":Landroid/os/Bundle;
     :pswitch_5
     invoke-virtual {p0, v7}, Lcom/samsung/android/writingbuddy/WritingBuddyImpl;->notifyPositionChanged(I)V
 
     goto :goto_0
 
-    .line 2177
     :pswitch_6
     invoke-direct {p0}, Lcom/samsung/android/writingbuddy/WritingBuddyImpl;->showWritingBuddyCue()V
 
     goto :goto_0
 
-    .line 2181
     :pswitch_7
     const/4 v6, 0x1
 
     invoke-direct {p0, v6}, Lcom/samsung/android/writingbuddy/WritingBuddyImpl;->dismissPopupCue(Z)Z
 
-    .line 2182
     const-string v6, "HOVER_CANCELED"
 
     invoke-direct {p0, v6}, Lcom/samsung/android/writingbuddy/WritingBuddyImpl;->sendHelpModeResult(Ljava/lang/CharSequence;)V
 
     goto :goto_0
 
-    .line 2186
     :pswitch_8
     invoke-virtual {p0}, Lcom/samsung/android/writingbuddy/WritingBuddyImpl;->onUpdateDialog()V
 
     goto :goto_0
 
-    .line 2190
     :pswitch_9
     invoke-direct {p0, v7}, Lcom/samsung/android/writingbuddy/WritingBuddyImpl;->notifyPositionCheck(I)V
 
     goto :goto_0
 
-    .line 2149
     nop
 
     :pswitch_data_0
@@ -3004,40 +2674,30 @@
 
     const/4 v0, 0x0
 
-    .line 593
     iput-object v0, p0, Lcom/samsung/android/writingbuddy/WritingBuddyImpl;->mParentView:Landroid/view/View;
 
-    .line 595
     iput-object v0, p0, Lcom/samsung/android/writingbuddy/WritingBuddyImpl;->mWBManager:Lcom/samsung/android/writingbuddy/IWritingBuddyManager;
 
-    .line 597
     iput-object v0, p0, Lcom/samsung/android/writingbuddy/WritingBuddyImpl;->mPopupCue:Lcom/samsung/android/writingbuddy/PopupCue;
 
-    .line 599
     new-instance v0, Landroid/graphics/Rect;
 
     invoke-direct {v0}, Landroid/graphics/Rect;-><init>()V
 
     iput-object v0, p0, Lcom/samsung/android/writingbuddy/WritingBuddyImpl;->mWBRect:Landroid/graphics/Rect;
 
-    .line 601
     iput-boolean v1, p0, Lcom/samsung/android/writingbuddy/WritingBuddyImpl;->mIsImageWritingEnabled:Z
 
-    .line 603
     const/4 v0, 0x1
 
     iput-boolean v0, p0, Lcom/samsung/android/writingbuddy/WritingBuddyImpl;->mCanShowAutoCompletePopup:Z
 
-    .line 605
     invoke-virtual {p0, v2}, Lcom/samsung/android/writingbuddy/WritingBuddyImpl;->setBoardType(I)V
 
-    .line 607
     invoke-virtual {p0, v2}, Lcom/samsung/android/writingbuddy/WritingBuddyImpl;->setEditorType(I)V
 
-    .line 609
     invoke-virtual {p0, v1}, Lcom/samsung/android/writingbuddy/WritingBuddyImpl;->setBoardTemplate(I)V
 
-    .line 610
     return-void
 .end method
 
@@ -3048,10 +2708,8 @@
     .prologue
     const/4 v2, 0x0
 
-    .line 2812
     if-nez p1, :cond_1
 
-    .line 2828
     :cond_0
     :goto_0
     return v2
@@ -3059,20 +2717,16 @@
     :cond_1
     move-object v1, p1
 
-    .line 2816
     check-cast v1, Landroid/widget/EditText;
 
-    .line 2817
     .local v1, "et":Landroid/widget/EditText;
     new-instance v0, Landroid/view/inputmethod/EditorInfo;
 
     invoke-direct {v0}, Landroid/view/inputmethod/EditorInfo;-><init>()V
 
-    .line 2818
     .local v0, "ei":Landroid/view/inputmethod/EditorInfo;
     invoke-virtual {v1, v0}, Landroid/widget/EditText;->extractEditorInfo(Landroid/view/inputmethod/EditorInfo;)V
 
-    .line 2820
     iget v3, v0, Landroid/view/inputmethod/EditorInfo;->inputType:I
 
     const/16 v4, 0x80
@@ -3116,7 +2770,6 @@
 
     if-ne v3, v4, :cond_0
 
-    .line 2826
     :cond_3
     const/4 v2, 0x1
 
@@ -3129,7 +2782,6 @@
     .prologue
     const/4 v0, 0x1
 
-    .line 1004
     iget v1, p0, Lcom/samsung/android/writingbuddy/WritingBuddyImpl;->mState:I
 
     if-ne v1, v0, :cond_0
@@ -3160,7 +2812,6 @@
 
     if-eqz v1, :cond_0
 
-    .line 1009
     :goto_0
     return v0
 
@@ -3177,14 +2828,13 @@
     .prologue
     const/4 v6, 0x0
 
-    .line 904
     const-string v3, "WritingBuddyImpl"
 
     new-instance v4, Ljava/lang/StringBuilder;
 
     invoke-direct {v4}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v5, "notifyPositionCheck code : "
+    const-string v5, "notifyPositionCheck code : "
 
     invoke-virtual {v4, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -3212,19 +2862,15 @@
 
     invoke-static {v3, v4}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 906
     iget v3, p0, Lcom/samsung/android/writingbuddy/WritingBuddyImpl;->mState:I
 
     if-eqz v3, :cond_1
 
-    .line 907
     const/4 v2, 0x0
 
-    .line 908
     .local v2, "wndRect":Landroid/graphics/Rect;
     const/4 v1, 0x0
 
-    .line 909
     .local v1, "scrRect":Landroid/graphics/Rect;
     iget-object v3, p0, Lcom/samsung/android/writingbuddy/WritingBuddyImpl;->mAnchorView:Landroid/view/View;
 
@@ -3237,7 +2883,6 @@
 
     move-result-object v2
 
-    .line 910
     iget-object v3, p0, Lcom/samsung/android/writingbuddy/WritingBuddyImpl;->mAnchorView:Landroid/view/View;
 
     if-eqz v3, :cond_3
@@ -3249,7 +2894,6 @@
 
     move-result-object v1
 
-    .line 912
     sget-boolean v3, Lcom/samsung/android/writingbuddy/WritingBuddyImpl;->DEBUG:Z
 
     if-eqz v3, :cond_0
@@ -3286,7 +2930,6 @@
 
     invoke-static {v3, v4}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 914
     :cond_0
     iget-object v3, p0, Lcom/samsung/android/writingbuddy/WritingBuddyImpl;->mScrRectUpdated:Landroid/graphics/Rect;
 
@@ -3296,14 +2939,12 @@
 
     if-eqz v3, :cond_4
 
-    .line 926
     .end local v1    # "scrRect":Landroid/graphics/Rect;
     .end local v2    # "wndRect":Landroid/graphics/Rect;
     :cond_1
     :goto_2
     return-void
 
-    .line 909
     .restart local v1    # "scrRect":Landroid/graphics/Rect;
     .restart local v2    # "wndRect":Landroid/graphics/Rect;
     :cond_2
@@ -3311,20 +2952,17 @@
 
     goto :goto_0
 
-    .line 910
     :cond_3
     iget-object v3, p0, Lcom/samsung/android/writingbuddy/WritingBuddyImpl;->mParentView:Landroid/view/View;
 
     goto :goto_1
 
-    .line 919
     :cond_4
     :try_start_0
     iget-object v3, p0, Lcom/samsung/android/writingbuddy/WritingBuddyImpl;->mWBManager:Lcom/samsung/android/writingbuddy/IWritingBuddyManager;
 
     if-eqz v3, :cond_1
 
-    .line 920
     iget-object v3, p0, Lcom/samsung/android/writingbuddy/WritingBuddyImpl;->mWBManager:Lcom/samsung/android/writingbuddy/IWritingBuddyManager;
 
     iget v4, p0, Lcom/samsung/android/writingbuddy/WritingBuddyImpl;->mViewID:I
@@ -3335,11 +2973,9 @@
 
     goto :goto_2
 
-    .line 922
     :catch_0
     move-exception v0
 
-    .line 923
     .local v0, "e":Landroid/os/RemoteException;
     const-string v3, "WritingBuddyImpl"
 
@@ -3356,7 +2992,6 @@
     .param p2, "localY"    # F
 
     .prologue
-    .line 2593
     iget-object v0, p0, Lcom/samsung/android/writingbuddy/WritingBuddyImpl;->mParentView:Landroid/view/View;
 
     invoke-direct {p0, v0, p1, p2}, Lcom/samsung/android/writingbuddy/WritingBuddyImpl;->pointInView(Landroid/view/View;FF)Z
@@ -3375,7 +3010,6 @@
     .prologue
     const/4 v2, 0x0
 
-    .line 2597
     cmpl-float v0, p2, v2
 
     if-ltz v0, :cond_0
@@ -3434,21 +3068,18 @@
     .end annotation
 
     .prologue
-    .line 973
     new-instance v0, Lcom/samsung/android/writingbuddy/WritingBuddyImpl$1;
 
     invoke-direct {v0, p0}, Lcom/samsung/android/writingbuddy/WritingBuddyImpl$1;-><init>(Lcom/samsung/android/writingbuddy/WritingBuddyImpl;)V
 
     invoke-virtual {p1, v0}, Landroid/view/View;->setOnHoverListener(Landroid/view/View$OnHoverListener;)V
 
-    .line 980
     new-instance v0, Lcom/samsung/android/writingbuddy/WritingBuddyImpl$2;
 
     invoke-direct {v0, p0}, Lcom/samsung/android/writingbuddy/WritingBuddyImpl$2;-><init>(Lcom/samsung/android/writingbuddy/WritingBuddyImpl;)V
 
     invoke-virtual {p1, v0}, Landroid/view/View;->setOnTouchListener(Landroid/view/View$OnTouchListener;)V
 
-    .line 987
     return-void
 .end method
 
@@ -3458,53 +3089,44 @@
     .prologue
     const/4 v2, 0x1
 
-    .line 2216
     iget v1, p0, Lcom/samsung/android/writingbuddy/WritingBuddyImpl;->mBoardType:I
 
     if-ne v1, v2, :cond_1
 
-    .line 2218
     iget-object v1, p0, Lcom/samsung/android/writingbuddy/WritingBuddyImpl;->mParentView:Landroid/view/View;
 
     instance-of v1, v1, Landroid/widget/EditText;
 
     if-eqz v1, :cond_0
 
-    .line 2219
     iget-object v1, p0, Lcom/samsung/android/writingbuddy/WritingBuddyImpl;->mParentView:Landroid/view/View;
 
     check-cast v1, Landroid/widget/EditText;
 
     invoke-virtual {v1, v2}, Landroid/widget/EditText;->setWBPositionListenerEnalbed(Z)V
 
-    .line 2230
     :cond_0
     :goto_0
     return-void
 
-    .line 2222
     :cond_1
     iget-object v1, p0, Lcom/samsung/android/writingbuddy/WritingBuddyImpl;->mParentView:Landroid/view/View;
 
     if-eqz v1, :cond_0
 
-    .line 2223
     iget-object v1, p0, Lcom/samsung/android/writingbuddy/WritingBuddyImpl;->mParentView:Landroid/view/View;
 
     invoke-virtual {v1}, Landroid/view/View;->getViewTreeObserver()Landroid/view/ViewTreeObserver;
 
     move-result-object v0
 
-    .line 2224
     .local v0, "vto":Landroid/view/ViewTreeObserver;
     if-eqz v0, :cond_0
 
-    .line 2225
     iget-object v1, p0, Lcom/samsung/android/writingbuddy/WritingBuddyImpl;->mOnScrollChangedListener:Landroid/view/ViewTreeObserver$OnScrollChangedListener;
 
     invoke-virtual {v0, v1}, Landroid/view/ViewTreeObserver;->removeOnScrollChangedListener(Landroid/view/ViewTreeObserver$OnScrollChangedListener;)V
 
-    .line 2226
     iget-object v1, p0, Lcom/samsung/android/writingbuddy/WritingBuddyImpl;->mOnScrollChangedListener:Landroid/view/ViewTreeObserver$OnScrollChangedListener;
 
     invoke-virtual {v0, v1}, Landroid/view/ViewTreeObserver;->addOnScrollChangedListener(Landroid/view/ViewTreeObserver$OnScrollChangedListener;)V
@@ -3516,7 +3138,6 @@
     .locals 3
 
     .prologue
-    .line 1452
     const/4 v1, 0x1
 
     const/4 v2, -0x1
@@ -3526,15 +3147,12 @@
     :try_end_0
     .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 1456
     :goto_0
     return-void
 
-    .line 1453
     :catch_0
     move-exception v0
 
-    .line 1454
     .local v0, "e":Landroid/os/RemoteException;
     const-string v1, "WritingBuddyImpl"
 
@@ -3553,7 +3171,6 @@
 
     const/4 v3, 0x0
 
-    .line 1125
     iget-boolean v0, p0, Lcom/samsung/android/writingbuddy/WritingBuddyImpl;->mIsCursorBlinkDisabled:Z
 
     if-eqz v0, :cond_0
@@ -3564,21 +3181,17 @@
 
     if-eqz v0, :cond_0
 
-    .line 1126
     iget-object v0, p0, Lcom/samsung/android/writingbuddy/WritingBuddyImpl;->mParentView:Landroid/view/View;
 
     check-cast v0, Landroid/widget/EditText;
 
     invoke-virtual {v0, v3}, Landroid/widget/EditText;->stopCursorBlink(Z)V
 
-    .line 1127
     iput-boolean v3, p0, Lcom/samsung/android/writingbuddy/WritingBuddyImpl;->mIsCursorBlinkDisabled:Z
 
-    .line 1130
     :cond_0
     invoke-direct {p0}, Lcom/samsung/android/writingbuddy/WritingBuddyImpl;->unregisterPositionChangeListener()V
 
-    .line 1131
     iget-object v0, p0, Lcom/samsung/android/writingbuddy/WritingBuddyImpl;->mParentView:Landroid/view/View;
 
     if-eqz v0, :cond_1
@@ -3597,12 +3210,10 @@
 
     if-eqz v0, :cond_1
 
-    .line 1132
     iget-object v0, p0, Lcom/samsung/android/writingbuddy/WritingBuddyImpl;->mParentView:Landroid/view/View;
 
     invoke-virtual {v0, v4}, Landroid/view/View;->reportCurrentWritingBuddyView(Landroid/view/View;)V
 
-    .line 1133
     const-string v0, "WritingBuddyImpl"
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -3625,19 +3236,15 @@
 
     invoke-static {v0, v1}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1136
     :cond_1
     const/4 v0, 0x1
 
     iput-boolean v0, p0, Lcom/samsung/android/writingbuddy/WritingBuddyImpl;->mCanShowAutoCompletePopup:Z
 
-    .line 1137
     iput v3, p0, Lcom/samsung/android/writingbuddy/WritingBuddyImpl;->mState:I
 
-    .line 1138
     iput v3, p0, Lcom/samsung/android/writingbuddy/WritingBuddyImpl;->mStateResetCnt:I
 
-    .line 1139
     return-void
 .end method
 
@@ -3649,19 +3256,16 @@
     .param p4, "arg1"    # I
 
     .prologue
-    .line 2262
     iget v0, p0, Lcom/samsung/android/writingbuddy/WritingBuddyImpl;->mBoardType:I
 
     const/4 v1, 0x1
 
     if-ne v0, v1, :cond_0
 
-    .line 2263
     invoke-direct {p0, p1, p2, p3, p4}, Lcom/samsung/android/writingbuddy/WritingBuddyImpl;->scheduleStateForEditor(IILandroid/view/MotionEvent;I)Z
 
     move-result v0
 
-    .line 2265
     :goto_0
     return v0
 
@@ -3681,10 +3285,8 @@
     .param p4, "arg1"    # I
 
     .prologue
-    .line 2276
     iput-object p3, p0, Lcom/samsung/android/writingbuddy/WritingBuddyImpl;->motionEvent:Landroid/view/MotionEvent;
 
-    .line 2278
     const/4 v6, 0x2
 
     if-ne p1, v6, :cond_3
@@ -3693,21 +3295,16 @@
 
     if-ne p2, v6, :cond_3
 
-    .line 2279
     iget v1, p0, Lcom/samsung/android/writingbuddy/WritingBuddyImpl;->mViewID:I
 
-    .line 2280
     .local v1, "clientViewID":I
     move v4, p4
 
-    .line 2282
     .local v4, "receivedClientID":I
     if-ne v1, v4, :cond_0
 
-    .line 2283
     invoke-direct {p0}, Lcom/samsung/android/writingbuddy/WritingBuddyImpl;->resetState()V
 
-    .line 2286
     :cond_0
     const-string v7, "WritingBuddyImpl"
 
@@ -3715,7 +3312,7 @@
 
     invoke-direct {v6}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v8, "state : "
+    const-string v8, "state : "
 
     invoke-virtual {v6, v8}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -3799,16 +3396,13 @@
 
     invoke-static {v7, v6}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 2290
     const/4 v6, 0x0
 
-    .line 2400
     .end local v1    # "clientViewID":I
     .end local v4    # "receivedClientID":I
     :goto_2
     return v6
 
-    .line 2286
     .restart local v1    # "clientViewID":I
     .restart local v4    # "receivedClientID":I
     :cond_1
@@ -3821,29 +3415,24 @@
 
     goto :goto_1
 
-    .line 2294
     .end local v1    # "clientViewID":I
     .end local v4    # "receivedClientID":I
     :cond_3
     const/4 v5, 0x1
 
-    .line 2296
     .local v5, "showLog":Z
     iget v6, p0, Lcom/samsung/android/writingbuddy/WritingBuddyImpl;->mState:I
 
     if-nez v6, :cond_d
 
-    .line 2297
     const/4 v6, 0x1
 
     if-ne p1, v6, :cond_6
 
-    .line 2298
     invoke-virtual {p3}, Landroid/view/MotionEvent;->getAction()I
 
     move-result v0
 
-    .line 2299
     .local v0, "action":I
     const/16 v6, 0x9
 
@@ -3857,14 +3446,12 @@
 
     if-eqz v6, :cond_8
 
-    .line 2300
     const-string v6, "WritingBuddyImpl"
 
     const-string v7, "ACTION_HOVER_ENTER"
 
     invoke-static {v6, v7}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 2302
     invoke-direct {p0}, Lcom/samsung/android/writingbuddy/WritingBuddyImpl;->getHandler()Landroid/os/Handler;
 
     move-result-object v6
@@ -3877,14 +3464,12 @@
 
     if-eqz v6, :cond_4
 
-    .line 2303
     const-string v6, "WritingBuddyImpl"
 
     const-string v7, "ACTION_HOVER_ENTER_1"
 
     invoke-static {v6, v7}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 2304
     invoke-direct {p0}, Lcom/samsung/android/writingbuddy/WritingBuddyImpl;->getHandler()Landroid/os/Handler;
 
     move-result-object v6
@@ -3893,7 +3478,6 @@
 
     invoke-virtual {v6, v7}, Landroid/os/Handler;->removeMessages(I)V
 
-    .line 2307
     :cond_4
     invoke-direct {p0}, Lcom/samsung/android/writingbuddy/WritingBuddyImpl;->getHandler()Landroid/os/Handler;
 
@@ -3907,14 +3491,12 @@
 
     if-nez v6, :cond_5
 
-    .line 2308
     const-string v6, "WritingBuddyImpl"
 
     const-string v7, "ACTION_HOVER_ENTER_2"
 
     invoke-static {v6, v7}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 2309
     invoke-direct {p0}, Lcom/samsung/android/writingbuddy/WritingBuddyImpl;->getHandler()Landroid/os/Handler;
 
     move-result-object v6
@@ -3925,35 +3507,30 @@
 
     invoke-virtual {v6, v7, v8, v9}, Landroid/os/Handler;->sendEmptyMessageDelayed(IJ)Z
 
-    .line 2310
     const/4 v6, 0x1
 
     iput-boolean v6, p0, Lcom/samsung/android/writingbuddy/WritingBuddyImpl;->mIsPopupCueShowMSGCalled:Z
 
-    .line 2340
     :cond_5
     :goto_3
     const/4 v6, 0x7
 
     if-ne v0, v6, :cond_6
 
-    .line 2341
     const/4 v5, 0x0
 
-    .line 2394
     .end local v0    # "action":I
     :cond_6
     :goto_4
     if-eqz v5, :cond_7
 
-    .line 2395
     const-string v7, "WritingBuddyImpl"
 
     new-instance v6, Ljava/lang/StringBuilder;
 
     invoke-direct {v6}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v8, "state : "
+    const-string v8, "state : "
 
     invoke-virtual {v6, v8}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -4037,13 +3614,11 @@
 
     invoke-static {v7, v6}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 2400
     :cond_7
     const/4 v6, 0x0
 
     goto/16 :goto_2
 
-    .line 2312
     .restart local v0    # "action":I
     :cond_8
     const/16 v6, 0xa
@@ -4058,19 +3633,16 @@
 
     if-eqz v6, :cond_b
 
-    .line 2313
     const-string v6, "WritingBuddyImpl"
 
     const-string v7, "ACTION_HOVER_EXIT"
 
     invoke-static {v6, v7}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 2314
     invoke-static {}, Landroid/hardware/input/InputManager;->getInstance()Landroid/hardware/input/InputManager;
 
     move-result-object v2
 
-    .line 2315
     .local v2, "im":Landroid/hardware/input/InputManager;
     invoke-virtual {p3}, Landroid/view/MotionEvent;->getX()F
 
@@ -4086,14 +3658,12 @@
 
     if-nez v6, :cond_9
 
-    .line 2316
     const-string v6, "WritingBuddyImpl"
 
     const-string v7, "ACTION_HOVER_EXIT_1"
 
     invoke-static {v6, v7}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 2317
     const/4 v6, 0x1
 
     invoke-direct {p0, v6}, Lcom/samsung/android/writingbuddy/WritingBuddyImpl;->dismissPopupCue(Z)Z
@@ -4102,14 +3672,12 @@
 
     if-eqz v6, :cond_5
 
-    .line 2319
     const-string v6, "HOVER_CANCELED"
 
     invoke-direct {p0, v6}, Lcom/samsung/android/writingbuddy/WritingBuddyImpl;->sendHelpModeResult(Ljava/lang/CharSequence;)V
 
     goto/16 :goto_3
 
-    .line 2321
     :cond_9
     if-eqz v2, :cond_a
 
@@ -4125,14 +3693,12 @@
 
     if-nez v6, :cond_a
 
-    .line 2322
     const-string v6, "WritingBuddyImpl"
 
     const-string v7, "ACTION_HOVER_EXIT_2"
 
     invoke-static {v6, v7}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 2323
     const/4 v6, 0x1
 
     invoke-direct {p0, v6}, Lcom/samsung/android/writingbuddy/WritingBuddyImpl;->dismissPopupCue(Z)Z
@@ -4141,14 +3707,12 @@
 
     if-eqz v6, :cond_5
 
-    .line 2325
     const-string v6, "HOVER_CANCELED"
 
     invoke-direct {p0, v6}, Lcom/samsung/android/writingbuddy/WritingBuddyImpl;->sendHelpModeResult(Ljava/lang/CharSequence;)V
 
     goto/16 :goto_3
 
-    .line 2328
     :cond_a
     const-string v6, "WritingBuddyImpl"
 
@@ -4156,7 +3720,6 @@
 
     invoke-static {v6, v7}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 2330
     invoke-direct {p0}, Lcom/samsung/android/writingbuddy/WritingBuddyImpl;->getHandler()Landroid/os/Handler;
 
     move-result-object v6
@@ -4169,7 +3732,6 @@
 
     goto/16 :goto_3
 
-    .line 2332
     .end local v2    # "im":Landroid/hardware/input/InputManager;
     :cond_b
     if-nez v0, :cond_c
@@ -4182,21 +3744,18 @@
 
     if-eqz v6, :cond_c
 
-    .line 2333
     const-string v6, "WritingBuddyImpl"
 
     const-string v7, "ACTION_DOWN"
 
     invoke-static {v6, v7}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 2334
     const/4 v6, 0x0
 
     invoke-direct {p0, v6}, Lcom/samsung/android/writingbuddy/WritingBuddyImpl;->dismissPopupCue(Z)Z
 
     goto/16 :goto_3
 
-    .line 2335
     :cond_c
     const/4 v6, 0x1
 
@@ -4210,14 +3769,12 @@
 
     if-eqz v6, :cond_5
 
-    .line 2336
     const-string v6, "WritingBuddyImpl"
 
     const-string v7, "ACTION_UP"
 
     invoke-static {v6, v7}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 2337
     invoke-direct {p0}, Lcom/samsung/android/writingbuddy/WritingBuddyImpl;->getHandler()Landroid/os/Handler;
 
     move-result-object v6
@@ -4230,7 +3787,6 @@
 
     goto/16 :goto_3
 
-    .line 2344
     .end local v0    # "action":I
     :cond_d
     iget v6, p0, Lcom/samsung/android/writingbuddy/WritingBuddyImpl;->mState:I
@@ -4239,17 +3795,14 @@
 
     if-ne v6, v7, :cond_6
 
-    .line 2345
     const/4 v6, 0x1
 
     if-ne p1, v6, :cond_e
 
-    .line 2346
     invoke-virtual {p3}, Landroid/view/MotionEvent;->getAction()I
 
     move-result v0
 
-    .line 2348
     .restart local v0    # "action":I
     const/16 v6, 0x9
 
@@ -4265,67 +3818,54 @@
 
     if-le v6, v7, :cond_e
 
-    .line 2349
     const-string v6, "WritingBuddyImpl"
 
     const-string v7, "Reset state"
 
     invoke-static {v6, v7}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 2350
     const/4 v6, 0x0
 
     iput v6, p0, Lcom/samsung/android/writingbuddy/WritingBuddyImpl;->mStateResetCnt:I
 
-    .line 2351
     invoke-direct {p0}, Lcom/samsung/android/writingbuddy/WritingBuddyImpl;->resetState()V
 
-    .line 2354
     .end local v0    # "action":I
     :cond_e
     const/4 v6, 0x2
 
     if-ne p1, v6, :cond_6
 
-    .line 2355
     const/4 v6, 0x1
 
     if-ne p2, v6, :cond_6
 
-    .line 2358
     const/4 v6, 0x0
 
     invoke-direct {p0, v6}, Lcom/samsung/android/writingbuddy/WritingBuddyImpl;->dismissPopupCue(Z)Z
 
-    .line 2361
     invoke-direct {p0}, Lcom/samsung/android/writingbuddy/WritingBuddyImpl;->resetPenPointerIcon()V
 
-    .line 2364
     iget-object v6, p0, Lcom/samsung/android/writingbuddy/WritingBuddyImpl;->mParentView:Landroid/view/View;
 
     instance-of v6, v6, Landroid/widget/EditText;
 
     if-eqz v6, :cond_f
 
-    .line 2365
     iget-object v6, p0, Lcom/samsung/android/writingbuddy/WritingBuddyImpl;->mParentView:Landroid/view/View;
 
     invoke-virtual {v6}, Landroid/view/View;->requestFocus()Z
 
-    .line 2369
     :cond_f
     invoke-static {}, Landroid/view/inputmethod/InputMethodManager;->peekInstance()Landroid/view/inputmethod/InputMethodManager;
 
     move-result-object v3
 
-    .line 2370
     .local v3, "imm":Landroid/view/inputmethod/InputMethodManager;
     if-eqz v3, :cond_11
 
-    .line 2371
     invoke-virtual {v3}, Landroid/view/inputmethod/InputMethodManager;->forceHideSoftInput()Z
 
-    .line 2377
     :goto_7
     iget-object v6, p0, Lcom/samsung/android/writingbuddy/WritingBuddyImpl;->mParentView:Landroid/view/View;
 
@@ -4333,7 +3873,6 @@
 
     if-eqz v6, :cond_10
 
-    .line 2378
     iget-object v6, p0, Lcom/samsung/android/writingbuddy/WritingBuddyImpl;->mParentView:Landroid/view/View;
 
     check-cast v6, Landroid/widget/EditText;
@@ -4342,25 +3881,21 @@
 
     invoke-virtual {v6, v7}, Landroid/widget/EditText;->stopCursorBlink(Z)V
 
-    .line 2379
     const/4 v6, 0x1
 
     iput-boolean v6, p0, Lcom/samsung/android/writingbuddy/WritingBuddyImpl;->mIsCursorBlinkDisabled:Z
 
-    .line 2383
     :cond_10
     const-string v6, "OPENED"
 
     invoke-direct {p0, v6}, Lcom/samsung/android/writingbuddy/WritingBuddyImpl;->sendHelpModeResult(Ljava/lang/CharSequence;)V
 
-    .line 2386
     const-string v6, "OPENED"
 
     const/4 v7, 0x0
 
     invoke-direct {p0, v6, v7}, Lcom/samsung/android/writingbuddy/WritingBuddyImpl;->sendWatchActionResult(Ljava/lang/CharSequence;Landroid/os/Bundle;)V
 
-    .line 2389
     invoke-direct {p0}, Lcom/samsung/android/writingbuddy/WritingBuddyImpl;->getHandler()Landroid/os/Handler;
 
     move-result-object v6
@@ -4373,7 +3908,6 @@
 
     goto/16 :goto_4
 
-    .line 2373
     :cond_11
     const-string v6, "WritingBuddyImpl"
 
@@ -4383,7 +3917,6 @@
 
     goto :goto_7
 
-    .line 2395
     .end local v3    # "imm":Landroid/view/inputmethod/InputMethodManager;
     :cond_12
     const/4 v6, 0x0
@@ -4404,28 +3937,22 @@
     .param p4, "arg1"    # I
 
     .prologue
-    .line 2404
     invoke-static {p3}, Lcom/samsung/android/writingbuddy/WritingBuddyImpl$EventChecker;->isDuplicated(Landroid/view/MotionEvent;)Z
 
     move-result v4
 
     if-eqz v4, :cond_0
 
-    .line 2405
     const/4 v4, 0x0
 
-    .line 2522
     :goto_0
     return v4
 
-    .line 2408
     :cond_0
     iput-object p3, p0, Lcom/samsung/android/writingbuddy/WritingBuddyImpl;->motionEvent:Landroid/view/MotionEvent;
 
-    .line 2409
     const/4 v3, 0x1
 
-    .line 2412
     .local v3, "showLog":Z
     const/4 v4, 0x2
 
@@ -4435,22 +3962,19 @@
 
     if-ne p2, v4, :cond_2
 
-    .line 2413
     const/4 v4, 0x0
 
     invoke-direct {p0, v4}, Lcom/samsung/android/writingbuddy/WritingBuddyImpl;->dismissPopupCue(Z)Z
 
-    .line 2414
     invoke-direct {p0}, Lcom/samsung/android/writingbuddy/WritingBuddyImpl;->resetState()V
 
-    .line 2416
     const-string v5, "WritingBuddyImpl"
 
     new-instance v4, Ljava/lang/StringBuilder;
 
     invoke-direct {v4}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v6, "state : "
+    const-string v6, "state : "
 
     invoke-virtual {v4, v6}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -4509,34 +4033,28 @@
 
     invoke-static {v5, v4}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 2419
     const/4 v4, 0x0
 
     goto :goto_0
 
-    .line 2416
     :cond_1
     const/4 v4, 0x0
 
     goto :goto_1
 
-    .line 2423
     :cond_2
     iget v4, p0, Lcom/samsung/android/writingbuddy/WritingBuddyImpl;->mState:I
 
     if-nez v4, :cond_d
 
-    .line 2424
     const/4 v4, 0x1
 
     if-ne p1, v4, :cond_4
 
-    .line 2425
     invoke-virtual {p3}, Landroid/view/MotionEvent;->getAction()I
 
     move-result v0
 
-    .line 2426
     .local v0, "action":I
     const/16 v4, 0x9
 
@@ -4550,14 +4068,12 @@
 
     if-eqz v4, :cond_6
 
-    .line 2427
     const-string v4, "WritingBuddyImpl"
 
     const-string v5, "ACTION_HOVER_ENTER"
 
     invoke-static {v4, v5}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 2429
     invoke-direct {p0}, Lcom/samsung/android/writingbuddy/WritingBuddyImpl;->getHandler()Landroid/os/Handler;
 
     move-result-object v4
@@ -4570,7 +4086,6 @@
 
     if-nez v4, :cond_3
 
-    .line 2430
     invoke-direct {p0}, Lcom/samsung/android/writingbuddy/WritingBuddyImpl;->getHandler()Landroid/os/Handler;
 
     move-result-object v4
@@ -4581,35 +4096,30 @@
 
     invoke-virtual {v4, v5, v6, v7}, Landroid/os/Handler;->sendEmptyMessageDelayed(IJ)Z
 
-    .line 2431
     const/4 v4, 0x1
 
     iput-boolean v4, p0, Lcom/samsung/android/writingbuddy/WritingBuddyImpl;->mIsPopupCueShowMSGCalled:Z
 
-    .line 2471
     :cond_3
     :goto_2
     const/4 v4, 0x7
 
     if-ne v0, v4, :cond_4
 
-    .line 2472
     const/4 v3, 0x0
 
-    .line 2518
     .end local v0    # "action":I
     :cond_4
     :goto_3
     if-eqz v3, :cond_5
 
-    .line 2519
     const-string v5, "WritingBuddyImpl"
 
     new-instance v4, Ljava/lang/StringBuilder;
 
     invoke-direct {v4}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v6, "state : "
+    const-string v6, "state : "
 
     invoke-virtual {v4, v6}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -4668,27 +4178,23 @@
 
     invoke-static {v5, v4}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 2522
     :cond_5
     const/4 v4, 0x0
 
     goto/16 :goto_0
 
-    .line 2433
     .restart local v0    # "action":I
     :cond_6
     const/4 v4, 0x7
 
     if-ne v0, v4, :cond_7
 
-    .line 2434
     const-string v4, "WritingBuddyImpl"
 
     const-string v5, "ACTION_HOVER_MOVE"
 
     invoke-static {v4, v5}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 2435
     invoke-direct {p0}, Lcom/samsung/android/writingbuddy/WritingBuddyImpl;->getHandler()Landroid/os/Handler;
 
     move-result-object v4
@@ -4701,14 +4207,12 @@
 
     if-eqz v4, :cond_3
 
-    .line 2436
     const-string v4, "WritingBuddyImpl"
 
     const-string v5, "ACTION_HOVER_EXIT_2"
 
     invoke-static {v4, v5}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 2437
     invoke-direct {p0}, Lcom/samsung/android/writingbuddy/WritingBuddyImpl;->getHandler()Landroid/os/Handler;
 
     move-result-object v4
@@ -4719,7 +4223,6 @@
 
     goto :goto_2
 
-    .line 2439
     :cond_7
     const/16 v4, 0xa
 
@@ -4733,19 +4236,16 @@
 
     if-eqz v4, :cond_b
 
-    .line 2440
     const-string v4, "WritingBuddyImpl"
 
     const-string v5, "ACTION_HOVER_EXIT"
 
     invoke-static {v4, v5}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 2441
     invoke-static {}, Landroid/hardware/input/InputManager;->getInstance()Landroid/hardware/input/InputManager;
 
     move-result-object v1
 
-    .line 2442
     .local v1, "im":Landroid/hardware/input/InputManager;
     invoke-virtual {p3}, Landroid/view/MotionEvent;->getX()F
 
@@ -4761,14 +4261,12 @@
 
     if-nez v4, :cond_8
 
-    .line 2443
     const-string v4, "WritingBuddyImpl"
 
     const-string v5, "ACTION_HOVER_EXIT_1"
 
     invoke-static {v4, v5}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 2444
     const/4 v4, 0x1
 
     invoke-direct {p0, v4}, Lcom/samsung/android/writingbuddy/WritingBuddyImpl;->dismissPopupCue(Z)Z
@@ -4777,14 +4275,12 @@
 
     if-eqz v4, :cond_3
 
-    .line 2446
     const-string v4, "HOVER_CANCELED"
 
     invoke-direct {p0, v4}, Lcom/samsung/android/writingbuddy/WritingBuddyImpl;->sendHelpModeResult(Ljava/lang/CharSequence;)V
 
     goto/16 :goto_2
 
-    .line 2448
     :cond_8
     if-eqz v1, :cond_9
 
@@ -4800,14 +4296,12 @@
 
     if-nez v4, :cond_9
 
-    .line 2449
     const-string v4, "WritingBuddyImpl"
 
     const-string v5, "ACTION_HOVER_EXIT_2"
 
     invoke-static {v4, v5}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 2450
     const/4 v4, 0x1
 
     invoke-direct {p0, v4}, Lcom/samsung/android/writingbuddy/WritingBuddyImpl;->dismissPopupCue(Z)Z
@@ -4816,14 +4310,12 @@
 
     if-eqz v4, :cond_3
 
-    .line 2452
     const-string v4, "HOVER_CANCELED"
 
     invoke-direct {p0, v4}, Lcom/samsung/android/writingbuddy/WritingBuddyImpl;->sendHelpModeResult(Ljava/lang/CharSequence;)V
 
     goto/16 :goto_2
 
-    .line 2454
     :cond_9
     iget-object v4, p0, Lcom/samsung/android/writingbuddy/WritingBuddyImpl;->mPopupCue:Lcom/samsung/android/writingbuddy/PopupCue;
 
@@ -4837,14 +4329,12 @@
 
     if-eqz v4, :cond_a
 
-    .line 2455
     const-string v4, "WritingBuddyImpl"
 
     const-string v5, "ACTION_HOVER_EXIT_3"
 
     invoke-static {v4, v5}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 2457
     invoke-direct {p0}, Lcom/samsung/android/writingbuddy/WritingBuddyImpl;->getHandler()Landroid/os/Handler;
 
     move-result-object v4
@@ -4857,7 +4347,6 @@
 
     goto/16 :goto_2
 
-    .line 2459
     :cond_a
     const-string v4, "WritingBuddyImpl"
 
@@ -4865,7 +4354,6 @@
 
     invoke-static {v4, v5}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 2461
     invoke-direct {p0}, Lcom/samsung/android/writingbuddy/WritingBuddyImpl;->getHandler()Landroid/os/Handler;
 
     move-result-object v4
@@ -4878,7 +4366,6 @@
 
     goto/16 :goto_2
 
-    .line 2463
     .end local v1    # "im":Landroid/hardware/input/InputManager;
     :cond_b
     if-nez v0, :cond_c
@@ -4891,21 +4378,18 @@
 
     if-eqz v4, :cond_c
 
-    .line 2464
     const-string v4, "WritingBuddyImpl"
 
     const-string v5, "ACTION_DOWN"
 
     invoke-static {v4, v5}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 2465
     const/4 v4, 0x1
 
     invoke-direct {p0, v4}, Lcom/samsung/android/writingbuddy/WritingBuddyImpl;->dismissPopupCue(Z)Z
 
     goto/16 :goto_2
 
-    .line 2466
     :cond_c
     const/4 v4, 0x1
 
@@ -4919,14 +4403,12 @@
 
     if-eqz v4, :cond_3
 
-    .line 2467
     const-string v4, "WritingBuddyImpl"
 
     const-string v5, "ACTION_UP"
 
     invoke-static {v4, v5}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 2468
     invoke-direct {p0}, Lcom/samsung/android/writingbuddy/WritingBuddyImpl;->getHandler()Landroid/os/Handler;
 
     move-result-object v4
@@ -4939,7 +4421,6 @@
 
     goto/16 :goto_2
 
-    .line 2475
     .end local v0    # "action":I
     :cond_d
     iget v4, p0, Lcom/samsung/android/writingbuddy/WritingBuddyImpl;->mState:I
@@ -4948,17 +4429,14 @@
 
     if-ne v4, v5, :cond_4
 
-    .line 2476
     const/4 v4, 0x1
 
     if-ne p1, v4, :cond_e
 
-    .line 2477
     invoke-virtual {p3}, Landroid/view/MotionEvent;->getAction()I
 
     move-result v0
 
-    .line 2479
     .restart local v0    # "action":I
     const/16 v4, 0x9
 
@@ -4974,45 +4452,37 @@
 
     if-le v4, v5, :cond_4
 
-    .line 2480
     const-string v4, "WritingBuddyImpl"
 
     const-string v5, "Reset state"
 
     invoke-static {v4, v5}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 2481
     const/4 v4, 0x0
 
     iput v4, p0, Lcom/samsung/android/writingbuddy/WritingBuddyImpl;->mStateResetCnt:I
 
-    .line 2482
     invoke-direct {p0}, Lcom/samsung/android/writingbuddy/WritingBuddyImpl;->resetState()V
 
     goto/16 :goto_3
 
-    .line 2484
     .end local v0    # "action":I
     :cond_e
     const/4 v4, 0x2
 
     if-ne p1, v4, :cond_4
 
-    .line 2485
     const/4 v4, 0x1
 
     if-ne p2, v4, :cond_4
 
-    .line 2488
     invoke-static {}, Landroid/view/inputmethod/InputMethodManager;->peekInstance()Landroid/view/inputmethod/InputMethodManager;
 
     move-result-object v2
 
-    .line 2489
     .local v2, "imm":Landroid/view/inputmethod/InputMethodManager;
     if-eqz v2, :cond_f
 
-    .line 2490
     new-instance v4, Lcom/samsung/android/writingbuddy/WritingBuddyImpl$6;
 
     new-instance v5, Landroid/os/Handler;
@@ -5023,28 +4493,23 @@
 
     invoke-virtual {v2, v4}, Landroid/view/inputmethod/InputMethodManager;->forceHideSoftInput(Landroid/os/ResultReceiver;)Z
 
-    .line 2501
     :goto_5
     const/4 v4, 0x0
 
     invoke-direct {p0, v4}, Lcom/samsung/android/writingbuddy/WritingBuddyImpl;->dismissPopupCue(Z)Z
 
-    .line 2504
     const-string v4, "OPENED"
 
     invoke-direct {p0, v4}, Lcom/samsung/android/writingbuddy/WritingBuddyImpl;->sendHelpModeResult(Ljava/lang/CharSequence;)V
 
-    .line 2507
     const-string v4, "OPENED"
 
     const/4 v5, 0x0
 
     invoke-direct {p0, v4, v5}, Lcom/samsung/android/writingbuddy/WritingBuddyImpl;->sendWatchActionResult(Ljava/lang/CharSequence;Landroid/os/Bundle;)V
 
-    .line 2510
     invoke-direct {p0}, Lcom/samsung/android/writingbuddy/WritingBuddyImpl;->resetPenPointerIcon()V
 
-    .line 2513
     invoke-direct {p0}, Lcom/samsung/android/writingbuddy/WritingBuddyImpl;->getHandler()Landroid/os/Handler;
 
     move-result-object v4
@@ -5057,7 +4522,6 @@
 
     goto/16 :goto_3
 
-    .line 2497
     :cond_f
     const-string v4, "WritingBuddyImpl"
 
@@ -5067,7 +4531,6 @@
 
     goto :goto_5
 
-    .line 2519
     .end local v2    # "imm":Landroid/view/inputmethod/InputMethodManager;
     :cond_10
     const/4 v4, 0x0
@@ -5082,7 +4545,6 @@
     .prologue
     const/4 v3, 0x2
 
-    .line 1431
     iget-boolean v1, p0, Lcom/samsung/android/writingbuddy/WritingBuddyImpl;->mIsReceiveActionButtonEnabled:Z
 
     if-eqz v1, :cond_0
@@ -5091,19 +4553,15 @@
 
     if-eqz v1, :cond_0
 
-    .line 1433
     const/4 v0, 0x0
 
-    .line 1434
     .local v0, "actionString":Ljava/lang/String;
     const/4 v1, 0x4
 
     if-ne p1, v1, :cond_1
 
-    .line 1435
     const-string v0, "ACTION_SEND"
 
-    .line 1446
     :goto_0
     iget-object v1, p0, Lcom/samsung/android/writingbuddy/WritingBuddyImpl;->mPrivateCommandListener:Lcom/samsung/android/writingbuddy/WritingBuddyImpl$OnPrivateCommandListener;
 
@@ -5111,44 +4569,36 @@
 
     invoke-interface {v1, v3, v0, v2}, Lcom/samsung/android/writingbuddy/WritingBuddyImpl$OnPrivateCommandListener;->onPrivateCommand(ILjava/lang/CharSequence;Landroid/os/Bundle;)Z
 
-    .line 1448
     .end local v0    # "actionString":Ljava/lang/String;
     :cond_0
     return-void
 
-    .line 1436
     .restart local v0    # "actionString":Ljava/lang/String;
     :cond_1
     const/4 v1, 0x3
 
     if-ne p1, v1, :cond_2
 
-    .line 1437
     const-string v0, "ACTION_SEARCH"
 
     goto :goto_0
 
-    .line 1438
     :cond_2
     if-ne p1, v3, :cond_3
 
-    .line 1439
     const-string v0, "ACTION_GO"
 
     goto :goto_0
 
-    .line 1440
     :cond_3
     const/16 v1, 0xf
 
     if-ne p1, v1, :cond_4
 
-    .line 1441
     const-string v0, "ACTION_IMAGE"
 
     goto :goto_0
 
-    .line 1443
     :cond_4
     const-string v0, "ACTION_DONE"
 
@@ -5160,7 +4610,6 @@
     .param p1, "result"    # Ljava/lang/CharSequence;
 
     .prologue
-    .line 1413
     iget-boolean v0, p0, Lcom/samsung/android/writingbuddy/WritingBuddyImpl;->mIsHelpModeEnabled:Z
 
     if-eqz v0, :cond_0
@@ -5169,12 +4618,10 @@
 
     if-eqz v0, :cond_0
 
-    .line 1414
     iget-object v0, p0, Lcom/samsung/android/writingbuddy/WritingBuddyImpl;->mTextWritingListener:Lcom/samsung/android/writingbuddy/WritingBuddyImpl$OnTextWritingListener;
 
     invoke-interface {v0, p1}, Lcom/samsung/android/writingbuddy/WritingBuddyImpl$OnTextWritingListener;->onTextReceived(Ljava/lang/CharSequence;)V
 
-    .line 1416
     :cond_0
     return-void
 .end method
@@ -5184,17 +4631,14 @@
     .param p1, "result"    # Ljava/lang/CharSequence;
 
     .prologue
-    .line 1419
     iget-object v0, p0, Lcom/samsung/android/writingbuddy/WritingBuddyImpl;->mTextWritingListener:Lcom/samsung/android/writingbuddy/WritingBuddyImpl$OnTextWritingListener;
 
     if-eqz v0, :cond_0
 
-    .line 1420
     iget-object v0, p0, Lcom/samsung/android/writingbuddy/WritingBuddyImpl;->mTextWritingListener:Lcom/samsung/android/writingbuddy/WritingBuddyImpl$OnTextWritingListener;
 
     invoke-interface {v0, p1}, Lcom/samsung/android/writingbuddy/WritingBuddyImpl$OnTextWritingListener;->onTextReceived(Ljava/lang/CharSequence;)V
 
-    .line 1422
     :cond_0
     return-void
 .end method
@@ -5205,7 +4649,6 @@
     .param p2, "data"    # Landroid/os/Bundle;
 
     .prologue
-    .line 1425
     iget-boolean v0, p0, Lcom/samsung/android/writingbuddy/WritingBuddyImpl;->mIsWatchActionEnabled:Z
 
     if-eqz v0, :cond_0
@@ -5214,14 +4657,12 @@
 
     if-eqz v0, :cond_0
 
-    .line 1426
     iget-object v0, p0, Lcom/samsung/android/writingbuddy/WritingBuddyImpl;->mPrivateCommandListener:Lcom/samsung/android/writingbuddy/WritingBuddyImpl$OnPrivateCommandListener;
 
     const/4 v1, 0x1
 
     invoke-interface {v0, v1, p1, p2}, Lcom/samsung/android/writingbuddy/WritingBuddyImpl$OnPrivateCommandListener;->onPrivateCommand(ILjava/lang/CharSequence;Landroid/os/Bundle;)Z
 
-    .line 1428
     :cond_0
     return-void
 .end method
@@ -5230,20 +4671,16 @@
     .locals 8
 
     .prologue
-    .line 613
     const/4 v4, 0x1
 
-    .line 615
     .local v4, "result":Z
     invoke-static {}, Landroid/os/UserHandle;->myUserId()I
 
     move-result v3
 
-    .line 616
     .local v3, "mCurrentUserId":I
     const-string v0, ""
 
-    .line 617
     .local v0, "CURRENT_SERVICE_NAME":Ljava/lang/String;
     const-string v5, "WritingBuddyImpl"
 
@@ -5267,20 +4704,16 @@
 
     invoke-static {v5, v6}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 620
     sparse-switch v3, :sswitch_data_0
 
-    .line 670
     :try_start_0
-    const-string/jumbo v0, "writingbuddymanagerservice"
+    const-string v0, "writingbuddymanagerservice"
 
-    .line 674
     :goto_0
     invoke-static {v0}, Landroid/os/ServiceManager;->getService(Ljava/lang/String;)Landroid/os/IBinder;
 
     move-result-object v1
 
-    .line 675
     .local v1, "binder":Landroid/os/IBinder;
     invoke-static {v1}, Lcom/samsung/android/writingbuddy/IWritingBuddyManager$Stub;->asInterface(Landroid/os/IBinder;)Lcom/samsung/android/writingbuddy/IWritingBuddyManager;
 
@@ -5288,14 +4721,13 @@
 
     iput-object v5, p0, Lcom/samsung/android/writingbuddy/WritingBuddyImpl;->mWBManager:Lcom/samsung/android/writingbuddy/IWritingBuddyManager;
 
-    .line 676
     const-string v5, "WritingBuddyImpl"
 
     new-instance v6, Ljava/lang/StringBuilder;
 
     invoke-direct {v6}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v7, "setupInRuntime binder, binder:"
+    const-string v7, "setupInRuntime binder, binder:"
 
     invoke-virtual {v6, v7}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -5321,12 +4753,10 @@
 
     invoke-static {v5, v6}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 678
     iget-object v5, p0, Lcom/samsung/android/writingbuddy/WritingBuddyImpl;->mWBManager:Lcom/samsung/android/writingbuddy/IWritingBuddyManager;
 
     if-nez v5, :cond_0
 
-    .line 679
     const-string v5, "WritingBuddyImpl"
 
     const-string v6, "Failed to get WritingBuddyService"
@@ -5335,143 +4765,105 @@
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 680
     const/4 v4, 0x0
 
-    .line 690
     :cond_0
     :goto_1
     invoke-direct {p0}, Lcom/samsung/android/writingbuddy/WritingBuddyImpl;->getHandler()Landroid/os/Handler;
 
-    .line 692
     const/4 v5, 0x0
 
     iput v5, p0, Lcom/samsung/android/writingbuddy/WritingBuddyImpl;->mEditCount:I
 
-    .line 694
     return v4
 
-    .line 622
     .end local v1    # "binder":Landroid/os/IBinder;
     :sswitch_0
     :try_start_1
-    const-string/jumbo v0, "writingbuddymanagerserviceknox0"
+    const-string v0, "writingbuddymanagerserviceknox0"
 
-    .line 623
     goto :goto_0
 
-    .line 625
     :sswitch_1
-    const-string/jumbo v0, "writingbuddymanagerserviceknox1"
+    const-string v0, "writingbuddymanagerserviceknox1"
 
-    .line 626
     goto :goto_0
 
-    .line 628
     :sswitch_2
-    const-string/jumbo v0, "writingbuddymanagerserviceknox2"
+    const-string v0, "writingbuddymanagerserviceknox2"
 
-    .line 629
     goto :goto_0
 
-    .line 631
     :sswitch_3
-    const-string/jumbo v0, "writingbuddymanagerserviceknox3"
+    const-string v0, "writingbuddymanagerserviceknox3"
 
-    .line 632
     goto :goto_0
 
-    .line 634
     :sswitch_4
-    const-string/jumbo v0, "writingbuddymanagerserviceknox4"
+    const-string v0, "writingbuddymanagerserviceknox4"
 
-    .line 635
     goto :goto_0
 
-    .line 637
     :sswitch_5
-    const-string/jumbo v0, "writingbuddymanagerserviceknox5"
+    const-string v0, "writingbuddymanagerserviceknox5"
 
-    .line 638
     goto :goto_0
 
-    .line 640
     :sswitch_6
-    const-string/jumbo v0, "writingbuddymanagerservicerestricted1"
+    const-string v0, "writingbuddymanagerservicerestricted1"
 
-    .line 641
     goto :goto_0
 
-    .line 643
     :sswitch_7
-    const-string/jumbo v0, "writingbuddymanagerservicerestricted2"
+    const-string v0, "writingbuddymanagerservicerestricted2"
 
-    .line 644
     goto :goto_0
 
-    .line 646
     :sswitch_8
-    const-string/jumbo v0, "writingbuddymanagerservicerestricted3"
+    const-string v0, "writingbuddymanagerservicerestricted3"
 
-    .line 647
     goto :goto_0
 
-    .line 649
     :sswitch_9
-    const-string/jumbo v0, "writingbuddymanagerservicerestricted4"
+    const-string v0, "writingbuddymanagerservicerestricted4"
 
-    .line 650
     goto :goto_0
 
-    .line 652
     :sswitch_a
-    const-string/jumbo v0, "writingbuddymanagerservicerestricted5"
+    const-string v0, "writingbuddymanagerservicerestricted5"
 
-    .line 653
     goto :goto_0
 
-    .line 655
     :sswitch_b
-    const-string/jumbo v0, "writingbuddymanagerservicerestricted6"
+    const-string v0, "writingbuddymanagerservicerestricted6"
 
-    .line 656
     goto :goto_0
 
-    .line 658
     :sswitch_c
-    const-string/jumbo v0, "writingbuddymanagerservicerestricted7"
+    const-string v0, "writingbuddymanagerservicerestricted7"
 
-    .line 659
     goto :goto_0
 
-    .line 661
     :sswitch_d
-    const-string/jumbo v0, "writingbuddymanagerservicerestricted8"
+    const-string v0, "writingbuddymanagerservicerestricted8"
 
-    .line 662
     goto :goto_0
 
-    .line 664
     :sswitch_e
-    const-string/jumbo v0, "writingbuddymanagerservicerestricted9"
+    const-string v0, "writingbuddymanagerservicerestricted9"
 
-    .line 665
     goto :goto_0
 
-    .line 667
     :sswitch_f
-    const-string/jumbo v0, "writingbuddymanagerservicerestricted10"
+    const-string v0, "writingbuddymanagerservicerestricted10"
     :try_end_1
     .catch Ljava/lang/Exception; {:try_start_1 .. :try_end_1} :catch_0
 
-    .line 668
     goto :goto_0
 
-    .line 682
     :catch_0
     move-exception v2
 
-    .line 683
     .local v2, "e":Ljava/lang/Exception;
     const-string v5, "WritingBuddyImpl"
 
@@ -5497,20 +4889,17 @@
 
     invoke-static {v5, v6}, Landroid/util/Slog;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 684
-    const-string/jumbo v5, "writingbuddymanagerservice"
+    const-string v5, "writingbuddymanagerservice"
 
     invoke-static {v5}, Landroid/os/ServiceManager;->getService(Ljava/lang/String;)Landroid/os/IBinder;
 
     move-result-object v1
 
-    .line 685
     .restart local v1    # "binder":Landroid/os/IBinder;
     iget-object v5, p0, Lcom/samsung/android/writingbuddy/WritingBuddyImpl;->mWBManager:Lcom/samsung/android/writingbuddy/IWritingBuddyManager;
 
     if-nez v5, :cond_0
 
-    .line 686
     invoke-static {v1}, Lcom/samsung/android/writingbuddy/IWritingBuddyManager$Stub;->asInterface(Landroid/os/IBinder;)Lcom/samsung/android/writingbuddy/IWritingBuddyManager;
 
     move-result-object v5
@@ -5519,7 +4908,6 @@
 
     goto :goto_1
 
-    .line 620
     :sswitch_data_0
     .sparse-switch
         0xa -> :sswitch_6
@@ -5545,10 +4933,8 @@
     .locals 33
 
     .prologue
-    .line 1628
     const/16 v30, 0x0
 
-    .line 1630
     .local v30, "result":Z
     invoke-direct/range {p0 .. p0}, Lcom/samsung/android/writingbuddy/WritingBuddyImpl;->setupInRuntime()Z
 
@@ -5556,14 +4942,11 @@
 
     if-nez v2, :cond_0
 
-    .line 1631
     const/4 v2, 0x0
 
-    .line 1829
     :goto_0
     return v2
 
-    .line 1634
     :cond_0
     move-object/from16 v0, p0
 
@@ -5573,7 +4956,6 @@
 
     move-result-object v6
 
-    .line 1635
     .local v6, "wndToken":Landroid/os/IBinder;
     move-object/from16 v0, p0
 
@@ -5583,15 +4965,12 @@
 
     move-result-object v5
 
-    .line 1637
     .local v5, "appToken":Landroid/os/IBinder;
     const/4 v7, 0x0
 
-    .line 1638
     .local v7, "wndRect":Landroid/graphics/Rect;
     const/4 v8, 0x0
 
-    .line 1639
     .local v8, "scrRect":Landroid/graphics/Rect;
     move-object/from16 v0, p0
 
@@ -5601,7 +4980,6 @@
 
     if-ne v2, v3, :cond_d
 
-    .line 1640
     move-object/from16 v0, p0
 
     iget-object v2, v0, Lcom/samsung/android/writingbuddy/WritingBuddyImpl;->mAnchorView:Landroid/view/View;
@@ -5621,7 +4999,6 @@
 
     move-result-object v7
 
-    .line 1641
     move-object/from16 v0, p0
 
     iget-object v2, v0, Lcom/samsung/android/writingbuddy/WritingBuddyImpl;->mAnchorView:Landroid/view/View;
@@ -5641,7 +5018,6 @@
 
     move-result-object v8
 
-    .line 1647
     :cond_1
     :goto_3
     move-object/from16 v0, p0
@@ -5652,24 +5028,20 @@
 
     if-ne v2, v3, :cond_12
 
-    .line 1648
     new-instance v10, Landroid/view/inputmethod/ExtractedText;
 
     invoke-direct {v10}, Landroid/view/inputmethod/ExtractedText;-><init>()V
 
-    .line 1649
     .local v10, "et":Landroid/view/inputmethod/ExtractedText;
     new-instance v11, Landroid/view/inputmethod/EditorInfo;
 
     invoke-direct {v11}, Landroid/view/inputmethod/EditorInfo;-><init>()V
 
-    .line 1650
     .local v11, "ei":Landroid/view/inputmethod/EditorInfo;
     new-instance v32, Landroid/view/inputmethod/EditorInfo;
 
     invoke-direct/range {v32 .. v32}, Landroid/view/inputmethod/EditorInfo;-><init>()V
 
-    .line 1652
     .local v32, "upView_ei":Landroid/view/inputmethod/EditorInfo;
     move-object/from16 v0, p0
 
@@ -5679,7 +5051,6 @@
 
     if-eqz v2, :cond_5
 
-    .line 1653
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/samsung/android/writingbuddy/WritingBuddyImpl;->mParentView:Landroid/view/View;
@@ -5688,7 +5059,6 @@
 
     check-cast v29, Landroid/widget/EditText;
 
-    .line 1654
     .local v29, "parent":Landroid/widget/EditText;
     new-instance v2, Landroid/view/inputmethod/ExtractedTextRequest;
 
@@ -5698,12 +5068,10 @@
 
     invoke-virtual {v0, v2, v10}, Landroid/widget/EditText;->extractText(Landroid/view/inputmethod/ExtractedTextRequest;Landroid/view/inputmethod/ExtractedText;)Z
 
-    .line 1655
     move-object/from16 v0, v29
 
     invoke-virtual {v0, v11}, Landroid/widget/EditText;->extractEditorInfo(Landroid/view/inputmethod/EditorInfo;)V
 
-    .line 1658
     move-object/from16 v0, p0
 
     iget-object v2, v0, Lcom/samsung/android/writingbuddy/WritingBuddyImpl;->mParentView:Landroid/view/View;
@@ -5714,17 +5082,14 @@
 
     invoke-virtual {v2, v3}, Landroid/widget/EditText;->getWBTextBuffer(Z)Ljava/lang/CharSequence;
 
-    .line 1659
     const/4 v2, 0x0
 
     move-object/from16 v0, p0
 
     iput v2, v0, Lcom/samsung/android/writingbuddy/WritingBuddyImpl;->mEditCount:I
 
-    .line 1661
     const/16 v27, 0x0
 
-    .line 1662
     .local v27, "flagPrevNext":I
     move-object/from16 v0, p0
 
@@ -5736,11 +5101,9 @@
 
     move-result-object v31
 
-    .line 1663
     .local v31, "upView":Landroid/view/View;
     if-eqz v31, :cond_3
 
-    .line 1664
     move-object/from16 v0, v31
 
     instance-of v2, v0, Landroid/widget/EditText;
@@ -5755,14 +5118,12 @@
 
     move-object/from16 v2, v31
 
-    .line 1666
     check-cast v2, Landroid/widget/EditText;
 
     move-object/from16 v0, v32
 
     invoke-virtual {v2, v0}, Landroid/widget/EditText;->extractEditorInfo(Landroid/view/inputmethod/EditorInfo;)V
 
-    .line 1667
     move-object/from16 v0, v32
 
     iget v2, v0, Landroid/view/inputmethod/EditorInfo;->imeOptions:I
@@ -5773,7 +5134,6 @@
 
     if-ne v2, v3, :cond_3
 
-    .line 1668
     move-object/from16 v0, p0
 
     move-object/from16 v1, v31
@@ -5784,12 +5144,10 @@
 
     if-nez v2, :cond_3
 
-    .line 1669
     invoke-virtual/range {v31 .. v31}, Landroid/view/View;->getParent()Landroid/view/ViewParent;
 
     move-result-object v28
 
-    .line 1670
     .local v28, "grandParent":Landroid/view/ViewParent;
     if-eqz v28, :cond_2
 
@@ -5799,11 +5157,9 @@
 
     if-nez v2, :cond_3
 
-    .line 1671
     :cond_2
     or-int/lit8 v27, v27, 0x1
 
-    .line 1678
     .end local v28    # "grandParent":Landroid/view/ViewParent;
     :cond_3
     move-object/from16 v0, p0
@@ -5816,11 +5172,9 @@
 
     move-result-object v25
 
-    .line 1679
     .local v25, "downView":Landroid/view/View;
     if-eqz v25, :cond_4
 
-    .line 1680
     move-object/from16 v0, v25
 
     instance-of v2, v0, Landroid/widget/EditText;
@@ -5833,7 +5187,6 @@
 
     if-eqz v2, :cond_4
 
-    .line 1682
     iget v2, v11, Landroid/view/inputmethod/EditorInfo;->imeOptions:I
 
     and-int/lit16 v2, v2, 0xff
@@ -5842,7 +5195,6 @@
 
     if-ne v2, v3, :cond_4
 
-    .line 1683
     move-object/from16 v0, p0
 
     move-object/from16 v1, v25
@@ -5853,16 +5205,13 @@
 
     if-nez v2, :cond_4
 
-    .line 1684
     or-int/lit8 v27, v27, 0x2
 
-    .line 1690
     :cond_4
     iget-object v2, v11, Landroid/view/inputmethod/EditorInfo;->extras:Landroid/os/Bundle;
 
     if-eqz v2, :cond_5
 
-    .line 1691
     iget-object v2, v11, Landroid/view/inputmethod/EditorInfo;->extras:Landroid/os/Bundle;
 
     const-string v3, "flagPrevNext"
@@ -5871,7 +5220,6 @@
 
     invoke-virtual {v2, v3, v0}, Landroid/os/Bundle;->putInt(Ljava/lang/String;I)V
 
-    .line 1695
     .end local v25    # "downView":Landroid/view/View;
     .end local v27    # "flagPrevNext":I
     .end local v29    # "parent":Landroid/widget/EditText;
@@ -5885,7 +5233,6 @@
 
     if-eqz v2, :cond_6
 
-    .line 1696
     move-object/from16 v0, p0
 
     iget-object v2, v0, Lcom/samsung/android/writingbuddy/WritingBuddyImpl;->mParentView:Landroid/view/View;
@@ -5900,7 +5247,6 @@
 
     iput-object v2, v11, Landroid/view/inputmethod/EditorInfo;->packageName:Ljava/lang/String;
 
-    .line 1699
     :cond_6
     move-object/from16 v0, p0
 
@@ -5916,7 +5262,6 @@
 
     if-eqz v2, :cond_7
 
-    .line 1701
     iget-object v2, v11, Landroid/view/inputmethod/EditorInfo;->extras:Landroid/os/Bundle;
 
     const-string v3, "hasFocus"
@@ -5925,7 +5270,6 @@
 
     invoke-virtual {v2, v3, v4}, Landroid/os/Bundle;->putBoolean(Ljava/lang/String;Z)V
 
-    .line 1705
     :cond_7
     iget v2, v11, Landroid/view/inputmethod/EditorInfo;->inputType:I
 
@@ -5955,14 +5299,12 @@
 
     if-nez v2, :cond_10
 
-    .line 1707
     const/4 v2, 0x1
 
     move-object/from16 v0, p0
 
     iput-boolean v2, v0, Lcom/samsung/android/writingbuddy/WritingBuddyImpl;->mIgnoreSizeChange:Z
 
-    .line 1708
     new-instance v2, Landroid/graphics/Rect;
 
     invoke-direct {v2, v7}, Landroid/graphics/Rect;-><init>(Landroid/graphics/Rect;)V
@@ -5971,11 +5313,9 @@
 
     iput-object v2, v0, Lcom/samsung/android/writingbuddy/WritingBuddyImpl;->mInitRect:Landroid/graphics/Rect;
 
-    .line 1714
     :goto_4
     const/4 v9, 0x0
 
-    .line 1715
     .local v9, "aniInitRect":Landroid/graphics/Rect;
     move-object/from16 v0, p0
 
@@ -5993,7 +5333,6 @@
 
     if-eqz v2, :cond_11
 
-    .line 1716
     move-object/from16 v0, p0
 
     iget-object v2, v0, Lcom/samsung/android/writingbuddy/WritingBuddyImpl;->mPopupCue:Lcom/samsung/android/writingbuddy/PopupCue;
@@ -6002,7 +5341,6 @@
 
     move-result-object v9
 
-    .line 1729
     :goto_5
     move-object/from16 v0, p0
 
@@ -6034,7 +5372,6 @@
 
     iput v2, v0, Lcom/samsung/android/writingbuddy/WritingBuddyImpl;->mViewID:I
 
-    .line 1730
     move-object/from16 v0, p0
 
     iget v2, v0, Lcom/samsung/android/writingbuddy/WritingBuddyImpl;->mViewID:I
@@ -6057,25 +5394,21 @@
 
     iput v2, v0, Lcom/samsung/android/writingbuddy/WritingBuddyImpl;->mViewID:I
 
-    .line 1732
     invoke-direct/range {p0 .. p0}, Lcom/samsung/android/writingbuddy/WritingBuddyImpl;->getModeFlag()I
 
     move-result v12
 
-    .line 1733
     .local v12, "flag":I
     and-int/lit8 v2, v12, 0x8
 
     if-eqz v2, :cond_8
 
-    .line 1735
     const/4 v2, 0x1
 
     move-object/from16 v0, p0
 
     invoke-direct {v0, v2}, Lcom/samsung/android/writingbuddy/WritingBuddyImpl;->dismissPopupCue(Z)Z
 
-    .line 1739
     :cond_8
     :try_start_0
     move-object/from16 v0, p0
@@ -6096,14 +5429,13 @@
 
     invoke-interface/range {v2 .. v12}, Lcom/samsung/android/writingbuddy/IWritingBuddyManager;->show(ILandroid/os/IBinder;Landroid/os/IBinder;Landroid/os/IBinder;Landroid/graphics/Rect;Landroid/graphics/Rect;Landroid/graphics/Rect;Landroid/view/inputmethod/ExtractedText;Landroid/view/inputmethod/EditorInfo;I)V
 
-    .line 1741
     const-string v2, "WritingBuddyImpl"
 
     new-instance v3, Ljava/lang/StringBuilder;
 
     invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v4, "startWritingBuddy "
+    const-string v4, "startWritingBuddy "
 
     invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -6137,7 +5469,6 @@
 
     invoke-static {v2, v3}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1744
     move-object/from16 v0, p0
 
     iget-object v2, v0, Lcom/samsung/android/writingbuddy/WritingBuddyImpl;->mParentView:Landroid/view/View;
@@ -6148,7 +5479,6 @@
 
     invoke-virtual {v2, v3}, Landroid/view/View;->reportCurrentWritingBuddyView(Landroid/view/View;)V
 
-    .line 1745
     const-string v2, "WritingBuddyImpl"
 
     new-instance v3, Ljava/lang/StringBuilder;
@@ -6175,10 +5505,8 @@
 
     invoke-static {v2, v3}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1748
     invoke-direct/range {p0 .. p0}, Lcom/samsung/android/writingbuddy/WritingBuddyImpl;->registerPositionChangeListener()V
 
-    .line 1751
     move-object/from16 v0, p0
 
     iget-object v2, v0, Lcom/samsung/android/writingbuddy/WritingBuddyImpl;->mParentView:Landroid/view/View;
@@ -6187,7 +5515,6 @@
 
     if-eqz v2, :cond_9
 
-    .line 1752
     move-object/from16 v0, p0
 
     iget-object v2, v0, Lcom/samsung/android/writingbuddy/WritingBuddyImpl;->mParentView:Landroid/view/View;
@@ -6196,7 +5523,6 @@
 
     invoke-virtual {v2}, Landroid/widget/EditText;->hideCursorControllers()V
 
-    .line 1755
     :cond_9
     const/4 v2, 0x0
 
@@ -6204,7 +5530,6 @@
 
     iput-boolean v2, v0, Lcom/samsung/android/writingbuddy/WritingBuddyImpl;->mCanShowAutoCompletePopup:Z
 
-    .line 1756
     const/4 v2, 0x1
 
     move-object/from16 v0, p0
@@ -6213,10 +5538,8 @@
     :try_end_0
     .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 1758
     const/16 v30, 0x1
 
-    .line 1827
     .end local v9    # "aniInitRect":Landroid/graphics/Rect;
     .end local v10    # "et":Landroid/view/inputmethod/ExtractedText;
     .end local v11    # "ei":Landroid/view/inputmethod/EditorInfo;
@@ -6236,10 +5559,8 @@
 
     move/from16 v2, v30
 
-    .line 1829
     goto/16 :goto_0
 
-    .line 1640
     :cond_b
     move-object/from16 v0, p0
 
@@ -6247,7 +5568,6 @@
 
     goto/16 :goto_1
 
-    .line 1641
     :cond_c
     move-object/from16 v0, p0
 
@@ -6255,7 +5575,6 @@
 
     goto/16 :goto_2
 
-    .line 1642
     :cond_d
     move-object/from16 v0, p0
 
@@ -6265,7 +5584,6 @@
 
     if-ne v2, v3, :cond_1
 
-    .line 1643
     move-object/from16 v0, p0
 
     iget-object v2, v0, Lcom/samsung/android/writingbuddy/WritingBuddyImpl;->mAnchorView:Landroid/view/View;
@@ -6285,7 +5603,6 @@
 
     move-result-object v7
 
-    .line 1644
     move-object/from16 v0, p0
 
     iget-object v2, v0, Lcom/samsung/android/writingbuddy/WritingBuddyImpl;->mAnchorView:Landroid/view/View;
@@ -6307,7 +5624,6 @@
 
     goto/16 :goto_3
 
-    .line 1643
     :cond_e
     move-object/from16 v0, p0
 
@@ -6315,7 +5631,6 @@
 
     goto :goto_7
 
-    .line 1644
     :cond_f
     move-object/from16 v0, p0
 
@@ -6323,7 +5638,6 @@
 
     goto :goto_8
 
-    .line 1710
     .restart local v10    # "et":Landroid/view/inputmethod/ExtractedText;
     .restart local v11    # "ei":Landroid/view/inputmethod/EditorInfo;
     .restart local v32    # "upView_ei":Landroid/view/inputmethod/EditorInfo;
@@ -6336,7 +5650,6 @@
 
     goto/16 :goto_4
 
-    .line 1718
     .restart local v9    # "aniInitRect":Landroid/graphics/Rect;
     :cond_11
     new-instance v9, Landroid/graphics/Rect;
@@ -6344,7 +5657,6 @@
     .end local v9    # "aniInitRect":Landroid/graphics/Rect;
     invoke-direct {v9}, Landroid/graphics/Rect;-><init>()V
 
-    .line 1719
     .restart local v9    # "aniInitRect":Landroid/graphics/Rect;
     invoke-virtual {v7}, Landroid/graphics/Rect;->width()I
 
@@ -6352,7 +5664,6 @@
 
     iput v2, v9, Landroid/graphics/Rect;->right:I
 
-    .line 1720
     invoke-virtual {v7}, Landroid/graphics/Rect;->height()I
 
     move-result v2
@@ -6361,12 +5672,10 @@
 
     goto/16 :goto_5
 
-    .line 1759
     .restart local v12    # "flag":I
     :catch_0
     move-exception v26
 
-    .line 1760
     .local v26, "e":Landroid/os/RemoteException;
     const-string v2, "WritingBuddyImpl"
 
@@ -6394,22 +5703,18 @@
 
     invoke-static {v2, v3}, Landroid/util/Slog;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1762
     const/4 v2, 0x0
 
     move-object/from16 v0, p0
 
     iput-object v2, v0, Lcom/samsung/android/writingbuddy/WritingBuddyImpl;->mWBManager:Lcom/samsung/android/writingbuddy/IWritingBuddyManager;
 
-    .line 1763
     invoke-direct/range {p0 .. p0}, Lcom/samsung/android/writingbuddy/WritingBuddyImpl;->resetState()V
 
-    .line 1765
     const/16 v30, 0x0
 
     goto/16 :goto_6
 
-    .line 1767
     .end local v9    # "aniInitRect":Landroid/graphics/Rect;
     .end local v10    # "et":Landroid/view/inputmethod/ExtractedText;
     .end local v11    # "ei":Landroid/view/inputmethod/EditorInfo;
@@ -6425,18 +5730,15 @@
 
     if-ne v2, v3, :cond_a
 
-    .line 1768
     new-instance v10, Landroid/view/inputmethod/ExtractedText;
 
     invoke-direct {v10}, Landroid/view/inputmethod/ExtractedText;-><init>()V
 
-    .line 1770
     .restart local v10    # "et":Landroid/view/inputmethod/ExtractedText;
     new-instance v11, Landroid/view/inputmethod/EditorInfo;
 
     invoke-direct {v11}, Landroid/view/inputmethod/EditorInfo;-><init>()V
 
-    .line 1771
     .restart local v11    # "ei":Landroid/view/inputmethod/EditorInfo;
     move-object/from16 v0, p0
 
@@ -6446,18 +5748,15 @@
 
     if-ne v2, v3, :cond_15
 
-    .line 1772
     const/4 v2, 0x2
 
     iput v2, v11, Landroid/view/inputmethod/EditorInfo;->inputType:I
 
-    .line 1776
     :goto_9
     const/4 v2, 0x6
 
     iput v2, v11, Landroid/view/inputmethod/EditorInfo;->imeOptions:I
 
-    .line 1777
     move-object/from16 v0, p0
 
     iget-object v2, v0, Lcom/samsung/android/writingbuddy/WritingBuddyImpl;->mParentView:Landroid/view/View;
@@ -6472,14 +5771,12 @@
 
     iput-object v2, v11, Landroid/view/inputmethod/EditorInfo;->packageName:Ljava/lang/String;
 
-    .line 1780
     move-object/from16 v0, p0
 
     iget-object v2, v0, Lcom/samsung/android/writingbuddy/WritingBuddyImpl;->mTextUpdateListener:Lcom/samsung/android/writingbuddy/WritingBuddyImpl$OnTextUpdateListener;
 
     if-eqz v2, :cond_13
 
-    .line 1781
     move-object/from16 v0, p0
 
     iget-object v2, v0, Lcom/samsung/android/writingbuddy/WritingBuddyImpl;->mTextUpdateListener:Lcom/samsung/android/writingbuddy/WritingBuddyImpl$OnTextUpdateListener;
@@ -6492,11 +5789,9 @@
 
     iput-object v2, v10, Landroid/view/inputmethod/ExtractedText;->text:Ljava/lang/CharSequence;
 
-    .line 1785
     :cond_13
     const/4 v9, 0x0
 
-    .line 1786
     .restart local v9    # "aniInitRect":Landroid/graphics/Rect;
     move-object/from16 v0, p0
 
@@ -6514,7 +5809,6 @@
 
     if-eqz v2, :cond_16
 
-    .line 1787
     move-object/from16 v0, p0
 
     iget-object v2, v0, Lcom/samsung/android/writingbuddy/WritingBuddyImpl;->mPopupCue:Lcom/samsung/android/writingbuddy/PopupCue;
@@ -6523,7 +5817,6 @@
 
     move-result-object v9
 
-    .line 1794
     :goto_a
     move-object/from16 v0, p0
 
@@ -6555,7 +5848,6 @@
 
     iput v2, v0, Lcom/samsung/android/writingbuddy/WritingBuddyImpl;->mViewID:I
 
-    .line 1795
     move-object/from16 v0, p0
 
     iget v2, v0, Lcom/samsung/android/writingbuddy/WritingBuddyImpl;->mViewID:I
@@ -6578,12 +5870,10 @@
 
     iput v2, v0, Lcom/samsung/android/writingbuddy/WritingBuddyImpl;->mViewID:I
 
-    .line 1797
     invoke-direct/range {p0 .. p0}, Lcom/samsung/android/writingbuddy/WritingBuddyImpl;->getModeFlag()I
 
     move-result v12
 
-    .line 1800
     .restart local v12    # "flag":I
     move-object/from16 v0, p0
 
@@ -6599,14 +5889,12 @@
 
     if-eqz v2, :cond_14
 
-    .line 1801
     const-string v2, "WritingBuddyImpl"
 
     const-string v3, "hideCursorControllers "
 
     invoke-static {v2, v3}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1805
     :cond_14
     :try_start_1
     move-object/from16 v0, p0
@@ -6649,14 +5937,13 @@
 
     invoke-interface/range {v13 .. v24}, Lcom/samsung/android/writingbuddy/IWritingBuddyManager;->showTemplate(ILandroid/os/IBinder;Landroid/os/IBinder;Landroid/os/IBinder;Landroid/graphics/Rect;Landroid/graphics/Rect;Landroid/graphics/Rect;ILandroid/view/inputmethod/ExtractedText;Landroid/view/inputmethod/EditorInfo;I)V
 
-    .line 1807
     const-string v2, "WritingBuddyImpl"
 
     new-instance v3, Ljava/lang/StringBuilder;
 
     invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v4, "startWritingBuddy. "
+    const-string v4, "startWritingBuddy. "
 
     invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -6690,7 +5977,6 @@
 
     invoke-static {v2, v3}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1810
     move-object/from16 v0, p0
 
     iget-object v2, v0, Lcom/samsung/android/writingbuddy/WritingBuddyImpl;->mParentView:Landroid/view/View;
@@ -6701,7 +5987,6 @@
 
     invoke-virtual {v2, v3}, Landroid/view/View;->reportCurrentWritingBuddyView(Landroid/view/View;)V
 
-    .line 1811
     const-string v2, "WritingBuddyImpl"
 
     new-instance v3, Ljava/lang/StringBuilder;
@@ -6728,7 +6013,6 @@
 
     invoke-static {v2, v3}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1813
     const/4 v2, 0x1
 
     move-object/from16 v0, p0
@@ -6737,12 +6021,10 @@
     :try_end_1
     .catch Landroid/os/RemoteException; {:try_start_1 .. :try_end_1} :catch_1
 
-    .line 1815
     const/16 v30, 0x1
 
     goto/16 :goto_6
 
-    .line 1774
     .end local v9    # "aniInitRect":Landroid/graphics/Rect;
     .end local v12    # "flag":I
     :cond_15
@@ -6752,7 +6034,6 @@
 
     goto/16 :goto_9
 
-    .line 1789
     .restart local v9    # "aniInitRect":Landroid/graphics/Rect;
     :cond_16
     new-instance v9, Landroid/graphics/Rect;
@@ -6760,7 +6041,6 @@
     .end local v9    # "aniInitRect":Landroid/graphics/Rect;
     invoke-direct {v9}, Landroid/graphics/Rect;-><init>()V
 
-    .line 1790
     .restart local v9    # "aniInitRect":Landroid/graphics/Rect;
     invoke-virtual {v7}, Landroid/graphics/Rect;->width()I
 
@@ -6768,7 +6048,6 @@
 
     iput v2, v9, Landroid/graphics/Rect;->right:I
 
-    .line 1791
     invoke-virtual {v7}, Landroid/graphics/Rect;->height()I
 
     move-result v2
@@ -6777,12 +6056,10 @@
 
     goto/16 :goto_a
 
-    .line 1816
     .restart local v12    # "flag":I
     :catch_1
     move-exception v26
 
-    .line 1817
     .restart local v26    # "e":Landroid/os/RemoteException;
     const-string v2, "WritingBuddyImpl"
 
@@ -6810,17 +6087,14 @@
 
     invoke-static {v2, v3}, Landroid/util/Slog;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1819
     const/4 v2, 0x0
 
     move-object/from16 v0, p0
 
     iput-object v2, v0, Lcom/samsung/android/writingbuddy/WritingBuddyImpl;->mWBManager:Lcom/samsung/android/writingbuddy/IWritingBuddyManager;
 
-    .line 1820
     invoke-direct/range {p0 .. p0}, Lcom/samsung/android/writingbuddy/WritingBuddyImpl;->resetState()V
 
-    .line 1822
     const/4 v2, 0x0
 
     goto/16 :goto_0
@@ -6834,7 +6108,6 @@
 
     const/4 v7, 0x1
 
-    .line 1553
     invoke-direct {p0}, Lcom/samsung/android/writingbuddy/WritingBuddyImpl;->getHandler()Landroid/os/Handler;
 
     move-result-object v6
@@ -6843,26 +6116,21 @@
 
     invoke-virtual {v6, v8}, Landroid/os/Handler;->removeMessages(I)V
 
-    .line 1554
     iput-boolean v2, p0, Lcom/samsung/android/writingbuddy/WritingBuddyImpl;->mIsPopupCueShowMSGCalled:Z
 
-    .line 1556
     iget-object v6, p0, Lcom/samsung/android/writingbuddy/WritingBuddyImpl;->mParentView:Landroid/view/View;
 
     if-nez v6, :cond_0
 
-    .line 1557
     const-string v6, "WritingBuddyImpl"
 
     const-string v7, "Caencel to show writingbuddy cue because mParentView is null"
 
     invoke-static {v6, v7}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1604
     :goto_0
     return-void
 
-    .line 1562
     :cond_0
     iget-object v6, p0, Lcom/samsung/android/writingbuddy/WritingBuddyImpl;->mParentView:Landroid/view/View;
 
@@ -6874,7 +6142,6 @@
 
     move v2, v7
 
-    .line 1563
     .local v2, "isShown":Z
     :cond_1
     if-eqz v2, :cond_2
@@ -6889,7 +6156,6 @@
 
     if-eqz v6, :cond_2
 
-    .line 1564
     iget-object v6, p0, Lcom/samsung/android/writingbuddy/WritingBuddyImpl;->mParentView:Landroid/view/View;
 
     invoke-virtual {v6}, Landroid/view/View;->getParent()Landroid/view/ViewParent;
@@ -6902,11 +6168,9 @@
 
     move-result v2
 
-    .line 1568
     :cond_2
     if-nez v2, :cond_3
 
-    .line 1569
     const-string v6, "WritingBuddyImpl"
 
     const-string v7, "Caencel to show writingbuddy cue."
@@ -6915,7 +6179,6 @@
 
     goto :goto_0
 
-    .line 1573
     :cond_3
     iget v6, p0, Lcom/samsung/android/writingbuddy/WritingBuddyImpl;->mBoardType:I
 
@@ -6923,7 +6186,6 @@
 
     if-ne v6, v8, :cond_8
 
-    .line 1574
     iget-object v6, p0, Lcom/samsung/android/writingbuddy/WritingBuddyImpl;->mAnchorView:Landroid/view/View;
 
     if-eqz v6, :cond_5
@@ -6935,7 +6197,6 @@
 
     move-result-object v5
 
-    .line 1575
     .local v5, "visualRect":Landroid/graphics/Rect;
     iget-object v6, p0, Lcom/samsung/android/writingbuddy/WritingBuddyImpl;->mAnchorView:Landroid/view/View;
 
@@ -6948,7 +6209,6 @@
 
     move-result-object v3
 
-    .line 1576
     .local v3, "scrRect":Landroid/graphics/Rect;
     iget-object v6, p0, Lcom/samsung/android/writingbuddy/WritingBuddyImpl;->mAnchorView:Landroid/view/View;
 
@@ -6961,11 +6221,9 @@
 
     move-result-object v4
 
-    .line 1577
     .local v4, "viewRect":Landroid/graphics/Rect;
     const/16 v0, 0x64
 
-    .line 1578
     .local v0, "bottomOffset":I
     invoke-virtual {v5}, Landroid/graphics/Rect;->height()I
 
@@ -6991,7 +6249,6 @@
 
     if-ge v6, v8, :cond_8
 
-    .line 1579
     :cond_4
     const-string v6, "WritingBuddyImpl"
 
@@ -6999,14 +6256,13 @@
 
     invoke-static {v6, v7}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1580
     const-string v6, "WritingBuddyImpl"
 
     new-instance v7, Ljava/lang/StringBuilder;
 
     invoke-direct {v7}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v8, "viewRect : "
+    const-string v8, "viewRect : "
 
     invoke-virtual {v7, v8}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -7028,7 +6284,6 @@
 
     goto/16 :goto_0
 
-    .line 1574
     .end local v0    # "bottomOffset":I
     .end local v3    # "scrRect":Landroid/graphics/Rect;
     .end local v4    # "viewRect":Landroid/graphics/Rect;
@@ -7038,44 +6293,36 @@
 
     goto :goto_1
 
-    .line 1575
     .restart local v5    # "visualRect":Landroid/graphics/Rect;
     :cond_6
     iget-object v6, p0, Lcom/samsung/android/writingbuddy/WritingBuddyImpl;->mParentView:Landroid/view/View;
 
     goto :goto_2
 
-    .line 1576
     .restart local v3    # "scrRect":Landroid/graphics/Rect;
     :cond_7
     iget-object v6, p0, Lcom/samsung/android/writingbuddy/WritingBuddyImpl;->mParentView:Landroid/view/View;
 
     goto :goto_3
 
-    .line 1586
     .end local v3    # "scrRect":Landroid/graphics/Rect;
     .end local v5    # "visualRect":Landroid/graphics/Rect;
     :cond_8
     invoke-direct {p0}, Lcom/samsung/android/writingbuddy/WritingBuddyImpl;->createPopupCue()V
 
-    .line 1588
     const/4 v1, 0x0
 
-    .line 1589
     .local v1, "cueType":I
     iget v6, p0, Lcom/samsung/android/writingbuddy/WritingBuddyImpl;->mBoardType:I
 
     if-ne v6, v7, :cond_a
 
-    .line 1590
     iget-boolean v6, p0, Lcom/samsung/android/writingbuddy/WritingBuddyImpl;->mIsMultiLineEditor:Z
 
     if-eqz v6, :cond_9
 
-    .line 1591
     const/4 v1, 0x2
 
-    .line 1600
     :goto_4
     iget-object v6, p0, Lcom/samsung/android/writingbuddy/WritingBuddyImpl;->mPopupCue:Lcom/samsung/android/writingbuddy/PopupCue;
 
@@ -7083,20 +6330,17 @@
 
     invoke-virtual {v6, v1, v7}, Lcom/samsung/android/writingbuddy/PopupCue;->show(ILandroid/view/MotionEvent;)V
 
-    .line 1603
     const-string v6, "HOVERED"
 
     invoke-direct {p0, v6}, Lcom/samsung/android/writingbuddy/WritingBuddyImpl;->sendHelpModeResult(Ljava/lang/CharSequence;)V
 
     goto/16 :goto_0
 
-    .line 1593
     :cond_9
     const/4 v1, 0x1
 
     goto :goto_4
 
-    .line 1596
     :cond_a
     const/4 v1, 0x3
 
@@ -7107,7 +6351,6 @@
     .locals 6
 
     .prologue
-    .line 2134
     :try_start_0
     const-string v3, "WritingBuddyImpl"
 
@@ -7115,12 +6358,10 @@
 
     invoke-static {v3, v4}, Landroid/util/Slog;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 2135
     new-instance v2, Landroid/content/Intent;
 
     invoke-direct {v2}, Landroid/content/Intent;-><init>()V
 
-    .line 2136
     .local v2, "intent":Landroid/content/Intent;
     new-instance v3, Landroid/content/ComponentName;
 
@@ -7132,7 +6373,6 @@
 
     invoke-virtual {v2, v3}, Landroid/content/Intent;->setComponent(Landroid/content/ComponentName;)Landroid/content/Intent;
 
-    .line 2138
     iget-object v3, p0, Lcom/samsung/android/writingbuddy/WritingBuddyImpl;->mParentView:Landroid/view/View;
 
     if-eqz v3, :cond_1
@@ -7143,38 +6383,32 @@
 
     move-result-object v0
 
-    .line 2139
     .local v0, "context":Landroid/content/Context;
     :goto_0
     if-eqz v0, :cond_0
 
-    .line 2140
     sget-object v3, Landroid/os/UserHandle;->CURRENT_OR_SELF:Landroid/os/UserHandle;
 
     invoke-virtual {v0, v2, v3}, Landroid/content/Context;->startServiceAsUser(Landroid/content/Intent;Landroid/os/UserHandle;)Landroid/content/ComponentName;
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 2145
     .end local v0    # "context":Landroid/content/Context;
     .end local v2    # "intent":Landroid/content/Intent;
     :cond_0
     :goto_1
     return-void
 
-    .line 2138
     .restart local v2    # "intent":Landroid/content/Intent;
     :cond_1
     const/4 v0, 0x0
 
     goto :goto_0
 
-    .line 2142
     .end local v2    # "intent":Landroid/content/Intent;
     :catch_0
     move-exception v1
 
-    .line 2143
     .local v1, "e":Ljava/lang/Exception;
     const-string v3, "WritingBuddyImpl"
 
@@ -7205,21 +6439,18 @@
     .locals 3
 
     .prologue
-    .line 2199
     iget v1, p0, Lcom/samsung/android/writingbuddy/WritingBuddyImpl;->mBoardType:I
 
     const/4 v2, 0x1
 
     if-ne v1, v2, :cond_1
 
-    .line 2201
     iget-object v1, p0, Lcom/samsung/android/writingbuddy/WritingBuddyImpl;->mParentView:Landroid/view/View;
 
     instance-of v1, v1, Landroid/widget/EditText;
 
     if-eqz v1, :cond_0
 
-    .line 2202
     iget-object v1, p0, Lcom/samsung/android/writingbuddy/WritingBuddyImpl;->mParentView:Landroid/view/View;
 
     check-cast v1, Landroid/widget/EditText;
@@ -7228,29 +6459,24 @@
 
     invoke-virtual {v1, v2}, Landroid/widget/EditText;->setWBPositionListenerEnalbed(Z)V
 
-    .line 2213
     :cond_0
     :goto_0
     return-void
 
-    .line 2206
     :cond_1
     iget-object v1, p0, Lcom/samsung/android/writingbuddy/WritingBuddyImpl;->mParentView:Landroid/view/View;
 
     if-eqz v1, :cond_0
 
-    .line 2207
     iget-object v1, p0, Lcom/samsung/android/writingbuddy/WritingBuddyImpl;->mParentView:Landroid/view/View;
 
     invoke-virtual {v1}, Landroid/view/View;->getViewTreeObserver()Landroid/view/ViewTreeObserver;
 
     move-result-object v0
 
-    .line 2208
     .local v0, "vto":Landroid/view/ViewTreeObserver;
     if-eqz v0, :cond_0
 
-    .line 2209
     iget-object v1, p0, Lcom/samsung/android/writingbuddy/WritingBuddyImpl;->mOnScrollChangedListener:Landroid/view/ViewTreeObserver$OnScrollChangedListener;
 
     invoke-virtual {v0, v1}, Landroid/view/ViewTreeObserver;->removeOnScrollChangedListener(Landroid/view/ViewTreeObserver$OnScrollChangedListener;)V
@@ -7266,15 +6492,12 @@
     .prologue
     const/4 v0, 0x1
 
-    .line 2026
     iget v1, p0, Lcom/samsung/android/writingbuddy/WritingBuddyImpl;->mState:I
 
     if-ne v1, v0, :cond_0
 
-    .line 2027
     iget-boolean v0, p0, Lcom/samsung/android/writingbuddy/WritingBuddyImpl;->mCanShowAutoCompletePopup:Z
 
-    .line 2030
     :cond_0
     return v0
 .end method
@@ -7283,14 +6506,12 @@
     .locals 2
 
     .prologue
-    .line 1073
     const-string v0, "WritingBuddyImpl"
 
     const-string v1, "Finish WritingBuddy"
 
     invoke-static {v0, v1}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1076
     iget-boolean v0, p0, Lcom/samsung/android/writingbuddy/WritingBuddyImpl;->mIsPerformingAction:Z
 
     if-eqz v0, :cond_0
@@ -7299,18 +6520,15 @@
 
     if-eqz v0, :cond_0
 
-    .line 1077
     const-string v0, "WritingBuddyImpl"
 
     const-string v1, "Cancel finish."
 
     invoke-static {v0, v1}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1081
     :goto_0
     return-void
 
-    .line 1080
     :cond_0
     const/4 v0, 0x1
 
@@ -7324,7 +6542,6 @@
     .param p1, "immediate"    # Z
 
     .prologue
-    .line 1089
     const-string v0, "WritingBuddyImpl"
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -7347,7 +6564,6 @@
 
     invoke-static {v0, v1}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1093
     return-void
 .end method
 
@@ -7355,7 +6571,6 @@
     .locals 1
 
     .prologue
-    .line 1030
     const/4 v0, 0x0
 
     return-object v0
@@ -7365,7 +6580,6 @@
     .locals 1
 
     .prologue
-    .line 837
     iget v0, p0, Lcom/samsung/android/writingbuddy/WritingBuddyImpl;->mEditorType:I
 
     return v0
@@ -7375,7 +6589,6 @@
     .locals 2
 
     .prologue
-    .line 1063
     iget-object v0, p0, Lcom/samsung/android/writingbuddy/WritingBuddyImpl;->mParentView:Landroid/view/View;
 
     iget v1, p0, Lcom/samsung/android/writingbuddy/WritingBuddyImpl;->mBoardType:I
@@ -7391,7 +6604,6 @@
     .locals 1
 
     .prologue
-    .line 1037
     iget-boolean v0, p0, Lcom/samsung/android/writingbuddy/WritingBuddyImpl;->mIsImageModePenDrawing:Z
 
     return v0
@@ -7401,7 +6613,6 @@
     .locals 1
 
     .prologue
-    .line 1022
     iget-object v0, p0, Lcom/samsung/android/writingbuddy/WritingBuddyImpl;->mWBRect:Landroid/graphics/Rect;
 
     return-object v0
@@ -7415,7 +6626,6 @@
     .prologue
     const/4 v1, 0x0
 
-    .line 2112
     invoke-virtual {p2, v1}, Landroid/view/MotionEvent;->getToolType(I)I
 
     move-result v2
@@ -7424,46 +6634,38 @@
 
     if-eq v2, v3, :cond_1
 
-    .line 2128
     :cond_0
     :goto_0
     return v1
 
-    .line 2116
     :cond_1
     iget-boolean v2, p0, Lcom/samsung/android/writingbuddy/WritingBuddyImpl;->mIsWaitingHideSoftInput:Z
 
     if-nez v2, :cond_0
 
-    .line 2120
     invoke-virtual {p2}, Landroid/view/MotionEvent;->getAction()I
 
     move-result v0
 
-    .line 2121
     .local v0, "action":I
     const/16 v2, 0x9
 
     if-ne v0, v2, :cond_2
 
-    .line 2122
     const-string v2, "WritingBuddyImpl"
 
     const-string v3, "handleMotionEvent ACTION_HOVER_ENTER"
 
     invoke-static {v2, v3}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 2123
     invoke-direct {p0}, Lcom/samsung/android/writingbuddy/WritingBuddyImpl;->setupInRuntime()Z
 
     move-result v2
 
     if-nez v2, :cond_2
 
-    .line 2124
     invoke-direct {p0}, Lcom/samsung/android/writingbuddy/WritingBuddyImpl;->startWritingBuddyService()V
 
-    .line 2128
     :cond_2
     const/4 v2, 0x1
 
@@ -7487,10 +6689,8 @@
 
     const/4 v2, 0x0
 
-    .line 2064
     if-nez p1, :cond_3
 
-    .line 2066
     iget-object v0, p0, Lcom/samsung/android/writingbuddy/WritingBuddyImpl;->mPopupCue:Lcom/samsung/android/writingbuddy/PopupCue;
 
     if-eqz v0, :cond_0
@@ -7503,15 +6703,12 @@
 
     if-eqz v0, :cond_0
 
-    .line 2067
     iget-object v0, p0, Lcom/samsung/android/writingbuddy/WritingBuddyImpl;->mPopupCue:Lcom/samsung/android/writingbuddy/PopupCue;
 
     invoke-virtual {v0, v2}, Lcom/samsung/android/writingbuddy/PopupCue;->dismiss(Z)V
 
-    .line 2068
     iput-object v5, p0, Lcom/samsung/android/writingbuddy/WritingBuddyImpl;->mPopupCue:Lcom/samsung/android/writingbuddy/PopupCue;
 
-    .line 2072
     :cond_0
     iget-boolean v0, p0, Lcom/samsung/android/writingbuddy/WritingBuddyImpl;->mIsPopupCueShowMSGCalled:Z
 
@@ -7521,17 +6718,14 @@
 
     if-eqz v0, :cond_1
 
-    .line 2073
     iget-object v0, p0, Lcom/samsung/android/writingbuddy/WritingBuddyImpl;->mHandler:Landroid/os/Handler;
 
     const/4 v1, 0x6
 
     invoke-virtual {v0, v1}, Landroid/os/Handler;->removeMessages(I)V
 
-    .line 2074
     iput-boolean v2, p0, Lcom/samsung/android/writingbuddy/WritingBuddyImpl;->mIsPopupCueShowMSGCalled:Z
 
-    .line 2078
     :cond_1
     invoke-direct {p0}, Lcom/samsung/android/writingbuddy/WritingBuddyImpl;->isWBRunning()Z
 
@@ -7539,7 +6733,6 @@
 
     if-eqz v0, :cond_2
 
-    .line 2079
     iget v0, p0, Lcom/samsung/android/writingbuddy/WritingBuddyImpl;->mWindowMode:I
 
     and-int/2addr v0, v3
@@ -7552,22 +6745,18 @@
 
     if-eq v0, v1, :cond_2
 
-    .line 2080
     const-string v0, "WritingBuddyImpl"
 
     const-string v1, "Window mode changed."
 
     invoke-static {v0, v1}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 2081
     invoke-virtual {p0, v4}, Lcom/samsung/android/writingbuddy/WritingBuddyImpl;->finish(Z)V
 
-    .line 2099
     :cond_2
     :goto_0
     return v2
 
-    .line 2085
     :cond_3
     iget v0, p0, Lcom/samsung/android/writingbuddy/WritingBuddyImpl;->mBoardType:I
 
@@ -7575,7 +6764,6 @@
 
     if-ne v0, v1, :cond_4
 
-    .line 2087
     iget-object v0, p0, Lcom/samsung/android/writingbuddy/WritingBuddyImpl;->mPopupCue:Lcom/samsung/android/writingbuddy/PopupCue;
 
     if-eqz v0, :cond_4
@@ -7588,15 +6776,12 @@
 
     if-eqz v0, :cond_4
 
-    .line 2088
     iget-object v0, p0, Lcom/samsung/android/writingbuddy/WritingBuddyImpl;->mPopupCue:Lcom/samsung/android/writingbuddy/PopupCue;
 
     invoke-virtual {v0, v2}, Lcom/samsung/android/writingbuddy/PopupCue;->dismiss(Z)V
 
-    .line 2089
     iput-object v5, p0, Lcom/samsung/android/writingbuddy/WritingBuddyImpl;->mPopupCue:Lcom/samsung/android/writingbuddy/PopupCue;
 
-    .line 2094
     :cond_4
     iget v0, p0, Lcom/samsung/android/writingbuddy/WritingBuddyImpl;->mBoardType:I
 
@@ -7608,14 +6793,12 @@
 
     if-eqz v0, :cond_2
 
-    .line 2095
     const-string v0, "WritingBuddyImpl"
 
     const-string v1, "Update."
 
     invoke-static {v0, v1}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 2096
     iget-object v0, p0, Lcom/samsung/android/writingbuddy/WritingBuddyImpl;->mHandler:Landroid/os/Handler;
 
     const/4 v1, 0x5
@@ -7629,7 +6812,6 @@
     .locals 1
 
     .prologue
-    .line 1000
     invoke-direct {p0}, Lcom/samsung/android/writingbuddy/WritingBuddyImpl;->isWBRunning()Z
 
     move-result v0
@@ -7646,14 +6828,13 @@
 
     const/4 v6, 0x1
 
-    .line 860
     const-string v3, "WritingBuddyImpl"
 
     new-instance v4, Ljava/lang/StringBuilder;
 
     invoke-direct {v4}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v5, "notifyPositionChanged code : "
+    const-string v5, "notifyPositionChanged code : "
 
     invoke-virtual {v4, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -7681,25 +6862,20 @@
 
     invoke-static {v3, v4}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 862
     iget v3, p0, Lcom/samsung/android/writingbuddy/WritingBuddyImpl;->mState:I
 
     if-eqz v3, :cond_0
 
-    .line 863
     const/4 v2, 0x0
 
-    .line 864
     .local v2, "wndRect":Landroid/graphics/Rect;
     const/4 v1, 0x0
 
-    .line 865
     .local v1, "scrRect":Landroid/graphics/Rect;
     iget v3, p0, Lcom/samsung/android/writingbuddy/WritingBuddyImpl;->mBoardType:I
 
     if-ne v3, v6, :cond_3
 
-    .line 866
     iget-object v3, p0, Lcom/samsung/android/writingbuddy/WritingBuddyImpl;->mAnchorView:Landroid/view/View;
 
     if-eqz v3, :cond_1
@@ -7711,7 +6887,6 @@
 
     move-result-object v2
 
-    .line 867
     iget-object v3, p0, Lcom/samsung/android/writingbuddy/WritingBuddyImpl;->mAnchorView:Landroid/view/View;
 
     if-eqz v3, :cond_2
@@ -7723,7 +6898,6 @@
 
     move-result-object v1
 
-    .line 874
     :goto_2
     iget-boolean v3, p0, Lcom/samsung/android/writingbuddy/WritingBuddyImpl;->mIgnoreSizeChange:Z
 
@@ -7757,14 +6931,12 @@
 
     if-eq v3, v4, :cond_6
 
-    .line 894
     .end local v1    # "scrRect":Landroid/graphics/Rect;
     .end local v2    # "wndRect":Landroid/graphics/Rect;
     :cond_0
     :goto_3
     return-void
 
-    .line 866
     .restart local v1    # "scrRect":Landroid/graphics/Rect;
     .restart local v2    # "wndRect":Landroid/graphics/Rect;
     :cond_1
@@ -7772,13 +6944,11 @@
 
     goto :goto_0
 
-    .line 867
     :cond_2
     iget-object v3, p0, Lcom/samsung/android/writingbuddy/WritingBuddyImpl;->mParentView:Landroid/view/View;
 
     goto :goto_1
 
-    .line 869
     :cond_3
     iget-object v3, p0, Lcom/samsung/android/writingbuddy/WritingBuddyImpl;->mAnchorView:Landroid/view/View;
 
@@ -7791,7 +6961,6 @@
 
     move-result-object v2
 
-    .line 870
     iget-object v3, p0, Lcom/samsung/android/writingbuddy/WritingBuddyImpl;->mAnchorView:Landroid/view/View;
 
     if-eqz v3, :cond_5
@@ -7805,19 +6974,16 @@
 
     goto :goto_2
 
-    .line 869
     :cond_4
     iget-object v3, p0, Lcom/samsung/android/writingbuddy/WritingBuddyImpl;->mParentView:Landroid/view/View;
 
     goto :goto_4
 
-    .line 870
     :cond_5
     iget-object v3, p0, Lcom/samsung/android/writingbuddy/WritingBuddyImpl;->mParentView:Landroid/view/View;
 
     goto :goto_5
 
-    .line 879
     :cond_6
     sget-boolean v3, Lcom/samsung/android/writingbuddy/WritingBuddyImpl;->DEBUG:Z
 
@@ -7855,40 +7021,34 @@
 
     invoke-static {v3, v4}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 882
     :cond_7
     :try_start_0
     iget-object v3, p0, Lcom/samsung/android/writingbuddy/WritingBuddyImpl;->mWBManager:Lcom/samsung/android/writingbuddy/IWritingBuddyManager;
 
     if-eqz v3, :cond_0
 
-    .line 883
     iget-object v3, p0, Lcom/samsung/android/writingbuddy/WritingBuddyImpl;->mWBManager:Lcom/samsung/android/writingbuddy/IWritingBuddyManager;
 
     iget v4, p0, Lcom/samsung/android/writingbuddy/WritingBuddyImpl;->mViewID:I
 
     invoke-interface {v3, v4, v2, v1}, Lcom/samsung/android/writingbuddy/IWritingBuddyManager;->updatePosition(ILandroid/graphics/Rect;Landroid/graphics/Rect;)V
 
-    .line 884
     iget v3, p0, Lcom/samsung/android/writingbuddy/WritingBuddyImpl;->mBoardType:I
 
     if-ne v3, v6, :cond_0
 
-    .line 885
     new-instance v3, Landroid/graphics/Rect;
 
     invoke-direct {v3, v2}, Landroid/graphics/Rect;-><init>(Landroid/graphics/Rect;)V
 
     iput-object v3, p0, Lcom/samsung/android/writingbuddy/WritingBuddyImpl;->mWinRectUpdated:Landroid/graphics/Rect;
 
-    .line 886
     new-instance v3, Landroid/graphics/Rect;
 
     invoke-direct {v3, v1}, Landroid/graphics/Rect;-><init>(Landroid/graphics/Rect;)V
 
     iput-object v3, p0, Lcom/samsung/android/writingbuddy/WritingBuddyImpl;->mScrRectUpdated:Landroid/graphics/Rect;
 
-    .line 887
     invoke-direct {p0}, Lcom/samsung/android/writingbuddy/WritingBuddyImpl;->getHandler()Landroid/os/Handler;
 
     move-result-object v3
@@ -7903,11 +7063,9 @@
 
     goto :goto_3
 
-    .line 890
     :catch_0
     move-exception v0
 
-    .line 891
     .local v0, "e":Landroid/os/RemoteException;
     const-string v3, "WritingBuddyImpl"
 
@@ -7923,7 +7081,6 @@
     .param p1, "outAttrs"    # Landroid/view/inputmethod/EditorInfo;
 
     .prologue
-    .line 1148
     const/4 v0, 0x0
 
     return-object v0
@@ -7934,15 +7091,12 @@
     .param p1, "b"    # Landroid/graphics/Bitmap;
 
     .prologue
-    .line 1157
     if-nez p1, :cond_1
 
-    .line 1164
     :cond_0
     :goto_0
     return-void
 
-    .line 1160
     :cond_1
     iget-boolean v0, p0, Lcom/samsung/android/writingbuddy/WritingBuddyImpl;->mIsImageWritingEnabled:Z
 
@@ -7964,7 +7118,6 @@
 
     if-nez v0, :cond_0
 
-    .line 1162
     iget-object v0, p0, Lcom/samsung/android/writingbuddy/WritingBuddyImpl;->mImageWritingListener:Lcom/samsung/android/writingbuddy/WritingBuddyImpl$OnImageWritingListener;
 
     invoke-interface {v0, p1}, Lcom/samsung/android/writingbuddy/WritingBuddyImpl$OnImageWritingListener;->onImageReceived(Landroid/graphics/Bitmap;)V
@@ -7986,14 +7139,13 @@
 
     const/4 v7, 0x1
 
-    .line 1245
     const-string v6, "WritingBuddyImpl"
 
     new-instance v9, Ljava/lang/StringBuilder;
 
     invoke-direct {v9}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v10, "onResultReceived "
+    const-string v10, "onResultReceived "
 
     invoke-virtual {v9, v10}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -8039,17 +7191,14 @@
 
     invoke-static {v6, v9}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1248
     if-nez p1, :cond_1
 
-    .line 1381
     :cond_0
     :goto_0
     return-void
 
-    .line 1253
     :cond_1
-    const-string/jumbo v6, "service_cb_client_changed"
+    const-string v6, "service_cb_client_changed"
 
     invoke-virtual {p1, v6}, Landroid/os/Bundle;->getInt(Ljava/lang/String;)I
 
@@ -8057,14 +7206,12 @@
 
     if-lez v6, :cond_6
 
-    .line 1254
     const-string v6, "WritingBuddyImpl"
 
-    const-string/jumbo v9, "onResultReceived SERVICE_CB_CLIENT_CHANGED "
+    const-string v9, "onResultReceived SERVICE_CB_CLIENT_CHANGED "
 
     invoke-static {v6, v9}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1257
     iget v6, p0, Lcom/samsung/android/writingbuddy/WritingBuddyImpl;->mBoardType:I
 
     if-ne v6, v7, :cond_4
@@ -8075,22 +7222,18 @@
 
     if-eqz v6, :cond_4
 
-    .line 1258
     iget-boolean v6, p0, Lcom/samsung/android/writingbuddy/WritingBuddyImpl;->mIsCursorBlinkDisabled:Z
 
     if-eqz v6, :cond_2
 
-    .line 1259
     iget-object v6, p0, Lcom/samsung/android/writingbuddy/WritingBuddyImpl;->mParentView:Landroid/view/View;
 
     check-cast v6, Landroid/widget/EditText;
 
     invoke-virtual {v6, v8}, Landroid/widget/EditText;->stopCursorBlink(Z)V
 
-    .line 1260
     iput-boolean v8, p0, Lcom/samsung/android/writingbuddy/WritingBuddyImpl;->mIsCursorBlinkDisabled:Z
 
-    .line 1263
     :cond_2
     iget v6, p0, Lcom/samsung/android/writingbuddy/WritingBuddyImpl;->mState:I
 
@@ -8116,14 +7259,12 @@
 
     if-nez v6, :cond_3
 
-    .line 1265
     iget-object v6, p0, Lcom/samsung/android/writingbuddy/WritingBuddyImpl;->mParentView:Landroid/view/View;
 
     check-cast v6, Landroid/widget/EditText;
 
     invoke-virtual {v6, v7}, Landroid/widget/EditText;->applyWBTextBuffer(Z)Z
 
-    .line 1269
     :cond_3
     iget-object v6, p0, Lcom/samsung/android/writingbuddy/WritingBuddyImpl;->mParentView:Landroid/view/View;
 
@@ -8131,10 +7272,8 @@
 
     invoke-virtual {v6, v11}, Landroid/widget/EditText;->setWBTextBuffer(Ljava/lang/CharSequence;)V
 
-    .line 1270
     iput v8, p0, Lcom/samsung/android/writingbuddy/WritingBuddyImpl;->mEditCount:I
 
-    .line 1274
     :cond_4
     iget-object v6, p0, Lcom/samsung/android/writingbuddy/WritingBuddyImpl;->mParentView:Landroid/view/View;
 
@@ -8154,12 +7293,10 @@
 
     if-eqz v6, :cond_5
 
-    .line 1275
     iget-object v6, p0, Lcom/samsung/android/writingbuddy/WritingBuddyImpl;->mParentView:Landroid/view/View;
 
     invoke-virtual {v6, v11}, Landroid/view/View;->reportCurrentWritingBuddyView(Landroid/view/View;)V
 
-    .line 1276
     const-string v6, "WritingBuddyImpl"
 
     new-instance v9, Ljava/lang/StringBuilder;
@@ -8182,16 +7319,13 @@
 
     invoke-static {v6, v9}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1279
     :cond_5
     invoke-direct {p0}, Lcom/samsung/android/writingbuddy/WritingBuddyImpl;->unregisterPositionChangeListener()V
 
-    .line 1280
     iput v8, p0, Lcom/samsung/android/writingbuddy/WritingBuddyImpl;->mState:I
 
-    .line 1284
     :cond_6
-    const-string/jumbo v6, "service_cb_inflate_done"
+    const-string v6, "service_cb_inflate_done"
 
     invoke-virtual {p1, v6}, Landroid/os/Bundle;->getInt(Ljava/lang/String;)I
 
@@ -8199,36 +7333,31 @@
 
     if-lez v6, :cond_7
 
-    .line 1285
     const-string v6, "WritingBuddyImpl"
 
-    const-string/jumbo v9, "onResultReceived SERVICE_CB_INFLATE_DONE "
+    const-string v9, "onResultReceived SERVICE_CB_INFLATE_DONE "
 
     invoke-static {v6, v9}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1286
     invoke-direct {p0, v12, v7, v11, p2}, Lcom/samsung/android/writingbuddy/WritingBuddyImpl;->scheduleState(IILandroid/view/MotionEvent;I)Z
 
-    .line 1290
     :cond_7
-    const-string/jumbo v6, "service_cb_writing_done"
+    const-string v6, "service_cb_writing_done"
 
     invoke-virtual {p1, v6}, Landroid/os/Bundle;->getInt(Ljava/lang/String;)I
 
     move-result v5
 
-    .line 1291
     .local v5, "resultValue":I
     if-lez v5, :cond_a
 
-    .line 1292
     const-string v6, "WritingBuddyImpl"
 
     new-instance v9, Ljava/lang/StringBuilder;
 
     invoke-direct {v9}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v10, "onResultReceived SERVICE_CB_WRITING_DONE "
+    const-string v10, "onResultReceived SERVICE_CB_WRITING_DONE "
 
     invoke-virtual {v9, v10}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -8244,17 +7373,14 @@
 
     invoke-static {v6, v9}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1294
     iput-boolean v7, p0, Lcom/samsung/android/writingbuddy/WritingBuddyImpl;->mCanShowAutoCompletePopup:Z
 
-    .line 1296
     iget-object v6, p0, Lcom/samsung/android/writingbuddy/WritingBuddyImpl;->mParentView:Landroid/view/View;
 
     instance-of v6, v6, Landroid/widget/EditText;
 
     if-eqz v6, :cond_a
 
-    .line 1298
     iget-object v6, p0, Lcom/samsung/android/writingbuddy/WritingBuddyImpl;->mParentView:Landroid/view/View;
 
     invoke-virtual {v6}, Landroid/view/View;->getVisibility()I
@@ -8265,7 +7391,6 @@
 
     move v4, v7
 
-    .line 1299
     .local v4, "isShown":Z
     :goto_1
     if-eqz v4, :cond_8
@@ -8280,7 +7405,6 @@
 
     if-eqz v6, :cond_8
 
-    .line 1300
     iget-object v6, p0, Lcom/samsung/android/writingbuddy/WritingBuddyImpl;->mParentView:Landroid/view/View;
 
     invoke-virtual {v6}, Landroid/view/View;->getParent()Landroid/view/ViewParent;
@@ -8293,7 +7417,6 @@
 
     move-result v4
 
-    .line 1303
     :cond_8
     iget v6, p0, Lcom/samsung/android/writingbuddy/WritingBuddyImpl;->mEditCount:I
 
@@ -8301,12 +7424,10 @@
 
     if-eqz v4, :cond_9
 
-    .line 1304
     if-ne v5, v7, :cond_13
 
     move v3, v7
 
-    .line 1305
     .local v3, "initBuffer":Z
     :goto_2
     iget-object v6, p0, Lcom/samsung/android/writingbuddy/WritingBuddyImpl;->mParentView:Landroid/view/View;
@@ -8315,7 +7436,6 @@
 
     invoke-virtual {v6, v3}, Landroid/widget/EditText;->applyWBTextBuffer(Z)Z
 
-    .line 1309
     .end local v3    # "initBuffer":Z
     :cond_9
     iget-object v6, p0, Lcom/samsung/android/writingbuddy/WritingBuddyImpl;->mParentView:Landroid/view/View;
@@ -8324,13 +7444,11 @@
 
     invoke-virtual {v6, v11}, Landroid/widget/EditText;->setWBTextBuffer(Ljava/lang/CharSequence;)V
 
-    .line 1310
     iput v8, p0, Lcom/samsung/android/writingbuddy/WritingBuddyImpl;->mEditCount:I
 
-    .line 1315
     .end local v4    # "isShown":Z
     :cond_a
-    const-string/jumbo v6, "service_cb_perform_editor_action"
+    const-string v6, "service_cb_perform_editor_action"
 
     const/4 v9, -0x1
 
@@ -8338,25 +7456,22 @@
 
     move-result v2
 
-    .line 1316
     .local v2, "editorAction":I
     if-ltz v2, :cond_c
 
-    .line 1317
     iget-object v6, p0, Lcom/samsung/android/writingbuddy/WritingBuddyImpl;->mParentView:Landroid/view/View;
 
     instance-of v6, v6, Landroid/widget/EditText;
 
     if-eqz v6, :cond_b
 
-    .line 1318
     const-string v6, "WritingBuddyImpl"
 
     new-instance v9, Ljava/lang/StringBuilder;
 
     invoke-direct {v9}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v10, "onResultReceived SERVICE_CB_PERFORM_EDITOR_ACTION "
+    const-string v10, "onResultReceived SERVICE_CB_PERFORM_EDITOR_ACTION "
 
     invoke-virtual {v9, v10}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -8372,26 +7487,21 @@
 
     invoke-static {v6, v9}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1319
     iput-boolean v7, p0, Lcom/samsung/android/writingbuddy/WritingBuddyImpl;->mIsPerformingAction:Z
 
-    .line 1320
     iget-object v6, p0, Lcom/samsung/android/writingbuddy/WritingBuddyImpl;->mParentView:Landroid/view/View;
 
     check-cast v6, Landroid/widget/EditText;
 
     invoke-virtual {v6, v2}, Landroid/widget/EditText;->performWBEditorAction(I)V
 
-    .line 1321
     iput-boolean v8, p0, Lcom/samsung/android/writingbuddy/WritingBuddyImpl;->mIsPerformingAction:Z
 
-    .line 1325
     :cond_b
     invoke-direct {p0, v2}, Lcom/samsung/android/writingbuddy/WritingBuddyImpl;->sendActionButtonResult(I)V
 
-    .line 1329
     :cond_c
-    const-string/jumbo v6, "service_cb_closed"
+    const-string v6, "service_cb_closed"
 
     invoke-virtual {p1, v6}, Landroid/os/Bundle;->getInt(Ljava/lang/String;)I
 
@@ -8399,29 +7509,24 @@
 
     if-lez v6, :cond_d
 
-    .line 1330
     const-string v6, "WritingBuddyImpl"
 
-    const-string/jumbo v9, "onResultReceived SERVICE_CB_CLOSED "
+    const-string v9, "onResultReceived SERVICE_CB_CLOSED "
 
     invoke-static {v6, v9}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1331
     invoke-direct {p0, v12, v12, v11, p2}, Lcom/samsung/android/writingbuddy/WritingBuddyImpl;->scheduleState(IILandroid/view/MotionEvent;I)Z
 
-    .line 1334
     const-string v6, "CLOSED"
 
     invoke-direct {p0, v6}, Lcom/samsung/android/writingbuddy/WritingBuddyImpl;->sendHelpModeResult(Ljava/lang/CharSequence;)V
 
-    .line 1337
     const-string v6, "CLOSED"
 
     invoke-direct {p0, v6, v11}, Lcom/samsung/android/writingbuddy/WritingBuddyImpl;->sendWatchActionResult(Ljava/lang/CharSequence;Landroid/os/Bundle;)V
 
-    .line 1341
     :cond_d
-    const-string/jumbo v6, "service_cb_private"
+    const-string v6, "service_cb_private"
 
     invoke-virtual {p1, v6}, Landroid/os/Bundle;->getInt(Ljava/lang/String;)I
 
@@ -8429,12 +7534,10 @@
 
     if-lez v6, :cond_e
 
-    .line 1343
-    const-string/jumbo v6, "service_cb_private"
+    const-string v6, "service_cb_private"
 
     invoke-direct {p0, v6, p1}, Lcom/samsung/android/writingbuddy/WritingBuddyImpl;->sendWatchActionResult(Ljava/lang/CharSequence;Landroid/os/Bundle;)V
 
-    .line 1347
     :cond_e
     iget-boolean v6, p0, Lcom/samsung/android/writingbuddy/WritingBuddyImpl;->mIsMathWritingEnabled:Z
 
@@ -8444,23 +7547,19 @@
 
     if-eqz v6, :cond_f
 
-    .line 1348
-    const-string/jumbo v6, "service_cb_math_writing_result"
+    const-string v6, "service_cb_math_writing_result"
 
     invoke-virtual {p1, v6, v11}, Landroid/os/Bundle;->getCharSequence(Ljava/lang/String;Ljava/lang/CharSequence;)Ljava/lang/CharSequence;
 
     move-result-object v1
 
-    .line 1349
     .local v1, "cs":Ljava/lang/CharSequence;
     if-eqz v1, :cond_f
 
-    .line 1350
     iget-object v6, p0, Lcom/samsung/android/writingbuddy/WritingBuddyImpl;->mTextWritingListener:Lcom/samsung/android/writingbuddy/WritingBuddyImpl$OnTextWritingListener;
 
     invoke-interface {v6, v1}, Lcom/samsung/android/writingbuddy/WritingBuddyImpl$OnTextWritingListener;->onTextReceived(Ljava/lang/CharSequence;)V
 
-    .line 1351
     sget-boolean v6, Lcom/samsung/android/writingbuddy/WritingBuddyImpl;->DEBUG:Z
 
     if-eqz v6, :cond_f
@@ -8471,7 +7570,7 @@
 
     invoke-direct {v9}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v10, "onResultReceived SERVICE_CB_MATH_WRITING_RESULT : "
+    const-string v10, "onResultReceived SERVICE_CB_MATH_WRITING_RESULT : "
 
     invoke-virtual {v9, v10}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -8487,7 +7586,6 @@
 
     invoke-static {v6, v9}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1356
     .end local v1    # "cs":Ljava/lang/CharSequence;
     :cond_f
     iget-boolean v6, p0, Lcom/samsung/android/writingbuddy/WritingBuddyImpl;->mIsHelpModeEnabled:Z
@@ -8498,23 +7596,19 @@
 
     if-eqz v6, :cond_10
 
-    .line 1357
-    const-string/jumbo v6, "service_cb_help_mode_result"
+    const-string v6, "service_cb_help_mode_result"
 
     invoke-virtual {p1, v6, v11}, Landroid/os/Bundle;->getCharSequence(Ljava/lang/String;Ljava/lang/CharSequence;)Ljava/lang/CharSequence;
 
     move-result-object v1
 
-    .line 1358
     .restart local v1    # "cs":Ljava/lang/CharSequence;
     if-eqz v1, :cond_10
 
-    .line 1359
     iget-object v6, p0, Lcom/samsung/android/writingbuddy/WritingBuddyImpl;->mTextWritingListener:Lcom/samsung/android/writingbuddy/WritingBuddyImpl$OnTextWritingListener;
 
     invoke-interface {v6, v1}, Lcom/samsung/android/writingbuddy/WritingBuddyImpl$OnTextWritingListener;->onTextReceived(Ljava/lang/CharSequence;)V
 
-    .line 1360
     sget-boolean v6, Lcom/samsung/android/writingbuddy/WritingBuddyImpl;->DEBUG:Z
 
     if-eqz v6, :cond_10
@@ -8525,7 +7619,7 @@
 
     invoke-direct {v9}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v10, "onResultReceived SERVICE_CB_HELP_MODE_RESULT : "
+    const-string v10, "onResultReceived SERVICE_CB_HELP_MODE_RESULT : "
 
     invoke-virtual {v9, v10}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -8541,10 +7635,9 @@
 
     invoke-static {v6, v9}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1364
     .end local v1    # "cs":Ljava/lang/CharSequence;
     :cond_10
-    const-string/jumbo v6, "service_cb_mms_data_delete"
+    const-string v6, "service_cb_mms_data_delete"
 
     invoke-virtual {p1, v6}, Landroid/os/Bundle;->getInt(Ljava/lang/String;)I
 
@@ -8552,38 +7645,33 @@
 
     if-lez v6, :cond_11
 
-    .line 1365
     const-string v6, "WritingBuddyImpl"
 
-    const-string/jumbo v9, "onResultReceived SERVICE_CB_MMS_DATA_DELETE "
+    const-string v9, "onResultReceived SERVICE_CB_MMS_DATA_DELETE "
 
     invoke-static {v6, v9}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1366
     const-string v6, "MMS_DATA_DELETE"
 
     invoke-direct {p0, v6}, Lcom/samsung/android/writingbuddy/WritingBuddyImpl;->sendMMSDataDelete(Ljava/lang/CharSequence;)V
 
-    .line 1370
     :cond_11
-    const-string/jumbo v6, "service_cb_drawing_mode_set"
+    const-string v6, "service_cb_drawing_mode_set"
 
     invoke-virtual {p1, v6}, Landroid/os/Bundle;->getInt(Ljava/lang/String;)I
 
     move-result v0
 
-    .line 1371
     .local v0, "ImageMode":I
     if-lez v0, :cond_0
 
-    .line 1372
     const-string v6, "WritingBuddyImpl"
 
     new-instance v9, Ljava/lang/StringBuilder;
 
     invoke-direct {v9}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v10, "onResultReceived SERVICE_CB_DRAWING_MODE_SET : "
+    const-string v10, "onResultReceived SERVICE_CB_DRAWING_MODE_SET : "
 
     invoke-virtual {v9, v10}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -8599,13 +7687,11 @@
 
     invoke-static {v6, v9}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1373
     if-ne v0, v7, :cond_14
 
     :goto_3
     iput-boolean v7, p0, Lcom/samsung/android/writingbuddy/WritingBuddyImpl;->mIsImageModePenDrawing:Z
 
-    .line 1375
     iget-boolean v6, p0, Lcom/samsung/android/writingbuddy/WritingBuddyImpl;->mIsReceiveActionButtonEnabled:Z
 
     if-eqz v6, :cond_0
@@ -8614,12 +7700,10 @@
 
     if-eqz v6, :cond_0
 
-    .line 1376
     iget-boolean v6, p0, Lcom/samsung/android/writingbuddy/WritingBuddyImpl;->mIsImageModePenDrawing:Z
 
     if-eqz v6, :cond_0
 
-    .line 1377
     iget-object v6, p0, Lcom/samsung/android/writingbuddy/WritingBuddyImpl;->mPrivateCommandListener:Lcom/samsung/android/writingbuddy/WritingBuddyImpl$OnPrivateCommandListener;
 
     const-string v7, "DRAWING_MODE"
@@ -8633,14 +7717,12 @@
     :cond_12
     move v4, v8
 
-    .line 1298
     goto/16 :goto_1
 
     .restart local v4    # "isShown":Z
     :cond_13
     move v3, v8
 
-    .line 1304
     goto/16 :goto_2
 
     .end local v4    # "isShown":Z
@@ -8649,7 +7731,6 @@
     :cond_14
     move v7, v8
 
-    .line 1373
     goto :goto_3
 .end method
 
@@ -8659,7 +7740,6 @@
     .param p2, "end"    # I
 
     .prologue
-    .line 1219
     sget-boolean v2, Lcom/samsung/android/writingbuddy/WritingBuddyImpl;->DEBUG:Z
 
     if-eqz v2, :cond_0
@@ -8670,7 +7750,7 @@
 
     invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v4, "onTextDeleted() : "
+    const-string v4, "onTextDeleted() : "
 
     invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -8696,7 +7776,6 @@
 
     invoke-static {v2, v3}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1221
     :cond_0
     iget-object v2, p0, Lcom/samsung/android/writingbuddy/WritingBuddyImpl;->mParentView:Landroid/view/View;
 
@@ -8704,7 +7783,6 @@
 
     if-eqz v2, :cond_2
 
-    .line 1222
     iget-object v2, p0, Lcom/samsung/android/writingbuddy/WritingBuddyImpl;->mParentView:Landroid/view/View;
 
     check-cast v2, Landroid/widget/EditText;
@@ -8715,7 +7793,6 @@
 
     move-result-object v1
 
-    .line 1223
     .local v1, "textBuffer":Ljava/lang/CharSequence;
     sget-boolean v2, Lcom/samsung/android/writingbuddy/WritingBuddyImpl;->DEBUG:Z
 
@@ -8727,7 +7804,7 @@
 
     invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v4, "onTextDeleted() : "
+    const-string v4, "onTextDeleted() : "
 
     invoke-virtual {v2, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -8754,7 +7831,6 @@
 
     invoke-static {v3, v2}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1225
     :cond_1
     instance-of v2, v1, Landroid/text/Editable;
 
@@ -8762,10 +7838,8 @@
 
     move-object v0, v1
 
-    .line 1226
     check-cast v0, Landroid/text/Editable;
 
-    .line 1227
     .local v0, "editable":Landroid/text/Editable;
     invoke-interface {v1}, Ljava/lang/CharSequence;->length()I
 
@@ -8775,21 +7849,18 @@
 
     if-ge v2, v3, :cond_4
 
-    .line 1238
     .end local v0    # "editable":Landroid/text/Editable;
     .end local v1    # "textBuffer":Ljava/lang/CharSequence;
     :cond_2
     :goto_1
     return-void
 
-    .line 1223
     .restart local v1    # "textBuffer":Ljava/lang/CharSequence;
     :cond_3
     const/4 v2, 0x0
 
     goto :goto_0
 
-    .line 1229
     .restart local v0    # "editable":Landroid/text/Editable;
     :cond_4
     invoke-interface {v1}, Ljava/lang/CharSequence;->length()I
@@ -8798,20 +7869,17 @@
 
     if-ge v2, p2, :cond_5
 
-    .line 1230
     const-string v2, "WritingBuddyImpl"
 
-    const-string/jumbo v3, "onTextDeleted() : end is out of bound textBuffer length"
+    const-string v3, "onTextDeleted() : end is out of bound textBuffer length"
 
     invoke-static {v2, v3}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
     goto :goto_1
 
-    .line 1233
     :cond_5
     invoke-interface {v0, p1, p2}, Landroid/text/Editable;->delete(II)Landroid/text/Editable;
 
-    .line 1236
     .end local v0    # "editable":Landroid/text/Editable;
     :cond_6
     iget v2, p0, Lcom/samsung/android/writingbuddy/WritingBuddyImpl;->mEditCount:I
@@ -8832,7 +7900,6 @@
     .prologue
     const/4 v3, 0x0
 
-    .line 1174
     sget-boolean v2, Lcom/samsung/android/writingbuddy/WritingBuddyImpl;->DEBUG:Z
 
     if-eqz v2, :cond_0
@@ -8843,7 +7910,7 @@
 
     invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v5, "onTextInserted() : "
+    const-string v5, "onTextInserted() : "
 
     invoke-virtual {v2, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -8890,7 +7957,6 @@
 
     invoke-static {v4, v2}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1177
     :cond_0
     iget v2, p0, Lcom/samsung/android/writingbuddy/WritingBuddyImpl;->mBoardType:I
 
@@ -8898,19 +7964,16 @@
 
     if-ne v2, v4, :cond_3
 
-    .line 1178
     iget-object v2, p0, Lcom/samsung/android/writingbuddy/WritingBuddyImpl;->mTextWritingListener:Lcom/samsung/android/writingbuddy/WritingBuddyImpl$OnTextWritingListener;
 
     if-eqz v2, :cond_1
 
     if-eqz p2, :cond_1
 
-    .line 1179
     iget-object v2, p0, Lcom/samsung/android/writingbuddy/WritingBuddyImpl;->mTextWritingListener:Lcom/samsung/android/writingbuddy/WritingBuddyImpl$OnTextWritingListener;
 
     invoke-interface {v2, p2}, Lcom/samsung/android/writingbuddy/WritingBuddyImpl$OnTextWritingListener;->onTextReceived(Ljava/lang/CharSequence;)V
 
-    .line 1209
     :cond_1
     :goto_1
     return-void
@@ -8918,10 +7981,8 @@
     :cond_2
     move-object v2, v3
 
-    .line 1174
     goto :goto_0
 
-    .line 1185
     :cond_3
     iget-object v2, p0, Lcom/samsung/android/writingbuddy/WritingBuddyImpl;->mParentView:Landroid/view/View;
 
@@ -8935,7 +7996,6 @@
 
     if-ne v2, v4, :cond_1
 
-    .line 1186
     iget-object v2, p0, Lcom/samsung/android/writingbuddy/WritingBuddyImpl;->mParentView:Landroid/view/View;
 
     check-cast v2, Landroid/widget/EditText;
@@ -8946,7 +8006,6 @@
 
     move-result-object v1
 
-    .line 1187
     .local v1, "textBuffer":Ljava/lang/CharSequence;
     sget-boolean v2, Lcom/samsung/android/writingbuddy/WritingBuddyImpl;->DEBUG:Z
 
@@ -8958,7 +8017,7 @@
 
     invoke-direct {v4}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v5, "onTextInserted() : "
+    const-string v5, "onTextInserted() : "
 
     invoke-virtual {v4, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -8985,7 +8044,6 @@
 
     invoke-static {v2, v3}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1189
     :cond_5
     instance-of v2, v1, Landroid/text/Editable;
 
@@ -8993,10 +8051,8 @@
 
     move-object v0, v1
 
-    .line 1190
     check-cast v0, Landroid/text/Editable;
 
-    .line 1191
     .local v0, "editable":Landroid/text/Editable;
     invoke-interface {v0}, Landroid/text/Editable;->length()I
 
@@ -9004,23 +8060,19 @@
 
     if-ge v2, p1, :cond_6
 
-    .line 1192
     const-string v2, "WritingBuddyImpl"
 
-    const-string/jumbo v3, "onTextInserted() : where is out of bound editor length"
+    const-string v3, "onTextInserted() : where is out of bound editor length"
 
     invoke-static {v2, v3}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
     goto :goto_1
 
-    .line 1195
     :cond_6
     invoke-interface {v0, p1, p2}, Landroid/text/Editable;->insert(ILjava/lang/CharSequence;)Landroid/text/Editable;
 
-    .line 1196
     invoke-static {v0, p3}, Landroid/text/Selection;->setSelection(Landroid/text/Spannable;I)V
 
-    .line 1200
     .end local v0    # "editable":Landroid/text/Editable;
     :cond_7
     if-eqz p2, :cond_8
@@ -9031,14 +8083,12 @@
 
     if-eqz v2, :cond_8
 
-    .line 1201
     iget v2, p0, Lcom/samsung/android/writingbuddy/WritingBuddyImpl;->mEditCount:I
 
     add-int/lit8 v2, v2, 0x1
 
     iput v2, p0, Lcom/samsung/android/writingbuddy/WritingBuddyImpl;->mEditCount:I
 
-    .line 1205
     :cond_8
     invoke-static {p2}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
 
@@ -9046,7 +8096,6 @@
 
     if-nez v2, :cond_1
 
-    .line 1206
     const-string v2, "TEXT_INSERTED"
 
     invoke-direct {p0, v2}, Lcom/samsung/android/writingbuddy/WritingBuddyImpl;->sendHelpModeResult(Ljava/lang/CharSequence;)V
@@ -9062,14 +8111,13 @@
 
     const/4 v6, 0x1
 
-    .line 1388
     const-string v3, "WritingBuddyImpl"
 
     new-instance v4, Ljava/lang/StringBuilder;
 
     invoke-direct {v4}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v5, "onUpdateDialog code : "
+    const-string v5, "onUpdateDialog code : "
 
     invoke-virtual {v4, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -9087,25 +8135,20 @@
 
     invoke-static {v3, v4}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1389
     iget v3, p0, Lcom/samsung/android/writingbuddy/WritingBuddyImpl;->mState:I
 
     if-eqz v3, :cond_1
 
-    .line 1390
     const/4 v2, 0x0
 
-    .line 1391
     .local v2, "wndRect":Landroid/graphics/Rect;
     const/4 v1, 0x0
 
-    .line 1392
     .local v1, "scrRect":Landroid/graphics/Rect;
     iget v3, p0, Lcom/samsung/android/writingbuddy/WritingBuddyImpl;->mBoardType:I
 
     if-ne v3, v6, :cond_4
 
-    .line 1393
     iget-object v3, p0, Lcom/samsung/android/writingbuddy/WritingBuddyImpl;->mAnchorView:Landroid/view/View;
 
     if-eqz v3, :cond_2
@@ -9117,7 +8160,6 @@
 
     move-result-object v2
 
-    .line 1394
     iget-object v3, p0, Lcom/samsung/android/writingbuddy/WritingBuddyImpl;->mAnchorView:Landroid/view/View;
 
     if-eqz v3, :cond_3
@@ -9129,7 +8171,6 @@
 
     move-result-object v1
 
-    .line 1400
     :goto_2
     sget-boolean v3, Lcom/samsung/android/writingbuddy/WritingBuddyImpl;->DEBUG:Z
 
@@ -9167,14 +8208,12 @@
 
     invoke-static {v3, v4}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1403
     :cond_0
     :try_start_0
     iget-object v3, p0, Lcom/samsung/android/writingbuddy/WritingBuddyImpl;->mWBManager:Lcom/samsung/android/writingbuddy/IWritingBuddyManager;
 
     if-eqz v3, :cond_1
 
-    .line 1404
     iget-object v3, p0, Lcom/samsung/android/writingbuddy/WritingBuddyImpl;->mWBManager:Lcom/samsung/android/writingbuddy/IWritingBuddyManager;
 
     iget v4, p0, Lcom/samsung/android/writingbuddy/WritingBuddyImpl;->mViewID:I
@@ -9183,14 +8222,12 @@
     :try_end_0
     .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 1410
     .end local v1    # "scrRect":Landroid/graphics/Rect;
     .end local v2    # "wndRect":Landroid/graphics/Rect;
     :cond_1
     :goto_3
     return-void
 
-    .line 1393
     .restart local v1    # "scrRect":Landroid/graphics/Rect;
     .restart local v2    # "wndRect":Landroid/graphics/Rect;
     :cond_2
@@ -9198,13 +8235,11 @@
 
     goto :goto_0
 
-    .line 1394
     :cond_3
     iget-object v3, p0, Lcom/samsung/android/writingbuddy/WritingBuddyImpl;->mParentView:Landroid/view/View;
 
     goto :goto_1
 
-    .line 1396
     :cond_4
     iget-object v3, p0, Lcom/samsung/android/writingbuddy/WritingBuddyImpl;->mAnchorView:Landroid/view/View;
 
@@ -9217,7 +8252,6 @@
 
     move-result-object v2
 
-    .line 1397
     iget-object v3, p0, Lcom/samsung/android/writingbuddy/WritingBuddyImpl;->mAnchorView:Landroid/view/View;
 
     if-eqz v3, :cond_6
@@ -9231,23 +8265,19 @@
 
     goto :goto_2
 
-    .line 1396
     :cond_5
     iget-object v3, p0, Lcom/samsung/android/writingbuddy/WritingBuddyImpl;->mParentView:Landroid/view/View;
 
     goto :goto_4
 
-    .line 1397
     :cond_6
     iget-object v3, p0, Lcom/samsung/android/writingbuddy/WritingBuddyImpl;->mParentView:Landroid/view/View;
 
     goto :goto_5
 
-    .line 1406
     :catch_0
     move-exception v0
 
-    .line 1407
     .local v0, "e":Landroid/os/RemoteException;
     const-string v3, "WritingBuddyImpl"
 
@@ -9263,10 +8293,8 @@
     .param p1, "anchor"    # Landroid/view/View;
 
     .prologue
-    .line 815
     iput-object p1, p0, Lcom/samsung/android/writingbuddy/WritingBuddyImpl;->mAnchorView:Landroid/view/View;
 
-    .line 816
     return-void
 .end method
 
@@ -9275,10 +8303,8 @@
     .param p1, "template"    # I
 
     .prologue
-    .line 852
     iput p1, p0, Lcom/samsung/android/writingbuddy/WritingBuddyImpl;->mBoardTemplate:I
 
-    .line 853
     return-void
 .end method
 
@@ -9287,10 +8313,8 @@
     .param p1, "type"    # I
 
     .prologue
-    .line 726
     iput p1, p0, Lcom/samsung/android/writingbuddy/WritingBuddyImpl;->mBoardType:I
 
-    .line 727
     return-void
 .end method
 
@@ -9299,7 +8323,6 @@
     .param p1, "type"    # I
 
     .prologue
-    .line 825
     const/4 v0, 0x1
 
     if-eq p1, v0, :cond_0
@@ -9308,7 +8331,6 @@
 
     if-eq p1, v0, :cond_0
 
-    .line 826
     new-instance v0, Ljava/lang/IllegalArgumentException;
 
     const-string v1, "You should set the Drawable, String, subDescription and Object in Param"
@@ -9317,11 +8339,9 @@
 
     throw v0
 
-    .line 828
     :cond_0
     iput p1, p0, Lcom/samsung/android/writingbuddy/WritingBuddyImpl;->mEditorType:I
 
-    .line 829
     return-void
 .end method
 
@@ -9330,10 +8350,8 @@
     .param p1, "enabled"    # Z
 
     .prologue
-    .line 778
     iput-boolean p1, p0, Lcom/samsung/android/writingbuddy/WritingBuddyImpl;->mIsImageWritingEnabled:Z
 
-    .line 779
     return-void
 .end method
 
@@ -9342,10 +8360,8 @@
     .param p1, "enabled"    # Z
 
     .prologue
-    .line 789
     iput-boolean p1, p0, Lcom/samsung/android/writingbuddy/WritingBuddyImpl;->mIsMathWritingEnabled:Z
 
-    .line 790
     return-void
 .end method
 
@@ -9354,7 +8370,6 @@
     .param p1, "l"    # Lcom/samsung/android/writingbuddy/WritingBuddyImpl$OnImageWritingListener;
 
     .prologue
-    .line 945
     if-eqz p1, :cond_0
 
     const/4 v0, 0x1
@@ -9362,13 +8377,10 @@
     :goto_0
     invoke-virtual {p0, v0}, Lcom/samsung/android/writingbuddy/WritingBuddyImpl;->setImageWritingEnabled(Z)V
 
-    .line 947
     iput-object p1, p0, Lcom/samsung/android/writingbuddy/WritingBuddyImpl;->mImageWritingListener:Lcom/samsung/android/writingbuddy/WritingBuddyImpl$OnImageWritingListener;
 
-    .line 948
     return-void
 
-    .line 945
     :cond_0
     const/4 v0, 0x0
 
@@ -9380,10 +8392,8 @@
     .param p1, "l"    # Lcom/samsung/android/writingbuddy/WritingBuddyImpl$OnPrivateCommandListener;
 
     .prologue
-    .line 957
     iput-object p1, p0, Lcom/samsung/android/writingbuddy/WritingBuddyImpl;->mPrivateCommandListener:Lcom/samsung/android/writingbuddy/WritingBuddyImpl$OnPrivateCommandListener;
 
-    .line 958
     return-void
 .end method
 
@@ -9392,10 +8402,8 @@
     .param p1, "l"    # Lcom/samsung/android/writingbuddy/WritingBuddyImpl$OnTextUpdateListener;
 
     .prologue
-    .line 967
     iput-object p1, p0, Lcom/samsung/android/writingbuddy/WritingBuddyImpl;->mTextUpdateListener:Lcom/samsung/android/writingbuddy/WritingBuddyImpl$OnTextUpdateListener;
 
-    .line 968
     return-void
 .end method
 
@@ -9404,10 +8412,8 @@
     .param p1, "l"    # Lcom/samsung/android/writingbuddy/WritingBuddyImpl$OnTextWritingListener;
 
     .prologue
-    .line 935
     iput-object p1, p0, Lcom/samsung/android/writingbuddy/WritingBuddyImpl;->mTextWritingListener:Lcom/samsung/android/writingbuddy/WritingBuddyImpl$OnTextWritingListener;
 
-    .line 936
     return-void
 .end method
 
@@ -9418,36 +8424,27 @@
     .prologue
     const/4 v2, 0x0
 
-    .line 705
     if-nez p1, :cond_0
 
-    .line 706
     const-string v0, "WritingBuddyImpl"
 
     const-string v1, "Reset parent View"
 
     invoke-static {v0, v1}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 708
     iput-object v2, p0, Lcom/samsung/android/writingbuddy/WritingBuddyImpl;->mParentView:Landroid/view/View;
 
-    .line 709
     iput-object v2, p0, Lcom/samsung/android/writingbuddy/WritingBuddyImpl;->mAnchorView:Landroid/view/View;
 
-    .line 710
     iput-object v2, p0, Lcom/samsung/android/writingbuddy/WritingBuddyImpl;->mPopupCue:Lcom/samsung/android/writingbuddy/PopupCue;
 
-    .line 711
     iput-object v2, p0, Lcom/samsung/android/writingbuddy/WritingBuddyImpl;->mWBManager:Lcom/samsung/android/writingbuddy/IWritingBuddyManager;
 
-    .line 712
     iput-object v2, p0, Lcom/samsung/android/writingbuddy/WritingBuddyImpl;->mHandler:Landroid/os/Handler;
 
-    .line 716
     :goto_0
     return-void
 
-    .line 714
     :cond_0
     iput-object p1, p0, Lcom/samsung/android/writingbuddy/WritingBuddyImpl;->mParentView:Landroid/view/View;
 
@@ -9461,10 +8458,8 @@
     .prologue
     const/4 v2, 0x1
 
-    .line 799
     iput-object p1, p0, Lcom/samsung/android/writingbuddy/WritingBuddyImpl;->mPrivateCMD:Ljava/lang/String;
 
-    .line 801
     const-string v0, "HELP_MODE"
 
     iget-object v1, p0, Lcom/samsung/android/writingbuddy/WritingBuddyImpl;->mPrivateCMD:Ljava/lang/String;
@@ -9475,15 +8470,12 @@
 
     if-eqz v0, :cond_1
 
-    .line 802
     iput-boolean v2, p0, Lcom/samsung/android/writingbuddy/WritingBuddyImpl;->mIsHelpModeEnabled:Z
 
-    .line 808
     :cond_0
     :goto_0
     return-void
 
-    .line 803
     :cond_1
     const-string v0, "WATCH_ACTION"
 
@@ -9495,12 +8487,10 @@
 
     if-eqz v0, :cond_2
 
-    .line 804
     iput-boolean v2, p0, Lcom/samsung/android/writingbuddy/WritingBuddyImpl;->mIsWatchActionEnabled:Z
 
     goto :goto_0
 
-    .line 805
     :cond_2
     const-string v0, "RECEIVE_ACTION_BUTTON"
 
@@ -9512,7 +8502,6 @@
 
     if-eqz v0, :cond_0
 
-    .line 806
     iput-boolean v2, p0, Lcom/samsung/android/writingbuddy/WritingBuddyImpl;->mIsReceiveActionButtonEnabled:Z
 
     goto :goto_0
@@ -9522,7 +8511,6 @@
     .locals 1
 
     .prologue
-    .line 1614
     const/4 v0, 0x0
 
     return v0
@@ -9532,24 +8520,20 @@
     .locals 4
 
     .prologue
-    .line 1044
     const-string v2, "WritingBuddyImpl"
 
-    const-string/jumbo v3, "showPopup"
+    const-string v3, "showPopup"
 
     invoke-static {v2, v3}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1046
     const/4 v1, 0x0
 
-    .line 1048
     .local v1, "style":I
     :try_start_0
     iget-object v2, p0, Lcom/samsung/android/writingbuddy/WritingBuddyImpl;->mWBManager:Lcom/samsung/android/writingbuddy/IWritingBuddyManager;
 
     if-eqz v2, :cond_0
 
-    .line 1049
     iget-object v2, p0, Lcom/samsung/android/writingbuddy/WritingBuddyImpl;->mWBManager:Lcom/samsung/android/writingbuddy/IWritingBuddyManager;
 
     iget v3, p0, Lcom/samsung/android/writingbuddy/WritingBuddyImpl;->mViewID:I
@@ -9558,16 +8542,13 @@
     :try_end_0
     .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 1054
     :cond_0
     :goto_0
     return-void
 
-    .line 1051
     :catch_0
     move-exception v0
 
-    .line 1052
     .local v0, "e":Landroid/os/RemoteException;
     const-string v2, "WritingBuddyImpl"
 

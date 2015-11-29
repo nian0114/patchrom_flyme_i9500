@@ -25,12 +25,10 @@
     .locals 1
 
     .prologue
-    .line 1512
     iput-object p1, p0, Lcom/android/server/epm/overlay/ThemeManagerService$3;->this$0:Lcom/android/server/epm/overlay/ThemeManagerService;
 
     invoke-direct {p0}, Ljava/util/TimerTask;-><init>()V
 
-    .line 1513
     const/4 v0, 0x0
 
     iput v0, p0, Lcom/android/server/epm/overlay/ThemeManagerService$3;->val:I
@@ -44,7 +42,6 @@
     .locals 4
 
     .prologue
-    .line 1517
     const-string v1, "USER_TRIAL"
 
     new-instance v2, Ljava/lang/StringBuilder;
@@ -86,16 +83,14 @@
 
     invoke-static {v1, v2}, Landroid/util/Slog;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1523
     new-instance v0, Landroid/content/Intent;
 
     const-string v1, "TIMER_UP"
 
     invoke-direct {v0, v1}, Landroid/content/Intent;-><init>(Ljava/lang/String;)V
 
-    .line 1524
     .local v0, "intent":Landroid/content/Intent;
-    const-string/jumbo v1, "packageName"
+    const-string v1, "packageName"
 
     iget-object v2, p0, Lcom/android/server/epm/overlay/ThemeManagerService$3;->this$0:Lcom/android/server/epm/overlay/ThemeManagerService;
 
@@ -106,7 +101,6 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;
 
-    .line 1525
     iget-object v1, p0, Lcom/android/server/epm/overlay/ThemeManagerService$3;->this$0:Lcom/android/server/epm/overlay/ThemeManagerService;
 
     # getter for: Lcom/android/server/epm/overlay/ThemeManagerService;->mContext:Landroid/content/Context;
@@ -116,7 +110,6 @@
 
     invoke-virtual {v1, v0}, Landroid/content/Context;->sendBroadcast(Landroid/content/Intent;)V
 
-    .line 1526
     # getter for: Lcom/android/server/epm/overlay/ThemeManagerService;->TAG:Ljava/lang/String;
     invoke-static {}, Lcom/android/server/epm/overlay/ThemeManagerService;->access$300()Ljava/lang/String;
 
@@ -126,7 +119,6 @@
 
     invoke-static {v1, v2}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1527
     iget-object v1, p0, Lcom/android/server/epm/overlay/ThemeManagerService$3;->this$0:Lcom/android/server/epm/overlay/ThemeManagerService;
 
     const/4 v2, 0x1
@@ -134,6 +126,5 @@
     # invokes: Lcom/android/server/epm/overlay/ThemeManagerService;->removeTrialPackage(Z)V
     invoke-static {v1, v2}, Lcom/android/server/epm/overlay/ThemeManagerService;->access$1200(Lcom/android/server/epm/overlay/ThemeManagerService;Z)V
 
-    .line 1529
     return-void
 .end method

@@ -23,7 +23,6 @@
     .locals 0
 
     .prologue
-    .line 223
     iput-object p1, p0, Lcom/android/server/TelephonyRegistry$1;->this$0:Lcom/android/server/TelephonyRegistry;
 
     invoke-direct {p0}, Landroid/os/Handler;-><init>()V
@@ -38,16 +37,13 @@
     .param p1, "msg"    # Landroid/os/Message;
 
     .prologue
-    .line 226
     iget v2, p1, Landroid/os/Message;->what:I
 
     packed-switch v2, :pswitch_data_0
 
-    .line 240
     :cond_0
     return-void
 
-    .line 229
     :pswitch_0
     invoke-static {}, Landroid/telephony/TelephonyManager;->getDefault()Landroid/telephony/TelephonyManager;
 
@@ -57,7 +53,6 @@
 
     move-result v0
 
-    .line 230
     .local v0, "numPhones":I
     const/4 v1, 0x0
 
@@ -65,7 +60,6 @@
     :goto_0
     if-ge v1, v0, :cond_0
 
-    .line 231
     iget-object v2, p0, Lcom/android/server/TelephonyRegistry$1;->this$0:Lcom/android/server/TelephonyRegistry;
 
     int-to-long v4, v1
@@ -81,12 +75,10 @@
 
     invoke-virtual {v2, v4, v5, v3}, Lcom/android/server/TelephonyRegistry;->notifyCellLocationForSubscriber(JLandroid/os/Bundle;)V
 
-    .line 230
     add-int/lit8 v1, v1, 0x1
 
     goto :goto_0
 
-    .line 226
     :pswitch_data_0
     .packed-switch 0x1
         :pswitch_0

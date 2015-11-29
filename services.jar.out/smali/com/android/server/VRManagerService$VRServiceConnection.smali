@@ -43,12 +43,10 @@
     .locals 2
 
     .prologue
-    .line 135
     iput-object p1, p0, Lcom/android/server/VRManagerService$VRServiceConnection;->this$0:Lcom/android/server/VRManagerService;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 138
     new-instance v0, Ljava/util/concurrent/LinkedBlockingQueue;
 
     const/4 v1, 0x1
@@ -66,7 +64,6 @@
     .param p2, "x1"    # Lcom/android/server/VRManagerService$1;
 
     .prologue
-    .line 135
     invoke-direct {p0, p1}, Lcom/android/server/VRManagerService$VRServiceConnection;-><init>(Lcom/android/server/VRManagerService;)V
 
     return-void
@@ -80,28 +77,23 @@
     .param p2, "service"    # Landroid/os/IBinder;
 
     .prologue
-    .line 143
     const-string v1, "VRManagerService"
 
-    const-string/jumbo v2, "onServiceConnected()"
+    const-string v2, "onServiceConnected()"
 
     invoke-static {v1, v2}, Landroid/util/Slog;->v(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 145
     :try_start_0
     iput-object p2, p0, Lcom/android/server/VRManagerService$VRServiceConnection;->mBinder:Landroid/os/IBinder;
 
-    .line 146
     const/4 v1, 0x1
 
     iput-boolean v1, p0, Lcom/android/server/VRManagerService$VRServiceConnection;->mConnected:Z
 
-    .line 147
     invoke-static {p2}, Lcom/android/internal/app/IVRManagerService$Stub;->asInterface(Landroid/os/IBinder;)Lcom/android/internal/app/IVRManagerService;
 
     move-result-object v0
 
-    .line 148
     .local v0, "vrService":Lcom/android/internal/app/IVRManagerService;
     iget-object v1, p0, Lcom/android/server/VRManagerService$VRServiceConnection;->q:Ljava/util/concurrent/BlockingQueue;
 
@@ -109,12 +101,10 @@
     :try_end_0
     .catch Ljava/lang/InterruptedException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 151
     .end local v0    # "vrService":Lcom/android/internal/app/IVRManagerService;
     :goto_0
     return-void
 
-    .line 149
     :catch_0
     move-exception v1
 
@@ -128,24 +118,19 @@
     .prologue
     const/4 v2, 0x0
 
-    .line 155
     const-string v0, "VRManagerService"
 
-    const-string/jumbo v1, "onServiceDisconnected()"
+    const-string v1, "onServiceDisconnected()"
 
     invoke-static {v0, v1}, Landroid/util/Slog;->v(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 156
     const/4 v0, 0x0
 
     iput-object v0, p0, Lcom/android/server/VRManagerService$VRServiceConnection;->mBinder:Landroid/os/IBinder;
 
-    .line 157
     iput-boolean v2, p0, Lcom/android/server/VRManagerService$VRServiceConnection;->mConnected:Z
 
-    .line 158
     iput-boolean v2, p0, Lcom/android/server/VRManagerService$VRServiceConnection;->mBound:Z
 
-    .line 159
     return-void
 .end method

@@ -27,19 +27,14 @@
     .param p3, "number"    # Ljava/lang/String;
 
     .prologue
-    .line 18
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 19
     iput-boolean p1, p0, Lcom/itsoninc/android/DeviceCall;->isVoice:Z
 
-    .line 20
     iput-object p2, p0, Lcom/itsoninc/android/DeviceCall;->state:Lcom/itsoninc/android/DeviceCall$CallState;
 
-    .line 21
     iput-object p3, p0, Lcom/itsoninc/android/DeviceCall;->number:Ljava/lang/String;
 
-    .line 22
     return-void
 .end method
 
@@ -49,7 +44,6 @@
     .locals 1
 
     .prologue
-    .line 33
     iget-object v0, p0, Lcom/itsoninc/android/DeviceCall;->number:Ljava/lang/String;
 
     return-object v0
@@ -59,7 +53,6 @@
     .locals 1
 
     .prologue
-    .line 25
     iget-object v0, p0, Lcom/itsoninc/android/DeviceCall;->state:Lcom/itsoninc/android/DeviceCall$CallState;
 
     return-object v0
@@ -69,7 +62,6 @@
     .locals 1
 
     .prologue
-    .line 29
     iget-boolean v0, p0, Lcom/itsoninc/android/DeviceCall;->isVoice:Z
 
     return v0

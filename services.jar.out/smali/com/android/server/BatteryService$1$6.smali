@@ -28,7 +28,6 @@
     .locals 0
 
     .prologue
-    .line 397
     iput-object p1, p0, Lcom/android/server/BatteryService$1$6;->this$1:Lcom/android/server/BatteryService$1;
 
     iput-boolean p2, p0, Lcom/android/server/BatteryService$1$6;->val$powerSharingEnable:Z
@@ -44,7 +43,6 @@
     .locals 3
 
     .prologue
-    .line 400
     iget-object v0, p0, Lcom/android/server/BatteryService$1$6;->this$1:Lcom/android/server/BatteryService$1;
 
     iget-object v0, v0, Lcom/android/server/BatteryService$1;->this$0:Lcom/android/server/BatteryService;
@@ -57,7 +55,6 @@
 
     if-eqz v0, :cond_0
 
-    .line 401
     # getter for: Lcom/android/server/BatteryService;->TAG:Ljava/lang/String;
     invoke-static {}, Lcom/android/server/BatteryService;->access$700()Ljava/lang/String;
 
@@ -67,7 +64,7 @@
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v2, "success to set Power sharing as "
+    const-string v2, "success to set Power sharing as "
 
     invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -85,11 +82,9 @@
 
     invoke-static {v0, v1}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 405
     :goto_0
     return-void
 
-    .line 403
     :cond_0
     # getter for: Lcom/android/server/BatteryService;->TAG:Ljava/lang/String;
     invoke-static {}, Lcom/android/server/BatteryService;->access$700()Ljava/lang/String;

@@ -54,7 +54,6 @@
     .locals 1
 
     .prologue
-    .line 48
     const/4 v0, 0x1
 
     sput-boolean v0, Landroid/net/wifi/MsapWifiManager;->Debug:Z
@@ -68,13 +67,10 @@
     .param p2, "msapservice"    # Landroid/net/wifi/IMsapWifiManager;
 
     .prologue
-    .line 122
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 123
     iput-object p2, p0, Landroid/net/wifi/MsapWifiManager;->mMsapService:Landroid/net/wifi/IMsapWifiManager;
 
-    .line 124
     return-void
 .end method
 
@@ -84,22 +80,18 @@
     .locals 3
 
     .prologue
-    .line 134
     :try_start_0
     iget-object v1, p0, Landroid/net/wifi/MsapWifiManager;->mMsapService:Landroid/net/wifi/IMsapWifiManager;
 
     if-eqz v1, :cond_0
 
-    .line 135
     iget-object v1, p0, Landroid/net/wifi/MsapWifiManager;->mMsapService:Landroid/net/wifi/IMsapWifiManager;
 
     invoke-interface {v1}, Landroid/net/wifi/IMsapWifiManager;->startWifiManager()V
 
-    .line 142
     :goto_0
     return-void
 
-    .line 137
     :cond_0
     const-string v1, "SamsungMSAP.MsapWifiManager"
 
@@ -111,11 +103,9 @@
 
     goto :goto_0
 
-    .line 139
     :catch_0
     move-exception v0
 
-    .line 140
     .local v0, "e":Landroid/os/RemoteException;
     const-string v1, "SamsungMSAP.MsapWifiManager"
 
@@ -135,24 +125,20 @@
     .prologue
     const/4 v1, 0x0
 
-    .line 206
     :try_start_0
     iget-object v2, p0, Landroid/net/wifi/MsapWifiManager;->mMsapService:Landroid/net/wifi/IMsapWifiManager;
 
     if-eqz v2, :cond_0
 
-    .line 207
     iget-object v2, p0, Landroid/net/wifi/MsapWifiManager;->mMsapService:Landroid/net/wifi/IMsapWifiManager;
 
     invoke-interface {v2, p1, p2, p3}, Landroid/net/wifi/IMsapWifiManager;->gasReq(IILjava/lang/String;)Z
 
     move-result v1
 
-    .line 217
     :goto_0
     return v1
 
-    .line 209
     :cond_0
     const-string v2, "SamsungMSAP.MsapWifiManager"
 
@@ -165,11 +151,9 @@
 
     goto :goto_0
 
-    .line 212
     :catch_0
     move-exception v0
 
-    .line 213
     .local v0, "e":Ljava/lang/NullPointerException;
     const-string v2, "SamsungMSAP.MsapWifiManager"
 
@@ -179,12 +163,10 @@
 
     goto :goto_0
 
-    .line 215
     .end local v0    # "e":Ljava/lang/NullPointerException;
     :catch_1
     move-exception v0
 
-    .line 216
     .local v0, "e":Landroid/os/RemoteException;
     const-string v2, "SamsungMSAP.MsapWifiManager"
 
@@ -202,24 +184,20 @@
     .prologue
     const/4 v1, 0x0
 
-    .line 256
     :try_start_0
     iget-object v2, p0, Landroid/net/wifi/MsapWifiManager;->mMsapService:Landroid/net/wifi/IMsapWifiManager;
 
     if-eqz v2, :cond_0
 
-    .line 257
     iget-object v2, p0, Landroid/net/wifi/MsapWifiManager;->mMsapService:Landroid/net/wifi/IMsapWifiManager;
 
     invoke-interface {v2, p1}, Landroid/net/wifi/IMsapWifiManager;->getBss(Ljava/lang/String;)Landroid/net/wifi/MsapBssInfo;
 
     move-result-object v1
 
-    .line 267
     :goto_0
     return-object v1
 
-    .line 259
     :cond_0
     const-string v2, "SamsungMSAP.MsapWifiManager"
 
@@ -232,11 +210,9 @@
 
     goto :goto_0
 
-    .line 262
     :catch_0
     move-exception v0
 
-    .line 263
     .local v0, "e":Ljava/lang/NullPointerException;
     const-string v2, "SamsungMSAP.MsapWifiManager"
 
@@ -246,12 +222,10 @@
 
     goto :goto_0
 
-    .line 265
     .end local v0    # "e":Ljava/lang/NullPointerException;
     :catch_1
     move-exception v0
 
-    .line 266
     .local v0, "e":Landroid/os/RemoteException;
     const-string v2, "SamsungMSAP.MsapWifiManager"
 
@@ -268,24 +242,20 @@
     .prologue
     const/4 v1, 0x0
 
-    .line 279
     :try_start_0
     iget-object v2, p0, Landroid/net/wifi/MsapWifiManager;->mMsapService:Landroid/net/wifi/IMsapWifiManager;
 
     if-eqz v2, :cond_0
 
-    .line 280
     iget-object v2, p0, Landroid/net/wifi/MsapWifiManager;->mMsapService:Landroid/net/wifi/IMsapWifiManager;
 
     invoke-interface {v2}, Landroid/net/wifi/IMsapWifiManager;->getGasResponse()[B
 
     move-result-object v1
 
-    .line 290
     :goto_0
     return-object v1
 
-    .line 282
     :cond_0
     const-string v2, "SamsungMSAP.MsapWifiManager"
 
@@ -298,11 +268,9 @@
 
     goto :goto_0
 
-    .line 285
     :catch_0
     move-exception v0
 
-    .line 286
     .local v0, "e":Ljava/lang/NullPointerException;
     const-string v2, "SamsungMSAP.MsapWifiManager"
 
@@ -312,12 +280,10 @@
 
     goto :goto_0
 
-    .line 288
     .end local v0    # "e":Ljava/lang/NullPointerException;
     :catch_1
     move-exception v0
 
-    .line 289
     .local v0, "e":Landroid/os/RemoteException;
     const-string v2, "SamsungMSAP.MsapWifiManager"
 
@@ -333,22 +299,18 @@
     .param p1, "remainder"    # Ljava/lang/String;
 
     .prologue
-    .line 188
     :try_start_0
     iget-object v1, p0, Landroid/net/wifi/MsapWifiManager;->mMsapService:Landroid/net/wifi/IMsapWifiManager;
 
     if-eqz v1, :cond_0
 
-    .line 189
     iget-object v1, p0, Landroid/net/wifi/MsapWifiManager;->mMsapService:Landroid/net/wifi/IMsapWifiManager;
 
     invoke-interface {v1, p1}, Landroid/net/wifi/IMsapWifiManager;->notifyGasResponse(Ljava/lang/String;)V
 
-    .line 196
     :goto_0
     return-void
 
-    .line 191
     :cond_0
     const-string v1, "SamsungMSAP.MsapWifiManager"
 
@@ -360,11 +322,9 @@
 
     goto :goto_0
 
-    .line 193
     :catch_0
     move-exception v0
 
-    .line 194
     .local v0, "e":Landroid/os/RemoteException;
     const-string v1, "SamsungMSAP.MsapWifiManager"
 
@@ -380,22 +340,18 @@
     .param p1, "venueInfo"    # Ljava/lang/String;
 
     .prologue
-    .line 152
     :try_start_0
     iget-object v1, p0, Landroid/net/wifi/MsapWifiManager;->mMsapService:Landroid/net/wifi/IMsapWifiManager;
 
     if-eqz v1, :cond_0
 
-    .line 153
     iget-object v1, p0, Landroid/net/wifi/MsapWifiManager;->mMsapService:Landroid/net/wifi/IMsapWifiManager;
 
     invoke-interface {v1, p1}, Landroid/net/wifi/IMsapWifiManager;->notifyVenueServerAdded(Ljava/lang/String;)V
 
-    .line 160
     :goto_0
     return-void
 
-    .line 155
     :cond_0
     const-string v1, "SamsungMSAP.MsapWifiManager"
 
@@ -407,11 +363,9 @@
 
     goto :goto_0
 
-    .line 157
     :catch_0
     move-exception v0
 
-    .line 158
     .local v0, "e":Landroid/os/RemoteException;
     const-string v1, "SamsungMSAP.MsapWifiManager"
 
@@ -427,22 +381,18 @@
     .param p1, "venueInfo"    # Ljava/lang/String;
 
     .prologue
-    .line 170
     :try_start_0
     iget-object v1, p0, Landroid/net/wifi/MsapWifiManager;->mMsapService:Landroid/net/wifi/IMsapWifiManager;
 
     if-eqz v1, :cond_0
 
-    .line 171
     iget-object v1, p0, Landroid/net/wifi/MsapWifiManager;->mMsapService:Landroid/net/wifi/IMsapWifiManager;
 
     invoke-interface {v1, p1}, Landroid/net/wifi/IMsapWifiManager;->notifyVenueServerDeleted(Ljava/lang/String;)V
 
-    .line 178
     :goto_0
     return-void
 
-    .line 173
     :cond_0
     const-string v1, "SamsungMSAP.MsapWifiManager"
 
@@ -454,11 +404,9 @@
 
     goto :goto_0
 
-    .line 175
     :catch_0
     move-exception v0
 
-    .line 176
     .local v0, "e":Landroid/os/RemoteException;
     const-string v1, "SamsungMSAP.MsapWifiManager"
 
@@ -475,28 +423,24 @@
     .prologue
     const/4 v1, -0x1
 
-    .line 229
     :try_start_0
     iget-object v2, p0, Landroid/net/wifi/MsapWifiManager;->mMsapService:Landroid/net/wifi/IMsapWifiManager;
 
     if-eqz v2, :cond_0
 
-    .line 230
     iget-object v2, p0, Landroid/net/wifi/MsapWifiManager;->mMsapService:Landroid/net/wifi/IMsapWifiManager;
 
     invoke-interface {v2}, Landroid/net/wifi/IMsapWifiManager;->resetMsap()I
 
     move-result v1
 
-    .line 240
     :goto_0
     return v1
 
-    .line 232
     :cond_0
     const-string v2, "SamsungMSAP.MsapWifiManager"
 
-    const-string/jumbo v3, "resetMsap - mMsapService is Null"
+    const-string v3, "resetMsap - mMsapService is Null"
 
     invoke-static {v2, v3}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
     :try_end_0
@@ -505,11 +449,9 @@
 
     goto :goto_0
 
-    .line 235
     :catch_0
     move-exception v0
 
-    .line 236
     .local v0, "e":Ljava/lang/NullPointerException;
     const-string v2, "SamsungMSAP.MsapWifiManager"
 
@@ -519,12 +461,10 @@
 
     goto :goto_0
 
-    .line 238
     .end local v0    # "e":Ljava/lang/NullPointerException;
     :catch_1
     move-exception v0
 
-    .line 239
     .local v0, "e":Landroid/os/RemoteException;
     const-string v2, "SamsungMSAP.MsapWifiManager"
 
@@ -539,26 +479,22 @@
     .locals 3
 
     .prologue
-    .line 303
     :try_start_0
     iget-object v1, p0, Landroid/net/wifi/MsapWifiManager;->mMsapService:Landroid/net/wifi/IMsapWifiManager;
 
     if-eqz v1, :cond_0
 
-    .line 304
     iget-object v1, p0, Landroid/net/wifi/MsapWifiManager;->mMsapService:Landroid/net/wifi/IMsapWifiManager;
 
     invoke-interface {v1}, Landroid/net/wifi/IMsapWifiManager;->sendVenueAddedCacheInfo()V
 
-    .line 311
     :goto_0
     return-void
 
-    .line 306
     :cond_0
     const-string v1, "SamsungMSAP.MsapWifiManager"
 
-    const-string/jumbo v2, "sendVenueAddedCacheInfo - mMsapService is Null"
+    const-string v2, "sendVenueAddedCacheInfo - mMsapService is Null"
 
     invoke-static {v1, v2}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
     :try_end_0
@@ -566,11 +502,9 @@
 
     goto :goto_0
 
-    .line 308
     :catch_0
     move-exception v0
 
-    .line 309
     .local v0, "e":Landroid/os/RemoteException;
     const-string v1, "SamsungMSAP.MsapWifiManager"
 

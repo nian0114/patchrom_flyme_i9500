@@ -48,24 +48,18 @@
     .param p5, "k"    # J
 
     .prologue
-    .line 1153
     iput-object p1, p0, Landroid/content/res/Resources$RCCallable;->this$0:Landroid/content/res/Resources;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 1154
     iput-object p2, p0, Landroid/content/res/Resources$RCCallable;->value:Landroid/util/TypedValue;
 
-    .line 1155
     iput-object p3, p0, Landroid/content/res/Resources$RCCallable;->file:Ljava/lang/String;
 
-    .line 1156
     iput-object p4, p0, Landroid/content/res/Resources$RCCallable;->res:Landroid/content/res/Resources;
 
-    .line 1157
     iput-wide p5, p0, Landroid/content/res/Resources$RCCallable;->key:J
 
-    .line 1158
     return-void
 .end method
 
@@ -82,20 +76,16 @@
     .prologue
     const-wide/16 v10, 0x2000
 
-    .line 1162
     const/4 v1, 0x0
 
-    .line 1163
     .local v1, "dr":Landroid/graphics/drawable/Drawable;
     const/4 v0, 0x0
 
-    .line 1164
     .local v0, "cs":Landroid/graphics/drawable/Drawable$ConstantState;
     iget-object v5, p0, Landroid/content/res/Resources$RCCallable;->file:Ljava/lang/String;
 
     invoke-static {v10, v11, v5}, Landroid/os/Trace;->traceBegin(JLjava/lang/String;)V
 
-    .line 1166
     :try_start_0
     iget-object v5, p0, Landroid/content/res/Resources$RCCallable;->this$0:Landroid/content/res/Resources;
 
@@ -113,7 +103,6 @@
 
     move-result-object v3
 
-    .line 1168
     .local v3, "is":Ljava/io/InputStream;
     iget-object v5, p0, Landroid/content/res/Resources$RCCallable;->res:Landroid/content/res/Resources;
 
@@ -127,43 +116,34 @@
 
     move-result-object v1
 
-    .line 1170
     invoke-virtual {v3}, Ljava/io/InputStream;->close()V
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 1179
     invoke-static {v10, v11}, Landroid/os/Trace;->traceEnd(J)V
 
-    .line 1181
     if-eqz v1, :cond_0
 
-    .line 1182
     iget-object v5, p0, Landroid/content/res/Resources$RCCallable;->value:Landroid/util/TypedValue;
 
     iget v5, v5, Landroid/util/TypedValue;->changingConfigurations:I
 
     invoke-virtual {v1, v5}, Landroid/graphics/drawable/Drawable;->setChangingConfigurations(I)V
 
-    .line 1183
     invoke-virtual {v1}, Landroid/graphics/drawable/Drawable;->getConstantState()Landroid/graphics/drawable/Drawable$ConstantState;
 
     move-result-object v0
 
-    .line 1185
     :cond_0
     return-object v0
 
-    .line 1171
     .end local v3    # "is":Ljava/io/InputStream;
     :catch_0
     move-exception v2
 
-    .line 1172
     .local v2, "e":Ljava/lang/Exception;
     invoke-static {v10, v11}, Landroid/os/Trace;->traceEnd(J)V
 
-    .line 1173
     new-instance v4, Landroid/content/res/Resources$NotFoundException;
 
     new-instance v5, Ljava/lang/StringBuilder;
@@ -206,11 +186,9 @@
 
     invoke-direct {v4, v5}, Landroid/content/res/Resources$NotFoundException;-><init>(Ljava/lang/String;)V
 
-    .line 1176
     .local v4, "rnf":Landroid/content/res/Resources$NotFoundException;
     invoke-virtual {v4, v2}, Landroid/content/res/Resources$NotFoundException;->initCause(Ljava/lang/Throwable;)Ljava/lang/Throwable;
 
-    .line 1177
     throw v4
 .end method
 
@@ -223,7 +201,6 @@
     .end annotation
 
     .prologue
-    .line 1147
     invoke-virtual {p0}, Landroid/content/res/Resources$RCCallable;->call()Landroid/graphics/drawable/Drawable$ConstantState;
 
     move-result-object v0

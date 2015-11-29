@@ -23,7 +23,6 @@
     .locals 0
 
     .prologue
-    .line 909
     iput-object p1, p0, Lcom/android/server/wifi/WifiServiceImpl$9;->this$0:Lcom/android/server/wifi/WifiServiceImpl;
 
     invoke-direct {p0}, Landroid/content/BroadcastReceiver;-><init>()V
@@ -39,12 +38,10 @@
     .param p2, "intent"    # Landroid/content/Intent;
 
     .prologue
-    .line 912
     invoke-virtual {p2}, Landroid/content/Intent;->getAction()Ljava/lang/String;
 
     move-result-object v0
 
-    .line 913
     .local v0, "action":Ljava/lang/String;
     const-string v1, "android.app.action.DEVICE_POLICY_MANAGER_STATE_CHANGED"
 
@@ -62,7 +59,6 @@
 
     if-eqz v1, :cond_1
 
-    .line 915
     :cond_0
     const-string v1, "WifiService"
 
@@ -70,13 +66,11 @@
 
     invoke-static {v1, v2}, Landroid/util/Slog;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 916
     iget-object v1, p0, Lcom/android/server/wifi/WifiServiceImpl$9;->this$0:Lcom/android/server/wifi/WifiServiceImpl;
 
     # invokes: Lcom/android/server/wifi/WifiServiceImpl;->handleSecurityPolicy()V
     invoke-static {v1}, Lcom/android/server/wifi/WifiServiceImpl;->access$3000(Lcom/android/server/wifi/WifiServiceImpl;)V
 
-    .line 918
     :cond_1
     return-void
 .end method

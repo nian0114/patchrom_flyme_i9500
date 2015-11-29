@@ -24,17 +24,14 @@
     .locals 1
 
     .prologue
-    .line 45
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 43
     const/16 v0, 0x400
 
     new-array v0, v0, [B
 
     iput-object v0, p0, Lcom/android/internal/os/InstallerConnection;->buf:[B
 
-    .line 46
     return-void
 .end method
 
@@ -44,16 +41,13 @@
     .prologue
     const/4 v2, 0x1
 
-    .line 189
     iget-object v3, p0, Lcom/android/internal/os/InstallerConnection;->mSocket:Landroid/net/LocalSocket;
 
     if-eqz v3, :cond_0
 
-    .line 207
     :goto_0
     return v2
 
-    .line 192
     :cond_0
     const-string v3, "InstallerConnection"
 
@@ -61,7 +55,6 @@
 
     invoke-static {v3, v4}, Landroid/util/Slog;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 194
     :try_start_0
     new-instance v3, Landroid/net/LocalSocket;
 
@@ -69,7 +62,6 @@
 
     iput-object v3, p0, Lcom/android/internal/os/InstallerConnection;->mSocket:Landroid/net/LocalSocket;
 
-    .line 196
     new-instance v0, Landroid/net/LocalSocketAddress;
 
     const-string v3, "installd"
@@ -78,13 +70,11 @@
 
     invoke-direct {v0, v3, v4}, Landroid/net/LocalSocketAddress;-><init>(Ljava/lang/String;Landroid/net/LocalSocketAddress$Namespace;)V
 
-    .line 199
     .local v0, "address":Landroid/net/LocalSocketAddress;
     iget-object v3, p0, Lcom/android/internal/os/InstallerConnection;->mSocket:Landroid/net/LocalSocket;
 
     invoke-virtual {v3, v0}, Landroid/net/LocalSocket;->connect(Landroid/net/LocalSocketAddress;)V
 
-    .line 201
     iget-object v3, p0, Lcom/android/internal/os/InstallerConnection;->mSocket:Landroid/net/LocalSocket;
 
     invoke-virtual {v3}, Landroid/net/LocalSocket;->getInputStream()Ljava/io/InputStream;
@@ -93,7 +83,6 @@
 
     iput-object v3, p0, Lcom/android/internal/os/InstallerConnection;->mIn:Ljava/io/InputStream;
 
-    .line 202
     iget-object v3, p0, Lcom/android/internal/os/InstallerConnection;->mSocket:Landroid/net/LocalSocket;
 
     invoke-virtual {v3}, Landroid/net/LocalSocket;->getOutputStream()Ljava/io/OutputStream;
@@ -106,16 +95,13 @@
 
     goto :goto_0
 
-    .line 203
     .end local v0    # "address":Landroid/net/LocalSocketAddress;
     :catch_0
     move-exception v1
 
-    .line 204
     .local v1, "ex":Ljava/io/IOException;
     invoke-virtual {p0}, Lcom/android/internal/os/InstallerConnection;->disconnect()V
 
-    .line 205
     const/4 v2, 0x0
 
     goto :goto_0
@@ -129,7 +115,6 @@
     .prologue
     const/4 v1, 0x0
 
-    .line 224
     :try_start_0
     iget-object v2, p0, Lcom/android/internal/os/InstallerConnection;->mIn:Ljava/io/InputStream;
 
@@ -139,25 +124,21 @@
     :try_end_0
     .catch Ljava/io/IOException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 235
     const/4 v1, 0x1
 
     :goto_0
     return v1
 
-    .line 225
     :catch_0
     move-exception v0
 
-    .line 226
     .local v0, "ioe":Ljava/io/IOException;
     const-string v2, "InstallerConnection"
 
-    const-string/jumbo v3, "read exception"
+    const-string v3, "read exception"
 
     invoke-static {v2, v3}, Landroid/util/Slog;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 227
     invoke-virtual {p0}, Lcom/android/internal/os/InstallerConnection;->disconnect()V
 
     goto :goto_0
@@ -171,7 +152,6 @@
 
     const/4 v1, -0x1
 
-    .line 239
     iget-object v2, p0, Lcom/android/internal/os/InstallerConnection;->buf:[B
 
     const/4 v3, 0x2
@@ -184,12 +164,10 @@
 
     move v0, v1
 
-    .line 254
     :cond_0
     :goto_0
     return v0
 
-    .line 243
     :cond_1
     iget-object v2, p0, Lcom/android/internal/os/InstallerConnection;->buf:[B
 
@@ -209,7 +187,6 @@
 
     or-int v0, v2, v3
 
-    .line 244
     .local v0, "len":I
     if-lt v0, v4, :cond_2
 
@@ -219,7 +196,6 @@
 
     if-le v0, v2, :cond_3
 
-    .line 245
     :cond_2
     const-string v2, "InstallerConnection"
 
@@ -249,15 +225,12 @@
 
     invoke-static {v2, v3}, Landroid/util/Slog;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 246
     invoke-virtual {p0}, Lcom/android/internal/os/InstallerConnection;->disconnect()V
 
     move v0, v1
 
-    .line 247
     goto :goto_0
 
-    .line 250
     :cond_3
     iget-object v2, p0, Lcom/android/internal/os/InstallerConnection;->buf:[B
 
@@ -269,7 +242,6 @@
 
     move v0, v1
 
-    .line 251
     goto :goto_0
 .end method
 
@@ -282,16 +254,13 @@
 
     const/4 v4, 0x0
 
-    .line 258
     invoke-virtual {p1}, Ljava/lang/String;->getBytes()[B
 
     move-result-object v0
 
-    .line 259
     .local v0, "cmd":[B
     array-length v2, v0
 
-    .line 260
     .local v2, "len":I
     if-lt v2, v3, :cond_0
 
@@ -304,11 +273,9 @@
     :cond_0
     move v3, v4
 
-    .line 274
     :goto_0
     return v3
 
-    .line 264
     :cond_1
     iget-object v5, p0, Lcom/android/internal/os/InstallerConnection;->buf:[B
 
@@ -318,7 +285,6 @@
 
     aput-byte v6, v5, v4
 
-    .line 265
     iget-object v5, p0, Lcom/android/internal/os/InstallerConnection;->buf:[B
 
     shr-int/lit8 v6, v2, 0x8
@@ -329,7 +295,6 @@
 
     aput-byte v6, v5, v3
 
-    .line 267
     :try_start_0
     iget-object v5, p0, Lcom/android/internal/os/InstallerConnection;->mOut:Ljava/io/OutputStream;
 
@@ -341,7 +306,6 @@
 
     invoke-virtual {v5, v6, v7, v8}, Ljava/io/OutputStream;->write([BII)V
 
-    .line 268
     iget-object v5, p0, Lcom/android/internal/os/InstallerConnection;->mOut:Ljava/io/OutputStream;
 
     const/4 v6, 0x0
@@ -352,24 +316,20 @@
 
     goto :goto_0
 
-    .line 269
     :catch_0
     move-exception v1
 
-    .line 270
     .local v1, "ex":Ljava/io/IOException;
     const-string v3, "InstallerConnection"
 
-    const-string/jumbo v5, "write error"
+    const-string v5, "write error"
 
     invoke-static {v3, v5}, Landroid/util/Slog;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 271
     invoke-virtual {p0}, Lcom/android/internal/os/InstallerConnection;->disconnect()V
 
     move v3, v4
 
-    .line 272
     goto :goto_0
 .end method
 
@@ -389,27 +349,21 @@
     .prologue
     const/16 v2, 0x20
 
-    .line 132
     new-instance v0, Ljava/lang/StringBuilder;
 
     const-string v1, "asyncdexopt"
 
     invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    .line 133
     .local v0, "builder":Ljava/lang/StringBuilder;
     invoke-virtual {v0, v2}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
 
-    .line 134
     invoke-virtual {v0, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 135
     invoke-virtual {v0, v2}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
 
-    .line 136
     invoke-virtual {v0, p2}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
-    .line 137
     if-eqz p3, :cond_0
 
     const-string v1, " 1"
@@ -417,22 +371,16 @@
     :goto_0
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 138
     invoke-virtual {v0, v2}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
 
-    .line 139
     invoke-virtual {v0, p4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 140
     invoke-virtual {v0, v2}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
 
-    .line 141
     invoke-virtual {v0, p5}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 142
     invoke-virtual {v0, v2}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
 
-    .line 143
     if-eqz p6, :cond_1
 
     const-string v1, " 1"
@@ -440,10 +388,8 @@
     :goto_1
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 144
     invoke-virtual {v0, v2}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
 
-    .line 145
     if-eqz p7, :cond_2
 
     const-string v1, " 1"
@@ -451,13 +397,10 @@
     :goto_2
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 146
     invoke-virtual {v0, v2}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
 
-    .line 147
     invoke-virtual {v0, p8}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
-    .line 148
     invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
     move-result-object v1
@@ -468,19 +411,16 @@
 
     return v1
 
-    .line 137
     :cond_0
     const-string v1, " 0"
 
     goto :goto_0
 
-    .line 143
     :cond_1
     const-string v1, " 0"
 
     goto :goto_1
 
-    .line 145
     :cond_2
     const-string v1, " 0"
 
@@ -497,7 +437,6 @@
     .prologue
     const/4 v6, 0x0
 
-    .line 95
     const-string v4, "*"
 
     move-object v0, p0
@@ -529,7 +468,6 @@
     .param p6, "vmSafeMode"    # Z
 
     .prologue
-    .line 102
     const/4 v7, 0x0
 
     move-object v0, p0
@@ -566,27 +504,21 @@
     .prologue
     const/16 v2, 0x20
 
-    .line 109
     new-instance v0, Ljava/lang/StringBuilder;
 
     const-string v1, "dexopt"
 
     invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    .line 110
     .local v0, "builder":Ljava/lang/StringBuilder;
     invoke-virtual {v0, v2}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
 
-    .line 111
     invoke-virtual {v0, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 112
     invoke-virtual {v0, v2}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
 
-    .line 113
     invoke-virtual {v0, p2}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
-    .line 114
     if-eqz p3, :cond_0
 
     const-string v1, " 1"
@@ -594,22 +526,16 @@
     :goto_0
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 115
     invoke-virtual {v0, v2}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
 
-    .line 116
     invoke-virtual {v0, p4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 117
     invoke-virtual {v0, v2}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
 
-    .line 118
     invoke-virtual {v0, p5}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 119
     invoke-virtual {v0, v2}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
 
-    .line 120
     if-eqz p6, :cond_1
 
     const-string v1, " 1"
@@ -617,10 +543,8 @@
     :goto_1
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 121
     invoke-virtual {v0, v2}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
 
-    .line 122
     if-eqz p7, :cond_2
 
     const-string v1, " 1"
@@ -628,7 +552,6 @@
     :goto_2
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 123
     invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
     move-result-object v1
@@ -639,19 +562,16 @@
 
     return v1
 
-    .line 114
     :cond_0
     const-string v1, " 0"
 
     goto :goto_0
 
-    .line 120
     :cond_1
     const-string v1, " 0"
 
     goto :goto_1
 
-    .line 122
     :cond_2
     const-string v1, " 0"
 
@@ -664,38 +584,30 @@
     .prologue
     const/4 v2, 0x0
 
-    .line 211
     const-string v0, "InstallerConnection"
 
     const-string v1, "disconnecting..."
 
     invoke-static {v0, v1}, Landroid/util/Slog;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 212
     iget-object v0, p0, Lcom/android/internal/os/InstallerConnection;->mSocket:Landroid/net/LocalSocket;
 
     invoke-static {v0}, Llibcore/io/IoUtils;->closeQuietly(Ljava/lang/AutoCloseable;)V
 
-    .line 213
     iget-object v0, p0, Lcom/android/internal/os/InstallerConnection;->mIn:Ljava/io/InputStream;
 
     invoke-static {v0}, Llibcore/io/IoUtils;->closeQuietly(Ljava/lang/AutoCloseable;)V
 
-    .line 214
     iget-object v0, p0, Lcom/android/internal/os/InstallerConnection;->mOut:Ljava/io/OutputStream;
 
     invoke-static {v0}, Llibcore/io/IoUtils;->closeQuietly(Ljava/lang/AutoCloseable;)V
 
-    .line 216
     iput-object v2, p0, Lcom/android/internal/os/InstallerConnection;->mSocket:Landroid/net/LocalSocket;
 
-    .line 217
     iput-object v2, p0, Lcom/android/internal/os/InstallerConnection;->mIn:Ljava/io/InputStream;
 
-    .line 218
     iput-object v2, p0, Lcom/android/internal/os/InstallerConnection;->mOut:Ljava/io/OutputStream;
 
-    .line 219
     return-void
 .end method
 
@@ -704,12 +616,10 @@
     .param p1, "cmd"    # Ljava/lang/String;
 
     .prologue
-    .line 85
     invoke-virtual {p0, p1}, Lcom/android/internal/os/InstallerConnection;->transact(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v1
 
-    .line 87
     .local v1, "res":Ljava/lang/String;
     :try_start_0
     invoke-static {v1}, Ljava/lang/Integer;->parseInt(Ljava/lang/String;)I
@@ -718,15 +628,12 @@
 
     move-result v2
 
-    .line 89
     :goto_0
     return v2
 
-    .line 88
     :catch_0
     move-exception v0
 
-    .line 89
     .local v0, "ex":Ljava/lang/NumberFormatException;
     const/4 v2, -0x1
 
@@ -741,7 +648,6 @@
     .param p4, "instructionSet"    # Ljava/lang/String;
 
     .prologue
-    .line 158
     const-string v4, "*"
 
     move-object v0, p0
@@ -772,14 +678,12 @@
     .prologue
     const/16 v3, 0x20
 
-    .line 163
     new-instance v0, Ljava/lang/StringBuilder;
 
-    const-string/jumbo v1, "patchoat "
+    const-string v1, "patchoat "
 
     invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    .line 164
     .local v0, "builder":Ljava/lang/StringBuilder;
     invoke-virtual {v0, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -800,7 +704,6 @@
     :goto_0
     invoke-virtual {v2, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 165
     invoke-virtual {v0, p4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     move-result-object v1
@@ -811,7 +714,6 @@
 
     invoke-virtual {v1, p5}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 166
     invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
     move-result-object v1
@@ -822,7 +724,6 @@
 
     return v1
 
-    .line 164
     :cond_0
     const-string v1, " 0 "
 
@@ -837,7 +738,6 @@
     .param p4, "instructionSet"    # Ljava/lang/String;
 
     .prologue
-    .line 170
     const-string v4, "*"
 
     move-object v0, p0
@@ -868,27 +768,21 @@
     .prologue
     const/16 v2, 0x20
 
-    .line 175
     new-instance v0, Ljava/lang/StringBuilder;
 
-    const-string/jumbo v1, "patchoat_art"
+    const-string v1, "patchoat_art"
 
     invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    .line 176
     .local v0, "builder":Ljava/lang/StringBuilder;
     invoke-virtual {v0, v2}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
 
-    .line 177
     invoke-virtual {v0, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 178
     invoke-virtual {v0, v2}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
 
-    .line 179
     invoke-virtual {v0, p2}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
-    .line 180
     if-eqz p3, :cond_0
 
     const-string v1, " 1"
@@ -896,19 +790,14 @@
     :goto_0
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 181
     invoke-virtual {v0, v2}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
 
-    .line 182
     invoke-virtual {v0, p4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 183
     invoke-virtual {v0, v2}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
 
-    .line 184
     invoke-virtual {v0, p5}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 185
     invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
     move-result-object v1
@@ -919,7 +808,6 @@
 
     return v1
 
-    .line 180
     :cond_0
     const-string v1, " 0"
 
@@ -930,14 +818,12 @@
     .locals 2
 
     .prologue
-    .line 152
     new-instance v0, Ljava/lang/StringBuilder;
 
     const-string v1, "asyncresult"
 
     invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    .line 153
     .local v0, "builder":Ljava/lang/StringBuilder;
     const-string v1, "asyncresult"
 
@@ -953,7 +839,6 @@
     .param p1, "cmd"    # Ljava/lang/String;
 
     .prologue
-    .line 49
     monitor-enter p0
 
     :try_start_0
@@ -963,25 +848,21 @@
 
     if-nez v2, :cond_0
 
-    .line 50
     const-string v2, "InstallerConnection"
 
     const-string v3, "connection failed"
 
     invoke-static {v2, v3}, Landroid/util/Slog;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 51
     const-string v1, "-1"
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 80
     :goto_0
     monitor-exit p0
 
     return-object v1
 
-    .line 54
     :cond_0
     :try_start_1
     invoke-direct {p0, p1}, Lcom/android/internal/os/InstallerConnection;->writeCommand(Ljava/lang/String;)Z
@@ -990,14 +871,12 @@
 
     if-nez v2, :cond_2
 
-    .line 60
     const-string v2, "InstallerConnection"
 
-    const-string/jumbo v3, "write command failed? reconnect!"
+    const-string v3, "write command failed? reconnect!"
 
     invoke-static {v2, v3}, Landroid/util/Slog;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 61
     invoke-direct {p0}, Lcom/android/internal/os/InstallerConnection;->connect()Z
 
     move-result v2
@@ -1010,23 +889,19 @@
 
     if-nez v2, :cond_2
 
-    .line 62
     :cond_1
     const-string v1, "-1"
 
     goto :goto_0
 
-    .line 69
     :cond_2
     invoke-direct {p0}, Lcom/android/internal/os/InstallerConnection;->readReply()I
 
     move-result v0
 
-    .line 70
     .local v0, "replyLength":I
     if-lez v0, :cond_3
 
-    .line 71
     new-instance v1, Ljava/lang/String;
 
     iget-object v2, p0, Lcom/android/internal/os/InstallerConnection;->buf:[B
@@ -1035,11 +910,9 @@
 
     invoke-direct {v1, v2, v3, v0}, Ljava/lang/String;-><init>([BII)V
 
-    .line 75
     .local v1, "s":Ljava/lang/String;
     goto :goto_0
 
-    .line 80
     .end local v1    # "s":Ljava/lang/String;
     :cond_3
     const-string v1, "-1"
@@ -1048,7 +921,6 @@
 
     goto :goto_0
 
-    .line 49
     .end local v0    # "replyLength":I
     :catchall_0
     move-exception v2

@@ -42,12 +42,10 @@
     .locals 1
 
     .prologue
-    .line 84
     const-string v0, "SmartCardAccessPolicy"
 
     sput-object v0, Lcom/android/server/enterprise/container/SmartCardAccessPolicy;->TAG:Ljava/lang/String;
 
-    .line 88
     const-string v0, "com.android.bluetooth"
 
     sput-object v0, Lcom/android/server/enterprise/container/SmartCardAccessPolicy;->packageName:Ljava/lang/String;
@@ -62,26 +60,20 @@
     .prologue
     const/4 v0, 0x0
 
-    .line 99
     invoke-direct {p0}, Lcom/sec/enterprise/knox/container/ISmartCardAccessPolicy$Stub;-><init>()V
 
-    .line 86
     iput-object v0, p0, Lcom/android/server/enterprise/container/SmartCardAccessPolicy;->mEdmStorageProvider:Lcom/android/server/enterprise/storage/EdmStorageProvider;
 
-    .line 87
     iput-object v0, p0, Lcom/android/server/enterprise/container/SmartCardAccessPolicy;->mEDM:Landroid/app/enterprise/EnterpriseDeviceManager;
 
-    .line 281
     new-instance v0, Lcom/android/server/enterprise/container/SmartCardAccessPolicy$1;
 
     invoke-direct {v0, p0}, Lcom/android/server/enterprise/container/SmartCardAccessPolicy$1;-><init>(Lcom/android/server/enterprise/container/SmartCardAccessPolicy;)V
 
     iput-object v0, p0, Lcom/android/server/enterprise/container/SmartCardAccessPolicy;->mPackageDataObserver:Landroid/content/pm/IPackageDataObserver;
 
-    .line 100
     iput-object p1, p0, Lcom/android/server/enterprise/container/SmartCardAccessPolicy;->mContext:Landroid/content/Context;
 
-    .line 101
     new-instance v0, Lcom/android/server/enterprise/storage/EdmStorageProvider;
 
     iget-object v1, p0, Lcom/android/server/enterprise/container/SmartCardAccessPolicy;->mContext:Landroid/content/Context;
@@ -90,7 +82,6 @@
 
     iput-object v0, p0, Lcom/android/server/enterprise/container/SmartCardAccessPolicy;->mEdmStorageProvider:Lcom/android/server/enterprise/storage/EdmStorageProvider;
 
-    .line 102
     iget-object v0, p0, Lcom/android/server/enterprise/container/SmartCardAccessPolicy;->mContext:Landroid/content/Context;
 
     invoke-virtual {v0}, Landroid/content/Context;->getPackageManager()Landroid/content/pm/PackageManager;
@@ -99,7 +90,6 @@
 
     iput-object v0, p0, Lcom/android/server/enterprise/container/SmartCardAccessPolicy;->mPackageManager:Landroid/content/pm/PackageManager;
 
-    .line 103
     iget-object v0, p0, Lcom/android/server/enterprise/container/SmartCardAccessPolicy;->mContext:Landroid/content/Context;
 
     invoke-static {v0}, Lcom/android/server/enterprise/adapterlayer/PackageManagerAdapter;->getInstance(Landroid/content/Context;)Lcom/android/server/enterprise/adapterlayer/PackageManagerAdapter;
@@ -108,8 +98,7 @@
 
     iput-object v0, p0, Lcom/android/server/enterprise/container/SmartCardAccessPolicy;->mPackageManagerAdapter:Lcom/android/server/enterprise/adapterlayer/PackageManagerAdapter;
 
-    .line 104
-    const-string/jumbo v0, "package"
+    const-string v0, "package"
 
     invoke-static {v0}, Landroid/os/ServiceManager;->getService(Ljava/lang/String;)Landroid/os/IBinder;
 
@@ -119,7 +108,6 @@
 
     iput-object v0, p0, Lcom/android/server/enterprise/container/SmartCardAccessPolicy;->mPms:Lcom/android/server/pm/PackageManagerService;
 
-    .line 105
     return-void
 .end method
 
@@ -127,7 +115,6 @@
     .locals 1
 
     .prologue
-    .line 82
     sget-object v0, Lcom/android/server/enterprise/container/SmartCardAccessPolicy;->TAG:Ljava/lang/String;
 
     return-object v0
@@ -138,7 +125,6 @@
     .param p1, "userId"    # I
 
     .prologue
-    .line 213
     sget-object v6, Lcom/android/server/enterprise/container/SmartCardAccessPolicy;->TAG:Ljava/lang/String;
 
     new-instance v7, Ljava/lang/StringBuilder;
@@ -161,24 +147,19 @@
 
     invoke-static {v6, v7}, Lcom/android/server/enterprise/log/Log;->w(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 214
     const/4 v2, 0x0
 
-    .line 215
     .local v2, "success":Z
     const/4 v3, 0x0
 
-    .line 216
     .local v3, "success1":Z
     invoke-static {}, Landroid/os/Binder;->clearCallingIdentity()J
 
     move-result-wide v4
 
-    .line 217
     .local v4, "token":J
     sget-object v1, Lcom/android/server/enterprise/container/SmartCardAccessPolicy;->packageName:Ljava/lang/String;
 
-    .line 218
     .local v1, "pkg_name":Ljava/lang/String;
     sget-object v6, Lcom/android/server/enterprise/container/SmartCardAccessPolicy;->TAG:Ljava/lang/String;
 
@@ -186,7 +167,6 @@
 
     invoke-static {v6, v7}, Lcom/android/server/enterprise/log/Log;->w(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 222
     :try_start_0
     sget-object v6, Lcom/android/server/enterprise/container/SmartCardAccessPolicy;->TAG:Ljava/lang/String;
 
@@ -194,21 +174,18 @@
 
     invoke-static {v6, v7}, Lcom/android/server/enterprise/log/Log;->w(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 223
     iget-object v6, p0, Lcom/android/server/enterprise/container/SmartCardAccessPolicy;->mPackageManagerAdapter:Lcom/android/server/enterprise/adapterlayer/PackageManagerAdapter;
 
     invoke-virtual {v6, v1, p1}, Lcom/android/server/enterprise/adapterlayer/PackageManagerAdapter;->clearApplicationUserData(Ljava/lang/String;I)Z
 
     move-result v2
 
-    .line 224
     iget-object v6, p0, Lcom/android/server/enterprise/container/SmartCardAccessPolicy;->mPackageManagerAdapter:Lcom/android/server/enterprise/adapterlayer/PackageManagerAdapter;
 
     invoke-virtual {v6, v1}, Lcom/android/server/enterprise/adapterlayer/PackageManagerAdapter;->clearApplicationCacheFiles(Ljava/lang/String;)Z
 
     move-result v3
 
-    .line 225
     sget-object v6, Lcom/android/server/enterprise/container/SmartCardAccessPolicy;->TAG:Ljava/lang/String;
 
     new-instance v7, Ljava/lang/StringBuilder;
@@ -231,7 +208,6 @@
 
     invoke-static {v6, v7}, Lcom/android/server/enterprise/log/Log;->w(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 226
     sget-object v6, Lcom/android/server/enterprise/container/SmartCardAccessPolicy;->TAG:Ljava/lang/String;
 
     new-instance v7, Ljava/lang/StringBuilder;
@@ -257,36 +233,28 @@
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 227
     and-int v6, v2, v3
 
-    .line 238
     invoke-static {v4, v5}, Landroid/os/Binder;->restoreCallingIdentity(J)V
 
-    .line 241
     :goto_0
     return v6
 
-    .line 235
     :catch_0
     move-exception v0
 
-    .line 236
     .local v0, "e":Ljava/lang/Exception;
     :try_start_1
     invoke-virtual {v0}, Ljava/lang/Exception;->printStackTrace()V
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
-    .line 238
     invoke-static {v4, v5}, Landroid/os/Binder;->restoreCallingIdentity(J)V
 
-    .line 241
     const/4 v6, 0x0
 
     goto :goto_0
 
-    .line 238
     .end local v0    # "e":Ljava/lang/Exception;
     :catchall_0
     move-exception v6
@@ -302,7 +270,6 @@
     .param p2, "allowAccess"    # Z
 
     .prologue
-    .line 248
     sget-object v0, Lcom/android/server/enterprise/container/SmartCardAccessPolicy;->TAG:Ljava/lang/String;
 
     new-instance v2, Ljava/lang/StringBuilder;
@@ -325,20 +292,16 @@
 
     invoke-static {v0, v2}, Lcom/android/server/enterprise/log/Log;->w(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 249
     const/4 v7, 0x0
 
-    .line 250
     .local v7, "success":Z
     invoke-static {}, Landroid/os/Binder;->clearCallingIdentity()J
 
     move-result-wide v8
 
-    .line 251
     .local v8, "token":J
     sget-object v1, Lcom/android/server/enterprise/container/SmartCardAccessPolicy;->packageName:Ljava/lang/String;
 
-    .line 253
     .local v1, "pkg_name":Ljava/lang/String;
     sget-object v0, Lcom/android/server/enterprise/container/SmartCardAccessPolicy;->TAG:Ljava/lang/String;
 
@@ -346,7 +309,6 @@
 
     invoke-static {v0, v2}, Lcom/android/server/enterprise/log/Log;->w(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 257
     :try_start_0
     sget-object v0, Lcom/android/server/enterprise/container/SmartCardAccessPolicy;->TAG:Ljava/lang/String;
 
@@ -354,14 +316,13 @@
 
     invoke-static {v0, v2}, Lcom/android/server/enterprise/log/Log;->w(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 258
     sget-object v0, Lcom/android/server/enterprise/container/SmartCardAccessPolicy;->TAG:Ljava/lang/String;
 
     new-instance v2, Ljava/lang/StringBuilder;
 
     invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v3, "state : "
+    const-string v3, "state : "
 
     invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -377,7 +338,6 @@
 
     invoke-static {v0, v2}, Lcom/android/server/enterprise/log/Log;->w(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 259
     iget-object v0, p0, Lcom/android/server/enterprise/container/SmartCardAccessPolicy;->mPackageManagerAdapter:Lcom/android/server/enterprise/adapterlayer/PackageManagerAdapter;
 
     if-eqz p2, :cond_0
@@ -398,31 +358,25 @@
 
     move-result v7
 
-    .line 273
     invoke-static {v8, v9}, Landroid/os/Binder;->restoreCallingIdentity(J)V
 
-    .line 276
     :goto_1
     return v7
 
-    .line 259
     :cond_0
     const/4 v2, 0x2
 
     goto :goto_0
 
-    .line 270
     :catch_0
     move-exception v6
 
-    .line 271
     .local v6, "e":Ljava/lang/Exception;
     :try_start_1
     invoke-virtual {v6}, Ljava/lang/Exception;->printStackTrace()V
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
-    .line 273
     invoke-static {v8, v9}, Landroid/os/Binder;->restoreCallingIdentity(J)V
 
     goto :goto_1
@@ -441,7 +395,6 @@
     .param p1, "cxtInfo"    # Landroid/app/enterprise/ContextInfo;
 
     .prologue
-    .line 116
     invoke-direct {p0}, Lcom/android/server/enterprise/container/SmartCardAccessPolicy;->getEDM()Landroid/app/enterprise/EnterpriseDeviceManager;
 
     move-result-object v0
@@ -452,12 +405,10 @@
 
     move-result-object p1
 
-    .line 118
     iget v0, p1, Landroid/app/enterprise/ContextInfo;->mContainerId:I
 
     invoke-static {v0}, Lcom/sec/enterprise/knox/EnterpriseContainerManager;->enforceContainerPermission(I)I
 
-    .line 119
     return-object p1
 .end method
 
@@ -465,12 +416,10 @@
     .locals 2
 
     .prologue
-    .line 108
     iget-object v0, p0, Lcom/android/server/enterprise/container/SmartCardAccessPolicy;->mEDM:Landroid/app/enterprise/EnterpriseDeviceManager;
 
     if-nez v0, :cond_0
 
-    .line 109
     iget-object v0, p0, Lcom/android/server/enterprise/container/SmartCardAccessPolicy;->mContext:Landroid/content/Context;
 
     const-string v1, "enterprise_policy"
@@ -483,7 +432,6 @@
 
     iput-object v0, p0, Lcom/android/server/enterprise/container/SmartCardAccessPolicy;->mEDM:Landroid/app/enterprise/EnterpriseDeviceManager;
 
-    .line 112
     :cond_0
     iget-object v0, p0, Lcom/android/server/enterprise/container/SmartCardAccessPolicy;->mEDM:Landroid/app/enterprise/EnterpriseDeviceManager;
 
@@ -498,30 +446,25 @@
     .param p2, "allowAccess"    # Z
 
     .prologue
-    .line 128
     sget-object v13, Lcom/android/server/enterprise/container/SmartCardAccessPolicy;->TAG:Ljava/lang/String;
 
     const-string v14, "allowBTSecureAccess"
 
     invoke-static {v13, v14}, Lcom/android/server/enterprise/log/Log;->w(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 129
     invoke-direct/range {p0 .. p1}, Lcom/android/server/enterprise/container/SmartCardAccessPolicy;->enforcePermission(Landroid/app/enterprise/ContextInfo;)Landroid/app/enterprise/ContextInfo;
 
     move-result-object p1
 
-    .line 132
     move-object/from16 v0, p1
 
     iget v2, v0, Landroid/app/enterprise/ContextInfo;->mCallerUid:I
 
-    .line 133
     .local v2, "adminId":I
     invoke-static/range {p1 .. p1}, Lcom/android/server/enterprise/EnterpriseDeviceManagerService;->getCallingOrCurrentUserId(Landroid/app/enterprise/ContextInfo;)I
 
     move-result v12
 
-    .line 134
     .local v12, "userId":I
     sget-object v13, Lcom/android/server/enterprise/container/SmartCardAccessPolicy;->TAG:Ljava/lang/String;
 
@@ -545,7 +488,6 @@
 
     invoke-static {v13, v14}, Lcom/android/server/enterprise/log/Log;->w(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 135
     sget-object v13, Lcom/android/server/enterprise/container/SmartCardAccessPolicy;->TAG:Ljava/lang/String;
 
     new-instance v14, Ljava/lang/StringBuilder;
@@ -568,12 +510,10 @@
 
     invoke-static {v13, v14}, Lcom/android/server/enterprise/log/Log;->w(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 136
     invoke-static {}, Landroid/os/Binder;->clearCallingIdentity()J
 
     move-result-wide v10
 
-    .line 137
     .local v10, "token":J
     const-string v13, "bluetooth_secure_mode_policy"
 
@@ -583,7 +523,6 @@
 
     check-cast v3, Lcom/android/server/enterprise/bluetooth/BluetoothSecureModePolicy;
 
-    .line 141
     .local v3, "bluetoothSecureModePolicy":Lcom/android/server/enterprise/bluetooth/BluetoothSecureModePolicy;
     :try_start_0
     move-object/from16 v0, p1
@@ -592,19 +531,15 @@
 
     move-result v8
 
-    .line 142
     .local v8, "result":Z
     const/4 v7, 0x0
 
-    .line 143
     .local v7, "res_enable_disable":Z
     const/4 v4, 0x0
 
-    .line 146
     .local v4, "clear_data":Z
     if-nez v8, :cond_0
 
-    .line 148
     sget-object v13, Lcom/android/server/enterprise/container/SmartCardAccessPolicy;->TAG:Ljava/lang/String;
 
     const-string v14, "Bluetooth Secure Mode Policy is not enabled"
@@ -614,20 +549,16 @@
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 149
     const/4 v13, 0x2
 
-    .line 203
     invoke-static {v10, v11}, Landroid/os/Binder;->restoreCallingIdentity(J)V
 
-    .line 206
     .end local v4    # "clear_data":Z
     .end local v7    # "res_enable_disable":Z
     .end local v8    # "result":Z
     :goto_0
     return v13
 
-    .line 153
     .restart local v4    # "clear_data":Z
     .restart local v7    # "res_enable_disable":Z
     .restart local v8    # "result":Z
@@ -639,10 +570,8 @@
 
     invoke-static {v13, v14}, Lcom/android/server/enterprise/log/Log;->w(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 155
     if-eqz p2, :cond_2
 
-    .line 158
     move-object/from16 v0, p0
 
     iget-object v13, v0, Lcom/android/server/enterprise/container/SmartCardAccessPolicy;->mPms:Lcom/android/server/pm/PackageManagerService;
@@ -661,14 +590,12 @@
 
     if-eqz v13, :cond_1
 
-    .line 159
     sget-object v13, Lcom/android/server/enterprise/container/SmartCardAccessPolicy;->TAG:Ljava/lang/String;
 
-    const-string/jumbo v14, "packageAlreadyInstalled in main user is true"
+    const-string v14, "packageAlreadyInstalled in main user is true"
 
     invoke-static {v13, v14}, Lcom/android/server/enterprise/log/Log;->w(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 160
     sget-object v13, Lcom/android/server/enterprise/container/SmartCardAccessPolicy;->TAG:Ljava/lang/String;
 
     new-instance v14, Ljava/lang/StringBuilder;
@@ -703,10 +630,8 @@
 
     invoke-static {v13, v14}, Lcom/android/server/enterprise/log/Log;->w(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 162
     const/4 v6, -0x1
 
-    .line 163
     .local v6, "installResult":I
     move-object/from16 v0, p0
 
@@ -718,12 +643,10 @@
 
     move-result v6
 
-    .line 164
     const/4 v13, 0x1
 
     if-eq v6, v13, :cond_1
 
-    .line 165
     sget-object v13, Lcom/android/server/enterprise/container/SmartCardAccessPolicy;->TAG:Ljava/lang/String;
 
     new-instance v14, Ljava/lang/StringBuilder;
@@ -761,15 +684,12 @@
     .catch Ljava/lang/Exception; {:try_start_1 .. :try_end_1} :catch_0
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
-    .line 166
     const/4 v13, 0x1
 
-    .line 203
     invoke-static {v10, v11}, Landroid/os/Binder;->restoreCallingIdentity(J)V
 
     goto :goto_0
 
-    .line 172
     .end local v6    # "installResult":I
     :cond_1
     :try_start_2
@@ -781,7 +701,6 @@
 
     move-result v7
 
-    .line 173
     sget-object v13, Lcom/android/server/enterprise/container/SmartCardAccessPolicy;->TAG:Ljava/lang/String;
 
     new-instance v14, Ljava/lang/StringBuilder;
@@ -804,14 +723,11 @@
 
     invoke-static {v13, v14}, Lcom/android/server/enterprise/log/Log;->w(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 188
     :goto_1
     if-eqz v7, :cond_3
 
-    .line 191
     const/4 v9, 0x0
 
-    .line 192
     .local v9, "ret":Z
     move-object/from16 v0, p0
 
@@ -830,18 +746,14 @@
 
     move-result v9
 
-    .line 193
     if-eqz v9, :cond_3
 
-    .line 194
     const/4 v13, 0x0
 
-    .line 203
     invoke-static {v10, v11}, Landroid/os/Binder;->restoreCallingIdentity(J)V
 
     goto/16 :goto_0
 
-    .line 178
     .end local v9    # "ret":Z
     :cond_2
     :try_start_3
@@ -851,7 +763,6 @@
 
     move-result v4
 
-    .line 179
     sget-object v13, Lcom/android/server/enterprise/container/SmartCardAccessPolicy;->TAG:Ljava/lang/String;
 
     new-instance v14, Ljava/lang/StringBuilder;
@@ -874,7 +785,6 @@
 
     invoke-static {v13, v14}, Lcom/android/server/enterprise/log/Log;->w(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 181
     move-object/from16 v0, p0
 
     move/from16 v1, p2
@@ -883,7 +793,6 @@
 
     move-result v7
 
-    .line 182
     sget-object v13, Lcom/android/server/enterprise/container/SmartCardAccessPolicy;->TAG:Ljava/lang/String;
 
     new-instance v14, Ljava/lang/StringBuilder;
@@ -911,14 +820,12 @@
 
     goto :goto_1
 
-    .line 200
     .end local v4    # "clear_data":Z
     .end local v7    # "res_enable_disable":Z
     .end local v8    # "result":Z
     :catch_0
     move-exception v5
 
-    .line 201
     .local v5, "e":Ljava/lang/Exception;
     :try_start_4
     sget-object v13, Lcom/android/server/enterprise/container/SmartCardAccessPolicy;->TAG:Ljava/lang/String;
@@ -945,17 +852,14 @@
     :try_end_4
     .catchall {:try_start_4 .. :try_end_4} :catchall_0
 
-    .line 203
     invoke-static {v10, v11}, Landroid/os/Binder;->restoreCallingIdentity(J)V
 
-    .line 206
     .end local v5    # "e":Ljava/lang/Exception;
     :goto_2
     const/4 v13, 0x1
 
     goto/16 :goto_0
 
-    .line 203
     .restart local v4    # "clear_data":Z
     .restart local v7    # "res_enable_disable":Z
     .restart local v8    # "result":Z
@@ -991,18 +895,15 @@
     .end annotation
 
     .prologue
-    .line 386
     new-instance v5, Ljava/util/ArrayList;
 
     invoke-direct {v5}, Ljava/util/ArrayList;-><init>()V
 
-    .line 387
     .local v5, "pkg_names":Ljava/util/List;, "Ljava/util/List<Ljava/lang/String;>;"
     invoke-static {p1}, Lcom/android/server/enterprise/EnterpriseDeviceManagerService;->getCallingOrCurrentUserId(Landroid/app/enterprise/ContextInfo;)I
 
     move-result v8
 
-    .line 389
     .local v8, "userId":I
     iget-object v10, p0, Lcom/android/server/enterprise/container/SmartCardAccessPolicy;->mEdmStorageProvider:Lcom/android/server/enterprise/storage/EdmStorageProvider;
 
@@ -1010,7 +911,6 @@
 
     move-result-object v0
 
-    .line 390
     .local v0, "adminList":Ljava/util/List;, "Ljava/util/List<Ljava/lang/Long;>;"
     if-eqz v0, :cond_0
 
@@ -1020,12 +920,10 @@
 
     if-eqz v10, :cond_1
 
-    .line 417
     :cond_0
     :goto_0
     return-object v5
 
-    .line 394
     :cond_1
     invoke-interface {v0}, Ljava/util/List;->iterator()Ljava/util/Iterator;
 
@@ -1045,7 +943,6 @@
 
     check-cast v7, Ljava/lang/Long;
 
-    .line 395
     .local v7, "uid":Ljava/lang/Long;
     sget-object v10, Lcom/android/server/enterprise/container/SmartCardAccessPolicy;->TAG:Ljava/lang/String;
 
@@ -1069,7 +966,6 @@
 
     invoke-static {v10, v11}, Lcom/android/server/enterprise/log/Log;->w(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 396
     sget-object v10, Lcom/android/server/enterprise/container/SmartCardAccessPolicy;->TAG:Ljava/lang/String;
 
     new-instance v11, Ljava/lang/StringBuilder;
@@ -1096,18 +992,16 @@
 
     invoke-static {v10, v11}, Lcom/android/server/enterprise/log/Log;->w(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 397
     const/4 v10, 0x1
 
     new-array v6, v10, [Ljava/lang/String;
 
     const/4 v10, 0x0
 
-    const-string/jumbo v11, "whitelistPackageName"
+    const-string v11, "whitelistPackageName"
 
     aput-object v11, v6, v10
 
-    .line 400
     .local v6, "ret":[Ljava/lang/String;
     const/4 v10, 0x1
 
@@ -1119,7 +1013,6 @@
 
     aput-object v11, v1, v10
 
-    .line 403
     .local v1, "col":[Ljava/lang/String;
     const/4 v10, 0x1
 
@@ -1133,7 +1026,6 @@
 
     aput-object v11, v9, v10
 
-    .line 406
     .local v9, "val":[Ljava/lang/String;
     sget-object v10, Lcom/android/server/enterprise/container/SmartCardAccessPolicy;->TAG:Ljava/lang/String;
 
@@ -1141,7 +1033,6 @@
 
     invoke-static {v10, v11}, Lcom/android/server/enterprise/log/Log;->w(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 407
     iget-object v10, p0, Lcom/android/server/enterprise/container/SmartCardAccessPolicy;->mEdmStorageProvider:Lcom/android/server/enterprise/storage/EdmStorageProvider;
 
     const-string v11, "SmartCardAccessWhitelistTable"
@@ -1150,7 +1041,6 @@
 
     move-result-object v2
 
-    .line 409
     .local v2, "cv":Ljava/util/ArrayList;, "Ljava/util/ArrayList<Landroid/content/ContentValues;>;"
     sget-object v10, Lcom/android/server/enterprise/container/SmartCardAccessPolicy;->TAG:Ljava/lang/String;
 
@@ -1178,7 +1068,6 @@
 
     invoke-static {v10, v11}, Lcom/android/server/enterprise/log/Log;->w(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 410
     const/4 v3, 0x0
 
     .local v3, "i":I
@@ -1189,14 +1078,13 @@
 
     if-ge v3, v10, :cond_2
 
-    .line 411
     invoke-virtual {v2, v3}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
 
     move-result-object v10
 
     check-cast v10, Landroid/content/ContentValues;
 
-    const-string/jumbo v11, "whitelistPackageName"
+    const-string v11, "whitelistPackageName"
 
     invoke-virtual {v10, v11}, Landroid/content/ContentValues;->getAsString(Ljava/lang/String;)Ljava/lang/String;
 
@@ -1204,12 +1092,10 @@
 
     invoke-interface {v5, v10}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    .line 410
     add-int/lit8 v3, v3, 0x1
 
     goto :goto_1
 
-    .line 416
     .end local v1    # "col":[Ljava/lang/String;
     .end local v2    # "cv":Ljava/util/ArrayList;, "Ljava/util/ArrayList<Landroid/content/ContentValues;>;"
     .end local v3    # "i":I
@@ -1246,10 +1132,8 @@
     .locals 9
 
     .prologue
-    .line 600
     const/4 v3, 0x0
 
-    .line 601
     .local v3, "ret":Z
     sget-object v5, Lcom/android/server/enterprise/container/SmartCardAccessPolicy;->TAG:Ljava/lang/String;
 
@@ -1257,14 +1141,12 @@
 
     invoke-static {v5, v6}, Lcom/android/server/enterprise/log/Log;->w(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 602
     iget-object v5, p0, Lcom/android/server/enterprise/container/SmartCardAccessPolicy;->mEdmStorageProvider:Lcom/android/server/enterprise/storage/EdmStorageProvider;
 
     invoke-virtual {v5}, Lcom/android/server/enterprise/storage/EdmStorageProvider;->getAdminLUidList()Ljava/util/ArrayList;
 
     move-result-object v0
 
-    .line 603
     .local v0, "adminList":Ljava/util/List;, "Ljava/util/List<Ljava/lang/Long;>;"
     if-eqz v0, :cond_0
 
@@ -1274,15 +1156,12 @@
 
     if-eqz v5, :cond_1
 
-    .line 604
     :cond_0
     const/4 v5, 0x0
 
-    .line 621
     :goto_0
     return v5
 
-    .line 607
     :cond_1
     invoke-interface {v0}, Ljava/util/List;->iterator()Ljava/util/Iterator;
 
@@ -1303,7 +1182,6 @@
 
     check-cast v4, Ljava/lang/Long;
 
-    .line 609
     .local v4, "uid":Ljava/lang/Long;
     :try_start_0
     sget-object v5, Lcom/android/server/enterprise/container/SmartCardAccessPolicy;->TAG:Ljava/lang/String;
@@ -1328,7 +1206,6 @@
 
     invoke-static {v5, v6}, Lcom/android/server/enterprise/log/Log;->w(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 610
     sget-object v5, Lcom/android/server/enterprise/container/SmartCardAccessPolicy;->TAG:Ljava/lang/String;
 
     new-instance v6, Ljava/lang/StringBuilder;
@@ -1355,7 +1232,6 @@
 
     invoke-static {v5, v6}, Lcom/android/server/enterprise/log/Log;->w(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 611
     iget-object v5, p0, Lcom/android/server/enterprise/container/SmartCardAccessPolicy;->mEdmStorageProvider:Lcom/android/server/enterprise/storage/EdmStorageProvider;
 
     invoke-virtual {v4}, Ljava/lang/Long;->intValue()I
@@ -1370,7 +1246,6 @@
 
     move-result v3
 
-    .line 612
     sget-object v5, Lcom/android/server/enterprise/container/SmartCardAccessPolicy;->TAG:Ljava/lang/String;
 
     new-instance v6, Ljava/lang/StringBuilder;
@@ -1395,19 +1270,15 @@
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 613
     if-eqz v3, :cond_2
 
-    .line 614
     const/4 v5, 0x1
 
     goto :goto_0
 
-    .line 615
     :catch_0
     move-exception v1
 
-    .line 616
     .local v1, "e":Ljava/lang/Exception;
     sget-object v5, Lcom/android/server/enterprise/container/SmartCardAccessPolicy;->TAG:Ljava/lang/String;
 
@@ -1431,7 +1302,6 @@
 
     invoke-static {v5, v6}, Lcom/android/server/enterprise/log/Log;->w(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 617
     invoke-virtual {v1}, Ljava/lang/Exception;->printStackTrace()V
 
     goto/16 :goto_1
@@ -1441,7 +1311,6 @@
     :cond_3
     move v5, v3
 
-    .line 621
     goto/16 :goto_0
 .end method
 
@@ -1450,16 +1319,13 @@
     .param p1, "cxtInfo"    # Landroid/app/enterprise/ContextInfo;
 
     .prologue
-    .line 293
     const/4 v3, 0x0
 
-    .line 294
     .local v3, "ret":Z
     invoke-static {p1}, Lcom/android/server/enterprise/EnterpriseDeviceManagerService;->getCallingOrCurrentUserId(Landroid/app/enterprise/ContextInfo;)I
 
     move-result v5
 
-    .line 295
     .local v5, "userId":I
     sget-object v6, Lcom/android/server/enterprise/container/SmartCardAccessPolicy;->TAG:Ljava/lang/String;
 
@@ -1483,21 +1349,18 @@
 
     invoke-static {v6, v7}, Lcom/android/server/enterprise/log/Log;->w(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 297
     sget-object v6, Lcom/android/server/enterprise/container/SmartCardAccessPolicy;->TAG:Ljava/lang/String;
 
     const-string v7, "isBTSecureAccessAllowed()"
 
     invoke-static {v6, v7}, Lcom/android/server/enterprise/log/Log;->w(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 298
     iget-object v6, p0, Lcom/android/server/enterprise/container/SmartCardAccessPolicy;->mEdmStorageProvider:Lcom/android/server/enterprise/storage/EdmStorageProvider;
 
     invoke-virtual {v6, v5}, Lcom/android/server/enterprise/storage/EdmStorageProvider;->getAdminLUidListAsUser(I)Ljava/util/ArrayList;
 
     move-result-object v0
 
-    .line 299
     .local v0, "adminList":Ljava/util/List;, "Ljava/util/List<Ljava/lang/Long;>;"
     if-eqz v0, :cond_0
 
@@ -1507,15 +1370,12 @@
 
     if-eqz v6, :cond_1
 
-    .line 300
     :cond_0
     const/4 v6, 0x0
 
-    .line 318
     :goto_0
     return v6
 
-    .line 303
     :cond_1
     invoke-interface {v0}, Ljava/util/List;->iterator()Ljava/util/Iterator;
 
@@ -1536,7 +1396,6 @@
 
     check-cast v4, Ljava/lang/Long;
 
-    .line 305
     .local v4, "uid":Ljava/lang/Long;
     :try_start_0
     sget-object v6, Lcom/android/server/enterprise/container/SmartCardAccessPolicy;->TAG:Ljava/lang/String;
@@ -1561,7 +1420,6 @@
 
     invoke-static {v6, v7}, Lcom/android/server/enterprise/log/Log;->w(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 306
     sget-object v6, Lcom/android/server/enterprise/container/SmartCardAccessPolicy;->TAG:Ljava/lang/String;
 
     new-instance v7, Ljava/lang/StringBuilder;
@@ -1588,7 +1446,6 @@
 
     invoke-static {v6, v7}, Lcom/android/server/enterprise/log/Log;->w(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 307
     iget-object v6, p0, Lcom/android/server/enterprise/container/SmartCardAccessPolicy;->mEdmStorageProvider:Lcom/android/server/enterprise/storage/EdmStorageProvider;
 
     invoke-virtual {v4}, Ljava/lang/Long;->intValue()I
@@ -1603,7 +1460,6 @@
 
     move-result v3
 
-    .line 308
     sget-object v6, Lcom/android/server/enterprise/container/SmartCardAccessPolicy;->TAG:Ljava/lang/String;
 
     new-instance v7, Ljava/lang/StringBuilder;
@@ -1628,19 +1484,15 @@
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 309
     if-eqz v3, :cond_2
 
-    .line 310
     const/4 v6, 0x1
 
     goto :goto_0
 
-    .line 311
     :catch_0
     move-exception v1
 
-    .line 312
     .local v1, "e":Ljava/lang/Exception;
     sget-object v6, Lcom/android/server/enterprise/container/SmartCardAccessPolicy;->TAG:Ljava/lang/String;
 
@@ -1664,7 +1516,6 @@
 
     invoke-static {v6, v7}, Lcom/android/server/enterprise/log/Log;->w(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 313
     invoke-virtual {v1}, Ljava/lang/Exception;->printStackTrace()V
 
     goto/16 :goto_1
@@ -1674,7 +1525,6 @@
     :cond_3
     move v6, v3
 
-    .line 318
     goto/16 :goto_0
 .end method
 
@@ -1684,10 +1534,8 @@
     .param p2, "userId"    # I
 
     .prologue
-    .line 322
     const/4 v3, 0x0
 
-    .line 323
     .local v3, "ret":Z
     sget-object v5, Lcom/android/server/enterprise/container/SmartCardAccessPolicy;->TAG:Ljava/lang/String;
 
@@ -1711,14 +1559,12 @@
 
     invoke-static {v5, v6}, Lcom/android/server/enterprise/log/Log;->w(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 325
     iget-object v5, p0, Lcom/android/server/enterprise/container/SmartCardAccessPolicy;->mEdmStorageProvider:Lcom/android/server/enterprise/storage/EdmStorageProvider;
 
     invoke-virtual {v5, p2}, Lcom/android/server/enterprise/storage/EdmStorageProvider;->getAdminLUidListAsUser(I)Ljava/util/ArrayList;
 
     move-result-object v0
 
-    .line 326
     .local v0, "adminList":Ljava/util/List;, "Ljava/util/List<Ljava/lang/Long;>;"
     if-eqz v0, :cond_0
 
@@ -1728,15 +1574,12 @@
 
     if-eqz v5, :cond_1
 
-    .line 327
     :cond_0
     const/4 v5, 0x0
 
-    .line 345
     :goto_0
     return v5
 
-    .line 330
     :cond_1
     invoke-interface {v0}, Ljava/util/List;->iterator()Ljava/util/Iterator;
 
@@ -1757,7 +1600,6 @@
 
     check-cast v4, Ljava/lang/Long;
 
-    .line 334
     .local v4, "uid":Ljava/lang/Long;
     :try_start_0
     iget-object v5, p0, Lcom/android/server/enterprise/container/SmartCardAccessPolicy;->mEdmStorageProvider:Lcom/android/server/enterprise/storage/EdmStorageProvider;
@@ -1774,7 +1616,6 @@
 
     move-result v3
 
-    .line 335
     sget-object v5, Lcom/android/server/enterprise/container/SmartCardAccessPolicy;->TAG:Ljava/lang/String;
 
     new-instance v6, Ljava/lang/StringBuilder;
@@ -1799,19 +1640,15 @@
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 336
     if-eqz v3, :cond_2
 
-    .line 337
     const/4 v5, 0x1
 
     goto :goto_0
 
-    .line 338
     :catch_0
     move-exception v1
 
-    .line 339
     .local v1, "e":Ljava/lang/Exception;
     sget-object v5, Lcom/android/server/enterprise/container/SmartCardAccessPolicy;->TAG:Ljava/lang/String;
 
@@ -1842,7 +1679,6 @@
     :cond_3
     move v5, v3
 
-    .line 345
     goto :goto_0
 .end method
 
@@ -1852,20 +1688,16 @@
     .param p2, "package_name"    # Ljava/lang/String;
 
     .prologue
-    .line 458
     const/4 v4, 0x0
 
-    .line 459
     .local v4, "pkg_nm":Ljava/lang/String;
     invoke-static {p1}, Lcom/android/server/enterprise/EnterpriseDeviceManagerService;->getCallingOrCurrentUserId(Landroid/app/enterprise/ContextInfo;)I
 
     move-result v7
 
-    .line 460
     .local v7, "userId":I
     const/4 v5, 0x0
 
-    .line 462
     .local v5, "ret":Z
     sget-object v9, Lcom/android/server/enterprise/container/SmartCardAccessPolicy;->TAG:Ljava/lang/String;
 
@@ -1889,24 +1721,19 @@
 
     invoke-static {v9, v10}, Lcom/android/server/enterprise/log/Log;->w(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 463
     if-nez p2, :cond_0
 
-    .line 464
     sget-object v9, Lcom/android/server/enterprise/container/SmartCardAccessPolicy;->TAG:Ljava/lang/String;
 
     const-string v10, "isPackageWhitelistedFromBTSecureAccess() package name is null "
 
     invoke-static {v9, v10}, Lcom/android/server/enterprise/log/Log;->w(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 465
     const/4 v9, 0x0
 
-    .line 503
     :goto_0
     return v9
 
-    .line 468
     :cond_0
     const-string v9, "com.android.bluetooth"
 
@@ -1916,19 +1743,16 @@
 
     if-eqz v9, :cond_1
 
-    .line 469
     sget-object v9, Lcom/android/server/enterprise/container/SmartCardAccessPolicy;->TAG:Ljava/lang/String;
 
     const-string v10, "isPackageWhitelistedFromBTSecureAccess() package name is bluetooth "
 
     invoke-static {v9, v10}, Lcom/android/server/enterprise/log/Log;->w(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 470
     const/4 v9, 0x1
 
     goto :goto_0
 
-    .line 474
     :cond_1
     iget-object v9, p0, Lcom/android/server/enterprise/container/SmartCardAccessPolicy;->mEdmStorageProvider:Lcom/android/server/enterprise/storage/EdmStorageProvider;
 
@@ -1936,7 +1760,6 @@
 
     move-result-object v0
 
-    .line 475
     .local v0, "adminList":Ljava/util/List;, "Ljava/util/List<Ljava/lang/Long;>;"
     if-eqz v0, :cond_2
 
@@ -1946,13 +1769,11 @@
 
     if-eqz v9, :cond_3
 
-    .line 476
     :cond_2
     const/4 v9, 0x0
 
     goto :goto_0
 
-    .line 479
     :cond_3
     invoke-interface {v0}, Ljava/util/List;->iterator()Ljava/util/Iterator;
 
@@ -1972,7 +1793,6 @@
 
     check-cast v6, Ljava/lang/Long;
 
-    .line 480
     .local v6, "uid":Ljava/lang/Long;
     sget-object v9, Lcom/android/server/enterprise/container/SmartCardAccessPolicy;->TAG:Ljava/lang/String;
 
@@ -1996,7 +1816,6 @@
 
     invoke-static {v9, v10}, Lcom/android/server/enterprise/log/Log;->w(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 481
     sget-object v9, Lcom/android/server/enterprise/container/SmartCardAccessPolicy;->TAG:Ljava/lang/String;
 
     new-instance v10, Ljava/lang/StringBuilder;
@@ -2023,7 +1842,6 @@
 
     invoke-static {v9, v10}, Lcom/android/server/enterprise/log/Log;->w(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 482
     const/4 v9, 0x2
 
     new-array v1, v9, [Ljava/lang/String;
@@ -2036,11 +1854,10 @@
 
     const/4 v9, 0x1
 
-    const-string/jumbo v10, "whitelistPackageName"
+    const-string v10, "whitelistPackageName"
 
     aput-object v10, v1, v9
 
-    .line 485
     .local v1, "col":[Ljava/lang/String;
     const/4 v9, 0x2
 
@@ -2058,7 +1875,6 @@
 
     aput-object p2, v8, v9
 
-    .line 489
     .local v8, "val":[Ljava/lang/String;
     sget-object v9, Lcom/android/server/enterprise/container/SmartCardAccessPolicy;->TAG:Ljava/lang/String;
 
@@ -2066,7 +1882,6 @@
 
     invoke-static {v9, v10}, Lcom/android/server/enterprise/log/Log;->w(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 490
     iget-object v9, p0, Lcom/android/server/enterprise/container/SmartCardAccessPolicy;->mEdmStorageProvider:Lcom/android/server/enterprise/storage/EdmStorageProvider;
 
     const-string v10, "SmartCardAccessWhitelistTable"
@@ -2077,7 +1892,6 @@
 
     move-result-object v2
 
-    .line 492
     .local v2, "cv":Ljava/util/ArrayList;, "Ljava/util/ArrayList<Landroid/content/ContentValues;>;"
     sget-object v9, Lcom/android/server/enterprise/container/SmartCardAccessPolicy;->TAG:Ljava/lang/String;
 
@@ -2105,7 +1919,6 @@
 
     invoke-static {v9, v10}, Lcom/android/server/enterprise/log/Log;->w(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 493
     if-eqz v2, :cond_4
 
     invoke-virtual {v2}, Ljava/util/ArrayList;->size()I
@@ -2116,7 +1929,6 @@
 
     if-ge v9, v10, :cond_5
 
-    .line 494
     :cond_4
     sget-object v9, Lcom/android/server/enterprise/container/SmartCardAccessPolicy;->TAG:Ljava/lang/String;
 
@@ -2124,12 +1936,10 @@
 
     invoke-static {v9, v10}, Lcom/android/server/enterprise/log/Log;->w(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 495
     const/4 v5, 0x0
 
     goto/16 :goto_1
 
-    .line 498
     :cond_5
     sget-object v9, Lcom/android/server/enterprise/container/SmartCardAccessPolicy;->TAG:Ljava/lang/String;
 
@@ -2137,7 +1947,6 @@
 
     invoke-static {v9, v10}, Lcom/android/server/enterprise/log/Log;->w(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 499
     const/4 v9, 0x1
 
     goto/16 :goto_0
@@ -2149,7 +1958,6 @@
     :cond_6
     move v9, v5
 
-    .line 503
     goto/16 :goto_0
 .end method
 
@@ -2159,16 +1967,13 @@
     .param p2, "calling_Uid"    # I
 
     .prologue
-    .line 512
     invoke-static/range {p1 .. p1}, Lcom/android/server/enterprise/EnterpriseDeviceManagerService;->getCallingOrCurrentUserId(Landroid/app/enterprise/ContextInfo;)I
 
     move-result v20
 
-    .line 513
     .local v20, "userId":I
     const/16 v18, 0x0
 
-    .line 514
     .local v18, "ret":Z
     sget-object v22, Lcom/android/server/enterprise/container/SmartCardAccessPolicy;->TAG:Ljava/lang/String;
 
@@ -2196,16 +2001,13 @@
 
     invoke-static/range {v22 .. v23}, Lcom/android/server/enterprise/log/Log;->w(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 515
     move/from16 v5, p2
 
-    .line 516
     .local v5, "callingUid":I
     invoke-static {v5}, Landroid/os/UserHandle;->getAppId(I)I
 
     move-result v6
 
-    .line 517
     .local v6, "callingUid_system":I
     sget-object v22, Lcom/android/server/enterprise/container/SmartCardAccessPolicy;->TAG:Ljava/lang/String;
 
@@ -2231,12 +2033,10 @@
 
     invoke-static/range {v22 .. v23}, Lcom/android/server/enterprise/log/Log;->e(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 518
     invoke-static {}, Landroid/os/Binder;->clearCallingIdentity()J
 
     move-result-wide v12
 
-    .line 521
     .local v12, "ident":J
     :try_start_0
     sget-object v22, Lcom/android/server/enterprise/container/SmartCardAccessPolicy;->TAG:Ljava/lang/String;
@@ -2265,14 +2065,13 @@
 
     invoke-static/range {v22 .. v23}, Lcom/android/server/enterprise/log/Log;->e(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 522
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/android/server/enterprise/container/SmartCardAccessPolicy;->mContext:Landroid/content/Context;
 
     move-object/from16 v22, v0
 
-    const-string/jumbo v23, "persona"
+    const-string v23, "persona"
 
     invoke-virtual/range {v22 .. v23}, Landroid/content/Context;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
 
@@ -2280,7 +2079,6 @@
 
     check-cast v16, Landroid/os/PersonaManager;
 
-    .line 523
     .local v16, "personaManager":Landroid/os/PersonaManager;
     move-object/from16 v0, v16
 
@@ -2290,11 +2088,9 @@
 
     move-result v14
 
-    .line 524
     .local v14, "isPersona":Z
     if-eqz v14, :cond_8
 
-    .line 526
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/android/server/enterprise/container/SmartCardAccessPolicy;->mEdmStorageProvider:Lcom/android/server/enterprise/storage/EdmStorageProvider;
@@ -2309,7 +2105,6 @@
 
     move-result-object v4
 
-    .line 527
     .local v4, "adminList":Ljava/util/List;, "Ljava/util/List<Ljava/lang/Long;>;"
     if-eqz v4, :cond_0
 
@@ -2322,21 +2117,17 @@
 
     if-eqz v22, :cond_1
 
-    .line 528
     :cond_0
     const/16 v22, 0x0
 
-    .line 587
     invoke-static {v12, v13}, Landroid/os/Binder;->restoreCallingIdentity(J)V
 
-    .line 591
     .end local v4    # "adminList":Ljava/util/List;, "Ljava/util/List<Ljava/lang/Long;>;"
     .end local v14    # "isPersona":Z
     .end local v16    # "personaManager":Landroid/os/PersonaManager;
     :goto_0
     return v22
 
-    .line 531
     .restart local v4    # "adminList":Ljava/util/List;, "Ljava/util/List<Ljava/lang/Long;>;"
     .restart local v14    # "isPersona":Z
     .restart local v16    # "personaManager":Landroid/os/PersonaManager;
@@ -2348,7 +2139,6 @@
 
     invoke-static/range {v22 .. v23}, Lcom/android/server/enterprise/log/Log;->e(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 532
     const/16 v22, 0x3e8
 
     move/from16 v0, v22
@@ -2361,7 +2151,6 @@
 
     if-ne v6, v0, :cond_3
 
-    .line 534
     :cond_2
     sget-object v22, Lcom/android/server/enterprise/container/SmartCardAccessPolicy;->TAG:Ljava/lang/String;
 
@@ -2372,15 +2161,12 @@
     .catch Ljava/lang/Exception; {:try_start_1 .. :try_end_1} :catch_0
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
-    .line 535
     const/16 v22, 0x1
 
-    .line 587
     invoke-static {v12, v13}, Landroid/os/Binder;->restoreCallingIdentity(J)V
 
     goto :goto_0
 
-    .line 538
     :cond_3
     :try_start_2
     move-object/from16 v0, p0
@@ -2393,7 +2179,6 @@
 
     move-result-object v17
 
-    .line 539
     .local v17, "pm":Landroid/content/pm/PackageManager;
     move-object/from16 v0, v17
 
@@ -2401,7 +2186,6 @@
 
     move-result-object v15
 
-    .line 541
     .local v15, "packages":[Ljava/lang/String;
     sget-object v22, Lcom/android/server/enterprise/container/SmartCardAccessPolicy;->TAG:Ljava/lang/String;
 
@@ -2427,7 +2211,6 @@
 
     invoke-static/range {v22 .. v23}, Lcom/android/server/enterprise/log/Log;->e(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 543
     if-eqz v15, :cond_7
 
     array-length v0, v15
@@ -2436,7 +2219,6 @@
 
     if-lez v22, :cond_7
 
-    .line 544
     const/4 v10, 0x0
 
     .local v10, "i":I
@@ -2449,7 +2231,6 @@
 
     if-ge v10, v0, :cond_9
 
-    .line 546
     sget-object v22, Lcom/android/server/enterprise/container/SmartCardAccessPolicy;->TAG:Ljava/lang/String;
 
     new-instance v23, Ljava/lang/StringBuilder;
@@ -2474,7 +2255,6 @@
 
     invoke-static/range {v22 .. v23}, Lcom/android/server/enterprise/log/Log;->e(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 547
     invoke-interface {v4}, Ljava/util/List;->iterator()Ljava/util/Iterator;
 
     move-result-object v11
@@ -2493,7 +2273,6 @@
 
     check-cast v19, Ljava/lang/Long;
 
-    .line 548
     .local v19, "uid":Ljava/lang/Long;
     sget-object v22, Lcom/android/server/enterprise/container/SmartCardAccessPolicy;->TAG:Ljava/lang/String;
 
@@ -2521,7 +2300,6 @@
 
     invoke-static/range {v22 .. v23}, Lcom/android/server/enterprise/log/Log;->w(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 549
     sget-object v22, Lcom/android/server/enterprise/container/SmartCardAccessPolicy;->TAG:Ljava/lang/String;
 
     new-instance v23, Ljava/lang/StringBuilder;
@@ -2548,7 +2326,6 @@
 
     invoke-static/range {v22 .. v23}, Lcom/android/server/enterprise/log/Log;->w(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 550
     const/16 v22, 0x2
 
     move/from16 v0, v22
@@ -2563,11 +2340,10 @@
 
     const/16 v22, 0x1
 
-    const-string/jumbo v23, "whitelistPackageName"
+    const-string v23, "whitelistPackageName"
 
     aput-object v23, v7, v22
 
-    .line 553
     .local v7, "col":[Ljava/lang/String;
     const/16 v22, 0x2
 
@@ -2591,7 +2367,6 @@
 
     aput-object v23, v21, v22
 
-    .line 557
     .local v21, "val":[Ljava/lang/String;
     sget-object v22, Lcom/android/server/enterprise/container/SmartCardAccessPolicy;->TAG:Ljava/lang/String;
 
@@ -2599,7 +2374,6 @@
 
     invoke-static/range {v22 .. v23}, Lcom/android/server/enterprise/log/Log;->w(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 558
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/android/server/enterprise/container/SmartCardAccessPolicy;->mEdmStorageProvider:Lcom/android/server/enterprise/storage/EdmStorageProvider;
@@ -2622,7 +2396,6 @@
 
     move-result-object v8
 
-    .line 560
     .local v8, "cv":Ljava/util/ArrayList;, "Ljava/util/ArrayList<Landroid/content/ContentValues;>;"
     sget-object v22, Lcom/android/server/enterprise/container/SmartCardAccessPolicy;->TAG:Ljava/lang/String;
 
@@ -2650,7 +2423,6 @@
 
     invoke-static/range {v22 .. v23}, Lcom/android/server/enterprise/log/Log;->w(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 561
     if-eqz v8, :cond_4
 
     invoke-virtual {v8}, Ljava/util/ArrayList;->size()I
@@ -2665,7 +2437,6 @@
 
     if-ge v0, v1, :cond_5
 
-    .line 562
     :cond_4
     sget-object v22, Lcom/android/server/enterprise/container/SmartCardAccessPolicy;->TAG:Ljava/lang/String;
 
@@ -2673,12 +2444,10 @@
 
     invoke-static/range {v22 .. v23}, Lcom/android/server/enterprise/log/Log;->w(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 563
     const/16 v18, 0x0
 
     goto/16 :goto_2
 
-    .line 566
     :cond_5
     sget-object v22, Lcom/android/server/enterprise/container/SmartCardAccessPolicy;->TAG:Ljava/lang/String;
 
@@ -2689,15 +2458,12 @@
     .catch Ljava/lang/Exception; {:try_start_2 .. :try_end_2} :catch_0
     .catchall {:try_start_2 .. :try_end_2} :catchall_0
 
-    .line 567
     const/16 v22, 0x1
 
-    .line 587
     invoke-static {v12, v13}, Landroid/os/Binder;->restoreCallingIdentity(J)V
 
     goto/16 :goto_0
 
-    .line 544
     .end local v7    # "col":[Ljava/lang/String;
     .end local v8    # "cv":Ljava/util/ArrayList;, "Ljava/util/ArrayList<Landroid/content/ContentValues;>;"
     .end local v19    # "uid":Ljava/lang/Long;
@@ -2707,7 +2473,6 @@
 
     goto/16 :goto_1
 
-    .line 574
     .end local v10    # "i":I
     .end local v11    # "i$":Ljava/util/Iterator;
     :cond_7
@@ -2721,15 +2486,12 @@
     .catch Ljava/lang/Exception; {:try_start_3 .. :try_end_3} :catch_0
     .catchall {:try_start_3 .. :try_end_3} :catchall_0
 
-    .line 575
     const/16 v22, 0x0
 
-    .line 587
     invoke-static {v12, v13}, Landroid/os/Binder;->restoreCallingIdentity(J)V
 
     goto/16 :goto_0
 
-    .line 580
     .end local v4    # "adminList":Ljava/util/List;, "Ljava/util/List<Ljava/lang/Long;>;"
     .end local v15    # "packages":[Ljava/lang/String;
     .end local v17    # "pm":Landroid/content/pm/PackageManager;
@@ -2744,14 +2506,11 @@
     .catch Ljava/lang/Exception; {:try_start_4 .. :try_end_4} :catch_0
     .catchall {:try_start_4 .. :try_end_4} :catchall_0
 
-    .line 581
     const/16 v18, 0x1
 
-    .line 587
     :cond_9
     invoke-static {v12, v13}, Landroid/os/Binder;->restoreCallingIdentity(J)V
 
-    .line 590
     .end local v14    # "isPersona":Z
     .end local v16    # "personaManager":Landroid/os/PersonaManager;
     :goto_3
@@ -2783,14 +2542,11 @@
 
     move/from16 v22, v18
 
-    .line 591
     goto/16 :goto_0
 
-    .line 583
     :catch_0
     move-exception v9
 
-    .line 584
     .local v9, "ex":Ljava/lang/Exception;
     :try_start_5
     sget-object v22, Lcom/android/server/enterprise/container/SmartCardAccessPolicy;->TAG:Ljava/lang/String;
@@ -2819,10 +2575,8 @@
     :try_end_5
     .catchall {:try_start_5 .. :try_end_5} :catchall_0
 
-    .line 585
     const/16 v18, 0x0
 
-    .line 587
     invoke-static {v12, v13}, Landroid/os/Binder;->restoreCallingIdentity(J)V
 
     goto :goto_3
@@ -2841,7 +2595,6 @@
     .param p1, "uid"    # I
 
     .prologue
-    .line 628
     return-void
 .end method
 
@@ -2850,7 +2603,6 @@
     .param p1, "uid"    # I
 
     .prologue
-    .line 633
     return-void
 .end method
 
@@ -2860,7 +2612,6 @@
     .param p2, "ownerUid"    # I
 
     .prologue
-    .line 642
     return-void
 .end method
 
@@ -2870,7 +2621,6 @@
     .param p2, "ownerUid"    # I
 
     .prologue
-    .line 651
     return-void
 .end method
 
@@ -2879,7 +2629,6 @@
     .param p1, "uid"    # I
 
     .prologue
-    .line 638
     return-void
 .end method
 
@@ -2889,7 +2638,6 @@
     .param p2, "ownerUid"    # I
 
     .prologue
-    .line 646
     return-void
 .end method
 
@@ -2908,29 +2656,24 @@
     .end annotation
 
     .prologue
-    .line 352
     .local p2, "packageNames":Ljava/util/List;, "Ljava/util/List<Ljava/lang/String;>;"
     const/4 v5, 0x0
 
-    .line 353
     .local v5, "ret":Z
     invoke-direct {p0, p1}, Lcom/android/server/enterprise/container/SmartCardAccessPolicy;->enforcePermission(Landroid/app/enterprise/ContextInfo;)Landroid/app/enterprise/ContextInfo;
 
     move-result-object p1
 
-    .line 354
     sget-object v8, Lcom/android/server/enterprise/container/SmartCardAccessPolicy;->TAG:Ljava/lang/String;
 
-    const-string/jumbo v9, "setBTSecureAccessAppWhiteList()"
+    const-string v9, "setBTSecureAccessAppWhiteList()"
 
     invoke-static {v8, v9}, Lcom/android/server/enterprise/log/Log;->w(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 355
     invoke-static {p1}, Lcom/android/server/enterprise/EnterpriseDeviceManagerService;->getCallingOrCurrentUserId(Landroid/app/enterprise/ContextInfo;)I
 
     move-result v7
 
-    .line 356
     .local v7, "userId":I
     sget-object v8, Lcom/android/server/enterprise/container/SmartCardAccessPolicy;->TAG:Ljava/lang/String;
 
@@ -2938,7 +2681,7 @@
 
     invoke-direct {v9}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v10, "setBTSecureAccessAppWhiteList() userId is "
+    const-string v10, "setBTSecureAccessAppWhiteList() userId is "
 
     invoke-virtual {v9, v10}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -2954,21 +2697,17 @@
 
     invoke-static {v8, v9}, Lcom/android/server/enterprise/log/Log;->w(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 358
     iget v0, p1, Landroid/app/enterprise/ContextInfo;->mCallerUid:I
 
-    .line 359
     .local v0, "adminId":I
     if-eqz p2, :cond_2
 
-    .line 360
     sget-object v8, Lcom/android/server/enterprise/container/SmartCardAccessPolicy;->TAG:Ljava/lang/String;
 
-    const-string/jumbo v9, "setBTSecureAccessAppWhiteList() - package name list not null"
+    const-string v9, "setBTSecureAccessAppWhiteList() - package name list not null"
 
     invoke-static {v8, v9}, Lcom/android/server/enterprise/log/Log;->w(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 361
     invoke-interface {p2}, Ljava/util/List;->iterator()Ljava/util/Iterator;
 
     move-result-object v2
@@ -2987,11 +2726,9 @@
 
     check-cast v3, Ljava/lang/String;
 
-    .line 362
     .local v3, "pkg":Ljava/lang/String;
     move-object v4, v3
 
-    .line 363
     .local v4, "pkg1":Ljava/lang/String;
     sget-object v8, Lcom/android/server/enterprise/container/SmartCardAccessPolicy;->TAG:Ljava/lang/String;
 
@@ -2999,7 +2736,7 @@
 
     invoke-direct {v9}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v10, "setBTSecureAccessAppWhiteList() - package name is "
+    const-string v10, "setBTSecureAccessAppWhiteList() - package name is "
 
     invoke-virtual {v9, v10}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -3015,18 +2752,15 @@
 
     invoke-static {v8, v9}, Lcom/android/server/enterprise/log/Log;->w(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 364
     new-instance v1, Landroid/content/ContentValues;
 
     invoke-direct {v1}, Landroid/content/ContentValues;-><init>()V
 
-    .line 365
     .local v1, "cv":Landroid/content/ContentValues;
-    const-string/jumbo v8, "whitelistPackageName"
+    const-string v8, "whitelistPackageName"
 
     invoke-virtual {v1, v8, v4}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 366
     const-string v8, "adminUid"
 
     invoke-static {v0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
@@ -3035,7 +2769,6 @@
 
     invoke-virtual {v1, v8, v9}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/Integer;)V
 
-    .line 369
     iget-object v8, p0, Lcom/android/server/enterprise/container/SmartCardAccessPolicy;->mEdmStorageProvider:Lcom/android/server/enterprise/storage/EdmStorageProvider;
 
     const-string v9, "SmartCardAccessWhitelistTable"
@@ -3044,12 +2777,10 @@
 
     move-result v5
 
-    .line 371
     if-nez v5, :cond_0
 
     move v6, v5
 
-    .line 379
     .end local v1    # "cv":Landroid/content/ContentValues;
     .end local v2    # "i$":Ljava/util/Iterator;
     .end local v3    # "pkg":Ljava/lang/String;
@@ -3059,14 +2790,12 @@
     :goto_0
     return v6
 
-    .line 375
     .end local v6    # "ret":Z
     .restart local v2    # "i$":Ljava/util/Iterator;
     .restart local v5    # "ret":Z
     :cond_1
     const/4 v5, 0x1
 
-    .line 378
     .end local v2    # "i$":Ljava/util/Iterator;
     :cond_2
     sget-object v8, Lcom/android/server/enterprise/container/SmartCardAccessPolicy;->TAG:Ljava/lang/String;
@@ -3075,7 +2804,7 @@
 
     invoke-direct {v9}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v10, "setBTSecureAccessAppWhiteList() - ret is "
+    const-string v10, "setBTSecureAccessAppWhiteList() - ret is "
 
     invoke-virtual {v9, v10}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -3093,7 +2822,6 @@
 
     move v6, v5
 
-    .line 379
     .end local v5    # "ret":Z
     .restart local v6    # "ret":Z
     goto :goto_0
@@ -3103,6 +2831,5 @@
     .locals 0
 
     .prologue
-    .line 656
     return-void
 .end method

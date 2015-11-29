@@ -26,7 +26,6 @@
     .locals 0
 
     .prologue
-    .line 2023
     iput-object p1, p0, Lcom/android/internal/policy/impl/MultiPhoneWindow$3;->this$0:Lcom/android/internal/policy/impl/MultiPhoneWindow;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -41,7 +40,6 @@
     .param p1, "animation"    # Landroid/view/animation/Animation;
 
     .prologue
-    .line 2035
     iget-object v0, p0, Lcom/android/internal/policy/impl/MultiPhoneWindow$3;->this$0:Lcom/android/internal/policy/impl/MultiPhoneWindow;
 
     # getter for: Lcom/android/internal/policy/impl/MultiPhoneWindow;->mConsumeTouchEvent:Z
@@ -51,7 +49,6 @@
 
     if-eqz v0, :cond_0
 
-    .line 2036
     iget-object v0, p0, Lcom/android/internal/policy/impl/MultiPhoneWindow$3;->this$0:Lcom/android/internal/policy/impl/MultiPhoneWindow;
 
     const/4 v1, 0x0
@@ -59,7 +56,6 @@
     # setter for: Lcom/android/internal/policy/impl/MultiPhoneWindow;->mConsumeTouchEvent:Z
     invoke-static {v0, v1}, Lcom/android/internal/policy/impl/MultiPhoneWindow;->access$5302(Lcom/android/internal/policy/impl/MultiPhoneWindow;Z)Z
 
-    .line 2038
     :cond_0
     return-void
 .end method
@@ -69,7 +65,6 @@
     .param p1, "animation"    # Landroid/view/animation/Animation;
 
     .prologue
-    .line 2031
     return-void
 .end method
 
@@ -78,7 +73,6 @@
     .param p1, "animation"    # Landroid/view/animation/Animation;
 
     .prologue
-    .line 2026
     iget-object v0, p0, Lcom/android/internal/policy/impl/MultiPhoneWindow$3;->this$0:Lcom/android/internal/policy/impl/MultiPhoneWindow;
 
     # getter for: Lcom/android/internal/policy/impl/MultiPhoneWindow;->mMultiWindowFacade:Lcom/samsung/android/multiwindow/MultiWindowFacade;
@@ -88,7 +82,6 @@
 
     if-eqz v0, :cond_0
 
-    .line 2027
     iget-object v0, p0, Lcom/android/internal/policy/impl/MultiPhoneWindow$3;->this$0:Lcom/android/internal/policy/impl/MultiPhoneWindow;
 
     # getter for: Lcom/android/internal/policy/impl/MultiPhoneWindow;->mMultiWindowFacade:Lcom/samsung/android/multiwindow/MultiWindowFacade;
@@ -105,7 +98,6 @@
 
     invoke-virtual {v0, v1}, Lcom/samsung/android/multiwindow/MultiWindowFacade;->appMinimizingStarted(Landroid/os/IBinder;)V
 
-    .line 2029
     :cond_0
     return-void
 .end method

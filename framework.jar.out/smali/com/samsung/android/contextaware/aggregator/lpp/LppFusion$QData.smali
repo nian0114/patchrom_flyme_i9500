@@ -57,37 +57,30 @@
     .end annotation
 
     .prologue
-    .line 102
     .local p2, "value":Ljava/lang/Object;, "TE;"
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 104
     iput-object p1, p0, Lcom/samsung/android/contextaware/aggregator/lpp/LppFusion$QData;->msgid:Lcom/samsung/android/contextaware/aggregator/lpp/LppFusion$QMsg;
 
-    .line 106
     if-nez p2, :cond_1
 
-    .line 131
     .end local p2    # "value":Ljava/lang/Object;, "TE;"
     :cond_0
     :goto_0
     return-void
 
-    .line 110
     .restart local p2    # "value":Ljava/lang/Object;, "TE;"
     :cond_1
     sget-object v6, Lcom/samsung/android/contextaware/aggregator/lpp/LppFusion$QMsg;->QMSG_APDR_DATA_RXED:Lcom/samsung/android/contextaware/aggregator/lpp/LppFusion$QMsg;
 
     if-ne p1, v6, :cond_2
 
-    .line 112
     new-instance v6, Ljava/util/ArrayList;
 
     invoke-direct {v6}, Ljava/util/ArrayList;-><init>()V
 
     iput-object v6, p0, Lcom/samsung/android/contextaware/aggregator/lpp/LppFusion$QData;->listAPDR:Ljava/util/ArrayList;
 
-    .line 113
     check-cast p2, Ljava/util/ArrayList;
 
     .end local p2    # "value":Ljava/lang/Object;, "TE;"
@@ -109,7 +102,6 @@
 
     check-cast v0, Lcom/samsung/android/contextaware/aggregator/lpp/ApdrData;
 
-    .line 114
     .local v0, "apdrdata":Lcom/samsung/android/contextaware/aggregator/lpp/ApdrData;
     iget-object v6, p0, Lcom/samsung/android/contextaware/aggregator/lpp/LppFusion$QData;->listAPDR:Ljava/util/ArrayList;
 
@@ -121,7 +113,6 @@
 
     goto :goto_1
 
-    .line 116
     .end local v0    # "apdrdata":Lcom/samsung/android/contextaware/aggregator/lpp/ApdrData;
     .end local v2    # "i$":Ljava/util/Iterator;
     .restart local p2    # "value":Ljava/lang/Object;, "TE;"
@@ -138,7 +129,6 @@
 
     if-ne p1, v6, :cond_4
 
-    .line 120
     :cond_3
     new-instance v6, Landroid/location/Location;
 
@@ -151,7 +141,6 @@
 
     goto :goto_0
 
-    .line 121
     .restart local p2    # "value":Ljava/lang/Object;, "TE;"
     :cond_4
     sget-object v6, Lcom/samsung/android/contextaware/aggregator/lpp/LppFusion$QMsg;->QMSG_BATCH_LOC_LIST_RXED:Lcom/samsung/android/contextaware/aggregator/lpp/LppFusion$QMsg;
@@ -165,7 +154,6 @@
     :cond_5
     move-object v6, p2
 
-    .line 124
     check-cast v6, Ljava/util/ArrayList;
 
     invoke-virtual {v6}, Ljava/util/ArrayList;->size()I
@@ -174,7 +162,6 @@
 
     new-array v4, v6, [Landroid/location/Location;
 
-    .line 125
     .local v4, "larray":[Landroid/location/Location;
     check-cast p2, Ljava/util/ArrayList;
 
@@ -186,7 +173,6 @@
     .end local v4    # "larray":[Landroid/location/Location;
     check-cast v4, [Landroid/location/Location;
 
-    .line 126
     .restart local v4    # "larray":[Landroid/location/Location;
     new-instance v6, Ljava/util/ArrayList;
 
@@ -194,7 +180,6 @@
 
     iput-object v6, p0, Lcom/samsung/android/contextaware/aggregator/lpp/LppFusion$QData;->listLoc:Ljava/util/ArrayList;
 
-    .line 127
     move-object v1, v4
 
     .local v1, "arr$":[Landroid/location/Location;
@@ -209,7 +194,6 @@
 
     aget-object v3, v1, v2
 
-    .line 128
     .local v3, "l":Landroid/location/Location;
     iget-object v6, p0, Lcom/samsung/android/contextaware/aggregator/lpp/LppFusion$QData;->listLoc:Ljava/util/ArrayList;
 
@@ -219,7 +203,6 @@
 
     invoke-virtual {v6, v7}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 127
     add-int/lit8 v2, v2, 0x1
 
     goto :goto_2
@@ -230,7 +213,6 @@
     .param p0, "x0"    # Lcom/samsung/android/contextaware/aggregator/lpp/LppFusion$QData;
 
     .prologue
-    .line 96
     iget-object v0, p0, Lcom/samsung/android/contextaware/aggregator/lpp/LppFusion$QData;->msgid:Lcom/samsung/android/contextaware/aggregator/lpp/LppFusion$QMsg;
 
     return-object v0
@@ -241,7 +223,6 @@
     .param p0, "x0"    # Lcom/samsung/android/contextaware/aggregator/lpp/LppFusion$QData;
 
     .prologue
-    .line 96
     iget-object v0, p0, Lcom/samsung/android/contextaware/aggregator/lpp/LppFusion$QData;->listAPDR:Ljava/util/ArrayList;
 
     return-object v0
@@ -252,7 +233,6 @@
     .param p0, "x0"    # Lcom/samsung/android/contextaware/aggregator/lpp/LppFusion$QData;
 
     .prologue
-    .line 96
     iget-object v0, p0, Lcom/samsung/android/contextaware/aggregator/lpp/LppFusion$QData;->listLoc:Ljava/util/ArrayList;
 
     return-object v0
@@ -263,7 +243,6 @@
     .param p0, "x0"    # Lcom/samsung/android/contextaware/aggregator/lpp/LppFusion$QData;
 
     .prologue
-    .line 96
     iget-object v0, p0, Lcom/samsung/android/contextaware/aggregator/lpp/LppFusion$QData;->loc:Landroid/location/Location;
 
     return-object v0

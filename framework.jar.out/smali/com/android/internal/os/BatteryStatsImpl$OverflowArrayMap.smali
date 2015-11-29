@@ -67,20 +67,17 @@
     .locals 1
 
     .prologue
-    .line 1571
     .local p0, "this":Lcom/android/internal/os/BatteryStatsImpl$OverflowArrayMap;, "Lcom/android/internal/os/BatteryStatsImpl$OverflowArrayMap<TT;>;"
     iput-object p1, p0, Lcom/android/internal/os/BatteryStatsImpl$OverflowArrayMap;->this$0:Lcom/android/internal/os/BatteryStatsImpl;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 1567
     new-instance v0, Landroid/util/ArrayMap;
 
     invoke-direct {v0}, Landroid/util/ArrayMap;-><init>()V
 
     iput-object v0, p0, Lcom/android/internal/os/BatteryStatsImpl$OverflowArrayMap;->mMap:Landroid/util/ArrayMap;
 
-    .line 1572
     return-void
 .end method
 
@@ -98,14 +95,12 @@
     .end annotation
 
     .prologue
-    .line 1585
     .local p0, "this":Lcom/android/internal/os/BatteryStatsImpl$OverflowArrayMap;, "Lcom/android/internal/os/BatteryStatsImpl$OverflowArrayMap<TT;>;"
     .local p2, "obj":Ljava/lang/Object;, "TT;"
     iget-object v0, p0, Lcom/android/internal/os/BatteryStatsImpl$OverflowArrayMap;->mMap:Landroid/util/ArrayMap;
 
     invoke-virtual {v0, p1, p2}, Landroid/util/ArrayMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 1586
     const-string v0, "*overflow*"
 
     invoke-virtual {v0, p1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
@@ -114,10 +109,8 @@
 
     if-eqz v0, :cond_0
 
-    .line 1587
     iput-object p2, p0, Lcom/android/internal/os/BatteryStatsImpl$OverflowArrayMap;->mCurOverflow:Ljava/lang/Object;
 
-    .line 1589
     :cond_0
     return-void
 .end method
@@ -129,12 +122,10 @@
     .local p0, "this":Lcom/android/internal/os/BatteryStatsImpl$OverflowArrayMap;, "Lcom/android/internal/os/BatteryStatsImpl$OverflowArrayMap<TT;>;"
     const/4 v4, 0x0
 
-    .line 1592
     iget-object v0, p0, Lcom/android/internal/os/BatteryStatsImpl$OverflowArrayMap;->mActiveOverflow:Landroid/util/ArrayMap;
 
     if-eqz v0, :cond_0
 
-    .line 1593
     iget-object v0, p0, Lcom/android/internal/os/BatteryStatsImpl$OverflowArrayMap;->mActiveOverflow:Landroid/util/ArrayMap;
 
     invoke-virtual {v0}, Landroid/util/ArrayMap;->size()I
@@ -143,16 +134,13 @@
 
     if-nez v0, :cond_0
 
-    .line 1594
     iput-object v4, p0, Lcom/android/internal/os/BatteryStatsImpl$OverflowArrayMap;->mActiveOverflow:Landroid/util/ArrayMap;
 
-    .line 1597
     :cond_0
     iget-object v0, p0, Lcom/android/internal/os/BatteryStatsImpl$OverflowArrayMap;->mActiveOverflow:Landroid/util/ArrayMap;
 
     if-nez v0, :cond_3
 
-    .line 1600
     iget-object v0, p0, Lcom/android/internal/os/BatteryStatsImpl$OverflowArrayMap;->mMap:Landroid/util/ArrayMap;
 
     const-string v1, "*overflow*"
@@ -163,7 +151,6 @@
 
     if-eqz v0, :cond_1
 
-    .line 1601
     const-string v0, "BatteryStatsImpl"
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -194,23 +181,19 @@
 
     invoke-static {v0, v1}, Landroid/util/Slog;->wtf(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1603
     iget-object v0, p0, Lcom/android/internal/os/BatteryStatsImpl$OverflowArrayMap;->mMap:Landroid/util/ArrayMap;
 
     const-string v1, "*overflow*"
 
     invoke-virtual {v0, v1}, Landroid/util/ArrayMap;->remove(Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 1605
     :cond_1
     iput-object v4, p0, Lcom/android/internal/os/BatteryStatsImpl$OverflowArrayMap;->mCurOverflow:Ljava/lang/Object;
 
-    .line 1613
     :cond_2
     :goto_0
     return-void
 
-    .line 1608
     :cond_3
     iget-object v0, p0, Lcom/android/internal/os/BatteryStatsImpl$OverflowArrayMap;->mCurOverflow:Ljava/lang/Object;
 
@@ -226,7 +209,6 @@
 
     if-nez v0, :cond_2
 
-    .line 1609
     :cond_4
     const-string v0, "BatteryStatsImpl"
 
@@ -280,18 +262,14 @@
     .local p0, "this":Lcom/android/internal/os/BatteryStatsImpl$OverflowArrayMap;, "Lcom/android/internal/os/BatteryStatsImpl$OverflowArrayMap<TT;>;"
     const/4 v1, 0x0
 
-    .line 1579
     iget-object v0, p0, Lcom/android/internal/os/BatteryStatsImpl$OverflowArrayMap;->mMap:Landroid/util/ArrayMap;
 
     invoke-virtual {v0}, Landroid/util/ArrayMap;->clear()V
 
-    .line 1580
     iput-object v1, p0, Lcom/android/internal/os/BatteryStatsImpl$OverflowArrayMap;->mCurOverflow:Ljava/lang/Object;
 
-    .line 1581
     iput-object v1, p0, Lcom/android/internal/os/BatteryStatsImpl$OverflowArrayMap;->mActiveOverflow:Landroid/util/ArrayMap;
 
-    .line 1582
     return-void
 .end method
 
@@ -308,7 +286,6 @@
     .end annotation
 
     .prologue
-    .line 1575
     .local p0, "this":Lcom/android/internal/os/BatteryStatsImpl$OverflowArrayMap;, "Lcom/android/internal/os/BatteryStatsImpl$OverflowArrayMap<TT;>;"
     iget-object v0, p0, Lcom/android/internal/os/BatteryStatsImpl$OverflowArrayMap;->mMap:Landroid/util/ArrayMap;
 
@@ -335,7 +312,6 @@
     .end annotation
 
     .prologue
-    .line 1616
     .local p0, "this":Lcom/android/internal/os/BatteryStatsImpl$OverflowArrayMap;, "Lcom/android/internal/os/BatteryStatsImpl$OverflowArrayMap<TT;>;"
     iget-object v4, p0, Lcom/android/internal/os/BatteryStatsImpl$OverflowArrayMap;->mMap:Landroid/util/ArrayMap;
 
@@ -343,19 +319,16 @@
 
     move-result-object v1
 
-    .line 1617
     .local v1, "obj":Ljava/lang/Object;, "TT;"
     if-eqz v1, :cond_0
 
     move-object v2, v1
 
-    .line 1661
     .end local v1    # "obj":Ljava/lang/Object;, "TT;"
     .local v2, "obj":Ljava/lang/Object;, "TT;"
     :goto_0
     return-object v2
 
-    .line 1623
     .end local v2    # "obj":Ljava/lang/Object;, "TT;"
     .restart local v1    # "obj":Ljava/lang/Object;, "TT;"
     :cond_0
@@ -363,7 +336,6 @@
 
     if-eqz v4, :cond_2
 
-    .line 1624
     iget-object v4, p0, Lcom/android/internal/os/BatteryStatsImpl$OverflowArrayMap;->mActiveOverflow:Landroid/util/ArrayMap;
 
     invoke-virtual {v4, p1}, Landroid/util/ArrayMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
@@ -372,17 +344,13 @@
 
     check-cast v3, Landroid/util/MutableInt;
 
-    .line 1625
     .local v3, "over":Landroid/util/MutableInt;
     if-eqz v3, :cond_2
 
-    .line 1627
     iget-object v1, p0, Lcom/android/internal/os/BatteryStatsImpl$OverflowArrayMap;->mCurOverflow:Ljava/lang/Object;
 
-    .line 1628
     if-nez v1, :cond_1
 
-    .line 1630
     const-string v4, "BatteryStatsImpl"
 
     new-instance v5, Ljava/lang/StringBuilder;
@@ -411,7 +379,6 @@
 
     invoke-static {v4, v5}, Landroid/util/Slog;->wtf(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1631
     invoke-virtual {p0}, Lcom/android/internal/os/BatteryStatsImpl$OverflowArrayMap;->instantiateObject()Ljava/lang/Object;
 
     move-result-object v1
@@ -419,7 +386,6 @@
     .end local v1    # "obj":Ljava/lang/Object;, "TT;"
     iput-object v1, p0, Lcom/android/internal/os/BatteryStatsImpl$OverflowArrayMap;->mCurOverflow:Ljava/lang/Object;
 
-    .line 1632
     .restart local v1    # "obj":Ljava/lang/Object;, "TT;"
     iget-object v4, p0, Lcom/android/internal/os/BatteryStatsImpl$OverflowArrayMap;->mMap:Landroid/util/ArrayMap;
 
@@ -427,7 +393,6 @@
 
     invoke-virtual {v4, v5, v1}, Landroid/util/ArrayMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 1634
     :cond_1
     iget v4, v3, Landroid/util/MutableInt;->value:I
 
@@ -437,12 +402,10 @@
 
     move-object v2, v1
 
-    .line 1635
     .end local v1    # "obj":Ljava/lang/Object;, "TT;"
     .restart local v2    # "obj":Ljava/lang/Object;, "TT;"
     goto :goto_0
 
-    .line 1641
     .end local v2    # "obj":Ljava/lang/Object;, "TT;"
     .end local v3    # "over":Landroid/util/MutableInt;
     .restart local v1    # "obj":Ljava/lang/Object;, "TT;"
@@ -453,19 +416,15 @@
 
     move-result v0
 
-    .line 1642
     .local v0, "N":I
     const/16 v4, 0x64
 
     if-lt v0, v4, :cond_5
 
-    .line 1645
     iget-object v1, p0, Lcom/android/internal/os/BatteryStatsImpl$OverflowArrayMap;->mCurOverflow:Ljava/lang/Object;
 
-    .line 1646
     if-nez v1, :cond_3
 
-    .line 1648
     invoke-virtual {p0}, Lcom/android/internal/os/BatteryStatsImpl$OverflowArrayMap;->instantiateObject()Ljava/lang/Object;
 
     move-result-object v1
@@ -473,7 +432,6 @@
     .end local v1    # "obj":Ljava/lang/Object;, "TT;"
     iput-object v1, p0, Lcom/android/internal/os/BatteryStatsImpl$OverflowArrayMap;->mCurOverflow:Ljava/lang/Object;
 
-    .line 1649
     .restart local v1    # "obj":Ljava/lang/Object;, "TT;"
     iget-object v4, p0, Lcom/android/internal/os/BatteryStatsImpl$OverflowArrayMap;->mMap:Landroid/util/ArrayMap;
 
@@ -481,20 +439,17 @@
 
     invoke-virtual {v4, v5, v1}, Landroid/util/ArrayMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 1651
     :cond_3
     iget-object v4, p0, Lcom/android/internal/os/BatteryStatsImpl$OverflowArrayMap;->mActiveOverflow:Landroid/util/ArrayMap;
 
     if-nez v4, :cond_4
 
-    .line 1652
     new-instance v4, Landroid/util/ArrayMap;
 
     invoke-direct {v4}, Landroid/util/ArrayMap;-><init>()V
 
     iput-object v4, p0, Lcom/android/internal/os/BatteryStatsImpl$OverflowArrayMap;->mActiveOverflow:Landroid/util/ArrayMap;
 
-    .line 1654
     :cond_4
     iget-object v4, p0, Lcom/android/internal/os/BatteryStatsImpl$OverflowArrayMap;->mActiveOverflow:Landroid/util/ArrayMap;
 
@@ -508,12 +463,10 @@
 
     move-object v2, v1
 
-    .line 1655
     .end local v1    # "obj":Ljava/lang/Object;, "TT;"
     .restart local v2    # "obj":Ljava/lang/Object;, "TT;"
     goto :goto_0
 
-    .line 1659
     .end local v2    # "obj":Ljava/lang/Object;, "TT;"
     .restart local v1    # "obj":Ljava/lang/Object;, "TT;"
     :cond_5
@@ -521,14 +474,12 @@
 
     move-result-object v1
 
-    .line 1660
     iget-object v4, p0, Lcom/android/internal/os/BatteryStatsImpl$OverflowArrayMap;->mMap:Landroid/util/ArrayMap;
 
     invoke-virtual {v4, p1, v1}, Landroid/util/ArrayMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     move-object v2, v1
 
-    .line 1661
     .end local v1    # "obj":Ljava/lang/Object;, "TT;"
     .restart local v2    # "obj":Ljava/lang/Object;, "TT;"
     goto/16 :goto_0
@@ -546,7 +497,6 @@
     .end annotation
 
     .prologue
-    .line 1665
     .local p0, "this":Lcom/android/internal/os/BatteryStatsImpl$OverflowArrayMap;, "Lcom/android/internal/os/BatteryStatsImpl$OverflowArrayMap<TT;>;"
     iget-object v2, p0, Lcom/android/internal/os/BatteryStatsImpl$OverflowArrayMap;->mMap:Landroid/util/ArrayMap;
 
@@ -554,23 +504,19 @@
 
     move-result-object v0
 
-    .line 1666
     .local v0, "obj":Ljava/lang/Object;, "TT;"
     if-eqz v0, :cond_0
 
     move-object v2, v0
 
-    .line 1692
     :goto_0
     return-object v2
 
-    .line 1672
     :cond_0
     iget-object v2, p0, Lcom/android/internal/os/BatteryStatsImpl$OverflowArrayMap;->mActiveOverflow:Landroid/util/ArrayMap;
 
     if-eqz v2, :cond_2
 
-    .line 1673
     iget-object v2, p0, Lcom/android/internal/os/BatteryStatsImpl$OverflowArrayMap;->mActiveOverflow:Landroid/util/ArrayMap;
 
     invoke-virtual {v2, p1}, Landroid/util/ArrayMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
@@ -579,29 +525,23 @@
 
     check-cast v1, Landroid/util/MutableInt;
 
-    .line 1674
     .local v1, "over":Landroid/util/MutableInt;
     if-eqz v1, :cond_2
 
-    .line 1676
     iget-object v0, p0, Lcom/android/internal/os/BatteryStatsImpl$OverflowArrayMap;->mCurOverflow:Ljava/lang/Object;
 
-    .line 1677
     if-eqz v0, :cond_2
 
-    .line 1678
     iget v2, v1, Landroid/util/MutableInt;->value:I
 
     add-int/lit8 v2, v2, -0x1
 
     iput v2, v1, Landroid/util/MutableInt;->value:I
 
-    .line 1679
     iget v2, v1, Landroid/util/MutableInt;->value:I
 
     if-gtz v2, :cond_1
 
-    .line 1680
     iget-object v2, p0, Lcom/android/internal/os/BatteryStatsImpl$OverflowArrayMap;->mActiveOverflow:Landroid/util/ArrayMap;
 
     invoke-virtual {v2, p1}, Landroid/util/ArrayMap;->remove(Ljava/lang/Object;)Ljava/lang/Object;
@@ -609,10 +549,8 @@
     :cond_1
     move-object v2, v0
 
-    .line 1682
     goto :goto_0
 
-    .line 1689
     .end local v1    # "over":Landroid/util/MutableInt;
     :cond_2
     const-string v2, "BatteryStatsImpl"
@@ -677,7 +615,6 @@
 
     invoke-static {v2, v3}, Landroid/util/Slog;->wtf(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1692
     const/4 v2, 0x0
 
     goto :goto_0

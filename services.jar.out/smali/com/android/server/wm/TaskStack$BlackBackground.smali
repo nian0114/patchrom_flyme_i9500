@@ -46,43 +46,34 @@
     .prologue
     const/4 v1, -0x1
 
-    .line 1259
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 1260
     new-instance v0, Lcom/android/server/wm/DimLayer;
 
     invoke-direct {v0, p1, p2, p3}, Lcom/android/server/wm/DimLayer;-><init>(Lcom/android/server/wm/WindowManagerService;Lcom/android/server/wm/TaskStack;Lcom/android/server/wm/DisplayContent;)V
 
     iput-object v0, p0, Lcom/android/server/wm/TaskStack$BlackBackground;->mBlackSurface:Lcom/android/server/wm/DimLayer;
 
-    .line 1261
     iput v1, p0, Lcom/android/server/wm/TaskStack$BlackBackground;->mLayer:I
 
-    .line 1262
     iput v1, p0, Lcom/android/server/wm/TaskStack$BlackBackground;->mBottomLayer:I
 
-    .line 1263
     const/4 v0, 0x0
 
     iput-object v0, p0, Lcom/android/server/wm/TaskStack$BlackBackground;->mBaseWindow:Lcom/android/server/wm/WindowState;
 
-    .line 1264
     new-instance v0, Landroid/graphics/Rect;
 
     invoke-direct {v0}, Landroid/graphics/Rect;-><init>()V
 
     iput-object v0, p0, Lcom/android/server/wm/TaskStack$BlackBackground;->mDimBounds:Landroid/graphics/Rect;
 
-    .line 1265
     const/4 v0, 0x0
 
     iput-boolean v0, p0, Lcom/android/server/wm/TaskStack$BlackBackground;->mShown:Z
 
-    .line 1266
     iput-object p1, p0, Lcom/android/server/wm/TaskStack$BlackBackground;->mService:Lcom/android/server/wm/WindowManagerService;
 
-    .line 1267
     return-void
 .end method
 
@@ -96,17 +87,14 @@
 
     const/4 v5, 0x0
 
-    .line 1320
     iget-object v7, p0, Lcom/android/server/wm/TaskStack$BlackBackground;->mBlackSurface:Lcom/android/server/wm/DimLayer;
 
     if-nez v7, :cond_1
 
-    .line 1357
     :cond_0
     :goto_0
     return-void
 
-    .line 1323
     :cond_1
     iget-object v7, p0, Lcom/android/server/wm/TaskStack$BlackBackground;->mBlackSurface:Lcom/android/server/wm/DimLayer;
 
@@ -114,27 +102,22 @@
 
     invoke-virtual {v7, v8}, Lcom/android/server/wm/DimLayer;->setBounds(Landroid/graphics/Rect;)V
 
-    .line 1324
     iget-object v7, p0, Lcom/android/server/wm/TaskStack$BlackBackground;->mBaseWindow:Lcom/android/server/wm/WindowState;
 
     if-nez v7, :cond_2
 
-    .line 1325
     iget-boolean v6, p0, Lcom/android/server/wm/TaskStack$BlackBackground;->mShown:Z
 
     if-eqz v6, :cond_0
 
-    .line 1327
     iget-object v6, p0, Lcom/android/server/wm/TaskStack$BlackBackground;->mBlackSurface:Lcom/android/server/wm/DimLayer;
 
     invoke-virtual {v6}, Lcom/android/server/wm/DimLayer;->hide()V
 
-    .line 1328
     iput-boolean v5, p0, Lcom/android/server/wm/TaskStack$BlackBackground;->mShown:Z
 
     goto :goto_0
 
-    .line 1331
     :cond_2
     iget-object v7, p0, Lcom/android/server/wm/TaskStack$BlackBackground;->mBaseWindow:Lcom/android/server/wm/WindowState;
 
@@ -163,7 +146,6 @@
     :cond_3
     move v4, v6
 
-    .line 1332
     .local v4, "isVisible":Z
     :goto_1
     iget-object v7, p0, Lcom/android/server/wm/TaskStack$BlackBackground;->mBaseWindow:Lcom/android/server/wm/WindowState;
@@ -189,7 +171,6 @@
     :cond_4
     move v1, v6
 
-    .line 1333
     .local v1, "isMediaWin":Z
     :goto_2
     iget-object v7, p0, Lcom/android/server/wm/TaskStack$BlackBackground;->mBaseWindow:Lcom/android/server/wm/WindowState;
@@ -204,7 +185,6 @@
 
     move v3, v6
 
-    .line 1334
     .local v3, "isOpaqueWin":Z
     :goto_3
     iget-object v7, p0, Lcom/android/server/wm/TaskStack$BlackBackground;->mBaseWindow:Lcom/android/server/wm/WindowState;
@@ -219,7 +199,6 @@
 
     move-result v2
 
-    .line 1335
     .local v2, "isMinimized":Z
     if-eqz v4, :cond_7
 
@@ -265,18 +244,15 @@
 
     if-eqz v7, :cond_b
 
-    .line 1342
     :cond_7
     iget-boolean v6, p0, Lcom/android/server/wm/TaskStack$BlackBackground;->mShown:Z
 
     if-eqz v6, :cond_0
 
-    .line 1344
     iget-object v6, p0, Lcom/android/server/wm/TaskStack$BlackBackground;->mBlackSurface:Lcom/android/server/wm/DimLayer;
 
     invoke-virtual {v6}, Lcom/android/server/wm/DimLayer;->hide()V
 
-    .line 1345
     iput-boolean v5, p0, Lcom/android/server/wm/TaskStack$BlackBackground;->mShown:Z
 
     goto/16 :goto_0
@@ -288,24 +264,20 @@
     :cond_8
     move v4, v5
 
-    .line 1331
     goto :goto_1
 
     .restart local v4    # "isVisible":Z
     :cond_9
     move v1, v5
 
-    .line 1332
     goto :goto_2
 
     .restart local v1    # "isMediaWin":Z
     :cond_a
     move v3, v5
 
-    .line 1333
     goto :goto_3
 
-    .line 1348
     .restart local v2    # "isMinimized":Z
     .restart local v3    # "isOpaqueWin":Z
     :cond_b
@@ -313,7 +285,6 @@
 
     add-int/lit8 v0, v5, -0x1
 
-    .line 1349
     .local v0, "dimlayer":I
     iget v5, p0, Lcom/android/server/wm/TaskStack$BlackBackground;->mLayer:I
 
@@ -323,11 +294,9 @@
 
     if-nez v5, :cond_0
 
-    .line 1351
     :cond_c
     iput v0, p0, Lcom/android/server/wm/TaskStack$BlackBackground;->mLayer:I
 
-    .line 1352
     iget-object v5, p0, Lcom/android/server/wm/TaskStack$BlackBackground;->mBlackSurface:Lcom/android/server/wm/DimLayer;
 
     iget v7, p0, Lcom/android/server/wm/TaskStack$BlackBackground;->mLayer:I
@@ -338,7 +307,6 @@
 
     invoke-virtual {v5, v7, v8, v10, v11}, Lcom/android/server/wm/DimLayer;->show(IFJ)V
 
-    .line 1353
     iput-boolean v6, p0, Lcom/android/server/wm/TaskStack$BlackBackground;->mShown:Z
 
     goto/16 :goto_0
@@ -348,17 +316,14 @@
     .locals 1
 
     .prologue
-    .line 1299
     iget-object v0, p0, Lcom/android/server/wm/TaskStack$BlackBackground;->mBlackSurface:Lcom/android/server/wm/DimLayer;
 
     invoke-virtual {v0}, Lcom/android/server/wm/DimLayer;->destroySurface()V
 
-    .line 1300
     const/4 v0, 0x0
 
     iput-object v0, p0, Lcom/android/server/wm/TaskStack$BlackBackground;->mBlackSurface:Lcom/android/server/wm/DimLayer;
 
-    .line 1301
     return-void
 .end method
 
@@ -366,7 +331,6 @@
     .locals 1
 
     .prologue
-    .line 1304
     iget-object v0, p0, Lcom/android/server/wm/TaskStack$BlackBackground;->mBlackSurface:Lcom/android/server/wm/DimLayer;
 
     if-eqz v0, :cond_0
@@ -375,17 +339,14 @@
 
     if-eqz v0, :cond_0
 
-    .line 1306
     iget-object v0, p0, Lcom/android/server/wm/TaskStack$BlackBackground;->mBlackSurface:Lcom/android/server/wm/DimLayer;
 
     invoke-virtual {v0}, Lcom/android/server/wm/DimLayer;->hide()V
 
-    .line 1307
     const/4 v0, 0x0
 
     iput-boolean v0, p0, Lcom/android/server/wm/TaskStack$BlackBackground;->mShown:Z
 
-    .line 1309
     :cond_0
     return-void
 .end method
@@ -397,23 +358,18 @@
     .prologue
     const/4 v2, -0x1
 
-    .line 1270
     if-nez p1, :cond_1
 
-    .line 1272
     const/4 v1, 0x0
 
     iput-object v1, p0, Lcom/android/server/wm/TaskStack$BlackBackground;->mBaseWindow:Lcom/android/server/wm/WindowState;
 
-    .line 1273
     iput v2, p0, Lcom/android/server/wm/TaskStack$BlackBackground;->mBottomLayer:I
 
-    .line 1295
     :cond_0
     :goto_0
     return-void
 
-    .line 1277
     :cond_1
     iget v1, p0, Lcom/android/server/wm/TaskStack$BlackBackground;->mBottomLayer:I
 
@@ -425,24 +381,20 @@
 
     if-ge v1, v2, :cond_3
 
-    .line 1278
     :cond_2
     iget v1, p1, Lcom/android/server/wm/WindowState;->mLayer:I
 
     iput v1, p0, Lcom/android/server/wm/TaskStack$BlackBackground;->mBottomLayer:I
 
-    .line 1282
     :cond_3
     iget-object v1, p0, Lcom/android/server/wm/TaskStack$BlackBackground;->mBaseWindow:Lcom/android/server/wm/WindowState;
 
     if-nez v1, :cond_4
 
-    .line 1284
     iput-object p1, p0, Lcom/android/server/wm/TaskStack$BlackBackground;->mBaseWindow:Lcom/android/server/wm/WindowState;
 
     goto :goto_0
 
-    .line 1285
     :cond_4
     iget-object v1, p0, Lcom/android/server/wm/TaskStack$BlackBackground;->mBaseWindow:Lcom/android/server/wm/WindowState;
 
@@ -452,7 +404,6 @@
 
     if-eq v1, v2, :cond_7
 
-    .line 1286
     iget-object v1, p1, Lcom/android/server/wm/WindowState;->mAttrs:Landroid/view/WindowManager$LayoutParams;
 
     iget v1, v1, Landroid/view/WindowManager$LayoutParams;->type:I
@@ -472,7 +423,6 @@
     :cond_5
     const/4 v0, 0x1
 
-    .line 1287
     .local v0, "isMediaWin":Z
     :goto_1
     if-eqz v0, :cond_0
@@ -485,19 +435,16 @@
 
     if-ge v1, v2, :cond_0
 
-    .line 1289
     iput-object p1, p0, Lcom/android/server/wm/TaskStack$BlackBackground;->mBaseWindow:Lcom/android/server/wm/WindowState;
 
     goto :goto_0
 
-    .line 1286
     .end local v0    # "isMediaWin":Z
     :cond_6
     const/4 v0, 0x0
 
     goto :goto_1
 
-    .line 1291
     :cond_7
     iget-object v1, p0, Lcom/android/server/wm/TaskStack$BlackBackground;->mBaseWindow:Lcom/android/server/wm/WindowState;
 
@@ -507,7 +454,6 @@
 
     if-le v1, v2, :cond_0
 
-    .line 1293
     iput-object p1, p0, Lcom/android/server/wm/TaskStack$BlackBackground;->mBaseWindow:Lcom/android/server/wm/WindowState;
 
     goto :goto_0
@@ -518,7 +464,6 @@
     .param p1, "bound"    # Landroid/graphics/Rect;
 
     .prologue
-    .line 1312
     iget-object v0, p0, Lcom/android/server/wm/TaskStack$BlackBackground;->mDimBounds:Landroid/graphics/Rect;
 
     invoke-virtual {v0, p1}, Landroid/graphics/Rect;->equals(Ljava/lang/Object;)Z
@@ -527,12 +472,10 @@
 
     if-nez v0, :cond_0
 
-    .line 1314
     iget-object v0, p0, Lcom/android/server/wm/TaskStack$BlackBackground;->mDimBounds:Landroid/graphics/Rect;
 
     invoke-virtual {v0, p1}, Landroid/graphics/Rect;->set(Landroid/graphics/Rect;)V
 
-    .line 1316
     :cond_0
     return-void
 .end method

@@ -23,7 +23,6 @@
     .locals 0
 
     .prologue
-    .line 94
     iput-object p1, p0, Lcom/android/internal/telephony/dataconnection/DctController$1;->this$0:Lcom/android/internal/telephony/dataconnection/DctController;
 
     invoke-direct {p0}, Landroid/os/Handler;-><init>()V
@@ -40,17 +39,14 @@
     .prologue
     const/4 v3, -0x1
 
-    .line 97
     iget v1, p1, Landroid/os/Message;->what:I
 
     packed-switch v1, :pswitch_data_0
 
-    .line 128
     :cond_0
     :goto_0
     return-void
 
-    .line 102
     :pswitch_0
     new-instance v1, Ljava/lang/StringBuilder;
 
@@ -92,13 +88,11 @@
     # invokes: Lcom/android/internal/telephony/dataconnection/DctController;->logd(Ljava/lang/String;)V
     invoke-static {v1}, Lcom/android/internal/telephony/dataconnection/DctController;->access$100(Ljava/lang/String;)V
 
-    .line 104
     iget-object v1, p0, Lcom/android/internal/telephony/dataconnection/DctController$1;->this$0:Lcom/android/internal/telephony/dataconnection/DctController;
 
     # setter for: Lcom/android/internal/telephony/dataconnection/DctController;->mCurrentDataPhone:I
     invoke-static {v1, v3}, Lcom/android/internal/telephony/dataconnection/DctController;->access$202(Lcom/android/internal/telephony/dataconnection/DctController;I)I
 
-    .line 105
     iget-object v1, p0, Lcom/android/internal/telephony/dataconnection/DctController$1;->this$0:Lcom/android/internal/telephony/dataconnection/DctController;
 
     # getter for: Lcom/android/internal/telephony/dataconnection/DctController;->mRequestedDataPhone:I
@@ -108,7 +102,6 @@
 
     if-eq v1, v3, :cond_0
 
-    .line 106
     iget-object v1, p0, Lcom/android/internal/telephony/dataconnection/DctController$1;->this$0:Lcom/android/internal/telephony/dataconnection/DctController;
 
     iget-object v2, p0, Lcom/android/internal/telephony/dataconnection/DctController$1;->this$0:Lcom/android/internal/telephony/dataconnection/DctController;
@@ -121,13 +114,11 @@
     # setter for: Lcom/android/internal/telephony/dataconnection/DctController;->mCurrentDataPhone:I
     invoke-static {v1, v2}, Lcom/android/internal/telephony/dataconnection/DctController;->access$202(Lcom/android/internal/telephony/dataconnection/DctController;I)I
 
-    .line 107
     iget-object v1, p0, Lcom/android/internal/telephony/dataconnection/DctController$1;->this$0:Lcom/android/internal/telephony/dataconnection/DctController;
 
     # setter for: Lcom/android/internal/telephony/dataconnection/DctController;->mRequestedDataPhone:I
     invoke-static {v1, v3}, Lcom/android/internal/telephony/dataconnection/DctController;->access$002(Lcom/android/internal/telephony/dataconnection/DctController;I)I
 
-    .line 109
     iget-object v1, p0, Lcom/android/internal/telephony/dataconnection/DctController$1;->this$0:Lcom/android/internal/telephony/dataconnection/DctController;
 
     # getter for: Lcom/android/internal/telephony/dataconnection/DctController;->mApnTypes:Ljava/util/HashSet;
@@ -139,7 +130,6 @@
 
     move-result-object v0
 
-    .line 110
     .local v0, "itrType":Ljava/util/Iterator;, "Ljava/util/Iterator<Ljava/lang/String;>;"
     :goto_1
     invoke-interface {v0}, Ljava/util/Iterator;->hasNext()Z
@@ -148,7 +138,6 @@
 
     if-eqz v1, :cond_1
 
-    .line 111
     iget-object v1, p0, Lcom/android/internal/telephony/dataconnection/DctController$1;->this$0:Lcom/android/internal/telephony/dataconnection/DctController;
 
     # getter for: Lcom/android/internal/telephony/dataconnection/DctController;->mDcSwitchAsyncChannel:[Lcom/android/internal/telephony/dataconnection/DcSwitchAsyncChannel;
@@ -175,7 +164,6 @@
 
     goto :goto_1
 
-    .line 113
     :cond_1
     iget-object v1, p0, Lcom/android/internal/telephony/dataconnection/DctController$1;->this$0:Lcom/android/internal/telephony/dataconnection/DctController;
 
@@ -188,7 +176,6 @@
 
     goto :goto_0
 
-    .line 121
     .end local v0    # "itrType":Ljava/util/Iterator;, "Ljava/util/Iterator<Ljava/lang/String;>;"
     :pswitch_1
     new-instance v1, Ljava/lang/StringBuilder;
@@ -224,7 +211,6 @@
     # invokes: Lcom/android/internal/telephony/dataconnection/DctController;->logd(Ljava/lang/String;)V
     invoke-static {v1}, Lcom/android/internal/telephony/dataconnection/DctController;->access$100(Ljava/lang/String;)V
 
-    .line 122
     iget-object v1, p0, Lcom/android/internal/telephony/dataconnection/DctController$1;->this$0:Lcom/android/internal/telephony/dataconnection/DctController;
 
     # getter for: Lcom/android/internal/telephony/dataconnection/DctController;->mServicePowerOffFlag:[Z
@@ -242,7 +228,6 @@
 
     goto/16 :goto_0
 
-    .line 97
     nop
 
     :pswitch_data_0

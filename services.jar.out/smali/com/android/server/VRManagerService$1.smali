@@ -23,7 +23,6 @@
     .locals 0
 
     .prologue
-    .line 60
     iput-object p1, p0, Lcom/android/server/VRManagerService$1;->this$0:Lcom/android/server/VRManagerService;
 
     invoke-direct {p0}, Landroid/os/Handler;-><init>()V
@@ -38,16 +37,13 @@
     .param p1, "msg"    # Landroid/os/Message;
 
     .prologue
-    .line 62
     iget v0, p1, Landroid/os/Message;->what:I
 
     packed-switch v0, :pswitch_data_0
 
-    .line 75
     :goto_0
     return-void
 
-    .line 64
     :pswitch_0
     iget-object v0, p0, Lcom/android/server/VRManagerService$1;->this$0:Lcom/android/server/VRManagerService;
 
@@ -58,7 +54,6 @@
 
     monitor-enter v1
 
-    .line 65
     :try_start_0
     iget-object v0, p0, Lcom/android/server/VRManagerService$1;->this$0:Lcom/android/server/VRManagerService;
 
@@ -69,14 +64,12 @@
 
     if-eqz v0, :cond_0
 
-    .line 66
     const-string v0, "VRManagerService"
 
     const-string v2, "VRConnection timeout for VRService!"
 
     invoke-static {v0, v2}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 67
     iget-object v0, p0, Lcom/android/server/VRManagerService$1;->this$0:Lcom/android/server/VRManagerService;
 
     # getter for: Lcom/android/server/VRManagerService;->mConnection:Lcom/android/server/VRManagerService$VRConnection;
@@ -86,7 +79,6 @@
 
     invoke-virtual {v0}, Lcom/android/server/VRManagerService$VRConnection;->close()V
 
-    .line 68
     iget-object v0, p0, Lcom/android/server/VRManagerService$1;->this$0:Lcom/android/server/VRManagerService;
 
     const/4 v2, 0x0
@@ -94,7 +86,6 @@
     # setter for: Lcom/android/server/VRManagerService;->mConnection:Lcom/android/server/VRManagerService$VRConnection;
     invoke-static {v0, v2}, Lcom/android/server/VRManagerService;->access$102(Lcom/android/server/VRManagerService;Lcom/android/server/VRManagerService$VRConnection;)Lcom/android/server/VRManagerService$VRConnection;
 
-    .line 70
     :cond_0
     monitor-exit v1
 
@@ -109,7 +100,6 @@
 
     throw v0
 
-    .line 62
     :pswitch_data_0
     .packed-switch 0x0
         :pswitch_0

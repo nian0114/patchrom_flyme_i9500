@@ -27,14 +27,12 @@
     .locals 1
 
     .prologue
-    .line 289
     iput-object p1, p0, Landroid/transition/ChangeBounds$3;->this$0:Landroid/transition/ChangeBounds;
 
     iput-object p2, p0, Landroid/transition/ChangeBounds$3;->val$parent:Landroid/view/ViewGroup;
 
     invoke-direct {p0}, Landroid/transition/Transition$TransitionListenerAdapter;-><init>()V
 
-    .line 290
     const/4 v0, 0x0
 
     iput-boolean v0, p0, Landroid/transition/ChangeBounds$3;->mCanceled:Z
@@ -49,19 +47,16 @@
     .param p1, "transition"    # Landroid/transition/Transition;
 
     .prologue
-    .line 294
     iget-object v0, p0, Landroid/transition/ChangeBounds$3;->val$parent:Landroid/view/ViewGroup;
 
     const/4 v1, 0x0
 
     invoke-virtual {v0, v1}, Landroid/view/ViewGroup;->suppressLayout(Z)V
 
-    .line 295
     const/4 v0, 0x1
 
     iput-boolean v0, p0, Landroid/transition/ChangeBounds$3;->mCanceled:Z
 
-    .line 296
     return-void
 .end method
 
@@ -70,19 +65,16 @@
     .param p1, "transition"    # Landroid/transition/Transition;
 
     .prologue
-    .line 300
     iget-boolean v0, p0, Landroid/transition/ChangeBounds$3;->mCanceled:Z
 
     if-nez v0, :cond_0
 
-    .line 301
     iget-object v0, p0, Landroid/transition/ChangeBounds$3;->val$parent:Landroid/view/ViewGroup;
 
     const/4 v1, 0x0
 
     invoke-virtual {v0, v1}, Landroid/view/ViewGroup;->suppressLayout(Z)V
 
-    .line 303
     :cond_0
     return-void
 .end method
@@ -92,14 +84,12 @@
     .param p1, "transition"    # Landroid/transition/Transition;
 
     .prologue
-    .line 307
     iget-object v0, p0, Landroid/transition/ChangeBounds$3;->val$parent:Landroid/view/ViewGroup;
 
     const/4 v1, 0x0
 
     invoke-virtual {v0, v1}, Landroid/view/ViewGroup;->suppressLayout(Z)V
 
-    .line 308
     return-void
 .end method
 
@@ -108,13 +98,11 @@
     .param p1, "transition"    # Landroid/transition/Transition;
 
     .prologue
-    .line 312
     iget-object v0, p0, Landroid/transition/ChangeBounds$3;->val$parent:Landroid/view/ViewGroup;
 
     const/4 v1, 0x1
 
     invoke-virtual {v0, v1}, Landroid/view/ViewGroup;->suppressLayout(Z)V
 
-    .line 313
     return-void
 .end method

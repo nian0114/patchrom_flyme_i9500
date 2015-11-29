@@ -45,16 +45,12 @@
     .end annotation
 
     .prologue
-    .line 121
     .local p2, "surfaces":Ljava/util/Collection;, "Ljava/util/Collection<Landroid/view/Surface;>;"
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 122
     iput-object p1, p0, Landroid/hardware/camera2/legacy/RequestThreadManager$ConfigureHolder;->condition:Landroid/os/ConditionVariable;
 
-    .line 123
     iput-object p2, p0, Landroid/hardware/camera2/legacy/RequestThreadManager$ConfigureHolder;->surfaces:Ljava/util/Collection;
 
-    .line 124
     return-void
 .end method

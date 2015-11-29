@@ -23,7 +23,6 @@
     .locals 0
 
     .prologue
-    .line 2380
     iput-object p1, p0, Lcom/android/internal/telephony/SMSDispatcher$2;->this$0:Lcom/android/internal/telephony/SMSDispatcher;
 
     invoke-direct {p0}, Landroid/content/BroadcastReceiver;-><init>()V
@@ -41,7 +40,6 @@
     .prologue
     const/4 v4, 0x0
 
-    .line 2383
     invoke-virtual {p2}, Landroid/content/Intent;->getAction()Ljava/lang/String;
 
     move-result-object v1
@@ -54,7 +52,6 @@
 
     if-eqz v1, :cond_0
 
-    .line 2389
     :cond_0
     invoke-virtual {p2}, Landroid/content/Intent;->getAction()Ljava/lang/String;
 
@@ -68,24 +65,20 @@
 
     if-eqz v1, :cond_2
 
-    .line 2390
     const-string v1, "SMSDispatcher"
 
     const-string v2, "ACTION_SIM_REFRESH_INIT"
 
     invoke-static {v1, v2}, Landroid/telephony/Rlog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 2391
     iget-object v1, p0, Lcom/android/internal/telephony/SMSDispatcher$2;->this$0:Lcom/android/internal/telephony/SMSDispatcher;
 
     const/4 v2, 0x0
 
     iput-object v2, v1, Lcom/android/internal/telephony/SMSDispatcher;->Sim_Smsc:Ljava/lang/String;
 
-    .line 2392
     sput v4, Lcom/android/internal/telephony/SMSDispatcher;->retryGetSmsc:I
 
-    .line 2393
     iget-object v1, p0, Lcom/android/internal/telephony/SMSDispatcher$2;->this$0:Lcom/android/internal/telephony/SMSDispatcher;
 
     iget-object v1, v1, Lcom/android/internal/telephony/SMSDispatcher;->mCi:Lcom/android/internal/telephony/CommandsInterface;
@@ -100,12 +93,10 @@
 
     invoke-interface {v1, v2}, Lcom/android/internal/telephony/CommandsInterface;->getSmscAddress(Landroid/os/Message;)V
 
-    .line 2409
     :cond_1
     :goto_0
     return-void
 
-    .line 2394
     :cond_2
     invoke-virtual {p2}, Landroid/content/Intent;->getAction()Ljava/lang/String;
 
@@ -119,7 +110,6 @@
 
     if-eqz v1, :cond_4
 
-    .line 2395
     const-string v1, "ZTO"
 
     invoke-static {}, Lcom/sec/android/app/CscFeature;->getInstance()Lcom/sec/android/app/CscFeature;
@@ -156,7 +146,6 @@
 
     if-eqz v1, :cond_1
 
-    .line 2396
     :cond_3
     iget-object v1, p0, Lcom/android/internal/telephony/SMSDispatcher$2;->this$0:Lcom/android/internal/telephony/SMSDispatcher;
 
@@ -164,7 +153,6 @@
 
     goto :goto_0
 
-    .line 2398
     :cond_4
     invoke-virtual {p2}, Landroid/content/Intent;->getAction()Ljava/lang/String;
 
@@ -178,7 +166,6 @@
 
     if-eqz v1, :cond_6
 
-    .line 2399
     const-string v1, "ZTO"
 
     invoke-static {}, Lcom/sec/android/app/CscFeature;->getInstance()Lcom/sec/android/app/CscFeature;
@@ -215,7 +202,6 @@
 
     if-eqz v1, :cond_1
 
-    .line 2400
     :cond_5
     const-string v1, "ssms_state"
 
@@ -223,7 +209,6 @@
 
     move-result v0
 
-    .line 2401
     .local v0, "ssms_state":I
     iget-object v1, p0, Lcom/android/internal/telephony/SMSDispatcher$2;->this$0:Lcom/android/internal/telephony/SMSDispatcher;
 
@@ -231,7 +216,6 @@
 
     goto :goto_0
 
-    .line 2403
     .end local v0    # "ssms_state":I
     :cond_6
     invoke-virtual {p2}, Landroid/content/Intent;->getAction()Ljava/lang/String;
@@ -246,7 +230,6 @@
 
     if-eqz v1, :cond_1
 
-    .line 2404
     const-string v1, "ltesms"
 
     invoke-virtual {p2, v1}, Landroid/content/Intent;->hasExtra(Ljava/lang/String;)Z
@@ -255,7 +238,6 @@
 
     if-eqz v1, :cond_1
 
-    .line 2405
     iget-object v1, p0, Lcom/android/internal/telephony/SMSDispatcher$2;->this$0:Lcom/android/internal/telephony/SMSDispatcher;
 
     const-string v2, "ltesms"
@@ -266,7 +248,6 @@
 
     iput v2, v1, Lcom/android/internal/telephony/SMSDispatcher;->mLteSmsStatus:I
 
-    .line 2406
     const-string v1, "SMSDispatcher"
 
     new-instance v2, Ljava/lang/StringBuilder;

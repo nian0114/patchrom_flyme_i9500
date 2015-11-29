@@ -30,7 +30,6 @@
     .locals 0
 
     .prologue
-    .line 592
     iput-object p1, p0, Lcom/android/internal/policy/impl/cocktail/CocktailPhoneWindowManager$1;->this$0:Lcom/android/internal/policy/impl/cocktail/CocktailPhoneWindowManager;
 
     iput-boolean p2, p0, Lcom/android/internal/policy/impl/cocktail/CocktailPhoneWindowManager$1;->val$bEnable:Z
@@ -48,7 +47,6 @@
     .locals 3
 
     .prologue
-    .line 594
     iget-object v1, p0, Lcom/android/internal/policy/impl/cocktail/CocktailPhoneWindowManager$1;->this$0:Lcom/android/internal/policy/impl/cocktail/CocktailPhoneWindowManager;
 
     iget-object v1, v1, Lcom/android/internal/policy/impl/cocktail/CocktailPhoneWindowManager;->mContext:Landroid/content/Context;
@@ -57,18 +55,15 @@
 
     move-result-object v0
 
-    .line 595
     .local v0, "cocktailBarManager":Lcom/samsung/android/cocktailbar/CocktailBarManager;
     if-eqz v0, :cond_0
 
-    .line 596
     iget-boolean v1, p0, Lcom/android/internal/policy/impl/cocktail/CocktailPhoneWindowManager$1;->val$bEnable:Z
 
     iget v2, p0, Lcom/android/internal/policy/impl/cocktail/CocktailPhoneWindowManager$1;->val$keyCode:I
 
     invoke-virtual {v0, v1, v2}, Lcom/samsung/android/cocktailbar/CocktailBarManager;->wakeupCocktailBar(ZI)V
 
-    .line 598
     :cond_0
     return-void
 .end method

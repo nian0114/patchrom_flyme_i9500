@@ -24,13 +24,10 @@
     .param p2, "h"    # Landroid/os/Handler;
 
     .prologue
-    .line 848
     iput-object p1, p0, Lcom/android/internal/telephony/dataconnection/DcTrackerBase$LteRoamingEnableObserver;->this$0:Lcom/android/internal/telephony/dataconnection/DcTrackerBase;
 
-    .line 849
     invoke-direct {p0, p2}, Landroid/database/ContentObserver;-><init>(Landroid/os/Handler;)V
 
-    .line 850
     return-void
 .end method
 
@@ -41,13 +38,11 @@
     .param p1, "selfChange"    # Z
 
     .prologue
-    .line 858
     iget-object v0, p0, Lcom/android/internal/telephony/dataconnection/DcTrackerBase$LteRoamingEnableObserver;->this$0:Lcom/android/internal/telephony/dataconnection/DcTrackerBase;
 
     const-string v1, "Do not support LTE Roaming"
 
     invoke-virtual {v0, v1}, Lcom/android/internal/telephony/dataconnection/DcTrackerBase;->log(Ljava/lang/String;)V
 
-    .line 860
     return-void
 .end method

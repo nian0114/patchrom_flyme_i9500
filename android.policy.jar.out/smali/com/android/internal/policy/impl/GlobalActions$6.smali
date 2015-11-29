@@ -26,7 +26,6 @@
     .locals 0
 
     .prologue
-    .line 1048
     iput-object p1, p0, Lcom/android/internal/policy/impl/GlobalActions$6;->this$0:Lcom/android/internal/policy/impl/GlobalActions;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -42,7 +41,6 @@
     .param p2, "whichButton"    # I
 
     .prologue
-    .line 1050
     iget-object v1, p0, Lcom/android/internal/policy/impl/GlobalActions$6;->this$0:Lcom/android/internal/policy/impl/GlobalActions;
 
     # getter for: Lcom/android/internal/policy/impl/GlobalActions;->mContext:Landroid/content/Context;
@@ -63,7 +61,6 @@
 
     check-cast v0, Landroid/view/inputmethod/InputMethodManager;
 
-    .line 1051
     .local v0, "im":Landroid/view/inputmethod/InputMethodManager;
     # getter for: Lcom/android/internal/policy/impl/GlobalActions;->mPasscodeEditText:Landroid/widget/EditText;
     invoke-static {}, Lcom/android/internal/policy/impl/GlobalActions;->access$1900()Landroid/widget/EditText;
@@ -78,6 +75,5 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/view/inputmethod/InputMethodManager;->hideSoftInputFromWindow(Landroid/os/IBinder;I)Z
 
-    .line 1052
     return-void
 .end method

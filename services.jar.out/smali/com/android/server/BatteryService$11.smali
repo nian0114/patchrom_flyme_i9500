@@ -26,7 +26,6 @@
     .locals 0
 
     .prologue
-    .line 1386
     iput-object p1, p0, Lcom/android/server/BatteryService$11;->this$0:Lcom/android/server/BatteryService;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -40,11 +39,9 @@
     .locals 1
 
     .prologue
-    .line 1389
     iget-object v0, p0, Lcom/android/server/BatteryService$11;->this$0:Lcom/android/server/BatteryService;
 
     invoke-virtual {v0}, Lcom/android/server/BatteryService;->logDischargeLevel()V
 
-    .line 1390
     return-void
 .end method

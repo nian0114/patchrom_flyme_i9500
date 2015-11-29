@@ -23,7 +23,6 @@
     .locals 0
 
     .prologue
-    .line 430
     iput-object p1, p0, Landroid/widget/TextView$IClipboardDataPasteEventImpl$1;->this$1:Landroid/widget/TextView$IClipboardDataPasteEventImpl;
 
     invoke-direct {p0}, Landroid/sec/clipboard/IClipboardDataPasteEvent$Stub;-><init>()V
@@ -38,11 +37,9 @@
     .param p1, "data"    # Landroid/sec/clipboard/data/ClipboardData;
 
     .prologue
-    .line 432
     iget-object v0, p0, Landroid/widget/TextView$IClipboardDataPasteEventImpl$1;->this$1:Landroid/widget/TextView$IClipboardDataPasteEventImpl;
 
     invoke-virtual {v0, p1}, Landroid/widget/TextView$IClipboardDataPasteEventImpl;->onClipboardDataPaste(Landroid/sec/clipboard/data/ClipboardData;)V
 
-    .line 433
     return-void
 .end method

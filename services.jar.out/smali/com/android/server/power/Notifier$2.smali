@@ -26,7 +26,6 @@
     .locals 0
 
     .prologue
-    .line 339
     iput-object p1, p0, Lcom/android/server/power/Notifier$2;->this$0:Lcom/android/server/power/Notifier;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -42,10 +41,8 @@
     .prologue
     const/4 v5, 0x0
 
-    .line 342
     const/4 v0, 0x2
 
-    .line 343
     .local v0, "why":I
     iget-object v1, p0, Lcom/android/server/power/Notifier$2;->this$0:Lcom/android/server/power/Notifier;
 
@@ -56,7 +53,6 @@
 
     packed-switch v1, :pswitch_data_0
 
-    .line 356
     :goto_0
     :pswitch_0
     const/16 v1, 0xaa8
@@ -97,7 +93,6 @@
 
     invoke-static {v1, v2}, Landroid/util/EventLog;->writeEvent(I[Ljava/lang/Object;)I
 
-    .line 357
     iget-object v1, p0, Lcom/android/server/power/Notifier$2;->this$0:Lcom/android/server/power/Notifier;
 
     # getter for: Lcom/android/server/power/Notifier;->mPolicy:Landroid/view/WindowManagerPolicy;
@@ -107,7 +102,6 @@
 
     invoke-interface {v1, v0}, Landroid/view/WindowManagerPolicy;->goingToSleep(I)V
 
-    .line 358
     iget-object v1, p0, Lcom/android/server/power/Notifier$2;->this$0:Lcom/android/server/power/Notifier;
 
     # getter for: Lcom/android/server/power/Notifier;->mScreenOffIntent:Landroid/content/Intent;
@@ -115,11 +109,10 @@
 
     move-result-object v1
 
-    const-string/jumbo v2, "why"
+    const-string v2, "why"
 
     invoke-virtual {v1, v2, v0}, Landroid/content/Intent;->putExtra(Ljava/lang/String;I)Landroid/content/Intent;
 
-    .line 359
     iget-object v1, p0, Lcom/android/server/power/Notifier$2;->this$0:Lcom/android/server/power/Notifier;
 
     # getter for: Lcom/android/server/power/Notifier;->mActivityManagerInternal:Landroid/app/ActivityManagerInternal;
@@ -129,30 +122,23 @@
 
     invoke-virtual {v1}, Landroid/app/ActivityManagerInternal;->goingToSleep()V
 
-    .line 360
     return-void
 
-    .line 345
     :pswitch_1
     const/4 v0, 0x1
 
-    .line 346
     goto :goto_0
 
-    .line 348
     :pswitch_2
     const/4 v0, 0x3
 
-    .line 349
     goto :goto_0
 
-    .line 352
     :pswitch_3
     const/4 v0, 0x4
 
     goto :goto_0
 
-    .line 343
     nop
 
     :pswitch_data_0

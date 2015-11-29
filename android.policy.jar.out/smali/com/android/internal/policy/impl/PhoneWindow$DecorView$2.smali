@@ -26,7 +26,6 @@
     .locals 0
 
     .prologue
-    .line 3022
     iput-object p1, p0, Lcom/android/internal/policy/impl/PhoneWindow$DecorView$2;->this$1:Lcom/android/internal/policy/impl/PhoneWindow$DecorView;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -44,7 +43,6 @@
 
     const/4 v4, 0x0
 
-    .line 3026
     iget-object v2, p0, Lcom/android/internal/policy/impl/PhoneWindow$DecorView$2;->this$1:Lcom/android/internal/policy/impl/PhoneWindow$DecorView;
 
     # getter for: Lcom/android/internal/policy/impl/PhoneWindow$DecorView;->mActionModeView:Lcom/android/internal/widget/ActionBarContextView;
@@ -56,7 +54,6 @@
 
     move-result-object v0
 
-    .line 3027
     .local v0, "token":Landroid/os/IBinder;
     iget-object v2, p0, Lcom/android/internal/policy/impl/PhoneWindow$DecorView$2;->this$1:Lcom/android/internal/policy/impl/PhoneWindow$DecorView;
 
@@ -68,13 +65,11 @@
 
     iget v1, v2, Landroid/view/WindowManager$LayoutParams;->type:I
 
-    .line 3028
     .local v1, "winType":I
     const/16 v2, 0x834
 
     if-ne v1, v2, :cond_1
 
-    .line 3029
     iget-object v2, p0, Lcom/android/internal/policy/impl/PhoneWindow$DecorView$2;->this$1:Lcom/android/internal/policy/impl/PhoneWindow$DecorView;
 
     # getter for: Lcom/android/internal/policy/impl/PhoneWindow$DecorView;->mActionModePopup:Landroid/widget/PopupWindow;
@@ -86,14 +81,12 @@
 
     invoke-virtual {v2, v3}, Landroid/widget/PopupWindow;->setWindowLayoutType(I)V
 
-    .line 3030
     iget-object v2, p0, Lcom/android/internal/policy/impl/PhoneWindow$DecorView$2;->this$1:Lcom/android/internal/policy/impl/PhoneWindow$DecorView;
 
     invoke-virtual {v2}, Lcom/android/internal/policy/impl/PhoneWindow$DecorView;->getWindowToken()Landroid/os/IBinder;
 
     move-result-object v0
 
-    .line 3035
     :cond_0
     :goto_0
     iget-object v2, p0, Lcom/android/internal/policy/impl/PhoneWindow$DecorView$2;->this$1:Lcom/android/internal/policy/impl/PhoneWindow$DecorView;
@@ -107,14 +100,11 @@
 
     invoke-virtual {v2, v0, v3, v4, v4}, Landroid/widget/PopupWindow;->showAtLocation(Landroid/os/IBinder;III)V
 
-    .line 3044
     return-void
 
-    .line 3031
     :cond_1
     if-ne v1, v3, :cond_0
 
-    .line 3032
     iget-object v2, p0, Lcom/android/internal/policy/impl/PhoneWindow$DecorView$2;->this$1:Lcom/android/internal/policy/impl/PhoneWindow$DecorView;
 
     # getter for: Lcom/android/internal/policy/impl/PhoneWindow$DecorView;->mActionModePopup:Landroid/widget/PopupWindow;
@@ -124,7 +114,6 @@
 
     invoke-virtual {v2, v3}, Landroid/widget/PopupWindow;->setWindowLayoutType(I)V
 
-    .line 3033
     iget-object v2, p0, Lcom/android/internal/policy/impl/PhoneWindow$DecorView$2;->this$1:Lcom/android/internal/policy/impl/PhoneWindow$DecorView;
 
     invoke-virtual {v2}, Lcom/android/internal/policy/impl/PhoneWindow$DecorView;->getWindowToken()Landroid/os/IBinder;

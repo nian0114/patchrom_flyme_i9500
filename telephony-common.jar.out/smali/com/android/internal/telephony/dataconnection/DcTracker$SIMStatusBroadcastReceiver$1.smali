@@ -23,7 +23,6 @@
     .locals 0
 
     .prologue
-    .line 854
     iput-object p1, p0, Lcom/android/internal/telephony/dataconnection/DcTracker$SIMStatusBroadcastReceiver$1;->this$1:Lcom/android/internal/telephony/dataconnection/DcTracker$SIMStatusBroadcastReceiver;
 
     invoke-direct {p0}, Ljava/lang/Thread;-><init>()V
@@ -37,7 +36,6 @@
     .locals 4
 
     .prologue
-    .line 857
     iget-object v1, p0, Lcom/android/internal/telephony/dataconnection/DcTracker$SIMStatusBroadcastReceiver$1;->this$1:Lcom/android/internal/telephony/dataconnection/DcTracker$SIMStatusBroadcastReceiver;
 
     iget-object v1, v1, Lcom/android/internal/telephony/dataconnection/DcTracker$SIMStatusBroadcastReceiver;->this$0:Lcom/android/internal/telephony/dataconnection/DcTracker;
@@ -50,7 +48,6 @@
 
     check-cast v0, Lcom/android/internal/telephony/uicc/IccRecords;
 
-    .line 858
     .local v0, "r":Lcom/android/internal/telephony/uicc/IccRecords;
     :goto_0
     if-eqz v0, :cond_0
@@ -68,7 +65,6 @@
 
     if-ne v1, v2, :cond_1
 
-    .line 860
     :try_start_0
     iget-object v1, p0, Lcom/android/internal/telephony/dataconnection/DcTracker$SIMStatusBroadcastReceiver$1;->this$1:Lcom/android/internal/telephony/dataconnection/DcTracker$SIMStatusBroadcastReceiver;
 
@@ -78,7 +74,6 @@
 
     invoke-virtual {v1, v2}, Lcom/android/internal/telephony/dataconnection/DcTracker;->log(Ljava/lang/String;)V
 
-    .line 861
     const-wide/16 v2, 0xa
 
     invoke-static {v2, v3}, Ljava/lang/Thread;->sleep(J)V
@@ -87,19 +82,16 @@
 
     goto :goto_0
 
-    .line 862
     :catch_0
     move-exception v1
 
     goto :goto_0
 
-    .line 858
     :cond_0
     const-string v1, ""
 
     goto :goto_1
 
-    .line 864
     :cond_1
     iget-object v1, p0, Lcom/android/internal/telephony/dataconnection/DcTracker$SIMStatusBroadcastReceiver$1;->this$1:Lcom/android/internal/telephony/dataconnection/DcTracker$SIMStatusBroadcastReceiver;
 
@@ -129,7 +121,6 @@
 
     invoke-virtual {v1, v2}, Lcom/android/internal/telephony/dataconnection/DcTracker;->log(Ljava/lang/String;)V
 
-    .line 865
     iget-object v1, p0, Lcom/android/internal/telephony/dataconnection/DcTracker$SIMStatusBroadcastReceiver$1;->this$1:Lcom/android/internal/telephony/dataconnection/DcTracker$SIMStatusBroadcastReceiver;
 
     iget-object v1, v1, Lcom/android/internal/telephony/dataconnection/DcTracker$SIMStatusBroadcastReceiver;->this$0:Lcom/android/internal/telephony/dataconnection/DcTracker;
@@ -137,13 +128,11 @@
     # invokes: Lcom/android/internal/telephony/dataconnection/DcTracker;->createAllApnList()V
     invoke-static {v1}, Lcom/android/internal/telephony/dataconnection/DcTracker;->access$300(Lcom/android/internal/telephony/dataconnection/DcTracker;)V
 
-    .line 866
     iget-object v1, p0, Lcom/android/internal/telephony/dataconnection/DcTracker$SIMStatusBroadcastReceiver$1;->this$1:Lcom/android/internal/telephony/dataconnection/DcTracker$SIMStatusBroadcastReceiver;
 
     iget-object v1, v1, Lcom/android/internal/telephony/dataconnection/DcTracker$SIMStatusBroadcastReceiver;->this$0:Lcom/android/internal/telephony/dataconnection/DcTracker;
 
     invoke-virtual {v1}, Lcom/android/internal/telephony/dataconnection/DcTracker;->setInitialAttachApn()V
 
-    .line 867
     return-void
 .end method

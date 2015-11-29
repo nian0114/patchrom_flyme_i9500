@@ -26,7 +26,6 @@
     .locals 0
 
     .prologue
-    .line 1400
     iput-object p1, p0, Lcom/samsung/android/fingerprint/FingerprintManager$4;->this$0:Lcom/samsung/android/fingerprint/FingerprintManager;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -41,10 +40,8 @@
     .param p1, "evt"    # Lcom/samsung/android/fingerprint/FingerprintEvent;
 
     .prologue
-    .line 1405
     move-object v1, p1
 
-    .line 1406
     .local v1, "event":Lcom/samsung/android/fingerprint/FingerprintEvent;
     :try_start_0
     iget-object v2, p0, Lcom/samsung/android/fingerprint/FingerprintManager$4;->this$0:Lcom/samsung/android/fingerprint/FingerprintManager;
@@ -56,7 +53,6 @@
 
     if-eqz v2, :cond_0
 
-    .line 1407
     iget-object v2, p0, Lcom/samsung/android/fingerprint/FingerprintManager$4;->this$0:Lcom/samsung/android/fingerprint/FingerprintManager;
 
     # getter for: Lcom/samsung/android/fingerprint/FingerprintManager;->mHandler:Landroid/os/Handler;
@@ -72,16 +68,13 @@
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 1443
     :cond_0
     :goto_0
     return-void
 
-    .line 1440
     :catch_0
     move-exception v0
 
-    .line 1441
     .local v0, "e":Ljava/lang/Exception;
     const-string v2, "FingerprintManager"
 
@@ -89,7 +82,7 @@
 
     invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v4, "onFingerprintEvent: Error : "
+    const-string v4, "onFingerprintEvent: Error : "
 
     invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 

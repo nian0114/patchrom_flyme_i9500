@@ -29,12 +29,10 @@
     .param p1, "context"    # Landroid/content/Context;
 
     .prologue
-    .line 107
     const/4 v0, 0x0
 
     invoke-direct {p0, p1, v0}, Lcom/movial/ipphone/WifiCallSwitchPreference;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;)V
 
-    .line 108
     return-void
 .end method
 
@@ -44,12 +42,10 @@
     .param p2, "attrs"    # Landroid/util/AttributeSet;
 
     .prologue
-    .line 111
     const v0, 0x101036d
 
     invoke-direct {p0, p1, p2, v0}, Lcom/movial/ipphone/WifiCallSwitchPreference;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;I)V
 
-    .line 112
     return-void
 .end method
 
@@ -60,24 +56,20 @@
     .param p3, "defStyle"    # I
 
     .prologue
-    .line 115
     invoke-direct {p0, p1, p2, p3}, Landroid/preference/SwitchPreference;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;I)V
 
-    .line 70
     new-instance v0, Lcom/movial/ipphone/WifiCallSwitchPreference$1;
 
     invoke-direct {v0, p0}, Lcom/movial/ipphone/WifiCallSwitchPreference$1;-><init>(Lcom/movial/ipphone/WifiCallSwitchPreference;)V
 
     iput-object v0, p0, Lcom/movial/ipphone/WifiCallSwitchPreference;->mIPStateListener:Lcom/movial/ipphone/IPStateListener;
 
-    .line 94
     new-instance v0, Lcom/movial/ipphone/WifiCallSwitchPreference$2;
 
     invoke-direct {v0, p0}, Lcom/movial/ipphone/WifiCallSwitchPreference$2;-><init>(Lcom/movial/ipphone/WifiCallSwitchPreference;)V
 
     iput-object v0, p0, Lcom/movial/ipphone/WifiCallSwitchPreference;->mHandler:Landroid/os/Handler;
 
-    .line 215
     new-instance v0, Lcom/movial/ipphone/WifiCallSwitchPreference$5;
 
     new-instance v1, Landroid/os/Handler;
@@ -88,37 +80,30 @@
 
     iput-object v0, p0, Lcom/movial/ipphone/WifiCallSwitchPreference;->mObserver:Landroid/database/ContentObserver;
 
-    .line 116
     iput-object p1, p0, Lcom/movial/ipphone/WifiCallSwitchPreference;->mContext:Landroid/content/Context;
 
-    .line 117
     new-instance v0, Lcom/movial/ipphone/IPManager;
 
     invoke-direct {v0, p1}, Lcom/movial/ipphone/IPManager;-><init>(Landroid/content/Context;)V
 
     iput-object v0, p0, Lcom/movial/ipphone/WifiCallSwitchPreference;->mIPManager:Lcom/movial/ipphone/IPManager;
 
-    .line 119
     const-string v0, "On"
 
     invoke-virtual {p0, v0}, Lcom/movial/ipphone/WifiCallSwitchPreference;->setSwitchTextOn(Ljava/lang/CharSequence;)V
 
-    .line 120
     const-string v0, "Off"
 
     invoke-virtual {p0, v0}, Lcom/movial/ipphone/WifiCallSwitchPreference;->setSwitchTextOff(Ljava/lang/CharSequence;)V
 
-    .line 121
     const-string v0, "Wi-Fi Calling"
 
     invoke-virtual {p0, v0}, Lcom/movial/ipphone/WifiCallSwitchPreference;->setTitle(Ljava/lang/CharSequence;)V
 
-    .line 124
     const/4 v0, 0x1
 
     invoke-direct {p0, v0}, Lcom/movial/ipphone/WifiCallSwitchPreference;->registerToIPRegistry(Z)V
 
-    .line 125
     return-void
 .end method
 
@@ -127,7 +112,6 @@
     .param p0, "x0"    # Lcom/movial/ipphone/WifiCallSwitchPreference;
 
     .prologue
-    .line 62
     iget-object v0, p0, Lcom/movial/ipphone/WifiCallSwitchPreference;->mHandler:Landroid/os/Handler;
 
     return-object v0
@@ -139,7 +123,6 @@
     .param p1, "x1"    # Ljava/lang/Object;
 
     .prologue
-    .line 62
     invoke-virtual {p0, p1}, Lcom/movial/ipphone/WifiCallSwitchPreference;->callChangeListener(Ljava/lang/Object;)Z
 
     move-result v0
@@ -152,7 +135,6 @@
     .param p0, "x0"    # Lcom/movial/ipphone/WifiCallSwitchPreference;
 
     .prologue
-    .line 62
     iget-object v0, p0, Lcom/movial/ipphone/WifiCallSwitchPreference;->mIPStateListener:Lcom/movial/ipphone/IPStateListener;
 
     return-object v0
@@ -163,7 +145,6 @@
     .param p0, "x0"    # Lcom/movial/ipphone/WifiCallSwitchPreference;
 
     .prologue
-    .line 62
     iget-object v0, p0, Lcom/movial/ipphone/WifiCallSwitchPreference;->mIPManager:Lcom/movial/ipphone/IPManager;
 
     return-object v0
@@ -174,7 +155,6 @@
     .param p0, "x0"    # Lcom/movial/ipphone/WifiCallSwitchPreference;
 
     .prologue
-    .line 62
     iget-object v0, p0, Lcom/movial/ipphone/WifiCallSwitchPreference;->mContext:Landroid/content/Context;
 
     return-object v0
@@ -185,16 +165,13 @@
     .param p1, "register"    # Z
 
     .prologue
-    .line 200
     new-instance v0, Lcom/movial/ipphone/WifiCallSwitchPreference$4;
 
     invoke-direct {v0, p0, p1}, Lcom/movial/ipphone/WifiCallSwitchPreference$4;-><init>(Lcom/movial/ipphone/WifiCallSwitchPreference;Z)V
 
-    .line 212
     .local v0, "t":Ljava/lang/Thread;
     invoke-virtual {v0}, Ljava/lang/Thread;->start()V
 
-    .line 213
     return-void
 .end method
 
@@ -204,12 +181,10 @@
     .locals 1
 
     .prologue
-    .line 186
     const/4 v0, 0x0
 
     invoke-direct {p0, v0}, Lcom/movial/ipphone/WifiCallSwitchPreference;->registerToIPRegistry(Z)V
 
-    .line 187
     return-void
 .end method
 
@@ -218,17 +193,14 @@
     .param p1, "view"    # Landroid/view/View;
 
     .prologue
-    .line 129
     invoke-super {p0, p1}, Landroid/preference/SwitchPreference;->onBindView(Landroid/view/View;)V
 
-    .line 131
     const v2, 0x1020411
 
     invoke-virtual {p1, v2}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
     move-result-object v0
 
-    .line 132
     .local v0, "checkableView":Landroid/view/View;
     if-eqz v0, :cond_0
 
@@ -236,30 +208,25 @@
 
     if-eqz v2, :cond_0
 
-    .line 133
     instance-of v2, v0, Landroid/widget/Switch;
 
     if-eqz v2, :cond_0
 
     move-object v1, v0
 
-    .line 134
     check-cast v1, Landroid/widget/Switch;
 
-    .line 135
     .local v1, "switchView":Landroid/widget/Switch;
     const/4 v2, 0x1
 
     invoke-virtual {v1, v2}, Landroid/widget/Switch;->setClickable(Z)V
 
-    .line 136
     new-instance v2, Lcom/movial/ipphone/WifiCallSwitchPreference$3;
 
     invoke-direct {v2, p0}, Lcom/movial/ipphone/WifiCallSwitchPreference$3;-><init>(Lcom/movial/ipphone/WifiCallSwitchPreference;)V
 
     invoke-virtual {v1, v2}, Landroid/widget/Switch;->setOnCheckedChangeListener(Landroid/widget/CompoundButton$OnCheckedChangeListener;)V
 
-    .line 152
     .end local v1    # "switchView":Landroid/widget/Switch;
     :cond_0
     return-void
@@ -269,10 +236,8 @@
     .locals 3
 
     .prologue
-    .line 156
     invoke-super {p0}, Landroid/preference/SwitchPreference;->onClick()V
 
-    .line 157
     const-string v0, "WifiCallSwitchPreference"
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -299,7 +264,6 @@
 
     invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 158
     iget-boolean v0, p0, Lcom/movial/ipphone/WifiCallSwitchPreference;->mCellOnly:Z
 
     if-nez v0, :cond_0
@@ -309,10 +273,8 @@
     :goto_0
     invoke-virtual {p0, v0}, Lcom/movial/ipphone/WifiCallSwitchPreference;->setChecked(Z)V
 
-    .line 159
     return-void
 
-    .line 158
     :cond_0
     const/4 v0, 0x0
 
@@ -327,7 +289,6 @@
 
     const/4 v2, 0x0
 
-    .line 162
     const-string v0, "WifiCallSwitchPreference"
 
     new-instance v3, Ljava/lang/StringBuilder;
@@ -354,10 +315,8 @@
 
     invoke-static {v0, v3}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 164
     invoke-virtual {p0, v2}, Lcom/movial/ipphone/WifiCallSwitchPreference;->setEnabled(Z)V
 
-    .line 165
     invoke-virtual {p0}, Lcom/movial/ipphone/WifiCallSwitchPreference;->isChecked()Z
 
     move-result v0
@@ -369,7 +328,6 @@
     :goto_0
     iput-boolean v0, p0, Lcom/movial/ipphone/WifiCallSwitchPreference;->mCellOnly:Z
 
-    .line 166
     iget-object v0, p0, Lcom/movial/ipphone/WifiCallSwitchPreference;->mContext:Landroid/content/Context;
 
     invoke-virtual {v0}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
@@ -382,7 +340,6 @@
 
     invoke-static {v0, v3, v4}, Lcom/movial/ipphone/IPPhoneSettings;->putBoolean(Landroid/content/ContentResolver;Ljava/lang/String;Z)Z
 
-    .line 167
     iget-boolean v0, p0, Lcom/movial/ipphone/WifiCallSwitchPreference;->mCellOnly:Z
 
     if-nez v0, :cond_1
@@ -390,19 +347,16 @@
     :goto_1
     invoke-direct {p0, v1}, Lcom/movial/ipphone/WifiCallSwitchPreference;->registerToIPRegistry(Z)V
 
-    .line 168
     return-void
 
     :cond_0
     move v0, v2
 
-    .line 165
     goto :goto_0
 
     :cond_1
     move v1, v2
 
-    .line 167
     goto :goto_1
 .end method
 
@@ -410,10 +364,8 @@
     .locals 0
 
     .prologue
-    .line 181
     invoke-virtual {p0}, Lcom/movial/ipphone/WifiCallSwitchPreference;->unregisterObserver()V
 
-    .line 182
     return-void
 .end method
 
@@ -421,7 +373,6 @@
     .locals 4
 
     .prologue
-    .line 191
     iget-object v0, p0, Lcom/movial/ipphone/WifiCallSwitchPreference;->mContext:Landroid/content/Context;
 
     invoke-virtual {v0}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
@@ -442,7 +393,6 @@
 
     invoke-virtual {v0, v1, v2, v3}, Landroid/content/ContentResolver;->registerContentObserver(Landroid/net/Uri;ZLandroid/database/ContentObserver;)V
 
-    .line 193
     return-void
 .end method
 
@@ -452,7 +402,6 @@
     .prologue
     const/4 v1, 0x1
 
-    .line 171
     iget-object v0, p0, Lcom/movial/ipphone/WifiCallSwitchPreference;->mContext:Landroid/content/Context;
 
     invoke-virtual {v0}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
@@ -467,7 +416,6 @@
 
     iput-boolean v0, p0, Lcom/movial/ipphone/WifiCallSwitchPreference;->mCellOnly:Z
 
-    .line 172
     iget-boolean v0, p0, Lcom/movial/ipphone/WifiCallSwitchPreference;->mCellOnly:Z
 
     if-nez v0, :cond_1
@@ -477,7 +425,6 @@
     :goto_0
     invoke-virtual {p0, v0}, Lcom/movial/ipphone/WifiCallSwitchPreference;->setChecked(Z)V
 
-    .line 173
     iget-boolean v0, p0, Lcom/movial/ipphone/WifiCallSwitchPreference;->mCellOnly:Z
 
     if-eqz v0, :cond_0
@@ -486,17 +433,13 @@
 
     invoke-virtual {p0, v0}, Lcom/movial/ipphone/WifiCallSwitchPreference;->setSummary(Ljava/lang/CharSequence;)V
 
-    .line 176
     :cond_0
     invoke-direct {p0, v1}, Lcom/movial/ipphone/WifiCallSwitchPreference;->registerToIPRegistry(Z)V
 
-    .line 177
     invoke-virtual {p0}, Lcom/movial/ipphone/WifiCallSwitchPreference;->registerObserver()V
 
-    .line 178
     return-void
 
-    .line 172
     :cond_1
     const/4 v0, 0x0
 
@@ -507,7 +450,6 @@
     .locals 2
 
     .prologue
-    .line 196
     iget-object v0, p0, Lcom/movial/ipphone/WifiCallSwitchPreference;->mContext:Landroid/content/Context;
 
     invoke-virtual {v0}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
@@ -518,6 +460,5 @@
 
     invoke-virtual {v0, v1}, Landroid/content/ContentResolver;->unregisterContentObserver(Landroid/database/ContentObserver;)V
 
-    .line 197
     return-void
 .end method

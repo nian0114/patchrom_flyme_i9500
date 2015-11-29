@@ -26,7 +26,6 @@
     .locals 0
 
     .prologue
-    .line 212
     iput-object p1, p0, Lcom/android/internal/policy/impl/sec/MultitapKeyManager$2;->this$0:Lcom/android/internal/policy/impl/sec/MultitapKeyManager;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -40,7 +39,6 @@
     .locals 2
 
     .prologue
-    .line 215
     iget-object v0, p0, Lcom/android/internal/policy/impl/sec/MultitapKeyManager$2;->this$0:Lcom/android/internal/policy/impl/sec/MultitapKeyManager;
 
     # getter for: Lcom/android/internal/policy/impl/sec/MultitapKeyManager;->mHomeTripleTapPending:Z
@@ -50,7 +48,6 @@
 
     if-eqz v0, :cond_0
 
-    .line 216
     iget-object v0, p0, Lcom/android/internal/policy/impl/sec/MultitapKeyManager$2;->this$0:Lcom/android/internal/policy/impl/sec/MultitapKeyManager;
 
     const/4 v1, 0x0
@@ -58,7 +55,6 @@
     # setter for: Lcom/android/internal/policy/impl/sec/MultitapKeyManager;->mHomeTripleTapPending:Z
     invoke-static {v0, v1}, Lcom/android/internal/policy/impl/sec/MultitapKeyManager;->access$102(Lcom/android/internal/policy/impl/sec/MultitapKeyManager;Z)Z
 
-    .line 218
     iget-object v0, p0, Lcom/android/internal/policy/impl/sec/MultitapKeyManager$2;->this$0:Lcom/android/internal/policy/impl/sec/MultitapKeyManager;
 
     iget-object v0, v0, Lcom/android/internal/policy/impl/sec/MultitapKeyManager;->mSPWM:Lcom/android/internal/policy/impl/sec/SamsungPhoneWindowManager;
@@ -69,17 +65,14 @@
 
     if-eqz v0, :cond_1
 
-    .line 219
     iget-object v0, p0, Lcom/android/internal/policy/impl/sec/MultitapKeyManager$2;->this$0:Lcom/android/internal/policy/impl/sec/MultitapKeyManager;
 
     invoke-virtual {v0}, Lcom/android/internal/policy/impl/sec/MultitapKeyManager;->handleDoubleTapOnHome()V
 
-    .line 224
     :cond_0
     :goto_0
     return-void
 
-    .line 221
     :cond_1
     iget-object v0, p0, Lcom/android/internal/policy/impl/sec/MultitapKeyManager$2;->this$0:Lcom/android/internal/policy/impl/sec/MultitapKeyManager;
 

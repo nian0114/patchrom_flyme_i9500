@@ -45,33 +45,23 @@
     .param p8, "colorRGBA"    # I
 
     .prologue
-    .line 247
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 248
     iput p1, p0, Landroid/media/TimedText$Style;->startChar:I
 
-    .line 249
     iput p2, p0, Landroid/media/TimedText$Style;->endChar:I
 
-    .line 250
     iput p3, p0, Landroid/media/TimedText$Style;->fontID:I
 
-    .line 251
     iput-boolean p4, p0, Landroid/media/TimedText$Style;->isBold:Z
 
-    .line 252
     iput-boolean p5, p0, Landroid/media/TimedText$Style;->isItalic:Z
 
-    .line 253
     iput-boolean p6, p0, Landroid/media/TimedText$Style;->isUnderlined:Z
 
-    .line 254
     iput p7, p0, Landroid/media/TimedText$Style;->fontSize:I
 
-    .line 255
     iput p8, p0, Landroid/media/TimedText$Style;->colorRGBA:I
 
-    .line 256
     return-void
 .end method

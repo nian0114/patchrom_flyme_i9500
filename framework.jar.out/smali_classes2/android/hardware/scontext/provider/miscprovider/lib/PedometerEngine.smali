@@ -8,12 +8,10 @@
     .locals 1
 
     .prologue
-    .line 23
     const-string v0, "/system/lib/libPedometer.so"
 
     invoke-static {v0}, Ljava/lang/System;->load(Ljava/lang/String;)V
 
-    .line 24
     return-void
 .end method
 
@@ -21,10 +19,8 @@
     .locals 0
 
     .prologue
-    .line 30
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 31
     return-void
 .end method
 

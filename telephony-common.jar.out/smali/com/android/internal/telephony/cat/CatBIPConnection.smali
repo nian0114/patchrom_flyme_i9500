@@ -27,39 +27,29 @@
     .prologue
     const/4 v1, 0x0
 
-    .line 70
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 71
     const/16 v0, 0x5dc
 
     if-le p1, v0, :cond_0
 
-    .line 72
     const/16 p1, 0x5dc
 
-    .line 73
     const/4 v0, 0x1
 
     iput-boolean v0, p0, Lcom/android/internal/telephony/cat/CatBIPConnection;->mBuffsizeModified:Z
 
-    .line 77
     :goto_0
     iput p1, p0, Lcom/android/internal/telephony/cat/CatBIPConnection;->bufferSize:I
 
-    .line 78
     iput-object p2, p0, Lcom/android/internal/telephony/cat/CatBIPConnection;->uiccTerminalIface:Lcom/android/internal/telephony/cat/TransportLevel;
 
-    .line 79
     iput-byte v1, p0, Lcom/android/internal/telephony/cat/CatBIPConnection;->linkStateCause:B
 
-    .line 80
     iput-object p3, p0, Lcom/android/internal/telephony/cat/CatBIPConnection;->mCatBIPManager:Lcom/android/internal/telephony/cat/CatBIPManager;
 
-    .line 81
     return-void
 
-    .line 75
     :cond_0
     iput-boolean v1, p0, Lcom/android/internal/telephony/cat/CatBIPConnection;->mBuffsizeModified:Z
 

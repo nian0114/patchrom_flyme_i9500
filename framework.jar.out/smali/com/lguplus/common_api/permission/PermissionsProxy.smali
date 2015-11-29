@@ -29,18 +29,14 @@
     .param p1, "pkgMgr"    # Landroid/content/pm/IPackageManager$Stub;
 
     .prologue
-    .line 21
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 20
     const/4 v0, 0x0
 
     iput-object v0, p0, Lcom/lguplus/common_api/permission/PermissionsProxy;->mPerms:Lcom/lguplus/common_api/permission/Permissions;
 
-    .line 22
     iput-object p1, p0, Lcom/lguplus/common_api/permission/PermissionsProxy;->mPkgMgr:Landroid/content/pm/IPackageManager$Stub;
 
-    .line 23
     return-void
 .end method
 
@@ -48,7 +44,6 @@
     .locals 7
 
     .prologue
-    .line 36
     :try_start_0
     iget-object v3, p0, Lcom/lguplus/common_api/permission/PermissionsProxy;->mPkgMgr:Landroid/content/pm/IPackageManager$Stub;
 
@@ -64,7 +59,6 @@
 
     iget-object v0, v3, Landroid/content/pm/ApplicationInfo;->sourceDir:Ljava/lang/String;
 
-    .line 37
     .local v0, "apkPath":Ljava/lang/String;
     new-instance v3, Lcom/lguplus/common_api/permission/PermissionsProxy$PermsClassLoader;
 
@@ -84,7 +78,6 @@
 
     move-result-object v1
 
-    .line 39
     .local v1, "cls":Ljava/lang/Class;, "Ljava/lang/Class<*>;"
     const/4 v3, 0x0
 
@@ -108,19 +101,16 @@
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 43
     .end local v0    # "apkPath":Ljava/lang/String;
     .end local v1    # "cls":Ljava/lang/Class;, "Ljava/lang/Class<*>;"
     :goto_0
     return-void
 
-    .line 40
     :catch_0
     move-exception v2
 
-    .line 41
     .local v2, "e":Ljava/lang/Exception;
-    const-string/jumbo v3, "uplus_common_api"
+    const-string v3, "uplus_common_api"
 
     new-instance v4, Ljava/lang/StringBuilder;
 
@@ -156,7 +146,6 @@
     .param p1, "pkg"    # Landroid/content/pm/PackageParser$Package;
 
     .prologue
-    .line 111
     iget-object v0, p1, Landroid/content/pm/PackageParser$Package;->packageName:Ljava/lang/String;
 
     const-string v1, "com.lguplus.common_api_impl"
@@ -169,7 +158,6 @@
 
     invoke-direct {p0}, Lcom/lguplus/common_api/permission/PermissionsProxy;->getPerms()V
 
-    .line 112
     :cond_0
     iget-object v0, p0, Lcom/lguplus/common_api/permission/PermissionsProxy;->mPerms:Lcom/lguplus/common_api/permission/Permissions;
 
@@ -185,7 +173,6 @@
 
     invoke-interface {v0, v1, v2}, Lcom/lguplus/common_api/permission/Permissions;->afterAdd(Ljava/lang/String;I)V
 
-    .line 113
     :cond_1
     return-void
 .end method
@@ -195,7 +182,6 @@
     .param p1, "pkg"    # Landroid/content/pm/PackageParser$Package;
 
     .prologue
-    .line 61
     :try_start_0
     move-object/from16 v0, p0
 
@@ -205,18 +191,14 @@
 
     if-eqz v12, :cond_4
 
-    .line 62
     const/4 v9, 0x0
 
-    .line 63
     .local v9, "token":Ljava/lang/String;
     const/4 v1, 0x0
 
-    .line 64
     .local v1, "am":Landroid/content/res/AssetManager;
     const/4 v6, 0x0
 
-    .line 66
     .local v6, "is":Ljava/io/InputStream;
     :try_start_1
     new-instance v2, Landroid/content/res/AssetManager;
@@ -227,7 +209,6 @@
     .catch Ljava/lang/Exception; {:try_start_1 .. :try_end_1} :catch_4
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
-    .line 67
     .end local v1    # "am":Landroid/content/res/AssetManager;
     .local v2, "am":Landroid/content/res/AssetManager;
     :try_start_2
@@ -239,18 +220,15 @@
 
     move-result v4
 
-    .line 68
     .local v4, "cookie":I
     if-eqz v4, :cond_0
 
-    .line 69
     const-string v12, "assets/uplus_common_api_perm_token.txt"
 
     invoke-virtual {v2, v4, v12}, Landroid/content/res/AssetManager;->openNonAsset(ILjava/lang/String;)Ljava/io/InputStream;
 
     move-result-object v6
 
-    .line 70
     const/16 v12, 0x1000
 
     new-array v3, v12, [B
@@ -260,7 +238,6 @@
 
     move-result v8
 
-    .line 71
     .local v8, "n":I
     new-instance v10, Ljava/lang/String;
 
@@ -276,7 +253,6 @@
     .local v10, "token":Ljava/lang/String;
     move-object v9, v10
 
-    .line 81
     .end local v3    # "bytes":[B
     .end local v8    # "n":I
     .end local v10    # "token":Ljava/lang/String;
@@ -284,7 +260,6 @@
     :cond_0
     if-eqz v6, :cond_9
 
-    .line 83
     :try_start_3
     invoke-virtual {v6}, Ljava/io/InputStream;->close()V
     :try_end_3
@@ -293,7 +268,6 @@
 
     move-object v1, v2
 
-    .line 89
     .end local v2    # "am":Landroid/content/res/AssetManager;
     .end local v4    # "cookie":I
     .restart local v1    # "am":Landroid/content/res/AssetManager;
@@ -304,7 +278,6 @@
     :try_start_4
     invoke-virtual {v1}, Landroid/content/res/AssetManager;->close()V
 
-    .line 90
     :cond_2
     move-object/from16 v0, p0
 
@@ -330,7 +303,6 @@
 
     move-result-object v11
 
-    .line 92
     .local v11, "userName":Ljava/lang/String;
     if-eqz v11, :cond_3
 
@@ -345,7 +317,6 @@
     :cond_3
     const/4 v7, 0x1
 
-    .line 93
     .local v7, "isValidToken":Z
     :goto_1
     move-object/from16 v0, p1
@@ -354,10 +325,8 @@
 
     if-eqz v12, :cond_8
 
-    .line 94
     if-eqz v7, :cond_7
 
-    .line 95
     move-object/from16 v0, p1
 
     iget-object v12, v0, Landroid/content/pm/PackageParser$Package;->mSharedUserId:Ljava/lang/String;
@@ -368,7 +337,6 @@
 
     if-nez v12, :cond_4
 
-    .line 96
     new-instance v12, Ljava/lang/StringBuilder;
 
     invoke-direct {v12}, Ljava/lang/StringBuilder;-><init>()V
@@ -395,7 +363,6 @@
 
     iput-object v12, v0, Landroid/content/pm/PackageParser$Package;->mSharedUserId:Ljava/lang/String;
 
-    .line 108
     .end local v1    # "am":Landroid/content/res/AssetManager;
     .end local v6    # "is":Ljava/io/InputStream;
     .end local v7    # "isValidToken":Z
@@ -405,7 +372,6 @@
     :goto_2
     return-void
 
-    .line 84
     .restart local v2    # "am":Landroid/content/res/AssetManager;
     .restart local v4    # "cookie":I
     .restart local v6    # "is":Ljava/io/InputStream;
@@ -413,9 +379,8 @@
     :catch_0
     move-exception v5
 
-    .line 85
     .local v5, "e":Ljava/io/IOException;
-    const-string/jumbo v12, "uplus_common_api"
+    const-string v12, "uplus_common_api"
 
     new-instance v13, Ljava/lang/StringBuilder;
 
@@ -445,22 +410,18 @@
 
     move-object v1, v2
 
-    .line 86
     .end local v2    # "am":Landroid/content/res/AssetManager;
     .restart local v1    # "am":Landroid/content/res/AssetManager;
     goto :goto_0
 
-    .line 74
     .end local v4    # "cookie":I
     .end local v5    # "e":Ljava/io/IOException;
     :catch_1
     move-exception v12
 
-    .line 81
     :goto_3
     if-eqz v6, :cond_1
 
-    .line 83
     :try_start_5
     invoke-virtual {v6}, Ljava/io/InputStream;->close()V
     :try_end_5
@@ -469,14 +430,12 @@
 
     goto :goto_0
 
-    .line 84
     :catch_2
     move-exception v5
 
-    .line 85
     .restart local v5    # "e":Ljava/io/IOException;
     :try_start_6
-    const-string/jumbo v12, "uplus_common_api"
+    const-string v12, "uplus_common_api"
 
     new-instance v13, Ljava/lang/StringBuilder;
 
@@ -506,7 +465,6 @@
 
     goto/16 :goto_0
 
-    .line 105
     .end local v1    # "am":Landroid/content/res/AssetManager;
     .end local v5    # "e":Ljava/io/IOException;
     .end local v6    # "is":Ljava/io/InputStream;
@@ -514,9 +472,8 @@
     :catch_3
     move-exception v5
 
-    .line 106
     .local v5, "e":Ljava/lang/Exception;
-    const-string/jumbo v12, "uplus_common_api"
+    const-string v12, "uplus_common_api"
 
     new-instance v13, Ljava/lang/StringBuilder;
 
@@ -544,7 +501,6 @@
 
     goto :goto_2
 
-    .line 77
     .end local v5    # "e":Ljava/lang/Exception;
     .restart local v1    # "am":Landroid/content/res/AssetManager;
     .restart local v6    # "is":Ljava/io/InputStream;
@@ -552,11 +508,10 @@
     :catch_4
     move-exception v5
 
-    .line 78
     .restart local v5    # "e":Ljava/lang/Exception;
     :goto_4
     :try_start_7
-    const-string/jumbo v12, "uplus_common_api"
+    const-string v12, "uplus_common_api"
 
     new-instance v13, Ljava/lang/StringBuilder;
 
@@ -584,10 +539,8 @@
     :try_end_7
     .catchall {:try_start_7 .. :try_end_7} :catchall_0
 
-    .line 81
     if-eqz v6, :cond_1
 
-    .line 83
     :try_start_8
     invoke-virtual {v6}, Ljava/io/InputStream;->close()V
     :try_end_8
@@ -596,14 +549,12 @@
 
     goto/16 :goto_0
 
-    .line 84
     :catch_5
     move-exception v5
 
-    .line 85
     .local v5, "e":Ljava/io/IOException;
     :try_start_9
-    const-string/jumbo v12, "uplus_common_api"
+    const-string v12, "uplus_common_api"
 
     new-instance v13, Ljava/lang/StringBuilder;
 
@@ -633,7 +584,6 @@
 
     goto/16 :goto_0
 
-    .line 81
     .end local v5    # "e":Ljava/io/IOException;
     :catchall_0
     move-exception v12
@@ -641,26 +591,22 @@
     :goto_5
     if-eqz v6, :cond_5
 
-    .line 83
     :try_start_a
     invoke-virtual {v6}, Ljava/io/InputStream;->close()V
     :try_end_a
     .catch Ljava/io/IOException; {:try_start_a .. :try_end_a} :catch_6
     .catch Ljava/lang/Exception; {:try_start_a .. :try_end_a} :catch_3
 
-    .line 86
     :cond_5
     :goto_6
     :try_start_b
     throw v12
 
-    .line 84
     :catch_6
     move-exception v5
 
-    .line 85
     .restart local v5    # "e":Ljava/io/IOException;
-    const-string/jumbo v13, "uplus_common_api"
+    const-string v13, "uplus_common_api"
 
     new-instance v14, Ljava/lang/StringBuilder;
 
@@ -688,7 +634,6 @@
 
     goto :goto_6
 
-    .line 92
     .end local v5    # "e":Ljava/io/IOException;
     .restart local v11    # "userName":Ljava/lang/String;
     :cond_6
@@ -696,7 +641,6 @@
 
     goto/16 :goto_1
 
-    .line 98
     .restart local v7    # "isValidToken":Z
     :cond_7
     move-object/from16 v0, p1
@@ -717,7 +661,6 @@
 
     goto/16 :goto_2
 
-    .line 101
     :cond_8
     if-eqz v7, :cond_4
 
@@ -729,7 +672,6 @@
 
     goto/16 :goto_2
 
-    .line 81
     .end local v1    # "am":Landroid/content/res/AssetManager;
     .end local v7    # "isValidToken":Z
     .end local v11    # "userName":Ljava/lang/String;
@@ -743,7 +685,6 @@
     .restart local v1    # "am":Landroid/content/res/AssetManager;
     goto :goto_5
 
-    .line 77
     .end local v1    # "am":Landroid/content/res/AssetManager;
     .restart local v2    # "am":Landroid/content/res/AssetManager;
     :catch_7
@@ -755,7 +696,6 @@
     .restart local v1    # "am":Landroid/content/res/AssetManager;
     goto/16 :goto_4
 
-    .line 74
     .end local v1    # "am":Landroid/content/res/AssetManager;
     .restart local v2    # "am":Landroid/content/res/AssetManager;
     :catch_8
@@ -784,14 +724,12 @@
     .param p2, "permName"    # Ljava/lang/String;
 
     .prologue
-    .line 49
     iget-object v0, p0, Lcom/lguplus/common_api/permission/PermissionsProxy;->mPerms:Lcom/lguplus/common_api/permission/Permissions;
 
     if-nez v0, :cond_0
 
     invoke-direct {p0}, Lcom/lguplus/common_api/permission/PermissionsProxy;->getPerms()V
 
-    .line 50
     :cond_0
     iget-object v0, p0, Lcom/lguplus/common_api/permission/PermissionsProxy;->mPerms:Lcom/lguplus/common_api/permission/Permissions;
 
@@ -822,14 +760,12 @@
     .param p2, "permName"    # Ljava/lang/String;
 
     .prologue
-    .line 45
     iget-object v0, p0, Lcom/lguplus/common_api/permission/PermissionsProxy;->mPerms:Lcom/lguplus/common_api/permission/Permissions;
 
     if-nez v0, :cond_0
 
     invoke-direct {p0}, Lcom/lguplus/common_api/permission/PermissionsProxy;->getPerms()V
 
-    .line 46
     :cond_0
     iget-object v0, p0, Lcom/lguplus/common_api/permission/PermissionsProxy;->mPerms:Lcom/lguplus/common_api/permission/Permissions;
 
@@ -859,7 +795,6 @@
     .param p1, "pkgName"    # Ljava/lang/String;
 
     .prologue
-    .line 53
     iget-object v0, p0, Lcom/lguplus/common_api/permission/PermissionsProxy;->mPerms:Lcom/lguplus/common_api/permission/Permissions;
 
     if-eqz v0, :cond_0
@@ -884,7 +819,6 @@
     .param p1, "pkgName"    # Ljava/lang/String;
 
     .prologue
-    .line 56
     iget-object v0, p0, Lcom/lguplus/common_api/permission/PermissionsProxy;->mPerms:Lcom/lguplus/common_api/permission/Permissions;
 
     if-eqz v0, :cond_0
@@ -909,7 +843,6 @@
     .param p1, "pkg"    # Landroid/content/pm/PackageParser$Package;
 
     .prologue
-    .line 116
     iget-object v0, p0, Lcom/lguplus/common_api/permission/PermissionsProxy;->mPerms:Lcom/lguplus/common_api/permission/Permissions;
 
     if-eqz v0, :cond_0
@@ -920,7 +853,6 @@
 
     invoke-interface {v0, v1}, Lcom/lguplus/common_api/permission/Permissions;->del(Ljava/lang/String;)Z
 
-    .line 117
     :cond_0
     return-void
 .end method
@@ -930,7 +862,6 @@
     .param p1, "files"    # [Ljava/io/File;
 
     .prologue
-    .line 120
     const/4 v1, 0x1
 
     .local v1, "i":I
@@ -939,7 +870,6 @@
 
     if-ge v1, v3, :cond_1
 
-    .line 121
     aget-object v3, p1, v1
 
     invoke-virtual {v3}, Ljava/io/File;->getName()Ljava/lang/String;
@@ -954,10 +884,8 @@
 
     if-eqz v3, :cond_2
 
-    .line 122
     aget-object v0, p1, v1
 
-    .line 123
     .local v0, "f":Ljava/io/File;
     add-int/lit8 v2, v1, -0x1
 
@@ -965,31 +893,26 @@
     :goto_1
     if-ltz v2, :cond_0
 
-    .line 124
     add-int/lit8 v3, v2, 0x1
 
     aget-object v4, p1, v2
 
     aput-object v4, p1, v3
 
-    .line 123
     add-int/lit8 v2, v2, -0x1
 
     goto :goto_1
 
-    .line 125
     :cond_0
     const/4 v3, 0x0
 
     aput-object v0, p1, v3
 
-    .line 129
     .end local v0    # "f":Ljava/io/File;
     .end local v2    # "j":I
     :cond_1
     return-void
 
-    .line 120
     :cond_2
     add-int/lit8 v1, v1, 0x1
 

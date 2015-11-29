@@ -23,7 +23,6 @@
     .locals 0
 
     .prologue
-    .line 1568
     iput-object p1, p0, Landroid/widget/MultiSelectPopupWindow$SelectionStartHandleView$1;->this$1:Landroid/widget/MultiSelectPopupWindow$SelectionStartHandleView;
 
     invoke-direct {p0}, Landroid/view/ViewOutlineProvider;-><init>()V
@@ -39,10 +38,8 @@
     .param p2, "outline"    # Landroid/graphics/Outline;
 
     .prologue
-    .line 1572
     const/4 v0, 0x3
 
-    .line 1573
     .local v0, "delta":I
     # getter for: Landroid/widget/MultiSelectPopupWindow;->mTextView:Landroid/widget/TextView;
     invoke-static {}, Landroid/widget/MultiSelectPopupWindow;->access$000()Landroid/widget/TextView;
@@ -68,13 +65,11 @@
 
     move-result v2
 
-    .line 1575
     .local v2, "radius":I
     new-instance v1, Landroid/graphics/Rect;
 
     invoke-direct {v1}, Landroid/graphics/Rect;-><init>()V
 
-    .line 1576
     .local v1, "r":Landroid/graphics/Rect;
     const/4 v3, 0x3
 
@@ -100,14 +95,12 @@
 
     invoke-virtual {v1, v3, v4, v5, v6}, Landroid/graphics/Rect;->set(IIII)V
 
-    .line 1577
     iget-object v3, p0, Landroid/widget/MultiSelectPopupWindow$SelectionStartHandleView$1;->this$1:Landroid/widget/MultiSelectPopupWindow$SelectionStartHandleView;
 
     iget-boolean v3, v3, Landroid/widget/MultiSelectPopupWindow$SelectionStartHandleView;->mbSwitchCursor:Z
 
     if-eqz v3, :cond_0
 
-    .line 1578
     iget-object v3, p0, Landroid/widget/MultiSelectPopupWindow$SelectionStartHandleView$1;->this$1:Landroid/widget/MultiSelectPopupWindow$SelectionStartHandleView;
 
     iget v3, v3, Landroid/widget/MultiSelectPopupWindow$SelectionStartHandleView;->mHotspotX:I
@@ -138,10 +131,8 @@
 
     invoke-virtual {v1, v3, v4, v5, v6}, Landroid/graphics/Rect;->set(IIII)V
 
-    .line 1580
     :cond_0
     invoke-virtual {p2, v1}, Landroid/graphics/Outline;->setOval(Landroid/graphics/Rect;)V
 
-    .line 1581
     return-void
 .end method

@@ -32,18 +32,14 @@
     .param p3, "handler"    # Landroid/os/Handler;
 
     .prologue
-    .line 41
     iput-object p1, p0, Lcom/itsoninc/android/ItsOnPhoneClient$AndroidFramework;->this$0:Lcom/itsoninc/android/ItsOnPhoneClient;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 42
     iput-object p2, p0, Lcom/itsoninc/android/ItsOnPhoneClient$AndroidFramework;->mRil:Lcom/android/internal/telephony/RIL;
 
-    .line 43
     iput-object p3, p0, Lcom/itsoninc/android/ItsOnPhoneClient$AndroidFramework;->mHandler:Landroid/os/Handler;
 
-    .line 44
     return-void
 .end method
 
@@ -53,7 +49,6 @@
     .locals 2
 
     .prologue
-    .line 53
     iget-object v0, p0, Lcom/itsoninc/android/ItsOnPhoneClient$AndroidFramework;->mRil:Lcom/android/internal/telephony/RIL;
 
     iget-object v1, p0, Lcom/itsoninc/android/ItsOnPhoneClient$AndroidFramework;->mHandler:Landroid/os/Handler;
@@ -64,7 +59,6 @@
 
     invoke-virtual {v0, v1}, Lcom/android/internal/telephony/RIL;->hangupForegroundResumeBackground(Landroid/os/Message;)V
 
-    .line 54
     return-void
 .end method
 
@@ -72,7 +66,6 @@
     .locals 2
 
     .prologue
-    .line 57
     iget-object v0, p0, Lcom/itsoninc/android/ItsOnPhoneClient$AndroidFramework;->mRil:Lcom/android/internal/telephony/RIL;
 
     iget-object v1, p0, Lcom/itsoninc/android/ItsOnPhoneClient$AndroidFramework;->mHandler:Landroid/os/Handler;
@@ -83,7 +76,6 @@
 
     invoke-virtual {v0, v1}, Lcom/android/internal/telephony/RIL;->hangupWaitingOrBackground(Landroid/os/Message;)V
 
-    .line 58
     return-void
 .end method
 
@@ -91,7 +83,6 @@
     .locals 0
 
     .prologue
-    .line 50
     return-void
 .end method
 
@@ -99,6 +90,5 @@
     .locals 0
 
     .prologue
-    .line 47
     return-void
 .end method
