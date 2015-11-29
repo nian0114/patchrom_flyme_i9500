@@ -846,6 +846,41 @@
     return-void
 .end method
 
+.method private mzCheckSimState()Z
+    .locals 2
+
+    .prologue
+    const/4 v0, 0x1
+
+    iget-object v1, p0, Lcom/android/internal/telephony/SMSDispatcher;->mTelephonyManager:Landroid/telephony/TelephonyManager;
+
+    invoke-virtual {v1}, Landroid/telephony/TelephonyManager;->getSimState()I
+
+    move-result v1
+
+    if-eq v0, v1, :cond_0
+
+    iget-object v1, p0, Lcom/android/internal/telephony/SMSDispatcher;->mTelephonyManager:Landroid/telephony/TelephonyManager;
+
+    invoke-virtual {v1}, Landroid/telephony/TelephonyManager;->getSimState()I
+
+    move-result v1
+
+    if-eqz v1, :cond_0
+
+    invoke-static {}, Landroid/os/BuildExt;->isProductInternational()Z
+
+    move-result v1
+
+    if-nez v1, :cond_1
+
+    :cond_0
+    const/4 v0, 0x0
+
+    :cond_1
+    return v0
+.end method
+
 .method private sendMultipartSms(Lcom/android/internal/telephony/SMSDispatcher$SmsTracker;)V
     .locals 13
     .param p1, "tracker"    # Lcom/android/internal/telephony/SMSDispatcher$SmsTracker;
@@ -1052,6 +1087,17 @@
     return v7
 
     :cond_1
+    invoke-direct/range {p0 .. p0}, Lcom/android/internal/telephony/SMSDispatcher;->mzCheckSimState()Z
+
+    move-result v9
+
+    if-nez v9, :cond_flyme_0
+
+    const/4 v7, 0x1
+
+    return v7
+
+    :cond_flyme_0
     iget-object v9, p0, Lcom/android/internal/telephony/SMSDispatcher;->mPremiumSmsRule:Ljava/util/concurrent/atomic/AtomicInteger;
 
     invoke-virtual {v9}, Ljava/util/concurrent/atomic/AtomicInteger;->get()I

@@ -934,6 +934,9 @@
 .method public abstract registerForUnknownConnection(Landroid/os/Handler;ILjava/lang/Object;)V
 .end method
 
+.method public abstract registerForVoiceCallIncomingIndication(Landroid/os/Handler;ILjava/lang/Object;)V
+.end method
+
 .method public abstract rejectCall()V
     .annotation system Ldalvik/annotation/Throws;
         value = {
@@ -1202,6 +1205,9 @@
 .end method
 
 .method public abstract unregisterForUnknownConnection(Landroid/os/Handler;)V
+.end method
+
+.method public abstract unregisterForVoiceCallIncomingIndication(Landroid/os/Handler;)V
 .end method
 
 .method public abstract unsetOnEcbModeExitResponse(Landroid/os/Handler;)V

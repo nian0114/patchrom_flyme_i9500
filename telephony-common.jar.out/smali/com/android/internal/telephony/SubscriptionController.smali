@@ -1328,18 +1328,6 @@
 
     iput v2, v0, Landroid/telephony/SubInfoRecord;->mnc:I
 
-    const-string v2, "sub_state"
-
-    invoke-interface {p1, v2}, Landroid/database/Cursor;->getColumnIndexOrThrow(Ljava/lang/String;)I
-
-    move-result v2
-
-    invoke-interface {p1, v2}, Landroid/database/Cursor;->getInt(I)I
-
-    move-result v2
-
-    iput v2, v0, Landroid/telephony/SubInfoRecord;->mStatus:I
-
     const/4 v2, -0x1
 
     iput v2, v0, Landroid/telephony/SubInfoRecord;->mNwMode:I
