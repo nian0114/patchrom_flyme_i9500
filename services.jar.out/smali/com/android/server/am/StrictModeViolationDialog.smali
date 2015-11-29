@@ -83,7 +83,8 @@
     .local v1, "name":Ljava/lang/CharSequence;
     if-eqz v1, :cond_2
 
-    const v4, #android:string@smv_application#t
+    .line 60
+    const v4, 0x1040494
 
     const/4 v5, 0x2
 
@@ -114,7 +115,7 @@
     .line 72
     const/4 v4, -0x1
 
-    const v5, #android:string@dlg_ok#t
+    const v5, 0x10404f6
 
     invoke-virtual {v2, v5}, Landroid/content/res/Resources;->getText(I)Ljava/lang/CharSequence;
 
@@ -170,7 +171,7 @@
     .line 86
     const/4 v4, -0x2
 
-    const v5, #android:string@report#t
+    const v5, 0x104048b
 
     invoke-virtual {v2, v5}, Landroid/content/res/Resources;->getText(I)Ljava/lang/CharSequence;
 
@@ -188,7 +189,7 @@
     .end local v0    # "edm":Landroid/app/enterprise/EnterpriseDeviceManager;
     .end local v3    # "rp":Landroid/app/enterprise/RestrictionPolicy;
     :cond_1
-    const v4, #android:string@aerr_title#t
+    const v4, 0x1040482
 
     invoke-virtual {v2, v4}, Landroid/content/res/Resources;->getText(I)Ljava/lang/CharSequence;
 
@@ -257,7 +258,7 @@
 
     .line 65
     .restart local v1    # "name":Ljava/lang/CharSequence;
-    const v4, #android:string@smv_process#t
+    const v4, 0x1040495
 
     new-array v5, v8, [Ljava/lang/Object;
 

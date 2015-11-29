@@ -76,24 +76,30 @@
 
     if-eqz v6, :cond_1
 
+    .line 3696
     :cond_0
     :goto_0
     return-void
 
+    .line 3655
     :cond_1
     iget-object v6, p0, Landroid/widget/AbsListView$PerformClick;->this$0:Landroid/widget/AbsListView;
 
     iget-object v0, v6, Landroid/widget/AbsListView;->mAdapter:Landroid/widget/ListAdapter;
 
+    .line 3656
     .local v0, "adapter":Landroid/widget/ListAdapter;
     iget v4, p0, Landroid/widget/AbsListView$PerformClick;->mClickMotionPosition:I
 
+    .line 3657
     .local v4, "motionPosition":I
     const/4 v3, 0x0
 
+    .line 3658
     .local v3, "handledNotifykeyPress":Z
     const/4 v2, 0x0
 
+    .line 3659
     .local v2, "handledNotifyMultiSelect":Z
     if-eqz v0, :cond_0
 

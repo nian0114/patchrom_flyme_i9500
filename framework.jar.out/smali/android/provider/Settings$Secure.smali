@@ -15,8 +15,6 @@
 
 
 # static fields
-.field public static final MEIZU_KEYGUARD_LOCK:Ljava/lang/String; = "meizu_keyguard_lock"
-
 .field public static final ACCESSIBILITY_CAPTIONING_BACKGROUND_COLOR:Ljava/lang/String; = "accessibility_captioning_background_color"
 
 .field public static final ACCESSIBILITY_CAPTIONING_EDGE_COLOR:Ljava/lang/String; = "accessibility_captioning_edge_color"
@@ -1872,8 +1870,6 @@
     .line 9242
     const/16 v0, 0x39
 
-    add-int/lit8 v0, v0, 0x1
-
     new-array v0, v0, [Ljava/lang/String;
 
     const-string v1, "bugreport_in_power_menu"
@@ -2168,54 +2164,49 @@
 
     const/16 v1, 0x32
 
-    const-string v2, "wifi_num_open_networks_kept"
+    const-string/jumbo v2, "wifi_num_open_networks_kept"
 
     aput-object v2, v0, v1
 
     const/16 v1, 0x33
 
-    const-string v2, "mount_play_not_snd"
+    const-string/jumbo v2, "mount_play_not_snd"
 
     aput-object v2, v0, v1
 
     const/16 v1, 0x34
 
-    const-string v2, "mount_ums_autostart"
+    const-string/jumbo v2, "mount_ums_autostart"
 
     aput-object v2, v0, v1
 
     const/16 v1, 0x35
 
-    const-string v2, "mount_ums_prompt"
+    const-string/jumbo v2, "mount_ums_prompt"
 
     aput-object v2, v0, v1
 
     const/16 v1, 0x36
 
-    const-string v2, "mount_ums_notify_enabled"
+    const-string/jumbo v2, "mount_ums_notify_enabled"
 
     aput-object v2, v0, v1
 
     const/16 v1, 0x37
 
-    const-string v2, "ui_night_mode"
+    const-string/jumbo v2, "ui_night_mode"
 
     aput-object v2, v0, v1
 
     const/16 v1, 0x38
 
-    const-string v2, "sleep_timeout"
-
-    aput-object v2, v0, v1
-
-    add-int/lit8 v1, v1, 0x1
-
-    const-string v2, "meizu_keyguard_lock"
+    const-string/jumbo v2, "sleep_timeout"
 
     aput-object v2, v0, v1
 
     sput-object v0, Landroid/provider/Settings$Secure;->SETTINGS_TO_BACKUP:[Ljava/lang/String;
 
+    .line 9307
     const/16 v0, 0xc
 
     new-array v0, v0, [Ljava/lang/String;

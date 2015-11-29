@@ -2813,7 +2813,7 @@
 
     iget-object v5, v5, Lcom/android/server/am/ActivityManagerService;->mContext:Landroid/content/Context;
 
-    const v10, #android:string@heavy_weight_notification#t
+    const v10, 0x104049a
 
     const/4 v11, 0x1
 
@@ -2849,7 +2849,7 @@
 
     .line 2138
     .local v64, "notification":Landroid/app/Notification;
-    const v5, #android:drawable@stat_sys_adb#t
+    const v5, 0x1080878
 
     move-object/from16 v0, v64
 
@@ -2908,7 +2908,7 @@
 
     move-result-object v5
 
-    const v10, #android:color@system_notification_accent_color#t
+    const v10, 0x1060058
 
     invoke-virtual {v5, v10}, Landroid/content/res/Resources;->getColor(I)I
 
@@ -2925,7 +2925,7 @@
 
     iget-object v5, v5, Lcom/android/server/am/ActivityManagerService;->mContext:Landroid/content/Context;
 
-    const v10, #android:string@heavy_weight_notification_detail#t
+    const v10, 0x104049b
 
     invoke-virtual {v5, v10}, Landroid/content/Context;->getText(I)Ljava/lang/CharSequence;
 
@@ -2991,7 +2991,7 @@
 
     const/16 v34, 0x0
 
-    const v35, #android:string@heavy_weight_notification#t
+    const v35, 0x104049a
 
     move-object/from16 v0, v75
 
@@ -3071,7 +3071,7 @@
 
     const/4 v10, 0x0
 
-    const v11, #android:string@heavy_weight_notification#t
+    const v11, 0x104049a
 
     move-object/from16 v0, p1
 
@@ -3419,7 +3419,7 @@
 
     iget-object v10, v10, Lcom/android/server/am/ActivityManagerService;->mContext:Landroid/content/Context;
 
-    const v11, #android:string@knox_feature_disabled_toast#t
+    const v11, 0x1040b1a
 
     invoke-virtual {v10, v11}, Landroid/content/Context;->getText(I)Ljava/lang/CharSequence;
 

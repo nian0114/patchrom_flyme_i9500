@@ -3,14 +3,6 @@
 .source "MasterClearReceiver.java"
 
 
-# annotations
-.annotation system Ldalvik/annotation/MemberClasses;
-    value = {
-        Lcom/android/server/MasterClearReceiver$MzRebootThread;
-    }
-.end annotation
-
-
 # static fields
 .field private static final TAG:Ljava/lang/String; = "MasterClear"
 
@@ -62,27 +54,20 @@
 
     if-nez v1, :cond_0
 
+    .line 36
     const-string v1, "MasterClear"
 
     const-string v2, "Ignoring master clear request -- not from trusted server."
 
     invoke-static {v1, v2}, Landroid/util/Slog;->w(Ljava/lang/String;Ljava/lang/String;)I
 
+    .line 82
     :goto_0
     return-void
 
+    .line 41
     :cond_0
-    invoke-direct/range {p0 .. p2}, Lcom/android/server/MasterClearReceiver;->mzRebootWipeUserData(Landroid/content/Context;Landroid/content/Intent;)Z
-
-    move-result v1
-
-    if-eqz v1, :cond_flyme_0
-
-    return-void
-
-    :cond_flyme_0
-
-    const-string v1, "shutdown"
+    const-string/jumbo v1, "shutdown"
 
     const/4 v2, 0x0
 
@@ -124,22 +109,4 @@
     invoke-virtual {v0}, Ljava/lang/Thread;->start()V
 
     goto :goto_0
-.end method
-
-.method private mzRebootWipeUserData(Landroid/content/Context;Landroid/content/Intent;)Z
-    .locals 2
-    .param p1, "context"    # Landroid/content/Context;
-    .param p2, "intent"    # Landroid/content/Intent;
-
-    .prologue
-    new-instance v0, Lcom/android/server/MasterClearReceiver$MzRebootThread;
-
-    invoke-direct {v0, p0, p1, p2}, Lcom/android/server/MasterClearReceiver$MzRebootThread;-><init>(Lcom/android/server/MasterClearReceiver;Landroid/content/Context;Landroid/content/Intent;)V
-
-    .local v0, "mzRebootThread":Lcom/android/server/MasterClearReceiver$MzRebootThread;
-    invoke-virtual {v0}, Lcom/android/server/MasterClearReceiver$MzRebootThread;->start()V
-
-    const/4 v1, 0x1
-
-    return v1
 .end method

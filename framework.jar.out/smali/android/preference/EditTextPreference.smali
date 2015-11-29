@@ -38,10 +38,12 @@
     .param p2, "attrs"    # Landroid/util/AttributeSet;
 
     .prologue
-    const v0, #android:attr@editTextPreferenceStyle#t
+    .line 76
+    const v0, 0x1010092
 
     invoke-direct {p0, p1, p2, v0}, Landroid/preference/EditTextPreference;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;I)V
 
+    .line 77
     return-void
 .end method
 
@@ -69,32 +71,38 @@
     .param p4, "defStyleRes"    # I
 
     .prologue
+    .line 54
     invoke-direct {p0, p1, p2, p3, p4}, Landroid/preference/DialogPreference;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;II)V
 
+    .line 56
     new-instance v0, Landroid/widget/EditText;
 
     invoke-direct {v0, p1, p2}, Landroid/widget/EditText;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;)V
 
     iput-object v0, p0, Landroid/preference/EditTextPreference;->mEditText:Landroid/widget/EditText;
 
+    .line 59
     iget-object v0, p0, Landroid/preference/EditTextPreference;->mEditText:Landroid/widget/EditText;
 
-    const v1, #android:id@edit#t
+    const v1, 0x1020003
 
     invoke-virtual {v0, v1}, Landroid/widget/EditText;->setId(I)V
 
+    .line 60
     iget-object v0, p0, Landroid/preference/EditTextPreference;->mEditText:Landroid/widget/EditText;
 
     const-string v1, "inputType=PredictionOff"
 
     invoke-virtual {v0, v1}, Landroid/widget/EditText;->setPrivateImeOptions(Ljava/lang/String;)V
 
+    .line 68
     iget-object v0, p0, Landroid/preference/EditTextPreference;->mEditText:Landroid/widget/EditText;
 
     const/4 v1, 0x1
 
     invoke-virtual {v0, v1}, Landroid/widget/EditText;->setEnabled(Z)V
 
+    .line 69
     return-void
 .end method
 
@@ -136,7 +144,8 @@
     .param p2, "editText"    # Landroid/widget/EditText;
 
     .prologue
-    const v1, #android:id@edittext_container#t
+    .line 138
+    const v1, 0x1020408
 
     invoke-virtual {p1, v1}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -179,39 +188,48 @@
 
     invoke-virtual {v0, v2}, Landroid/widget/EditText;->setText(Ljava/lang/CharSequence;)V
 
+    .line 117
     invoke-virtual {v0}, Landroid/widget/EditText;->length()I
 
     move-result v2
 
     if-eqz v2, :cond_0
 
+    .line 119
     invoke-virtual {v0}, Landroid/widget/EditText;->length()I
 
     move-result v2
 
     invoke-virtual {v0, v2}, Landroid/widget/EditText;->setSelection(I)V
 
+    .line 122
     :cond_0
     invoke-virtual {v0}, Landroid/widget/EditText;->getParent()Landroid/view/ViewParent;
 
     move-result-object v1
 
+    .line 123
     .local v1, "oldParent":Landroid/view/ViewParent;
     if-eq v1, p1, :cond_2
 
+    .line 124
     if-eqz v1, :cond_1
 
+    .line 125
     check-cast v1, Landroid/view/ViewGroup;
 
     .end local v1    # "oldParent":Landroid/view/ViewParent;
     invoke-virtual {v1, v0}, Landroid/view/ViewGroup;->removeView(Landroid/view/View;)V
 
+    .line 127
     :cond_1
     invoke-virtual {p0, p1, v0}, Landroid/preference/EditTextPreference;->onAddEditTextToDialogView(Landroid/view/View;Landroid/widget/EditText;)V
 
+    .line 129
     :cond_2
     invoke-virtual {v0}, Landroid/widget/EditText;->requestFocus()Z
 
+    .line 130
     return-void
 .end method
 
@@ -454,32 +472,4 @@
     const/4 v0, 0x0
 
     goto :goto_0
-.end method
-
-.method private mzSetEditTextSelection()V
-    .locals 3
-
-    .prologue
-    iget-object v0, p0, Landroid/preference/EditTextPreference;->mEditText:Landroid/widget/EditText;
-
-    invoke-virtual {v0}, Landroid/widget/EditText;->length()I
-
-    move-result v0
-
-    if-lez v0, :cond_0
-
-    iget-object v0, p0, Landroid/preference/EditTextPreference;->mEditText:Landroid/widget/EditText;
-
-    const/4 v1, 0x0
-
-    iget-object v2, p0, Landroid/preference/EditTextPreference;->mEditText:Landroid/widget/EditText;
-
-    invoke-virtual {v2}, Landroid/widget/EditText;->length()I
-
-    move-result v2
-
-    invoke-virtual {v0, v1, v2}, Landroid/widget/EditText;->setSelection(II)V
-
-    :cond_0
-    return-void
 .end method

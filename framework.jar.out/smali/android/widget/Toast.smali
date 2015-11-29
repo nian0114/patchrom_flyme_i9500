@@ -63,7 +63,7 @@
 
     move-result-object v1
 
-    const v2, #android:dimen@toast_y_offset#t
+    const v2, 0x105000f
 
     invoke-virtual {v1, v2}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
 
@@ -78,7 +78,7 @@
 
     move-result-object v1
 
-    const v2, #android:integer@config_toastDefaultGravity#t
+    const v2, 0x10e0072
 
     invoke-virtual {v1, v2}, Landroid/content/res/Resources;->getInteger(I)I
 
@@ -498,7 +498,7 @@
 
     move-result-object v5
 
-    const v6, #android:attr@parentIsDeviceDefault#t
+    const v6, 0x10105a2
 
     const/4 v7, 0x1
 
@@ -508,16 +508,19 @@
 
     if-eqz v5, :cond_0
 
+    .line 302
     iget v5, v1, Landroid/util/TypedValue;->data:I
 
     if-eqz v5, :cond_1
 
-    const v5, #android:layout@tw_transient_notification#t
+    .line 304
+    const v5, 0x1090144
 
     invoke-virtual {v0, v5, v8}, Landroid/view/LayoutInflater;->inflate(ILandroid/view/ViewGroup;)Landroid/view/View;
 
     move-result-object v4
 
+    .line 311
     :cond_0
     :goto_0
     new-instance v5, Landroid/widget/Toast$1;
@@ -526,7 +529,8 @@
 
     invoke-virtual {v4, v5}, Landroid/view/View;->setOnTouchListener(Landroid/view/View$OnTouchListener;)V
 
-    const v5, #android:id@message#t
+    .line 317
+    const v5, 0x102000b
 
     invoke-virtual {v4, v5}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -550,7 +554,7 @@
     .line 308
     .end local v3    # "tv":Landroid/widget/TextView;
     :cond_1
-    const v5, #android:layout@transient_notification#t
+    const v5, 0x10900fd
 
     invoke-virtual {v0, v5, v8}, Landroid/view/LayoutInflater;->inflate(ILandroid/view/ViewGroup;)Landroid/view/View;
 
@@ -587,7 +591,7 @@
 
     .line 337
     .local v3, "v":Landroid/view/View;
-    const v4, #android:layout@tw_transient_notification_actionbar#t
+    const v4, 0x1090145
 
     const/4 v5, 0x0
 
@@ -595,13 +599,15 @@
 
     move-result-object v3
 
+    .line 338
     new-instance v4, Landroid/widget/Toast$2;
 
     invoke-direct {v4, v1}, Landroid/widget/Toast$2;-><init>(Landroid/widget/Toast;)V
 
     invoke-virtual {v3, v4}, Landroid/view/View;->setOnTouchListener(Landroid/view/View$OnTouchListener;)V
 
-    const v4, #android:id@message#t
+    .line 344
+    const v4, 0x102000b
 
     invoke-virtual {v3, v4}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -855,7 +861,7 @@
     :cond_0
     iget-object v1, p0, Landroid/widget/Toast;->mNextView:Landroid/view/View;
 
-    const v2, #android:id@message#t
+    const v2, 0x102000b
 
     invoke-virtual {v1, v2}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -975,7 +981,7 @@
     .line 158
     iget-object v4, p0, Landroid/widget/Toast;->mNextView:Landroid/view/View;
 
-    const v5, #android:id@message#t
+    const v5, 0x102000b
 
     invoke-virtual {v4, v5}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -1028,16 +1034,4 @@
     move-exception v4
 
     goto :goto_1
-.end method
-
-.method public setType(I)V
-    .locals 1
-    .param p1, "type"    # I
-
-    .prologue
-    iget-object v0, p0, Landroid/widget/Toast;->mTN:Landroid/widget/Toast$TN;
-
-    iput p1, v0, Landroid/widget/Toast$TN;->mMzToastType:I
-
-    return-void
 .end method

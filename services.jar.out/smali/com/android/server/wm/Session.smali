@@ -1309,6 +1309,7 @@
 
     invoke-virtual {v5, v8, v10}, Landroid/view/SurfaceControl;->setPosition(FF)V
 
+    .line 361
     .end local v6    # "xPos":I
     .end local v7    # "yPos":I
     :goto_1
@@ -1779,7 +1780,7 @@
 
     iget-object v4, v4, Lcom/android/server/wm/WindowManagerService;->mDragState:Lcom/android/server/wm/DragState;
 
-    invoke-virtual {v4}, Lcom/android/server/wm/DragState;->mzEndDragLwAnimation()V
+    invoke-virtual {v4}, Lcom/android/server/wm/DragState;->endDragLw()V
     :try_end_7
     .catchall {:try_start_7 .. :try_end_7} :catchall_0
 

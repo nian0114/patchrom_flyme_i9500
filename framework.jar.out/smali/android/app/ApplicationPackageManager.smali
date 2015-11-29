@@ -6,7 +6,6 @@
 # annotations
 .annotation system Ldalvik/annotation/MemberClasses;
     value = {
-        Landroid/app/ApplicationPackageManager$FlymeInjector;,
         Landroid/app/ApplicationPackageManager$ResourceName;
     }
 .end annotation
@@ -243,10 +242,12 @@
 
     if-eqz v3, :cond_2
 
-    const v2, #android:drawable@ic_knox_badge#t
+    .line 2124
+    const v2, 0x1080470
 
     goto :goto_0
 
+    .line 2125
     :cond_2
     iget-object v3, v1, Landroid/content/pm/UserInfo;->name:Ljava/lang/String;
 
@@ -262,10 +263,12 @@
 
     if-eqz v3, :cond_0
 
-    const v2, #android:drawable@ic_knox_badge2#t
+    .line 2127
+    const v2, 0x1080471
 
     goto :goto_0
 
+    .line 2129
     .end local v0    # "appPolicy":Landroid/sec/enterprise/ApplicationPolicy;
     :cond_3
     invoke-virtual {v1}, Landroid/content/pm/UserInfo;->isManagedProfile()Z
@@ -274,7 +277,8 @@
 
     if-eqz v3, :cond_0
 
-    const v2, #android:drawable@ic_corp_icon_badge#t
+    .line 2131
+    const v2, 0x1080450
 
     goto :goto_0
 .end method
@@ -3932,11 +3936,9 @@
 
     move-result-object v0
 
-    const v1, #android:drawable@sym_def_app_icon#t
+    const v1, 0x1080093
 
     invoke-virtual {v0, v1}, Landroid/content/res/Resources;->getDrawable(I)Landroid/graphics/drawable/Drawable;
-
-    invoke-static {}, Landroid/app/ApplicationPackageManager$FlymeInjector;->getDefaultFlymeActivityIcon()Landroid/graphics/drawable/Drawable;
 
     move-result-object v0
 
@@ -3967,6 +3969,7 @@
 
     move-result-object v0
 
+    .line 794
     .local v0, "appPolicy":Landroid/sec/enterprise/ApplicationPolicy;
     iget v9, p3, Landroid/content/pm/ApplicationInfo;->uid:I
 
@@ -4033,9 +4036,11 @@
     :goto_0
     return-object v1
 
+    .line 808
     :catch_0
     move-exception v3
 
+    .line 809
     .local v3, "e":Ljava/lang/Exception;
     const-string v9, "ApplicationPackageManager"
 
@@ -4089,21 +4094,25 @@
 
     move-result-object p3
 
+    .line 826
     :cond_2
     :try_start_2
     invoke-virtual {p0, p3}, Landroid/app/ApplicationPackageManager;->getResourcesForApplication(Landroid/content/pm/ApplicationInfo;)Landroid/content/res/Resources;
 
     move-result-object v7
 
+    .line 828
     .local v7, "r":Landroid/content/res/Resources;
     iget-object v9, p3, Landroid/content/pm/ApplicationInfo;->packageName:Ljava/lang/String;
 
     iput-object v9, v7, Landroid/content/res/Resources;->mPackageName:Ljava/lang/String;
 
+    .line 829
     iget v9, p3, Landroid/content/pm/ApplicationInfo;->icon:I
 
     iput v9, v7, Landroid/content/res/Resources;->mAppIconResId:I
 
+    .line 830
     iget v9, p3, Landroid/content/pm/ApplicationInfo;->uid:I
 
     invoke-static {v9}, Landroid/os/UserHandle;->getUserId(I)I
@@ -6326,7 +6335,7 @@
 
     move-result-object v1
 
-    const v2, #android:drawable@ic_knox_badge#t
+    const v2, 0x1080470
 
     invoke-virtual {v1, v2, p2}, Landroid/content/res/Resources;->getDrawableForDensity(II)Landroid/graphics/drawable/Drawable;
 
@@ -6357,7 +6366,7 @@
 
     move-result-object v1
 
-    const v2, #android:drawable@ic_knox_badge2#t
+    const v2, 0x1080471
 
     invoke-virtual {v1, v2, p2}, Landroid/content/res/Resources;->getDrawableForDensity(II)Landroid/graphics/drawable/Drawable;
 
@@ -6378,7 +6387,7 @@
 
     move-result-object v1
 
-    const v2, #android:drawable@ic_corp_badge#t
+    const v2, 0x108044e
 
     invoke-virtual {v1, v2, p2}, Landroid/content/res/Resources;->getDrawableForDensity(II)Landroid/graphics/drawable/Drawable;
 
@@ -6702,7 +6711,7 @@
 
     move-result-object v1
 
-    const v2, #android:string@managed_profile_label_badge#t
+    const v2, 0x1040682
 
     const/4 v3, 0x1
 

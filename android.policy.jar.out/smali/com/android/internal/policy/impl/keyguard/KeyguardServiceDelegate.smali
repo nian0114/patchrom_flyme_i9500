@@ -16,10 +16,6 @@
 
 
 # static fields
-.field public static final FLYME_KEYGUARD_CLASS:Ljava/lang/String; = "com.android.keyguard.KeyguardService"
-
-.field public static final FLYME_KEYGUARD_PACKAGE:Ljava/lang/String; = "com.android.keyguard"
-
 .field private static final DEBUG:Z = true
 
 .field public static final KEYGUARD_CLASS:Ljava/lang/String; = "com.android.systemui.keyguard.KeyguardService"
@@ -223,9 +219,9 @@
 
     .line 113
     .local v0, "intent":Landroid/content/Intent;
-    const-string v1, "com.android.keyguard"
+    const-string v1, "com.android.systemui"
 
-    const-string v2, "com.android.keyguard.KeyguardService"
+    const-string v2, "com.android.systemui.keyguard.KeyguardService"
 
     invoke-virtual {v0, v1, v2}, Landroid/content/Intent;->setClassName(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;
 
@@ -242,27 +238,33 @@
 
     if-nez v1, :cond_0
 
+    .line 116
     const-string v1, "KeyguardServiceDelegate"
 
-    const-string v2, "*** Keyguard: can\'t bind to com.android.keyguard.KeyguardService"
+    const-string v2, "*** Keyguard: can\'t bind to com.android.systemui.keyguard.KeyguardService"
 
     invoke-static {v1, v2}, Landroid/util/Log;->v(Ljava/lang/String;Ljava/lang/String;)I
 
+    .line 117
     iget-object v1, p0, Lcom/android/internal/policy/impl/keyguard/KeyguardServiceDelegate;->mKeyguardState:Lcom/android/internal/policy/impl/keyguard/KeyguardServiceDelegate$KeyguardState;
 
     iput-boolean v4, v1, Lcom/android/internal/policy/impl/keyguard/KeyguardServiceDelegate$KeyguardState;->showing:Z
 
+    .line 118
     iget-object v1, p0, Lcom/android/internal/policy/impl/keyguard/KeyguardServiceDelegate;->mKeyguardState:Lcom/android/internal/policy/impl/keyguard/KeyguardServiceDelegate$KeyguardState;
 
     iput-boolean v4, v1, Lcom/android/internal/policy/impl/keyguard/KeyguardServiceDelegate$KeyguardState;->showingAndNotOccluded:Z
 
+    .line 119
     iget-object v1, p0, Lcom/android/internal/policy/impl/keyguard/KeyguardServiceDelegate;->mKeyguardState:Lcom/android/internal/policy/impl/keyguard/KeyguardServiceDelegate$KeyguardState;
 
     iput-boolean v4, v1, Lcom/android/internal/policy/impl/keyguard/KeyguardServiceDelegate$KeyguardState;->secure:Z
 
+    .line 123
     :goto_0
     return-void
 
+    .line 121
     :cond_0
     const-string v1, "KeyguardServiceDelegate"
 

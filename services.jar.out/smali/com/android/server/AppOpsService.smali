@@ -1063,6 +1063,7 @@
     :cond_8
     invoke-static {v4, v5}, Landroid/os/Binder;->restoreCallingIdentity(J)V
 
+    .line 906
     .end local v4    # "ident":J
     .end local v9    # "pkgUid":I
     :cond_9
@@ -1100,14 +1101,17 @@
 
     invoke-virtual {v6, v10, v11}, Lcom/android/server/AppOpsService$Ops;->put(ILjava/lang/Object;)V
 
+    .line 908
     add-int/lit8 v2, v2, 0x1
 
     goto :goto_2
 
+    .line 912
     .end local v2    # "i":I
     :cond_a
     move-object v7, v6
 
+    .line 913
     invoke-virtual {v8, p2, v6}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     goto/16 :goto_0

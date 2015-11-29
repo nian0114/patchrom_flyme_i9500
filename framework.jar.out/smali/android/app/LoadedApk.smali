@@ -7,7 +7,6 @@
 .annotation system Ldalvik/annotation/MemberClasses;
     value = {
         Landroid/app/LoadedApk$1;,
-        Landroid/app/LoadedApk$FlymeInjector;,
         Landroid/app/LoadedApk$ServiceDispatcher;,
         Landroid/app/LoadedApk$ReceiverDispatcher;,
         Landroid/app/LoadedApk$WarningContextClassLoader;
@@ -3092,7 +3091,7 @@
 
     check-cast v9, Ljava/lang/String;
 
-    invoke-static {p0, v10, v9, v7}, Landroid/app/LoadedApk$FlymeInjector;->rewriteRValues(Landroid/app/LoadedApk;Ljava/lang/ClassLoader;Ljava/lang/String;I)V
+    invoke-direct {p0, v10, v9, v7}, Landroid/app/LoadedApk;->rewriteRValues(Ljava/lang/ClassLoader;Ljava/lang/String;I)V
 
     goto :goto_1
 .end method
@@ -3431,17 +3430,5 @@
     invoke-virtual {v0, p1}, Landroid/view/DisplayAdjustments;->setCompatibilityInfo(Landroid/content/res/CompatibilityInfo;)V
 
     .line 240
-    return-void
-.end method
-
-.method mzInvokeMethodRewriteRValues(Ljava/lang/ClassLoader;Ljava/lang/String;I)V
-    .locals 0
-    .param p1, "cl"    # Ljava/lang/ClassLoader;
-    .param p2, "packageName"    # Ljava/lang/String;
-    .param p3, "id"    # I
-
-    .prologue
-    invoke-direct {p0, p1, p2, p3}, Landroid/app/LoadedApk;->rewriteRValues(Ljava/lang/ClassLoader;Ljava/lang/String;I)V
-
     return-void
 .end method
