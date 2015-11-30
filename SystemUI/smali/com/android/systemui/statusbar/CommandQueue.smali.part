@@ -1,0 +1,55 @@
+.method public applyEDMPolicy()V
+    .locals 0
+
+    .prologue
+    return-void
+.end method
+
+.method public blockRecentWindow(Z)V
+    .locals 0
+
+    .prologue
+    return-void
+.end method
+
+
+.method public hideCallOnGoingView()V
+    .locals 0
+
+    .prologue
+    return-void
+.end method
+
+
+.method public setCallBackground(I)V
+    .locals 0
+
+    .prologue
+    return-void
+.end method
+
+
+.method public setMaxBrightness(I)V
+    .locals 0
+
+    .prologue
+    return-void
+.end method
+
+.method public setMultiWindowBg(Z)V
+    .locals 0
+
+    .prologue
+    return-void
+.end method
+
+
+.method public setSemiTransparentMode(Z)V
+    .locals 0
+
+    .prologue
+    return-void
+.end method
+
+
+ 
