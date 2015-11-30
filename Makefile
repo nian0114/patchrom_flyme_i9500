@@ -80,7 +80,7 @@ vendor_modify_jars := android.policy framework services telephony-common wifi-se
 # The default value is nothing.
 # You can configure the board system directory path which relative to the system directory in the board release.
 #-----------------------------------------------------------------------------
-#board_saved_dirs := media/audio/ui
+board_saved_dirs := media/ app/mcRegistry
 
 ##############################################################################
 # The value decides which board system file you want to save.
@@ -88,7 +88,7 @@ vendor_modify_jars := android.policy framework services telephony-common wifi-se
 # You can configure the board system file path which relative to the system directory in the board release.
 # You should add "lib64/libwebviewchromium.so" for 64 bit system.
 #-----------------------------------------------------------------------------
-board_saved_files := lib/libwebviewchromium.so
+board_saved_files := app/FFFFFFFF000000000000000000000001.drbin
 
 ##############################################################################
 # The value decides which board system apk you want to remove.
