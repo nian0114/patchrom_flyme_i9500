@@ -77608,6 +77608,44 @@
     throw v0
 .end method
 
+.method private mzchooseBestActivity(Landroid/content/Intent;Ljava/lang/String;ILjava/util/List;I)Landroid/content/pm/ResolveInfo;
+    .locals 1
+    .param p1, "intent"    # Landroid/content/Intent;
+    .param p2, "resolvedType"    # Ljava/lang/String;
+    .param p3, "flags"    # I
+    .param p5, "userId"    # I
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "(",
+            "Landroid/content/Intent;",
+            "Ljava/lang/String;",
+            "I",
+            "Ljava/util/List",
+            "<",
+            "Landroid/content/pm/ResolveInfo;",
+            ">;I)",
+            "Landroid/content/pm/ResolveInfo;"
+        }
+    .end annotation
+
+    .prologue
+    .local p4, "query":Ljava/util/List;, "Ljava/util/List<Landroid/content/pm/ResolveInfo;>;"
+    invoke-direct/range {p0 .. p5}, Lcom/android/server/pm/PackageManagerService;->chooseBestActivity(Landroid/content/Intent;Ljava/lang/String;ILjava/util/List;I)Landroid/content/pm/ResolveInfo;
+
+    move-result-object v0
+
+    .local v0, "r":Landroid/content/pm/ResolveInfo;
+    if-nez v0, :cond_0
+
+    invoke-static {p1, p2, p3, p5}, Lcom/android/server/pm/InjectorPMS;->getResolveInfoForNoType(Landroid/content/Intent;Ljava/lang/String;II)Landroid/content/pm/ResolveInfo;
+
+    move-result-object v0
+
+    .end local v0    # "r":Landroid/content/pm/ResolveInfo;
+    :cond_0
+    return-object v0
+.end method
+
 .method public performBootDexOpt()V
     .locals 28
 
