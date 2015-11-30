@@ -585,7 +585,7 @@
 
     const-string v9, "android:status:background"
 
-    const v10, 0x102002f
+    const v10, #android:id@statusBarBackground#t
 
     move-object/from16 v0, p0
 
@@ -641,7 +641,7 @@
 
     const-string v9, "android:navigation:background"
 
-    const v10, 0x1020030
+    const v10, #android:id@navigationBarBackground#t
 
     const/4 v11, 0x0
 
@@ -937,7 +937,7 @@
 
     move-result-object v3
 
-    const v4, 0x1060032
+    const v4, #android:color@input_method_navigation_guard#t
 
     invoke-virtual {v3, v4}, Landroid/content/res/Resources;->getColor(I)I
 
@@ -1114,7 +1114,7 @@
 
     move-result-object v8
 
-    const v9, 0x1060032
+    const v9, #android:color@input_method_navigation_guard#t
 
     invoke-virtual {v8, v9}, Landroid/content/res/Resources;->getColor(I)I
 
@@ -1548,6 +1548,7 @@
     return v5
 
     :cond_flyme_0
+
     if-nez v2, :cond_0
 
     .end local v1    # "cb":Landroid/view/Window$Callback;
@@ -3692,7 +3693,7 @@
     move-result-object v2
 
     .local v2, "baseTheme":Landroid/content/res/Resources$Theme;
-    const v8, 0x1010431
+    const v8, #android:attr@actionBarTheme#t
 
     invoke-virtual {v2, v8, v5, v9}, Landroid/content/res/Resources$Theme;->resolveAttribute(ILandroid/util/TypedValue;Z)Z
 
@@ -3740,7 +3741,7 @@
 
     new-instance v8, Landroid/widget/PopupWindow;
 
-    const v11, 0x1010424
+    const v11, #android:attr@actionModePopupWindowStyle#t
 
     invoke-direct {v8, v0, v13, v11}, Landroid/widget/PopupWindow;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;I)V
 
@@ -3768,7 +3769,7 @@
 
     move-result-object v8
 
-    const v11, 0x10102eb
+    const v11, #android:attr@actionBarSize#t
 
     invoke-virtual {v8, v11, v5, v9}, Landroid/content/res/Resources$Theme;->resolveAttribute(ILandroid/util/TypedValue;Z)Z
 
@@ -3889,7 +3890,7 @@
     .end local v2    # "baseTheme":Landroid/content/res/Resources$Theme;
     .end local v5    # "outValue":Landroid/util/TypedValue;
     :cond_8
-    const v8, 0x1020428
+    const v8, #android:id@action_mode_bar_stub#t
 
     invoke-virtual {p0, v8}, Lcom/android/internal/policy/impl/PhoneWindow$DecorView;->findViewById(I)Landroid/view/View;
 
@@ -4005,6 +4006,7 @@
     return v1
 
     :cond_flyme_0
+
     if-ne v0, v1, :cond_0
 
     iget-object v2, p0, Lcom/android/internal/policy/impl/PhoneWindow$DecorView;->mActionMode:Landroid/view/ActionMode;
@@ -4571,4 +4573,13 @@
         :pswitch_1
         :pswitch_2
     .end packed-switch
+.end method
+
+.method getActionMode()Landroid/view/ActionMode;
+    .locals 1
+
+    .prologue
+    iget-object v0, p0, Lcom/android/internal/policy/impl/PhoneWindow$DecorView;->mActionMode:Landroid/view/ActionMode;
+
+    return-object v0
 .end method
