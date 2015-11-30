@@ -59,6 +59,8 @@
 
 .field private mEdm:Landroid/app/enterprise/EnterpriseDeviceManager;
 
+.field mFlymeWallpaperService:Lcom/android/server/wallpaper/FlymeWallpaperService;
+
 .field final mHandler:Landroid/os/Handler;
 
 .field final mIPackageManager:Landroid/content/pm/IPackageManager;
