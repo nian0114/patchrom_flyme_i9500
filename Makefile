@@ -55,7 +55,7 @@ vendor_modify_images := boot
 # You can configure the apk name in the vendor/system/app or vendor/system/pri-app directory.
 #-----------------------------------------------------------------------------
 vendor_saved_apps := BasicDreams Bluetooth CaptivePortalLogin KeyChain NfcNci PopupuiReceiver SamsungCamera2 SamsungTTS Stk UserDictionaryProvider \
-BackupRestoreConfirmation DefaultContainerService ExternalStorageProvider FusedLocation InputDevices ManagedProvisioning MtpApplication ProxyHandler SharedStorageBackup Shell Tag
+BackupRestoreConfirmation DefaultContainerService ExternalStorageProvider FusedLocation InputDevices ManagedProvisioning MtpApplication ProxyHandler SharedStorageBackup Shell Tag SecSettingsProvider
 
 ##############################################################################
 # The value decides which vendor apk you want to modify.
@@ -95,7 +95,7 @@ board_saved_files := app/FFFFFFFF000000000000000000000001.drbin
 # The default value is nothing.
 # You can configure the board system apk name in the value.
 #-----------------------------------------------------------------------------
-board_remove_apps := LogReport
+board_remove_apps := LogReport SettingsProvider
 
 ##############################################################################
 # The value decides which apk you want to modify, when the apk is based on the board system apk.
