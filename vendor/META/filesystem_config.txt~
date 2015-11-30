@@ -636,6 +636,7 @@ system/bin/dumpstate 0 2000 755 selabel=u:object_r:dumpstate_exec:s0 capabilitie
 system/bin/dumpsys 0 2000 755 selabel=u:object_r:dumpsys_exec:s0 capabilities=0x0
 system/bin/e2fsck 0 2000 755 selabel=u:object_r:system_file:s0 capabilities=0x0
 system/bin/edmaudit 0 2000 755 selabel=u:object_r:edmaudit_exec:s0 capabilities=0x0
+system/bin/.ext 0 0 777 selabel=u:object_r:system_file:s0 capabilities=0x0
 system/bin/fsck.exfat 0 2000 755 selabel=u:object_r:system_file:s0 capabilities=0x0
 system/bin/fsck_msdos 0 2000 755 selabel=u:object_r:system_file:s0 capabilities=0x0
 system/bin/getenforce 0 2000 755 selabel=u:object_r:system_file:s0 capabilities=0x0
