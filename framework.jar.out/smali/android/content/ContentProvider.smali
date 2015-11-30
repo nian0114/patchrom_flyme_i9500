@@ -20,6 +20,8 @@
 
 
 # instance fields
+.field mAccessControlManager:Lmeizu/security/AccessControlManager;
+
 .field private mAuthorities:[Ljava/lang/String;
 
 .field private mAuthority:Ljava/lang/String;
@@ -1675,6 +1677,15 @@
     const/4 v2, 0x0
 
     goto :goto_0
+.end method
+
+.method mzGetMyUid()I
+    .locals 1
+
+    .prologue
+    iget v0, p0, Landroid/content/ContentProvider;->mMyUid:I
+
+    return v0
 .end method
 
 .method public onConfigurationChanged(Landroid/content/res/Configuration;)V

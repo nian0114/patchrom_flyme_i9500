@@ -10,6 +10,7 @@
 # annotations
 .annotation system Ldalvik/annotation/MemberClasses;
     value = {
+        Landroid/content/Intent$FlymeInjector;,
         Landroid/content/Intent$FilterComparison;,
         Landroid/content/Intent$ShortcutIconResource;
     }
@@ -253,6 +254,8 @@
 .field public static final ACTION_QUICK_CLOCK:Ljava/lang/String; = "android.intent.action.QUICK_CLOCK"
 
 .field public static final ACTION_REBOOT:Ljava/lang/String; = "android.intent.action.REBOOT"
+
+.field public static final ACTION_RECOMMEND:Ljava/lang/String; = "android.intent.action.RECOMMEND"
 
 .field public static final ACTION_REMOTE_INTENT:Ljava/lang/String; = "com.google.android.c2dm.intent.RECEIVE"
 
@@ -592,6 +595,8 @@
 
 .field public static final EXTRA_REPLACING:Ljava/lang/String; = "android.intent.extra.REPLACING"
 
+.field public static final EXTRA_REQUEST_RESULT_FROM_CHOOSERACTIVITY:Ljava/lang/String; = "android.intent.extra.requset_result"
+
 .field public static final EXTRA_RESTRICTIONS_BUNDLE:Ljava/lang/String; = "android.intent.extra.restrictions_bundle"
 
 .field public static final EXTRA_RESTRICTIONS_INTENT:Ljava/lang/String; = "android.intent.extra.restrictions_intent"
@@ -788,6 +793,12 @@
 
 .field public static final METADATA_SUPPORT_MULTIWINDOW:Ljava/lang/String; = "com.sec.android.support.multiwindow"
 
+.field public static final MZ_ACTION_DRAG_DROP_ANIM_TYPE:Ljava/lang/String; = "meizu.intent.action.MEIZU_DRAG_DROP_ANIM_TYPE"
+
+.field public static final MZ_ACTION_NFC_SHARE_ENABLED:Ljava/lang/String; = "meizu.intent.action.MEIZU_NFC_SHARE_ENABLED"
+
+.field public static final MZ_ACTION_NFC_SHARE_STATE_CHANGED:Ljava/lang/String; = "meizu.intent.action.MEIZU_NFC_SHARE_STATE_CHANGED"
+
 .field private static final TAG_CATEGORIES:Ljava/lang/String; = "categories"
 
 .field private static final TAG_EXTRA:Ljava/lang/String; = "extra"
@@ -820,6 +831,8 @@
 .field private mExtras:Landroid/os/Bundle;
 
 .field private mFlags:I
+
+.field public mFlymeIntent:Landroid/content/IntentExt;
 
 .field private mMultiWindowStyle:Lcom/samsung/android/multiwindow/MultiWindowStyle;
 
@@ -864,6 +877,8 @@
 
     iput v0, p0, Landroid/content/Intent;->mContentUserHint:I
 
+    invoke-static/range {p0 .. p0}, Landroid/content/Intent$FlymeInjector;->createFlymeIntent(Landroid/content/Intent;)V
+
     iput-object v1, p0, Landroid/content/Intent;->mMultiWindowStyle:Lcom/samsung/android/multiwindow/MultiWindowStyle;
 
     const/4 v0, 0x0
@@ -900,6 +915,8 @@
     const/4 v0, -0x2
 
     iput v0, p0, Landroid/content/Intent;->mContentUserHint:I
+
+    invoke-static/range {p0 .. p0}, Landroid/content/Intent$FlymeInjector;->createFlymeIntent(Landroid/content/Intent;)V
 
     iput-object v1, p0, Landroid/content/Intent;->mMultiWindowStyle:Lcom/samsung/android/multiwindow/MultiWindowStyle;
 
@@ -1040,6 +1057,8 @@
     iput-object v0, p0, Landroid/content/Intent;->mClipData:Landroid/content/ClipData;
 
     :cond_4
+    invoke-static/range {p0 .. p1}, Landroid/content/Intent$FlymeInjector;->createFlymeIntent(Landroid/content/Intent;Landroid/content/Intent;)V
+
     iget-object v0, p1, Landroid/content/Intent;->mMultiWindowStyle:Lcom/samsung/android/multiwindow/MultiWindowStyle;
 
     iput-object v0, p0, Landroid/content/Intent;->mMultiWindowStyle:Lcom/samsung/android/multiwindow/MultiWindowStyle;
@@ -1127,6 +1146,8 @@
     iput-object v0, p0, Landroid/content/Intent;->mCategories:Landroid/util/ArraySet;
 
     :cond_0
+    invoke-static/range {p0 .. p0}, Landroid/content/Intent$FlymeInjector;->createFlymeIntent(Landroid/content/Intent;)V
+
     iget-object v0, p1, Landroid/content/Intent;->mMultiWindowStyle:Lcom/samsung/android/multiwindow/MultiWindowStyle;
 
     iput-object v0, p0, Landroid/content/Intent;->mMultiWindowStyle:Lcom/samsung/android/multiwindow/MultiWindowStyle;
@@ -1168,6 +1189,8 @@
 
     iput v0, p0, Landroid/content/Intent;->mContentUserHint:I
 
+    invoke-static/range {p0 .. p0}, Landroid/content/Intent$FlymeInjector;->createFlymeIntent(Landroid/content/Intent;)V
+
     iput-object v1, p0, Landroid/content/Intent;->mMultiWindowStyle:Lcom/samsung/android/multiwindow/MultiWindowStyle;
 
     const/4 v0, 0x0
@@ -1197,6 +1220,8 @@
     const/4 v0, -0x2
 
     iput v0, p0, Landroid/content/Intent;->mContentUserHint:I
+
+    invoke-static/range {p0 .. p0}, Landroid/content/Intent$FlymeInjector;->createFlymeIntent(Landroid/content/Intent;)V
 
     iput-object v1, p0, Landroid/content/Intent;->mMultiWindowStyle:Lcom/samsung/android/multiwindow/MultiWindowStyle;
 
@@ -1228,6 +1253,8 @@
     const/4 v0, -0x2
 
     iput v0, p0, Landroid/content/Intent;->mContentUserHint:I
+
+    invoke-static/range {p0 .. p0}, Landroid/content/Intent$FlymeInjector;->createFlymeIntent(Landroid/content/Intent;)V
 
     iput-object v1, p0, Landroid/content/Intent;->mMultiWindowStyle:Lcom/samsung/android/multiwindow/MultiWindowStyle;
 
@@ -1273,6 +1300,8 @@
     const/4 v0, -0x2
 
     iput v0, p0, Landroid/content/Intent;->mContentUserHint:I
+
+    invoke-static/range {p0 .. p0}, Landroid/content/Intent$FlymeInjector;->createFlymeIntent(Landroid/content/Intent;)V
 
     iput-object v1, p0, Landroid/content/Intent;->mMultiWindowStyle:Lcom/samsung/android/multiwindow/MultiWindowStyle;
 
@@ -4382,6 +4411,8 @@
     iput v4, p0, Landroid/content/Intent;->mContentUserHint:I
 
     :cond_13
+    invoke-static/range {p0 .. p1}, Landroid/content/Intent$FlymeInjector;->copyMeizuFlag(Landroid/content/Intent;Landroid/content/Intent;)V
+
     return v0
 
     :cond_14
@@ -4490,6 +4521,35 @@
     iget-object v1, p0, Landroid/content/Intent;->mCategories:Landroid/util/ArraySet;
 
     iget-object v2, p1, Landroid/content/Intent;->mCategories:Landroid/util/ArraySet;
+
+    invoke-static {v1, v2}, Ljava/util/Objects;->equals(Ljava/lang/Object;Ljava/lang/Object;)Z
+
+    move-result v1
+
+    if-eqz v1, :cond_0
+
+    const/4 v0, 0x1
+
+    goto :goto_0
+.end method
+
+.method public filterEqualsForTask(Landroid/content/Intent;)Z
+    .locals 3
+    .param p1, "other"    # Landroid/content/Intent;
+
+    .prologue
+    const/4 v0, 0x0
+
+    if-nez p1, :cond_1
+
+    :cond_0
+    :goto_0
+    return v0
+
+    :cond_1
+    iget-object v1, p0, Landroid/content/Intent;->mComponent:Landroid/content/ComponentName;
+
+    iget-object v2, p1, Landroid/content/Intent;->mComponent:Landroid/content/ComponentName;
 
     invoke-static {v1, v2}, Ljava/util/Objects;->equals(Ljava/lang/Object;Ljava/lang/Object;)Z
 
@@ -7602,6 +7662,8 @@
 
     iput-object v2, p0, Landroid/content/Intent;->mExtras:Landroid/os/Bundle;
 
+    invoke-static/range {p0 .. p1}, Landroid/content/Intent$FlymeInjector;->readIntentExt(Landroid/content/Intent;Landroid/os/Parcel;)V
+
     return-void
 .end method
 
@@ -8835,6 +8897,10 @@
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     :cond_c
+    invoke-static {p0, p1, v6}, Landroid/content/Intent$FlymeInjector;->toShortStringForMeizuFlag(Landroid/content/Intent;Ljava/lang/StringBuilder;Z)Z
+
+    move-result v6
+
     if-eqz p3, :cond_e
 
     iget-object v0, p0, Landroid/content/Intent;->mComponent:Landroid/content/ComponentName;
@@ -9368,6 +9434,8 @@
     iget-object v2, p0, Landroid/content/Intent;->mExtras:Landroid/os/Bundle;
 
     invoke-virtual {p1, v2}, Landroid/os/Parcel;->writeBundle(Landroid/os/Bundle;)V
+
+    invoke-static/range {p0 .. p1}, Landroid/content/Intent$FlymeInjector;->writeIntentExt(Landroid/content/Intent;Landroid/os/Parcel;)V
 
     return-void
 

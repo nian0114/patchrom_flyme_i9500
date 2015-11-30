@@ -9,6 +9,7 @@
 # annotations
 .annotation system Ldalvik/annotation/MemberClasses;
     value = {
+        Landroid/app/Notification$FlymeInject;,
         Landroid/app/Notification$BuilderRemoteViews;,
         Landroid/app/Notification$WearableExtender;,
         Landroid/app/Notification$Extender;,
@@ -110,6 +111,8 @@
 .field public static final EXTRA_SHOW_CHRONOMETER:Ljava/lang/String; = "android.showChronometer"
 
 .field public static final EXTRA_SHOW_WHEN:Ljava/lang/String; = "android.showWhen"
+
+.field public static final EXTRA_SIM_SLOTS:Ljava/lang/String; = "android.simSlots"
 
 .field public static final EXTRA_SMALL_ICON:Ljava/lang/String; = "android.icon"
 
@@ -271,6 +274,8 @@
 
 .field public ledOnMS:I
 
+.field public mFlymeNotification:Landroid/app/NotificationExt;
+
 .field private mGroupKey:Ljava/lang/String;
 
 .field private mSortKey:Ljava/lang/String;
@@ -413,6 +418,8 @@
 
     iput v2, p0, Landroid/app/Notification;->priority:I
 
+    invoke-static/range {p0 .. p0}, Landroid/app/Notification$FlymeInject;->initNotificationExt(Landroid/app/Notification;)V
+
     return-void
 
     :cond_0
@@ -468,6 +475,8 @@
     iput-object p2, p0, Landroid/app/Notification;->tickerText:Ljava/lang/CharSequence;
 
     iput-wide p3, p0, Landroid/app/Notification;->when:J
+
+    invoke-static/range {p0 .. p0}, Landroid/app/Notification$FlymeInject;->initNotificationExt(Landroid/app/Notification;)V
 
     return-void
 
@@ -532,6 +541,8 @@
     move-result-object v0
 
     invoke-virtual {p0, p1, p6, p7, v0}, Landroid/app/Notification;->setLatestEventInfo(Landroid/content/Context;Ljava/lang/CharSequence;Ljava/lang/CharSequence;Landroid/app/PendingIntent;)V
+
+    invoke-static/range {p0 .. p0}, Landroid/app/Notification$FlymeInject;->initNotificationExt(Landroid/app/Notification;)V
 
     return-void
 
@@ -934,6 +945,8 @@
     move-result v5
 
     iput v5, p0, Landroid/app/Notification;->color:I
+
+    invoke-static/range {p0 .. p1}, Landroid/app/Notification$FlymeInject;->initNotificationExt(Landroid/app/Notification;Landroid/os/Parcel;)V
 
     invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
 
@@ -1648,6 +1661,8 @@
     invoke-virtual {p1}, Landroid/app/Notification;->lightenPayload()V
 
     :cond_b
+    invoke-static/range {p0 .. p1}, Landroid/app/Notification$FlymeInject;->cloneIntoFlyme(Landroid/app/Notification;Landroid/app/Notification;)V
+
     iget v5, p0, Landroid/app/Notification;->twQuickPanelEvent:I
 
     iput v5, p1, Landroid/app/Notification;->twQuickPanelEvent:I
@@ -1872,6 +1887,8 @@
     iget v1, p0, Landroid/app/Notification;->icon:I
 
     invoke-virtual {v0, v1}, Landroid/app/Notification$Builder;->setSmallIcon(I)Landroid/app/Notification$Builder;
+
+    invoke-static {p0, v0}, Landroid/app/Notification$FlymeInject;->setLatestEventInfoFlyme(Landroid/app/Notification;Landroid/app/Notification$Builder;)V
 
     iget v1, p0, Landroid/app/Notification;->priority:I
 
@@ -2542,6 +2559,8 @@
     iget v3, p0, Landroid/app/Notification;->color:I
 
     invoke-virtual {p1, v3}, Landroid/os/Parcel;->writeInt(I)V
+
+    invoke-static/range {p0 .. p2}, Landroid/app/Notification$FlymeInject;->writeToParcelFlyme(Landroid/app/Notification;Landroid/os/Parcel;I)V
 
     iget v3, p0, Landroid/app/Notification;->twQuickPanelEvent:I
 

@@ -4457,6 +4457,8 @@
 
     const/16 v0, 0x27
 
+    add-int/lit8 v0, v0, 0x1
+
     new-array v0, v0, [I
 
     fill-array-data v0, :array_e
@@ -6617,6 +6619,7 @@
         0x1010476
         0x10104b2
         0x10105a1
+        0x1010660
     .end array-data
 
     :array_f

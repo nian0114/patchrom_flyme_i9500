@@ -236,6 +236,16 @@
     return-void
 .end method
 
+.method public sendUrlRedirection(Landroid/webkit/WebView;Ljava/lang/String;Z)V
+    .locals 0
+    .param p1, "view"    # Landroid/webkit/WebView;
+    .param p2, "url"    # Ljava/lang/String;
+    .param p3, "is_redirect"    # Z
+
+    .prologue
+    return-void
+.end method
+
 .method public shouldInterceptRequest(Landroid/webkit/WebView;Landroid/webkit/WebResourceRequest;)Landroid/webkit/WebResourceResponse;
     .locals 1
     .param p1, "view"    # Landroid/webkit/WebView;

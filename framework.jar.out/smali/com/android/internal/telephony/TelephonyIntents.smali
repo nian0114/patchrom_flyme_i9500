@@ -100,6 +100,8 @@
 
 .field public static final ACTION_SERVICE_STATE_CHANGED:Ljava/lang/String; = "android.intent.action.SERVICE_STATE"
 
+.field public static final ACTION_SET_PHONE_RAT_FAMILY_DONE:Ljava/lang/String; = "android.intent.action.ACTION_SET_PHONE_RAT_FAMILY_DONE"
+
 .field public static final ACTION_SHOW_DIALOG_DATA_ROAMING_GUARD:Ljava/lang/String; = "android.intent.action.ACTION_SHOW_DIALOG_DATA_ROAMING_GUARD"
 
 .field public static final ACTION_SHOW_NOTICE_ECM_BLOCK_OTHERS:Ljava/lang/String; = "android.intent.action.ACTION_SHOW_NOTICE_ECM_BLOCK_OTHERS"

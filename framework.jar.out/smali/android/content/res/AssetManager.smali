@@ -158,6 +158,8 @@
 
     invoke-static {}, Landroid/content/res/AssetManager;->ensureSystemAssets()V
 
+    invoke-direct/range {p0 .. p0}, Landroid/content/res/AssetManager;->addFlymeAssetPath()V
+
     monitor-exit p0
 
     return-void
@@ -214,6 +216,8 @@
     iput-object v0, p0, Landroid/content/res/AssetManager;->elasticAppCookieOffset:Ljava/util/HashMap;
 
     invoke-direct {p0, v1}, Landroid/content/res/AssetManager;->init(Z)V
+
+    invoke-direct/range {p0 .. p0}, Landroid/content/res/AssetManager;->addFlymeAssetPath()V
 
     return-void
 .end method
@@ -311,6 +315,17 @@
 .end method
 
 .method private final native addAssetPathNative(Ljava/lang/String;I)I
+.end method
+
+.method private addFlymeAssetPath()V
+    .locals 1
+
+    .prologue
+    const-string v0, "/system/framework/flyme-res/flyme-res.apk"
+
+    invoke-virtual {p0, v0}, Landroid/content/res/AssetManager;->addAssetPath(Ljava/lang/String;)I
+
+    return-void
 .end method
 
 .method private final native addOverlayPathNative(Ljava/lang/String;)I

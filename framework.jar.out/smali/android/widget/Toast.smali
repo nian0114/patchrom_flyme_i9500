@@ -796,6 +796,18 @@
     return-void
 .end method
 
+.method public setType(I)V
+    .locals 1
+    .param p1, "type"    # I
+
+    .prologue
+    iget-object v0, p0, Landroid/widget/Toast;->mTN:Landroid/widget/Toast$TN;
+
+    iput p1, v0, Landroid/widget/Toast$TN;->mMzToastType:I
+
+    return-void
+.end method
+
 .method public setView(Landroid/view/View;)V
     .locals 0
     .param p1, "view"    # Landroid/view/View;

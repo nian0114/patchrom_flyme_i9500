@@ -16268,6 +16268,10 @@
 
     move-result-object v0
 
+    move-object/from16 v1, p7
+
+    invoke-direct {p0, v0, v1}, Landroid/app/ActivityThread;->setFlymeThemeResource(Landroid/content/res/Resources;Landroid/app/LoadedApk;)V
+
     return-object v0
 .end method
 
@@ -19438,5 +19442,26 @@
 
     invoke-virtual {v0, v1}, Landroid/app/ActivityThread$H;->removeMessages(I)V
 
+    return-void
+.end method
+
+.method private setFlymeThemeResource(Landroid/content/res/Resources;Landroid/app/LoadedApk;)V
+    .locals 1
+    .param p1, "resources"    # Landroid/content/res/Resources;
+    .param p2, "pkgInfo"    # Landroid/app/LoadedApk;
+
+    .prologue
+    .line 5231
+    if-eqz p1, :cond_0
+
+    .line 5232
+    invoke-virtual {p2}, Landroid/app/LoadedApk;->getPackageName()Ljava/lang/String;
+
+    move-result-object v0
+
+    invoke-virtual {p1, v0}, Landroid/content/res/Resources;->setFlymeThemeResource(Ljava/lang/String;)V
+
+    .line 5234
+    :cond_0
     return-void
 .end method

@@ -163,7 +163,7 @@
 
     iput-object v1, p0, Landroid/hardware/Camera;->mAutoFocusCallbackLock:Ljava/lang/Object;
 
-    invoke-direct {p0, p1}, Landroid/hardware/Camera;->cameraInitNormal(I)I
+    invoke-direct {p0, p1}, Landroid/hardware/Camera;->hook_cameraInitNormal(I)I
 
     move-result v0
 
@@ -838,6 +838,32 @@
     invoke-virtual {v1, p0}, Landroid/hardware/Camera$Parameters;->copyFrom(Landroid/hardware/Camera$Parameters;)V
 
     return-object v1
+.end method
+
+.method private hook_cameraInitNormal(I)I
+    .locals 1
+    .param p1, "cameraId"    # I
+
+    .prologue
+    const/16 v0, 0x4c
+
+    invoke-static {v0}, Lmeizu/security/FlymePermissionManager;->isFlymePermissionGranted(I)Z
+
+    move-result v0
+
+    if-eqz v0, :cond_0
+
+    invoke-direct {p0, p1}, Landroid/hardware/Camera;->cameraInitNormal(I)I
+
+    move-result v0
+
+    :goto_0
+    return v0
+
+    :cond_0
+    const/4 v0, 0x0
+
+    goto :goto_0
 .end method
 
 .method private final native native_autoFocus()V

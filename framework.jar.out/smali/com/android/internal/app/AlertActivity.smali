@@ -6,6 +6,14 @@
 .implements Landroid/content/DialogInterface;
 
 
+# annotations
+.annotation system Ldalvik/annotation/MemberClasses;
+    value = {
+        Lcom/android/internal/app/AlertActivity$FlymeInjector;
+    }
+.end annotation
+
+
 # instance fields
 .field protected mAlert:Lcom/android/internal/app/AlertController;
 
@@ -46,6 +54,17 @@
     invoke-virtual {p0}, Lcom/android/internal/app/AlertActivity;->finish()V
 
     :cond_0
+    return-void
+.end method
+
+.method public onContentChanged()V
+    .locals 0
+
+    .prologue
+    invoke-super {p0}, Landroid/app/Activity;->onContentChanged()V
+
+    invoke-static {p0}, Lcom/android/internal/app/AlertActivity$FlymeInjector;->onAlertContentChanged(Lcom/android/internal/app/AlertActivity;)V
+
     return-void
 .end method
 
@@ -142,6 +161,8 @@
     iget-object v0, p0, Lcom/android/internal/app/AlertActivity;->mAlert:Lcom/android/internal/app/AlertController;
 
     invoke-virtual {v0}, Lcom/android/internal/app/AlertController;->installContent()V
+
+    invoke-static/range {p0 .. p0}, Lcom/android/internal/app/AlertActivity$FlymeInjector;->applyMeizuStyle(Lcom/android/internal/app/AlertActivity;)V
 
     return-void
 .end method

@@ -479,6 +479,21 @@
     .end local v1    # "oldPolicy":Landroid/os/StrictMode$ThreadPolicy;
     .end local v2    # "providerClass":Ljava/lang/Class;, "Ljava/lang/Class<Landroid/webkit/WebViewFactoryProvider;>;"
     :cond_0
+    invoke-static {}, Landroid/os/Process;->myUid()I
+
+    move-result v3
+
+    if-nez v3, :cond_flyme_0
+
+    new-instance v3, Ljava/lang/UnsupportedOperationException;
+
+    const-string v6, "For security reasons, WebView is not allowed in privileged processes"
+
+    invoke-direct {v3, v6}, Ljava/lang/UnsupportedOperationException;-><init>(Ljava/lang/String;)V
+
+    throw v3
+
+    :cond_flyme_0
     const-wide/16 v6, 0x10
 
     const-string v3, "WebViewFactory.getProvider()"
@@ -707,13 +722,18 @@
 
     move-result-object v1
 
+    iget-object v6, v1, Landroid/content/pm/ApplicationInfo;->primaryCpuAbi:Ljava/lang/String;
+
+    if-eqz v6, :cond_flyme_0
+
     .local v1, "ai":Landroid/content/pm/ApplicationInfo;
     iget-object v6, v1, Landroid/content/pm/ApplicationInfo;->primaryCpuAbi:Ljava/lang/String;
 
     invoke-static {v6}, Ldalvik/system/VMRuntime;->is64BitAbi(Ljava/lang/String;)Z
 
     move-result v5
-
+    
+    :goto_flyme_0
     .local v5, "primaryArchIs64bit":Z
     iget-object v6, v1, Landroid/content/pm/ApplicationInfo;->secondaryCpuAbi:Ljava/lang/String;
 
@@ -828,6 +848,12 @@
 
     .restart local v3    # "path64":Ljava/lang/String;
     goto :goto_0
+    
+    :cond_flyme_0
+
+    const/4 v5, 0x0
+
+    goto :goto_flyme_0
 .end method
 
 .method public static getWebViewPackageName()Ljava/lang/String;

@@ -59,7 +59,7 @@
 .end method
 
 .method public constructor <init>(Landroid/content/Context;Landroid/util/AttributeSet;II)V
-    .locals 0
+    .locals 1
     .param p1, "context"    # Landroid/content/Context;
     .param p2, "attrs"    # Landroid/util/AttributeSet;
     .param p3, "defStyleAttr"    # I
@@ -67,6 +67,10 @@
 
     .prologue
     invoke-direct {p0, p1, p2, p3, p4}, Landroid/widget/AbsSeekBar;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;II)V
+
+    const/4 v0, 0x1
+
+    invoke-virtual {p0, v0}, Landroid/widget/SeekBar;->setTouchMode(I)V
 
     return-void
 .end method

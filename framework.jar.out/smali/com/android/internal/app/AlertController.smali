@@ -6,6 +6,7 @@
 # annotations
 .annotation system Ldalvik/annotation/MemberClasses;
     value = {
+        Lcom/android/internal/app/AlertController$FlymeInjector;,
         Lcom/android/internal/app/AlertController$ButtonBarLayout;,
         Lcom/android/internal/app/AlertController$CheckedItemAdapter;,
         Lcom/android/internal/app/AlertController$AlertParams;,
@@ -19,6 +20,8 @@
 .field private mAdapter:Landroid/widget/ListAdapter;
 
 .field private mAlertDialogLayout:I
+
+.field public mAlertExt:Lcom/android/internal/app/AlertControllerExt;
 
 .field private final mButtonHandler:Landroid/view/View$OnClickListener;
 
@@ -209,6 +212,8 @@
     iput v1, p0, Lcom/android/internal/app/AlertController;->mListItemLayout:I
 
     invoke-virtual {v0}, Landroid/content/res/TypedArray;->recycle()V
+
+    invoke-static/range {p0 .. p3}, Lcom/android/internal/app/AlertController$FlymeInjector;->initFlymeExtFields(Lcom/android/internal/app/AlertController;Landroid/content/Context;Landroid/content/DialogInterface;Landroid/view/Window;)V
 
     return-void
 .end method
@@ -1804,6 +1809,8 @@
 
     invoke-virtual {v5}, Landroid/content/res/TypedArray;->recycle()V
 
+    invoke-static/range {p0 .. p0}, Lcom/android/internal/app/AlertController$FlymeInjector;->syncViewAndData(Lcom/android/internal/app/AlertController;)V
+
     return-void
 
     .end local v11    # "hasCustomView":Z
@@ -1914,6 +1921,15 @@
 
 
 # virtual methods
+.method public getAdapter()Landroid/widget/ListAdapter;
+    .locals 1
+
+    .prologue
+    iget-object v0, p0, Lcom/android/internal/app/AlertController;->mAdapter:Landroid/widget/ListAdapter;
+
+    return-object v0
+.end method
+
 .method public getButton(I)Landroid/widget/Button;
     .locals 1
     .param p1, "whichButton"    # I
@@ -1979,6 +1995,33 @@
 
     .prologue
     iget-object v0, p0, Lcom/android/internal/app/AlertController;->mListView:Landroid/widget/ListView;
+
+    return-object v0
+.end method
+
+.method public getMessage()Ljava/lang/CharSequence;
+    .locals 1
+
+    .prologue
+    iget-object v0, p0, Lcom/android/internal/app/AlertController;->mMessage:Ljava/lang/CharSequence;
+
+    return-object v0
+.end method
+
+.method public getTitle()Ljava/lang/CharSequence;
+    .locals 1
+
+    .prologue
+    iget-object v0, p0, Lcom/android/internal/app/AlertController;->mTitle:Ljava/lang/CharSequence;
+
+    return-object v0
+.end method
+
+.method public getView()Landroid/view/View;
+    .locals 1
+
+    .prologue
+    iget-object v0, p0, Lcom/android/internal/app/AlertController;->mView:Landroid/view/View;
 
     return-object v0
 .end method
@@ -2065,6 +2108,16 @@
     const/4 v0, 0x0
 
     goto :goto_0
+.end method
+
+.method public setAlertDialogLayout(I)V
+    .locals 0
+    .param p1, "layoutRes"    # I
+
+    .prologue
+    iput p1, p0, Lcom/android/internal/app/AlertController;->mAlertDialogLayout:I
+
+    return-void
 .end method
 
 .method public setButton(ILjava/lang/CharSequence;Landroid/content/DialogInterface$OnClickListener;Landroid/os/Message;)V

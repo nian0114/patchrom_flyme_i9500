@@ -53,6 +53,23 @@
     return-void
 .end method
 
+.method private mzInitMenuView(Lcom/android/internal/view/menu/MenuBuilder;)V
+    .locals 1
+    .param p1, "menu"    # Lcom/android/internal/view/menu/MenuBuilder;
+
+    .prologue
+    iget-object v0, p0, Lcom/android/internal/view/menu/BaseMenuPresenter;->mMenuView:Lcom/android/internal/view/menu/MenuView;
+
+    if-eqz v0, :cond_0
+
+    iget-object v0, p0, Lcom/android/internal/view/menu/BaseMenuPresenter;->mMenuView:Lcom/android/internal/view/menu/MenuView;
+
+    invoke-interface {v0, p1}, Lcom/android/internal/view/menu/MenuView;->initialize(Lcom/android/internal/view/menu/MenuBuilder;)V
+
+    :cond_0
+    return-void
+.end method
+
 
 # virtual methods
 .method protected addItemView(Landroid/view/View;I)V
@@ -256,6 +273,8 @@
     iput-object v0, p0, Lcom/android/internal/view/menu/BaseMenuPresenter;->mInflater:Landroid/view/LayoutInflater;
 
     iput-object p2, p0, Lcom/android/internal/view/menu/BaseMenuPresenter;->mMenu:Lcom/android/internal/view/menu/MenuBuilder;
+
+    invoke-direct {p0, p2}, Lcom/android/internal/view/menu/BaseMenuPresenter;->mzInitMenuView(Lcom/android/internal/view/menu/MenuBuilder;)V
 
     return-void
 .end method

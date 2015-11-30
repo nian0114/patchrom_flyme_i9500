@@ -776,6 +776,29 @@
     throw v0
 .end method
 
+.method public declared-synchronized getTextDegree()I
+    .locals 1
+
+    .prologue
+    monitor-enter p0
+
+    :try_start_0
+    new-instance v0, Landroid/webkit/MustOverrideException;
+
+    invoke-direct {v0}, Landroid/webkit/MustOverrideException;-><init>()V
+
+    throw v0
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    :catchall_0
+    move-exception v0
+
+    monitor-exit p0
+
+    throw v0
+.end method
+
 .method public declared-synchronized getTextSize()Landroid/webkit/WebSettings$TextSize;
     .locals 9
 
@@ -1498,6 +1521,54 @@
     throw v0
 .end method
 
+.method public declared-synchronized setIsBrowserApp(Z)V
+    .locals 1
+    .param p1, "enabled"    # Z
+
+    .prologue
+    monitor-enter p0
+
+    :try_start_0
+    new-instance v0, Landroid/webkit/MustOverrideException;
+
+    invoke-direct {v0}, Landroid/webkit/MustOverrideException;-><init>()V
+
+    throw v0
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    :catchall_0
+    move-exception v0
+
+    monitor-exit p0
+
+    throw v0
+.end method
+
+.method public declared-synchronized setIsEmailApp(Z)V
+    .locals 1
+    .param p1, "enabled"    # Z
+
+    .prologue
+    monitor-enter p0
+
+    :try_start_0
+    new-instance v0, Landroid/webkit/MustOverrideException;
+
+    invoke-direct {v0}, Landroid/webkit/MustOverrideException;-><init>()V
+
+    throw v0
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    :catchall_0
+    move-exception v0
+
+    monitor-exit p0
+
+    throw v0
+.end method
+
 .method public declared-synchronized setJavaScriptCanOpenWindowsAutomatically(Z)V
     .locals 1
     .param p1, "flag"    # Z
@@ -1709,6 +1780,30 @@
     throw v0
 .end method
 
+.method public declared-synchronized setNightModeEnabled(Z)V
+    .locals 1
+    .param p1, "enabled"    # Z
+
+    .prologue
+    monitor-enter p0
+
+    :try_start_0
+    new-instance v0, Landroid/webkit/MustOverrideException;
+
+    invoke-direct {v0}, Landroid/webkit/MustOverrideException;-><init>()V
+
+    throw v0
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    :catchall_0
+    move-exception v0
+
+    monitor-exit p0
+
+    throw v0
+.end method
+
 .method public declared-synchronized setPluginState(Landroid/webkit/WebSettings$PluginState;)V
     .locals 1
     .param p1, "state"    # Landroid/webkit/WebSettings$PluginState;
@@ -1773,6 +1868,30 @@
     monitor-exit p0
 
     return-void
+.end method
+
+.method public declared-synchronized setPrivateBrowsingEnabled(Z)V
+    .locals 1
+    .param p1, "enabled"    # Z
+
+    .prologue
+    monitor-enter p0
+
+    :try_start_0
+    new-instance v0, Landroid/webkit/MustOverrideException;
+
+    invoke-direct {v0}, Landroid/webkit/MustOverrideException;-><init>()V
+
+    throw v0
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    :catchall_0
+    move-exception v0
+
+    monitor-exit p0
+
+    throw v0
 .end method
 
 .method public declared-synchronized setRenderPriority(Landroid/webkit/WebSettings$RenderPriority;)V
@@ -1931,6 +2050,30 @@
     new-instance v0, Landroid/webkit/MustOverrideException;
 
     invoke-direct {v0}, Landroid/webkit/MustOverrideException;-><init>()V
+
+    throw v0
+.end method
+
+.method public declared-synchronized setTextDegree(I)V
+    .locals 1
+    .param p1, "degree"    # I
+
+    .prologue
+    monitor-enter p0
+
+    :try_start_0
+    new-instance v0, Landroid/webkit/MustOverrideException;
+
+    invoke-direct {v0}, Landroid/webkit/MustOverrideException;-><init>()V
+
+    throw v0
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    :catchall_0
+    move-exception v0
+
+    monitor-exit p0
 
     throw v0
 .end method

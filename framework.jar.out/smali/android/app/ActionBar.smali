@@ -6,6 +6,8 @@
 # annotations
 .annotation system Ldalvik/annotation/MemberClasses;
     value = {
+        Landroid/app/ActionBar$OnBackButtonEnableChangeListener;,
+        Landroid/app/ActionBar$VisibilityAnimationListener;,
         Landroid/app/ActionBar$LayoutParams;,
         Landroid/app/ActionBar$TabListener;,
         Landroid/app/ActionBar$Tab;,
@@ -33,6 +35,8 @@
 .field public static final NAVIGATION_MODE_STANDARD:I = 0x0
 
 .field public static final NAVIGATION_MODE_TABS:I = 0x2
+
+.field protected mMeasureWithLargestChild:Z
 
 
 # direct methods
@@ -442,5 +446,169 @@
     .param p1, "isTabOnTop"    # Z
 
     .prologue
+    return-void
+.end method
+
+.method public isBackButtonEnabled()Z
+    .locals 1
+
+    .prologue
+    .line 1510
+    const/4 v0, 0x0
+
+    return v0
+.end method
+
+.method public registerSmartBarSettingObserver()V
+    .locals 0
+
+    .prologue
+    .line 1514
+    return-void
+.end method
+
+.method public setActionBarViewCollapsable(Z)V
+    .locals 0
+    .param p1, "collapsable"    # Z
+
+    .prologue
+    .line 1414
+    return-void
+.end method
+
+.method public setActionModeHeaderHidden(Z)V
+    .locals 0
+    .param p1, "hidden"    # Z
+
+    .prologue
+    .line 1408
+    return-void
+.end method
+
+.method public setBackButtonDrawable(Landroid/graphics/drawable/Drawable;)V
+    .locals 0
+    .param p1, "backIcon"    # Landroid/graphics/drawable/Drawable;
+
+    .prologue
+    .line 1468
+    return-void
+.end method
+
+.method public setEmbeddedTabsWhenNarrow(Z)V
+    .locals 0
+    .param p1, "embedTabsWhenNarrow"    # Z
+
+    .prologue
+    .line 1402
+    return-void
+.end method
+
+.method public setEnableBackButton(Z)V
+    .locals 0
+    .param p1, "enabled"    # Z
+
+    .prologue
+    .line 1474
+    return-void
+.end method
+
+.method public setEnabledBackWhenOverlay(Z)V
+    .locals 0
+    .param p1, "enabled"    # Z
+
+    .prologue
+    .line 1455
+    return-void
+.end method
+
+.method public setMeasureWithLargestChildEnable(Z)V
+    .locals 0
+    .param p1, "enabled"    # Z
+
+    .prologue
+    .line 1447
+    iput-boolean p1, p0, Landroid/app/ActionBar;->mMeasureWithLargestChild:Z
+
+    .line 1448
+    return-void
+.end method
+
+.method public setOnBackButtonEnableChangeListener(Landroid/app/ActionBar$OnBackButtonEnableChangeListener;)V
+    .locals 0
+    .param p1, "listener"    # Landroid/app/ActionBar$OnBackButtonEnableChangeListener;
+
+    .prologue
+    .line 1503
+    return-void
+.end method
+
+.method public setOverFlowButtonDrawable(Landroid/graphics/drawable/Drawable;)V
+    .locals 0
+    .param p1, "drawable"    # Landroid/graphics/drawable/Drawable;
+
+    .prologue
+    .line 1480
+    return-void
+.end method
+
+.method public setProgressBarShowAtBottom(Z)V
+    .locals 0
+    .param p1, "showAtBottom"    # Z
+
+    .prologue
+    .line 1486
+    return-void
+.end method
+
+.method public setTabsHeight(I)V
+    .locals 0
+    .param p1, "height"    # I
+
+    .prologue
+    .line 1395
+    return-void
+.end method
+
+.method public setTabsShowAtBottom(Z)V
+    .locals 0
+    .param p1, "showAtBottom"    # Z
+
+    .prologue
+    .line 1388
+    return-void
+.end method
+
+.method public setTopBarHeight(I)V
+    .locals 0
+    .param p1, "height"    # I
+
+    .prologue
+    .line 1461
+    return-void
+.end method
+
+.method public setVisibilityAnimationListener(Landroid/app/ActionBar$VisibilityAnimationListener;)V
+    .locals 0
+    .param p1, "listener"    # Landroid/app/ActionBar$VisibilityAnimationListener;
+
+    .prologue
+    .line 1427
+    return-void
+.end method
+
+.method public unregisterSmartBarSettingObserver()V
+    .locals 0
+
+    .prologue
+    .line 1513
+    return-void
+.end method
+
+.method public useMzTitleLayout(Z)V
+    .locals 0
+    .param p1, "used"    # Z
+
+    .prologue
+    .line 1420
     return-void
 .end method

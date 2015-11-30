@@ -94,6 +94,34 @@
     return-void
 .end method
 
+.method private mzSetEditTextSelection()V
+    .locals 3
+
+    .prologue
+    iget-object v0, p0, Landroid/preference/EditTextPreference;->mEditText:Landroid/widget/EditText;
+
+    invoke-virtual {v0}, Landroid/widget/EditText;->length()I
+
+    move-result v0
+
+    if-lez v0, :cond_0
+
+    iget-object v0, p0, Landroid/preference/EditTextPreference;->mEditText:Landroid/widget/EditText;
+
+    const/4 v1, 0x0
+
+    iget-object v2, p0, Landroid/preference/EditTextPreference;->mEditText:Landroid/widget/EditText;
+
+    invoke-virtual {v2}, Landroid/widget/EditText;->length()I
+
+    move-result v2
+
+    invoke-virtual {v0, v1, v2}, Landroid/widget/EditText;->setSelection(II)V
+
+    :cond_0
+    return-void
+.end method
+
 
 # virtual methods
 .method public getEditText()Landroid/widget/EditText;
@@ -165,6 +193,8 @@
     move-result-object v2
 
     invoke-virtual {v0, v2}, Landroid/widget/EditText;->setText(Ljava/lang/CharSequence;)V
+
+    invoke-direct/range {p0 .. p0}, Landroid/preference/EditTextPreference;->mzSetEditTextSelection()V
 
     invoke-virtual {v0}, Landroid/widget/EditText;->length()I
 

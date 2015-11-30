@@ -146,6 +146,9 @@
 .method public abstract getVisibleTitleHeight()I
 .end method
 
+.method public abstract getWebChromeClient()Landroid/webkit/WebChromeClient;
+.end method
+
 .method public abstract getZoomControls()Landroid/view/View;
 .end method
 
@@ -230,6 +233,9 @@
 .method public abstract postUrl(Ljava/lang/String;[B)V
 .end method
 
+.method public abstract readerWholeHtmlSendMessage()V
+.end method
+
 .method public abstract reload()V
 .end method
 
@@ -249,6 +255,9 @@
 .end method
 
 .method public abstract resumeTimers()V
+.end method
+
+.method public abstract savePage()Z
 .end method
 
 .method public abstract savePassword(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
@@ -277,6 +286,9 @@
     .end annotation
 .end method
 
+.method public abstract selectLink()V
+.end method
+
 .method public abstract setCertificate(Landroid/net/http/SslCertificate;)V
 .end method
 
@@ -295,6 +307,9 @@
 .method public abstract setInitialScale(I)V
 .end method
 
+.method public abstract setLoadReaderPageCallBack(Landroid/webkit/WebView$ReaderCallBack;)V
+.end method
+
 .method public abstract setMapTrackballToArrowKeys(Z)V
 .end method
 
@@ -302,6 +317,18 @@
 .end method
 
 .method public abstract setPictureListener(Landroid/webkit/WebView$PictureListener;)V
+.end method
+
+.method public abstract setReaderModel()V
+.end method
+
+.method public abstract setReaderPageListener(Landroid/webkit/WebView$ReaderModeListener;)V
+.end method
+
+.method public abstract setReaderTitleAndNumFunction(Landroid/webkit/WebView$ReaderTitleAndNumCallBack;)V
+.end method
+
+.method public abstract setSavePageClient(Landroid/webkit/SavePageClient;)V
 .end method
 
 .method public abstract setVerticalScrollbarOverlay(Z)V

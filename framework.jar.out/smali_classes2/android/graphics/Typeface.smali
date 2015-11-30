@@ -56,6 +56,8 @@
 
 .field public static isFlipFontUsed:Z
 
+.field static mFlymeTypeface:Landroid/graphics/Typeface;
+
 .field static sDefaultTypeface:Landroid/graphics/Typeface;
 
 .field static sDefaults:[Landroid/graphics/Typeface;
@@ -1243,7 +1245,37 @@
 
     aget-object v0, v0, p0
 
+    invoke-static/range {p0 .. p0}, Landroid/graphics/Typeface;->getFlymeStyle(I)V
+
+    sget-object v0, Landroid/graphics/Typeface;->mFlymeTypeface:Landroid/graphics/Typeface;
+
     return-object v0
+.end method
+
+.method static getFlymeStyle(I)V
+    .locals 1
+    .param p0, "style"    # I
+
+    .prologue
+    sget-object v0, Landroid/content/res/flymetheme/FlymeFontsHelper;->sFlymeDefaultTypeface:Landroid/graphics/Typeface;
+
+    if-eqz v0, :cond_0
+
+    sget-object v0, Landroid/content/res/flymetheme/FlymeFontsHelper;->sFlymeDefaultTypeface:Landroid/graphics/Typeface;
+
+    sput-object v0, Landroid/graphics/Typeface;->mFlymeTypeface:Landroid/graphics/Typeface;
+
+    :goto_0
+    return-void
+
+    :cond_0
+    sget-object v0, Landroid/graphics/Typeface;->sDefaults:[Landroid/graphics/Typeface;
+
+    aget-object v0, v0, p0
+
+    sput-object v0, Landroid/graphics/Typeface;->mFlymeTypeface:Landroid/graphics/Typeface;
+
+    goto :goto_0
 .end method
 
 .method public static getFontNameFlipFont(Landroid/content/Context;I)Ljava/lang/String;
