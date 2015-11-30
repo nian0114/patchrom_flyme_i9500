@@ -54,8 +54,9 @@ vendor_modify_images := boot
 # The default value is Bluetooth.
 # You can configure the apk name in the vendor/system/app or vendor/system/pri-app directory.
 #-----------------------------------------------------------------------------
-vendor_saved_apps := BasicDreams Bluetooth CaptivePortalLogin KeyChain NfcNci PopupuiReceiver SamsungCamera2 SamsungTTS Stk UserDictionaryProvider \
-BackupRestoreConfirmation DefaultContainerService ExternalStorageProvider FusedLocation InputDevices ManagedProvisioning MtpApplication ProxyHandler SharedStorageBackup Shell Tag SecSettingsProvider
+vendor_saved_apps := BasicDreams Bluetooth CaptivePortalLogin KeyChain NfcNci PopupuiReceiver SamsungTTS Stk UserDictionaryProvider \
+BackupRestoreConfirmation DefaultContainerService ExternalStorageProvider FusedLocation InputDevices ManagedProvisioning MtpApplication ProxyHandler SharedStorageBackup Shell Tag SecSettingsProvider \
+FilterInstaller FilterProvider GestureService GlanceView minimode-res MultiWindowTrayService ResourceManager MemoryManager SPenSdk3 BestFace PicAction MemoryManagerSDK
 
 ##############################################################################
 # The value decides which vendor apk you want to modify.
@@ -64,7 +65,7 @@ BackupRestoreConfirmation DefaultContainerService ExternalStorageProvider FusedL
 # You need ro decode FMRadio.apk to the project directory(use apktool d FMRadio.apk) first,
 # and then you can make it by:   make FMRadio
 #-----------------------------------------------------------------------------
-#vendor_modify_apps := FMRadio
+vendor_modify_apps := SamsungCamera2
 
 ##############################################################################
 # The value decides which vendor jar you want to modify.
