@@ -65,7 +65,7 @@ FilterInstaller FilterProvider GestureService GlanceView minimode-res MultiWindo
 # You need ro decode FMRadio.apk to the project directory(use apktool d FMRadio.apk) first,
 # and then you can make it by:   make FMRadio
 #-----------------------------------------------------------------------------
-vendor_modify_apps := SamsungCamera2 
+vendor_modify_apps := SamsungCamera2 SystemUI Keyguard
 
 ##############################################################################
 # The value decides which vendor jar you want to modify.
