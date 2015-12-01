@@ -920,14 +920,14 @@
     .local v6, "info":Landroid/content/pm/PackageInfo;
     sget-object v0, Lcom/android/server/pm/InjectorPMS;->mPMS:Lcom/android/server/pm/PackageManagerService;
 
-    iget-object v1, v0, Lcom/android/server/pm/PackageManagerService;->mPackages:Ljava/util/HashMap;
+    sget-object v1, Lcom/android/server/pm/PackageManagerService;->mPackages:Ljava/util/HashMap;
 
     monitor-enter v1
 
     :try_start_0
     sget-object v0, Lcom/android/server/pm/InjectorPMS;->mPMS:Lcom/android/server/pm/PackageManagerService;
 
-    iget-object v0, v0, Lcom/android/server/pm/PackageManagerService;->mPackages:Ljava/util/HashMap;
+    sget-object v0, Lcom/android/server/pm/PackageManagerService;->mPackages:Ljava/util/HashMap;
 
     invoke-virtual {v0, p0}, Ljava/util/HashMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
 
@@ -1686,14 +1686,14 @@
 
     sget-object v5, Lcom/android/server/pm/InjectorPMS;->mPMS:Lcom/android/server/pm/PackageManagerService;
 
-    iget-object v6, v5, Lcom/android/server/pm/PackageManagerService;->mPackages:Ljava/util/HashMap;
+    sget-object v6, Lcom/android/server/pm/PackageManagerService;->mPackages:Ljava/util/HashMap;
 
     monitor-enter v6
 
     :try_start_0
     sget-object v5, Lcom/android/server/pm/InjectorPMS;->mPMS:Lcom/android/server/pm/PackageManagerService;
 
-    iget-object v5, v5, Lcom/android/server/pm/PackageManagerService;->mPackages:Ljava/util/HashMap;
+    sget-object v5, Lcom/android/server/pm/PackageManagerService;->mPackages:Ljava/util/HashMap;
 
     iget-object v7, v2, Lcom/android/server/pm/PackageDefaultOpService$Op;->packageName:Ljava/lang/String;
 
@@ -2220,14 +2220,14 @@
     .local v2, "write":Z
     sget-object v3, Lcom/android/server/pm/InjectorPMS;->mPMS:Lcom/android/server/pm/PackageManagerService;
 
-    iget-object v4, v3, Lcom/android/server/pm/PackageManagerService;->mPackages:Ljava/util/HashMap;
+    sget-object v4, Lcom/android/server/pm/PackageManagerService;->mPackages:Ljava/util/HashMap;
 
     monitor-enter v4
 
     :try_start_0
     sget-object v3, Lcom/android/server/pm/InjectorPMS;->mPMS:Lcom/android/server/pm/PackageManagerService;
 
-    iget-object v3, v3, Lcom/android/server/pm/PackageManagerService;->mPackages:Ljava/util/HashMap;
+    sget-object v3, Lcom/android/server/pm/PackageManagerService;->mPackages:Ljava/util/HashMap;
 
     invoke-virtual {v3}, Ljava/util/HashMap;->values()Ljava/util/Collection;
 
@@ -2416,14 +2416,14 @@
 
     sget-object v5, Lcom/android/server/pm/InjectorPMS;->mPMS:Lcom/android/server/pm/PackageManagerService;
 
-    iget-object v6, v5, Lcom/android/server/pm/PackageManagerService;->mPackages:Ljava/util/HashMap;
+    sget-object v6, Lcom/android/server/pm/PackageManagerService;->mPackages:Ljava/util/HashMap;
 
     monitor-enter v6
 
     :try_start_0
     sget-object v5, Lcom/android/server/pm/InjectorPMS;->mPMS:Lcom/android/server/pm/PackageManagerService;
 
-    iget-object v5, v5, Lcom/android/server/pm/PackageManagerService;->mPackages:Ljava/util/HashMap;
+    sget-object v5, Lcom/android/server/pm/PackageManagerService;->mPackages:Ljava/util/HashMap;
 
     iget-object v7, v2, Lcom/android/server/pm/PackageDefaultOpService$Op;->packageName:Ljava/lang/String;
 
