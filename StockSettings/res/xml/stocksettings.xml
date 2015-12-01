@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <CheckBoxPreference android:persistent="false" android:title="@string/auto_adjust_touch" android:key="auto_adjust_touch" android:summary="增加触摸屏幕的灵敏程度" />
+    <CheckBoxPreference android:persistent="false" android:title="@string/multi_window_enabled" android:key="multi_window" android:summary="打开的时候，长按返回键激活此功能" />
+    <CheckBoxPreference android:persistent="false" android:title="@string/intelligent_sleep_mode" android:key="intelligent_sleep_mode" android:summary="眼睛盯着屏幕时就不会在设置的时间内熄屏" />
+    <Preference android:title="三星省电模式">
+        <intent android:targetPackage="com.android.settings_ex" android:action="android.intent.action.MAIN" android:targetClass="com.android.settings_ex.Settings$PowerSavingModeSettings2014Activity" />
+    </Preference>
+    <Preference android:title="三星浮窗预览">
+        <intent android:targetPackage="com.android.settings_ex" android:action="android.intent.action.MAIN" android:targetClass="com.android.settings_ex.Settings$AirViewSettingActivity" />
+    </Preference>
+    <Preference android:title="三星原厂显示">
+        <intent android:targetPackage="com.android.settings_ex" android:action="android.intent.action.MAIN" android:targetClass="com.android.settings_ex.Settings$DisplaySettingsActivity" />
+    </Preference>
+    <Preference android:title="@string/website_title" android:key="about_key" android:summary="© 2015 FlymeSettings | Powered by Nian">
+        <intent android:action="android.intent.action.VIEW" android:data="http://www.nianrom.cn" />
+    </Preference>
+    <Preference android:title="@string/donate_title" android:key="donate_key">
+        <intent android:action="android.intent.action.VIEW" android:data="@string/donate_link" />
+    </Preference>
+</PreferenceScreen>

@@ -247,6 +247,7 @@ name="SPlannerWidget_OS_UPG_EasyWidget.apk" certificate="build/security/shared.x
 name="SPPPushClient_Prod.apk" certificate="PRESIGNED" private_key=""
 name="SPrintSpooler.apk" certificate="PRESIGNED" private_key=""
 name="Stk.apk" certificate="build/security/platform.x509.pem" private_key="build/security/platform.pk8"
+name="StockSettings.apk" certificate="build/security/platform.x509.pem" private_key="build/security/platform.pk8"
 name="StoryAlbum2013_L.apk" certificate="PRESIGNED" private_key=""
 name="StoryAlbumWidget.apk" certificate="build/security/shared.x509.pem" private_key="build/security/shared.pk8"
 name="S_Translator_CSLi.apk" certificate="PRESIGNED" private_key=""
